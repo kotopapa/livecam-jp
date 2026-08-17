@@ -1,6 +1,6 @@
 # livecam-jp — 全国ライブカメラ地図アプリ
 
-官公庁が公開している全国のライブカメラをクローラで台帳化し、死活監視して静的JSONで配信し、iOSアプリが地図に表示する。詳細仕様は [SPEC.md](SPEC.md)。
+官公庁が公開している全国のライブカメラをクローラで台帳化し、死活監視して静的JSONで配信し、アプリ（iOS / Android / Web）が地図に表示する。詳細仕様は [SPEC.md](SPEC.md)。
 
 - ランニングコストはドメイン代のみ。画像・映像は端末から一次ソースへ直接アクセス（自前中継なし）
 - 差別化の核は「開いたら必ず映る」（死活監視）と「今見る価値があるか」（オンデバイス画像判定）
@@ -11,8 +11,8 @@
 |---|---|---|
 | `crawler/` | Phase 1: カメラ台帳の収集（Python） | 実装済み（KTR・QSR YouTube・kawabou県別） |
 | `monitor/` | Phase 2: 死活監視（Python, 30分ごと） | 実装済み |
-| `site/` | Phase 3: 静的配信（GitHub Pages, `site/build.py` が生成） | 実装済み |
-| `ios/` | Phase 4: iOSアプリ（Swift 6 / SwiftUI） | 未着手 |
+| `site/` | Phase 3: 静的配信（GitHub Pages, `site/build.py` が生成）+ Web版（静的ページ） | 配信は実装済み / Web版は未着手 |
+| `app/` | Phase 4: モバイルアプリ（Flutter, iOS/Android） | 未着手 |
 | `tools/` | 候補レビューCLI | 実装済み |
 
 ## セットアップ
