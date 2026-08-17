@@ -1,5 +1,5 @@
 {
- "version": "2026-08-17T22:40:27Z",
+ "version": "2026-08-17T23:15:37Z",
  "cameras": [
   {
    "id": "kawabou-100081004",
@@ -194059,6 +194059,2285 @@
    },
    "first_seen": "2026-08-17",
    "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-road-c01671",
+   "name": "大垂水区間",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01671.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/sobu/sobu_index018.html"
+   },
+   "operator": "国土交通省 相武国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/sobu/sobu_index018.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 相武国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 100851
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01685",
+   "name": "相模湖区間",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01685.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/sobu/sobu_index018.html"
+   },
+   "operator": "国土交通省 相武国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/sobu/sobu_index018.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 相武国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 80975
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01753",
+   "name": "新善町地下道 (内回り) (上り) (側道)",
+   "name_kana": null,
+   "lat": 35.848839,
+   "lng": 139.784637,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01753.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shinzen_town-underpass(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shinzen_town-underpass(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01764(新善町地下道 (外回り) (下り) (側道)) と50m以内・類似度1.00 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 67309
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01754",
+   "name": "辻地下道 (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.83741,
+   "lng": 139.665787,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01754.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_tsuji-underpass(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_tsuji-underpass(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01755(辻地下道 (外回り) (下り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 71908
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01755",
+   "name": "辻地下道 (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.83741,
+   "lng": 139.665787,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01755.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_tsuji-underpass(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_tsuji-underpass(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01754(辻地下道 (内回り) (上り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 72495
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01756",
+   "name": "芝地下道 (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.833206,
+   "lng": 139.703339,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01756.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shiba-underpass(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shiba-underpass(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01757(芝地下道 (外回り) (下り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 61368
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01757",
+   "name": "芝地下道 (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.833206,
+   "lng": 139.703339,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01757.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shiba-underpass(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shiba-underpass(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01756(芝地下道 (内回り) (上り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 44746
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01758",
+   "name": "神根地下道 (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.850842,
+   "lng": 139.717667,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01758.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_kamine-underpass(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_kamine-underpass(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01759(神根地下道 (外回り) (下り)) と50m以内・類似度1.00 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 64764
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01759",
+   "name": "神根地下道 (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.850842,
+   "lng": 139.717667,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01759.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_kamine-underpass(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_kamine-underpass(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01758(神根地下道 (内回り) (上り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 47836
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01760",
+   "name": "川口JCT地下道 (上り)",
+   "name_kana": null,
+   "lat": 35.846832,
+   "lng": 139.732178,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01760.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_kawaguchi-JCT(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_kawaguchi-JCT(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01761(川口JCT地下道 (下り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 47649
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01761",
+   "name": "川口JCT地下道 (下り)",
+   "name_kana": null,
+   "lat": 35.846832,
+   "lng": 139.732178,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01761.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_kawaguchi-JCT(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_kawaguchi-JCT(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01760(川口JCT地下道 (上り)) と50m以内・類似度1.00 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 71840
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01762",
+   "name": "安行地下道 (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.851227,
+   "lng": 139.755692,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01762.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_angyo-underpass(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_angyo-underpass(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01763(安行地下道 (外回り) (下り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 59094
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01763",
+   "name": "安行地下道 (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.851227,
+   "lng": 139.755692,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01763.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_angyo-underpass(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_angyo-underpass(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01762(安行地下道 (内回り) (上り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 65381
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01764",
+   "name": "新善町地下道 (外回り) (下り) (側道)",
+   "name_kana": null,
+   "lat": 35.848839,
+   "lng": 139.784637,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01764.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shinzen_town-underpass(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shinzen_town-underpass(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01753(新善町地下道 (内回り) (上り) (側道)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 74332
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01765",
+   "name": "谷口地下道 (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.826015,
+   "lng": 139.870361,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01765.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_yaguchi-underpass(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_yaguchi-underpass(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01766(谷口地下道 (外回り) (下り)) と50m以内・類似度1.00 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 62475
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01766",
+   "name": "谷口地下道 (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.826015,
+   "lng": 139.870361,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01766.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_yaguchi-underpass(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_yaguchi-underpass(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01765(谷口地下道 (内回り) (上り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 51763
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01767",
+   "name": "鷹野地下道 (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.803379,
+   "lng": 139.879562,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01767.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_takano-underpass(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_takano-underpass(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01768(鷹野地下道 (外回り) (下り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 48065
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01768",
+   "name": "鷹野地下道 (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.803379,
+   "lng": 139.879562,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01768.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_takano-underpass(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_takano-underpass(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c01767(鷹野地下道 (内回り) (上り)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 52417
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01769",
+   "name": "幸魂大橋 (戸田側) (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.829967,
+   "lng": 139.639557,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01769.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_sakitama-big_bridge(toda).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_sakitama-big_bridge(toda).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 83564
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01770",
+   "name": "幸魂大橋 (和光側) (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.803238,
+   "lng": 139.616898,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01770.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_sakitama-big_bridge(wako).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_sakitama-big_bridge(wako).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 91388
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01837",
+   "name": "国道4号 栃福橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01837.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya_livecamera001.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya_livecamera001.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 72540
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01838",
+   "name": "国道4号 栃福橋南",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01838.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00306.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00306.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 73907
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01840",
+   "name": "国道4号 柏沼チェーン着脱所",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01840.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00307.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00307.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 68745
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01843",
+   "name": "国道4号 那須除雪基地",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01843.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya_livecamera002.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya_livecamera002.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 56307
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01846",
+   "name": "国道4号 弓落中",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01846.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00309.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00309.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 54843
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01853",
+   "name": "国道4号 新鬼怒川橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01853.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00312.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00312.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 66562
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01855",
+   "name": "国道4号 野崎橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01855.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00311.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00311.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 62818
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01856",
+   "name": "国道4号 那須野橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01856.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00310.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00310.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 51553
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01857",
+   "name": "国道50号 足利陸橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道50号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01857.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00317.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00317.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 68581
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01861",
+   "name": "国道50号 大平高架橋上り",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道50号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01861.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00318.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00318.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 66495
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01863",
+   "name": "国道50号 小山大橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道50号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01863.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00319.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00319.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 60384
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01864",
+   "name": "国道4号 新利根川橋下り",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01864.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00314.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00314.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 58492
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01865",
+   "name": "国道4号 新利根川橋上り",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01865.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00315.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00315.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 61356
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01872",
+   "name": "国道4号 国分寺出張所",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01872.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00316.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00316.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 101017
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01893",
+   "name": "国道4号 田川橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01893.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00313.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya00313.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 73191
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01902",
+   "name": "国道4号 漆塚狩下",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": "国道4号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01902.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya_livecamera003.html"
+   },
+   "operator": "国土交通省 宇都宮国道事務所",
+   "source": {
+    "page_url": "http://www.ktr.mlit.go.jp/utunomiya/utunomiya_livecamera003.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 宇都宮国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 93547
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01910",
+   "name": "国道17号 猿ヶ京スノーステーション みなかみ町猿ヶ京温泉895付近（東京から170.0km付近／標高650m）",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01910.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00588.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00588.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 96931
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01911",
+   "name": "国道17号 みなかみ町永井 みなかみ町永井（カーブ16／標高800m）",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01911.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00587.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00587.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 110361
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01919",
+   "name": "国道17号 新三国トンネル群馬県側（新上越橋） みなかみ町永井（標高1080m） カーブ53から新潟方面へ約600m、新三国トンネル東京側出口付近",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01919.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00585.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00585.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 77336
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01926",
+   "name": "国道17号 新三国トンネル新潟県側（立岩橋） 新潟県南魚沼郡湯沢町三国（東京から182.9km付近／標高1080m）",
+   "name_kana": null,
+   "lat": 36.804073,
+   "lng": 138.759995,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01926.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00584.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00584.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 66122
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c01956",
+   "name": "国道17号 法師大橋 みなかみ町永井（カーブ40とカーブ41の間／標高960m）",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C01956.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00586.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00586.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 60611
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c02000",
+   "name": "国道18号碓氷バイパス 軽井沢橋 北佐久郡軽井沢町（標高990m）",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": "国道18号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C02000.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00589.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00589.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 69177
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c02005",
+   "name": "国道18号碓氷バイパス 入山チェーン脱着所 安中市松井田町（標高580ｍ）",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": "国道18号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C02005.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00797.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00797.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 85942
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c02030",
+   "name": "烏川（城南大橋） 高崎市新後閑町",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C02030.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00583.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00583.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 名称に河川名を含む（河川カメラの可能性。カテゴリ要確認） / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 68167
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c02046",
+   "name": "浅間山（軽井沢） 北佐久郡軽井沢町（標高1025m）",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C02046.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00590.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00590.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 70583
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c05004",
+   "name": "東北線跨線橋 (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.83955,
+   "lng": 139.674484,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C05004.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_JR-tohoku-line_overpass(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_JR-tohoku-line_overpass(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 54285
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c05005",
+   "name": "JR東北線跨線橋 (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.837383,
+   "lng": 139.681763,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C05005.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_JR-tohoku-line_overpass(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_JR-tohoku-line_overpass(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 65676
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c05006",
+   "name": "雀田地区 (外回り) (下り) (本線)",
+   "name_kana": null,
+   "lat": 35.850842,
+   "lng": 139.717667,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C05006.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_suzumeda_main(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_suzumeda_main(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c05007(雀田地区 (外回り) (下り) (側道)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 40505
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c05007",
+   "name": "雀田地区 (外回り) (下り) (側道)",
+   "name_kana": null,
+   "lat": 35.850842,
+   "lng": 139.717667,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C05007.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_suzumeda_sub(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_suzumeda_sub(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c05006(雀田地区 (外回り) (下り) (本線)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 51879
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c05008",
+   "name": "仲谷津橋地区 (外回り) (下り) (側道)",
+   "name_kana": null,
+   "lat": 35.852169,
+   "lng": 139.726578,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C05008.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_nakayatsu_sub(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_nakayatsu_sub(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c05009(仲谷津橋地区 (外回り) (下り) (本線)) と50m以内・類似度1.00"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 60868
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c05009",
+   "name": "仲谷津橋地区 (外回り) (下り) (本線)",
+   "name_kana": null,
+   "lat": 35.852169,
+   "lng": 139.726578,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C05009.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_nakayatsu_main(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_nakayatsu_main(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 重複疑い: mlit-ktr-road-c05008(仲谷津橋地区 (外回り) (下り) (側道)) と50m以内・類似度1.00 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 36656
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c05012",
+   "name": "潮郷橋 (外回り) (下り)",
+   "name_kana": null,
+   "lat": 35.842045,
+   "lng": 139.837357,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C05012.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shiosato-bridge(d).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shiosato-bridge(d).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 56963
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-c05013",
+   "name": "潮郷橋 (内回り) (上り)",
+   "name_kana": null,
+   "lat": 35.843933,
+   "lng": 139.847931,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道298号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C05013.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shiosato-bridge(u).html"
+   },
+   "operator": "国土交通省 北首都国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/kitasyuto/public/CAM_shiosato-bridge(u).html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 北首都国道事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "県は事務所管轄からの推定 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 59099
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
   },
   {
    "id": "mlit-qsr-yt-uc0uwffm6gl2jswluiubxowg",
