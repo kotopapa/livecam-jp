@@ -84,16 +84,23 @@ def extract_camera_links(html: str, base_url: str, office_key: str) -> list[tupl
     return list(found.items())
 
 
-def extract_cctv_images(html: str, page_url: str) -> list[tuple[str, str]]:
-    """ページ内の /river/cctv/C*.jpg 画像を (C番号, 正規化URL) で返す。"""
+def clean_alt(alt: str) -> str:
+    """img の alt からカメラ名を取り出す（「ライブカメラ○○映像」→「○○」）。"""
+    name = re.sub(r"ライブカメラ|映像", "", alt or "").replace("　", " ")
+    return re.sub(r"\s+", " ", name).strip()
+
+
+def extract_cctv_images(html: str, page_url: str) -> list[tuple[str, str, str]]:
+    """ページ内の /river/cctv/C*.jpg 画像を (C番号, 正規化URL, alt由来の名前) で返す。"""
     soup = BeautifulSoup(html, "html.parser")
-    out: dict[str, str] = {}
+    out: dict[str, tuple[str, str]] = {}
     for img in soup.find_all("img", src=True):
         m = CCTV_IMG_RE.search(urljoin(page_url, img["src"]))
         if m:
             cnum = m.group(1)
-            out.setdefault(cnum, f"https://www.ktr.mlit.go.jp/river/cctv/{cnum}.jpg")
-    return list(out.items())
+            out.setdefault(cnum, (f"https://www.ktr.mlit.go.jp/river/cctv/{cnum}.jpg",
+                                  clean_alt(img.get("alt", ""))))
+    return [(c, url, alt) for c, (url, alt) in out.items()]
 
 
 def page_camera_name(html: str) -> str | None:
@@ -144,13 +151,17 @@ class MlitKtrRoadParser(SourceParser):
                 images = extract_cctv_images(html, url)
                 if not images:
                     continue
-                name = page_camera_name(html) or link_text
+                page_name = page_camera_name(html) or link_text
                 address = extract_address_hint(html)
-                for cnum, img_url in images:
+                for cnum, img_url, alt_name in images:
                     if cnum in seen:
                         continue
                     seen.add(cnum)
-                    cam_name = name if len(images) == 1 else f"{name} ({cnum})"
+                    if len(images) == 1:
+                        cam_name = page_name or alt_name
+                    else:
+                        # 1ページ複数カメラは alt の個別名を優先する
+                        cam_name = alt_name or (f"{page_name} ({cnum})" if page_name else "")
                     if not cam_name:
                         cam_name = cnum
                     route_m = ROUTE_RE.search(cam_name + " " + link_text)

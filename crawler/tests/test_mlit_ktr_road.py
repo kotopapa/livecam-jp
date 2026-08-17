@@ -40,20 +40,30 @@ def test_utsunomiya_index_links():
 def test_utsunomiya_detail_camera():
     html = read("mlit_ktr_road_utsunomiya_detail.html")
     images = extract_cctv_images(html, "https://www.ktr.mlit.go.jp/utunomiya/utunomiya00306.html")
-    assert images == [("C01838", "https://www.ktr.mlit.go.jp/river/cctv/C01838.jpg")]
+    assert images == [("C01838", "https://www.ktr.mlit.go.jp/river/cctv/C01838.jpg",
+                       "国道4号 栃福橋南")]
     assert page_camera_name(html) == "国道4号 栃福橋南"
 
 
-def test_sobu_index_is_camera_page_too():
+def test_sobu_detail_is_camera_page_too():
     html = read("mlit_ktr_road_sobu_index.html")
-    images = extract_cctv_images(html, "https://www.ktr.mlit.go.jp/sobu/sobu_index018.html")
-    assert ("C01671", "https://www.ktr.mlit.go.jp/river/cctv/C01671.jpg") in images
+    images = extract_cctv_images(html, "https://www.ktr.mlit.go.jp/sobu/sobu00063.html")
+    assert ("C01671", "https://www.ktr.mlit.go.jp/river/cctv/C01671.jpg",
+            "大垂水区間") in images
     assert page_camera_name(html) == "大垂水区間"
     links = extract_camera_links(
-        html, "https://www.ktr.mlit.go.jp/sobu/sobu_index018.html", "sobu")
+        html, "https://www.ktr.mlit.go.jp/sobu/sobu00063.html", "sobu")
     urls = [u for u, _ in links]
-    assert "https://www.ktr.mlit.go.jp/sobu/sobu00063.html" in urls
     assert "https://www.ktr.mlit.go.jp/sobu/sobu00064.html" in urls
+
+
+def test_sobu_live_index_multi_camera_alt_names():
+    """一覧ページに複数カメラのimgが直接並ぶケース（altから個別名を取る）。"""
+    html = read("mlit_ktr_road_sobu_index_live.html")
+    images = extract_cctv_images(html, "https://www.ktr.mlit.go.jp/sobu/sobu_index018.html")
+    named = {c: alt for c, _, alt in images}
+    assert named["C01671"] == "大垂水区間"
+    assert named["C01685"] == "相模湖区間"
 
 
 def test_kitasyuto_menu_and_camera_page():
@@ -67,7 +77,7 @@ def test_kitasyuto_menu_and_camera_page():
 
     cam = read("mlit_ktr_road_kitasyuto_cam.html")
     images = extract_cctv_images(cam, "https://www.ktr.mlit.go.jp/kitasyuto/public/x.html")
-    assert images == [("C01770", "https://www.ktr.mlit.go.jp/river/cctv/C01770.jpg")]
+    assert images == [("C01770", "https://www.ktr.mlit.go.jp/river/cctv/C01770.jpg", "")]
     assert "幸魂大橋" in page_camera_name(cam)
     assert extract_address_hint(cam) == "埼玉県和光市新倉5丁目"
 
@@ -75,7 +85,7 @@ def test_kitasyuto_menu_and_camera_page():
 def test_takasaki_river_camera_on_road_page():
     html = read("mlit_ktr_road_takasaki_detail.html")
     images = extract_cctv_images(html, "https://www.ktr.mlit.go.jp/takasaki/x.html")
-    assert images == [("C02030", "https://www.ktr.mlit.go.jp/river/cctv/C02030.jpg")]
+    assert images == [("C02030", "https://www.ktr.mlit.go.jp/river/cctv/C02030.jpg", "")]
     name = page_camera_name(html)
     assert "烏川" in name          # 河川カメラ混在の検知（RIVERISH_RE の対象）
 
