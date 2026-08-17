@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="Shift_JIS">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>みちカメラ・みちマップ | 甲府河川国道事務所 | 国土交通省　関東地方整備局</title>
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/michi.css">
+</head>
+<body>
+<div class="container is-max-desktop">
+  <div class="image">
+    <a href="../michi_camera/">
+      <picture>
+        <source srcset="./img/header_n.png" media="(max-width: 768px)" type="image/png">
+        <img src="./img/header_w.png" alt="みちカメラ">
+      </picture>
+    </a>
+  </div>
+
+  <nav class="breadcrumb has-succeeds-separator m-3 is-size-7" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../">甲府河川国道事務所ホーム</a></li>
+      <li><a href="../koufu_index002.html">ライブ情報</a></li>
+      <li class="is-active"><a href="#" aria-current="page">みちカメラ</a></li>
+    </ul>
+  </nav>
+
+  <section class="section p-2">
+    <p class="title is-5">ここでは主要国道に設置されたライブカメラ画像などの情報がご覧いただけます。</p>
+    <p class="subtitle is-6">下のマップにあるそれぞれのアイコン、または下表の地点名をクリックすると詳細情報にアクセスできます。</p>
+    <div id="map">
+      <div class="tabs">
+        <ul>
+          <li><img src="./img/tab_michi.png" alt="みち"></li>
+          <li><a href="../kawa_camera/" class="p-0"><img src="./img/tab_kawa.png" alt="かわ"></a></li>
+        </ul>
+      </div>
+      <div class="image">
+        <img src="./img/map_main.png" alt="みちマップ" usemap="#main" class="map_main">
+      </div>
+      <map name="main">
+        <area shape="rect" href class="js-modal-trigger" data-pos="tl" data-target="zoom" coords="0,0,391,391">
+        <area shape="rect" href class="js-modal-trigger" data-pos="tr" data-target="zoom" coords="391,0,782,391">
+        <area shape="rect" href class="js-modal-trigger" data-pos="bl" data-target="zoom" coords="0,391,391,782">
+        <area shape="rect" href class="js-modal-trigger" data-pos="br" data-target="zoom" coords="391,391,782,782">
+      </map>
+      <div class="legend">
+        <ul>
+          <li><img src="./img/icon_michicam.png" alt="">みちカメラ</li>
+          <li><img src="./img/icon_uryo.png" alt="">雨量観測所</li>
+          <li><img src="./img/icon_kisyo.png" alt="">気象観測所</li>
+          <li><img src="./img/icon_michicam_uryo.png" alt="">みちカメラ・雨量観測所</li>
+          <li><img src="./img/icon_michicam_kisyo.png" alt="">みちカメラ・気象観測所</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="hyou"></section>
+
+  <section class="section mb-6 p-2">
+    <div class="description">
+      <dl>
+        <dt>時間雨量：</dt><dd>1時間あたりの降雨量です。</dd>
+        <dt>連続雨量：</dt><dd>降り始めからの降雨量の累積です。</dd>
+        <dt>規制雨量：</dt><dd>通行止めを行う降雨量の基準のことであり、規制区間ごとに連続雨量で定めています。</dd>
+      </dl>
+    </div>
+
+    <div class="my-5 p-1">
+      <ul class="kome">
+        <li>上野原、初狩については下記で通行規制を行うことがあります。<br>
+          上野原：連続雨量 300mm 又は連続雨量 250mm かつ時間雨量 50mm<br>
+          初狩：連続雨量 300mm 又は連続雨量 250mm かつ時間雨量 60mm</li>
+        <li>集中豪雨時には、規制雨量に達しなくても通行規制を行うことがあります。</li>
+      </ul>
+      <p class="mt-4"><a href="http://www.road.ktr.mlit.go.jp/" target="_blank" class="is-size-6">雨による通行規制区間情報</a>（外部リンク）</p>
+    </div>
+  </section>
+
+  <footer>&copy; 2023 甲府河川国道事務所 All rights reserved.</footer>
+</div>
+
+<div id="zoom" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card p-3">
+    <header class="modal-card-head">
+      <p class="modal-card-title">地点名をクリックすると<br>詳細情報にアクセスできます。</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <div class="image">
+      <img src="./img/zoom_tl.png" alt="" useMap="#m_zoom_tl" class="map_zoom">
+      <img src="./img/zoom_tr.png" alt="" useMap="#m_zoom_tr" class="map_zoom">
+      <img src="./img/zoom_bl.png" alt="" useMap="#m_zoom_bl" class="map_zoom">
+      <img src="./img/zoom_br.png" alt="" useMap="#m_zoom_br" class="map_zoom">
+    </div>
+    <div class="legend">
+      <ul>
+        <li><img src="./img/icon_michicam.png" alt="">みちカメラ</li>
+        <li><img src="./img/icon_uryo.png" alt="">雨量観測所</li>
+        <li><img src="./img/icon_kisyo.png" alt="">気象観測所</li>
+        <li><img src="./img/icon_michicam_uryo.png" alt="">みちカメラ・雨量観測所</li>
+        <li><img src="./img/icon_michicam_kisyo.png" alt="">みちカメラ・気象観測所</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<map name="m_zoom_tl">
+<area shape="rect" href onclick="return zoomSwicth('br');" coords="770,770,810,810">
+<area shape="rect" href onclick="return zoomSwicth('tr');" coords="780,305,810,505">
+<area shape="rect" href onclick="return zoomSwicth('bl');" coords="305,780,505,810">
+<area shape="poly" href="../livecamera/michi/mukawa.html" title="武川" alt="武川" coords="266,465,266,521,472,521,472,450,422,450,422,465,266,465">
+<area shape="poly" href="../livecamera/michi/yamaguti.html" title="山口" alt="山口" coords="183,238,255,238,255,363,101,363,101,316,183,316,183,238">
+<area shape="rect" href="../livecamera/michi/hakushu.html" title="白州" alt="白州" coords="215,390,421,464">
+<area shape="poly" href="../livecamera/michi/nirasaki.html" title="韮崎" alt="韮崎" coords="309,571,433,572,433,523,510,523,510,617,309,617,309,571">
+<area shape="poly" href="../livecamera/michi/masuho.html" title="増穂" alt="増穂" coords="347,678,532,678,532,779,460,779,460,724,347,724,347,678">
+</map>
+
+<map name="m_zoom_tr">
+<area shape="rect" href onclick="return zoomSwicth('bl');" coords="0,770,40,810">
+<area shape="rect" href onclick="return zoomSwicth('br');" coords="305,780,505,810">
+<area shape="rect" href onclick="return zoomSwicth('tl');" coords="0,305,30,505">
+<area shape="poly" href="../livecamera/michi/uenohara.html" title="上野原" alt="上野原" coords="605,607,605,733,737,733,737,687,678,687,678,607,605,607">
+<area shape="poly" href="../livecamera/michi/tanokura.html" title="田野倉" alt="田野倉" coords="397,709,472,709,472,727,599,728,599,778,397,778,397,709">
+<area shape="poly" href="../livecamera/michi/yanagawa.html" title="梁川" alt="梁川" coords="438,597,564,597,564,720,492,720,491,644,438,644,438,597">
+<area shape="poly" href="../livecamera/michi/hatukari.html" title="初狩" alt="初狩" coords="293,596,293,738,367,738,366,643,428,643,428,596,293,596">
+<area shape="poly" href="../livecamera/michi/sasago.html" title="笹子" alt="笹子" coords="84,707,212,707,212,669,288,669,287,752,84,752,84,707">
+<area shape="poly" href="../livecamera/michi/yamato.html" title="大和" alt="大和" coords="214,533,340,534,340,579,289,579,288,658,214,658,214,533">
+<area shape="poly" href="../livecamera/michi/katsunuma.html" title="勝沼" alt="勝沼" coords="192,532,192,656,118,656,118,579,61,579,61,532,192,532">
+</map>
+
+<map name="m_zoom_bl">
+<area shape="rect" href onclick="return zoomSwicth('tr');" coords="770,0,810,40">
+<area shape="rect" href onclick="return zoomSwicth('br');" coords="780,305,810,505">
+<area shape="rect" href onclick="return zoomSwicth('tl');" coords="305,0,505,30">
+<area shape="poly" href="../livecamera/michi/manzawa.html" title="万沢" alt="万沢" coords="580,632,580,736,761,736,761,693,650,693,651,632,580,632">
+<area shape="poly" href="../livecamera/michi/kirikubo.html" title="切久保" alt="切久保" coords="569,592,496,592,496,655,376,655,376,701,569,701,569,592">
+<area shape="poly" href="../livecamera/michi/aimata.html" title="相又" alt="相又" coords="268,413,474,413,474,513,397,513,397,459,268,459,268,413">
+<area shape="poly" href="../livecamera/michi/motosu.html" title="本栖" alt="本栖" coords="723,214,650,214,650,289,590,289,591,336,723,336,723,214">
+<area shape="rect" href="../livecamera/michi/oowatouge.html" title="大和峠" alt="大和峠" coords="311,514,523,585">
+<area shape="rect" href="../livecamera/michi/furuyasiki.html" title="古屋敷" alt="古屋敷" coords="310,281,515,356">
+<area shape="rect" href="../livecamera/michi/hakohara.html" title="箱原" alt="箱原" coords="274,207,487,280">
+<area shape="poly" href="../livecamera/michi/shoji.html" title="精進" alt="精進" coords="556,100,761,100,761,176,556,176,556,100">
+<area shape="poly" href="../livecamera/michi/kajikazawa.html" title="鰍沢" alt="鰍沢" coords="297,129,502,129,502,204,297,204,297,129">
+<area shape="poly" href="../livecamera/michi/simizubata.html" title="清水端" alt="清水端" coords="289,53,492,53,492,127,289,127,289,53">
+</map>
+
+<map name="m_zoom_br">
+<area shape="rect" href onclick="return zoomSwicth('tl');" coords="0,0,40,40">
+<area shape="rect" href onclick="return zoomSwicth('bl');" coords="0,305,30,505">
+<area shape="rect" href onclick="return zoomSwicth('tr');" coords="305,0,505,30">
+<area shape="poly" href="../livecamera/michi/narusawa.html" title="鳴沢" alt="鳴沢" coords="37,264,163,264,163,219,135,219,135,146,62,146,63,219,37,218,37,264">
+<area shape="poly" href="../livecamera/michi/nashigahara.html" title="梨ヶ原" alt="梨ヶ原" coords="185,176,254,176,254,321,100,321,100,275,184,275,185,176">
+<area shape="poly" href="../livecamera/michi/kamikureti.html" title="上暮地" alt="上暮地" coords="306,66,377,66,377,144,457,144,457,189,306,189,306,66">
+<area shape="poly" href="../livecamera/michi/kagosaka.html" title="籠坂峠" alt="籠坂峠" coords="380,356,309,356,309,432,239,432,239,474,380,474,380,356">
+<area shape="rect" href="../livecamera/michi/yamanakako.html" title="山中湖" alt="山中湖" coords="328,278,531,350">
+<area shape="poly" href="../livecamera/michi/kawagutiko.html" title="河口湖" alt="河口湖" coords="147,54,271,54,271,98,218,98,218,175,147,175,147,54">
+</map>
+
+<script src="./js/imageMapResizer.js"></script>
+<script src="./js/tool.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+  const xhr = new XMLHttpRequest();
+  xhr.open('get', 'https://www.ktr.mlit.go.jp/koufu/livecamera/INFO_TABLE/michi.html');
+  xhr.overrideMimeType('text/plain; charset=Shift_JIS');
+  xhr.send();
+
+  xhr.addEventListener('readystatechange', function(){
+    if( xhr.readyState === 4 && xhr.status === 200){
+      let res = (xhr.response).replace(/\.\.\//g, '../livecamera/');
+      const html = new DOMParser().parseFromString(res, 'text/html');
+      const body = html.querySelector('body');
+      document.querySelector('#hyou').innerHTML = body.innerHTML;
+    }
+  });
+});
+</script>
+</body>
+</html>

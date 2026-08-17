@@ -102,3 +102,55 @@ def test_candidate_record_passes_schema():
         terms_url="https://www.ktr.mlit.go.jp/guide/copyright.html",
         river_or_route="国道4号", refresh_sec=600)
     assert validate_camera_record(cand.to_record("2026-08-18")) == []
+
+
+def test_oomiya_district_table_pairing():
+    from crawler.sources.mlit_ktr_road import oomiya_cameras
+    html = read("mlit_ktr_road_oomiya_district.html")
+    cams = oomiya_cameras(html, "https://www.ktr.mlit.go.jp/oomiya/oomiya00095.html")
+    assert len(cams) >= 9, f"入間市高倉地区は9台のはず: {len(cams)}"
+    named = {key: (name, link) for key, _, name, link in cams}
+    assert named["25a"][0] == "小谷田交差点"
+    assert named["25a"][1].endswith("/oomiya/oomiya00096.html")
+    urls = {key: url for key, url, _, _ in cams}
+    assert urls["25a"] == "https://www.ktr.mlit.go.jp/oomiya/livecamera/25_A.jpg"
+
+
+def test_yokohama_left_position_pairing():
+    from crawler.sources.mlit_ktr_road import yokohama_cameras
+    html = read("mlit_ktr_road_yokohama.html")
+    cams = yokohama_cameras(html, "https://www.ktr.mlit.go.jp/yokohama/live-camera/live.html")
+    assert len(cams) == 2
+    names = {key: name for key, _, name in cams}
+    assert set(names.values()) == {"畑宿付近", "箱根峠付近"}
+
+
+def test_koufu_spot_page():
+    from crawler.sources.mlit_ktr_road import koufu_camera
+    html = read("mlit_ktr_road_koufu_spot.html")
+    cam = koufu_camera(html, "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/mukawa.html")
+    assert cam == ("11", "武川", "国道20号")
+
+
+def test_koufu_index_links():
+    from crawler.sources.mlit_ktr_road import KOUFU_LINK_RE
+    from urllib.parse import urljoin, urlparse
+    import re as _re
+    html = read("mlit_ktr_road_koufu_index.html")
+    links = {urljoin("https://www.ktr.mlit.go.jp/koufu/michi_camera/index.htm", h)
+             for h in _re.findall(r'href="([^"]+\.html?)"', html)}
+    spots = [u for u in links if KOUFU_LINK_RE.search(urlparse(u).path)]
+    assert len(spots) >= 25, f"甲府の地点ページが25件以上取れるはず: {len(spots)}"
+
+
+def test_nagano_map_layer_pairing():
+    from crawler.sources.mlit_ktr_road import nagano_map_cameras
+    html = read("mlit_ktr_road_nagano_map18.html")
+    cams = nagano_map_cameras(
+        html, "https://www.ktr.mlit.go.jp/nagano/douroinfo/road/html/map/cameraMap_18.html")
+    assert len(cams) >= 15, f"R18マップから15台以上: {len(cams)}"
+    named = {code: (url, alt) for code, url, alt in cams}
+    assert "080139" in named
+    assert named["080139"][1] == "信濃町野尻赤川"
+    assert named["080139"][0] == \
+        "https://www.ktr.mlit.go.jp/nagano/douroinfo/data/camera/cond_m/080139_L.jpg"
