@@ -1,0 +1,3259 @@
+{
+ "version": "2026-08-17T08:04:06Z",
+ "cameras": [
+  {
+   "id": "mlit-ktr-103585001",
+   "name": "倉見",
+   "name_kana": null,
+   "lat": 35.3924722,
+   "lng": 139.3740556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14203",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585001.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585001&ownCd=3585&sysCamId=3585001"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 62106
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585002",
+   "name": "厚木",
+   "name_kana": null,
+   "lat": 35.4415833,
+   "lng": 139.3749722,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14215",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585002.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585002&ownCd=3585&sysCamId=3585002"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 104267
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585003",
+   "name": "磯部",
+   "name_kana": null,
+   "lat": 35.5096111,
+   "lng": 139.3791667,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14209",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585003.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585003&ownCd=3585&sysCamId=3585003"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 74997
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585004",
+   "name": "高田橋",
+   "name_kana": null,
+   "lat": 35.5431111,
+   "lng": 139.3296111,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14209",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585004.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585004&ownCd=3585&sysCamId=3585004"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 50500
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585005",
+   "name": "葉山島",
+   "name_kana": null,
+   "lat": 35.5578889,
+   "lng": 139.3206667,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14209",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585005.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585005&ownCd=3585&sysCamId=3585005"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 87060
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585006",
+   "name": "大島",
+   "name_kana": null,
+   "lat": 35.5764167,
+   "lng": 139.3079444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14209",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585006.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585006&ownCd=3585&sysCamId=3585006"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 50822
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585007",
+   "name": "小倉橋",
+   "name_kana": null,
+   "lat": 35.5859722,
+   "lng": 139.3002778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14209",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585007.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585007&ownCd=3585&sysCamId=3585007"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 79837
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585079",
+   "name": "戸沢橋",
+   "name_kana": null,
+   "lat": 35.405139,
+   "lng": 139.367639,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14212",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585079.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585079&ownCd=3585&sysCamId=3585079"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 68703
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585080",
+   "name": "玉川合流点",
+   "name_kana": null,
+   "lat": 35.412732,
+   "lng": 139.365855,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14212",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585080.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585080&ownCd=3585&sysCamId=3585080"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 58309
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585081",
+   "name": "三川合流点",
+   "name_kana": null,
+   "lat": 35.4484,
+   "lng": 139.36851,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14212",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585081.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585081&ownCd=3585&sysCamId=3585081"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 81235
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585082",
+   "name": "新田宿",
+   "name_kana": null,
+   "lat": 35.4789,
+   "lng": 139.37866,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14216",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585082.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585082&ownCd=3585&sysCamId=3585082"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 45132
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585083",
+   "name": "座架依橋",
+   "name_kana": null,
+   "lat": 35.488363,
+   "lng": 139.371178,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14212",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585083.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585083&ownCd=3585&sysCamId=3585083"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 53803
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585084",
+   "name": "昭和橋",
+   "name_kana": null,
+   "lat": 35.520993,
+   "lng": 139.368613,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14209",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585084.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585084&ownCd=3585&sysCamId=3585084"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 65459
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-103585085",
+   "name": "中津",
+   "name_kana": null,
+   "lat": 35.527517,
+   "lng": 139.351868,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14401",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/103585085.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=103585085&ownCd=3585&sysCamId=3585085"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.river.go.jp/riyou",
+    "license": "unknown",
+    "attribution": "出典：神奈川県／国土交通省「川の防災情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "神奈川県設置カメラ。利用規約の個別確認が必要（SPEC 3.3）"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 91646
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320001",
+   "name": "調布橋",
+   "name_kana": null,
+   "lat": 35.783958333,
+   "lng": 139.264569444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13205",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03380.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320001&ownCd=21320&sysCamId=21320001"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 85617
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320002",
+   "name": "報恩橋水位観測所",
+   "name_kana": null,
+   "lat": 35.648858333,
+   "lng": 139.458447222,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13224",
+   "river_or_route": "大栗川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03423.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320002&ownCd=21320&sysCamId=21320002"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 76192
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320003",
+   "name": "田園調布出張所2",
+   "name_kana": null,
+   "lat": 35.582930556,
+   "lng": 139.672005556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13111",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03351.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320003&ownCd=21320&sysCamId=21320003"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 49057
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320004",
+   "name": "浅川橋水位観測所",
+   "name_kana": null,
+   "lat": 35.665908333,
+   "lng": 139.329827778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13201",
+   "river_or_route": "浅川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03371.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320004&ownCd=21320&sysCamId=21320004"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 113852
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320005",
+   "name": "日野橋水位観測所",
+   "name_kana": null,
+   "lat": 35.684319444,
+   "lng": 139.413177778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13202",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03361.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320005&ownCd=21320&sysCamId=21320005"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 64323
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320006",
+   "name": "石原水位観測所",
+   "name_kana": null,
+   "lat": 35.643869444,
+   "lng": 139.528058333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13208",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03475.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320006&ownCd=21320&sysCamId=21320006"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 87173
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320007",
+   "name": "二子玉川ライズタワーオフィス屋上",
+   "name_kana": null,
+   "lat": 35.610458333,
+   "lng": 139.629477778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13112",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03994.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320007&ownCd=21320&sysCamId=21320007"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 84622
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320008",
+   "name": "小田急線橋梁上流",
+   "name_kana": null,
+   "lat": 35.625619444,
+   "lng": 139.571469444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13219",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03413.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320008&ownCd=21320&sysCamId=21320008"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 69734
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320009",
+   "name": "関戸橋下流",
+   "name_kana": null,
+   "lat": 35.651438889,
+   "lng": 139.456208333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13224",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03454.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320009&ownCd=21320&sysCamId=21320009"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 78924
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320010",
+   "name": "睦橋上流",
+   "name_kana": null,
+   "lat": 35.720361111,
+   "lng": 139.329991667,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13218",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03468.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320010&ownCd=21320&sysCamId=21320010"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 81370
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320011",
+   "name": "高幡橋上流",
+   "name_kana": null,
+   "lat": 35.665988889,
+   "lng": 139.404458333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13212",
+   "river_or_route": "浅川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03533.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320011&ownCd=21320&sysCamId=21320011"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 68329
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320012",
+   "name": "綱島水位観測所",
+   "name_kana": null,
+   "lat": 35.5349,
+   "lng": 139.63755,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03326.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320012&ownCd=21320&sysCamId=21320012"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 87191
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320013",
+   "name": "鳥山川合流点",
+   "name_kana": null,
+   "lat": 35.514747222,
+   "lng": 139.609927778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03334.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320013&ownCd=21320&sysCamId=21320013"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 109606
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320014",
+   "name": "越流堤上流2",
+   "name_kana": null,
+   "lat": 35.516869444,
+   "lng": 139.598288889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03460.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320014&ownCd=21320&sysCamId=21320014"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 69994
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320015",
+   "name": "多摩川河口水位観測所",
+   "name_kana": null,
+   "lat": 35.536708333,
+   "lng": 139.766708333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14130",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03372.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320015&ownCd=21320&sysCamId=21320015"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 47949
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320016",
+   "name": "末吉橋水位観測所",
+   "name_kana": null,
+   "lat": 35.535319444,
+   "lng": 139.665458333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14130",
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03385.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320016&ownCd=21320&sysCamId=21320016"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 64871
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320017",
+   "name": "相模川河口",
+   "name_kana": null,
+   "lat": 35.314888889,
+   "lng": 139.3668,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14207",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03547.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320017&ownCd=21320&sysCamId=21320017"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 66380
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320018",
+   "name": "神川橋水位観測所",
+   "name_kana": null,
+   "lat": 35.373183333,
+   "lng": 139.368588889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14321",
+   "river_or_route": "相模川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03366.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320018&ownCd=21320&sysCamId=21320018"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01459.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 93162
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320019",
+   "name": "亀の子橋水位観測所",
+   "name_kana": null,
+   "lat": 35.514758333,
+   "lng": 139.6099,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03386.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320019&ownCd=21320&sysCamId=21320019"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 121209
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320020",
+   "name": "矢上橋水位観測所",
+   "name_kana": null,
+   "lat": 35.551,
+   "lng": 139.657869444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14130",
+   "river_or_route": "矢上川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03383.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320020&ownCd=21320&sysCamId=21320020"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 119050
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320021",
+   "name": "高田橋水位観測所",
+   "name_kana": null,
+   "lat": 35.545988889,
+   "lng": 139.622647222,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "早淵川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03381.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320021&ownCd=21320&sysCamId=21320021"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 97102
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320022",
+   "name": "鳥山水位観測所",
+   "name_kana": null,
+   "lat": 35.50395,
+   "lng": 139.606827778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "鳥山川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03382.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320022&ownCd=21320&sysCamId=21320022"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 115769
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320026",
+   "name": "鶴見川橋上流",
+   "name_kana": "つるみがわばしじょうりゅう",
+   "lat": 35.514091667,
+   "lng": 139.680197222,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03316.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320026&ownCd=21320&sysCamId=21320026"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 52742
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320027",
+   "name": "佃野町",
+   "name_kana": "つくのちょう",
+   "lat": 35.516780556,
+   "lng": 139.6763,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03319.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320027&ownCd=21320&sysCamId=21320027"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 68126
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320028",
+   "name": "小机大橋水位観測所",
+   "name_kana": "こづくえおおはしすいいかんそくじょ",
+   "lat": 35.517438889,
+   "lng": 139.595161111,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14100",
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03390.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320028&ownCd=21320&sysCamId=21320028"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01458.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 86250
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320029",
+   "name": "多摩川緑地事務所",
+   "name_kana": "たまがわりょくちじむしょ",
+   "lat": 35.540769444,
+   "lng": 139.704980556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13111",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03399.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320029&ownCd=21320&sysCamId=21320029"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 65193
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320030",
+   "name": "戸手船着場",
+   "name_kana": "とでふなつきば",
+   "lat": 35.537919444,
+   "lng": 139.69945,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14130",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03374.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320030&ownCd=21320&sysCamId=21320030"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 67803
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320031",
+   "name": "戸手樋管",
+   "name_kana": "とでひかん",
+   "lat": 35.546619444,
+   "lng": 139.697530556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14130",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03503.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320031&ownCd=21320&sysCamId=21320031"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 82560
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320032",
+   "name": "田園調布(上)観測所",
+   "name_kana": "でんえんちょうふ(かみ)かんそくじょ",
+   "lat": 35.589261111,
+   "lng": 139.665769444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13111",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03342.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320032&ownCd=21320&sysCamId=21320032"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 75095
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320033",
+   "name": "二子橋",
+   "name_kana": "ふたごばし",
+   "lat": 35.610938889,
+   "lng": 139.625519444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13112",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03407.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320033&ownCd=21320&sysCamId=21320033"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 76299
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320034",
+   "name": "高幡橋水位観測所",
+   "name_kana": "たかはたばしすいいかんそくじょ",
+   "lat": 35.664188889,
+   "lng": 139.410169444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13212",
+   "river_or_route": "浅川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03360.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320034&ownCd=21320&sysCamId=21320034"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 84490
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320035",
+   "name": "平山橋上流",
+   "name_kana": "ひらやまばしじょうりゅう",
+   "lat": 35.649580556,
+   "lng": 139.3811,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13212",
+   "river_or_route": "浅川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03540.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320035&ownCd=21320&sysCamId=21320035"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "pause=1（休止中の可能性） / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 32983
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320036",
+   "name": "暁橋上流",
+   "name_kana": "あかつきばしじょうりゅう",
+   "lat": 35.666438889,
+   "lng": 139.335038889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13201",
+   "river_or_route": "浅川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03543.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320036&ownCd=21320&sysCamId=21320036"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 95026
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320037",
+   "name": "京王相模原線下流",
+   "name_kana": "けいおうさがみはらせんかりゅう",
+   "lat": 35.641161111,
+   "lng": 139.538511111,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13208",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03474.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320037&ownCd=21320&sysCamId=21320037"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 55561
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320038",
+   "name": "石原第二水位観測所",
+   "name_kana": "いしはらだいにすいいかんそくじょ",
+   "lat": 35.641091667,
+   "lng": 139.525691667,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "14",
+   "municipality": "14130",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_140007_31C03356.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320038&ownCd=21320&sysCamId=21320038"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 88800
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320039",
+   "name": "大丸用水堰下流",
+   "name_kana": "おおまるようすいぜきかりゅう",
+   "lat": 35.654019444,
+   "lng": 139.477938889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13206",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03479.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320039&ownCd=21320&sysCamId=21320039"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 58294
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320040",
+   "name": "京王線橋梁上流",
+   "name_kana": "けいおうせんきょうりょうじょうりゅう",
+   "lat": 35.653530556,
+   "lng": 139.447230556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13224",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03421.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320040&ownCd=21320&sysCamId=21320040"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 60742
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320041",
+   "name": "中央自動車道上流",
+   "name_kana": "ちゅうおうじどうしゃどうじょうりゅう",
+   "lat": 35.679561111,
+   "lng": 139.423461111,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13215",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03428.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320041&ownCd=21320&sysCamId=21320041"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 45028
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320042",
+   "name": "栄町排水樋管",
+   "name_kana": "さかえちょうはいすいひかん",
+   "lat": 35.68545,
+   "lng": 139.394269444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13212",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03486.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320042&ownCd=21320&sysCamId=21320042"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 120345
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320043",
+   "name": "JR八高線橋梁上流",
+   "name_kana": "じぇいあーるはちこうせんきょうりょうじょうりゅう",
+   "lat": 35.692811111,
+   "lng": 139.360630556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13201",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03489.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320043&ownCd=21320&sysCamId=21320043"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 80005
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320044",
+   "name": "秋川合流点",
+   "name_kana": "あきかわごうりゅうてん",
+   "lat": 35.708769444,
+   "lng": 139.3343,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13207",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03362.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320044&ownCd=21320&sysCamId=21320044"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 78689
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320045",
+   "name": "羽村大橋下流",
+   "name_kana": "はむらおおはしかりゅう",
+   "lat": 35.748888889,
+   "lng": 139.314430556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13227",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03469.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320045&ownCd=21320&sysCamId=21320045"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 106779
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320046",
+   "name": "那賀樋管",
+   "name_kana": "なかひかん",
+   "lat": 35.757119444,
+   "lng": 139.306969444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13227",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03491.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320046&ownCd=21320&sysCamId=21320046"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 104881
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-ktr-221320047",
+   "name": "草花排水樋管上流",
+   "name_kana": "くさばなはいすいひかんじょうりゅう",
+   "lat": 35.75545,
+   "lng": 139.303088889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": "13227",
+   "river_or_route": "多摩川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://cam.river.go.jp/cam/now/cctv_130001_31C03492.jpg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=221320047&ownCd=21320&sysCamId=21320047"
+   },
+   "operator": "国土交通省 関東地方整備局 京浜河川事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/keihin/keihin01457.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 京浜河川事務所（川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": ""
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 115669
+   },
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uc0uwffm6gl2jswluiubxowg",
+   "name": "番匠川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC0UWfFM6GL2jSWLuiUBXoWg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uc5u5693lw0zy7cd6ywju6zq",
+   "name": "嘉瀬川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC5u5693Lw0Zy7cd6yWjU6ZQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uc6srm2ygdykhfzdehui9nq",
+   "name": "六角川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC6SRM2ygDykHf_ZDehui9nQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uc8ds6sqjqc89705g5wcea",
+   "name": "大淀川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC_8ds6S_qjqc89705G5wceA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uc8ub986tdig6x7bf0f1jew",
+   "name": "松浦川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC8uB986Td-iG6x7BF0F1JEw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uc8zzlk9hyq7wmlzbamivwcg",
+   "name": "球磨川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC8ZZlK9HyQ7WmLZbamIvwcg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uca0fkxm0cj5dcqosr8pyxrq",
+   "name": "五ヶ瀬川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCA0fKXM0CJ5dcQosR8pyxRQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucb1iyfzwqswtfnsiqkrt0q",
+   "name": "矢部川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCb1iYF-zWqswtfNSIQKRt0Q",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uccn1d6khxwkantngru995uw",
+   "name": "白川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCCn1d6KhxWkANtNgRU995Uw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-uccogrsrbhwdxpxepw2iczq",
+   "name": "川内川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCcoGrsRbhwDXPXE_pW2ICzQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucdfxgt9x8clcezact7ag2g",
+   "name": "本明川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCdFxgT9x_8ClcEZACt7Ag2g",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucffackhaglkllmqiateycdw",
+   "name": "山国川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCFfacKhaGlkllMQiATeYCDw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucj9faq05kuukqrccrh1xga",
+   "name": "肝属川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCJ9F_aQ05kuUkQRCcrh1XgA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucuzji9djqaohitrdq5xliw",
+   "name": "大野川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCUzji-9dJQaOHiTRdQ5xLIw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucv8csstnecxgyazqy558a",
+   "name": "緑川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCV8cS-sTne-cXgYaZqY558A",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucvlb412e3kxzlonlvqnvww",
+   "name": "菊池川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCVlb412e3-KxZlONLvqNvWw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucvsajk99sgmhic5i9k2tkqw",
+   "name": "遠賀川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCVsaJK99sGmHic5i9K2TKQw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucxfm2y5glvqlyxjqoravyg",
+   "name": "大分川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCXFM2y5gLvQlYxjQO-ravYg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucxjzvkda3koj5wfzvmv7i2g",
+   "name": "小丸川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCXjZvKda3koJ5wFzVMv7I2g",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mlit-qsr-yt-ucxvrdp0vsztx6nr4le2tifa",
+   "name": "筑後川",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCxvRdp0VSZtx6NR4Le2TIFA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html"
+   },
+   "operator": "国土交通省 九州地方整備局",
+   "source": {
+    "page_url": "http://www.qsr.mlit.go.jp/useful/kasen_youtube.html",
+    "terms_url": "https://www.qsr.mlit.go.jp/site_info/index_c6.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 九州地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-17",
+   "last_updated": "2026-08-17"
+  }
+ ]
+}

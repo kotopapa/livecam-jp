@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://livecam-jp/schema/status.schema.json",
+  "title": "StatusFile",
+  "type": "object",
+  "required": ["generated_at", "statuses"],
+  "properties": {
+    "generated_at": { "type": "string", "format": "date-time" },
+    "statuses": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["state"],
+        "properties": {
+          "state": { "type": "string", "enum": ["ok", "frozen", "error", "unknown"] },
+          "last_ok_at": { "type": ["string", "null"] },
+          "http_status": { "type": ["integer", "null"] },
+          "frozen_since": { "type": ["string", "null"] },
+          "consecutive_failures": { "type": "integer", "minimum": 0 },
+          "avg_interval_sec": { "type": ["integer", "null"] }
+        }
+      }
+    }
+  }
+}

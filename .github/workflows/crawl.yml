@@ -1,0 +1,49 @@
+name: crawl
+
+on:
+  schedule:
+    - cron: "0 18 * * 5"   # 毎週土曜 03:00 JST（= 金曜 18:00 UTC）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 取得数の前回値を記録
+        run: |
+          python -c "import json,pathlib; p=pathlib.Path('data/candidates.json'); print(len(json.loads(p.read_text(encoding='utf-8'))['cameras']) if p.exists() else 0)" > /tmp/prev_count
+      - name: クロール実行
+        run: python -m crawler.main --all
+      - name: 取得数チェック（前回比80%未満で失敗 = パーサ破損検知）
+        run: |
+          prev=$(cat /tmp/prev_count)
+          curr=$(python -c "import json; print(len(json.load(open('data/candidates.json', encoding='utf-8'))['cameras']))")
+          echo "prev=$prev curr=$curr"
+          if [ "$prev" -gt 20 ] && [ $((curr * 100)) -lt $((prev * 80)) ]; then
+            echo "::error::候補数が前回比80%を下回った（パーサ破損の可能性）"
+            exit 1
+          fi
+      - name: スキーマ検証
+        run: python -m crawler.validate
+      - name: 差分があればPRを作成（mainへ直接コミットしない）
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: crawl/update-candidates
+          title: "crawl: candidates.json 更新"
+          commit-message: "crawl: candidates.json 更新"
+          body: |
+            週次クロールの結果です。`python tools/review_cli.py` でレビューしてください。
+          add-paths: |
+            data/candidates.json
+            crawler/.cache/geocode.json

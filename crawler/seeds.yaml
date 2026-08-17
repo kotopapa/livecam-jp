@@ -1,0 +1,33 @@
+# クロール起点。source は crawler/sources/__init__.py の REGISTRY キーに対応する。
+# enabled: false のものは実装待ち（パーサ追加時に有効化）。
+
+sources:
+  - id: mlit_ktr_river
+    enabled: true
+    note: 関東地方整備局。リンク集→事務所→河川別ページから scamId を収集し kawabou で解決
+
+  - id: mlit_qsr_youtube
+    enabled: true
+    note: 九州地方整備局の官公庁YouTube配信（優先度最高）。座標なし→手動レビューで確定
+
+  - id: kawabou_pref
+    enabled: false
+    note: 川の防災情報の県単位一括収集（全国展開・M5用）。リクエスト数が多いので明示的に有効化する
+    # kawabou の prefCd（crawler/tests/fixtures/kawabou_prefarea.json 参照）
+    # 例: 関東 = [801, 901, 1001, 1101, 1201, 1301, 1401]
+    pref_codes: []
+
+# 実装待ちシード（SPEC 6.2 より。パーサ追加時に sources へ昇格させる）
+todo:
+  - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
+  - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）
+  - url: https://www.kkr.mlit.go.jp/river/bousai/livecamera.html  # 近畿地整
+  - url: http://river-livecam.cgr.mlit.go.jp/                 # 中国地整
+  - url: https://www.thr.mlit.go.jp/bumon/b00037/k00290/river-hp/kasen/livecamera/index.html  # 東北地整
+  - note: 北海道開発局・北陸・中部・四国・沖縄総合事務局、47都道府県、火山カメラ（気象庁・砂防）
+
+# クロール対象外（SPEC 6.2 除外リスト）
+excluded:
+  - 民間ライブカメラまとめサイト全般（cametan.com 等。著作権・規約上NG）
+  - 個人・企業設置カメラ
+  - ログインが必要なもの

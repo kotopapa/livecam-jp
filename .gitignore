@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# クローラのローカルキャッシュ（geocodeキャッシュはコミットする）
+crawler/.cache/http/
+
+# ローカル実行ログ
+crawl_run.log
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ビルド生成物（publish.yml が生成する。ローカル確認用は追跡しない）
+site/v1/
+
+crawl_nationwide*.log
+*.local.md
