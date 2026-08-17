@@ -7,7 +7,7 @@
 ## コマンド
 
 ```bash
-python -m pytest crawler/tests monitor/tests   # テスト
+python -m pytest crawler/tests monitor/tests tools/tests   # テスト
 python -m crawler.main --all --dry-run          # クロール（書き込みなし）
 python -m crawler.main --all --no-verify --no-geocode --limit 5  # 高速動作確認
 python -m monitor.main                          # 死活監視

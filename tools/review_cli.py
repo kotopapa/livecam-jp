@@ -3,6 +3,15 @@
     python tools/review_cli.py            # pending を1件ずつレビュー
     python tools/review_cli.py --id X     # 特定IDのみ
 
+一括承認（人が明示的に範囲を指定する。フィルタ指定なしでは動かない）:
+
+    python tools/review_cli.py --bulk --license public_data_1.0 --verified --dry-run
+    python tools/review_cli.py --bulk --license unknown --pref 14 --operator 神奈川県
+
+    フィルタ: --license / --pref(複数可) / --operator(部分一致) / --category
+              / --feed-type / --verified(2回取得検証で画像変化を確認済みのみ)
+    --dry-run で対象一覧の確認のみ。実行時は表示された件数をそのまま入力して確定する。
+
 操作: a 承認 / r 却下 / e 編集 / s スキップ / o 画像・地図を開く / q 終了
 承認したものだけ cameras.json へ移す。却下は candidates.json に rejected として残す
 （再クロール時に候補へ再登場させないため、却下済みも cameras.json に移して記録する）。
@@ -91,10 +100,121 @@ def edit(rec: dict) -> None:
             cur[path[-1]] = val
 
 
+def matches_filters(rec: dict, *, license: str | None = None, prefs: list[str] | None = None,
+                    operator: str | None = None, category: str | None = None,
+                    feed_type: str | None = None, verified: bool = False) -> bool:
+    """一括承認のフィルタ判定。pending 以外は常に対象外。"""
+    if rec["review"]["status"] != "pending":
+        return False
+    if license is not None and rec["source"].get("license") != license:
+        return False
+    if prefs and rec.get("prefecture") not in prefs:
+        return False
+    if operator is not None and operator not in (rec.get("operator") or ""):
+        return False
+    if category is not None and rec.get("category") != category:
+        return False
+    if feed_type is not None and rec["feed"]["type"] != feed_type:
+        return False
+    if verified and not (rec.get("verification") or {}).get("image_changed"):
+        return False
+    return True
+
+
+def apply_bulk_approval(selected: list[dict], cameras: dict, note: str,
+                        reviewed_at: str) -> tuple[list[str], list[tuple[str, list[str]]]]:
+    """選択済みレコードを承認して cameras に移す。スキーマNGは pending のまま残す。
+
+    戻り値: (承認したID一覧, [(スキーマNGのID, エラー一覧), ...])
+    """
+    existing_ids = {r["id"] for r in cameras["cameras"]}
+    approved: list[str] = []
+    skipped: list[tuple[str, list[str]]] = []
+    for rec in selected:
+        if rec["id"] in existing_ids:
+            skipped.append((rec["id"], ["cameras.json に既存"]))
+            continue
+        original_review = rec["review"]
+        rec["review"] = {"status": "approved", "reviewed_at": reviewed_at, "note": note}
+        out = {k: v for k, v in rec.items() if k != "verification"}
+        errs = validate_camera_record(out)
+        if errs:
+            rec["review"] = original_review
+            skipped.append((rec["id"], errs))
+            continue
+        cameras["cameras"].append(out)
+        approved.append(rec["id"])
+    return approved, skipped
+
+
+def bulk_main(args) -> int:
+    filters = dict(license=args.license, prefs=args.pref, operator=args.operator,
+                   category=args.category, feed_type=args.feed_type, verified=args.verified)
+    if not any([args.license, args.pref, args.operator, args.category,
+                args.feed_type, args.verified]):
+        print("一括承認にはフィルタの指定が必須（範囲を明示しない承認はしない。SPEC 6.1）")
+        return 1
+
+    candidates = load(CANDIDATES_PATH)
+    cameras = load(CAMERAS_PATH)
+    selected = [r for r in candidates["cameras"] if matches_filters(r, **filters)]
+    if not selected:
+        print("フィルタに該当する pending 候補なし")
+        return 0
+
+    from collections import Counter
+    by_pref = Counter(r.get("prefecture") for r in selected)
+    by_op = Counter(r.get("operator") for r in selected)
+    print(f"対象: {len(selected)}件")
+    print(f"  都道府県: {len(by_pref)}県 {dict(by_pref.most_common(5))} ...")
+    print("  運営者上位:")
+    for op, n in by_op.most_common(5):
+        print(f"    {n:6d}  {op}")
+    print("  サンプル:")
+    for r in selected[:3]:
+        print(f"    {r['id']}  {r['name']}  [{r['source'].get('license')}]")
+
+    if args.dry_run:
+        print("(dry-run: 変更なし)")
+        return 0
+
+    typed = input(f"この範囲を一括承認する。確認のため件数 {len(selected)} を入力 > ").strip()
+    if typed != str(len(selected)):
+        print("件数不一致のため中止")
+        return 1
+
+    note = "bulk: " + " ".join(
+        f"{k}={v}" for k, v in filters.items() if v not in (None, [], False))
+    approved, skipped = apply_bulk_approval(
+        selected, cameras, note, date.today().isoformat())
+    if approved:
+        approved_set = set(approved)
+        candidates["cameras"] = [r for r in candidates["cameras"]
+                                 if r["id"] not in approved_set]
+        save(CANDIDATES_PATH, candidates)
+        save(CAMERAS_PATH, cameras)
+    print(f"承認 {len(approved)}件 / スキップ {len(skipped)}件")
+    for cid, errs in skipped[:10]:
+        print(f"  skip {cid}: {errs[0]}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--id", help="特定IDのみレビュー")
+    ap.add_argument("--bulk", action="store_true", help="フィルタ指定による一括承認")
+    ap.add_argument("--license", help="source.license の完全一致")
+    ap.add_argument("--pref", action="append", help="都道府県コード(JIS)。複数指定可")
+    ap.add_argument("--operator", help="運営者名の部分一致")
+    ap.add_argument("--category", help="カテゴリの完全一致")
+    ap.add_argument("--feed-type", help="feed.type の完全一致")
+    ap.add_argument("--verified", action="store_true",
+                    help="2回取得検証で画像変化を確認済みのみ")
+    ap.add_argument("--dry-run", action="store_true", help="対象一覧の表示のみ")
     args = ap.parse_args()
+
+    if args.bulk:
+        return bulk_main(args)
 
     candidates = load(CANDIDATES_PATH)
     cameras = load(CAMERAS_PATH)
