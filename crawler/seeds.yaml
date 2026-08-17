@@ -10,6 +10,12 @@ sources:
     enabled: true
     note: 九州地方整備局の官公庁YouTube配信（優先度最高）。座標なし→手動レビューで確定
 
+  - id: mlit_ktr_road
+    enabled: true
+    note: 関東地整の道路カメラ（静止画URL共通の4事務所: 宇都宮・高崎・相武・北首都）。
+          座標なし→ジオコーディング+手動レビュー。大宮・横浜・甲府・長野はURL規則が
+          別系統のため未対応（mlit_ktr_road.py の docstring 参照）
+
   - id: kawabou_pref
     enabled: false
     note: 川の防災情報の県単位一括収集（全国展開・M5用）。リクエスト数が多いので明示的に有効化する
