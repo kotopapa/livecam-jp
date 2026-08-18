@@ -2,13 +2,17 @@
 
 一覧: https://www.hbc.co.jp/info-cam/cam_list.html / cam_list2.html（素のリンク集）
 地点ページに 720px静止画（media/<name>_720.jpg、JSで自動リロード＝随時更新）と
-Googleマップ埋め込みがあり、embed URLの !2d(経度)!3d(緯度) から座標が取れる。
+Googleマップ埋め込みがある。座標は embed URL の !2z（base64のDMS表記、
+マーカー実位置）を第一に使う。!2d/!3d はズーム依存の「地図ビューポート中心」で
+海上など大きくずれることがあるため、!2z が無いときのフォールバックに留める。
 """
 
 from __future__ import annotations
 
+import base64
+import binascii
 import re
-from urllib.parse import urljoin
+from urllib.parse import unquote, urljoin
 
 from bs4 import BeautifulSoup
 
@@ -19,7 +23,29 @@ BASE = "https://www.hbc.co.jp/info-cam/"
 LIST_URLS = (BASE + "cam_list.html", BASE + "cam_list2.html")
 IMG_RE = re.compile(r"media/([A-Za-z0-9_-]+)_720\.jpg")
 GMAP_RE = re.compile(r"google\.com/maps/embed\?pb=[^\"']*!2d([\d.]+)[^\"']*!3d([\d.]+)")
+GMAP_Z_RE = re.compile(r"google\.com/maps/embed\?pb=[^\"']*!2z([A-Za-z0-9+/%=_-]+)")
+DMS_RE = re.compile(
+    r"(\d+)\xb0(\d+)'([\d.]+)\"([NS])\s+(\d+)\xb0(\d+)'([\d.]+)\"([EW])")
 MAX_PAGES = 45
+
+
+def decode_marker_dms(token: str) -> tuple[float, float] | None:
+    """!2z の base64 トークン（例: 43°03'40.3"N 141°21'08.6"E）を (lat, lng) に。"""
+    try:
+        raw = base64.b64decode(unquote(token) + "==")
+        text = raw.decode("utf-8", "replace")
+    except (binascii.Error, ValueError):
+        return None
+    m = DMS_RE.search(text)
+    if not m:
+        return None
+    lat = int(m.group(1)) + int(m.group(2)) / 60 + float(m.group(3)) / 3600
+    if m.group(4) == "S":
+        lat = -lat
+    lng = int(m.group(5)) + int(m.group(6)) / 60 + float(m.group(7)) / 3600
+    if m.group(8) == "W":
+        lng = -lng
+    return (round(lat, 6), round(lng, 6))
 
 
 def extract_point_links(html: str, base_url: str) -> list[tuple[str, str]]:
@@ -40,14 +66,18 @@ def extract_point_links(html: str, base_url: str) -> list[tuple[str, str]]:
 def extract_point(html: str) -> tuple[str, float, float] | None:
     """地点ページから (画像名, lat, lng) を返す。座標が無ければ None。"""
     img = IMG_RE.search(html)
-    gm = GMAP_RE.search(html)
     if not img:
         return None
+    # マーカー実位置（!2z）を優先。無ければビューポート中心（!2d/!3d）
+    z = GMAP_Z_RE.search(html)
+    if z:
+        dms = decode_marker_dms(z.group(1))
+        if dms:
+            return (img.group(1), dms[0], dms[1])
+    gm = GMAP_RE.search(html)
     if gm:
-        lng, lat = float(gm.group(1)), float(gm.group(2))
-    else:
-        return (img.group(1), None, None)  # type: ignore[return-value]
-    return (img.group(1), lat, lng)
+        return (img.group(1), float(gm.group(2)), float(gm.group(1)))
+    return (img.group(1), None, None)  # type: ignore[return-value]
 
 
 def categorize(name: str) -> str:

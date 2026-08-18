@@ -174,7 +174,17 @@ def test_hbc_webcam_extract():
     sap = (FIXTURES / "hbc_cam_sapporo.html").read_text(encoding="utf-8", errors="replace")
     img, lat, lng = extract_point(sap)
     assert img == "sapporohd"
-    assert abs(lat - 43.061) < 0.01 and abs(lng - 141.3515) < 0.01
+    # !2z（マーカー実位置のDMS）を優先して使う。!2d/!3d はビューポート中心で
+    # ズームによっては海上など大きくずれる（稚内で経度1.1度西など）
+    assert abs(lat - 43.061194) < 1e-6 and abs(lng - 141.352389) < 1e-6
+
+
+def test_hbc_webcam_marker_dms_decode():
+    from crawler.sources.hbc_webcam import decode_marker_dms
+    # 43°03'40.3"N 141°21'08.6"E の base64
+    assert decode_marker_dms("NDPCsDAzJzQwLjMiTiAxNDHCsDIxJzA4LjYiRQ") == \
+        (43.061194, 141.352389)
+    assert decode_marker_dms("not-base64!!") is None
 
 
 def test_kaiho_webcam_extract():
