@@ -20,7 +20,7 @@ void main() {
           client: MockClient((_) async => http.Response('not found', 404))),
       cache: CacheStore(tmp),
     ));
-    await tester.pumpWidget(LiveCamApp(app: app));
+    await tester.pumpWidget(LiveCamApp(app: app, onboardingDone: true));
     await tester.pump();
     expect(find.text('地図'), findsOneWidget);
     expect(find.text('一覧'), findsOneWidget);

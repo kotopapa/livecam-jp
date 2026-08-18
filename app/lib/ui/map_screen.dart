@@ -160,6 +160,24 @@ class _MapScreenState extends State<MapScreen> {
                     setSheetState(() {});
                   },
                 ),
+                SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
+                  title: const Text('お気に入りのみ'),
+                  value: app.favoritesOnly,
+                  onChanged: (v) {
+                    app.setFavoritesOnly(v);
+                    setSheetState(() {});
+                  },
+                ),
+                SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
+                  title: const Text('現在映っているもののみ'),
+                  value: app.okOnly,
+                  onChanged: (v) {
+                    app.setOkOnly(v);
+                    setSheetState(() {});
+                  },
+                ),
                 const Divider(),
                 const _LegendRow(
                     kind: _LegendKind.liveDot, text: '赤ドット = 動画（ライブ配信）'),
@@ -274,10 +292,9 @@ class _MapScreenState extends State<MapScreen> {
               ],
             ),
             child: Text(
-              widget.app.searchQuery.isEmpty && !widget.app.videoOnly &&
-                      widget.app.enabledCategories.length == 9
-                  ? '${widget.app.displayableCameras.length}台'
-                  : '絞り込み中 ${widget.app.displayableCameras.length}台',
+              widget.app.hasActiveFilters
+                  ? '絞り込み中 ${widget.app.displayableCameras.length}台'
+                  : '${widget.app.displayableCameras.length}台',
               style: const TextStyle(
                   fontSize: 12, fontWeight: FontWeight.bold,
                   color: Colors.black87),

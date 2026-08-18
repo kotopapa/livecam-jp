@@ -29,6 +29,8 @@ class AppState extends ChangeNotifier {
     'river', 'road', 'volcano', 'dam', 'coast', 'port', 'scenic', 'healing', 'other'
   };
   bool videoOnly = false;
+  bool favoritesOnly = false;
+  bool okOnly = false; // 現在映っている（state=ok）もののみ
   String searchQuery = '';
 
   void toggleCategory(String category) {
@@ -40,6 +42,31 @@ class AppState extends ChangeNotifier {
     videoOnly = value;
     notifyListeners();
   }
+
+  void setFavoritesOnly(bool value) {
+    favoritesOnly = value;
+    notifyListeners();
+  }
+
+  void setOkOnly(bool value) {
+    okOnly = value;
+    notifyListeners();
+  }
+
+  /// カテゴリ以外も含め、何らかの絞り込みが効いているか（地図の件数バッジ用）
+  bool get hasActiveFilters =>
+      searchQuery.isNotEmpty ||
+      videoOnly ||
+      favoritesOnly ||
+      okOnly ||
+      enabledCategories.length != 9;
+
+  /// カテゴリ以外の共通フィルタ（一覧・地図・件数集計で共用）
+  bool _matchesCommonFilters(Camera c) =>
+      (!videoOnly || c.isVideo) &&
+      (!favoritesOnly || favorites.contains(c.id)) &&
+      (!okOnly || stateOf(c) == CameraState.ok) &&
+      _matchesQuery(c);
 
   void setSearchQuery(String query) {
     searchQuery = query.trim();
@@ -57,16 +84,14 @@ class AppState extends ChangeNotifier {
   List<Camera> get displayableCameras => repository
       .displayableCameras()
       .where((c) =>
-          enabledCategories.contains(c.category) &&
-          (!videoOnly || c.isVideo) &&
-          _matchesQuery(c))
+          enabledCategories.contains(c.category) && _matchesCommonFilters(c))
       .toList();
 
   /// カテゴリ別の件数（凡例チップに表示）。カテゴリ以外のフィルタは適用後
   Map<String, int> categoryCounts() {
     final counts = <String, int>{};
     for (final c in repository.displayableCameras()) {
-      if ((!videoOnly || c.isVideo) && _matchesQuery(c)) {
+      if (_matchesCommonFilters(c)) {
         counts[c.category] = (counts[c.category] ?? 0) + 1;
       }
     }

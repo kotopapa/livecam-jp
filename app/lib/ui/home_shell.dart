@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../app_state.dart';
 import 'favorites_screen.dart';
+import 'list_screen.dart';
 import 'map_screen.dart';
+import 'settings_screen.dart';
 
 /// 4タブのシェル（地図 / 一覧 / お気に入り / 設定。デザイン案準拠）。
 /// 地図以外は次フェーズで実装するプレースホルダ。
@@ -23,9 +25,9 @@ class _HomeShellState extends State<HomeShell> {
     return Scaffold(
       body: IndexedStack(index: _index, children: [
         MapScreen(app: widget.app),
-        const _PlaceholderTab(label: '一覧（実装予定）'),
+        ListScreen(app: widget.app),
         FavoritesScreen(app: widget.app),
-        const _PlaceholderTab(label: '設定（実装予定）'),
+        SettingsScreen(app: widget.app),
       ]),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
@@ -41,11 +43,3 @@ class _HomeShellState extends State<HomeShell> {
   }
 }
 
-class _PlaceholderTab extends StatelessWidget {
-  const _PlaceholderTab({required this.label});
-
-  final String label;
-
-  @override
-  Widget build(BuildContext context) => Center(child: Text(label));
-}
