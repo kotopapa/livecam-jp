@@ -64,6 +64,29 @@ def load_json(path: Path) -> dict:
     return {"version": None, "cameras": []}
 
 
+def refresh_approved_feeds(cameras: list[dict], new_records: list[dict]) -> int:
+    """承認済みカメラの揮発性feed（YouTubeライブの動画ID等）を安全更新する。
+
+    自動承認はしない（SPEC 6.1）。同一ID・同一feed.typeのレコードに対して
+    feed.url と fallback.url のみ差し替える技術的更新。対象は youtube_video のみ
+    （ライブ再起動で動画IDが変わるため）。
+    """
+    by_id = {r["id"]: r for r in new_records}
+    updated = 0
+    for cam in cameras:
+        rec = by_id.get(cam["id"])
+        if rec is None:
+            continue
+        if (cam["feed"]["type"] == "youtube_video"
+                and rec["feed"]["type"] == "youtube_video"
+                and cam["feed"]["url"] != rec["feed"]["url"]):
+            cam["feed"]["url"] = rec["feed"]["url"]
+            cam["fallback"] = rec.get("fallback", cam.get("fallback"))
+            cam["last_updated"] = rec.get("last_updated", cam.get("last_updated"))
+            updated += 1
+    return updated
+
+
 def merge_candidates(existing: list[dict], new: list[dict], approved_ids: set[str]) -> list[dict]:
     """既存候補のレビュー情報を保持しつつ新結果をマージする。"""
     by_id = {r["id"]: r for r in existing}
@@ -161,6 +184,14 @@ def main() -> int:
     CANDIDATES_PATH.write_text(
         json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"candidates.json 更新: {len(merged)}件")
+
+    # 承認済みカメラの揮発性feed（YouTubeライブの動画ID）を安全更新する
+    refreshed = refresh_approved_feeds(cameras.get("cameras", []), records)
+    if refreshed:
+        cameras["version"] = out["version"]
+        CAMERAS_PATH.write_text(
+            json.dumps(cameras, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"cameras.json feed更新: {refreshed}件（動画ID追従）")
     return 0
 
 

@@ -69,3 +69,46 @@ def test_dedupe_near_similar_flags_but_keeps():
     out = dedupe([a, b])
     assert len(out) == 2
     assert "重複疑い" in out[0].review_note and "重複疑い" in out[1].review_note
+
+
+def test_tokyo_suibo_csv():
+    from crawler.sources.tokyo_suibo import parse_csv
+    text = (FIXTURES / "tokyo_suibo_cameras.csv").read_text(encoding="utf-8")
+    rows = parse_csv(text)
+    assert len(rows) >= 100, f"東京都水防は100台以上のはず: {len(rows)}"
+    r = rows[0]
+    assert r["name"] == "飯田橋" and r["river"] == "神田川"
+    assert r["video_id"] == "8p11ESAA15w"
+    assert abs(r["lat"] - 35.70286) < 0.001
+
+
+def test_youtube_live_streams_extract():
+    from crawler.sources.youtube_live import (clean_title, extract_live_streams,
+                                              stable_id)
+    html = (FIXTURES / "youtube_live_streams.html").read_text(encoding="utf-8")
+    streams = extract_live_streams(html)
+    assert dict(streams) == {"AbC123xYz01": "【ライブ配信】那賀川 加茂谷",
+                             "DeF456uVw02": "肱川 野村ダム左岸直下流 ライブカメラ"}
+    assert clean_title("【ライブ配信】那賀川 加茂谷") == "那賀川 加茂谷"
+    assert clean_title("肱川 野村ダム左岸直下流 ライブカメラ") == "肱川 野村ダム左岸直下流"
+    # 安定ID: videoIdに依存せず、タイトルが同じなら同じID
+    a = stable_id("skr", "UC1", "那賀川 加茂谷")
+    assert a == stable_id("skr", "UC1", "那賀川 加茂谷")
+    assert a != stable_id("skr", "UC1", "別の地点")
+
+
+def test_refresh_approved_feeds():
+    from crawler.main import refresh_approved_feeds
+    cam = {"id": "yt-skr-abc", "feed": {"type": "youtube_video", "url": "OLD_ID"},
+           "fallback": {"type": "web_page", "url": "https://youtube.com/watch?v=OLD_ID"},
+           "last_updated": "2026-08-01"}
+    rec = {"id": "yt-skr-abc", "feed": {"type": "youtube_video", "url": "NEW_ID"},
+           "fallback": {"type": "web_page", "url": "https://youtube.com/watch?v=NEW_ID"},
+           "last_updated": "2026-08-18"}
+    n = refresh_approved_feeds([cam], [rec])
+    assert n == 1 and cam["feed"]["url"] == "NEW_ID"
+    assert cam["fallback"]["url"].endswith("NEW_ID")
+    # still_image は対象外
+    cam2 = {"id": "x", "feed": {"type": "still_image", "url": "a.jpg"}}
+    rec2 = {"id": "x", "feed": {"type": "still_image", "url": "b.jpg"}}
+    assert refresh_approved_feeds([cam2], [rec2]) == 0

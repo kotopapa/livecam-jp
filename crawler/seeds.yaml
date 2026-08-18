@@ -33,6 +33,16 @@ sources:
           対象CD 81,82,86,87,88,89,90。83-85は事務所サイト直の既存パーサ優先（重複回避）。
           固定URLがない都度解決型feed。license=unknownで規約確認後に一括承認する
 
+  - id: tokyo_suibo
+    enabled: true
+    note: 東京都水防チャンネル(都建設局)。オープンデータCSV(CC BY)に観測所名・河川名・
+          YouTube動画URL・正確な座標。110台。動画ID変化は週次クロール+承認済みfeed更新で追従
+
+  - id: youtube_gov_live
+    enabled: true
+    note: 官公庁YouTubeチャンネルの配信中ライブ収集(streams解析)。現在は四国地整CCTV(9本)。
+          近畿14ch・北陸5本・北海道2本は第2弾でCHANNELSに追加する
+
   - id: kawabou_pref
     enabled: false
     note: 川の防災情報の県単位一括収集（全国展開・M5用）。リクエスト数が多いので明示的に有効化する

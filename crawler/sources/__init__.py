@@ -9,6 +9,8 @@ from crawler.sources.mlit_ktr import MlitKtrRiverParser
 from crawler.sources.mlit_roadinfo import MlitRoadinfoParser
 from crawler.sources.mlit_ktr_road import MlitKtrRoadParser
 from crawler.sources.mlit_youtube import MlitYoutubeParser
+from crawler.sources.tokyo_suibo import TokyoSuiboParser
+from crawler.sources.youtube_live import YoutubeLiveParser
 
 REGISTRY = {
     p.source_id: p
@@ -19,5 +21,7 @@ REGISTRY = {
         MlitKtrRoadParser,
         MlitRoadinfoParser,
         MlitYoutubeParser,
+        TokyoSuiboParser,
+        YoutubeLiveParser,
     ]
 }

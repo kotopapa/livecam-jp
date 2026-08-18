@@ -175,6 +175,12 @@ class _DetailScreenState extends State<DetailScreen> {
           child: const Text('チャンネルページを見る'),
         ),
       ],
+      if (camera.feed.type == FeedType.youtubeVideo)
+        TextButton(
+          onPressed: () =>
+              _open('https://www.youtube.com/watch?v=${camera.feed.url}'),
+          child: const Text('YouTubeで見る'),
+        ),
     ]);
   }
 
@@ -267,7 +273,16 @@ class _MediaView extends StatelessWidget {
         // IFrame Player（embed/live_stream）をWebViewで表示（SPEC C6遵守）
         return AspectRatio(
           aspectRatio: 16 / 9,
-          child: _YoutubeLiveView(channelId: camera.feed.url),
+          child: _YoutubeEmbedView(
+              url:
+                  'https://www.youtube.com/embed/live_stream?channel=${camera.feed.url}'),
+        );
+      case FeedType.youtubeVideo:
+        // 動画ID固定のIFrame埋め込み（1チャンネル多配信のライブ用）
+        return AspectRatio(
+          aspectRatio: 16 / 9,
+          child: _YoutubeEmbedView(
+              url: 'https://www.youtube.com/embed/${camera.feed.url}'),
         );
       default:
         return _MediaFallback(
@@ -278,16 +293,16 @@ class _MediaView extends StatelessWidget {
   }
 }
 
-class _YoutubeLiveView extends StatefulWidget {
-  const _YoutubeLiveView({required this.channelId});
+class _YoutubeEmbedView extends StatefulWidget {
+  const _YoutubeEmbedView({required this.url});
 
-  final String channelId;
+  final String url;
 
   @override
-  State<_YoutubeLiveView> createState() => _YoutubeLiveViewState();
+  State<_YoutubeEmbedView> createState() => _YoutubeEmbedViewState();
 }
 
-class _YoutubeLiveViewState extends State<_YoutubeLiveView> {
+class _YoutubeEmbedViewState extends State<_YoutubeEmbedView> {
   late final WebViewController _controller;
 
   @override
@@ -295,8 +310,7 @@ class _YoutubeLiveViewState extends State<_YoutubeLiveView> {
     super.initState();
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadRequest(Uri.parse(
-          'https://www.youtube.com/embed/live_stream?channel=${widget.channelId}'));
+      ..loadRequest(Uri.parse(widget.url));
   }
 
   @override
