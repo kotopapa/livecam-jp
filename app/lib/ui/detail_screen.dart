@@ -56,6 +56,12 @@ class _DetailScreenState extends State<DetailScreen> {
 
   void _manualRefresh() {
     if (_cooldownLeft > 0) return;
+    // 同一URLはFlutterのメモリ内画像キャッシュに残るため、明示的に追い出して
+    // 再取得させる（キーの付け替えだけではネットワークへ行かない）
+    final url = app.imageUrlFor(camera);
+    if (url != null) NetworkImage(url).evict();
+    // status.json も鮮度切れ(5分)なら再取得し、取得時刻表示を最新化する
+    app.refresh();
     setState(() {
       _lastManualRefresh = DateTime.now();
       _refreshTick++;
