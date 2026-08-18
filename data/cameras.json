@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T01:24:49Z",
+ "version": "2026-08-18T01:27:24Z",
  "cameras": [
   {
    "id": "kawabou-100081001",
@@ -428240,6 +428240,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mlit-ktr-road-koufu-18",
+   "name": "切久保",
+   "name_kana": null,
+   "lat": 35.42747,
+   "lng": 138.45762,
+   "coord_accuracy": "area",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道52号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/18/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/kirikubo.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/kirikubo.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-19",
+   "name": "大和峠",
+   "name_kana": null,
+   "lat": 35.42747,
+   "lng": 138.45762,
+   "coord_accuracy": "area",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道52号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/19/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/oowatouge.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/oowatouge.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mlit-ktr-road-koufu-20",
    "name": "相又",
    "name_kana": null,
@@ -428264,6 +428338,43 @@
    "operator": "国土交通省 甲府河川国道事務所",
    "source": {
     "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/aimata.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-22",
+   "name": "古屋敷",
+   "name_kana": null,
+   "lat": 35.42747,
+   "lng": 138.45762,
+   "coord_accuracy": "area",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道52号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/22/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/furuyasiki.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/furuyasiki.html",
     "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
     "license": "public_data_1.0",
     "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
