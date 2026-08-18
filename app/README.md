@@ -30,7 +30,9 @@ flutter create --org jp.livecam --project-name livecam_jp .
 |---|---|
 | `flutter_map` | 地図表示（地理院タイル。Google Maps SDKは課金アカウントが必要なため不使用） |
 | `youtube_player_iframe` | YouTube再生（IFrame Player API準拠 = SPEC C6遵守） |
-| `shared_preferences` / `sqflite` | お気に入り・キャッシュメタの永続化 |
+| `http` | 配信JSONの取得（If-None-Match条件付きGET。テストはMockClient） |
+| `path_provider` | キャッシュ保存先ディレクトリの取得 |
+| `shared_preferences` | お気に入り等の軽量永続化 |
 | `home_widget` | ネイティブウィジェットとのデータ連携（仕上げ段階で追加） |
 
 追加する場合はこの表に用途を書き足すこと。
