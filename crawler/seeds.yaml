@@ -43,6 +43,12 @@ sources:
     note: 官公庁YouTubeチャンネルの配信中ライブ収集(streams解析)。現在は四国地整CCTV(9本)。
           近畿14ch・北陸5本・北海道2本は第2弾でCHANNELSに追加する
 
+  - id: curated_youtube
+    enabled: true
+    note: 民間・報道系YouTubeライブのキュレーション台帳(crawler/curated_youtube.yaml)。
+          運営者確認済みのみ人手追加。渋谷スクランブル(ANN/FNN)・新宿・銀座・道頓堀・
+          雷門・秋葉原・桜島MBC・羽田/成田・みなとみらい等17本
+
   - id: kawabou_pref
     enabled: false
     note: 川の防災情報の県単位一括収集（全国展開・M5用）。リクエスト数が多いので明示的に有効化する

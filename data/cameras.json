@@ -1,6 +1,635 @@
 {
- "version": "2026-08-18T08:48:04Z",
+ "version": "2026-08-18T08:57:21Z",
  "cameras": [
+  {
+   "id": "curated-akihabara-aisan",
+   "name": "秋葉原 中央通り交差点",
+   "name_kana": null,
+   "lat": 35.7023,
+   "lng": 139.7715,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "aEgbnkL8f1I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=aEgbnkL8f1I"
+   },
+   "operator": "愛三電機株式会社（配信: Cerevo）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=aEgbnkL8f1I",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：愛三電機株式会社（配信: Cerevo）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-asakusa-kaminarimon",
+   "name": "浅草 雷門前",
+   "name_kana": null,
+   "lat": 35.7108,
+   "lng": 139.7967,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "E1l9PcSGojU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=E1l9PcSGojU"
+   },
+   "operator": "TBSテレビ（TBS NEWS DIG）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=E1l9PcSGojU",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：TBSテレビ（TBS NEWS DIG）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-dotonbori-mbs",
+   "name": "道頓堀 グリコ看板前",
+   "name_kana": null,
+   "lat": 34.6687,
+   "lng": 135.5013,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "27",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "0P2dOCRPSRM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=0P2dOCRPSRM"
+   },
+   "operator": "毎日放送（MBS NEWS）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=0P2dOCRPSRM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：毎日放送（MBS NEWS）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-enoshima-riviera",
+   "name": "江の島ヨットハーバー",
+   "name_kana": null,
+   "lat": 35.3,
+   "lng": 139.485,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "DoC_PlS1P_M",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=DoC_PlS1P_M"
+   },
+   "operator": "株式会社リビエラリゾート",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=DoC_PlS1P_M",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：株式会社リビエラリゾート（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-ginza-sukiyabashi",
+   "name": "銀座 数寄屋橋交差点",
+   "name_kana": null,
+   "lat": 35.6717,
+   "lng": 139.7625,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "nP_xdzmt0AE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=nP_xdzmt0AE"
+   },
+   "operator": "朝日新聞社（朝日新聞LIVE）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=nP_xdzmt0AE",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：朝日新聞社（朝日新聞LIVE）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-haneda-t1-tbs",
+   "name": "羽田空港 第1ターミナル",
+   "name_kana": null,
+   "lat": 35.5493,
+   "lng": 139.784,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "2f9NOSw-FqM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=2f9NOSw-FqM"
+   },
+   "operator": "TBSテレビ（TBS NEWS DIG）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=2f9NOSw-FqM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：TBSテレビ（TBS NEWS DIG）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-haneda-t2-ntv",
+   "name": "羽田空港 第2ターミナル",
+   "name_kana": null,
+   "lat": 35.5533,
+   "lng": 139.787,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "2PIdi3Xa7TY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=2PIdi3Xa7TY"
+   },
+   "operator": "日本テレビ（日テレNEWS）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=2PIdi3Xa7TY",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：日本テレビ（日テレNEWS）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kawaguchiko-uty",
+   "name": "富士山 河口湖駅前",
+   "name_kana": null,
+   "lat": 35.498,
+   "lng": 138.766,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "PW6zhYOkunI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=PW6zhYOkunI"
+   },
+   "operator": "UTYテレビ山梨",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=PW6zhYOkunI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：UTYテレビ山梨（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-minatomirai-tbs",
+   "name": "横浜 みなとみらい",
+   "name_kana": null,
+   "lat": 35.456,
+   "lng": 139.638,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "x3P3N3VGvtU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=x3P3N3VGvtU"
+   },
+   "operator": "TBSテレビ（TBS NEWS DIG）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=x3P3N3VGvtU",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：TBSテレビ（TBS NEWS DIG）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-narita-a-asahi",
+   "name": "成田空港 A滑走路",
+   "name_kana": null,
+   "lat": 35.7767,
+   "lng": 140.383,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "12",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ZIHxOzhFFUc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ZIHxOzhFFUc"
+   },
+   "operator": "朝日新聞社（朝日新聞LIVE）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ZIHxOzhFFUc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：朝日新聞社（朝日新聞LIVE）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-sakurajima-mbc",
+   "name": "桜島（垂水市牛根麓から）",
+   "name_kana": null,
+   "lat": 31.628,
+   "lng": 130.752,
+   "coord_accuracy": "approx",
+   "category": "volcano",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Hmmk0eYn0cw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Hmmk0eYn0cw"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Hmmk0eYn0cw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-shibuya-ann",
+   "name": "渋谷スクランブル交差点",
+   "name_kana": null,
+   "lat": 35.6595,
+   "lng": 139.7005,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "8H3nRCFVR6Y",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8H3nRCFVR6Y"
+   },
+   "operator": "テレビ朝日（ANNnewsCH）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=8H3nRCFVR6Y",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：テレビ朝日（ANNnewsCH）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-shibuya-fnn",
+   "name": "渋谷スクランブル交差点（FNN）",
+   "name_kana": null,
+   "lat": 35.6597,
+   "lng": 139.7008,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "dfVK7ld38Ys",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=dfVK7ld38Ys"
+   },
+   "operator": "フジテレビ（FNNプライムオンライン）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=dfVK7ld38Ys",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：フジテレビ（FNNプライムオンライン）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-shinjuku-5chome",
+   "name": "新宿五丁目交差点",
+   "name_kana": null,
+   "lat": 35.6925,
+   "lng": 139.7072,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "gTO_FJzv70k",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=gTO_FJzv70k"
+   },
+   "operator": "テイケイ株式会社",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=gTO_FJzv70k",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：テイケイ株式会社（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-shinjuku-kuyakusho",
+   "name": "新宿 区役所前交差点",
+   "name_kana": null,
+   "lat": 35.6944,
+   "lng": 139.704,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vuP9iwdyyFM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vuP9iwdyyFM"
+   },
+   "operator": "テイケイ株式会社",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vuP9iwdyyFM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：テイケイ株式会社（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-shinjuku-yasukuni",
+   "name": "新宿 歌舞伎町交差点（靖国通り）",
+   "name_kana": null,
+   "lat": 35.6938,
+   "lng": 139.7034,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ErHJBXTmm2Q",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ErHJBXTmm2Q"
+   },
+   "operator": "テイケイ株式会社",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ErHJBXTmm2Q",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：テイケイ株式会社（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-skytree-toyo",
+   "name": "東京スカイツリー（吾妻橋から）",
+   "name_kana": null,
+   "lat": 35.708,
+   "lng": 139.801,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "1DEOe2cBalA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=1DEOe2cBalA"
+   },
+   "operator": "東洋コムテック株式会社",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=1DEOe2cBalA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東洋コムテック株式会社（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
   {
    "id": "kawabou-100081001",
    "name": "豊平川KP19.8右岸カメラ",

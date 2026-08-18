@@ -122,3 +122,17 @@ def test_kkr_youtube_channels():
     ids = {c for c, _ in channels if c.startswith("UC")}
     assert len(ids) >= 14, f"近畿は14水系チャンネル以上のはず: {len(ids)}"
     assert "UCUGXTjGtxRHyoeTHHXCBSqg" in ids   # 淀川・宇治川
+
+
+def test_curated_youtube_yaml():
+    from crawler.sources.curated_youtube import CuratedYoutubeParser, load_curated
+    cams = load_curated()
+    assert len(cams) >= 15
+    ids = [c["id"] for c in cams]
+    assert len(ids) == len(set(ids)), "IDは一意であること"
+    assert all(c.get("operator") for c in cams), "運営者不明のカメラは載せない"
+    result = CuratedYoutubeParser().discover(None)
+    assert len(result.candidates) == len(cams) and not result.errors
+    shibuya = next(c for c in result.candidates if c.id == "curated-shibuya-ann")
+    assert shibuya.feed_type == "youtube_video" and shibuya.coord_accuracy == "approx"
+    assert validate_camera_record(shibuya.to_record("2026-08-18")) == []

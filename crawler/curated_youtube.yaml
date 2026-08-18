@@ -1,0 +1,160 @@
+# 人手キュレーションの民間・報道系YouTubeライブカメラ台帳（SPEC 1.3の条件付き民間スコープ）。
+# 掲載条件: 公開YouTubeライブ / 運営者特定済み / IFrame埋め込み（削除依頼があれば即削除）。
+# 座標はカメラ設置地点の手動指定（approx）。videoIdは配信枠更新で変わることがある。
+# 2026-08-18 調査時点。運営者不明のカメラは載せない。
+
+cameras:
+  - id: curated-shibuya-ann
+    name: 渋谷スクランブル交差点
+    operator: テレビ朝日（ANNnewsCH）
+    video_id: 8H3nRCFVR6Y
+    category: road
+    prefecture: "13"
+    lat: 35.6595
+    lng: 139.7005
+    note: oEmbedで埋め込み可を確認済み
+
+  - id: curated-shibuya-fnn
+    name: 渋谷スクランブル交差点（FNN）
+    operator: フジテレビ（FNNプライムオンライン）
+    video_id: dfVK7ld38Ys
+    category: road
+    prefecture: "13"
+    lat: 35.6597
+    lng: 139.7008
+
+  - id: curated-shinjuku-yasukuni
+    name: 新宿 歌舞伎町交差点（靖国通り）
+    operator: テイケイ株式会社
+    video_id: ErHJBXTmm2Q
+    category: road
+    prefecture: "13"
+    lat: 35.6938
+    lng: 139.7034
+
+  - id: curated-shinjuku-kuyakusho
+    name: 新宿 区役所前交差点
+    operator: テイケイ株式会社
+    video_id: vuP9iwdyyFM
+    category: road
+    prefecture: "13"
+    lat: 35.6944
+    lng: 139.7040
+
+  - id: curated-shinjuku-5chome
+    name: 新宿五丁目交差点
+    operator: テイケイ株式会社
+    video_id: gTO_FJzv70k
+    category: road
+    prefecture: "13"
+    lat: 35.6925
+    lng: 139.7072
+
+  - id: curated-ginza-sukiyabashi
+    name: 銀座 数寄屋橋交差点
+    operator: 朝日新聞社（朝日新聞LIVE）
+    video_id: nP_xdzmt0AE
+    category: road
+    prefecture: "13"
+    lat: 35.6717
+    lng: 139.7625
+
+  - id: curated-dotonbori-mbs
+    name: 道頓堀 グリコ看板前
+    operator: 毎日放送（MBS NEWS）
+    video_id: 0P2dOCRPSRM
+    category: scenic
+    prefecture: "27"
+    lat: 34.6687
+    lng: 135.5013
+
+  - id: curated-asakusa-kaminarimon
+    name: 浅草 雷門前
+    operator: TBSテレビ（TBS NEWS DIG）
+    video_id: E1l9PcSGojU
+    category: scenic
+    prefecture: "13"
+    lat: 35.7108
+    lng: 139.7967
+
+  - id: curated-akihabara-aisan
+    name: 秋葉原 中央通り交差点
+    operator: "愛三電機株式会社（配信: Cerevo）"
+    video_id: aEgbnkL8f1I
+    category: road
+    prefecture: "13"
+    lat: 35.7023
+    lng: 139.7715
+    note: 2011年から継続する老舗カメラ
+
+  - id: curated-sakurajima-mbc
+    name: 桜島（垂水市牛根麓から）
+    operator: MBC南日本放送
+    video_id: Hmmk0eYn0cw
+    category: volcano
+    prefecture: "46"
+    lat: 31.6280
+    lng: 130.7520
+
+  - id: curated-kawaguchiko-uty
+    name: 富士山 河口湖駅前
+    operator: UTYテレビ山梨
+    video_id: PW6zhYOkunI
+    category: scenic
+    prefecture: "19"
+    lat: 35.4980
+    lng: 138.7660
+
+  - id: curated-skytree-toyo
+    name: 東京スカイツリー（吾妻橋から）
+    operator: 東洋コムテック株式会社
+    video_id: 1DEOe2cBalA
+    category: scenic
+    prefecture: "13"
+    lat: 35.7080
+    lng: 139.8010
+
+  - id: curated-haneda-t2-ntv
+    name: 羽田空港 第2ターミナル
+    operator: 日本テレビ（日テレNEWS）
+    video_id: 2PIdi3Xa7TY
+    category: other
+    prefecture: "13"
+    lat: 35.5533
+    lng: 139.7870
+
+  - id: curated-haneda-t1-tbs
+    name: 羽田空港 第1ターミナル
+    operator: TBSテレビ（TBS NEWS DIG）
+    video_id: 2f9NOSw-FqM
+    category: other
+    prefecture: "13"
+    lat: 35.5493
+    lng: 139.7840
+
+  - id: curated-narita-a-asahi
+    name: 成田空港 A滑走路
+    operator: 朝日新聞社（朝日新聞LIVE）
+    video_id: ZIHxOzhFFUc
+    category: other
+    prefecture: "12"
+    lat: 35.7767
+    lng: 140.3830
+
+  - id: curated-minatomirai-tbs
+    name: 横浜 みなとみらい
+    operator: TBSテレビ（TBS NEWS DIG）
+    video_id: x3P3N3VGvtU
+    category: port
+    prefecture: "14"
+    lat: 35.4560
+    lng: 139.6380
+
+  - id: curated-enoshima-riviera
+    name: 江の島ヨットハーバー
+    operator: 株式会社リビエラリゾート
+    video_id: DoC_PlS1P_M
+    category: port
+    prefecture: "14"
+    lat: 35.3000
+    lng: 139.4850
