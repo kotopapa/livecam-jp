@@ -54,6 +54,21 @@ sources:
     note: 市町村公式YouTubeライブ(大田原8・春日井4・志木3・横須賀28)。静的ページの
           リンク列挙をパース。動画IDは週次クロールで追従
 
+  - id: mbc_webcam
+    enabled: true
+    note: MBC南日本放送「かごしまライブカメラ」85地点(静止画網)。インラインJSONを解析。
+          設置者混在(気象庁・国道事務所・役場等)のためlicense=unknown
+
+  - id: hbc_webcam
+    enabled: true
+    note: HBC北海道放送「情報カメラ」34地点(静止画網)。地点ページのGoogleマップ埋込から
+          座標を機械取得。license=unknown
+
+  - id: kaiho_webcam
+    enabled: true
+    note: 海上保安庁「海の安全情報」の灯台・海上交通センターカメラ12地点(静止画)。
+          座標は手動対応表。license=unknown
+
   - id: kawabou_pref
     enabled: false
     note: 川の防災情報の県単位一括収集（全国展開・M5用）。リクエスト数が多いので明示的に有効化する

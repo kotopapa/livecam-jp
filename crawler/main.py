@@ -87,13 +87,22 @@ def refresh_approved_feeds(cameras: list[dict], new_records: list[dict]) -> int:
     return updated
 
 
-def merge_candidates(existing: list[dict], new: list[dict], approved_ids: set[str]) -> list[dict]:
-    """既存候補のレビュー情報を保持しつつ新結果をマージする。"""
+def merge_candidates(existing: list[dict], new: list[dict], approved_ids: set[str],
+                     approved_feed_urls: set[str] | None = None) -> list[dict]:
+    """既存候補のレビュー情報を保持しつつ新結果をマージする。
+
+    approved_feed_urls: 承認済みカメラのfeed.url集合。別ソースが同じ動画
+    （例: キュレーション台帳とチャンネル巡回が同じYouTubeライブ）を拾ったときに
+    IDが違っても重複候補を作らないためのガード。
+    """
     by_id = {r["id"]: r for r in existing}
     for rec in new:
         rid = rec["id"]
         if rid in approved_ids:
             continue                      # 承認済み・却下済みは候補に再登場させない
+        if (approved_feed_urls and rid not in by_id
+                and rec["feed"]["url"] in approved_feed_urls):
+            continue                      # 同一の動画/URLを別IDで重複させない
         if rid in by_id:
             old = by_id[rid]
             rec["first_seen"] = old.get("first_seen", rec["first_seen"])
@@ -175,7 +184,9 @@ def main() -> int:
     cameras = load_json(CAMERAS_PATH)
     decided_ids = {r["id"] for r in cameras.get("cameras", [])}
     existing = load_json(CANDIDATES_PATH)
-    merged = merge_candidates(existing.get("cameras", []), records, decided_ids)
+    approved_urls = {r["feed"]["url"] for r in cameras.get("cameras", [])}
+    merged = merge_candidates(existing.get("cameras", []), records, decided_ids,
+                              approved_feed_urls=approved_urls)
     out = {
         "version": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "cameras": sorted(merged, key=lambda r: r["id"]),

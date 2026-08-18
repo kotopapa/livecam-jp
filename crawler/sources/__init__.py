@@ -4,6 +4,9 @@
 """
 
 from crawler.sources.curated_youtube import CuratedYoutubeParser
+from crawler.sources.hbc_webcam import HbcWebcamParser
+from crawler.sources.kaiho_webcam import KaihoWebcamParser
+from crawler.sources.mbc_webcam import MbcWebcamParser
 from crawler.sources.mlit_cbr_road import MlitCbrRoadParser
 from crawler.sources.mlit_hrr_road import MlitHrrRoadParser
 from crawler.sources.mlit_ktr import MlitKtrRiverParser
@@ -18,6 +21,9 @@ REGISTRY = {
     p.source_id: p
     for p in [
         CuratedYoutubeParser,
+        HbcWebcamParser,
+        KaihoWebcamParser,
+        MbcWebcamParser,
         MlitCbrRoadParser,
         MlitHrrRoadParser,
         MlitKtrRiverParser,

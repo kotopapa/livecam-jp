@@ -1,4 +1,865 @@
 {
- "version": "2026-08-18T11:44:49Z",
- "cameras": []
+ "version": "2026-08-18T12:26:43Z",
+ "cameras": [
+  {
+   "id": "mbc-chi1",
+   "name": "知名町",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-chi1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "知名町役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：知名町役場）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 71903
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-dai",
+   "name": "徳之島",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/dai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "徳之島ダイマル",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：徳之島ダイマル）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 194671
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-in-wad1",
+   "name": "和泊町 研修センター屋上",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-in_wad1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "和泊町役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：和泊町役場）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 47043
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-in-wad2",
+   "name": "和泊町 朝戸医院屋上",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-in_wad2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "和泊町役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：和泊町役場）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 41003
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-jma2",
+   "name": "種子島灯台",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-jma2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "第十管区海上保安本部MICS",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：第十管区海上保安本部MICS）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 68607
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-kki1",
+   "name": "喜界町",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-kki1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "喜界町役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：喜界町役場）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 72855
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn113",
+   "name": "甲女川 榕城橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn113.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 79518
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn117",
+   "name": "余多川 天竜橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn117.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 76125
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis1",
+   "name": "西之表市役所",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 218136
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis2",
+   "name": "西之表市 天神橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 341543
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis3",
+   "name": "浦田海水浴場",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 443646
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis4",
+   "name": "能野（よきの）海水浴場",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis4.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 420182
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis5",
+   "name": "鉄浜（かねはま）海水浴場",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis5.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 425662
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-seigi03",
+   "name": "新燃岳",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "volcano",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-seigi03.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 59298
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-seigi07",
+   "name": "口永良部島",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-seigi07.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 31516
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen5",
+   "name": "甑島 甑大橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen5.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 17696
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen6",
+   "name": "甑島 前の平展望所",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen6.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 21110
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen7",
+   "name": "甑島 里港",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen7.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 14803
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen8",
+   "name": "甑島 甑大明神橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen8.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 68607
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tuc1",
+   "name": "下甑 手打",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tuc1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "手打地区コミュニティ協議会",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：手打地区コミュニティ協議会）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 34720
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  }
+ ]
 }

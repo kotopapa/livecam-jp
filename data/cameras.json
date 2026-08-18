@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T11:44:49Z",
+ "version": "2026-08-18T12:26:43Z",
  "cameras": [
   {
    "id": "curated-akihabara-aisan",
@@ -4585,6 +4585,1116 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-asahikawahd",
+   "name": "旭川（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 43.77062022382455,
+   "lng": 141.80377729704912,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/asahikawahd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/asahikawa.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/asahikawa.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-chitosehd",
+   "name": "新千歳空港（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 42.79042840467569,
+   "lng": 141.6818995166591,
+   "coord_accuracy": "exact",
+   "category": "other",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/chitosehd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/shinchitose.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/shinchitose.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-esashihd",
+   "name": "江差（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 41.86552844923668,
+   "lng": 139.8427933002845,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/esashihd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/esashi.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/esashi.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-hakodatebayhd",
+   "name": "函館ベイエリア（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 41.76628600000104,
+   "lng": 140.70941163174024,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/hakodatebayhd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/hakodatebayarea.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/hakodatebayarea.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-hakodatehd",
+   "name": "函館（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 41.760626658063714,
+   "lng": 140.6686144297455,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/hakodatehd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/hakodate.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/hakodate.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-hiroohd",
+   "name": "広尾（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 42.28620459742686,
+   "lng": 142.75783680202713,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/hiroohd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/hiroo.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/hiroo.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-iwamizawahd",
+   "name": "岩見沢（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 43.203901748421934,
+   "lng": 141.19867095078376,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/iwamizawahd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/iwamizawa.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/iwamizawa.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-jrsapporohd",
+   "name": "JR札幌駅（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 43.0691000926849,
+   "lng": 141.35474672932634,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/jrsapporohd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/jrsapporosta.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/jrsapporosta.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-kushirohd",
+   "name": "釧路（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 42.97845150657919,
+   "lng": 143.8257228163287,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/kushirohd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/kushiro.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/kushiro.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-muroranhd",
+   "name": "室蘭（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 42.335122637637994,
+   "lng": 140.65501636589886,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/muroranhd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/muroran.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/muroran.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-nemurohd",
+   "name": "根室花咲港（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 43.28732282828883,
+   "lng": 145.02479600289664,
+   "coord_accuracy": "exact",
+   "category": "port",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/nemurohd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/nemuro.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/nemuro.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-obihirohd",
+   "name": "帯広（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 42.920182243797186,
+   "lng": 142.6439146820044,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/obihirohd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/obihiro.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/obihiro.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-otaruhd",
+   "name": "小樽（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 43.200611533394174,
+   "lng": 140.71992450785447,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/otaruhd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/otaru.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/otaru.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-rumoihd",
+   "name": "留萌（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 43.94138683072421,
+   "lng": 141.07666290182416,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/rumoihd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/rumoi.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/rumoi.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-sapporohd",
+   "name": "札幌（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 43.06105732126345,
+   "lng": 141.3515210300561,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/sapporohd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/sapporo.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/sapporo.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-tomakomaihd",
+   "name": "苫小牧（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 42.6338175,
+   "lng": 141.6063198,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/tomakomaihd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/tomakomai.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/tomakomai.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-utorohd",
+   "name": "斜里町ウトロ（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 44.071912071066016,
+   "lng": 144.72034961413914,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/utorohd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/utoro.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/utoro.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "hbc-wakkanaihd",
+   "name": "稚内（HBC情報カメラ）",
+   "name_kana": null,
+   "lat": 45.420172698169196,
+   "lng": 140.55429938532436,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hbc.co.jp/info-cam/media/wakkanaihd_720.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hbc.co.jp/info-cam/wakkanai.html"
+   },
+   "operator": "HBC北海道放送",
+   "source": {
+    "page_url": "https://www.hbc.co.jp/info-cam/wakkanai.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HBC北海道放送（情報カメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-daiosaki-lt",
+   "name": "大王埼灯台",
+   "name_kana": null,
+   "lat": 34.278,
+   "lng": 136.899,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "24",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/daiosaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/04kanku/toba/daiosaki_lt/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/04kanku/toba/daiosaki_lt/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-isewan-martis-no1",
+   "name": "伊勢湾海上交通センター（南西）",
+   "name_kana": null,
+   "lat": 34.5825,
+   "lng": 137.0165,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/isewan_martis_no1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/isewan_martis_no1/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/isewan_martis_no1/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-isewan-martis-no2",
+   "name": "伊勢湾海上交通センター（北西）",
+   "name_kana": null,
+   "lat": 34.5835,
+   "lng": 137.017,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/isewan_martis_no2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/isewan_martis_no2/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/isewan_martis_no2/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-kannonsaki-radar",
+   "name": "観音埼レーダー施設",
+   "name_kana": null,
+   "lat": 35.254,
+   "lng": 139.741,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/kannonsaki_radar.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/03kanku/yokosuka/kannonsaki_radar/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/03kanku/yokosuka/kannonsaki_radar/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-nagoyako-martis-no1",
+   "name": "名古屋港海上交通センター（西）",
+   "name_kana": null,
+   "lat": 35.049,
+   "lng": 136.8475,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/nagoyako_martis_no1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no1/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no1/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-nagoyako-martis-no2",
+   "name": "名古屋港海上交通センター（東）",
+   "name_kana": null,
+   "lat": 35.0495,
+   "lng": 136.8485,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/nagoyako_martis_no2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no2/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no2/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-nagoyako-martis-no3",
+   "name": "名古屋港ガーデンふ頭",
+   "name_kana": null,
+   "lat": 35.089,
+   "lng": 136.882,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/nagoyako_martis_no3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no3/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no3/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-ondonoseto-n-entrance",
+   "name": "音戸ノ瀬戸北口",
+   "name_kana": null,
+   "lat": 34.195,
+   "lng": 132.533,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "34",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/ondonoseto_n_entrance.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_n_entrance/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_n_entrance/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-ondonoseto-s-entrance-no1",
+   "name": "音戸ノ瀬戸南口１",
+   "name_kana": null,
+   "lat": 34.188,
+   "lng": 132.535,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "34",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/ondonoseto_s_entrance_no1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_s_entrance_no1/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_s_entrance_no1/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-ondonoseto-s-entrance-no2",
+   "name": "音戸ノ瀬戸南口２",
+   "name_kana": null,
+   "lat": 34.1875,
+   "lng": 132.536,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "34",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/ondonoseto_s_entrance_no2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_s_entrance_no2/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_s_entrance_no2/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-toba-cgo",
+   "name": "鳥羽海上保安部庁舎",
+   "name_kana": null,
+   "lat": 34.481,
+   "lng": 136.843,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "24",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/toba_cgo.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/04kanku/toba/toba_cgo/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/04kanku/toba/toba_cgo/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "kaiho-tsurugisaki-lt",
+   "name": "剱埼灯台",
+   "name_kana": null,
+   "lat": 35.141,
+   "lng": 139.676,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www6.kaiho.mlit.go.jp/gazou/tsurugisaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/03kanku/yokosuka/tsurugisaki_lt/livecamera/index.html"
+   },
+   "operator": "海上保安庁",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/03kanku/yokosuka/tsurugisaki_lt/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：海上保安庁「海の安全情報」"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -422762,6 +423872,2374 @@
    },
    "first_seen": "2026-08-17",
    "last_updated": "2026-08-17"
+  },
+  {
+   "id": "mbc-amk",
+   "name": "奄美空港",
+   "name_kana": null,
+   "lat": 28.377674,
+   "lng": 129.493835,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-amk.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-amm",
+   "name": "奄美市名瀬",
+   "name_kana": null,
+   "lat": 28.330383,
+   "lng": 129.4832,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-amm.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-egc1",
+   "name": "江口浜",
+   "name_kana": null,
+   "lat": 31.645987,
+   "lng": 130.335266,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-egc1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "日置市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：日置市役所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-elm1",
+   "name": "南さつま市加世田",
+   "name_kana": null,
+   "lat": 31.404226,
+   "lng": 130.323669,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-elm1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "株式会社エルム",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：株式会社エルム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-jma1",
+   "name": "佐多岬灯台",
+   "name_kana": null,
+   "lat": 31.217297,
+   "lng": 130.768646,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-jma1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "第十管区海上保安本部MICS",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：第十管区海上保安本部MICS）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-jma3",
+   "name": "小平瀬鼻灯台",
+   "name_kana": null,
+   "lat": 32.014442,
+   "lng": 130.19278,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-jma3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "第十管区海上保安本部MICS",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：第十管区海上保安本部MICS）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-jma4",
+   "name": "笠利埼灯台",
+   "name_kana": null,
+   "lat": 28.377674,
+   "lng": 129.493835,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-jma4.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "第十管区海上保安本部MICS",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：第十管区海上保安本部MICS）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn01",
+   "name": "甲突川 岩崎橋",
+   "name_kana": null,
+   "lat": 31.610449,
+   "lng": 130.529877,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn02",
+   "name": "甲突川 宮山橋",
+   "name_kana": null,
+   "lat": 31.69759,
+   "lng": 130.462158,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn02.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn03",
+   "name": "新川 田上橋",
+   "name_kana": null,
+   "lat": 31.577456,
+   "lng": 130.531067,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn03.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn04",
+   "name": "稲荷川 一ツ橋",
+   "name_kana": null,
+   "lat": 31.61051,
+   "lng": 130.561447,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn04.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn05",
+   "name": "永田川 宮下橋",
+   "name_kana": null,
+   "lat": 31.548416,
+   "lng": 130.511566,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn05.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn06",
+   "name": "万之瀬川 万之瀬橋",
+   "name_kana": null,
+   "lat": 31.404226,
+   "lng": 130.323669,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn06.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn07",
+   "name": "加世田川 日新橋",
+   "name_kana": null,
+   "lat": 31.404226,
+   "lng": 130.323669,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn07.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn08",
+   "name": "万之瀬川 大渡橋",
+   "name_kana": null,
+   "lat": 31.391857,
+   "lng": 130.370712,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn08.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn09",
+   "name": "神之川 荒瀬橋",
+   "name_kana": null,
+   "lat": 31.655741,
+   "lng": 130.416,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn09.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn10",
+   "name": "平佐川 草原橋",
+   "name_kana": null,
+   "lat": 31.815609,
+   "lng": 130.312897,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn10.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn101",
+   "name": "脇田川 広木橋",
+   "name_kana": null,
+   "lat": 31.564325,
+   "lng": 130.522278,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn101.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn102",
+   "name": "和田川 和田橋",
+   "name_kana": null,
+   "lat": 31.512924,
+   "lng": 130.511322,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn102.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn103",
+   "name": "思川 高崎橋",
+   "name_kana": null,
+   "lat": 31.738289,
+   "lng": 130.540466,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn103.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn104",
+   "name": "五反田川 麓大橋",
+   "name_kana": null,
+   "lat": 31.721218,
+   "lng": 130.293045,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn104.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn105",
+   "name": "隈之城川 佛生橋",
+   "name_kana": null,
+   "lat": 31.783852,
+   "lng": 130.320099,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn105.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn106",
+   "name": "大浦川 磯間橋",
+   "name_kana": null,
+   "lat": 31.367495,
+   "lng": 130.23587,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn106.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn107",
+   "name": "天降川 天降川橋",
+   "name_kana": null,
+   "lat": 31.741079,
+   "lng": 130.741089,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn107.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn108",
+   "name": "網掛川 竹下橋",
+   "name_kana": null,
+   "lat": 31.741457,
+   "lng": 130.659851,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn108.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn109",
+   "name": "手籠川 鏡橋",
+   "name_kana": null,
+   "lat": 31.747625,
+   "lng": 130.763947,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn109.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn11",
+   "name": "米之津川 春日橋",
+   "name_kana": null,
+   "lat": 32.088696,
+   "lng": 130.354187,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn11.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn110",
+   "name": "神ノ川 神之川・水流川合流点付近",
+   "name_kana": null,
+   "lat": 31.276079,
+   "lng": 130.827118,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn110.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn111",
+   "name": "菱田川 菱田橋",
+   "name_kana": null,
+   "lat": 31.48245,
+   "lng": 131.047577,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn111.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn112",
+   "name": "前川 石踊橋",
+   "name_kana": null,
+   "lat": 31.494001,
+   "lng": 131.131424,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn112.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn114",
+   "name": "安房川 安房川橋",
+   "name_kana": null,
+   "lat": 30.305077,
+   "lng": 130.649551,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn114.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn115",
+   "name": "新川 平田中央橋",
+   "name_kana": null,
+   "lat": 28.35508,
+   "lng": 129.499817,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn115.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn116",
+   "name": "大瀬川 第３大瀬橋",
+   "name_kana": null,
+   "lat": 27.741297,
+   "lng": 128.991821,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn116.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn12",
+   "name": "天降川 日当山橋",
+   "name_kana": null,
+   "lat": 31.769297,
+   "lng": 130.746796,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn12.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn13",
+   "name": "木之下川 JR橋",
+   "name_kana": null,
+   "lat": 31.500528,
+   "lng": 130.524323,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn13.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn14",
+   "name": "花渡川 神浦橋",
+   "name_kana": null,
+   "lat": 31.272837,
+   "lng": 130.29689,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn14.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn15",
+   "name": "二反田川 二月田橋",
+   "name_kana": null,
+   "lat": 31.245895,
+   "lng": 130.629745,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn15.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn16",
+   "name": "本城川 今川原橋",
+   "name_kana": null,
+   "lat": 31.492752,
+   "lng": 130.700912,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn16.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn17",
+   "name": "雄川 北之口橋",
+   "name_kana": null,
+   "lat": 31.217297,
+   "lng": 130.768646,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn17.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn18",
+   "name": "別府川 友徳橋",
+   "name_kana": null,
+   "lat": 31.75161,
+   "lng": 130.585815,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn18.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-kuu",
+   "name": "鹿児島空港",
+   "name_kana": null,
+   "lat": 31.8503,
+   "lng": 130.693649,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-kuu.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-mak-hotel-iwato",
+   "name": "枕崎市",
+   "name_kana": null,
+   "lat": 31.272837,
+   "lng": 130.29689,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ox3uu-PmgtM",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ox3uu-PmgtM"
+   },
+   "operator": "空と海を臨む宿 Ocean Hotel Iwato",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：空と海を臨む宿 Ocean Hotel Iwato）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-mis-iou",
+   "name": "三島村 硫黄島港",
+   "name_kana": null,
+   "lat": 30.790266,
+   "lng": 130.293335,
+   "coord_accuracy": "approx",
+   "category": "volcano",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-mis_iou.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "三島村",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：三島村）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-mis-kat",
+   "name": "三島村 黒島・片泊港",
+   "name_kana": null,
+   "lat": 30.831541,
+   "lng": 129.936325,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-mis_kat.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "三島村",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：三島村）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-mis-oos",
+   "name": "三島村 黒島・大里港",
+   "name_kana": null,
+   "lat": 30.831541,
+   "lng": 129.936325,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-mis_oos.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "三島村",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：三島村）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-mis-tak",
+   "name": "三島村 竹島港",
+   "name_kana": null,
+   "lat": 30.810089,
+   "lng": 130.428986,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-mis_tak.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "三島村",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：三島村）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-r10kmw",
+   "name": "国道10号 亀割峠",
+   "name_kana": null,
+   "lat": 31.740877,
+   "lng": 130.76329,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-r10kmw.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "国交省鹿児島国道事務所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：国交省鹿児島国道事務所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-r10ryu",
+   "name": "国道10号 竜ヶ水",
+   "name_kana": null,
+   "lat": 31.64538,
+   "lng": 130.58551,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-r10ryu.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "国交省鹿児島国道事務所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：国交省鹿児島国道事務所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-r225kaw",
+   "name": "国道225号 川辺峠",
+   "name_kana": null,
+   "lat": 31.451265,
+   "lng": 130.499847,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-r225kaw.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "国交省鹿児島国道事務所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：国交省鹿児島国道事務所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-r225mno",
+   "name": "国道225号 峰尾",
+   "name_kana": null,
+   "lat": 31.391857,
+   "lng": 130.370712,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-r225mno.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "国交省鹿児島国道事務所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：国交省鹿児島国道事務所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-r226kir",
+   "name": "国道226号 前之浜",
+   "name_kana": null,
+   "lat": 31.335428,
+   "lng": 130.541138,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-r226kir.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "国交省鹿児島国道事務所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：国交省鹿児島国道事務所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-r3kin",
+   "name": "国道3号 金山峠",
+   "name_kana": null,
+   "lat": 31.714561,
+   "lng": 130.271942,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-r3kin.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "国交省鹿児島国道事務所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：国交省鹿児島国道事務所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sbs",
+   "name": "志布志",
+   "name_kana": null,
+   "lat": 31.45999,
+   "lng": 131.076309,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sbs.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen1",
+   "name": "寺山公園",
+   "name_kana": null,
+   "lat": 31.813334,
+   "lng": 130.304169,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen3",
+   "name": "西方海岸",
+   "name_kana": null,
+   "lat": 31.813334,
+   "lng": 130.304169,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tar1",
+   "name": "桜島（垂水市役所）",
+   "name_kana": null,
+   "lat": 31.492752,
+   "lng": 130.700912,
+   "coord_accuracy": "approx",
+   "category": "volcano",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tar1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "垂水市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：垂水市役所）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tkr-aku",
+   "name": "悪石島 やすら浜港",
+   "name_kana": null,
+   "lat": 29.460869,
+   "lng": 129.59903,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tkr_aku.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "十島村役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：十島村役場）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tkr-hig",
+   "name": "平島 東之浜港",
+   "name_kana": null,
+   "lat": 29.686575,
+   "lng": 129.532501,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tkr_hig.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "十島村役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：十島村役場）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tkr-kot",
+   "name": "小宝島 小宝島港",
+   "name_kana": null,
+   "lat": 29.22353,
+   "lng": 129.324799,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tkr_kot.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "十島村役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：十島村役場）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tkr-kuc",
+   "name": "口之島 西之浜漁港",
+   "name_kana": null,
+   "lat": 29.978397,
+   "lng": 129.91687,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tkr_kuc.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "十島村役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：十島村役場）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tkr-nak",
+   "name": "中之島 中之島港",
+   "name_kana": null,
+   "lat": 29.849651,
+   "lng": 129.866074,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tkr_nak.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "十島村役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：十島村役場）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tkr-suw",
+   "name": "諏訪之瀬島 切石港",
+   "name_kana": null,
+   "lat": 29.63715,
+   "lng": 129.713257,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tkr_suw.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "十島村役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：十島村役場）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tkr-tai",
+   "name": "平島 南之浜港",
+   "name_kana": null,
+   "lat": 29.686575,
+   "lng": 129.532501,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tkr_tai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "十島村役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：十島村役場）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tkr-tak",
+   "name": "宝島 前籠漁港",
+   "name_kana": null,
+   "lat": 29.143108,
+   "lng": 129.207809,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tkr_tak.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "十島村役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：十島村役場）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
   },
   {
    "id": "mlit-cbr-road-001-001",

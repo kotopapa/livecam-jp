@@ -35,6 +35,7 @@ class LiveChannel:
     default_pref: str            # JIS 2桁
     license: str = "unknown"
     terms_url: str | None = None
+    default_category: str = "river"
     category_rules: tuple = ()   # (正規表現, category)
     pref_rules: tuple = ()       # (正規表現, JISコード, 県名)
     default_pref_name: str = ""
@@ -156,7 +157,7 @@ class YoutubeLiveParser(SourceParser):
                 name = clean_title(title)
                 if not name:
                     continue
-                category = "river"
+                category = ch.default_category
                 for pat, cat in ch.category_rules:
                     if re.search(pat, name):
                         category = cat

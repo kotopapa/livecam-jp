@@ -150,3 +150,41 @@ def test_muni_youtube_extract():
     ylinks = extract_video_links(yoko, "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html")
     assert len(ylinks) >= 9
     assert clean_spot_name("蛇尾橋付近（外部リンク）") == "蛇尾橋付近"
+
+
+def test_mbc_webcam_extract():
+    from crawler.sources.mbc_webcam import categorize, extract_cameras
+    html = (FIXTURES / "mbc_webcam.html").read_text(encoding="utf-8", errors="replace")
+    cams = extract_cameras(html)
+    assert len(cams) >= 80, f"MBCはcamTitle付き85地点のはず: {len(cams)}"
+    titles = [c["camTitle"] for c in cams]
+    assert "国道10号 竜ヶ水" in titles
+    assert categorize("国道10号 竜ヶ水", None) == "road"
+    assert categorize("桜島（牛根麓）", None) == "volcano"
+    assert categorize("甲突川", "甲突川") == "river"
+
+
+def test_hbc_webcam_extract():
+    from crawler.sources.hbc_webcam import extract_point, extract_point_links
+    html = (FIXTURES / "hbc_cam_list.html").read_text(encoding="utf-8", errors="replace")
+    links = extract_point_links(html, "https://www.hbc.co.jp/info-cam/cam_list.html")
+    assert len(links) >= 15
+    assert ("https://www.hbc.co.jp/info-cam/sapporo.html", "札幌") in links
+
+    sap = (FIXTURES / "hbc_cam_sapporo.html").read_text(encoding="utf-8", errors="replace")
+    img, lat, lng = extract_point(sap)
+    assert img == "sapporohd"
+    assert abs(lat - 43.061) < 0.01 and abs(lng - 141.3515) < 0.01
+
+
+def test_kaiho_webcam_extract():
+    from crawler.sources.kaiho_webcam import GAZOU_RE, LINK_RE, NAME_COORDS
+    hub = (FIXTURES / "kaiho_live.html").read_text(encoding="utf-8", errors="replace")
+    links = [(u, t.strip()) for u, t in LINK_RE.findall(hub)]
+    assert len(links) == 12
+    names = {t for _, t in links}
+    assert names <= set(NAME_COORDS), f"対応表にない地点: {names - set(NAME_COORDS)}"
+
+    point = (FIXTURES / "kaiho_point.html").read_text(encoding="utf-8", errors="replace")
+    m = GAZOU_RE.search(point)
+    assert m and m.group(1).endswith("gazou/tsurugisaki_lt.jpg")

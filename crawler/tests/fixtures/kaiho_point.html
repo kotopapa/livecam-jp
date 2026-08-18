@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>海の安全情報（沿岸域情報提供システム）</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="noydir" />
+<meta name="robots" content="noodp" />
+<meta name="robots" content="index,follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link href="/common/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/common/scripts/jquery.bubblepopup.v2.3.1.css" rel="stylesheet" type="text/css" />
+<script src="/common/scripts/jquery-3.5.0.min.js" type="text/javascript"></script>
+<script src="/common/scripts/common.js" type="text/javascript"></script>
+<script src="/common/scripts/lity.min.js"></script>
+<script src="/common/scripts/jquery.bubblepopup.v2.3.1.min.js" type="text/javascript"></script>
+<script src="/common/scripts/mics_map_bubble.js" type="text/javascript"></script>
+
+<link href="/common/styles/livecamera.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+$(document).ready(function() {
+  $.ajax({
+    url: "../../info/tsurugisaki_lt/livecamera/inline_bb.html",
+    cache: false,
+    success: function(html){
+//      $("#inlineMarker").before(html);
+      $("#inlineMarker").before('<section class=""bg-w"><div class="_inner middleinner">' + html + '</div></section>');
+    }
+  });
+
+  $.ajax({
+    url: "../kisyou/data.txt",
+    cache: false,
+    success: function(html){
+      $("#toLiveCamera").before(html);
+    }
+  });
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $.ajax({
+    url: "info/inline_addmenu.html",
+    cache: false,
+    success: function(html){
+      $("#anzenMenu").after(html);
+    }
+  });
+  $.ajax({
+    url: "../info/inline_sidebar.html",
+    cache: false,
+    success: function(html){
+      $("aside").append(html);
+    }
+  });
+});
+</script>
+<link rel="alternate" type="application/rss+xml" title="海の安全情報 緊急情報 RSS2.0" href="/rss.xml" />
+</head>
+<body>
+<div id="pagetop" class="wrapper">
+<header id="header" class="cfix"><div class="_inner">
+<h2 id="logo"><img src="/common/images/header_logo.png" alt="海の安全情報" width="279" height="60" /></h2>
+<ul id="subMenues" class="cfix">
+<li class="first"><a href="/">海の安全情報トップ</a></li>
+<li><a href="/index_en.html">English</a></li>
+<li><a href="/n/index.html">ナローバンド</a></li>
+<li><a href="/sp/index.html">スマホ</a></li>
+</ul>
+<p id="subLogo"><img src="/common/images/header_logo_s.gif" alt="JAPAN COAST GUARD" width="98" height="32" /></p>
+</div></header><!-- header -->
+
+
+
+<div id="container">
+<main>
+
+
+
+<div class="pageTitleArea"><div class="_inner">
+<h1 class="pageTitle">【ライブカメラ】剱埼灯台からの映像</h1>
+</div></div><!-- /.pageTitleArea -->
+
+<section id="liveCam" class="bg-w"><div class="_inner topinner">
+  <div class="camerabox">
+    <img class="cameraimg" src="../../../../gazou/tsurugisaki_lt.jpg">
+    <a href="https://camera.mics.kaiho.mlit.go.jp/camstream/tsurugisaki_lt/" class="no-ico" target="_blank">動画ページを表示</a>	
+  </div>
+
+</div></section><!-- liveCam -->
+
+
+
+
+
+<div id="inlineMarker"></div>
+
+
+
+
+<section id="genkyoDetail" class="bg-w"><div class="_inner">
+<h2 class="sectionTitle">気象情報</h2>
+<div class="indent">
+<div id="toLiveCamera">
+<h3><img src="/common/images/hdr_togenkyo.png" alt="気象現況はこちら" width="750" height="70" class="pfix" /></h3>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><a href="/03kanku/yokosuka/tsurugisaki_lt/kisyou/index.html">剱埼灯台</a></td>
+</tr>
+</table>
+</div><!-- toLiveCamera -->
+</div><!-- indent -->
+</div></section><!-- /#genkyoDetail -->
+
+
+
+<section class="bg-w"><div class="_inner bottominner">
+<p class="btnBack"><a href="javascript:history.back()">戻る</a></p>
+</div></section><!-- section -->
+
+</main>
+<aside class="sub">
+<div class="about"><div class="_inner">
+<h3 class="sectionTitle sub">海の安全情報とは</h3>
+<p>全国各地の灯台やライブカメラなどで観測した風向、風速、波高などの「海の安全情報」をリアルタイムに提供しています。</p>
+<a href="#aboutText" class="btn btn-general btn-arrow" data-lity>詳しく見る </a>
+</div></div>
+
+<div id="aboutText" class="lity-hide">
+  <h2 class="sectionTitle">海の安全情報とは</h2>
+  <p>海上保安庁では、プレジャーボートや漁船などの船舶運航者やマリンレジャー愛好者の方々に対して、全国各地の灯台などで観測した風向、風速、波高などの局地的な気象・海象の現況、海上工事の状況、海上模様が把握できるライブカメラなどの「海の安全情報」をリアルタイムに提供しています。</p>
+  <p>海の安全情報は、主にインターネットで提供しており、特に、スマートフォンのGPS機能を利用して、現在地周辺の情報や気象・海象の現況、海上安全情報など様々な情報が地図画面上で一目で分かる<a href="https://www6.kaiho.mlit.go.jp/sp/index.html" target="_blank">　スマートフォン用サイト　</a>も運用しています。</p>
+  <p>さらに、24時間体制で海上保安庁が発表する緊急情報や気象庁発表の気象警報・注意報などを、事前に登録されたメールアドレスに配信する<a href="https://www7.kaiho.mlit.go.jp/micsmail/reg/touroku.html" target="_blank">「緊急情報配信サービス」</a>も提供しています。</p>
+  <p>地図の管区名をクリックするとその地域の情報を確認することができます。</p>
+</div>
+
+<div class="items _inner">
+
+<section id="anzenMenu" class="item">
+<h3 class="sectionTitle">安全情報メニュー / <br><strong class="em">横須賀海上保安部</strong></h3>
+
+<ul class="circle">
+<li><a href="/03kanku/yokosuka/">横須賀海上保安部 TOPへ</a></li>
+<li><a href="/03kanku/yokosuka/kisyou.html">気象現況</a></li>
+<li><a href="/03kanku/yokosuka/keihou_chuihou.html">警報・注意報</a>
+	<ul class="nostyle">
+	<li><a href="/03kanku/yokosuka/keihou_chuihou.html">- 気象警報・注意報</a></li>
+	<li><a href="/03kanku/yokosuka/keihou_tsunami.html">- 津波警報・注意報</a></li>
+	<li><a href="/03kanku/yokosuka/keihou_kaijou.html">- 地方海上警報・予報</a></li>
+	</ul>
+</li>
+<li><a href="/03kanku/yokosuka/kinkyu.html">緊急情報</a></li>
+<li><a href="/03kanku/yokosuka/anzen.html">海上安全情報</a></li>
+<li><a href="/03kanku/yokosuka/livecamera.html">ライブカメラ</a></li>
+</ul>
+</section>
+
+<section class="item">
+<h3 class="sectionTitle">全国・<br class="wide-only">他の管区はこちら</h3>
+<p><img src="/common/images/sub_map.png" alt=""></p>
+<p class="kankuZenkokuTitle"><a href="/">全国（総合TOP）へ</a></p>
+<p class="kankuOtherTitle">他の管区へ</p>
+<ul class="nostyle kankuList">
+<li><a href="/01kanku/">第一管区</a></li>
+<li><a href="/02kanku/">第二管区</a></li>
+<li><a href="/03kanku/">第三管区</a></li>
+<li><a href="/04kanku/">第四管区</a></li>
+<li><a href="/05kanku/">第五管区</a></li>
+<li><a href="/06kanku/">第六管区</a></li>
+<li><a href="/07kanku/">第七管区</a></li>
+<li><a href="/08kanku/">第八管区</a></li>
+<li><a href="/09kanku/">第九管区</a></li>
+<li><a href="/10kanku/">第十管区</a></li>
+<li><a href="/11kanku/">第十一管区</a></li>
+</ul>
+</section>
+
+<a class="item bnr-wsg" href="/watersafety/index.html" target="_blank">
+<picture><source media="(max-width: 1299px)" srcset="/common/images/wsg_banner_sp.jpg"><source srcset="/common/images/wsg_banner.jpg"><img src="/common/images/wsg_banner.jpg" alt="WATER SAFETY GUIDE ウォーターアクティビティ（海辺でのレジャー活動）を安全に無事故で楽しむための総合情報サイト"></picture>
+</a>
+
+<a class="item btn-x" href="https://twitter.com/JCG_koho" target="_blank">
+<img src="/common/images/www6-x-bunner.png">
+</a>
+
+</div><!--/.items-->
+</aside>
+</div><!-- /#container -->
+<footer id="footer"><div class="_inner">
+<address>Copyright(c) Japan Coast Guard. All rights reserved.</address>
+</div></footer><!-- /footer -->
+</div><!-- wrapper --><!-- benchmark broadband  0 wallclock secs ( 0.01 usr +  0.00 sys =  0.01 CPU) -->
+<script src="/common/scripts/jquery.cookie.js" charset="utf-8" type="text/javascript" ></script>
+</body>
+</html>

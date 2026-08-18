@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>海の安全情報（沿岸域情報提供システム）</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="noydir" />
+<meta name="robots" content="noodp" />
+<meta name="robots" content="index,follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link href="/common/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/common/scripts/jquery.bubblepopup.v2.3.1.css" rel="stylesheet" type="text/css" />
+<script src="/common/scripts/jquery-3.5.0.min.js" type="text/javascript"></script>
+<script src="/common/scripts/common.js" type="text/javascript"></script>
+<script src="/common/scripts/lity.min.js"></script>
+<script src="/common/scripts/jquery.bubblepopup.v2.3.1.min.js" type="text/javascript"></script>
+<script src="/common/scripts/mics_map_bubble.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var open_kinkyu=false;
+var site_path='/';
+</script>
+<script type="text/javascript" src="/common/scripts/mics_kinkyu.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $.ajax({
+    url: "info/inline_addmenu.html",
+    cache: false,
+    success: function(html){
+      $("#anzenMenu").after(html);
+    }
+  });
+  $.ajax({
+    url: "info/inline_sidebar.html",
+    cache: false,
+    success: function(html){
+      $("aside").append(html);
+    }
+  });
+});
+</script>
+<link rel="alternate" type="application/rss+xml" title="海の安全情報 緊急情報 RSS2.0" href="/rss.xml" />
+</head>
+<body>
+<div id="pagetop" class="wrapper">
+<header id="header" class="cfix"><div class="_inner">
+<h2 id="logo"><img src="/common/images/header_logo.png" alt="海の安全情報" width="279" height="60" /></h2>
+<ul id="subMenues" class="cfix">
+<li class="first"><a href="/">海の安全情報トップ</a></li>
+<li><a href="/index_en.html">English</a></li>
+<li><a href="/n/index.html">ナローバンド</a></li>
+<li><a href="/sp/index.html">スマホ</a></li>
+</ul>
+<p id="subLogo"><img src="/common/images/header_logo_s.gif" alt="JAPAN COAST GUARD" width="98" height="32" /></p>
+</div></header><!-- header -->
+
+
+
+<div id="container">
+<main>
+
+
+
+
+<div class="pageTitleArea"><div class="_inner">
+<h1 class="pageTitle">ライブカメラ（全国）</h1>
+</div></div><!-- /.pageTitleArea -->
+
+<section id="kinkyu" class="bg-e"><div class="_inner">
+<div class="box">
+<h2 class="sectionTitle notice">緊急情報</h2>
+<p id="rss"><a href="/rss.xml" class="btn btn-rss">RSS</a></p>
+<div id="kinkyuContent">
+<div id="zenkoku" class="kinkyu areaInfo" style="display:none;"><p class="icn icn_zenkoku">全国</p></div>
+<div id="kanku" class="kinkyu areaInfo" style="display:none;"><p class="icn icn_kanku">管区</p></div>
+<noscript><div class="kinkyu_noscript"><span>JavaScriptを有効にしてください。無効時は、緊急情報が表示されません。</span></div></noscript>
+</div><!-- kinkyuContent -->
+<p class="boxFooter" id="kinkyuBtn"><a href="javascript:void(0);"><span>&nbsp;</span></a></p>
+</div><!-- /.box -->
+</div></section><!-- kinkyu -->
+
+<section id="map" class="bg-g"><div class="_inner">
+<div id="nav">
+<ul class="tab">
+<li><a href="/kisyou.html"><span>気象現況</span></a></li>
+<li><a href="/keihou_chuihou.html"><span>警報・注意報</span></a></li>
+<li><a href="/kinkyu.html"><span>緊急情報</span></a></li>
+<li><a href="/anzen.html"><span>海上安全情報</span></a></li>
+<li class="active"><a href="/livecamera.html"><span>ライブカメラ</span></a></li>
+</ul>
+</div><!-- nav -->
+
+<div class="tab-body">
+<div id="mapAPI"><div style='position: relative;'><img src='/map/live_camera/00zenkoku.png' /><a href='https://www6.kaiho.mlit.go.jp/11kanku/naha/11th_rcgh/livecamera/index.html' style='position:absolute; top:555px; left:178px;'><img src='/map/transparent.gif' id='bubble1040' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/08kanku/maizuru/bakuchimisaki_lt/livecamera/index.html' style='position:absolute; top:305px; left:380px;'><img src='/map/transparent.gif' id='bubble1029' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/11kanku/ishigaki/irisaki_lt/livecamera/index.html' style='position:absolute; top:603px; left:52px;'><img src='/map/transparent.gif' id='bubble283761' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/05kanku/kobe/esaki_radar/livecamera/index.html' style='position:absolute; top:331px; left:371px;'><img src='/map/transparent.gif' id='bubble3326' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/wakkanai/motochi_lt/livecamera/index.html' style='position:absolute; top:44px; left:530px;'><img src='/map/transparent.gif' id='bubble283757' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/03kanku/shimoda/hachijosima_lt/livecamera/index.html' style='position:absolute; top:371px; left:499px;'><img src='/map/transparent.gif' id='bubble1004' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/kushiro/kushirosaki_lt/livecamera/index.html' style='position:absolute; top:106px; left:619px;'><img src='/map/transparent.gif' id='bubble988' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/hakodate/kattoshimisaki_lt/livecamera/index.html' style='position:absolute; top:139px; left:519px;'><img src='/map/transparent.gif' id='bubble983' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/otaru/hiyoriyama_lt/livecamera/index.html' style='position:absolute; top:99px; left:530px;'><img src='/map/transparent.gif' id='bubble984' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/07kanku/senzaki/mishima_n_lt/livecamera/index.html' style='position:absolute; top:325px; left:269px;'><img src='/map/transparent.gif' id='bubble1019' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/03kanku/ibaraki/isozaki_lt/livecamera/index.html' style='position:absolute; top:283px; left:520px;'><img src='/map/transparent.gif' id='bubble997' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/10kanku/kagoshima/satamisaki_lt/livecamera/index.html' style='position:absolute; top:427px; left:256px;'><img src='/map/transparent.gif' id='bubble1036' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/09kanku/niigata/sawasakihana_lt/livecamera/index.html' style='position:absolute; top:244px; left:456px;'><img src='/map/transparent.gif' id='bubble1031' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/rumoi/mashike_lt/livecamera/index.html' style='position:absolute; top:83px; left:544px;'><img src='/map/transparent.gif' id='bubble985' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/08kanku/tsuruga/tateishimisaki/livecamera/index.html' style='position:absolute; top:300px; left:398px;'><img src='/map/transparent.gif' id='bubble1024' class='bubble' style='width: 25px; height:31px;'/></a><a href="javascript:void(0)" style="position:absolute; top:313px; left:496px;"><img src="/map/transparent.gif" class="bubble" style="width: 25px; height:31px;" id="popup3320" /></a><div id="popup-content3320"><ul><li><a href="https://www6.kaiho.mlit.go.jp/03kanku/yokosuka/kannonsaki_radar/livecamera/index.html">観音埼レーダー施設</a></li><li><a href="https://www6.kaiho.mlit.go.jp/03kanku/yokosuka/tsurugisaki_lt/livecamera/index.html">剱埼灯台</a></li></ul></div><a href='https://www6.kaiho.mlit.go.jp/05kanku/kobe/kobe_no2_ss/livecamera/index.html' style='position:absolute; top:329px; left:378px;'><img src='/map/transparent.gif' id='bubble1010' class='bubble' style='width: 25px; height:31px;'/></a><a href="javascript:void(0)" style="position:absolute; top:331px; left:424px;"><img src="/map/transparent.gif" class="bubble" style="width: 25px; height:31px;" id="popup3322" /></a><div id="popup-content3322"><ul><li><a href="https://www6.kaiho.mlit.go.jp/04kanku/nagoya/isewan_martis_no2/livecamera/index.html">伊勢湾海上交通センター（北西）</a></li><li><a href="https://www6.kaiho.mlit.go.jp/04kanku/toba/toba_cgo/livecamera/index.html">鳥羽海上保安部庁舎</a></li><li><a href="https://www6.kaiho.mlit.go.jp/04kanku/toba/daiosaki_lt/livecamera/index.html">大王埼灯台</a></li><li><a href="https://www6.kaiho.mlit.go.jp/04kanku/nagoya/isewan_martis_no1/livecamera/index.html">伊勢湾海上交通センター（南西）</a></li></ul></div><a href='https://www6.kaiho.mlit.go.jp/01kanku/muroran/chikiumisaki_lt/livecamera/index.html' style='position:absolute; top:124px; left:530px;'><img src='/map/transparent.gif' id='bubble796' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/02kanku/hachinohe/hachinohe_ss/livecamera/index.html' style='position:absolute; top:172px; left:543px;'><img src='/map/transparent.gif' id='bubble991' class='bubble' style='width: 25px; height:31px;'/></a><a href="javascript:void(0)" style="position:absolute; top:342px; left:306px;"><img src="/map/transparent.gif" class="bubble" style="width: 25px; height:31px;" id="popup1016" /></a><div id="popup-content1016"><ul><li><a href="https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_s_entrance_no2/livecamera/index.html">音戸ノ瀬戸南口２</a></li><li><a href="https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_n_entrance/livecamera/index.html">音戸ノ瀬戸北口</a></li><li><a href="https://www6.kaiho.mlit.go.jp/06kanku/kure/ondonoseto_s_entrance_no1/livecamera/index.html">音戸ノ瀬戸南口１</a></li></ul></div><a href='https://www6.kaiho.mlit.go.jp/01kanku/muroran/erimomisaki_lt/livecamera/index.html' style='position:absolute; top:134px; left:589px;'><img src='/map/transparent.gif' id='bubble797' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/nemuro/nosappumisaki_lt/livecamera/index.html' style='position:absolute; top:95px; left:657px;'><img src='/map/transparent.gif' id='bubble987' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/07kanku/nagasaki/miirakunagasakihana_lt/livecamera/index.html' style='position:absolute; top:380px; left:203px;'><img src='/map/transparent.gif' id='bubble1021' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/07kanku/moji/hinoyamashita_tss/livecamera/index.html' style='position:absolute; top:348px; left:264px;'><img src='/map/transparent.gif' id='bubble1020' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/05kanku/tokushima/magosaki_lt/livecamera/index.html' style='position:absolute; top:340px; left:362px;'><img src='/map/transparent.gif' id='bubble1012' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/09kanku/kanazawa/ono_lt/livecamera/index.html' style='position:absolute; top:277px; left:413px;'><img src='/map/transparent.gif' id='bubble1033' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/08kanku/maizuru/kyogamisaki_lt/livecamera/index.html' style='position:absolute; top:299px; left:377px;'><img src='/map/transparent.gif' id='bubble1028' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/09kanku/nanao/hegurashima_lt/livecamera/index.html' style='position:absolute; top:244px; left:422px;'><img src='/map/transparent.gif' id='bubble1032' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/07kanku/karatsu/wakamiya_lt/livecamera/index.html' style='position:absolute; top:350px; left:231px;'><img src='/map/transparent.gif' id='bubble1023' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/06kanku/takamatsu/bisan_martis/livecamera/index.html' style='position:absolute; top:339px; left:340px;'><img src='/map/transparent.gif' id='bubble3327' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/02kanku/fukushima/shioyasaki_lt/livecamera/index.html' style='position:absolute; top:267px; left:529px;'><img src='/map/transparent.gif' id='bubble995' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/05kanku/osaka/osaka_lt/livecamera/index.html' style='position:absolute; top:330px; left:381px;'><img src='/map/transparent.gif' id='bubble1043' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/08kanku/hamada/iwamiosakihana_lt/livecamera/index.html' style='position:absolute; top:321px; left:296px;'><img src='/map/transparent.gif' id='bubble1025' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/10kanku/kumamoto/misumi_lt/livecamera/index.html' style='position:absolute; top:384px; left:251px;'><img src='/map/transparent.gif' id='bubble1038' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/monbetsu/saromako_entrance_lt/livecamera/index.html' style='position:absolute; top:74px; left:603px;'><img src='/map/transparent.gif' id='bubble986' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/03kanku/choshi/inubosaki_lt/livecamera/index.html' style='position:absolute; top:301px; left:526px;'><img src='/map/transparent.gif' id='bubble1001' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/11kanku/ishigaki/ryukyukannonsaki_lt/livecamera/index.html' style='position:absolute; top:605px; left:83px;'><img src='/map/transparent.gif' id='bubble1041' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/09kanku/niigata/aganokawa_rm_lt/livecamera/index.html' style='position:absolute; top:241px; left:480px;'><img src='/map/transparent.gif' id='bubble1034' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/08kanku/sakai/izumohinomisaki_sakaguri_sl/livecamera/index.html' style='position:absolute; top:308px; left:308px;'><img src='/map/transparent.gif' id='bubble1026' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/03kanku/chiba/nojimasaki_lt/livecamera/index.html' style='position:absolute; top:323px; left:500px;'><img src='/map/transparent.gif' id='bubble998' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/08kanku/sakai/mihonoseki_lt/livecamera/index.html' style='position:absolute; top:305px; left:327px;'><img src='/map/transparent.gif' id='bubble1027' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/04kanku/yokkaichi/yokkaichiko_bkw_lt/livecamera/index.html' style='position:absolute; top:321px; left:415px;'><img src='/map/transparent.gif' id='bubble1007' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/hakodate/kamomeshima_lt/livecamera/index.html' style='position:absolute; top:136px; left:506px;'><img src='/map/transparent.gif' id='bubble981' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/10kanku/kagoshima/tanegashima_lt/livecamera/index.html' style='position:absolute; top:444px; left:264px;'><img src='/map/transparent.gif' id='bubble283759' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/06kanku/matsuyama/sadamisaki_lt/livecamera/index.html' style='position:absolute; top:364px; left:292px;'><img src='/map/transparent.gif' id='bubble1017' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/11kanku/nakagusuku/ikeishima_lt/livecamera/index.html' style='position:absolute; top:550px; left:186px;'><img src='/map/transparent.gif' id='bubble1042' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/03kanku/shimoda/irosaki_lt/livecamera/index.html' style='position:absolute; top:331px; left:473px;'><img src='/map/transparent.gif' id='bubble1003' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/02kanku/miyagi/kinkasan_lt/livecamera/index.html' style='position:absolute; top:232px; left:545px;'><img src='/map/transparent.gif' id='bubble994' class='bubble' style='width: 25px; height:31px;'/></a><a href="javascript:void(0)" style="position:absolute; top:319px; left:420px;"><img src="/map/transparent.gif" class="bubble" style="width: 25px; height:31px;" id="popup3324" /></a><div id="popup-content3324"><ul><li><a href="https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no2/livecamera/index.html">名古屋港海上交通センター（東）</a></li><li><a href="https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no3/livecamera/index.html">名古屋港ガーデンふ頭</a></li><li><a href="https://www6.kaiho.mlit.go.jp/04kanku/nagoya/nagoyako_martis_no1/livecamera/index.html">名古屋港海上交通センター（西）</a></li></ul></div><a href='https://www6.kaiho.mlit.go.jp/07kanku/tsushima/mitsushima_lt/livecamera/index.html' style='position:absolute; top:328px; left:224px;'><img src='/map/transparent.gif' id='bubble1022' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/02kanku/aomori/tappisaki_lt/livecamera/index.html' style='position:absolute; top:152px; left:512px;'><img src='/map/transparent.gif' id='bubble989' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/05kanku/tanabe/shionomisaki_lt/livecamera/index.html' style='position:absolute; top:362px; left:391px;'><img src='/map/transparent.gif' id='bubble1011' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/07kanku/oita/sekisaki_lt/livecamera/index.html' style='position:absolute; top:366px; left:289px;'><img src='/map/transparent.gif' id='bubble1018' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/02kanku/kamaishi/ofunatoko_dl/livecamera/index.html' style='position:absolute; top:212px; left:549px;'><img src='/map/transparent.gif' id='bubble993' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/10kanku/miyazaki/toimisaki_lt/livecamera/index.html' style='position:absolute; top:417px; left:274px;'><img src='/map/transparent.gif' id='bubble1035' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/05kanku/kouchi/kochi_lt/livecamera/index.html' style='position:absolute; top:360px; left:333px;'><img src='/map/transparent.gif' id='bubble1013' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/03kanku/shimizu/omaesaki_lt/livecamera/index.html' style='position:absolute; top:331px; left:456px;'><img src='/map/transparent.gif' id='bubble1002' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/09kanku/fushiki/fushiki_dl/livecamera/index.html' style='position:absolute; top:272px; left:426px;'><img src='/map/transparent.gif' id='bubble1030' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/03kanku/yokohama/honmoku_vtss/livecamera/index.html' style='position:absolute; top:308px; left:495px;'><img src='/map/transparent.gif' id='bubble999' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/02kanku/akita/akita_cgo/livecamera/index.html' style='position:absolute; top:193px; left:505px;'><img src='/map/transparent.gif' id='bubble992' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/10kanku/amami/kasarisaki_lt/livecamera/index.html' style='position:absolute; top:493px; left:231px;'><img src='/map/transparent.gif' id='bubble1039' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/02kanku/sakata/sakata_lt/livecamera/index.html' style='position:absolute; top:214px; left:498px;'><img src='/map/transparent.gif' id='bubble996' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/10kanku/kushikino/kohirasehana_lt/livecamera/index.html' style='position:absolute; top:398px; left:243px;'><img src='/map/transparent.gif' id='bubble1037' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/11kanku/miyakojima/hennasaki_lt/livecamera/index.html' style='position:absolute; top:595px; left:119px;'><img src='/map/transparent.gif' id='bubble283760' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/02kanku/hachinohe/shiriyasaki_lt/livecamera/index.html' style='position:absolute; top:148px; left:542px;'><img src='/map/transparent.gif' id='bubble990' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/04kanku/owase/owase_cgo/livecamera/index.html' style='position:absolute; top:345px; left:403px;'><img src='/map/transparent.gif' id='bubble1006' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/07kanku/moji/kanmon_martis/livecamera/index.html' style='position:absolute; top:350px; left:263px;'><img src='/map/transparent.gif' id='bubble3329' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/01kanku/wakkanai/soyamisaki_lt/livecamera/index.html' style='position:absolute; top:38px; left:554px;'><img src='/map/transparent.gif' id='bubble333' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/07kanku/tsushima/tsutsusaki_lt/livecamera/index.html' style='position:absolute; top:344px; left:217px;'><img src='/map/transparent.gif' id='bubble283758' class='bubble' style='width: 25px; height:31px;'/></a><a href='https://www6.kaiho.mlit.go.jp/04kanku/nagoya/hashidahana_lt/livecamera/index.html' style='position:absolute; top:326px; left:428px;'><img src='/map/transparent.gif' id='bubble1005' class='bubble' style='width: 25px; height:31px;'/></a><a href="https://camera.mics.kaiho.mlit.go.jp/camportal/cameralist.html" class="no-ico" style="position:absolute; top:683px; left:575px;" target="_blank"><img src="/common/images/live_camera_list.gif" alt="ライブカメラ一覧" /></a>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+    $(".bubble").CreateBubblePopup();
+set_livecamera_bubble('1040','top','第十一管区海上保安本部庁舎');
+set_livecamera_bubble('1029','bottom','博奕岬灯台');
+set_livecamera_bubble('283761','top','西埼灯台');
+set_livecamera_bubble('3326','top','江埼レーダー施設');
+set_livecamera_bubble('283757','bottom','元地灯台');
+set_livecamera_bubble('1004','top','八丈島灯台');
+set_livecamera_bubble('988','bottom','釧路埼灯台');
+set_livecamera_bubble('983','bottom','葛登支岬灯台');
+set_livecamera_bubble('984','bottom','日和山灯台');
+set_livecamera_bubble('1019','top','見島北灯台');
+set_livecamera_bubble('997','bottom','磯埼灯台');
+set_livecamera_bubble('1036','top','佐多岬灯台');
+set_livecamera_bubble('1031','bottom','沢崎鼻灯台');
+set_livecamera_bubble('985','bottom','増毛灯台');
+set_livecamera_bubble('1024','bottom','立石岬');
+set_popup("3320", "bottom");
+set_livecamera_bubble('1010','top','神戸第二信号所');
+set_popup("3322", "top");
+set_livecamera_bubble('796','bottom','チキウ岬灯台');
+set_livecamera_bubble('991','bottom','八戸信号所');
+set_popup("1016", "top");
+set_livecamera_bubble('797','bottom','襟裳岬灯台');
+set_livecamera_bubble('987','bottom','納沙布岬灯台');
+set_livecamera_bubble('1021','top','三井楽長崎鼻灯台');
+set_livecamera_bubble('1020','top','火ノ山下潮流信号所');
+set_livecamera_bubble('1012','top','孫埼灯台');
+set_livecamera_bubble('1033','bottom','大野灯台');
+set_livecamera_bubble('1028','bottom','経ケ岬灯台');
+set_livecamera_bubble('1032','bottom','舳倉島灯台');
+set_livecamera_bubble('1023','top','若宮灯台');
+set_livecamera_bubble('3327','top','備讃瀬戸海上交通センター');
+set_livecamera_bubble('995','bottom','塩屋埼灯台');
+set_livecamera_bubble('1043','top','大阪灯台');
+set_livecamera_bubble('1025','bottom','石見大崎鼻灯台');
+set_livecamera_bubble('1038','top','三角灯台');
+set_livecamera_bubble('986','bottom','サロマ湖口灯台');
+set_livecamera_bubble('1001','bottom','犬吠埼灯台');
+set_livecamera_bubble('1041','top','琉球観音埼灯台');
+set_livecamera_bubble('1034','bottom','阿賀野川口灯台');
+set_livecamera_bubble('1026','bottom','出雲日御碕サカグリ照射灯');
+set_livecamera_bubble('998','top','野島埼灯台');
+set_livecamera_bubble('1027','bottom','美保関灯台');
+set_livecamera_bubble('1007','top','四日市防波堤信号所');
+set_livecamera_bubble('981','bottom','鴎島灯台');
+set_livecamera_bubble('283759','top','種子島灯台');
+set_livecamera_bubble('1017','top','佐田岬灯台');
+set_livecamera_bubble('1042','top','伊計島灯台');
+set_livecamera_bubble('1003','top','石廊埼灯台');
+set_livecamera_bubble('994','bottom','金華山灯台');
+set_popup("3324", "bottom");
+set_livecamera_bubble('1022','top','三島灯台');
+set_livecamera_bubble('989','bottom','龍飛埼灯台');
+set_livecamera_bubble('1011','top','潮岬灯台');
+set_livecamera_bubble('1018','top','関埼灯台');
+set_livecamera_bubble('993','bottom','大船渡港指向灯');
+set_livecamera_bubble('1035','top','都井岬灯台');
+set_livecamera_bubble('1013','top','高知灯台');
+set_livecamera_bubble('1002','top','御前埼灯台');
+set_livecamera_bubble('1030','bottom','伏木指向灯');
+set_livecamera_bubble('999','bottom','本牧信号所');
+set_livecamera_bubble('992','bottom','秋田海上保安部庁舎');
+set_livecamera_bubble('1039','top','笠利埼灯台');
+set_livecamera_bubble('996','bottom','酒田灯台');
+set_livecamera_bubble('1037','top','小平瀬鼻灯台');
+set_livecamera_bubble('283760','top','平安名埼灯台');
+set_livecamera_bubble('990','bottom','尻屋埼灯台');
+set_livecamera_bubble('1006','top','尾鷲海上保安部庁舎');
+set_livecamera_bubble('3329','top','関門海峡海上交通センター');
+set_livecamera_bubble('333','bottom','宗谷岬灯台');
+set_livecamera_bubble('283758','top','豆酘埼灯台');
+set_livecamera_bubble('1005','top','橋田鼻灯台');
+
+});
+//-->
+</script>
+<a href="/01kanku/livecamera.html" style="position:absolute; top:153px; left:626px;"><img src='/map/live_camera/link_icon/00zenkoku/0100-626-153.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/02kanku/livecamera.html" style="position:absolute; top:258px; left:586px;"><img src='/map/live_camera/link_icon/00zenkoku/0200-586-258.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/03kanku/livecamera.html" style="position:absolute; top:392px; left:540px;"><img src='/map/live_camera/link_icon/00zenkoku/0300-540-392.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/04kanku/livecamera.html" style="position:absolute; top:437px; left:404px;"><img src='/map/live_camera/link_icon/00zenkoku/0400-404-437.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/05kanku/livecamera.html" style="position:absolute; top:467px; left:310px;"><img src='/map/live_camera/link_icon/00zenkoku/0500-310-467.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/06kanku/livecamera.html" style="position:absolute; top:437px; left:310px;"><img src='/map/live_camera/link_icon/00zenkoku/0600-310-437.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/07kanku/livecamera.html" style="position:absolute; top:351px; left:124px;"><img src='/map/live_camera/link_icon/00zenkoku/0700-124-351.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/08kanku/livecamera.html" style="position:absolute; top:257px; left:255px;"><img src='/map/live_camera/link_icon/00zenkoku/0800-255-257.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/09kanku/livecamera.html" style="position:absolute; top:219px; left:368px;"><img src='/map/live_camera/link_icon/00zenkoku/0900-368-219.png' class='pfix' style='width: 80px; height: 25px;' /></a><a href="/10kanku/livecamera.html" style="position:absolute; top:467px; left:96px;"><img src='/map/live_camera/link_icon/00zenkoku/1000-96-467.png' class='pfix' style='width: 85px; height: 25px;' /></a><a href="/11kanku/livecamera.html" style="position:absolute; top:563px; left:53px;"><img src='/map/live_camera/link_icon/00zenkoku/1100-53-563.png' class='pfix' style='width: 85px; height: 25px;' /></a></div></div>
+</div><!--/.tab-body-->
+</div></section><!-- /#map -->
+
+
+</main>
+<aside class="sub">
+<div class="about"><div class="_inner">
+<h3 class="sectionTitle sub">海の安全情報とは</h3>
+<p>全国各地の灯台やライブカメラなどで観測した風向、風速、波高などの「海の安全情報」をリアルタイムに提供しています。</p>
+<a href="#aboutText" class="btn btn-general btn-arrow" data-lity>詳しく見る </a>
+</div></div>
+
+<div id="aboutText" class="lity-hide">
+  <h2 class="sectionTitle">海の安全情報とは</h2>
+  <p>海上保安庁では、プレジャーボートや漁船などの船舶運航者やマリンレジャー愛好者の方々に対して、全国各地の灯台などで観測した風向、風速、波高などの局地的な気象・海象の現況、海上工事の状況、海上模様が把握できるライブカメラなどの「海の安全情報」をリアルタイムに提供しています。</p>
+  <p>海の安全情報は、主にインターネットで提供しており、特に、スマートフォンのGPS機能を利用して、現在地周辺の情報や気象・海象の現況、海上安全情報など様々な情報が地図画面上で一目で分かる<a href="https://www6.kaiho.mlit.go.jp/sp/index.html" target="_blank">　スマートフォン用サイト　</a>も運用しています。</p>
+  <p>さらに、24時間体制で海上保安庁が発表する緊急情報や気象庁発表の気象警報・注意報などを、事前に登録されたメールアドレスに配信する<a href="https://www7.kaiho.mlit.go.jp/micsmail/reg/touroku.html" target="_blank">「緊急情報配信サービス」</a>も提供しています。</p>
+  <p>地図の管区名をクリックするとその地域の情報を確認することができます。</p>
+</div>
+
+<div class="items _inner">
+
+<section id="anzenMenu" class="item">
+<h3 class="sectionTitle">安全情報メニュー</h3>
+
+<ul class="circle">
+
+<li><a href="/kisyou.html">気象現況</a></li>
+<li><a href="/keihou_chuihou.html">警報・注意報</a>
+	<ul class="nostyle">
+	<li><a href="/keihou_chuihou.html">- 気象警報・注意報</a></li>
+	<li><a href="/keihou_tsunami.html">- 津波警報・注意報</a></li>
+	<li><a href="/keihou_kaijou.html">- 地方海上警報・予報</a></li>
+	</ul>
+</li>
+<li><a href="/kinkyu.html">緊急情報</a></li>
+<li><a href="/anzen.html">海上安全情報</a></li>
+<li><a href="/livecamera.html">ライブカメラ</a></li>
+</ul>
+</section>
+
+<section class="item">
+<h3 class="sectionTitle">全国・<br class="wide-only">他の管区はこちら</h3>
+<p><img src="/common/images/sub_map.png" alt=""></p>
+<p class="kankuZenkokuTitle"><a href="/">全国（総合TOP）へ</a></p>
+<p class="kankuOtherTitle">他の管区へ</p>
+<ul class="nostyle kankuList">
+<li><a href="/01kanku/">第一管区</a></li>
+<li><a href="/02kanku/">第二管区</a></li>
+<li><a href="/03kanku/">第三管区</a></li>
+<li><a href="/04kanku/">第四管区</a></li>
+<li><a href="/05kanku/">第五管区</a></li>
+<li><a href="/06kanku/">第六管区</a></li>
+<li><a href="/07kanku/">第七管区</a></li>
+<li><a href="/08kanku/">第八管区</a></li>
+<li><a href="/09kanku/">第九管区</a></li>
+<li><a href="/10kanku/">第十管区</a></li>
+<li><a href="/11kanku/">第十一管区</a></li>
+</ul>
+</section>
+
+<a class="item bnr-wsg" href="/watersafety/index.html" target="_blank">
+<picture><source media="(max-width: 1299px)" srcset="/common/images/wsg_banner_sp.jpg"><source srcset="/common/images/wsg_banner.jpg"><img src="/common/images/wsg_banner.jpg" alt="WATER SAFETY GUIDE ウォーターアクティビティ（海辺でのレジャー活動）を安全に無事故で楽しむための総合情報サイト"></picture>
+</a>
+
+<a class="item btn-x" href="https://twitter.com/JCG_koho" target="_blank">
+<img src="/common/images/www6-x-bunner.png">
+</a>
+
+</div><!--/.items-->
+</aside>
+</div><!-- /#container -->
+<footer id="footer"><div class="_inner">
+<address>Copyright(c) Japan Coast Guard. All rights reserved.</address>
+</div></footer><!-- /footer -->
+</div><!-- wrapper --><!-- benchmark broadband  1 wallclock secs ( 0.66 usr +  0.01 sys =  0.67 CPU) -->
+<script src="/common/scripts/jquery.cookie.js" charset="utf-8" type="text/javascript" ></script>
+</body>
+</html>
