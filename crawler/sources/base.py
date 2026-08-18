@@ -212,6 +212,7 @@ class CameraCandidate:
     refresh_sec: int | None = None
     requires_referer: bool = False
     headers: dict[str, str] = field(default_factory=dict)
+    camera_ref: str | None = None       # 都度解決型feedのカメラ管理ID（mlit_roadinfo等）
     fallback_url: str | None = None
     address_hint: str | None = None     # geocode.py が使う住所ヒント（出力には含めない）
     review_note: str = ""
@@ -236,6 +237,7 @@ class CameraCandidate:
                 "refresh_sec": self.refresh_sec,
                 "requires_referer": self.requires_referer,
                 "headers": self.headers,
+                **({"camera_ref": self.camera_ref} if self.camera_ref else {}),
             },
             "fallback": {"type": "web_page", "url": self.fallback_url or self.page_url},
             "operator": self.operator,

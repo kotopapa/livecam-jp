@@ -44,6 +44,8 @@ def check_camera(session: requests.Session, camera: dict[str, Any],
 
     if ftype == "still_image":
         return _check_still(session, camera, state, now, prev_failures)
+    if ftype == "mlit_roadinfo":
+        return _check_roadinfo(session, camera, state, now, prev_failures)
     if ftype in ("youtube_channel", "youtube_video"):
         return _check_youtube(session, camera, state, now, prev_failures)
     # web_page / hls はステータスコードのみ確認
@@ -75,8 +77,28 @@ def _headers(camera: dict, state: dict) -> dict[str, str]:
     return h
 
 
-def _check_still(session, camera, state, now, prev_failures) -> dict:
-    resp = _get(session, camera["feed"]["url"], _headers(camera, state))
+def _check_roadinfo(session, camera, state, now, prev_failures) -> dict:
+    """都度解決型（道路情報提供システム）。
+
+    monitor/main.py の事前解決パスが camera["_resolved_image"] に
+    {"url": 最新静止画URL, "time": 提供元申告の取得時刻} を入れてくる。
+    解決できていなければ失敗として数える。
+    """
+    resolved = camera.get("_resolved_image") or {}
+    url = resolved.get("url")
+    if not url:
+        return _fail(state, now, prev_failures, None)
+    # タイムスタンプ付きURLは毎回変わるため、ETag/If-Modified-Since は意味を持たない
+    state.pop("etag", None)
+    state.pop("last_modified", None)
+    result = _check_still(session, camera, state, now, prev_failures, url=url)
+    result["image_url"] = url
+    result["image_time"] = resolved.get("time") or None
+    return result
+
+
+def _check_still(session, camera, state, now, prev_failures, url: str | None = None) -> dict:
+    resp = _get(session, url or camera["feed"]["url"], _headers(camera, state))
     if resp is None or resp.status_code >= 400:
         return _fail(state, now, prev_failures, resp.status_code if resp is not None else None)
 

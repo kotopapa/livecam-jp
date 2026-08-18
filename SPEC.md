@@ -142,7 +142,7 @@ livecam-jp/
       "river_or_route": "多摩川",             // 河川名 or 路線名（任意）
 
       "feed": {
-        "type": "still_image",                // still_image | youtube_channel | youtube_video | hls | web_page
+        "type": "still_image",                // still_image | youtube_channel | youtube_video | hls | web_page | mlit_roadinfo
         "url": "https://.../camera01.jpg",
         "refresh_sec": 300,                   // 一次ソース側の更新間隔（判明している場合）
         "requires_referer": false,            // Referer必須か
@@ -180,6 +180,7 @@ livecam-jp/
 | type | 意味 | アプリの実装 |
 |---|---|---|
 | `still_image` | 定期更新される静止画URL | URLSession で取得。最短60秒間隔。ETag対応 |
+| `mlit_roadinfo` | 道路情報提供システム（road-info-prvs.mlit.go.jp）の都度解決型カメラ。`url` は解決元ページ、`camera_ref` に管理ID。**静止画の固定URLが存在しない**（15分刻みタイムスタンプ付き・直近3世代のみ） | アプリは `status.json` の `image_url`（monitorが実行のたびに再解決して配信）を使う。取れないときは `fallback` の元ページへ誘導 |
 | `youtube_channel` | チャンネルIDを保持。`url` は `UC...` のチャンネルID | `https://www.youtube.com/embed/live_stream?channel=<ID>` を WKWebView で読む。**動画IDが変わっても追従するのでAPIクォータ消費ゼロ** |
 | `youtube_video` | 固定の動画ID | 同上（`embed/<videoId>`）。チャンネル方式が使えない場合のみ |
 | `hls` | 公開されているHLSのm3u8 | AVPlayer。**YouTube由来のものは絶対にここに入れない** |
@@ -199,7 +200,9 @@ livecam-jp/
       "http_status": 200,
       "frozen_since": null,       // frozen のとき、いつから同一画像か
       "consecutive_failures": 0,
-      "avg_interval_sec": 300     // 実測した更新間隔（アプリのポーリング間隔決定に使う）
+      "avg_interval_sec": 300,    // 実測した更新間隔（アプリのポーリング間隔決定に使う）
+      "image_url": null,          // 都度解決型feed（mlit_roadinfo）のみ: monitorが解決した最新静止画URL
+      "image_time": null          // image_url の画像取得時刻（提供元申告）
     }
   }
 }

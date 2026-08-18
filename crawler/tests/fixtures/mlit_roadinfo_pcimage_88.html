@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="" />
+        <meta name="keywords"    content="" />
+        <meta name="viewport"    content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+
+                <script type="text/javascript" charset="utf8" src="../common/js/jquery-3.5.1.min.js?1669820438">                            </script>
+        <script type="text/javascript" charset="utf8" src="../backup/20260818085000/kH2Xgv5Oree4Z1mC/Wrm6BJhy.js">                                                          </script>
+        <script type="text/javascript" charset="utf8" src="../common/js/jquery.cookie.js?1669820438">                               </script>
+        <script type="text/javascript" charset="utf8" src="../common/js/bootstrap.min.js?1669820438">                               </script>
+        <script type="text/javascript" charset="utf8" src="../common/leaflet/leaflet.js?1669820438">                                </script>
+        <script type="text/javascript" charset="utf8" src="../common/leaflet/leaflet_context/leaflet.contextmenu.min.js?1669820438"></script>
+        <script type="text/javascript" charset="utf8" src="../common/js/leaflet.awesome-markers.js?1669820438">                     </script>
+        <script type="text/javascript" charset="utf8" src="../common/js/wise-leaflet-pip.js?1669820438">                            </script>
+
+        <script type="text/javascript" charset="utf8" src="../common/pc/js/Cookie.js?1669820438">                                   </script>
+        <script type="text/javascript" charset="utf8" src="../common/js/Content.js?1669820438">                                     </script>
+        <script type="text/javascript" charset="utf8" src="../common/js/Common.js?1669820438">                                      </script>
+        <script type="text/javascript" charset="utf8" src="../common/js/CommonJp.js?1669820438">                                    </script>
+
+        <script type="text/javascript" charset="utf8" src="../common/pc/js/L.Control.Pan.js?1669820438">                            </script>
+        <script type="text/javascript" charset="utf8" src="../common/pc/js/Control.MiniMap.min.js?1669820438">                      </script>
+        <script type="text/javascript" charset="utf8" src="../common/pc/js/L.Control.Zoomslider.js?1669820438">                     </script>
+        <script type="text/javascript" charset="utf8" src="../common/pc/js/Common.js?1669820438">                                   </script>
+        <script type="text/javascript" charset="utf8" src="../common/pc/js/leafletController.js?1669820438">                        </script>
+
+        <link rel="stylesheet" type="text/css" href="../common/css/bootstrap.min.css?1669820438                              ">
+        <link rel="stylesheet" type="text/css" href="../common/leaflet/leaflet.css?1669820438                                ">
+        <link rel="stylesheet" type="text/css" href="../common/leaflet/leaflet_context/leaflet.contextmenu.min.css?1669820438">
+        <link rel="stylesheet" type="text/css" href="../common/css/fontawesome/v5.0.13_all.css?1669820438">
+        <link rel="stylesheet" type="text/css" href="../common/pc/css/fontawesome.min.css?1669820438                         ">
+
+        <link rel="stylesheet" type="text/css" href="../common/pc/css/leaflet.awesome-markers.css?1669820438                 ">
+        <link rel="stylesheet" type="text/css" href="../common/pc/css/L.Control.Pan.css?1669820438                           ">
+        <link rel="stylesheet" type="text/css" href="../common/pc/css/L.Control.Zoomslider.css?1669820438                    ">
+        <link rel="stylesheet" type="text/css" href="../common/pc/css/Control.MiniMap.min.css?1669820438                     ">
+        <link rel="stylesheet" type="text/css" href="../common/pc/css/Common.css?1669820438                                  ">
+        <link rel="stylesheet" type="text/css" href="../common/pc/css/displayFrame.css?1669820438                            ">
+
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="./css/L.Control.Pan.ie.css">
+        <![endif]-->
+
+        <script>
+            <!-- mouseover時のヘッダ画像切り替え -->
+            $(function(){
+                $('.mouseover').each(function(){
+                    var src_off = $(this).find('img').attr('src');
+                    var src_on = src_off.replace('_off','_on');
+                    $('<img />').attr('src',src_on);
+                    $(this).hover(function(){
+                    $(this).find('img').attr('src',src_on);
+                },
+                    function(){
+                        $(this).find('img').attr('src',src_off);
+                    }); 
+                });
+            });
+        </script>
+        <title>道路情報提供システム</title>
+    </head>
+
+    <body>
+        <div id="headerBar" onclick="selectedMenu('pcTop', 0);">
+            <img id="headerBarTitle" src="../common/pc/img/header_bar_title.png" />
+                        <div id="displayingContentTriangle"></div>
+            <div id="displayingContent">
+                <p id="displayingContentName">道路画像</p>
+            </div>
+
+        </div>
+        <div id="mainFrame">
+            <div id="sideMenuFrame">
+                <div id="commonUpdateTimeFrame" class="updateTimeFrame">2026年08月18日<br>09時00分更新</div>
+                <div id="radarRainUpdateTimeFrame" class="updateTimeFrame displayNone"></div>
+                <ul id="hdrop" class="dropmenu">
+                    <li id="tukokiseiMenu">
+                        <a href="#" class="mouseover"><img id="tukokiseiMenuImg" class="menuBtnImg" src="../common/pc/img/header_menu01.png" alt="通行規制"><p id="tukokiseiMenuText">通行規制</p></a>
+                        <ul class="submenuList">
+                            <li onclick="selectedMenu('pcTukokisei', 1);">
+                                <a id="tukokiseiSubmenu1">現在の通行規制</a>
+                            </li>
+                            <li onclick="selectedMenu('pcJizenTukokisei', 3);" class="jizen">
+                                <a id="tukokiseiSubmenu3">事前通行規制区間(国が管理する道路)</a>
+                            </li>
+                            <li onclick="selectedMenu('pcExpresswayJizenTukokisei', 5);" class="jizen">
+                                <a id="tukokiseiSubmenu5">事前通行規制区間(高速道路会社が管理する道路)</a>
+                            </li>
+                            <li onclick="selectedMenu('pcKojiYotei', 4);">
+                                <a id="tukokiseiSubmenu4">工事・行事予定実施箇所</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="gazoMenu" onclick="selectedMenu('pcImage', 1);">
+                        <a href="#" class="mouseover"><img id="gazoMenuImg" class="menuBtnImg" src="../common/pc/img/header_menu02.png" alt="道路画像"><p id="gazoMenuText">道路画像</p></a>
+                    </li>
+                    <li id="kishoMenu">
+                        <a href="#" class="mouseover"><img id="kishoMenuImg" class="menuBtnImg" src="../common/pc/img/header_menu03.png" alt="道路気象"><p id="kishoMenuText">道路気象</p></a>
+                        <ul class="submenuList">
+                            <li onclick="selectedMenu('pcKisho' , 1);"><a id="kishoSubmenu1">時間雨量</a></li>
+                            <li onclick="selectedMenu('pcKisho' , 2);"><a id="kishoSubmenu2">連続雨量</a></li>
+                            <li onclick="selectedMenu('pcKisho' , 3);"><a id="kishoSubmenu3">積雪深</a></li>
+                            <li onclick="selectedMenu('pcKisho' , 4);"><a id="kishoSubmenu4">風向風速</a></li>
+                            <li onclick="selectedMenu('pcKisho' , 5);"><a id="kishoSubmenu5">気温</a></li>
+                            <li onclick="selectedMenu('pcKisho' , 6);"><a id="kishoSubmenu6">路温</a></li>
+                        </ul>
+                    </li>
+                    <li id="radarRainMenu" onclick="selectedMenu('pcRadarRain', 1);">
+                        <a href="#" class="mouseover"><img id="radarRainMenuImg" class="menuBtnImg" src="../common/pc/img/header_menu06.png" alt="レーダ雨量"><p id="radarRainMenuText">レーダ雨量<br>(川の防災情報)</p></a>
+                    </li>
+                    <li id="linkMenu" onclick="selectedMenu('pcLink', 1);">
+                        <a href="#" class="mouseover"><img id="linkMenuImg" class="menuBtnImg" src="../common/pc/img/header_menu04.png" alt="リンク"><p id="linkMenuText">リンク</p></a>
+                    </li>
+                    <li id="inquiryMenu" onclick="selectedMenu('pcInquiry', 0);">
+                        <a href="#" class="mouseover"><img id="inquiryMenuImg" class="menuBtnImg" src="../common/pc/img/header_menu05.png" alt="お問合せ"><p id="inquiryMenuText">お問合せ</p></a>
+                    </li>
+                </ul>
+                <div id="noticeFrame" class="noticeFrameJp">
+                    <p>おことわり</p>
+                    <ul>
+                        <li>本サイトで提供する情報は5～10分間隔で更新していますが、表示中のコンテンツは自動更新されません。</li>
+                        <li>現地の規制状況により、本サイトで提供している規制情報箇所以外で規制を実施している場合もあります。 </li>
+                        <li>情報更新時点からの時間経過により、あるいは現地到着までの間に道路状況が一変していることもあります。この情報提供は、運転の参考程度にお考えいただき、十分注意してご通行ください。</li>
+                        <li>国土交通省は利用者が本サイトの情報を用いて行う一切の行為について何ら責任を負うものではありません。</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- お知らせ -->
+            <input type="hidden" id="systemKokuchi"  value='[]' />
+            <!-- 整備局座標 -->
+            <input type="hidden" id="seibikyokuPnt"  value='134.0455805,34.35236213' />
+            <!-- ページタイプ -->
+            <input type="hidden" id="pageType"       value='1' />
+            <!-- 言語 -->
+            <input type="hidden" id="language"       value='ja' />
+
+            <div id="contentsFrame">
+                        <link   type="text/css"        rel="stylesheet" href="../common/pc/css/Image.css?1669820438" />
+        <script type="text/javascript" charset="utf8"   src="../common/pc/js/Image.js?1669820438"></script>
+
+        <input type="hidden" id="todofukenJson" value='[
+      { "todofuken_cd":"36", "todofuken_mei":"徳島県" }
+    , { "todofuken_cd":"37", "todofuken_mei":"香川県" }
+    , { "todofuken_cd":"38", "todofuken_mei":"愛媛県" }
+    , { "todofuken_cd":"39", "todofuken_mei":"高知県" }
+]' />
+        <input type="hidden" id="kokudoJson"    value='{"30011&\u56fd\u905311\u53f7":[{"R_30011":{"doro_gazo_joho_kanri_id":"8293013B","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"38","cities_cd":"38206","cities_name":"\u897f\u6761\u5e02","area_cd":"38","area_name":"\u611b\u5a9b\u770c","gis_point":["132.9880556","33.82527778"],"image_name":"\u4e39\u539f\u5343\u539f","teikyo_rosen_mei":"\u56fd\u905311\u53f7","rosen_no":30011,"kokudo_no":11,"kansoku_chiten_mei":"\u897f\u6761\u5e02\u3000\u685c\u4e09\u91cc","shozaichi":"\u897f\u6761\u5e02\u3000\u685c\u4e09\u91cc","shozaichi_en":"Tanbarachochihara, Saijo City, Ehime Prefecture","kyorihyo":"211.5","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_8293013B.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_8293013B.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_8293013B.jpeg"}]}}],"30032&\u56fd\u905332\u53f7":[{"R_30032":{"doro_gazo_joho_kanri_id":"80B20214","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"37","cities_cd":"37208","cities_name":"\u4e09\u8c4a\u5e02","area_cd":"37","area_name":"\u9999\u5ddd\u770c","gis_point":["133.802457","34.098683"],"image_name":"\u6edd\u5009","teikyo_rosen_mei":"\u56fd\u905332\u53f7","rosen_no":30032,"kokudo_no":32,"kansoku_chiten_mei":"\u4e09\u8c4a\u5e02\u3000\u732a\u30ce\u9f3b","shozaichi":"\u4e09\u8c4a\u5e02\u3000\u732a\u30ce\u9f3b","shozaichi_en":"Saitachosaitakami, Mitoyo City, Kagawa Prefecture","kyorihyo":"39.5","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_80B20214.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_80B20214.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_80B20214.jpeg"}]}},{"R_30032":{"doro_gazo_joho_kanri_id":"815802AD","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"36","cities_cd":"36208","cities_name":"\u4e09\u597d\u5e02","area_cd":"36","area_name":"\u5fb3\u5cf6\u770c","gis_point":["133.816119","34.05967"],"image_name":"\u8fbc\u91ce\u4ea4\u5dee\u70b9","teikyo_rosen_mei":"\u56fd\u905332\u53f7","rosen_no":30032,"kokudo_no":32,"kansoku_chiten_mei":"\u4e09\u597d\u5e02\u3000\u8fbc\u91ce\u4ea4\u5dee\u70b9","shozaichi":"\u4e09\u597d\u5e02\u3000\u8fbc\u91ce\u4ea4\u5dee\u70b9","shozaichi_en":"Nishiyama, Miyoshi City, Tokushima Prefecture","kyorihyo":"48.6","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_815802AD.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_815802AD.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_815802AD.jpeg"}]}},{"R_30032":{"doro_gazo_joho_kanri_id":"81580138","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"36","cities_cd":"36208","cities_name":"\u4e09\u597d\u5e02","area_cd":"36","area_name":"\u5fb3\u5cf6\u770c","gis_point":["133.785","33.98333333"],"image_name":"\u4e0b\u5ddd\u8de8\u7dda\u6a4b","teikyo_rosen_mei":"\u56fd\u905332\u53f7","rosen_no":30032,"kokudo_no":32,"kansoku_chiten_mei":"\u4e09\u597d\u5e02\u3000\u5c71\u57ce\u753a","shozaichi":"\u4e09\u597d\u5e02\u3000\u5c71\u57ce\u753a","shozaichi_en":"Shimokawa, Miyoshi City, Tokushima Prefecture","kyorihyo":"62.8","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_81580138.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_81580138.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_81580138.jpeg"}]}},{"R_30032":{"doro_gazo_joho_kanri_id":"8212010C","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"39","cities_cd":"39344","cities_name":"\u5927\u8c4a\u753a","area_cd":"39","area_name":"\u9ad8\u77e5\u770c","gis_point":["133.7637559","33.79997271"],"image_name":"\u8c4a\u6c38\u5927\u6a4b","teikyo_rosen_mei":"\u56fd\u905332\u53f7","rosen_no":30032,"kokudo_no":32,"kansoku_chiten_mei":"\u5927\u8c4a\u753a\u3000\u6843\u539f","shozaichi":"\u5927\u8c4a\u753a\u3000\u6843\u539f","shozaichi_en":"Higashidoi, Otoyo Town, Nagaoka County, Kochi Prefecture","kyorihyo":"88.9","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_8212010C.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_8212010C.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_8212010C.jpeg"}]}},{"R_30032":{"doro_gazo_joho_kanri_id":"8212015E","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"39","cities_cd":"39344","cities_name":"\u5927\u8c4a\u753a","area_cd":"39","area_name":"\u9ad8\u77e5\u770c","gis_point":["133.6915433","33.69470532"],"image_name":"\u6238\u624b\u91ce\uff34\uff2e","teikyo_rosen_mei":"\u56fd\u905332\u53f7","rosen_no":30032,"kokudo_no":32,"kansoku_chiten_mei":"\u5927\u8c4a\u753a\u3000\u6238\u624b\u91ce","shozaichi":"\u5927\u8c4a\u753a\u3000\u6238\u624b\u91ce","shozaichi_en":"Umaze, Otoyo Town, Nagaoka County, Kochi Prefecture","kyorihyo":"110.6","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_8212015E.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_8212015E.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_8212015E.jpeg"}]}},{"R_30032":{"doro_gazo_joho_kanri_id":"8212012B","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"39","cities_cd":"39212","cities_name":"\u9999\u7f8e\u5e02","area_cd":"39","area_name":"\u9ad8\u77e5\u770c","gis_point":["133.6618246","33.66193062"],"image_name":"\u5317\u6edd\u672c","teikyo_rosen_mei":"\u56fd\u905332\u53f7","rosen_no":30032,"kokudo_no":32,"kansoku_chiten_mei":"\u9999\u7f8e\u5e02\u3000\u6839\u66f3\u5ce0","shozaichi":"\u9999\u7f8e\u5e02\u3000\u6839\u66f3\u5ce0","shozaichi_en":"Kitatakimoto, Kami City, Kochi Prefecture","kyorihyo":"117.4","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_8212012B.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_8212012B.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_8212012B.jpeg"}]}}],"30033&\u56fd\u905333\u53f7":[{"R_30033":{"doro_gazo_joho_kanri_id":"82130155","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"39","cities_cd":"39387","cities_name":"\u4ec1\u6dc0\u5ddd\u753a","area_cd":"39","area_name":"\u9ad8\u77e5\u770c","gis_point":["133.155021","33.567919"],"image_name":"\u4ec1\u6dc0\u5ddd\u753a\u76f8\u80fd","teikyo_rosen_mei":"\u56fd\u905333\u53f7","rosen_no":30033,"kokudo_no":33,"kansoku_chiten_mei":"\u4ec1\u6dc0\u5ddd\u753a\u3000\u76f8\u80fd","shozaichi":"\u4ec1\u6dc0\u5ddd\u753a\u3000\u76f8\u80fd","shozaichi_en":"Hikichi, Niyodogawa Town, Agawa County, Kochi Prefecture","kyorihyo":"45.39","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82130155.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82130155.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82130155.jpeg"}]}},{"R_30033":{"doro_gazo_joho_kanri_id":"8213010A","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"39","cities_cd":"39387","cities_name":"\u4ec1\u6dc0\u5ddd\u753a","area_cd":"39","area_name":"\u9ad8\u77e5\u770c","gis_point":["133.099621","33.548194"],"image_name":"\u4ec1\u6dc0\u5ddd\u753a\u68ee\u5c71","teikyo_rosen_mei":"\u56fd\u905333\u53f7","rosen_no":30033,"kokudo_no":33,"kansoku_chiten_mei":"\u4ec1\u6dc0\u5ddd\u753a\u68ee\u5c71","shozaichi":"\u4ec1\u6dc0\u5ddd\u753a\u68ee\u5c71","shozaichi_en":"Moriyama, Niyodogawa Town, Agawa County, Kochi Prefecture","kyorihyo":"55","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_8213010A.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_8213010A.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_8213010A.jpeg"}]}},{"R_30033":{"doro_gazo_joho_kanri_id":"82940136","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"38","cities_cd":"38386","cities_name":"\u4e45\u4e07\u9ad8\u539f\u753a","area_cd":"38","area_name":"\u611b\u5a9b\u770c","gis_point":["133.0088786","33.54387763"],"image_name":"\u67f3\u8c37\u78ef\u30ac\u6210","teikyo_rosen_mei":"\u56fd\u905333\u53f7","rosen_no":30033,"kokudo_no":33,"kansoku_chiten_mei":"\u4e45\u4e07\u9ad8\u539f\u753a\u3000\u67f3\u4e95\u5ddd","shozaichi":"\u4e45\u4e07\u9ad8\u539f\u753a\u3000\u67f3\u4e95\u5ddd","shozaichi_en":"Yanaigawa, Kumakogen Town, Kamiukena County, Ehime Prefecture","kyorihyo":"65.5","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82940136.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82940136.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82940136.jpeg"}]}},{"R_30033":{"doro_gazo_joho_kanri_id":"8294013A","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"38","cities_cd":"38386","cities_name":"\u4e45\u4e07\u9ad8\u539f\u753a","area_cd":"38","area_name":"\u611b\u5a9b\u770c","gis_point":["132.9925","33.58111111"],"image_name":"\u7f8e\u5ddd\u65e5\u91ce\u6d66","teikyo_rosen_mei":"\u56fd\u905333\u53f7","rosen_no":30033,"kokudo_no":33,"kansoku_chiten_mei":"\u4e45\u4e07\u9ad8\u539f\u753a\u65e5\u91ce\u6d66","shozaichi":"\u4e45\u4e07\u9ad8\u539f\u753a\u65e5\u91ce\u6d66","shozaichi_en":"Hinoura, Kumakogen Town, Kamiukena County, Ehime Prefecture","kyorihyo":"70.5","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_8294013A.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_8294013A.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_8294013A.jpeg"}]}},{"R_30033":{"doro_gazo_joho_kanri_id":"82940187","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"38","cities_cd":"38201","cities_name":"\u677e\u5c71\u5e02","area_cd":"38","area_name":"\u611b\u5a9b\u770c","gis_point":["132.8302778","33.70472222"],"image_name":"\u3064\u3065\u3089\u5730\u533a","teikyo_rosen_mei":"\u56fd\u905333\u53f7","rosen_no":30033,"kokudo_no":33,"kansoku_chiten_mei":"\u677e\u5c71\u5e02\u3000\u4e09\u5742\u9053\u8def","shozaichi":"\u677e\u5c71\u5e02\u3000\u4e09\u5742\u9053\u8def","shozaichi_en":"Kutanimachi, Matsuyama City, Ehime Prefecture","kyorihyo":"97.3","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82940187.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82940187.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82940187.jpeg"}]}}],"30055&\u56fd\u905355\u53f7":[{"R_30055":{"doro_gazo_joho_kanri_id":"81590202","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"36","cities_cd":"36204","cities_name":"\u963f\u5357\u5e02","area_cd":"36","area_name":"\u5fb3\u5cf6\u770c","gis_point":["134.5727778","33.79222222"],"image_name":"\u798f\u4e95\u65e5\u306e\u5730","teikyo_rosen_mei":"\u56fd\u905355\u53f7","rosen_no":30055,"kokudo_no":55,"kansoku_chiten_mei":"\u963f\u5357\u5e02\u3000\u798f\u4e95\u753a","shozaichi":"\u963f\u5357\u5e02\u3000\u798f\u4e95\u753a","shozaichi_en":"Fukuicho, Anan City, Tokushima Prefecture","kyorihyo":"42.8","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_81590202.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_81590202.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_81590202.jpeg"}]}},{"R_30055":{"doro_gazo_joho_kanri_id":"82140103","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"39","cities_cd":"39202","cities_name":"\u5ba4\u6238\u5e02","area_cd":"39","area_name":"\u9ad8\u77e5\u770c","gis_point":["134.2254101","33.42698231"],"image_name":"\u5165\u6728\u906e\u65ad\u6a5f","teikyo_rosen_mei":"\u56fd\u905355\u53f7","rosen_no":30055,"kokudo_no":55,"kansoku_chiten_mei":"\u5ba4\u6238\u5e02\u3000\u4f50\u559c\u6d5c\u753a","shozaichi":"\u5ba4\u6238\u5e02\u3000\u4f50\u559c\u6d5c\u753a","shozaichi_en":"Sakihamacho, Muroto City, Kochi Prefecture","kyorihyo":"107.5","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82140103.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82140103.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82140103.jpeg"}]}}],"30056&\u56fd\u905356\u53f7":[{"R_30056":{"doro_gazo_joho_kanri_id":"82110105","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"39","cities_cd":"39401","cities_name":"\u4e2d\u571f\u4f50\u753a","area_cd":"39","area_name":"\u9ad8\u77e5\u770c","gis_point":["133.1830927","33.31468836"],"image_name":"\u4e45\u793c\u5742\u2461","teikyo_rosen_mei":"\u56fd\u905356\u53f7","rosen_no":30056,"kokudo_no":56,"kansoku_chiten_mei":"\u4e2d\u571f\u4f50\u753a\u3000\u4e45\u793c\u5742","shozaichi":"\u4e2d\u571f\u4f50\u753a\u3000\u4e45\u793c\u5742","shozaichi_en":"Kure, Nakatosa Town, Takaoka County, Kochi Prefecture","kyorihyo":"53","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82110105.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82110105.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82110105.jpeg"}]}},{"R_30056":{"doro_gazo_joho_kanri_id":"82030107","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"39","cities_cd":"39428","cities_name":"\u9ed2\u6f6e\u753a","area_cd":"39","area_name":"\u9ad8\u77e5\u770c","gis_point":["133.1455892","33.16441744"],"image_name":"\u7247\u5742\u7b2c\u4e09\uff34\uff2e\u7d42\u70b9","teikyo_rosen_mei":"\u56fd\u905356\u53f7","rosen_no":30056,"kokudo_no":56,"kansoku_chiten_mei":"\u9ed2\u6f6e\u753a\u3000\u7247\u5742","shozaichi":"\u9ed2\u6f6e\u753a\u3000\u7247\u5742","shozaichi_en":"Ichinose, Kuroshio Town, Hata County, Kochi Prefecture","kyorihyo":"73.6","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82030107.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82030107.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82030107.jpeg"}]}},{"R_30056":{"doro_gazo_joho_kanri_id":"82A20136","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"38","cities_cd":"38203","cities_name":"\u5b87\u548c\u5cf6\u5e02","area_cd":"38","area_name":"\u611b\u5a9b\u770c","gis_point":["132.5247222","33.33352778"],"image_name":"\u6cd5\u83ef\u6d25TN\u8d77\u70b9","teikyo_rosen_mei":"\u56fd\u905356\u53f7","rosen_no":30056,"kokudo_no":56,"kansoku_chiten_mei":"\u5b87\u548c\u5cf6\u5e02\u3000\u6cd5\u83ef\u6d25\u5ce0","shozaichi":"\u5b87\u548c\u5cf6\u5e02\u3000\u6cd5\u83ef\u6d25\u5ce0","shozaichi_en":"Yoshidachofukaura, Uwajima City, Ehime Prefecture","kyorihyo":"217","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82A20136.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82A20136.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82A20136.jpeg"}]}},{"R_30056":{"doro_gazo_joho_kanri_id":"82A30101","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"38","cities_cd":"38207","cities_name":"\u5927\u6d32\u5e02","area_cd":"38","area_name":"\u611b\u5a9b\u770c","gis_point":["132.5330556","33.45777778"],"image_name":"\u5927\u6d32\u5e02\u9ce5\u5742","teikyo_rosen_mei":"\u56fd\u905356\u53f7","rosen_no":30056,"kokudo_no":56,"kansoku_chiten_mei":"\u5927\u6d32\u5e02\u3000\u9ce5\u5742\u5ce0","shozaichi":"\u5927\u6d32\u5e02\u3000\u9ce5\u5742\u5ce0","shozaichi_en":"Inazumi, Ozu City, Ehime Prefecture","kyorihyo":"233.6","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82A30101.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82A30101.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82A30101.jpeg"}]}},{"R_30056":{"doro_gazo_joho_kanri_id":"82950207","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"38","cities_cd":"38210","cities_name":"\u4f0a\u4e88\u5e02","area_cd":"38","area_name":"\u611b\u5a9b\u770c","gis_point":["132.6972222","33.68361111"],"image_name":"\u6771\u5cf0\uff34\uff2e\u8d77\u70b9","teikyo_rosen_mei":"\u56fd\u905356\u53f7","rosen_no":30056,"kokudo_no":56,"kansoku_chiten_mei":"\u4f0a\u4e88\u5e02\u3000\u72ac\u5bc4\u5ce0","shozaichi":"\u4f0a\u4e88\u5e02\u3000\u72ac\u5bc4\u5ce0","shozaichi_en":"Futamichokaminada, Iyo City, Ehime Prefecture","kyorihyo":"272.9","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_82950207.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_82950207.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_82950207.jpeg"}]}}],"30192&\u56fd\u9053192\u53f7":[{"R_30192":{"doro_gazo_joho_kanri_id":"8158043F","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"36","cities_cd":"36208","cities_name":"\u4e09\u597d\u5e02","area_cd":"36","area_name":"\u5fb3\u5cf6\u770c","gis_point":["133.6938889","33.99805556"],"image_name":"\u6c60\u7530\u753a\u4f50\u91ce","teikyo_rosen_mei":"\u56fd\u9053192\u53f7","rosen_no":30192,"kokudo_no":192,"kansoku_chiten_mei":"\u4e09\u597d\u5e02\u3000\u5883\u76ee\u5ce0","shozaichi":"\u4e09\u597d\u5e02\u3000\u5883\u76ee\u5ce0","shozaichi_en":"Sano, Miyoshi City, Tokushima Prefecture","kyorihyo":"52.3","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_8158043F.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_8158043F.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_8158043F.jpeg"}]}},{"R_30192":{"doro_gazo_joho_kanri_id":"8158033D","seibikyoku_cd":"88","jimusho_cd":"880000","todofuken_cd":"36","cities_cd":"36489","cities_name":"\u6771\u307f\u3088\u3057\u753a","area_cd":"36","area_name":"\u5fb3\u5cf6\u770c","gis_point":["133.9663889","34.035"],"image_name":"\u5c71\u53e3\u8c37\u6a4b","teikyo_rosen_mei":"\u56fd\u9053192\u53f7","rosen_no":30192,"kokudo_no":192,"kansoku_chiten_mei":"\u6771\u307f\u3088\u3057\u753a\u3000\u5c71\u53e3\u8c37\u6a4b","shozaichi":"\u6771\u307f\u3088\u3057\u753a\u3000\u5c71\u53e3\u8c37\u6a4b","shozaichi_en":"Nakasho, Higashimiyoshi Town, Miyoshi County, Tokushima Prefecture","kyorihyo":"79.7","fileList":[{"get_datetime":"2026-08-18 08:50:27","kiki_jotai_cd":1,"file":"20260818085000\/s_8158033D.jpeg"},{"get_datetime":"2026-08-18 08:35:27","kiki_jotai_cd":1,"file":"20260818083500\/s_8158033D.jpeg"},{"get_datetime":"2026-08-18 08:20:27","kiki_jotai_cd":1,"file":"20260818082000\/s_8158033D.jpeg"}]}}]}'    />
+
+        <!-- 一覧ウィンドウ -->
+        <div id="sideMenuRegulation" class="imageList"></div>
+        <div id="regListTab">
+            <img class="tab-open"  src="../common/pc/img/reg-list-tab-open.png">
+            <img class="tab-close" src="../common/pc/img/reg-list-tab-close.png">
+        </div>
+
+        <div id="mapBlock" class="map-block">
+            <div id="leafletFrame"></div>
+        </div>
+
+        <!-- ポップアップ -->
+        <div id="modal" class="modal js-modal">
+            <div class="modal-bg"></div>
+            <div class="imagePop-modal-content">
+                <div class="modal-content-header">
+                    <span><img src="../common/pc/img/close_btn2.gif" class="js-modal-close modal-close-btn"></span>
+                </div>
+
+                <div id="pop_doroGazo" class="modal-content-inner modal-off"></div>
+                <div id="pop_Info"     class="modal-content-inner modal-off"></div>
+
+                <div class="modal-content-footer">
+                    <span><img src="../common/pc/img/close_btn.gif" class="js-modal-close modal-close-btn"></span>
+                </div>
+            </div>
+        </div>
+
+
+            </div>
+
+            <!-- ポップアップ -->
+            <div id="modal" class="modal js-modal">
+                <div class="modal-bg"></div>
+                <div class="modal-content">
+                    <div class="modal-content-header">
+                        <span><img src="../common/pc/img/close_btn2.gif" class="js-modal-close modal-close-btn"></span>
+                    </div>
+
+                    <div id="pop_Info"     class="modal-content-inner modal-off"></div>
+
+                    <div class="modal-content-footer">
+                        <span><img src="../common/pc/img/close_btn.gif" class="js-modal-close modal-close-btn"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="telopFrame"><div id="telopString"></div></div>
+            <div id="footerFrame">
+                <script type="text/javascript" charset="utf8" src="../common/pc/js/Info.js"></script>
+                <div class="footer-nav">
+                    <ul>
+                        <div class="footer-info">
+                            <!--<button class="btn btn-outline-secondary btn-sm allFooterBtn otherBtn" onclick="selectedMenu('pcMail', 0);"> <span class="fas fa-paper-plane fa-flip-horizontal"></span>&nbsp;メール配信サービス</button>-->
+                            <button class="btn btn-outline-secondary btn-sm allFooterBtn otherBtn modal-content-inner" id="info" onclick="info();"> <span class="fas fa-info-circle mr-1"></span>&nbsp;お知らせ</button>
+                            <button class="btn btn-outline-secondary btn-sm allFooterBtn otherBtn" onclick="selectedMenu('pcWhenUsing', 0);"> <span class="fas fa-book-open mr-1"></span>&nbsp;ご利用に際して</button>
+                            <!--<button class="btn btn-outline-secondary btn-sm allFooterBtn languageBtn" onclick="selectedMenu('pcTopJp', 1);"> <span class="fas fa fa-globe mr-1">   </span>&nbsp;日本語</button>-->
+                            <button class="btn btn-outline-secondary btn-sm allFooterBtn languageBtn" onclick="selectedMenu('pcTopEnglish', 1);"> <span class="fas fa fa-globe mr-1">   </span>&nbsp;英語(English)</button>
+                            <button class="btn btn-outline-secondary btn-sm allFooterBtn languageBtn" onclick="selectedMenu('pcTopZhCn', 1);"> <span class="fas fa fa-globe mr-1">   </span>&nbsp;中国語(中文-简体字)</button>
+                            <button class="btn btn-outline-secondary btn-sm allFooterBtn languageBtn" onclick="selectedMenu('pcTopZhTw', 1);"> <span class="fas fa fa-globe mr-1">   </span>&nbsp;中国語(中文-繁體字)</button>
+                            <button class="btn btn-outline-secondary btn-sm allFooterBtn languageBtn" onclick="selectedMenu('pcTopKo', 1);"> <span class="fas fa fa-globe mr-1">   </span>&nbsp;韓国語(한국어)</button>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

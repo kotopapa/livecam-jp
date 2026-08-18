@@ -40,7 +40,8 @@ def dedupe(candidates: list[CameraCandidate]) -> list[CameraCandidate]:
     by_url: dict[str, CameraCandidate] = {}
     result: list[CameraCandidate] = []
     for c in candidates:
-        key = c.feed_url.strip()
+        # 都度解決型feedは複数カメラが解決元URLを共有するため camera_ref で区別する
+        key = c.feed_url.strip() + (f"#{c.camera_ref}" if c.camera_ref else "")
         if key in by_url:
             continue                     # 先勝ちマージ
         by_url[key] = c

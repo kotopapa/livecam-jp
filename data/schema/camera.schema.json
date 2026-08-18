@@ -1,86 +1,254 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://livecam-jp/schema/camera.schema.json",
-  "title": "Camera",
-  "type": "object",
-  "required": ["id", "name", "category", "prefecture", "feed", "operator", "source", "review"],
-  "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^[a-z0-9]+(-[a-z0-9]+)+$",
-      "description": "安定した一意ID。source_prefix + slug"
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://livecam-jp/schema/camera.schema.json",
+ "title": "Camera",
+ "type": "object",
+ "required": [
+  "id",
+  "name",
+  "category",
+  "prefecture",
+  "feed",
+  "operator",
+  "source",
+  "review"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^[a-z0-9]+(-[a-z0-9]+)+$",
+   "description": "安定した一意ID。source_prefix + slug"
+  },
+  "name": {
+   "type": "string",
+   "minLength": 1
+  },
+  "name_kana": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "lat": {
+   "type": [
+    "number",
+    "null"
+   ],
+   "minimum": 20,
+   "maximum": 46
+  },
+  "lng": {
+   "type": [
+    "number",
+    "null"
+   ],
+   "minimum": 122,
+   "maximum": 154
+  },
+  "coord_accuracy": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "exact",
+    "approx",
+    "town_level",
+    null
+   ]
+  },
+  "category": {
+   "type": "string",
+   "enum": [
+    "river",
+    "road",
+    "volcano",
+    "dam",
+    "coast",
+    "port",
+    "scenic",
+    "other"
+   ]
+  },
+  "prefecture": {
+   "type": "string",
+   "pattern": "^[0-4][0-9]$"
+  },
+  "municipality": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "pattern": "^[0-9]{5}$"
+  },
+  "river_or_route": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "feed": {
+   "type": "object",
+   "required": [
+    "type",
+    "url"
+   ],
+   "properties": {
+    "type": {
+     "type": "string",
+     "enum": [
+      "still_image",
+      "youtube_channel",
+      "youtube_video",
+      "hls",
+      "web_page",
+      "mlit_roadinfo"
+     ]
     },
-    "name": { "type": "string", "minLength": 1 },
-    "name_kana": { "type": ["string", "null"] },
-    "lat": { "type": ["number", "null"], "minimum": 20, "maximum": 46 },
-    "lng": { "type": ["number", "null"], "minimum": 122, "maximum": 154 },
-    "coord_accuracy": {
-      "type": ["string", "null"],
-      "enum": ["exact", "approx", "town_level", null]
+    "url": {
+     "type": "string",
+     "minLength": 1
     },
-    "category": {
-      "type": "string",
-      "enum": ["river", "road", "volcano", "dam", "coast", "port", "scenic", "other"]
+    "refresh_sec": {
+     "type": [
+      "integer",
+      "null"
+     ],
+     "minimum": 30
     },
-    "prefecture": { "type": "string", "pattern": "^[0-4][0-9]$" },
-    "municipality": { "type": ["string", "null"], "pattern": "^[0-9]{5}$" },
-    "river_or_route": { "type": ["string", "null"] },
-    "feed": {
-      "type": "object",
-      "required": ["type", "url"],
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["still_image", "youtube_channel", "youtube_video", "hls", "web_page"]
-        },
-        "url": { "type": "string", "minLength": 1 },
-        "refresh_sec": { "type": ["integer", "null"], "minimum": 30 },
-        "requires_referer": { "type": "boolean" },
-        "headers": { "type": "object", "additionalProperties": { "type": "string" } }
-      }
+    "requires_referer": {
+     "type": "boolean"
     },
-    "fallback": {
-      "type": ["object", "null"],
-      "required": ["type", "url"],
-      "properties": {
-        "type": { "type": "string", "enum": ["web_page"] },
-        "url": { "type": "string" }
-      }
+    "headers": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "string"
+     }
     },
-    "operator": { "type": "string", "minLength": 1 },
-    "source": {
-      "type": "object",
-      "required": ["page_url", "license", "attribution"],
-      "properties": {
-        "page_url": { "type": "string" },
-        "terms_url": { "type": ["string", "null"] },
-        "license": {
-          "type": "string",
-          "enum": ["gov_std_2.0", "public_data_1.0", "cc_by_4.0", "youtube_gov", "unknown"]
-        },
-        "attribution": { "type": "string", "minLength": 1 }
-      }
+    "camera_ref": {
+     "type": "string",
+     "description": "都度解決型feedのカメラ管理ID（mlit_roadinfo: 道路情報提供システムの doro_gazo_joho_kanri_id）"
+    }
+   }
+  },
+  "fallback": {
+   "type": [
+    "object",
+    "null"
+   ],
+   "required": [
+    "type",
+    "url"
+   ],
+   "properties": {
+    "type": {
+     "type": "string",
+     "enum": [
+      "web_page"
+     ]
     },
-    "review": {
-      "type": "object",
-      "required": ["status"],
-      "properties": {
-        "status": { "type": "string", "enum": ["approved", "pending", "rejected"] },
-        "reviewed_at": { "type": ["string", "null"] },
-        "note": { "type": "string" }
-      }
+    "url": {
+     "type": "string"
+    }
+   }
+  },
+  "operator": {
+   "type": "string",
+   "minLength": 1
+  },
+  "source": {
+   "type": "object",
+   "required": [
+    "page_url",
+    "license",
+    "attribution"
+   ],
+   "properties": {
+    "page_url": {
+     "type": "string"
     },
-    "verification": {
-      "type": ["object", "null"],
-      "description": "クローラによる2回取得検証の結果（candidates.json のみ）",
-      "properties": {
-        "fetched_twice": { "type": "boolean" },
-        "image_changed": { "type": ["boolean", "null"] },
-        "content_type": { "type": ["string", "null"] },
-        "bytes": { "type": ["integer", "null"] }
-      }
+    "terms_url": {
+     "type": [
+      "string",
+      "null"
+     ]
     },
-    "first_seen": { "type": "string" },
-    "last_updated": { "type": "string" }
+    "license": {
+     "type": "string",
+     "enum": [
+      "gov_std_2.0",
+      "public_data_1.0",
+      "cc_by_4.0",
+      "youtube_gov",
+      "unknown"
+     ]
+    },
+    "attribution": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "review": {
+   "type": "object",
+   "required": [
+    "status"
+   ],
+   "properties": {
+    "status": {
+     "type": "string",
+     "enum": [
+      "approved",
+      "pending",
+      "rejected"
+     ]
+    },
+    "reviewed_at": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "note": {
+     "type": "string"
+    }
+   }
+  },
+  "verification": {
+   "type": [
+    "object",
+    "null"
+   ],
+   "description": "クローラによる2回取得検証の結果（candidates.json のみ）",
+   "properties": {
+    "fetched_twice": {
+     "type": "boolean"
+    },
+    "image_changed": {
+     "type": [
+      "boolean",
+      "null"
+     ]
+    },
+    "content_type": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "bytes": {
+     "type": [
+      "integer",
+      "null"
+     ]
+    }
+   }
+  },
+  "first_seen": {
+   "type": "string"
+  },
+  "last_updated": {
+   "type": "string"
   }
+ }
 }

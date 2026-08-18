@@ -91,6 +91,41 @@ def run(shard: str | None = None) -> int:
     session.headers["User-Agent"] = USER_AGENT
     lock = threading.Lock()
 
+    # 都度解決型feed（mlit_roadinfo）: 解決元ページ1枚で整備局分の最新URLが取れるので、
+    # シャード外のカメラも含めて毎回解決し、status.json の image_url を新鮮に保つ
+    all_cameras = json.loads(CAMERAS_PATH.read_text(encoding="utf-8")).get("cameras", [])
+    roadinfo_cams = [c for c in all_cameras
+                     if c.get("review", {}).get("status") == "approved"
+                     and c["feed"]["type"] == "mlit_roadinfo"]
+    if roadinfo_cams:
+        from crawler.sources.mlit_roadinfo import resolve_image_urls
+        resolved: dict[str, tuple[str, str]] = {}
+        for page_url in sorted({c["feed"]["url"] for c in roadinfo_cams}):
+            try:
+                throttle.acquire(urlparse(page_url).netloc)
+                try:
+                    resp = session.get(page_url, timeout=30)
+                finally:
+                    throttle.release(urlparse(page_url).netloc)
+                if resp.status_code == 200:
+                    resolved.update(resolve_image_urls(resp.text))
+            except requests.RequestException as e:
+                print(f"roadinfo解決失敗 {page_url}: {e}", file=sys.stderr)
+        for cam in roadinfo_cams:
+            hit = resolved.get(cam["feed"].get("camera_ref") or "")
+            if hit:
+                cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
+            # シャード外でも最新URLだけは配信する（チェック自体はシャード担当回で行う)
+            st = statuses.get(cam["id"])
+            if hit and st is not None:
+                st["image_url"], st["image_time"] = hit
+        # cameras(シャード抽出済み)のdictはall_camerasと別オブジェクトなので反映する
+        by_id = {c["id"]: c for c in roadinfo_cams}
+        for cam in cameras:
+            src = by_id.get(cam["id"])
+            if src and "_resolved_image" in src:
+                cam["_resolved_image"] = src["_resolved_image"]
+
     def work(camera: dict):
         host = monitor_host(camera)
         throttle.acquire(host)

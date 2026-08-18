@@ -22,6 +22,7 @@ FROZEN_AFTER_HOURS = 6
 # ステータスコードでは検知できない（フィクスチャ: crawler/tests/fixtures/kawabou_placeholder.png）
 PLACEHOLDER_HASHES = [
     0x10101c0c0010101,      # 川の防災情報 cam.river.go.jp の「画像がありません」
+    0x153169713131d890,     # 道路情報提供システム road-info-prvs の no_data.jpeg
 ]
 PLACEHOLDER_MAX_DISTANCE = 2
 

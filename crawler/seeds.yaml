@@ -27,6 +27,12 @@ sources:
     note: 北陸地整・金沢河川国道「みちナビ石川」。map.data.js に座標直書き。
           国交省管轄(A)のみ採用。石川県(B)・金沢市(D)は自治体枠で将来対応
 
+  - id: mlit_roadinfo
+    enabled: true
+    note: 道路情報提供システム（road-info-prvs）。全国の直轄道路カメラ集約（道路版kawabou）。
+          対象CD 81,82,86,87,88,89,90。83-85は事務所サイト直の既存パーサ優先（重複回避）。
+          固定URLがない都度解決型feed。license=unknownで規約確認後に一括承認する
+
   - id: kawabou_pref
     enabled: false
     note: 川の防災情報の県単位一括収集（全国展開・M5用）。リクエスト数が多いので明示的に有効化する
