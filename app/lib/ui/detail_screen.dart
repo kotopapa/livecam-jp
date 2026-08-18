@@ -36,6 +36,8 @@ class _DetailScreenState extends State<DetailScreen> {
   DateTime? _lastManualRefresh;
   int _refreshTick = 0; // 画像再取得用のキー
   Timer? _cooldownTimer;
+  // 静止画をアプリが読み込んだ時刻。画像は表示のたびに配信元から直接取得される
+  DateTime _imageLoadedAt = DateTime.now();
 
   Camera get camera => widget.camera;
   AppState get app => widget.app;
@@ -64,6 +66,7 @@ class _DetailScreenState extends State<DetailScreen> {
     app.refresh();
     setState(() {
       _lastManualRefresh = DateTime.now();
+      _imageLoadedAt = DateTime.now();
       _refreshTick++;
     });
     // クールダウン表示の更新
@@ -128,7 +131,11 @@ class _DetailScreenState extends State<DetailScreen> {
   /// 取得時刻を大きく表示 + 手動更新（60秒クールダウン）。
   /// 更新ボタンは静止画の再取得用のため、常時流れ続けるYouTube系では出さない
   Widget _timeAndRefreshRow(CameraStatus? st) {
-    final time = st?.imageTime ?? st?.lastOkAt;
+    // 静止画はアプリがいま配信元から直接取得した画像なので、アプリの読込時刻を出す。
+    // 都度解決型(roadinfo)はURL自体に撮影時刻が入っており status の image_time が正
+    final time = camera.feed.type == FeedType.stillImage
+        ? _imageLoadedAt.toIso8601String()
+        : (st?.imageTime ?? st?.lastOkAt);
     final left = _cooldownLeft;
     if (camera.isVideo) {
       return const Row(children: [

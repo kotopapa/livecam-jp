@@ -146,6 +146,9 @@ class AppState extends ChangeNotifier {
       imagesBlockedByWifiSetting ? null : repository.imageUrlFor(c);
 
   String? imageTimeFor(Camera c) {
+    // 静止画はアプリが表示のたびに配信元から直接取得するため、監視システムの
+    // 確認時刻(最大5時間前)を「取得時刻」として出すと誤解を招く。一覧では出さない
+    if (c.feed.type == FeedType.stillImage) return null;
     final st = repository.status[c.id];
     return st?.imageTime ?? st?.lastOkAt;
   }

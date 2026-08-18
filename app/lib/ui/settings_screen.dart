@@ -5,6 +5,8 @@ import '../app_state.dart';
 import '../config.dart';
 import 'detail_screen.dart' show disclaimerText;
 
+const _requestFormUrl =
+    'https://docs.google.com/forms/d/e/1FAIpQLScRz0Enqfrq-lrbuDVBdFD1jwSyl4GJEZtgTJxAoZfYo-QWJw/viewform';
 const _repoIssues = 'https://github.com/kotopapa/livecam-jp/issues/new';
 const _termsUrl = 'https://kotopapa.github.io/livecam-jp/terms.html';
 const _privacyUrl = 'https://kotopapa.github.io/livecam-jp/privacy.html';
@@ -81,16 +83,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
         const Divider(),
         const _SectionHeader('カメラの追加・削除のご依頼'),
         ListTile(
-          leading: const Icon(Icons.add_a_photo_outlined),
-          title: const Text('ライブカメラの追加を依頼'),
-          subtitle: const Text('掲載してほしいカメラのURLをお寄せください（GitHubアカウントが必要です）'),
-          onTap: () => _open('$_repoIssues?template=add-camera.yml'),
+          leading: const Icon(Icons.contact_support_outlined),
+          title: const Text('ご相談・依頼フォーム'),
+          subtitle: const Text('カメラの追加要請・掲載削除の依頼はこちらから（ログイン不要）。'
+              '設置者・運営者の方からの削除のお申し出には速やかに対応します'),
+          onTap: () => _open(_requestFormUrl),
         ),
         ListTile(
-          leading: const Icon(Icons.remove_circle_outline),
-          title: const Text('掲載の削除を依頼'),
-          subtitle: const Text('設置者・運営者の方からのお申し出に速やかに対応します（GitHubアカウントが必要です）'),
-          onTap: () => _open('$_repoIssues?template=remove-camera.yml'),
+          leading: const Icon(Icons.code),
+          title: const Text('GitHubで依頼'),
+          subtitle: const Text('GitHubアカウントをお持ちの方はIssueでも受け付けています'),
+          onTap: () => _open('$_repoIssues/choose'),
         ),
         const Divider(),
         const _SectionHeader('出典・ライセンス'),
