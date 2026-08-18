@@ -38,16 +38,24 @@ class CuratedYoutubeParser(SourceParser):
                         "埋め込み再生のみ・削除依頼即応。")
                 if cam.get("note"):
                     note += f" {cam['note']}"
+                if cam.get("channel_id"):
+                    feed_type = "youtube_channel"
+                    feed_url = cam["channel_id"]
+                    fallback = f"https://www.youtube.com/channel/{feed_url}/live"
+                else:
+                    feed_type = "youtube_video"
+                    feed_url = cam["video_id"]
+                    fallback = f"https://www.youtube.com/watch?v={feed_url}"
                 result.candidates.append(CameraCandidate(
                     id=cam["id"],
                     name=cam["name"],
                     category=cam.get("category", "scenic"),
                     prefecture=str(cam.get("prefecture", "13")),
-                    feed_type="youtube_video",
-                    feed_url=cam["video_id"],
-                    fallback_url=f"https://www.youtube.com/watch?v={cam['video_id']}",
+                    feed_type=feed_type,
+                    feed_url=feed_url,
+                    fallback_url=fallback,
                     operator=cam["operator"],
-                    page_url=f"https://www.youtube.com/watch?v={cam['video_id']}",
+                    page_url=fallback,
                     attribution=f"映像提供：{cam['operator']}（YouTubeライブ）",
                     license="unknown",
                     terms_url=None,

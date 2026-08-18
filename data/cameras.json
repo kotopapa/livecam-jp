@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T11:07:25Z",
+ "version": "2026-08-18T11:10:03Z",
  "cameras": [
   {
    "id": "curated-akihabara-aisan",
@@ -150,6 +150,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-biwako-bbc",
+   "name": "琵琶湖・大津",
+   "name_kana": null,
+   "lat": 34.983,
+   "lng": 135.905,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "25",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCbmPPH1lE7T6AwCQw0ZV8RA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCbmPPH1lE7T6AwCQw0ZV8RA/live"
+   },
+   "operator": "びわ湖放送",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCbmPPH1lE7T6AwCQw0ZV8RA/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：びわ湖放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-chitose-stv",
    "name": "新千歳空港",
    "name_kana": null,
@@ -219,6 +256,80 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-chuzenji-kojoen",
+   "name": "中禅寺湖（湖上苑から）",
+   "name_kana": null,
+   "lat": 36.732,
+   "lng": 139.485,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "V7x3zhV2aTM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=V7x3zhV2aTM"
+   },
+   "operator": "湖上苑",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=V7x3zhV2aTM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：湖上苑（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-chuzenji-zen",
+   "name": "中禅寺湖・男体山（ZEN RESORT）",
+   "name_kana": null,
+   "lat": 36.734,
+   "lng": 139.478,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC2vDsbLyCHQjXatp4nT0Jfw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UC2vDsbLyCHQjXatp4nT0Jfw/live"
+   },
+   "operator": "ZEN RESORT NIKKO",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC2vDsbLyCHQjXatp4nT0Jfw/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ZEN RESORT NIKKO（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -890,6 +1001,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-inawashiro",
+   "name": "猪苗代湖（スキー場から）",
+   "name_kana": null,
+   "lat": 37.62,
+   "lng": 140.07,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "07",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "goz5JZD8dH4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=goz5JZD8dH4"
+   },
+   "operator": "猪苗代スキー場（リステル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=goz5JZD8dH4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：猪苗代スキー場（リステル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-inubosaki",
+   "name": "犬吠埼",
+   "name_kana": null,
+   "lat": 35.708,
+   "lng": 140.869,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "12",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCY88ELMjnfMyOYMUw5K9o3g",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCY88ELMjnfMyOYMUw5K9o3g/live"
+   },
+   "operator": "犬吠テラステラス",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCY88ELMjnfMyOYMUw5K9o3g/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：犬吠テラステラス（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-itami-asahi",
    "name": "伊丹空港（大阪国際空港）",
    "name_kana": null,
@@ -959,6 +1144,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kasai-suizokuen",
+   "name": "葛西臨海水族園",
+   "name_kana": null,
+   "lat": 35.64,
+   "lng": 139.863,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCanUP77zPKOr3K0tLXNmKGg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCanUP77zPKOr3K0tLXNmKGg/live"
+   },
+   "operator": "東京動物園協会",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCanUP77zPKOr3K0tLXNmKGg/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京動物園協会（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -2888,6 +3110,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-shinjiko-nkt",
+   "name": "宍道湖（夕日名所）",
+   "name_kana": null,
+   "lat": 35.457,
+   "lng": 133.045,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "32",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "rTViPLUmYAc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=rTViPLUmYAc"
+   },
+   "operator": "日本海テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=rTViPLUmYAc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：日本海テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-shinjuku-5chome",
    "name": "新宿五丁目交差点",
    "name_kana": null,
@@ -3332,6 +3591,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-tazawako",
+   "name": "田沢湖",
+   "name_kana": null,
+   "lat": 39.723,
+   "lng": 140.663,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "05",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "XkFBxz86Eoc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=XkFBxz86Eoc"
+   },
+   "operator": "秋田県仙北市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=XkFBxz86Eoc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：秋田県仙北市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-teny-niigata",
    "name": "新潟市",
    "name_kana": null,
@@ -3438,6 +3734,80 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-towadako",
+   "name": "十和田湖",
+   "name_kana": null,
+   "lat": 40.455,
+   "lng": 140.92,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "02",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "trSGa-eTSrk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=trSGa-eTSrk"
+   },
+   "operator": "十和田湖マリーナ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=trSGa-eTSrk",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：十和田湖マリーナ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-toyako",
+   "name": "洞爺湖",
+   "name_kana": null,
+   "lat": 42.565,
+   "lng": 140.818,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCbIl6jhI6lq_k6TisBcxFLw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCbIl6jhI6lq_k6TisBcxFLw/live"
+   },
+   "operator": "洞爺湖温泉観光協会",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCbIl6jhI6lq_k6TisBcxFLw/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：洞爺湖温泉観光協会（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"

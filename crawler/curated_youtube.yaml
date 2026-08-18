@@ -910,3 +910,97 @@ cameras:
     lng: 127.65
     accuracy: area
     note: 切替配信
+
+  - id: curated-tazawako
+    name: 田沢湖
+    operator: "秋田県仙北市"
+    video_id: "XkFBxz86Eoc"
+    category: scenic
+    prefecture: "05"
+    lat: 39.723
+    lng: 140.663
+
+  - id: curated-towadako
+    name: 十和田湖
+    operator: "十和田湖マリーナ"
+    video_id: "trSGa-eTSrk"
+    category: scenic
+    prefecture: "02"
+    lat: 40.455
+    lng: 140.92
+
+  - id: curated-chuzenji-kojoen
+    name: 中禅寺湖（湖上苑から）
+    operator: "湖上苑"
+    video_id: "V7x3zhV2aTM"
+    category: scenic
+    prefecture: "09"
+    lat: 36.732
+    lng: 139.485
+
+  - id: curated-shinjiko-nkt
+    name: 宍道湖（夕日名所）
+    operator: "日本海テレビ"
+    video_id: "rTViPLUmYAc"
+    category: scenic
+    prefecture: "32"
+    lat: 35.457
+    lng: 133.045
+
+  - id: curated-inawashiro
+    name: 猪苗代湖（スキー場から）
+    operator: "猪苗代スキー場（リステル）"
+    video_id: "goz5JZD8dH4"
+    category: scenic
+    prefecture: "07"
+    lat: 37.62
+    lng: 140.07
+    note: 湖畔でなくスキー場からの眺望
+
+  - id: curated-inubosaki
+    name: 犬吠埼
+    operator: "犬吠テラステラス"
+    channel_id: "UCY88ELMjnfMyOYMUw5K9o3g"
+    category: scenic
+    prefecture: "12"
+    lat: 35.708
+    lng: 140.869
+    note: 関東最東端・初日の出の名所
+
+  - id: curated-toyako
+    name: 洞爺湖
+    operator: "洞爺湖温泉観光協会"
+    channel_id: "UCbIl6jhI6lq_k6TisBcxFLw"
+    category: scenic
+    prefecture: "01"
+    lat: 42.565
+    lng: 140.818
+
+  - id: curated-biwako-bbc
+    name: 琵琶湖・大津
+    operator: "びわ湖放送"
+    channel_id: "UCbmPPH1lE7T6AwCQw0ZV8RA"
+    category: scenic
+    prefecture: "25"
+    lat: 34.983
+    lng: 135.905
+    note: 期間限定の可能性あり要観察
+
+  - id: curated-kasai-suizokuen
+    name: 葛西臨海水族園
+    operator: "東京動物園協会"
+    channel_id: "UCanUP77zPKOr3K0tLXNmKGg"
+    category: scenic
+    prefecture: "13"
+    lat: 35.64
+    lng: 139.863
+    note: 期間限定の可能性あり要観察
+
+  - id: curated-chuzenji-zen
+    name: 中禅寺湖・男体山（ZEN RESORT）
+    operator: "ZEN RESORT NIKKO"
+    channel_id: "UC2vDsbLyCHQjXatp4nT0Jfw"
+    category: scenic
+    prefecture: "09"
+    lat: 36.734
+    lng: 139.478
