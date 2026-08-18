@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T00:51:48Z",
+ "version": "2026-08-18T01:24:49Z",
  "cameras": [
   {
    "id": "kawabou-100081001",
@@ -427426,6 +427426,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mlit-ktr-road-c02030",
+   "name": "烏川（城南大橋） 高崎市新後閑町",
+   "name_kana": null,
+   "lat": 36.310184,
+   "lng": 139.012863,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "10",
+   "municipality": null,
+   "river_or_route": "烏川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/river/cctv/C02030.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00583.html"
+   },
+   "operator": "国土交通省 高崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/takasaki/takasaki00583.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 高崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mlit-ktr-road-c02046",
    "name": "浅間山（軽井沢） 北佐久郡軽井沢町（標高1025m）",
    "name_kana": null,
@@ -427754,6 +427791,672 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=public_data_1.0 category=road with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-01",
+   "name": "上野原",
+   "name_kana": null,
+   "lat": 35.63784,
+   "lng": 139.109634,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/01/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/uenohara.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/uenohara.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-04",
+   "name": "梁川",
+   "name_kana": null,
+   "lat": 35.596531,
+   "lng": 139.050995,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/04/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/yanagawa.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/yanagawa.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-05",
+   "name": "初狩",
+   "name_kana": null,
+   "lat": 35.603546,
+   "lng": 138.885437,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/05/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/hatukari.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/hatukari.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-06",
+   "name": "笹子",
+   "name_kana": null,
+   "lat": 35.598862,
+   "lng": 138.834488,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/06/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/sasago.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/sasago.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-07",
+   "name": "勝沼",
+   "name_kana": null,
+   "lat": 35.652096,
+   "lng": 138.721237,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/07/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/katsunuma.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/katsunuma.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-09",
+   "name": "田野倉",
+   "name_kana": null,
+   "lat": 35.591908,
+   "lng": 138.938126,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道139号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/09/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/tanokura.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/tanokura.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-10",
+   "name": "韮崎",
+   "name_kana": null,
+   "lat": 35.708889,
+   "lng": 138.446396,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/10/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/nirasaki.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/nirasaki.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-11",
+   "name": "武川",
+   "name_kana": null,
+   "lat": 35.792862,
+   "lng": 138.35791,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/11/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/mukawa.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/mukawa.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-12",
+   "name": "白州",
+   "name_kana": null,
+   "lat": 35.773617,
+   "lng": 138.28743,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/12/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/hakushu.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/hakushu.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-13",
+   "name": "山口",
+   "name_kana": null,
+   "lat": 35.835613,
+   "lng": 138.258652,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道20号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/13/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/yamaguti.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/yamaguti.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-14",
+   "name": "増穂（甲西道路）",
+   "name_kana": null,
+   "lat": 35.560951,
+   "lng": 138.461975,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道52号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/14/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/masuho.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/masuho.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-16",
+   "name": "万沢",
+   "name_kana": null,
+   "lat": 35.204254,
+   "lng": 138.504929,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道52号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/16/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/manzawa.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/manzawa.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-20",
+   "name": "相又",
+   "name_kana": null,
+   "lat": 35.329777,
+   "lng": 138.419174,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道52号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/20/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/aimata.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/aimata.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-24",
+   "name": "箱原",
+   "name_kana": null,
+   "lat": 35.510693,
+   "lng": 138.451752,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道52号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/24/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/hakohara.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/hakohara.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-26",
+   "name": "山中湖",
+   "name_kana": null,
+   "lat": 35.410591,
+   "lng": 138.861084,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道138号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/26/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/yamanakako.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/yamanakako.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-27",
+   "name": "籠坂峠",
+   "name_kana": null,
+   "lat": 35.424641,
+   "lng": 138.891769,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道138号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/27/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/kagosaka.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/kagosaka.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-28",
+   "name": "本栖",
+   "name_kana": null,
+   "lat": 35.450409,
+   "lng": 138.617065,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道139号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/28/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/motosu.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/motosu.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-koufu-29",
+   "name": "精進",
+   "name_kana": null,
+   "lat": 35.481388,
+   "lng": 138.626358,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": "国道139号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/29/Camera.jpg",
+    "refresh_sec": 1200,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/shoji.html"
+   },
+   "operator": "国土交通省 甲府河川国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/koufu/livecamera/michi/shoji.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 甲府河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -430127,6 +430830,117 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mlit-ktr-road-oomiya-45a",
+   "name": "春日部市梅田本町二丁目 梅田陸橋(下り線)",
+   "name_kana": null,
+   "lat": 35.992405,
+   "lng": 139.742493,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道16号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/45_A.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiya00106.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiya00106.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-48a",
+   "name": "春日部市小渕 小渕立体地下道(上り線3)",
+   "name_kana": null,
+   "lat": 35.993061,
+   "lng": 139.752869,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道16号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/48_A.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_kasukabe2.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_kasukabe2.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-49a",
+   "name": "春日部市小渕 小渕立体地下道(下り線3)",
+   "name_kana": null,
+   "lat": 35.993061,
+   "lng": 139.752869,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道16号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/49_A.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_kasukabe3.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_kasukabe3.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mlit-ktr-road-oomiya-52a",
    "name": "春日部市不動院野(下り線)",
    "name_kana": null,
@@ -430159,6 +430973,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=public_data_1.0 category=road with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-53a",
+   "name": "春日部市下柳(下り線)",
+   "name_kana": null,
+   "lat": 35.98695,
+   "lng": 139.788986,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道16号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/53_A.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_kasukabe5.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_kasukabe5.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -430381,6 +431232,228 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=public_data_1.0 category=road with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-76a",
+   "name": "さいたま市南区内谷 内谷二丁目(上り線)",
+   "name_kana": null,
+   "lat": 35.83242,
+   "lng": 139.632523,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/76_A.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama5.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama5.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-79c",
+   "name": "さいたま市桜区田島 田島地下道(上り線12)",
+   "name_kana": null,
+   "lat": 35.841961,
+   "lng": 139.633545,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/79_C.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama1.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama1.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-80c",
+   "name": "さいたま市桜区田島 田島地下道(下り線16)",
+   "name_kana": null,
+   "lat": 35.841961,
+   "lng": 139.633545,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/80_C.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama2.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama2.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-81a",
+   "name": "さいたま市桜区栄和 浦和西地下道(下り線13)",
+   "name_kana": null,
+   "lat": 35.861134,
+   "lng": 139.616501,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/81_A.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama4.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama4.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-82a",
+   "name": "さいたま市中央区上峰 浦和西地下道(上り線9)",
+   "name_kana": null,
+   "lat": 35.871983,
+   "lng": 139.6185,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/82_A.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama3.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama3.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-ktr-road-oomiya-83a",
+   "name": "さいたま市大宮区三橋 三橋二丁目(上り線)",
+   "name_kana": null,
+   "lat": 35.909569,
+   "lng": 139.602585,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": "国道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/83_A.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama6.html"
+   },
+   "operator": "国土交通省 大宮国道事務所",
+   "source": {
+    "page_url": "https://www.ktr.mlit.go.jp/oomiya/oomiyalc_saitama6.html",
+    "terms_url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+    "license": "public_data_1.0",
+    "attribution": "出典：国土交通省 関東地方整備局 大宮国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=public_data_1.0 with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
