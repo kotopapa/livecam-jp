@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T08:43:24Z",
+ "version": "2026-08-18T08:48:04Z",
  "cameras": [
   {
    "id": "kawabou-100081001",
@@ -423689,6 +423689,561 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mlit-kkr-yt-uc6foelxamd2dc7xecejk2q",
+   "name": "紀の川水系",
+   "name_kana": null,
+   "lat": 34.33081,
+   "lng": 135.50451,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "30",
+   "municipality": null,
+   "river_or_route": "紀の川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC6FOeLXamd2Dc7XeCEJk-2Q",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-uc8hrcjtcsfpohx5ipbvydwg",
+   "name": "九頭竜川水系",
+   "name_kana": null,
+   "lat": 36.11726,
+   "lng": 136.22747,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "18",
+   "municipality": null,
+   "river_or_route": "九頭竜川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC8hRcJTCsFPohx5iPBvyDWg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-uc9fycjxymjthon9dmnxckg",
+   "name": "淀川水系　猪名川",
+   "name_kana": null,
+   "lat": 34.77725,
+   "lng": 135.50714,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "28",
+   "municipality": null,
+   "river_or_route": "淀川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC9fYc_jxYMJThon9dmnXcKg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-uceczxzgd2ekyycxjodirwwq",
+   "name": "淀川水系　桂川",
+   "name_kana": null,
+   "lat": 34.85944,
+   "lng": 135.75651,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "26",
+   "municipality": null,
+   "river_or_route": "淀川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCeczXzGd2EkYyCxJOdIRWWQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucf4ibm27ezg94pfvqa3yawa",
+   "name": "円山川水系",
+   "name_kana": null,
+   "lat": 35.50201,
+   "lng": 134.80779,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "28",
+   "municipality": null,
+   "river_or_route": "円山川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCf4IBm27ezg94PfVqa3YaWA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucfltl8kptscptmobvitja",
+   "name": "揖保川水系",
+   "name_kana": null,
+   "lat": 34.96098,
+   "lng": 134.56303,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "28",
+   "municipality": null,
+   "river_or_route": "揖保川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCf_Ltl8KpTsCPTMo-bVITJA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucmzsofihz3x2wd6rpgzbsva",
+   "name": "淀川水系　木津川",
+   "name_kana": null,
+   "lat": 34.7695,
+   "lng": 135.77749,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "26",
+   "municipality": null,
+   "river_or_route": "淀川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCmZsoFIhz3x2WD6RpgzBsVA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucrwocqvudgt4tlqvre8w99a",
+   "name": "由良川水系",
+   "name_kana": null,
+   "lat": 35.37736,
+   "lng": 135.21107,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "26",
+   "municipality": null,
+   "river_or_route": "由良川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCrwoCqvudGt4tLqvrE8w99A",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-uctfl4hkp7rs2ouorkl4w",
+   "name": "新宮川水系",
+   "name_kana": null,
+   "lat": 33.94228,
+   "lng": 135.85847,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "30",
+   "municipality": null,
+   "river_or_route": "熊野川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCtfl_4HkP7rs2Ouork-L4-w",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucugxtjgtxrhyoethhxcbsqg",
+   "name": "淀川水系　淀川　宇治川",
+   "name_kana": null,
+   "lat": 34.74217,
+   "lng": 135.51059,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "27",
+   "municipality": null,
+   "river_or_route": "淀川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCUGXTjGtxRHyoeTHHXCBSqg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucutvlt6tnvz1l48gtowaqq",
+   "name": "加古川水系",
+   "name_kana": null,
+   "lat": 34.88471,
+   "lng": 134.9128,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "28",
+   "municipality": null,
+   "river_or_route": "加古川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCUtVl-t6tNVz1L48GTowAqQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucwh3gyiqdpibwkpkukye8g",
+   "name": "淀川水系　野洲川　瀬田川",
+   "name_kana": null,
+   "lat": 34.8969,
+   "lng": 135.76491,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "25",
+   "municipality": null,
+   "river_or_route": "淀川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCwH3gyIQdpIbwkPKukYE_8g",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucwkfda61jpy3smhu9xxmlhq",
+   "name": "淀川水系　名張川",
+   "name_kana": null,
+   "lat": 34.7193,
+   "lng": 135.7484,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "24",
+   "municipality": null,
+   "river_or_route": "淀川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCwKfdA61jpY3Smhu9XxMLHQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucyon7a4wahxt1lnkmdnyww",
+   "name": "大和川水系",
+   "name_kana": null,
+   "lat": 34.59038,
+   "lng": 135.61757,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "29",
+   "municipality": null,
+   "river_or_route": "大和川",
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCyoN_7A4wAhxT1lnkmDNyww",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mlit-kkr-yt-ucyqkax7mcf5ujftsngn0aeq",
+   "name": "東播海岸",
+   "name_kana": null,
+   "lat": 34.76471,
+   "lng": 134.9128,
+   "coord_accuracy": "area",
+   "category": "coast",
+   "prefecture": "28",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCYQkax7MCF5UJFTSnGn0aEQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_channel with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mlit-ktr-103585001",
    "name": "倉見",
    "name_kana": null,
@@ -479885,6 +480440,265 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-hkd-1fdfb3b809",
+   "name": "北海道開発局 河川映像１",
+   "name_kana": null,
+   "lat": 43.35497,
+   "lng": 142.3244,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": "河川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "0YJKesNgY8E",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=0YJKesNgY8E"
+   },
+   "operator": "国土交通省 北海道開発局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC_CPIys6tBqmwVXsH-X4ycg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 北海道開発局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-hkd-69cd830fa7",
+   "name": "北海道開発局 河川映像２",
+   "name_kana": null,
+   "lat": 43.50497,
+   "lng": 142.3244,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": "河川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "0iCsSOcKNVM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=0iCsSOcKNVM"
+   },
+   "operator": "国土交通省 北海道開発局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC_CPIys6tBqmwVXsH-X4ycg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 北海道開発局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-hrr-881cf5391e",
+   "name": "②信濃川水系(千曲川・信濃川・信濃川下流)／主要河川映像",
+   "name_kana": null,
+   "lat": 36.78189,
+   "lng": 138.48693,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "15",
+   "municipality": null,
+   "river_or_route": "信濃川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "bjDnpic40Yw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=bjDnpic40Yw"
+   },
+   "operator": "国土交通省 北陸地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCcwYr4sdrvx3XjdkyHnhtBA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 北陸地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-hrr-898e7f8f11",
+   "name": "③関川、姫川、黒部川水系／主要河川映像",
+   "name_kana": null,
+   "lat": 36.80854,
+   "lng": 137.57264,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "16",
+   "municipality": null,
+   "river_or_route": "関川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "CdoNvV1EtBs",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=CdoNvV1EtBs"
+   },
+   "operator": "国土交通省 北陸地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCcwYr4sdrvx3XjdkyHnhtBA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 北陸地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-hrr-9e06fbcceb",
+   "name": "①荒川、阿賀野川水系(阿賀川、阿賀野川)／主要河川映像",
+   "name_kana": null,
+   "lat": 36.91572,
+   "lng": 139.69243,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "15",
+   "municipality": null,
+   "river_or_route": "荒川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "N8M4timuSNg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=N8M4timuSNg"
+   },
+   "operator": "国土交通省 北陸地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCcwYr4sdrvx3XjdkyHnhtBA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 北陸地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-hrr-c270b07fda",
+   "name": "④常願寺川、神通川、庄川、小矢部川水系／主要河川映像",
+   "name_kana": null,
+   "lat": 36.66913,
+   "lng": 137.09161,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "16",
+   "municipality": null,
+   "river_or_route": "常願寺川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "yGBiRYtHHZk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=yGBiRYtHHZk"
+   },
+   "operator": "国土交通省 北陸地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCcwYr4sdrvx3XjdkyHnhtBA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 北陸地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-hrr-fdfd833249",
+   "name": "⑤手取川、梯川水系／主要河川映像",
+   "name_kana": null,
+   "lat": 36.39213,
+   "lng": 136.53209,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "17",
+   "municipality": null,
+   "river_or_route": "手取川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "cp3Y4mkWGqs",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=cp3Y4mkWGqs"
+   },
+   "operator": "国土交通省 北陸地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCcwYr4sdrvx3XjdkyHnhtBA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 北陸地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"

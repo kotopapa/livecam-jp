@@ -112,3 +112,13 @@ def test_refresh_approved_feeds():
     cam2 = {"id": "x", "feed": {"type": "still_image", "url": "a.jpg"}}
     rec2 = {"id": "x", "feed": {"type": "still_image", "url": "b.jpg"}}
     assert refresh_approved_feeds([cam2], [rec2]) == 0
+
+
+def test_kkr_youtube_channels():
+    from crawler.sources.mlit_youtube import extract_channels
+    html = (FIXTURES / "mlit_kkr_youtube.html").read_text(encoding="utf-8",
+                                                          errors="replace")
+    channels = extract_channels(html, "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html")
+    ids = {c for c, _ in channels if c.startswith("UC")}
+    assert len(ids) >= 14, f"近畿は14水系チャンネル以上のはず: {len(ids)}"
+    assert "UCUGXTjGtxRHyoeTHHXCBSqg" in ids   # 淀川・宇治川

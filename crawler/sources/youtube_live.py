@@ -55,6 +55,28 @@ CHANNELS: list[LiveChannel] = [
             (r"肱川|野村|鹿野川|都谷", "38", "愛媛県"),
         ),
     ),
+    # 北陸地整 水災害対策センター: 水系グループ単位の巡回配信5本
+    LiveChannel(
+        key="hrr",
+        channel_id="UCcwYr4sdrvx3XjdkyHnhtBA",
+        operator="国土交通省 北陸地方整備局",
+        attribution="出典：国土交通省 北陸地方整備局（公式YouTubeライブ）",
+        default_pref="15",
+        default_pref_name="",   # 巡回型は地点ジオコード不可（重心を後段で設定）
+        pref_rules=(
+            (r"黒部|常願寺|神通|庄川|小矢部", "16", ""),
+            (r"手取川|梯川", "17", ""),
+        ),
+    ),
+    # 北海道開発局 河川管理課: 16カ所巡回×2本
+    LiveChannel(
+        key="hkd",
+        channel_id="UC_CPIys6tBqmwVXsH-X4ycg",
+        operator="国土交通省 北海道開発局",
+        attribution="出典：国土交通省 北海道開発局（公式YouTubeライブ）",
+        default_pref="01",
+        default_pref_name="",
+    ),
 ]
 
 
