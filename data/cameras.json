@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T12:43:50Z",
+ "version": "2026-08-18T12:55:22Z",
  "cameras": [
   {
    "id": "curated-akihabara-aisan",
@@ -1297,6 +1297,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-kanazawa-21museum",
+   "name": "金沢21世紀美術館",
+   "name_kana": null,
+   "lat": 36.561,
+   "lng": 136.658,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "17",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "8etsjHvo3Gs",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8etsjHvo3Gs"
+   },
+   "operator": "金沢市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=8etsjHvo3Gs",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：金沢市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kanazawa-asanogawa",
+   "name": "浅野川（金沢）",
+   "name_kana": null,
+   "lat": 36.573,
+   "lng": 136.663,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "17",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "R8I6PTbmbh8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=R8I6PTbmbh8"
+   },
+   "operator": "金沢市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=R8I6PTbmbh8",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：金沢市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-kanazawa-higashichaya",
    "name": "金沢 ひがし茶屋街",
    "name_kana": null,
@@ -1329,6 +1403,117 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kanazawa-kenrokuen",
+   "name": "兼六園",
+   "name_kana": null,
+   "lat": 36.562,
+   "lng": 136.663,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "17",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "5uNwdsIUZOw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=5uNwdsIUZOw"
+   },
+   "operator": "金沢市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=5uNwdsIUZOw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：金沢市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kanazawa-saigawa",
+   "name": "犀川（金沢）",
+   "name_kana": null,
+   "lat": 36.556,
+   "lng": 136.649,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "17",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Xm_gxYlpquM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Xm_gxYlpquM"
+   },
+   "operator": "金沢市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Xm_gxYlpquM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：金沢市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kanazawa-sta",
+   "name": "金沢駅（鼓門・もてなしドーム）",
+   "name_kana": null,
+   "lat": 36.578,
+   "lng": 136.648,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "17",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "mRDptGfqcJo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=mRDptGfqcJo"
+   },
+   "operator": "金沢市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=mRDptGfqcJo",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：金沢市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
