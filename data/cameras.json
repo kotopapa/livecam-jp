@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T08:57:21Z",
+ "version": "2026-08-18T09:01:36Z",
  "cameras": [
   {
    "id": "curated-akihabara-aisan",
@@ -145,6 +145,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-fuji-5thstation",
+   "name": "富士山五合目（吉田ルート受付窓口付近）",
+   "name_kana": null,
+   "lat": 35.39,
+   "lng": 138.733,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "aAwLkwikVd4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=aAwLkwikVd4"
+   },
+   "operator": "山梨県",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=aAwLkwikVd4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山梨県（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -372,6 +409,413 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-rito-aogashima",
+   "name": "青ヶ島（三宝港）",
+   "name_kana": null,
+   "lat": 32.462,
+   "lng": 139.762,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLmB3KUN7dad7BHzIjK3tz0B",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmB3KUN7dad7BHzIjK3tz0B"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmB3KUN7dad7BHzIjK3tz0B",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-chichijima",
+   "name": "父島（二見港）",
+   "name_kana": null,
+   "lat": 27.094,
+   "lng": 142.192,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLnMz4TA4ulr_jij1eJ2iVpG",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLnMz4TA4ulr_jij1eJ2iVpG"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLnMz4TA4ulr_jij1eJ2iVpG",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-hachijojima",
+   "name": "八丈島（神湊港底土・八重根漁港ほか）",
+   "name_kana": null,
+   "lat": 33.11,
+   "lng": 139.79,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLkiv2t415oIV8aqpMziket4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLkiv2t415oIV8aqpMziket4"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLkiv2t415oIV8aqpMziket4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-hahajima",
+   "name": "母島（沖港）",
+   "name_kana": null,
+   "lat": 26.63,
+   "lng": 142.156,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLmO_ulfLohTTPPvqtVMCZcI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmO_ulfLohTTPPvqtVMCZcI"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmO_ulfLohTTPPvqtVMCZcI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-kozushima",
+   "name": "神津島（神津島港・三浦漁港）",
+   "name_kana": null,
+   "lat": 34.203,
+   "lng": 139.134,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLklmd8qyb3PK32H9CJgxI3L",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLklmd8qyb3PK32H9CJgxI3L"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLklmd8qyb3PK32H9CJgxI3L",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-mikurajima",
+   "name": "御蔵島（御蔵島港）",
+   "name_kana": null,
+   "lat": 33.901,
+   "lng": 139.602,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLmvJcvc0R8yRzAvX5CdbSe7",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmvJcvc0R8yRzAvX5CdbSe7"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmvJcvc0R8yRzAvX5CdbSe7",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-miyakejima",
+   "name": "三宅島（三池港・阿古漁港・伊ヶ谷漁港）",
+   "name_kana": null,
+   "lat": 34.079,
+   "lng": 139.529,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLlsMjfLD9w7RgUep7Li3MXt",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLlsMjfLD9w7RgUep7Li3MXt"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLlsMjfLD9w7RgUep7Li3MXt",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-niijima",
+   "name": "新島（新島港・若郷漁港）",
+   "name_kana": null,
+   "lat": 34.372,
+   "lng": 139.255,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLlty2YoDJnfSDRlvxtnfhHf",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLlty2YoDJnfSDRlvxtnfhHf"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLlty2YoDJnfSDRlvxtnfhHf",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-oshima",
+   "name": "大島（元町港・岡田港・波浮港）",
+   "name_kana": null,
+   "lat": 34.75,
+   "lng": 139.356,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLmISHQn8YxyCVoGWh5lBC9v",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmISHQn8YxyCVoGWh5lBC9v"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmISHQn8YxyCVoGWh5lBC9v",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-shikinejima",
+   "name": "式根島（野伏漁港）",
+   "name_kana": null,
+   "lat": 34.324,
+   "lng": 139.212,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLmTsoDf1iTSjtDF1BG8nv5-",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmTsoDf1iTSjtDF1BG8nv5-"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLmTsoDf1iTSjtDF1BG8nv5-",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rito-toshima",
+   "name": "利島（利島港）",
+   "name_kana": null,
+   "lat": 34.525,
+   "lng": 139.28,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "videoseries?list=PLEMMKGHcrLLllhEpyGlDGAK8hFW67GDis",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLllhEpyGlDGAK8hFW67GDis"
+   },
+   "operator": "東京都港湾局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=videoseries?list=PLEMMKGHcrLLllhEpyGlDGAK8hFW67GDis",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京都港湾局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-sakurajima-mbc",
    "name": "桜島（垂水市牛根麓から）",
    "name_kana": null,
@@ -404,6 +848,80 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-satta-hiroshige",
+   "name": "さった峠 広重の富士山",
+   "name_kana": null,
+   "lat": 35.052,
+   "lng": 138.532,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "22",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "GsD9QQEKSzQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=GsD9QQEKSzQ"
+   },
+   "operator": "静岡市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=GsD9QQEKSzQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：静岡市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-satta-kotsu",
+   "name": "さった峠 交通の要衝（国道1号・東名）",
+   "name_kana": null,
+   "lat": 35.051,
+   "lng": 138.528,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "6S4qvf97cbQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=6S4qvf97cbQ"
+   },
+   "operator": "静岡市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=6S4qvf97cbQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：静岡市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -477147,6 +477665,1560 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=mlit_roadinfo"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-kasugai-1b8deaade7",
+   "name": "春日井市 1【動画】河川監視 地蔵川 勝川水位観測所",
+   "name_kana": null,
+   "lat": 35.247501,
+   "lng": 136.972229,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "wRjDXvAUnV4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=wRjDXvAUnV4"
+   },
+   "operator": "春日井市",
+   "source": {
+    "page_url": "https://www.city.kasugai.lg.jp/shisei/machi/haisui/kansoku_system.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：春日井市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-kasugai-53e8dd1501",
+   "name": "春日井市 4【動画】河川監視 西行堂川 神明橋下流",
+   "name_kana": null,
+   "lat": 35.259697,
+   "lng": 136.941833,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "HYNHUQKDqXY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=HYNHUQKDqXY"
+   },
+   "operator": "春日井市",
+   "source": {
+    "page_url": "https://www.city.kasugai.lg.jp/shisei/machi/haisui/kansoku_system.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：春日井市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-kasugai-6840bbbe54",
+   "name": "春日井市 3【動画】河川監視 八田川 西浦橋上流",
+   "name_kana": null,
+   "lat": 35.247501,
+   "lng": 136.972229,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "p-sL0eD2db0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=p-sL0eD2db0"
+   },
+   "operator": "春日井市",
+   "source": {
+    "page_url": "https://www.city.kasugai.lg.jp/shisei/machi/haisui/kansoku_system.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：春日井市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-kasugai-e4d339fd3e",
+   "name": "春日井市 2【動画】河川監視 地蔵川 八尻橋上流",
+   "name_kana": null,
+   "lat": 35.224899,
+   "lng": 136.935074,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "aJ5cdKOqKxg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=aJ5cdKOqKxg"
+   },
+   "operator": "春日井市",
+   "source": {
+    "page_url": "https://www.city.kasugai.lg.jp/shisei/machi/haisui/kansoku_system.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：春日井市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-ohtawara-0855a89b3f",
+   "name": "大田原市 上高橋付近",
+   "name_kana": null,
+   "lat": 36.868027,
+   "lng": 140.055893,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "09MsavaS5Gw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=09MsavaS5Gw"
+   },
+   "operator": "大田原市",
+   "source": {
+    "page_url": "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：大田原市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-ohtawara-0ed8862c12",
+   "name": "大田原市 箒橋付近",
+   "name_kana": null,
+   "lat": 36.870922,
+   "lng": 140.015839,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "nQrc595iymg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=nQrc595iymg"
+   },
+   "operator": "大田原市",
+   "source": {
+    "page_url": "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：大田原市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-ohtawara-4be915d360",
+   "name": "大田原市 旧須賀川小学校付近",
+   "name_kana": null,
+   "lat": 36.870922,
+   "lng": 140.015839,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "lBFjHErpmlc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=lBFjHErpmlc"
+   },
+   "operator": "大田原市",
+   "source": {
+    "page_url": "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：大田原市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-ohtawara-61c8398d17",
+   "name": "大田原市 高取橋付近",
+   "name_kana": null,
+   "lat": 36.870922,
+   "lng": 140.015839,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "bFg0PC_IypY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=bFg0PC_IypY"
+   },
+   "operator": "大田原市",
+   "source": {
+    "page_url": "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：大田原市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-ohtawara-712fd8f65b",
+   "name": "大田原市 弾正橋付近",
+   "name_kana": null,
+   "lat": 36.870922,
+   "lng": 140.015839,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "wGc7-7d1-J4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=wGc7-7d1-J4"
+   },
+   "operator": "大田原市",
+   "source": {
+    "page_url": "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：大田原市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-ohtawara-778ee463f9",
+   "name": "大田原市 蛇尾橋付近",
+   "name_kana": null,
+   "lat": 36.870922,
+   "lng": 140.015839,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "OLLd7YiM3Tk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=OLLd7YiM3Tk"
+   },
+   "operator": "大田原市",
+   "source": {
+    "page_url": "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：大田原市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-ohtawara-befd1bfd7e",
+   "name": "大田原市 岩井橋付近",
+   "name_kana": null,
+   "lat": 36.870922,
+   "lng": 140.015839,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "W6OJrKQJOrQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=W6OJrKQJOrQ"
+   },
+   "operator": "大田原市",
+   "source": {
+    "page_url": "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：大田原市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-ohtawara-f67c51deb9",
+   "name": "大田原市 清流荘付近",
+   "name_kana": null,
+   "lat": 36.870922,
+   "lng": 140.015839,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "FGBoilorXsQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FGBoilorXsQ"
+   },
+   "operator": "大田原市",
+   "source": {
+    "page_url": "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：大田原市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-shiki-c624b6df42",
+   "name": "志木市 新河岸川・袋橋（上宗岡1丁目）の様子",
+   "name_kana": null,
+   "lat": 35.83659,
+   "lng": 139.580246,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "BxagHIIDERk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=BxagHIIDERk"
+   },
+   "operator": "志木市",
+   "source": {
+    "page_url": "https://www.city.shiki.lg.jp/soshiki/11/3173.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：志木市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-shiki-cc6e01d33e",
+   "name": "志木市 新河岸川・柳瀬川の合流地点（本町2丁目）の様子",
+   "name_kana": null,
+   "lat": 35.83659,
+   "lng": 139.580246,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "hgO7XMTWhGk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=hgO7XMTWhGk"
+   },
+   "operator": "志木市",
+   "source": {
+    "page_url": "https://www.city.shiki.lg.jp/soshiki/11/3173.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：志木市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-shiki-f0fe1aef24",
+   "name": "志木市 柳瀬川・高橋（柏町2丁目）の様子",
+   "name_kana": null,
+   "lat": 35.83659,
+   "lng": 139.580246,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "11",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "7cXr5GGmXSs",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=7cXr5GGmXSs"
+   },
+   "operator": "志木市",
+   "source": {
+    "page_url": "https://www.city.shiki.lg.jp/soshiki/11/3173.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：志木市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-07509d6ac7",
+   "name": "横須賀市 長浜海岸",
+   "name_kana": null,
+   "lat": 35.203728,
+   "lng": 139.62706,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "47KZd8Oy1u0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=47KZd8Oy1u0"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-16145863ae",
+   "name": "横須賀市 長井漁港（本港）",
+   "name_kana": null,
+   "lat": 35.203728,
+   "lng": 139.62706,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "pkonyjvd7xU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=pkonyjvd7xU"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-1bdb0a419b",
+   "name": "横須賀市 走水小学校横",
+   "name_kana": null,
+   "lat": 35.260162,
+   "lng": 139.723694,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "MMvpAGjTGyw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=MMvpAGjTGyw"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_02/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-357bd1c0c1",
+   "name": "横須賀市 ヴェルニー公園",
+   "name_kana": null,
+   "lat": 35.281467,
+   "lng": 139.672226,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "n63yRhCRvHg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=n63yRhCRvHg"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-3ab835d624",
+   "name": "横須賀市 久留和漁港",
+   "name_kana": null,
+   "lat": 35.229851,
+   "lng": 139.690781,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "jdPHYcpj3as",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=jdPHYcpj3as"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-4785451af2",
+   "name": "横須賀市 上町歩道橋付近",
+   "name_kana": null,
+   "lat": 35.276482,
+   "lng": 139.668045,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "1CI685iPIUQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=1CI685iPIUQ"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-4e67d7b1bd",
+   "name": "横須賀市 秋谷漁港",
+   "name_kana": null,
+   "lat": 35.25005,
+   "lng": 139.595947,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "GUVHlrxsEos",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=GUVHlrxsEos"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-4ff4efb38c",
+   "name": "横須賀市 湘南国際村バス回転場付近",
+   "name_kana": null,
+   "lat": 35.254547,
+   "lng": 139.606995,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "FoKpdSt2oew",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FoKpdSt2oew"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-517f69dcd0",
+   "name": "横須賀市 うみかぜ公園",
+   "name_kana": null,
+   "lat": 35.281467,
+   "lng": 139.672226,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Yj4CHgedlVw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Yj4CHgedlVw"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-65159c0ca2",
+   "name": "横須賀市 長井漁港（漆山）",
+   "name_kana": null,
+   "lat": 35.203728,
+   "lng": 139.62706,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "RDed26749T8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=RDed26749T8"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-6a35bf801d",
+   "name": "横須賀市 馬堀海岸",
+   "name_kana": null,
+   "lat": 35.262928,
+   "lng": 139.700256,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "_s_M1EPmWuI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=_s_M1EPmWuI"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_02/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-6f1975ec75",
+   "name": "横須賀市 文化会館入口交差点",
+   "name_kana": null,
+   "lat": 35.281467,
+   "lng": 139.672226,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "8HUN4M4bMfE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8HUN4M4bMfE"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-6fd37f8964",
+   "name": "横須賀市 上町3丁目交差点",
+   "name_kana": null,
+   "lat": 35.26944,
+   "lng": 139.670303,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "whZNcbEiWdg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=whZNcbEiWdg"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-87b81fc927",
+   "name": "横須賀市 長井漁港（荒井）",
+   "name_kana": null,
+   "lat": 35.203728,
+   "lng": 139.62706,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "xy2QeFcc8_A",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=xy2QeFcc8_A"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-8b5b95e18e",
+   "name": "横須賀市 夏島貝塚通り",
+   "name_kana": null,
+   "lat": 35.321507,
+   "lng": 139.643631,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "9393pYSPE6Q",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=9393pYSPE6Q"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-904cfbc62b",
+   "name": "横須賀市 富浦公園付近",
+   "name_kana": null,
+   "lat": 35.26712,
+   "lng": 139.678741,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "lg7-kjSgqOA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=lg7-kjSgqOA"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-9f46c94d44",
+   "name": "横須賀市 佐島（芦名）",
+   "name_kana": null,
+   "lat": 35.224052,
+   "lng": 139.61676,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "B23eUfMDnu0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=B23eUfMDnu0"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-a4669b7aa9",
+   "name": "横須賀市 津久井橋付近",
+   "name_kana": null,
+   "lat": 35.195984,
+   "lng": 139.664978,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "h8xMxqqOhb8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=h8xMxqqOhb8"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_02/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-a56592aaf1",
+   "name": "横須賀市 川間川",
+   "name_kana": null,
+   "lat": 35.281467,
+   "lng": 139.672226,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "7PQwUKvmK8s",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=7PQwUKvmK8s"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-a80a7bfc93",
+   "name": "横須賀市 久里浜海岸",
+   "name_kana": null,
+   "lat": 35.234421,
+   "lng": 139.699356,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "klqiayelF5E",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=klqiayelF5E"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_02/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-ba83ac849e",
+   "name": "横須賀市 野比海岸",
+   "name_kana": null,
+   "lat": 35.217117,
+   "lng": 139.685425,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "FywhX-2zuMU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FywhX-2zuMU"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_02/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-bdef69b94e",
+   "name": "横須賀市 エコミルトンネル前",
+   "name_kana": null,
+   "lat": 35.281467,
+   "lng": 139.672226,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "mOIPfM9v_l0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=mOIPfM9v_l0"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-c965dbb4d5",
+   "name": "横須賀市 国道16号 コースカ前",
+   "name_kana": null,
+   "lat": 35.281467,
+   "lng": 139.672226,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Na9wnYD_dZ8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Na9wnYD_dZ8"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-dbd547ed57",
+   "name": "横須賀市 NTT横須賀研究開発センター南門前",
+   "name_kana": null,
+   "lat": 35.281467,
+   "lng": 139.672226,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "i6t35BsAMwA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=i6t35BsAMwA"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_02/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-e5b8a03aee",
+   "name": "横須賀市 三島神社入口前",
+   "name_kana": null,
+   "lat": 35.268753,
+   "lng": 139.682434,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "l_5bGc_UBtM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=l_5bGc_UBtM"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-e7a7ea05bb",
+   "name": "横須賀市 浦賀港",
+   "name_kana": null,
+   "lat": 35.254074,
+   "lng": 139.710281,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "K427DZ2lT7g",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=K427DZ2lT7g"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_02/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-yokosuka-ea64346dcd",
+   "name": "横須賀市 湘南鷹取跨線橋付近",
+   "name_kana": null,
+   "lat": 35.31118,
+   "lng": 139.618637,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "jflJMbsQTtQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=jflJMbsQTtQ"
+   },
+   "operator": "横須賀市",
+   "source": {
+    "page_url": "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：横須賀市（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"

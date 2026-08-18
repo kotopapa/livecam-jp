@@ -136,3 +136,17 @@ def test_curated_youtube_yaml():
     shibuya = next(c for c in result.candidates if c.id == "curated-shibuya-ann")
     assert shibuya.feed_type == "youtube_video" and shibuya.coord_accuracy == "approx"
     assert validate_camera_record(shibuya.to_record("2026-08-18")) == []
+
+
+def test_muni_youtube_extract():
+    from crawler.sources.muni_youtube import clean_spot_name, extract_video_links
+    html = (FIXTURES / "muni_ohtawara.html").read_text(encoding="utf-8", errors="replace")
+    links = extract_video_links(html, "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/")
+    ids = dict(links)
+    assert "OLLd7YiM3Tk" in ids, "蛇尾橋のvideoIdが取れるはず"
+    assert len(ids) >= 8
+
+    yoko = (FIXTURES / "muni_yokosuka_area01.html").read_text(encoding="utf-8", errors="replace")
+    ylinks = extract_video_links(yoko, "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html")
+    assert len(ylinks) >= 9
+    assert clean_spot_name("蛇尾橋付近（外部リンク）") == "蛇尾橋付近"

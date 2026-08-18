@@ -158,3 +158,142 @@ cameras:
     prefecture: "14"
     lat: 35.3000
     lng: 139.4850
+
+  - id: curated-satta-hiroshige
+    name: さった峠 広重の富士山
+    operator: 静岡市
+    video_id: GsD9QQEKSzQ
+    category: scenic
+    prefecture: "22"
+    lat: 35.0520
+    lng: 138.5320
+    note: 東海道五十三次「由井」のアングル。著作権は静岡市帰属と明記あり
+
+  - id: curated-satta-kotsu
+    name: さった峠 交通の要衝（国道1号・東名）
+    operator: 静岡市
+    video_id: 6S4qvf97cbQ
+    category: road
+    prefecture: "22"
+    lat: 35.0510
+    lng: 138.5280
+
+  - id: curated-fuji-5thstation
+    name: 富士山五合目（吉田ルート受付窓口付近）
+    operator: 山梨県
+    video_id: aAwLkwikVd4
+    category: scenic
+    prefecture: "19"
+    lat: 35.3900
+    lng: 138.7330
+    note: 開山期間中のみの季節運用
+
+  - id: curated-rito-oshima
+    name: 大島（元町港・岡田港・波浮港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLmISHQn8YxyCVoGWh5lBC9v"
+    category: port
+    prefecture: "13"
+    lat: 34.75
+    lng: 139.356
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-toshima
+    name: 利島（利島港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLllhEpyGlDGAK8hFW67GDis"
+    category: port
+    prefecture: "13"
+    lat: 34.525
+    lng: 139.28
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-niijima
+    name: 新島（新島港・若郷漁港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLlty2YoDJnfSDRlvxtnfhHf"
+    category: port
+    prefecture: "13"
+    lat: 34.372
+    lng: 139.255
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-shikinejima
+    name: 式根島（野伏漁港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLmTsoDf1iTSjtDF1BG8nv5-"
+    category: port
+    prefecture: "13"
+    lat: 34.324
+    lng: 139.212
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-kozushima
+    name: 神津島（神津島港・三浦漁港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLklmd8qyb3PK32H9CJgxI3L"
+    category: port
+    prefecture: "13"
+    lat: 34.203
+    lng: 139.134
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-miyakejima
+    name: 三宅島（三池港・阿古漁港・伊ヶ谷漁港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLlsMjfLD9w7RgUep7Li3MXt"
+    category: port
+    prefecture: "13"
+    lat: 34.079
+    lng: 139.529
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-mikurajima
+    name: 御蔵島（御蔵島港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLmvJcvc0R8yRzAvX5CdbSe7"
+    category: port
+    prefecture: "13"
+    lat: 33.901
+    lng: 139.602
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-hachijojima
+    name: 八丈島（神湊港底土・八重根漁港ほか）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLkiv2t415oIV8aqpMziket4"
+    category: port
+    prefecture: "13"
+    lat: 33.11
+    lng: 139.79
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-aogashima
+    name: 青ヶ島（三宝港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLmB3KUN7dad7BHzIjK3tz0B"
+    category: port
+    prefecture: "13"
+    lat: 32.462
+    lng: 139.762
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-chichijima
+    name: 父島（二見港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLnMz4TA4ulr_jij1eJ2iVpG"
+    category: port
+    prefecture: "13"
+    lat: 27.094
+    lng: 142.192
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-rito-hahajima
+    name: 母島（沖港）
+    operator: 東京都港湾局
+    video_id: "videoseries?list=PLEMMKGHcrLLmO_ulfLohTTPPvqtVMCZcI"
+    category: port
+    prefecture: "13"
+    lat: 26.63
+    lng: 142.156
+    note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
