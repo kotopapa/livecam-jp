@@ -1,15 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
 import '../config.dart';
 import 'detail_screen.dart' show disclaimerText;
 
+const _repoIssues = 'https://github.com/kotopapa/livecam-jp/issues/new';
+const _termsUrl = 'https://kotopapa.github.io/livecam-jp/terms.html';
+const _privacyUrl = 'https://kotopapa.github.io/livecam-jp/privacy.html';
+
+Future<void> _open(String url) =>
+    launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+
 /// 設定タブ（SPEC 9.2⑥）。
 /// 置いてはいけない項目: 更新間隔の変更（60秒固定）・プッシュ通知（スコープ外）。
-class SettingsScreen extends StatelessWidget {
+class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key, required this.app});
 
   final AppState app;
+
+  @override
+  State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+  bool _clearingCache = false;
+
+  AppState get app => widget.app;
+
+  Future<void> _clearCache() async {
+    setState(() => _clearingCache = true);
+    try {
+      await app.clearCacheAndReload();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('キャッシュを削除して再取得しました')));
+      }
+    } finally {
+      if (mounted) setState(() => _clearingCache = false);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +47,16 @@ class SettingsScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('設定')),
       body: ListView(children: [
         const _SectionHeader('データ取得'),
+        SwitchListTile(
+          secondary: const Icon(Icons.wifi),
+          title: const Text('Wi-Fi接続時のみ画像を取得'),
+          subtitle: const Text('モバイル通信量を抑えます（地図とカメラ一覧は表示されます）'),
+          value: app.wifiOnly,
+          onChanged: (v) async {
+            await app.setWifiOnly(v);
+            if (mounted) setState(() {});
+          },
+        ),
         const ListTile(
           leading: Icon(Icons.timer_outlined),
           title: Text('手動更新の間隔'),
@@ -27,6 +67,31 @@ class SettingsScreen extends StatelessWidget {
           title: Text('カメラの死活確認'),
           subtitle: Text('約30分ごとに自動確認し、映らないカメラは地図から自動で非表示になります'),
         ),
+        ListTile(
+          leading: const Icon(Icons.delete_outline),
+          title: const Text('キャッシュを削除'),
+          subtitle: const Text('カメラ一覧などの保存データを消去して再取得します'),
+          trailing: _clearingCache
+              ? const SizedBox(
+                  width: 18, height: 18,
+                  child: CircularProgressIndicator(strokeWidth: 2))
+              : null,
+          onTap: _clearingCache ? null : _clearCache,
+        ),
+        const Divider(),
+        const _SectionHeader('カメラの追加・削除のご依頼'),
+        ListTile(
+          leading: const Icon(Icons.add_a_photo_outlined),
+          title: const Text('ライブカメラの追加を依頼'),
+          subtitle: const Text('掲載してほしいカメラのURLをお寄せください（GitHubアカウントが必要です）'),
+          onTap: () => _open('$_repoIssues?template=add-camera.yml'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.remove_circle_outline),
+          title: const Text('掲載の削除を依頼'),
+          subtitle: const Text('設置者・運営者の方からのお申し出に速やかに対応します（GitHubアカウントが必要です）'),
+          onTap: () => _open('$_repoIssues?template=remove-camera.yml'),
+        ),
         const Divider(),
         const _SectionHeader('出典・ライセンス'),
         ListTile(
@@ -35,6 +100,16 @@ class SettingsScreen extends StatelessWidget {
           subtitle: const Text('カメラ映像の提供元の一覧'),
           onTap: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => _AttributionScreen(app: app))),
+        ),
+        ListTile(
+          leading: const Icon(Icons.gavel_outlined),
+          title: const Text('利用規約'),
+          onTap: () => _open(_termsUrl),
+        ),
+        ListTile(
+          leading: const Icon(Icons.privacy_tip_outlined),
+          title: const Text('プライバシーポリシー'),
+          onTap: () => _open(_privacyUrl),
         ),
         const Divider(),
         const _SectionHeader('このアプリについて'),

@@ -1,0 +1,30 @@
+name: 掲載削除の依頼
+description: カメラの設置者・運営者の方からの掲載削除のお申し出（速やかに対応します）
+title: "[削除依頼] "
+labels: ["removal-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        掲載削除のお申し出は速やかに対応いたします。ご迷惑をおかけして申し訳ありません。
+        本アプリは映像を保存・再配信しておらず、削除後はアプリ・地図上に一切表示されなくなります。
+  - type: input
+    id: camera
+    attributes:
+      label: 対象のカメラ
+      description: アプリ内に表示されているカメラの名前（複数ある場合はまとめて記載可）
+      placeholder: 例「○○川 △△橋」
+    validations:
+      required: true
+  - type: input
+    id: relation
+    attributes:
+      label: お立場
+      description: 例「カメラの設置者」「運営会社の担当者」
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: 補足（任意）
+      description: 削除範囲のご指定（特定カメラのみ/全カメラ）など

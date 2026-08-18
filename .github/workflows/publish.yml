@@ -6,7 +6,7 @@ on:
     paths:
       - "data/cameras.json"
       - "data/status.json"
-      - "site/build.py"
+      - "site/**"
   workflow_dispatch:
 
 permissions:

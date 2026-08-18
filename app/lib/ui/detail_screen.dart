@@ -264,7 +264,12 @@ class _MediaView extends StatelessWidget {
       case FeedType.stillImage:
       case FeedType.mlitRoadinfo:
         final url = app.imageUrlFor(camera);
-        if (url == null) return const _MediaFallback(text: '現在映像を取得できません');
+        if (url == null) {
+          return _MediaFallback(
+              text: app.imagesBlockedByWifiSetting
+                  ? '設定により、画像の取得はWi-Fi接続時のみです'
+                  : '現在映像を取得できません');
+        }
         // refreshTick をキーに含めて手動更新時に再取得する
         return AspectRatio(
           aspectRatio: 4 / 3,

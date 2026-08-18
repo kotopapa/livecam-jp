@@ -1,0 +1,36 @@
+name: ライブカメラの追加要請
+description: 掲載してほしいライブカメラを教えてください
+title: "[追加要請] "
+labels: ["camera-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        掲載のご提案ありがとうございます。公開されているライブカメラであれば、出典明記のうえ掲載を検討します。
+        （埋め込みが許可されていない映像は、YouTube等へ誘導する形での掲載になります）
+  - type: input
+    id: name
+    attributes:
+      label: カメラの名前・場所
+      description: 例「渋谷スクランブル交差点」「○○川 △△橋」
+      placeholder: 場所がわかる名前
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: カメラのURL
+      description: YouTubeのライブURL、またはカメラが見られるページのURL
+      placeholder: https://www.youtube.com/watch?v=...
+    validations:
+      required: true
+  - type: input
+    id: operator
+    attributes:
+      label: 運営者（わかれば）
+      description: 例「○○市」「△△テレビ」「個人」
+  - type: textarea
+    id: note
+    attributes:
+      label: 補足（任意）
+      description: おすすめの理由や、位置の目印など

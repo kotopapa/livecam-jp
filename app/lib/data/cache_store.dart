@@ -41,6 +41,18 @@ class CacheStore {
     }
   }
 
+  /// キャッシュファイルを全削除する（設定画面の「キャッシュ削除」用）。
+  Future<void> clear() async {
+    try {
+      if (!await dir.exists()) return;
+      await for (final f in dir.list()) {
+        if (f is File && f.path.endsWith('.json')) await f.delete();
+      }
+    } catch (_) {
+      // 消せないファイルがあっても致命的ではない
+    }
+  }
+
   Future<void> write(String name, String rawJson,
       {String? etag, String? version}) async {
     await dir.create(recursive: true);

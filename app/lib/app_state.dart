@@ -1,4 +1,8 @@
+import 'dart:async';
+
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'data/camera_repository.dart';
 import 'data/favorites_store.dart';
@@ -101,7 +105,45 @@ class AppState extends ChangeNotifier {
   CameraState stateOf(Camera c) =>
       repository.status[c.id]?.state ?? CameraState.unknown;
 
-  String? imageUrlFor(Camera c) => repository.imageUrlFor(c);
+  // --- データ通信設定（Wi-Fiのみで画像取得。SPEC 9.2⑥） ---
+  static const _wifiOnlyKey = 'wifi_only_images';
+  bool wifiOnly = false;
+  bool _onWifi = true; // 接続不明時は取得を止めない
+  StreamSubscription<List<ConnectivityResult>>? _connSub;
+
+  /// Wi-Fiのみ設定が原因で画像取得を止めている状態か（プレースホルダ文言用）
+  bool get imagesBlockedByWifiSetting => wifiOnly && !_onWifi;
+
+  Future<void> setWifiOnly(bool value) async {
+    wifiOnly = value;
+    notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_wifiOnlyKey, value);
+  }
+
+  void _updateConnectivity(List<ConnectivityResult> results) {
+    final onWifi = results.contains(ConnectivityResult.wifi) ||
+        results.contains(ConnectivityResult.ethernet);
+    if (onWifi != _onWifi) {
+      _onWifi = onWifi;
+      notifyListeners();
+    }
+  }
+
+  /// キャッシュを全削除して再取得する（設定画面用）
+  Future<void> clearCacheAndReload() async {
+    await repository.cache.clear();
+    await refresh();
+  }
+
+  @override
+  void dispose() {
+    _connSub?.cancel();
+    super.dispose();
+  }
+
+  String? imageUrlFor(Camera c) =>
+      imagesBlockedByWifiSetting ? null : repository.imageUrlFor(c);
 
   String? imageTimeFor(Camera c) {
     final st = repository.status[c.id];
@@ -112,6 +154,15 @@ class AppState extends ChangeNotifier {
   Future<void> init() async {
     await repository.loadCached();
     await favorites.load();
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      wifiOnly = prefs.getBool(_wifiOnlyKey) ?? false;
+      final conn = Connectivity();
+      _updateConnectivity(await conn.checkConnectivity());
+      _connSub = conn.onConnectivityChanged.listen(_updateConnectivity);
+    } catch (_) {
+      // 接続状態が取れない環境（テスト等）では常時取得可として扱う
+    }
     initialized = true;
     notifyListeners();
     await refresh();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../app_state.dart';
+import '../config.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
 import '../util/time_format.dart';
@@ -19,7 +20,25 @@ class FavoritesScreen extends StatefulWidget {
 
 class _FavoritesScreenState extends State<FavoritesScreen> {
   bool _cardView = true;
-  int _refreshTick = 0;
+  bool _bulkRefreshing = false;
+  // カメラごとの再取得キー。一括更新は3件ずつ順次進める（SPEC 9.2⑤）
+  final Map<String, int> _ticks = {};
+
+  Future<void> _bulkRefresh() async {
+    if (_bulkRefreshing) return;
+    setState(() => _bulkRefreshing = true);
+    final favs = _favorites;
+    for (var i = 0; i < favs.length; i += maxConcurrentFetches) {
+      if (!mounted) break;
+      setState(() {
+        for (final c in favs.skip(i).take(maxConcurrentFetches)) {
+          _ticks[c.id] = (_ticks[c.id] ?? 0) + 1;
+        }
+      });
+      await Future.delayed(const Duration(milliseconds: 800));
+    }
+    if (mounted) setState(() => _bulkRefreshing = false);
+  }
 
   @override
   void initState() {
@@ -52,9 +71,13 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             onPressed: () => setState(() => _cardView = !_cardView),
           ),
           IconButton(
-            tooltip: '一括更新',
-            icon: const Icon(Icons.refresh),
-            onPressed: () => setState(() => _refreshTick++),
+            tooltip: '一括更新（3件ずつ順次取得）',
+            icon: _bulkRefreshing
+                ? const SizedBox(
+                    width: 18, height: 18,
+                    child: CircularProgressIndicator(strokeWidth: 2))
+                : const Icon(Icons.refresh),
+            onPressed: _bulkRefreshing ? null : _bulkRefresh,
           ),
         ],
       ),
@@ -78,14 +101,14 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   itemCount: favorites.length,
                   itemBuilder: (context, i) =>
                       _FavoriteCard(camera: favorites[i], app: widget.app,
-                          refreshTick: _refreshTick),
+                          refreshTick: _ticks[favorites[i].id] ?? 0),
                 )
               : ListView.separated(
                   itemCount: favorites.length,
                   separatorBuilder: (_, _) => const Divider(height: 1),
                   itemBuilder: (context, i) =>
                       _FavoriteTile(camera: favorites[i], app: widget.app,
-                          refreshTick: _refreshTick),
+                          refreshTick: _ticks[favorites[i].id] ?? 0),
                 ),
     );
   }

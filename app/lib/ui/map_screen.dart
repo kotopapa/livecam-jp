@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../app_state.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
+import '../util/prefectures.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 
@@ -68,6 +70,8 @@ class _MapScreenState extends State<MapScreen> {
   void initState() {
     super.initState();
     widget.app.addListener(_onDataChanged);
+    // 初回フレーム後に前回位置へ移動（MapControllerはレイアウト後に有効）
+    WidgetsBinding.instance.addPostFrameCallback((_) => _restorePosition());
   }
 
   @override
@@ -78,6 +82,75 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   void _onDataChanged() => setState(() {});
+
+  // --- 地図位置の記憶（前回表示していた場所から再開する） ---
+  static const _posKey = 'map_position'; // "lat,lng,zoom"
+
+  Future<void> _restorePosition() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final parts = (prefs.getString(_posKey) ?? '').split(',');
+      if (parts.length != 3) return;
+      final lat = double.parse(parts[0]);
+      final lng = double.parse(parts[1]);
+      final zoom = double.parse(parts[2]);
+      if (!mounted) return;
+      _controller.move(LatLng(lat, lng), zoom);
+      setState(() => _zoom = zoom);
+    } catch (_) {
+      // 記憶がない/壊れている場合は既定位置のまま
+    }
+  }
+
+  Future<void> _savePosition() async {
+    final c = _controller.camera;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_posKey,
+        '${c.center.latitude},${c.center.longitude},${c.zoom}');
+  }
+
+  /// 都道府県ジャンプ（SPEC 9.2②）。承認済みカメラの重心へ移動する
+  void _showPrefectureJump(BuildContext context) {
+    final cams = widget.app.repository.displayableCameras();
+    final sums = <String, (double, double, int)>{};
+    for (final c in cams) {
+      if (!c.hasLocation) continue;
+      final cur = sums[c.prefecture] ?? (0.0, 0.0, 0);
+      sums[c.prefecture] = (cur.$1 + c.lat!, cur.$2 + c.lng!, cur.$3 + 1);
+    }
+    showModalBottomSheet(
+      context: context,
+      showDragHandle: true,
+      builder: (context) => SafeArea(
+        child: GridView.count(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          crossAxisCount: 4,
+          mainAxisSpacing: 8,
+          crossAxisSpacing: 8,
+          childAspectRatio: 2.2,
+          children: [
+            for (final e in prefectureNames.entries)
+              if (sums.containsKey(e.key))
+                OutlinedButton(
+                  onPressed: () {
+                    final s = sums[e.key]!;
+                    Navigator.of(context).pop();
+                    _controller.move(
+                        LatLng(s.$1 / s.$3, s.$2 / s.$3), 9.5);
+                    setState(() => _zoom = 9.5);
+                    _savePosition();
+                  },
+                  style: OutlinedButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      visualDensity: VisualDensity.compact),
+                  child: Text(e.value,
+                      style: const TextStyle(fontSize: 12)),
+                ),
+          ],
+        ),
+      ),
+    );
+  }
 
   void _zoomBy(double delta) {
     final z = (_controller.camera.zoom + delta).clamp(4.0, 18.0);
@@ -224,9 +297,19 @@ class _MapScreenState extends State<MapScreen> {
             initialZoom: _initialZoom,
             minZoom: 4,
             maxZoom: 18,
+            // ピンチズーム等は既定で有効。二本指ひねりの回転だけ無効化（北固定）
+            interactionOptions: const InteractionOptions(
+                flags: InteractiveFlag.all & ~InteractiveFlag.rotate),
             onPositionChanged: (camera, _) {
               if ((camera.zoom - _zoom).abs() >= 0.5) {
                 setState(() => _zoom = camera.zoom);
+              }
+            },
+            onMapEvent: (e) {
+              if (e is MapEventMoveEnd ||
+                  e is MapEventFlingAnimationEnd ||
+                  e is MapEventDoubleTapZoomEnd) {
+                _savePosition();
               }
             },
           ),
@@ -310,11 +393,20 @@ class _MapScreenState extends State<MapScreen> {
         Positioned(
           right: 16,
           top: MediaQuery.of(context).padding.top + 12,
-          child: FloatingActionButton.small(
-            heroTag: 'legend_filter',
-            onPressed: () => _showLegendFilter(context),
-            child: const Icon(Icons.layers_outlined),
-          ),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            FloatingActionButton.small(
+              heroTag: 'legend_filter',
+              onPressed: () => _showLegendFilter(context),
+              child: const Icon(Icons.layers_outlined),
+            ),
+            const SizedBox(height: 8),
+            FloatingActionButton.small(
+              heroTag: 'pref_jump',
+              tooltip: '都道府県へ移動',
+              onPressed: () => _showPrefectureJump(context),
+              child: const Icon(Icons.travel_explore),
+            ),
+          ]),
         ),
         Positioned(
           right: 16,
