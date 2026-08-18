@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 import '../app_state.dart';
 import '../config.dart';
@@ -274,15 +275,13 @@ class _MediaView extends StatelessWidget {
         return AspectRatio(
           aspectRatio: 16 / 9,
           child: _YoutubeEmbedView(
-              url:
-                  'https://www.youtube.com/embed/live_stream?channel=${camera.feed.url}'),
+              embedPath: 'live_stream?channel=${camera.feed.url}'),
         );
       case FeedType.youtubeVideo:
         // 動画ID固定のIFrame埋め込み（1チャンネル多配信のライブ用）
         return AspectRatio(
           aspectRatio: 16 / 9,
-          child: _YoutubeEmbedView(
-              url: 'https://www.youtube.com/embed/${camera.feed.url}'),
+          child: _YoutubeEmbedView(embedPath: camera.feed.url),
         );
       default:
         return _MediaFallback(
@@ -294,9 +293,10 @@ class _MediaView extends StatelessWidget {
 }
 
 class _YoutubeEmbedView extends StatefulWidget {
-  const _YoutubeEmbedView({required this.url});
+  const _YoutubeEmbedView({required this.embedPath});
 
-  final String url;
+  /// youtube.com/embed/ 以降のパス（動画ID or live_stream?channel=...）
+  final String embedPath;
 
   @override
   State<_YoutubeEmbedView> createState() => _YoutubeEmbedViewState();
@@ -308,9 +308,31 @@ class _YoutubeEmbedViewState extends State<_YoutubeEmbedView> {
   @override
   void initState() {
     super.initState();
-    _controller = WebViewController()
+    // embed URLを直接開くとYouTubeが「設定エラー」を返すため、
+    // iframeを含むHTMLをbaseUrl付きで読み込む（IFrame Player APIの正規の使い方）
+    PlatformWebViewControllerCreationParams params =
+        const PlatformWebViewControllerCreationParams();
+    if (WebViewPlatform.instance is WebKitWebViewPlatform) {
+      params = WebKitWebViewControllerCreationParams(
+        allowsInlineMediaPlayback: true,
+        mediaTypesRequiringUserAction: const <PlaybackMediaTypes>{},
+      );
+    }
+    final sep = widget.embedPath.contains('?') ? '&' : '?';
+    final src = 'https://www.youtube.com/embed/${widget.embedPath}'
+        '${sep}playsinline=1&autoplay=1&mute=1&rel=0';
+    _controller = WebViewController.fromPlatformCreationParams(params)
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadRequest(Uri.parse(widget.url));
+      ..setBackgroundColor(Colors.black)
+      ..loadHtmlString('''
+<!DOCTYPE html><html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html,body{margin:0;padding:0;background:#000;height:100%;overflow:hidden}
+iframe{width:100%;height:100%;border:0}</style></head>
+<body><iframe src="$src"
+ allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+</body></html>
+''', baseUrl: 'https://livecam-jp.local');
   }
 
   @override

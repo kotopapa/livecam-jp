@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T10:53:58Z",
+ "version": "2026-08-18T11:07:25Z",
  "cameras": [
   {
    "id": "curated-akihabara-aisan",
@@ -293,6 +293,117 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-fct-fukushima-airport",
+   "name": "福島空港",
+   "name_kana": null,
+   "lat": 37.2274,
+   "lng": 140.431,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "07",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "b8Pwk-Syo5A",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=b8Pwk-Syo5A"
+   },
+   "operator": "福島中央テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=b8Pwk-Syo5A",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福島中央テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-fct-fukushima-daiichi",
+   "name": "福島第一原子力発電所",
+   "name_kana": null,
+   "lat": 37.4213,
+   "lng": 141.033,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "07",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "jWmD5-Oyfps",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=jWmD5-Oyfps"
+   },
+   "operator": "福島中央テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=jWmD5-Oyfps",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福島中央テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-fct-fukushima-mix",
+   "name": "福島県内4市（切替）",
+   "name_kana": null,
+   "lat": 37.7608,
+   "lng": 140.4747,
+   "coord_accuracy": "area",
+   "category": "scenic",
+   "prefecture": "07",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "J4gl5Rgyquk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=J4gl5Rgyquk"
+   },
+   "operator": "福島中央テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=J4gl5Rgyquk",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福島中央テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -705,6 +816,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-iat-morioka",
+   "name": "盛岡情報カメラ",
+   "name_kana": null,
+   "lat": 39.704,
+   "lng": 141.158,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "03",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "PxHYFalgxAg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=PxHYFalgxAg"
+   },
+   "operator": "IAT岩手朝日テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=PxHYFalgxAg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：IAT岩手朝日テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-inasayama",
    "name": "稲佐山展望台（長崎夜景）",
    "name_kana": null,
@@ -848,6 +996,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-knb-toyama",
+   "name": "富山駅北",
+   "name_kana": null,
+   "lat": 36.702,
+   "lng": 137.213,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "16",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "brLYHa4JzPM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=brLYHa4JzPM"
+   },
+   "operator": "KNB北日本放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=brLYHa4JzPM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：KNB北日本放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -1482,6 +1667,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-oab-oita-airport",
+   "name": "大分空港",
+   "name_kana": null,
+   "lat": 33.48,
+   "lng": 131.737,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "44",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "sFhl7CFnNZA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=sFhl7CFnNZA"
+   },
+   "operator": "OAB大分朝日放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=sFhl7CFnNZA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：OAB大分朝日放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-ohori-nishinippon",
    "name": "大濠公園・福岡タワー方面",
    "name_kana": null,
@@ -1620,6 +1842,117 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：富士五湖TV（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-otv-miyakojima",
+   "name": "宮古島",
+   "name_kana": null,
+   "lat": 24.805,
+   "lng": 125.281,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "47",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vALZRyqT_Jg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vALZRyqT_Jg"
+   },
+   "operator": "OTV沖縄テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vALZRyqT_Jg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：OTV沖縄テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-qab-naha-mix",
+   "name": "那覇空港ほか（切替）",
+   "name_kana": null,
+   "lat": 26.21,
+   "lng": 127.65,
+   "coord_accuracy": "area",
+   "category": "other",
+   "prefecture": "47",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ZdvNQ3D0PY4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ZdvNQ3D0PY4"
+   },
+   "operator": "QAB琉球朝日放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ZdvNQ3D0PY4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：QAB琉球朝日放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rcc-hiroshima",
+   "name": "広島（お天気カメラ）",
+   "name_kana": null,
+   "lat": 34.394,
+   "lng": 132.455,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "34",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "0kHcp6hW-t4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=0kHcp6hW-t4"
+   },
+   "operator": "RCC中国放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=0kHcp6hW-t4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：RCC中国放送（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -2037,6 +2370,117 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-rkc-kochi-airport",
+   "name": "高知龍馬空港",
+   "name_kana": null,
+   "lat": 33.546,
+   "lng": 133.669,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "39",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "uo-sHAw3cr0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=uo-sHAw3cr0"
+   },
+   "operator": "RKC高知放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=uo-sHAw3cr0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：RKC高知放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rnb-matsuyama-airport",
+   "name": "松山空港",
+   "name_kana": null,
+   "lat": 33.827,
+   "lng": 132.7,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "38",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "TUxN7e_KxH4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=TUxN7e_KxH4"
+   },
+   "operator": "RNB南海放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=TUxN7e_KxH4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：RNB南海放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-rnb-matsuyamajo",
+   "name": "松山城",
+   "name_kana": null,
+   "lat": 33.845,
+   "lng": 132.766,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "38",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ZsoV_eLAngM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ZsoV_eLAngM"
+   },
+   "operator": "RNB南海放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ZsoV_eLAngM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：RNB南海放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-sakae-trinity",
    "name": "栄・久屋大通公園（MIRAI TOWERから）",
    "name_kana": null,
@@ -2175,6 +2619,154 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：静岡市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-sbs-gotemba",
+   "name": "御殿場",
+   "name_kana": null,
+   "lat": 35.309,
+   "lng": 138.935,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "22",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "3ltxADrccf8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=3ltxADrccf8"
+   },
+   "operator": "SBS静岡放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=3ltxADrccf8",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：SBS静岡放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-sbs-nihondaira",
+   "name": "日本平から富士山",
+   "name_kana": null,
+   "lat": 34.964,
+   "lng": 138.375,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "22",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "e5fTf-gywY0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=e5fTf-gywY0"
+   },
+   "operator": "SBS静岡放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=e5fTf-gywY0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：SBS静岡放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-sbs-shimizu-yui",
+   "name": "清水・由比",
+   "name_kana": null,
+   "lat": 35.085,
+   "lng": 138.515,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "22",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "6_8ehEmYBYc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=6_8ehEmYBYc"
+   },
+   "operator": "SBS静岡放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=6_8ehEmYBYc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：SBS静岡放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-sbs-shizuoka-mix",
+   "name": "静岡県内情報カメラ（切替）",
+   "name_kana": null,
+   "lat": 34.976,
+   "lng": 138.383,
+   "coord_accuracy": "area",
+   "category": "scenic",
+   "prefecture": "22",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "52hB_eOFukI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=52hB_eOFukI"
+   },
+   "operator": "SBS静岡放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=52hB_eOFukI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：SBS静岡放送（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -2444,6 +3036,191 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-stv-hokkaido-mix",
+   "name": "北海道各地（切替）",
+   "name_kana": null,
+   "lat": 43.06,
+   "lng": 141.36,
+   "coord_accuracy": "area",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "c6Gqe6L_xZg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=c6Gqe6L_xZg"
+   },
+   "operator": "STV札幌テレビ放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=c6Gqe6L_xZg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：STV札幌テレビ放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-stv-kitahiroshima",
+   "name": "北広島",
+   "name_kana": null,
+   "lat": 42.99,
+   "lng": 141.55,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "nbtzTBRBuzM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=nbtzTBRBuzM"
+   },
+   "operator": "STV札幌テレビ放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=nbtzTBRBuzM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：STV札幌テレビ放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-stv-okurayama",
+   "name": "大倉山ジャンプ競技場",
+   "name_kana": null,
+   "lat": 43.08,
+   "lng": 141.303,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "VZSrCwBZBbw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=VZSrCwBZBbw"
+   },
+   "operator": "STV札幌テレビ放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=VZSrCwBZBbw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：STV札幌テレビ放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-stv-sapporo",
+   "name": "いまの札幌",
+   "name_kana": null,
+   "lat": 43.061,
+   "lng": 141.354,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "z3OUPSoABJk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=z3OUPSoABJk"
+   },
+   "operator": "STV札幌テレビ放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=z3OUPSoABJk",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：STV札幌テレビ放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-stv-sapporo-sta",
+   "name": "JR札幌駅",
+   "name_kana": null,
+   "lat": 43.068,
+   "lng": 141.351,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "I1kJB1jdGo0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=I1kJB1jdGo0"
+   },
+   "operator": "STV札幌テレビ放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=I1kJB1jdGo0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：STV札幌テレビ放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-tadanoumi-port",
    "name": "忠海港（うさぎ島フェリー）",
    "name_kana": null,
@@ -2555,6 +3332,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-teny-niigata",
+   "name": "新潟市",
+   "name_kana": null,
+   "lat": 37.916,
+   "lng": 139.036,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "15",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "mbMbATaQRjw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=mbMbATaQRjw"
+   },
+   "operator": "TeNYテレビ新潟",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=mbMbATaQRjw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：TeNYテレビ新潟（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-togetsukyo",
    "name": "嵯峨嵐山 渡月橋",
    "name_kana": null,
@@ -2619,6 +3433,80 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：日本テレビ（日テレ鉄道部）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-tuf-fukushima-mix",
+   "name": "福島・郡山・会津若松・小名浜（切替）",
+   "name_kana": null,
+   "lat": 37.755,
+   "lng": 140.48,
+   "coord_accuracy": "area",
+   "category": "scenic",
+   "prefecture": "07",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "lFl4hgnoQTA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=lFl4hgnoQTA"
+   },
+   "operator": "テレビユー福島",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=lFl4hgnoQTA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：テレビユー福島（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-tvi-morioka",
+   "name": "盛岡（おてんきLIVE）",
+   "name_kana": null,
+   "lat": 39.702,
+   "lng": 141.155,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "03",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "BK0MgkhngOI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=BK0MgkhngOI"
+   },
+   "operator": "テレビ岩手",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=BK0MgkhngOI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：テレビ岩手（YouTubeライブ）"
    },
    "review": {
     "status": "approved",

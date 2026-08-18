@@ -52,7 +52,7 @@ class CuratedYoutubeParser(SourceParser):
                     license="unknown",
                     terms_url=None,
                     lat=float(cam["lat"]), lng=float(cam["lng"]),
-                    coord_accuracy="approx",
+                    coord_accuracy=cam.get("accuracy", "approx"),
                     review_note=note,
                 ))
             except (KeyError, TypeError, ValueError) as e:

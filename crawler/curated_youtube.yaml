@@ -684,3 +684,229 @@ cameras:
     prefecture: "42"
     lat: 32.755
     lng: 129.85
+
+  - id: curated-stv-sapporo
+    name: いまの札幌
+    operator: "STV札幌テレビ放送"
+    video_id: "z3OUPSoABJk"
+    category: scenic
+    prefecture: "01"
+    lat: 43.061
+    lng: 141.354
+
+  - id: curated-stv-okurayama
+    name: 大倉山ジャンプ競技場
+    operator: "STV札幌テレビ放送"
+    video_id: "VZSrCwBZBbw"
+    category: scenic
+    prefecture: "01"
+    lat: 43.08
+    lng: 141.303
+
+  - id: curated-stv-kitahiroshima
+    name: 北広島
+    operator: "STV札幌テレビ放送"
+    video_id: "nbtzTBRBuzM"
+    category: scenic
+    prefecture: "01"
+    lat: 42.99
+    lng: 141.55
+
+  - id: curated-stv-sapporo-sta
+    name: JR札幌駅
+    operator: "STV札幌テレビ放送"
+    video_id: "I1kJB1jdGo0"
+    category: scenic
+    prefecture: "01"
+    lat: 43.068
+    lng: 141.351
+
+  - id: curated-stv-hokkaido-mix
+    name: 北海道各地（切替）
+    operator: "STV札幌テレビ放送"
+    video_id: "c6Gqe6L_xZg"
+    category: scenic
+    prefecture: "01"
+    lat: 43.06
+    lng: 141.36
+    accuracy: area
+    note: 道内約15地点の切替配信
+
+  - id: curated-fct-fukushima-mix
+    name: 福島県内4市（切替）
+    operator: "福島中央テレビ"
+    video_id: "J4gl5Rgyquk"
+    category: scenic
+    prefecture: "07"
+    lat: 37.7608
+    lng: 140.4747
+    accuracy: area
+    note: 福島・郡山等の切替配信
+
+  - id: curated-fct-fukushima-daiichi
+    name: 福島第一原子力発電所
+    operator: "福島中央テレビ"
+    video_id: "jWmD5-Oyfps"
+    category: other
+    prefecture: "07"
+    lat: 37.4213
+    lng: 141.033
+
+  - id: curated-fct-fukushima-airport
+    name: 福島空港
+    operator: "福島中央テレビ"
+    video_id: "b8Pwk-Syo5A"
+    category: other
+    prefecture: "07"
+    lat: 37.2274
+    lng: 140.431
+
+  - id: curated-tuf-fukushima-mix
+    name: 福島・郡山・会津若松・小名浜（切替）
+    operator: "テレビユー福島"
+    video_id: "lFl4hgnoQTA"
+    category: scenic
+    prefecture: "07"
+    lat: 37.755
+    lng: 140.48
+    accuracy: area
+    note: 4地点切替配信
+
+  - id: curated-tvi-morioka
+    name: 盛岡（おてんきLIVE）
+    operator: "テレビ岩手"
+    video_id: "BK0MgkhngOI"
+    category: scenic
+    prefecture: "03"
+    lat: 39.702
+    lng: 141.155
+
+  - id: curated-iat-morioka
+    name: 盛岡情報カメラ
+    operator: "IAT岩手朝日テレビ"
+    video_id: "PxHYFalgxAg"
+    category: scenic
+    prefecture: "03"
+    lat: 39.704
+    lng: 141.158
+
+  - id: curated-teny-niigata
+    name: 新潟市
+    operator: "TeNYテレビ新潟"
+    video_id: "mbMbATaQRjw"
+    category: scenic
+    prefecture: "15"
+    lat: 37.916
+    lng: 139.036
+
+  - id: curated-knb-toyama
+    name: 富山駅北
+    operator: "KNB北日本放送"
+    video_id: "brLYHa4JzPM"
+    category: scenic
+    prefecture: "16"
+    lat: 36.702
+    lng: 137.213
+
+  - id: curated-sbs-nihondaira
+    name: 日本平から富士山
+    operator: "SBS静岡放送"
+    video_id: "e5fTf-gywY0"
+    category: scenic
+    prefecture: "22"
+    lat: 34.964
+    lng: 138.375
+
+  - id: curated-sbs-shimizu-yui
+    name: 清水・由比
+    operator: "SBS静岡放送"
+    video_id: "6_8ehEmYBYc"
+    category: scenic
+    prefecture: "22"
+    lat: 35.085
+    lng: 138.515
+
+  - id: curated-sbs-gotemba
+    name: 御殿場
+    operator: "SBS静岡放送"
+    video_id: "3ltxADrccf8"
+    category: scenic
+    prefecture: "22"
+    lat: 35.309
+    lng: 138.935
+
+  - id: curated-sbs-shizuoka-mix
+    name: 静岡県内情報カメラ（切替）
+    operator: "SBS静岡放送"
+    video_id: "52hB_eOFukI"
+    category: scenic
+    prefecture: "22"
+    lat: 34.976
+    lng: 138.383
+    accuracy: area
+    note: 県内切替配信
+
+  - id: curated-rcc-hiroshima
+    name: 広島（お天気カメラ）
+    operator: "RCC中国放送"
+    video_id: "0kHcp6hW-t4"
+    category: scenic
+    prefecture: "34"
+    lat: 34.394
+    lng: 132.455
+
+  - id: curated-rnb-matsuyamajo
+    name: 松山城
+    operator: "RNB南海放送"
+    video_id: "ZsoV_eLAngM"
+    category: scenic
+    prefecture: "38"
+    lat: 33.845
+    lng: 132.766
+
+  - id: curated-rnb-matsuyama-airport
+    name: 松山空港
+    operator: "RNB南海放送"
+    video_id: "TUxN7e_KxH4"
+    category: other
+    prefecture: "38"
+    lat: 33.827
+    lng: 132.7
+
+  - id: curated-rkc-kochi-airport
+    name: 高知龍馬空港
+    operator: "RKC高知放送"
+    video_id: "uo-sHAw3cr0"
+    category: other
+    prefecture: "39"
+    lat: 33.546
+    lng: 133.669
+
+  - id: curated-oab-oita-airport
+    name: 大分空港
+    operator: "OAB大分朝日放送"
+    video_id: "sFhl7CFnNZA"
+    category: other
+    prefecture: "44"
+    lat: 33.48
+    lng: 131.737
+
+  - id: curated-otv-miyakojima
+    name: 宮古島
+    operator: "OTV沖縄テレビ"
+    video_id: "vALZRyqT_Jg"
+    category: scenic
+    prefecture: "47"
+    lat: 24.805
+    lng: 125.281
+
+  - id: curated-qab-naha-mix
+    name: 那覇空港ほか（切替）
+    operator: "QAB琉球朝日放送"
+    video_id: "ZdvNQ3D0PY4"
+    category: other
+    prefecture: "47"
+    lat: 26.21
+    lng: 127.65
+    accuracy: area
+    note: 切替配信
