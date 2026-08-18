@@ -297,9 +297,16 @@ class _MediaView extends StatelessWidget {
           child: _YoutubeEmbedView(embedPath: camera.feed.url),
         );
       default:
+        // YouTube誘導型（埋め込み不可のライブ）は文言とボタンをYouTube向けにする
+        final url = camera.fallbackUrl ?? camera.sourcePageUrl;
+        final isYoutube = url != null && url.contains('youtube.com');
         return _MediaFallback(
-          text: 'アプリ内再生非対応のカメラです',
-          action: camera.fallbackUrl ?? camera.sourcePageUrl,
+          text: isYoutube
+              ? '提供者の設定により、この映像は\nアプリ内で再生できません'
+              : 'アプリ内再生非対応のカメラです',
+          action: url,
+          actionLabel: isYoutube ? 'YouTubeで見る' : '元ページで見る',
+          icon: isYoutube ? Icons.play_circle_outline : Icons.videocam_off,
         );
     }
   }
@@ -356,10 +363,17 @@ iframe{width:100%;height:100%;border:0}</style></head>
 }
 
 class _MediaFallback extends StatelessWidget {
-  const _MediaFallback({required this.text, this.action});
+  const _MediaFallback({
+    required this.text,
+    this.action,
+    this.actionLabel = '元ページで見る',
+    this.icon = Icons.videocam_off,
+  });
 
   final String text;
   final String? action;
+  final String actionLabel;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -368,14 +382,14 @@ class _MediaFallback extends StatelessWidget {
       child: Container(
         color: Colors.grey[200],
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          const Icon(Icons.videocam_off, size: 40, color: Colors.grey),
+          Icon(icon, size: 40, color: Colors.grey),
           const SizedBox(height: 8),
-          Text(text),
+          Text(text, textAlign: TextAlign.center),
           if (action != null)
-            TextButton(
+            FilledButton.tonal(
               onPressed: () => launchUrl(Uri.parse(action!),
                   mode: LaunchMode.externalApplication),
-              child: const Text('元ページで見る'),
+              child: Text(actionLabel),
             ),
         ]),
       ),
