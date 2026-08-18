@@ -11,6 +11,7 @@ import '../config.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
 import '../util/geo.dart';
+import 'ad_banner.dart';
 import 'pin_style.dart';
 
 /// 免責文言（SPEC 9.5。削ってはいけない）
@@ -103,6 +104,8 @@ class _DetailScreenState extends State<DetailScreen> {
             _badges(st),
             const Divider(height: 24),
             _sourceSection(pageUrl),
+            const Divider(height: 24),
+            const AdBannerPlaceholder(),
             const Divider(height: 24),
             _nearbySection(),
             const Divider(height: 24),
