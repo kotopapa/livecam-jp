@@ -111,6 +111,12 @@ class Camera {
 
   bool get hasLocation => lat != null && lng != null;
 
+  /// 動画で見られるカメラか（ピンのアイコン分け等に使う）
+  bool get isVideo =>
+      feed.type == FeedType.youtubeChannel ||
+      feed.type == FeedType.youtubeVideo ||
+      feed.type == FeedType.hls;
+
   /// レコードとして最低限成立しているか（欠損データで地図を壊さない）
   bool get isDisplayable => id.isNotEmpty && name.isNotEmpty && hasLocation;
 

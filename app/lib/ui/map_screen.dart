@@ -78,6 +78,12 @@ class _MapScreenState extends State<MapScreen> {
 
   void _onDataChanged() => setState(() {});
 
+  void _zoomBy(double delta) {
+    final z = (_controller.camera.zoom + delta).clamp(4.0, 18.0);
+    _controller.move(_controller.camera.center, z);
+    setState(() => _zoom = z);
+  }
+
   void _openDetail(Camera camera) {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -161,16 +167,30 @@ class _MapScreenState extends State<MapScreen> {
         Positioned(
           right: 16,
           bottom: 24,
-          child: FloatingActionButton.small(
-            heroTag: 'my_location',
-            onPressed: _goToMyLocation,
-            child: _locating
-                ? const SizedBox(
-                    width: 18,
-                    height: 18,
-                    child: CircularProgressIndicator(strokeWidth: 2))
-                : const Icon(Icons.my_location),
-          ),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            FloatingActionButton.small(
+              heroTag: 'zoom_in',
+              onPressed: () => _zoomBy(1),
+              child: const Icon(Icons.add),
+            ),
+            const SizedBox(height: 8),
+            FloatingActionButton.small(
+              heroTag: 'zoom_out',
+              onPressed: () => _zoomBy(-1),
+              child: const Icon(Icons.remove),
+            ),
+            const SizedBox(height: 8),
+            FloatingActionButton.small(
+              heroTag: 'my_location',
+              onPressed: _goToMyLocation,
+              child: _locating
+                  ? const SizedBox(
+                      width: 18,
+                      height: 18,
+                      child: CircularProgressIndicator(strokeWidth: 2))
+                  : const Icon(Icons.my_location),
+            ),
+          ]),
         ),
       ],
     );

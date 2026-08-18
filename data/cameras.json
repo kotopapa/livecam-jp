@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T01:27:24Z",
+ "version": "2026-08-18T08:43:24Z",
  "cameras": [
   {
    "id": "kawabou-100081001",
@@ -475963,6 +475963,4261 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=mlit_roadinfo"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-001",
+   "name": "神田川 飯田橋",
+   "name_kana": null,
+   "lat": 35.70286194,
+   "lng": 139.749895,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "神田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "8p11ESAA15w",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8p11ESAA15w"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-002",
+   "name": "神田川 南小滝橋",
+   "name_kana": null,
+   "lat": 35.70791667,
+   "lng": 139.6895139,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "神田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "T00nuKJ3HF8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=T00nuKJ3HF8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-003",
+   "name": "神田川 和田見橋",
+   "name_kana": null,
+   "lat": 35.68935694,
+   "lng": 139.6645219,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "神田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "32xkX2_7rxA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=32xkX2_7rxA"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-004",
+   "name": "神田川 番屋橋",
+   "name_kana": null,
+   "lat": 35.67802194,
+   "lng": 139.6501258,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "神田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "LVj4Pt1_q9I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=LVj4Pt1_q9I"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-005",
+   "name": "善福寺川 西田端橋",
+   "name_kana": null,
+   "lat": 35.69442222,
+   "lng": 139.6241306,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "善福寺川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "7wiEJygFlT8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=7wiEJygFlT8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-006",
+   "name": "妙正寺川 千歳橋",
+   "name_kana": null,
+   "lat": 35.71649722,
+   "lng": 139.6596778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "妙正寺川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "zrzij_wmu84",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=zrzij_wmu84"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-007",
+   "name": "妙正寺川 鷺盛橋",
+   "name_kana": null,
+   "lat": 35.716313,
+   "lng": 139.642155,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "妙正寺川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "V0CV0cS3GGs",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=V0CV0cS3GGs"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-008",
+   "name": "古川 四ノ橋",
+   "name_kana": null,
+   "lat": 35.64724472,
+   "lng": 139.7319028,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "古川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "JtJL2ujzgz8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=JtJL2ujzgz8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-009",
+   "name": "渋谷川 渋谷橋",
+   "name_kana": null,
+   "lat": 35.64805083,
+   "lng": 139.7122828,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "渋谷川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "Gwe_nY4QMj4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Gwe_nY4QMj4"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-010",
+   "name": "目黒川 荏原調節池上流",
+   "name_kana": null,
+   "lat": 35.62790472,
+   "lng": 139.7161097,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "目黒川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "HZGu3p-fWFU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=HZGu3p-fWFU"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-011",
+   "name": "目黒川 青葉台",
+   "name_kana": null,
+   "lat": 35.64911,
+   "lng": 139.69342,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "目黒川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "IzAwuhZLKfE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=IzAwuhZLKfE"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-012",
+   "name": "石神井川 溝田橋",
+   "name_kana": null,
+   "lat": 35.75379583,
+   "lng": 139.7422228,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "3c-x1cH_xdA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=3c-x1cH_xdA"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-013",
+   "name": "石神井川 加賀橋",
+   "name_kana": null,
+   "lat": 35.75404583,
+   "lng": 139.7180308,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "HkEzkeijlew",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=HkEzkeijlew"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-014",
+   "name": "石神井川 稲荷橋",
+   "name_kana": null,
+   "lat": 35.72898333,
+   "lng": 139.57945,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "tMjz2eO4FH8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=tMjz2eO4FH8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-015",
+   "name": "石神井川 芝久保",
+   "name_kana": null,
+   "lat": 35.72267972,
+   "lng": 139.5240469,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "LmJ3F1sZjZE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=LmJ3F1sZjZE"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-016",
+   "name": "白子川 子安橋",
+   "name_kana": null,
+   "lat": 35.77505833,
+   "lng": 139.6243444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "白子川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "93DsB7VeJ-w",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=93DsB7VeJ-w"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-017",
+   "name": "白子川 越後山橋",
+   "name_kana": null,
+   "lat": 35.77021278,
+   "lng": 139.6121097,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "白子川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "XfAxaeoYeS4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=XfAxaeoYeS4"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-018",
+   "name": "白子川 三ツ橋",
+   "name_kana": null,
+   "lat": 35.75656111,
+   "lng": 139.5969139,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "白子川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "z_QcYosX4zc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=z_QcYosX4zc"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-019",
+   "name": "白子川 松殿橋",
+   "name_kana": null,
+   "lat": 35.74777028,
+   "lng": 139.578565,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "白子川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "yFknyhaf2V8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=yFknyhaf2V8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-020",
+   "name": "新芝川 新芝川橋",
+   "name_kana": null,
+   "lat": 35.80161694,
+   "lng": 139.7573439,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "新芝川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "FVPt0-lFIWY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FVPt0-lFIWY"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-021",
+   "name": "鶴見川 下川戸橋",
+   "name_kana": null,
+   "lat": 35.58358889,
+   "lng": 139.4714439,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "鶴見川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "V3E7CQ-vUzQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=V3E7CQ-vUzQ"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-022",
+   "name": "恩田川 高瀬橋",
+   "name_kana": null,
+   "lat": 35.54285,
+   "lng": 139.46358,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "恩田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "xByu6ONj53s",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=xByu6ONj53s"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-023",
+   "name": "真光寺川 矢崎橋",
+   "name_kana": null,
+   "lat": 35.58461111,
+   "lng": 139.4866444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "真光寺川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "aVCh4bnVdAE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=aVCh4bnVdAE"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-024",
+   "name": "境川 根岸橋",
+   "name_kana": null,
+   "lat": 35.57323472,
+   "lng": 139.40984,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "境川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "6NgcCrHxOc8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=6NgcCrHxOc8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-025",
+   "name": "境川 境橋",
+   "name_kana": null,
+   "lat": 35.53793278,
+   "lng": 139.4480539,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "境川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "BtLV2QWpIDU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=BtLV2QWpIDU"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-026",
+   "name": "野川 鎌田橋野川",
+   "name_kana": null,
+   "lat": 35.62104167,
+   "lng": 139.6114556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "野川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "fk37cmRWx3c",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=fk37cmRWx3c"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-027",
+   "name": "野川 大沢池上",
+   "name_kana": null,
+   "lat": 35.67456111,
+   "lng": 139.5325194,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "野川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "qMFtmvC2PLQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=qMFtmvC2PLQ"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-028",
+   "name": "仙川 鎌田橋仙川",
+   "name_kana": null,
+   "lat": 35.62186472,
+   "lng": 139.6129878,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "仙川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "pCNfuCLmXh8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=pCNfuCLmXh8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-029",
+   "name": "谷沢川 矢川橋",
+   "name_kana": null,
+   "lat": 35.60236611,
+   "lng": 139.645685,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "谷沢川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "5xM0rQFnnuA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=5xM0rQFnnuA"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-030",
+   "name": "谷沢川 丸山橋",
+   "name_kana": null,
+   "lat": 35.61743111,
+   "lng": 139.6420369,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "谷沢川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "A_Kd5djSxio",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=A_Kd5djSxio"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-031",
+   "name": "丸子川 滝ノ橋",
+   "name_kana": null,
+   "lat": 35.60046,
+   "lng": 139.6451589,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "丸子川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "1fCzyXSuoM8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=1fCzyXSuoM8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-032",
+   "name": "呑川 池上",
+   "name_kana": null,
+   "lat": 35.57621944,
+   "lng": 139.7034694,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "呑川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "f9qoq9eoSIg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=f9qoq9eoSIg"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-033",
+   "name": "柳瀬川 金山橋",
+   "name_kana": null,
+   "lat": 35.78881472,
+   "lng": 139.5231728,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "柳瀬川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "gbpa0PdQf9k",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=gbpa0PdQf9k"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-034",
+   "name": "奈良橋川 宮前二の橋",
+   "name_kana": null,
+   "lat": 35.75034972,
+   "lng": 139.4342269,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "奈良橋川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "4TRKLe7NDAc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=4TRKLe7NDAc"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-035",
+   "name": "成木川 成木川",
+   "name_kana": null,
+   "lat": 35.83671472,
+   "lng": 139.2802178,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "成木川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "Z8Byz2DUSaQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Z8Byz2DUSaQ"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-036",
+   "name": "秋川 山田",
+   "name_kana": null,
+   "lat": 35.72362333,
+   "lng": 139.2569333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "秋川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "iLITy7eni9c",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=iLITy7eni9c"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-037",
+   "name": "南浅川 浅川事務所",
+   "name_kana": null,
+   "lat": 35.64377278,
+   "lng": 139.2770689,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "南浅川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "FuWD_fbeJbo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FuWD_fbeJbo"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-038",
+   "name": "浅川 板当橋",
+   "name_kana": null,
+   "lat": 35.66867278,
+   "lng": 139.24035,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "浅川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "NgSLw6af2FY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=NgSLw6af2FY"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-039",
+   "name": "新河岸川 志茂橋",
+   "name_kana": null,
+   "lat": 35.78453083,
+   "lng": 139.7305064,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "新河岸川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "wsfTTC7UA0M",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=wsfTTC7UA0M"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-040",
+   "name": "新河岸川 新河岸橋",
+   "name_kana": null,
+   "lat": 35.78632222,
+   "lng": 139.6904094,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "新河岸川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "mleTFazeKes",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=mleTFazeKes"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-041",
+   "name": "新河岸川 浮間橋",
+   "name_kana": null,
+   "lat": 35.78812639,
+   "lng": 139.7066786,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "新河岸川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "ec8nY1JZ6zA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ec8nY1JZ6zA"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-042",
+   "name": "毛長川 毛長橋",
+   "name_kana": null,
+   "lat": 35.80695889,
+   "lng": 139.7817742,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "毛長川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "uqrjVpaPHCM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=uqrjVpaPHCM"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-043",
+   "name": "秋川 秋留橋",
+   "name_kana": null,
+   "lat": 35.71547111,
+   "lng": 139.2851303,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "秋川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "iE7jl_sZMyw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=iE7jl_sZMyw"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-044",
+   "name": "霞川 霞川",
+   "name_kana": null,
+   "lat": 35.8086125,
+   "lng": 139.3144997,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "霞川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "QBUwKDnGAqg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=QBUwKDnGAqg"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-045",
+   "name": "大栗川 霞ケ関橋",
+   "name_kana": null,
+   "lat": 35.64732,
+   "lng": 139.44621,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "大栗川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "dGvqoI2qzVg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=dGvqoI2qzVg"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-046",
+   "name": "三沢川 砂場の橋",
+   "name_kana": null,
+   "lat": 35.63536111,
+   "lng": 139.4963686,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "三沢川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "S3Rxultxbxo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=S3Rxultxbxo"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-047",
+   "name": "境川 鶴間",
+   "name_kana": null,
+   "lat": 35.51278972,
+   "lng": 139.4643767,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "境川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "I04G23hSvvk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=I04G23hSvvk"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-048",
+   "name": "南浅川 上椚田橋",
+   "name_kana": null,
+   "lat": 35.63937639,
+   "lng": 139.2711833,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "南浅川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "-T8Edvjrh1A",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=-T8Edvjrh1A"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-049",
+   "name": "程久保川 程久保橋",
+   "name_kana": null,
+   "lat": 35.65838361,
+   "lng": 139.4137731,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "程久保川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "5HB71rEvnM0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=5HB71rEvnM0"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-050",
+   "name": "大栗川 常盤橋",
+   "name_kana": null,
+   "lat": 35.63520722,
+   "lng": 139.4151783,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "大栗川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "47GvKUznwUo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=47GvKUznwUo"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-051",
+   "name": "湯殿川 栄橋",
+   "name_kana": null,
+   "lat": 35.64471972,
+   "lng": 139.3649486,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "湯殿川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "cpFjIzyxAsg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=cpFjIzyxAsg"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-052",
+   "name": "入間川 入間川",
+   "name_kana": null,
+   "lat": 35.6539375,
+   "lng": 139.5824989,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "入間川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "z5r7tMqrAsU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=z5r7tMqrAsU"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-053",
+   "name": "石神井川 向台",
+   "name_kana": null,
+   "lat": 35.72216028,
+   "lng": 139.5285275,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "kHTP4HSThvk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=kHTP4HSThvk"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-054",
+   "name": "野川 野川",
+   "name_kana": null,
+   "lat": 35.6469475,
+   "lng": 139.5840819,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "野川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "cf4qhdsaY7A",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=cf4qhdsaY7A"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-055",
+   "name": "仙川 長久保",
+   "name_kana": null,
+   "lat": 35.68046417,
+   "lng": 139.5683706,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "仙川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "BbsLUXk26Eo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=BbsLUXk26Eo"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-056",
+   "name": "残堀川 下砂橋",
+   "name_kana": null,
+   "lat": 35.72989083,
+   "lng": 139.3861422,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "残堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "kgOEec1TofY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=kgOEec1TofY"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-057",
+   "name": "空堀川 青葉町",
+   "name_kana": null,
+   "lat": 35.77104389,
+   "lng": 139.495335,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "空堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "5A599UlkmhE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=5A599UlkmhE"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-058",
+   "name": "空堀川 丸山橋",
+   "name_kana": null,
+   "lat": 35.75472472,
+   "lng": 139.4768461,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "空堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "YaVQKiU-VJ0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=YaVQKiU-VJ0"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-059",
+   "name": "空堀川 中里",
+   "name_kana": null,
+   "lat": 35.78208333,
+   "lng": 139.5076667,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "空堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "dLsuCS_w0-8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=dLsuCS_w0-8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-060",
+   "name": "柳瀬川 境橋",
+   "name_kana": null,
+   "lat": 35.78502778,
+   "lng": 139.5120556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "柳瀬川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "mbwu44BlZFA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=mbwu44BlZFA"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-061",
+   "name": "黒目川 下田橋",
+   "name_kana": null,
+   "lat": 35.76336111,
+   "lng": 139.5296944,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "黒目川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "bpL7MAbdoI8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=bpL7MAbdoI8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-062",
+   "name": "落合川 立野二の橋",
+   "name_kana": null,
+   "lat": 35.75711111,
+   "lng": 139.5353889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "落合川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "3Lgz7df1nqE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=3Lgz7df1nqE"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-063",
+   "name": "落合川 毘沙門橋",
+   "name_kana": null,
+   "lat": 35.75425,
+   "lng": 139.5280278,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "落合川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "SE3geZaXNbc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=SE3geZaXNbc"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-064",
+   "name": "空堀川 神明橋",
+   "name_kana": null,
+   "lat": 35.75205556,
+   "lng": 139.4049722,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "空堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "HJ3XTE6SXxE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=HJ3XTE6SXxE"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-065",
+   "name": "残堀川 残堀池上",
+   "name_kana": null,
+   "lat": 35.71641667,
+   "lng": 139.3893333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "残堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "lKHfoQxDU-M",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=lKHfoQxDU-M"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-066",
+   "name": "残堀川 山中坂下",
+   "name_kana": null,
+   "lat": 35.69425,
+   "lng": 139.3981111,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "残堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "L9dTTIsaFyg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=L9dTTIsaFyg"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-067",
+   "name": "山入川 紙谷橋",
+   "name_kana": null,
+   "lat": 35.68222222,
+   "lng": 139.2668056,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "山入川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "QZlDEcg1EEw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=QZlDEcg1EEw"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-068",
+   "name": "川口川 清水橋",
+   "name_kana": null,
+   "lat": 35.67722222,
+   "lng": 139.3177778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "川口川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "Wgt35BFeQ8w",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Wgt35BFeQ8w"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-069",
+   "name": "大栗川 大栗川橋",
+   "name_kana": null,
+   "lat": 35.62716667,
+   "lng": 139.398,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "大栗川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "-GZEwl6aJjY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=-GZEwl6aJjY"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-070",
+   "name": "浅川 瀧乃澤螢橋",
+   "name_kana": null,
+   "lat": 35.66897222,
+   "lng": 139.2569167,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "浅川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "M82zbx8_e_M",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=M82zbx8_e_M"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-071",
+   "name": "大田川 峯ヶ谷戸橋",
+   "name_kana": null,
+   "lat": 35.62655556,
+   "lng": 139.3958889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "大田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "A5ohfWSexjQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=A5ohfWSexjQ"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-072",
+   "name": "野川 馬橋",
+   "name_kana": null,
+   "lat": 35.653,
+   "lng": 139.5626944,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "野川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "P1DyrZjDrcM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=P1DyrZjDrcM"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-073",
+   "name": "石神井川 柳沢橋",
+   "name_kana": null,
+   "lat": 35.72558333,
+   "lng": 139.5539722,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "MsxX8Pwk34U",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=MsxX8Pwk34U"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-074",
+   "name": "野川 大沢橋",
+   "name_kana": null,
+   "lat": 35.66977778,
+   "lng": 139.5374167,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "野川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "iZicbBOtC2c",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=iZicbBOtC2c"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-075",
+   "name": "乞田川 車橋",
+   "name_kana": null,
+   "lat": 35.64188889,
+   "lng": 139.4520556,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "乞田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "XHGq8_rDvDk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=XHGq8_rDvDk"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-076",
+   "name": "平井川 東平井橋",
+   "name_kana": null,
+   "lat": 35.74313889,
+   "lng": 139.2767222,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "平井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "48qw8x7LJaU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=48qw8x7LJaU"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-077",
+   "name": "秋川 留原",
+   "name_kana": null,
+   "lat": 35.72986111,
+   "lng": 139.2280833,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "秋川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "ZRUh9gNk8-g",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ZRUh9gNk8-g"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-078",
+   "name": "養沢川 小宮ふるさと自然学校",
+   "name_kana": null,
+   "lat": 35.734,
+   "lng": 139.1841667,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "養沢川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "2Hl_YCgM0g8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=2Hl_YCgM0g8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-079",
+   "name": "丸子川 鷹の圦樋門",
+   "name_kana": null,
+   "lat": 35.59465278,
+   "lng": 139.6576028,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "丸子川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "BJkNnwv__t8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=BJkNnwv__t8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-080",
+   "name": "海老取川 天空橋",
+   "name_kana": null,
+   "lat": 35.54896389,
+   "lng": 139.7521389,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "海老取川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "QCKC4nOJNfw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=QCKC4nOJNfw"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-081",
+   "name": "石神井川 久保田橋",
+   "name_kana": null,
+   "lat": 35.75725278,
+   "lng": 139.6963444,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "RagO5RKepEc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=RagO5RKepEc"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-082",
+   "name": "石神井川 宮宿橋",
+   "name_kana": null,
+   "lat": 35.74936944,
+   "lng": 139.6684222,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "DClR4hUoPJ4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=DClR4hUoPJ4"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-083",
+   "name": "石神井川 神路橋",
+   "name_kana": null,
+   "lat": 35.74538333,
+   "lng": 139.6342889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "OJZjL0864Ho",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=OJZjL0864Ho"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-084",
+   "name": "石神井川 すずしろ橋",
+   "name_kana": null,
+   "lat": 35.74409722,
+   "lng": 139.6199167,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "n4RN_znCTak",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=n4RN_znCTak"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-085",
+   "name": "石神井川 愛宕橋",
+   "name_kana": null,
+   "lat": 35.73311111,
+   "lng": 139.5914528,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "石神井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "vNpwB1NKi5I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vNpwB1NKi5I"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-086",
+   "name": "新河岸川 笹目橋",
+   "name_kana": null,
+   "lat": 35.79623333,
+   "lng": 139.6457833,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "新河岸川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "_dA2jB2NEZw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=_dA2jB2NEZw"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-087",
+   "name": "隅田川 小台",
+   "name_kana": null,
+   "lat": 35.75319444,
+   "lng": 139.7819722,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "隅田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "pmTFyDvr4l4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=pmTFyDvr4l4"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-088",
+   "name": "霞川 五反田橋",
+   "name_kana": null,
+   "lat": 35.80446389,
+   "lng": 139.2950583,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "霞川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "P4bIApiX4-s",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=P4bIApiX4-s"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-089",
+   "name": "黒沢川 黒沢川",
+   "name_kana": null,
+   "lat": 35.82091111,
+   "lng": 139.2757361,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "黒沢川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "E0MnAXaS5Pw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=E0MnAXaS5Pw"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-090",
+   "name": "平井川 落合橋",
+   "name_kana": null,
+   "lat": 35.74456944,
+   "lng": 139.2465861,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "平井川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "DWE0fmTkN4o",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=DWE0fmTkN4o"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-091",
+   "name": "乞田川 上之根橋",
+   "name_kana": null,
+   "lat": 35.62837778,
+   "lng": 139.4301194,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "乞田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "FDNz8U8IOWk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FDNz8U8IOWk"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-092",
+   "name": "湯殿川 東橋",
+   "name_kana": null,
+   "lat": 35.64264722,
+   "lng": 139.3446167,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "湯殿川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "xY-zqZnrXQc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=xY-zqZnrXQc"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-093",
+   "name": "兵衛川 兵衛橋",
+   "name_kana": null,
+   "lat": 35.638175,
+   "lng": 139.3399639,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "兵衛川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "tt7aBKcyS9k",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=tt7aBKcyS9k"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-094",
+   "name": "山田川 竹屋橋",
+   "name_kana": null,
+   "lat": 35.65247778,
+   "lng": 139.3358778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "山田川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "uztgLKgQJAY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=uztgLKgQJAY"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-095",
+   "name": "川口川 片井戸",
+   "name_kana": null,
+   "lat": 35.69472778,
+   "lng": 139.2789806,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "川口川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "Kx3__kDD0co",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Kx3__kDD0co"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-096",
+   "name": "南浅川 横川橋",
+   "name_kana": null,
+   "lat": 35.66539167,
+   "lng": 139.3117806,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "南浅川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "050YBc1UroA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=050YBc1UroA"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-097",
+   "name": "城山川 三村橋",
+   "name_kana": null,
+   "lat": 35.66746111,
+   "lng": 139.3020806,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "城山川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "Fdfunur-140",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Fdfunur-140"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-098",
+   "name": "谷地川 新旭橋",
+   "name_kana": null,
+   "lat": 35.68646111,
+   "lng": 139.3789694,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "谷地川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "I1qkEM_2200",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=I1qkEM_2200"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-099",
+   "name": "谷地川 新鶴見橋",
+   "name_kana": null,
+   "lat": 35.68167778,
+   "lng": 139.3724417,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "谷地川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "_bDmc_3Yu_I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=_bDmc_3Yu_I"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-100",
+   "name": "谷地川 明王下橋",
+   "name_kana": null,
+   "lat": 35.695725,
+   "lng": 139.3243389,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "谷地川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "REe_RTmh_Kg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=REe_RTmh_Kg"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-101",
+   "name": "仙川 仙川花見",
+   "name_kana": null,
+   "lat": 35.70628056,
+   "lng": 139.5221083,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "仙川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "1zW5N2wjaDk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=1zW5N2wjaDk"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-102",
+   "name": "仙川 仙川取水",
+   "name_kana": null,
+   "lat": 35.70628056,
+   "lng": 139.5217167,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "仙川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "p5DZVIt1nmA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=p5DZVIt1nmA"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-103",
+   "name": "柳瀬川 秋津橋",
+   "name_kana": null,
+   "lat": 35.77812222,
+   "lng": 139.4807806,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "柳瀬川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "-RBpWne_A_8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=-RBpWne_A_8"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-104",
+   "name": "空堀川 野塩橋",
+   "name_kana": null,
+   "lat": 35.77349167,
+   "lng": 139.4988472,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "空堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "B3k5TSibylY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=B3k5TSibylY"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-105",
+   "name": "空堀川 新薬師橋",
+   "name_kana": null,
+   "lat": 35.75498333,
+   "lng": 139.3910278,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "空堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "_SRuQXK_sQk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=_SRuQXK_sQk"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "tokyo-suibo-106",
+   "name": "空堀川 高木橋",
+   "name_kana": null,
+   "lat": 35.74866389,
+   "lng": 139.4364222,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": "空堀川",
+   "feed": {
+    "type": "youtube_video",
+    "url": "eR2UYH9LjC0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=eR2UYH9LjC0"
+   },
+   "operator": "東京都建設局",
+   "source": {
+    "page_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "terms_url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000014d0000000028",
+    "license": "youtube_gov",
+    "attribution": "出典：東京都建設局（東京都水防チャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=東京都建設局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-3aab4f4176",
+   "name": "都谷川樋門（肱川水系 矢落川）",
+   "name_kana": null,
+   "lat": 33.53172,
+   "lng": 132.55429,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "38",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Vfw6vNKboI0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Vfw6vNKboI0"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-40d3546d17",
+   "name": "那賀川橋（那賀川水系 那賀川）",
+   "name_kana": null,
+   "lat": 33.857437,
+   "lng": 134.496643,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "36",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "8MpMUVmj2L8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8MpMUVmj2L8"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-58dd27feec",
+   "name": "野村ダム左岸直下流（肱川水系 肱川）",
+   "name_kana": null,
+   "lat": 33.53172,
+   "lng": 132.55429,
+   "coord_accuracy": "area",
+   "category": "dam",
+   "prefecture": "38",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "-J74ua4qU1I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=-J74ua4qU1I"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-6275bccb33",
+   "name": "加茂谷（那賀川水系 那賀川）",
+   "name_kana": null,
+   "lat": 33.92489,
+   "lng": 134.57467,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "36",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "58abKQ0oPcE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=58abKQ0oPcE"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-6b773bb4d8",
+   "name": "長安口ダム直下流（那賀川水系 那賀川）",
+   "name_kana": null,
+   "lat": 33.92489,
+   "lng": 134.57467,
+   "coord_accuracy": "area",
+   "category": "dam",
+   "prefecture": "36",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "iBhBIFtlAvM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=iBhBIFtlAvM"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-b106ea43f8",
+   "name": "長生橋（那賀川水系 桑野川）",
+   "name_kana": null,
+   "lat": 33.92489,
+   "lng": 134.57467,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "36",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "QOExs1iY-TA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=QOExs1iY-TA"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-c501dbe932",
+   "name": "那賀川河川事務所（那賀川水系 桑野川）",
+   "name_kana": null,
+   "lat": 33.857437,
+   "lng": 134.496643,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "36",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "rLxqVUPJS0M",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=rLxqVUPJS0M"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-d0f67bd212",
+   "name": "鹿野川ダム吐口ゲート（肱川水系 肱川）",
+   "name_kana": null,
+   "lat": 33.53172,
+   "lng": 132.55429,
+   "coord_accuracy": "area",
+   "category": "dam",
+   "prefecture": "38",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "8WKyvbmRxec",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8WKyvbmRxec"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-skr-f35db696be",
+   "name": "肱川橋（肱川水系 肱川）",
+   "name_kana": null,
+   "lat": 33.53172,
+   "lng": 132.55429,
+   "coord_accuracy": "area",
+   "category": "river",
+   "prefecture": "38",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ljl3V8lr268",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ljl3V8lr268"
+   },
+   "operator": "国土交通省 四国地方整備局",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCsV_76RlGzFVZQABftUKdSw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：国土交通省 四国地方整備局（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: operator=四国地方整備局"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"

@@ -41,24 +41,42 @@ class CameraPin extends StatelessWidget {
   Widget build(BuildContext context) {
     final color = categoryColor(camera.category);
     final uncertain = camera.coordAccuracy.isUncertain;
+    final pin = Container(
+      decoration: BoxDecoration(
+        color: color,
+        shape: BoxShape.circle,
+        border: Border.all(
+          color: uncertain
+              ? uncertainBorderColor
+              : (selected ? Colors.black87 : Colors.white),
+          width: uncertain ? 3 : 2,
+        ),
+        boxShadow: const [
+          BoxShadow(color: Colors.black26, blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+    );
     return Opacity(
       opacity: state == CameraState.frozen ? 0.45 : 1.0,
-      child: Container(
-        decoration: BoxDecoration(
-          color: color,
-          shape: BoxShape.circle,
-          border: Border.all(
-            color: uncertain
-                ? uncertainBorderColor
-                : (selected ? Colors.black87 : Colors.white),
-            width: uncertain ? 3 : 2,
-          ),
-          boxShadow: const [
-            BoxShadow(color: Colors.black26, blurRadius: 3, offset: Offset(0, 1)),
-          ],
-        ),
-        child: const Icon(Icons.videocam, size: 13, color: Colors.white),
-      ),
+      // 動画カメラは右上に小さな赤ドット（LIVEインジケータ）を付けて区別する
+      child: camera.isVideo
+          ? Stack(clipBehavior: Clip.none, children: [
+              pin,
+              Positioned(
+                top: -2,
+                right: -2,
+                child: Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFE53935),
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white, width: 1.5),
+                  ),
+                ),
+              ),
+            ])
+          : pin,
     );
   }
 }
