@@ -86,6 +86,9 @@ class _MapScreenState extends State<MapScreen> {
 
   /// 凡例 + カテゴリフィルタのボトムシート
   void _showLegendFilter(BuildContext context) {
+    // コントローラはシート表示中ずっと同一インスタンスを使う。
+    // 再描画のたびに作り直すとIMEの変換中テキストが破棄され日本語入力が壊れる
+    final searchController = TextEditingController(text: widget.app.searchQuery);
     showModalBottomSheet(
       context: context,
       showDragHandle: true,
@@ -102,9 +105,7 @@ class _MapScreenState extends State<MapScreen> {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                 const SizedBox(height: 10),
                 TextField(
-                  controller: TextEditingController(text: app.searchQuery)
-                    ..selection = TextSelection.collapsed(
-                        offset: app.searchQuery.length),
+                  controller: searchController,
                   decoration: InputDecoration(
                     isDense: true,
                     prefixIcon: const Icon(Icons.search, size: 20),
@@ -116,6 +117,7 @@ class _MapScreenState extends State<MapScreen> {
                         : IconButton(
                             icon: const Icon(Icons.clear, size: 18),
                             onPressed: () {
+                              searchController.clear();
                               app.setSearchQuery('');
                               setSheetState(() {});
                             },
@@ -175,7 +177,7 @@ class _MapScreenState extends State<MapScreen> {
           );
         },
       ),
-    );
+    ).whenComplete(searchController.dispose);
   }
 
   void _openDetail(Camera camera) {
