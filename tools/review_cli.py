@@ -102,9 +102,12 @@ def edit(rec: dict) -> None:
 
 def matches_filters(rec: dict, *, license: str | None = None, prefs: list[str] | None = None,
                     operator: str | None = None, category: str | None = None,
-                    feed_type: str | None = None, verified: bool = False) -> bool:
+                    feed_type: str | None = None, verified: bool = False,
+                    with_coords: bool = False) -> bool:
     """一括承認のフィルタ判定。pending 以外は常に対象外。"""
     if rec["review"]["status"] != "pending":
+        return False
+    if with_coords and rec.get("lat") is None:
         return False
     if license is not None and rec["source"].get("license") != license:
         return False
@@ -149,7 +152,8 @@ def apply_bulk_approval(selected: list[dict], cameras: dict, note: str,
 
 def bulk_main(args) -> int:
     filters = dict(license=args.license, prefs=args.pref, operator=args.operator,
-                   category=args.category, feed_type=args.feed_type, verified=args.verified)
+                   category=args.category, feed_type=args.feed_type, verified=args.verified,
+                   with_coords=args.with_coords)
     if not any([args.license, args.pref, args.operator, args.category,
                 args.feed_type, args.verified]):
         print("一括承認にはフィルタの指定が必須（範囲を明示しない承認はしない。SPEC 6.1）")
@@ -210,6 +214,8 @@ def main() -> int:
     ap.add_argument("--feed-type", help="feed.type の完全一致")
     ap.add_argument("--verified", action="store_true",
                     help="2回取得検証で画像変化を確認済みのみ")
+    ap.add_argument("--with-coords", action="store_true",
+                    help="座標が設定済みのもののみ（範囲指定の補助。単独ではフィルタにならない）")
     ap.add_argument("--dry-run", action="store_true", help="対象一覧の表示のみ")
     args = ap.parse_args()
 

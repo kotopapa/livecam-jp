@@ -23,11 +23,11 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: 死活監視（30分ごとに1シャード巡回。全カメラは3時間で一巡）
+      - name: 死活監視（30分ごとに1シャード巡回。全カメラは5時間で一巡）
         run: |
-          SHARD=$(( ($(date +%s) / 1800) % 6 ))
-          echo "shard=${SHARD}/6"
-          python -m monitor.main --shard ${SHARD}/6
+          SHARD=$(( ($(date +%s) / 1800) % 10 ))
+          echo "shard=${SHARD}/10"
+          python -m monitor.main --shard ${SHARD}/10
       - name: スキーマ検証
         run: python -m crawler.validate
       - name: status.json と履歴をコミット

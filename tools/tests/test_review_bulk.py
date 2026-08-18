@@ -104,3 +104,10 @@ class TestApplyBulkApproval:
         assert approved == []
         assert skipped[0][0] == rec["id"]
         assert len(cameras["cameras"]) == 1
+
+
+def test_with_coords_filter():
+    rec = make_rec()
+    assert matches_filters(rec, license="public_data_1.0", with_coords=True)
+    rec2 = make_rec(lat=None, lng=None)
+    assert not matches_filters(rec2, license="public_data_1.0", with_coords=True)
