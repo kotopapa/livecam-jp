@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
 import '../config.dart';
@@ -42,15 +41,6 @@ class SettingsScreen extends StatelessWidget {
           title: Text('地図タイル'),
           subtitle: Text('国土地理院「地理院タイル（淡色地図）」を使用しています'),
         ),
-        ListTile(
-          leading: const Icon(Icons.description_outlined),
-          title: const Text('OSSライセンス'),
-          onTap: () => showLicensePage(
-            context: context,
-            applicationName: '全国ライブカメラ地図',
-            applicationVersion: appVersion,
-          ),
-        ),
         const Divider(),
         const _SectionHeader('このアプリについて'),
         const ListTile(
@@ -58,21 +48,26 @@ class SettingsScreen extends StatelessWidget {
           title: Text('バージョン'),
           subtitle: Text(appVersion),
         ),
-        ListTile(
-          leading: const Icon(Icons.code),
-          title: const Text('データ配信・開発リポジトリ'),
-          subtitle: const Text('github.com/kotopapa/livecam-jp'),
-          onTap: () => launchUrl(
-              Uri.parse('https://github.com/kotopapa/livecam-jp'),
-              mode: LaunchMode.externalApplication),
-        ),
         const Divider(),
         const _SectionHeader('免責'),
         Padding(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
           child: Text(disclaimerText,
               style: TextStyle(fontSize: 12, color: Colors.grey[700])),
         ),
+        // OSSライセンス（表示義務あり。控えめなテキストリンクとして最下部に置く）
+        Center(
+          child: TextButton(
+            onPressed: () => showLicensePage(
+              context: context,
+              applicationName: '全国ライブカメラ地図',
+              applicationVersion: appVersion,
+            ),
+            child: Text('OSSライセンス',
+                style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+          ),
+        ),
+        const SizedBox(height: 16),
       ]),
     );
   }
