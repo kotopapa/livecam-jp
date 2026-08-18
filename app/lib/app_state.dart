@@ -24,7 +24,27 @@ class AppState extends ChangeNotifier {
   bool refreshing = false;
   String? notice;
 
-  List<Camera> get displayableCameras => repository.displayableCameras();
+  /// 地図のフィルタ（カテゴリ・動画のみ）
+  final Set<String> enabledCategories = {
+    'river', 'road', 'volcano', 'dam', 'coast', 'port', 'scenic', 'other'
+  };
+  bool videoOnly = false;
+
+  void toggleCategory(String category) {
+    if (!enabledCategories.remove(category)) enabledCategories.add(category);
+    notifyListeners();
+  }
+
+  void setVideoOnly(bool value) {
+    videoOnly = value;
+    notifyListeners();
+  }
+
+  List<Camera> get displayableCameras => repository
+      .displayableCameras()
+      .where((c) =>
+          enabledCategories.contains(c.category) && (!videoOnly || c.isVideo))
+      .toList();
 
   CameraState stateOf(Camera c) =>
       repository.status[c.id]?.state ?? CameraState.unknown;

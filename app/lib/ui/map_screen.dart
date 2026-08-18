@@ -84,6 +84,63 @@ class _MapScreenState extends State<MapScreen> {
     setState(() => _zoom = z);
   }
 
+  /// 凡例 + カテゴリフィルタのボトムシート
+  void _showLegendFilter(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      showDragHandle: true,
+      builder: (sheetContext) => StatefulBuilder(
+        builder: (context, setSheetState) {
+          final app = widget.app;
+          return SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                const Text('凡例・絞り込み',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                const SizedBox(height: 12),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: [
+                    for (final entry in categoryLabels.entries)
+                      FilterChip(
+                        avatar: CircleAvatar(
+                            backgroundColor: categoryColor(entry.key),
+                            radius: 6),
+                        label: Text(entry.value),
+                        selected: app.enabledCategories.contains(entry.key),
+                        onSelected: (_) {
+                          app.toggleCategory(entry.key);
+                          setSheetState(() {});
+                        },
+                      ),
+                  ],
+                ),
+                SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
+                  title: const Text('動画カメラのみ'),
+                  value: app.videoOnly,
+                  onChanged: (v) {
+                    app.setVideoOnly(v);
+                    setSheetState(() {});
+                  },
+                ),
+                const Divider(),
+                const _LegendRow(
+                    kind: _LegendKind.liveDot, text: '赤ドット = 動画（ライブ配信）'),
+                const _LegendRow(
+                    kind: _LegendKind.uncertain, text: '黄色の縁 = 位置未確定（おおよそ/代表点）'),
+                const _LegendRow(
+                    kind: _LegendKind.frozen, text: '半透明 = 画像が長時間更新されていない'),
+              ]),
+            ),
+          );
+        },
+      ),
+    );
+  }
+
   void _openDetail(Camera camera) {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -166,6 +223,15 @@ class _MapScreenState extends State<MapScreen> {
         if (widget.app.notice != null) _NoticeBanner(text: widget.app.notice!),
         Positioned(
           right: 16,
+          top: MediaQuery.of(context).padding.top + 12,
+          child: FloatingActionButton.small(
+            heroTag: 'legend_filter',
+            onPressed: () => _showLegendFilter(context),
+            child: const Icon(Icons.layers_outlined),
+          ),
+        ),
+        Positioned(
+          right: 16,
           bottom: 24,
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             FloatingActionButton.small(
@@ -193,6 +259,51 @@ class _MapScreenState extends State<MapScreen> {
           ]),
         ),
       ],
+    );
+  }
+}
+
+enum _LegendKind { liveDot, uncertain, frozen }
+
+/// 凡例の1行（マーカー例 + 説明）。
+class _LegendRow extends StatelessWidget {
+  const _LegendRow({required this.kind, required this.text});
+
+  final _LegendKind kind;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final Widget sample = switch (kind) {
+      _LegendKind.liveDot => Container(
+          width: 12,
+          height: 12,
+          decoration: BoxDecoration(
+              color: liveDotColor,
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.white, width: 1.5))),
+      _LegendKind.uncertain => Container(
+          width: 14,
+          height: 14,
+          decoration: BoxDecoration(
+              color: Colors.grey,
+              shape: BoxShape.circle,
+              border: Border.all(color: uncertainBorderColor, width: 3))),
+      _LegendKind.frozen => Opacity(
+          opacity: 0.45,
+          child: Container(
+              width: 14,
+              height: 14,
+              decoration: const BoxDecoration(
+                  color: Color(0xFF1E6FD9), shape: BoxShape.circle))),
+    };
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 3),
+      child: Row(children: [
+        SizedBox(width: 20, child: Center(child: sample)),
+        const SizedBox(width: 8),
+        Expanded(child: Text(text, style: const TextStyle(fontSize: 12))),
+      ]),
     );
   }
 }

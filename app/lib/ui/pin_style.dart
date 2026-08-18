@@ -15,8 +15,23 @@ const Map<String, Color> categoryColors = {
   'other': Color(0xFF8D6E63),   // その他=茶
 };
 
+/// カテゴリの表示名（凡例・フィルタで使う）
+const Map<String, String> categoryLabels = {
+  'river': '河川',
+  'road': '道路',
+  'volcano': '火山',
+  'dam': 'ダム',
+  'coast': '海岸',
+  'port': '港湾',
+  'scenic': '景観',
+  'other': 'その他',
+};
+
 /// 位置未確定（coord_accuracy が exact 以外）の縁取り色（SPEC 9.2②）
 const Color uncertainBorderColor = Color(0xFFFFC400);
+
+/// 動画LIVEドットの色
+const Color liveDotColor = Color(0xFFE53935);
 
 Color categoryColor(String category) =>
     categoryColors[category] ?? categoryColors['other']!;
