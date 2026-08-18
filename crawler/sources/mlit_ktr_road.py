@@ -252,6 +252,54 @@ def nagano_map_cameras(html: str, page_url: str) -> list[tuple[str, str, str]]:
     return out
 
 
+PRVS_KANTO_URL = "https://www.road-info-prvs.mlit.go.jp/roadinfo/pc/pcImage_83_1.html"
+
+
+def build_prvs_coord_maps(data: dict) -> tuple[dict, dict]:
+    """prvs関東(83)のJSONから (C番号→情報, 地点名→情報) の照合辞書を作る。
+
+    情報 = (lat, lng, 都道府県CD, 市区町村CD)
+    """
+    from crawler.sources.mlit_roadinfo import iter_cameras
+    by_c: dict[str, tuple] = {}
+    by_name: dict[str, tuple] = {}
+    for cam in iter_cameras(data):
+        try:
+            lng, lat = float(cam["gis_point"][0]), float(cam["gis_point"][1])
+        except (KeyError, IndexError, TypeError, ValueError):
+            continue
+        info = (lat, lng, cam.get("todofuken_cd"), cam.get("cities_cd"))
+        m = re.fullmatch(r"83(C\d+)", cam.get("doro_gazo_joho_kanri_id") or "")
+        if m:
+            by_c[m.group(1)] = info
+        name = (cam.get("image_name") or "").strip()
+        if len(name) >= 3:
+            by_name.setdefault(name, info)
+    return by_c, by_name
+
+
+def apply_prvs_coords(candidates: list[CameraCandidate],
+                      by_c: dict[str, tuple], by_name: dict[str, tuple]) -> int:
+    """C番号（確実）または地点名の包含（保守的）で座標・県・市区町村を確定する。"""
+    applied = 0
+    for cand in candidates:
+        m = CCTV_IMG_RE.search(cand.feed_url)
+        hit = by_c.get(m.group(1)) if m else None
+        if hit is None:
+            hit = next((v for name, v in by_name.items() if name in cand.name), None)
+        if hit is None:
+            continue
+        cand.lat, cand.lng = hit[0], hit[1]
+        cand.coord_accuracy = "exact"
+        if hit[2]:
+            cand.prefecture = hit[2]
+        if hit[3]:
+            cand.municipality = hit[3]
+        cand.review_note = (cand.review_note + " / 座標・県は道路情報提供システム(83)照合").strip(" /")
+        applied += 1
+    return applied
+
+
 class MlitKtrRoadParser(SourceParser):
     source_id = "mlit_ktr_road"
     seed_url = "https://www.mlit.go.jp/road/bosai/LIVEcamera.html"
@@ -326,6 +374,19 @@ class MlitKtrRoadParser(SourceParser):
         self._discover_yokohama(session, result)
         self._discover_koufu(session, result)
         self._discover_nagano(session, result)
+
+        # 座標が事務所ページにないため、道路情報提供システム関東(83)と照合して確定する
+        prvs = session.fetch(PRVS_KANTO_URL)
+        if prvs.ok:
+            from crawler.sources.mlit_roadinfo import extract_kokudo_json
+            data = extract_kokudo_json(prvs.text)
+            if data:
+                by_c, by_name = build_prvs_coord_maps(data)
+                applied = apply_prvs_coords(result.candidates, by_c, by_name)
+                if applied == 0:
+                    result.errors.append("prvs(83)照合が0件 — ID体系が変わった可能性")
+        else:
+            result.errors.append(f"prvs(83)照合スキップ: HTTP {prvs.status} {prvs.error or ''}")
         return result
 
     # ---- 事務所別ストラテジ -----------------------------------------

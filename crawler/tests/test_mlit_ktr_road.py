@@ -154,3 +154,28 @@ def test_nagano_map_layer_pairing():
     assert named["080139"][1] == "信濃町野尻赤川"
     assert named["080139"][0] == \
         "https://www.ktr.mlit.go.jp/nagano/douroinfo/data/camera/cond_m/080139_L.jpg"
+
+
+def test_prvs_coord_join():
+    from crawler.sources.mlit_ktr_road import apply_prvs_coords, build_prvs_coord_maps
+    data = {"10001&国道4号": [{"R_10001": {
+        "doro_gazo_joho_kanri_id": "83C01838", "image_name": "栃福橋南",
+        "gis_point": ["140.1394444", "37.10361111"],
+        "todofuken_cd": "09", "cities_cd": "09407", "fileList": []}}]}
+    by_c, by_name = build_prvs_coord_maps(data)
+    assert "C01838" in by_c and "栃福橋南" in by_name
+
+    from crawler.sources.base import CameraCandidate
+    def cand(id_, name, url):
+        return CameraCandidate(id=id_, name=name, category="road", prefecture="13",
+                               feed_type="still_image", feed_url=url, operator="x",
+                               page_url="https://example.jp/", attribution="出典：x")
+    a = cand("a", "国道4号 栃福橋南", "https://www.ktr.mlit.go.jp/river/cctv/C01838.jpg")  # C番号一致
+    b = cand("b", "栃福橋南交差点", "https://www.ktr.mlit.go.jp/oomiya/livecamera/25_A.jpg")  # 名称包含
+    c = cand("c", "無関係", "https://www.ktr.mlit.go.jp/oomiya/livecamera/26_A.jpg")
+    n = apply_prvs_coords([a, b, c], by_c, by_name)
+    assert n == 2
+    assert a.coord_accuracy == "exact" and abs(a.lat - 37.1036) < 0.001
+    assert a.prefecture == "09" and a.municipality == "09407"
+    assert b.coord_accuracy == "exact"
+    assert c.lat is None
