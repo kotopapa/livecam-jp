@@ -44,10 +44,12 @@ class _ListScreenState extends State<ListScreen> {
     if (mounted) setState(() {});
   }
 
-  Future<void> _loadPosition() async {
+  /// [request] が false のときは許可済みの場合のみ取得する。
+  /// 起動直後に許可ダイアログを出さないため、要求はユーザー操作時に限る
+  Future<void> _loadPosition({bool request = false}) async {
     try {
       var permission = await Geolocator.checkPermission();
-      if (permission == LocationPermission.denied) {
+      if (permission == LocationPermission.denied && request) {
         permission = await Geolocator.requestPermission();
       }
       if (permission == LocationPermission.denied ||
@@ -130,9 +132,21 @@ class _ListScreenState extends State<ListScreen> {
       body: cams.isEmpty
           ? const Center(child: Text('条件に合うカメラがありません'))
           : ListView.separated(
-              itemCount: cams.length,
+              itemCount: cams.length + (_position == null ? 1 : 0),
               separatorBuilder: (_, _) => const Divider(height: 1),
               itemBuilder: (context, i) {
+                if (_position == null) {
+                  // 先頭に現在地ソートの案内行（タップ時に初めて許可を要求する）
+                  if (i == 0) {
+                    return ListTile(
+                      leading: const Icon(Icons.near_me_outlined),
+                      title: const Text('現在地から近い順に並べ替える'),
+                      subtitle: const Text('タップすると位置情報の利用を確認します'),
+                      onTap: () => _loadPosition(request: true),
+                    );
+                  }
+                  i -= 1;
+                }
                 final (camera, dist) = cams[i];
                 return _CameraTile(
                   camera: camera,

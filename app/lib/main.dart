@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'app_state.dart';
@@ -9,7 +10,9 @@ import 'ui/home_shell.dart';
 import 'ui/onboarding_screen.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  final binding = WidgetsFlutterBinding.ensureInitialized();
+  // ネイティブ起動画面はFlutter初回フレームで即消えるため、最低表示時間を保証する
+  FlutterNativeSplash.preserve(widgetsBinding: binding);
   final dir = await getApplicationSupportDirectory();
   final app = AppState(CameraRepository(
     api: ApiClient(),
@@ -18,6 +21,8 @@ Future<void> main() async {
   final onboardingDone = await OnboardingScreen.isDone();
   runApp(LiveCamApp(app: app, onboardingDone: onboardingDone));
   app.init(); // キャッシュ復元→バックグラウンド更新（待たずに起動する）
+  Future.delayed(
+      const Duration(milliseconds: 1600), FlutterNativeSplash.remove);
 }
 
 class LiveCamApp extends StatefulWidget {
