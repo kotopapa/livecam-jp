@@ -319,8 +319,11 @@ class _YoutubeEmbedViewState extends State<_YoutubeEmbedView> {
       );
     }
     final sep = widget.embedPath.contains('?') ? '&' : '?';
+    // controls=0: 再生バー・設定・全画面等を非表示（映像を遮らない）。
+    // 音声はプレーヤー上で解除できなくなるため「YouTubeで見る」導線で補う
     final src = 'https://www.youtube.com/embed/${widget.embedPath}'
-        '${sep}playsinline=1&autoplay=1&mute=1&rel=0';
+        '${sep}playsinline=1&autoplay=1&mute=1&rel=0'
+        '&controls=0&fs=0&iv_load_policy=3&disablekb=1';
     _controller = WebViewController.fromPlatformCreationParams(params)
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(Colors.black)
