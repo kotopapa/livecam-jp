@@ -1,5 +1,5 @@
 {
- "version": "2026-08-18T12:26:43Z",
+ "version": "2026-08-18T12:43:50Z",
  "cameras": [
   {
    "id": "curated-akihabara-aisan",
@@ -1260,6 +1260,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-kamikochi-kappabashi",
+   "name": "上高地 河童橋（4K）",
+   "name_kana": null,
+   "lat": 36.249,
+   "lng": 137.64,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Iv2VUE_UhRQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Iv2VUE_UhRQ"
+   },
+   "operator": "五千尺ホテル上高地",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Iv2VUE_UhRQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：五千尺ホテル上高地（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-kanazawa-higashichaya",
    "name": "金沢 ひがし茶屋街",
    "name_kana": null,
@@ -1292,6 +1329,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-karuizawa-birds",
+   "name": "軽井沢 小さな鳥とリスのLIVE",
+   "name_kana": null,
+   "lat": 36.348,
+   "lng": 138.597,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "HXp5x6llMo4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=HXp5x6llMo4"
+   },
+   "operator": "michiski（個人運営）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=HXp5x6llMo4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：michiski（個人運営）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown feed_type=youtube_video with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
