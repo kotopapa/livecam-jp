@@ -73,6 +73,7 @@ class _MapScreenState extends State<MapScreen> {
   @override
   void dispose() {
     widget.app.removeListener(_onDataChanged);
+    _searchController.dispose();
     super.dispose();
   }
 
@@ -84,11 +85,16 @@ class _MapScreenState extends State<MapScreen> {
     setState(() => _zoom = z);
   }
 
+  // 検索欄のコントローラは画面Stateと同寿命で保持する。
+  // - 再描画のたびに作り直すとIMEの変換中テキストが破棄され日本語入力が壊れる
+  // - シートの close Future 完了時に dispose すると、フリックで閉じた際の
+  //   閉アニメーション中にTextFieldが破棄済みコントローラを参照して落ちる
+  final _searchController = TextEditingController();
+
   /// 凡例 + カテゴリフィルタのボトムシート
   void _showLegendFilter(BuildContext context) {
-    // コントローラはシート表示中ずっと同一インスタンスを使う。
-    // 再描画のたびに作り直すとIMEの変換中テキストが破棄され日本語入力が壊れる
-    final searchController = TextEditingController(text: widget.app.searchQuery);
+    final searchController = _searchController
+      ..text = widget.app.searchQuery;
     showModalBottomSheet(
       context: context,
       showDragHandle: true,
@@ -195,7 +201,7 @@ class _MapScreenState extends State<MapScreen> {
           );
         },
       ),
-    ).whenComplete(searchController.dispose);
+    );
   }
 
   void _openDetail(Camera camera) {
