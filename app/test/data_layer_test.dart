@@ -13,8 +13,8 @@ import 'package:livecam_jp/models/status.dart';
 
 const manifestJson = '''
 {"schema_version":1,
- "cameras":{"version":"2026-08-18T00:00:00Z","url":"/livecam-jp/v1/cameras.json","count":2},
- "status":{"version":null,"url":"/livecam-jp/v1/status.json"},
+ "cameras":{"version":"2026-08-18T00:00:00Z","url":"/v1/cameras.json","count":2},
+ "status":{"version":null,"url":"/v1/status.json"},
  "min_app_version":"1.0.0","notice":null}''';
 
 const camerasJson = '''

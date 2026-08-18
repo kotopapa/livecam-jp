@@ -33,6 +33,10 @@ flutter create --org jp.livecam --project-name livecam_jp .
 | `http` | 配信JSONの取得（If-None-Match条件付きGET。テストはMockClient） |
 | `path_provider` | キャッシュ保存先ディレクトリの取得 |
 | `shared_preferences` | お気に入り等の軽量永続化 |
+| `latlong2` | 地図座標型（flutter_mapの座標APIに必要） |
+| `webview_flutter` | YouTube IFrame Player（embed/live_stream）の表示（SPEC C6遵守） |
+| `url_launcher` | 出典サイト・YouTube等の外部リンクを開く |
+| `share_plus` | 共有（画像ではなく元ページURLを共有。SPEC 9.2③） |
 | `home_widget` | ネイティブウィジェットとのデータ連携（仕上げ段階で追加） |
 
 追加する場合はこの表に用途を書き足すこと。

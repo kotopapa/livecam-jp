@@ -13,8 +13,23 @@ class ApiClient {
   final http.Client _client;
   final Uri _base;
 
-  /// manifest内の相対URL（例: /v1/cameras.json）を配信オリジンで解決する
-  Uri resolve(String url) => _base.resolve(url);
+  /// manifest内のURLを解決する。
+  ///
+  /// manifestは「/v1/cameras.json」形式（サイトルート基準）でURLを持つが、
+  /// GitHub Pagesのプロジェクトサイトでは /livecam-jp/ 配下に配信されるため、
+  /// そのままオリジン解決すると404になる。「/v1/」以降をベース（…/v1/）からの
+  /// 相対として解決することで、ルート配信・サブパス配信の両方に対応する。
+  Uri resolve(String url) {
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      return Uri.parse(url);
+    }
+    if (url.startsWith('/')) {
+      final idx = url.indexOf('/v1/');
+      if (idx >= 0) return _base.resolve(url.substring(idx + 4));
+      return _base.resolve(url.substring(1));
+    }
+    return _base.resolve(url);
+  }
 
   Future<ApiResponse> getJson(String url, {String? etag}) async {
     final headers = <String, String>{

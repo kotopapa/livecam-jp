@@ -12,8 +12,9 @@ import 'package:livecam_jp/main.dart';
 
 void main() {
   testWidgets('アプリが起動して4タブのシェルが表示される', (tester) async {
-    final tmp = await Directory.systemTemp.createTemp('livecam_widget');
-    addTearDown(() => tmp.delete(recursive: true));
+    // testWidgets(fake async)内で実I/Oをawaitするとハングするため、
+    // ディレクトリは作成せず既存パスを渡す（このテストではキャッシュ未使用）
+    final tmp = Directory(Directory.systemTemp.path);
     final app = AppState(CameraRepository(
       api: ApiClient(
           client: MockClient((_) async => http.Response('not found', 404))),
