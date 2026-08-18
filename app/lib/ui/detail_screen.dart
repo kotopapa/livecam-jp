@@ -11,6 +11,7 @@ import '../config.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
 import '../util/geo.dart';
+import '../util/time_format.dart';
 import 'ad_banner.dart';
 import 'pin_style.dart';
 
@@ -134,7 +135,7 @@ class _DetailScreenState extends State<DetailScreen> {
     return Row(children: [
       Expanded(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(time != null ? '$time 取得' : '取得時刻不明',
+          Text(time != null ? formatTakenTime(time) : '取得時刻不明',
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           Text('${camera.feed.refreshSec ?? 600}秒ごとに更新',
               style: TextStyle(fontSize: 12, color: Colors.grey[600])),

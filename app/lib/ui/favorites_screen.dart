@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../app_state.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
+import '../util/time_format.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 
@@ -171,7 +172,7 @@ class _FavoriteCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 13)),
-                  Text(time ?? camera.operator,
+                  Text(time != null ? formatTakenTime(time) : camera.operator,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style:
@@ -204,7 +205,7 @@ class _FavoriteTile extends StatelessWidget {
       ),
       title: Text(camera.name, maxLines: 1, overflow: TextOverflow.ellipsis),
       subtitle: Text(
-        [if (camera.isVideo) 'LIVE', ?time, camera.operator].join(' · '),
+        [if (camera.isVideo) 'LIVE', if (time != null) formatTakenTime(time), camera.operator].join(' · '),
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: const TextStyle(fontSize: 12),
