@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 
 import '../app_state.dart';
@@ -26,6 +27,42 @@ class _MapScreenState extends State<MapScreen> {
 
   final MapController _controller = MapController();
   double _zoom = _initialZoom;
+  LatLng? _myLocation;
+  bool _locating = false;
+
+  /// 現在地ボタン（SPEC 9.2②）。権限を確認して現在地へ移動する
+  Future<void> _goToMyLocation() async {
+    if (_locating) return;
+    setState(() => _locating = true);
+    try {
+      var permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.denied) {
+        permission = await Geolocator.requestPermission();
+      }
+      if (permission == LocationPermission.denied ||
+          permission == LocationPermission.deniedForever) {
+        _showMessage('位置情報の利用が許可されていません（設定から変更できます）');
+        return;
+      }
+      final pos = await Geolocator.getCurrentPosition(
+          locationSettings:
+              const LocationSettings(accuracy: LocationAccuracy.medium))
+          .timeout(const Duration(seconds: 10));
+      final here = LatLng(pos.latitude, pos.longitude);
+      setState(() => _myLocation = here);
+      _controller.move(here, 12);
+      setState(() => _zoom = 12);
+    } catch (_) {
+      _showMessage('現在地を取得できませんでした');
+    } finally {
+      if (mounted) setState(() => _locating = false);
+    }
+  }
+
+  void _showMessage(String text) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
+  }
 
   @override
   void initState() {
@@ -105,6 +142,15 @@ class _MapScreenState extends State<MapScreen> {
                     ),
               ],
             ),
+            if (_myLocation != null)
+              MarkerLayer(markers: [
+                Marker(
+                  point: _myLocation!,
+                  width: 20,
+                  height: 20,
+                  child: const _MyLocationDot(),
+                ),
+              ]),
             const Align(
               alignment: Alignment.bottomLeft,
               child: _GsiAttribution(),
@@ -112,7 +158,38 @@ class _MapScreenState extends State<MapScreen> {
           ],
         ),
         if (widget.app.notice != null) _NoticeBanner(text: widget.app.notice!),
+        Positioned(
+          right: 16,
+          bottom: 24,
+          child: FloatingActionButton.small(
+            heroTag: 'my_location',
+            onPressed: _goToMyLocation,
+            child: _locating
+                ? const SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(strokeWidth: 2))
+                : const Icon(Icons.my_location),
+          ),
+        ),
       ],
+    );
+  }
+}
+
+/// 現在地の青い点。
+class _MyLocationDot extends StatelessWidget {
+  const _MyLocationDot();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: const Color(0xFF1A73E8),
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.white, width: 3),
+        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 4)],
+      ),
     );
   }
 }
