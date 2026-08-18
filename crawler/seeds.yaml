@@ -16,6 +16,17 @@ sources:
           座標なし→ジオコーディング+手動レビュー。大宮・横浜・甲府・長野はURL規則が
           別系統のため未対応（mlit_ktr_road.py の docstring 参照）
 
+  - id: mlit_cbr_road
+    enabled: true
+    note: 中部地整・名古屋国道の道路カメラ（めいこくWEB）。CMS断片が実質API。
+          座標はGoogle My Maps KMLから照合（取れない場合はジオコーディング）。
+          中部の他事務所（静岡・岐阜国道等）は未対応
+
+  - id: mlit_hrr_road
+    enabled: true
+    note: 北陸地整・金沢河川国道「みちナビ石川」。map.data.js に座標直書き。
+          国交省管轄(A)のみ採用。石川県(B)・金沢市(D)は自治体枠で将来対応
+
   - id: kawabou_pref
     enabled: false
     note: 川の防災情報の県単位一括収集（全国展開・M5用）。リクエスト数が多いので明示的に有効化する

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Language" content="ja" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<meta name="keywords" content="みちなびいしかわ,石川" />
+<meta name="description" content="みちナビ石川は、石川県内の主要国道・県道の情報を提供しています。" />
+
+<title>国道8号 津幡町九折｜みちナビ石川</title>
+
+<link rel="shortcut icon" href="../favicon.ico" /> 
+<link rel="stylesheet" type="text/css" href="../com/css/import.css" media="all" />
+
+<script type="text/javascript">
+<!--
+ var movSpeed = 10000; 
+ function animation(){ 
+ 	day = new Date(); 
+ 	if(navigator.appVersion.charAt(0)>=3){ 
+ 		document.camera.src="http://www.hrr.mlit.go.jp/bosai/img/761160.jpg?time="+day.getHours()+day.getMinutes()+day.getSeconds()+""; 
+ 		setTimeout("animation()", movSpeed); 
+ 	} 
+ }
+//--> 
+</script>
+
+</head>
+
+<body id="map">
+<div id="top">&nbsp;</div>
+
+<div id="map_header">
+<h1><a href="../index.html" target="_new">みちナビ石川</a></h1>
+</div>
+
+<h2>国道8号 津幡町九折</h2>
+<ul>
+<li><img name="camera" src="https://www.hrr.mlit.go.jp/bosai/img/761160.jpg?time=" width="352" height="240" alt="" /><br>※この画像は10分おきに提供サイトより取得しています。</li>
+<li><img src="https://www.hrr.mlit.go.jp/road/cctvclip/gif/761160.gif" width="352" height="240" alt="" /><br>※過去2時間分の静止画を連続再生しています。</li>
+</ul>
+
+<p><a href="javascript:window.close();">×閉じる</a></p>
+
+<div id="map_footer"><p>提供：国土交通省</p></div>
+<script>animation()</script>
+<div id="bottom">&nbsp;</div>
+</body>
+</html>
