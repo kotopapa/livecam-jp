@@ -1599,3 +1599,822 @@ cameras:
     prefecture: "03"
     lat: 39.641
     lng: 141.972
+
+  - id: curated-miyako-ibc
+    name: 宮古情報カメラ（宮古港・市街）
+    operator: "IBC岩手放送"
+    video_id: "lX_rmxRJ97w"
+    category: port
+    prefecture: "03"
+    lat: 39.639
+    lng: 141.954
+
+  - id: curated-miyakowan-tvi
+    name: 宮古湾・白浜（切替）
+    operator: "テレビ岩手"
+    video_id: "961YDrszB64"
+    category: coast
+    prefecture: "03"
+    lat: 39.62
+    lng: 141.97
+    note: 多地点切替式
+
+  - id: curated-ofunato-tvi
+    name: 大船渡（お天気カメラ）
+    operator: "テレビ岩手"
+    video_id: "0YBXD1DFNXA"
+    category: port
+    prefecture: "03"
+    lat: 39.064
+    lng: 141.716
+    note: チャンネル名義はレビューで確認
+
+  - id: curated-yuriage-kahoku
+    name: 閖上港・仙台湾
+    operator: "河北新報社"
+    video_id: "zRT3miyL4YA"
+    category: port
+    prefecture: "04"
+    lat: 38.173
+    lng: 140.957
+
+  - id: curated-itsutsubashi-kahoku
+    name: 仙台 東二番丁通（五橋）
+    operator: "河北新報社"
+    video_id: "9UNpXYB8rCQ"
+    category: road
+    prefecture: "04"
+    lat: 38.254
+    lng: 140.877
+
+  - id: curated-mmt-izumichuo
+    name: 仙台 泉中央
+    operator: "ミヤギテレビ"
+    video_id: "wBvfPMPXOTA"
+    category: scenic
+    prefecture: "04"
+    lat: 38.325
+    lng: 140.881
+
+  - id: curated-mmt-dainenji
+    name: 仙台 大年寺山
+    operator: "ミヤギテレビ"
+    video_id: "rPAGOmumees"
+    category: scenic
+    prefecture: "04"
+    lat: 38.234
+    lng: 140.871
+
+  - id: curated-fukutele-mix
+    name: 福島県内 情報カメラ（切替）
+    operator: "福島テレビ"
+    video_id: "VXYNMpJP_PA"
+    category: scenic
+    prefecture: "07"
+    lat: 37.765
+    lng: 140.465
+    note: 小名浜含む切替式
+
+  - id: curated-kfb-mix
+    name: 郡山・福島・相馬・小名浜（切替）
+    operator: "KFB福島放送"
+    video_id: "aGhE6D8hkus"
+    category: scenic
+    prefecture: "07"
+    lat: 37.405
+    lng: 140.365
+    note: 4市切替式
+
+  - id: curated-kushiro-yuyake
+    name: 釧路港の夕焼け（ANAクラウンプラザ釧路）
+    operator: "釧路夕焼け倶楽部"
+    video_id: "bp8_IQgp_o4"
+    category: port
+    prefecture: "01"
+    lat: 42.986
+    lng: 144.381
+
+  - id: curated-koshimizu-highland
+    name: 小清水ハイランド725（藻琴山）
+    operator: "小清水町"
+    video_id: "lqMJiYIPUcg"
+    category: scenic
+    prefecture: "01"
+    lat: 43.674
+    lng: 144.423
+
+  - id: curated-koshimizu-yakuba
+    name: 小清水町役場屋上
+    operator: "小清水町"
+    video_id: "XyMRbMYO7vA"
+    category: scenic
+    prefecture: "01"
+    lat: 43.856
+    lng: 144.462
+
+  - id: curated-koshimizu-hanayaka-umi
+    name: 道の駅はなやか（海側）
+    operator: "小清水町"
+    video_id: "MDL-KnbBKyc"
+    category: coast
+    prefecture: "01"
+    lat: 43.928
+    lng: 144.464
+
+  - id: curated-koshimizu-hanayaka-p
+    name: 道の駅はなやか（駐車場側）
+    operator: "小清水町"
+    video_id: "YodyWQUs24I"
+    category: road
+    prefecture: "01"
+    lat: 43.927
+    lng: 144.465
+
+  - id: curated-koshimizu-jaga-hama
+    name: じゃがいも街道（浜小清水側）
+    operator: "小清水町"
+    video_id: "3-QV-UfQOjQ"
+    category: road
+    prefecture: "01"
+    lat: 43.91
+    lng: 144.45
+
+  - id: curated-koshimizu-higashikan
+    name: 東幹川（国道244号付近）
+    operator: "小清水町"
+    video_id: "3xj_z7AJ6Vw"
+    category: road
+    prefecture: "01"
+    lat: 43.92
+    lng: 144.48
+
+  - id: curated-koshimizu-minami3
+    name: じゃがいも街道 南3号交差点
+    operator: "小清水町"
+    video_id: "pGiTbBOXgXM"
+    category: road
+    prefecture: "01"
+    lat: 43.87
+    lng: 144.44
+
+  - id: curated-koshimizu-minami3kikan
+    name: 南3号基幹道路
+    operator: "小清水町"
+    video_id: "x0L-kxjjBI0"
+    category: road
+    prefecture: "01"
+    lat: 43.865
+    lng: 144.43
+
+  - id: curated-koshimizu-yanbetsu6
+    name: 止別川（南6号基幹道路付近）
+    operator: "小清水町"
+    video_id: "v3XsDZLM7TY"
+    category: river
+    prefecture: "01"
+    lat: 43.9
+    lng: 144.52
+
+  - id: curated-koshimizu-jaga-shigai
+    name: じゃがいも街道（市街側）
+    operator: "小清水町"
+    video_id: "wT59DZpcb78"
+    category: road
+    prefecture: "01"
+    lat: 43.86
+    lng: 144.47
+
+  - id: curated-koshimizu-ponyanbetsu
+    name: ポン止別川（西第2仲通り）
+    operator: "小清水町"
+    video_id: "_hi7d0TkKwU"
+    category: river
+    prefecture: "01"
+    lat: 43.93
+    lng: 144.54
+
+  - id: curated-koshimizu-yanbetsu-trim
+    name: 止別川（トリム公園付近）
+    operator: "小清水町"
+    video_id: "TdFx28Dj0Ls"
+    category: river
+    prefecture: "01"
+    lat: 43.935
+    lng: 144.56
+
+  - id: curated-koshimizu-kyowa
+    name: 共和西基幹道路
+    operator: "小清水町"
+    video_id: "EJ4pPEGWsWQ"
+    category: road
+    prefecture: "01"
+    lat: 43.83
+    lng: 144.4
+
+  - id: curated-giken-minami1
+    name: 札幌 南1条通×東4丁目交差点
+    operator: "株式会社技研工房"
+    video_id: "AWVVYHfxZac"
+    category: road
+    prefecture: "01"
+    lat: 43.059
+    lng: 141.36
+
+  - id: curated-giken-ezorisu
+    name: 札幌郊外 エゾリスと野鳥の餌場
+    operator: "株式会社技研工房"
+    video_id: "vGSD5cWirq4"
+    category: healing
+    prefecture: "01"
+    lat: 43.03
+    lng: 141.3
+
+  - id: curated-giken-nakajima
+    name: 札幌 中島公園駅周辺
+    operator: "株式会社技研工房"
+    video_id: "WRFxBWoOzb8"
+    category: scenic
+    prefecture: "01"
+    lat: 43.045
+    lng: 141.354
+
+  - id: curated-giken-tongu
+    name: 札幌 北海道神宮頓宮
+    operator: "株式会社技研工房"
+    video_id: "PY6muFoDs6U"
+    category: scenic
+    prefecture: "01"
+    lat: 43.055
+    lng: 141.356
+
+  - id: curated-giken-r36
+    name: 札幌 国道36号・創成川
+    operator: "株式会社技研工房"
+    video_id: "6DhFMy_i8bg"
+    category: road
+    prefecture: "01"
+    lat: 43.057
+    lng: 141.357
+
+  - id: curated-kamisu-kashima
+    name: 鹿島港 津波監視カメラ
+    operator: "神栖市"
+    video_id: "GpMWkjnO1js"
+    category: port
+    prefecture: "08"
+    lat: 35.926
+    lng: 140.689
+
+  - id: curated-kashiwa-r16
+    name: 柏 国道16号（大井）
+    operator: "電材センター"
+    video_id: "Uq8UjinTEaU"
+    category: road
+    prefecture: "12"
+    lat: 35.842
+    lng: 139.997
+
+  - id: curated-oiso-coast
+    name: 大磯海岸・大磯港
+    operator: "神奈川県"
+    video_id: "WV9DtVXgwqE"
+    category: coast
+    prefecture: "14"
+    lat: 35.306
+    lng: 139.311
+    note: 津波・高潮監視
+
+  - id: curated-hiratsuka-coast
+    name: 平塚海岸
+    operator: "神奈川県"
+    video_id: "62_twW5uXd4"
+    category: coast
+    prefecture: "14"
+    lat: 35.317
+    lng: 139.342
+
+  - id: curated-shonan-inamura
+    name: 稲村ヶ崎（3rd HOUSE西棟・江の島ビュー）
+    operator: "湘南ライブカメラ"
+    video_id: "_ddxDN0eMnA"
+    category: coast
+    prefecture: "14"
+    lat: 35.304
+    lng: 139.526
+
+  - id: curated-shonan-fuji-enoshima
+    name: 七里ヶ浜 富士山・江の島
+    operator: "湘南ライブカメラ"
+    video_id: "PFqSE8GNfnE"
+    category: coast
+    prefecture: "14"
+    lat: 35.306
+    lng: 139.51
+
+  - id: curated-shonan-kamakurakoko
+    name: 鎌倉高校前・七里ヶ浜
+    operator: "湘南ライブカメラ"
+    video_id: "wq5J3SZSdX8"
+    category: coast
+    prefecture: "14"
+    lat: 35.308
+    lng: 139.5
+
+  - id: curated-shonan-enoden-134
+    name: 江ノ電・国道134号
+    operator: "湘南ライブカメラ"
+    video_id: "DgIbfgFdGVI"
+    category: road
+    prefecture: "14"
+    lat: 35.307
+    lng: 139.495
+
+  - id: curated-kusatsu-maeguchi
+    name: 国道292号 草津前口
+    operator: "草津町"
+    video_id: "WB4jllqVRCc"
+    category: road
+    prefecture: "10"
+    lat: 36.633
+    lng: 138.57
+
+  - id: curated-kusatsu-onsen-iriguchi
+    name: 国道292号 草津温泉入口
+    operator: "草津町"
+    video_id: "rHuoK_TWOnA"
+    category: road
+    prefecture: "10"
+    lat: 36.626
+    lng: 138.59
+
+  - id: curated-kusatsu-tenguyama
+    name: 草津 天狗山
+    operator: "草津町"
+    video_id: "hN8mxz3-1pg"
+    category: scenic
+    prefecture: "10"
+    lat: 36.614
+    lng: 138.588
+
+  - id: curated-kusatsu-onsenmon
+    name: 草津 温泉門
+    operator: "草津町"
+    video_id: "Xr781EeLdqs"
+    category: scenic
+    prefecture: "10"
+    lat: 36.63
+    lng: 138.598
+
+  - id: curated-kusatsu-michinoeki
+    name: 道の駅 草津運動茶屋公園
+    operator: "草津町"
+    video_id: "J3zIOmIrSzM"
+    category: scenic
+    prefecture: "10"
+    lat: 36.628
+    lng: 138.599
+
+  - id: curated-tokyo-catguardian
+    name: 保護猫シェルター24時間ライブ（ずっとねこ）
+    operator: "東京キャットガーディアン"
+    video_id: "XNOSZ4m8Ofc"
+    category: healing
+    prefecture: "13"
+    lat: 35.731
+    lng: 139.728
+
+  - id: curated-mombetsu-tokkari
+    name: 紋別 とっかりセンター（アザラシ）
+    operator: "紋別市（オホーツクとっかりセンター）"
+    video_id: "UGUfoDGulxQ"
+    category: healing
+    prefecture: "01"
+    lat: 44.349
+    lng: 143.372
+
+  - id: curated-awaji-monkey
+    name: 淡路島モンキーセンター
+    operator: "淡路島モンキーセンター"
+    video_id: "lsxYH2XQQCg"
+    category: healing
+    prefecture: "28"
+    lat: 34.268
+    lng: 134.766
+
+  - id: curated-gero-suimeikan
+    name: 下呂温泉 水明館（日本庭園・飛騨川）
+    operator: "水明館"
+    video_id: "GYtBIpM9PLg"
+    category: scenic
+    prefecture: "21"
+    lat: 35.802
+    lng: 137.244
+
+  - id: curated-kamogawa-maehara
+    name: 鴨川 前原海岸
+    operator: "波のスケッチ"
+    video_id: "tYdZlbOKNR0"
+    category: coast
+    prefecture: "12"
+    lat: 35.113
+    lng: 140.103
+
+  - id: curated-tateyama-hojo
+    name: 館山 北条海岸
+    operator: "e-CAM（イーカム）"
+    video_id: "Gf5NpwlF_yI"
+    category: coast
+    prefecture: "12"
+    lat: 34.996
+    lng: 139.866
+
+  - id: curated-osezaki
+    name: 大瀬崎・駿河湾
+    operator: "ネイチャーイン大瀬館"
+    video_id: "UDBdjmAyr4Y"
+    category: coast
+    prefecture: "22"
+    lat: 35.027
+    lng: 138.787
+
+  - id: curated-shimoda-tsumekizaki
+    name: 下田 爪木崎
+    operator: "下田市観光協会（LIVE SHIMODA）"
+    video_id: "y2snSN1CIEg"
+    category: coast
+    prefecture: "22"
+    lat: 34.663
+    lng: 138.992
+
+  - id: curated-shimoda-ohama
+    name: 下田 白浜大浜
+    operator: "下田市観光協会（LIVE SHIMODA）"
+    video_id: "_Upz1dlQgpg"
+    category: coast
+    prefecture: "22"
+    lat: 34.69
+    lng: 138.966
+
+  - id: curated-shimoda-sotoura
+    name: 下田 外浦海岸
+    operator: "下田市観光協会（LIVE SHIMODA）"
+    video_id: "suBsw5F_1u0"
+    category: coast
+    prefecture: "22"
+    lat: 34.683
+    lng: 138.975
+
+  - id: curated-fukui-owada
+    name: 福井 国道8号 大和田交差点
+    operator: "福井新聞社"
+    video_id: "2HJSkWkAx90"
+    category: road
+    prefecture: "18"
+    lat: 36.087
+    lng: 136.241
+
+  - id: curated-tannan-1
+    name: 丹南 国道8号・県道鯖江織田線（切替）
+    operator: "福井新聞社"
+    video_id: "13-tezFvtd4"
+    category: road
+    prefecture: "18"
+    lat: 35.903
+    lng: 136.168
+    note: 越前市・鯖江市・越前町の切替式
+
+  - id: curated-tannan-2
+    name: 丹南 県道武生美山線・福井鯖江線（切替）
+    operator: "福井新聞社"
+    video_id: "1dz7RLJgNSo"
+    category: road
+    prefecture: "18"
+    lat: 35.905
+    lng: 136.175
+    note: 交通・河川の切替式
+
+  - id: curated-obama-minamigawa
+    name: 小浜 南川河口
+    operator: "福井新聞社（ケーブルテレビ若狭小浜提供）"
+    video_id: "tq-35AZQrVA"
+    category: river
+    prefecture: "18"
+    lat: 35.495
+    lng: 135.746
+
+  - id: curated-mable-kasugakita
+    name: 松江 春日北交差点
+    operator: "山陰ケーブルビジョン"
+    video_id: "IqnTjRGTLb4"
+    category: road
+    prefecture: "32"
+    lat: 35.478
+    lng: 133.045
+
+  - id: curated-mable-shinjiko-ohashi
+    name: 松江 宍道湖大橋
+    operator: "山陰ケーブルビジョン"
+    video_id: "mspMbWuEbxk"
+    category: road
+    prefecture: "32"
+    lat: 35.468
+    lng: 133.048
+
+  - id: curated-mable-kunibiki
+    name: 松江 くにびき大橋
+    operator: "山陰ケーブルビジョン"
+    video_id: "JEFoqOUDUI4"
+    category: road
+    prefecture: "32"
+    lat: 35.464
+    lng: 133.064
+
+  - id: curated-mable-enmusubi
+    name: 松江 縁結び大橋
+    operator: "山陰ケーブルビジョン"
+    video_id: "gCSr3Qm3BDM"
+    category: road
+    prefecture: "32"
+    lat: 35.46
+    lng: 133.07
+
+  - id: curated-mable-sodeshi
+    name: 松江 袖師交差点（国道9号）
+    operator: "山陰ケーブルビジョン"
+    video_id: "MZZPfI49aB4"
+    category: road
+    prefecture: "32"
+    lat: 35.456
+    lng: 133.064
+
+  - id: curated-mable-higashiagenogi
+    name: 松江 東上乃木交差点（国道9号）
+    operator: "山陰ケーブルビジョン"
+    video_id: "Mk8z2d1lHfg"
+    category: road
+    prefecture: "32"
+    lat: 35.452
+    lng: 133.07
+
+  - id: curated-dojocco-kenzakai
+    name: 安来 県境交差点（国道9号・雪道）
+    operator: "やすぎどじょっこテレビ"
+    video_id: "tDEB_0OpBWU"
+    category: road
+    prefecture: "32"
+    lat: 35.429
+    lng: 133.348
+
+  - id: curated-dojocco-ekimae
+    name: 安来駅前（国道9号）
+    operator: "やすぎどじょっこテレビ"
+    video_id: "yZYiBmrlFwc"
+    category: road
+    prefecture: "32"
+    lat: 35.432
+    lng: 133.251
+
+  - id: curated-dojocco-arashima
+    name: 安来 荒島交差点（国道9号）
+    operator: "やすぎどじょっこテレビ"
+    video_id: "z0gixuXIAto"
+    category: road
+    prefecture: "32"
+    lat: 35.413
+    lng: 133.183
+
+  - id: curated-wink-himejijo
+    name: 姫路城
+    operator: "WINK姫路ケーブルテレビ"
+    video_id: "76M1BK8_chY"
+    category: scenic
+    prefecture: "28"
+    lat: 34.839
+    lng: 134.694
+
+  - id: curated-wink-bypass
+    name: 姫路バイパス 姫路南ランプ
+    operator: "WINK姫路ケーブルテレビ"
+    video_id: "LOSuQJUY_gc"
+    category: road
+    prefecture: "28"
+    lat: 34.793
+    lng: 134.688
+
+  - id: curated-tokushima-kachidoki
+    name: 徳島 かちどき橋方面（国道11号）
+    operator: "ケーブルテレビ徳島"
+    video_id: "luOqDxsRiPU"
+    category: road
+    prefecture: "36"
+    lat: 34.062
+    lng: 134.559
+
+  - id: curated-hiroshima-ekimae-home
+    name: 広島駅前
+    operator: "広島ホームテレビ"
+    video_id: "g3P6ooY6igk"
+    category: scenic
+    prefecture: "34"
+    lat: 34.398
+    lng: 132.475
+
+  - id: curated-hiroshima-hondori
+    name: 広島 本通交差点（国道54号）
+    operator: "広島ホームテレビ"
+    video_id: "oW2Gb8YoGAg"
+    category: road
+    prefecture: "34"
+    lat: 34.393
+    lng: 132.457
+
+  - id: curated-miyajima-home
+    name: 宮島・嚴島神社方面
+    operator: "広島ホームテレビ"
+    video_id: "s2CxZ7N25i0"
+    category: scenic
+    prefecture: "34"
+    lat: 34.299
+    lng: 132.321
+
+  - id: curated-heiwakoen-home
+    name: 平和記念公園
+    operator: "広島ホームテレビ"
+    video_id: "PO2Afl_fH3E"
+    category: scenic
+    prefecture: "34"
+    lat: 34.395
+    lng: 132.453
+
+  - id: curated-tss-hiroshima
+    name: TSS情報カメラ（広島）
+    operator: "テレビ新広島"
+    video_id: "lf-RntqEthQ"
+    category: scenic
+    prefecture: "34"
+    lat: 34.391
+    lng: 132.462
+    note: 画角はレビューで確認
+
+  - id: curated-kry-shunan
+    name: 周南・徳山市街
+    operator: "KRY山口放送"
+    video_id: "oOi1zUJZ5gk"
+    category: scenic
+    prefecture: "35"
+    lat: 34.055
+    lng: 131.806
+
+  - id: curated-nichinan-aburatsu
+    name: 日南 油津（国道220号）
+    operator: "日南テレビ!"
+    video_id: "CFgxlt_yf8k"
+    category: road
+    prefecture: "45"
+    lat: 31.588
+    lng: 131.378
+
+  - id: curated-kyoto-ekimae-bus
+    name: 京都駅前バス乗り場
+    operator: "京都市観光協会"
+    video_id: "v9rQqa_VTEY"
+    category: scenic
+    prefecture: "26"
+    lat: 34.986
+    lng: 135.759
+
+  - id: curated-kyoto-hachijoguchi
+    name: 京都駅八条口
+    operator: "京都市観光協会"
+    video_id: "CO_ZjH6N7RE"
+    category: scenic
+    prefecture: "26"
+    lat: 34.984
+    lng: 135.76
+
+  - id: curated-kyoto-tetsugaku
+    name: 哲学の道
+    operator: "京都市観光協会"
+    video_id: "S6IkZhhwG4A"
+    category: scenic
+    prefecture: "26"
+    lat: 35.027
+    lng: 135.794
+
+  - id: curated-kyoto-gion
+    name: 祇園 花見小路
+    operator: "京都市観光協会"
+    video_id: "J3xHBUgWRqc"
+    category: scenic
+    prefecture: "26"
+    lat: 35.003
+    lng: 135.775
+
+  - id: curated-toba-marine
+    name: 鳥羽マリンターミナル
+    operator: "鳥羽市観光協会"
+    video_id: "HRPuSpah5Sw"
+    category: port
+    prefecture: "24"
+    lat: 34.489
+    lng: 136.842
+
+  - id: curated-toba-ijika
+    name: 鳥羽 石鏡港
+    operator: "鳥羽市観光協会"
+    video_id: "i99I20Z0xGI"
+    category: port
+    prefecture: "24"
+    lat: 34.447
+    lng: 136.904
+
+  - id: curated-toba-kuzaki
+    name: 鳥羽 国崎漁港
+    operator: "鳥羽市観光協会"
+    video_id: "oR6eTyTAGvc"
+    category: port
+    prefecture: "24"
+    lat: 34.427
+    lng: 136.92
+
+  - id: curated-kushimoto-wabuka
+    name: 串本 和深・太平洋
+    operator: "ビーチテラス串本"
+    video_id: "_IegwToRnFw"
+    category: coast
+    prefecture: "30"
+    lat: 33.493
+    lng: 135.672
+
+  - id: curated-kisakihama
+    name: 宮崎 木崎浜（サーフポイント）
+    operator: "ii-nami（いい波プロジェクト）"
+    video_id: "PK4TOEdwVUc"
+    category: coast
+    prefecture: "45"
+    lat: 31.858
+    lng: 131.462
+
+  - id: curated-ushibuka-rkk
+    name: 天草 牛深港
+    operator: "RKK熊本放送"
+    video_id: "HfSrh4sZf1U"
+    category: port
+    prefecture: "43"
+    lat: 32.191
+    lng: 130.027
+
+  - id: curated-kanmon-shinko
+    name: 関門海峡（下関・門司）
+    operator: "新興製作所"
+    video_id: "98OuCgpMM9s"
+    category: port
+    prefecture: "35"
+    lat: 33.945
+    lng: 130.943
+
+  - id: curated-gutto-omotezao
+    name: 山形 表蔵王（国道13号・蔵王温泉入口）
+    operator: "山形県観光物産会館"
+    channel_id: "UClAxnBf5cxpHFqv9PEBegSg"
+    category: road
+    prefecture: "06"
+    lat: 38.211
+    lng: 140.396
+
+  - id: curated-gutto-bypass
+    name: 山形バイパス（国道13号）
+    operator: "山形県観光物産会館"
+    channel_id: "UCabGvrOAKh2We0UeVEj8eeA"
+    category: road
+    prefecture: "06"
+    lat: 38.23
+    lng: 140.37
+
+  - id: curated-chigasaki-beach
+    name: 茅ヶ崎海岸（江の島〜辻堂）
+    operator: "湘南茅ヶ崎 Beach and Waves（個人運営）"
+    channel_id: "UC_UHINSFCpBr68YW56HYQ2Q"
+    category: coast
+    prefecture: "14"
+    lat: 35.323
+    lng: 139.411
+
+  - id: curated-versailles-farm
+    name: ヴェルサイユリゾートファーム（引退競走馬）
+    operator: "Yogiboヴェルサイユリゾートファーム"
+    channel_id: "UC6NPhwlQgzLecFSKE2d6wiQ"
+    category: healing
+    prefecture: "01"
+    lat: 42.48
+    lng: 142.18
+    note: 日次で配信枠が変わるためチャンネル型
+
+  - id: curated-kamifurano-hinode
+    name: 上富良野 日の出公園展望台
+    operator: "上富良野町"
+    channel_id: "UC4nF-XQTebGqUiVNSUy1haw"
+    category: scenic
+    prefecture: "01"
+    lat: 43.459
+    lng: 142.467
