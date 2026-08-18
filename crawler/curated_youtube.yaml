@@ -297,3 +297,390 @@ cameras:
     lat: 26.63
     lng: 142.156
     note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
+
+  - id: curated-fuji-panorama-uty
+    name: 富士山パノラマロープウェイ〜河口湖
+    operator: "UTYテレビ山梨"
+    video_id: "eU8A7QQOcso"
+    category: scenic
+    prefecture: "19"
+    lat: 35.517
+    lng: 138.755
+
+  - id: curated-oshino-hakkai
+    name: 忍野八海から富士山
+    operator: "富士五湖TV"
+    video_id: "zFYO6lfcA_E"
+    category: scenic
+    prefecture: "19"
+    lat: 35.46
+    lng: 138.843
+
+  - id: curated-oshino-hakkai-4k
+    name: 忍野八海から富士山（4K）
+    operator: "富士五湖TV"
+    video_id: "PxzwnWh1dKk"
+    category: scenic
+    prefecture: "19"
+    lat: 35.461
+    lng: 138.844
+
+  - id: curated-tateyama-murodo-tut
+    name: 立山室堂（チューリップテレビ）
+    operator: "チューリップテレビ"
+    video_id: "rWO9PXZwahM"
+    category: scenic
+    prefecture: "16"
+    lat: 36.577
+    lng: 137.605
+
+  - id: curated-tateyama-murodo-bbt
+    name: 立山室堂お天気カメラ
+    operator: "富山テレビ放送"
+    video_id: "IAdFjoGEoII"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5775
+    lng: 137.606
+
+  - id: curated-aso-kusasenri
+    name: 阿蘇中岳・草千里（4K）
+    operator: "自然公園財団 阿蘇支部"
+    video_id: "-DDn7lAxR-8"
+    category: volcano
+    prefecture: "43"
+    lat: 32.884
+    lng: 131.048
+    note: 草千里展望所から
+
+  - id: curated-osaka-castle-tvo
+    name: 大阪城（天満橋から）
+    operator: "テレビ大阪"
+    video_id: "-Vck0hn-zqk"
+    category: scenic
+    prefecture: "27"
+    lat: 34.687
+    lng: 135.526
+
+  - id: curated-togetsukyo
+    name: 嵯峨嵐山 渡月橋
+    operator: "京都市観光協会"
+    video_id: "jqtsC5BYlIk"
+    category: scenic
+    prefecture: "26"
+    lat: 35.013
+    lng: 135.677
+
+  - id: curated-itsukushima-htv
+    name: 嚴島神社 大鳥居（広島テレビ）
+    operator: "広島テレビ"
+    video_id: "gpnHa7sW4q8"
+    category: scenic
+    prefecture: "34"
+    lat: 34.296
+    lng: 132.319
+
+  - id: curated-miyajima-kyokai
+    name: 嚴島神社前・宮島
+    operator: "宮島観光協会"
+    video_id: "Pk8Q-69MWSU"
+    category: scenic
+    prefecture: "34"
+    lat: 34.2985
+    lng: 132.322
+
+  - id: curated-niseko-hirafu-annupuri
+    name: ニセコグラン・ヒラフ（アンヌプリ側）
+    operator: "ニセコ東急リゾート"
+    video_id: "c_Mftnh0iJI"
+    category: scenic
+    prefecture: "01"
+    lat: 42.861
+    lng: 140.688
+    note: 冬期はゲレンデ
+
+  - id: curated-niseko-hirafu-yotei
+    name: ニセコグラン・ヒラフ（羊蹄山側）
+    operator: "ニセコ東急リゾート"
+    video_id: "UjmKoVmjcBE"
+    category: scenic
+    prefecture: "01"
+    lat: 42.8615
+    lng: 140.689
+
+  - id: curated-zao-360
+    name: 蔵王温泉スキー場（360度）
+    operator: "蔵王索道協会"
+    video_id: "E59ywA_EtQI"
+    category: scenic
+    prefecture: "06"
+    lat: 38.166
+    lng: 140.403
+
+  - id: curated-kusatsu-yubatake
+    name: 草津温泉 湯畑
+    operator: "草津町"
+    video_id: "GrEEoEmmrKs"
+    category: scenic
+    prefecture: "10"
+    lat: 36.622
+    lng: 138.596
+
+  - id: curated-kusatsu-mobile
+    name: 草津温泉（移動式カメラ）
+    operator: "草津町"
+    video_id: "B_Sc1v1qR-g"
+    category: scenic
+    prefecture: "10"
+    lat: 36.6225
+    lng: 138.597
+    note: 移動式のため画角が変わる
+
+  - id: curated-asahiyama-seal
+    name: 旭山動物園 アザラシ水中
+    operator: "Live Zoo In（旭山動物園公認）"
+    video_id: "X_1MGDGrSlw"
+    category: scenic
+    prefecture: "01"
+    lat: 43.768
+    lng: 142.479
+
+  - id: curated-sendai-mmt
+    name: 仙台駅前
+    operator: "ミヤギテレビ"
+    video_id: "AinAZQgQp_s"
+    category: scenic
+    prefecture: "04"
+    lat: 38.26
+    lng: 140.882
+
+  - id: curated-tokyo-sta-train
+    name: 東京駅トレインビュー
+    operator: "日本テレビ（日テレ鉄道部）"
+    video_id: "A339NeCDGYY"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6812
+    lng: 139.7671
+    note: 新幹線・在来線の発着
+
+  - id: curated-nagoya-sta-ctv
+    name: 名古屋駅
+    operator: "中京テレビ"
+    video_id: "bEv1d0w_WJo"
+    category: scenic
+    prefecture: "23"
+    lat: 35.1709
+    lng: 136.8815
+
+  - id: curated-nagoya-sta-starcat
+    name: 名古屋駅 高層ビル群・鉄道
+    operator: "スターキャット"
+    video_id: "X304dz1zrfU"
+    category: scenic
+    prefecture: "23"
+    lat: 35.166
+    lng: 136.885
+
+  - id: curated-nagoya-taiko-starcat
+    name: 名古屋駅西口 太閤通口（新幹線）
+    operator: "スターキャット"
+    video_id: "cJd9IIu2vio"
+    category: scenic
+    prefecture: "23"
+    lat: 35.171
+    lng: 136.879
+
+  - id: curated-sakae-trinity
+    name: 栄・久屋大通公園（MIRAI TOWERから）
+    operator: "株式会社トリニティー"
+    video_id: "pHFh8pbPO10"
+    category: scenic
+    prefecture: "23"
+    lat: 35.172
+    lng: 136.908
+
+  - id: curated-hakata-kbc
+    name: 博多駅前（博多口）
+    operator: "KBC九州朝日放送"
+    video_id: "yETDDgrE2E4"
+    category: scenic
+    prefecture: "40"
+    lat: 33.59
+    lng: 130.42
+
+  - id: curated-nakasu-mainichi
+    name: 中洲
+    operator: "毎日新聞社 福岡本部"
+    video_id: "EQZzcrYnjuk"
+    category: scenic
+    prefecture: "40"
+    lat: 33.594
+    lng: 130.406
+
+  - id: curated-ohori-nishinippon
+    name: 大濠公園・福岡タワー方面
+    operator: "西日本新聞社"
+    video_id: "D86W8XXQ21E"
+    category: scenic
+    prefecture: "40"
+    lat: 33.586
+    lng: 130.379
+
+  - id: curated-kumamoto-castle-kab
+    name: 熊本市街・熊本城
+    operator: "KAB熊本朝日放送"
+    video_id: "iMxrP_Td8_M"
+    category: scenic
+    prefecture: "43"
+    lat: 32.806
+    lng: 130.706
+
+  - id: curated-kumamoto-sta-rkk
+    name: 熊本駅前
+    operator: "RKK熊本放送"
+    video_id: "uvfo7eEirHs"
+    category: scenic
+    prefecture: "43"
+    lat: 32.79
+    lng: 130.689
+
+  - id: curated-naha-asahi
+    name: 那覇市内（県庁前・国際通り方面）
+    operator: "朝日新聞社 那覇総局"
+    video_id: "6HYjCFkmDPA"
+    category: scenic
+    prefecture: "47"
+    lat: 26.2124
+    lng: 127.6809
+    note: ゆいレールも映る
+
+  - id: curated-chitose-stv
+    name: 新千歳空港
+    operator: "STV札幌テレビ放送"
+    video_id: "uvNVpMKG8rw"
+    category: other
+    prefecture: "01"
+    lat: 42.775
+    lng: 141.692
+
+  - id: curated-itami-asahi
+    name: 伊丹空港（大阪国際空港）
+    operator: "朝日新聞社"
+    video_id: "GRIr_nWOA3A"
+    category: other
+    prefecture: "28"
+    lat: 34.785
+    lng: 135.438
+
+  - id: curated-chubu-ctv
+    name: 中部国際空港 セントレア
+    operator: "中京テレビ"
+    video_id: "N1_qXtzWA30"
+    category: other
+    prefecture: "23"
+    lat: 34.858
+    lng: 136.805
+
+  - id: curated-fukuoka-tnc
+    name: 福岡空港/天神（切替）
+    operator: "TNCテレビ西日本"
+    video_id: "CzgSFUAbE9s"
+    category: other
+    prefecture: "40"
+    lat: 33.585
+    lng: 130.451
+    note: 空港と天神の切替式
+
+  - id: curated-naha-airport-rbc
+    name: 那覇空港
+    operator: "RBC琉球放送"
+    video_id: "Yzl9offu5g8"
+    category: other
+    prefecture: "47"
+    lat: 26.206
+    lng: 127.652
+
+  - id: curated-naha-airport-ntv
+    name: 那覇空港（日テレ）
+    operator: "日本テレビ"
+    video_id: "jDES4_9UlHk"
+    category: other
+    prefecture: "47"
+    lat: 26.208
+    lng: 127.654
+
+  - id: curated-hiroshima-sta-rcc
+    name: 広島駅 新幹線・在来線ホーム
+    operator: "RCC中国放送"
+    video_id: "YnCXegVqpKA"
+    category: scenic
+    prefecture: "34"
+    lat: 34.3975
+    lng: 132.475
+    note: 期間限定の可能性あり
+
+  - id: curated-tadanoumi-port
+    name: 忠海港（うさぎ島フェリー）
+    operator: "忠海港ターミナル（rabbit-island.info）"
+    video_id: "rtThvK2r1wI"
+    category: port
+    prefecture: "34"
+    lat: 34.326
+    lng: 132.995
+
+  - id: curated-yawatahama-port
+    name: 八幡浜港フェリーターミナル
+    operator: "八幡浜市"
+    video_id: "XJ-o3WNR6Fk"
+    category: port
+    prefecture: "38"
+    lat: 33.463
+    lng: 132.423
+    note: 4K
+
+  - id: curated-hakata-port-tvq
+    name: 博多港
+    operator: "TVQ九州放送"
+    video_id: "KUGWooj7awE"
+    category: port
+    prefecture: "40"
+    lat: 33.601
+    lng: 130.403
+    note: 大博通との切替式
+
+  - id: curated-kobe-meriken
+    name: 神戸メリケンパーク・ポートタワー
+    operator: "神戸ウォーターフロント開発機構"
+    video_id: "AU_2zfM4m68"
+    category: port
+    prefecture: "28"
+    lat: 34.682
+    lng: 135.187
+
+  - id: curated-hakone-turnpike
+    name: 箱根ターンパイク 大観山（富士山・芦ノ湖）
+    operator: "箱根ターンパイク株式会社"
+    video_id: "maMMEh-2Bsk"
+    category: road
+    prefecture: "14"
+    lat: 35.202
+    lng: 139.068
+
+  - id: curated-hakodateyama
+    name: 函館山山頂（夜景）
+    operator: "函館山ロープウェイ×FMいるか"
+    video_id: "s--MDmshT3I"
+    category: scenic
+    prefecture: "01"
+    lat: 41.759
+    lng: 140.704
+
+  - id: curated-inasayama
+    name: 稲佐山展望台（長崎夜景）
+    operator: "稲佐山公園（指定管理者）"
+    video_id: "_B84q1nefd0"
+    category: scenic
+    prefecture: "42"
+    lat: 32.755
+    lng: 129.85
