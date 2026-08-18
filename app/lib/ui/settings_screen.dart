@@ -36,11 +36,6 @@ class SettingsScreen extends StatelessWidget {
           onTap: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => _AttributionScreen(app: app))),
         ),
-        const ListTile(
-          leading: Icon(Icons.map_outlined),
-          title: Text('地図タイル'),
-          subtitle: Text('国土地理院「地理院タイル（淡色地図）」を使用しています'),
-        ),
         const Divider(),
         const _SectionHeader('このアプリについて'),
         const ListTile(
