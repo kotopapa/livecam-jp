@@ -275,7 +275,7 @@ class _MapScreenState extends State<MapScreen> {
             ),
             child: Text(
               widget.app.searchQuery.isEmpty && !widget.app.videoOnly &&
-                      widget.app.enabledCategories.length == 8
+                      widget.app.enabledCategories.length == 9
                   ? '${widget.app.displayableCameras.length}台'
                   : '絞り込み中 ${widget.app.displayableCameras.length}台',
               style: const TextStyle(

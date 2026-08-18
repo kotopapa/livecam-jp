@@ -12,6 +12,7 @@ const Map<String, Color> categoryColors = {
   'coast': Color(0xFF12B5CB),   // 海岸=水色
   'port': Color(0xFF7B3FE4),    // 港湾=紫
   'scenic': Color(0xFFF29900),  // 景観=橙
+  'healing': Color(0xFFEC5F9B), // 癒し=ピンク（動物・星空など）
   'other': Color(0xFF8D6E63),   // その他=茶
 };
 
@@ -24,6 +25,7 @@ const Map<String, String> categoryLabels = {
   'coast': '海岸',
   'port': '港湾',
   'scenic': '景観',
+  'healing': '癒し',
   'other': 'その他',
 };
 

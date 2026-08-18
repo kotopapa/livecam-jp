@@ -26,7 +26,7 @@ class AppState extends ChangeNotifier {
 
   /// 地図のフィルタ（カテゴリ・動画のみ）
   final Set<String> enabledCategories = {
-    'river', 'road', 'volcano', 'dam', 'coast', 'port', 'scenic', 'other'
+    'river', 'road', 'volcano', 'dam', 'coast', 'port', 'scenic', 'healing', 'other'
   };
   bool videoOnly = false;
   String searchQuery = '';

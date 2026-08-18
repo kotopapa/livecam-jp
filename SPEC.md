@@ -145,7 +145,7 @@ livecam-jp/
       "lat": 35.5942,
       "lng": 139.6647,
       "coord_accuracy": "exact",              // exact | approx | town_level | area（河川単位等の広域代表点）
-      "category": "river",                    // river | road | volcano | dam | coast | port | scenic | other
+      "category": "river",                    // river | road | volcano | dam | coast | port | scenic | healing(動物・星空等の癒し系) | other
       "prefecture": "13",                     // JIS X 0401 都道府県コード（文字列2桁）
       "municipality": "13111",                // JIS X 0402 市区町村コード（任意）
       "river_or_route": "多摩川",             // 河川名 or 路線名（任意）
@@ -500,7 +500,7 @@ Web版は最小構成（地図＋詳細表示）とし、先行してデータ�
 
 **② 地図画面（メイン）**
 
-- 全国の承認済みカメラをピン表示。**カテゴリ別のピン色**（河川=青、道路=灰、火山=赤、ダム=緑、海岸=水色、港湾=紫、景観=橙、その他=茶）
+- 全国の承認済みカメラをピン表示。**カテゴリ別のピン色**（河川=青、道路=灰、火山=赤、ダム=緑、海岸=水色、港湾=紫、景観=橙、癒し=ピンク、その他=茶）
 - ズームレベルに応じてクラスタリング（件数バッジ）
 - `status.state == "error"` のカメラは**表示しない**
 - `frozen` はピンを半透明にする
