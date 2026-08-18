@@ -89,12 +89,14 @@ class _MapScreenState extends State<MapScreen> {
     showModalBottomSheet(
       context: context,
       showDragHandle: true,
+      isScrollControlled: true,
       builder: (sheetContext) => StatefulBuilder(
         builder: (context, setSheetState) {
           final app = widget.app;
           return SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+            child: SingleChildScrollView(
+              padding: EdgeInsets.fromLTRB(20, 0, 20,
+                  16 + MediaQuery.of(sheetContext).viewInsets.bottom),
               child: Column(mainAxisSize: MainAxisSize.min, children: [
                 const Text('凡例・絞り込み',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
