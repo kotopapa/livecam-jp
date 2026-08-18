@@ -46,11 +46,13 @@ class CameraPin extends StatelessWidget {
     required this.camera,
     this.state = CameraState.unknown,
     this.selected = false,
+    this.favorite = false,
   });
 
   final Camera camera;
   final CameraState state;
   final bool selected;
+  final bool favorite;
 
   @override
   Widget build(BuildContext context) {
@@ -71,27 +73,36 @@ class CameraPin extends StatelessWidget {
         ],
       ),
     );
+    final badges = <Widget>[
+      // 動画カメラは右上に赤ドット（LIVEインジケータ）
+      if (camera.isVideo)
+        Positioned(
+          top: -2,
+          right: -2,
+          child: Container(
+            width: 10,
+            height: 10,
+            decoration: BoxDecoration(
+              color: liveDotColor,
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.white, width: 1.5),
+            ),
+          ),
+        ),
+      // お気に入りは左上に金の星
+      if (favorite)
+        const Positioned(
+          top: -5,
+          left: -5,
+          child: Icon(Icons.star, size: 13, color: Color(0xFFFFB300),
+              shadows: [Shadow(color: Colors.black45, blurRadius: 2)]),
+        ),
+    ];
     return Opacity(
       opacity: state == CameraState.frozen ? 0.45 : 1.0,
-      // 動画カメラは右上に小さな赤ドット（LIVEインジケータ）を付けて区別する
-      child: camera.isVideo
-          ? Stack(clipBehavior: Clip.none, children: [
-              pin,
-              Positioned(
-                top: -2,
-                right: -2,
-                child: Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFE53935),
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white, width: 1.5),
-                  ),
-                ),
-              ),
-            ])
-          : pin,
+      child: badges.isEmpty
+          ? pin
+          : Stack(clipBehavior: Clip.none, children: [pin, ...badges]),
     );
   }
 }

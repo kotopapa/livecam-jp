@@ -29,6 +29,7 @@ class AppState extends ChangeNotifier {
     'river', 'road', 'volcano', 'dam', 'coast', 'port', 'scenic', 'other'
   };
   bool videoOnly = false;
+  String searchQuery = '';
 
   void toggleCategory(String category) {
     if (!enabledCategories.remove(category)) enabledCategories.add(category);
@@ -40,11 +41,37 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  void setSearchQuery(String query) {
+    searchQuery = query.trim();
+    notifyListeners();
+  }
+
+  bool _matchesQuery(Camera c) {
+    if (searchQuery.isEmpty) return true;
+    final q = searchQuery.toLowerCase();
+    return c.name.toLowerCase().contains(q) ||
+        c.operator.toLowerCase().contains(q) ||
+        (c.riverOrRoute ?? '').toLowerCase().contains(q);
+  }
+
   List<Camera> get displayableCameras => repository
       .displayableCameras()
       .where((c) =>
-          enabledCategories.contains(c.category) && (!videoOnly || c.isVideo))
+          enabledCategories.contains(c.category) &&
+          (!videoOnly || c.isVideo) &&
+          _matchesQuery(c))
       .toList();
+
+  /// カテゴリ別の件数（凡例チップに表示）。カテゴリ以外のフィルタは適用後
+  Map<String, int> categoryCounts() {
+    final counts = <String, int>{};
+    for (final c in repository.displayableCameras()) {
+      if ((!videoOnly || c.isVideo) && _matchesQuery(c)) {
+        counts[c.category] = (counts[c.category] ?? 0) + 1;
+      }
+    }
+    return counts;
+  }
 
   CameraState stateOf(Camera c) =>
       repository.status[c.id]?.state ?? CameraState.unknown;

@@ -115,10 +115,19 @@ class _DetailScreenState extends State<DetailScreen> {
     );
   }
 
-  /// 取得時刻を大きく表示 + 手動更新（60秒クールダウン）
+  /// 取得時刻を大きく表示 + 手動更新（60秒クールダウン）。
+  /// 更新ボタンは静止画の再取得用のため、常時流れ続けるYouTube系では出さない
   Widget _timeAndRefreshRow(CameraStatus? st) {
     final time = st?.imageTime ?? st?.lastOkAt;
     final left = _cooldownLeft;
+    if (camera.isVideo) {
+      return const Row(children: [
+        Icon(Icons.sensors, size: 18, color: Color(0xFFE53935)),
+        SizedBox(width: 6),
+        Text('ライブ配信中',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+      ]);
+    }
     return Row(children: [
       Expanded(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

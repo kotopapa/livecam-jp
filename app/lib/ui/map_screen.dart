@@ -98,25 +98,55 @@ class _MapScreenState extends State<MapScreen> {
               child: Column(mainAxisSize: MainAxisSize.min, children: [
                 const Text('凡例・絞り込み',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                const SizedBox(height: 12),
-                Wrap(
-                  spacing: 8,
-                  runSpacing: 8,
-                  children: [
-                    for (final entry in categoryLabels.entries)
-                      FilterChip(
-                        avatar: CircleAvatar(
-                            backgroundColor: categoryColor(entry.key),
-                            radius: 6),
-                        label: Text(entry.value),
-                        selected: app.enabledCategories.contains(entry.key),
-                        onSelected: (_) {
-                          app.toggleCategory(entry.key);
-                          setSheetState(() {});
-                        },
-                      ),
-                  ],
+                const SizedBox(height: 10),
+                TextField(
+                  controller: TextEditingController(text: app.searchQuery)
+                    ..selection = TextSelection.collapsed(
+                        offset: app.searchQuery.length),
+                  decoration: InputDecoration(
+                    isDense: true,
+                    prefixIcon: const Icon(Icons.search, size: 20),
+                    hintText: 'カメラ名・運営者・河川/路線名で検索',
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    suffixIcon: app.searchQuery.isEmpty
+                        ? null
+                        : IconButton(
+                            icon: const Icon(Icons.clear, size: 18),
+                            onPressed: () {
+                              app.setSearchQuery('');
+                              setSheetState(() {});
+                            },
+                          ),
+                  ),
+                  onChanged: (v) {
+                    app.setSearchQuery(v);
+                    setSheetState(() {});
+                  },
                 ),
+                const SizedBox(height: 12),
+                Builder(builder: (context) {
+                  final counts = app.categoryCounts();
+                  return Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      for (final entry in categoryLabels.entries)
+                        FilterChip(
+                          avatar: CircleAvatar(
+                              backgroundColor: categoryColor(entry.key),
+                              radius: 6),
+                          label: Text(
+                              '${entry.value} ${counts[entry.key] ?? 0}'),
+                          selected: app.enabledCategories.contains(entry.key),
+                          onSelected: (_) {
+                            app.toggleCategory(entry.key);
+                            setSheetState(() {});
+                          },
+                        ),
+                    ],
+                  );
+                }),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
                   title: const Text('動画カメラのみ'),
@@ -133,6 +163,11 @@ class _MapScreenState extends State<MapScreen> {
                     kind: _LegendKind.uncertain, text: '黄色の縁 = 位置未確定（おおよそ/代表点）'),
                 const _LegendRow(
                     kind: _LegendKind.frozen, text: '半透明 = 画像が長時間更新されていない'),
+                const _LegendRow(
+                    kind: _LegendKind.favorite, text: '金の星 = お気に入り登録済み'),
+                const _LegendRow(
+                    kind: _LegendKind.cluster,
+                    text: '数字の丸 = 周辺カメラのまとまり（タップでズーム）'),
               ]),
             ),
           );
@@ -200,6 +235,7 @@ class _MapScreenState extends State<MapScreen> {
                         child: CameraPin(
                           camera: item.camera!,
                           state: widget.app.stateOf(item.camera!),
+                          favorite: widget.app.isFavorite(item.camera!),
                         ),
                       ),
                     ),
@@ -221,6 +257,29 @@ class _MapScreenState extends State<MapScreen> {
           ],
         ),
         if (widget.app.notice != null) _NoticeBanner(text: widget.app.notice!),
+        Positioned(
+          left: 12,
+          top: MediaQuery.of(context).padding.top + 12,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.92),
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: const [
+                BoxShadow(color: Colors.black26, blurRadius: 3)
+              ],
+            ),
+            child: Text(
+              widget.app.searchQuery.isEmpty && !widget.app.videoOnly &&
+                      widget.app.enabledCategories.length == 8
+                  ? '${widget.app.displayableCameras.length}台'
+                  : '絞り込み中 ${widget.app.displayableCameras.length}台',
+              style: const TextStyle(
+                  fontSize: 12, fontWeight: FontWeight.bold,
+                  color: Colors.black87),
+            ),
+          ),
+        ),
         Positioned(
           right: 16,
           top: MediaQuery.of(context).padding.top + 12,
@@ -263,7 +322,7 @@ class _MapScreenState extends State<MapScreen> {
   }
 }
 
-enum _LegendKind { liveDot, uncertain, frozen }
+enum _LegendKind { liveDot, uncertain, frozen, favorite, cluster }
 
 /// 凡例の1行（マーカー例 + 説明）。
 class _LegendRow extends StatelessWidget {
@@ -296,6 +355,17 @@ class _LegendRow extends StatelessWidget {
               height: 14,
               decoration: const BoxDecoration(
                   color: Color(0xFF1E6FD9), shape: BoxShape.circle))),
+      _LegendKind.favorite => const Icon(Icons.star,
+          size: 14, color: Color(0xFFFFB300)),
+      _LegendKind.cluster => Container(
+          width: 16,
+          height: 16,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+              color: Color(0xFF1E6FD9), shape: BoxShape.circle),
+          child: const Text('9',
+              style: TextStyle(color: Colors.white, fontSize: 9,
+                  fontWeight: FontWeight.bold))),
     };
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3),
