@@ -1175,7 +1175,7 @@ cameras:
   - id: curated-karuizawa-birds
     name: 軽井沢 小さな鳥とリスのLIVE
     operator: "michiski（個人運営）"
-    video_id: "HXp5x6llMo4"
+    channel_id: "UCknCiFBy4pQTphwgyj2aa7A"
     category: scenic
     prefecture: "20"
     lat: 36.3480
@@ -1231,3 +1231,371 @@ cameras:
     lat: 36.556
     lng: 136.649
     note: 金沢市公式ページ掲載のライブカメラ
+
+  - id: curated-aomori-yanagimachi
+    name: 国道4号 柳町通り交差点
+    operator: "ATV青森テレビ"
+    video_id: "XyqzzI_vSCo"
+    category: road
+    prefecture: "02"
+    lat: 40.8244
+    lng: 140.74
+    note: チャンネル名義はレビューで最終確認
+
+  - id: curated-morioka-ekinishi
+    name: 盛岡駅西通
+    operator: "IAT岩手朝日テレビ"
+    video_id: "vMik8XBp3jI"
+    category: road
+    prefecture: "03"
+    lat: 39.699
+    lng: 141.135
+
+  - id: curated-sendai-kitakanjo
+    name: 仙台 北環状線（南吉成）
+    operator: "河北新報社"
+    video_id: "ZwxSwqJX76o"
+    category: road
+    prefecture: "04"
+    lat: 38.293
+    lng: 140.828
+
+  - id: curated-tsuchiura-r125
+    name: 土浦 国道125号（城北町）
+    operator: "着物お手入れ専門店 扇屋"
+    video_id: "lAh2irV6AfI"
+    category: road
+    prefecture: "08"
+    lat: 36.09
+    lng: 140.195
+
+  - id: curated-nct-nagaoka
+    name: NCT道路情報カメラ（新潟県内切替）
+    operator: "エヌ・シィ・ティ（NCT）"
+    video_id: "g9SJeUH0sWc"
+    category: road
+    prefecture: "15"
+    lat: 37.446
+    lng: 138.851
+    note: 複数地点の切替配信
+
+  - id: curated-karuizawa-oiwake
+    name: 軽井沢 国道18号 追分
+    operator: "軽井沢町"
+    video_id: "Y4KAMd2eGuU"
+    category: road
+    prefecture: "20"
+    lat: 36.346
+    lng: 138.547
+
+  - id: curated-karuizawa-shinkaru
+    name: 軽井沢 国道18号 新軽井沢西
+    operator: "軽井沢町"
+    video_id: "GkoIAnOeazM"
+    category: road
+    prefecture: "20"
+    lat: 36.342
+    lng: 138.633
+
+  - id: curated-karuizawa-kyukaru
+    name: 旧軽井沢ロータリー
+    operator: "軽井沢町"
+    video_id: "iLfmRhMarWM"
+    category: road
+    prefecture: "20"
+    lat: 36.356
+    lng: 138.636
+
+  - id: curated-karuizawa-prince
+    name: 軽井沢 プリンス通り
+    operator: "軽井沢町"
+    video_id: "8VbOUB-dplM"
+    category: road
+    prefecture: "20"
+    lat: 36.339
+    lng: 138.63
+
+  - id: curated-karuizawa-yukawa
+    name: 軽井沢 湯川ふるさと公園付近（国道146号）
+    operator: "軽井沢町"
+    video_id: "fic_lTH_4KY"
+    category: road
+    prefecture: "20"
+    lat: 36.333
+    lng: 138.611
+
+  - id: curated-kyoto-karasuma
+    name: 京都 烏丸通（京都新聞社前）
+    operator: "京都新聞社"
+    video_id: "-bGDoyYqe1I"
+    category: road
+    prefecture: "26"
+    lat: 35.01
+    lng: 135.76
+
+  - id: curated-kanmon-bridge
+    name: 関門橋
+    operator: "tysテレビ山口"
+    video_id: "ZOScw9H4D94"
+    category: road
+    prefecture: "35"
+    lat: 33.96
+    lng: 130.953
+
+  - id: curated-ginowan-r58
+    name: 宜野湾 国道58号 大謝名交差点
+    operator: "BANKSY（宜野湾）"
+    video_id: "qcXFhfNRe5g"
+    category: road
+    prefecture: "47"
+    lat: 26.277
+    lng: 127.728
+    note: 防災配信実績のある民間PTZカメラ
+
+  - id: curated-abashiri-birds
+    name: オホーツク 野鳥と朝日のライブ
+    operator: "個人運営（オホーツク野鳥ライブ）"
+    video_id: "tMe0cocGOYA"
+    category: scenic
+    prefecture: "01"
+    lat: 44.021
+    lng: 144.274
+
+  - id: curated-nakano-hogoneko
+    name: 保護猫ルーム（富士見台どうぶつ病院）
+    operator: "富士見台どうぶつ病院"
+    video_id: "KiKDn8DnKeQ"
+    category: scenic
+    prefecture: "13"
+    lat: 35.727
+    lng: 139.627
+
+  - id: curated-miyama-kayabuki
+    name: 美山 かやぶきの里
+    operator: "agataJapan（知井の里情報発信館）"
+    video_id: "Eyt5W76Qvh0"
+    category: scenic
+    prefecture: "26"
+    lat: 35.306
+    lng: 135.573
+
+  - id: curated-niikappu-uma
+    name: 新冠 馬の映るお天気カメラ
+    operator: "LIVEtheSCAPE（個人運営）"
+    video_id: "HgcqGKqQalE"
+    category: scenic
+    prefecture: "01"
+    lat: 42.461
+    lng: 142.228
+
+  - id: curated-katase-higashihama
+    name: 片瀬海岸東浜
+    operator: "HviewCam（個人運営）"
+    video_id: "xPgeZzojY5o"
+    category: coast
+    prefecture: "14"
+    lat: 35.308
+    lng: 139.487
+
+  - id: curated-southern-chigasaki
+    name: サザンビーチちがさき
+    operator: "WITH SEA茅ヶ崎"
+    video_id: "OJYcNsIpyx0"
+    category: coast
+    prefecture: "14"
+    lat: 35.313
+    lng: 139.403
+
+  - id: curated-shimoda-port
+    name: 下田港
+    operator: "小林テレビ設備"
+    video_id: "rB_nzP76ktc"
+    category: port
+    prefecture: "22"
+    lat: 34.672
+    lng: 138.945
+
+  - id: curated-omaezaki-port
+    name: 御前崎港
+    operator: "御前崎ケーブルテレビ"
+    video_id: "x7oJB_dhv3I"
+    category: port
+    prefecture: "22"
+    lat: 34.607
+    lng: 138.221
+    note: 有事は画角変更運用
+
+  - id: curated-utsumi-beach
+    name: 内海海岸
+    operator: "南知多町観光協会"
+    video_id: "Ka8HqXkN9oM"
+    category: coast
+    prefecture: "23"
+    lat: 34.687
+    lng: 136.89
+
+  - id: curated-toyohashi-omotehama
+    name: 豊橋 表浜海岸（伊古部）
+    operator: "豊橋市"
+    video_id: "O2g9Y26nKso"
+    category: coast
+    prefecture: "23"
+    lat: 34.641
+    lng: 137.418
+    note: 遠州灘の海岸監視
+
+  - id: curated-kaigata-sakurajima-a
+    name: 海潟漁港・桜島（財宝A）
+    operator: "株式会社財宝"
+    video_id: "eF9PohrRP_o"
+    category: port
+    prefecture: "46"
+    lat: 31.49
+    lng: 130.736
+
+  - id: curated-kaigata-sakurajima-b
+    name: 海潟漁港・桜島（財宝B）
+    operator: "株式会社財宝"
+    video_id: "fuXHrVU9FU4"
+    category: port
+    prefecture: "46"
+    lat: 31.492
+    lng: 130.738
+
+  - id: curated-tarumizu-kyt
+    name: 垂水 海潟・錦江湾
+    operator: "KYT鹿児島読売テレビ"
+    video_id: "PDUwDPgyMFU"
+    category: coast
+    prefecture: "46"
+    lat: 31.493
+    lng: 130.73
+
+  - id: curated-kotsukigawa-kako
+    name: 甲突川河口・錦江湾
+    operator: "南電工"
+    video_id: "WknwFmhKRdQ"
+    category: coast
+    prefecture: "46"
+    lat: 31.58
+    lng: 130.557
+
+  - id: curated-nagasaki-port
+    name: 長崎港
+    operator: "NCC長崎文化放送"
+    video_id: "SVpsCVjzoiI"
+    category: port
+    prefecture: "42"
+    lat: 32.742
+    lng: 129.868
+
+  - id: curated-kujiranami
+    name: 鯨波海岸
+    operator: "日本海夕日チャンネル（サウナ宝来洲）"
+    video_id: "lZ0Va0y_KxA"
+    category: coast
+    prefecture: "15"
+    lat: 37.351
+    lng: 138.531
+
+  - id: curated-amaharashi
+    name: 雨晴海岸・富山湾
+    operator: "道の駅雨晴"
+    video_id: "vOFQt1JWSgE"
+    category: coast
+    prefecture: "16"
+    lat: 36.788
+    lng: 137.051
+    note: 女岩と立山連峰の絶景
+
+  - id: curated-wajima-port
+    name: 輪島港・朝市通り
+    operator: "HAB北陸朝日放送"
+    video_id: "44VtKsTv90U"
+    category: port
+    prefecture: "17"
+    lat: 37.397
+    lng: 136.899
+
+  - id: curated-suzu-coast
+    name: 珠洲（飯田港方面）
+    operator: "HAB北陸朝日放送"
+    video_id: "MJv8moHUmlU"
+    category: coast
+    prefecture: "17"
+    lat: 37.438
+    lng: 137.26
+
+  - id: curated-busena-beach
+    name: ブセナビーチ
+    operator: "ザ・ブセナテラス"
+    video_id: "VWpOgCVKoK4"
+    category: coast
+    prefecture: "47"
+    lat: 26.655
+    lng: 127.978
+
+  - id: curated-yushima-nekojima
+    name: 湯島「猫島」ありのままライブ
+    operator: "熊本日日新聞社"
+    channel_id: "UC9pARxM8ajMNB0rA8xBamLg"
+    category: scenic
+    prefecture: "43"
+    lat: 32.547
+    lng: 130.453
+
+  - id: curated-toba-rakko
+    name: 鳥羽水族館 ラッコ水槽
+    operator: "鳥羽水族館"
+    channel_id: "UCQcj-JgG6XA0hGcTYWnK3ig"
+    category: scenic
+    prefecture: "24"
+    lat: 34.481
+    lng: 136.843
+
+  - id: curated-namiai-hoshizora
+    name: 浪合パーク 星空（阿智村）
+    operator: "浪合パーク（スタービレッジ阿智）"
+    channel_id: "UCtMHIWQqa1YK-mAKg3E2VOA"
+    category: scenic
+    prefecture: "20"
+    lat: 35.323
+    lng: 137.657
+    note: 日本一の星空で有名
+
+  - id: curated-kizuna-nekocafe
+    name: 保護猫カフェキズナ
+    operator: "保護猫カフェキズナ"
+    channel_id: "UCML_lMEOqOL78bghrm_7APw"
+    category: scenic
+    prefecture: "14"
+    lat: 35.4437
+    lng: 139.638
+
+  - id: curated-nikko-akechidaira
+    name: 第二いろは坂 明智平（国道120号）
+    operator: "日光地域交通対策検討会"
+    channel_id: "UCCK9dx9Psj9DpDeQCa86XOQ"
+    category: road
+    prefecture: "09"
+    lat: 36.73
+    lng: 139.524
+    note: 紅葉期等の期間運用
+
+  - id: curated-harimaya-bashi
+    name: はりまや橋交差点
+    operator: "高知県（高知家）"
+    channel_id: "UCFRpPniTy8R0BYze7urqaLA"
+    category: road
+    prefecture: "39"
+    lat: 33.559
+    lng: 133.544
+
+  - id: curated-miyako-joho
+    name: 宮古港・市街（宮古情報カメラ）
+    operator: "宮古情報カメラ（個人運営）"
+    channel_id: "UCMbq0m2vILQTbc0VhOcVWaQ"
+    category: port
+    prefecture: "03"
+    lat: 39.641
+    lng: 141.972

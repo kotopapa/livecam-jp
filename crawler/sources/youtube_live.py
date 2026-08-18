@@ -36,6 +36,7 @@ class LiveChannel:
     license: str = "unknown"
     terms_url: str | None = None
     default_category: str = "river"
+    title_filter: str | None = None   # 一致しない配信は採らない（ニュース等の混入防止）
     category_rules: tuple = ()   # (正規表現, category)
     pref_rules: tuple = ()       # (正規表現, JISコード, 県名)
     default_pref_name: str = ""
@@ -68,6 +69,28 @@ CHANNELS: list[LiveChannel] = [
             (r"黒部|常願寺|神通|庄川|小矢部", "16", ""),
             (r"手取川|梯川", "17", ""),
         ),
+    ),
+    # 峡西CATV: 南アルプス市・富士川町の主要交差点8地点
+    LiveChannel(
+        key="kyosai",
+        channel_id="UCHZt37s-l_ZGuWcEMiFuSVA",
+        operator="峡西シーエーティーヴィ",
+        attribution="映像提供：峡西CATV（公式YouTubeライブ）",
+        default_pref="19",
+        default_pref_name="山梨県南アルプス市",
+        default_category="road",
+        title_filter=r"交差点|橋|IC|バイパス|国道|県道",
+    ),
+    # ケーブルテレビ富山: 富山市内の交差点・幹線4地点
+    LiveChannel(
+        key="ctt",
+        channel_id="UCtiNcBgihippyAi6mOTxh0g",
+        operator="ケーブルテレビ富山",
+        attribution="映像提供：ケーブルテレビ富山（公式YouTubeライブ）",
+        default_pref="16",
+        default_pref_name="富山県富山市",
+        default_category="road",
+        title_filter=r"交差点|橋|IC|環状|国道|県道|通り",
     ),
     # 北海道開発局 河川管理課: 16カ所巡回×2本
     LiveChannel(
@@ -156,6 +179,8 @@ class YoutubeLiveParser(SourceParser):
             for vid, title in streams:
                 name = clean_title(title)
                 if not name:
+                    continue
+                if ch.title_filter and not re.search(ch.title_filter, name):
                     continue
                 category = ch.default_category
                 for pat, cat in ch.category_rules:

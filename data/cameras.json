@@ -1,6 +1,43 @@
 {
- "version": "2026-08-18T12:55:22Z",
+ "version": "2026-08-18T13:01:49Z",
  "cameras": [
+  {
+   "id": "curated-abashiri-birds",
+   "name": "オホーツク 野鳥と朝日のライブ",
+   "name_kana": null,
+   "lat": 44.021,
+   "lng": 144.274,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "tMe0cocGOYA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=tMe0cocGOYA"
+   },
+   "operator": "個人運営（オホーツク野鳥ライブ）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=tMe0cocGOYA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：個人運営（オホーツク野鳥ライブ）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
   {
    "id": "curated-akihabara-aisan",
    "name": "秋葉原 中央通り交差点",
@@ -34,6 +71,80 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-amaharashi",
+   "name": "雨晴海岸・富山湾",
+   "name_kana": null,
+   "lat": 36.788,
+   "lng": 137.051,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "16",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vOFQt1JWSgE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vOFQt1JWSgE"
+   },
+   "operator": "道の駅雨晴",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vOFQt1JWSgE",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：道の駅雨晴（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-aomori-yanagimachi",
+   "name": "国道4号 柳町通り交差点",
+   "name_kana": null,
+   "lat": 40.8244,
+   "lng": 140.74,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "02",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "XyqzzI_vSCo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=XyqzzI_vSCo"
+   },
+   "operator": "ATV青森テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=XyqzzI_vSCo",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ATV青森テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -177,6 +288,43 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：びわ湖放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-busena-beach",
+   "name": "ブセナビーチ",
+   "name_kana": null,
+   "lat": 26.655,
+   "lng": 127.978,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "47",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "VWpOgCVKoK4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=VWpOgCVKoK4"
+   },
+   "operator": "ザ・ブセナテラス",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=VWpOgCVKoK4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ザ・ブセナテラス（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -668,6 +816,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-ginowan-r58",
+   "name": "宜野湾 国道58号 大謝名交差点",
+   "name_kana": null,
+   "lat": 26.277,
+   "lng": 127.728,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "47",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "qcXFhfNRe5g",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=qcXFhfNRe5g"
+   },
+   "operator": "BANKSY（宜野湾）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=qcXFhfNRe5g",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：BANKSY（宜野湾）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-ginza-sukiyabashi",
    "name": "銀座 数寄屋橋交差点",
    "name_kana": null,
@@ -922,6 +1107,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-harimaya-bashi",
+   "name": "はりまや橋交差点",
+   "name_kana": null,
+   "lat": 33.559,
+   "lng": 133.544,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "39",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCFRpPniTy8R0BYze7urqaLA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCFRpPniTy8R0BYze7urqaLA/live"
+   },
+   "operator": "高知県（高知家）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCFRpPniTy8R0BYze7urqaLA/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高知県（高知家）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -1260,6 +1482,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-kaigata-sakurajima-a",
+   "name": "海潟漁港・桜島（財宝A）",
+   "name_kana": null,
+   "lat": 31.49,
+   "lng": 130.736,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "eF9PohrRP_o",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=eF9PohrRP_o"
+   },
+   "operator": "株式会社財宝",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=eF9PohrRP_o",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：株式会社財宝（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kaigata-sakurajima-b",
+   "name": "海潟漁港・桜島（財宝B）",
+   "name_kana": null,
+   "lat": 31.492,
+   "lng": 130.738,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "fuXHrVU9FU4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=fuXHrVU9FU4"
+   },
+   "operator": "株式会社財宝",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=fuXHrVU9FU4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：株式会社財宝（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-kamikochi-kappabashi",
    "name": "上高地 河童橋（4K）",
    "name_kana": null,
@@ -1519,6 +1815,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-kanmon-bridge",
+   "name": "関門橋",
+   "name_kana": null,
+   "lat": 33.96,
+   "lng": 130.953,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ZOScw9H4D94",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ZOScw9H4D94"
+   },
+   "operator": "tysテレビ山口",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ZOScw9H4D94",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：tysテレビ山口（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-karuizawa-birds",
    "name": "軽井沢 小さな鳥とリスのLIVE",
    "name_kana": null,
@@ -1530,15 +1863,15 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "HXp5x6llMo4",
+    "type": "youtube_channel",
+    "url": "UCknCiFBy4pQTphwgyj2aa7A",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=HXp5x6llMo4"
+    "url": "https://www.youtube.com/channel/UCknCiFBy4pQTphwgyj2aa7A/live"
    },
    "operator": "michiski（個人運営）",
    "source": {
@@ -1551,6 +1884,191 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-karuizawa-kyukaru",
+   "name": "旧軽井沢ロータリー",
+   "name_kana": null,
+   "lat": 36.356,
+   "lng": 138.636,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "iLfmRhMarWM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=iLfmRhMarWM"
+   },
+   "operator": "軽井沢町",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=iLfmRhMarWM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：軽井沢町（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-karuizawa-oiwake",
+   "name": "軽井沢 国道18号 追分",
+   "name_kana": null,
+   "lat": 36.346,
+   "lng": 138.547,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Y4KAMd2eGuU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Y4KAMd2eGuU"
+   },
+   "operator": "軽井沢町",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Y4KAMd2eGuU",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：軽井沢町（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-karuizawa-prince",
+   "name": "軽井沢 プリンス通り",
+   "name_kana": null,
+   "lat": 36.339,
+   "lng": 138.63,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "8VbOUB-dplM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8VbOUB-dplM"
+   },
+   "operator": "軽井沢町",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=8VbOUB-dplM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：軽井沢町（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-karuizawa-shinkaru",
+   "name": "軽井沢 国道18号 新軽井沢西",
+   "name_kana": null,
+   "lat": 36.342,
+   "lng": 138.633,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "GkoIAnOeazM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=GkoIAnOeazM"
+   },
+   "operator": "軽井沢町",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=GkoIAnOeazM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：軽井沢町（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-karuizawa-yukawa",
+   "name": "軽井沢 湯川ふるさと公園付近（国道146号）",
+   "name_kana": null,
+   "lat": 36.333,
+   "lng": 138.611,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "fic_lTH_4KY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=fic_lTH_4KY"
+   },
+   "operator": "軽井沢町",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=fic_lTH_4KY",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：軽井沢町（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -1583,6 +2101,43 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：東京動物園協会（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-katase-higashihama",
+   "name": "片瀬海岸東浜",
+   "name_kana": null,
+   "lat": 35.308,
+   "lng": 139.487,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "xPgeZzojY5o",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=xPgeZzojY5o"
+   },
+   "operator": "HviewCam（個人運営）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=xPgeZzojY5o",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HviewCam（個人運営）（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -1741,6 +2296,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-kizuna-nekocafe",
+   "name": "保護猫カフェキズナ",
+   "name_kana": null,
+   "lat": 35.4437,
+   "lng": 139.638,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCML_lMEOqOL78bghrm_7APw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCML_lMEOqOL78bghrm_7APw/live"
+   },
+   "operator": "保護猫カフェキズナ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCML_lMEOqOL78bghrm_7APw/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：保護猫カフェキズナ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-knb-toyama",
    "name": "富山駅北",
    "name_kana": null,
@@ -1810,6 +2402,80 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kotsukigawa-kako",
+   "name": "甲突川河口・錦江湾",
+   "name_kana": null,
+   "lat": 31.58,
+   "lng": 130.557,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "WknwFmhKRdQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=WknwFmhKRdQ"
+   },
+   "operator": "南電工",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=WknwFmhKRdQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南電工（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kujiranami",
+   "name": "鯨波海岸",
+   "name_kana": null,
+   "lat": 37.351,
+   "lng": 138.531,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "15",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "lZ0Va0y_KxA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=lZ0Va0y_KxA"
+   },
+   "operator": "日本海夕日チャンネル（サウナ宝来洲）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=lZ0Va0y_KxA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：日本海夕日チャンネル（サウナ宝来洲）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -1963,6 +2629,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-kyoto-karasuma",
+   "name": "京都 烏丸通（京都新聞社前）",
+   "name_kana": null,
+   "lat": 35.01,
+   "lng": 135.76,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "26",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "-bGDoyYqe1I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=-bGDoyYqe1I"
+   },
+   "operator": "京都新聞社",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=-bGDoyYqe1I",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都新聞社（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-maehama-miyakotv",
    "name": "与那覇前浜ビーチ・来間大橋",
    "name_kana": null,
@@ -2111,6 +2814,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-miyako-joho",
+   "name": "宮古港・市街（宮古情報カメラ）",
+   "name_kana": null,
+   "lat": 39.641,
+   "lng": 141.972,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "03",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCMbq0m2vILQTbc0VhOcVWaQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCMbq0m2vILQTbc0VhOcVWaQ/live"
+   },
+   "operator": "宮古情報カメラ（個人運営）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCMbq0m2vILQTbc0VhOcVWaQ/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：宮古情報カメラ（個人運営）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-miyako-watermark",
    "name": "宮古島 ビーチ（ウォーターマークホテル）",
    "name_kana": null,
@@ -2138,6 +2878,117 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：ウォーターマークホテル＆リゾーツ沖縄宮古島（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-miyama-kayabuki",
+   "name": "美山 かやぶきの里",
+   "name_kana": null,
+   "lat": 35.306,
+   "lng": 135.573,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "26",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Eyt5W76Qvh0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Eyt5W76Qvh0"
+   },
+   "operator": "agataJapan（知井の里情報発信館）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Eyt5W76Qvh0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：agataJapan（知井の里情報発信館）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-morioka-ekinishi",
+   "name": "盛岡駅西通",
+   "name_kana": null,
+   "lat": 39.699,
+   "lng": 141.135,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "03",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vMik8XBp3jI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vMik8XBp3jI"
+   },
+   "operator": "IAT岩手朝日テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vMik8XBp3jI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：IAT岩手朝日テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-nagasaki-port",
+   "name": "長崎港",
+   "name_kana": null,
+   "lat": 32.742,
+   "lng": 129.868,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "42",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "SVpsCVjzoiI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=SVpsCVjzoiI"
+   },
+   "operator": "NCC長崎文化放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=SVpsCVjzoiI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：NCC長崎文化放送（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -2370,6 +3221,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-nakano-hogoneko",
+   "name": "保護猫ルーム（富士見台どうぶつ病院）",
+   "name_kana": null,
+   "lat": 35.727,
+   "lng": 139.627,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "13",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "KiKDn8DnKeQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=KiKDn8DnKeQ"
+   },
+   "operator": "富士見台どうぶつ病院",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=KiKDn8DnKeQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：富士見台どうぶつ病院（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-nakasu-mainichi",
    "name": "中洲",
    "name_kana": null,
@@ -2407,6 +3295,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-namiai-hoshizora",
+   "name": "浪合パーク 星空（阿智村）",
+   "name_kana": null,
+   "lat": 35.323,
+   "lng": 137.657,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCtMHIWQqa1YK-mAKg3E2VOA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCtMHIWQqa1YK-mAKg3E2VOA/live"
+   },
+   "operator": "浪合パーク（スタービレッジ阿智）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCtMHIWQqa1YK-mAKg3E2VOA/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浪合パーク（スタービレッジ阿智）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-narita-a-asahi",
    "name": "成田空港 A滑走路",
    "name_kana": null,
@@ -2439,6 +3364,117 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-nct-nagaoka",
+   "name": "NCT道路情報カメラ（新潟県内切替）",
+   "name_kana": null,
+   "lat": 37.446,
+   "lng": 138.851,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "g9SJeUH0sWc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=g9SJeUH0sWc"
+   },
+   "operator": "エヌ・シィ・ティ（NCT）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=g9SJeUH0sWc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：エヌ・シィ・ティ（NCT）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-niikappu-uma",
+   "name": "新冠 馬の映るお天気カメラ",
+   "name_kana": null,
+   "lat": 42.461,
+   "lng": 142.228,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "HgcqGKqQalE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=HgcqGKqQalE"
+   },
+   "operator": "LIVEtheSCAPE（個人運営）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=HgcqGKqQalE",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：LIVEtheSCAPE（個人運営）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-nikko-akechidaira",
+   "name": "第二いろは坂 明智平（国道120号）",
+   "name_kana": null,
+   "lat": 36.73,
+   "lng": 139.524,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "09",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCCK9dx9Psj9DpDeQCa86XOQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCCK9dx9Psj9DpDeQCa86XOQ/live"
+   },
+   "operator": "日光地域交通対策検討会",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCCK9dx9Psj9DpDeQCa86XOQ/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：日光地域交通対策検討会（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -2587,6 +3623,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-omaezaki-port",
+   "name": "御前崎港",
+   "name_kana": null,
+   "lat": 34.607,
+   "lng": 138.221,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "22",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "x7oJB_dhv3I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=x7oJB_dhv3I"
+   },
+   "operator": "御前崎ケーブルテレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=x7oJB_dhv3I",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：御前崎ケーブルテレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -3665,6 +4738,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-sendai-kitakanjo",
+   "name": "仙台 北環状線（南吉成）",
+   "name_kana": null,
+   "lat": 38.293,
+   "lng": 140.828,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ZwxSwqJX76o",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ZwxSwqJX76o"
+   },
+   "operator": "河北新報社",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ZwxSwqJX76o",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：河北新報社（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-sendai-mmt",
    "name": "仙台駅前",
    "name_kana": null,
@@ -3808,6 +4918,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown feed_type=youtube_video"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-shimoda-port",
+   "name": "下田港",
+   "name_kana": null,
+   "lat": 34.672,
+   "lng": 138.945,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "22",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "rB_nzP76ktc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=rB_nzP76ktc"
+   },
+   "operator": "小林テレビ設備",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=rB_nzP76ktc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：小林テレビ設備（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -4035,6 +5182,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-southern-chigasaki",
+   "name": "サザンビーチちがさき",
+   "name_kana": null,
+   "lat": 35.313,
+   "lng": 139.403,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "OJYcNsIpyx0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=OJYcNsIpyx0"
+   },
+   "operator": "WITH SEA茅ヶ崎",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=OJYcNsIpyx0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：WITH SEA茅ヶ崎（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-stv-hokkaido-mix",
    "name": "北海道各地（切替）",
    "name_kana": null,
@@ -4220,6 +5404,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-suzu-coast",
+   "name": "珠洲（飯田港方面）",
+   "name_kana": null,
+   "lat": 37.438,
+   "lng": 137.26,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "17",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "MJv8moHUmlU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=MJv8moHUmlU"
+   },
+   "operator": "HAB北陸朝日放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=MJv8moHUmlU",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HAB北陸朝日放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-tadanoumi-port",
    "name": "忠海港（うさぎ島フェリー）",
    "name_kana": null,
@@ -4358,6 +5579,43 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：谷川岳ロープウエー株式会社（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-tarumizu-kyt",
+   "name": "垂水 海潟・錦江湾",
+   "name_kana": null,
+   "lat": 31.493,
+   "lng": 130.73,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "PDUwDPgyMFU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=PDUwDPgyMFU"
+   },
+   "operator": "KYT鹿児島読売テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=PDUwDPgyMFU",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：KYT鹿児島読売テレビ（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -4511,6 +5769,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-toba-rakko",
+   "name": "鳥羽水族館 ラッコ水槽",
+   "name_kana": null,
+   "lat": 34.481,
+   "lng": 136.843,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "24",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCQcj-JgG6XA0hGcTYWnK3ig",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCQcj-JgG6XA0hGcTYWnK3ig/live"
+   },
+   "operator": "鳥羽水族館",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCQcj-JgG6XA0hGcTYWnK3ig/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鳥羽水族館（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -4701,6 +5996,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-toyohashi-omotehama",
+   "name": "豊橋 表浜海岸（伊古部）",
+   "name_kana": null,
+   "lat": 34.641,
+   "lng": 137.418,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "O2g9Y26nKso",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=O2g9Y26nKso"
+   },
+   "operator": "豊橋市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=O2g9Y26nKso",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：豊橋市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-tsuchiura-r125",
+   "name": "土浦 国道125号（城北町）",
+   "name_kana": null,
+   "lat": 36.09,
+   "lng": 140.195,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "08",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "lAh2irV6AfI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=lAh2irV6AfI"
+   },
+   "operator": "着物お手入れ専門店 扇屋",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=lAh2irV6AfI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：着物お手入れ専門店 扇屋（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-tuf-fukushima-mix",
    "name": "福島・郡山・会津若松・小名浜（切替）",
    "name_kana": null,
@@ -4775,6 +6144,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-utsumi-beach",
+   "name": "内海海岸",
+   "name_kana": null,
+   "lat": 34.687,
+   "lng": 136.89,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "23",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Ka8HqXkN9oM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Ka8HqXkN9oM"
+   },
+   "operator": "南知多町観光協会",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Ka8HqXkN9oM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南知多町観光協会（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-wajima-port",
+   "name": "輪島港・朝市通り",
+   "name_kana": null,
+   "lat": 37.397,
+   "lng": 136.899,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "17",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "44VtKsTv90U",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=44VtKsTv90U"
+   },
+   "operator": "HAB北陸朝日放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=44VtKsTv90U",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：HAB北陸朝日放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "curated-yawatahama-port",
    "name": "八幡浜港フェリーターミナル",
    "name_kana": null,
@@ -4807,6 +6250,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-yushima-nekojima",
+   "name": "湯島「猫島」ありのままライブ",
+   "name_kana": null,
+   "lat": 32.547,
+   "lng": 130.453,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "43",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC9pARxM8ajMNB0rA8xBamLg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UC9pARxM8ajMNB0rA8xBamLg/live"
+   },
+   "operator": "熊本日日新聞社",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC9pARxM8ajMNB0rA8xBamLg/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本日日新聞社（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -490578,6 +492058,376 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: feed_type=youtube_video with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-2c5f16a5d1",
+   "name": "南アルプスIC西交差点",
+   "name_kana": null,
+   "lat": 35.608334,
+   "lng": 138.464996,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "sgzeogDT4c4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=sgzeogDT4c4"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-370f935d3b",
+   "name": "十五所交差点",
+   "name_kana": null,
+   "lat": 35.619686,
+   "lng": 138.474091,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "KLOsZ6IzP3U",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=KLOsZ6IzP3U"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-64aa912f53",
+   "name": "白根IC西交差点",
+   "name_kana": null,
+   "lat": 35.608334,
+   "lng": 138.464996,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "r3Qi439HTzI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=r3Qi439HTzI"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-9f7e3f0701",
+   "name": "御勅使川橋",
+   "name_kana": null,
+   "lat": 35.608334,
+   "lng": 138.464996,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "SitepD5vzlM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=SitepD5vzlM"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-c6d286e1c9",
+   "name": "開国橋西交差点",
+   "name_kana": null,
+   "lat": 35.608334,
+   "lng": 138.464996,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "XlCFjPwPH2s",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=XlCFjPwPH2s"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-e1e7cdedce",
+   "name": "小笠原橋",
+   "name_kana": null,
+   "lat": 35.612083,
+   "lng": 138.464401,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "jTmQFaMz2Hc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=jTmQFaMz2Hc"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-eb172afd7f",
+   "name": "富士川大橋西交差点",
+   "name_kana": null,
+   "lat": 35.608334,
+   "lng": 138.464996,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "BuBGphGBPEA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=BuBGphGBPEA"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-edb26d9818",
+   "name": "三郡橋北交差点",
+   "name_kana": null,
+   "lat": 35.608334,
+   "lng": 138.464996,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "HvYIQxERbIo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=HvYIQxERbIo"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-efe9b790f5",
+   "name": "富士橋",
+   "name_kana": null,
+   "lat": 35.608334,
+   "lng": 138.464996,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "jIjsSNlgflM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=jIjsSNlgflM"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "yt-kyosai-f1aa41f8c5",
+   "name": "浅原橋西交差点",
+   "name_kana": null,
+   "lat": 35.594707,
+   "lng": 138.505753,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "19",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "oWzkS5g6oqc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=oWzkS5g6oqc"
+   },
+   "operator": "峡西シーエーティーヴィ",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCHZt37s-l_ZGuWcEMiFuSVA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：峡西CATV（公式YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-18",
+    "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
