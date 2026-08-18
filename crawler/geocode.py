@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import json
+import re
 import time
 import urllib.parse
 from pathlib import Path
@@ -54,9 +55,15 @@ class Geocoder:
 
         coord = None
         if results:
-            # GeoJSON: coordinates = [lng, lat]
-            lng, lat = results[0]["geometry"]["coordinates"]
-            coord = [lat, lng]
+            title = (results[0].get("properties") or {}).get("title") or ""
+            # GSIは該当なしのとき都道府県レベルにフォールバックする（例:「山梨県武川」→山梨県庁）。
+            # 県庁座標をapproxとして採用すると位置が大きく誤るため、市区町村より粗い結果は棄却する
+            if not re.search(r"[市区町村郡]", title):
+                coord = None
+            else:
+                # GeoJSON: coordinates = [lng, lat]
+                lng, lat = results[0]["geometry"]["coordinates"]
+                coord = [lat, lng]
         self.cache[address] = coord
         self._save()
         return (coord[0], coord[1]) if coord else None

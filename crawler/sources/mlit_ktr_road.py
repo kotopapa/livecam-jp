@@ -40,6 +40,8 @@ ADDRESS_RE = re.compile(
     r"[一-龥ぁ-ゟァ-ヶ0-9０-９]{1,12}[市区町村][一-龥ぁ-ゟァ-ヶ0-9０-９丁目番地ー]{0,20}")
 RIVERISH_RE = re.compile(r"[一-龥]{1,6}川[（(]")
 MAX_PAGES_PER_OFFICE = 40
+PREF_NAMES = {"09": "栃木県", "10": "群馬県", "11": "埼玉県", "13": "東京都",
+              "14": "神奈川県", "19": "山梨県", "20": "長野県"}
 
 
 @dataclass(frozen=True)
@@ -194,6 +196,40 @@ def yokohama_cameras(html: str, page_url: str) -> list[tuple[str, str, str]]:
 # ---- 甲府河川国道（みちカメラ。地点ページの iframe から CCTV 番号を得る） --
 
 KOUFU_INDEX = "https://www.ktr.mlit.go.jp/koufu/michi_camera/index.htm"
+
+# 甲府の地点名 → ジオコーディング可能な住所（地点ページに住所記載がないため手動対応表）。
+# 対応表にない地点はヒントなし（座標未解決のままpending）とする
+KOUFU_ADDRESS = {
+    "上野原": "山梨県上野原市上野原",
+    "梁川": "山梨県大月市梁川町",
+    "初狩": "山梨県大月市初狩町",
+    "笹子": "山梨県大月市笹子町",
+    "勝沼": "山梨県甲州市勝沼町",
+    "田野倉": "山梨県都留市田野倉",
+    "韮崎": "山梨県韮崎市",
+    "武川": "山梨県北杜市武川町",
+    "白州": "山梨県北杜市白州町",
+    "山口": "山梨県北杜市白州町下教来石",
+    "増穂（甲西道路）": "山梨県富士川町",
+    "万沢": "山梨県南部町万沢",
+    "相又": "山梨県身延町相又",
+    "箱原": "山梨県富士川町箱原",
+    "山中湖": "山梨県山中湖村",
+    "籠坂峠": "山梨県山中湖村平野",
+    "本栖": "山梨県富士河口湖町本栖",
+    "精進": "山梨県富士河口湖町精進",
+}
+
+NAME_ADDRESS_RE = re.compile(r"^([一-龥ぁ-ゟァ-ヶ0-9０-９]{2,8}[市町村][一-龥ぁ-ゟァ-ヶ0-9０-９]{0,12})")
+
+
+def address_from_name(name: str, pref_name: str) -> str | None:
+    """カメラ名の先頭に住所が入っている場合（大宮・高崎方式）にヒント化する。"""
+    for token in name.split():
+        m = NAME_ADDRESS_RE.match(token)
+        if m:
+            return pref_name + m.group(1)
+    return None
 KOUFU_IFRAME_RE = re.compile(r"livecamera/CCTV/(\d+)/CAMframe\.html")
 KOUFU_LINK_RE = re.compile(r"/koufu/livecamera/michi/[a-z0-9_]+\.html?$")
 
@@ -330,7 +366,7 @@ class MlitKtrRoadParser(SourceParser):
                 if not images:
                     continue
                 page_name = page_camera_name(html) or link_text
-                address = extract_address_hint(html)
+                page_address = extract_address_hint(html)
                 for cnum, img_url, alt_name in images:
                     if cnum in seen:
                         continue
@@ -342,14 +378,23 @@ class MlitKtrRoadParser(SourceParser):
                         cam_name = alt_name or (f"{page_name} ({cnum})" if page_name else "")
                     if not cam_name:
                         cam_name = cnum
+                    address = page_address or address_from_name(
+                        cam_name, PREF_NAMES.get(office.prefecture, ""))
                     route_m = ROUTE_RE.search(cam_name + " " + link_text)
                     notes = ["県は事務所管轄からの推定"]
-                    if RIVERISH_RE.search(cam_name):
-                        notes.append("名称に河川名を含む（河川カメラの可能性。カテゴリ要確認）")
+                    river_m = RIVERISH_RE.search(cam_name)
+                    category = "road"
+                    route = (f"国道{route_m.group(1)}号" if route_m
+                             else office.default_route)
+                    if river_m:
+                        # 道路ページ掲載でも映像が河川のもの（例: 烏川 城南大橋）
+                        category = "river"
+                        route = river_m.group(0).rstrip("（(")
+                        notes.append("道路事務所ページ掲載の河川カメラ（カテゴリをriverに自動補正）")
                     result.candidates.append(CameraCandidate(
                         id=f"mlit-ktr-road-{cnum.lower()}",
                         name=cam_name,
-                        category="road",
+                        category=category,
                         prefecture=office.prefecture,
                         feed_type="still_image",
                         feed_url=img_url,
@@ -358,8 +403,7 @@ class MlitKtrRoadParser(SourceParser):
                         attribution=f"出典：国土交通省 関東地方整備局 {office.operator.split()[-1]}",
                         license="public_data_1.0",
                         terms_url=TERMS_URL,
-                        river_or_route=(f"国道{route_m.group(1)}号" if route_m
-                                        else office.default_route),
+                        river_or_route=route,
                         refresh_sec=600,
                         address_hint=address,
                         review_note=" / ".join(notes),
@@ -432,7 +476,8 @@ class MlitKtrRoadParser(SourceParser):
                           pref="11", feed_url=img_url,
                           operator="国土交通省 大宮国道事務所", page_url=link,
                           route=f"国道{route_m.group(1)}号" if route_m else None,
-                          address=f"埼玉県{city_m.group(0)}" if city_m else None)
+                          address=address_from_name(name, "埼玉県")
+                                  or (f"埼玉県{city_m.group(0)}" if city_m else None))
         if not seen:
             result.errors.append("oomiya: カメラが1件も取れない — ページ構造が変わった可能性")
 
@@ -479,7 +524,7 @@ class MlitKtrRoadParser(SourceParser):
                       pref="19",
                       feed_url=f"https://www.ktr.mlit.go.jp/koufu/livecamera/CCTV/{num}/Camera.jpg",
                       operator="国土交通省 甲府河川国道事務所", page_url=url,
-                      route=route, address=None, refresh=1200,
+                      route=route, address=KOUFU_ADDRESS.get(name or ""), refresh=1200,
                       extra_note="更新は約20分間隔（事務所ページ記載）")
         if not seen:
             result.errors.append("koufu: カメラが1件も取れない — ページ構造が変わった可能性")

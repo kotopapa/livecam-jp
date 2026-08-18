@@ -179,3 +179,11 @@ def test_prvs_coord_join():
     assert a.prefecture == "09" and a.municipality == "09407"
     assert b.coord_accuracy == "exact"
     assert c.lat is None
+
+
+def test_address_from_name():
+    from crawler.sources.mlit_ktr_road import address_from_name
+    assert address_from_name("春日部市梅田本町二丁目 梅田陸橋(下り線)", "埼玉県") == "埼玉県春日部市梅田本町二丁目"
+    assert address_from_name("さいたま市桜区田島 田島地下道(上り線12)", "埼玉県") == "埼玉県さいたま市桜区田島"
+    assert address_from_name("烏川（城南大橋） 高崎市新後閑町", "群馬県") == "群馬県高崎市新後閑町"
+    assert address_from_name("国道4号 栃福橋南", "栃木県") is None
