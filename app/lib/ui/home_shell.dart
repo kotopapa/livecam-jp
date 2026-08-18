@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../app_state.dart';
+import 'favorites_screen.dart';
 import 'map_screen.dart';
 
 /// 4タブのシェル（地図 / 一覧 / お気に入り / 設定。デザイン案準拠）。
@@ -23,7 +24,7 @@ class _HomeShellState extends State<HomeShell> {
       body: IndexedStack(index: _index, children: [
         MapScreen(app: widget.app),
         const _PlaceholderTab(label: '一覧（実装予定）'),
-        const _PlaceholderTab(label: 'お気に入り（実装予定）'),
+        FavoritesScreen(app: widget.app),
         const _PlaceholderTab(label: '設定（実装予定）'),
       ]),
       bottomNavigationBar: NavigationBar(
