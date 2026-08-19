@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'data/camera_repository.dart';
 import 'data/favorites_store.dart';
+import 'data/global_stats.dart';
 import 'data/view_history_store.dart';
 import 'models/camera.dart';
 import 'models/status.dart';
@@ -18,9 +19,14 @@ class AppState extends ChangeNotifier {
   final CameraRepository repository;
   final FavoritesStore favorites;
   final ViewHistoryStore viewHistory = ViewHistoryStore();
+  final GlobalStats globalStats = GlobalStats();
 
-  /// 詳細画面を開いたときに呼ぶ（ローカル統計。外部送信なし）
-  Future<void> recordView(Camera c) => viewHistory.record(c.id);
+  /// 詳細画面を開いたときに呼ぶ。ローカル統計に加え、全国ランキングが
+  /// 有効な場合は匿名カウント（カメラIDと回数のみ）を束ねて送信する
+  Future<void> recordView(Camera c) async {
+    await viewHistory.record(c.id);
+    await globalStats.add(c.id);
+  }
 
   bool isFavorite(Camera c) => favorites.contains(c.id);
 
@@ -175,6 +181,7 @@ class AppState extends ChangeNotifier {
     await repository.loadCached();
     await favorites.load();
     await viewHistory.load();
+    await globalStats.load();
     try {
       final prefs = await SharedPreferences.getInstance();
       wifiOnly = prefs.getBool(_wifiOnlyKey) ?? false;

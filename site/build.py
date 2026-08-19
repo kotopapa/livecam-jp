@@ -71,6 +71,28 @@ def build() -> int:
     (OUT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
 
+    # 全国ランキング（日次集計の成果物があれば上位のみ軽量化して配信）
+    ranking_src = DATA / "global_ranking.json"
+    if ranking_src.exists():
+        state = json.loads(ranking_src.read_text(encoding="utf-8"))
+        cams = state.get("cameras", {})
+        entries = []
+        for cid, rec in cams.items():
+            if cid not in ids:
+                continue  # 削除済みカメラはランキングから外す
+            recent = sum(rec.get("days", {}).values())
+            entries.append({"id": cid, "recent": recent,
+                            "total": rec.get("total", 0)})
+        top_recent = sorted(entries, key=lambda e: -e["recent"])[:300]
+        top_total = sorted(entries, key=lambda e: -e["total"])[:300]
+        (OUT / "ranking.json").write_text(json.dumps({
+            "updated": state.get("updated"),
+            "recent_days": 7,
+            "recent": [e for e in top_recent if e["recent"] > 0],
+            "total": [e for e in top_total if e["total"] > 0],
+        }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        print(f"ranking.json 生成: {len(entries)}台")
+
     print(f"site/v1 生成: 承認済み {len(approved)}件, 都道府県 {len(by_pref)}")
     return 0
 

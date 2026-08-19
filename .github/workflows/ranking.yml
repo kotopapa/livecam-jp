@@ -1,0 +1,34 @@
+name: ranking
+
+on:
+  schedule:
+    - cron: "30 17 * * *" # JST 02:30 に前日分を集計
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ranking
+  cancel-in-progress: false
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install google-auth requests
+      - name: 前日分を集計してランキング状態を更新
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: python tools/aggregate_ranking.py
+      - name: コミット（変更があるときのみ）
+        run: |
+          git config user.name "livecam-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/global_ranking.json
+          git diff --cached --quiet || git commit -m "ranking: daily aggregate"
+          git push

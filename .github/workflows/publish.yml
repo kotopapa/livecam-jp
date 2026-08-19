@@ -6,6 +6,7 @@ on:
     paths:
       - "data/cameras.json"
       - "data/status.json"
+      - "data/global_ranking.json"
       - "site/**"
   workflow_dispatch:
 

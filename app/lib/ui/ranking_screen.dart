@@ -1,11 +1,15 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
+import '../config.dart';
 import '../models/camera.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 
-enum _RankMode { recent, total, favorites }
+enum _RankMode { everyone, recent, total, favorites }
 
 /// ランキング画面。統計はすべて端末内の履歴に基づく（サーバー集計はしない）。
 class RankingScreen extends StatefulWidget {
@@ -18,12 +22,55 @@ class RankingScreen extends StatefulWidget {
 }
 
 class _RankingScreenState extends State<RankingScreen> {
-  _RankMode _mode = _RankMode.recent;
+  _RankMode _mode = _RankMode.everyone;
+  List<(String, int)>? _globalRecent; // (cameraId, 直近7日回数)
+  bool _globalLoading = false;
+  String? _globalError;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadGlobal();
+  }
+
+  Future<void> _loadGlobal() async {
+    if (_globalLoading) return;
+    setState(() {
+      _globalLoading = true;
+      _globalError = null;
+    });
+    try {
+      final resp = await http
+          .get(Uri.parse('${apiBaseUrl}ranking.json'))
+          .timeout(const Duration(seconds: 15));
+      if (resp.statusCode == 404) {
+        _globalError = '全国ランキングは準備中です（集計データがまだありません）';
+      } else if (resp.statusCode != 200) {
+        _globalError = '取得に失敗しました (HTTP ${resp.statusCode})';
+      } else {
+        final body = jsonDecode(utf8.decode(resp.bodyBytes))
+            as Map<String, dynamic>;
+        _globalRecent = [
+          for (final e in (body['recent'] as List).cast<Map<String, dynamic>>())
+            (e['id'] as String, e['recent'] as int),
+        ];
+      }
+    } catch (e) {
+      _globalError = '取得に失敗しました';
+    } finally {
+      if (mounted) setState(() => _globalLoading = false);
+    }
+  }
 
   List<(Camera, String)> _ranked() {
     final app = widget.app;
     final byId = {for (final c in app.repository.cameras) c.id: c};
     switch (_mode) {
+      case _RankMode.everyone:
+        return [
+          for (final (id, n) in _globalRecent ?? const <(String, int)>[])
+            if (byId[id] != null) (byId[id]!, '$n回'),
+        ];
       case _RankMode.recent:
       case _RankMode.total:
         final counts = <String, int>{};
@@ -57,6 +104,11 @@ class _RankingScreenState extends State<RankingScreen> {
           padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
           child: Wrap(spacing: 8, children: [
             ChoiceChip(
+              label: const Text('みんなのランキング'),
+              selected: _mode == _RankMode.everyone,
+              onSelected: (_) => setState(() => _mode = _RankMode.everyone),
+            ),
+            ChoiceChip(
               label: const Text('よく見る（3日間）'),
               selected: _mode == _RankMode.recent,
               onSelected: (_) => setState(() => _mode = _RankMode.recent),
@@ -76,13 +128,27 @@ class _RankingScreenState extends State<RankingScreen> {
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 6, 16, 0),
           child: Text(
-            'この端末での閲覧・登録に基づくランキングです',
+            _mode == _RankMode.everyone
+                ? '全ユーザーの直近7日間の閲覧に基づくランキングです（毎日更新）'
+                : 'この端末での閲覧・登録に基づくランキングです',
             style: TextStyle(fontSize: 11, color: Colors.grey[600]),
           ),
         ),
         Expanded(
-          child: ranked.isEmpty
-              ? const Center(child: Text('まだ履歴がありません。\nカメラの詳細を開くと記録されます。',
+          child: _mode == _RankMode.everyone && _globalLoading
+              ? const Center(child: CircularProgressIndicator())
+              : _mode == _RankMode.everyone && _globalError != null
+                  ? Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(24),
+                        child: Text(_globalError!, textAlign: TextAlign.center),
+                      ),
+                    )
+              : ranked.isEmpty
+              ? Center(child: Text(
+                  _mode == _RankMode.everyone
+                      ? '全国ランキングは準備中です'
+                      : 'まだ履歴がありません。\nカメラの詳細を開くと記録されます。',
                   textAlign: TextAlign.center))
               : ListView.separated(
                   itemCount: ranked.length,
