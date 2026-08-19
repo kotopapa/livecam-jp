@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: ranking
@@ -32,3 +33,7 @@ jobs:
           git add data/global_ranking.json
           git diff --cached --quiet || git commit -m "ranking: daily aggregate"
           git push
+      - name: 配信を更新（botプッシュはpublishを自動起動しないため明示的に実行）
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml --repo ${{ github.repository }}
