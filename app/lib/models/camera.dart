@@ -76,6 +76,7 @@ class Camera {
     required this.name,
     required this.category,
     required this.prefecture,
+    this.country,
     required this.feed,
     required this.operator,
     required this.attribution,
@@ -99,6 +100,7 @@ class Camera {
   final CoordAccuracy coordAccuracy;
   final String category;
   final String prefecture;
+  final String? country; // 海外カメラのISO 3166-1 alpha-2（国内はnull）
   final String? municipality;
   final String? riverOrRoute;
   final Feed feed;
@@ -112,6 +114,9 @@ class Camera {
   bool get hasLocation => lat != null && lng != null;
 
   /// 動画で見られるカメラか（ピンのアイコン分け等に使う）
+  /// 海外カメラか（prefecture=99）
+  bool get isWorld => prefecture == '99';
+
   bool get isVideo =>
       feed.type == FeedType.youtubeChannel ||
       feed.type == FeedType.youtubeVideo ||
@@ -132,6 +137,7 @@ class Camera {
         coordAccuracy: CoordAccuracy.parse(json['coord_accuracy'] as String?),
         category: json['category'] as String? ?? 'other',
         prefecture: json['prefecture'] as String? ?? '00',
+        country: json['country'] as String?,
         municipality: json['municipality'] as String?,
         riverOrRoute: json['river_or_route'] as String?,
         feed: Feed.fromJson(json['feed'] as Map<String, dynamic>? ?? const {}),

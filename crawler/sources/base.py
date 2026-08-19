@@ -213,6 +213,7 @@ class CameraCandidate:
     requires_referer: bool = False
     headers: dict[str, str] = field(default_factory=dict)
     camera_ref: str | None = None       # 都度解決型feedのカメラ管理ID（mlit_roadinfo等）
+    country: str | None = None          # 海外カメラのISO 3166-1 alpha-2（国内はNone）
     fallback_url: str | None = None
     address_hint: str | None = None     # geocode.py が使う住所ヒント（出力には含めない）
     review_note: str = ""
@@ -229,6 +230,7 @@ class CameraCandidate:
             "coord_accuracy": self.coord_accuracy,
             "category": self.category,
             "prefecture": self.prefecture,
+            "country": self.country,
             "municipality": self.municipality,
             "river_or_route": self.river_or_route,
             "feed": {

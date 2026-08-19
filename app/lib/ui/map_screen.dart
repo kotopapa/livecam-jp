@@ -114,6 +114,21 @@ class _MapScreenState extends State<MapScreen> {
 
   void _onDataChanged() => setState(() {});
 
+  // 日本域外・広域表示ではOSMタイルへ切替（地理院タイルは日本のみ提供のため）
+  bool _useWorldTiles = false;
+
+  static bool _outsideJapan(double lat, double lng) =>
+      lat < 20 || lat > 46 || lng < 122 || lng > 154;
+
+  void _updateTileMode() {
+    final c = _controller.camera;
+    final world = c.zoom < 4.5 ||
+        _outsideJapan(c.center.latitude, c.center.longitude);
+    if (world != _useWorldTiles) {
+      setState(() => _useWorldTiles = world);
+    }
+  }
+
   // --- 地図位置の記憶（前回表示していた場所から再開する） ---
   static const _posKey = 'map_position'; // "lat,lng,zoom"
 
@@ -160,6 +175,32 @@ class _MapScreenState extends State<MapScreen> {
           crossAxisSpacing: 8,
           childAspectRatio: 2.2,
           children: [
+            OutlinedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                _stopFollowing();
+                _controller.move(const LatLng(25, 15), 2);
+                setState(() => _zoom = 2);
+                _savePosition();
+              },
+              style: OutlinedButton.styleFrom(
+                  padding: EdgeInsets.zero,
+                  visualDensity: VisualDensity.compact),
+              child: const Text('🌍世界', style: TextStyle(fontSize: 12)),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                _stopFollowing();
+                _controller.move(const LatLng(36.2, 138.25), 5);
+                setState(() => _zoom = 5);
+                _savePosition();
+              },
+              style: OutlinedButton.styleFrom(
+                  padding: EdgeInsets.zero,
+                  visualDensity: VisualDensity.compact),
+              child: const Text('🗾日本全体', style: TextStyle(fontSize: 12)),
+            ),
             for (final e in prefectureNames.entries)
               if (sums.containsKey(e.key))
                 OutlinedButton(
@@ -348,7 +389,7 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   void _zoomBy(double delta) {
-    final z = (_controller.camera.zoom + delta).clamp(4.0, 18.0);
+    final z = (_controller.camera.zoom + delta).clamp(2.0, 18.0);
     _controller.move(_controller.camera.center, z);
     setState(() => _zoom = z);
   }
@@ -436,6 +477,15 @@ class _MapScreenState extends State<MapScreen> {
                 ),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
+                  title: const Text('世界のカメラを表示'),
+                  value: app.showWorld,
+                  onChanged: (v) {
+                    app.setShowWorld(v);
+                    setSheetState(() {});
+                  },
+                ),
+                SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
                   title: const Text('お気に入りのみ'),
                   value: app.favoritesOnly,
                   onChanged: (v) {
@@ -490,7 +540,7 @@ class _MapScreenState extends State<MapScreen> {
           options: MapOptions(
             initialCenter: _initialCenter,
             initialZoom: _initialZoom,
-            minZoom: 4,
+            minZoom: 2,
             maxZoom: 18,
             // ピンチズーム等は既定で有効。二本指ひねりの回転だけ無効化（北固定）
             interactionOptions: const InteractionOptions(
@@ -500,6 +550,7 @@ class _MapScreenState extends State<MapScreen> {
               if ((camera.zoom - _zoom).abs() >= 0.5) {
                 setState(() => _zoom = camera.zoom);
               }
+              _updateTileMode();
             },
             onMapEvent: (e) {
               if (e is MapEventMoveEnd ||
@@ -511,9 +562,10 @@ class _MapScreenState extends State<MapScreen> {
           ),
           children: [
             TileLayer(
-              // 地理院タイル(淡色)。出典表示は必須（SPEC 9.5）
-              urlTemplate:
-                  'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
+              // 日本域=地理院タイル(淡色)、世界=OpenStreetMap。出典表示は必須
+              urlTemplate: _useWorldTiles
+                  ? 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+                  : 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
               userAgentPackageName: 'jp.livecam.livecam_jp',
             ),
             MarkerLayer(
@@ -557,9 +609,9 @@ class _MapScreenState extends State<MapScreen> {
                   child: const _MyLocationDot(),
                 ),
               ]),
-            const Align(
+            Align(
               alignment: Alignment.bottomLeft,
-              child: _GsiAttribution(),
+              child: _GsiAttribution(worldTiles: _useWorldTiles),
             ),
           ],
         ),
@@ -718,7 +770,9 @@ class _MyLocationDot extends StatelessWidget {
 }
 
 class _GsiAttribution extends StatelessWidget {
-  const _GsiAttribution();
+  const _GsiAttribution({this.worldTiles = false});
+
+  final bool worldTiles;
 
   @override
   Widget build(BuildContext context) {
@@ -726,7 +780,8 @@ class _GsiAttribution extends StatelessWidget {
       margin: const EdgeInsets.all(4),
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       color: Colors.white70,
-      child: const Text('地理院タイル', style: TextStyle(fontSize: 10)),
+      child: Text(worldTiles ? '© OpenStreetMap contributors' : '地理院タイル',
+          style: const TextStyle(fontSize: 10)),
     );
   }
 }

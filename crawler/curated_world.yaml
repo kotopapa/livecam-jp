@@ -1,0 +1,342 @@
+# 世界の有名スポット ライブカメラ台帳（人手キュレーション）
+# 検証: 各IDはwatchページ+oEmbedで実在・埋め込み可否を確認して追加する
+# prefecture は 99(海外) 固定。country は ISO 3166-1 alpha-2
+cameras:
+  - id: world-cda27a66
+    name: ニューヨーク タイムズスクエア
+    operator: "EarthCam"
+    video_id: "QTTTY_ra2Tg"
+    category: scenic
+    country: "US"
+    lat: 40.758
+    lng: -73.9855
+
+  - id: world-9239c9e1
+    name: ナイアガラの滝
+    operator: "EarthCam"
+    video_id: "qx7gry390YA"
+    category: scenic
+    country: "CA"
+    lat: 43.0828
+    lng: -79.0742
+
+  - id: world-4f2d6f30
+    name: キラウエア火山
+    operator: "afarTV"
+    video_id: "FVdmnpJ2kM0"
+    category: volcano
+    country: "US"
+    lat: 19.4069
+    lng: -155.2834
+
+  - id: world-100cc365
+    name: ワイキキビーチ
+    operator: "Ozolio Live"
+    video_id: "8waVy4wM1tM"
+    category: scenic
+    country: "US"
+    lat: 21.2761
+    lng: -157.8269
+
+  - id: world-f8041a34
+    name: イエローストーン オールドフェイスフル
+    operator: "WorldCam"
+    video_id: "SFdGJIbijY8"
+    category: scenic
+    country: "US"
+    lat: 44.4605
+    lng: -110.8281
+
+  - id: world-81e0e5f5
+    name: マイアミ サウスビーチ
+    operator: "ZeroEight"
+    video_id: "IG04qlJFiz8"
+    category: scenic
+    country: "US"
+    lat: 25.7825
+    lng: -80.1341
+    note: "IDローテーションあり"
+
+  - id: world-4b7657df
+    name: トロント CNタワー
+    operator: "TorontoLive4k"
+    video_id: "bbjwotvAvDM"
+    category: scenic
+    country: "CA"
+    lat: 43.6426
+    lng: -79.3871
+
+  - id: world-06086ae6
+    name: アラスカ ブルックス滝のヒグマ
+    operator: "Explore.org"
+    video_id: "J7ZrIDvqlic"
+    category: healing
+    country: "US"
+    lat: 58.6353
+    lng: -155.7997
+    note: "夜間・冬季は非稼働"
+
+  - id: world-c186ce00
+    name: リオデジャネイロ コパカバーナ
+    operator: "EarthCam"
+    video_id: "6QoLEltTzIM"
+    category: scenic
+    country: "BR"
+    lat: -22.9711
+    lng: -43.1822
+
+  - id: world-525c9e3d
+    name: カンクン
+    operator: "webcamsdemexico"
+    video_id: "AIczEWAm8_U"
+    category: scenic
+    country: "MX"
+    lat: 21.1391
+    lng: -86.7476
+
+  - id: world-a8c3a59e
+    name: サンフランシスコ ゴールデンゲート遠望
+    operator: "Teleport.camera"
+    video_id: "BSWhGNXxT9A"
+    category: scenic
+    country: "US"
+    lat: 37.8199
+    lng: -122.4783
+
+  - id: world-bceb38e7
+    name: ラスベガス ストリップ
+    operator: "LV Strip Cam"
+    video_id: "mmSKBT_nTfY"
+    category: scenic
+    country: "US"
+    lat: 36.1147
+    lng: -115.1728
+
+  - id: world-e4b9ea15
+    name: バンクーバー港
+    operator: "Vancouver City Views"
+    video_id: "rxyNjFKwzJA"
+    category: scenic
+    country: "CA"
+    lat: 49.2888
+    lng: -123.1111
+
+  - id: world-d6c61d92
+    name: シカゴ ウィリスタワー展望
+    operator: "EarthCam"
+    video_id: "O0UGT7AT3aw"
+    category: scenic
+    country: "US"
+    lat: 41.8789
+    lng: -87.6359
+
+  - id: world-3b62917a
+    name: ニューオーリンズ バーボンストリート
+    operator: "EarthCam"
+    video_id: "ryyC8t-mxyQ"
+    category: scenic
+    country: "US"
+    lat: 29.9584
+    lng: -90.0644
+
+  - id: world-345d22dc
+    name: 自由の女神
+    operator: "EarthCam"
+    video_id: "Qk8pA1UWNNo"
+    category: scenic
+    country: "US"
+    lat: 40.6892
+    lng: -74.0445
+
+  - id: world-609bfded
+    name: ブエノスアイレス オベリスコ
+    operator: "Buenos Aires Panorama"
+    video_id: "cKba5JJoxR4"
+    category: scenic
+    country: "AR"
+    lat: -34.6037
+    lng: -58.3816
+
+  - id: world-88bddf6b
+    name: サンタモニカ ビーチ&桟橋
+    operator: "Explore.org"
+    video_id: "v97JpT3ZA0w"
+    category: scenic
+    country: "US"
+    lat: 34.0094
+    lng: -118.4973
+
+  - id: world-89b18dd2
+    name: キーウエスト港
+    operator: "PTZtv"
+    video_id: "iHJbTrQSZys"
+    category: scenic
+    country: "US"
+    lat: 24.5601
+    lng: -81.8058
+
+  - id: world-f8ff2d32
+    name: ロンドン アビーロード横断歩道
+    operator: "EarthCam"
+    video_id: "zMCea32gpmg"
+    category: scenic
+    country: "GB"
+    lat: 51.532
+    lng: -0.1778
+
+  - id: world-ab0dd973
+    name: ダブリン テンプルバー
+    operator: "EarthCam"
+    video_id: "3nyPER2kzqk"
+    category: scenic
+    country: "IE"
+    lat: 53.3453
+    lng: -6.2655
+
+  - id: world-4cad8407
+    name: アムステルダム 運河
+    operator: "EarthCam"
+    video_id: "_rn6lFr3u9Q"
+    category: scenic
+    country: "NL"
+    lat: 52.373
+    lng: 4.8926
+    note: "座標近似"
+
+  - id: world-61393584
+    name: ベネチア サンマルコ広場
+    operator: "SkylineWebcams"
+    video_id: "L-IgLJMNkGU"
+    category: scenic
+    country: "IT"
+    lat: 45.4341
+    lng: 12.3388
+
+  - id: world-6fcbd369
+    name: ローマ コロッセオ
+    operator: "SkylineWebcams"
+    video_id: "54_skPGLNhA"
+    category: scenic
+    country: "IT"
+    lat: 41.8902
+    lng: 12.4922
+
+  - id: world-3eec5762
+    name: プラハ旧市街広場
+    operator: "SkylineWebcams"
+    video_id: "0FvTdT3EJY4"
+    category: scenic
+    country: "CZ"
+    lat: 50.087
+    lng: 14.4208
+
+  - id: world-086f93d3
+    name: ローマ トレビの泉
+    operator: "SkylineWebcams"
+    video_id: "HKSYo22sCTQ"
+    category: scenic
+    country: "IT"
+    lat: 41.9009
+    lng: 12.4833
+
+  - id: world-060282c1
+    name: サントリーニ島
+    operator: "SkylineWebcams"
+    video_id: "2a4SrvF0iS8"
+    category: scenic
+    country: "GR"
+    lat: 36.3932
+    lng: 25.4615
+    note: "座標はフィラ近似"
+
+  - id: world-95b34327
+    name: ドブロブニク旧市街
+    operator: "Live Cam Croatia"
+    video_id: "5V0gW2sUBkg"
+    category: scenic
+    country: "HR"
+    lat: 42.6414
+    lng: 18.1084
+
+  - id: world-66ecc426
+    name: ベネチア リアルト橋
+    operator: "I Love You Venice"
+    video_id: "Kmf_wiTFuXY"
+    category: scenic
+    country: "IT"
+    lat: 45.438
+    lng: 12.3358
+
+  - id: world-cc03160d
+    name: アイスランド レイキャネス火山
+    operator: "afarTV"
+    video_id: "qkSvU9j4kqM"
+    category: volcano
+    country: "IS"
+    lat: 63.8384
+    lng: -22.4338
+
+  - id: world-21eb5910
+    name: マッターホルン(ツェルマット)
+    operator: "feratel"
+    video_id: "o9puACFGW0o"
+    category: scenic
+    country: "CH"
+    lat: 45.9367
+    lng: 7.7361
+
+  - id: world-cfbe8e60
+    name: ゲイランゲルフィヨルド
+    operator: "Hotel Union Geiranger"
+    video_id: "wAdTV6Uc5eA"
+    category: scenic
+    country: "NO"
+    lat: 62.1017
+    lng: 7.2062
+
+  - id: world-ad498b9f
+    name: ロフォーテン諸島(レーヌ)
+    operator: "SkylineWebcams"
+    video_id: "bPvwWyY-Y1Y"
+    category: scenic
+    country: "NO"
+    lat: 67.9312
+    lng: 13.0655
+
+  - id: world-60ff70af
+    name: ロンドン タワーブリッジ
+    operator: "Tower Bridge LIVE"
+    video_id: "WpcxRYYc7vo"
+    category: scenic
+    country: "GB"
+    lat: 51.5055
+    lng: -0.0754
+    note: "誘導型 / 埋め込み不可→誘導型"
+
+  - id: world-7cb8df6d
+    name: パリ エッフェル塔
+    operator: "Vision-Environnement"
+    video_id: "OzYp4NRZlwQ"
+    category: scenic
+    country: "FR"
+    lat: 48.8584
+    lng: 2.2945
+
+  - id: world-d2cea02e
+    name: ベルリン ブランデンブルク門
+    operator: "4GiTV"
+    video_id: "v5OUHl8c9Es"
+    category: scenic
+    country: "DE"
+    lat: 52.5163
+    lng: 13.3777
+
+  - id: world-f8260cfe
+    name: バチカン サンピエトロ広場
+    operator: "Vatican News"
+    video_id: "03pYP2Nmreo"
+    category: scenic
+    country: "VA"
+    lat: 41.9022
+    lng: 12.4539
+

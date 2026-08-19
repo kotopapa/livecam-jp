@@ -3,6 +3,7 @@
 新しいパーサを追加したら REGISTRY に登録すること。
 """
 
+from crawler.sources.curated_world import CuratedWorldParser
 from crawler.sources.curated_youtube import CuratedYoutubeParser
 from crawler.sources.fukushima_road import FukushimaRoadParser
 from crawler.sources.hiroshima_road import HiroshimaRoadParser
@@ -23,6 +24,7 @@ from crawler.sources.youtube_live import YoutubeLiveParser
 REGISTRY = {
     p.source_id: p
     for p in [
+        CuratedWorldParser,
         CuratedYoutubeParser,
         FukushimaRoadParser,
         HiroshimaRoadParser,

@@ -34,16 +34,16 @@
     "number",
     "null"
    ],
-   "minimum": 20,
-   "maximum": 46
+   "minimum": -90,
+   "maximum": 90
   },
   "lng": {
    "type": [
     "number",
     "null"
    ],
-   "minimum": 122,
-   "maximum": 154
+   "minimum": -180,
+   "maximum": 180
   },
   "coord_accuracy": {
    "type": [
@@ -74,7 +74,14 @@
   },
   "prefecture": {
    "type": "string",
-   "pattern": "^[0-4][0-9]$"
+   "pattern": "^([0-4][0-9]|99)$"
+  },
+  "country": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "pattern": "^[A-Z]{2}$"
   },
   "municipality": {
    "type": [

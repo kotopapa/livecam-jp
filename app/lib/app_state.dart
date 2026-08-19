@@ -45,6 +45,7 @@ class AppState extends ChangeNotifier {
     'river', 'road', 'volcano', 'dam', 'coast', 'port', 'scenic', 'healing', 'other'
   };
   bool videoOnly = false;
+  bool showWorld = true; // 世界(海外)カメラの表示
   bool favoritesOnly = false;
   bool okOnly = false; // 現在映っている（state=ok）もののみ
   String searchQuery = '';
@@ -56,6 +57,11 @@ class AppState extends ChangeNotifier {
 
   void setVideoOnly(bool value) {
     videoOnly = value;
+    notifyListeners();
+  }
+
+  void setShowWorld(bool value) {
+    showWorld = value;
     notifyListeners();
   }
 
@@ -73,12 +79,14 @@ class AppState extends ChangeNotifier {
   bool get hasActiveFilters =>
       searchQuery.isNotEmpty ||
       videoOnly ||
+      !showWorld ||
       favoritesOnly ||
       okOnly ||
       enabledCategories.length != 9;
 
   /// カテゴリ以外の共通フィルタ（一覧・地図・件数集計で共用）
   bool _matchesCommonFilters(Camera c) =>
+      (showWorld || !c.isWorld) &&
       (!videoOnly || c.isVideo) &&
       (!favoritesOnly || favorites.contains(c.id)) &&
       (!okOnly || stateOf(c) == CameraState.ok) &&

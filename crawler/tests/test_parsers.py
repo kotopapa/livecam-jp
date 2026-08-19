@@ -230,3 +230,16 @@ def test_fukushima_road_parse():
     byid = {c["id"]: c for c in cams}
     assert byid["63"]["name"] == "三島町 宮下"
     assert byid["63"]["route"] == "国道252号"
+
+
+def test_curated_world_yaml():
+    from crawler.sources.curated_world import CuratedWorldParser, load_world
+    cams = load_world()
+    assert len(cams) >= 30
+    ids = [c["id"] for c in cams]
+    assert len(ids) == len(set(ids))
+    result = CuratedWorldParser().discover(None)
+    assert len(result.candidates) == len(cams) and not result.errors
+    c = result.candidates[0]
+    assert c.prefecture == "99" and c.country and len(c.country) == 2
+    assert validate_camera_record(c.to_record("2026-08-19")) == []
