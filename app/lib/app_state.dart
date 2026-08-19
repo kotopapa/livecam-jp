@@ -31,8 +31,9 @@ class AppState extends ChangeNotifier {
   bool isFavorite(Camera c) => favorites.contains(c.id);
 
   Future<void> toggleFavorite(Camera c) async {
-    await favorites.toggle(c.id);
+    final added = await favorites.toggle(c.id);
     notifyListeners();
+    await globalStats.addFavorite(c.id, added);
   }
 
   bool initialized = false;

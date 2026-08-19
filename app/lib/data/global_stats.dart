@@ -14,6 +14,7 @@ import '../config.dart';
 /// - firebaseProjectId が空なら全機能無効（送信もしない）
 class GlobalStats {
   static const _pendingKey = 'global_stats_pending_v1';
+  static const _pendingFavKey = 'global_stats_pending_fav_v1';
   static const _lastFlushKey = 'global_stats_last_flush';
   static const _minFlushInterval = Duration(minutes: 15);
   static const _maxPendingAge = Duration(minutes: 30);
@@ -21,6 +22,7 @@ class GlobalStats {
   static const _maxWritesPerCommit = 200;
 
   final Map<String, int> _pending = {};
+  final Map<String, int> _pendingFav = {}; // cameraId -> 増減(±)
   DateTime? _oldestPending;
   DateTime? _lastFlush;
   SharedPreferences? _prefs;
@@ -36,7 +38,14 @@ class GlobalStats {
       if (raw != null) {
         final m = jsonDecode(raw) as Map<String, dynamic>;
         _pending.addAll(m.map((k, v) => MapEntry(k, v as int)));
-        if (_pending.isNotEmpty) _oldestPending = DateTime.now();
+      }
+      final rawFav = _prefs!.getString(_pendingFavKey);
+      if (rawFav != null) {
+        final m = jsonDecode(rawFav) as Map<String, dynamic>;
+        _pendingFav.addAll(m.map((k, v) => MapEntry(k, v as int)));
+      }
+      if (_pending.isNotEmpty || _pendingFav.isNotEmpty) {
+        _oldestPending = DateTime.now();
       }
       final lf = _prefs!.getString(_lastFlushKey);
       if (lf != null) _lastFlush = DateTime.tryParse(lf);
@@ -53,21 +62,39 @@ class GlobalStats {
     await _maybeFlush();
   }
 
+  /// お気に入りの増減（added=trueで+1、falseで-1）。全国お気に入り数の集計用
+  Future<void> addFavorite(String cameraId, bool added) async {
+    if (!enabled) return;
+    final v = (_pendingFav[cameraId] ?? 0) + (added ? 1 : -1);
+    if (v == 0) {
+      _pendingFav.remove(cameraId); // 付けて外した→送信不要
+    } else {
+      _pendingFav[cameraId] = v;
+    }
+    _oldestPending ??= DateTime.now();
+    await _prefs?.setString(_pendingFavKey, jsonEncode(_pendingFav));
+    await _maybeFlush();
+  }
+
   Future<void> _maybeFlush() async {
-    if (_flushing || _pending.isEmpty) return;
+    if (_flushing || (_pending.isEmpty && _pendingFav.isEmpty)) return;
     final now = DateTime.now();
     if (_lastFlush != null && now.difference(_lastFlush!) < _minFlushInterval) {
       return;
     }
     final aged = _oldestPending != null &&
         now.difference(_oldestPending!) >= _maxPendingAge;
-    if (_pending.length < _flushThreshold && !aged) return;
+    if (_pending.length + _pendingFav.length < _flushThreshold && !aged) {
+      return;
+    }
     await flush();
   }
 
   /// Firestoreの `views/{JST日付}/cams/{cameraId}` の n をincrementする
   Future<void> flush() async {
-    if (!enabled || _flushing || _pending.isEmpty) return;
+    if (!enabled || _flushing || (_pending.isEmpty && _pendingFav.isEmpty)) {
+      return;
+    }
     _flushing = true;
     try {
       final jst = DateTime.now().toUtc().add(const Duration(hours: 9));
@@ -76,11 +103,27 @@ class GlobalStats {
           '${jst.day.toString().padLeft(2, '0')}';
       final base = 'projects/$firebaseProjectId/databases/(default)/documents';
       final entries = _pending.entries.take(_maxWritesPerCommit).toList();
+      final favEntries = _pendingFav.entries
+          .take(_maxWritesPerCommit - entries.length)
+          .toList();
       final writes = [
         for (final e in entries)
           {
             'transform': {
               'document': '$base/views/$day/cams/${e.key}',
+              'fieldTransforms': [
+                {
+                  'fieldPath': 'n',
+                  'increment': {'integerValue': '${e.value}'},
+                },
+              ],
+            },
+          },
+        // お気に入りは累積カウンタ（日付なし・集計側は読むだけで削除しない）
+        for (final e in favEntries)
+          {
+            'transform': {
+              'document': '$base/favs/all/cams/${e.key}',
               'fieldTransforms': [
                 {
                   'fieldPath': 'n',
@@ -102,9 +145,13 @@ class GlobalStats {
         for (final e in entries) {
           _pending.remove(e.key);
         }
-        if (_pending.isEmpty) _oldestPending = null;
+        for (final e in favEntries) {
+          _pendingFav.remove(e.key);
+        }
+        if (_pending.isEmpty && _pendingFav.isEmpty) _oldestPending = null;
         _lastFlush = DateTime.now();
         await _prefs?.setString(_pendingKey, jsonEncode(_pending));
+        await _prefs?.setString(_pendingFavKey, jsonEncode(_pendingFav));
         await _prefs?.setString(
             _lastFlushKey, _lastFlush!.toIso8601String());
       }

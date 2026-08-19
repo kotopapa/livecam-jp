@@ -32,9 +32,9 @@ def firestore_session(sa_info: dict):
     return s, sa_info["project_id"]
 
 
-def list_day_counts(s, project: str, day: str) -> dict[str, int]:
+def list_collection_counts(s, project: str, path: str) -> dict[str, int]:
     base = (f"https://firestore.googleapis.com/v1/projects/{project}"
-            f"/databases/(default)/documents/views/{day}/cams")
+            f"/databases/(default)/documents/{path}")
     counts: dict[str, int] = {}
     token = None
     while True:
@@ -49,7 +49,7 @@ def list_day_counts(s, project: str, day: str) -> dict[str, int]:
         for doc in body.get("documents", []):
             cam_id = doc["name"].rsplit("/", 1)[1]
             n = int(doc.get("fields", {}).get("n", {}).get("integerValue", 0))
-            if n > 0:
+            if n != 0:
                 counts[cam_id] = n
         token = body.get("nextPageToken")
         if not token:
@@ -75,8 +75,13 @@ def main() -> int:
     s, project = firestore_session(json.loads(sa_raw))
 
     yesterday = (datetime.now(JST) - timedelta(days=1)).strftime("%Y%m%d")
-    counts = list_day_counts(s, project, yesterday)
+    counts = list_collection_counts(s, project, f"views/{yesterday}/cams")
     print(f"{yesterday}: {len(counts)}台 / {sum(counts.values())}回")
+
+    # お気に入り累積（読むだけ・削除しない。±が相殺され現在の登録数になる）
+    favs = list_collection_counts(s, project, "favs/all/cams")
+    favs = {k: v for k, v in favs.items() if v > 0}
+    print(f"favorites: {len(favs)}台 / {sum(favs.values())}件")
 
     # 既存状態へマージ
     try:
@@ -92,6 +97,7 @@ def main() -> int:
     cutoff = (datetime.now(JST) - timedelta(days=KEEP_DAYS)).strftime("%Y%m%d")
     for rec in cams.values():
         rec["days"] = {d: c for d, c in rec["days"].items() if d >= cutoff}
+    state["favorites"] = favs
     state["updated"] = datetime.now(JST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
 
     json.dump(state, open(RANKING_PATH, "w", encoding="utf-8"),

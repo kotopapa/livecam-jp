@@ -85,11 +85,16 @@ def build() -> int:
                             "total": rec.get("total", 0)})
         top_recent = sorted(entries, key=lambda e: -e["recent"])[:300]
         top_total = sorted(entries, key=lambda e: -e["total"])[:300]
+        favs = [{"id": cid, "count": n}
+                for cid, n in state.get("favorites", {}).items()
+                if cid in ids and n > 0]
+        favs.sort(key=lambda e: -e["count"])
         (OUT / "ranking.json").write_text(json.dumps({
             "updated": state.get("updated"),
             "recent_days": 7,
             "recent": [e for e in top_recent if e["recent"] > 0],
             "total": [e for e in top_total if e["total"] > 0],
+            "favorites": favs[:300],
         }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         print(f"ranking.json 生成: {len(entries)}台")
 
