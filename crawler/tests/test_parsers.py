@@ -281,3 +281,37 @@ def test_fukui_road_filter():
     assert not is_target("滋賀県　高島土木事務所")
     assert is_target("福井土木事務所")
     assert is_target("鯖江市")
+
+
+def test_myoko_xml_parse():
+    from crawler.sources.muni_road import MYOKO_CAM_RE
+    xml = (FIXTURES / "myoko_clist.xml").read_text(encoding="utf-8")
+    cams = MYOKO_CAM_RE.findall(xml)
+    assert len(cams) >= 10
+    title, cid, adr, lat, lng, lgimg = cams[0]
+    assert float(lat) > 36 and lgimg.startswith("https://media.jcv.co.jp/")
+
+
+def test_gujo_city_owned_only():
+    from crawler.sources.muni_road import GUJO_RE
+    html = (FIXTURES / "gujo_livecamera.html").read_text(encoding="utf-8", errors="replace")
+    hits = GUJO_RE.findall(html)
+    assert 2 <= len(hits) <= 8
+    assert any("庁舎" in name for _, name in hits)
+
+
+def test_minamioguni_labels():
+    from crawler.sources.muni_road import parse_oguni
+    html = (FIXTURES / "minamioguni_webcam.html").read_text(encoding="utf-8", errors="replace")
+    pairs = dict(parse_oguni(html))
+    assert len(pairs) >= 10
+    assert pairs.get("kurokawa-road.jpg", "").startswith("黒川温泉")
+
+
+def test_miyagi_region_parse():
+    from crawler.sources.miyagi_road import parse_region
+    html = (FIXTURES / "miyagi_hokubu.html").read_text(encoding="utf-8", errors="replace")
+    items = parse_region(html)
+    assert len(items) >= 3
+    slug, name, img = items[0]
+    assert img.startswith("img/") and name

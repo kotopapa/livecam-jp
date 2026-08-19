@@ -1,5 +1,5 @@
 {
- "version": "2026-08-19T15:41:22Z",
+ "version": "2026-08-19T21:16:46Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -523708,6 +523708,310 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "muni-gujo-01-1",
+   "name": "明宝庁舎前",
+   "name_kana": null,
+   "lat": 35.85928,
+   "lng": 137.042099,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.gujo.gifu.jp/application/sumaho/02_tdk/camera/01/photo280x210_1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.gujo.gifu.jp/pages/live-camera.html"
+   },
+   "operator": "郡上市",
+   "source": {
+    "page_url": "https://www.city.gujo.gifu.jp/pages/live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：郡上市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-gujo-05-1",
+   "name": "和良庁舎前",
+   "name_kana": null,
+   "lat": 35.722855,
+   "lng": 137.049591,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.gujo.gifu.jp/application/sumaho/02_tdk/camera/05/photo280x210_1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.gujo.gifu.jp/pages/live-camera.html"
+   },
+   "operator": "郡上市",
+   "source": {
+    "page_url": "https://www.city.gujo.gifu.jp/pages/live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：郡上市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-gujo-kasen-camera-1",
+   "name": "高鷲町天王橋",
+   "name_kana": null,
+   "lat": 36.008366,
+   "lng": 136.902069,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.gujo.gifu.jp/application/sumaho/04_bouhan/kasen_camera/photo280x210_1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.gujo.gifu.jp/pages/live-camera.html"
+   },
+   "operator": "郡上市",
+   "source": {
+    "page_url": "https://www.city.gujo.gifu.jp/pages/live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：郡上市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-gujo-kasen-camera-2",
+   "name": "白鳥町歩岐島",
+   "name_kana": null,
+   "lat": 35.933731,
+   "lng": 136.836838,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.gujo.gifu.jp/application/sumaho/04_bouhan/kasen_camera/photo280x210_2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.gujo.gifu.jp/pages/live-camera.html"
+   },
+   "operator": "郡上市",
+   "source": {
+    "page_url": "https://www.city.gujo.gifu.jp/pages/live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：郡上市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-gujo-kasen-camera-3",
+   "name": "白鳥町奥美濃大橋",
+   "name_kana": null,
+   "lat": 35.905273,
+   "lng": 136.834564,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.gujo.gifu.jp/application/sumaho/04_bouhan/kasen_camera/photo280x210_3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.gujo.gifu.jp/pages/live-camera.html"
+   },
+   "operator": "郡上市",
+   "source": {
+    "page_url": "https://www.city.gujo.gifu.jp/pages/live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：郡上市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-gujo-kasen-camera-4",
+   "name": "大和町和合橋",
+   "name_kana": null,
+   "lat": 35.795959,
+   "lng": 136.913879,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.gujo.gifu.jp/application/sumaho/04_bouhan/kasen_camera/photo280x210_4.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.gujo.gifu.jp/pages/live-camera.html"
+   },
+   "operator": "郡上市",
+   "source": {
+    "page_url": "https://www.city.gujo.gifu.jp/pages/live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：郡上市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-gujo-kasen-camera-5",
+   "name": "八幡町八幡大橋",
+   "name_kana": null,
+   "lat": 35.759174,
+   "lng": 136.945831,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.gujo.gifu.jp/application/sumaho/04_bouhan/kasen_camera/photo280x210_5.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.gujo.gifu.jp/pages/live-camera.html"
+   },
+   "operator": "郡上市",
+   "source": {
+    "page_url": "https://www.city.gujo.gifu.jp/pages/live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：郡上市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-gujo-kasen-camera-7",
+   "name": "和良町法師丸橋",
+   "name_kana": null,
+   "lat": 35.736828,
+   "lng": 137.090622,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.gujo.gifu.jp/application/sumaho/04_bouhan/kasen_camera/photo280x210_7.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.gujo.gifu.jp/pages/live-camera.html"
+   },
+   "operator": "郡上市",
+   "source": {
+    "page_url": "https://www.city.gujo.gifu.jp/pages/live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：郡上市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
    "id": "muni-kasugai-1b8deaade7",
    "name": "春日井市 1【動画】河川監視 地蔵川 勝川水位観測所",
    "name_kana": null,
@@ -523854,6 +524158,994 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-myoko-28",
+   "name": "はねうま大橋右岸",
+   "name_kana": null,
+   "lat": 37.027974,
+   "lng": 138.246306,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/33lChFRZoSasM.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-29",
+   "name": "国道18号 関山交差点",
+   "name_kana": null,
+   "lat": 36.931157,
+   "lng": 138.220161,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/6eBk0t3AvjePc.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-30",
+   "name": "上信越道 妙高高原IC",
+   "name_kana": null,
+   "lat": 36.861356,
+   "lng": 138.193036,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/3436apvLY1lvg.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-40",
+   "name": "佐渡汽船ターミナルビル",
+   "name_kana": null,
+   "lat": 37.182536,
+   "lng": 138.25083,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/d6xUe9a9f2NAo.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-42",
+   "name": "北陸新幹線 上越妙高駅前",
+   "name_kana": null,
+   "lat": 37.079997,
+   "lng": 138.24904,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/a1B7oReCZI3Eg.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-45",
+   "name": "妙高市役所本庁舎",
+   "name_kana": null,
+   "lat": 37.0252334,
+   "lng": 138.2528776,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/6c91100gDnTgg.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-57",
+   "name": "上信越道 新井PA",
+   "name_kana": null,
+   "lat": 37.025681,
+   "lng": 138.223689,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/721qrRiO1Gh3s.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-58",
+   "name": "国道292号 長沢付近",
+   "name_kana": null,
+   "lat": 36.926216,
+   "lng": 138.301799,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/66CE0xre.enss.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-59",
+   "name": "赤倉観光リゾートスキー場",
+   "name_kana": null,
+   "lat": 36.886929,
+   "lng": 138.178267,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/09SRftCrPrTGA.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-6",
+   "name": "国道292号 姫川原交差点",
+   "name_kana": null,
+   "lat": 37.00505988,
+   "lng": 138.2607816,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/16tboIdUXNRNU.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-8",
+   "name": "妙高トンネル 燕温泉口側",
+   "name_kana": null,
+   "lat": 36.90090738,
+   "lng": 138.151605,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/c9jwCwE4j0lvE.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-myoko-84",
+   "name": "妙高高原いもり池",
+   "name_kana": null,
+   "lat": 36.86591865705534,
+   "lng": 138.17503519384627,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://media.jcv.co.jp/onesrc/livecam/myoko/68kLNWdhp5TCQ.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.myoko.niigata.jp/live-camera/"
+   },
+   "operator": "妙高市",
+   "source": {
+    "page_url": "https://www.city.myoko.niigata.jp/live-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：妙高市（協力: 上越ケーブルビジョン）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-niimi-wl02",
+   "name": "国道180号 千屋温泉入口",
+   "name_kana": null,
+   "lat": 35.058,
+   "lng": 133.47,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "33",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道180号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.city.niimi.okayama.jp/gazo/wl02/image.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.niimi.okayama.jp/kurashi/kurashi_detail/index/242.html"
+   },
+   "operator": "新見市",
+   "source": {
+    "page_url": "https://www.city.niimi.okayama.jp/kurashi/kurashi_detail/index/242.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：新見市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-niimi-wl03",
+   "name": "国道182号 九の坂トンネル",
+   "name_kana": null,
+   "lat": 34.923,
+   "lng": 133.555,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "33",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道182号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.city.niimi.okayama.jp/gazo/wl03/image.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.niimi.okayama.jp/kurashi/kurashi_detail/index/242.html"
+   },
+   "operator": "新見市",
+   "source": {
+    "page_url": "https://www.city.niimi.okayama.jp/kurashi/kurashi_detail/index/242.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：新見市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-kiyora",
+   "name": "きよらカァサ（R212）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/kiyora.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-kiyora-tunnel",
+   "name": "きよらトンネル付近（波居原）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/kiyora-tunnel.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-kujyuu-waita",
+   "name": "くじゅう・わいた展望公園付近（R212）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/kujyuu-waita.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-kurokawa",
+   "name": "黒川温泉旅館組合（風の舎）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/kurokawa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-kurokawa-road",
+   "name": "黒川温泉（R442）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/kurokawa-road.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-manganji",
+   "name": "満願寺町営住宅付近（志津）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/manganji.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-nakabaru",
+   "name": "中原夢トンネル（坂の下）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/nakabaru.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-rindo",
+   "name": "りんどうヶ丘小学校入口付近（田の原）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/rindo.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-sanai",
+   "name": "やまなみハイウェイ（大分方面向き）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/sanai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-tanoharu",
+   "name": "田の原（R442）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/tanoharu.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-tanoharu-farm",
+   "name": "田の原（ファームロード）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/tanoharu-farm.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-oguni-yuta",
+   "name": "湯田天神様付近（湯田）",
+   "name_kana": null,
+   "lat": 33.098564,
+   "lng": 131.070511,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/yuta.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.minamioguni.lg.jp/webcam/"
+   },
+   "operator": "南小国町",
+   "source": {
+    "page_url": "https://www.town.minamioguni.lg.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南小国町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
   },
   {
    "id": "muni-ohtawara-0855a89b3f",
@@ -524261,6 +525553,82 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "muni-takamori-tateno",
+   "name": "立野交差点",
+   "name_kana": null,
+   "lat": 32.884,
+   "lng": 131.123,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道57号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.kumamoto-takamori.lg.jp/cam_tateno/TRIFORA.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.kumamoto-takamori.lg.jp/page/2017.html"
+   },
+   "operator": "高森町",
+   "source": {
+    "page_url": "https://www.town.kumamoto-takamori.lg.jp/page/2017.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高森町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "muni-takamori-tochinoki",
+   "name": "栃の木交差点",
+   "name_kana": null,
+   "lat": 32.828,
+   "lng": 131.122,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道325号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.kumamoto-takamori.lg.jp/cam_tochinoki/TRIFORA.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.kumamoto-takamori.lg.jp/page/2017.html"
+   },
+   "operator": "高森町",
+   "source": {
+    "page_url": "https://www.town.kumamoto-takamori.lg.jp/page/2017.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高森町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
   },
   {
    "id": "muni-yokosuka-07509d6ac7",

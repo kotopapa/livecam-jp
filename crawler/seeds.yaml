@@ -99,6 +99,16 @@ sources:
     note: 島根県「道路カメラ情報」約120台。point.json5(座標つき)+snapshot固定URL。
           license=unknown
 
+  - id: muni_road
+    enabled: true
+    note: 市町村道路カメラ統合(妙高XML座標つき・郡上市所有分・南小国12・新見2・高森2)。
+          license=unknown
+
+  - id: miyagi_road
+    enabled: true
+    note: 宮城県道路管理ライブカメラ(北部・大河原西/東部)。HTTP専用のためiOSはATS例外。
+          座標は地点名ジオコーディング。license=unknown
+
   - id: hbc_webcam
     enabled: true
     note: HBC北海道放送「情報カメラ」34地点(静止画網)。地点ページのGoogleマップ埋込から

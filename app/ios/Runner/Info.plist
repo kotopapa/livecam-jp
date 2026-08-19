@@ -28,6 +28,17 @@
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>roadgis.pref.miyagi.jp</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>現在地周辺のライブカメラを表示するために位置情報を使用します。バックグラウンドでの位置情報は使用しません</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
