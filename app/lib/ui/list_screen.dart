@@ -4,9 +4,10 @@ import 'package:geolocator/geolocator.dart';
 import '../app_state.dart';
 import '../models/camera.dart';
 import '../util/geo.dart';
-import '../util/time_format.dart';
+import 'bosai_screen.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
+import 'ranking_screen.dart';
 
 /// 一覧タブ（SPEC 9.2④）。
 /// 検索は地図と共通のフィルタ（AppState.searchQuery）を使い、
@@ -100,6 +101,20 @@ class _ListScreenState extends State<ListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('一覧（${cams.length}）'),
+        actions: [
+          IconButton(
+            tooltip: 'ランキング',
+            icon: const Icon(Icons.leaderboard_outlined),
+            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => RankingScreen(app: widget.app))),
+          ),
+          IconButton(
+            tooltip: '災害速報',
+            icon: const Icon(Icons.crisis_alert),
+            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => BosaiScreen(app: widget.app))),
+          ),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(56),
           child: Padding(
@@ -169,7 +184,6 @@ class _CameraTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final time = app.imageTimeFor(camera);
     final url = app.imageUrlFor(camera);
     return ListTile(
       leading: ClipRRect(
@@ -186,11 +200,7 @@ class _CameraTile extends StatelessWidget {
       ),
       title: Text(camera.name, maxLines: 1, overflow: TextOverflow.ellipsis),
       subtitle: Text(
-        [
-          if (camera.isVideo) 'LIVE',
-          if (time != null) formatTakenTime(time),
-          camera.operator,
-        ].join(' · '),
+        [if (camera.isVideo) 'LIVE', camera.operator].join(' · '),
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: const TextStyle(fontSize: 12),

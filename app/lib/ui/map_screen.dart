@@ -1,5 +1,9 @@
+import 'dart:async';
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -31,9 +35,16 @@ class _MapScreenState extends State<MapScreen> {
   double _zoom = _initialZoom;
   LatLng? _myLocation;
   bool _locating = false;
+  bool _following = false; // 現在地追従モード
+  StreamSubscription<Position>? _posSub;
 
-  /// 現在地ボタン（SPEC 9.2②）。権限を確認して現在地へ移動する
+  /// 現在地ボタン（SPEC 9.2②）。タップで追従モードをトグルする。
+  /// 追従中は位置の更新に合わせて地図が動き、手で地図を動かすと解除される
   Future<void> _goToMyLocation() async {
+    if (_following) {
+      _stopFollowing();
+      return;
+    }
     if (_locating) return;
     setState(() => _locating = true);
     try {
@@ -51,14 +62,32 @@ class _MapScreenState extends State<MapScreen> {
               const LocationSettings(accuracy: LocationAccuracy.medium))
           .timeout(const Duration(seconds: 10));
       final here = LatLng(pos.latitude, pos.longitude);
-      setState(() => _myLocation = here);
-      _controller.move(here, 12);
-      setState(() => _zoom = 12);
+      setState(() {
+        _myLocation = here;
+        _following = true;
+        _zoom = 13;
+      });
+      _controller.move(here, 13);
+      _posSub = Geolocator.getPositionStream(
+        locationSettings: const LocationSettings(
+            accuracy: LocationAccuracy.medium, distanceFilter: 10),
+      ).listen((p) {
+        final here = LatLng(p.latitude, p.longitude);
+        if (!mounted) return;
+        setState(() => _myLocation = here);
+        if (_following) _controller.move(here, _controller.camera.zoom);
+      });
     } catch (_) {
       _showMessage('現在地を取得できませんでした');
     } finally {
       if (mounted) setState(() => _locating = false);
     }
+  }
+
+  void _stopFollowing() {
+    _posSub?.cancel();
+    _posSub = null;
+    if (mounted) setState(() => _following = false);
   }
 
   void _showMessage(String text) {
@@ -78,6 +107,8 @@ class _MapScreenState extends State<MapScreen> {
   void dispose() {
     widget.app.removeListener(_onDataChanged);
     _searchController.dispose();
+    _posSub?.cancel();
+    _placeController.dispose();
     super.dispose();
   }
 
@@ -148,6 +179,109 @@ class _MapScreenState extends State<MapScreen> {
                 ),
           ],
         ),
+      ),
+    );
+  }
+
+  // --- 場所検索（国土地理院ジオコーディング。無料・キー不要） ---
+  final _placeController = TextEditingController();
+
+  Future<List<(String, LatLng)>> _searchPlace(String query) async {
+    final uri = Uri.parse(
+        'https://msearch.gsi.go.jp/address-search/AddressSearch'
+        '?q=${Uri.encodeQueryComponent(query)}');
+    final resp = await http.get(uri).timeout(const Duration(seconds: 10));
+    if (resp.statusCode != 200) return const [];
+    final list = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
+    return [
+      for (final e in list.cast<Map<String, dynamic>>().take(15))
+        (
+          (e['properties'] as Map<String, dynamic>)['title'] as String? ?? '',
+          LatLng(
+            ((e['geometry'] as Map<String, dynamic>)['coordinates']
+                as List)[1] as double,
+            ((e['geometry'] as Map<String, dynamic>)['coordinates']
+                as List)[0] as double,
+          ),
+        ),
+    ];
+  }
+
+  void _showPlaceSearch(BuildContext context) {
+    List<(String, LatLng)> results = const [];
+    bool searching = false;
+    showModalBottomSheet(
+      context: context,
+      showDragHandle: true,
+      isScrollControlled: true,
+      builder: (sheetContext) => StatefulBuilder(
+        builder: (context, setSheetState) {
+          Future<void> run() async {
+            final q = _placeController.text.trim();
+            if (q.isEmpty) return;
+            setSheetState(() => searching = true);
+            try {
+              results = await _searchPlace(q);
+            } catch (_) {
+              results = const [];
+            }
+            setSheetState(() => searching = false);
+          }
+
+          return SafeArea(
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(20, 0, 20,
+                  16 + MediaQuery.of(sheetContext).viewInsets.bottom),
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                const Text('場所を検索',
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: _placeController,
+                  autofocus: true,
+                  textInputAction: TextInputAction.search,
+                  decoration: InputDecoration(
+                    isDense: true,
+                    prefixIcon: const Icon(Icons.place_outlined, size: 20),
+                    hintText: '地名・住所（例: 渋谷、金沢市広坂）',
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    suffixIcon: IconButton(
+                        icon: const Icon(Icons.search), onPressed: run),
+                  ),
+                  onSubmitted: (_) => run(),
+                ),
+                const SizedBox(height: 8),
+                if (searching)
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: CircularProgressIndicator(),
+                  )
+                else
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(maxHeight: 320),
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: results.length,
+                      itemBuilder: (context, i) => ListTile(
+                        dense: true,
+                        leading: const Icon(Icons.place, size: 18),
+                        title: Text(results[i].$1),
+                        onTap: () {
+                          Navigator.of(sheetContext).pop();
+                          _stopFollowing();
+                          _controller.move(results[i].$2, 13);
+                          setState(() => _zoom = 13);
+                          _savePosition();
+                        },
+                      ),
+                    ),
+                  ),
+              ]),
+            ),
+          );
+        },
       ),
     );
   }
@@ -300,7 +434,8 @@ class _MapScreenState extends State<MapScreen> {
             // ピンチズーム等は既定で有効。二本指ひねりの回転だけ無効化（北固定）
             interactionOptions: const InteractionOptions(
                 flags: InteractiveFlag.all & ~InteractiveFlag.rotate),
-            onPositionChanged: (camera, _) {
+            onPositionChanged: (camera, hasGesture) {
+              if (hasGesture && _following) _stopFollowing();
               if ((camera.zoom - _zoom).abs() >= 0.5) {
                 setState(() => _zoom = camera.zoom);
               }
@@ -406,6 +541,13 @@ class _MapScreenState extends State<MapScreen> {
               onPressed: () => _showPrefectureJump(context),
               child: const Icon(Icons.travel_explore),
             ),
+            const SizedBox(height: 8),
+            FloatingActionButton.small(
+              heroTag: 'place_search',
+              tooltip: '場所を検索',
+              onPressed: () => _showPlaceSearch(context),
+              child: const Icon(Icons.search),
+            ),
           ]),
         ),
         Positioned(
@@ -432,7 +574,7 @@ class _MapScreenState extends State<MapScreen> {
                       width: 18,
                       height: 18,
                       child: CircularProgressIndicator(strokeWidth: 2))
-                  : const Icon(Icons.my_location),
+                  : Icon(_following ? Icons.my_location : Icons.location_searching),
             ),
           ]),
         ),

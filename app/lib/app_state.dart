@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'data/camera_repository.dart';
 import 'data/favorites_store.dart';
+import 'data/view_history_store.dart';
 import 'models/camera.dart';
 import 'models/status.dart';
 
@@ -16,6 +17,10 @@ class AppState extends ChangeNotifier {
 
   final CameraRepository repository;
   final FavoritesStore favorites;
+  final ViewHistoryStore viewHistory = ViewHistoryStore();
+
+  /// 詳細画面を開いたときに呼ぶ（ローカル統計。外部送信なし）
+  Future<void> recordView(Camera c) => viewHistory.record(c.id);
 
   bool isFavorite(Camera c) => favorites.contains(c.id);
 
@@ -142,8 +147,20 @@ class AppState extends ChangeNotifier {
     super.dispose();
   }
 
-  String? imageUrlFor(Camera c) =>
-      imagesBlockedByWifiSetting ? null : repository.imageUrlFor(c);
+  static final _watchIdRe = RegExp(r'[?&]v=([\w-]{11})');
+
+  String? imageUrlFor(Camera c) {
+    if (imagesBlockedByWifiSetting) return null;
+    // YouTube系は公式サムネイルCDN（映像そのものはIFrame Playerのみ。C6遵守）
+    if (c.feed.type == FeedType.youtubeVideo) {
+      return 'https://i.ytimg.com/vi/${c.feed.url}/mqdefault.jpg';
+    }
+    if (c.feed.type == FeedType.webPage) {
+      final m = _watchIdRe.firstMatch(c.feed.url);
+      if (m != null) return 'https://i.ytimg.com/vi/${m.group(1)}/mqdefault.jpg';
+    }
+    return repository.imageUrlFor(c);
+  }
 
   String? imageTimeFor(Camera c) {
     // 静止画はアプリが表示のたびに配信元から直接取得するため、監視システムの
@@ -157,6 +174,7 @@ class AppState extends ChangeNotifier {
   Future<void> init() async {
     await repository.loadCached();
     await favorites.load();
+    await viewHistory.load();
     try {
       final prefs = await SharedPreferences.getInstance();
       wifiOnly = prefs.getBool(_wifiOnlyKey) ?? false;

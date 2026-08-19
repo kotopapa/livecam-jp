@@ -4,7 +4,6 @@ import '../app_state.dart';
 import '../config.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
-import '../util/time_format.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 
@@ -150,7 +149,6 @@ class _FavoriteCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final time = app.imageTimeFor(camera);
     final state = app.stateOf(camera);
     return Card(
       clipBehavior: Clip.antiAlias,
@@ -195,7 +193,7 @@ class _FavoriteCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 13)),
-                  Text(time != null ? formatTakenTime(time) : camera.operator,
+                  Text(camera.operator,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style:
@@ -219,7 +217,6 @@ class _FavoriteTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final time = app.imageTimeFor(camera);
     return ListTile(
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(6),
@@ -228,7 +225,7 @@ class _FavoriteTile extends StatelessWidget {
       ),
       title: Text(camera.name, maxLines: 1, overflow: TextOverflow.ellipsis),
       subtitle: Text(
-        [if (camera.isVideo) 'LIVE', if (time != null) formatTakenTime(time), camera.operator].join(' · '),
+        [if (camera.isVideo) 'LIVE', camera.operator].join(' · '),
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
         style: const TextStyle(fontSize: 12),

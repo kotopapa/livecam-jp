@@ -43,6 +43,12 @@ class _DetailScreenState extends State<DetailScreen> {
   AppState get app => widget.app;
 
   @override
+  void initState() {
+    super.initState();
+    app.recordView(camera); // ローカル閲覧統計（ランキング用・外部送信なし）
+  }
+
+  @override
   void dispose() {
     _cooldownTimer?.cancel();
     super.dispose();
