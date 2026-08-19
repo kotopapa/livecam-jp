@@ -1,0 +1,548 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="ie=10"> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="./yui/reset-fonts-grids/reset-fonts-grids.css" />
+	<link rel="stylesheet" type="text/css" href="./yui//assets/skins/sam/resize.css" />
+	<link rel="stylesheet" type="text/css" href="./yui/layout/assets/skins/sam/layout.css" />
+	<link rel="stylesheet" type="text/css" href="./yui/button/assets/skins/sam/button.css" />
+	<link rel="stylesheet" type="text/css" href="./yui/container/assets/skins/sam/container.css" />
+	<link rel="stylesheet" type="text/css" href="./yui/fonts/fonts-min.css" />
+	<link rel="stylesheet" type="text/css" href="./yui/datatable/assets/skins/sam/datatable.css" />
+	<link rel="stylesheet" type="text/css" href="./css/camera_list.css">
+	
+	<link rel="stylesheet" href="leaflet.css" />
+	<script src="leaflet.js"></script>
+	<script src="wicket.js"></script>
+	<script src="wicket-leaflet.js"></script>
+	<script src="leaflet-omnivore.js"></script>
+	
+	<title>ひろしま道路ナビ（道路防災情報システム）</title>
+	
+	<style>
+	
+
+	</style>
+	
+	<script type="text/javascript" src="./js/jquery-1.9.1.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			setTimeout("location.reload()",1000 * 60 * 10);
+			
+		}
+	</script>
+	
+</head>
+
+<body id="body">
+<div id="title">
+	<h1>広島県道路カメラ情報</h1>
+	<h3>広島県が管理する道路（国道、県道）について道路のライブ画像を提供しています。※本ページは<span id="minuet_string">10分</span>おきに自動更新します。</h3>
+</div>
+<div id="buttonarea">
+	<a href="camera_list.php?area=all"><button      class="selected">全域</button></a>
+	<a href="camera_list.php?area=kure"><button     class="">広島・呉</button></a>
+	<a href="camera_list.php?area=higasi"><button   class="">東広島・竹原</button></a>
+	<a href="camera_list.php?area=hukuyama"><button class="">福山・尾三</button></a>
+	<a href="camera_list.php?area=bihoku"><button   class="">備北</button></a>
+	<a href="camera_list.php?area=geihoku"><button class="">芸北</button></a>
+</div>
+<div id="contents">
+	<!--<div id="content_header">全域</div>-->
+	<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）矢野安浦線<BR/>中畑</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=131"><img class="content_image" src="snow_pic/131.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">呉市安浦町大字中畑</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）呉環状線<BR/>苗代</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=64"><img class="content_image" src="snow_pic/64.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">呉市苗代町</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（一）広仁方停車場線<BR/>広小坪一丁目</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=132"><img class="content_image" src="snow_pic/132.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">呉市広小坪1丁目防波堤前</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（一）上蒲刈島循環線<BR/>田戸</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=133"><img class="content_image" src="snow_pic/133.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">呉市蒲刈町田戸</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）2号<BR/>廿日市二丁目</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=87"><img class="content_image" src="snow_pic/87.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市廿日市二丁目9-6</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>吉和</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=33"><img class="content_image" src="snow_pic/33.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市吉和</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>吉和</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=83"><img class="content_image" src="snow_pic/83.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市吉和</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>飯山</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=84"><img class="content_image" src="snow_pic/84.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市飯山</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>吉和（R434別れ）</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=38"><img class="content_image" src="snow_pic/38.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市吉和</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>スパ羅漢</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=77"><img class="content_image" src="snow_pic/77.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市飯山 </td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>栗栖</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=85"><img class="content_image" src="snow_pic/85.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市栗栖</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）廿日市佐伯線<BR/>津田</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=88"><img class="content_image" src="snow_pic/88.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市津田1981-15先</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）廿日市佐伯線<BR/>明石峠</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=60"><img class="content_image" src="snow_pic/60.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市峠</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（一）吉和戸河内線<BR/>吉和</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=09"><img class="content_image" src="snow_pic/9.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">廿日市市吉和</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）岩国大竹線<BR/>木野二丁目</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=82"><img class="content_image" src="snow_pic/82.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">大竹市木野２丁目</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）487号<BR/>高田</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=116"><img class="content_image" src="snow_pic/116.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">江田島市能美町高田</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）433号<BR/>佐々部</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=24"><img class="content_image" src="snow_pic/24.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市高宮町佐々部</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）433号<BR/>桑田</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=26"><img class="content_image" src="snow_pic/26.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市美土里町桑田</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）甲田作木線<BR/>川根</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=23"><img class="content_image" src="snow_pic/23.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市高宮町川根</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）浜田八重可部線<BR/>土師</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=111"><img class="content_image" src="snow_pic/111.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市八千代町土師</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）吉田邑南線<BR/>智教寺</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=25"><img class="content_image" src="snow_pic/25.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市美土里町生田</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）吉田豊栄線<BR/>国司</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=108"><img class="content_image" src="snow_pic/108.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市吉田町国司</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）吉田豊栄線<BR/>上小原</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=109"><img class="content_image" src="snow_pic/109.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市甲田町上小原</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）吉田豊栄線<BR/>戸島</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=107"><img class="content_image" src="snow_pic/107.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市向原町戸島</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）広島三次線<BR/>下小原</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=115"><img class="content_image" src="snow_pic/115.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市甲田町下小原</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）三次美土里線<BR/>高田インター口</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=112"><img class="content_image" src="snow_pic/112.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市美土里町横田</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（一）三次江津線<BR/>船木</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=114"><img class="content_image" src="snow_pic/114.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市高宮町船木</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（一）金屋壬生線<BR/>美土里</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=37"><img class="content_image" src="snow_pic/37.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">安芸高田市美土里町本郷</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>八幡</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=94"><img class="content_image" src="snow_pic/94.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町八幡　八幡雲耕線交点</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>芸北</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=02"><img class="content_image" src="snow_pic/2.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町川小田</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）186号<BR/>細見</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=96"><img class="content_image" src="snow_pic/96.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町細見　安佐豊平芸北線交点</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）191号<BR/>八幡</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=32"><img class="content_image" src="snow_pic/32.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町西八幡原</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）261号<BR/>大朝</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=05"><img class="content_image" src="snow_pic/5.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町大朝鳴滝</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）261号<BR/>大朝</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=100"><img class="content_image" src="snow_pic/100.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町大朝　大朝IC</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）261号<BR/>中山峠</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=59"><img class="content_image" src="snow_pic/59.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町中山</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）261号<BR/>千代田</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=04"><img class="content_image" src="snow_pic/4.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町有田</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）261号<BR/>海見山</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=98"><img class="content_image" src="snow_pic/98.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町海見山　市境</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）433号<BR/>川戸</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=101"><img class="content_image" src="snow_pic/101.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町川戸　藤原橋</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（国）433号<BR/>志路原</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=89"><img class="content_image" src="snow_pic/89.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町志路原</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）浜田八重可部線<BR/>大朝本町</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=74"><img class="content_image" src="snow_pic/74.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町大朝本町</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content">
+  <table class="inner_table">
+    <tr><td class="rosenname">（主）旭戸河内線<BR/>南門原</td></tr>
+    <tr><td class="center"><a target="_blank" href="camera_detail.php?id=91"><img class="content_image" src="snow_pic/91.jpg?timestamp=1787147775" /></a><br /></td></tr>
+   <tr>
+     <td class="titen">山県郡北広島町南門原</td>
+   </tr>
+   <tr>
+     <td class="time">2026/08/19 22:50:00</td>
+   </tr>
+  </table>
+</div>
+<div class="content"

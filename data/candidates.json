@@ -1,6 +1,82 @@
 {
- "version": "2026-08-19T11:28:08Z",
+ "version": "2026-08-19T14:01:41Z",
  "cameras": [
+  {
+   "id": "fukushima-road-051",
+   "name": "博士峠 会津美里町側",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "07",
+   "municipality": null,
+   "river_or_route": "国道401号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://absv2.f-road.info/cs1/ms/cam051m.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://fukushima-road.net/aizu/"
+   },
+   "operator": "福島県",
+   "source": {
+    "page_url": "https://www.pref.fukushima.lg.jp/sec/41340a/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福島県 会津地区道路情報"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福島県会津の峠カメラ。座標は地名ジオコーディング。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-19",
+   "last_updated": "2026-08-19"
+  },
+  {
+   "id": "fukushima-road-052",
+   "name": "博士峠 昭和村側",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "07",
+   "municipality": null,
+   "river_or_route": "国道401号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://absv2.f-road.info/cs1/ms/cam052m.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://fukushima-road.net/aizu/"
+   },
+   "operator": "福島県",
+   "source": {
+    "page_url": "https://www.pref.fukushima.lg.jp/sec/41340a/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福島県 会津地区道路情報"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福島県会津の峠カメラ。座標は地名ジオコーディング。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-19",
+   "last_updated": "2026-08-19"
+  },
   {
    "id": "mbc-chi1",
    "name": "知名町",

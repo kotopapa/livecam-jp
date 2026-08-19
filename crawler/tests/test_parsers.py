@@ -198,3 +198,35 @@ def test_kaiho_webcam_extract():
     point = (FIXTURES / "kaiho_point.html").read_text(encoding="utf-8", errors="replace")
     m = GAZOU_RE.search(point)
     assert m and m.group(1).endswith("gazou/tsurugisaki_lt.jpg")
+
+
+def test_toyama_road_parse():
+    from crawler.sources.toyama_road import parse_master
+    raw = (FIXTURES / "toyama_camera_master.json").read_text(encoding="utf-8")
+    cams = parse_master(raw)
+    assert len(cams) == 5
+    num, rec = cams[0]
+    assert num.isdigit()
+    assert float(rec["lat"]) > 35 and float(rec["lng"]) > 136
+    assert rec["path"] == "kl/camimg/"
+
+
+def test_hiroshima_road_parse():
+    from crawler.sources.hiroshima_road import parse_list
+    html = (FIXTURES / "hiroshima_camera_list.html").read_text(encoding="utf-8")
+    cams = parse_list(html)
+    assert len(cams) >= 10
+    first = cams[0]
+    assert first["id"].isdigit()
+    assert first["point"]
+    assert first["titen"]  # 住所（ジオコーディングに使う）
+
+
+def test_fukushima_road_parse():
+    from crawler.sources.fukushima_road import parse_cameras
+    html = (FIXTURES / "fukushima_aizu.html").read_bytes().decode("cp932", "replace")
+    cams = parse_cameras(html)
+    assert len(cams) >= 8
+    byid = {c["id"]: c for c in cams}
+    assert byid["63"]["name"] == "三島町 宮下"
+    assert byid["63"]["route"] == "国道252号"

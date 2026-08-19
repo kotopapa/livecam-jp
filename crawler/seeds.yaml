@@ -59,6 +59,21 @@ sources:
     note: MBC南日本放送「かごしまライブカメラ」85地点(静止画網)。インラインJSONを解析。
           設置者混在(気象庁・国道事務所・役場等)のためlicense=unknown
 
+  - id: toyama_road
+    enabled: true
+    note: 富山県「とやま道路情報」約174台。静的JSON(camera_master.json)に座標つき。
+          規約明示なし→license=unknownで人手レビュー
+
+  - id: hiroshima_road
+    enabled: true
+    note: 広島県「ひろしま道路ナビ」150台前後。snow_pic/<ID>.jpg固定URL。
+          座標なし→住所ジオコーディング。license=unknown
+
+  - id: fukushima_road
+    enabled: true
+    note: 福島県会津地区の峠カメラ(約9台)。absv2.f-road.infoのhttps静止画。
+          地名ジオコーディング。license=unknown
+
   - id: hbc_webcam
     enabled: true
     note: HBC北海道放送「情報カメラ」34地点(静止画網)。地点ページのGoogleマップ埋込から
