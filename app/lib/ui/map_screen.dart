@@ -193,8 +193,8 @@ class _MapScreenState extends State<MapScreen> {
     final resp = await http.get(uri).timeout(const Duration(seconds: 10));
     if (resp.statusCode != 200) return const [];
     final list = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
-    return [
-      for (final e in list.cast<Map<String, dynamic>>().take(15))
+    final hits = [
+      for (final e in list.cast<Map<String, dynamic>>())
         (
           (e['properties'] as Map<String, dynamic>)['title'] as String? ?? '',
           LatLng(
@@ -205,11 +205,32 @@ class _MapScreenState extends State<MapScreen> {
           ),
         ),
     ];
+    // 地理院APIは部分一致の住所も多く返すため、クエリ全体を含む候補を優先する
+    hits.sort((a, b) {
+      final am = a.$1.contains(query) ? 0 : 1;
+      final bm = b.$1.contains(query) ? 0 : 1;
+      return am.compareTo(bm);
+    });
+    return hits.take(15).toList();
+  }
+
+  /// 登録済みカメラ名からの検索（地理院が施設名に弱いのを補完する）
+  List<Camera> _searchCameras(String query) {
+    final q = query.toLowerCase();
+    return widget.app.repository
+        .displayableCameras()
+        .where((c) =>
+            c.name.toLowerCase().contains(q) ||
+            c.operator.toLowerCase().contains(q))
+        .take(8)
+        .toList();
   }
 
   void _showPlaceSearch(BuildContext context) {
     List<(String, LatLng)> results = const [];
+    List<Camera> cameraHits = const [];
     bool searching = false;
+    bool searched = false;
     showModalBottomSheet(
       context: context,
       showDragHandle: true,
@@ -220,12 +241,22 @@ class _MapScreenState extends State<MapScreen> {
             final q = _placeController.text.trim();
             if (q.isEmpty) return;
             setSheetState(() => searching = true);
+            cameraHits = _searchCameras(q);
             try {
               results = await _searchPlace(q);
             } catch (_) {
               results = const [];
             }
+            searched = true;
             setSheetState(() => searching = false);
+          }
+
+          void goTo(LatLng point, double zoom) {
+            Navigator.of(sheetContext).pop();
+            _stopFollowing();
+            _controller.move(point, zoom);
+            setState(() => _zoom = zoom);
+            _savePosition();
           }
 
           return SafeArea(
@@ -258,25 +289,55 @@ class _MapScreenState extends State<MapScreen> {
                     padding: EdgeInsets.all(16),
                     child: CircularProgressIndicator(),
                   )
+                else if (searched && results.isEmpty && cameraHits.isEmpty)
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Text('見つかりませんでした。地名・住所・カメラ名でお試しください',
+                        style: TextStyle(color: Colors.grey[600])),
+                  )
                 else
                   ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 320),
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: results.length,
-                      itemBuilder: (context, i) => ListTile(
-                        dense: true,
-                        leading: const Icon(Icons.place, size: 18),
-                        title: Text(results[i].$1),
-                        onTap: () {
-                          Navigator.of(sheetContext).pop();
-                          _stopFollowing();
-                          _controller.move(results[i].$2, 13);
-                          setState(() => _zoom = 13);
-                          _savePosition();
-                        },
-                      ),
-                    ),
+                    constraints: const BoxConstraints(maxHeight: 360),
+                    child: ListView(shrinkWrap: true, children: [
+                      if (cameraHits.isNotEmpty)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4, bottom: 2),
+                          child: Text('カメラ',
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey[600])),
+                        ),
+                      for (final c in cameraHits)
+                        ListTile(
+                          dense: true,
+                          leading: Icon(Icons.videocam,
+                              size: 18, color: categoryColor(c.category)),
+                          title: Text(c.name,
+                              maxLines: 1, overflow: TextOverflow.ellipsis),
+                          subtitle: Text(c.operator,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(fontSize: 11)),
+                          onTap: () => goTo(LatLng(c.lat!, c.lng!), 14),
+                        ),
+                      if (results.isNotEmpty)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4, bottom: 2),
+                          child: Text('場所',
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey[600])),
+                        ),
+                      for (final r in results)
+                        ListTile(
+                          dense: true,
+                          leading: const Icon(Icons.place, size: 18),
+                          title: Text(r.$1),
+                          onTap: () => goTo(r.$2, 13),
+                        ),
+                    ]),
                   ),
               ]),
             ),
