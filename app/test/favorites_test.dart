@@ -51,7 +51,8 @@ void main() {
 
     await tester.tap(find.byIcon(Icons.view_list));
     await tester.pump();
-    expect(find.byType(ListView), findsOneWidget, reason: 'リスト表示へ切替');
+    // フィルタチップの横ListViewが常設のため、縦リスト切替でListViewは2つになる
+    expect(find.byType(ListView), findsNWidgets(2), reason: 'リスト表示へ切替');
     expect(find.text('渋谷カメラ'), findsOneWidget);
 
     // リストの★で解除できる
