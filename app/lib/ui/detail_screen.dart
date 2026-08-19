@@ -42,15 +42,21 @@ class _DetailScreenState extends State<DetailScreen> {
   Camera get camera => widget.camera;
   AppState get app => widget.app;
 
+  Timer? _viewTimer;
+
   @override
   void initState() {
     super.initState();
-    app.recordView(camera); // ローカル閲覧統計（ランキング用・外部送信なし）
+    // 誤タップの一瞬の表示をカウントしないよう、5秒以上見た場合のみ記録する
+    _viewTimer = Timer(const Duration(seconds: 5), () {
+      if (mounted) app.recordView(camera);
+    });
   }
 
   @override
   void dispose() {
     _cooldownTimer?.cancel();
+    _viewTimer?.cancel();
     super.dispose();
   }
 

@@ -2,7 +2,7 @@ name: bosai-notify
 
 on:
   schedule:
-    - cron: "*/10 * * * *" # 約10分間隔（GitHub都合で遅延あり）
+    - cron: "*/5 * * * *" # 約5分間隔（GitHubの最短。実際は遅延あり）
   workflow_dispatch:
 
 permissions:
