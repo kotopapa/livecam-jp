@@ -79,6 +79,21 @@ sources:
     note: 福島県会津地区の峠カメラ(約9台)。absv2.f-road.infoのhttps静止画。
           地名ジオコーディング。license=unknown
 
+  - id: ishikawa_road
+    enabled: true
+    note: 石川県「石川みち情報ネット」約190台。api/getCameraMaster(座標つき)+
+          img/camera/<id>.jpg固定URL。license=unknown
+
+  - id: gifu_road
+    enabled: true
+    note: 岐阜県「道の情報」約350地点。api/getCameraMaster+getCamera(画像対応表)。
+          license=unknown
+
+  - id: fukui_road
+    enabled: true
+    note: 福井県「みち情報ネットふくい」約215台(NEXCO・国交省・滋賀県分は除外)。
+          cameras.json(座標つき)+assets/images/camera/<id>.jpg。license=unknown
+
   - id: shimane_road
     enabled: true
     note: 島根県「道路カメラ情報」約120台。point.json5(座標つき)+snapshot固定URL。

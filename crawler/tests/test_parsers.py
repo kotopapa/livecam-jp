@@ -253,3 +253,31 @@ def test_shimane_road_parse():
     p = pts[0]
     assert p["point_id"] == "0101" and p["name"] == "大川端"
     assert 34 < p["lat"] < 37 and 131 < p["lng"] < 134
+
+
+def test_ishikawa_road_parse():
+    from crawler.sources.ishikawa_road import parse_master
+    raw = (FIXTURES / "ishikawa_camera_master.json").read_text(encoding="utf-8")
+    cams = parse_master(raw)
+    assert len(cams) == 5
+    assert cams[0]["pointName"] and cams[0]["latitude"] > 36
+
+
+def test_gifu_road_parse():
+    from crawler.sources.gifu_road import image_map, parse_vals
+    master = parse_vals((FIXTURES / "gifu_camera_master.json").read_text(encoding="utf-8"))
+    cam = parse_vals((FIXTURES / "gifu_camera.json").read_text(encoding="utf-8"))
+    assert len(master) == 5
+    imgs = image_map(cam)
+    assert imgs and all(v.startswith("img/camera/") for v in imgs.values())
+
+
+def test_fukui_road_filter():
+    from crawler.sources.fukui_road import is_target, parse_cameras
+    cams = parse_cameras((FIXTURES / "fukui_cameras.json").read_text(encoding="utf-8"))
+    assert len(cams) == 8
+    assert not is_target("中日本高速")
+    assert not is_target("福井河川国道")
+    assert not is_target("滋賀県　高島土木事務所")
+    assert is_target("福井土木事務所")
+    assert is_target("鯖江市")

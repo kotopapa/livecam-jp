@@ -5,8 +5,11 @@
 
 from crawler.sources.curated_world import CuratedWorldParser
 from crawler.sources.curated_youtube import CuratedYoutubeParser
+from crawler.sources.fukui_road import FukuiRoadParser
 from crawler.sources.fukushima_road import FukushimaRoadParser
+from crawler.sources.gifu_road import GifuRoadParser
 from crawler.sources.hiroshima_road import HiroshimaRoadParser
+from crawler.sources.ishikawa_road import IshikawaRoadParser
 from crawler.sources.hbc_webcam import HbcWebcamParser
 from crawler.sources.kaiho_webcam import KaihoWebcamParser
 from crawler.sources.mbc_webcam import MbcWebcamParser
@@ -27,8 +30,11 @@ REGISTRY = {
     for p in [
         CuratedWorldParser,
         CuratedYoutubeParser,
+        FukuiRoadParser,
         FukushimaRoadParser,
+        GifuRoadParser,
         HiroshimaRoadParser,
+        IshikawaRoadParser,
         HbcWebcamParser,
         KaihoWebcamParser,
         MbcWebcamParser,
