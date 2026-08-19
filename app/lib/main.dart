@@ -1,5 +1,8 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+
+import 'firebase_options.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'app_state.dart';
@@ -13,6 +16,13 @@ Future<void> main() async {
   final binding = WidgetsFlutterBinding.ensureInitialized();
   // ネイティブ起動画面はFlutter初回フレームで即消えるため、最低表示時間を保証する
   FlutterNativeSplash.preserve(widgetsBinding: binding);
+  // 災害プッシュ通知用（対応プラットフォームのみ・失敗しても起動は続行）
+  try {
+    final options = DefaultFirebaseOptions.currentPlatform;
+    if (options != null) {
+      await Firebase.initializeApp(options: options);
+    }
+  } catch (_) {}
   final dir = await getApplicationSupportDirectory();
   final app = AppState(CameraRepository(
     api: ApiClient(),

@@ -23,6 +23,14 @@ QUAKE_URL = "https://www.jma.go.jp/bosai/quake/data/list.json"
 WARNING_URL = "https://www.jma.go.jp/bosai/warning/data/warning/map.json"
 
 STRONG_INTENSITY = {"5-", "5+", "6-", "6+", "7"}
+# 震度→通知対象トピック（クライアントは選択レベルの1トピックだけ購読する）
+INTENSITY_TOPICS = {
+    "5-": ["quake5"],
+    "5+": ["quake5", "quake5up"],
+    "6-": ["quake5", "quake5up", "quake6low"],
+    "6+": ["quake5", "quake5up", "quake6low"],
+    "7":  ["quake5", "quake5up", "quake6low"],
+}
 INTENSITY_LABEL = {"5-": "5弱", "5+": "5強", "6-": "6弱", "6+": "6強", "7": "7"}
 SPECIAL_WARNINGS = {
     "32": "暴風雪特別警報", "33": "大雨特別警報", "35": "暴風特別警報",
@@ -73,8 +81,8 @@ def load_state() -> dict:
         return {"notified_quakes": [], "active_special": []}
 
 
-def check_quakes(state: dict) -> list[tuple[str, str, str]]:
-    """未通知の震度5弱以上を返す [(eid, title, body)]"""
+def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
+    """未通知の震度5弱以上を返す [(eid, title, body, topics)]"""
     out = []
     quakes = requests.get(QUAKE_URL, timeout=30).json()
     since = datetime.now(JST) - timedelta(hours=3)
@@ -92,7 +100,7 @@ def check_quakes(state: dict) -> list[tuple[str, str, str]]:
         body = (f"{e.get('anm', '不明')}で震度{label}"
                 f"（M{e.get('mag', '-')}・{at.strftime('%H:%M')}頃）。"
                 "周辺のライブカメラを確認できます")
-        out.append((eid, title, body))
+        out.append((eid, title, body, INTENSITY_TOPICS.get(maxi, ["quake5"])))
     return out
 
 
@@ -135,8 +143,9 @@ def main() -> int:
     changed = False
     if quake_events or warning_events:
         token, project = fcm_token(json.loads(sa_raw))
-        for eid, title, body in quake_events:
-            send_push(token, project, "quake5", title, body)
+        for eid, title, body, topics in quake_events:
+            for topic in topics:
+                send_push(token, project, topic, title, body)
             state["notified_quakes"].append(eid)
             changed = True
         for title, body in warning_events:

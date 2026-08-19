@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
 import '../config.dart';
+import '../data/notification_settings.dart';
 import 'detail_screen.dart' show disclaimerText;
 
 const _requestFormUrl =
@@ -26,6 +27,21 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool _clearingCache = false;
+  final _notify = NotificationSettings();
+  bool _notifyLoaded = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _notify.load().then((_) {
+      if (mounted) setState(() => _notifyLoaded = true);
+    });
+  }
+
+  void _showPermissionDenied() {
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('通知が許可されていません。iOSの設定アプリから通知を許可してください')));
+  }
 
   AppState get app => widget.app;
 
@@ -47,6 +63,57 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('設定')),
       body: ListView(children: [
+        const _SectionHeader('災害通知'),
+        SwitchListTile(
+          secondary: const Icon(Icons.rss_feed),
+          title: const Text('震度5弱以上の地震'),
+          subtitle: Text(_notifyLoaded && _notify.quakeEnabled
+              ? '通知レベル: ${NotificationSettings.quakeLevelLabels[_notify.quakeLevel]}'
+              : '大きな地震の発生を通知し、周辺カメラへ誘導します'),
+          value: _notifyLoaded && _notify.quakeEnabled,
+          onChanged: !_notifyLoaded
+              ? null
+              : (v) async {
+                  final ok = await _notify.setQuakeEnabled(v);
+                  if (!ok && mounted) _showPermissionDenied();
+                  if (mounted) setState(() {});
+                },
+        ),
+        if (_notifyLoaded && _notify.quakeEnabled)
+          Padding(
+            padding: const EdgeInsets.only(left: 72, right: 16),
+            child: Wrap(spacing: 8, children: [
+              for (final level in NotificationSettings.quakeLevels)
+                ChoiceChip(
+                  label: Text(
+                      NotificationSettings.quakeLevelLabels[level] ?? level),
+                  selected: _notify.quakeLevel == level,
+                  onSelected: (_) async {
+                    await _notify.setQuakeLevel(level);
+                    if (mounted) setState(() {});
+                  },
+                ),
+            ]),
+          ),
+        SwitchListTile(
+          secondary: const Icon(Icons.warning_amber_outlined),
+          title: const Text('特別警報'),
+          subtitle: const Text('大雨・暴風・高潮などの特別警報の発表を通知します'),
+          value: _notifyLoaded && _notify.warningEnabled,
+          onChanged: !_notifyLoaded
+              ? null
+              : (v) async {
+                  final ok = await _notify.setWarningEnabled(v);
+                  if (!ok && mounted) _showPermissionDenied();
+                  if (mounted) setState(() {});
+                },
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+          child: Text('※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません',
+              style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+        ),
+        const Divider(),
         const _SectionHeader('データ取得'),
         SwitchListTile(
           secondary: const Icon(Icons.wifi),
