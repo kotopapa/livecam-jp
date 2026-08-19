@@ -59,6 +59,7 @@ const _warningNames = {
 class _BosaiScreenState extends State<BosaiScreen> {
   List<_Quake>? _quakes;
   String? _error;
+  DateTime? _fetchedAt;
   // 都道府県コード → 発表中の警報名セット（特別警報を先頭に）
   Map<String, List<String>>? _warnings;
   String? _warningError;
@@ -76,9 +77,11 @@ class _BosaiScreenState extends State<BosaiScreen> {
       _warningError = null;
     });
     try {
-      final resp = await http
-          .get(Uri.parse(BosaiScreen.warningMapUrl))
-          .timeout(const Duration(seconds: 15));
+      final resp = await http.get(
+        Uri.parse('${BosaiScreen.warningMapUrl}'
+            '?_=${DateTime.now().millisecondsSinceEpoch}'),
+        headers: {'Cache-Control': 'no-cache'},
+      ).timeout(const Duration(seconds: 15));
       if (resp.statusCode != 200) throw Exception('HTTP ${resp.statusCode}');
       final offices = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
       final byPref = <String, Set<String>>{};
@@ -128,9 +131,11 @@ class _BosaiScreenState extends State<BosaiScreen> {
       _error = null;
     });
     try {
-      final resp = await http
-          .get(Uri.parse(BosaiScreen.quakeListUrl))
-          .timeout(const Duration(seconds: 15));
+      final resp = await http.get(
+        Uri.parse('${BosaiScreen.quakeListUrl}'
+            '?_=${DateTime.now().millisecondsSinceEpoch}'),
+        headers: {'Cache-Control': 'no-cache'},
+      ).timeout(const Duration(seconds: 15));
       if (resp.statusCode != 200) {
         throw Exception('HTTP ${resp.statusCode}');
       }
@@ -183,13 +188,17 @@ class _BosaiScreenState extends State<BosaiScreen> {
         ));
       }
       // 震度の大きい順 → 新しい順
+      // 新しい順（津波情報のみ最優先）。震度の大小はバッジ色で判別できる
       quakes.sort((a, b) {
         if (a.isTsunami != b.isTsunami) return a.isTsunami ? -1 : 1;
-        final ci = _intensityRank(b.maxIntensity)
-            .compareTo(_intensityRank(a.maxIntensity));
-        return ci != 0 ? ci : b.at.compareTo(a.at);
+        return b.at.compareTo(a.at);
       });
-      if (mounted) setState(() => _quakes = quakes.take(30).toList());
+      if (mounted) {
+        setState(() {
+          _quakes = quakes.take(30).toList();
+          _fetchedAt = DateTime.now();
+        });
+      }
     } catch (e) {
       if (mounted) setState(() => _error = '取得に失敗しました（$e）');
     }
@@ -260,10 +269,14 @@ class _BosaiScreenState extends State<BosaiScreen> {
                       separatorBuilder: (_, _) => const Divider(height: 1),
                       itemBuilder: (context, i) {
                         if (i == 0) {
+                          final t = _fetchedAt;
+                          final ts = t == null
+                              ? ''
+                              : '（${t.hour.toString().padLeft(2, '0')}:${t.minute.toString().padLeft(2, '0')}時点・新しい順）';
                           return Padding(
                             padding: const EdgeInsets.all(12),
                             child: Text(
-                              '出典：気象庁 地震情報（直近72時間）。タップすると震源周辺のライブカメラ一覧を表示します。',
+                              '出典：気象庁 地震情報（直近72時間）$ts。タップすると震源周辺のライブカメラ一覧を表示します。',
                               style: TextStyle(
                                   fontSize: 11, color: Colors.grey[600]),
                             ),
