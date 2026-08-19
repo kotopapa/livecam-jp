@@ -1511,7 +1511,7 @@ cameras:
   - id: curated-wajima-port
     name: 輪島港・朝市通り
     operator: "HAB北陸朝日放送"
-    video_id: "44VtKsTv90U"
+    video_id: "zj7tJYwFHig"  # 旧44VtKsTv90Uは配信終了(2026-08-19確認)
     category: port
     prefecture: "17"
     lat: 37.397
@@ -2418,3 +2418,1828 @@ cameras:
     prefecture: "01"
     lat: 43.459
     lng: 142.467
+
+  # ===== 第10弾: ジャンル網羅調査 (2026-08-19) =====
+
+  # --- shrine_castle ---
+  - id: curated-r2-452b7be7
+    name: 松本城 本丸庭園
+    operator: "国宝松本城（公式）"
+    video_id: "MDo8JOa9i3U"
+    category: scenic
+    prefecture: "20"
+    lat: 36.2387
+    lng: 137.9689
+    note: "公式ch常設ライブ#1。国宝天守と本丸庭園"
+
+  - id: curated-r2-52b3bc1a
+    name: 松本城 黒門
+    operator: "国宝松本城（公式）"
+    video_id: "w1x2kIMp5OQ"
+    category: scenic
+    prefecture: "20"
+    lat: 36.2383
+    lng: 137.9692
+    note: "公式ch常設ライブ#2。黒門からの眺め"
+
+  - id: curated-r2-65596fc0
+    name: 松本城 お天気カメラ
+    operator: "国宝松本城（公式）"
+    video_id: "jWr_0kT2A_g"
+    category: scenic
+    prefecture: "20"
+    lat: 36.2386
+    lng: 137.9686
+    note: "公式ch常設ライブ#3。天守と空"
+
+  - id: curated-r2-de1af964
+    name: 松本城と北アルプス
+    operator: "松本市（公式）"
+    video_id: "3pfpRzVgtoE"
+    category: scenic
+    prefecture: "20"
+    lat: 36.238
+    lng: 137.9709
+    note: "松本市役所方面からの俯瞰。天守+北アルプス"
+
+  - id: curated-r2-0c80d3a2
+    name: 善光寺
+    operator: "INC長野ケーブルテレビ"
+    video_id: "HvJdPF46kak"
+    category: scenic
+    prefecture: "20"
+    lat: 36.6616
+    lng: 138.1876
+    note: "本堂前方向の常設ライブ"
+
+  - id: curated-r2-15c96162
+    name: 日光二荒山神社 神橋
+    operator: "日光二荒山神社"
+    video_id: "7oRZg_BHPXg"
+    category: scenic
+    prefecture: "09"
+    lat: 36.7549
+    lng: 139.6054
+    note: "世界遺産日光の玄関・神橋。神社自身の配信"
+
+  - id: curated-r2-ed148135
+    name: 日光二荒山神社 中宮祠
+    operator: "日光二荒山神社"
+    video_id: "o2X0pY07L5E"
+    category: scenic
+    prefecture: "09"
+    lat: 36.7481
+    lng: 139.4897
+    note: "中禅寺湖畔の中宮祠。同神社チャンネル"
+
+  - id: curated-r2-8bb8e066
+    name: 鎌倉 若宮大路 段葛
+    operator: "置石fm."
+    video_id: "VOix1wTjheQ"
+    category: scenic
+    prefecture: "14"
+    lat: 35.319
+    lng: 139.551
+    note: "鶴岡八幡宮参道段葛。同chに第2(UrZWLQSjOuQ)・第3(5bEHNKM2H2k)あり"
+
+  - id: curated-r2-8dd282ef
+    name: 鎌倉 材木座海岸・由比ガ浜
+    operator: "FlyingSuika（ローカス鎌倉）"
+    video_id: "hxKBnoLH0uk"
+    category: scenic
+    prefecture: "14"
+    lat: 35.305
+    lng: 139.556
+    note: "材木座〜由比ガ浜方向"
+
+  - id: curated-r2-0c89545a
+    name: 銀閣寺
+    operator: "京都観光混雑状況Live"
+    video_id: "kFxyBm56WPk"
+    category: scenic
+    prefecture: "26"
+    lat: 35.027
+    lng: 135.7982
+    note: "銀閣寺門前の混雑カメラ"
+
+  - id: curated-r2-9de2f8a5
+    name: 清水坂（清水寺門前）
+    operator: "京都観光混雑状況Live"
+    video_id: "cUnYPpK7ENk"
+    category: scenic
+    prefecture: "26"
+    lat: 34.9962
+    lng: 135.7789
+    note: "清水寺参道の混雑カメラ"
+
+  - id: curated-r2-dc3c36dd
+    name: 伏見稲荷大社 表参道
+    operator: "京都観光混雑状況Live"
+    video_id: "MMeBDRfRHyA"
+    category: scenic
+    prefecture: "26"
+    lat: 34.9677
+    lng: 135.7726
+    note: "表参道の混雑カメラ"
+
+  - id: curated-r2-42b045cf
+    name: 貴船神社
+    operator: "京都観光混雑状況Live"
+    video_id: "eJAqPCdS1cY"
+    category: scenic
+    prefecture: "26"
+    lat: 35.1216
+    lng: 135.7629
+    note: "貴船神社付近の混雑カメラ"
+
+  - id: curated-r2-c2cddf33
+    name: 東大路通・五条坂
+    operator: "京都観光混雑状況Live"
+    video_id: "AhFQvPJe_Yk"
+    category: scenic
+    prefecture: "26"
+    lat: 34.9967
+    lng: 135.7757
+    note: "清水寺方面への入口交差点"
+
+  - id: curated-r2-89320a94
+    name: 北野天満宮前
+    operator: "京都市観光協会"
+    video_id: "KHglGodzQ9g"
+    category: scenic
+    prefecture: "26"
+    lat: 35.0264
+    lng: 135.7355
+    note: "協会公式。既存の渡月橋・哲学の道と同チャンネル"
+
+  - id: curated-r2-f299c0dd
+    name: 掛川城 天守閣
+    operator: "ZAZAマガジンチャンネル"
+    video_id: "pFlwpTTEuq0"
+    category: scenic
+    prefecture: "22"
+    lat: 34.7745
+    lng: 138.014
+    note: "24h常設"
+
+  - id: curated-r2-149da542
+    name: 大内宿
+    operator: "福島県下郷町"
+    video_id: "TR0ZBrVbDio"
+    category: scenic
+    prefecture: "07"
+    lat: 37.3323
+    lng: 139.86
+    note: "重伝建の宿場町。町公式ch"
+
+  - id: curated-r2-dda4b4ea
+    name: 塔のへつり
+    operator: "福島県下郷町"
+    video_id: "I7bsDHmaoxM"
+    category: scenic
+    prefecture: "07"
+    lat: 37.2903
+    lng: 139.8839
+    note: "国天然記念物の景勝地。町公式ch"
+
+  - id: curated-r2-e54499ad
+    name: 出雲大社前駅 神門通り
+    operator: "神門通りライブカメラ（民間）"
+    video_id: "WXQLdFkgPiQ"
+    category: scenic
+    prefecture: "32"
+    lat: 35.3893
+    lng: 132.6862
+    note: "出雲大社本体のライブは無し。参道+一畑電車"
+
+  - id: curated-r2-30ccae15
+    name: 高野山
+    operator: "テレビ和歌山"
+    video_id: "XXVXVSLbjAk"
+    category: scenic
+    prefecture: "30"
+    lat: 34.212
+    lng: 135.585
+    note: "情報カメラ。座標は壇上伽藍付近の近似"
+
+  - id: curated-r2-e4a721e8
+    name: 談山神社
+    operator: "奈良テレビ放送"
+    video_id: "zppA64fWxfE"
+    category: scenic
+    prefecture: "29"
+    lat: 34.4325
+    lng: 135.8623
+    note: "十三重塔の名所"
+
+  - id: curated-r2-46cf96af
+    name: 錦帯橋
+    operator: "岩国市錦帯橋課"
+    video_id: "tHwWcSdBjjY"
+    category: scenic
+    prefecture: "35"
+    lat: 34.1677
+    lng: 132.177
+    note: "市の錦帯橋課公式チャンネル"
+
+  - id: curated-r2-ad2ba824
+    name: 備中松山城 雲海展望台
+    operator: "高梁市"
+    video_id: "6plJysTshZY"
+    category: scenic
+    prefecture: "33"
+    lat: 34.8215
+    lng: 133.6153
+    note: "天空の山城の雲海眺望"
+
+  - id: curated-r2-6c3f0db8
+    name: 浅草寺 境内（本堂側）
+    operator: "宗教法人浅草寺"
+    video_id: "HjRZNBm1kms"
+    category: scenic
+    prefecture: "13"
+    lat: 35.7148
+    lng: 139.7967
+    note: "寺公式チャンネルの常設ライブ"
+
+  - id: curated-r2-4711e07a
+    name: 浅草寺 境内（雷門側）
+    operator: "宗教法人浅草寺"
+    video_id: "8sp9SafNr8Q"
+    category: scenic
+    prefecture: "13"
+    lat: 35.7113
+    lng: 139.7966
+    note: "埋め込み不可→誘導型で登録"
+
+  - id: curated-r2-543cb95f
+    name: 浅草寺 宝蔵門
+    operator: "浅草中屋"
+    video_id: "NsFHt76uwh8"
+    category: scenic
+    prefecture: "13"
+    lat: 35.7136
+    lng: 139.7961
+    note: "仲見世側から宝蔵門方向"
+
+  - id: curated-r2-9604ceed
+    name: 成田山新勝寺
+    operator: "成田山新勝寺"
+    video_id: "g9Y-Bkq5O0Q"
+    category: scenic
+    prefecture: "12"
+    lat: 35.7862
+    lng: 140.3181
+    note: "寺公式チャンネルの常設ライブ"
+
+  - id: curated-r2-81277eca
+    name: 原宿駅前（明治神宮方面）
+    operator: "原宿駅・表参道口ライブカメラ（民間）"
+    video_id: "RUB0oL0SHl0"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6702
+    lng: 139.7027
+    note: "神宮口前の駅前カメラ(4K)"
+
+  - id: curated-r2-c134e484
+    name: 小田原城 お堀端
+    operator: "ケルト（お堀端の店舗）"
+    video_id: "4Ezkah-bZ2Y"
+    category: scenic
+    prefecture: "14"
+    lat: 35.2513
+    lng: 139.155
+    note: "城内お堀を望む店舗設置カメラ"
+
+  - id: curated-r2-04bc137c
+    name: 英彦山
+    operator: "福岡県添田町"
+    video_id: "eHrqIefbe9Q"
+    category: scenic
+    prefecture: "40"
+    lat: 33.4746
+    lng: 130.9411
+    note: "埋め込み不可→誘導型で登録"
+
+  - id: curated-r2-01978867
+    name: 身延 七面山
+    operator: "七面山ライブカメラ"
+    video_id: "54NpKx_efis"
+    category: scenic
+    prefecture: "19"
+    lat: 35.3576
+    lng: 138.3428
+    note: "日蓮宗霊山。ご来光・富士山方向"
+
+  - id: curated-r2-487ad52a
+    name: にこ淵（仁淀ブルー）
+    operator: "いの町観光協会"
+    video_id: "DYZNt9R5szY"
+    category: scenic
+    prefecture: "39"
+    lat: 33.684
+    lng: 133.29
+    note: "観光名所。座標は近似"
+
+
+  # --- urban ---
+  - id: curated-r2-9895fb0c
+    name: 新宿駅前(TBSニュースカメラ)
+    operator: "TBS NEWS DIG Powered by JNN"
+    video_id: "BePkAsZnDjM"
+    category: scenic
+    prefecture: "13"
+    lat: 35.691
+    lng: 139.7005
+    note: "IDローテーションあり。チャンネル追従推奨"
+
+  - id: curated-r2-5f9cb448
+    name: 新宿 歌舞伎町第2(区役所交差点)
+    operator: "テイケイ"
+    video_id: "vuP9iwdyyFM"
+    category: scenic
+    prefecture: "13"
+    lat: 35.695
+    lng: 139.704
+    note: "警備会社本社ビル屋上・4K・24時間"
+
+  - id: curated-r2-474952fa
+    name: 新宿 歌舞伎町交差点(靖国通り)
+    operator: "テイケイ"
+    video_id: "ErHJBXTmm2Q"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6934
+    lng: 139.7025
+    note: "姉妹配信に新宿五丁目交差点 gTO_FJzv70k(検証済)"
+
+  - id: curated-r2-abc50536
+    name: 新宿五丁目交差点
+    operator: "テイケイ"
+    video_id: "gTO_FJzv70k"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6926
+    lng: 139.7066
+    note: "テイケイ屋上カメラ姉妹配信"
+
+  - id: curated-r2-ddfe315c
+    name: 勝どき東向き スカイツリー・隅田川
+    operator: "東京ライブカメラ | Tokyo Live Cam"
+    video_id: "xdjEmXaf8o8"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6585
+    lng: 139.7772
+    note: "高層階から東東京パノラマ・24時間"
+
+  - id: curated-r2-15e2f401
+    name: 東京タワー(公式ライブカメラ)
+    operator: "東京タワー"
+    video_id: "nu6NE55_X7A"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6586
+    lng: 139.7454
+    note: "公式「現在の東京タワー」定点"
+
+  - id: curated-r2-990b2549
+    name: お台場 レインボーブリッジ
+    operator: "ODAIBA TOKYO LIVE"
+    video_id: "hlbh4P0Mz8M"
+    category: scenic
+    prefecture: "13"
+    lat: 35.63
+    lng: 139.775
+    note: "お台場高所からレインボーブリッジと都心"
+
+  - id: curated-r2-49cfe2fc
+    name: 浅草 隅田川・スカイツリー
+    operator: "船宿あみ清"
+    video_id: "MwcMURMzJ7A"
+    category: scenic
+    prefecture: "13"
+    lat: 35.7107
+    lng: 139.8005
+    note: "4K。吾妻橋付近から"
+
+  - id: curated-r2-459810e9
+    name: 横浜定点(テレビ神奈川屋上)
+    operator: "テレビ神奈川"
+    video_id: "f3qvRKzN33s"
+    category: scenic
+    prefecture: "14"
+    lat: 35.446
+    lng: 139.637
+    note: "IDローテーションの可能性。チャンネル追従推奨"
+
+  - id: curated-r2-fbe7c0a8
+    name: 横浜みなとみらい全景
+    operator: "Japan Live Camera"
+    video_id: "Uu37SpkYaEw"
+    category: scenic
+    prefecture: "14"
+    lat: 35.455
+    lng: 139.63
+    note: "4K高所全景・座標近似"
+
+  - id: curated-r2-e66c94b8
+    name: 横浜港・ベイブリッジ
+    operator: "横浜港ライブカメラ(民間)"
+    video_id: "XMYIqdG0JMI"
+    category: scenic
+    prefecture: "14"
+    lat: 35.4437
+    lng: 139.6503
+    note: "座標近似・IDローテーションの可能性"
+
+  - id: curated-r2-cfd209a5
+    name: 名古屋駅 鉄道俯瞰4K
+    operator: "鉄道沿線の生活(民間)"
+    video_id: "pI_u966ixNk"
+    category: scenic
+    prefecture: "23"
+    lat: 35.166
+    lng: 136.882
+    note: "埋め込み不可→誘導型。IDローテーションあり"
+
+  - id: curated-r2-6e69c75e
+    name: 大阪・梅田(毎日新聞大阪本社)
+    operator: "毎日新聞社"
+    video_id: "il6iGt3CuiE"
+    category: scenic
+    prefecture: "27"
+    lat: 34.6989
+    lng: 135.4913
+    note: "高層階から梅田俯瞰"
+
+  - id: curated-r2-435f68f9
+    name: 梅田情報カメラ
+    operator: "Kansai HD(民間)"
+    video_id: "1obdYuDvP0Q"
+    category: scenic
+    prefecture: "27"
+    lat: 34.7025
+    lng: 135.4959
+    note: "座標近似"
+
+  - id: curated-r2-9b54c53f
+    name: 大阪夜景・あべのハルカス方面
+    operator: "starstyle(民間)"
+    video_id: "YIjxwMxWzgE"
+    category: scenic
+    prefecture: "27"
+    lat: 34.68
+    lng: 135.51
+    note: "座標近似"
+
+  - id: curated-r2-25066a60
+    name: 広島駅南口(RCC)
+    operator: "RCC中国放送"
+    video_id: "2-sN0A1nF9M"
+    category: scenic
+    prefecture: "34"
+    lat: 34.3948
+    lng: 132.4757
+    note: "駅前大橋・路面電車高架を俯瞰"
+
+  - id: curated-r2-a0c862fa
+    name: JR博多駅前(KBC)
+    operator: "九州朝日放送"
+    video_id: "8RyR0J8zbbU"
+    category: scenic
+    prefecture: "40"
+    lat: 33.5902
+    lng: 130.4207
+    note: "駅前広場を俯瞰"
+
+  - id: curated-r2-95912402
+    name: 博多港(テレQ)
+    operator: "TVQ九州放送"
+    video_id: "EkH8SihBx9E"
+    category: scenic
+    prefecture: "40"
+    lat: 33.5877
+    lng: 130.4127
+    note: "緊急時は映像切替あり"
+
+  - id: curated-r2-e1160af6
+    name: 福岡 天神北・都市高速
+    operator: "ニューガイアグループ"
+    video_id: "1z64AKqCDTQ"
+    category: scenic
+    prefecture: "40"
+    lat: 33.5985
+    lng: 130.4008
+    note: "企業ビル上から"
+
+  - id: curated-r2-1d6af559
+    name: 札幌 大通公園・テレビ塔(朝日新聞)
+    operator: "朝日新聞社"
+    video_id: "RBHsITnIoI0"
+    category: scenic
+    prefecture: "01"
+    lat: 43.0617
+    lng: 141.3546
+    note: "創世スクエア高層階から"
+
+  - id: curated-r2-e2db3f9c
+    name: いまの札幌(HTB/SODANE)
+    operator: "HTB北海道テレビ"
+    video_id: "kfIQBC0hrII"
+    category: scenic
+    prefecture: "01"
+    lat: 43.0617
+    lng: 141.3546
+    note: "BGM付き高所ビュー"
+
+
+  # --- mountain ---
+  - id: curated-r2-4f1fe3f9
+    name: 新穂高ロープウェイ（西穂高口）
+    operator: "新穂高ロープウェイ"
+    video_id: "qmqsvWrFfww"
+    category: scenic
+    prefecture: "21"
+    lat: 36.289
+    lng: 137.587
+    note: "北アルプス西穂高方面"
+
+  - id: curated-r2-7c0fa32e
+    name: 富士山頂 東向き（ご来光）
+    operator: "NPO法人富士山測候所を活用する会"
+    video_id: "zWORRn1aRRw"
+    category: scenic
+    prefecture: "22"
+    lat: 35.3606
+    lng: 138.7274
+    note: "剣ヶ峰。夏期観測期間のみ配信"
+
+  - id: curated-r2-db7d489e
+    name: 富士山頂 西向き
+    operator: "NPO法人富士山測候所を活用する会"
+    video_id: "hzJMyFceuGY"
+    category: scenic
+    prefecture: "22"
+    lat: 35.3606
+    lng: 138.7274
+    note: "夏期のみ"
+
+  - id: curated-r2-035e188f
+    name: 八ヶ岳 赤岳天望荘
+    operator: "エルシーブイ（LCV）"
+    video_id: "6_4If7ufEyU"
+    category: scenic
+    prefecture: "20"
+    lat: 35.9758
+    lng: 138.369
+    note: "標高2722mの山小屋。冬期休業の可能性"
+
+  - id: curated-r2-e3e779ce
+    name: 北八ヶ岳ロープウェイ 山頂駅
+    operator: "北八ヶ岳リゾート"
+    video_id: "r5iODADWb50"
+    category: scenic
+    prefecture: "20"
+    lat: 36.0693
+    lng: 138.326
+    note: "坪庭・標高2237m（通年）"
+
+  - id: curated-r2-6b15de3b
+    name: 美ヶ原 王ヶ頭
+    operator: "王ヶ頭カメラ"
+    video_id: "Lh4xGhNCps8"
+    category: scenic
+    prefecture: "20"
+    lat: 36.2325
+    lng: 138.113
+    note: "標高2034m山頂から"
+
+  - id: curated-r2-72bb9f9e
+    name: 谷川連峰・俎嵓（TANIGAWA GOODY）
+    operator: "TANIGAWA GOODY"
+    video_id: "uuOzVUTVrXU"
+    category: scenic
+    prefecture: "10"
+    lat: 36.766
+    lng: 138.937
+    note: "宿から俎嵓を望む"
+
+  - id: curated-r2-2a8dc4de
+    name: 大山 北壁（大山寺地区）
+    operator: "自然公園財団 大山事業地"
+    video_id: "g2ks-Q4IEj0"
+    category: scenic
+    prefecture: "31"
+    lat: 35.3855
+    lng: 133.5389
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-b5bdbcc3
+    name: 大山 桝水高原
+    operator: "日本海テレビ"
+    video_id: "QjNzHxGgKb4"
+    category: scenic
+    prefecture: "31"
+    lat: 35.373
+    lng: 133.517
+    note: "IDローテーションの可能性"
+
+  - id: curated-r2-b768c9cb
+    name: 大山（大山観光局）
+    operator: "大山観光局"
+    video_id: "_zBo6YE_Aj4"
+    category: scenic
+    prefecture: "31"
+    lat: 35.3873
+    lng: 133.54
+    note: "博労座周辺から北壁"
+
+  - id: curated-r2-fd8c69ef
+    name: 阿蘇 草千里・火山博物館（RKK）
+    operator: "RKK熊本放送"
+    video_id: "aVGYOlIzV0A"
+    category: volcano
+    prefecture: "43"
+    lat: 32.8837
+    lng: 131.0656
+    note: "既存4Kカメラとは別運営"
+
+  - id: curated-r2-f7942f45
+    name: 阿蘇 草千里（KAB）
+    operator: "KAB熊本朝日放送"
+    video_id: "jTa775fM-gY"
+    category: volcano
+    prefecture: "43"
+    lat: 32.884
+    lng: 131.065
+    note: "設置点近似"
+
+  - id: curated-r2-0d25aa10
+    name: 桜島 ライブカメラC（火口）
+    operator: "株式会社財宝"
+    video_id: "Mfq8V8uE0SU"
+    category: volcano
+    prefecture: "46"
+    lat: 31.583
+    lng: 130.755
+    note: "既存財宝A/Bと同chの別カメラ"
+
+  - id: curated-r2-c00fd35e
+    name: 白馬八方尾根
+    operator: "白馬村観光局"
+    video_id: "21HCv58C99o"
+    category: scenic
+    prefecture: "20"
+    lat: 36.698
+    lng: 137.831
+    note: "同chに姉妹カメラあり"
+
+  - id: curated-r2-5e0c257b
+    name: 志賀高原 横手山・渋峠
+    operator: "横手山・渋峠スキー場"
+    video_id: "e5PzMEi_kug"
+    category: scenic
+    prefecture: "20"
+    lat: 36.6742
+    lng: 138.5203
+    note: "標高約2300m"
+
+  - id: curated-r2-8747f9bc
+    name: 北アルプス遠望（大町市）
+    operator: "長野県山岳総合センター"
+    video_id: "Vqj0uA_I2Xs"
+    category: scenic
+    prefecture: "20"
+    lat: 36.503
+    lng: 137.862
+    note: "爺ヶ岳・蓮華岳方面"
+
+  - id: curated-r2-475a049c
+    name: 金剛山 国見城址
+    operator: "金剛錬成会"
+    video_id: "hs80tlGTZJo"
+    category: scenic
+    prefecture: "29"
+    lat: 34.4197
+    lng: 135.6716
+    note: "山頂広場"
+
+  - id: curated-r2-08729bce
+    name: 立山 雄山山頂 北（剱岳方面）
+    operator: "tateyama now"
+    video_id: "w9zKli6lmwc"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5725
+    lng: 137.6172
+    note: "20分毎静止画更新。埋め込み不可→誘導型"
+
+  - id: curated-r2-4ac9fa53
+    name: 立山 雄山山頂 南（槍穂高・富士山方面）
+    operator: "tateyama now"
+    video_id: "j8Kvv-w_GZQ"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5723
+    lng: 137.617
+    note: "20分毎静止画更新"
+
+  - id: curated-r2-db6878ca
+    name: 那須連山（那須自然村）
+    operator: "那須自然村"
+    video_id: "gapbOiXhgO4"
+    category: scenic
+    prefecture: "09"
+    lat: 37.048
+    lng: 140.005
+    note: "夜間は水槽映像に切替"
+
+  - id: curated-r2-82a08920
+    name: 丸沼高原・日光白根山
+    operator: "丸沼高原スキー場"
+    video_id: "0Q2YZBnp7vk"
+    category: scenic
+    prefecture: "10"
+    lat: 36.7767
+    lng: 139.3436
+    note: "関東以北最高峰を望む"
+
+  - id: curated-r2-caf9658e
+    name: 新燃岳・霧島連山（KYT）
+    operator: "KYT鹿児島読売テレビ"
+    video_id: "Ay63GFWdJUg"
+    category: volcano
+    prefecture: "46"
+    lat: 31.909
+    lng: 130.886
+    note: "座標は山体近似"
+
+  - id: curated-r2-63dbd29b
+    name: 御岳山・武蔵御嶽神社（4K）
+    operator: "青梅市観光協会"
+    video_id: "1vdmvnXnkQ4"
+    category: scenic
+    prefecture: "13"
+    lat: 35.783
+    lng: 139.149
+    note: "御岳山(929m)山上"
+
+  - id: curated-r2-2fda414c
+    name: 富士山（ふもとっぱらキャンプ場）
+    operator: "ふもとっぱら"
+    video_id: "hBaHx5WdnbQ"
+    category: scenic
+    prefecture: "22"
+    lat: 35.403
+    lng: 138.586
+    note: "朝霧高原から富士山西面"
+
+  - id: curated-r2-76c32070
+    name: 七面山から富士山（ご来光）
+    operator: "さくら製菓"
+    video_id: "rZckj5mmeXc"
+    category: scenic
+    prefecture: "19"
+    lat: 35.371
+    lng: 138.349
+    note: "標高1982mからご来光"
+
+  - id: curated-r2-dda9ac6b
+    name: 杖突峠 峠の茶屋
+    operator: "峠の茶屋"
+    video_id: "1v8Ln286PcE"
+    category: scenic
+    prefecture: "20"
+    lat: 35.959
+    lng: 138.091
+    note: "諏訪盆地・八ヶ岳遠望"
+
+
+  # --- station ---
+  - id: curated-r2-8da9df43
+    name: 西武新宿駅 pepe前広場
+    operator: "インフォ新宿"
+    video_id: "lA6TaaMGgDo"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6946
+    lng: 139.6999
+    note: "24時間・駅前交差点定点"
+
+  - id: curated-r2-9be53e5b
+    name: 東京駅 鉄道ライブカメラ
+    operator: "日本テレビ（日テレ鉄道部）"
+    video_id: "1oNQ9HoxAEE"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6812
+    lng: 139.7671
+    note: "東京駅天カメ常設"
+
+  - id: curated-r2-40ddaa3e
+    name: JR中央線 高尾駅周辺
+    operator: "TTSC CH"
+    video_id: "F_sTV4pnsZs"
+    category: scenic
+    prefecture: "13"
+    lat: 35.6422
+    lng: 139.2823
+    note: "4K複数カメラ切替"
+
+  - id: curated-r2-eb837885
+    name: 西武池袋線 保谷駅付近 電留線
+    operator: "うめたくん"
+    video_id: "1XphVUBHHmk"
+    category: scenic
+    prefecture: "13"
+    lat: 35.7523
+    lng: 139.569
+    note: "鉄道定点"
+
+  - id: curated-r2-0516a7d0
+    name: 新潟駅前
+    operator: "NST新潟総合テレビ"
+    video_id: "TUjtOgs_fCM"
+    category: scenic
+    prefecture: "15"
+    lat: 37.9125
+    lng: 139.062
+    note: "万代口方面"
+
+  - id: curated-r2-dc8ba17c
+    name: JR長野駅（線路側）
+    operator: "INC長野ケーブルテレビ"
+    video_id: "-LxeC1RhMrU"
+    category: scenic
+    prefecture: "20"
+    lat: 36.642
+    lng: 138.1873
+    note: "新幹線・信越本線"
+
+  - id: curated-r2-64fe00ba
+    name: 上田電鉄別所線 別所温泉駅
+    operator: "UCV上田ケーブルビジョン"
+    video_id: "mqoWvRo8YpI"
+    category: scenic
+    prefecture: "20"
+    lat: 36.3547
+    lng: 138.1663
+    note: "ローカル私鉄終着駅"
+
+  - id: curated-r2-a33106fd
+    name: JR中央本線 熊野権現踏切
+    operator: "The Dramatic 中央本線。"
+    video_id: "G3_58aWKi_Q"
+    category: scenic
+    prefecture: "19"
+    lat: 35.663
+    lng: 138.639
+    note: "IDが月次ローテーションの可能性→チャンネル追従推奨"
+
+  - id: curated-r2-db2cf963
+    name: 富山駅南口（路面電車乗り入れ）
+    operator: "チューリップテレビ"
+    video_id: "YiX6DQ_dJ0I"
+    category: scenic
+    prefecture: "16"
+    lat: 36.7008
+    lng: 137.2132
+    note: "地鉄LRTと南口広場"
+
+  - id: curated-r2-3cf63cb7
+    name: のと鉄道 能登鹿島駅（能登さくら駅）
+    operator: "穴水町"
+    video_id: "THy9p2xJSek"
+    category: scenic
+    prefecture: "17"
+    lat: 37.212
+    lng: 136.885
+    note: "桜名所のローカル線駅"
+
+  - id: curated-r2-7100fcda
+    name: JR静岡駅 新幹線ホーム
+    operator: "radac_yoshizuka"
+    video_id: "DeK5kcX-CD0"
+    category: scenic
+    prefecture: "22"
+    lat: 34.9719
+    lng: 138.3886
+    note: "鉄道定点"
+
+  - id: curated-r2-4457f7ee
+    name: JR京都駅 新幹線・東海道線
+    operator: "JR京都駅ライブカメラ（民間）"
+    video_id: "a7QuVQfSESM"
+    category: scenic
+    prefecture: "26"
+    lat: 34.985
+    lng: 135.757
+    note: "ID日次ローテーションの可能性→チャンネル追従推奨"
+
+  - id: curated-r2-560f6ce0
+    name: 京都駅東側 高倉跨線橋
+    operator: "JR京都駅ライブカメラ（民間）"
+    video_id: "gcWty8bA7Dc"
+    category: scenic
+    prefecture: "26"
+    lat: 34.9843
+    lng: 135.7654
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-27a284f1
+    name: JR大阪駅前
+    operator: "テレビ大阪"
+    video_id: "lPlBcj6yWpE"
+    category: scenic
+    prefecture: "27"
+    lat: 34.7043
+    lng: 135.4961
+    note: "24時間情報カメラ"
+
+  - id: curated-r2-545a5ab5
+    name: 佐賀駅ほか（STS天気カメラ）
+    operator: "サガテレビ"
+    video_id: "e8uHdS4VDec"
+    category: scenic
+    prefecture: "41"
+    lat: 33.2635
+    lng: 130.2988
+    note: "複数地点巡回型"
+
+  - id: curated-r2-5d737760
+    name: JR長崎駅
+    operator: "長崎ケーブルメディア"
+    video_id: "xAQN-uKmE_0"
+    category: scenic
+    prefecture: "42"
+    lat: 32.7524
+    lng: 129.8705
+    note: "新駅舎定点"
+
+  - id: curated-r2-72e017f6
+    name: 日豊本線 宮崎駅付近
+    operator: "JapanGoMiya"
+    video_id: "zgUkHf4ZSwU"
+    category: scenic
+    prefecture: "45"
+    lat: 31.917
+    lng: 131.431
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-bbbd5737
+    name: 函館駅前（路面電車）
+    operator: "HAKODATE LIVE CAMERA"
+    video_id: "rCgvMJGdhNo"
+    category: scenic
+    prefecture: "01"
+    lat: 41.7737
+    lng: 140.7262
+    note: "20秒ごとアングル自動切替"
+
+
+  # --- coast ---
+  - id: curated-r2-9cc422f0
+    name: 輪島市街(MRO)
+    operator: "MRO北陸放送"
+    video_id: "vjp_8TKQRhw"
+    category: coast
+    prefecture: "17"
+    lat: 37.39
+    lng: 136.899
+    note: "HABとは別運営。座標は市街近似"
+
+  - id: curated-r2-d8e14cab
+    name: 珠洲市街(MRO)
+    operator: "MRO北陸放送"
+    video_id: "CgmxirNHFgI"
+    category: coast
+    prefecture: "17"
+    lat: 37.436
+    lng: 137.26
+    note: "座標は飯田港周辺の近似"
+
+  - id: curated-r2-25e9a960
+    name: 七尾城山展望台(七尾湾)
+    operator: "七尾市"
+    video_id: "2msaOgDsSko"
+    category: coast
+    prefecture: "17"
+    lat: 37.01
+    lng: 136.97
+    note: "七尾湾・能登島大橋を俯瞰"
+
+  - id: curated-r2-ce64e179
+    name: 千里浜なぎさドライブウェイ
+    operator: "HAB北陸朝日放送"
+    video_id: "Mr7aXbVkhxY"
+    category: coast
+    prefecture: "17"
+    lat: 36.876
+    lng: 136.774
+    note: "レストハウス設置"
+
+  - id: curated-r2-84b4710b
+    name: 千里浜サンセット
+    operator: "HAB北陸朝日放送"
+    video_id: "wd2riidtMm0"
+    category: coast
+    prefecture: "17"
+    lat: 36.88
+    lng: 136.772
+    note: "夕日向きアングル"
+
+  - id: curated-r2-a3692ade
+    name: 千里浜(羽咋市公式)
+    operator: "羽咋市"
+    video_id: "VohP1yGAAYo"
+    category: coast
+    prefecture: "17"
+    lat: 36.883
+    lng: 136.778
+    note: "市公式チャンネル"
+
+  - id: curated-r2-f46f84a7
+    name: 海王丸パーク・新湊大橋
+    operator: "射水ケーブルネットワーク"
+    video_id: "zHeOmGm8YKE"
+    category: coast
+    prefecture: "16"
+    lat: 36.7785
+    lng: 137.0995
+    note: "帆船海王丸・富山湾・立山連峰"
+
+  - id: curated-r2-5396843e
+    name: 敦賀市内(敦賀港ほか切替)
+    operator: "嶺南ケーブルネットワーク"
+    video_id: "OypZ7021k74"
+    category: coast
+    prefecture: "18"
+    lat: 35.66
+    lng: 136.062
+    note: "市内8地点切替。埋め込み不可→誘導型"
+
+  - id: curated-r2-9966cd43
+    name: 笹川流れ(道の駅・海側)
+    operator: "DC・NeXT"
+    video_id: "-hyYkoP0RBU"
+    category: coast
+    prefecture: "15"
+    lat: 38.409
+    lng: 139.429
+    note: "村上市桑川・日本海"
+
+  - id: curated-r2-84fbb5cc
+    name: 笹川流れ 夕日会館
+    operator: "DC・NeXT"
+    video_id: "nwO2D1yUnT8"
+    category: coast
+    prefecture: "15"
+    lat: 38.408
+    lng: 139.428
+    note: "別アングル"
+
+  - id: curated-r2-12a481d6
+    name: 竹野浜海水浴場
+    operator: "たけの観光協会"
+    video_id: "17q7guoJFJo"
+    category: coast
+    prefecture: "28"
+    lat: 35.6595
+    lng: 134.756
+    note: "豊岡市竹野町・日本海"
+
+  - id: curated-r2-2bbff466
+    name: 産湯海岸・産湯川水門(北側)
+    operator: "和歌山県日高町"
+    video_id: "wc4dUVGpw_Q"
+    category: coast
+    prefecture: "30"
+    lat: 33.919
+    lng: 135.086
+    note: "津波・高波監視。埋め込み不可→誘導型"
+
+  - id: curated-r2-2f71487a
+    name: 産湯海岸・南出川水門(南側)
+    operator: "和歌山県日高町"
+    video_id: "1mTKLWIPlR4"
+    category: coast
+    prefecture: "30"
+    lat: 33.915
+    lng: 135.089
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-efc4fe23
+    name: 比井川河口(比井漁港)
+    operator: "和歌山県日高町"
+    video_id: "Lq71TAttr_M"
+    category: coast
+    prefecture: "30"
+    lat: 33.935
+    lng: 135.075
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-551c7a0e
+    name: 小浦川河口
+    operator: "和歌山県日高町"
+    video_id: "ucHNWZ46Bcc"
+    category: coast
+    prefecture: "30"
+    lat: 33.905
+    lng: 135.098
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-fd0cb897
+    name: 南紀白浜・白良浜
+    operator: "共同通信LiveCamera"
+    video_id: "1raX4KS2_sA"
+    category: coast
+    prefecture: "30"
+    lat: 33.6845
+    lng: 135.3405
+    note: "4K。太平洋岸"
+
+  - id: curated-r2-c1ee0115
+    name: 伊豆白浜海岸(サーフカメラ)
+    operator: "mariner1173(民間)"
+    video_id: "RP-wuud0NMU"
+    category: coast
+    prefecture: "22"
+    lat: 34.692
+    lng: 138.964
+    note: "既存の下田白浜大浜とは別運営"
+
+
+  # --- airport ---
+  - id: curated-r2-8cc2e499
+    name: 成田空港 さくらの山
+    operator: "Charlie FURUSHO NRT Base"
+    video_id: "1nNkpxB7Bak"
+    category: other
+    prefecture: "12"
+    lat: 35.7758
+    lng: 140.3925
+    note: "A滑走路の離着陸。IDローテーションあり→チャンネル追従推奨"
+
+  - id: curated-r2-38190405
+    name: 羽田空港 第2ターミナル展望デッキ
+    operator: "日本テレビ"
+    video_id: "2PIdi3Xa7TY"
+    category: other
+    prefecture: "13"
+    lat: 35.5494
+    lng: 139.7838
+    note: "24時間定点"
+
+  - id: curated-r2-cf27083d
+    name: 新千歳空港 天気カメラ
+    operator: "HTB北海道テレビ"
+    video_id: "Azbdr5jbN6o"
+    category: other
+    prefecture: "01"
+    lat: 42.7752
+    lng: 141.6923
+    note: "STVと別局"
+
+  - id: curated-r2-5302b9a8
+    name: 福岡空港ライブカメラ
+    operator: "福岡空港ライブカメラ(民間)"
+    video_id: "cTD7nITGhE0"
+    category: other
+    prefecture: "40"
+    lat: 33.5859
+    lng: 130.4517
+    note: "24/7・離着陸音声あり"
+
+  - id: curated-r2-e3dd3964
+    name: 那覇空港・瀬長島
+    operator: "BANKSY GINOWAN"
+    video_id: "3e_uPkJCTNo"
+    category: other
+    prefecture: "47"
+    lat: 26.1958
+    lng: 127.6461
+    note: "ウミカジテラスから空港・海"
+
+  - id: curated-r2-b86f9a98
+    name: 関西国際空港 第1ターミナル
+    operator: "関西テレビ放送"
+    video_id: "tusny7uGPS8"
+    category: other
+    prefecture: "27"
+    lat: 34.4347
+    lng: 135.2441
+    note: "IDローテーションあり→チャンネル追従推奨"
+
+  - id: curated-r2-763d189b
+    name: 仙台空港ライブカメラ
+    operator: "河北新報社"
+    video_id: "prhi5doir6U"
+    category: other
+    prefecture: "04"
+    lat: 38.1397
+    lng: 140.917
+    note: "滑走路・エプロン定点"
+
+  - id: curated-r2-978dc333
+    name: 鹿児島空港ライブカメラ
+    operator: "KYT鹿児島読売テレビ"
+    video_id: "pJC3BThpdio"
+    category: other
+    prefecture: "46"
+    lat: 31.8034
+    lng: 130.7194
+    note: "24時間"
+
+  - id: curated-r2-b05ea6d4
+    name: 広島空港ライブカメラ
+    operator: "RCC中国放送"
+    video_id: "KWarKq_pvTM"
+    category: other
+    prefecture: "34"
+    lat: 34.4361
+    lng: 132.9194
+    note: "滑走路・駐機場"
+
+  - id: curated-r2-de9c3d8b
+    name: 松山空港ライブカメラ
+    operator: "テレビ愛媛"
+    video_id: "L9OqeSJgzKA"
+    category: other
+    prefecture: "38"
+    lat: 33.8272
+    lng: 132.6994
+    note: "24時間"
+
+  - id: curated-r2-eb4ceab6
+    name: 熊本空港ライブカメラ(KAB)
+    operator: "KAB熊本朝日放送"
+    video_id: "B7pwhKpcHjI"
+    category: other
+    prefecture: "43"
+    lat: 32.8372
+    lng: 130.855
+    note: "阿蘇くまもと空港"
+
+  - id: curated-r2-d40b88e7
+    name: 阿蘇くまもと空港(RKK)
+    operator: "RKK熊本放送"
+    video_id: "rGtE0C62fss"
+    category: volcano
+    prefecture: "43"
+    lat: 32.8372
+    lng: 130.855
+    note: "KABと別局の並行配信"
+
+  - id: curated-r2-12d144a1
+    name: 高松空港(高山航空公園)
+    operator: "香川県綾川町"
+    video_id: "leFhfdptn_Y"
+    category: other
+    prefecture: "37"
+    lat: 34.2144
+    lng: 134.0044
+    note: "滑走路延長線上を望む定点"
+
+
+  # --- lakes ---
+  - id: curated-r2-3026d840
+    name: 河口湖 富士山パノラマロープウェイ
+    operator: "フジヤマNAVI"
+    video_id: "Sv9hcJ3k5h4"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4975
+    lng: 138.7681
+    note: "4K。山頂展望台から富士山"
+
+  - id: curated-r2-0e579044
+    name: 山中湖から富士山
+    operator: "KTVケーブルテレビ河口湖"
+    video_id: "F2NbYrc-gBU"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4167
+    lng: 138.8667
+    note: "山中湖畔定点"
+
+  - id: curated-r2-ec0e63fc
+    name: ホテルマウント富士から富士山(山中湖)
+    operator: "フジヤマNAVI/ホテルマウント富士"
+    video_id: "Gn2CJjzY068"
+    category: scenic
+    prefecture: "19"
+    lat: 35.423
+    lng: 138.8508
+    note: "山中湖越しの富士山"
+
+  - id: curated-r2-18944c56
+    name: 本栖湖から富士山(YBS)
+    operator: "YBS山梨放送"
+    video_id: "_qdu714QT1E"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4522
+    lng: 138.6094
+    note: "千円札構図"
+
+  - id: curated-r2-05f6e2fa
+    name: 富士本栖湖リゾート
+    operator: "フジヤマNAVI/富士本栖湖リゾート"
+    video_id: "JGyGoXlKZmw"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4772
+    lng: 138.6083
+    note: "芝桜まつり会場の富士山ビュー"
+
+  - id: curated-r2-0dd2f850
+    name: 芦ノ湖 箱根遊船SORAKAZE
+    operator: "フジヤマNAVI/箱根遊船"
+    video_id: "YCtAXDnsyYY"
+    category: scenic
+    prefecture: "14"
+    lat: 35.2013
+    lng: 139.0233
+    note: "芦ノ湖遊覧船定点"
+
+  - id: curated-r2-52ce9886
+    name: 諏訪湖
+    operator: "諏訪湖八ヶ岳ライブカメラ 4994 Land"
+    video_id: "1iWw2sxlmVg"
+    category: scenic
+    prefecture: "20"
+    lat: 36.0439
+    lng: 138.1092
+    note: "8月は毎晩花火配信あり"
+
+  - id: curated-r2-ecfdf983
+    name: 猪苗代スキー場(幸せの鐘)
+    operator: "絶景・猪苗代スキー場"
+    video_id: "ARNiW-l8PH0"
+    category: scenic
+    prefecture: "07"
+    lat: 37.5892
+    lng: 140.1044
+    note: "埋め込み不可→誘導型。猪苗代湖・磐梯山遠望"
+
+  - id: curated-r2-dc16c466
+    name: 釧路市街(幣舞橋周辺)
+    operator: "北海道新聞"
+    video_id: "4bus7bosciE"
+    category: scenic
+    prefecture: "01"
+    lat: 42.985
+    lng: 144.382
+
+  - id: curated-r2-f9606025
+    name: 美瑛 四季の塔
+    operator: "World.cam(美瑛町)"
+    video_id: "WQfqitaVfqA"
+    category: scenic
+    prefecture: "01"
+    lat: 43.5817
+    lng: 142.4694
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-4d786767
+    name: 富良野スキー場 北の峰
+    operator: "FURANO LIVE CAM"
+    video_id: "xu7xanczRus"
+    category: scenic
+    prefecture: "01"
+    lat: 43.3497
+    lng: 142.3958
+
+  - id: curated-r2-8f407d9f
+    name: 霧ヶ峰高原 ビバルデの丘
+    operator: "霧ヶ峰高原ビバルデの丘"
+    video_id: "IZ3hxdfZlwo"
+    category: scenic
+    prefecture: "20"
+    lat: 36.0966
+    lng: 138.1544
+    note: "八ヶ岳・富士山・南アルプス"
+
+  - id: curated-r2-6ca14c6a
+    name: 蓼科湖畔(蓼の花)
+    operator: "蓼科湖畔 蓼の花"
+    video_id: "sNMeuMIHbxY"
+    category: scenic
+    prefecture: "20"
+    lat: 36.0836
+    lng: 138.2181
+    note: "蓼科山方向"
+
+  - id: curated-r2-72c8880d
+    name: 浅間山(軽井沢町役場)
+    operator: "長野県軽井沢町"
+    video_id: "Arw1omQUnr4"
+    category: volcano
+    prefecture: "20"
+    lat: 36.3486
+    lng: 138.6335
+    note: "火山カテゴリ"
+
+
+  # --- onsen ---
+  - id: curated-r2-e0e99638
+    name: 由布院 由布岳と夜景
+    operator: "ゆふいんライブカメラch"
+    video_id: "J1mVbBHcA0g"
+    category: scenic
+    prefecture: "44"
+    lat: 33.2645
+    lng: 131.361
+
+  - id: curated-r2-997a2477
+    name: 熱海駅前広場
+    operator: "熱海市"
+    video_id: "EGbjDf5nVGQ"
+    category: scenic
+    prefecture: "22"
+    lat: 35.0956
+    lng: 139.0784
+    note: "市公式"
+
+  - id: curated-r2-a70a9fe8
+    name: 熱海 シェル前交差点
+    operator: "熱海市"
+    video_id: "CQaQuVDtB0Q"
+    category: scenic
+    prefecture: "22"
+    lat: 35.0972
+    lng: 139.0779
+    note: "市公式別地点"
+
+  - id: curated-r2-42fcf67b
+    name: 道頓堀(戎橋周辺)
+    operator: "ラジカルビデオジョッキー"
+    video_id: "i2PpmC1IeKk"
+    category: scenic
+    prefecture: "27"
+    lat: 34.6687
+    lng: 135.5013
+    note: "24時間"
+
+  - id: curated-r2-9fc3fa49
+    name: 川越一番街(蔵の街)
+    operator: "川越TV"
+    video_id: "rS5Iu49mitQ"
+    category: scenic
+    prefecture: "11"
+    lat: 35.9251
+    lng: 139.4844
+    note: "時の鐘周辺"
+
+  - id: curated-r2-39214965
+    name: 天神橋筋商店街
+    operator: "天神橋筋商店街"
+    video_id: "UnZJmTNfhH8"
+    category: scenic
+    prefecture: "27"
+    lat: 34.6969
+    lng: 135.5162
+    note: "日本一長い商店街"
+
+  - id: curated-r2-c3b76507
+    name: 湯原温泉 街並み
+    operator: "39K"
+    video_id: "80k5e2vgElQ"
+    category: scenic
+    prefecture: "33"
+    lat: 35.2814
+    lng: 133.7314
+    note: "砂湯入口・湯原ダム周辺"
+
+  - id: curated-r2-f9f953a8
+    name: 沖縄国際通り 牧志交番前
+    operator: "定点カメラ部沖縄"
+    video_id: "DMcs48QiB-8"
+    category: scenic
+    prefecture: "47"
+    lat: 26.2124
+    lng: 127.6892
+    note: "24時間定点"
+
+  - id: curated-r2-85b5feba
+    name: 心斎橋筋商店街入口
+    operator: "F.S.T. NET"
+    video_id: "YZMZSqz9fx8"
+    category: scenic
+    prefecture: "27"
+    lat: 34.6717
+    lng: 135.5013
+    note: "高感度カメラ"
+
+  - id: curated-r2-9ee7b650
+    name: 長門湯本温泉 恩湯前
+    operator: "長門湯本温泉"
+    video_id: "0Sg3hJnBV-M"
+    category: scenic
+    prefecture: "35"
+    lat: 34.3833
+    lng: 131.1806
+    note: "音信川沿い"
+
+  - id: curated-r2-58c137c1
+    name: 川湯温泉(熊野)
+    operator: "お宿欣喜湯・別邸忍冬"
+    video_id: "9KVUU0LOYmY"
+    category: scenic
+    prefecture: "30"
+    lat: 33.8264
+    lng: 135.7719
+    note: "仙人風呂近く"
+
+  - id: curated-r2-a05a513a
+    name: 福岡 天神1丁目交差点
+    operator: "LOG FUKUOKA"
+    video_id: "vOURyxLGME4"
+    category: scenic
+    prefecture: "40"
+    lat: 33.5904
+    lng: 130.4017
+    note: "繁華街定点"
+
+
+  # --- surf ---
+  - id: curated-r2-64c66778
+    name: 鵠沼海岸(新江ノ島水族館前)
+    operator: "波通/なみあるLIVE"
+    video_id: "DZWA9Xicaxg"
+    category: coast
+    prefecture: "14"
+    lat: 35.309
+    lng: 139.47
+    note: "湘南鵠沼・江ノ島方面"
+
+  - id: curated-r2-c606b6be
+    name: 御前崎マリンパーク
+    operator: "御前崎ケーブルテレビ"
+    video_id: "pMylvOB5Ta0"
+    category: coast
+    prefecture: "22"
+    lat: 34.601
+    lng: 138.225
+    note: "御前崎ロングビーチ定点"
+
+  - id: curated-r2-7430ca73
+    name: 鳥取市伏野海岸
+    operator: "伏野海岸ライブカメラ(個人)"
+    video_id: "HoeuEIpyfNU"
+    category: coast
+    prefecture: "31"
+    lat: 35.527
+    lng: 134.129
+    note: "アトリエから日本海"
+
+  - id: curated-r2-42310147
+    name: 恩納村マリブビーチ
+    operator: "沖縄NOW!!"
+    video_id: "3VuKgtoZWbQ"
+    category: coast
+    prefecture: "47"
+    lat: 26.478
+    lng: 127.821
+
+  - id: curated-r2-b8749198
+    name: 北谷町砂辺・宮城海岸
+    operator: "オーシャンビュー北谷町砂辺"
+    video_id: "vA_41GBLxVU"
+    category: coast
+    prefecture: "47"
+    lat: 26.316
+    lng: 127.755
+    note: "人気サーフ/ダイブポイント"
+
+  - id: curated-r2-f9ea5a50
+    name: 部原海岸
+    operator: "サンセットタウン"
+    video_id: "Ay5sDDxzh5Q"
+    category: coast
+    prefecture: "12"
+    lat: 35.17
+    lng: 140.293
+    note: "世界大会開催のサーフビーチ"
+
+  - id: curated-r2-e7de80c4
+    name: 新島港
+    operator: "新島村"
+    video_id: "_jN3KzK-V-U"
+    category: coast
+    prefecture: "13"
+    lat: 34.369
+    lng: 139.27
+    note: "船客待合所設置"
+
+  - id: curated-r2-01a26db8
+    name: 久留和漁港(秋谷)
+    operator: "横須賀市"
+    video_id: "jdPHYcpj3as"
+    category: coast
+    prefecture: "14"
+    lat: 35.229
+    lng: 139.598
+    note: "防災兼用・相模湾と富士山"
+
+  - id: curated-r2-266df21c
+    name: 犬吠テラステラス(銚子)
+    operator: "犬吠テラステラス"
+    video_id: "Zjd0-RKD5Cc"
+    category: coast
+    prefecture: "12"
+    lat: 35.706
+    lng: 140.869
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-35795897
+    name: 福田漁港(津波監視)
+    operator: "磐田市"
+    video_id: "D5qHbYEYT50"
+    category: coast
+    prefecture: "22"
+    lat: 34.681
+    lng: 137.827
+    note: "埋め込み不可→誘導型"
+
+
+  # --- zoo ---
+  - id: curated-r2-35d9f43a
+    name: 旭山動物園 ペンギン放飼場
+    operator: "旭山動物園(Live Zoo In あさひやま)"
+    video_id: "CBWHik_WX-U"
+    category: healing
+    prefecture: "01"
+    lat: 43.7666
+    lng: 142.4813
+    note: "24時間。既存アザラシとは別展示"
+
+  - id: curated-r2-3a6f26ed
+    name: のぼりべつクマ牧場 子グマの寝室
+    operator: "のぼりべつクマ牧場"
+    video_id: "KIEYRmOVp7Y"
+    category: healing
+    prefecture: "01"
+    lat: 42.4964
+    lng: 141.1601
+    note: "17時頃〜翌3時頃配信。夜間は赤外線映像"
+
+  - id: curated-r2-40d2fd8d
+    name: 小諸市動物園 崖上のペンギン村
+    operator: "小諸市動物園"
+    video_id: "YGzDnrjxq9Y"
+    category: healing
+    prefecture: "20"
+    lat: 36.3216
+    lng: 138.4207
+    note: "フンボルトペンギン舎"
+
+  - id: curated-r2-f9a2389b
+    name: 新屋島水族館 マナティー
+    operator: "テレビせとうち/新屋島水族館"
+    video_id: "06eWQscOHdo"
+    category: healing
+    prefecture: "37"
+    lat: 34.3667
+    lng: 134.1064
+    note: "休館中もマナティー槽のみ24時間配信"
+
+  - id: curated-r2-6223b1f9
+    name: VIVAアルパカ牧場
+    operator: "VIVAアルパカ牧場"
+    video_id: "P4M_-ShkuaY"
+    category: healing
+    prefecture: "01"
+    lat: 44.1216
+    lng: 142.2668
+    note: "営業時間内のみ配信(夜間オフライン)"
+
+  - id: curated-r2-54f03b09
+    name: とかち村上牧場 モグモグLIVE
+    operator: "とかち村上牧場"
+    video_id: "3V6Brk9SZMs"
+    category: healing
+    prefecture: "01"
+    lat: 43.2667
+    lng: 143.3
+    note: "牛舎・酪農風景。時間帯によりオフライン"
+
+  - id: curated-r2-cd253a40
+    name: 男鹿水族館GAO
+    operator: "男鹿水族館GAO"
+    video_id: "SF3zlANKD5w"
+    category: healing
+    prefecture: "05"
+    lat: 39.9081
+    lng: 139.7247
+    note: "開館時間内配信"
+
+  - id: curated-r2-42577dc5
+    name: 五月山動物園 ウォンバット
+    operator: "池田市立五月山動物園"
+    video_id: "4rX5QDqxuPM"
+    category: healing
+    prefecture: "27"
+    lat: 34.8236
+    lng: 135.4308
+    note: "ウォンバットてれび。開園時間内配信"
+
+  - id: curated-r2-4d718994
+    name: 宮島水族館 はつこい庵/スナメリ
+    operator: "宮島水族館(みやじマリン)"
+    video_id: "10jFZt3QR_M"
+    category: healing
+    prefecture: "34"
+    lat: 34.2955
+    lng: 132.3198
+    note: "開館時間内配信・水槽切替"
+
+  - id: curated-r2-5a39f5cd
+    name: 嵐山モンキーパークいわたやま
+    operator: "嵐山モンキーパークいわたやま"
+    video_id: "DlKN8WvIELE"
+    category: healing
+    prefecture: "26"
+    lat: 35.0094
+    lng: 135.6772
+    note: "埋め込み不可→誘導型。野生ニホンザル"
+
+  - id: curated-r2-4c2723a2
+    name: 飯田市立動物園 サル山
+    operator: "飯田市立動物園"
+    video_id: "BehU1STa7Zs"
+    category: healing
+    prefecture: "20"
+    lat: 35.515
+    lng: 137.834
+
+  - id: curated-r2-a5029599
+    name: 飯田市立動物園 ペンギンの丘
+    operator: "飯田市立動物園"
+    video_id: "831QJ5DMU3M"
+    category: healing
+    prefecture: "20"
+    lat: 35.515
+    lng: 137.834
+
+  - id: curated-r2-b0cd4ffc
+    name: 厚岸水鳥観察館
+    operator: "厚岸水鳥観察館"
+    video_id: "ixGYCnMgeo8"
+    category: healing
+    prefecture: "01"
+    lat: 43.0333
+    lng: 144.8333
+    note: "別寒辺牛湿原の水鳥24時間"
+
+  - id: curated-r2-bfbac06e
+    name: 熊本市動植物園 アフリカゾウ
+    operator: "熊本市動植物園"
+    video_id: "iLsJ1R8iz78"
+    category: healing
+    prefecture: "43"
+    lat: 32.7967
+    lng: 130.7692
+    note: "ゾウ舎・キリン舎"
+
+  - id: curated-r2-d5f488ad
+    name: 久留米市鳥類センター クジャク
+    operator: "久留米市鳥類センター"
+    video_id: "j-ieZ34xfC4"
+    category: healing
+    prefecture: "40"
+    lat: 33.2833
+    lng: 130.5333
+
+  - id: curated-r2-efd92ce6
+    name: 野田市こうのとりの里
+    operator: "野田市"
+    video_id: "S6kXlVRLhjs"
+    category: healing
+    prefecture: "12"
+    lat: 35.9436
+    lng: 139.8494
+    note: "特別天然記念物コウノトリの見守り"
+
+  - id: curated-r2-97a7baec
+    name: 桐生が岡動物園 東エリア
+    operator: "桐生が岡動物園"
+    video_id: "t57gEiPO5LY"
+    category: healing
+    prefecture: "10"
+    lat: 36.4114
+    lng: 139.3239
+    note: "埋め込み不可→誘導型"
+
+  - id: curated-r2-0f1d066a
+    name: だいこんの花 リスと小鳥の森
+    operator: "温泉山荘だいこんの花"
+    video_id: "bYCPLjNi_R0"
+    category: healing
+    prefecture: "04"
+    lat: 38.1719
+    lng: 140.6428
+    note: "埋め込み不可→誘導型。蔵王の野生リス・野鳥給餌場"
+
