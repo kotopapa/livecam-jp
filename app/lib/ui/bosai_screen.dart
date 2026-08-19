@@ -48,12 +48,20 @@ class _Quake {
   final bool isTsunami;
 }
 
-/// 気象警報コード → 表示名（警報・特別警報のみ。注意報は対象外）
+/// 気象警報コード → 表示名
 const _warningNames = {
   '02': '暴風雪警報', '03': '大雨警報', '04': '洪水警報', '05': '暴風警報',
   '06': '大雪警報', '07': '波浪警報', '08': '高潮警報',
   '32': '暴風雪特別警報', '33': '大雨特別警報', '35': '暴風特別警報',
   '36': '大雪特別警報', '37': '波浪特別警報', '38': '高潮特別警報',
+};
+
+/// 注意報コード → 表示名（折りたたみ表示用）
+const _advisoryNames = {
+  '10': '大雨注意報', '12': '大雪注意報', '13': '風雪注意報', '14': '雷注意報',
+  '15': '強風注意報', '16': '波浪注意報', '17': '融雪注意報', '18': '洪水注意報',
+  '19': '高潮注意報', '20': '濃霧注意報', '21': '乾燥注意報', '22': 'なだれ注意報',
+  '23': '低温注意報', '24': '霜注意報', '25': '着氷注意報', '26': '着雪注意報',
 };
 
 class _BosaiScreenState extends State<BosaiScreen> {
@@ -62,6 +70,8 @@ class _BosaiScreenState extends State<BosaiScreen> {
   DateTime? _fetchedAt;
   // 都道府県コード → 発表中の警報名セット（特別警報を先頭に）
   Map<String, List<String>>? _warnings;
+  // 都道府県コード → 発表中の注意報名セット（警報がない県の参考表示）
+  Map<String, List<String>>? _advisories;
   String? _warningError;
 
   @override
@@ -85,6 +95,7 @@ class _BosaiScreenState extends State<BosaiScreen> {
       if (resp.statusCode != 200) throw Exception('HTTP ${resp.statusCode}');
       final offices = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
       final byPref = <String, Set<String>>{};
+      final advByPref = <String, Set<String>>{};
       for (final office in offices.cast<Map<String, dynamic>>()) {
         final areaTypes = office['areaTypes'] as List? ?? const [];
         if (areaTypes.isEmpty) continue;
@@ -99,9 +110,15 @@ class _BosaiScreenState extends State<BosaiScreen> {
               .cast<Map<String, dynamic>>()) {
             final status = w['status'] as String? ?? '';
             if (status == '解除') continue;
-            final name = _warningNames[w['code'] as String? ?? ''];
+            final wc = w['code'] as String? ?? '';
+            final name = _warningNames[wc];
             if (name != null) {
               byPref.putIfAbsent(pref, () => {}).add(name);
+            } else {
+              final adv = _advisoryNames[wc];
+              if (adv != null) {
+                advByPref.putIfAbsent(pref, () => {}).add(adv);
+              }
             }
           }
         }
@@ -116,7 +133,16 @@ class _BosaiScreenState extends State<BosaiScreen> {
           });
         result[e.key] = list;
       }
-      if (mounted) setState(() => _warnings = result);
+      final advResult = <String, List<String>>{};
+      for (final e in advByPref.entries) {
+        advResult[e.key] = e.value.toList()..sort();
+      }
+      if (mounted) {
+        setState(() {
+          _warnings = result;
+          _advisories = advResult;
+        });
+      }
     } catch (e) {
       if (mounted) setState(() => _warningError = '取得に失敗しました');
     }
@@ -326,8 +352,8 @@ class _BosaiScreenState extends State<BosaiScreen> {
     if (_warnings == null) {
       return const Center(child: CircularProgressIndicator());
     }
-    if (_warnings!.isEmpty) {
-      return const Center(child: Text('現在、発表中の警報・特別警報はありません'));
+    if (_warnings!.isEmpty && (_advisories?.isEmpty ?? true)) {
+      return const Center(child: Text('現在、発表中の警報・注意報はありません'));
     }
     final prefs = _warnings!.keys.toList()
       ..sort((a, b) {
@@ -335,17 +361,41 @@ class _BosaiScreenState extends State<BosaiScreen> {
         final be = _warnings![b]!.any((w) => w.contains('特別')) ? 0 : 1;
         return ae != be ? ae.compareTo(be) : a.compareTo(b);
       });
+    final advPrefs = (_advisories ?? const {}).keys.toList()..sort();
     return ListView.separated(
-      itemCount: prefs.length + 1,
+      itemCount: prefs.length + 2,
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
         if (i == 0) {
           return Padding(
             padding: const EdgeInsets.all(12),
             child: Text(
-              '出典：気象庁 気象警報・注意報（警報・特別警報のみ表示）。タップするとその都道府県のカメラ一覧を表示します。',
+              _warnings!.isEmpty
+                  ? '出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は下の一覧から確認できます。'
+                  : '出典：気象庁 気象警報・注意報。タップするとその都道府県のカメラ一覧を表示します。',
               style: TextStyle(fontSize: 11, color: Colors.grey[600]),
             ),
+          );
+        }
+        if (i == prefs.length + 1) {
+          if (advPrefs.isEmpty) return const SizedBox.shrink();
+          return ExpansionTile(
+            leading: const Icon(Icons.info_outline, color: Color(0xFF616E7C)),
+            title: Text('注意報が発表中の地域（${advPrefs.length}都道府県）'),
+            children: [
+              for (final pref in advPrefs)
+                ListTile(
+                  dense: true,
+                  title: Text(prefectureNames[pref] ?? pref),
+                  subtitle: Text(_advisories![pref]!.join('・'),
+                      style: const TextStyle(fontSize: 12)),
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => PrefCamerasScreen(
+                          app: widget.app,
+                          pref: pref,
+                          title: '${prefectureNames[pref] ?? pref}のカメラ'))),
+                ),
+            ],
           );
         }
         final pref = prefs[i - 1];
