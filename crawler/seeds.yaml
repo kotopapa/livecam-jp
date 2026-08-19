@@ -79,6 +79,11 @@ sources:
     note: 福島県会津地区の峠カメラ(約9台)。absv2.f-road.infoのhttps静止画。
           地名ジオコーディング。license=unknown
 
+  - id: shimane_road
+    enabled: true
+    note: 島根県「道路カメラ情報」約120台。point.json5(座標つき)+snapshot固定URL。
+          license=unknown
+
   - id: hbc_webcam
     enabled: true
     note: HBC北海道放送「情報カメラ」34地点(静止画網)。地点ページのGoogleマップ埋込から

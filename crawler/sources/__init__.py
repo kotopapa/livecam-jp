@@ -17,6 +17,7 @@ from crawler.sources.mlit_roadinfo import MlitRoadinfoParser
 from crawler.sources.mlit_ktr_road import MlitKtrRoadParser
 from crawler.sources.mlit_youtube import MlitYoutubeParser
 from crawler.sources.muni_youtube import MuniYoutubeParser
+from crawler.sources.shimane_road import ShimaneRoadParser
 from crawler.sources.tokyo_suibo import TokyoSuiboParser
 from crawler.sources.toyama_road import ToyamaRoadParser
 from crawler.sources.youtube_live import YoutubeLiveParser
@@ -38,6 +39,7 @@ REGISTRY = {
         MlitRoadinfoParser,
         MlitYoutubeParser,
         MuniYoutubeParser,
+        ShimaneRoadParser,
         TokyoSuiboParser,
         ToyamaRoadParser,
         YoutubeLiveParser,

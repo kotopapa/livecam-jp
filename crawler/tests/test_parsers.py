@@ -243,3 +243,13 @@ def test_curated_world_yaml():
     c = result.candidates[0]
     assert c.prefecture == "99" and c.country and len(c.country) == 2
     assert validate_camera_record(c.to_record("2026-08-19")) == []
+
+
+def test_shimane_road_parse():
+    from crawler.sources.shimane_road import parse_points
+    raw = (FIXTURES / "shimane_point.json5").read_text(encoding="utf-8")
+    pts = parse_points(raw)
+    assert len(pts) >= 100
+    p = pts[0]
+    assert p["point_id"] == "0101" and p["name"] == "大川端"
+    assert 34 < p["lat"] < 37 and 131 < p["lng"] < 134
