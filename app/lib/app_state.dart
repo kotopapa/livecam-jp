@@ -191,6 +191,8 @@ class AppState extends ChangeNotifier {
     await favorites.load();
     await viewHistory.load();
     await globalStats.load();
+    // 実装前から登録済みのお気に入りを全国集計へ一度だけ反映
+    await globalStats.backfillFavorites(favorites.ids);
     try {
       final prefs = await SharedPreferences.getInstance();
       wifiOnly = prefs.getBool(_wifiOnlyKey) ?? false;

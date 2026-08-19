@@ -16,6 +16,7 @@ class GlobalStats {
   static const _pendingKey = 'global_stats_pending_v1';
   static const _pendingFavKey = 'global_stats_pending_fav_v1';
   static const _lastFlushKey = 'global_stats_last_flush';
+  static const _favBackfillKey = 'global_stats_fav_backfilled_v1';
   static const _minFlushInterval = Duration(minutes: 15);
   static const _maxPendingAge = Duration(minutes: 30);
   static const _flushThreshold = 3; // 束ねるカメラ数がこの数以上で送信を試みる
@@ -60,6 +61,21 @@ class GlobalStats {
     _oldestPending ??= DateTime.now();
     await _prefs?.setString(_pendingKey, jsonEncode(_pending));
     await _maybeFlush();
+  }
+
+  /// 機能実装前から登録済みのお気に入りを一度だけ全国集計へ反映する
+  Future<void> backfillFavorites(Iterable<String> favoriteIds) async {
+    if (!enabled || _prefs == null) return;
+    if (_prefs!.getBool(_favBackfillKey) ?? false) return;
+    await _prefs!.setBool(_favBackfillKey, true);
+    for (final id in favoriteIds) {
+      _pendingFav[id] = (_pendingFav[id] ?? 0) + 1;
+    }
+    if (_pendingFav.isNotEmpty) {
+      _oldestPending ??= DateTime.now();
+      await _prefs!.setString(_pendingFavKey, jsonEncode(_pendingFav));
+      await flush(); // バックフィルは即時送信
+    }
   }
 
   /// お気に入りの増減（added=trueで+1、falseで-1）。全国お気に入り数の集計用
