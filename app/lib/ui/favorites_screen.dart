@@ -17,9 +17,21 @@ class FavoritesScreen extends StatefulWidget {
   State<FavoritesScreen> createState() => _FavoritesScreenState();
 }
 
+enum _FavSort { newest, oldest, name, category }
+
+const _favSortLabels = {
+  _FavSort.newest: '登録が新しい順',
+  _FavSort.oldest: '登録が古い順',
+  _FavSort.name: '名前順',
+  _FavSort.category: 'カテゴリ順',
+};
+
 class _FavoritesScreenState extends State<FavoritesScreen> {
   bool _cardView = true;
   bool _bulkRefreshing = false;
+  _FavSort _sort = _FavSort.newest;
+  final Set<String> _filterCategories = {}; // 空=全カテゴリ
+  bool _videoOnly = false;
   // カメラごとの再取得キー。一括更新は3件ずつ順次進める（SPEC 9.2⑤）
   final Map<String, int> _ticks = {};
 
@@ -53,9 +65,46 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
 
   void _onChanged() => setState(() {});
 
-  List<Camera> get _favorites => widget.app.repository.cameras
-      .where((c) => widget.app.favorites.contains(c.id))
-      .toList();
+  /// 登録が新しい順を基準に、フィルタ→並べ替えを適用した一覧
+  List<Camera> get _favorites {
+    final byId = {
+      for (final c in widget.app.repository.cameras) c.id: c
+    };
+    var list = [
+      for (final id in widget.app.favorites.newestFirst)
+        if (byId[id] != null) byId[id]!,
+    ];
+    if (_filterCategories.isNotEmpty) {
+      list = list
+          .where((c) => _filterCategories.contains(c.category))
+          .toList();
+    }
+    if (_videoOnly) list = list.where((c) => c.isVideo).toList();
+    switch (_sort) {
+      case _FavSort.newest:
+        break; // 基準順のまま
+      case _FavSort.oldest:
+        list = list.reversed.toList();
+      case _FavSort.name:
+        list.sort((a, b) => a.name.compareTo(b.name));
+      case _FavSort.category:
+        list.sort((a, b) {
+          final c = a.category.compareTo(b.category);
+          return c != 0 ? c : a.name.compareTo(b.name);
+        });
+    }
+    return list;
+  }
+
+  /// お気に入り内に存在するカテゴリ（フィルタチップ表示用）
+  List<String> get _presentCategories {
+    final ids = widget.app.favorites.ids;
+    final cats = <String>{};
+    for (final c in widget.app.repository.cameras) {
+      if (ids.contains(c.id)) cats.add(c.category);
+    }
+    return categoryLabels.keys.where(cats.contains).toList();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +113,19 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
       appBar: AppBar(
         title: Text('お気に入り（${favorites.length}）'),
         actions: [
+          PopupMenuButton<_FavSort>(
+            tooltip: '並べ替え',
+            icon: const Icon(Icons.sort),
+            onSelected: (v) => setState(() => _sort = v),
+            itemBuilder: (context) => [
+              for (final e in _favSortLabels.entries)
+                CheckedPopupMenuItem(
+                  value: e.key,
+                  checked: _sort == e.key,
+                  child: Text(e.value),
+                ),
+            ],
+          ),
           IconButton(
             tooltip: '表示切替',
             icon: Icon(_cardView ? Icons.view_list : Icons.grid_view),
@@ -80,15 +142,57 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
           ),
         ],
       ),
-      body: favorites.isEmpty
-          ? const Center(
-              child: Padding(
-                padding: EdgeInsets.all(24),
-                child: Text('お気に入りはまだありません。\n地図でカメラを開いて★を押すと追加されます。',
-                    textAlign: TextAlign.center),
-              ),
-            )
-          : _cardView
+      body: Column(children: [
+        if (widget.app.favorites.ids.isNotEmpty && _presentCategories.length + 1 > 1)
+          SizedBox(
+            height: 44,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              children: [
+                for (final cat in _presentCategories)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 6),
+                    child: FilterChip(
+                      label: Text(categoryLabels[cat] ?? cat,
+                          style: const TextStyle(fontSize: 12)),
+                      selected: _filterCategories.contains(cat),
+                      selectedColor:
+                          categoryColor(cat).withValues(alpha: 0.25),
+                      onSelected: (_) => setState(() {
+                        if (!_filterCategories.remove(cat)) {
+                          _filterCategories.add(cat);
+                        }
+                      }),
+                    ),
+                  ),
+                FilterChip(
+                  label: const Text('動画のみ', style: TextStyle(fontSize: 12)),
+                  selected: _videoOnly,
+                  onSelected: (v) => setState(() => _videoOnly = v),
+                ),
+              ],
+            ),
+          ),
+        Expanded(child: _buildBody(favorites)),
+      ]),
+    );
+  }
+
+  Widget _buildBody(List<Camera> favorites) {
+    if (widget.app.favorites.ids.isEmpty) {
+      return const Center(
+        child: Padding(
+          padding: EdgeInsets.all(24),
+          child: Text('お気に入りはまだありません。\n地図でカメラを開いて★を押すと追加されます。',
+              textAlign: TextAlign.center),
+        ),
+      );
+    }
+    if (favorites.isEmpty) {
+      return const Center(child: Text('絞り込み条件に合うお気に入りがありません'));
+    }
+    return _cardView
               ? GridView.builder(
                   padding: const EdgeInsets.all(12),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -108,8 +212,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   itemBuilder: (context, i) =>
                       _FavoriteTile(camera: favorites[i], app: widget.app,
                           refreshTick: _ticks[favorites[i].id] ?? 0),
-                ),
-    );
+                );
   }
 }
 
