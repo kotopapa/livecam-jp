@@ -32,7 +32,8 @@ def firestore_session(sa_info: dict):
     return s, sa_info["project_id"]
 
 
-def list_collection_counts(s, project: str, path: str) -> dict[str, int]:
+def list_collection_counts(s, project: str, path: str,
+                           include_zero: bool = False) -> dict[str, int]:
     base = (f"https://firestore.googleapis.com/v1/projects/{project}"
             f"/databases/(default)/documents/{path}")
     counts: dict[str, int] = {}
@@ -49,7 +50,7 @@ def list_collection_counts(s, project: str, path: str) -> dict[str, int]:
         for doc in body.get("documents", []):
             cam_id = doc["name"].rsplit("/", 1)[1]
             n = int(doc.get("fields", {}).get("n", {}).get("integerValue", 0))
-            if n != 0:
+            if n != 0 or include_zero:
                 counts[cam_id] = n
         token = body.get("nextPageToken")
         if not token:
@@ -58,13 +59,22 @@ def list_collection_counts(s, project: str, path: str) -> dict[str, int]:
 
 
 def delete_docs(s, project: str, day: str, cam_ids: list[str]) -> None:
+    """処理済みドキュメントを個別DELETEで削除する。
+    失敗しても集計は成立している（翌日以降に再削除される）ため致命扱いしない。"""
     base = (f"https://firestore.googleapis.com/v1/projects/{project}"
             f"/databases/(default)/documents")
-    for i in range(0, len(cam_ids), 400):
-        writes = [{"delete": f"{base}/views/{day}/cams/{cid}"}
-                  for cid in cam_ids[i:i + 400]]
-        r = s.post(f"{base}:commit", json={"writes": writes}, timeout=30)
-        r.raise_for_status()
+    failed = 0
+    for cid in cam_ids:
+        try:
+            r = s.delete(f"{base}/views/{day}/cams/{cid}", timeout=30)
+            if r.status_code >= 400:
+                failed += 1
+                print(f"delete NG {cid}: {r.status_code} {r.text[:120]}")
+        except Exception as e:  # noqa: BLE001
+            failed += 1
+            print(f"delete NG {cid}: {e}")
+    if failed:
+        print(f"削除失敗 {failed}/{len(cam_ids)}件（翌日再試行）")
 
 
 def main() -> int:
@@ -75,7 +85,9 @@ def main() -> int:
     s, project = firestore_session(json.loads(sa_raw))
 
     yesterday = (datetime.now(JST) - timedelta(days=1)).strftime("%Y%m%d")
-    counts = list_collection_counts(s, project, f"views/{yesterday}/cams")
+    counts_all = list_collection_counts(s, project, f"views/{yesterday}/cams",
+                                        include_zero=True)
+    counts = {k: v for k, v in counts_all.items() if v > 0}
     print(f"{yesterday}: {len(counts)}台 / {sum(counts.values())}回")
 
     # お気に入り累積（読むだけ・削除しない。±が相殺され現在の登録数になる）
@@ -111,8 +123,8 @@ def main() -> int:
               ensure_ascii=False, indent=1)
 
     # 配信用（上位のみ・軽量化）: site/build.py が site/v1/ranking.json へ変換
-    if counts:
-        delete_docs(s, project, yesterday, list(counts.keys()))
+    if counts_all:
+        delete_docs(s, project, yesterday, list(counts_all.keys()))
         print("処理済みドキュメントを削除")
     return 0
 
