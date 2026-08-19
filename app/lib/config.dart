@@ -12,5 +12,5 @@ const int maxConcurrentFetches = 3;
 /// 全国ランキング用 Firebase 設定（未設定=空文字なら機能無効）。
 /// Firestoreは書き込み専用で使い、ランキングの読み込みは
 /// GitHub Pages の静的JSON（/v1/ranking.json）から行う。
-const String firebaseProjectId = '';
-const String firebaseApiKey = '';
+const String firebaseProjectId = 'livecam-jp';
+const String firebaseApiKey = 'AIzaSyBlNICazXyF_x9A5aLARTW3k2L-K62lae0';
