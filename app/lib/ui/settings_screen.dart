@@ -7,7 +7,6 @@ import 'detail_screen.dart' show disclaimerText;
 
 const _requestFormUrl =
     'https://docs.google.com/forms/d/e/1FAIpQLScRz0Enqfrq-lrbuDVBdFD1jwSyl4GJEZtgTJxAoZfYo-QWJw/viewform';
-const _repoIssues = 'https://github.com/kotopapa/livecam-jp/issues/new';
 const _termsUrl = 'https://kotopapa.github.io/livecam-jp/terms.html';
 const _privacyUrl = 'https://kotopapa.github.io/livecam-jp/privacy.html';
 
@@ -88,12 +87,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
           subtitle: const Text('カメラの追加要請・掲載削除の依頼はこちらから（ログイン不要）。'
               '設置者・運営者の方からの削除のお申し出には速やかに対応します'),
           onTap: () => _open(_requestFormUrl),
-        ),
-        ListTile(
-          leading: const Icon(Icons.code),
-          title: const Text('GitHubで依頼'),
-          subtitle: const Text('GitHubアカウントをお持ちの方はIssueでも受け付けています'),
-          onTap: () => _open('$_repoIssues/choose'),
         ),
         const Divider(),
         const _SectionHeader('出典・ライセンス'),
