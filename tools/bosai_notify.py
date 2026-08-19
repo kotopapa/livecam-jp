@@ -147,12 +147,10 @@ def main() -> int:
     state["active_special"] = current_special
     state["notified_quakes"] = state["notified_quakes"][-200:]
 
-    if changed:
-        json.dump(state, open(STATE_PATH, "w", encoding="utf-8"),
-                  ensure_ascii=False, indent=1)
-        print("state updated")
-    else:
-        print("変化なし")
+    # stateは毎回書き出す（コミットは差分があるときだけワークフロー側で行う）
+    json.dump(state, open(STATE_PATH, "w", encoding="utf-8"),
+              ensure_ascii=False, indent=1)
+    print("state updated" if changed else "変化なし")
     return 0
 
 
