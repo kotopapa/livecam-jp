@@ -1,0 +1,34 @@
+name: bosai-notify
+
+on:
+  schedule:
+    - cron: "*/10 * * * *" # 約10分間隔（GitHub都合で遅延あり）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bosai-notify
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install google-auth requests
+      - name: 重大災害を確認して通知
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: python tools/bosai_notify.py
+      - name: 通知状態をコミット（変更があるときのみ）
+        run: |
+          git config user.name "livecam-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/bosai_notify_state.json
+          git diff --cached --quiet || git commit -m "bosai: notify state"
+          git push || (git pull --rebase && git push)
