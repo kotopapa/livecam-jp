@@ -97,6 +97,13 @@ def main() -> int:
     cutoff = (datetime.now(JST) - timedelta(days=KEEP_DAYS)).strftime("%Y%m%d")
     for rec in cams.values():
         rec["days"] = {d: c for d, c in rec["days"].items() if d >= cutoff}
+    # 当日分の暫定値（削除しない・stateの確定分には足さない）。
+    # 翌日の実行で同じ日付が確定処理されるため二重計上にならない
+    today = datetime.now(JST).strftime("%Y%m%d")
+    today_counts = list_collection_counts(s, project, f"views/{today}/cams")
+    state["today_partial"] = {"date": today, "counts": today_counts}
+    print(f"today({today}) partial: {len(today_counts)}台")
+
     state["favorites"] = favs
     state["updated"] = datetime.now(JST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
 

@@ -76,13 +76,17 @@ def build() -> int:
     if ranking_src.exists():
         state = json.loads(ranking_src.read_text(encoding="utf-8"))
         cams = state.get("cameras", {})
+        # 当日分の暫定値を上乗せ（確定処理は翌日の集計で行われる）
+        partial = state.get("today_partial", {}).get("counts", {})
         entries = []
-        for cid, rec in cams.items():
+        for cid in set(cams) | set(partial):
             if cid not in ids:
                 continue  # 削除済みカメラはランキングから外す
-            recent = sum(rec.get("days", {}).values())
+            rec = cams.get(cid, {})
+            extra = partial.get(cid, 0)
+            recent = sum(rec.get("days", {}).values()) + extra
             entries.append({"id": cid, "recent": recent,
-                            "total": rec.get("total", 0)})
+                            "total": rec.get("total", 0) + extra})
         top_recent = sorted(entries, key=lambda e: -e["recent"])[:300]
         top_total = sorted(entries, key=lambda e: -e["total"])[:300]
         favs = [{"id": cid, "count": n}
