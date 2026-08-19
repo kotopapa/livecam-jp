@@ -1,5 +1,5 @@
 {
- "version": "2026-08-19T15:35:18Z",
+ "version": "2026-08-19T15:41:22Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -541284,6 +541284,44 @@
    "last_updated": "2026-08-20"
   },
   {
+   "id": "world-19cfb657",
+   "name": "ボンダイビーチ",
+   "name_kana": null,
+   "lat": -33.8908,
+   "lng": 151.2743,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "AU",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=y6eLfuAk0Lc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=y6eLfuAk0Lc"
+   },
+   "operator": "Bondi Beach Live",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=y6eLfuAk0Lc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Bondi Beach Live（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True / 埋め込み不可のためYouTube誘導型"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
    "id": "world-19dbb2eb",
    "name": "ヒューストン ダウンタウン",
    "name_kana": null,
@@ -541426,6 +541464,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：SkylineWebcams（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "world-1ba97c80",
+   "name": "ゴールドコースト サーファーズパラダイス",
+   "name_kana": null,
+   "lat": -28.0023,
+   "lng": 153.4295,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "AU",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Pk0iA2vsdPQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Pk0iA2vsdPQ"
+   },
+   "operator": "Gold Coast Explorer",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Pk0iA2vsdPQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Gold Coast Explorer（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -541768,6 +541844,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：SHOWME Caribbean（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "world-206c32f3",
+   "name": "Nソウルタワー(南山)",
+   "name_kana": null,
+   "lat": 37.5512,
+   "lng": 126.9882,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "KR",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "0v8x5wyXeB8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=0v8x5wyXeB8"
+   },
+   "operator": "漢江ライブ365",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=0v8x5wyXeB8",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：漢江ライブ365（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -542880,6 +542994,44 @@
    "last_updated": "2026-08-19"
   },
   {
+   "id": "world-3ba12ea9",
+   "name": "デイトナビーチ",
+   "name_kana": null,
+   "lat": 29.2108,
+   "lng": -81.0228,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "US",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "6cCCTW3xv9I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=6cCCTW3xv9I"
+   },
+   "operator": "FOX 35 Orlando",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=6cCCTW3xv9I",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：FOX 35 Orlando（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
    "id": "world-3be93a86",
    "name": "シュトゥバイ氷河",
    "name_kana": null,
@@ -543716,6 +543868,44 @@
    "last_updated": "2026-08-20"
   },
   {
+   "id": "world-517c78a0",
+   "name": "高雄 旗津海水浴場",
+   "name_kana": null,
+   "lat": 22.6163,
+   "lng": 120.2694,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "TW",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ka7FV0sCvxQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ka7FV0sCvxQ"
+   },
+   "operator": "高雄市観光局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ka7FV0sCvxQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高雄市観光局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
    "id": "world-525c9e3d",
    "name": "カンクン",
    "name_kana": null,
@@ -543972,6 +544162,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：feratel（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "world-5baec040",
+   "name": "淡水 渡船頭",
+   "name_kana": null,
+   "lat": 25.1687,
+   "lng": 121.4394,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "TW",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "8rFVhLx8ORE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8rFVhLx8ORE"
+   },
+   "operator": "紅樹林有線電視",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=8rFVhLx8ORE",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：紅樹林有線電視（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -545198,6 +545426,44 @@
    "last_updated": "2026-08-20"
   },
   {
+   "id": "world-72746ef9",
+   "name": "高雄 蓮池潭",
+   "name_kana": null,
+   "lat": 22.6928,
+   "lng": 120.2937,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "TW",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "BnPoNatG-HE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=BnPoNatG-HE"
+   },
+   "operator": "高雄市観光局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=BnPoNatG-HE",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高雄市観光局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
    "id": "world-736688ee",
    "name": "シドニー オペラハウス・ハーバーブリッジ",
    "name_kana": null,
@@ -545378,6 +545644,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：Virtual Railfan（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "world-77e7a5f5",
+   "name": "釜山 海雲台海水浴場",
+   "name_kana": null,
+   "lat": 35.1587,
+   "lng": 129.1604,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "KR",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "DhzstkJjoz0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=DhzstkJjoz0"
+   },
+   "operator": "Busan Haeundae Live",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=DhzstkJjoz0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Busan Haeundae Live（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -546376,6 +546680,44 @@
    "last_updated": "2026-08-20"
   },
   {
+   "id": "world-8a85ae3b",
+   "name": "淡水 漁人碼頭",
+   "name_kana": null,
+   "lat": 25.1751,
+   "lng": 121.3958,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "TW",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "xwAWSh35uuw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=xwAWSh35uuw"
+   },
+   "operator": "新北市観光局",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=xwAWSh35uuw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：新北市観光局（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
    "id": "world-8b783b73",
    "name": "モントレーベイ水族館 ムーンジェリー",
    "name_kana": null,
@@ -546404,6 +546746,82 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：Monterey Bay Aquarium（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "world-8c948436",
+   "name": "ガルベストン シーウォール",
+   "name_kana": null,
+   "lat": 29.2694,
+   "lng": -94.7847,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "US",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "HkHhXsWci7Q",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=HkHhXsWci7Q"
+   },
+   "operator": "ABC13 Houston",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=HkHhXsWci7Q",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ABC13 Houston（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "world-8d2d67f7",
+   "name": "アウターバンクス(キティホーク)",
+   "name_kana": null,
+   "lat": 36.0637,
+   "lng": -75.7043,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "US",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "WEhuDqlxHmM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=WEhuDqlxHmM"
+   },
+   "operator": "Twiddy & Company",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=WEhuDqlxHmM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Twiddy & Company（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
@@ -548152,6 +548570,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：Chesapeake Bay Media（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-20",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "world-b9176e5f",
+   "name": "釜山 松亭(GiGAeyes)",
+   "name_kana": null,
+   "lat": 35.1786,
+   "lng": 129.2001,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "KR",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "tQ9tse8cTy4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=tQ9tse8cTy4"
+   },
+   "operator": "GiGAeyes Live TV",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=tQ9tse8cTy4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：GiGAeyes Live TV（YouTubeライブ）"
    },
    "review": {
     "status": "approved",
