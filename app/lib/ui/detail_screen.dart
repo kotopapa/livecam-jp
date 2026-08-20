@@ -12,7 +12,8 @@ import '../models/camera.dart';
 import '../models/status.dart';
 import '../util/geo.dart';
 import '../util/time_format.dart';
-import 'ad_banner.dart';
+// AdMob導入時に ad_banner.dart のインポートを戻す（下の広告位置コメント参照）
+// import 'ad_banner.dart';
 import 'pin_style.dart';
 
 /// 免責文言（SPEC 9.5。削ってはいけない）
@@ -127,8 +128,10 @@ class _DetailScreenState extends State<DetailScreen> {
             const Divider(height: 24),
             _sourceSection(pageUrl),
             const Divider(height: 24),
-            const AdBannerPlaceholder(),
-            const Divider(height: 24),
+            // AdMob導入時はこの位置にバナー広告を置く（出典セクションと近隣カメラの間）。
+            // AdBannerPlaceholder の build をAdMobバナーに差し替えて以下2行を戻す。
+            // const AdBannerPlaceholder(),
+            // const Divider(height: 24),
             _nearbySection(),
             const Divider(height: 24),
             Text(disclaimerText,
