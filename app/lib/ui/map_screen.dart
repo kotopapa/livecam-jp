@@ -175,32 +175,6 @@ class _MapScreenState extends State<MapScreen> {
           crossAxisSpacing: 8,
           childAspectRatio: 2.2,
           children: [
-            OutlinedButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                _stopFollowing();
-                _controller.move(const LatLng(25, 15), 2);
-                setState(() => _zoom = 2);
-                _savePosition();
-              },
-              style: OutlinedButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                  visualDensity: VisualDensity.compact),
-              child: const Text('🌍世界', style: TextStyle(fontSize: 12)),
-            ),
-            OutlinedButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                _stopFollowing();
-                _controller.move(const LatLng(36.2, 138.25), 5);
-                setState(() => _zoom = 5);
-                _savePosition();
-              },
-              style: OutlinedButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                  visualDensity: VisualDensity.compact),
-              child: const Text('🗾日本全体', style: TextStyle(fontSize: 12)),
-            ),
             for (final e in prefectureNames.entries)
               if (sums.containsKey(e.key))
                 OutlinedButton(
