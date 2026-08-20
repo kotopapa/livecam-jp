@@ -70,3 +70,48 @@ def test_non_image_content_fails():
     state: dict = {}
     r = check_camera(FakeSession([html]), _camera(), state)
     assert r["state"] == "unknown" and r["consecutive_failures"] == 1
+
+
+def _yt_camera(ftype="youtube_video", url="abc123DEF45"):
+    return {
+        "id": "yt-1", "lat": 35.0, "lng": 139.0,
+        "feed": {"type": ftype, "url": url, "headers": {}, "requires_referer": False},
+        "source": {"page_url": "https://example.jp/"},
+    }
+
+
+def test_youtube_video_uses_oembed_and_ok_on_200():
+    s = FakeSession([FakeResponse(200, b'{"title":"x"}')])
+    r = check_camera(s, _yt_camera(), {})
+    assert r["state"] == "ok"
+    req = s.requests[0]["url"]
+    assert req.startswith("https://www.youtube.com/oembed?url=")
+    assert "abc123DEF45" in req
+
+
+def test_youtube_video_dead_becomes_error_after_3():
+    """削除/非公開IDは oEmbed が 403/404 → 3回連続で error（アプリ側で非表示）。"""
+    state: dict = {}
+    for expected, n in [("unknown", 1), ("unknown", 2), ("error", 3)]:
+        r = check_camera(FakeSession([FakeResponse(403), FakeResponse(403)]), _yt_camera(), state)
+        assert r["state"] == expected and r["consecutive_failures"] == n
+
+
+def test_youtube_channel_checks_live_url():
+    s = FakeSession([FakeResponse(200, b"<html>live</html>")])
+    r = check_camera(s, _yt_camera("youtube_channel", "UCxxChannelIdxx"), {})
+    assert r["state"] == "ok"
+    assert s.requests[0]["url"] == "https://www.youtube.com/channel/UCxxChannelIdxx/live"
+
+
+def test_youtube_channel_gone_fails():
+    r = check_camera(FakeSession([FakeResponse(404), FakeResponse(404)]),
+                     _yt_camera("youtube_channel", "UCxxChannelIdxx"), {})
+    assert r["state"] == "unknown" and r["consecutive_failures"] == 1
+
+
+def test_youtube_playlist_uses_playlist_oembed():
+    s = FakeSession([FakeResponse(200, b'{"title":"pl"}')])
+    r = check_camera(s, _yt_camera("youtube_video", "videoseries?list=PLxxYYzz"), {})
+    assert r["state"] == "ok"
+    assert "playlist%3Flist%3DPLxxYYzz" in s.requests[0]["url"]

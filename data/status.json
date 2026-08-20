@@ -101292,11 +101292,11 @@
    "avg_interval_sec": null
   },
   "curated-kanmon-shinko": {
-   "state": "ok",
+   "state": "error",
    "last_ok_at": "2026-08-20T01:57:04.808141+00:00",
-   "http_status": 200,
+   "http_status": 401,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "curated-koshimizu-hanayaka-umi": {
@@ -101964,11 +101964,11 @@
    "avg_interval_sec": null
   },
   "curated-oiso-coast": {
-   "state": "ok",
+   "state": "error",
    "last_ok_at": "2026-08-20T02:49:44.776593+00:00",
-   "http_status": 200,
+   "http_status": 401,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "curated-nct-nagaoka": {
@@ -102580,11 +102580,11 @@
    "avg_interval_sec": null
   },
   "curated-wink-himejijo": {
-   "state": "ok",
+   "state": "error",
    "last_ok_at": "2026-08-20T06:21:45.271731+00:00",
-   "http_status": 200,
+   "http_status": 401,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "mbc-elm1": {
@@ -103044,11 +103044,11 @@
    "avg_interval_sec": null
   },
   "curated-osezaki": {
-   "state": "ok",
+   "state": "error",
    "last_ok_at": "2026-08-20T09:02:00.708416+00:00",
-   "http_status": 200,
+   "http_status": 401,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "curated-rnb-matsuyamajo": {
@@ -109572,11 +109572,11 @@
    "avg_interval_sec": null
   },
   "curated-r2-12d144a1": {
-   "state": "ok",
+   "state": "error",
    "last_ok_at": "2026-08-20T08:01:53.382048+00:00",
-   "http_status": 200,
+   "http_status": 401,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "curated-r2-e3dd3964": {
@@ -112532,11 +112532,11 @@
    "avg_interval_sec": null
   },
   "world-bceb38e7": {
-   "state": "ok",
+   "state": "error",
    "last_ok_at": "2026-08-20T10:12:27.754085+00:00",
-   "http_status": 200,
+   "http_status": 404,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "world-7cc3f443": {
@@ -112668,11 +112668,11 @@
    "avg_interval_sec": null
   },
   "curated-r2-39214965": {
-   "state": "ok",
+   "state": "error",
    "last_ok_at": "2026-08-20T07:13:21.166788+00:00",
-   "http_status": 200,
+   "http_status": 403,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "curated-r2-266df21c": {

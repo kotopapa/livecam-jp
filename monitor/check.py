@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import time
+import urllib.parse
 from datetime import datetime, timezone
 from typing import Any
 
@@ -147,21 +148,31 @@ def _check_still(session, camera, state, now, prev_failures, url: str | None = N
 
 
 def _check_youtube(session, camera, state, now, prev_failures) -> dict:
-    """embed/live_stream ページに配信中の手掛かりがあるか（Data APIは使わない）。"""
+    """oEmbed / チャンネルURLの応答コードで判定する（Data APIは使わない）。
+
+    embedページの本文判定は2026年夏頃から機能しない（生死どちらも同一の
+    汎用シェルHTMLが返る）。代わりに:
+    - youtube_video: oEmbed が 200 なら視聴可。4xx は削除/非公開/埋め込み
+      不可のいずれかで、アプリ内では再生できないため障害扱いにする
+    - youtube_channel: /channel/<id>/live が 404 ならチャンネル消滅。
+      配信休止中でも200が返り、新配信開始で自動復帰する型なので存在確認のみ
+    """
     feed = camera["feed"]
     if feed["type"] == "youtube_channel":
-        url = f"https://www.youtube.com/embed/live_stream?channel={feed['url']}"
+        url = f"https://www.youtube.com/channel/{feed['url']}/live"
+    elif feed["url"].startswith("videoseries?list="):
+        # プレイリスト埋め込み型（離島カメラ等）はプレイリストの存在で判定
+        pl = feed["url"].split("list=", 1)[1].split("&")[0]
+        target = urllib.parse.quote(
+            f"https://www.youtube.com/playlist?list={pl}", safe="")
+        url = f"https://www.youtube.com/oembed?url={target}&format=json"
     else:
-        url = f"https://www.youtube.com/embed/{feed['url']}"
+        watch = urllib.parse.quote(
+            f"https://www.youtube.com/watch?v={feed['url']}", safe="")
+        url = f"https://www.youtube.com/oembed?url={watch}&format=json"
     resp = _get(session, url, {"User-Agent": USER_AGENT})
     if resp is None or resp.status_code >= 400:
         return _fail(state, now, prev_failures, resp.status_code if resp is not None else None)
-    text = resp.text
-    # 配信が存在しないときの embed ページには UNPLAYABLE / LIVE_STREAM_OFFLINE 等が入る
-    alive = ('"playabilityStatus"' not in text and "UNPLAYABLE" not in text
-             and "LIVE_STREAM_OFFLINE" not in text) or '"status":"OK"' in text
-    if not alive:
-        return _fail(state, now, prev_failures, resp.status_code)
     state["consecutive_failures"] = 0
     state["last_ok_at"] = now.isoformat()
     return {
