@@ -30,10 +30,14 @@ footer { margin-top: 3em; font-size: .85rem; color: #777; }
 <li><strong>YouTube（Google）</strong>（ライブ映像の埋め込み再生）</li>
 <li><strong>各カメラ提供元のサーバー</strong>（カメラ画像の取得。国土交通省・自治体・放送局・民間事業者等）</li>
 <li><strong>Google Firebase（Firestore）</strong>（全国ランキングのための匿名の閲覧カウント送信。下記参照）</li>
+<li><strong>Google Firebase（Crashlytics）</strong>（アプリの安定性向上のためのクラッシュ情報の収集。下記参照）</li>
 </ul>
 
 <h2>3-2. 全国ランキングのための匿名統計</h2>
 <p>本アプリの「みんなのランキング」機能は、<strong>どのカメラが何回閲覧されたか（カメラIDと回数）のみ</strong>を Google Firebase に送信して集計します。ユーザーを識別する情報（端末ID・氏名・位置情報・IPアドレスの保存等）は送信・保存しません。送信された回数はランキングの生成のみに使用されます。</p>
+
+<h2>3-3. クラッシュ情報の収集（Firebase Crashlytics）</h2>
+<p>アプリの不具合を発見・修正するため、アプリが異常終了した際に <strong>Google Firebase Crashlytics</strong> を利用してクラッシュ情報（発生箇所のスタックトレース・端末のモデル名とOSバージョン・発生時刻等）を収集します。氏名・位置情報などユーザー個人を特定する情報は含まれません。収集された情報は不具合の修正のみに使用されます。詳細は <a href="https://firebase.google.com/support/privacy?hl=ja">Firebaseのプライバシー情報</a> をご覧ください。</p>
 
 <h2>4. お気に入り等の設定情報</h2>
 <p>お気に入り登録・アプリ内の設定は端末内にのみ保存され、外部へ送信されません。</p>
@@ -47,6 +51,6 @@ footer { margin-top: 3em; font-size: .85rem; color: #777; }
 <h2>7. 改定</h2>
 <p>本ポリシーは必要に応じて改定されることがあります。重要な変更がある場合は本ページで告知します。</p>
 
-<footer>制定日: 2026年8月19日（同日改定: 匿名統計の追記）<br>全国ライブカメラ地図 開発者</footer>
+<footer>制定日: 2026年8月19日（2026年8月20日改定: クラッシュ情報収集の追記）<br>全国ライブカメラ地図 開発者</footer>
 </body>
 </html>

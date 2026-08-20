@@ -56,4 +56,8 @@ class ViewHistoryStore {
 
   /// 閲覧のあるカメラID一覧
   Iterable<String> get viewedIds => _views.keys;
+
+  /// 全カメラ合計の閲覧回数（レビュー訴求のタイミング判定に使う）
+  int get totalEvents =>
+      _views.values.fold(0, (sum, times) => sum + times.length);
 }

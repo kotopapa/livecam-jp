@@ -2,11 +2,13 @@ import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'data/camera_repository.dart';
 import 'data/favorites_store.dart';
 import 'data/global_stats.dart';
+import 'data/review_prompter.dart';
 import 'data/view_history_store.dart';
 import 'models/camera.dart';
 import 'models/status.dart';
@@ -20,12 +22,16 @@ class AppState extends ChangeNotifier {
   final FavoritesStore favorites;
   final ViewHistoryStore viewHistory = ViewHistoryStore();
   final GlobalStats globalStats = GlobalStats();
+  final ReviewPrompter reviewPrompter = ReviewPrompter();
 
   /// 詳細画面を開いたときに呼ぶ。ローカル統計に加え、全国ランキングが
   /// 有効な場合は匿名カウント（カメラIDと回数のみ）を束ねて送信する
   Future<void> recordView(Camera c) async {
     await viewHistory.record(c.id);
     await globalStats.add(c.id);
+    reviewPrompter.maybePrompt(
+        totalViews: viewHistory.totalEvents,
+        favoriteCount: favorites.ids.length);
   }
 
   bool isFavorite(Camera c) => favorites.contains(c.id);
@@ -34,6 +40,45 @@ class AppState extends ChangeNotifier {
     final added = await favorites.toggle(c.id);
     notifyListeners();
     await globalStats.addFavorite(c.id, added);
+    if (added) {
+      reviewPrompter.maybePrompt(
+          totalViews: viewHistory.totalEvents,
+          favoriteCount: favorites.ids.length);
+    }
+  }
+
+  // --- 強制アップデート（HANDOFF 2-8-1。manifest.min_app_version と比較） ---
+  bool updateRequired = false;
+  String? storeUrl;
+  String _appVersion = '';
+
+  /// "1.2.3" 形式の比較。current < minimum のとき true
+  @visibleForTesting
+  static bool isVersionBelow(String current, String minimum) {
+    List<int> parse(String v) => v
+        .split('+')[0]
+        .split('.')
+        .map((p) => int.tryParse(p) ?? 0)
+        .toList();
+    final cur = parse(current);
+    final min = parse(minimum);
+    for (var i = 0; i < 3; i++) {
+      final c = i < cur.length ? cur[i] : 0;
+      final m = i < min.length ? min[i] : 0;
+      if (c != m) return c < m;
+    }
+    return false;
+  }
+
+  void _checkUpdateRequired() {
+    final min = repository.manifest?.minAppVersion;
+    storeUrl = repository.manifest?.storeUrl;
+    if (min == null || _appVersion.isEmpty) return;
+    final required = isVersionBelow(_appVersion, min);
+    if (required != updateRequired) {
+      updateRequired = required;
+      notifyListeners();
+    }
   }
 
   bool initialized = false;
@@ -219,6 +264,12 @@ class AppState extends ChangeNotifier {
     await favorites.load();
     await viewHistory.load();
     await globalStats.load();
+    await reviewPrompter.load();
+    try {
+      _appVersion = (await PackageInfo.fromPlatform()).version;
+    } catch (_) {
+      // テスト環境等で取れない場合は強制アップデート判定をスキップ
+    }
     await _loadFilterDefaults();
     // 実装前から登録済みのお気に入りを全国集計へ一度だけ反映
     await globalStats.backfillFavorites(favorites.ids);
@@ -243,6 +294,7 @@ class AppState extends ChangeNotifier {
     try {
       await repository.refresh();
       notice = repository.manifest?.notice;
+      _checkUpdateRequired();
     } finally {
       refreshing = false;
       notifyListeners();

@@ -1,4 +1,8 @@
+import 'dart:ui' show PlatformDispatcher;
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -21,6 +25,15 @@ Future<void> main() async {
     final options = DefaultFirebaseOptions.currentPlatform;
     if (options != null) {
       await Firebase.initializeApp(options: options);
+      // クラッシュ検知（HANDOFF 2-8-3）。デバッグビルドでは送信しない
+      if (!kDebugMode) {
+        FlutterError.onError =
+            FirebaseCrashlytics.instance.recordFlutterFatalError;
+        PlatformDispatcher.instance.onError = (error, stack) {
+          FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+          return true;
+        };
+      }
     }
   } catch (_) {}
   final dir = await getApplicationSupportDirectory();

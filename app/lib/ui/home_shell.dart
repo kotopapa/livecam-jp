@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
 import 'favorites_screen.dart';
@@ -19,6 +20,47 @@ class HomeShell extends StatefulWidget {
 
 class _HomeShellState extends State<HomeShell> {
   int _index = 0;
+  bool _updateDialogShown = false;
+
+  @override
+  void initState() {
+    super.initState();
+    widget.app.addListener(_maybeShowUpdateDialog);
+  }
+
+  @override
+  void dispose() {
+    widget.app.removeListener(_maybeShowUpdateDialog);
+    super.dispose();
+  }
+
+  /// 強制アップデート（HANDOFF 2-8-1）。manifest の min_app_version を
+  /// 下回ったら閉じられないダイアログでストアへ誘導する
+  void _maybeShowUpdateDialog() {
+    if (!widget.app.updateRequired || _updateDialogShown || !mounted) return;
+    _updateDialogShown = true;
+    final storeUrl = widget.app.storeUrl;
+    showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => PopScope(
+        canPop: false,
+        child: AlertDialog(
+          title: const Text('アップデートが必要です'),
+          content: const Text('このバージョンはサポートが終了しました。\n'
+              'App Storeから最新版に更新してください。'),
+          actions: [
+            if (storeUrl != null)
+              FilledButton(
+                onPressed: () => launchUrl(Uri.parse(storeUrl),
+                    mode: LaunchMode.externalApplication),
+                child: const Text('App Storeを開く'),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

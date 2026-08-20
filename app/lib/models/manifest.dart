@@ -7,6 +7,7 @@ class Manifest {
     required this.camerasCount,
     required this.statusUrl,
     this.minAppVersion,
+    this.storeUrl,
     this.notice,
   });
 
@@ -16,6 +17,9 @@ class Manifest {
   final int camerasCount;
   final String statusUrl;
   final String? minAppVersion;
+
+  /// App Store のURL（強制アップデートダイアログの誘導先。未公開の間はnull）
+  final String? storeUrl;
 
   /// 緊急告知（あればアプリ上部にバナー表示。SPEC 8.1）
   final String? notice;
@@ -30,6 +34,7 @@ class Manifest {
       camerasCount: (cameras['count'] as num?)?.toInt() ?? 0,
       statusUrl: status['url'] as String? ?? '/v1/status.json',
       minAppVersion: json['min_app_version'] as String?,
+      storeUrl: json['store_url'] as String?,
       notice: json['notice'] as String?,
     );
   }

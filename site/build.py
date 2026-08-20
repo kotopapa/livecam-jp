@@ -22,6 +22,8 @@ DATA = REPO_ROOT / "data"
 OUT = REPO_ROOT / "site" / "v1"
 
 MIN_APP_VERSION = "1.0.0"
+# App Store 公開後にURLを設定する（強制アップデートダイアログの誘導先）
+STORE_URL = None
 INTERNAL_FIELDS = {"verification"}
 
 
@@ -66,6 +68,7 @@ def build() -> int:
         "status": {"version": status.get("generated_at"), "url": "/v1/status.json"},
         "prefectures": sorted(by_pref),
         "min_app_version": MIN_APP_VERSION,
+        "store_url": STORE_URL,
         "notice": None,
     }
     (OUT / "manifest.json").write_text(
