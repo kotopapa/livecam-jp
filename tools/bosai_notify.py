@@ -1,7 +1,7 @@
 """重大災害のプッシュ通知送信（GitHub Actionsから10分間隔で実行）。
 
 - 震度5弱以上の地震（気象庁 quake/list.json）→ FCMトピック 'quake5'
-- 特別警報の新規発表（気象庁 warning/map.json）→ FCMトピック 'special-warning'
+- 特別警報の新規発表（気象庁 warning/map.json）→ FCMトピック 'special-warning'(全国) と 'special-warning-<prefJIS>'(都道府県別)
 
 通知済み管理は data/bosai_notify_state.json（変更時のみコミットされる）。
 認証は FIREBASE_SERVICE_ACCOUNT（既存のランキング集計と同じ鍵）。
@@ -104,8 +104,8 @@ def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
     return out
 
 
-def check_special_warnings(state: dict) -> tuple[list[tuple[str, str]], list[str]]:
-    """新規発表の特別警報 [(title, body)] と現在の発表中リストを返す。
+def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], list[str]]:
+    """新規発表の特別警報 [(title, body, prefJIS)] と現在の発表中リストを返す。
     r8形式: 発表報ログの配列。官署ごとに最新報のみを現在状態として採用する。"""
     reports = requests.get(WARNING_URL, timeout=30).json()
     latest: dict[str, dict] = {}
@@ -133,7 +133,7 @@ def check_special_warnings(state: dict) -> tuple[list[tuple[str, str]], list[str
         pref, wc = key.split(":")
         title = f"{SPECIAL_WARNINGS[wc]}が発表されました"
         body = f"{PREF_NAMES[pref]}に{SPECIAL_WARNINGS[wc]}。周辺のライブカメラを確認できます"
-        out.append((title, body))
+        out.append((title, body, pref))
     return out, sorted(current)
 
 
@@ -154,8 +154,10 @@ def main() -> int:
                 send_push(token, project, topic, title, body)
             state["notified_quakes"].append(eid)
             changed = True
-        for title, body in warning_events:
+        for title, body, pref in warning_events:
+            # 全国トピック(地域未選択のユーザー)と都道府県別トピックの両方に送る
             send_push(token, project, "special-warning", title, body)
+            send_push(token, project, f"special-warning-{pref}", title, body)
             changed = True
     if sorted(current_special) != sorted(state["active_special"]):
         changed = True

@@ -7,12 +7,19 @@ import 'package:shared_preferences/shared_preferences.dart';
 ///   quake5    = 震度5弱以上で通知
 ///   quake5up  = 震度5強以上で通知
 ///   quake6low = 震度6弱以上で通知
-///   special-warning = 特別警報の新規発表で通知
-/// 地震はレベルに応じて1トピックだけ購読する。
+///   special-warning      = 特別警報の新規発表で通知（全国）
+///   special-warning-`<XX>` = 特別警報・都道府県別（XXはJISコード01〜47）
+/// 地震はレベルに応じて1トピックだけ、特別警報は全国1つか都道府県別の
+/// いずれかを購読する（対象未選択=全国）。
 class NotificationSettings {
   static const _quakeEnabledKey = 'notify_quake_enabled';
   static const _quakeLevelKey = 'notify_quake_level'; // '5-' | '5+' | '6-'
   static const _warningEnabledKey = 'notify_warning_enabled';
+  static const _warningPrefsKey = 'notify_warning_prefs'; // JISコードのリスト
+
+  static final List<String> allPrefCodes = [
+    for (var i = 1; i <= 47; i++) i.toString().padLeft(2, '0')
+  ];
 
   static const quakeLevels = ['5-', '5+', '6-'];
   static const quakeLevelLabels = {
@@ -29,6 +36,9 @@ class NotificationSettings {
   bool quakeEnabled = false;
   String quakeLevel = '5-';
   bool warningEnabled = false;
+
+  /// 特別警報の通知対象の都道府県JISコード。空 = 全国
+  Set<String> warningPrefs = {};
   SharedPreferences? _prefs;
 
   Future<void> load() async {
@@ -36,6 +46,8 @@ class NotificationSettings {
     quakeEnabled = _prefs!.getBool(_quakeEnabledKey) ?? false;
     quakeLevel = _prefs!.getString(_quakeLevelKey) ?? '5-';
     warningEnabled = _prefs!.getBool(_warningEnabledKey) ?? false;
+    warningPrefs =
+        (_prefs!.getStringList(_warningPrefsKey) ?? const []).toSet();
   }
 
   Future<bool> _ensurePermission() async {
@@ -73,25 +85,44 @@ class NotificationSettings {
     _applyQuakeTopics();
   }
 
+  /// 特別警報トピックの購読反映。対象未選択なら全国トピック、
+  /// 選択ありなら都道府県別トピックを購読し、それ以外は解除する
+  void _applyWarningTopics({bool unsubscribeOthers = true}) {
+    final fm = FirebaseMessaging.instance;
+    final wantNational = warningEnabled && warningPrefs.isEmpty;
+    (wantNational
+            ? fm.subscribeToTopic('special-warning')
+            : fm.unsubscribeFromTopic('special-warning'))
+        .catchError((_) {});
+    for (final code in allPrefCodes) {
+      final want = warningEnabled && warningPrefs.contains(code);
+      if (!want && !unsubscribeOthers) continue;
+      (want
+              ? fm.subscribeToTopic('special-warning-$code')
+              : fm.unsubscribeFromTopic('special-warning-$code'))
+          .catchError((_) {});
+    }
+  }
+
   Future<bool> setWarningEnabled(bool value) async {
     if (value && !await _ensurePermission()) return false;
     warningEnabled = value;
     await _prefs?.setBool(_warningEnabledKey, value);
-    final fm = FirebaseMessaging.instance;
-    final f = value
-        ? fm.subscribeToTopic('special-warning')
-        : fm.unsubscribeFromTopic('special-warning');
-    f.catchError((_) {});
+    _applyWarningTopics();
     return true;
   }
 
-  /// 起動時に保存済み設定の購読を再適用する（購読漏れの自己修復）
+  Future<void> setWarningPrefs(Set<String> prefs) async {
+    warningPrefs = prefs.where(allPrefCodes.contains).toSet();
+    await _prefs?.setStringList(
+        _warningPrefsKey, warningPrefs.toList()..sort());
+    _applyWarningTopics();
+  }
+
+  /// 起動時に保存済み設定の購読を再適用する（購読漏れの自己修復）。
+  /// 起動のたびに48件の解除を投げないよう、購読side のみ再適用する
   void reapply() {
     if (quakeEnabled) _applyQuakeTopics();
-    if (warningEnabled) {
-      FirebaseMessaging.instance
-          .subscribeToTopic('special-warning')
-          .catchError((_) {});
-    }
+    if (warningEnabled) _applyWarningTopics(unsubscribeOthers: false);
   }
 }

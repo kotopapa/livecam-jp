@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../app_state.dart';
 import '../config.dart';
 import '../data/notification_settings.dart';
+import '../util/prefectures.dart';
 import 'detail_screen.dart' show disclaimerText;
 
 const _requestFormUrl =
@@ -59,6 +60,68 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
+  String _warningPrefsSummary() {
+    final prefs = _notify.warningPrefs;
+    if (prefs.isEmpty) return '全国';
+    final names = (prefs.toList()..sort())
+        .map((c) => prefectureNames[c] ?? c)
+        .toList();
+    if (names.length <= 3) return names.join('・');
+    return '${names.take(3).join('・')} など${names.length}件';
+  }
+
+  Future<void> _pickWarningPrefs() async {
+    final selected = Set<String>.from(_notify.warningPrefs);
+    final result = await showDialog<Set<String>>(
+      context: context,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setDialogState) => AlertDialog(
+          title: const Text('通知する地域'),
+          contentPadding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Text('選択した都道府県の特別警報のみ通知します。何も選ばない場合は全国が対象になります',
+                    style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+              ),
+              Flexible(
+                child: ListView(shrinkWrap: true, children: [
+                  for (final code in NotificationSettings.allPrefCodes)
+                    CheckboxListTile(
+                      dense: true,
+                      title: Text(prefectureNames[code] ?? code),
+                      value: selected.contains(code),
+                      onChanged: (v) => setDialogState(() =>
+                          v! ? selected.add(code) : selected.remove(code)),
+                    ),
+                ]),
+              ),
+            ]),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => setDialogState(selected.clear),
+              child: const Text('全国に戻す'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('キャンセル'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.of(context).pop(selected),
+              child: const Text('決定'),
+            ),
+          ],
+        ),
+      ),
+    );
+    if (result == null) return;
+    await _notify.setWarningPrefs(result);
+    if (mounted) setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,6 +172,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   if (mounted) setState(() {});
                 },
         ),
+        if (_notifyLoaded && _notify.warningEnabled)
+          ListTile(
+            contentPadding: const EdgeInsets.only(left: 72, right: 16),
+            title: const Text('通知する地域'),
+            subtitle: Text(_warningPrefsSummary()),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: _pickWarningPrefs,
+          ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
           child: Text('※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません',
