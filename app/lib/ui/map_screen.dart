@@ -486,6 +486,15 @@ class _MapScreenState extends State<MapScreen> {
                 ),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
+                  title: const Text('位置が曖昧なカメラを非表示'),
+                  value: app.hideUncertain,
+                  onChanged: (v) {
+                    app.setHideUncertain(v);
+                    setSheetState(() {});
+                  },
+                ),
+                SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
                   title: const Text('お気に入りのみ'),
                   value: app.favoritesOnly,
                   onChanged: (v) {

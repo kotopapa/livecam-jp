@@ -34,6 +34,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   void initState() {
     super.initState();
     _notify.load().then((_) {
+      _notify.reapply(); // 保存済み購読の自己修復
       if (mounted) setState(() => _notifyLoaded = true);
     });
   }
@@ -145,6 +146,44 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   child: CircularProgressIndicator(strokeWidth: 2))
               : null,
           onTap: _clearingCache ? null : _clearCache,
+        ),
+        const Divider(),
+        const _SectionHeader('フィルタの初期設定'),
+        SwitchListTile(
+          secondary: const Icon(Icons.public),
+          title: const Text('世界のカメラを表示'),
+          value: app.showWorld,
+          onChanged: (v) async {
+            app.setShowWorld(v);
+            await app.saveFilterDefault('showWorld', v);
+            if (mounted) setState(() {});
+          },
+        ),
+        SwitchListTile(
+          secondary: const Icon(Icons.videocam_outlined),
+          title: const Text('動画カメラのみ'),
+          value: app.videoOnly,
+          onChanged: (v) async {
+            app.setVideoOnly(v);
+            await app.saveFilterDefault('videoOnly', v);
+            if (mounted) setState(() {});
+          },
+        ),
+        SwitchListTile(
+          secondary: const Icon(Icons.location_off_outlined),
+          title: const Text('位置が曖昧なカメラを非表示'),
+          subtitle: const Text('黄色い縁取りのピン（おおよそ/代表点）を隠します'),
+          value: app.hideUncertain,
+          onChanged: (v) async {
+            app.setHideUncertain(v);
+            await app.saveFilterDefault('hideUncertain', v);
+            if (mounted) setState(() {});
+          },
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+          child: Text('ここで設定した内容は次回起動時の初期状態になります（地図の凡例からも一時的に変更できます）',
+              style: TextStyle(fontSize: 11, color: Colors.grey[600])),
         ),
         const Divider(),
         const _SectionHeader('カメラの追加・削除のご依頼'),

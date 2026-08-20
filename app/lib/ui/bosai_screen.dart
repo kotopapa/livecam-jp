@@ -19,8 +19,9 @@ class BosaiScreen extends StatefulWidget {
       'https://www.jma.go.jp/bosai/quake/data/list.json';
   static const tsunamiListUrl =
       'https://www.jma.go.jp/bosai/tsunami/data/list.json';
+  // 旧 /data/warning/map.json は2026-05で更新停止。r8系が現行
   static const warningMapUrl =
-      'https://www.jma.go.jp/bosai/warning/data/warning/map.json';
+      'https://www.jma.go.jp/bosai/warning/data/r8/map.json';
 
   final AppState app;
 
@@ -93,23 +94,31 @@ class _BosaiScreenState extends State<BosaiScreen> {
         headers: {'Cache-Control': 'no-cache'},
       ).timeout(const Duration(seconds: 15));
       if (resp.statusCode != 200) throw Exception('HTTP ${resp.statusCode}');
-      final offices = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
+      // r8形式: 発表報のログ配列。発表官署ごとに最新報だけを状態として採用する
+      final reports = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
+      final latestByOffice = <String, Map<String, dynamic>>{};
+      for (final rep in reports.cast<Map<String, dynamic>>()) {
+        final office = rep['publishingOffice'] as String? ?? '';
+        final dt = rep['reportDatetime'] as String? ?? '';
+        final cur = latestByOffice[office];
+        if (cur == null || dt.compareTo(cur['reportDatetime'] as String? ?? '') > 0) {
+          latestByOffice[office] = rep;
+        }
+      }
       final byPref = <String, Set<String>>{};
       final advByPref = <String, Set<String>>{};
-      for (final office in offices.cast<Map<String, dynamic>>()) {
-        final areaTypes = office['areaTypes'] as List? ?? const [];
-        if (areaTypes.isEmpty) continue;
-        // 先頭のareaType=府県予報区レベルを使う
-        for (final area in (areaTypes.first['areas'] as List? ?? const [])
+      for (final rep in latestByOffice.values) {
+        final warning = rep['warning'] as Map<String, dynamic>? ?? const {};
+        for (final area in (warning['class10Items'] as List? ?? const [])
             .cast<Map<String, dynamic>>()) {
-          final code = area['code'] as String? ?? '';
+          final code = area['areaCode'] as String? ?? '';
           if (code.length < 2) continue;
           final pref = code.substring(0, 2);
           if (!prefectureNames.containsKey(pref)) continue;
-          for (final w in (area['warnings'] as List? ?? const [])
+          for (final w in (area['kinds'] as List? ?? const [])
               .cast<Map<String, dynamic>>()) {
             final status = w['status'] as String? ?? '';
-            if (status == '解除') continue;
+            if (status == '解除' || status.contains('なし')) continue;
             final wc = w['code'] as String? ?? '';
             final name = _warningNames[wc];
             if (name != null) {

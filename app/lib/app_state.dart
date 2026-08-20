@@ -46,6 +46,7 @@ class AppState extends ChangeNotifier {
   };
   bool videoOnly = false;
   bool showWorld = true; // 世界(海外)カメラの表示
+  bool hideUncertain = false; // 位置情報が曖昧なカメラを非表示
   bool favoritesOnly = false;
   bool okOnly = false; // 現在映っている（state=ok）もののみ
   String searchQuery = '';
@@ -65,6 +66,31 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  void setHideUncertain(bool value) {
+    hideUncertain = value;
+    notifyListeners();
+  }
+
+  // --- フィルタ初期値（設定画面から構成。起動時に適用） ---
+  static const filterDefaultKeys = {
+    'showWorld': 'filter_default_show_world',
+    'videoOnly': 'filter_default_video_only',
+    'hideUncertain': 'filter_default_hide_uncertain',
+  };
+
+  Future<void> saveFilterDefault(String key, bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(filterDefaultKeys[key]!, value);
+  }
+
+  Future<void> _loadFilterDefaults() async {
+    final prefs = await SharedPreferences.getInstance();
+    showWorld = prefs.getBool(filterDefaultKeys['showWorld']!) ?? true;
+    videoOnly = prefs.getBool(filterDefaultKeys['videoOnly']!) ?? false;
+    hideUncertain =
+        prefs.getBool(filterDefaultKeys['hideUncertain']!) ?? false;
+  }
+
   void setFavoritesOnly(bool value) {
     favoritesOnly = value;
     notifyListeners();
@@ -80,6 +106,7 @@ class AppState extends ChangeNotifier {
       searchQuery.isNotEmpty ||
       videoOnly ||
       !showWorld ||
+      hideUncertain ||
       favoritesOnly ||
       okOnly ||
       enabledCategories.length != 9;
@@ -87,6 +114,7 @@ class AppState extends ChangeNotifier {
   /// カテゴリ以外の共通フィルタ（一覧・地図・件数集計で共用）
   bool _matchesCommonFilters(Camera c) =>
       (showWorld || !c.isWorld) &&
+      (!hideUncertain || !(c.coordAccuracy.isUncertain)) &&
       (!videoOnly || c.isVideo) &&
       (!favoritesOnly || favorites.contains(c.id)) &&
       (!okOnly || stateOf(c) == CameraState.ok) &&
@@ -191,6 +219,7 @@ class AppState extends ChangeNotifier {
     await favorites.load();
     await viewHistory.load();
     await globalStats.load();
+    await _loadFilterDefaults();
     // 実装前から登録済みのお気に入りを全国集計へ一度だけ反映
     await globalStats.backfillFavorites(favorites.ids);
     try {

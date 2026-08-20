@@ -44,15 +44,16 @@ class NotificationSettings {
         settings.authorizationStatus == AuthorizationStatus.provisional;
   }
 
-  Future<void> _applyQuakeTopics() async {
+  /// トピック購読の反映。APNsトークン待ちで長時間かかることがあるため
+  /// バックグラウンドで実行する（UIをブロックしない）
+  void _applyQuakeTopics() {
     final fm = FirebaseMessaging.instance;
     for (final e in _levelTopics.entries) {
       final want = quakeEnabled && e.key == quakeLevel;
-      if (want) {
-        await fm.subscribeToTopic(e.value);
-      } else {
-        await fm.unsubscribeFromTopic(e.value);
-      }
+      final f = want
+          ? fm.subscribeToTopic(e.value)
+          : fm.unsubscribeFromTopic(e.value);
+      f.catchError((_) {}); // 失敗時は次回起動/変更時に再適用される
     }
   }
 
@@ -61,7 +62,7 @@ class NotificationSettings {
     if (value && !await _ensurePermission()) return false;
     quakeEnabled = value;
     await _prefs?.setBool(_quakeEnabledKey, value);
-    await _applyQuakeTopics();
+    _applyQuakeTopics();
     return true;
   }
 
@@ -69,19 +70,28 @@ class NotificationSettings {
     if (!quakeLevels.contains(level)) return;
     quakeLevel = level;
     await _prefs?.setString(_quakeLevelKey, level);
-    await _applyQuakeTopics();
+    _applyQuakeTopics();
   }
 
   Future<bool> setWarningEnabled(bool value) async {
     if (value && !await _ensurePermission()) return false;
     warningEnabled = value;
     await _prefs?.setBool(_warningEnabledKey, value);
-    if (value) {
-      await FirebaseMessaging.instance.subscribeToTopic('special-warning');
-    } else {
-      await FirebaseMessaging.instance
-          .unsubscribeFromTopic('special-warning');
-    }
+    final fm = FirebaseMessaging.instance;
+    final f = value
+        ? fm.subscribeToTopic('special-warning')
+        : fm.unsubscribeFromTopic('special-warning');
+    f.catchError((_) {});
     return true;
+  }
+
+  /// 起動時に保存済み設定の購読を再適用する（購読漏れの自己修復）
+  void reapply() {
+    if (quakeEnabled) _applyQuakeTopics();
+    if (warningEnabled) {
+      FirebaseMessaging.instance
+          .subscribeToTopic('special-warning')
+          .catchError((_) {});
+    }
   }
 }

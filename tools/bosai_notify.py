@@ -20,7 +20,7 @@ from google.oauth2 import service_account
 JST = timezone(timedelta(hours=9))
 STATE_PATH = "data/bosai_notify_state.json"
 QUAKE_URL = "https://www.jma.go.jp/bosai/quake/data/list.json"
-WARNING_URL = "https://www.jma.go.jp/bosai/warning/data/warning/map.json"
+WARNING_URL = "https://www.jma.go.jp/bosai/warning/data/r8/map.json"  # 旧warning/map.jsonは2026-05で凍結
 
 STRONG_INTENSITY = {"5-", "5+", "6-", "6+", "7"}
 # 震度→通知対象トピック（クライアントは選択レベルの1トピックだけ購読する）
@@ -105,21 +105,27 @@ def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
 
 
 def check_special_warnings(state: dict) -> tuple[list[tuple[str, str]], list[str]]:
-    """新規発表の特別警報 [(title, body)] と現在の発表中リストを返す"""
-    offices = requests.get(WARNING_URL, timeout=30).json()
+    """新規発表の特別警報 [(title, body)] と現在の発表中リストを返す。
+    r8形式: 発表報ログの配列。官署ごとに最新報のみを現在状態として採用する。"""
+    reports = requests.get(WARNING_URL, timeout=30).json()
+    latest: dict[str, dict] = {}
+    for rep in reports:
+        office = rep.get("publishingOffice", "")
+        dt = rep.get("reportDatetime", "")
+        if office not in latest or dt > latest[office].get("reportDatetime", ""):
+            latest[office] = rep
     current: set[str] = set()  # "pref:code"
-    for office in offices:
-        area_types = office.get("areaTypes") or []
-        if not area_types:
-            continue
-        for area in area_types[0].get("areas") or []:
-            code = area.get("code", "")
+    for rep in latest.values():
+        warning = rep.get("warning") or {}
+        for area in warning.get("class10Items") or []:
+            code = area.get("areaCode", "")
             pref = code[:2]
             if pref not in PREF_NAMES:
                 continue
-            for w in area.get("warnings") or []:
+            for w in area.get("kinds") or []:
                 wc = w.get("code", "")
-                if wc in SPECIAL_WARNINGS and w.get("status") != "解除":
+                status = w.get("status", "")
+                if wc in SPECIAL_WARNINGS and status != "解除" and "なし" not in status:
                     current.add(f"{pref}:{wc}")
     previous = set(state["active_special"])
     out = []
