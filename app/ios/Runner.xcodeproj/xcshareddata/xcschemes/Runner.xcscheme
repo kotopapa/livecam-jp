@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Prepare Flutter Framework Script"
-               scriptText = "/bin/sh &quot;$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh&quot; prepare&#10;">
+               scriptText = "/bin/sh &quot;$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh&quot; prepare&#10;# flutter pub get が生成パッケージのiOS最低バージョンを13.0に戻すバグ対策(Firebaseは15.0必須)&#10;sed -i &apos;&apos; &apos;s/\.iOS(&quot;13\.0&quot;)/.iOS(&quot;17.0&quot;)/&apos; &quot;$SRCROOT/Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage/Package.swift&quot;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
