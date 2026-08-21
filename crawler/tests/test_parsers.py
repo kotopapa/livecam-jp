@@ -373,3 +373,22 @@ def test_saga_road_json():
     assert c.feed_url.endswith("/camimage/data/sa-010.jpg")
     assert 32 < c.lat < 34 and 129 < c.lng < 131
     assert validate_camera_record(c.to_record("2026-08-21")) == []
+
+
+def test_ehime_road_json():
+    from crawler.sources.ehime_road import EhimeRoadParser
+    body = (FIXTURES / "ehime_maps.json").read_text(encoding="utf-8")
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = body
+            return P()
+    result = EhimeRoadParser().discover(S())
+    assert len(result.candidates) == 3
+    c = result.candidates[0]
+    assert c.feed_url.endswith("_resent_png.jpg") and c.prefecture == "38"
+    assert 32 < c.lat < 35 and 131 < c.lng < 134
+    assert validate_camera_record(c.to_record("2026-08-21")) == []

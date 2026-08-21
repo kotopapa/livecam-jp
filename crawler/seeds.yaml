@@ -147,6 +147,10 @@ sources:
     enabled: true
     note: 佐賀県道路情報(sagacat.or.jp)。maps<N>.jsonが住所・座標つき台帳(27台)。
           固定URL camimage/data/<id>.jpg。license=unknown
+  - id: ehime_road
+    enabled: true
+    note: えひめの道(凍結情報システム)。ehime_maps.jsonが座標つき台帳(57地点)。
+          固定URL json/<id>_resent_png.jpg。冬期メインで夏期は一部noimage
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）
