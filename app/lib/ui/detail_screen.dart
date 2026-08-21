@@ -239,6 +239,7 @@ class _DetailScreenState extends State<DetailScreen> {
     final ref = camera.sourcePageUrl ?? camera.fallbackUrl ?? '';
     final uri = Uri.parse(base).replace(queryParameters: {
       'usp': 'pp_url',
+      'entry.803872053': '不具合の報告',
       'entry.285662317': '${camera.name}（ID: ${camera.id}）',
       'entry.1884263750': ref,
       'entry.799104956': '【不具合報告】症状: ',
