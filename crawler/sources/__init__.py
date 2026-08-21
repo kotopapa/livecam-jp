@@ -32,6 +32,8 @@ from crawler.sources.muni_youtube import MuniYoutubeParser
 from crawler.sources.saga_road import SagaRoadParser
 from crawler.sources.saitama_flood import SaitamaFloodParser
 from crawler.sources.shimane_road import ShimaneRoadParser
+from crawler.sources.shizuoka_doboku import ShizuokaDobokuParser
+from crawler.sources.tochigi_road import TochigiRoadParser
 from crawler.sources.tokyo_suibo import TokyoSuiboParser
 from crawler.sources.toyama_road import ToyamaRoadParser
 from crawler.sources.youtube_live import YoutubeLiveParser
@@ -68,6 +70,8 @@ REGISTRY = {
         SagaRoadParser,
         SaitamaFloodParser,
         ShimaneRoadParser,
+        ShizuokaDobokuParser,
+        TochigiRoadParser,
         TokyoSuiboParser,
         ToyamaRoadParser,
         YoutubeLiveParser,

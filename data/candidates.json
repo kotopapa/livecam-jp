@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T11:03:09Z",
+ "version": "2026-08-21T11:26:44Z",
  "cameras": [
   {
    "id": "fukushima-road-051",
@@ -1092,6 +1092,396 @@
    "verification": null,
    "first_seen": "2026-08-20",
    "last_updated": "2026-08-20"
+  },
+  {
+   "id": "shizuoka-doboku-atami-04-sasajiri",
+   "name": "<img src=atami/04_sasajiri/temp_sasajiri.gif id=tempcss />県道11号 (主)熱海函南線 笹尻(函南方面)",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": ">県道11号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/04_sasajiri/cam_sasajiri.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-atami-05-umenokidaira",
+   "name": "<img src=atami/05_umenokidaira/temp_umenokidaira.gif id=tempcss />(国)１３５号 梅ノ木平(熱海方面)",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道１３５号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/05_umenokidaira/cam_umenokidaira.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-atami-07-kameishitouge",
+   "name": "<img src=atami/07_kameishitouge/temp_kameishitouge.gif id=tempcss />県道19号 (主)伊東大仁線 亀石峠東(伊東方面)",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "県道19号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/07_kameishitouge/cam_kameishitouge.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-atami-08-rokurobatouge",
+   "name": "<img src=atami/08_rokurobatouge/temp_rokurobatouge.gif id=tempcss />県道111号 (一)遠笠山富戸線 鹿路庭峠(伊東方面)",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "県道111号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/08_rokurobatouge/cam_rokurobatouge.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-atami-09-sakuranosato",
+   "name": "<img src=atami/09_sakuranosato/temp_sakuranosato.gif id=tempcss />県道351号 (一)池東松原線 さくらの里(伊東市街方面)",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "県道351号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/09_sakuranosato/cam_sakuranosato.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-fuji-02-mizugazuka",
+   "name": "<img src=fuji/02_mizugazuka/temp_mizugazuka.gif id=tempcss3 />(一)富士公園太郎坊線 水ヶ塚",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://fujilive.pref.shizuoka.jp/fuji/02_mizugazuka/cam_mizugazuka.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://fujilive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 富士土木事務所",
+   "source": {
+    "page_url": "https://fujilive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県富士土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-fuji-04-kodomonokuni",
+   "name": "<img src=fuji/04_kodomonokuni/temp_kodomonokuni.gif id=tempcss3 />(国)469号 こどもの国入口",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://fujilive.pref.shizuoka.jp/fuji/04_kodomonokuni/cam_kodomonokuni.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://fujilive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 富士土木事務所",
+   "source": {
+    "page_url": "https://fujilive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県富士土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-numadu-04-jurigi",
+   "name": "(国)４６９号 十里木 交差点",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道469号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://snowlive.pref.shizuoka.jp/numadu/04_jurigi/cam_jurigi.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://snowlive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 沼津土木事務所",
+   "source": {
+    "page_url": "https://snowlive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県沼津土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-numadu-06-heda",
+   "name": "(主)修善寺戸田線 戸田峠",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道修善寺戸田線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://snowlive.pref.shizuoka.jp/numadu/06_heda/cam_heda.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://snowlive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 沼津土木事務所",
+   "source": {
+    "page_url": "https://snowlive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県沼津土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-numadu-09-kousuimae",
+   "name": "(国)１３８号 湖水前交差点",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道138号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://snowlive.pref.shizuoka.jp/numadu/09_kousuimae/cam_kousuimae.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://snowlive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 沼津土木事務所",
+   "source": {
+    "page_url": "https://snowlive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県沼津土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   }
  ]
 }

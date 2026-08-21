@@ -163,6 +163,14 @@ sources:
     enabled: true
     note: さいたま市水位情報システムの河川カメラ14台。place.jsonが座標つき台帳、
           camera_latest.jsonで全台の最新画像を1リクエスト解決(都度解決型)
+  - id: tochigi_road
+    enabled: true
+    note: 栃木県道路ライブカメラ60台(モバイル版menu.htmlが市町村別一覧)。
+          固定URL Portable/<ID>_1.jpg。座標なし→ジオコーディング
+  - id: shizuoka_doboku
+    enabled: true
+    note: 静岡県土木事務所4系統(熱海9・沼津15・富士8・下田13)。lightbox一覧が台帳。
+          固定URL cam_<slug>.jpg。座標なし→ジオコーディング
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）

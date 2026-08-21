@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META http-equiv="Pragma" content="no-cache">
+<META http-equiv="Cache-Control" content="no-cache">
+<LINK rel="index" href="index.html">
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+<!-- ポップアップ表示 -->
+<SCRIPT type="text/javascript" charset="UTF-8" src="js/lightbox_plus2.js"></SCRIPT>
+<SCRIPT language="JavaScript" src="js/prototype.js"></SCRIPT>
+<!-- ポップアップFORMBUTTON -->
+<script
+ type="text/javascript">
+
+function callNativeMouseEvent(obj) {
+
+   if ( window.navigator.appName.toLowerCase().indexOf("microsoft") > -1) {
+      obj.click();
+   }
+   else {
+      var event;
+      event = document.createEvent("MouseEvent");
+      event.initEvent("click", true, true);
+      obj.dispatchEvent(event);
+   }
+}
+</script>
+
+
+<!-- 時刻表示用スクリプト -->
+<SCRIPT language="JavaScript">
+	setInterval ( 'clocknow()',1000 ) ; // 1秒間隔で繰返し実行
+	function clocknow() {
+
+		weeks = new Array("日","月","火","水","木","金","土") ;
+		now = new Date() ;
+		y = now.getFullYear() ;
+		mo = now.getMonth() + 1 ;
+		d = now.getDate() ;
+		w = weeks[now.getDay()] ;
+		h = now.getHours(); 
+		mi = now.getMinutes(); 
+		s = now.getSeconds(); 
+
+// 月、日、時、分、秒が一桁のとき、頭に0を付加
+	if ( mo < 10 ) { mo = "0" + mo ; } 
+	if ( d < 10 ) { d = "0" + d ; } 
+	if ( h < 10 ) { h = "0" + h ; } 
+	if ( mi < 10 ) { mi = "0" + mi ; } 
+	if ( s < 10 ) { s = "0" + s ; } 
+
+document.formclock.fieldclock.value = y + "/" + mo + "/" + d + "(" + w + ")　" + h + ":" + mi + ":" + s + ""; // 整形
+}
+
+//-->
+</SCRIPT>
+
+<TITLE>静岡県 沼津雪ライブカメラ</TITLE>
+
+</head>
+
+<!-- テロップ用の外部ファイル参照 -->
+<!--
+<object id="TELOP1" classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83">
+<param name="DataURL" value="mobile_telop.csv">
+<param name="CharSet" value="_autodetect">
+</object>
+-->
+
+<body>
+
+<MARQUEE scrollamount="6" loop="10" truespeed bgcolor="#d9d9ff"><FONT color="red">実際の交通規制に従い、十分注意して走行してください。 
+</FONT></MARQUEE></CENTER>
+<!-- コンテナ開始 -->
+<div id="container">
+
+
+<!-- ヘッダ開始 -->
+<div id="header">
+
+<CENTER><IMG src="images/title.gif" width="550" height="63" border="0"></CENTER>
+
+</DIV>
+<!-- ヘッダ終了 -->
+
+<!-- ナビゲーション開始 -->
+<div id="nav">
+<H3><FONT SIZE="3">時刻</FONT></H3>
+<UL>
+  <LI>
+  <FORM name="formclock"><INPUT type="text" name="fieldclock" size="24" style="border-width:0;background-color:#FBF9E7;"></FORM>
+</UL>
+
+<UL>
+  <LI>
+<A href="attention.html" target="_blank"><font size="3" color="#ff0000"><b>※ご利用上の注意</b></font></A><br>
+  <LI><A href="sezinfo/sample.html" target="select">お知らせ</A><br>
+</UL>
+
+<H3><FONT SIZE="3">ライブカメラ</FONT></H3>
+<UL>
+  <LI><A href="/">地図で表示</A><br>
+  <LI><A href="inline2.html" target="select">一覧で表示</A><br>
+</UL>
+<UL>
+	<div style='display:none'>
+	<a id="img1" href="numadu/01_funabara/cam_funabara.jpg" rel="lightbox" title="(国)１３６号　船原トンネル(東側)">(国)136号 船原</a><br>
+	<a id="img2" href="numadu/02_hiekawa/cam_hiekawa.jpg" rel="lightbox" title="(主)伊東修善寺線　冷川トンネル(西側)">(主)伊東修善寺線 冷川</a><br>
+	<a id="img3" href="numadu/03_kameishi/cam_kameishi.jpg" rel="lightbox" title="(主)伊東大仁線　亀石峠">(主)伊東大仁線 亀石峠</a><br>
+	<a id="img4" href="numadu/04_jurigi/cam_jurigi.jpg" rel="lightbox" title="(国)４６９号　十里木 交差点">(国)469号 十里木</a><br>
+	<a id="img5" href="numadu/05_otome/cam_otome.jpg" rel="lightbox" title="(国)１３８号　乙女峠">(国)138号 乙女峠</a><br>
+	<a id="img6" href="numadu/06_heda/cam_heda.jpg" rel="lightbox" title="(主)修善寺戸田線　戸田峠">(主)修善寺戸田線 戸田峠</a><br>
+	<a id="img7" href="numadu/07_amagi/cam_amagi.jpg" rel="lightbox" title="(国)４１４号　天城峠">(国)414号 天城峠</a><br>
+	<a id="img8" href="numadu/08_ashigara/cam_ashigara.jpg" rel="lightbox" title="(主)御殿場大井線 足柄峠">(主)御殿場大井線 足柄峠</a><br>
+	<a id="img9" href="numadu/12_atamitouge/cam_atamitouge.jpg" rel="lightbox" title="(主)熱海箱根峠線 熱海峠">(主)熱海箱根峠線 熱海峠</a><br>
+	<a id="img10" href="numadu/13_takanosumae/cam_takanosumae.jpg" rel="lightbox" title="(主)熱海函南線 鷹ノ巣山(函南)">(主)熱海函南線 鷹ノ巣山(函南)</a><br>
+	<a id="img11" href="numadu/14_funahara/cam_funahara.jpg" rel="lightbox" title="(国)１３６号 船原(土肥側)">(国)136号 船原(土肥側)</a><br>
+	<a id="img12" href="numadu/10_fukazawahigashi/cam_fukazawahigashi.jpg" rel="lightbox" title="(国)１３８号 深沢東交差点">(国)138号 深沢東交差点</a><br>
+	<a id="img13" href="numadu/11_fukazawanishi/cam_fukazawanishi.jpg" rel="lightbox" title="(国)１３８号 深沢西交差点">(国)138号 深沢西交差点</a><br>
+	<a id="img14" href="numadu/09_kousuimae/cam_kousuimae.jpg" rel="lightbox" title="(国)１３８号 湖水前交差点">(国)138号 湖水前交差点</a><br>
+	<a id="img15" href="numadu/15_sanagitouge/cam_sanagitouge.jpg" rel="lightbox" title="(一)船原西浦高原線 真城峠">(一)船原西浦高原線 真城峠</a><br>
+	</div>
+	<INPUT type="button" value="(国)１３６号 船原(東側)　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img1"));'><br>
+	<INPUT type="button" value="(主)伊東修善寺線 冷川　　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img2"));'><br>
+	<INPUT type="button" value="(主)伊東大仁線 亀石峠　　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img3"));'><br>
+	<INPUT type="button" value="(国)４６９号 十里木　　　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img4"));'><br>
+	<INPUT type="button" value="(国)１３８号 乙女峠　　　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img5"));'><br>
+	<INPUT type="button" value="(主)修善寺戸田線 戸田峠　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img6"));'><br>
+	<INPUT type="button" value="(国)４１４号 天城峠　　　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img7"));'><br>
+	<INPUT type="button" value="(主)御殿場大井線 足柄峠　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img8"));'><br>
+	<INPUT type="button" value="(主)熱海箱根峠線 熱海峠　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img9"));'><br>
+	<INPUT type="button" value="(主)熱海函南線 鷹ノ巣山　　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img10"));'><br>
+	<INPUT type="button" value="(国)１３６号 船原(土肥側)　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img11"));'><br>
+	<INPUT type="button" value="(国)１３８号 深沢東交差点　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img12"));'><br>
+	<INPUT type="button" value="(国)１３８号 深沢西交差点　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img13"));'><br>
+	<INPUT type="button" value="(国)１３８号 湖水前交差点　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img14"));'><br>
+	<INPUT type="button" value="(一)船原西浦高原線 真城峠　" STYLE="width: 150px; height:20px;" onClick='callNativeMouseEvent($("img15"));'><br>
+</UL>
+
+<H3><FONT SIZE="3">モバイル</FONT></H3>
+<UL>
+携帯電話からのアクセスは以下を参照してください。<br>
+<CENTER><A href="images/qrcode.gif" target="select" rel="lightbox"><IMG src="images/qrcode.gif" width="100" height="100" border="0"></A><br>
+<font size="-2">URL <A href="/mobile.html">https://snowlive.pref.shizuoka.jp/<br>mobile.html</A><br><br></font>
+</CENTER>
+</UL>
+
+<H3><FONT SIZE="3">ライブカメラリンク</FONT></H3>
+<UL>
+沼津土木事務所管理外のライブカメラへのリンクです。<br>
+  <LI><A href="https://fujilive.pref.shizuoka.jp/" target="_blank">富士土木事務所<br />&nbsp;雪ライブカメラ</A>
+  <LI><A href="https://izu-s.pref.shizuoka.jp/" target="_blank">下田土木事務所<br />&nbsp;みちなみライブカメラ</A>
+  <LI><A href="https://izu-e.pref.shizuoka.jp/" target="_blank">熱海土木事務所<br />&nbsp;みちなみライブカメラ<br />&nbsp;&nbsp;～A・Iカメラ～</A>
+  <LI><A href="https://www.cbr.mlit.go.jp/numazu/bousai/livecamera/" target="_blank">国土交通省中部地方整備局<br>&nbsp;沼津河川国道事務所ライブカメラ</A>
+  <LI><A href="https://camera.siz-road.or.jp/" target="_blank">静岡県道路公社ライブカメラ</A>
+</UL>
+
+<H3><FONT SIZE="3">リンク</FONT></H3>
+<UL>
+  <LI><A href="https://sipos.pref.shizuoka.jp/" target="_blank">サイポスレーダー</A>
+  <LI><A href="http://douro.pref.shizuoka.jp/website/Shizuoka/Base/default.htm" target="_blank">道路規制情報</A>
+</UL>
+</div>
+<!-- ナビゲーション終了 -->
+
+<!-- メインカラム開始 -->
+<div id="content">
+<MARQUEE bgcolor="#E7FBEE" height="16" scrolldelay="100" onmouseover="this.stop()" onmouseout="this.start()"><span datasrc="#TELOP1" datafld="Column1"></span></MARQUEE><BR>
+<P align="center"><IFRAME src="inline1.html" name="select" frameborder="0" scrolling="no" width="650" height="1750"></IFRAME></P>
+</div>
+<!-- メインカラム終了 -->
+
+<!-- フッタ開始 -->
+<div id="footer">
+<CENTER>
+<P id="copyright">〒410-0055　静岡県沼津市高島本町1-3 【沼津土木事務所 維持調査課】電話番号：055-920-2120<BR>
+Copyright &copy; 2010 Copyright Shizuoka Prefecture. All Rights Reserved. All rights reserved.</P>
+</CENTER>
+</div>
+<!-- フッタ終了 -->
+
+
+</div>
+<!-- コンテナ終了 -->
+
+</body>
+</html>
+

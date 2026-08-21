@@ -489,3 +489,35 @@ def test_saitama_flood_parser():
     c = result.candidates[0]
     assert c.id == "saitama-flood-001" and c.camera_ref == "001"
     assert validate_camera_record(c.to_record("2026-08-22")) == []
+
+
+def test_tochigi_road_menu():
+    from crawler.sources.tochigi_road import TochigiRoadParser, parse_menu
+    html = (FIXTURES / "tochigi_menu.html").read_text(encoding="utf-8")
+    rows = parse_menu(html)
+    assert len(rows) >= 55, f"栃木は60台規模のはず: {len(rows)}"
+    assert ("宇都宮市", "001", "宮の内アンダー") in rows
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = html
+            return P()
+    result = TochigiRoadParser().discover(S())
+    assert len(result.candidates) >= 55
+    c = next(x for x in result.candidates if x.id == "tochigi-road-001")
+    assert c.feed_url.endswith("Portable/001_1.jpg")
+    assert c.address_hint.startswith("栃木県宇都宮市")
+    assert validate_camera_record(c.to_record("2026-08-22")) == []
+
+
+def test_shizuoka_doboku():
+    from crawler.sources.shizuoka_doboku import parse_site
+    html = (FIXTURES / "shizuoka_numadu.html").read_text(encoding="utf-8")
+    rows = parse_site(html)
+    assert len(rows) >= 14, f"沼津は15台のはず: {len(rows)}"
+    path, title, label = rows[0]
+    assert path == "numadu/01_funabara/cam_funabara.jpg"
+    assert "船原" in title and label.endswith("船原")
