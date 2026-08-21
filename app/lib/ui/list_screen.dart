@@ -46,9 +46,14 @@ class _ListScreenState extends State<ListScreen> {
     if (mounted) setState(() {});
   }
 
+  DateTime? _lastAttempt;
+  bool _loading = false;
+
   /// [request] が false のときは許可済みの場合のみ取得する。
-  /// 起動直後に許可ダイアログを出さないため、要求はユーザー操作時に限る
   Future<void> _loadPosition({bool request = false}) async {
+    if (_loading) return;
+    _loading = true;
+    _lastAttempt = DateTime.now();
     try {
       var permission = await Geolocator.checkPermission();
       if (permission == LocationPermission.denied && request) {
@@ -58,13 +63,34 @@ class _ListScreenState extends State<ListScreen> {
           permission == LocationPermission.deniedForever) {
         return;
       }
+      // まず既知の最終位置を即時採用し（起動直後でも近い順で出す）、
+      // その後に現在位置で上書きする
+      final last = await Geolocator.getLastKnownPosition();
+      if (last != null && mounted && _position == null) {
+        setState(() => _position = last);
+      }
       final pos = await Geolocator.getCurrentPosition(
-          locationSettings:
-              const LocationSettings(accuracy: LocationAccuracy.low));
+              locationSettings:
+                  const LocationSettings(accuracy: LocationAccuracy.low))
+          .timeout(const Duration(seconds: 12));
       if (mounted) setState(() => _position = pos);
     } catch (_) {
-      // 位置が取れなくても一覧は使える（距離なし表示）
+      // 位置が取れなくても一覧は使える（buildからの再試行に任せる）
+    } finally {
+      _loading = false;
     }
+  }
+
+  /// 位置が未取得のままなら定期的に再試行する（初回失敗の自己回復）
+  void _maybeRetryPosition() {
+    if (_position != null || _loading) return;
+    final last = _lastAttempt;
+    if (last != null &&
+        DateTime.now().difference(last) < const Duration(seconds: 20)) {
+      return;
+    }
+    WidgetsBinding.instance
+        .addPostFrameCallback((_) => _loadPosition(request: true));
   }
 
   List<(Camera, double?)> _sortedCameras() {
@@ -98,6 +124,7 @@ class _ListScreenState extends State<ListScreen> {
 
   @override
   Widget build(BuildContext context) {
+    _maybeRetryPosition();
     final cams = _sortedCameras();
     return Scaffold(
       appBar: AppBar(
