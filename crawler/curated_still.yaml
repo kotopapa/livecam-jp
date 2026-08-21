@@ -988,3 +988,137 @@ cameras:
     lng: 138.7514
     image_url: "https://www.yamanashi-kankou.jp/heritage/fujisanwatcher/jp/live/images/kawaguchiko.jpg"
     page_url: "https://www.yamanashi-kankou.jp/heritage/fujisanwatcher/jp/live/02.html"
+
+  # --- 2026-08-22 第5弾: 熊本県営ダム ---
+
+  - id: curated-still-kumamoto-ichifusa-dam-upstream
+    name: "市房ダム カメラ1"
+    operator: "熊本県(市房ダム管理所)"
+    category: dam
+    prefecture: "43"
+    lat: 32.32
+    lng: 131.0128
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now001.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S575"
+    note: "球磨川水系球磨川"
+
+  - id: curated-still-kumamoto-ichifusa-dam-spillway
+    name: "市房ダム カメラ2"
+    operator: "熊本県(市房ダム管理所)"
+    category: dam
+    prefecture: "43"
+    lat: 32.32
+    lng: 131.0128
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now002.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S575"
+    note: "球磨川水系球磨川"
+
+  - id: curated-still-kumamoto-hikawa-dam-upstream
+    name: "氷川ダム カメラ3"
+    operator: "熊本県(氷川ダム管理所)"
+    category: dam
+    prefecture: "43"
+    lat: 32.5711
+    lng: 130.7866
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now003.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S576"
+    note: "氷川水系氷川"
+
+  - id: curated-still-kumamoto-hikawa-dam-spillway
+    name: "氷川ダム カメラ4"
+    operator: "熊本県(氷川ダム管理所)"
+    category: dam
+    prefecture: "43"
+    lat: 32.5711
+    lng: 130.7866
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now004.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S576"
+    note: "氷川水系氷川"
+
+  - id: curated-still-kumamoto-ishiuchi-dam-upstream
+    name: "石打ダム カメラ7"
+    operator: "熊本県(石打ダム管理所)"
+    category: dam
+    prefecture: "43"
+    lat: 32.6436
+    lng: 130.5192
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now007.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S772"
+    note: "波多川水系波多川"
+
+  - id: curated-still-kumamoto-ishiuchi-dam-spillway
+    name: "石打ダム カメラ8"
+    operator: "熊本県(石打ダム管理所)"
+    category: dam
+    prefecture: "43"
+    lat: 32.6436
+    lng: 130.5192
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now008.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S772"
+    note: "波多川水系波多川"
+
+  - id: curated-still-kumamoto-kozuura-dam-upstream
+    name: "上津浦ダム カメラ9"
+    operator: "熊本県(天草地域振興局)"
+    category: dam
+    prefecture: "43"
+    lat: 32.4772
+    lng: 130.3247
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now009.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S577"
+    note: "上津浦川水系上津浦川"
+
+  - id: curated-still-kumamoto-kozuura-dam-spillway
+    name: "上津浦ダム カメラ10"
+    operator: "熊本県(天草地域振興局)"
+    category: dam
+    prefecture: "43"
+    lat: 32.4772
+    lng: 130.3247
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now010.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S577"
+    note: "上津浦川水系上津浦川"
+
+  - id: curated-still-kumamoto-kamegawa-dam-upstream
+    name: "亀川ダム カメラ5"
+    operator: "熊本県(天草地域振興局)"
+    category: dam
+    prefecture: "43"
+    lat: 32.432
+    lng: 130.135
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now005.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S773"
+    note: "亀川水系亀川"
+
+  - id: curated-still-kumamoto-kamegawa-dam-spillway
+    name: "亀川ダム カメラ6"
+    operator: "熊本県(天草地域振興局)"
+    category: dam
+    prefecture: "43"
+    lat: 32.432
+    lng: 130.135
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now006.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S773"
+    note: "亀川水系亀川"
+
+  - id: curated-still-kumamoto-rogi-dam-upstream
+    name: "路木ダム カメラ11"
+    operator: "熊本県(天草地域振興局)"
+    category: dam
+    prefecture: "43"
+    lat: 32.2821
+    lng: 130.0872
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now011.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S774"
+    note: "路木川水系路木川"
+
+  - id: curated-still-kumamoto-rogi-dam-spillway
+    name: "路木ダム カメラ12"
+    operator: "熊本県(天草地域振興局)"
+    category: dam
+    prefecture: "43"
+    lat: 32.2821
+    lng: 130.0872
+    image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now012.jpg"
+    page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S774"
+    note: "路木川水系路木川"

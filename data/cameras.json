@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T09:58:53Z",
+ "version": "2026-08-21T10:04:43Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -17269,6 +17269,462 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：公益社団法人やまなし観光推進機構(山梨県公式観光サイト「富士の国やまなし観光ネット」)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-hikawa-dam-spillway",
+   "name": "氷川ダム カメラ4",
+   "name_kana": null,
+   "lat": 32.5711,
+   "lng": 130.7866,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now004.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S576"
+   },
+   "operator": "熊本県(氷川ダム管理所)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S576",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(氷川ダム管理所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-hikawa-dam-upstream",
+   "name": "氷川ダム カメラ3",
+   "name_kana": null,
+   "lat": 32.5711,
+   "lng": 130.7866,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now003.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S576"
+   },
+   "operator": "熊本県(氷川ダム管理所)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S576",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(氷川ダム管理所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-ichifusa-dam-spillway",
+   "name": "市房ダム カメラ2",
+   "name_kana": null,
+   "lat": 32.32,
+   "lng": 131.0128,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now002.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S575"
+   },
+   "operator": "熊本県(市房ダム管理所)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S575",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(市房ダム管理所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-ichifusa-dam-upstream",
+   "name": "市房ダム カメラ1",
+   "name_kana": null,
+   "lat": 32.32,
+   "lng": 131.0128,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now001.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S575"
+   },
+   "operator": "熊本県(市房ダム管理所)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S575",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(市房ダム管理所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-ishiuchi-dam-spillway",
+   "name": "石打ダム カメラ8",
+   "name_kana": null,
+   "lat": 32.6436,
+   "lng": 130.5192,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now008.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S772"
+   },
+   "operator": "熊本県(石打ダム管理所)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S772",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(石打ダム管理所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-ishiuchi-dam-upstream",
+   "name": "石打ダム カメラ7",
+   "name_kana": null,
+   "lat": 32.6436,
+   "lng": 130.5192,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now007.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S772"
+   },
+   "operator": "熊本県(石打ダム管理所)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S772",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(石打ダム管理所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-kamegawa-dam-spillway",
+   "name": "亀川ダム カメラ6",
+   "name_kana": null,
+   "lat": 32.432,
+   "lng": 130.135,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now006.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S773"
+   },
+   "operator": "熊本県(天草地域振興局)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S773",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(天草地域振興局)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-kamegawa-dam-upstream",
+   "name": "亀川ダム カメラ5",
+   "name_kana": null,
+   "lat": 32.432,
+   "lng": 130.135,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now005.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S773"
+   },
+   "operator": "熊本県(天草地域振興局)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S773",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(天草地域振興局)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-kozuura-dam-spillway",
+   "name": "上津浦ダム カメラ10",
+   "name_kana": null,
+   "lat": 32.4772,
+   "lng": 130.3247,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now010.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S577"
+   },
+   "operator": "熊本県(天草地域振興局)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S577",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(天草地域振興局)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-kozuura-dam-upstream",
+   "name": "上津浦ダム カメラ9",
+   "name_kana": null,
+   "lat": 32.4772,
+   "lng": 130.3247,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now009.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S577"
+   },
+   "operator": "熊本県(天草地域振興局)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S577",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(天草地域振興局)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-rogi-dam-spillway",
+   "name": "路木ダム カメラ12",
+   "name_kana": null,
+   "lat": 32.2821,
+   "lng": 130.0872,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now012.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S774"
+   },
+   "operator": "熊本県(天草地域振興局)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S774",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(天草地域振興局)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kumamoto-rogi-dam-upstream",
+   "name": "路木ダム カメラ11",
+   "name_kana": null,
+   "lat": 32.2821,
+   "lng": 130.0872,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now011.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S774"
+   },
+   "operator": "熊本県(天草地域振興局)",
+   "source": {
+    "page_url": "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S774",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：熊本県(天草地域振興局)"
    },
    "review": {
     "status": "approved",
