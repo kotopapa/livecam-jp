@@ -129,22 +129,50 @@ class _MapScreenState extends State<MapScreen> {
     }
   }
 
-  // --- 地図位置の記憶（前回表示していた場所から再開する） ---
+  // --- 起動時の初期位置 ---
   static const _posKey = 'map_position'; // "lat,lng,zoom"
 
+  /// まず前回位置を即時復元し、現在地が取れ次第そこへ移動する。
+  /// 位置情報が未許可・取得失敗の場合は前回位置のまま（起動時に許可は求めない）
   Future<void> _restorePosition() async {
     try {
       final prefs = await SharedPreferences.getInstance();
       final parts = (prefs.getString(_posKey) ?? '').split(',');
-      if (parts.length != 3) return;
-      final lat = double.parse(parts[0]);
-      final lng = double.parse(parts[1]);
-      final zoom = double.parse(parts[2]);
-      if (!mounted) return;
-      _controller.move(LatLng(lat, lng), zoom);
-      setState(() => _zoom = zoom);
+      if (parts.length == 3) {
+        final lat = double.parse(parts[0]);
+        final lng = double.parse(parts[1]);
+        final zoom = double.parse(parts[2]);
+        if (!mounted) return;
+        _controller.move(LatLng(lat, lng), zoom);
+        setState(() => _zoom = zoom);
+      }
     } catch (_) {
       // 記憶がない/壊れている場合は既定位置のまま
+    }
+    await _centerOnCurrentLocation();
+  }
+
+  Future<void> _centerOnCurrentLocation() async {
+    try {
+      final permission = await Geolocator.checkPermission();
+      if (permission != LocationPermission.always &&
+          permission != LocationPermission.whileInUse) {
+        return;
+      }
+      final pos = await Geolocator.getCurrentPosition(
+              locationSettings:
+                  const LocationSettings(accuracy: LocationAccuracy.medium))
+          .timeout(const Duration(seconds: 8));
+      if (!mounted) return;
+      final here = LatLng(pos.latitude, pos.longitude);
+      setState(() {
+        _myLocation = here;
+        _zoom = 11;
+      });
+      _controller.move(here, 11);
+      _savePosition();
+    } catch (_) {
+      // 取得できなければ前回位置のまま
     }
   }
 

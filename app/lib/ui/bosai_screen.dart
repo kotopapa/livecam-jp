@@ -71,6 +71,9 @@ class _BosaiScreenState extends State<BosaiScreen> {
   DateTime? _fetchedAt;
   // 都道府県コード → 発表中の警報名セット（特別警報を先頭に）
   Map<String, List<String>>? _warnings;
+
+  /// 都道府県→警報を発表中の官署コード（市区町村単位の詳細取得に使う）
+  Map<String, Set<String>> _warningOffices = {};
   // 都道府県コード → 発表中の注意報名セット（警報がない県の参考表示）
   Map<String, List<String>>? _advisories;
   String? _warningError;
@@ -107,12 +110,13 @@ class _BosaiScreenState extends State<BosaiScreen> {
       }
       final byPref = <String, Set<String>>{};
       final advByPref = <String, Set<String>>{};
+      final officesByPref = <String, Set<String>>{};
       for (final rep in latestByOffice.values) {
         final warning = rep['warning'] as Map<String, dynamic>? ?? const {};
         for (final area in (warning['class10Items'] as List? ?? const [])
             .cast<Map<String, dynamic>>()) {
           final code = area['areaCode'] as String? ?? '';
-          if (code.length < 2) continue;
+          if (code.length < 6) continue;
           final pref = code.substring(0, 2);
           if (!prefectureNames.containsKey(pref)) continue;
           for (final w in (area['kinds'] as List? ?? const [])
@@ -123,6 +127,10 @@ class _BosaiScreenState extends State<BosaiScreen> {
             final name = _warningNames[wc];
             if (name != null) {
               byPref.putIfAbsent(pref, () => {}).add(name);
+              // 市区町村単位の詳細ファイルは官署コード単位（class10の先頭3桁+000）
+              officesByPref
+                  .putIfAbsent(pref, () => {})
+                  .add('${code.substring(0, 3)}000');
             } else {
               final adv = _advisoryNames[wc];
               if (adv != null) {
@@ -150,6 +158,7 @@ class _BosaiScreenState extends State<BosaiScreen> {
         setState(() {
           _warnings = result;
           _advisories = advResult;
+          _warningOffices = officesByPref;
         });
       }
     } catch (e) {
@@ -440,7 +449,8 @@ class _BosaiScreenState extends State<BosaiScreen> {
                   app: widget.app,
                   pref: pref,
                   title:
-                      '${prefectureNames[pref] ?? pref}のカメラ（警報発表中）'))),
+                      '${prefectureNames[pref] ?? pref}のカメラ（警報発表中）',
+                  warningOffices: _warningOffices[pref]))),
         );
       },
     );
@@ -448,29 +458,136 @@ class _BosaiScreenState extends State<BosaiScreen> {
 }
 
 /// 都道府県内のカメラ一覧（警報発表時の導線）。
-class PrefCamerasScreen extends StatelessWidget {
+/// [warningOffices] を渡すと気象庁の官署別詳細（class20=市区町村単位）を
+/// 取得し、警報発表中の市区町村のカメラだけに絞り込む。
+class PrefCamerasScreen extends StatefulWidget {
   const PrefCamerasScreen(
-      {super.key, required this.app, required this.pref, required this.title});
+      {super.key,
+      required this.app,
+      required this.pref,
+      required this.title,
+      this.warningOffices});
 
   final AppState app;
   final String pref;
   final String title;
+  final Set<String>? warningOffices;
+
+  @override
+  State<PrefCamerasScreen> createState() => _PrefCamerasScreenState();
+}
+
+class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
+  Set<String>? _warningMunis; // 警報発表中の市区町村コード。null=読込中
+  bool _muniLookupFailed = false;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.warningOffices != null) {
+      _loadWarningMunis();
+    }
+  }
+
+  /// 官署別ファイルの class20Items から警報発表中の市区町村コードを集める
+  Future<void> _loadWarningMunis() async {
+    final munis = <String>{};
+    var anyOk = false;
+    for (final office in widget.warningOffices!) {
+      try {
+        final resp = await http.get(
+          Uri.parse('https://www.jma.go.jp/bosai/warning/data/r8/'
+              '$office.json?_=${DateTime.now().millisecondsSinceEpoch}'),
+          headers: {'Cache-Control': 'no-cache'},
+        ).timeout(const Duration(seconds: 15));
+        if (resp.statusCode != 200) continue;
+        final reports = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
+        Map<String, dynamic>? latest;
+        for (final rep in reports.cast<Map<String, dynamic>>()) {
+          final dt = rep['reportDatetime'] as String? ?? '';
+          if (latest == null ||
+              dt.compareTo(latest['reportDatetime'] as String? ?? '') > 0) {
+            latest = rep;
+          }
+        }
+        final warning =
+            latest?['warning'] as Map<String, dynamic>? ?? const {};
+        for (final area in (warning['class20Items'] as List? ?? const [])
+            .cast<Map<String, dynamic>>()) {
+          final code = area['areaCode'] as String? ?? '';
+          if (code.length < 5) continue;
+          for (final w in (area['kinds'] as List? ?? const [])
+              .cast<Map<String, dynamic>>()) {
+            final status = w['status'] as String? ?? '';
+            if (status == '解除' || status.contains('なし')) continue;
+            if (_warningNames.containsKey(w['code'] as String? ?? '')) {
+              munis.add(code.substring(0, 5));
+              break;
+            }
+          }
+        }
+        anyOk = true;
+      } catch (_) {
+        // この官署の詳細が取れなくても他の官署は処理を続ける
+      }
+    }
+    if (!mounted) return;
+    setState(() {
+      _warningMunis = munis;
+      _muniLookupFailed = !anyOk;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    final cams = app.repository
+    final app = widget.app;
+    final all = app.repository
         .displayableCameras()
-        .where((c) => c.prefecture == pref)
+        .where((c) => c.prefecture == widget.pref)
         .toList()
       ..sort((a, b) => a.name.compareTo(b.name));
+
+    List<Camera> cams = all;
+    String? note;
+    if (widget.warningOffices != null) {
+      if (_warningMunis == null) {
+        return Scaffold(
+          appBar: AppBar(
+              title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+          body: const Center(child: CircularProgressIndicator()),
+        );
+      }
+      final matched =
+          all.where((c) => _warningMunis!.contains(c.municipality)).toList();
+      if (matched.isNotEmpty) {
+        cams = matched;
+        note = '警報が発表されている市区町村のカメラのみ表示しています';
+      } else if (_muniLookupFailed || _warningMunis!.isEmpty) {
+        note = '発表エリアの詳細を取得できなかったため、都道府県内の全カメラを表示しています';
+      } else {
+        note = '発表中の市区町村に該当するカメラがないため、都道府県内の全カメラを表示しています';
+      }
+    }
+
     return Scaffold(
-      appBar: AppBar(title: Text(title, overflow: TextOverflow.ellipsis)),
+      appBar: AppBar(
+          title: Text(widget.title, overflow: TextOverflow.ellipsis)),
       body: cams.isEmpty
           ? const Center(child: Text('この都道府県のカメラがありません'))
           : ListView.builder(
-              itemCount: cams.length,
+              itemCount: cams.length + (note != null ? 1 : 0),
               itemBuilder: (context, i) {
-                final camera = cams[i];
+                if (note != null && i == 0) {
+                  return Container(
+                    color: const Color(0xFFFFF4E5),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 8),
+                    child: Text(note,
+                        style: TextStyle(
+                            fontSize: 12, color: Colors.orange[900])),
+                  );
+                }
+                final camera = cams[note != null ? i - 1 : i];
                 final url = app.imageUrlFor(camera);
                 return ListTile(
                   leading: ClipRRect(
