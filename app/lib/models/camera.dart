@@ -14,6 +14,9 @@ enum FeedType {
   /// 気象庁 火山監視カメラ（都度解決型）。静止画URLは status.json の image_url を使う
   jmaVolcam('jma_volcam'),
 
+  /// 東北地整カメラXML（都度解決型）。静止画URLは status.json の image_url を使う
+  thrCamxml('thr_camxml'),
+
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する
   unknown('unknown');
 

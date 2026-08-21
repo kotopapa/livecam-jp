@@ -413,3 +413,16 @@ def test_kobe_river_parser():
     assert c.id == "kobe-river-01" and c.lat == 34.721324
     assert c.feed_url.endswith("/images/camera/mobile/01.jpg")
     assert validate_camera_record(c.to_record("2026-08-21")) == []
+
+
+def test_thr_camxml_resolver():
+    from crawler.sources.thr_camxml import resolve_image_url
+    xml = ("<Camera><ObservationDate>2026/08/21-19:20</ObservationDate>"
+           "<PictureFilenameHistorical>202608211920.jpg"
+           "</PictureFilenameHistorical></Camera>")
+    url, at = resolve_image_url(
+        "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/video/okama.xml", xml)
+    assert url == ("https://www2.thr.mlit.go.jp/shinjyou/zaou_live/video/"
+                   "okama/202608211920.jpg")
+    assert at == "2026-08-21T19:20:00+09:00"
+    assert resolve_image_url("x.xml", "<Camera/>") is None

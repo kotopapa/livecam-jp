@@ -1122,3 +1122,18 @@ cameras:
     image_url: "https://www.bousai.pref.kumamoto.jp/DamCamera/VGA/Now012.jpg"
     page_url: "https://www.bousai.pref.kumamoto.jp/Dsp/GmnDspD.exe?60S774"
     note: "路木川水系路木川"
+
+  # --- 2026-08-22 蔵王御釜(都度解決型) ---
+
+  - id: curated-still-zao-okama
+    name: "蔵王山 御釜（刈田岳山頂）"
+    operator: "国土交通省 新庄河川事務所"
+    category: volcano
+    prefecture: "04"
+    lat: 38.1297
+    lng: 140.4483
+    feed_type: thr_camxml
+    feed_url: "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/video/okama.xml"
+    image_url: "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/video/okama.xml"
+    page_url: "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/"
+    note: 20分間隔のタイムスタンプ画像。monitorがXMLから最新URLを解決

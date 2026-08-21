@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T10:04:43Z",
+ "version": "2026-08-21T10:16:51Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -18675,6 +18675,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：長野県企業局 北信発電管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-zao-okama",
+   "name": "蔵王山 御釜（刈田岳山頂）",
+   "name_kana": null,
+   "lat": 38.1297,
+   "lng": 140.4483,
+   "coord_accuracy": "approx",
+   "category": "volcano",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "thr_camxml",
+    "url": "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/video/okama.xml",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/"
+   },
+   "operator": "国土交通省 新庄河川事務所",
+   "source": {
+    "page_url": "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 新庄河川事務所"
    },
    "review": {
     "status": "approved",
