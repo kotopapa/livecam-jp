@@ -223,7 +223,27 @@ class _DetailScreenState extends State<DetailScreen> {
               _open('https://www.youtube.com/watch?v=${camera.feed.url}'),
           child: const Text('YouTubeで見る'),
         ),
+      TextButton.icon(
+        onPressed: _openReportForm,
+        icon: const Icon(Icons.flag_outlined, size: 18),
+        label: const Text('このカメラの不具合を報告'),
+        style: TextButton.styleFrom(foregroundColor: Colors.grey[700]),
+      ),
     ]);
+  }
+
+  /// 不具合報告: 依頼フォームをカメラ名・URL入りで開く（ログイン不要）
+  void _openReportForm() {
+    const base = 'https://docs.google.com/forms/d/e/'
+        '1FAIpQLScRz0Enqfrq-lrbuDVBdFD1jwSyl4GJEZtgTJxAoZfYo-QWJw/viewform';
+    final ref = camera.sourcePageUrl ?? camera.fallbackUrl ?? '';
+    final uri = Uri.parse(base).replace(queryParameters: {
+      'usp': 'pp_url',
+      'entry.285662317': '${camera.name}（ID: ${camera.id}）',
+      'entry.1884263750': ref,
+      'entry.799104956': '【不具合報告】症状: ',
+    });
+    _open(uri.toString());
   }
 
   Widget _nearbySection() {
