@@ -74,6 +74,7 @@ class _BosaiScreenState extends State<BosaiScreen> {
 
   /// 都道府県→警報を発表中の官署コード（市区町村単位の詳細取得に使う）
   Map<String, Set<String>> _warningOffices = {};
+
   // 都道府県コード → 発表中の注意報名セット（警報がない県の参考表示）
   Map<String, List<String>>? _advisories;
   String? _warningError;
@@ -445,12 +446,11 @@ class _BosaiScreenState extends State<BosaiScreen> {
           ]),
           trailing: const Icon(Icons.chevron_right),
           onTap: () => Navigator.of(context).push(MaterialPageRoute(
-              builder: (_) => PrefCamerasScreen(
+              builder: (_) => WarningMuniListScreen(
                   app: widget.app,
                   pref: pref,
-                  title:
-                      '${prefectureNames[pref] ?? pref}のカメラ（警報発表中）',
-                  warningOffices: _warningOffices[pref]))),
+                  title: '${prefectureNames[pref] ?? pref}の警報発表地域',
+                  offices: _warningOffices[pref] ?? const {}))),
         );
       },
     );
@@ -460,40 +460,63 @@ class _BosaiScreenState extends State<BosaiScreen> {
 /// 都道府県内のカメラ一覧（警報発表時の導線）。
 /// [warningOffices] を渡すと気象庁の官署別詳細（class20=市区町村単位）を
 /// 取得し、警報発表中の市区町村のカメラだけに絞り込む。
-class PrefCamerasScreen extends StatefulWidget {
-  const PrefCamerasScreen(
+/// 警報発表中の市区町村一覧（都道府県タップ後の中間画面）。
+/// 気象庁の官署別詳細(class20Items)とarea.jsonの市区町村名を突き合わせ、
+/// 市区町村をタップするとそのエリアのカメラ一覧を開く。
+class WarningMuniListScreen extends StatefulWidget {
+  const WarningMuniListScreen(
       {super.key,
       required this.app,
       required this.pref,
       required this.title,
-      this.warningOffices});
+      required this.offices});
 
   final AppState app;
   final String pref;
   final String title;
-  final Set<String>? warningOffices;
+  final Set<String> offices;
 
   @override
-  State<PrefCamerasScreen> createState() => _PrefCamerasScreenState();
+  State<WarningMuniListScreen> createState() => _WarningMuniListScreenState();
 }
 
-class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
-  Set<String>? _warningMunis; // 警報発表中の市区町村コード。null=読込中
-  bool _muniLookupFailed = false;
+class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
+  /// (市区町村コード5桁, 市区町村名, 警報名リスト)。null=読込中
+  List<(String, String, List<String>)>? _munis;
+  bool _failed = false;
+
+  /// class20コード(7桁)→市区町村名。気象庁area.jsonから一度だけ取得
+  static Map<String, String>? _class20Names;
+
+  static Future<Map<String, String>> _loadClass20Names() async {
+    if (_class20Names != null) return _class20Names!;
+    final resp = await http
+        .get(Uri.parse('https://www.jma.go.jp/bosai/common/const/area.json'))
+        .timeout(const Duration(seconds: 20));
+    final data =
+        jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
+    final c20 = data['class20s'] as Map<String, dynamic>? ?? const {};
+    _class20Names = {
+      for (final e in c20.entries)
+        e.key: ((e.value as Map<String, dynamic>)['name'] as String? ?? '')
+    };
+    return _class20Names!;
+  }
 
   @override
   void initState() {
     super.initState();
-    if (widget.warningOffices != null) {
-      _loadWarningMunis();
-    }
+    _load();
   }
 
-  /// 官署別ファイルの class20Items から警報発表中の市区町村コードを集める
-  Future<void> _loadWarningMunis() async {
-    final munis = <String>{};
+  Future<void> _load() async {
+    final byMuni = <String, (String, Set<String>)>{};
     var anyOk = false;
-    for (final office in widget.warningOffices!) {
+    Map<String, String> names = const {};
+    try {
+      names = await _loadClass20Names();
+    } catch (_) {}
+    for (final office in widget.offices) {
       try {
         final resp = await http.get(
           Uri.parse('https://www.jma.go.jp/bosai/warning/data/r8/'
@@ -515,15 +538,18 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
         for (final area in (warning['class20Items'] as List? ?? const [])
             .cast<Map<String, dynamic>>()) {
           final code = area['areaCode'] as String? ?? '';
-          if (code.length < 5) continue;
+          if (code.length < 5 || !code.startsWith(widget.pref)) continue;
           for (final w in (area['kinds'] as List? ?? const [])
               .cast<Map<String, dynamic>>()) {
             final status = w['status'] as String? ?? '';
             if (status == '解除' || status.contains('なし')) continue;
-            if (_warningNames.containsKey(w['code'] as String? ?? '')) {
-              munis.add(code.substring(0, 5));
-              break;
-            }
+            final wname = _warningNames[w['code'] as String? ?? ''];
+            if (wname == null) continue;
+            final muni = code.substring(0, 5);
+            final entry = byMuni[muni] ??
+                (names[code] ?? '市区町村 $muni', <String>{});
+            entry.$2.add(wname);
+            byMuni[muni] = entry;
           }
         }
         anyOk = true;
@@ -532,46 +558,130 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
       }
     }
     if (!mounted) return;
+    final list = byMuni.entries
+        .map((e) => (e.key, e.value.$1, e.value.$2.toList()..sort()))
+        .toList()
+      ..sort((a, b) {
+        final ae = a.$3.any((w) => w.contains('特別')) ? 0 : 1;
+        final be = b.$3.any((w) => w.contains('特別')) ? 0 : 1;
+        return ae != be ? ae.compareTo(be) : a.$1.compareTo(b.$1);
+      });
     setState(() {
-      _warningMunis = munis;
-      _muniLookupFailed = !anyOk;
+      _munis = list;
+      _failed = !anyOk;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final app = widget.app;
+    final body = _munis == null
+        ? const Center(child: CircularProgressIndicator())
+        : (_munis!.isEmpty
+            ? Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Text(
+                      _failed
+                          ? '発表エリアの詳細を取得できませんでした'
+                          : '現在、警報が発表されている市区町村はありません',
+                      textAlign: TextAlign.center),
+                ),
+              )
+            : ListView.separated(
+                itemCount: _munis!.length + 1,
+                separatorBuilder: (_, _) => const Divider(height: 1),
+                itemBuilder: (context, i) {
+                  if (i == 0) {
+                    return Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Text('出典：気象庁。タップするとその市区町村のカメラ一覧を表示します',
+                          style: TextStyle(
+                              fontSize: 11, color: Colors.grey[600])),
+                    );
+                  }
+                  final (muni, name, warns) = _munis![i - 1];
+                  final emergency = warns.any((w) => w.contains('特別'));
+                  return ListTile(
+                    leading: Icon(
+                      emergency
+                          ? Icons.warning
+                          : Icons.warning_amber_outlined,
+                      color: emergency
+                          ? const Color(0xFFD93025)
+                          : const Color(0xFFF29900),
+                    ),
+                    title: Text(name),
+                    subtitle: Wrap(spacing: 4, runSpacing: 2, children: [
+                      for (final w in warns)
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 6, vertical: 1),
+                          decoration: BoxDecoration(
+                            color: w.contains('特別')
+                                ? const Color(0xFFD93025)
+                                : const Color(0xFFF29900),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(w,
+                              style: const TextStyle(
+                                  color: Colors.white, fontSize: 11)),
+                        ),
+                    ]),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => PrefCamerasScreen(
+                            app: widget.app,
+                            pref: widget.pref,
+                            title: '$nameのカメラ（警報発表中）',
+                            municipality: muni))),
+                  );
+                },
+              ));
+    return Scaffold(
+      appBar: AppBar(
+          title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+      body: body,
+    );
+  }
+}
+
+class PrefCamerasScreen extends StatelessWidget {
+  const PrefCamerasScreen(
+      {super.key,
+      required this.app,
+      required this.pref,
+      required this.title,
+      this.municipality});
+
+  final AppState app;
+  final String pref;
+  final String title;
+
+  /// 指定時はこの市区町村コード(5桁)のカメラのみ表示する
+  final String? municipality;
+
+  @override
+  Widget build(BuildContext context) {
     final all = app.repository
         .displayableCameras()
-        .where((c) => c.prefecture == widget.pref)
+        .where((c) => c.prefecture == pref)
         .toList()
       ..sort((a, b) => a.name.compareTo(b.name));
 
     List<Camera> cams = all;
     String? note;
-    if (widget.warningOffices != null) {
-      if (_warningMunis == null) {
-        return Scaffold(
-          appBar: AppBar(
-              title: Text(widget.title, overflow: TextOverflow.ellipsis)),
-          body: const Center(child: CircularProgressIndicator()),
-        );
-      }
+    if (municipality != null) {
       final matched =
-          all.where((c) => _warningMunis!.contains(c.municipality)).toList();
+          all.where((c) => c.municipality == municipality).toList();
       if (matched.isNotEmpty) {
         cams = matched;
-        note = '警報が発表されている市区町村のカメラのみ表示しています';
-      } else if (_muniLookupFailed || _warningMunis!.isEmpty) {
-        note = '発表エリアの詳細を取得できなかったため、都道府県内の全カメラを表示しています';
       } else {
-        note = '発表中の市区町村に該当するカメラがないため、都道府県内の全カメラを表示しています';
+        note = 'この市区町村に対応するカメラがないため、都道府県内の全カメラを表示しています';
       }
     }
-
     return Scaffold(
       appBar: AppBar(
-          title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+          title: Text(title, overflow: TextOverflow.ellipsis)),
       body: cams.isEmpty
           ? const Center(child: Text('この都道府県のカメラがありません'))
           : ListView.builder(
