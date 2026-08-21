@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T10:55:41Z",
+ "version": "2026-08-21T10:58:21Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -16595,6 +16595,538 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-hamamatsu-cm01-02",
+   "name": "安間川 若草橋",
+   "name_kana": null,
+   "lat": 34.7419,
+   "lng": 137.7758,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm01_02/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_01.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_01.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm02-03",
+   "name": "馬込川 白竜橋",
+   "name_kana": null,
+   "lat": 34.6927,
+   "lng": 137.7378,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm02_03/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_02.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_02.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm03-01",
+   "name": "新川 四郎五郎橋",
+   "name_kana": null,
+   "lat": 34.6972,
+   "lng": 137.7344,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm03_01/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_03.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_03.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm05-01",
+   "name": "高塚川 枇杷橋",
+   "name_kana": null,
+   "lat": 34.6856,
+   "lng": 137.6876,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm05_01/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_04.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_04.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm05-02",
+   "name": "高塚川 新津橋",
+   "name_kana": null,
+   "lat": 34.6842,
+   "lng": 137.7124,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm05_02/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_05.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_05.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm06-01",
+   "name": "堀留川 堀留橋",
+   "name_kana": null,
+   "lat": 34.6957,
+   "lng": 137.7011,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm06_01/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_06.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_06.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm06-02",
+   "name": "堀留川 鴨江排水路",
+   "name_kana": null,
+   "lat": 34.7045,
+   "lng": 137.7086,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm06_02/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_08.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_08.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm06-04",
+   "name": "堀留川 阿津ま橋",
+   "name_kana": null,
+   "lat": 34.6955,
+   "lng": 137.6988,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm06_04/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_09.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_09.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm07-01",
+   "name": "堀留運河 第一堀留橋",
+   "name_kana": null,
+   "lat": 34.6962,
+   "lng": 137.7169,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm07_01/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_07.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_07.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm13-02",
+   "name": "二俣川 二光橋（二俣川）",
+   "name_kana": null,
+   "lat": 34.8654,
+   "lng": 137.8169,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm13_02/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_14.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_14.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm15-01",
+   "name": "九領川 下山田橋",
+   "name_kana": null,
+   "lat": 34.7,
+   "lng": 137.6461,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm15_01/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_10.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_10.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm16-01",
+   "name": "曳馬川 小出橋",
+   "name_kana": null,
+   "lat": 34.7249,
+   "lng": 137.7418,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm16_01/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_11.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_11.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm19-01",
+   "name": "（普）本沢合16号排水路",
+   "name_kana": null,
+   "lat": 34.8087,
+   "lng": 137.7998,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm19_01/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_12.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_12.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hamamatsu-cm20-01",
+   "name": "旧二俣川 二光橋",
+   "name_kana": null,
+   "lat": 34.8667,
+   "lng": 137.8163,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hamamatsu-dobokubousai.net/cm/cm20_01/cam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hamamatsu-dobokubousai.net/camera_13.php"
+   },
+   "operator": "浜松市",
+   "source": {
+    "page_url": "https://www.hamamatsu-dobokubousai.net/camera_13.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-hirosaki-castle-tower",
    "name": "弘前市(弘前城天守)",
    "name_kana": null,
@@ -18267,6 +18799,272 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kawasaki-kyoku1",
+   "name": "河港水門",
+   "name_kana": null,
+   "lat": 35.5362,
+   "lng": 139.7169,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku1/image/genzai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kawasakicity.secure.tenki-info.com/"
+   },
+   "operator": "川崎市",
+   "source": {
+    "page_url": "https://kawasakicity.secure.tenki-info.com/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：川崎市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kawasaki-kyoku2",
+   "name": "東久地橋",
+   "name_kana": null,
+   "lat": 35.6106,
+   "lng": 139.6154,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku2/image/genzai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kawasakicity.secure.tenki-info.com/"
+   },
+   "operator": "川崎市",
+   "source": {
+    "page_url": "https://kawasakicity.secure.tenki-info.com/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：川崎市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kawasaki-kyoku3",
+   "name": "二ケ領本川合流点下流",
+   "name_kana": null,
+   "lat": 35.6071,
+   "lng": 139.6064,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku3/image/genzai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kawasakicity.secure.tenki-info.com/"
+   },
+   "operator": "川崎市",
+   "source": {
+    "page_url": "https://kawasakicity.secure.tenki-info.com/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：川崎市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kawasaki-kyoku4",
+   "name": "大丸用水樋門",
+   "name_kana": null,
+   "lat": 35.6349,
+   "lng": 139.5424,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku4/image/genzai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kawasakicity.secure.tenki-info.com/"
+   },
+   "operator": "川崎市",
+   "source": {
+    "page_url": "https://kawasakicity.secure.tenki-info.com/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：川崎市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kawasaki-kyoku5",
+   "name": "大丸用水(多摩8号橋)",
+   "name_kana": null,
+   "lat": 35.6349,
+   "lng": 139.5424,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku5/image/genzai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kawasakicity.secure.tenki-info.com/"
+   },
+   "operator": "川崎市",
+   "source": {
+    "page_url": "https://kawasakicity.secure.tenki-info.com/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：川崎市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kawasaki-kyoku6",
+   "name": "水路",
+   "name_kana": null,
+   "lat": 35.6349,
+   "lng": 139.5424,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku6/image/genzai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kawasakicity.secure.tenki-info.com/"
+   },
+   "operator": "川崎市",
+   "source": {
+    "page_url": "https://kawasakicity.secure.tenki-info.com/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：川崎市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kawasaki-kyoku7",
+   "name": "新布田橋",
+   "name_kana": null,
+   "lat": 35.6349,
+   "lng": 139.5424,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku7/image/genzai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kawasakicity.secure.tenki-info.com/"
+   },
+   "operator": "川崎市",
+   "source": {
+    "page_url": "https://kawasakicity.secure.tenki-info.com/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：川崎市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-kumamoto-hikawa-dam-spillway",
    "name": "氷川ダム カメラ4",
    "name_kana": null,
@@ -18761,6 +19559,196 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kyoto-arisu",
+   "name": "有栖川",
+   "name_kana": null,
+   "lat": 35.001,
+   "lng": 135.7045,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "26",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://hce.hanshin.co.jp/weathercam/upload/arisu-01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://hce.hanshin.co.jp/weathercam/"
+   },
+   "operator": "京都市（阪神ケーブルエンジニアリングに委託）",
+   "source": {
+    "page_url": "http://hce.hanshin.co.jp/weathercam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都市（阪神ケーブルエンジニアリングに委託）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kyoto-gojo",
+   "name": "鴨川・五条大橋",
+   "name_kana": null,
+   "lat": 34.9957,
+   "lng": 135.7679,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "26",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://hce.hanshin.co.jp/weathercam/upload/gojo-01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://hce.hanshin.co.jp/weathercam/"
+   },
+   "operator": "京都市（阪神ケーブルエンジニアリングに委託）",
+   "source": {
+    "page_url": "http://hce.hanshin.co.jp/weathercam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都市（阪神ケーブルエンジニアリングに委託）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kyoto-sanjo",
+   "name": "鴨川・三条大橋",
+   "name_kana": null,
+   "lat": 35.009,
+   "lng": 135.7717,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "26",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://hce.hanshin.co.jp/weathercam/upload/sanjo-01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://hce.hanshin.co.jp/weathercam/"
+   },
+   "operator": "京都市（阪神ケーブルエンジニアリングに委託）",
+   "source": {
+    "page_url": "http://hce.hanshin.co.jp/weathercam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都市（阪神ケーブルエンジニアリングに委託）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kyoto-shirakawa-zoo",
+   "name": "白川・動物園前",
+   "name_kana": null,
+   "lat": 35.0137,
+   "lng": 135.784,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "26",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://hce.hanshin.co.jp/weathercam/upload/shirakawa_zoo-01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://hce.hanshin.co.jp/weathercam/"
+   },
+   "operator": "京都市（阪神ケーブルエンジニアリングに委託）",
+   "source": {
+    "page_url": "http://hce.hanshin.co.jp/weathercam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都市（阪神ケーブルエンジニアリングに委託）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kyoto-tenjin",
+   "name": "天神川",
+   "name_kana": null,
+   "lat": 35.0109,
+   "lng": 135.7168,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "26",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://hce.hanshin.co.jp/weathercam/upload/tenjin-01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://hce.hanshin.co.jp/weathercam/"
+   },
+   "operator": "京都市（阪神ケーブルエンジニアリングに委託）",
+   "source": {
+    "page_url": "http://hce.hanshin.co.jp/weathercam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都市（阪神ケーブルエンジニアリングに委託）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-makinoto-pass",
    "name": "牧ノ戸峠（くじゅう連山）",
    "name_kana": null,
@@ -18865,6 +19853,310 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：開田高原観光協会(木曽町)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-osaka-kasen01",
+   "name": "住吉川（住吉川水門東）",
+   "name_kana": null,
+   "lat": 34.6132,
+   "lng": 135.4811,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.osaka-city-kasen.jp/Camera/01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.osaka-city-kasen.jp/"
+   },
+   "operator": "大阪市",
+   "source": {
+    "page_url": "http://www.osaka-city-kasen.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大阪市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-osaka-kasen04",
+   "name": "道頓堀川",
+   "name_kana": null,
+   "lat": 34.6692,
+   "lng": 135.4825,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.osaka-city-kasen.jp/Camera/04.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.osaka-city-kasen.jp/"
+   },
+   "operator": "大阪市",
+   "source": {
+    "page_url": "http://www.osaka-city-kasen.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大阪市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-osaka-kasen05",
+   "name": "東横堀川",
+   "name_kana": null,
+   "lat": 34.6891,
+   "lng": 135.5094,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.osaka-city-kasen.jp/Camera/05.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.osaka-city-kasen.jp/"
+   },
+   "operator": "大阪市",
+   "source": {
+    "page_url": "http://www.osaka-city-kasen.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大阪市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-osaka-kasen06",
+   "name": "空港放水路",
+   "name_kana": null,
+   "lat": 34.6081,
+   "lng": 135.5858,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.osaka-city-kasen.jp/Camera/06.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.osaka-city-kasen.jp/"
+   },
+   "operator": "大阪市",
+   "source": {
+    "page_url": "http://www.osaka-city-kasen.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大阪市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-osaka-kasen07",
+   "name": "今川",
+   "name_kana": null,
+   "lat": 34.6108,
+   "lng": 135.5396,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.osaka-city-kasen.jp/Camera/07.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.osaka-city-kasen.jp/"
+   },
+   "operator": "大阪市",
+   "source": {
+    "page_url": "http://www.osaka-city-kasen.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大阪市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-osaka-kasen09",
+   "name": "駒川",
+   "name_kana": null,
+   "lat": 34.6216,
+   "lng": 135.5301,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.osaka-city-kasen.jp/Camera/09.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.osaka-city-kasen.jp/"
+   },
+   "operator": "大阪市",
+   "source": {
+    "page_url": "http://www.osaka-city-kasen.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大阪市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-osaka-kasen10",
+   "name": "加美巽川",
+   "name_kana": null,
+   "lat": 34.6513,
+   "lng": 135.5491,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.osaka-city-kasen.jp/Camera/10.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.osaka-city-kasen.jp/"
+   },
+   "operator": "大阪市",
+   "source": {
+    "page_url": "http://www.osaka-city-kasen.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大阪市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-osaka-kasen11",
+   "name": "長瀬川",
+   "name_kana": null,
+   "lat": 34.6868,
+   "lng": 135.5638,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.osaka-city-kasen.jp/Camera/11.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.osaka-city-kasen.jp/"
+   },
+   "operator": "大阪市",
+   "source": {
+    "page_url": "http://www.osaka-city-kasen.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大阪市"
    },
    "review": {
     "status": "approved",
