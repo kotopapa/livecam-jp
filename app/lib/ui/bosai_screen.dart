@@ -614,6 +614,12 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                     );
                   }
                   final (muni, name, warns) = _munis![i - 1];
+                  final camCount = widget.app.repository
+                      .displayableCameras()
+                      .where((c) =>
+                          c.prefecture == widget.pref &&
+                          c.municipality == muni)
+                      .length;
                   final emergency = warns.any((w) => w.contains('特別'));
                   Color chipColor(String w) => w.contains('特別')
                       ? const Color(0xFFD93025)
@@ -629,7 +635,20 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                           ? const Color(0xFFD93025)
                           : const Color(0xFFF29900),
                     ),
-                    title: Text(name),
+                    title: Row(children: [
+                      Flexible(
+                          child: Text(name,
+                              overflow: TextOverflow.ellipsis)),
+                      const SizedBox(width: 6),
+                      Text(
+                        camCount > 0 ? 'カメラ$camCount台' : 'カメラなし',
+                        style: TextStyle(
+                            fontSize: 12,
+                            color: camCount > 0
+                                ? Colors.grey[700]
+                                : Colors.grey[500]),
+                      ),
+                    ]),
                     subtitle: Wrap(spacing: 4, runSpacing: 2, children: [
                       for (final w in warns)
                         Container(
