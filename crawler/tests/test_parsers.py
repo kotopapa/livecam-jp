@@ -459,3 +459,33 @@ def test_camidx_latest_resolver():
                    "546718/546718_20260821194000.jpg")
     assert at == "2026-08-21T19:40:00+09:00"
     assert resolve_camidx_url("x_latest.idx", "no ts") is None
+
+
+def test_saitama_flood_parser():
+    import json as _json
+    from crawler.sources.saitama_flood import (SaitamaFloodParser,
+                                               resolve_image_urls)
+    resolved = resolve_image_urls('{"001": "2026-08-21 19:50:00"}')
+    assert resolved["001"][0] == ("https://www.flood-info.city.saitama.jp/"
+                                  "camera/001/20260821/202608211950.jpg")
+    assert resolved["001"][1] == "2026-08-21T19:50:00+09:00"
+
+    place = _json.dumps([
+        {"place_no": 1, "name": "滝沼川（排水機場）", "address": "西区宝来1798",
+         "camera_flg": True, "lat": 35.9189, "lng": 139.5559},
+        {"place_no": 2, "name": "水位のみ", "camera_flg": False,
+         "lat": 35.9, "lng": 139.5},
+    ])
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = place
+            return P()
+    result = SaitamaFloodParser().discover(S())
+    assert len(result.candidates) == 1
+    c = result.candidates[0]
+    assert c.id == "saitama-flood-001" and c.camera_ref == "001"
+    assert validate_camera_record(c.to_record("2026-08-22")) == []

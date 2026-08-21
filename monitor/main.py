@@ -193,6 +193,38 @@ def run(shard: str | None = None) -> int:
             if cam["id"] in ref_by_id:
                 cam["_resolved_image"] = ref_by_id[cam["id"]]
 
+    # 都度解決型feed（saitama_flood）: camera_latest.json 1リクエストで全台解決
+    saitama_cams = [c for c in all_cameras
+                    if c.get("review", {}).get("status") == "approved"
+                    and c["feed"]["type"] == "saitama_flood"]
+    if saitama_cams:
+        from crawler.sources.saitama_flood import resolve_image_urls as st_resolve
+        st_map: dict[str, tuple[str, str]] = {}
+        latest_url = saitama_cams[0]["feed"]["url"]
+        host = urlparse(latest_url).netloc
+        try:
+            throttle.acquire(host)
+            try:
+                resp = session.get(latest_url, timeout=30)
+            finally:
+                throttle.release(host)
+            if resp.status_code == 200:
+                st_map = st_resolve(resp.text)
+        except requests.RequestException as e:
+            print(f"saitama解決失敗 {latest_url}: {e}", file=sys.stderr)
+        st_by_id = {}
+        for cam in saitama_cams:
+            hit = st_map.get(cam["feed"].get("camera_ref") or "")
+            if hit:
+                cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
+                st_by_id[cam["id"]] = cam["_resolved_image"]
+                st = statuses.get(cam["id"])
+                if st is not None:
+                    st["image_url"], st["image_time"] = hit
+        for cam in cameras:
+            if cam["id"] in st_by_id:
+                cam["_resolved_image"] = st_by_id[cam["id"]]
+
     def work(camera: dict):
         host = monitor_host(camera)
         throttle.acquire(host)

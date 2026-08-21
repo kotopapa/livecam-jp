@@ -159,6 +159,10 @@ sources:
     enabled: true
     note: 福岡市防災気象情報の河川カメラ24台。トップ埋め込みGeoJSONに座標・住所・
           固定URL <cID>/moboImage.jpg。license=unknown
+  - id: saitama_flood
+    enabled: true
+    note: さいたま市水位情報システムの河川カメラ14台。place.jsonが座標つき台帳、
+          camera_latest.jsonで全台の最新画像を1リクエスト解決(都度解決型)
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）

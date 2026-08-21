@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T10:51:44Z",
+ "version": "2026-08-21T10:55:41Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -548779,6 +548779,552 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-001",
+   "name": "滝沼川（排水機場）",
+   "name_kana": null,
+   "lat": 35.9189446,
+   "lng": 139.5558928,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "001"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-002",
+   "name": "滝沼川（堤外水路）",
+   "name_kana": null,
+   "lat": 35.9184596,
+   "lng": 139.5546874,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "002"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-003",
+   "name": "滝沼川第2遊水地",
+   "name_kana": null,
+   "lat": 35.9237373,
+   "lng": 139.570048,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "003"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-004",
+   "name": "新川（最下流点）",
+   "name_kana": null,
+   "lat": 35.8971692,
+   "lng": 139.5943377,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "004"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-005",
+   "name": "芝川(新橋)",
+   "name_kana": null,
+   "lat": 35.9130749,
+   "lng": 139.6463892,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "005"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-007",
+   "name": "上院川（最下流点）",
+   "name_kana": null,
+   "lat": 35.9766504,
+   "lng": 139.7245403,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "007"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-008",
+   "name": "徳力調節池",
+   "name_kana": null,
+   "lat": 35.9755503,
+   "lng": 139.7180002,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "008"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-009",
+   "name": "東宮下調節池",
+   "name_kana": null,
+   "lat": 35.9338454,
+   "lng": 139.682287,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "009"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-010",
+   "name": "皇山川（最下流点）",
+   "name_kana": null,
+   "lat": 35.8937391,
+   "lng": 139.6557359,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "010"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-011",
+   "name": "芝川（皇山川合流点）",
+   "name_kana": null,
+   "lat": 35.8939598,
+   "lng": 139.6562902,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "011"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-013",
+   "name": "荒川左岸排水路",
+   "name_kana": null,
+   "lat": 35.8319845,
+   "lng": 139.6315585,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "013"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-034",
+   "name": "本郷町（中島雨水幹線）",
+   "name_kana": null,
+   "lat": 35.9489495,
+   "lng": 139.6290931,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "034"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-036",
+   "name": "東岩槻6丁目（東岩槻1号雨水幹線）",
+   "name_kana": null,
+   "lat": 35.9627781,
+   "lng": 139.7165417,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "036"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saitama-flood-051",
+   "name": "油面川（排水機場）",
+   "name_kana": null,
+   "lat": 35.8496268,
+   "lng": 139.6141261,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11100",
+   "river_or_route": null,
+   "feed": {
+    "type": "saitama_flood",
+    "url": "https://www.flood-info.city.saitama.jp/data/camera_latest.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "051"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.flood-info.city.saitama.jp/"
+   },
+   "operator": "さいたま市",
+   "source": {
+    "page_url": "https://www.flood-info.city.saitama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：さいたま市（水位情報システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=さいたま市 with_coords=True"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
