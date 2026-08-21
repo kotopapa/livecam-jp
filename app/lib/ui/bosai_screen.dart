@@ -75,6 +75,9 @@ class _BosaiScreenState extends State<BosaiScreen> {
   /// 都道府県→警報を発表中の官署コード（市区町村単位の詳細取得に使う）
   Map<String, Set<String>> _warningOffices = {};
 
+  /// 都道府県→注意報を発表中の官署コード
+  Map<String, Set<String>> _advisoryOffices = {};
+
   // 都道府県コード → 発表中の注意報名セット（警報がない県の参考表示）
   Map<String, List<String>>? _advisories;
   String? _warningError;
@@ -112,6 +115,7 @@ class _BosaiScreenState extends State<BosaiScreen> {
       final byPref = <String, Set<String>>{};
       final advByPref = <String, Set<String>>{};
       final officesByPref = <String, Set<String>>{};
+      final advOfficesByPref = <String, Set<String>>{};
       for (final rep in latestByOffice.values) {
         final warning = rep['warning'] as Map<String, dynamic>? ?? const {};
         for (final area in (warning['class10Items'] as List? ?? const [])
@@ -136,6 +140,9 @@ class _BosaiScreenState extends State<BosaiScreen> {
               final adv = _advisoryNames[wc];
               if (adv != null) {
                 advByPref.putIfAbsent(pref, () => {}).add(adv);
+                advOfficesByPref
+                    .putIfAbsent(pref, () => {})
+                    .add('${code.substring(0, 3)}000');
               }
             }
           }
@@ -160,6 +167,7 @@ class _BosaiScreenState extends State<BosaiScreen> {
           _warnings = result;
           _advisories = advResult;
           _warningOffices = officesByPref;
+          _advisoryOffices = advOfficesByPref;
         });
       }
     } catch (e) {
@@ -409,10 +417,12 @@ class _BosaiScreenState extends State<BosaiScreen> {
                   subtitle: Text(_advisories![pref]!.join('・'),
                       style: const TextStyle(fontSize: 12)),
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => PrefCamerasScreen(
+                      builder: (_) => WarningMuniListScreen(
                           app: widget.app,
                           pref: pref,
-                          title: '${prefectureNames[pref] ?? pref}のカメラ'))),
+                          title: '${prefectureNames[pref] ?? pref}の注意報発表地域',
+                          offices: _advisoryOffices[pref] ?? const {},
+                          codeNames: _advisoryNames))),
                 ),
             ],
           );
@@ -469,12 +479,16 @@ class WarningMuniListScreen extends StatefulWidget {
       required this.app,
       required this.pref,
       required this.title,
-      required this.offices});
+      required this.offices,
+      this.codeNames = _warningNames});
 
   final AppState app;
   final String pref;
   final String title;
   final Set<String> offices;
+
+  /// 対象コード→表示名（警報 or 注意報。既定は警報）
+  final Map<String, String> codeNames;
 
   @override
   State<WarningMuniListScreen> createState() => _WarningMuniListScreenState();
@@ -543,7 +557,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
               .cast<Map<String, dynamic>>()) {
             final status = w['status'] as String? ?? '';
             if (status == '解除' || status.contains('なし')) continue;
-            final wname = _warningNames[w['code'] as String? ?? ''];
+            final wname = widget.codeNames[w['code'] as String? ?? ''];
             if (wname == null) continue;
             final muni = code.substring(0, 5);
             final entry = byMuni[muni] ??
@@ -583,7 +597,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                   child: Text(
                       _failed
                           ? '発表エリアの詳細を取得できませんでした'
-                          : '現在、警報が発表されている市区町村はありません',
+                          : '現在、発表中の市区町村はありません',
                       textAlign: TextAlign.center),
                 ),
               )
@@ -601,6 +615,11 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                   }
                   final (muni, name, warns) = _munis![i - 1];
                   final emergency = warns.any((w) => w.contains('特別'));
+                  Color chipColor(String w) => w.contains('特別')
+                      ? const Color(0xFFD93025)
+                      : w.contains('注意報')
+                          ? const Color(0xFFF9A825)
+                          : const Color(0xFFF29900);
                   return ListTile(
                     leading: Icon(
                       emergency
@@ -617,9 +636,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 6, vertical: 1),
                           decoration: BoxDecoration(
-                            color: w.contains('特別')
-                                ? const Color(0xFFD93025)
-                                : const Color(0xFFF29900),
+                            color: chipColor(w),
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(w,
