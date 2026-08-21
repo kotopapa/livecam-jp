@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T11:26:44Z",
+ "version": "2026-08-21T11:28:39Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -19673,6 +19673,82 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kyoto-kosha-daishiyama",
+   "name": "大師山トンネル（野田川大宮道路）",
+   "name_kana": null,
+   "lat": 35.5468,
+   "lng": 135.1517,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "26",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kyo-doko.sakura.ne.jp/livecamera/daishiyamatnkyoutango.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kyo-miti.jp/livecameraNew/"
+   },
+   "operator": "京都府道路公社",
+   "source": {
+    "page_url": "https://www.kyo-miti.jp/livecameraNew/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都府道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kyoto-kosha-kamimiyazu",
+   "name": "上宮津橋（宮津与謝道路）",
+   "name_kana": null,
+   "lat": 35.5107,
+   "lng": 135.1846,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "26",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kyo-doko.sakura.ne.jp/livecamera/kamimiyazubrkyoutango.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kyo-miti.jp/livecameraNew/"
+   },
+   "operator": "京都府道路公社",
+   "source": {
+    "page_url": "https://www.kyo-miti.jp/livecameraNew/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都府道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-kyoto-sanjo",
    "name": "鴨川・三条大橋",
    "name_kana": null,
@@ -20803,6 +20879,82 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shizuoka-kosha-hamayu",
+   "name": "浜名湖新橋（はまゆう大橋）",
+   "name_kana": null,
+   "lat": 34.7312,
+   "lng": 137.6235,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.siz-road.or.jp/img/camera_pic3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.siz-road.or.jp/"
+   },
+   "operator": "静岡県道路公社",
+   "source": {
+    "page_url": "https://camera.siz-road.or.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：静岡県道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shizuoka-kosha-izu-skyline",
+   "name": "伊豆スカイライン（熱海峠料金所）",
+   "name_kana": null,
+   "lat": 35.1189,
+   "lng": 139.041,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.siz-road.or.jp/img/camera_pic1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.siz-road.or.jp/"
+   },
+   "operator": "静岡県道路公社",
+   "source": {
+    "page_url": "https://camera.siz-road.or.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：静岡県道路公社"
    },
    "review": {
     "status": "approved",

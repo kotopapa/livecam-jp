@@ -2721,3 +2721,45 @@ cameras:
     image_url: "http://kasen.pref.iwate.jp/camera/iwate/area11_cam120_20260821195225.jpg"
     page_url: "http://kasen.pref.iwate.jp/iwate/servlet/Gamen44Servlet?param=area=7"
     note: "綾里川"
+
+  # --- 2026-08-22 道路公社(静岡・京都) ---
+
+  - id: curated-still-shizuoka-kosha-izu-skyline
+    name: "伊豆スカイライン（熱海峠料金所）"
+    operator: "静岡県道路公社"
+    category: road
+    prefecture: "22"
+    lat: 35.1189
+    lng: 139.041
+    image_url: "https://camera.siz-road.or.jp/img/camera_pic1.jpg"
+    page_url: "https://camera.siz-road.or.jp/"
+
+  - id: curated-still-shizuoka-kosha-hamayu
+    name: "浜名湖新橋（はまゆう大橋）"
+    operator: "静岡県道路公社"
+    category: road
+    prefecture: "22"
+    lat: 34.7312
+    lng: 137.6235
+    image_url: "https://camera.siz-road.or.jp/img/camera_pic3.jpg"
+    page_url: "https://camera.siz-road.or.jp/"
+
+  - id: curated-still-kyoto-kosha-daishiyama
+    name: "大師山トンネル（野田川大宮道路）"
+    operator: "京都府道路公社"
+    category: road
+    prefecture: "26"
+    lat: 35.5468
+    lng: 135.1517
+    image_url: "https://kyo-doko.sakura.ne.jp/livecamera/daishiyamatnkyoutango.jpg"
+    page_url: "https://www.kyo-miti.jp/livecameraNew/"
+
+  - id: curated-still-kyoto-kosha-kamimiyazu
+    name: "上宮津橋（宮津与謝道路）"
+    operator: "京都府道路公社"
+    category: road
+    prefecture: "26"
+    lat: 35.5107
+    lng: 135.1846
+    image_url: "https://kyo-doko.sakura.ne.jp/livecamera/kamimiyazubrkyoutango.jpg"
+    page_url: "https://www.kyo-miti.jp/livecameraNew/"
