@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T10:16:51Z",
+ "version": "2026-08-21T10:27:26Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -16633,6 +16633,690 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-hkd-dam-biratori",
+   "name": "平取ダム",
+   "name_kana": null,
+   "lat": 42.6803,
+   "lng": 142.3864,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/biratori_dam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_biratori_dam.htm"
+   },
+   "operator": "国土交通省北海道開発局(室蘭開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_biratori_dam.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(室蘭開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-chubetsu",
+   "name": "忠別ダム",
+   "name_kana": null,
+   "lat": 43.6272,
+   "lng": 142.6294,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/chubetsu.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_chubetsu.htm"
+   },
+   "operator": "国土交通省北海道開発局(旭川開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_chubetsu.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(旭川開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-houheikyou",
+   "name": "豊平峡ダム",
+   "name_kana": null,
+   "lat": 42.9158,
+   "lng": 141.1536,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/houheikyou.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_houheikyou.htm"
+   },
+   "operator": "国土交通省北海道開発局(札幌開発建設部 豊平川ダム統合管理事務所)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_houheikyou.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(札幌開発建設部 豊平川ダム統合管理事務所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-iwaonai",
+   "name": "岩尾内ダム",
+   "name_kana": null,
+   "lat": 44.1153,
+   "lng": 142.7072,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/iwaonai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_iwaonai.htm"
+   },
+   "operator": "国土交通省北海道開発局(旭川開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_iwaonai.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(旭川開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-izarigawa",
+   "name": "漁川ダム",
+   "name_kana": null,
+   "lat": 42.8456,
+   "lng": 141.4481,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/izarigawa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_izarigawa.htm"
+   },
+   "operator": "国土交通省北海道開発局(札幌開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_izarigawa.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(札幌開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-jyouzankei",
+   "name": "定山渓ダム",
+   "name_kana": null,
+   "lat": 42.9847,
+   "lng": 141.1575,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/jyouzankei.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_jyouzankei.htm"
+   },
+   "operator": "国土交通省北海道開発局(札幌開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_jyouzankei.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(札幌開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-kanayama",
+   "name": "金山ダム",
+   "name_kana": null,
+   "lat": 43.1297,
+   "lng": 142.4431,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/kanayama.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_kanayama.htm"
+   },
+   "operator": "国土交通省北海道開発局(札幌開発建設部 金山ダム管理支所)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_kanayama.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(札幌開発建設部 金山ダム管理支所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-kanoko",
+   "name": "鹿ノ子ダム",
+   "name_kana": null,
+   "lat": 43.6072,
+   "lng": 143.3878,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/kanoko.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_kanoko.htm"
+   },
+   "operator": "国土交通省北海道開発局(網走開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_kanoko.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(網走開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-katsurazawa",
+   "name": "新桂沢ダム",
+   "name_kana": null,
+   "lat": 43.2397,
+   "lng": 142.0025,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/katsurazawa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_katsurazawa.htm"
+   },
+   "operator": "国土交通省北海道開発局(札幌開発建設部 新桂沢ダム管理支所)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_katsurazawa.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(札幌開発建設部 新桂沢ダム管理支所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-nibutani",
+   "name": "二風谷ダム",
+   "name_kana": null,
+   "lat": 42.6292,
+   "lng": 142.1484,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/nibutani.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_nibutani.htm"
+   },
+   "operator": "国土交通省北海道開発局(室蘭開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_nibutani.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(室蘭開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-pirika",
+   "name": "美利河ダム",
+   "name_kana": null,
+   "lat": 42.4717,
+   "lng": 140.1967,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/pirika.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_pirika.htm"
+   },
+   "operator": "国土交通省北海道開発局(函館開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_pirika.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(函館開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-rumoi",
+   "name": "留萌ダム",
+   "name_kana": null,
+   "lat": 43.8339,
+   "lng": 141.7614,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/rumoi.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_rumoi.htm"
+   },
+   "operator": "国土交通省北海道開発局(留萌開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_rumoi.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(留萌開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-sanru",
+   "name": "サンルダム",
+   "name_kana": null,
+   "lat": 44.3306,
+   "lng": 142.6375,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/sanru.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_sanru.htm"
+   },
+   "operator": "国土交通省北海道開発局(旭川開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_sanru.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(旭川開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-satsunaigawa",
+   "name": "札内川ダム",
+   "name_kana": null,
+   "lat": 42.5883,
+   "lng": 142.9228,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/satsunaigawa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_satsunaigawa.htm"
+   },
+   "operator": "国土交通省北海道開発局(帯広開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_satsunaigawa.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(帯広開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-taisetsu",
+   "name": "大雪ダム",
+   "name_kana": null,
+   "lat": 43.6764,
+   "lng": 143.0367,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/taisetsu.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_taisetsu.htm"
+   },
+   "operator": "国土交通省北海道開発局(旭川開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_taisetsu.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(旭川開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-takisato",
+   "name": "滝里ダム",
+   "name_kana": null,
+   "lat": 43.4436,
+   "lng": 142.2881,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/takisato.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_takisato.htm"
+   },
+   "operator": "国土交通省北海道開発局(札幌開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_takisato.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(札幌開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-tokachi",
+   "name": "十勝ダム",
+   "name_kana": null,
+   "lat": 43.2403,
+   "lng": 142.9389,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/tokachi.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_tokachi.htm"
+   },
+   "operator": "国土交通省北海道開発局(帯広開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_tokachi.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(帯広開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hkd-dam-yuubari-shupparo",
+   "name": "夕張シューパロダム",
+   "name_kana": null,
+   "lat": 43.0233,
+   "lng": 142.0992,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/yuubari.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_yuubari.htm"
+   },
+   "operator": "国土交通省北海道開発局(札幌開発建設部)",
+   "source": {
+    "page_url": "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_yuubari.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北海道開発局(札幌開発建設部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-ioworld-kagoshima-kuroshio",
    "name": "いおワールドかごしま水族館 黒潮大水槽",
    "name_kana": null,
@@ -17193,6 +17877,310 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：海上保安庁(第十管区海上保安本部 宮崎海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kagoshima-dam-kawabe-downstream",
+   "name": "川辺ダム(ダム下流)",
+   "name_kana": null,
+   "lat": 31.445,
+   "lng": 130.4456,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=186",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県土木部(南薩地域振興局建設部河川港湾課)",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県土木部(南薩地域振興局建設部河川港湾課)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kagoshima-dam-kawabe-iwaya-park",
+   "name": "川辺ダム(岩屋公園)",
+   "name_kana": null,
+   "lat": 31.445,
+   "lng": 130.4456,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=187",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県土木部(南薩地域振興局建設部河川港湾課)",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県土木部(南薩地域振興局建設部河川港湾課)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kagoshima-dam-kawabe-office",
+   "name": "川辺ダム(ダム管理所)",
+   "name_kana": null,
+   "lat": 31.445,
+   "lng": 130.4456,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=185",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県土木部(南薩地域振興局建設部河川港湾課)",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県土木部(南薩地域振興局建設部河川港湾課)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kagoshima-dam-nishinotani-downstream",
+   "name": "西之谷ダム(ダム下流)",
+   "name_kana": null,
+   "lat": 31.6014,
+   "lng": 130.5025,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=182",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kagoshima-dam-nishinotani-office",
+   "name": "西之谷ダム(ダム管理所)",
+   "name_kana": null,
+   "lat": 31.6014,
+   "lng": 130.5025,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=181",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kagoshima-dam-nishinotani-park",
+   "name": "西之谷ダム(上流公園)",
+   "name_kana": null,
+   "lat": 31.6014,
+   "lng": 130.5025,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=183",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kagoshima-dam-yamato-downstream",
+   "name": "大和ダム(ダム下流)",
+   "name_kana": null,
+   "lat": 28.3428,
+   "lng": 129.3867,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=190",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県土木部(大島支庁土木課)",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県土木部(大島支庁土木課)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kagoshima-dam-yamato-office",
+   "name": "大和ダム(ダム管理所)",
+   "name_kana": null,
+   "lat": 28.3428,
+   "lng": 129.3867,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=189",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県土木部(大島支庁土木課)",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県土木部(大島支庁土木課)"
    },
    "review": {
     "status": "approved",
@@ -30761,6 +31749,918 @@
    },
    "first_seen": "2026-08-19",
    "last_updated": "2026-08-19"
+  },
+  {
+   "id": "fukuoka-city-c001",
+   "name": "二又瀬橋",
+   "name_kana": null,
+   "lat": 33.60724,
+   "lng": 130.4371,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c001/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c002",
+   "name": "稲荷橋",
+   "name_kana": null,
+   "lat": 33.58242,
+   "lng": 130.4105,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c002/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c003",
+   "name": "原田橋",
+   "name_kana": null,
+   "lat": 33.62078,
+   "lng": 130.435,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c003/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c004",
+   "name": "那珂下原橋",
+   "name_kana": null,
+   "lat": 33.56912,
+   "lng": 130.4427,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c004/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c005",
+   "name": "綿打橋",
+   "name_kana": null,
+   "lat": 33.61745,
+   "lng": 130.4313,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c005/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c006",
+   "name": "東光橋",
+   "name_kana": null,
+   "lat": 33.59335,
+   "lng": 130.4233,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c006/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c007",
+   "name": "那珂大橋",
+   "name_kana": null,
+   "lat": 33.57325,
+   "lng": 130.4394,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c007/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c010",
+   "name": "大原橋",
+   "name_kana": null,
+   "lat": 33.57003,
+   "lng": 130.3378,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c010/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c011",
+   "name": "太郎丸橋",
+   "name_kana": null,
+   "lat": 33.58374,
+   "lng": 130.2389,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c011/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c013",
+   "name": "田島橋",
+   "name_kana": null,
+   "lat": 33.56755,
+   "lng": 130.3755,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c013/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c014",
+   "name": "橋本橋",
+   "name_kana": null,
+   "lat": 33.55863,
+   "lng": 130.3262,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c014/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c015",
+   "name": "多々良橋",
+   "name_kana": null,
+   "lat": 33.62919,
+   "lng": 130.4531,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c015/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c016",
+   "name": "津屋本町橋",
+   "name_kana": null,
+   "lat": 33.61992,
+   "lng": 130.4494,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c016/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c017",
+   "name": "草香江新橋",
+   "name_kana": null,
+   "lat": 33.57946,
+   "lng": 130.3729,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c017/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c018",
+   "name": "樋井川橋",
+   "name_kana": null,
+   "lat": 33.55319,
+   "lng": 130.3861,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c018/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c019",
+   "name": "博多橋",
+   "name_kana": null,
+   "lat": 33.59323,
+   "lng": 130.4086,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c019/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c021",
+   "name": "石釜",
+   "name_kana": null,
+   "lat": 33.48003,
+   "lng": 130.3258,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c021/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c201",
+   "name": "片峰新橋",
+   "name_kana": null,
+   "lat": 33.58707,
+   "lng": 130.4783,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c201/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c202",
+   "name": "筒井橋",
+   "name_kana": null,
+   "lat": 33.53996,
+   "lng": 130.4832,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c202/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c203",
+   "name": "下曰佐",
+   "name_kana": null,
+   "lat": 33.54137,
+   "lng": 130.4307,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c203/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c204",
+   "name": "山王橋",
+   "name_kana": null,
+   "lat": 33.58474,
+   "lng": 130.4325,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c204/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c205",
+   "name": "雨水橋",
+   "name_kana": null,
+   "lat": 33.63075,
+   "lng": 130.4681,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c205/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c207",
+   "name": "隅田橋",
+   "name_kana": null,
+   "lat": 33.56597,
+   "lng": 130.4594,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c207/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "fukuoka-city-c223",
+   "name": "塩原",
+   "name_kana": null,
+   "lat": 33.56649,
+   "lng": 130.4316,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bousai.city.fukuoka.lg.jp/c223/moboImage.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bousai.city.fukuoka.lg.jp/"
+   },
+   "operator": "福岡市",
+   "source": {
+    "page_url": "https://bousai.city.fukuoka.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福岡市（防災気象情報）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=福岡市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "fukushima-road-061",

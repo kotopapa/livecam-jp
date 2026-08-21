@@ -155,6 +155,10 @@ sources:
     enabled: true
     note: 神戸市河川モニタリングカメラ30台。詳細ページのGoogleマップリンクから
           正確な座標。固定URL images/camera/mobile/<NN>.jpg。license=unknown
+  - id: fukuoka_city_river
+    enabled: true
+    note: 福岡市防災気象情報の河川カメラ24台。トップ埋め込みGeoJSONに座標・住所・
+          固定URL <cID>/moboImage.jpg。license=unknown
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）

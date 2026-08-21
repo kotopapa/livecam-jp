@@ -426,3 +426,25 @@ def test_thr_camxml_resolver():
                    "okama/202608211920.jpg")
     assert at == "2026-08-21T19:20:00+09:00"
     assert resolve_image_url("x.xml", "<Camera/>") is None
+
+
+def test_fukuoka_city_river():
+    from crawler.sources.fukuoka_city_river import (FukuokaCityRiverParser,
+                                                    extract_geojson)
+    html = (FIXTURES / "fukuoka_bousai_top.html").read_text(encoding="utf-8")
+    data = extract_geojson(html)
+    assert data and len(data["features"]) == 2
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = html
+            return P()
+    result = FukuokaCityRiverParser().discover(S())
+    assert len(result.candidates) == 1
+    c = result.candidates[0]
+    assert c.id == "fukuoka-city-c205" and c.name == "雨水橋"
+    assert c.lat == 33.63075 and c.feed_url.endswith("c205/moboImage.jpg")
+    assert validate_camera_record(c.to_record("2026-08-22")) == []

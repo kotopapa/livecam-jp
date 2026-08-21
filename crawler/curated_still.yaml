@@ -1137,3 +1137,291 @@ cameras:
     image_url: "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/video/okama.xml"
     page_url: "https://www2.thr.mlit.go.jp/shinjyou/zaou_live/"
     note: 20分間隔のタイムスタンプ画像。monitorがXMLから最新URLを解決
+
+  # --- 2026-08-22 第6弾: 北海道開発局ダム・鹿児島県営ダム ---
+
+  - id: curated-still-hkd-dam-houheikyou
+    name: "豊平峡ダム"
+    operator: "国土交通省北海道開発局(札幌開発建設部 豊平川ダム統合管理事務所)"
+    category: dam
+    prefecture: "01"
+    lat: 42.9158
+    lng: 141.1536
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/houheikyou.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_houheikyou.htm"
+    note: "石狩川水系豊平川"
+
+  - id: curated-still-hkd-dam-jyouzankei
+    name: "定山渓ダム"
+    operator: "国土交通省北海道開発局(札幌開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 42.9847
+    lng: 141.1575
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/jyouzankei.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_jyouzankei.htm"
+    note: "石狩川水系小樽内川"
+
+  - id: curated-still-hkd-dam-izarigawa
+    name: "漁川ダム"
+    operator: "国土交通省北海道開発局(札幌開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 42.8456
+    lng: 141.4481
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/izarigawa.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_izarigawa.htm"
+    note: "石狩川水系漁川"
+
+  - id: curated-still-hkd-dam-yuubari-shupparo
+    name: "夕張シューパロダム"
+    operator: "国土交通省北海道開発局(札幌開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 43.0233
+    lng: 142.0992
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/yuubari.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_yuubari.htm"
+    note: "石狩川水系夕張川"
+
+  - id: curated-still-hkd-dam-katsurazawa
+    name: "新桂沢ダム"
+    operator: "国土交通省北海道開発局(札幌開発建設部 新桂沢ダム管理支所)"
+    category: dam
+    prefecture: "01"
+    lat: 43.2397
+    lng: 142.0025
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/katsurazawa.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_katsurazawa.htm"
+    note: "石狩川水系幾春別川"
+
+  - id: curated-still-hkd-dam-takisato
+    name: "滝里ダム"
+    operator: "国土交通省北海道開発局(札幌開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 43.4436
+    lng: 142.2881
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/takisato.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_takisato.htm"
+    note: "石狩川水系空知川"
+
+  - id: curated-still-hkd-dam-kanayama
+    name: "金山ダム"
+    operator: "国土交通省北海道開発局(札幌開発建設部 金山ダム管理支所)"
+    category: dam
+    prefecture: "01"
+    lat: 43.1297
+    lng: 142.4431
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/kanayama.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_kanayama.htm"
+    note: "石狩川水系空知川"
+
+  - id: curated-still-hkd-dam-taisetsu
+    name: "大雪ダム"
+    operator: "国土交通省北海道開発局(旭川開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 43.6764
+    lng: 143.0367
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/taisetsu.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_taisetsu.htm"
+    note: "石狩川(本川最上流部)"
+
+  - id: curated-still-hkd-dam-chubetsu
+    name: "忠別ダム"
+    operator: "国土交通省北海道開発局(旭川開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 43.6272
+    lng: 142.6294
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/chubetsu.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_chubetsu.htm"
+    note: "石狩川水系忠別川"
+
+  - id: curated-still-hkd-dam-sanru
+    name: "サンルダム"
+    operator: "国土交通省北海道開発局(旭川開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 44.3306
+    lng: 142.6375
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/sanru.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_sanru.htm"
+    note: "天塩川水系サンル川"
+
+  - id: curated-still-hkd-dam-iwaonai
+    name: "岩尾内ダム"
+    operator: "国土交通省北海道開発局(旭川開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 44.1153
+    lng: 142.7072
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/iwaonai.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_iwaonai.htm"
+    note: "天塩川水系天塩川(本流)"
+
+  - id: curated-still-hkd-dam-pirika
+    name: "美利河ダム"
+    operator: "国土交通省北海道開発局(函館開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 42.4717
+    lng: 140.1967
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/pirika.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_pirika.htm"
+    note: "後志利別川水系後志利別川"
+
+  - id: curated-still-hkd-dam-nibutani
+    name: "二風谷ダム"
+    operator: "国土交通省北海道開発局(室蘭開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 42.6292
+    lng: 142.1484
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/nibutani.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_nibutani.htm"
+    note: "沙流川水系沙流川"
+
+  - id: curated-still-hkd-dam-biratori
+    name: "平取ダム"
+    operator: "国土交通省北海道開発局(室蘭開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 42.6803
+    lng: 142.3864
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/biratori_dam.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_biratori_dam.htm"
+    note: "沙流川水系額平川"
+
+  - id: curated-still-hkd-dam-tokachi
+    name: "十勝ダム"
+    operator: "国土交通省北海道開発局(帯広開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 43.2403
+    lng: 142.9389
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/tokachi.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_tokachi.htm"
+    note: "十勝川水系十勝川(本流)"
+
+  - id: curated-still-hkd-dam-satsunaigawa
+    name: "札内川ダム"
+    operator: "国土交通省北海道開発局(帯広開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 42.5883
+    lng: 142.9228
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/satsunaigawa.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_satsunaigawa.htm"
+    note: "十勝川水系札内川"
+
+  - id: curated-still-hkd-dam-kanoko
+    name: "鹿ノ子ダム"
+    operator: "国土交通省北海道開発局(網走開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 43.6072
+    lng: 143.3878
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/kanoko.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_kanoko.htm"
+    note: "常呂川水系常呂川(本流)"
+
+  - id: curated-still-hkd-dam-rumoi
+    name: "留萌ダム"
+    operator: "国土交通省北海道開発局(留萌開発建設部)"
+    category: dam
+    prefecture: "01"
+    lat: 43.8339
+    lng: 141.7614
+    image_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/images/dam/camera/current/rumoi.jpg"
+    page_url: "https://info-dam.hdb.hkd.mlit.go.jp/dam/dam_rumoi.htm"
+    note: "留萌川水系チバベリ川"
+
+  - id: curated-still-kagoshima-dam-nishinotani-office
+    name: "西之谷ダム(ダム管理所)"
+    operator: "鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)"
+    category: dam
+    prefecture: "46"
+    lat: 31.6014
+    lng: 130.5025
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=181"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    note: "新川水系新川"
+
+  - id: curated-still-kagoshima-dam-nishinotani-downstream
+    name: "西之谷ダム(ダム下流)"
+    operator: "鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)"
+    category: dam
+    prefecture: "46"
+    lat: 31.6014
+    lng: 130.5025
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=182"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    note: "新川水系新川"
+
+  - id: curated-still-kagoshima-dam-nishinotani-park
+    name: "西之谷ダム(上流公園)"
+    operator: "鹿児島県土木部(鹿児島地域振興局建設部河川港湾課)"
+    category: dam
+    prefecture: "46"
+    lat: 31.6014
+    lng: 130.5025
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=183"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    note: "新川水系新川"
+
+  - id: curated-still-kagoshima-dam-kawabe-office
+    name: "川辺ダム(ダム管理所)"
+    operator: "鹿児島県土木部(南薩地域振興局建設部河川港湾課)"
+    category: dam
+    prefecture: "46"
+    lat: 31.445
+    lng: 130.4456
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=185"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    note: "万之瀬川(二級河川)"
+
+  - id: curated-still-kagoshima-dam-kawabe-downstream
+    name: "川辺ダム(ダム下流)"
+    operator: "鹿児島県土木部(南薩地域振興局建設部河川港湾課)"
+    category: dam
+    prefecture: "46"
+    lat: 31.445
+    lng: 130.4456
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=186"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    note: "万之瀬川(二級河川)"
+
+  - id: curated-still-kagoshima-dam-kawabe-iwaya-park
+    name: "川辺ダム(岩屋公園)"
+    operator: "鹿児島県土木部(南薩地域振興局建設部河川港湾課)"
+    category: dam
+    prefecture: "46"
+    lat: 31.445
+    lng: 130.4456
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=187"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    note: "万之瀬川(二級河川)"
+
+  - id: curated-still-kagoshima-dam-yamato-office
+    name: "大和ダム(ダム管理所)"
+    operator: "鹿児島県土木部(大島支庁土木課)"
+    category: dam
+    prefecture: "46"
+    lat: 28.3428
+    lng: 129.3867
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=189"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    note: "大和川水系三田川"
+
+  - id: curated-still-kagoshima-dam-yamato-downstream
+    name: "大和ダム(ダム下流)"
+    operator: "鹿児島県土木部(大島支庁土木課)"
+    category: dam
+    prefecture: "46"
+    lat: 28.3428
+    lng: 129.3867
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=190"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    note: "大和川水系三田川"

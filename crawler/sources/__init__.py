@@ -9,6 +9,7 @@ from crawler.sources.curated_youtube import CuratedYoutubeParser
 from crawler.sources.ehime_road import EhimeRoadParser
 from crawler.sources.fukui_road import FukuiRoadParser
 from crawler.sources.fukushima_road import FukushimaRoadParser
+from crawler.sources.fukuoka_city_river import FukuokaCityRiverParser
 from crawler.sources.gifu_road import GifuRoadParser
 from crawler.sources.hiroshima_road import HiroshimaRoadParser
 from crawler.sources.ishikawa_road import IshikawaRoadParser
@@ -43,6 +44,7 @@ REGISTRY = {
         EhimeRoadParser,
         FukuiRoadParser,
         FukushimaRoadParser,
+        FukuokaCityRiverParser,
         GifuRoadParser,
         HiroshimaRoadParser,
         IshikawaRoadParser,
