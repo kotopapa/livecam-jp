@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T11:28:39Z",
+ "version": "2026-08-21T11:45:23Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -547110,6 +547110,348 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "nagano-road-nagano-003",
+   "name": "宝光社",
+   "name_kana": null,
+   "lat": 36.7298,
+   "lng": 138.0783,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/rp003b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/top.html"
+   },
+   "operator": "長野県 長野建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/nagano/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県長野建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-nagano-005",
+   "name": "鬼無里",
+   "name_kana": null,
+   "lat": 36.7242,
+   "lng": 138.0078,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/rp005b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/top.html"
+   },
+   "operator": "長野県 長野建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/nagano/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県長野建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-002",
+   "name": "白樺高原",
+   "name_kana": null,
+   "lat": 36.1202,
+   "lng": 138.2654,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-004",
+   "name": "内山トンネル",
+   "name_kana": null,
+   "lat": 36.2185,
+   "lng": 138.5795,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp004b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-005",
+   "name": "松井トンネル",
+   "name_kana": null,
+   "lat": 36.3345,
+   "lng": 138.4422,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp005b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-ueda-001",
+   "name": "鳥居峠",
+   "name_kana": null,
+   "lat": 36.4904,
+   "lng": 138.3968,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/top.html"
+   },
+   "operator": "長野県 上田建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/ueda/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県上田建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-ueda-003",
+   "name": "笠取峠",
+   "name_kana": null,
+   "lat": 36.258,
+   "lng": 138.2874,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/rp003b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/top.html"
+   },
+   "operator": "長野県 上田建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/ueda/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県上田建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-ueda-004",
+   "name": "菅平",
+   "name_kana": null,
+   "lat": 36.5405,
+   "lng": 138.3222,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/rp004b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/top.html"
+   },
+   "operator": "長野県 上田建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/ueda/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県上田建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-ueda-005",
+   "name": "修那羅峠",
+   "name_kana": null,
+   "lat": 36.4044,
+   "lng": 138.1012,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/rp005b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/top.html"
+   },
+   "operator": "長野県 上田建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/ueda/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県上田建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "niigata-road-akitsu",

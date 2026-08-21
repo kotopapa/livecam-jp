@@ -171,6 +171,10 @@ sources:
     enabled: true
     note: 静岡県土木事務所4系統(熱海9・沼津15・富士8・下田13)。lightbox一覧が台帳。
           固定URL cam_<slug>.jpg。座標なし→ジオコーディング
+  - id: nagano_road
+    enabled: true
+    note: 長野県建設事務所6系統(avis.ne.jp)。rp<ID>b.jpg固定URLをIDプローブで列挙、
+          地点名は詳細CGIから。座標なし→ジオコーディング
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）

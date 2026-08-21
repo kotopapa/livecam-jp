@@ -27,6 +27,7 @@ from crawler.sources.mlit_roadinfo import MlitRoadinfoParser
 from crawler.sources.mlit_ktr_road import MlitKtrRoadParser
 from crawler.sources.mlit_youtube import MlitYoutubeParser
 from crawler.sources.muni_road import MuniRoadParser
+from crawler.sources.nagano_road import NaganoRoadParser
 from crawler.sources.niigata_road import NiigataRoadParser
 from crawler.sources.muni_youtube import MuniYoutubeParser
 from crawler.sources.saga_road import SagaRoadParser
@@ -65,6 +66,7 @@ REGISTRY = {
         MlitRoadinfoParser,
         MlitYoutubeParser,
         MuniRoadParser,
+        NaganoRoadParser,
         NiigataRoadParser,
         MuniYoutubeParser,
         SagaRoadParser,

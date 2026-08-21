@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T11:28:39Z",
+ "version": "2026-08-21T11:45:23Z",
  "cameras": [
   {
    "id": "fukushima-road-051",
@@ -1092,6 +1092,1293 @@
    "verification": null,
    "first_seen": "2026-08-20",
    "last_updated": "2026-08-20"
+  },
+  {
+   "id": "nagano-road-kiso-001",
+   "name": "国道３６１号 権兵衛伊那側",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道３６１号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-002",
+   "name": "国道３６１号 権兵衛木曽側",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道３６１号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-003",
+   "name": "長峰峠",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": "none",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp003b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-004",
+   "name": "神谷入口",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp004b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-005",
+   "name": "神谷",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp005b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-006",
+   "name": "神谷ランプ１",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp006b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-007",
+   "name": "神谷ランプ２",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp007b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-008",
+   "name": "羽渕",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp008b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-nagano-001",
+   "name": "新地蔵峠",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/top.html"
+   },
+   "operator": "長野県 長野建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/nagano/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県長野建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-nagano-002",
+   "name": "古海",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/top.html"
+   },
+   "operator": "長野県 長野建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/nagano/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県長野建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-nagano-004",
+   "name": "小根山",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/rp004b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/top.html"
+   },
+   "operator": "長野県 長野建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/nagano/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県長野建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-001",
+   "name": "大町建設事務所 カメラ1",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-002",
+   "name": "大町建設事務所 カメラ2",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-003",
+   "name": "大町建設事務所 カメラ3",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp003b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-004",
+   "name": "大町建設事務所 カメラ4",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp004b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-005",
+   "name": "大町建設事務所 カメラ5",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp005b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-006",
+   "name": "大町建設事務所 カメラ6",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp006b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-007",
+   "name": "大町建設事務所 カメラ7",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp007b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-008",
+   "name": "大町建設事務所 カメラ8",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp008b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-009",
+   "name": "大町建設事務所 カメラ9",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp009b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-010",
+   "name": "大町建設事務所 カメラ10",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp010b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-011",
+   "name": "大町建設事務所 カメラ11",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp011b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-012",
+   "name": "大町建設事務所 カメラ12",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp012b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-001",
+   "name": "市場坂",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-003",
+   "name": "峰の茶屋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp003b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-006",
+   "name": "佐久建設事務所 カメラ6",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp006b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-008",
+   "name": "佐久建設事務所 カメラ8",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp008b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-009",
+   "name": "佐久建設事務所 カメラ9",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp009b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-suzaka-001",
+   "name": "大島",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/top.html"
+   },
+   "operator": "長野県 須坂建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/suzaka/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県須坂建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-suzaka-002",
+   "name": "仙仁",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/top.html"
+   },
+   "operator": "長野県 須坂建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/suzaka/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県須坂建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-suzaka-003",
+   "name": "日影山",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/rp003b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/top.html"
+   },
+   "operator": "長野県 須坂建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/suzaka/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県須坂建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-ueda-002",
+   "name": "大門峠",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/top.html"
+   },
+   "operator": "長野県 上田建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/ueda/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県上田建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-ueda-006",
+   "name": "湯ノ丸",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/rp006b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/top.html"
+   },
+   "operator": "長野県 上田建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/ueda/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県上田建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "shizuoka-doboku-atami-04-sasajiri",
