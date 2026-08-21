@@ -926,3 +926,35 @@ cameras:
     lng: 140.2317
     image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=6&tm=202608211740&width=320"
     page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
+
+  # --- 2026-08-21 第4弾: 観光地 ---
+
+  - id: curated-still-shima-onsen-toshimaya
+    name: "四万温泉 豊島屋 (四万川)"
+    operator: "豊島屋(四万温泉の旅館、私設)"
+    category: scenic
+    prefecture: "10"
+    lat: 36.6167
+    lng: 138.8167
+    image_url: "https://tosimaya.co.jp/remotecam/01.jpg"
+    page_url: "https://nakanojo-kanko.jp/shima/livacameras/"
+
+  - id: curated-still-izumo-shinmondori
+    name: "出雲大社(神門通り)"
+    operator: "公益社団法人 島根県観光連盟"
+    category: scenic
+    prefecture: "32"
+    lat: 35.4023
+    lng: 132.6853
+    image_url: "https://www.kankou-shimane.com/livecam/sinmon.jpg"
+    page_url: "https://www.kankou-shimane.com/useful/257.html"
+
+  - id: curated-still-biei-zerubu
+    name: "ぜるぶの丘"
+    operator: "ぜるぶの丘(観光農園、私設・アトム農機運営)"
+    category: scenic
+    prefecture: "01"
+    lat: 43.6142
+    lng: 142.4694
+    image_url: "http://zerubu.ddns.net/-wvhttp-01-/image.cgi?v=jpg:1280x720&seq=1"
+    page_url: "http://biei.selfip.com/"

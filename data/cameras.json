@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T09:00:40Z",
+ "version": "2026-08-21T09:06:51Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -2186,6 +2186,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-ito-marinetown",
+   "name": "道の駅 伊東マリンタウン",
+   "name_kana": null,
+   "lat": 34.9694,
+   "lng": 139.1103,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "iONmztl7vOo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=iONmztl7vOo"
+   },
+   "operator": "伊東マリンタウン株式会社(道の駅、第三セクター運営)",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=iONmztl7vOo",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：伊東マリンタウン株式会社(道の駅、第三セクター運営)（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-itsukushima-htv",
    "name": "嚴島神社 大鳥居（広島テレビ）",
    "name_kana": null,
@@ -2813,6 +2851,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-karuizawa-kumobaike",
+   "name": "雲場池",
+   "name_kana": null,
+   "lat": 36.3467,
+   "lng": 138.6172,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "q-81YL3MAZI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=q-81YL3MAZI"
+   },
+   "operator": "軽井沢町(役場情報推進課)",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=q-81YL3MAZI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：軽井沢町(役場情報推進課)（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-karuizawa-kyukaru",
@@ -6035,6 +6111,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-niseko-view-plaza",
+   "name": "道の駅ニセコビュープラザ",
+   "name_kana": null,
+   "lat": 42.8058,
+   "lng": 140.6875,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "44XYJiiPgPY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=44XYJiiPgPY"
+   },
+   "operator": "ニセコリゾート観光協会",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=44XYJiiPgPY",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ニセコリゾート観光協会（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-oab-oita-airport",
    "name": "大分空港",
    "name_kana": null,
@@ -6255,6 +6369,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-onomichi-senkoji",
+   "name": "尾道 千光寺山ロープウェイ公式",
+   "name_kana": null,
+   "lat": 34.409,
+   "lng": 133.2003,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "34",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ju3n3bvYlRw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ju3n3bvYlRw"
+   },
+   "operator": "千光寺山ロープウェイ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ju3n3bvYlRw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：千光寺山ロープウェイ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-osaka-castle-tvo",
@@ -14657,6 +14809,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-biei-zerubu",
+   "name": "ぜるぶの丘",
+   "name_kana": null,
+   "lat": 43.6142,
+   "lng": 142.4694,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://zerubu.ddns.net/-wvhttp-01-/image.cgi?v=jpg:1280x720&seq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://biei.selfip.com/"
+   },
+   "operator": "ぜるぶの丘(観光農園、私設・アトム農機運営)",
+   "source": {
+    "page_url": "http://biei.selfip.com/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ぜるぶの丘(観光農園、私設・アトム農機運営)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-dam-gosho",
    "name": "御所ダム",
    "name_kana": null,
@@ -16443,6 +16633,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-izumo-shinmondori",
+   "name": "出雲大社(神門通り)",
+   "name_kana": null,
+   "lat": 35.4023,
+   "lng": 132.6853,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "32",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kankou-shimane.com/livecam/sinmon.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kankou-shimane.com/useful/257.html"
+   },
+   "operator": "公益社団法人 島根県観光連盟",
+   "source": {
+    "page_url": "https://www.kankou-shimane.com/useful/257.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：公益社団法人 島根県観光連盟"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-jcg-hachijojima-lighthouse-tokyo",
    "name": "八丈島灯台",
    "name_kana": null,
@@ -17231,6 +17459,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shima-onsen-toshimaya",
+   "name": "四万温泉 豊島屋 (四万川)",
+   "name_kana": null,
+   "lat": 36.6167,
+   "lng": 138.8167,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "10",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://tosimaya.co.jp/remotecam/01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://nakanojo-kanko.jp/shima/livacameras/"
+   },
+   "operator": "豊島屋(四万温泉の旅館、私設)",
+   "source": {
+    "page_url": "https://nakanojo-kanko.jp/shima/livacameras/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：豊島屋(四万温泉の旅館、私設)"
    },
    "review": {
     "status": "approved",
@@ -19437,6 +19703,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-zao-juhyo-kogen",
+   "name": "蔵王温泉 樹氷高原駅舎",
+   "name_kana": null,
+   "lat": 38.123,
+   "lng": 140.421,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "rpHUbj-7pR0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=rpHUbj-7pR0"
+   },
+   "operator": "蔵王索道協会",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=rpHUbj-7pR0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：蔵王索道協会（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "ehime-road-1-13",
