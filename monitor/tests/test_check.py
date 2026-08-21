@@ -119,11 +119,33 @@ def test_youtube_playlist_uses_playlist_oembed():
 
 
 def test_youtube_video_not_live_fails():
-    """oEmbed 200でもwatchページがライブ中でなければ失敗(アーカイブ化検知)。"""
+    """48時間より前に始まった配信のアーカイブは死とみなす。"""
     oembed = FakeResponse(200, b'{"title":"x"}')
-    watch = FakeResponse(200, b'ytInitialPlayerResponse {"isLiveNow":false}')
+    watch = FakeResponse(
+        200, b'ytInitialPlayerResponse {"isLiveNow":false,'
+             b'"startTimestamp":"2020-01-01T00:00:00+00:00"}')
     r = check_camera(FakeSession([oembed, watch]), _yt_camera(), {})
     assert r["state"] == "unknown" and r["consecutive_failures"] == 1
+
+
+def test_youtube_video_unplayable_fails():
+    oembed = FakeResponse(200, b'{"title":"x"}')
+    watch = FakeResponse(
+        200, b'ytInitialPlayerResponse "status":"UNPLAYABLE"')
+    r = check_camera(FakeSession([oembed, watch]), _yt_camera(), {})
+    assert r["state"] == "unknown"
+
+
+def test_youtube_video_nightly_pause_stays_ok():
+    """開始が直近(48h以内)の終了済み配信は夜間停止型として生存扱い。"""
+    from datetime import datetime, timedelta, timezone
+    recent = (datetime.now(timezone.utc) - timedelta(hours=5)).isoformat()
+    oembed = FakeResponse(200, b'{"title":"x"}')
+    watch = FakeResponse(
+        200, ('ytInitialPlayerResponse {"isLiveNow":false,'
+              '"startTimestamp":"%s"}' % recent).encode())
+    r = check_camera(FakeSession([oembed, watch]), _yt_camera(), {})
+    assert r["state"] == "ok"
 
 
 def test_youtube_video_live_ok():

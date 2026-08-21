@@ -7,6 +7,7 @@
 
 from __future__ import annotations
 
+import re
 import time
 import urllib.parse
 from datetime import datetime, timezone
@@ -149,6 +150,32 @@ def _check_still(session, camera, state, now, prev_failures, url: str | None = N
     }
 
 
+_YT_START_RE = re.compile(r'"startTimestamp":"([^"]+)"')
+
+
+def _youtube_watch_alive(text: str, now: datetime) -> bool:
+    """watchページからライブカメラとして生きているか判定する。
+
+    - ライブ中/待機枠 → 生存
+    - UNPLAYABLE(「記録はご覧いただけません」等) → 死
+    - 配信終了(アーカイブ化)でも開始が48時間以内 → 夜間・営業時間停止型
+      とみなして生存扱い(深夜チェックでの誤検知防止)。48時間超は死
+    """
+    if ('"isLiveNow":true' in text or '"isLive":true' in text
+            or '"isUpcoming":true' in text):
+        return True
+    if '"status":"UNPLAYABLE"' in text:
+        return False
+    m = _YT_START_RE.search(text)
+    if not m:
+        return False  # ライブ由来でない通常動画
+    try:
+        start = datetime.fromisoformat(m.group(1).replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return (now - start).total_seconds() <= 48 * 3600
+
+
 def _check_youtube(session, camera, state, now, prev_failures) -> dict:
     """oEmbed / チャンネルURLの応答コードで判定する（Data APIは使わない）。
 
@@ -183,10 +210,7 @@ def _check_youtube(session, camera, state, now, prev_failures) -> dict:
                      f"https://www.youtube.com/watch?v={feed['url']}",
                      {"User-Agent": USER_AGENT})
         if watch is not None and "ytInitialPlayerResponse" in watch.text:
-            alive = ('"isLiveNow":true' in watch.text
-                     or '"isLive":true' in watch.text
-                     or '"isUpcoming":true' in watch.text)
-            if not alive:
+            if not _youtube_watch_alive(watch.text, now):
                 return _fail(state, now, prev_failures, resp.status_code)
         # 判定材料が無い応答(同意画面等のシェル)は oEmbed の結果を採用する
     state["consecutive_failures"] = 0
