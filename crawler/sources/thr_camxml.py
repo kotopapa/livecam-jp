@@ -25,3 +25,26 @@ def resolve_image_url(xml_url: str, xml_text: str) -> tuple[str, str] | None:
     iso = (f"{ts[0:4]}-{ts[4:6]}-{ts[6:8]}T{ts[8:10]}:{ts[10:12]}:00+09:00")
     base = xml_url[:-4] if xml_url.endswith(".xml") else xml_url
     return f"{base}/{ts}.jpg", iso
+
+
+IDX_TS_RE = re.compile(r"^(\d{12,14})", re.MULTILINE)
+
+
+def resolve_camidx_url(idx_url: str, idx_text: str) -> tuple[str, str] | None:
+    """camidx_latest型（横浜市水防災など）の解決。
+
+    idxファイルの先頭行が最新タイムスタンプ。画像は
+    <idxと同じディレクトリ>/<カメラID>_<ts>.jpg （IDはidxファイル名の先頭部）。
+    """
+    m = IDX_TS_RE.search(idx_text)
+    if not m:
+        return None
+    ts = m.group(1)
+    directory, fname = idx_url.rsplit("/", 1)
+    cam_id = fname.split("_")[0]
+    if len(ts) >= 12:
+        iso = (f"{ts[0:4]}-{ts[4:6]}-{ts[6:8]}T{ts[8:10]}:{ts[10:12]}:"
+               f"{ts[12:14] if len(ts) >= 14 else '00'}+09:00")
+    else:
+        iso = ""
+    return f"{directory}/{cam_id}_{ts}.jpg", iso

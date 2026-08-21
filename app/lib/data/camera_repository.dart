@@ -96,7 +96,8 @@ class CameraRepository {
   String? imageUrlFor(Camera c) {
     if (c.feed.type == FeedType.mlitRoadinfo ||
         c.feed.type == FeedType.jmaVolcam ||
-        c.feed.type == FeedType.thrCamxml) {
+        c.feed.type == FeedType.thrCamxml ||
+        c.feed.type == FeedType.camidxLatest) {
       return status[c.id]?.imageUrl;
     }
     if (c.feed.type == FeedType.stillImage) return c.feed.url;

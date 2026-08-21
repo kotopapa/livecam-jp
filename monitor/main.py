@@ -157,35 +157,41 @@ def run(shard: str | None = None) -> int:
             if cam["id"] in volcam_by_id:
                 cam["_resolved_image"] = volcam_by_id[cam["id"]]
 
-    # 都度解決型feed（thr_camxml）: 東北地整のCamera XMLから最新画像名を解決する
-    thr_cams = [c for c in all_cameras
+    # 都度解決型feed（thr_camxml / camidx_latest）: 参照ファイルから最新画像名を解決する
+    ref_cams = [c for c in all_cameras
                 if c.get("review", {}).get("status") == "approved"
-                and c["feed"]["type"] == "thr_camxml"]
-    if thr_cams:
-        from crawler.sources.thr_camxml import resolve_image_url as thr_resolve
-        thr_by_id = {}
-        for cam in thr_cams:
-            xml_url = cam["feed"]["url"]
-            host = urlparse(xml_url).netloc
+                and c["feed"]["type"] in ("thr_camxml", "camidx_latest")]
+    if ref_cams:
+        from crawler.sources.thr_camxml import (resolve_camidx_url,
+                                                resolve_image_url as thr_resolve)
+        ref_by_id = {}
+        for cam in ref_cams:
+            ref_url = cam["feed"]["url"]
+            host = urlparse(ref_url).netloc
             try:
                 throttle.acquire(host)
                 try:
-                    resp = session.get(xml_url, timeout=30)
+                    resp = session.get(ref_url, timeout=30)
                 finally:
                     throttle.release(host)
             except requests.RequestException as e:
-                print(f"thr_camxml解決失敗 {xml_url}: {e}", file=sys.stderr)
+                print(f"都度解決失敗 {ref_url}: {e}", file=sys.stderr)
                 continue
-            hit = thr_resolve(xml_url, resp.text) if resp.status_code == 200 else None
+            if resp.status_code != 200:
+                continue
+            if cam["feed"]["type"] == "thr_camxml":
+                hit = thr_resolve(ref_url, resp.text)
+            else:
+                hit = resolve_camidx_url(ref_url, resp.text)
             if hit:
                 cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
-                thr_by_id[cam["id"]] = cam["_resolved_image"]
+                ref_by_id[cam["id"]] = cam["_resolved_image"]
                 st = statuses.get(cam["id"])
                 if st is not None:
                     st["image_url"], st["image_time"] = hit
         for cam in cameras:
-            if cam["id"] in thr_by_id:
-                cam["_resolved_image"] = thr_by_id[cam["id"]]
+            if cam["id"] in ref_by_id:
+                cam["_resolved_image"] = ref_by_id[cam["id"]]
 
     def work(camera: dict):
         host = monitor_host(camera)

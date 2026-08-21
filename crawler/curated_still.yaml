@@ -1425,3 +1425,824 @@ cameras:
     image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=190"
     page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
     note: "大和川水系三田川"
+
+  # --- 2026-08-22 第7弾: 横浜市水防災の河川カメラ(camidx_latest都度解決型) ---
+
+  - id: curated-still-yokohama-546601
+    name: "神明橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.5094
+    lng: 139.5228
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546601/546601_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546601/546601_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市緑区三保町"
+
+  - id: curated-still-yokohama-546602
+    name: "宮原橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4894
+    lng: 139.5959
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546602/546602_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546602/546602_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市神奈川区三枚町"
+
+  - id: curated-still-yokohama-546603
+    name: "下橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.506
+    lng: 139.6041
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546603/546603_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546603/546603_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市港北区鳥山町"
+
+  - id: curated-still-yokohama-546606
+    name: "元舞橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4044
+    lng: 139.5421
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546606/546606_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546606/546606_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市戸塚区吉田町"
+
+  - id: curated-still-yokohama-546607
+    name: "伊勢堰橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4276
+    lng: 139.5221
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546607/546607_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546607/546607_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市泉区岡津町"
+
+  - id: curated-still-yokohama-546608
+    name: "栄橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4318
+    lng: 139.5375
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546608/546608_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546608/546608_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市戸塚区名瀬町"
+
+  - id: curated-still-yokohama-546611
+    name: "城山橋（大いたち橋）"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3732
+    lng: 139.5566
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546611/546611_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546611/546611_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市栄区小菅ケ谷町"
+
+  - id: curated-still-yokohama-546612
+    name: "永戸人道橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4153
+    lng: 139.566
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546612/546612_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546612/546612_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市港南区芹が谷５丁目"
+
+  - id: curated-still-yokohama-546613
+    name: "宮川橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3419
+    lng: 139.6159
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546613/546613_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546613/546613_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市金沢区釜利谷東"
+
+  - id: curated-still-yokohama-546634
+    name: "中野橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4478
+    lng: 139.5987
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546634/546634_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546634/546634_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市保土ケ谷区帷子町１丁目"
+
+  - id: curated-still-yokohama-546635
+    name: "保土ケ谷橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4423
+    lng: 139.5904
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546635/546635_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546635/546635_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市保土ケ谷区瀬戸ケ谷町"
+
+  - id: curated-still-yokohama-546639
+    name: "水神橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3569
+    lng: 139.532
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546639/546639_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546639/546639_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市栄区笠間"
+
+  - id: curated-still-yokohama-546641
+    name: "外郷橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4238
+    lng: 139.5517
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546641/546641_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546641/546641_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市戸塚区前田町"
+
+  - id: curated-still-yokohama-546642
+    name: "嶽下橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4218
+    lng: 139.5456
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546642/546642_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546642/546642_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市戸塚区秋葉町"
+
+  - id: curated-still-yokohama-546643
+    name: "トーヨー橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4198
+    lng: 139.5313
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546643/546643_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546643/546643_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市戸塚区上矢部町"
+
+  - id: curated-still-yokohama-546644
+    name: "韮橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3826
+    lng: 139.492
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546644/546644_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546644/546644_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市戸塚区俣野町"
+
+  - id: curated-still-yokohama-546646
+    name: "四ツ谷橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4053
+    lng: 139.486
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546646/546646_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546646/546646_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市泉区和泉町"
+
+  - id: curated-still-yokohama-546649
+    name: "内海橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4671
+    lng: 139.6194
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546649/546649_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546649/546649_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市西区北幸１丁目"
+
+  - id: curated-still-yokohama-546652
+    name: "河口橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4528
+    lng: 139.6027
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546652/546652_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546652/546652_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市保土ケ谷区岩間町１丁目"
+
+  - id: curated-still-yokohama-546653
+    name: "御所が谷橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3886
+    lng: 139.5794
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546653/546653_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546653/546653_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市港南区日野７丁目"
+
+  - id: curated-still-yokohama-546654
+    name: "浦島町"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4817
+    lng: 139.6423
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546654/546654_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546654/546654_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市神奈川区浦島町363地先"
+
+  - id: curated-still-yokohama-546655
+    name: "入江川公園"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4941
+    lng: 139.6465
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546655/546655_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546655/546655_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市神奈川区神之木町13番地先"
+
+  - id: curated-still-yokohama-546661
+    name: "今川橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4756
+    lng: 139.5347
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546661/546661_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546661/546661_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市旭区今川町"
+
+  - id: curated-still-yokohama-546662
+    name: "御殿橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4846
+    lng: 139.5198
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546662/546662_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546662/546662_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市旭区下川井町15"
+
+  - id: curated-still-yokohama-546663
+    name: "住吉橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.5621
+    lng: 139.4828
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546663/546663_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546663/546663_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市青葉区奈良町"
+
+  - id: curated-still-yokohama-546664
+    name: "住撰橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.5301
+    lng: 139.5073
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546664/546664_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546664/546664_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市緑区いぶき野"
+
+  - id: curated-still-yokohama-546665
+    name: "童橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4526
+    lng: 139.484
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546665/546665_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546665/546665_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市瀬谷区下瀬谷１丁目"
+
+  - id: curated-still-yokohama-546666
+    name: "勝田橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.5437
+    lng: 139.5907
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546666/546666_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546666/546666_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市都筑区勝田町"
+
+  - id: curated-still-yokohama-546667
+    name: "宮崎橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4682
+    lng: 139.5848
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546667/546667_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546667/546667_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市保土ケ谷区釜台町20-1"
+
+  - id: curated-still-yokohama-546669
+    name: "元平沼橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4638
+    lng: 139.6171
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546669/546669_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546669/546669_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市西区南幸２丁目"
+
+  - id: curated-still-yokohama-546682
+    name: "鍛冶橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.5601
+    lng: 139.5581
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546682/546682_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546682/546682_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市青葉区荏田町"
+
+  - id: curated-still-yokohama-546683
+    name: "大竹上橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.5276
+    lng: 139.6093
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546683/546683_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546683/546683_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市港北区新羽町1317"
+
+  - id: curated-still-yokohama-546684
+    name: "元町橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4073
+    lng: 139.5283
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546684/546684_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546684/546684_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市戸塚区矢部町"
+
+  - id: curated-still-yokohama-546685
+    name: "鷹匠橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3609
+    lng: 139.5337
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546685/546685_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546685/546685_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市栄区笠間３丁目"
+
+  - id: curated-still-yokohama-546686
+    name: "境橋（神奈川県）"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546686/546686_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546686/546686_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "大和市深見"
+
+  - id: curated-still-yokohama-546687
+    name: "高鎌橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4106
+    lng: 139.4829
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546687/546687_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546687/546687_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市泉区上飯田町"
+
+  - id: curated-still-yokohama-546688
+    name: "埋田橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3914
+    lng: 139.6001
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546688/546688_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546688/546688_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市港南区笹下3-11-44"
+
+  - id: curated-still-yokohama-546689
+    name: "六浦二号"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3263
+    lng: 139.6198
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546689/546689_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546689/546689_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市金沢区六浦"
+
+  - id: curated-still-yokohama-546690
+    name: "幸延寺橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546690/546690_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546690/546690_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "東京都町田市森野１丁目"
+
+  - id: curated-still-yokohama-546691
+    name: "大清水橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546691/546691_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546691/546691_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "藤沢市大鋸"
+
+  - id: curated-still-yokohama-546692
+    name: "神鋼橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546692/546692_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546692/546692_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "藤沢市宮前字浦河内"
+
+  - id: curated-still-yokohama-546693
+    name: "西ケ崎橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546693/546693_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546693/546693_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "川崎市高津区子母口1037-1"
+
+  - id: curated-still-yokohama-546694
+    name: "境川橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546694/546694_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546694/546694_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "藤沢市鵠沼藤が谷２丁目"
+
+  - id: curated-still-yokohama-546695
+    name: "愛宕白根橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4812
+    lng: 139.5493
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546695/546695_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546695/546695_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市旭区白根三丁目"
+
+  - id: curated-still-yokohama-546696
+    name: "新田間橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4664
+    lng: 139.616
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546696/546696_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546696/546696_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市西区北幸二丁目"
+
+  - id: curated-still-yokohama-546697
+    name: "東野川"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546697/546697_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546697/546697_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "川崎市高津区東野川"
+
+  - id: curated-still-yokohama-546698
+    name: "八幡橋（県）"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.412
+    lng: 139.6272
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546698/546698_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546698/546698_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市磯子区磯子"
+
+  - id: curated-still-yokohama-546699
+    name: "屛風ヶ浦橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.3983
+    lng: 139.6162
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546699/546699_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546699/546699_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市磯子区森"
+
+  - id: curated-still-yokohama-546701
+    name: "寺家橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546701/546701_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546701/546701_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "川崎市麻生区早野"
+
+  - id: curated-still-yokohama-546702
+    name: "浅山橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.5365
+    lng: 139.4958
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546702/546702_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546702/546702_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市緑区長津田３丁目"
+
+  - id: curated-still-yokohama-546703
+    name: "落合橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.516
+    lng: 139.5399
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546703/546703_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546703/546703_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市緑区中山町"
+
+  - id: curated-still-yokohama-546706
+    name: "高田橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.5416
+    lng: 139.6081
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546706/546706_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546706/546706_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市港北区新吉田町"
+
+  - id: curated-still-yokohama-546714
+    name: "高橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546714/546714_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546714/546714_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "東京都町田市小山町"
+
+  - id: curated-still-yokohama-546715
+    name: "昭和橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546715/546715_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546715/546715_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "東京都町田市小山町"
+
+  - id: curated-still-yokohama-546716
+    name: "風戸橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546716/546716_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546716/546716_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "東京都町田市相原町"
+
+  - id: curated-still-yokohama-546717
+    name: "新三輪橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546717/546717_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546717/546717_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "川崎市麻生区上麻生７丁目"
+
+  - id: curated-still-yokohama-546718
+    name: "岡上橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546718/546718_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546718/546718_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "川崎市麻生区岡上"
+
+  - id: curated-still-yokohama-546721
+    name: "石崎橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4605
+    lng: 139.6196
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546721/546721_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546721/546721_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市西区平沼１丁目"
+
+  - id: curated-still-yokohama-546722
+    name: "西鶴屋橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4688
+    lng: 139.624
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546722/546722_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546722/546722_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市神奈川区鶴屋町"
+
+  - id: curated-still-yokohama-546730
+    name: "寿橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546730/546730_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546730/546730_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "相模原市緑区橋本"
+
+  - id: curated-still-yokohama-546731
+    name: "中吉橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4503
+    lng: 139.6342
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546731/546731_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546731/546731_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "川崎市中原区木月"
+
+  - id: curated-still-yokohama-546808
+    name: "栄橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4318
+    lng: 139.5375
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546808/546808_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546808/546808_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市戸塚区名瀬町"
+
+  - id: curated-still-yokohama-546810
+    name: "上分橋"
+    operator: "横浜市"
+    category: river
+    prefecture: "14"
+    lat: 35.4053
+    lng: 139.486
+    feed_type: camidx_latest
+    feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546810/546810_latest.idx"
+    image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546810/546810_latest.idx"
+    page_url: "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+    note: "横浜市泉区和泉町"

@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T10:27:26Z",
+ "version": "2026-08-21T10:51:44Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -19630,6 +19630,2400 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546601",
+   "name": "神明橋",
+   "name_kana": null,
+   "lat": 35.5094,
+   "lng": 139.5228,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546601/546601_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546602",
+   "name": "宮原橋",
+   "name_kana": null,
+   "lat": 35.4894,
+   "lng": 139.5959,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546602/546602_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546603",
+   "name": "下橋",
+   "name_kana": null,
+   "lat": 35.506,
+   "lng": 139.6041,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546603/546603_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546606",
+   "name": "元舞橋",
+   "name_kana": null,
+   "lat": 35.4044,
+   "lng": 139.5421,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546606/546606_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546607",
+   "name": "伊勢堰橋",
+   "name_kana": null,
+   "lat": 35.4276,
+   "lng": 139.5221,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546607/546607_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546608",
+   "name": "栄橋",
+   "name_kana": null,
+   "lat": 35.4318,
+   "lng": 139.5375,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546608/546608_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546611",
+   "name": "城山橋（大いたち橋）",
+   "name_kana": null,
+   "lat": 35.3732,
+   "lng": 139.5566,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546611/546611_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546612",
+   "name": "永戸人道橋",
+   "name_kana": null,
+   "lat": 35.4153,
+   "lng": 139.566,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546612/546612_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546613",
+   "name": "宮川橋",
+   "name_kana": null,
+   "lat": 35.3419,
+   "lng": 139.6159,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546613/546613_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546634",
+   "name": "中野橋",
+   "name_kana": null,
+   "lat": 35.4478,
+   "lng": 139.5987,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546634/546634_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546635",
+   "name": "保土ケ谷橋",
+   "name_kana": null,
+   "lat": 35.4423,
+   "lng": 139.5904,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546635/546635_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546639",
+   "name": "水神橋",
+   "name_kana": null,
+   "lat": 35.3569,
+   "lng": 139.532,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546639/546639_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546641",
+   "name": "外郷橋",
+   "name_kana": null,
+   "lat": 35.4238,
+   "lng": 139.5517,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546641/546641_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546642",
+   "name": "嶽下橋",
+   "name_kana": null,
+   "lat": 35.4218,
+   "lng": 139.5456,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546642/546642_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546643",
+   "name": "トーヨー橋",
+   "name_kana": null,
+   "lat": 35.4198,
+   "lng": 139.5313,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546643/546643_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546644",
+   "name": "韮橋",
+   "name_kana": null,
+   "lat": 35.3826,
+   "lng": 139.492,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546644/546644_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546646",
+   "name": "四ツ谷橋",
+   "name_kana": null,
+   "lat": 35.4053,
+   "lng": 139.486,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546646/546646_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546649",
+   "name": "内海橋",
+   "name_kana": null,
+   "lat": 35.4671,
+   "lng": 139.6194,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546649/546649_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546652",
+   "name": "河口橋",
+   "name_kana": null,
+   "lat": 35.4528,
+   "lng": 139.6027,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546652/546652_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546653",
+   "name": "御所が谷橋",
+   "name_kana": null,
+   "lat": 35.3886,
+   "lng": 139.5794,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546653/546653_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546654",
+   "name": "浦島町",
+   "name_kana": null,
+   "lat": 35.4817,
+   "lng": 139.6423,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546654/546654_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546655",
+   "name": "入江川公園",
+   "name_kana": null,
+   "lat": 35.4941,
+   "lng": 139.6465,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546655/546655_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546661",
+   "name": "今川橋",
+   "name_kana": null,
+   "lat": 35.4756,
+   "lng": 139.5347,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546661/546661_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546662",
+   "name": "御殿橋",
+   "name_kana": null,
+   "lat": 35.4846,
+   "lng": 139.5198,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546662/546662_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546663",
+   "name": "住吉橋",
+   "name_kana": null,
+   "lat": 35.5621,
+   "lng": 139.4828,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546663/546663_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546664",
+   "name": "住撰橋",
+   "name_kana": null,
+   "lat": 35.5301,
+   "lng": 139.5073,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546664/546664_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546665",
+   "name": "童橋",
+   "name_kana": null,
+   "lat": 35.4526,
+   "lng": 139.484,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546665/546665_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546666",
+   "name": "勝田橋",
+   "name_kana": null,
+   "lat": 35.5437,
+   "lng": 139.5907,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546666/546666_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546667",
+   "name": "宮崎橋",
+   "name_kana": null,
+   "lat": 35.4682,
+   "lng": 139.5848,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546667/546667_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546669",
+   "name": "元平沼橋",
+   "name_kana": null,
+   "lat": 35.4638,
+   "lng": 139.6171,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546669/546669_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546682",
+   "name": "鍛冶橋",
+   "name_kana": null,
+   "lat": 35.5601,
+   "lng": 139.5581,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546682/546682_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546683",
+   "name": "大竹上橋",
+   "name_kana": null,
+   "lat": 35.5276,
+   "lng": 139.6093,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546683/546683_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546684",
+   "name": "元町橋",
+   "name_kana": null,
+   "lat": 35.4073,
+   "lng": 139.5283,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546684/546684_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546685",
+   "name": "鷹匠橋",
+   "name_kana": null,
+   "lat": 35.3609,
+   "lng": 139.5337,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546685/546685_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546686",
+   "name": "境橋（神奈川県）",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546686/546686_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546687",
+   "name": "高鎌橋",
+   "name_kana": null,
+   "lat": 35.4106,
+   "lng": 139.4829,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546687/546687_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546688",
+   "name": "埋田橋",
+   "name_kana": null,
+   "lat": 35.3914,
+   "lng": 139.6001,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546688/546688_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546689",
+   "name": "六浦二号",
+   "name_kana": null,
+   "lat": 35.3263,
+   "lng": 139.6198,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546689/546689_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546690",
+   "name": "幸延寺橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546690/546690_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546691",
+   "name": "大清水橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546691/546691_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546692",
+   "name": "神鋼橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546692/546692_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546693",
+   "name": "西ケ崎橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546693/546693_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546694",
+   "name": "境川橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546694/546694_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546695",
+   "name": "愛宕白根橋",
+   "name_kana": null,
+   "lat": 35.4812,
+   "lng": 139.5493,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546695/546695_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546696",
+   "name": "新田間橋",
+   "name_kana": null,
+   "lat": 35.4664,
+   "lng": 139.616,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546696/546696_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546697",
+   "name": "東野川",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546697/546697_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546698",
+   "name": "八幡橋（県）",
+   "name_kana": null,
+   "lat": 35.412,
+   "lng": 139.6272,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546698/546698_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546699",
+   "name": "屛風ヶ浦橋",
+   "name_kana": null,
+   "lat": 35.3983,
+   "lng": 139.6162,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546699/546699_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546701",
+   "name": "寺家橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546701/546701_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546702",
+   "name": "浅山橋",
+   "name_kana": null,
+   "lat": 35.5365,
+   "lng": 139.4958,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546702/546702_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546703",
+   "name": "落合橋",
+   "name_kana": null,
+   "lat": 35.516,
+   "lng": 139.5399,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546703/546703_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546706",
+   "name": "高田橋",
+   "name_kana": null,
+   "lat": 35.5416,
+   "lng": 139.6081,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546706/546706_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546714",
+   "name": "高橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546714/546714_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546715",
+   "name": "昭和橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546715/546715_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546716",
+   "name": "風戸橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546716/546716_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546717",
+   "name": "新三輪橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546717/546717_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546718",
+   "name": "岡上橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546718/546718_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546721",
+   "name": "石崎橋",
+   "name_kana": null,
+   "lat": 35.4605,
+   "lng": 139.6196,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546721/546721_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546722",
+   "name": "西鶴屋橋",
+   "name_kana": null,
+   "lat": 35.4688,
+   "lng": 139.624,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546722/546722_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546730",
+   "name": "寿橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546730/546730_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546731",
+   "name": "中吉橋",
+   "name_kana": null,
+   "lat": 35.4503,
+   "lng": 139.6342,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546731/546731_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546808",
+   "name": "栄橋",
+   "name_kana": null,
+   "lat": 35.4318,
+   "lng": 139.5375,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546808/546808_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yokohama-546810",
+   "name": "上分橋",
+   "name_kana": null,
+   "lat": 35.4053,
+   "lng": 139.486,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "camidx_latest",
+    "url": "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546810/546810_latest.idx",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html"
+   },
+   "operator": "横浜市",
+   "source": {
+    "page_url": "https://mizubousai.city.yokohama.lg.jp/river_camera/rc_list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=横浜市 with_coords=True"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"

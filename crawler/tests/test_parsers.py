@@ -448,3 +448,14 @@ def test_fukuoka_city_river():
     assert c.id == "fukuoka-city-c205" and c.name == "雨水橋"
     assert c.lat == 33.63075 and c.feed_url.endswith("c205/moboImage.jpg")
     assert validate_camera_record(c.to_record("2026-08-22")) == []
+
+
+def test_camidx_latest_resolver():
+    from crawler.sources.thr_camxml import resolve_camidx_url
+    idx = "20260821194000\n20260821193800\n"
+    url, at = resolve_camidx_url(
+        "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546718/546718_latest.idx", idx)
+    assert url == ("https://mizubousai.city.yokohama.lg.jp/wdata/camera/"
+                   "546718/546718_20260821194000.jpg")
+    assert at == "2026-08-21T19:40:00+09:00"
+    assert resolve_camidx_url("x_latest.idx", "no ts") is None
