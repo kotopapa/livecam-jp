@@ -143,6 +143,10 @@ sources:
     enabled: true
     note: 新潟県にいがたLIVEカメラの県土木部道路カメラ約66台。県河川管理課分は
           kawabou収録済みのため除外。座標なし→テキスト版の市町村+地点名でジオコーディング
+  - id: saga_road
+    enabled: true
+    note: 佐賀県道路情報(sagacat.or.jp)。maps<N>.jsonが住所・座標つき台帳(27台)。
+          固定URL camimage/data/<id>.jpg。license=unknown
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）

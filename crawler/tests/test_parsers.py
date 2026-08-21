@@ -353,3 +353,23 @@ def test_iwate_road_xml():
     c = result.candidates[0]
     assert c.feed_url == "https://www.douro.com/camera_img/014008_i.php"
     assert validate_camera_record(c.to_record("2026-08-21")) == []
+
+
+def test_saga_road_json():
+    import json as _json
+    from crawler.sources.saga_road import SagaRoadParser
+    rows = (FIXTURES / "saga_maps1.json").read_text(encoding="utf-8")
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = url.endswith("maps1.json")
+                status = 200 if url.endswith("maps1.json") else 404
+                text = rows
+            return P()
+    result = SagaRoadParser().discover(S())
+    assert len(result.candidates) == 10
+    c = next(x for x in result.candidates if x.id == "saga-road-sa-010")
+    assert c.feed_url.endswith("/camimage/data/sa-010.jpg")
+    assert 32 < c.lat < 34 and 129 < c.lng < 131
+    assert validate_camera_record(c.to_record("2026-08-21")) == []

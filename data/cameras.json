@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T08:53:18Z",
+ "version": "2026-08-21T08:56:51Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -538823,6 +538823,1032 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-im-002",
+   "name": "204号 楠久津交差点付近",
+   "name_kana": null,
+   "lat": 33.29402778,
+   "lng": 129.8304722,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道204号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/im-002.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ka-009",
+   "name": "相知山内線 西相知駅付近",
+   "name_kana": null,
+   "lat": 33.34738889,
+   "lng": 129.99177778,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道38号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ka-009.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ki-007",
+   "name": "武雄白石線 六角川東側",
+   "name_kana": null,
+   "lat": 33.185285,
+   "lng": 130.050127,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道345号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ki-007.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ki-008",
+   "name": "武雄福富線 馬田交差点付近",
+   "name_kana": null,
+   "lat": 33.19455556,
+   "lng": 130.1140278,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道36号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ki-008.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ki-018",
+   "name": "久間深浦線 入江川付近",
+   "name_kana": null,
+   "lat": 33.135904,
+   "lng": 130.065574,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道324号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ki-018.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ki-021",
+   "name": "498号 二俣付近",
+   "name_kana": null,
+   "lat": 33.20544444,
+   "lng": 130.0485556,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道498号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ki-021.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ki-022",
+   "name": "498号 鳴瀬分道バス停付近",
+   "name_kana": null,
+   "lat": 33.21019444,
+   "lng": 130.0451389,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道498号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ki-022.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ki-023",
+   "name": "武雄福富線 下蓑具交差点付近",
+   "name_kana": null,
+   "lat": 33.19863889,
+   "lng": 130.1025,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道36号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ki-023.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ki-024",
+   "name": "武雄多久線 甘久交差点東側",
+   "name_kana": null,
+   "lat": 33.205014,
+   "lng": 130.03648,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道24号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ki-024.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-ki-025",
+   "name": "白石大町線 福母付近",
+   "name_kana": null,
+   "lat": 33.206781,
+   "lng": 130.103497,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道214号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/ki-025.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-010",
+   "name": "多久牛津線 古賀宿交差点付近",
+   "name_kana": null,
+   "lat": 33.28072222,
+   "lng": 130.1568889,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道332号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-010.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-011",
+   "name": "別府牛津停車場線 納所川付近",
+   "name_kana": null,
+   "lat": 33.25608333,
+   "lng": 130.1711111,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道284号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-011.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-015",
+   "name": "東与賀佐賀線 佐大南交差点付近",
+   "name_kana": null,
+   "lat": 33.23911111,
+   "lng": 130.2944722,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道260号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-015.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-016",
+   "name": "松尾佐賀停車場線 どん3の森東側",
+   "name_kana": null,
+   "lat": 33.261519,
+   "lng": 130.294854,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道267号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-016.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-017",
+   "name": "佐賀川久保鳥栖線 高木瀬東付近",
+   "name_kana": null,
+   "lat": 33.28144444,
+   "lng": 130.2984167,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道31号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-017.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-018",
+   "name": "小城牛津線 江津交差点北側",
+   "name_kana": null,
+   "lat": 33.25211111,
+   "lng": 130.2031944,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道42号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-018.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-019",
+   "name": "264号 多布施一丁目交差点付近",
+   "name_kana": null,
+   "lat": 33.255279,
+   "lng": 130.29293,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道264号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-019.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-020",
+   "name": "264号 佐野常民像前",
+   "name_kana": null,
+   "lat": 33.27291,
+   "lng": 130.294231,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道264号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-020.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-021",
+   "name": "佐賀停車場線 駅南本町付近",
+   "name_kana": null,
+   "lat": 33.261197,
+   "lng": 130.298459,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道29号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-021.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-sa-022",
+   "name": "264号 佐嘉神社角交差点付近",
+   "name_kana": null,
+   "lat": 33.251152,
+   "lng": 130.30419,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道264号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/sa-022.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-to-014",
+   "name": "久留米基山筑紫野線 真木町付近",
+   "name_kana": null,
+   "lat": 33.354983,
+   "lng": 130.514652,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道17号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/to-014.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-to-015",
+   "name": "中原鳥栖線 安楽寺町交差点付近",
+   "name_kana": null,
+   "lat": 33.34783333,
+   "lng": 130.5185,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道336号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/to-015.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-to-016",
+   "name": "江口長門石江島線 江島町付近",
+   "name_kana": null,
+   "lat": 33.340555,
+   "lng": 130.480691,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道145号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/to-016.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-to-017",
+   "name": "江口東尾線 天満宮南側",
+   "name_kana": null,
+   "lat": 33.30916667,
+   "lng": 130.4575,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道277号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/to-017.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-to-018",
+   "name": "北茂安三田川線 通瀬川東側",
+   "name_kana": null,
+   "lat": 33.32625,
+   "lng": 130.46188889,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道22号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/to-018.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-to-019",
+   "name": "市武神埼線 市武天満宮付近",
+   "name_kana": null,
+   "lat": 33.292841,
+   "lng": 130.422315,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一般県道210号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/to-019.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "saga-road-to-020",
+   "name": "国道385号 田道ケ里付近",
+   "name_kana": null,
+   "lat": 33.311329,
+   "lng": 130.382269,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "41",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道385号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sagacat.or.jp/roadinfo/camimage/data/to-020.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sagacat.or.jp/kisei/"
+   },
+   "operator": "佐賀県",
+   "source": {
+    "page_url": "https://www.sagacat.or.jp/kisei/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：佐賀県道路情報（佐賀県県土整備部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=佐賀県 with_coords=True"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
