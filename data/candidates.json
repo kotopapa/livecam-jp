@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T23:24:38Z",
+ "version": "2026-08-21T23:42:35Z",
  "cameras": [
   {
    "id": "fukushima-road-051",
@@ -2379,6 +2379,123 @@
    "verification": null,
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizukawa-coast-fuji-gokanjima",
+   "name": "富士海岸 五貫島",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-gokanjima.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "海岸監視カメラ（津波・高潮監視）。座標は地点名からの推定(approx)"
+   },
+   "verification": null,
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-kanbara-hinode",
+   "name": "富士海岸 日の出",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/kanbara-hinode.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "海岸監視カメラ（津波・高潮監視）。座標は地点名からの推定(approx)"
+   },
+   "verification": null,
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-kanbara-takahama",
+   "name": "富士海岸 高浜",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/kanbara-takahama.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "海岸監視カメラ（津波・高潮監視）。座標は地点名からの推定(approx)"
+   },
+   "verification": null,
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "shizuoka-doboku-atami-04-sasajiri",

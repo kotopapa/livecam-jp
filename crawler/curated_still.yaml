@@ -3257,3 +3257,64 @@ cameras:
     image_url: "https://www.nps.gov/yell/learn/photosmultimedia/webcams.htm"
     page_url: "https://www.nps.gov/yell/learn/photosmultimedia/webcams.htm"
     note: "静止画直URLは403のため公式ライブページへの誘導型"
+
+  # ---- 2026-08-22 津波・海岸監視調査分 ----
+  - id: curated-still-sendai-yamamoto-kaigan1
+    name: "山元海岸1（津波・海岸監視）"
+    operator: "国土交通省東北地方整備局 仙台河川国道事務所"
+    category: coast
+    prefecture: "04"
+    lat: 37.9481
+    lng: 140.8976
+    refresh_sec: 600
+    image_url: "http://www2.thr.mlit.go.jp/sendai/html/image/KS-74101-l.jpg"
+    page_url: "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html"
+    note: "仙台湾南部海岸。座標は山元町高瀬(town_level相当)"
+
+  - id: curated-still-sendai-yamamoto-kaigan2
+    name: "山元海岸2（津波・海岸監視）"
+    operator: "国土交通省東北地方整備局 仙台河川国道事務所"
+    category: coast
+    prefecture: "04"
+    lat: 37.9481
+    lng: 140.8976
+    refresh_sec: 600
+    image_url: "http://www2.thr.mlit.go.jp/sendai/html/image/KS-74102-l.jpg"
+    page_url: "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html"
+    note: "仙台湾南部海岸。座標は山元町高瀬(town_level相当)"
+
+  - id: curated-still-sendai-kabasaki-kaigan1
+    name: "蒲崎海岸1（津波・海岸監視）"
+    operator: "国土交通省東北地方整備局 仙台河川国道事務所"
+    category: coast
+    prefecture: "04"
+    lat: 38.0845
+    lng: 140.9145
+    refresh_sec: 600
+    image_url: "http://www2.thr.mlit.go.jp/sendai/html/image/KS-74149-l.jpg"
+    page_url: "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html"
+    note: "阿武隈川河口北側・岩沼海岸。座標は岩沼市寺島(town_level相当)"
+
+  - id: curated-still-sendai-kabasaki-kaigan2
+    name: "蒲崎海岸2（津波・海岸監視）"
+    operator: "国土交通省東北地方整備局 仙台河川国道事務所"
+    category: coast
+    prefecture: "04"
+    lat: 38.0845
+    lng: 140.9145
+    refresh_sec: 600
+    image_url: "http://www2.thr.mlit.go.jp/sendai/html/image/KS-74150-l.jpg"
+    page_url: "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html"
+    note: "阿武隈川河口北側・岩沼海岸。座標は岩沼市寺島(town_level相当)"
+
+  - id: curated-still-tahara-akabane-port
+    name: "赤羽根漁港（津波監視）"
+    operator: "田原市"
+    category: coast
+    prefecture: "23"
+    lat: 34.6212
+    lng: 137.1996
+    refresh_sec: 600
+    image_url: "http://tahara-bousai.jp/images/akabanekou.jpg"
+    page_url: "https://www.city.tahara.aichi.jp/kurashi/saigai/1000702/1002276.html"
+    note: "南海トラフ地震で津波が最速到達すると想定される地点として市が公開。10分更新"

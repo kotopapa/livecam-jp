@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T23:30:41Z",
+ "version": "2026-08-21T23:42:35Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -22294,6 +22294,82 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-sendai-kabasaki-kaigan1",
+   "name": "蒲崎海岸1（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 38.0845,
+   "lng": 140.9145,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www2.thr.mlit.go.jp/sendai/html/image/KS-74149-l.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html"
+   },
+   "operator": "国土交通省東北地方整備局 仙台河川国道事務所",
+   "source": {
+    "page_url": "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 仙台河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=仙台河川国道事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-sendai-kabasaki-kaigan2",
+   "name": "蒲崎海岸2（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 38.0845,
+   "lng": 140.9145,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www2.thr.mlit.go.jp/sendai/html/image/KS-74150-l.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html"
+   },
+   "operator": "国土交通省東北地方整備局 仙台河川国道事務所",
+   "source": {
+    "page_url": "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 仙台河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=仙台河川国道事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-sendai-tenmondai-weathercam",
    "name": "仙台市天文台 お天気カメラ（星空）",
    "name_kana": null,
@@ -22330,6 +22406,82 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-sendai-yamamoto-kaigan1",
+   "name": "山元海岸1（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 37.9481,
+   "lng": 140.8976,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www2.thr.mlit.go.jp/sendai/html/image/KS-74101-l.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html"
+   },
+   "operator": "国土交通省東北地方整備局 仙台河川国道事務所",
+   "source": {
+    "page_url": "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 仙台河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=仙台河川国道事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-sendai-yamamoto-kaigan2",
+   "name": "山元海岸2（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 37.9481,
+   "lng": 140.8976,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www2.thr.mlit.go.jp/sendai/html/image/KS-74102-l.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html"
+   },
+   "operator": "国土交通省東北地方整備局 仙台河川国道事務所",
+   "source": {
+    "page_url": "https://www.thr.mlit.go.jp/sendai/sp/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 仙台河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=仙台河川国道事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-shima-azuri-beach-mie",
@@ -22748,6 +22900,44 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-tahara-akabane-port",
+   "name": "赤羽根漁港（津波監視）",
+   "name_kana": null,
+   "lat": 34.6212,
+   "lng": 137.1996,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "23",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://tahara-bousai.jp/images/akabanekou.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.tahara.aichi.jp/kurashi/saigai/1000702/1002276.html"
+   },
+   "operator": "田原市",
+   "source": {
+    "page_url": "https://www.city.tahara.aichi.jp/kurashi/saigai/1000702/1002276.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：田原市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=田原市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-takato-dam",
@@ -558371,6 +558561,956 @@
    },
    "first_seen": "2026-08-19",
    "last_updated": "2026-08-19"
+  },
+  {
+   "id": "shizukawa-coast-fuji-hara",
+   "name": "富士海岸 原",
+   "name_kana": null,
+   "lat": 35.127247,
+   "lng": 138.788528,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-hara.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-imai",
+   "name": "富士海岸 今井",
+   "name_kana": null,
+   "lat": 35.147968,
+   "lng": 138.713852,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-imai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-kawanarijima",
+   "name": "富士海岸 川成島",
+   "name_kana": null,
+   "lat": 35.136467,
+   "lng": 138.667007,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-kawanarijima.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-miyajima",
+   "name": "富士海岸 宮島",
+   "name_kana": null,
+   "lat": 35.134617,
+   "lng": 138.657501,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-miyajima.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-momosato",
+   "name": "富士海岸 桃里",
+   "name_kana": null,
+   "lat": 35.135544,
+   "lng": 138.767929,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-momosato.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-nishikashiwa",
+   "name": "富士海岸 西柏原新田",
+   "name_kana": null,
+   "lat": 34.994728,
+   "lng": 138.861481,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-nishikashiwa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-nishimakado",
+   "name": "富士海岸 西間門",
+   "name_kana": null,
+   "lat": 35.104378,
+   "lng": 138.842773,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-nishimakado.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-ootsuka",
+   "name": "富士海岸 大塚",
+   "name_kana": null,
+   "lat": 35.12273,
+   "lng": 138.807755,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-ootsuka.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-oozuwa",
+   "name": "富士海岸 大諏訪",
+   "name_kana": null,
+   "lat": 35.111794,
+   "lng": 138.831772,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-oozuwa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-samejima",
+   "name": "富士海岸 鮫島",
+   "name_kana": null,
+   "lat": 35.138409,
+   "lng": 138.681702,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-samejima.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-fuji-senbonhama",
+   "name": "富士海岸 千本浜",
+   "name_kana": null,
+   "lat": 35.083679,
+   "lng": 138.857895,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-senbonhama.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-kanbara-kogane",
+   "name": "富士海岸 小金",
+   "name_kana": null,
+   "lat": 35.127003,
+   "lng": 138.589737,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/kanbara-kogane.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-kanbara-shucchousho",
+   "name": "富士海岸 蒲原中",
+   "name_kana": null,
+   "lat": 35.13126,
+   "lng": 138.600449,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/kanbara-shucchousho.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-fujimorigawa",
+   "name": "駿河海岸 藤守川河口右岸",
+   "name_kana": null,
+   "lat": 34.805935,
+   "lng": 138.31221,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-fujimorigawa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-haibara",
+   "name": "駿河海岸 榛原",
+   "name_kana": null,
+   "lat": 34.737862,
+   "lng": 138.227692,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-haibara.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-kawajiri",
+   "name": "駿河海岸 川尻",
+   "name_kana": null,
+   "lat": 34.772598,
+   "lng": 138.273178,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-kawajiri.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-ooigawakakou",
+   "name": "駿河海岸 大井川河口右岸",
+   "name_kana": null,
+   "lat": 34.772598,
+   "lng": 138.273178,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-ooigawakakou.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-saguchiyagawa",
+   "name": "駿河海岸 坂口谷川河口左岸",
+   "name_kana": null,
+   "lat": 34.75655,
+   "lng": 138.259338,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-saguchiyagawa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-sumiyoshi",
+   "name": "駿河海岸 住吉",
+   "name_kana": null,
+   "lat": 34.75655,
+   "lng": 138.259338,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-sumiyoshi.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-tajiri",
+   "name": "駿河海岸 田尻",
+   "name_kana": null,
+   "lat": 34.828014,
+   "lng": 138.324997,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-tajiri.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-tajirikita",
+   "name": "駿河海岸 田尻北",
+   "name_kana": null,
+   "lat": 34.837708,
+   "lng": 138.331909,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-tajirikita.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-takashinden",
+   "name": "駿河海岸 高新田",
+   "name_kana": null,
+   "lat": 34.79882,
+   "lng": 138.30603,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-takashinden.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-tenmonkan",
+   "name": "駿河海岸 ディスカバリーパーク屋上",
+   "name_kana": null,
+   "lat": 34.828014,
+   "lng": 138.324997,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-tenmonkan.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-tochiyamagawa",
+   "name": "駿河海岸 栃山川河口右岸",
+   "name_kana": null,
+   "lat": 34.788067,
+   "lng": 138.295471,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-tochiyamagawa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-suruga-yoshinaga",
+   "name": "駿河海岸 吉永",
+   "name_kana": null,
+   "lat": 34.794106,
+   "lng": 138.297256,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "駿河海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/suruga-yoshinaga.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/suruga/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "shizuoka-doboku-atami-01-kamitaga-1",

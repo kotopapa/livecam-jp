@@ -167,6 +167,10 @@ sources:
     enabled: true
     note: 栃木県道路ライブカメラ60台(モバイル版menu.htmlが市町村別一覧)。
           固定URL Portable/<ID>_1.jpg。座標なし→ジオコーディング
+  - id: shizukawa_coast
+    enabled: true
+    note: 静岡河川事務所の海岸監視カメラ27台(駿河海岸12・富士海岸15)。津波高潮監視。
+          固定URL seishiga/eizou/<slug>.jpg。座標は地点名ヒントからGSIジオコーディング
   - id: shizuoka_doboku
     enabled: true
     note: 静岡県土木事務所4系統(熱海9・沼津15・富士8・下田13)。lightbox一覧が台帳。
