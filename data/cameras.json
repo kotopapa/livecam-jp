@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T23:24:38Z",
+ "version": "2026-08-21T23:28:31Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -15581,19 +15581,18 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "web_page",
-    "url": "https://nyalesundresearch.no/data-quick-looks-and-webcams/",
+    "type": "still_image",
+    "url": "https://data.npolar.no/_file/zeppelin/camera/Latest/zeppCam2.jpg",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
-    "type": "web_page",
-    "url": "https://nyalesundresearch.no/data-quick-looks-and-webcams/"
+    "url": "https://nyalesundresearch.no/maps-and-webcams/"
    },
    "operator": "ノルウェー極地研究所/Kings Bay AS",
    "source": {
-    "page_url": "https://nyalesundresearch.no/data-quick-looks-and-webcams/",
+    "page_url": "https://nyalesundresearch.no/maps-and-webcams/",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：ノルウェー極地研究所/Kings Bay AS"
@@ -15601,7 +15600,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-22",
-    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True / 2026-08-22 旧ページ404修正: ツェッペリン観測所の静止画直URL(Latest固定)に変換"
    },
    "first_seen": "2026-08-22",
    "last_updated": "2026-08-22"

@@ -3199,11 +3199,10 @@ cameras:
     country: "NO"
     lat: 78.9231
     lng: 11.9312
-    feed_type: web_page
-    feed_url: "https://nyalesundresearch.no/data-quick-looks-and-webcams/"
-    image_url: "https://nyalesundresearch.no/data-quick-looks-and-webcams/"
-    page_url: "https://nyalesundresearch.no/data-quick-looks-and-webcams/"
-    note: "スヴァールバル諸島・世界最北の常住研究拠点。複数カメラ集約ページのため誘導型"
+    refresh_sec: 600
+    image_url: "https://data.npolar.no/_file/zeppelin/camera/Latest/zeppCam2.jpg"
+    page_url: "https://nyalesundresearch.no/maps-and-webcams/"
+    note: "スヴァールバル諸島・世界最北の常住研究拠点。ツェッペリン観測所カメラ(Latest固定URL・リダイレクト先が実画像)"
 
   - id: curated-still-eso-paranal
     name: "ESOパラナル天文台(VLT)"
