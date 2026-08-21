@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T13:17:09Z",
+ "version": "2026-08-21T13:55:03Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -37,6 +37,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-achi-namiai-park-hoshizora",
+   "name": "日本一の星空 長野県阿智村 浪合パーク",
+   "name_kana": null,
+   "lat": 35.3537,
+   "lng": 137.6706,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "MHp6BWO-z1M",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=MHp6BWO-z1M"
+   },
+   "operator": "長野県阿智村（日本一の星空 浪合パーク）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=MHp6BWO-z1M",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：長野県阿智村（日本一の星空 浪合パーク）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-akihabara-aisan",
@@ -408,6 +446,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-busena-underwater-observatory",
+   "name": "ブセナ海中公園 海中展望塔 「リアル水族館」",
+   "name_kana": null,
+   "lat": 26.6627,
+   "lng": 127.943,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "H1ajySclapw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=H1ajySclapw"
+   },
+   "operator": "琉球放送(RBC)・ブセナ海中公園",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=H1ajySclapw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：琉球放送(RBC)・ブセナ海中公園（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-chigasaki-beach",
@@ -1485,6 +1561,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-grinpa-fujisan-live",
+   "name": "富士山二合目のテーマパーク「ぐりんぱ」",
+   "name_kana": null,
+   "lat": 35.327,
+   "lng": 138.8262,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Joer2U0vki4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Joer2U0vki4"
+   },
+   "operator": "フジヤマNAVI(ぐりんぱ園内設置・提携配信)",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Joer2U0vki4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：フジヤマNAVI(ぐりんぱ園内設置・提携配信)（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-gutto-bypass",
    "name": "山形バイパス（国道13号）",
    "name_kana": null,
@@ -2113,6 +2227,82 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-ichihara-umizuri-parking",
+   "name": "オリジナルメーカー海づり公園 駐車場側カメラ",
+   "name_kana": null,
+   "lat": 35.5425,
+   "lng": 140.0605,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vs91kpippxI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vs91kpippxI"
+   },
+   "operator": "オリジナルメーカー海づり公園",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vs91kpippxI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：オリジナルメーカー海づり公園（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-ichihara-umizuri-sanbashi",
+   "name": "オリジナルメーカー海づり公園 桟橋釣り場側カメラ",
+   "name_kana": null,
+   "lat": 35.5425,
+   "lng": 140.0605,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "gww15EqFelQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=gww15EqFelQ"
+   },
+   "operator": "オリジナルメーカー海づり公園",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=gww15EqFelQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：オリジナルメーカー海づり公園（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-ichinomiya-city-station-rotary",
@@ -14373,6 +14563,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-seibuen-keirin-official-live",
+   "name": "西武園競輪 公式インターネットライブ",
+   "name_kana": null,
+   "lat": 35.7841,
+   "lng": 139.455,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Ifm4fObeVDo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Ifm4fObeVDo"
+   },
+   "operator": "西武園競輪(所沢市営競輪)",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Ifm4fObeVDo",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：西武園競輪(所沢市営競輪)（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-sendai-kitakanjo",
    "name": "仙台 北環状線（南吉成）",
    "name_kana": null,
@@ -15217,6 +15445,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：ぜるぶの丘(観光農園、私設・アトム農機運営)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-daisetsuzan-asahidake",
+   "name": "大雪山旭岳",
+   "name_kana": null,
+   "lat": 43.6621,
+   "lng": 142.8251,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/108_c/image/2026/08/21/NCS20260821210002000.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=108"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所／東川町（旭岳WebView映像を取り込み配信）",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=108",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所／東川町（旭岳WebView映像を取り込み配信）"
    },
    "review": {
     "status": "approved",
@@ -17241,6 +17507,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-gunma-tenmondai-allsky",
+   "name": "ぐんま天文台 全天モニターカメラ",
+   "name_kana": null,
+   "lat": 36.5972,
+   "lng": 138.9734,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "10",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.astron.pref.gunma.jp/webcam/allsky.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.astron.pref.gunma.jp/webcam/sky.html"
+   },
+   "operator": "群馬県（群馬県立ぐんま天文台）",
+   "source": {
+    "page_url": "https://www.astron.pref.gunma.jp/webcam/sky.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：群馬県（群馬県立ぐんま天文台）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-hamamatsu-cm01-02",
    "name": "安間川 若草橋",
    "name_kana": null,
@@ -18609,6 +18913,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-izumi-heiya-tsuru",
+   "name": "出水平野のツル",
+   "name_kana": null,
+   "lat": 32.1055,
+   "lng": 130.2747,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/94_c/image/2026/08/21/NCS20260821200002970.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=94"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=94",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-izumo-shinmondori",
    "name": "出雲大社(神門通り)",
    "name_kana": null,
@@ -18637,6 +18979,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：公益社団法人 島根県観光連盟"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-izunuma-gankamo",
+   "name": "伊豆沼のガンカモ類",
+   "name_kana": null,
+   "lat": 38.7235,
+   "lng": 141.0946,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/90_c/image/2026/08/21/NCS20260821200046090.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=90"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所／宮城県伊豆沼・内沼サンクチュアリセンター",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=90",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所／宮城県伊豆沼・内沼サンクチュアリセンター"
    },
    "review": {
     "status": "approved",
@@ -19131,6 +19511,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：海上保安庁(第十管区海上保安本部 宮崎海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kabushima-uminego-hachinohe",
+   "name": "蕪島・八戸港 （ウミネコ繁殖地）",
+   "name_kana": null,
+   "lat": 40.5391,
+   "lng": 141.5575,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "02",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hachinohe-tv.jp/wp-content/uploads/livecamera/kabushima.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://hachinohe-tv.jp/livecamera"
+   },
+   "operator": "八戸テレビ放送株式会社",
+   "source": {
+    "page_url": "https://hachinohe-tv.jp/livecamera",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：八戸テレビ放送株式会社"
    },
    "review": {
     "status": "approved",
@@ -20281,6 +20699,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kushiro-shitsugen-tancho-tsurui",
+   "name": "釧路湿原のタンチョウ（鶴居村）",
+   "name_kana": null,
+   "lat": 43.2286,
+   "lng": 144.3323,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/73_c/image/2026/08/21/NCS20260821200011150.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=73"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=73",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-kyoto-arisu",
    "name": "有栖川",
    "name_kana": null,
@@ -20613,6 +21069,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：公益財団法人自然公園財団 阿蘇支部(公益推進協会助成)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-norikura-kogen-norikuradake",
+   "name": "乗鞍高原からみた乗鞍岳",
+   "name_kana": null,
+   "lat": 36.1172,
+   "lng": 137.6137,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/85_c/image/2026/08/21/NCS20260821200044960.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=85"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=85",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所"
    },
    "review": {
     "status": "approved",
@@ -21345,6 +21839,158 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-otsuchi-coastal-center-hyotanjima",
+   "name": "東京大学大槌沿岸センター ひょうたん島",
+   "name_kana": null,
+   "lat": 39.355,
+   "lng": 141.928,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cf4ee.jp/latest/otohama/latest.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://cf4ee.jp/otohama_live"
+   },
+   "operator": "東京大学大気海洋研究所 国際・地域連携研究センター 大槌研究拠点(大槌沿岸センター)",
+   "source": {
+    "page_url": "https://cf4ee.jp/otohama_live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京大学大気海洋研究所 国際・地域連携研究センター 大槌研究拠点(大槌沿岸センター)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-ozenuma-oze-national-park",
+   "name": "尾瀬沼",
+   "name_kana": null,
+   "lat": 36.9276,
+   "lng": 139.3164,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "07",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/92_c/image/2026/08/21/NCS20260821200056270.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=92"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=92",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-sarobetsu-shitsugen-center",
+   "name": "サロベツ湿原センターからみたサロベツ湿原",
+   "name_kana": null,
+   "lat": 45.1103,
+   "lng": 141.701,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/119_c/image/2026/08/21/NCS2026082120000000.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=119"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所／サロベツ湿原センター",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=119",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所／サロベツ湿原センター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-sendai-tenmondai-weathercam",
+   "name": "仙台市天文台 お天気カメラ（星空）",
+   "name_kana": null,
+   "lat": 38.2569,
+   "lng": 140.7555,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sendai-astro.jp/imagedata/camer1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sendai-astro.jp/livecamera/"
+   },
+   "operator": "仙台市（仙台市天文台、指定管理：公益財団法人仙台市市民文化事業団）",
+   "source": {
+    "page_url": "https://www.sendai-astro.jp/livecamera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：仙台市（仙台市天文台、指定管理：公益財団法人仙台市市民文化事業団）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-shima-azuri-beach-mie",
    "name": "志摩市 あづり浜(志摩町越賀)",
    "name_kana": null,
@@ -21801,6 +22447,158 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-tanukiko-campsite-kita-hiroba",
+   "name": "田貫湖キャンプ場 北広場",
+   "name_kana": null,
+   "lat": 35.342,
+   "lng": 138.5615,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://tanukiko.com/data-webcamera6/tanuki-kita-h.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tanukiko.com/en/live/"
+   },
+   "operator": "富士宮市(田貫湖キャンプ場管理事務所)",
+   "source": {
+    "page_url": "https://tanukiko.com/en/live/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：富士宮市(田貫湖キャンプ場管理事務所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-tanukiko-campsite-minami-parking",
+   "name": "田貫湖キャンプ場 南駐車場",
+   "name_kana": null,
+   "lat": 35.342,
+   "lng": 138.5615,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://tanukiko.com/data-webcamera2/tanukishot2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tanukiko.com/en/live/"
+   },
+   "operator": "富士宮市(田貫湖キャンプ場管理事務所)",
+   "source": {
+    "page_url": "https://tanukiko.com/en/live/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：富士宮市(田貫湖キャンプ場管理事務所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-tanukiko-campsite-site-a",
+   "name": "田貫湖キャンプ場 南Aサイト",
+   "name_kana": null,
+   "lat": 35.342,
+   "lng": 138.5615,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://tanukiko.com/data-webcamera/tanukishot.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tanukiko.com/en/live/"
+   },
+   "operator": "富士宮市(田貫湖キャンプ場管理事務所)",
+   "source": {
+    "page_url": "https://tanukiko.com/en/live/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：富士宮市(田貫湖キャンプ場管理事務所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-tanukiko-campsite-site-b",
+   "name": "田貫湖キャンプ場 南Bサイト",
+   "name_kana": null,
+   "lat": 35.342,
+   "lng": 138.5615,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://tanukiko.com/data-webcamera3/tanukishot3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tanukiko.com/en/live/"
+   },
+   "operator": "富士宮市(田貫湖キャンプ場管理事務所)",
+   "source": {
+    "page_url": "https://tanukiko.com/en/live/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：富士宮市(田貫湖キャンプ場管理事務所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-toda-city-hall-camera",
    "name": "戸田市役所(まちが見えるカメラ)",
    "name_kana": null,
@@ -21905,6 +22703,82 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：戸田市(デジタル戦略室)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-togakushi-campsite",
+   "name": "戸隠キャンプ場",
+   "name_kana": null,
+   "lat": 36.7711,
+   "lng": 138.0889,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.togakushi-21.jp/assets/livecam/photo/tp03.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://togakushi-21.jp/livecam/tp03/"
+   },
+   "operator": "一般社団法人戸隠観光協会",
+   "source": {
+    "page_url": "https://togakushi-21.jp/livecam/tp03/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：一般社団法人戸隠観光協会"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-totto-park-koshima",
+   "name": "とっとパーク小島",
+   "name_kana": null,
+   "lat": 34.3151,
+   "lng": 135.0999,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://tottopark-kosima.sakura.ne.jp/img/livecamera.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://minnaga.com/totopark/"
+   },
+   "operator": "とっとパーク小島(岬町海釣り公園、指定管理:民永商店)",
+   "source": {
+    "page_url": "https://minnaga.com/totopark/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：とっとパーク小島(岬町海釣り公園、指定管理:民永商店)"
    },
    "review": {
     "status": "approved",
@@ -22247,6 +23121,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：中央アルプス観光株式会社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-tsushima-yamaneko-fukuoka-zoo",
+   "name": "ツシマヤマネコ（福岡市動物園）",
+   "name_kana": null,
+   "lat": 33.5721,
+   "lng": 130.3908,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/57_c/image/2026/08/21/NCS20260821190008540.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=57"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所／福岡市動物園",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=57",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所／福岡市動物園"
    },
    "review": {
     "status": "approved",
@@ -24651,6 +25563,120 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-yonago-suicho-koen-kohakucho",
+   "name": "米子水鳥公園のコハクチョウ",
+   "name_kana": null,
+   "lat": 35.4414,
+   "lng": 133.2873,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "31",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/64_c/image/2026/08/21/NCS20260821200002370.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=64"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所／米子水鳥公園",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=64",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所／米子水鳥公園"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yumura-onsen-cam1",
+   "name": "湯村温泉 1(荒湯周辺)",
+   "name_kana": null,
+   "lat": 35.5551,
+   "lng": 134.4883,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.yumura.gr.jp/my-live-camera/1/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.yumura.gr.jp/2026/01/22/live_camera/"
+   },
+   "operator": "湯村温泉観光協会",
+   "source": {
+    "page_url": "https://www.yumura.gr.jp/2026/01/22/live_camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：湯村温泉観光協会"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yumura-onsen-cam2",
+   "name": "湯村温泉 2(温泉街もう1地点)",
+   "name_kana": null,
+   "lat": 35.5551,
+   "lng": 134.4883,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.yumura.gr.jp/my-live-camera/2/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.yumura.gr.jp/2026/01/22/live_camera/"
+   },
+   "operator": "湯村温泉観光協会",
+   "source": {
+    "page_url": "https://www.yumura.gr.jp/2026/01/22/live_camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：湯村温泉観光協会"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-yunose-dam",
    "name": "湯の瀬ダム",
    "name_kana": null,
@@ -25687,6 +26713,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-tokyo-dome-city-official",
+   "name": "東京ドームシティ公式",
+   "name_kana": null,
+   "lat": 35.7056,
+   "lng": 139.7519,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "13",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "7XzfKy8CzdY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=7XzfKy8CzdY"
+   },
+   "operator": "東京ドームシティ(株式会社東京ドーム)",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=7XzfKy8CzdY",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京ドームシティ(株式会社東京ドーム)（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-tokyo-sta-train",

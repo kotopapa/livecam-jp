@@ -2885,3 +2885,215 @@ cameras:
     lng: 129.9586
     image_url: "https://www.octp-net.ne.jp/~cam_d2015/cam1/cam_data1.jpg"
     page_url: "https://omura-catv.com/road-camera/"
+
+  # --- 2026-08-22 第11弾: 新カテゴリ(天体・動物・自然・温泉・キャンプ・釣り・海中・施設) ---
+
+  - id: curated-still-gunma-tenmondai-allsky
+    name: "ぐんま天文台 全天モニターカメラ"
+    operator: "群馬県（群馬県立ぐんま天文台）"
+    category: healing
+    prefecture: "10"
+    lat: 36.5972
+    lng: 138.9734
+    image_url: "https://www.astron.pref.gunma.jp/webcam/allsky.jpg"
+    page_url: "https://www.astron.pref.gunma.jp/webcam/sky.html"
+
+  - id: curated-still-sendai-tenmondai-weathercam
+    name: "仙台市天文台 お天気カメラ（星空）"
+    operator: "仙台市（仙台市天文台、指定管理：公益財団法人仙台市市民文化事業団）"
+    category: healing
+    prefecture: "04"
+    lat: 38.2569
+    lng: 140.7555
+    image_url: "https://www.sendai-astro.jp/imagedata/camer1.jpg"
+    page_url: "https://www.sendai-astro.jp/livecamera/"
+
+  - id: curated-still-kushiro-shitsugen-tancho-tsurui
+    name: "釧路湿原のタンチョウ（鶴居村）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: healing
+    prefecture: "01"
+    lat: 43.2286
+    lng: 144.3323
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/73_c/image/2026/08/21/NCS20260821200011150.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=73"
+
+  - id: curated-still-izumi-heiya-tsuru
+    name: "出水平野のツル"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: healing
+    prefecture: "46"
+    lat: 32.1055
+    lng: 130.2747
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/94_c/image/2026/08/21/NCS20260821200002970.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=94"
+
+  - id: curated-still-kabushima-uminego-hachinohe
+    name: "蕪島・八戸港 （ウミネコ繁殖地）"
+    operator: "八戸テレビ放送株式会社"
+    category: healing
+    prefecture: "02"
+    lat: 40.5391
+    lng: 141.5575
+    image_url: "https://hachinohe-tv.jp/wp-content/uploads/livecamera/kabushima.jpg"
+    page_url: "https://hachinohe-tv.jp/livecamera"
+
+  - id: curated-still-tsushima-yamaneko-fukuoka-zoo
+    name: "ツシマヤマネコ（福岡市動物園）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所／福岡市動物園"
+    category: other
+    prefecture: "40"
+    lat: 33.5721
+    lng: 130.3908
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/57_c/image/2026/08/21/NCS20260821190008540.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=57"
+
+  - id: curated-still-izunuma-gankamo
+    name: "伊豆沼のガンカモ類"
+    operator: "環境省（生物多様性センター）インターネット自然研究所／宮城県伊豆沼・内沼サンクチュアリセンター"
+    category: healing
+    prefecture: "04"
+    lat: 38.7235
+    lng: 141.0946
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/90_c/image/2026/08/21/NCS20260821200046090.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=90"
+
+  - id: curated-still-yonago-suicho-koen-kohakucho
+    name: "米子水鳥公園のコハクチョウ"
+    operator: "環境省（生物多様性センター）インターネット自然研究所／米子水鳥公園"
+    category: healing
+    prefecture: "31"
+    lat: 35.4414
+    lng: 133.2873
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/64_c/image/2026/08/21/NCS20260821200002370.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=64"
+
+  - id: curated-still-ozenuma-oze-national-park
+    name: "尾瀬沼"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "07"
+    lat: 36.9276
+    lng: 139.3164
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/92_c/image/2026/08/21/NCS20260821200056270.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=92"
+
+  - id: curated-still-norikura-kogen-norikuradake
+    name: "乗鞍高原からみた乗鞍岳"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "20"
+    lat: 36.1172
+    lng: 137.6137
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/85_c/image/2026/08/21/NCS20260821200044960.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=85"
+
+  - id: curated-still-sarobetsu-shitsugen-center
+    name: "サロベツ湿原センターからみたサロベツ湿原"
+    operator: "環境省（生物多様性センター）インターネット自然研究所／サロベツ湿原センター"
+    category: healing
+    prefecture: "01"
+    lat: 45.1103
+    lng: 141.701
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/119_c/image/2026/08/21/NCS2026082120000000.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=119"
+
+  - id: curated-still-daisetsuzan-asahidake
+    name: "大雪山旭岳"
+    operator: "環境省（生物多様性センター）インターネット自然研究所／東川町（旭岳WebView映像を取り込み配信）"
+    category: scenic
+    prefecture: "01"
+    lat: 43.6621
+    lng: 142.8251
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/108_c/image/2026/08/21/NCS20260821210002000.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=108"
+
+  - id: curated-still-yumura-onsen-cam1
+    name: "湯村温泉 1(荒湯周辺)"
+    operator: "湯村温泉観光協会"
+    category: healing
+    prefecture: "28"
+    lat: 35.5551
+    lng: 134.4883
+    image_url: "https://www.yumura.gr.jp/my-live-camera/1/"
+    page_url: "https://www.yumura.gr.jp/2026/01/22/live_camera/"
+
+  - id: curated-still-yumura-onsen-cam2
+    name: "湯村温泉 2(温泉街もう1地点)"
+    operator: "湯村温泉観光協会"
+    category: healing
+    prefecture: "28"
+    lat: 35.5551
+    lng: 134.4883
+    image_url: "https://www.yumura.gr.jp/my-live-camera/2/"
+    page_url: "https://www.yumura.gr.jp/2026/01/22/live_camera/"
+
+  - id: curated-still-togakushi-campsite
+    name: "戸隠キャンプ場"
+    operator: "一般社団法人戸隠観光協会"
+    category: healing
+    prefecture: "20"
+    lat: 36.7711
+    lng: 138.0889
+    image_url: "https://www.togakushi-21.jp/assets/livecam/photo/tp03.jpg"
+    page_url: "https://togakushi-21.jp/livecam/tp03/"
+
+  - id: curated-still-tanukiko-campsite-site-a
+    name: "田貫湖キャンプ場 南Aサイト"
+    operator: "富士宮市(田貫湖キャンプ場管理事務所)"
+    category: healing
+    prefecture: "22"
+    lat: 35.342
+    lng: 138.5615
+    image_url: "https://tanukiko.com/data-webcamera/tanukishot.jpg"
+    page_url: "https://tanukiko.com/en/live/"
+
+  - id: curated-still-tanukiko-campsite-site-b
+    name: "田貫湖キャンプ場 南Bサイト"
+    operator: "富士宮市(田貫湖キャンプ場管理事務所)"
+    category: healing
+    prefecture: "22"
+    lat: 35.342
+    lng: 138.5615
+    image_url: "https://tanukiko.com/data-webcamera3/tanukishot3.jpg"
+    page_url: "https://tanukiko.com/en/live/"
+
+  - id: curated-still-tanukiko-campsite-minami-parking
+    name: "田貫湖キャンプ場 南駐車場"
+    operator: "富士宮市(田貫湖キャンプ場管理事務所)"
+    category: healing
+    prefecture: "22"
+    lat: 35.342
+    lng: 138.5615
+    image_url: "https://tanukiko.com/data-webcamera2/tanukishot2.jpg"
+    page_url: "https://tanukiko.com/en/live/"
+
+  - id: curated-still-tanukiko-campsite-kita-hiroba
+    name: "田貫湖キャンプ場 北広場"
+    operator: "富士宮市(田貫湖キャンプ場管理事務所)"
+    category: healing
+    prefecture: "22"
+    lat: 35.342
+    lng: 138.5615
+    image_url: "https://tanukiko.com/data-webcamera6/tanuki-kita-h.jpg"
+    page_url: "https://tanukiko.com/en/live/"
+
+  - id: curated-still-totto-park-koshima
+    name: "とっとパーク小島"
+    operator: "とっとパーク小島(岬町海釣り公園、指定管理:民永商店)"
+    category: coast
+    prefecture: "27"
+    lat: 34.3151
+    lng: 135.0999
+    image_url: "https://tottopark-kosima.sakura.ne.jp/img/livecamera.jpg"
+    page_url: "https://minnaga.com/totopark/"
+
+  - id: curated-still-otsuchi-coastal-center-hyotanjima
+    name: "東京大学大槌沿岸センター ひょうたん島"
+    operator: "東京大学大気海洋研究所 国際・地域連携研究センター 大槌研究拠点(大槌沿岸センター)"
+    category: coast
+    prefecture: "03"
+    lat: 39.355
+    lng: 141.928
+    image_url: "https://www.cf4ee.jp/latest/otohama/latest.jpg"
+    page_url: "https://cf4ee.jp/otohama_live"
