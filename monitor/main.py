@@ -126,6 +126,37 @@ def run(shard: str | None = None) -> int:
             if src and "_resolved_image" in src:
                 cam["_resolved_image"] = src["_resolved_image"]
 
+    # 都度解決型feed（jma_volcam）: 画像は2分刻みのタイムスタンプURLで1時間分しか
+    # 残らないため、シャード外も含めて毎回最新URLを解決して配信する
+    volcam_cams = [c for c in all_cameras
+                   if c.get("review", {}).get("status") == "approved"
+                   and c["feed"]["type"] == "jma_volcam"]
+    if volcam_cams:
+        from crawler.sources.jma_volcam import PAGE_URL, resolve_image_url
+        volcam_host = "www.data.jma.go.jp"
+        volcam_by_id = {}
+        for cam in volcam_cams:
+            page_url = PAGE_URL.format(code=cam["feed"]["url"])
+            try:
+                throttle.acquire(volcam_host)
+                try:
+                    resp = session.get(page_url, timeout=30)
+                finally:
+                    throttle.release(volcam_host)
+            except requests.RequestException as e:
+                print(f"volcam解決失敗 {page_url}: {e}", file=sys.stderr)
+                continue
+            hit = resolve_image_url(resp.text) if resp.status_code == 200 else None
+            if hit:
+                cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
+                volcam_by_id[cam["id"]] = cam["_resolved_image"]
+                st = statuses.get(cam["id"])
+                if st is not None:
+                    st["image_url"], st["image_time"] = hit
+        for cam in cameras:
+            if cam["id"] in volcam_by_id:
+                cam["_resolved_image"] = volcam_by_id[cam["id"]]
+
     def work(camera: dict):
         host = monitor_host(camera)
         throttle.acquire(host)

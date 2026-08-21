@@ -45,7 +45,8 @@ def check_camera(session: requests.Session, camera: dict[str, Any],
 
     if ftype == "still_image":
         return _check_still(session, camera, state, now, prev_failures)
-    if ftype == "mlit_roadinfo":
+    if ftype in ("mlit_roadinfo", "jma_volcam"):
+        # どちらも都度解決型: main.py が _resolved_image を事前解決してくる
         return _check_roadinfo(session, camera, state, now, prev_failures)
     if ftype in ("youtube_channel", "youtube_video"):
         return _check_youtube(session, camera, state, now, prev_failures)

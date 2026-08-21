@@ -1,5 +1,5 @@
 {
- "version": "2026-08-20T12:13:20Z",
+ "version": "2026-08-21T06:55:19Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -44373,6 +44373,3616 @@
    },
    "first_seen": "2026-08-19",
    "last_updated": "2026-08-19"
+  },
+  {
+   "id": "jma-volcam-10401",
+   "name": "アトサヌプリ 北東山麓（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.638,
+   "lng": 144.465,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01665",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10401",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10401"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10401",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10402",
+   "name": "アトサヌプリ 硫黄山駐車場北（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.621,
+   "lng": 144.441,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01665",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10402",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10402"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10402",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10403",
+   "name": "アトサヌプリ 屈斜路湖南（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.557,
+   "lng": 144.313,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01665",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10403",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10403"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10403",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10501",
+   "name": "雌阿寒岳 上徹別（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.262,
+   "lng": 144.112,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01206",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10501",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10501"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10501",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10502",
+   "name": "雌阿寒岳 阿寒富士北（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.38,
+   "lng": 144.008,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01647",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10502",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10502"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10502",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10701",
+   "name": "大雪山 忠別湖東（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.625,
+   "lng": 142.671,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01459",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10701",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10701"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10701",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10702",
+   "name": "大雪山 旭岳姿見２（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.662,
+   "lng": 142.825,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01458",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10702",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10702"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10702",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10801",
+   "name": "十勝岳 白金模範牧場（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.496,
+   "lng": 142.642,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01459",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10801",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10801"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10801",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10802",
+   "name": "十勝岳 避難小屋南東（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.433,
+   "lng": 142.668,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01459",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10802",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10802"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10802",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-10901",
+   "name": "樽前山 別々川（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 42.59,
+   "lng": 141.416,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01213",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10901",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10901"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10901",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11101",
+   "name": "倶多楽 ４１４ｍ山（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 42.488,
+   "lng": 141.138,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01230",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11101",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11101"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11101",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11102",
+   "name": "倶多楽 地獄谷（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 42.497,
+   "lng": 141.146,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01230",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11102",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11102"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11102",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11201",
+   "name": "有珠山 東湖畔（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 42.566,
+   "lng": 140.894,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01575",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11201",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11201"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11201",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11202",
+   "name": "有珠山 月浦（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 42.609,
+   "lng": 140.792,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01584",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11202",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11202"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11202",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11301",
+   "name": "北海道駒ヶ岳 鹿部公園南東（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 42.031,
+   "lng": 140.813,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01343",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11301",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11301"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11301",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11302",
+   "name": "北海道駒ヶ岳 赤井川２（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 42.014,
+   "lng": 140.643,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01345",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11302",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11302"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11302",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11303",
+   "name": "北海道駒ヶ岳 剣ヶ峯（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 42.063,
+   "lng": 140.679,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01343",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11303",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11303"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11303",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11401",
+   "name": "恵山 高岱（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 41.78,
+   "lng": 141.085,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01202",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11401",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11401"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11401",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-11402",
+   "name": "恵山 火口原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 41.809,
+   "lng": 141.156,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01202",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "11402",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11402"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=11402",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20201",
+   "name": "岩木山 百沢東（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 40.626,
+   "lng": 140.332,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "02",
+   "country": null,
+   "municipality": "02202",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20201",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20201"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20201",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20301",
+   "name": "八甲田山 大川原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 40.644,
+   "lng": 140.806,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "02",
+   "country": null,
+   "municipality": "02204",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20301",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20301"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20301",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20302",
+   "name": "八甲田山 地獄沼（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 40.647,
+   "lng": 140.853,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "02",
+   "country": null,
+   "municipality": "02201",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20302",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20302"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20302",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20401",
+   "name": "十和田 銀山（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 40.477,
+   "lng": 140.828,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "05",
+   "country": null,
+   "municipality": "05303",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20401",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20401"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20401",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20501",
+   "name": "秋田焼山 栂森（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 39.965,
+   "lng": 140.771,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "05",
+   "country": null,
+   "municipality": "05209",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20501",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20501"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20501",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20701",
+   "name": "岩手山 柏台（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 39.917,
+   "lng": 140.981,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "03",
+   "country": null,
+   "municipality": "03214",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20701",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20701"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20701",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20702",
+   "name": "岩手山 黒倉山（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 39.852,
+   "lng": 140.967,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "03",
+   "country": null,
+   "municipality": "03214",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20702",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20702"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20702",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20703",
+   "name": "岩手山 長山篠川原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 39.771,
+   "lng": 140.961,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "03",
+   "country": null,
+   "municipality": "03301",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20703",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20703"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20703",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-20901",
+   "name": "鳥海山 上郷２（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 39.185,
+   "lng": 139.945,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "05",
+   "country": null,
+   "municipality": "05214",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "20901",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20901"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=20901",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21001",
+   "name": "栗駒山 大柳（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 38.815,
+   "lng": 140.989,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "04",
+   "country": null,
+   "municipality": "04213",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21001",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21001"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21001",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21002",
+   "name": "栗駒山 展望岩頭（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 38.96,
+   "lng": 140.775,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "03",
+   "country": null,
+   "municipality": "03209",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21002",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21002"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21002",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21201",
+   "name": "蔵王山 遠刈田温泉（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 38.127,
+   "lng": 140.581,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "04",
+   "country": null,
+   "municipality": "04324",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21201",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21201"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21201",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21204",
+   "name": "蔵王山 刈田岳２（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 38.129,
+   "lng": 140.447,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "06",
+   "country": null,
+   "municipality": "06201",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21204",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21204"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21204",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21301",
+   "name": "吾妻山 上野寺（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 37.759,
+   "lng": 140.396,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "07",
+   "country": null,
+   "municipality": "07201",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21301",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21301"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21301",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21401",
+   "name": "安達太良山 若宮（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 37.654,
+   "lng": 140.193,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "07",
+   "country": null,
+   "municipality": "07408",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21401",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21401"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21401",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21402",
+   "name": "安達太良山 鉄山（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 37.632,
+   "lng": 140.283,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "07",
+   "country": null,
+   "municipality": "07408",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21402",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21402"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21402",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21501",
+   "name": "磐梯山 剣ケ峯（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 37.66,
+   "lng": 140.08,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "07",
+   "country": null,
+   "municipality": "07402",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21501",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21501"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21501",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-21502",
+   "name": "磐梯山 櫛ヶ峰（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 37.61,
+   "lng": 140.085,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "07",
+   "country": null,
+   "municipality": "07408",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "21502",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21502"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=21502",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30101",
+   "name": "那須岳 湯本２（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 37.092,
+   "lng": 140.002,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "09",
+   "country": null,
+   "municipality": "09407",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30101",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30101"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30101",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30102",
+   "name": "那須岳 日の出平北（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 37.125,
+   "lng": 139.953,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "09",
+   "country": null,
+   "municipality": "09407",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30102",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30102"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30102",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30201",
+   "name": "日光白根山 歌ヶ浜（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.73,
+   "lng": 139.49,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "09",
+   "country": null,
+   "municipality": "09206",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30201",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30201"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30201",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30202",
+   "name": "日光白根山 上小川（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.791,
+   "lng": 139.26,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "10",
+   "country": null,
+   "municipality": "10443",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30202",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30202"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30202",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30501",
+   "name": "草津白根山 奥山田（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.66,
+   "lng": 138.535,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "10",
+   "country": null,
+   "municipality": "10421",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30501",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30501"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30501",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30502",
+   "name": "草津白根山 逢ノ峰山頂（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.635,
+   "lng": 138.535,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "10",
+   "country": null,
+   "municipality": "10425",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30502",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30502"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30502",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30504",
+   "name": "草津白根山 草津（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.621,
+   "lng": 138.596,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "10",
+   "country": null,
+   "municipality": "10426",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30504",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30504"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30504",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30601",
+   "name": "浅間山 鬼押（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.442,
+   "lng": 138.537,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "10",
+   "country": null,
+   "municipality": "10425",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30601",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30601"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30601",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30602",
+   "name": "浅間山 追分（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.342,
+   "lng": 138.547,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20321",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30602",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30602"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30602",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30701",
+   "name": "新潟焼山 宇棚（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.858,
+   "lng": 138.075,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "15",
+   "country": null,
+   "municipality": "15217",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30701",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30701"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30701",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-30901",
+   "name": "弥陀ヶ原 芦峅（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.578,
+   "lng": 137.386,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "16",
+   "country": null,
+   "municipality": "16323",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "30901",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30901"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=30901",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31001",
+   "name": "焼岳 中尾峠（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.235,
+   "lng": 137.593,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20202",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31001",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31001"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31001",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31101",
+   "name": "乗鞍岳 乗鞍高原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.122,
+   "lng": 137.625,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20202",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31101",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31101"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31101",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31201",
+   "name": "御嶽山 三岳黒沢（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 35.847,
+   "lng": 137.627,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20432",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31201",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31201"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31201",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31202",
+   "name": "御嶽山 奥の院（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 35.887,
+   "lng": 137.48,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20429",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31202",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31202"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31202",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31301",
+   "name": "白山 白峰（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 36.165,
+   "lng": 136.635,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "17",
+   "country": null,
+   "municipality": "17210",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31301",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31301"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31301",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31401",
+   "name": "富士山 萩原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 35.31,
+   "lng": 138.932,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22215",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31401",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31401"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31401",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31501",
+   "name": "箱根山 宮城野（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 35.253,
+   "lng": 139.05,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "14",
+   "country": null,
+   "municipality": "14382",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31501",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31501"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31501",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31502",
+   "name": "箱根山 大涌谷（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 35.245,
+   "lng": 139.02,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "14",
+   "country": null,
+   "municipality": "14382",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31502",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31502"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31502",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31504",
+   "name": "箱根山 箱根峠（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 35.187,
+   "lng": 139.015,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "14",
+   "country": null,
+   "municipality": "14382",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31504",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31504"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31504",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31601",
+   "name": "伊豆東部火山群 大原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 34.967,
+   "lng": 139.102,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22208",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31601",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31601"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31601",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31602",
+   "name": "伊豆東部火山群 大崎（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 35.008,
+   "lng": 139.098,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22208",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31602",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31602"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31602",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31701",
+   "name": "伊豆大島 北西外輪（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 34.738,
+   "lng": 139.38,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13361",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31701",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31701"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31701",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31702",
+   "name": "伊豆大島 中央火孔北（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 34.728,
+   "lng": 139.395,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13361",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31702",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31702"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31702",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31801",
+   "name": "新島 式根（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 34.328,
+   "lng": 139.217,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13363",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31801",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31801"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31801",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-31901",
+   "name": "神津島 前浜南東（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 34.2,
+   "lng": 139.135,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13364",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "31901",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31901"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=31901",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-32001",
+   "name": "三宅島 坪田（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 34.08,
+   "lng": 139.558,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13381",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "32001",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32001"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32001",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-32002",
+   "name": "三宅島 神着（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 34.125,
+   "lng": 139.522,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13381",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "32002",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32002"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32002",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-32003",
+   "name": "三宅島 山頂火口北西（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 34.091,
+   "lng": 139.52,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13381",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "32003",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32003"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32003",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-32101",
+   "name": "八丈島 楊梅ヶ原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 33.105,
+   "lng": 139.785,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13401",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "32101",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32101"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32101",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-32201",
+   "name": "青ヶ島 手取山（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 32.462,
+   "lng": 139.763,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13402",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "32201",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32201"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=32201",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50201",
+   "name": "九重山 上野（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 33.133,
+   "lng": 131.225,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "44",
+   "country": null,
+   "municipality": "44461",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50201",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50201"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50201",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50202",
+   "name": "九重山 星生山北尾根（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 33.098,
+   "lng": 131.236,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "44",
+   "country": null,
+   "municipality": "44461",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50202",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50202"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50202",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50203",
+   "name": "九重山 飯田大原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 33.173,
+   "lng": 131.279,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "44",
+   "country": null,
+   "municipality": "44461",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50203",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50203"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50203",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50301",
+   "name": "阿蘇山 草千里（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 32.886,
+   "lng": 131.052,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "43",
+   "country": null,
+   "municipality": "43433",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50301",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50301"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50301",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50302",
+   "name": "<span>阿蘇山 <ruby><rb>車帰</rb><rt>くるまがえり</rt></ruby></span>（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 32.916,
+   "lng": 130.972,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "43",
+   "country": null,
+   "municipality": "43214",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50302",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50302"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50302",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50303",
+   "name": "阿蘇山 南阿蘇村２（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 32.802,
+   "lng": 131.029,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "43",
+   "country": null,
+   "municipality": "43433",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50303",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50303"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50303",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50401",
+   "name": "雲仙岳 野岳（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 32.742,
+   "lng": 130.288,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "42",
+   "country": null,
+   "municipality": "42214",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50401",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50401"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50401",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50402",
+   "name": "雲仙岳 垂木台地南（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 32.765,
+   "lng": 130.327,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "42",
+   "country": null,
+   "municipality": "42203",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50402",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50402"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50402",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50501",
+   "name": "霧島山 猪子石（新燃岳）（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.845,
+   "lng": 130.871,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46218",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50501",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50501"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50501",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50502",
+   "name": "霧島山 猪子石（御鉢）（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.845,
+   "lng": 130.875,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46218",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50502",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50502"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50502",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50503",
+   "name": "霧島山 八久保（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 32.038,
+   "lng": 130.932,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45205",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50503",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50503"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50503",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50504",
+   "name": "霧島山 韓国岳（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.934,
+   "lng": 130.862,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45205",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50504",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50504"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50504",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50505",
+   "name": "霧島山 えびの高原（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.946,
+   "lng": 130.844,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45209",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50505",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50505"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50505",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50506",
+   "name": "霧島山 硫黄山南（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.945,
+   "lng": 130.854,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45209",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50506",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50506"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50506",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50507",
+   "name": "霧島山 御鉢火口南縁（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.884,
+   "lng": 130.91,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46218",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50507",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50507"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50507",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50508",
+   "name": "霧島山 高原西麓（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.928,
+   "lng": 131.008,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45361",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50508",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50508"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50508",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50601",
+   "name": "桜島 牛根（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.583,
+   "lng": 130.784,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46214",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50601",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50601"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50601",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50602",
+   "name": "桜島 中央港新町（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.538,
+   "lng": 130.557,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46201",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50602",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50602"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50602",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50603",
+   "name": "桜島 垂水荒崎（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 31.511,
+   "lng": 130.698,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46214",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50603",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50603"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50603",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50801",
+   "name": "薩摩硫黄島 岩ノ上（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 30.784,
+   "lng": 130.275,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46303",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50801",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50801"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50801",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50901",
+   "name": "口永良部島 本村西（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 30.464,
+   "lng": 130.19,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46505",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50901",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50901"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50901",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-50902",
+   "name": "口永良部島 屋久島吉田（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 30.425,
+   "lng": 130.447,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46505",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "50902",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50902"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50902",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-51001",
+   "name": "中之島 寄木（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 29.833,
+   "lng": 129.854,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46304",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "51001",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51001"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51001",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-51002",
+   "name": "中之島 御岳山頂（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 29.859,
+   "lng": 129.856,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46304",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "51002",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51002"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51002",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-51101",
+   "name": "諏訪之瀬島 寄木（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 29.83,
+   "lng": 129.854,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46304",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "51101",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51101"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51101",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-51102",
+   "name": "諏訪之瀬島 キャンプ場（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 29.611,
+   "lng": 129.706,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": "46304",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "51102",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51102"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51102",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "jma-volcam-51301",
+   "name": "鶴見岳・伽藍岳 塚原無田（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 33.306,
+   "lng": 131.376,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "44",
+   "country": null,
+   "municipality": "44213",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "51301",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51301"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=51301",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: feed_type=jma_volcam"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "kaiho-daiosaki-lt",

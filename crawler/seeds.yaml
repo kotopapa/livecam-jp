@@ -12,7 +12,7 @@ sources:
 
   - id: mlit_ktr_road
     enabled: true
-    note: 関東地整の道路カメラ（静止画URL共通の4事務所: 宇都宮・高崎・相武・北首都）。
+    note: 関東地整の道路カメラ（静止画URL共通の4事務所：宇都宮・高崎・相武・北首都）。
           座標なし→ジオコーディング+手動レビュー。大宮・横浜・甲府・長野はURL規則が
           別系統のため未対応（mlit_ktr_road.py の docstring 参照）
 
@@ -127,6 +127,10 @@ sources:
     pref_codes: []
 
 # 実装待ちシード（SPEC 6.2 より。パーサ追加時に sources へ昇格させる）
+  - id: jma_volcam
+    enabled: true
+    note: 気象庁 火山監視カメラ95台(camicon.geojsonが座標つき台帳)。都度解決型
+          feed=jma_volcam。政府標準利用規約(出典明記)
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）
@@ -136,6 +140,7 @@ todo:
   - note: 北海道開発局・北陸・中部・四国・沖縄総合事務局、47都道府県、火山カメラ（気象庁・砂防）
 
 # クロール対象外（SPEC 6.2 除外リスト）
+
 excluded:
   - 民間ライブカメラまとめサイト全般（cametan.com 等。著作権・規約上NG）
   - 個人・企業設置カメラ

@@ -94,7 +94,10 @@ class CameraRepository {
 
   /// カメラの静止画URL。都度解決型は status.json の image_url を使う
   String? imageUrlFor(Camera c) {
-    if (c.feed.type == FeedType.mlitRoadinfo) return status[c.id]?.imageUrl;
+    if (c.feed.type == FeedType.mlitRoadinfo ||
+        c.feed.type == FeedType.jmaVolcam) {
+      return status[c.id]?.imageUrl;
+    }
     if (c.feed.type == FeedType.stillImage) return c.feed.url;
     return null;
   }

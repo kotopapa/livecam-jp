@@ -11,6 +11,9 @@ enum FeedType {
   /// 道路情報提供システム（都度解決型）。静止画URLは status.json の image_url を使う
   mlitRoadinfo('mlit_roadinfo'),
 
+  /// 気象庁 火山監視カメラ（都度解決型）。静止画URLは status.json の image_url を使う
+  jmaVolcam('jma_volcam'),
+
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する
   unknown('unknown');
 
