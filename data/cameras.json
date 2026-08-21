@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T09:45:11Z",
+ "version": "2026-08-21T09:58:53Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -1629,6 +1629,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-hakuba-goryu-alpsdaira",
+   "name": "白馬五竜 アルプス平",
+   "name_kana": null,
+   "lat": 36.6975,
+   "lng": 137.8272,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "aoBkllBoMWQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=aoBkllBoMWQ"
+   },
+   "operator": "株式会社五龍(白馬村公式観光サイト埋め込み)",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=aoBkllBoMWQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：株式会社五龍(白馬村公式観光サイト埋め込み)（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-haneda-t1-tbs",
@@ -17203,6 +17241,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kawaguchiko-yamanashi",
+   "name": "河口湖",
+   "name_kana": null,
+   "lat": 35.5011,
+   "lng": 138.7514,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "19",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.yamanashi-kankou.jp/heritage/fujisanwatcher/jp/live/images/kawaguchiko.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.yamanashi-kankou.jp/heritage/fujisanwatcher/jp/live/02.html"
+   },
+   "operator": "公益社団法人やまなし観光推進機構(山梨県公式観光サイト「富士の国やまなし観光ネット」)",
+   "source": {
+    "page_url": "https://www.yamanashi-kankou.jp/heritage/fujisanwatcher/jp/live/02.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：公益社団法人やまなし観光推進機構(山梨県公式観光サイト「富士の国やまなし観光ネット」)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-kushimoto-marine-park-underwater",
    "name": "串本海中公園 海中景観ライブ映像",
    "name_kana": null,
@@ -17241,6 +17317,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-makinoto-pass",
+   "name": "牧ノ戸峠（くじゅう連山）",
+   "name_kana": null,
+   "lat": 33.0844,
+   "lng": 131.2528,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://oita-bosai.sakura.ne.jp/MAKINOTO.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://oita-bosai.my.salesforce-sites.com/X_VF_CamerasPopup?oid=a4t10000000wvJNAAY"
+   },
+   "operator": "大分県(大分県土砂災害・河川情報システム)",
+   "source": {
+    "page_url": "https://oita-bosai.my.salesforce-sites.com/X_VF_CamerasPopup?oid=a4t10000000wvJNAAY",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県(大分県土砂災害・河川情報システム)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-michinoeki-aso-kako-camera",
    "name": "道の駅阿蘇 火口(阿蘇パーキング)",
    "name_kana": null,
@@ -17269,6 +17383,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：公益財団法人自然公園財団 阿蘇支部(公益推進協会助成)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-ontake-kaida-kogen",
+   "name": "御嶽山（開田高原）",
+   "name_kana": null,
+   "lat": 35.8944,
+   "lng": 137.6142,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kaidakogen.jp/wp_kaida/wp-content/themes/kaida/img/livecamera/licam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kaidakogen.jp/livecamera/"
+   },
+   "operator": "開田高原観光協会(木曽町)",
+   "source": {
+    "page_url": "https://kaidakogen.jp/livecamera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：開田高原観光協会(木曽町)"
    },
    "review": {
     "status": "approved",
@@ -19074,6 +19226,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-tottori-sakyu",
+   "name": "鳥取砂丘",
+   "name_kana": null,
+   "lat": 35.5389,
+   "lng": 134.2306,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "31",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "u7Zib_9HbUU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=u7Zib_9HbUU"
+   },
+   "operator": "鳥取砂丘チャンネル",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=u7Zib_9HbUU",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鳥取砂丘チャンネル（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-towadako",
@@ -475189,6 +475379,1146 @@
    },
    "first_seen": "2026-08-17",
    "last_updated": "2026-08-17"
+  },
+  {
+   "id": "kobe-river-01",
+   "name": "高橋川 深江橋",
+   "name_kana": null,
+   "lat": 34.721324,
+   "lng": 135.291457,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "高橋川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/01",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-02",
+   "name": "要玄寺川 深田橋",
+   "name_kana": null,
+   "lat": 34.722909,
+   "lng": 135.285521,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "要玄寺川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/02.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/02",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-03",
+   "name": "天上川 天上川橋",
+   "name_kana": null,
+   "lat": 34.723504,
+   "lng": 135.276286,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "天上川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/03.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/03",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-04",
+   "name": "住吉川 五百崎橋",
+   "name_kana": null,
+   "lat": 34.714655,
+   "lng": 135.268875,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "住吉川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/04.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/04",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-05",
+   "name": "天神川 沈砂池",
+   "name_kana": null,
+   "lat": 34.728378,
+   "lng": 135.254617,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "天神川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/05.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/05",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-06",
+   "name": "石屋川 水道橋",
+   "name_kana": null,
+   "lat": 34.72031,
+   "lng": 135.246567,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "石屋川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/06.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/06",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-07",
+   "name": "都賀川 甲橋",
+   "name_kana": null,
+   "lat": 34.715279,
+   "lng": 135.227484,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "都賀川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/07.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/07",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-08",
+   "name": "生田川 二宮橋",
+   "name_kana": null,
+   "lat": 34.701028,
+   "lng": 135.199409,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "生田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/08.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/08",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-09",
+   "name": "宇治川 清風橋",
+   "name_kana": null,
+   "lat": 34.68696,
+   "lng": 135.174408,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "宇治川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/09.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/09",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-10",
+   "name": "新湊川 夢野橋",
+   "name_kana": null,
+   "lat": 34.68217,
+   "lng": 135.160914,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "新湊川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/10.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/10",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-11",
+   "name": "武庫川 千苅浄水事務所",
+   "name_kana": null,
+   "lat": 34.868121,
+   "lng": 135.267051,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "武庫川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/11.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/11",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-12",
+   "name": "有馬川 月見橋",
+   "name_kana": null,
+   "lat": 34.871228,
+   "lng": 135.235198,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "有馬川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/12.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/12",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-13",
+   "name": "有馬川 公園橋",
+   "name_kana": null,
+   "lat": 34.800911,
+   "lng": 135.247117,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "有馬川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/13.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/13",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-14",
+   "name": "有野川 神鉄六甲駅踏切道",
+   "name_kana": null,
+   "lat": 34.785453,
+   "lng": 135.206849,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "有野川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/14.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/14",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-15",
+   "name": "有野川 廣瀬橋",
+   "name_kana": null,
+   "lat": 34.860539,
+   "lng": 135.225531,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "有野川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/15.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/15",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-16",
+   "name": "八多川 小名田橋",
+   "name_kana": null,
+   "lat": 34.839016,
+   "lng": 135.209641,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "八多川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/16.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/16",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-17",
+   "name": "淡河川 淡河大橋",
+   "name_kana": null,
+   "lat": 34.814678,
+   "lng": 135.102957,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "淡河川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/17.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/17",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-18",
+   "name": "妙法寺川 上与市橋",
+   "name_kana": null,
+   "lat": 34.673239,
+   "lng": 135.119935,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "妙法寺川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/18.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/18",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-19",
+   "name": "妙法寺川 村雨橋",
+   "name_kana": null,
+   "lat": 34.649015,
+   "lng": 135.13124,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "妙法寺川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/19.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/19",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-20",
+   "name": "塩屋谷川 塩屋北橋",
+   "name_kana": null,
+   "lat": 34.64617,
+   "lng": 135.081966,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "塩屋谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/20.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/20",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-21",
+   "name": "福田川 福田4丁目",
+   "name_kana": null,
+   "lat": 34.644745,
+   "lng": 135.068332,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "福田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/21.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/21",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-22",
+   "name": "福田川 川原橋",
+   "name_kana": null,
+   "lat": 34.632283,
+   "lng": 135.057987,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "福田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/22.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/22",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-23",
+   "name": "山田川 西岡橋",
+   "name_kana": null,
+   "lat": 34.651517,
+   "lng": 135.036089,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "山田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/23.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/23",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-24",
+   "name": "山田川 亀ヶ坪橋",
+   "name_kana": null,
+   "lat": 34.643039,
+   "lng": 135.027415,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "山田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/24.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/24",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-25",
+   "name": "伊川 上脇橋",
+   "name_kana": null,
+   "lat": 34.67424,
+   "lng": 135.025674,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "伊川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/25.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/25",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-26",
+   "name": "伊川 井手橋",
+   "name_kana": null,
+   "lat": 34.663521,
+   "lng": 134.998935,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "伊川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/26.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/26",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-27",
+   "name": "櫨谷川 二ツ屋橋",
+   "name_kana": null,
+   "lat": 34.685302,
+   "lng": 134.992163,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "櫨谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/27.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/27",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-28",
+   "name": "明石川 藤原橋",
+   "name_kana": null,
+   "lat": 34.73953,
+   "lng": 135.009991,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "明石川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/28.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/28",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-29",
+   "name": "明石川 平野橋",
+   "name_kana": null,
+   "lat": 34.710662,
+   "lng": 134.984025,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "明石川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/29.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/29",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "kobe-river-30",
+   "name": "明石川 上明石橋",
+   "name_kana": null,
+   "lat": 34.668379,
+   "lng": 134.987029,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28100",
+   "river_or_route": "明石川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobe-city-office.jp/images/camera/mobile/30.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobe-city-office.jp/"
+   },
+   "operator": "神戸市",
+   "source": {
+    "page_url": "https://kobe-city-office.jp/kawa-camera/kyoku/30",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市（河川モニタリングカメラシステム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=神戸市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-amk",

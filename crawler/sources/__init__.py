@@ -16,6 +16,7 @@ from crawler.sources.iwate_road import IwateRoadParser
 from crawler.sources.jma_volcam import JmaVolcamParser
 from crawler.sources.hbc_webcam import HbcWebcamParser
 from crawler.sources.kaiho_webcam import KaihoWebcamParser
+from crawler.sources.kobe_river import KobeRiverParser
 from crawler.sources.mbc_webcam import MbcWebcamParser
 from crawler.sources.miyagi_road import MiyagiRoadParser
 from crawler.sources.mlit_cbr_road import MlitCbrRoadParser
@@ -49,6 +50,7 @@ REGISTRY = {
         JmaVolcamParser,
         HbcWebcamParser,
         KaihoWebcamParser,
+        KobeRiverParser,
         MbcWebcamParser,
         MiyagiRoadParser,
         MlitCbrRoadParser,

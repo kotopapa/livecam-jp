@@ -151,6 +151,10 @@ sources:
     enabled: true
     note: えひめの道(凍結情報システム)。ehime_maps.jsonが座標つき台帳(57地点)。
           固定URL json/<id>_resent_png.jpg。冬期メインで夏期は一部noimage
+  - id: kobe_river
+    enabled: true
+    note: 神戸市河川モニタリングカメラ30台。詳細ページのGoogleマップリンクから
+          正確な座標。固定URL images/camera/mobile/<NN>.jpg。license=unknown
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）

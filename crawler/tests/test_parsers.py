@@ -392,3 +392,24 @@ def test_ehime_road_json():
     assert c.feed_url.endswith("_resent_png.jpg") and c.prefecture == "38"
     assert 32 < c.lat < 35 and 131 < c.lng < 134
     assert validate_camera_record(c.to_record("2026-08-21")) == []
+
+
+def test_kobe_river_parser():
+    from crawler.sources.kobe_river import KobeRiverParser
+    top = ('<a href="/kawa-camera/kyoku/01">高橋川 深江橋</a>'
+           '<a href="/kawa-camera/kyoku/13">有馬川 公園橋</a>')
+    detail = '<a href="https://maps.google.co.jp/maps?ll=34.721324,135.291457&amp;z=17">位置</a>'
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = detail if "kyoku" in url else top
+            return P()
+    result = KobeRiverParser().discover(S())
+    assert len(result.candidates) == 2
+    c = result.candidates[0]
+    assert c.id == "kobe-river-01" and c.lat == 34.721324
+    assert c.feed_url.endswith("/images/camera/mobile/01.jpg")
+    assert validate_camera_record(c.to_record("2026-08-21")) == []
