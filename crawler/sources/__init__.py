@@ -3,6 +3,7 @@
 新しいパーサを追加したら REGISTRY に登録すること。
 """
 
+from crawler.sources.curated_still import CuratedStillParser
 from crawler.sources.curated_world import CuratedWorldParser
 from crawler.sources.curated_youtube import CuratedYoutubeParser
 from crawler.sources.fukui_road import FukuiRoadParser
@@ -31,6 +32,7 @@ from crawler.sources.youtube_live import YoutubeLiveParser
 REGISTRY = {
     p.source_id: p
     for p in [
+        CuratedStillParser,
         CuratedWorldParser,
         CuratedYoutubeParser,
         FukuiRoadParser,

@@ -315,3 +315,18 @@ def test_miyagi_region_parse():
     assert len(items) >= 3
     slug, name, img = items[0]
     assert img.startswith("img/") and name
+
+
+def test_curated_still_yaml():
+    from crawler.sources.curated_still import CuratedStillParser, load_curated
+    cams = load_curated()
+    assert len(cams) >= 50
+    ids = [c["id"] for c in cams]
+    assert len(ids) == len(set(ids)), "IDは一意であること"
+    assert all(c.get("operator") for c in cams), "運営者不明のカメラは載せない"
+    assert all(c.get("image_url", "").startswith("http") for c in cams)
+    result = CuratedStillParser().discover(None)
+    assert len(result.candidates) == len(cams) and not result.errors
+    dam = next(c for c in result.candidates if c.category == "dam")
+    assert dam.feed_type == "still_image" and dam.coord_accuracy == "approx"
+    assert validate_camera_record(dam.to_record("2026-08-21")) == []

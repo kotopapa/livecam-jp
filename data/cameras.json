@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T06:55:19Z",
+ "version": "2026-08-21T07:00:09Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -481,6 +481,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-churaumi-kuroshio",
+   "name": "沖縄美ら海水族館 黒潮の海",
+   "name_kana": null,
+   "lat": 26.6941,
+   "lng": 127.878,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "cVm1NrAI_f8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=cVm1NrAI_f8"
+   },
+   "operator": "国営沖縄記念公園（沖縄美ら海水族館）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=cVm1NrAI_f8",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国営沖縄記念公園（沖縄美ら海水族館）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-chuzenji-kojoen",
@@ -4847,6 +4885,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-michinoeki-nikko",
+   "name": "道の駅日光 駐車場",
+   "name_kana": null,
+   "lat": 36.7295,
+   "lng": 139.6866,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "09",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Dy0idlngpN0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Dy0idlngpN0"
+   },
+   "operator": "道の駅日光 日光街道ニコニコ本陣",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Dy0idlngpN0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：道の駅日光 日光街道ニコニコ本陣（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-minatomirai-tbs",
@@ -14541,6 +14617,2096 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-still-dam-gosho",
+   "name": "御所ダム",
+   "name_kana": null,
+   "lat": 39.7381,
+   "lng": 141.0644,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS12.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam02.html"
+   },
+   "operator": "国土交通省東北地方整備局 北上川ダム統合管理事務所",
+   "source": {
+    "page_url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam02.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 北上川ダム統合管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-aonodam",
+   "name": "青野ダム",
+   "name_kana": null,
+   "lat": 34.9333,
+   "lng": 135.207,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/aonodam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/takarazuka/dam_detail/aonodam.html"
+   },
+   "operator": "兵庫県 阪神北県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/takarazuka/dam_detail/aonodam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 阪神北県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-dainichidam",
+   "name": "大日ダム",
+   "name_kana": null,
+   "lat": 34.2427,
+   "lng": 134.7728,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/dainichidam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/dainichidam.html"
+   },
+   "operator": "兵庫県 淡路県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/dainichidam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 淡路県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-hikiharadam",
+   "name": "引原ダム",
+   "name_kana": null,
+   "lat": 35.2303,
+   "lng": 134.5383,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/hikiharadam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/hikiharadam.html"
+   },
+   "operator": "兵庫県 西播磨県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/hikiharadam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 西播磨県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-ikunodam",
+   "name": "生野ダム",
+   "name_kana": null,
+   "lat": 35.1855,
+   "lng": 134.8214,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/ikunodam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/ikunodam.html"
+   },
+   "operator": "兵庫県 中播磨県民センター",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/ikunodam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 中播磨県民センター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-ishiidam",
+   "name": "石井ダム",
+   "name_kana": null,
+   "lat": 34.7055,
+   "lng": 135.1465,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/ishiidam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/kobe/dam_detail/ishiidam.html"
+   },
+   "operator": "兵庫県 神戸県民センター",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/kobe/dam_detail/ishiidam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 神戸県民センター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-kanajidam",
+   "name": "金出地ダム",
+   "name_kana": null,
+   "lat": 34.9282,
+   "lng": 134.4225,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/kanajidam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/kanajidam.html"
+   },
+   "operator": "兵庫県 西播磨県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/kanajidam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 西播磨県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-kitafujidam",
+   "name": "北富士ダム",
+   "name_kana": null,
+   "lat": 34.2777,
+   "lng": 134.8185,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/kitafujidam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/kitafujidam.html"
+   },
+   "operator": "兵庫県 淡路県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/kitafujidam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 淡路県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-kurikaradam",
+   "name": "栗柄ダム",
+   "name_kana": null,
+   "lat": 35.1373,
+   "lng": 135.2246,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/kurikaradam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/kurikaradam.html"
+   },
+   "operator": "兵庫県 丹波県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/kurikaradam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 丹波県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-mikumaridam",
+   "name": "みくまりダム",
+   "name_kana": null,
+   "lat": 35.1041,
+   "lng": 135.3481,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/mikumaridam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/mikumaridam.html"
+   },
+   "operator": "兵庫県 丹波県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/mikumaridam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 丹波県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-mitakaradam",
+   "name": "三宝ダム",
+   "name_kana": null,
+   "lat": 35.1576,
+   "lng": 135.1938,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/mitakaradam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/mitakaradam.html"
+   },
+   "operator": "兵庫県 丹波県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/mitakaradam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 丹波県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-nagaidanidam",
+   "name": "長谷ダム",
+   "name_kana": null,
+   "lat": 34.9432,
+   "lng": 134.4414,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/nagaidanidam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/nagaidanidam.html"
+   },
+   "operator": "兵庫県 西播磨県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/nagaidanidam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 西播磨県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-nariaidam",
+   "name": "成相ダム",
+   "name_kana": null,
+   "lat": 34.275,
+   "lng": 134.8166,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/nariaidam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/nariaidam.html"
+   },
+   "operator": "兵庫県 淡路県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/nariaidam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 淡路県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-ohrodam",
+   "name": "大路ダム",
+   "name_kana": null,
+   "lat": 35.291,
+   "lng": 134.818,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/ohrodam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/yabu/dam_detail/ohrodam.html"
+   },
+   "operator": "兵庫県 但馬県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/yabu/dam_detail/ohrodam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 但馬県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-sugodam",
+   "name": "菅生ダム",
+   "name_kana": null,
+   "lat": 35.0014,
+   "lng": 134.6345,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/sugodam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/sugodam.html"
+   },
+   "operator": "兵庫県 中播磨県民センター",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/sugodam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 中播磨県民センター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-tantodam",
+   "name": "但東ダム",
+   "name_kana": null,
+   "lat": 35.4865,
+   "lng": 135.0058,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/tantodam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/toyooka/dam_detail/tantodam.html"
+   },
+   "operator": "兵庫県 但馬県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/toyooka/dam_detail/tantodam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 但馬県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-tennodam",
+   "name": "天王ダム",
+   "name_kana": null,
+   "lat": 34.7176,
+   "lng": 135.1597,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/tennodam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/kobe/dam_detail/tennodam.html"
+   },
+   "operator": "兵庫県 神戸県民センター",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/kobe/dam_detail/tennodam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 神戸県民センター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-ushiuchidam",
+   "name": "牛内ダム",
+   "name_kana": null,
+   "lat": 34.2501,
+   "lng": 134.7892,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/ushiuchidam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/ushiuchidam.html"
+   },
+   "operator": "兵庫県 淡路県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/ushiuchidam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 淡路県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-yasumurodam",
+   "name": "安室ダム",
+   "name_kana": null,
+   "lat": 34.8749,
+   "lng": 134.2817,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/yasumurodam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/yasumurodam.html"
+   },
+   "operator": "兵庫県 西播磨県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/yasumurodam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 西播磨県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-yasutomidam",
+   "name": "安富ダム",
+   "name_kana": null,
+   "lat": 35.0456,
+   "lng": 134.6125,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/yasutomidam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/yasutomidam.html"
+   },
+   "operator": "兵庫県 中播磨県民センター",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/yasutomidam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 中播磨県民センター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-yofudodam",
+   "name": "与布土ダム",
+   "name_kana": null,
+   "lat": 35.2745,
+   "lng": 134.8894,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/yofudodam2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/yabu/dam_detail/yofudodam.html"
+   },
+   "operator": "兵庫県 但馬県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/yabu/dam_detail/yofudodam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 但馬県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-hyogo-dam-yuzuruhadam",
+   "name": "諭鶴羽ダム",
+   "name_kana": null,
+   "lat": 34.25,
+   "lng": 134.7985,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://hyogo.kasen-teikyo.info/dam/yuzuruhadam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/yuzuruhadam.html"
+   },
+   "operator": "兵庫県 淡路県民局",
+   "source": {
+    "page_url": "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/yuzuruhadam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：兵庫県 淡路県民局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-isawa",
+   "name": "胆沢ダム",
+   "name_kana": null,
+   "lat": 39.115,
+   "lng": 140.8378,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS34.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam05.html"
+   },
+   "operator": "国土交通省東北地方整備局 北上川ダム統合管理事務所",
+   "source": {
+    "page_url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam05.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 北上川ダム統合管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-iwaya",
+   "name": "岩屋ダム",
+   "name_kana": null,
+   "lat": 35.7869,
+   "lng": 137.24,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.iwayadam.jp/iwaya/camera/iwaya-dam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.water.go.jp/chubu/iwaya/html/camera/camera.html"
+   },
+   "operator": "独立行政法人水資源機構 岩屋ダム管理所",
+   "source": {
+    "page_url": "https://www.water.go.jp/chubu/iwaya/html/camera/camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：独立行政法人水資源機構 岩屋ダム管理所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-matsubara",
+   "name": "松原ダム",
+   "name_kana": null,
+   "lat": 33.2075,
+   "lng": 130.95,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/toukan/bousai/data/image/cctv/C_001_cctv2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/toukan/bousai/cgdweb/livecamera.php"
+   },
+   "operator": "国土交通省九州地方整備局 筑後川ダム統合管理事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/toukan/bousai/cgdweb/livecamera.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省九州地方整備局 筑後川ダム統合管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-mikunigawa",
+   "name": "三国川ダム",
+   "name_kana": null,
+   "lat": 37.0139,
+   "lng": 138.9958,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hrr.mlit.go.jp/bosai/img/734001.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hrr.mlit.go.jp/saguri/livecam/livecam.html"
+   },
+   "operator": "国土交通省北陸地方整備局 三国川ダム管理所",
+   "source": {
+    "page_url": "https://www.hrr.mlit.go.jp/saguri/livecam/livecam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省北陸地方整備局 三国川ダム管理所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-misogawa",
+   "name": "味噌川ダム",
+   "name_kana": null,
+   "lat": 35.9989,
+   "lng": 137.7961,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.misogawa.jp/live/miso_live.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.water.go.jp/chubu/misogawa/live/camera_index.html"
+   },
+   "operator": "独立行政法人水資源機構 味噌川ダム管理所",
+   "source": {
+    "page_url": "https://www.water.go.jp/chubu/misogawa/live/camera_index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：独立行政法人水資源機構 味噌川ダム管理所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-ootaki",
+   "name": "大滝ダム",
+   "name_kana": null,
+   "lat": 34.3183,
+   "lng": 135.9214,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "29",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.seishiga.kkr.mlit.go.jp/kinokawa/cctv/pic/C02925.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.seishiga.kkr.mlit.go.jp/kinokawa/cctv/ootaki.html"
+   },
+   "operator": "国土交通省近畿地方整備局 紀の川ダム統合管理事務所",
+   "source": {
+    "page_url": "https://www.seishiga.kkr.mlit.go.jp/kinokawa/cctv/ootaki.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省近畿地方整備局 紀の川ダム統合管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-sameura",
+   "name": "早明浦ダム",
+   "name_kana": null,
+   "lat": 33.7897,
+   "lng": 133.6661,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp11.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.water.go.jp/yoshino/ikeda/sameura/eizoukan.html"
+   },
+   "operator": "独立行政法人水資源機構 池田総合管理所(吉野川上流総合管理所)",
+   "source": {
+    "page_url": "https://www.water.go.jp/yoshino/ikeda/sameura/eizoukan.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：独立行政法人水資源機構 池田総合管理所(吉野川上流総合管理所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-shijushida",
+   "name": "四十四田ダム",
+   "name_kana": null,
+   "lat": 39.7458,
+   "lng": 141.0994,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS06.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam01.html"
+   },
+   "operator": "国土交通省東北地方整備局 北上川ダム統合管理事務所",
+   "source": {
+    "page_url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam01.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 北上川ダム統合管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-shimokubo",
+   "name": "下久保ダム",
+   "name_kana": null,
+   "lat": 36.1611,
+   "lng": 138.9931,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "10",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.water.go.jp/kanto/simokubo/dam/images/ph_damlive01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.water.go.jp/kanto/simokubo/dam/damlive.html"
+   },
+   "operator": "独立行政法人水資源機構 下久保ダム管理所",
+   "source": {
+    "page_url": "https://www.water.go.jp/kanto/simokubo/dam/damlive.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：独立行政法人水資源機構 下久保ダム管理所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-shimouke",
+   "name": "下筌ダム",
+   "name_kana": null,
+   "lat": 33.2119,
+   "lng": 130.9756,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/toukan/bousai/data/image/cctv/C_003_cctv2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/toukan/bousai/cgdweb/livecamera.php"
+   },
+   "operator": "国土交通省九州地方整備局 筑後川ダム統合管理事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/toukan/bousai/cgdweb/livecamera.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省九州地方整備局 筑後川ダム統合管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-shintoyone",
+   "name": "新豊根ダム",
+   "name_kana": null,
+   "lat": 35.2069,
+   "lng": 137.7106,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "23",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/hamamatsu/live_view_kasen/pc/img/PCK0068L.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/hamamatsu/shintoyone/livecamera.html"
+   },
+   "operator": "国土交通省中部地方整備局 浜松河川国道事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/hamamatsu/shintoyone/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 浜松河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-takizawa",
+   "name": "滝沢ダム",
+   "name_kana": null,
+   "lat": 35.9358,
+   "lng": 138.9997,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.arakawadam.org/livecamera/takizawa/image.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.water.go.jp/kanto/arakawa/realtime/realtime.html"
+   },
+   "operator": "独立行政法人水資源機構 荒川ダム総合管理所",
+   "source": {
+    "page_url": "https://www.water.go.jp/kanto/arakawa/realtime/realtime.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：独立行政法人水資源機構 荒川ダム総合管理所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-tase",
+   "name": "田瀬ダム",
+   "name_kana": null,
+   "lat": 39.3439,
+   "lng": 141.2183,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS21.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam03.html"
+   },
+   "operator": "国土交通省東北地方整備局 北上川ダム統合管理事務所",
+   "source": {
+    "page_url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam03.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 北上川ダム統合管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-tokuyama",
+   "name": "徳山ダム",
+   "name_kana": null,
+   "lat": 35.6647,
+   "lng": 136.4994,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.tokuyamadam.jp/dam.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.tokuyamadam.jp/01_map_photo.html"
+   },
+   "operator": "独立行政法人水資源機構 木曽川用水総合管理所 徳山ダム管理所",
+   "source": {
+    "page_url": "https://www.tokuyamadam.jp/01_map_photo.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：独立行政法人水資源機構 木曽川用水総合管理所 徳山ダム管理所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-tomisato",
+   "name": "富郷ダム",
+   "name_kana": null,
+   "lat": 33.8842,
+   "lng": 133.4784,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "38",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp31.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/html/p0502/p050204.html"
+   },
+   "operator": "国土交通省四国地方整備局 吉野川ダム統合管理事務所(銅山川3ダム)※水資源機構池田総合管理所の水管理情報システム上で共同配信",
+   "source": {
+    "page_url": "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/html/p0502/p050204.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省四国地方整備局 吉野川ダム統合管理事務所(銅山川3ダム)※水資源機構池田総合管理所の水管理情報システム上で共同配信"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-urayama",
+   "name": "浦山ダム",
+   "name_kana": null,
+   "lat": 35.9494,
+   "lng": 139.0839,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.arakawadam.org/livecamera/urayama/image.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.water.go.jp/kanto/arakawa/realtime/realtime.html"
+   },
+   "operator": "独立行政法人水資源機構 荒川ダム総合管理所",
+   "source": {
+    "page_url": "https://www.water.go.jp/kanto/arakawa/realtime/realtime.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：独立行政法人水資源機構 荒川ダム総合管理所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-yagisawa",
+   "name": "矢木沢ダム",
+   "name_kana": null,
+   "lat": 36.8563,
+   "lng": 139.1499,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "10",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www3.kannet.ne.jp/~numata/teiten/yagisawa_2m.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.water.go.jp/kanto/numata/"
+   },
+   "operator": "独立行政法人水資源機構 利根川上流総合管理所(旧沼田総合管理所)",
+   "source": {
+    "page_url": "https://www.water.go.jp/kanto/numata/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：独立行政法人水資源機構 利根川上流総合管理所(旧沼田総合管理所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-yasaka",
+   "name": "弥栄ダム",
+   "name_kana": null,
+   "lat": 34.3603,
+   "lng": 132.1917,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "34",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cgr.mlit.go.jp/yasaka/live/last_image.php?id=C03202",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yasaka/live/index.php"
+   },
+   "operator": "国土交通省中国地方整備局 弥栄ダム管理所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yasaka/live/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中国地方整備局 弥栄ダム管理所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-yuda",
+   "name": "湯田ダム",
+   "name_kana": null,
+   "lat": 39.3308,
+   "lng": 140.8916,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS46.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam04.html"
+   },
+   "operator": "国土交通省東北地方整備局 北上川ダム統合管理事務所",
+   "source": {
+    "page_url": "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam04.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省東北地方整備局 北上川ダム統合管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-hirosaki-castle-tower",
+   "name": "弘前市(弘前城天守)",
+   "name_kana": null,
+   "lat": 40.6073,
+   "lng": 140.4638,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "02",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://live4.hi-it.jp/viewer/live/ja/live.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.hirosaki.aomori.jp/gaiyou/livecam/"
+   },
+   "operator": "弘前市",
+   "source": {
+    "page_url": "https://www.city.hirosaki.aomori.jp/gaiyou/livecam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：弘前市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-ioworld-kagoshima-kuroshio",
+   "name": "いおワールドかごしま水族館 黒潮大水槽",
+   "name_kana": null,
+   "lat": 31.5966,
+   "lng": 130.5599,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://ioworld.aa1.netvolante.jp/viewer/live/index.html?lang=ja",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://ioworld.jp/livecamera"
+   },
+   "operator": "いおワールドかごしま水族館",
+   "source": {
+    "page_url": "https://ioworld.jp/livecamera",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：いおワールドかごしま水族館"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kushimoto-marine-park-underwater",
+   "name": "串本海中公園 海中景観ライブ映像",
+   "name_kana": null,
+   "lat": 33.478,
+   "lng": 135.7889,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "30",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/51_c/image/2026/08/21/NCS20260821150002600.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=51"
+   },
+   "operator": "環境省 生物多様性センター(インターネット自然研究所)",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=51",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 生物多様性センター(インターネット自然研究所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-michinoeki-aso-kako-camera",
+   "name": "道の駅阿蘇 火口(阿蘇パーキング)",
+   "name_kana": null,
+   "lat": 32.943,
+   "lng": 131.1047,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://parking.aso-navi.com/aso.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.aso-denku.jp/tag/%E7%81%AB%E5%8F%A3%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/"
+   },
+   "operator": "公益財団法人自然公園財団 阿蘇支部(公益推進協会助成)",
+   "source": {
+    "page_url": "https://www.aso-denku.jp/tag/%E7%81%AB%E5%8F%A3%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：公益財団法人自然公園財団 阿蘇支部(公益推進協会助成)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-toda-city-hall-camera",
+   "name": "戸田市役所(まちが見えるカメラ)",
+   "name_kana": null,
+   "lat": 35.8168,
+   "lng": 139.6789,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://live1.city.toda.saitama.jp/-wvhttp-01-/image.cgi?v=jpg:160x120&seq=",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html"
+   },
+   "operator": "戸田市(デジタル戦略室)",
+   "source": {
+    "page_url": "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：戸田市(デジタル戦略室)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-toda-fire-hq-camera",
+   "name": "戸田市消防本部(まちが見えるカメラ)",
+   "name_kana": null,
+   "lat": 35.8085,
+   "lng": 139.6773,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://live2.city.toda.saitama.jp/-wvhttp-01-/image.cgi?v=jpg:160x120&seq=",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html"
+   },
+   "operator": "戸田市(デジタル戦略室)",
+   "source": {
+    "page_url": "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：戸田市(デジタル戦略室)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-toda-saiko-camera",
+   "name": "戸田市彩湖(まちが見えるカメラ)",
+   "name_kana": null,
+   "lat": 35.8264,
+   "lng": 139.6469,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://live3.city.toda.saitama.jp/-wvhttp-01-/image.cgi?v=jpg:160x120&seq=",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html"
+   },
+   "operator": "戸田市(デジタル戦略室)",
+   "source": {
+    "page_url": "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：戸田市(デジタル戦略室)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-trail-chogatake-hutte",
+   "name": "蝶ヶ岳ヒュッテ",
+   "name_kana": null,
+   "lat": 36.2889,
+   "lng": 137.7253,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/cyougatake.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+   },
+   "operator": "蝶ヶ岳ヒュッテ(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター",
+   "source": {
+    "page_url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：蝶ヶ岳ヒュッテ(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-trail-enzansou-tsubakurodake",
+   "name": "燕山荘(燕岳)",
+   "name_kana": null,
+   "lat": 36.3994,
+   "lng": 137.7152,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/enzan.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+   },
+   "operator": "燕山荘(株式会社燕山荘)(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター",
+   "source": {
+    "page_url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：燕山荘(株式会社燕山荘)(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-trail-karasawa-hyutte",
+   "name": "涸沢ヒュッテ",
+   "name_kana": null,
+   "lat": 36.2944,
+   "lng": 137.6625,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/karasawa.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+   },
+   "operator": "涸沢ヒュッテ(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク(northalps.net)/掲載:環境省・中部山岳国立公園南部地域利用推進協議会(上高地ビジターセンター)",
+   "source": {
+    "page_url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：涸沢ヒュッテ(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク(northalps.net)/掲載:環境省・中部山岳国立公園南部地域利用推進協議会(上高地ビジターセンター)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-trail-kitahotaka-goya",
+   "name": "北穂高小屋",
+   "name_kana": null,
+   "lat": 36.3038,
+   "lng": 137.6527,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/kitaho.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+   },
+   "operator": "北穂高小屋(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター",
+   "source": {
+    "page_url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：北穂高小屋(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-trail-nishiho-sanso",
+   "name": "西穂山荘",
+   "name_kana": null,
+   "lat": 36.2655,
+   "lng": 137.6177,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/nisiho.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+   },
+   "operator": "西穂山荘(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター",
+   "source": {
+    "page_url": "https://www.kamikochi-vc.or.jp/watch-walk/live-camera",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：西穂山荘(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-trail-norikuradake-kankyosho",
+   "name": "乗鞍岳(乗鞍高原)",
+   "name_kana": null,
+   "lat": 36.1172,
+   "lng": 137.6137,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.sizenken.biodic.go.jp/camera_img/85_c/image/2026/08/21/NCS20260821150044360.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=85"
+   },
+   "operator": "環境省 インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=85",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-trail-senjojiki-cirque",
+   "name": "千畳敷カール(ホテル千畳敷)",
+   "name_kana": null,
+   "lat": 35.7786,
+   "lng": 137.8131,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.chuo-alps.com/ncarll.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.chuo-alps.com/live/"
+   },
+   "operator": "中央アルプス観光株式会社",
+   "source": {
+    "page_url": "https://www.chuo-alps.com/live/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：中央アルプス観光株式会社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-stv-hokkaido-mix",

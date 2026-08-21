@@ -131,6 +131,10 @@ sources:
     enabled: true
     note: 気象庁 火山監視カメラ95台(camicon.geojsonが座標つき台帳)。都度解決型
           feed=jma_volcam。政府標準利用規約(出典明記)
+  - id: curated_still
+    enabled: true
+    note: 静止画キュレーション台帳(ダム41・山小屋/景観・水族館等)。license=unknown
+          →人手レビュー。画像URLは追加時に直接検証済み
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）

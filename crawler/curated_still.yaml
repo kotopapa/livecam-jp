@@ -1,0 +1,610 @@
+# 人手キュレーションの静止画ライブカメラ台帳（ダム・山小屋・水族館等の単発カメラ）。
+# 掲載条件: 運営者特定済み・画像URL直接検証済み。座標は設置地点の手動指定(approx)。
+# 利用条件が不明なものは license=unknown → review_cli の人手レビュー経由で採用。
+# 2026-08-21 調査分。
+
+cameras:
+  - id: curated-still-dam-shintoyone
+    name: "新豊根ダム"
+    operator: "国土交通省中部地方整備局 浜松河川国道事務所"
+    category: dam
+    prefecture: "23"
+    lat: 35.2069
+    lng: 137.7106
+    image_url: "https://www.cbr.mlit.go.jp/hamamatsu/live_view_kasen/pc/img/PCK0068L.jpg"
+    page_url: "https://www.cbr.mlit.go.jp/hamamatsu/shintoyone/livecamera.html"
+    note: "天竜川水系 大入川"
+
+  - id: curated-still-dam-yasaka
+    name: "弥栄ダム"
+    operator: "国土交通省中国地方整備局 弥栄ダム管理所"
+    category: dam
+    prefecture: "34"
+    lat: 34.3603
+    lng: 132.1917
+    image_url: "https://www.cgr.mlit.go.jp/yasaka/live/last_image.php?id=C03202"
+    page_url: "https://www.cgr.mlit.go.jp/yasaka/live/index.php"
+    note: "小瀬川水系 小瀬川"
+
+  - id: curated-still-dam-ootaki
+    name: "大滝ダム"
+    operator: "国土交通省近畿地方整備局 紀の川ダム統合管理事務所"
+    category: dam
+    prefecture: "29"
+    lat: 34.3183
+    lng: 135.9214
+    image_url: "https://www.seishiga.kkr.mlit.go.jp/kinokawa/cctv/pic/C02925.jpg"
+    page_url: "https://www.seishiga.kkr.mlit.go.jp/kinokawa/cctv/ootaki.html"
+    note: "紀の川水系 紀の川(大滝川)"
+
+  - id: curated-still-dam-mikunigawa
+    name: "三国川ダム"
+    operator: "国土交通省北陸地方整備局 三国川ダム管理所"
+    category: dam
+    prefecture: "15"
+    lat: 37.0139
+    lng: 138.9958
+    image_url: "https://www.hrr.mlit.go.jp/bosai/img/734001.jpg"
+    page_url: "https://www.hrr.mlit.go.jp/saguri/livecam/livecam.html"
+    note: "信濃川水系 三国川"
+
+  - id: curated-still-dam-iwaya
+    name: "岩屋ダム"
+    operator: "独立行政法人水資源機構 岩屋ダム管理所"
+    category: dam
+    prefecture: "21"
+    lat: 35.7869
+    lng: 137.24
+    image_url: "https://www.iwayadam.jp/iwaya/camera/iwaya-dam.jpg"
+    page_url: "https://www.water.go.jp/chubu/iwaya/html/camera/camera.html"
+    note: "木曽川水系 馬瀬川"
+
+  - id: curated-still-dam-sameura
+    name: "早明浦ダム"
+    operator: "独立行政法人水資源機構 池田総合管理所(吉野川上流総合管理所)"
+    category: dam
+    prefecture: "39"
+    lat: 33.7897
+    lng: 133.6661
+    image_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp11.jpg"
+    page_url: "https://www.water.go.jp/yoshino/ikeda/sameura/eizoukan.html"
+    note: "吉野川水系 吉野川"
+
+  - id: curated-still-dam-misogawa
+    name: "味噌川ダム"
+    operator: "独立行政法人水資源機構 味噌川ダム管理所"
+    category: dam
+    prefecture: "20"
+    lat: 35.9989
+    lng: 137.7961
+    image_url: "https://www.misogawa.jp/live/miso_live.jpg"
+    page_url: "https://www.water.go.jp/chubu/misogawa/live/camera_index.html"
+    note: "木曽川水系 木曽川"
+
+  - id: curated-still-dam-shimokubo
+    name: "下久保ダム"
+    operator: "独立行政法人水資源機構 下久保ダム管理所"
+    category: dam
+    prefecture: "10"
+    lat: 36.1611
+    lng: 138.9931
+    image_url: "https://www.water.go.jp/kanto/simokubo/dam/images/ph_damlive01.jpg"
+    page_url: "https://www.water.go.jp/kanto/simokubo/dam/damlive.html"
+    note: "利根川水系 神流川"
+
+  - id: curated-still-dam-urayama
+    name: "浦山ダム"
+    operator: "独立行政法人水資源機構 荒川ダム総合管理所"
+    category: dam
+    prefecture: "11"
+    lat: 35.9494
+    lng: 139.0839
+    image_url: "https://www.arakawadam.org/livecamera/urayama/image.jpg"
+    page_url: "https://www.water.go.jp/kanto/arakawa/realtime/realtime.html"
+    note: "荒川水系 浦山川"
+
+  - id: curated-still-dam-takizawa
+    name: "滝沢ダム"
+    operator: "独立行政法人水資源機構 荒川ダム総合管理所"
+    category: dam
+    prefecture: "11"
+    lat: 35.9358
+    lng: 138.9997
+    image_url: "https://www.arakawadam.org/livecamera/takizawa/image.jpg"
+    page_url: "https://www.water.go.jp/kanto/arakawa/realtime/realtime.html"
+    note: "荒川水系 中津川"
+
+  - id: curated-still-dam-matsubara
+    name: "松原ダム"
+    operator: "国土交通省九州地方整備局 筑後川ダム統合管理事務所"
+    category: dam
+    prefecture: "44"
+    lat: 33.2075
+    lng: 130.95
+    image_url: "https://www.qsr.mlit.go.jp/toukan/bousai/data/image/cctv/C_001_cctv2.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/toukan/bousai/cgdweb/livecamera.php"
+    note: "筑後川水系 大山川"
+
+  - id: curated-still-dam-shimouke
+    name: "下筌ダム"
+    operator: "国土交通省九州地方整備局 筑後川ダム統合管理事務所"
+    category: dam
+    prefecture: "44"
+    lat: 33.2119
+    lng: 130.9756
+    image_url: "https://www.qsr.mlit.go.jp/toukan/bousai/data/image/cctv/C_003_cctv2.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/toukan/bousai/cgdweb/livecamera.php"
+    note: "筑後川水系 津江川"
+
+  - id: curated-still-dam-tomisato
+    name: "富郷ダム"
+    operator: "国土交通省四国地方整備局 吉野川ダム統合管理事務所(銅山川3ダム)※水資源機構池田総合管理所の水管理情報システム上で共同配信"
+    category: dam
+    prefecture: "38"
+    lat: 33.8842
+    lng: 133.4784
+    image_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp31.jpg"
+    page_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/html/p0502/p050204.html"
+    note: "吉野川水系 銅山川"
+
+  - id: curated-still-dam-gosho
+    name: "御所ダム"
+    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+    category: dam
+    prefecture: "03"
+    lat: 39.7381
+    lng: 141.0644
+    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS12.jpg"
+    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam02.html"
+    note: "北上川水系 雫石川"
+
+  - id: curated-still-dam-shijushida
+    name: "四十四田ダム"
+    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+    category: dam
+    prefecture: "03"
+    lat: 39.7458
+    lng: 141.0994
+    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS06.jpg"
+    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam01.html"
+    note: "北上川水系 北上川"
+
+  - id: curated-still-dam-isawa
+    name: "胆沢ダム"
+    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+    category: dam
+    prefecture: "03"
+    lat: 39.115
+    lng: 140.8378
+    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS34.jpg"
+    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam05.html"
+    note: "北上川水系 胆沢川"
+
+  - id: curated-still-dam-tase
+    name: "田瀬ダム"
+    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+    category: dam
+    prefecture: "03"
+    lat: 39.3439
+    lng: 141.2183
+    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS21.jpg"
+    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam03.html"
+    note: "北上川水系 猿ヶ石川"
+
+  - id: curated-still-dam-yuda
+    name: "湯田ダム"
+    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+    category: dam
+    prefecture: "03"
+    lat: 39.3308
+    lng: 140.8916
+    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS46.jpg"
+    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam04.html"
+    note: "北上川水系 和賀川"
+
+  - id: curated-still-dam-yagisawa
+    name: "矢木沢ダム"
+    operator: "独立行政法人水資源機構 利根川上流総合管理所(旧沼田総合管理所)"
+    category: dam
+    prefecture: "10"
+    lat: 36.8563
+    lng: 139.1499
+    image_url: "https://www3.kannet.ne.jp/~numata/teiten/yagisawa_2m.jpg"
+    page_url: "https://www.water.go.jp/kanto/numata/"
+    note: "利根川水系 利根川"
+
+  - id: curated-still-dam-tokuyama
+    name: "徳山ダム"
+    operator: "独立行政法人水資源機構 木曽川用水総合管理所 徳山ダム管理所"
+    category: dam
+    prefecture: "21"
+    lat: 35.6647
+    lng: 136.4994
+    image_url: "https://www.tokuyamadam.jp/dam.jpg"
+    page_url: "https://www.tokuyamadam.jp/01_map_photo.html"
+    note: "木曽川水系 揖斐川"
+
+  - id: curated-still-dam-hyogo-dam-tennodam
+    name: "天王ダム"
+    operator: "兵庫県 神戸県民センター"
+    category: dam
+    prefecture: "28"
+    lat: 34.7176
+    lng: 135.1597
+    image_url: "https://hyogo.kasen-teikyo.info/dam/tennodam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/kobe/dam_detail/tennodam.html"
+    note: "新湊川水系 天王谷川"
+
+  - id: curated-still-dam-hyogo-dam-ikunodam
+    name: "生野ダム"
+    operator: "兵庫県 中播磨県民センター"
+    category: dam
+    prefecture: "28"
+    lat: 35.1855
+    lng: 134.8214
+    image_url: "https://hyogo.kasen-teikyo.info/dam/ikunodam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/ikunodam.html"
+    note: "市川水系 市川"
+
+  - id: curated-still-dam-hyogo-dam-aonodam
+    name: "青野ダム"
+    operator: "兵庫県 阪神北県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.9333
+    lng: 135.207
+    image_url: "https://hyogo.kasen-teikyo.info/dam/aonodam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/takarazuka/dam_detail/aonodam.html"
+    note: "武庫川水系 青野川"
+
+  - id: curated-still-dam-hyogo-dam-yofudodam
+    name: "与布土ダム"
+    operator: "兵庫県 但馬県民局"
+    category: dam
+    prefecture: "28"
+    lat: 35.2745
+    lng: 134.8894
+    image_url: "https://hyogo.kasen-teikyo.info/dam/yofudodam2.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/yabu/dam_detail/yofudodam.html"
+    note: "円山川水系 与布土川"
+
+  - id: curated-still-dam-hyogo-dam-hikiharadam
+    name: "引原ダム"
+    operator: "兵庫県 西播磨県民局"
+    category: dam
+    prefecture: "28"
+    lat: 35.2303
+    lng: 134.5383
+    image_url: "https://hyogo.kasen-teikyo.info/dam/hikiharadam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/hikiharadam.html"
+    note: "揖保川水系 引原川"
+
+  - id: curated-still-dam-hyogo-dam-mikumaridam
+    name: "みくまりダム"
+    operator: "兵庫県 丹波県民局"
+    category: dam
+    prefecture: "28"
+    lat: 35.1041
+    lng: 135.3481
+    image_url: "https://hyogo.kasen-teikyo.info/dam/mikumaridam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/mikumaridam.html"
+    note: "加古川水系 三熊川"
+
+  - id: curated-still-dam-hyogo-dam-sugodam
+    name: "菅生ダム"
+    operator: "兵庫県 中播磨県民センター"
+    category: dam
+    prefecture: "28"
+    lat: 35.0014
+    lng: 134.6345
+    image_url: "https://hyogo.kasen-teikyo.info/dam/sugodam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/sugodam.html"
+    note: "夢前川水系 菅生川"
+
+  - id: curated-still-dam-hyogo-dam-yasutomidam
+    name: "安富ダム"
+    operator: "兵庫県 中播磨県民センター"
+    category: dam
+    prefecture: "28"
+    lat: 35.0456
+    lng: 134.6125
+    image_url: "https://hyogo.kasen-teikyo.info/dam/yasutomidam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/himeji/dam_detail/yasutomidam.html"
+    note: "揖保川水系 林田川"
+
+  - id: curated-still-dam-hyogo-dam-ishiidam
+    name: "石井ダム"
+    operator: "兵庫県 神戸県民センター"
+    category: dam
+    prefecture: "28"
+    lat: 34.7055
+    lng: 135.1465
+    image_url: "https://hyogo.kasen-teikyo.info/dam/ishiidam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/kobe/dam_detail/ishiidam.html"
+    note: "新湊川水系 烏原川"
+
+  - id: curated-still-dam-hyogo-dam-kanajidam
+    name: "金出地ダム"
+    operator: "兵庫県 西播磨県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.9282
+    lng: 134.4225
+    image_url: "https://hyogo.kasen-teikyo.info/dam/kanajidam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/kanajidam.html"
+    note: "千種川水系 鞍居川"
+
+  - id: curated-still-dam-hyogo-dam-nagaidanidam
+    name: "長谷ダム"
+    operator: "兵庫県 西播磨県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.9432
+    lng: 134.4414
+    image_url: "https://hyogo.kasen-teikyo.info/dam/nagaidanidam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/nagaidanidam.html"
+    note: "千種川水系 長谷川"
+
+  - id: curated-still-dam-hyogo-dam-yasumurodam
+    name: "安室ダム"
+    operator: "兵庫県 西播磨県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.8749
+    lng: 134.2817
+    image_url: "https://hyogo.kasen-teikyo.info/dam/yasumurodam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/koto/dam_detail/yasumurodam.html"
+    note: "千種川水系 安室川"
+
+  - id: curated-still-dam-hyogo-dam-dainichidam
+    name: "大日ダム"
+    operator: "兵庫県 淡路県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.2427
+    lng: 134.7728
+    image_url: "https://hyogo.kasen-teikyo.info/dam/dainichidam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/dainichidam.html"
+    note: "三原川水系 大日川"
+
+  - id: curated-still-dam-hyogo-dam-kitafujidam
+    name: "北富士ダム"
+    operator: "兵庫県 淡路県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.2777
+    lng: 134.8185
+    image_url: "https://hyogo.kasen-teikyo.info/dam/kitafujidam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/kitafujidam.html"
+    note: "三原川水系 北富士川"
+
+  - id: curated-still-dam-hyogo-dam-nariaidam
+    name: "成相ダム"
+    operator: "兵庫県 淡路県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.275
+    lng: 134.8166
+    image_url: "https://hyogo.kasen-teikyo.info/dam/nariaidam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/nariaidam.html"
+    note: "三原川水系 成相川"
+
+  - id: curated-still-dam-hyogo-dam-ushiuchidam
+    name: "牛内ダム"
+    operator: "兵庫県 淡路県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.2501
+    lng: 134.7892
+    image_url: "https://hyogo.kasen-teikyo.info/dam/ushiuchidam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/ushiuchidam.html"
+    note: "三原川水系 牛内川"
+
+  - id: curated-still-dam-hyogo-dam-yuzuruhadam
+    name: "諭鶴羽ダム"
+    operator: "兵庫県 淡路県民局"
+    category: dam
+    prefecture: "28"
+    lat: 34.25
+    lng: 134.7985
+    image_url: "https://hyogo.kasen-teikyo.info/dam/yuzuruhadam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/sumoto/dam_detail/yuzuruhadam.html"
+    note: "三原川水系 諭鶴羽川"
+
+  - id: curated-still-dam-hyogo-dam-kurikaradam
+    name: "栗柄ダム"
+    operator: "兵庫県 丹波県民局"
+    category: dam
+    prefecture: "28"
+    lat: 35.1373
+    lng: 135.2246
+    image_url: "https://hyogo.kasen-teikyo.info/dam/kurikaradam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/kurikaradam.html"
+    note: "由良川水系 滝の尻川"
+
+  - id: curated-still-dam-hyogo-dam-mitakaradam
+    name: "三宝ダム"
+    operator: "兵庫県 丹波県民局"
+    category: dam
+    prefecture: "28"
+    lat: 35.1576
+    lng: 135.1938
+    image_url: "https://hyogo.kasen-teikyo.info/dam/mitakaradam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/tanba/dam_detail/mitakaradam.html"
+    note: "由良川水系 大谷川"
+
+  - id: curated-still-dam-hyogo-dam-tantodam
+    name: "但東ダム"
+    operator: "兵庫県 但馬県民局"
+    category: dam
+    prefecture: "28"
+    lat: 35.4865
+    lng: 135.0058
+    image_url: "https://hyogo.kasen-teikyo.info/dam/tantodam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/toyooka/dam_detail/tantodam.html"
+    note: "円山川水系 横谷川"
+
+  - id: curated-still-dam-hyogo-dam-ohrodam
+    name: "大路ダム"
+    operator: "兵庫県 但馬県民局"
+    category: dam
+    prefecture: "28"
+    lat: 35.291
+    lng: 134.818
+    image_url: "https://hyogo.kasen-teikyo.info/dam/ohrodam1.jpg"
+    page_url: "https://camera.hyogo.kasenkanshi.info/yabu/dam_detail/ohrodam.html"
+    note: "円山川水系 大路川"
+
+  - id: curated-still-trail-karasawa-hyutte
+    name: "涸沢ヒュッテ"
+    operator: "涸沢ヒュッテ(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク(northalps.net)/掲載:環境省・中部山岳国立公園南部地域利用推進協議会(上高地ビジターセンター)"
+    category: scenic
+    prefecture: "20"
+    lat: 36.2944
+    lng: 137.6625
+    image_url: "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/karasawa.jpg"
+    page_url: "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+    note: "涸沢カール(北アルプス穂高連峰)・涸沢ヒュッテ設置。座標はWikipedia「涸沢カール」記載値(北緯36度17分40秒"
+
+  - id: curated-still-trail-enzansou-tsubakurodake
+    name: "燕山荘(燕岳)"
+    operator: "燕山荘(株式会社燕山荘)(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター"
+    category: scenic
+    prefecture: "20"
+    lat: 36.3994
+    lng: 137.7152
+    image_url: "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/enzan.jpg"
+    page_url: "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+    note: "座標はWikipedia「燕山荘」記載値(北緯36度23分57.7秒 東経137度42分54.8秒)。"
+
+  - id: curated-still-trail-chogatake-hutte
+    name: "蝶ヶ岳ヒュッテ"
+    operator: "蝶ヶ岳ヒュッテ(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター"
+    category: scenic
+    prefecture: "20"
+    lat: 36.2889
+    lng: 137.7253
+    image_url: "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/cyougatake.jpg"
+    page_url: "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+    note: "座標はWikipedia「蝶ヶ岳ヒュッテ」記載値(北緯36度17分20.0秒 東経137度43分31.0秒)。"
+
+  - id: curated-still-trail-kitahotaka-goya
+    name: "北穂高小屋"
+    operator: "北穂高小屋(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター"
+    category: scenic
+    prefecture: "20"
+    lat: 36.3038
+    lng: 137.6527
+    image_url: "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/kitaho.jpg"
+    page_url: "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+    note: "座標はWikipedia「北穂高小屋」記載値(北緯36度18分13.5秒 東経137度39分9.6秒)。長野県松本市側。"
+
+  - id: curated-still-trail-nishiho-sanso
+    name: "西穂山荘"
+    operator: "西穂山荘(撮影・設置)/画像提供:北アルプスブロードバンドネットワーク/掲載:環境省・上高地ビジターセンター"
+    category: scenic
+    prefecture: "21"
+    lat: 36.2655
+    lng: 137.6177
+    image_url: "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/nisiho.jpg"
+    page_url: "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+    note: "座標はWikipedia「西穂山荘」記載値(北緯36度15分55.8秒 東経137度37分03.7秒)。岐阜県高山市側。"
+
+  - id: curated-still-trail-norikuradake-kankyosho
+    name: "乗鞍岳(乗鞍高原)"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "20"
+    lat: 36.1172
+    lng: 137.6137
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/85_c/image/2026/08/21/NCS20260821150044360.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=85"
+    note: "長野県松本市安曇4307、環境省インターネット自然研究所の設置場所座標(ページ記載値)。乗鞍高原から見た乗鞍岳。"
+
+  - id: curated-still-trail-senjojiki-cirque
+    name: "千畳敷カール(ホテル千畳敷)"
+    operator: "中央アルプス観光株式会社"
+    category: scenic
+    prefecture: "20"
+    lat: 35.7786
+    lng: 137.8131
+    image_url: "https://www.chuo-alps.com/ncarll.jpg"
+    page_url: "https://www.chuo-alps.com/live/"
+    note: "座標はWikipedia「千畳敷カール」記載値(北緯35度46分43秒 東経137度48分47秒)。中央アルプス駒ヶ岳ロ"
+
+  - id: curated-still-michinoeki-aso-kako-camera
+    name: "道の駅阿蘇 火口(阿蘇パーキング)"
+    operator: "公益財団法人自然公園財団 阿蘇支部(公益推進協会助成)"
+    category: scenic
+    prefecture: "43"
+    lat: 32.943
+    lng: 131.1047
+    image_url: "https://parking.aso-navi.com/aso.html"
+    page_url: "https://www.aso-denku.jp/tag/%E7%81%AB%E5%8F%A3%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/"
+    note: "未確認"
+
+  - id: curated-still-kushimoto-marine-park-underwater
+    name: "串本海中公園 海中景観ライブ映像"
+    operator: "環境省 生物多様性センター(インターネット自然研究所)"
+    category: healing
+    prefecture: "30"
+    lat: 33.478
+    lng: 135.7889
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/51_c/image/2026/08/21/NCS20260821150002600.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=51"
+    note: "『All rights Reserved, Copyright Ministry of the Environment』"
+
+  - id: curated-still-toda-city-hall-camera
+    name: "戸田市役所(まちが見えるカメラ)"
+    operator: "戸田市(デジタル戦略室)"
+    category: other
+    prefecture: "11"
+    lat: 35.8168
+    lng: 139.6789
+    image_url: "http://live1.city.toda.saitama.jp/-wvhttp-01-/image.cgi?v=jpg:160x120&seq="
+    page_url: "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html"
+    note: "ページ内に著作権リンクあり(詳細未確認)。プライバシー保護のため見える範囲・倍率を制限との記載。"
+
+  - id: curated-still-toda-fire-hq-camera
+    name: "戸田市消防本部(まちが見えるカメラ)"
+    operator: "戸田市(デジタル戦略室)"
+    category: other
+    prefecture: "11"
+    lat: 35.8085
+    lng: 139.6773
+    image_url: "http://live2.city.toda.saitama.jp/-wvhttp-01-/image.cgi?v=jpg:160x120&seq="
+    page_url: "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html"
+    note: "戸田市役所カメラと同一ページの規約に準ずる(未確認)。"
+
+  - id: curated-still-toda-saiko-camera
+    name: "戸田市彩湖(まちが見えるカメラ)"
+    operator: "戸田市(デジタル戦略室)"
+    category: scenic
+    prefecture: "11"
+    lat: 35.8264
+    lng: 139.6469
+    image_url: "http://live3.city.toda.saitama.jp/-wvhttp-01-/image.cgi?v=jpg:160x120&seq="
+    page_url: "https://www.city.toda.saitama.jp/soshiki/154/joho-live-camera.html"
+    note: "戸田市役所カメラと同一ページの規約に準ずる(未確認)。"
+
+  - id: curated-still-hirosaki-castle-tower
+    name: "弘前市(弘前城天守)"
+    operator: "弘前市"
+    category: scenic
+    prefecture: "02"
+    lat: 40.6073
+    lng: 140.4638
+    image_url: "http://live4.hi-it.jp/viewer/live/ja/live.html"
+    page_url: "https://www.city.hirosaki.aomori.jp/gaiyou/livecam/"
+    note: "未確認。「アクセス集中時に配信不具合が生じる場合がある」との注記のみ。"
+
+  - id: curated-still-ioworld-kagoshima-kuroshio
+    name: "いおワールドかごしま水族館 黒潮大水槽"
+    operator: "いおワールドかごしま水族館"
+    category: healing
+    prefecture: "46"
+    lat: 31.5966
+    lng: 130.5599
+    image_url: "http://ioworld.aa1.netvolante.jp/viewer/live/index.html?lang=ja"
+    page_url: "https://ioworld.jp/livecamera"
+    note: "未確認"
