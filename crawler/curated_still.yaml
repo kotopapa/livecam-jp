@@ -2763,3 +2763,125 @@ cameras:
     lng: 135.1846
     image_url: "https://kyo-doko.sakura.ne.jp/livecamera/kamimiyazubrkyoutango.jpg"
     page_url: "https://www.kyo-miti.jp/livecameraNew/"
+
+  # --- 2026-08-22 第10弾: 市町村・企業の道路カメラ ---
+
+  - id: curated-still-toyota-himawari-toyotachominami
+    name: "トヨタ町南"
+    operator: "ひまわりネットワーク株式会社（地域情報サイト「まちくる」）"
+    category: road
+    prefecture: "23"
+    lat: 35.0517
+    lng: 137.156
+    image_url: "http://www.himawari.co.jp/webcam/live_image/cam14_server5_00001.jpg"
+    page_url: "https://www.machikuru.jp/traffic/"
+
+  - id: curated-still-toyota-himawari-r153-nakagiri
+    name: "国道153号中切町"
+    operator: "ひまわりネットワーク株式会社（地域情報サイト「まちくる」）"
+    category: road
+    prefecture: "23"
+    lat: 35.1286
+    lng: 137.2789
+    image_url: "http://www.himawari.co.jp/webcam/live_image/cam1_server3_00001.jpg"
+    page_url: "https://www.machikuru.jp/traffic/"
+
+  - id: curated-still-dazaifu-yakusyo-mae
+    name: "太宰府市役所前"
+    operator: "太宰府市（太宰府市交通情報案内システム）"
+    category: road
+    prefecture: "40"
+    lat: 33.5128
+    lng: 130.524
+    image_url: "https://dzf1.sakura.ne.jp/cgi-bin/img_yakusyo/web1.jpg"
+    page_url: "https://dazaifucity-parking.com/?page_id=1701"
+
+  - id: curated-still-dazaifu-gojo-tenmangu
+    name: "五条交差点（太宰府天満宮方向）"
+    operator: "太宰府市（太宰府市交通情報案内システム）"
+    category: road
+    prefecture: "40"
+    lat: 33.5128
+    lng: 130.524
+    image_url: "https://dzf2.sakura.ne.jp/cgi-bin/img_gojoh1/web1.jpg"
+    page_url: "https://dazaifucity-parking.com/?page_id=1701"
+
+  - id: curated-still-dazaifu-sekiya
+    name: "関屋交差点"
+    operator: "太宰府市（太宰府市交通情報案内システム）"
+    category: road
+    prefecture: "40"
+    lat: 33.5133
+    lng: 130.509
+    image_url: "https://dzf2.sakura.ne.jp/cgi-bin/img4/web1.jpg"
+    page_url: "https://dazaifucity-parking.com/?page_id=1701"
+
+  - id: curated-still-dazaifu-umeoji-tenmangu
+    name: "梅大路交差点（太宰府天満宮方向）"
+    operator: "太宰府市（太宰府市交通情報案内システム）"
+    category: road
+    prefecture: "40"
+    lat: 33.5166
+    lng: 130.5301
+    image_url: "https://dzf2.sakura.ne.jp/cgi-bin/img_umeoji1/web1.jpg"
+    page_url: "https://dazaifucity-parking.com/?page_id=1701"
+
+  - id: curated-still-dazaifu-suzaku
+    name: "朱雀大路交差点"
+    operator: "太宰府市（太宰府市交通情報案内システム）"
+    category: road
+    prefecture: "40"
+    lat: 33.514
+    lng: 130.5152
+    image_url: "https://dzf2.sakura.ne.jp/cgi-bin/img_suzaku/web1.jpg"
+    page_url: "https://dazaifucity-parking.com/?page_id=1701"
+
+  - id: curated-still-dazaifu-mizuki3choume
+    name: "水城三丁目交差点"
+    operator: "太宰府市（太宰府市交通情報案内システム）"
+    category: road
+    prefecture: "40"
+    lat: 33.5243
+    lng: 130.498
+    image_url: "https://dzf2.sakura.ne.jp/cgi-bin/img_mizuki3choume1/web1.jpg"
+    page_url: "https://dazaifucity-parking.com/?page_id=1701"
+
+  - id: curated-still-dazaifu-matsukawa
+    name: "松川交差点"
+    operator: "太宰府市（太宰府市交通情報案内システム）"
+    category: road
+    prefecture: "40"
+    lat: 33.5357
+    lng: 130.5414
+    image_url: "https://dzf2.sakura.ne.jp/cgi-bin/img_matugou1/web1.jpg"
+    page_url: "https://dazaifucity-parking.com/?page_id=1701"
+
+  - id: curated-still-dazaifu-uchiyama
+    name: "内山交差点"
+    operator: "太宰府市（太宰府市交通情報案内システム）"
+    category: road
+    prefecture: "40"
+    lat: 33.5282
+    lng: 130.5503
+    image_url: "https://dzf2.sakura.ne.jp/cgi-bin/img_uchiyama/web1.jpg"
+    page_url: "https://dazaifucity-parking.com/?page_id=1701"
+
+  - id: curated-still-higashimiyoshi-sansan-ohashi
+    name: "三三大橋（吉野川）"
+    operator: "東みよし町"
+    category: road
+    prefecture: "36"
+    lat: 34.0394
+    lng: 133.9119
+    image_url: "https://tc001.t-cloudsystem.net/TC001-CAM0005-BS/bpP4iFNg/getjpeg.php"
+    page_url: "https://www.town.higashimiyoshi.lg.jp/docs/976.html"
+
+  - id: curated-still-omura-shiyakusho-traffic
+    name: "市役所前交通カメラ"
+    operator: "おおむらケーブルテレビ株式会社"
+    category: road
+    prefecture: "42"
+    lat: 32.9008
+    lng: 129.9586
+    image_url: "https://www.octp-net.ne.jp/~cam_d2015/cam1/cam_data1.jpg"
+    page_url: "https://omura-catv.com/road-camera/"

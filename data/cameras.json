@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T11:45:23Z",
+ "version": "2026-08-21T12:32:19Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -74,6 +74,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-akihabara-aisan-chuo-dori",
+   "name": "秋葉原（愛三電機ビル・中央通り交差点）",
+   "name_kana": null,
+   "lat": 35.7006,
+   "lng": 139.7712,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "tz3LqWOMMOM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=tz3LqWOMMOM"
+   },
+   "operator": "愛三電機株式会社（東京都千代田区外神田1-12-3）／株式会社Cerevo（配信技術協力）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=tz3LqWOMMOM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：愛三電機株式会社（東京都千代田区外神田1-12-3）／株式会社Cerevo（配信技術協力）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-amaharashi",
@@ -593,6 +631,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-denzai-kashiwa-r16",
+   "name": "電材買取センター柏店 国道16号",
+   "name_kana": null,
+   "lat": 35.8867,
+   "lng": 139.9445,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "g5LZWZZ1GJQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=g5LZWZZ1GJQ"
+   },
+   "operator": "電材買取センター柏店（電線・電材買取事業者、店舗運営）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=g5LZWZZ1GJQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：電材買取センター柏店（電線・電材買取事業者、店舗運営）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-dogo-onsen",
@@ -2039,6 +2115,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-ichinomiya-city-station-rotary",
+   "name": "一宮市役所屋上カメラ（一宮駅東北側ロータリー）",
+   "name_kana": null,
+   "lat": 35.304,
+   "lng": 136.803,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "23",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ZsmVPAvJ3ik",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ZsmVPAvJ3ik"
+   },
+   "operator": "一宮市（都市計画課まちなか事業グループ、技術協力:ICCメディア）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ZsmVPAvJ3ik",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：一宮市（都市計画課まちなか事業グループ、技術協力:ICCメディア）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-inasayama",
    "name": "稲佐山展望台（長崎夜景）",
    "name_kana": null,
@@ -3223,6 +3337,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-kawachinagano-kuromaro-parking",
+   "name": "道の駅奥河内くろまろの郷 駐車場入口",
+   "name_kana": null,
+   "lat": 34.437,
+   "lng": 135.5493,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "6a8XvKfhc4Y",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=6a8XvKfhc4Y"
+   },
+   "operator": "河内長野市（河内長野市役所）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=6a8XvKfhc4Y",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：河内長野市（河内長野市役所）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-kawagoe-tokinokane",
@@ -6482,6 +6634,82 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-osaka-tc-shinosaka-taxi-1",
+   "name": "JR新大阪駅 タクシー乗場①",
+   "name_kana": null,
+   "lat": 34.7325,
+   "lng": 135.501,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "YRuBQ3136D0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=YRuBQ3136D0"
+   },
+   "operator": "公益財団法人大阪タクシーセンター",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=YRuBQ3136D0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：公益財団法人大阪タクシーセンター（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-osaka-tc-shinosaka-taxi-2",
+   "name": "JR新大阪駅 タクシー乗場②",
+   "name_kana": null,
+   "lat": 34.7325,
+   "lng": 135.501,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vxRaY0mXBbU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vxRaY0mXBbU"
+   },
+   "operator": "公益財団法人大阪タクシーセンター",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vxRaY0mXBbU",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：公益財団法人大阪タクシーセンター（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-osezaki",
@@ -13773,6 +14001,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-ryukyushimpo-nahashiyakusho-mae",
+   "name": "那覇市役所前交差点",
+   "name_kana": null,
+   "lat": 26.2123,
+   "lng": 127.6792,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "nU41kpfKLJM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=nU41kpfKLJM"
+   },
+   "operator": "琉球新報社（泉崎本社）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=nU41kpfKLJM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：琉球新報社（泉崎本社）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-sakae-trinity",
    "name": "栄・久屋大通公園（MIRAI TOWERから）",
    "name_kana": null,
@@ -13808,6 +14074,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-sakai-machikado-carwash-daisen",
+   "name": "街角カーウォッシュ堺市大仙陵古墳店",
+   "name_kana": null,
+   "lat": 34.5673,
+   "lng": 135.4862,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "FFe6PpWbHqw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FFe6PpWbHqw"
+   },
+   "operator": "街角カーウォッシュ 堺市大仙陵古墳店（運営会社: 株式会社パークエステート）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=FFe6PpWbHqw",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：街角カーウォッシュ 堺市大仙陵古墳店（運営会社: 株式会社パークエステート）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-sakurajima-mbc",
@@ -14252,6 +14556,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-shibuya-koendori-ogaibiru",
+   "name": "渋谷公園通り商店街（第2大外ビル・宇田川町交差点付近）",
+   "name_kana": null,
+   "lat": 35.6637,
+   "lng": 139.7004,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "13",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "DPtIH3unwDY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=DPtIH3unwDY"
+   },
+   "operator": "渋谷公園通り商店街振興組合（東京都渋谷区神南1-20-15 和田ビル402）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=DPtIH3unwDY",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：渋谷公園通り商店街振興組合（東京都渋谷区神南1-20-15 和田ビル402）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-shimoda-ohama",
@@ -16595,6 +16937,310 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-dazaifu-gojo-tenmangu",
+   "name": "五条交差点（太宰府天満宮方向）",
+   "name_kana": null,
+   "lat": 33.5128,
+   "lng": 130.524,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://dzf2.sakura.ne.jp/cgi-bin/img_gojoh1/web1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://dazaifucity-parking.com/?page_id=1701"
+   },
+   "operator": "太宰府市（太宰府市交通情報案内システム）",
+   "source": {
+    "page_url": "https://dazaifucity-parking.com/?page_id=1701",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：太宰府市（太宰府市交通情報案内システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dazaifu-matsukawa",
+   "name": "松川交差点",
+   "name_kana": null,
+   "lat": 33.5357,
+   "lng": 130.5414,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://dzf2.sakura.ne.jp/cgi-bin/img_matugou1/web1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://dazaifucity-parking.com/?page_id=1701"
+   },
+   "operator": "太宰府市（太宰府市交通情報案内システム）",
+   "source": {
+    "page_url": "https://dazaifucity-parking.com/?page_id=1701",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：太宰府市（太宰府市交通情報案内システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dazaifu-mizuki3choume",
+   "name": "水城三丁目交差点",
+   "name_kana": null,
+   "lat": 33.5243,
+   "lng": 130.498,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://dzf2.sakura.ne.jp/cgi-bin/img_mizuki3choume1/web1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://dazaifucity-parking.com/?page_id=1701"
+   },
+   "operator": "太宰府市（太宰府市交通情報案内システム）",
+   "source": {
+    "page_url": "https://dazaifucity-parking.com/?page_id=1701",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：太宰府市（太宰府市交通情報案内システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dazaifu-sekiya",
+   "name": "関屋交差点",
+   "name_kana": null,
+   "lat": 33.5133,
+   "lng": 130.509,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://dzf2.sakura.ne.jp/cgi-bin/img4/web1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://dazaifucity-parking.com/?page_id=1701"
+   },
+   "operator": "太宰府市（太宰府市交通情報案内システム）",
+   "source": {
+    "page_url": "https://dazaifucity-parking.com/?page_id=1701",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：太宰府市（太宰府市交通情報案内システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dazaifu-suzaku",
+   "name": "朱雀大路交差点",
+   "name_kana": null,
+   "lat": 33.514,
+   "lng": 130.5152,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://dzf2.sakura.ne.jp/cgi-bin/img_suzaku/web1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://dazaifucity-parking.com/?page_id=1701"
+   },
+   "operator": "太宰府市（太宰府市交通情報案内システム）",
+   "source": {
+    "page_url": "https://dazaifucity-parking.com/?page_id=1701",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：太宰府市（太宰府市交通情報案内システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dazaifu-uchiyama",
+   "name": "内山交差点",
+   "name_kana": null,
+   "lat": 33.5282,
+   "lng": 130.5503,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://dzf2.sakura.ne.jp/cgi-bin/img_uchiyama/web1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://dazaifucity-parking.com/?page_id=1701"
+   },
+   "operator": "太宰府市（太宰府市交通情報案内システム）",
+   "source": {
+    "page_url": "https://dazaifucity-parking.com/?page_id=1701",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：太宰府市（太宰府市交通情報案内システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dazaifu-umeoji-tenmangu",
+   "name": "梅大路交差点（太宰府天満宮方向）",
+   "name_kana": null,
+   "lat": 33.5166,
+   "lng": 130.5301,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://dzf2.sakura.ne.jp/cgi-bin/img_umeoji1/web1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://dazaifucity-parking.com/?page_id=1701"
+   },
+   "operator": "太宰府市（太宰府市交通情報案内システム）",
+   "source": {
+    "page_url": "https://dazaifucity-parking.com/?page_id=1701",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：太宰府市（太宰府市交通情報案内システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dazaifu-yakusyo-mae",
+   "name": "太宰府市役所前",
+   "name_kana": null,
+   "lat": 33.5128,
+   "lng": 130.524,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "40",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://dzf1.sakura.ne.jp/cgi-bin/img_yakusyo/web1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://dazaifucity-parking.com/?page_id=1701"
+   },
+   "operator": "太宰府市（太宰府市交通情報案内システム）",
+   "source": {
+    "page_url": "https://dazaifucity-parking.com/?page_id=1701",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：太宰府市（太宰府市交通情報案内システム）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-hamamatsu-cm01-02",
    "name": "安間川 若草橋",
    "name_kana": null,
@@ -17117,6 +17763,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：浜松市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-higashimiyoshi-sansan-ohashi",
+   "name": "三三大橋（吉野川）",
+   "name_kana": null,
+   "lat": 34.0394,
+   "lng": 133.9119,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "36",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://tc001.t-cloudsystem.net/TC001-CAM0005-BS/bpP4iFNg/getjpeg.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.higashimiyoshi.lg.jp/docs/976.html"
+   },
+   "operator": "東みよし町",
+   "source": {
+    "page_url": "https://www.town.higashimiyoshi.lg.jp/docs/976.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東みよし町"
    },
    "review": {
     "status": "approved",
@@ -20281,6 +20965,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-omura-shiyakusho-traffic",
+   "name": "市役所前交通カメラ",
+   "name_kana": null,
+   "lat": 32.9008,
+   "lng": 129.9586,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.octp-net.ne.jp/~cam_d2015/cam1/cam_data1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://omura-catv.com/road-camera/"
+   },
+   "operator": "おおむらケーブルテレビ株式会社",
+   "source": {
+    "page_url": "https://omura-catv.com/road-camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：おおむらケーブルテレビ株式会社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-ontake-kaida-kogen",
    "name": "御嶽山（開田高原）",
    "name_kana": null,
@@ -21183,6 +21905,82 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：戸田市(デジタル戦略室)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-toyota-himawari-r153-nakagiri",
+   "name": "国道153号中切町",
+   "name_kana": null,
+   "lat": 35.1286,
+   "lng": 137.2789,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "23",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.himawari.co.jp/webcam/live_image/cam1_server3_00001.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.machikuru.jp/traffic/"
+   },
+   "operator": "ひまわりネットワーク株式会社（地域情報サイト「まちくる」）",
+   "source": {
+    "page_url": "https://www.machikuru.jp/traffic/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ひまわりネットワーク株式会社（地域情報サイト「まちくる」）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-toyota-himawari-toyotachominami",
+   "name": "トヨタ町南",
+   "name_kana": null,
+   "lat": 35.0517,
+   "lng": 137.156,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "23",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.himawari.co.jp/webcam/live_image/cam14_server5_00001.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.machikuru.jp/traffic/"
+   },
+   "operator": "ひまわりネットワーク株式会社（地域情報サイト「まちくる」）",
+   "source": {
+    "page_url": "https://www.machikuru.jp/traffic/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ひまわりネットワーク株式会社（地域情報サイト「まちくる」）"
    },
    "review": {
     "status": "approved",
@@ -25149,6 +25947,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-tsukuba-ekimae-intec",
+   "name": "つくば駅前（株式会社インテック）",
+   "name_kana": null,
+   "lat": 35.9756,
+   "lng": 140.1128,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "08",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "VOp_3L2T5y4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=VOp_3L2T5y4"
+   },
+   "operator": "株式会社インテック（人材派遣業、茨城県つくば市吾妻2-8-8 つくばシティアビル6F）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=VOp_3L2T5y4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：株式会社インテック（人材派遣業、茨城県つくば市吾妻2-8-8 つくばシティアビル6F）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "curated-tuf-fukushima-mix",

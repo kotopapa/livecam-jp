@@ -4335,3 +4335,95 @@ cameras:
     prefecture: "31"
     lat: 35.5389
     lng: 134.2306
+
+  # --- 2026-08-22 市町村・企業の道路カメラ ---
+
+  - id: curated-denzai-kashiwa-r16
+    name: "電材買取センター柏店 国道16号"
+    operator: "電材買取センター柏店（電線・電材買取事業者、店舗運営）"
+    video_id: "g5LZWZZ1GJQ"
+    category: road
+    prefecture: "12"
+    lat: 35.8867
+    lng: 139.9445
+
+  - id: curated-shibuya-koendori-ogaibiru
+    name: "渋谷公園通り商店街（第2大外ビル・宇田川町交差点付近）"
+    operator: "渋谷公園通り商店街振興組合（東京都渋谷区神南1-20-15 和田ビル402）"
+    video_id: "DPtIH3unwDY"
+    category: road
+    prefecture: "13"
+    lat: 35.6637
+    lng: 139.7004
+
+  - id: curated-akihabara-aisan-chuo-dori
+    name: "秋葉原（愛三電機ビル・中央通り交差点）"
+    operator: "愛三電機株式会社（東京都千代田区外神田1-12-3）／株式会社Cerevo（配信技術協力）"
+    video_id: "tz3LqWOMMOM"
+    category: road
+    prefecture: "13"
+    lat: 35.7006
+    lng: 139.7712
+
+  - id: curated-tsukuba-ekimae-intec
+    name: "つくば駅前（株式会社インテック）"
+    operator: "株式会社インテック（人材派遣業、茨城県つくば市吾妻2-8-8 つくばシティアビル6F）"
+    video_id: "VOp_3L2T5y4"
+    category: road
+    prefecture: "08"
+    lat: 35.9756
+    lng: 140.1128
+
+  - id: curated-osaka-tc-shinosaka-taxi-1
+    name: "JR新大阪駅 タクシー乗場①"
+    operator: "公益財団法人大阪タクシーセンター"
+    video_id: "YRuBQ3136D0"
+    category: road
+    prefecture: "27"
+    lat: 34.7325
+    lng: 135.501
+
+  - id: curated-osaka-tc-shinosaka-taxi-2
+    name: "JR新大阪駅 タクシー乗場②"
+    operator: "公益財団法人大阪タクシーセンター"
+    video_id: "vxRaY0mXBbU"
+    category: road
+    prefecture: "27"
+    lat: 34.7325
+    lng: 135.501
+
+  - id: curated-sakai-machikado-carwash-daisen
+    name: "街角カーウォッシュ堺市大仙陵古墳店"
+    operator: "街角カーウォッシュ 堺市大仙陵古墳店（運営会社: 株式会社パークエステート）"
+    video_id: "FFe6PpWbHqw"
+    category: road
+    prefecture: "27"
+    lat: 34.5673
+    lng: 135.4862
+
+  - id: curated-kawachinagano-kuromaro-parking
+    name: "道の駅奥河内くろまろの郷 駐車場入口"
+    operator: "河内長野市（河内長野市役所）"
+    video_id: "6a8XvKfhc4Y"
+    category: road
+    prefecture: "27"
+    lat: 34.437
+    lng: 135.5493
+
+  - id: curated-ichinomiya-city-station-rotary
+    name: "一宮市役所屋上カメラ（一宮駅東北側ロータリー）"
+    operator: "一宮市（都市計画課まちなか事業グループ、技術協力:ICCメディア）"
+    video_id: "ZsmVPAvJ3ik"
+    category: road
+    prefecture: "23"
+    lat: 35.304
+    lng: 136.803
+
+  - id: curated-ryukyushimpo-nahashiyakusho-mae
+    name: "那覇市役所前交差点"
+    operator: "琉球新報社（泉崎本社）"
+    video_id: "nU41kpfKLJM"
+    category: road
+    prefecture: "47"
+    lat: 26.2123
+    lng: 127.6792
