@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T13:55:03Z",
+ "version": "2026-08-21T14:06:18Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -25596,6 +25596,82 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yubara-onsengai",
+   "name": "湯原温泉街",
+   "name_kana": null,
+   "lat": 35.0576,
+   "lng": 133.7492,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "33",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.maniwa.lg.jp/live/images/yubarahureai/image2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.maniwa.lg.jp/site/live-cam/1373.html"
+   },
+   "operator": "真庭市",
+   "source": {
+    "page_url": "https://www.city.maniwa.lg.jp/site/live-cam/1373.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：真庭市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=真庭市 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yubara-r313",
+   "name": "国道313号（湯原）",
+   "name_kana": null,
+   "lat": 35.0486,
+   "lng": 133.7488,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "33",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.maniwa.lg.jp/live/images/yubara/image2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.maniwa.lg.jp/site/live-cam/1365.html"
+   },
+   "operator": "真庭市",
+   "source": {
+    "page_url": "https://www.city.maniwa.lg.jp/site/live-cam/1365.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：真庭市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=真庭市 with_coords=True"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"

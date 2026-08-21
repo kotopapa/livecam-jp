@@ -81,7 +81,8 @@ def _yt_camera(ftype="youtube_video", url="abc123DEF45"):
 
 
 def test_youtube_video_uses_oembed_and_ok_on_200():
-    s = FakeSession([FakeResponse(200, b'{"title":"x"}')])
+    s = FakeSession([FakeResponse(200, b'{"title":"x"}'),
+                     FakeResponse(200, b'<html>shell</html>')])
     r = check_camera(s, _yt_camera(), {})
     assert r["state"] == "ok"
     req = s.requests[0]["url"]
@@ -115,3 +116,26 @@ def test_youtube_playlist_uses_playlist_oembed():
     r = check_camera(s, _yt_camera("youtube_video", "videoseries?list=PLxxYYzz"), {})
     assert r["state"] == "ok"
     assert "playlist%3Flist%3DPLxxYYzz" in s.requests[0]["url"]
+
+
+def test_youtube_video_not_live_fails():
+    """oEmbed 200でもwatchページがライブ中でなければ失敗(アーカイブ化検知)。"""
+    oembed = FakeResponse(200, b'{"title":"x"}')
+    watch = FakeResponse(200, b'ytInitialPlayerResponse {"isLiveNow":false}')
+    r = check_camera(FakeSession([oembed, watch]), _yt_camera(), {})
+    assert r["state"] == "unknown" and r["consecutive_failures"] == 1
+
+
+def test_youtube_video_live_ok():
+    oembed = FakeResponse(200, b'{"title":"x"}')
+    watch = FakeResponse(200, b'ytInitialPlayerResponse "isLiveNow":true')
+    r = check_camera(FakeSession([oembed, watch]), _yt_camera(), {})
+    assert r["state"] == "ok"
+
+
+def test_youtube_video_shell_response_keeps_ok():
+    """同意画面等で判定材料がない場合はoEmbed結果を採用(誤爆防止)。"""
+    oembed = FakeResponse(200, b'{"title":"x"}')
+    shell = FakeResponse(200, b'<html>consent</html>')
+    r = check_camera(FakeSession([oembed, shell]), _yt_camera(), {})
+    assert r["state"] == "ok"

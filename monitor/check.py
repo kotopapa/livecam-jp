@@ -175,6 +175,20 @@ def _check_youtube(session, camera, state, now, prev_failures) -> dict:
     resp = _get(session, url, {"User-Agent": USER_AGENT})
     if resp is None or resp.status_code >= 400:
         return _fail(state, now, prev_failures, resp.status_code if resp is not None else None)
+    # youtube_video は「現在ライブ中(または待機枠)」かも確認する。
+    # 配信終了してアーカイブ化/記録非公開になったIDは oEmbed 200 のままだが
+    # ライブカメラとしては死んでいる（GAO・「記録はご覧いただけません」型）
+    if feed["type"] == "youtube_video" and not feed["url"].startswith("videoseries"):
+        watch = _get(session,
+                     f"https://www.youtube.com/watch?v={feed['url']}",
+                     {"User-Agent": USER_AGENT})
+        if watch is not None and "ytInitialPlayerResponse" in watch.text:
+            alive = ('"isLiveNow":true' in watch.text
+                     or '"isLive":true' in watch.text
+                     or '"isUpcoming":true' in watch.text)
+            if not alive:
+                return _fail(state, now, prev_failures, resp.status_code)
+        # 判定材料が無い応答(同意画面等のシェル)は oEmbed の結果を採用する
     state["consecutive_failures"] = 0
     state["last_ok_at"] = now.isoformat()
     return {

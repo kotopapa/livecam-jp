@@ -3097,3 +3097,27 @@ cameras:
     lng: 141.928
     image_url: "https://www.cf4ee.jp/latest/otohama/latest.jpg"
     page_url: "https://cf4ee.jp/otohama_live"
+
+  # --- 2026-08-22 湯原温泉(真庭市公式) ---
+
+  - id: curated-still-yubara-onsengai
+    name: "湯原温泉街"
+    operator: "真庭市"
+    category: healing
+    prefecture: "33"
+    lat: 35.0576
+    lng: 133.7492
+    image_url: "https://www.city.maniwa.lg.jp/live/images/yubarahureai/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1373.html"
+    note: 1分更新・固定URL
+
+  - id: curated-still-yubara-r313
+    name: "国道313号（湯原）"
+    operator: "真庭市"
+    category: road
+    prefecture: "33"
+    lat: 35.0486
+    lng: 133.7488
+    image_url: "https://www.city.maniwa.lg.jp/live/images/yubara/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1365.html"
+    note: 1分更新・固定URL
