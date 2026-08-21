@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T23:28:31Z",
+ "version": "2026-08-21T23:30:41Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -21318,19 +21318,18 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "web_page",
-    "url": "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi",
+    "type": "still_image",
+    "url": "https://www.cfht.hawaii.edu/en/gallery/cfhtdome/cfhtdome.jpg",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
-    "type": "web_page",
-    "url": "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi"
+    "url": "https://www.cfht.hawaii.edu/en/gallery/webcams/"
    },
-   "operator": "Mauna Kea Weather Center/CFHT",
+   "operator": "カナダ・フランス・ハワイ望遠鏡(CFHT)",
    "source": {
-    "page_url": "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi",
+    "page_url": "https://www.cfht.hawaii.edu/en/gallery/webcams/",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：Mauna Kea Weather Center/CFHT"
@@ -21338,10 +21337,11 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-22",
-    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True / 2026-08-22 CFHT公式の静止画直URL(Gemini設置カメラからのCFHTドーム)に変換"
    },
    "first_seen": "2026-08-22",
-   "last_updated": "2026-08-22"
+   "last_updated": "2026-08-22",
+   "attribution": "映像提供：カナダ・フランス・ハワイ望遠鏡(CFHT)"
   },
   {
    "id": "curated-still-michinoeki-aso-kako-camera",
