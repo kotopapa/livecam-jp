@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T14:06:18Z",
+ "version": "2026-08-21T21:09:12Z",
  "cameras": [
   {
    "id": "fukushima-road-051",
@@ -10,6 +10,7 @@
    "coord_accuracy": null,
    "category": "road",
    "prefecture": "07",
+   "country": null,
    "municipality": null,
    "river_or_route": "国道401号",
    "feed": {
@@ -35,9 +36,14 @@
     "reviewed_at": null,
     "note": "福島県会津の峠カメラ。座標は地名ジオコーディング。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 13730
+   },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-08-19"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "fukushima-road-052",
@@ -48,6 +54,7 @@
    "coord_accuracy": null,
    "category": "road",
    "prefecture": "07",
+   "country": null,
    "municipality": null,
    "river_or_route": "国道401号",
    "feed": {
@@ -73,9 +80,14 @@
     "reviewed_at": null,
     "note": "福島県会津の峠カメラ。座標は地名ジオコーディング。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 13150
+   },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-08-19"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-chi1",
@@ -86,6 +98,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -115,10 +128,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 71903
+    "bytes": 36832
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-dai",
@@ -129,6 +142,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -161,7 +175,7 @@
     "bytes": 194671
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-in-wad1",
@@ -172,6 +186,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -201,10 +216,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 47043
+    "bytes": 16399
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-in-wad2",
@@ -215,6 +230,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -244,10 +260,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 41003
+    "bytes": 17542
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-jma2",
@@ -258,6 +274,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -290,7 +307,7 @@
     "bytes": 68607
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-kki1",
@@ -301,6 +318,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -330,10 +348,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 72855
+    "bytes": 34239
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-ksn113",
@@ -344,6 +362,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -371,12 +390,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 79518
+    "bytes": 48595
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-ksn117",
@@ -387,6 +406,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -414,12 +434,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 76125
+    "bytes": 64297
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-nis1",
@@ -430,6 +450,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -457,12 +478,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 218136
+    "bytes": 290348
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-nis2",
@@ -473,6 +494,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -500,12 +522,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 341543
+    "bytes": 266964
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-nis3",
@@ -516,6 +538,7 @@
    "coord_accuracy": null,
    "category": "coast",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -543,12 +566,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 443646
+    "bytes": 226218
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-nis4",
@@ -559,6 +582,7 @@
    "coord_accuracy": null,
    "category": "coast",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -586,12 +610,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 420182
+    "bytes": 287060
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-nis5",
@@ -602,6 +626,7 @@
    "coord_accuracy": null,
    "category": "coast",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -629,12 +654,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 425662
+    "bytes": 257774
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-seigi03",
@@ -645,6 +670,7 @@
    "coord_accuracy": null,
    "category": "volcano",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -674,10 +700,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 59298
+    "bytes": 16517
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-seigi07",
@@ -688,6 +714,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -717,10 +744,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 31516
+    "bytes": 15796
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-sen5",
@@ -731,6 +758,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -760,10 +788,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 17696
+    "bytes": 10417
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-sen6",
@@ -774,6 +802,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -803,10 +832,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 21110
+    "bytes": 11572
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-sen7",
@@ -817,6 +846,7 @@
    "coord_accuracy": null,
    "category": "port",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -846,10 +876,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 14803
+    "bytes": 19929
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-sen8",
@@ -860,6 +890,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -892,7 +923,7 @@
     "bytes": 68607
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "mbc-tuc1",
@@ -903,6 +934,7 @@
    "coord_accuracy": null,
    "category": "scenic",
    "prefecture": "46",
+   "country": null,
    "municipality": null,
    "river_or_route": null,
    "feed": {
@@ -932,10 +964,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 34720
+    "bytes": 16594
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "miyagi-road-hokubu-soto",
@@ -972,9 +1004,14 @@
     "reviewed_at": null,
     "note": "宮城県道路カメラ(HTTP配信)。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 98346
+   },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "miyagi-road-hokubu-yanagi1",
@@ -1011,9 +1048,14 @@
     "reviewed_at": null,
     "note": "宮城県道路カメラ(HTTP配信)。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 73718
+   },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "miyagi-road-hokubu-yanagi2",
@@ -1050,9 +1092,14 @@
     "reviewed_at": null,
     "note": "宮城県道路カメラ(HTTP配信)。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 107443
+   },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "miyagi-road-tobu-oosawa",
@@ -1089,9 +1136,14 @@
     "reviewed_at": null,
     "note": "宮城県道路カメラ(HTTP配信)。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 7984
+   },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-21"
   },
   {
    "id": "nagano-road-kiso-001",
@@ -1128,7 +1180,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 36670
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1167,7 +1224,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 27198
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1175,9 +1237,9 @@
    "id": "nagano-road-kiso-003",
    "name": "長峰峠",
    "name_kana": null,
-   "lat": null,
-   "lng": null,
-   "coord_accuracy": null,
+   "lat": 36.648537,
+   "lng": 138.194824,
+   "coord_accuracy": "approx",
    "category": "road",
    "prefecture": "20",
    "country": null,
@@ -1206,7 +1268,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 40439
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1245,7 +1312,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 40909
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1284,7 +1356,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 46252
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1323,7 +1400,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 49622
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1362,7 +1444,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 49622
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1401,7 +1488,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 41023
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1440,7 +1532,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 43230
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1479,7 +1576,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 72306
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1518,7 +1620,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 45038
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1557,7 +1664,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 43722
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1596,7 +1708,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 34353
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1635,7 +1752,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 45378
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1674,7 +1796,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 41927
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1713,7 +1840,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 39890
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1752,7 +1884,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 41824
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1791,7 +1928,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 38913
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1830,7 +1972,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 40238
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1869,7 +2016,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 44387
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1908,7 +2060,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 44347
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1947,7 +2104,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 37741
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -1986,7 +2148,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 41332
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2025,7 +2192,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 43398
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2064,7 +2236,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 45229
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2103,7 +2280,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 44439
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2142,7 +2324,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 14569
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2181,7 +2368,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 32583
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2220,7 +2412,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 37959
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2259,7 +2456,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 43779
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2298,7 +2500,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 41763
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2337,7 +2544,12 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 38252
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2376,7 +2588,56 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 38928
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-camera-091",
+   "name": "南魚沼市上野",
+   "name_kana": null,
+   "lat": 37.018047,
+   "lng": 138.829803,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/camera_091.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "新潟県土木部の道路カメラ。利用条件はレビューで確認 / 重複疑い: niigata-road-uwaseki(南魚沼市上関) と50m以内・類似度0.83 / 重複疑い: niigata-road-noda(南魚沼市野田) と50m以内・類似度0.83"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 45844
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2415,7 +2676,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 86280
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2454,7 +2720,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 64254
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2493,7 +2764,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 19038
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2532,7 +2808,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 41865
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2571,7 +2852,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 47435
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2610,7 +2896,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 58196
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2649,7 +2940,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 17930
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2688,7 +2984,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 39386
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2727,7 +3028,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 33138
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   },
@@ -2735,9 +3041,9 @@
    "id": "shizuoka-doboku-numadu-09-kousuimae",
    "name": "(国)１３８号 湖水前交差点",
    "name_kana": null,
-   "lat": null,
-   "lng": null,
-   "coord_accuracy": null,
+   "lat": 34.718472,
+   "lng": 137.531647,
+   "coord_accuracy": "approx",
    "category": "road",
    "prefecture": "22",
    "country": null,
@@ -2766,7 +3072,12 @@
     "reviewed_at": null,
     "note": "静岡県土木事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 40323
+   },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
   }
