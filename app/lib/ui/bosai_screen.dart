@@ -524,7 +524,9 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
   }
 
   Future<void> _load() async {
-    final byMuni = <String, (String, Set<String>)>{};
+    // class20コード(7桁)単位で保持する。政令市は「横浜市北部/南部」等に
+    // 分割されており、市コード5桁に丸めると別区域が1行に統合されてしまう
+    final byArea = <String, (String, String, Set<String>)>{};
     var anyOk = false;
     Map<String, String> names = const {};
     try {
@@ -560,10 +562,10 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
             final wname = widget.codeNames[w['code'] as String? ?? ''];
             if (wname == null) continue;
             final muni = code.substring(0, 5);
-            final entry = byMuni[muni] ??
-                (names[code] ?? '市区町村 $muni', <String>{});
-            entry.$2.add(wname);
-            byMuni[muni] = entry;
+            final entry = byArea[code] ??
+                (muni, names[code] ?? '市区町村 $muni', <String>{});
+            entry.$3.add(wname);
+            byArea[code] = entry;
           }
         }
         anyOk = true;
@@ -572,13 +574,15 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
       }
     }
     if (!mounted) return;
-    final list = byMuni.entries
-        .map((e) => (e.key, e.value.$1, e.value.$2.toList()..sort()))
-        .toList()
-      ..sort((a, b) {
+    final sortedCodes = byArea.keys.toList()..sort();
+    final list = [
+      for (final code in sortedCodes)
+        (byArea[code]!.$1, byArea[code]!.$2,
+            byArea[code]!.$3.toList()..sort())
+    ]..sort((a, b) {
         final ae = a.$3.any((w) => w.contains('特別')) ? 0 : 1;
         final be = b.$3.any((w) => w.contains('特別')) ? 0 : 1;
-        return ae != be ? ae.compareTo(be) : a.$1.compareTo(b.$1);
+        return ae.compareTo(be);
       });
     setState(() {
       _munis = list;
