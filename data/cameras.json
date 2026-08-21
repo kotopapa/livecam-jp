@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T10:58:21Z",
+ "version": "2026-08-21T11:03:09Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -17887,6 +17887,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-iwate-ryorigawa-dam",
+   "name": "綾里川ダム",
+   "name_kana": null,
+   "lat": 39.0622,
+   "lng": 141.7783,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.iwate.jp/camera/iwate/area11_cam120_20260821195225.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.iwate.jp/iwate/servlet/Gamen44Servlet?param=area=7"
+   },
+   "operator": "岩手県県土整備部河川課(岩手県河川情報システム)",
+   "source": {
+    "page_url": "http://kasen.pref.iwate.jp/iwate/servlet/Gamen44Servlet?param=area=7",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：岩手県県土整備部河川課(岩手県河川情報システム)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-izumo-shinmondori",
    "name": "出雲大社(神門通り)",
    "name_kana": null,
@@ -19815,6 +19853,348 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：公益財団法人自然公園財団 阿蘇支部(公益推進協会助成)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-aki-dam",
+   "name": "安岐ダム",
+   "name_kana": null,
+   "lat": 33.4856,
+   "lng": 131.6092,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=24&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=24"
+   },
+   "operator": "大分県土木建築部河川課",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=24",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県土木建築部河川課"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-aoe-dam",
+   "name": "青江ダム",
+   "name_kana": null,
+   "lat": 33.0703,
+   "lng": 131.8058,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=30&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=30"
+   },
+   "operator": "大分県土木建築部河川課",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=30",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県土木建築部河川課"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-gyunyu-dam",
+   "name": "行入ダム",
+   "name_kana": null,
+   "lat": 33.5697,
+   "lng": 131.6492,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=26&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=26"
+   },
+   "operator": "大分県土木建築部河川課",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=26",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県土木建築部河川課"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-inaba-dam",
+   "name": "稲葉ダム",
+   "name_kana": null,
+   "lat": 32.9942,
+   "lng": 131.2967,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=38&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=38"
+   },
+   "operator": "大分県土木建築部河川課",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=38",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県土木建築部河川課"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-kitagawa-dam",
+   "name": "北川ダム",
+   "name_kana": null,
+   "lat": 32.7906,
+   "lng": 131.6078,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=42&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=42"
+   },
+   "operator": "大分県企業局(ダム管理部 芹川・北川ダム管理事務所)",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=42",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県企業局(ダム管理部 芹川・北川ダム管理事務所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-kurosawa-dam",
+   "name": "黒沢ダム",
+   "name_kana": null,
+   "lat": 32.8508,
+   "lng": 131.8386,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=32&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=32"
+   },
+   "operator": "大分県土木建築部河川課",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=32",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県土木建築部河川課"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-notsu-dam",
+   "name": "野津ダム",
+   "name_kana": null,
+   "lat": 32.9806,
+   "lng": 131.7617,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=1&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=1"
+   },
+   "operator": "大分県土木建築部河川課",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=1",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県土木建築部河川課"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-serikawa-dam",
+   "name": "芹川ダム",
+   "name_kana": null,
+   "lat": 33.1397,
+   "lng": 131.4411,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=44&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=44"
+   },
+   "operator": "大分県企業局(ダム管理部 芹川・北川ダム管理事務所)",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=44",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県企業局(ダム管理部 芹川・北川ダム管理事務所)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-oita-tokogi-dam",
+   "name": "床木ダム",
+   "name_kana": null,
+   "lat": 33.0164,
+   "lng": 131.8611,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=34&unq=1",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=34"
+   },
+   "operator": "大分県土木建築部河川課",
+   "source": {
+    "page_url": "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=34",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大分県土木建築部河川課"
    },
    "review": {
     "status": "approved",

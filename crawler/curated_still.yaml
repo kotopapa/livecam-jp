@@ -2609,3 +2609,115 @@ cameras:
     lng: 135.784
     image_url: "http://hce.hanshin.co.jp/weathercam/upload/shirakawa_zoo-01.jpg"
     page_url: "http://hce.hanshin.co.jp/weathercam/"
+
+  # --- 2026-08-22 第9弾: 大分県営9ダム・岩手綾里川ダム ---
+
+  - id: curated-still-oita-gyunyu-dam
+    name: "行入ダム"
+    operator: "大分県土木建築部河川課"
+    category: dam
+    prefecture: "44"
+    lat: 33.5697
+    lng: 131.6492
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=26&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=26"
+    note: "横手川"
+
+  - id: curated-still-oita-aki-dam
+    name: "安岐ダム"
+    operator: "大分県土木建築部河川課"
+    category: dam
+    prefecture: "44"
+    lat: 33.4856
+    lng: 131.6092
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=24&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=24"
+    note: "安岐川"
+
+  - id: curated-still-oita-aoe-dam
+    name: "青江ダム"
+    operator: "大分県土木建築部河川課"
+    category: dam
+    prefecture: "44"
+    lat: 33.0703
+    lng: 131.8058
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=30&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=30"
+    note: "青江川"
+
+  - id: curated-still-oita-notsu-dam
+    name: "野津ダム"
+    operator: "大分県土木建築部河川課"
+    category: dam
+    prefecture: "44"
+    lat: 32.9806
+    lng: 131.7617
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=1&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=1"
+    note: "垣河内川"
+
+  - id: curated-still-oita-tokogi-dam
+    name: "床木ダム"
+    operator: "大分県土木建築部河川課"
+    category: dam
+    prefecture: "44"
+    lat: 33.0164
+    lng: 131.8611
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=34&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=34"
+    note: "床木川"
+
+  - id: curated-still-oita-kurosawa-dam
+    name: "黒沢ダム"
+    operator: "大分県土木建築部河川課"
+    category: dam
+    prefecture: "44"
+    lat: 32.8508
+    lng: 131.8386
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=32&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=32"
+    note: "堅田川"
+
+  - id: curated-still-oita-kitagawa-dam
+    name: "北川ダム"
+    operator: "大分県企業局(ダム管理部 芹川・北川ダム管理事務所)"
+    category: dam
+    prefecture: "44"
+    lat: 32.7906
+    lng: 131.6078
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=42&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=42"
+    note: "北川"
+
+  - id: curated-still-oita-inaba-dam
+    name: "稲葉ダム"
+    operator: "大分県土木建築部河川課"
+    category: dam
+    prefecture: "44"
+    lat: 32.9942
+    lng: 131.2967
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=38&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=38"
+    note: "稲葉川"
+
+  - id: curated-still-oita-serikawa-dam
+    name: "芹川ダム"
+    operator: "大分県企業局(ダム管理部 芹川・北川ダム管理事務所)"
+    category: dam
+    prefecture: "44"
+    lat: 33.1397
+    lng: 131.4411
+    image_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&tm=202608211945&sn=44&unq=1"
+    page_url: "https://river.pref.oita.jp/bousai/servlet/bousaiweb.servletBousaiContents?dk=15&style=itv_detail&it=0&nw=1&sv=3&sn=44"
+    note: "芹川"
+
+  - id: curated-still-iwate-ryorigawa-dam
+    name: "綾里川ダム"
+    operator: "岩手県県土整備部河川課(岩手県河川情報システム)"
+    category: dam
+    prefecture: "03"
+    lat: 39.0622
+    lng: 141.7783
+    image_url: "http://kasen.pref.iwate.jp/camera/iwate/area11_cam120_20260821195225.jpg"
+    page_url: "http://kasen.pref.iwate.jp/iwate/servlet/Gamen44Servlet?param=area=7"
+    note: "綾里川"
