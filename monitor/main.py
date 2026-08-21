@@ -116,8 +116,12 @@ def run(shard: str | None = None) -> int:
             if hit:
                 cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
             # シャード外でも最新URLだけは配信する（チェック自体はシャード担当回で行う)
-            st = statuses.get(cam["id"])
-            if hit and st is not None:
+            if hit:
+                st = statuses.setdefault(cam["id"], {
+                    "state": "unknown", "last_ok_at": None,
+                    "http_status": None, "frozen_since": None,
+                    "consecutive_failures": 0, "avg_interval_sec": None,
+                })
                 st["image_url"], st["image_time"] = hit
         # cameras(シャード抽出済み)のdictはall_camerasと別オブジェクトなので反映する
         by_id = {c["id"]: c for c in roadinfo_cams}
@@ -150,9 +154,12 @@ def run(shard: str | None = None) -> int:
             if hit:
                 cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
                 volcam_by_id[cam["id"]] = cam["_resolved_image"]
-                st = statuses.get(cam["id"])
-                if st is not None:
-                    st["image_url"], st["image_time"] = hit
+                st = statuses.setdefault(cam["id"], {
+                    "state": "unknown", "last_ok_at": None,
+                    "http_status": None, "frozen_since": None,
+                    "consecutive_failures": 0, "avg_interval_sec": None,
+                })
+                st["image_url"], st["image_time"] = hit
         for cam in cameras:
             if cam["id"] in volcam_by_id:
                 cam["_resolved_image"] = volcam_by_id[cam["id"]]
@@ -186,9 +193,12 @@ def run(shard: str | None = None) -> int:
             if hit:
                 cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
                 ref_by_id[cam["id"]] = cam["_resolved_image"]
-                st = statuses.get(cam["id"])
-                if st is not None:
-                    st["image_url"], st["image_time"] = hit
+                st = statuses.setdefault(cam["id"], {
+                    "state": "unknown", "last_ok_at": None,
+                    "http_status": None, "frozen_since": None,
+                    "consecutive_failures": 0, "avg_interval_sec": None,
+                })
+                st["image_url"], st["image_time"] = hit
         for cam in cameras:
             if cam["id"] in ref_by_id:
                 cam["_resolved_image"] = ref_by_id[cam["id"]]
@@ -218,9 +228,12 @@ def run(shard: str | None = None) -> int:
             if hit:
                 cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
                 st_by_id[cam["id"]] = cam["_resolved_image"]
-                st = statuses.get(cam["id"])
-                if st is not None:
-                    st["image_url"], st["image_time"] = hit
+                st = statuses.setdefault(cam["id"], {
+                    "state": "unknown", "last_ok_at": None,
+                    "http_status": None, "frozen_since": None,
+                    "consecutive_failures": 0, "avg_interval_sec": None,
+                })
+                st["image_url"], st["image_time"] = hit
         for cam in cameras:
             if cam["id"] in st_by_id:
                 cam["_resolved_image"] = st_by_id[cam["id"]]
