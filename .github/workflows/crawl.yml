@@ -25,6 +25,8 @@ jobs:
           python -c "import json,pathlib; p=pathlib.Path('data/candidates.json'); print(len(json.loads(p.read_text(encoding='utf-8'))['cameras']) if p.exists() else 0)" > /tmp/prev_count
       - name: クロール実行
         run: python -m crawler.main --all
+        env:
+          PYTHONUNBUFFERED: "1"   # 失敗時にどこまで進んだかログで追えるようにする
       - name: 取得数チェック（前回比80%未満で失敗 = パーサ破損検知）
         run: |
           prev=$(cat /tmp/prev_count)

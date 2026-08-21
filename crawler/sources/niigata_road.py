@@ -22,8 +22,10 @@ from crawler.sources.base import (CameraCandidate, DiscoverResult, HttpSession,
 BASE = "https://www.live-cam.pref.niigata.jp/"
 TOP_URL = BASE
 TEXT_URL = BASE + "text/select.php?area={area}&class=1"
+# hrefは「/camera/pc/x.jpg」と「camera/pc/x.jpg」の両表記が観測されている
+# (2026-08-21にサイト側が先頭スラッシュなしへ変更し0件になった)
 CAM_RE = re.compile(
-    r"<a id='\d+' class='([^']*)' href='(/camera/pc/[^']+)' title='([^']+)'")
+    r"<a id='\d+' class='([^']*)' href='(/?camera/pc/[^']+)' title='([^']+)'")
 CITY_HEAD_RE = re.compile(r"link_title[^>]*>>?\s*([^<\s　]+)[\s　]*\[一覧\]")
 CITY_CAM_RE = re.compile(r"class='link'[^>]*>([^<]+)</a>")
 
@@ -104,7 +106,7 @@ class NiigataRoadParser(SourceParser):
                 category="road",
                 prefecture="15",
                 feed_type="still_image",
-                feed_url=BASE.rstrip("/") + href,
+                feed_url=BASE.rstrip("/") + "/" + href.lstrip("/"),
                 fallback_url=BASE,
                 operator="新潟県",
                 page_url=BASE,

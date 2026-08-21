@@ -11,12 +11,15 @@ from __future__ import annotations
 
 import hashlib
 import time
+from urllib.parse import urlparse
 
-from crawler.sources.base import CameraCandidate, HttpSession
+from crawler.sources.base import CameraCandidate, HttpSession, RateLimitedError
 from monitor.freeze import dhash64, is_placeholder
 
 MIN_BYTES = 5 * 1024
 DEFAULT_WAIT_SEC = 300
+
+RATE_LIMITED_NOTE = "検証不可: 403/429検知により当該ホストへのアクセスを停止"
 
 
 def _fetch_image(session: HttpSession, cand: CameraCandidate):
@@ -30,23 +33,47 @@ def _fetch_image(session: HttpSession, cand: CameraCandidate):
 def verify_still_images(session: HttpSession, candidates: list[CameraCandidate],
                         wait_sec: int = DEFAULT_WAIT_SEC,
                         log=print) -> None:
-    """still_image 候補を検証し、cand.verification / review_note を埋める。"""
+    """still_image 候補を検証し、cand.verification / review_note を埋める。
+
+    SPEC 10章: 403/429 を受けたホストへのアクセスは即停止するが、
+    他ホストの検証は継続する（クロール全体は落とさず、対象候補に
+    「検証不可」を記録して人に報告する）。
+    """
     targets = [c for c in candidates if c.feed_type == "still_image"]
     if not targets:
         return
 
+    blocked_hosts: set[str] = set()
+
+    def _fetch_guarded(c: CameraCandidate):
+        host = urlparse(c.feed_url).netloc
+        if host in blocked_hosts:
+            return None
+        try:
+            return _fetch_image(session, c)
+        except RateLimitedError as e:
+            blocked_hosts.add(host)
+            log(f"!!! レート制限/拒否検知: {e}（このホストの検証を停止して継続）")
+            return None
+
     log(f"検証: {len(targets)}件の静止画を1回目取得...")
-    first: dict[str, tuple[int | None, bytes | None, str]] = {}
+    first: dict[str, tuple[int | None, bytes | None, str] | None] = {}
     for c in targets:
-        r = _fetch_image(session, c)
-        first[c.id] = (r.status, r.content, r.content_type)
+        r = _fetch_guarded(c)
+        first[c.id] = (r.status, r.content, r.content_type) if r else None
 
     log(f"検証: {wait_sec}秒待機して2回目取得...")
     time.sleep(wait_sec)
 
     for c in targets:
+        if first[c.id] is None:
+            _mark_rate_limited(c)
+            continue
         s1, b1, ct1 = first[c.id]
-        r2 = _fetch_image(session, c)
+        r2 = _fetch_guarded(c)
+        if r2 is None:
+            _mark_rate_limited(c)
+            continue
         s2, b2 = r2.status, r2.content
 
         ok_status = s1 == 200 and s2 == 200
@@ -78,3 +105,14 @@ def verify_still_images(session: HttpSession, candidates: list[CameraCandidate],
         if problems:
             note = "検証NG: " + "、".join(problems)
             c.review_note = (c.review_note + " / " + note).strip(" /")
+
+
+def _mark_rate_limited(c: CameraCandidate) -> None:
+    c.verification = {
+        "fetched_twice": False,
+        "image_changed": None,
+        "content_type": None,
+        "bytes": None,
+    }
+    if RATE_LIMITED_NOTE not in (c.review_note or ""):
+        c.review_note = ((c.review_note or "") + " / " + RATE_LIMITED_NOTE).strip(" /")
