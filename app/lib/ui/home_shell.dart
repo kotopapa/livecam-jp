@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
+import 'bosai_screen.dart';
 import 'favorites_screen.dart';
 import 'list_screen.dart';
 import 'map_screen.dart';
@@ -26,12 +27,19 @@ class _HomeShellState extends State<HomeShell> {
   void initState() {
     super.initState();
     widget.app.addListener(_maybeShowUpdateDialog);
+    widget.app.addListener(_onAppChanged);
   }
 
   @override
   void dispose() {
     widget.app.removeListener(_maybeShowUpdateDialog);
+    widget.app.removeListener(_onAppChanged);
     super.dispose();
+  }
+
+  /// 特別警報バッジ等の反映（AppState変更で下部バーを再描画する）
+  void _onAppChanged() {
+    if (mounted) setState(() {});
   }
 
   /// 強制アップデート（HANDOFF 2-8-1）。manifest の min_app_version を
@@ -68,17 +76,29 @@ class _HomeShellState extends State<HomeShell> {
       body: IndexedStack(index: _index, children: [
         MapScreen(app: widget.app),
         ListScreen(app: widget.app),
+        BosaiScreen(app: widget.app),
         FavoritesScreen(app: widget.app),
         SettingsScreen(app: widget.app),
       ]),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
         onDestinationSelected: (i) => setState(() => _index = i),
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.map_outlined), label: '地図'),
-          NavigationDestination(icon: Icon(Icons.list), label: '一覧'),
-          NavigationDestination(icon: Icon(Icons.star_border), label: 'お気に入り'),
-          NavigationDestination(icon: Icon(Icons.settings_outlined), label: '設定'),
+        destinations: [
+          const NavigationDestination(
+              icon: Icon(Icons.map_outlined), label: '地図'),
+          const NavigationDestination(icon: Icon(Icons.list), label: '一覧'),
+          NavigationDestination(
+            icon: Badge(
+              isLabelVisible: widget.app.specialWarningActive,
+              backgroundColor: const Color(0xFFD93025),
+              child: const Icon(Icons.crisis_alert),
+            ),
+            label: '災害速報',
+          ),
+          const NavigationDestination(
+              icon: Icon(Icons.star_border), label: 'お気に入り'),
+          const NavigationDestination(
+              icon: Icon(Icons.settings_outlined), label: '設定'),
         ],
       ),
     );

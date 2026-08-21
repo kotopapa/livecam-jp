@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -298,6 +300,56 @@ class AppState extends ChangeNotifier {
     } finally {
       refreshing = false;
       notifyListeners();
+    }
+    // 災害速報タブのバッジ用（失敗しても本体機能に影響させない）
+    unawaited(checkSpecialWarnings());
+  }
+
+  // --- 特別警報バッジ（災害速報タブに赤バッジを出す） ---
+  bool specialWarningActive = false;
+  static const _specialCodes = {'32', '33', '35', '36', '37', '38'};
+
+  Future<void> checkSpecialWarnings() async {
+    try {
+      final resp = await http
+          .get(Uri.parse('https://www.jma.go.jp/bosai/warning/data/r8/'
+              'map.json?_=${DateTime.now().millisecondsSinceEpoch}'))
+          .timeout(const Duration(seconds: 15));
+      if (resp.statusCode != 200) return;
+      final reports = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
+      final latestByOffice = <String, Map<String, dynamic>>{};
+      for (final rep in reports.cast<Map<String, dynamic>>()) {
+        final office = rep['publishingOffice'] as String? ?? '';
+        final dt = rep['reportDatetime'] as String? ?? '';
+        final cur = latestByOffice[office];
+        if (cur == null ||
+            dt.compareTo(cur['reportDatetime'] as String? ?? '') > 0) {
+          latestByOffice[office] = rep;
+        }
+      }
+      var active = false;
+      outer:
+      for (final rep in latestByOffice.values) {
+        final warning = rep['warning'] as Map<String, dynamic>? ?? const {};
+        for (final area in (warning['class10Items'] as List? ?? const [])
+            .cast<Map<String, dynamic>>()) {
+          for (final w in (area['kinds'] as List? ?? const [])
+              .cast<Map<String, dynamic>>()) {
+            final status = w['status'] as String? ?? '';
+            if (status == '解除' || status.contains('なし')) continue;
+            if (_specialCodes.contains(w['code'] as String? ?? '')) {
+              active = true;
+              break outer;
+            }
+          }
+        }
+      }
+      if (active != specialWarningActive) {
+        specialWarningActive = active;
+        notifyListeners();
+      }
+    } catch (_) {
+      // 取得失敗時はバッジ状態を維持
     }
   }
 }

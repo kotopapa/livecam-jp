@@ -4,7 +4,6 @@ import 'package:geolocator/geolocator.dart';
 import '../app_state.dart';
 import '../models/camera.dart';
 import '../util/geo.dart';
-import 'bosai_screen.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 import 'ranking_screen.dart';
@@ -107,12 +106,6 @@ class _ListScreenState extends State<ListScreen> {
             icon: const Icon(Icons.leaderboard_outlined),
             onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (_) => RankingScreen(app: widget.app))),
-          ),
-          IconButton(
-            tooltip: '災害速報',
-            icon: const Icon(Icons.crisis_alert),
-            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (_) => BosaiScreen(app: widget.app))),
           ),
         ],
         bottom: PreferredSize(
