@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T15:18:21Z",
+ "version": "2026-08-21T23:24:38Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -15379,6 +15379,234 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-still-antarctica-mcmurdo",
+   "name": "南極 マクマード基地",
+   "name_kana": null,
+   "lat": -77.8419,
+   "lng": 166.6863,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "AQ",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm"
+   },
+   "operator": "米国南極プログラム(USAP/NSF)",
+   "source": {
+    "page_url": "https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：米国南極プログラム(USAP/NSF)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-antarctica-neumayer",
+   "name": "南極 ノイマイヤーIII基地",
+   "name_kana": null,
+   "lat": -70.6758,
+   "lng": -8.2708,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "AQ",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.awi.de/en/expedition/stations/neumayer-station-iii/webcam.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.awi.de/en/expedition/stations/neumayer-station-iii/webcam.html"
+   },
+   "operator": "Alfred Wegener Institute(AWI)",
+   "source": {
+    "page_url": "https://www.awi.de/en/expedition/stations/neumayer-station-iii/webcam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Alfred Wegener Institute(AWI)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-antarctica-palmer",
+   "name": "南極 パーマー基地",
+   "name_kana": null,
+   "lat": -64.7742,
+   "lng": -64.0527,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "AQ",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.usap.gov/videoclipsandmaps/palwebcam.cfm",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.usap.gov/videoclipsandmaps/palwebcam.cfm"
+   },
+   "operator": "米国南極プログラム(USAP/NSF)",
+   "source": {
+    "page_url": "https://www.usap.gov/videoclipsandmaps/palwebcam.cfm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：米国南極プログラム(USAP/NSF)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-antarctica-southpole",
+   "name": "南極点 アムンゼン・スコット基地",
+   "name_kana": null,
+   "lat": -90.0,
+   "lng": 0.0,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "AQ",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.usap.gov/videoclipsandmaps/SouthPoleWebcam/spole00001.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.usap.gov/videoclipsandmaps/spwebcam.cfm"
+   },
+   "operator": "米国南極プログラム(USAP/NSF)",
+   "source": {
+    "page_url": "https://www.usap.gov/videoclipsandmaps/spwebcam.cfm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：米国南極プログラム(USAP/NSF)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-antarctica-syowa",
+   "name": "南極 昭和基地",
+   "name_kana": null,
+   "lat": -69.0044,
+   "lng": 39.5903,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "AQ",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.nipr.ac.jp/syowa-cam1.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.nipr.ac.jp/webcam/"
+   },
+   "operator": "国立極地研究所",
+   "source": {
+    "page_url": "https://www.nipr.ac.jp/webcam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国立極地研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-arctic-nyalesund",
+   "name": "北極 ニーオルスン国際観測村",
+   "name_kana": null,
+   "lat": 78.9231,
+   "lng": 11.9312,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "NO",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://nyalesundresearch.no/data-quick-looks-and-webcams/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://nyalesundresearch.no/data-quick-looks-and-webcams/"
+   },
+   "operator": "ノルウェー極地研究所/Kings Bay AS",
+   "source": {
+    "page_url": "https://nyalesundresearch.no/data-quick-looks-and-webcams/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ノルウェー極地研究所/Kings Bay AS"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-asakawa-dam",
    "name": "浅川ダム",
    "name_kana": null,
@@ -17505,6 +17733,44 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-eso-paranal",
+   "name": "ESOパラナル天文台(VLT)",
+   "name_kana": null,
+   "lat": -24.6272,
+   "lng": -70.4039,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "CL",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.eso.org/public/archives/static/pano/latest/pano_PV_960x.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.eso.org/public/outreach/webcams/"
+   },
+   "operator": "European Southern Observatory",
+   "source": {
+    "page_url": "https://www.eso.org/public/outreach/webcams/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：European Southern Observatory"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-gunma-tenmondai-allsky",
@@ -21041,6 +21307,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-maunakea-summit",
+   "name": "マウナケア山頂 天文台群",
+   "name_kana": null,
+   "lat": 19.8206,
+   "lng": -155.4681,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "US",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi"
+   },
+   "operator": "Mauna Kea Weather Center/CFHT",
+   "source": {
+    "page_url": "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Mauna Kea Weather Center/CFHT"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-michinoeki-aso-kako-camera",
    "name": "道の駅阿蘇 火口(阿蘇パーキング)",
    "name_kana": null,
@@ -21077,6 +21381,44 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-mount-washington",
+   "name": "マウントワシントン観測所",
+   "name_kana": null,
+   "lat": 44.2706,
+   "lng": -71.3033,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "US",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://mountwashington.org/webcams/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://mountwashington.org/webcams/"
+   },
+   "operator": "Mount Washington Observatory",
+   "source": {
+    "page_url": "https://mountwashington.org/webcams/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Mount Washington Observatory"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-norikura-kogen-norikuradake",
@@ -23167,6 +23509,44 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yellowstone-oldfaithful",
+   "name": "イエローストーン オールドフェイスフル間欠泉",
+   "name_kana": null,
+   "lat": 44.4605,
+   "lng": -110.8281,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "US",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.nps.gov/yell/learn/photosmultimedia/webcams.htm",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.nps.gov/yell/learn/photosmultimedia/webcams.htm"
+   },
+   "operator": "米国国立公園局(NPS)",
+   "source": {
+    "page_url": "https://www.nps.gov/yell/learn/photosmultimedia/webcams.htm",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：米国国立公園局(NPS)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-yokohama-546601",
@@ -572281,14 +572661,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "J7ZrIDvqlic",
+    "url": "1iipvnLct7E",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=J7ZrIDvqlic"
+    "url": "https://www.youtube.com/watch?v=1iipvnLct7E"
    },
    "operator": "Explore.org",
    "source": {
@@ -572303,7 +572683,7 @@
     "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-08-19"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "world-06ec65c7",
@@ -573421,14 +573801,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "FLdrf1oOhf4",
+    "url": "AZJF-tk4GQo",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=FLdrf1oOhf4"
+    "url": "https://www.youtube.com/watch?v=AZJF-tk4GQo"
    },
    "operator": "Vomo Island Fiji",
    "source": {
@@ -573443,7 +573823,7 @@
     "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "world-1d228bd6",
@@ -573877,14 +574257,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "1iipvnLct7E",
+    "url": "J7ZrIDvqlic",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=1iipvnLct7E"
+    "url": "https://www.youtube.com/watch?v=J7ZrIDvqlic"
    },
    "operator": "Explore.org/Aquarium of the Pacific",
    "source": {
@@ -573899,7 +574279,7 @@
     "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "world-26d90f0b",
@@ -576803,14 +577183,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "AZJF-tk4GQo",
+    "url": "FLdrf1oOhf4",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=AZJF-tk4GQo"
+    "url": "https://www.youtube.com/watch?v=FLdrf1oOhf4"
    },
    "operator": "Vomo Island Fiji",
    "source": {
@@ -576825,7 +577205,7 @@
     "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "world-6c303f70",
@@ -583324,6 +583704,44 @@
    },
    "first_seen": "2026-08-20",
    "last_updated": "2026-08-20"
+  },
+  {
+   "id": "world-iss-live",
+   "name": "国際宇宙ステーション(ISS)ライブ ※地図上の位置はNASAジョンソン宇宙センター",
+   "name_kana": null,
+   "lat": 29.5593,
+   "lng": -95.09,
+   "coord_accuracy": "area",
+   "category": "scenic",
+   "prefecture": "99",
+   "country": "US",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "M3HKLzjvKPc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=M3HKLzjvKPc"
+   },
+   "operator": "NASA",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=M3HKLzjvKPc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：NASA（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "yt-hkd-1fdfb3b809",

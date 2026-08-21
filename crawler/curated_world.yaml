@@ -2750,3 +2750,15 @@ cameras:
     lat: 29.2694
     lng: -94.7847
 
+
+  # ---- 2026-08-22 宇宙 ----
+  - id: world-iss-live
+    name: "国際宇宙ステーション(ISS)ライブ ※地図上の位置はNASAジョンソン宇宙センター"
+    operator: "NASA"
+    video_id: "M3HKLzjvKPc"
+    category: scenic
+    country: "US"
+    lat: 29.5593
+    lng: -95.09
+    accuracy: area
+    note: "地球俯瞰/船内映像の24時間配信。軌道上のため座標は管制センター(ヒューストン)を代表点にしている"

@@ -3121,3 +3121,141 @@ cameras:
     image_url: "https://www.city.maniwa.lg.jp/live/images/yubara/image2.jpg"
     page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1365.html"
     note: 1分更新・固定URL
+
+  # ---- 2026-08-22 極地・秘境調査分（prefecture "99"=海外） ----
+  - id: curated-still-antarctica-syowa
+    name: "南極 昭和基地"
+    operator: "国立極地研究所"
+    category: scenic
+    prefecture: "99"
+    country: "AQ"
+    lat: -69.0044
+    lng: 39.5903
+    refresh_sec: 300
+    image_url: "https://www.nipr.ac.jp/syowa-cam1.jpg"
+    page_url: "https://www.nipr.ac.jp/webcam/"
+    note: "基本観測棟屋上カメラ。約1分毎更新"
+
+  - id: curated-still-antarctica-southpole
+    name: "南極点 アムンゼン・スコット基地"
+    operator: "米国南極プログラム(USAP/NSF)"
+    category: scenic
+    prefecture: "99"
+    country: "AQ"
+    lat: -90.0
+    lng: 0.0
+    refresh_sec: 300
+    image_url: "https://www.usap.gov/videoclipsandmaps/SouthPoleWebcam/spole00001.jpg"
+    page_url: "https://www.usap.gov/videoclipsandmaps/spwebcam.cfm"
+    note: "ARO大気研究観測所カメラ。回転スロット式固定URL(90秒毎上書きを確認)"
+
+  - id: curated-still-antarctica-mcmurdo
+    name: "南極 マクマード基地"
+    operator: "米国南極プログラム(USAP/NSF)"
+    category: scenic
+    prefecture: "99"
+    country: "AQ"
+    lat: -77.8419
+    lng: 166.6863
+    feed_type: web_page
+    feed_url: "https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm"
+    image_url: "https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm"
+    page_url: "https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm"
+    note: "画像はAJAXで名称が都度変わるため誘導型。4カメラ集約ページ"
+
+  - id: curated-still-antarctica-palmer
+    name: "南極 パーマー基地"
+    operator: "米国南極プログラム(USAP/NSF)"
+    category: scenic
+    prefecture: "99"
+    country: "AQ"
+    lat: -64.7742
+    lng: -64.0527
+    feed_type: web_page
+    feed_url: "https://www.usap.gov/videoclipsandmaps/palwebcam.cfm"
+    image_url: "https://www.usap.gov/videoclipsandmaps/palwebcam.cfm"
+    page_url: "https://www.usap.gov/videoclipsandmaps/palwebcam.cfm"
+    note: "画像はAJAXで名称が都度変わるため誘導型"
+
+  - id: curated-still-antarctica-neumayer
+    name: "南極 ノイマイヤーIII基地"
+    operator: "Alfred Wegener Institute(AWI)"
+    category: scenic
+    prefecture: "99"
+    country: "AQ"
+    lat: -70.6758
+    lng: -8.2708
+    feed_type: web_page
+    feed_url: "https://www.awi.de/en/expedition/stations/neumayer-station-iii/webcam.html"
+    image_url: "https://www.awi.de/en/expedition/stations/neumayer-station-iii/webcam.html"
+    page_url: "https://www.awi.de/en/expedition/stations/neumayer-station-iii/webcam.html"
+    note: "画像はUTC時刻名(HHMM)で固定latestが無いため誘導型。日本からの接続が不安定な時間帯あり"
+
+  - id: curated-still-arctic-nyalesund
+    name: "北極 ニーオルスン国際観測村"
+    operator: "ノルウェー極地研究所/Kings Bay AS"
+    category: scenic
+    prefecture: "99"
+    country: "NO"
+    lat: 78.9231
+    lng: 11.9312
+    feed_type: web_page
+    feed_url: "https://nyalesundresearch.no/data-quick-looks-and-webcams/"
+    image_url: "https://nyalesundresearch.no/data-quick-looks-and-webcams/"
+    page_url: "https://nyalesundresearch.no/data-quick-looks-and-webcams/"
+    note: "スヴァールバル諸島・世界最北の常住研究拠点。複数カメラ集約ページのため誘導型"
+
+  - id: curated-still-eso-paranal
+    name: "ESOパラナル天文台(VLT)"
+    operator: "European Southern Observatory"
+    category: scenic
+    prefecture: "99"
+    country: "CL"
+    lat: -24.6272
+    lng: -70.4039
+    refresh_sec: 600
+    image_url: "https://www.eso.org/public/archives/static/pano/latest/pano_PV_960x.jpg"
+    page_url: "https://www.eso.org/public/outreach/webcams/"
+    note: "アタカマ砂漠標高2635mの超大型望遠鏡VLT観測プラットフォームパノラマ"
+
+  - id: curated-still-maunakea-summit
+    name: "マウナケア山頂 天文台群"
+    operator: "Mauna Kea Weather Center/CFHT"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 19.8206
+    lng: -155.4681
+    feed_type: web_page
+    feed_url: "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi"
+    image_url: "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi"
+    page_url: "http://mkwc.ifa.hawaii.edu/current/cams/index.cgi"
+    note: "標高4200m。複数天文台カメラ集約ページのため誘導型"
+
+  - id: curated-still-mount-washington
+    name: "マウントワシントン観測所"
+    operator: "Mount Washington Observatory"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 44.2706
+    lng: -71.3033
+    feed_type: web_page
+    feed_url: "https://mountwashington.org/webcams/"
+    image_url: "https://mountwashington.org/webcams/"
+    page_url: "https://mountwashington.org/webcams/"
+    note: "「世界最悪の天気」で知られる山岳観測所。複数カメラのため誘導型"
+
+  - id: curated-still-yellowstone-oldfaithful
+    name: "イエローストーン オールドフェイスフル間欠泉"
+    operator: "米国国立公園局(NPS)"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 44.4605
+    lng: -110.8281
+    feed_type: web_page
+    feed_url: "https://www.nps.gov/yell/learn/photosmultimedia/webcams.htm"
+    image_url: "https://www.nps.gov/yell/learn/photosmultimedia/webcams.htm"
+    page_url: "https://www.nps.gov/yell/learn/photosmultimedia/webcams.htm"
+    note: "静止画直URLは403のため公式ライブページへの誘導型"
