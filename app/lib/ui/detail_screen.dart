@@ -291,6 +291,10 @@ class _MediaView extends StatelessWidget {
     switch (camera.feed.type) {
       case FeedType.stillImage:
       case FeedType.mlitRoadinfo:
+      case FeedType.jmaVolcam:
+      case FeedType.thrCamxml:
+      case FeedType.camidxLatest:
+      case FeedType.saitamaFlood:
         final url = app.imageUrlFor(camera);
         if (url == null) {
           return _MediaFallback(
