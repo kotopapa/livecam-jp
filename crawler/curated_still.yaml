@@ -608,3 +608,269 @@ cameras:
     image_url: "http://ioworld.aa1.netvolante.jp/viewer/live/index.html?lang=ja"
     page_url: "https://ioworld.jp/livecamera"
     note: "未確認"
+
+  # --- 2026-08-21 第2弾: 海保灯台(MICS)・志摩市海岸・長野県営ダム ---
+
+  - id: curated-still-jcg-ono-lighthouse-ishikawa
+    name: "大野灯台"
+    operator: "海上保安庁(第九管区海上保安本部 金沢海上保安部)"
+    category: coast
+    prefecture: "17"
+    lat: 36.6161
+    lng: 136.6028
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/ono_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/ono_lt/"
+    note: "フッターに『Copyright(c) Japan Coast Guard. All rights reserved.』の著作権表示のみ。再配"
+
+  - id: curated-still-jcg-mitsushima-lighthouse-nagasaki
+    name: "三島灯台(対馬)"
+    operator: "海上保安庁(第七管区海上保安本部 対馬海上保安部)"
+    category: coast
+    prefecture: "42"
+    lat: 34.7239
+    lng: 129.4443
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/mitsushima_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/mitsushima_lt/"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-kinkasan-lighthouse-miyagi
+    name: "金華山灯台"
+    operator: "海上保安庁(第二管区海上保安本部)"
+    category: coast
+    prefecture: "04"
+    lat: 38.2766
+    lng: 141.5841
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kinkasan_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kinkasan_lt/"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-nojimasaki-lighthouse-chiba
+    name: "野島埼灯台"
+    operator: "海上保安庁(第三管区海上保安本部)"
+    category: coast
+    prefecture: "12"
+    lat: 34.9017
+    lng: 139.8884
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/nojimasaki_lt.jpg"
+    page_url: "https://www6.kaiho.mlit.go.jp/03kanku/chiba/nojimasaki_lt/livecamera/index.html"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-kyogamisaki-lighthouse-kyoto
+    name: "経ヶ岬灯台"
+    operator: "海上保安庁(第八管区海上保安本部 舞鶴海上保安部)"
+    category: coast
+    prefecture: "26"
+    lat: 35.7771
+    lng: 135.2233
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kyogamisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kyogamisaki_lt/"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-shionomisaki-lighthouse-wakayama
+    name: "潮岬灯台"
+    operator: "海上保安庁(第五管区海上保安本部 串本海上保安署)"
+    category: coast
+    prefecture: "30"
+    lat: 33.4331
+    lng: 135.7625
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/shionomisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/shionomisaki_lt/"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-mihonoseki-lighthouse-shimane
+    name: "美保関灯台"
+    operator: "海上保安庁(第八管区海上保安本部 境海上保安部)"
+    category: coast
+    prefecture: "32"
+    lat: 35.5672
+    lng: 133.3253
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/mihonoseki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/mihonoseki_lt/"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-izumohinomisaki-sakaguri-shimane
+    name: "出雲日御碕サカグリ照射灯"
+    operator: "海上保安庁(第八管区海上保安本部 境海上保安部)"
+    category: port
+    prefecture: "32"
+    lat: 35.4335
+    lng: 132.6296
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/izumohinomisaki_sakaguri_sl.jpg"
+    page_url: "https://www6.kaiho.mlit.go.jp/08kanku/sakai/izumohinomisaki_sakaguri_sl/livecamera/"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-toimisaki-lighthouse-miyazaki
+    name: "都井岬灯台"
+    operator: "海上保安庁(第十管区海上保安本部 宮崎海上保安部)"
+    category: coast
+    prefecture: "45"
+    lat: 31.3675
+    lng: 131.3458
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/toimisaki_lt.jpg"
+    page_url: "https://www6.kaiho.mlit.go.jp/10kanku/miyazaki/toimisaki_lt/livecamera/index.html"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-inubosaki-lighthouse-chiba
+    name: "犬吠埼灯台"
+    operator: "海上保安庁(第三管区海上保安本部 銚子海上保安部)"
+    category: coast
+    prefecture: "12"
+    lat: 35.7078
+    lng: 140.8686
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/inubosaki_lt.jpg"
+    page_url: "https://www6.kaiho.mlit.go.jp/03kanku/choshi/inubosaki_lt/livecamera/index.html"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-omaesaki-lighthouse-shizuoka
+    name: "御前埼灯台"
+    operator: "海上保安庁(第三管区海上保安本部 清水海上保安部)"
+    category: coast
+    prefecture: "22"
+    lat: 34.5958
+    lng: 138.2257
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/omaesaki_lt.jpg"
+    page_url: "https://www6.kaiho.mlit.go.jp/03kanku/shimizu/omaesaki_lt/livecamera/index.html"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-irosaki-lighthouse-shizuoka
+    name: "石廊埼灯台"
+    operator: "海上保安庁(第三管区海上保安本部 下田海上保安部)"
+    category: coast
+    prefecture: "22"
+    lat: 34.6028
+    lng: 138.8453
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/irosaki_lt.jpg"
+    page_url: "https://www6.kaiho.mlit.go.jp/03kanku/shimoda/irosaki_lt/livecamera/index.html"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-jcg-hachijojima-lighthouse-tokyo
+    name: "八丈島灯台"
+    operator: "海上保安庁(第三管区海上保安本部 下田海上保安部)"
+    category: coast
+    prefecture: "13"
+    lat: 33.0792
+    lng: 139.8553
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hachijosima_lt.jpg"
+    page_url: "https://www6.kaiho.mlit.go.jp/03kanku/shimoda/hachijosima_lt/livecamera/index.html"
+    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+
+  - id: curated-still-shima-kurosaki-coast-mie
+    name: "志摩市 黒崎海岸(浜島町浜島)"
+    operator: "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+    category: coast
+    prefecture: "24"
+    lat: 34.2961
+    lng: 136.7566
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=4"
+    page_url: "https://webcam.mctv.jp/shima/"
+    note: "『志摩市は、利用者が当サイトの情報を用いて行う一切の行為について、何ら責任を負うものではありません』との免責事項あり。転載可否は明記なし→要"
+
+  - id: curated-still-shima-goza-port-mie
+    name: "志摩市 御座港(志摩町御座)"
+    operator: "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+    category: port
+    prefecture: "24"
+    lat: 34.2756
+    lng: 136.7654
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=20"
+    page_url: "https://webcam.mctv.jp/shima/"
+    note: "同上(免責事項あり、転載可否明記なし→要人手レビュー)"
+
+  - id: curated-still-shima-kokufu-coast-mie
+    name: "志摩市 国府海岸(阿児町国府)"
+    operator: "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+    category: coast
+    prefecture: "24"
+    lat: 34.3404
+    lng: 136.8733
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=3"
+    page_url: "https://webcam.mctv.jp/shima/"
+    note: "同上(免責事項あり、転載可否明記なし→要人手レビュー)"
+
+  - id: curated-still-shima-matoya-anori-mie
+    name: "志摩市 的矢湾(阿児町安乗)"
+    operator: "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+    category: port
+    prefecture: "24"
+    lat: 34.365
+    lng: 136.9083
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=2"
+    page_url: "https://webcam.mctv.jp/shima/"
+    note: "同上(免責事項あり、転載可否明記なし→要人手レビュー)"
+
+  - id: curated-still-shima-wagu-port-mie
+    name: "志摩市 和具漁港(志摩町和具)"
+    operator: "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+    category: port
+    prefecture: "24"
+    lat: 34.2588
+    lng: 136.815
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=22"
+    page_url: "https://webcam.mctv.jp/shima/"
+    note: "同上(免責事項あり、転載可否明記なし→要人手レビュー)"
+
+  - id: curated-still-shima-azuri-beach-mie
+    name: "志摩市 あづり浜(志摩町越賀)"
+    operator: "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+    category: coast
+    prefecture: "24"
+    lat: 34.2594
+    lng: 136.7895
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=21"
+    page_url: "https://webcam.mctv.jp/shima/"
+    note: "同上(免責事項あり、転載可否明記なし→要人手レビュー)"
+
+  - id: curated-still-asakawa-dam
+    name: "浅川ダム"
+    operator: "長野県建設部 浅川改良事務所"
+    category: dam
+    prefecture: "20"
+    lat: 36.6906
+    lng: 138.191
+    image_url: "https://cf371510.cloudfree.jp/camera/asakawa-camera.jpg"
+    page_url: "https://www.pref.nagano.lg.jp/asakawa/jigyo/dam.html"
+    note: "信濃川水系浅川"
+
+  - id: curated-still-takato-dam
+    name: "高遠ダム"
+    operator: "長野県企業局 南信発電管理事務所"
+    category: dam
+    prefecture: "20"
+    lat: 35.8294
+    lng: 138.0631
+    image_url: "https://naganoken-kigyokyoku.jp/camera/takato.jpg"
+    page_url: "https://naganoken-kigyokyoku.jp/dam/"
+    note: "天竜川水系三峰川"
+
+  - id: curated-still-yunose-dam
+    name: "湯の瀬ダム"
+    operator: "長野県企業局 北信発電管理事務所"
+    category: dam
+    prefecture: "20"
+    lat: 36.6639
+    lng: 138.1333
+    image_url: "https://naganoken-kigyokyoku.jp/camera/yunose.jpg"
+    page_url: "https://naganoken-kigyokyoku.jp/dam/"
+    note: "信濃川水系裾花川"
+
+  - id: curated-still-sugadaira-dam-up
+    name: "菅平ダム(上流側)"
+    operator: "長野県企業局 北信発電管理事務所"
+    category: dam
+    prefecture: "20"
+    lat: 36.5022
+    lng: 138.3492
+    image_url: "https://sugadaira-dam.com/index.files/live1.jpg"
+    page_url: "https://naganoken-kigyokyoku.jp/dam/"
+    note: "信濃川水系神川"
+
+  - id: curated-still-sugadaira-dam-down
+    name: "菅平ダム(下流側)"
+    operator: "長野県企業局 北信発電管理事務所"
+    category: dam
+    prefecture: "20"
+    lat: 36.5022
+    lng: 138.3492
+    image_url: "https://sugadaira-dam.com/index.files/live2.jpg"
+    page_url: "https://naganoken-kigyokyoku.jp/dam/"
+    note: "信濃川水系神川"

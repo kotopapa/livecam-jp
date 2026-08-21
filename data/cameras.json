@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T07:00:09Z",
+ "version": "2026-08-21T07:13:06Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -14619,6 +14619,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-still-asakawa-dam",
+   "name": "浅川ダム",
+   "name_kana": null,
+   "lat": 36.6906,
+   "lng": 138.191,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://cf371510.cloudfree.jp/camera/asakawa-camera.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.nagano.lg.jp/asakawa/jigyo/dam.html"
+   },
+   "operator": "長野県建設部 浅川改良事務所",
+   "source": {
+    "page_url": "https://www.pref.nagano.lg.jp/asakawa/jigyo/dam.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：長野県建設部 浅川改良事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-dam-gosho",
    "name": "御所ダム",
    "name_kana": null,
@@ -16253,6 +16291,500 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-jcg-hachijojima-lighthouse-tokyo",
+   "name": "八丈島灯台",
+   "name_kana": null,
+   "lat": 33.0792,
+   "lng": 139.8553,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "13",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hachijosima_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/03kanku/shimoda/hachijosima_lt/livecamera/index.html"
+   },
+   "operator": "海上保安庁(第三管区海上保安本部 下田海上保安部)",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/03kanku/shimoda/hachijosima_lt/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第三管区海上保安本部 下田海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-inubosaki-lighthouse-chiba",
+   "name": "犬吠埼灯台",
+   "name_kana": null,
+   "lat": 35.7078,
+   "lng": 140.8686,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/inubosaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/03kanku/choshi/inubosaki_lt/livecamera/index.html"
+   },
+   "operator": "海上保安庁(第三管区海上保安本部 銚子海上保安部)",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/03kanku/choshi/inubosaki_lt/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第三管区海上保安本部 銚子海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-irosaki-lighthouse-shizuoka",
+   "name": "石廊埼灯台",
+   "name_kana": null,
+   "lat": 34.6028,
+   "lng": 138.8453,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/irosaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/03kanku/shimoda/irosaki_lt/livecamera/index.html"
+   },
+   "operator": "海上保安庁(第三管区海上保安本部 下田海上保安部)",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/03kanku/shimoda/irosaki_lt/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第三管区海上保安本部 下田海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-izumohinomisaki-sakaguri-shimane",
+   "name": "出雲日御碕サカグリ照射灯",
+   "name_kana": null,
+   "lat": 35.4335,
+   "lng": 132.6296,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "32",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/izumohinomisaki_sakaguri_sl.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/08kanku/sakai/izumohinomisaki_sakaguri_sl/livecamera/"
+   },
+   "operator": "海上保安庁(第八管区海上保安本部 境海上保安部)",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/08kanku/sakai/izumohinomisaki_sakaguri_sl/livecamera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第八管区海上保安本部 境海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-kinkasan-lighthouse-miyagi",
+   "name": "金華山灯台",
+   "name_kana": null,
+   "lat": 38.2766,
+   "lng": 141.5841,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kinkasan_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/camstream/kinkasan_lt/"
+   },
+   "operator": "海上保安庁(第二管区海上保安本部)",
+   "source": {
+    "page_url": "https://camera.mics.kaiho.mlit.go.jp/camstream/kinkasan_lt/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第二管区海上保安本部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-kyogamisaki-lighthouse-kyoto",
+   "name": "経ヶ岬灯台",
+   "name_kana": null,
+   "lat": 35.7771,
+   "lng": 135.2233,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "26",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kyogamisaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/camstream/kyogamisaki_lt/"
+   },
+   "operator": "海上保安庁(第八管区海上保安本部 舞鶴海上保安部)",
+   "source": {
+    "page_url": "https://camera.mics.kaiho.mlit.go.jp/camstream/kyogamisaki_lt/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第八管区海上保安本部 舞鶴海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-mihonoseki-lighthouse-shimane",
+   "name": "美保関灯台",
+   "name_kana": null,
+   "lat": 35.5672,
+   "lng": 133.3253,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "32",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/mihonoseki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/camstream/mihonoseki_lt/"
+   },
+   "operator": "海上保安庁(第八管区海上保安本部 境海上保安部)",
+   "source": {
+    "page_url": "https://camera.mics.kaiho.mlit.go.jp/camstream/mihonoseki_lt/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第八管区海上保安本部 境海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-mitsushima-lighthouse-nagasaki",
+   "name": "三島灯台(対馬)",
+   "name_kana": null,
+   "lat": 34.7239,
+   "lng": 129.4443,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/mitsushima_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/camstream/mitsushima_lt/"
+   },
+   "operator": "海上保安庁(第七管区海上保安本部 対馬海上保安部)",
+   "source": {
+    "page_url": "https://camera.mics.kaiho.mlit.go.jp/camstream/mitsushima_lt/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第七管区海上保安本部 対馬海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-nojimasaki-lighthouse-chiba",
+   "name": "野島埼灯台",
+   "name_kana": null,
+   "lat": 34.9017,
+   "lng": 139.8884,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/nojimasaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/03kanku/chiba/nojimasaki_lt/livecamera/index.html"
+   },
+   "operator": "海上保安庁(第三管区海上保安本部)",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/03kanku/chiba/nojimasaki_lt/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第三管区海上保安本部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-omaesaki-lighthouse-shizuoka",
+   "name": "御前埼灯台",
+   "name_kana": null,
+   "lat": 34.5958,
+   "lng": 138.2257,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/omaesaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/03kanku/shimizu/omaesaki_lt/livecamera/index.html"
+   },
+   "operator": "海上保安庁(第三管区海上保安本部 清水海上保安部)",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/03kanku/shimizu/omaesaki_lt/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第三管区海上保安本部 清水海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-ono-lighthouse-ishikawa",
+   "name": "大野灯台",
+   "name_kana": null,
+   "lat": 36.6161,
+   "lng": 136.6028,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "17",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/ono_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/camstream/ono_lt/"
+   },
+   "operator": "海上保安庁(第九管区海上保安本部 金沢海上保安部)",
+   "source": {
+    "page_url": "https://camera.mics.kaiho.mlit.go.jp/camstream/ono_lt/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第九管区海上保安本部 金沢海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-shionomisaki-lighthouse-wakayama",
+   "name": "潮岬灯台",
+   "name_kana": null,
+   "lat": 33.4331,
+   "lng": 135.7625,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "30",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/shionomisaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/camstream/shionomisaki_lt/"
+   },
+   "operator": "海上保安庁(第五管区海上保安本部 串本海上保安署)",
+   "source": {
+    "page_url": "https://camera.mics.kaiho.mlit.go.jp/camstream/shionomisaki_lt/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第五管区海上保安本部 串本海上保安署)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-jcg-toimisaki-lighthouse-miyazaki",
+   "name": "都井岬灯台",
+   "name_kana": null,
+   "lat": 31.3675,
+   "lng": 131.3458,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "45",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camera.mics.kaiho.mlit.go.jp/thumbnail/toimisaki_lt.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www6.kaiho.mlit.go.jp/10kanku/miyazaki/toimisaki_lt/livecamera/index.html"
+   },
+   "operator": "海上保安庁(第十管区海上保安本部 宮崎海上保安部)",
+   "source": {
+    "page_url": "https://www6.kaiho.mlit.go.jp/10kanku/miyazaki/toimisaki_lt/livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：海上保安庁(第十管区海上保安本部 宮崎海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-kushimoto-marine-park-underwater",
    "name": "串本海中公園 海中景観ライブ映像",
    "name_kana": null,
@@ -16319,6 +16851,348 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：公益財団法人自然公園財団 阿蘇支部(公益推進協会助成)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shima-azuri-beach-mie",
+   "name": "志摩市 あづり浜(志摩町越賀)",
+   "name_kana": null,
+   "lat": 34.2594,
+   "lng": 136.7895,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=21",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://webcam.mctv.jp/shima/"
+   },
+   "operator": "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)",
+   "source": {
+    "page_url": "https://webcam.mctv.jp/shima/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shima-goza-port-mie",
+   "name": "志摩市 御座港(志摩町御座)",
+   "name_kana": null,
+   "lat": 34.2756,
+   "lng": 136.7654,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=20",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://webcam.mctv.jp/shima/"
+   },
+   "operator": "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)",
+   "source": {
+    "page_url": "https://webcam.mctv.jp/shima/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shima-kokufu-coast-mie",
+   "name": "志摩市 国府海岸(阿児町国府)",
+   "name_kana": null,
+   "lat": 34.3404,
+   "lng": 136.8733,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=3",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://webcam.mctv.jp/shima/"
+   },
+   "operator": "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)",
+   "source": {
+    "page_url": "https://webcam.mctv.jp/shima/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shima-kurosaki-coast-mie",
+   "name": "志摩市 黒崎海岸(浜島町浜島)",
+   "name_kana": null,
+   "lat": 34.2961,
+   "lng": 136.7566,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=4",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://webcam.mctv.jp/shima/"
+   },
+   "operator": "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)",
+   "source": {
+    "page_url": "https://webcam.mctv.jp/shima/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shima-matoya-anori-mie",
+   "name": "志摩市 的矢湾(阿児町安乗)",
+   "name_kana": null,
+   "lat": 34.365,
+   "lng": 136.9083,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=2",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://webcam.mctv.jp/shima/"
+   },
+   "operator": "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)",
+   "source": {
+    "page_url": "https://webcam.mctv.jp/shima/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-shima-wagu-port-mie",
+   "name": "志摩市 和具漁港(志摩町和具)",
+   "name_kana": null,
+   "lat": 34.2588,
+   "lng": 136.815,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=22",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://webcam.mctv.jp/shima/"
+   },
+   "operator": "志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)",
+   "source": {
+    "page_url": "https://webcam.mctv.jp/shima/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：志摩市(配信: 伊勢志摩ケーブルテレビ MCTV)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-sugadaira-dam-down",
+   "name": "菅平ダム(下流側)",
+   "name_kana": null,
+   "lat": 36.5022,
+   "lng": 138.3492,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://sugadaira-dam.com/index.files/live2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://naganoken-kigyokyoku.jp/dam/"
+   },
+   "operator": "長野県企業局 北信発電管理事務所",
+   "source": {
+    "page_url": "https://naganoken-kigyokyoku.jp/dam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：長野県企業局 北信発電管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-sugadaira-dam-up",
+   "name": "菅平ダム(上流側)",
+   "name_kana": null,
+   "lat": 36.5022,
+   "lng": 138.3492,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://sugadaira-dam.com/index.files/live1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://naganoken-kigyokyoku.jp/dam/"
+   },
+   "operator": "長野県企業局 北信発電管理事務所",
+   "source": {
+    "page_url": "https://naganoken-kigyokyoku.jp/dam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：長野県企業局 北信発電管理事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-takato-dam",
+   "name": "高遠ダム",
+   "name_kana": null,
+   "lat": 35.8294,
+   "lng": 138.0631,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://naganoken-kigyokyoku.jp/camera/takato.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://naganoken-kigyokyoku.jp/dam/"
+   },
+   "operator": "長野県企業局 南信発電管理事務所",
+   "source": {
+    "page_url": "https://naganoken-kigyokyoku.jp/dam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：長野県企業局 南信発電管理事務所"
    },
    "review": {
     "status": "approved",
@@ -16699,6 +17573,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：中央アルプス観光株式会社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-yunose-dam",
+   "name": "湯の瀬ダム",
+   "name_kana": null,
+   "lat": 36.6639,
+   "lng": 138.1333,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://naganoken-kigyokyoku.jp/camera/yunose.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://naganoken-kigyokyoku.jp/dam/"
+   },
+   "operator": "長野県企業局 北信発電管理事務所",
+   "source": {
+    "page_url": "https://naganoken-kigyokyoku.jp/dam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：長野県企業局 北信発電管理事務所"
    },
    "review": {
     "status": "approved",
