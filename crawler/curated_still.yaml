@@ -3318,3 +3318,177 @@ cameras:
     image_url: "http://tahara-bousai.jp/images/akabanekou.jpg"
     page_url: "https://www.city.tahara.aichi.jp/kurashi/saigai/1000702/1002276.html"
     note: "南海トラフ地震で津波が最速到達すると想定される地点として市が公開。10分更新"
+
+  # ---- 2026-08-22 神奈川県 海岸・港湾監視カメラ(津波監視・県河港課公開15地点) ----
+  - id: curated-still-kanagawa-coast-yugawara
+    name: "湯河原海岸（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.171963
+    lng: 139.101959
+    refresh_sec: 600
+    image_url: "http://125.206.12.114/cgi-bin/camera?resolution=1280"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "吉浜海岸。Panasonic製カメラのスナップショットAPI"
+
+  - id: curated-still-kanagawa-coast-manazuru
+    name: "真鶴港（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.151665
+    lng: 139.141769
+    refresh_sec: 600
+    image_url: "http://58.94.97.144/cgi-bin/camera?resolution=1280"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "Panasonic製カメラのスナップショットAPI"
+
+  - id: curated-still-kanagawa-coast-odawara
+    name: "小田原海岸（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.249767
+    lng: 139.158493
+    refresh_sec: 600
+    image_url: "http://118.21.116.37/cgi-bin/camera?resolution=1280"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "御幸の浜周辺。Panasonic製カメラのスナップショットAPI"
+
+  - id: curated-still-kanagawa-coast-ninomiya
+    name: "二宮海岸（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.305229
+    lng: 139.256744
+    refresh_sec: 600
+    image_url: "http://118.21.39.196/cgi-bin/camera?resolution=1280"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "Panasonic製カメラのスナップショットAPI"
+
+  - id: curated-still-kanagawa-coast-oiso
+    name: "大磯海岸（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.313828
+    lng: 139.316559
+    feed_type: web_page
+    feed_url: "https://www.youtube.com/watch?v=WV9DtVXgwqE"
+    image_url: "https://www.youtube.com/watch?v=WV9DtVXgwqE"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "県公式YouTubeライブ(埋め込み不可のため誘導型)"
+
+  # 平塚海岸は curated-hiratsuka-coast として既収録のため省略
+
+  - id: curated-still-kanagawa-coast-chigasaki
+    name: "茅ヶ崎海岸（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.326015
+    lng: 139.404007
+    refresh_sec: 600
+    image_url: "http://221.189.0.181/record/current.jpg"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "Mobotix製カメラのスナップショット"
+
+  - id: curated-still-kanagawa-coast-fujisawa
+    name: "藤沢海岸（片瀬東浜）（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.308735
+    lng: 139.486557
+    refresh_sec: 600
+    image_url: "http://153.156.235.87/record/current.jpg"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "映像で片瀬東浜(江の島東側)を確認。Mobotix製"
+
+  - id: curated-still-kanagawa-coast-shonan-port
+    name: "湘南港（江の島）（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.300049
+    lng: 139.482239
+    refresh_sec: 600
+    image_url: "http://114.156.129.154/record/current.jpg"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "映像でPORT of SHONAN表示を確認。Mobotix製"
+
+  - id: curated-still-kanagawa-coast-kamakura
+    name: "鎌倉海岸（由比ヶ浜・材木座）（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.315674
+    lng: 139.545929
+    refresh_sec: 600
+    image_url: "http://153.142.220.112/record/current.jpg"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "映像でKAMAKURAKAIGAN表示を確認。Mobotix製"
+
+  - id: curated-still-kanagawa-coast-zushi
+    name: "逗子海岸（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.290417
+    lng: 139.574219
+    feed_type: web_page
+    feed_url: "https://www.youtube.com/watch?v=Q5AAi9KOjG0"
+    image_url: "https://www.youtube.com/watch?v=Q5AAi9KOjG0"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "県公式YouTubeライブ(埋め込み不可のため誘導型)"
+
+  - id: curated-still-kanagawa-coast-hayama
+    name: "葉山港（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.276577
+    lng: 139.593552
+    refresh_sec: 600
+    image_url: "https://coast-cam.com/images/cam1.jpg"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "映像で葉山港を確認。県ページからcoast-cam.com掲載"
+
+  - id: curated-still-kanagawa-coast-yokosuka
+    name: "横須賀（秋谷海岸）（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.25005
+    lng: 139.595947
+    refresh_sec: 600
+    image_url: "https://coast-cam.com/images/cam2.jpg"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "映像で秋谷付近の海岸駐車場を確認"
+
+  - id: curated-still-kanagawa-coast-miura-sagami
+    name: "三浦（相模湾側）（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.161861
+    lng: 139.629852
+    refresh_sec: 600
+    image_url: "https://coast-cam.com/images/cam3.jpg"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "相模湾側の小漁港。詳細地点未特定のため小網代周辺を代表点に"
+
+  - id: curated-still-kanagawa-coast-miura-tokyowan
+    name: "三浦海岸（東京湾側）（津波・海岸監視）"
+    operator: "神奈川県"
+    category: coast
+    prefecture: "14"
+    lat: 35.19202
+    lng: 139.65239
+    feed_type: web_page
+    feed_url: "https://www.youtube.com/watch?v=Blh-OB2JDR4"
+    image_url: "https://www.youtube.com/watch?v=Blh-OB2JDR4"
+    page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+    note: "県公式YouTubeライブ(埋め込み不可のため誘導型)"

@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T23:42:35Z",
+ "version": "2026-08-21T23:53:28Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -20164,6 +20164,538 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-chigasaki",
+   "name": "茅ヶ崎海岸（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.326015,
+   "lng": 139.404007,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://221.189.0.181/record/current.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-fujisawa",
+   "name": "藤沢海岸（片瀬東浜）（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.308735,
+   "lng": 139.486557,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://153.156.235.87/record/current.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-hayama",
+   "name": "葉山港（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.276577,
+   "lng": 139.593552,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://coast-cam.com/images/cam1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-kamakura",
+   "name": "鎌倉海岸（由比ヶ浜・材木座）（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.315674,
+   "lng": 139.545929,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://153.142.220.112/record/current.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-manazuru",
+   "name": "真鶴港（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.151665,
+   "lng": 139.141769,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://58.94.97.144/cgi-bin/camera?resolution=1280",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-miura-sagami",
+   "name": "三浦（相模湾側）（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.161861,
+   "lng": 139.629852,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://coast-cam.com/images/cam3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-miura-tokyowan",
+   "name": "三浦海岸（東京湾側）（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.19202,
+   "lng": 139.65239,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Blh-OB2JDR4",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-ninomiya",
+   "name": "二宮海岸（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.305229,
+   "lng": 139.256744,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://118.21.39.196/cgi-bin/camera?resolution=1280",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-odawara",
+   "name": "小田原海岸（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.249767,
+   "lng": 139.158493,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://118.21.116.37/cgi-bin/camera?resolution=1280",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-oiso",
+   "name": "大磯海岸（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.313828,
+   "lng": 139.316559,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=WV9DtVXgwqE",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-shonan-port",
+   "name": "湘南港（江の島）（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.300049,
+   "lng": 139.482239,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://114.156.129.154/record/current.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-yokosuka",
+   "name": "横須賀（秋谷海岸）（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.25005,
+   "lng": 139.595947,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://coast-cam.com/images/cam2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-yugawara",
+   "name": "湯河原海岸（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.171963,
+   "lng": 139.101959,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://125.206.12.114/cgi-bin/camera?resolution=1280",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kanagawa-coast-zushi",
+   "name": "逗子海岸（津波・海岸監視）",
+   "name_kana": null,
+   "lat": 35.290417,
+   "lng": 139.574219,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Q5AAi9KOjG0",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
+   },
+   "operator": "神奈川県",
+   "source": {
+    "page_url": "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown prefs=['14'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-kawaguchiko-yamanashi",
