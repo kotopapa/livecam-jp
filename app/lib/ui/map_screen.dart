@@ -604,18 +604,26 @@ class _MapScreenState extends State<MapScreen> {
                 flags: InteractiveFlag.all & ~InteractiveFlag.rotate),
             onPositionChanged: (camera, hasGesture) {
               if (hasGesture && _following) _stopFollowing();
-              if ((camera.zoom - _zoom).abs() >= 0.5) {
+              // ピンチ中の毎フレーム再構築はフリーズ→強制終了の原因になる。
+              // ジェスチャー中はズーム2段以上の大変化だけ間引いて反映し、
+              // 細かい追従は操作終了イベント(onMapEvent)でまとめて行う
+              if ((camera.zoom - _zoom).abs() >= 2.0) {
                 setState(() => _zoom = camera.zoom);
-              } else {
-                _maybeRebuildForPan(camera);
               }
               _updateTileMode();
             },
             onMapEvent: (e) {
               if (e is MapEventMoveEnd ||
                   e is MapEventFlingAnimationEnd ||
-                  e is MapEventDoubleTapZoomEnd) {
+                  e is MapEventDoubleTapZoomEnd ||
+                  e is MapEventRotateEnd) {
                 _savePosition();
+                final z = _controller.camera.zoom;
+                if ((z - _zoom).abs() >= 0.25) {
+                  setState(() => _zoom = z);
+                } else {
+                  _maybeRebuildForPan(_controller.camera);
+                }
               }
             },
           ),
