@@ -98270,11 +98270,11 @@
    "avg_interval_sec": null
   },
   "muni-yokosuka-a56592aaf1": {
-   "state": "ok",
-   "last_ok_at": "2026-08-21T07:31:38.056263+00:00",
+   "state": "error",
+   "last_ok_at": null,
    "http_status": 200,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "tokyo-suibo-012": {
@@ -102788,11 +102788,11 @@
    "avg_interval_sec": null
   },
   "curated-sendai-kitakanjo": {
-   "state": "ok",
-   "last_ok_at": "2026-08-21T11:16:49.556664+00:00",
+   "state": "error",
+   "last_ok_at": null,
    "http_status": 200,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "curated-tannan-1": {
@@ -109172,11 +109172,11 @@
    "avg_interval_sec": null
   },
   "muni-ohtawara-712fd8f65b": {
-   "state": "ok",
-   "last_ok_at": "2026-08-21T06:09:38.596486+00:00",
+   "state": "error",
+   "last_ok_at": null,
    "http_status": 200,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "muni-yokosuka-357bd1c0c1": {
@@ -111628,11 +111628,11 @@
    "avg_interval_sec": null
   },
   "world-6a63bfee": {
-   "state": "ok",
-   "last_ok_at": "2026-08-21T02:23:18.951591+00:00",
+   "state": "error",
+   "last_ok_at": null,
    "http_status": 200,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "world-81c2d3f7": {
@@ -114580,11 +114580,11 @@
    "avg_interval_sec": null
   },
   "world-70a20239": {
-   "state": "ok",
-   "last_ok_at": "2026-08-21T09:23:15.623842+00:00",
+   "state": "error",
+   "last_ok_at": null,
    "http_status": 200,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "world-bd87192f": {
@@ -118940,11 +118940,11 @@
    "avg_interval_sec": 28558
   },
   "world-25a8957c": {
-   "state": "ok",
-   "last_ok_at": "2026-08-21T13:42:27.854668+00:00",
+   "state": "error",
+   "last_ok_at": null,
    "http_status": 200,
    "frozen_since": null,
-   "consecutive_failures": 0,
+   "consecutive_failures": 3,
    "avg_interval_sec": null
   },
   "world-38f502d2": {
@@ -125682,6 +125682,22 @@
    "avg_interval_sec": null
   },
   "curated-busena-underwater-observatory": {
+   "state": "error",
+   "last_ok_at": null,
+   "http_status": 200,
+   "frozen_since": null,
+   "consecutive_failures": 3,
+   "avg_interval_sec": null
+  },
+  "curated-denzai-kashiwa-r16": {
+   "state": "error",
+   "last_ok_at": null,
+   "http_status": 200,
+   "frozen_since": null,
+   "consecutive_failures": 3,
+   "avg_interval_sec": null
+  },
+  "curated-ichihara-umizuri-sanbashi": {
    "state": "error",
    "last_ok_at": null,
    "http_status": 200,

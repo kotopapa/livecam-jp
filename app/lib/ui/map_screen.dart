@@ -11,6 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../app_state.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
+import '../util/geo.dart';
 import '../util/prefectures.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
@@ -533,6 +534,62 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  /// ピンのタップ。同一地点(40m以内)に複数カメラがある場合は
+  /// 選択シートを出す（同じ場所の別アングル・別被写体に対応）
+  void _onPinTap(Camera camera) {
+    if (!camera.hasLocation) {
+      _openDetail(camera);
+      return;
+    }
+    final near = widget.app.displayableCameras
+        .where((c) =>
+            c.hasLocation &&
+            distanceMeters(camera.lat!, camera.lng!, c.lat!, c.lng!) < 40)
+        .toList()
+      ..sort((a, b) => a.name.compareTo(b.name));
+    if (near.length <= 1) {
+      _openDetail(camera);
+      return;
+    }
+    showModalBottomSheet(
+      context: context,
+      showDragHandle: true,
+      builder: (sheetContext) => SafeArea(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4),
+            child: Text('この地点のカメラ（${near.length}台）',
+                style: const TextStyle(fontWeight: FontWeight.bold)),
+          ),
+          for (final c in near)
+            ListTile(
+              leading: Container(
+                width: 14,
+                height: 14,
+                decoration: BoxDecoration(
+                    color: categoryColor(c.category),
+                    shape: BoxShape.circle),
+              ),
+              title: Text(c.name,
+                  maxLines: 1, overflow: TextOverflow.ellipsis),
+              subtitle: Text(
+                [if (c.isVideo) 'LIVE', c.operator].join(' · '),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontSize: 12),
+              ),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                Navigator.of(sheetContext).pop();
+                _openDetail(c);
+              },
+            ),
+          const SizedBox(height: 8),
+        ]),
+      ),
+    );
+  }
+
   void _openDetail(Camera camera) {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -657,7 +714,7 @@ class _MapScreenState extends State<MapScreen> {
                       width: 26,
                       height: 26,
                       child: GestureDetector(
-                        onTap: () => _openDetail(item.camera!),
+                        onTap: () => _onPinTap(item.camera!),
                         child: CameraPin(
                           camera: item.camera!,
                           state: widget.app.stateOf(item.camera!),
