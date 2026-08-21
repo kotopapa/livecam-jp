@@ -39,6 +39,11 @@ jobs:
             echo "変更なし"
           else
             git commit -m "monitor: status update"
-            git pull --rebase origin main
-            git push
+            # status.json/hashes.jsonは実行のたびに全量再生成されるため、
+            # 他コミットと競合したら自分側(このrunの最新状態)を採用してよい
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && break
+              git rebase --abort 2>/dev/null || true
+              sleep $((i * 10))
+            done
           fi
