@@ -523,10 +523,14 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
     _load();
   }
 
+  /// 「横浜市北部」→「横浜市」のように政令市の分割区域名を市名に丸める
+  static String _cityName(String name) =>
+      name.replaceFirst(RegExp(r'(北東|北西|南東|南西|中央|北|南|東|西)部$'), '');
+
   Future<void> _load() async {
-    // class20コード(7桁)単位で保持する。政令市は「横浜市北部/南部」等に
-    // 分割されており、市コード5桁に丸めると別区域が1行に統合されてしまう
-    final byArea = <String, (String, String, Set<String>)>{};
+    // 市区町村コード5桁単位で統合する（政令市の「横浜市北部/南部」等は
+    // カメラが市単位で共通のため1行にまとめ、警報名は区域横断で合算する）
+    final byMuni = <String, (String, Set<String>)>{};
     var anyOk = false;
     Map<String, String> names = const {};
     try {
@@ -562,10 +566,10 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
             final wname = widget.codeNames[w['code'] as String? ?? ''];
             if (wname == null) continue;
             final muni = code.substring(0, 5);
-            final entry = byArea[code] ??
-                (muni, names[code] ?? '市区町村 $muni', <String>{});
-            entry.$3.add(wname);
-            byArea[code] = entry;
+            final entry = byMuni[muni] ??
+                (_cityName(names[code] ?? '市区町村 $muni'), <String>{});
+            entry.$2.add(wname);
+            byMuni[muni] = entry;
           }
         }
         anyOk = true;
@@ -574,11 +578,10 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
       }
     }
     if (!mounted) return;
-    final sortedCodes = byArea.keys.toList()..sort();
+    final sortedCodes = byMuni.keys.toList()..sort();
     final list = [
-      for (final code in sortedCodes)
-        (byArea[code]!.$1, byArea[code]!.$2,
-            byArea[code]!.$3.toList()..sort())
+      for (final muni in sortedCodes)
+        (muni, byMuni[muni]!.$1, byMuni[muni]!.$2.toList()..sort())
     ]..sort((a, b) {
         final ae = a.$3.any((w) => w.contains('特別')) ? 0 : 1;
         final be = b.$3.any((w) => w.contains('特別')) ? 0 : 1;
