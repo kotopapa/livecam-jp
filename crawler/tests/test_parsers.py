@@ -330,3 +330,26 @@ def test_curated_still_yaml():
     dam = next(c for c in result.candidates if c.category == "dam")
     assert dam.feed_type == "still_image" and dam.coord_accuracy == "approx"
     assert validate_camera_record(dam.to_record("2026-08-21")) == []
+
+
+def test_iwate_road_xml():
+    from crawler.sources.iwate_road import IwateRoadParser, parse_points
+    xml = (FIXTURES / "iwate_cameralist.xml").read_text(encoding="utf-8")
+    pts = parse_points(xml)
+    assert len(pts) == 3
+    name, lat, lng, cid = pts[0]
+    assert name == "相ノ沢 網張温泉線(滝沢市)" and cid == "014008"
+    assert 38 < lat < 41 and 140 < lng < 142
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = xml
+            return P()
+    result = IwateRoadParser().discover(S())
+    assert len(result.candidates) == 3
+    c = result.candidates[0]
+    assert c.feed_url == "https://www.douro.com/camera_img/014008_i.php"
+    assert validate_camera_record(c.to_record("2026-08-21")) == []

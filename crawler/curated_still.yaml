@@ -874,3 +874,55 @@ cameras:
     image_url: "https://sugadaira-dam.com/index.files/live2.jpg"
     page_url: "https://naganoken-kigyokyoku.jp/dam/"
     note: "信濃川水系神川"
+
+  # --- 2026-08-21 第3弾: 観光地・山形県営ダム ---
+
+  - id: curated-still-kakunodate-bukeyashiki
+    name: "角館武家屋敷通り"
+    operator: "仙北市観光文化スポーツ部観光課"
+    category: scenic
+    prefecture: "05"
+    lat: 39.5975
+    lng: 140.5636
+    image_url: "https://bukeyashiki.pixif.jp/photo/area1/latest.jpg"
+    page_url: "https://bukeyashiki.pixif.jp/"
+
+  - id: curated-still-dam-yamagata-tazawagawa
+    name: "田沢川ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.8437
+    lng: 140.0275
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=66&tm=202608211740&width=320"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=66"
+
+  - id: curated-still-dam-yamagata-arasawa
+    name: "荒沢ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.5131
+    lng: 139.7789
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=64&tm=202608211740&width=320"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=64"
+
+  - id: curated-still-dam-yamagata-kijiyama
+    name: "木地山ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.1497
+    lng: 139.92
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=51&tm=202608211740&width=320"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=51"
+
+  - id: curated-still-dam-yamagata-maekawa
+    name: "前川ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.1272
+    lng: 140.2317
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=6&tm=202608211740&width=320"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"

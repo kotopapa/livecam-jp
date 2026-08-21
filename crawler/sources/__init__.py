@@ -11,6 +11,7 @@ from crawler.sources.fukushima_road import FukushimaRoadParser
 from crawler.sources.gifu_road import GifuRoadParser
 from crawler.sources.hiroshima_road import HiroshimaRoadParser
 from crawler.sources.ishikawa_road import IshikawaRoadParser
+from crawler.sources.iwate_road import IwateRoadParser
 from crawler.sources.jma_volcam import JmaVolcamParser
 from crawler.sources.hbc_webcam import HbcWebcamParser
 from crawler.sources.kaiho_webcam import KaihoWebcamParser
@@ -23,6 +24,7 @@ from crawler.sources.mlit_roadinfo import MlitRoadinfoParser
 from crawler.sources.mlit_ktr_road import MlitKtrRoadParser
 from crawler.sources.mlit_youtube import MlitYoutubeParser
 from crawler.sources.muni_road import MuniRoadParser
+from crawler.sources.niigata_road import NiigataRoadParser
 from crawler.sources.muni_youtube import MuniYoutubeParser
 from crawler.sources.shimane_road import ShimaneRoadParser
 from crawler.sources.tokyo_suibo import TokyoSuiboParser
@@ -40,6 +42,7 @@ REGISTRY = {
         GifuRoadParser,
         HiroshimaRoadParser,
         IshikawaRoadParser,
+        IwateRoadParser,
         JmaVolcamParser,
         HbcWebcamParser,
         KaihoWebcamParser,
@@ -52,6 +55,7 @@ REGISTRY = {
         MlitRoadinfoParser,
         MlitYoutubeParser,
         MuniRoadParser,
+        NiigataRoadParser,
         MuniYoutubeParser,
         ShimaneRoadParser,
         TokyoSuiboParser,

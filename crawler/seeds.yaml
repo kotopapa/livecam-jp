@@ -135,6 +135,14 @@ sources:
     enabled: true
     note: 静止画キュレーション台帳(ダム41・山小屋/景観・水族館等)。license=unknown
           →人手レビュー。画像URLは追加時に直接検証済み
+  - id: iwate_road
+    enabled: true
+    note: 岩手県douro.comの道路カメラ(xml/cameralist.xmlが座標つき台帳・約80台)。
+          固定URL camera_img/<ID>_i.php。license=unknown
+  - id: niigata_road
+    enabled: true
+    note: 新潟県にいがたLIVEカメラの県土木部道路カメラ約66台。県河川管理課分は
+          kawabou収録済みのため除外。座標なし→テキスト版の市町村+地点名でジオコーディング
 todo:
   - url: https://www.mlit.go.jp/road/bosai/LIVEcamera.html   # 全国道路カメラのハブ
   - url: http://www.qsr.mlit.go.jp/useful/river_livecam.html  # 九州地整（河川・静止画）

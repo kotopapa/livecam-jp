@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T07:13:06Z",
+ "version": "2026-08-21T08:53:18Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -16139,6 +16139,158 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-dam-yamagata-arasawa",
+   "name": "荒沢ダム",
+   "name_kana": null,
+   "lat": 38.5131,
+   "lng": 139.7789,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=64&tm=202608211740&width=320",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=64"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=64",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-yamagata-kijiyama",
+   "name": "木地山ダム",
+   "name_kana": null,
+   "lat": 38.1497,
+   "lng": 139.92,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=51&tm=202608211740&width=320",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=51"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=51",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-yamagata-maekawa",
+   "name": "前川ダム",
+   "name_kana": null,
+   "lat": 38.1272,
+   "lng": 140.2317,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=6&tm=202608211740&width=320",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-yamagata-tazawagawa",
+   "name": "田沢川ダム",
+   "name_kana": null,
+   "lat": 38.8437,
+   "lng": 140.0275,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=66&tm=202608211740&width=320",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=66"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=66",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "curated-still-dam-yasaka",
    "name": "弥栄ダム",
    "name_kana": null,
@@ -16775,6 +16927,44 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：海上保安庁(第十管区海上保安本部 宮崎海上保安部)"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-kakunodate-bukeyashiki",
+   "name": "角館武家屋敷通り",
+   "name_kana": null,
+   "lat": 39.5975,
+   "lng": 140.5636,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "05",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://bukeyashiki.pixif.jp/photo/area1/latest.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://bukeyashiki.pixif.jp/"
+   },
+   "operator": "仙北市観光文化スポーツ部観光課",
+   "source": {
+    "page_url": "https://bukeyashiki.pixif.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：仙北市観光文化スポーツ部観光課"
    },
    "review": {
     "status": "approved",
@@ -47451,6 +47641,2856 @@
    },
    "first_seen": "2026-08-19",
    "last_updated": "2026-08-19"
+  },
+  {
+   "id": "iwate-road-001221",
+   "name": "新区界TN-国道106号(区界道路)(宮古市)",
+   "name_kana": null,
+   "lat": 39.64208,
+   "lng": 141.3791,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道106号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/001221_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-001239",
+   "name": "簗川TN-国道106号(区界道路)(盛岡市)",
+   "name_kana": null,
+   "lat": 39.66253889,
+   "lng": 141.3027806,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道106号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/001239_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-002002",
+   "name": "安俵 国道283号(花巻市)",
+   "name_kana": null,
+   "lat": 39.3864044,
+   "lng": 141.2219601,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道283号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/002002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-002003",
+   "name": "二枚橋 盛岡和賀線(花巻市)",
+   "name_kana": null,
+   "lat": 39.4463842,
+   "lng": 141.097799,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "盛岡和賀線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/002003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-002004",
+   "name": "古田峠 盛岡大迫東和線(花巻市)",
+   "name_kana": null,
+   "lat": 39.446758,
+   "lng": 141.2551216,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "盛岡大迫東和線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/002004_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-002005",
+   "name": "鉛 花巻大曲線(花巻市)",
+   "name_kana": null,
+   "lat": 39.4620634,
+   "lng": 140.9948194,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "花巻大曲線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/002005_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-002006",
+   "name": "高松 国道283号(花巻市)",
+   "name_kana": null,
+   "lat": 39.3950936,
+   "lng": 141.174591,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道283号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/002006_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-003001",
+   "name": "臥牛 北上東和線(北上市)",
+   "name_kana": null,
+   "lat": 39.3478951,
+   "lng": 141.169436,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "北上東和線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/003001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-003002",
+   "name": "内鱒沢 夏油温泉江釣子線(北上市)",
+   "name_kana": null,
+   "lat": 39.2348037,
+   "lng": 140.9155554,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "夏油温泉江釣子線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/003002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-003003",
+   "name": "山伏峠 盛岡横手線(西和賀町-雫石町)",
+   "name_kana": null,
+   "lat": 39.5597627,
+   "lng": 140.8499615,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "盛岡横手線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/003003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-003004",
+   "name": "大石 国道107号(西和賀町)",
+   "name_kana": null,
+   "lat": 39.3035036,
+   "lng": 140.8261026,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道107号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/003004_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-003005",
+   "name": "川舟 盛岡横手線(西和賀町)",
+   "name_kana": null,
+   "lat": 39.4819023,
+   "lng": 140.8032488,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "盛岡横手線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/003005_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-003006",
+   "name": "巣郷 国道107号(西和賀町)",
+   "name_kana": null,
+   "lat": 39.2755826,
+   "lng": 140.7190268,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道107号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/003006_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-003007",
+   "name": "梁川（江刺） 国道107号(奥州市)",
+   "name_kana": null,
+   "lat": 39.28834,
+   "lng": 141.255351,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道107号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/003007_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-003008",
+   "name": "当楽 国道107号(北上市-西和賀町)",
+   "name_kana": null,
+   "lat": 39.3055545,
+   "lng": 140.8906188,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道107号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/003008_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-004001",
+   "name": "正法寺 国道343号(奥州市)",
+   "name_kana": null,
+   "lat": 39.0607605,
+   "lng": 141.2246705,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道343号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/004001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-004002",
+   "name": "古歌葉 国道397号(奥州市)",
+   "name_kana": null,
+   "lat": 39.1759785,
+   "lng": 141.3701224,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道397号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/004002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-004003",
+   "name": "大幡 国道107号(奥州市)",
+   "name_kana": null,
+   "lat": 39.2919939,
+   "lng": 141.3031068,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道107号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/004003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-004004",
+   "name": "根木町 国道456号(奥州市)",
+   "name_kana": null,
+   "lat": 39.1007223,
+   "lng": 141.2657076,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道456号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/004004_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-004005",
+   "name": "石淵 国道397号(奥州市)",
+   "name_kana": null,
+   "lat": 39.1192639,
+   "lng": 140.9535954,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道397号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/004005_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-004009",
+   "name": "真湯 国道342号(一関市)",
+   "name_kana": null,
+   "lat": 39.0121083,
+   "lng": 140.8660599,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道342号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/004009_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-005201",
+   "name": "須川 国道342号(一関市)",
+   "name_kana": null,
+   "lat": 38.9803034,
+   "lng": 140.7703648,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道342号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/005201_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-006001",
+   "name": "越路峠 江刺室根線(一関市-奥州市)",
+   "name_kana": null,
+   "lat": 39.1346808,
+   "lng": 141.3750542,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "江刺室根線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/006001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-006003",
+   "name": "生母 前沢東山線(奥州市)",
+   "name_kana": null,
+   "lat": 39.0322166,
+   "lng": 141.200342,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "前沢東山線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/006003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-006004",
+   "name": "笹ノ田 国道343号(一関市)",
+   "name_kana": null,
+   "lat": 39.0147037,
+   "lng": 141.4557972,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道343号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/006004_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-007001",
+   "name": "種山峠 国道397号(住田町)",
+   "name_kana": null,
+   "lat": 39.1809442,
+   "lng": 141.3957391,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道397号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/007001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-007002",
+   "name": "赤羽根 国道340号(遠野市-住田町)",
+   "name_kana": null,
+   "lat": 39.2387318,
+   "lng": 141.5998962,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道340号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/007002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-007003",
+   "name": "荷沢峠 国道107号(遠野市-住田町)",
+   "name_kana": null,
+   "lat": 39.2018234,
+   "lng": 141.4605569,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道107号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/007003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-008001",
+   "name": "足ヶ瀬 国道283号(遠野市)",
+   "name_kana": null,
+   "lat": 39.262456,
+   "lng": 141.660642,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道283号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/008001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-008002",
+   "name": "立丸峠 国道340号(遠野市-宮古市)",
+   "name_kana": null,
+   "lat": 39.4328509,
+   "lng": 141.6602209,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道340号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/008002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-008003",
+   "name": "小峠 国道396号(遠野市)",
+   "name_kana": null,
+   "lat": 39.3570519,
+   "lng": 141.4173516,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道396号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/008003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-008005",
+   "name": "馬越 土淵達曽部線(遠野市)",
+   "name_kana": null,
+   "lat": 39.4169821,
+   "lng": 141.4385407,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "土淵達曽部線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/008005_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-008006",
+   "name": "内楽木峠 国道396号(遠野市)",
+   "name_kana": null,
+   "lat": 39.3729685,
+   "lng": 141.3498728,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道396号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/008006_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-009001",
+   "name": "仙人トンネル 国道283号(釜石市-遠野市)",
+   "name_kana": null,
+   "lat": 39.291929,
+   "lng": 141.6984385,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道283号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/009001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-009002",
+   "name": "笛吹峠 釜石遠野線(釜石市-遠野市)",
+   "name_kana": null,
+   "lat": 39.3401102,
+   "lng": 141.660109,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "釜石遠野線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/009002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010002",
+   "name": "鈴久名 国道106号(宮古市)",
+   "name_kana": null,
+   "lat": 39.6246316,
+   "lng": 141.6101875,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道106号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010003",
+   "name": "熊の平 重茂半島線(宮古市)",
+   "name_kana": null,
+   "lat": 39.587125,
+   "lng": 141.988133,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "重茂半島線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010004",
+   "name": "石浜 重茂半島線(宮古市)",
+   "name_kana": null,
+   "lat": 39.525243,
+   "lng": 142.030409,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "重茂半島線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010004_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010005",
+   "name": "小国 国道340号(宮古市)",
+   "name_kana": null,
+   "lat": 39.460431,
+   "lng": 141.679436,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道340号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010005_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010006",
+   "name": "大峠 国道106号(宮古市)",
+   "name_kana": null,
+   "lat": 39.6312835,
+   "lng": 141.5267705,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道106号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010006_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010007",
+   "name": "押角峠 国道340号(宮古市)",
+   "name_kana": null,
+   "lat": 39.734781,
+   "lng": 141.688736,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道340号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010007_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010008",
+   "name": "土坂峠 大槌小国線(宮古市-大槌町)",
+   "name_kana": null,
+   "lat": 39.4827591,
+   "lng": 141.6946572,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "大槌小国線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010008_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010009",
+   "name": "区界峠 国道106号(盛岡市-宮古市)",
+   "name_kana": null,
+   "lat": 39.6502749,
+   "lng": 141.3542192,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道106号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010009_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-010015",
+   "name": "田鎖-国道106号(宮古西道路)(宮古市)",
+   "name_kana": null,
+   "lat": 39.62763,
+   "lng": 141.89404,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道106号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/010015_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-011001",
+   "name": "大月峠 久慈岩泉線(久慈市-岩泉町)",
+   "name_kana": null,
+   "lat": 40.0327761,
+   "lng": 141.7273552,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "久慈岩泉線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/011001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-011002",
+   "name": "平庭 国道281号(久慈市-葛巻町)",
+   "name_kana": null,
+   "lat": 40.0804421,
+   "lng": 141.5093354,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道281号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/011002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-011004",
+   "name": "卯坂峠 野田山形線(久慈市)",
+   "name_kana": null,
+   "lat": 40.0645995,
+   "lng": 141.6375454,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "野田山形線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/011004_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-011005",
+   "name": "万谷 八戸大野線(軽米町-洋野町)",
+   "name_kana": null,
+   "lat": 40.325521,
+   "lng": 141.5826324,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "八戸大野線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/011005_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-011006",
+   "name": "ノソウケ峠 軽米種市線(軽米町-洋野町)",
+   "name_kana": null,
+   "lat": 40.3658204,
+   "lng": 141.5908505,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "軽米種市線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/011006_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-011007",
+   "name": "木藤古 一戸山形線(九戸村)",
+   "name_kana": null,
+   "lat": 40.1891958,
+   "lng": 141.4833226,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一戸山形線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/011007_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-011008",
+   "name": "赤石峠 国道395号(軽米町-洋野町)",
+   "name_kana": null,
+   "lat": 40.2761172,
+   "lng": 141.5914457,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道395号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/011008_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-012001",
+   "name": "下藤 二戸五日市線(二戸市-八幡平市)",
+   "name_kana": null,
+   "lat": 40.138907,
+   "lng": 141.1078442,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "二戸五日市線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/012001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-012002",
+   "name": "似鳥-二戸五日市線(二戸市-八幡平市)",
+   "name_kana": null,
+   "lat": 40.235165,
+   "lng": 141.239313,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "似鳥-二戸五日市線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/012002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-012004",
+   "name": "猿越峠 国道395号(二戸市-軽米町)",
+   "name_kana": null,
+   "lat": 40.3187834,
+   "lng": 141.3569787,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道395号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/012004_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-012005",
+   "name": "切明畑 二戸田子線(二戸市)",
+   "name_kana": null,
+   "lat": 40.2823731,
+   "lng": 141.1568158,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "二戸田子線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/012005_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-012006",
+   "name": "小峠 二戸九戸線(二戸市-九戸村)",
+   "name_kana": null,
+   "lat": 40.2385229,
+   "lng": 141.3933858,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "二戸九戸線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/012006_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014001",
+   "name": "緑ガ丘 大更八幡平線",
+   "name_kana": null,
+   "lat": 39.9477997,
+   "lng": 140.9291882,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "大更八幡平線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014002",
+   "name": "竜ケ森安代 国道282号(八幡平市)",
+   "name_kana": null,
+   "lat": 40.015388,
+   "lng": 140.991284,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道282号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014003",
+   "name": "竜ケ森松尾 国道282号(八幡平市)",
+   "name_kana": null,
+   "lat": 40.007238,
+   "lng": 140.993389,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道282号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014004",
+   "name": "兄畑 国道282号(八幡平市)",
+   "name_kana": null,
+   "lat": 40.116378,
+   "lng": 140.8751941,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道282号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014004_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014005",
+   "name": "大坊峠 国道281号(岩手町-葛巻町)",
+   "name_kana": null,
+   "lat": 39.979904,
+   "lng": 141.314913,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道281号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014005_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014006",
+   "name": "貝梨峠 国道282号(八幡平市)",
+   "name_kana": null,
+   "lat": 40.1374403,
+   "lng": 141.002498,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道282号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014006_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014007",
+   "name": "長山 雫石東八幡平線(雫石町)",
+   "name_kana": null,
+   "lat": 39.8115208,
+   "lng": 140.9662637,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "雫石東八幡平線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014007_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014008",
+   "name": "相ノ沢 網張温泉線(滝沢市)",
+   "name_kana": null,
+   "lat": 39.8023303,
+   "lng": 141.0120783,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "網張温泉線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014008_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-014009",
+   "name": "大峠 国道340号(葛巻町-九戸村)",
+   "name_kana": null,
+   "lat": 40.1010756,
+   "lng": 141.4496603,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道340号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/014009_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-01410",
+   "name": "見返峠（八幡平アスピーテライン）",
+   "name_kana": null,
+   "lat": 39.9500629,
+   "lng": 140.8566219,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/01410_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-015001",
+   "name": "国境峠 国道340号(岩泉町-葛巻町)",
+   "name_kana": null,
+   "lat": 39.9300724,
+   "lng": 141.5660465,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道340号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/015001_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-015002",
+   "name": "早坂トンネル-岩泉側 国道455号(岩泉町-盛岡市)",
+   "name_kana": null,
+   "lat": 39.8480264,
+   "lng": 141.5269886,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道455号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/015002_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-015003",
+   "name": "早坂トンネル-盛岡側 国道455号(盛岡市-岩泉町)",
+   "name_kana": null,
+   "lat": 39.8391446,
+   "lng": 141.4908498,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道455号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/015003_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-10150",
+   "name": "下鱒沢 国道283号(遠野市)",
+   "name_kana": null,
+   "lat": 39.3184287,
+   "lng": 141.3686879,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道283号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/10150_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-10630",
+   "name": "和光 花巻平泉線(金ヶ崎町)",
+   "name_kana": null,
+   "lat": 39.1893211,
+   "lng": 141.0028142,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "花巻平泉線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/10630_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-10730",
+   "name": "新狭山 一関大東線(一関市)",
+   "name_kana": null,
+   "lat": 38.974175,
+   "lng": 141.2230694,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一関大東線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/10730_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-10735",
+   "name": "餅転 栗駒平泉線(奥州市)",
+   "name_kana": null,
+   "lat": 38.9971579,
+   "lng": 140.9607317,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "栗駒平泉線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/10735_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-kawashiri",
+   "name": "川尻 国道107号",
+   "name_kana": null,
+   "lat": 39.3177055812592,
+   "lng": 140.78551727009662,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道107号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/kawashiri_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "iwate-road-sotoyama",
+   "name": "外山 国道455号(盛岡市)",
+   "name_kana": null,
+   "lat": 39.7979486,
+   "lng": 141.3525495,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "03",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道455号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.douro.com/camera_img/sotoyama_i.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.douro.com/allcamera.shtml"
+   },
+   "operator": "岩手県",
+   "source": {
+    "page_url": "https://www.douro.com/allcamera.shtml",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：いわて道路情報提供サービス（岩手県）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=岩手県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "jma-volcam-10401",
@@ -533316,6 +536356,2476 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "niigata-road-akitsu",
+   "name": "佐渡市秋津",
+   "name_kana": null,
+   "lat": 38.018604,
+   "lng": 138.368011,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/akitsu.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-aono",
+   "name": "上越市青野",
+   "name_kana": null,
+   "lat": 37.165314,
+   "lng": 138.288315,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/aono.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-aoshima",
+   "name": "魚沼市青島",
+   "name_kana": null,
+   "lat": 37.204205,
+   "lng": 138.895538,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/aoshima.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-asouda",
+   "name": "長岡市麻生田町",
+   "name_kana": null,
+   "lat": 37.43557,
+   "lng": 138.873428,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/asouda.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-camera-073",
+   "name": "小千谷市岩沢",
+   "name_kana": null,
+   "lat": 37.342056,
+   "lng": 138.795837,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/camera_073.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-camera-084",
+   "name": "十日町市樽沢",
+   "name_kana": null,
+   "lat": 37.127499,
+   "lng": 138.755569,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/camera_084.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-camera-092",
+   "name": "南魚沼市大沢山",
+   "name_kana": null,
+   "lat": 37.018047,
+   "lng": 138.829803,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/camera_092.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-camera-093",
+   "name": "南魚沼市一村尾",
+   "name_kana": null,
+   "lat": 37.018047,
+   "lng": 138.829803,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/camera_093.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-daisyou",
+   "name": "佐渡市大小",
+   "name_kana": null,
+   "lat": 38.018604,
+   "lng": 138.368011,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/daisyou.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-fujitsukahama",
+   "name": "新発田市藤塚浜",
+   "name_kana": null,
+   "lat": 37.954056,
+   "lng": 139.301559,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/fujitsukahama.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-higashikou",
+   "name": "聖籠町東港",
+   "name_kana": null,
+   "lat": 37.974442,
+   "lng": 139.27446,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/higashikou.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-himizo",
+   "name": "国道291号 干溝",
+   "name_kana": null,
+   "lat": 37.202908,
+   "lng": 138.996719,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道291号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/himizo.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-hitodura",
+   "name": "長岡市人面",
+   "name_kana": null,
+   "lat": 37.43557,
+   "lng": 138.873428,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/hitodura.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-honcho",
+   "name": "新発田市本町",
+   "name_kana": null,
+   "lat": 37.954056,
+   "lng": 139.301559,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/honcho.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-hondou",
+   "name": "上越市本道",
+   "name_kana": null,
+   "lat": 37.165314,
+   "lng": 138.288315,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/hondou.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-iiyamashin",
+   "name": "阿賀野市飯山新",
+   "name_kana": null,
+   "lat": 37.834469,
+   "lng": 139.225952,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/iiyamashin.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-ikejiri",
+   "name": "十日町市池尻",
+   "name_kana": null,
+   "lat": 37.127499,
+   "lng": 138.755569,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/ikejiri.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-imo2",
+   "name": "十日町市芋沢",
+   "name_kana": null,
+   "lat": 37.127499,
+   "lng": 138.755569,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/imo2.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-inakura",
+   "name": "魚沼市稲倉",
+   "name_kana": null,
+   "lat": 37.204205,
+   "lng": 138.895538,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/inakura.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-inubushi",
+   "name": "十日町市犬伏",
+   "name_kana": null,
+   "lat": 37.127499,
+   "lng": 138.755569,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/inubushi.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-itagai",
+   "name": "村上市板貝",
+   "name_kana": null,
+   "lat": 38.229038,
+   "lng": 139.464218,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/itagai.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-kaminakayama",
+   "name": "新発田市上中山",
+   "name_kana": null,
+   "lat": 37.954056,
+   "lng": 139.301559,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/kaminakayama.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-kangawa",
+   "name": "国道345号 寒川",
+   "name_kana": null,
+   "lat": 38.45134,
+   "lng": 139.494186,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道345号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/kangawa.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-kariwa",
+   "name": "主要地方道村上田上線  刈羽",
+   "name_kana": null,
+   "lat": 37.683537,
+   "lng": 139.121994,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "主要地方道村上田上線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/kariwa.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-kasabori",
+   "name": "国道289号 三条市笠堀",
+   "name_kana": null,
+   "lat": 37.664597,
+   "lng": 138.977417,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道289号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/kasabori.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-kenshoji2",
+   "name": "上越市浦川原区顕聖寺",
+   "name_kana": null,
+   "lat": 37.165314,
+   "lng": 138.288315,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/kenshoji2.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-kitanigoro",
+   "name": "長岡市北荷頃",
+   "name_kana": null,
+   "lat": 37.43557,
+   "lng": 138.873428,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/kitanigoro.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-kuwagarazawa",
+   "name": "十日町市鍬柄沢",
+   "name_kana": null,
+   "lat": 37.127499,
+   "lng": 138.755569,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/kuwagarazawa.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-maoroshi",
+   "name": "五泉市馬下",
+   "name_kana": null,
+   "lat": 37.750751,
+   "lng": 139.166946,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/maoroshi.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-maruta",
+   "name": "五泉市丸田",
+   "name_kana": null,
+   "lat": 37.750751,
+   "lng": 139.166946,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/maruta.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-mishimadani",
+   "name": "長岡市大積三島谷町",
+   "name_kana": null,
+   "lat": 37.43557,
+   "lng": 138.873428,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/mishimadani.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-mugurasawa",
+   "name": "十日町市葎沢",
+   "name_kana": null,
+   "lat": 37.127499,
+   "lng": 138.755569,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/mugurasawa.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-murasugi",
+   "name": "阿賀野市村杉",
+   "name_kana": null,
+   "lat": 37.834469,
+   "lng": 139.225952,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/murasugi.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-nagamasa",
+   "name": "村上市長政",
+   "name_kana": null,
+   "lat": 38.229038,
+   "lng": 139.464218,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/nagamasa.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-nagamine",
+   "name": "上越市吉川区長峰",
+   "name_kana": null,
+   "lat": 37.165314,
+   "lng": 138.288315,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/nagamine.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-nakaoki",
+   "name": "佐渡市中興",
+   "name_kana": null,
+   "lat": 38.018604,
+   "lng": 138.368011,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/nakaoki.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-nakasenda",
+   "name": "十日町市中仙田",
+   "name_kana": null,
+   "lat": 37.127499,
+   "lng": 138.755569,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/nakasenda.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-nakhara",
+   "name": "魚沼市中原",
+   "name_kana": null,
+   "lat": 37.204205,
+   "lng": 138.895538,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/nakhara.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-nanokamachi",
+   "name": "長岡市小国町七日町",
+   "name_kana": null,
+   "lat": 37.43557,
+   "lng": 138.873428,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/nanokamachi.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-niibokatagami",
+   "name": "佐渡市新穂潟上",
+   "name_kana": null,
+   "lat": 38.018604,
+   "lng": 138.368011,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/niibokatagami.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-nishinoura",
+   "name": "六日町",
+   "name_kana": null,
+   "lat": 37.06958,
+   "lng": 138.879044,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/nishinoura.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-nisiki",
+   "name": "上越市三和区錦",
+   "name_kana": null,
+   "lat": 37.165314,
+   "lng": 138.288315,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/nisiki.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-noda",
+   "name": "南魚沼市野田",
+   "name_kana": null,
+   "lat": 37.018047,
+   "lng": 138.829803,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/noda.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-ojiro",
+   "name": "五泉市尾白",
+   "name_kana": null,
+   "lat": 37.750751,
+   "lng": 139.166946,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/ojiro.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-oodaira",
+   "name": "大島区大平",
+   "name_kana": null,
+   "lat": 37.151981,
+   "lng": 138.510513,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/oodaira.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-oonagatani",
+   "name": "胎内市大長谷",
+   "name_kana": null,
+   "lat": 38.059719,
+   "lng": 139.410294,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/oonagatani.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-sagari",
+   "name": "阿賀野市下里",
+   "name_kana": null,
+   "lat": 37.834469,
+   "lng": 139.225952,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/sagari.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-sakata",
+   "name": "柏崎市西山町坂田",
+   "name_kana": null,
+   "lat": 37.364952,
+   "lng": 138.557999,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/sakata.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-sasaki",
+   "name": "新発田市佐々木",
+   "name_kana": null,
+   "lat": 37.954056,
+   "lng": 139.301559,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/sasaki.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-sekiyama",
+   "name": "関山",
+   "name_kana": null,
+   "lat": 36.928406,
+   "lng": 138.148727,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/sekiyama.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-shiodono",
+   "name": "小千谷市塩殿",
+   "name_kana": null,
+   "lat": 37.342056,
+   "lng": 138.795837,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/shiodono.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-snapshotjpeg",
+   "name": "十日町市八箇",
+   "name_kana": null,
+   "lat": 37.127499,
+   "lng": 138.755569,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/SnapshotJPEG.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-suhara",
+   "name": "魚沼市須原",
+   "name_kana": null,
+   "lat": 37.204205,
+   "lng": 138.895538,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/suhara.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-suibara",
+   "name": "水原跨線橋",
+   "name_kana": null,
+   "lat": 37.853168,
+   "lng": 139.230423,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "水原跨線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/suibara.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-takamatsu",
+   "name": "五泉市高松",
+   "name_kana": null,
+   "lat": 37.750751,
+   "lng": 139.166946,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/takamatsu.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-takeda",
+   "name": "佐渡市竹田",
+   "name_kana": null,
+   "lat": 38.018604,
+   "lng": 138.368011,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/takeda.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-tamugi",
+   "name": "大島区田麦",
+   "name_kana": null,
+   "lat": 37.169296,
+   "lng": 138.539307,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/tamugi.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-tanesuhara",
+   "name": "長岡市山古志種苧原",
+   "name_kana": null,
+   "lat": 37.43557,
+   "lng": 138.873428,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/tanesuhara.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-toujyou",
+   "name": "柏崎市東条",
+   "name_kana": null,
+   "lat": 37.364952,
+   "lng": 138.557999,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/toujyou.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-tsugawa",
+   "name": "阿賀町津川",
+   "name_kana": null,
+   "lat": 37.675606,
+   "lng": 139.458771,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/tsugawa.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-tsunan",
+   "name": "芦ヶ崎",
+   "name_kana": null,
+   "lat": 37.00238,
+   "lng": 138.640564,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/tsunan.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-uragara",
+   "name": "小千谷市浦柄",
+   "name_kana": null,
+   "lat": 37.342056,
+   "lng": 138.795837,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/uragara.jpeg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-uwaseki",
+   "name": "南魚沼市上関",
+   "name_kana": null,
+   "lat": 37.018047,
+   "lng": 138.829803,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/uwaseki.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-yahiko",
+   "name": "弥彦村弥彦",
+   "name_kana": null,
+   "lat": 37.703419,
+   "lng": 138.827972,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/yahiko.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "niigata-road-yamamoto",
+   "name": "山本",
+   "name_kana": null,
+   "lat": 36.970341,
+   "lng": 137.859512,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/yamamoto.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=新潟県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
   },
   {
    "id": "shimane-road-0101",
