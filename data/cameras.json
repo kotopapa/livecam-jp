@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T09:06:51Z",
+ "version": "2026-08-21T09:45:11Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -477557,6 +477557,348 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "miyagi-road-hokubu-mon",
+   "name": "国道347号 門沢",
+   "name_kana": null,
+   "lat": 38.6032,
+   "lng": 140.6902,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道347号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/hokubu/img/mon.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/hokubu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/hokubu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "miyagi-road-hokubu-nabe",
+   "name": "国道347号 鍋越峠",
+   "name_kana": null,
+   "lat": 38.6053,
+   "lng": 140.5562,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道347号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/hokubu/img/nabe.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/hokubu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/hokubu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "miyagi-road-seibu-name",
+   "name": "国道113号 滑津",
+   "name_kana": null,
+   "lat": 38.0153,
+   "lng": 140.4035,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道113号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/img/name.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "miyagi-road-seibu-seki",
+   "name": "国道113号 関",
+   "name_kana": null,
+   "lat": 37.9943,
+   "lng": 140.4424,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道113号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/img/seki.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "miyagi-road-seibu-taota",
+   "name": "国道113号 峠田",
+   "name_kana": null,
+   "lat": 38.0056,
+   "lng": 140.3613,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道113号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/img/taota.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "miyagi-road-seibu-yuhara",
+   "name": "国道113号 湯原",
+   "name_kana": null,
+   "lat": 38.0127,
+   "lng": 140.3212,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道113号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/img/yuhara.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/seibu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "miyagi-road-tobu-hiranuki",
+   "name": "県道28号 平貫",
+   "name_kana": null,
+   "lat": 38.0293,
+   "lng": 140.8202,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "県道28号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/img/hira.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "miyagi-road-tobu-kaneyama",
+   "name": "国道113号 金山",
+   "name_kana": null,
+   "lat": 37.8966,
+   "lng": 140.7979,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道113号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/img/kane.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
+  },
+  {
+   "id": "miyagi-road-tobu-oouchi",
+   "name": "国道113号 大内",
+   "name_kana": null,
+   "lat": 37.8541,
+   "lng": 140.8215,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "04",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道113号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/img/oouchi.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/index.html"
+   },
+   "operator": "宮城県",
+   "source": {
+    "page_url": "http://roadgis.pref.miyagi.jp/roadgis/tobu/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮城県道路管理ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-21",
+    "note": "bulk: license=unknown operator=宮城県 with_coords=True"
+   },
+   "first_seen": "2026-08-20",
+   "last_updated": "2026-08-20"
   },
   {
    "id": "mlit-cbr-road-001-001",
