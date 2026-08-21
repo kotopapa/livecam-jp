@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T14:48:47Z",
+ "version": "2026-08-21T15:18:21Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -627,12 +627,12 @@
     "attribution": "映像提供：国営沖縄記念公園（沖縄美ら海水族館）（YouTubeライブ）"
    },
    "review": {
-    "status": "approved",
-    "reviewed_at": "2026-08-21",
-    "note": "bulk: license=unknown with_coords=True"
+    "status": "rejected",
+    "reviewed_at": "2026-08-22",
+    "note": "2026-08-22 旧ライブ(cVm1NrAI_f8)は2020年アーカイブ化。公式ch/liveも録画動画のみで現行ライブなしのため取り下げ"
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-21"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-chuzenji-kojoen",
@@ -18849,9 +18849,9 @@
    "municipality": "46201",
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "http://ioworld.aa1.netvolante.jp/viewer/live/index.html?lang=ja",
-    "refresh_sec": 600,
+    "type": "web_page",
+    "url": "https://ioworld.jp/livecamera",
+    "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
@@ -18869,10 +18869,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-21",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-22 独自JSビューアで静止画直URLなし→web_page誘導型に変換"
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-21"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-iwate-ryorigawa-dam",
