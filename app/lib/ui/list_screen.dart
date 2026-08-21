@@ -30,7 +30,9 @@ class _ListScreenState extends State<ListScreen> {
     super.initState();
     _searchController = TextEditingController(text: widget.app.searchQuery);
     widget.app.addListener(_onChanged);
-    _loadPosition();
+    // 一覧は常に現在地から近い順で表示する（初回に許可を確認。
+    // 拒否された場合は北から順で表示し、案内行は出さない）
+    _loadPosition(request: true);
   }
 
   @override
@@ -140,21 +142,9 @@ class _ListScreenState extends State<ListScreen> {
       body: cams.isEmpty
           ? const Center(child: Text('条件に合うカメラがありません'))
           : ListView.separated(
-              itemCount: cams.length + (_position == null ? 1 : 0),
+              itemCount: cams.length,
               separatorBuilder: (_, _) => const Divider(height: 1),
               itemBuilder: (context, i) {
-                if (_position == null) {
-                  // 先頭に現在地ソートの案内行（タップ時に初めて許可を要求する）
-                  if (i == 0) {
-                    return ListTile(
-                      leading: const Icon(Icons.near_me_outlined),
-                      title: const Text('現在地から近い順に並べ替える'),
-                      subtitle: const Text('タップすると位置情報の利用を確認します'),
-                      onTap: () => _loadPosition(request: true),
-                    );
-                  }
-                  i -= 1;
-                }
                 final (camera, dist) = cams[i];
                 return _CameraTile(
                   camera: camera,
