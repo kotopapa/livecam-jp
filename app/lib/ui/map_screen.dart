@@ -541,9 +541,55 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  // --- 表示領域カリング ---
+  // 全カメラ分のMarkerウィジェットを毎回生成するとズームイン時に1万個超と
+  // なりUIがフリーズする（iOSのウォッチドッグ強制終了の原因になる）。
+  // クラスタリングは全体で行い、描画は表示領域+余白分だけに絞る
+  LatLng? _lastCullCenter;
+
+  List<MapItem> _cullToViewport(List<MapItem> items) {
+    final LatLngBounds b;
+    try {
+      b = _controller.camera.visibleBounds;
+    } catch (_) {
+      return items; // 初回レイアウト前（直後のフレームで再構築される）
+    }
+    _lastCullCenter = _controller.camera.center;
+    final lngSpan = (b.east - b.west).abs();
+    if (lngSpan >= 300) return items; // ほぼ全世界が見えている
+    final latMargin = (b.north - b.south) * 0.5;
+    final lngMargin = lngSpan * 0.5;
+    final south = b.south - latMargin, north = b.north + latMargin;
+    final west = b.west - lngMargin, east = b.east + lngMargin;
+    // 経度±180跨ぎに対応（±360ずらしても範囲内なら表示対象）
+    bool lngIn(double lng) =>
+        (lng >= west && lng <= east) ||
+        (lng + 360 >= west && lng + 360 <= east) ||
+        (lng - 360 >= west && lng - 360 <= east);
+    return [
+      for (final it in items)
+        if (it.latitude >= south && it.latitude <= north && lngIn(it.longitude))
+          it
+    ];
+  }
+
+  /// パンで表示領域が1/4以上動いたらマーカーを再構築する（余白を食い潰す前に）
+  void _maybeRebuildForPan(MapCamera camera) {
+    final last = _lastCullCenter;
+    if (last == null) return;
+    final b = camera.visibleBounds;
+    final latSpan = b.north - b.south;
+    final lngSpan = (b.east - b.west).abs();
+    if ((camera.center.latitude - last.latitude).abs() > latSpan * 0.25 ||
+        (camera.center.longitude - last.longitude).abs() > lngSpan * 0.25) {
+      setState(() {});
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final items = clusterCameras(widget.app.displayableCameras, _zoom);
+    final cams = widget.app.displayableCameras;
+    final items = _cullToViewport(clusterCameras(cams, _zoom));
     return Stack(
       children: [
         FlutterMap(
@@ -560,6 +606,8 @@ class _MapScreenState extends State<MapScreen> {
               if (hasGesture && _following) _stopFollowing();
               if ((camera.zoom - _zoom).abs() >= 0.5) {
                 setState(() => _zoom = camera.zoom);
+              } else {
+                _maybeRebuildForPan(camera);
               }
               _updateTileMode();
             },
@@ -641,8 +689,8 @@ class _MapScreenState extends State<MapScreen> {
             ),
             child: Text(
               widget.app.hasActiveFilters
-                  ? '絞り込み中 ${widget.app.displayableCameras.length}台'
-                  : '${widget.app.displayableCameras.length}台',
+                  ? '絞り込み中 ${cams.length}台'
+                  : '${cams.length}台',
               style: const TextStyle(
                   fontSize: 12, fontWeight: FontWeight.bold,
                   color: Colors.black87),
