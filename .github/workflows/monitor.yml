@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: monitor
@@ -47,3 +48,7 @@ jobs:
               sleep $((i * 10))
             done
           fi
+      - name: 配信を更新（GITHUB_TOKENのpushはpublishを起動しないため明示実行）
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml || true
