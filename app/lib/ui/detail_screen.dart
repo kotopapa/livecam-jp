@@ -1,6 +1,9 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -342,6 +345,16 @@ class _MediaView extends StatelessWidget {
                 : const Center(child: CircularProgressIndicator()),
           ),
         );
+      case FeedType.mieDouro:
+        // 三重県道路規制情報: 画像はAPI応答内のbase64のみ（直URLなし）
+        return AspectRatio(
+          aspectRatio: 4 / 3,
+          child: _MieDouroView(
+            apiUrl: camera.feed.url,
+            cameraRef: camera.feed.cameraRef ?? '',
+            refreshTick: refreshTick,
+          ),
+        );
       case FeedType.youtubeChannel:
         // IFrame Player（embed/live_stream）をWebViewで表示（SPEC C6遵守）
         return AspectRatio(
@@ -419,6 +432,70 @@ iframe{width:100%;height:100%;border:0}</style></head>
 
   @override
   Widget build(BuildContext context) => WebViewWidget(controller: _controller);
+}
+
+/// 三重県道路規制情報のカメラ表示。
+/// 画像は camera_get_api.php の応答内にbase64でのみ含まれる（直URLなし）ため、
+/// アプリが提供元APIを直接取得してデコード表示する（自前中継はしない）。
+class _MieDouroView extends StatefulWidget {
+  const _MieDouroView(
+      {required this.apiUrl,
+      required this.cameraRef,
+      required this.refreshTick});
+
+  final String apiUrl;
+  final String cameraRef;
+  final int refreshTick;
+
+  @override
+  State<_MieDouroView> createState() => _MieDouroViewState();
+}
+
+class _MieDouroViewState extends State<_MieDouroView> {
+  Uint8List? _bytes;
+  bool _error = false;
+  int _loadedTick = -1;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  @override
+  void didUpdateWidget(covariant _MieDouroView old) {
+    super.didUpdateWidget(old);
+    if (old.refreshTick != widget.refreshTick) _load();
+  }
+
+  Future<void> _load() async {
+    if (_loadedTick == widget.refreshTick) return;
+    _loadedTick = widget.refreshTick;
+    setState(() => _error = false);
+    try {
+      final resp = await http
+          .get(Uri.parse(widget.apiUrl))
+          .timeout(const Duration(seconds: 20));
+      final data = jsonDecode(resp.body) as Map<String, dynamic>;
+      final ent = data[widget.cameraRef] as Map<String, dynamic>?;
+      final pic = ent?['picture'] as String? ?? '';
+      final i = pic.indexOf('base64,');
+      if (i < 0) throw const FormatException('no image');
+      final bytes = base64Decode(pic.substring(i + 7));
+      if (mounted) setState(() => _bytes = bytes);
+    } catch (_) {
+      if (mounted) setState(() => _error = _bytes == null);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_error) return const _MediaFallback(text: '現在映像を取得できません');
+    if (_bytes == null) {
+      return const Center(child: CircularProgressIndicator());
+    }
+    return Image.memory(_bytes!, fit: BoxFit.contain, gaplessPlayback: true);
+  }
 }
 
 class _MediaFallback extends StatelessWidget {

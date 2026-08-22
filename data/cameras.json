@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T01:55:22Z",
+ "version": "2026-08-22T02:14:53Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -224,6 +224,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-asahi-chiba-city",
+   "name": "千葉市街（朝日新聞千葉総局）",
+   "name_kana": null,
+   "lat": 35.605,
+   "lng": 140.11,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vaifJWjqu0k",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vaifJWjqu0k"
+   },
+   "operator": "朝日新聞社（朝日新聞LIVE）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vaifJWjqu0k",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：朝日新聞社（朝日新聞LIVE）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=朝日新聞社 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-asahiyama-seal",
@@ -25905,6 +25943,1371 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-mie-douro-11-01",
+   "name": "国道365号（いなべ市藤原町篠立）",
+   "name_kana": null,
+   "lat": 35.213722,
+   "lng": 136.445129,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "11_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-11-02",
+   "name": "国道421号（いなべ市大安町石榑南）",
+   "name_kana": null,
+   "lat": 35.105591,
+   "lng": 136.474472,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "11_02"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-11-03",
+   "name": "木曽岬弥富停車場線（木曽岬町富田子）",
+   "name_kana": null,
+   "lat": 35.072044,
+   "lng": 136.749054,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "11_03"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-11-04",
+   "name": "水郷公園線（桑名市長島町福吉）",
+   "name_kana": null,
+   "lat": 35.055256,
+   "lng": 136.716614,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "11_04"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-11-05",
+   "name": "湾岸桑名インター線（桑名市大字立田町）",
+   "name_kana": null,
+   "lat": 35.041912,
+   "lng": 136.704987,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "11_05"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-11-07",
+   "name": "桑名川越線（桑名市東金井）",
+   "name_kana": null,
+   "lat": 35.050739,
+   "lng": 136.670731,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "11_07"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-12-01",
+   "name": "国道477号（菰野町吉沢）",
+   "name_kana": null,
+   "lat": 35.016125,
+   "lng": 136.528503,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "12_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-12-03",
+   "name": "国道477号（菰野町潤田）",
+   "name_kana": null,
+   "lat": 35.028156,
+   "lng": 136.516663,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "12_03"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-12-07",
+   "name": "国道164号（四日市市蔵町）",
+   "name_kana": null,
+   "lat": 34.96537,
+   "lng": 136.633057,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "12_07"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-12-08",
+   "name": "上海老茂福線（四日市市大字羽津）",
+   "name_kana": null,
+   "lat": 35.0042,
+   "lng": 136.630936,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "12_08"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-12-09",
+   "name": "国道477号（三重郡菰野町菰野）",
+   "name_kana": null,
+   "lat": 35.008766,
+   "lng": 136.46936,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "12_09"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-13-01",
+   "name": "国道306号（鈴鹿市東庄内町）",
+   "name_kana": null,
+   "lat": 34.913605,
+   "lng": 136.465195,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "13_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-13-03",
+   "name": "津関線（亀山市関町木崎）",
+   "name_kana": null,
+   "lat": 34.852661,
+   "lng": 136.399033,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "13_03"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-13-04",
+   "name": "津関線（亀山市関町木崎）",
+   "name_kana": null,
+   "lat": 34.852661,
+   "lng": 136.399033,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "13_04"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-13-06",
+   "name": "鈴鹿芸濃線（亀山市下庄町）",
+   "name_kana": null,
+   "lat": 34.820541,
+   "lng": 136.482849,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "13_06"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-13-07",
+   "name": "亀山鈴鹿線（鈴鹿市道伯町）",
+   "name_kana": null,
+   "lat": 34.857849,
+   "lng": 136.549454,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "13_07"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-13-08",
+   "name": "神戸長沢線（鈴鹿市長澤町）",
+   "name_kana": null,
+   "lat": 34.938923,
+   "lng": 136.477768,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "13_08"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-14-03",
+   "name": "津芸濃大山田線（津市納所町）",
+   "name_kana": null,
+   "lat": 34.728725,
+   "lng": 136.484085,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "14_03"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-14-04",
+   "name": "国道165号（津市久居明神町）",
+   "name_kana": null,
+   "lat": 34.689285,
+   "lng": 136.468491,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "14_04"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-14-05",
+   "name": "津関線（津市芸濃町楠原）",
+   "name_kana": null,
+   "lat": 34.830814,
+   "lng": 136.400909,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "14_05"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-16-01",
+   "name": "松阪第2環状線（松阪市川井町）",
+   "name_kana": null,
+   "lat": 34.581577,
+   "lng": 136.516266,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "16_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-16-02",
+   "name": "国道166号（松阪市鎌田町）",
+   "name_kana": null,
+   "lat": 34.583279,
+   "lng": 136.536087,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "16_02"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-16-03",
+   "name": "国道166号（松阪市飯高町木梶）",
+   "name_kana": null,
+   "lat": 34.401451,
+   "lng": 136.099838,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "16_03"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-16-04",
+   "name": "嬉野津線（松阪市嬉野中川新町）",
+   "name_kana": null,
+   "lat": 34.634525,
+   "lng": 136.4776,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "16_04"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-17-01",
+   "name": "伊勢磯部線（伊勢市宇治浦田町）",
+   "name_kana": null,
+   "lat": 34.46294,
+   "lng": 136.717422,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "17_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-17-02",
+   "name": "玉城南勢線（度会郡度会町大野木）",
+   "name_kana": null,
+   "lat": 34.442307,
+   "lng": 136.635895,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "17_02"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-17-03",
+   "name": "伊勢松阪線（伊勢市御薗町高向）",
+   "name_kana": null,
+   "lat": 34.504753,
+   "lng": 136.694931,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "17_03"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-18-01",
+   "name": "国道42号（鳥羽市一丁目）",
+   "name_kana": null,
+   "lat": 34.481342,
+   "lng": 136.84343,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "18_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-18-02",
+   "name": "国道167号（鳥羽市河内町）",
+   "name_kana": null,
+   "lat": 34.44067,
+   "lng": 136.808517,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "18_02"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-19-01",
+   "name": "国道163号（伊賀市上阿波）",
+   "name_kana": null,
+   "lat": 34.778378,
+   "lng": 136.306107,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "19_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-19-04",
+   "name": "国道163号（伊賀市上野丸之内）",
+   "name_kana": null,
+   "lat": 34.769566,
+   "lng": 136.128784,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "19_04"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-19-05",
+   "name": "国道368号（伊賀市上之庄）",
+   "name_kana": null,
+   "lat": 34.732857,
+   "lng": 136.114746,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "19_05"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-20-01",
+   "name": "国道425号（尾鷲市倉ノ谷町）",
+   "name_kana": null,
+   "lat": 34.076588,
+   "lng": 136.187576,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "20_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-20-02",
+   "name": "国道422号（北牟婁郡紀北町東長島）",
+   "name_kana": null,
+   "lat": 34.220497,
+   "lng": 136.349396,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "20_02"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-mie-douro-21-01",
+   "name": "鵜殿熊野線（熊野市有馬町）",
+   "name_kana": null,
+   "lat": 33.880947,
+   "lng": 136.079376,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "24",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "mie_douro",
+    "url": "http://www.douro.pref.mie.jp/camera_get_api.php",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "21_01"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.douro.pref.mie.jp/camera_map.php"
+   },
+   "operator": "三重県",
+   "source": {
+    "page_url": "http://www.douro.pref.mie.jp/camera_map.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：三重県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=三重県 feed_type=mie_douro with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-mount-washington",

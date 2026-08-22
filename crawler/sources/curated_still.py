@@ -44,6 +44,7 @@ class CuratedStillParser(SourceParser):
                     category=cam.get("category", "other"),
                     prefecture=str(cam.get("prefecture", "13")),
                     country=cam.get("country"),
+                    camera_ref=cam.get("camera_ref"),
                     feed_type=cam.get("feed_type", "still_image"),
                     feed_url=cam.get("feed_url") or cam["image_url"],
                     fallback_url=cam["page_url"],

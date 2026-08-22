@@ -5083,3 +5083,507 @@ cameras:
     image_url: "https://www.youtube.com/channel/UCDl1pzdSiIYDQn-JmyFqe_Q/live"
     page_url: "https://www.chihayaakasaka.org/info/live.html"
     note: "村観光協会が案内する登山口ライブ。動画ID変動のためチャンネル埋め込み型"
+
+  # ---- 2026-08-22 三重県道路規制情報 35台(都度解決型mie_douro・画像はAPI内base64) ----
+  - id: curated-still-mie-douro-11-01
+    name: "国道365号（いなべ市藤原町篠立）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.213722
+    lng: 136.445129
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "11_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-11-02
+    name: "国道421号（いなべ市大安町石榑南）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.105591
+    lng: 136.474472
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "11_02"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-11-03
+    name: "木曽岬弥富停車場線（木曽岬町富田子）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.072044
+    lng: 136.749054
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "11_03"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-11-04
+    name: "水郷公園線（桑名市長島町福吉）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.055256
+    lng: 136.716614
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "11_04"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-11-05
+    name: "湾岸桑名インター線（桑名市大字立田町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.041912
+    lng: 136.704987
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "11_05"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-11-07
+    name: "桑名川越線（桑名市東金井）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.050739
+    lng: 136.670731
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "11_07"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-12-01
+    name: "国道477号（菰野町吉沢）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.016125
+    lng: 136.528503
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "12_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-12-03
+    name: "国道477号（菰野町潤田）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.028156
+    lng: 136.516663
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "12_03"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-12-07
+    name: "国道164号（四日市市蔵町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.96537
+    lng: 136.633057
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "12_07"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-12-08
+    name: "上海老茂福線（四日市市大字羽津）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.0042
+    lng: 136.630936
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "12_08"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-12-09
+    name: "国道477号（三重郡菰野町菰野）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 35.008766
+    lng: 136.46936
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "12_09"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-13-01
+    name: "国道306号（鈴鹿市東庄内町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.913605
+    lng: 136.465195
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "13_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-13-03
+    name: "津関線（亀山市関町木崎）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.852661
+    lng: 136.399033
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "13_03"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-13-04
+    name: "津関線（亀山市関町木崎）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.852661
+    lng: 136.399033
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "13_04"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-13-06
+    name: "鈴鹿芸濃線（亀山市下庄町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.820541
+    lng: 136.482849
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "13_06"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-13-07
+    name: "亀山鈴鹿線（鈴鹿市道伯町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.857849
+    lng: 136.549454
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "13_07"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-13-08
+    name: "神戸長沢線（鈴鹿市長澤町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.938923
+    lng: 136.477768
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "13_08"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-14-03
+    name: "津芸濃大山田線（津市納所町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.728725
+    lng: 136.484085
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "14_03"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-14-04
+    name: "国道165号（津市久居明神町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.689285
+    lng: 136.468491
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "14_04"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-14-05
+    name: "津関線（津市芸濃町楠原）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.830814
+    lng: 136.400909
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "14_05"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-16-01
+    name: "松阪第2環状線（松阪市川井町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.581577
+    lng: 136.516266
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "16_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-16-02
+    name: "国道166号（松阪市鎌田町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.583279
+    lng: 136.536087
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "16_02"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-16-03
+    name: "国道166号（松阪市飯高町木梶）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.401451
+    lng: 136.099838
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "16_03"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-16-04
+    name: "嬉野津線（松阪市嬉野中川新町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.634525
+    lng: 136.4776
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "16_04"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-17-01
+    name: "伊勢磯部線（伊勢市宇治浦田町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.46294
+    lng: 136.717422
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "17_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-17-02
+    name: "玉城南勢線（度会郡度会町大野木）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.442307
+    lng: 136.635895
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "17_02"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-17-03
+    name: "伊勢松阪線（伊勢市御薗町高向）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.504753
+    lng: 136.694931
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "17_03"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-18-01
+    name: "国道42号（鳥羽市一丁目）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.481342
+    lng: 136.84343
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "18_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-18-02
+    name: "国道167号（鳥羽市河内町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.44067
+    lng: 136.808517
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "18_02"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-19-01
+    name: "国道163号（伊賀市上阿波）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.778378
+    lng: 136.306107
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "19_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-19-04
+    name: "国道163号（伊賀市上野丸之内）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.769566
+    lng: 136.128784
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "19_04"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-19-05
+    name: "国道368号（伊賀市上之庄）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.732857
+    lng: 136.114746
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "19_05"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-20-01
+    name: "国道425号（尾鷲市倉ノ谷町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.076588
+    lng: 136.187576
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "20_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-20-02
+    name: "国道422号（北牟婁郡紀北町東長島）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 34.220497
+    lng: 136.349396
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "20_02"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-still-mie-douro-21-01
+    name: "鵜殿熊野線（熊野市有馬町）"
+    operator: "三重県"
+    category: road
+    prefecture: "24"
+    lat: 33.880947
+    lng: 136.079376
+    feed_type: mie_douro
+    feed_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    camera_ref: "21_01"
+    image_url: "http://www.douro.pref.mie.jp/camera_get_api.php"
+    page_url: "http://www.douro.pref.mie.jp/camera_map.php"
+    note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
+
+  - id: curated-asahi-chiba-city
+    name: "千葉市街（朝日新聞千葉総局）"
+    operator: "朝日新聞社（朝日新聞LIVE）"
+    category: road
+    prefecture: "12"
+    lat: 35.605
+    lng: 140.11
+    feed_type: youtube_video
+    feed_url: "vaifJWjqu0k"
+    image_url: "https://www.youtube.com/watch?v=vaifJWjqu0k"
+    page_url: "https://www.youtube.com/watch?v=vaifJWjqu0k"
+    note: "千葉市中央区から市街・道路を望む24時間配信。isLiveNow/oEmbed埋め込み可確認済み。座標は総局周辺(town_level)"

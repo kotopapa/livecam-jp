@@ -50,6 +50,8 @@ def check_camera(session: requests.Session, camera: dict[str, Any],
                  "saitama_flood", "kochi_suibo"):
         # いずれも都度解決型: main.py が _resolved_image を事前解決してくる
         return _check_roadinfo(session, camera, state, now, prev_failures)
+    if ftype == "mie_douro":
+        return _check_mie_douro(camera, state, now, prev_failures)
     if ftype in ("youtube_channel", "youtube_video"):
         return _check_youtube(session, camera, state, now, prev_failures)
     # web_page / hls はステータスコードのみ確認
@@ -147,6 +149,41 @@ def _check_still(session, camera, state, now, prev_failures, url: str | None = N
         "frozen_since": frozen_since if frozen else None,
         "consecutive_failures": 0,
         "avg_interval_sec": state.get("avg_interval_sec"),
+    }
+
+
+def _check_mie_douro(camera, state, now, prev_failures) -> dict:
+    """三重県道路規制情報（画像がAPI応答内のbase64のみ）。
+
+    monitor/main.py が camera_get_api.php を一括取得し、該当カメラの
+    デコード済みバイト列を camera["_mie_bytes"]、観測時刻を
+    camera["_mie_time"] に入れてくる。URLは存在しないため、バイト列に
+    対して _check_still と同じハッシュ履歴・フリーズ判定を行う。
+    """
+    data = camera.get("_mie_bytes")
+    if not data or len(data) < 2000:
+        return _fail(state, now, prev_failures, None)
+    h = dhash64(data)
+    if is_placeholder(h):
+        return _fail(state, now, prev_failures, 200)
+    history: list[dict] = state.get("history", [])
+    state["consecutive_failures"] = 0
+    if (history and history[-1].get("hash") is not None and h != history[-1]["hash"]):
+        times = state.get("change_times", [])
+        times.append(now.isoformat())
+        state["change_times"] = times[-10:]
+    history.append({"at": now.isoformat(), "hash": h})
+    state["history"] = history[-HISTORY_MAX:]
+    state["last_ok_at"] = now.isoformat()
+    frozen, frozen_since = judge_frozen(state["history"], now, camera.get("lat"), camera.get("lng"))
+    return {
+        "state": "frozen" if frozen else "ok",
+        "last_ok_at": state["last_ok_at"],
+        "http_status": 200,
+        "frozen_since": frozen_since if frozen else None,
+        "consecutive_failures": 0,
+        "avg_interval_sec": state.get("avg_interval_sec"),
+        "image_time": camera.get("_mie_time"),
     }
 
 

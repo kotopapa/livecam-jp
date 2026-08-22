@@ -241,6 +241,42 @@ def run(shard: str | None = None) -> int:
             if cam["id"] in st_by_id:
                 cam["_resolved_image"] = st_by_id[cam["id"]]
 
+    # 都度解決型feed（mie_douro）: camera_get_api.php 1リクエストで全台のbase64画像を取得
+    mie_cams = [c for c in all_cameras
+                if c.get("review", {}).get("status") == "approved"
+                and c["feed"]["type"] == "mie_douro"]
+    if mie_cams:
+        import base64
+        api_url = mie_cams[0]["feed"]["url"]
+        host = urlparse(api_url).netloc
+        payload = {}
+        try:
+            throttle.acquire(host)
+            try:
+                resp = session.get(api_url, timeout=30)
+            finally:
+                throttle.release(host)
+            if resp.status_code == 200:
+                payload = resp.json()
+        except (requests.RequestException, ValueError) as e:
+            print(f"mie_douro解決失敗 {api_url}: {e}", file=sys.stderr)
+        mie_by_id = {}
+        for cam in mie_cams:
+            ent = payload.get(cam["feed"].get("camera_ref") or "")
+            if not isinstance(ent, dict):
+                continue
+            pic = ent.get("picture") or ""
+            if "base64," in pic:
+                try:
+                    raw = base64.b64decode(pic.split("base64,", 1)[1])
+                except Exception:
+                    continue
+                mie_by_id[cam["id"]] = (raw, ent.get("date"))
+                cam["_mie_bytes"], cam["_mie_time"] = raw, ent.get("date")
+        for cam in cameras:
+            if cam["id"] in mie_by_id:
+                cam["_mie_bytes"], cam["_mie_time"] = mie_by_id[cam["id"]]
+
     def work(camera: dict):
         host = monitor_host(camera)
         throttle.acquire(host)
