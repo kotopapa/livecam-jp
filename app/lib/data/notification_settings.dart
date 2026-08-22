@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -92,46 +94,60 @@ class NotificationSettings {
     _applyQuakeTopics();
   }
 
-  /// 特別警報トピックの購読反映。対象未選択なら全国トピック、
-  /// 選択ありなら都道府県別トピックを購読し、それ以外は解除する
-  void _applyWarningTopics({bool unsubscribeOthers = true}) {
-    final fm = FirebaseMessaging.instance;
-    final wantDanger = warningEnabled && warningLevel == '4';
-    final wantNational = warningEnabled && warningPrefs.isEmpty;
-    (wantNational
-            ? fm.subscribeToTopic('special-warning')
-            : fm.unsubscribeFromTopic('special-warning'))
-        .catchError((_) {});
-    (wantNational && wantDanger
-            ? fm.subscribeToTopic('danger-warning')
-            : fm.unsubscribeFromTopic('danger-warning'))
-        .catchError((_) {});
-    for (final code in allPrefCodes) {
-      final want = warningEnabled && warningPrefs.contains(code);
-      if (!want && !unsubscribeOthers) continue;
-      (want
-              ? fm.subscribeToTopic('special-warning-$code')
-              : fm.unsubscribeFromTopic('special-warning-$code'))
-          .catchError((_) {});
-      (want && wantDanger
-              ? fm.subscribeToTopic('danger-warning-$code')
-              : fm.unsubscribeFromTopic('danger-warning-$code'))
-          .catchError((_) {});
+  static const _appliedTopicsKey = 'notify_applied_warning_topics';
+
+  /// いま購読すべき警報トピックの集合
+  Set<String> _desiredWarningTopics() {
+    if (!warningEnabled) return {};
+    final danger = warningLevel == '4';
+    if (warningPrefs.isEmpty) {
+      return {'special-warning', if (danger) 'danger-warning'};
     }
+    return {
+      for (final code in warningPrefs) ...{
+        'special-warning-$code',
+        if (danger) 'danger-warning-$code',
+      }
+    };
+  }
+
+  /// 特別警報トピックの購読反映。
+  /// 全トピックへ一斉に購読/解除を投げるとFCMのレート制限に弾かれて
+  /// 静かに失敗するため（実機で発生）、前回適用済みの集合を保存し、
+  /// 差分のみを1件ずつ順番に適用する。購読側は自己修復のため毎回実行する
+  Future<void> _applyWarningTopics() async {
+    final fm = FirebaseMessaging.instance;
+    final desired = _desiredWarningTopics();
+    final applied =
+        (_prefs?.getStringList(_appliedTopicsKey) ?? const []).toSet();
+    final result = applied.toSet();
+    for (final topic in applied.difference(desired)) {
+      try {
+        await fm.unsubscribeFromTopic(topic);
+        result.remove(topic);
+      } catch (_) {} // 失敗分は次回の差分適用で再試行される
+    }
+    for (final topic in desired) {
+      try {
+        await fm.subscribeToTopic(topic);
+        result.add(topic);
+      } catch (_) {}
+    }
+    await _prefs?.setStringList(_appliedTopicsKey, result.toList()..sort());
   }
 
   Future<void> setWarningLevel(String level) async {
     if (level != '5' && level != '4') return;
     warningLevel = level;
     await _prefs?.setString(_warningLevelKey, level);
-    _applyWarningTopics();
+    unawaited(_applyWarningTopics());
   }
 
   Future<bool> setWarningEnabled(bool value) async {
     if (value && !await _ensurePermission()) return false;
     warningEnabled = value;
     await _prefs?.setBool(_warningEnabledKey, value);
-    _applyWarningTopics();
+    unawaited(_applyWarningTopics());
     return true;
   }
 
@@ -139,13 +155,13 @@ class NotificationSettings {
     warningPrefs = prefs.where(allPrefCodes.contains).toSet();
     await _prefs?.setStringList(
         _warningPrefsKey, warningPrefs.toList()..sort());
-    _applyWarningTopics();
+    unawaited(_applyWarningTopics());
   }
 
   /// 起動時に保存済み設定の購読を再適用する（購読漏れの自己修復）。
   /// 起動のたびに48件の解除を投げないよう、購読side のみ再適用する
   void reapply() {
     if (quakeEnabled) _applyQuakeTopics();
-    if (warningEnabled) _applyWarningTopics(unsubscribeOthers: false);
+    if (warningEnabled) unawaited(_applyWarningTopics());
   }
 }
