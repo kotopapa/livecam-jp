@@ -479,24 +479,36 @@ class _IHighwayMapViewState extends State<_IHighwayMapView> {
     final js = '''
 (function(){
   var tries = 0;
+  function ready(){
+    try {
+      return window.MP_OL && MP_OL.ol
+        && window.CM_POPUP && CM_POPUP.CAMERA
+        && window.CM_COMMON && CM_COMMON.config
+        && CM_COMMON.config.JSON && CM_COMMON.config.JSON.CAMERA_POINT
+        && Object.keys(CM_COMMON.config.JSON.CAMERA_POINT).length > 0
+        && document.querySelector('#mp_pop_camhlayer')
+        && document.querySelector('#mp_pop_area');
+    } catch(e){ return false; }
+  }
+  function opened(){
+    var m = document.querySelector('#mp_pop_area');
+    return m && !m.classList.contains('cm_display_none');
+  }
   function go(){
     tries++;
-    try {
-      if (window.MP_OL && MP_OL.ol) {
+    if (ready()) {
+      try {
         var v = MP_OL.ol.getView();
         v.setCenter([${widget.x}, ${widget.y}]);
         v.setZoom(4);
-        // カメラ映像モーダルを直接開く(サイト内のクリック処理と同一のAPI)
-        setTimeout(function(){
-          try {
-            CM_POPUP.CAMERA.showPopup(
-                '#mp_pop_area', '#mp_pop_camhlayer', 1, '${widget.camId}');
-          } catch(e) {}
-        }, 800);
-        return;
-      }
-    } catch(e) {}
-    if (tries < 40) setTimeout(go, 500);
+        if (!opened()) {
+          CM_POPUP.CAMERA.showPopup(
+              '#mp_pop_area', '#mp_pop_camhlayer', 1, '${widget.camId}');
+        }
+        if (opened()) return;
+      } catch(e) {}
+    }
+    if (tries < 60) setTimeout(go, 500);
   }
   go();
 })();
