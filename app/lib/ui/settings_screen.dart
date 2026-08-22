@@ -1,6 +1,10 @@
 import 'package:firebase_messaging/firebase_messaging.dart' as fbm;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
@@ -75,6 +79,85 @@ class _SettingsScreenState extends State<SettingsScreen> {
   // 通知診断の隠し表示(バージョン5回タップで解放)
   bool _diagUnlocked = false;
   int _diagTapCount = 0;
+
+  /// MetricKitがDocuments/mx_diagnosticsへ保存した診断JSONを表示する。
+  /// クラッシュ翌回の起動時に配送されるため、再現直後に開くと記録がある
+  Future<void> _showCrashDiagnosis() async {
+    String summary = '';
+    String latestJson = '';
+    try {
+      final docs = await getApplicationDocumentsDirectory();
+      final dir = Directory('${docs.path}/mx_diagnostics');
+      if (!dir.existsSync()) {
+        summary = '診断データはまだありません。\nクラッシュ後にアプリを起動し直すと記録されます';
+      } else {
+        final files = dir
+            .listSync()
+            .whereType<File>()
+            .where((f) => f.path.endsWith('.json'))
+            .toList()
+          ..sort((a, b) => b.path.compareTo(a.path));
+        if (files.isEmpty) {
+          summary = '診断データはまだありません';
+        } else {
+          summary = '記録: ${files.length}件\n最新: ${files.first.uri.pathSegments.last}';
+          latestJson = files.first.readAsStringSync();
+          // 概要(クラッシュ種別)を先頭に抽出
+          try {
+            final d = jsonDecode(latestJson) as Map<String, dynamic>;
+            final kinds = <String>[
+              if (d['crashDiagnostics'] != null) 'クラッシュ',
+              if (d['hangDiagnostics'] != null) 'ハング',
+              if (d['cpuExceptionDiagnostics'] != null) 'CPU異常',
+              if (d['diskWriteExceptionDiagnostics'] != null) 'ディスク書込異常',
+            ];
+            if (kinds.isNotEmpty) summary += '\n種別: ${kinds.join('・')}';
+          } catch (_) {}
+        }
+      }
+    } catch (e) {
+      summary = '読み取りエラー: $e';
+    }
+    if (!mounted) return;
+    showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('クラッシュ診断データ'),
+        content: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(summary),
+              if (latestJson.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Text(
+                  latestJson.length > 1500
+                      ? '${latestJson.substring(0, 1500)}…'
+                      : latestJson,
+                  style: const TextStyle(fontSize: 9),
+                ),
+              ],
+            ],
+          ),
+        ),
+        actions: [
+          if (latestJson.isNotEmpty)
+            TextButton(
+              onPressed: () {
+                Clipboard.setData(ClipboardData(text: latestJson));
+                ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('診断JSONをコピーしました')));
+              },
+              child: const Text('全文をコピー'),
+            ),
+          TextButton(
+              onPressed: () => Navigator.of(ctx).pop(),
+              child: const Text('閉じる')),
+        ],
+      ),
+    );
+  }
 
   Future<void> _showNotifyDiagnosis() async {
     final fm = fbm.FirebaseMessaging.instance;
@@ -272,13 +355,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
         ],
-        if (_diagUnlocked)
+        if (_diagUnlocked) ...[
           ListTile(
             leading: const Icon(Icons.troubleshoot),
             title: const Text('通知診断'),
             subtitle: const Text('通知が届かないときの状態確認'),
             onTap: _showNotifyDiagnosis,
           ),
+          ListTile(
+            leading: const Icon(Icons.bug_report_outlined),
+            title: const Text('クラッシュ診断データ'),
+            subtitle: const Text('強制終了の記録(MetricKit)を表示・コピー'),
+            onTap: _showCrashDiagnosis,
+          ),
+        ],
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
           child: Text('※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません',
