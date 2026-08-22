@@ -72,6 +72,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return '${names.take(3).join('・')} など${names.length}件';
   }
 
+  // 通知診断の隠し表示(バージョン5回タップで解放)
+  bool _diagUnlocked = false;
+  int _diagTapCount = 0;
+
   Future<void> _showNotifyDiagnosis() async {
     final fm = fbm.FirebaseMessaging.instance;
     String perm = '取得失敗', apns = '取得失敗', fcm = '取得失敗';
@@ -268,12 +272,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
         ],
-        ListTile(
-          leading: const Icon(Icons.troubleshoot),
-          title: const Text('通知診断'),
-          subtitle: const Text('通知が届かないときの状態確認'),
-          onTap: _showNotifyDiagnosis,
-        ),
+        if (_diagUnlocked)
+          ListTile(
+            leading: const Icon(Icons.troubleshoot),
+            title: const Text('通知診断'),
+            subtitle: const Text('通知が届かないときの状態確認'),
+            onTap: _showNotifyDiagnosis,
+          ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
           child: Text('※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません',
@@ -380,10 +385,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         const Divider(),
         const _SectionHeader('このアプリについて'),
-        const ListTile(
-          leading: Icon(Icons.info_outline),
-          title: Text('バージョン'),
-          subtitle: Text(appVersion),
+        ListTile(
+          leading: const Icon(Icons.info_outline),
+          title: const Text('バージョン'),
+          subtitle: const Text(appVersion),
+          // 隠し機能: 5回タップで「通知診断」を表示する
+          onTap: () {
+            if (_diagUnlocked) return;
+            _diagTapCount++;
+            if (_diagTapCount >= 5) {
+              setState(() => _diagUnlocked = true);
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text('通知診断を表示しました（災害通知の項目内）')));
+            }
+          },
         ),
         const Divider(),
         const _SectionHeader('免責'),
