@@ -1,4 +1,6 @@
+import 'package:firebase_messaging/firebase_messaging.dart' as fbm;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
@@ -68,6 +70,60 @@ class _SettingsScreenState extends State<SettingsScreen> {
         .toList();
     if (names.length <= 3) return names.join('・');
     return '${names.take(3).join('・')} など${names.length}件';
+  }
+
+  Future<void> _showNotifyDiagnosis() async {
+    final fm = fbm.FirebaseMessaging.instance;
+    String perm = '取得失敗', apns = '取得失敗', fcm = '取得失敗';
+    try {
+      final s = await fm.getNotificationSettings();
+      perm = s.authorizationStatus.name;
+    } catch (_) {}
+    try {
+      final a = await fm.getAPNSToken();
+      apns = a == null ? '未取得(null)' : '取得済み(${a.substring(0, 8)}…)';
+    } catch (e) {
+      apns = 'エラー: $e';
+    }
+    try {
+      fcm = await fm.getToken() ?? '未取得(null)';
+    } catch (e) {
+      fcm = 'エラー: $e';
+    }
+    if (!mounted) return;
+    showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('通知診断'),
+        content: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('通知許可: $perm'),
+              const SizedBox(height: 6),
+              Text('APNsトークン: $apns'),
+              const SizedBox(height: 6),
+              const Text('FCMトークン:'),
+              SelectableText(fcm, style: const TextStyle(fontSize: 11)),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Clipboard.setData(ClipboardData(text: fcm));
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('FCMトークンをコピーしました')));
+            },
+            child: const Text('トークンをコピー'),
+          ),
+          TextButton(
+              onPressed: () => Navigator.of(ctx).pop(),
+              child: const Text('閉じる')),
+        ],
+      ),
+    );
   }
 
   Future<void> _pickWarningPrefs() async {
@@ -212,6 +268,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
         ],
+        ListTile(
+          leading: const Icon(Icons.troubleshoot),
+          title: const Text('通知診断'),
+          subtitle: const Text('通知が届かないときの状態確認'),
+          onTap: _showNotifyDiagnosis,
+        ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
           child: Text('※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません',
