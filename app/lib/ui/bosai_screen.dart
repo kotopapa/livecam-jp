@@ -713,7 +713,41 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
   }
 }
 
-class PrefCamerasScreen extends StatelessWidget {
+/// 災害速報の一覧共通: 上部固定の「LIVEのみ」トグルバー
+class _LiveOnlyBar extends StatelessWidget {
+  const _LiveOnlyBar(
+      {required this.liveOnly,
+      required this.liveCount,
+      required this.onChanged});
+
+  final bool liveOnly;
+  final int liveCount;
+  final ValueChanged<bool> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Theme.of(context).colorScheme.surface,
+      child: Container(
+        decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey[300]!))),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        child: Row(
+          children: [
+            FilterChip(
+              label: Text('LIVEのみ（$liveCount）'),
+              selected: liveOnly,
+              onSelected: onChanged,
+              visualDensity: VisualDensity.compact,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PrefCamerasScreen extends StatefulWidget {
   const PrefCamerasScreen(
       {super.key,
       required this.app,
@@ -729,30 +763,56 @@ class PrefCamerasScreen extends StatelessWidget {
   final String? municipality;
 
   @override
+  State<PrefCamerasScreen> createState() => _PrefCamerasScreenState();
+}
+
+class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
+  bool _liveOnly = false;
+
+  @override
   Widget build(BuildContext context) {
+    final app = widget.app;
     final all = app.repository
         .displayableCameras()
-        .where((c) => c.prefecture == pref)
+        .where((c) => c.prefecture == widget.pref)
         .toList()
       ..sort((a, b) => a.name.compareTo(b.name));
 
-    List<Camera> cams = all;
+    List<Camera> base = all;
     String? note;
-    if (municipality != null) {
+    if (widget.municipality != null) {
       final matched =
-          all.where((c) => c.municipality == municipality).toList();
+          all.where((c) => c.municipality == widget.municipality).toList();
       if (matched.isNotEmpty) {
-        cams = matched;
+        base = matched;
       } else {
         note = 'この市区町村に対応するカメラがないため、都道府県内の全カメラを表示しています';
       }
     }
+    final liveCount = base.where((c) => c.isVideo).length;
+    final cams = _liveOnly ? base.where((c) => c.isVideo).toList() : base;
     return Scaffold(
       appBar: AppBar(
-          title: Text(title, overflow: TextOverflow.ellipsis)),
-      body: cams.isEmpty
+          title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+      body: base.isEmpty
           ? const Center(child: Text('この都道府県のカメラがありません'))
-          : ListView.builder(
+          : Column(children: [
+              _LiveOnlyBar(
+                liveOnly: _liveOnly,
+                liveCount: liveCount,
+                onChanged: (v) => setState(() => _liveOnly = v),
+              ),
+              Expanded(
+                  child: cams.isEmpty
+                      ? const Center(child: Text('LIVE配信のカメラがありません'))
+                      : _buildList(cams, note)),
+            ]),
+    );
+  }
+
+  Widget _buildList(List<Camera> cams, String? note) {
+    final app = widget.app;
+    return ListView.builder(
               itemCount: cams.length + (note != null ? 1 : 0),
               itemBuilder: (context, i) {
                 if (note != null && i == 0) {
@@ -797,13 +857,12 @@ class PrefCamerasScreen extends StatelessWidget {
                           DetailScreen(camera: camera, app: app))),
                 );
               },
-            ),
-    );
+            );
   }
 }
 
 /// 指定地点の周辺カメラ一覧（距離順・50km以内）。
-class NearbyCamerasScreen extends StatelessWidget {
+class NearbyCamerasScreen extends StatefulWidget {
   const NearbyCamerasScreen({
     super.key,
     required this.app,
@@ -818,19 +877,47 @@ class NearbyCamerasScreen extends StatelessWidget {
   final double lng;
 
   @override
+  State<NearbyCamerasScreen> createState() => _NearbyCamerasScreenState();
+}
+
+class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
+  bool _liveOnly = false;
+
+  @override
   Widget build(BuildContext context) {
-    final cams = <(Camera, double)>[];
+    final app = widget.app;
+    final base = <(Camera, double)>[];
     for (final c in app.repository.displayableCameras()) {
       if (!c.hasLocation) continue;
-      final d = distanceMeters(lat, lng, c.lat!, c.lng!);
-      if (d <= 50000) cams.add((c, d));
+      final d = distanceMeters(widget.lat, widget.lng, c.lat!, c.lng!);
+      if (d <= 50000) base.add((c, d));
     }
-    cams.sort((a, b) => a.$2.compareTo(b.$2));
+    base.sort((a, b) => a.$2.compareTo(b.$2));
+    final liveCount = base.where((e) => e.$1.isVideo).length;
+    final cams =
+        _liveOnly ? base.where((e) => e.$1.isVideo).toList() : base;
     return Scaffold(
-      appBar: AppBar(title: Text(title, overflow: TextOverflow.ellipsis)),
-      body: cams.isEmpty
+      appBar: AppBar(
+          title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+      body: base.isEmpty
           ? const Center(child: Text('50km以内にカメラがありません'))
-          : ListView.separated(
+          : Column(children: [
+              _LiveOnlyBar(
+                liveOnly: _liveOnly,
+                liveCount: liveCount,
+                onChanged: (v) => setState(() => _liveOnly = v),
+              ),
+              Expanded(child: _buildList(cams)),
+            ]),
+    );
+  }
+
+  Widget _buildList(List<(Camera, double)> cams) {
+    final app = widget.app;
+    if (cams.isEmpty) {
+      return const Center(child: Text('LIVE配信のカメラがありません'));
+    }
+    return ListView.separated(
               itemCount: cams.length,
               separatorBuilder: (_, _) => const Divider(height: 1),
               itemBuilder: (context, i) {
@@ -870,7 +957,6 @@ class NearbyCamerasScreen extends StatelessWidget {
                           DetailScreen(camera: camera, app: app))),
                 );
               },
-            ),
-    );
+            );
   }
 }
