@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T02:14:53Z",
+ "version": "2026-08-22T02:17:46Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -3847,14 +3847,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "TbLQHnIVniM",
+    "url": "g5LZWZZ1GJQ",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=TbLQHnIVniM"
+    "url": "https://www.youtube.com/watch?v=g5LZWZZ1GJQ"
    },
    "operator": "柏市（土木部交通政策課）",
    "source": {
@@ -5760,6 +5760,120 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-mboso-biwakurabu",
+   "name": "道の駅 とみうら枇杷倶楽部",
+   "name_kana": null,
+   "lat": 35.070312,
+   "lng": 139.887955,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "kIeIAUhdlYQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=kIeIAUhdlYQ"
+   },
+   "operator": "南房総市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=kIeIAUhdlYQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南房総市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=南房総市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-mboso-furari",
+   "name": "道の駅 富楽里とみやま",
+   "name_kana": null,
+   "lat": 35.103237,
+   "lng": 139.870987,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "QpQ0301lS6I",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=QpQ0301lS6I"
+   },
+   "operator": "南房総市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=QpQ0301lS6I",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南房総市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=南房総市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-mboso-shiokaze",
+   "name": "道の駅 ちくら潮風王国",
+   "name_kana": null,
+   "lat": 34.934258,
+   "lng": 139.948578,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "q1Nxn99NwJ4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=q1Nxn99NwJ4"
+   },
+   "operator": "南房総市",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=q1Nxn99NwJ4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：南房総市（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=南房総市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-michinoeki-nikko",
