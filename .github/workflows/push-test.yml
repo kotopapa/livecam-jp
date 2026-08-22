@@ -1,0 +1,51 @@
+name: push-test
+
+# Push通知の手動テスト送信（本番トピックに任意の文面を送る）。
+# 使い方: gh workflow run push-test.yml -f topics=special-warning,special-warning-14
+on:
+  workflow_dispatch:
+    inputs:
+      topics:
+        description: "送信先トピック(カンマ区切り)"
+        required: true
+        default: "special-warning,special-warning-14"
+      title:
+        description: "通知タイトル"
+        required: true
+        default: "【テスト】通知のテスト配信です"
+      body:
+        description: "通知本文"
+        required: true
+        default: "全国ライブカメラ地図のPush通知テストです。実際の警報ではありません"
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: テスト送信
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          TOPICS: ${{ inputs.topics }}
+          TITLE: ${{ inputs.title }}
+          BODY: ${{ inputs.body }}
+        run: |
+          python - <<'EOF'
+          import json, os
+          from tools.bosai_notify import fcm_token, send_push
+          sa = os.environ["FIREBASE_SERVICE_ACCOUNT"]
+          token, project = fcm_token(json.loads(sa))
+          for topic in os.environ["TOPICS"].split(","):
+              topic = topic.strip()
+              if topic:
+                  send_push(token, project, topic,
+                            os.environ["TITLE"], os.environ["BODY"])
+          EOF
