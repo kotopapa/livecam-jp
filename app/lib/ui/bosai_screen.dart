@@ -52,10 +52,28 @@ class _Quake {
 /// 気象警報コード → 表示名
 const _warningNames = {
   '02': '暴風雪警報', '03': '大雨警報', '04': '洪水警報', '05': '暴風警報',
-  '06': '大雪警報', '07': '波浪警報', '08': '高潮警報',
-  '32': '暴風雪特別警報', '33': '大雨特別警報', '35': '暴風特別警報',
-  '36': '大雪特別警報', '37': '波浪特別警報', '38': '高潮特別警報',
+  '06': '大雪警報', '07': '波浪警報', '08': '高潮警報', '09': '土砂災害警報',
+  // 2026-05-28の新体系で追加された「危険警報」(警戒レベル4相当。コード=警報+40)
+  '43': '大雨危険警報', '44': '洪水危険警報', '48': '高潮危険警報',
+  '49': '土砂災害危険警報',
+  '32': '暴風雪特別警報', '33': '大雨特別警報', '34': '洪水特別警報',
+  '35': '暴風特別警報', '36': '大雪特別警報', '37': '波浪特別警報',
+  '38': '高潮特別警報', '39': '土砂災害特別警報',
 };
+
+/// 警報名 → 表示色（特別=赤 / 危険警報=紫(レベル4) / 警報=オレンジ）
+Color warningLevelColor(String name) {
+  if (name.contains('特別')) return const Color(0xFFD93025);
+  if (name.contains('危険警報')) return const Color(0xFF9334E6);
+  return const Color(0xFFF29900);
+}
+
+/// 並び順ランク（特別→危険→警報）
+int warningLevelRank(String name) {
+  if (name.contains('特別')) return 0;
+  if (name.contains('危険警報')) return 1;
+  return 2;
+}
 
 /// 注意報コード → 表示名（折りたたみ表示用）
 const _advisoryNames = {
@@ -152,8 +170,8 @@ class _BosaiScreenState extends State<BosaiScreen> {
       for (final e in byPref.entries) {
         final list = e.value.toList()
           ..sort((a, b) {
-            final ae = a.contains('特別') ? 0 : 1;
-            final be = b.contains('特別') ? 0 : 1;
+            final ae = warningLevelRank(a);
+            final be = warningLevelRank(b);
             return ae != be ? ae.compareTo(be) : a.compareTo(b);
           });
         result[e.key] = list;
@@ -384,8 +402,10 @@ class _BosaiScreenState extends State<BosaiScreen> {
     }
     final prefs = _warnings!.keys.toList()
       ..sort((a, b) {
-        final ae = _warnings![a]!.any((w) => w.contains('特別')) ? 0 : 1;
-        final be = _warnings![b]!.any((w) => w.contains('特別')) ? 0 : 1;
+        final ae =
+            _warnings![a]!.map(warningLevelRank).reduce((x, y) => x < y ? x : y);
+        final be =
+            _warnings![b]!.map(warningLevelRank).reduce((x, y) => x < y ? x : y);
         return ae != be ? ae.compareTo(be) : a.compareTo(b);
       });
     final advPrefs = (_advisories ?? const {}).keys.toList()..sort();
@@ -429,13 +449,14 @@ class _BosaiScreenState extends State<BosaiScreen> {
         }
         final pref = prefs[i - 1];
         final names = _warnings![pref]!;
+        final topColor = names
+            .map(warningLevelColor)
+            .firstWhere((_) => true, orElse: () => const Color(0xFFF29900));
         final emergency = names.any((w) => w.contains('特別'));
         return ListTile(
           leading: Icon(
             emergency ? Icons.warning : Icons.warning_amber_outlined,
-            color: emergency
-                ? const Color(0xFFD93025)
-                : const Color(0xFFF29900),
+            color: topColor,
           ),
           title: Text(prefectureNames[pref] ?? pref),
           subtitle: Wrap(spacing: 4, runSpacing: 2, children: [
@@ -444,9 +465,7 @@ class _BosaiScreenState extends State<BosaiScreen> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
                 decoration: BoxDecoration(
-                  color: n.contains('特別')
-                      ? const Color(0xFFD93025)
-                      : const Color(0xFFF29900),
+                  color: warningLevelColor(n),
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Text(n,
@@ -583,8 +602,12 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
       for (final muni in sortedCodes)
         (muni, byMuni[muni]!.$1, byMuni[muni]!.$2.toList()..sort())
     ]..sort((a, b) {
-        final ae = a.$3.any((w) => w.contains('特別')) ? 0 : 1;
-        final be = b.$3.any((w) => w.contains('特別')) ? 0 : 1;
+        final ae = a.$3.isEmpty
+            ? 9
+            : a.$3.map(warningLevelRank).reduce((x, y) => x < y ? x : y);
+        final be = b.$3.isEmpty
+            ? 9
+            : b.$3.map(warningLevelRank).reduce((x, y) => x < y ? x : y);
         return ae.compareTo(be);
       });
     setState(() {
@@ -628,19 +651,21 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                           c.municipality == muni)
                       .length;
                   final emergency = warns.any((w) => w.contains('特別'));
-                  Color chipColor(String w) => w.contains('特別')
-                      ? const Color(0xFFD93025)
-                      : w.contains('注意報')
-                          ? const Color(0xFFF9A825)
-                          : const Color(0xFFF29900);
+                  Color chipColor(String w) => w.contains('注意報')
+                      ? const Color(0xFFF9A825)
+                      : warningLevelColor(w);
+                  final iconColor = warns.isEmpty
+                      ? const Color(0xFFF29900)
+                      : chipColor((warns.toList()
+                            ..sort((a, b) => warningLevelRank(a)
+                                .compareTo(warningLevelRank(b))))
+                          .first);
                   return ListTile(
                     leading: Icon(
                       emergency
                           ? Icons.warning
                           : Icons.warning_amber_outlined,
-                      color: emergency
-                          ? const Color(0xFFD93025)
-                          : const Color(0xFFF29900),
+                      color: iconColor,
                     ),
                     title: Row(children: [
                       Flexible(

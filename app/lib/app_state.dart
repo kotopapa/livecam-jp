@@ -307,7 +307,7 @@ class AppState extends ChangeNotifier {
 
   // --- 特別警報バッジ（災害速報タブに赤バッジを出す） ---
   bool specialWarningActive = false;
-  static const _specialCodes = {'32', '33', '35', '36', '37', '38'};
+  static const _specialCodes = {'32', '33', '34', '35', '36', '37', '38', '39'};
 
   Future<void> checkSpecialWarnings() async {
     try {
