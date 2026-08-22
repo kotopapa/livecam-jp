@@ -4605,3 +4605,27 @@ cameras:
     image_url: "http://webcam.town.toyo.kochi.jp/-wvhttp-01-/image.cgi?v=jpg:1280x960"
     page_url: "http://www.town.toyo.kochi.jp/contents/live.php"
     note: "四国屈指のサーフポイント生見海岸。町公式のwvhttp配信"
+
+  - id: curated-still-usuki-kakinoura
+    name: "臼杵市 柿ノ浦漁港（防災カメラ）"
+    operator: "臼杵市"
+    category: coast
+    prefecture: "44"
+    lat: 33.112591
+    lng: 131.834229
+    refresh_sec: 300
+    image_url: "https://www.city.usuki.oita.jp/bousai_camera/p_kakinoura.jpg"
+    page_url: "https://www.city.usuki.oita.jp/docs/2014020700374/"
+    note: "長目半島北側の漁港。住所解決不可のため座標は隣接の大泊地区(精度area・ユーザー了承済み)"
+
+  - id: curated-still-usuki-tomarigauchi
+    name: "臼杵市 泊ヶ内漁港（防災カメラ）"
+    operator: "臼杵市"
+    category: coast
+    prefecture: "44"
+    lat: 33.110641
+    lng: 131.850677
+    refresh_sec: 300
+    image_url: "https://www.city.usuki.oita.jp/bousai_camera/p_tomarigauti.jpg"
+    page_url: "https://www.city.usuki.oita.jp/docs/2014020700374/"
+    note: "長目半島突端の漁村。住所解決不可のため座標は隣接の風成地区(精度area・実際はさらに突端側。ユーザー了承済み)"

@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T00:49:19Z",
+ "version": "2026-08-22T00:52:06Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -28072,6 +28072,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-usuki-kakinoura",
+   "name": "臼杵市 柿ノ浦漁港（防災カメラ）",
+   "name_kana": null,
+   "lat": 33.112591,
+   "lng": 131.834229,
+   "coord_accuracy": "area",
+   "category": "coast",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.usuki.oita.jp/bousai_camera/p_kakinoura.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.usuki.oita.jp/docs/2014020700374/"
+   },
+   "operator": "臼杵市",
+   "source": {
+    "page_url": "https://www.city.usuki.oita.jp/docs/2014020700374/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：臼杵市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=臼杵市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-usuki-sashiu",
    "name": "臼杵市 佐志生海岸（防災カメラ）",
    "name_kana": null,
@@ -28124,6 +28162,44 @@
    "feed": {
     "type": "still_image",
     "url": "https://www.city.usuki.oita.jp/bousai_camera/p_shiyakusyo.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.usuki.oita.jp/docs/2014020700374/"
+   },
+   "operator": "臼杵市",
+   "source": {
+    "page_url": "https://www.city.usuki.oita.jp/docs/2014020700374/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：臼杵市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=臼杵市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-usuki-tomarigauchi",
+   "name": "臼杵市 泊ヶ内漁港（防災カメラ）",
+   "name_kana": null,
+   "lat": 33.110641,
+   "lng": 131.850677,
+   "coord_accuracy": "area",
+   "category": "coast",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.usuki.oita.jp/bousai_camera/p_tomarigauti.jpg",
     "refresh_sec": 300,
     "requires_referer": false,
     "headers": {}
