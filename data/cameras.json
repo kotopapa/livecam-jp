@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T00:15:58Z",
+ "version": "2026-08-22T00:17:51Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -15892,7 +15892,8 @@
     "headers": {}
    },
    "fallback": {
-    "url": "https://nyalesundresearch.no/maps-and-webcams/"
+    "url": "https://nyalesundresearch.no/maps-and-webcams/",
+    "type": "web_page"
    },
    "operator": "ノルウェー極地研究所/Kings Bay AS",
    "source": {
@@ -22845,7 +22846,8 @@
     "headers": {}
    },
    "fallback": {
-    "url": "https://www.cfht.hawaii.edu/en/gallery/webcams/"
+    "url": "https://www.cfht.hawaii.edu/en/gallery/webcams/",
+    "type": "web_page"
    },
    "operator": "カナダ・フランス・ハワイ望遠鏡(CFHT)",
    "source": {
