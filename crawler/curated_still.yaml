@@ -4629,3 +4629,184 @@ cameras:
     image_url: "https://www.city.usuki.oita.jp/bousai_camera/p_tomarigauti.jpg"
     page_url: "https://www.city.usuki.oita.jp/docs/2014020700374/"
     note: "長目半島突端の漁村。住所解決不可のため座標は隣接の風成地区(精度area・実際はさらに突端側。ユーザー了承済み)"
+
+  # ---- 2026-08-22 高知県集中調査分(大月町漁港監視13台+宿毛沖の島+黒潮町浮鞭) ----
+  - id: curated-still-otsuki-cam1
+    name: "龍ヶ迫漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.862961
+    lng: 132.678375
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM1.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM1.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam2
+    name: "泊浦漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.842979
+    lng: 132.67926
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM2.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM2.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam3
+    name: "橋浦漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.841492
+    lng: 132.707001
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM3.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM3.html"
+    note: "大月町の漁港監視カメラ。地名の住所解決不可のため座標は町中心部(area精度)"
+
+  - id: curated-still-otsuki-cam4
+    name: "安満地漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.800072
+    lng: 132.653946
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM4.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM4.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam5
+    name: "一切漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.786652
+    lng: 132.650513
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM5.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM5.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam6
+    name: "柏島漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.766674
+    lng: 132.634842
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM6.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM6.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam8
+    name: "古満目漁港1（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.787518
+    lng: 132.684616
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM8.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM8.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam9
+    name: "古満目漁港2（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.787518
+    lng: 132.684616
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM9.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM9.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam10
+    name: "周防形漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.807018
+    lng: 132.717209
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM10.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM10.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam11
+    name: "樫ノ浦漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.79287
+    lng: 132.725266
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM11.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM11.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam12
+    name: "西泊漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.780762
+    lng: 132.731842
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM12.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM12.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam13
+    name: "大浦漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.76067
+    lng: 132.760117
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM13.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM13.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-otsuki-cam14
+    name: "小才角漁港（大月町）"
+    operator: "大月町"
+    category: port
+    prefecture: "39"
+    lat: 32.777302
+    lng: 132.778259
+    refresh_sec: 300
+    image_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM14.jpg"
+    page_url: "http://gyokou.town.otsuki.kochi.jp/CAM/CAM14.html"
+    note: "大月町の漁港監視カメラ。座標は漁港地区(town_level)"
+
+  - id: curated-still-sukumo-okinoshima
+    name: "沖の島 母島港（宿毛市）"
+    operator: "宿毛市"
+    category: port
+    prefecture: "39"
+    lat: 32.740807
+    lng: 132.556091
+    refresh_sec: 300
+    image_url: "https://okinoshimacam.r-es.jp/cameraconsole/img.php?cam_no=101"
+    page_url: "https://www.city.sukumo.kochi.jp/docs-05/livecamera.html"
+    note: "離島・沖の島の母島港。定期船・ヘリポートが映る"
+
+  - id: curated-still-kuroshio-ukibuchi
+    name: "浮鞭ビーチ（黒潮町）"
+    operator: "黒潮町"
+    category: coast
+    prefecture: "39"
+    lat: 33.042198
+    lng: 133.031876
+    refresh_sec: 300
+    image_url: "https://www.town.kuroshio.lg.jp/cameraconsole/img.php?cam_no=101"
+    page_url: "https://www.town.kuroshio.lg.jp/pb/cont/livecamera/22908"
+    note: "浮津海水浴場・サーフポイント。同システムの白浜(cam_no=102)は停止中のため不採用"

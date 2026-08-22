@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T00:52:06Z",
+ "version": "2026-08-22T01:01:42Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -24651,6 +24651,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kuroshio-ukibuchi",
+   "name": "浮鞭ビーチ（黒潮町）",
+   "name_kana": null,
+   "lat": 33.042198,
+   "lng": 133.031876,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.kuroshio.lg.jp/cameraconsole/img.php?cam_no=101",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.kuroshio.lg.jp/pb/cont/livecamera/22908"
+   },
+   "operator": "黒潮町",
+   "source": {
+    "page_url": "https://www.town.kuroshio.lg.jp/pb/cont/livecamera/22908",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：黒潮町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=黒潮町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-kushimoto-marine-park-underwater",
    "name": "串本海中公園 海中景観ライブ映像",
    "name_kana": null,
@@ -26172,6 +26210,500 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-otsuki-cam1",
+   "name": "龍ヶ迫漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.862961,
+   "lng": 132.678375,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM1.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM1.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM1.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam10",
+   "name": "周防形漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.807018,
+   "lng": 132.717209,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM10.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM10.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM10.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam11",
+   "name": "樫ノ浦漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.79287,
+   "lng": 132.725266,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM11.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM11.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM11.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam12",
+   "name": "西泊漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.780762,
+   "lng": 132.731842,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM12.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM12.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM12.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam13",
+   "name": "大浦漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.76067,
+   "lng": 132.760117,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM13.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM13.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM13.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam14",
+   "name": "小才角漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.777302,
+   "lng": 132.778259,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM14.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM14.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM14.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam2",
+   "name": "泊浦漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.842979,
+   "lng": 132.67926,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM2.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM2.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM2.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam3",
+   "name": "橋浦漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.841492,
+   "lng": 132.707001,
+   "coord_accuracy": "area",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM3.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM3.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM3.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam4",
+   "name": "安満地漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.800072,
+   "lng": 132.653946,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM4.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM4.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM4.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam5",
+   "name": "一切漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.786652,
+   "lng": 132.650513,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM5.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM5.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM5.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam6",
+   "name": "柏島漁港（大月町）",
+   "name_kana": null,
+   "lat": 32.766674,
+   "lng": 132.634842,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM6.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM6.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM6.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam8",
+   "name": "古満目漁港1（大月町）",
+   "name_kana": null,
+   "lat": 32.787518,
+   "lng": 132.684616,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM8.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM8.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM8.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-otsuki-cam9",
+   "name": "古満目漁港2（大月町）",
+   "name_kana": null,
+   "lat": 32.787518,
+   "lng": 132.684616,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM9.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM9.html"
+   },
+   "operator": "大月町",
+   "source": {
+    "page_url": "http://gyokou.town.otsuki.kochi.jp/CAM/CAM9.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：大月町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=大月町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-ozenuma-oze-national-park",
    "name": "尾瀬沼",
    "name_kana": null,
@@ -27196,6 +27728,44 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-sukumo-okinoshima",
+   "name": "沖の島 母島港（宿毛市）",
+   "name_kana": null,
+   "lat": 32.740807,
+   "lng": 132.556091,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://okinoshimacam.r-es.jp/cameraconsole/img.php?cam_no=101",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.sukumo.kochi.jp/docs-05/livecamera.html"
+   },
+   "operator": "宿毛市",
+   "source": {
+    "page_url": "https://www.city.sukumo.kochi.jp/docs-05/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：宿毛市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=宿毛市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-tahara-akabane-port",
