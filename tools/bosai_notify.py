@@ -139,15 +139,59 @@ def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], lis
     for key in sorted(current - previous):
         pref, wc = key.split(":")
         if wc in SPECIAL_WARNINGS:
-            name, family = SPECIAL_WARNINGS[wc], "special"
-            title = f"{name}が発表されました"
-            body = f"{PREF_NAMES[pref]}に{name}。周辺のライブカメラを確認できます"
+            out.append((pref, wc, "special", SPECIAL_WARNINGS[wc]))
         else:
-            name, family = DANGER_WARNINGS[wc], "danger"
-            title = f"{name}が発表されました（警戒レベル4相当）"
-            body = f"{PREF_NAMES[pref]}に{name}。周辺のライブカメラを確認できます"
-        out.append((title, body, pref, family))
+            out.append((pref, wc, "danger", DANGER_WARNINGS[wc]))
     return out, sorted(current)
+
+
+TAIL = "。周辺のライブカメラを確認できます"
+
+
+def aggregate_warning_pushes(events: list[tuple[str, str, str, str]]
+                             ) -> list[tuple[str, str, str]]:
+    """同一チェック内の新規発表を、送信トピックごとに1通へ集約する。
+
+    events: [(prefJIS, code, family, 警報名)]
+    返り値: [(topic, title, body)]。
+    - 全国トピック({family}-warning)はfamilyごとに必ず1通
+    - 都道府県別トピックは県ごとに1通（同県の複数種別は連結）
+    """
+    pushes: list[tuple[str, str, str]] = []
+    for family, generic, tag in (("special", "特別警報", ""),
+                                 ("danger", "危険警報", "（警戒レベル4相当）")):
+        evs = sorted([e for e in events if e[2] == family])
+        if not evs:
+            continue
+        names = sorted({e[3] for e in evs})
+        pref_names = [PREF_NAMES[p] for p in sorted({e[0] for e in evs})]
+        if len(names) == 1:
+            title = f"{names[0]}が発表されました{tag}"
+            shown = "・".join(pref_names[:8])
+            if len(pref_names) > 8:
+                shown += f" ほか{len(pref_names) - 8}県"
+            body = f"{shown}に{names[0]}{TAIL}"
+        else:
+            title = f"{generic}が発表されました{tag}"
+            pairs = [f"{PREF_NAMES[p]}に{n}" for p, _, _, n in evs]
+            shown = "、".join(pairs[:3])
+            if len(pairs) > 3:
+                shown += f" ほか{len(pairs) - 3}件"
+            body = f"{shown}{TAIL}"
+        pushes.append((f"{family}-warning", title, body))
+
+        by_pref: dict[str, list[str]] = {}
+        for p, _, _, n in evs:
+            by_pref.setdefault(p, []).append(n)
+        for p in sorted(by_pref):
+            ns = sorted(set(by_pref[p]))
+            if len(ns) == 1:
+                title = f"{ns[0]}が発表されました{tag}"
+            else:
+                title = f"{ns[0]}ほか{len(ns) - 1}件が発表されました{tag}"
+            body = f"{PREF_NAMES[p]}に{'・'.join(ns)}{TAIL}"
+            pushes.append((f"{family}-warning-{p}", title, body))
+    return pushes
 
 
 def main() -> int:
@@ -167,12 +211,10 @@ def main() -> int:
                 send_push(token, project, topic, title, body)
             state["notified_quakes"].append(eid)
             changed = True
-        for title, body, pref, family in warning_events:
-            # 全国トピック(地域未選択のユーザー)と都道府県別トピックの両方に送る。
-            # family: special=特別警報(レベル5) / danger=危険警報(レベル4)。
-            # レベル4から受け取る設定のユーザーはdanger系も購読している
-            send_push(token, project, f"{family}-warning", title, body)
-            send_push(token, project, f"{family}-warning-{pref}", title, body)
+        # 同一チェック内の複数発表はトピックごとに1通へ集約する
+        # (全国購読者への連打防止)。special=レベル5 / danger=レベル4
+        for topic, title, body in aggregate_warning_pushes(warning_events):
+            send_push(token, project, topic, title, body)
             changed = True
     if sorted(current_special) != sorted(state["active_special"]):
         changed = True
