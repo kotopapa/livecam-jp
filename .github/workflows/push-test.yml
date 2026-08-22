@@ -13,6 +13,10 @@ on:
         description: "デバイストークン宛に直接送信(任意)"
         required: false
         default: ""
+      mode:
+        description: "send=送信 / inspect=トークンの購読状況照会 / subscribe=サーバー側から購読登録"
+        required: false
+        default: "send"
       title:
         description: "通知タイトル"
         required: true
@@ -40,6 +44,7 @@ jobs:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           TOPICS: ${{ inputs.topics }}
           DEVICE_TOKEN: ${{ inputs.token }}
+          MODE: ${{ inputs.mode }}
           TITLE: ${{ inputs.title }}
           BODY: ${{ inputs.body }}
         run: |
@@ -49,6 +54,27 @@ jobs:
           sa = os.environ["FIREBASE_SERVICE_ACCOUNT"]
           token, project = fcm_token(json.loads(sa))
           device = os.environ.get("DEVICE_TOKEN", "").strip()
+          mode = os.environ.get("MODE", "send").strip()
+          if mode == "inspect" and device:
+              r = requests.get(
+                  f"https://iid.googleapis.com/iid/info/{device}?details=true",
+                  headers={"Authorization": f"Bearer {token}",
+                           "access_token_auth": "true"}, timeout=30)
+              print("inspect:", r.status_code)
+              print(json.dumps(r.json(), ensure_ascii=False, indent=1)[:1500])
+              raise SystemExit(0)
+          if mode == "subscribe" and device:
+              for tp in os.environ.get("TOPICS", "").split(","):
+                  tp = tp.strip()
+                  if not tp: continue
+                  r = requests.post(
+                      "https://iid.googleapis.com/iid/v1:batchAdd",
+                      headers={"Authorization": f"Bearer {token}",
+                               "access_token_auth": "true"},
+                      json={"to": f"/topics/{tp}",
+                            "registration_tokens": [device]}, timeout=30)
+                  print("subscribe", tp, r.status_code, r.text[:200])
+              raise SystemExit(0)
           if device:
               r = requests.post(
                   f"https://fcm.googleapis.com/v1/projects/{project}/messages:send",
