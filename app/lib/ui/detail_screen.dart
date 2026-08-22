@@ -382,6 +382,7 @@ class _MediaView extends StatelessWidget {
               url: camera.feed.url,
               x: feedUri.queryParameters['x']!,
               y: feedUri.queryParameters['y']!,
+              camId: feedUri.queryParameters['cam'] ?? '',
             ),
           );
         }
@@ -455,11 +456,15 @@ iframe{width:100%;height:100%;border:0}</style></head>
 /// ページ内容は改変せず、地図操作(ユーザー操作相当)のみを自動化する。
 class _IHighwayMapView extends StatefulWidget {
   const _IHighwayMapView(
-      {required this.url, required this.x, required this.y});
+      {required this.url,
+      required this.x,
+      required this.y,
+      required this.camId});
 
   final String url;
   final String x;
   final String y;
+  final String camId;
 
   @override
   State<_IHighwayMapView> createState() => _IHighwayMapViewState();
@@ -481,6 +486,13 @@ class _IHighwayMapViewState extends State<_IHighwayMapView> {
         var v = MP_OL.ol.getView();
         v.setCenter([${widget.x}, ${widget.y}]);
         v.setZoom(4);
+        // カメラ映像モーダルを直接開く(サイト内のクリック処理と同一のAPI)
+        setTimeout(function(){
+          try {
+            CM_POPUP.CAMERA.showPopup(
+                '#mp_pop_area', '#mp_pop_camhlayer', 1, '${widget.camId}');
+          } catch(e) {}
+        }, 800);
         return;
       }
     } catch(e) {}
