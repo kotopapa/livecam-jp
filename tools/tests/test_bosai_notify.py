@@ -116,6 +116,34 @@ def test_already_active_warning_not_renotified():
     assert current == ["13:33"]
 
 
+def test_same_office_parallel_products_are_merged():
+    # 実例(2026-08-23 石垣島): 同一官署・同時刻でも気象警報(VPWW55)と
+    # 土砂災害(VPWW56)は別報。官署単位で1報に絞ると土砂災害49が落ちる
+    reports = [
+        {"publishingOffice": "石垣島地方気象台",
+         "reportDatetime": "2026-08-23T07:06:00+09:00",
+         "dataTypeCode": "VPWW55",
+         "warning": {"class10Items": [
+             {"areaCode": "474010",
+              "kinds": [{"code": "03", "status": "危険警報から警報"}]},
+         ]}},
+        {"publishingOffice": "石垣島地方気象台",
+         "reportDatetime": "2026-08-23T07:06:00+09:00",
+         "dataTypeCode": "VPWW56",
+         "warning": {"class10Items": [
+             {"areaCode": "474010",
+              "kinds": [{"code": "49", "status": "継続"}]},
+         ]}},
+    ]
+    resp = mock.Mock(); resp.json.return_value = reports
+    with mock.patch.object(bosai_notify.requests, "get",
+                           lambda url, timeout=30: resp):
+        events, current = bosai_notify.check_special_warnings(
+            {"active_special": []})
+    assert current == ["47:49"]
+    assert events == [("47", "49", "danger", "土砂災害危険警報")]
+
+
 def _quake_get(entries):
     resp = mock.Mock()
     resp.json.return_value = entries

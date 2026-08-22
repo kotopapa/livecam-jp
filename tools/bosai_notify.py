@@ -133,14 +133,16 @@ def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
 
 def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], list[str]]:
     """新規発表の特別警報 [(title, body, prefJIS)] と現在の発表中リストを返す。
-    r8形式: 発表報ログの配列。官署ごとに最新報のみを現在状態として採用する。"""
+    r8形式: 発表報ログの配列。官署は気象警報(VPWW55)と土砂災害(VPWW56)等を
+    別々の報として出すため、官署×報種別ごとに最新報を採用して合算する
+    （官署単位だと同時刻の土砂災害報が落ちる。2026-08-23石垣島で実際に発生）。"""
     reports = requests.get(WARNING_URL, timeout=30).json()
-    latest: dict[str, dict] = {}
+    latest: dict[tuple[str, str], dict] = {}
     for rep in reports:
-        office = rep.get("publishingOffice", "")
+        key = (rep.get("publishingOffice", ""), rep.get("dataTypeCode", ""))
         dt = rep.get("reportDatetime", "")
-        if office not in latest or dt > latest[office].get("reportDatetime", ""):
-            latest[office] = rep
+        if key not in latest or dt > latest[key].get("reportDatetime", ""):
+            latest[key] = rep
     current: set[str] = set()  # "pref:code"
     for rep in latest.values():
         warning = rep.get("warning") or {}

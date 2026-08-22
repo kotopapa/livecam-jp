@@ -81,6 +81,8 @@ const _advisoryNames = {
   '15': '強風注意報', '16': '波浪注意報', '17': '融雪注意報', '18': '洪水注意報',
   '19': '高潮注意報', '20': '濃霧注意報', '21': '乾燥注意報', '22': 'なだれ注意報',
   '23': '低温注意報', '24': '霜注意報', '25': '着氷注意報', '26': '着雪注意報',
+  // 2026-05-28新体系で追加（土砂災害系が大雨から独立した）
+  '29': '土砂災害注意報',
 };
 
 class _BosaiScreenState extends State<BosaiScreen> {
@@ -119,22 +121,26 @@ class _BosaiScreenState extends State<BosaiScreen> {
         headers: {'Cache-Control': 'no-cache'},
       ).timeout(const Duration(seconds: 15));
       if (resp.statusCode != 200) throw Exception('HTTP ${resp.statusCode}');
-      // r8形式: 発表報のログ配列。発表官署ごとに最新報だけを状態として採用する
+      // r8形式: 発表報のログ配列。官署は気象警報(VPWW55)と土砂災害(VPWW56)等を
+      // 別々の報として同時刻に出すため、官署×報種別(dataTypeCode)ごとに
+      // 最新報を採用して合算する（官署単位だと土砂災害の報が落ちる）
       final reports = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
-      final latestByOffice = <String, Map<String, dynamic>>{};
+      final latestByProduct = <String, Map<String, dynamic>>{};
       for (final rep in reports.cast<Map<String, dynamic>>()) {
         final office = rep['publishingOffice'] as String? ?? '';
+        final type = rep['dataTypeCode'] as String? ?? '';
         final dt = rep['reportDatetime'] as String? ?? '';
-        final cur = latestByOffice[office];
+        final key = '$office/$type';
+        final cur = latestByProduct[key];
         if (cur == null || dt.compareTo(cur['reportDatetime'] as String? ?? '') > 0) {
-          latestByOffice[office] = rep;
+          latestByProduct[key] = rep;
         }
       }
       final byPref = <String, Set<String>>{};
       final advByPref = <String, Set<String>>{};
       final officesByPref = <String, Set<String>>{};
       final advOfficesByPref = <String, Set<String>>{};
-      for (final rep in latestByOffice.values) {
+      for (final rep in latestByProduct.values) {
         final warning = rep['warning'] as Map<String, dynamic>? ?? const {};
         for (final area in (warning['class10Items'] as List? ?? const [])
             .cast<Map<String, dynamic>>()) {
@@ -564,31 +570,37 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
         ).timeout(const Duration(seconds: 15));
         if (resp.statusCode != 200) continue;
         final reports = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
-        Map<String, dynamic>? latest;
+        // 気象警報(VPWW55)と土砂災害(VPWW56)等は別報のため、
+        // 報種別ごとに最新報を採用して合算する
+        final latestByType = <String, Map<String, dynamic>>{};
         for (final rep in reports.cast<Map<String, dynamic>>()) {
+          final type = rep['dataTypeCode'] as String? ?? '';
           final dt = rep['reportDatetime'] as String? ?? '';
-          if (latest == null ||
-              dt.compareTo(latest['reportDatetime'] as String? ?? '') > 0) {
-            latest = rep;
+          final cur = latestByType[type];
+          if (cur == null ||
+              dt.compareTo(cur['reportDatetime'] as String? ?? '') > 0) {
+            latestByType[type] = rep;
           }
         }
-        final warning =
-            latest?['warning'] as Map<String, dynamic>? ?? const {};
-        for (final area in (warning['class20Items'] as List? ?? const [])
-            .cast<Map<String, dynamic>>()) {
-          final code = area['areaCode'] as String? ?? '';
-          if (code.length < 5 || !code.startsWith(widget.pref)) continue;
-          for (final w in (area['kinds'] as List? ?? const [])
+        for (final latest in latestByType.values) {
+          final warning =
+              latest['warning'] as Map<String, dynamic>? ?? const {};
+          for (final area in (warning['class20Items'] as List? ?? const [])
               .cast<Map<String, dynamic>>()) {
-            final status = w['status'] as String? ?? '';
-            if (status == '解除' || status.contains('なし')) continue;
-            final wname = widget.codeNames[w['code'] as String? ?? ''];
-            if (wname == null) continue;
-            final muni = code.substring(0, 5);
-            final entry = byMuni[muni] ??
-                (_cityName(names[code] ?? '市区町村 $muni'), <String>{});
-            entry.$2.add(wname);
-            byMuni[muni] = entry;
+            final code = area['areaCode'] as String? ?? '';
+            if (code.length < 5 || !code.startsWith(widget.pref)) continue;
+            for (final w in (area['kinds'] as List? ?? const [])
+                .cast<Map<String, dynamic>>()) {
+              final status = w['status'] as String? ?? '';
+              if (status == '解除' || status.contains('なし')) continue;
+              final wname = widget.codeNames[w['code'] as String? ?? ''];
+              if (wname == null) continue;
+              final muni = code.substring(0, 5);
+              final entry = byMuni[muni] ??
+                  (_cityName(names[code] ?? '市区町村 $muni'), <String>{});
+              entry.$2.add(wname);
+              byMuni[muni] = entry;
+            }
           }
         }
         anyOk = true;
