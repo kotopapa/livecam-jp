@@ -1,5 +1,5 @@
 {
- "version": "2026-08-21T23:53:28Z",
+ "version": "2026-08-22T00:00:21Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -722,14 +722,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "g5LZWZZ1GJQ",
+    "url": "Uq8UjinTEaU",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=g5LZWZZ1GJQ"
+    "url": "https://www.youtube.com/watch?v=Uq8UjinTEaU"
    },
    "operator": "電材買取センター柏店（電線・電材買取事業者、店舗運営）",
    "source": {
@@ -744,7 +744,7 @@
     "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-21"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-dogo-onsen",
@@ -907,14 +907,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "zgaUF25Bh7E",
+    "url": "0P2dOCRPSRM",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=zgaUF25Bh7E"
+    "url": "https://www.youtube.com/watch?v=0P2dOCRPSRM"
    },
    "operator": "毎日放送（MBS NEWS）",
    "source": {
@@ -929,7 +929,7 @@
     "note": "bulk: license=unknown feed_type=youtube_video"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-enoshima-riviera",
@@ -967,6 +967,82 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-fbc-echizen-port",
+   "name": "越前漁港（FBC情報カメラ）",
+   "name_kana": null,
+   "lat": 35.947666,
+   "lng": 135.999146,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ejnUvdMmcbk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ejnUvdMmcbk"
+   },
+   "operator": "FBC福井放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ejnUvdMmcbk",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：FBC福井放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=FBC福井放送 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-fbc-obama-port",
+   "name": "小浜港（FBC情報カメラ）",
+   "name_kana": null,
+   "lat": 35.497375,
+   "lng": 135.750626,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "acLJEotPVJc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=acLJEotPVJc"
+   },
+   "operator": "FBC福井放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=acLJEotPVJc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：FBC福井放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=FBC福井放送 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-fct-fukushima-airport",
@@ -3467,14 +3543,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "Uq8UjinTEaU",
+    "url": "g5LZWZZ1GJQ",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=Uq8UjinTEaU"
+    "url": "https://www.youtube.com/watch?v=g5LZWZZ1GJQ"
    },
    "operator": "電材センター",
    "source": {
@@ -3489,7 +3565,7 @@
     "note": "bulk: license=unknown with_coords=True"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-katase-higashihama",
@@ -3824,6 +3900,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-knb-namerikawa",
+   "name": "KNB情報カメラ（滑川・富山湾ほか巡回）",
+   "name_kana": null,
+   "lat": 36.767544,
+   "lng": 137.343765,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "16",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "7wY_HO3HECY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=7wY_HO3HECY"
+   },
+   "operator": "KNB北日本放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=7wY_HO3HECY",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：KNB北日本放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=KNB北日本放送 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-knb-toyama",
@@ -6527,6 +6641,82 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-nkt-hamada-port",
+   "name": "浜田港（ゆうひパーク浜田）",
+   "name_kana": null,
+   "lat": 34.881348,
+   "lng": 132.07106,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "32",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "QLD5CwcIBH0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=QLD5CwcIBH0"
+   },
+   "operator": "日本海テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=QLD5CwcIBH0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：日本海テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=日本海テレビ with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-nkt-saigo-port",
+   "name": "西郷港（隠岐の島）",
+   "name_kana": null,
+   "lat": 36.205757,
+   "lng": 133.334122,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "32",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "GaKp6Mofepc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=GaKp6Mofepc"
+   },
+   "operator": "日本海テレビ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=GaKp6Mofepc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：日本海テレビ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=日本海テレビ with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-oab-oita-airport",

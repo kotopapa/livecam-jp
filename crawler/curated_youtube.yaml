@@ -4483,3 +4483,54 @@ cameras:
     prefecture: "11"
     lat: 35.7841
     lng: 139.455
+
+  # ---- 2026-08-22 テレビ局沿岸カメラ調査分(第2弾) ----
+  - id: curated-knb-namerikawa
+    name: KNB情報カメラ（滑川・富山湾ほか巡回）
+    operator: KNB北日本放送
+    video_id: 7wY_HO3HECY
+    category: coast
+    prefecture: "16"
+    lat: 36.767544
+    lng: 137.343765
+    note: 富山駅北/富山空港/立山室堂/滑川の巡回配信。滑川カメラが富山湾を撮影。oEmbed埋め込み可確認済み
+
+  - id: curated-fbc-obama-port
+    name: 小浜港（FBC情報カメラ）
+    operator: FBC福井放送
+    video_id: acLJEotPVJc
+    category: coast
+    prefecture: "18"
+    lat: 35.497375
+    lng: 135.750626
+    note: 小浜市千種設置、小浜港・西防波堤灯台を撮影。oEmbed埋め込み可確認済み
+
+  - id: curated-fbc-echizen-port
+    name: 越前漁港（FBC情報カメラ）
+    operator: FBC福井放送
+    video_id: ejnUvdMmcbk
+    category: coast
+    prefecture: "18"
+    lat: 35.947666
+    lng: 135.999146
+    note: 越前町小樟設置、越前漁港・厨漁港・海水浴場を撮影。oEmbed埋め込み可確認済み
+
+  - id: curated-nkt-saigo-port
+    name: 西郷港（隠岐の島）
+    operator: 日本海テレビ
+    video_id: GaKp6Mofepc
+    category: port
+    prefecture: "32"
+    lat: 36.205757
+    lng: 133.334122
+    note: 隠岐ビューポートホテル設置、隠岐汽船フェリー発着の西郷港。可動式。oEmbed埋め込み可確認済み
+
+  - id: curated-nkt-hamada-port
+    name: 浜田港（ゆうひパーク浜田）
+    operator: 日本海テレビ
+    video_id: QLD5CwcIBH0
+    category: port
+    prefecture: "32"
+    lat: 34.881348
+    lng: 132.07106
+    note: 道の駅ゆうひパーク浜田から浜田港・日本海を撮影。oEmbed埋め込み可確認済み
