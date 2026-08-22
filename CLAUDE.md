@@ -37,3 +37,11 @@ python site/build.py                            # 配信ファイル生成
 - prvsの欠測プレースホルダ no_data.jpeg のdHashは `monitor/freeze.py` に登録済み
 - 関東(83)・北陸(84)・中部(85)は事務所サイト直のパーサ（固定URL・mlit_ktr_road / mlit_hrr_road / mlit_cbr_road）を優先。prvs側CDは重複回避のため対象外にしている
 - 中国地整の道路ポータル www.road.cgr.mlit.go.jp は **robots.txt が Disallow: / のためクロール禁止**（prvs経由で取得する）
+
+## Push通知の知見（2026-08-22追記）
+
+- **新FlutterテンプレートはAPNs自動登録が効かない**。scene lifecycle構成（FlutterImplicitEngineDelegate）ではfirebase_messagingの自動処理が動かず、APNsトークンがnullのままになる。AppDelegateで`registerForRemoteNotifications()`明示呼び出し＋`didRegisterForRemoteNotificationsWithDeviceToken`で`Messaging.messaging().apnsToken`を直接設定して解決
+- **FCMトピック購読の一斉送信はレート制限で静かに全滅する**。47都道府県×2系統の購読/解除を並列で投げると全て失敗する（エラーはcatchErrorで握りつぶされ見えない）。`notify_applied_warning_topics`に適用済み集合を保存し差分のみ逐次awaitする方式にした（notification_settings.dart）
+- 設定画面の「通知診断」で通知許可/APNsトークン/FCMトークンを確認できる。トークンがあれば `push-test.yml` の mode=inspect で購読状況照会、mode=subscribe でサーバー側から購読登録、mode=send（token指定）で直接送信テストができる
+- 通知トピック: special-warning(-XX)=特別警報レベル5 / danger-warning(-XX)=危険警報レベル4(2026新体系)。送信はtools/bosai_notify.py（同一チェック内はトピックごと1通に集約）
+- 気象庁のr8警報コードは2026-05-28新体系対応済み（43大雨/44洪水/48高潮/49土砂災害の危険警報=紫表示、34洪水/39土砂災害の特別警報追加）
