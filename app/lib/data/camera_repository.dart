@@ -98,7 +98,8 @@ class CameraRepository {
         c.feed.type == FeedType.jmaVolcam ||
         c.feed.type == FeedType.thrCamxml ||
         c.feed.type == FeedType.camidxLatest ||
-        c.feed.type == FeedType.saitamaFlood) {
+        c.feed.type == FeedType.saitamaFlood ||
+        c.feed.type == FeedType.kochiSuibo) {
       return status[c.id]?.imageUrl;
     }
     if (c.feed.type == FeedType.stillImage) return c.feed.url;

@@ -316,6 +316,7 @@ class _MediaView extends StatelessWidget {
       case FeedType.thrCamxml:
       case FeedType.camidxLatest:
       case FeedType.saitamaFlood:
+      case FeedType.kochiSuibo:
         final url = app.imageUrlFor(camera);
         if (url == null) {
           return _MediaFallback(

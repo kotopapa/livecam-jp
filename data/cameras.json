@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T01:01:42Z",
+ "version": "2026-08-22T01:31:25Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -19673,6 +19673,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-honjin-kure",
+   "name": "久礼湾・双名島（黒潮本陣）",
+   "name_kana": null,
+   "lat": 33.337196,
+   "lng": 133.211533,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://honjin1.miemasu.net/cgi-bin/camera?resolution=1280",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.honjin.or.jp/"
+   },
+   "operator": "黒潮本陣（中土佐町）",
+   "source": {
+    "page_url": "http://www.honjin.or.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：黒潮本陣（中土佐町）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=黒潮本陣 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-ioworld-kagoshima-kuroshio",
    "name": "いおワールドかごしま水族館 黒潮大水槽",
    "name_kana": null,
@@ -24152,6 +24190,234 @@
     "status": "approved",
     "reviewed_at": "2026-08-22",
     "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kochi-suibo-34",
+   "name": "宇佐漁港（土佐市）",
+   "name_kana": null,
+   "lat": 33.450825,
+   "lng": 133.435394,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "kochi_suibo",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_34.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_34.html"
+   },
+   "operator": "高知県",
+   "source": {
+    "page_url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_34.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高知県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=高知県 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kochi-suibo-73",
+   "name": "小室湾（興津・郷分）",
+   "name_kana": null,
+   "lat": 33.164539,
+   "lng": 133.179016,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "kochi_suibo",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_73.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_73.html"
+   },
+   "operator": "高知県",
+   "source": {
+    "page_url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_73.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高知県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=高知県 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kochi-suibo-74",
+   "name": "小室湾（興津・小室）",
+   "name_kana": null,
+   "lat": 33.164539,
+   "lng": 133.179016,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "kochi_suibo",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_74.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_74.html"
+   },
+   "operator": "高知県",
+   "source": {
+    "page_url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_74.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高知県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=高知県 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kochi-suibo-75",
+   "name": "浦分漁港（四万十町興津）",
+   "name_kana": null,
+   "lat": 33.164539,
+   "lng": 133.179016,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "kochi_suibo",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_75.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_75.html"
+   },
+   "operator": "高知県",
+   "source": {
+    "page_url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_75.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高知県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=高知県 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kochi-suibo-98",
+   "name": "高知海岸 高知海岸出張所",
+   "name_kana": null,
+   "lat": 33.471996,
+   "lng": 133.492416,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "kochi_suibo",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_98.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_98.html"
+   },
+   "operator": "高知県",
+   "source": {
+    "page_url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_98.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高知県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=高知県 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kochi-suibo-99",
+   "name": "高知海岸 荻岬観測所",
+   "name_kana": null,
+   "lat": 33.450825,
+   "lng": 133.435394,
+   "coord_accuracy": "area",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "kochi_suibo",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_99.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_99.html"
+   },
+   "operator": "高知県",
+   "source": {
+    "page_url": "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_99.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高知県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=高知県 with_coords=True"
    },
    "first_seen": "2026-08-22",
    "last_updated": "2026-08-22"

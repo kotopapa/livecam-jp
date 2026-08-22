@@ -4810,3 +4810,94 @@ cameras:
     image_url: "https://www.town.kuroshio.lg.jp/cameraconsole/img.php?cam_no=101"
     page_url: "https://www.town.kuroshio.lg.jp/pb/cont/livecamera/22908"
     note: "浮津海水浴場・サーフポイント。同システムの白浜(cam_no=102)は停止中のため不採用"
+
+  # ---- 2026-08-22 高知県水防情報システム 海岸/漁港カメラ6台(都度解決型kochi_suibo) ----
+  - id: curated-still-kochi-suibo-34
+    name: "宇佐漁港（土佐市）"
+    operator: "高知県"
+    category: coast
+    prefecture: "39"
+    lat: 33.450825
+    lng: 133.435394
+    feed_type: kochi_suibo
+    feed_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_34.html"
+    image_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_34.html"
+    page_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_34.html"
+    note: "高知県水防情報システム。画像名がHHMM付きのため都度解決型。土佐市宇佐町の漁港"
+
+  - id: curated-still-kochi-suibo-99
+    name: "高知海岸 荻岬観測所"
+    operator: "高知県"
+    category: coast
+    prefecture: "39"
+    lat: 33.450825
+    lng: 133.435394
+    feed_type: kochi_suibo
+    feed_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_99.html"
+    image_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_99.html"
+    page_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_99.html"
+    note: "高知県水防情報システム。画像名がHHMM付きのため都度解決型。荻岬の海岸観測所。座標は宇佐町(area精度)"
+
+  - id: curated-still-kochi-suibo-98
+    name: "高知海岸 高知海岸出張所"
+    operator: "高知県"
+    category: coast
+    prefecture: "39"
+    lat: 33.471996
+    lng: 133.492416
+    feed_type: kochi_suibo
+    feed_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_98.html"
+    image_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_98.html"
+    page_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_98.html"
+    note: "高知県水防情報システム。画像名がHHMM付きのため都度解決型。仁ノ海岸(高知市春野町)"
+
+  - id: curated-still-kochi-suibo-75
+    name: "浦分漁港（四万十町興津）"
+    operator: "高知県"
+    category: coast
+    prefecture: "39"
+    lat: 33.164539
+    lng: 133.179016
+    feed_type: kochi_suibo
+    feed_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_75.html"
+    image_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_75.html"
+    page_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_75.html"
+    note: "高知県水防情報システム。画像名がHHMM付きのため都度解決型。興津の漁港。座標は興津地区(town_level)"
+
+  - id: curated-still-kochi-suibo-74
+    name: "小室湾（興津・小室）"
+    operator: "高知県"
+    category: coast
+    prefecture: "39"
+    lat: 33.164539
+    lng: 133.179016
+    feed_type: kochi_suibo
+    feed_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_74.html"
+    image_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_74.html"
+    page_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_74.html"
+    note: "高知県水防情報システム。画像名がHHMM付きのため都度解決型。座標は興津地区(town_level)"
+
+  - id: curated-still-kochi-suibo-73
+    name: "小室湾（興津・郷分）"
+    operator: "高知県"
+    category: coast
+    prefecture: "39"
+    lat: 33.164539
+    lng: 133.179016
+    feed_type: kochi_suibo
+    feed_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_73.html"
+    image_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_73.html"
+    page_url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/sp/static/camera/itv_detail_73.html"
+    note: "高知県水防情報システム。画像名がHHMM付きのため都度解決型。座標は興津地区(town_level)"
+
+  - id: curated-still-honjin-kure
+    name: "久礼湾・双名島（黒潮本陣）"
+    operator: "黒潮本陣（中土佐町）"
+    category: coast
+    prefecture: "39"
+    lat: 33.337196
+    lng: 133.211533
+    refresh_sec: 300
+    image_url: "http://honjin1.miemasu.net/cgi-bin/camera?resolution=1280"
+    page_url: "http://www.honjin.or.jp/"
+    note: "宿泊施設・黒潮本陣の展望カメラ。久礼湾・太平洋を一望(実映像確認済み)"
