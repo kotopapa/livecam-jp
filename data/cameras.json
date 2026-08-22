@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T00:42:04Z",
+ "version": "2026-08-22T00:49:19Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -1268,6 +1268,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-fukashima-kaikyo",
+   "name": "深島 海況カメラ（佐伯市蒲江沖）",
+   "name_kana": null,
+   "lat": 32.807941,
+   "lng": 131.928513,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Ypv7BM9GWS8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Ypv7BM9GWS8"
+   },
+   "operator": "でぃーぷまりん深島",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Ypv7BM9GWS8",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：でぃーぷまりん深島（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=でぃーぷまりん深島 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-fukui-owada",
    "name": "福井 国道8号 大和田交差点",
    "name_kana": null,
@@ -2531,6 +2569,82 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-iinami-aoshima",
+   "name": "宮崎 青島（波情報カメラ）",
+   "name_kana": null,
+   "lat": 31.803978,
+   "lng": 131.464142,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "45",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "jKJXDBrS99o",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=jKJXDBrS99o"
+   },
+   "operator": "いい波プロジェクト（ii-nami.com）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=jKJXDBrS99o",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：いい波プロジェクト（ii-nami.com）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=いい波プロジェクト with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-iinami-kisakihama",
+   "name": "宮崎 木崎浜（波情報カメラ）",
+   "name_kana": null,
+   "lat": 31.832977,
+   "lng": 131.441925,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "45",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "IKxO75Bn1Ok",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=IKxO75Bn1Ok"
+   },
+   "operator": "いい波プロジェクト（ii-nami.com）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=IKxO75Bn1Ok",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：いい波プロジェクト（ii-nami.com）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=いい波プロジェクト with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-inasayama",
@@ -27540,6 +27654,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-toyo-ikumi",
+   "name": "生見海岸（東洋町）",
+   "name_kana": null,
+   "lat": 33.531673,
+   "lng": 134.275894,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://webcam.town.toyo.kochi.jp/-wvhttp-01-/image.cgi?v=jpg:1280x960",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.town.toyo.kochi.jp/contents/live.php"
+   },
+   "operator": "東洋町",
+   "source": {
+    "page_url": "http://www.town.toyo.kochi.jp/contents/live.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東洋町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=東洋町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-toyota-himawari-r153-nakagiri",
    "name": "国道153号中切町",
    "name_kana": null,
@@ -27918,6 +28070,82 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-usuki-sashiu",
+   "name": "臼杵市 佐志生海岸（防災カメラ）",
+   "name_kana": null,
+   "lat": 33.186703,
+   "lng": 131.818405,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.usuki.oita.jp/bousai_camera/p_sashiu.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.usuki.oita.jp/docs/2014020700374/"
+   },
+   "operator": "臼杵市",
+   "source": {
+    "page_url": "https://www.city.usuki.oita.jp/docs/2014020700374/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：臼杵市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=臼杵市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-usuki-shiyakusyo",
+   "name": "臼杵湾（市役所屋上・防災カメラ）",
+   "name_kana": null,
+   "lat": 33.12241,
+   "lng": 131.802719,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "44",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.city.usuki.oita.jp/bousai_camera/p_shiyakusyo.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.city.usuki.oita.jp/docs/2014020700374/"
+   },
+   "operator": "臼杵市",
+   "source": {
+    "page_url": "https://www.city.usuki.oita.jp/docs/2014020700374/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：臼杵市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=臼杵市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-wn-hiwasa-ohama",
@@ -31579,6 +31807,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-tokushimagas-yoshinogawa",
+   "name": "吉野川河口（徳島ガス）",
+   "name_kana": null,
+   "lat": 34.070625,
+   "lng": 134.583069,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "36",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "-VtkhzQ1PVo",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=-VtkhzQ1PVo"
+   },
+   "operator": "徳島ガス協業組合",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=-VtkhzQ1PVo",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：徳島ガス協業組合（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=徳島ガス協業組合 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-tokyo-catguardian",

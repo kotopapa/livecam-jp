@@ -4568,3 +4568,40 @@ cameras:
     image_url: "http://a-road.info/cam1000/cam9434b.jpg"
     page_url: "http://a-road.info/souma-kouwan/?PID=3"
     note: "相馬港・松川浦の港湾監視。2分更新。座標は相馬市尾浜(town_level)"
+
+  # ---- 2026-08-22 九州・四国精査分 ----
+  - id: curated-still-usuki-shiyakusyo
+    name: "臼杵湾（市役所屋上・防災カメラ）"
+    operator: "臼杵市"
+    category: coast
+    prefecture: "44"
+    lat: 33.12241
+    lng: 131.802719
+    refresh_sec: 300
+    image_url: "https://www.city.usuki.oita.jp/bousai_camera/p_shiyakusyo.jpg"
+    page_url: "https://www.city.usuki.oita.jp/docs/2014020700374/"
+    note: "臼杵湾を一望。1分毎更新"
+
+  - id: curated-still-usuki-sashiu
+    name: "臼杵市 佐志生海岸（防災カメラ）"
+    operator: "臼杵市"
+    category: coast
+    prefecture: "44"
+    lat: 33.186703
+    lng: 131.818405
+    refresh_sec: 300
+    image_url: "https://www.city.usuki.oita.jp/bousai_camera/p_sashiu.jpg"
+    page_url: "https://www.city.usuki.oita.jp/docs/2014020700374/"
+    note: "海沿い集落・佐志生地区の防災カメラ"
+
+  - id: curated-still-toyo-ikumi
+    name: "生見海岸（東洋町）"
+    operator: "東洋町"
+    category: coast
+    prefecture: "39"
+    lat: 33.531673
+    lng: 134.275894
+    refresh_sec: 300
+    image_url: "http://webcam.town.toyo.kochi.jp/-wvhttp-01-/image.cgi?v=jpg:1280x960"
+    page_url: "http://www.town.toyo.kochi.jp/contents/live.php"
+    note: "四国屈指のサーフポイント生見海岸。町公式のwvhttp配信"

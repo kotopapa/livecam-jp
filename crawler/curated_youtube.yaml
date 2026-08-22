@@ -4576,3 +4576,44 @@ cameras:
     lat: 34.097469
     lng: 136.28418
     note: 尾鷲市須賀利町の漁港24時間配信。isLiveNow/oEmbed埋め込み可確認済み
+
+  # ---- 2026-08-22 九州・四国精査分 ----
+  - id: curated-fukashima-kaikyo
+    name: 深島 海況カメラ（佐伯市蒲江沖）
+    operator: でぃーぷまりん深島
+    video_id: Ypv7BM9GWS8
+    category: coast
+    prefecture: "44"
+    lat: 32.807941
+    lng: 131.928513
+    note: 座標は蒲江港側(実際は沖合約5kmの深島)。海況・船舶確認用。oEmbed埋め込み可確認済み
+
+  - id: curated-iinami-aoshima
+    name: 宮崎 青島（波情報カメラ）
+    operator: いい波プロジェクト（ii-nami.com）
+    video_id: jKJXDBrS99o
+    category: coast
+    prefecture: "45"
+    lat: 31.803978
+    lng: 131.464142
+    note: サーフィン波情報の無料公開配信。oEmbed埋め込み可確認済み
+
+  - id: curated-iinami-kisakihama
+    name: 宮崎 木崎浜（波情報カメラ）
+    operator: いい波プロジェクト（ii-nami.com）
+    video_id: IKxO75Bn1Ok
+    category: coast
+    prefecture: "45"
+    lat: 31.832977
+    lng: 131.441925
+    note: サーフィンセンター前。無料公開配信。oEmbed埋め込み可確認済み
+
+  - id: curated-tokushimagas-yoshinogawa
+    name: 吉野川河口（徳島ガス）
+    operator: 徳島ガス協業組合
+    video_id: -VtkhzQ1PVo
+    category: coast
+    prefecture: "36"
+    lat: 34.070625
+    lng: 134.583069
+    note: 徳島市北沖洲から吉野川河口・臨港道路方面。oEmbed埋め込み可確認済み
