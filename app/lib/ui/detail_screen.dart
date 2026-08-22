@@ -369,6 +369,22 @@ class _MediaView extends StatelessWidget {
           child: _YoutubeEmbedView(embedPath: camera.feed.url),
         );
       default:
+        // iHighway(NEXCO)は個別ページが無いため、公式地図をアプリ内で開き
+        // 該当カメラ位置へ自動ズームする（画像の転載はしない）
+        final feedUri = Uri.tryParse(camera.feed.url);
+        if (feedUri != null &&
+            feedUri.host == 'ihighway.jp' &&
+            feedUri.queryParameters.containsKey('x') &&
+            feedUri.queryParameters.containsKey('y')) {
+          return AspectRatio(
+            aspectRatio: 4 / 3,
+            child: _IHighwayMapView(
+              url: camera.feed.url,
+              x: feedUri.queryParameters['x']!,
+              y: feedUri.queryParameters['y']!,
+            ),
+          );
+        }
         // YouTube誘導型（埋め込み不可のライブ）は文言とボタンをYouTube向けにする
         final url = camera.fallbackUrl ?? camera.sourcePageUrl;
         final isYoutube = url != null && url.contains('youtube.com');
@@ -432,6 +448,58 @@ iframe{width:100%;height:100%;border:0}</style></head>
 
   @override
   Widget build(BuildContext context) => WebViewWidget(controller: _controller);
+}
+
+/// iHighway(NEXCO)の交通情報地図をアプリ内で開き、該当カメラの
+/// デフォルメ地図座標(x,y)へ自動センタリング+最大ズームする。
+/// ページ内容は改変せず、地図操作(ユーザー操作相当)のみを自動化する。
+class _IHighwayMapView extends StatefulWidget {
+  const _IHighwayMapView(
+      {required this.url, required this.x, required this.y});
+
+  final String url;
+  final String x;
+  final String y;
+
+  @override
+  State<_IHighwayMapView> createState() => _IHighwayMapViewState();
+}
+
+class _IHighwayMapViewState extends State<_IHighwayMapView> {
+  late final WebViewController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    final js = '''
+(function(){
+  var tries = 0;
+  function go(){
+    tries++;
+    try {
+      if (window.MP_OL && MP_OL.ol) {
+        var v = MP_OL.ol.getView();
+        v.setCenter([${widget.x}, ${widget.y}]);
+        v.setZoom(4);
+        return;
+      }
+    } catch(e) {}
+    if (tries < 40) setTimeout(go, 500);
+  }
+  go();
+})();
+''';
+    _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setNavigationDelegate(NavigationDelegate(
+        onPageFinished: (_) => _controller.runJavaScript(js),
+      ))
+      ..loadRequest(Uri.parse(widget.url));
+  }
+
+  @override
+  Widget build(BuildContext context) =>
+      WebViewWidget(controller: _controller);
 }
 
 /// 三重県道路規制情報のカメラ表示。
