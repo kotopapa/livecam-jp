@@ -87,25 +87,46 @@ def load_state() -> dict:
         return {"notified_quakes": [], "active_special": []}
 
 
+_INTENSITY_ORDER = {"5-": 0, "5+": 1, "6-": 2, "6+": 3, "7": 4}
+
+
 def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
-    """未通知の震度5弱以上を返す [(eid, title, body, topics)]"""
+    """未通知の震度5弱以上を返す [(eid, title, body, topics)]。
+
+    list.json は同一地震(eid)を複数報（震度速報/震源情報/震源・震度情報）で
+    掲載するため、eidでまとめて1通にする。震度速報は anm(震源地名)・mag が
+    空文字列なので、埋まっている報を優先して本文を作る。
+    """
     out = []
     quakes = requests.get(QUAKE_URL, timeout=30).json()
     since = datetime.now(JST) - timedelta(hours=3)
     notified = set(state["notified_quakes"])
+    groups: dict[str, list[dict]] = {}
     for e in quakes:
         eid = str(e.get("eid", ""))
-        maxi = e.get("maxi", "")
-        at = datetime.fromisoformat(e.get("at", "1970-01-01T00:00:00+09:00"))
-        if maxi not in STRONG_INTENSITY or eid in notified:
+        if not eid or eid in notified:
             continue
+        groups.setdefault(eid, []).append(e)
+    for eid, entries in groups.items():
+        strong = [e.get("maxi", "") for e in entries
+                  if e.get("maxi", "") in STRONG_INTENSITY]
+        if not strong:
+            continue
+        maxi = max(strong, key=lambda m: _INTENSITY_ORDER[m])
+        # 震源地名→M→報告時刻の順で埋まっている報を採用する
+        best = max(entries, key=lambda e: (
+            bool(e.get("anm")), bool(e.get("mag")), e.get("rdt", "")))
+        at = datetime.fromisoformat(
+            best.get("at") or "1970-01-01T00:00:00+09:00")
         if at < since:  # 古い地震は通知しない（初回実行時の大量通知防止）
             continue
         label = INTENSITY_LABEL.get(maxi, maxi)
         title = f"震度{label}の地震が発生しました"
-        body = (f"{e.get('anm', '不明')}で震度{label}"
-                f"（M{e.get('mag', '-')}・{at.strftime('%H:%M')}頃）。"
-                "周辺のライブカメラを確認できます")
+        place = best.get("anm") or ""
+        mag = best.get("mag") or ""
+        detail = (f"M{mag}・" if mag else "") + f"{at.strftime('%H:%M')}頃"
+        head = f"{place}で震度{label}" if place else f"震度{label}を観測"
+        body = f"{head}（{detail}）。周辺のライブカメラを確認できます"
         out.append((eid, title, body, INTENSITY_TOPICS.get(maxi, ["quake5"])))
     return out
 

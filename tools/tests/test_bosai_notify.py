@@ -114,3 +114,75 @@ def test_already_active_warning_not_renotified():
             {"active_special": ["13:33"]})
     assert events == []
     assert current == ["13:33"]
+
+
+def _quake_get(entries):
+    resp = mock.Mock()
+    resp.json.return_value = entries
+    return lambda url, timeout=30: resp
+
+
+def _recent_at():
+    from datetime import datetime
+    return datetime.now(bosai_notify.JST).replace(microsecond=0).isoformat()
+
+
+def test_quake_multiple_reports_same_eid_send_single_push():
+    # 実例(2026-08-23 茨城県南部): 同一eidが震度速報3報+詳報1報で並び、
+    # 震度速報は anm/mag が空文字列。4通ではなく詳報ベースの1通にする
+    at = _recent_at()
+    entries = [
+        {"eid": "20260823020005", "maxi": "5-", "anm": "", "mag": "",
+         "at": at, "rdt": at},
+        {"eid": "20260823020005", "maxi": "5-", "anm": "", "mag": "",
+         "at": at, "rdt": at},
+        {"eid": "20260823020005", "maxi": "5-", "anm": "茨城県南部",
+         "mag": "5.9", "at": at, "rdt": at},
+        {"eid": "20260823020005", "maxi": "5-", "anm": "", "mag": "",
+         "at": at, "rdt": at},
+    ]
+    with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
+        events = bosai_notify.check_quakes({"notified_quakes": []})
+    assert len(events) == 1
+    eid, title, body, topics = events[0]
+    assert eid == "20260823020005"
+    assert title == "震度5弱の地震が発生しました"
+    assert body.startswith("茨城県南部で震度5弱（M5.9・")
+    assert topics == ["quake5"]
+
+
+def test_quake_sokuho_only_omits_empty_place_and_mag():
+    # 震度速報しかない時点でも欠落文（「で震度」「M・」）にしない
+    at = _recent_at()
+    entries = [{"eid": "e1", "maxi": "5-", "anm": "", "mag": "",
+                "at": at, "rdt": at}]
+    with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
+        events = bosai_notify.check_quakes({"notified_quakes": []})
+    assert len(events) == 1
+    body = events[0][2]
+    assert body.startswith("震度5弱を観測（")
+    assert "で震度" not in body and "（M・" not in body
+
+
+def test_quake_uses_highest_intensity_among_reports():
+    # 速報5弱→詳報5強のときは5強で通知し、対応トピックへ送る
+    at = _recent_at()
+    entries = [
+        {"eid": "e2", "maxi": "5-", "anm": "", "mag": "", "at": at, "rdt": at},
+        {"eid": "e2", "maxi": "5+", "anm": "千葉県北西部", "mag": "6.1",
+         "at": at, "rdt": at},
+    ]
+    with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
+        events = bosai_notify.check_quakes({"notified_quakes": []})
+    assert len(events) == 1
+    assert "震度5強" in events[0][1]
+    assert events[0][3] == ["quake5", "quake5up"]
+
+
+def test_quake_already_notified_eid_skipped():
+    at = _recent_at()
+    entries = [{"eid": "e3", "maxi": "5-", "anm": "宮城県沖", "mag": "5.5",
+                "at": at, "rdt": at}]
+    with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
+        events = bosai_notify.check_quakes({"notified_quakes": ["e3"]})
+    assert events == []
