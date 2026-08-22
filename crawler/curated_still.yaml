@@ -3749,3 +3749,677 @@ cameras:
     image_url: "https://kobeko-bousai.jp/camera_img/camera26/camera26.jpg"
     page_url: "https://kobeko-bousai.jp/camera_list/"
     note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  # ---- 2026-08-22 海上保安庁「海の安全情報」ポータル全国灯台・港カメラ(既収録12台を除く67台) ----
+  - id: curated-still-kaiho-soyamisaki-lt
+    name: "宗谷岬灯台"
+    operator: "海上保安庁 稚内海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 45.52138889
+    lng: 141.9363889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/soyamisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/soyamisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-motochi-lt
+    name: "元地灯台"
+    operator: "海上保安庁 稚内海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 45.28388889
+    lng: 141.0197222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/motochi_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/motochi_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-chikiumisaki-lt
+    name: "チキウ岬灯台"
+    operator: "海上保安庁 室蘭海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 42.30222222
+    lng: 141.0011111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/chikiumisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/chikiumisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-erimomisaki-lt
+    name: "襟裳岬灯台"
+    operator: "海上保安庁 室蘭海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 41.92583333
+    lng: 143.2438889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/erimomisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/erimomisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-kamomeshima-lt
+    name: "鴎島灯台"
+    operator: "海上保安庁 函館海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 41.86805556
+    lng: 140.1138889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kamomeshima_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kamomeshima_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-kattoshimisaki-lt
+    name: "葛登支岬灯台"
+    operator: "海上保安庁 函館海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 41.74194444
+    lng: 140.5994444
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kattoshimisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kattoshimisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-hiyoriyama-lt
+    name: "日和山灯台"
+    operator: "海上保安庁 小樽海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 43.23833333
+    lng: 141.0155556
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hiyoriyama_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hiyoriyama_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-mashike-lt
+    name: "増毛灯台"
+    operator: "海上保安庁 留萌海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 43.855
+    lng: 141.5275
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/mashike_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/mashike_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-saromako-entrance-lt
+    name: "サロマ湖口灯台"
+    operator: "海上保安庁 紋別海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 44.18
+    lng: 143.7830556
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/saromako_entrance_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/saromako_entrance_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-kushirosaki-lt
+    name: "釧路埼灯台"
+    operator: "海上保安庁 釧路海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 42.96944444
+    lng: 144.3733333
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kushirosaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kushirosaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-nosappumisaki-lt
+    name: "納沙布岬灯台"
+    operator: "海上保安庁 根室海上保安部"
+    category: coast
+    prefecture: "01"
+    lat: 43.38527778
+    lng: 145.8169444
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/nosappumisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/nosappumisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-tappisaki-lt
+    name: "龍飛埼灯台"
+    operator: "海上保安庁 青森海上保安部"
+    category: coast
+    prefecture: "02"
+    lat: 41.25833333
+    lng: 140.3425
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/tappisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/tappisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-shiriyasaki-lt
+    name: "尻屋埼灯台"
+    operator: "海上保安庁 八戸海上保安部"
+    category: coast
+    prefecture: "02"
+    lat: 41.43027778
+    lng: 141.4622222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/shiriyasaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/shiriyasaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-hachinohe-ss
+    name: "八戸信号所"
+    operator: "海上保安庁 八戸海上保安部"
+    category: port
+    prefecture: "02"
+    lat: 40.52833333
+    lng: 141.5213889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hachinohe_ss.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hachinohe_ss/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-akita-cgo
+    name: "秋田海上保安部庁舎"
+    operator: "海上保安庁 秋田海上保安部"
+    category: coast
+    prefecture: "05"
+    lat: 39.75222222
+    lng: 140.0636111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/akita_cgo.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/akita_cgo/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-ofunatoko-dl
+    name: "大船渡港指向灯"
+    operator: "海上保安庁 釜石海上保安部"
+    category: port
+    prefecture: "03"
+    lat: 39.03138889
+    lng: 141.7141667
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/ofunatoko_dl.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/ofunatoko_dl/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-shioyasaki-lt
+    name: "塩屋埼灯台"
+    operator: "海上保安庁 福島海上保安部"
+    category: coast
+    prefecture: "07"
+    lat: 36.995
+    lng: 140.9819444
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/shioyasaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/shioyasaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-sakata-lt
+    name: "酒田灯台"
+    operator: "海上保安庁 酒田海上保安部"
+    category: coast
+    prefecture: "06"
+    lat: 38.94583333
+    lng: 139.8161111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/sakata_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/sakata_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-isozaki-lt
+    name: "磯埼灯台"
+    operator: "海上保安庁 茨城海上保安部"
+    category: coast
+    prefecture: "08"
+    lat: 36.38083333
+    lng: 140.6258333
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/isozaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/isozaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-honmoku-vtss
+    name: "本牧信号所"
+    operator: "海上保安庁 横浜海上保安部"
+    category: port
+    prefecture: "14"
+    lat: 35.43888889
+    lng: 139.6897222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/honmoku_vtss.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/honmoku_vtss/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-hashidahana-lt
+    name: "橋田鼻灯台"
+    operator: "海上保安庁 名古屋海上保安部"
+    category: coast
+    prefecture: "23"
+    lat: 34.76555556
+    lng: 137.17
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hashidahana_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hashidahana_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-owase-cgo
+    name: "尾鷲海上保安部庁舎"
+    operator: "海上保安庁 尾鷲海上保安部"
+    category: coast
+    prefecture: "24"
+    lat: 34.07166667
+    lng: 136.2019444
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/owase_cgo.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/owase_cgo/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-yokkaichiko-bkw-lt
+    name: "四日市防波堤信号所"
+    operator: "海上保安庁 四日市海上保安部"
+    category: port
+    prefecture: "24"
+    lat: 34.94555556
+    lng: 136.6630556
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/yokkaichiko_bkw_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/yokkaichiko_bkw_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-osaka-lt
+    name: "大阪灯台"
+    operator: "海上保安庁 大阪海上保安監部"
+    category: coast
+    prefecture: "27"
+    lat: 34.64361111
+    lng: 135.3791667
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/osaka_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/osaka_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-kobe-no2-ss
+    name: "神戸第二信号所"
+    operator: "海上保安庁 神戸海上保安部"
+    category: port
+    prefecture: "28"
+    lat: 34.65111111
+    lng: 135.2447222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kobe_no2_ss.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kobe_no2_ss/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-magosaki-lt
+    name: "孫埼灯台"
+    operator: "海上保安庁 徳島海上保安部"
+    category: coast
+    prefecture: "36"
+    lat: 34.23916667
+    lng: 134.6433333
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/magosaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/magosaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-kochi-lt
+    name: "高知灯台"
+    operator: "海上保安庁 高知海上保安部"
+    category: coast
+    prefecture: "39"
+    lat: 33.49611111
+    lng: 133.5730556
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kochi_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kochi_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-esaki-radar
+    name: "江埼レーダー施設"
+    operator: "海上保安庁 神戸海上保安部"
+    category: coast
+    prefecture: "28"
+    lat: 34.59833333
+    lng: 134.9922222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/esaki_radar.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/esaki_radar/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-sadamisaki-lt
+    name: "佐田岬灯台"
+    operator: "海上保安庁 松山海上保安部"
+    category: coast
+    prefecture: "38"
+    lat: 33.34305556
+    lng: 132.015
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/sadamisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/sadamisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-bisan-martis
+    name: "備讃瀬戸海上交通センター"
+    operator: "海上保安庁 高松海上保安部"
+    category: port
+    prefecture: "37"
+    lat: 34.30333333
+    lng: 133.8211111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/bisan_martis.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/bisan_martis/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-sekisaki-lt
+    name: "関埼灯台"
+    operator: "海上保安庁 大分海上保安部"
+    category: coast
+    prefecture: "44"
+    lat: 33.26666667
+    lng: 131.9022222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/sekisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/sekisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-mishima-n-lt
+    name: "見島北灯台"
+    operator: "海上保安庁 仙崎海上保安部"
+    category: coast
+    prefecture: "35"
+    lat: 34.7975
+    lng: 131.1311111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/mishima_n_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/mishima_n_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-hinoyamashita-tss
+    name: "火ノ山下潮流信号所"
+    operator: "海上保安庁 門司海上保安部"
+    category: port
+    prefecture: "35"
+    lat: 33.96833333
+    lng: 130.9613889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hinoyamashita_tss.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hinoyamashita_tss/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-miirakunagasakihana-lt
+    name: "三井楽長崎鼻灯台"
+    operator: "海上保安庁 長崎海上保安部"
+    category: coast
+    prefecture: "42"
+    lat: 32.76157667
+    lng: 128.6415403
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/miirakunagasakihana_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/miirakunagasakihana_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-tsutsusaki-lt
+    name: "豆酘埼灯台"
+    operator: "海上保安庁 対馬海上保安部"
+    category: coast
+    prefecture: "42"
+    lat: 34.10416667
+    lng: 129.1686111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/tsutsusaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/tsutsusaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-wakamiya-lt
+    name: "若宮灯台"
+    operator: "海上保安庁 唐津海上保安部"
+    category: coast
+    prefecture: "42"
+    lat: 33.86916667
+    lng: 129.6863889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/wakamiya_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/wakamiya_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-kanmon-martis
+    name: "関門海峡海上交通センター"
+    operator: "海上保安庁 門司海上保安部"
+    category: port
+    prefecture: "40"
+    lat: 33.89722222
+    lng: 130.9186111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kanmon_martis.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kanmon_martis/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-tateishimisaki
+    name: "立石岬"
+    operator: "海上保安庁 敦賀海上保安部"
+    category: coast
+    prefecture: "18"
+    lat: 35.76194444
+    lng: 136.0213889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/tateishimisaki.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/tateishimisaki/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-iwamiosakihana-lt
+    name: "石見大崎鼻灯台"
+    operator: "海上保安庁 浜田海上保安部"
+    category: coast
+    prefecture: "32"
+    lat: 34.97611111
+    lng: 132.1522222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/iwamiosakihana_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/iwamiosakihana_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-bakuchimisaki-lt
+    name: "博奕岬灯台"
+    operator: "海上保安庁 舞鶴海上保安部"
+    category: coast
+    prefecture: "26"
+    lat: 35.54777778
+    lng: 135.3413889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/bakuchimisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/bakuchimisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-fushiki-dl
+    name: "伏木指向灯"
+    operator: "海上保安庁 伏木海上保安部"
+    category: coast
+    prefecture: "16"
+    lat: 36.79194444
+    lng: 137.0725
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/fushiki_dl.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/fushiki_dl/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-sawasakihana-lt
+    name: "沢崎鼻灯台"
+    operator: "海上保安庁 新潟海上保安部"
+    category: coast
+    prefecture: "15"
+    lat: 37.82222222
+    lng: 138.2058333
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/sawasakihana_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/sawasakihana_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-hegurashima-lt
+    name: "舳倉島灯台"
+    operator: "海上保安庁 七尾海上保安部"
+    category: coast
+    prefecture: "17"
+    lat: 37.85138889
+    lng: 136.9188889
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hegurashima_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hegurashima_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-aganokawa-rm-lt
+    name: "阿賀野川口灯台"
+    operator: "海上保安庁 新潟海上保安部"
+    category: coast
+    prefecture: "15"
+    lat: 37.95944444
+    lng: 139.1358333
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/aganokawa_rm_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/aganokawa_rm_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-satamisaki-lt
+    name: "佐多岬灯台"
+    operator: "海上保安庁 鹿児島海上保安部"
+    category: coast
+    prefecture: "46"
+    lat: 30.99944444
+    lng: 130.6622222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/satamisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/satamisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-tanegashima-lt
+    name: "種子島灯台"
+    operator: "海上保安庁 鹿児島海上保安部"
+    category: coast
+    prefecture: "46"
+    lat: 30.385
+    lng: 130.9622222
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/tanegashima_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/tanegashima_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-kohirasehana-lt
+    name: "小平瀬鼻灯台"
+    operator: "海上保安庁 串木野海上保安部"
+    category: coast
+    prefecture: "46"
+    lat: 32.08111111
+    lng: 130.1711111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kohirasehana_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kohirasehana_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-misumi-lt
+    name: "三角灯台"
+    operator: "海上保安庁 熊本海上保安部"
+    category: coast
+    prefecture: "43"
+    lat: 32.625
+    lng: 130.4441667
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/misumi_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/misumi_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-kasarisaki-lt
+    name: "笠利埼灯台"
+    operator: "海上保安庁 奄美海上保安部"
+    category: coast
+    prefecture: "46"
+    lat: 28.52944444
+    lng: 129.6894444
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kasarisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kasarisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-11th-rcgh
+    name: "第十一管区海上保安本部庁舎"
+    operator: "海上保安庁 那覇海上保安部"
+    category: coast
+    prefecture: "47"
+    lat: 26.24138889
+    lng: 127.6766667
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/11th_rcgh.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/11th_rcgh/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-ryukyukannonsaki-lt
+    name: "琉球観音埼灯台"
+    operator: "海上保安庁 石垣海上保安部"
+    category: coast
+    prefecture: "47"
+    lat: 24.36583333
+    lng: 124.1116667
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/ryukyukannonsaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/ryukyukannonsaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-hennasaki-lt
+    name: "平安名埼灯台"
+    operator: "海上保安庁 宮古島海上保安部"
+    category: coast
+    prefecture: "47"
+    lat: 24.71944444
+    lng: 125.4686111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hennasaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hennasaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-irisaki-lt
+    name: "西埼灯台"
+    operator: "海上保安庁 石垣海上保安部"
+    category: coast
+    prefecture: "47"
+    lat: 24.45
+    lng: 122.9344444
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/irisaki_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/irisaki_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-kaiho-ikeishima-lt
+    name: "伊計島灯台"
+    operator: "海上保安庁 中城海上保安部"
+    category: coast
+    prefecture: "47"
+    lat: 26.39888889
+    lng: 127.9961111
+    refresh_sec: 300
+    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/ikeishima_lt.jpg"
+    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/ikeishima_lt/"
+    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+
+  - id: curated-still-atv-hachinohe-port
+    name: "八戸港・八太郎大橋（ATV）"
+    operator: "ATV青森テレビ"
+    category: port
+    prefecture: "02"
+    lat: 40.519123
+    lng: 141.502747
+    refresh_sec: 300
+    image_url: "https://www.atv.jp/w/ha/TRIFORA.jpg"
+    page_url: "https://www.atv.ne.jp/livecamera/"
+    note: "2分更新。座標は八戸港周辺(town_level)"
+
+  - id: curated-still-wn-hiwasa-ohama
+    name: "日和佐 大浜海岸"
+    operator: "ウェザーニュース"
+    category: coast
+    prefecture: "36"
+    lat: 33.726582
+    lng: 134.538483
+    feed_type: web_page
+    feed_url: "https://weathernews.jp/onebox/livecam/shikoku/tokushima/410000053/"
+    image_url: "https://weathernews.jp/onebox/livecam/shikoku/tokushima/410000053/"
+    page_url: "https://weathernews.jp/onebox/livecam/shikoku/tokushima/410000053/"
+    note: "ウミガメ産卵地・大浜海岸。画像URLが時刻付きで変わるため誘導型"
