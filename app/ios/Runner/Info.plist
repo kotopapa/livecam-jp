@@ -30,21 +30,12 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>roadgis.pref.miyagi.jp</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-			<key>kasen.pref.yamagata.jp</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-		</dict>
+		<!-- 官公庁・自治体のライブカメラ静止画はhttpのみの配信元が多数
+		     (IPアドレス直配信の防災カメラ含む)のため全体許可が必要。
+		     審査メモ: 表示するのは政府/自治体の公開カメラ画像のみで、
+		     ユーザーデータの送信には常時HTTPSを使用 -->
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>現在地周辺のライブカメラを表示するために位置情報を使用します。バックグラウンドでの位置情報は使用しません</string>
