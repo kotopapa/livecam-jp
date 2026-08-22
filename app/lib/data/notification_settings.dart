@@ -9,6 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 ///   quake6low = 震度6弱以上で通知
 ///   special-warning      = 特別警報の新規発表で通知（全国）
 ///   special-warning-`<XX>` = 特別警報・都道府県別（XXはJISコード01〜47）
+///   danger-warning(-XX)  = 危険警報（警戒レベル4相当・2026新体系）。
+///                          「レベル4から通知」を選んだ場合のみ追加購読する
 /// 地震はレベルに応じて1トピックだけ、特別警報は全国1つか都道府県別の
 /// いずれかを購読する（対象未選択=全国）。
 class NotificationSettings {
@@ -16,6 +18,7 @@ class NotificationSettings {
   static const _quakeLevelKey = 'notify_quake_level'; // '5-' | '5+' | '6-'
   static const _warningEnabledKey = 'notify_warning_enabled';
   static const _warningPrefsKey = 'notify_warning_prefs'; // JISコードのリスト
+  static const _warningLevelKey = 'notify_warning_level'; // '5' | '4'
 
   static final List<String> allPrefCodes = [
     for (var i = 1; i <= 47; i++) i.toString().padLeft(2, '0')
@@ -37,6 +40,9 @@ class NotificationSettings {
   String quakeLevel = '5-';
   bool warningEnabled = false;
 
+  /// '5' = 特別警報のみ（既定） / '4' = 危険警報（レベル4相当）から通知
+  String warningLevel = '5';
+
   /// 特別警報の通知対象の都道府県JISコード。空 = 全国
   Set<String> warningPrefs = {};
   SharedPreferences? _prefs;
@@ -46,6 +52,7 @@ class NotificationSettings {
     quakeEnabled = _prefs!.getBool(_quakeEnabledKey) ?? false;
     quakeLevel = _prefs!.getString(_quakeLevelKey) ?? '5-';
     warningEnabled = _prefs!.getBool(_warningEnabledKey) ?? false;
+    warningLevel = _prefs!.getString(_warningLevelKey) ?? '5';
     warningPrefs =
         (_prefs!.getStringList(_warningPrefsKey) ?? const []).toSet();
   }
@@ -89,10 +96,15 @@ class NotificationSettings {
   /// 選択ありなら都道府県別トピックを購読し、それ以外は解除する
   void _applyWarningTopics({bool unsubscribeOthers = true}) {
     final fm = FirebaseMessaging.instance;
+    final wantDanger = warningEnabled && warningLevel == '4';
     final wantNational = warningEnabled && warningPrefs.isEmpty;
     (wantNational
             ? fm.subscribeToTopic('special-warning')
             : fm.unsubscribeFromTopic('special-warning'))
+        .catchError((_) {});
+    (wantNational && wantDanger
+            ? fm.subscribeToTopic('danger-warning')
+            : fm.unsubscribeFromTopic('danger-warning'))
         .catchError((_) {});
     for (final code in allPrefCodes) {
       final want = warningEnabled && warningPrefs.contains(code);
@@ -101,7 +113,18 @@ class NotificationSettings {
               ? fm.subscribeToTopic('special-warning-$code')
               : fm.unsubscribeFromTopic('special-warning-$code'))
           .catchError((_) {});
+      (want && wantDanger
+              ? fm.subscribeToTopic('danger-warning-$code')
+              : fm.unsubscribeFromTopic('danger-warning-$code'))
+          .catchError((_) {});
     }
+  }
+
+  Future<void> setWarningLevel(String level) async {
+    if (level != '5' && level != '4') return;
+    warningLevel = level;
+    await _prefs?.setString(_warningLevelKey, level);
+    _applyWarningTopics();
   }
 
   Future<bool> setWarningEnabled(bool value) async {

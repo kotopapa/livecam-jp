@@ -172,7 +172,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   if (mounted) setState(() {});
                 },
         ),
-        if (_notifyLoaded && _notify.warningEnabled)
+        if (_notifyLoaded && _notify.warningEnabled) ...[
           ListTile(
             contentPadding: const EdgeInsets.only(left: 72, right: 16),
             title: const Text('通知する地域'),
@@ -180,6 +180,38 @@ class _SettingsScreenState extends State<SettingsScreen> {
             trailing: const Icon(Icons.chevron_right),
             onTap: _pickWarningPrefs,
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 72, right: 16, bottom: 8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('通知するレベル'),
+                const SizedBox(height: 4),
+                Wrap(spacing: 8, children: [
+                  ChoiceChip(
+                    label: const Text('特別警報のみ（レベル5）'),
+                    selected: _notify.warningLevel == '5',
+                    onSelected: (_) async {
+                      await _notify.setWarningLevel('5');
+                      if (mounted) setState(() {});
+                    },
+                  ),
+                  ChoiceChip(
+                    label: const Text('危険警報から（レベル4以上）'),
+                    selected: _notify.warningLevel == '4',
+                    onSelected: (_) async {
+                      await _notify.setWarningLevel('4');
+                      if (mounted) setState(() {});
+                    },
+                  ),
+                ]),
+                const SizedBox(height: 2),
+                Text('危険警報は大雨・洪水・高潮・土砂災害の警戒レベル4相当の発表です',
+                    style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+              ],
+            ),
+          ),
+        ],
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
           child: Text('※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません',

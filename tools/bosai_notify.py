@@ -37,6 +37,11 @@ SPECIAL_WARNINGS = {
     "35": "暴風特別警報", "36": "大雪特別警報", "37": "波浪特別警報",
     "38": "高潮特別警報", "39": "土砂災害特別警報",
 }
+# 2026-05-28新体系の「危険警報」(警戒レベル4相当)。danger-warning系トピックに送る
+DANGER_WARNINGS = {
+    "43": "大雨危険警報", "44": "洪水危険警報",
+    "48": "高潮危険警報", "49": "土砂災害危険警報",
+}
 PREF_NAMES = {
     "01": "北海道", "02": "青森県", "03": "岩手県", "04": "宮城県", "05": "秋田県",
     "06": "山形県", "07": "福島県", "08": "茨城県", "09": "栃木県", "10": "群馬県",
@@ -126,15 +131,22 @@ def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], lis
             for w in area.get("kinds") or []:
                 wc = w.get("code", "")
                 status = w.get("status", "")
-                if wc in SPECIAL_WARNINGS and status != "解除" and "なし" not in status:
+                if (wc in SPECIAL_WARNINGS or wc in DANGER_WARNINGS) \
+                        and status != "解除" and "なし" not in status:
                     current.add(f"{pref}:{wc}")
     previous = set(state["active_special"])
     out = []
     for key in sorted(current - previous):
         pref, wc = key.split(":")
-        title = f"{SPECIAL_WARNINGS[wc]}が発表されました"
-        body = f"{PREF_NAMES[pref]}に{SPECIAL_WARNINGS[wc]}。周辺のライブカメラを確認できます"
-        out.append((title, body, pref))
+        if wc in SPECIAL_WARNINGS:
+            name, family = SPECIAL_WARNINGS[wc], "special"
+            title = f"{name}が発表されました"
+            body = f"{PREF_NAMES[pref]}に{name}。周辺のライブカメラを確認できます"
+        else:
+            name, family = DANGER_WARNINGS[wc], "danger"
+            title = f"{name}が発表されました（警戒レベル4相当）"
+            body = f"{PREF_NAMES[pref]}に{name}。周辺のライブカメラを確認できます"
+        out.append((title, body, pref, family))
     return out, sorted(current)
 
 
@@ -155,10 +167,12 @@ def main() -> int:
                 send_push(token, project, topic, title, body)
             state["notified_quakes"].append(eid)
             changed = True
-        for title, body, pref in warning_events:
-            # 全国トピック(地域未選択のユーザー)と都道府県別トピックの両方に送る
-            send_push(token, project, "special-warning", title, body)
-            send_push(token, project, f"special-warning-{pref}", title, body)
+        for title, body, pref, family in warning_events:
+            # 全国トピック(地域未選択のユーザー)と都道府県別トピックの両方に送る。
+            # family: special=特別警報(レベル5) / danger=危険警報(レベル4)。
+            # レベル4から受け取る設定のユーザーはdanger系も購読している
+            send_push(token, project, f"{family}-warning", title, body)
+            send_push(token, project, f"{family}-warning-{pref}", title, body)
             changed = True
     if sorted(current_special) != sorted(state["active_special"]):
         changed = True

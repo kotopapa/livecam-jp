@@ -44,9 +44,31 @@ def test_new_special_warning_carries_pref_code():
             {"active_special": []})
     assert current == ["13:33"]
     assert len(events) == 1
-    title, body, pref = events[0]
+    title, body, pref, family = events[0]
     assert pref == "13"
+    assert family == "special"
     assert "東京都" in body and "大雨特別警報" in body
+
+
+def test_danger_warning_uses_danger_family():
+    reports = [{
+        "publishingOffice": "横浜地方気象台",
+        "reportDatetime": "2026-08-22T18:43:00+09:00",
+        "warning": {"class10Items": [
+            {"areaCode": "140010",
+             "kinds": [{"code": "43", "status": "発表"}]},
+        ]},
+    }]
+    resp = mock.Mock(); resp.json.return_value = reports
+    with mock.patch.object(bosai_notify.requests, "get",
+                           lambda url, timeout=30: resp):
+        events, current = bosai_notify.check_special_warnings(
+            {"active_special": []})
+    assert current == ["14:43"]
+    title, body, pref, family = events[0]
+    assert family == "danger"
+    assert "神奈川県" in body and "大雨危険警報" in body
+    assert "レベル4" in title
 
 
 def test_already_active_warning_not_renotified():
