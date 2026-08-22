@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T00:00:21Z",
+ "version": "2026-08-22T00:15:58Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -707,6 +707,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-cozy-chigasaki",
+   "name": "湘南茅ヶ崎 海岸（烏帽子岩・江の島）",
+   "name_kana": null,
+   "lat": 35.321201,
+   "lng": 139.406921,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "FMf4XEP2ZY4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FMf4XEP2ZY4"
+   },
+   "operator": "湘南茅ヶ崎 Beach and Waves",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=FMf4XEP2ZY4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：湘南茅ヶ崎 Beach and Waves（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=Beach and Waves with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-denzai-kashiwa-r16",
@@ -2266,6 +2304,44 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
+  },
+  {
+   "id": "curated-hors-hasaki",
+   "name": "波崎海洋研究施設 観測桟橋（鹿島灘）",
+   "name_kana": null,
+   "lat": 35.767437,
+   "lng": 140.798477,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "08",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "NVZSmBwvtaQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=NVZSmBwvtaQ"
+   },
+   "operator": "港湾空港技術研究所",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=NVZSmBwvtaQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：港湾空港技術研究所（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=港湾空港技術研究所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-iat-morioka",
@@ -15347,6 +15423,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-shirahama-shirarahama",
+   "name": "白良浜海水浴場（白浜町公式）",
+   "name_kana": null,
+   "lat": 33.685,
+   "lng": 135.343,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "30",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "-CQ426fZMH0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=-CQ426fZMH0"
+   },
+   "operator": "白浜町",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=-CQ426fZMH0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：白浜町（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=白浜町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-shonan-enoden-134",
    "name": "江ノ電・国道134号",
    "name_kana": null,
@@ -17922,6 +18036,82 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dpri-shionomisaki",
+   "name": "潮岬（京大風力実験所）",
+   "name_kana": null,
+   "lat": 33.447029,
+   "lng": 135.761078,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "30",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://rcfcd.dpri.kyoto-u.ac.jp/frs/swel/web_camera/camera1_image.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://rcfcd.dpri.kyoto-u.ac.jp/frs/swel/camera.html"
+   },
+   "operator": "京都大学防災研究所 潮岬風力実験所",
+   "source": {
+    "page_url": "http://rcfcd.dpri.kyoto-u.ac.jp/frs/swel/camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都大学防災研究所 潮岬風力実験所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=京都大学防災研究所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-dpri-tanabe-bay",
+   "name": "田辺湾・高潮観測塔（白浜海象観測所）",
+   "name_kana": null,
+   "lat": 33.678158,
+   "lng": 135.348129,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "30",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://rcfcd.dpri.kyoto-u.ac.jp/frs/shirahama/web_camera/Real_V-SPW611.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://rcfcd.dpri.kyoto-u.ac.jp/frs/shirahama/live_camera.html"
+   },
+   "operator": "京都大学防災研究所 白浜海象観測所",
+   "source": {
+    "page_url": "https://rcfcd.dpri.kyoto-u.ac.jp/frs/shirahama/live_camera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：京都大学防災研究所 白浜海象観測所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=京都大学防災研究所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-eso-paranal",
@@ -21192,6 +21382,576 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kobe-port-cam10",
+   "name": "神戸港 東部第3工区（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.711388,
+   "lng": 135.29805,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera10/camera10.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam11",
+   "name": "神戸港 マリンパーク1（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.695518,
+   "lng": 135.266251,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera11/camera11.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam12",
+   "name": "神戸港 マリンパーク3（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.695518,
+   "lng": 135.266251,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera12/camera12.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam13",
+   "name": "神戸港 マリンパーク4（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.695518,
+   "lng": 135.266251,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera13/camera13.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam14",
+   "name": "神戸港 メリケンパーク（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.682678,
+   "lng": 135.187027,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera14/camera14.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam15",
+   "name": "神戸港 ハーバーランド（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.679077,
+   "lng": 135.181961,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera15/camera15.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam25",
+   "name": "神戸港 灘浜緑地（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.703773,
+   "lng": 135.245117,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera25/camera25.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam26",
+   "name": "神戸港 苅藻橋（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.659149,
+   "lng": 135.152344,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera26/camera26.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam35",
+   "name": "神戸港 サンシャインワーフ神戸（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.715813,
+   "lng": 135.289413,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera35/camera35.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam5",
+   "name": "神戸港 新港側出入口（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.684265,
+   "lng": 135.19722,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera5/camera5.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam6",
+   "name": "神戸港 ポートアイランド北側出入口（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.665333,
+   "lng": 135.20459,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera6/camera6.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam7",
+   "name": "神戸港 ポートアイランド南側出入口（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.665333,
+   "lng": 135.20459,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera7/camera7.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam8",
+   "name": "神戸港 新港第3突堤（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.684265,
+   "lng": 135.19722,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera8/camera8.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kobe-port-cam9",
+   "name": "神戸港 マリンパーク2（防災カメラ）",
+   "name_kana": null,
+   "lat": 34.695518,
+   "lng": 135.266251,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "28",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://kobeko-bousai.jp/camera_img/camera9/camera9.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://kobeko-bousai.jp/camera_list/"
+   },
+   "operator": "神戸市港湾局",
+   "source": {
+    "page_url": "https://kobeko-bousai.jp/camera_list/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神戸市港湾局"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神戸市港湾局 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kujukuri-fudodo",
+   "name": "九十九里 不動堂海岸",
+   "name_kana": null,
+   "lat": 35.513855,
+   "lng": 140.4245,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.town.kujukuri.chiba.jp/0000000245.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.kujukuri.chiba.jp/0000000245.html"
+   },
+   "operator": "九十九里町",
+   "source": {
+    "page_url": "https://www.town.kujukuri.chiba.jp/0000000245.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：九十九里町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=九十九里町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-kumamoto-hikawa-dam-spillway",
    "name": "氷川ダム カメラ4",
    "name_kana": null,
@@ -21686,6 +22446,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kushimoto-umasaka",
+   "name": "串本町 馬坂（防災カメラ）",
+   "name_kana": null,
+   "lat": 33.485687,
+   "lng": 135.787018,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "30",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.town.kushimoto.wakayama.jp/kwp3/camera/umasaka.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.town.kushimoto.wakayama.jp/bousai/livecamera.html"
+   },
+   "operator": "串本町",
+   "source": {
+    "page_url": "https://www.town.kushimoto.wakayama.jp/bousai/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：串本町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=串本町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-kushiro-shitsugen-tancho-tsurui",
    "name": "釧路湿原のタンチョウ（鶴居村）",
    "name_kana": null,
@@ -22137,6 +22935,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-22",
     "note": "bulk: license=unknown prefs=['99'] with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-nishinoomote-port",
+   "name": "西之表港ほか（種子島5地点）",
+   "name_kana": null,
+   "lat": 30.73097,
+   "lng": 131.020721,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "http://camera1.city-nishinoomote.jp/livecam/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://camera1.city-nishinoomote.jp/livecam/"
+   },
+   "operator": "西之表市",
+   "source": {
+    "page_url": "http://camera1.city-nishinoomote.jp/livecam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：西之表市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=西之表市 with_coords=True"
    },
    "first_seen": "2026-08-22",
    "last_updated": "2026-08-22"
@@ -23548,6 +24384,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-sizenken-yumigahama",
+   "name": "弓ヶ浜（南伊豆）",
+   "name_kana": null,
+   "lat": 34.646275,
+   "lng": 138.887405,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=46",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=46"
+   },
+   "operator": "環境省 インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=46",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=インターネット自然研究所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-sugadaira-dam-down",
    "name": "菅平ダム(下流側)",
    "name_kana": null,
@@ -24002,6 +24876,44 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-tomakomai-port",
+   "name": "苫小牧港（管理組合庁舎屋上）",
+   "name_kana": null,
+   "lat": 42.640614,
+   "lng": 141.632614,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.jptmk.com/080livecamera/index.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.jptmk.com/080livecamera/index.html"
+   },
+   "operator": "苫小牧港管理組合",
+   "source": {
+    "page_url": "https://www.jptmk.com/080livecamera/index.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：苫小牧港管理組合"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=苫小牧港管理組合 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-totto-park-koshima",

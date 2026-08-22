@@ -3492,3 +3492,260 @@ cameras:
     image_url: "https://www.youtube.com/watch?v=Blh-OB2JDR4"
     page_url: "https://www.pref.kanagawa.jp/docs/f4i/tsunami/p613103.html"
     note: "県公式YouTubeライブ(埋め込み不可のため誘導型)"
+
+  # ---- 2026-08-22 津波観測 第2弾(研究機関・港湾・市町村) ----
+  - id: curated-still-dpri-tanabe-bay
+    name: "田辺湾・高潮観測塔（白浜海象観測所）"
+    operator: "京都大学防災研究所 白浜海象観測所"
+    category: coast
+    prefecture: "30"
+    lat: 33.678158
+    lng: 135.348129
+    refresh_sec: 300
+    image_url: "https://rcfcd.dpri.kyoto-u.ac.jp/frs/shirahama/web_camera/Real_V-SPW611.jpg"
+    page_url: "https://rcfcd.dpri.kyoto-u.ac.jp/frs/shirahama/live_camera.html"
+    note: "瀬戸臨海実験所屋上から田辺湾・田辺中島高潮観測塔を望む。1分間隔更新"
+
+  - id: curated-still-dpri-shionomisaki
+    name: "潮岬（京大風力実験所）"
+    operator: "京都大学防災研究所 潮岬風力実験所"
+    category: coast
+    prefecture: "30"
+    lat: 33.447029
+    lng: 135.761078
+    refresh_sec: 600
+    image_url: "http://rcfcd.dpri.kyoto-u.ac.jp/frs/swel/web_camera/camera1_image.jpg"
+    page_url: "http://rcfcd.dpri.kyoto-u.ac.jp/frs/swel/camera.html"
+    note: "本州最南端・潮岬の海象/風況観測カメラ"
+
+  - id: curated-still-kushimoto-umasaka
+    name: "串本町 馬坂（防災カメラ）"
+    operator: "串本町"
+    category: coast
+    prefecture: "30"
+    lat: 33.485687
+    lng: 135.787018
+    refresh_sec: 600
+    image_url: "https://www.town.kushimoto.wakayama.jp/kwp3/camera/umasaka.jpg"
+    page_url: "https://www.town.kushimoto.wakayama.jp/bousai/livecamera.html"
+    note: "南海トラフ想定域の町設置防災カメラ。座標は町中心部(town_level)"
+
+  - id: curated-still-kujukuri-fudodo
+    name: "九十九里 不動堂海岸"
+    operator: "九十九里町"
+    category: coast
+    prefecture: "12"
+    lat: 35.513855
+    lng: 140.4245
+    feed_type: web_page
+    feed_url: "https://www.town.kujukuri.chiba.jp/0000000245.html"
+    image_url: "https://www.town.kujukuri.chiba.jp/0000000245.html"
+    page_url: "https://www.town.kujukuri.chiba.jp/0000000245.html"
+    note: "国民宿舎サンライズ九十九里屋上等から九十九里浜を撮影。独自ビューアのため誘導型"
+
+  - id: curated-still-nishinoomote-port
+    name: "西之表港ほか（種子島5地点）"
+    operator: "西之表市"
+    category: port
+    prefecture: "46"
+    lat: 30.73097
+    lng: 131.020721
+    feed_type: web_page
+    feed_url: "http://camera1.city-nishinoomote.jp/livecam/"
+    image_url: "http://camera1.city-nishinoomote.jp/livecam/"
+    page_url: "http://camera1.city-nishinoomote.jp/livecam/"
+    note: "西之表港・浦田など5カメラ切替のDASH配信のため誘導型"
+
+  - id: curated-still-sizenken-yumigahama
+    name: "弓ヶ浜（南伊豆）"
+    operator: "環境省 インターネット自然研究所"
+    category: coast
+    prefecture: "22"
+    lat: 34.646275
+    lng: 138.887405
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=46"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=46"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=46"
+    note: "日本の渚百選・弓ヶ浜。画像URLが時刻付きで変わるため誘導型(毎正時更新)"
+
+  - id: curated-still-tomakomai-port
+    name: "苫小牧港（管理組合庁舎屋上）"
+    operator: "苫小牧港管理組合"
+    category: port
+    prefecture: "01"
+    lat: 42.640614
+    lng: 141.632614
+    feed_type: web_page
+    feed_url: "https://www.jptmk.com/080livecamera/index.html"
+    image_url: "https://www.jptmk.com/080livecamera/index.html"
+    page_url: "https://www.jptmk.com/080livecamera/index.html"
+    note: "専用WebGLプレイヤーのため誘導型"
+
+  - id: curated-still-kobe-port-cam35
+    name: "神戸港 サンシャインワーフ神戸（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.715813
+    lng: 135.289413
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera35/camera35.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam11
+    name: "神戸港 マリンパーク1（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.695518
+    lng: 135.266251
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera11/camera11.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam9
+    name: "神戸港 マリンパーク2（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.695518
+    lng: 135.266251
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera9/camera9.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam12
+    name: "神戸港 マリンパーク3（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.695518
+    lng: 135.266251
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera12/camera12.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam13
+    name: "神戸港 マリンパーク4（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.695518
+    lng: 135.266251
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera13/camera13.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam10
+    name: "神戸港 東部第3工区（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.711388
+    lng: 135.29805
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera10/camera10.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam25
+    name: "神戸港 灘浜緑地（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.703773
+    lng: 135.245117
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera25/camera25.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam5
+    name: "神戸港 新港側出入口（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.684265
+    lng: 135.19722
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera5/camera5.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam8
+    name: "神戸港 新港第3突堤（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.684265
+    lng: 135.19722
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera8/camera8.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam6
+    name: "神戸港 ポートアイランド北側出入口（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.665333
+    lng: 135.20459
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera6/camera6.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam7
+    name: "神戸港 ポートアイランド南側出入口（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.665333
+    lng: 135.20459
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera7/camera7.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam14
+    name: "神戸港 メリケンパーク（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.682678
+    lng: 135.187027
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera14/camera14.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam15
+    name: "神戸港 ハーバーランド（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.679077
+    lng: 135.181961
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera15/camera15.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
+
+  - id: curated-still-kobe-port-cam26
+    name: "神戸港 苅藻橋（防災カメラ）"
+    operator: "神戸市港湾局"
+    category: port
+    prefecture: "28"
+    lat: 34.659149
+    lng: 135.152344
+    refresh_sec: 600
+    image_url: "https://kobeko-bousai.jp/camera_img/camera26/camera26.jpg"
+    page_url: "https://kobeko-bousai.jp/camera_list/"
+    note: "神戸港防災ポータルの高潮・津波監視カメラ"
