@@ -6,9 +6,13 @@ on:
   workflow_dispatch:
     inputs:
       topics:
-        description: "送信先トピック(カンマ区切り)"
-        required: true
+        description: "送信先トピック(カンマ区切り。token指定時は無視可)"
+        required: false
         default: "special-warning,special-warning-14"
+      token:
+        description: "デバイストークン宛に直接送信(任意)"
+        required: false
+        default: ""
       title:
         description: "通知タイトル"
         required: true
@@ -35,15 +39,30 @@ jobs:
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           TOPICS: ${{ inputs.topics }}
+          DEVICE_TOKEN: ${{ inputs.token }}
           TITLE: ${{ inputs.title }}
           BODY: ${{ inputs.body }}
         run: |
           python - <<'EOF'
-          import json, os
+          import json, os, requests
           from tools.bosai_notify import fcm_token, send_push
           sa = os.environ["FIREBASE_SERVICE_ACCOUNT"]
           token, project = fcm_token(json.loads(sa))
-          for topic in os.environ["TOPICS"].split(","):
+          device = os.environ.get("DEVICE_TOKEN", "").strip()
+          if device:
+              r = requests.post(
+                  f"https://fcm.googleapis.com/v1/projects/{project}/messages:send",
+                  headers={"Authorization": f"Bearer {token}"},
+                  json={"message": {
+                      "token": device,
+                      "notification": {"title": os.environ["TITLE"],
+                                       "body": os.environ["BODY"]},
+                      "apns": {"headers": {"apns-priority": "10"},
+                               "payload": {"aps": {"sound": "default"}}},
+                  }}, timeout=30)
+              print("direct:", r.status_code, r.text[:300])
+              r.raise_for_status()
+          for topic in os.environ.get("TOPICS", "").split(","):
               topic = topic.strip()
               if topic:
                   send_push(token, project, topic,
