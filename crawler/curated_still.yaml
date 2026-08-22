@@ -4901,3 +4901,185 @@ cameras:
     image_url: "http://honjin1.miemasu.net/cgi-bin/camera?resolution=1280"
     page_url: "http://www.honjin.or.jp/"
     note: "宿泊施設・黒潮本陣の展望カメラ。久礼湾・太平洋を一望(実映像確認済み)"
+
+  # ---- 2026-08-22 道路空白調査分(関東・西日本) ----
+  - id: curated-still-kdt-kinugasa
+    name: "三浦縦貫道路 衣笠IC付近（神奈川県道路公社）"
+    operator: "神奈川県道路公社"
+    category: road
+    prefecture: "14"
+    lat: 35.241928
+    lng: 139.656281
+    refresh_sec: 300
+    image_url: "http://yokosan-miura-kinugasa.miemasu.net/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.kdt-kousha.or.jp/live_camera/"
+    note: "公社公式ライブカメラ。Panasonicスナップショット/静止画"
+
+  - id: curated-still-kdt-hayashi
+    name: "三浦縦貫道路 林出口付近（神奈川県道路公社）"
+    operator: "神奈川県道路公社"
+    category: road
+    prefecture: "14"
+    lat: 35.17926
+    lng: 139.636917
+    refresh_sec: 300
+    image_url: "http://yokosan-miura-hayashi.miemasu.net:8003/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.kdt-kousha.or.jp/live_camera/"
+    note: "公社公式ライブカメラ。Panasonicスナップショット/静止画"
+
+  - id: curated-still-kdt-iwaohashi
+    name: "真鶴道路 岩大橋（神奈川県道路公社）"
+    operator: "神奈川県道路公社"
+    category: road
+    prefecture: "14"
+    lat: 35.172455
+    lng: 139.131668
+    refresh_sec: 300
+    image_url: "https://www.kdt-kousha.or.jp/livecamera_img/manazuru_101.jpg"
+    page_url: "https://www.kdt-kousha.or.jp/live_camera/"
+    note: "公社公式ライブカメラ。Panasonicスナップショット/静止画"
+
+  - id: curated-still-kdt-yugawarabashi
+    name: "真鶴道路 湯河原橋（神奈川県道路公社）"
+    operator: "神奈川県道路公社"
+    category: road
+    prefecture: "14"
+    lat: 35.143505
+    lng: 139.111725
+    refresh_sec: 300
+    image_url: "http://manazuru01.miemasu.net/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.kdt-kousha.or.jp/live_camera/"
+    note: "公社公式ライブカメラ。Panasonicスナップショット/静止画"
+
+  - id: curated-still-kdt-choujagasaki
+    name: "長者ヶ崎駐車場（神奈川県道路公社）"
+    operator: "神奈川県道路公社"
+    category: road
+    prefecture: "14"
+    lat: 35.258633
+    lng: 139.593628
+    refresh_sec: 300
+    image_url: "http://cyoujyagasaki.miemasu.net:50049/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.kdt-kousha.or.jp/live_camera/"
+    note: "公社公式ライブカメラ。Panasonicスナップショット/静止画"
+
+  - id: curated-still-kdt-zuyo
+    name: "逗葉新道料金所付近（神奈川県道路公社）"
+    operator: "神奈川県道路公社"
+    category: road
+    prefecture: "14"
+    lat: 35.281544
+    lng: 139.610672
+    refresh_sec: 300
+    image_url: "http://yokosan-zuyo.miemasu.net/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.kdt-kousha.or.jp/live_camera/"
+    note: "公社公式ライブカメラ。Panasonicスナップショット/静止画"
+
+  - id: curated-still-tsukuba-p01cam01
+    name: "県道42号（筑波山第1駐車場入口）"
+    operator: "つくば市"
+    category: road
+    prefecture: "08"
+    lat: 36.217861
+    lng: 140.100342
+    refresh_sec: 600
+    image_url: "https://camserv02.heliosmate.net/p01cam01.jpg"
+    page_url: "https://tsukuba.fureai.jp/"
+    note: "筑波山ライブカメラマップ(市観光推進課)。座標は筑波地区(town_level)"
+
+  - id: curated-still-tsukuba-c01cam01
+    name: "筑波山 御幸ヶ原"
+    operator: "つくば市"
+    category: scenic
+    prefecture: "08"
+    lat: 36.217861
+    lng: 140.100342
+    refresh_sec: 600
+    image_url: "https://camserv02.heliosmate.net/c01cam01.jpg"
+    page_url: "https://tsukuba.fureai.jp/"
+    note: "筑波山ライブカメラマップ(市観光推進課)。座標は筑波地区(town_level)"
+
+  - id: curated-still-tsukuba-r02cam01
+    name: "筑波山 女体山頂直下"
+    operator: "つくば市"
+    category: scenic
+    prefecture: "08"
+    lat: 36.217861
+    lng: 140.100342
+    refresh_sec: 600
+    image_url: "https://camserv02.heliosmate.net/r02cam01.jpg"
+    page_url: "https://tsukuba.fureai.jp/"
+    note: "筑波山ライブカメラマップ(市観光推進課)。座標は筑波地区(town_level)"
+
+  - id: curated-still-tsukuba-r01cam01
+    name: "筑波山 女体山頂（ロープウェイ駅）"
+    operator: "つくば市"
+    category: scenic
+    prefecture: "08"
+    lat: 36.217861
+    lng: 140.100342
+    refresh_sec: 600
+    image_url: "https://camserv02.heliosmate.net/r01cam01.jpg"
+    page_url: "https://tsukuba.fureai.jp/"
+    note: "筑波山ライブカメラマップ(市観光推進課)。座標は筑波地区(town_level)"
+
+  - id: curated-still-tsukuba-b01cam02
+    name: "筑波山梅林（上部）"
+    operator: "つくば市"
+    category: scenic
+    prefecture: "08"
+    lat: 36.217861
+    lng: 140.100342
+    refresh_sec: 600
+    image_url: "https://camserv02.heliosmate.net/b01cam02.jpg"
+    page_url: "https://tsukuba.fureai.jp/"
+    note: "筑波山ライブカメラマップ(市観光推進課)。座標は筑波地区(town_level)"
+
+  - id: curated-still-tsukuba-b01cam01
+    name: "筑波山梅林（下部）"
+    operator: "つくば市"
+    category: scenic
+    prefecture: "08"
+    lat: 36.217861
+    lng: 140.100342
+    refresh_sec: 600
+    image_url: "https://camserv02.heliosmate.net/b01cam01.jpg"
+    page_url: "https://tsukuba.fureai.jp/"
+    note: "筑波山ライブカメラマップ(市観光推進課)。座標は筑波地区(town_level)"
+
+  - id: curated-still-nose-haragatawa
+    name: "国道173号 はらがたわトンネル（能勢町）"
+    operator: "能勢町"
+    category: road
+    prefecture: "27"
+    lat: 35.035614
+    lng: 135.355347
+    refresh_sec: 300
+    image_url: "http://camsrv.town.nose.osaka.jp/webcam/haragatawaTN/01.jpg"
+    page_url: "http://www.town.nose.osaka.jp/2663.html"
+    note: "町公式の道路状況監視カメラ。座標は天王地区(town_level)"
+
+  - id: curated-still-nose-kurinosato
+    name: "国道173号 道の駅能勢くりの郷（能勢町）"
+    operator: "能勢町"
+    category: road
+    prefecture: "27"
+    lat: 34.955429
+    lng: 135.396332
+    refresh_sec: 300
+    image_url: "http://camsrv.town.nose.osaka.jp/webcam/kurinosato/01.jpg"
+    page_url: "http://www.town.nose.osaka.jp/2663.html"
+    note: "町公式の道路状況監視カメラ"
+
+  - id: curated-still-matsumasa-kongozan
+    name: "金剛山登山口（府道705号・千早駐車場）"
+    operator: "まつまさ（千早赤阪村観光協会案内）"
+    category: road
+    prefecture: "27"
+    lat: 34.412663
+    lng: 135.657349
+    feed_type: youtube_channel
+    feed_url: "UCDl1pzdSiIYDQn-JmyFqe_Q"
+    image_url: "https://www.youtube.com/channel/UCDl1pzdSiIYDQn-JmyFqe_Q/live"
+    page_url: "https://www.chihayaakasaka.org/info/live.html"
+    note: "村観光協会が案内する登山口ライブ。動画ID変動のためチャンネル埋め込み型"

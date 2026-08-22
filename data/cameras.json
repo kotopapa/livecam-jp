@@ -1,5 +1,5 @@
 {
- "version": "2026-08-22T01:31:25Z",
+ "version": "2026-08-22T01:54:16Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -2758,6 +2758,44 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "curated-ishigaki-730",
+   "name": "石垣島 730交差点（国道390号）",
+   "name_kana": null,
+   "lat": 24.339369,
+   "lng": 124.155464,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "5CE32IQIgG0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=5CE32IQIgG0"
+   },
+   "operator": "石垣島ライブカメラ（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=5CE32IQIgG0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：石垣島ライブカメラ（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=石垣島ライブカメラ with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-ishigaki-rbc",
    "name": "石垣港・サザンゲートブリッジ",
    "name_kana": null,
@@ -3771,14 +3809,14 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "g5LZWZZ1GJQ",
+    "url": "TbLQHnIVniM",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=g5LZWZZ1GJQ"
+    "url": "https://www.youtube.com/watch?v=TbLQHnIVniM"
    },
    "operator": "電材センター",
    "source": {
@@ -23663,6 +23701,234 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-kdt-choujagasaki",
+   "name": "長者ヶ崎駐車場（神奈川県道路公社）",
+   "name_kana": null,
+   "lat": 35.258633,
+   "lng": 139.593628,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://cyoujyagasaki.miemasu.net:50049/SnapshotJPEG?Resolution=640x480",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kdt-kousha.or.jp/live_camera/"
+   },
+   "operator": "神奈川県道路公社",
+   "source": {
+    "page_url": "https://www.kdt-kousha.or.jp/live_camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神奈川県道路公社 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kdt-hayashi",
+   "name": "三浦縦貫道路 林出口付近（神奈川県道路公社）",
+   "name_kana": null,
+   "lat": 35.17926,
+   "lng": 139.636917,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://yokosan-miura-hayashi.miemasu.net:8003/SnapshotJPEG?Resolution=640x480",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kdt-kousha.or.jp/live_camera/"
+   },
+   "operator": "神奈川県道路公社",
+   "source": {
+    "page_url": "https://www.kdt-kousha.or.jp/live_camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神奈川県道路公社 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kdt-iwaohashi",
+   "name": "真鶴道路 岩大橋（神奈川県道路公社）",
+   "name_kana": null,
+   "lat": 35.172455,
+   "lng": 139.131668,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kdt-kousha.or.jp/livecamera_img/manazuru_101.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kdt-kousha.or.jp/live_camera/"
+   },
+   "operator": "神奈川県道路公社",
+   "source": {
+    "page_url": "https://www.kdt-kousha.or.jp/live_camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神奈川県道路公社 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kdt-kinugasa",
+   "name": "三浦縦貫道路 衣笠IC付近（神奈川県道路公社）",
+   "name_kana": null,
+   "lat": 35.241928,
+   "lng": 139.656281,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://yokosan-miura-kinugasa.miemasu.net/SnapshotJPEG?Resolution=640x480",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kdt-kousha.or.jp/live_camera/"
+   },
+   "operator": "神奈川県道路公社",
+   "source": {
+    "page_url": "https://www.kdt-kousha.or.jp/live_camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神奈川県道路公社 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kdt-yugawarabashi",
+   "name": "真鶴道路 湯河原橋（神奈川県道路公社）",
+   "name_kana": null,
+   "lat": 35.143505,
+   "lng": 139.111725,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://manazuru01.miemasu.net/SnapshotJPEG?Resolution=640x480",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kdt-kousha.or.jp/live_camera/"
+   },
+   "operator": "神奈川県道路公社",
+   "source": {
+    "page_url": "https://www.kdt-kousha.or.jp/live_camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神奈川県道路公社 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-kdt-zuyo",
+   "name": "逗葉新道料金所付近（神奈川県道路公社）",
+   "name_kana": null,
+   "lat": 35.281544,
+   "lng": 139.610672,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://yokosan-zuyo.miemasu.net/SnapshotJPEG?Resolution=640x480",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kdt-kousha.or.jp/live_camera/"
+   },
+   "operator": "神奈川県道路公社",
+   "source": {
+    "page_url": "https://www.kdt-kousha.or.jp/live_camera/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県道路公社"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=神奈川県道路公社 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-kobe-port-cam10",
    "name": "神戸港 東部第3工区（防災カメラ）",
    "name_kana": null,
@@ -25525,6 +25791,44 @@
    "last_updated": "2026-08-22"
   },
   {
+   "id": "curated-still-matsumasa-kongozan",
+   "name": "金剛山登山口（府道705号・千早駐車場）",
+   "name_kana": null,
+   "lat": 34.412663,
+   "lng": 135.657349,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCDl1pzdSiIYDQn-JmyFqe_Q",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.chihayaakasaka.org/info/live.html"
+   },
+   "operator": "まつまさ（千早赤阪村観光協会案内）",
+   "source": {
+    "page_url": "https://www.chihayaakasaka.org/info/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：まつまさ（千早赤阪村観光協会案内）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=まつまさ with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "curated-still-maunakea-summit",
    "name": "マウナケア山頂 天文台群",
    "name_kana": null,
@@ -25714,6 +26018,82 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-nose-haragatawa",
+   "name": "国道173号 はらがたわトンネル（能勢町）",
+   "name_kana": null,
+   "lat": 35.035614,
+   "lng": 135.355347,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://camsrv.town.nose.osaka.jp/webcam/haragatawaTN/01.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.town.nose.osaka.jp/2663.html"
+   },
+   "operator": "能勢町",
+   "source": {
+    "page_url": "http://www.town.nose.osaka.jp/2663.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：能勢町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=能勢町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-nose-kurinosato",
+   "name": "国道173号 道の駅能勢くりの郷（能勢町）",
+   "name_kana": null,
+   "lat": 34.955429,
+   "lng": 135.396332,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://camsrv.town.nose.osaka.jp/webcam/kurinosato/01.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.town.nose.osaka.jp/2663.html"
+   },
+   "operator": "能勢町",
+   "source": {
+    "page_url": "http://www.town.nose.osaka.jp/2663.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：能勢町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=能勢町 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-oita-aki-dam",
@@ -28868,6 +29248,234 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-tsukuba-b01cam01",
+   "name": "筑波山梅林（下部）",
+   "name_kana": null,
+   "lat": 36.217861,
+   "lng": 140.100342,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "08",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camserv02.heliosmate.net/b01cam01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tsukuba.fureai.jp/"
+   },
+   "operator": "つくば市",
+   "source": {
+    "page_url": "https://tsukuba.fureai.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：つくば市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=つくば市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-tsukuba-b01cam02",
+   "name": "筑波山梅林（上部）",
+   "name_kana": null,
+   "lat": 36.217861,
+   "lng": 140.100342,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "08",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camserv02.heliosmate.net/b01cam02.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tsukuba.fureai.jp/"
+   },
+   "operator": "つくば市",
+   "source": {
+    "page_url": "https://tsukuba.fureai.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：つくば市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=つくば市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-tsukuba-c01cam01",
+   "name": "筑波山 御幸ヶ原",
+   "name_kana": null,
+   "lat": 36.217861,
+   "lng": 140.100342,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "08",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camserv02.heliosmate.net/c01cam01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tsukuba.fureai.jp/"
+   },
+   "operator": "つくば市",
+   "source": {
+    "page_url": "https://tsukuba.fureai.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：つくば市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=つくば市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-tsukuba-p01cam01",
+   "name": "県道42号（筑波山第1駐車場入口）",
+   "name_kana": null,
+   "lat": 36.217861,
+   "lng": 140.100342,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "08",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camserv02.heliosmate.net/p01cam01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tsukuba.fureai.jp/"
+   },
+   "operator": "つくば市",
+   "source": {
+    "page_url": "https://tsukuba.fureai.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：つくば市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=つくば市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-tsukuba-r01cam01",
+   "name": "筑波山 女体山頂（ロープウェイ駅）",
+   "name_kana": null,
+   "lat": 36.217861,
+   "lng": 140.100342,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "08",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camserv02.heliosmate.net/r01cam01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tsukuba.fureai.jp/"
+   },
+   "operator": "つくば市",
+   "source": {
+    "page_url": "https://tsukuba.fureai.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：つくば市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=つくば市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-tsukuba-r02cam01",
+   "name": "筑波山 女体山頂直下",
+   "name_kana": null,
+   "lat": 36.217861,
+   "lng": 140.100342,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "08",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://camserv02.heliosmate.net/r02cam01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://tsukuba.fureai.jp/"
+   },
+   "operator": "つくば市",
+   "source": {
+    "page_url": "https://tsukuba.fureai.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：つくば市"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-22",
+    "note": "bulk: license=unknown operator=つくば市 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
   },
   {
    "id": "curated-still-tsushima-yamaneko-fukuoka-zoo",
