@@ -377,12 +377,36 @@ class _MediaView extends StatelessWidget {
             feedUri.queryParameters.containsKey('x') &&
             feedUri.queryParameters.containsKey('y')) {
           return AspectRatio(
-            aspectRatio: 4 / 3,
-            child: _IHighwayMapView(
-              url: camera.feed.url,
-              x: feedUri.queryParameters['x']!,
-              y: feedUri.queryParameters['y']!,
-              camId: feedUri.queryParameters['cam'] ?? '',
+            aspectRatio: 16 / 9,
+            child: Material(
+              color: const Color(0xFF12306B),
+              child: InkWell(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => _IHighwayBrowserScreen(
+                          title: camera.name,
+                          url: camera.feed.url,
+                          x: feedUri.queryParameters['x']!,
+                          y: feedUri.queryParameters['y']!,
+                          camId: feedUri.queryParameters['cam'] ?? '',
+                        ))),
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.open_in_new, color: Colors.white, size: 36),
+                    SizedBox(height: 10),
+                    Text('NEXCO公式「iHighway」で\nライブカメラを表示',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                    SizedBox(height: 6),
+                    Text('タップするとアプリ内ブラウザで公式サイトを開き、\nこのカメラの位置まで自動で移動します',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white70, fontSize: 11)),
+                  ],
+                ),
+              ),
             ),
           );
         }
@@ -454,23 +478,26 @@ iframe{width:100%;height:100%;border:0}</style></head>
 /// iHighway(NEXCO)の交通情報地図をアプリ内で開き、該当カメラの
 /// デフォルメ地図座標(x,y)へ自動センタリング+最大ズームする。
 /// ページ内容は改変せず、地図操作(ユーザー操作相当)のみを自動化する。
-class _IHighwayMapView extends StatefulWidget {
-  const _IHighwayMapView(
-      {required this.url,
+/// 埋め込みではなく「アプリ内ブラウザで公式サイトを開く」体裁の全画面表示
+class _IHighwayBrowserScreen extends StatefulWidget {
+  const _IHighwayBrowserScreen(
+      {required this.title,
+      required this.url,
       required this.x,
       required this.y,
       required this.camId});
 
+  final String title;
   final String url;
   final String x;
   final String y;
   final String camId;
 
   @override
-  State<_IHighwayMapView> createState() => _IHighwayMapViewState();
+  State<_IHighwayBrowserScreen> createState() => _IHighwayBrowserScreenState();
 }
 
-class _IHighwayMapViewState extends State<_IHighwayMapView> {
+class _IHighwayBrowserScreenState extends State<_IHighwayBrowserScreen> {
   late final WebViewController _controller;
 
   @override
@@ -522,8 +549,31 @@ class _IHighwayMapViewState extends State<_IHighwayMapView> {
   }
 
   @override
-  Widget build(BuildContext context) =>
-      WebViewWidget(controller: _controller);
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(widget.title,
+                style: const TextStyle(fontSize: 15),
+                overflow: TextOverflow.ellipsis),
+            const Text('ihighway.jp（NEXCO公式）',
+                style: TextStyle(fontSize: 11, color: Colors.white70)),
+          ],
+        ),
+        actions: [
+          IconButton(
+            tooltip: 'Safariで開く',
+            icon: const Icon(Icons.open_in_browser),
+            onPressed: () => launchUrl(Uri.parse(widget.url),
+                mode: LaunchMode.externalApplication),
+          ),
+        ],
+      ),
+      body: WebViewWidget(controller: _controller),
+    );
+  }
 }
 
 /// 三重県道路規制情報のカメラ表示。
