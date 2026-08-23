@@ -109,11 +109,37 @@ class _BosaiScreenState extends State<BosaiScreen> {
     _loadWarnings();
   }
 
+  /// class10区域コード → 親官署コード（市区町村詳細ファイル名の解決用）。
+  /// 「先頭3桁+000」の推定は北海道(014010→014100)や鹿児島(460010→460100)で
+  /// 外れて404になるため、気象庁のarea.jsonから正しい対応を引く
+  static Map<String, String>? _class10OfficeCache;
+
+  static Future<Map<String, String>> _loadClass10Offices() async {
+    if (_class10OfficeCache != null) return _class10OfficeCache!;
+    final resp = await http
+        .get(Uri.parse('https://www.jma.go.jp/bosai/common/const/area.json'))
+        .timeout(const Duration(seconds: 20));
+    final data =
+        jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
+    final c10 = data['class10s'] as Map<String, dynamic>? ?? const {};
+    _class10OfficeCache = {
+      for (final e in c10.entries)
+        e.key: ((e.value as Map<String, dynamic>)['parent'] as String? ?? '')
+    };
+    return _class10OfficeCache!;
+  }
+
   Future<void> _loadWarnings() async {
     setState(() {
       _warnings = null;
       _warningError = null;
     });
+    Map<String, String> class10Office = const {};
+    try {
+      class10Office = await _loadClass10Offices();
+    } catch (_) {
+      // 取れなくても従来の推定(先頭3桁+000)で続行する
+    }
     try {
       final resp = await http.get(
         Uri.parse('${BosaiScreen.warningMapUrl}'
@@ -159,14 +185,14 @@ class _BosaiScreenState extends State<BosaiScreen> {
               // 市区町村単位の詳細ファイルは官署コード単位（class10の先頭3桁+000）
               officesByPref
                   .putIfAbsent(pref, () => {})
-                  .add('${code.substring(0, 3)}000');
+                  .add(class10Office[code] ?? '${code.substring(0, 3)}000');
             } else {
               final adv = _advisoryNames[wc];
               if (adv != null) {
                 advByPref.putIfAbsent(pref, () => {}).add(adv);
                 advOfficesByPref
                     .putIfAbsent(pref, () => {})
-                    .add('${code.substring(0, 3)}000');
+                    .add(class10Office[code] ?? '${code.substring(0, 3)}000');
               }
             }
           }
