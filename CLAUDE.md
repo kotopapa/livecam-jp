@@ -45,3 +45,10 @@ python site/build.py                            # 配信ファイル生成
 - 設定画面の「通知診断」で通知許可/APNsトークン/FCMトークンを確認できる。トークンがあれば `push-test.yml` の mode=inspect で購読状況照会、mode=subscribe でサーバー側から購読登録、mode=send（token指定）で直接送信テストができる
 - 通知トピック: special-warning(-XX)=特別警報レベル5 / danger-warning(-XX)=危険警報レベル4(2026新体系)。送信はtools/bosai_notify.py（同一チェック内はトピックごと1通に集約）
 - 気象庁のr8警報コードは2026-05-28新体系対応済み（43大雨/44洪水/48高潮/49土砂災害の危険警報=紫表示、34洪水/39土砂災害の特別警報追加）
+
+## Push通知の知見（2026-08-23追記）
+
+- **r8のmap.jsonは官署×報種別(dataTypeCode)で別報が同時刻に並ぶ**（気象警報=VPWW55と土砂災害=VPWW56など）。「官署ごとに最新1報」で絞ると土砂災害報が落ちる（石垣島で実発生）。アプリ表示・bosai_notifyとも官署×報種別で最新を取り合算する
+- **quake/list.jsonは同一地震(eid)が複数報並ぶ**（震度速報はanm/magが空文字列）。eidでグループ化し、震源名・Mが埋まった報を優先して1通にする
+- **デバッグ版⇄TestFlight版の入替えでトピック配信だけが静かに全滅する**。FCMトークンは同じままAPNsトークンだけ差し替わり、紐付けが腐る。直接送信(token宛)は届くのにトピックは不達で、iid照会では「購読済み」に見え、batchAddやSDKの購読し直しでも直らない。完全アンインストール→再インストール(トークン再発行)でのみ復旧。対策としてhealTokenAndReapply()（起動時にAPNs/FCMトークンを前回値と比較し、APNsのみ変化ならdeleteToken→再発行→全購読作り直し）を実装済み（notification_settings.dart）
+- 切り分け手順: push-test.ymlで ①mode=send token指定(直接) ②topics指定(トピック) を**別タイトルで**送り分けると経路が特定できる
