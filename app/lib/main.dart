@@ -18,6 +18,9 @@ import 'ui/onboarding_screen.dart';
 
 Future<void> main() async {
   final binding = WidgetsFlutterBinding.ensureInitialized();
+  // 画像はカメラ静止画(数MB級)が主体のため、既定100MBでは端末メモリを
+  // 圧迫しすぎる。デコード画像のキャッシュ上限を50MBに抑える
+  PaintingBinding.instance.imageCache.maximumSizeBytes = 50 << 20;
   // ネイティブ起動画面はFlutter初回フレームで即消えるため、最低表示時間を保証する
   FlutterNativeSplash.preserve(widgetsBinding: binding);
   // 災害プッシュ通知用（対応プラットフォームのみ・失敗しても起動は続行）
@@ -59,8 +62,32 @@ class LiveCamApp extends StatefulWidget {
   State<LiveCamApp> createState() => _LiveCamAppState();
 }
 
-class _LiveCamAppState extends State<LiveCamApp> {
+class _LiveCamAppState extends State<LiveCamApp>
+    with WidgetsBindingObserver {
   late bool _onboardingDone = widget.onboardingDone;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // バックグラウンド移行時にデコード済み画像を全て解放する。
+    // 画面は見えていないため副作用がなく、復帰時の再デコードが
+    // 「溜まった分の上に乗る」形にならずメモリの土台を低く保てる
+    if (state == AppLifecycleState.paused) {
+      PaintingBinding.instance.imageCache.clear();
+      PaintingBinding.instance.imageCache.clearLiveImages();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

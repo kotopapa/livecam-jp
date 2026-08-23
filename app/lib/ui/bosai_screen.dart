@@ -848,6 +848,8 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
                       child: url != null
                           ? Image.network(url,
                               fit: BoxFit.cover,
+                              // 72×48表示への縮小デコード(メモリ削減)
+                              cacheWidth: 216,
                               errorBuilder: (_, _, _) =>
                                   Container(color: Colors.grey[300]))
                           : Container(
@@ -944,6 +946,8 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
                       child: url != null
                           ? Image.network(url,
                               fit: BoxFit.cover,
+                              // 72×48表示への縮小デコード(メモリ削減)
+                              cacheWidth: 216,
                               errorBuilder: (_, _, _) =>
                                   Container(color: Colors.grey[300]))
                           : Container(

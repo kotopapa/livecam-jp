@@ -204,6 +204,8 @@ class _CameraTile extends StatelessWidget {
           child: url != null
               ? Image.network(url,
                   fit: BoxFit.cover,
+                  // 72×48表示にフル解像度(1枚8MB級)をデコードしない
+                  cacheWidth: 216,
                   errorBuilder: (_, _, _) => _placeholder())
               : _placeholder(),
         ),

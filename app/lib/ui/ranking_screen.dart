@@ -163,6 +163,8 @@ class _RankingScreenState extends State<RankingScreen> {
                                       child: url != null
                                           ? Image.network(url,
                                               fit: BoxFit.cover,
+                                              // 60×40表示への縮小デコード
+                                              cacheWidth: 180,
                                               errorBuilder: (_, _, _) =>
                                                   Container(
                                                       color: Colors.grey[300]))

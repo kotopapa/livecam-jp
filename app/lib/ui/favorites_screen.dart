@@ -222,7 +222,7 @@ void _openDetail(BuildContext context, Camera camera, AppState app) {
 }
 
 Widget _thumb(AppState app, Camera camera, int tick,
-    {BoxFit fit = BoxFit.cover}) {
+    {BoxFit fit = BoxFit.cover, int cacheWidth = 216}) {
   final url = app.imageUrlFor(camera);
   if (url == null) {
     return Container(
@@ -235,6 +235,8 @@ Widget _thumb(AppState app, Camera camera, int tick,
   return Image.network(url,
       key: ValueKey('$url#$tick'),
       fit: fit,
+      // 表示サイズに合わせた縮小デコード（フル解像度8MB級を防ぐ）
+      cacheWidth: cacheWidth,
       errorBuilder: (_, _, _) => Container(
           color: Colors.grey[300],
           alignment: Alignment.center,
@@ -260,7 +262,8 @@ class _FavoriteCard extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Expanded(
             child: Stack(fit: StackFit.expand, children: [
-              _thumb(app, camera, refreshTick),
+              // カード表示は大きめ(画面半分幅)なので縮小幅も大きめに取る
+              _thumb(app, camera, refreshTick, cacheWidth: 640),
               if (camera.isVideo)
                 Positioned(
                   left: 6,
