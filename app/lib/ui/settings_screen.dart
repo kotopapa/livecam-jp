@@ -1,6 +1,7 @@
 import 'package:firebase_messaging/firebase_messaging.dart' as fbm;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -41,7 +42,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
   void initState() {
     super.initState();
     _notify.load().then((_) {
-      _notify.reapply(); // 保存済み購読の自己修復
+      // トークン健全性チェック込みの自己修復（APNs入替え等での不達を復旧）
+      unawaited(_notify.healTokenAndReapply());
       if (mounted) setState(() => _notifyLoaded = true);
     });
   }

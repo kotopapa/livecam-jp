@@ -164,4 +164,47 @@ class NotificationSettings {
     if (quakeEnabled) _applyQuakeTopics();
     if (warningEnabled) unawaited(_applyWarningTopics());
   }
+
+  static const _lastFcmTokenKey = 'notify_last_fcm_token';
+  static const _lastApnsTokenKey = 'notify_last_apns_token';
+
+  /// トークンの健全性チェック＋購読の自己修復（起動時に1回呼ぶ）。
+  ///
+  /// デバッグ版⇄TestFlight版の入替えや機種変更の復元では、FCMトークンは
+  /// 同じままAPNsトークンだけが差し替わることがある。この状態になると
+  /// トピック配信だけが静かに全滅し、購読し直しても直らない（2026-08-23に
+  /// 実機で確認。直接送信は届くのにquake5等が不達）。APNsトークンの変化を
+  /// 検知したらFCMトークンを破棄して再発行し、購読を作り直す。
+  Future<void> healTokenAndReapply() async {
+    final fm = FirebaseMessaging.instance;
+    try {
+      // APNsトークンは起動直後はnullのことがあるため少し粘る
+      String? apns;
+      for (var i = 0; i < 10 && apns == null; i++) {
+        apns = await fm.getAPNSToken();
+        if (apns == null) {
+          await Future<void>.delayed(const Duration(seconds: 1));
+        }
+      }
+      var fcm = await fm.getToken();
+      final lastApns = _prefs?.getString(_lastApnsTokenKey);
+      final lastFcm = _prefs?.getString(_lastFcmTokenKey);
+      if (apns != null && lastApns != null && apns != lastApns &&
+          fcm != null && fcm == lastFcm) {
+        // APNsだけが変わった＝トピック紐付けが腐っている可能性が高い。
+        // トークンを再発行して購読を全て作り直す
+        await fm.deleteToken();
+        fcm = await fm.getToken();
+        await _prefs?.setStringList(_appliedTopicsKey, const []);
+      } else if (fcm != null && lastFcm != null && fcm != lastFcm) {
+        // トークンが変わった＝旧トークンの購読は無効。適用済み記録を破棄
+        await _prefs?.setStringList(_appliedTopicsKey, const []);
+      }
+      if (apns != null) await _prefs?.setString(_lastApnsTokenKey, apns);
+      if (fcm != null) await _prefs?.setString(_lastFcmTokenKey, fcm);
+    } catch (_) {
+      // 通信不良等で判定できなくても通常の再適用は行う
+    }
+    reapply();
+  }
 }
