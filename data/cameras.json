@@ -1,5 +1,5 @@
 {
- "version": "2026-08-24T22:22:59Z",
+ "version": "2026-08-24T22:24:12Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -55390,44 +55390,6 @@
     "status": "approved",
     "reviewed_at": "2026-08-22",
     "note": "bulk: license=unknown operator=高知県 with_coords=True"
-   },
-   "first_seen": "2026-08-22",
-   "last_updated": "2026-08-22"
-  },
-  {
-   "id": "curated-still-kujukuri-fudodo",
-   "name": "九十九里 不動堂海岸",
-   "name_kana": null,
-   "lat": 35.513855,
-   "lng": 140.4245,
-   "coord_accuracy": "approx",
-   "category": "coast",
-   "prefecture": "12",
-   "country": null,
-   "municipality": null,
-   "river_or_route": null,
-   "feed": {
-    "type": "web_page",
-    "url": "https://www.town.kujukuri.chiba.jp/0000000245.html",
-    "refresh_sec": 600,
-    "requires_referer": false,
-    "headers": {}
-   },
-   "fallback": {
-    "type": "web_page",
-    "url": "https://www.town.kujukuri.chiba.jp/0000000245.html"
-   },
-   "operator": "九十九里町",
-   "source": {
-    "page_url": "https://www.town.kujukuri.chiba.jp/0000000245.html",
-    "terms_url": null,
-    "license": "unknown",
-    "attribution": "映像提供：九十九里町"
-   },
-   "review": {
-    "status": "approved",
-    "reviewed_at": "2026-08-22",
-    "note": "bulk: license=unknown operator=九十九里町 with_coords=True"
    },
    "first_seen": "2026-08-22",
    "last_updated": "2026-08-22"

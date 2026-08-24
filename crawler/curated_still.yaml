@@ -3544,19 +3544,6 @@ cameras:
     page_url: "https://www.town.kushimoto.wakayama.jp/bousai/livecamera.html"
     note: "南海トラフ想定域の町設置防災カメラ。座標は町中心部(town_level)"
 
-  - id: curated-still-kujukuri-fudodo
-    name: "九十九里 不動堂海岸"
-    operator: "九十九里町"
-    category: coast
-    prefecture: "12"
-    lat: 35.513855
-    lng: 140.4245
-    feed_type: web_page
-    feed_url: "https://www.town.kujukuri.chiba.jp/0000000245.html"
-    image_url: "https://www.town.kujukuri.chiba.jp/0000000245.html"
-    page_url: "https://www.town.kujukuri.chiba.jp/0000000245.html"
-    note: "国民宿舎サンライズ九十九里屋上等から九十九里浜を撮影。独自ビューアのため誘導型"
-
   - id: curated-still-nishinoomote-port
     name: "西之表港ほか（種子島5地点）"
     operator: "西之表市"
