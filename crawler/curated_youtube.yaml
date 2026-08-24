@@ -867,11 +867,12 @@ cameras:
   - id: curated-rnb-matsuyama-airport
     name: 松山空港
     operator: "RNB南海放送"
-    video_id: "TUxN7e_KxH4"
+    video_id: "CFh9z-6IeEE"
     category: other
     prefecture: "38"
     lat: 33.827
     lng: 132.7
+    note: "旧ID TUxN7e_KxH4 は配信終了→RNBチャンネル現行ライブに差替え(2026-08-25)。同チャンネルは複数ライブ同時配信のため channel_id は付けない"
 
   - id: curated-rkc-kochi-airport
     name: 高知龍馬空港
@@ -950,12 +951,13 @@ cameras:
   - id: curated-inawashiro
     name: 猪苗代湖（スキー場から）
     operator: "猪苗代スキー場（リステル）"
-    video_id: "goz5JZD8dH4"
+    video_id: "hmGMijkatDY"
+    channel_id: "UC8AHDeJk9r2ko0f2LWp8h1A"
     category: scenic
     prefecture: "07"
     lat: 37.62
     lng: 140.07
-    note: 湖畔でなくスキー場からの眺望
+    note: 湖畔でなくスキー場からの眺望 旧ID goz5JZD8dH4 は配信終了→チャンネル/liveの現行IDに差替え(2026-08-25)。channel_id追加
 
   - id: curated-inubosaki
     name: 犬吠埼
@@ -1355,11 +1357,13 @@ cameras:
   - id: curated-abashiri-birds
     name: オホーツク 野鳥と朝日のライブ
     operator: "個人運営（オホーツク野鳥ライブ）"
-    video_id: "tMe0cocGOYA"
+    video_id: "0AdHcmVg7lg"
+    channel_id: "UCcnyFxVfbsx8L3-B0rIFTLg"
     category: healing
     prefecture: "01"
     lat: 44.021
     lng: 144.274
+    note: "旧ID tMe0cocGOYA は配信終了→チャンネル/liveの現行IDに差替え(2026-08-25)。channel_id追加"
 
   - id: curated-nakano-hogoneko
     name: 保護猫ルーム（富士見台どうぶつ病院）
@@ -3768,12 +3772,13 @@ cameras:
   - id: curated-r2-ecfdf983
     name: 猪苗代スキー場(幸せの鐘)
     operator: "絶景・猪苗代スキー場"
-    video_id: "ARNiW-l8PH0"
+    video_id: "hmGMijkatDY"
+    channel_id: "UC8AHDeJk9r2ko0f2LWp8h1A"
     category: scenic
     prefecture: "07"
     lat: 37.5892
     lng: 140.1044
-    note: "埋め込み不可→誘導型。猪苗代湖・磐梯山遠望"
+    note: "埋め込み不可→誘導型。猪苗代湖・磐梯山遠望 旧ID ARNiW-l8PH0 は配信終了→チャンネル/liveの現行IDに差替え(2026-08-25)。channel_id追加"
 
   - id: curated-r2-dc16c466
     name: 釧路市街(幣舞橋周辺)
@@ -3787,12 +3792,13 @@ cameras:
   - id: curated-r2-f9606025
     name: 美瑛 四季の塔
     operator: "World.cam(美瑛町)"
-    video_id: "WQfqitaVfqA"
+    video_id: "riTcTDJ2UMA"
+    channel_id: "UCzjRAMVvFtTp_20sLDv2OUA"
     category: scenic
     prefecture: "01"
     lat: 43.5817
     lng: 142.4694
-    note: "埋め込み不可→誘導型"
+    note: "埋め込み不可→誘導型 旧ID WQfqitaVfqA は配信終了→チャンネル/liveの現行IDに差替え(2026-08-25)。channel_id追加"
 
   - id: curated-r2-4d786767
     name: 富良野スキー場 北の峰
@@ -5867,6 +5873,7 @@ cameras:
     name: "札幌 狸小路商店街（4丁目）"
     operator: "たぬきや（狸小路の店舗、たぬきやLIVE）"
     video_id: "XZi57dMjr2s"
+    channel_id: "UCRZplV8vE67bgCI6_3sm3mQ"
     category: "road"
     prefecture: "01"
     lat: 43.05632
@@ -7487,6 +7494,7 @@ cameras:
     name: "高野山 中央案内所前（県道53号・小辺路）"
     operator: "和歌山県高野町"
     video_id: "XAUchBjokNo"
+    channel_id: "UCtjoCIS31JfpltaGOZgdFtw"
     category: "scenic"
     prefecture: "30"
     lat: 34.2159
@@ -8117,6 +8125,7 @@ cameras:
     name: "国道39号 永山（アウトバーン太陽店）"
     operator: "有限会社アウトバーン"
     video_id: "OYLHi_mc79M"
+    channel_id: "UCix_G_zC5PZ_y0uL84hFCdQ"
     category: "road"
     prefecture: "01"
     lat: 43.7975
@@ -8137,6 +8146,7 @@ cameras:
     name: "道道7号北見常呂線・常呂町基線交差点（大友産業）"
     operator: "大友産業"
     video_id: "Bjwqs3XDkx4"
+    channel_id: "UC3Upaut8BeI-mkk2EhqtoKA"
     category: "road"
     prefecture: "01"
     lat: 44.0839
@@ -8862,3 +8872,7 @@ cameras:
     lat: 34.9103
     lng: 138.7853
     note: "oEmbed 200 / isLiveNow true。フェリー運航者公式。座標は土肥港既知位置"
+
+  # ===== 2026-08-25 全国空白地帯・離島・ジャンル横断調査分 (0件) =====
+
+  # ===== 2026-08-25 全国空白地帯・離島・ジャンル横断調査分 (0件) =====
