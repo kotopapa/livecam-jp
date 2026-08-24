@@ -20706,3 +20706,597 @@ cameras:
     feed_type: "web_page"
     feed_url: "https://www.youtube.com/watch?v=HmdscgFbqQQ"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「八千代村上駅」(説明文「八千代村上駅方面の映像」)"
+
+  # ---- 沖縄県河川情報システム (bousai-kasen.pref.okinawa.jp) 2026-08-25 追加 ----
+  # p-NN ⇔ 地点の対応は dat_js/DBDAT_inf.js の cam[] (no/name/ksn/ofc/lat/lon) から。座標は同マスタ記載値。
+  # 既登録: p-64 源河川(curated-still-river-okinawa-genkagawa-genka)。p-44/50/51/65/66 は「運用停止中」プレースホルダのため見送り。
+
+  - id: curated-still-river-okinawa-kasen-01
+    name: "久茂地川 御成橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.215000
+    lng: 127.679444
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-01.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=1（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-02
+    name: "久茂地川 美栄橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.219444
+    lng: 127.684444
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-02.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=2（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-03
+    name: "安里川 泊高橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.223611
+    lng: 127.685278
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-03.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=3（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-04
+    name: "安里川 ひめゆり橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.215000
+    lng: 127.693889
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-04.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=4（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-05
+    name: "安里川 豊橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.216667
+    lng: 127.695000
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-05.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=5（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-06
+    name: "安里川 安里橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.215000
+    lng: 127.696667
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-06.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=6（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-07
+    name: "安里川 大道錬兵橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.214722
+    lng: 127.699722
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-07.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=7（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-08
+    name: "安里川 崇元寺橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.220278
+    lng: 127.689167
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-08.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=8（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-09
+    name: "安里川 指帰橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.216944
+    lng: 127.702500
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-09.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=9（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-10
+    name: "安里川 蔡温橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.217500
+    lng: 127.692500
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-10.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=10（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-11
+    name: "真嘉比川 真嘉比遊水地(下池)"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.221111
+    lng: 127.705556
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-11.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=11（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-12
+    name: "真嘉比川 真嘉比遊水地(中池)"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.221944
+    lng: 127.706389
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-12.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=12（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-13
+    name: "真嘉比川 真嘉比遊水地(上池)"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.223056
+    lng: 127.709444
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-13.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=13（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-15
+    name: "国場川 鏡原"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.198611
+    lng: 127.679722
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-15.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=15（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-16
+    name: "国場川 古波蔵"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.196944
+    lng: 127.686389
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-16.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=16（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-17
+    name: "国場川 下茂橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.196389
+    lng: 127.719444
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-17.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=17（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-18
+    name: "国場川 石原橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.196667
+    lng: 127.726944
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-18.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=18（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-19
+    name: "国場川 宮城川合流"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.199444
+    lng: 127.735278
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-19.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=19（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-20
+    name: "国場川 長堂川合流"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.193611
+    lng: 127.701111
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-20.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=20（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-21
+    name: "長堂川 宇平橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.178889
+    lng: 127.717778
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-21.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=21（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-22
+    name: "安謝川 古島"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.231944
+    lng: 127.706389
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-22.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=22（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-23
+    name: "安謝川 末吉"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.228333
+    lng: 127.710556
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-23.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=23（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-24
+    name: "安謝川 平良"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.227222
+    lng: 127.718611
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-24.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=24（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-25
+    name: "安謝川 新開橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.229444
+    lng: 127.722222
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-25.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=25（管轄: 南部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-41
+    name: "小波津川 小波津-上流"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.226944
+    lng: 127.754167
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-41.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=41（管轄: 中部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-42
+    name: "小波津川 小波津-下流"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.221667
+    lng: 127.765000
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-42.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=42（管轄: 中部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-43
+    name: "牧港川 牧港川"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.260556
+    lng: 127.727778
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-43.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=43（管轄: 中部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-49
+    name: "石川川 石川川"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.426944
+    lng: 127.820000
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-49.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=49（管轄: 中部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-52
+    name: "天願川 赤田地橋"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.385278
+    lng: 127.856389
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-52.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=52（管轄: 中部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-okinawa-kasen-53
+    name: "天願川 栄野比"
+    operator: "沖縄県"
+    category: "river"
+    prefecture: "47"
+    lat: 26.390278
+    lng: 127.835278
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-53.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "沖縄県河川情報システム 河川監視カメラ no=53（管轄: 中部土木事務所）。10分更新・httpのみ。座標は一次サイト dat_js/DBDAT_inf.js cam[] 記載値。県HP利用案内(https://www.pref.okinawa.jp/site/riyoannai/index.html)は無断転用不可の一般記載のためlicense=unknown・レビューで判断。curl 200 image/jpeg 確認(2026-08-25)"
+
+  # ---- 四万十町 河川・海岸監視 (kasen.midwest-kochi.jp/shimanto) 2026-08-25 追加 ----
+  # 画像は point<N>/<YYYYMMDDHHMM>.jpg (1分更新)で固定URLがないため feed_type=shimanto_kasen(都度解決型)。
+  # monitor が result_time.php に POST point=point<N> して最新時刻を取り status.json の image_url で配信する。
+  # 地点名は index.php の一覧(17地点)。座標は一次サイトに無いため国土地理院AddressSearch(概略・approx)。
+
+  - id: curated-still-river-shimanto-kasen-01
+    name: "吉見川橋（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.205799
+    lng: 133.133682
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point1/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point1"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point1(吉見川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町窪川」(吉見川は窪川市街を流下、橋位置未特定)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-02
+    name: "東又（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.227840
+    lng: 133.145294
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point2/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point2"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point2(東又川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町東大奈路」(東又地区中心)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-03
+    name: "新開町（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.209251
+    lng: 133.129532
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point3/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point3"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point3(吉見川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町新開町」。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-04
+    name: "仁井田（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.245125
+    lng: 133.165115
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point4/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point4"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point4(仁井田川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町仁井田」。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-05
+    name: "松葉川（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.276836
+    lng: 133.092087
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point5/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point5"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point5(松葉川(四万十川支流))。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町米奥」(松葉川地区中心)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-06
+    name: "興津（小室）（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.164539
+    lng: 133.179016
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point6/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point6"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point6(小室湾(海岸))。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町興津」(小室の浜、詳細位置未特定)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-07
+    name: "興津（浦分）（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.164539
+    lng: 133.179016
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point7/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point7"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point7(興津海岸)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町興津」(浦分、詳細位置未特定)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-08
+    name: "興津（郷分）（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.164539
+    lng: 133.179016
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point8/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point8"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point8(興津海岸)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町興津」(郷分、詳細位置未特定)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-09
+    name: "志和（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.224377
+    lng: 133.234222
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point9/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point9"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point9(志和海岸)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町志和」。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-17
+    name: "志和川（四万十町窪川地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.221109
+    lng: 133.223123
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point17/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point17"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point17(志和川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:Nominatim「志和川」(志和峰付近の河道)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-10
+    name: "大正（四万十町大正地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.174580
+    lng: 132.960281
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point10/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point10"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point10(四万十川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町大正」。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-11
+    name: "大正北ノ川（四万十町大正地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.185238
+    lng: 133.034286
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point11/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point11"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point11(北川川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町大正北ノ川」。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-12
+    name: "大正大奈路（四万十町大正地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.232178
+    lng: 132.989822
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point12/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point12"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point12(梼原川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町大正大奈路」。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-13
+    name: "浦越（四万十町十和地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.205070
+    lng: 132.947617
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point13/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point13"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point13(四万十川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町浦越」。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-14
+    name: "交流センター（四万十町十和地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.229450
+    lng: 132.835861
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point14/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point14"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point14(四万十川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町十和川口」(十和地域振興局周辺と推定・要確認)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-15
+    name: "三島（四万十町十和地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.258320
+    lng: 132.865555
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point15/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point15"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point15(四万十川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町十川」(三島は十川の中州)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
+
+  - id: curated-still-river-shimanto-kasen-16
+    name: "鍋谷（四万十町十和地区）"
+    operator: "四万十町"
+    category: "river"
+    prefecture: "39"
+    lat: 33.260891
+    lng: 132.828415
+    image_url: "http://kasen.midwest-kochi.jp/shimanto/point16/"
+    page_url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    feed_type: "shimanto_kasen"
+    feed_url: "http://kasen.midwest-kochi.jp/shimanto/result_time.php"
+    camera_ref: "point16"
+    refresh_sec: 60
+    note: "四万十町 河川・海岸監視カメラ point16(四万十川)。1分更新・タイムスタンプ名(固定URLなし)・httpのみ。座標:GSI「四万十町古城」(GSI/Nominatimに鍋谷なし。一覧地図で最西端のため十和西部と推定・要確認)。町HPプライバシーポリシー(http://www.town.shimanto.lg.jp/privacy/)に無断転載禁止の一般記載あり→license=unknown・レビューで判断(必要なら企画課広報担当 0880-22-3124 へ照会)。POST解決+HEAD 200 image/jpeg 確認(2026-08-25)"
