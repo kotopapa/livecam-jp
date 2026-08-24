@@ -244,6 +244,42 @@ def run(shard: str | None = None) -> int:
             if cam["id"] in st_by_id:
                 cam["_resolved_image"] = st_by_id[cam["id"]]
 
+    # 都度解決型feed（shimanto_kasen）: result_time.php に POST point=pointN で最新時刻(12桁)を取る
+    shimanto_cams = [c for c in all_cameras
+                     if c.get("review", {}).get("status") == "approved"
+                     and c["feed"]["type"] == "shimanto_kasen"]
+    if shimanto_cams:
+        from crawler.sources.shimanto_kasen import resolve_image_url as sm_resolve
+        sm_by_id = {}
+        for cam in shimanto_cams:
+            result_url = cam["feed"]["url"]
+            ref = cam["feed"].get("camera_ref") or ""
+            host = urlparse(result_url).netloc
+            try:
+                throttle.acquire(host)
+                try:
+                    resp = session.post(result_url, data={"point": ref}, timeout=30)
+                finally:
+                    throttle.release(host)
+            except requests.RequestException as e:
+                print(f"shimanto解決失敗 {ref}: {e}", file=sys.stderr)
+                continue
+            if resp.status_code != 200:
+                continue
+            hit = sm_resolve(result_url, ref, resp.text)
+            if hit:
+                cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
+                sm_by_id[cam["id"]] = cam["_resolved_image"]
+                st = statuses.setdefault(cam["id"], {
+                    "state": "unknown", "last_ok_at": None,
+                    "http_status": None, "frozen_since": None,
+                    "consecutive_failures": 0, "avg_interval_sec": None,
+                })
+                st["image_url"], st["image_time"] = hit
+        for cam in cameras:
+            if cam["id"] in sm_by_id:
+                cam["_resolved_image"] = sm_by_id[cam["id"]]
+
     # 都度解決型feed（mie_douro）: camera_get_api.php 1リクエストで全台のbase64画像を取得
     mie_cams = [c for c in all_cameras
                 if c.get("review", {}).get("status") == "approved"

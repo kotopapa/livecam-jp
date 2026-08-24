@@ -24,6 +24,7 @@ enum FeedType {
   saitamaFlood('saitama_flood'),
   kochiSuibo('kochi_suibo'),
   sizenken('sizenken'),
+  shimantoKasen('shimanto_kasen'),
   mieDouro('mie_douro'),
 
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する

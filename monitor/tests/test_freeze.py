@@ -71,3 +71,11 @@ def test_no_coords_falls_back_to_6h():
     now = datetime(2026, 8, 17, 3, 0, tzinfo=timezone.utc)
     frozen, _ = judge_frozen(_history(8, 16, True, now), now, None, None)
     assert frozen
+
+
+def test_okinawa_kasen_placeholder_detected():
+    from pathlib import Path
+    from monitor.freeze import dhash64, is_placeholder
+    fx = Path(__file__).resolve().parent.parent.parent / "crawler" / "tests" / "fixtures"
+    h = dhash64((fx / "okinawa_kasen_placeholder.jpg").read_bytes())
+    assert is_placeholder(h)
