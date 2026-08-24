@@ -14,3 +14,9 @@ const int maxConcurrentFetches = 3;
 /// GitHub Pages の静的JSON（/v1/ranking.json）から行う。
 const String firebaseProjectId = 'livecam-jp';
 const String firebaseApiKey = 'AIzaSyBlNICazXyF_x9A5aLARTW3k2L-K62lae0';
+
+/// AdMob バナー広告ユニットID（詳細画面）。
+/// 現在はGoogle公式のテストIDを設定している。AdMob管理画面で
+/// 本番ユニットを発行したらここを差し替える（Info.plist の
+/// GADApplicationIdentifier も本番アプリIDへ差し替えること）。
+const String admobBannerUnitId = 'ca-app-pub-3940256099942544/2934735716';

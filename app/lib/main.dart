@@ -1,6 +1,9 @@
 import 'dart:ui' show PlatformDispatcher;
 
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:firebase_core/firebase_core.dart';
+// AppState名がアプリ本体のクラスと衝突するためshowで絞る
+import 'package:google_mobile_ads/google_mobile_ads.dart' show MobileAds;
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
@@ -49,6 +52,20 @@ Future<void> main() async {
   app.init(); // キャッシュ復元→バックグラウンド更新（待たずに起動する）
   Future.delayed(
       const Duration(milliseconds: 1600), FlutterNativeSplash.remove);
+  _initAds(); // 起動をブロックしない（ATT許可→AdMob初期化）
+}
+
+/// 広告の初期化。ATT（トラッキング許可）の回答を待ってからSDKを起動する。
+/// 拒否されても広告は表示される（非パーソナライズ配信になるだけ）
+Future<void> _initAds() async {
+  try {
+    // スプラッシュ消滅後に許可ダイアログを出す（起動直後は表示に失敗する）
+    await Future<void>.delayed(const Duration(milliseconds: 2000));
+    await AppTrackingTransparency.requestTrackingAuthorization();
+  } catch (_) {}
+  try {
+    await MobileAds.instance.initialize();
+  } catch (_) {}
 }
 
 class LiveCamApp extends StatefulWidget {
