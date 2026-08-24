@@ -1,5 +1,5 @@
 {
- "version": "2026-08-24T22:34:37Z",
+ "version": "2026-08-24T22:35:49Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -19139,43 +19139,6 @@
    "last_updated": "2026-08-18"
   },
   {
-   "id": "curated-oshino-hakkai",
-   "name": "忍野八海から富士山",
-   "name_kana": null,
-   "lat": 35.46,
-   "lng": 138.843,
-   "coord_accuracy": "approx",
-   "category": "scenic",
-   "prefecture": "19",
-   "municipality": "19424",
-   "river_or_route": null,
-   "feed": {
-    "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=zFYO6lfcA_E",
-    "refresh_sec": null,
-    "requires_referer": false,
-    "headers": {}
-   },
-   "fallback": {
-    "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=zFYO6lfcA_E"
-   },
-   "operator": "富士五湖TV",
-   "source": {
-    "page_url": "https://www.youtube.com/watch?v=zFYO6lfcA_E",
-    "terms_url": null,
-    "license": "unknown",
-    "attribution": "映像提供：富士五湖TV（YouTubeライブ）"
-   },
-   "review": {
-    "status": "approved",
-    "reviewed_at": "2026-08-18",
-    "note": "bulk: feed_type=youtube_video with_coords=True / 埋め込み不可/枠切れのためYouTube誘導型に変換(2026-08-18診断)"
-   },
-   "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
-  },
-  {
    "id": "curated-oshino-hakkai-4k",
    "name": "忍野八海から富士山（4K）",
    "name_kana": null,
@@ -21731,43 +21694,6 @@
     "status": "approved",
     "reviewed_at": "2026-08-19",
     "note": "bulk: license=unknown with_coords=True"
-   },
-   "first_seen": "2026-08-19",
-   "last_updated": "2026-08-19"
-  },
-  {
-   "id": "curated-r2-266df21c",
-   "name": "犬吠テラステラス(銚子)",
-   "name_kana": null,
-   "lat": 35.706,
-   "lng": 140.869,
-   "coord_accuracy": "approx",
-   "category": "coast",
-   "prefecture": "12",
-   "municipality": null,
-   "river_or_route": null,
-   "feed": {
-    "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=Zjd0-RKD5Cc",
-    "refresh_sec": null,
-    "requires_referer": false,
-    "headers": {}
-   },
-   "fallback": {
-    "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=Zjd0-RKD5Cc"
-   },
-   "operator": "犬吠テラステラス",
-   "source": {
-    "page_url": "https://www.youtube.com/watch?v=Zjd0-RKD5Cc",
-    "terms_url": null,
-    "license": "unknown",
-    "attribution": "映像提供：犬吠テラステラス（YouTubeライブ）"
-   },
-   "review": {
-    "status": "approved",
-    "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True / 埋め込み不可のためYouTube誘導型(2026-08-19診断)"
    },
    "first_seen": "2026-08-19",
    "last_updated": "2026-08-19"
