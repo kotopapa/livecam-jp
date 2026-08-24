@@ -61,3 +61,6 @@ python site/build.py                            # 配信ファイル生成
 - **画像URL直リンク禁止を明記する運営者**: 水資源機構 吉野川管理所(早明浦・池田・新宮・富郷)、中山寺。→ 既存の早明浦(camDisp11)・富郷(camDisp31)は要再確認
 - 調査エージェントのWebSearchは1セッション200回上限。まとめサイト(cametan/livecam.asia/wcmap)をリンク集として一次サイトへ辿る方式が有効。Nominatimは並列調査で429になるため国土地理院AddressSearch APIを代替に使う
 - Canon(`/-wvhttp-01-/GetOneShot`)・Panasonic(`/SnapshotJPEG?Resolution=`)・AXIS(`/axis-cgi/jpg/image.cgi`)のネットワークカメラ直公開は動的DNS(netvolante.jp/mydns.jp/miemasu.net)で見つかる。運営者公式ページからリンクされているもののみ採用
+- **都度解決型の追加パターン（2026-08-25）**: 1台ごとに参照ページ→`kochi_suibo`/`sizenken`型（monitor/main.py ref_camsブロック）、一覧1リクエストで全台→`saitama_flood`/`takashima_river`/`higashiomi_river`/`yamaguchi_romen`型（共通ループ）、POST解決→`shimanto_kasen`。新型を足したら schema enum・monitor/check.py・**アプリの FeedType と camera_repository.imageUrlFor** の4箇所に配線（アプリ側はリリースまで「再生非対応」表示になる）
+- **youtube_channel型は /live が1本にしか解決しない**ため、1チャンネルで複数拠点を同時配信する運営者(アウトバーン・高野町・RNB等)には channel_id を付けない（同じ映像になる）
+- 運営者の明示的な断り（「無断転載禁止」「直接リンクはご遠慮」）があるものは技術的に取れても実装しない: ロードネット滋賀・山口県道路見えるナビ・三好市観光カメラ（取得経路は docs/research_followups_2026-08-25.md に記録済み、照会して許諾が得られれば即実装可）
