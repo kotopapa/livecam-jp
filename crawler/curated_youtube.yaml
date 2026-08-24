@@ -1868,7 +1868,7 @@ cameras:
   - id: curated-kashiwa-r16
     name: 柏 国道16号（大井）
     operator: "電材センター"
-    video_id: "g5LZWZZ1GJQ"
+    video_id: "TbLQHnIVniM"
     category: road
     prefecture: "12"
     lat: 35.842
@@ -2013,7 +2013,7 @@ cameras:
   - id: curated-kamogawa-maehara
     name: 鴨川 前原海岸
     operator: "波のスケッチ"
-    video_id: "LWJPoRLAo5w"
+    video_id: "lEcdg6Xx7t4"
     category: coast
     prefecture: "12"
     lat: 35.113
@@ -2345,15 +2345,6 @@ cameras:
     prefecture: "30"
     lat: 33.493
     lng: 135.672
-
-  - id: curated-kisakihama
-    name: 宮崎 木崎浜（サーフポイント）
-    operator: "ii-nami（いい波プロジェクト）"
-    video_id: "lXChKGR5ibM"
-    category: coast
-    prefecture: "45"
-    lat: 31.858
-    lng: 131.462
 
   - id: curated-ushibuka-rkk
     name: 天草 牛深港
@@ -3049,7 +3040,7 @@ cameras:
   - id: curated-r2-b768c9cb
     name: 大山（大山観光局）
     operator: "大山観光局"
-    video_id: "_zBo6YE_Aj4"
+    video_id: "VDtMfauGMew"
     category: scenic
     prefecture: "31"
     lat: 35.3873
@@ -4588,26 +4579,6 @@ cameras:
     lng: 131.928513
     note: 座標は蒲江港側(実際は沖合約5kmの深島)。海況・船舶確認用。oEmbed埋め込み可確認済み
 
-  - id: curated-iinami-aoshima
-    name: 宮崎 青島（波情報カメラ）
-    operator: いい波プロジェクト（ii-nami.com）
-    video_id: jKJXDBrS99o
-    category: coast
-    prefecture: "45"
-    lat: 31.803978
-    lng: 131.464142
-    note: サーフィン波情報の無料公開配信。oEmbed埋め込み可確認済み
-
-  - id: curated-iinami-kisakihama
-    name: 宮崎 木崎浜（波情報カメラ）
-    operator: いい波プロジェクト（ii-nami.com）
-    video_id: IKxO75Bn1Ok
-    category: coast
-    prefecture: "45"
-    lat: 31.832977
-    lng: 131.441925
-    note: サーフィンセンター前。無料公開配信。oEmbed埋め込み可確認済み
-
   - id: curated-tokushimagas-yoshinogawa
     name: 吉野川河口（徳島ガス）
     operator: 徳島ガス協業組合
@@ -4660,3 +4631,4234 @@ cameras:
     lat: 34.934258
     lng: 139.948578
     note: 市公式の24時間配信(千倉の港・海岸)。oEmbed埋め込み可確認済み
+
+  # ===== 2026-08-25 全国空白地帯・離島・ジャンル横断調査分 (423件) =====
+  - id: curated-bakunovision-kokusaidori
+    name: "国際通り（バクノビジョン前）"
+    operator: "バクノビジョン"
+    video_id: "D0hiHTAbu2A"
+    category: "other"
+    prefecture: "47"
+    lat: 26.214626
+    lng: 127.68428
+    note: "oEmbed 200 / 24時間ライブ。那覇市松尾2-1"
+
+  - id: curated-laguna-garden-ginowan
+    name: "宜野湾海浜公園・東シナ海（ラグナガーデンホテル）"
+    operator: "Laguna Garden Hotel"
+    video_id: "o7i9-ZK0U6c"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.281155
+    lng: 127.737572
+    note: "oEmbed 200 / ホテル公式24時間ライブ。宜野湾市真志喜4-1-1"
+
+  - id: curated-kintaka-naha-4screen
+    name: "那覇新港・泊大橋・クルーズターミナル（4画面）"
+    operator: "KIN-TAKA"
+    video_id: "HMK1dPnJZXI"
+    category: "port"
+    prefecture: "47"
+    lat: 26.235369
+    lng: 127.694565
+    note: "oEmbed 200。個人チャンネルだが運営者=チャンネル名。同チャンネルに kwfvATRs5MA(那覇新港・空港北側) / lYoxW4wkOZQ(泊大橋〜曙 渋滞) / Mc3OxQnVSrI(クルーズターミナル) の単独ライブもあり(いずれも oEmbed 200)。座標=那覇市安謝"
+
+  - id: curated-kintaka-tomari-ohashi
+    name: "泊大橋〜曙（国道58号 渋滞状況）"
+    operator: "KIN-TAKA"
+    video_id: "lYoxW4wkOZQ"
+    category: "road"
+    prefecture: "47"
+    lat: 26.2354
+    lng: 127.6946
+    note: "oEmbed 200"
+
+  - id: curated-kintaka-naha-cruise-terminal
+    name: "那覇クルーズターミナル・泊港入口"
+    operator: "KIN-TAKA"
+    video_id: "Mc3OxQnVSrI"
+    category: "port"
+    prefecture: "47"
+    lat: 26.2295
+    lng: 127.679
+    note: "oEmbed 200。座標=那覇クルーズターミナル概算"
+
+  - id: curated-kariyushi-beach
+    name: "かりゆしビーチ"
+    operator: "Kariyushi Hotels"
+    video_id: "THryehCFhUU"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.532156
+    lng: 127.930099
+    note: "oEmbed 200 / @Kariyushi.Hotels の /live から解決。名護市喜瀬1996"
+
+  - id: curated-niruya-kanaya-bise
+    name: "備瀬から伊江島タッチュー（ニルヤカナヤBISE）"
+    operator: "ニルヤカナヤBISE"
+    video_id: "VyT694OcIHM"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.701693
+    lng: 127.884453
+    note: "oEmbed 200。本部町備瀬"
+
+  - id: curated-yukurina-resort-motobu
+    name: "ゆくりなリゾート沖縄 海風（本部町石川）"
+    operator: "ゆくりなリゾート沖縄"
+    video_id: "iisltM5Ee54"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.692402
+    lng: 127.881859
+    note: "oEmbed 200"
+
+  - id: curated-cahaya-bulan-bise
+    name: "cafe CAHAYA BULAN（本部町備瀬・東シナ海）"
+    operator: "CAHAYA BULAN"
+    video_id: "5ZIw5x5jnQg"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.702049
+    lng: 127.87986
+    note: "oEmbed 200 / 4K 24時間ライブ。備瀬429"
+
+  - id: curated-arimabaru-beach-motobu
+    name: "ありまばるビーチリゾート（本部町具志堅）"
+    operator: "ありまばるチャンネル"
+    video_id: "LoeukVlOVOo"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.694214
+    lng: 127.912445
+    note: "oEmbed 200 / チャンネル /live から解決"
+
+  - id: curated-kaiyohaku-tomidai
+    name: "海洋博公園 熱帯ドリームセンター遠見台（エメラルドビーチ）"
+    operator: "国営沖縄記念公園（海洋博公園・沖縄美ら海水族館）"
+    video_id: "lfN88SfMCh4"
+    category: "scenic"
+    prefecture: "47"
+    lat: 26.693777
+    lng: 127.878372
+    note: "oEmbed 200 / 公式チャンネル。既登録の黒潮の海(cVm1NrAI_f8)とは別カメラ"
+
+  - id: curated-motobu-terrace
+    name: "モトブテラス（本部町上空・伊江島）"
+    operator: "Motobu Terrace"
+    video_id: "Tlc3uegvdrQ"
+    category: "scenic"
+    prefecture: "47"
+    lat: 26.654192
+    lng: 127.909401
+    note: "oEmbed 200。伊野波150-18"
+
+  - id: curated-transit-cafe-chatan
+    name: "トランジットカフェ（北谷町宮城海岸）"
+    operator: "Transit Café"
+    video_id: "Yq-tvHhSJN4"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.330542
+    lng: 127.744049
+    note: "oEmbed 200 / 24時間。既登録のオーシャンビュー砂辺(vA_41GBLxVU)と近接だが別運営"
+
+  - id: curated-maedamisaki-blue-cave
+    name: "真栄田岬（青の洞窟 海況）"
+    operator: "真栄田岬管理事務所（青の洞窟チャンネル）"
+    video_id: "mFSKW2VeYHo"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.430632
+    lng: 127.762749
+    note: "oEmbed 200 / チャンネル /live から解決。maedamisaki.jp"
+
+  - id: curated-teiten-ryugudori
+    name: "国際通り 竜宮通り入口"
+    operator: "定点カメラ部沖縄"
+    video_id: "VpDoK4Yet_o"
+    category: "other"
+    prefecture: "47"
+    lat: 26.218222
+    lng: 127.689529
+    note: "oEmbed 200。既登録の牧志交番前(se05Vc8g_TY)と同運営の別カメラ"
+
+  - id: curated-okichan-nishihara-urasoe
+    name: "西原町 てだこ浦西駅周辺（イオンモール浦西）"
+    operator: "8131 okichan"
+    video_id: "wCmEcbNro0M"
+    category: "other"
+    prefecture: "47"
+    lat: 26.245747
+    lng: 127.754967
+    note: "oEmbed 200 / チャンネル /live。同チャンネルに恩納村ムーンビーチ(国道58号・前兼久漁港)と国際通り安里交差点のライブもあり(video_id 未解決、/streams 要確認)"
+
+  - id: curated-kbn-seto-ohashi
+    name: "瀬戸大橋（与島 橋脚上）"
+    operator: "KBN（香川テレビ放送網）"
+    video_id: "xrb4L3p1eHY"
+    category: "scenic"
+    prefecture: "37"
+    lat: 34.389088
+    lng: 133.818939
+    note: "oEmbed 200。ケーブルテレビ局公式。本四高速ではなくKBN設置"
+
+  - id: curated-cms-sunport-takamatsu
+    name: "サンポート高松（高松港）"
+    operator: "ケーブルメディア四国(CMS)"
+    video_id: "jxG3qZd6xKo"
+    category: "port"
+    prefecture: "37"
+    lat: 34.352398
+    lng: 134.047791
+    note: "oEmbed 200 / 高松シンボルタワー設置"
+
+  - id: curated-funenotaiikukan
+    name: "旧香川県立体育館（船の体育館）"
+    operator: "船の体育館 ライブカメラ"
+    video_id: "5PImbqudipc"
+    category: "other"
+    prefecture: "37"
+    lat: 34.350628
+    lng: 134.051651
+    note: "oEmbed 200 / チャンネル /live。運営者はチャンネル名(保存活動団体と推定)"
+
+  - id: curated-takamatsu-kamitenjin
+    name: "高松市上天神 南向き（空港通り）"
+    operator: "定点カメラチャンネル 兵庫県"
+    video_id: "FEFBzlvzfjU"
+    category: "road"
+    prefecture: "37"
+    lat: 34.311382
+    lng: 134.038803
+    note: "oEmbed 200 / 「試験配信中」表記あり。運営者=チャンネル名"
+
+  - id: curated-takayama-koku-koen-2
+    name: "高山航空公園 ライブ配信2"
+    operator: "綾川町高山航空公園"
+    video_id: "xi47AfuVnWA"
+    category: "scenic"
+    prefecture: "37"
+    lat: 34.202869
+    lng: 133.966812
+    note: "oEmbed 200。既登録 leFhfdptn_Y と同運営の第2カメラ(重複か要確認)"
+
+  - id: curated-chichibugahama
+    name: "父母ヶ浜"
+    operator: "三豊市観光交流局 Love, Mitoyo"
+    video_id: "ZM1ZLUzfka4"
+    category: "coast"
+    prefecture: "37"
+    lat: 34.188663
+    lng: 133.64949
+    note: "oEmbed 200 / /live から解決(旧ID u6e_v5ntnyw は【修理中】表記)。夕日の名所"
+
+  - id: curated-kotohira-meteor-asahi
+    name: "金刀比羅宮・象頭山と星空（丸亀）"
+    operator: "Higashiyama`s Labo（朝日新聞宇宙部連携）"
+    video_id: "SqI7x2vgf8Q"
+    category: "scenic"
+    prefecture: "37"
+    lat: 34.19
+    lng: 133.8
+    note: "oEmbed 200。設置は丸亀市内(詳細不明)→座標は金刀比羅宮方向の概算。夜間星空向け"
+
+  - id: curated-ncc-sasebo-port
+    name: "佐世保港"
+    operator: "NCC長崎文化放送"
+    video_id: "Y5OA9z2YiJ4"
+    category: "port"
+    prefecture: "42"
+    lat: 33.165016
+    lng: 129.72049
+    note: "oEmbed 200(旧ID tGaSspbB8wA は403)。座標=万津町"
+
+  - id: curated-ncc-nagasaki-airport
+    name: "長崎空港"
+    operator: "NCC長崎文化放送"
+    video_id: "zNahac5x0Tw"
+    category: "other"
+    prefecture: "42"
+    lat: 32.91518
+    lng: 129.914444
+    note: "oEmbed 200"
+
+  - id: curated-ncm-nagasaki-cityhall
+    name: "長崎市役所屋上（長崎港・女神大橋）"
+    operator: "長崎ケーブルメディア"
+    video_id: "ZoETGE0w5w8"
+    category: "scenic"
+    prefecture: "42"
+    lat: 32.749592
+    lng: 129.879211
+    note: "oEmbed 200"
+
+  - id: curated-ncm-gunkanjima
+    name: "軍艦島（長崎市恐竜博物館から）"
+    operator: "長崎ケーブルメディア"
+    video_id: "pmdZ-D1XOJA"
+    category: "scenic"
+    prefecture: "42"
+    lat: 32.582142
+    lng: 129.744904
+    note: "oEmbed 200 / チャンネル /live とも一致"
+
+  - id: curated-ncm-nabekanmuriyama
+    name: "鍋冠山展望台（長崎夜景）"
+    operator: "長崎ケーブルメディア"
+    video_id: "ECA5G89gogI"
+    category: "scenic"
+    prefecture: "42"
+    lat: 32.729336
+    lng: 129.8694
+    note: "oEmbed 200"
+
+  - id: curated-hibaruyama-1
+    name: "しまばら火張山花公園 第1（雲仙岳）"
+    operator: "Love in Blue（しまばら火張山花公園）"
+    video_id: "32Azf9yJmRI"
+    category: "scenic"
+    prefecture: "42"
+    lat: 32.788944
+    lng: 130.336853
+    note: "oEmbed 200"
+
+  - id: curated-hibaruyama-2
+    name: "しまばら火張山花公園 第2（国道251号・島原IC方面）"
+    operator: "Love in Blue（しまばら火張山花公園）"
+    video_id: "Y5AX5hdA8no"
+    category: "scenic"
+    prefecture: "42"
+    lat: 32.788944
+    lng: 130.336853
+    note: "oEmbed 200 / @loveblue5442 の /live"
+
+  - id: curated-another-rent-nagasaki-airport
+    name: "長崎空港 駐車場・大村湾（アナザーレンタカー）"
+    operator: "アナザーレンタカー 長崎空港店"
+    video_id: "sPOq_two14k"
+    category: "other"
+    prefecture: "42"
+    lat: 32.91518
+    lng: 129.914444
+    note: "oEmbed 200 / 駐車場混雑カメラ"
+
+  - id: curated-qsr-honmyogawa-6point
+    name: "本明川 6地点切替（諫早）"
+    operator: "国土交通省 九州地方整備局 長崎河川国道事務所"
+    video_id: "h5QLt5hj150"
+    category: "river"
+    prefecture: "42"
+    lat: 32.844913
+    lng: 130.048019
+    note: "oEmbed 200 / 「試験配信中」。高城橋・裏山・JR鉄橋など巡回。座標=高城町"
+
+  - id: curated-tnc-yamaguchi-ube-airport
+    name: "山口宇部空港"
+    operator: "テレビ西日本(TNC)"
+    video_id: "NokinTfqIaM"
+    category: "other"
+    prefecture: "35"
+    lat: 33.932217
+    lng: 131.275024
+    note: "oEmbed 200"
+
+  - id: curated-aikan-kintaikyo
+    name: "錦帯橋（橋の駅 展望台から）"
+    operator: "アイ・キャン（岩国のケーブルテレビ）"
+    video_id: "C3Ood13b4Sk"
+    category: "scenic"
+    prefecture: "35"
+    lat: 34.167534
+    lng: 132.179794
+    note: "oEmbed 200。既登録の錦帯橋課公式(tHwWcSdBjjY)とは別アングル"
+
+  - id: curated-aikan-r2-shinminatomachi
+    name: "国道2号 新港町4丁目交差点（岩国港）"
+    operator: "アイ・キャン"
+    video_id: "wkpK0btHs74"
+    category: "road"
+    prefecture: "35"
+    lat: 34.189762
+    lng: 132.22995
+    note: "oEmbed 200"
+
+  - id: curated-aikan-hosori-ohashi
+    name: "錦川 細利大橋（北河内）"
+    operator: "アイ・キャン"
+    video_id: "GJuqIxomRhA"
+    category: "river"
+    prefecture: "35"
+    lat: 34.169106
+    lng: 132.095917
+    note: "oEmbed 200。座標=岩国市下 代表点(要微調整)"
+
+  - id: curated-aikan-bojigatao
+    name: "傍示ヶ峠（国道187号 錦町県境）"
+    operator: "アイ・キャン"
+    video_id: "c3MXSOpCvww"
+    category: "road"
+    prefecture: "35"
+    lat: 34.311035
+    lng: 131.9328
+    note: "oEmbed 200。冬季積雪確認向け。座標=錦町大野代表点"
+
+  - id: curated-aikan-oshima-ohashi
+    name: "大島大橋"
+    operator: "アイ・キャン"
+    video_id: "xGfw98KW8g0"
+    category: "scenic"
+    prefecture: "35"
+    lat: 33.980316
+    lng: 132.183746
+    note: "チャンネル(UCCDCozZz1umL3bOH_WMa-4Q) /live で解決。oEmbed 未確認→要確認。座標=柳井市神代(大島大橋本土側)"
+
+  - id: curated-hagi-kikugahama
+    name: "菊ヶ浜（萩）"
+    operator: "萩大志館"
+    video_id: "MIwitK_brdk"
+    category: "coast"
+    prefecture: "35"
+    lat: 34.416138
+    lng: 131.384445
+    note: "oEmbed 200"
+
+  - id: curated-tys-nihogawa
+    name: "仁保川（tys本社）"
+    operator: "tysテレビ山口"
+    video_id: "qqrGSjdqfdQ"
+    category: "river"
+    prefecture: "35"
+    lat: 34.161926
+    lng: 131.488693
+    note: "oEmbed 200。山口市大内千坊"
+
+  - id: curated-onda-sports-park-ube
+    name: "恩田スポーツパーク（宇部）"
+    operator: "宇部市スポーツ協会"
+    video_id: "Hwvs3OMa4ww"
+    category: "other"
+    prefecture: "35"
+    lat: 33.944817
+    lng: 131.268982
+    note: "oEmbed 200"
+
+  - id: curated-rapport-yuya-nagato
+    name: "ラポールゆや テラス（国道191号・掛淵川）"
+    operator: "長門市文化振興財団"
+    video_id: "dDfCeFu2n4g"
+    category: "scenic"
+    prefecture: "35"
+    lat: 34.373348
+    lng: 131.060364
+    note: "oEmbed 200"
+
+  - id: curated-koganji-yuyawan
+    name: "油谷湾（向岸寺）"
+    operator: "向岸寺"
+    video_id: "FUAKNMnpCmU"
+    category: "coast"
+    prefecture: "35"
+    lat: 34.416718
+    lng: 130.993225
+    note: "oEmbed 200 / 寺院設置 Axis カメラ"
+
+  - id: curated-sugane-ebisubashi
+    name: "錦川 恵比須橋（須万）"
+    operator: "須金地区自主防災"
+    video_id: "0K3thF0EFtM"
+    category: "river"
+    prefecture: "35"
+    lat: 34.216507
+    lng: 131.890137
+    note: "oEmbed 200 / チャンネル /live。運営者=自主防災組織"
+
+  - id: curated-tokushima-bizan-live
+    name: "眉山・新町橋"
+    operator: "徳島 眉山・阿波おどり Live Camera"
+    video_id: "J-fuUG0hCBQ"
+    category: "scenic"
+    prefecture: "36"
+    lat: 34.070232
+    lng: 134.54567
+    note: "oEmbed 200 / チャンネル /live。運営者=チャンネル名"
+
+  - id: curated-tokushima-bunkanomori
+    name: "文化の森総合公園 シンボル広場"
+    operator: "徳島県文化の森総合公園"
+    video_id: "vQ04u6zOhMI"
+    category: "other"
+    prefecture: "36"
+    lat: 34.040089
+    lng: 134.522202
+    note: "oEmbed 200 / @Tokushimabunka の /live"
+
+  - id: curated-tokushima-pref-otanigawa
+    name: "大谷川 鳴門市大麻町大谷"
+    operator: "徳島県 河川整備課"
+    video_id: "xjYDjAubw_A"
+    category: "river"
+    prefecture: "36"
+    lat: 34.174393
+    lng: 134.537415
+    note: "oEmbed 200。徳島県河川整備課は多数の河川カメラをYouTube配信(新池川 zzyaJUs1jws / 鮎喰川 QI2aab1EKlU / 勝浦川飯谷 hNZk_BFIfXc / 園瀬川 7UMre-SDImU / 海部川 kNqx4jorwyU は 401=埋め込み不可)。台帳未登録の有望ソース、チャンネル UCi1H5mkE0g5ye9RQE9trsyQ 精査推奨"
+
+  - id: curated-tokushima-pref-nakagawa-kito
+    name: "那賀川 那賀町木頭出原"
+    operator: "徳島県 河川整備課"
+    video_id: "7SvxNnTq4SE"
+    category: "river"
+    prefecture: "36"
+    lat: 33.760574
+    lng: 134.215485
+    note: "oEmbed 200"
+
+  - id: curated-tokushima-pref-katsuuragawa-komatsushima
+    name: "勝浦川 小松島市江田町中道"
+    operator: "徳島県 河川整備課"
+    video_id: "ROZEUmBLXMc"
+    category: "river"
+    prefecture: "36"
+    lat: 34.017338
+    lng: 134.559265
+    note: "oEmbed 200 (author 徳島県河川整備課3)"
+
+  - id: curated-golf-chibacc-umesato
+    name: "千葉カントリークラブ 梅郷コース"
+    operator: "千葉カントリークラブ"
+    video_id: "KpJEUTLAwgo"
+    category: "other"
+    prefecture: "12"
+    lat: 35.9407
+    lng: 139.8886
+    note: "oEmbed 200 / isLive:true。公式サイト chibacc.co.jp に live_stream 埋め込み(channel=UC23ZFVG_LpV2EzMdYdeERxw)。野田市堤根"
+
+  - id: curated-golf-chibacc-kawama
+    name: "千葉カントリークラブ 川間コース"
+    operator: "千葉カントリークラブ"
+    video_id: "U043Bu7KUXQ"
+    category: "other"
+    prefecture: "12"
+    lat: 35.9872
+    lng: 139.8329
+    note: "oEmbed 200 / isLive:true。channel=UCE2s58gSpG8Idsd6AVu7k7A。野田市尾崎(住所ジオコーディング)"
+
+  - id: curated-golf-chibacc-noda
+    name: "千葉カントリークラブ 野田コース"
+    operator: "千葉カントリークラブ"
+    video_id: "PQbq23tuAH4"
+    category: "other"
+    prefecture: "12"
+    lat: 35.9753
+    lng: 139.8651
+    note: "oEmbed 200 / isLive:true。channel=UCSVGuiepq8jYmd562YU8fWw。野田市蕃昌"
+
+  - id: curated-temple-honkoji-ichikawa
+    name: "本光寺（市川）本堂・駐車場"
+    operator: "日蓮宗 光胤山 本光寺"
+    video_id: "yGVFJOigXIY"
+    category: "other"
+    prefecture: "12"
+    lat: 35.7559
+    lng: 139.9536
+    note: "oEmbed 200 / @honkouji/live canonical isLive:true。24時間ライブ(遥拝用)。市川市大野町3-1695"
+
+  - id: curated-scenic-tateyama-shiroyama-park
+    name: "館山 城山公園"
+    operator: "館山城・城山公園（tateyamacastle.jp）"
+    video_id: "BGy9PRQQ0wA"
+    category: "scenic"
+    prefecture: "12"
+    lat: 34.9841
+    lng: 139.8555
+    note: "oEmbed 200 / isLive:true。公式 tateyamacastle.jp に埋め込み。館山市館山362"
+
+  - id: curated-scenic-tateyama-castle-summit
+    name: "館山城 山頂（市街・館山湾）"
+    operator: "館山城・城山公園（tateyamacastle.jp）"
+    video_id: "LGJ44kmVA6I"
+    category: "scenic"
+    prefecture: "12"
+    lat: 34.9841
+    lng: 139.8555
+    note: "oEmbed 200 / isLive:true。公式サイト埋め込み"
+
+  - id: curated-station-motoyawata-north
+    name: "JR本八幡駅 北口"
+    operator: "千葉県タクシー協会京葉支部"
+    video_id: "3NZQIHZziuw"
+    category: "other"
+    prefecture: "12"
+    lat: 35.7218
+    lng: 139.9281
+    note: "oEmbed 200 / @taxichiba/live canonical isLive:true。同チャンネルに北口タクシー乗り場(7hrKIqCuXwo)・南口(CHY8L4g02lM)もあるが取得時 isLiveNow:false→再確認"
+
+  - id: curated-station-tobu-kamagaya
+    name: "東武鎌ヶ谷駅 東口タクシー乗り場"
+    operator: "千葉県タクシー協会京葉支部"
+    video_id: "vt1eDSAychw"
+    category: "other"
+    prefecture: "12"
+    lat: 35.7648
+    lng: 139.9986
+    note: "oEmbed 200 / isLive:true。鎌ケ谷市道野辺本町1"
+
+  - id: curated-station-matsudo-east
+    name: "松戸駅 東口"
+    operator: "Mi ra i（@mirai9841）"
+    video_id: "XwHIpJmUZOE"
+    category: "other"
+    prefecture: "12"
+    lat: 35.7783
+    lng: 139.903
+    note: "oEmbed 200 / @mirai9841/live isLive:true。個人チャンネル(チャンネル名=運営者)。座標は松戸駅(住所ジオコーディング)"
+
+  - id: curated-road-kanteikyoku-matsudo-r6
+    name: "国道6号 松戸二ツ木（かんてい局松戸店前）"
+    operator: "質屋かんてい局松戸店"
+    video_id: "Qk5cHKWsRlE"
+    category: "road"
+    prefecture: "12"
+    lat: 35.8198
+    lng: 139.9265
+    note: "oEmbed 200 / isLive:true。店舗設置の道路カメラ(既存『電材買取センター柏店 国道16号』と同ジャンル)"
+
+  - id: curated-road-mobara-hayano-hobundo
+    name: "県道27号 茂原大多喜線 茂原早野（豊文堂前）"
+    operator: "豊文堂"
+    video_id: "U5YtzBjhqag"
+    category: "road"
+    prefecture: "12"
+    lat: 35.4154
+    lng: 140.2919
+    note: "oEmbed 200 / channel UCq9ZbvWlSkPbMkLlHFEDuNQ /live isLive:true。一宮川早野の県河川カメラ近傍で冠水確認に有用"
+
+  - id: curated-coast-chosei-hitotsumatsu
+    name: "長生村 一松海岸（潮位監視）"
+    operator: "千葉県長生村"
+    video_id: "47xoP12hJxs"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.3909
+    lng: 140.374
+    note: "oEmbed 200 / isLive:true。自治体公式カメラ、利用条件未記載→unknown"
+
+  - id: curated-coast-hebara-wowpow-1
+    name: "勝浦 部原ビーチ (1)"
+    operator: "wowpowcom"
+    video_id: "G2tN6QaDbJQ"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.1682
+    lng: 140.3253
+    note: "oEmbed 200 / isLive:true。既存サンセットタウン(部原)とは別運営者"
+
+  - id: curated-coast-hebara-wowpow-2
+    name: "勝浦 部原ビーチ (2)"
+    operator: "wowpowcom"
+    video_id: "fPIPRTQpCao"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.1682
+    lng: 140.3253
+    note: "oEmbed 200 / @wowpowcom/live canonical isLive:true"
+
+  - id: curated-coast-boso-clubhouse-1
+    name: "金谷 房総クラブハウス カメラ1"
+    operator: "ネットワークカメラライブ（房総クラブハウス）"
+    video_id: "w6Z3l3S-s5Y"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.1739
+    lng: 139.8364
+    note: "oEmbed 200 / isLive:true。既存台帳に同チャンネル(_IegwToRnFw)採用実績あり。富津市金谷"
+
+  - id: curated-coast-boso-clubhouse-2
+    name: "金谷 房総クラブハウス カメラ2"
+    operator: "ネットワークカメラライブ（房総クラブハウス）"
+    video_id: "Rp6Ut0kBQoE"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.1739
+    lng: 139.8364
+    note: "oEmbed 200 / isLive:true"
+
+  - id: curated-parking-narita-superparking-1
+    name: "成田空港 スーパーパーキング（第3ターミナル至近）"
+    operator: "SUPER PARKING"
+    video_id: "KBwgvcdA7Qo"
+    category: "other"
+    prefecture: "12"
+    lat: 35.7815
+    lng: 140.3799
+    note: "oEmbed 200 / isLive:true。駐車場混雑カメラ。成田市取香"
+
+  - id: curated-parking-narita-superparking-2
+    name: "成田空港 スーパーパーキング2号店"
+    operator: "SUPER PARKING"
+    video_id: "qGCGeDxIXlo"
+    category: "other"
+    prefecture: "12"
+    lat: 35.7815
+    lng: 140.3799
+    note: "oEmbed 200 / isLive:true。公式 super-parking295.com"
+
+  - id: curated-farm-iizasa-narita-2
+    name: "IIZASA牧場 牛舎-2（成田）"
+    operator: "株式会社IIZASA牧場"
+    video_id: "WowFZXMJRrw"
+    category: "healing"
+    prefecture: "12"
+    lat: 35.7969
+    lng: 140.4326
+    note: "oEmbed 200 / isLive:true。牛舎-1(Procsg56-tg)はoEmbed 401=埋め込み不可のため除外"
+
+  - id: curated-farm-isb-katori-1
+    name: "ISBファーム 牛舎-1（香取）"
+    operator: "株式会社ISBファーム"
+    video_id: "Iv-NusEwc3k"
+    category: "healing"
+    prefecture: "12"
+    lat: 35.7874
+    lng: 140.6204
+    note: "oEmbed 200 / @isb9679/live isLive:true。香取市志高"
+
+  - id: curated-farm-iwai-asahi-4
+    name: "イワイ牧場 せんば牛 牛舎-4（旭）"
+    operator: "株式会社イワイ牧場"
+    video_id: "HLGb3VrdG_E"
+    category: "healing"
+    prefecture: "12"
+    lat: 35.6988
+    lng: 140.6577
+    note: "oEmbed 200。ライブ中判定は未取得(YouTube側ブロック)→要確認。牛舎-2 cUdjoh5786g もoEmbed 200"
+
+  - id: curated-mboso-shiramazu-hanabatake
+    name: "白間津のお花畑"
+    operator: "南房総市"
+    video_id: "--I6cdnC4-U"
+    category: "scenic"
+    prefecture: "12"
+    lat: 34.9227
+    lng: 139.9332
+    note: "oEmbed 200 / isLive:true。市公式 mboso-etoko.jp/info/livecamera 埋め込み。既存の枇杷倶楽部/富楽里/潮風王国と同シリーズ"
+
+  - id: curated-mboso-rakunou-no-sato
+    name: "千葉県酪農のさと"
+    operator: "南房総市"
+    video_id: "LBNbGp4nIAI"
+    category: "healing"
+    prefecture: "12"
+    lat: 35.093
+    lng: 139.9755
+    note: "oEmbed 200 / isLive:true。南房総市大井686"
+
+  - id: curated-mboso-wadaura-beach
+    name: "和田浦海岸"
+    operator: "南房総市"
+    video_id: "VSwkTmST2Mk"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.0434
+    lng: 140.017
+    note: "oEmbed 200 / isLive:true"
+
+  - id: curated-mboso-haraoka-pier
+    name: "原岡海岸（岡本桟橋）"
+    operator: "南房総市"
+    video_id: "iM2PC7D_BJs"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.0477
+    lng: 139.8402
+    note: "oEmbed 200 / isLive:true"
+
+  - id: curated-mboso-iwai-beach
+    name: "岩井海岸"
+    operator: "南房総市"
+    video_id: "68UXF0bFjac"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.0942
+    lng: 139.8443
+    note: "oEmbed 200 / isLive:true。南房総市久枝"
+
+  - id: curated-coast-kamogawa-seaside-2026
+    name: "鴨川 前原海岸（鴨川シーサイド）"
+    operator: "波のスケッチ"
+    video_id: "lEcdg6Xx7t4"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.1015
+    lng: 140.1038
+    note: "既存『鴨川 前原海岸』(LWJPoRLAo5w, 同チャンネル)の更新候補。channel UCEDn0tLxpVqEvI3NJyE2DRA の現行ライブ=lEcdg6Xx7t4 isLive:true"
+
+  - id: curated-scenic-kanozan-kujukutani
+    name: "鹿野山 九十九谷展望公園"
+    operator: "Green Base"
+    video_id: "H8J6kZgW5eA"
+    category: "scenic"
+    prefecture: "12"
+    lat: 35.2525
+    lng: 139.9606
+    note: "oEmbed 200 / @greenbase6881/live isLive:true。雲海スポット。livecam.asiaでは『期間限定』表記→継続性に注意。君津市鹿野山119-1"
+
+  - id: curated-coast-isao-studio-tokyo-bay
+    name: "習志野 茜浜（東京湾・イサオスタジオ）"
+    operator: "ISAO Studio"
+    video_id: "33JZpyHyyXE"
+    category: "coast"
+    prefecture: "12"
+    lat: 35.6736
+    lng: 140.0019
+    note: "oEmbed 200。/live canonical 未取得のためライブ中か要確認。座標=習志野市茜浜(推定)"
+
+  - id: curated-zoo-x-zoo-llama-matsudo
+    name: "エクス動物園 リャマ（松戸）"
+    operator: "エクス動物園（エクスアリーナ松戸）"
+    video_id: "jKRnJrUE_Vg"
+    category: "healing"
+    prefecture: "12"
+    lat: 35.7583
+    lng: 139.9375
+    note: "oEmbed 200 / isLive:true。松戸市高塚新田"
+
+  - id: curated-other-rc-stadium-sodegaura
+    name: "RCスタジアム袖ケ浦（K2 International Circuit）"
+    operator: "RCスタジアム袖ケ浦"
+    video_id: "4EqSSbpMMEU"
+    category: "other"
+    prefecture: "12"
+    lat: 35.3785
+    lng: 140.0404
+    note: "oEmbed 200 / @RC-bs7jp/live isLive:true。Z_CUFsN4IWY も同運営。県道も映る。袖ケ浦市百目木1057"
+
+  - id: curated-other-la-dogsports-sammu
+    name: "LA DOGSPORTS FIELD（山武）"
+    operator: "エルエードッグスポーツフィールド"
+    video_id: "SW27zEnLGrM"
+    category: "other"
+    prefecture: "12"
+    lat: 35.5609
+    lng: 140.4577
+    note: "oEmbed 200 / @ladogs/live isLive:true"
+
+  - id: curated-other-dogpark-tenten-nagareyama
+    name: "Dogpark&Cafe TENTEN（流山）"
+    operator: "Dogpark and cafe TENTEN"
+    video_id: "ihqB89fen2g"
+    category: "other"
+    prefecture: "12"
+    lat: 35.8417
+    lng: 139.9122
+    note: "oEmbed 200 / isLive:true"
+
+  - id: curated-sky-maihama-livecamera
+    name: "舞浜上空（東京ディズニーリゾート方面）"
+    operator: "舞浜ライブカメラ- MaihamaLivecamera -"
+    video_id: "v_GOxe9PSvY"
+    category: "other"
+    prefecture: "12"
+    lat: 35.6321
+    lng: 139.8816
+    note: "oEmbed 200 / @maihamalivecamera/live isLive:true。個人チャンネル(チャンネル名=運営者)。配信IDが頻繁に更新される(過去 1cnbKGLJ_mQ 等)→channel追従推奨"
+
+  - id: curated-shrine-toudaijima-inari-urayasu
+    name: "当代島稲荷神社（浦安）"
+    operator: "浦安稲荷神社"
+    video_id: "NEDKV62DqhY"
+    category: "other"
+    prefecture: "12"
+    lat: 35.6666
+    lng: 139.8902
+    note: "oEmbed 200 / isLive:true だがタイトル『試験配信』。安定性要確認"
+
+  - id: curated-golf-wakkanai-cc
+    name: "稚内カントリークラブ コース"
+    operator: "稚内カントリークラブ"
+    video_id: "Vxi-QVgKG1o"
+    category: "scenic"
+    prefecture: "01"
+    lat: 45.39731
+    lng: 141.81382
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。24時間ライブ。座標:Nominatim(稚内市声問村恵北)。geo=稚内カントリークラブ, 稚内幌延線, 恵北, 声問村, 稚内市, 宗谷総合振興局, 北海道, 北海道地方, 098-6643, 日本"
+
+  - id: curated-golf-izumi-parktown
+    name: "泉パークタウンゴルフ倶楽部"
+    operator: "泉パークタウンゴルフ倶楽部"
+    video_id: "P51GLCIYwN4"
+    category: "scenic"
+    prefecture: "04"
+    lat: 38.35422
+    lng: 140.8626
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(仙台市泉区明通)。geo=明通四丁目, 泉区, 仙台市, 宮城県, 981-3206, 日本"
+
+  - id: curated-golf-nikko-cc
+    name: "日光カンツリー倶楽部"
+    operator: "日光カンツリー倶楽部"
+    video_id: "SoCdVy0detA"
+    category: "scenic"
+    prefecture: "09"
+    lat: 36.77568
+    lng: 139.61172
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(日光市所野)。geo=所野, 日光市, 栃木県, 321-1421, 日本"
+
+  - id: curated-golf-crown-cc
+    name: "クラウンカントリークラブ"
+    operator: "クラウンカントリークラブ"
+    video_id: "rW5-1OKPiJk"
+    category: "scenic"
+    prefecture: "21"
+    lat: 35.31264
+    lng: 137.32851
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(瑞浪市陶町猿爪)。geo=陶町猿爪, 瑞浪市, 岐阜県, 509-6361, 日本"
+
+  - id: curated-golf-kawana-fuji15
+    name: "川奈ホテルゴルフコース 富士コース15番"
+    operator: "川奈ホテル（プリンスホテル）"
+    video_id: "jrmeLQnVH0Q"
+    category: "scenic"
+    prefecture: "22"
+    lat: 34.94005
+    lng: 139.14006
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(伊東市川奈)。geo=川奈ホテル, 伊東川奈八幡野線, 川奈, 伊東市, 静岡県, 414-0051, 日本"
+
+  - id: curated-golf-amagi-kogen
+    name: "天城高原ゴルフコース"
+    operator: "東急リゾーツ＆ステイ（伊豆天城リゾート公式ch）"
+    video_id: "5ih6YCzC0H4"
+    category: "scenic"
+    prefecture: "22"
+    lat: 34.91611
+    lng: 139.00524
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。同chに天城高原サービスセンター(sptRTsRU-n8)もあり。座標:Nominatim(伊豆市菅引)。geo=菅引, 伊豆市, 静岡県, 410-2507, 日本"
+
+  - id: curated-golf-amagi-service-center
+    name: "天城高原サービスセンター前"
+    operator: "東急リゾーツ＆ステイ（伊豆天城リゾート公式ch）"
+    video_id: "sptRTsRU-n8"
+    category: "other"
+    prefecture: "22"
+    lat: 34.91611
+    lng: 139.00524
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:天城高原GCと同地点(Nominatim)。geo=菅引, 伊豆市, 静岡県, 410-2507, 日本"
+
+  - id: curated-golf-takanosu
+    name: "鷹の巣ゴルフクラブ"
+    operator: "鷹の巣ゴルフクラブ"
+    video_id: "o6JceZrWaEQ"
+    category: "scenic"
+    prefecture: "34"
+    lat: 34.36879
+    lng: 132.20831
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(廿日市市河津原)。geo=河津原, 廿日市市, 広島県, 738-0203, 日本"
+
+  - id: curated-golf-setouchi-resort
+    name: "瀬戸内ゴルフリゾート"
+    operator: "瀬戸内ゴルフリゾート（リソル）"
+    video_id: "wonwvsHHP6g"
+    category: "scenic"
+    prefecture: "34"
+    lat: 34.30743
+    lng: 132.8639
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(竹原市吉名町)。geo=瀬戸内ゴルフリゾート, 竹原吉名線, 吉名町, 竹原市, 広島県, 725-0013, 日本"
+
+  - id: curated-golf-emerald-coast-miyako
+    name: "宮古島 エメラルドコーストゴルフリンクス"
+    operator: "KuROKO-宮古島映像-（個人ch。エメラルドコーストGL設置カメラ）"
+    video_id: "ij8oqydLVLo"
+    category: "scenic"
+    prefecture: "47"
+    lat: 24.72599
+    lng: 125.28342
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。運営者はチャンネル名扱い。座標:Nominatim(宮古島市下地与那覇)。geo=エメラルドコーストゴルフリンクス, 1, 宮古島市, 沖縄県, 906-0305, 日本"
+
+  - id: curated-golf-takanezawa-park-daseki
+    name: "高根沢ゴルフパーク 打席"
+    operator: "高根沢ゴルフパーク（ch: 高根沢八十七）"
+    video_id: "5mIEuHXYmgY"
+    category: "other"
+    prefecture: "09"
+    lat: 36.6346
+    lng: 139.99508
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。練習場打席の混雑確認用。座標:Nominatim(高根沢町石末)。geo=石末, 宇都宮那須烏山線, 大字石末, 高根沢町, 塩谷郡, 栃木県, 329-1233, 日本"
+
+  - id: curated-other-kijima-kogen-park
+    name: "城島高原パーク"
+    operator: "城島高原cam（城島高原オペレーションズ公式ページ埋め込み）"
+    video_id: "lK5hrCFbVd8"
+    category: "scenic"
+    prefecture: "44"
+    lat: 33.26449
+    lng: 131.42686
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(別府市城島高原)。geo=城島高原パーク, 別府市, 大分県, 874-8666, 日本"
+
+  - id: curated-shrine-tarumaesan
+    name: "樽前山神社 参道・境内"
+    operator: "街角ライブカメラ（YouTubeチャンネル名。樽前山神社設置）"
+    video_id: "J8E-prFNjOA"
+    category: "scenic"
+    prefecture: "01"
+    lat: 42.67895
+    lng: 141.59441
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。運営者はチャンネル名扱い(要確認)。座標:Nominatim(苫小牧市高丘)。geo=高丘, 苫小牧市, 胆振総合振興局, 北海道, 北海道地方, 053-0035, 日本"
+
+  - id: curated-shrine-hiraoka
+    name: "枚岡神社 境内"
+    operator: "枚岡神社"
+    video_id: "1WtItKYIVA4"
+    category: "scenic"
+    prefecture: "27"
+    lat: 34.66984
+    lng: 135.65048
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。公式ch。座標:Nominatim(東大阪市出雲井町)。geo=枚岡神社, 枚岡停車場線, 豊浦町, 東大阪市, 大阪府, 579-8031, 日本"
+
+  - id: curated-temple-tsukiji-hongwanji
+    name: "築地本願寺"
+    operator: "築地本願寺"
+    video_id: "ohYeZs4F0NY"
+    category: "scenic"
+    prefecture: "13"
+    lat: 35.6666
+    lng: 139.77213
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。公式ch「築地本願寺LIVE」。座標:Nominatim(中央区築地3)。geo=築地本願寺, 1, 築地三丁目, 築地, 中央区, 東京都, 104-8435, 日本"
+
+  - id: curated-temple-minobusan-kuonji
+    name: "身延山久遠寺 境内"
+    operator: "身延山久遠寺"
+    video_id: "WQWiX76xJwA"
+    category: "scenic"
+    prefecture: "19"
+    lat: 35.38123
+    lng: 138.42704
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(身延町身延)。geo=久遠寺, 身延, 身延町, 南巨摩郡, 山梨県, 409-2593, 日本"
+
+  - id: curated-temple-hieizan-daireien-parking
+    name: "比叡山延暦寺大霊園 大駐車場"
+    operator: "比叡山延暦寺大霊園"
+    video_id: "UsmzDJtTraM"
+    category: "other"
+    prefecture: "25"
+    lat: 35.16201
+    lng: 135.87801
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。駐車場混雑用。座標:Nominatim(大津市伊香立上龍華町)。geo=伊香立上龍華町, 大津市, 滋賀県, 日本"
+
+  - id: curated-shrine-toyokawa-susanoo
+    name: "豊川進雄神社 境内"
+    operator: "paul gotto（個人ch。豊川進雄神社公式サイトのライブカメラページに掲載）"
+    video_id: "B5HGavwR3zk"
+    category: "scenic"
+    prefecture: "23"
+    lat: 34.82596
+    lng: 137.3963
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(豊川市)。geo=豊川進雄神社, 宿谷川線, 西豊町一丁目, 豊川西町, 豊川市, 愛知県, 442-0068, 日本"
+
+  - id: curated-temple-toyokawa-inari
+    name: "豊川稲荷 境内"
+    operator: "paul gotto（個人ch。its-i.com掲載では運営者=豊川稲荷）"
+    video_id: "pzFuh7ASWG4"
+    category: "scenic"
+    prefecture: "23"
+    lat: 34.82582
+    lng: 137.39227
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(豊川市豊川町)。geo=豊川稲荷, 宿谷川線, 中央通一丁目, 旭町, 豊川市, 愛知県, 442-0068, 日本"
+
+  - id: curated-temple-byodoji
+    name: "平等寺（四国霊場第22番）"
+    operator: "平等寺"
+    video_id: "xsIuKwfHs84"
+    category: "scenic"
+    prefecture: "36"
+    lat: 33.85173
+    lng: 134.58251
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。24時間ライブ(リモート参拝)。座標:Nominatim(阿南市新野町)。geo=平等寺, 新野町, 阿南市, 徳島県, 日本"
+
+  - id: curated-kyoto-jonangu
+    name: "京都 城南宮"
+    operator: "京都観光混雑状況Live"
+    video_id: "5hlP34DHcFk"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.9506
+    lng: 135.74699
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=城南宮, 中島鳥羽離宮町, 伏見区, 京都市, 京都府, 612-8459, 日本"
+
+  - id: curated-kyoto-jingoji
+    name: "京都 神護寺"
+    operator: "京都観光混雑状況Live"
+    video_id: "rjQZjpEjnc4"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.05448
+    lng: 135.66999
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=神護寺, 神護寺線, 梅ケ畑高雄町, 右京区, 京都市, 京都府, 616-0000, 日本"
+
+  - id: curated-kyoto-oharano
+    name: "京都 大原野神社"
+    operator: "京都観光混雑状況Live"
+    video_id: "mEqMdNLcpGY"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.95838
+    lng: 135.65534
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=西京区 大原野南春日町, 太鼓橋, 西京区, 京都市, 京都府, 615-0000, 日本"
+
+  - id: curated-kyoto-jakkoin
+    name: "京都 寂光院"
+    operator: "京都観光混雑状況Live"
+    video_id: "QKqHuf0O3yw"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.12406
+    lng: 135.82082
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=寂光院, 草生上野線, 大原草生町, 大原, 左京区, 京都市, 京都府, 601-1242, 日本"
+
+  - id: curated-kyoto-zuishinin
+    name: "京都 随心院"
+    operator: "京都観光混雑状況Live"
+    video_id: "5Ica9fIP_Ng"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.96023
+    lng: 135.81659
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=隨心院, 旧奈良街道, 小野西浦, 山科区, 京都市, 京都府, 607-8257, 日本"
+
+  - id: curated-kyoto-daigoji
+    name: "京都 醍醐寺"
+    operator: "京都観光混雑状況Live"
+    video_id: "Z37hOWHiGKw"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.95134
+    lng: 135.82093
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=下醍醐, 醍醐大津線, 醍醐伽藍町, 伏見区, 京都市, 京都府, 601-1351, 日本"
+
+  - id: curated-kyoto-woody-keihoku
+    name: "京都 道の駅ウッディー京北"
+    operator: "京都観光混雑状況Live"
+    video_id: "P0jNz4sEbsg"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.15607
+    lng: 135.63317
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=道の駅ウッディー京北, 1, 京北, 右京区, 京都市, 京都府, 601-0251, 日本"
+
+  - id: curated-kyoto-eikando
+    name: "京都 永観堂（禅林寺）"
+    operator: "京都観光混雑状況Live"
+    video_id: "bK9vpKisRnQ"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.02186
+    lng: 135.78948
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=京都府指定文化財 真征極楽寺元三大師堂, 白川通, 岡崎東天王町, 永観堂町飛地, 左京区, 京都市, 京都府, 606-8332, 日本"
+
+  - id: curated-kyoto-heian-jingu
+    name: "京都 平安神宮"
+    operator: "京都観光混雑状況Live"
+    video_id: "iUbbYRWIEzo"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.01607
+    lng: 135.7829
+    note: "oEmbed 200確認(2026-08-24)。@kyototouristspotlive の/streamsでLIVE確認。既存「京都観光混雑状況Live」系列の未登録分。座標:Nominatim。geo=平安神宮, 岡崎西天王町, 左京区, 京都市, 京都府, 606-8341, 日本"
+
+  - id: curated-kyoto-seiryoji
+    name: "京都 清凉寺（嵯峨釈迦堂）"
+    operator: "京都市観光協会"
+    video_id: "4Za-6AXfu4w"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.02271
+    lng: 135.67483
+    note: "oEmbed 200確認(2026-08-24)。@DMOKYOTO/@DMOKYOTO_Live の/streamsでLIVE確認。座標:Nominatim。geo=清凉寺 (嵯峨釈迦堂), 46, 宇多野嵐山山田線, 嵯峨釈迦堂門前南中院町, 右京区, 京都市, 京都府, 616-0000, 日本"
+
+  - id: curated-kyoto-daikakuji
+    name: "京都 大覚寺"
+    operator: "京都市観光協会"
+    video_id: "ldO0Eqoomms"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.02868
+    lng: 135.67948
+    note: "oEmbed 200確認(2026-08-24)。@DMOKYOTO/@DMOKYOTO_Live の/streamsでLIVE確認。座標:Nominatim。geo=大覚寺, 大覚寺平岡線, 嵯峨観空寺明水町, 右京区, 京都市, 京都府, 616-0000, 日本"
+
+  - id: curated-kyoto-fushimi-inari-ura
+    name: "京都 伏見稲荷大社付近 裏参道"
+    operator: "京都市観光協会"
+    video_id: "Onyb8uHQV5Y"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.96698
+    lng: 135.77476
+    note: "oEmbed 200確認(2026-08-24)。@DMOKYOTO/@DMOKYOTO_Live の/streamsでLIVE確認。座標:Nominatim。geo=伏見稲荷大社, 千本鳥居, 深草石峰寺山町, 伏見区, 京都市, 京都府, 612-0807, 日本"
+
+  - id: curated-kyoto-chikurin
+    name: "京都 嵯峨嵐山 竹林の小径"
+    operator: "京都市観光協会"
+    video_id: "Op-lf2NRMzs"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.01849
+    lng: 135.68254
+    note: "oEmbed 200確認(2026-08-24)。@DMOKYOTO/@DMOKYOTO_Live の/streamsでLIVE確認。座標:Nominatim。geo=嵯峨天龍寺広道町, 右京区, 京都市, 京都府, 616-0000, 日本"
+
+  - id: curated-kyoto-saga-toriimoto
+    name: "京都 嵯峨鳥居本 伝統的建造物群保存地区"
+    operator: "京都市観光協会"
+    video_id: "Qm4X_oY-9YM"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.02271
+    lng: 135.67483
+    note: "oEmbed 200確認(2026-08-24)。@DMOKYOTO/@DMOKYOTO_Live の/streamsでLIVE確認。座標:Nominatim。geo=清凉寺 (嵯峨釈迦堂), 46, 宇多野嵐山山田線, 嵯峨釈迦堂門前南中院町, 右京区, 京都市, 京都府, 616-0000, 日本"
+
+  - id: curated-kyoto-nene-no-michi
+    name: "京都 東山 ねねの道"
+    operator: "京都市観光協会"
+    video_id: "niQh-vFZBs4"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.0003
+    lng: 135.7806
+    note: "oEmbed 200確認(2026-08-24)。@DMOKYOTO/@DMOKYOTO_Live の/streamsでLIVE確認。座標:Nominatim。geo=高台寺, 維新の道, 八坂上町, 辰巳町, 東山区, 京都市, 京都府, 605-0826, 日本"
+
+  - id: curated-kyoto-nishiki-ichiba
+    name: "京都 錦市場（11-18時のみ配信）"
+    operator: "京都市観光協会"
+    video_id: "qZ2ghbe3zc0"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.02364
+    lng: 135.79625
+    note: "oEmbed 200確認(2026-08-24)。@DMOKYOTO/@DMOKYOTO_Live の/streamsでLIVE確認。座標:Nominatim。geo=哲学の道, 鹿ケ谷法然院町, 左京区, 京都市, 京都府, 606-8402, 日本"
+
+  - id: curated-kyoto-higashihonganji-morishin
+    name: "京都 東本願寺（森信三郎商舗より）"
+    operator: "森信三郎商舗（butsuguya）"
+    video_id: "Y1XxYLwpJy4"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.99271
+    lng: 135.75901
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(東本願寺)。geo=東本願寺出版, 花屋町通, 乾町, 下京区, 京都市, 京都府, 600-8304, 日本"
+
+  - id: curated-kyoto-ohigashisan-hiroba
+    name: "京都 お東さん広場（東本願寺前市民緑地）"
+    operator: "森信三郎商舗（butsuguya）"
+    video_id: "faaDguOLQrQ"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.99271
+    lng: 135.75901
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:東本願寺前(Nominatim)。geo=東本願寺出版, 花屋町通, 乾町, 下京区, 京都市, 京都府, 600-8304, 日本"
+
+  - id: curated-street-shibuya-center-gai
+    name: "渋谷センター街 メインアーチ前"
+    operator: "渋谷センター商店街振興組合"
+    video_id: "d1JuNg7knNo"
+    category: "road"
+    prefecture: "13"
+    lat: 35.66208
+    lng: 139.6975
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(宇田川町)。geo=宇田川町, 渋谷区, 東京都, 150-0042, 日本"
+
+  - id: curated-street-tanukikoji-4
+    name: "札幌 狸小路商店街（4丁目）"
+    operator: "たぬきや（狸小路の店舗、たぬきやLIVE）"
+    video_id: "XZi57dMjr2s"
+    category: "road"
+    prefecture: "01"
+    lat: 43.05632
+    lng: 141.35185
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(南3条西4)。geo=キリンビール園, 2, 南3条西4, 狸小路, 中央区, 札幌市, 石狩振興局, 北海道, 北海道地方, 060-0063, 日本"
+
+  - id: curated-street-obiyamachi-kochi
+    name: "高知 帯屋町商店街"
+    operator: "金亀堂（きんかめちゃんねる。帯屋町の店舗）"
+    video_id: "KZKo7cEVcPM"
+    category: "road"
+    prefecture: "39"
+    lat: 33.5606
+    lng: 133.53978
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。防犯カメラ兼用。座標:Nominatim(帯屋町1)。geo=帯屋町一丁目, 堺町, 高知市, 高知県, 780-8571, 日本"
+
+  - id: curated-street-kanda-sta-kita
+    name: "神田駅北口"
+    operator: "神田ライブチャンネル（個人ch）"
+    video_id: "ftkM0BVLhtg"
+    category: "road"
+    prefecture: "13"
+    lat: 35.69314
+    lng: 139.77118
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。運営者=チャンネル名。座標:Nominatim(鍛冶町2)。geo=神田駅北口, 中央通り, 内神田三丁目, 内神田, 千代田区, 東京都, 102-0000, 日本"
+
+  - id: curated-street-kokubuncho-sendai
+    name: "仙台 国分町"
+    operator: "国分町ライブカメラ（YouTube ch）"
+    video_id: "hV38YF80Wkk"
+    category: "road"
+    prefecture: "04"
+    lat: 38.26387
+    lng: 140.86878
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。運営者=チャンネル名(要確認)。座標:Nominatim(国分町2)。geo=国分町二丁目, 立町, 青葉区, 仙台市, 宮城県, 980-0803, 日本"
+
+  - id: curated-street-tama-center
+    name: "多摩センター駅周辺"
+    operator: "多摩テレビ（CATV）"
+    video_id: "jmksO-K0sLc"
+    category: "road"
+    prefecture: "13"
+    lat: 35.6245
+    lng: 139.42471
+    note: "oEmbed 200確認(2026-08-24)。座標:Nominatim(多摩センター駅)。ライブ種別は/streams未確認(oEmbedのみ)。geo=多摩センター駅, 多摩センター大橋東脇橋, 落合一丁目, 多摩市, 東京都, 206-8543, 日本"
+
+  - id: curated-street-kasumigaseki-tokyoshimbun
+    name: "霞が関（東京新聞）"
+    operator: "東京新聞（中日新聞社）"
+    video_id: "0GVPhWWUStc"
+    category: "road"
+    prefecture: "13"
+    lat: 35.67394
+    lng: 139.75256
+    note: "oEmbed 200確認(2026-08-24)。座標:Nominatim(霞が関1)。geo=霞が関一丁目, 霞が関, 千代田区, 東京都, 100-0013, 日本"
+
+  - id: curated-street-uchisaiwaicho-tokyoshimbun
+    name: "内幸町（東京新聞）"
+    operator: "東京新聞（中日新聞社）"
+    video_id: "832oyounAII"
+    category: "road"
+    prefecture: "13"
+    lat: 35.67081
+    lng: 139.75418
+    note: "oEmbed 200確認(2026-08-24)。座標:Nominatim(内幸町2)。geo=内幸町二丁目, 内幸町, 千代田区, 東京都, 100-0011, 日本"
+
+  - id: curated-street-kabukicho-godzilla
+    name: "新宿 歌舞伎町 ゴジラ前"
+    operator: "歌舞伎町ゴジラ前ライブ（YouTube ch）"
+    video_id: "TObte08ESr0"
+    category: "road"
+    prefecture: "13"
+    lat: 35.69536
+    lng: 139.70203
+    note: "oEmbed 200確認(2026-08-24)。24時間ライブ。運営者=チャンネル名。座標:Nominatim(新宿東宝ビル)。geo=新宿東宝ビル, 1, 歌舞伎町一丁目, 歌舞伎町, 新宿区, 東京都, 160-0021, 日本"
+
+  - id: curated-street-omoide-yokocho
+    name: "新宿 思い出横丁"
+    operator: "思い出横丁チャンネル（新宿西口商店街振興組合）"
+    video_id: "G5THMspEkWk"
+    category: "road"
+    prefecture: "13"
+    lat: 35.69287
+    lng: 139.69955
+    note: "oEmbed 200確認(2026-08-24)。座標:Nominatim(西新宿1)。geo=思い出横丁, 西新宿一丁目, 西新宿, 新宿区, 東京都, 160-0023, 日本"
+
+  - id: curated-scenic-tsukiji-asahi
+    name: "東京・築地（朝日新聞LIVE 湾岸・レインボーブリッジ）"
+    operator: "朝日新聞社（朝日新聞LIVE）"
+    video_id: "bKVGdsMVuMA"
+    category: "scenic"
+    prefecture: "13"
+    lat: 35.66288
+    lng: 139.76789
+    note: "oEmbed 200確認(2026-08-24)。既存の朝日新聞LIVE 3件に未登録。座標:Nominatim(朝日新聞社)。geo=築地五丁目, 築地, 中央区, 東京都, 104-0045, 日本"
+
+  - id: curated-street-fukushima-gurutto
+    name: "ぐるっと福島 福島市街"
+    operator: "ぐるっと福島TV"
+    video_id: "3MM0yX3QPX4"
+    category: "road"
+    prefecture: "07"
+    lat: 37.7552
+    lng: 140.46391
+    note: "oEmbed 200確認(2026-08-24)。座標:Nominatim(福島市中心部)概略。geo=置賜町, 福島市, 福島県, 960-8034, 日本"
+
+  - id: curated-street-ofuna-kasamaguchi
+    name: "大船駅 笠間口交差点"
+    operator: "Japan Live Camera（既存登録あり運営者）"
+    video_id: "OKCDmhQ4QGw"
+    category: "road"
+    prefecture: "14"
+    lat: 35.35578
+    lng: 139.53318
+    note: "oEmbed 200確認(2026-08-24)。座標:Nominatim(大船駅)。geo=大船駅, 大船停車場矢部線, 笠間一丁目, 笠間, 栄区, 横浜市, 神奈川県, 247-0006, 日本"
+
+  - id: curated-street-kokubo-kofu-hotel
+    name: "甲府 国道20号 国母交差点（甲斐のホテル屋上）"
+    operator: "甲斐のホテル"
+    video_id: "i-5fynOR1G8"
+    category: "road"
+    prefecture: "19"
+    lat: 35.6304
+    lng: 138.55139
+    note: "oEmbed 200確認(2026-08-24)。ホテル屋上カメラ。座標:Nominatim(国母交差点)。geo=国母, 甲府市川三郷線, 押越, 甲府市, 中巨摩郡, 山梨県, 409-3866, 日本"
+
+  - id: curated-street-zazacity-hamamatsu
+    name: "浜松 鍛冶町通り（ザザシティ浜松）PTZ"
+    operator: "ZAZAマガジンチャンネル（ザザシティ浜松）"
+    video_id: "rPNHFcaZSp8"
+    category: "road"
+    prefecture: "22"
+    lat: 34.70475
+    lng: 137.72919
+    note: "oEmbed 200確認(2026-08-24)。既存ZAZA 1件とは別ID。座標:Nominatim(ザザシティ)。geo=ザザシティ浜松西館, ザザシティ浜松駐車場進入路, 鍛冶町, 中央区, 浜松市, 静岡県, 430-0933, 日本"
+
+  - id: curated-street-kumamoto-sta-shirakawa-rkk
+    name: "熊本駅 白川口（RKK NEWS DIG）"
+    operator: "RKK熊本放送"
+    video_id: "Mfq_QtuyrYI"
+    category: "road"
+    prefecture: "43"
+    lat: 32.78979
+    lng: 130.68611
+    note: "oEmbed 200確認(2026-08-24)。既存RKK熊本駅前(uvfo7eEirHs)とは別ID・別アングル。座標:Nominatim(熊本駅)。geo=市立春日小学校, 並建熊本線, 春日五丁目, 戸坂町, 西区, 熊本市, 熊本県, 860-8601, 日本"
+
+  - id: curated-street-hachioji-ecotown
+    name: "八王子 エコタウン屋上（交通状況）"
+    operator: "株式会社ゼロエミッション"
+    video_id: "l-ZAJUd9G_4"
+    category: "road"
+    prefecture: "13"
+    lat: 35.66423
+    lng: 139.3594
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(八王子市大和田町)。geo=大和田町, 甲州街道, 大和田町二丁目, 八王子市, 東京都, 192-0045, 日本"
+
+  - id: curated-street-motoyawata-taxi
+    name: "JR本八幡駅北口 タクシー乗り場"
+    operator: "千葉県タクシー協会京葉支部"
+    video_id: "WhNoqKDlx8Y"
+    category: "road"
+    prefecture: "12"
+    lat: 35.72162
+    lng: 139.92703
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim。geo=本八幡駅(北口), 本八幡停車場線, 八幡二丁目, 市川市, 千葉県, 272-8510, 日本"
+
+  - id: curated-street-motoyawata-minami
+    name: "JR本八幡駅南口"
+    operator: "千葉県タクシー協会京葉支部"
+    video_id: "g_00CDso3AI"
+    category: "road"
+    prefecture: "12"
+    lat: 35.71919
+    lng: 139.92598
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim。geo=本八幡駅(南口), 行徳街道, 南八幡四丁目, 市川市, 千葉県, 272-0023, 日本"
+
+  - id: curated-street-kamagaya-taxipool
+    name: "東武鎌ヶ谷駅 タクシープール"
+    operator: "千葉県タクシー協会京葉支部"
+    video_id: "w_WCXju2Q44"
+    category: "road"
+    prefecture: "12"
+    lat: 35.76405
+    lng: 139.99735
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim。geo=鎌ヶ谷, 道野辺新鎌ヶ谷線, 道野辺中央二丁目, 中沢新町, 鎌ケ谷市, 千葉県, 273-0113, 日本"
+
+  - id: curated-street-tsurumi-rooftop
+    name: "鶴見駅 屋上カメラ"
+    operator: "神奈川県タクシー協会"
+    video_id: "g8NXxgs79Jo"
+    category: "road"
+    prefecture: "14"
+    lat: 35.50872
+    lng: 139.68137
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(鶴見駅)。geo=区役所前通り, 鶴見中央四丁目, 鶴見区, 横浜市, 神奈川県, 231-0017, 日本"
+
+  - id: curated-street-tsurumi-bus
+    name: "鶴見駅 バス乗り場側"
+    operator: "神奈川県タクシー協会"
+    video_id: "RUUsBgQe1eI"
+    category: "road"
+    prefecture: "14"
+    lat: 35.50872
+    lng: 139.68137
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(鶴見駅)。geo=区役所前通り, 鶴見中央四丁目, 鶴見区, 横浜市, 神奈川県, 231-0017, 日本"
+
+  - id: curated-street-tsurumi-taxi
+    name: "鶴見駅 タクシー乗り場側"
+    operator: "神奈川県タクシー協会"
+    video_id: "-XeFBi9ge_8"
+    category: "road"
+    prefecture: "14"
+    lat: 35.50872
+    lng: 139.68137
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(鶴見駅)。geo=区役所前通り, 鶴見中央四丁目, 鶴見区, 横浜市, 神奈川県, 231-0017, 日本"
+
+  - id: curated-street-takatsuki-radio171
+    name: "高槻 4Kライブカメラ（JR京都線・阪急京都線）"
+    operator: "Radio171（高槻のコミュニティFM）"
+    video_id: "AQ9NAMZp1-Y"
+    category: "road"
+    prefecture: "27"
+    lat: 34.85162
+    lng: 135.61767
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(高槻駅)概略。geo=高槻, 高槻停車場線, 芥川町一丁目, 高槻市, 大阪府, 569-0804, 日本"
+
+  - id: curated-street-sankei-kunitachi
+    name: "国立 富士見通り（サンケイハウジング前）"
+    operator: "サンケイハウジング国立店（ch: chico sandesu）"
+    video_id: "n7L45-Ey_QE"
+    category: "road"
+    prefecture: "13"
+    lat: 35.69749
+    lng: 139.44435
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。タイトルが汎用のため内容要確認。座標:Nominatim(国立市中1)。geo=立川国分寺線;富士見通り, 中一丁目, 中, 国立市, 東京都, 186-0004, 日本"
+
+  - id: curated-street-iida-sta-ictv
+    name: "飯田駅前（飯田ケーブルテレビ）"
+    operator: "飯田ケーブルテレビ（ICTV）"
+    video_id: "5NJZVXZnWp8"
+    category: "road"
+    prefecture: "20"
+    lat: 35.50629
+    lng: 137.84639
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(飯田駅)。geo=伊那生田飯田線, 城東, 鼎東鼎, 上郷, 飯田市, 長野県, 395-0811, 日本"
+
+  - id: curated-street-nipponbashi-bouhan110
+    name: "大阪 日本橋（でんでんタウン）"
+    operator: "防犯110番（防犯カメラ販売店）"
+    video_id: "Ttbg4hvcXec"
+    category: "road"
+    prefecture: "27"
+    lat: 34.65999
+    lng: 135.5061
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(日本橋4)。geo=日本橋四丁目, 浪速区, 大阪市, 大阪府, 556-0005, 日本"
+
+  - id: curated-street-fst-ikuno-koreatown
+    name: "大阪 生野コリアタウン 御幸通商店街"
+    operator: "F.S.T. NET"
+    video_id: "ztXjQgNxi4o"
+    category: "road"
+    prefecture: "27"
+    lat: 34.66059
+    lng: 135.53702
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=御幸通中央商店街, 桃谷四丁目, 生野区, 大阪市, 大阪府, 544-0034, 日本"
+
+  - id: curated-street-fst-shinsaibashi-shinbashi
+    name: "大阪 心斎橋 新橋交差点（長堀通）"
+    operator: "F.S.T. NET"
+    video_id: "aVAO2wSUsPo"
+    category: "road"
+    prefecture: "27"
+    lat: 34.67343
+    lng: 135.50134
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=心斎橋筋一丁目, 中央区, 大阪市, 大阪府, 日本"
+
+  - id: curated-street-fst-kitashinchi
+    name: "大阪 北新地本通"
+    operator: "F.S.T. NET"
+    video_id: "1na-ORGC1P8"
+    category: "road"
+    prefecture: "27"
+    lat: 34.69736
+    lng: 135.49834
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=新地本通, 曾根崎新地一丁目, 北区, 大阪市, 大阪府, 530-0002, 日本"
+
+  - id: curated-street-fst-tadaoka-marina
+    name: "忠岡町 海上レストラン・エクセロンマリン"
+    operator: "F.S.T. NET"
+    video_id: "SiWmIxVeYIA"
+    category: "port"
+    prefecture: "27"
+    lat: 34.48102
+    lng: 135.36465
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=阪南港新西防波堤南灯台, 阪神高速4号湾岸線, 新浜一丁目, 岸和田市, 泉北郡, 大阪府, 596-0067, 日本"
+
+  - id: curated-street-fst-minoh-aonoshinke
+    name: "箕面 粟生新家交差点"
+    operator: "F.S.T. NET"
+    video_id: "-nQCcDvp7Xs"
+    category: "road"
+    prefecture: "27"
+    lat: 34.83551
+    lng: 135.50582
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=新家, 国道171号, 今宮一丁目, 箕面市, 大阪府, 562-0033, 日本"
+
+  - id: curated-street-fst-kadoma-costco
+    name: "門真 コストコ・三井アウトレット前"
+    operator: "F.S.T. NET"
+    video_id: "9UYFGM8CGt0"
+    category: "road"
+    prefecture: "27"
+    lat: 34.72958
+    lng: 135.58405
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=コストコ, 5, 松生町, 門真市, 大阪府, 571-0044, 日本"
+
+  - id: curated-street-fst-kadoma-ic
+    name: "門真IC 北行"
+    operator: "F.S.T. NET"
+    video_id: "K2r6YQhLqCg"
+    category: "road"
+    prefecture: "27"
+    lat: 34.72904
+    lng: 135.58241
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=門真IC, 近畿自動車道, 向島町, 中町, 鶴見区, 門真市, 大阪府, 571-0048, 日本"
+
+  - id: curated-street-fst-sannomiya-sta
+    name: "JR三ノ宮駅前"
+    operator: "F.S.T. NET"
+    video_id: "8tDuhb9QnQ4"
+    category: "road"
+    prefecture: "28"
+    lat: 34.69531
+    lng: 135.19447
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=布引町四丁目, 中央区, 神戸市, 兵庫県, 651-0097, 日本"
+
+  - id: curated-street-yudanaka-sta
+    name: "湯田中駅前"
+    operator: "山ノ内まちづくり観光局"
+    video_id: "lAWdqnXJ0w0"
+    category: "road"
+    prefecture: "20"
+    lat: 36.74173
+    lng: 138.41461
+    note: "oEmbed 200確認(2026-08-24)。座標:Nominatim(湯田中駅)。geo=湯田中, 湯田中停車場線, 湯河原, 平穏, 山ノ内町, 下高井郡, 長野県, 381-0402, 日本"
+
+  - id: curated-street-yunokami-onsen-sta
+    name: "湯野上温泉駅（茅葺き駅舎）"
+    operator: "福島県下郷町"
+    video_id: "z1MErdsqsw8"
+    category: "scenic"
+    prefecture: "07"
+    lat: 37.30398
+    lng: 139.89533
+    note: "oEmbed 200確認(2026-08-24)。既存下郷町2件(大内宿/塔のへつり)に未登録。座標:Nominatim(湯野上温泉駅)。geo=湯野上温泉駅, 国道121号, 大字湯野上, 下郷町, 南会津郡, 福島県, 969-5299, 日本"
+
+  - id: curated-street-hakodate-sta-1
+    name: "函館駅前ライブカメラ①（函館湾）"
+    operator: "HAKODATE LIVE CAMERA"
+    video_id: "n43Rbr8kB-Y"
+    category: "road"
+    prefecture: "01"
+    lat: 41.7738
+    lng: 140.72638
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存は②のみ。座標:Nominatim(函館駅)。geo=函館駅, 若松町, 函館市, 渡島総合振興局, 北海道, 北海道地方, 040-0063, 日本"
+
+  - id: curated-parking-kusatsu-tenguyama-p1
+    name: "草津温泉 天狗山第一駐車場"
+    operator: "草津町"
+    video_id: "VnRb8aFDK2M"
+    category: "other"
+    prefecture: "10"
+    lat: 36.62669
+    lng: 138.58512
+    note: "oEmbed 200確認(2026-08-24)。草津町公式chの/streamsでLIVE確認。自治体(license unknown)。既存草津町7件に未登録。座標:Nominatim概略。geo=天狗山第1駐車場, 志賀草津道路, 草津町, 吾妻郡, 群馬県, 377-1711, 日本"
+
+  - id: curated-parking-kusatsu-nishinokawara-p
+    name: "草津温泉 西の河原公園駐車場"
+    operator: "草津町"
+    video_id: "UdOAbyzxKto"
+    category: "other"
+    prefecture: "10"
+    lat: 36.625
+    lng: 138.59434
+    note: "oEmbed 200確認(2026-08-24)。草津町公式chの/streamsでLIVE確認。自治体(license unknown)。既存草津町7件に未登録。座標:Nominatim概略。geo=西の河原公園駐車場, しゃくなげ通り, 草津, 草津町, 吾妻郡, 群馬県, 377-1711, 日本"
+
+  - id: curated-parking-kusatsu-onsenmon-free-p
+    name: "草津温泉 温泉門無料駐車場"
+    operator: "草津町"
+    video_id: "_1PfF1v9GJc"
+    category: "other"
+    prefecture: "10"
+    lat: 36.61862
+    lng: 138.5937
+    note: "oEmbed 200確認(2026-08-24)。草津町公式chの/streamsでLIVE確認。自治体(license unknown)。既存草津町7件に未登録。座標:Nominatim概略。geo=草津温泉門, 草津, 草津町, 吾妻郡, 群馬県, 377-1711, 日本"
+
+  - id: curated-parking-kusatsu-onsenmon-bus-p
+    name: "草津温泉 温泉門 観光バス専用駐車場"
+    operator: "草津町"
+    video_id: "ZFhzy9-sy3U"
+    category: "other"
+    prefecture: "10"
+    lat: 36.61862
+    lng: 138.5937
+    note: "oEmbed 200確認(2026-08-24)。草津町公式chの/streamsでLIVE確認。自治体(license unknown)。既存草津町7件に未登録。座標:Nominatim概略。geo=草津温泉門, 草津, 草津町, 吾妻郡, 群馬県, 377-1711, 日本"
+
+  - id: curated-parking-kusatsu-ski-sanroku
+    name: "草津温泉スキー場 天狗山山麓エリア"
+    operator: "草津町"
+    video_id: "eX7vAL4Jtfk"
+    category: "scenic"
+    prefecture: "10"
+    lat: 36.63096
+    lng: 138.57806
+    note: "oEmbed 200確認(2026-08-24)。草津町公式chの/streamsでLIVE確認。自治体(license unknown)。既存草津町7件に未登録。座標:Nominatim概略。geo=草津温泉スキー場, 草津町, 吾妻郡, 群馬県, 377-1711, 日本"
+
+  - id: curated-parking-kusatsu-urakusatsu-jizo
+    name: "裏草津 地蔵 源泉広場"
+    operator: "草津町"
+    video_id: "ybOa_LRzp_I"
+    category: "scenic"
+    prefecture: "10"
+    lat: 36.62275
+    lng: 138.59837
+    note: "oEmbed 200確認(2026-08-24)。草津町公式chの/streamsでLIVE確認。自治体(license unknown)。既存草津町7件に未登録。座標:Nominatim概略。geo=地蔵の湯, 地蔵通り, 草津, 草津町, 吾妻郡, 群馬県, 377-1711, 日本"
+
+  - id: curated-parking-kusatsu-nishinokawara-yukawa
+    name: "草津温泉 西の河原・湯川"
+    operator: "草津町"
+    video_id: "RT_yg_qsK_M"
+    category: "scenic"
+    prefecture: "10"
+    lat: 36.625
+    lng: 138.59434
+    note: "oEmbed 200確認(2026-08-24)。草津町公式chの/streamsでLIVE確認。自治体(license unknown)。既存草津町7件に未登録。座標:Nominatim概略。geo=西の河原公園駐車場, しゃくなげ通り, 草津, 草津町, 吾妻郡, 群馬県, 377-1711, 日本"
+
+  - id: curated-parking-zao-ropeway
+    name: "蔵王ロープウェイ 駐車場"
+    operator: "蔵王索道協会"
+    video_id: "Rs4CcR79sWA"
+    category: "other"
+    prefecture: "06"
+    lat: 38.16112
+    lng: 140.39472
+    note: "oEmbed 200確認(2026-08-24)。既存蔵王索道協会2件に未登録。座標:Nominatim(蔵王温泉)。geo=蔵王ロープウェイ, 蔵王ライン, 蔵王温泉, 山形市, 山形県, 990-2301, 日本"
+
+  - id: curated-hotel-gamagori-classic
+    name: "蒲郡クラシックホテル（三河湾・竹島）"
+    operator: "蒲郡クラシックホテル"
+    video_id: "_bTJh8RpQQU"
+    category: "scenic"
+    prefecture: "23"
+    lat: 34.8159
+    lng: 137.23577
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(竹島町)。geo=蒲郡クラシックホテル, 1, 竹島町, 蒲郡市, 愛知県, 443-0031, 日本"
+
+  - id: curated-hotel-shimoda-prince-shirahama
+    name: "下田プリンスホテル 白浜中央海水浴場"
+    operator: "下田プリンスホテル"
+    video_id: "z3sngsY_u4Y"
+    category: "coast"
+    prefecture: "22"
+    lat: 34.69538
+    lng: 138.97177
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(下田市白浜)。geo=下田プリンスホテル, 国道135号, 原田, 白浜, 下田市, 静岡県, 415-8501, 日本"
+
+  - id: curated-onsen-yarimikan-yarigatake
+    name: "槍見館 槍ヶ岳ライブカメラ（新穂高温泉）"
+    operator: "槍見館"
+    video_id: "4S4hrquuPqg"
+    category: "scenic"
+    prefecture: "21"
+    lat: 36.30419
+    lng: 137.60228
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(奥飛騨温泉郷神坂)。geo=奥飛騨温泉郷神坂, 高山市, 岐阜県, 506-1421, 日本"
+
+  - id: curated-onsen-tsurutsuru
+    name: "つるつる温泉（日の出町）"
+    operator: "(一社)日の出町観光協会"
+    video_id: "IvZiY3G0FfU"
+    category: "scenic"
+    prefecture: "13"
+    lat: 35.77977
+    lng: 139.19215
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(日の出町大久野)。geo=つるつる温泉, 林道大入線, 柚木町一丁目, 大久野, 日の出町, 西多摩郡, 東京都, 198-0174, 日本"
+
+  - id: curated-hotel-kariyushi-oceanspa
+    name: "沖縄かりゆしビーチリゾート・オーシャンスパ"
+    operator: "かりゆしホテルズ"
+    video_id: "AhQErfreEOE"
+    category: "coast"
+    prefecture: "47"
+    lat: 26.53405
+    lng: 127.94102
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:同上。geo=喜瀬, 名護市, 沖縄県, 905-8540, 日本"
+
+  - id: curated-fbc-fukui-sta
+    name: "福井駅付近（FBC情報カメラ）"
+    operator: "FBC福井放送"
+    video_id: "tHMEnSTnFd4"
+    category: "road"
+    prefecture: "18"
+    lat: 36.06214
+    lng: 136.22219
+    note: "oEmbed 200確認(2026-08-24)。@FBC の/streamsでLIVE確認。既存FBC2件に未登録。座標:Nominatim。geo=福井駅, 路線バス専用通路, 中央一丁目, 大手, 福井市, 福井県, 910-0858, 日本"
+
+  - id: curated-fbc-fukui-owada
+    name: "福井市大和田（FBC情報カメラ）"
+    operator: "FBC福井放送"
+    video_id: "kOKevC8ajFg"
+    category: "road"
+    prefecture: "18"
+    lat: 36.09787
+    lng: 136.25273
+    note: "oEmbed 200確認(2026-08-24)。@FBC の/streamsでLIVE確認。既存FBC2件に未登録。座標:Nominatim。geo=大和田, 国道8号, 大和田一丁目, 新田本町, 福井市, 福井県, 910-0802, 日本"
+
+  - id: curated-fbc-daimyocho
+    name: "福井駅西口 大名町交差点（FBC情報カメラ）"
+    operator: "FBC福井放送"
+    video_id: "kdTzzqRh4LQ"
+    category: "road"
+    prefecture: "18"
+    lat: 36.06521
+    lng: 136.22294
+    note: "oEmbed 200確認(2026-08-24)。@FBC の/streamsでLIVE確認。既存FBC2件に未登録。座標:Nominatim。geo=大手, 福井市, 福井県, 910-0005, 日本"
+
+  - id: curated-fbc-ono
+    name: "大野市（FBC情報カメラ）"
+    operator: "FBC福井放送"
+    video_id: "vTtMdsgn49w"
+    category: "road"
+    prefecture: "18"
+    lat: 35.97971
+    lng: 136.48744
+    note: "oEmbed 200確認(2026-08-24)。@FBC の/streamsでLIVE確認。既存FBC2件に未登録。座標:Nominatim。geo=大野市, 福井県, 日本"
+
+  - id: curated-ebc-uwajima
+    name: "宇和島市（EBC）"
+    operator: "テレビ愛媛（EBC）"
+    video_id: "aJcTvBuj5AA"
+    category: "scenic"
+    prefecture: "38"
+    lat: 33.22323
+    lng: 132.56065
+    note: "oEmbed 200確認(2026-08-24)。@tvehime の/streamsでLIVE確認。座標:Nominatim概略(市町中心)。geo=宇和島市, 愛媛県, 798-8601, 日本"
+
+  - id: curated-ebc-ainan
+    name: "愛南町（EBC）"
+    operator: "テレビ愛媛（EBC）"
+    video_id: "ZgMFLDWgbBo"
+    category: "scenic"
+    prefecture: "38"
+    lat: 32.96362
+    lng: 132.57168
+    note: "oEmbed 200確認(2026-08-24)。@tvehime の/streamsでLIVE確認。座標:Nominatim概略(市町中心)。geo=愛媛県立南宇和高等学校, 久良城辺線, 御荘平城, 愛南町, 南宇和郡, 愛媛県, 798-4199, 日本"
+
+  - id: curated-ebc-shimanami
+    name: "しまなみ海道（EBC）"
+    operator: "テレビ愛媛（EBC）"
+    video_id: "OV0JEv6C2QQ"
+    category: "scenic"
+    prefecture: "38"
+    lat: 34.25854
+    lng: 133.05825
+    note: "oEmbed 200確認(2026-08-24)。@tvehime の/streamsでLIVE確認。座標:Nominatim概略(市町中心)。geo=西瀬戸自動車道;瀬戸内しまなみ海道, 今治市, 愛媛県, 794-8511, 日本"
+
+  - id: curated-fctv-nanjo-sa
+    name: "北陸自動車道 南条SA付近"
+    operator: "福井ケーブルテレビ（FCTV）"
+    video_id: "U1fhYEreP4Q"
+    category: "road"
+    prefecture: "18"
+    lat: 35.8264
+    lng: 136.20195
+    note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=南条SA (下り), 北陸自動車道, 関ケ鼻, 南越前町, 南条郡, 福井県, 919-0292, 日本"
+
+  - id: curated-fctv-hirose-bashi
+    name: "足羽川・池田町広瀬橋"
+    operator: "福井ケーブルテレビ（FCTV）"
+    video_id: "jfiV5lcfBL0"
+    category: "river"
+    prefecture: "18"
+    lat: 35.89066
+    lng: 136.34231
+    note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=池田町, 今立郡, 福井県, 日本"
+
+  - id: curated-fctv-shinkuzuryu
+    name: "新九頭竜橋"
+    operator: "福井ケーブルテレビ（FCTV）"
+    video_id: "yNgpcqA9X64"
+    category: "river"
+    prefecture: "18"
+    lat: 36.10916
+    lng: 136.24473
+    note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=新九頭竜橋, 福井森田丸岡線, 上野本町三丁目, 上野本町, 福井市, 福井県, 910-0137, 日本"
+
+  - id: curated-fctv-mikuni-sunset
+    name: "三国サンセットビーチ"
+    operator: "福井ケーブルテレビ（FCTV）"
+    video_id: "CIjhFpsN-3k"
+    category: "coast"
+    prefecture: "18"
+    lat: 36.22915
+    lng: 136.14123
+    note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=三国町新宿, 坂井市, 福井県, 919-0592, 日本"
+
+  - id: curated-fctv-kono-ukon
+    name: "河野 北前船主の館右近家"
+    operator: "福井ケーブルテレビ（FCTV）"
+    video_id: "cG_-7ItG0Mk"
+    category: "scenic"
+    prefecture: "18"
+    lat: 35.82815
+    lng: 136.07958
+    note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=河野, 南越前町, 南条郡, 福井県, 919-0292, 日本"
+
+  - id: curated-fctv-fukui-nishi
+    name: "福井駅西口"
+    operator: "福井ケーブルテレビ（FCTV）"
+    video_id: "IrXQ8JID0Gs"
+    category: "road"
+    prefecture: "18"
+    lat: 36.06091
+    lng: 136.22056
+    note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=中央一丁目, 中央, 福井市, 福井県, 910-0006, 日本"
+
+  - id: curated-fctv-r8-owada
+    name: "国道8号 大和田方面"
+    operator: "福井ケーブルテレビ（FCTV）"
+    video_id: "jLZ_T91paAU"
+    category: "road"
+    prefecture: "18"
+    lat: 36.02201
+    lng: 136.21576
+    note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=国道8号, 下莇生田町, 福井市, 福井県, 918-8016, 日本"
+
+  - id: curated-fctv-kida-bashi
+    name: "足羽川・木田橋"
+    operator: "福井ケーブルテレビ（FCTV）"
+    video_id: "k3lKNrqtSyE"
+    category: "river"
+    prefecture: "18"
+    lat: 36.09973
+    lng: 136.21211
+    note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=福井加賀線, 舟橋黒竜二丁目, 舟橋新町, 福井市, 福井県, 910-0123, 日本"
+
+  - id: curated-nkt-kurayoshi-utsubuki
+    name: "倉吉・打吹山"
+    operator: "日本海テレビ（NKT）"
+    video_id: "BBLpltI2QYM"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.42711
+    lng: 133.81781
+    note: "oEmbed 200確認(2026-08-24)。@NKT1CHANNEL の/streamsでLIVE確認。既存NKT4件に未登録。米子水鳥公園は既存環境省カメラと別。座標:Nominatim概略。geo=打吹山 長谷寺, 倉吉市, 鳥取県, 682-0864, 日本"
+
+  - id: curated-nkt-tottori-city
+    name: "鳥取市街地"
+    operator: "日本海テレビ（NKT）"
+    video_id: "eFAa1Ku7HLo"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.51501
+    lng: 134.22334
+    note: "oEmbed 200確認(2026-08-24)。@NKT1CHANNEL の/streamsでLIVE確認。既存NKT4件に未登録。米子水鳥公園は既存環境省カメラと別。座標:Nominatim概略。geo=日本海テレビ, 田園町2号線, 田園町四丁目, 田島, 鳥取市, 鳥取県, 680-8572, 日本"
+
+  - id: curated-nkt-yonago-mizutori
+    name: "米子水鳥公園（野鳥）"
+    operator: "日本海テレビ（NKT）"
+    video_id: "qN6Xwpi-lnA"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.51501
+    lng: 134.22334
+    note: "oEmbed 200確認(2026-08-24)。@NKT1CHANNEL の/streamsでLIVE確認。既存NKT4件に未登録。米子水鳥公園は既存環境省カメラと別。座標:Nominatim概略。geo=日本海テレビ, 田園町2号線, 田園町四丁目, 田島, 鳥取市, 鳥取県, 680-8572, 日本"
+
+  - id: curated-hab-kencho
+    name: "石川県庁"
+    operator: "HAB北陸朝日放送"
+    video_id: "reo2ABoeXvE"
+    category: "road"
+    prefecture: "17"
+    lat: 36.59396
+    lng: 136.62537
+    note: "oEmbed 200確認(2026-08-24)。@habmigochannel の/streamsでLIVE確認。既存HAB4件に未登録。座標:Nominatim。geo=鞍月一丁目, 西念町, 金沢市, 石川県, 920-8203, 日本"
+
+  - id: curated-hab-kanazawa-sta
+    name: "北陸新幹線 金沢駅"
+    operator: "HAB北陸朝日放送"
+    video_id: "JY0VPKVjmRs"
+    category: "road"
+    prefecture: "17"
+    lat: 36.57817
+    lng: 136.64879
+    note: "oEmbed 200確認(2026-08-24)。@habmigochannel の/streamsでLIVE確認。既存HAB4件に未登録。座標:Nominatim。geo=金沢駅, 大階段, 本町二丁目, 木ノ新保町, 金沢市, 石川県, 920-0858, 日本"
+
+  - id: curated-hab-honsha
+    name: "北陸朝日放送 本社前（金沢市）"
+    operator: "HAB北陸朝日放送"
+    video_id: "e9y2rfhbR-Q"
+    category: "road"
+    prefecture: "17"
+    lat: 36.55784
+    lng: 136.66057
+    note: "oEmbed 200確認(2026-08-24)。@habmigochannel の/streamsでLIVE確認。既存HAB4件に未登録。座標:Nominatim。geo=本多町三丁目, 下本多町六番丁, 金沢市, 石川県, 920-0963, 日本"
+
+  - id: curated-lcv-area-roads
+    name: "LCVエリア道路状況（諏訪・多画面）"
+    operator: "エルシーブイ（LCV）"
+    video_id: "aFN5cVbmNYQ"
+    category: "road"
+    prefecture: "20"
+    lat: 36.03917
+    lng: 138.11398
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。多画面切替配信。座標:LCV本社(諏訪市)概略。geo=諏訪市, 長野県, 日本"
+
+  - id: curated-tw-kushimoto
+    name: "串本町 情報カメラ（テレビ和歌山）"
+    operator: "テレビ和歌山"
+    video_id: "QPFEvMS-LoU"
+    category: "coast"
+    prefecture: "30"
+    lat: 33.47557
+    lng: 135.7817
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存は高野山のみ。座標:Nominatim(串本町串本)。geo=串本, 国道42号, 串本, 串本町, 東牟婁郡, 和歌山県, 649-3599, 日本"
+
+  - id: curated-ktv-shimoda-sta
+    name: "伊豆急下田駅前（小林テレビ設備）"
+    operator: "小林テレビ設備（KTV12net）"
+    video_id: "QGT6Nqrdwbk"
+    category: "road"
+    prefecture: "22"
+    lat: 34.67914
+    lng: 138.9445
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存は下田港のみ。座標:Nominatim(伊豆急下田駅)。geo=伊豆急下田駅, 国道136号, 東本郷一丁目, 武ガ浜, 下田市, 静岡県, 415-8501, 日本"
+
+  - id: curated-ktv-izoo-outdoor
+    name: "体感型動物園iZoo ゾウガメ牧場（屋外）"
+    operator: "小林テレビ設備（iZoo提携配信）"
+    video_id: "h-aOylbMEsQ"
+    category: "healing"
+    prefecture: "22"
+    lat: 34.73097
+    lng: 138.99496
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(河津町浜 iZoo)。geo=体感動物園iZoo, 406-2, 浜, 河津町, 賀茂郡, 静岡県, 413-0513, 日本"
+
+  - id: curated-ktv-izoo-indoor
+    name: "体感型動物園iZoo ゾウガメ牧場（室内）"
+    operator: "小林テレビ設備（iZoo提携配信）"
+    video_id: "xbtcl8WuEZ4"
+    category: "healing"
+    prefecture: "22"
+    lat: 34.73097
+    lng: 138.99496
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:同上。geo=体感動物園iZoo, 406-2, 浜, 河津町, 賀茂郡, 静岡県, 413-0513, 日本"
+
+  - id: curated-marina-zushi-riviera
+    name: "リビエラ逗子マリーナ"
+    operator: "株式会社リビエラリゾート"
+    video_id: "fl0YqYWGvd8"
+    category: "port"
+    prefecture: "14"
+    lat: 35.29805
+    lng: 139.55783
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存はリビエラ江の島のみ。座標:Nominatim(逗子市小坪)。geo=小坪, 国道134号, 小坪四丁目, 逗子市, 神奈川県, 249-0008, 日本"
+
+  - id: curated-marina-seabornia-riviera
+    name: "リビエラシーボニアマリーナ"
+    operator: "株式会社リビエラリゾート"
+    video_id: "KG_NX5YkkOo"
+    category: "port"
+    prefecture: "14"
+    lat: 35.16051
+    lng: 139.62874
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(三崎町小網代)。geo=三崎町小網代, 三浦市, 神奈川県, 238-0298, 日本"
+
+  - id: curated-marina-yokohama-yacht-club
+    name: "横浜ヨット協会 No1 CAM"
+    operator: "横浜ヨット協会"
+    video_id: "dCmZVImJz_I"
+    category: "port"
+    prefecture: "14"
+    lat: 35.41135
+    lng: 139.62895
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(横浜市磯子区)概略。geo=横浜ヨット協会, 首都高速湾岸線, 森一丁目, 森, 磯子区, 横浜市, 神奈川県, 231-0017, 日本"
+
+  - id: curated-marina-misaki-marine-aburatsubo
+    name: "油壺（三崎マリン）"
+    operator: "三崎マリン株式会社"
+    video_id: "VG674DNIUoY"
+    category: "port"
+    prefecture: "14"
+    lat: 35.15958
+    lng: 139.61315
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(油壺)。geo=油壺, 油壷線, 三崎町小網代, 三浦市, 神奈川県, 238-0298, 日本"
+
+  - id: curated-marina-kaiyo-yacht-harbor
+    name: "海陽ヨットハーバー（風速計付き）"
+    operator: "豊田自動織機 海陽ヨットハーバー"
+    video_id: "5pCwoVyljeY"
+    category: "port"
+    prefecture: "23"
+    lat: 34.8055
+    lng: 137.26695
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。タイトルは風速計ライブ(映像内容要確認)。座標:Nominatim(蒲郡市海陽町)。geo=海陽ヨットハーバー, 県道豊橋幸田線, 海陽町二丁目, 三谷町, 蒲郡市, 愛知県, 443-0013, 日本"
+
+  - id: curated-marina-ohmi-biwako
+    name: "淡海マリーナ（琵琶湖）"
+    operator: "淡海マリーナ（配信: Daishin.Drone.Channel）"
+    video_id: "kIIGtT51fdE"
+    category: "port"
+    prefecture: "25"
+    lat: 35.12382
+    lng: 135.9194
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(大津市今堅田)。geo=今堅田, 高島大津線, 本堅田四丁目, 堅田, 大津市, 滋賀県, 520-0241, 日本"
+
+  - id: curated-marina-saga-yacht-harbor
+    name: "佐賀県ヨットハーバー（唐津）"
+    operator: "佐賀県ヨットハーバー"
+    video_id: "yWQs2ZygsZc"
+    category: "port"
+    prefecture: "41"
+    lat: 33.45987
+    lng: 129.95736
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(唐津市二タ子)。geo=二タ子, 唐津市, 佐賀県, 847-0861, 日本"
+
+  - id: curated-marina-otaru-port-scape
+    name: "小樽港マリーナ（marina scape）"
+    operator: "LIVE the SCAPE（小樽港マリーナ公式ページ掲載ch）"
+    video_id: "OaimuJGtpDA"
+    category: "port"
+    prefecture: "01"
+    lat: 43.18508
+    lng: 141.02456
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存LIVEtheSCAPEは新冠のみ。座標:Nominatim(小樽市築港)。geo=小樽港マリーナ, 築港海岸通, 築港, 小樽市, 後志総合振興局, 北海道, 北海道地方, 047-0008, 日本"
+
+  - id: curated-surf-otake-wavegarage
+    name: "茨城 大竹海岸 波情報"
+    operator: "Wave Garage（サーフショップ）"
+    video_id: "tt4KpMZWC-Q"
+    category: "coast"
+    prefecture: "08"
+    lat: 36.15617
+    lng: 140.57235
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。タイトルに日付あり=IDが変わる可能性(要監視)。座標:Nominatim(鉾田市大竹)。geo=大竹, 鉾田市, 茨城県, 311-1512, 日本"
+
+  - id: curated-surf-kanegahama-stairs
+    name: "日向 金ヶ浜（stairs of the sea カメラ3）"
+    operator: "stairs of the sea（サーフショップ）"
+    video_id: "B8T2jPynrvE"
+    category: "coast"
+    prefecture: "45"
+    lat: 32.37837
+    lng: 131.62141
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(日向市平岩)。geo=平岩, 日向市, 宮崎県, 883-0021, 日本"
+
+  - id: curated-ropeway-otaru-tenguyama
+    name: "小樽天狗山ロープウエイ"
+    operator: "小樽天狗山ロープウエイ（北海道中央バス）"
+    video_id: "fRJu6m5R9VU"
+    category: "scenic"
+    prefecture: "01"
+    lat: 43.16841
+    lng: 140.96981
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(小樽天狗山)。geo=天狗山, 小樽市, 後志総合振興局, 北海道, 北海道地方, 047-8501, 日本"
+
+  - id: curated-ropeway-heavens-sonohara
+    name: "ヘブンスそのはら（阿智村）"
+    operator: "ヘブンスそのはら（富士見台高原ロープウェイ）"
+    video_id: "7rTmi01TWhk"
+    category: "scenic"
+    prefecture: "20"
+    lat: 35.45527
+    lng: 137.66863
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存浪合パーク(阿智村)とは別。座標:Nominatim(阿智村智里)。geo=ヘブンスそのはら, 富士見台公園線, 園原, 智里, 阿智村, 下伊那郡, 長野県, 395-0304, 日本"
+
+  - id: curated-ropeway-hakkaisan-sancho
+    name: "八海山ロープウェー 山頂"
+    operator: "八海山ロープウェー（プリンスホテル）"
+    video_id: "JkuatPS9HrY"
+    category: "scenic"
+    prefecture: "15"
+    lat: 37.09902
+    lng: 138.97297
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(南魚沼市山口)。geo=山口, 南魚沼市, 新潟県, 日本"
+
+  - id: curated-univ-showa-womens
+    name: "昭和女子大学 キャンパス"
+    operator: "昭和女子大学（昭和女子大TV）"
+    video_id: "C1F9PaVlav0"
+    category: "other"
+    prefecture: "13"
+    lat: 35.64427
+    lng: 139.6761
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(世田谷区太子堂1)。geo=昭和女子大学, 首都高速3号渋谷線, 太子堂一丁目, 太子堂, 世田谷区, 東京都, 154-0004, 日本"
+
+  - id: curated-univ-hiroshima-higashihiroshima
+    name: "広島大学 東広島キャンパス"
+    operator: "広島大学"
+    video_id: "eK249Kh3lQQ"
+    category: "other"
+    prefecture: "34"
+    lat: 34.40164
+    lng: 132.72072
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(東広島市鏡山1)。geo=広島大学, 広大通り, 鏡山一丁目, 西条町田口, 東広島市, 広島県, 739-8512, 日本"
+
+  - id: curated-aquarium-kamo-tsuruoka
+    name: "鶴岡市加茂（加茂水族館周辺）"
+    operator: "鶴岡市加茂地区自治振興会"
+    video_id: "fpZLS402exc"
+    category: "coast"
+    prefecture: "06"
+    lat: 38.75552
+    lng: 139.72413
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(鶴岡市今泉 加茂水族館)。geo=今泉, 鶴岡市, 山形県, 997-1206, 日本"
+
+  - id: curated-zoo-nihondaira-polarbear
+    name: "日本平動物園 ホッキョクグマ"
+    operator: "静岡市 日本平動物園"
+    video_id: "XX0SK-yVja4"
+    category: "healing"
+    prefecture: "22"
+    lat: 34.97982
+    lng: 138.44051
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。自治体(license unknown)。座標:Nominatim(日本平動物園)。geo=市立日本平動物園, 日本平パークウェイ, 池田, 駿河区, 静岡市, 静岡県, 422-8550, 日本"
+
+  - id: curated-coast-minamiizu-yumigahama-1
+    name: "弓ヶ浜①"
+    operator: "南伊豆町観光協会"
+    video_id: "-ulWjBZrLlE"
+    category: "coast"
+    prefecture: "22"
+    lat: 34.63766
+    lng: 138.88896
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存弓ヶ浜(環境省)とは別。座標:Nominatim。geo=弓ヶ浜温泉;みなと湯, 手石湊線, 湊, 南伊豆町, 賀茂郡, 静岡県, 415-0303, 日本"
+
+  - id: curated-coast-minamiizu-yumigahama-2
+    name: "弓ヶ浜②（季一遊前駐車場）"
+    operator: "南伊豆町観光協会"
+    video_id: "6wvrhy3RH6M"
+    category: "coast"
+    prefecture: "22"
+    lat: 34.63766
+    lng: 138.88896
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存弓ヶ浜(環境省)とは別。座標:Nominatim。geo=弓ヶ浜温泉;みなと湯, 手石湊線, 湊, 南伊豆町, 賀茂郡, 静岡県, 415-0303, 日本"
+
+  - id: curated-coast-minamiizu-irozaki
+    name: "石廊崎オーシャンパーク"
+    operator: "南伊豆町観光協会"
+    video_id: "yyKt4PYmyJ0"
+    category: "coast"
+    prefecture: "22"
+    lat: 34.60492
+    lng: 138.84273
+    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存弓ヶ浜(環境省)とは別。座標:Nominatim。geo=石廊崎オーシャンパーク（南伊豆ジオパークビジターセンター）, 546-5, 石廊崎, 南伊豆町, 賀茂郡, 静岡県, 415-0156, 日本"
+
+  - id: curated-scenic-nosappu-kaigarajima
+    name: "納沙布岬 北方館から歯舞群島・貝殻島"
+    operator: "北方領土問題対策協会（北方館）"
+    video_id: "wnramazO4XI"
+    category: "scenic"
+    prefecture: "01"
+    lat: 43.3855
+    lng: 145.817
+    note: "oEmbed 200 / isLiveNow:true。公式ページ https://advoke.jpn.com/hoppou/passible.html に埋め込み。貝殻島灯台を望遠、冬は流氷。座標: 北方館(根室市納沙布36-6)"
+
+  - id: curated-scenic-nosappu-suishojima
+    name: "納沙布岬 北方館から歯舞群島・水晶島"
+    operator: "北方領土問題対策協会（北方館）"
+    video_id: "cdfTKT-M38k"
+    category: "scenic"
+    prefecture: "01"
+    lat: 43.3855
+    lng: 145.817
+    note: "oEmbed 200 / isLiveNow:true。https://advoke.jpn.com/hoppou2/ja/video/video.html。座標: 北方館"
+
+  - id: curated-scenic-rausu-kunashiri-tenbo
+    name: "羅臼国後展望塔から国後島"
+    operator: "北方領土問題対策協会（羅臼町）"
+    video_id: "VyepphBHmcY"
+    category: "scenic"
+    prefecture: "01"
+    lat: 44.0219
+    lng: 145.1894
+    note: "oEmbed 200 / isLiveNow:true。https://advoke.jpn.com/rausu/ja/video/camera/index.html（羅臼町サイトからリンク）。座標: 羅臼国後展望塔(羅臼町礼文町32-1)"
+
+  - id: curated-scenic-okushiri-nabetsuruiwa
+    name: "奥尻島 鍋釣岩（ヒラキスポーツ）"
+    operator: "ニッチワークスDIY（ヒラキスポーツ・奥尻）"
+    video_id: "ZkCdSLZ5ZzI"
+    category: "scenic"
+    prefecture: "01"
+    lat: 42.162
+    lng: 139.518
+    note: "oEmbed 200 / isLiveNow:true。奥尻港・道道39号も映る。座標: 鍋釣岩付近(奥尻町奥尻)概略"
+
+  - id: curated-port-rishiri-oshidomari-ferry-peshi
+    name: "利尻島 鴛泊港フェリーターミナルからペシ岬"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "iBwjkDhl9ys"
+    category: "port"
+    prefecture: "01"
+    lat: 45.242
+    lng: 141.232
+    note: "oEmbed 200 / isLiveNow:true。座標: 鴛泊港フェリーターミナル"
+
+  - id: curated-port-rishiri-oshidomari-kou
+    name: "利尻島 鴛泊港（海の玄関）"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "8BwfUCuPcVE"
+    category: "port"
+    prefecture: "01"
+    lat: 45.241
+    lng: 141.23
+    note: "oEmbed 200 / isLiveNow:true。座標: 鴛泊港"
+
+  - id: curated-scenic-rishiri-peshimisaki
+    name: "利尻島 ペシ岬"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "Lvlm2e83hqM"
+    category: "scenic"
+    prefecture: "01"
+    lat: 45.245
+    lng: 141.233
+    note: "oEmbed 200 / isLiveNow:true。座標: ペシ岬"
+
+  - id: curated-coast-rishiri-maehama1
+    name: "利尻島 前浜（鴛泊）第1"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "aqXQI-SRigk"
+    category: "coast"
+    prefecture: "01"
+    lat: 45.238
+    lng: 141.225
+    note: "oEmbed 200 / isLiveNow:true。座標: 鴛泊前浜(概略)"
+
+  - id: curated-coast-rishiri-maehama2
+    name: "利尻島 前浜（鴛泊）第2"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "bAWueJBFcT0"
+    category: "coast"
+    prefecture: "01"
+    lat: 45.238
+    lng: 141.225
+    note: "oEmbed 200 / isLiveNow:true。座標: 鴛泊前浜(概略)"
+
+  - id: curated-scenic-rishiri-motodomari-rishirizan
+    name: "利尻島 旧本泊小学校から利尻山"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "ag_nRE1jbXk"
+    category: "scenic"
+    prefecture: "01"
+    lat: 45.24
+    lng: 141.2
+    note: "oEmbed 200 / isLiveNow:true。座標: 利尻富士町鴛泊字本泊(概略)"
+
+  - id: curated-scenic-rishiri-himenuma
+    name: "利尻島 姫沼園地"
+    operator: "Tetsu Kuro（YouTubeチャンネル）"
+    video_id: "_CTve3fF0W4"
+    category: "scenic"
+    prefecture: "01"
+    lat: 45.219
+    lng: 141.248
+    note: "oEmbed 200 / isLiveNow:true。座標: 姫沼"
+
+  - id: curated-scenic-rishiri-otadomarinuma
+    name: "利尻島 オタドマリ沼"
+    operator: "Tetsu Kuro（YouTubeチャンネル）"
+    video_id: "enBReBFAk7U"
+    category: "scenic"
+    prefecture: "01"
+    lat: 45.1
+    lng: 141.28
+    note: "oEmbed 200 / isLiveNow:true。座標: オタドマリ沼"
+
+  - id: curated-scenic-rishiri-senposhi-misaki
+    name: "利尻島 仙法志御崎公園"
+    operator: "Tetsu Kuro（YouTubeチャンネル）"
+    video_id: "5BG3KJVFRVM"
+    category: "scenic"
+    prefecture: "01"
+    lat: 45.1247
+    lng: 141.2139
+    note: "oEmbed 200 / isLiveNow:true。座標: 仙法志御崎公園"
+
+  - id: curated-port-ogasawara-futami-mura
+    name: "父島 二見港（小笠原村ライブカメラ①）"
+    operator: "小笠原村"
+    video_id: "poluvhrt6Dk"
+    category: "port"
+    prefecture: "13"
+    lat: 27.095
+    lng: 142.194
+    note: "oEmbed 200 / isLiveNow:true。小笠原.TV(gajyumaru.it-ogasawara.com cam1)と同一映像。東京都港湾局playlist(既登録)とは別カメラ。座標: 二見港"
+
+  - id: curated-port-ogasawara-hahajima-okikou-mura
+    name: "母島 沖港（小笠原村ライブカメラ③）"
+    operator: "小笠原村"
+    video_id: "1s1N4e4qdpo"
+    category: "port"
+    prefecture: "13"
+    lat: 26.64
+    lng: 142.16
+    note: "oEmbed 200 / isLiveNow:true(同名の gHi2T3tBIlo は終了)。座標: 沖港"
+
+  - id: curated-river-ogasawara-yatsusegawa
+    name: "八ツ瀬川 八ツ瀬映像監視局（父島）"
+    operator: "東京都建設局（東京都水防チャンネル）"
+    video_id: "n1TtSZ7z7c0"
+    category: "river"
+    prefecture: "13"
+    lat: 27.0712
+    lng: 142.2096
+    note: "oEmbed 200 / isLiveNow:true。page https://www.kasen-suibo.metro.tokyo.lg.jp/ 。座標: 父島北袋沢(概略)"
+
+  - id: curated-port-toshima-village
+    name: "利島村ライブカメラ"
+    operator: "利島村"
+    video_id: "zKOa2NAlxXw"
+    category: "port"
+    prefecture: "13"
+    lat: 34.5291
+    lng: 139.282
+    note: "oEmbed 200 / 検索LIVEバッジ確認。チャンネル名『利島村ライブカメラ』(村公式と推定・要確認)。座標: 利島村(概略)"
+
+  - id: curated-port-hachijo-sokodo
+    name: "八丈島 底土港"
+    operator: "八丈町"
+    video_id: "1Vl2OrZkwsM"
+    category: "port"
+    prefecture: "13"
+    lat: 33.12
+    lng: 139.8
+    note: "oEmbed 200 / LIVEバッジ。ライブカメラDBで『八丈町役場による配信』。座標: 底土港"
+
+  - id: curated-coast-hachijo-nazumado
+    name: "八丈島 ナズマド（ホエールウォッチングカメラ）"
+    operator: "八丈町"
+    video_id: "QVcanRNNFc8"
+    category: "coast"
+    prefecture: "13"
+    lat: 33.127
+    lng: 139.758
+    note: "oEmbed 200 / LIVEバッジ。八丈町役場配信(ライブカメラDB)。座標: ナズマド(大賀郷)概略"
+
+  - id: curated-port-aogashima-sanpo-village
+    name: "青ヶ島 三宝港（青ヶ島村）"
+    operator: "青ヶ島村"
+    video_id: "mkr8aUEnWuM"
+    category: "port"
+    prefecture: "13"
+    lat: 32.46
+    lng: 139.75
+    note: "oEmbed 200 / LIVEバッジ。ライブカメラDBで『青ヶ島村役場による配信』(チャンネル名は『ストリーミングアカウント』)。都港湾局playlistとは別。座標: 三宝港"
+
+  - id: curated-road-awaji-sa-akashi-kaikyo
+    name: "淡路SA（上り）から明石海峡大橋"
+    operator: "JBハイウェイサービス（本四高速グループ）"
+    video_id: "wVYiVODQAkg"
+    category: "road"
+    prefecture: "28"
+    lat: 34.583
+    lng: 135.01
+    note: "oEmbed 200 / isLiveNow:true。本四高速は転載禁止リスト対象外だが利用条件未確認→unknown。座標: 淡路SA上り(淡路市岩屋)"
+
+  - id: curated-coast-awaji-shevron-place
+    name: "淡路島 SHEVRON PLACE（下司）"
+    operator: "SHEVRON PLACE"
+    video_id: "lJ_pJCUeRyA"
+    category: "coast"
+    prefecture: "28"
+    lat: 34.4099
+    lng: 134.8829
+    note: "oEmbed 200 / LIVEバッジ。店舗運営。座標: 淡路市下司(概略)"
+
+  - id: curated-port-morozaki-kou
+    name: "師崎港（日間賀島・篠島航路）"
+    operator: "南知多町観光協会"
+    video_id: "C3yW6ecbclA"
+    category: "port"
+    prefecture: "23"
+    lat: 34.687
+    lng: 136.972
+    note: "oEmbed 200 / LIVEバッジ。本土側だが離島航路発着港。座標: 師崎港"
+
+  - id: curated-port-iki-ashibe
+    name: "壱岐 芦辺港"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "NR5x9VHjpuE"
+    category: "port"
+    prefecture: "42"
+    lat: 33.8
+    lng: 129.75
+    note: "oEmbed 200 / isLiveNow:true。座標: 芦辺港"
+
+  - id: curated-port-iki-gonoura
+    name: "壱岐 郷ノ浦港"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "pSdtW7OOWig"
+    category: "port"
+    prefecture: "42"
+    lat: 33.74
+    lng: 129.69
+    note: "oEmbed 200 / isLiveNow:true。座標: 郷ノ浦港"
+
+  - id: curated-port-iki-katsumoto
+    name: "壱岐 勝本港"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "CYHGeUeYE0c"
+    category: "port"
+    prefecture: "42"
+    lat: 33.85
+    lng: 129.69
+    note: "oEmbed 200 / isLiveNow:true。座標: 勝本港"
+
+  - id: curated-port-iki-indoji
+    name: "壱岐 印通寺港"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "vKlKHcoX2d0"
+    category: "port"
+    prefecture: "42"
+    lat: 33.74
+    lng: 129.77
+    note: "oEmbed 200 / isLiveNow:true。座標: 印通寺港"
+
+  - id: curated-coast-iki-yunomoto-wan
+    name: "壱岐 湯本湾（湯本温泉）"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "V2urW9TBKz4"
+    category: "coast"
+    prefecture: "42"
+    lat: 33.82
+    lng: 129.68
+    note: "oEmbed 200 / isLiveNow:true。座標: 勝本町立石西触(概略)"
+
+  - id: curated-coast-iki-kuyoshihama
+    name: "壱岐 清石浜"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "orjoGv9Z1ng"
+    category: "coast"
+    prefecture: "42"
+    lat: 33.79
+    lng: 129.76
+    note: "oEmbed 200 / isLiveNow:true。座標: 清石浜(芦辺浦)概略"
+
+  - id: curated-scenic-iki-kojima-jinja
+    name: "壱岐 小島神社"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "40a1tFRC8sg"
+    category: "scenic"
+    prefecture: "42"
+    lat: 33.78
+    lng: 129.76
+    note: "oEmbed 200 / isLiveNow:true。座標: 小島神社(芦辺町諸吉)概略"
+
+  - id: curated-port-ojika-kou
+    name: "小値賀港"
+    operator: "株式会社にんじんネットソリューションズ"
+    video_id: "CViFccMM_GA"
+    category: "port"
+    prefecture: "42"
+    lat: 33.191
+    lng: 129.0589
+    note: "oEmbed 200 / isLiveNow:true。座標: 小値賀港(笛吹)"
+
+  - id: curated-scenic-ojika-shimayado-goen
+    name: "小値賀島 島宿御縁から海"
+    operator: "島宿御縁（御縁チャンネル）"
+    video_id: "HXRBcbOmf-A"
+    category: "scenic"
+    prefecture: "42"
+    lat: 33.1923
+    lng: 129.0532
+    note: "oEmbed 200 / isLiveNow:true。24時間LIVE。座標: 小値賀町笛吹郷(概略)"
+
+  - id: curated-healing-ojika-goen-nekoniwa
+    name: "小値賀島 島宿御縁 保護猫の庭"
+    operator: "島宿御縁（御縁チャンネル）"
+    video_id: "z58SAyF_FXY"
+    category: "healing"
+    prefecture: "42"
+    lat: 33.1923
+    lng: 129.0532
+    note: "oEmbed 200 / LIVEバッジ。座標: 同上"
+
+  - id: curated-other-goto-tsubaki-airport
+    name: "五島つばき空港"
+    operator: "五島つばき空港（長崎空港ビルディング）"
+    video_id: "ftudtfg66TU"
+    category: "other"
+    prefecture: "42"
+    lat: 32.666
+    lng: 128.833
+    note: "oEmbed 200 / LIVEバッジ。座標: 五島つばき空港"
+
+  - id: curated-other-amakusa-airport
+    name: "天草空港"
+    operator: "天草みぞかショップ（天草エアライン関連）"
+    video_id: "tSp0OIjjwnQ"
+    category: "other"
+    prefecture: "43"
+    lat: 32.482
+    lng: 130.159
+    note: "oEmbed 200 / isLiveNow:true。天草エアライン公式(PVJz9xQWECU)は現在非ライブ。座標: 天草空港"
+
+  - id: curated-healing-yushima-nekojima
+    name: "湯島（猫島）定点カメラ"
+    operator: "湯島猫島ありのまま（YouTubeチャンネル）"
+    video_id: "g-tfZ65pdn4"
+    category: "healing"
+    prefecture: "43"
+    lat: 32.6027
+    lng: 130.3378
+    note: "oEmbed 200 / isLiveNow:true。座標: 上天草市大矢野町湯島"
+
+  - id: curated-port-kab-ushibuka-kou
+    name: "天草 牛深港（KAB）"
+    operator: "熊本朝日放送（KAB）"
+    video_id: "wOCxBhh_CUI"
+    category: "port"
+    prefecture: "43"
+    lat: 32.193
+    lng: 130.027
+    note: "oEmbed 200 / LIVEバッジ。ライブカメラDBは【期間限定】表記→要継続確認。RKK牛深港(既登録)とは別局。座標: 牛深港"
+
+  - id: curated-volcano-kyt-kuchinoerabujima
+    name: "口永良部島（KYT情報カメラ）"
+    operator: "KYT鹿児島読売テレビ"
+    video_id: "r4CcpvDcUZE"
+    category: "volcano"
+    prefecture: "46"
+    lat: 30.4561
+    lng: 130.2229
+    note: "oEmbed 200 / isLiveNow:true。座標: 口永良部島本村(概略・カメラ設置位置要確認)"
+
+  - id: curated-scenic-yakushima-nagatadake
+    name: "屋久島 永田岳（4K）"
+    operator: "ライブカメラ見ませんか【Shingenn】（YouTubeチャンネル）"
+    video_id: "dPO_C5ytfrM"
+    category: "scenic"
+    prefecture: "46"
+    lat: 30.3645
+    lng: 130.384
+    note: "oEmbed 200 / isLiveNow:true。個人。座標: 屋久島町永田(概略)"
+
+  - id: curated-coast-yakushima-harutahama-oki
+    name: "屋久島 安房 春田浜沖（光丸）"
+    operator: "光丸（YouTubeチャンネル）"
+    video_id: "f3XFtcmHfWk"
+    category: "coast"
+    prefecture: "46"
+    lat: 30.3051
+    lng: 130.6496
+    note: "oEmbed 200 / LIVEバッジ。24時間。座標: 春田浜(安房)概略"
+
+  - id: curated-scenic-yakushima-yamano-maedake
+    name: "屋久島 安房前岳（やまの）"
+    operator: "安心農園やまの"
+    video_id: "8weVjXZg6pE"
+    category: "scenic"
+    prefecture: "46"
+    lat: 30.31
+    lng: 130.645
+    note: "oEmbed 200 / LIVEバッジ。24時間。座標: 屋久島町安房(概略)"
+
+  - id: curated-other-kyt-amami-airport
+    name: "奄美空港（KYT）"
+    operator: "KYT鹿児島読売テレビ"
+    video_id: "ZCTdrUlC0zE"
+    category: "other"
+    prefecture: "46"
+    lat: 28.431
+    lng: 129.712
+    note: "oEmbed 200 / isLiveNow:true。MBC奄美空港(静止画・既登録)とは別局。座標: 奄美空港"
+
+  - id: curated-coast-hatomajima
+    name: "鳩間島"
+    operator: "Mr.Kajiku/かじく（YouTubeチャンネル）"
+    video_id: "Uh_od38Qtf4"
+    category: "coast"
+    prefecture: "47"
+    lat: 24.4723
+    lng: 123.8204
+    note: "oEmbed 200 / LIVEバッジ(旧ID DpysMv-mhBo は終了)。座標: 鳩間島(概略)"
+
+  - id: curated-other-ishigaki-airport-flight-info
+    name: "南ぬ島石垣空港 国内線フライトインフォメーション"
+    operator: "石垣空港ターミナル株式会社"
+    video_id: "XBvOwSfafF0"
+    category: "other"
+    prefecture: "47"
+    lat: 24.396
+    lng: 124.245
+    note: "oEmbed 200 / isLiveNow:true。表示板の映像(屋内)。座標: 石垣空港"
+
+  - id: curated-port-ishigaki-euglena-ritou-terminal
+    name: "石垣島 ユーグレナ離島ターミナル側"
+    operator: "石垣島ユーグレナ離島ターミナル側LIVEカメラ（個人チャンネル）"
+    video_id: "aGGhY9UcUDU"
+    category: "port"
+    prefecture: "47"
+    lat: 24.337
+    lng: 124.156
+    note: "oEmbed 200 / LIVEバッジ。既登録の730交差点(個人チャンネル)と同系統。座標: 石垣港離島ターミナル"
+
+  - id: curated-coast-ishigaki-ema-nagurawan
+    name: "石垣島 名蔵湾（エーマ石垣島 ムリカブシ）"
+    operator: "エーマ石垣島ホテルズ"
+    video_id: "E7nXbOUBBZc"
+    category: "coast"
+    prefecture: "47"
+    lat: 24.39
+    lng: 124.13
+    note: "oEmbed 200 / LIVEバッジ。座標: 名蔵湾(概略)"
+
+  - id: curated-healing-yanbaru-aha-ikimono
+    name: "やんばる生き物LIVE 水場（道の駅やんばるパイナップルの丘安波）"
+    operator: "道の駅やんばるパイナップルの丘安波"
+    video_id: "VyCdLV2XjpQ"
+    category: "healing"
+    prefecture: "47"
+    lat: 26.72
+    lng: 128.3
+    note: "oEmbed 200 / LIVEバッジ。ヤンバルクイナ等。座標: 国頭村安波(概略)"
+
+  - id: curated-scenic-maibara-ibuki-greenpark-santo
+    name: "伊吹山（グリーンパーク山東から）"
+    operator: "米原市"
+    video_id: "II18TejgjMw"
+    category: "scenic"
+    prefecture: "25"
+    lat: 35.3739
+    lng: 136.3599
+    note: "oEmbed 200 / isLiveNow:true(24hライブ)。米原市公式チャンネル、市の伊吹山特設サイト(https://www.city.maibara.lg.jp/mtibuki/livecamera/20509.html)に埋め込み。座標はNominatim『池下 米原市』(グリーンパーク山東所在地)"
+
+  - id: curated-scenic-maibara-ibuki-3gome
+    name: "伊吹山3合目"
+    operator: "米原市"
+    video_id: "KOaB6A5eWBo"
+    category: "scenic"
+    prefecture: "25"
+    lat: 35.4108
+    lng: 136.3903
+    note: "oEmbed 200 / isLiveNow:true(24hライブ)。米原市公式。座標は伊吹山3合目(旧ゴンドラ山頂駅付近)の既知位置の概算(Nominatim『伊吹山』山頂35.4178,136.4063の南西)"
+
+  - id: curated-scenic-maibara-ibuki-5gome
+    name: "伊吹山5合目"
+    operator: "米原市"
+    video_id: "n996gl1UU6U"
+    category: "scenic"
+    prefecture: "25"
+    lat: 35.415
+    lng: 136.3985
+    note: "oEmbed 200 / isLiveNow:true(24hライブ)。米原市公式。座標は登山道5合目の概算(山頂とゴンドラ駅の中間)"
+
+  - id: curated-scenic-ibuki-highschool-ibukiyama
+    name: "伊吹山（伊吹高校4階から）"
+    operator: "滋賀県立伊吹高等学校"
+    video_id: "OPq7PL4GNwM"
+    category: "scenic"
+    prefecture: "25"
+    lat: 35.3851
+    lng: 136.3782
+    note: "oEmbed 200 / isLiveNow:true。学校公式チャンネル、学校サイト(https://www.ibuki-h.shiga-ec.ed.jp/live/)からリンク、YouTube運用ポリシーあり(埋め込み禁止記載なし)。座標はNominatim『春照 米原市』(学校所在地 米原市春照)"
+
+  - id: curated-scenic-omihachiman-myohoji-gosenkannon
+    name: "近江八幡 八幡堀脇 普陀山妙法寺（護船観音）"
+    operator: "サイバー坊主（普陀山妙法寺）"
+    video_id: "Og8yAjN350g"
+    category: "scenic"
+    prefecture: "25"
+    lat: 35.1425
+    lng: 136.0908
+    note: "oEmbed 200 / isLiveNow:true。説明文に『八幡堀脇に位置』、寺公式サイト(myouhou-ji.com)にライブカメラ記事あり。座標は八幡堀(近江八幡市)の既知概算位置。Nominatimでは寺名ヒットせず"
+
+  - id: curated-other-hikone-daitocho-livecam
+    name: "彦根市大東町 定点カメラ"
+    operator: "滋賀県彦根市大東町ライブカメラ（livecamera24.jp）"
+    video_id: "bvqcnwKCkHs"
+    category: "other"
+    prefecture: "25"
+    lat: 35.2705
+    lng: 136.2613
+    note: "oEmbed 200 / isLiveNow:true。説明文『滋賀県彦根市大東町の定点ライブカメラ』、連絡先info@livecamera24.jp。個人/事業者不明瞭のためレビュー要。座標はNominatim『滋賀県彦根市大東町』"
+
+  - id: curated-ski-hakodateyama-parking
+    name: "びわこ箱館山 駐車場"
+    operator: "びわこ箱館山（hakodateyama MEG）"
+    video_id: "Ms2PIvqvxI8"
+    category: "scenic"
+    prefecture: "25"
+    lat: 35.4283
+    lng: 135.9968
+    note: "oEmbed 200 / isLiveNow:true。公式サイト(https://www.hakodateyama.com/winter/access/#camera)からリンクされる駐車場ライブカメラ(冬季の積雪・タイヤ確認用)。座標はNominatim『箱館山駐車場』"
+
+  - id: curated-other-kohoku-crystal-plaza
+    name: "湖北広域 クリスタルプラザ 混雑状況"
+    operator: "湖北広域行政事務センター"
+    video_id: "0-NgTuQ9d-w"
+    category: "other"
+    prefecture: "25"
+    lat: 35.389
+    lng: 136.2815
+    note: "oEmbed 200 / isLiveNow:true。ごみ処理施設の搬入待ち混雑(4分割画面、上=国道8号側)。公的機関。座標はNominatim『クリスタルプラザ 長浜市』"
+
+  - id: curated-road-hikone-log-morido-r8
+    name: "彦根倉庫 森堂センター 国道8号"
+    operator: "彦根倉庫株式会社"
+    video_id: "5KYJ4onT_YQ"
+    category: "road"
+    prefecture: "25"
+    lat: 35.2302
+    lng: 136.237
+    note: "oEmbed 200 / isLiveNow:true。会社サイト(hikone-log.com/webcam)からYouTubeチャンネルへリンク。国道8号 南行(草津)/北行(彦根・米原)。座標はNominatim『森堂町 彦根市』(森堂センター: 彦根市森堂町110)"
+
+  - id: curated-road-hikone-log-taga-center
+    name: "彦根倉庫 多賀物流センター"
+    operator: "彦根倉庫株式会社"
+    video_id: "4n4ulm-MnhY"
+    category: "road"
+    prefecture: "25"
+    lat: 35.2195
+    lng: 136.2635
+    note: "oEmbed 200 / isLiveNow:true。説明文『多賀物流センターのライブカメラ ←東近江方面 彦根方面→』。座標は多賀町敏満寺(名神多賀SA南側)の概算、Nominatimが429で未確認のためレビュー時要修正"
+
+  - id: curated-coast-wakayama-sailing-center
+    name: "和歌山セーリングセンター（マリーナシティ・わっくん灯台）"
+    operator: "和歌山セーリングクラブ"
+    video_id: "yBc5jseRBpQ"
+    category: "coast"
+    prefecture: "30"
+    lat: 34.155
+    lng: 135.179
+    note: "oEmbed 200 / isLiveNow=true (2026-08-15開始、24hライブ枠)。和歌山マリーナシティ内セーリングセンターからマリーナと北防波堤のわっくん灯台を映す。座標はGSI『和歌山市毛見1517番地』"
+
+  - id: curated-coast-tanabe-tenjinzaki
+    name: "天神崎（丸山灯台・田辺湾）"
+    operator: "公益財団法人 天神崎の自然を大切にする会"
+    video_id: "-DOezXoXqeU"
+    category: "coast"
+    prefecture: "30"
+    lat: 33.736
+    lng: 135.355
+    note: "oEmbed 200 / isLiveNow=true (2023-05-20開始の長期ライブ)。自動パンで天神崎（和歌山のウユニ塩湖）・田辺湾・丸山灯台を映す。座標はGSI『田辺市目良』(33.734177,135.35498)を天神崎側へ微調整"
+
+  - id: curated-scenic-aridagawa-aragijima
+    name: "あらぎ島（有田川町 棚田）"
+    operator: "有田川町役場"
+    video_id: "vd4EkioDHag"
+    category: "scenic"
+    prefecture: "30"
+    lat: 34.074
+    lng: 135.3865
+    note: "oEmbed 200 / isLiveNow=true (2026-04-16開始)。あらぎ島展望所から扇形棚田（日本の棚田百選・重要文化的景観）と有田川を映す。座標は展望所の既知位置（GSI『有田川町三田』代表点34.0903,135.4080は地区中心で離れるため不採用）"
+
+  - id: curated-river-kinokawa-city-maeda
+    name: "貴志川流域 冠水監視カメラ（前田地区）"
+    operator: "紀の川市役所"
+    video_id: "z__LXDtJRrw"
+    category: "river"
+    prefecture: "30"
+    lat: 34.2243
+    lng: 135.3205
+    note: "oEmbed 200 / isLiveNow=true (2025-05-15開始)。紀の川市公式チャンネルの冠水監視カメラ3本のうち1本。座標はGSI『紀の川市貴志川町前田』"
+
+  - id: curated-river-kinokawa-city-marusu
+    name: "貴志川流域 冠水監視カメラ（丸栖地区）"
+    operator: "紀の川市役所"
+    video_id: "yejJge4FTMk"
+    category: "river"
+    prefecture: "30"
+    lat: 34.2354
+    lng: 135.3286
+    note: "oEmbed 200 / isLiveNow=true (2025-05-15開始)。座標はGSI『紀の川市貴志川町丸栖』"
+
+  - id: curated-river-kinokawa-city-chozuki
+    name: "貴志川流域 冠水監視カメラ（調月地区）"
+    operator: "紀の川市役所"
+    video_id: "V-t3fX9UKGE"
+    category: "river"
+    prefecture: "30"
+    lat: 34.2201
+    lng: 135.3324
+    note: "oEmbed 200 / isLiveNow=true (2025-05-15開始)。座標はGSI『紀の川市桃山町調月』"
+
+  - id: curated-other-hashimoto-sugimura-parking
+    name: "杉村やすらぎ広場（駐車場・国道371号橋本バイパス）"
+    operator: "橋本市役所"
+    video_id: "f90BkYeFXqQ"
+    category: "other"
+    prefecture: "30"
+    lat: 34.3432
+    lng: 135.601
+    note: "oEmbed 200 / isLiveNow=true (2024-05-22開始)。橋本市公式チャンネル。駐車場の混雑と国道371号・南海高野線が映る。座標はGSI『橋本市御幸辻390番地』"
+
+  - id: curated-other-hashimoto-sugimura-playground
+    name: "杉村やすらぎ広場（遊具広場）"
+    operator: "橋本市役所"
+    video_id: "Woujo-d_Q5g"
+    category: "other"
+    prefecture: "30"
+    lat: 34.343
+    lng: 135.6012
+    note: "oEmbed 200 / isLiveNow=true (2024-02-28開始)。同施設の遊具広場向き。座標は上と同じ"
+
+  - id: curated-port-inami-fishing-port-ishibashi
+    name: "印南漁港（国道42号印南交差点・太平洋）"
+    operator: "株式会社石橋"
+    video_id: "7sforfBRcZQ"
+    category: "port"
+    prefecture: "30"
+    lat: 33.8212
+    lng: 135.2147
+    note: "oEmbed 200 / isLiveNow=true (2019-12-24開始の長期4Kライブ)。地元企業(株)石橋が自社屋から印南漁港・国道42号・太平洋を配信。座標はGSI『印南町印南1741-1』"
+
+  - id: curated-scenic-koya-chuo-annaijo
+    name: "高野山 中央案内所前（県道53号・小辺路）"
+    operator: "和歌山県高野町"
+    video_id: "XAUchBjokNo"
+    category: "scenic"
+    prefecture: "30"
+    lat: 34.2159
+    lng: 135.5927
+    note: "oEmbed 200 / isLiveNow=true (2026-04-06開始)。高野町公式チャンネル。旧配信 CAU_I1ZMks8 は2026-04-01終了→現行IDに差し替え済み（IDが年次で変わる可能性あり）。座標はGSI『高野町高野山600番地』"
+
+  - id: curated-road-koya-daimon-minami-parking
+    name: "高野山 大門南駐車場前（国道371号）"
+    operator: "和歌山県高野町"
+    video_id: "vyWlu9_tk1o"
+    category: "road"
+    prefecture: "30"
+    lat: 34.2102
+    lng: 135.5755
+    note: "oEmbed 200 / isLiveNow=true (2024-10-31開始)。高野町公式チャンネル。大門南駐車場から国道371号を映す。座標は大門南駐車場の既知位置（GSI『高野町西郷』代表点は離れるため不採用）"
+
+  - id: curated-coast-shirahama-musashi
+    name: "白良浜（紀州・白浜温泉むさし）"
+    operator: "紀州・白浜温泉むさし"
+    video_id: "ExxzkHh4bUY"
+    category: "coast"
+    prefecture: "30"
+    lat: 33.6845
+    lng: 135.3418
+    note: "oEmbed 200 / isLiveNow=true (2025-02-13開始)。旅館むさし公式チャンネル（旅館サイト yado-musashi.co.jp/camera/ はcamstreamer埋込だがYouTubeにも同時配信）。既存の白良浜2本（共同通信/白浜町）とは別視点（北端・むさし前）。座標は白良浜北端のむさし既知位置"
+
+  - id: curated-scenic-yonago-station-nkt
+    name: "JR米子駅・がいなロード"
+    operator: "日本海テレビニュース（日本海テレビ）"
+    video_id: "jX4ezjIYI_I"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.424
+    lng: 133.3356
+    note: "oEmbed 200・isLiveNow=true確認。24時間ライブ。座標: cametan記載の米子駅西側 35.424005,133.335636。"
+
+  - id: curated-scenic-tottori-city-plusbits
+    name: "鳥取市松並町 国道53号"
+    operator: "Plusbits（株式会社プラスビッツ）"
+    video_id: "qWT06bk-pnc"
+    category: "road"
+    prefecture: "31"
+    lat: 35.5143
+    lng: 134.2192
+    note: "oEmbed 200・isLiveNow=true確認。24時間ライブ。座標: GSI 鳥取市松並町 35.5143,134.2192。"
+
+  - id: curated-scenic-tottori-sakyu-cam2
+    name: "鳥取砂丘（馬の背アップ）"
+    operator: "鳥取砂丘チャンネル"
+    video_id: "7T3SV0zMQVI"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.541
+    lng: 134.23
+    note: "oEmbed 200・isLiveNow=true確認。既存 u7Zib_9HbUU(ワイド)とは別枠の第2カメラ。座標: 砂丘中心(GSI 福部町湯山 西側)。"
+
+  - id: curated-scenic-daisen-kankokyoku-2026
+    name: "大山（大山町観光案内所）"
+    operator: "一般社団法人 大山観光局"
+    video_id: "VDtMfauGMew"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.3794
+    lng: 133.5416
+    note: "oEmbed 200・isLiveNow=true確認(チャンネル/liveから抽出)。既存 _zBo6YE_Aj4 と SrJplhtP0bk は配信終了(isLiveNow=false)→本IDへ差替え推奨。座標: GSI 大山町大山 35.3794,133.5416(観光案内所)。"
+
+  - id: curated-scenic-koyamaike-rem
+    name: "湖山池・鳥取大学周辺（サンシープラザ）"
+    operator: "株式会社REM（サンシープラザ）"
+    video_id: "849SJO-DAg8"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.5222
+    lng: 134.1671
+    note: "oEmbed 200・isLiveNow=true確認。賃貸業者の宣伝目的配信だが運営者明確。座標: GSI 鳥取市湖山町西 35.5222,134.1671。"
+
+  - id: curated-scenic-yonago-ryosanyanagi
+    name: "米子市両三柳"
+    operator: "鳥取県米子市両三柳ライブカメラ（個人チャンネル）"
+    video_id: "y26s6wzsBPI"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.4572
+    lng: 133.3246
+    note: "oEmbed 200・isLiveNow=true確認。同一地点を別チャンネル(ddMLqSF16Xk)でも配信中。座標: GSI 米子市両三柳 35.4572,133.3246(丁目不明)。"
+
+  - id: curated-scenic-kutv-kochi-sky
+    name: "KUTVテレビ高知 お天気カメラ（高知市北本町）"
+    operator: "KUTVテレビ高知"
+    video_id: "th1n0fSSUjk"
+    category: "scenic"
+    prefecture: "39"
+    lat: 33.568
+    lng: 133.5455
+    note: "oEmbed 200・isLiveNow=true。@kutv/live の正規URLが本ID。高知市上空と県道384号を写す24時間配信。緊急時は報道配信に切替の可能性。座標はテレビ高知本社(高知市北本町3-4-27)の既知位置"
+
+  - id: curated-scenic-kochi-mirai-kagakukan-sky
+    name: "高知の空をみる（オーテピア屋上）"
+    operator: "高知みらい科学館"
+    video_id: "jtiPiMw4Ecs"
+    category: "scenic"
+    prefecture: "39"
+    lat: 33.561
+    lng: 133.5335
+    note: "oEmbed 200・isLiveNow=true。オーテピア(高知市追手筋2-1-1)屋上から高知市街と空。座標はオーテピアの既知位置"
+
+  - id: curated-scenic-aki-iokido-cave
+    name: "伊尾木洞（安芸市）"
+    operator: "あきのこと（安芸市）"
+    video_id: "nOqYz_8SXO0"
+    category: "scenic"
+    prefecture: "39"
+    lat: 33.5027
+    lng: 133.9346
+    note: "oEmbed 200・isLiveNow=true。伊尾木洞入口の24時間配信。運営は安芸市の情報発信チャンネル「あきのこと」。座標は伊尾木洞(安芸市伊尾木117)の既知位置"
+
+  - id: curated-other-kochi-airport-parking
+    name: "高知龍馬空港 駐車場混雑状況"
+    operator: "高知県航空利用促進協議会"
+    video_id: "92TBiyZKS54"
+    category: "other"
+    prefecture: "39"
+    lat: 33.547
+    lng: 133.67
+    note: "oEmbed 200・isLiveNow=true(チャンネルUCv82Gjr4ulqFHdvoCCQKTXg/liveの正規URL)。既存のRKC空港カメラ(uo-sHAw3cr0)とは別運営者・別視点(駐車場)。座標は高知龍馬空港ターミナル前駐車場の既知位置"
+
+  - id: curated-port-miyazaki-airport-mrt
+    name: "宮崎空港（MRT宮崎放送ライブカメラ）"
+    operator: "MRT宮崎放送"
+    video_id: "ETM2Gb2ks-4"
+    category: "port"
+    prefecture: "45"
+    lat: 31.8772
+    lng: 131.4486
+    note: "oEmbed 200 / isLive=true (2026-08-24 20時台)。チャンネル /live が本IDに解決。24時間LIVE配信枠。座標は宮崎空港ターミナル(既知)。台風時等に配信構成が変わる可能性あり"
+
+  - id: curated-scenic-asahi-miyazaki-oyodogawa
+    name: "宮崎市街・大淀川・橘橋（朝日新聞宮崎総局）"
+    operator: "朝日新聞社（朝日新聞LIVE）"
+    video_id: "h9v4l3maqfs"
+    category: "scenic"
+    prefecture: "45"
+    lat: 31.907
+    lng: 131.4222
+    note: "oEmbed 200 / isLive=true。24時間ライブ。宮崎市橘通東1丁目2-18(朝日新聞宮崎総局)をGSI住所検索で取得。大淀川・橘橋・国道220号を俯瞰"
+
+  - id: curated-road-interluck-r10-miyazaki
+    name: "国道10号 宮崎市大橋（インターラック）"
+    operator: "有限会社インターラック"
+    video_id: "TyedJvZTZWs"
+    category: "road"
+    prefecture: "45"
+    lat: 31.9207
+    lng: 131.4116
+    note: "oEmbed 200 / isLive=true。タイトル「ライブ配信１（サブ）」。同社 cam1 (_lMP3FoYIWA) は配信終了(recording not available)のためサブ側を採用。宮崎市大橋2丁目(GSI丁目代表点)。国道10号・県道26号・小松川方面"
+
+  - id: curated-coast-nobeoka-blue-aile-shinhama
+    name: "延岡 新浜の海（ホテルブルーエール）"
+    operator: "ホテルブルーエール（YouTube: サボテン）"
+    video_id: "tJO2hnxguXk"
+    category: "coast"
+    prefecture: "45"
+    lat: 32.5283
+    lng: 131.6843
+    note: "oEmbed 200 / isLive=true。チャンネル UCXE5HLQOyncCYANgs6qWwuw の /live が本IDに解決。延岡市新浜町1丁目8935-39(GSI)。日向灘・新浜海岸"
+
+  - id: curated-coast-hyuga-kanegahama-stairs-cam2
+    name: "日向 金ヶ浜サーフポイント カメラ2（stairs of the sea）"
+    operator: "stairs of the sea"
+    video_id: "a0dyZaETpto"
+    category: "coast"
+    prefecture: "45"
+    lat: 32.3646
+    lng: 131.6267
+    note: "oEmbed 200 / isLive=true。同一店舗の別アングル。カメラ1 (AF0q8HDOzVk / ZzqbobQtqfM) は確認時点で非配信のため見送り"
+
+  - id: curated-river-qsr-oyodogawa-live
+    name: "大淀川 映像配信（九州地方整備局 試験配信）"
+    operator: "国土交通省 九州地方整備局 水災害予報センター・宮崎河川国道事務所"
+    video_id: "roLilL1JvUQ"
+    category: "river"
+    prefecture: "45"
+    lat: 31.9161
+    lng: 131.4105
+    note: "oEmbed 200 / isLive=true。「試験配信中」表記。複数地点を巡回する可能性があり地点固定でない→座標は宮崎河川国道事務所(宮崎市大工2丁目39, GSI)。政府配信だが利用条件未記載→license=unknown。kawabou静止画とは別系統(YouTube)で重複なし"
+
+  - id: curated-river-qsr-omarugawa-live
+    name: "小丸川 映像配信（九州地方整備局 試験配信）"
+    operator: "国土交通省 九州地方整備局 水災害予報センター・宮崎河川国道事務所"
+    video_id: "4DbsHMixQW4"
+    category: "river"
+    prefecture: "45"
+    lat: 32.1224
+    lng: 131.5199
+    note: "oEmbed 200 / isLive=true。「試験配信中」。座標は小丸川・小丸大橋付近(高鍋町北高鍋, GSI)の代表点。巡回配信の可能性あり。license=unknown"
+
+  - id: curated-river-qsr-gokasegawa-live
+    name: "五ヶ瀬川 映像配信（九州地方整備局 試験配信）"
+    operator: "国土交通省 九州地方整備局 水災害予報センター・延岡河川国道事務所"
+    video_id: "Y0ErmD-el-0"
+    category: "river"
+    prefecture: "45"
+    lat: 32.5797
+    lng: 131.6557
+    note: "oEmbed 200 / isLive=true。「試験配信中」。座標は延岡河川国道事務所(延岡市大貫町1丁目2889, GSI)。巡回配信の可能性あり。license=unknown"
+
+  - id: curated-scenic-morotsuka-yamashigi-no-mori
+    name: "諸塚村の景色 やましぎの杜（4K）"
+    operator: "諸塚村役場"
+    video_id: "v8q_9QdZquc"
+    category: "scenic"
+    prefecture: "45"
+    lat: 32.5675
+    lng: 131.2691
+    note: "oEmbed 200 / isLive=true。自治体公式チャンネルの24時間配信。諸塚村七ツ山1034(やましぎの杜)はGSIで大字代表点まで解決。license=unknown"
+
+  - id: curated-other-eco-clean-plaza-miyazaki-gate
+    name: "エコクリーンプラザみやざき 入場門→計量棟（搬入混雑）"
+    operator: "エコクリーンプラザみやざき"
+    video_id: "1vPU-bye4RM"
+    category: "other"
+    prefecture: "45"
+    lat: 31.9872
+    lng: 131.3828
+    note: "oEmbed 200 / isLive=true。チャンネル @-sf7hk /live が本IDに解決。宮崎市大瀬町倉谷6176-1(GSIは大瀬町代表点)。ごみ処理施設の搬入車両混雑カメラ。運営者名はページ記載から"
+
+  - id: curated-mountain-kongozan-trailhead
+    name: "金剛山 登山口"
+    operator: "kongozanTV（kongozan.live / tsujiwaki.jp）"
+    video_id: "K-bqbArZiuM"
+    category: "scenic"
+    prefecture: "27"
+    lat: 34.423
+    lng: 135.652
+    note: "oEmbed 200 / isLiveNow:true 24時間配信。金剛山登山口(千早赤阪村千早)の既知座標。個人運営(サイト名=運営者)"
+
+  - id: curated-mountain-kongozan-iwawaki
+    name: "金剛山（岩湧山麓ライブ・河内長野市）"
+    operator: "岩湧山麓ライブ (Haru)"
+    video_id: "uxDiOALn_8A"
+    category: "scenic"
+    prefecture: "27"
+    lat: 34.43
+    lng: 135.59
+    note: "oEmbed 200 / isLiveNow:true 24/7。個人チャンネル。設置点は河内長野市岩湧山麓としか不明のため概略座標、要レビュー"
+
+  - id: curated-mountain-kimobetsu-yoteizan
+    name: "喜茂別町から見た羊蹄山"
+    operator: "喜茂別町ライブカメラ"
+    video_id: "Rx54BxW2kiU"
+    category: "scenic"
+    prefecture: "01"
+    lat: 42.796
+    lng: 140.95
+    note: "oEmbed 200 / isLiveNow:true。座標は喜茂別町役場の既知座標"
+
+  - id: curated-mountain-hachimantai-panorama-ski
+    name: "八幡平リゾート パノラマスキー場"
+    operator: "八幡平リゾート"
+    video_id: "nTlYu7BovSM"
+    category: "scenic"
+    prefecture: "03"
+    lat: 39.943
+    lng: 140.983
+    note: "oEmbed 200 / isLiveNow:true。座標は八幡平リゾートパノラマスキー場の既知座標"
+
+  - id: curated-mountain-appi-dynabase-iwatesan
+    name: "八幡平温泉郷から見る岩手山（DynaBase APPI）"
+    operator: "RVパーク DynaBase APPI"
+    video_id: "wNm17Fe-Sto"
+    category: "scenic"
+    prefecture: "03"
+    lat: 39.94
+    lng: 140.99
+    note: "oEmbed 200 / isLiveNow:true。座標は八幡平温泉郷の概略(施設位置要確認)"
+
+  - id: curated-mountain-akaishidake-sawarajima
+    name: "赤石岳（椹島）"
+    operator: "南アルプスユネスコエコパーク（南プスPR）"
+    video_id: "x4JzcgI9UVs"
+    category: "scenic"
+    prefecture: "22"
+    lat: 35.364
+    lng: 138.216
+    note: "oEmbed 200 / isLiveNow:true。椹島ロッヂ周辺の既知座標"
+
+  - id: curated-mountain-shirabiso-kogen
+    name: "しらびそ高原"
+    operator: "しらびそ高原（天空の楽園）"
+    video_id: "AWgSeZ3EnVY"
+    category: "scenic"
+    prefecture: "20"
+    lat: 35.416
+    lng: 138.017
+    note: "oEmbed 200 / isLiveNow:true。しらびそ高原(飯田市上村)の既知座標"
+
+  - id: curated-mountain-asamayama-crater-maechan
+    name: "浅間山火口（嬬恋村）"
+    operator: "株式会社まえちゃんねっと"
+    video_id: "YhxWaipmtl8"
+    category: "volcano"
+    prefecture: "10"
+    lat: 36.51
+    lng: 138.526
+    note: "oEmbed 200 / isLiveNow:true。嬬恋村内設置、概略座標(要確認)"
+
+  - id: curated-mountain-sanbesan-nishinohara
+    name: "三瓶山 西の原（山の駅さんべ）"
+    operator: "さんべツアーズ"
+    video_id: "3TjoHhS78hE"
+    category: "scenic"
+    prefecture: "32"
+    lat: 35.117
+    lng: 132.612
+    note: "oEmbed 200 / isLiveNow:true。山の駅さんべ(大田市三瓶町)の既知座標"
+
+  - id: curated-mountain-aso-volcano-museum-dcam
+    name: "阿蘇火山博物館 dカメラ"
+    operator: "阿蘇火山博物館"
+    video_id: "t4tKqcWyU7I"
+    category: "volcano"
+    prefecture: "43"
+    lat: 32.8848
+    lng: 131.048
+    note: "oEmbed 200 / isLiveNow:true。草千里の阿蘇火山博物館既知座標。既存の自然公園財団草千里4Kとは別運営者"
+
+  - id: curated-mountain-kurodake-rinyu
+    name: "大雪山 黒岳五合目（りんゆう黒岳）"
+    operator: "りんゆう観光（黒岳ロープウェイ）"
+    video_id: "JLABQcjsHd4"
+    category: "scenic"
+    prefecture: "01"
+    lat: 43.72
+    lng: 142.935
+    note: "oEmbed 200 / isLiveNow:true。黒岳五合目駅の既知座標"
+
+  - id: curated-mountain-higashikawa-asahidake-hokko
+    name: "東川町から見る旭岳（北工学園）"
+    operator: "北工学園 東川国際文化福祉専門学校"
+    video_id: "Q5Q5UL34cH4"
+    category: "scenic"
+    prefecture: "01"
+    lat: 43.696
+    lng: 142.447
+    note: "oEmbed 200 / isLiveNow:true。東川町市街の既知座標"
+
+  - id: curated-mountain-iwashiro-adatarayama
+    name: "二本松市岩代から見る安達太良山"
+    operator: "いわしろ夢現塾"
+    video_id: "79KAGuh0wQs"
+    category: "scenic"
+    prefecture: "07"
+    lat: 37.557
+    lng: 140.515
+    note: "oEmbed 200 / isLiveNow:true。岩代グラウンド(二本松市)の概略座標"
+
+  - id: curated-mountain-azumino-terrace-jonen
+    name: "安曇野から見る常念山脈（あづみのテラス）"
+    operator: "あづみのテラス"
+    video_id: "Is8U7W-IjmI"
+    category: "scenic"
+    prefecture: "20"
+    lat: 36.304
+    lng: 137.905
+    note: "oEmbed 200 / isLiveNow:true 4K。安曇野市の概略座標、施設位置要確認"
+
+  - id: curated-mountain-hakuba-tokyu-kitaalps
+    name: "白馬東急ホテルから見る北アルプス"
+    operator: "白馬東急ホテル"
+    video_id: "LntyJbsekPk"
+    category: "scenic"
+    prefecture: "20"
+    lat: 36.697
+    lng: 137.838
+    note: "oEmbed 200 / isLiveNow:true。白馬東急ホテルの既知座標"
+
+  - id: curated-mountain-shigakogen-yamanoeki
+    name: "志賀高原 山の駅（西館山・東館山）"
+    operator: "山ノ内まちづくり観光局"
+    video_id: "96TRTCrb5GU"
+    category: "scenic"
+    prefecture: "20"
+    lat: 36.723
+    lng: 138.487
+    note: "oEmbed 200 / isLiveNow:true。志賀高原山の駅の既知座標"
+
+  - id: curated-mountain-kushiro-meakandake-sanes
+    name: "釧路市街から見る雌阿寒岳"
+    operator: "サンエス電気通信株式会社"
+    video_id: "ACIoHP6DW-0"
+    category: "scenic"
+    prefecture: "01"
+    lat: 42.98
+    lng: 144.383
+    note: "oEmbed 200 / isLiveNow:true。同社釧路本社ビル屋上、概略座標(要確認)"
+
+  - id: curated-mountain-hakusan-murodo-mro
+    name: "白山室堂（MRO）"
+    operator: "MRO北陸放送"
+    video_id: "Getnw5E1ue8"
+    category: "scenic"
+    prefecture: "17"
+    lat: 36.152
+    lng: 136.765
+    note: "oEmbed 200 / isLiveNow:true。タイトルに10/13配信停止予定(夏山期間限定)。白山室堂ビジターセンターの既知座標"
+
+  - id: curated-mountain-tsukubasan-channel-miyukigahara
+    name: "筑波山 御幸ヶ原（筑波山チャンネル）"
+    operator: "筑波山チャンネル"
+    video_id: "cL2zQrbW3vg"
+    category: "scenic"
+    prefecture: "08"
+    lat: 36.226
+    lng: 140.106
+    note: "oEmbed 200 / isLiveNow:true 24/7(実証試験中と表記)。既存のつくば市静止画(御幸ヶ原)と同地点だが運営者・種別が異なる。運営者実体は要確認"
+
+  - id: curated-mountain-tsukubasan-channel-nyotai
+    name: "筑波山 女体山頂合流地点（筑波山チャンネル）"
+    operator: "筑波山チャンネル"
+    video_id: "dojmzSgF-yk"
+    category: "scenic"
+    prefecture: "08"
+    lat: 36.2255
+    lng: 140.109
+    note: "oEmbed 200 / isLiveNow:true。同上"
+
+  - id: curated-mountain-toyooka-toyoterrace-chuoalps
+    name: "豊丘村から見る中央アルプス（とよテラス）"
+    operator: "長野県豊丘村（広報係）"
+    video_id: "lw_3VOqM0fM"
+    category: "scenic"
+    prefecture: "20"
+    lat: 35.531
+    lng: 137.882
+    note: "oEmbed 200 / isLiveNow:true。豊丘村役場の既知座標"
+
+  - id: curated-mountain-kushigatayama-kyosai
+    name: "櫛形山（峡西CATV）"
+    operator: "峡西CATV"
+    video_id: "1mRb_buPZ6E"
+    category: "scenic"
+    prefecture: "19"
+    lat: 35.608
+    lng: 138.468
+    note: "oEmbed 200 / isLiveNow:true。南アルプス市内(峡西CATV局舎付近)の概略座標"
+
+  - id: curated-mountain-jukkoku-toge-fuji
+    name: "箱根 十国峠から見る富士山"
+    operator: "フジヤマNAVI（十国峠）"
+    video_id: "4Hro9QIrsYA"
+    category: "scenic"
+    prefecture: "22"
+    lat: 35.085
+    lng: 139.035
+    note: "oEmbed 200 / isLiveNow:true。十国峠山頂(函南町)の既知座標。フジヤマNAVIは既存curatedで採用実績あり"
+
+  - id: curated-mountain-moiwayama-ropeway
+    name: "藻岩山（札幌）"
+    operator: "Hokkaido Kurashi no Yomimono（hokkaidodo.jp）"
+    video_id: "T95GNcqeKdE"
+    category: "scenic"
+    prefecture: "01"
+    lat: 43.027
+    lng: 141.322
+    note: "oEmbed 200 / isLiveNow:true 24/7。hokkaidodo.jp/mt-moiwa/ に埋め込み。藻岩山山頂の既知座標(カメラ位置要確認)"
+
+  - id: curated-muni-happo-koirigawa
+    name: "小入川ライブカメラ（八峰町）"
+    operator: "八峰町"
+    video_id: "BBvzrh5dQFI"
+    category: "river"
+    prefecture: "05"
+    lat: 40.36
+    lng: 140.02
+    note: "oEmbed 200(タイトル『秋田県八峰町「小入川」ライブカメラ』/ 八峰町_カメラ1)。YouTube側でcurl/WebFetchがブロックされライブ中の確認は未了(町ページで常時配信として案内)。座標は小入川河口(八森)の概略"
+
+  - id: curated-muni-happo-masegawa
+    name: "真瀬川ライブカメラ（八峰町）"
+    operator: "八峰町"
+    video_id: "5OPZjrk868A"
+    category: "river"
+    prefecture: "05"
+    lat: 40.3
+    lng: 140.03
+    note: "oEmbed 200(八峰町_カメラ2)。ライブ中確認は未了。座標概略(真瀬)"
+
+  - id: curated-muni-kawachinagano-iwawaki
+    name: "河内長野市役所から岩湧山方面"
+    operator: "河内長野市"
+    video_id: "3tm9GiVT9FM"
+    category: "scenic"
+    prefecture: "27"
+    lat: 34.45789
+    lng: 135.56424
+    note: "oEmbed 200(河内長野市役所チャンネル)。同市の『くろまろの郷 駐車場入口』(6a8XvKfhc4Y)は既登録。ライブ中確認は未了。座標GSI(河内長野市役所)"
+
+  - id: curated-muni-kawachinagano-kuromaro-dogpark
+    name: "道の駅奥河内くろまろの郷（ドッグパーク）"
+    operator: "河内長野市"
+    video_id: "QM8nQo5OSqY"
+    category: "other"
+    prefecture: "27"
+    lat: 34.4385
+    lng: 135.5745
+    note: "oEmbed 200。ライブ中確認は未了。座標は道の駅(高向)の既知座標・概略"
+
+  - id: curated-muni-kawachinagano-kuromaro-bazaar
+    name: "道の駅奥河内くろまろの郷（バザール広場）"
+    operator: "河内長野市"
+    video_id: "yraLdgyWAzM"
+    category: "other"
+    prefecture: "27"
+    lat: 34.4385
+    lng: 135.5745
+    note: "oEmbed 200。ライブ中確認は未了。座標概略"
+
+  - id: curated-muni-kamijima-sekizenzan
+    name: "岩城島 積善山ライブカメラ（上島町）"
+    operator: "上島町"
+    video_id: "tYzYCzd8rWI"
+    category: "scenic"
+    prefecture: "38"
+    lat: 34.25663
+    lng: 133.14733
+    note: "oEmbed 200(チャンネル『上島町岩城積善山ライブカメラ』)。三千本桜の山頂展望。ライブ中確認は未了。座標GSI(積善山)"
+
+  - id: curated-muni-komatsu-fire-hq
+    name: "小松市消防本部 防災カメラ"
+    operator: "小松市"
+    video_id: "XHXTFL4jI5c"
+    category: "other"
+    prefecture: "17"
+    lat: 36.403
+    lng: 136.448
+    note: "oEmbed 200(komatsucity小松市役所)。ライブ中確認は未了。座標は小松市消防本部(園町)の概略"
+
+  - id: curated-muni-kamoenai
+    name: "神恵内村ライブカメラ"
+    operator: "神恵内村（地域おこし協力隊チャンネル）"
+    video_id: "nDxVuGyXQhc"
+    category: "coast"
+    prefecture: "01"
+    lat: 43.14
+    lng: 140.437
+    note: "oEmbed 200(チャンネル『カモエナイマニア ー神恵内村地域おこし協力隊よりー』、村公式ページからリンク)。ライブ中確認は未了。座標は神恵内村役場の概略"
+
+  - id: curated-muni-oshino-nijumagari
+    name: "忍野村 二十曲峠展望テラス（4K）"
+    operator: "忍野村"
+    video_id: "2RBil3H-fAA"
+    category: "scenic"
+    prefecture: "19"
+    lat: 35.478
+    lng: 138.878
+    note: "oEmbed 200(忍野村公式、タイトル【4K LIVE】)。ライブ中確認は未了。座標は二十曲峠の既知座標・概略"
+
+  - id: curated-muni-omachi-kizakiko
+    name: "木崎湖ライブ（大町市）"
+    operator: "大町市"
+    video_id: "zFCpoFBAcXg"
+    category: "scenic"
+    prefecture: "20"
+    lat: 36.555
+    lng: 137.835
+    note: "oEmbed 200(長野県大町市)。ライブ中確認は未了。座標は木崎湖の既知座標・概略"
+
+  - id: curated-muni-funagata-nagaobashi
+    name: "舟形町 長尾橋"
+    operator: "舟形町"
+    video_id: "Dq-S5GhlqGk"
+    category: "river"
+    prefecture: "06"
+    lat: 38.69
+    lng: 140.32
+    note: "oEmbed 200(舟長尾ライブ景観)。舟形町多目的ライブカメラ9本中、oEmbed 200は本件と若あゆ温泉の2本のみ(他7本は401=非公開/終了)。ライブ中確認は未了。座標は最上小国川長尾橋付近の概略"
+
+  - id: curated-muni-funagata-wakaayu
+    name: "舟形若あゆ温泉"
+    operator: "舟形町"
+    video_id: "_9eJ7jABipY"
+    category: "scenic"
+    prefecture: "06"
+    lat: 38.7
+    lng: 140.33
+    note: "oEmbed 200(舟若あゆライブ景観)。ライブ中確認は未了。座標概略"
+
+  - id: curated-taxi-awaraonsen-station-1
+    name: "芦原温泉駅 タクシー乗り場①"
+    operator: "福井県タクシー協会"
+    video_id: "EwfXRXo3tyI"
+    category: "other"
+    prefecture: "18"
+    lat: 36.2155
+    lng: 136.2354
+    note: "oEmbed 200 / isLiveNow=true。納入事例(grasphere.com/case/2943)で運営者確認。②(9Si8-fRvCdI)はoEmbed 401で不可。座標Nominatim(芦原温泉駅)"
+
+  - id: curated-road-yamagata-omotezao-bussan-a
+    name: "山形 表蔵王 国道13号・蔵王温泉入口交差点（観光物産会館 北向き）"
+    operator: "株式会社山形県観光物産会館（ぐっと山形）"
+    video_id: "0nzlGCw_zVQ"
+    category: "road"
+    prefecture: "06"
+    lat: 38.1904
+    lng: 140.3128
+    note: "2026-04設置。チャンネル@山形市表蔵王ライブ /liveで取得、isLiveNow=true、oEmbed 200。page https://www.yamagata-bussan.co.jp/livecam.html。既存「山形 表蔵王（国道13号・蔵王温泉入口）」(38.211,140.396)は別地点・別ソース。座標Nominatim(山形県観光物産会館)"
+
+  - id: curated-road-yamagata-omotezao-bussan-b
+    name: "山形 表蔵王 国道13号・山形バイパス（観光物産会館 南向き）"
+    operator: "株式会社山形県観光物産会館（ぐっと山形）"
+    video_id: "3rNxOptVoXI"
+    category: "road"
+    prefecture: "06"
+    lat: 38.1904
+    lng: 140.3128
+    note: "チャンネル@山形バイパスライブ /live、isLiveNow=true、oEmbed 200。東北中央道山形上山IC・道の駅やまがた蔵王方向"
+
+  - id: curated-road-asahikawa-autobahn-toko
+    name: "旭川環状線 東光（アウトバーン スズキアリーナツインハープ東光店）"
+    operator: "有限会社アウトバーン"
+    video_id: "ZYeO5BXjKVU"
+    category: "road"
+    prefecture: "01"
+    lat: 43.7396
+    lng: 142.4058
+    note: "oEmbed 200 / isLiveNow=true。運営者=中古車販売アウトバーン公式チャンネル(UCix_G_zC5PZ_y0uL84hFCdQ)。座標は東光17条5丁目の概略(Nominatim失敗、要確認)"
+
+  - id: curated-road-asahikawa-autobahn-nagayama
+    name: "国道39号 永山（アウトバーン太陽店）"
+    operator: "有限会社アウトバーン"
+    video_id: "OYLHi_mc79M"
+    category: "road"
+    prefecture: "01"
+    lat: 43.7975
+    lng: 142.4085
+    note: "チャンネル/liveで取得、oEmbed 200（旧ID mQvs2o8HXecは403）。座標は永山3条の概略(Nominatim失敗、要確認)"
+
+  - id: curated-road-asahikawa-autobahn-chuwa
+    name: "国道12号・国道233号 忠和（アウトバーン忠和店）"
+    operator: "有限会社アウトバーン"
+    video_id: "ulPfwd62RCM"
+    category: "road"
+    prefecture: "01"
+    lat: 43.7694
+    lng: 142.3205
+    note: "oEmbed 200。ライブ状態はYouTube側レート制限で未確認(要再確認)。住所 忠和7条7丁目1-15、座標Nominatim(忠和七条七丁目)"
+
+  - id: curated-road-kitami-tokoro-ohtomo
+    name: "道道7号北見常呂線・常呂町基線交差点（大友産業）"
+    operator: "大友産業"
+    video_id: "Bjwqs3XDkx4"
+    category: "road"
+    prefecture: "01"
+    lat: 44.0839
+    lng: 144.0349
+    note: "チャンネル@ohtomoindustry /liveで取得、isLiveNow=true、oEmbed 200（旧ID PeOHFw14tNUは終了）。page https://tokoro.net/ohtomoindustry/。座標は常呂町共立(Nominatim)概略"
+
+  - id: curated-other-minamiawaji-fujii-carwash-2
+    name: "ENEOS淡路セントラルSS ドライブスルー洗車 Liveカメラ2"
+    operator: "藤井商事株式会社"
+    video_id: "DSAXe1wBkFM"
+    category: "other"
+    prefecture: "28"
+    lat: 34.3263
+    lng: 134.8264
+    note: "oEmbed 200 / isLiveNow=true。page https://fujiishoji-fs.co.jp/?page_id=187。Liveカメラ1(HqX-XW0U7P8)はoEmbed 401で不可。座標は南あわじ市広田広田(Nominatim)、住所広田広田310-1"
+
+  - id: curated-ski-minakami-hodaigi
+    name: "宝台樹スキー場 ゲレンデ"
+    operator: "みなかみ宝台樹リゾート株式会社"
+    video_id: "FNrVE0yzEpA"
+    category: "scenic"
+    prefecture: "10"
+    lat: 36.8315
+    lng: 139.0839
+    note: "oEmbed 200 / isLiveNow=true。page https://hodaigi.jp/live-camera/。座標Nominatim"
+
+  - id: curated-port-takehara-tadanoumi-port
+    name: "竹原港・忠海港（竹原市）"
+    operator: "竹原市（建設課）"
+    video_id: "pm6Iv_jVkJk"
+    category: "port"
+    prefecture: "34"
+    lat: 34.3393
+    lng: 132.91
+    note: "市公式ページ埋め込み。oEmbed 200 / isLiveNow=true。既存「忠海港（うさぎ島フェリー）」とはvideo_id不一致。座標は竹原港(Nominatim)"
+
+  - id: curated-farm-adachi-bokujo-niikappu
+    name: "新冠 安達牧場 放牧地（競走馬生産）"
+    operator: "LIVE the SCAPE（安達牧場）"
+    video_id: "gJkI89hErsI"
+    category: "healing"
+    prefecture: "01"
+    lat: 42.4361
+    lng: 142.3079
+    note: "oEmbed 200 / isLiveNow:true。24h定点。座標は新冠町共栄(Nominatim)"
+
+  - id: curated-farm-rakuno-gakuen-univ
+    name: "酪農学園大学 キャンパス（江別）"
+    operator: "酪大放送局（酪農学園大学学生チャンネル）"
+    video_id: "EoVL1rJ-_1I"
+    category: "other"
+    prefecture: "01"
+    lat: 43.0748
+    lng: 141.511
+    note: "oEmbed 200 / isLiveNow:true。channel @HokkaidoMoriageTv の常設ライブ。大学公式ではなく学生団体運営"
+
+  - id: curated-shrine-suzuka-myojin
+    name: "鈴鹿明神社（座間）"
+    operator: "鈴鹿明神社"
+    video_id: "LpVbMMrwDuo"
+    category: "scenic"
+    prefecture: "14"
+    lat: 35.4848
+    lng: 139.3945
+    note: "oEmbed 200 / isLiveNow:true。チャンネル Suzuka Myoujin。Nominatim: 鈴鹿明神社"
+
+  - id: curated-temple-toyokawa-inari-somon
+    name: "豊川稲荷 総門前"
+    operator: "paul gotto（YouTubeチャンネル・個人運営）"
+    video_id: "IF9aMSrHTAM"
+    category: "scenic"
+    prefecture: "23"
+    lat: 34.8258
+    lng: 137.3923
+    note: "oEmbed 200 / isLiveNow:true。同上"
+
+  - id: curated-shrine-kamishikimi-kumanoza-parking
+    name: "上色見熊野座神社 参拝者駐車場"
+    operator: "阿蘇DC（YouTubeチャンネル）"
+    video_id: "82uCs10qJCo"
+    category: "other"
+    prefecture: "43"
+    lat: 32.8538
+    lng: 131.1585
+    note: "oEmbed 200 / isLiveNow:true。駐車場向き（参道ではない）。Nominatim: 上色見熊野座神社"
+
+  - id: curated-shrine-kuniyasu-tenma-keidai
+    name: "国安天満神社 境内（稲美町）"
+    operator: "国安天満神社"
+    video_id: "GE180njoRoM"
+    category: "scenic"
+    prefecture: "28"
+    lat: 34.7415
+    lng: 134.9106
+    note: "oEmbed 200 / isLiveNow:true。channel/live解決。Nominatim: 国安 稲美町"
+
+  - id: curated-shrine-kuniyasu-tenma-oike
+    name: "国安天満神社 天満大池"
+    operator: "国安天満神社"
+    video_id: "8V9wAUw9T2E"
+    category: "scenic"
+    prefecture: "28"
+    lat: 34.7415
+    lng: 134.9106
+    note: "oEmbed 200 / isLiveNow:true"
+
+  - id: curated-temple-honjoji-oshu
+    name: "本浄寺（奥州市胆沢）"
+    operator: "Answerpoint（アンサーポイント）"
+    video_id: "nFhcKtH6s6I"
+    category: "scenic"
+    prefecture: "03"
+    lat: 39.0918
+    lng: 141.0545
+    note: "oEmbed 200 / isLiveNow:true。設置業者チャンネル。座標は胆沢小山(Nominatim)"
+
+  - id: curated-temple-reitoji-oshu
+    name: "霊桃寺（奥州市前沢）"
+    operator: "霊桃寺"
+    video_id: "oVt0-ioPjnA"
+    category: "scenic"
+    prefecture: "03"
+    lat: 39.0416
+    lng: 141.073
+    note: "oEmbed 200 / isLiveNow:true。公式 reitoji.com。座標は前沢山下 approx"
+
+  - id: curated-temple-zempukuji-oicho
+    name: "善福寺の大銀杏（南足柄）"
+    operator: "相州善福寺"
+    video_id: "2YYGp8aV5rQ"
+    category: "scenic"
+    prefecture: "14"
+    lat: 35.337
+    lng: 139.0975
+    note: "oEmbed 200 / isLiveNow:true。台帳の『善福寺川』は別物。Nominatim: 南足柄市怒田"
+
+  - id: curated-temple-chisan-sando
+    name: "智積院 参道"
+    operator: "真言宗智山派 総本山智積院"
+    video_id: "YF0H1rYrREw"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.988
+    lng: 135.7768
+    note: "oEmbed 200 / isLiveNow:true。公式サブチャンネル"
+
+  - id: curated-temple-chisan-teien
+    name: "智積院 名勝庭園"
+    operator: "真言宗智山派 総本山智積院"
+    video_id: "z_EU7eS3bJw"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.988
+    lng: 135.7768
+    note: "oEmbed 200 / isLiveNow:true。公式チャンネル"
+
+  - id: curated-temple-saihoji-maizuru
+    name: "西法寺（舞鶴）"
+    operator: "西法寺"
+    video_id: "POMYJSiGEo0"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.4511
+    lng: 135.389
+    note: "oEmbed 200 / isLiveNow:true。座標は舞鶴市行永(Nominatim)"
+
+  - id: curated-temple-higashihonganji-westsky
+    name: "京都駅周辺 西の空・東本願寺"
+    operator: "きょうの西の空 お天気ライブカメラ 京都（個人）"
+    video_id: "HxXavkLizWM"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.9912
+    lng: 135.7584
+    note: "oEmbed 200 / isLiveNow:true。4Kお天気カメラ"
+
+  - id: curated-coast-enoshima-zoom-flyingsuika
+    name: "江の島ズーム（片瀬海岸東浜）"
+    operator: "FlyingSuika（個人）"
+    video_id: "ywXRfMLuw78"
+    category: "coast"
+    prefecture: "14"
+    lat: 35.3087
+    lng: 139.4866
+    note: "oEmbed 200 / isLiveNow:true。同チャンネルの東浜全景(xPgeZzojY5o)は既登録"
+
+  - id: curated-coast-koshigoe-flyingsuika
+    name: "腰越海岸"
+    operator: "FlyingSuika（個人）"
+    video_id: "ESsZ9iB7tz0"
+    category: "coast"
+    prefecture: "14"
+    lat: 35.3084
+    lng: 139.4949
+    note: "oEmbed 200 / isLiveNow:true"
+
+  - id: curated-coast-zushi-wide-flyingsuika
+    name: "逗子海岸ワイド"
+    operator: "FlyingSuika（個人）"
+    video_id: "QDfSyvJ-1-g"
+    category: "coast"
+    prefecture: "14"
+    lat: 35.2904
+    lng: 139.5742
+    note: "oEmbed 200 / isLiveNow:true。台帳の逗子海岸は県の津波監視のみ"
+
+  - id: curated-coast-zushi-kaigansen-flyingsuika
+    name: "逗子海岸 海岸線"
+    operator: "FlyingSuika（個人）"
+    video_id: "8tk5LQkNr5k"
+    category: "coast"
+    prefecture: "14"
+    lat: 35.2904
+    lng: 139.5742
+    note: "oEmbed 200 / isLiveNow:true"
+
+  - id: curated-coast-tbase-nabae
+    name: "難波江海岸（T Base 難波江）"
+    operator: "T Base 難波江"
+    video_id: "kWmSt0JzG2o"
+    category: "coast"
+    prefecture: "18"
+    lat: 35.5041
+    lng: 135.5041
+    note: "oEmbed 200 / isLiveNow:true。マリンショップ系海況カメラ。既存サーフ系との重複なし(name grep 難波江=0)"
+
+  - id: curated-coast-imahama-hodatsushimizu
+    name: "今浜海岸（千里浜なぎさドライブウェイ入口）"
+    operator: "宝達志水町"
+    video_id: "RIPaGq8iV38"
+    category: "coast"
+    prefecture: "17"
+    lat: 36.834
+    lng: 136.7519
+    note: "oEmbed 200 / isLiveNow:true。自治体公式。台帳のHAB千里浜サンセットとは別地点"
+
+  - id: curated-scenic-doya-tanada
+    name: "土谷棚田（松浦市福島町）"
+    operator: "chunchunTV（松浦市ケーブル系）"
+    video_id: "tEym4tCR1Js"
+    category: "scenic"
+    prefecture: "42"
+    lat: 33.3883
+    lng: 129.8145
+    note: "oEmbed 200 / isLiveNow:true。運営者はチャンネル名（chun2.ne.jp）"
+
+  - id: curated-coast-hounohama-beach
+    name: "青島 宝の浜海水浴場（松浦）"
+    operator: "chunchunTV（松浦市ケーブル系）"
+    video_id: "8wie6hq9u-Y"
+    category: "coast"
+    prefecture: "42"
+    lat: 33.4147
+    lng: 129.6876
+    note: "oEmbed 200 / isLiveNow:true。座標は青島(Nominatim)"
+
+  - id: curated-coast-horie-marinehouse
+    name: "堀江海岸 マリンハウス（夕日）"
+    operator: "Come on guys（堀江マリンハウス）"
+    video_id: "bYtTPIDKT88"
+    category: "coast"
+    prefecture: "38"
+    lat: 33.9089
+    lng: 132.7591
+    note: "oEmbed 200 / isLiveNow:true。配信は3月〜10月のみと明記"
+
+  - id: curated-coast-hatsu-okagaki
+    name: "岡垣町 波津海岸"
+    operator: "岡垣町観光協会"
+    video_id: "Lo1mf9sTVjg"
+    category: "coast"
+    prefecture: "40"
+    lat: 33.8767
+    lng: 130.5713
+    note: "oEmbed 200 / isLiveNow:true。観光協会公式。座標は岡垣町原(Nominatim)"
+
+  - id: curated-coast-shirahama-chuo-shimoda
+    name: "白浜中央海水浴場（LIVE SHIMODA）"
+    operator: "LIVE SHIMODA（下田市観光協会系）"
+    video_id: "mWu0lcIsEX8"
+    category: "coast"
+    prefecture: "22"
+    lat: 34.704
+    lng: 138.9715
+    note: "oEmbed 200 / isLiveNow:true。同海岸のプリンスホテル版はホテル担当へ"
+
+  - id: curated-coast-sarushima-tryangle
+    name: "無人島・猿島"
+    operator: "TRYANGLE（猿島航路運営）"
+    video_id: "8vESAF-rTV4"
+    category: "coast"
+    prefecture: "14"
+    lat: 35.2861
+    lng: 139.6941
+    note: "oEmbed 200 / isLiveNow:true。台帳の猿島1件は茨城県猿島郡（別物）"
+
+  - id: curated-scenic-nakano-tanada-cvk
+    name: "富士山と棚田（南アルプス市中野）"
+    operator: "峡西CATV"
+    video_id: "wOl9ZA7rI7k"
+    category: "scenic"
+    prefecture: "19"
+    lat: 35.5985
+    lng: 138.4336
+    note: "oEmbed 200 / isLiveNow:true。CATV運営"
+
+  - id: curated-scenic-aso-mizukake-tanada
+    name: "阿蘇 水掛の棚田"
+    operator: "ITFOR（アイティフォー）"
+    video_id: "3Ab5Upfmtzg"
+    category: "scenic"
+    prefecture: "43"
+    lat: 33.0062
+    lng: 131.0814
+    note: "oEmbed 200 / isLiveNow:true。企業CSRカメラ(mizutomidori.jp)。座標は阿蘇市山田(Nominatim)"
+
+  - id: curated-scenic-iida-ringo-namiki
+    name: "飯田 りんご並木"
+    operator: "飯田ケーブルテレビ（cvn）"
+    video_id: "_krYOEqGGlQ"
+    category: "scenic"
+    prefecture: "20"
+    lat: 35.5153
+    lng: 137.8252
+    note: "oEmbed 200 / isLiveNow:true。CATV運営。Nominatim: りんご並木 飯田市"
+
+  - id: curated-scenic-springs-hiyoshi
+    name: "スプリングスひよし（南丹市）"
+    operator: "agataJapan"
+    video_id: "50N5fNOr2CU"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.1507
+    lng: 135.5174
+    note: "oEmbed 200 / isLiveNow:true。タイトルが日付付き（配信枠が日次で切替わる可能性→channel_id運用推奨）"
+
+  - id: curated-castle-fukuchiyama-agata
+    name: "福知山城"
+    operator: "agataJapan"
+    video_id: "ManyEcR75T4"
+    category: "scenic"
+    prefecture: "26"
+    lat: 35.2968
+    lng: 135.1296
+    note: "oEmbed 200 / isLiveNow:true。日付付きタイトル→枠切替注意。台帳の福知山は河川事務所のみ"
+
+  - id: curated-castle-gujo-hachiman
+    name: "郡上八幡城 お天気カメラ"
+    operator: "郡上どっとcom"
+    video_id: "L0C80aVxJaU"
+    category: "scenic"
+    prefecture: "21"
+    lat: 35.7531
+    lng: 136.9614
+    note: "oEmbed 200 / isLiveNow:true"
+
+  - id: curated-castle-kanazawa-sannomaru
+    name: "金沢城公園 三の丸広場"
+    operator: "石川県土木部公園緑地課"
+    video_id: "HJp34x62osw"
+    category: "scenic"
+    prefecture: "17"
+    lat: 36.5658
+    lng: 136.6594
+    note: "oEmbed 200 / isLiveNow:true。県公式"
+
+  - id: curated-castle-sendai-castle-site
+    name: "仙台城跡"
+    operator: "Discover SENDAI（仙台城本丸会館）"
+    video_id: "Ado_7_DMTdc"
+    category: "scenic"
+    prefecture: "04"
+    lat: 38.2529
+    lng: 140.8567
+    note: "oEmbed 200 / isLiveNow:true"
+
+  - id: curated-castle-sendai-ohashi
+    name: "仙台城跡と市街地をつなぐ大橋"
+    operator: "Discover SENDAI（仙台城本丸会館）"
+    video_id: "vM5RkLiSn5E"
+    category: "scenic"
+    prefecture: "04"
+    lat: 38.2552
+    lng: 140.86
+    note: "oEmbed 200 / isLiveNow:true。座標は川内追廻(Nominatim)"
+
+  - id: curated-castle-takatori-castle-site
+    name: "高取城跡"
+    operator: "高取町まちづくり課"
+    video_id: "w5g9u6eWx1g"
+    category: "scenic"
+    prefecture: "29"
+    lat: 34.4295
+    lng: 135.8351
+    note: "oEmbed 200 / isLiveNow:true。自治体公式。座標は高取町高取(Nominatim)、城跡本体は南東の山上 approx"
+
+  - id: curated-castle-ueda-senbonzakura-1
+    name: "上田城跡公園 櫓門前（千本桜1）"
+    operator: "上田ケーブルビジョン（UCV）"
+    video_id: "E94gKZlClK4"
+    category: "scenic"
+    prefecture: "20"
+    lat: 36.404
+    lng: 138.2437
+    note: "oEmbed 200 / isLiveNow:true。CATV運営。通年配信"
+
+  - id: curated-castle-ueda-senbonzakura-2
+    name: "上田城跡公園 櫓門前（千本桜2）"
+    operator: "上田ケーブルビジョン（UCV）"
+    video_id: "fzpweNXlEgQ"
+    category: "scenic"
+    prefecture: "20"
+    lat: 36.404
+    lng: 138.2437
+    note: "oEmbed 200 / isLiveNow:true"
+
+  - id: curated-camp-marunuma-camping-valley
+    name: "丸沼高原キャンピングバレイ（標高1500m）"
+    operator: "丸沼高原（MARUNUMA）"
+    video_id: "cqvEOhOzN2o"
+    category: "scenic"
+    prefecture: "10"
+    lat: 36.8078
+    lng: 139.3405
+    note: "oEmbed 200 / isLiveNow:true。台帳の『丸沼高原・日光白根山』とはvideo_id不一致(別カメラ)。座標は丸沼高原 手動approx"
+
+  - id: curated-camp-kasagi
+    name: "笠置キャンプ場"
+    operator: "笠置キャンプ場"
+    video_id: "jp8YydpqWJA"
+    category: "scenic"
+    prefecture: "26"
+    lat: 34.7592
+    lng: 135.9343
+    note: "oEmbed 200 / isLiveNow:true。台帳の『笠置』『木津川 笠置』は河川系でvideo_id不一致"
+
+  - id: curated-camp-shiunji-kinen-park
+    name: "紫雲寺記念公園オートキャンプ場"
+    operator: "新潟県立紫雲寺記念公園"
+    video_id: "y-VfhQn8Kxg"
+    category: "coast"
+    prefecture: "15"
+    lat: 38.0335
+    lng: 139.3085
+    note: "oEmbed 200 / isLiveNow:true。channel/live解決"
+
+  - id: curated-camp-iwaya-park
+    name: "岩屋公園キャンプ場（流水プール・BBQ）"
+    operator: "岩屋公園キャンプ場"
+    video_id: "oXaOIgopWEc"
+    category: "scenic"
+    prefecture: "46"
+    lat: 31.4193
+    lng: 130.4263
+    note: "oEmbed 200 / isLiveNow:true。Nominatim: 清水岩屋公園"
+
+  - id: curated-camp-abu-engawa-base
+    name: "ABUキャンプフィールド ENGAWA BASE"
+    operator: "ABUキャンプフィールド"
+    video_id: "0xNG4O7g2g4"
+    category: "coast"
+    prefecture: "35"
+    lat: 34.5028
+    lng: 131.4725
+    note: "oEmbed 200 / isLiveNow:true。台帳の『阿武』は阿武隈川のみ"
+
+  - id: curated-camp-abu-kiyogahama-base
+    name: "ABUキャンプフィールド 清ヶ浜ベイス"
+    operator: "ABUキャンプフィールド"
+    video_id: "_-NOSGI02Ns"
+    category: "coast"
+    prefecture: "35"
+    lat: 34.5028
+    lng: 131.4725
+    note: "oEmbed 200 / isLiveNow:true。座標は奈古(Nominatim)、清ヶ浜は西側 approx"
+
+  - id: curated-fishing-kigo-taki
+    name: "木郷滝自然つりセンター"
+    operator: "有限会社木郷滝自然つりセンター"
+    video_id: "H7mUIH7iQ98"
+    category: "river"
+    prefecture: "43"
+    lat: 32.7944
+    lng: 131.2097
+    note: "oEmbed 200 / isLiveNow:true。座標は高森町草部(Nominatim)"
+
+  - id: curated-fishing-ishida-otori-kuzuryu
+    name: "九頭竜川 石田おとり店前"
+    operator: "石田おとり店"
+    video_id: "IYX3S0gC4M4"
+    category: "river"
+    prefecture: "18"
+    lat: 36.0554
+    lng: 136.4662
+    note: "oEmbed 200 / isLiveNow:true。鮎釣り向け河川カメラ"
+
+  - id: curated-skate-takeshimagata
+    name: "竹嶋潟スケートパーク（にかほ）"
+    operator: "竹嶋潟スケートパーク"
+    video_id: "gyxnc_5qMn0"
+    category: "other"
+    prefecture: "05"
+    lat: 39.264
+    lng: 139.914
+    note: "oEmbed 200 / isLiveNow:true。channel/live解決"
+
+  - id: curated-dogrun-lahaina-ushimado
+    name: "ラハイナドッグラン（牛窓）"
+    operator: "ラハイナ"
+    video_id: "uq78ztypy4M"
+    category: "other"
+    prefecture: "33"
+    lat: 34.6199
+    lng: 134.1603
+    note: "oEmbed 200 / isLiveNow:true。channel/live解決"
+
+  - id: curated-univ-tohoku-aobayama
+    name: "東北大学 青葉山キャンパス"
+    operator: "東北大学未来科学技術共同研究センター"
+    video_id: "aZ6qUfgKlH8"
+    category: "other"
+    prefecture: "04"
+    lat: 38.2542
+    lng: 140.8407
+    note: "oEmbed 200 / isLiveNow:true。channel/live解決"
+
+  - id: curated-obs-dodaira
+    name: "堂平天文台"
+    operator: "日本電業工作株式会社（堂平天文台＝ときがわ町）"
+    video_id: "zPKguC8bF9M"
+    category: "scenic"
+    prefecture: "11"
+    lat: 36.0061
+    lng: 139.1904
+    note: "oEmbed 200 / isLiveNow:true。Nominatim: 堂平天文台"
+
+  - id: curated-transport-airport-chitose-stv-2026
+    name: "新千歳空港（STV）"
+    operator: "STVニュース北海道（札幌テレビ放送）"
+    video_id: "3SKn4LgGJk8"
+    category: "port"
+    prefecture: "01"
+    lat: 42.7752
+    lng: 141.6923
+    note: "oEmbed 200 / isLiveNow true。既存 curated-chitose-stv（STV新千歳空港）と同一カメラの可能性あり(既存のvideo_idがindexに無く照合不能)。video_idが異なれば差し替え候補。座標は新千歳空港ターミナル既知位置"
+
+  - id: curated-transport-airport-obihiro-kachimai
+    name: "とかち帯広空港"
+    operator: "十勝毎日新聞"
+    video_id: "IDXRscHtp2s"
+    category: "port"
+    prefecture: "01"
+    lat: 42.7333
+    lng: 143.2172
+    note: "oEmbed 200 / isLiveNow true。24時間ライブ。座標は帯広空港既知位置"
+
+  - id: curated-transport-airport-aomori-aba
+    name: "青森空港"
+    operator: "ABA青森朝日放送"
+    video_id: "pcA1VW0n7JU"
+    category: "port"
+    prefecture: "02"
+    lat: 40.7347
+    lng: 140.6906
+    note: "oEmbed 200 / isLiveNow true。座標は青森空港既知位置"
+
+  - id: curated-transport-airport-hanamaki-official
+    name: "いわて花巻空港"
+    operator: "いわて花巻空港（岩手県空港ターミナルビル）"
+    video_id: "XHnrgK4sEDE"
+    category: "port"
+    prefecture: "03"
+    lat: 39.4286
+    lng: 141.1353
+    note: "oEmbed 200 / isLiveNow true。空港公式チャンネル。座標は花巻空港既知位置"
+
+  - id: curated-transport-airport-akita-akt
+    name: "秋田空港（AKT情報カメラ・夜間は秋田駅前）"
+    operator: "AKT秋田テレビ"
+    video_id: "2EfwG0g0rW4"
+    category: "port"
+    prefecture: "05"
+    lat: 39.6156
+    lng: 140.2186
+    note: "oEmbed 200 / isLiveNow true。タイトルに「夜間は秋田駅前情報カメラLIVE」とあり夜間は切替。座標は秋田空港既知位置"
+
+  - id: curated-transport-airport-yamagata-ybc
+    name: "山形空港"
+    operator: "YBC山形放送"
+    video_id: "log3DCKyMwI"
+    category: "port"
+    prefecture: "06"
+    lat: 38.4119
+    lng: 140.3711
+    note: "oEmbed 200 / isLiveNow true。座標は山形空港既知位置"
+
+  - id: curated-transport-airport-shonai-tuy
+    name: "庄内空港"
+    operator: "TUYテレビユー山形"
+    video_id: "VUztn_JkOjM"
+    category: "port"
+    prefecture: "06"
+    lat: 38.8122
+    lng: 139.7872
+    note: "oEmbed 200 / isLiveNow true。座標は庄内空港既知位置。(庄内空港ビル公式の駐車場カメラは無断転載禁止のため不採用→skipped参照)"
+
+  - id: curated-transport-airport-fukushima-kfb
+    name: "福島空港（KFB）"
+    operator: "KFB福島放送"
+    video_id: "CVp0bl7ROSM"
+    category: "port"
+    prefecture: "07"
+    lat: 37.2274
+    lng: 140.4308
+    note: "oEmbed 200 / isLiveNow true。既存はFCT(福島中央テレビ)で運営者が異なる。座標は福島空港既知位置"
+
+  - id: curated-transport-airport-matsumoto-official
+    name: "信州まつもと空港 滑走路"
+    operator: "松本空港（信州まつもと空港）"
+    video_id: "WAzZUkjgT4k"
+    category: "port"
+    prefecture: "20"
+    lat: 36.1668
+    lng: 137.9227
+    note: "oEmbed 200 / isLiveNow true。空港公式チャンネル。座標は松本空港既知位置"
+
+  - id: curated-transport-airport-nagoya-starcat
+    name: "県営名古屋空港"
+    operator: "スターキャット（Starcat）"
+    video_id: "LRgGBlcL4KU"
+    category: "port"
+    prefecture: "23"
+    lat: 35.255
+    lng: 136.9244
+    note: "oEmbed 200 / isLiveNow true。座標は県営名古屋空港既知位置"
+
+  - id: curated-transport-airport-itami-mbs
+    name: "伊丹空港（MBS）"
+    operator: "MBS NEWS（毎日放送）"
+    video_id: "zgaUF25Bh7E"
+    category: "port"
+    prefecture: "28"
+    lat: 34.7855
+    lng: 135.4382
+    note: "oEmbed 200 / isLiveNow true。既存は朝日新聞社で運営者が異なる。座標は大阪国際空港既知位置"
+
+  - id: curated-transport-airport-kobe-ytv
+    name: "神戸空港"
+    operator: "読売テレビニュース"
+    video_id: "1V-rE4Z1ZZQ"
+    category: "port"
+    prefecture: "28"
+    lat: 34.6328
+    lng: 135.2239
+    note: "oEmbed 200 / isLiveNow true。座標は神戸空港既知位置"
+
+  - id: curated-transport-airport-hiroshima-htv
+    name: "広島空港（HTV）"
+    operator: "広テレ!NEWS（広島テレビ）"
+    video_id: "uPXvT-eE0To"
+    category: "port"
+    prefecture: "34"
+    lat: 34.4361
+    lng: 132.9194
+    note: "oEmbed 200 / isLiveNow true。既存はRCC。座標は広島空港既知位置"
+
+  - id: curated-transport-airport-okayama-tsc
+    name: "岡山桃太郎空港"
+    operator: "TSCテレビせとうち"
+    video_id: "0nC9ws-BSJA"
+    category: "port"
+    prefecture: "33"
+    lat: 34.7569
+    lng: 133.8553
+    note: "oEmbed 200 / isLiveNow true。座標は岡山空港既知位置"
+
+  - id: curated-transport-airport-fukuoka-kbc
+    name: "福岡空港（KBC）"
+    operator: "福岡・佐賀 KBC NEWS（九州朝日放送）"
+    video_id: "uuMhOREzUYA"
+    category: "port"
+    prefecture: "40"
+    lat: 33.5859
+    lng: 130.4507
+    note: "oEmbed 200 / isLiveNow true。タイトルに「＆他ライブカメラ」とあり切替配信の可能性。既存はTNC/民間。座標は福岡空港既知位置"
+
+  - id: curated-transport-port-akita-aab
+    name: "秋田港（AAB情報カメラ）"
+    operator: "AAB秋田朝日放送"
+    video_id: "J7_rWq_Owgc"
+    category: "port"
+    prefecture: "05"
+    lat: 39.7556
+    lng: 140.061
+    note: "oEmbed 200 / isLiveNow true。座標 Nominatim「秋田港 秋田市 土崎」"
+
+  - id: curated-transport-port-akita-akt-4points
+    name: "秋田港ほか（AKT情報カメラ 4地点）"
+    operator: "AKT秋田テレビ"
+    video_id: "63Q8D9EgJBo"
+    category: "port"
+    prefecture: "05"
+    lat: 39.7556
+    lng: 140.061
+    note: "oEmbed 200 / isLiveNow true。4地点切替配信（秋田港を含む）。切替型のため要レビュー。座標は秋田港"
+
+  - id: curated-transport-port-wakkanai-surfeel
+    name: "稚内港・宗谷湾（サフィールホテル稚内）"
+    operator: "サフィールホテル稚内"
+    video_id: "lSyjwsfqQ9M"
+    category: "port"
+    prefecture: "01"
+    lat: 45.4165
+    lng: 141.6745
+    note: "oEmbed 200 / isLiveNow true。ホテル公式。座標はサフィールホテル稚内既知位置（稚内駅前・フェリーターミナル至近）"
+
+  - id: curated-transport-port-toi-surugawan-ferry
+    name: "駿河湾フェリー 土肥港"
+    operator: "一般社団法人ふじさん駿河湾フェリー"
+    video_id: "pj8r6m24lh8"
+    category: "port"
+    prefecture: "22"
+    lat: 34.9103
+    lng: 138.7853
+    note: "oEmbed 200 / isLiveNow true。フェリー運航者公式。座標は土肥港既知位置"
