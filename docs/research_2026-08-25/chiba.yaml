@@ -1,0 +1,579 @@
+# 千葉県 ライブカメラ調査結果 (2026-08-24)
+# 検証: 静止画は curl で Content-Type: image/jpeg を確認。YouTube は oEmbed 200 + チャンネル /live の canonical で isLive:true を確認
+# 座標は国土地理院 AddressSearch API (msearch.gsi.go.jp) による住所ジオコーディング
+
+still:
+  - id: curated-still-golf-caledonian-gc
+    name: "カレドニアン・ゴルフクラブ コース状況"
+    operator: "カレドニアン・ゴルフクラブ"
+    category: other
+    prefecture: "12"
+    lat: 35.6669
+    lng: 140.4615
+    image_url: "https://camesan03.from.tv/oma9261/secure/data-live/live.jpg"
+    page_url: "https://www.caledoniangolf.net/etc/livecam.php"
+    note: "curl 200 image/jpeg。公式『様子は数秒ごとに更新』。from.tv(カメさん)ホスティング。利用条件記載なし→license=unknown。座標=横芝光町長倉(住所ジオコーディング)"
+  - id: curated-still-hotel-ichihara-marine
+    name: "市原マリンホテル屋上（市原市上空）"
+    operator: "市原マリンホテル"
+    category: other
+    prefecture: "12"
+    lat: 35.5164
+    lng: 140.0864
+    image_url: "http://webcam.wni.co.jp/MBP88282/00.jpg"
+    page_url: "http://webcam.wni.co.jp/MBP88282/loop.html"
+    note: "curl 200 image/jpeg 640x480。ウェザーニューズ webcam.wni.co.jp ホスティング(お天気カメラ)。利用条件不明→unknown。住所 市原市五井中央西2-22-8"
+  - id: curated-still-port-inage-yacht-harbor
+    name: "稲毛ヨットハーバー（東京湾）"
+    operator: "公益財団法人千葉市スポーツ協会"
+    category: port
+    prefecture: "12"
+    lat: 35.6231
+    lng: 140.0564
+    image_url: "https://webcam.wni.co.jp/SMO82989/00.jpg"
+    page_url: "https://chibacity.spo-sin.or.jp/shisetu/yacht-top/"
+    note: "curl 200 image/jpeg。施設公式ページから weathernews livecam へリンク(liveid=410001688)。WNIホスティング。住所 千葉市美浜区磯辺2-8-1"
+  - id: curated-still-coast-gyoukeikan-inubosaki
+    name: "ぎょうけい館（犬吠埼灯台・太平洋）"
+    operator: "ぎょうけい館（日本ビューホテル）"
+    category: coast
+    prefecture: "12"
+    lat: 35.7008
+    lng: 140.8625
+    image_url: "https://webcam.wni.co.jp/BPL47738/00.jpg"
+    page_url: "https://webcam.wni.co.jp/BPL47738/loop.html"
+    note: "curl 200 image/jpeg。WNIホスティングのホテル屋上カメラ。既存の犬吠埼灯台(海保)・犬吠テラステラスとは別視点。住所 銚子市犬吠埼10293"
+  - id: curated-still-scenic-michinoeki-tako-1
+    name: "道の駅多古あじさい館 カメラ1（多古大橋・栗山川）"
+    operator: "道の駅多古あじさい館"
+    category: scenic
+    prefecture: "12"
+    lat: 35.7326
+    lng: 140.4751
+    image_url: "http://www.taco.mydns.jp/SnapshotJPEG?Resolution=320x240"
+    page_url: "http://advan-ad.com/mieki/camera1.html"
+    note: "curl 200 image/jpeg 320x240 (Panasonic BBカメラ)。ページはPTZプリセット切替式(多古大橋/栗山川/役場等)で視点が変わり得る。利用条件記載なし→unknown。住所 多古町多古1069-1"
+  - id: curated-still-scenic-michinoeki-tako-2
+    name: "道の駅多古あじさい館 カメラ2（国道296号・田園）"
+    operator: "道の駅多古あじさい館"
+    category: scenic
+    prefecture: "12"
+    lat: 35.7326
+    lng: 140.4751
+    image_url: "http://180.131.124.116:81/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://advan-ad.com/mieki/camera2.html"
+    note: "curl 200 image/jpeg 640x480。IP直指定・非標準ポートのため変更リスクあり"
+  - id: curated-still-coast-yumemisaki-chikura
+    name: "夢みさき（千倉 瀬戸浜海岸）"
+    operator: "夢みさき（旅館）"
+    category: coast
+    prefecture: "12"
+    lat: 34.9803
+    lng: 139.9589
+    image_url: "http://yume.aa0.netvolante.jp/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "http://yume.aa0.netvolante.jp/viewer/live/index.html?lang=ja"
+    note: "Canon WebView Livescope。GetOneShot で curl 200 image/jpeg 640x360。PTZ公開操作型のため視点が変動。住所 南房総市千倉町瀬戸3137"
+  - id: curated-still-scenic-sodegaura-park-office
+    name: "袖ケ浦公園 管理事務所前"
+    operator: "袖ケ浦公園（公益財団法人袖ケ浦市施設管理協会）"
+    category: scenic
+    prefecture: "12"
+    lat: 35.4200
+    lng: 139.9901
+    image_url: "http://sodegauracamera01.aa1.netvolante.jp:8088/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "http://sodegauracamera01.aa1.netvolante.jp:8088/viewer/live/index.html?lang=ja"
+    note: "curl 200 image/jpeg。公園公式 park-sodegaura.or.jp からリンク。Canon Livescope・PTZ公開型。住所 袖ケ浦市飯富2360"
+  - id: curated-still-scenic-sodegaura-park-terrace
+    name: "袖ケ浦公園 花のテラス"
+    operator: "袖ケ浦公園（公益財団法人袖ケ浦市施設管理協会）"
+    category: scenic
+    prefecture: "12"
+    lat: 35.4200
+    lng: 139.9901
+    image_url: "http://sodegauracamera02.aa2.netvolante.jp:65312/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "http://sodegauracamera02.aa2.netvolante.jp:65312/viewer/live/ja/live.html"
+    note: "curl 200 image/jpeg"
+  - id: curated-still-port-nagisanoeki-tateyama
+    name: "渚の駅たてやま（館山湾）"
+    operator: "館山市（建設経済部観光みなと課）"
+    category: port
+    prefecture: "12"
+    lat: 34.9966
+    lng: 139.8570
+    image_url: "http://118.21.150.241/-wvhttp-01-/image.cgi?image_size=640x480"
+    page_url: "https://www.city.tateyama.chiba.jp/shoukan/page100190.html"
+    note: "curl 200 image/jpeg(取得時5.5KB=夜間)。市公式ページ記載: 自動で左右旋回・予告なく変更あり。市設置で利用条件明記なし→unknown。座標=渚の駅たてやま(館山市館山1564-1)"
+  - id: curated-still-healing-yatsu-higata
+    name: "谷津干潟自然観察センター"
+    operator: "谷津干潟自然観察センター（習志野市）"
+    category: healing
+    prefecture: "12"
+    lat: 35.6753
+    lng: 140.0057
+    image_url: "http://webview.seaple.ne.jp/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://webview.seaple.ne.jp/CgiStart?page=Single&Language=1"
+    note: "curl 200 image/jpeg だがサイズ950Bと極小(夜間/休止画像の可能性)。日中に再確認必要。旧チバテレ・リンク集にも掲載(city.narashino.chiba.jp/~yatsu-tf は消滅)"
+  - id: curated-still-coast-kujukuri-magame-sunrise
+    name: "九十九里 真亀海水浴場（サンライズ九十九里）"
+    operator: "九十九里町"
+    category: coast
+    prefecture: "12"
+    lat: 35.5028
+    lng: 140.4287
+    image_url: "http://218.224.118.87/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "http://www.town.kujukuri.chiba.jp/0000000245.html"
+    note: "既存台帳『九十九里 不動堂海岸』(web_page型, 同page_url)と同一カメラの可能性大。web_page→still_image への置換候補として記載。curl 200 image/jpeg 640x480。名称も『真亀海水浴場』が正しい模様"
+
+youtube:
+  - id: curated-golf-chibacc-umesato
+    name: "千葉カントリークラブ 梅郷コース"
+    operator: "千葉カントリークラブ"
+    video_id: "KpJEUTLAwgo"
+    category: other
+    prefecture: "12"
+    lat: 35.9407
+    lng: 139.8886
+    note: "oEmbed 200 / isLive:true。公式サイト chibacc.co.jp に live_stream 埋め込み(channel=UC23ZFVG_LpV2EzMdYdeERxw)。野田市堤根"
+  - id: curated-golf-chibacc-kawama
+    name: "千葉カントリークラブ 川間コース"
+    operator: "千葉カントリークラブ"
+    video_id: "U043Bu7KUXQ"
+    category: other
+    prefecture: "12"
+    lat: 35.9872
+    lng: 139.8329
+    note: "oEmbed 200 / isLive:true。channel=UCE2s58gSpG8Idsd6AVu7k7A。野田市尾崎(住所ジオコーディング)"
+  - id: curated-golf-chibacc-noda
+    name: "千葉カントリークラブ 野田コース"
+    operator: "千葉カントリークラブ"
+    video_id: "PQbq23tuAH4"
+    category: other
+    prefecture: "12"
+    lat: 35.9753
+    lng: 139.8651
+    note: "oEmbed 200 / isLive:true。channel=UCSVGuiepq8jYmd562YU8fWw。野田市蕃昌"
+  - id: curated-temple-honkoji-ichikawa
+    name: "本光寺（市川）本堂・駐車場"
+    operator: "日蓮宗 光胤山 本光寺"
+    video_id: "yGVFJOigXIY"
+    category: other
+    prefecture: "12"
+    lat: 35.7559
+    lng: 139.9536
+    note: "oEmbed 200 / @honkouji/live canonical isLive:true。24時間ライブ(遥拝用)。市川市大野町3-1695"
+  - id: curated-scenic-tateyama-shiroyama-park
+    name: "館山 城山公園"
+    operator: "館山城・城山公園（tateyamacastle.jp）"
+    video_id: "BGy9PRQQ0wA"
+    category: scenic
+    prefecture: "12"
+    lat: 34.9841
+    lng: 139.8555
+    note: "oEmbed 200 / isLive:true。公式 tateyamacastle.jp に埋め込み。館山市館山362"
+  - id: curated-scenic-tateyama-castle-summit
+    name: "館山城 山頂（市街・館山湾）"
+    operator: "館山城・城山公園（tateyamacastle.jp）"
+    video_id: "LGJ44kmVA6I"
+    category: scenic
+    prefecture: "12"
+    lat: 34.9841
+    lng: 139.8555
+    note: "oEmbed 200 / isLive:true。公式サイト埋め込み"
+  - id: curated-station-motoyawata-north
+    name: "JR本八幡駅 北口"
+    operator: "千葉県タクシー協会京葉支部"
+    video_id: "3NZQIHZziuw"
+    category: other
+    prefecture: "12"
+    lat: 35.7218
+    lng: 139.9281
+    note: "oEmbed 200 / @taxichiba/live canonical isLive:true。同チャンネルに北口タクシー乗り場(7hrKIqCuXwo)・南口(CHY8L4g02lM)もあるが取得時 isLiveNow:false→再確認"
+  - id: curated-station-tobu-kamagaya
+    name: "東武鎌ヶ谷駅 東口タクシー乗り場"
+    operator: "千葉県タクシー協会京葉支部"
+    video_id: "vt1eDSAychw"
+    category: other
+    prefecture: "12"
+    lat: 35.7648
+    lng: 139.9986
+    note: "oEmbed 200 / isLive:true。鎌ケ谷市道野辺本町1"
+  - id: curated-station-matsudo-east
+    name: "松戸駅 東口"
+    operator: "Mi ra i（@mirai9841）"
+    video_id: "XwHIpJmUZOE"
+    category: other
+    prefecture: "12"
+    lat: 35.7783
+    lng: 139.9030
+    note: "oEmbed 200 / @mirai9841/live isLive:true。個人チャンネル(チャンネル名=運営者)。座標は松戸駅(住所ジオコーディング)"
+  - id: curated-road-kanteikyoku-matsudo-r6
+    name: "国道6号 松戸二ツ木（かんてい局松戸店前）"
+    operator: "質屋かんてい局松戸店"
+    video_id: "Qk5cHKWsRlE"
+    category: road
+    prefecture: "12"
+    lat: 35.8198
+    lng: 139.9265
+    note: "oEmbed 200 / isLive:true。店舗設置の道路カメラ(既存『電材買取センター柏店 国道16号』と同ジャンル)"
+  - id: curated-road-mobara-hayano-hobundo
+    name: "県道27号 茂原大多喜線 茂原早野（豊文堂前）"
+    operator: "豊文堂"
+    video_id: "U5YtzBjhqag"
+    category: road
+    prefecture: "12"
+    lat: 35.4154
+    lng: 140.2919
+    note: "oEmbed 200 / channel UCq9ZbvWlSkPbMkLlHFEDuNQ /live isLive:true。一宮川早野の県河川カメラ近傍で冠水確認に有用"
+  - id: curated-road-kashiwa-r16-oi-2026
+    name: "柏 国道16号（大井）"
+    operator: "柏市（土木部交通政策課）"
+    video_id: "TbLQHnIVniM"
+    category: road
+    prefecture: "12"
+    lat: 35.8502
+    lng: 140.0044
+    note: "既存 g5LZWZZ1GJQ の更新候補。市公式ページ現在の埋め込みID=TbLQHnIVniM、isLive:true。既存IDが死んでいれば差し替え"
+  - id: curated-coast-chosei-hitotsumatsu
+    name: "長生村 一松海岸（潮位監視）"
+    operator: "千葉県長生村"
+    video_id: "47xoP12hJxs"
+    category: coast
+    prefecture: "12"
+    lat: 35.3909
+    lng: 140.3740
+    note: "oEmbed 200 / isLive:true。自治体公式カメラ、利用条件未記載→unknown"
+  - id: curated-coast-hebara-wowpow-1
+    name: "勝浦 部原ビーチ (1)"
+    operator: "wowpowcom"
+    video_id: "G2tN6QaDbJQ"
+    category: coast
+    prefecture: "12"
+    lat: 35.1682
+    lng: 140.3253
+    note: "oEmbed 200 / isLive:true。既存サンセットタウン(部原)とは別運営者"
+  - id: curated-coast-hebara-wowpow-2
+    name: "勝浦 部原ビーチ (2)"
+    operator: "wowpowcom"
+    video_id: "fPIPRTQpCao"
+    category: coast
+    prefecture: "12"
+    lat: 35.1682
+    lng: 140.3253
+    note: "oEmbed 200 / @wowpowcom/live canonical isLive:true"
+  - id: curated-coast-boso-clubhouse-1
+    name: "金谷 房総クラブハウス カメラ1"
+    operator: "ネットワークカメラライブ（房総クラブハウス）"
+    video_id: "w6Z3l3S-s5Y"
+    category: coast
+    prefecture: "12"
+    lat: 35.1739
+    lng: 139.8364
+    note: "oEmbed 200 / isLive:true。既存台帳に同チャンネル(_IegwToRnFw)採用実績あり。富津市金谷"
+  - id: curated-coast-boso-clubhouse-2
+    name: "金谷 房総クラブハウス カメラ2"
+    operator: "ネットワークカメラライブ（房総クラブハウス）"
+    video_id: "Rp6Ut0kBQoE"
+    category: coast
+    prefecture: "12"
+    lat: 35.1739
+    lng: 139.8364
+    note: "oEmbed 200 / isLive:true"
+  - id: curated-parking-narita-superparking-1
+    name: "成田空港 スーパーパーキング（第3ターミナル至近）"
+    operator: "SUPER PARKING"
+    video_id: "KBwgvcdA7Qo"
+    category: other
+    prefecture: "12"
+    lat: 35.7815
+    lng: 140.3799
+    note: "oEmbed 200 / isLive:true。駐車場混雑カメラ。成田市取香"
+  - id: curated-parking-narita-superparking-2
+    name: "成田空港 スーパーパーキング2号店"
+    operator: "SUPER PARKING"
+    video_id: "qGCGeDxIXlo"
+    category: other
+    prefecture: "12"
+    lat: 35.7815
+    lng: 140.3799
+    note: "oEmbed 200 / isLive:true。公式 super-parking295.com"
+  - id: curated-farm-iizasa-narita-2
+    name: "IIZASA牧場 牛舎-2（成田）"
+    operator: "株式会社IIZASA牧場"
+    video_id: "WowFZXMJRrw"
+    category: healing
+    prefecture: "12"
+    lat: 35.7969
+    lng: 140.4326
+    note: "oEmbed 200 / isLive:true。牛舎-1(Procsg56-tg)はoEmbed 401=埋め込み不可のため除外"
+  - id: curated-farm-isb-katori-1
+    name: "ISBファーム 牛舎-1（香取）"
+    operator: "株式会社ISBファーム"
+    video_id: "Iv-NusEwc3k"
+    category: healing
+    prefecture: "12"
+    lat: 35.7874
+    lng: 140.6204
+    note: "oEmbed 200 / @isb9679/live isLive:true。香取市志高"
+  - id: curated-farm-iwai-asahi-4
+    name: "イワイ牧場 せんば牛 牛舎-4（旭）"
+    operator: "株式会社イワイ牧場"
+    video_id: "HLGb3VrdG_E"
+    category: healing
+    prefecture: "12"
+    lat: 35.6988
+    lng: 140.6577
+    note: "oEmbed 200。ライブ中判定は未取得(YouTube側ブロック)→要確認。牛舎-2 cUdjoh5786g もoEmbed 200"
+  - id: curated-mboso-shiramazu-hanabatake
+    name: "白間津のお花畑"
+    operator: "南房総市"
+    video_id: "--I6cdnC4-U"
+    category: scenic
+    prefecture: "12"
+    lat: 34.9227
+    lng: 139.9332
+    note: "oEmbed 200 / isLive:true。市公式 mboso-etoko.jp/info/livecamera 埋め込み。既存の枇杷倶楽部/富楽里/潮風王国と同シリーズ"
+  - id: curated-mboso-rakunou-no-sato
+    name: "千葉県酪農のさと"
+    operator: "南房総市"
+    video_id: "LBNbGp4nIAI"
+    category: healing
+    prefecture: "12"
+    lat: 35.0930
+    lng: 139.9755
+    note: "oEmbed 200 / isLive:true。南房総市大井686"
+  - id: curated-mboso-wadaura-beach
+    name: "和田浦海岸"
+    operator: "南房総市"
+    video_id: "VSwkTmST2Mk"
+    category: coast
+    prefecture: "12"
+    lat: 35.0434
+    lng: 140.0170
+    note: "oEmbed 200 / isLive:true"
+  - id: curated-mboso-haraoka-pier
+    name: "原岡海岸（岡本桟橋）"
+    operator: "南房総市"
+    video_id: "iM2PC7D_BJs"
+    category: coast
+    prefecture: "12"
+    lat: 35.0477
+    lng: 139.8402
+    note: "oEmbed 200 / isLive:true"
+  - id: curated-mboso-iwai-beach
+    name: "岩井海岸"
+    operator: "南房総市"
+    video_id: "68UXF0bFjac"
+    category: coast
+    prefecture: "12"
+    lat: 35.0942
+    lng: 139.8443
+    note: "oEmbed 200 / isLive:true。南房総市久枝"
+  - id: curated-coast-kamogawa-seaside-2026
+    name: "鴨川 前原海岸（鴨川シーサイド）"
+    operator: "波のスケッチ"
+    video_id: "lEcdg6Xx7t4"
+    category: coast
+    prefecture: "12"
+    lat: 35.1015
+    lng: 140.1038
+    note: "既存『鴨川 前原海岸』(LWJPoRLAo5w, 同チャンネル)の更新候補。channel UCEDn0tLxpVqEvI3NJyE2DRA の現行ライブ=lEcdg6Xx7t4 isLive:true"
+  - id: curated-scenic-kanozan-kujukutani
+    name: "鹿野山 九十九谷展望公園"
+    operator: "Green Base"
+    video_id: "H8J6kZgW5eA"
+    category: scenic
+    prefecture: "12"
+    lat: 35.2525
+    lng: 139.9606
+    note: "oEmbed 200 / @greenbase6881/live isLive:true。雲海スポット。livecam.asiaでは『期間限定』表記→継続性に注意。君津市鹿野山119-1"
+  - id: curated-coast-isao-studio-tokyo-bay
+    name: "習志野 茜浜（東京湾・イサオスタジオ）"
+    operator: "ISAO Studio"
+    video_id: "33JZpyHyyXE"
+    category: coast
+    prefecture: "12"
+    lat: 35.6736
+    lng: 140.0019
+    note: "oEmbed 200。/live canonical 未取得のためライブ中か要確認。座標=習志野市茜浜(推定)"
+  - id: curated-zoo-x-zoo-llama-matsudo
+    name: "エクス動物園 リャマ（松戸）"
+    operator: "エクス動物園（エクスアリーナ松戸）"
+    video_id: "jKRnJrUE_Vg"
+    category: healing
+    prefecture: "12"
+    lat: 35.7583
+    lng: 139.9375
+    note: "oEmbed 200 / isLive:true。松戸市高塚新田"
+  - id: curated-other-rc-stadium-sodegaura
+    name: "RCスタジアム袖ケ浦（K2 International Circuit）"
+    operator: "RCスタジアム袖ケ浦"
+    video_id: "4EqSSbpMMEU"
+    category: other
+    prefecture: "12"
+    lat: 35.3785
+    lng: 140.0404
+    note: "oEmbed 200 / @RC-bs7jp/live isLive:true。Z_CUFsN4IWY も同運営。県道も映る。袖ケ浦市百目木1057"
+  - id: curated-other-la-dogsports-sammu
+    name: "LA DOGSPORTS FIELD（山武）"
+    operator: "エルエードッグスポーツフィールド"
+    video_id: "SW27zEnLGrM"
+    category: other
+    prefecture: "12"
+    lat: 35.5609
+    lng: 140.4577
+    note: "oEmbed 200 / @ladogs/live isLive:true"
+  - id: curated-other-dogpark-tenten-nagareyama
+    name: "Dogpark&Cafe TENTEN（流山）"
+    operator: "Dogpark and cafe TENTEN"
+    video_id: "ihqB89fen2g"
+    category: other
+    prefecture: "12"
+    lat: 35.8417
+    lng: 139.9122
+    note: "oEmbed 200 / isLive:true"
+  - id: curated-sky-maihama-livecamera
+    name: "舞浜上空（東京ディズニーリゾート方面）"
+    operator: "舞浜ライブカメラ- MaihamaLivecamera -"
+    video_id: "v_GOxe9PSvY"
+    category: other
+    prefecture: "12"
+    lat: 35.6321
+    lng: 139.8816
+    note: "oEmbed 200 / @maihamalivecamera/live isLive:true。個人チャンネル(チャンネル名=運営者)。配信IDが頻繁に更新される(過去 1cnbKGLJ_mQ 等)→channel追従推奨"
+  - id: curated-shrine-toudaijima-inari-urayasu
+    name: "当代島稲荷神社（浦安）"
+    operator: "浦安稲荷神社"
+    video_id: "NEDKV62DqhY"
+    category: other
+    prefecture: "12"
+    lat: 35.6666
+    lng: 139.8902
+    note: "oEmbed 200 / isLive:true だがタイトル『試験配信』。安定性要確認"
+  - id: curated-parking-moriya-beach-coinpark
+    name: "勝浦 守谷海水浴場 駐車場（コインパーク）"
+    operator: "株式会社コインパーク"
+    video_id: "annxVpH5GKo"
+    category: coast
+    prefecture: "12"
+    lat: 35.1440
+    lng: 140.2830
+    note: "channel UCr0SXM1UYXTafysk5OLPPqA /live canonical isLive:true だがタイトル『TEST』。oEmbed未確認・要確認。勝浦市守谷761-1(座標は概略)"
+
+skipped:
+  - name: "千葉県道路公社（千葉外房有料/九十九里有料/銚子連絡道路/東総有料）"
+    url: "https://www.chiba-dourokousha.or.jp/kotsu/kotsu-info/"
+    reason: "ライブカメラ提供なし（道路状況は各管理事務所へ電話）"
+  - name: "千葉国道事務所 ライブカメラ"
+    url: "https://www.ktr.mlit.go.jp/chiba/limit/livecamara/index.htm"
+    reason: "自前カメラなし。柏市(国道16号)と南房総市へのリンク集のみ"
+  - name: "千葉県 ダム（高滝/亀山/片倉/矢那川/長柄/大多喜/三島）"
+    url: "https://www.pref.chiba.lg.jp/d-takataki/"
+    reason: "県ダム管理事務所は貯水状況のみで映像なし。三島ダム(livecam.asia)は【調整中】"
+  - name: "利根川河口堰・房総導水路・印旛沼（水資源機構）"
+    url: "https://www.water.go.jp/kanto/tonekako/"
+    reason: "公開映像なし（リアルタイム数値データのみ）"
+  - name: "鋸山ロープウェー"
+    url: "https://www.mt-nokogiri.co.jp/"
+    reason: "ライブカメラなし（SNSのみ）"
+  - name: "香取神宮/千葉神社/玉前神社/清澄寺/日本寺/誕生寺/笠森観音"
+    url: ""
+    reason: "常設ライブカメラ確認できず（初詣期間限定のTV局配信のみ）"
+  - name: "天津神明宮 境内ライブカメラ"
+    url: "https://www.youtube.com/channel/UC6kbYyCH6aSIyCSTisKtX4A"
+    reason: "OHRf-j9nut4 は取得時 isLiveNow:false（配信停止中）。復活時に再評価"
+  - name: "清瀧神社（浦安）"
+    url: "https://www.youtube.com/channel/UCuhso_DuVpK9Xwm1MVoWIRg"
+    reason: "M_decfOoCPM は oEmbed 401（埋め込み不可）"
+  - name: "豊受神社（浦安）"
+    url: "https://www.youtube.com/channel/UCRsAQOPi7ZIOjV3lqkhJwzg"
+    reason: "jHuBW__LHzQ / l5gmkuBoxaw ともに oEmbed 401"
+  - name: "東京湾フェリー 金谷港（金谷マリンベースアルバトロス）"
+    url: "https://www.youtube.com/channel/UC_RCBUF-jSigj6bH8aEwmIg"
+    reason: "チャンネルにコンテンツなし（配信終了）。東京湾フェリー公式にもカメラなし"
+  - name: "Beach Terrace（金谷サンセットビーチ）"
+    url: "https://www.youtube.com/@beachterrace"
+    reason: "ライブ配信なし（過去動画のみ）"
+  - name: "ハーバー津浜（富津）"
+    url: "http://www.tsuhama.com/webcam/photo.php"
+    reason: "画像URLが HTTP 500（livecam.asiaでも【調整中】）"
+  - name: "銚子マリーナ"
+    url: "http://camera.choshimarina.co.jp/viewer/live/index.html?lang=ja"
+    reason: "Canon Livescopeビューアのみ。image.cgi は 401 で直接取得不可"
+  - name: "海ほたる/アクアライン（NEXCO東）"
+    url: "https://www.driveplaza.com/"
+    reason: "転載禁止確定（既存iHighway分は登録済み）"
+  - name: "鴨川シーワールド/東京ドイツ村/マザー牧場/ホテル三日月/幕張メッセ/成田ゆめ牧場/ふなばしアンデルセン公園"
+    url: ""
+    reason: "常設ライブカメラ見つからず"
+  - name: "千葉市動物公園"
+    url: "https://www.youtube.com/@chibaZOO/streams"
+    reason: "イベント配信のみで定点ライブなし"
+  - name: "鴨川ユニバースホテル/ライバーハウス鴨川"
+    url: "https://livecam.asia/chiba/kamogawa/"
+    reason: "休止中"
+  - name: "御宿中央ライブカメラ（@three-n）"
+    url: "https://www.youtube.com/@three-n"
+    reason: "取得時 isLiveNow:false（複数IDが 401/停止）。復活時に再評価"
+  - name: "サンチャイルド千葉（御宿）/スプラッシュゲストハウス（部原）/情熱宿（豊岡海岸）"
+    url: "https://sunchild-chiba.com/"
+    reason: "ページ内に直接参照できる画像/YouTube埋め込みなし（JS描画）"
+  - name: "AGO太東ポイント（アーゴプロジェクト）"
+    url: "https://www.youtube.com/@agoproject"
+    reason: "G0u_46x1yE4 は oEmbed 401（埋め込み不可）"
+  - name: "一宮海岸（海上最強.com @kaijyosaikyo）"
+    url: "https://www.youtube.com/@kaijyosaikyo"
+    reason: "現在ライブ配信なし（動画のみ）"
+  - name: "民宿錦海亭 新舞子海岸"
+    url: "https://www.youtube.com/@kinkaitey"
+    reason: "l1XV-jx8oGc/HM2pINrTXlI とも isLiveNow:false"
+  - name: "ゲートグルメジャパン 成田滑走路"
+    url: "https://www.youtube.com/channel/UCjwO5xVV7ARD6asrMDX9CwA"
+    reason: "TcBQzrCD31w は isLiveNow:false（停止中）"
+  - name: "Live 3D Airport ATC+WX 成田"
+    url: "https://www.youtube.com/@Live3DAirportATCWX"
+    reason: "実写カメラではなく3DCG再現。現行ライブは羽田"
+  - name: "海辺の遊び屋KNOTS 館山湾（e-CAM）"
+    url: "https://www.youtube.com/watch?v=Gf5NpwlF_yI"
+    reason: "既登録（curated-tateyama-hojo）。@e-CAMの/liveは新宿カメラに変わっており竜島カメラは未確認"
+  - name: "こうのとりの里/道の駅とみうら枇杷倶楽部/富楽里/潮風王国/成田山新勝寺/さくらの山/朝日新聞千葉・成田/サンセットタウン/犬吠テラステラス"
+    url: ""
+    reason: "既登録"
+  - name: "大山千枚田（NPO法人大山千枚田保存会）"
+    url: "https://www.youtube.com/@npo5848"
+    reason: "u3P9qTU8SVc は isLiveNow:false（停止中）"
+  - name: "木更津のお天気カメラ南東方面"
+    url: "https://www.youtube.com/@weather-cam-kisarazu"
+    reason: "UBvLz3Zhec8 isLiveNow:false（停止中）"
+  - name: "千葉市中央区県庁前駅ライブカメラ"
+    url: "https://www.youtube.com/@千葉市県庁前駅ライブ"
+    reason: "U7iHToCAn-8 isLiveNow:false、個人配信でID頻繁変更"
+  - name: "八千代市内ライブカメラ（LIVE YACHIYO）"
+    url: "https://www.youtube.com/@live-yachiyo"
+    reason: "HmdscgFbqQQ は oEmbed 401（埋め込み不可）"
+  - name: "bayfm 海浜幕張"
+    url: "https://camera-map.com/chiba/chibashi-mihamaku/livecam-kaihin-makuhari.html"
+    reason: "ウェザーニュース経由の静止画。直接画像URL不明（@bayfm78 は404）"
+  - name: "千葉大学 / 東京情報大学 お天気カメラ"
+    url: "http://yas.tu.chiba-u.ac.jp/current-view.jpg"
+    reason: "千葉大は404、東京情報大は休止中"
+  - name: "千葉ポートタワー（千葉市観光）/谷津干潟旧URL/丸山町"
+    url: "http://www.kankou.city.chiba.jp/liveview/camera1.html"
+    reason: "チバテレ・リンク集の旧URLは消滅"
+  - name: "Radio NARITA 国道51号"
+    url: "https://www.youtube.com/@radionaritayoutubechannel3766"
+    reason: "現行配信は番組配信でカメラ常設ライブなし"
+  - name: "千葉ろうさい病院/区役所窓口/柿田眼科 待合表示"
+    url: ""
+    reason: "屋内の番号表示板で地図アプリ対象外"
+  - name: "北森ペット病院駐車場（360度）"
+    url: "https://www.youtube.com/watch?v=ITwQxwZLazA"
+    reason: "作者名『ライブ配信ユーザー』で運営者特定が弱く、360度動画で用途薄"
+  - name: "カフェGAKE 太平洋（いすみ）/ヴィラストリートパーク/ねこのす/ふくろうFM/市原FM/B&Sルーム"
+    url: ""
+    reason: "ライブ配信なし or oEmbed 401（GAKE: ClKtKSzDgPY 401）"
+  - name: "ウェザーニュース投稿カメラ（船橋・鎌ケ谷・印西等）"
+    url: "https://weathernews.jp/onebox/livecam/kanto/chiba/"
+    reason: "個人投稿でWNI配信、直接URL取得不可"
+  - name: "中国地整/首都高/NEXCO系"
+    url: ""
+    reason: "転載禁止"

@@ -1,0 +1,221 @@
+# 滋賀県(JIS 25) 追加候補調査 2026-08-24
+# 既存129台は kawabou河川(滋賀県/琵琶湖河川事務所)・prvs国道・iHighway・BBC YouTube のみ。観光/スキー/山/ヨット/企業系は未登録だったため以下を候補化。
+still:
+  - id: curated-still-scenic-biwako-valley-uchimiyama
+    name: "びわ湖バレイ 打見山頂（琵琶湖〜蓬莱山）"
+    operator: "びわ湖バレイ（アルピナビーアイ株式会社）"
+    category: scenic
+    prefecture: "25"
+    lat: 35.2136
+    lng: 135.8916
+    image_url: "https://www.biwako-valley.com/cameradata/livecamera01.jpg"
+    page_url: "https://www.biwako-valley.com/livecamera/"
+    note: "curl HEAD 200 image/jpeg(30KB, Last-Modified当日)。公式JS(livecamera-reload.js)が同URLを約10秒ごと再取得する固定URL。ページに転載禁止の記載なし(施設約款は別ページ)。座標はNominatim『びわ湖バレイ』(住所: 大津市木戸1547-1)。冬季はスキー場ゲレンデ側"
+  - id: curated-still-scenic-nagahama-bio-biwako
+    name: "長浜バイオ大学 命江館3階から琵琶湖"
+    operator: "長浜バイオ大学"
+    category: scenic
+    prefecture: "25"
+    lat: 35.3580
+    lng: 136.2801
+    image_url: "https://www1.nagahama-i-bio.ac.jp/livecam/live.jpg"
+    page_url: "https://www1.nagahama-i-bio.ac.jp/livecam/live.html"
+    note: "curl HEAD 200 image/jpeg(440KB, Last-Modified当日)。ページ記載『約1分毎に再表示』。転載禁止の記載なし。座標はNominatim『長浜バイオ大学』(長浜市田村町1266)"
+  - id: curated-still-scenic-yogoko-gyokyo-kawanami
+    name: "余呉湖 川並釣桟橋（余呉湖漁業組合）"
+    operator: "余呉ライブカメラ（浅井恒男・余呉湖漁業組合より撮影）"
+    category: scenic
+    prefecture: "25"
+    lat: 35.5141
+    lng: 136.1964
+    image_url: "http://www.zb.ztv.ne.jp/uhqzveby/kamera4/kamera4.jpg"
+    page_url: "http://www.zb.ztv.ne.jp/uhqzveby/livekamera4.html"
+    note: "curl HEAD 200 image/jpeg(60KB, Last-Modified当日11:00UTC)。稼働時間6:00〜20:00・10秒ごと撮影(夜間は更新停止)。正面は賤ヶ岳。個人サイト(ZTVホスティング)で運営者明記あり、転載禁止記載なし。同サイトの他カメラ(kamera/kamera1/kamera2/kamera3)はLast-Modifiedが2016〜2020年で停止中。座標はNominatim『長浜市余呉町川並 余呉湖』"
+  - id: curated-still-road-chuei-hikone-taga
+    name: "株式会社中栄 多賀方面"
+    operator: "株式会社中栄（高速道路維持管理）"
+    category: road
+    prefecture: "25"
+    lat: 35.2477
+    lng: 136.2844
+    image_url: "https://www.chuei.co.jp/wp-content/themes/chuei/livecamera/camera_01.jpg"
+    page_url: "https://www.chuei.co.jp/now/livecamera/"
+    note: "curl HEAD 200 image/jpeg(47KB, Last-Modified当日)。ページは『多賀方面/彦根方面 2026/08/24 23:05現在』で数分更新。転載禁止記載なし(要レビュー)。設置場所は本社(彦根市野田山町862-15、名神彦根IC付近)と推定、座標はNominatim『野田山町 彦根市』"
+  - id: curated-still-road-chuei-hikone-hikone
+    name: "株式会社中栄 彦根方面"
+    operator: "株式会社中栄（高速道路維持管理）"
+    category: road
+    prefecture: "25"
+    lat: 35.2477
+    lng: 136.2844
+    image_url: "https://www.chuei.co.jp/wp-content/themes/chuei/livecamera/camera_02.jpg"
+    page_url: "https://www.chuei.co.jp/now/livecamera/"
+    note: "curl HEAD 200 image/jpeg(39KB, Last-Modified当日)。上と同一設置・逆方向。座標根拠同上"
+  - id: curated-still-port-shiga-yacht-club
+    name: "志賀ヨットクラブ正面（琵琶湖・伊吹山方面）"
+    operator: "志賀ヨットクラブ"
+    category: port
+    prefecture: "25"
+    lat: 35.1693
+    lng: 135.9215
+    image_url: "http://shigaycc11.miemasu.net/SnapshotJPEG?Resolution=640x360"
+    page_url: "https://www.shigayc.jp/elementor-445/"
+    note: "Panasonic BB-SP104W(みえますねっとDDNS)直結。GET 200 image/jpeg確認(640x360/1280x720/320x180とも可)、HEADは500を返すので監視はGETで。カメラ本体直アクセスのため負荷配慮(更新間隔長め推奨)。公式ページ『志賀ヨットクラブ正面からのライブカメラ』からリンク。転載禁止記載なし。座標はNominatim『和邇北浜 大津市』(住所: 大津市和邇北浜390)"
+youtube:
+  - id: curated-scenic-maibara-ibuki-greenpark-santo
+    name: "伊吹山（グリーンパーク山東から）"
+    operator: "米原市"
+    video_id: "II18TejgjMw"
+    category: scenic
+    prefecture: "25"
+    lat: 35.3739
+    lng: 136.3599
+    note: "oEmbed 200 / isLiveNow:true(24hライブ)。米原市公式チャンネル、市の伊吹山特設サイト(https://www.city.maibara.lg.jp/mtibuki/livecamera/20509.html)に埋め込み。座標はNominatim『池下 米原市』(グリーンパーク山東所在地)"
+  - id: curated-scenic-maibara-ibuki-3gome
+    name: "伊吹山3合目"
+    operator: "米原市"
+    video_id: "KOaB6A5eWBo"
+    category: scenic
+    prefecture: "25"
+    lat: 35.4108
+    lng: 136.3903
+    note: "oEmbed 200 / isLiveNow:true(24hライブ)。米原市公式。座標は伊吹山3合目(旧ゴンドラ山頂駅付近)の既知位置の概算(Nominatim『伊吹山』山頂35.4178,136.4063の南西)"
+  - id: curated-scenic-maibara-ibuki-5gome
+    name: "伊吹山5合目"
+    operator: "米原市"
+    video_id: "n996gl1UU6U"
+    category: scenic
+    prefecture: "25"
+    lat: 35.4150
+    lng: 136.3985
+    note: "oEmbed 200 / isLiveNow:true(24hライブ)。米原市公式。座標は登山道5合目の概算(山頂とゴンドラ駅の中間)"
+  - id: curated-scenic-ibuki-highschool-ibukiyama
+    name: "伊吹山（伊吹高校4階から）"
+    operator: "滋賀県立伊吹高等学校"
+    video_id: "OPq7PL4GNwM"
+    category: scenic
+    prefecture: "25"
+    lat: 35.3851
+    lng: 136.3782
+    note: "oEmbed 200 / isLiveNow:true。学校公式チャンネル、学校サイト(https://www.ibuki-h.shiga-ec.ed.jp/live/)からリンク、YouTube運用ポリシーあり(埋め込み禁止記載なし)。座標はNominatim『春照 米原市』(学校所在地 米原市春照)"
+  - id: curated-other-enryakuji-daireien-parking
+    name: "比叡山延暦寺大霊園 大駐車場"
+    operator: "比叡山延暦寺大霊園"
+    video_id: "UsmzDJtTraM"
+    category: other
+    prefecture: "25"
+    lat: 35.1649
+    lng: 135.8871
+    note: "oEmbed 200 / isLiveNow:true。公式サイト告知(https://hieizan-enryakuji-daireien.jp/reien/6941)。駐車場混雑・天候確認用。座標はNominatim『延暦寺大霊園』"
+  - id: curated-scenic-omihachiman-myohoji-gosenkannon
+    name: "近江八幡 八幡堀脇 普陀山妙法寺（護船観音）"
+    operator: "サイバー坊主（普陀山妙法寺）"
+    video_id: "Og8yAjN350g"
+    category: scenic
+    prefecture: "25"
+    lat: 35.1425
+    lng: 136.0908
+    note: "oEmbed 200 / isLiveNow:true。説明文に『八幡堀脇に位置』、寺公式サイト(myouhou-ji.com)にライブカメラ記事あり。座標は八幡堀(近江八幡市)の既知概算位置。Nominatimでは寺名ヒットせず"
+  - id: curated-other-hikone-daitocho-livecam
+    name: "彦根市大東町 定点カメラ"
+    operator: "滋賀県彦根市大東町ライブカメラ（livecamera24.jp）"
+    video_id: "bvqcnwKCkHs"
+    category: other
+    prefecture: "25"
+    lat: 35.2705
+    lng: 136.2613
+    note: "oEmbed 200 / isLiveNow:true。説明文『滋賀県彦根市大東町の定点ライブカメラ』、連絡先info@livecamera24.jp。個人/事業者不明瞭のためレビュー要。座標はNominatim『滋賀県彦根市大東町』"
+  - id: curated-ski-hakodateyama-parking
+    name: "びわこ箱館山 駐車場"
+    operator: "びわこ箱館山（hakodateyama MEG）"
+    video_id: "Ms2PIvqvxI8"
+    category: scenic
+    prefecture: "25"
+    lat: 35.4283
+    lng: 135.9968
+    note: "oEmbed 200 / isLiveNow:true。公式サイト(https://www.hakodateyama.com/winter/access/#camera)からリンクされる駐車場ライブカメラ(冬季の積雪・タイヤ確認用)。座標はNominatim『箱館山駐車場』"
+  - id: curated-other-kohoku-crystal-plaza
+    name: "湖北広域 クリスタルプラザ 混雑状況"
+    operator: "湖北広域行政事務センター"
+    video_id: "0-NgTuQ9d-w"
+    category: other
+    prefecture: "25"
+    lat: 35.3890
+    lng: 136.2815
+    note: "oEmbed 200 / isLiveNow:true。ごみ処理施設の搬入待ち混雑(4分割画面、上=国道8号側)。公的機関。座標はNominatim『クリスタルプラザ 長浜市』"
+  - id: curated-road-hikone-log-morido-r8
+    name: "彦根倉庫 森堂センター 国道8号"
+    operator: "彦根倉庫株式会社"
+    video_id: "5KYJ4onT_YQ"
+    category: road
+    prefecture: "25"
+    lat: 35.2302
+    lng: 136.2370
+    note: "oEmbed 200 / isLiveNow:true。会社サイト(hikone-log.com/webcam)からYouTubeチャンネルへリンク。国道8号 南行(草津)/北行(彦根・米原)。座標はNominatim『森堂町 彦根市』(森堂センター: 彦根市森堂町110)"
+  - id: curated-road-hikone-log-taga-center
+    name: "彦根倉庫 多賀物流センター"
+    operator: "彦根倉庫株式会社"
+    video_id: "4n4ulm-MnhY"
+    category: road
+    prefecture: "25"
+    lat: 35.2195
+    lng: 136.2635
+    note: "oEmbed 200 / isLiveNow:true。説明文『多賀物流センターのライブカメラ ←東近江方面 彦根方面→』。座標は多賀町敏満寺(名神多賀SA南側)の概算、Nominatimが429で未確認のためレビュー時要修正"
+skipped:
+  - name: "ヘイシン滋賀アクセス・ナウ（兵神装備 滋賀事業所 北陸道/一般道/さくら/積雪/周辺/駐車場 6台）"
+    url: "https://webcam.heishin.jp/"
+    reason: "画像URL(images/image1〜6.jpg)は200 image/jpegだが、サイト利用規約PDF(img/terms.pdf)第3条で『無断使用・転載・商業的利用を固くお断り』明記 → 不採用"
+  - name: "滋賀国道事務所 国道ライブカメラ(60台, seishiga.kkr.mlit.go.jp/shiga/pic/Cxxxxx.jpg)"
+    url: "https://www.kkr.mlit.go.jp/shiga/live/index.html"
+    reason: "固定URLだがcurl直GETは403(Referer付与でも403)。かつ同一カメラがprvs経由で既登録(外町/鈴鹿TN/逢坂/坂本北IC等)のため重複"
+  - name: "ロードネット滋賀（滋賀県 県管理道路カメラ 大津/南部/甲賀/東近江/湖東/長浜/木之本/高島）"
+    url: "https://www.shiga-douro.jp/cameras"
+    reason: "SPA(GraphQL POST)でCloudFrontがPOSTを403拒否、静的画像URLを特定できず。ブラウザ調査で画像CDN URLが判明すれば有望(県管理道路の多数カメラ)"
+  - name: "高島市 河川監視カメラ(bousai.city.takashima.lg.jp/cctv, api/cameras で一覧取得可)"
+    url: "http://bousai.city.takashima.lg.jp/cctv/list"
+    reason: "画像パスがタイムスタンプ付き(assets/cameras/<id>/pictures/YYYY/MM/DD/<id>_YYYYMMDDHHMMSS.jpg)で固定URLなし。都度解決型パーサを作れば採用可(APIは認証なしJSON)"
+  - name: "東近江市 河川監視カメラ(大同川/青野/大森/五個荘中/五個荘竜田/地蔵/下二俣/dreamheights)"
+    url: "https://higashiomi-camera.mysystems.jp/"
+    reason: "画像URLがタイムスタンプ付き(webaccel.jp/<id>/…_TIMING.jpg)で固定URLなし。都度解決型なら採用可"
+  - name: "琵琶湖大橋ライブカメラ（滋賀県道路公社）"
+    url: "https://www.shiga-dourokousha.or.jp/"
+    reason: "トップのimg/livecam.pngはLast-Modified 2021年の静的画像(リンク画像)。実カメラページ/画像URLを特定できず(livecam/等は404)"
+  - name: "BANTV 大津港/琵琶湖 ライブカメラ（表/裏/砂浜）"
+    url: "https://www.youtube.com/@BANTV/streams"
+    reason: "bZHusX-v7NI, Jk14mavBkAs, Bxvp5bQ7Qa4, rb_yWZkCvSs, kM14Zw3VpUA いずれも isLiveNow:false(配信終了)。現在ライブ中は流星群観測の星空ライブ(jveexcEacFU)のみで常設枠でない"
+  - name: "Hikone LIVE Cam 4k"
+    url: "https://www.youtube.com/watch?v=tp0h_Ta7EEM"
+    reason: "ライブ中(oEmbed 200)だが説明文・概要が空で設置場所を特定できず(彦根市内のどこか)。運営者も個人チャンネル名のみ"
+  - name: "滋賀県立大学 県大お天気カメラ"
+    url: "https://www.youtube.com/channel/UCa9DpI_1lyyF3SHi26ozcog/live"
+    reason: "/live が現在ライブなし(2DXN6rhp88M はライブでない)"
+  - name: "草津駅周辺ライブ(@kusatsulivecam) / Bordercollie Sarah 伊吹山 / 伊吹山ドライブウェイYouTube / グランスノー奥伊吹YouTube"
+    url: "https://www.youtube.com/@kusatsulivecam/live"
+    reason: "いずれも現在ライブ配信なし(個人チャンネル/公式とも非配信中)。奥伊吹・伊吹山ドライブウェイは公式ページにも静止画URLなし(ドライブウェイは山頂画像がJS描画、抽出不可)"
+  - name: "ウェザーニュース 滋賀県内ライブカメラ(約30地点)"
+    url: "https://weathernews.jp/onebox/livecam/kinki/shiga/"
+    reason: "WNI規約により転載不可・画像はJS配信のため対象外"
+  - name: "水生植物公園みずの森(mizunomori.miepro.net) / マリーナ雄琴 雄琴ヨットクラブ(ogotoyc.miemasu.net) / 125.199.232.5:8080"
+    url: "http://mizunomori.miepro.net/live/index.html"
+    reason: "ホストが応答なし(タイムアウト)"
+  - name: "菩提寺ネット 三上山WEBカメラ(湖南市)"
+    url: "http://www.bodaiji.ne.jp/webcam/index.html"
+    reason: "nnjcam.jpg は200だがLast-Modified 2023-12-10で更新停止"
+  - name: "余呉ライブカメラ 七々頭ヶ岳/赤子山/上丹生/徳山鮓(kamera, kamera1, kamera2, kamera3)"
+    url: "http://www.zb.ztv.ne.jp/uhqzveby/kamera.html"
+    reason: "Last-Modifiedが2016〜2020年で停止中(kamera4のみ採用)"
+  - name: "まがらソーラーファーム鳰の里(真柄建設, pic_nio1.jpg)"
+    url: "https://www.magara.co.jp/modules/energy/index.php?content_id=1"
+    reason: "画像は200 image/jpeg(15分更新)だが設置場所が『滋賀県大津市』としか分からず座標特定不可。太陽光発電所内の景色で観光価値も低い"
+  - name: "インターネット自然研究所 琵琶湖の水鳥(環境省 no=61)"
+    url: "https://www.sizenken.biodic.go.jp/view_new.php?no=61"
+    reason: "画像パスが日付・時刻付き(camera_img/61_c/image/YYYY/MM/DD/NCS…jpg)で固定URLなし。都度解決型なら可"
+  - name: "いちご高島朽木ECO発電所カメラ / マキノ高原『今日のスキー場』 / 黒壁スクエア / マリーナ雄琴公式 / 比叡山ドライブウェイ公式 / 湖北野鳥センター / 長浜まちづくり役場 / 中道農園 / okk.jp日野 / s-h-i.com / miyabi debroom / 近江富士いちご園"
+    url: "https://www.ichigo.gr.jp/business/sustainable/eco/plant/49.html"
+    reason: "ページが404/403、または静止画・ライブ配信URLが存在しない(ブログ写真やリンク画像のみ)"
+  - name: "比叡山ライブカメラ(京都府立大 eureka.kpu.ac.jp)"
+    url: "https://eureka.kpu.ac.jp/~a_ishida/mthiei.html"
+    reason: "設置場所が京都側(京都府)のため滋賀県対象外"
+  - name: "NEXCO iHighway 名神/新名神/北陸道 各カメラ"
+    url: "https://ihighway.jp/"
+    reason: "転載禁止確定(既登録分も含め対象外)"

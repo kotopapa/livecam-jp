@@ -1,0 +1,1762 @@
+# 市町村の観光・防災カメラ調査（2026-08-24）
+# 共通注記: 自治体サイトは利用条件が明記されていないものが多く「利用条件不明」(license=unknown想定)。
+#   画像応答は curl GET で Content-Type: image/jpeg・200 を確認済み。Last-Modified(LM)が当日のものは更新中と判断。
+#   座標は GSI住所検索(msearch.gsi.go.jp)/Nominatim(429多発のため一部のみ)/既知座標。「概略」と記したものは施設・地区中心の推定で要確認。
+still:
+  # ---- 北海道 ----
+  - id: curated-still-muni-shimamaki-sakaehama
+    name: "栄浜漁港（島牧村）"
+    operator: "島牧村"
+    category: port
+    prefecture: "01"
+    lat: 42.67755
+    lng: 139.91516
+    image_url: "http://shimamaki-camera.aa0.netvolante.jp:8001/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.vill.shimamaki.lg.jp/category/detail.php?category=content&content=145"
+    note: "島牧村Webカメラ(栄浜漁港・千走漁港・江ノ島海岸・厚瀬漁港の順で8001〜8004)。Panasonic旧型 SnapshotJPEG が image/jpeg 200。ページ掲載順とポート対応は要確認。利用条件不明。座標はGSI(島牧村栄浜)"
+  - id: curated-still-muni-shimamaki-chihase
+    name: "千走漁港（島牧村）"
+    operator: "島牧村"
+    category: port
+    prefecture: "01"
+    lat: 42.66704
+    lng: 140.01085
+    image_url: "http://shimamaki-camera.aa0.netvolante.jp:8002/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.vill.shimamaki.lg.jp/category/detail.php?category=content&content=145"
+    note: "image/jpeg 200確認。ポート対応は要確認。利用条件不明。座標GSI(島牧村千走)"
+  - id: curated-still-muni-shimamaki-enoshima
+    name: "江ノ島海岸（島牧村）"
+    operator: "島牧村"
+    category: coast
+    prefecture: "01"
+    lat: 42.67055
+    lng: 140.03502
+    image_url: "http://shimamaki-camera.aa0.netvolante.jp:8003/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.vill.shimamaki.lg.jp/category/detail.php?category=content&content=145"
+    note: "image/jpeg 200確認。ポート対応は要確認。利用条件不明。座標GSI(島牧村江ノ島)"
+  - id: curated-still-muni-shimamaki-atsuse
+    name: "厚瀬漁港（島牧村）"
+    operator: "島牧村"
+    category: port
+    prefecture: "01"
+    lat: 42.74257
+    lng: 140.11589
+    image_url: "http://shimamaki-camera.aa0.netvolante.jp:8004/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.vill.shimamaki.lg.jp/category/detail.php?category=content&content=145"
+    note: "image/jpeg 200確認。ポート対応は要確認。利用条件不明。座標GSI(島牧村港)"
+  - id: curated-still-muni-makkari
+    name: "真狩村ライブカメラ（役場・羊蹄山方面）"
+    operator: "真狩村"
+    category: scenic
+    prefecture: "01"
+    lat: 42.76300
+    lng: 140.80366
+    image_url: "https://www.vill.makkari.lg.jp/livecam/webcam_l.jpg"
+    page_url: "https://www.vill.makkari.lg.jp/webcam/"
+    note: "image/jpeg 200、LM当日。撮影方向の記載なし(羊蹄山方面と推定)。利用条件不明。座標GSI(真狩村役場)"
+  - id: curated-still-muni-kutchan
+    name: "倶知安町ライブカメラ（役場）"
+    operator: "倶知安町"
+    category: scenic
+    prefecture: "01"
+    lat: 42.90146
+    lng: 140.75902
+    image_url: "https://www.town.kutchan.hokkaido.jp/webcam/img/webcam.jpg"
+    page_url: "http://www.town.kutchan.hokkaido.jp/webcam/"
+    note: "image/jpeg 200、LM当日。撮影対象の記載なし(役場からの町並み/羊蹄山と推定)。利用条件不明。座標GSI(倶知安町役場)"
+  - id: curated-still-muni-yakumo-panoramapark
+    name: "噴火湾パノラマパーク（八雲町）"
+    operator: "八雲町"
+    category: scenic
+    prefecture: "01"
+    lat: 42.23016
+    lng: 140.31046
+    image_url: "http://panorama-camera1.town.yakumo.hokkaido.jp/cgi-bin/camera?Resolution=640"
+    page_url: "http://panorama.town.yakumo.hokkaido.jp/livecamera/"
+    note: "Panasonicカメラ cgi-bin/camera が image/jpeg 200(GET)。パークゴルフ場の様子。利用条件不明。座標GSI(噴火湾パノラマパーク)"
+  - id: curated-still-muni-takinoue-shibazakura
+    name: "芝ざくら滝上公園（役場から）"
+    operator: "滝上町"
+    category: scenic
+    prefecture: "01"
+    lat: 44.19228
+    lng: 143.07762
+    image_url: "https://town.takinoue.hokkaido.jp/images/camera/camera.jpg"
+    page_url: "https://town.takinoue.hokkaido.jp/livecam.html"
+    note: "image/jpeg 200、LM当日。役場庁舎から芝ざくら滝上公園。利用条件不明。座標GSI(滝上町役場)"
+  - id: curated-still-muni-shiranuka-higashiyama
+    name: "白糠町 東山公園"
+    operator: "白糠町"
+    category: scenic
+    prefecture: "01"
+    lat: 42.95737
+    lng: 144.07509
+    image_url: "http://www.town.shiranuka.lg.jp/webcam/higashiyama.jpg"
+    page_url: "https://www.town.shiranuka.lg.jp/section/kikaku/h8v21a0000006qq1.html"
+    note: "image/jpeg 200。利用条件不明。座標GSI(白糠町東一条=東山公園付近、概略)"
+  - id: curated-still-muni-shiranuka-sashiushi
+    name: "白糠町 刺牛海岸"
+    operator: "白糠町"
+    category: coast
+    prefecture: "01"
+    lat: 42.96316
+    lng: 144.10304
+    image_url: "http://www.town.shiranuka.lg.jp/webcam/sashiushi.jpg"
+    page_url: "https://www.town.shiranuka.lg.jp/section/kikaku/h8v21a0000006qq1.html"
+    note: "image/jpeg 200。刺牛の国道から海へ向けたカメラ。利用条件不明。座標GSI(白糠町刺牛)"
+  - id: curated-still-muni-shinshinotsu
+    name: "新篠津村 しのつ公園"
+    operator: "新篠津村"
+    category: scenic
+    prefecture: "01"
+    lat: 43.22532
+    lng: 141.64923
+    image_url: "https://www.vill.shinshinotsu.hokkaido.jp/images/camera/livecam.jpg"
+    page_url: "https://www.vill.shinshinotsu.hokkaido.jp/hotnews/detail/00000164.html"
+    note: "image/jpeg 200、LM当日。1分間隔更新。利用条件不明。座標GSI(新篠津村役場、概略)"
+  - id: curated-still-muni-rebun-rishirifuji
+    name: "礼文島から利尻富士（北のカナリアパーク）"
+    operator: "礼文町"
+    category: scenic
+    prefecture: "01"
+    lat: 45.2780
+    lng: 141.0310
+    image_url: "https://www.town.rebun.hokkaido.jp/images/camera/camera_new.jpg"
+    page_url: "https://www.town.rebun.hokkaido.jp/"
+    note: "image/jpeg 200、LM当日。ただしページに『ただいまメンテナンス中』表示あり(2026-08-24)。利用条件不明。座標は北のカナリアパーク(礼文町香深村)の既知座標・概略"
+  - id: curated-still-muni-pippu
+    name: "比布町 ウェブカメラ"
+    operator: "比布町"
+    category: scenic
+    prefecture: "01"
+    lat: 43.87500
+    lng: 142.47768
+    image_url: "https://www.town.pippu.hokkaido.jp/camera/webimg/pippucam2.jpg"
+    page_url: "https://www.town.pippu.hokkaido.jp/cms/webcam.html"
+    note: "image/jpeg 200、LM当日(http→httpsリダイレクト)。撮影対象の記載なし。利用条件不明。座標GSI(比布町役場、概略)"
+  # ---- 青森 ----
+  - id: curated-still-muni-imabetsu-seikan
+    name: "青函トンネル入口広場（今別町）"
+    operator: "今別町"
+    category: scenic
+    prefecture: "02"
+    lat: 41.1775
+    lng: 140.4565
+    image_url: "http://43.244.153.38/cgi-bin/camera?resolution=1280"
+    page_url: "http://www.town.imabetsu.lg.jp/sightseeing/guide/livecamera.html"
+    note: "IP直指定のPanasonicカメラ。GETで image/jpeg 200(HEADは500)。新幹線通過時は自動で入口方向へ向く。利用条件不明。座標は青函トンネル入口広場(今別町浜名)の既知座標・概略"
+  - id: curated-still-muni-hashikami-oja
+    name: "大蛇漁港（階上町）"
+    operator: "階上町"
+    category: port
+    prefecture: "02"
+    lat: 40.452
+    lng: 141.648
+    image_url: "http://live.town.hashikami.lg.jp/cam01/images/image.jpg"
+    page_url: "http://live.town.hashikami.lg.jp/"
+    note: "image/jpeg 200、LM当日。利用上の注意ページあり(転載禁止の明記は未確認・利用条件不明)。座標概略(階上町大蛇漁港、GSIは町中心しか返さず)"
+  - id: curated-still-muni-hashikami-sakaki
+    name: "榊漁港（階上町）"
+    operator: "階上町"
+    category: port
+    prefecture: "02"
+    lat: 40.465
+    lng: 141.637
+    image_url: "http://live.town.hashikami.lg.jp/cam02/images/image.jpg"
+    page_url: "http://live.town.hashikami.lg.jp/"
+    note: "image/jpeg 200、LM当日。利用条件不明。座標概略"
+  - id: curated-still-muni-hashikami-kofunato
+    name: "小舟渡漁港（階上町）"
+    operator: "階上町"
+    category: port
+    prefecture: "02"
+    lat: 40.441
+    lng: 141.655
+    image_url: "http://live.town.hashikami.lg.jp/cam04/images/image.jpg"
+    page_url: "http://live.town.hashikami.lg.jp/"
+    note: "image/jpeg 200、LM当日。利用条件不明。座標概略"
+  - id: curated-still-muni-rokunohe-r45
+    name: "六戸町 国道45号方面"
+    operator: "六戸町"
+    category: road
+    prefecture: "02"
+    lat: 40.60950
+    lng: 141.32498
+    image_url: "https://www.town.rokunohe.aomori.jp/livecamera/livecamera1.jpg"
+    page_url: "https://www.town.rokunohe.aomori.jp/livecamera.html"
+    note: "image/jpeg 200。LMは当日09:00(撮影時間は季節で調整=更新頻度低め)。利用条件不明。座標GSI(六戸町役場)"
+  - id: curated-still-muni-rokunohe-hakkoda
+    name: "六戸町 八甲田方面"
+    operator: "六戸町"
+    category: scenic
+    prefecture: "02"
+    lat: 40.60950
+    lng: 141.32498
+    image_url: "https://www.town.rokunohe.aomori.jp/livecamera/livecamera2.jpg"
+    page_url: "https://www.town.rokunohe.aomori.jp/livecamera.html"
+    note: "image/jpeg 200。更新頻度低め。利用条件不明。座標GSI(六戸町役場)"
+  # ---- 岩手 ----
+  - id: curated-still-muni-kuzumaki-01
+    name: "葛巻町 くずま〜る（町道茶屋場田子線・馬淵川中流）"
+    operator: "葛巻町"
+    category: river
+    prefecture: "03"
+    lat: 40.0391
+    lng: 141.4401
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam01.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "葛巻町防災カメラ15台。image/jpeg 200。利用条件不明(著作権・免責事項ページのみ)。座標Nominatim(町道茶屋場田子線)"
+  - id: curated-still-muni-kuzumaki-02
+    name: "葛巻町 茶屋場自治会館（元町川）"
+    operator: "葛巻町"
+    category: river
+    prefecture: "03"
+    lat: 40.0391
+    lng: 141.4401
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam02.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標Nominatim(茶屋場、概略)"
+  - id: curated-still-muni-kuzumaki-03
+    name: "葛巻町 森の館ウッディ（国道281号 久慈方面）"
+    operator: "葛巻町"
+    category: road
+    prefecture: "03"
+    lat: 40.0400
+    lng: 141.4379
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam03.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標は町中心(GSI)概略・要確認"
+  - id: curated-still-muni-kuzumaki-04
+    name: "葛巻町 ゆきわりそう（県道30号）"
+    operator: "葛巻町"
+    category: road
+    prefecture: "03"
+    lat: 40.0400
+    lng: 141.4379
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam04.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標は町中心概略・要確認"
+  - id: curated-still-muni-kuzumaki-05
+    name: "葛巻町 産直ハウスくずまき高原（国道281号 岩手町方面）"
+    operator: "葛巻町"
+    category: road
+    prefecture: "03"
+    lat: 40.0400
+    lng: 141.4379
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam05.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標は町中心概略・要確認"
+  - id: curated-still-muni-kuzumaki-06
+    name: "葛巻町 小屋瀬農村センター（国道281号・山形川中流）"
+    operator: "葛巻町"
+    category: river
+    prefecture: "03"
+    lat: 39.9516
+    lng: 141.5643
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam06.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標Nominatim(小屋瀬、概略)"
+  - id: curated-still-muni-kuzumaki-07
+    name: "葛巻町 荒谷地区（山形川上流）"
+    operator: "葛巻町"
+    category: river
+    prefecture: "03"
+    lat: 39.9585
+    lng: 141.4076
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam07.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標Nominatim(荒谷川、概略)"
+  - id: curated-still-muni-kuzumaki-08
+    name: "葛巻町 上外川林業研修センター（町道上外川線）"
+    operator: "葛巻町"
+    category: road
+    prefecture: "03"
+    lat: 40.0400
+    lng: 141.4379
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam08.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標は町中心概略・要確認"
+  - id: curated-still-muni-kuzumaki-09
+    name: "葛巻町 江刈小学校（馬淵川上流）"
+    operator: "葛巻町"
+    category: river
+    prefecture: "03"
+    lat: 39.9786
+    lng: 141.5100
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam09.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標GSI(葛巻町江刈、概略)"
+  - id: curated-still-muni-kuzumaki-10
+    name: "葛巻町 車門地区（国道340号 岩泉方面・馬淵川上流）"
+    operator: "葛巻町"
+    category: road
+    prefecture: "03"
+    lat: 39.9786
+    lng: 141.5100
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam10.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標は江刈地区概略・要確認"
+  - id: curated-still-muni-kuzumaki-11
+    name: "葛巻町 夢見る里ふれあい交流館（馬淵川中流）"
+    operator: "葛巻町"
+    category: river
+    prefecture: "03"
+    lat: 40.0400
+    lng: 141.4379
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam11.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標は町中心概略・要確認"
+  - id: curated-still-muni-kuzumaki-12
+    name: "葛巻町 星野生活改善センター（星野川）"
+    operator: "葛巻町"
+    category: river
+    prefecture: "03"
+    lat: 40.0904
+    lng: 141.4144
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam12.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標Nominatim(星野川、概略)"
+  - id: curated-still-muni-kuzumaki-13
+    name: "葛巻町 鍋倉地区（国道340号 九戸方面）"
+    operator: "葛巻町"
+    category: road
+    prefecture: "03"
+    lat: 40.0675
+    lng: 141.4608
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam13.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標Nominatim(鍋倉沢、概略)"
+  - id: curated-still-muni-kuzumaki-14
+    name: "葛巻町 田野構造改善センター（馬淵川下流）"
+    operator: "葛巻町"
+    category: river
+    prefecture: "03"
+    lat: 40.0464
+    lng: 141.4602
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam14.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標Nominatim(田野、概略)"
+  - id: curated-still-muni-kuzumaki-15
+    name: "葛巻町 冬部生活改善センター（県道15号）"
+    operator: "葛巻町"
+    category: road
+    prefecture: "03"
+    lat: 40.0400
+    lng: 141.4379
+    image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam15.jpg"
+    page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
+    note: "image/jpeg 200。座標は町中心概略・要確認"
+  - id: curated-still-muni-takizawa-sugo
+    name: "滝沢市 巣子川（かまど付近）"
+    operator: "滝沢市"
+    category: river
+    prefecture: "03"
+    lat: 39.77496
+    lng: 141.12622
+    image_url: "https://kasen.city.takizawa.iwate.jp/contents/sugo01.jpg"
+    page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
+    note: "滝沢市河川監視カメラ5台。image/jpeg 200、LM当日。利用条件不明。座標GSI(滝沢市巣子、概略)"
+  - id: curated-still-muni-takizawa-koiwai
+    name: "滝沢市 小岩井地区（越前堰合流部）"
+    operator: "滝沢市"
+    category: river
+    prefecture: "03"
+    lat: 39.7348
+    lng: 141.0771
+    image_url: "https://kasen.city.takizawa.iwate.jp/contents/koiwai01.jpg"
+    page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
+    note: "image/jpeg 200、LM当日。座標概略(小岩井地区)"
+  - id: curated-still-muni-takizawa-furin
+    name: "滝沢市 小岩井地区（風林橋）"
+    operator: "滝沢市"
+    category: river
+    prefecture: "03"
+    lat: 39.7348
+    lng: 141.0771
+    image_url: "https://kasen.city.takizawa.iwate.jp/contents/furin01.jpg"
+    page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
+    note: "image/jpeg 200、LM当日。座標概略"
+  - id: curated-still-muni-takizawa-yanagisawa-up
+    name: "滝沢市 柳沢砂込川（上流部）"
+    operator: "滝沢市"
+    category: river
+    prefecture: "03"
+    lat: 39.8115
+    lng: 141.0926
+    image_url: "https://kasen.city.takizawa.iwate.jp/contents/iwate101.jpg"
+    page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
+    note: "image/jpeg 200、LM当日。座標GSI(滝沢市柳沢、概略)"
+  - id: curated-still-muni-takizawa-yanagisawa-down
+    name: "滝沢市 柳沢砂込川（下流部）"
+    operator: "滝沢市"
+    category: river
+    prefecture: "03"
+    lat: 39.8115
+    lng: 141.0926
+    image_url: "https://kasen.city.takizawa.iwate.jp/contents/iwate201.jpg"
+    page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
+    note: "image/jpeg 200、LM当日。座標概略"
+  # ---- 宮城 ----
+  - id: curated-still-muni-shichikashuku-yakuba
+    name: "七ヶ宿町役場前（屋上カメラ）"
+    operator: "七ヶ宿町"
+    category: scenic
+    prefecture: "04"
+    lat: 37.99299
+    lng: 140.44165
+    image_url: "https://shichikashuku.jp/livecam007/yakuba.jpg"
+    page_url: "https://town.shichikashuku.miyagi.jp/webcamera/"
+    note: "image/jpeg 200、LM当日。画像ホストは shichikashuku.jp(町ドメイン)。利用条件不明。座標GSI(七ヶ宿町役場)"
+  - id: curated-still-muni-shichikashuku-hikaba
+    name: "七ヶ宿町 干蒲地区"
+    operator: "七ヶ宿町"
+    category: road
+    prefecture: "04"
+    lat: 38.04428
+    lng: 140.29746
+    image_url: "https://shichikashuku.jp/livecam001/image2000004.jpg"
+    page_url: "https://town.shichikashuku.miyagi.jp/webcamera/"
+    note: "地区カメラ6台(毎時更新、image2000004.jpg=現在)。image/jpeg 200。積雪確認向け。座標GSI(七ヶ宿町干蒲)"
+  - id: curated-still-muni-shichikashuku-yunohara
+    name: "七ヶ宿町 湯原地区"
+    operator: "七ヶ宿町"
+    category: road
+    prefecture: "04"
+    lat: 38.01271
+    lng: 140.32120
+    image_url: "https://shichikashuku.jp/livecam002/image2000004.jpg"
+    page_url: "https://town.shichikashuku.miyagi.jp/webcamera/"
+    note: "image/jpeg 200。座標GSI(七ヶ宿町湯原)"
+  - id: curated-still-muni-shichikashuku-tougeta
+    name: "七ヶ宿町 峠田地区"
+    operator: "七ヶ宿町"
+    category: road
+    prefecture: "04"
+    lat: 38.00557
+    lng: 140.36125
+    image_url: "https://shichikashuku.jp/livecam003/image2000004.jpg"
+    page_url: "https://town.shichikashuku.miyagi.jp/webcamera/"
+    note: "image/jpeg 200。座標GSI(七ヶ宿町峠田)"
+  - id: curated-still-muni-shichikashuku-namezu
+    name: "七ヶ宿町 滑津地区"
+    operator: "七ヶ宿町"
+    category: road
+    prefecture: "04"
+    lat: 38.01530
+    lng: 140.40355
+    image_url: "https://shichikashuku.jp/livecam004/image2000004.jpg"
+    page_url: "https://town.shichikashuku.miyagi.jp/webcamera/"
+    note: "image/jpeg 200。座標GSI(七ヶ宿町滑津)"
+  - id: curated-still-muni-shichikashuku-yokokawa
+    name: "七ヶ宿町 横川地区"
+    operator: "七ヶ宿町"
+    category: road
+    prefecture: "04"
+    lat: 38.01734
+    lng: 140.46625
+    image_url: "https://shichikashuku.jp/livecam005/image2000004.jpg"
+    page_url: "https://town.shichikashuku.miyagi.jp/webcamera/"
+    note: "image/jpeg 200。座標GSI(七ヶ宿町横川)"
+  - id: curated-still-muni-shichikashuku-choro
+    name: "七ヶ宿町 長老地区"
+    operator: "七ヶ宿町"
+    category: road
+    prefecture: "04"
+    lat: 38.03715
+    lng: 140.48288
+    image_url: "https://shichikashuku.jp/livecam006/image2000004.jpg"
+    page_url: "https://town.shichikashuku.miyagi.jp/webcamera/"
+    note: "image/jpeg 200。座標GSI(七ヶ宿町長老)"
+  # ---- 山形 ----
+  - id: curated-still-muni-murayama-eki-higashi
+    name: "村山駅 東口駅前"
+    operator: "村山市"
+    category: other
+    prefecture: "06"
+    lat: 38.47708
+    lng: 140.38650
+    image_url: "https://www.city.murayama.lg.jp/static/soumu/livecam/tateoka.jpg"
+    page_url: "https://www.city.murayama.lg.jp/kurashi/sumai/murra_livecam.html"
+    note: "村山市ライブカメラ5台、約1時間ごと更新。image/jpeg 200。alt属性で対応確認。利用条件不明。座標Nominatim(村山駅)"
+  - id: curated-still-muni-murayama-eki-higashi-p
+    name: "村山駅 東口駐車場"
+    operator: "村山市"
+    category: other
+    prefecture: "06"
+    lat: 38.47708
+    lng: 140.38650
+    image_url: "https://www.city.murayama.lg.jp/static/soumu/livecam/ekihigasikita.jpg"
+    page_url: "https://www.city.murayama.lg.jp/kurashi/sumai/murra_livecam.html"
+    note: "image/jpeg 200。約1時間更新。座標Nominatim(村山駅)"
+  - id: curated-still-muni-murayama-eki-nishi-p
+    name: "村山駅 西口駐車場"
+    operator: "村山市"
+    category: other
+    prefecture: "06"
+    lat: 38.47708
+    lng: 140.38650
+    image_url: "https://www.city.murayama.lg.jp/static/soumu/livecam/ekinisiminami.jpg"
+    page_url: "https://www.city.murayama.lg.jp/kurashi/sumai/murra_livecam.html"
+    note: "image/jpeg 200。約1時間更新。座標Nominatim(村山駅)"
+  - id: curated-still-muni-murayama-koshikidake
+    name: "甑岳の眺め（大倉地域市民センター）"
+    operator: "村山市"
+    category: scenic
+    prefecture: "06"
+    lat: 38.505
+    lng: 140.335
+    image_url: "https://www.city.murayama.lg.jp/static/soumu/livecam/ookura.jpg"
+    page_url: "https://www.city.murayama.lg.jp/kurashi/sumai/murra_livecam.html"
+    note: "image/jpeg 200。約1時間更新。座標は村山市大倉地区の概略(GSIは大久保を返したため既知位置で補正)・要確認"
+  - id: curated-still-muni-murayama-mogamigawa-museum
+    name: "最上川美術館からの眺め（真下慶治記念美術館）"
+    operator: "村山市"
+    category: river
+    prefecture: "06"
+    lat: 38.490
+    lng: 140.330
+    image_url: "https://www.city.murayama.lg.jp/static/soumu/livecam/masimo.jpg"
+    page_url: "https://www.city.murayama.lg.jp/kurashi/sumai/murra_livecam.html"
+    note: "image/jpeg 200。約1時間更新。座標は真下慶治記念美術館(村山市大淀)の既知座標・概略"
+  - id: curated-still-muni-tsuruoka-chido
+    name: "鶴岡市 致道博物館"
+    operator: "鶴岡市"
+    category: scenic
+    prefecture: "06"
+    lat: 38.72814
+    lng: 139.82183
+    image_url: "https://www.city.tsuruoka.lg.jp/static/camera/images/image01.jpg"
+    page_url: "https://www.city.tsuruoka.lg.jp/static/camera/"
+    note: "image/jpeg 200、LM当日。chido.html=image01(致道博物館)、park.html=image02(鶴岡公園)。利用条件不明。座標GSI(致道博物館)"
+  - id: curated-still-muni-tsuruoka-park
+    name: "鶴岡公園"
+    operator: "鶴岡市"
+    category: scenic
+    prefecture: "06"
+    lat: 38.7275
+    lng: 139.8250
+    image_url: "https://www.city.tsuruoka.lg.jp/static/camera/images/image02.jpg"
+    page_url: "https://www.city.tsuruoka.lg.jp/static/camera/"
+    note: "image/jpeg 200、LM当日。座標は鶴岡公園の既知座標(GSIは北海道を返した)"
+  - id: curated-still-muni-obanazawa-showadori
+    name: "尾花沢市 昭和通り"
+    operator: "尾花沢市"
+    category: road
+    prefecture: "06"
+    lat: 38.60108
+    lng: 140.40685
+    image_url: "https://city.obanazawa.netj.jp/livecamera/m-obane1.jpg"
+    page_url: "https://www.city.obanazawa.yamagata.jp/kurashi/kikikanri/anzen/livecamera/"
+    note: "image/jpeg 200、LM当日。豪雪地帯の市街(積雪確認向け)。画像ホスト city.obanazawa.netj.jp。利用条件不明。座標GSI(尾花沢市中心、概略)"
+  - id: curated-still-muni-obanazawa-tokurako
+    name: "尾花沢市 徳良湖周辺"
+    operator: "尾花沢市"
+    category: scenic
+    prefecture: "06"
+    lat: 38.59631
+    lng: 140.44103
+    image_url: "https://city.obanazawa.netj.jp/livecamera/m-tokurako.jpg"
+    page_url: "https://www.city.obanazawa.yamagata.jp/kurashi/kikikanri/anzen/livecamera/"
+    note: "image/jpeg 200、LM当日。座標GSI(徳良湖)"
+  - id: curated-still-muni-obanazawa-shobosho
+    name: "尾花沢市 消防署周辺"
+    operator: "尾花沢市"
+    category: road
+    prefecture: "06"
+    lat: 38.60108
+    lng: 140.40685
+    image_url: "https://city.obanazawa.netj.jp/livecamera/m-obane2.jpg"
+    page_url: "https://www.city.obanazawa.yamagata.jp/kurashi/kikikanri/anzen/livecamera/"
+    note: "image/jpeg 200、LM当日。座標概略(市中心)"
+  # ---- 新潟 ----
+  - id: curated-still-muni-itoigawa-yakeyama
+    name: "焼山（糸魚川市 能生高倉地区から）"
+    operator: "糸魚川市"
+    category: volcano
+    prefecture: "15"
+    lat: 37.086
+    lng: 137.997
+    image_url: "https://itoigawa.nihonkai.net/yakeyama.jpg"
+    page_url: "https://www.city.itoigawa.lg.jp/page/2481.html"
+    note: "糸魚川市ライブカメラ4台、1分更新。image/jpeg 200。画像ホスト itoigawa.nihonkai.net。利用条件不明。座標は能生高倉地区の概略(GSIは能生中心を返した)"
+  - id: curated-still-muni-itoigawa-bentemiwa
+    name: "弁天岩（国道8号から）"
+    operator: "糸魚川市"
+    category: coast
+    prefecture: "15"
+    lat: 37.111
+    lng: 137.987
+    image_url: "https://itoigawa.nihonkai.net/noukaigan.jpg"
+    page_url: "https://www.city.itoigawa.lg.jp/page/2481.html"
+    note: "image/jpeg 200。座標は弁天岩(能生)の既知座標・概略"
+  - id: curated-still-muni-itoigawa-nihonkai
+    name: "日本海（能生事務所屋上から）"
+    operator: "糸魚川市"
+    category: coast
+    prefecture: "15"
+    lat: 37.103
+    lng: 137.988
+    image_url: "https://itoigawa.nihonkai.net/nou.jpg"
+    page_url: "https://www.city.itoigawa.lg.jp/page/2481.html"
+    note: "image/jpeg 200。座標GSI(能生)概略"
+  - id: curated-still-muni-itoigawa-nougawa
+    name: "能生川（左岸から上流方向）"
+    operator: "糸魚川市"
+    category: river
+    prefecture: "15"
+    lat: 37.098
+    lng: 137.992
+    image_url: "https://itoigawa.nihonkai.net/nougawa.jpg"
+    page_url: "https://www.city.itoigawa.lg.jp/page/2481.html"
+    note: "image/jpeg 200。座標概略(能生川下流)"
+  - id: curated-still-muni-sanjo-01
+    name: "五十嵐川右岸（田島わくわく保育園）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.62688
+    lng: 138.96825
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam1.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "三条市防災カメラ12台。image/jpeg 200、LM当日。利用条件不明。座標GSI(三条市田島)"
+  - id: curated-still-muni-sanjo-03
+    name: "五十嵐川・駒出川合流地点（いい湯らてい）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.6364
+    lng: 138.9617
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam3.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(概略・要確認: いい湯らていは下田地区のため実位置は東寄りの可能性)"
+  - id: curated-still-muni-sanjo-04
+    name: "五十嵐川（江口消防ポンプ小屋）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.56234
+    lng: 139.06416
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam4.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市江口)"
+  - id: curated-still-muni-sanjo-05
+    name: "鹿熊川（曲谷やまゆり）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.60063
+    lng: 139.06014
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam5.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市曲谷)"
+  - id: curated-still-muni-sanjo-09
+    name: "大平川（荻堀水管橋）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.57178
+    lng: 139.03351
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam9.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市荻堀)"
+  - id: curated-still-muni-sanjo-10
+    name: "五十嵐川（白鳥の郷公苑）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.65737
+    lng: 139.01199
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam10.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(白鳥の郷公苑)"
+  - id: curated-still-muni-sanjo-11
+    name: "大面川（福島新田）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.59671
+    lng: 138.91205
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam11.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市福島新田)"
+  - id: curated-still-muni-sanjo-12
+    name: "刈谷田川（鬼木新田）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.59628
+    lng: 138.87825
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam12.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市鬼木新田)"
+  - id: curated-still-muni-sanjo-13
+    name: "吉津川（下保内）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.64490
+    lng: 139.02478
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam13.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市下保内)"
+  - id: curated-still-muni-sanjo-14
+    name: "しおから川（西大崎）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.61354
+    lng: 139.01270
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam14.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市西大崎)"
+  - id: curated-still-muni-sanjo-15
+    name: "島田川（ものづくり拠点施設）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.62837
+    lng: 138.94731
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam15.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市島田)"
+  - id: curated-still-muni-sanjo-16
+    name: "上保内（井栗分団第6ポンプ置場）"
+    operator: "三条市"
+    category: river
+    prefecture: "15"
+    lat: 37.63071
+    lng: 139.02368
+    image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam16.jpg"
+    page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
+    note: "image/jpeg 200、LM当日。座標GSI(三条市上保内)"
+  - id: curated-still-muni-kariwa-tourinbo
+    name: "刈羽平野（ぴあパークとうりんぼから）"
+    operator: "刈羽村"
+    category: scenic
+    prefecture: "15"
+    lat: 37.428
+    lng: 138.620
+    image_url: "http://www.vill.kariwa.niigata.jp/open/camera//tourinbo01.jpg"
+    page_url: "http://www.vill.kariwa.niigata.jp/www/livecamera/index.jsp"
+    note: "1分毎更新。image/jpeg 200、LM当日。URLに//が含まれる(原文どおり)。利用条件不明。座標概略(刈羽村、GSIは村中心)"
+  - id: curated-still-muni-kariwa-toueibashi
+    name: "別山川（東栄橋から）"
+    operator: "刈羽村"
+    category: river
+    prefecture: "15"
+    lat: 37.420
+    lng: 138.630
+    image_url: "http://www.vill.kariwa.niigata.jp/open/camera//toueibashi.jpg"
+    page_url: "http://www.vill.kariwa.niigata.jp/www/livecamera/index.jsp"
+    note: "1分毎更新。image/jpeg 200、LM当日。座標概略"
+  - id: curated-still-muni-mitsuke-kominkan
+    name: "見附市 中央公民館から"
+    operator: "見附市"
+    category: other
+    prefecture: "15"
+    lat: 37.5316
+    lng: 138.9128
+    image_url: "http://saigaicam04.city.mitsuke.niigata.jp/view/get_jpeg?size=0&compress=0&force=1&camera=1"
+    page_url: "https://www.city.mitsuke.niigata.jp/soshiki/2/2478.html"
+    note: "災害カメラ(saigaicam04)。tmseq無しGETで image/jpeg 200(saigaicam02で確認、04/05は同型)。02/03はNCT(CATV)提供のため除外。利用条件不明。座標GSI(見附市役所、概略)"
+  - id: curated-still-muni-mitsuke-nagino
+    name: "見附市 名木野小学校から"
+    operator: "見附市"
+    category: other
+    prefecture: "15"
+    lat: 37.5316
+    lng: 138.9128
+    image_url: "http://saigaicam05.city.mitsuke.niigata.jp/view/get_jpeg?size=0&compress=0&force=1&camera=1"
+    page_url: "https://www.city.mitsuke.niigata.jp/soshiki/2/2478.html"
+    note: "同上。座標は市中心概略・要確認"
+  # ---- 富山 ----
+  - id: curated-still-muni-tonami-tulip-panorama
+    name: "砺波チューリップ公園 パノラマテラス"
+    operator: "砺波市"
+    category: scenic
+    prefecture: "16"
+    lat: 36.6435
+    lng: 136.9632
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/churip.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam01/"
+    note: "砺波市ライブカメラ(WordPress、mirror静止画)。image/jpeg 200。利用条件不明。座標は砺波チューリップ公園の既知座標(GSIは北海道名寄市砺波を返した)"
+  - id: curated-still-muni-tonami-tulip-suisha
+    name: "砺波チューリップ公園 五連揚水水車"
+    operator: "砺波市"
+    category: scenic
+    prefecture: "16"
+    lat: 36.6428
+    lng: 136.9640
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/churip_goren.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam02/"
+    note: "image/jpeg 200。座標既知(公園内)概略"
+  - id: curated-still-muni-tonami-tulip-bunzone
+    name: "砺波チューリップ公園 BUNZO-NE"
+    operator: "砺波市"
+    category: scenic
+    prefecture: "16"
+    lat: 36.6440
+    lng: 136.9625
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/churip_bunzo-ne.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam16/"
+    note: "image/jpeg 200確認。座標既知概略"
+  - id: curated-still-muni-tonami-museum
+    name: "砺波市美術館"
+    operator: "砺波市"
+    category: scenic
+    prefecture: "16"
+    lat: 36.6446
+    lng: 136.9612
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/tonami_bijutsukan.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam03/"
+    note: "image/jpeg 200。座標既知概略"
+  - id: curated-still-muni-tonami-yumenotaira
+    name: "夢の平コスモス荘（スキー場）"
+    operator: "砺波市"
+    category: scenic
+    prefecture: "16"
+    lat: 36.590
+    lng: 137.005
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/yumenotaira.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam04/"
+    note: "積雪・ゲレンデ確認向け。image/jpeg 200確認。座標は夢の平(砺波市五谷)の既知座標・概略"
+  - id: curated-still-muni-tonami-hachibuseyama
+    name: "鉢伏山（散居村風景）"
+    operator: "砺波市"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5895
+    lng: 137.002
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/hachibuseyama.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam05/"
+    note: "散居村展望。image/jpeg 200確認。座標概略"
+  - id: curated-still-muni-tonami-funatobashi
+    name: "舟戸橋（庄川）"
+    operator: "砺波市"
+    category: river
+    prefecture: "16"
+    lat: 36.578
+    lng: 136.974
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/funatobashi.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam07/"
+    note: "image/jpeg 200確認。座標概略(庄川町舟戸)"
+  - id: curated-still-muni-tonami-mizukinen
+    name: "庄川水記念公園（特産館）"
+    operator: "砺波市"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5795
+    lng: 136.9765
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/mizukinen.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam08/"
+    note: "image/jpeg 200確認。座標既知概略"
+  - id: curated-still-muni-tonami-shogawakyo
+    name: "庄川峡遊覧船（小牧）"
+    operator: "砺波市"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5215
+    lng: 136.9565
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/senpaku.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam10/"
+    note: "image/jpeg 200確認。座標は小牧港の既知座標・概略"
+  - id: curated-still-muni-tonami-station
+    name: "砺波駅"
+    operator: "砺波市"
+    category: other
+    prefecture: "16"
+    lat: 36.6410
+    lng: 136.9605
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/tonamieki.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam11/"
+    note: "image/jpeg 200確認。座標既知概略"
+  - id: curated-still-muni-tonami-cityhall
+    name: "砺波市役所本庁舎"
+    operator: "砺波市"
+    category: other
+    prefecture: "16"
+    lat: 36.6475
+    lng: 136.9622
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/tonami.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam14/"
+    note: "image/jpeg 200確認。座標GSI(砺波市)"
+  - id: curated-still-muni-tonami-shogawa-shisho
+    name: "砺波市役所庄川支所"
+    operator: "砺波市"
+    category: other
+    prefecture: "16"
+    lat: 36.5815
+    lng: 136.9745
+    image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/s_shisyo.jpg"
+    page_url: "https://www.city.tonami.lg.jp/livecam/cam15/"
+    note: "image/jpeg 200確認。座標既知概略"
+  # ---- 山梨 ----
+  - id: curated-still-muni-hayakawa
+    name: "早川町 防災ライブカメラ（役場）"
+    operator: "早川町"
+    category: other
+    prefecture: "19"
+    lat: 35.412
+    lng: 138.365
+    image_url: "https://www.town.hayakawa.yamanashi.jp/livecamera/camera/top.jpg"
+    page_url: "https://www.town.hayakawa.yamanashi.jp/livecamera/hayakawa.html"
+    note: "30秒毎更新の現在画像(top.jpg)。image/jpeg 200、LM当日。利用条件不明。座標は早川町役場(高住)の既知座標・概略(GSIは栃木県を返した)"
+  - id: curated-still-muni-oshino-omiyabashi
+    name: "忍野村 お宮橋から富士山"
+    operator: "忍野村"
+    category: scenic
+    prefecture: "19"
+    lat: 35.457
+    lng: 138.848
+    image_url: "https://www.vill.oshino.lg.jp/camera/omiyabashi.jpg"
+    page_url: "https://www.vill.oshino.lg.jp/page/4902.html"
+    note: "image/jpeg 200、LM当日14:00。既存の『忍野八海から富士山』(富士五湖TV)とは別運営。利用条件不明。座標はお宮橋(忍野村忍草)既知座標・概略"
+  - id: curated-still-muni-oshino-hokencenter
+    name: "忍野村 保健福祉センターから富士山"
+    operator: "忍野村"
+    category: scenic
+    prefecture: "19"
+    lat: 35.460
+    lng: 138.845
+    image_url: "https://www.vill.oshino.lg.jp/camera/last.jpg"
+    page_url: "https://www.vill.oshino.lg.jp/page/4902.html"
+    note: "image/jpeg 200、LM当日09:13(更新間隔は長め)。座標概略"
+  # ---- 長野 ----
+  - id: curated-still-muni-kijimadaira-idou
+    name: "木島平村 田園風景と高社山"
+    operator: "木島平村"
+    category: scenic
+    prefecture: "20"
+    lat: 36.86041
+    lng: 138.46431
+    image_url: "https://www.vill.kijimadaira.lg.jp/cam/idou.jpg"
+    page_url: "https://www.vill.kijimadaira.lg.jp/webcamera/"
+    note: "10秒更新。image/jpeg 200。ページ掲載順(idou=田園風景と高社山, kotei=高社山麓から見た村の風景)は要確認。利用条件不明。座標GSI(役場、概略)"
+  - id: curated-still-muni-kijimadaira-kotei
+    name: "木島平村 高社山麓から見た村の風景"
+    operator: "木島平村"
+    category: scenic
+    prefecture: "20"
+    lat: 36.86041
+    lng: 138.46431
+    image_url: "https://www.vill.kijimadaira.lg.jp/cam/kotei.jpg"
+    page_url: "https://www.vill.kijimadaira.lg.jp/webcamera/"
+    note: "image/jpeg 200。座標概略"
+  - id: curated-still-muni-nakano-kosha
+    name: "高社山（中野市役所屋上から北向き）"
+    operator: "中野市"
+    category: scenic
+    prefecture: "20"
+    lat: 36.74150
+    lng: 138.36922
+    image_url: "https://www.city.nakano.nagano.jp/camera/live_kosha/TRIFORA.jpg"
+    page_url: "https://www.city.nakano.nagano.jp/docs/2014021200248/"
+    note: "5分更新。image/jpeg 200、LM当日。利用条件不明。座標GSI(中野市役所)"
+  - id: curated-still-muni-nakano-gogaku
+    name: "北信五岳（中野市役所屋上から西向き）"
+    operator: "中野市"
+    category: scenic
+    prefecture: "20"
+    lat: 36.74150
+    lng: 138.36922
+    image_url: "https://www.city.nakano.nagano.jp/camera/live_gogaku/TRIFORA.jpg"
+    page_url: "https://www.city.nakano.nagano.jp/docs/2014021200248/"
+    note: "5分更新。image/jpeg 200、LM当日。座標GSI(中野市役所)"
+  - id: curated-still-muni-nagawa-yakuba
+    name: "長和町役場"
+    operator: "長和町"
+    category: other
+    prefecture: "20"
+    lat: 36.263
+    lng: 138.283
+    image_url: "https://www.nagawa.ne.jp/image/chosya.jpg"
+    page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
+    note: "長和町内ライブカメラ8台(町CATV nagawa.ne.jp配信)。image/jpeg 200、LM当日。利用条件不明。座標は長和町役場(古町4247-1)の既知座標・概略(GSIは北海道伊達市を返した)"
+  - id: curated-still-muni-nagawa-nagakubo
+    name: "長和町 長久保支所（長久保グラウンド・国道152号）"
+    operator: "長和町"
+    category: road
+    prefecture: "20"
+    lat: 36.25382
+    lng: 138.26788
+    image_url: "https://www.nagawa.ne.jp/image/nagakubo.jpg"
+    page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
+    note: "image/jpeg 200、LM当日。座標GSI(長和町長久保)"
+  - id: curated-still-muni-nagawa-ochiaibashi
+    name: "中山道落合橋（大門川・大和橋）"
+    operator: "長和町"
+    category: river
+    prefecture: "20"
+    lat: 36.2206
+    lng: 138.2504
+    image_url: "https://www.nagawa.ne.jp/image/aobara.jpg"
+    page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
+    note: "image/jpeg 200、LM当日。座標GSI(長和町大門、概略)"
+  - id: curated-still-muni-nagawa-wadajuku-station
+    name: "和田宿ステーション（国道142号・浅間山方面）"
+    operator: "長和町"
+    category: road
+    prefecture: "20"
+    lat: 36.209
+    lng: 138.170
+    image_url: "https://www.nagawa.ne.jp/image/wada_ST.jpg"
+    page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
+    note: "image/jpeg 200、LM当日。座標は和田宿ステーション(長和町和田)既知座標・概略(GSIは福島県を返した)"
+  - id: curated-still-muni-nagawa-wadajuku-honjin
+    name: "和田宿本陣"
+    operator: "長和町"
+    category: scenic
+    prefecture: "20"
+    lat: 36.205
+    lng: 138.163
+    image_url: "https://www.nagawa.ne.jp/image/honjin.jpg"
+    page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
+    note: "image/jpeg 200、LM当日。座標既知概略"
+  - id: curated-still-muni-nagawa-kokuyoseki
+    name: "黒耀石体験ミュージアム"
+    operator: "長和町"
+    category: scenic
+    prefecture: "20"
+    lat: 36.163
+    lng: 138.211
+    image_url: "https://www.nagawa.ne.jp/image/museum.jpg"
+    page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
+    note: "image/jpeg 200、LM当日。座標は鷹山(長和町大門)の既知座標・概略"
+  - id: curated-still-muni-nagawa-himeki
+    name: "姫木平コミュニティセンター（国道152号・姫木平キャンプ場）"
+    operator: "長和町"
+    category: road
+    prefecture: "20"
+    lat: 36.157
+    lng: 138.245
+    image_url: "https://www.nagawa.ne.jp/image/himeki.jpg"
+    page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
+    note: "image/jpeg 200、LM当日。積雪確認向け。座標既知概略"
+  - id: curated-still-muni-nagawa-yodakubo
+    name: "依田窪病院（古町）"
+    operator: "長和町"
+    category: other
+    prefecture: "20"
+    lat: 36.257
+    lng: 138.280
+    image_url: "https://www.nagawa.ne.jp/image/furumachi.jpg"
+    page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
+    note: "image/jpeg 200、LM当日。座標既知概略"
+  # ---- 岐阜 ----
+  - id: curated-still-muni-motosu-usuzumizakura
+    name: "根尾谷 淡墨桜"
+    operator: "本巣市"
+    category: scenic
+    prefecture: "21"
+    lat: 35.6345
+    lng: 136.6135
+    image_url: "http://cam01.city.motosu.lg.jp:10088/-wvhttp-01-/image.cgi"
+    page_url: "https://www.city.motosu.lg.jp/0000000262.html"
+    note: "Canon VBカメラ image.cgi。GETで image/jpeg 200(HEADは501)。静止画は自動更新されない旨あり。利用条件の記載なし。座標は淡墨桜(本巣市根尾板所)の既知座標(GSIは千葉県を返した)"
+  - id: curated-still-muni-shirakawacho-obara
+    name: "白川町 小原駐車場"
+    operator: "白川町（岐阜県）"
+    category: other
+    prefecture: "21"
+    lat: 35.5813
+    lng: 137.1913
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam01/cam01.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "白川町防災(監視)カメラ9台、毎時更新(?query付きだがベースURLで image/jpeg 200、LM当日)。掲載順: 小原駐車場,白川口,藤井橋,大賀医院,豊川寺,三掛,中川,黒川,佐見。利用条件不明。座標GSI(白川町中心、概略)"
+  - id: curated-still-muni-shirakawacho-shirakawaguchi
+    name: "白川町 白川口"
+    operator: "白川町（岐阜県）"
+    category: other
+    prefecture: "21"
+    lat: 35.582
+    lng: 137.172
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam02/cam02.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "座標は白川口駅付近の既知座標・概略"
+  - id: curated-still-muni-shirakawacho-fujiibashi
+    name: "白川町 藤井橋（飛騨川）"
+    operator: "白川町（岐阜県）"
+    category: river
+    prefecture: "21"
+    lat: 35.583
+    lng: 137.186
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam03/cam03.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "座標概略"
+  - id: curated-still-muni-shirakawacho-oga
+    name: "白川町 大賀医院前"
+    operator: "白川町（岐阜県）"
+    category: other
+    prefecture: "21"
+    lat: 35.583
+    lng: 137.190
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam04/cam04.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "座標概略(河岐)"
+  - id: curated-still-muni-shirakawacho-hosenji
+    name: "白川町 豊川寺"
+    operator: "白川町（岐阜県）"
+    category: other
+    prefecture: "21"
+    lat: 35.585
+    lng: 137.195
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam05/cam05.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "座標概略・要確認"
+  - id: curated-still-muni-shirakawacho-mikake
+    name: "白川町 三掛"
+    operator: "白川町（岐阜県）"
+    category: river
+    prefecture: "21"
+    lat: 35.568
+    lng: 137.221
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam06/cam06.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "座標GSI(白川町三川、概略)"
+  - id: curated-still-muni-shirakawacho-nakagawa
+    name: "白川町 中川"
+    operator: "白川町（岐阜県）"
+    category: river
+    prefecture: "21"
+    lat: 35.612
+    lng: 137.248
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam07/cam07.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "座標GSI(白川町中川)"
+  - id: curated-still-muni-shirakawacho-kurokawa
+    name: "白川町 黒川"
+    operator: "白川町（岐阜県）"
+    category: river
+    prefecture: "21"
+    lat: 35.592
+    lng: 137.323
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam08/cam08.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "座標GSI(白川町黒川)"
+  - id: curated-still-muni-shirakawacho-sami
+    name: "白川町 佐見"
+    operator: "白川町（岐阜県）"
+    category: river
+    prefecture: "21"
+    lat: 35.645
+    lng: 137.285
+    image_url: "http://cam.town.shirakawa.lg.jp/Content/photo/cam09/cam09.jpg"
+    page_url: "http://cam.town.shirakawa.lg.jp/Camera/Index"
+    note: "座標は佐見地区の既知座標・概略"
+  - id: curated-still-muni-ikeda-gifu-east
+    name: "池田町役場から東側"
+    operator: "池田町（岐阜県）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.44222
+    lng: 136.57306
+    image_url: "http://www.town.ikeda.gifu.jp/camera/East.jpg"
+    page_url: "http://www.town.ikeda.gifu.jp/webcam.html"
+    note: "池田町ライブカメラ6台。image/jpeg 200、LM当日。利用条件不明。座標GSI(池田町役場)"
+  - id: curated-still-muni-ikeda-gifu-north
+    name: "池田町役場から北側"
+    operator: "池田町（岐阜県）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.44222
+    lng: 136.57306
+    image_url: "http://www.town.ikeda.gifu.jp/camera/North.jpg"
+    page_url: "http://www.town.ikeda.gifu.jp/webcam.html"
+    note: "image/jpeg 200、LM当日"
+  - id: curated-still-muni-ikeda-gifu-south
+    name: "池田町役場から南側"
+    operator: "池田町（岐阜県）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.44222
+    lng: 136.57306
+    image_url: "http://www.town.ikeda.gifu.jp/camera/South.jpg"
+    page_url: "http://www.town.ikeda.gifu.jp/webcam.html"
+    note: "image/jpeg 200、LM当日"
+  - id: curated-still-muni-ikeda-gifu-west
+    name: "池田町役場から西側（池田山）"
+    operator: "池田町（岐阜県）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.44222
+    lng: 136.57306
+    image_url: "https://www.ikedaonsen.jp/livecam/ikedayama.jpg"
+    page_url: "http://www.town.ikeda.gifu.jp/webcam.html"
+    note: "image/jpeg 200、LM当日。画像ホストは ikedaonsen.jp(町公式ページに埋め込み。運営主体が池田町か池田温泉かは要確認)"
+  - id: curated-still-muni-ikeda-gifu-kamagatani
+    name: "霞間ヶ渓（池田町）"
+    operator: "池田町（岐阜県）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.442
+    lng: 136.555
+    image_url: "http://www.town.ikeda.gifu.jp/camera/Kamagatani.jpg"
+    page_url: "http://www.town.ikeda.gifu.jp/webcam.html"
+    note: "桜の名所。image/jpeg 200、LM当日。座標は霞間ヶ渓の既知座標・概略"
+  - id: curated-still-muni-ikeda-gifu-otsudani
+    name: "大津谷（池田町）"
+    operator: "池田町（岐阜県）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.462
+    lng: 136.553
+    image_url: "http://www.town.ikeda.gifu.jp/camera/Otudani.jpg"
+    page_url: "http://www.town.ikeda.gifu.jp/webcam.html"
+    note: "大津谷公園(キャンプ場)。image/jpeg 200、LM当日。座標既知概略"
+  # ---- 静岡 ----
+  - id: curated-still-muni-susono-onoji
+    name: "裾野市 大野路交差点"
+    operator: "裾野市"
+    category: road
+    prefecture: "22"
+    lat: 35.18979
+    lng: 138.88605
+    image_url: "https://www2.city.susono.shizuoka.jp/data/ts-photo/ts1-photo.jpeg"
+    page_url: "https://www.city.susono.shizuoka.jp/soshiki/6/4/1/1/19734.html"
+    note: "裾野市道路ライブカメラ。image/jpeg 200、LM当日。利用条件不明。座標GSI(裾野市大畑=大野路付近、概略)"
+  - id: curated-still-muni-susono-kirikubo
+    name: "裾野市 切久保ガード"
+    operator: "裾野市"
+    category: road
+    prefecture: "22"
+    lat: 35.17389
+    lng: 138.90666
+    image_url: "https://www2.city.susono.shizuoka.jp/data/ts-photo/ts7-photo.jpeg"
+    page_url: "https://www.city.susono.shizuoka.jp/soshiki/6/4/1/1/19734.html"
+    note: "アンダーパス冠水確認向け。image/jpeg 200、LM当日。座標GSI(概略)"
+  - id: curated-still-muni-susono-chabatake
+    name: "大場川 茶畑観測局（裾野市）"
+    operator: "裾野市"
+    category: river
+    prefecture: "22"
+    lat: 35.19028
+    lng: 138.97134
+    image_url: "https://www2.city.susono.shizuoka.jp/data/ts-photo/ts5-photo.jpeg"
+    page_url: "https://www.city.susono.shizuoka.jp/soshiki/6/4/1/1/19734.html"
+    note: "image/jpeg 200、LM当日。座標GSI(裾野市茶畑)"
+  - id: curated-still-muni-matsuzaki-matsuzakiso
+    name: "伊豆まつざき荘 防災カメラ（松崎海岸）"
+    operator: "松崎町"
+    category: coast
+    prefecture: "22"
+    lat: 34.751
+    lng: 138.775
+    image_url: "https://www.town.matsuzaki.shizuoka.jp/bousai_camera/images/matsuzaki.jpg"
+    page_url: "https://www.town.matsuzaki.shizuoka.jp/bousai_camera/"
+    note: "松崎町防災カメラ4台。image/jpeg 200、LM当日。利用条件不明。座標は伊豆まつざき荘(江奈)の既知座標・概略(GSIは三宅島を返した)"
+  - id: curated-still-muni-matsuzaki-iwachi
+    name: "岩地海岸 防災カメラ"
+    operator: "松崎町"
+    category: coast
+    prefecture: "22"
+    lat: 34.73993
+    lng: 138.76424
+    image_url: "https://www.town.matsuzaki.shizuoka.jp/bousai_camera/images/iwachi.jpg"
+    page_url: "https://www.town.matsuzaki.shizuoka.jp/bousai_camera/"
+    note: "海水浴場。image/jpeg 200、LM当日。座標GSI(松崎町岩地)"
+  - id: curated-still-muni-matsuzaki-kumomi
+    name: "雲見くじら館 防災カメラ（雲見海岸）"
+    operator: "松崎町"
+    category: coast
+    prefecture: "22"
+    lat: 34.71736
+    lng: 138.75316
+    image_url: "https://www.town.matsuzaki.shizuoka.jp/bousai_camera/images/kujira.jpg"
+    page_url: "https://www.town.matsuzaki.shizuoka.jp/bousai_camera/"
+    note: "image/jpeg 200、LM当日。座標GSI(松崎町雲見)"
+  - id: curated-still-muni-matsuzaki-ishibu
+    name: "石部棚田 防災カメラ"
+    operator: "松崎町"
+    category: scenic
+    prefecture: "22"
+    lat: 34.72380
+    lng: 138.76309
+    image_url: "https://www.town.matsuzaki.shizuoka.jp/bousai_camera/images/ishibu.jpg"
+    page_url: "https://www.town.matsuzaki.shizuoka.jp/bousai_camera/"
+    note: "image/jpeg 200、LM当日。座標GSI(松崎町石部)"
+  - id: curated-still-muni-shimizucho-honjoyama
+    name: "狩野川ライブカメラ（本城山）"
+    operator: "清水町（静岡県）"
+    category: river
+    prefecture: "22"
+    lat: 35.09903
+    lng: 138.90277
+    image_url: "https://www.town.shimizu.shizuoka.jp/livecam/02.jpg"
+    page_url: "https://www.town.shimizu.shizuoka.jp/anzen/anzen00084.html"
+    note: "清水町河川カメラ4台、60秒更新。image/jpeg 200、LM当日。掲載順 02=本城山,03=かわせみ,04=江川(徳倉排水機場),01=新川(伏見)。利用条件不明。座標GSI(概略)"
+  - id: curated-still-muni-shimizucho-kawasemi
+    name: "狩野川ライブカメラ（かわせみ）"
+    operator: "清水町（静岡県）"
+    category: river
+    prefecture: "22"
+    lat: 35.099
+    lng: 138.905
+    image_url: "https://www.town.shimizu.shizuoka.jp/livecam/03.jpg"
+    page_url: "https://www.town.shimizu.shizuoka.jp/anzen/anzen00084.html"
+    note: "image/jpeg 200、LM当日。座標概略"
+  - id: curated-still-muni-shimizucho-egawa
+    name: "江川ライブカメラ（大平・徳倉排水機場）"
+    operator: "清水町（静岡県）"
+    category: river
+    prefecture: "22"
+    lat: 35.08758
+    lng: 138.90082
+    image_url: "https://www.town.shimizu.shizuoka.jp/livecam/04.jpg"
+    page_url: "https://www.town.shimizu.shizuoka.jp/anzen/anzen00084.html"
+    note: "image/jpeg 200、LM当日。座標GSI(清水町徳倉)"
+  - id: curated-still-muni-shimizucho-shinkawa
+    name: "新川ライブカメラ（伏見）"
+    operator: "清水町（静岡県）"
+    category: river
+    prefecture: "22"
+    lat: 35.11169
+    lng: 138.89627
+    image_url: "https://www.town.shimizu.shizuoka.jp/livecam/01.jpg"
+    page_url: "https://www.town.shimizu.shizuoka.jp/anzen/anzen00084.html"
+    note: "image/jpeg 200、LM当日。座標GSI(清水町伏見)"
+  # ---- 鳥取 ----
+  - id: curated-still-muni-wakasa-hyonosen
+    name: "わかさ氷ノ山（若桜町）"
+    operator: "若桜町"
+    category: scenic
+    prefecture: "31"
+    lat: 35.337
+    lng: 134.478
+    image_url: "http://cam.town.wakasa.tottori.jp/-wvhttp-01-/image.cgi?v=jpg:640x360"
+    page_url: "http://cam.town.wakasa.tottori.jp/local/"
+    note: "Canon VBカメラ image.cgi、GETで image/jpeg 200。氷ノ山スキー場・ゲレンデ等を巡回するPTZ(映像スポット8種)。積雪確認向け。利用条件不明。座標はわかさ氷ノ山スキー場の既知座標・概略"
+  # ---- 岡山 ----
+  - id: curated-still-muni-niimi-cityhall
+    name: "新見市役所屋上（お天気カメラ）"
+    operator: "新見市"
+    category: scenic
+    prefecture: "33"
+    lat: 34.97704
+    lng: 133.47035
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl01/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "新見市WEBカメラ。image/jpeg 200、LM当日。R180/R182の道路カメラ(wl02/03)は既登録のため除外。利用条件不明。座標GSI(新見市役所)"
+  - id: curated-still-muni-niimi-takao-showabashi
+    name: "新見駅前（高尾昭和橋）"
+    operator: "新見市"
+    category: river
+    prefecture: "33"
+    lat: 34.975
+    lng: 133.468
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl04/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "河川カメラ。image/jpeg 200、LM当日。掲載順による対応(wl04=昭和橋, wl11=小川橋)は要確認。座標は新見駅付近概略"
+  - id: curated-still-muni-niimi-ogawabashi
+    name: "高梁川・熊谷川合流付近（小川橋）"
+    operator: "新見市"
+    category: river
+    prefecture: "33"
+    lat: 34.977
+    lng: 133.470
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl11/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "image/jpeg 200、LM当日。座標は市中心概略・要確認"
+  - id: curated-still-muni-niimi-edobashi
+    name: "高梁川・熊谷川合流付近（江道橋）"
+    operator: "新見市"
+    category: river
+    prefecture: "33"
+    lat: 34.977
+    lng: 133.470
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl05/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "image/jpeg 200、LM当日。座標概略・要確認"
+  - id: curated-still-muni-niimi-kanayabashi
+    name: "新見市役所付近（金谷橋）"
+    operator: "新見市"
+    category: river
+    prefecture: "33"
+    lat: 34.96972
+    lng: 133.45718
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl10/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "image/jpeg 200、LM当日。座標GSI(新見市金谷)"
+  - id: curated-still-muni-niimi-shodabashi
+    name: "高梁川・本郷川合流付近（正田橋）"
+    operator: "新見市"
+    category: river
+    prefecture: "33"
+    lat: 34.96458
+    lng: 133.47386
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl09/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "image/jpeg 200、LM当日。座標GSI(新見市正田橋ノ本)"
+  - id: curated-still-muni-niimi-kamihirosebashi
+    name: "新見南中学校付近（上広瀬橋）"
+    operator: "新見市"
+    category: river
+    prefecture: "33"
+    lat: 34.960
+    lng: 133.480
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl08/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "image/jpeg 200、LM当日。座標は新見南中付近概略(GSIの上熊谷は誤り)"
+  - id: curated-still-muni-niimi-shimonagaya
+    name: "下長屋遊歩道橋付近"
+    operator: "新見市"
+    category: river
+    prefecture: "33"
+    lat: 34.985
+    lng: 133.470
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl06/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "image/jpeg 200、LM当日。座標概略・要確認"
+  - id: curated-still-muni-niimi-shingo-anzanebashi
+    name: "神郷支局付近（安実橋）"
+    operator: "新見市"
+    category: river
+    prefecture: "33"
+    lat: 34.98208
+    lng: 133.38141
+    image_url: "http://camera.city.niimi.okayama.jp/gazo/wl07/image.jpg"
+    page_url: "http://camera.city.niimi.okayama.jp/index.html"
+    note: "image/jpeg 200、LM当日。座標GSI(新見市神郷下神代)"
+  # ---- 高知 ----
+  - id: curated-still-muni-yusuhara-karst
+    name: "四国カルスト（梼原町）"
+    operator: "梼原町"
+    category: scenic
+    prefecture: "39"
+    lat: 33.480
+    lng: 132.930
+    image_url: "http://www.town.yusuhara.kochi.jp/karstlive/GetPhotoImg.php?id=1&size=L"
+    page_url: "http://www.town.yusuhara.kochi.jp/karstlive/LiveCam.php"
+    note: "PHP経由だが固定URLで image/jpeg 200(GET)。積雪・霧氷の観光名所。利用条件不明。座標は四国カルスト姫鶴平付近の既知座標・概略"
+  - id: curated-still-muni-niyodogawa-honcho
+    name: "仁淀川町本庁舎前"
+    operator: "仁淀川町"
+    category: other
+    prefecture: "39"
+    lat: 33.57529
+    lng: 133.17101
+    image_url: "https://www.town.niyodogawa.lg.jp/hp/webcamera/image_honcho01.jpg"
+    page_url: "https://www.town.niyodogawa.lg.jp/live/"
+    note: "10分更新。image/jpeg 200、LM当日。観光サイト側カメラ(niyodogawa-cam.sakura.ne.jp)は無断転載禁止明記のため除外。利用条件不明。座標GSI(仁淀川町役場)"
+  - id: curated-still-muni-niyodogawa-shisho
+    name: "仁淀川町仁淀総合支所前"
+    operator: "仁淀川町"
+    category: other
+    prefecture: "39"
+    lat: 33.585
+    lng: 133.270
+    image_url: "https://www.town.niyodogawa.lg.jp/hp/webcamera/image_niyodoshisho01.jpg"
+    page_url: "https://www.town.niyodogawa.lg.jp/live/"
+    note: "10分更新。image/jpeg 200、LM当日。座標は旧仁淀村中心(森)の既知座標・概略"
+  # ---- 熊本 ----
+  - id: curated-still-muni-minamiaso-asobo
+    name: "あそ望の郷くぎの（南阿蘇村）"
+    operator: "南阿蘇村"
+    category: scenic
+    prefecture: "43"
+    lat: 32.81876
+    lng: 131.04148
+    image_url: "http://minamiaso.miemasu.net/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.vill.minamiaso.lg.jp/kiji003987/index.html"
+    note: "Panasonic WV-S6530(miemasu.net DDNS)。SnapshotJPEG が image/jpeg 200。阿蘇五岳を望む道の駅。立野/栃の木交差点(高森町)は既登録。利用条件不明。座標GSI(道の駅あそ望の郷くぎの)"
+  - id: curated-still-muni-uto-nagabeta
+    name: "長部田海床路（住吉海岸公園）"
+    operator: "宇土市"
+    category: coast
+    prefecture: "43"
+    lat: 32.6985
+    lng: 130.6165
+    image_url: "https://www.city.uto.lg.jp/livecam_n/images/st1.jpg"
+    page_url: "https://www.city.uto.lg.jp/livecamera_n/view/1.html"
+    note: "約5分更新。image/jpeg 200、LM当日。潮位で電柱が海に沈む観光名所。利用条件不明。座標は長部田海床路の既知座標(GSIは千葉県を返した)"
+  # ---- 沖縄 ----
+  - id: curated-still-muni-okinawa-hijagawa
+    name: "比謝川 水位監視カメラ（沖縄市）"
+    operator: "沖縄市"
+    category: river
+    prefecture: "47"
+    lat: 26.352
+    lng: 127.780
+    image_url: "https://www.city.okinawa.okinawa.jp/suiikanshi/hijacam/hijacam.jpg"
+    page_url: "https://www.city.okinawa.okinawa.jp/k058-003/anshin/bousai/saigaijouhou/22230.html"
+    note: "image/jpeg 200、LM当日。利用条件不明。座標は比謝川(沖縄市北端)の概略・要確認"
+  - id: curated-still-muni-okinawa-awase1
+    name: "泡瀬1 水位監視カメラ（沖縄市）"
+    operator: "沖縄市"
+    category: river
+    prefecture: "47"
+    lat: 26.32129
+    lng: 127.83741
+    image_url: "https://www.city.okinawa.okinawa.jp/suiikanshi/awasecam01/TRIFORA.jpg"
+    page_url: "https://www.city.okinawa.okinawa.jp/k058-003/anshin/bousai/saigaijouhou/22230.html"
+    note: "image/jpeg 200、LM当日。座標GSI(沖縄市泡瀬、概略)"
+  - id: curated-still-muni-okinawa-awase2
+    name: "泡瀬2 水位監視カメラ（沖縄市）"
+    operator: "沖縄市"
+    category: river
+    prefecture: "47"
+    lat: 26.32129
+    lng: 127.83741
+    image_url: "https://www.city.okinawa.okinawa.jp/suiikanshi/awasecam02/TRIFORA.jpg"
+    page_url: "https://www.city.okinawa.okinawa.jp/k058-003/anshin/bousai/saigaijouhou/22230.html"
+    note: "image/jpeg 200、LM当日。座標概略"
+  - id: curated-still-muni-kitanakagusuku
+    name: "北中城村 防災カメラ"
+    operator: "北中城村"
+    category: other
+    prefecture: "47"
+    lat: 26.30074
+    lng: 127.79289
+    image_url: "https://www.vill.kitanakagusuku.lg.jp/site/htdocs/camera/camera.jpg"
+    page_url: "http://www.vill.kitanakagusuku.lg.jp/sonsei/bousai/659.html"
+    note: "image/jpeg 200、LM当日。撮影対象の記載未確認。利用条件不明。座標GSI(北中城村役場、概略)"
+youtube:
+  - id: curated-muni-happo-koirigawa
+    name: "小入川ライブカメラ（八峰町）"
+    operator: "八峰町"
+    video_id: "BBvzrh5dQFI"
+    category: river
+    prefecture: "05"
+    lat: 40.36
+    lng: 140.02
+    note: "oEmbed 200(タイトル『秋田県八峰町「小入川」ライブカメラ』/ 八峰町_カメラ1)。YouTube側でcurl/WebFetchがブロックされライブ中の確認は未了(町ページで常時配信として案内)。座標は小入川河口(八森)の概略"
+  - id: curated-muni-happo-masegawa
+    name: "真瀬川ライブカメラ（八峰町）"
+    operator: "八峰町"
+    video_id: "5OPZjrk868A"
+    category: river
+    prefecture: "05"
+    lat: 40.30
+    lng: 140.03
+    note: "oEmbed 200(八峰町_カメラ2)。ライブ中確認は未了。座標概略(真瀬)"
+  - id: curated-muni-kawachinagano-iwawaki
+    name: "河内長野市役所から岩湧山方面"
+    operator: "河内長野市"
+    video_id: "3tm9GiVT9FM"
+    category: scenic
+    prefecture: "27"
+    lat: 34.45789
+    lng: 135.56424
+    note: "oEmbed 200(河内長野市役所チャンネル)。同市の『くろまろの郷 駐車場入口』(6a8XvKfhc4Y)は既登録。ライブ中確認は未了。座標GSI(河内長野市役所)"
+  - id: curated-muni-kawachinagano-kuromaro-dogpark
+    name: "道の駅奥河内くろまろの郷（ドッグパーク）"
+    operator: "河内長野市"
+    video_id: "QM8nQo5OSqY"
+    category: other
+    prefecture: "27"
+    lat: 34.4385
+    lng: 135.5745
+    note: "oEmbed 200。ライブ中確認は未了。座標は道の駅(高向)の既知座標・概略"
+  - id: curated-muni-kawachinagano-kuromaro-bazaar
+    name: "道の駅奥河内くろまろの郷（バザール広場）"
+    operator: "河内長野市"
+    video_id: "yraLdgyWAzM"
+    category: other
+    prefecture: "27"
+    lat: 34.4385
+    lng: 135.5745
+    note: "oEmbed 200。ライブ中確認は未了。座標概略"
+  - id: curated-muni-kamijima-sekizenzan
+    name: "岩城島 積善山ライブカメラ（上島町）"
+    operator: "上島町"
+    video_id: "tYzYCzd8rWI"
+    category: scenic
+    prefecture: "38"
+    lat: 34.25663
+    lng: 133.14733
+    note: "oEmbed 200(チャンネル『上島町岩城積善山ライブカメラ』)。三千本桜の山頂展望。ライブ中確認は未了。座標GSI(積善山)"
+  - id: curated-muni-maibara-ibuki-3gome
+    name: "伊吹山3合目（米原市）"
+    operator: "米原市"
+    video_id: "KOaB6A5eWBo"
+    category: scenic
+    prefecture: "25"
+    lat: 35.400
+    lng: 136.395
+    note: "oEmbed 200(米原市役所YouTubeチャンネル)。ライブ中確認は未了。座標は伊吹山3合目の既知座標・概略"
+  - id: curated-muni-maibara-ibuki-5gome
+    name: "伊吹山5合目（米原市）"
+    operator: "米原市"
+    video_id: "n996gl1UU6U"
+    category: scenic
+    prefecture: "25"
+    lat: 35.410
+    lng: 136.400
+    note: "oEmbed 200。ライブ中確認は未了。座標概略"
+  - id: curated-muni-maibara-greenpark-santo
+    name: "グリーンパーク山東（米原市）"
+    operator: "米原市"
+    video_id: "II18TejgjMw"
+    category: scenic
+    prefecture: "25"
+    lat: 35.365
+    lng: 136.315
+    note: "oEmbed 200。三島池から伊吹山。ライブ中確認は未了。座標概略"
+  - id: curated-muni-komatsu-fire-hq
+    name: "小松市消防本部 防災カメラ"
+    operator: "小松市"
+    video_id: "XHXTFL4jI5c"
+    category: other
+    prefecture: "17"
+    lat: 36.403
+    lng: 136.448
+    note: "oEmbed 200(komatsucity小松市役所)。ライブ中確認は未了。座標は小松市消防本部(園町)の概略"
+  - id: curated-muni-kamoenai
+    name: "神恵内村ライブカメラ"
+    operator: "神恵内村（地域おこし協力隊チャンネル）"
+    video_id: "nDxVuGyXQhc"
+    category: coast
+    prefecture: "01"
+    lat: 43.140
+    lng: 140.437
+    note: "oEmbed 200(チャンネル『カモエナイマニア ー神恵内村地域おこし協力隊よりー』、村公式ページからリンク)。ライブ中確認は未了。座標は神恵内村役場の概略"
+  - id: curated-muni-oshino-nijumagari
+    name: "忍野村 二十曲峠展望テラス（4K）"
+    operator: "忍野村"
+    video_id: "2RBil3H-fAA"
+    category: scenic
+    prefecture: "19"
+    lat: 35.478
+    lng: 138.878
+    note: "oEmbed 200(忍野村公式、タイトル【4K LIVE】)。ライブ中確認は未了。座標は二十曲峠の既知座標・概略"
+  - id: curated-muni-omachi-kizakiko
+    name: "木崎湖ライブ（大町市）"
+    operator: "大町市"
+    video_id: "zFCpoFBAcXg"
+    category: scenic
+    prefecture: "20"
+    lat: 36.555
+    lng: 137.835
+    note: "oEmbed 200(長野県大町市)。ライブ中確認は未了。座標は木崎湖の既知座標・概略"
+  - id: curated-muni-funagata-nagaobashi
+    name: "舟形町 長尾橋"
+    operator: "舟形町"
+    video_id: "Dq-S5GhlqGk"
+    category: river
+    prefecture: "06"
+    lat: 38.690
+    lng: 140.320
+    note: "oEmbed 200(舟長尾ライブ景観)。舟形町多目的ライブカメラ9本中、oEmbed 200は本件と若あゆ温泉の2本のみ(他7本は401=非公開/終了)。ライブ中確認は未了。座標は最上小国川長尾橋付近の概略"
+  - id: curated-muni-funagata-wakaayu
+    name: "舟形若あゆ温泉"
+    operator: "舟形町"
+    video_id: "_9eJ7jABipY"
+    category: scenic
+    prefecture: "06"
+    lat: 38.700
+    lng: 140.330
+    note: "oEmbed 200(舟若あゆライブ景観)。ライブ中確認は未了。座標概略"
+skipped:
+  - name: "横浜町ライブカメラ（自然苑・漁協・三保野公園）"
+    url: "http://www.live-yokohama.jp/"
+    reason: "SnapshotJPEGは取得可だが、利用上の注意に『無断で複製・転用することはできません』と明記"
+  - name: "南部町河川監視ライブカメラ（青森）"
+    url: "http://live-nanbu.aomori.jp/"
+    reason: "著作権表記に『無断で複製・転用することはできません』と明記"
+  - name: "白川郷合掌造り集落ライブ（荻町城跡展望台）"
+    url: "https://www.vill.shirakawa.lg.jp/livecam/"
+    reason: "gazo.jpgはimage/jpeg 200だが『ライブ画像データへの直接リンクはご遠慮ください』と明記"
+  - name: "京丹後市 自然景観ライブカメラ（8地点）"
+    url: "https://www.city.kyotango.lg.jp/top/soshiki/somu/digital/13/1744.html"
+    reason: "『無断リンクや、映像の転載および加工は禁止』と明記"
+  - name: "仁淀川町観光ライブカメラ（中津・桜・鳥形山・安居）"
+    url: "https://www.town.niyodogawa.lg.jp/kanko/camera.php"
+    reason: "無断転載を禁じますと明記"
+  - name: "佐井村 仏ヶ浦ライブ"
+    url: "https://www.vill.sai.lg.jp/about-saimura/hotokegaura-scenic-site/"
+    reason: "無断転載・使用はご遠慮くださいと明記"
+  - name: "名寄市ライブカメラ（4台）"
+    url: "http://www.city.nayoro.lg.jp/section/soumu/prkeql000000ha9u.html"
+    reason: "Panasonic viewer/live(JS描画)。cgi-bin/camera は401、SnapshotJPEGは404で静止画URL取得不能"
+  - name: "大鰐町ライブカメラ"
+    url: "http://www.town.owani.lg.jp/aboutsite/livecamera.html"
+    reason: "同上(camera.town.owani.lg.jp は401/404)"
+  - name: "十和田湖休屋地区ライブカメラ"
+    url: "https://www.city.towada.lg.jp/kanko/spot/livecamera.html"
+    reason: "netvolante 8080 viewerのみ、静止画URL取得不能(401/404)"
+  - name: "上島町 豊島ライブカメラ（船の見える丘）"
+    url: "http://toyoshima.town.kamijima.ehime.jp/viewer/live/ja/live.html"
+    reason: "viewer/live(JS)。静止画URL取得不能(401/404)"
+  - name: "上ノ国町ライブカメラ"
+    url: "https://www.town.kaminokuni.lg.jp/livecamera/index.html"
+    reason: "ページ内に画像/動画URLがなく(JS/外部読み込み)取得不能"
+  - name: "釧路市 防災カメラ・ライブカメラ"
+    url: "https://www.city.kushiro.lg.jp/kurashi/bousai/1003667.html"
+    reason: "ページが404"
+  - name: "中泊町防災カメラ（小泊漁港・下前漁港）"
+    url: "https://www.town.nakadomari.lg.jp/soshikikarasagasu/somuka/gyomuannai/1/2/2/829.html"
+    reason: "ページには静止写真(png)のみでライブ画像URLなし"
+  - name: "内灘町ライブカメラ（6地点）"
+    url: "http://www6.town.uchinada.lg.jp/webapps/www/camera_system/index.jsp"
+    reason: "On_Air.jpgは閲覧者が選択したカメラを切替表示する単一画像で、地点固定の画像URLが無い(サムネイルは2014年の静止画)"
+  - name: "由利本荘市ライブカメラ"
+    url: "http://videodlv.city.yurihonjo.akita.jp/map_pc.php"
+    reason: "Windows Media動画配信のみ、静止画URLなし"
+  - name: "只見町ライブカメラ"
+    url: "http://livecamera.town.tadami.lg.jp/"
+    reason: "bou4-6.jpg はLast-Modified 2022年の静止画(現在画像はJS/別経路)、要再調査"
+  - name: "北相木村ライブカメラ（役場前・みどり前・加和志湖・長者の森）"
+    url: "http://www.vill.kitaaiki.nagano.jp/live-camera/live-camera.html"
+    reason: "ページ上の画像は『イメージ』(2023年静止画)でクリック先の実カメラURLは未取得、要再調査"
+  - name: "高山村（長野）ライブカメラ（役場・高井橋・山田牧場）"
+    url: "https://www.vill.takayama.nagano.jp/live-camera/live-camera.html"
+    reason: "同上(イメージ画像のみ、実カメラURL未取得)"
+  - name: "美馬市 うだつの町並みライブカメラ"
+    url: "https://www.city.mima.lg.jp/kankou/livecamera/movie/0006.html"
+    reason: "静止画は2022年のサムネイル、動画は別配信で静止画URLなし"
+  - name: "南相馬市 北泉海岸ライブカメラ"
+    url: "https://www.city.minamisoma.lg.jp/tourist/tourist_attractions/5761.html"
+    reason: "操作型ビューワー(外部)で静止画URLなし"
+  - name: "大町市 鷹狩山ライブカメラ"
+    url: "https://www.city.omachi.nagano.jp/00003000/00002400/takagari_live.html"
+    reason: "画像URLがタイムスタンプ付き(storage.googleapis)で固定URLなし。木崎湖YouTubeは採用"
+  - name: "裾野市 富士山ライブカメラ（saijiki）"
+    url: "http://www.city.susono.shizuoka.jp/saijiki/"
+    reason: "画像URLが日時付き(YYYYMMDDHH_m.jpg)で固定URLなし(規則的URLとして都度解決なら可)"
+  - name: "見附市 国道8号今町五丁目・県道8号本町四交差点"
+    url: "https://www.city.mitsuke.niigata.jp/soshiki/2/2478.html"
+    reason: "NCT(CATV)情報提供カメラで運営者が市でない"
+  - name: "大紀町ライブカメラ"
+    url: "https://www.town.taiki.mie.jp/soshiki/somukikaku/gyomu/anzen_anshin/1570.html"
+    reason: "画像は webcam.mctv.jp(三重CATV)配信で運営者が町でない可能性、要確認"
+  - name: "関市気象河川情報"
+    url: "http://www3.city.seki.gifu.jp/Home/Index"
+    reason: "slev-*.jpg は水位表示の小画像でカメラ映像ではない"
+  - name: "高森町 立野交差点・栃の木交差点"
+    url: "https://www.town.kumamoto-takamori.lg.jp/cam_tateno/TRIFORA.jpg"
+    reason: "既登録(muni-takamori-tateno / muni-takamori-tochinoki)"
+  - name: "小清水町ライブカメラ（YouTube 13本）"
+    url: "https://www.town.koshimizu.hokkaido.jp/hotnews/detail/00009870.html"
+    reason: "既登録(小清水町)"
+  - name: "大田原市 河川監視カメラ（YouTube 8本）"
+    url: "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/"
+    reason: "既登録(大田原市 8件)"
+  - name: "串本町 馬坂防災カメラ"
+    url: "https://www.town.kushimoto.wakayama.jp/bousai/livecamera.html"
+    reason: "既登録"
+  - name: "新見市 国道180号千屋温泉入口・国道182号九の坂トンネル"
+    url: "http://camera.city.niimi.okayama.jp/index.html"
+    reason: "既登録"
+  - name: "河内長野市 くろまろの郷 駐車場入口"
+    url: "https://www.city.kawachinagano.lg.jp/soshiki/16/82252.html"
+    reason: "既登録(6a8XvKfhc4Y)"
+  - name: "ニセコ町ライブカメラ"
+    url: "https://www.town.niseko.lg.jp/livecam"
+    reason: "リンク集のみ(ニセコ関連は既登録3件)"
+  - name: "留寿都村周辺ライブカメラ"
+    url: "https://www.vill.rusutsu.lg.jp/kanko/detail/00002858.html"
+    reason: "リゾート(rusutsu.com)へのリンクのみ"
+  - name: "阿賀野市 瓢湖"
+    url: "https://www.city.agano.niigata.jp/soshiki/koenkanrijimusho/2/2845.html"
+    reason: "YouTubeは令和2年の録画で常時ライブではない"
+  - name: "鶴田町"
+    url: "http://www.town.tsuruta.lg.jp/"
+    reason: "YouTubeはPR動画でカメラではない"
+  - name: "舟形町 多目的ライブカメラ（他7本）"
+    url: "http://www.town.funagata.yamagata.jp/live/"
+    reason: "oEmbed 401(非公開/配信終了)"
+  - name: "辰野NOW（辰野町）/ 喬木村観光カメラ / 日南町 / ときがわ町 / 蓬田村 / 宮田村土石流カメラ / 三条市以外の新潟県内市町村(魚沼・十日町・上越等)"
+    url: "-"
+    reason: "JS描画・外部システム(新潟LIVEカメラ等)へのリンクのみで静止画URL未取得、または県システム経由で既登録扱い。要再調査"
+  - name: "沖の島ライブカメラ（宿毛市）/ 黒潮町 / 知名町 / 珠洲市 / 佐渡市 / 妙高市 / 玄海町 棚田 / 九度山町 / 猪苗代町 磐梯山 / 東伊豆町 津波カメラ / 大子町 / 早川町以外の山梨 / 越前町 / 奈義町 / 印南町 / 海南市 / 湖西市 / 那須町 峠の茶屋 / 茂木町 / 富加町 / 勝央町 / 津別峠 / 初山別村 / 比布町以外の道内町村"
+    url: "-"
+    reason: "cametan経由で公式ページは特定したが、画像がJS/iframe/外部ビューワー/静止サムネイルのみで固定画像URLを取得できず(今回未着手・要再調査)"

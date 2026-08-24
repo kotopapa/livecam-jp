@@ -1,0 +1,542 @@
+# round2_netcam: 千葉県調査で判明した取得パターン(動的DNS直公開NWカメラ / WNIホスティング / タクシー協会・商店街 / 店舗設置道路カメラ)の全国横展開
+# 調査日: 2026-08-24。全候補 curl で Content-Type image/* または oEmbed 200 を確認済み。既存台帳(data/cameras.json, curated_*.yaml)と name/URL/video_id で重複なしを確認
+still:
+  # ---- パターン1: 動的DNS直公開 (Canon/Panasonic) ----
+  - id: curated-still-coast-hioki-fukiagehama
+    name: "吹上浜（江口浜）ライブカメラ"
+    operator: "日置市"
+    category: coast
+    prefecture: "46"
+    lat: 31.6452
+    lng: 130.3307
+    image_url: "http://hioki-live2.aa0.netvolante.jp/-wvhttp-01-/image.cgi"
+    page_url: "https://www.city.hioki.kagoshima.jp/kouho/home/live-camera.html"
+    note: "Canon WebView。image.cgi=200 image/jpeg（GetOneShotは非対応）。市公式ページから直リンク（2025-11-25にURL変更）。座標は視野に含まれる江口蓬莱館/東市来町伊作田(Nominatim)近傍の概略、要確認。利用条件記載なし→license=unknown"
+  - id: curated-still-scenic-sakata-sansan-shonai
+    name: "眺海の森さんさん 庄内平野・最上川"
+    operator: "酒田市"
+    category: scenic
+    prefecture: "06"
+    lat: 38.8643
+    lng: 139.9762
+    image_url: "https://www3.city.sakata.lg.jp/camera/sansangazo.jpg"
+    page_url: "https://www3.city.sakata.lg.jp/camera/index.html"
+    note: "市公式LiveCameraページ。10秒更新。curl 200 image/jpeg 44KB。座標は酒田市土渕(Nominatim)、眺海の森は土渕字大平で概略。同ページの鳥海山荘カメラ(118.21.142.104:60001/60002 SnapshotJPEG)は接続不可"
+  - id: curated-still-scenic-sakata-sansan-chokai
+    name: "眺海の森さんさん 鳥海山"
+    operator: "酒田市"
+    category: scenic
+    prefecture: "06"
+    lat: 38.8643
+    lng: 139.9762
+    image_url: "https://www3.city.sakata.lg.jp/camera/sansangazo2.jpg"
+    page_url: "https://www3.city.sakata.lg.jp/camera/index.html"
+    note: "同上。curl 200 image/jpeg 45KB"
+  - id: curated-still-scenic-hakodate-goryokaku-uramon
+    name: "五稜郭公園（裏門橋側）"
+    operator: "函館市住宅都市施設公社"
+    category: scenic
+    prefecture: "01"
+    lat: 41.7969
+    lng: 140.7572
+    image_url: "http://goryokaku.aa0.netvolante.jp/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.hakodate-jts-kosya.jp/green/kaika_kouyou/"
+    note: "Panasonic BB-SW175A。公社の開花・紅葉ページから直リンク確認。curl 200 image/jpeg 215KB。座標は五稜郭公園(Nominatim)中心、裏門橋は北東側で要微調整。利用条件記載なし"
+  - id: curated-still-scenic-misato-lavender
+    name: "美郷町ラベンダー園"
+    operator: "美郷町"
+    category: scenic
+    prefecture: "05"
+    lat: 39.4505
+    lng: 140.5963
+    image_url: "http://sekka.aa1.netvolante.jp/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.town.misato.akita.jp/midokoro/3882"
+    note: "Panasonic。町公式ページから直リンク。curl 200 image/jpeg 29KB。冬期休止（町サイト注記）。座標は美郷町千屋(Nominatim)、園は千屋字大台野1-4で要微調整"
+  - id: curated-still-port-otaru-marina
+    name: "小樽港マリーナ"
+    operator: "マリンウェーブ小樽（株）"
+    category: port
+    prefecture: "01"
+    lat: 43.1851
+    lng: 141.0246
+    image_url: "http://mw-otaru.miemasu.net/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.mw-otaru.jp/live/"
+    note: "みえますねっと(Panasonic)。公式liveページから直リンク。curl 200 image/jpeg 30KB。座標Nominatim(小樽港マリーナ)"
+  - id: curated-still-scenic-tokyo-wildbirdpark-shioiri
+    name: "東京港野鳥公園 潮入りの池"
+    operator: "東京港野鳥公園（東京港埠頭株式会社）"
+    category: scenic
+    prefecture: "13"
+    lat: 35.5815
+    lng: 139.7671
+    image_url: "http://wildbirdpark.st.wakwak.ne.jp:8001/-wvhttp-01-/image.cgi"
+    page_url: "http://www.wildbirdpark.jp/livecam.html"
+    note: "Canon WebView(viewer/live)。公園公式ページからリンク。image.cgi=200 image/jpeg。座標Nominatim。利用条件記載なし"
+  - id: curated-still-scenic-nagasaki-mizubenomori
+    name: "長崎水辺の森公園"
+    operator: "長崎水辺の森公園（長崎県）"
+    category: scenic
+    prefecture: "42"
+    lat: 32.7408
+    lng: 129.8688
+    image_url: "http://153.156.94.48/-wvhttp-01-/image.cgi"
+    page_url: "http://www.mizubenomori.jp/live.html"
+    note: "Canon WebView。公園公式live.htmlから http://153.156.94.48/viewer/live/ へリンク。image.cgi=200 image/jpeg 41KB。IP直指定のため変更リスクあり。座標Nominatim。指定管理者名は要確認"
+  - id: curated-still-scenic-mima-udatsu-1
+    name: "うだつの町並み①（美馬市脇町）"
+    operator: "美馬市"
+    category: scenic
+    prefecture: "36"
+    lat: 34.0683
+    lng: 134.1452
+    image_url: "http://cam6.city.mima.lg.jp/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.city.mima.lg.jp/kanko/livecamera/udatsu/"
+    note: "Panasonic。にし阿波観光圏/美馬市公式ページから cam6.city.mima.lg.jp/live/ へリンク。curl 200 image/jpeg。座標Nominatim(うだつ)。利用条件記載なし→unknown"
+  - id: curated-still-scenic-mima-udatsu-2
+    name: "うだつの町並み②（美馬市脇町）"
+    operator: "美馬市"
+    category: scenic
+    prefecture: "36"
+    lat: 34.0683
+    lng: 134.1452
+    image_url: "http://cam7.city.mima.lg.jp/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.city.mima.lg.jp/kanko/livecamera/udatsu/"
+    note: "同上 cam7。curl 200 image/jpeg"
+  # ---- パターン1'/4: 店舗設置 ----
+  - id: curated-still-road-horokanai-mitsuhashi
+    name: "幌加内町 国道275号・道道126号（三ツ橋建設 出光幌加内SS）"
+    operator: "三ツ橋建設（三ツ橋産業グループ）"
+    category: road
+    prefecture: "01"
+    lat: 44.0122
+    lng: 142.1521
+    image_url: "https://www.mlcmitsuhashi.co.jp/kensetsu/camera/horocamera.jpg"
+    page_url: "https://kensetsu.mlcmitsuhashi.co.jp/"
+    note: "自社サイトのカメラページ(http→httpsリダイレクト)。curl 200 image/jpeg 29KB。確認時Last-Modifiedが約7時間前で更新間隔要確認(10分更新とされる)。座標は幌加内市街(Nominatim)概略"
+  - id: curated-still-other-kurayoshi-minatoya-taishomachi
+    name: "湊屋石油 大正町SS 洗車待ち状況"
+    operator: "湊屋石油株式会社"
+    category: other
+    prefecture: "31"
+    lat: 35.4346
+    lng: 133.8230
+    image_url: "http://minatoya-s.miemasu.net:9906/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://pal-minatoya.jp/pages/16/"
+    note: "みえますねっと。公式サイトから直リンク確認。curl 200 image/jpeg。座標は倉吉市大正町(Nominatim)、住所大正町2-80"
+  # ---- パターン2: WNIホスティング ----
+  - id: curated-still-scenic-minakami-sarusho
+    name: "泊まれる学校さる小（赤谷湖・三国峠方面）"
+    operator: "一般社団法人猿ヶ京小学校スポーツアカデミー（泊まれる学校さる小）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.7308
+    lng: 138.9004
+    image_url: "https://webcam.wni.co.jp/ARY64417/00.jpg"
+    page_url: "https://www.sarusho.com/"
+    note: "公式サイト・みなかみ町観光協会一覧から webcam.wni.co.jp/ARY64417 へリンク。00.jpg=200 image/jpeg（Last-Modified当日）。座標はみなかみ町相俣(Nominatim)概略"
+  - id: curated-still-other-matsumoto-airport-wni
+    name: "信州まつもと空港 お天気カメラ"
+    operator: "松本空港ターミナルビル株式会社"
+    category: other
+    prefecture: "20"
+    lat: 36.1664
+    lng: 137.9227
+    image_url: "https://webcam.wni.co.jp/GWT60730/00.jpg"
+    page_url: "http://www.matsumoto-airport.co.jp/"
+    note: "公式サイト「お天気カメラ」から webcam.wni.co.jp/GWT60730 へリンク。00.jpg=200 image/jpeg。座標Nominatim"
+  - id: curated-still-other-kagoshima-airport-apron-wni
+    name: "鹿児島空港 駐機場（空港ビル）"
+    operator: "鹿児島空港ビルディング株式会社"
+    category: other
+    prefecture: "46"
+    lat: 31.8032
+    lng: 130.7172
+    image_url: "https://webcam.wni.co.jp/QON00108/00.jpg"
+    page_url: "https://www.koj-ab.co.jp/relax-and-enjoy/livecam.html"
+    note: "公式livecam.htmlから webcam.wni.co.jp/QON00108 へリンク確認。00.jpg=200 image/jpeg。既存「鹿児島空港ライブカメラ」はMBC/KYT系で別ソース(video_id/URLの重複なし)"
+  - id: curated-still-scenic-minakami-yado-tamura
+    name: "照葉峡・清流の宿たむら（尾瀬笠ヶ岳方面）"
+    operator: "清流の宿 たむら"
+    category: scenic
+    prefecture: "10"
+    lat: 36.8572
+    lng: 139.0655
+    image_url: "https://www.yado-tamura.com/live-img/live.jpg"
+    page_url: "https://www.yado-tamura.com/live"
+    note: "宿公式liveページ(Panasonic KX-HCM130、4秒更新)。curl 200 image/jpeg Last-Modified当日。座標はみなかみ町藤原(Nominatim)概略、住所藤原6273-2"
+  # ---- パターン3: タクシー乗り場 ----
+  - id: curated-still-other-tokyo-station-yaesu-taxi
+    name: "東京駅八重洲口 タクシー乗り場"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.6800
+    lng: 139.7682
+    image_url: "https://svc01.p-counter.jp/doc-server-taxi/tokyo_taxi/data/cam_a.jpg"
+    page_url: "https://www.tokyo-tc.or.jp/driver/stand/livecamera/"
+    note: "約30秒更新。curl 200 image/jpeg Last-Modified当日。同ディレクトリ data/park.jpg(待機所)もあり。座標Nominatim。乗務員向け情報だが公開ページ"
+  - id: curated-still-other-haneda-taxi-pool1-south
+    name: "羽田空港 第1タクシー待機所（南側）"
+    operator: "公益財団法人東京タクシーセンター（羽田空港TPシステム）"
+    category: other
+    prefecture: "13"
+    lat: 35.5491
+    lng: 139.7845
+    image_url: "https://ttc.taxi-inf.jp/Real001.jpg"
+    page_url: "https://ttc.taxi-inf.jp/index.php"
+    note: "1分更新。curl 200 image/jpeg Last-Modified当日。同ページ Real002.jpg=東側。座標は羽田空港第1ターミナル(Nominatim)概略、待機所実位置は要確認"
+  - id: curated-still-other-haneda-t3-taxi-stand
+    name: "羽田空港 第3ターミナル タクシー乗り場"
+    operator: "公益財団法人東京タクシーセンター（羽田空港TPシステム）"
+    category: other
+    prefecture: "13"
+    lat: 35.5439
+    lng: 139.7687
+    image_url: "https://ttc.taxi-inf.jp/Real106.jpg"
+    page_url: "https://ttc.taxi-inf.jp/No5TaxiStand.php"
+    note: "curl 200 image/jpeg。Real107.jpgも同乗り場別角度。第4乗場は Real104_line.jpg / Real105_line.jpg (No4TaxiStand.php)。座標Nominatim(第3ターミナル)"
+  - id: curated-still-other-omiya-station-east-taxi
+    name: "大宮駅東口 タクシープール"
+    operator: "大宮TPシステム（大宮駅東口タクシー乗り場運営）"
+    category: other
+    prefecture: "11"
+    lat: 35.9068
+    lng: 139.6251
+    image_url: "http://omy.taxi-inf.jp/Real01.jpg"
+    page_url: "http://omy.taxi-inf.jp/index.php"
+    note: "1分更新。Real01.jpg=200 image/jpeg Last-Modified当日（Real02.jpgは2025-04で停止）。運営主体の正式名称(タクシー協会支部等)は要確認。座標Nominatim"
+  # ---- 追加発見: 石見ケーブルビジョン自社カメラ(いわみる) ----
+  - id: curated-still-scenic-hamada-cityhall-roof
+    name: "浜田市役所屋上（殿町）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: scenic
+    prefecture: "32"
+    lat: 34.8992
+    lng: 132.0799
+    image_url: "https://www.iwamiru.jp/camera2/hamadashiyakusho.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "いわみる情報カメラ。自社(石見CV)設置分のみ採用、浜田市・道路カメラ由来分は除外。curl 200 image/jpeg Last-Modified当日。転載禁止表記なし、license=unknown。座標Nominatim"
+  - id: curated-still-road-hamada-bypass-higashi
+    name: "浜田バイパス東口（下府町）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: road
+    prefecture: "32"
+    lat: 34.9204
+    lng: 132.1117
+    image_url: "https://www.iwamiru.jp/camera2/bypass-higashi.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "curl 200 image/jpeg当日。座標は下府町(Nominatim)概略"
+  - id: curated-still-road-hamada-bypass-nishi
+    name: "浜田バイパス西口（笠柄町）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: road
+    prefecture: "32"
+    lat: 34.8813
+    lng: 132.0638
+    image_url: "https://www.iwamiru.jp/camera2/bypass-nishi.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "同上（ファイル名は一覧ページ記載。個別curl未実施→採用前に確認）。座標笠柄町概略"
+  - id: curated-still-road-hamada-r9-atsuta
+    name: "国道9号 熱田"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: road
+    prefecture: "32"
+    lat: 34.8732
+    lng: 132.0633
+    image_url: "https://www.iwamiru.jp/camera2/route9-atsuta.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "curl 200 image/jpeg当日。座標熱田町概略"
+  - id: curated-still-road-hamada-r9-sufu
+    name: "国道9号 周布町"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: road
+    prefecture: "32"
+    lat: 34.8610
+    lng: 132.0255
+    image_url: "https://www.iwamiru.jp/camera2/route9-sufu.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "一覧記載、個別curl未実施。座標周布町概略"
+  - id: curated-still-river-hamada-shimofugawa-kamikou
+    name: "下府川（上府町）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: river
+    prefecture: "32"
+    lat: 34.9213
+    lng: 132.1275
+    image_url: "https://www.iwamiru.jp/camera2/kamikou.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "curl 200 image/jpeg当日。座標上府町概略"
+  - id: curated-still-river-hamada-sufugawa-mikawa
+    name: "周布川（美川）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: river
+    prefecture: "32"
+    lat: 34.8526
+    lng: 132.0497
+    image_url: "https://www.iwamiru.jp/camera2/sufugawa-mikawa.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "curl 200 image/jpeg当日。座標は美川地区概略(要確認)"
+  - id: curated-still-road-hamada-kanagi-shimokurahara
+    name: "金城町下来原"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: road
+    prefecture: "32"
+    lat: 34.8665
+    lng: 132.1810
+    image_url: "https://www.iwamiru.jp/camera2/kanagi-road.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "一覧記載、個別curl未実施。座標Nominatim"
+  - id: curated-still-road-hamada-yasaka-kizuka
+    name: "弥栄町木都賀"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: road
+    prefecture: "32"
+    lat: 34.7501
+    lng: 132.0627
+    image_url: "https://www.iwamiru.jp/camera2/yasaka-road.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "一覧記載、個別curl未実施。座標Nominatim"
+  - id: curated-still-coast-gotsu-hashi
+    name: "波子海岸（江津市波子町）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: coast
+    prefecture: "32"
+    lat: 34.9622
+    lng: 132.1534
+    image_url: "https://www.iwamiru.jp/camera2/hashi.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "curl 200 image/jpeg当日。座標波子町概略"
+  - id: curated-still-river-gotsu-gonokawa-watazu
+    name: "江の川（渡津町）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: river
+    prefecture: "32"
+    lat: 35.0200
+    lng: 132.2375
+    image_url: "https://www.iwamiru.jp/camera2/gounokawa-watadu.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "curl 200 image/jpeg当日。座標渡津町概略"
+  - id: curated-still-river-gotsu-sakurae-ohashi
+    name: "桜江大橋（桜江町川戸）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: river
+    prefecture: "32"
+    lat: 34.9583
+    lng: 132.3355
+    image_url: "https://www.iwamiru.jp/camera2/sakuraeoohashi.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "curl 200 image/jpeg当日。座標は桜江町川戸(Nominatim)概略"
+  - id: curated-still-road-gotsu-ic
+    name: "江津IC付近"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: road
+    prefecture: "32"
+    lat: 35.0014
+    lng: 132.2117
+    image_url: "https://www.iwamiru.jp/camera2/goutsu-ic.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "一覧記載、個別curl未実施。座標Nominatim(江津IC)"
+  - id: curated-still-road-gotsu-r9-waki
+    name: "国道9号 和木町"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: road
+    prefecture: "32"
+    lat: 35.0026
+    lng: 132.1976
+    image_url: "https://www.iwamiru.jp/camera2/route9-waki.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "一覧記載、個別curl未実施。座標和木町概略"
+  - id: curated-still-river-gotsu-gonokawa-nagara
+    name: "江の川（松川町長良）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: river
+    prefecture: "32"
+    lat: 34.9914
+    lng: 132.3016
+    image_url: "https://www.iwamiru.jp/camera2/gounokawa-nagara.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "一覧記載、個別curl未実施。座標Nominatim"
+  - id: curated-still-river-gotsu-yatogawa-imada
+    name: "八戸川（桜江町今田）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: river
+    prefecture: "32"
+    lat: 34.9408
+    lng: 132.3348
+    image_url: "https://www.iwamiru.jp/camera2/imada.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "一覧記載、個別curl未実施。座標Nominatim"
+  - id: curated-still-river-gotsu-gonokawa-kawagoe
+    name: "江の川（桜江町川越）"
+    operator: "石見ケーブルビジョン（いわみる）"
+    category: river
+    prefecture: "32"
+    lat: 34.9522
+    lng: 132.4248
+    image_url: "https://www.iwamiru.jp/camera2/kawagoe.jpg"
+    page_url: "https://www.iwamiru.jp/livecamera/"
+    note: "一覧記載、個別curl未実施。座標Nominatim"
+youtube:
+  # ---- パターン3: タクシー協会・駅前 ----
+  - id: curated-taxi-awaraonsen-station-1
+    name: "芦原温泉駅 タクシー乗り場①"
+    operator: "福井県タクシー協会"
+    video_id: "EwfXRXo3tyI"
+    category: other
+    prefecture: "18"
+    lat: 36.2155
+    lng: 136.2354
+    note: "oEmbed 200 / isLiveNow=true。納入事例(grasphere.com/case/2943)で運営者確認。②(9Si8-fRvCdI)はoEmbed 401で不可。座標Nominatim(芦原温泉駅)"
+  - id: curated-station-iida-ekimae-cvn
+    name: "飯田駅前（飯田ケーブルテレビ）"
+    operator: "飯田ケーブルテレビ（cvn）"
+    video_id: "5NJZVXZnWp8"
+    category: other
+    prefecture: "20"
+    lat: 35.5195
+    lng: 137.8211
+    note: "oEmbed 200 / isLiveNow=true。page https://castvision.net/livecamera/4999/ (iidacable.tvからリダイレクト)。座標Nominatim(飯田駅)"
+  - id: curated-street-sapporo-tanukikoji-4chome
+    name: "札幌 狸小路商店街4丁目（たぬきや）"
+    operator: "たぬきや（狸小路4丁目）"
+    video_id: "XZi57dMjr2s"
+    category: other
+    prefecture: "01"
+    lat: 43.0573
+    lng: 141.3527
+    note: "チャンネル@TANUKIYAの/liveで取得、isLiveNow=true、oEmbed 200（旧ID lMOrPU8321wは終了）。国道36号・市電停留場も映る。座標は南3条西4丁目の概略（要確認）"
+  # ---- パターン4: 店舗設置の幹線道路カメラ ----
+  - id: curated-road-yamagata-omotezao-bussan-a
+    name: "山形 表蔵王 国道13号・蔵王温泉入口交差点（観光物産会館 北向き）"
+    operator: "株式会社山形県観光物産会館（ぐっと山形）"
+    video_id: "0nzlGCw_zVQ"
+    category: road
+    prefecture: "06"
+    lat: 38.1904
+    lng: 140.3128
+    note: "2026-04設置。チャンネル@山形市表蔵王ライブ /liveで取得、isLiveNow=true、oEmbed 200。page https://www.yamagata-bussan.co.jp/livecam.html。既存「山形 表蔵王（国道13号・蔵王温泉入口）」(38.211,140.396)は別地点・別ソース。座標Nominatim(山形県観光物産会館)"
+  - id: curated-road-yamagata-omotezao-bussan-b
+    name: "山形 表蔵王 国道13号・山形バイパス（観光物産会館 南向き）"
+    operator: "株式会社山形県観光物産会館（ぐっと山形）"
+    video_id: "3rNxOptVoXI"
+    category: road
+    prefecture: "06"
+    lat: 38.1904
+    lng: 140.3128
+    note: "チャンネル@山形バイパスライブ /live、isLiveNow=true、oEmbed 200。東北中央道山形上山IC・道の駅やまがた蔵王方向"
+  - id: curated-road-asahikawa-autobahn-toko
+    name: "旭川環状線 東光（アウトバーン スズキアリーナツインハープ東光店）"
+    operator: "有限会社アウトバーン"
+    video_id: "ZYeO5BXjKVU"
+    category: road
+    prefecture: "01"
+    lat: 43.7396
+    lng: 142.4058
+    note: "oEmbed 200 / isLiveNow=true。運営者=中古車販売アウトバーン公式チャンネル(UCix_G_zC5PZ_y0uL84hFCdQ)。座標は東光17条5丁目の概略(Nominatim失敗、要確認)"
+  - id: curated-road-asahikawa-autobahn-nagayama
+    name: "国道39号 永山（アウトバーン太陽店）"
+    operator: "有限会社アウトバーン"
+    video_id: "OYLHi_mc79M"
+    category: road
+    prefecture: "01"
+    lat: 43.7975
+    lng: 142.4085
+    note: "チャンネル/liveで取得、oEmbed 200（旧ID mQvs2o8HXecは403）。座標は永山3条の概略(Nominatim失敗、要確認)"
+  - id: curated-road-asahikawa-autobahn-chuwa
+    name: "国道12号・国道233号 忠和（アウトバーン忠和店）"
+    operator: "有限会社アウトバーン"
+    video_id: "ulPfwd62RCM"
+    category: road
+    prefecture: "01"
+    lat: 43.7694
+    lng: 142.3205
+    note: "oEmbed 200。ライブ状態はYouTube側レート制限で未確認(要再確認)。住所 忠和7条7丁目1-15、座標Nominatim(忠和七条七丁目)"
+  - id: curated-road-kitami-tokoro-ohtomo
+    name: "道道7号北見常呂線・常呂町基線交差点（大友産業）"
+    operator: "大友産業"
+    video_id: "Bjwqs3XDkx4"
+    category: road
+    prefecture: "01"
+    lat: 44.0839
+    lng: 144.0349
+    note: "チャンネル@ohtomoindustry /liveで取得、isLiveNow=true、oEmbed 200（旧ID PeOHFw14tNUは終了）。page https://tokoro.net/ohtomoindustry/。座標は常呂町共立(Nominatim)概略"
+  - id: curated-other-minamiawaji-fujii-carwash-2
+    name: "ENEOS淡路セントラルSS ドライブスルー洗車 Liveカメラ2"
+    operator: "藤井商事株式会社"
+    video_id: "DSAXe1wBkFM"
+    category: other
+    prefecture: "28"
+    lat: 34.3263
+    lng: 134.8264
+    note: "oEmbed 200 / isLiveNow=true。page https://fujiishoji-fs.co.jp/?page_id=187。Liveカメラ1(HqX-XW0U7P8)はoEmbed 401で不可。座標は南あわじ市広田広田(Nominatim)、住所広田広田310-1"
+  # ---- その他パターンで発見 ----
+  - id: curated-ski-minakami-hodaigi
+    name: "宝台樹スキー場 ゲレンデ"
+    operator: "みなかみ宝台樹リゾート株式会社"
+    video_id: "FNrVE0yzEpA"
+    category: scenic
+    prefecture: "10"
+    lat: 36.8315
+    lng: 139.0839
+    note: "oEmbed 200 / isLiveNow=true。page https://hodaigi.jp/live-camera/。座標Nominatim"
+  - id: curated-port-takehara-tadanoumi-port
+    name: "竹原港・忠海港（竹原市）"
+    operator: "竹原市（建設課）"
+    video_id: "pm6Iv_jVkJk"
+    category: port
+    prefecture: "34"
+    lat: 34.3393
+    lng: 132.9100
+    note: "市公式ページ埋め込み。oEmbed 200 / isLiveNow=true。既存「忠海港（うさぎ島フェリー）」とはvideo_id不一致。座標は竹原港(Nominatim)"
+skipped:
+  - name: "座間味 / angelforest / sanken.miemasu / 札幌リージェントGC(regentgc.miemasu.net) / 志賀高原一ノ瀬(ichinosecamera.aa0.netvolante.jp)"
+    url: "http://zamami.aa1.netvolante.jp:8880/ ほか"
+    reason: "ホスト接続不可(タイムアウト)"
+  - name: "鳥海山荘 鳥海山/酒田市街（酒田市）"
+    url: "http://118.21.142.104:60002/SnapshotJPEG?Resolution=640x480&Quality=Clarity"
+    reason: "接続不可(60001/60002とも)"
+  - name: "御殿場駅富士山口タクシー乗り場（御殿場市）"
+    url: "https://gotemba-live.jp/"
+    reason: "JS描画(SPA)で固定画像URLなし、実証期間限定(2026-08〜2027-03)"
+  - name: "新温泉町ライブカメラ(浜坂海岸ほか5台)"
+    url: "https://shinonsen-live.f5.si/hls/live4.html"
+    reason: "HLS配信のみ、静止画/YouTubeなし"
+  - name: "会津喜多方商工会議所 ふれあい通り(4台)"
+    url: "http://a-road.info/cam-stock2/kitakataWakaki.jpg"
+    reason: "画像Last-Modified 2021-12で更新停止"
+  - name: "ぶらんどーむ一番町（仙台）"
+    url: "https://vlandome.com/livecam/"
+    reason: "機器故障で停止中(画像2024-10固定)"
+  - name: "下郷町ライブカメラ(大内宿ほか5台)"
+    url: "https://shimogo-livecamera.jp/"
+    reason: "サイト内画像は2025-08固定の静止画、ライブ画像URL特定不能(YouTube ID ey6_9WljsT4はoEmbed 404)"
+  - name: "目明かし堂(岩手紫波) / 玄海町役場 / JR中条駅西口タクシー乗場"
+    url: "http://www.meakashi.com/live/"
+    reason: "休止中・調整中"
+  - name: "スノータウンイエティ WNIカメラ(KAC24326)"
+    url: "https://webcam.wni.co.jp/KAC24326/loop.html"
+    reason: "公式サイト(yeti-resort.com)上でリンクを確認できず、シーズン終了中。画像自体は200"
+  - name: "WNI ID ARV52629/EEM85554/UWD79284/RRX05102/TZS71057/XNP40302/MTK08875"
+    url: "https://webcam.wni.co.jp/<ID>/loop.html"
+    reason: "画像は200だが掲載元(運営者公式ページ)を特定できず"
+  - name: "札幌新道・石狩街道交差点ライブカメラ"
+    url: "https://www.youtube.com/watch?v=lt24XlkpcbY"
+    reason: "確認時isLiveNow=false、運営者(チャンネル名のみ)不明確"
+  - name: "静岡駅前タクシー乗り場（静岡市/千代田タクシー）"
+    url: "https://www.city.shizuoka.lg.jp/s3792/faq/s000010.html"
+    reason: "実証実験終了(2025-01)"
+  - name: "大町市 鷹狩山ライブカメラ"
+    url: "https://www.city.omachi.nagano.jp/00003000/00002400/takagari_live.html"
+    reason: "画像URLがタイムスタンプ付き(storage.googleapis.com/.../takagari<YYMMDDhhmmss>.jpg)で固定URLなし"
+  - name: "信濃毎日新聞松本専売所 / 東京タクシーセンター park.jpg 等"
+    url: "https://matsusen.jp/live/"
+    reason: "画像URL特定不能(JS) / 補助カメラのため未採用"
+  - name: "みなかみ町気象情報ライブカメラ(21地点) / 町道藤原粟沢線"
+    url: "http://157.112.102.76/map.html"
+    reason: "cam01.town.minakami.gunma.jp・terama1.serveftp.org とも接続不可。藤原粟沢線YouTube(25ldyb-MuZo, OHuvFpgBhl0)はoEmbed 200だが既存台帳の国道17号系と要照合のため保留"
+  - name: "東みよし町 T-Cloud カメラ(5台) / 草津温泉観光協会 / 伊東マリンタウン"
+    url: "https://tc001.t-cloudsystem.net/"
+    reason: "画像URL特定不能 / 既登録 / miemasuリンク切れ"
+  - name: "いわみる 浜田市・道路カメラ由来分(はりも山・三隅大橋・御部ダム・竹迫町交差点・国道9号西村/都野津・旭町木田・浄蓮寺坂・周布地峠・江の川河口)"
+    url: "https://www.iwamiru.jp/livecamera/"
+    reason: "一覧上『浜田市カメラ』『道路カメラ』表記で他機関映像の再配信の可能性→石見CV自社設置分のみ採用"

@@ -1,0 +1,980 @@
+# bottom5 調査結果 (沖縄47 / 香川37 / 長崎42 / 山口35 / 徳島36)  2026-08-24
+# 検証: YouTube=oEmbed 200確認(401/403/404は skipped)、静止画=curl で image/* 応答確認
+# 座標: 国土地理院 AddressSearch API(msearch.gsi.go.jp) で住所→座標。note に根拠
+still:
+  # ---------------- 沖縄 (47) ----------------
+  - id: curated-still-ogimi-nousonic
+    name: "大宜味村農村環境改善センター（防災カメラ）"
+    operator: "大宜味村"
+    category: other
+    prefecture: "47"
+    lat: 26.690619
+    lng: 128.155533
+    image_url: "http://www-camera.vill.ogimi.lg.jp/photo/nousonic.jpg"
+    page_url: "http://www-camera.vill.ogimi.lg.jp/nousonic.html"
+    note: "image/jpeg 640x360 確認。村の防災カメラ、利用条件記載なし(license=unknown)。座標=喜如嘉の代表点(GSI)"
+  - id: curated-still-ogimi-old-es-ground
+    name: "旧大宜味小学校グラウンド（防災カメラ）"
+    operator: "大宜味村"
+    category: other
+    prefecture: "47"
+    lat: 26.68141
+    lng: 128.142471
+    image_url: "http://www-camera.vill.ogimi.lg.jp/photo/old_ogimiesgrd.jpg"
+    page_url: "http://www-camera.vill.ogimi.lg.jp/old_ogimiesgrd.html"
+    note: "同サイト photo/<page名>.jpg 規則(ページ内 IMG src 確認)。実GETは nousonic/tuhacc で確認済、本URLは規則推定→レビュー時要確認。座標=大宜味の代表点"
+  - id: curated-still-ogimi-es-front
+    name: "大宜味小学校前（防災カメラ）"
+    operator: "大宜味村"
+    category: other
+    prefecture: "47"
+    lat: 26.675875
+    lng: 128.112411
+    image_url: "http://www-camera.vill.ogimi.lg.jp/photo/ogimiej.jpg"
+    page_url: "http://www-camera.vill.ogimi.lg.jp/ogimiej.html"
+    note: "規則推定URL(要確認)。座標=塩屋の代表点"
+  - id: curated-still-ogimi-tuha-cc
+    name: "津波公民館（防災カメラ）"
+    operator: "大宜味村"
+    category: coast
+    prefecture: "47"
+    lat: 26.639683
+    lng: 128.097565
+    image_url: "http://www-camera.vill.ogimi.lg.jp/photo/tuhacc.jpg"
+    page_url: "http://www-camera.vill.ogimi.lg.jp/tuhacc.html"
+    note: "image/jpeg 確認済。座標=津波の代表点"
+  - id: curated-still-okinawa-pref-ajagawa-shinkai
+    name: "安謝川 新開橋（沖縄県河川情報システム）"
+    operator: "沖縄県 土木建築部河川課"
+    category: river
+    prefecture: "47"
+    lat: 26.2295
+    lng: 127.7215
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-25.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "image/jpeg 確認(10分更新)。同システムに img_cam/p-NN.jpg 形式で多数(那覇市の安謝川/安里川/国場川/久茂地川、源河川、石川川、牧港川など livecam.asia に約20件)。一覧はJS描画のため p-NN⇔地点名の対応表を要作成(有望: 沖縄県の河川カメラは台帳に0件)。座標=首里平良町付近の概算(要修正)"
+  # ---------------- 香川 (37) ----------------
+  - id: curated-still-cms-takamatsu-gyoko
+    name: "高松漁港（CMSカメラ）"
+    operator: "ケーブルメディア四国"
+    category: port
+    prefecture: "37"
+    lat: 34.350533
+    lng: 134.055496
+    image_url: "https://www.cavy.co.jp/webcam/get_image.php?id=4"
+    page_url: "https://www.cavy.co.jp/camera/"
+    note: "image/jpeg 確認。西部第2分署屋上。利用条件記載なし(license=unknown)。座標=北浜町代表点"
+  - id: curated-still-cms-aji
+    name: "庵治（CMSカメラ）"
+    operator: "ケーブルメディア四国"
+    category: port
+    prefecture: "37"
+    lat: 34.377396
+    lng: 134.142563
+    image_url: "https://www.cavy.co.jp/webcam/get_image.php?id=10"
+    page_url: "https://www.cavy.co.jp/camera/"
+    note: "get_image.php?id=N 規則(id=4,7でimage/jpeg確認)。高松市消防局庵治分署。座標=庵治町代表点"
+  - id: curated-still-cms-yashima-higashi
+    name: "屋島東町（CMSカメラ）"
+    operator: "ケーブルメディア四国"
+    category: other
+    prefecture: "37"
+    lat: 34.360672
+    lng: 134.114716
+    image_url: "https://www.cavy.co.jp/webcam/get_image.php?id=9"
+    page_url: "https://www.cavy.co.jp/camera/"
+    note: "屋島東小学校屋上、県道150号が映る。規則URL"
+  - id: curated-still-cms-kamemizu
+    name: "亀水川（CMSカメラ）"
+    operator: "ケーブルメディア四国"
+    category: river
+    prefecture: "37"
+    lat: 34.364799
+    lng: 133.946503
+    image_url: "https://www.cavy.co.jp/webcam/get_image.php?id=7"
+    page_url: "https://www.cavy.co.jp/camera/"
+    note: "image/jpeg 確認。高松市亀水運動センター"
+  - id: curated-still-cms-shinkawa
+    name: "新川（CMSカメラ）"
+    operator: "ケーブルメディア四国"
+    category: river
+    prefecture: "37"
+    lat: 34.328644
+    lng: 134.091675
+    image_url: "https://www.cavy.co.jp/webcam/get_image.php?id=6"
+    page_url: "https://www.cavy.co.jp/camera/"
+    note: "STNet屋上。規則URL。ほか id=2川島(川島小)/3愛染川(香西ポンプ場)/5御坊川(ロイヤルケア高松)/8摺鉢谷川(西部ポンプ場)/11国分寺(新居コミセン)も同形式"
+  - id: curated-still-skr-r32-takikura
+    name: "国道32号 滝倉（猪ノ鼻道路）"
+    operator: "国土交通省 四国地方整備局"
+    category: road
+    prefecture: "37"
+    lat: 34.1137
+    lng: 133.7959
+    image_url: "https://www.skr.mlit.go.jp/road/cctv/80B2214_E.jpg"
+    page_url: "https://www.skr.mlit.go.jp/road/cctv/"
+    note: "image/jpeg 確認(5分更新)。一覧ページは403で利用条件未確認(license=unknown)。座標=財田上代表点(要微調整)"
+  - id: curated-still-skr-kendo5-inohana
+    name: "県道5号 猪ノ鼻峠（猪ノ鼻トンネル）"
+    operator: "国土交通省 四国地方整備局"
+    category: road
+    prefecture: "37"
+    lat: 34.1000
+    lng: 133.7930
+    image_url: "https://www.skr.mlit.go.jp/road/pc/0E80B2204.jpg"
+    page_url: "https://www.skr.mlit.go.jp/road/pc/"
+    note: "/road/pc/*.jpg 系(0E815833D で image/jpeg 確認、Last-Modified 更新あり)。本IDは livecam.asia 記載、要curl確認。座標概算"
+  # ---------------- 長崎 (42) ----------------
+  # 長崎河川国道事務所 道路CCTV: https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_NN.jpg (cNN.html) 、サイトポリシーはPDL1.0(出典明記で利用可)
+  - id: curated-still-qsr-ngs-r34-tawarazaka
+    name: "国道34号 俵坂"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 33.06258
+    lng: 129.955505
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_01.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c01.html"
+    note: "image/jpeg 確認。PDL1.0。座標=東彼杵町坂本郷代表点(峠位置は要微調整)"
+  - id: curated-still-qsr-ngs-r34-shimoowatano
+    name: "国道34号 下大渡野高架橋"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 32.821415
+    lng: 129.986572
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_02.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c02.html"
+    note: "cNN.html に ngscctv_vga_NN.jpg が埋め込まれていることを確認(01〜14,17〜19 存在)。座標=多良見町化屋代表点"
+  - id: curated-still-qsr-ngs-r34-hongochi
+    name: "国道34号 本河内（日見バイパス）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 32.75095
+    lng: 129.915222
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_03.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c03.html"
+    note: "本河内トンネル坑口。座標=本河内3丁目代表点"
+  - id: curated-still-qsr-ngs-r35-kihara
+    name: "国道35号 木原町（佐世保）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 33.166676
+    lng: 129.857025
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_04.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c04.html"
+    note: "image/jpeg 確認。国道35/202号・佐世保三川内IC付近"
+  - id: curated-still-qsr-ngs-r205-nagahata
+    name: "国道205号 長畑"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 33.081673
+    lng: 129.810059
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_05.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c05.html"
+    note: "座標=長畑町代表点"
+  - id: curated-still-qsr-ngs-r57-houbaru
+    name: "国道57号 宝原橋（雲仙）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 32.744427
+    lng: 130.267563
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_08.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c08.html"
+    note: "雲仙温泉近く。座標=小浜町雲仙代表点"
+  - id: curated-still-qsr-ngs-r35-arifuku
+    name: "国道35号 有福"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 33.131599
+    lng: 129.781036
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_17.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c17.html"
+    note: "座標=有福町代表点"
+  - id: curated-still-qsr-ngs-r35-hiu
+    name: "国道35号 日宇町"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 33.162548
+    lng: 129.761261
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_18.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c18.html"
+    note: "座標=日宇町代表点"
+  - id: curated-still-qsr-ngs-r34-nakazato
+    name: "国道34号 中里町（大村）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 32.883602
+    lng: 130.00293
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_19.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c19.html"
+    note: "座標=中里町代表点"
+  - id: curated-still-qsr-ngs-r57-tawaraishi
+    name: "国道57号 俵石"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 32.747295
+    lng: 130.226746
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_23.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c23.html"
+    note: "c23 の画像番号は c01-19 の規則(同番号)からの推定。要確認。座標=小浜町北野代表点"
+  - id: curated-still-qsr-ngs-r57-fudanohara
+    name: "国道57号 札の原（島原）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: road
+    prefecture: "42"
+    lat: 32.755047
+    lng: 130.367188
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_25.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c25.html"
+    note: "番号規則推定(要確認)。座標=南崩山町代表点"
+  - id: curated-still-qsr-ngs-r57-aino-tenbo
+    name: "国道57号 愛野展望所（雲仙岳・橘湾）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: scenic
+    prefecture: "42"
+    lat: 32.80624
+    lng: 130.1521
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_59.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c59.html"
+    note: "番号規則推定(要確認)。愛野展望台から雲仙岳と国道57号。座標=愛野町乙代表点。※小浜管内 c53島原大橋/c54水無大橋/c28山ノ寺/c55鬢串/c56小浜/c57富津/c58猿場/c60愛津、佐世保管内 c29松浦IC/c30調川IC/c31今福IC/c32三川内本町/c33桑木場町/c34脇崎/c35大塔/c36笹ノ谷/c37新早岐瀬戸大橋/c38-39南風崎/c40川棚大橋/c41彼杵大橋/c42高吉/c43江頭/c61御厨田代大橋、大村管内 c44桜馬場/c45与崎/c47小船越トンネル/c48切通/c49大曲/c50新妙相寺橋/c51島原道路非常駐車帯/c52小川町 も同形式で存在(計約43台)。番号対応を curl で一括確認して追加推奨"
+  # ---------------- 山口 (35) ----------------
+  # 山口河川国道事務所 河川カメラ(佐波川) http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00NNN.jpg 固定URL。ページに「河川監視等以外の目的での利用不可」趣旨の注意あり→license=unknown
+  - id: curated-still-cgr-sabagawa-nishinoura
+    name: "佐波川 西ノ浦"
+    operator: "国土交通省 山口河川国道事務所"
+    category: river
+    prefecture: "35"
+    lat: 34.023197
+    lng: 131.521393
+    image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00627.jpg"
+    page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
+    note: "image/jpeg 80KB 確認。座標=防府市西浦代表点。cgr.mlit.go.jp(www.road.cgr ではない)"
+  - id: curated-still-cgr-sabagawa-ohashi
+    name: "佐波川 佐波川大橋"
+    operator: "国土交通省 山口河川国道事務所"
+    category: river
+    prefecture: "35"
+    lat: 34.045601
+    lng: 131.528473
+    image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00632.jpg"
+    page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
+    note: "alt='佐波川大橋カメラ'。座標=植松代表点"
+  - id: curated-still-cgr-sabagawa-shinbashi
+    name: "佐波川 新橋"
+    operator: "国土交通省 山口河川国道事務所"
+    category: river
+    prefecture: "35"
+    lat: 34.063343
+    lng: 131.55954
+    image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00629.jpg"
+    page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
+    note: "座標=新橋町代表点。ほか C00628佐野堰/C00630総合堰/C00631小島/C00633甲久保/C00634佐波川出張所/C00635上右田/C00636矢筈/C00637上右田堰/C00638真尾/C00639真尾堰/C00640伊賀地/C00641漆尾/C00642合流点/C00643堀/C00644上流端/C01328岸見/C01484奈美 も同形式(計20台)"
+  - id: curated-still-cgr-sabagawa-hori
+    name: "佐波川 堀（徳地）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: river
+    prefecture: "35"
+    lat: 34.189011
+    lng: 131.636612
+    image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00643.jpg"
+    page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
+    note: "座標=徳地堀代表点"
+  - id: curated-still-ccs-boukaidai
+    name: "望海台（周南市街・瀬戸内）"
+    operator: "シティーケーブル周南(CCS)"
+    category: scenic
+    prefecture: "35"
+    lat: 34.0688
+    lng: 131.7853
+    image_url: "https://livecam.ccsonline.jp/img/boukaidai/boukaidai-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "image/jpeg 428KB 確認(1分更新)。住所 周南市西金剛山1019-45 は GSI で未解決→西千代田町の座標。要修正。利用条件記載なし"
+  - id: curated-still-ccs-solene-shunan
+    name: "道の駅ソレーネ周南（国道2号 戸田交差点）"
+    operator: "シティーケーブル周南(CCS)"
+    category: road
+    prefecture: "35"
+    lat: 34.073734
+    lng: 131.679123
+    image_url: "https://livecam.ccsonline.jp/img/solene/solene-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "同サイトの規則(boukaidai で確認)。他に touyoko/higashiic/st-shin(新南陽駅前)/kano(鹿野)/kume/nakag/ozaki/sukumo(周防大島?) の各 -001.jpg あり(計10台)。地点名の確認を推奨"
+  # ---------------- 徳島 (36) ----------------
+  - id: curated-still-higashimiyoshi-cam1
+    name: "東みよし町ライブカメラ1"
+    operator: "東みよし町"
+    category: river
+    prefecture: "36"
+    lat: 34.0605
+    lng: 133.9093
+    image_url: "https://tc001.t-cloudsystem.net/TC001-CAM0001-BS/bu3UfvLp/getjpeg.php"
+    page_url: "https://www.town.higashimiyoshi.lg.jp/docs/976.html"
+    note: "image/jpg 1280x720 確認。CAM0005(三三大橋)は既登録。CAM0001〜0003 の地点名は町ページ本文に記載(取得できず)→要確認。座標=足代代表点(仮)"
+  - id: curated-still-higashimiyoshi-cam2
+    name: "東みよし町ライブカメラ2"
+    operator: "東みよし町"
+    category: river
+    prefecture: "36"
+    lat: 34.0605
+    lng: 133.9093
+    image_url: "https://tc001.t-cloudsystem.net/TC001-CAM0002-BS/bR8hsVUB/getjpeg.php"
+    page_url: "https://www.town.higashimiyoshi.lg.jp/docs/976.html"
+    note: "image/jpg 275KB 確認。地点名要確認"
+  - id: curated-still-higashimiyoshi-cam3
+    name: "東みよし町ライブカメラ3"
+    operator: "東みよし町"
+    category: river
+    prefecture: "36"
+    lat: 34.0605
+    lng: 133.9093
+    image_url: "https://tc001.t-cloudsystem.net/TC001-CAM0003-BS/bU6kWDvt/getjpeg.php"
+    page_url: "https://www.town.higashimiyoshi.lg.jp/docs/976.html"
+    note: "image/jpg 確認。地点名要確認"
+  - id: curated-still-mima-udatsu-1
+    name: "うだつの町並み①（脇町）"
+    operator: "美馬市"
+    category: scenic
+    prefecture: "36"
+    lat: 34.068764
+    lng: 134.136505
+    image_url: "http://cam6.city.mima.lg.jp/cgi-bin/camera?resolution=640"
+    page_url: "https://www.city.mima.lg.jp/kanko/livecamera/udatsu/"
+    note: "Panasonic WV-S1510 の cgi-bin/camera で image/jpeg 37KB 確認。利用条件記載なし。座標=脇町代表点"
+  - id: curated-still-mima-udatsu-2
+    name: "うだつの町並み②（脇町）"
+    operator: "美馬市"
+    category: scenic
+    prefecture: "36"
+    lat: 34.068764
+    lng: 134.136505
+    image_url: "http://cam7.city.mima.lg.jp/cgi-bin/camera?resolution=640"
+    page_url: "https://www.city.mima.lg.jp/kanko/livecamera/udatsu/"
+    note: "image/jpeg 38KB 確認"
+  - id: curated-still-skr-r192-sakaime
+    name: "国道192号 境目峠"
+    operator: "国土交通省 四国地方整備局"
+    category: road
+    prefecture: "36"
+    lat: 34.003742
+    lng: 133.703568
+    image_url: "http://www.skr.mlit.go.jp/road/pc/0E815843F.jpg"
+    page_url: "https://nishi-awa.jp/live_camera/"
+    note: "にし阿波観光圏サイトが直リンク。同系 0E815833D/0E8158138 で image/jpeg 確認。利用条件未確認(license=unknown)。座標=池田町佐野代表点"
+  - id: curated-still-skr-r32-shimokawa
+    name: "国道32号 下川跨線橋付近"
+    operator: "国土交通省 四国地方整備局"
+    category: road
+    prefecture: "36"
+    lat: 33.982834
+    lng: 133.780319
+    image_url: "http://www.skr.mlit.go.jp/road/pc/0E815833D.jpg"
+    page_url: "https://nishi-awa.jp/live_camera/"
+    note: "image/jpeg 38KB 確認(Last-Modified 更新あり)。にし阿波サイトの3リンクのうち ID⇔地点対応は推定(0E8158138=山口谷橋/0E815833D=下川/0E815843F=境目峠 の順で要確認)"
+  - id: curated-still-skr-r192-yamaguchidani
+    name: "国道192号 山口谷橋付近（東みよし町）"
+    operator: "国土交通省 四国地方整備局"
+    category: road
+    prefecture: "36"
+    lat: 34.060501
+    lng: 133.909256
+    image_url: "http://www.skr.mlit.go.jp/road/pc/0E8158138.jpg"
+    page_url: "https://nishi-awa.jp/live_camera/"
+    note: "image/jpeg 37KB 確認。ID対応要確認"
+youtube:
+  # ---------------- 沖縄 (47) ----------------
+  - id: curated-bakunovision-kokusaidori
+    name: "国際通り（バクノビジョン前）"
+    operator: "バクノビジョン"
+    video_id: "D0hiHTAbu2A"
+    category: other
+    prefecture: "47"
+    lat: 26.214626
+    lng: 127.68428
+    note: "oEmbed 200 / 24時間ライブ。那覇市松尾2-1"
+  - id: curated-laguna-garden-ginowan
+    name: "宜野湾海浜公園・東シナ海（ラグナガーデンホテル）"
+    operator: "Laguna Garden Hotel"
+    video_id: "o7i9-ZK0U6c"
+    category: coast
+    prefecture: "47"
+    lat: 26.281155
+    lng: 127.737572
+    note: "oEmbed 200 / ホテル公式24時間ライブ。宜野湾市真志喜4-1-1"
+  - id: curated-kintaka-naha-4screen
+    name: "那覇新港・泊大橋・クルーズターミナル（4画面）"
+    operator: "KIN-TAKA"
+    video_id: "HMK1dPnJZXI"
+    category: port
+    prefecture: "47"
+    lat: 26.235369
+    lng: 127.694565
+    note: "oEmbed 200。個人チャンネルだが運営者=チャンネル名。同チャンネルに kwfvATRs5MA(那覇新港・空港北側) / lYoxW4wkOZQ(泊大橋〜曙 渋滞) / Mc3OxQnVSrI(クルーズターミナル) の単独ライブもあり(いずれも oEmbed 200)。座標=那覇市安謝"
+  - id: curated-kintaka-tomari-ohashi
+    name: "泊大橋〜曙（国道58号 渋滞状況）"
+    operator: "KIN-TAKA"
+    video_id: "lYoxW4wkOZQ"
+    category: road
+    prefecture: "47"
+    lat: 26.2354
+    lng: 127.6946
+    note: "oEmbed 200"
+  - id: curated-kintaka-naha-cruise-terminal
+    name: "那覇クルーズターミナル・泊港入口"
+    operator: "KIN-TAKA"
+    video_id: "Mc3OxQnVSrI"
+    category: port
+    prefecture: "47"
+    lat: 26.2295
+    lng: 127.6790
+    note: "oEmbed 200。座標=那覇クルーズターミナル概算"
+  - id: curated-kariyushi-beach
+    name: "かりゆしビーチ"
+    operator: "Kariyushi Hotels"
+    video_id: "THryehCFhUU"
+    category: coast
+    prefecture: "47"
+    lat: 26.532156
+    lng: 127.930099
+    note: "oEmbed 200 / @Kariyushi.Hotels の /live から解決。名護市喜瀬1996"
+  - id: curated-niruya-kanaya-bise
+    name: "備瀬から伊江島タッチュー（ニルヤカナヤBISE）"
+    operator: "ニルヤカナヤBISE"
+    video_id: "VyT694OcIHM"
+    category: coast
+    prefecture: "47"
+    lat: 26.701693
+    lng: 127.884453
+    note: "oEmbed 200。本部町備瀬"
+  - id: curated-yukurina-resort-motobu
+    name: "ゆくりなリゾート沖縄 海風（本部町石川）"
+    operator: "ゆくりなリゾート沖縄"
+    video_id: "iisltM5Ee54"
+    category: coast
+    prefecture: "47"
+    lat: 26.692402
+    lng: 127.881859
+    note: "oEmbed 200"
+  - id: curated-cahaya-bulan-bise
+    name: "cafe CAHAYA BULAN（本部町備瀬・東シナ海）"
+    operator: "CAHAYA BULAN"
+    video_id: "5ZIw5x5jnQg"
+    category: coast
+    prefecture: "47"
+    lat: 26.702049
+    lng: 127.87986
+    note: "oEmbed 200 / 4K 24時間ライブ。備瀬429"
+  - id: curated-arimabaru-beach-motobu
+    name: "ありまばるビーチリゾート（本部町具志堅）"
+    operator: "ありまばるチャンネル"
+    video_id: "LoeukVlOVOo"
+    category: coast
+    prefecture: "47"
+    lat: 26.694214
+    lng: 127.912445
+    note: "oEmbed 200 / チャンネル /live から解決"
+  - id: curated-kaiyohaku-tomidai
+    name: "海洋博公園 熱帯ドリームセンター遠見台（エメラルドビーチ）"
+    operator: "国営沖縄記念公園（海洋博公園・沖縄美ら海水族館）"
+    video_id: "lfN88SfMCh4"
+    category: scenic
+    prefecture: "47"
+    lat: 26.693777
+    lng: 127.878372
+    note: "oEmbed 200 / 公式チャンネル。既登録の黒潮の海(cVm1NrAI_f8)とは別カメラ"
+  - id: curated-motobu-terrace
+    name: "モトブテラス（本部町上空・伊江島）"
+    operator: "Motobu Terrace"
+    video_id: "Tlc3uegvdrQ"
+    category: scenic
+    prefecture: "47"
+    lat: 26.654192
+    lng: 127.909401
+    note: "oEmbed 200。伊野波150-18"
+  - id: curated-transit-cafe-chatan
+    name: "トランジットカフェ（北谷町宮城海岸）"
+    operator: "Transit Café"
+    video_id: "Yq-tvHhSJN4"
+    category: coast
+    prefecture: "47"
+    lat: 26.330542
+    lng: 127.744049
+    note: "oEmbed 200 / 24時間。既登録のオーシャンビュー砂辺(vA_41GBLxVU)と近接だが別運営"
+  - id: curated-maedamisaki-blue-cave
+    name: "真栄田岬（青の洞窟 海況）"
+    operator: "真栄田岬管理事務所（青の洞窟チャンネル）"
+    video_id: "mFSKW2VeYHo"
+    category: coast
+    prefecture: "47"
+    lat: 26.430632
+    lng: 127.762749
+    note: "oEmbed 200 / チャンネル /live から解決。maedamisaki.jp"
+  - id: curated-teiten-ryugudori
+    name: "国際通り 竜宮通り入口"
+    operator: "定点カメラ部沖縄"
+    video_id: "VpDoK4Yet_o"
+    category: other
+    prefecture: "47"
+    lat: 26.218222
+    lng: 127.689529
+    note: "oEmbed 200。既登録の牧志交番前(se05Vc8g_TY)と同運営の別カメラ"
+  - id: curated-okichan-nishihara-urasoe
+    name: "西原町 てだこ浦西駅周辺（イオンモール浦西）"
+    operator: "8131 okichan"
+    video_id: "wCmEcbNro0M"
+    category: other
+    prefecture: "47"
+    lat: 26.245747
+    lng: 127.754967
+    note: "oEmbed 200 / チャンネル /live。同チャンネルに恩納村ムーンビーチ(国道58号・前兼久漁港)と国際通り安里交差点のライブもあり(video_id 未解決、/streams 要確認)"
+  # ---------------- 香川 (37) ----------------
+  - id: curated-kbn-seto-ohashi
+    name: "瀬戸大橋（与島 橋脚上）"
+    operator: "KBN（香川テレビ放送網）"
+    video_id: "xrb4L3p1eHY"
+    category: scenic
+    prefecture: "37"
+    lat: 34.389088
+    lng: 133.818939
+    note: "oEmbed 200。ケーブルテレビ局公式。本四高速ではなくKBN設置"
+  - id: curated-cms-sunport-takamatsu
+    name: "サンポート高松（高松港）"
+    operator: "ケーブルメディア四国(CMS)"
+    video_id: "jxG3qZd6xKo"
+    category: port
+    prefecture: "37"
+    lat: 34.352398
+    lng: 134.047791
+    note: "oEmbed 200 / 高松シンボルタワー設置"
+  - id: curated-funenotaiikukan
+    name: "旧香川県立体育館（船の体育館）"
+    operator: "船の体育館 ライブカメラ"
+    video_id: "5PImbqudipc"
+    category: other
+    prefecture: "37"
+    lat: 34.350628
+    lng: 134.051651
+    note: "oEmbed 200 / チャンネル /live。運営者はチャンネル名(保存活動団体と推定)"
+  - id: curated-takamatsu-kamitenjin
+    name: "高松市上天神 南向き（空港通り）"
+    operator: "定点カメラチャンネル 兵庫県"
+    video_id: "FEFBzlvzfjU"
+    category: road
+    prefecture: "37"
+    lat: 34.311382
+    lng: 134.038803
+    note: "oEmbed 200 / 「試験配信中」表記あり。運営者=チャンネル名"
+  - id: curated-takayama-koku-koen-2
+    name: "高山航空公園 ライブ配信2"
+    operator: "綾川町高山航空公園"
+    video_id: "xi47AfuVnWA"
+    category: scenic
+    prefecture: "37"
+    lat: 34.202869
+    lng: 133.966812
+    note: "oEmbed 200。既登録 leFhfdptn_Y と同運営の第2カメラ(重複か要確認)"
+  - id: curated-chichibugahama
+    name: "父母ヶ浜"
+    operator: "三豊市観光交流局 Love, Mitoyo"
+    video_id: "ZM1ZLUzfka4"
+    category: coast
+    prefecture: "37"
+    lat: 34.188663
+    lng: 133.64949
+    note: "oEmbed 200 / /live から解決(旧ID u6e_v5ntnyw は【修理中】表記)。夕日の名所"
+  - id: curated-kotohira-meteor-asahi
+    name: "金刀比羅宮・象頭山と星空（丸亀）"
+    operator: "Higashiyama`s Labo（朝日新聞宇宙部連携）"
+    video_id: "SqI7x2vgf8Q"
+    category: scenic
+    prefecture: "37"
+    lat: 34.19
+    lng: 133.80
+    note: "oEmbed 200。設置は丸亀市内(詳細不明)→座標は金刀比羅宮方向の概算。夜間星空向け"
+  # ---------------- 長崎 (42) ----------------
+  - id: curated-ncc-sasebo-port
+    name: "佐世保港"
+    operator: "NCC長崎文化放送"
+    video_id: "Y5OA9z2YiJ4"
+    category: port
+    prefecture: "42"
+    lat: 33.165016
+    lng: 129.72049
+    note: "oEmbed 200(旧ID tGaSspbB8wA は403)。座標=万津町"
+  - id: curated-ncc-nagasaki-airport
+    name: "長崎空港"
+    operator: "NCC長崎文化放送"
+    video_id: "zNahac5x0Tw"
+    category: other
+    prefecture: "42"
+    lat: 32.91518
+    lng: 129.914444
+    note: "oEmbed 200"
+  - id: curated-ncm-nagasaki-cityhall
+    name: "長崎市役所屋上（長崎港・女神大橋）"
+    operator: "長崎ケーブルメディア"
+    video_id: "ZoETGE0w5w8"
+    category: scenic
+    prefecture: "42"
+    lat: 32.749592
+    lng: 129.879211
+    note: "oEmbed 200"
+  - id: curated-ncm-gunkanjima
+    name: "軍艦島（長崎市恐竜博物館から）"
+    operator: "長崎ケーブルメディア"
+    video_id: "pmdZ-D1XOJA"
+    category: scenic
+    prefecture: "42"
+    lat: 32.582142
+    lng: 129.744904
+    note: "oEmbed 200 / チャンネル /live とも一致"
+  - id: curated-ncm-nabekanmuriyama
+    name: "鍋冠山展望台（長崎夜景）"
+    operator: "長崎ケーブルメディア"
+    video_id: "ECA5G89gogI"
+    category: scenic
+    prefecture: "42"
+    lat: 32.729336
+    lng: 129.8694
+    note: "oEmbed 200"
+  - id: curated-hibaruyama-1
+    name: "しまばら火張山花公園 第1（雲仙岳）"
+    operator: "Love in Blue（しまばら火張山花公園）"
+    video_id: "32Azf9yJmRI"
+    category: scenic
+    prefecture: "42"
+    lat: 32.788944
+    lng: 130.336853
+    note: "oEmbed 200"
+  - id: curated-hibaruyama-2
+    name: "しまばら火張山花公園 第2（国道251号・島原IC方面）"
+    operator: "Love in Blue（しまばら火張山花公園）"
+    video_id: "Y5AX5hdA8no"
+    category: scenic
+    prefecture: "42"
+    lat: 32.788944
+    lng: 130.336853
+    note: "oEmbed 200 / @loveblue5442 の /live"
+  - id: curated-another-rent-nagasaki-airport
+    name: "長崎空港 駐車場・大村湾（アナザーレンタカー）"
+    operator: "アナザーレンタカー 長崎空港店"
+    video_id: "sPOq_two14k"
+    category: other
+    prefecture: "42"
+    lat: 32.91518
+    lng: 129.914444
+    note: "oEmbed 200 / 駐車場混雑カメラ"
+  - id: curated-qsr-honmyogawa-6point
+    name: "本明川 6地点切替（諫早）"
+    operator: "国土交通省 九州地方整備局 長崎河川国道事務所"
+    video_id: "h5QLt5hj150"
+    category: river
+    prefecture: "42"
+    lat: 32.844913
+    lng: 130.048019
+    note: "oEmbed 200 / 「試験配信中」。高城橋・裏山・JR鉄橋など巡回。座標=高城町"
+  # ---------------- 山口 (35) ----------------
+  - id: curated-tnc-yamaguchi-ube-airport
+    name: "山口宇部空港"
+    operator: "テレビ西日本(TNC)"
+    video_id: "NokinTfqIaM"
+    category: other
+    prefecture: "35"
+    lat: 33.932217
+    lng: 131.275024
+    note: "oEmbed 200"
+  - id: curated-aikan-kintaikyo
+    name: "錦帯橋（橋の駅 展望台から）"
+    operator: "アイ・キャン（岩国のケーブルテレビ）"
+    video_id: "C3Ood13b4Sk"
+    category: scenic
+    prefecture: "35"
+    lat: 34.167534
+    lng: 132.179794
+    note: "oEmbed 200。既登録の錦帯橋課公式(tHwWcSdBjjY)とは別アングル"
+  - id: curated-aikan-r2-shinminatomachi
+    name: "国道2号 新港町4丁目交差点（岩国港）"
+    operator: "アイ・キャン"
+    video_id: "wkpK0btHs74"
+    category: road
+    prefecture: "35"
+    lat: 34.189762
+    lng: 132.22995
+    note: "oEmbed 200"
+  - id: curated-aikan-hosori-ohashi
+    name: "錦川 細利大橋（北河内）"
+    operator: "アイ・キャン"
+    video_id: "GJuqIxomRhA"
+    category: river
+    prefecture: "35"
+    lat: 34.169106
+    lng: 132.095917
+    note: "oEmbed 200。座標=岩国市下 代表点(要微調整)"
+  - id: curated-aikan-bojigatao
+    name: "傍示ヶ峠（国道187号 錦町県境）"
+    operator: "アイ・キャン"
+    video_id: "c3MXSOpCvww"
+    category: road
+    prefecture: "35"
+    lat: 34.311035
+    lng: 131.9328
+    note: "oEmbed 200。冬季積雪確認向け。座標=錦町大野代表点"
+  - id: curated-aikan-oshima-ohashi
+    name: "大島大橋"
+    operator: "アイ・キャン"
+    video_id: "xGfw98KW8g0"
+    category: scenic
+    prefecture: "35"
+    lat: 33.980316
+    lng: 132.183746
+    note: "チャンネル(UCCDCozZz1umL3bOH_WMa-4Q) /live で解決。oEmbed 未確認→要確認。座標=柳井市神代(大島大橋本土側)"
+  - id: curated-hagi-kikugahama
+    name: "菊ヶ浜（萩）"
+    operator: "萩大志館"
+    video_id: "MIwitK_brdk"
+    category: coast
+    prefecture: "35"
+    lat: 34.416138
+    lng: 131.384445
+    note: "oEmbed 200"
+  - id: curated-tys-nihogawa
+    name: "仁保川（tys本社）"
+    operator: "tysテレビ山口"
+    video_id: "qqrGSjdqfdQ"
+    category: river
+    prefecture: "35"
+    lat: 34.161926
+    lng: 131.488693
+    note: "oEmbed 200。山口市大内千坊"
+  - id: curated-onda-sports-park-ube
+    name: "恩田スポーツパーク（宇部）"
+    operator: "宇部市スポーツ協会"
+    video_id: "Hwvs3OMa4ww"
+    category: other
+    prefecture: "35"
+    lat: 33.944817
+    lng: 131.268982
+    note: "oEmbed 200"
+  - id: curated-rapport-yuya-nagato
+    name: "ラポールゆや テラス（国道191号・掛淵川）"
+    operator: "長門市文化振興財団"
+    video_id: "dDfCeFu2n4g"
+    category: scenic
+    prefecture: "35"
+    lat: 34.373348
+    lng: 131.060364
+    note: "oEmbed 200"
+  - id: curated-koganji-yuyawan
+    name: "油谷湾（向岸寺）"
+    operator: "向岸寺"
+    video_id: "FUAKNMnpCmU"
+    category: coast
+    prefecture: "35"
+    lat: 34.416718
+    lng: 130.993225
+    note: "oEmbed 200 / 寺院設置 Axis カメラ"
+  - id: curated-sugane-ebisubashi
+    name: "錦川 恵比須橋（須万）"
+    operator: "須金地区自主防災"
+    video_id: "0K3thF0EFtM"
+    category: river
+    prefecture: "35"
+    lat: 34.216507
+    lng: 131.890137
+    note: "oEmbed 200 / チャンネル /live。運営者=自主防災組織"
+  # ---------------- 徳島 (36) ----------------
+  - id: curated-tokushima-bizan-live
+    name: "眉山・新町橋"
+    operator: "徳島 眉山・阿波おどり Live Camera"
+    video_id: "J-fuUG0hCBQ"
+    category: scenic
+    prefecture: "36"
+    lat: 34.070232
+    lng: 134.54567
+    note: "oEmbed 200 / チャンネル /live。運営者=チャンネル名"
+  - id: curated-tokushima-bunkanomori
+    name: "文化の森総合公園 シンボル広場"
+    operator: "徳島県文化の森総合公園"
+    video_id: "vQ04u6zOhMI"
+    category: other
+    prefecture: "36"
+    lat: 34.040089
+    lng: 134.522202
+    note: "oEmbed 200 / @Tokushimabunka の /live"
+  - id: curated-tokushima-pref-otanigawa
+    name: "大谷川 鳴門市大麻町大谷"
+    operator: "徳島県 河川整備課"
+    video_id: "xjYDjAubw_A"
+    category: river
+    prefecture: "36"
+    lat: 34.174393
+    lng: 134.537415
+    note: "oEmbed 200。徳島県河川整備課は多数の河川カメラをYouTube配信(新池川 zzyaJUs1jws / 鮎喰川 QI2aab1EKlU / 勝浦川飯谷 hNZk_BFIfXc / 園瀬川 7UMre-SDImU / 海部川 kNqx4jorwyU は 401=埋め込み不可)。台帳未登録の有望ソース、チャンネル UCi1H5mkE0g5ye9RQE9trsyQ 精査推奨"
+  - id: curated-tokushima-pref-nakagawa-kito
+    name: "那賀川 那賀町木頭出原"
+    operator: "徳島県 河川整備課"
+    video_id: "7SvxNnTq4SE"
+    category: river
+    prefecture: "36"
+    lat: 33.760574
+    lng: 134.215485
+    note: "oEmbed 200"
+  - id: curated-tokushima-pref-katsuuragawa-komatsushima
+    name: "勝浦川 小松島市江田町中道"
+    operator: "徳島県 河川整備課"
+    video_id: "ROZEUmBLXMc"
+    category: river
+    prefecture: "36"
+    lat: 34.017338
+    lng: 134.559265
+    note: "oEmbed 200 (author 徳島県河川整備課3)"
+skipped:
+  - name: "沖縄 ホテルエアポートビュー那覇（那覇空港）"
+    url: "https://www.youtube.com/watch?v=LN1vF_vKX8o"
+    reason: "oEmbed 401（埋め込み不可）"
+  - name: "沖縄 ブセナの海なう（アイランドブリーズ）"
+    url: "https://www.youtube.com/watch?v=Gj0IkOK6xH0"
+    reason: "oEmbed 401"
+  - name: "沖縄 新原ビーチ（ミーバルビーチcam）"
+    url: "https://www.youtube.com/watch?v=QcSjnVPeZbY"
+    reason: "oEmbed 401"
+  - name: "沖縄 美浜アメリカンビレッジ（さくらやチャンネル）"
+    url: "https://www.youtube.com/watch?v=briBfx5IZbg"
+    reason: "oEmbed 401"
+  - name: "沖縄 大謝名交差点 54ZyYMfyGnE / CAHAYA edXroSDwuiM / OTV宮古 EL57ZkKmAo4"
+    url: "youtube"
+    reason: "404/403（終了済み。後継IDは採用側に記載）"
+  - name: "沖縄 うるマルシェ直売所"
+    url: "https://www.youtube.com/@urumarche817/live"
+    reason: "現在の /live は取材動画で定点ライブではない"
+  - name: "沖縄 名護湾（FMやんばる）"
+    url: "https://www.youtube.com/watch?v=3v9OipsYf3k"
+    reason: "現配信は『脱毛サロン店内カメラ』で風景カメラではない"
+  - name: "沖縄 FMなは/FM読谷/FMたまん スタジオカメラ"
+    url: "https://livecam.asia/okinawa/naha/fm-naha.html"
+    reason: "スタジオ内映像で地図アプリの用途外"
+  - name: "沖縄 南部国道事務所 道路ライブカメラ 5地点"
+    url: "https://www.dc.ogb.go.jp/nankoku/cctv/sentaku.html"
+    reason: "images/01.jpg〜05.jpg は image/jpeg で更新あり(Last-Modified確認)だが、地点名がSJISページから抽出できず(国道329/331/332号)。既登録 prvs(比謝橋/摩文仁/空港入口/小那覇/久場)と重複の可能性大→要照合"
+  - name: "沖縄 泊港・泊交差点（沖縄移住生活）"
+    url: "https://www.okinawalife.jp/live5/"
+    reason: "画像が /inc/pcview5.cgi (302リダイレクト) で固定URL取得不可"
+  - name: "沖縄 JAL那覇空港ライブカメラ"
+    url: "https://weather.jal.co.jp/livecam/spot.html?camid=410000154"
+    reason: "JAL『All rights reserved』のみで転載可否不明・JS描画(ウェザーニュース提供)"
+  - name: "沖縄 津堅島（かみやロッジ）"
+    url: "https://www.youtube.com/@tsukenisland/live"
+    reason: "イベント配信で定点ライブではない"
+  - name: "沖縄 恩納村ムーンビーチ / 国際通り安里交差点（8131 okichan）"
+    url: "https://www.youtube.com/@okichan-kf6hg/streams"
+    reason: "video_id 未解決（/live は西原町を返す）。/streams 精査で追加可"
+  - name: "香川 荘内半島オリーブ農園"
+    url: "https://www.youtube.com/channel/UCcU_9_vdtuFUBBVVoomV4AQ/live"
+    reason: "現在ライブなし"
+  - name: "香川 大窪寺→徳勝寺 本堂お朝事"
+    url: "https://www.youtube.com/channel/UCxMfHAwPLxqkSaPAYHGfhdQ/live"
+    reason: "毎朝の勤行配信(日次)で24時間定点ではない"
+  - name: "香川 高松妙泉寺"
+    url: "https://livecam.asia/kagawa/takamatsu/takamatsu-myosenj.html"
+    reason: "未確認（ページ取得404）"
+  - name: "香川 金刀比羅宮 桜馬場"
+    url: "http://www.konpira.or.jp/Halcam/halcam.html"
+    reason: "桜期間限定"
+  - name: "香川 五色台（休暇村讃岐五色台）"
+    url: "https://www.sizenken.biodic.go.jp/view_new.php?no=70"
+    reason: "台帳に sizenken 37件あり既登録の可能性大（要 grep no=70）。画像URLは日付ディレクトリ形式で固定でない"
+  - name: "香川 道の駅ことなみ（エピアみかど）"
+    url: "http://cam7499639.miemasu.net/live/index.html"
+    reason: "みえますねっと(Panasonic)ビューア、固定画像URLなし"
+  - name: "香川 一光電機（香南町）"
+    url: "http://www.ikko-e.co.jp/livecam/"
+    reason: "ページに画像埋め込みなし(JS/廃止?)"
+  - name: "香川 あいほん屋常磐町商店街/JR四国車両基地/ことでん 各YouTube"
+    url: "https://livecam.asia/kagawa/takamatsu/"
+    reason: "休止中"
+  - name: "香川 高松競輪/丸亀ボート、山口 防府競輪/下関ボート、長崎 佐世保競輪/大村ボート"
+    url: "-"
+    reason: "レース中継で用途外"
+  - name: "長崎 稲佐山中腹駐車場（稲佐山カメラ）"
+    url: "https://www.youtube.com/channel/UC28I3ao8OWu1cBDbC2jJr4w/live"
+    reason: "現在ライブなし"
+  - name: "長崎 明和ビル 中島川中央橋"
+    url: "https://www.youtube.com/@meiwawing/live"
+    reason: "現在ライブなし"
+  - name: "長崎 飯盛神社（佐世保）"
+    url: "https://www.youtube.com/@iimori-jinja/live"
+    reason: "現在は祭礼配信。初詣期に24時間化する可能性あり→年末に再確認"
+  - name: "長崎 千々石浦 船泊/眉山（LoveBlue）"
+    url: "http://ao123.jp.net/img/live10.jpg"
+    reason: "ao123.jp.net 接続不能。船泊YouTubeは /live が花公園に切替"
+  - name: "長崎 水辺の森公園"
+    url: "http://www.mizubenomori.jp/live.html"
+    reason: "Panasonic ビューア(153.156.94.48)で cgi-bin/camera は401"
+  - name: "長崎 アリアケファーム"
+    url: "https://www.ariake-farm.co.jp/?page_id=24"
+    reason: "8-19時のみ・画像URL未確認"
+  - name: "長崎 雲仙岳 野岳/垂木台地南"
+    url: "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=50401"
+    reason: "既登録(jma_volcam)"
+  - name: "長崎県河川砂防情報システム 河川カメラ"
+    url: "http://www.kasen-sabo.pref.nagasaki.jp/nakss/Camera"
+    reason: "SPA(JS描画)で画像URL未解明。kawabou 経由で既登録の可能性"
+  - name: "山口 山口河川国道事務所 峠路面情報カメラ 9地点（鎖峠/吉見峠/椿峠/杖坂/生雲東分/徳佐/西深川/宇田/樋口）"
+    url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    reason: "画像URLが /romen/douroimage/YYYYMMDD/HHMM/C0913.jpg の時刻付きで固定URLなし(都度解決型リゾルバが必要)。冬季有望"
+  - name: "山口県 道路見えるナビ（県管理道路カメラ多数）"
+    url: "https://www.roadinfo.pref.yamaguchi.lg.jp/"
+    reason: "SPA(Laravel/Vue)で画像API未解明・利用規約未確認。robots.txt は404。要API調査（萩市鎖峠・県道32号ひばり峠など多数、有望）"
+  - name: "山口 秋吉台（美祢市観光協会）"
+    url: "http://122.250.5.56/viewer/live/ja/live.html"
+    reason: "Panasonic ビューア、cgi-bin/camera は401"
+  - name: "山口 光市 EyeLiveひかり（虹ヶ浜/室積/冠山総合公園/伊藤公記念公園）"
+    url: "http://camera1.city.hikari.lg.jp/"
+    reason: "Panasonic ビューア、cgi-bin/camera は401（他の静止画パス要調査。海岸カメラ4台で有望）"
+  - name: "山口 中国地整 佐波川新橋 YouTube / 小瀬川 YouTube"
+    url: "https://www.youtube.com/watch?v=elj-242Jn8Q"
+    reason: "oEmbed 401（uBHLYJkN4KA も401）"
+  - name: "山口 宇部魚市場 せり場A/B/C"
+    url: "https://ubefish.com/camera/fix_camera_a/"
+    reason: "4:00-6:30のみ配信"
+  - name: "山口 てしま旅館 猫庭 / 防府 あおいとり保護猫"
+    url: "https://www.youtube.com/@nekoniwa/live"
+    reason: "室内猫カメラ(healing候補だが地図用途外と判断・必要なら採用可 Jk1v2c80dX4 oEmbed 200)"
+  - name: "山口 関門海峡(新興製作所) 1aTepj89_9w"
+    url: "youtube"
+    reason: "404、既登録 98OuCgpMM9s が現行"
+  - name: "徳島 大鳴門橋（LIVE日本一周 絶景の旅）"
+    url: "https://www.youtube.com/watch?v=8H8szw9VLoc"
+    reason: "oEmbed 200 だが設置地点・運営実体不明(旅系チャンネル)。要判断"
+  - name: "徳島 三好市観光情報 ライブカメラ 約15台（大歩危橋/小歩危展望台/かずら橋/奥祖谷二重かずら橋/剣山リフト西島駅/井川スキー場山頂・ふもと/箸蔵寺/塩塚高原/黒沢湿原/池田ダム/道の駅三野 ほか）"
+    url: "https://miyoshi-tourism.jp/camera/"
+    reason: "mgis.city-miyoshi.jp の lc_jv2.php は Flash/Java ビューアで静止画URL未解明（lc_gw3.php 系を要調査）。最有望ジャンル"
+  - name: "徳島 剣山観光推進協議会（リフト西島駅）"
+    url: "https://tsurugisan.net/livecamera/"
+    reason: "YouTube channel embed だが現在ライブなし(4-11月・9-16:30のみ)"
+  - name: "徳島 かずら橋管理小屋/周辺道路（三好市観光協会）"
+    url: "https://www.youtube.com/@miyoshi-tourism/live"
+    reason: "/live が通常動画を返し定点ライブなし"
+  - name: "徳島 海部郡イントラネット カメラ群（宍喰海岸/大浜海岸/田井ノ浜/海部川河口/海南マリンセンター/ホテルリビエラししくい/鞆浦漁港）"
+    url: "http://cam08.kaifu-intra.jp/local/cam08.html"
+    reason: "cam08 はHTML応答するが画像URL未抽出(他ホストはDNS不安定)。海陽町役場運営で有望、要再調査"
+  - name: "徳島 美馬市 穴吹川（cam3）"
+    url: "http://cam3.city.mima.lg.jp"
+    reason: "AXIS カメラでスナップショットパス未解明(/axis-cgi/jpg/image.cgi 要試行)"
+  - name: "徳島 ケーブルテレビ徳島 本町交差点"
+    url: "https://www.youtube.com/@TV-Tokushima"
+    reason: "/live は既登録のかちどき橋(luOqDxsRiPU)を返す。本町交差点の video_id 未解決"
+  - name: "徳島 吉野川橋（徳島河川国道事務所）"
+    url: "https://cam.river.go.jp/cam/now/cctv_360007_81C00126.jpg"
+    reason: "kawabou 系で既登録の可能性大"
+  - name: "徳島 徳島県河川整備課 YouTube（新池川/鮎喰川/勝浦川飯谷/園瀬川/海部川 ほか）"
+    url: "https://www.youtube.com/channel/UCi1H5mkE0g5ye9RQE9trsyQ"
+    reason: "上記5件は oEmbed 401(埋め込み不可)。チャンネル内で埋め込み可の配信のみ採用(3件採用済)"

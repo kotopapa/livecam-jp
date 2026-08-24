@@ -1,0 +1,397 @@
+still:
+- id: curated-still-road-sendai-romen-0003
+  name: 仙台市路面情報 八木山（八木山動物公園前）
+  operator: 仙台市
+  category: road
+  prefecture: '04'
+  lat: 38.2415
+  lng: 140.8497
+  image_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/camera/thumb0003.jpg
+  page_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/
+  note: '仙台市建設局 路面情報（配信: 日本気象協会 micos）。thumbNNNN.jpg は320x180の静止画、Last-Modified が現在時刻(数分前)で更新中を確認。curl 200 image/jpeg。動画は camera/NNNN.mp4。利用条件記載なし→license=unknown。座標は地名から既知座標(太白区八木山本町 動物公園前)'
+- id: curated-still-road-sendai-romen-0008
+  name: 仙台市路面情報 五橋（新北目町ガード）
+  operator: 仙台市
+  category: road
+  prefecture: '04'
+  lat: 38.2545
+  lng: 140.879
+  image_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/camera/thumb0008.jpg
+  page_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/
+  note: '仙台市建設局 路面情報（配信: 日本気象協会 micos）。thumbNNNN.jpg は320x180の静止画、Last-Modified が現在時刻(数分前)で更新中を確認。curl 200 image/jpeg。動画は camera/NNNN.mp4。利用条件記載なし→license=unknown。座標は地名から既知座標(青葉区五橋 新北目町JRガード)'
+- id: curated-still-road-sendai-romen-0004
+  name: 仙台市路面情報 川平（川平市営住宅前）
+  operator: 仙台市
+  category: road
+  prefecture: '04'
+  lat: 38.2985
+  lng: 140.8455
+  image_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/camera/thumb0004.jpg
+  page_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/
+  note: '仙台市建設局 路面情報（配信: 日本気象協会 micos）。thumbNNNN.jpg は320x180の静止画、Last-Modified が現在時刻(数分前)で更新中を確認。curl 200 image/jpeg。動画は camera/NNNN.mp4。利用条件記載なし→license=unknown。座標は地名から既知座標(青葉区川平 市営住宅)'
+- id: curated-still-road-sendai-romen-0005
+  name: 仙台市路面情報 茂庭（茂庭台団地前）
+  operator: 仙台市
+  category: road
+  prefecture: '04'
+  lat: 38.223
+  lng: 140.79
+  image_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/camera/thumb0005.jpg
+  page_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/
+  note: '仙台市建設局 路面情報（配信: 日本気象協会 micos）。thumbNNNN.jpg は320x180の静止画、Last-Modified が現在時刻(数分前)で更新中を確認。curl 200 image/jpeg。動画は camera/NNNN.mp4。利用条件記載なし→license=unknown。座標は地名から既知座標(太白区茂庭台)'
+- id: curated-still-road-sendai-romen-0006
+  name: 仙台市路面情報 泉ヶ岳（スプリングバレースキー場手前）
+  operator: 仙台市
+  category: road
+  prefecture: '04'
+  lat: 38.402
+  lng: 140.718
+  image_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/camera/thumb0006.jpg
+  page_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/
+  note: '仙台市建設局 路面情報（配信: 日本気象協会 micos）。thumbNNNN.jpg は320x180の静止画、Last-Modified が現在時刻(数分前)で更新中を確認。curl 200 image/jpeg。動画は camera/NNNN.mp4。利用条件記載なし→license=unknown。座標は地名から既知座標(泉区福岡 泉ヶ岳)'
+- id: curated-still-road-sendai-romen-0007
+  name: 仙台市路面情報 秋保野尻
+  operator: 仙台市
+  category: road
+  prefecture: '04'
+  lat: 38.276
+  lng: 140.645
+  image_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/camera/thumb0007.jpg
+  page_url: https://micos-sa.jwa.or.jp/tohoku/sendaishi_romen/real/
+  note: '仙台市建設局 路面情報（配信: 日本気象協会 micos）。thumbNNNN.jpg は320x180の静止画、Last-Modified が現在時刻(数分前)で更新中を確認。curl 200 image/jpeg。動画は camera/NNNN.mp4。利用条件記載なし→license=unknown。座標は地名から既知座標(太白区秋保町 野尻)'
+- id: curated-still-road-fukuoka-urban-exp-1
+  name: 福岡都市高速 西公園
+  operator: 福岡北九州高速道路公社
+  category: road
+  prefecture: '40'
+  lat: 33.5975
+  lng: 130.38
+  image_url: https://www.fk-tosikou.or.jp/douro/camera/html/04_1.jpeg
+  page_url: https://www.fk-tosikou.or.jp/douro/camera/fukuoka.shtml
+  note: 福岡北九州高速道路公社 福岡都市高速ライブカメラ。ページはJSで html/day.txt を読み込み ./html/04_N.jpeg?<ts> を表示。クエリ無しの固定URL https://www.fk-tosikou.or.jp/douro/camera/html/04_N.jpeg で curl 200 image/jpeg、Last-Modified が現在時刻(1分更新)。サイトポリシーに転載禁止の記載なし(確認済み)→license=unknown。座標は都市高速ランプ位置の既知座標(環状線 西公園ランプ 中央区西公園)
+- id: curated-still-road-fukuoka-urban-exp-2
+  name: 福岡都市高速 箱崎
+  operator: 福岡北九州高速道路公社
+  category: road
+  prefecture: '40'
+  lat: 33.618
+  lng: 130.424
+  image_url: https://www.fk-tosikou.or.jp/douro/camera/html/04_2.jpeg
+  page_url: https://www.fk-tosikou.or.jp/douro/camera/fukuoka.shtml
+  note: 福岡北九州高速道路公社 福岡都市高速ライブカメラ。ページはJSで html/day.txt を読み込み ./html/04_N.jpeg?<ts> を表示。クエリ無しの固定URL https://www.fk-tosikou.or.jp/douro/camera/html/04_N.jpeg で curl 200 image/jpeg、Last-Modified が現在時刻(1分更新)。サイトポリシーに転載禁止の記載なし(確認済み)→license=unknown。座標は都市高速ランプ位置の既知座標(箱崎ランプ/箱崎JCT 東区箱崎)
+- id: curated-still-road-fukuoka-urban-exp-3
+  name: 福岡都市高速 千代
+  operator: 福岡北九州高速道路公社
+  category: road
+  prefecture: '40'
+  lat: 33.606
+  lng: 130.415
+  image_url: https://www.fk-tosikou.or.jp/douro/camera/html/04_3.jpeg
+  page_url: https://www.fk-tosikou.or.jp/douro/camera/fukuoka.shtml
+  note: 福岡北九州高速道路公社 福岡都市高速ライブカメラ。ページはJSで html/day.txt を読み込み ./html/04_N.jpeg?<ts> を表示。クエリ無しの固定URL https://www.fk-tosikou.or.jp/douro/camera/html/04_N.jpeg で curl 200 image/jpeg、Last-Modified が現在時刻(1分更新)。サイトポリシーに転載禁止の記載なし(確認済み)→license=unknown。座標は都市高速ランプ位置の既知座標(千代ランプ 博多区千代)
+- id: curated-still-road-fukuoka-urban-exp-4
+  name: 福岡都市高速 博多駅
+  operator: 福岡北九州高速道路公社
+  category: road
+  prefecture: '40'
+  lat: 33.594
+  lng: 130.426
+  image_url: https://www.fk-tosikou.or.jp/douro/camera/html/04_4.jpeg
+  page_url: https://www.fk-tosikou.or.jp/douro/camera/fukuoka.shtml
+  note: 福岡北九州高速道路公社 福岡都市高速ライブカメラ。ページはJSで html/day.txt を読み込み ./html/04_N.jpeg?<ts> を表示。クエリ無しの固定URL https://www.fk-tosikou.or.jp/douro/camera/html/04_N.jpeg で curl 200 image/jpeg、Last-Modified が現在時刻(1分更新)。サイトポリシーに転載禁止の記載なし(確認済み)→license=unknown。座標は都市高速ランプ位置の既知座標(博多駅東ランプ 博多区博多駅東)
+- id: curated-still-road-fukuoka-urban-exp-5
+  name: 福岡都市高速 豊
+  operator: 福岡北九州高速道路公社
+  category: road
+  prefecture: '40'
+  lat: 33.5885
+  lng: 130.44
+  image_url: https://www.fk-tosikou.or.jp/douro/camera/html/04_5.jpeg
+  page_url: https://www.fk-tosikou.or.jp/douro/camera/fukuoka.shtml
+  note: 福岡北九州高速道路公社 福岡都市高速ライブカメラ。ページはJSで html/day.txt を読み込み ./html/04_N.jpeg?<ts> を表示。クエリ無しの固定URL https://www.fk-tosikou.or.jp/douro/camera/html/04_N.jpeg で curl 200 image/jpeg、Last-Modified が現在時刻(1分更新)。サイトポリシーに転載禁止の記載なし(確認済み)→license=unknown。座標は都市高速ランプ位置の既知座標(豊ランプ 博多区豊)
+- id: curated-still-road-chitamaru-01
+  name: ちたまる定点カメラ 西知多産業道路 大田町付近
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: road
+  prefecture: '23'
+  lat: 34.99
+  lng: 136.912
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=1
+  page_url: https://www.medias-ch.com/camera/cameraimg__1.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(東海市大田町)'
+- id: curated-still-road-chitamaru-02
+  name: ちたまる定点カメラ 名和北交差点
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: road
+  prefecture: '23'
+  lat: 35.035
+  lng: 136.908
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=2
+  page_url: https://www.medias-ch.com/camera/cameraimg__2.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(東海市名和町 名和北交差点)'
+- id: curated-still-road-chitamaru-03
+  name: ちたまる定点カメラ 名鉄太田川駅
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: other
+  prefecture: '23'
+  lat: 34.9917
+  lng: 136.9105
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=3
+  page_url: https://www.medias-ch.com/camera/cameraimg__3.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(東海市 名鉄太田川駅)'
+- id: curated-still-road-chitamaru-04
+  name: ちたまる定点カメラ JR大府駅
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: other
+  prefecture: '23'
+  lat: 35.017
+  lng: 136.962
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=4
+  page_url: https://www.medias-ch.com/camera/cameraimg__4.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(大府市 JR大府駅)'
+- id: curated-still-road-chitamaru-05
+  name: ちたまる定点カメラ 大府高校北交差点
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: road
+  prefecture: '23'
+  lat: 35.023
+  lng: 136.956
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=5
+  page_url: https://www.medias-ch.com/camera/cameraimg__5.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(大府市 大府高校北)'
+- id: curated-still-road-chitamaru-06
+  name: ちたまる定点カメラ 西知多産業道路 朝倉インター周辺
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: road
+  prefecture: '23'
+  lat: 34.954
+  lng: 136.89
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=6
+  page_url: https://www.medias-ch.com/camera/cameraimg__6.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(知多市新知 朝倉IC)'
+- id: curated-still-road-chitamaru-07
+  name: ちたまる定点カメラ 新舞子
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: coast
+  prefecture: '23'
+  lat: 34.964
+  lng: 136.886
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=7
+  page_url: https://www.medias-ch.com/camera/cameraimg__7.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(知多市新舞子)'
+- id: curated-still-road-chitamaru-08
+  name: ちたまる定点カメラ 東浦町役場周辺
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: other
+  prefecture: '23'
+  lat: 34.977
+  lng: 136.966
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=8
+  page_url: https://www.medias-ch.com/camera/cameraimg__8.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(東浦町緒川 役場)'
+- id: curated-still-road-chitamaru-09
+  name: ちたまる定点カメラ 衣浦港
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: port
+  prefecture: '23'
+  lat: 34.883
+  lng: 136.95
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=9
+  page_url: https://www.medias-ch.com/camera/cameraimg__9.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(半田市 衣浦港)'
+- id: curated-still-road-chitamaru-10
+  name: ちたまる定点カメラ 知多半島道路 東浦知多IC
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: road
+  prefecture: '23'
+  lat: 34.999
+  lng: 136.9515
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=10
+  page_url: https://www.medias-ch.com/camera/cameraimg__10.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(大府市桜木町 東浦知多IC)'
+- id: curated-still-road-chitamaru-11
+  name: ちたまる定点カメラ 天白川 名和町付近
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: river
+  prefecture: '23'
+  lat: 35.032
+  lng: 136.9
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=11
+  page_url: https://www.medias-ch.com/camera/cameraimg__11.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(東海市名和町 天白川)'
+- id: curated-still-road-chitamaru-12
+  name: ちたまる定点カメラ 境川・逢妻川 横根町付近
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: river
+  prefecture: '23'
+  lat: 35.008
+  lng: 136.983
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=12
+  page_url: https://www.medias-ch.com/camera/cameraimg__12.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(大府市横根町 境川)'
+- id: curated-still-road-chitamaru-13
+  name: ちたまる定点カメラ 中部国際空港 連絡橋
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: road
+  prefecture: '23'
+  lat: 34.87
+  lng: 136.83
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=13
+  page_url: https://www.medias-ch.com/camera/cameraimg__13.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(常滑市 セントレア連絡橋)'
+- id: curated-still-road-chitamaru-14
+  name: ちたまる定点カメラ 国道155号常滑市 午新田交差点周辺
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: road
+  prefecture: '23'
+  lat: 34.899
+  lng: 136.837
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=14
+  page_url: https://www.medias-ch.com/camera/cameraimg__14.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(常滑市 午新田交差点)'
+- id: curated-still-road-chitamaru-15
+  name: ちたまる定点カメラ 篠島南西方向
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: coast
+  prefecture: '23'
+  lat: 34.672
+  lng: 136.925
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=15
+  page_url: https://www.medias-ch.com/camera/cameraimg__15.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(南知多町篠島)'
+- id: curated-still-road-chitamaru-16
+  name: ちたまる定点カメラ 横須賀高校北西交差点
+  operator: 知多メディアスネットワーク（ちたまるNavi）
+  category: road
+  prefecture: '23'
+  lat: 35.011
+  lng: 136.916
+  image_url: https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=16
+  page_url: https://www.medias-ch.com/camera/cameraimg__16.html
+  note: '知多メディアスネットワーク(CATV)の定点カメラ。画像URL https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=N で curl 200 image/jpeg（同内容が https://www.chitamaru.jp/livecamera/Get.cgi?n=N でも配信）。medias-ch.com/camera/ に転載禁止記載なし→license=unknown。ページ: https://www.medias-ch.com/camera/cameraimg__N.html。座標は地名の既知座標(東海市養父町 横須賀高校)'
+- id: curated-still-kyoto-kosha-mitodani
+  name: 京丹後大宮IC付近（水戸谷トンネル京丹後側）
+  operator: 京都府道路公社
+  category: road
+  prefecture: '26'
+  lat: 35.581
+  lng: 135.101
+  image_url: https://kyo-doko.sakura.ne.jp/livecamera/mitodanitnkyoutango.jpg
+  page_url: https://www.kyo-miti.jp/livecameraNew/
+  note: 既登録の大師山/上宮津と同系(60秒refresh)。curl 200 image/jpeg、Last-Modified現在時刻。ページに転載禁止記載なし→license=unknown。座標は京丹後大宮IC(京丹後市大宮町)の既知座標
+- id: curated-still-road-whiteroad-tenbodai
+  name: 白山白川郷ホワイトロード 展望台デッキ
+  operator: 白山白川郷ホワイトロード（石川県・岐阜県）
+  category: scenic
+  prefecture: '17'
+  lat: 36.238
+  lng: 136.791
+  image_url: https://hs-whiteroad.jp/_webcam/camA.jpg
+  page_url: https://hs-whiteroad.jp/
+  note: '白山白川郷ホワイトロード公式サイトのライブカメラ(タブ: 展望台デッキ)。https://hs-whiteroad.jp/_webcam/camA.jpg で curl 200 image/jpeg、Last-Modified当日(開通期間中のみ更新。冬期閉鎖中は img/live_camera_winter.png に差替)。privacy-policyにリンク自由と記載、転載禁止記載なし→license=unknown。座標は三方岩駐車場展望台(白山市尾添)の既知座標。要レビュー'
+- id: curated-still-road-whiteroad-gassho
+  name: 白山白川郷ホワイトロード 合掌集落
+  operator: 白山白川郷ホワイトロード（石川県・岐阜県）
+  category: scenic
+  prefecture: '21'
+  lat: 36.264
+  lng: 136.88
+  image_url: https://hs-whiteroad.jp/_webcam/camB.jpg
+  page_url: https://hs-whiteroad.jp/
+  note: '白山白川郷ホワイトロード公式サイトのライブカメラ(タブ: 合掌集落)。https://hs-whiteroad.jp/_webcam/camB.jpg で curl 200 image/jpeg、Last-Modified当日(開通期間中のみ更新。冬期閉鎖中は img/live_camera_winter.png に差替)。privacy-policyにリンク自由と記載、転載禁止記載なし→license=unknown。座標は岐阜側馬狩付近と推定(プレビューで白川郷方向か要確認)'
+- id: curated-still-road-yugawara-town
+  name: 湯河原町ライブカメラ（真鶴道路方面）
+  operator: 湯河原町
+  category: road
+  prefecture: '14'
+  lat: 35.147
+  lng: 139.068
+  image_url: http://live.town.yugawara.kanagawa.jp/-wvhttp-01-/image.cgi?v=jpg:1280x720
+  page_url: https://www.town.yugawara.kanagawa.jp/site/yugawara2211/
+  note: 神奈川県道路公社のライブカメラページから「真鶴道路（湯河原町提供）」としてリンク。Canon VBカメラ、HEADは501だがGETで200 image/jpeg(74KB)。町ページに「リンクを張る際は『湯河原町提供』と明記」の条件あり→note表示要。設置場所は町役場屋上と推定(既知座標)、要レビュー
+youtube: []
+skipped:
+- name: 秋田市 地下道(アンダーパス)ライブカメラ 6台(明田/牛島西/茨島・大住/楢山大元町/八幡田/天徳寺)
+  url: https://www.city.akita.lg.jp/kurashi/doro-koen/1007154/1034493/1041503.html
+  reason: 配信は lve.jp のストリーミング(外部リンク)。市ページ内の jpg はLast-Modified 2024年の見本静止画で更新されない→固定静止画URLなし
+- name: 仙台市 市内路面状況ページ
+  url: https://www.city.sendai.jp/iji/kurashi/machi/kotsu/tsuko/romen.html
+  reason: ページ404。実体はJWA micos の路面情報(採用済み)
+- name: 広島高速道路公社 ライブカメラ
+  url: https://www.h-exp.or.jp/post-18388/
+  reason: 「ライブカメラ画像への無断リンクや、画像の転載および加工は禁止」と明記→転載禁止
+- name: '広島市 道路情報ライブカメラ(道守人 kouiki-nw.jp 29地点: 小田JRアンダー等)'
+  url: https://www.city.hiroshima.lg.jp/living/doro-kotsu-kasen/1021384/1026405/1039463.html
+  reason: 画像URLが /pic/image/Michimorito/CA-059/YYYYMMDD_HHMMSS.jpg のタイムスタンプ付きで秒が毎回変わる。latest系URLなし(404)、ディレクトリ403→固定URL取得不能(都度解決が必要)
+- name: 名古屋市 道路・河川等監視情報システム
+  url: https://www.rdcamimage.city.nagoya.jp/public_html/all_map.asp
+  reason: 利用規約同意(POST+cookie)必須、画像は cam_img_mobile/<id><YYYYMMDDHHMM>.jpg のタイムスタンプ付きで固定URLなし。国交省・愛知県提供画像も混在
+- name: 兵庫県道路公社 播但連絡道路 ライブカメラ1 和田山JCT
+  url: https://www.h-dorokosya.or.jp/bantan/live/
+  reason: 既登録(国交省豊岡 C02406.jpg をそのまま掲載、prvs mlit-roadinfo-86c02406 和田山JCT1 と同一)
+- name: 兵庫県道路公社 播但連絡道路 ライブカメラ2 生野北第1ランプ付近
+  url: https://www.h-dorokosya.or.jp/bantan/live/
+  reason: 冬期のみ配信。現在は2019年更新の静止PNG(live-1.png)が置かれているだけで固定ライブURL未確認
+- name: 神奈川県道路公社 ライブカメラ 6台(衣笠IC/林出口/岩大橋/湯河原橋/長者ヶ崎/逗葉新道)
+  url: https://www.kdt-kousha.or.jp/live_camera/
+  reason: 既登録(curated-still-kdt-*)。逗子海岸駐車場は運用終了
+- name: 静岡県道路公社 ライブカメラ(伊豆スカイライン/箱根スカイライン/浜名湖新橋)
+  url: https://camera.siz-road.or.jp/
+  reason: 伊豆スカイライン・浜名湖新橋は既登録(curated-still-shizuoka-kosha-*)。箱根スカイラインはページ上で画像URL特定できず(JS)→未確認
+- name: 京都府道路公社 大師山トンネル・上宮津橋
+  url: https://www.kyo-miti.jp/livecameraNew/
+  reason: 既登録
+- name: 滋賀県道路公社 琵琶湖大橋有料道路 ライブカメラ
+  url: https://www.shiga-dourokousha.or.jp/biwako/
+  reason: トップに「静止画像：約60秒に一度更新」とあるがページHTML内に画像URLなし(JS/別ホスト)、特定できず
+- name: 大阪府道路公社(箕面有料道路等)
+  url: https://www.osaka-road.or.jp/
+  reason: サイトにライブカメラ提供なし
+- name: 栃木県道路公社(日光宇都宮道路)
+  url: https://www.totidoko.or.jp/
+  reason: サイトにライブカメラ提供なし(SNSのみ)
+- name: 千葉県道路公社
+  url: https://www.chiba-dourokousha.or.jp/
+  reason: サイトにライブカメラ提供なし
+- name: 長崎県道路公社(ながさき出島道路/川平有料道路/女神大橋)
+  url: https://www.nagasaki-dourokousha.or.jp/
+  reason: サイトにライブカメラ提供なし
+- name: 愛知道路コンセッション(知多半島道路・南知多道路・猿投グリーンロード)
+  url: https://www.arcc.jp/
+  reason: サイトにライブカメラ提供なし(東浦知多ICは知多メディアスのカメラを採用)
+- name: 名古屋高速道路公社
+  url: https://www.nagoya-expressway.or.jp/
+  reason: サイトにライブカメラ提供なし(新洲崎JCTはスターキャットのYouTube、別ジャンル)
+- name: JB本四高速(瀬戸大橋/しまなみ海道/明石海峡大橋)
+  url: https://www.jb-honshi.co.jp/customer_index/traffic/
+  reason: 公社サイトにライブカメラ提供なし。瀬戸大橋のカメラはKBN/海上保安庁備讃のもので道路公社ではない
+- name: 福井県道路公社 三方五湖レインボーライン
+  url: https://www.hozen.pref.fukui.lg.jp/hozen/yuki/sp/camera-list.html
+  reason: 公社は2022年解散、県道路保全課(みち情報ネットふくい)に移管。福井県分は既登録(196台)
+- name: 石川県道路公社
+  url: https://douro.pref.ishikawa.lg.jp/
+  reason: 有料道路は県に移管済み、石川みち情報ネットは既登録(188台)
+- name: 岐阜県道路公社
+  url: https://douro.pref.gifu.lg.jp/
+  reason: 解散済み。岐阜県の道路カメラは既登録(199台)
+- name: 山口県道路公社
+  url: https://www.roadinfo.pref.yamaguchi.lg.jp/
+  reason: 公社独自カメラなし(県 道路見えるナビは県ジャンル)
+- name: 宮城県道路公社(仙台松島道路)
+  url: http://roadgis.pref.miyagi.jp/roadgis/index.html
+  reason: 公社サイトにカメラ提供なし。宮城県道路管理ライブカメラは県ジャンル(既登録9台)
+- name: 茨城/新潟/富山/長野/三重/奈良/和歌山/香川/愛媛/熊本/大分/鹿児島/沖縄/北海道 各道路公社
+  url: ''
+  reason: 多くが解散済みまたは公式サイトにライブカメラ提供なし(ドメイン推定でも到達せず)。検索上限到達のため未確認分は要再調査
+- name: 宮崎県道路公社 / 群馬県道路 / 埼玉道路 / NEXCO東中西 / 首都高 / 阪神高速 / ドラぷら / www.road.cgr.mlit.go.jp
+  url: ''
+  reason: 転載禁止確定(BRIEF指定)
+- name: 箱根ターンパイク 大観山
+  url: https://www.htpl.co.jp/
+  reason: 既登録(curated-hakone-turnpike YouTube)
+- name: 芦ノ湖スカイライン
+  url: https://www.ashinoko-skyline.co.jp/
+  reason: サイトにライブカメラ提供なし
+- name: 政令市(札幌/さいたま/千葉/川崎/相模原/新潟/静岡/浜松/京都/大阪/堺/神戸/岡山/北九州/福岡/熊本)の道路・アンダーパス冠水カメラ
+  url: ''
+  reason: WebSearch上限到達後、Bing/DDGでは市公式の道路カメラページを特定できず。横浜市・神戸市・福岡市・北九州市等の河川カメラは既登録。要再調査

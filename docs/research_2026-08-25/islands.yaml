@@ -1,0 +1,1174 @@
+# 北方領土・全国離島ライブカメラ調査結果 (2026-08-24)
+# 検証: 静止画は curl で Content-Type: image/jpeg を確認、YouTubeは oEmbed 200 + watchページ isLiveNow:true(またはYouTube検索LIVEバッジ)を確認
+# 重複: data/cameras.json / curated_*.yaml を name・URL・video_id で grep 済み (下記は全て未登録)
+# 座標: Nominatimは429(レート制限)で使用不可だったため国土地理院 AddressSearch API(msearch.gsi.go.jp)で住所(大字)レベルを照合し、港・施設は地図読みで補正。noteの「概略」は大字中心相当
+
+still:
+  # ---------------- 北海道 ----------------
+  - id: curated-still-scenic-rebun-yakuba-rishirifuji
+    name: "礼文町役場から望む利尻富士"
+    operator: "礼文町"
+    category: scenic
+    prefecture: "01"
+    lat: 45.3021
+    lng: 141.0432
+    image_url: "https://www.town.rebun.hokkaido.jp/images/camera/camera_new.jpg"
+    page_url: "https://www.town.rebun.hokkaido.jp/"
+    note: "curl 200 image/jpeg(http→https 301)。礼文町役場(香深村)屋上。利用条件記載なし→license=unknown。STVの同画像ページ(stv.jp/webcam/rebun)は転載禁止のため町サイト直参照。座標: 礼文町役場住所"
+  - id: curated-still-scenic-kitano-kanaria-park
+    name: "北のカナリアパーク（礼文島）から利尻山"
+    operator: "礼文島観光協会"
+    category: scenic
+    prefecture: "01"
+    lat: 45.2584
+    lng: 141.0398
+    image_url: "https://www.rebun-island.jp/livecamera/camera.jpg"
+    page_url: "https://www.rebun-island.jp/livecamera/"
+    note: "curl 200 image/jpeg 41KB。観光協会運営、利用条件記載なし→unknown。座標: 北のカナリアパーク(礼文町香深村字ベッシュ)"
+  - id: curated-still-scenic-rishiri-town-mtrishiri
+    name: "利尻町役場 リアルタイム利尻山"
+    operator: "利尻町"
+    category: scenic
+    prefecture: "01"
+    lat: 45.187
+    lng: 141.1396
+    image_url: "https://rishiri-town.jp/wp-content/themes/rishiri/images/MtRishiri/mt-rishiri.jpg"
+    page_url: "https://rishiri-town.jp/観光・イベント/リアルタイム利尻山/"
+    note: "curl 200 image/jpeg(約1MB・高解像度)。更新間隔不明(数分)。利用条件記載なし→unknown。座標: 利尻町役場(沓形)"
+  - id: curated-still-other-haboro-yakuba
+    name: "羽幌町役場（天売・焼尻フェリー発着地）"
+    operator: "羽幌町（ウェザーニューズ配信基盤）"
+    category: other
+    prefecture: "01"
+    lat: 44.3606
+    lng: 141.6973
+    image_url: "https://webcam.wni.co.jp/GDG72770/camera.jpg"
+    page_url: "https://www.town.haboro.lg.jp/"
+    note: "curl 200 image/jpeg 72KB。webcam.wni.co.jp(ウェザーニューズ提供の自治体カメラホスティング)。天売・焼尻島内にはカメラ発見できず、羽幌港側の代替。WNI側の利用条件要確認→unknown"
+
+  # ---------------- 新潟 佐渡市（防災カメラ 17地点・1分更新）----------------
+  # page: https://www.city.sado.niigata.jp/soshiki/2003/46544.html 「今日の佐渡（ライブカメラ）」佐渡市防災課。利用条件記載なし→unknown。全て curl 200 image/jpeg
+  - id: curated-still-coast-sado-yahata
+    name: "佐渡市 八幡（真野湾）"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 37.9906
+    lng: 138.3392
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/01.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "地点↔画像番号の対応はライブカメラDB(livecam.asia)の記載を採用。1分更新。座標: 佐渡市八幡(概略)"
+  - id: curated-still-port-sado-futami
+    name: "佐渡市 二見港"
+    operator: "佐渡市"
+    category: port
+    prefecture: "15"
+    lat: 37.9785
+    lng: 138.2539
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/02.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 二見港"
+  - id: curated-still-coast-sado-himezu
+    name: "佐渡市 姫津"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 38.0836
+    lng: 138.2428
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/03.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市姫津"
+  - id: curated-still-coast-sado-nyugawa
+    name: "佐渡市 入川"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 38.1658
+    lng: 138.3563
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/04.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市入川"
+  - id: curated-still-coast-sado-iwayaguchi
+    name: "佐渡市 岩谷口"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 38.2544
+    lng: 138.4594
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/05.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市岩谷口"
+  - id: curated-still-coast-sado-urakawa
+    name: "佐渡市 浦川"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 38.201
+    lng: 138.4721
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/06.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市浦川"
+  - id: curated-still-coast-sado-yoshizumi
+    name: "佐渡市 吉住（羽吉）"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 38.1179
+    lng: 138.4183
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/07.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市羽吉"
+  - id: curated-still-coast-sado-ryotsu-okawa
+    name: "佐渡市 両津大川"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 38.0681
+    lng: 138.5502
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/08.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市両津大川"
+  - id: curated-still-coast-sado-akadama
+    name: "佐渡市 赤玉"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 37.999
+    lng: 138.5181
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/09.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市赤玉"
+  - id: curated-still-coast-sado-matsugasaki
+    name: "佐渡市 松ヶ崎"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 37.9205
+    lng: 138.4832
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/10.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市松ヶ崎"
+  - id: curated-still-port-sado-ogi
+    name: "佐渡市 小木港（佐渡汽船直江津航路）"
+    operator: "佐渡市"
+    category: port
+    prefecture: "15"
+    lat: 37.8152
+    lng: 138.2564
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/11.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 小木港"
+  - id: curated-still-coast-sado-konagase
+    name: "佐渡市 木流"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 37.8315
+    lng: 138.2412
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/12.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市木流"
+  - id: curated-still-coast-sado-senago
+    name: "佐渡市 背合"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 37.941
+    lng: 138.3226
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/13.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市背合"
+  - id: curated-still-scenic-sado-onogame
+    name: "佐渡市 大野亀"
+    operator: "佐渡市"
+    category: scenic
+    prefecture: "15"
+    lat: 38.3290
+    lng: 138.4330
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/14.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "市ページのメイン表示画像。1分更新。座標: 大野亀"
+  - id: curated-still-coast-sado-sawasaki
+    name: "佐渡市 沢崎"
+    operator: "佐渡市"
+    category: coast
+    prefecture: "15"
+    lat: 37.8246
+    lng: 138.2147
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/15.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 佐渡市沢崎"
+  - id: curated-still-dam-sado-niibo-dam
+    name: "佐渡市 新穂ダム"
+    operator: "佐渡市"
+    category: dam
+    prefecture: "15"
+    lat: 38.0146
+    lng: 138.4226
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/17.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。c_img/16.jpg も画像応答するが地点名不明(旧・両津港/相川春日崎は2025-11撤去)のため未採用。座標: 新穂ダム"
+  - id: curated-still-port-sado-akadomari
+    name: "佐渡市 赤泊港"
+    operator: "佐渡市"
+    category: port
+    prefecture: "15"
+    lat: 37.8930
+    lng: 138.4310
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/18.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "1分更新。座標: 赤泊港"
+
+  # ---------------- 愛知 篠島 ----------------
+  - id: curated-still-coast-chitamaru-shinojima
+    name: "篠島 南西方向（ちたまる防災カメラ）"
+    operator: "知多メディアスネットワーク（ちたまる）"
+    category: coast
+    prefecture: "23"
+    lat: 34.6700
+    lng: 136.9330
+    image_url: "https://bousaich.medias.co.jp/cgi-bin/Get.cgi?n=15"
+    page_url: "https://www.medias-ch.com/camera/cameraimg__15.html"
+    note: "curl 200 image/jpeg 65KB(cgi応答だが規則URL)。CATV局の防災カメラ、利用条件記載なし→unknown。座標: 篠島(概略)"
+
+  # ---------------- 兵庫 淡路市 防災監視カメラ ----------------
+  # page: http://awajicitycam.city.awaji.lg.jp/ 淡路市。new_image.php?camera=N が image/jpeg を返す(4以降はHTML=未設置)。利用条件記載なし→unknown
+  - id: curated-still-river-awaji-shizukigawa
+    name: "淡路市 志筑川（中田）"
+    operator: "淡路市"
+    category: river
+    prefecture: "28"
+    lat: 34.4317
+    lng: 134.8801
+    image_url: "http://awajicitycam.city.awaji.lg.jp/new_image.php?camera=1"
+    page_url: "http://awajicitycam.city.awaji.lg.jp/shizukigawa.php"
+    note: "curl 200 image/jpeg 24KB。httpのみ。座標: 淡路市中田(概略)"
+  - id: curated-still-port-awaji-eikou
+    name: "淡路市 江井港"
+    operator: "淡路市"
+    category: port
+    prefecture: "28"
+    lat: 34.4596
+    lng: 134.8221
+    image_url: "http://awajicitycam.city.awaji.lg.jp/new_image.php?camera=2"
+    page_url: "http://awajicitycam.city.awaji.lg.jp/eikou.php"
+    note: "curl 200 image/jpeg 25KB。座標: 江井港"
+  - id: curated-still-port-awaji-ikuha-gyokou
+    name: "淡路市 育波漁港"
+    operator: "淡路市"
+    category: port
+    prefecture: "28"
+    lat: 34.5243
+    lng: 134.896
+    image_url: "http://awajicitycam.city.awaji.lg.jp/new_image.php?camera=3"
+    page_url: "http://awajicitycam.city.awaji.lg.jp/ikuhagyokou.php"
+    note: "curl 200 image/jpeg 16KB。座標: 育波漁港"
+
+  # ---------------- 香川 小豆島 ----------------
+  - id: curated-still-scenic-shodoshima-kokusai-hotel-angelroad
+    name: "小豆島国際ホテル エンジェルロード"
+    operator: "小豆島国際ホテル（ウェザーニューズ配信基盤）"
+    category: scenic
+    prefecture: "37"
+    lat: 34.4830
+    lng: 134.1720
+    image_url: "https://webcam.wni.co.jp/VRL94816/camera.jpg"
+    page_url: "https://www.shodoshima-kh.jp/guide/live_camera.html"
+    note: "curl 200 image/jpeg 44KB。ホテル公式ページが webcam.wni.co.jp/VRL94816/loop.html を埋め込み。WNI側利用条件要確認→unknown。座標: 小豆島国際ホテル(土庄町銀波浦)"
+
+  # ---------------- 熊本 上天草市 総合防災情報サイト ----------------
+  # page: https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera 上天草市。cameraN.jpg (N=2..16) が image/jpeg を返す(1は404)。14-16は地点名未確認のため未採用。利用条件記載なし→unknown。
+  # 同市はYouTube(City Kamiamakusa: 3USLylIlQF4 樋島大橋 / BTYoS7X-xhE 串漁港・江樋戸港 / AJMFFwIoWu4 千束・蔵々 / Tr7_X2aUqBY 新田・尾越崎ほか)でも配信中だが複数地点切替のため固定静止画を採用
+  - id: curated-still-port-kamiamakusa-kushi-gyokou
+    name: "上天草市 串漁港（大矢野町上）"
+    operator: "上天草市"
+    category: port
+    prefecture: "43"
+    lat: 32.6000
+    lng: 130.4400
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera2.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg 122KB。地点名はライブカメラDB記載。座標: 大矢野町上(概略)"
+  - id: curated-still-river-kamiamakusa-oyanogawa1
+    name: "上天草市 大矢野川 第1"
+    operator: "上天草市"
+    category: river
+    prefecture: "43"
+    lat: 32.5830
+    lng: 130.4500
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera3.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 大矢野川(概略)"
+  - id: curated-still-river-kamiamakusa-oyanogawa2
+    name: "上天草市 大矢野川 第2"
+    operator: "上天草市"
+    category: river
+    prefecture: "43"
+    lat: 32.5850
+    lng: 130.4480
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera4.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 大矢野川(概略)"
+  - id: curated-still-river-kamiamakusa-oyanogawa3
+    name: "上天草市 大矢野川 第3"
+    operator: "上天草市"
+    category: river
+    prefecture: "43"
+    lat: 32.5870
+    lng: 130.4460
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera5.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 大矢野川(概略)"
+  - id: curated-still-port-kamiamakusa-ebito
+    name: "上天草市 江樋戸港"
+    operator: "上天草市"
+    category: port
+    prefecture: "43"
+    lat: 32.5960
+    lng: 130.4210
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera6.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 江樋戸港(概略)"
+  - id: curated-still-port-kamiamakusa-zozo-gyokou
+    name: "上天草市 蔵々漁港（維和島）"
+    operator: "上天草市"
+    category: port
+    prefecture: "43"
+    lat: 32.5600
+    lng: 130.4800
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera7.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 維和島蔵々(概略)"
+  - id: curated-still-road-kamiamakusa-chiju-kokudo
+    name: "上天草市 知十（国道266号）"
+    operator: "上天草市"
+    category: road
+    prefecture: "43"
+    lat: 32.4909
+    lng: 130.4136
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera8.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 松島町今泉(概略)"
+  - id: curated-still-road-kamiamakusa-chiju-kendo
+    name: "上天草市 知十（県道）"
+    operator: "上天草市"
+    category: road
+    prefecture: "43"
+    lat: 32.4915
+    lng: 130.413
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera9.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 松島町今泉(概略)"
+  - id: curated-still-road-kamiamakusa-sonobe
+    name: "上天草市 天草オレンジライン 園部"
+    operator: "上天草市"
+    category: road
+    prefecture: "43"
+    lat: 32.4681
+    lng: 130.3659
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera10.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 松島町教良木(概略)"
+  - id: curated-still-road-kamiamakusa-hinoshima-ohashi
+    name: "上天草市 樋島大橋"
+    operator: "上天草市"
+    category: road
+    prefecture: "43"
+    lat: 32.4500
+    lng: 130.3000
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera11.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 樋島大橋(龍ヶ岳町高戸)概略"
+  - id: curated-still-port-kamiamakusa-odo-kou
+    name: "上天草市 大道港"
+    operator: "上天草市"
+    category: port
+    prefecture: "43"
+    lat: 32.4330
+    lng: 130.3300
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera12.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 龍ヶ岳町大道(概略)"
+  - id: curated-still-port-kamiamakusa-odo-gyokou
+    name: "上天草市 大道漁港"
+    operator: "上天草市"
+    category: port
+    prefecture: "43"
+    lat: 32.4320
+    lng: 130.3320
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera13.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
+    note: "curl 200 image/jpeg。座標: 龍ヶ岳町大道(概略)"
+
+  # ---------------- 鹿児島 MBC南日本放送「かごしまライブカメラ」離島分 ----------------
+  # 既存台帳にMBC(cam1-amm/amk/ksn等)が多数登録済みのため同条件。全て curl 200 image/jpeg(md5でプレースホルダでないことを確認)
+  - id: curated-still-port-mbc-shimokoshiki-teuchi
+    name: "下甑島 手打（MBC）"
+    operator: "MBC南日本放送"
+    category: port
+    prefecture: "46"
+    lat: 31.6402
+    lng: 129.6944
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tuc1.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 33KB。座標: 薩摩川内市下甑町手打(概略)。※上甑島懐団地(cam1-sen8)はプレースホルダ画像(md5同一)のため見送り"
+  - id: curated-still-coast-mbc-kikai-wan
+    name: "喜界島 湾（MBC・喜界町）"
+    operator: "MBC南日本放送（喜界町設置）"
+    category: coast
+    prefecture: "46"
+    lat: 28.3134
+    lng: 129.9377
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-kki1.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 70KB。喜界町公式カメラ(camera.town.kikai.lg.jp)はPanasonicビューアで静止画URL取得不能のためMBC経由を採用。座標: 喜界町湾(役場付近)"
+  - id: curated-still-coast-mbc-china-town
+    name: "沖永良部島 知名町（MBC）"
+    operator: "MBC南日本放送（知名町設置）"
+    category: coast
+    prefecture: "46"
+    lat: 27.3386
+    lng: 128.5739
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-chi1.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 71KB。座標: 知名町役場"
+  - id: curated-still-port-mbc-wadomari
+    name: "沖永良部島 和泊町和泊（和泊港方面・MBC）"
+    operator: "MBC南日本放送（和泊町設置）"
+    category: port
+    prefecture: "46"
+    lat: 27.392
+    lng: 128.6555
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-in_wad2.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 43KB。cam1-in_wad1.jpg も応答するが地点名未確認のため未採用。座標: 和泊町役場付近(概略)"
+  - id: curated-still-port-mbc-kuchinoshima-nishinohama
+    name: "口之島 西之浜漁港（十島村・MBC）"
+    operator: "MBC南日本放送（十島村港監視カメラ）"
+    category: port
+    prefecture: "46"
+    lat: 29.9784
+    lng: 129.9169
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tkr_kuc.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 45KB。十島村港監視カメラシステム(210.237.44.104:8080)は現在メンテナンス表示で静止画URLなし。座標: 口之島西之浜港(概略)"
+  - id: curated-still-port-mbc-nakanoshima-kou
+    name: "中之島港（十島村・MBC）"
+    operator: "MBC南日本放送（十島村港監視カメラ）"
+    category: port
+    prefecture: "46"
+    lat: 29.8580
+    lng: 129.8530
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tkr_nak.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 45KB。座標: 中之島港(概略)"
+  - id: curated-still-port-mbc-tairajima-higashinohama
+    name: "平島 東之浜港（十島村・MBC）"
+    operator: "MBC南日本放送（十島村港監視カメラ）"
+    category: port
+    prefecture: "46"
+    lat: 29.6850
+    lng: 129.5350
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tkr_hig.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 46KB。座標: 平島東之浜港(概略)"
+  - id: curated-still-port-mbc-tairajima-minaminohama
+    name: "平島 南之浜港（十島村・MBC）"
+    operator: "MBC南日本放送（十島村港監視カメラ）"
+    category: port
+    prefecture: "46"
+    lat: 29.6780
+    lng: 129.5300
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tkr_tai.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 42KB。座標: 平島南之浜港(概略)"
+  - id: curated-still-port-mbc-suwanosejima-kiriishi
+    name: "諏訪之瀬島 切石港（十島村・MBC）"
+    operator: "MBC南日本放送（十島村港監視カメラ）"
+    category: port
+    prefecture: "46"
+    lat: 29.6050
+    lng: 129.7000
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tkr_suw.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 44KB。座標: 切石港(概略)"
+  - id: curated-still-port-mbc-akusekijima-yasurahama
+    name: "悪石島 やすら浜港（十島村・MBC）"
+    operator: "MBC南日本放送（十島村港監視カメラ）"
+    category: port
+    prefecture: "46"
+    lat: 29.4609
+    lng: 129.599
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tkr_aku.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 46KB。MBCページ特設欄で「悪石島 やすら浜港」=cam1-tkr_aku を確認。座標: やすら浜港(概略)"
+  - id: curated-still-port-mbc-kodakarajima-kou
+    name: "小宝島港（十島村・MBC）"
+    operator: "MBC南日本放送（十島村港監視カメラ）"
+    category: port
+    prefecture: "46"
+    lat: 29.2235
+    lng: 129.3248
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tkr_kot.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 40KB。MBCページ特設欄で確認。座標: 小宝島港(概略)"
+  - id: curated-still-port-mbc-takarajima-maegomori
+    name: "宝島 前籠漁港（十島村・MBC）"
+    operator: "MBC南日本放送（十島村港監視カメラ）"
+    category: port
+    prefecture: "46"
+    lat: 29.1431
+    lng: 129.2078
+    image_url: "https://www.mbc.co.jp/web-cam/img/cam1-tkr_tak.jpg"
+    page_url: "https://www.mbc.co.jp/web-cam/"
+    note: "curl 200 image/jpeg 49KB。座標: 前籠漁港(概略)"
+  - id: curated-still-other-amagi-yakuba
+    name: "徳之島 天城町役場（平土野）"
+    operator: "天城町（ウェザーニューズ配信基盤）"
+    category: other
+    prefecture: "46"
+    lat: 27.8117
+    lng: 128.8977
+    image_url: "https://webcam.wni.co.jp/DNJ74343/camera.jpg"
+    page_url: "https://www.town.amagi.lg.jp/"
+    note: "curl 200 image/jpeg 77KB。webcam.wni.co.jp ホスティング(WNI側利用条件要確認→unknown)。座標: 天城町役場"
+  - id: curated-still-scenic-yoron-denshi-okinawa-hokubu
+    name: "与論島から望む沖縄本島北部（与論電子）"
+    operator: "与論電子"
+    category: scenic
+    prefecture: "46"
+    lat: 27.0374
+    lng: 128.4144
+    image_url: "http://www.ne.jp/asahi/yoron/tv/okinawa2.jpg"
+    page_url: "http://www.ne.jp/asahi/yoron/tv/"
+    note: "curl 200 image/jpeg 73KB。httpのみ。民間(電器店)運営、更新間隔・利用条件不明→unknown。座標: 与論町立長(概略)"
+
+  # ---------------- 沖縄県 河川防災カメラ（本島北部）----------------
+  - id: curated-still-river-okinawa-genkagawa-genka
+    name: "源河川 源河（名護市）"
+    operator: "沖縄県"
+    category: river
+    prefecture: "47"
+    lat: 26.6139
+    lng: 128.0768
+    image_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-64.jpg"
+    page_url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+    note: "curl 200 image/jpeg 44KB、10分更新(ページ記載)。httpのみ。県河川カメラは台帳未登録(grep 0件)のため他地点も一括取り込み候補(img_cam/p-NN.jpg)。p-65(大井川/今帰仁)・p-66(満名川/本部)は同一サイズ=調整中プレースホルダで見送り。座標: 名護市源河(概略)"
+
+  # ---------------- 環境省 インターネット自然研究所（既存sizenkenソースと同形式）----------------
+  - id: curated-still-scenic-sizenken-rausu-kunashiri-tenbo
+    name: "羅臼国後展望塔 知床半島・羅臼の山々（環境省）"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "01"
+    lat: 44.0219
+    lng: 145.1894
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=74"
+    page_url: "https://www.sizenken.biodic.go.jp/about_camera/about.php?no=157"
+    note: "画像URLはタイムスタンプ付(camera_img/74_c/image/YYYY/MM/DD/NCS*.jpg)で台帳の既存sizenken各エントリと同形式→同じ解決方法で取り込み。台帳に74_cは未登録。座標: 羅臼国後展望塔(羅臼町礼文町)"
+  - id: curated-still-scenic-sizenken-yakushima-tachudake
+    name: "屋久島 太忠岳（環境省）"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "46"
+    lat: 30.3400
+    lng: 130.5700
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=60"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=60"
+    note: "同上(60_c 未登録)。座標: 太忠岳方面(屋久島町・概略)"
+
+youtube:
+  # ---------------- 北方領土（日本側から望遠）----------------
+  - id: curated-scenic-nosappu-kaigarajima
+    name: "納沙布岬 北方館から歯舞群島・貝殻島"
+    operator: "北方領土問題対策協会（北方館）"
+    video_id: "wnramazO4XI"
+    category: scenic
+    prefecture: "01"
+    lat: 43.3855
+    lng: 145.8170
+    note: "oEmbed 200 / isLiveNow:true。公式ページ https://advoke.jpn.com/hoppou/passible.html に埋め込み。貝殻島灯台を望遠、冬は流氷。座標: 北方館(根室市納沙布36-6)"
+  - id: curated-scenic-nosappu-suishojima
+    name: "納沙布岬 北方館から歯舞群島・水晶島"
+    operator: "北方領土問題対策協会（北方館）"
+    video_id: "cdfTKT-M38k"
+    category: scenic
+    prefecture: "01"
+    lat: 43.3855
+    lng: 145.8170
+    note: "oEmbed 200 / isLiveNow:true。https://advoke.jpn.com/hoppou2/ja/video/video.html。座標: 北方館"
+  - id: curated-scenic-rausu-kunashiri-tenbo
+    name: "羅臼国後展望塔から国後島"
+    operator: "北方領土問題対策協会（羅臼町）"
+    video_id: "VyepphBHmcY"
+    category: scenic
+    prefecture: "01"
+    lat: 44.0219
+    lng: 145.1894
+    note: "oEmbed 200 / isLiveNow:true。https://advoke.jpn.com/rausu/ja/video/camera/index.html（羅臼町サイトからリンク）。座標: 羅臼国後展望塔(羅臼町礼文町32-1)"
+  # ---------------- 北海道離島 ----------------
+  - id: curated-scenic-okushiri-nabetsuruiwa
+    name: "奥尻島 鍋釣岩（ヒラキスポーツ）"
+    operator: "ニッチワークスDIY（ヒラキスポーツ・奥尻）"
+    video_id: "ZkCdSLZ5ZzI"
+    category: scenic
+    prefecture: "01"
+    lat: 42.1620
+    lng: 139.5180
+    note: "oEmbed 200 / isLiveNow:true。奥尻港・道道39号も映る。座標: 鍋釣岩付近(奥尻町奥尻)概略"
+  - id: curated-port-rishiri-oshidomari-ferry-peshi
+    name: "利尻島 鴛泊港フェリーターミナルからペシ岬"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "iBwjkDhl9ys"
+    category: port
+    prefecture: "01"
+    lat: 45.2420
+    lng: 141.2320
+    note: "oEmbed 200 / isLiveNow:true。座標: 鴛泊港フェリーターミナル"
+  - id: curated-port-rishiri-oshidomari-kou
+    name: "利尻島 鴛泊港（海の玄関）"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "8BwfUCuPcVE"
+    category: port
+    prefecture: "01"
+    lat: 45.2410
+    lng: 141.2300
+    note: "oEmbed 200 / isLiveNow:true。座標: 鴛泊港"
+  - id: curated-scenic-rishiri-peshimisaki
+    name: "利尻島 ペシ岬"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "Lvlm2e83hqM"
+    category: scenic
+    prefecture: "01"
+    lat: 45.2450
+    lng: 141.2330
+    note: "oEmbed 200 / isLiveNow:true。座標: ペシ岬"
+  - id: curated-coast-rishiri-maehama1
+    name: "利尻島 前浜（鴛泊）第1"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "aqXQI-SRigk"
+    category: coast
+    prefecture: "01"
+    lat: 45.2380
+    lng: 141.2250
+    note: "oEmbed 200 / isLiveNow:true。座標: 鴛泊前浜(概略)"
+  - id: curated-coast-rishiri-maehama2
+    name: "利尻島 前浜（鴛泊）第2"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "bAWueJBFcT0"
+    category: coast
+    prefecture: "01"
+    lat: 45.2380
+    lng: 141.2250
+    note: "oEmbed 200 / isLiveNow:true。座標: 鴛泊前浜(概略)"
+  - id: curated-scenic-rishiri-motodomari-rishirizan
+    name: "利尻島 旧本泊小学校から利尻山"
+    operator: "利尻島_旅番屋（YouTubeチャンネル）"
+    video_id: "ag_nRE1jbXk"
+    category: scenic
+    prefecture: "01"
+    lat: 45.2400
+    lng: 141.2000
+    note: "oEmbed 200 / isLiveNow:true。座標: 利尻富士町鴛泊字本泊(概略)"
+  - id: curated-scenic-rishiri-himenuma
+    name: "利尻島 姫沼園地"
+    operator: "Tetsu Kuro（YouTubeチャンネル）"
+    video_id: "_CTve3fF0W4"
+    category: scenic
+    prefecture: "01"
+    lat: 45.2190
+    lng: 141.2480
+    note: "oEmbed 200 / isLiveNow:true。座標: 姫沼"
+  - id: curated-scenic-rishiri-otadomarinuma
+    name: "利尻島 オタドマリ沼"
+    operator: "Tetsu Kuro（YouTubeチャンネル）"
+    video_id: "enBReBFAk7U"
+    category: scenic
+    prefecture: "01"
+    lat: 45.1000
+    lng: 141.2800
+    note: "oEmbed 200 / isLiveNow:true。座標: オタドマリ沼"
+  - id: curated-scenic-rishiri-senposhi-misaki
+    name: "利尻島 仙法志御崎公園"
+    operator: "Tetsu Kuro（YouTubeチャンネル）"
+    video_id: "5BG3KJVFRVM"
+    category: scenic
+    prefecture: "01"
+    lat: 45.1247
+    lng: 141.2139
+    note: "oEmbed 200 / isLiveNow:true。座標: 仙法志御崎公園"
+  # ---------------- 伊豆諸島・小笠原 ----------------
+  - id: curated-port-ogasawara-futami-mura
+    name: "父島 二見港（小笠原村ライブカメラ①）"
+    operator: "小笠原村"
+    video_id: "poluvhrt6Dk"
+    category: port
+    prefecture: "13"
+    lat: 27.0950
+    lng: 142.1940
+    note: "oEmbed 200 / isLiveNow:true。小笠原.TV(gajyumaru.it-ogasawara.com cam1)と同一映像。東京都港湾局playlist(既登録)とは別カメラ。座標: 二見港"
+  - id: curated-port-ogasawara-hahajima-okikou-mura
+    name: "母島 沖港（小笠原村ライブカメラ③）"
+    operator: "小笠原村"
+    video_id: "1s1N4e4qdpo"
+    category: port
+    prefecture: "13"
+    lat: 26.6400
+    lng: 142.1600
+    note: "oEmbed 200 / isLiveNow:true(同名の gHi2T3tBIlo は終了)。座標: 沖港"
+  - id: curated-river-ogasawara-yatsusegawa
+    name: "八ツ瀬川 八ツ瀬映像監視局（父島）"
+    operator: "東京都建設局（東京都水防チャンネル）"
+    video_id: "n1TtSZ7z7c0"
+    category: river
+    prefecture: "13"
+    lat: 27.0712
+    lng: 142.2096
+    note: "oEmbed 200 / isLiveNow:true。page https://www.kasen-suibo.metro.tokyo.lg.jp/ 。座標: 父島北袋沢(概略)"
+  - id: curated-port-toshima-village
+    name: "利島村ライブカメラ"
+    operator: "利島村"
+    video_id: "zKOa2NAlxXw"
+    category: port
+    prefecture: "13"
+    lat: 34.5291
+    lng: 139.282
+    note: "oEmbed 200 / 検索LIVEバッジ確認。チャンネル名『利島村ライブカメラ』(村公式と推定・要確認)。座標: 利島村(概略)"
+  - id: curated-port-hachijo-sokodo
+    name: "八丈島 底土港"
+    operator: "八丈町"
+    video_id: "1Vl2OrZkwsM"
+    category: port
+    prefecture: "13"
+    lat: 33.1200
+    lng: 139.8000
+    note: "oEmbed 200 / LIVEバッジ。ライブカメラDBで『八丈町役場による配信』。座標: 底土港"
+  - id: curated-coast-hachijo-nazumado
+    name: "八丈島 ナズマド（ホエールウォッチングカメラ）"
+    operator: "八丈町"
+    video_id: "QVcanRNNFc8"
+    category: coast
+    prefecture: "13"
+    lat: 33.1270
+    lng: 139.7580
+    note: "oEmbed 200 / LIVEバッジ。八丈町役場配信(ライブカメラDB)。座標: ナズマド(大賀郷)概略"
+  - id: curated-port-aogashima-sanpo-village
+    name: "青ヶ島 三宝港（青ヶ島村）"
+    operator: "青ヶ島村"
+    video_id: "mkr8aUEnWuM"
+    category: port
+    prefecture: "13"
+    lat: 32.4600
+    lng: 139.7500
+    note: "oEmbed 200 / LIVEバッジ。ライブカメラDBで『青ヶ島村役場による配信』(チャンネル名は『ストリーミングアカウント』)。都港湾局playlistとは別。座標: 三宝港"
+  # ---------------- 淡路島 ----------------
+  - id: curated-road-awaji-sa-akashi-kaikyo
+    name: "淡路SA（上り）から明石海峡大橋"
+    operator: "JBハイウェイサービス（本四高速グループ）"
+    video_id: "wVYiVODQAkg"
+    category: road
+    prefecture: "28"
+    lat: 34.5830
+    lng: 135.0100
+    note: "oEmbed 200 / isLiveNow:true。本四高速は転載禁止リスト対象外だが利用条件未確認→unknown。座標: 淡路SA上り(淡路市岩屋)"
+  - id: curated-coast-awaji-shevron-place
+    name: "淡路島 SHEVRON PLACE（下司）"
+    operator: "SHEVRON PLACE"
+    video_id: "lJ_pJCUeRyA"
+    category: coast
+    prefecture: "28"
+    lat: 34.4099
+    lng: 134.8829
+    note: "oEmbed 200 / LIVEバッジ。店舗運営。座標: 淡路市下司(概略)"
+  # ---------------- 愛知（離島玄関口）----------------
+  - id: curated-port-morozaki-kou
+    name: "師崎港（日間賀島・篠島航路）"
+    operator: "南知多町観光協会"
+    video_id: "C3yW6ecbclA"
+    category: port
+    prefecture: "23"
+    lat: 34.6870
+    lng: 136.9720
+    note: "oEmbed 200 / LIVEバッジ。本土側だが離島航路発着港。座標: 師崎港"
+  # ---------------- 壱岐（壱岐市ケーブルテレビ）----------------
+  - id: curated-port-iki-ashibe
+    name: "壱岐 芦辺港"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "NR5x9VHjpuE"
+    category: port
+    prefecture: "42"
+    lat: 33.8000
+    lng: 129.7500
+    note: "oEmbed 200 / isLiveNow:true。座標: 芦辺港"
+  - id: curated-port-iki-gonoura
+    name: "壱岐 郷ノ浦港"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "pSdtW7OOWig"
+    category: port
+    prefecture: "42"
+    lat: 33.7400
+    lng: 129.6900
+    note: "oEmbed 200 / isLiveNow:true。座標: 郷ノ浦港"
+  - id: curated-port-iki-katsumoto
+    name: "壱岐 勝本港"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "CYHGeUeYE0c"
+    category: port
+    prefecture: "42"
+    lat: 33.8500
+    lng: 129.6900
+    note: "oEmbed 200 / isLiveNow:true。座標: 勝本港"
+  - id: curated-port-iki-indoji
+    name: "壱岐 印通寺港"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "vKlKHcoX2d0"
+    category: port
+    prefecture: "42"
+    lat: 33.7400
+    lng: 129.7700
+    note: "oEmbed 200 / isLiveNow:true。座標: 印通寺港"
+  - id: curated-coast-iki-yunomoto-wan
+    name: "壱岐 湯本湾（湯本温泉）"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "V2urW9TBKz4"
+    category: coast
+    prefecture: "42"
+    lat: 33.8200
+    lng: 129.6800
+    note: "oEmbed 200 / isLiveNow:true。座標: 勝本町立石西触(概略)"
+  - id: curated-coast-iki-kuyoshihama
+    name: "壱岐 清石浜"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "orjoGv9Z1ng"
+    category: coast
+    prefecture: "42"
+    lat: 33.7900
+    lng: 129.7600
+    note: "oEmbed 200 / isLiveNow:true。座標: 清石浜(芦辺浦)概略"
+  - id: curated-scenic-iki-kojima-jinja
+    name: "壱岐 小島神社"
+    operator: "壱岐市ケーブルテレビ（イキテレ）"
+    video_id: "40a1tFRC8sg"
+    category: scenic
+    prefecture: "42"
+    lat: 33.7800
+    lng: 129.7600
+    note: "oEmbed 200 / isLiveNow:true。座標: 小島神社(芦辺町諸吉)概略"
+  # ---------------- 五島列島 ----------------
+  - id: curated-port-ojika-kou
+    name: "小値賀港"
+    operator: "株式会社にんじんネットソリューションズ"
+    video_id: "CViFccMM_GA"
+    category: port
+    prefecture: "42"
+    lat: 33.191
+    lng: 129.0589
+    note: "oEmbed 200 / isLiveNow:true。座標: 小値賀港(笛吹)"
+  - id: curated-scenic-ojika-shimayado-goen
+    name: "小値賀島 島宿御縁から海"
+    operator: "島宿御縁（御縁チャンネル）"
+    video_id: "HXRBcbOmf-A"
+    category: scenic
+    prefecture: "42"
+    lat: 33.1923
+    lng: 129.0532
+    note: "oEmbed 200 / isLiveNow:true。24時間LIVE。座標: 小値賀町笛吹郷(概略)"
+  - id: curated-healing-ojika-goen-nekoniwa
+    name: "小値賀島 島宿御縁 保護猫の庭"
+    operator: "島宿御縁（御縁チャンネル）"
+    video_id: "z58SAyF_FXY"
+    category: healing
+    prefecture: "42"
+    lat: 33.1923
+    lng: 129.0532
+    note: "oEmbed 200 / LIVEバッジ。座標: 同上"
+  - id: curated-other-goto-tsubaki-airport
+    name: "五島つばき空港"
+    operator: "五島つばき空港（長崎空港ビルディング）"
+    video_id: "ftudtfg66TU"
+    category: other
+    prefecture: "42"
+    lat: 32.6660
+    lng: 128.8330
+    note: "oEmbed 200 / LIVEバッジ。座標: 五島つばき空港"
+  # ---------------- 天草 ----------------
+  - id: curated-other-amakusa-airport
+    name: "天草空港"
+    operator: "天草みぞかショップ（天草エアライン関連）"
+    video_id: "tSp0OIjjwnQ"
+    category: other
+    prefecture: "43"
+    lat: 32.4820
+    lng: 130.1590
+    note: "oEmbed 200 / isLiveNow:true。天草エアライン公式(PVJz9xQWECU)は現在非ライブ。座標: 天草空港"
+  - id: curated-healing-yushima-nekojima
+    name: "湯島（猫島）定点カメラ"
+    operator: "湯島猫島ありのまま（YouTubeチャンネル）"
+    video_id: "g-tfZ65pdn4"
+    category: healing
+    prefecture: "43"
+    lat: 32.6027
+    lng: 130.3378
+    note: "oEmbed 200 / isLiveNow:true。座標: 上天草市大矢野町湯島"
+  - id: curated-port-kab-ushibuka-kou
+    name: "天草 牛深港（KAB）"
+    operator: "熊本朝日放送（KAB）"
+    video_id: "wOCxBhh_CUI"
+    category: port
+    prefecture: "43"
+    lat: 32.1930
+    lng: 130.0270
+    note: "oEmbed 200 / LIVEバッジ。ライブカメラDBは【期間限定】表記→要継続確認。RKK牛深港(既登録)とは別局。座標: 牛深港"
+  # ---------------- 周防大島 ----------------
+  - id: curated-road-suo-oshima-ohashi
+    name: "大島大橋（周防大島）"
+    operator: "アイ・キャン（岩国市ケーブルテレビ）"
+    video_id: "xGfw98KW8g0"
+    category: road
+    prefecture: "35"
+    lat: 33.9300
+    lng: 132.2200
+    note: "oEmbed 200 / isLiveNow:true。座標: 大島大橋"
+  # ---------------- 鹿児島離島 ----------------
+  - id: curated-volcano-kyt-kuchinoerabujima
+    name: "口永良部島（KYT情報カメラ）"
+    operator: "KYT鹿児島読売テレビ"
+    video_id: "r4CcpvDcUZE"
+    category: volcano
+    prefecture: "46"
+    lat: 30.4561
+    lng: 130.2229
+    note: "oEmbed 200 / isLiveNow:true。座標: 口永良部島本村(概略・カメラ設置位置要確認)"
+  - id: curated-scenic-yakushima-nagatadake
+    name: "屋久島 永田岳（4K）"
+    operator: "ライブカメラ見ませんか【Shingenn】（YouTubeチャンネル）"
+    video_id: "dPO_C5ytfrM"
+    category: scenic
+    prefecture: "46"
+    lat: 30.3645
+    lng: 130.384
+    note: "oEmbed 200 / isLiveNow:true。個人。座標: 屋久島町永田(概略)"
+  - id: curated-coast-yakushima-harutahama-oki
+    name: "屋久島 安房 春田浜沖（光丸）"
+    operator: "光丸（YouTubeチャンネル）"
+    video_id: "f3XFtcmHfWk"
+    category: coast
+    prefecture: "46"
+    lat: 30.3051
+    lng: 130.6496
+    note: "oEmbed 200 / LIVEバッジ。24時間。座標: 春田浜(安房)概略"
+  - id: curated-scenic-yakushima-yamano-maedake
+    name: "屋久島 安房前岳（やまの）"
+    operator: "安心農園やまの"
+    video_id: "8weVjXZg6pE"
+    category: scenic
+    prefecture: "46"
+    lat: 30.31
+    lng: 130.645
+    note: "oEmbed 200 / LIVEバッジ。24時間。座標: 屋久島町安房(概略)"
+  - id: curated-other-kyt-amami-airport
+    name: "奄美空港（KYT）"
+    operator: "KYT鹿児島読売テレビ"
+    video_id: "ZCTdrUlC0zE"
+    category: other
+    prefecture: "46"
+    lat: 28.4310
+    lng: 129.7120
+    note: "oEmbed 200 / isLiveNow:true。MBC奄美空港(静止画・既登録)とは別局。座標: 奄美空港"
+  # ---------------- 沖縄 ----------------
+  - id: curated-coast-hatomajima
+    name: "鳩間島"
+    operator: "Mr.Kajiku/かじく（YouTubeチャンネル）"
+    video_id: "Uh_od38Qtf4"
+    category: coast
+    prefecture: "47"
+    lat: 24.4723
+    lng: 123.8204
+    note: "oEmbed 200 / LIVEバッジ(旧ID DpysMv-mhBo は終了)。座標: 鳩間島(概略)"
+  - id: curated-other-ishigaki-airport-flight-info
+    name: "南ぬ島石垣空港 国内線フライトインフォメーション"
+    operator: "石垣空港ターミナル株式会社"
+    video_id: "XBvOwSfafF0"
+    category: other
+    prefecture: "47"
+    lat: 24.3960
+    lng: 124.2450
+    note: "oEmbed 200 / isLiveNow:true。表示板の映像(屋内)。座標: 石垣空港"
+  - id: curated-port-ishigaki-euglena-ritou-terminal
+    name: "石垣島 ユーグレナ離島ターミナル側"
+    operator: "石垣島ユーグレナ離島ターミナル側LIVEカメラ（個人チャンネル）"
+    video_id: "aGGhY9UcUDU"
+    category: port
+    prefecture: "47"
+    lat: 24.3370
+    lng: 124.1560
+    note: "oEmbed 200 / LIVEバッジ。既登録の730交差点(個人チャンネル)と同系統。座標: 石垣港離島ターミナル"
+  - id: curated-coast-ishigaki-ema-nagurawan
+    name: "石垣島 名蔵湾（エーマ石垣島 ムリカブシ）"
+    operator: "エーマ石垣島ホテルズ"
+    video_id: "E7nXbOUBBZc"
+    category: coast
+    prefecture: "47"
+    lat: 24.3900
+    lng: 124.1300
+    note: "oEmbed 200 / LIVEバッジ。座標: 名蔵湾(概略)"
+  - id: curated-coast-miyakojima-emerald-coast-golf
+    name: "宮古島 エメラルドコーストゴルフリンクス"
+    operator: "KuROKO-宮古島映像-（エメラルドコーストGL）"
+    video_id: "ij8oqydLVLo"
+    category: coast
+    prefecture: "47"
+    lat: 24.7300
+    lng: 125.2700
+    note: "oEmbed 200 / isLiveNow:true。既登録ウォーターマーク(同チャンネル)とは別地点。座標: 下地与那覇(概略)"
+  - id: curated-coast-kariyushi-beach-nago
+    name: "かりゆしビーチ（名護市喜瀬）"
+    operator: "Kariyushi Hotels"
+    video_id: "THryehCFhUU"
+    category: coast
+    prefecture: "47"
+    lat: 26.5300
+    lng: 127.9400
+    note: "oEmbed 200 / isLiveNow:true。座標: 沖縄かりゆしビーチリゾート(概略)"
+  - id: curated-coast-kariyushi-oceanspa-nago
+    name: "沖縄かりゆしビーチリゾート・オーシャンスパ"
+    operator: "Kariyushi Hotels"
+    video_id: "AhQErfreEOE"
+    category: coast
+    prefecture: "47"
+    lat: 26.5300
+    lng: 127.9400
+    note: "oEmbed 200 / LIVEバッジ。同ホテル別カメラ。座標: 同上"
+  - id: curated-coast-motobu-terrace
+    name: "モトブテラス（本部町伊野波）"
+    operator: "Motobu Terrace"
+    video_id: "Tlc3uegvdrQ"
+    category: coast
+    prefecture: "47"
+    lat: 26.6637
+    lng: 127.9146
+    note: "oEmbed 200 / isLiveNow:true。座標: 本部町伊野波(概略)"
+  - id: curated-scenic-bise-niruyakanaya-iejima
+    name: "備瀬から伊江島タッチュー（ニルヤカナヤBISE）"
+    operator: "ニルヤカナヤBISE"
+    video_id: "VyT694OcIHM"
+    category: scenic
+    prefecture: "47"
+    lat: 26.7017
+    lng: 127.8845
+    note: "oEmbed 200 / isLiveNow:true。伊江島を望む。座標: 本部町備瀬(概略)"
+  - id: curated-coast-bise-cahaya-bulan
+    name: "cafe CAHAYA BULAN（本部町備瀬）4K"
+    operator: "CAHAYA BULAN"
+    video_id: "5ZIw5x5jnQg"
+    category: coast
+    prefecture: "47"
+    lat: 26.7017
+    lng: 127.8845
+    note: "oEmbed 200 / LIVEバッジ。座標: 本部町備瀬(概略)"
+  - id: curated-healing-yanbaru-aha-ikimono
+    name: "やんばる生き物LIVE 水場（道の駅やんばるパイナップルの丘安波）"
+    operator: "道の駅やんばるパイナップルの丘安波"
+    video_id: "VyCdLV2XjpQ"
+    category: healing
+    prefecture: "47"
+    lat: 26.7200
+    lng: 128.3000
+    note: "oEmbed 200 / LIVEバッジ。ヤンバルクイナ等。座標: 国頭村安波(概略)"
+
+skipped:
+  # --- 転載禁止 / 利用条件NG ---
+  - name: "STV礼文ライブカメラ / STV根室花咲港"
+    url: "https://www.stv.jp/webcam/rebun/index.html"
+    reason: "「無断で複写・複製・転載…処罰の対象」明記=転載禁止"
+  # --- YouTube 埋め込み不可(oEmbed 401) ---
+  - name: "飛島港ライブカメラ（山形県漁協）"
+    url: "https://www.youtube.com/watch?v=VA1EeHptJPM"
+    reason: "oEmbed 401(埋め込み不可)かつ isLiveNow:false"
+  - name: "別海町 北方領土ライブカメラ（野付半島）"
+    url: "https://www.youtube.com/watch?v=VXz-FQIbsMg"
+    reason: "oEmbed 401(埋め込み不可)。配信中ではあるので別海町に埋め込み許可依頼の余地あり"
+  - name: "与論島 パラダイスビーチ（株式会社ヨロン島）"
+    url: "https://www.youtube.com/watch?v=UKfyhbRI3rY"
+    reason: "oEmbed 401"
+  - name: "与論町 供利港ライブ配信"
+    url: "https://www.youtube.com/watch?v=fJQ54oqoQE8"
+    reason: "oEmbed 401"
+  - name: "川平湾 昼/夜星空（八重山諸島の風景）"
+    url: "https://www.youtube.com/watch?v=cKOUqWab-Q4"
+    reason: "oEmbed 401"
+  - name: "レイクサンセット風蓮湖（根室）"
+    url: "https://www.youtube.com/watch?v=ml_6E371x_A"
+    reason: "oEmbed 401"
+  - name: "利尻 御崎/栄浜灯台付近 第1・第2 / 父島小港海岸 / 屋久島田んぼ / 標津町文化ホール方面"
+    url: "vj2pOiWolhk, Mn9EszbHh4Y, WPDRuyBv6LE, P9stiZVACSg, cYN5f--ZLYQ, -IWoIwMbaZ0, C96tVBfRGOA"
+    reason: "oEmbed 401(埋め込み不可)"
+  # --- ライブ終了 / 巡回 ---
+  - name: "KTS十島村中之島(NxEBq23QqIg) / 海洋博遠見台(lfN88SfMCh4) / ゆくりなリゾート(iisltM5Ee54) / 鳩間島旧ID(DpysMv-mhBo) / 天草エアライン公式(PVJz9xQWECU) / 都港湾局二見港限定公開(DkDu14lDBy0)"
+    url: "youtube"
+    reason: "isLiveNow:false(配信終了)"
+  - name: "HBC根室花咲港(O7aL3u5n1gQ) / KKT牛深(nUpNlSRQVJA) / TeNY佐渡(IQms8zArI7w)"
+    url: "youtube"
+    reason: "同IDが現在JR札幌駅・人吉・県内5地点ループに切替済み(巡回・地点固定不可)"
+  - name: "石垣島 名蔵湾・フサキビーチ（YAEYAMA LIVE）"
+    url: "https://www.youtube.com/@yaeyamalive"
+    reason: "毎日新規video_id(タイトルに日付)。youtube_channel型で登録する場合の候補: @yaeyamalive"
+  # --- 運営者不明 ---
+  - name: "利尻町沓形新湊/泉町(KCHoLvmzPz4ほか3本) / 礼文島船泊村パノラマ(hcZzFX5Mxsg) / 礼文島から利尻島(Ar4PHjP-PUs) / 佐渡島ライブカメラ(DP3E3dJmijY)"
+    url: "youtube"
+    reason: "チャンネル名=カメラ名のみで運営者特定不可(同系統のネットワーク)。うち3本はoEmbed 401"
+  - name: "新島 羽伏浦海水浴場（Panasonic 121.117.160.58 SnapshotJPEG可）"
+    url: "http://121.117.160.58/SnapshotJPEG?Resolution=640x480"
+    reason: "画像は取得可(image/jpeg)だが設置者不明(生IPのみ)。新島村と確認できれば採用可"
+  - name: "石垣島 舟蔵ビーチ(fSKaj0Irfho)"
+    url: "youtube"
+    reason: "個人名チャンネルで運営者・設置権限不明"
+  # --- 静止画URL取得不能 ---
+  - name: "喜界町 / 知名町 / 和泊町(朝戸医院・研修センター) / 薩摩川内市 甑島館・下甑前の平展望所 / 上島町 豊島船の見える丘"
+    url: "http://camera.town.kikai.lg.jp/viewer/live/ ほか"
+    reason: "Panasonic viewer/live(ストリーミング)。SnapshotJPEG/cgi-bin/camera等の静止画エンドポイント全て404"
+  - name: "十島村港監視カメラシステム（口之島〜宝島）"
+    url: "http://210.237.44.104:8080/Portal/"
+    reason: "現在メンテナンス表示、画像URLなし → MBC配信の静止画(cam1-tkr_*)を採用"
+  - name: "天草市 ライブカメラ（amakusa-web.jp WebCam.aspx 約25地点：御所浦・鬼池港・崎津など）"
+    url: "https://amakusa-web.jp/WebCam.aspx?id=1"
+    reason: "画像はJS描画で固定URLを特定できず(HTML内に画像URLなし)。要ブラウザ調査"
+  - name: "KATCH 佐久島（東港・外海・佐久島行船のりば）"
+    url: "https://www.katch.co.jp/community/livecamera/?index=16"
+    reason: "画像URLがHTMLから特定できず(JS)"
+  - name: "小笠原.TV（父島振分山・宮之浜・母島中ノ平）"
+    url: "http://gajyumaru.it-ogasawara.com/cam4.php"
+    reason: "画像はタイムスタンプ付ファイル名(cam1/20260824231001.jpg)で固定URLなし。二見港・沖港はYouTube(小笠原村)で採用"
+  - name: "座間味村 高月山ライブカメラ"
+    url: "http://zamami.aa1.netvolante.jp:8880/CgiStart?page=Single&Language=1"
+    reason: "ホスト応答なし(タイムアウト)"
+  - name: "南あわじ市 沼島漁港 防災監視カメラ"
+    url: "https://bousaicam.city.minamiawaji.hyogo.jp/camview.aspx?cam=17"
+    reason: "ページは応答するが画像URL特定できず(JS/aspx)"
+  - name: "粟島漁港（新潟県 live-cam.pref.niigata.jp id=111）"
+    url: "http://www.live-cam.pref.niigata.jp/mobile/camera/camera.php?id=111"
+    reason: "302で問い合わせフォームへ。県カメラの pc/*.jpg 命名も推定失敗(awashima等404)。県道路カメラ担当で確認推奨"
+  - name: "MBC 上甑島懐団地(cam1-sen8) / 口永良部島本村西・吉田(ker1/ker2) / 種子島灯台(jma2) / 種子島宇宙センター(jaxa1)"
+    url: "https://www.mbc.co.jp/web-cam/img/cam1-sen8.jpg"
+    reason: "全て同一md5(584a7752…)=休止プレースホルダ画像"
+  - name: "沖縄県河川カメラ 大井川大井川橋(p-65) / 満名川川底橋(p-66)"
+    url: "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-65.jpg"
+    reason: "同一サイズの調整中プレースホルダ"
+  - name: "オリビアン小豆島 / いこい日間賀島 / 直島宮浦港 / 久米島(FM久米島・球美の里) / 与論(星砂荘) / 西表島(西表島動画配信サイト) / 小浜島(YAEYAMA LIVE) / 石垣島チューブ / 川平公園駐車場 / 宮古島(東平安名崎・来間大橋・前浜: miyako-net) / ユルリ島 / 知夫アカハゲ山"
+    url: "livecam.asia 掲載地点"
+    reason: "一次サイト/YouTube検索で現在の配信URL・video_idを特定できず(配信終了または非公開の可能性)"
+  # --- 既登録 ---
+  - name: "淡路島モンキーセンター / 西郷港(日本海テレビ) / RBC石垣島 / OTV宮古島 / ウォーターマーク宮古島 / ブセナテラス / 恩納村マリブビーチ / 南知多内海海岸 / 徳之島(Tokki Works: 既登録チャンネル UCJslcB5ebC6TlUVx-FMeI5Q) / 海保灯台カメラ(納沙布・元地・八丈島・三島・豆酘埼・若宮・笠利埼・平安名埼・西埼・琉球観音埼・種子島・見島北・沢崎鼻) / 気象庁火山カメラ(伊豆諸島・口永良部・諏訪之瀬島) / kawabou河川カメラ(奥尻青苗川・羅臼川・壱岐永田川・対馬・五島・平戸・新上五島) / 東京都港湾局 伊豆・小笠原港湾(playlist登録済)"
+    url: "data/cameras.json"
+    reason: "name/URL/video_id/channel で重複"
+  - name: "上天草市 YouTube(3USLylIlQF4 樋島大橋 / BTYoS7X-xhE / AJMFFwIoWu4 / Tr7_X2aUqBY)"
+    url: "youtube"
+    reason: "同市の固定静止画(camera2-13.jpg)を採用。複数地点切替配信のため見送り"
+  # --- ロシア側（北方四島）---
+  - name: "国後島(Южно-Курильск)・択捉島(Курильск)・色丹島 ロシア運営カメラ"
+    url: "YouTube検索『Кунашир онлайн камера』『Курилы веб-камера』『Южно-Курильск веб камера онлайн』"
+    reason: "YouTubeライブ検索で公開配信ヒットなし。ロシア側の公開静止画/ライブは確認できず(2026-08-24時点)"
+  # --- 期間限定 ---
+  - name: "NHK南大東島 / NHK八丈島 / ANN・日テレ 悪石島 / KTS諏訪之瀬島 / 石垣島天文台 流星群(QzFmToex1Aw) / 知床峠(ロードコンシェルジュ)"
+    url: "各局"
+    reason: "災害時・イベント時の期間限定配信"

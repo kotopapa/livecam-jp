@@ -1,0 +1,413 @@
+# 駅・空港・港・道の駅 調査結果 (2026-08-24)
+# 注: WebSearch枠が途中で枯渇したため、後半はリンク集(livecam.asia/livecombs)→一次サイトcurl確認で調査。
+# 座標は Nominatim が 429 で停止したため、Nominatim取得分以外は既知の施設位置（要レビュー）。
+still:
+  - id: curated-still-transport-tateshina-megaminosato
+    name: "道の駅 女神の里たてしな"
+    operator: "蓼科ケーブルビジョン株式会社"
+    category: other
+    prefecture: "20"
+    lat: 36.2708
+    lng: 138.2913
+    image_url: "https://tcv21.com/live5.jpg"
+    page_url: "https://tcv21.com/livecamera/live5/"
+    note: "curl 200 image/jpeg (195KB, Last-Modified 当日) 確認。ページ記載: 60秒毎自動更新。利用条件の記載なし(license=unknown)。座標は道の駅女神の里たてしな(立科町芦田)の既知位置・要確認"
+  - id: curated-still-transport-sado-akadomari-port
+    name: "赤泊港（佐渡市）"
+    operator: "佐渡市"
+    category: port
+    prefecture: "15"
+    lat: 37.8666
+    lng: 138.4124
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/18.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "curl 200 image/jpeg、Last-Modified 当日。市ページ「今日の佐渡（ライブカメラ）」更新間隔1分・防災目的設置。cam番号→ファイル名対応は /ssi/js/livecammap.js の switch文(#cam13→18.jpg /*赤泊港*/)で確定。利用条件記載なし(license=unknown)。座標 Nominatim「赤泊港 佐渡市」"
+  - id: curated-still-transport-sado-ogi-port
+    name: "小木港（佐渡市）"
+    operator: "佐渡市"
+    category: port
+    prefecture: "15"
+    lat: 37.8163
+    lng: 138.2822
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/11.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "curl 200 image/jpeg、Last-Modified 当日。livecammap.js #cam14→11.jpg /*小木港*/。更新1分。license=unknown。座標 Nominatim「小木港 佐渡市」(小木港佐渡汽船ターミナル)"
+  - id: curated-still-transport-sado-futami-port
+    name: "二見港（佐渡市）"
+    operator: "佐渡市"
+    category: port
+    prefecture: "15"
+    lat: 38.0560
+    lng: 138.2630
+    image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/02.jpg"
+    page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    note: "curl 200 image/jpeg、Last-Modified 当日。livecammap.js #cam18→02.jpg /*二見港*/。更新1分。license=unknown。座標は二見港(佐渡市二見)の既知位置・Nominatimでヒットせず要確認"
+  - id: curated-still-transport-kamiamakusa-odo-port
+    name: "大道港（上天草市 防災カメラ）"
+    operator: "上天草市"
+    category: port
+    prefecture: "43"
+    lat: 32.4700
+    lng: 130.3430
+    image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera12.jpg"
+    page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/"
+    note: "curl 200 image/jpeg 確認(Last-Modifiedヘッダなし)。上天草市防災ポータルのトップはJS描画で一覧を取得できず、地点名「大道港」はリンク集(livecombs)経由の情報。座標は龍ヶ岳町大道の概算。一次ページでの地点名・利用条件の確認が必要(license=unknown)・要レビュー"
+youtube:
+  - id: curated-transport-airport-chitose-stv-2026
+    name: "新千歳空港（STV）"
+    operator: "STVニュース北海道（札幌テレビ放送）"
+    video_id: "3SKn4LgGJk8"
+    category: port
+    prefecture: "01"
+    lat: 42.7752
+    lng: 141.6923
+    note: "oEmbed 200 / isLiveNow true。既存 curated-chitose-stv（STV新千歳空港）と同一カメラの可能性あり(既存のvideo_idがindexに無く照合不能)。video_idが異なれば差し替え候補。座標は新千歳空港ターミナル既知位置"
+  - id: curated-transport-airport-obihiro-kachimai
+    name: "とかち帯広空港"
+    operator: "十勝毎日新聞"
+    video_id: "IDXRscHtp2s"
+    category: port
+    prefecture: "01"
+    lat: 42.7333
+    lng: 143.2172
+    note: "oEmbed 200 / isLiveNow true。24時間ライブ。座標は帯広空港既知位置"
+  - id: curated-transport-airport-aomori-aba
+    name: "青森空港"
+    operator: "ABA青森朝日放送"
+    video_id: "pcA1VW0n7JU"
+    category: port
+    prefecture: "02"
+    lat: 40.7347
+    lng: 140.6906
+    note: "oEmbed 200 / isLiveNow true。座標は青森空港既知位置"
+  - id: curated-transport-airport-hanamaki-official
+    name: "いわて花巻空港"
+    operator: "いわて花巻空港（岩手県空港ターミナルビル）"
+    video_id: "XHnrgK4sEDE"
+    category: port
+    prefecture: "03"
+    lat: 39.4286
+    lng: 141.1353
+    note: "oEmbed 200 / isLiveNow true。空港公式チャンネル。座標は花巻空港既知位置"
+  - id: curated-transport-airport-akita-akt
+    name: "秋田空港（AKT情報カメラ・夜間は秋田駅前）"
+    operator: "AKT秋田テレビ"
+    video_id: "2EfwG0g0rW4"
+    category: port
+    prefecture: "05"
+    lat: 39.6156
+    lng: 140.2186
+    note: "oEmbed 200 / isLiveNow true。タイトルに「夜間は秋田駅前情報カメラLIVE」とあり夜間は切替。座標は秋田空港既知位置"
+  - id: curated-transport-airport-yamagata-ybc
+    name: "山形空港"
+    operator: "YBC山形放送"
+    video_id: "log3DCKyMwI"
+    category: port
+    prefecture: "06"
+    lat: 38.4119
+    lng: 140.3711
+    note: "oEmbed 200 / isLiveNow true。座標は山形空港既知位置"
+  - id: curated-transport-airport-shonai-tuy
+    name: "庄内空港"
+    operator: "TUYテレビユー山形"
+    video_id: "VUztn_JkOjM"
+    category: port
+    prefecture: "06"
+    lat: 38.8122
+    lng: 139.7872
+    note: "oEmbed 200 / isLiveNow true。座標は庄内空港既知位置。(庄内空港ビル公式の駐車場カメラは無断転載禁止のため不採用→skipped参照)"
+  - id: curated-transport-airport-fukushima-kfb
+    name: "福島空港（KFB）"
+    operator: "KFB福島放送"
+    video_id: "CVp0bl7ROSM"
+    category: port
+    prefecture: "07"
+    lat: 37.2274
+    lng: 140.4308
+    note: "oEmbed 200 / isLiveNow true。既存はFCT(福島中央テレビ)で運営者が異なる。座標は福島空港既知位置"
+  - id: curated-transport-airport-matsumoto-official
+    name: "信州まつもと空港 滑走路"
+    operator: "松本空港（信州まつもと空港）"
+    video_id: "WAzZUkjgT4k"
+    category: port
+    prefecture: "20"
+    lat: 36.1668
+    lng: 137.9227
+    note: "oEmbed 200 / isLiveNow true。空港公式チャンネル。座標は松本空港既知位置"
+  - id: curated-transport-airport-nagoya-starcat
+    name: "県営名古屋空港"
+    operator: "スターキャット（Starcat）"
+    video_id: "LRgGBlcL4KU"
+    category: port
+    prefecture: "23"
+    lat: 35.2550
+    lng: 136.9244
+    note: "oEmbed 200 / isLiveNow true。座標は県営名古屋空港既知位置"
+  - id: curated-transport-airport-itami-mbs
+    name: "伊丹空港（MBS）"
+    operator: "MBS NEWS（毎日放送）"
+    video_id: "zgaUF25Bh7E"
+    category: port
+    prefecture: "28"
+    lat: 34.7855
+    lng: 135.4382
+    note: "oEmbed 200 / isLiveNow true。既存は朝日新聞社で運営者が異なる。座標は大阪国際空港既知位置"
+  - id: curated-transport-airport-kobe-ytv
+    name: "神戸空港"
+    operator: "読売テレビニュース"
+    video_id: "1V-rE4Z1ZZQ"
+    category: port
+    prefecture: "28"
+    lat: 34.6328
+    lng: 135.2239
+    note: "oEmbed 200 / isLiveNow true。座標は神戸空港既知位置"
+  - id: curated-transport-airport-takamatsu-takayama-park-2
+    name: "高松空港（綾川町高山航空公園 ライブ配信2）"
+    operator: "綾川町高山航空公園"
+    video_id: "xi47AfuVnWA"
+    category: port
+    prefecture: "37"
+    lat: 34.2130
+    lng: 134.0240
+    note: "oEmbed 200 / isLiveNow true。既存 curated-r2-12d144a1(高山航空公園)と同チャンネルの「配信2」。既存のvideo_idと照合のうえ別カメラなら採用。座標は高山航空公園既知位置"
+  - id: curated-transport-airport-hiroshima-htv
+    name: "広島空港（HTV）"
+    operator: "広テレ!NEWS（広島テレビ）"
+    video_id: "uPXvT-eE0To"
+    category: port
+    prefecture: "34"
+    lat: 34.4361
+    lng: 132.9194
+    note: "oEmbed 200 / isLiveNow true。既存はRCC。座標は広島空港既知位置"
+  - id: curated-transport-airport-okayama-tsc
+    name: "岡山桃太郎空港"
+    operator: "TSCテレビせとうち"
+    video_id: "0nC9ws-BSJA"
+    category: port
+    prefecture: "33"
+    lat: 34.7569
+    lng: 133.8553
+    note: "oEmbed 200 / isLiveNow true。座標は岡山空港既知位置"
+  - id: curated-transport-airport-ube-tnc
+    name: "山口宇部空港"
+    operator: "福岡TNC ニュース（テレビ西日本）"
+    video_id: "NokinTfqIaM"
+    category: port
+    prefecture: "35"
+    lat: 33.9300
+    lng: 131.2789
+    note: "oEmbed 200 / isLiveNow true。座標は山口宇部空港既知位置"
+  - id: curated-transport-airport-fukuoka-kbc
+    name: "福岡空港（KBC）"
+    operator: "福岡・佐賀 KBC NEWS（九州朝日放送）"
+    video_id: "uuMhOREzUYA"
+    category: port
+    prefecture: "40"
+    lat: 33.5859
+    lng: 130.4507
+    note: "oEmbed 200 / isLiveNow true。タイトルに「＆他ライブカメラ」とあり切替配信の可能性。既存はTNC/民間。座標は福岡空港既知位置"
+  - id: curated-transport-airport-amakusa-mizoka
+    name: "天草空港"
+    operator: "天草みぞかショップ（天草エアライン関連）"
+    video_id: "tSp0OIjjwnQ"
+    category: port
+    prefecture: "43"
+    lat: 32.4825
+    lng: 130.1589
+    note: "oEmbed 200 / isLiveNow true。運営者はチャンネル名(天草エアライン公式ショップ)。座標は天草空港既知位置"
+  - id: curated-transport-airport-miyazaki-mrt
+    name: "宮崎空港"
+    operator: "MRT宮崎放送"
+    video_id: "ETM2Gb2ks-4"
+    category: port
+    prefecture: "45"
+    lat: 31.8772
+    lng: 131.4486
+    note: "oEmbed 200 / isLiveNow true。座標は宮崎空港既知位置"
+  - id: curated-transport-airport-nagasaki-ncc
+    name: "長崎空港"
+    operator: "NCC長崎文化放送"
+    video_id: "zNahac5x0Tw"
+    category: port
+    prefecture: "42"
+    lat: 32.9169
+    lng: 129.9136
+    note: "oEmbed 200 / isLiveNow true。座標は長崎空港既知位置"
+  - id: curated-transport-airport-goto-tsubaki
+    name: "五島つばき空港"
+    operator: "五島つばき空港（長崎空港ビルディング）"
+    video_id: "ftudtfg66TU"
+    category: port
+    prefecture: "42"
+    lat: 32.6663
+    lng: 128.8328
+    note: "oEmbed 200 / isLiveNow true。空港公式チャンネル。座標は福江空港既知位置"
+  - id: curated-transport-airport-amami-kyt
+    name: "奄美空港（KYT）"
+    operator: "KYT鹿児島読売テレビ"
+    video_id: "ZCTdrUlC0zE"
+    category: port
+    prefecture: "46"
+    lat: 28.4306
+    lng: 129.7125
+    note: "oEmbed 200 / isLiveNow true。既存 mbc-amk はMBCで運営者が異なる。座標は奄美空港既知位置"
+  - id: curated-transport-port-akita-aab
+    name: "秋田港（AAB情報カメラ）"
+    operator: "AAB秋田朝日放送"
+    video_id: "J7_rWq_Owgc"
+    category: port
+    prefecture: "05"
+    lat: 39.7556
+    lng: 140.0610
+    note: "oEmbed 200 / isLiveNow true。座標 Nominatim「秋田港 秋田市 土崎」"
+  - id: curated-transport-port-akita-akt-4points
+    name: "秋田港ほか（AKT情報カメラ 4地点）"
+    operator: "AKT秋田テレビ"
+    video_id: "63Q8D9EgJBo"
+    category: port
+    prefecture: "05"
+    lat: 39.7556
+    lng: 140.0610
+    note: "oEmbed 200 / isLiveNow true。4地点切替配信（秋田港を含む）。切替型のため要レビュー。座標は秋田港"
+  - id: curated-transport-port-tadanoumi-takehara
+    name: "忠海港・竹原港（うさぎ島航路）"
+    operator: "LIVECAM TAKEHARAPORT TADANOUMIPORT JAPAN（チャンネル名）"
+    video_id: "pm6Iv_jVkJk"
+    category: port
+    prefecture: "34"
+    lat: 34.3345
+    lng: 132.9843
+    note: "oEmbed 200 / isLiveNow true。既存「忠海港（うさぎ島フェリー）rabbit-island.info」とは別配信の可能性・要照合。運営者はチャンネル名のみ(実体不明瞭)。座標は忠海港既知位置"
+  - id: curated-transport-port-rishiri-oshidomari
+    name: "利尻島 鴛泊港（海の玄関Live）"
+    operator: "利尻島_旅番屋"
+    video_id: "8BwfUCuPcVE"
+    category: port
+    prefecture: "01"
+    lat: 45.2417
+    lng: 141.2313
+    note: "oEmbed 200 / isLiveNow true。民間宿泊施設チャンネル。座標は鴛泊港既知位置"
+  - id: curated-transport-port-wakkanai-surfeel
+    name: "稚内港・宗谷湾（サフィールホテル稚内）"
+    operator: "サフィールホテル稚内"
+    video_id: "lSyjwsfqQ9M"
+    category: port
+    prefecture: "01"
+    lat: 45.4165
+    lng: 141.6745
+    note: "oEmbed 200 / isLiveNow true。ホテル公式。座標はサフィールホテル稚内既知位置（稚内駅前・フェリーターミナル至近）"
+  - id: curated-transport-port-sunport-takamatsu-cms
+    name: "サンポート高松（高松港）"
+    operator: "CMSチャンネル（ケーブルメディア四国）"
+    video_id: "jxG3qZd6xKo"
+    category: port
+    prefecture: "37"
+    lat: 34.3515
+    lng: 134.0480
+    note: "oEmbed 200 / isLiveNow true。座標はサンポート高松既知位置"
+  - id: curated-transport-port-iki-ashibe
+    name: "芦辺港（壱岐市）"
+    operator: "イキテレチャンネル（壱岐市ケーブルテレビ）"
+    video_id: "NR5x9VHjpuE"
+    category: port
+    prefecture: "42"
+    lat: 33.7825
+    lng: 129.7583
+    note: "oEmbed 200 / isLiveNow true。座標は芦辺港既知位置"
+  - id: curated-transport-port-iki-indoji
+    name: "印通寺港（壱岐市）"
+    operator: "イキテレチャンネル（壱岐市ケーブルテレビ）"
+    video_id: "vKlKHcoX2d0"
+    category: port
+    prefecture: "42"
+    lat: 33.7395
+    lng: 129.7405
+    note: "oEmbed 200 / isLiveNow true。座標は印通寺港既知位置"
+  - id: curated-transport-port-toi-surugawan-ferry
+    name: "駿河湾フェリー 土肥港"
+    operator: "一般社団法人ふじさん駿河湾フェリー"
+    video_id: "pj8r6m24lh8"
+    category: port
+    prefecture: "22"
+    lat: 34.9103
+    lng: 138.7853
+    note: "oEmbed 200 / isLiveNow true。フェリー運航者公式。座標は土肥港既知位置"
+  - id: curated-transport-port-toshima-village
+    name: "利島港（利島村ライブカメラ）"
+    operator: "利島村"
+    video_id: "zKOa2NAlxXw"
+    category: port
+    prefecture: "13"
+    lat: 34.5262
+    lng: 139.2778
+    note: "oEmbed 200 / isLiveNow true。既存 curated-rito-toshima(東京都港湾局 静止画)とは運営者・種別が異なる。座標は利島港既知位置"
+skipped:
+  - name: "海上保安庁 ライブカメラ（www6.kaiho.mlit.go.jp/livecamera.html 全66地点）"
+    url: "https://www6.kaiho.mlit.go.jp/livecamera.html"
+    reason: "既登録（トップページ・管区マップの全リンク先をindexのkaiho-*/curated-still-kaiho-*/curated-still-jcg-*と照合、全て登録済み）"
+  - name: "小樽海上保安部 ライブカメラ"
+    url: "https://www.kaiho.mlit.go.jp/01kanku/otaru/livecam/"
+    reason: "image.gif の Last-Modified が 2016-08-31 で更新停止（実質休止）"
+  - name: "東京都港湾局 離島港湾情報プラットフォーム"
+    url: "https://open.ritokouwan-infopf.metro.tokyo.lg.jp/"
+    reason: "既登録（curated-rito-* 11島分）"
+  - name: "道の駅奥久慈だいご（大子町）"
+    url: "https://www.town.daigo.ibaraki.jp/page/page006780.html"
+    reason: "ビューア(/livecamera/)はユーザー名・パスワード要求＋JS/Java描画。固定の静止画URLなし"
+  - name: "中部「道の駅」情報提供システム ライブカメラ（長野/静岡/岐阜/愛知/三重）"
+    url: "https://www.cbr.mlit.go.jp/michinoeki/spot/nagano/traffic04.html"
+    reason: "道の駅自体のカメラではなく国道事務所・県道路カメラへのリンク集（prvs等で既登録範囲）"
+  - name: "庄内空港ビル 駐車場ライブカメラ"
+    url: "https://www.shonai-airport.co.jp/flight_info/live_view/"
+    reason: "サイト規約に「写真はあらゆる情報の無断複製・転載を禁じます」明記（転載禁止）"
+  - name: "出雲縁結び空港 ライブカメラ（出雲空港ターミナルビル）"
+    url: "https://www.izumo-airport.co.jp/webcam"
+    reason: "1分毎15枚を連続表示するJS描画で、HTMLから固定の画像URLを特定できず"
+  - name: "JAL 空港ライブカメラ（weather.jal.co.jp/livecam）"
+    url: "https://weather.jal.co.jp/livecam/"
+    reason: "JS描画で画像URL不明・Copyright JAL 表記のみで利用条件不明。転載可否未確認のため見送り"
+  - name: "STV 江差ライブカメラ"
+    url: "https://www.stv.jp/webcam/esashi/index.html"
+    reason: "画像 /cameraimg/esashi_L.jpg が直接GETで403（リファラ制限）。HBC江差は既登録(hbc-esashihd)"
+  - name: "HBC 江差/稚内 情報カメラ"
+    url: "https://www.hbc.co.jp/info-cam/esashi.html"
+    reason: "既登録（hbc-esashihd / hbc-wakkanaihd）"
+  - name: "八幡浜フェリーターミナル（宇和島運輸）"
+    url: "https://www.youtube.com/watch?v=XJ-o3WNR6Fk"
+    reason: "既登録（八幡浜港フェリーターミナル/八幡浜市）"
+  - name: "八幡浜フェリーターミナル駐車場"
+    url: "https://www.youtube.com/watch?v=sm-Zo-FmN9E"
+    reason: "oEmbed 401（埋め込み不可/限定公開）"
+  - name: "RCC 呉港ライブカメラ"
+    url: "https://www.youtube.com/watch?v=biWZj-WoN9Y"
+    reason: "oEmbed 403（埋め込み不可）"
+  - name: "呉市 大長港・小長港カメラ"
+    url: "http://camera.kure-city.jp/camera20.html"
+    reason: "HTML(2012年更新)のみで画像URL特定できず・更新停止の疑い"
+  - name: "松山観光港ターミナル第1カメラ"
+    url: "http://www.kankoko.com/cam/web-cam/cam01/index.html"
+    reason: "HTML Last-Modified 2019年・画像URL特定できず（更新停止の疑い）"
+  - name: "天草Webの駅 御所浦港/鬼池港カメラ"
+    url: "https://amakusa-web.jp/WebCam.aspx?id=14"
+    reason: "WebCam.aspx はJS描画で静止画URLを特定できず"
+  - name: "伊江港・本部港カメラ（伊江村）"
+    url: "http://camsv1.iejima.org/ieport"
+    reason: "/video_feed_2 は multipart/x-mixed-replace のMJPEGストリームで固定静止画URLではない（自前中継不可）"
+  - name: "RSK 日生港ライブカメラ"
+    url: "http://www.rsk.co.jp/weather/tencame/image.jpg"
+    reason: "image/jpeg は返るが Last-Modified 2022-08-02 で更新停止"
+  - name: "佐渡 両津港・相川春日崎（新潟県）"
+    url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
+    reason: "2025年11月末に老朽化で撤去（市ページ記載）"
+  - name: "livecombs 道の駅タグ掲載カメラ（ねむの丘駐車場/河野/磐梯/裏磐梯/羽鳥湖/土湯/とざわ/ソレーネ周南/佐賀関/天領の里/南魚沼/みかも/みなべ 等）"
+    url: "https://livecombs.com/tag/roadside-station/"
+    reason: "一次ソースは kawabou / 県道路カメラ(福島f-road, 新潟doboku-bousai, 大分river.pref, 栃木roadcctv, drivetraffic) で既登録範囲またはクローラ対象。道の駅独自カメラではない"
+  - name: "神戸市港湾局 / 東京都港湾局 神戸港カメラ"
+    url: "https://livecam.asia/hyogo/kobe/kobe-port-terminal.html"
+    reason: "既登録（神戸市港湾局14台）。livecam.asiaページからも一次URL特定できず"
+  - name: "利尻/礼文/奥尻/隠岐(七類・菱浦)/津軽海峡フェリー/ジャンボフェリー/東海汽船/種子屋久高速船 各社公式カメラ"
+    url: "https://www.oki-kisen.co.jp/"
+    reason: "WebSearch枠枯渇により公式サイトでのライブカメラ有無を確認できず（隠岐西郷港NKTは既登録 curated-nkt-saigo-port）。次回調査候補"
+  - name: "駅前カメラ（livecam.asia/tetsudou 掲載 約150件）"
+    url: "https://livecam.asia/tetsudou/"
+    reason: "主要局(TBS新宿/日テレ東京駅/KBC博多/RKK熊本/NST新潟/テレビ大阪/広島各局/函館 等)は既登録。残りはCATV・自治体の駅前カメラだがWebSearch枠枯渇で一次確認未了。次回調査候補（KATCH刈谷/知立/新安城、ちたまる大府、福井駅各所、金沢駅、鹿児島中央駅KKB/KTS/MBC、札幌駅HBC/HTB/STV 等）"

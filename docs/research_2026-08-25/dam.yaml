@@ -1,0 +1,534 @@
+# ダム ライブカメラ調査（既存101台以外）2026-08-24
+# 画像URL確認: curl -sI で Content-Type: image/jpeg / Last-Modified が当日 を確認済み
+# 座標: 国土地理院 住所検索API(msearch.gsi.go.jp)のダム/管理支所POI。Nominatimは429で照会不可
+still:
+  # ---- 関東地整 利根川ダム統合管理事務所（realtime2/E014020_x.html、画像 ktr.mlit.go.jp/river/cctv/Cxxxxx.jpg）----
+  - id: curated-still-dam-fujiwara-hjvalve
+    name: "藤原ダム HJバルブ"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.8675
+    lng: 139.0294
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01523.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_3.html"
+    note: "ページ内 live-image1(alt HJバルブ)。image/jpeg 200、Last-Modified当日。座標はGSI検索で群馬県みなかみ町藤原(139.0753,36.9140)ヒットのみ→ダム堤体の既知位置36.8675,139.0294(要確認)。利用条件: ktr.mlit.go.jp サイトポリシー(政府標準利用規約)= license unknown"
+  - id: curated-still-dam-fujiwara-tower
+    name: "藤原ダム 管理所鉄塔"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.8675
+    lng: 139.0294
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01526.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_3.html"
+    note: "live-image2(alt 管理所鉄塔)。image/jpeg 200。座標は藤原ダム堤体既知位置"
+  - id: curated-still-dam-fujiwara-inflow
+    name: "藤原ダム 本川流入"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.8675
+    lng: 139.0294
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01531.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_3.html"
+    note: "live-image3(alt 本川流入)。image/jpeg 200。座標は藤原ダム堤体(流入部は上流側のため実際は数百m上流)"
+  - id: curated-still-dam-aimata-office
+    name: "相俣ダム 管理所前"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.7122
+    lng: 138.8899
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01532.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_4.html"
+    note: "live-image1(alt 管理所前)。image/jpeg 200。座標GSI POI「相俣ダム」(138.88993,36.71218)"
+  - id: curated-still-dam-aimata-subdam
+    name: "相俣ダム 副ダム"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.7122
+    lng: 138.8899
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01536.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_4.html"
+    note: "live-image2(alt 副ダム)。image/jpeg 200。座標GSI POI相俣ダム"
+  - id: curated-still-dam-aimata-sanddam
+    name: "相俣ダム 貯砂ダム"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.7122
+    lng: 138.8899
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01539.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_4.html"
+    note: "live-image3(alt 貯砂ダム)。image/jpeg 200。座標GSI POI相俣ダム(貯砂ダムは上流側)"
+  - id: curated-still-dam-sonohara-subdam
+    name: "薗原ダム 副ダム"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.6378
+    lng: 139.1753
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01562.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
+    note: "live-image1(alt 副ダム)。image/jpeg 200。座標GSI POI「薗原ダム管理支所」(139.17531,36.63784)"
+  - id: curated-still-dam-sonohara-upstream1
+    name: "薗原ダム 上流1"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.6378
+    lng: 139.1753
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01563.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
+    note: "live-image2(alt 上流1)。image/jpeg 200。座標GSI POI薗原ダム管理支所"
+  - id: curated-still-dam-sonohara-reservoir2
+    name: "薗原ダム 貯水池2"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.6378
+    lng: 139.1753
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01544.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
+    note: "live-image3(alt 貯水池2)。image/jpeg 200。座標GSI POI薗原ダム管理支所"
+  - id: curated-still-dam-yamba-outlet
+    name: "八ッ場ダム 減勢口（右岸）"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.5569
+    lng: 138.7138
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C05511.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_6.html"
+    note: "live-image1(alt 減勢口（右岸）)。image/jpeg 200。座標GSI POI「八ッ場ダム」(138.71382,36.55691)"
+  - id: curated-still-dam-yamba-mihodai
+    name: "八ッ場ダム 見放台"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.5569
+    lng: 138.7138
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C03982.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_6.html"
+    note: "live-image2(alt 見放台)。image/jpeg 200。座標GSI POI八ッ場ダム"
+  - id: curated-still-dam-yamba-yokokabe
+    name: "八ッ場ダム 横壁"
+    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+    category: dam
+    prefecture: "10"
+    lat: 36.5569
+    lng: 138.7138
+    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C05516.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_6.html"
+    note: "live-image3(alt 横壁)。image/jpeg 200。座標GSI POI八ッ場ダム(横壁は湖岸上流側)"
+  # ---- 関東地整 鬼怒川ダム統合管理事務所（daminfo/cctv/C<局番><2桁CCTV番号>.jpg。局番 1=川俣 2=川治 3=五十里 4=湯西川。kawabouには川治橋上下流のみ登録済）----
+  - id: curated-still-dam-ikari-body
+    name: "五十里ダム 堤体（無線室屋上）"
+    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+    category: dam
+    prefecture: "09"
+    lat: 36.9034
+    lng: 139.7040
+    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C304.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+    note: "comnTbl.js CctvTbl 五十里[4]=ダム堤体カメラ(無線室屋上)。image/jpeg 200、Last-Modified当日(10分更新)。ページはJS描画だが画像は固定URL。座標GSI POI「五十里ダム管理支所」(139.70396,36.90335)"
+  - id: curated-still-dam-ikari-downstream
+    name: "五十里ダム 下流右岸"
+    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+    category: dam
+    prefecture: "09"
+    lat: 36.9034
+    lng: 139.7040
+    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C306.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+    note: "五十里[6]=ダム下流２カメラ(ダム下流右岸)。image/jpeg 200"
+  - id: curated-still-dam-kawamata-deck
+    name: "川俣ダム 展望台デッキ"
+    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+    category: dam
+    prefecture: "09"
+    lat: 36.8860
+    lng: 139.4886
+    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C103.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+    note: "川俣[3]=ダム堤体カメラ(展望台デッキ)。image/jpeg 200。座標: GSIは地名「日光市川俣」(139.4548,36.8916)のみ→川俣ダム堤体の既知位置36.886,139.4886(要確認)"
+  - id: curated-still-dam-kawamata-downstream
+    name: "川俣ダム 下流"
+    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+    category: dam
+    prefecture: "09"
+    lat: 36.8860
+    lng: 139.4886
+    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C105.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+    note: "川俣[5]=ダム下流２カメラ(下流カメラ)。image/jpeg 200"
+  - id: curated-still-dam-kawaji-office
+    name: "川治ダム 支所屋上"
+    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+    category: dam
+    prefecture: "09"
+    lat: 36.8987
+    lng: 139.6899
+    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C206.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+    note: "川治[6]=ダム堤体カメラ(支所屋上)。image/jpeg 200。座標GSI POI「川治ダム」(139.68988,36.89874)"
+  - id: curated-still-dam-kawaji-downstream
+    name: "川治ダム 下流左岸"
+    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+    category: dam
+    prefecture: "09"
+    lat: 36.8987
+    lng: 139.6899
+    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C208.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+    note: "川治[8]=ダム下流２カメラ(ダム下流左岸)。image/jpeg 200"
+  - id: curated-still-dam-yunishigawa-deck
+    name: "湯西川ダム 展望台"
+    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+    category: dam
+    prefecture: "09"
+    lat: 36.9359
+    lng: 139.6592
+    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C404.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+    note: "湯西川[4]=ダム堤体カメラ(展望台)。image/jpeg 200。座標GSI POI「湯西川ダム」(139.65922,36.93588)"
+  - id: curated-still-dam-yunishigawa-downstream
+    name: "湯西川ダム 下流右岸"
+    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+    category: dam
+    prefecture: "09"
+    lat: 36.9359
+    lng: 139.6592
+    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C405.jpg"
+    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+    note: "湯西川[5]=ダム下流１カメラ(ダム下流右岸)。image/jpeg 200"
+  # ---- 東北地整 ----
+  - id: curated-still-dam-moriyoshizan
+    name: "森吉山ダム"
+    operator: "国土交通省東北地方整備局 能代河川国道事務所 森吉山ダム管理支所"
+    category: dam
+    prefecture: "05"
+    lat: 40.0351
+    lng: 140.4579
+    image_url: "http://www.thr.mlit.go.jp/noshiro/kasen/moriyoshi/image/photo_new.jpg"
+    page_url: "https://www.thr.mlit.go.jp/noshiro/kasen/moriyoshi/"
+    note: "トップ「ライブ情報」の画像。image/jpeg 200、Last-Modified当日14:00Z(=23:00JST、1時間更新か)。httpのみ(https未確認)。kawabouに森吉山の登録なし。座標GSI POI「森吉山ダム」(140.45793,40.03507)"
+  # ---- 北陸地整 羽越河川国道事務所 横川ダム管理支所（hrr bosai/img/7249xx.jpg。画像内テロップで「荒川水系 横川ダム ダム上流/下流」確認）----
+  - id: curated-still-dam-yokokawa-upstream
+    name: "横川ダム ダム上流"
+    operator: "国土交通省北陸地方整備局 羽越河川国道事務所 横川ダム管理支所"
+    category: dam
+    prefecture: "06"
+    lat: 38.0260
+    lng: 139.8210
+    image_url: "https://www.hrr.mlit.go.jp/bosai/img/724908.jpg"
+    page_url: "https://www.hrr.mlit.go.jp/uetsu/contents/dam/yokokawa/camera/index.html"
+    note: "画像を取得して目視: テロップ「荒川水系 横川ダム / 山形県西置賜郡小国町綱木箱口 ダム上流」。image/jpeg 200、当日23:00JST。注意: uetsuトップではこの画像のaltが「大石ダム左岸監視」だが実画像は横川ダム。座標: GSIで横川ダムPOIなし→小国町綱木箱口の横川ダム堤体既知位置38.026,139.821(要確認)"
+  - id: curated-still-dam-yokokawa-downstream
+    name: "横川ダム ダム下流"
+    operator: "国土交通省北陸地方整備局 羽越河川国道事務所 横川ダム管理支所"
+    category: dam
+    prefecture: "06"
+    lat: 38.0260
+    lng: 139.8210
+    image_url: "https://www.hrr.mlit.go.jp/bosai/img/724909.jpg"
+    page_url: "https://www.hrr.mlit.go.jp/uetsu/contents/dam/yokokawa/camera/index.html"
+    note: "目視: テロップ「横川ダム ダム下流」。image/jpeg 200。座標同上"
+  # ---- 水資源機構 ----
+  - id: curated-still-dam-naramata
+    name: "奈良俣ダム"
+    operator: "独立行政法人水資源機構 利根川上流総合管理所（沼田）"
+    category: dam
+    prefecture: "10"
+    lat: 36.8578
+    lng: 139.0917
+    image_url: "https://www3.kannet.ne.jp/~numata/teiten/naramata_2m.jpg"
+    page_url: "https://www.water.go.jp/kanto/numata/"
+    note: "矢木沢ダム(同システム yagisawa_2m.jpg)は既登録。定点画像、image/jpeg 200、Last-Modified 24日07:56Z(数時間更新の可能性、監視で要確認)。座標: GSI POIなし→奈良俣ダム堤体既知位置36.8578,139.0917(要確認)。利用条件記載なし(license unknown)"
+  - id: curated-still-dam-kusaki
+    name: "草木ダム（草木湖）"
+    operator: "独立行政法人水資源機構 草木ダム管理所"
+    category: dam
+    prefecture: "10"
+    lat: 36.5564
+    lng: 139.3781
+    image_url: "https://www.kusakidam-001water.jp/kusatop.jpg"
+    page_url: "https://www.water.go.jp/kanto/kusaki/livecamera-kusakidam.htm"
+    note: "「約1分毎に自動更新」。image/jpeg 200、当日。「リンクを貼る際はご一報ください」(禁止ではない)→license unknown。座標: 管理所ページのGSI3Dリンク(36.5592,139.3778 付近)とダム堤体既知位置36.5564,139.3781"
+  # ---- 土地改良区 ----
+  - id: curated-still-dam-sasagamine
+    name: "笹ヶ峰ダム"
+    operator: "関川地区土地改良区連合"
+    category: dam
+    prefecture: "15"
+    lat: 36.8577
+    lng: 138.0719
+    image_url: "https://www.sekikawarengo.com/htmldata/cam01.jpg"
+    page_url: "https://www.sekikawarengo.com/livecamera/"
+    note: "ページに「笹ヶ峰ダム 2026/08/24 23:01」と時刻表示、cam01.jpg?t=UNIX付きだが素URLで image/jpeg 200。座標GSI POI「笹ヶ峰ダム」(138.07195,36.85772)。転載禁止記載なし(license unknown)"
+  - id: curated-still-dam-sasagamine-yakeyama
+    name: "笹ヶ峰ダム（焼山方向）"
+    operator: "関川地区土地改良区連合"
+    category: dam
+    prefecture: "15"
+    lat: 36.8577
+    lng: 138.0719
+    image_url: "https://www.sekikawarengo.com/htmldata/cam02.jpg"
+    page_url: "https://www.sekikawarengo.com/livecamera/"
+    note: "同ページ2台目「焼山」(ダムから焼山を望む)。image/jpeg 200"
+  # ---- 中国地整 温井ダム管理所（/cctv/nukui/<id>/cctv.jpg = フル画像、tumb.jpgはサムネ）----
+  - id: curated-still-dam-nukui-crest
+    name: "温井ダム 堤頂カメラ"
+    operator: "国土交通省中国地方整備局 温井ダム管理所"
+    category: dam
+    prefecture: "34"
+    lat: 34.6365
+    lng: 132.2991
+    image_url: "https://www.cgr.mlit.go.jp/cctv/nukui/162/cctv.jpg"
+    page_url: "https://www.cgr.mlit.go.jp/nukui/cctv/detail.php?id=162"
+    note: "detail.php?id=162 のタイトル「堤頂カメラ」、1時間更新。image/jpeg 200(475KB)。robots.txt該当Disallowなし。座標GSI POI「温井ダム」(132.29910,34.63653)。kawabouに温井の登録なし"
+  - id: curated-still-dam-nukui-downstream1
+    name: "温井ダム ダム下流1"
+    operator: "国土交通省中国地方整備局 温井ダム管理所"
+    category: dam
+    prefecture: "34"
+    lat: 34.6365
+    lng: 132.2991
+    image_url: "https://www.cgr.mlit.go.jp/cctv/nukui/161/cctv.jpg"
+    page_url: "https://www.cgr.mlit.go.jp/nukui/cctv/detail.php?id=161"
+    note: "id=161「ダム下流１」。image/jpeg 200"
+  - id: curated-still-dam-nukui-downstream2
+    name: "温井ダム ダム下流2"
+    operator: "国土交通省中国地方整備局 温井ダム管理所"
+    category: dam
+    prefecture: "34"
+    lat: 34.6365
+    lng: 132.2991
+    image_url: "https://www.cgr.mlit.go.jp/cctv/nukui/163/cctv.jpg"
+    page_url: "https://www.cgr.mlit.go.jp/nukui/cctv/detail.php?id=163"
+    note: "id=163「ダム下流２」。image/jpeg 200"
+  - id: curated-still-dam-nukui-upstream2
+    name: "温井ダム ダム上流2"
+    operator: "国土交通省中国地方整備局 温井ダム管理所"
+    category: dam
+    prefecture: "34"
+    lat: 34.6365
+    lng: 132.2991
+    image_url: "https://www.cgr.mlit.go.jp/cctv/nukui/164/cctv.jpg"
+    page_url: "https://www.cgr.mlit.go.jp/nukui/cctv/detail.php?id=164"
+    note: "id=164「ダム上流２」。image/jpeg 200"
+  - id: curated-still-dam-nukui-tower
+    name: "温井ダム 通信鉄塔"
+    operator: "国土交通省中国地方整備局 温井ダム管理所"
+    category: dam
+    prefecture: "34"
+    lat: 34.6365
+    lng: 132.2991
+    image_url: "https://www.cgr.mlit.go.jp/cctv/nukui/160/cctv.jpg"
+    page_url: "https://www.cgr.mlit.go.jp/nukui/cctv/detail.php?id=160"
+    note: "id=160「通信鉄塔」(ダム湖俯瞰)。image/jpeg 200"
+  # ---- 九州地整 武雄河川事務所（takeo/bousai/data/cctv/<key>_cctv1.jpg=フル、_cctv3.jpg=サムネ。名称はPC/map.php?area=4/3 の吹き出し）----
+  - id: curated-still-dam-kyuragi-lake
+    name: "厳木ダム ダム湖中流"
+    operator: "国土交通省九州地方整備局 武雄河川事務所 厳木ダム管理支所"
+    category: dam
+    prefecture: "41"
+    lat: 33.3282
+    lng: 130.1023
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/d_003_cctv1.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/kyuragi/"
+    note: "厳木ダムHPトップ「厳木ダムライブカメラ」4枚のうち1枚。map.php?area=4で d_003=ダム湖中流。image/jpeg 200、当日。座標GSI POI「厳木ダム」(130.10227,33.32824)。kawabouに厳木ダム本体の登録なし(中山警報所のみ)"
+  - id: curated-still-dam-kyuragi-upstream
+    name: "厳木ダム ダム上流"
+    operator: "国土交通省九州地方整備局 武雄河川事務所 厳木ダム管理支所"
+    category: dam
+    prefecture: "41"
+    lat: 33.3282
+    lng: 130.1023
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/d_004_cctv1.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/kyuragi/"
+    note: "d_004=ダム上流。image/jpeg 200"
+  - id: curated-still-dam-kyuragi-office
+    name: "厳木ダム 管理所屋上"
+    operator: "国土交通省九州地方整備局 武雄河川事務所 厳木ダム管理支所"
+    category: dam
+    prefecture: "41"
+    lat: 33.3282
+    lng: 130.1023
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/d_005_cctv1.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/kyuragi/"
+    note: "d_005=管理所屋上。image/jpeg 200"
+  - id: curated-still-dam-kyuragi-below
+    name: "厳木ダム ダム直下"
+    operator: "国土交通省九州地方整備局 武雄河川事務所 厳木ダム管理支所"
+    category: dam
+    prefecture: "41"
+    lat: 33.3282
+    lng: 130.1023
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/d_009_cctv1.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/kyuragi/"
+    note: "d_009=ダム直下。image/jpeg 200"
+  - id: curated-still-dam-kyuragi-downstream
+    name: "厳木ダム ダム下流"
+    operator: "国土交通省九州地方整備局 武雄河川事務所 厳木ダム管理支所"
+    category: dam
+    prefecture: "41"
+    lat: 33.3282
+    lng: 130.1023
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/d_010_cctv1.jpg"
+    page_url: "http://www.qsr.mlit.go.jp/takeo/bousai/PC/map.php?area=4"
+    note: "d_010=ダム下流(トップ未掲載、流域図に掲載)。image/jpeg 200"
+  - id: curated-still-dam-kasegawa-body-up
+    name: "嘉瀬川ダム 堤体上流側"
+    operator: "国土交通省九州地方整備局 武雄河川事務所（嘉瀬川ダム管理支所）"
+    category: dam
+    prefecture: "41"
+    lat: 33.3918
+    lng: 130.2174
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/k_004_cctv1.jpg"
+    page_url: "http://www.qsr.mlit.go.jp/takeo/bousai/PC/map.php?area=3"
+    note: "武雄河川事務所 防災情報 流域図(嘉瀬川)の k_004=嘉瀬川ダム堤体上流側。image/jpeg 200、当日。座標GSI POI「嘉瀬川ダム」(130.21736,33.39182)。既登録は嘉瀬川大堰・河川カメラのみ"
+  - id: curated-still-dam-kasegawa-body-down
+    name: "嘉瀬川ダム 堤体下流側"
+    operator: "国土交通省九州地方整備局 武雄河川事務所（嘉瀬川ダム管理支所）"
+    category: dam
+    prefecture: "41"
+    lat: 33.3918
+    lng: 130.2174
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/k_005_cctv1.jpg"
+    page_url: "http://www.qsr.mlit.go.jp/takeo/bousai/PC/map.php?area=3"
+    note: "k_005=嘉瀬川ダム堤体下流側。image/jpeg 200"
+  - id: curated-still-dam-kasegawa-up1
+    name: "嘉瀬川ダム 上流カメラ1"
+    operator: "国土交通省九州地方整備局 武雄河川事務所（嘉瀬川ダム管理支所）"
+    category: dam
+    prefecture: "41"
+    lat: 33.3918
+    lng: 130.2174
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/k_006_cctv1.jpg"
+    page_url: "http://www.qsr.mlit.go.jp/takeo/bousai/PC/map.php?area=3"
+    note: "k_006=嘉瀬川ダム上流カメラ1。image/jpeg 200。座標はダム堤体(実位置は湖岸上流)"
+  - id: curated-still-dam-kasegawa-up2
+    name: "嘉瀬川ダム 上流カメラ2"
+    operator: "国土交通省九州地方整備局 武雄河川事務所（嘉瀬川ダム管理支所）"
+    category: dam
+    prefecture: "41"
+    lat: 33.3918
+    lng: 130.2174
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/k_007_cctv1.jpg"
+    page_url: "http://www.qsr.mlit.go.jp/takeo/bousai/PC/map.php?area=3"
+    note: "k_007=嘉瀬川ダム上流カメラ2。image/jpeg 200"
+  - id: curated-still-dam-kasegawa-up3
+    name: "嘉瀬川ダム 上流カメラ3"
+    operator: "国土交通省九州地方整備局 武雄河川事務所（嘉瀬川ダム管理支所）"
+    category: dam
+    prefecture: "41"
+    lat: 33.3918
+    lng: 130.2174
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/k_008_cctv1.jpg"
+    page_url: "http://www.qsr.mlit.go.jp/takeo/bousai/PC/map.php?area=3"
+    note: "k_008=嘉瀬川ダム上流カメラ3。image/jpeg 200"
+  - id: curated-still-dam-kasegawa-up4
+    name: "嘉瀬川ダム 上流カメラ4"
+    operator: "国土交通省九州地方整備局 武雄河川事務所（嘉瀬川ダム管理支所）"
+    category: dam
+    prefecture: "41"
+    lat: 33.3918
+    lng: 130.2174
+    image_url: "https://www.qsr.mlit.go.jp/takeo/bousai/data/cctv/k_009_cctv1.jpg"
+    page_url: "http://www.qsr.mlit.go.jp/takeo/bousai/PC/map.php?area=3"
+    note: "k_009=嘉瀬川ダム上流カメラ4。image/jpeg 200"
+  # ---- 九州地整 菊池川河川事務所 竜門ダム ----
+  - id: curated-still-dam-ryumon
+    name: "竜門ダム カメラ1"
+    operator: "国土交通省九州地方整備局 菊池川河川事務所 竜門ダム管理支所"
+    category: dam
+    prefecture: "43"
+    lat: 33.0370
+    lng: 130.8496
+    image_url: "https://www.qsr.mlit.go.jp/ryumon/bousai/data/cctv/cctv01_1.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/ryumon/"
+    note: "ryumon/cameratop.html(トップのiframe、5分refresh)の「カメラ1」。image/jpeg 200、当日。座標GSI POI「竜門ダム」(130.84958,33.03701)。kawabou未登録"
+  # ---- 市町村 ----
+  - id: curated-still-dam-hokubo
+    name: "北房ダム"
+    operator: "真庭市"
+    category: dam
+    prefecture: "33"
+    lat: 34.9844
+    lng: 133.6425
+    image_url: "https://www.city.maniwa.lg.jp/live/images/hokubodam/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1378.html"
+    note: "「北房ダム管理棟にカメラを設置、1分おきに最新の静止画像」。image/jpeg 200、当日。転載禁止記載なし(license unknown)。座標: GSI POIなし→真庭市阿口の北房ダム堤体既知位置34.9844,133.6425(要確認)"
+  - id: curated-still-dam-otomi
+    name: "乙見ダム"
+    operator: "臼杵市"
+    category: dam
+    prefecture: "44"
+    lat: 33.0590
+    lng: 131.7532
+    image_url: "https://www.city.usuki.oita.jp/bousai_camera/p_otomi.jpg"
+    page_url: "https://www.city.usuki.oita.jp/docs/2014020700374/"
+    note: "臼杵市防災カメラ(臼杵地域)の「乙見ダム」。image/jpeg 200、当日(自動更新)。座標GSI「大分県臼杵市乙見」(131.75319,33.05898)=地名レベル、堤体は近傍(要確認)"
+  - id: curated-still-dam-ishiba
+    name: "石場ダム"
+    operator: "臼杵市"
+    category: dam
+    prefecture: "44"
+    lat: 32.9771
+    lng: 131.6556
+    image_url: "https://www.city.usuki.oita.jp/bousai_camera/p_ishibadamu.jpg"
+    page_url: "https://www.city.usuki.oita.jp/docs/2014020700398/"
+    note: "臼杵市防災カメラ(野津地域)の「石場ダム」。image/jpeg 200、当日。座標GSI POI「石場ダム」(131.65564,32.97710)"
+youtube: []
+skipped:
+  # --- 既登録（kawabou/curated で同ダム登録済。管理所サイトに別視点カメラがある場合は備考）---
+  - {name: "小渋ダム(天竜川ダム統管 tendamu001-012.jpg 6台)", url: "https://www.cbr.mlit.go.jp/tendamu/camera_kosibu.html", reason: "既登録(kawabou 小渋ダム)。管理所サイトに堤頂/洪水吐等6視点の固定URL静止画あり(image/jpeg確認済)→追加視点が欲しければ採用可"}
+  - {name: "美和ダム(tendamu/live/camera_miwa.html 8台)", url: "https://www.cbr.mlit.go.jp/tendamu/live/camera_miwa.html", reason: "既登録(kawabou 美和ダム)。同上、miwadamu005-013.jpg 固定URLあり"}
+  - {name: "大町ダム", url: "https://www.hrr.mlit.go.jp/omachi/", reason: "既登録(kawabou 大町ダム管理所 多数)"}
+  - {name: "長島ダム", url: "https://www.cbr.mlit.go.jp/nagashima/", reason: "既登録(kawabou 長島ダム管理所)。gazou/cctv0109140.jpg は固定URL"}
+  - {name: "横山ダム", url: "https://www.cbr.mlit.go.jp/kisojyo/yokoyama/", reason: "既登録(kawabou 横山ダム放流口)。kisojyo/livecamera/Gazou/G0753.jpeg 固定URLあり"}
+  - {name: "小里川ダム", url: "https://www.cbr.mlit.go.jp/shonai/origawa/", reason: "既登録(kawabou 小里川ダム管理支所)。shonai/kasen/data/picture/cctv0201640.jpg 等固定URLあり"}
+  - {name: "二瀬ダム", url: "https://www.ktr.mlit.go.jp/futase/", reason: "既登録(kawabou 二瀬ダム管理所)"}
+  - {name: "宮ヶ瀬ダム", url: "https://www.ktr.mlit.go.jp/sagami/livecam/", reason: "既登録(kawabou 宮ヶ瀬ダム上流/下流)。sagami/livecam は403"}
+  - {name: "釜房ダム(右岸/左岸/下流/展望台)", url: "http://www2.thr.mlit.go.jp/kamafusa/realtime/dam/index.html", reason: "既登録(kawabou 釜房ダム管理所5台)。realtime/cctv/cam/cctv06_0.jpg等固定URLあり"}
+  - {name: "玉川ダム", url: "https://www.thr.mlit.go.jp/tamagawa/", reason: "既登録(kawabou 玉川ダム管理所4台)。www2.thr.mlit.go.jp/12index2/dam_photo/tamagawa.jpg 固定URLあり"}
+  - {name: "灰塚ダム", url: "http://www.cgr.mlit.go.jp/miyoshi/haizuka/live/camera1.php", reason: "既登録(kawabou 灰塚ダム3台)。dam_data/image/camera/p_cam_img1.jpg は当日更新(C01207.jpgは2022年で停止)"}
+  - {name: "苫田ダム", url: "https://www.cgr.mlit.go.jp/tomata/", reason: "既登録(kawabou 苫田ダム管理所)"}
+  - {name: "尾原ダム・志津見ダム", url: "http://www.cgr.mlit.go.jp/izumokasen/", reason: "既登録(kawabou 出雲河川事務所)"}
+  - {name: "鳴子ダム", url: "https://www.thr.mlit.go.jp/naruko/rt/realtime.html", reason: "既登録(kawabou 鳴子ダム管理所)。管理所ページもkawabouへのリンク"}
+  - {name: "三春ダム・摺上川ダム・七ヶ宿ダム・月山ダム・寒河江/白川/長井ダム(最上川統管)", url: "https://www.thr.mlit.go.jp/", reason: "既登録(kawabou)"}
+  - {name: "北上川5ダム(四十四田/御所/湯田/田瀬/胆沢)", url: "https://www.thr.mlit.go.jp/kitakato/", reason: "既登録(curated)"}
+  - {name: "下久保/浦山/滝沢/矢木沢/味噌川/岩屋/徳山/早明浦/富郷/高山/布目/青蓮寺/室生/比奈知/川上/一庫(水資源機構)", url: "https://www.water.go.jp/", reason: "既登録(curated/kawabou)"}
+  - {name: "三国川/宇奈月/新豊根/丸山/矢作/阿摺/弥栄/土師/緑川/松原/下筌/大滝/猿谷/野村/鹿野川/長安口", url: "-", reason: "既登録(kawabou/curated)"}
+  - {name: "兵庫県民局ダム群・熊本県・大分県・鹿児島県・茨城県・滋賀県(宇曽川/青土)・岡山県(旭川/湯原)・山形県(前川/木地山/荒沢/田沢川)・北海道開発局各ダム", url: "-", reason: "既登録"}
+  - {name: "早明浦ダム 追加視点(camDisp12/14/15)", url: "https://www.water.go.jp/yoshino/ikeda/", reason: "既登録ダム。かつ privacy.htm に「ダム画像データのURLに直接リンクを張ることはお断りします」→直リンク不可。既登録の早明浦(camDisp11)/富郷(camDisp31)も同条件のため要再確認"}
+  # --- 利用条件NG ---
+  - {name: "池田ダム(camDisp02)・新宮ダム(camDisp21)", url: "https://www.water.go.jp/yoshino/ikeda/", reason: "画像はimage/jpeg 200で取得可だが、privacy.htm「画像データはご自由にお使い下さい(出典明示)」の一方「画像データのURLに直接リンクを張ることはお断りします」と明記→アプリの直接参照は不可"}
+  # --- 画像URL取得不能/停止 ---
+  - {name: "大志田ダム", url: "http://www.edu-ichinohe.jp/cam.php?c=c10", reason: "img/mainte.jpg(メンテナンス画像)のみ"}
+  - {name: "牧尾ダム", url: "http://202.189.152.162/viewer/live/ja/live.html", reason: "接続不可(タイムアウト)"}
+  - {name: "中里ダム", url: "http://210.128.81.133/CgiStart?page=Single&Language=1", reason: "接続不可(タイムアウト)"}
+  - {name: "湯免ダム", url: "http://223.223.160.154/ngt/livecam/index.php", reason: "接続不可(タイムアウト)"}
+  - {name: "島ノ瀬ダム(みなべ町)", url: "http://camera10.town.minabe.lg.jp/viewer/live/ja/live.html", reason: "Panasonicネットワークカメラのビューア(JS/動画)。SnapshotJPEGは404/401で静止画URLなし"}
+  - {name: "並石ダム(豊後高田市)", url: "http://www2.city.bungotakada.oita.jp/cam4/local/viewer/live/index.html?lang=ja", reason: "同上 Panasonicビューアのみ、静止画URLなし"}
+  - {name: "君ヶ野ダム(ZTV)", url: "http://www.ztv.ne.jp/vvjwjc5c/index.htm", reason: "2011年のフレームページ、画像なし"}
+  - {name: "正木ダム", url: "http://210.142.245.82/live/", reason: "勝浦町/上勝町のページ(2006年)、pic_masaki.jpgは2006年の静止画で更新なし"}
+  - {name: "七川ダム(古座川町)", url: "https://www.town.kozagawa.lg.jp/yakunitatu/sub006.html", reason: "ページに画像なし(リンク切れ)"}
+  - {name: "二川/広川/椿山/切目川ダム(和歌山県)", url: "https://kasensabo01.pref.wakayama.lg.jp/damDetail.html?ccd=470", reason: "JS描画で画像URL未特定(未確認)"}
+  - {name: "竜宮ダム・川上ダム(美作市)", url: "https://www.city.mimasaka.lg.jp/kanshi/genba017.html", reason: "ページに画像なし"}
+  - {name: "大石ダム(羽越)", url: "https://www.hrr.mlit.go.jp/uetsu/", reason: "トップのalt「大石ダム左岸監視」画像(724908)は実際は横川ダム上流。大石ダム画像のURL未特定"}
+  - {name: "鶴田ダム", url: "https://www.qsr.mlit.go.jp/turuta/", reason: "トップに静止画URLなし(未特定)"}
+  - {name: "八田原ダム", url: "https://www.cgr.mlit.go.jp/hattabara/", reason: "トップに静止画/ライブリンクなし"}
+  - {name: "山口河川国道事務所カメラ(菅野/島地川想定)", url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html", reason: "椹野川等の河川カメラのみでダム設置なし"}
+  - {name: "秋葉ダム・船明ダム(浜松)", url: "https://www.cbr.mlit.go.jp/hamamatsu/live_view_kasen/pc/dam4.html", reason: "JS描画で画像URL未特定(浜松河川国道事務所はkawabou登録多数)"}
+  - {name: "水資源機構 日吉/一庫/寺内/朝倉/大山/思川/阿木川/長良川河口堰/利根導水", url: "https://www.water.go.jp/", reason: "各サイトに静止画ライブなし。YouTubeは紹介動画(NKmZTYbZYxs, ftVvs1AXMGI, twbfqfxpD7A, ZXeU2_F5jm4)で非ライブ。一庫は既登録"}
+  - {name: "横川ダム紹介/長島ダム/小里川ダム YouTube", url: "https://www.youtube.com/watch?v=-HADaady6fk", reason: "紹介動画で非ライブ"}
+  - {name: "奈良俣ダム YouTube(PsQKKx6O4kE)", url: "https://www.water.go.jp/kanto/numata/", reason: "oEmbed 401(非公開/削除)。jDkHmKQVhfIは群馬県tsulunosの風景動画で非ライブ"}
+  - {name: "東北電力 ダム情報", url: "https://www.tohoku-epco.co.jp/dam/", reason: "只見川水系の水位・放流情報ページで映像なし"}
+  - {name: "関西電力 黒部ダム", url: "https://www.kurobe-dam.com/", reason: "ライブ映像なし(イベント写真のみ)"}
+  - {name: "東京電力/中部電力/九州電力/北海道電力/北陸電力/J-POWER ダムカメラ", url: "-", reason: "推定URLは全て404。WebSearch枠が枯渇し一次ページを特定できず(未調査)"}
+  - {name: "都道府県営ダム(新潟/長野/静岡/愛知/岐阜/広島/山口/愛媛/香川/高知/福岡/長崎/宮崎 等)", url: "-", reason: "WebSearch枠枯渇のため一次サイト未特定(未調査)。山形県 綱木川/高坂/神室/留山川/蔵王 は kasen.pref.yamagata.jp の servletBousaiITVCameraImage?sn=<id> 形式(前川等既登録と同系統)で追加可能性あり"}
+  - {name: "@damlivecam (mstdn.jp)", url: "https://mstdn.jp/@damlivecam", reason: "403で取得不可"}

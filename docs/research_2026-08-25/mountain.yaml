@@ -1,0 +1,822 @@
+# 登山口・山 ジャンル調査結果（2026-08-24）
+# 確認方法: 一次ページをcurl/WebFetchで確認 → 画像URLを curl -sL で取得し Content-Type: image/jpeg を確認。
+# YouTubeは oEmbed 200 + watchページの isLiveNow:true を確認。
+# 座標: 施設住所は国土地理院 AddressSearch(msearch.gsi.go.jp)で解決（Nominatimは429で利用不可）。
+#       山小屋・山頂・展望所など地名POIは地理院地図の既知座標（note参照）。要レビュー時に再確認。
+still:
+  - id: curated-still-mountain-hotakadake-sanso-west
+    name: "穂高岳山荘 西側カメラ（白出沢側）"
+    operator: "穂高岳山荘"
+    category: scenic
+    prefecture: "21"
+    lat: 36.2897
+    lng: 137.6473
+    image_url: "https://www.hotakadakesanso.com/livecam-data/hotakacam2.jpg"
+    page_url: "https://www.hotakadakesanso.com/livecam"
+    note: "curl 200 image/jpeg(82KB)。10分間隔更新、冬期閉鎖中は停止。ページに転載禁止の明記なし(license=unknown)。robots.txtは/js /php /archiveのみDisallow。座標は穂高岳山荘(白出のコル、標高2996m)の地理院地図既知座標"
+  - id: curated-still-mountain-hotakadake-sanso-east
+    name: "穂高岳山荘 東側カメラ（涸沢側）"
+    operator: "穂高岳山荘"
+    category: scenic
+    prefecture: "20"
+    lat: 36.2897
+    lng: 137.6475
+    image_url: "https://www.hotakadakesanso.com/livecam-data/hotakacam1.jpg"
+    page_url: "https://www.hotakadakesanso.com/livecam"
+    note: "curl 200 image/jpeg(88KB)。ページ上は『東側カメラは動作が確認出来次第公開』表記のため配信不安定の可能性。座標は同山荘"
+  - id: curated-still-mountain-gozaisho-ropeway
+    name: "御在所岳 山上公園駅（御在所ロープウエイ）"
+    operator: "御在所ロープウエイ株式会社"
+    category: scenic
+    prefecture: "24"
+    lat: 35.0197
+    lng: 136.4227
+    image_url: "https://www.gozaisho.co.jp/live/camera.jpg"
+    page_url: "https://www.gozaisho.co.jp/live/camera.htm"
+    note: "curl 200 image/jpeg。1分毎更新・営業時間内のみ(24時間ではない)。山上公園駅屋上設置、2台がランダム切替。転載条件の記載なし(license=unknown)。座標は山上公園駅の地理院地図既知座標"
+  - id: curated-still-mountain-sizenken-nekodake
+    name: "南阿蘇から見る阿蘇根子岳（休暇村南阿蘇）"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "43"
+    lat: 32.8207
+    lng: 131.1308
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/58_c/image/2026/08/24/NCS20260824200006440.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=58"
+    note: "既存sizenken4台と同方式(日付入りURL、view_new.phpから最新画像を解決)。設置箇所: 阿蘇くじゅう国立公園阿蘇地区(休暇村南阿蘇内) 熊本県阿蘇郡高森町高森3219 → GSIジオコーディング"
+  - id: curated-still-mountain-sizenken-kirishima-ebino
+    name: "えびの高原から見た霧島連山"
+    operator: "環境省 インターネット自然研究所"
+    category: volcano
+    prefecture: "45"
+    lat: 31.9459
+    lng: 130.8455
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/59_c/image/2026/08/24/NCS20260824200002660.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=59"
+    note: "sizenken方式。設置箇所: えびのエコミュージアムセンター(宮崎県えびの市末永1495-5)。座標はえびの高原エコミュージアムセンターの既知座標(GSI住所検索は集落中心を返すため不採用)"
+  - id: curated-still-mountain-sizenken-yakushima
+    name: "屋久島の山々（ヤクスギランド）"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "46"
+    lat: 30.3059
+    lng: 130.5671
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/60_c/image/2026/08/24/NCS20260824200054870.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=60"
+    note: "sizenken方式。設置箇所: ヤクスギランド休憩施設「森泉」内。座標はGSI(ヤクスギランド)"
+  - id: curated-still-mountain-sizenken-urabandai-bandaisan
+    name: "裏磐梯から見た磐梯山"
+    operator: "環境省 インターネット自然研究所"
+    category: volcano
+    prefecture: "07"
+    lat: 37.6529
+    lng: 140.0867
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/80_c/image/2026/08/24/NCS20260824200055020.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=80"
+    note: "sizenken方式。利用案内ページ(about.php)なし。座標は裏磐梯ビジターセンター(北塩原村桧原剣ケ峯)の既知座標。要確認"
+  - id: curated-still-mountain-sizenken-shikotsuko
+    name: "支笏湖と周辺の山々（モラップ）"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "01"
+    lat: 42.7304
+    lng: 141.3864
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/89_c/image/2026/08/24/NCS20260824200055230.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=89"
+    note: "sizenken方式。設置箇所: 支笏湖モラップキャンプ場(千歳市支笏湖温泉モラップ)。座標はGSI(モラップキャンプ場)"
+  - id: curated-still-mountain-sizenken-gassan-haguro
+    name: "羽黒町から見た月山遠望"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "06"
+    lat: 38.7199
+    lng: 139.9004
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/91_c/image/2026/08/24/NCS20260824190030800.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=91"
+    note: "sizenken方式。設置箇所: 鶴岡市羽黒庁舎(鶴岡市羽黒町荒川字前田元89) → GSI住所検索"
+  - id: curated-still-mountain-sizenken-tofutsuko-sharidake
+    name: "濤沸湖と斜里岳"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "01"
+    lat: 43.9499
+    lng: 144.3380
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/113_c/image/2026/08/24/NCS20260824190002760.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=113"
+    note: "sizenken方式。設置箇所: 環境省濤沸湖水鳥・湿地センター(網走市北浜203) → GSI住所検索"
+  - id: curated-still-mountain-sizenken-kagaminari-karasugasen
+    name: "大山鏡ヶ成から見た烏ヶ山"
+    operator: "環境省 インターネット自然研究所"
+    category: scenic
+    prefecture: "31"
+    lat: 35.3311
+    lng: 133.5727
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/68_c/image/2026/08/24/NCS20260824200055900.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=68"
+    note: "sizenken方式。設置箇所: 休暇村奥大山(江府町御机字鏡ヶ成709-1) → GSI住所検索"
+  - id: curated-still-mountain-ibukiyama-driveway-summit
+    name: "伊吹山 山頂駐車場（伊吹山ドライブウェイ）"
+    operator: "伊吹山ドライブウェイ（日本自動車道株式会社）"
+    category: scenic
+    prefecture: "25"
+    lat: 35.4170
+    lng: 136.4030
+    image_url: "https://ibukiyama1182.sakura.ne.jp/ibukiyama2.jpg"
+    page_url: "https://www.ibukiyama-driveway.jp/"
+    note: "curl 200 image/jpeg(94KB)。公式トップページに埋め込み。転載条件の記載なし(license=unknown)。座標は伊吹山ドライブウェイ山頂駐車場(9合目・スカイテラス伊吹山)の既知座標"
+  - id: curated-still-mountain-nantaisan-summit-futarasan
+    name: "男体山山頂（日光二荒山神社奥宮）"
+    operator: "日光二荒山神社（設置協力: 株式会社ドゥ）"
+    category: scenic
+    prefecture: "09"
+    lat: 36.7650
+    lng: 139.4908
+    image_url: "http://www.futarasan.jp/nantai_camera/images/nantai.jpg"
+    page_url: "http://www.futarasan.jp/weather3.shtml"
+    note: "curl 200 image/jpeg(192KB)。ページに『落雷の影響で配信できない場合あり／電力不足で更新停止あり』の告知。http(非TLS)。座標は男体山山頂(奥宮)の既知座標"
+  - id: curated-still-mountain-murodou-sanso
+    name: "立山室堂山荘前"
+    operator: "立山室堂山荘"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5761
+    lng: 137.5983
+    image_url: "http://49.212.184.169/cameraGii/MurodouCamera.php"
+    page_url: "http://www.murodou.co.jp/kozan/live.htm"
+    note: "curl 200 image/jpeg(1.4MB、画像サイズ大)。IP直指定のPHP配信、毎時更新(ページJSは毎時00分の画像と表示)。既存の室堂カメラ(BBT/TUT)とは別運営者。座標は室堂山荘の既知座標"
+  - id: curated-still-mountain-kiyosatonomori-yatsugatake
+    name: "清里の森から八ヶ岳"
+    operator: "清里の森管理公社"
+    category: scenic
+    prefecture: "19"
+    lat: 35.9265
+    lng: 138.4460
+    image_url: "https://www.kiyosatonomori.co.jp/img/live.jpg"
+    page_url: "https://kiyosatonomori.co.jp/about/livecamera"
+    note: "curl 200 image/jpeg(740KB)。管理センター設置の定点カメラ、一定間隔更新。転載条件の記載なし(license=unknown)。座標は清里の森管理センター(北杜市高根町清里)の既知座標"
+  - id: curated-still-mountain-mashuko-kamuiterrace
+    name: "摩周湖カムイテラス（摩周湖第一展望台）"
+    operator: "摩周湖観光協会（楽しむ摩周湖＆硫黄山）"
+    category: scenic
+    prefecture: "01"
+    lat: 43.5654
+    lng: 144.5223
+    image_url: "https://mashuko-iozan.jp/cam/mashuko-cam-01.jpg"
+    page_url: "https://mashuko-iozan.jp/"
+    note: "curl 200 image/jpeg(596KB)。トップページ『現在の摩周湖』に埋め込み。運営会社ページは404で運営者名は要確認(license=unknown)。座標は摩周湖第一展望台(カムイテラス)の既知座標"
+  - id: curated-still-mountain-iozan-mokmok
+    name: "硫黄山（MOKMOKベース）"
+    operator: "摩周湖観光協会（楽しむ摩周湖＆硫黄山）"
+    category: volcano
+    prefecture: "01"
+    lat: 43.6110
+    lng: 144.4390
+    image_url: "https://mashuko-iozan.jp/cam/mokumoku-cam-01.jpg"
+    page_url: "https://mashuko-iozan.jp/"
+    note: "curl 200 image/jpeg(59KB)。『現在の硫黄山』。座標は硫黄山(アトサヌプリ)レストハウス/MOKMOKベースの既知座標"
+  - id: curated-still-mountain-rebun-kitanocanaria-rishirifuji
+    name: "北のカナリアパークから見る利尻富士"
+    operator: "礼文島観光協会"
+    category: scenic
+    prefecture: "01"
+    lat: 45.2531
+    lng: 141.0374
+    image_url: "https://www.rebun-island.jp/livecamera/camera.jpg"
+    page_url: "https://www.rebun-island.jp/livecamera/"
+    note: "curl 200 image/jpeg(42KB)。cametan注記で冬期休止。座標は北のカナリアパーク(礼文町香深村)の既知座標"
+  - id: curated-still-mountain-makkari-yoteizan
+    name: "真狩村から見る羊蹄山"
+    operator: "真狩村"
+    category: scenic
+    prefecture: "01"
+    lat: 42.7647
+    lng: 140.8031
+    image_url: "https://www.vill.makkari.lg.jp/livecam/webcam_l.jpg"
+    page_url: "https://www.vill.makkari.lg.jp/webcam/"
+    note: "curl 200 image/jpeg(27KB)。自治体・利用条件不明(license=unknown)。座標は真狩村役場(真狩118) → GSI"
+  - id: curated-still-mountain-kutchan-yoteizan
+    name: "倶知安町から見る羊蹄山"
+    operator: "倶知安町"
+    category: scenic
+    prefecture: "01"
+    lat: 42.9015
+    lng: 140.7584
+    image_url: "http://www.town.kutchan.hokkaido.jp/webcam/img/webcam.jpg"
+    page_url: "http://www.town.kutchan.hokkaido.jp/webcam/"
+    note: "curl 200 image/jpeg(14KB)。自治体・利用条件不明(license=unknown)。座標は倶知安町役場(北1条東3丁目) → GSI"
+  - id: curated-still-mountain-pippu-taisetsuzan
+    name: "比布町から見る大雪山"
+    operator: "比布町"
+    category: scenic
+    prefecture: "01"
+    lat: 43.8755
+    lng: 142.4779
+    image_url: "http://www.town.pippu.hokkaido.jp/camera/webimg/pippucam2.jpg"
+    page_url: "https://www.town.pippu.hokkaido.jp/cms/webcam.html"
+    note: "curl 200 image/jpeg(37KB)。http配信。自治体・利用条件不明(license=unknown)。座標は比布町役場 → GSI"
+  - id: curated-still-mountain-haraikawa-hutte-chokai-1
+    name: "祓川ヒュッテ（鳥海山矢島口）カメラ1"
+    operator: "由利本荘市観光協会"
+    category: scenic
+    prefecture: "05"
+    lat: 39.1470
+    lng: 140.0625
+    image_url: "https://haraikawa.pixif.jp/photo/area1/latest.jpg"
+    page_url: "https://haraikawa.pixif.jp/"
+    note: "curl 200 image/jpeg(133KB)。設置場所: 秋田県由利本荘市矢島町祓川ヒュッテ(ソーラー稼働、冬期停止の注記あり)。座標は祓川ヒュッテ(鳥海山5合目)の既知座標"
+  - id: curated-still-mountain-haraikawa-hutte-chokai-2
+    name: "祓川ヒュッテ（鳥海山矢島口）カメラ2"
+    operator: "由利本荘市観光協会"
+    category: scenic
+    prefecture: "05"
+    lat: 39.1470
+    lng: 140.0627
+    image_url: "https://haraikawa.pixif.jp/photo/area2/latest.jpg"
+    page_url: "https://haraikawa.pixif.jp/"
+    note: "curl 200 image/jpeg(110KB)。同上(別方向)"
+  - id: curated-still-mountain-yuza-yakuba-chokaisan
+    name: "遊佐町役場から見る鳥海山"
+    operator: "遊佐町"
+    category: scenic
+    prefecture: "06"
+    lat: 39.0149
+    lng: 139.9074
+    image_url: "http://www.town.yuza.yamagata.jp/uploads/public/archive_0000001067_00/user_6/yakuba_yama.jpg"
+    page_url: "http://www.town.yuza.yamagata.jp/ou/somu/jyoho/live_camera.html"
+    note: "curl 200 image/jpeg(17KB、小サイズ)。自治体・利用条件不明。座標は遊佐町役場(遊佐字舞鶴211) → GSI"
+  - id: curated-still-mountain-yuza-yurari-chokaisan
+    name: "遊楽里（吹浦）から見る鳥海山"
+    operator: "遊佐町"
+    category: scenic
+    prefecture: "06"
+    lat: 39.0925
+    lng: 139.9195
+    image_url: "http://www.town.yuza.yamagata.jp/uploads/public/archive_0000001067_00/user_6/yurariyama.jpg"
+    page_url: "http://www.town.yuza.yamagata.jp/ou/somu/jyoho/live_camera.html"
+    note: "curl 200 image/jpeg(14KB)。ファイル名yurari=鳥海温泉遊楽里(遊佐町吹浦)と推定、座標は遊楽里の既知座標。要レビュー"
+  - id: curated-still-mountain-atv-hirosaki-iwakisan
+    name: "弘前市から見る岩木山（ATV）"
+    operator: "ATV青森テレビ"
+    category: scenic
+    prefecture: "02"
+    lat: 40.6030
+    lng: 140.4640
+    image_url: "https://www.atv.jp/w/hi/TRIFORA.jpg"
+    page_url: "https://www.atv.jp/camera/"
+    note: "curl 200 image/jpeg(165KB)。2分毎更新。既存curatedに同サイトの八戸(/w/ha/)が登録済みのため運用実績あり。座標は弘前市中心部(ATV弘前支社付近)の概略、要確認"
+  - id: curated-still-mountain-shichikashuku-yakuba
+    name: "七ヶ宿町役場屋上"
+    operator: "七ヶ宿町"
+    category: scenic
+    prefecture: "04"
+    lat: 37.9943
+    lng: 140.4424
+    image_url: "https://shichikashuku.jp/livecam007/yakuba.jpg"
+    page_url: "https://town.shichikashuku.miyagi.jp/webcamera/"
+    note: "10分毎更新の役場屋上カメラ。curlは同サイトlivecam001/003で200 image/jpeg確認、yakuba.jpgも同サーバー。町内6地区カメラ(image2000004.jpg)も同形式。座標は七ヶ宿町役場(字関126) → GSI"
+  - id: curated-still-mountain-urabandai-bandaisan
+    name: "裏磐梯観光協会 磐梯山カメラ"
+    operator: "裏磐梯観光協会"
+    category: volcano
+    prefecture: "07"
+    lat: 37.6522
+    lng: 140.0870
+    image_url: "https://www.urabandai-inf.com/cam2/cam2-image.jpg"
+    page_url: "https://www.urabandai-inf.com/livecamera/"
+    note: "curl 200 image/jpeg(65KB)。ページ内ラベル『磐梯山』=cam2。転載条件記載なし(license=unknown)。座標は五色沼入口観光プラザ(北塩原村桧原剣ケ峯)の既知座標"
+  - id: curated-still-mountain-urabandai-hibarako
+    name: "裏磐梯観光協会 檜原湖カメラ"
+    operator: "裏磐梯観光協会"
+    category: scenic
+    prefecture: "07"
+    lat: 37.6522
+    lng: 140.0870
+    image_url: "https://www.urabandai-inf.com/cam3/cam3-image.jpg"
+    page_url: "https://www.urabandai-inf.com/livecamera/"
+    note: "curl 200 image/jpeg(66KB)。ラベル『檜原湖』=cam3"
+  - id: curated-still-mountain-urabandai-goshikinuma-plaza
+    name: "五色沼入口観光プラザ"
+    operator: "裏磐梯観光協会"
+    category: scenic
+    prefecture: "07"
+    lat: 37.6522
+    lng: 140.0870
+    image_url: "https://www.urabandai-inf.com/cam1/cam1-image.jpg"
+    page_url: "https://www.urabandai-inf.com/livecamera/"
+    note: "curl 200 image/jpeg(118KB)。ラベル『五色沼入口観光プラザ』=cam1"
+  - id: curated-still-mountain-ina-senjogatake
+    name: "仙丈ヶ岳（伊那市長谷浦）"
+    operator: "伊那市"
+    category: scenic
+    prefecture: "20"
+    lat: 35.6567
+    lng: 138.1503
+    image_url: "http://www.inacity.jp/koho/livecamera/senzyoulivecamera.images/camera_senjogatake02.jpg"
+    page_url: "http://www.inacity.jp/koho/livecamera/senzyoulivecamera.html"
+    note: "curl 200 image/jpeg(16KB)。長谷浦地区設置(標高3033mの仙丈ヶ岳)。自治体・利用条件不明。座標はGSI(伊那市長谷浦)"
+  - id: curated-still-mountain-ogawa-rinrinkan-kitaalps
+    name: "小川村 林りん館から見る北アルプス"
+    operator: "林りん館（長野県小川村）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.6255
+    lng: 137.9605
+    image_url: "https://rinrincan.com/alpslive/alps_rinrinkan.jpg"
+    page_url: "https://rinrincan.com/alpslive1/"
+    note: "curl 200 image/jpeg(193KB)。宿の公式ライブカメラ。座標は林りん館(小川村高府)の既知座標(GSIは小谷村を返したため不採用)"
+  - id: curated-still-mountain-nakano-gogaku
+    name: "中野市役所屋上から見た北信五岳"
+    operator: "長野県中野市"
+    category: scenic
+    prefecture: "20"
+    lat: 36.7417
+    lng: 138.3698
+    image_url: "https://www.city.nakano.nagano.jp/camera/live_gogaku/TRIFORA.jpg"
+    page_url: "https://www.city.nakano.nagano.jp/docs/2014021200248/"
+    note: "curl 200 image/jpeg(18KB)。稼働時間 6:30〜18:00。自治体・利用条件不明。座標は中野市役所(三好町1-3-19) → GSI"
+  - id: curated-still-mountain-nakano-kosha
+    name: "中野市役所屋上から見た高社山"
+    operator: "長野県中野市"
+    category: scenic
+    prefecture: "20"
+    lat: 36.7417
+    lng: 138.3698
+    image_url: "https://www.city.nakano.nagano.jp/camera/live_kosha/TRIFORA.jpg"
+    page_url: "https://www.city.nakano.nagano.jp/docs/2014021200248/"
+    note: "curl 200 image/jpeg(18KB)。同上"
+  - id: curated-still-mountain-komiyama-asamayama
+    name: "立科町から見た浅間山（小宮山土木）"
+    operator: "株式会社小宮山土木"
+    category: volcano
+    prefecture: "20"
+    lat: 36.2721
+    lng: 138.3161
+    image_url: "https://komiyama.jp/wp-content/uploads/livecamera/asama.jpg"
+    page_url: "https://komiyama.jp/"
+    note: "curl 200 image/jpeg(42KB)。自社屋上設置、10分間隔更新。座標は立科町中心部(GSI)、社屋位置は要確認"
+  - id: curated-still-mountain-wakasa-hyonosen
+    name: "わかさ氷ノ山スキー場（氷ノ山）"
+    operator: "若桜町"
+    category: scenic
+    prefecture: "31"
+    lat: 35.3516
+    lng: 134.4928
+    image_url: "http://cam.town.wakasa.tottori.jp/-wvhttp-01-/image.cgi?v=jpg:640x360"
+    page_url: "http://cam.town.wakasa.tottori.jp/local/"
+    note: "curl 200 image/jpeg(28KB)。Canonネットワークカメラの静止画CGI(既存curatedの戸田市と同形式)。http。座標はGSI(わかさ氷ノ山スキー場)"
+  - id: curated-still-mountain-ikedaonsen-ikedayama
+    name: "池田温泉から見る池田山"
+    operator: "池田温泉（岐阜県池田町）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.4237
+    lng: 136.5462
+    image_url: "https://www.ikedaonsen.jp/livecam/ikedayama.jpg"
+    page_url: "https://www.ikedaonsen.jp/"
+    note: "curl 200 image/jpeg(47KB)。池田町公式webcam.htmlからも参照。座標は池田温泉本館(池田町片山3021-1) → GSI"
+  - id: curated-still-mountain-nakashibetsu-musadake
+    name: "中標津市街地と武佐岳"
+    operator: "中標津町"
+    category: scenic
+    prefecture: "01"
+    lat: 43.5548
+    lng: 144.9718
+    image_url: "http://www.nakashibetsu.jp/image/contents/25/13919/webcm.jpg"
+    page_url: "http://www.nakashibetsu.jp/livecam/"
+    note: "curl 200 image/jpeg(161KB)。『武佐岳をバックに市街地』。座標は中標津町役場の既知座標(設置場所未記載)"
+  - id: curated-still-mountain-nakashibetsu-kaiyodai
+    name: "開陽台"
+    operator: "中標津町"
+    category: scenic
+    prefecture: "01"
+    lat: 43.6334
+    lng: 144.8617
+    image_url: "http://www.nakashibetsu.jp/image/contents/25/13917/webkaiyou.jpg"
+    page_url: "http://www.nakashibetsu.jp/livecam/"
+    note: "webcm.jpgと同サーバー・同形式(要curl再確認)。座標はGSI(開陽台)"
+  - id: curated-still-mountain-shiretoko-nature-center-kitami
+    name: "知床自然センターから見た知床連山"
+    operator: "北見工業大学 雪氷環境研究室"
+    category: scenic
+    prefecture: "01"
+    lat: 44.0914
+    lng: 145.0170
+    image_url: "http://dias.rd.kitami-it.ac.jp/~ohno_dias/images/lastcamera.jpg"
+    page_url: "http://dias.rd.kitami-it.ac.jp/~ohno_dias/shiretokodata.html"
+    note: "curl 200 image/jpeg(128KB)。30分間隔更新(10分に改良予定と記載)。座標はGSI(知床自然センター)"
+  - id: curated-still-mountain-rishiri-town-realtime
+    name: "リアルタイム利尻山（利尻町）"
+    operator: "利尻町"
+    category: scenic
+    prefecture: "01"
+    lat: 45.1875
+    lng: 141.1488
+    image_url: "https://rishiri-town.jp/wp-content/themes/rishiri/images/MtRishiri/mt-rishiri.jpg"
+    page_url: "https://rishiri-town.jp/%e8%a6%b3%e5%85%89%e3%83%bb%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/%e3%83%aa%e3%82%a2%e3%83%ab%e3%82%bf%e3%82%a4%e3%83%a0%e5%88%a9%e5%b0%bb%e5%b1%b1/"
+    note: "curl 200 image/jpeg(1.1MB、大きい)。テーマ内固定パスに最新画像を上書きする方式と推定、更新間隔未確認。設置場所未記載のため座標は利尻町役場(沓形) → GSI。要レビュー"
+  - id: curated-still-mountain-kcg-daimonjiyama
+    name: "大文字山（京都コンピュータ学院洛北校）"
+    operator: "京都コンピュータ学院"
+    category: scenic
+    prefecture: "26"
+    lat: 35.0480
+    lng: 135.7785
+    image_url: "https://www.kcg.ac.jp/daimon/current.jpg"
+    page_url: "https://www.kcg.ac.jp/daimon/"
+    note: "curl 200 image/jpeg(41KB)。老舗カメラ。座標は洛北校(左京区高野)の既知座標"
+  - id: curated-still-mountain-fuefuki-shindo-toge-fuji
+    name: "新道峠 FUJIYAMAツインテラスから見る富士山"
+    operator: "笛吹市観光物産連盟（ふえふき観光ナビ）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.5170
+    lng: 138.6795
+    image_url: "http://www.fuefuki-kanko.jp/article/live_cam/fuefuki_live_cam.jpg"
+    page_url: "https://www.fuefuki-kanko.jp/livecam/"
+    note: "curl 200 image/jpeg(28KB)。配信5:00〜18:00・30分毎(夜間は最終画像のまま)。山梨県fujisanwatcherからリンク。座標は新道峠(笛吹市芦川町)の既知座標"
+  - id: curated-still-mountain-nakanojo-takeyama
+    name: "中之条町 嵩山（キララあがつま）"
+    operator: "キララ★あがつま（画像提供: 株式会社測研）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.5899
+    lng: 138.8410
+    image_url: "https://www.shima-net.jp/live/takeyama-1.jpg"
+    page_url: "https://www.shima-net.jp/live/"
+    note: "curl 200 image/jpeg(15KB)。『中之条町の北の空: 嵩山(標高789m)』。運営者はローカルポータル(要確認、license=unknown)。座標は中之条町中心部(GSI)"
+  - id: curated-still-mountain-visitaso-daikanbo-unkai
+    name: "阿蘇 大観峰 雲海カメラ"
+    operator: "熊本県観光連盟／阿蘇市（阿蘇リアルタイム雲海カメラ）"
+    category: scenic
+    prefecture: "43"
+    lat: 32.9938
+    lng: 131.0715
+    image_url: "https://visitaso.com/livecam/010/images/image00.jpg"
+    page_url: "https://kumamoto.guide/localguide/asocam/"
+    note: "curl 200 image/jpeg(171KB)。熊本県公式観光サイトにiframe埋め込み(visitaso.com/livecam/010 タイトル ASO-DAIKANBO)。運営主体の表記は要確認(license=unknown)。座標は大観峰展望所の既知座標"
+  - id: curated-still-mountain-visitaso-aspecta-unkai
+    name: "阿蘇 アスペクタ 雲海カメラ"
+    operator: "熊本県観光連盟／阿蘇市（阿蘇リアルタイム雲海カメラ）"
+    category: scenic
+    prefecture: "43"
+    lat: 32.8225
+    lng: 131.0393
+    image_url: "https://visitaso.com/livecam/030/images/image00.jpg"
+    page_url: "https://kumamoto.guide/localguide/asocam/"
+    note: "curl 200 image/jpeg(220KB)。visitaso.com/livecam/030 タイトル ASPECTA(南阿蘇村久石)。座標はアスペクタの既知座標"
+youtube:
+  - id: curated-mountain-kongozan-trailhead
+    name: "金剛山 登山口"
+    operator: "kongozanTV（kongozan.live / tsujiwaki.jp）"
+    video_id: "K-bqbArZiuM"
+    category: scenic
+    prefecture: "27"
+    lat: 34.4230
+    lng: 135.6520
+    note: "oEmbed 200 / isLiveNow:true 24時間配信。金剛山登山口(千早赤阪村千早)の既知座標。個人運営(サイト名=運営者)"
+  - id: curated-mountain-kongozan-iwawaki
+    name: "金剛山（岩湧山麓ライブ・河内長野市）"
+    operator: "岩湧山麓ライブ (Haru)"
+    video_id: "uxDiOALn_8A"
+    category: scenic
+    prefecture: "27"
+    lat: 34.4300
+    lng: 135.5900
+    note: "oEmbed 200 / isLiveNow:true 24/7。個人チャンネル。設置点は河内長野市岩湧山麓としか不明のため概略座標、要レビュー"
+  - id: curated-mountain-kimobetsu-yoteizan
+    name: "喜茂別町から見た羊蹄山"
+    operator: "喜茂別町ライブカメラ"
+    video_id: "Rx54BxW2kiU"
+    category: scenic
+    prefecture: "01"
+    lat: 42.7960
+    lng: 140.9500
+    note: "oEmbed 200 / isLiveNow:true。座標は喜茂別町役場の既知座標"
+  - id: curated-mountain-hachimantai-panorama-ski
+    name: "八幡平リゾート パノラマスキー場"
+    operator: "八幡平リゾート"
+    video_id: "nTlYu7BovSM"
+    category: scenic
+    prefecture: "03"
+    lat: 39.9430
+    lng: 140.9830
+    note: "oEmbed 200 / isLiveNow:true。座標は八幡平リゾートパノラマスキー場の既知座標"
+  - id: curated-mountain-appi-dynabase-iwatesan
+    name: "八幡平温泉郷から見る岩手山（DynaBase APPI）"
+    operator: "RVパーク DynaBase APPI"
+    video_id: "wNm17Fe-Sto"
+    category: scenic
+    prefecture: "03"
+    lat: 39.9400
+    lng: 140.9900
+    note: "oEmbed 200 / isLiveNow:true。座標は八幡平温泉郷の概略(施設位置要確認)"
+  - id: curated-mountain-akaishidake-sawarajima
+    name: "赤石岳（椹島）"
+    operator: "南アルプスユネスコエコパーク（南プスPR）"
+    video_id: "x4JzcgI9UVs"
+    category: scenic
+    prefecture: "22"
+    lat: 35.3640
+    lng: 138.2160
+    note: "oEmbed 200 / isLiveNow:true。椹島ロッヂ周辺の既知座標"
+  - id: curated-mountain-shirabiso-kogen
+    name: "しらびそ高原"
+    operator: "しらびそ高原（天空の楽園）"
+    video_id: "AWgSeZ3EnVY"
+    category: scenic
+    prefecture: "20"
+    lat: 35.4160
+    lng: 138.0170
+    note: "oEmbed 200 / isLiveNow:true。しらびそ高原(飯田市上村)の既知座標"
+  - id: curated-mountain-asamayama-crater-maechan
+    name: "浅間山火口（嬬恋村）"
+    operator: "株式会社まえちゃんねっと"
+    video_id: "YhxWaipmtl8"
+    category: volcano
+    prefecture: "10"
+    lat: 36.5100
+    lng: 138.5260
+    note: "oEmbed 200 / isLiveNow:true。嬬恋村内設置、概略座標(要確認)"
+  - id: curated-mountain-ibukiyama-ibuki-hs
+    name: "伊吹山（伊吹高校）"
+    operator: "滋賀県立伊吹高等学校"
+    video_id: "OPq7PL4GNwM"
+    category: scenic
+    prefecture: "25"
+    lat: 35.3800
+    lng: 136.3200
+    note: "oEmbed 200 / isLiveNow:true。伊吹高校(米原市春照)の既知座標"
+  - id: curated-mountain-ibukiyama-3rd-station-maibara
+    name: "伊吹山3合目（米原市）"
+    operator: "米原市役所"
+    video_id: "KOaB6A5eWBo"
+    category: scenic
+    prefecture: "25"
+    lat: 35.4020
+    lng: 136.3950
+    note: "oEmbed 200 / isLiveNow:true。米原市公式ページに埋め込み。3合目の既知座標。同ページの5合目(n996gl1UU6U)はライブ判定不可のため未採用"
+  - id: curated-mountain-sanbesan-nishinohara
+    name: "三瓶山 西の原（山の駅さんべ）"
+    operator: "さんべツアーズ"
+    video_id: "3TjoHhS78hE"
+    category: scenic
+    prefecture: "32"
+    lat: 35.1170
+    lng: 132.6120
+    note: "oEmbed 200 / isLiveNow:true。山の駅さんべ(大田市三瓶町)の既知座標"
+  - id: curated-mountain-aso-volcano-museum-dcam
+    name: "阿蘇火山博物館 dカメラ"
+    operator: "阿蘇火山博物館"
+    video_id: "t4tKqcWyU7I"
+    category: volcano
+    prefecture: "43"
+    lat: 32.8848
+    lng: 131.0480
+    note: "oEmbed 200 / isLiveNow:true。草千里の阿蘇火山博物館既知座標。既存の自然公園財団草千里4Kとは別運営者"
+  - id: curated-mountain-yarimikan-yarigatake
+    name: "奥飛騨温泉郷 槍見館から見る槍ヶ岳"
+    operator: "槍見館"
+    video_id: "4S4hrquuPqg"
+    category: scenic
+    prefecture: "21"
+    lat: 36.2440
+    lng: 137.5530
+    note: "oEmbed 200 / isLiveNow:true。槍見館(高山市奥飛騨温泉郷神坂)の既知座標"
+  - id: curated-mountain-kurodake-rinyu
+    name: "大雪山 黒岳五合目（りんゆう黒岳）"
+    operator: "りんゆう観光（黒岳ロープウェイ）"
+    video_id: "JLABQcjsHd4"
+    category: scenic
+    prefecture: "01"
+    lat: 43.7200
+    lng: 142.9350
+    note: "oEmbed 200 / isLiveNow:true。黒岳五合目駅の既知座標"
+  - id: curated-mountain-higashikawa-asahidake-hokko
+    name: "東川町から見る旭岳（北工学園）"
+    operator: "北工学園 東川国際文化福祉専門学校"
+    video_id: "Q5Q5UL34cH4"
+    category: scenic
+    prefecture: "01"
+    lat: 43.6960
+    lng: 142.4470
+    note: "oEmbed 200 / isLiveNow:true。東川町市街の既知座標"
+  - id: curated-mountain-iwashiro-adatarayama
+    name: "二本松市岩代から見る安達太良山"
+    operator: "いわしろ夢現塾"
+    video_id: "79KAGuh0wQs"
+    category: scenic
+    prefecture: "07"
+    lat: 37.5570
+    lng: 140.5150
+    note: "oEmbed 200 / isLiveNow:true。岩代グラウンド(二本松市)の概略座標"
+  - id: curated-mountain-azumino-terrace-jonen
+    name: "安曇野から見る常念山脈（あづみのテラス）"
+    operator: "あづみのテラス"
+    video_id: "Is8U7W-IjmI"
+    category: scenic
+    prefecture: "20"
+    lat: 36.3040
+    lng: 137.9050
+    note: "oEmbed 200 / isLiveNow:true 4K。安曇野市の概略座標、施設位置要確認"
+  - id: curated-mountain-hakuba-tokyu-kitaalps
+    name: "白馬東急ホテルから見る北アルプス"
+    operator: "白馬東急ホテル"
+    video_id: "LntyJbsekPk"
+    category: scenic
+    prefecture: "20"
+    lat: 36.6970
+    lng: 137.8380
+    note: "oEmbed 200 / isLiveNow:true。白馬東急ホテルの既知座標"
+  - id: curated-mountain-shigakogen-yamanoeki
+    name: "志賀高原 山の駅（西館山・東館山）"
+    operator: "山ノ内まちづくり観光局"
+    video_id: "96TRTCrb5GU"
+    category: scenic
+    prefecture: "20"
+    lat: 36.7230
+    lng: 138.4870
+    note: "oEmbed 200 / isLiveNow:true。志賀高原山の駅の既知座標"
+  - id: curated-mountain-kushiro-meakandake-sanes
+    name: "釧路市街から見る雌阿寒岳"
+    operator: "サンエス電気通信株式会社"
+    video_id: "ACIoHP6DW-0"
+    category: scenic
+    prefecture: "01"
+    lat: 42.9800
+    lng: 144.3830
+    note: "oEmbed 200 / isLiveNow:true。同社釧路本社ビル屋上、概略座標(要確認)"
+  - id: curated-mountain-hakusan-murodo-mro
+    name: "白山室堂（MRO）"
+    operator: "MRO北陸放送"
+    video_id: "Getnw5E1ue8"
+    category: scenic
+    prefecture: "17"
+    lat: 36.1520
+    lng: 136.7650
+    note: "oEmbed 200 / isLiveNow:true。タイトルに10/13配信停止予定(夏山期間限定)。白山室堂ビジターセンターの既知座標"
+  - id: curated-mountain-tsukubasan-channel-miyukigahara
+    name: "筑波山 御幸ヶ原（筑波山チャンネル）"
+    operator: "筑波山チャンネル"
+    video_id: "cL2zQrbW3vg"
+    category: scenic
+    prefecture: "08"
+    lat: 36.2260
+    lng: 140.1060
+    note: "oEmbed 200 / isLiveNow:true 24/7(実証試験中と表記)。既存のつくば市静止画(御幸ヶ原)と同地点だが運営者・種別が異なる。運営者実体は要確認"
+  - id: curated-mountain-tsukubasan-channel-nyotai
+    name: "筑波山 女体山頂合流地点（筑波山チャンネル）"
+    operator: "筑波山チャンネル"
+    video_id: "dojmzSgF-yk"
+    category: scenic
+    prefecture: "08"
+    lat: 36.2255
+    lng: 140.1090
+    note: "oEmbed 200 / isLiveNow:true。同上"
+  - id: curated-mountain-toyooka-toyoterrace-chuoalps
+    name: "豊丘村から見る中央アルプス（とよテラス）"
+    operator: "長野県豊丘村（広報係）"
+    video_id: "lw_3VOqM0fM"
+    category: scenic
+    prefecture: "20"
+    lat: 35.5310
+    lng: 137.8820
+    note: "oEmbed 200 / isLiveNow:true。豊丘村役場の既知座標"
+  - id: curated-mountain-kushigatayama-kyosai
+    name: "櫛形山（峡西CATV）"
+    operator: "峡西CATV"
+    video_id: "1mRb_buPZ6E"
+    category: scenic
+    prefecture: "19"
+    lat: 35.6080
+    lng: 138.4680
+    note: "oEmbed 200 / isLiveNow:true。南アルプス市内(峡西CATV局舎付近)の概略座標"
+  - id: curated-mountain-yakushima-nagatadake-shingenn
+    name: "屋久島 永田岳（4K）"
+    operator: "ライブカメラ見ませんか【Shingenn しんげん】"
+    video_id: "dPO_C5ytfrM"
+    category: scenic
+    prefecture: "46"
+    lat: 30.3900
+    lng: 130.4100
+    note: "oEmbed 200 / isLiveNow:true 4K。個人チャンネル。永田地区の概略座標"
+  - id: curated-mountain-shimabara-hibariyama-unzen
+    name: "しまばら火張山花公園から見る雲仙岳"
+    operator: "しまばら火張山花公園"
+    video_id: "32Azf9yJmRI"
+    category: volcano
+    prefecture: "42"
+    lat: 32.7550
+    lng: 130.3560
+    note: "oEmbed 200 / isLiveNow:true。火張山花公園(島原市上折橋町)の既知座標"
+  - id: curated-mountain-morotsuka-yamashigi
+    name: "諸塚村の山々（やましぎの杜）"
+    operator: "諸塚村"
+    video_id: "v8q_9QdZquc"
+    category: scenic
+    prefecture: "45"
+    lat: 32.5120
+    lng: 131.3230
+    note: "oEmbed 200 / isLiveNow:true 4K環境音。諸塚村中心部の概略座標"
+  - id: curated-mountain-jukkoku-toge-fuji
+    name: "箱根 十国峠から見る富士山"
+    operator: "フジヤマNAVI（十国峠）"
+    video_id: "4Hro9QIrsYA"
+    category: scenic
+    prefecture: "22"
+    lat: 35.0850
+    lng: 139.0350
+    note: "oEmbed 200 / isLiveNow:true。十国峠山頂(函南町)の既知座標。フジヤマNAVIは既存curatedで採用実績あり"
+  - id: curated-mountain-moiwayama-ropeway
+    name: "藻岩山（札幌）"
+    operator: "Hokkaido Kurashi no Yomimono（hokkaidodo.jp）"
+    video_id: "T95GNcqeKdE"
+    category: scenic
+    prefecture: "01"
+    lat: 43.0270
+    lng: 141.3220
+    note: "oEmbed 200 / isLiveNow:true 24/7。hokkaidodo.jp/mt-moiwa/ に埋め込み。藻岩山山頂の既知座標(カメラ位置要確認)"
+skipped:
+  - name: 上高地ビジターセンター 山小屋カメラ（涸沢/北穂/蝶ヶ岳/燕/西穂 等）
+    url: https://www.kamikochi-vc.or.jp/livecam/
+    reason: 既登録（curated-still-trail-* 6件）。なおcurl/WebFetchとも403
+  - name: 槍ヶ岳山荘・南岳小屋・岳沢小屋・殺生小屋 ライブカメラ
+    url: https://www.yarigatake.co.jp/livecamera/
+    reason: 「当サイト内のすべてのコンテンツの無断転載・無断使用を禁止します」明記のため不採用（画像自体はcurlで取得可）
+  - name: 土小屋白石ロッジ（石鎚山）
+    url: https://tutigoya.com/livecam.php
+    reason: 「無断利用は固くお断り／個別コンテンツへのリンクは避けて」明記。画像も最終更新2026-07-22で停滞
+  - name: 石鎚山系公式 天気情報・ライブカメラ（成就社／成就駅）
+    url: https://ishizuchisankei.com/weather/
+    reason: 画像はJS描画で固定URLを特定できず
+  - name: 立山黒部アルペンルート（室堂平/大観峰/黒部平/弥陀ヶ原）
+    url: https://www.alpen-route.com/live_camera/murodou.html
+    reason: 画像URL live.alpen-route.co.jp/livecam/2012/img.php?n=1〜4 がReferer付でも0バイト応答（JS/セッション依存）
+  - name: 白馬ハイランドホテル 北アルプス
+    url: https://www.hakuba-highland.net/live/
+    reason: 画像がnanfutsu.com/cgi/live/e106_live.cgi で、同ドメインrobots.txtが /cgi/ をDisallow
+  - name: ABA青森朝日放送 八甲田山
+    url: https://www.aba-net.com/livecamera/
+    reason: 「複製、転載することを禁じます」明記
+  - name: 大山（大山観光局）YouTube
+    url: https://www.youtube.com/watch?v=VDtMfauGMew
+    reason: 既登録（curated-r2-b768c9cb）
+  - name: 立山山頂 / 那須連山 / 富士ヶ嶺 / 羊蹄山(ニセコ) / 赤岳天望荘 / 立山室堂 / 谷川連峰 / 雨晴海岸 等
+    url: https://www.cametan.com/view/y03.html
+    reason: 既登録（curated_index / all_index に同video_id）
+  - name: 中央アルプス駒ヶ岳 宝剣山荘（宮田村）
+    url: https://miyada.jp/live_camera/
+    reason: 画像がGIF(mcam1.gif)でJPEG/PNGでない。千畳敷は既登録
+  - name: 剣山観光推進協議会
+    url: https://www.youtube.com/channel/UCFDVZny7a8W3Hk2Gh90Xsfw/live
+    reason: 現在ライブ配信なし（isLiveNow:false）
+  - name: 大町市 木崎湖ライブ
+    url: https://www.city.omachi.nagano.jp/00003000/00002400/takagari_live.html
+    reason: 湖カメラのためジャンル外（鷹狩山カメラの静止画は日時入りURLで固定URLなし）
+  - name: 蔵王山ライブカメラ（宮城県）
+    url: https://www.spot-i.com/miyagizaosan/public/page/index.aspx
+    reason: 画像ファイル名が撮影時刻入り(T001YYYYMMDDHHMM00.jpg)で固定URLなし
+  - name: 雑遊記 くじゅう連山（長者原）
+    url: https://www.kuju-walker.net/live/
+    reason: latest.cgi がHTMLを返し画像URL特定不可（個人サイト・フレーム構成）
+  - name: 大子町 奥久慈男体山
+    url: https://www.town.daigo.ibaraki.jp/page/page002579.html
+    reason: JS描画のみ（HTML内画像は静的サムネイル8KB）
+  - name: 酒田市 鳥海山カメラ
+    url: http://www3.city.sakata.lg.jp/camera/
+    reason: 画像がIP:60001のSnapshotJPEGで接続不可
+  - name: JR9VQ 立山雄山山頂 南向き
+    url: http://www.jr9vq.org/lcams/lcam.html
+    reason: 画像URLが時刻・秒入りファイル名で固定URLなし（同地点は tateyama now が既登録）
+  - name: 利根川水系砂防事務所 浅間山(東)/草津白根山(逢ノ峰)
+    url: https://www.ktr.mlit.go.jp/tonesui/livecam/asama-east.jpg
+    reason: 画像は取得可だが一覧ページが403で設置地点を特定できず。要追加調査
+  - name: 湯沢河川国道事務所 秋田駒ヶ岳カメラ
+    url: https://www.thr.mlit.go.jp/yuzawa/17_sabou/livecam/index.htm
+    reason: 画像(rivercctv C04118等)は取得可だがShift_JISページから地点名を抽出できず。要追加調査
+  - name: Cafe KaZe 木曽御嶽山 / インターネット信州 風越山 / qrx.jp 茅ヶ岳
+    url: http://cafekaze.jp/web-camera.html
+    reason: 個人・小規模サイトで設置地点が特定できない（茅ヶ岳は画像6KBの低解像度）
+  - name: 手稲山ライブカメラ
+    url: https://www.youtube.com/watch?v=A98h2E-7ytc
+    reason: チャンネル名以外に運営者・設置地点の情報がない
+  - name: 利尻島_旅番屋（前浜）
+    url: https://www.youtube.com/watch?v=aqXQI-SRigk
+    reason: 海岸カメラでジャンル外（海岸担当へ）
+  - name: 阿蘇DC 道の駅阿蘇 パーキング
+    url: https://www.youtube.com/watch?v=PnpbEAu0n0s
+    reason: 駐車場カメラで山岳ジャンル外
+  - name: 佐渡特選市場 金北山
+    url: https://www.youtube.com/watch?v=AdHbmvyW7RU
+    reason: 配信中だが設置施設の所在地を特定できず（要追加調査）
+  - name: ITFOR 阿蘇水掛の棚田
+    url: https://www.youtube.com/watch?v=3Ab5Upfmtzg
+    reason: 配信中だが設置地点(水掛)の位置を特定できず
+  - name: アルピコ 蓼科高原（プール平ほか3台）
+    url: http://www.alpico.co.jp/tokan-tateshina/livecamera/
+    reason: 画像3本は取得可(image/jpeg)だがHTMLから地点ラベルと画像の対応が取れず
+  - name: 山梨県 fujisanwatcher 精進湖 (lcnet.jp)
+    url: https://www.yamanashi-kankou.jp/fujisanwatcher/live/index.html
+    reason: 富士五湖の湖畔カメラは富士山系担当と重複しやすいため本ジャンルでは未採用（lcnet.jp/~live-cam/*-capt.jpg は取得可）
+  - name: 富士山周辺のYouTube多数（河口湖/山中湖/忍野/御殿場/富士宮 等）
+    url: https://www.cametan.com/view/y03.html#yamanashi
+    reason: 富士山系は既登録多数・別担当想定のため本ジャンルでは十国峠のみ採用

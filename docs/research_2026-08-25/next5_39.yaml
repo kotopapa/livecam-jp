@@ -1,0 +1,217 @@
+# 高知県(39) 追加調査 2026-08-24  ※Nominatimが429(共有制限)のため座標は既知座標＋根拠を note に明記
+still:
+  - id: curated-still-scenic-shikoku-karst-himetsuru
+    name: "四国カルスト 姫鶴平（梼原町）"
+    operator: "梼原町"
+    category: scenic
+    prefecture: "39"
+    lat: 33.4886
+    lng: 132.9281
+    image_url: "http://www.town.yusuhara.kochi.jp/karstlive/GetPhotoImg.php?id=1&size=L"
+    page_url: "http://www.town.yusuhara.kochi.jp/karstlive/LiveCam.php"
+    note: "curlで200 image/jpeg確認。ページJSが5秒ごとに同URLを再取得(gtmはキャッシュ回避パラメータ)。姫鶴平キャンプ場設置で四国カルスト・風車・県道383号を写す。ページに利用条件記載なし→license=unknown。座標は姫鶴平(梼原町太田戸)の既知位置"
+  - id: curated-still-coast-kuroshio-shirahama
+    name: "白浜海岸（黒潮町佐賀）"
+    operator: "黒潮町"
+    category: coast
+    prefecture: "39"
+    lat: 33.1130
+    lng: 133.0990
+    image_url: "https://www.town.kuroshio.lg.jp/cameraconsole/img.php?cam_no=102"
+    page_url: "https://www.town.kuroshio.lg.jp/pb/cont/22909"
+    note: "既存の浮鞭ビーチ(cam_no=101)と同系統。町公式ページのimg要素がcam_no=102を参照、curlで200 image/png確認(101/102/103はそれぞれ別画像、100/104/105は空応答)。利用条件記載なし。座標は佐賀・白浜海岸(土佐白浜駅前)の概略位置"
+  - id: curated-still-river-kuroshio-iyokigawa
+    name: "伊与木川（黒潮町佐賀）"
+    operator: "黒潮町"
+    category: river
+    prefecture: "39"
+    lat: 33.1030
+    lng: 133.1110
+    image_url: "https://www.town.kuroshio.lg.jp/cameraconsole/img.php?cam_no=103"
+    page_url: "https://www.town.kuroshio.lg.jp/pb/cont/22910"
+    note: "町公式ページのimg要素がcam_no=103。curlで200 image/png確認。ページに「海岸近くの設置で風雨時は見えにくい」旨の注記。利用条件記載なし。座標は伊与木川河口付近(佐賀市街)の概略位置"
+  - id: curated-still-coast-yasu-uminoeki-teyui
+    name: "手結ビーチ・土佐湾（YASU海の駅クラブ）"
+    operator: "YASU海の駅クラブ（香南市）"
+    category: coast
+    prefecture: "39"
+    lat: 33.5325
+    lng: 133.7562
+    image_url: "http://yasuuminoeki.aa0.netvolante.jp/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://yasuuminoeki.aa0.netvolante.jp/CgiStart?page=Single&Language=1"
+    note: "Panasonicネットワークカメラ。SnapshotJPEGでcurl 200 image/jpeg確認。公式サイト(yasu-uminoeki.com)からリンクされた公開カメラ、転載禁止の記載なし。可動カメラのため視点が変わる。座標は施設住所(香南市夜須町千切536-19 手結港)の既知位置"
+  - id: curated-still-dam-sameura-left-bank
+    name: "早明浦ダム 左岸展望台"
+    operator: "独立行政法人水資源機構 池田総合管理所"
+    category: dam
+    prefecture: "39"
+    lat: 33.7654
+    lng: 133.5185
+    image_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp14.jpg"
+    page_url: "https://www.water.go.jp/yoshino/ikeda/sameura/eizoukan.html"
+    note: "既存の早明浦ダム(camDisp11=上流)と同ページに掲載の2台目「左岸展望台ライブカメラ（静止画像）」。curl 200 image/jpeg、Last-Modified 現在時刻で更新中。camDisp12/15も画像は返るがページ未掲載のため見送り。座標は早明浦ダム堤体の既知位置"
+  - id: curated-still-river-ino-gohoku-center
+    name: "上八川川 吾北山村開発センター前（いの町）"
+    operator: "いの町"
+    category: river
+    prefecture: "39"
+    lat: 33.6790
+    lng: 133.3600
+    image_url: "https://www.town.ino.kochi.jp/gohoku/camera/centerphoto.jpg"
+    page_url: "https://www.town.ino.kochi.jp/bousai/bousai2/4979/"
+    note: "町防災ライブカメラページのimg直参照。curl 200 image/jpeg、Last-Modified現在時刻(10分更新)。利用条件記載なし。座標は吾北山村開発センター(いの町上八川)の概略位置・要確認"
+  - id: curated-still-river-ino-gohoku-kominkan
+    name: "上八川川 吾北中央公民館前（いの町）"
+    operator: "いの町"
+    category: river
+    prefecture: "39"
+    lat: 33.6800
+    lng: 133.3620
+    image_url: "https://www.town.ino.kochi.jp/gohoku/camera/photo.jpg"
+    page_url: "https://www.town.ino.kochi.jp/bousai/bousai2/4979/"
+    note: "同上ページのimg直参照。curl 200 image/jpeg、10分更新。座標は吾北中央公民館(いの町上八川)の概略位置・要確認"
+  - id: curated-still-river-ino-ujigawa-edagawa
+    name: "宇治川 枝川地区（いの町）"
+    operator: "いの町（高度雨水情報システム）"
+    category: river
+    prefecture: "39"
+    lat: 33.5560
+    lng: 133.4620
+    image_url: "http://www2.town.ino.kochi.jp/usui/Content/Images/camera1.jpg"
+    page_url: "https://www.town.ino.kochi.jp/bousai/bousai2/4979/"
+    note: "町防災ページからimg直参照(camera1=宇治川)。curl 200 image/jpeg、Last-Modified現在時刻。http配信。既存の国交省 宇治川排水機場/新宇治川放水路とは別カメラ(町設置)。座標は枝川地区(宇治川沿い)の概略位置"
+  - id: curated-still-river-ino-tenjingatani-edagawa
+    name: "天神ヶ谷川 枝川地区（いの町）"
+    operator: "いの町（高度雨水情報システム）"
+    category: river
+    prefecture: "39"
+    lat: 33.5575
+    lng: 133.4640
+    image_url: "http://www2.town.ino.kochi.jp/usui/Content/Images/camera2.jpg"
+    page_url: "https://www.town.ino.kochi.jp/bousai/bousai2/4979/"
+    note: "同上(camera2=天神ヶ谷川)。curl 200 image/jpeg確認。座標は枝川地区の概略位置"
+youtube:
+  - id: curated-scenic-kochi-obiyamachi-kinkame
+    name: "帯屋町商店街（高知市）"
+    operator: "きんかめちゃんねる（金亀 高知店）"
+    video_id: "KZKo7cEVcPM"
+    category: scenic
+    prefecture: "39"
+    lat: 33.5602
+    lng: 133.5366
+    note: "oEmbed 200・isLiveNow=true確認(チャンネル/liveの正規URL)。24時間配信、よさこい祭り期間は演舞も。既存台帳に帯屋町なし。座標はカメ探記載値(帯屋町アーケード内)"
+  - id: curated-scenic-kutv-kochi-sky
+    name: "KUTVテレビ高知 お天気カメラ（高知市北本町）"
+    operator: "KUTVテレビ高知"
+    video_id: "th1n0fSSUjk"
+    category: scenic
+    prefecture: "39"
+    lat: 33.5680
+    lng: 133.5455
+    note: "oEmbed 200・isLiveNow=true。@kutv/live の正規URLが本ID。高知市上空と県道384号を写す24時間配信。緊急時は報道配信に切替の可能性。座標はテレビ高知本社(高知市北本町3-4-27)の既知位置"
+  - id: curated-scenic-kochi-mirai-kagakukan-sky
+    name: "高知の空をみる（オーテピア屋上）"
+    operator: "高知みらい科学館"
+    video_id: "jtiPiMw4Ecs"
+    category: scenic
+    prefecture: "39"
+    lat: 33.5610
+    lng: 133.5335
+    note: "oEmbed 200・isLiveNow=true。オーテピア(高知市追手筋2-1-1)屋上から高知市街と空。座標はオーテピアの既知位置"
+  - id: curated-scenic-aki-iokido-cave
+    name: "伊尾木洞（安芸市）"
+    operator: "あきのこと（安芸市）"
+    video_id: "nOqYz_8SXO0"
+    category: scenic
+    prefecture: "39"
+    lat: 33.5027
+    lng: 133.9346
+    note: "oEmbed 200・isLiveNow=true。伊尾木洞入口の24時間配信。運営は安芸市の情報発信チャンネル「あきのこと」。座標は伊尾木洞(安芸市伊尾木117)の既知位置"
+  - id: curated-other-kochi-airport-parking
+    name: "高知龍馬空港 駐車場混雑状況"
+    operator: "高知県航空利用促進協議会"
+    video_id: "92TBiyZKS54"
+    category: other
+    prefecture: "39"
+    lat: 33.5470
+    lng: 133.6700
+    note: "oEmbed 200・isLiveNow=true(チャンネルUCv82Gjr4ulqFHdvoCCQKTXg/liveの正規URL)。既存のRKC空港カメラ(uo-sHAw3cr0)とは別運営者・別視点(駐車場)。座標は高知龍馬空港ターミナル前駐車場の既知位置"
+skipped:
+  - name: "高知城歴史博物館 西側/南側 道路混雑状況（TW高知）"
+    url: "https://www.youtube.com/watch?v=EaR67gitw9c / WfTbbiTjkL8"
+    reason: "oEmbedは200だがisLiveNow=false(現在配信停止)。再開時は有望"
+  - name: "五台山公園展望台駐車場（YouTube）"
+    url: "https://www.youtube.com/channel/UCBuZXpm6MLPMEdRj9skjBOA"
+    reason: "チャンネルにライブ配信なし(/live・/streamsとも空)"
+  - name: "土佐塾高校天文部 星空カメラ"
+    url: "https://www.youtube.com/channel/UC0OdXkaj_5nQhAmwCbN24LA"
+    reason: "過去配信のみ、現在ライブなし(eL0d0_IRdmM isLiveNow=false)"
+  - name: "四万十楽舎 四万十川（西土佐中半）"
+    url: "https://www.youtube.com/channel/UCVTYWxywBihrgX89f69YdHw"
+    reason: "/liveが動画に解決せず(現在配信なし)。再開時は有望(四万十川・沈下橋系)"
+  - name: "竜串湾桜浜 うみのわ（土佐清水ジオパークTV）"
+    url: "https://www.youtube.com/@tosashimizu-geopark/live"
+    reason: "/liveが動画に解決せず(現在配信なし)"
+  - name: "生見海岸・白浜海岸（東洋町観光振興協会 YouTube）"
+    url: "https://www.youtube.com/channel/UCdmch4LzRVS0EOvk8xIY3Kw/live"
+    reason: "現在ライブなし。生見海岸は既に町の静止画で登録済み"
+  - name: "エコサイクル高知 屋形船仁淀川"
+    url: "https://www.youtube.com/watch?v=yZYjCVPZjHI"
+    reason: "oEmbed 401(埋め込み不可)かつ配信終了"
+  - name: "土佐の海空と侍猫 太平洋ライブカメラ（土佐清水）"
+    url: "https://www.youtube.com/watch?v=AbZ0_ytrSgI"
+    reason: "個人配信で猫部屋映像と混在、設置位置が特定できない"
+  - name: "高知大学医学部附属病院 検査部呼出番号"
+    url: "https://www.youtube.com/@kmshpCLD"
+    reason: "屋内の呼出番号表示のみ(景観カメラではない)"
+  - name: "高知競馬/高知競輪/高知市議会/南国市議会/四万十市議会/土佐清水市議会 配信"
+    url: "livecam.asia 各ページ"
+    reason: "イベント時のみ配信・屋内中継"
+  - name: "高知県庁 知事室ライブ中継"
+    url: "https://www.pref.kochi.lg.jp/chiji/live.html"
+    reason: "屋内。ページに画像/埋め込み要素が見つからず(配信手段不明)"
+  - name: "四万十町 河川・海岸監視カメラ 17地点（鍋谷・三島・浦越・交流センター・大正・吉見川橋・興津 等）"
+    url: "http://kasen.midwest-kochi.jp/shimanto/index.php"
+    reason: "画像URLが point5/YYYYMMDDHHMM.jpg のタイムスタンプ形式で固定URLなし(1分更新・ajax result_time.phpで最新時刻取得)。専用パーサを書けば取り込める有望候補(四万十川・梼原川の町設置カメラ)"
+  - name: "土佐市 防災カメラ 5台（火渡川思地・鎌田井筋吹越・萩谷川海洋高校・波介川弥九郎橋・白菊園裏山）"
+    url: "https://www.city.tosa.lg.jp/camera/?cid=5"
+    reason: "Incapsula(JSチャレンジ)で保護されておりcurl/WebFetchでHTML取得不能→画像URL特定できず"
+  - name: "大豊町役場 ライブカメラ（国道32号）"
+    url: "http://www.town.otoyo.kochi.jp/livecamera/camera.php"
+    reason: "旧URLは404、現サイトにカメラページのリンクが見つからず"
+  - name: "中土佐町 河川カメラ 3台（久礼川・上ノ加江川・四万十川大野見）"
+    url: "https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_83.html"
+    reason: "県水防情報システム(JS描画)経由。既存の高知県suibo系(itv_detail_*)と同一システムのため既存パーサ側で拡張すべき"
+  - name: "しらさ峠・寒風山（石鎚山系連携事業協議会/いの町）"
+    url: "https://www.ishizuchisankei.com/kanpu_camera.php"
+    reason: "画像ファイル名がタイムスタンプ付き(kanpu26082423033400.jpg等)で固定URLなし。しらさ峠は20-4時停止・画像も5日前で停滞"
+  - name: "足摺国際ホテル 伊佐漁港"
+    url: "http://kokusai.miemasu.net:60002/CgiStart?page=Single&Language=1"
+    reason: "ポート60002が応答なし(停止中)"
+  - name: "平野サーフビーチ（四万十市）"
+    url: "http://210.161.63.243/live/index.html?Language=1"
+    reason: "Canonネットワークカメラのビューア(ViewMode=pull)のみで静止画エンドポイント未発見(image.cgi/GetOneShot 404)"
+  - name: "高知県 道路カメラ・センサー情報（国道194/195/197/439号 等）"
+    url: "https://sys.bousai.pref.kochi.lg.jp/road/bousai_top.html"
+    reason: "冬期(12〜3月)のみ運用。オフシーズンで画像確認不能。冬季に再調査"
+  - name: "仁淀川町 ライブカメラ（池川・大崎・仁淀 等）"
+    url: "http://www.town.niyodogawa.lg.jp/live/camera.php?hdnKey=15"
+    reason: "休止中(Webカメラまっぷ表記)"
+  - name: "高知高専 現在の高知の空 4台"
+    url: "http://sky.kochi-ct.jp/"
+    reason: "サイト応答なし(休止)"
+  - name: "奈半利町海浜センター Webカメラ（ガレコレ）"
+    url: "http://neconote.jp/web-camera/"
+    reason: "ページに画像要素なし(停止)"
+  - name: "ウェザーニュース 高知県内カメラ（高知市・安芸市・須崎 等）"
+    url: "https://weathernews.jp/onebox/livecam/shikoku/kouchi/"
+    reason: "WN独自配信で直接画像URL/埋め込み不可"
+  - name: "早明浦ダム camDisp12 / camDisp15"
+    url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp12.jpg"
+    reason: "画像は返るが公式ページに未掲載(旧下流/3河川合流点)のため見送り"
+  - name: "RKC高知駅前ライブカメラ"
+    url: "https://www.youtube.com/@rkc5325/live"
+    reason: "チャンネル/liveは既存の高知龍馬空港(uo-sHAw3cr0)に解決。駅前カメラの個別IDは現在なし"
+  - name: "高知灯台 / 沖の島母島港 / 生見海岸 / 浮鞭ビーチ / 黒潮本陣 / にこ淵 / はりまや橋 / 大月町漁港群"
+    url: "-"
+    reason: "既登録"

@@ -1,0 +1,290 @@
+# 和歌山県（JIS 30）追加候補 2026-08-24 調査
+# WebSearch枠が途中で尽きたため、後半は livecam.asia / fujiyamasan / cametan をリンク集として一次サイトへ辿る方式のみ。
+# YouTubeのライブ判定は youtubei/v1/player (WEB client) の liveBroadcastDetails.isLiveNow で確認（watchページはcaptchaで遮断されたため）。
+
+still:
+  - id: curated-still-road-koya-ryujin-skyline-ryujin
+    name: "高野龍神スカイライン ごまさんスカイタワー前（龍神村方向）"
+    operator: "公益社団法人 龍神観光協会"
+    category: road
+    prefecture: "30"
+    lat: 34.0663
+    lng: 135.5638
+    image_url: "https://camesan02.from.tv/oma9101/secure/data-live/live.jpg"
+    page_url: "https://www.ryujin-kanko.jp/access/livecamera/"
+    note: "curl -sI 200 image/jpeg (8KB, Last-Modified 数秒前=ほぼリアルタイム更新)。国道371号・道の駅田辺市龍神ごまさんスカイタワー設置。ページに転載禁止記載なし（『参考程度に』の注意書きのみ）。座標は護摩壇山山頂東・ごまさんスカイタワー既知位置（GSI住所検索は龍神村中心を返すため不採用）。冬季(12/15-3/25)は積雪路面確認用途に有用"
+  - id: curated-still-road-koya-ryujin-skyline-koya
+    name: "高野龍神スカイライン ごまさんスカイタワー前（高野町方向）"
+    operator: "公益社団法人 龍神観光協会"
+    category: road
+    prefecture: "30"
+    lat: 34.0665
+    lng: 135.5640
+    image_url: "https://camesan02.from.tv/oma9102/secure/data-live/live.jpg"
+    page_url: "https://www.ryujin-kanko.jp/access/livecamera/"
+    note: "curl -sI 200 image/jpeg。上と同じ設置地点で高野山側を向く。転載禁止記載なし。座標根拠は上と同じ"
+  - id: curated-still-river-kozagawa-takinohai
+    name: "古座川 滝の拝（小川）"
+    operator: "古座川町"
+    category: river
+    prefecture: "30"
+    lat: 33.6080
+    lng: 135.7650
+    image_url: "http://cam01.town.kozagawa.wakayama.jp/axis-cgi/jpg/image.cgi?resolution=640x480"
+    page_url: "http://www.town.kozagawa.wakayama.jp/yakunitatu/sub006.html"
+    note: "AXISカメラの標準静止画CGI。curl GET 200 image/jpeg 640x480 約27KB（fileでJPEG確認）。町ページは『詳細はこちら』で cam01 のAXISビューアへリンク。利用条件記載なし→license=unknown。http(非TLS)のみ。座標は滝の拝（小川の甌穴群・アユ釣り名所）の既知位置、GSI『古座川町小川』代表点は33.6011,135.7715"
+  - id: curated-still-coast-yura-shirasaki
+    name: "白崎海岸（由良町大引）"
+    operator: "由良町"
+    category: coast
+    prefecture: "30"
+    lat: 33.9706
+    lng: 135.0872
+    image_url: "http://cam2-obiki.town.yura.lg.jp/cgi-bin/camera?resolution=640"
+    page_url: "http://cam2-obiki.town.yura.lg.jp/"
+    note: "Panasonicネットワークカメラの静止画CGI。curl GET 200 image/jpeg 640x360 約29KB（HEADは500を返すのでGETで確認すること）。町公式のMJPEG配信URLが livecam.asia 経由で公開されており同ホストの静止画CGIが認証なしで取得可。利用条件記載なし→license=unknown。『災害対応時は配信停止あり』。座標はGSI住所検索『和歌山県由良町大引』(33.970562,135.087173)"
+  - id: curated-still-coast-yura-bay
+    name: "由良湾・蟻島（由良町里）"
+    operator: "由良町"
+    category: coast
+    prefecture: "30"
+    lat: 33.9592
+    lng: 135.1184
+    image_url: "http://cam1-yurajh.town.yura.lg.jp/cgi-bin/camera?resolution=640"
+    page_url: "http://cam1-yurajh.town.yura.lg.jp/"
+    note: "同上（由良中学校設置と思われる cam1-yurajh）。curl GET 200 image/jpeg 640x360 約28KB。利用条件記載なし→license=unknown。座標はGSI住所検索『和歌山県由良町里1220番地』(33.959217,135.118362)"
+
+youtube:
+  - id: curated-coast-wakayama-sailing-center
+    name: "和歌山セーリングセンター（マリーナシティ・わっくん灯台）"
+    operator: "和歌山セーリングクラブ"
+    video_id: "yBc5jseRBpQ"
+    category: coast
+    prefecture: "30"
+    lat: 34.1550
+    lng: 135.1790
+    note: "oEmbed 200 / isLiveNow=true (2026-08-15開始、24hライブ枠)。和歌山マリーナシティ内セーリングセンターからマリーナと北防波堤のわっくん灯台を映す。座標はGSI『和歌山市毛見1517番地』"
+  - id: curated-coast-tanabe-tenjinzaki
+    name: "天神崎（丸山灯台・田辺湾）"
+    operator: "公益財団法人 天神崎の自然を大切にする会"
+    video_id: "-DOezXoXqeU"
+    category: coast
+    prefecture: "30"
+    lat: 33.7360
+    lng: 135.3550
+    note: "oEmbed 200 / isLiveNow=true (2023-05-20開始の長期ライブ)。自動パンで天神崎（和歌山のウユニ塩湖）・田辺湾・丸山灯台を映す。座標はGSI『田辺市目良』(33.734177,135.35498)を天神崎側へ微調整"
+  - id: curated-scenic-telewaka-kushimoto
+    name: "串本町 情報カメラ（テレビ和歌山）"
+    operator: "テレビ和歌山"
+    video_id: "QPFEvMS-LoU"
+    category: scenic
+    prefecture: "30"
+    lat: 33.4726
+    lng: 135.7815
+    note: "oEmbed 200 / isLiveNow=true (2024-12-25開始)。テレビ和歌山公式の【LIVE】情報カメラ（既存の高野山 XXVXVSLbjAk と同系列）。設置地点は非公開のため串本町役場(GSI『串本町串本1800番地』)を代表点にした。レビュー時に映像から要確認"
+  - id: curated-scenic-aridagawa-aragijima
+    name: "あらぎ島（有田川町 棚田）"
+    operator: "有田川町役場"
+    video_id: "vd4EkioDHag"
+    category: scenic
+    prefecture: "30"
+    lat: 34.0740
+    lng: 135.3865
+    note: "oEmbed 200 / isLiveNow=true (2026-04-16開始)。あらぎ島展望所から扇形棚田（日本の棚田百選・重要文化的景観）と有田川を映す。座標は展望所の既知位置（GSI『有田川町三田』代表点34.0903,135.4080は地区中心で離れるため不採用）"
+  - id: curated-river-kinokawa-city-maeda
+    name: "貴志川流域 冠水監視カメラ（前田地区）"
+    operator: "紀の川市役所"
+    video_id: "z__LXDtJRrw"
+    category: river
+    prefecture: "30"
+    lat: 34.2243
+    lng: 135.3205
+    note: "oEmbed 200 / isLiveNow=true (2025-05-15開始)。紀の川市公式チャンネルの冠水監視カメラ3本のうち1本。座標はGSI『紀の川市貴志川町前田』"
+  - id: curated-river-kinokawa-city-marusu
+    name: "貴志川流域 冠水監視カメラ（丸栖地区）"
+    operator: "紀の川市役所"
+    video_id: "yejJge4FTMk"
+    category: river
+    prefecture: "30"
+    lat: 34.2354
+    lng: 135.3286
+    note: "oEmbed 200 / isLiveNow=true (2025-05-15開始)。座標はGSI『紀の川市貴志川町丸栖』"
+  - id: curated-river-kinokawa-city-chozuki
+    name: "貴志川流域 冠水監視カメラ（調月地区）"
+    operator: "紀の川市役所"
+    video_id: "V-t3fX9UKGE"
+    category: river
+    prefecture: "30"
+    lat: 34.2201
+    lng: 135.3324
+    note: "oEmbed 200 / isLiveNow=true (2025-05-15開始)。座標はGSI『紀の川市桃山町調月』"
+  - id: curated-other-hashimoto-sugimura-parking
+    name: "杉村やすらぎ広場（駐車場・国道371号橋本バイパス）"
+    operator: "橋本市役所"
+    video_id: "f90BkYeFXqQ"
+    category: other
+    prefecture: "30"
+    lat: 34.3432
+    lng: 135.6010
+    note: "oEmbed 200 / isLiveNow=true (2024-05-22開始)。橋本市公式チャンネル。駐車場の混雑と国道371号・南海高野線が映る。座標はGSI『橋本市御幸辻390番地』"
+  - id: curated-other-hashimoto-sugimura-playground
+    name: "杉村やすらぎ広場（遊具広場）"
+    operator: "橋本市役所"
+    video_id: "Woujo-d_Q5g"
+    category: other
+    prefecture: "30"
+    lat: 34.3430
+    lng: 135.6012
+    note: "oEmbed 200 / isLiveNow=true (2024-02-28開始)。同施設の遊具広場向き。座標は上と同じ"
+  - id: curated-port-inami-fishing-port-ishibashi
+    name: "印南漁港（国道42号印南交差点・太平洋）"
+    operator: "株式会社石橋"
+    video_id: "7sforfBRcZQ"
+    category: port
+    prefecture: "30"
+    lat: 33.8212
+    lng: 135.2147
+    note: "oEmbed 200 / isLiveNow=true (2019-12-24開始の長期4Kライブ)。地元企業(株)石橋が自社屋から印南漁港・国道42号・太平洋を配信。座標はGSI『印南町印南1741-1』"
+  - id: curated-scenic-koya-chuo-annaijo
+    name: "高野山 中央案内所前（県道53号・小辺路）"
+    operator: "和歌山県高野町"
+    video_id: "XAUchBjokNo"
+    category: scenic
+    prefecture: "30"
+    lat: 34.2159
+    lng: 135.5927
+    note: "oEmbed 200 / isLiveNow=true (2026-04-06開始)。高野町公式チャンネル。旧配信 CAU_I1ZMks8 は2026-04-01終了→現行IDに差し替え済み（IDが年次で変わる可能性あり）。座標はGSI『高野町高野山600番地』"
+  - id: curated-road-koya-daimon-minami-parking
+    name: "高野山 大門南駐車場前（国道371号）"
+    operator: "和歌山県高野町"
+    video_id: "vyWlu9_tk1o"
+    category: road
+    prefecture: "30"
+    lat: 34.2102
+    lng: 135.5755
+    note: "oEmbed 200 / isLiveNow=true (2024-10-31開始)。高野町公式チャンネル。大門南駐車場から国道371号を映す。座標は大門南駐車場の既知位置（GSI『高野町西郷』代表点は離れるため不採用）"
+  - id: curated-coast-shirahama-musashi
+    name: "白良浜（紀州・白浜温泉むさし）"
+    operator: "紀州・白浜温泉むさし"
+    video_id: "ExxzkHh4bUY"
+    category: coast
+    prefecture: "30"
+    lat: 33.6845
+    lng: 135.3418
+    note: "oEmbed 200 / isLiveNow=true (2025-02-13開始)。旅館むさし公式チャンネル（旅館サイト yado-musashi.co.jp/camera/ はcamstreamer埋込だがYouTubeにも同時配信）。既存の白良浜2本（共同通信/白浜町）とは別視点（北端・むさし前）。座標は白良浜北端のむさし既知位置"
+
+skipped:
+  - name: "和歌山県河川雨量防災情報システム YouTubeカメラ群（二川ダム上下流・広川ダム・七川ダム・切目川ダム・椿山ダム・山田川三之橋・富田川市ノ瀬 など約50本、上流側/下流側）"
+    url: "https://www.youtube.com/channel/UCrQm4VsC4STPkwuq0kP8TKw"
+    reason: "oEmbed 401 Unauthorized（埋め込み不可設定）。8NTRQt2jmRI / oLDrWLHB0NM / xw6UBOP2GdU / bUCTW4vZMKk / nIpevKO6gw4 / NDVA39lYmTI 等すべて401。配信自体はisLiveNow=true。県が埋め込みを許可すれば最大の鉱脈"
+  - name: "和歌山県 河川監視カメラ（kasensabo02.pref.wakayama.lg.jp mainCamera / damDetail）"
+    url: "https://kasensabo02.pref.wakayama.lg.jp/mainCamera.html?scd=000"
+    reason: "Leaflet SPAで静止画URLをJSから特定できず（js配下は空応答）。上記YouTube群と同一映像"
+  - name: "和歌山県 道路監視カメラ（小広峠・龍神・花坂 など5地点、geocloud/machiup.linksmart）"
+    url: "https://wakayamaken.geocloud.jp/mp/7"
+    reason: "geocloud は403、machiup.linksmart.jp/web/dcame/30000/C30039 はJS描画のみで画像URL取得不能"
+  - name: "熊野那智大社 那智の瀧ライブ配信"
+    url: "https://www.youtube.com/watch?v=zLmxuGi8pDg"
+    reason: "oEmbed 200だが2025-02-12に配信終了、チャンネル/liveに現行ライブなし。Q1BCx7EWrEw・A7mMRQfgW6Qは401。再開時に要再確認"
+  - name: "熊野本宮 御幸道・大鳥居ライブカメラ／熊野本宮館前駐車場"
+    url: "https://www.youtube.com/watch?v=dpgrvWwhdds"
+    reason: "2026-04-24に配信終了（isLiveNow=false）、チャンネルに現行ライブなし。hongu.jp記載のuoNZWijTSsk は404。再開時に要再確認"
+  - name: "中辺路町 熊野古道館ライブカメラ（中辺路町観光協会）"
+    url: "https://www.youtube.com/channel/UCI0KxIoJHM2c2AQaZW-jrGg"
+    reason: "チャンネル/liveに動画なし（配信停止中）"
+  - name: "アドベンチャーワールド ペンギンベース定点カメラ"
+    url: "https://www.youtube.com/@adventureworld_official/live"
+    reason: "アーカイブのみ（2026-05-29等）、現在ライブなし。24h枠ではない"
+  - name: "釣太郎 白浜日置の海／天神崎／みなべ水槽"
+    url: "https://www.youtube.com/@tsuttarou/live"
+    reason: "-2rQ9LBEv7g は LIVE_STREAM_OFFLINE、q4nuFkugo74・i38KEZurseM・NI_Wxrr2-nw は2018-2020年に終了。現在ライブなし"
+  - name: "高野山 西南院 庭園ライブカメラ"
+    url: "https://www.youtube.com/watch?v=VDPBmrAEWMw"
+    reason: "公式サイト・動画タイトルとも『メンテナンス中』、2026-08-24で配信終了。勤行ライブ(tp3_QG99s2o)は毎朝の時間限定"
+  - name: "紀伊高原ゴルフクラブ（和島興産）"
+    url: "https://www.youtube.com/channel/UC_Y1YVkMU2TbJ_HxNfbF0rA"
+    reason: "oEmbed 401（埋め込み不可）かつ2021年の配信で終了"
+  - name: "那智勝浦ゴルフ倶楽部 コースカメラ"
+    url: "http://www.nachikatsuura-gc.jp/nk_photo.html"
+    reason: "休止中（livecam.asia表記）"
+  - name: "道の駅すさみ（江須崎）"
+    url: "https://www.youtube.com/watch?v=F11pRpU7A2Y"
+    reason: "2024-02-27に配信終了、現在ライブなし"
+  - name: "パサージュマルシェ新宮（店内）"
+    url: "https://www.youtube.com/watch?v=OqWeq731mGk"
+    reason: "LIVE_STREAM_OFFLINE。店内カメラで景観価値も低い"
+  - name: "善称寺 本堂（和歌山市本町）"
+    url: "https://www.youtube.com/channel/UC5shSzXuKtcrCfOuG8fOlxA"
+    reason: "日付ごとの予約配信（4QX-yEKYK5M=8/26予定）で24hライブ枠ではない"
+  - name: "民宿せせらぎ 日高川（龍神村）"
+    url: "https://www.youtube.com/@龍神せせらぎ"
+    reason: "oEmbed 401、2024-09に終了"
+  - name: "おくむらクリニック 市堀川／DREAMCOURT 3x3コート"
+    url: "https://www.youtube.com/@okumuramental/live"
+    reason: "/live に現行ライブなし（DREAMCOURTは2023年終了・401）"
+  - name: "穴池（日高川町 農業振興課）"
+    url: "https://www.youtube.com/channel/UCSeQRV2gIP4ja5SCwnx2DfQ"
+    reason: "現行ID j8_yXWmXqaU が oEmbed 401（埋め込み不可）"
+  - name: "白良浜ライブカメラ 白浜町公式 旧ID"
+    url: "https://www.youtube.com/watch?v=i6luD8PP1Z0"
+    reason: "2026-08-13終了。現行 -CQ426fZMH0 は既登録（isLiveNow=true確認）"
+  - name: "金剛峯寺 壇上伽藍（テレビ和歌山）"
+    url: "https://www.youtube.com/watch?v=XXVXVSLbjAk"
+    reason: "既登録（高野山/テレビ和歌山）。isLiveNow=true再確認済み"
+  - name: "BEACH TERRACE KUSHIMOTO"
+    url: "https://www.youtube.com/watch?v=_IegwToRnFw"
+    reason: "既登録。isLiveNow=true再確認済み"
+  - name: "テレビ大阪 串本（珊瑚台）期間限定カメラ"
+    url: "https://livecam.asia/wakayama/kushimoto/tvo-kushimoto.html"
+    reason: "期間限定配信でチャンネル/liveから現行IDを特定できず"
+  - name: "旅館むさし 公式ページ camstreamer 埋込"
+    url: "https://www.yado-musashi.co.jp/camera/"
+    reason: "camstreamer.com iframe（静止画URLなし）。YouTube側 ExxzkHh4bUY を採用"
+  - name: "磯ノ浦海水浴場（サーフィン）"
+    url: "https://www.isonoura-w.jp/livecamera/"
+    reason: "ストリーミング配信（操作可能カメラ）で静止画URL・YouTubeなし"
+  - name: "明光バス 藤島北交差点／桃の木交差点（県道33号 南紀白浜空港線）"
+    url: "https://meikobus.jp/live_cam/"
+    reason: "img src=http://meikobus.hive0.net/cam.php?cam=0/1 がhttpsへ302→接続不可(000)。復旧すれば1秒更新の静止画で有望"
+  - name: "オレンジハウス（串本 高富 ダイビング）"
+    url: "https://orange-h.net/experience/livecamera/"
+    reason: "listcam方式と案内があるがページ内に画像URL/iframeが存在せず（工事中画像のみ）"
+  - name: "海南市 港湾防災カメラ（下津）／消防本部（日方川）"
+    url: "http://cam3.city.kainan.lg.jp/view/serverpush.cgi?only=hsp&size_comp=10&interval=0&type=0"
+    reason: "serverpush(MJPEG)のみ。静止画CGI(cgi-bin/camera)は404、ホスト応答も不安定"
+  - name: "みなべ町防災カメラ6台（うめ振興館・千里浜・堺漁港・国民宿舎紀州路・岩代小・紀州南部ロイヤルホテル）＋島ノ瀬ダム・清川交番"
+    url: "http://bousai.town.minabe.lg.jp/camera.html"
+    reason: "camera.cgi は serverpush.cgi(MJPEG)＋制御フレーム構成、Panasonicビューア(camera10/11等)の静止画CGIは401/404。静止画取得不能"
+  - name: "古座川町役場屋上（cam03）／七川ダム（cam02）"
+    url: "http://cam02.town.kozagawa.wakayama.jp/viewer/live/ja/live.html"
+    reason: "Panasonicビューア。cgi-bin/camera は401（要認証）。同町の滝の拝(cam01,AXIS)のみ静止画取得可"
+  - name: "岩出市 根来寺ライブカメラ"
+    url: "http://www4.city.iwade.wakayama.jp/viewer/live/ja/live.html"
+    reason: "Panasonicビューア。静止画CGI 401（要認証）"
+  - name: "美浜町 煙樹ヶ浜／三尾漁港／潮騒かおる公園"
+    url: "http://www.town.mihama.wakayama.jp/docs/2014091000014/"
+    reason: "ID/パスワード認証必須（町の防災防犯カメラ）"
+  - name: "休暇村紀州加太 紀淡海峡（インターネット自然研究所 no=52）"
+    url: "https://www.sizenken.biodic.go.jp/view_new.php?no=52"
+    reason: "最新画像が2024-12-16で更新停止（休止中）"
+  - name: "三段壁洞窟（白浜）"
+    url: "https://www.youtube.com/channel/UCaxGSwh15OlgGam9YOI6atQ/"
+    reason: "休止中（livecam.asia表記）"
+  - name: "パークサイドホテル田辺湾／南海和歌山市駅／片山のいももち（みなべ）"
+    url: "https://livecam.asia/wakayama/tanabe/parkside-hotel-tanabewan.html"
+    reason: "休止中（livecam.asia表記）"
+  - name: "コインランドリーセレクト（有田川町）"
+    url: "https://www.youtube.com/channel/UC52rfEIBETmfcI1ImlWbtCQ"
+    reason: "/liveに動画なし。店内利用状況カメラで景観価値なし"
+  - name: "ウェザーニュース 和歌山城付近ライブカメラ"
+    url: "https://weathernews.jp/onebox/livecam/kinki/wakayama/7CDDE907AA2C/"
+    reason: "WNI配信（画像直リンク不可・利用規約上転載不可）"
+  - name: "ABCゴルフ倶楽部ライブカメラ"
+    url: "https://abc-golf.co.jp/livecamera/"
+    reason: "兵庫県加東市で対象外、かつ『無断リンク・転載禁止』明記"
+  - name: "iHighway 阪和道・湯浅御坊道路／NEXCO"
+    url: "https://ihighway.jp/"
+    reason: "転載禁止確定（対象外）"
+  - name: "カイロスロケット打上げ中継（テレビ和歌山・ABC・MBS 等）"
+    url: "https://livecam.asia/wakayama/kushimoto/"
+    reason: "打上げ時のみのイベント配信で常設ではない"

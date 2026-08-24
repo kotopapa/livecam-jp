@@ -1,0 +1,225 @@
+# 宮崎県(JIS 45) 追加候補調査 2026-08-24
+# 検証: YouTubeは oEmbed 200 + youtubei player API の isLive=true(配信中)で確認。静止画は curl -sI で image/* 200 確認
+still:
+  - id: curated-still-scenic-ebino-kogen-kirishima
+    name: "えびの高原から見た霧島連山（えびのエコミュージアムセンター）"
+    operator: "環境省 生物多様性センター（インターネット自然研究所）"
+    category: scenic
+    prefecture: "45"
+    lat: 31.9460
+    lng: 130.8440
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/59_c/image/2026/08/24/NCS20260824200002660.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=59"
+    note: "curlで image/jpeg 200確認(87KB, 2026-08-24)。約1時間更新。画像ファイル名は日付/時刻入りで固定URLではない（既存 curated-still-daisetsuzan-asahidake 等と同じ sizenken 形式、view_new.php?no=59 から最新画像を解決する運用）。利用条件: 'All rights Reserved, Copyright Ministry of the Environment'、転載禁止の明記なし→license=unknown。座標はえびのエコミュージアムセンター(えびの市末永1495-5、えびの高原)の既知位置。MBC南日本放送 web-cam-m/ebi1.html の cam1-ebi1-m.jpg と kar1-m.jpg は本カメラの再配信(同一MD5・映像提供:環境省)なので採用しない"
+youtube:
+  - id: curated-port-miyazaki-airport-mrt
+    name: "宮崎空港（MRT宮崎放送ライブカメラ）"
+    operator: "MRT宮崎放送"
+    video_id: "ETM2Gb2ks-4"
+    category: port
+    prefecture: "45"
+    lat: 31.8772
+    lng: 131.4486
+    note: "oEmbed 200 / isLive=true (2026-08-24 20時台)。チャンネル /live が本IDに解決。24時間LIVE配信枠。座標は宮崎空港ターミナル(既知)。台風時等に配信構成が変わる可能性あり"
+  - id: curated-scenic-asahi-miyazaki-oyodogawa
+    name: "宮崎市街・大淀川・橘橋（朝日新聞宮崎総局）"
+    operator: "朝日新聞社（朝日新聞LIVE）"
+    video_id: "h9v4l3maqfs"
+    category: scenic
+    prefecture: "45"
+    lat: 31.9070
+    lng: 131.4222
+    note: "oEmbed 200 / isLive=true。24時間ライブ。宮崎市橘通東1丁目2-18(朝日新聞宮崎総局)をGSI住所検索で取得。大淀川・橘橋・国道220号を俯瞰"
+  - id: curated-road-interluck-r10-miyazaki
+    name: "国道10号 宮崎市大橋（インターラック）"
+    operator: "有限会社インターラック"
+    video_id: "TyedJvZTZWs"
+    category: road
+    prefecture: "45"
+    lat: 31.9207
+    lng: 131.4116
+    note: "oEmbed 200 / isLive=true。タイトル「ライブ配信１（サブ）」。同社 cam1 (_lMP3FoYIWA) は配信終了(recording not available)のためサブ側を採用。宮崎市大橋2丁目(GSI丁目代表点)。国道10号・県道26号・小松川方面"
+  - id: curated-coast-nobeoka-blue-aile-shinhama
+    name: "延岡 新浜の海（ホテルブルーエール）"
+    operator: "ホテルブルーエール（YouTube: サボテン）"
+    video_id: "tJO2hnxguXk"
+    category: coast
+    prefecture: "45"
+    lat: 32.5283
+    lng: 131.6843
+    note: "oEmbed 200 / isLive=true。チャンネル UCXE5HLQOyncCYANgs6qWwuw の /live が本IDに解決。延岡市新浜町1丁目8935-39(GSI)。日向灘・新浜海岸"
+  - id: curated-coast-hyuga-kanegahama-stairs-cam3
+    name: "日向 金ヶ浜サーフポイント カメラ3（stairs of the sea）"
+    operator: "stairs of the sea"
+    video_id: "B8T2jPynrvE"
+    category: coast
+    prefecture: "45"
+    lat: 32.3646
+    lng: 131.6267
+    note: "oEmbed 200 / isLive=true。チャンネル @stairsofthesea4980 /live が本IDに解決。日向市平岩2217-3(GSI)。サーフショップ設置"
+  - id: curated-coast-hyuga-kanegahama-stairs-cam2
+    name: "日向 金ヶ浜サーフポイント カメラ2（stairs of the sea）"
+    operator: "stairs of the sea"
+    video_id: "a0dyZaETpto"
+    category: coast
+    prefecture: "45"
+    lat: 32.3646
+    lng: 131.6267
+    note: "oEmbed 200 / isLive=true。同一店舗の別アングル。カメラ1 (AF0q8HDOzVk / ZzqbobQtqfM) は確認時点で非配信のため見送り"
+  - id: curated-river-qsr-oyodogawa-live
+    name: "大淀川 映像配信（九州地方整備局 試験配信）"
+    operator: "国土交通省 九州地方整備局 水災害予報センター・宮崎河川国道事務所"
+    video_id: "roLilL1JvUQ"
+    category: river
+    prefecture: "45"
+    lat: 31.9161
+    lng: 131.4105
+    note: "oEmbed 200 / isLive=true。「試験配信中」表記。複数地点を巡回する可能性があり地点固定でない→座標は宮崎河川国道事務所(宮崎市大工2丁目39, GSI)。政府配信だが利用条件未記載→license=unknown。kawabou静止画とは別系統(YouTube)で重複なし"
+  - id: curated-river-qsr-omarugawa-live
+    name: "小丸川 映像配信（九州地方整備局 試験配信）"
+    operator: "国土交通省 九州地方整備局 水災害予報センター・宮崎河川国道事務所"
+    video_id: "4DbsHMixQW4"
+    category: river
+    prefecture: "45"
+    lat: 32.1224
+    lng: 131.5199
+    note: "oEmbed 200 / isLive=true。「試験配信中」。座標は小丸川・小丸大橋付近(高鍋町北高鍋, GSI)の代表点。巡回配信の可能性あり。license=unknown"
+  - id: curated-river-qsr-gokasegawa-live
+    name: "五ヶ瀬川 映像配信（九州地方整備局 試験配信）"
+    operator: "国土交通省 九州地方整備局 水災害予報センター・延岡河川国道事務所"
+    video_id: "Y0ErmD-el-0"
+    category: river
+    prefecture: "45"
+    lat: 32.5797
+    lng: 131.6557
+    note: "oEmbed 200 / isLive=true。「試験配信中」。座標は延岡河川国道事務所(延岡市大貫町1丁目2889, GSI)。巡回配信の可能性あり。license=unknown"
+  - id: curated-scenic-morotsuka-yamashigi-no-mori
+    name: "諸塚村の景色 やましぎの杜（4K）"
+    operator: "諸塚村役場"
+    video_id: "v8q_9QdZquc"
+    category: scenic
+    prefecture: "45"
+    lat: 32.5675
+    lng: 131.2691
+    note: "oEmbed 200 / isLive=true。自治体公式チャンネルの24時間配信。諸塚村七ツ山1034(やましぎの杜)はGSIで大字代表点まで解決。license=unknown"
+  - id: curated-other-eco-clean-plaza-miyazaki-gate
+    name: "エコクリーンプラザみやざき 入場門→計量棟（搬入混雑）"
+    operator: "エコクリーンプラザみやざき"
+    video_id: "1vPU-bye4RM"
+    category: other
+    prefecture: "45"
+    lat: 31.9872
+    lng: 131.3828
+    note: "oEmbed 200 / isLive=true。チャンネル @-sf7hk /live が本IDに解決。宮崎市大瀬町倉谷6176-1(GSIは大瀬町代表点)。ごみ処理施設の搬入車両混雑カメラ。運営者名はページ記載から"
+skipped:
+  - name: "ii-nami 新規6地点（伊倉ヶ浜 MN-9yjWfXmY / 一ツ葉 7T38fkiUMvU / 木崎浜 3D8b17dDSYk / 青島 gkI3M23y6KM / 梅ヶ浜 -KML3k2yxcw / 恋ヶ浦 gcevrDF0vZk）"
+    url: "https://www.ii-nami.com/"
+    reason: "oEmbedは200だが確認時(20時台)全て isLiveNow=false。既存登録の青島 jKJXDBrS99o・木崎浜 IKxO75Bn1Ok もページ埋め込みIDと不一致かつ非配信→日次で video_id が変わる運用の可能性が高く固定IDでの採用不可。※既存 lXChKGR5ibM(木崎浜 サーフポイント)は実際は「福岡県釣川ライブカメラ」で誤登録"
+  - name: "ii-nami お倉ヶ浜・金ヶ浜・木崎浜加江田"
+    url: "https://www.ii-nami.com/gt-okuragahama"
+    reason: "videog.jp プレイヤー埋め込み(非YouTube・静止画URLなし)"
+  - name: "Mediacity(YOUING) 国道10号 屋上カメラ yv1kubx2D04"
+    url: "https://www.youtube.com/user/YOUINGmediacity/live"
+    reason: "確認時 isLiveNow=false（休止扱いの情報あり）"
+  - name: "インターラック cam1 _lMP3FoYIWA"
+    url: "https://www.youtube.com/watch?v=_lMP3FoYIWA"
+    reason: "配信終了(recording not available)。サブ配信 TyedJvZTZWs を採用"
+  - name: "青島地域まちづくり 青島参道南広場駐車場 cXIJkfNTvhI"
+    url: "https://www.youtube.com/@aoshimachiikimachizukuri/live"
+    reason: "oEmbed 200 だが player API で配信中を確認できず(Video unavailable)。再確認の価値あり(青島神社・参道・駐車場を写す好立地)"
+  - name: "stairs of the sea 金ヶ浜 カメラ1 (AF0q8HDOzVk / ZzqbobQtqfM)"
+    url: "https://www.youtube.com/@stairsofthesea4980/streams"
+    reason: "確認時点で非配信"
+  - name: "旭ヶ丘ゴルフリゾート 混雑状況 xpJs48lD1as"
+    url: "https://www.youtube.com/channel/UCRXcZPgp4G0VHF9n6RN9oaw/live"
+    reason: "oEmbed 200 だが夜間確認で配信中を確認できず（営業時間内のみ配信の可能性、昼間に再確認推奨。三股町蓼池5200 31.7541,131.1126）"
+  - name: "都農神社 境内カメラ"
+    url: "https://www.youtube.com/channel/UC5eRGqJwt8YDNWhMJG5SG1Q/live"
+    reason: "/live に配信なし（初詣期間限定の可能性）"
+  - name: "宮崎市市民課 窓口案内モニター"
+    url: "https://www.youtube.com/channel/UC22kOQEBhxwl7NUsPHu_beQ"
+    reason: "平日日中のみ・窓口表示モニターでありライブカメラではない。/live 配信なし"
+  - name: "JA宮崎中央 家畜市場セリ"
+    url: "https://www.youtube.com/@JA-rp5gf/live"
+    reason: "セリ開催日のみのイベント配信"
+  - name: "みやざき公園協会 青島亜熱帯植物園（ショクダイオオコンニャク）"
+    url: "https://www.youtube.com/channel/UCoWExkQWKMHOh0Zzj91QZ5Q/streams"
+    reason: "開花期間限定配信。現在配信なし"
+  - name: "MRT宮崎放送 硫黄山/新燃岳ライブ、UMKテレビ宮崎 硫黄山/高原町新燃岳"
+    url: "https://www.youtube.com/@MRTmiyazaki/streams"
+    reason: "噴火警戒時の期間限定配信。確認時点でMRT/UMK両チャンネルとも火山ライブは配信なし（MRTは宮崎空港のみ）"
+  - name: "日南テレビ! お天気カメラ（油津以外）"
+    url: "https://www.nichinan.tv/live-weather/"
+    reason: "サイトに映像の転載・加工禁止が明記。油津カメラは既登録、追加カメラも同条件のため不採用"
+  - name: "九州電力 耳川ダム通砂ライブカメラ（椎原橋下流 ほか）"
+    url: "https://mimikawa.kyuden.co.jp/release/P07002?livecameraid=3&callerPage=liveCamera"
+    reason: "画像URL(/images/cameraimages/camera3.jpg)がセッション無しでは /manage/M01001 へ302リダイレクトされ直接GET不可。ダム通砂時のみ公開"
+  - name: "MBC南日本放送 えびの高原 (cam1-ebi1-m.jpg) / 韓国岳 (cam1-kar1-m.jpg)"
+    url: "https://www.mbc.co.jp/web-cam-m/ebi1.html"
+    reason: "環境省インターネット自然研究所(no=59)画像の再配信で同一MD5。一次ソースを still に採用"
+  - name: "高千穂町 高千穂峡・国見ヶ丘・四季見原キャンプ場"
+    url: "https://www.town-takachiho.jp/top/soshiki/kikakukanko/2/2/311.html"
+    reason: "Panasonicカメラ直公開(118.21.109.43/45/46:50000)。SnapshotJPEG等が500エラー・無応答、Java/ActiveX前提で静止画URL取得不可。国見ヶ丘は工事休止中"
+  - name: "五ヶ瀬ハイランドスキー場"
+    url: "http://111.89.161.14/CgiStart?page=Single&Language=1"
+    reason: "無応答（冬季限定）"
+  - name: "椎葉村役場 3カメラ（博物館・体育館・不土野）"
+    url: "http://www.vill.shiiba.miyazaki.jp/promote/livecamera.php"
+    reason: "118.21.111.252-254:65000 無応答"
+  - name: "日之影町 防災カメラ4台"
+    url: "http://www.town.hinokage.lg.jp/docs/2016031800043/"
+    reason: "124.247.184.17-30 のスナップショットAPIが500エラー"
+  - name: "門川町役場 ライブカメラ"
+    url: "http://livecam.town.kadogawa.lg.jp/CgiStart?page=Single&Language=1"
+    reason: "休止中・無応答"
+  - name: "航空大学校 宮崎本校エプロン"
+    url: "http://www.kouku-dai.ac.jp/liveimage/"
+    reason: "ページが 'no images'（サービス休止）"
+  - name: "ダイイチ よしみカメラ（星空）"
+    url: "http://skyarchives.dai1.jp/movie/1030.php"
+    reason: "404"
+  - name: "フェニックス自然動物園 3カメラ"
+    url: "http://www.city.miyazaki.miyazaki.jp/cul/digicon/zoo/camera/index.html"
+    reason: "宮崎市サイト側が404（終了）"
+  - name: "いちご都城安久町/高崎町東霧島ECO発電所"
+    url: "https://www.ichigo.gr.jp/business/sustainable/eco/plant/16.html"
+    reason: "JSポップアップ経由で画像URLを特定できず"
+  - name: "IoT百葉箱 高鍋東小学校（内田洋行）"
+    url: "https://iot100.uchida.co.jp/day.html?NodeID=29"
+    reason: "画像は /iot100api/public/getscene/ API経由でJS描画、固定URLなし"
+  - name: "宮崎自動車道 霧島SA"
+    url: "https://ihighway.jp/camera/webcam90009-00.jpg"
+    reason: "NEXCO西日本 iHighway（転載禁止確定）"
+  - name: "宮崎県道路カメラ（寧静ループ橋・津花トンネル・鞍岡 ほか）"
+    url: "https://roadi.pref.miyazaki.lg.jp/roadinfo/public/WatchPoint/WatchPointList.aspx"
+    reason: "宮崎県道路情報（転載禁止確定）"
+  - name: "BCM波情報 お倉ヶ浜/金ヶ浜/木崎浜/青島（cam-image.risesystem.com）"
+    url: "https://www.bcm-surfpatrol.com/wave-detail/12/191/"
+    reason: "商用波情報サービス、サイト403で規約未確認・画像URL未特定"
+  - name: "ウェザーニュース 宮崎市内/都城/新燃岳/宮崎港"
+    url: "https://weathernews.jp/onebox/livecam/kyushu/miyazaki/"
+    reason: "WNI独自配信、直接画像URLなし"
+  - name: "都城市 河川カメラ12地点"
+    url: "https://www.city.miyakonojo.miyazaki.jp/soshiki/1/44421.html"
+    reason: "全て川の防災情報(kawabou)へのリンク（既登録系統）"
+  - name: "木郷滝自然つりセンター H7mUIH7iQ98"
+    url: "https://www.youtube.com/watch?v=H7mUIH7iQ98"
+    reason: "熊本県高森町（県外）"
+  - name: "曽於市クリーンセンター radvOIxSJrc / 大分県企業局 北川ダム / 阿蘇DC・通潤橋"
+    url: "https://www.youtube.com/watch?v=radvOIxSJrc"
+    reason: "県外（鹿児島・大分・熊本）"
+  - name: "pwssurf1173 お倉ヶ浜波情報 / Tetsuya F 宮崎市天気"
+    url: "https://www.youtube.com/@pwssurf1173/streams"
+    reason: "投稿動画のみ、ライブ配信なし"
+  - name: "小林市議会・えびの市議会・高原町議会 中継"
+    url: "https://livecam.asia/miyazaki/kobayashi/kobayashi-gikai.html"
+    reason: "議会中継であり風景カメラではない"
+  - name: "宮崎花火大会・油津港まつり花火・広島カープ日南キャンプ・日南完熟マンゴー・京屋酒造"
+    url: "https://livecam.asia/miyazaki/nichinan-miyazaki/"
+    reason: "期間限定または休止中"
+  - name: "ヒュー!日向 お倉ヶ浜ライブカメラ"
+    url: "http://www.phew-hyuga.jp/livecamera/"
+    reason: "404（休止）"
+  - name: "宮崎県観光協会 ライブカメラページ / 宮崎カーフェリー / 細島港 / サンメッセ / シーガイア / 各市町公式サイト"
+    url: "http://www.kanko-miyazaki.jp/livecamera"
+    reason: "404 または公式サイトにライブカメラ導線なし（港湾・フェリー・ゴルフ場(フェニックス/トムワトソン)・寺社(鵜戸神宮/青島神社)・関之尾滝・照葉大吊橋・西都原・高千穂神社は一次カメラ見当たらず）"
