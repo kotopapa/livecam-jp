@@ -27,6 +27,7 @@ enum FeedType {
   shimantoKasen('shimanto_kasen'),
   takashimaRiver('takashima_river'),
   higashiomiRiver('higashiomi_river'),
+  yamaguchiRomen('yamaguchi_romen'),
   mieDouro('mie_douro'),
 
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する

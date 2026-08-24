@@ -103,7 +103,8 @@ class CameraRepository {
         c.feed.type == FeedType.sizenken ||
         c.feed.type == FeedType.shimantoKasen ||
         c.feed.type == FeedType.takashimaRiver ||
-        c.feed.type == FeedType.higashiomiRiver) {
+        c.feed.type == FeedType.higashiomiRiver ||
+        c.feed.type == FeedType.yamaguchiRomen) {
       return status[c.id]?.imageUrl;
     }
     if (c.feed.type == FeedType.stillImage) return c.feed.url;
