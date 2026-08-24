@@ -1,5 +1,5 @@
 {
- "version": "2026-08-24T22:34:14Z",
+ "version": "2026-08-24T22:34:37Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -28519,6 +28519,357 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-road-cgr-yamaguchi-romen-higuchi",
+   "name": "樋口（国道2号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.071499,
+   "lng": 131.978302,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C1209"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-road-cgr-yamaguchi-romen-ikumohigashibun",
+   "name": "生雲東分（国道9号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.33736,
+   "lng": 131.612717,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C0815"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-road-cgr-yamaguchi-romen-kusaritoge",
+   "name": "鎖峠（国道316号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.362166,
+   "lng": 131.324556,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C0422"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-road-cgr-yamaguchi-romen-nishifukawa",
+   "name": "西深川（国道191号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.366936,
+   "lng": 131.169418,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C044A"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-road-cgr-yamaguchi-romen-tokusa",
+   "name": "徳佐（国道9号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.405739,
+   "lng": 131.719284,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C0818"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-road-cgr-yamaguchi-romen-tsubakitoge",
+   "name": "椿峠（国道2号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.063,
+   "lng": 131.66,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C1107"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-road-cgr-yamaguchi-romen-tsuesaka",
+   "name": "杖坂（国道9号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.242581,
+   "lng": 131.518647,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C0812"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-road-cgr-yamaguchi-romen-uda",
+   "name": "宇田（国道191号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.558441,
+   "lng": 131.550919,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C0401"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-road-cgr-yamaguchi-romen-yoshimitoge",
+   "name": "吉見峠（国道191号 峠路面カメラ）",
+   "name_kana": null,
+   "lat": 34.088928,
+   "lng": 130.92012,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "35",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "yamaguchi_romen",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "C0913"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+   },
+   "operator": "国土交通省 山口河川国道事務所",
+   "source": {
+    "page_url": "https://www.cgr.mlit.go.jp/yamaguchi/romen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 山口河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
    "id": "curated-road-hikone-log-morido-r8",
    "name": "彦根倉庫 森堂センター 国道8号",
    "name_kana": null,
@@ -32631,6 +32982,44 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-biwako-mizudori",
+   "name": "琵琶湖の水鳥（琵琶湖水鳥・湿地センター）",
+   "name_kana": null,
+   "lat": 35.4463,
+   "lng": 136.19,
+   "coord_accuracy": "approx",
+   "category": "healing",
+   "prefecture": "25",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=61",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=61"
+   },
+   "operator": "環境省（生物多様性センター）インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=61",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省（生物多様性センター）インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
   },
   {
    "id": "curated-still-ccs-boukaidai",
@@ -37611,6 +38000,272 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-dam-yamagata-arasawa-sn65",
+   "name": "荒沢ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 38.5131,
+   "lng": 139.7789,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=65&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=64"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=64",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-atsumigawa",
+   "name": "温海川ダム",
+   "name_kana": null,
+   "lat": 38.5926,
+   "lng": 139.6697,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=61&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-atsumigawa-sn62",
+   "name": "温海川ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 38.5926,
+   "lng": 139.6697,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=62&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-atsumigawa-sn63",
+   "name": "温海川ダム（カメラ3）",
+   "name_kana": null,
+   "lat": 38.5926,
+   "lng": 139.6697,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=63&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-gakkogawa",
+   "name": "月光川ダム",
+   "name_kana": null,
+   "lat": 39.0281,
+   "lng": 139.9853,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=68&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=68"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=68",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-gakkogawa-sn69",
+   "name": "月光川ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 39.0281,
+   "lng": 139.9853,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=69&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=68"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=68",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-kamuro",
+   "name": "神室ダム",
+   "name_kana": null,
+   "lat": 38.9109,
+   "lng": 140.4243,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=32&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=32"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=32",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
    "id": "curated-still-dam-yamagata-kijiyama",
    "name": "木地山ダム",
    "name_kana": null,
@@ -37647,6 +38302,82 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-yamagata-kijiyama-sn52",
+   "name": "木地山ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 38.1497,
+   "lng": 139.92,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=52&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=51"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=51",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-kosaka",
+   "name": "高坂ダム",
+   "name_kana": null,
+   "lat": 38.9849,
+   "lng": 140.1583,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=31&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=31"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=31",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
   },
   {
    "id": "curated-still-dam-yamagata-maekawa",
@@ -37687,6 +38418,234 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "curated-still-dam-yamagata-maekawa-sn7",
+   "name": "前川ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 38.1272,
+   "lng": 140.2317,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=7&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-maekawa-sn8",
+   "name": "前川ダム（カメラ3）",
+   "name_kana": null,
+   "lat": 38.1272,
+   "lng": 140.2317,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=8&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-maekawa-sn9",
+   "name": "前川ダム（カメラ4）",
+   "name_kana": null,
+   "lat": 38.1272,
+   "lng": 140.2317,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=9&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-mogamioguni",
+   "name": "最上小国川流水型ダム",
+   "name_kana": null,
+   "lat": 38.7243,
+   "lng": 140.5589,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=34&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-mogamioguni-sn35",
+   "name": "最上小国川流水型ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 38.7243,
+   "lng": 140.5589,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=35&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-mogamioguni-sn36",
+   "name": "最上小国川流水型ダム（カメラ3）",
+   "name_kana": null,
+   "lat": 38.7243,
+   "lng": 140.5589,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=36&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
    "id": "curated-still-dam-yamagata-tazawagawa",
    "name": "田沢川ダム",
    "name_kana": null,
@@ -37723,6 +38682,272 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-dam-yamagata-tazawagawa-sn67",
+   "name": "田沢川ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 38.8437,
+   "lng": 140.0275,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=67&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=66"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=66",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-tomeyamagawa",
+   "name": "留山川ダム",
+   "name_kana": null,
+   "lat": 38.3607,
+   "lng": 140.4515,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=4&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=4"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-tomeyamagawa-sn5",
+   "name": "留山川ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 38.3607,
+   "lng": 140.4515,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=5&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=4"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-tsunakigawa",
+   "name": "綱木川ダム",
+   "name_kana": null,
+   "lat": 37.8401,
+   "lng": 140.0446,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=41&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-tsunakigawa-sn42",
+   "name": "綱木川ダム（カメラ2）",
+   "name_kana": null,
+   "lat": 37.8401,
+   "lng": 140.0446,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=42&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-tsunakigawa-sn43",
+   "name": "綱木川ダム（カメラ3）",
+   "name_kana": null,
+   "lat": 37.8401,
+   "lng": 140.0446,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=43&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-dam-yamagata-zao",
+   "name": "蔵王ダム",
+   "name_kana": null,
+   "lat": 38.2121,
+   "lng": 140.4207,
+   "coord_accuracy": "approx",
+   "category": "dam",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=3&width=640",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=3"
+   },
+   "operator": "山形県(県土整備部河川課) - 山形県河川・砂防情報システム",
+   "source": {
+    "page_url": "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=3",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
   },
   {
    "id": "curated-still-dam-yamba-mihodai",
@@ -124385,6 +125610,357 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-19"
+  },
+  {
+   "id": "higashiomi-river-aono-dr",
+   "name": "青野除塵機",
+   "name_kana": null,
+   "lat": 35.08112946,
+   "lng": 136.2735083,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": null,
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "aono-dr"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=aono-dr"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=aono-dr",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "higashiomi-river-daidogawa",
+   "name": "大同川",
+   "name_kana": null,
+   "lat": 35.18935248,
+   "lng": 136.1770664,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": null,
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "daidogawa"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=daidogawa"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=daidogawa",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "higashiomi-river-dreamheights",
+   "name": "ドリームハイツ（向田川）",
+   "name_kana": null,
+   "lat": 35.18922306,
+   "lng": 136.186121,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": "向田川",
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "dreamheights"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=dreamheights"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=dreamheights",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "higashiomi-river-gokashonaka-under",
+   "name": "五個荘中町アンダーパス（国道8号下）",
+   "name_kana": null,
+   "lat": 35.16014424,
+   "lng": 136.1964527,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": "国道8号下",
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "gokashonaka-under"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=gokashonaka-under"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=gokashonaka-under",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "higashiomi-river-gokashotatsuta-under",
+   "name": "五個荘竜田町アンダーパス（国道8号下）",
+   "name_kana": null,
+   "lat": 35.15073593,
+   "lng": 136.1876733,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": "国道8号下",
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "gokashotatsuta-under"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=gokashotatsuta-under"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=gokashotatsuta-under",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "higashiomi-river-jizo-br",
+   "name": "地蔵橋（蛇砂川）",
+   "name_kana": null,
+   "lat": 35.09873136,
+   "lng": 136.1904878,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": "蛇砂川",
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "jizo-br"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=jizo-br"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=jizo-br",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "higashiomi-river-omori-dr",
+   "name": "大森除塵機",
+   "name_kana": null,
+   "lat": 35.08980106,
+   "lng": 136.2335798,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": null,
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "omori-dr"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=omori-dr"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=omori-dr",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "higashiomi-river-omori-under",
+   "name": "大森町アンダーパス（名神下）",
+   "name_kana": null,
+   "lat": 35.0918598,
+   "lng": 136.2245964,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": "名神下",
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "omori-under"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=omori-under"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=omori-under",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "higashiomi-river-shimofutamata-br",
+   "name": "下二俣橋（蛇砂川）",
+   "name_kana": null,
+   "lat": 35.08975989,
+   "lng": 136.2140442,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25213",
+   "river_or_route": "蛇砂川",
+   "feed": {
+    "type": "higashiomi_river",
+    "url": "https://ni0zipku.user.webaccel.jp/api/json-cameralist.php",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "shimofutamata-br"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=shimofutamata-br"
+   },
+   "operator": "東近江市（都市整備部 管理課）",
+   "source": {
+    "page_url": "https://higashiomi-camera.mysystems.jp/cameradetail.php?cameraid=shimofutamata-br",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東近江市 河川監視カメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
   },
   {
    "id": "hiroshima-road-100",
@@ -637315,6 +638891,201 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "takashima-river-1",
+   "name": "上開田橋（知内川）",
+   "name_kana": null,
+   "lat": 35.4845,
+   "lng": 136.0473,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25212",
+   "river_or_route": "知内川",
+   "feed": {
+    "type": "takashima_river",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/api/cameras",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "1"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/cameras/1"
+   },
+   "operator": "高島市（政策部 危機管理局）",
+   "source": {
+    "page_url": "http://bousai.city.takashima.lg.jp/cctv/cameras/1",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高島市 河川防災カメラシステム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "takashima-river-2",
+   "name": "能登橋（百瀬川）",
+   "name_kana": null,
+   "lat": 35.451,
+   "lng": 136.035,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25212",
+   "river_or_route": "百瀬川",
+   "feed": {
+    "type": "takashima_river",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/api/cameras",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "2"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/cameras/2"
+   },
+   "operator": "高島市（政策部 危機管理局）",
+   "source": {
+    "page_url": "http://bousai.city.takashima.lg.jp/cctv/cameras/2",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高島市 河川防災カメラシステム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "takashima-river-3",
+   "name": "岸脇橋（石田川）",
+   "name_kana": null,
+   "lat": 35.4164,
+   "lng": 136.0064,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25212",
+   "river_or_route": "石田川",
+   "feed": {
+    "type": "takashima_river",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/api/cameras",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "3"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/cameras/3"
+   },
+   "operator": "高島市（政策部 危機管理局）",
+   "source": {
+    "page_url": "http://bousai.city.takashima.lg.jp/cctv/cameras/3",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高島市 河川防災カメラシステム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "takashima-river-4",
+   "name": "山神橋（北川）",
+   "name_kana": null,
+   "lat": 35.35565,
+   "lng": 135.918962,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25212",
+   "river_or_route": "北川",
+   "feed": {
+    "type": "takashima_river",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/api/cameras",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "4"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/cameras/4"
+   },
+   "operator": "高島市（政策部 危機管理局）",
+   "source": {
+    "page_url": "http://bousai.city.takashima.lg.jp/cctv/cameras/4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高島市 河川防災カメラシステム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "takashima-river-5",
+   "name": "八田川橋（八田川）",
+   "name_kana": null,
+   "lat": 35.328,
+   "lng": 135.997,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "25",
+   "country": null,
+   "municipality": "25212",
+   "river_or_route": "八田川",
+   "feed": {
+    "type": "takashima_river",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/api/cameras",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "5"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai.city.takashima.lg.jp/cctv/cameras/5"
+   },
+   "operator": "高島市（政策部 危機管理局）",
+   "source": {
+    "page_url": "http://bousai.city.takashima.lg.jp/cctv/cameras/5",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高島市 河川防災カメラシステム"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 パーサ化(山口峠/山形ダム/高島/東近江/水鳥)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
   },
   {
    "id": "tochigi-road-001",
