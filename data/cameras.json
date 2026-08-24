@@ -1,5 +1,5 @@
 {
- "version": "2026-08-24T22:36:18Z",
+ "version": "2026-08-24T22:40:17Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -117065,6 +117065,80 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-22"
+  },
+  {
+   "id": "fukushima-road-051",
+   "name": "国道401号 博士峠 会津美里町側",
+   "name_kana": null,
+   "lat": 37.3376,
+   "lng": 139.7351,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "07",
+   "municipality": "07447",
+   "river_or_route": "国道401号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://absv2.f-road.info/cs1/ms/cam051m.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://fukushima-road.net/aizu/"
+   },
+   "operator": "福島県",
+   "source": {
+    "page_url": "https://www.pref.fukushima.lg.jp/sec/41340a/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福島県 会津地区道路情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-19",
+   "last_updated": "2026-08-19"
+  },
+  {
+   "id": "fukushima-road-052",
+   "name": "国道401号 博士峠 昭和村側",
+   "name_kana": null,
+   "lat": 37.3376,
+   "lng": 139.7151,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "07",
+   "municipality": "07446",
+   "river_or_route": "国道401号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://absv2.f-road.info/cs1/ms/cam052m.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://fukushima-road.net/aizu/"
+   },
+   "operator": "福島県",
+   "source": {
+    "page_url": "https://www.pref.fukushima.lg.jp/sec/41340a/livecamera.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福島県 会津地区道路情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-19",
+   "last_updated": "2026-08-19"
   },
   {
    "id": "fukushima-road-061",
@@ -563744,6 +563818,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mbc-chi1",
+   "name": "知名町",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-chi1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "知名町役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：知名町役場）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-dai",
+   "name": "徳之島",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/dai.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "徳之島ダイマル",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：徳之島ダイマル）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mbc-egc1",
    "name": "江口浜",
    "name_kana": null,
@@ -563818,6 +563966,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mbc-in-wad1",
+   "name": "和泊町 研修センター屋上",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-in_wad1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "和泊町役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：和泊町役場）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-in-wad2",
+   "name": "和泊町 朝戸医院屋上",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-in_wad2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "和泊町役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：和泊町役場）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mbc-jma1",
    "name": "佐多岬灯台",
    "name_kana": null,
@@ -563850,6 +564072,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-jma2",
+   "name": "種子島灯台",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-jma2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "第十管区海上保安本部MICS",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：第十管区海上保安本部MICS）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -563924,6 +564183,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-kki1",
+   "name": "喜界町",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-kki1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "喜界町役場",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：喜界町役場）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -564780,6 +565076,43 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mbc-ksn113",
+   "name": "甲女川 榕城橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn113.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mbc-ksn114",
    "name": "安房川 安房川橋",
    "name_kana": null,
@@ -564886,6 +565219,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-ksn117",
+   "name": "余多川 天竜橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-ksn117.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：鹿児島県）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -565372,6 +565742,191 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mbc-nis1",
+   "name": "西之表市役所",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis2",
+   "name": "西之表市 天神橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis2.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis3",
+   "name": "浦田海水浴場",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis3.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis4",
+   "name": "能野（よきの）海水浴場",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis4.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-nis5",
+   "name": "鉄浜（かねはま）海水浴場",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "coast",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-nis5.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "西之表市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：西之表市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mbc-r10kmw",
    "name": "国道10号 亀割峠",
    "name_kana": null,
@@ -565631,6 +566186,80 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "mbc-seigi03",
+   "name": "新燃岳",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "volcano",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-seigi03.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-seigi07",
+   "name": "口永良部島",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-seigi07.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
    "id": "mbc-sen1",
    "name": "寺山公園",
    "name_kana": null,
@@ -565700,6 +566329,154 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen5",
+   "name": "甑島 甑大橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen5.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen6",
+   "name": "甑島 前の平展望所",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen6.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen7",
+   "name": "甑島 里港",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "port",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen7.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-sen8",
+   "name": "甑島 甑大明神橋",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-sen8.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "薩摩川内市役所",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：薩摩川内市役所）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -566033,6 +566810,43 @@
     "status": "approved",
     "reviewed_at": "2026-08-18",
     "note": "bulk: license=unknown with_coords=True"
+   },
+   "first_seen": "2026-08-18",
+   "last_updated": "2026-08-18"
+  },
+  {
+   "id": "mbc-tuc1",
+   "name": "下甑 手打",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "scenic",
+   "prefecture": "46",
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.mbc.co.jp/web-cam/img/cam1-tuc1.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.mbc.co.jp/web-cam/"
+   },
+   "operator": "手打地区コミュニティ協議会",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：手打地区コミュニティ協議会）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "MBCサイト共通フッターに「掲載された全ての記事・画像等の無断転載、二次利用をお断りいたします」と明記。web-camページ自体も「画像は提供元の団体・企業の許諾を得て複写、掲載」とあり、MBC配信URL(mbc.co.jp/web-cam/img)の直接利用は二次利用に該当。設置者独自の配信URLがあれば別途検討"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-18"
@@ -627649,6 +628463,386 @@
    "last_updated": "2026-08-18"
   },
   {
+   "id": "nagano-road-kiso-001",
+   "name": "国道361号 権兵衛トンネル伊那側",
+   "name_kana": null,
+   "lat": 35.885,
+   "lng": 137.878,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20209",
+   "river_or_route": "国道３６１号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-002",
+   "name": "国道361号 権兵衛トンネル木曽側",
+   "name_kana": null,
+   "lat": 35.888,
+   "lng": 137.832,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20215",
+   "river_or_route": "国道３６１号",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-003",
+   "name": "国道361号 長峰峠",
+   "name_kana": null,
+   "lat": 35.9718202,
+   "lng": 137.5439206,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20432",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp003b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-004",
+   "name": "国道361号 神谷入口",
+   "name_kana": null,
+   "lat": 35.897,
+   "lng": 137.812,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20215",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp004b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-005",
+   "name": "国道361号 神谷",
+   "name_kana": null,
+   "lat": 35.897,
+   "lng": 137.812,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20215",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp005b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-006",
+   "name": "国道361号 神谷ランプ1",
+   "name_kana": null,
+   "lat": 35.897,
+   "lng": 137.812,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20215",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp006b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-007",
+   "name": "国道361号 神谷ランプ2",
+   "name_kana": null,
+   "lat": 35.897,
+   "lng": 137.812,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20215",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp007b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-kiso-008",
+   "name": "羽渕（木曽町日義）",
+   "name_kana": null,
+   "lat": 35.903,
+   "lng": 137.792,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20432",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/rp008b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/kiso/top.html"
+   },
+   "operator": "長野県 木曽建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/kiso/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県木曽建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-nagano-001",
+   "name": "県道35号 新地蔵峠",
+   "name_kana": null,
+   "lat": 36.51,
+   "lng": 138.27,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20203",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/top.html"
+   },
+   "operator": "長野県 長野建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/nagano/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県長野建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-nagano-002",
+   "name": "古海（信濃町）",
+   "name_kana": null,
+   "lat": 36.847206,
+   "lng": 138.248276,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20583",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/top.html"
+   },
+   "operator": "長野県 長野建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/nagano/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県長野建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "nagano-road-nagano-003",
    "name": "宝光社",
    "name_kana": null,
@@ -627682,6 +628876,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-nagano-004",
+   "name": "小根山（小川村）",
+   "name_kana": null,
+   "lat": 36.617256,
+   "lng": 137.925934,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20588",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/rp004b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/nagano/top.html"
+   },
+   "operator": "長野県 長野建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/nagano/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県長野建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -627725,6 +628957,386 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "nagano-road-oomachi-001",
+   "name": "国道148号 下寺",
+   "name_kana": null,
+   "lat": 36.864536,
+   "lng": 137.917099,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20486",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-002",
+   "name": "国道148号 外沢",
+   "name_kana": null,
+   "lat": 36.85384,
+   "lng": 137.979736,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20486",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-004",
+   "name": "県道433号 栂池",
+   "name_kana": null,
+   "lat": 36.749458,
+   "lng": 137.8714342,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20486",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp004b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-005",
+   "name": "国道148号 立の間",
+   "name_kana": null,
+   "lat": 36.73004444,
+   "lng": 137.8837972,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20485",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp005b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-006",
+   "name": "県道33号 美麻トンネル南",
+   "name_kana": null,
+   "lat": 36.6304791,
+   "lng": 137.8777939,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20212",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp006b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-007",
+   "name": "国道148号 佐野",
+   "name_kana": null,
+   "lat": 36.652256,
+   "lng": 137.849884,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20485",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp007b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-008",
+   "name": "県道31号 美麻",
+   "name_kana": null,
+   "lat": 36.582199,
+   "lng": 137.897079,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20212",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp008b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-010",
+   "name": "国道148号 簗場",
+   "name_kana": null,
+   "lat": 36.59310556,
+   "lng": 137.8448111,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20212",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp010b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-011",
+   "name": "県道45号 扇沢",
+   "name_kana": null,
+   "lat": 36.5586721,
+   "lng": 137.7209068,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20212",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp011b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-oomachi-012",
+   "name": "県道306号 松川",
+   "name_kana": null,
+   "lat": 36.42416601,
+   "lng": 137.85444809,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20482",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/rp012b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/oomachi/top.html"
+   },
+   "operator": "長野県 大町建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/oomachi/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県大町建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "nagano-road-saku-002",
    "name": "白樺高原",
    "name_kana": null,
@@ -627758,6 +629370,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-003",
+   "name": "国道146号 峰の茶屋",
+   "name_kana": null,
+   "lat": 36.41,
+   "lng": 138.6,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20321",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp003b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -627839,6 +629489,196 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "nagano-road-saku-006",
+   "name": "佐久建設事務所 カメラ6",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp006b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-25",
+    "note": "avis.ne.jp/~chouken の各事務所ページに利用条件の記載なし。長野県HPは「リンク原則自由」。転載禁止の明記なし"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-008",
+   "name": "国道299号 麦草峠",
+   "name_kana": null,
+   "lat": 36.0592155,
+   "lng": 138.3462857,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20214",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp008b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-saku-009",
+   "name": "国道141号 清水町（佐久市臼田）",
+   "name_kana": null,
+   "lat": 36.20219,
+   "lng": 138.471863,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20217",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/saku/rp009b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/saku/top.html"
+   },
+   "operator": "長野県 佐久建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/saku/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県佐久建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-suzaka-001",
+   "name": "国道403号 大島（小布施町）",
+   "name_kana": null,
+   "lat": 36.688938,
+   "lng": 138.293289,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20541",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/rp001b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/top.html"
+   },
+   "operator": "長野県 須坂建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/suzaka/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県須坂建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-suzaka-002",
+   "name": "国道406号 仙仁（須坂市）",
+   "name_kana": null,
+   "lat": 36.61,
+   "lng": 138.36,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20207",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/suzaka/top.html"
+   },
+   "operator": "長野県 須坂建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/suzaka/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県須坂建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "nagano-road-ueda-001",
    "name": "鳥居峠",
    "name_kana": null,
@@ -627872,6 +629712,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-ueda-002",
+   "name": "国道152号 大門峠",
+   "name_kana": null,
+   "lat": 36.115,
+   "lng": 138.245,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20324",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/rp002b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/top.html"
+   },
+   "operator": "長野県 上田建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/ueda/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県上田建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -627986,6 +629864,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=長野県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "nagano-road-ueda-006",
+   "name": "県道94号 湯ノ丸（地蔵峠）",
+   "name_kana": null,
+   "lat": 36.4218562,
+   "lng": 138.4243865,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20219",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/rp006b.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://www.avis.ne.jp/~chouken/ueda/top.html"
+   },
+   "operator": "長野県 上田建設事務所",
+   "source": {
+    "page_url": "http://www.avis.ne.jp/~chouken/ueda/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：長野県上田建設事務所（道路ライブカメラ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -636555,6 +638471,44 @@
    "last_updated": "2026-08-19"
   },
   {
+   "id": "shizukawa-coast-fuji-gokanjima",
+   "name": "富士海岸 五貫島（C12）",
+   "name_kana": null,
+   "lat": 35.12268056,
+   "lng": 138.6491611,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22210",
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/fuji-gokanjima.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
    "id": "shizukawa-coast-fuji-hara",
    "name": "富士海岸 原",
    "name_kana": null,
@@ -636968,6 +638922,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-22",
     "note": "bulk: license=unknown operator=静岡河川事務所 with_coords=True"
+   },
+   "first_seen": "2026-08-22",
+   "last_updated": "2026-08-22"
+  },
+  {
+   "id": "shizukawa-coast-kanbara-hinode",
+   "name": "富士海岸 日の出",
+   "name_kana": null,
+   "lat": 35.11253611,
+   "lng": 138.5843111,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22103",
+   "river_or_route": "富士海岸",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/seishiga/eizou/kanbara-hinode.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/"
+   },
+   "operator": "国土交通省中部地方整備局 静岡河川事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/shizukawa/bousai/livecamera/kanbara/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省中部地方整備局 静岡河川事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-22",
    "last_updated": "2026-08-22"
@@ -637619,6 +639611,82 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "shizuoka-doboku-atami-04-sasajiri",
+   "name": "県道11号 熱海函南線 笹尻（函南方面）",
+   "name_kana": null,
+   "lat": 35.0972755,
+   "lng": 139.0247764,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22325",
+   "river_or_route": ">県道11号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/04_sasajiri/cam_sasajiri.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-atami-05-umenokidaira",
+   "name": "国道135号 梅ノ木平（熱海方面）",
+   "name_kana": null,
+   "lat": 34.91823333,
+   "lng": 139.1197194,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22208",
+   "river_or_route": "国道１３５号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/05_umenokidaira/cam_umenokidaira.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "shizuoka-doboku-atami-06-izukougen",
    "name": "(国)１３５号 伊豆高原(下田方面)",
    "name_kana": null,
@@ -637652,6 +639720,120 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=静岡県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-atami-07-kameishitouge",
+   "name": "県道19号 伊東大仁線 亀石峠東（伊東方面）",
+   "name_kana": null,
+   "lat": 35.0225518,
+   "lng": 139.041983,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22225",
+   "river_or_route": "県道19号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/07_kameishitouge/cam_kameishitouge.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-atami-08-rokurobatouge",
+   "name": "県道111号 遠笠山富戸線 鹿路庭峠（伊東方面）",
+   "name_kana": null,
+   "lat": 34.9,
+   "lng": 139.06,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22208",
+   "river_or_route": "県道111号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/08_rokurobatouge/cam_rokurobatouge.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-atami-09-sakuranosato",
+   "name": "県道351号 池東松原線 さくらの里（伊東市街方面）",
+   "name_kana": null,
+   "lat": 34.907,
+   "lng": 139.093,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22208",
+   "river_or_route": "県道351号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://izu-e.pref.shizuoka.jp/atami/09_sakuranosato/cam_sakuranosato.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://izu-e.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 熱海土木事務所",
+   "source": {
+    "page_url": "https://izu-e.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県熱海土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -637695,6 +639877,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "shizuoka-doboku-fuji-02-mizugazuka",
+   "name": "県道 富士公園太郎坊線 水ヶ塚",
+   "name_kana": null,
+   "lat": 35.303,
+   "lng": 138.762,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22220",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://fujilive.pref.shizuoka.jp/fuji/02_mizugazuka/cam_mizugazuka.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://fujilive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 富士土木事務所",
+   "source": {
+    "page_url": "https://fujilive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県富士土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "shizuoka-doboku-fuji-03-fujinomiya",
    "name": "<img src=fuji/03_fujinomiya/temp_fujinomiya.gif id=tempcss3 />(一)富士公園太郎坊線 富士宮口二合目",
    "name_kana": null,
@@ -637728,6 +639948,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=静岡県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-fuji-04-kodomonokuni",
+   "name": "国道469号 こどもの国入口",
+   "name_kana": null,
+   "lat": 35.25477424,
+   "lng": 138.7736353,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22210",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://fujilive.pref.shizuoka.jp/fuji/04_kodomonokuni/cam_kodomonokuni.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://fujilive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 富士土木事務所",
+   "source": {
+    "page_url": "https://fujilive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県富士土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -637999,6 +640257,44 @@
    "last_updated": "2026-08-21"
   },
   {
+   "id": "shizuoka-doboku-numadu-04-jurigi",
+   "name": "国道469号 十里木交差点",
+   "name_kana": null,
+   "lat": 35.25679444,
+   "lng": 138.7859278,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22220",
+   "river_or_route": "国道469号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://snowlive.pref.shizuoka.jp/numadu/04_jurigi/cam_jurigi.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://snowlive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 沼津土木事務所",
+   "source": {
+    "page_url": "https://snowlive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県沼津土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
    "id": "shizuoka-doboku-numadu-05-otome",
    "name": "(国)１３８号 乙女峠",
    "name_kana": null,
@@ -638032,6 +640328,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=静岡県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-numadu-06-heda",
+   "name": "主要地方道修善寺戸田線 戸田峠",
+   "name_kana": null,
+   "lat": 34.965,
+   "lng": 138.805,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22203",
+   "river_or_route": "主要地方道修善寺戸田線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://snowlive.pref.shizuoka.jp/numadu/06_heda/cam_heda.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://snowlive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 沼津土木事務所",
+   "source": {
+    "page_url": "https://snowlive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県沼津土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -638108,6 +640442,44 @@
     "status": "approved",
     "reviewed_at": "2026-08-21",
     "note": "bulk: license=unknown operator=静岡県 with_coords=True"
+   },
+   "first_seen": "2026-08-21",
+   "last_updated": "2026-08-21"
+  },
+  {
+   "id": "shizuoka-doboku-numadu-09-kousuimae",
+   "name": "国道138号 湖水前交差点",
+   "name_kana": null,
+   "lat": 35.293,
+   "lng": 138.955,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22215",
+   "river_or_route": "国道138号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://snowlive.pref.shizuoka.jp/numadu/09_kousuimae/cam_kousuimae.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://snowlive.pref.shizuoka.jp/"
+   },
+   "operator": "静岡県 沼津土木事務所",
+   "source": {
+    "page_url": "https://snowlive.pref.shizuoka.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：静岡県沼津土木事務所ライブカメラ"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 旧候補72件の座標付与後に承認(license=unknown)"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
