@@ -23,6 +23,7 @@ enum FeedType {
   /// さいたま市水位情報システム（都度解決型）
   saitamaFlood('saitama_flood'),
   kochiSuibo('kochi_suibo'),
+  sizenken('sizenken'),
   mieDouro('mie_douro'),
 
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する

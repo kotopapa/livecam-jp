@@ -66,6 +66,8 @@ cameras:
     prefecture: "39"
     lat: 33.7897
     lng: 133.6661
+    feed_type: web_page
+    feed_url: "https://www.water.go.jp/yoshino/ikeda/sameura/eizoukan.html"
     image_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp11.jpg"
     page_url: "https://www.water.go.jp/yoshino/ikeda/sameura/eizoukan.html"
     note: "吉野川水系 吉野川"
@@ -143,6 +145,8 @@ cameras:
     prefecture: "38"
     lat: 33.8842
     lng: 133.4784
+    feed_type: web_page
+    feed_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/html/p0502/p050204.html"
     image_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp31.jpg"
     page_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/html/p0502/p050204.html"
     note: "吉野川水系 銅山川"
@@ -517,6 +521,8 @@ cameras:
     prefecture: "20"
     lat: 36.1172
     lng: 137.6137
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=85"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/85_c/image/2026/08/21/NCS20260821150044360.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=85"
     note: "長野県松本市安曇4307、環境省インターネット自然研究所の設置場所座標(ページ記載値)。乗鞍高原から見た乗鞍岳。"
@@ -550,6 +556,8 @@ cameras:
     prefecture: "30"
     lat: 33.478
     lng: 135.7889
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=51"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/51_c/image/2026/08/21/NCS20260821150002600.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=51"
     note: "『All rights Reserved, Copyright Ministry of the Environment』"
@@ -2915,6 +2923,8 @@ cameras:
     prefecture: "01"
     lat: 43.2286
     lng: 144.3323
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=73"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/73_c/image/2026/08/21/NCS20260821200011150.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=73"
 
@@ -2925,6 +2935,8 @@ cameras:
     prefecture: "46"
     lat: 32.1055
     lng: 130.2747
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=94"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/94_c/image/2026/08/21/NCS20260821200002970.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=94"
 
@@ -2945,6 +2957,8 @@ cameras:
     prefecture: "40"
     lat: 33.5721
     lng: 130.3908
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=57"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/57_c/image/2026/08/21/NCS20260821190008540.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=57"
 
@@ -2955,6 +2969,8 @@ cameras:
     prefecture: "04"
     lat: 38.7235
     lng: 141.0946
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=90"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/90_c/image/2026/08/21/NCS20260821200046090.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=90"
 
@@ -2965,6 +2981,8 @@ cameras:
     prefecture: "31"
     lat: 35.4414
     lng: 133.2873
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=64"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/64_c/image/2026/08/21/NCS20260821200002370.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=64"
 
@@ -2975,18 +2993,10 @@ cameras:
     prefecture: "07"
     lat: 36.9276
     lng: 139.3164
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=92"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/92_c/image/2026/08/21/NCS20260821200056270.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=92"
-
-  - id: curated-still-norikura-kogen-norikuradake
-    name: "乗鞍高原からみた乗鞍岳"
-    operator: "環境省（生物多様性センター）インターネット自然研究所"
-    category: scenic
-    prefecture: "20"
-    lat: 36.1172
-    lng: 137.6137
-    image_url: "https://www.sizenken.biodic.go.jp/camera_img/85_c/image/2026/08/21/NCS20260821200044960.jpg"
-    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=85"
 
   - id: curated-still-sarobetsu-shitsugen-center
     name: "サロベツ湿原センターからみたサロベツ湿原"
@@ -2995,6 +3005,8 @@ cameras:
     prefecture: "01"
     lat: 45.1103
     lng: 141.701
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=119"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/119_c/image/2026/08/21/NCS2026082120000000.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=119"
 
@@ -3005,6 +3017,8 @@ cameras:
     prefecture: "01"
     lat: 43.6621
     lng: 142.8251
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=108"
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/108_c/image/2026/08/21/NCS20260821210002000.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=108"
 
@@ -20706,3 +20720,108 @@ cameras:
     feed_type: "web_page"
     feed_url: "https://www.youtube.com/watch?v=HmdscgFbqQQ"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「八千代村上駅」(説明文「八千代村上駅方面の映像」)"
+
+  # ===== 2026-08-25 全国空白地帯・離島・ジャンル横断調査分 (8件) =====
+  - id: curated-still-scenic-daisen-kagaminari-sizenken68
+    name: "大山鏡ヶ成から見た烏ヶ山"
+    operator: "環境省 生物多様性センター インターネット自然研究所"
+    category: "scenic"
+    prefecture: "31"
+    lat: 35.327
+    lng: 133.59
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/68_c/image/2026/08/24/NCS20260824200055900.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=68"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=68"
+    note: "view_new.php?no=68 から当日画像URLを取得(日付付きパスで毎回変わる→既存の米子水鳥公園(no=64)と同じ方式で要都度解決)。設置: 江府町御机 鏡ヶ成709-1。座標は鏡ヶ成休暇村付近の既知座標(GSI 御机 35.3311,133.5727 から東へ補正)。"
+
+  - id: curated-still-scenic-ebino-kogen-kirishima
+    name: "えびの高原から見た霧島連山（えびのエコミュージアムセンター）"
+    operator: "環境省 生物多様性センター（インターネット自然研究所）"
+    category: "scenic"
+    prefecture: "45"
+    lat: 31.946
+    lng: 130.844
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/59_c/image/2026/08/24/NCS20260824200002660.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=59"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=59"
+    note: "curlで image/jpeg 200確認(87KB, 2026-08-24)。約1時間更新。画像ファイル名は日付/時刻入りで固定URLではない（既存 curated-still-daisetsuzan-asahidake 等と同じ sizenken 形式、view_new.php?no=59 から最新画像を解決する運用）。利用条件: 'All rights Reserved, Copyright Ministry of the Environment'、転載禁止の明記なし→license=unknown。座標はえびのエコミュージアムセンター(えびの市末永1495-5、えびの高原)の既知位置。MBC南日本放送 web-cam-m/ebi1.html の cam1-ebi1-m.jpg と kar1-m.jpg は本カメラの再配信(同一MD5・映像提供:環境省)なので採用しない"
+
+  - id: curated-still-mountain-sizenken-nekodake
+    name: "南阿蘇から見る阿蘇根子岳（休暇村南阿蘇）"
+    operator: "環境省 インターネット自然研究所"
+    category: "scenic"
+    prefecture: "43"
+    lat: 32.8207
+    lng: 131.1308
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/58_c/image/2026/08/24/NCS20260824200006440.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=58"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=58"
+    note: "既存sizenken4台と同方式(日付入りURL、view_new.phpから最新画像を解決)。設置箇所: 阿蘇くじゅう国立公園阿蘇地区(休暇村南阿蘇内) 熊本県阿蘇郡高森町高森3219 → GSIジオコーディング"
+
+  - id: curated-still-mountain-sizenken-yakushima
+    name: "屋久島の山々（ヤクスギランド）"
+    operator: "環境省 インターネット自然研究所"
+    category: "scenic"
+    prefecture: "46"
+    lat: 30.3059
+    lng: 130.5671
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/60_c/image/2026/08/24/NCS20260824200054870.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=60"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=60"
+    note: "sizenken方式。設置箇所: ヤクスギランド休憩施設「森泉」内。座標はGSI(ヤクスギランド)"
+
+  - id: curated-still-mountain-sizenken-urabandai-bandaisan
+    name: "裏磐梯から見た磐梯山"
+    operator: "環境省 インターネット自然研究所"
+    category: "volcano"
+    prefecture: "07"
+    lat: 37.6529
+    lng: 140.0867
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/80_c/image/2026/08/24/NCS20260824200055020.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=80"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=80"
+    note: "sizenken方式。利用案内ページ(about.php)なし。座標は裏磐梯ビジターセンター(北塩原村桧原剣ケ峯)の既知座標。要確認"
+
+  - id: curated-still-mountain-sizenken-shikotsuko
+    name: "支笏湖と周辺の山々（モラップ）"
+    operator: "環境省 インターネット自然研究所"
+    category: "scenic"
+    prefecture: "01"
+    lat: 42.7304
+    lng: 141.3864
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/89_c/image/2026/08/24/NCS20260824200055230.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=89"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=89"
+    note: "sizenken方式。設置箇所: 支笏湖モラップキャンプ場(千歳市支笏湖温泉モラップ)。座標はGSI(モラップキャンプ場)"
+
+  - id: curated-still-mountain-sizenken-gassan-haguro
+    name: "羽黒町から見た月山遠望"
+    operator: "環境省 インターネット自然研究所"
+    category: "scenic"
+    prefecture: "06"
+    lat: 38.7199
+    lng: 139.9004
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/91_c/image/2026/08/24/NCS20260824190030800.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=91"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=91"
+    note: "sizenken方式。設置箇所: 鶴岡市羽黒庁舎(鶴岡市羽黒町荒川字前田元89) → GSI住所検索"
+
+  - id: curated-still-mountain-sizenken-tofutsuko-sharidake
+    name: "濤沸湖と斜里岳"
+    operator: "環境省 インターネット自然研究所"
+    category: "scenic"
+    prefecture: "01"
+    lat: 43.9499
+    lng: 144.338
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/113_c/image/2026/08/24/NCS20260824190002760.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=113"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=113"
+    note: "sizenken方式。設置箇所: 環境省濤沸湖水鳥・湿地センター(網走市北浜203) → GSI住所検索"

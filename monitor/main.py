@@ -167,9 +167,10 @@ def run(shard: str | None = None) -> int:
     # 都度解決型feed（thr_camxml / camidx_latest）: 参照ファイルから最新画像名を解決する
     ref_cams = [c for c in all_cameras
                 if c.get("review", {}).get("status") == "approved"
-                and c["feed"]["type"] in ("thr_camxml", "camidx_latest", "kochi_suibo")]
+                and c["feed"]["type"] in ("thr_camxml", "camidx_latest", "kochi_suibo", "sizenken")]
     if ref_cams:
         from crawler.sources.kochi_suibo import resolve_image_url as kochi_resolve
+        from crawler.sources.sizenken import resolve_image_url as sizenken_resolve
         from crawler.sources.thr_camxml import (resolve_camidx_url,
                                                 resolve_image_url as thr_resolve)
         ref_by_id = {}
@@ -191,6 +192,8 @@ def run(shard: str | None = None) -> int:
                 hit = thr_resolve(ref_url, resp.text)
             elif cam["feed"]["type"] == "kochi_suibo":
                 hit = kochi_resolve(ref_url, resp.text)
+            elif cam["feed"]["type"] == "sizenken":
+                hit = sizenken_resolve(ref_url, resp.text)
             else:
                 hit = resolve_camidx_url(ref_url, resp.text)
             if hit:

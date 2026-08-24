@@ -1,5 +1,5 @@
 {
- "version": "2026-08-24T21:34:21Z",
+ "version": "2026-08-24T22:22:59Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -34317,8 +34317,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/108_c/image/2026/08/21/NCS20260821210002000.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=108",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -36787,8 +36787,8 @@
    "municipality": "39344",
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp11.jpg",
+    "type": "web_page",
+    "url": "https://www.water.go.jp/yoshino/ikeda/sameura/eizoukan.html",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -36807,7 +36807,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-21",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 運営者が画像直リンク不可を明記のため誘導型へ変更"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -37281,8 +37281,8 @@
    "municipality": "38213",
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp31.jpg",
+    "type": "web_page",
+    "url": "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/html/p0502/p050204.html",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -37301,7 +37301,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-21",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 運営者が画像直リンク不可を明記のため誘導型へ変更"
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
@@ -50543,8 +50543,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/94_c/image/2026/08/21/NCS20260821200002970.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=94",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -50619,8 +50619,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/90_c/image/2026/08/21/NCS20260821200046090.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=90",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -55939,8 +55939,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/51_c/image/2026/08/21/NCS20260821150002600.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=51",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -56015,8 +56015,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/73_c/image/2026/08/21/NCS20260821200011150.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=73",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -59373,6 +59373,234 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：北見工業大学 雪氷環境研究室"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-mountain-sizenken-gassan-haguro",
+   "name": "羽黒町から見た月山遠望",
+   "name_kana": null,
+   "lat": 38.7199,
+   "lng": 139.9004,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "06",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=91",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=91"
+   },
+   "operator": "環境省 インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=91",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-mountain-sizenken-nekodake",
+   "name": "南阿蘇から見る阿蘇根子岳（休暇村南阿蘇）",
+   "name_kana": null,
+   "lat": 32.8207,
+   "lng": 131.1308,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "43",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=58",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=58"
+   },
+   "operator": "環境省 インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=58",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-mountain-sizenken-shikotsuko",
+   "name": "支笏湖と周辺の山々（モラップ）",
+   "name_kana": null,
+   "lat": 42.7304,
+   "lng": 141.3864,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=89",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=89"
+   },
+   "operator": "環境省 インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=89",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-mountain-sizenken-tofutsuko-sharidake",
+   "name": "濤沸湖と斜里岳",
+   "name_kana": null,
+   "lat": 43.9499,
+   "lng": 144.338,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=113",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=113"
+   },
+   "operator": "環境省 インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=113",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-mountain-sizenken-urabandai-bandaisan",
+   "name": "裏磐梯から見た磐梯山",
+   "name_kana": null,
+   "lat": 37.6529,
+   "lng": 140.0867,
+   "coord_accuracy": "approx",
+   "category": "volcano",
+   "prefecture": "07",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=80",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=80"
+   },
+   "operator": "環境省 インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=80",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-mountain-sizenken-yakushima",
+   "name": "屋久島の山々（ヤクスギランド）",
+   "name_kana": null,
+   "lat": 30.3059,
+   "lng": 130.5671,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=60",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=60"
+   },
+   "operator": "環境省 インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=60",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 インターネット自然研究所"
    },
    "review": {
     "status": "approved",
@@ -64981,8 +65209,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/85_c/image/2026/08/21/NCS20260821200044960.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=85",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -67033,8 +67261,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/92_c/image/2026/08/21/NCS20260821200056270.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=92",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -88731,8 +88959,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/119_c/image/2026/08/21/NCS2026082120000000.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=119",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -88785,6 +89013,82 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：茶臼山高原協会"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-scenic-daisen-kagaminari-sizenken68",
+   "name": "大山鏡ヶ成から見た烏ヶ山",
+   "name_kana": null,
+   "lat": 35.327,
+   "lng": 133.59,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "31",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=68",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=68"
+   },
+   "operator": "環境省 生物多様性センター インターネット自然研究所",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=68",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 生物多様性センター インターネット自然研究所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-scenic-ebino-kogen-kirishima",
+   "name": "えびの高原から見た霧島連山（えびのエコミュージアムセンター）",
+   "name_kana": null,
+   "lat": 31.946,
+   "lng": 130.844,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "45",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=59",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=59"
+   },
+   "operator": "環境省 生物多様性センター（インターネット自然研究所）",
+   "source": {
+    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=59",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：環境省 生物多様性センター（インターネット自然研究所）"
    },
    "review": {
     "status": "approved",
@@ -92519,44 +92823,6 @@
    "last_updated": "2026-08-21"
   },
   {
-   "id": "curated-still-trail-norikuradake-kankyosho",
-   "name": "乗鞍岳(乗鞍高原)",
-   "name_kana": null,
-   "lat": 36.1172,
-   "lng": 137.6137,
-   "coord_accuracy": "approx",
-   "category": "scenic",
-   "prefecture": "20",
-   "country": null,
-   "municipality": "20202",
-   "river_or_route": null,
-   "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/85_c/image/2026/08/21/NCS20260821150044360.jpg",
-    "refresh_sec": 600,
-    "requires_referer": false,
-    "headers": {}
-   },
-   "fallback": {
-    "type": "web_page",
-    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=85"
-   },
-   "operator": "環境省 インターネット自然研究所",
-   "source": {
-    "page_url": "https://www.sizenken.biodic.go.jp/view_new.php?no=85",
-    "terms_url": null,
-    "license": "unknown",
-    "attribution": "映像提供：環境省 インターネット自然研究所"
-   },
-   "review": {
-    "status": "approved",
-    "reviewed_at": "2026-08-21",
-    "note": "bulk: license=unknown with_coords=True"
-   },
-   "first_seen": "2026-08-21",
-   "last_updated": "2026-08-21"
-  },
-  {
    "id": "curated-still-trail-senjojiki-cirque",
    "name": "千畳敷カール(ホテル千畳敷)",
    "name_kana": null,
@@ -92873,8 +93139,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/57_c/image/2026/08/21/NCS20260821190008540.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=57",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
@@ -95837,8 +96103,8 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "still_image",
-    "url": "https://www.sizenken.biodic.go.jp/camera_img/64_c/image/2026/08/21/NCS20260821200002370.jpg",
+    "type": "sizenken",
+    "url": "https://www.sizenken.biodic.go.jp/view_new.php?no=64",
     "refresh_sec": 600,
     "requires_referer": false,
     "headers": {}
