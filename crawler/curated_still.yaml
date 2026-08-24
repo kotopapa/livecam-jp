@@ -9158,22 +9158,22 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.747295
-    lng: 130.226746
+    lat: 32.69408
+    lng: 130.322647
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_23.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c23.html"
-    note: "c23 の画像番号は c01-19 の規則(同番号)からの推定。要確認。座標=小浜町北野代表点"
+    note: "c23.html→ngscctv_vga_23.jpg・ngscctv_23.txt「南島原市有家町　俵石　下」を実確認(2026-08-25)。小浜管内。txtの住所が南島原市有家町のため座標を有家町原尾代表点(GSI)に修正(要微調整)"
 
   - id: curated-still-qsr-ngs-r57-fudanohara
     name: "国道57号 札の原（島原）"
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.755047
-    lng: 130.367188
+    lat: 32.744427
+    lng: 130.267563
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_25.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c25.html"
-    note: "番号規則推定(要確認)。座標=南崩山町代表点"
+    note: "c25.html→ngscctv_vga_25.jpg・ngscctv_25.txt「雲仙市小浜町　札ノ原　上」を実確認(2026-08-25)。小浜管内。txtの住所が雲仙市小浜町のため座標を小浜町雲仙代表点(GSI)に修正(要微調整)"
 
   - id: curated-still-qsr-ngs-r57-aino-tenbo
     name: "国道57号 愛野展望所（雲仙岳・橘湾）"
@@ -9184,7 +9184,359 @@ cameras:
     lng: 130.1521
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_59.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c59.html"
-    note: "番号規則推定(要確認)。愛野展望台から雲仙岳と国道57号。座標=愛野町乙代表点。※小浜管内 c53島原大橋/c54水無大橋/c28山ノ寺/c55鬢串/c56小浜/c57富津/c58猿場/c60愛津、佐世保管内 c29松浦IC/c30調川IC/c31今福IC/c32三川内本町/c33桑木場町/c34脇崎/c35大塔/c36笹ノ谷/c37新早岐瀬戸大橋/c38-39南風崎/c40川棚大橋/c41彼杵大橋/c42高吉/c43江頭/c61御厨田代大橋、大村管内 c44桜馬場/c45与崎/c47小船越トンネル/c48切通/c49大曲/c50新妙相寺橋/c51島原道路非常駐車帯/c52小川町 も同形式で存在(計約43台)。番号対応を curl で一括確認して追加推奨"
+    note: "c59.html→ngscctv_vga_59.jpg・ngscctv_59.txt「雲仙市愛野町　愛野展望所　下」を実確認(2026-08-25)。愛野展望台から雲仙岳と国道57号。座標=愛野町乙代表点。※小浜管内 c53島原大橋/c54水無大橋/c28山ノ寺/c55鬢串/c56小浜/c57富津/c58猿場/c60愛津、佐世保管内 c29松浦IC/c30調川IC/c31今福IC/c32三川内本町/c33桑木場町/c34脇崎/c35大塔/c36笹ノ谷/c37新早岐瀬戸大橋/c38-39南風崎/c40川棚大橋/c41彼杵大橋/c42高吉/c43江頭/c61御厨田代大橋、大村管内 c44桜馬場/c45与崎/c47小船越トンネル/c48切通/c49大曲/c50新妙相寺橋/c51島原道路非常駐車帯/c52小川町 も同形式で存在(計約43台)。番号対応を curl で一括確認して追加推奨"
+
+  - id: curated-still-qsr-ngs-r497-mikuriya-tashiro
+    name: "御厨田代大橋（松浦市御厨町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.340569
+    lng: 129.659454
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_61.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c61.html"
+    note: "佐世保国道維持出張所管内。c61.html→ngscctv_vga_61.jpg・ngscctv_61.txt「松浦市御厨町　御厨田代大橋」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=御厨町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-matsuura-ic
+    name: "松浦IC入口・調川方向（松浦市志佐町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.312309
+    lng: 129.720657
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_29.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c29.html"
+    note: "佐世保国道維持出張所管内。c29.html→ngscctv_vga_29.jpg・ngscctv_29.txt「松浦市志佐町　松浦IC入口（調川方向）」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=志佐町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-tsukinokawa-ic
+    name: "調川IC（松浦市調川町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.33955
+    lng: 129.738708
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_30.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c30.html"
+    note: "佐世保国道維持出張所管内。c30.html→ngscctv_vga_30.jpg・ngscctv_30.txt「松浦市調川町　調川ＩＣ」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=調川町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-imafuku-ic
+    name: "今福IC下り（松浦市今福町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.339535
+    lng: 129.769623
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_31.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c31.html"
+    note: "佐世保国道維持出張所管内。c31.html→ngscctv_vga_31.jpg・ngscctv_31.txt「松浦市今福町　今福ＩＣ下り」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=今福町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-mikawachi
+    name: "三川内（佐世保市三川内本町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.156635
+    lng: 129.828857
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_32.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c32.html"
+    note: "佐世保国道維持出張所管内。c32.html→ngscctv_vga_32.jpg・ngscctv_32.txt「佐世保市三川内本町　三川内　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=三川内本町3番地付近(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-kuwakoba
+    name: "桑木場（佐世保市桑木場町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.154774
+    lng: 129.816666
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_33.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c33.html"
+    note: "佐世保国道維持出張所管内。c33.html→ngscctv_vga_33.jpg・ngscctv_33.txt「佐世保市桑木場町　桑木場　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=桑木場町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-wakizaki
+    name: "脇崎（佐世保市大塔町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.15099
+    lng: 129.775864
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_34.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c34.html"
+    note: "佐世保国道維持出張所管内。c34.html→ngscctv_vga_34.jpg・ngscctv_34.txt「佐世保市大塔町　脇崎　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=大塔町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-daito
+    name: "大塔（佐世保市大塔町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.15099
+    lng: 129.775864
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_35.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c35.html"
+    note: "佐世保国道維持出張所管内。c35.html→ngscctv_vga_35.jpg・ngscctv_35.txt「佐世保市大塔町　大塔　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=大塔町代表点(脇崎と同一点)(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-sasanotani
+    name: "笹ノ谷（佐世保市有福町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.131599
+    lng: 129.781036
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_36.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c36.html"
+    note: "佐世保国道維持出張所管内。c36.html→ngscctv_vga_36.jpg・ngscctv_36.txt「佐世保市有福町　笹ノ谷　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=有福町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-shin-haikiseto-bridge
+    name: "新早岐瀬戸大橋（佐世保市崎岡町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.109196
+    lng: 129.800735
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_37.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c37.html"
+    note: "佐世保国道維持出張所管内。c37.html→ngscctv_vga_37.jpg・ngscctv_37.txt「佐世保市崎岡町　新早岐瀬戸大橋　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=崎岡町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-haenosaki
+    name: "南風崎（佐世保市南風崎町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.092445
+    lng: 129.803467
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_38.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c38.html"
+    note: "佐世保国道維持出張所管内。c38.html→ngscctv_vga_38.jpg・ngscctv_38.txt「佐世保市南風崎町　南風崎　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=南風崎町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-haenosaki2
+    name: "南風崎２（佐世保市南風崎町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.092445
+    lng: 129.803467
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_39.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c39.html"
+    note: "佐世保国道維持出張所管内。c39.html→ngscctv_vga_39.jpg・ngscctv_39.txt「佐世保市南風崎町　南風崎２　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=南風崎町代表点(南風崎と同一点)(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-kawatana-bridge
+    name: "川棚大橋（東彼杵郡川棚町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.072742
+    lng: 129.861603
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_40.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c40.html"
+    note: "佐世保国道維持出張所管内。c40.html→ngscctv_vga_40.jpg・ngscctv_40.txt「東彼杵郡川棚町　川棚大橋　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=川棚町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-sonogi-bridge
+    name: "彼杵大橋（東彼杵町彼杵宿郷）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.034931
+    lng: 129.928406
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_41.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c41.html"
+    note: "佐世保国道維持出張所管内。c41.html→ngscctv_vga_41.jpg・ngscctv_41.txt「東彼杵郡東彼杵町　彼杵大橋　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=彼杵宿郷代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-takayoshi
+    name: "高吉（東彼杵郡東彼杵町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.037003
+    lng: 129.917145
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_42.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c42.html"
+    note: "佐世保国道維持出張所管内。c42.html→ngscctv_vga_42.jpg・ngscctv_42.txt「東彼杵郡東彼杵町　高吉　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=東彼杵町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-egashira
+    name: "江頭（東彼杵郡東彼杵町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 33.037003
+    lng: 129.917145
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_43.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c43.html"
+    note: "佐世保国道維持出張所管内。c43.html→ngscctv_vga_43.jpg・ngscctv_43.txt「東彼杵郡東彼杵町　江頭　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=東彼杵町代表点(高吉と同一点)(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-sakurababa
+    name: "桜馬場（大村市西大村本町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.926865
+    lng: 129.952713
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_44.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c44.html"
+    note: "大村国道維持出張所管内。c44.html→ngscctv_vga_44.jpg・ngscctv_44.txt「大村市西大村本町　桜馬場　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=西大村本町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-yozaki
+    name: "与崎（大村市久原二丁目）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.895477
+    lng: 129.971725
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_45.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c45.html"
+    note: "大村国道維持出張所管内。c45.html→ngscctv_vga_45.jpg・ngscctv_45.txt「大村市久原二丁目　与崎　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=久原二丁目代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-kofunakoshi-tn
+    name: "小船越トンネル起点坑口（諫早市小船越町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.842861
+    lng: 130.032333
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_47.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c47.html"
+    note: "大村国道維持出張所管内。c47.html→ngscctv_vga_47.jpg・ngscctv_47.txt「諫早市小船越町　小船越ＴＮ起点坑口　中」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=小船越町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-kiritoshi
+    name: "切通（長崎市宿町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.763264
+    lng: 129.934799
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_48.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c48.html"
+    note: "大村国道維持出張所管内。c48.html→ngscctv_vga_48.jpg・ngscctv_48.txt「長崎市宿町　切通　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=宿町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-omagari
+    name: "大曲（長崎市宿町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.763264
+    lng: 129.934799
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_49.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c49.html"
+    note: "大村国道維持出張所管内。c49.html→ngscctv_vga_49.jpg・ngscctv_49.txt「長崎市宿町　大曲　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=宿町代表点(切通と同一点)(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-shin-myosoji-bridge
+    name: "新妙相寺橋（長崎市本河内）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.749607
+    lng: 129.897552
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_50.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c50.html"
+    note: "大村国道維持出張所管内。c50.html→ngscctv_vga_50.jpg・ngscctv_50.txt「長崎市本河内　新妙相寺橋　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=本河内代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-ogawa
+    name: "小川（諫早市小川町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.821922
+    lng: 130.058868
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_52.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c52.html"
+    note: "大村国道維持出張所管内。c52.html→ngscctv_vga_52.jpg・ngscctv_52.txt「諫早市小川町　小川　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=小川町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-shimabara-road-parking2
+    name: "島原道路 非常駐車帯２（諫早市森山町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.829536
+    lng: 130.114319
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_51.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c51.html"
+    note: "大村国道維持出張所管内。c51.html→ngscctv_vga_51.jpg・ngscctv_51.txt「島原道路_諫早市森山町　非常駐車帯２」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=森山町下井牟田代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-shimabara-bridge
+    name: "島原大橋（島原市南下川尻町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.765621
+    lng: 130.364014
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_53.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c53.html"
+    note: "小浜国道維持出張所管内。c53.html→ngscctv_vga_53.jpg・ngscctv_53.txt「島原市南下川尻町　島原大橋　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=南下川尻町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-mizunashi-bridge
+    name: "水無大橋（島原市札の元町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.747871
+    lng: 130.354874
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_54.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c54.html"
+    note: "小浜国道維持出張所管内。c54.html→ngscctv_vga_54.jpg・ngscctv_54.txt「島原市札の元町　水無大橋　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=札の元町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-yamanotera
+    name: "山ノ寺（南島原市深江町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.723431
+    lng: 130.33255
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_28.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c28.html"
+    note: "小浜国道維持出張所管内。c28.html→ngscctv_vga_28.jpg・ngscctv_28.txt「南島原市深江町　山ノ寺　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=深江町乙代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-bingushi
+    name: "鬢串（雲仙市小浜町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.723824
+    lng: 130.202728
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_55.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c55.html"
+    note: "小浜国道維持出張所管内。c55.html→ngscctv_vga_55.jpg・ngscctv_55.txt「雲仙市小浜町　鬢串　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=小浜町代表点(要微調整)(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-obama
+    name: "小浜（雲仙市小浜町北本町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.731773
+    lng: 130.225006
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_56.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c56.html"
+    note: "小浜国道維持出張所管内。c56.html→ngscctv_vga_56.jpg・ngscctv_56.txt「雲仙市小浜町　小浜　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=小浜町北本町代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-tomitsu
+    name: "富津（雲仙市小浜町富津）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.762817
+    lng: 130.199677
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_57.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c57.html"
+    note: "小浜国道維持出張所管内。c57.html→ngscctv_vga_57.jpg・ngscctv_57.txt「雲仙市小浜町　富津　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=小浜町富津代表点(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-saruba
+    name: "猿場（雲仙市小浜町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.723824
+    lng: 130.202728
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_58.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c58.html"
+    note: "小浜国道維持出張所管内。c58.html→ngscctv_vga_58.jpg・ngscctv_58.txt「雲仙市小浜町　猿場　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=小浜町代表点(鬢串と同一点・要微調整)(GSI AddressSearch)"
+
+  - id: curated-still-qsr-ngs-aitsu
+    name: "愛津（雲仙市愛野町）"
+    operator: "国土交通省 長崎河川国道事務所"
+    category: "road"
+    prefecture: "42"
+    lat: 32.80624
+    lng: 130.1521
+    image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_60.jpg"
+    page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c60.html"
+    note: "小浜国道維持出張所管内。c60.html→ngscctv_vga_60.jpg・ngscctv_60.txt「雲仙市愛野町　愛津　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=愛野町乙代表点(GSI AddressSearch)"
 
   - id: curated-still-cgr-sabagawa-nishinoura
     name: "佐波川 西ノ浦"
