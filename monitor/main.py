@@ -209,14 +209,24 @@ def run(shard: str | None = None) -> int:
             if cam["id"] in ref_by_id:
                 cam["_resolved_image"] = ref_by_id[cam["id"]]
 
-    # 都度解決型feed（saitama_flood）: camera_latest.json 1リクエストで全台解決
-    saitama_cams = [c for c in all_cameras
-                    if c.get("review", {}).get("status") == "approved"
-                    and c["feed"]["type"] == "saitama_flood"]
-    if saitama_cams:
-        from crawler.sources.saitama_flood import resolve_image_urls as st_resolve
-        st_map: dict[str, tuple[str, str]] = {}
-        latest_url = saitama_cams[0]["feed"]["url"]
+    # 都度解決型feed（saitama_flood / takashima_river / higashiomi_river）:
+    # 一覧JSON 1リクエストで全台解決（feed.url が一覧、camera_ref がキー）
+    from crawler.sources.higashiomi_river import resolve_image_urls as ho_resolve
+    from crawler.sources.saitama_flood import resolve_image_urls as st_resolve
+    from crawler.sources.takashima_river import resolve_image_urls as tk_resolve
+    bulk_resolvers = {
+        "saitama_flood": st_resolve,
+        "takashima_river": tk_resolve,
+        "higashiomi_river": ho_resolve,
+    }
+    for ftype, resolver in bulk_resolvers.items():
+        bulk_cams = [c for c in all_cameras
+                     if c.get("review", {}).get("status") == "approved"
+                     and c["feed"]["type"] == ftype]
+        if not bulk_cams:
+            continue
+        bulk_map: dict[str, tuple[str, str]] = {}
+        latest_url = bulk_cams[0]["feed"]["url"]
         host = urlparse(latest_url).netloc
         try:
             throttle.acquire(host)
@@ -225,15 +235,15 @@ def run(shard: str | None = None) -> int:
             finally:
                 throttle.release(host)
             if resp.status_code == 200:
-                st_map = st_resolve(resp.text)
+                bulk_map = resolver(resp.text)
         except requests.RequestException as e:
-            print(f"saitama解決失敗 {latest_url}: {e}", file=sys.stderr)
-        st_by_id = {}
-        for cam in saitama_cams:
-            hit = st_map.get(cam["feed"].get("camera_ref") or "")
+            print(f"{ftype}解決失敗 {latest_url}: {e}", file=sys.stderr)
+        bulk_by_id = {}
+        for cam in bulk_cams:
+            hit = bulk_map.get(cam["feed"].get("camera_ref") or "")
             if hit:
                 cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
-                st_by_id[cam["id"]] = cam["_resolved_image"]
+                bulk_by_id[cam["id"]] = cam["_resolved_image"]
                 st = statuses.setdefault(cam["id"], {
                     "state": "unknown", "last_ok_at": None,
                     "http_status": None, "frozen_since": None,
@@ -241,8 +251,8 @@ def run(shard: str | None = None) -> int:
                 })
                 st["image_url"], st["image_time"] = hit
         for cam in cameras:
-            if cam["id"] in st_by_id:
-                cam["_resolved_image"] = st_by_id[cam["id"]]
+            if cam["id"] in bulk_by_id:
+                cam["_resolved_image"] = bulk_by_id[cam["id"]]
 
     # 都度解決型feed（shimanto_kasen）: result_time.php に POST point=pointN で最新時刻(12桁)を取る
     shimanto_cams = [c for c in all_cameras
