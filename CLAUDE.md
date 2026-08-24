@@ -57,7 +57,7 @@ python site/build.py                            # 配信ファイル生成
 
 - **鳥取県防災情報ポータル(tori-bousai.jp)**は道路(雪みちナビ)266台+河川178台+県営ダム5台がS3固定URL(`tori-bousai.s3.ap-northeast-1.amazonaws.com/{yukinavi|kasen}/camera/NNN/camera.jpg`)で、座標は一覧HTMLの`data-lat/lng`とarcgis geojsonに県公式値がある。他県の防災ポータルも同型の可能性大
 - **環境省 sizenken(インターネット自然研究所)の画像URLは日付入り**で固定URL扱いにすると翌日から陳腐化する（既存4件が該当）。都度解決型パーサ`sizenken`をmonitorに追加し、アプリのFeedType対応と同時に投入する（未実装。候補11件は docs/research_followups_2026-08-25.md 参照）
-- **YouTubeライブIDは頻繁に切り替わる**（商店街・店舗・観光協会・自治体で多発。石垣YAEYAMA LIVEは毎日変更）。可能なら`channel_id`指定(youtube_channel型)で登録する。oEmbed 401=埋め込み不可のライブは県河川防災系に多い（和歌山県約50本・別海町北方領土カメラ等）→運営者へ埋め込み許可を打診する余地
+- **YouTubeライブIDは頻繁に切り替わる**（商店街・店舗・観光協会・自治体で多発。石垣YAEYAMA LIVEは毎日変更）。可能なら`channel_id`指定(youtube_channel型)で登録する。oEmbed 401=埋め込み不可のライブは県河川防災系に多い（和歌山県約50本・別海町北方領土カメラ等）→**埋め込み不可でもライブ中なら誘導型(feed_type: web_page, URL=watch)で登録する方針**（2026-08-25ユーザー決定・101本適用済み）。アプリはYouTube watch URLならサムネイルを自動表示する
 - **画像URL直リンク禁止を明記する運営者**: 水資源機構 吉野川管理所(早明浦・池田・新宮・富郷)、中山寺。→ 既存の早明浦(camDisp11)・富郷(camDisp31)は要再確認
 - 調査エージェントのWebSearchは1セッション200回上限。まとめサイト(cametan/livecam.asia/wcmap)をリンク集として一次サイトへ辿る方式が有効。Nominatimは並列調査で429になるため国土地理院AddressSearch APIを代替に使う
 - Canon(`/-wvhttp-01-/GetOneShot`)・Panasonic(`/SnapshotJPEG?Resolution=`)・AXIS(`/axis-cgi/jpg/image.cgi`)のネットワークカメラ直公開は動的DNS(netvolante.jp/mydns.jp/miemasu.net)で見つかる。運営者公式ページからリンクされているもののみ採用
