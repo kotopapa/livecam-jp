@@ -1,5 +1,5 @@
 {
- "version": "2026-08-24T22:24:12Z",
+ "version": "2026-08-24T22:33:19Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -68959,6 +68959,652 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-still-qsr-ngs-aitsu",
+   "name": "愛津（雲仙市愛野町）",
+   "name_kana": null,
+   "lat": 32.80624,
+   "lng": 130.1521,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_60.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c60.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c60.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-bingushi",
+   "name": "鬢串（雲仙市小浜町）",
+   "name_kana": null,
+   "lat": 32.723824,
+   "lng": 130.202728,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_55.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c55.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c55.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-daito",
+   "name": "大塔（佐世保市大塔町）",
+   "name_kana": null,
+   "lat": 33.15099,
+   "lng": 129.775864,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_35.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c35.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c35.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-egashira",
+   "name": "江頭（東彼杵郡東彼杵町）",
+   "name_kana": null,
+   "lat": 33.037003,
+   "lng": 129.917145,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_43.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c43.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c43.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-haenosaki",
+   "name": "南風崎（佐世保市南風崎町）",
+   "name_kana": null,
+   "lat": 33.092445,
+   "lng": 129.803467,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_38.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c38.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c38.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-haenosaki2",
+   "name": "南風崎２（佐世保市南風崎町）",
+   "name_kana": null,
+   "lat": 33.092445,
+   "lng": 129.803467,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_39.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c39.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c39.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-imafuku-ic",
+   "name": "今福IC下り（松浦市今福町）",
+   "name_kana": null,
+   "lat": 33.339535,
+   "lng": 129.769623,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_31.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c31.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c31.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-kawatana-bridge",
+   "name": "川棚大橋（東彼杵郡川棚町）",
+   "name_kana": null,
+   "lat": 33.072742,
+   "lng": 129.861603,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_40.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c40.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c40.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-kiritoshi",
+   "name": "切通（長崎市宿町）",
+   "name_kana": null,
+   "lat": 32.763264,
+   "lng": 129.934799,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_48.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c48.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c48.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-kofunakoshi-tn",
+   "name": "小船越トンネル起点坑口（諫早市小船越町）",
+   "name_kana": null,
+   "lat": 32.842861,
+   "lng": 130.032333,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_47.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c47.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c47.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-kuwakoba",
+   "name": "桑木場（佐世保市桑木場町）",
+   "name_kana": null,
+   "lat": 33.154774,
+   "lng": 129.816666,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_33.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c33.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c33.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-matsuura-ic",
+   "name": "松浦IC入口・調川方向（松浦市志佐町）",
+   "name_kana": null,
+   "lat": 33.312309,
+   "lng": 129.720657,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_29.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c29.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c29.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-mikawachi",
+   "name": "三川内（佐世保市三川内本町）",
+   "name_kana": null,
+   "lat": 33.156635,
+   "lng": 129.828857,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_32.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c32.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c32.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-mizunashi-bridge",
+   "name": "水無大橋（島原市札の元町）",
+   "name_kana": null,
+   "lat": 32.747871,
+   "lng": 130.354874,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_54.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c54.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c54.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-obama",
+   "name": "小浜（雲仙市小浜町北本町）",
+   "name_kana": null,
+   "lat": 32.731773,
+   "lng": 130.225006,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_56.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c56.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c56.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-ogawa",
+   "name": "小川（諫早市小川町）",
+   "name_kana": null,
+   "lat": 32.821922,
+   "lng": 130.058868,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_52.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c52.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c52.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-omagari",
+   "name": "大曲（長崎市宿町）",
+   "name_kana": null,
+   "lat": 32.763264,
+   "lng": 129.934799,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_49.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c49.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c49.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
    "id": "curated-still-qsr-ngs-r205-nagahata",
    "name": "国道205号 長畑",
    "name_kana": null,
@@ -69263,6 +69909,44 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-still-qsr-ngs-r497-mikuriya-tashiro",
+   "name": "御厨田代大橋（松浦市御厨町）",
+   "name_kana": null,
+   "lat": 33.340569,
+   "lng": 129.659454,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_61.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c61.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c61.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
    "id": "curated-still-qsr-ngs-r57-aino-tenbo",
    "name": "国道57号 愛野展望所（雲仙岳・橘湾）",
    "name_kana": null,
@@ -69304,8 +69988,8 @@
    "id": "curated-still-qsr-ngs-r57-fudanohara",
    "name": "国道57号 札の原（島原）",
    "name_kana": null,
-   "lat": 32.755047,
-   "lng": 130.367188,
+   "lat": 32.744427,
+   "lng": 130.267563,
    "coord_accuracy": "approx",
    "category": "road",
    "prefecture": "42",
@@ -69380,8 +70064,8 @@
    "id": "curated-still-qsr-ngs-r57-tawaraishi",
    "name": "国道57号 俵石",
    "name_kana": null,
-   "lat": 32.747295,
-   "lng": 130.226746,
+   "lat": 32.69408,
+   "lng": 130.322647,
    "coord_accuracy": "approx",
    "category": "road",
    "prefecture": "42",
@@ -69402,6 +70086,538 @@
    "operator": "国土交通省 長崎河川国道事務所",
    "source": {
     "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c23.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-sakurababa",
+   "name": "桜馬場（大村市西大村本町）",
+   "name_kana": null,
+   "lat": 32.926865,
+   "lng": 129.952713,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_44.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c44.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c44.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-saruba",
+   "name": "猿場（雲仙市小浜町）",
+   "name_kana": null,
+   "lat": 32.723824,
+   "lng": 130.202728,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_58.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c58.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c58.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-sasanotani",
+   "name": "笹ノ谷（佐世保市有福町）",
+   "name_kana": null,
+   "lat": 33.131599,
+   "lng": 129.781036,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_36.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c36.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c36.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-shimabara-bridge",
+   "name": "島原大橋（島原市南下川尻町）",
+   "name_kana": null,
+   "lat": 32.765621,
+   "lng": 130.364014,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_53.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c53.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c53.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-shimabara-road-parking2",
+   "name": "島原道路 非常駐車帯２（諫早市森山町）",
+   "name_kana": null,
+   "lat": 32.829536,
+   "lng": 130.114319,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_51.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c51.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c51.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-shin-haikiseto-bridge",
+   "name": "新早岐瀬戸大橋（佐世保市崎岡町）",
+   "name_kana": null,
+   "lat": 33.109196,
+   "lng": 129.800735,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_37.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c37.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c37.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-shin-myosoji-bridge",
+   "name": "新妙相寺橋（長崎市本河内）",
+   "name_kana": null,
+   "lat": 32.749607,
+   "lng": 129.897552,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_50.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c50.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c50.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-sonogi-bridge",
+   "name": "彼杵大橋（東彼杵町彼杵宿郷）",
+   "name_kana": null,
+   "lat": 33.034931,
+   "lng": 129.928406,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_41.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c41.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c41.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-takayoshi",
+   "name": "高吉（東彼杵郡東彼杵町）",
+   "name_kana": null,
+   "lat": 33.037003,
+   "lng": 129.917145,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_42.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c42.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c42.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-tomitsu",
+   "name": "富津（雲仙市小浜町富津）",
+   "name_kana": null,
+   "lat": 32.762817,
+   "lng": 130.199677,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_57.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c57.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c57.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-tsukinokawa-ic",
+   "name": "調川IC（松浦市調川町）",
+   "name_kana": null,
+   "lat": 33.33955,
+   "lng": 129.738708,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_30.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c30.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c30.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-wakizaki",
+   "name": "脇崎（佐世保市大塔町）",
+   "name_kana": null,
+   "lat": 33.15099,
+   "lng": 129.775864,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_34.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c34.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c34.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-yamanotera",
+   "name": "山ノ寺（南島原市深江町）",
+   "name_kana": null,
+   "lat": 32.723431,
+   "lng": 130.33255,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_28.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c28.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c28.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：国土交通省 長崎河川国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-qsr-ngs-yozaki",
+   "name": "与崎（大村市久原二丁目）",
+   "name_kana": null,
+   "lat": 32.895477,
+   "lng": 129.971725,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "42",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_45.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c45.html"
+   },
+   "operator": "国土交通省 長崎河川国道事務所",
+   "source": {
+    "page_url": "https://www.qsr.mlit.go.jp/nagasaki/bousai/c45.html",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：国土交通省 長崎河川国道事務所"
@@ -70279,6 +71495,1771 @@
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-01",
+   "name": "久茂地川 御成橋",
+   "name_kana": null,
+   "lat": 26.215,
+   "lng": 127.679444,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-01.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-02",
+   "name": "久茂地川 美栄橋",
+   "name_kana": null,
+   "lat": 26.219444,
+   "lng": 127.684444,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-02.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-03",
+   "name": "安里川 泊高橋",
+   "name_kana": null,
+   "lat": 26.223611,
+   "lng": 127.685278,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-03.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-04",
+   "name": "安里川 ひめゆり橋",
+   "name_kana": null,
+   "lat": 26.215,
+   "lng": 127.693889,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-04.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-05",
+   "name": "安里川 豊橋",
+   "name_kana": null,
+   "lat": 26.216667,
+   "lng": 127.695,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-05.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-06",
+   "name": "安里川 安里橋",
+   "name_kana": null,
+   "lat": 26.215,
+   "lng": 127.696667,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-06.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-07",
+   "name": "安里川 大道錬兵橋",
+   "name_kana": null,
+   "lat": 26.214722,
+   "lng": 127.699722,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-07.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-08",
+   "name": "安里川 崇元寺橋",
+   "name_kana": null,
+   "lat": 26.220278,
+   "lng": 127.689167,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-08.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-09",
+   "name": "安里川 指帰橋",
+   "name_kana": null,
+   "lat": 26.216944,
+   "lng": 127.7025,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-09.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-10",
+   "name": "安里川 蔡温橋",
+   "name_kana": null,
+   "lat": 26.2175,
+   "lng": 127.6925,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-10.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-11",
+   "name": "真嘉比川 真嘉比遊水地(下池)",
+   "name_kana": null,
+   "lat": 26.221111,
+   "lng": 127.705556,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-11.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-12",
+   "name": "真嘉比川 真嘉比遊水地(中池)",
+   "name_kana": null,
+   "lat": 26.221944,
+   "lng": 127.706389,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-12.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-13",
+   "name": "真嘉比川 真嘉比遊水地(上池)",
+   "name_kana": null,
+   "lat": 26.223056,
+   "lng": 127.709444,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-13.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-15",
+   "name": "国場川 鏡原",
+   "name_kana": null,
+   "lat": 26.198611,
+   "lng": 127.679722,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-15.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-16",
+   "name": "国場川 古波蔵",
+   "name_kana": null,
+   "lat": 26.196944,
+   "lng": 127.686389,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-16.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-17",
+   "name": "国場川 下茂橋",
+   "name_kana": null,
+   "lat": 26.196389,
+   "lng": 127.719444,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-17.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-18",
+   "name": "国場川 石原橋",
+   "name_kana": null,
+   "lat": 26.196667,
+   "lng": 127.726944,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-18.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-19",
+   "name": "国場川 宮城川合流",
+   "name_kana": null,
+   "lat": 26.199444,
+   "lng": 127.735278,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-19.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-20",
+   "name": "国場川 長堂川合流",
+   "name_kana": null,
+   "lat": 26.193611,
+   "lng": 127.701111,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-20.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-21",
+   "name": "長堂川 宇平橋",
+   "name_kana": null,
+   "lat": 26.178889,
+   "lng": 127.717778,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-21.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-22",
+   "name": "安謝川 古島",
+   "name_kana": null,
+   "lat": 26.231944,
+   "lng": 127.706389,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-22.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-23",
+   "name": "安謝川 末吉",
+   "name_kana": null,
+   "lat": 26.228333,
+   "lng": 127.710556,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-23.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-24",
+   "name": "安謝川 平良",
+   "name_kana": null,
+   "lat": 26.227222,
+   "lng": 127.718611,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-24.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-41",
+   "name": "小波津川 小波津-上流",
+   "name_kana": null,
+   "lat": 26.226944,
+   "lng": 127.754167,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-41.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-42",
+   "name": "小波津川 小波津-下流",
+   "name_kana": null,
+   "lat": 26.221667,
+   "lng": 127.765,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-42.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-43",
+   "name": "牧港川 牧港川",
+   "name_kana": null,
+   "lat": 26.260556,
+   "lng": 127.727778,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-43.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-49",
+   "name": "石川川 石川川",
+   "name_kana": null,
+   "lat": 26.426944,
+   "lng": 127.82,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-49.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-52",
+   "name": "天願川 赤田地橋",
+   "name_kana": null,
+   "lat": 26.385278,
+   "lng": 127.856389,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-52.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-okinawa-kasen-53",
+   "name": "天願川 栄野比",
+   "name_kana": null,
+   "lat": 26.390278,
+   "lng": 127.835278,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "47",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/img_cam/p-53.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/"
+   },
+   "operator": "沖縄県",
+   "source": {
+    "page_url": "http://bousai-kasen.pref.okinawa.jp/river/kasen/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：沖縄県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-01",
+   "name": "吉見川橋（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.205799,
+   "lng": 133.133682,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point1"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-02",
+   "name": "東又（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.22784,
+   "lng": 133.145294,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point2"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-03",
+   "name": "新開町（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.209251,
+   "lng": 133.129532,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point3"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-04",
+   "name": "仁井田（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.245125,
+   "lng": 133.165115,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point4"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-05",
+   "name": "松葉川（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.276836,
+   "lng": 133.092087,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point5"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-06",
+   "name": "興津（小室）（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.164539,
+   "lng": 133.179016,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point6"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-07",
+   "name": "興津（浦分）（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.164539,
+   "lng": 133.179016,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point7"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-08",
+   "name": "興津（郷分）（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.164539,
+   "lng": 133.179016,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point8"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-09",
+   "name": "志和（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.224377,
+   "lng": 133.234222,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point9"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-10",
+   "name": "大正（四万十町大正地区）",
+   "name_kana": null,
+   "lat": 33.17458,
+   "lng": 132.960281,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point10"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-11",
+   "name": "大正北ノ川（四万十町大正地区）",
+   "name_kana": null,
+   "lat": 33.185238,
+   "lng": 133.034286,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point11"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-12",
+   "name": "大正大奈路（四万十町大正地区）",
+   "name_kana": null,
+   "lat": 33.232178,
+   "lng": 132.989822,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point12"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-13",
+   "name": "浦越（四万十町十和地区）",
+   "name_kana": null,
+   "lat": 33.20507,
+   "lng": 132.947617,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point13"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-14",
+   "name": "交流センター（四万十町十和地区）",
+   "name_kana": null,
+   "lat": 33.22945,
+   "lng": 132.835861,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point14"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-15",
+   "name": "三島（四万十町十和地区）",
+   "name_kana": null,
+   "lat": 33.25832,
+   "lng": 132.865555,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point15"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-16",
+   "name": "鍋谷（四万十町十和地区）",
+   "name_kana": null,
+   "lat": 33.260891,
+   "lng": 132.828415,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point16"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-25",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-25",
+   "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-river-shimanto-kasen-17",
+   "name": "志和川（四万十町窪川地区）",
+   "name_kana": null,
+   "lat": 33.221109,
+   "lng": 133.223123,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "39",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimanto_kasen",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/result_time.php",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "point17"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.midwest-kochi.jp/shimanto/index.php"
+   },
+   "operator": "四万十町",
+   "source": {
+    "page_url": "http://kasen.midwest-kochi.jp/shimanto/index.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：四万十町"
    },
    "review": {
     "status": "approved",
