@@ -894,7 +894,7 @@ cameras:
     prefecture: "06"
     lat: 38.8437
     lng: 140.0275
-    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=66&tm=202608211740&width=320"
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=66&width=640"
     page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=66"
 
   - id: curated-still-dam-yamagata-arasawa
@@ -904,7 +904,7 @@ cameras:
     prefecture: "06"
     lat: 38.5131
     lng: 139.7789
-    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=64&tm=202608211740&width=320"
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=64&width=640"
     page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=64"
 
   - id: curated-still-dam-yamagata-kijiyama
@@ -914,7 +914,7 @@ cameras:
     prefecture: "06"
     lat: 38.1497
     lng: 139.92
-    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=51&tm=202608211740&width=320"
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=51&width=640"
     page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=51"
 
   - id: curated-still-dam-yamagata-maekawa
@@ -924,7 +924,7 @@ cameras:
     prefecture: "06"
     lat: 38.1272
     lng: 140.2317
-    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=6&tm=202608211740&width=320"
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=6&width=640"
     page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
 
   # --- 2026-08-21 第4弾: 観光地 ---
@@ -20706,3 +20706,374 @@ cameras:
     feed_type: "web_page"
     feed_url: "https://www.youtube.com/watch?v=HmdscgFbqQQ"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「八千代村上駅」(説明文「八千代村上駅方面の映像」)"
+
+  # --- 2026-08-25 山形県河川・砂防情報システム ダムカメラ(sn総当たりで全12ダム25視点を確認。既存4件以外を追加) ---
+  - id: curated-still-dam-yamagata-zao
+    name: "蔵王ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.2121
+    lng: 140.4207
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=3&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=3"
+    note: "最上川水系 馬見ヶ崎川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「山形市上宝沢」(town_level相当)。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-tomeyamagawa
+    name: "留山川ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.3607
+    lng: 140.4515
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=4&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=4"
+    note: "最上川水系 留山川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「留山川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-tomeyamagawa-sn5
+    name: "留山川ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.3607
+    lng: 140.4515
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=5&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=4"
+    note: "最上川水系 留山川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「留山川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-maekawa-sn7
+    name: "前川ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.1272
+    lng: 140.2317
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=7&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
+    note: "最上川水系 前川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標は既存 maekawa と同じ。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-maekawa-sn8
+    name: "前川ダム（カメラ3）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.1272
+    lng: 140.2317
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=8&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
+    note: "最上川水系 前川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標は既存 maekawa と同じ。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-maekawa-sn9
+    name: "前川ダム（カメラ4）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.1272
+    lng: 140.2317
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=9&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=6"
+    note: "最上川水系 前川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標は既存 maekawa と同じ。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-kosaka
+    name: "高坂ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.9849
+    lng: 140.1583
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=31&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=31"
+    note: "最上川水系 鮭川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「真室川町差首鍋」(town_level相当)。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-kamuro
+    name: "神室ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.9109
+    lng: 140.4243
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=32&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=32"
+    note: "最上川水系 金山川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「神室ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-mogamioguni
+    name: "最上小国川流水型ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.7243
+    lng: 140.5589
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=34&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34"
+    note: "最上川水系 最上小国川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「最上町富澤」(town_level相当)。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-mogamioguni-sn35
+    name: "最上小国川流水型ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.7243
+    lng: 140.5589
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=35&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34"
+    note: "最上川水系 最上小国川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「最上町富澤」(town_level相当)。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-mogamioguni-sn36
+    name: "最上小国川流水型ダム（カメラ3）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.7243
+    lng: 140.5589
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=36&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=34"
+    note: "最上川水系 最上小国川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「最上町富澤」(town_level相当)。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-tsunakigawa
+    name: "綱木川ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 37.8401
+    lng: 140.0446
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=41&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41"
+    note: "最上川水系 綱木川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「綱木川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-tsunakigawa-sn42
+    name: "綱木川ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 37.8401
+    lng: 140.0446
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=42&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41"
+    note: "最上川水系 綱木川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「綱木川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-tsunakigawa-sn43
+    name: "綱木川ダム（カメラ3）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 37.8401
+    lng: 140.0446
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=43&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=41"
+    note: "最上川水系 綱木川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「綱木川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-kijiyama-sn52
+    name: "木地山ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.1497
+    lng: 139.92
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=52&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=51"
+    note: "最上川水系 置賜野川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標は既存 kijiyama と同じ。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-atsumigawa
+    name: "温海川ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.5926
+    lng: 139.6697
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=61&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61"
+    note: "温海川水系 温海川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「温海川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-atsumigawa-sn62
+    name: "温海川ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.5926
+    lng: 139.6697
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=62&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61"
+    note: "温海川水系 温海川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「温海川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-atsumigawa-sn63
+    name: "温海川ダム（カメラ3）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.5926
+    lng: 139.6697
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=63&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=61"
+    note: "温海川水系 温海川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「温海川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-arasawa-sn65
+    name: "荒沢ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.5131
+    lng: 139.7789
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=65&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=64"
+    note: "赤川水系 赤川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標は既存 arasawa と同じ。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-tazawagawa-sn67
+    name: "田沢川ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 38.8437
+    lng: 140.0275
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=67&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=66"
+    note: "最上川水系 田沢川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標は既存 tazawagawa と同じ。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-gakkogawa
+    name: "月光川ダム"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 39.0281
+    lng: 139.9853
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=68&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=68"
+    note: "月光川水系 月光川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「月光川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  - id: curated-still-dam-yamagata-gakkogawa-sn69
+    name: "月光川ダム（カメラ2）"
+    operator: "山形県(県土整備部河川課) - 山形県河川・砂防情報システム"
+    category: dam
+    prefecture: "06"
+    lat: 39.0281
+    lng: 139.9853
+    image_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=0&sn=69&width=640"
+    page_url: "http://www.kasen.pref.yamagata.jp/bousai/servlet/bousaiweb.model.servletBousaiSelectMap?model=itv-enlarge&id=68"
+    note: "月光川水系 月光川。servletBousaiITVCameraImage は tm パラメータ無しで最新画像を返す固定URL(tm付きは古い時刻だと0バイト)。同ページ内の複数視点は sn 別・視点名なし。座標はGSI「月光川ダム」。2026-08-25 curl 200 image/jpeg 確認"
+
+  # --- 2026-08-25 山口河川国道事務所 峠路面情報(試行版) 9地点。画像はタイムスタンプ名のため都度解決型 yamaguchi_romen ---
+  - id: curated-road-cgr-yamaguchi-romen-nishifukawa
+    name: "西深川（国道191号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.366936
+    lng: 131.169418
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C044A"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「長門市西深川」(town_level相当)。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
+  - id: curated-road-cgr-yamaguchi-romen-kusaritoge
+    name: "鎖峠（国道316号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.362166
+    lng: 131.324556
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C0422"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「鎖峠」。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
+  - id: curated-road-cgr-yamaguchi-romen-uda
+    name: "宇田（国道191号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.558441
+    lng: 131.550919
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C0401"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「阿武町宇田」(town_level相当)。画像ファイル名はC0437.jpg。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
+  - id: curated-road-cgr-yamaguchi-romen-tsuesaka
+    name: "杖坂（国道9号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.242581
+    lng: 131.518647
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C0812"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「杖坂」(山口市)。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
+  - id: curated-road-cgr-yamaguchi-romen-ikumohigashibun
+    name: "生雲東分（国道9号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.33736
+    lng: 131.612717
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C0815"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「山口市阿東生雲東分」(town_level相当)。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
+  - id: curated-road-cgr-yamaguchi-romen-tokusa
+    name: "徳佐（国道9号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.405739
+    lng: 131.719284
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C0818"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「山口市阿東徳佐中」(town_level相当)。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
+  - id: curated-road-cgr-yamaguchi-romen-yoshimitoge
+    name: "吉見峠（国道191号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.088928
+    lng: 130.92012
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C0913"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「下関市吉見上」(town_level相当、峠の実位置は要プレビュー確認)。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
+  - id: curated-road-cgr-yamaguchi-romen-tsubakitoge
+    name: "椿峠（国道2号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.063
+    lng: 131.66
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C1107"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「防府市富海」と「周南市戸田」の中間(峠は両市境。approx)。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
+  - id: curated-road-cgr-yamaguchi-romen-higuchi
+    name: "樋口（国道2号 峠路面カメラ）"
+    operator: "国土交通省 山口河川国道事務所"
+    category: road
+    prefecture: "35"
+    lat: 34.071499
+    lng: 131.978302
+    feed_type: yamaguchi_romen
+    feed_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    camera_ref: "C1209"
+    image_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
+    note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「周南市樋口」(town_level相当)。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
+
