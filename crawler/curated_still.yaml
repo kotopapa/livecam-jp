@@ -20694,6 +20694,19 @@ cameras:
     feed_url: "https://www.youtube.com/watch?v=E45Hwb1Fpbw"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「日高川町」役場付近(概略、池の正確位置は未特定)。配信タイトルに日付が入り毎日再作成される可能性あり(旧ID j8_yXWmXqaU は非公開化)"
 
+  - id: curated-still-biwako-mizudori
+    name: "琵琶湖の水鳥（琵琶湖水鳥・湿地センター）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: healing
+    prefecture: "25"
+    lat: 35.4463
+    lng: 136.1900
+    image_url: "https://www.sizenken.biodic.go.jp/camera_img/61_c/image/2026/08/25/NCS20260825070002420.jpg"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=61"
+    feed_type: "sizenken"
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=61"
+    note: "画像はタイムスタンプ名(camera_img/61_c/image/YYYY/MM/DD/NCS*.jpg)で固定URLなし→sizenken型で都度解決。設置場所『滋賀県長浜市湖北町尾上（水鳥公園）』、座標はGSI AddressSearch「琵琶湖水鳥・湿地センター」。毎週火曜と年末年始は休館で画像更新なし。『All rights Reserved, Copyright Ministry of the Environment』(2026-08-25)"
+
   - id: curated-link-other-live-yachiyo
     name: "八千代市ライブカメラ LIVE YACHIYO（八千代村上駅方面）"
     operator: "八千代市"

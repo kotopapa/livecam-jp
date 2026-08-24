@@ -16,6 +16,7 @@ from crawler.sources.ishikawa_road import IshikawaRoadParser
 from crawler.sources.iwate_road import IwateRoadParser
 from crawler.sources.jma_volcam import JmaVolcamParser
 from crawler.sources.hbc_webcam import HbcWebcamParser
+from crawler.sources.higashiomi_river import HigashiomiRiverParser
 from crawler.sources.kaiho_webcam import KaihoWebcamParser
 from crawler.sources.kobe_river import KobeRiverParser
 from crawler.sources.mbc_webcam import MbcWebcamParser
@@ -36,6 +37,7 @@ from crawler.sources.shimane_road import ShimaneRoadParser
 from crawler.sources.shizukawa_coast import ShizukawaCoastParser
 from crawler.sources.shizuoka_doboku import ShizuokaDobokuParser
 from crawler.sources.tochigi_road import TochigiRoadParser
+from crawler.sources.takashima_river import TakashimaRiverParser
 from crawler.sources.tokyo_suibo import TokyoSuiboParser
 from crawler.sources.toyama_road import ToyamaRoadParser
 from crawler.sources.youtube_live import YoutubeLiveParser
@@ -56,6 +58,7 @@ REGISTRY = {
         IwateRoadParser,
         JmaVolcamParser,
         HbcWebcamParser,
+        HigashiomiRiverParser,
         KaihoWebcamParser,
         KobeRiverParser,
         MbcWebcamParser,
@@ -76,6 +79,7 @@ REGISTRY = {
         ShizukawaCoastParser,
         ShizuokaDobokuParser,
         TochigiRoadParser,
+        TakashimaRiverParser,
         TokyoSuiboParser,
         ToyamaRoadParser,
         YoutubeLiveParser,
