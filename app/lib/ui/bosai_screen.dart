@@ -820,15 +820,15 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
     String? note;
     if (widget.municipality != null) {
       final matched =
-          all.where((c) => c.municipality == widget.municipality).toList();
+          all.where((c) => c.inMunicipality(widget.municipality!)).toList();
       if (matched.isNotEmpty) {
         base = matched;
       } else {
         note = 'この市区町村に対応するカメラがないため、都道府県内の全カメラを表示しています';
       }
     }
-    final liveCount = base.where((c) => c.isVideo).length;
-    final cams = _liveOnly ? base.where((c) => c.isVideo).toList() : base;
+    final liveCount = base.where((c) => c.isLiveVideo).length;
+    final cams = _liveOnly ? base.where((c) => c.isLiveVideo).toList() : base;
     return Scaffold(
       appBar: AppBar(
           title: Text(widget.title, overflow: TextOverflow.ellipsis)),
@@ -933,9 +933,9 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
       if (d <= 50000) base.add((c, d));
     }
     base.sort((a, b) => a.$2.compareTo(b.$2));
-    final liveCount = base.where((e) => e.$1.isVideo).length;
+    final liveCount = base.where((e) => e.$1.isLiveVideo).length;
     final cams =
-        _liveOnly ? base.where((e) => e.$1.isVideo).toList() : base;
+        _liveOnly ? base.where((e) => e.$1.isLiveVideo).toList() : base;
     return Scaffold(
       appBar: AppBar(
           title: Text(widget.title, overflow: TextOverflow.ellipsis)),

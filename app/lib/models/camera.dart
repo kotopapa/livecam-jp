@@ -141,6 +141,34 @@ class Camera {
       feed.type == FeedType.youtubeVideo ||
       feed.type == FeedType.hls;
 
+  /// 動画ライブとして見られるか。アプリ内再生できる[isVideo]に加え、
+  /// 埋め込み不可のためYouTubeへ誘導する形(web_page)のライブも含む
+  bool get isLiveVideo =>
+      isVideo ||
+      (feed.type == FeedType.webPage &&
+          (feed.url.contains('youtube.com/') || feed.url.contains('youtu.be/')));
+
+  /// 政令指定都市(コード末尾00)の区コード群。JMAの市区町村区域は市単位
+  /// (例: 横浜市=14100)だが、カメラの市区町村コードは区単位(14101〜14118)
+  /// のため、同一市として突き合わせる
+  static const _designatedCities = {
+    '01100', '04100', '11100', '12100', '13100', '14100', '14130', '14150',
+    '15100', '22100', '22130', '23100', '26100', '27100', '27140', '28100',
+    '33100', '34100', '40100', '40130', '43100',
+  };
+
+  /// [muni](5桁JIS)に属するか。政令市コードなら配下の区も一致とみなす
+  bool inMunicipality(String muni) {
+    final m = municipality;
+    if (m == null) return false;
+    if (m == muni) return true;
+    if (!_designatedCities.contains(muni)) return false;
+    if (m.substring(0, 3) != muni.substring(0, 3)) return false;
+    final base = int.tryParse(muni) ?? -1;
+    final code = int.tryParse(m) ?? -1;
+    return code > base && code < base + 30 && !_designatedCities.contains(m);
+  }
+
   /// レコードとして最低限成立しているか（欠損データで地図を壊さない）
   bool get isDisplayable => id.isNotEmpty && name.isNotEmpty && hasLocation;
 
