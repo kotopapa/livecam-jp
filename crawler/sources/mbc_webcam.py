@@ -90,8 +90,10 @@ class MbcWebcamParser(SourceParser):
                 feed_type, feed_url = "youtube_video", yt.group(1)
                 fallback = f"https://www.youtube.com/watch?v={feed_url}"
             else:
-                feed_type = "still_image"
-                feed_url = f"https://www.mbc.co.jp/web-cam/img/{img}.jpg"
+                # MBCサイトは画像の二次利用をお断りしているため(2026-08-25確認)、
+                # 静止画は直接参照せず個別ページへの誘導型にする
+                feed_type = "web_page"
+                feed_url = f"https://www.mbc.co.jp/web-cam/movie.html?area={img}"
                 fallback = PAGE_URL
 
             result.candidates.append(CameraCandidate(

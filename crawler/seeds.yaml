@@ -56,7 +56,8 @@ sources:
 
   - id: mbc_webcam
     enabled: true
-    note: MBC南日本放送「かごしまライブカメラ」85地点(静止画網)。インラインJSONを解析。
+    note: MBC南日本放送「かごしまライブカメラ」85地点。インラインJSONを解析。
+          MBCサイトが画像の二次利用をお断りしているため静止画は誘導型(movie.html?area=)で登録。
           設置者混在(気象庁・国道事務所・役場等)のためlicense=unknown
 
   - id: curated_world
