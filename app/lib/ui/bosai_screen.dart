@@ -85,7 +85,24 @@ const _advisoryNames = {
   '29': '土砂災害注意報',
 };
 
-class _BosaiScreenState extends State<BosaiScreen> {
+class _BosaiScreenState extends State<BosaiScreen>
+    with SingleTickerProviderStateMixin {
+  late final TabController _tabs = TabController(length: 2, vsync: this);
+
+  /// 通知タップの要求（'bosai/quake'→地震・津波, 'bosai/warning'→気象警報）
+  void _onNavigationRequest() {
+    final r = widget.app.navigationRequest.value ?? '';
+    if (!mounted || !r.startsWith('bosai')) return;
+    if (r.endsWith('/warning')) {
+      _tabs.animateTo(1);
+    } else if (r.endsWith('/quake')) {
+      _tabs.animateTo(0);
+    }
+    // 通知経由で開いたときは最新情報に更新する
+    _load();
+    _loadWarnings();
+  }
+
   List<_Quake>? _quakes;
   String? _error;
   DateTime? _fetchedAt;
@@ -107,6 +124,15 @@ class _BosaiScreenState extends State<BosaiScreen> {
     super.initState();
     _load();
     _loadWarnings();
+    widget.app.navigationRequest.addListener(_onNavigationRequest);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _onNavigationRequest());
+  }
+
+  @override
+  void dispose() {
+    widget.app.navigationRequest.removeListener(_onNavigationRequest);
+    _tabs.dispose();
+    super.dispose();
   }
 
   /// class10区域コード → 親官署コード（市区町村詳細ファイル名の解決用）。
@@ -334,9 +360,7 @@ class _BosaiScreenState extends State<BosaiScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text('災害速報'),
           actions: [
@@ -347,16 +371,15 @@ class _BosaiScreenState extends State<BosaiScreen> {
                   _loadWarnings();
                 }),
           ],
-          bottom: const TabBar(tabs: [
+          bottom: TabBar(controller: _tabs, tabs: const [
             Tab(text: '地震・津波'),
             Tab(text: '気象警報'),
           ]),
         ),
-        body: TabBarView(children: [
+        body: TabBarView(controller: _tabs, children: [
           _buildQuakeTab(),
           _buildWarningTab(),
         ]),
-      ),
     );
   }
 

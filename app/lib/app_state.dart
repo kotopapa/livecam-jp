@@ -17,6 +17,10 @@ import 'models/status.dart';
 
 /// アプリ全体で共有するデータ状態（ChangeNotifier 構成）。
 class AppState extends ChangeNotifier {
+  /// プッシュ通知タップ等による画面遷移の要求（例: 'bosai/quake', 'bosai/warning'）。
+  /// HomeShell がタブ切替、BosaiScreen が内部タブ切替に使う
+  final ValueNotifier<String?> navigationRequest = ValueNotifier(null);
+
   AppState(this.repository, {FavoritesStore? favorites})
       : favorites = favorites ?? FavoritesStore();
 

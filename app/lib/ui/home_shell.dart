@@ -28,12 +28,22 @@ class _HomeShellState extends State<HomeShell> {
     super.initState();
     widget.app.addListener(_maybeShowUpdateDialog);
     widget.app.addListener(_onAppChanged);
+    widget.app.navigationRequest.addListener(_onNavigationRequest);
+    _onNavigationRequest(); // 起動前に届いていた要求(終了状態からの通知タップ)
+  }
+
+  /// 通知タップ等の遷移要求（'bosai/...' なら災害速報タブへ）
+  void _onNavigationRequest() {
+    final r = widget.app.navigationRequest.value;
+    if (r == null || !mounted) return;
+    if (r.startsWith('bosai') && _index != 2) setState(() => _index = 2);
   }
 
   @override
   void dispose() {
     widget.app.removeListener(_maybeShowUpdateDialog);
     widget.app.removeListener(_onAppChanged);
+    widget.app.navigationRequest.removeListener(_onNavigationRequest);
     super.dispose();
   }
 

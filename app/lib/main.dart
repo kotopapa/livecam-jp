@@ -5,6 +5,8 @@ import 'package:firebase_core/firebase_core.dart';
 // AppState名がアプリ本体のクラスと衝突するためshowで絞る
 import 'package:google_mobile_ads/google_mobile_ads.dart' show MobileAds;
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:firebase_messaging/firebase_messaging.dart'
+    show FirebaseMessaging, RemoteMessage;
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -49,6 +51,7 @@ Future<void> main() async {
   ));
   final onboardingDone = await OnboardingScreen.isDone();
   runApp(LiveCamApp(app: app, onboardingDone: onboardingDone));
+  _hookNotificationTaps(app);
   app.init(); // キャッシュ復元→バックグラウンド更新（待たずに起動する）
   Future.delayed(
       const Duration(milliseconds: 1600), FlutterNativeSplash.remove);
@@ -117,4 +120,28 @@ class _LiveCamAppState extends State<LiveCamApp>
               onDone: () => setState(() => _onboardingDone = true)),
     );
   }
+}
+
+/// プッシュ通知のタップでアプリが開かれたら災害速報タブへ移動する。
+/// 送信側(tools/bosai_notify.py)は data.screen/tab を付けるが、無くても災害速報へ
+void _hookNotificationTaps(AppState app) {
+  String route(RemoteMessage m) {
+    final screen = m.data['screen'] as String? ?? 'bosai';
+    final tab = m.data['tab'] as String? ?? '';
+    return tab.isEmpty ? screen : '$screen/$tab';
+  }
+  try {
+    // 終了状態から通知タップで起動した場合
+    FirebaseMessaging.instance.getInitialMessage().then((m) {
+      if (m != null) {
+        app.navigationRequest.value = null; // 同一値でも通知されるように
+        app.navigationRequest.value = route(m);
+      }
+    }).catchError((_) {});
+    // バックグラウンドから通知タップで復帰した場合
+    FirebaseMessaging.onMessageOpenedApp.listen((m) {
+      app.navigationRequest.value = null;
+      app.navigationRequest.value = route(m);
+    });
+  } catch (_) {}
 }

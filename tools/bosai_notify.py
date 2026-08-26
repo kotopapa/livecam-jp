@@ -65,13 +65,15 @@ def fcm_token(sa_info: dict) -> tuple[str, str]:
 
 
 def send_push(token: str, project: str, topic: str,
-              title: str, body: str) -> None:
+              title: str, body: str, tab: str = "") -> None:
+    """tab: アプリが通知タップ時に開く災害速報内タブ('quake'|'warning'|'')"""
     r = requests.post(
         f"https://fcm.googleapis.com/v1/projects/{project}/messages:send",
         headers={"Authorization": f"Bearer {token}"},
         json={"message": {
             "topic": topic,
             "notification": {"title": title, "body": body},
+            "data": {"screen": "bosai", "tab": tab},
             "apns": {"headers": {"apns-priority": "10"},
                      "payload": {"aps": {"sound": "default"}}},
         }},
@@ -231,13 +233,13 @@ def main() -> int:
         token, project = fcm_token(json.loads(sa_raw))
         for eid, title, body, topics in quake_events:
             for topic in topics:
-                send_push(token, project, topic, title, body)
+                send_push(token, project, topic, title, body, tab="quake")
             state["notified_quakes"].append(eid)
             changed = True
         # 同一チェック内の複数発表はトピックごとに1通へ集約する
         # (全国購読者への連打防止)。special=レベル5 / danger=レベル4
         for topic, title, body in aggregate_warning_pushes(warning_events):
-            send_push(token, project, topic, title, body)
+            send_push(token, project, topic, title, body, tab="warning")
             changed = True
     if sorted(current_special) != sorted(state["active_special"]):
         changed = True
