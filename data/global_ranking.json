@@ -2,49 +2,41 @@
  "cameras": {
   "curated-ginza-sukiyabashi": {
    "total": 2,
-   "days": {
-    "20260819": 2
-   }
+   "days": {}
   },
   "curated-ishigaki-rbc": {
    "total": 1,
-   "days": {
-    "20260819": 1
-   }
+   "days": {}
   },
   "curated-karuizawa-birds": {
    "total": 2,
    "days": {
-    "20260819": 1,
     "20260820": 1
    }
   },
   "curated-katase-higashihama": {
    "total": 1,
-   "days": {
-    "20260819": 1
-   }
+   "days": {}
   },
   "curated-r2-15e2f401": {
-   "total": 7,
+   "total": 8,
    "days": {
-    "20260819": 2,
     "20260820": 1,
     "20260821": 2,
     "20260823": 1,
-    "20260824": 1
+    "20260824": 1,
+    "20260826": 1
    }
   },
   "curated-r2-9be53e5b": {
-   "total": 5,
+   "total": 6,
    "days": {
-    "20260819": 5
+    "20260826": 1
    }
   },
   "curated-r2-c3b76507": {
    "total": 7,
    "days": {
-    "20260819": 1,
     "20260821": 3,
     "20260822": 2,
     "20260823": 1
@@ -52,14 +44,11 @@
   },
   "curated-tokyo-sta-train": {
    "total": 1,
-   "days": {
-    "20260819": 1
-   }
+   "days": {}
   },
   "curated-yushima-nekojima": {
    "total": 5,
    "days": {
-    "20260819": 1,
     "20260820": 1,
     "20260821": 1,
     "20260822": 2
@@ -67,21 +56,15 @@
   },
   "kaiho-tsurugisaki-lt": {
    "total": 1,
-   "days": {
-    "20260819": 1
-   }
+   "days": {}
   },
   "mlit-roadinfo-89c01666": {
    "total": 1,
-   "days": {
-    "20260819": 1
-   }
+   "days": {}
   },
   "muni-yokosuka-a80a7bfc93": {
    "total": 1,
-   "days": {
-    "20260819": 1
-   }
+   "days": {}
   },
   "curated-naha-airport-rbc": {
    "total": 2,
@@ -261,9 +244,10 @@
    }
   },
   "curated-still-ihighway-952525600010": {
-   "total": 8,
+   "total": 9,
    "days": {
-    "20260822": 8
+    "20260822": 8,
+    "20260826": 1
    }
   },
   "curated-still-maunakea-summit": {
@@ -375,9 +359,10 @@
    }
   },
   "world-iss-live": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260822": 4
+    "20260822": 4,
+    "20260826": 1
    }
   },
   "curated-denzai-kashiwa-r16": {
@@ -393,10 +378,11 @@
    }
   },
   "curated-r2-e54499ad": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260823": 1,
-    "20260824": 1
+    "20260824": 1,
+    "20260826": 1
    }
   },
   "curated-seibuen-keirin-official-live": {
@@ -508,15 +494,17 @@
    }
   },
   "curated-motobu-terrace": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260825": 1
+    "20260825": 1,
+    "20260826": 2
    }
   },
   "curated-niruya-kanaya-bise": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260825": 1
+    "20260825": 1,
+    "20260826": 1
    }
   },
   "curated-other-minamiawaji-fujii-carwash-2": {
@@ -556,35 +544,269 @@
    }
   },
   "kawabou-310253005": {
+   "total": 3,
+   "days": {
+    "20260825": 1,
+    "20260826": 2
+   }
+  },
+  "curated-amaharashi": {
    "total": 1,
    "days": {
-    "20260825": 1
+    "20260826": 1
+   }
+  },
+  "curated-arimabaru-beach-motobu": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-busena-beach": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-camp-iwaya-park": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-hakata-kbc": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-healing-yanbaru-aha-ikimono": {
+   "total": 2,
+   "days": {
+    "20260826": 2
+   }
+  },
+  "curated-hotel-kariyushi-oceanspa": {
+   "total": 2,
+   "days": {
+    "20260826": 2
+   }
+  },
+  "curated-kariyushi-beach": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-link-healing-lake-furen": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-link-river-tokushima-15": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-naha-asahi": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-r2-b86f9a98": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-r2-e3dd3964": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-road-awaji-sa-akashi-kaikyo": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-shibuya-fnn": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-still-kaiho-saromako-entrance-lt": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-still-ogimi-es-front": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-still-osaka-kasen11": {
+   "total": 2,
+   "days": {
+    "20260826": 2
+   }
+  },
+  "curated-still-other-amagi-yakuba": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "curated-street-fst-ikuno-koreatown": {
+   "total": 2,
+   "days": {
+    "20260826": 2
+   }
+  },
+  "curated-tokushima-pref-katsuuragawa-komatsushima": {
+   "total": 2,
+   "days": {
+    "20260826": 2
+   }
+  },
+  "curated-tokushima-pref-nakagawa-kito": {
+   "total": 5,
+   "days": {
+    "20260826": 5
+   }
+  },
+  "kawabou-106913068": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "kawabou-106913072": {
+   "total": 6,
+   "days": {
+    "20260826": 6
+   }
+  },
+  "kawabou-106913102": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "kawabou-106913120": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "kawabou-106913124": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "kawabou-121555069": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "kawabou-221555038": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "kawabou-221805002": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "kawabou-221805004": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "kawabou-222551005": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "mbc-amk": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "mbc-ksn06": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "toyama-road-214": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "world-33e2cf19": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "world-38e6fc0b": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "world-95dae0ef": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "world-abe52f28": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "world-cfbe8e60": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "world-ef33d357": {
+   "total": 1,
+   "days": {
+    "20260826": 1
+   }
+  },
+  "yt-skr-6b773bb4d8": {
+   "total": 2,
+   "days": {
+    "20260826": 2
    }
   }
  },
- "updated": "2026-08-26T02:51:18+09:00",
+ "updated": "2026-08-27T04:22:15+09:00",
  "today_partial": {
-  "date": "20260826",
-  "counts": {
-   "curated-arimabaru-beach-motobu": 1,
-   "curated-busena-beach": 1,
-   "curated-camp-iwaya-park": 1,
-   "curated-healing-yanbaru-aha-ikimono": 2,
-   "curated-hotel-kariyushi-oceanspa": 2,
-   "curated-kariyushi-beach": 1,
-   "curated-motobu-terrace": 1,
-   "curated-naha-asahi": 1,
-   "curated-r2-e3dd3964": 1,
-   "curated-still-ogimi-es-front": 1,
-   "curated-still-other-amagi-yakuba": 1,
-   "mbc-amk": 1,
-   "world-33e2cf19": 1,
-   "world-38e6fc0b": 1,
-   "world-95dae0ef": 1,
-   "world-abe52f28": 1,
-   "world-cfbe8e60": 1,
-   "world-ef33d357": 1
-  }
+  "date": "20260827",
+  "counts": {}
  },
  "favorites": {
   "curated-ishigaki-rbc": 1,
@@ -592,7 +814,10 @@
   "curated-r2-9be53e5b": 1,
   "curated-r2-c3b76507": 1,
   "curated-r2-e54499ad": 1,
+  "curated-tokushima-pref-katsuuragawa-komatsushima": 1,
+  "curated-tokushima-pref-nakagawa-kito": 1,
   "curated-yushima-nekojima": 3,
+  "kawabou-106913072": 1,
   "kawabou-222298007": 1,
   "world-77eea933": 2,
   "world-8b783b73": 1,
@@ -600,6 +825,7 @@
   "world-ae1f87fc": 1,
   "world-cc03160d": 1,
   "world-e8287128": 1,
-  "world-iss-live": 1
+  "world-iss-live": 1,
+  "yt-skr-6b773bb4d8": 1
  }
 }
