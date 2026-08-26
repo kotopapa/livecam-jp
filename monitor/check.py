@@ -15,7 +15,8 @@ from typing import Any
 
 import requests
 
-from monitor.freeze import HISTORY_MAX, dhash64, is_placeholder, judge_frozen
+from monitor.freeze import (HISTORY_MAX, dhash64, is_black_frame,
+                            is_local_daytime, is_placeholder, judge_frozen)
 
 USER_AGENT = "LiveCamJP-Monitor/1.0 (+https://github.com/kotopapa/livecam-jp)"
 TIMEOUT_SEC = 10
@@ -119,6 +120,10 @@ def _check_still(session, camera, state, now, prev_failures, url: str | None = N
         h = dhash64(resp.content)
         if is_placeholder(h):
             # HTTP 200 だが「画像がありません」プレースホルダ → 失敗として数える
+            return _fail(state, now, prev_failures, resp.status_code)
+        if is_local_daytime(now, camera.get("lng")) and is_black_frame(resp.content):
+            # 日中なのに真っ暗（映像信号なし等）。タイムスタンプだけ更新される
+            # ため凍結判定では拾えない → 失敗として数える
             return _fail(state, now, prev_failures, resp.status_code)
 
     # ETag等の保存は全チェック通過後のみ。失敗時に保存すると次回304で検知をすり抜ける

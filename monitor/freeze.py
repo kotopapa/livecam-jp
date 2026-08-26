@@ -50,6 +50,30 @@ def dhash64(image_bytes: bytes) -> int | None:
     return bits
 
 
+def is_black_frame(image_bytes: bytes) -> bool:
+    """ほぼ真っ暗な画像か（映像信号なし・レンズ遮蔽・機器故障）。
+    タイムスタンプ等の白文字が少量乗っていても検知できるよう、
+    平均輝度と「明るい画素の割合」の両方で判定する。"""
+    try:
+        img = Image.open(io.BytesIO(image_bytes)).convert("L").resize((64, 48))
+    except Exception:
+        return False
+    px = list(img.getdata())
+    if not px:
+        return False
+    mean = sum(px) / len(px)
+    bright = sum(1 for v in px if v > 40) / len(px)
+    return mean < 18 and bright < 0.03
+
+
+def is_local_daytime(now: datetime, lng: float | None) -> bool:
+    """経度から求めた概略の地方時で 9〜16時か（夜間の暗画像を誤検知しない）。"""
+    if lng is None:
+        return False
+    hour = (now.astimezone(timezone.utc).hour + now.minute / 60 + lng / 15.0) % 24
+    return 9 <= hour <= 16
+
+
 def hamming(a: int, b: int) -> int:
     return bin(a ^ b).count("1")
 
