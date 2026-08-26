@@ -1,5 +1,5 @@
 {
- "version": "2026-08-25T11:10:06Z",
+ "version": "2026-08-26T00:04:18Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -15149,6 +15149,82 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-marina-yokohama-bayside-marina-1",
+   "name": "横浜ベイサイドマリーナ①（センター〜イースト間航路）",
+   "name_kana": null,
+   "lat": 35.38098,
+   "lng": 139.64871,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "AqIv-OmxSnA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=AqIv-OmxSnA"
+   },
+   "operator": "Yokohama Bayside Marina（横浜ベイサイドマリーナ）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=AqIv-OmxSnA",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Yokohama Bayside Marina（横浜ベイサイドマリーナ）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
+   "id": "curated-marina-yokohama-bayside-marina-2",
+   "name": "横浜ベイサイドマリーナ②（湾口付近）",
+   "name_kana": null,
+   "lat": 35.38098,
+   "lng": 139.64871,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "h6s6hEehZEc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=h6s6hEehZEc"
+   },
+   "operator": "Yokohama Bayside Marina（横浜ベイサイドマリーナ）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=h6s6hEehZEc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Yokohama Bayside Marina（横浜ベイサイドマリーナ）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
    "id": "curated-marina-yokohama-yacht-club",
    "name": "横浜ヨット協会 No1 CAM",
    "name_kana": null,
@@ -15185,6 +15261,44 @@
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-marina-yokohama-yacht-club-2",
+   "name": "横浜ヨット協会 No2 CAM（ヤード・ポンツーン）",
+   "name_kana": null,
+   "lat": 35.41135,
+   "lng": 139.62895,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "8Of21adKGFg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=8Of21adKGFg"
+   },
+   "operator": "横浜ヨット協会",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=8Of21adKGFg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜ヨット協会（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-marina-zushi-riviera",
@@ -15565,43 +15679,6 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
-  },
-  {
-   "id": "curated-minatomirai-tbs",
-   "name": "横浜 みなとみらい",
-   "name_kana": null,
-   "lat": 35.456,
-   "lng": 139.638,
-   "coord_accuracy": "approx",
-   "category": "port",
-   "prefecture": "14",
-   "municipality": "14104",
-   "river_or_route": null,
-   "feed": {
-    "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=x3P3N3VGvtU",
-    "refresh_sec": null,
-    "requires_referer": false,
-    "headers": {}
-   },
-   "fallback": {
-    "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=x3P3N3VGvtU"
-   },
-   "operator": "TBSテレビ（TBS NEWS DIG）",
-   "source": {
-    "page_url": "https://www.youtube.com/watch?v=x3P3N3VGvtU",
-    "terms_url": null,
-    "license": "unknown",
-    "attribution": "映像提供：TBSテレビ（TBS NEWS DIG）（YouTubeライブ）"
-   },
-   "review": {
-    "status": "approved",
-    "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown feed_type=youtube_video / 埋め込み不可/枠切れのためYouTube誘導型に変換(2026-08-18診断)"
-   },
-   "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
   },
   {
    "id": "curated-mitake-takimoto",
@@ -19746,6 +19823,44 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-other-snova-shinyokohama",
+   "name": "スノーヴァ新横浜（屋内ゲレンデ）",
+   "name_kana": null,
+   "lat": 35.5273,
+   "lng": 139.663,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vzUCB9qS4Ks",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vzUCB9qS4Ks"
+   },
+   "operator": "スノーヴァ新横浜",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vzUCB9qS4Ks",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：スノーヴァ新横浜（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
    "id": "curated-otv-miyakojima",
    "name": "宮古島",
    "name_kana": null,
@@ -20201,6 +20316,120 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-port-baybridge-jlc-zoom",
+   "name": "横浜ベイブリッジ・横浜港（ズーム）",
+   "name_kana": null,
+   "lat": 35.455,
+   "lng": 139.63,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "OcxqQP5R0Os",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=OcxqQP5R0Os"
+   },
+   "operator": "Japan Live Camera",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=OcxqQP5R0Os",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Japan Live Camera（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
+   "id": "curated-port-baybridge-tsubasa-daikoku-jlc",
+   "name": "横浜ベイブリッジ・鶴見つばさ橋・大黒ふ頭",
+   "name_kana": null,
+   "lat": 35.455,
+   "lng": 139.63,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "I4d7Vn1mIaY",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=I4d7Vn1mIaY"
+   },
+   "operator": "Japan Live Camera",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=I4d7Vn1mIaY",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Japan Live Camera（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
+   "id": "curated-port-daikoku-fishing-pier",
+   "name": "大黒海づり施設",
+   "name_kana": null,
+   "lat": 35.44876,
+   "lng": 139.69456,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "J0rHqWcXd8A",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=J0rHqWcXd8A"
+   },
+   "operator": "横浜フィッシングピアーズ（大黒海づり施設）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=J0rHqWcXd8A",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜フィッシングピアーズ（大黒海づり施設）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
    "id": "curated-port-hachijo-sokodo",
    "name": "八丈島 底土港",
    "name_kana": null,
@@ -20237,6 +20466,44 @@
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-port-honmoku-fishing-pier",
+   "name": "本牧海づり施設",
+   "name_kana": null,
+   "lat": 35.43013,
+   "lng": 139.68675,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "FG_hauBt09E",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FG_hauBt09E"
+   },
+   "operator": "横浜フィッシングピアーズ（本牧海づり施設）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=FG_hauBt09E",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜フィッシングピアーズ（本牧海づり施設）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-port-iki-ashibe",
@@ -20465,6 +20732,44 @@
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-port-isogo-fishing-pier",
+   "name": "磯子海づり施設",
+   "name_kana": null,
+   "lat": 35.40239,
+   "lng": 139.6428,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "jBEumQXYOhI",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=jBEumQXYOhI"
+   },
+   "operator": "横浜フィッシングピアーズ（磯子海づり施設）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=jBEumQXYOhI",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜フィッシングピアーズ（磯子海づり施設）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-port-kab-ushibuka-kou",
@@ -20845,6 +21150,44 @@
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-port-yokohama-port-minatomirai-baybridge",
+   "name": "横浜港・みなとみらい・ベイブリッジ（横浜港ライブカメラ）",
+   "name_kana": null,
+   "lat": 35.4608,
+   "lng": 139.6369,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "AEhdDHMR_vc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=AEhdDHMR_vc"
+   },
+   "operator": "横浜港ライブカメラ（@YokohamaLive）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=AEhdDHMR_vc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜港ライブカメラ（@YokohamaLive）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-qab-naha-mix",
@@ -26706,7 +27049,7 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "XMYIqdG0JMI",
+    "url": "AEhdDHMR_vc",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
@@ -27395,6 +27738,44 @@
    },
    "first_seen": "2026-08-19",
    "last_updated": "2026-08-19"
+  },
+  {
+   "id": "curated-rail-sotetsu-tennocho-hoshikawa",
+   "name": "相鉄本線 天王町〜星川",
+   "name_kana": null,
+   "lat": 35.4566,
+   "lng": 139.5981,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "UaqfkvqVqnc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=UaqfkvqVqnc"
+   },
+   "operator": "Yokohama Live Camera（YouTubeチャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=UaqfkvqVqnc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Yokohama Live Camera（YouTubeチャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-rapport-yuya-nagato",
@@ -28914,6 +29295,82 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-road-itscom-yokohama-aoba-ic",
+   "name": "東名高速 横浜青葉IC（iTSCOM）",
+   "name_kana": null,
+   "lat": 35.54307,
+   "lng": 139.53926,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "LzlrHXS-ebM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=LzlrHXS-ebM"
+   },
+   "operator": "iTSCOM（イッツ・コミュニケーションズ）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=LzlrHXS-ebM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：iTSCOM（イッツ・コミュニケーションズ）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
+   "id": "curated-road-k55-kohoku-pa",
+   "name": "東名高速 港北PA下り",
+   "name_kana": null,
+   "lat": 35.53568,
+   "lng": 139.53367,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "1ypCIGjesD8",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=1ypCIGjesD8"
+   },
+   "operator": "K55（YouTubeチャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=1ypCIGjesD8",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：K55（YouTubeチャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
    "id": "curated-road-kanteikyoku-matsudo-r6",
    "name": "国道6号 松戸二ツ木（かんてい局松戸店前）",
    "name_kana": null,
@@ -30282,6 +30739,44 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-scenic-minatomirai-jlc-sound",
+   "name": "横浜みなとみらい（街の音つき）",
+   "name_kana": null,
+   "lat": 35.455,
+   "lng": 139.63,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "WOrWnnJleA4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=WOrWnnJleA4"
+   },
+   "operator": "Japan Live Camera",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=WOrWnnJleA4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Japan Live Camera（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
    "id": "curated-scenic-morotsuka-yamashigi-no-mori",
    "name": "諸塚村の景色 やましぎの杜（4K）",
    "name_kana": null,
@@ -31078,6 +31573,44 @@
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-scenic-yokohama-kishamichi",
+   "name": "横浜汽車道（クイーンズスクエア方面）",
+   "name_kana": null,
+   "lat": 35.45292,
+   "lng": 139.63467,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "h8SP6IGbAPM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=h8SP6IGbAPM"
+   },
+   "operator": "横浜汽車道ライブカメラ /Live Cam Yokohama Japan（@YokohamaLiveCam）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=h8SP6IGbAPM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜汽車道ライブカメラ /Live Cam Yokohama Japan（@YokohamaLiveCam）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-scenic-yonago-ryosanyanagi",
@@ -69932,6 +70465,44 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-still-port-osanbashi-terminal",
+   "name": "横浜港大さん橋国際客船ターミナル",
+   "name_kana": null,
+   "lat": 35.451,
+   "lng": 139.6465,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://osanbashi.jp/floorcamera/fromWebCamera.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://osanbashi.jp/floorguide/web_camera"
+   },
+   "operator": "一般社団法人 横浜港振興協会（大さん橋指定管理者）",
+   "source": {
+    "page_url": "https://osanbashi.jp/floorguide/web_camera",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：一般社団法人 横浜港振興協会（大さん橋指定管理者）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
    "id": "curated-still-port-otaru-marina",
    "name": "小樽港マリーナ",
    "name_kana": null,
@@ -92749,6 +93320,44 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-still-road-ycv-shinhodogaya-ic",
+   "name": "保土ヶ谷バイパス 新保土ヶ谷IC（YCV）",
+   "name_kana": null,
+   "lat": 35.45346,
+   "lng": 139.57894,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=lo-jjyNuSYg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=lo-jjyNuSYg"
+   },
+   "operator": "横浜ケーブルビジョン（YCVチャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=lo-jjyNuSYg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：横浜ケーブルビジョン（YCVチャンネル）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
    "id": "curated-still-road-yugawara-town",
    "name": "湯河原町ライブカメラ（真鶴道路方面）",
    "name_kana": null,
@@ -93089,6 +93698,44 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-21"
+  },
+  {
+   "id": "curated-still-scenic-bioweather-tsuzuki",
+   "name": "いであ 国土環境研究所（都筑区早渕）空模様",
+   "name_kana": null,
+   "lat": 35.54574,
+   "lng": 139.5985,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://s3-ap-northeast-1.amazonaws.com/idea.bioweather.camera/live-cam-latest/kkd_now.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.bioweather.net/livecam/index_list.php"
+   },
+   "operator": "いであ株式会社（バイオウェザー）",
+   "source": {
+    "page_url": "https://www.bioweather.net/livecam/index_list.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：いであ株式会社（バイオウェザー）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-still-scenic-chausuyama-kogen",
@@ -94229,6 +94876,44 @@
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-still-scenic-totsucam-totsuka",
+   "name": "戸塚駅付近から東戸塚方面（totsucam）",
+   "name_kana": null,
+   "lat": 35.40311,
+   "lng": 139.53344,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://totsucam.yasmu.jp/scurrent.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://totsucam.yasmu.jp/"
+   },
+   "operator": "totsucam（個人 yas.mu, totsucam@yas.mu）",
+   "source": {
+    "page_url": "https://totsucam.yasmu.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：totsucam（個人 yas.mu, totsucam@yas.mu）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-still-scenic-tottori-sakyu-mirai-cam1",
@@ -96015,6 +96700,44 @@
    },
    "first_seen": "2026-08-22",
    "last_updated": "2026-08-22"
+  },
+  {
+   "id": "curated-still-street-asahi-kawaihoncho",
+   "name": "旭区川井本町",
+   "name_kana": null,
+   "lat": 35.49282,
+   "lng": 139.51151,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Gu_5nAJH-p0",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Gu_5nAJH-p0"
+   },
+   "operator": "神奈川県旭区川井本町ライブカメラ（livecamera24.jp）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Gu_5nAJH-p0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県旭区川井本町ライブカメラ（livecamera24.jp）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-still-sugadaira-dam-down",
@@ -100995,6 +101718,44 @@
    "last_updated": "2026-08-25"
   },
   {
+   "id": "curated-street-kanban-ichiba-saedo",
+   "name": "中原街道 佐江戸町（看板市場 大型ビジョン）",
+   "name_kana": null,
+   "lat": 35.51651,
+   "lng": 139.5573,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "bnElYaKslTE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=bnElYaKslTE"
+   },
+   "operator": "株式会社看板市場",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=bnElYaKslTE",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：株式会社看板市場（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
    "id": "curated-street-kanda-sta-kita",
    "name": "神田駅北口",
    "name_kana": null,
@@ -101183,6 +101944,82 @@
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-street-minami-nakazato-2",
+   "name": "南区中里",
+   "name_kana": null,
+   "lat": 35.41889,
+   "lng": 139.59904,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "FDFTnsXoh6U",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=FDFTnsXoh6U"
+   },
+   "operator": "神奈川県横浜市南区中里ライブカメラ（livecamera24.jp）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=FDFTnsXoh6U",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県横浜市南区中里ライブカメラ（livecamera24.jp）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
+   "id": "curated-street-minami-nakazato-k21",
+   "name": "南区中里 県道21号",
+   "name_kana": null,
+   "lat": 35.41889,
+   "lng": 139.59904,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "kSp0Cresb28",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=kSp0Cresb28"
+   },
+   "operator": "神奈川県中里県道21号ライブカメラ（livecamera24.jp）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=kSp0Cresb28",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県中里県道21号ライブカメラ（livecamera24.jp）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-street-motoyawata-minami",
@@ -101449,6 +102286,44 @@
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-08-25"
+  },
+  {
+   "id": "curated-street-seya-seya",
+   "name": "瀬谷区瀬谷",
+   "name_kana": null,
+   "lat": 35.4704,
+   "lng": 139.48253,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "3OrcuFjcTQ0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=3OrcuFjcTQ0"
+   },
+   "operator": "神奈川県瀬谷区瀬谷ライブカメラ（livecamera24.jp）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=3OrcuFjcTQ0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：神奈川県瀬谷区瀬谷ライブカメラ（livecamera24.jp）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-08-26",
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+   },
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
   },
   {
    "id": "curated-street-shibuya-center-gai",

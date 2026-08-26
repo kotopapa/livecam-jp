@@ -1,6 +1,84 @@
 {
- "version": "2026-08-24T22:40:17Z",
+ "version": "2026-08-26T00:04:18Z",
  "cameras": [
+  {
+   "id": "curated-oshino-hakkai",
+   "name": "忍野八海から富士山",
+   "name_kana": null,
+   "lat": 35.46,
+   "lng": 138.843,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "19",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "zFYO6lfcA_E",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=zFYO6lfcA_E"
+   },
+   "operator": "富士五湖TV",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=zFYO6lfcA_E",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：富士五湖TV（YouTubeライブ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "民間・報道系の公式YouTubeライブ（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
+  {
+   "id": "curated-r2-266df21c",
+   "name": "犬吠テラステラス(銚子)",
+   "name_kana": null,
+   "lat": 35.706,
+   "lng": 140.869,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "12",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Zjd0-RKD5Cc",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Zjd0-RKD5Cc"
+   },
+   "operator": "犬吠テラステラス",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Zjd0-RKD5Cc",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：犬吠テラステラス（YouTubeライブ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "民間・報道系の公式YouTubeライブ（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。 埋め込み不可→誘導型"
+   },
+   "verification": null,
+   "first_seen": "2026-08-26",
+   "last_updated": "2026-08-26"
+  },
   {
    "id": "miyagi-road-hokubu-soto",
    "name": "国道347号 外川",

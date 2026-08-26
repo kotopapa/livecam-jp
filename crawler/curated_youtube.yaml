@@ -2842,7 +2842,7 @@ cameras:
   - id: curated-r2-e66c94b8
     name: 横浜港・ベイブリッジ
     operator: "横浜港ライブカメラ(民間)"
-    video_id: "XMYIqdG0JMI"
+    video_id: "AEhdDHMR_vc"
     category: scenic
     prefecture: "14"
     lat: 35.4437
@@ -8876,3 +8876,194 @@ cameras:
   # ===== 2026-08-25 全国空白地帯・離島・ジャンル横断調査分 (0件) =====
 
   # ===== 2026-08-25 全国空白地帯・離島・ジャンル横断調査分 (0件) =====
+
+  # ===== 2026-08-26 全国空白地帯・離島・ジャンル横断調査分 (19件) =====
+  - id: curated-scenic-yokohama-kishamichi
+    name: "横浜汽車道（クイーンズスクエア方面）"
+    operator: "横浜汽車道ライブカメラ /Live Cam Yokohama Japan（@YokohamaLiveCam）"
+    video_id: "h8SP6IGbAPM"
+    category: "scenic"
+    prefecture: "14"
+    lat: 35.45292
+    lng: 139.63467
+    note: "oEmbed 200 / isLive=true / 24時間ライブ枠(2026-08-26)。汽車道からみなとみらい・クイーンズスクエア方面。座標:cametan掲載値(35.452916,139.634674)、Nominatim(汽車道)=35.4531,139.6355と整合"
+
+  - id: curated-port-yokohama-port-minatomirai-baybridge
+    name: "横浜港・みなとみらい・ベイブリッジ（横浜港ライブカメラ）"
+    operator: "横浜港ライブカメラ（@YokohamaLive）"
+    video_id: "AEhdDHMR_vc"
+    category: "port"
+    prefecture: "14"
+    lat: 35.4608
+    lng: 139.6369
+    note: "oEmbed 200 / isLive=true(2026-08-26)。既存台帳の curated-r2-e66c94b8(video_id=XMYIqdG0JMI, 同チャンネル)は isLive=None で配信終了 → 本IDに差し替え推奨。パシフィコ横浜・インターコンチが映る=臨港パーク側からの撮影。座標:Nominatim(臨港パーク)概略"
+
+  - id: curated-scenic-minatomirai-jlc-sound
+    name: "横浜みなとみらい（街の音つき）"
+    operator: "Japan Live Camera"
+    video_id: "WOrWnnJleA4"
+    category: "scenic"
+    prefecture: "14"
+    lat: 35.455
+    lng: 139.63
+    note: "oEmbed 200 / isLive=true(2026-08-26)。既存 curated-r2-fbe7c0a8(Uu37SpkYaEw, 同運営者の全景カメラ)と同一地点の別画角(音声あり)。座標は既存エントリに揃えた"
+
+  - id: curated-port-baybridge-jlc-zoom
+    name: "横浜ベイブリッジ・横浜港（ズーム）"
+    operator: "Japan Live Camera"
+    video_id: "OcxqQP5R0Os"
+    category: "port"
+    prefecture: "14"
+    lat: 35.455
+    lng: 139.63
+    note: "oEmbed 200 / isLive=true(2026-08-26)。同運営者の全景カメラと同地点からのズーム画角。座標は既存エントリに揃えた"
+
+  - id: curated-port-baybridge-tsubasa-daikoku-jlc
+    name: "横浜ベイブリッジ・鶴見つばさ橋・大黒ふ頭"
+    operator: "Japan Live Camera"
+    video_id: "I4d7Vn1mIaY"
+    category: "port"
+    prefecture: "14"
+    lat: 35.455
+    lng: 139.63
+    note: "oEmbed 200 / isLive=true(2026-08-26)。ノースドック・大黒ふ頭方面。座標は同運営者の既存エントリに揃えた(撮影地点は同一ビルと推定)"
+
+  - id: curated-port-honmoku-fishing-pier
+    name: "本牧海づり施設"
+    operator: "横浜フィッシングピアーズ（本牧海づり施設）"
+    video_id: "FG_hauBt09E"
+    category: "port"
+    prefecture: "14"
+    lat: 35.43013
+    lng: 139.68675
+    note: "oEmbed 200 / isLive=true / チャンネルUCLE8vpltUpjXRFjvnTATawA で24時間配信(2026-08-26)。運営:横浜市指定管理者 横浜フィッシングピアーズ(yokohama-fishingpiers.jp)。座標:cametan掲載値"
+
+  - id: curated-port-daikoku-fishing-pier
+    name: "大黒海づり施設"
+    operator: "横浜フィッシングピアーズ（大黒海づり施設）"
+    video_id: "J0rHqWcXd8A"
+    category: "port"
+    prefecture: "14"
+    lat: 35.44876
+    lng: 139.69456
+    note: "oEmbed 200 / isLive=true(2026-08-26)。座標:Nominatim(大黒海づり施設)"
+
+  - id: curated-port-isogo-fishing-pier
+    name: "磯子海づり施設"
+    operator: "横浜フィッシングピアーズ（磯子海づり施設）"
+    video_id: "jBEumQXYOhI"
+    category: "port"
+    prefecture: "14"
+    lat: 35.40239
+    lng: 139.6428
+    note: "oEmbed 200 / isLive=true(2026-08-26)。座標:Nominatim(磯子海づり施設)"
+
+  - id: curated-marina-yokohama-bayside-marina-1
+    name: "横浜ベイサイドマリーナ①（センター〜イースト間航路）"
+    operator: "Yokohama Bayside Marina（横浜ベイサイドマリーナ）"
+    video_id: "AqIv-OmxSnA"
+    category: "port"
+    prefecture: "14"
+    lat: 35.38098
+    lng: 139.64871
+    note: "oEmbed 200 / isLive=true(2026-08-26)。金沢区白帆1。座標:Nominatim(横浜ベイサイドマリーナ)"
+
+  - id: curated-marina-yokohama-bayside-marina-2
+    name: "横浜ベイサイドマリーナ②（湾口付近）"
+    operator: "Yokohama Bayside Marina（横浜ベイサイドマリーナ）"
+    video_id: "h6s6hEehZEc"
+    category: "port"
+    prefecture: "14"
+    lat: 35.38098
+    lng: 139.64871
+    note: "oEmbed 200 / isLive=true(2026-08-26)。座標:Nominatim(横浜ベイサイドマリーナ)"
+
+  - id: curated-marina-yokohama-yacht-club-2
+    name: "横浜ヨット協会 No2 CAM（ヤード・ポンツーン）"
+    operator: "横浜ヨット協会"
+    video_id: "8Of21adKGFg"
+    category: "port"
+    prefecture: "14"
+    lat: 35.41135
+    lng: 139.62895
+    note: "oEmbed 200 / isLive=true(2026-08-26)。既存 curated-marina-yokohama-yacht-club(No1 CAM)と同一施設の別カメラ。座標は既存に揃えた"
+
+  - id: curated-road-itscom-yokohama-aoba-ic
+    name: "東名高速 横浜青葉IC（iTSCOM）"
+    operator: "iTSCOM（イッツ・コミュニケーションズ）"
+    video_id: "LzlrHXS-ebM"
+    category: "road"
+    prefecture: "14"
+    lat: 35.54307
+    lng: 139.53926
+    note: "oEmbed 200 / isLive=true(2026-08-26)。ケーブルテレビ局が市が尾メディアセンターから撮影する自社カメラ(NEXCOのカメラではない)。座標:cametan掲載値"
+
+  - id: curated-road-k55-kohoku-pa
+    name: "東名高速 港北PA下り"
+    operator: "K55（YouTubeチャンネル）"
+    video_id: "1ypCIGjesD8"
+    category: "road"
+    prefecture: "14"
+    lat: 35.53568
+    lng: 139.53367
+    note: "oEmbed 200 / isLive=true(2026-08-26)。個人チャンネル、24/7枠(IDは長期固定)。座標:Nominatim(港北PA下り)"
+
+  - id: curated-street-kanban-ichiba-saedo
+    name: "中原街道 佐江戸町（看板市場 大型ビジョン）"
+    operator: "株式会社看板市場"
+    video_id: "bnElYaKslTE"
+    category: "road"
+    prefecture: "14"
+    lat: 35.51651
+    lng: 139.5573
+    note: "oEmbed 200 / isLive=true(2026-08-26)。都筑区佐江戸町220、県道45号(中原街道)沿い。座標:Nominatim(佐江戸町)概略→要微調整"
+
+  - id: curated-rail-sotetsu-tennocho-hoshikawa
+    name: "相鉄本線 天王町〜星川"
+    operator: "Yokohama Live Camera（YouTubeチャンネル）"
+    video_id: "UaqfkvqVqnc"
+    category: "other"
+    prefecture: "14"
+    lat: 35.4566
+    lng: 139.5981
+    note: "oEmbed 200 / isLive=true(2026-08-26)。保土ケ谷区、天王町〜星川間の建物から。座標:Nominatim(天王町駅/星川駅)の中点"
+
+  - id: curated-street-minami-nakazato-k21
+    name: "南区中里 県道21号"
+    operator: "神奈川県中里県道21号ライブカメラ（livecamera24.jp）"
+    video_id: "kSp0Cresb28"
+    category: "road"
+    prefecture: "14"
+    lat: 35.41889
+    lng: 139.59904
+    note: "oEmbed 200 / isLive=true(2026-08-26)。運営:ライブカメラ設置事業者 livecamera24.jp(info@livecamera24.jp)。座標:Nominatim(南区中里)概略"
+
+  - id: curated-street-minami-nakazato-2
+    name: "南区中里"
+    operator: "神奈川県横浜市南区中里ライブカメラ（livecamera24.jp）"
+    video_id: "FDFTnsXoh6U"
+    category: "other"
+    prefecture: "14"
+    lat: 35.41889
+    lng: 139.59904
+    note: "oEmbed 200 / isLive=true(2026-08-26)。同系列の別カメラ。座標:Nominatim(南区中里)概略"
+
+  - id: curated-street-seya-seya
+    name: "瀬谷区瀬谷"
+    operator: "神奈川県瀬谷区瀬谷ライブカメラ（livecamera24.jp）"
+    video_id: "3OrcuFjcTQ0"
+    category: "other"
+    prefecture: "14"
+    lat: 35.4704
+    lng: 139.48253
+    note: "oEmbed 200 / isLive=true(2026-08-26)。座標:Nominatim(瀬谷駅)概略"
+
+  - id: curated-other-snova-shinyokohama
+    name: "スノーヴァ新横浜（屋内ゲレンデ）"
+    operator: "スノーヴァ新横浜"
+    video_id: "vzUCB9qS4Ks"
+    category: "other"
+    prefecture: "14"
+    lat: 35.5273
+    lng: 139.663
+    note: "oEmbed 200 / isLive=true(2026-08-26)。鶴見区梶山1-1-1、屋内スキー場のゲレンデ。座標:Nominatim(梶山一丁目)概略"

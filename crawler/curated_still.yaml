@@ -22140,3 +22140,63 @@ cameras:
     page_url: "https://www.cgr.mlit.go.jp/yamaguchi/romen/"
     note: "峠路面情報(試行版)。画像は /romen/douroimage/<YYYYMMDD>/<HHMM>/<code>.jpg で固定URLなし → 一覧ページを都度解決。座標はGSI「周南市樋口」(town_level相当)。事務所サイト側(www.cgr.mlit.go.jp)のみ使用、www.road.cgr.mlit.go.jp はrobots Disallowのため不使用。2026-08-25 解決先 200 image/jpeg 確認(撮影日時が前日10:30で更新が粗い可能性あり)"
 
+
+  # ===== 2026-08-26 全国空白地帯・離島・ジャンル横断調査分 (5件) =====
+  - id: curated-still-road-ycv-shinhodogaya-ic
+    name: "保土ヶ谷バイパス 新保土ヶ谷IC（YCV）"
+    operator: "横浜ケーブルビジョン（YCVチャンネル）"
+    category: "road"
+    prefecture: "14"
+    lat: 35.45346
+    lng: 139.57894
+    image_url: "https://www.youtube.com/watch?v=lo-jjyNuSYg"
+    page_url: "https://www.youtube.com/watch?v=lo-jjyNuSYg"
+    feed_type: "web_page"
+    feed_url: "https://www.youtube.com/watch?v=lo-jjyNuSYg"
+    note: "YouTube live isLive=true だが oEmbed 401(埋め込み不可)→誘導型。保土ヶ谷区新桜ケ丘。座標:Nominatim(新保土ヶ谷IC)"
+
+  - id: curated-still-street-asahi-kawaihoncho
+    name: "旭区川井本町"
+    operator: "神奈川県旭区川井本町ライブカメラ（livecamera24.jp）"
+    category: "other"
+    prefecture: "14"
+    lat: 35.49282
+    lng: 139.51151
+    image_url: "https://www.youtube.com/watch?v=Gu_5nAJH-p0"
+    page_url: "https://www.youtube.com/watch?v=Gu_5nAJH-p0"
+    feed_type: "web_page"
+    feed_url: "https://www.youtube.com/watch?v=Gu_5nAJH-p0"
+    note: "YouTube live isLive=true だが oEmbed 401→誘導型。座標:Nominatim(川井本町)概略"
+
+  - id: curated-still-port-osanbashi-terminal
+    name: "横浜港大さん橋国際客船ターミナル"
+    operator: "一般社団法人 横浜港振興協会（大さん橋指定管理者）"
+    category: "port"
+    prefecture: "14"
+    lat: 35.451
+    lng: 139.6465
+    image_url: "https://osanbashi.jp/floorcamera/fromWebCamera.jpg"
+    page_url: "https://osanbashi.jp/floorguide/web_camera"
+    note: "curl: HTTP200 image/jpeg 39KB, Last-Modified=取得時刻(10秒更新と記載)。利用条件の記載なし→license=unknown。座標:大さん橋ターミナル(中区海岸通1-1-4)の既知座標"
+
+  - id: curated-still-scenic-totsucam-totsuka
+    name: "戸塚駅付近から東戸塚方面（totsucam）"
+    operator: "totsucam（個人 yas.mu, totsucam@yas.mu）"
+    category: "scenic"
+    prefecture: "14"
+    lat: 35.40311
+    lng: 139.53344
+    image_url: "https://totsucam.yasmu.jp/scurrent.jpg"
+    page_url: "https://totsucam.yasmu.jp/"
+    note: "curl: HTTP200 image/jpeg(小サイズ2KB, 縮小版)。Last-Modified=取得時刻。個人運営(2005年〜)。座標:Nominatim(戸塚駅)概略。同ページに current.jpg(旧URL totsucam.yas.mu は301で新ドメインへ)"
+
+  - id: curated-still-scenic-bioweather-tsuzuki
+    name: "いであ 国土環境研究所（都筑区早渕）空模様"
+    operator: "いであ株式会社（バイオウェザー）"
+    category: "scenic"
+    prefecture: "14"
+    lat: 35.54574
+    lng: 139.5985
+    image_url: "https://s3-ap-northeast-1.amazonaws.com/idea.bioweather.camera/live-cam-latest/kkd_now.jpg"
+    page_url: "https://www.bioweather.net/livecam/index_list.php"
+    note: "curl: HTTP200, Last-Modified=取得時刻(10分更新と記載)。一覧ページで『横浜』ラベルの画像がkkd_now.jpg。利用条件の記載未確認→license=unknown。座標:Nominatim(都筑区早渕2丁目)"
