@@ -1,5 +1,6 @@
 import Flutter
 import UIKit
+import UserNotifications
 import FirebaseMessaging
 import MetricKit
 
@@ -13,6 +14,14 @@ import MetricKit
     // 新しいFlutterテンプレート(scene lifecycle)ではfirebase_messagingの
     // 自動登録が効かないことがあるため、APNs登録を明示的に行う
     application.registerForRemoteNotifications()
+    // アプリを開いたら通知センターに残った配信済み通知とバッジを消す。
+    // scene lifecycle構成でも届く didBecomeActive 通知で拾う
+    NotificationCenter.default.addObserver(
+      forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main
+    ) { _ in
+      UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+      UNUserNotificationCenter.current().setBadgeCount(0)
+    }
     // クラッシュ記録が残らない強制終了(メモリ/ウォッチドッグ等)を捕獲する。
     // 診断は次回起動時に配送され、Documents/mx_diagnostics に保存される
     MXMetricManager.shared.add(self)
