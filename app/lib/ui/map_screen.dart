@@ -160,10 +160,22 @@ class _MapScreenState extends State<MapScreen> {
           permission != LocationPermission.whileInUse) {
         return;
       }
+      // まずOSが保持する最終既知位置へ即座に移動する（屋内等でGPS測位が
+      // 8秒以内に終わらず、前回位置のまま起動してしまう問題の対策）
+      final last = await Geolocator.getLastKnownPosition();
+      if (last != null && mounted) {
+        final approx = LatLng(last.latitude, last.longitude);
+        setState(() {
+          _myLocation = approx;
+          _zoom = 11;
+        });
+        _controller.move(approx, 11);
+        _savePosition();
+      }
       final pos = await Geolocator.getCurrentPosition(
               locationSettings:
                   const LocationSettings(accuracy: LocationAccuracy.medium))
-          .timeout(const Duration(seconds: 8));
+          .timeout(const Duration(seconds: 15));
       if (!mounted) return;
       final here = LatLng(pos.latitude, pos.longitude);
       setState(() {
@@ -173,7 +185,7 @@ class _MapScreenState extends State<MapScreen> {
       _controller.move(here, 11);
       _savePosition();
     } catch (_) {
-      // 取得できなければ前回位置のまま
+      // 取得できなければ最終既知位置または前回位置のまま
     }
   }
 
