@@ -326,21 +326,25 @@ class _MediaView extends StatelessWidget {
                   : '現在映像を取得できません');
         }
         // refreshTick をキーに含めて手動更新時に再取得する
+        final headers = camera.feed.requiresReferer &&
+                camera.sourcePageUrl != null
+            ? {'Referer': camera.sourcePageUrl!}
+            : null;
         return AspectRatio(
           aspectRatio: 4 / 3,
-          child: Image.network(
-            url,
-            key: ValueKey('$url#$refreshTick'),
-            fit: BoxFit.contain,
-            headers: camera.feed.requiresReferer &&
-                    camera.sourcePageUrl != null
-                ? {'Referer': camera.sourcePageUrl!}
-                : null,
-            errorBuilder: (_, _, _) =>
-                const _MediaFallback(text: '現在映像を取得できません'),
-            loadingBuilder: (_, child, progress) => progress == null
-                ? child
-                : const Center(child: CircularProgressIndicator()),
+          child: _ZoomableImage(
+            title: camera.name,
+            builder: (fullscreen) => Image.network(
+              url,
+              key: ValueKey('$url#$refreshTick#$fullscreen'),
+              fit: BoxFit.contain,
+              headers: headers,
+              errorBuilder: (_, _, _) =>
+                  const _MediaFallback(text: '現在映像を取得できません'),
+              loadingBuilder: (_, child, progress) => progress == null
+                  ? child
+                  : const Center(child: CircularProgressIndicator()),
+            ),
           ),
         );
       case FeedType.mieDouro:
@@ -634,7 +638,12 @@ class _MieDouroViewState extends State<_MieDouroView> {
     if (_bytes == null) {
       return const Center(child: CircularProgressIndicator());
     }
-    return Image.memory(_bytes!, fit: BoxFit.contain, gaplessPlayback: true);
+    final bytes = _bytes!;
+    return _ZoomableImage(
+      title: '',
+      builder: (_) =>
+          Image.memory(bytes, fit: BoxFit.contain, gaplessPlayback: true),
+    );
   }
 }
 
@@ -689,6 +698,60 @@ class _InfoChip extends StatelessWidget {
         border: Border.all(color: color),
       ),
       child: Text(text, style: const TextStyle(fontSize: 12)),
+    );
+  }
+}
+
+
+/// 静止画のピンチズーム。埋め込み表示ではピンチのみ（縦スクロールを妨げない
+/// よう移動は無効）、タップで全画面ビューア（ピンチ＋ドラッグ移動）を開く
+class _ZoomableImage extends StatelessWidget {
+  const _ZoomableImage({required this.builder, required this.title});
+
+  /// fullscreen=true のとき全画面用に同じ画像を組み立てる
+  final Widget Function(bool fullscreen) builder;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
+        fullscreenDialog: true,
+        builder: (_) => _FullscreenImage(title: title, child: builder(true)),
+      )),
+      child: InteractiveViewer(
+        minScale: 1,
+        maxScale: 5,
+        panEnabled: false,
+        clipBehavior: Clip.hardEdge,
+        child: builder(false),
+      ),
+    );
+  }
+}
+
+class _FullscreenImage extends StatelessWidget {
+  const _FullscreenImage({required this.child, required this.title});
+
+  final Widget child;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+        title: Text(title, style: const TextStyle(fontSize: 16)),
+      ),
+      body: Center(
+        child: InteractiveViewer(
+          minScale: 1,
+          maxScale: 8,
+          child: child,
+        ),
+      ),
     );
   }
 }
