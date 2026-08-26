@@ -62,8 +62,10 @@ def is_black_frame(image_bytes: bytes) -> bool:
     if not px:
         return False
     mean = sum(px) / len(px)
-    bright = sum(1 for v in px if v > 40) / len(px)
-    return mean < 18 and bright < 0.03
+    p90 = sorted(px)[int(len(px) * 0.9)]
+    bright = sum(1 for v in px if v > 60) / len(px)
+    # 実例(子浦川 吉野屋橋の信号なし画像): mean 18 / p90 16 / bright 1.7%
+    return mean < 26 and p90 < 32 and bright < 0.03
 
 
 def is_local_daytime(now: datetime, lng: float | None) -> bool:
