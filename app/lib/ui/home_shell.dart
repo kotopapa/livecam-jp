@@ -37,6 +37,7 @@ class _HomeShellState extends State<HomeShell> {
     final r = widget.app.navigationRequest.value;
     if (r == null || !mounted) return;
     if (r.startsWith('bosai') && _index != 2) setState(() => _index = 2);
+    if (r.startsWith('map') && _index != 0) setState(() => _index = 0);
   }
 
   @override

@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:http/http.dart' as http;
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -14,6 +16,7 @@ import '../config.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
 import '../util/geo.dart';
+import '../util/prefectures.dart';
 import '../util/time_format.dart';
 import 'ad_banner.dart';
 import 'pin_style.dart';
@@ -128,6 +131,8 @@ class _DetailScreenState extends State<DetailScreen> {
             const SizedBox(height: 8),
             _badges(st),
             const Divider(height: 24),
+            _locationSection(),
+            const Divider(height: 24),
             _sourceSection(pageUrl),
             const Divider(height: 24),
             // バナー広告（出典セクションと近隣カメラの間。読み込み失敗時は
@@ -194,6 +199,106 @@ class _DetailScreenState extends State<DetailScreen> {
           text: camera.riverOrRoute!, color: categoryColor(camera.category)));
     }
     return Wrap(spacing: 6, runSpacing: 4, children: chips);
+  }
+
+  /// カテゴリと設置位置（ミニマップ）。ミニマップをタップすると地図タブへ移動する
+  Widget _locationSection() {
+    final cat = camera.category;
+    final label = categoryLabels[cat] ?? cat;
+    final pref = prefectureNames[camera.prefecture] ?? '';
+    final chips = Wrap(spacing: 6, runSpacing: 4, children: [
+      Chip(
+        avatar: CircleAvatar(backgroundColor: categoryColor(cat), radius: 6),
+        label: Text(label),
+        visualDensity: VisualDensity.compact,
+      ),
+      if (pref.isNotEmpty)
+        Chip(label: Text(pref), visualDensity: VisualDensity.compact),
+      if (camera.isWorld)
+        const Chip(label: Text('海外'), visualDensity: VisualDensity.compact),
+    ]);
+    if (!camera.hasLocation) {
+      return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        const Text('カテゴリ・位置', style: TextStyle(fontWeight: FontWeight.bold)),
+        const SizedBox(height: 6),
+        chips,
+      ]);
+    }
+    final pos = LatLng(camera.lat!, camera.lng!);
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      const Text('カテゴリ・位置', style: TextStyle(fontWeight: FontWeight.bold)),
+      const SizedBox(height: 6),
+      chips,
+      const SizedBox(height: 8),
+      ClipRRect(
+        borderRadius: BorderRadius.circular(8),
+        child: SizedBox(
+          height: 170,
+          child: Stack(children: [
+            FlutterMap(
+              options: MapOptions(
+                initialCenter: pos,
+                initialZoom: 13,
+                interactionOptions:
+                    const InteractionOptions(flags: InteractiveFlag.none),
+              ),
+              children: [
+                TileLayer(
+                  urlTemplate: camera.isWorld
+                      ? 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+                      : 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
+                  userAgentPackageName: 'jp.livecam.livecam_jp',
+                ),
+                MarkerLayer(markers: [
+                  Marker(
+                    point: pos,
+                    width: 26,
+                    height: 26,
+                    child: CameraPin(
+                        camera: camera,
+                        state: app.stateOf(camera),
+                        favorite: app.isFavorite(camera)),
+                  ),
+                ]),
+              ],
+            ),
+            Positioned(
+              left: 4,
+              bottom: 2,
+              child: Text(
+                camera.isWorld ? '© OpenStreetMap contributors' : '地理院タイル',
+                style: const TextStyle(fontSize: 9, color: Colors.black87),
+              ),
+            ),
+            // タップで地図タブへ（この位置を中心に表示）
+            Positioned.fill(
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {
+                    app.navigationRequest.value = null;
+                    app.navigationRequest.value =
+                        'map/${pos.latitude},${pos.longitude}';
+                    Navigator.of(context).popUntil((r) => r.isFirst);
+                  },
+                ),
+              ),
+            ),
+            Positioned(
+              right: 6,
+              top: 6,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.9),
+                    borderRadius: BorderRadius.circular(12)),
+                child: const Text('地図で見る', style: TextStyle(fontSize: 11)),
+              ),
+            ),
+          ]),
+        ),
+      ),
+    ]);
   }
 
   Widget _sourceSection(String? pageUrl) {

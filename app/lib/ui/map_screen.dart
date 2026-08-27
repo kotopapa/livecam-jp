@@ -102,10 +102,27 @@ class _MapScreenState extends State<MapScreen> {
     widget.app.addListener(_onDataChanged);
     // 初回フレーム後に前回位置へ移動（MapControllerはレイアウト後に有効）
     WidgetsBinding.instance.addPostFrameCallback((_) => _restorePosition());
+    widget.app.navigationRequest.addListener(_onNavigationRequest);
+  }
+
+  /// 詳細画面の「地図で見る」等からの移動要求（'map/<lat>,<lng>'）
+  void _onNavigationRequest() {
+    final r = widget.app.navigationRequest.value ?? '';
+    if (!r.startsWith('map/')) return;
+    final parts = r.substring(4).split(',');
+    if (parts.length < 2) return;
+    final lat = double.tryParse(parts[0]);
+    final lng = double.tryParse(parts[1]);
+    if (lat == null || lng == null || !mounted) return;
+    _stopFollowing();
+    _controller.move(LatLng(lat, lng), 15);
+    setState(() => _zoom = 15);
+    _savePosition();
   }
 
   @override
   void dispose() {
+    widget.app.navigationRequest.removeListener(_onNavigationRequest);
     widget.app.removeListener(_onDataChanged);
     _searchController.dispose();
     _posSub?.cancel();
