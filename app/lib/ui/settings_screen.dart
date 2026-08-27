@@ -7,6 +7,9 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+import 'package:in_app_review/in_app_review.dart';
 
 import '../app_state.dart';
 import '../config.dart';
@@ -46,6 +49,64 @@ class _SettingsScreenState extends State<SettingsScreen> {
       unawaited(_notify.healTokenAndReapply());
       if (mounted) setState(() => _notifyLoaded = true);
     });
+  }
+
+  String get _storeUrl => app.storeUrl ?? appStoreUrl;
+
+  /// 友達を招待: App Store ページのQRコードとURL（コピー・共有）
+  void _showInvite() {
+    final url = _storeUrl;
+    showDialog<void>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('友達を招待する'),
+        content: Column(mainAxisSize: MainAxisSize.min, children: [
+          const Text('QRコードを読み取るか、リンクを送ると\nApp Storeのアプリページが開きます',
+              textAlign: TextAlign.center, style: TextStyle(fontSize: 13)),
+          const SizedBox(height: 12),
+          Container(
+            color: Colors.white,
+            padding: const EdgeInsets.all(8),
+            child: QrImageView(data: url, size: 200),
+          ),
+          const SizedBox(height: 12),
+          SelectableText(url,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 12, color: Colors.blueGrey)),
+        ]),
+        actions: [
+          TextButton.icon(
+            icon: const Icon(Icons.copy, size: 18),
+            label: const Text('コピー'),
+            onPressed: () {
+              Clipboard.setData(ClipboardData(text: url));
+              ScaffoldMessenger.of(this.context).showSnackBar(
+                  const SnackBar(content: Text('リンクをコピーしました')));
+            },
+          ),
+          TextButton.icon(
+            icon: const Icon(Icons.ios_share, size: 18),
+            label: const Text('共有'),
+            onPressed: () => SharePlus.instance.share(ShareParams(
+                text: '全国ライブカメラ地図 - 河川・道路・防災\n$url')),
+          ),
+          TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('閉じる')),
+        ],
+      ),
+    );
+  }
+
+  /// アプリを評価: App Store のレビュー画面へ（開けない場合はストアページ）
+  Future<void> _openReview() async {
+    try {
+      final review = InAppReview.instance;
+      await review.openStoreListing(appStoreId: appStoreId);
+    } catch (_) {
+      await launchUrl(Uri.parse('$_storeUrl?action=write-review'),
+          mode: LaunchMode.externalApplication);
+    }
   }
 
   void _showPermissionDenied() {
@@ -491,6 +552,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   content: Text('通知診断を表示しました（災害通知の項目内）')));
             }
           },
+        ),
+        ListTile(
+          leading: const Icon(Icons.qr_code_2),
+          title: const Text('友達を招待する'),
+          subtitle: const Text('QRコードまたはリンクでApp Storeのページを共有'),
+          onTap: _showInvite,
+        ),
+        ListTile(
+          leading: const Icon(Icons.star_rate_outlined),
+          title: const Text('アプリを評価する'),
+          subtitle: const Text('App Storeでレビューを書く'),
+          onTap: _openReview,
         ),
         const Divider(),
         const _SectionHeader('免責'),

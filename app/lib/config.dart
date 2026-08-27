@@ -20,3 +20,7 @@ const String firebaseApiKey = 'AIzaSyBlNICazXyF_x9A5aLARTW3k2L-K62lae0';
 /// デバッグ検証にはGoogle公式テストID
 /// (ca-app-pub-3940256099942544/2934735716) に一時差し替えて使う。
 const String admobBannerUnitId = 'ca-app-pub-9639294688594011/6375938678';
+
+/// App Store のアプリID（招待・評価導線用）。manifest の store_url が無い場合の既定
+const String appStoreId = '6802841521';
+const String appStoreUrl = 'https://apps.apple.com/jp/app/id$appStoreId';
