@@ -161,7 +161,13 @@ def main() -> int:
         fill_coordinates(all_candidates, Geocoder())
     all_candidates = normalize.dedupe(all_candidates)
     if not args.no_verify:
-        verify.verify_still_images(session, all_candidates, wait_sec=args.verify_wait)
+        # 承認/却下済み(cameras.jsonに存在)のカメラは死活監視側が見ているため、
+        # クロールの2回取得検証は未確定の新規候補だけに絞る（台帳1.8万台規模で
+        # 全件検証するとGitHub Actionsの実行時間上限に達する）
+        decided_now = {r["id"] for r in load_json(CAMERAS_PATH).get("cameras", [])}
+        fresh = [c for c in all_candidates if c.id not in decided_now]
+        print(f"検証対象: 新規候補 {len(fresh)}件（確定済み {len(all_candidates) - len(fresh)}件は省略）")
+        verify.verify_still_images(session, fresh, wait_sec=args.verify_wait)
 
     records = [c.to_record(today) for c in all_candidates]
     bad = 0
