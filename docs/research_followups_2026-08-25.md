@@ -21,3 +21,7 @@
 ## 未着手（再調査候補）
 - 天草市(約25地点)・KATCH佐久島・南あわじ沼島・名寄/大鰐/十和田などPanasonicビューア型、フェリー各社公式、県域TV局お天気カメラ、電力会社ダム、政令市アンダーパス冠水カメラ
 - 沖縄県河川 p-44/50/51/65/66 は運用停止中（再開時に追加）、長崎c06/c07は停止中、c09-c14は河川系で道路LIVE未リンク
+
+## 2026-08-27 追記
+- **crawlワークフローが8/21から失敗**: 「GitHub Actions is not permitted to create or approve pull requests」。リポジトリ Settings → Actions → General → Workflow permissions の「Allow GitHub Actions to create and approve pull requests」を有効にする必要あり（ユーザー作業）。それまで新設カメラは自動で候補に上がらない
+- 上記の間に川の防災情報で新設された460台は手動で取り込み済み（配信18,306件）。kawabou全国11,819台中、当方11,762台（残りは同一画像URLの重複）
