@@ -105,7 +105,7 @@ class _MapScreenState extends State<MapScreen> {
     widget.app.navigationRequest.addListener(_onNavigationRequest);
   }
 
-  /// 詳細画面の「地図で見る」等からの移動要求（'map/<lat>,<lng>'）
+  /// 詳細画面の「地図で見る」等からの移動要求（`map/lat,lng` 形式）
   void _onNavigationRequest() {
     final r = widget.app.navigationRequest.value ?? '';
     if (!r.startsWith('map/')) return;
