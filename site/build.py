@@ -23,7 +23,7 @@ OUT = REPO_ROOT / "site" / "v1"
 
 MIN_APP_VERSION = "1.0.0"
 # App Store 公開後にURLを設定する（強制アップデートダイアログの誘導先）
-STORE_URL = None
+STORE_URL = "https://apps.apple.com/jp/app/id6802841521"
 INTERNAL_FIELDS = {"verification"}
 
 
