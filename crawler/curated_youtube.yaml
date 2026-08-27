@@ -141,15 +141,6 @@ cameras:
     lat: 35.7767
     lng: 140.3830
 
-  - id: curated-minatomirai-tbs
-    name: 横浜 みなとみらい
-    operator: TBSテレビ（TBS NEWS DIG）
-    video_id: x3P3N3VGvtU
-    category: port
-    prefecture: "14"
-    lat: 35.4560
-    lng: 139.6380
-
   - id: curated-enoshima-riviera
     name: 江の島ヨットハーバー
     operator: 株式会社リビエラリゾート
@@ -947,17 +938,6 @@ cameras:
     prefecture: "32"
     lat: 35.457
     lng: 133.045
-
-  - id: curated-inawashiro
-    name: 猪苗代湖（スキー場から）
-    operator: "猪苗代スキー場（リステル）"
-    video_id: "hmGMijkatDY"
-    channel_id: "UC8AHDeJk9r2ko0f2LWp8h1A"
-    category: scenic
-    prefecture: "07"
-    lat: 37.62
-    lng: 140.07
-    note: 湖畔でなくスキー場からの眺望 旧ID goz5JZD8dH4 は配信終了→チャンネル/liveの現行IDに差替え(2026-08-25)。channel_id追加
 
   - id: curated-inubosaki
     name: 犬吠埼
@@ -3768,17 +3748,6 @@ cameras:
     lat: 36.0439
     lng: 138.1092
     note: "8月は毎晩花火配信あり"
-
-  - id: curated-r2-ecfdf983
-    name: 猪苗代スキー場(幸せの鐘)
-    operator: "絶景・猪苗代スキー場"
-    video_id: "hmGMijkatDY"
-    channel_id: "UC8AHDeJk9r2ko0f2LWp8h1A"
-    category: scenic
-    prefecture: "07"
-    lat: 37.5892
-    lng: 140.1044
-    note: "埋め込み不可→誘導型。猪苗代湖・磐梯山遠望 旧ID ARNiW-l8PH0 は配信終了→チャンネル/liveの現行IDに差替え(2026-08-25)。channel_id追加"
 
   - id: curated-r2-dc16c466
     name: 釧路市街(幣舞橋周辺)
