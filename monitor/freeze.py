@@ -24,6 +24,7 @@ PLACEHOLDER_HASHES = [
     0x10101c0c0010101,      # 川の防災情報 cam.river.go.jp の「画像がありません」
     0x153169713131d890,     # 道路情報提供システム road-info-prvs の no_data.jpeg
     0x2d27000100,           # 沖縄県河川情報システム img_cam/p-NN.jpg の「運用停止中」(黒地白文字)
+    0x8304c4c300000,       # 金沢河川国道 防災情報(bousai-info-ishikawa) の「工事中」(青地黄文字)
 ]
 PLACEHOLDER_MAX_DISTANCE = 2
 
