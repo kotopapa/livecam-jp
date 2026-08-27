@@ -1,6 +1,45 @@
 {
- "version": "2026-08-27T12:11:22Z",
+ "version": "2026-08-27T15:32:35Z",
  "cameras": [
+  {
+   "id": "curated-minatomirai-tbs",
+   "name": "横浜 みなとみらい",
+   "name_kana": null,
+   "lat": 35.456,
+   "lng": 139.638,
+   "coord_accuracy": "approx",
+   "category": "port",
+   "prefecture": "14",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "x3P3N3VGvtU",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=x3P3N3VGvtU"
+   },
+   "operator": "TBSテレビ（TBS NEWS DIG）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=x3P3N3VGvtU",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：TBSテレビ（TBS NEWS DIG）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "民間・報道系の公式YouTubeライブ（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。"
+   },
+   "verification": null,
+   "first_seen": "2026-08-27",
+   "last_updated": "2026-08-27"
+  },
   {
    "id": "curated-oshino-hakkai",
    "name": "忍野八海から富士山",
@@ -38,7 +77,7 @@
    },
    "verification": null,
    "first_seen": "2026-08-26",
-   "last_updated": "2026-08-26"
+   "last_updated": "2026-08-27"
   },
   {
    "id": "curated-r2-266df21c",
@@ -77,7 +116,51 @@
    },
    "verification": null,
    "first_seen": "2026-08-26",
-   "last_updated": "2026-08-26"
+   "last_updated": "2026-08-27"
+  },
+  {
+   "id": "gifu-road-6011",
+   "name": "濁河",
+   "name_kana": null,
+   "lat": 35.925087,
+   "lng": 137.447026,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "県道435号御岳山朝日線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://douro.pref.gifu.lg.jp/img/camera/douro_060_0151.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://douro.pref.gifu.lg.jp/"
+   },
+   "operator": "岐阜県",
+   "source": {
+    "page_url": "https://douro.pref.gifu.lg.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：岐阜県「道の情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "岐阜県道路カメラ（下呂土木事務所）。利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 53397
+   },
+   "first_seen": "2026-08-27",
+   "last_updated": "2026-08-27"
   },
   {
    "id": "miyagi-road-hokubu-soto",
@@ -89,7 +172,7 @@
    "category": "road",
    "prefecture": "04",
    "country": null,
-   "municipality": "04445",
+   "municipality": null,
    "river_or_route": "国道347号",
    "feed": {
     "type": "still_image",
@@ -114,9 +197,14 @@
     "reviewed_at": null,
     "note": "宮城県道路カメラ(HTTP配信)。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 98346
+   },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-27"
   },
   {
    "id": "miyagi-road-hokubu-yanagi1",
@@ -128,7 +216,7 @@
    "category": "road",
    "prefecture": "04",
    "country": null,
-   "municipality": "04445",
+   "municipality": null,
    "river_or_route": "国道347号",
    "feed": {
     "type": "still_image",
@@ -153,9 +241,14 @@
     "reviewed_at": null,
     "note": "宮城県道路カメラ(HTTP配信)。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 73718
+   },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-27"
   },
   {
    "id": "miyagi-road-hokubu-yanagi2",
@@ -167,7 +260,7 @@
    "category": "road",
    "prefecture": "04",
    "country": null,
-   "municipality": "04445",
+   "municipality": null,
    "river_or_route": "国道347号",
    "feed": {
     "type": "still_image",
@@ -192,9 +285,14 @@
     "reviewed_at": null,
     "note": "宮城県道路カメラ(HTTP配信)。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 107443
+   },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-27"
   },
   {
    "id": "miyagi-road-tobu-oosawa",
@@ -206,7 +304,7 @@
    "category": "road",
    "prefecture": "04",
    "country": null,
-   "municipality": "04341",
+   "municipality": null,
    "river_or_route": "国道113号",
    "feed": {
     "type": "still_image",
@@ -231,13 +329,18 @@
     "reviewed_at": null,
     "note": "宮城県道路カメラ(HTTP配信)。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 7984
+   },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-08-27"
   },
   {
    "id": "nagano-road-oomachi-003",
-   "name": "国道148号 塩水",
+   "name": "大町建設事務所 カメラ3",
    "name_kana": null,
    "lat": null,
    "lng": null,
@@ -245,7 +348,7 @@
    "category": "road",
    "prefecture": "20",
    "country": null,
-   "municipality": "20486",
+   "municipality": null,
    "river_or_route": null,
    "feed": {
     "type": "still_image",
@@ -270,13 +373,18 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 41776
+   },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-21"
+   "last_updated": "2026-08-27"
   },
   {
    "id": "nagano-road-oomachi-009",
-   "name": "県道31号 美麻新行",
+   "name": "大町建設事務所 カメラ9",
    "name_kana": null,
    "lat": null,
    "lng": null,
@@ -284,7 +392,7 @@
    "category": "road",
    "prefecture": "20",
    "country": null,
-   "municipality": "20212",
+   "municipality": null,
    "river_or_route": null,
    "feed": {
     "type": "still_image",
@@ -309,9 +417,14 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 47697
+   },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-21"
+   "last_updated": "2026-08-27"
   },
   {
    "id": "nagano-road-saku-001",
@@ -348,9 +461,14 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 40717
+   },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-21"
+   "last_updated": "2026-08-27"
   },
   {
    "id": "nagano-road-suzaka-003",
@@ -387,9 +505,58 @@
     "reviewed_at": null,
     "note": "長野県建設事務所の道路カメラ。利用条件はレビューで確認"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 105557
+   },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-21"
+   "last_updated": "2026-08-27"
+  },
+  {
+   "id": "niigata-road-camera-091",
+   "name": "南魚沼市上野",
+   "name_kana": null,
+   "lat": 37.018047,
+   "lng": 138.829803,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "15",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.live-cam.pref.niigata.jp/camera/pc/camera_091.jpg",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.live-cam.pref.niigata.jp/"
+   },
+   "operator": "新潟県",
+   "source": {
+    "page_url": "https://www.live-cam.pref.niigata.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：にいがたLIVEカメラ（新潟県土木部）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "新潟県土木部の道路カメラ。利用条件はレビューで確認 / 重複疑い: niigata-road-uwaseki(南魚沼市上関) と50m以内・類似度0.83 / 重複疑い: niigata-road-noda(南魚沼市野田) と50m以内・類似度0.83"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 28300
+   },
+   "first_seen": "2026-08-27",
+   "last_updated": "2026-08-27"
   },
   {
    "id": "shizukawa-coast-kanbara-takahama",
@@ -401,7 +568,7 @@
    "category": "coast",
    "prefecture": "22",
    "country": null,
-   "municipality": "22101",
+   "municipality": null,
    "river_or_route": "富士海岸",
    "feed": {
     "type": "still_image",
@@ -426,9 +593,14 @@
     "reviewed_at": null,
     "note": "海岸監視カメラ（津波・高潮監視）。座標は地点名からの推定(approx)"
    },
-   "verification": null,
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 68960
+   },
    "first_seen": "2026-08-22",
-   "last_updated": "2026-08-22"
+   "last_updated": "2026-08-27"
   }
  ]
 }
