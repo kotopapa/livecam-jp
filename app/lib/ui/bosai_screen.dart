@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
 import '../models/camera.dart';
@@ -383,7 +384,36 @@ class _BosaiScreenState extends State<BosaiScreen>
     );
   }
 
+  /// 地震速報のリアルタイム配信（Yahoo!ニュース公式のYouTubeライブ）。
+  /// 埋め込み不可のためアプリ内では再生せず、YouTubeへ誘導する
+  static const _quakeLiveUrl = 'https://www.youtube.com/watch?v=Edhq6m719T0';
+
+  Widget _quakeLiveCard() {
+    return Material(
+      color: const Color(0xFFFFF3F2),
+      child: ListTile(
+        dense: true,
+        leading: const Icon(Icons.sensors, color: Color(0xFFE53935)),
+        title: const Text('地震速報 リアルタイム配信（Yahoo!ニュース）',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+        subtitle: const Text('緊急地震速報・震度速報を24時間ライブ配信。YouTubeで開きます',
+            style: TextStyle(fontSize: 12)),
+        trailing: const Icon(Icons.open_in_new, size: 18),
+        onTap: () => launchUrl(Uri.parse(_quakeLiveUrl),
+            mode: LaunchMode.externalApplication),
+      ),
+    );
+  }
+
   Widget _buildQuakeTab() {
+    return Column(children: [
+      _quakeLiveCard(),
+      const Divider(height: 1),
+      Expanded(child: _buildQuakeList()),
+    ]);
+  }
+
+  Widget _buildQuakeList() {
     return _error != null
           ? Center(child: Text(_error!))
           : _quakes == null
