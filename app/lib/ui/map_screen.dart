@@ -9,10 +9,12 @@ import 'package:latlong2/latlong.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../app_state.dart';
+import '../data/jma_layers.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
 import '../util/geo.dart';
 import '../util/prefectures.dart';
+import 'bosai_screen.dart' show NearbyCamerasScreen;
 import 'detail_screen.dart';
 import 'pin_style.dart';
 
@@ -122,6 +124,7 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   void dispose() {
+    _layerTimer?.cancel();
     widget.app.navigationRequest.removeListener(_onNavigationRequest);
     widget.app.removeListener(_onDataChanged);
     _searchController.dispose();
@@ -131,6 +134,281 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   void _onDataChanged() => setState(() {});
+
+  // --- 気象レイヤー（雨雲レーダー / 震源 / 24時間雨量。排他表示） ---
+  MapLayerKind _layer = MapLayerKind.none;
+  QuakePeriod _quakePeriod = QuakePeriod.week;
+  NowcastTime? _nowcast;
+  List<QuakePoint> _quakes = const [];
+  List<RainPoint> _rain = const [];
+  bool _layerLoading = false;
+  bool _layerFailed = false;
+  Timer? _layerTimer;
+
+  Future<void> _setLayer(MapLayerKind kind, {QuakePeriod? period}) async {
+    _layerTimer?.cancel();
+    setState(() {
+      _layer = kind;
+      if (period != null) {
+        _quakePeriod = period;
+      }
+      _layerFailed = false;
+    });
+    if (kind == MapLayerKind.none) return;
+    await _refreshLayer();
+    // レイヤーON中だけ定期更新（雨雲5分・震源/雨量10分）
+    _layerTimer = Timer.periodic(
+        Duration(minutes: kind == MapLayerKind.rainRadar ? 5 : 10),
+        (_) => _refreshLayer());
+  }
+
+  Future<void> _refreshLayer() async {
+    if (!mounted || _layer == MapLayerKind.none) return;
+    setState(() => _layerLoading = true);
+    var ok = true;
+    switch (_layer) {
+      case MapLayerKind.rainRadar:
+        final n = await JmaLayers.fetchLatestNowcast();
+        ok = n != null;
+        if (n != null) {
+          _nowcast = n;
+        }
+      case MapLayerKind.quakes:
+        _quakes = await JmaLayers.fetchQuakes(_quakePeriod);
+      case MapLayerKind.rain24h:
+        _rain = await JmaLayers.fetchRain24h();
+        ok = _rain.isNotEmpty;
+      case MapLayerKind.none:
+        break;
+    }
+    if (mounted) setState(() {
+      _layerLoading = false;
+      _layerFailed = !ok;
+    });
+  }
+
+  void _showLayerPicker(BuildContext context) {
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          const ListTile(
+              title: Text('気象レイヤー', style: TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text('出典：気象庁。地図に1種類だけ重ねて表示します')),
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.none ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.none ? Theme.of(ctx).colorScheme.primary : null),
+            title: const Text('表示しない'),
+            
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.none); },
+          ),
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.rainRadar ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.rainRadar ? Theme.of(ctx).colorScheme.primary : null),
+            title: const Text('雨雲レーダー（現在）'),
+            subtitle: const Text('高解像度降水ナウキャスト・5分ごとに更新'),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rainRadar); },
+          ),
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.quakes ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.quakes ? Theme.of(ctx).colorScheme.primary : null),
+            title: const Text('震源'),
+            subtitle: Row(children: [
+              for (final p in QuakePeriod.values) ...[
+                ChoiceChip(
+                  label: Text(switch (p) { QuakePeriod.day => '24時間', QuakePeriod.week => '7日', QuakePeriod.month => '30日' }),
+                  selected: _layer == MapLayerKind.quakes && _quakePeriod == p,
+                  visualDensity: VisualDensity.compact,
+                  onSelected: (_) { Navigator.pop(ctx); _setLayer(MapLayerKind.quakes, period: p); },
+                ),
+                const SizedBox(width: 6),
+              ],
+            ]),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.quakes); },
+          ),
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.rain24h ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.rain24h ? Theme.of(ctx).colorScheme.primary : null),
+            title: const Text('24時間雨量'),
+            subtitle: const Text('アメダス観測点の24時間降水量・10分ごとに更新'),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rain24h); },
+          ),
+          const SizedBox(height: 8),
+        ]),
+      ),
+    );
+  }
+
+  void _showQuakeInfo(QuakePoint q) {
+    final t = q.at.toLocal();
+    String two(int v) => v.toString().padLeft(2, '0');
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          ListTile(
+            leading: CircleAvatar(
+                backgroundColor: JmaLayers.intensityColor(q.maxIntensity),
+                child: Text(q.maxIntensity.isEmpty ? '-' : q.maxIntensity,
+                    style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black87))),
+            title: Text(q.place.isEmpty ? '震源（詳細未発表）' : q.place),
+            subtitle: Text('${t.month}/${t.day} ${two(t.hour)}:${two(t.minute)}'
+                '${q.magnitude.isNotEmpty ? '　M${q.magnitude}' : ''}'
+                '${q.maxIntensity.isNotEmpty ? '　最大震度${q.maxIntensity}' : ''}'),
+          ),
+          ListTile(
+            leading: const Icon(Icons.videocam),
+            title: const Text('周辺のライブカメラ（50km以内）'),
+            onTap: () {
+              Navigator.pop(ctx);
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => NearbyCamerasScreen(
+                      app: widget.app,
+                      title: '${q.place.isEmpty ? '震源' : q.place} 周辺のカメラ',
+                      lat: q.pos.latitude,
+                      lng: q.pos.longitude)));
+            },
+          ),
+          const SizedBox(height: 8),
+        ]),
+      ),
+    );
+  }
+
+  /// 気象レイヤーの凡例・出典（地図左下、地理院表記の上）
+  Widget _layerLegend() {
+    if (_layer == MapLayerKind.none) return const SizedBox.shrink();
+    Widget swatch(Color c, String label) => Padding(
+          padding: const EdgeInsets.only(right: 6),
+          child: Row(mainAxisSize: MainAxisSize.min, children: [
+            Container(width: 10, height: 10, color: c),
+            const SizedBox(width: 2),
+            Text(label, style: const TextStyle(fontSize: 9)),
+          ]),
+        );
+    final items = <Widget>[];
+    String title;
+    switch (_layer) {
+      case MapLayerKind.rainRadar:
+        title = '雨雲レーダー ${_nowcast?.label ?? ''}';
+        items.addAll([
+          swatch(const Color(0xFFB3E5FC), '弱'),
+          swatch(const Color(0xFF0041FF), '10'),
+          swatch(const Color(0xFFFAF500), '30'),
+          swatch(const Color(0xFFFF9900), '50'),
+          swatch(const Color(0xFFFF2800), '80mm/h'),
+        ]);
+      case MapLayerKind.quakes:
+        title = '震源 ${switch (_quakePeriod) { QuakePeriod.day => '24時間', QuakePeriod.week => '7日', QuakePeriod.month => '30日' }}（${_quakes.length}件）';
+        items.addAll([
+          swatch(JmaLayers.intensityColor('3'), '震度3'),
+          swatch(JmaLayers.intensityColor('4'), '4'),
+          swatch(JmaLayers.intensityColor('5-'), '5弱'),
+          swatch(JmaLayers.intensityColor('6-'), '6弱〜'),
+        ]);
+      case MapLayerKind.rain24h:
+        title = '24時間雨量（${_rain.length}地点）';
+        items.addAll([
+          swatch(JmaLayers.rainColor(1), '〜10'),
+          swatch(JmaLayers.rainColor(10), '10'),
+          swatch(JmaLayers.rainColor(30), '30'),
+          swatch(JmaLayers.rainColor(50), '50'),
+          swatch(JmaLayers.rainColor(100), '100mm〜'),
+        ]);
+      case MapLayerKind.none:
+        title = '';
+    }
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+      decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.9),
+          borderRadius: BorderRadius.circular(6)),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+        Row(mainAxisSize: MainAxisSize.min, children: [
+          Text(title, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
+          if (_layerLoading) const Padding(
+              padding: EdgeInsets.only(left: 6),
+              child: SizedBox(width: 10, height: 10, child: CircularProgressIndicator(strokeWidth: 1.5))),
+          if (_layerFailed) const Padding(
+              padding: EdgeInsets.only(left: 6),
+              child: Text('取得できません', style: TextStyle(fontSize: 9, color: Colors.red))),
+        ]),
+        Row(mainAxisSize: MainAxisSize.min, children: items),
+        const Text('出典：気象庁', style: TextStyle(fontSize: 9, color: Colors.black54)),
+      ]),
+    );
+  }
+
+  /// 気象レイヤーの地図要素（タイル/マーカー）
+  List<Widget> _layerWidgets() {
+    switch (_layer) {
+      case MapLayerKind.rainRadar:
+        final n = _nowcast;
+        if (n == null) return const [];
+        return [
+          Opacity(
+            opacity: 0.6,
+            child: TileLayer(
+              key: ValueKey('nowc-${n.validtime}'),
+              urlTemplate: n.tileTemplate,
+              maxNativeZoom: 10,
+              userAgentPackageName: 'jp.livecam.livecam_jp',
+              errorTileCallback: (_, _, _) {},
+            ),
+          ),
+        ];
+      case MapLayerKind.quakes:
+        return [
+          MarkerLayer(markers: [
+            for (final q in _quakes)
+              Marker(
+                point: q.pos,
+                width: 28,
+                height: 28,
+                child: GestureDetector(
+                  onTap: () => _showQuakeInfo(q),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: JmaLayers.intensityColor(q.maxIntensity).withValues(alpha: 0.85),
+                      border: Border.all(color: Colors.white, width: 1.5),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(q.maxIntensity.isEmpty ? '' : q.maxIntensity,
+                        style: const TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.black87)),
+                  ),
+                ),
+              ),
+          ]),
+        ];
+      case MapLayerKind.rain24h:
+        return [
+          MarkerLayer(markers: [
+            for (final r in _rain)
+              Marker(
+                point: r.pos,
+                width: 14,
+                height: 14,
+                child: Tooltip(
+                  message: '${r.name} ${r.mm24h.toStringAsFixed(1)}mm',
+                  triggerMode: TooltipTriggerMode.tap,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: JmaLayers.rainColor(r.mm24h).withValues(alpha: 0.85),
+                      border: Border.all(color: Colors.white, width: 1),
+                    ),
+                  ),
+                ),
+              ),
+          ]),
+        ];
+      case MapLayerKind.none:
+        return const [];
+    }
+  }
 
   // 日本域外・広域表示ではOSMタイルへ切替（地理院タイルは日本のみ提供のため）
   bool _useWorldTiles = false;
@@ -721,6 +999,7 @@ class _MapScreenState extends State<MapScreen> {
                   : 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
               userAgentPackageName: 'jp.livecam.livecam_jp',
             ),
+            ..._layerWidgets(),
             MarkerLayer(
               markers: [
                 for (final item in items)
@@ -764,7 +1043,10 @@ class _MapScreenState extends State<MapScreen> {
               ]),
             Align(
               alignment: Alignment.bottomLeft,
-              child: _GsiAttribution(worldTiles: _useWorldTiles),
+              child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
+                _GsiAttribution(worldTiles: _useWorldTiles),
+              ]),
             ),
           ],
         ),
@@ -795,6 +1077,15 @@ class _MapScreenState extends State<MapScreen> {
           right: 16,
           top: MediaQuery.of(context).padding.top + 12,
           child: Column(mainAxisSize: MainAxisSize.min, children: [
+            FloatingActionButton.small(
+              heroTag: 'weather_layer',
+              tooltip: '気象レイヤー',
+              backgroundColor: _layer == MapLayerKind.none ? null : Theme.of(context).colorScheme.primary,
+              foregroundColor: _layer == MapLayerKind.none ? null : Colors.white,
+              onPressed: () => _showLayerPicker(context),
+              child: const Icon(Icons.cloud_outlined),
+            ),
+            const SizedBox(height: 8),
             FloatingActionButton.small(
               heroTag: 'legend_filter',
               onPressed: () => _showLegendFilter(context),
