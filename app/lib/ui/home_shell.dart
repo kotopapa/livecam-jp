@@ -85,9 +85,10 @@ class _HomeShellState extends State<HomeShell> {
 
   @override
   Widget build(BuildContext context) {
-    // 下部固定バナー: 滞在の長い地図・一覧・災害速報タブのみ。
+    // 下部固定バナー: 一覧・災害速報・お気に入りタブ（地図と設定には出さない）。
     // 特別警報の発表中は防災アプリとして広告を出さない
-    final showAd = _index <= 2 && !widget.app.specialWarningActive;
+    final showAd = (_index == 1 || _index == 2 || _index == 3) &&
+        !widget.app.specialWarningActive;
     return Scaffold(
       body: Column(children: [
         Expanded(

@@ -547,7 +547,12 @@ class _YoutubeEmbedView extends StatefulWidget {
   State<_YoutubeEmbedView> createState() => _YoutubeEmbedViewState();
 }
 
-class _YoutubeEmbedViewState extends State<_YoutubeEmbedView> {
+class _YoutubeEmbedViewState extends State<_YoutubeEmbedView>
+    with AutomaticKeepAliveClientMixin {
+  // ListView内で画面外へスクロールしてもWebView(再生中の動画)を破棄しない
+  @override
+  bool get wantKeepAlive => true;
+
   late final WebViewController _controller;
 
   @override
@@ -584,7 +589,10 @@ iframe{width:100%;height:100%;border:0}</style></head>
   }
 
   @override
-  Widget build(BuildContext context) => WebViewWidget(controller: _controller);
+  Widget build(BuildContext context) {
+    super.build(context);
+    return WebViewWidget(controller: _controller);
+  }
 }
 
 /// iHighway(NEXCO)の交通情報地図をアプリ内で開き、該当カメラの
