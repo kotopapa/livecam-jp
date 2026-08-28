@@ -33,7 +33,7 @@ R8_REPORTS = [
 
 
 def _fake_get(url, timeout=30):
-    resp = mock.Mock()
+    resp = mock.Mock(); resp.status_code = 200
     resp.json.return_value = R8_REPORTS
     return resp
 
@@ -55,7 +55,7 @@ def test_danger_warning_uses_danger_family():
              "kinds": [{"code": "43", "status": "発表"}]},
         ]},
     }]
-    resp = mock.Mock(); resp.json.return_value = reports
+    resp = mock.Mock(); resp.status_code = 200; resp.json.return_value = reports
     with mock.patch.object(bosai_notify.requests, "get",
                            lambda url, timeout=30: resp):
         events, current = bosai_notify.check_special_warnings(
@@ -135,7 +135,7 @@ def test_same_office_parallel_products_are_merged():
               "kinds": [{"code": "49", "status": "継続"}]},
          ]}},
     ]
-    resp = mock.Mock(); resp.json.return_value = reports
+    resp = mock.Mock(); resp.status_code = 200; resp.json.return_value = reports
     with mock.patch.object(bosai_notify.requests, "get",
                            lambda url, timeout=30: resp):
         events, current = bosai_notify.check_special_warnings(
@@ -145,7 +145,7 @@ def test_same_office_parallel_products_are_merged():
 
 
 def _quake_get(entries):
-    resp = mock.Mock()
+    resp = mock.Mock(); resp.status_code = 200
     resp.json.return_value = entries
     return lambda url, timeout=30: resp
 
