@@ -65,3 +65,9 @@ python site/build.py                            # 配信ファイル生成
 - **youtube_channel型は /live が1本にしか解決しない**ため、1チャンネルで複数拠点を同時配信する運営者(アウトバーン・高野町・RNB等)には channel_id を付けない（同じ映像になる）
 - 運営者の明示的な断り（「無断転載禁止」「直接リンクはご遠慮」）があるものは技術的に取れても実装しない: ロードネット滋賀・山口県道路見えるナビ・三好市観光カメラ（取得経路は docs/research_followups_2026-08-25.md に記録済み、照会して許諾が得られれば即実装可）
 - **MBC南日本放送(mbc.co.jp)は画像の無断転載・二次利用お断りを明記** → 配信URLの直接参照は不可。既存67件は個別ページ(`/web-cam/movie.html?area=<img>`)への誘導型に変更済み、mbc_webcamパーサも誘導型を出す（2026-08-25ユーザー決定）
+
+## 定期実行の知見（2026-08-28追記）
+
+- **GitHub Actionsのcronは間引かれ・停止することがある**（2026-08-26〜27に5分cronが数時間おきになり、最後は8時間停止。大阪の大雨危険警報の通知が遅れた）。公開リポジトリで実行枠の問題ではなく、GitHub側のスケジュール取りこぼし
+- 対策として**ユーザーのGAS（Google Apps Script）から5分おきに`bosai-notify.yml`、30分おきに`monitor.yml`を`workflow_dispatch` APIで起動**している（Fine-grained PAT: livecam-jp限定・Actions Read/write）。GitHub側のcronは予備として併存。実行履歴で`workflow_dispatch`が5分ごとに並んでいれば正常。止まっていたらGASのトリガー/トークン期限(無期限設定)を疑う
+- 台帳の公開(publish)は全ユーザーに1MB(gzip)の再取得を発生させるため、1日1回程度にまとめる
