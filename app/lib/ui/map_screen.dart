@@ -139,6 +139,9 @@ class _MapScreenState extends State<MapScreen> {
   MapLayerKind _layer = MapLayerKind.none;
   QuakePeriod _quakePeriod = QuakePeriod.week;
   NowcastTime? _nowcast;
+  List<NowcastTime> _nowcastTimes = const [];
+  int _nowcastIdx = 0;
+  bool _nowcastUserMoved = false; // ユーザーがスライダーを動かしたら自動更新で最新へ戻さない
   List<QuakePoint> _quakes = const [];
   List<RainPoint> _rain = const [];
   bool _layerLoading = false;
@@ -149,6 +152,7 @@ class _MapScreenState extends State<MapScreen> {
     _layerTimer?.cancel();
     setState(() {
       _layer = kind;
+      _nowcastUserMoved = false;
       if (period != null) {
         _quakePeriod = period;
       }
@@ -168,10 +172,19 @@ class _MapScreenState extends State<MapScreen> {
     var ok = true;
     switch (_layer) {
       case MapLayerKind.rainRadar:
-        final n = await JmaLayers.fetchLatestNowcast();
-        ok = n != null;
-        if (n != null) {
-          _nowcast = n;
+        final times = await JmaLayers.fetchNowcastTimes();
+        ok = times.isNotEmpty;
+        if (times.isNotEmpty) {
+          final latestObs = times.lastIndexWhere((n) => !n.isForecast);
+          var idx = latestObs < 0 ? times.length - 1 : latestObs;
+          if (_nowcastUserMoved && _nowcast != null) {
+            // 同じ時刻が残っていればそこを維持
+            final keep = times.indexWhere((n) => n.validtime == _nowcast!.validtime);
+            if (keep >= 0) idx = keep;
+          }
+          _nowcastTimes = times;
+          _nowcastIdx = idx;
+          _nowcast = times[idx];
         }
       case MapLayerKind.quakes:
         _quakes = await JmaLayers.fetchQuakes(_quakePeriod);
@@ -279,6 +292,71 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  /// 雨雲レーダーの時刻スライダー（過去3時間の実況〜1時間先の予測）
+  Widget _nowcastSlider() {
+    if (_layer != MapLayerKind.rainRadar || _nowcastTimes.length < 2) {
+      return const SizedBox.shrink();
+    }
+    final n = _nowcastTimes[_nowcastIdx];
+    final latestObs = _nowcastTimes.lastIndexWhere((x) => !x.isForecast);
+    final diffMin = latestObs >= 0
+        ? n.validAtJst.difference(_nowcastTimes[latestObs].validAtJst).inMinutes
+        : 0;
+    String span(int m) => m.abs() >= 60 ? '${(m.abs() / 60).toStringAsFixed(m.abs() % 60 == 0 ? 0 : 1)}時間' : '${m.abs()}分';
+    final rel = diffMin == 0
+        ? '現在（実況）'
+        : diffMin > 0
+            ? '${span(diffMin)}後（${n.isHourly ? '予報・1時間雨量' : '予測'}）'
+            : '${span(diffMin)}前（実況）';
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.fromLTRB(12, 6, 12, 2),
+      decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.92),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
+      child: Column(mainAxisSize: MainAxisSize.min, children: [
+        Row(children: [
+          const Icon(Icons.cloud_outlined, size: 16),
+          const SizedBox(width: 6),
+          Text('${n.label}　$rel',
+              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+          const Spacer(),
+          if (_nowcastUserMoved && latestObs >= 0)
+            TextButton(
+              style: TextButton.styleFrom(visualDensity: VisualDensity.compact),
+              onPressed: () => setState(() {
+                _nowcastUserMoved = false;
+                _nowcastIdx = latestObs;
+                _nowcast = _nowcastTimes[latestObs];
+              }),
+              child: const Text('現在へ', style: TextStyle(fontSize: 12)),
+            ),
+        ]),
+        SliderTheme(
+          data: const SliderThemeData(trackHeight: 3),
+          child: Slider(
+            min: 0,
+            max: (_nowcastTimes.length - 1).toDouble(),
+            divisions: _nowcastTimes.length - 1,
+            value: _nowcastIdx.toDouble(),
+            activeColor: n.isForecast ? Colors.orange : null,
+            onChanged: (v) => setState(() {
+              _nowcastUserMoved = true;
+              _nowcastIdx = v.round();
+              _nowcast = _nowcastTimes[_nowcastIdx];
+            }),
+          ),
+        ),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Text(_nowcastTimes.first.label, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+          const Text('▲ 現在', style: TextStyle(fontSize: 9, color: Colors.black54)),
+          Text('${_nowcastTimes.last.label}（6時間先）', style: const TextStyle(fontSize: 9, color: Colors.black54)),
+        ]),
+      ]),
+    );
+  }
+
   /// 気象レイヤーの凡例・出典（地図左下、地理院表記の上）
   Widget _layerLegend() {
     if (_layer == MapLayerKind.none) return const SizedBox.shrink();
@@ -294,7 +372,7 @@ class _MapScreenState extends State<MapScreen> {
     String title;
     switch (_layer) {
       case MapLayerKind.rainRadar:
-        title = '雨雲レーダー ${_nowcast?.label ?? ''}';
+        title = '雨雲レーダー ${_nowcast?.label ?? ''}${(_nowcast?.isHourly ?? false) ? '（予報・1時間雨量）' : (_nowcast?.isForecast ?? false) ? '（予測）' : ''}';
         items.addAll([
           swatch(const Color(0xFFB3E5FC), '弱'),
           swatch(const Color(0xFF0041FF), '10'),
@@ -1049,6 +1127,13 @@ class _MapScreenState extends State<MapScreen> {
                 Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
                 _GsiAttribution(worldTiles: _useWorldTiles),
               ]),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 44, right: 60),
+                child: _nowcastSlider(),
+              ),
             ),
           ],
         ),

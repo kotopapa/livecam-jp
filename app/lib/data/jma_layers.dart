@@ -16,17 +16,38 @@ enum MapLayerKind { none, rainRadar, quakes, rain24h }
 enum QuakePeriod { day, week, month }
 
 class NowcastTime {
-  const NowcastTime(this.basetime, this.validtime);
+  const NowcastTime(this.basetime, this.validtime,
+      {this.product = 'nowc', this.member = 'none'});
   final String basetime;
   final String validtime;
 
+  /// 'nowc' = 高解像度降水ナウキャスト(5分刻み・1時間先まで)
+  /// 'rasrf' = 降水短時間予報(1時間刻み・6時間先まで。値は1時間雨量)
+  final String product;
+  final String member;
+
+  bool get isForecast => basetime != validtime;
+  bool get isHourly => product == 'rasrf';
+
   /// flutter_map の urlTemplate
-  String get tileTemplate =>
-      'https://www.jma.go.jp/bosai/jmatile/data/nowc/$basetime/none/$validtime/surf/hrpns/{z}/{x}/{y}.png';
+  String get tileTemplate => product == 'rasrf'
+      ? 'https://www.jma.go.jp/bosai/jmatile/data/rasrf/$basetime/$member/$validtime/surf/rasrf/{z}/{x}/{y}.png'
+      : 'https://www.jma.go.jp/bosai/jmatile/data/nowc/$basetime/none/$validtime/surf/hrpns/{z}/{x}/{y}.png';
+
+  /// 気象庁の時刻表記はUTC。日本時間(JST=UTC+9)に直す
+  DateTime get validAtJst => DateTime.utc(
+        int.parse(validtime.substring(0, 4)),
+        int.parse(validtime.substring(4, 6)),
+        int.parse(validtime.substring(6, 8)),
+        int.parse(validtime.substring(8, 10)),
+        int.parse(validtime.substring(10, 12)),
+      ).add(const Duration(hours: 9));
 
   /// 表示用 HH:MM（JST）
-  String get label =>
-      '${validtime.substring(8, 10)}:${validtime.substring(10, 12)}';
+  String get label {
+    final d = validAtJst;
+    return '${d.hour.toString().padLeft(2, '0')}:${d.minute.toString().padLeft(2, '0')}';
+  }
 }
 
 class QuakePoint {
@@ -54,25 +75,59 @@ class RainPoint {
 class JmaLayers {
   static const _ua = {'User-Agent': 'LiveCamJP/1.0 (+https://kotopapa.github.io/livecam-jp/)'};
 
-  /// 最新の（現在時刻の）ナウキャスト時刻。JSTの実況分のみ使う
-  static Future<NowcastTime?> fetchLatestNowcast() async {
+  /// 雨雲の時間軸: 過去3時間の実況(5分刻み) + 1時間先まで(5分刻み) + 6時間先まで(1時間刻み)。
+  /// 古い順に並べて返す。取得失敗は空リスト
+  static Future<List<NowcastTime>> fetchNowcastTimes() async {
     try {
-      final r = await http
-          .get(Uri.parse('https://www.jma.go.jp/bosai/jmatile/data/nowc/targetTimes_N1.json'), headers: _ua)
-          .timeout(const Duration(seconds: 10));
-      if (r.statusCode != 200) return null;
-      final list = jsonDecode(r.body) as List;
-      // basetime==validtime の実況を優先（先頭が最新）
-      for (final e in list.cast<Map<String, dynamic>>()) {
-        if (e['basetime'] == e['validtime']) {
-          return NowcastTime(e['basetime'] as String, e['validtime'] as String);
+      final rs = await Future.wait([
+        http.get(Uri.parse('https://www.jma.go.jp/bosai/jmatile/data/nowc/targetTimes_N1.json'), headers: _ua),
+        http.get(Uri.parse('https://www.jma.go.jp/bosai/jmatile/data/nowc/targetTimes_N2.json'), headers: _ua),
+        http.get(Uri.parse('https://www.jma.go.jp/bosai/jmatile/data/rasrf/targetTimes.json'), headers: _ua),
+      ]).timeout(const Duration(seconds: 15));
+      final byValid = <String, NowcastTime>{};
+      void put(NowcastTime n) {
+        final cur = byValid[n.validtime];
+        // 同じ時刻は 実況 > ナウキャスト予測 > 短時間予報 の優先
+        if (cur == null || (cur.isForecast && !n.isForecast) || (cur.isHourly && !n.isHourly)) {
+          byValid[n.validtime] = n;
         }
       }
-      final e = list.first as Map<String, dynamic>;
-      return NowcastTime(e['basetime'] as String, e['validtime'] as String);
+      for (final r in rs.take(2)) {
+        if (r.statusCode != 200) continue;
+        for (final e in (jsonDecode(r.body) as List).cast<Map<String, dynamic>>()) {
+          put(NowcastTime(e['basetime'] as String, e['validtime'] as String));
+        }
+      }
+      // 短時間予報: 最新basetimeの予測のうち6時間先まで(immed=1〜6時間先)
+      final r3 = rs[2];
+      if (r3.statusCode == 200) {
+        final fc = (jsonDecode(r3.body) as List)
+            .cast<Map<String, dynamic>>()
+            .where((e) => e['basetime'] != e['validtime'] && e['member'] == 'immed')
+            .toList();
+        if (fc.isNotEmpty) {
+          final latestBase = fc.map((e) => e['basetime'] as String).reduce((a, b) => a.compareTo(b) >= 0 ? a : b);
+          for (final e in fc.where((e) => e['basetime'] == latestBase)) {
+            final n = NowcastTime(e['basetime'] as String, e['validtime'] as String,
+                product: 'rasrf', member: e['member'] as String? ?? 'immed');
+            if (!byValid.containsKey(n.validtime)) byValid[n.validtime] = n;
+          }
+        }
+      }
+      final list = byValid.values.toList()..sort((a, b) => a.validtime.compareTo(b.validtime));
+      return list;
     } catch (_) {
-      return null;
+      return const [];
     }
+  }
+
+  /// 最新の実況（後方互換）
+  static Future<NowcastTime?> fetchLatestNowcast() async {
+    final list = await fetchNowcastTimes();
+    for (final n in list.reversed) {
+      if (!n.isForecast) return n;
+    }
+    return list.isEmpty ? null : list.last;
   }
 
   static final _codRe = RegExp(r'^([+-][\d.]+)([+-][\d.]+)');
