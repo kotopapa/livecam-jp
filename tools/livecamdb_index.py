@@ -56,9 +56,24 @@ def parse(url: str, html: str) -> dict:
         if "x.com/livecam_db" in l or "bsky.app" in l: break
         if any(h in l for h in SKIP_HOSTS): continue
         ext.append(l)
+    # 「ライブカメラ情報」表: 名称/URL/映像先/設置先名称/設置先所在地/配信・管理/配信種類/配信方法/更新間隔/備考 等
+    info: dict = {}
+    url_rows: list = []
+    import html as _html
+    for tb in re.findall(r"<table.*?</table>", html, re.S):
+        for tr in re.findall(r"<tr.*?</tr>", tb, re.S):
+            cells = [re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", c))).strip()
+                     for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)]
+            if len(cells) < 2 or not cells[0]:
+                continue
+            k, v = cells[0], cells[1]
+            if k == "URL":
+                url_rows = re.findall(r'href="(https?://[^"]+)"', tr)
+            elif v and v not in ("–", "-", "－") and k not in info:
+                info[k] = v[:200]
     parts = url.replace("https://livecam.asia/", "").split("/")
     pref = PREF_SLUG.get(parts[0], "")
-    return {"url": url, "title": title, "pref": pref, "muni_slug": parts[1] if len(parts) > 2 else "", "yt_videos": sorted(yt_v), "yt_channels": sorted(yt_c), "lat": lat, "lng": lng, "ext_links": ext[:6], "src": ext[0] if ext else None}
+    return {"url": url, "title": title, "pref": pref, "muni_slug": parts[1] if len(parts) > 2 else "", "yt_videos": sorted(yt_v), "yt_channels": sorted(yt_c), "lat": lat, "lng": lng, "ext_links": ext[:6], "src": (url_rows[0] if url_rows else (ext[0] if ext else None)), "urls": url_rows[:4], "info": info}
 
 def cmd_fetch(limit: int):
     urls = json.loads((CACHE / "urls.json").read_text())
