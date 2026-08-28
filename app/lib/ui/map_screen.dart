@@ -181,10 +181,12 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.none:
         break;
     }
-    if (mounted) setState(() {
-      _layerLoading = false;
-      _layerFailed = !ok;
-    });
+    if (mounted) {
+      setState(() {
+        _layerLoading = false;
+        _layerFailed = !ok;
+      });
+    }
   }
 
   void _showLayerPicker(BuildContext context) {
