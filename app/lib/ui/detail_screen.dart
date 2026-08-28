@@ -127,15 +127,15 @@ class _DetailScreenState extends State<DetailScreen> {
         Padding(
           padding: const EdgeInsets.all(12),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            // バナー広告（映像の直下。スクロールなしで見える位置。
+            // 読み込み失敗時は区切り線ごと自動で消える）
+            const AdBannerPlaceholder(),
             _timeAndRefreshRow(st),
             const SizedBox(height: 8),
             _badges(st),
             const Divider(height: 24),
             _locationSection(),
             const Divider(height: 24),
-            // バナー広告（位置ミニマップと出典セクションの間。読み込み失敗時は
-            // 下側の区切り線ごと自動で消える）
-            const AdBannerPlaceholder(),
             _sourceSection(pageUrl),
             const Divider(height: 24),
             _nearbySection(),

@@ -68,3 +68,76 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
     ]);
   }
 }
+
+
+/// 画面下部に固定するアンカー型アダプティブバナー（HomeShell用）。
+/// 画面幅に合わせた高さで1回だけ読み込み、タブを切り替えても保持する。
+/// 読み込み失敗時は高さ0（空白を見せない）
+class AnchoredAdBanner extends StatefulWidget {
+  const AnchoredAdBanner({super.key});
+
+  @override
+  State<AnchoredAdBanner> createState() => _AnchoredAdBannerState();
+}
+
+class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
+  BannerAd? _ad;
+  AdSize? _size;
+  bool _loaded = false;
+  bool _failed = false;
+  bool _loading = false;
+
+  Future<void> _load(BuildContext context) async {
+    if (_loading || _ad != null) return;
+    _loading = true;
+    final width = MediaQuery.of(context).size.width.truncate();
+    final orientation = MediaQuery.of(context).orientation;
+    final size =
+        await AdSize.getAnchoredAdaptiveBannerAdSize(orientation, width);
+    if (!mounted || size == null) {
+      _loading = false;
+      if (mounted) setState(() => _failed = true);
+      return;
+    }
+    _size = size;
+    _ad = BannerAd(
+      adUnitId: admobBannerUnitId,
+      size: size,
+      request: const AdRequest(),
+      listener: BannerAdListener(
+        onAdLoaded: (_) {
+          if (mounted) setState(() => _loaded = true);
+        },
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+          _ad = null;
+          if (mounted) setState(() => _failed = true);
+        },
+      ),
+    )..load();
+  }
+
+  @override
+  void dispose() {
+    _ad?.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_failed) return const SizedBox.shrink();
+    if (_ad == null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) => _load(context));
+      return const SizedBox.shrink();
+    }
+    if (!_loaded || _size == null) return const SizedBox.shrink();
+    return SafeArea(
+      top: false,
+      child: SizedBox(
+        width: _size!.width.toDouble(),
+        height: _size!.height.toDouble(),
+        child: AdWidget(ad: _ad!),
+      ),
+    );
+  }
+}

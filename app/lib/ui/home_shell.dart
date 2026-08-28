@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'ad_banner.dart';
+
 import '../app_state.dart';
 import 'bosai_screen.dart';
 import 'favorites_screen.dart';
@@ -83,13 +85,22 @@ class _HomeShellState extends State<HomeShell> {
 
   @override
   Widget build(BuildContext context) {
+    // 下部固定バナー: 滞在の長い地図・一覧・災害速報タブのみ。
+    // 特別警報の発表中は防災アプリとして広告を出さない
+    final showAd = _index <= 2 && !widget.app.specialWarningActive;
     return Scaffold(
-      body: IndexedStack(index: _index, children: [
-        MapScreen(app: widget.app),
-        ListScreen(app: widget.app),
-        BosaiScreen(app: widget.app),
-        FavoritesScreen(app: widget.app),
-        SettingsScreen(app: widget.app),
+      body: Column(children: [
+        Expanded(
+          child: IndexedStack(index: _index, children: [
+            MapScreen(app: widget.app),
+            ListScreen(app: widget.app),
+            BosaiScreen(app: widget.app),
+            FavoritesScreen(app: widget.app),
+            SettingsScreen(app: widget.app),
+          ]),
+        ),
+        // Offstageで保持し、タブ切替で広告を読み直さない
+        Offstage(offstage: !showAd, child: const AnchoredAdBanner()),
       ]),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
