@@ -144,6 +144,7 @@ class _MapScreenState extends State<MapScreen> {
   bool _nowcastUserMoved = false; // ユーザーがスライダーを動かしたら自動更新で最新へ戻さない
   List<QuakePoint> _quakes = const [];
   List<RainPoint> _rain = const [];
+  NowcastTime? _rain24hTile;
   bool _layerLoading = false;
   bool _layerFailed = false;
   Timer? _layerTimer;
@@ -189,8 +190,10 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.quakes:
         _quakes = await JmaLayers.fetchQuakes(_quakePeriod);
       case MapLayerKind.rain24h:
+        final tile = await JmaLayers.fetchRain24hTile();
+        if (tile != null) _rain24hTile = tile;
         _rain = await JmaLayers.fetchRain24h();
-        ok = _rain.isNotEmpty;
+        ok = tile != null || _rain.isNotEmpty;
       case MapLayerKind.none:
         break;
     }
@@ -245,8 +248,8 @@ class _MapScreenState extends State<MapScreen> {
           ListTile(
             leading: Icon(_layer == MapLayerKind.rain24h ? Icons.radio_button_checked : Icons.radio_button_off,
                 color: _layer == MapLayerKind.rain24h ? Theme.of(ctx).colorScheme.primary : null),
-            title: const Text('24時間雨量'),
-            subtitle: const Text('アメダス観測点の24時間降水量・10分ごとに更新'),
+            title: const Text('24時間降水量'),
+            subtitle: const Text('気象庁の解析雨量（面）＋拡大でアメダス観測値'),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rain24h); },
           ),
           const SizedBox(height: 8),
@@ -389,13 +392,9 @@ class _MapScreenState extends State<MapScreen> {
           swatch(JmaLayers.intensityColor('6-'), '6弱〜'),
         ]);
       case MapLayerKind.rain24h:
-        title = '24時間雨量（${_rain.length}地点）';
+        title = '24時間降水量 ${_rain24hTile?.label ?? ''}${_zoom >= 9 ? '' : '（拡大で観測値）'}';
         items.addAll([
-          swatch(JmaLayers.rainColor(1), '〜10'),
-          swatch(JmaLayers.rainColor(10), '10'),
-          swatch(JmaLayers.rainColor(30), '30'),
-          swatch(JmaLayers.rainColor(50), '50'),
-          swatch(JmaLayers.rainColor(100), '100mm〜'),
+          for (final s in JmaLayers.rain24hScale) swatch(s.$2, s.$3),
         ]);
       case MapLayerKind.none:
         title = '';
@@ -464,26 +463,46 @@ class _MapScreenState extends State<MapScreen> {
           ]),
         ];
       case MapLayerKind.rain24h:
+        final tile = _rain24hTile;
         return [
-          MarkerLayer(markers: [
-            for (final r in _rain)
-              Marker(
-                point: r.pos,
-                width: 14,
-                height: 14,
-                child: Tooltip(
-                  message: '${r.name} ${r.mm24h.toStringAsFixed(1)}mm',
-                  triggerMode: TooltipTriggerMode.tap,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: JmaLayers.rainColor(r.mm24h).withValues(alpha: 0.85),
-                      border: Border.all(color: Colors.white, width: 1),
+          if (tile != null)
+            Opacity(
+              opacity: 0.65,
+              child: TileLayer(
+                key: ValueKey('rasrf24h-${tile.validtime}'),
+                urlTemplate: tile.tileTemplate,
+                maxNativeZoom: 10,
+                userAgentPackageName: 'jp.livecam.livecam_jp',
+                errorTileCallback: (_, _, _) {},
+              ),
+            ),
+          // 市街地ズームでは観測点の実測値(mm)を重ねる（tenki.jp方式）
+          if (_zoom >= 9)
+            MarkerLayer(markers: [
+              for (final r in _rain)
+                Marker(
+                  point: r.pos,
+                  width: 46,
+                  height: 20,
+                  child: Tooltip(
+                    message: '${r.name} 24時間 ${r.mm24h.toStringAsFixed(1)}mm',
+                    triggerMode: TooltipTriggerMode.tap,
+                    child: Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: JmaLayers.rainColor(r.mm24h).withValues(alpha: 0.9),
+                        borderRadius: BorderRadius.circular(4),
+                        border: Border.all(color: Colors.white, width: 1),
+                      ),
+                      child: Text('${r.mm24h.round()}',
+                          style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              color: r.mm24h >= 80 ? Colors.white : Colors.black87)),
                     ),
                   ),
                 ),
-              ),
-          ]),
+            ]),
         ];
       case MapLayerKind.none:
         return const [];

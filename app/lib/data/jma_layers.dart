@@ -30,9 +30,14 @@ class NowcastTime {
   bool get isHourly => product == 'rasrf';
 
   /// flutter_map の urlTemplate
-  String get tileTemplate => product == 'rasrf'
-      ? 'https://www.jma.go.jp/bosai/jmatile/data/rasrf/$basetime/$member/$validtime/surf/rasrf/{z}/{x}/{y}.png'
-      : 'https://www.jma.go.jp/bosai/jmatile/data/nowc/$basetime/none/$validtime/surf/hrpns/{z}/{x}/{y}.png';
+  String get tileTemplate => switch (product) {
+        'rasrf' =>
+          'https://www.jma.go.jp/bosai/jmatile/data/rasrf/$basetime/$member/$validtime/surf/rasrf/{z}/{x}/{y}.png',
+        'rasrf24h' =>
+          'https://www.jma.go.jp/bosai/jmatile/data/rasrf/$basetime/$member/$validtime/surf/rasrf24h/{z}/{x}/{y}.png',
+        _ =>
+          'https://www.jma.go.jp/bosai/jmatile/data/nowc/$basetime/none/$validtime/surf/hrpns/{z}/{x}/{y}.png',
+      };
 
   /// 気象庁の時刻表記はUTC。日本時間(JST=UTC+9)に直す
   DateTime get validAtJst => DateTime.utc(
@@ -170,6 +175,40 @@ class JmaLayers {
       return const [];
     }
   }
+
+  /// 24時間降水量の面タイル（気象庁 解析雨量の積算。実況・1時間ごと更新）
+  static Future<NowcastTime?> fetchRain24hTile() async {
+    try {
+      final r = await http
+          .get(Uri.parse('https://www.jma.go.jp/bosai/jmatile/data/rasrf/targetTimes.json'), headers: _ua)
+          .timeout(const Duration(seconds: 12));
+      if (r.statusCode != 200) return null;
+      final obs = (jsonDecode(r.body) as List)
+          .cast<Map<String, dynamic>>()
+          .where((e) => e['basetime'] == e['validtime'] &&
+              (e['elements'] as List).contains('rasrf24h'))
+          .toList()
+        ..sort((a, b) => (b['basetime'] as String).compareTo(a['basetime'] as String));
+      if (obs.isEmpty) return null;
+      final e = obs.first;
+      return NowcastTime(e['basetime'] as String, e['validtime'] as String,
+          product: 'rasrf24h', member: e['member'] as String? ?? 'immed');
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 24時間降水量の凡例色（気象庁の積算降水量配色）
+  static const rain24hScale = <(double, Color, String)>[
+    (0.5, Color(0xFFF2F2FF), '〜10'),
+    (10, Color(0xFFA0D2FF), '10'),
+    (20, Color(0xFF218CFF), '20'),
+    (50, Color(0xFF0041FF), '50'),
+    (80, Color(0xFFFAF500), '80'),
+    (100, Color(0xFFFF9900), '100'),
+    (150, Color(0xFFFF2800), '150'),
+    (200, Color(0xFFB40068), '200mm〜'),
+  ];
 
   static Map<String, LatLng>? _stations;
 
