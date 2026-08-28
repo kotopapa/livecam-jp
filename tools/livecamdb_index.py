@@ -3,6 +3,10 @@
 - robots.txt は /wp-admin/ のみ禁止(2026-08-28確認)。取得は1.5秒間隔・キャッシュ付き
 - 取り出すのは 名称/所在地/YouTube ID/地図座標/公式サイト外部リンク のみ(記事本文は保存しない)
 - 採用は従来どおり一次ソースの確認と review_cli 経由。ここでは候補一覧(JSON)を作るだけ
+- 台帳化するときの page_url(アプリの「出典サイトを見る」) は必ず**掲載元(運営者)側のページ**にする。
+  優先順位: URL行の2番目以降のページリンク(公式チャンネル/公式ページ) → 既知ホストの掲載ページ規則
+  (cam.river.go.jp→kawabou、cbr.mlit.go.jp/meikoku→livecamera一覧 等) → 画像URLの親ディレクトリで200が返るページ
+  → 運営者名(配信・管理)から公式サイトを特定。livecam.asia 自身を出典にはしない。attribution は「配信・管理」欄の値を使う
 使い方:
   python -m tools.livecamdb_index sitemap            # 詳細ページURL一覧を取得
   python -m tools.livecamdb_index fetch --limit 200  # 詳細ページを取得・抽出(再実行で続きから)
