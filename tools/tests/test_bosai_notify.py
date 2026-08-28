@@ -214,3 +214,18 @@ def test_quake_already_notified_eid_skipped():
     with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
         events = bosai_notify.check_quakes({"notified_quakes": ["e3"]})
     assert events == []
+
+
+def test_non_json_response_is_skipped_without_crash():
+    # 気象庁が一時的にHTMLエラー等を返しても落ちず、状態も変えない
+    resp = mock.Mock(); resp.status_code = 200; resp.json.side_effect = ValueError("no json")
+    with mock.patch.object(bosai_notify.requests, "get", lambda url, timeout=30: resp):
+        assert bosai_notify.check_quakes({"notified_quakes": []}) == []
+        events, current = bosai_notify.check_special_warnings({"active_special": ["13:33"]})
+    assert events == [] and current == ["13:33"]
+
+
+def test_http_error_is_skipped():
+    resp = mock.Mock(); resp.status_code = 503
+    with mock.patch.object(bosai_notify.requests, "get", lambda url, timeout=30: resp):
+        assert bosai_notify.check_quakes({"notified_quakes": []}) == []

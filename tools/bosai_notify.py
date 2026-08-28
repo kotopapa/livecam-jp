@@ -82,6 +82,20 @@ def send_push(token: str, project: str, topic: str,
     print(f"push sent [{topic}] {title} / {body}")
 
 
+def _fetch_json(url: str):
+    """気象庁JSONを取得。HTTPエラー・非JSON応答(メンテ画面等)は None を返し、
+    呼び出し側でそのチェックだけ見送る（1系統の障害で通知処理全体を落とさない）"""
+    try:
+        r = requests.get(url, timeout=30)
+        if r.status_code != 200:
+            print(f"取得失敗 {url}: HTTP {r.status_code}", file=sys.stderr)
+            return None
+        return r.json()
+    except (requests.RequestException, ValueError) as e:
+        print(f"取得失敗 {url}: {type(e).__name__}: {e}", file=sys.stderr)
+        return None
+
+
 def load_state() -> dict:
     try:
         return json.load(open(STATE_PATH, encoding="utf-8"))
@@ -100,7 +114,9 @@ def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
     空文字列なので、埋まっている報を優先して本文を作る。
     """
     out = []
-    quakes = requests.get(QUAKE_URL, timeout=30).json()
+    quakes = _fetch_json(QUAKE_URL)
+    if quakes is None:  # 気象庁側の一時障害。今回は地震チェックを見送り次回に持ち越す
+        return out
     since = datetime.now(JST) - timedelta(hours=3)
     notified = set(state["notified_quakes"])
     groups: dict[str, list[dict]] = {}
@@ -138,7 +154,9 @@ def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], lis
     r8形式: 発表報ログの配列。官署は気象警報(VPWW55)と土砂災害(VPWW56)等を
     別々の報として出すため、官署×報種別ごとに最新報を採用して合算する
     （官署単位だと同時刻の土砂災害報が落ちる。2026-08-23石垣島で実際に発生）。"""
-    reports = requests.get(WARNING_URL, timeout=30).json()
+    reports = _fetch_json(WARNING_URL)
+    if reports is None:  # 取得失敗時は状態を変えない（解除扱いにして再通知させない）
+        return [], sorted(state["active_special"])
     latest: dict[tuple[str, str], dict] = {}
     for rep in reports:
         key = (rep.get("publishingOffice", ""), rep.get("dataTypeCode", ""))
