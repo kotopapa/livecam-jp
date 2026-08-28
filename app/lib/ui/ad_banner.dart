@@ -92,6 +92,8 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
     _loading = true;
     final width = MediaQuery.of(context).size.width.truncate();
     final orientation = MediaQuery.of(context).orientation;
+    // 「Large」版(最大90px)は地図領域を圧迫するため、高さが抑えられる標準版を使う
+    // ignore: deprecated_member_use
     final size =
         await AdSize.getAnchoredAdaptiveBannerAdSize(orientation, width);
     if (!mounted || size == null) {
