@@ -14,7 +14,6 @@ import '../data/jma_layers.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
 import '../util/geo.dart';
-import '../util/prefectures.dart';
 import 'bosai_screen.dart' show NearbyCamerasScreen;
 import 'detail_screen.dart';
 import 'pin_style.dart';
