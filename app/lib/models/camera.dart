@@ -31,7 +31,13 @@ enum FeedType {
 
   /// 山口県土木防災情報システム 河川監視カメラ（都度解決型）
   yamaguchiKasen('yamaguchi_kasen'),
+
+  /// 島根県水防情報システム 河川カメラ（都度解決型）
+  shimaneSuibo('shimane_suibo'),
   mieDouro('mie_douro'),
+
+  /// 福岡県河川防災情報 河川監視カメラ（都度解決型）
+  fukuokaKasen('fukuoka_kasen'),
 
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する
   unknown('unknown');

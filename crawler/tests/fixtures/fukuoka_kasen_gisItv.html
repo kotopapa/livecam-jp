@@ -1,0 +1,86 @@
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=SHIFT_JIS">
+<meta charset="Shift_JIS">
+<title>河川監視カメラ（GISデータ）</title>
+<script>
+          const itvJson = {
+            "date": '202608291605',
+            
+    
+    '4':{
+      "an":'山王橋',
+      "rn":'御笠川',
+      "lat":'33.584722222222226',
+      "lng":'130.43277777777777',
+      "icon":'../img/itv_normal.gif',
+      "data1":'0.23',
+      "flag":'itv_0',
+      "flagStr":'通常',
+      "time":'08/29 16：00'
+    }
+    ,
+    '7':{
+      "an":'隅田橋',
+      "rn":'御笠川',
+      "lat":'33.56583333333333',
+      "lng":'130.45888888888888',
+      "icon":'../img/itv_normal.gif',
+      "data1":'-0.53',
+      "flag":'itv_0',
+      "flagStr":'通常',
+      "time":'08/29 16：00'
+    }
+    ,
+    '281':{
+      "an":'久保橋',
+      "rn":'久原川',
+      "lat":'33.64277777777778',
+      "lng":'',
+      "icon":'../img/itv_normal.gif',
+      "data1":'',
+      "flag":'itv_0',
+      "flagStr":'',
+      "time":'08/29 16：05'
+    }
+    ,
+    '188':{
+      "an":'上稗田橋（休止中）',
+      "rn":'長峡川',
+      "lat":'33.69544444444444',
+      "lng":'130.9323611111111',
+      "icon":'../img/itv_warn.gif',
+      "data1":'0.37',
+      "flag":'itv_2',
+      "flagStr":'通常',
+      "time":''
+    }
+    ,
+    '40':{
+      "an":'西縄手橋（休止中）',
+      "rn":'池町川',
+      "lat":'33.31805555555556',
+      "lng":'130.5013888888889',
+      "icon":'../img/itv_warn.gif',
+      "data1":'---',
+      "flag":'itv_2',
+      "flagStr":'欠測',
+      "time":''
+    }
+          };
+
+          
+            function getItvJson() {
+              return itvJson;
+            }
+            function init() {
+              if (window != window.parent) {
+                parent.setItvJson(getItvJson());
+                parent.map_ol.initDataItv();
+              }
+            }
+          
+        </script>
+</head>
+<body onload="init();"></body>
+</html>

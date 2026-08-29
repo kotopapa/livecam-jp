@@ -160,6 +160,11 @@ sources:
     enabled: true
     note: 福岡市防災気象情報の河川カメラ24台。トップ埋め込みGeoJSONに座標・住所・
           固定URL <cID>/moboImage.jpg。license=unknown
+  - id: fukuoka_kasen
+    enabled: true
+    note: 福岡県河川防災情報の河川監視カメラ208台(座標は配置図GISデータ gisItv_0.html、
+          所在地は detail_<局>.html)。画像はタイムスタンプ名→都度解決型 fukuoka_kasen
+          (gisItv_0.html 1リクエストで全台)。https不可でhttp取得。license=unknown
   - id: saitama_flood
     enabled: true
     note: さいたま市水位情報システムの河川カメラ14台。place.jsonが座標つき台帳、
@@ -190,6 +195,11 @@ sources:
           全台の最新画像(タイムスタンプ名)を解決する都度解決型(feed=yamaguchi_kasen)。
           座標は地図ページ(kco_map 302先)の L.marker(小数3桁≒100m, approx)、
           属性は krc_camera_station_info.aspx。リンク自由・転載禁止表記なし、license=unknown
+  - id: shimane_suibo
+    enabled: true
+    note: 島根県水防情報システムの河川カメラ73台(うち名称空の休止局1を除外)。
+          mapData90.jsonが座標つき台帳、camera.jsonで全台の最新画像(タイムスタンプ名)を
+          1リクエスト解決(都度解決型 feed=shimane_suibo)。サイトは免責のみ、license=unknown
   - id: tochigi_road
     enabled: true
     note: 栃木県道路ライブカメラ60台(モバイル版menu.htmlが市町村別一覧)。

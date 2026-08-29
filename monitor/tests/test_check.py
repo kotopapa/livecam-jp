@@ -72,6 +72,16 @@ def test_non_image_content_fails():
     assert r["state"] == "unknown" and r["consecutive_failures"] == 1
 
 
+def test_empty_image_body_fails():
+    # 実例(2026-08-29 石川県道路カメラ 中能登町金丸): HTTP 200・image/jpeg だが
+    # Content-Length 0。カメラ停止中にサーバが空ファイルを配信する
+    empty = FakeResponse(200, b"", {"Content-Type": "image/jpeg", "Last-Modified": "Sat, 29 Aug 2026 07:12:01 GMT"})
+    state: dict = {}
+    r = check_camera(FakeSession([empty]), _camera(), state)
+    assert r["state"] == "unknown" and r["consecutive_failures"] == 1
+    assert "last_modified" not in state
+
+
 def _yt_camera(ftype="youtube_video", url="abc123DEF45"):
     return {
         "id": "yt-1", "lat": 35.0, "lng": 139.0,
@@ -178,6 +188,25 @@ def test_yamaguchi_kasen_uses_resolved_image():
     assert s.requests[0]["url"] == url
     assert r["state"] == "ok" and r["image_url"] == url and r["image_time"] == at
     # 未解決なら失敗として数える
+    cam.pop("_resolved_image")
+    r2 = check_camera(FakeSession([]), cam, {})
+    assert r2["state"] == "unknown" and r2["consecutive_failures"] == 1
+
+
+def test_shimane_suibo_uses_resolved_image():
+    """都度解決型 shimane_suibo: main.py が解決した URL を取得し image_url/image_time を返す。"""
+    from crawler.sources.shimane_suibo import resolve_image_urls
+    text = (FIXTURES / "shimane_suibo_camera.json").read_text(encoding="utf-8")
+    url, at = resolve_image_urls(text)["8193_90_1"]
+    cam = _camera()
+    cam["feed"] = {"type": "shimane_suibo",
+                   "url": "https://www.suibou-shimane.jp/dyn/camera/camera.json",
+                   "camera_ref": "8193_90_1", "headers": {}, "requires_referer": False}
+    cam["_resolved_image"] = {"url": url, "time": at}
+    s = FakeSession([FakeResponse(200, b"\xff\xd8" + b"x" * 6000, {"Content-Type": "image/jpeg"})])
+    r = check_camera(s, cam, {})
+    assert s.requests[0]["url"] == url
+    assert r["state"] == "ok" and r["image_url"] == url and r["image_time"] == at
     cam.pop("_resolved_image")
     r2 = check_camera(FakeSession([]), cam, {})
     assert r2["state"] == "unknown" and r2["consecutive_failures"] == 1

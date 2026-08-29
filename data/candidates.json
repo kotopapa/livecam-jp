@@ -1,5 +1,5 @@
 {
- "version": "2026-08-29T06:59:54Z",
+ "version": "2026-08-29T07:27:58Z",
  "cameras": [
   {
    "id": "curated-lcdb-5621ad43",
@@ -74,6 +74,966 @@
     "status": "pending",
     "reviewed_at": null,
     "note": "民間・報道系の公式YouTubeライブ（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。 ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.nagoyatv.com/news/"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-001",
+   "name": "片峰新橋（宇美川）",
+   "name_kana": null,
+   "lat": 33.58694444444445,
+   "lng": 130.47833333333332,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40343",
+   "river_or_route": "宇美川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "001"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_1.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: fukuoka-city-c201 片峰新橋(福岡市)14m / kawabou-310242003 片峰新橋(福岡県土整備事務所)29m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-002",
+   "name": "筒井橋（御笠川）",
+   "name_kana": null,
+   "lat": 33.54,
+   "lng": 130.48333333333332,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40219",
+   "river_or_route": "御笠川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "002"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_2.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: fukuoka-city-c202 筒井橋(福岡市)13m / kawabou-310253001 筒井橋(那珂県土整備事務所)28m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-003",
+   "name": "下曰佐（那珂川）",
+   "name_kana": null,
+   "lat": 33.54222222222222,
+   "lng": 130.43027777777777,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40134",
+   "river_or_route": "那珂川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "003"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_3.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310253003 下曰佐(那珂県土整備事務所)94m / fukuoka-city-c203 下曰佐(福岡市)103m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-004",
+   "name": "山王橋（御笠川）",
+   "name_kana": null,
+   "lat": 33.584722222222226,
+   "lng": 130.43277777777777,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40132",
+   "river_or_route": "御笠川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "004"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_4.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310242002 山王橋(福岡県土整備事務所)14m / fukuoka-city-c204 山王橋(福岡市)26m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-005",
+   "name": "雨水橋（多々良川）",
+   "name_kana": null,
+   "lat": 33.63027777777778,
+   "lng": 130.46833333333333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40349",
+   "river_or_route": "多々良川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "005"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_5.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310242001 雨水橋(福岡県土整備事務所)27m / fukuoka-city-c205 雨水橋(福岡市)57m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-006",
+   "name": "桜橋（紫川）",
+   "name_kana": null,
+   "lat": 33.82333333333334,
+   "lng": 130.86083333333332,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40107",
+   "river_or_route": "紫川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "006"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_6.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310250001 桜橋(北九州県土整備事務所)47m / kawabou-310241001 桜橋(上流側)(北九州市)260m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-007",
+   "name": "隅田橋（御笠川）",
+   "name_kana": null,
+   "lat": 33.56583333333333,
+   "lng": 130.45888888888888,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40132",
+   "river_or_route": "御笠川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "007"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_7.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: fukuoka-city-c207 隅田橋(福岡市)50m / kawabou-310253005 隅田橋(那珂県土整備事務所)130m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-016",
+   "name": "畔切橋（堂面川）",
+   "name_kana": null,
+   "lat": 33.046388888888885,
+   "lng": 130.4608333333333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40202",
+   "river_or_route": "堂面川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "016"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_16.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310254001 畔切橋(南筑後県土整備事務所)30m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-017",
+   "name": "上釣橋（釣川）",
+   "name_kana": null,
+   "lat": 33.81194444444444,
+   "lng": 130.53333333333333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40220",
+   "river_or_route": "釣川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "017"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_17.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310256002 上釣橋(北九州県土整備事務所宗像支所)89m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-018",
+   "name": "藪瀬（紫川）",
+   "name_kana": null,
+   "lat": 33.84722222222222,
+   "lng": 130.8711111111111,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40106",
+   "river_or_route": "紫川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "018"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_18.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310250002 藪瀬(北九州県土整備事務所)14m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-019",
+   "name": "長音寺橋（長峡川）",
+   "name_kana": null,
+   "lat": 33.73027777777778,
+   "lng": 130.95416666666665,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40213",
+   "river_or_route": "長峡川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "019"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_19.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310255001 長音寺橋(京築県土整備事務所)50m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-023",
+   "name": "塩原（那珂川）",
+   "name_kana": null,
+   "lat": 33.56861111111112,
+   "lng": 130.42888888888888,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40134",
+   "river_or_route": "那珂川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "023"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_23.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: fukuoka-city-c223 塩原(福岡市)345m / kawabou-310253004 塩原(那珂県土整備事務所)368m（同名）"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-033",
+   "name": "平成橋（高尾川）",
+   "name_kana": null,
+   "lat": 33.49888888888889,
+   "lng": 130.51944444444445,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40217",
+   "river_or_route": "高尾川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "033"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_33.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310253002 平成橋(那珂県土整備事務所)100m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-037",
+   "name": "四角橋（西郷川）",
+   "name_kana": null,
+   "lat": 33.76116666666667,
+   "lng": 130.4933333333333,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40224",
+   "river_or_route": "西郷川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "037"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_37.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310256001 四角橋(北九州県土整備事務所宗像支所)27m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-040",
+   "name": "西縄手橋（休止中）（池町川）",
+   "name_kana": null,
+   "lat": 33.31805555555556,
+   "lng": 130.5013888888889,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40203",
+   "river_or_route": "池町川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "040"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_40.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。局名に「休止中」。既存と同一地点の可能性: kawabou-310243001 西縄手橋(久留米県土整備事務所)8m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-042",
+   "name": "十篭橋（龍川内川）",
+   "name_kana": null,
+   "lat": 33.250277777777775,
+   "lng": 130.76416666666665,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40210",
+   "river_or_route": "龍川内川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "042"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_42.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310249006 十篭橋(八女県土整備事務所)23m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-043",
+   "name": "光延橋（星野川）",
+   "name_kana": null,
+   "lat": 33.24722222222222,
+   "lng": 130.7011111111111,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40210",
+   "river_or_route": "星野川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "043"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_43.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310249001 光延橋(八女県土整備事務所)39m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-044",
+   "name": "中川原橋（矢部川）",
+   "name_kana": null,
+   "lat": 33.189138888888884,
+   "lng": 130.55761111111113,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40210",
+   "river_or_route": "矢部川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "044"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_44.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310249002 中川原橋(八女県土整備事務所)52m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-045",
+   "name": "下八重谷橋（横山川）",
+   "name_kana": null,
+   "lat": 33.26,
+   "lng": 130.66916666666665,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40210",
+   "river_or_route": "横山川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "045"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_45.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310249004 下八重谷橋(八女県土整備事務所)25m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-046",
+   "name": "串毛橋（休止中）（矢部川）",
+   "name_kana": null,
+   "lat": 33.20444444444445,
+   "lng": 130.64777777777778,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40210",
+   "river_or_route": "矢部川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "046"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_46.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。局名に「休止中」。既存と同一地点の可能性: kawabou-310249003 串毛橋(八女県土整備事務所)102m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-047",
+   "name": "蛍橋（笠原川）",
+   "name_kana": null,
+   "lat": 33.22277777777778,
+   "lng": 130.70749999999998,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40210",
+   "river_or_route": "笠原川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "047"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_47.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310249005 蛍橋(八女県土整備事務所)21m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-048",
+   "name": "新村橋（沖端川）",
+   "name_kana": null,
+   "lat": 33.17133333333333,
+   "lng": 130.45677777777777,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40207",
+   "river_or_route": "沖端川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "048"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_48.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310254003 新村橋(南筑後県土整備事務所)19m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-049",
+   "name": "松原橋（沖端川）",
+   "name_kana": null,
+   "lat": 33.175555555555555,
+   "lng": 130.48499999999999,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40229",
+   "river_or_route": "沖端川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "049"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_49.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。既存と同一地点の可能性: kawabou-310254002 松原橋(南筑後県土整備事務所)27m"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "fukuoka-kasen-281",
+   "name": "久保橋（久原川）",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40348",
+   "river_or_route": "久原川",
+   "feed": {
+    "type": "fukuoka_kasen",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/data/gisItv_0.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "281"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/camera/detail_281.html"
+   },
+   "operator": "福岡県",
+   "source": {
+    "page_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river2/map/mapItv_0.html",
+    "terms_url": "http://doboku-bousai.pref.fukuoka.lg.jp/river/html/usageguide/about.html",
+    "license": "unknown",
+    "attribution": "映像提供：福岡県（福岡県河川防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "福岡県河川防災情報の河川監視カメラ。利用条件はレビューで確認（免責のみ）。座標未取得（gisItv_0.html に lat/lng なし）"
    },
    "verification": null,
    "first_seen": "2026-08-29",
@@ -3238,6 +4198,46 @@
    },
    "first_seen": "2026-08-21",
    "last_updated": "2026-08-27"
+  },
+  {
+   "id": "shimane-suibo-8193-90-62",
+   "name": "市原",
+   "name_kana": null,
+   "lat": 34.668055555555554,
+   "lng": 131.79583333333332,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "32",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "shimane_suibo",
+    "url": "https://www.suibou-shimane.jp/dyn/camera/camera.json",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {},
+    "camera_ref": "8193_90_62"
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.suibou-shimane.jp/pc/map/top.html"
+   },
+   "operator": "島根県",
+   "source": {
+    "page_url": "https://www.suibou-shimane.jp/pc/map/top.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：島根県（水防情報システム）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "島根県水防情報システムの河川カメラ(10分更新)。サイトは免責のみで転載・リンク制限なし。利用条件はレビューで確認。重複候補: kawabou-122308260「白上川 1.2K 左岸 市原」(kawabou/島根県設置)と64m。同一カメラの可能性大"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
   },
   {
    "id": "shizukawa-coast-kanbara-takahama",

@@ -211,15 +211,19 @@ def run(shard: str | None = None) -> int:
             if cam["id"] in ref_by_id:
                 cam["_resolved_image"] = ref_by_id[cam["id"]]
 
-    # 都度解決型feed（saitama_flood / takashima_river / higashiomi_river）:
+    # 都度解決型feed（saitama_flood / takashima_river / higashiomi_river / shimane_suibo）:
     # 一覧JSON 1リクエストで全台解決（feed.url が一覧、camera_ref がキー）
+    from crawler.sources.fukuoka_kasen import resolve_image_urls as fk_resolve
     from crawler.sources.higashiomi_river import resolve_image_urls as ho_resolve
     from crawler.sources.saitama_flood import resolve_image_urls as st_resolve
+    from crawler.sources.shimane_suibo import resolve_image_urls as sn_resolve
     from crawler.sources.takashima_river import resolve_image_urls as tk_resolve
     bulk_resolvers = {
         "saitama_flood": st_resolve,
         "takashima_river": tk_resolve,
         "higashiomi_river": ho_resolve,
+        "fukuoka_kasen": fk_resolve,
+        "shimane_suibo": sn_resolve,
     }
     for ftype, resolver in bulk_resolvers.items():
         bulk_cams = [c for c in all_cameras

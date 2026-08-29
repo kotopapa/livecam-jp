@@ -49,7 +49,7 @@ def check_camera(session: requests.Session, camera: dict[str, Any],
         return _check_still(session, camera, state, now, prev_failures)
     if ftype in ("mlit_roadinfo", "jma_volcam", "thr_camxml", "camidx_latest",
                  "saitama_flood", "kochi_suibo", "sizenken", "shimanto_kasen", "takashima_river", "higashiomi_river", "yamaguchi_romen",
-                 "yamaguchi_kasen"):
+                 "yamaguchi_kasen", "shimane_suibo", "fukuoka_kasen"):
         # いずれも都度解決型: main.py が _resolved_image を事前解決してくる
         return _check_roadinfo(session, camera, state, now, prev_failures)
     if ftype == "mie_douro":
@@ -117,6 +117,10 @@ def _check_still(session, camera, state, now, prev_failures, url: str | None = N
         h = history[-1]["hash"] if history else None
     else:
         if not resp.headers.get("Content-Type", "").lower().startswith("image/"):
+            return _fail(state, now, prev_failures, resp.status_code)
+        if not resp.content:
+            # HTTP 200・image/jpeg だが本文0バイト（石川県道路カメラで実発生。
+            # カメラ側停止中にサーバが空ファイルを配信する）→ 失敗として数える
             return _fail(state, now, prev_failures, resp.status_code)
         h = dhash64(resp.content)
         if is_placeholder(h):

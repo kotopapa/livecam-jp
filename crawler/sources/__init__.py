@@ -10,6 +10,7 @@ from crawler.sources.ehime_road import EhimeRoadParser
 from crawler.sources.fukui_road import FukuiRoadParser
 from crawler.sources.fukushima_road import FukushimaRoadParser
 from crawler.sources.fukuoka_city_river import FukuokaCityRiverParser
+from crawler.sources.fukuoka_kasen import FukuokaKasenParser
 from crawler.sources.gifu_road import GifuRoadParser
 from crawler.sources.hiroshima_road import HiroshimaRoadParser
 from crawler.sources.ishikawa_road import IshikawaRoadParser
@@ -35,6 +36,7 @@ from crawler.sources.muni_youtube import MuniYoutubeParser
 from crawler.sources.saga_road import SagaRoadParser
 from crawler.sources.saitama_flood import SaitamaFloodParser
 from crawler.sources.shimane_road import ShimaneRoadParser
+from crawler.sources.shimane_suibo import ShimaneSuiboParser
 from crawler.sources.shizukawa_coast import ShizukawaCoastParser
 from crawler.sources.shizuoka_doboku import ShizuokaDobokuParser
 from crawler.sources.tochigi_road import TochigiRoadParser
@@ -54,6 +56,7 @@ REGISTRY = {
         FukuiRoadParser,
         FukushimaRoadParser,
         FukuokaCityRiverParser,
+        FukuokaKasenParser,
         GifuRoadParser,
         HiroshimaRoadParser,
         IshikawaRoadParser,
@@ -78,6 +81,7 @@ REGISTRY = {
         MuniYoutubeParser,
         SagaRoadParser,
         SaitamaFloodParser,
+        ShimaneSuiboParser,
         ShimaneRoadParser,
         ShizukawaCoastParser,
         ShizuokaDobokuParser,

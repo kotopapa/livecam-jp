@@ -1,0 +1,63 @@
+{
+ "data": [
+  {
+   "lng": 133.04194444444445,
+   "name": "春日",
+   "style": "camera",
+   "id": "camera.8193_90_1",
+   "type": "10min",
+   "title": "春日のカメラ画像",
+   "lat": 35.48555555555556
+  },
+  {
+   "lng": 133.04083333333332,
+   "name": "センチュリータウン",
+   "style": "camera",
+   "id": "camera.8193_90_68",
+   "type": "10min",
+   "title": "センチュリータウンのカメラ画像",
+   "lat": 35.487500000000004
+  },
+  {
+   "lng": 132.29944444444445,
+   "name": "都治",
+   "style": "camera",
+   "id": "camera.8193_90_27",
+   "type": "10min",
+   "title": "都治のカメラ画像",
+   "lat": 35.0325
+  },
+  {
+   "lng": 132.34416666666667,
+   "name": "   ",
+   "style": "camera",
+   "id": "camera.8193_90_67",
+   "type": "10min",
+   "title": "   のカメラ画像",
+   "lat": 35.03361111111111
+  }
+ ],
+ "obsTime": "2026-08-29-14-30",
+ "update": "2026-08-29-14-35",
+ "style": {
+  "camera": {
+   "icon": {
+    "normal": {
+     "anchor_x": 10,
+     "anchor_y": 8,
+     "width": 22,
+     "url": "/res/images/icon/iconMap_camera.png",
+     "height": 18
+    },
+    "highlight": {
+     "anchor_x": 17,
+     "anchor_y": 16,
+     "width": 38,
+     "url": "/res/images/icon/iconMap_camera_on.png",
+     "height": 34
+    }
+   }
+  }
+ },
+ "layer": "MapCameraNow"
+}
