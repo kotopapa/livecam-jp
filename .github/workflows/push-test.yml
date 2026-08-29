@@ -8,7 +8,7 @@ on:
       topics:
         description: "送信先トピック(カンマ区切り。token指定時は無視可)"
         required: false
-        default: "special-warning,special-warning-14"
+        default: ""
       token:
         description: "デバイストークン宛に直接送信(任意)"
         required: false
@@ -87,6 +87,10 @@ jobs:
                                "payload": {"aps": {"sound": "default"}}},
                   }}, timeout=30)
               print("direct:", r.status_code, r.text[:300])
+              # token指定時は直接送信のみ。既定トピックに流れて一般ユーザーへ
+              # テスト通知が届く事故があった(2026-08-30)ため、トピック送信は
+              # token未指定のときだけ行う
+              raise SystemExit(0)
               r.raise_for_status()
           for topic in os.environ.get("TOPICS", "").split(","):
               topic = topic.strip()
