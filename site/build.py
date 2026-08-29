@@ -27,6 +27,14 @@ STORE_URL = "https://apps.apple.com/jp/app/id6802841521"
 INTERNAL_FIELDS = {"verification"}
 
 
+def _notice() -> str | None:
+    p = DATA / "notice.txt"
+    if not p.exists():
+        return None
+    t = p.read_text(encoding="utf-8").strip()
+    return t or None
+
+
 def build() -> int:
     cameras_src = json.loads((DATA / "cameras.json").read_text(encoding="utf-8"))
     approved = [
@@ -69,7 +77,9 @@ def build() -> int:
         "prefectures": sorted(by_pref),
         "min_app_version": MIN_APP_VERSION,
         "store_url": STORE_URL,
-        "notice": None,
+        # data/notice.txt があればアプリ内お知らせバナーとして配信（空なら非表示）。
+        # bot の再ビルドでも消えないようファイルで持つ
+        "notice": _notice(),
     }
     (OUT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
