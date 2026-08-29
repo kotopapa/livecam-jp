@@ -1,6 +1,84 @@
 {
- "version": "2026-08-29T06:03:08Z",
+ "version": "2026-08-29T06:42:21Z",
  "cameras": [
+  {
+   "id": "curated-lcdb-5621ad43",
+   "name": "HBCラジオ第2スタジオ",
+   "name_kana": null,
+   "lat": 43.062618,
+   "lng": 141.347387,
+   "coord_accuracy": "approx",
+   "category": "coast",
+   "prefecture": "01",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "tG1K8s6LFVg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=tG1K8s6LFVg"
+   },
+   "operator": "北海道放送",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=tG1K8s6LFVg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：北海道放送（YouTubeライブ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "民間・報道系の公式YouTubeライブ（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。 ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.hbc.co.jp/radio/"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
+  {
+   "id": "curated-lcdb-d132db4d",
+   "name": "メーテレニュース岐阜県岐阜市",
+   "name_kana": null,
+   "lat": 35.408645,
+   "lng": 136.7559,
+   "coord_accuracy": "approx",
+   "category": "other",
+   "prefecture": "21",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "ElmLqemMkng",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=ElmLqemMkng"
+   },
+   "operator": "名古屋テレビ放送(NBN) メーテレニュースLIVE(メ～テレニュースLIVE)",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=ElmLqemMkng",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：名古屋テレビ放送(NBN) メーテレニュースLIVE(メ～テレニュースLIVE)（YouTubeライブ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "民間・報道系の公式YouTubeライブ（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。 ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.nagoyatv.com/news/"
+   },
+   "verification": null,
+   "first_seen": "2026-08-29",
+   "last_updated": "2026-08-29"
+  },
   {
    "id": "jwa-river-saitama-55201100003",
    "name": "市助",
