@@ -63,6 +63,9 @@ class FukuiRoadParser(SourceParser):
             except (KeyError, TypeError, ValueError):
                 continue
             address = (c.get("address") or "").strip()
+            image_path = ((c.get("data") or {}).get("image") or "").lstrip("/")
+            if not image_path:
+                continue
             # 設置者が市町ならその名を運営者に（それ以外は福井県）
             operator = org if org.endswith(("市", "町", "村")) else "福井県"
             result.candidates.append(CameraCandidate(
@@ -73,7 +76,9 @@ class FukuiRoadParser(SourceParser):
                 # 2026-08-29: 一度「無断転載禁止」文言を理由に誘導型へ切替えたが、
                 # ユーザー判断で静止画の直接表示に戻した（端末が直接取得・出典明記・県へ照会中）
                 feed_type="still_image",
-                feed_url=f"{BASE}assets/images/camera/{cid}.jpg",
+                # 画像ファイル名は data.image（externalId）で、台帳の id とは別番号。
+                # id を使うと他カメラの古い画像を指す（2026-08-29 坂東島で実発生）
+                feed_url=BASE + image_path,
                 fallback_url=f"{BASE}camera.html?id={cid}",
                 operator=operator,
                 page_url=BASE + "camera-list.html",
