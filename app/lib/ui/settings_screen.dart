@@ -336,7 +336,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         const _SectionHeader('災害通知'),
         SwitchListTile(
           secondary: const Icon(Icons.rss_feed),
-          title: const Text('震度5弱以上の地震'),
+          title: const Text('地震（震度のしきい値を選択）'),
           subtitle: Text(_notifyLoaded && _notify.quakeEnabled
               ? '通知レベル: ${NotificationSettings.quakeLevelLabels[_notify.quakeLevel]}'
               : '大きな地震の発生を通知し、周辺カメラへ誘導します'),

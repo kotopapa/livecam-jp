@@ -22,16 +22,18 @@ STATE_PATH = "data/bosai_notify_state.json"
 QUAKE_URL = "https://www.jma.go.jp/bosai/quake/data/list.json"
 WARNING_URL = "https://www.jma.go.jp/bosai/warning/data/r8/map.json"  # 旧warning/map.jsonは2026-05で凍結
 
-STRONG_INTENSITY = {"5-", "5+", "6-", "6+", "7"}
+STRONG_INTENSITY = {"4", "5-", "5+", "6-", "6+", "7"}
 # 震度→通知対象トピック（クライアントは選択レベルの1トピックだけ購読する）
+# quake4 は「震度4以上」を選んだ利用者向け(2026-08-30追加)
 INTENSITY_TOPICS = {
-    "5-": ["quake5"],
-    "5+": ["quake5", "quake5up"],
-    "6-": ["quake5", "quake5up", "quake6low"],
-    "6+": ["quake5", "quake5up", "quake6low"],
-    "7":  ["quake5", "quake5up", "quake6low"],
+    "4":  ["quake4"],
+    "5-": ["quake4", "quake5"],
+    "5+": ["quake4", "quake5", "quake5up"],
+    "6-": ["quake4", "quake5", "quake5up", "quake6low"],
+    "6+": ["quake4", "quake5", "quake5up", "quake6low"],
+    "7":  ["quake4", "quake5", "quake5up", "quake6low"],
 }
-INTENSITY_LABEL = {"5-": "5弱", "5+": "5強", "6-": "6弱", "6+": "6強", "7": "7"}
+INTENSITY_LABEL = {"4": "4", "5-": "5弱", "5+": "5強", "6-": "6弱", "6+": "6強", "7": "7"}
 SPECIAL_WARNINGS = {
     "32": "暴風雪特別警報", "33": "大雨特別警報", "34": "洪水特別警報",
     "35": "暴風特別警報", "36": "大雪特別警報", "37": "波浪特別警報",
@@ -103,7 +105,7 @@ def load_state() -> dict:
         return {"notified_quakes": [], "active_special": []}
 
 
-_INTENSITY_ORDER = {"5-": 0, "5+": 1, "6-": 2, "6+": 3, "7": 4}
+_INTENSITY_ORDER = {"4": 0, "5-": 0, "5+": 1, "6-": 2, "6+": 3, "7": 4}
 
 
 def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
