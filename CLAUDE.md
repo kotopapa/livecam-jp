@@ -85,3 +85,6 @@ python site/build.py                            # 配信ファイル生成
 - **Dartの `DateTime.parse` は `+09:00` 付き文字列をUTCに変換して返す**。気象庁のファイル名（JST）を組み立てるときは `.toUtc().add(9h)` で明示的にJSTへ戻す（アメダスで9時間前のデータを読んでいた）。表示も `toLocal()` ではなく明示変換にする
 - 気象庁の24時間降水量タイル(rasrf24h)の配色しきい値は 〜50/50/80/100/150/200/250/300mm（1時間雨量の 10/20/50/80… とは別）。凡例・ラベル色はタイル画素とアメダス実測値で照合済み
 - quake/list.json の「顕著な地震の震源要素更新」報は cod が度分形式（`+3559.9+14005.7`）。同一eidの複数報は震度が空の報が混ざるので、値の埋まっている項目を合成し最大震度を採る（`JmaLayers.mergeQuakeReports`）
+- **都度解決型の追加（2026-08-29）**: `shimane_suibo`（島根県水防情報。`dyn/camera/camera.json` 1リクエスト→`dyn/camera/<日付>/<時刻>/camera_l/<point>.jpg`、saitama_flood型）、`fukuoka_kasen`（福岡県河川防災情報。座標は `river2/map/data/gisItv_0.html` 埋め込みの itvJson(Shift_JIS)、https失敗のためhttp取得）、`yamaguchi_kasen`（一覧ページ型。サーバのDH鍵が弱く `crawler/sources/base.py` の LegacyTlsAdapter が必須）。いずれもアプリの FeedType 配線済み（リリースまで再生非対応表示）
+- **監視は HTTP 200・image/* でも本文0バイトを失敗として数える**（石川県道路カメラで停止中カメラが空ファイル配信）
+- 運営者不明分の再調査結果は docs/research_2026-08-29/operator_unknown_resolved.md。転載禁止で不採用にした運営者（yamagata-road.net・tollroad-saga・fujikichi 等）と、事前相談文言で見送った臼杵市・高砂市を記録。kawabou 重複候補（埼玉72・福岡24・島根1）は candidates.json に保留中
