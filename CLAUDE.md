@@ -77,7 +77,7 @@ python site/build.py                            # 配信ファイル生成
 - **ライブカメラDB(livecam.asia)索引経由の取込**は tools/livecamdb_index.py（索引）→ tools/livecamdb_ingest.py（一次ソース確認）→ scratchpad の build_*_yaml.py / merge.py / approve_batch.py（消えたら再作成）で流す。座標はGoogleマップ埋め込みの `!2z`（マーカー実位置）を優先、`!2d/!3d` は中心で約200mずれる
 - **YouTubeチャンネルの現在ライブは `/streams` の ytInitialData から取れる**。2026-08時点で一覧は `lockupViewModel`（`contentId` + `thumbnailBadgeViewModel.badgeStyle == THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE`）に変わっており、旧 `videoRenderer` は出ない。索引由来の「チャンネルURLのみ」記録はこれで6割程度が現在の枠に解決できた。ニュース番組・院内番号案内・ペット部屋などカメラ映像でない配信が混ざるので名称/タイトルで除外する
 - **埼玉県川の防災情報と和歌山県河川雨量防災は同じJWAテンプレート**（`geojson/<pref>_camera.geojson` + `chitenconfig/CameraList.csv` + 固定URL `hyoujidata/camera/<ID>.jpg`）。`crawler/sources/jwa_river_cam.py` に県設定を足すだけで他県も対応できる。埼玉はkawabou由来と同一地点が72件あり保留中（候補のnoteに「kawabou重複候補」）
-- **転載禁止文言のため誘導型に切替済み**: みち情報ネットふくい（`camera.html?id=`）・ひろしま道路ナビ（`camera_detail.php?id=`）。県へ照会中（docs/inquiries_2026-08-29.md）。許諾が出たらパーサの feed_type を still_image に戻す
+- **みち情報ネットふくい・ひろしま道路ナビは転載禁止文言があるが、ユーザー判断(2026-08-29)で静止画の直接表示を継続**（端末が直接取得・出典明記）。県へ照会中（docs/inquiries_2026-08-29.md）。回答が「不可」なら誘導型（福井 `camera.html?id=`・広島 `camera_detail.php?id=`）に切替える
 - 掲載元システムの利用条件・取得構造の調査結果は docs/research_2026-08-29/system_parsers_terms.md（静岡SIPOS・名古屋市は要照会、NTTルパルクは不可、山口・島根・福岡は実装可/条件付き）
 
 ## アプリの知見（2026-08-29追記）

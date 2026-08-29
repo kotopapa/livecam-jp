@@ -62,11 +62,11 @@ class HiroshimaRoadParser(SourceParser):
                 name=point,
                 category="road",
                 prefecture="34",
-                # サイト規約「広島県に無断で転載等を行うことはできません」(2026-08-29確認)
-                # のため静止画は直接参照せず、カメラ個別ページへの誘導型にする
-                feed_type="web_page",
-                feed_url=f"{BASE}camera_detail.php?id={c['id']}",
-                fallback_url=LIST_URL,
+                # 2026-08-29: 一度「無断転載等不可」文言を理由に誘導型へ切替えたが、
+                # ユーザー判断で静止画の直接表示に戻した（端末が直接取得・出典明記・県へ照会中）
+                feed_type="still_image",
+                feed_url=f"{BASE}snow_pic/{c['id']}.jpg",
+                fallback_url=f"{BASE}camera_detail.php?id={c['id']}",
                 operator="広島県",
                 page_url=LIST_URL,
                 attribution="出典：広島県「ひろしま道路ナビ」",

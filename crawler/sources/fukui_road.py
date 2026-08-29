@@ -70,11 +70,11 @@ class FukuiRoadParser(SourceParser):
                 name=f"{name}（{address}）" if address and address not in name else name,
                 category="road",
                 prefecture="18",
-                # サイト規約「掲載されている内容の無断転載を禁じます」(2026-08-29確認)
-                # のため静止画は直接参照せず、カメラ一覧ページへの誘導型にする
-                feed_type="web_page",
-                feed_url=f"{BASE}camera.html?id={cid}",
-                fallback_url=BASE + "camera-list.html",
+                # 2026-08-29: 一度「無断転載禁止」文言を理由に誘導型へ切替えたが、
+                # ユーザー判断で静止画の直接表示に戻した（端末が直接取得・出典明記・県へ照会中）
+                feed_type="still_image",
+                feed_url=f"{BASE}assets/images/camera/{cid}.jpg",
+                fallback_url=f"{BASE}camera.html?id={cid}",
                 operator=operator,
                 page_url=BASE + "camera-list.html",
                 attribution="出典：福井県「みち情報ネットふくい」",
