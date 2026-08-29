@@ -73,7 +73,7 @@ class FukuiRoadParser(SourceParser):
                 # サイト規約「掲載されている内容の無断転載を禁じます」(2026-08-29確認)
                 # のため静止画は直接参照せず、カメラ一覧ページへの誘導型にする
                 feed_type="web_page",
-                feed_url=BASE + "camera-list.html",
+                feed_url=f"{BASE}camera.html?id={cid}",
                 fallback_url=BASE + "camera-list.html",
                 operator=operator,
                 page_url=BASE + "camera-list.html",
