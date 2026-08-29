@@ -105,7 +105,7 @@ def load_state() -> dict:
         return {"notified_quakes": [], "active_special": []}
 
 
-_INTENSITY_ORDER = {"4": 0, "5-": 0, "5+": 1, "6-": 2, "6+": 3, "7": 4}
+_INTENSITY_ORDER = {"4": -1, "5-": 0, "5+": 1, "6-": 2, "6+": 3, "7": 4}
 
 
 def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:

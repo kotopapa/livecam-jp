@@ -88,3 +88,8 @@ python site/build.py                            # 配信ファイル生成
 - **都度解決型の追加（2026-08-29）**: `shimane_suibo`（島根県水防情報。`dyn/camera/camera.json` 1リクエスト→`dyn/camera/<日付>/<時刻>/camera_l/<point>.jpg`、saitama_flood型）、`fukuoka_kasen`（福岡県河川防災情報。座標は `river2/map/data/gisItv_0.html` 埋め込みの itvJson(Shift_JIS)、https失敗のためhttp取得）、`yamaguchi_kasen`（一覧ページ型。サーバのDH鍵が弱く `crawler/sources/base.py` の LegacyTlsAdapter が必須）。いずれもアプリの FeedType 配線済み（リリースまで再生非対応表示）
 - **監視は HTTP 200・image/* でも本文0バイトを失敗として数える**（石川県道路カメラで停止中カメラが空ファイル配信）
 - 運営者不明分の再調査結果は docs/research_2026-08-29/operator_unknown_resolved.md。転載禁止で不採用にした運営者（yamagata-road.net・tollroad-saga・fujikichi 等）と、事前相談文言で見送った臼杵市・高砂市を記録。kawabou 重複候補（埼玉72・福岡24・島根1）は candidates.json に保留中
+
+## Push通知の運用ルール（2026-08-30追記・厳守）
+
+- **本番トピック（special-warning / danger-warning / quake* とその都道府県別）へテスト送信をしてはならない**。一般ユーザー700人超に「【テスト】」通知が届く事故を起こした。切り分けは必ず `push-test.yml` の **mode=send + token指定（直接送信のみ）** で行う。トピック経路の確認が必要なときは、本番と別のテスト専用トピック（例: `test-only`。アプリは購読しない）を使うか、ユーザーに事前に確認を取る
+- push-test.yml は token 指定時にトピックへ送らないよう修正済み。topics の既定値も空
