@@ -91,7 +91,18 @@ def main() -> int:
     print(f"{yesterday}: {len(counts)}台 / {sum(counts.values())}回")
 
     # お気に入り累積（読むだけ・削除しない。±が相殺され現在の登録数になる）
-    favs = list_collection_counts(s, project, "favs/all/cams")
+    # お気に入り集計(favs/all/cams は登録済みカメラ数ぶんの読取)は1日1回だけ。
+    # 3時間おきの実行では前回値を引き継ぐ
+    today_str = datetime.now(JST).strftime("%Y%m%d")
+    try:
+        prev_state = json.load(open(RANKING_PATH, encoding="utf-8"))
+    except FileNotFoundError:
+        prev_state = {}
+    if prev_state.get("favorites_date") == today_str:
+        favs = prev_state.get("favorites", {})
+        print("favorites: 本日分は集計済み(前回値を使用)")
+    else:
+        favs = list_collection_counts(s, project, "favs/all/cams")
     favs = {k: v for k, v in favs.items() if v > 0}
     print(f"favorites: {len(favs)}台 / {sum(favs.values())}件")
 
@@ -117,6 +128,7 @@ def main() -> int:
     print(f"today({today}) partial: {len(today_counts)}台")
 
     state["favorites"] = favs
+    state["favorites_date"] = today_str
     state["updated"] = datetime.now(JST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
 
     json.dump(state, open(RANKING_PATH, "w", encoding="utf-8"),

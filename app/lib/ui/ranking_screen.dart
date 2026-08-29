@@ -9,7 +9,7 @@ import '../models/camera.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 
-enum _RankMode { recent, total, favorites }
+enum _RankMode { day, recent, favorites }
 
 /// 全国ランキング画面。全ユーザーの匿名統計（GitHub Pagesの静的JSON）に基づく。
 /// 個人の履歴ではなく全国共通のランキングを表示する（毎日1回更新）。
@@ -23,7 +23,7 @@ class RankingScreen extends StatefulWidget {
 }
 
 class _RankingScreenState extends State<RankingScreen> {
-  _RankMode _mode = _RankMode.recent;
+  _RankMode _mode = _RankMode.day;
   Map<String, List<(String, int)>>? _data; // key -> [(cameraId, count)]
   bool _loading = false;
   String? _error;
@@ -45,7 +45,7 @@ class _RankingScreenState extends State<RankingScreen> {
           .get(Uri.parse('${apiBaseUrl}ranking.json'))
           .timeout(const Duration(seconds: 15));
       if (resp.statusCode == 404) {
-        _error = '全国ランキングは準備中です。\n集計は毎日1回行われます（初回データは明日以降）。';
+        _error = '全国ランキングは準備中です。\n集計は3時間おきに行われます。';
       } else if (resp.statusCode != 200) {
         _error = '取得に失敗しました (HTTP ${resp.statusCode})';
       } else {
@@ -57,8 +57,8 @@ class _RankingScreenState extends State<RankingScreen> {
                 (e['id'] as String, e[countKey] as int),
             ];
         _data = {
+          'day': parse('day', 'day'),
           'recent': parse('recent', 'recent'),
-          'total': parse('total', 'total'),
           'favorites': parse('favorites', 'count'),
         };
       }
@@ -72,8 +72,8 @@ class _RankingScreenState extends State<RankingScreen> {
   List<(Camera, String)> _ranked() {
     final byId = {for (final c in widget.app.repository.cameras) c.id: c};
     final key = switch (_mode) {
+      _RankMode.day => 'day',
       _RankMode.recent => 'recent',
-      _RankMode.total => 'total',
       _RankMode.favorites => 'favorites',
     };
     final unit = _mode == _RankMode.favorites ? '件' : '回';
@@ -98,14 +98,14 @@ class _RankingScreenState extends State<RankingScreen> {
           padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
           child: Wrap(spacing: 8, children: [
             ChoiceChip(
-              label: const Text('よく見られている（7日間）'),
-              selected: _mode == _RankMode.recent,
-              onSelected: (_) => setState(() => _mode = _RankMode.recent),
+              label: const Text('いま見られている（24時間 TOP10）'),
+              selected: _mode == _RankMode.day,
+              onSelected: (_) => setState(() => _mode = _RankMode.day),
             ),
             ChoiceChip(
-              label: const Text('よく見られている（累計）'),
-              selected: _mode == _RankMode.total,
-              onSelected: (_) => setState(() => _mode = _RankMode.total),
+              label: const Text('よく見られている（7日間 TOP30）'),
+              selected: _mode == _RankMode.recent,
+              onSelected: (_) => setState(() => _mode = _RankMode.recent),
             ),
             ChoiceChip(
               label: const Text('お気に入り登録数'),

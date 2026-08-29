@@ -2,7 +2,8 @@ name: ranking
 
 on:
   schedule:
-    - cron: "30 17 * * *" # JST 02:30 に前日分を集計
+    - cron: "30 17 * * *" # JST 02:30 に前日分を確定集計
+    - cron: "20 */3 * * *" # 3時間おきに当日分(暫定)を更新(直近24時間ランキング用)
   workflow_dispatch:
 
 permissions:

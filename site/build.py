@@ -91,17 +91,28 @@ def build() -> int:
         cams = state.get("cameras", {})
         # 当日分の暫定値を上乗せ（確定処理は翌日の集計で行われる）
         partial = state.get("today_partial", {}).get("counts", {})
+        # 直近24時間の近似: 当日分(暫定) + 前日分×(24-経過時間)/24。
+        # 集計は3時間おきに回るので当日分がほぼ最新になる
+        from datetime import datetime, timedelta, timezone
+        jst = timezone(timedelta(hours=9))
+        now = datetime.now(jst)
+        yesterday = (now - timedelta(days=1)).strftime("%Y%m%d")
+        frac = max(0.0, (24 - now.hour - now.minute / 60) / 24)
         entries = []
         for cid in set(cams) | set(partial):
             if cid not in ids:
                 continue  # 削除済みカメラはランキングから外す
             rec = cams.get(cid, {})
             extra = partial.get(cid, 0)
-            recent = sum(rec.get("days", {}).values()) + extra
-            entries.append({"id": cid, "recent": recent,
+            days = rec.get("days", {})
+            recent = sum(days.values()) + extra
+            day = int(round(extra + days.get(yesterday, 0) * frac))
+            entries.append({"id": cid, "recent": recent, "day": day,
                             "total": rec.get("total", 0) + extra})
-        top_recent = sorted(entries, key=lambda e: -e["recent"])[:300]
-        top_total = sorted(entries, key=lambda e: -e["total"])[:300]
+        top_day = sorted(entries, key=lambda e: -e["day"])[:10]
+        top_recent = sorted(entries, key=lambda e: -e["recent"])[:30]
+        # 旧バージョンのアプリ向け(累計タブ)に total も残す
+        top_total = sorted(entries, key=lambda e: -e["total"])[:30]
         favs = [{"id": cid, "count": n}
                 for cid, n in state.get("favorites", {}).items()
                 if cid in ids and n > 0]
@@ -109,9 +120,10 @@ def build() -> int:
         (OUT / "ranking.json").write_text(json.dumps({
             "updated": state.get("updated"),
             "recent_days": 7,
+            "day": [e for e in top_day if e["day"] > 0],
             "recent": [e for e in top_recent if e["recent"] > 0],
             "total": [e for e in top_total if e["total"] > 0],
-            "favorites": favs[:300],
+            "favorites": favs[:30],
         }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         print(f"ranking.json 生成: {len(entries)}台")
 
