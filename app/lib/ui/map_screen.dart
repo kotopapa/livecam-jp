@@ -102,6 +102,7 @@ class _MapScreenState extends State<MapScreen> {
   @override
   void initState() {
     super.initState();
+    _loadDismissedNotice();
     widget.app.addListener(_onDataChanged);
     // 初回フレーム後に前回位置へ移動（MapControllerはレイアウト後に有効）
     WidgetsBinding.instance.addPostFrameCallback((_) => _restorePosition());
@@ -1100,11 +1101,26 @@ class _MapScreenState extends State<MapScreen> {
     // お知らせバナーは地図の上に重ねず、地図の上部に積む（台数チップや
     // レイヤーボタンと重なって読めなくなるため。2026-08-30）
     final notice = widget.app.notice;
-    if (notice == null) return _mapStack(context);
+    if (notice == null || notice == _dismissedNotice) return _mapStack(context);
     return Column(children: [
-      _NoticeBanner(text: notice),
+      _NoticeBanner(text: notice, onClose: () => _dismissNotice(notice)),
       Expanded(child: _mapStack(context)),
     ]);
+  }
+
+  static const _dismissedNoticeKey = 'notice_dismissed';
+  String? _dismissedNotice;
+
+  Future<void> _loadDismissedNotice() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (mounted) setState(() => _dismissedNotice = prefs.getString(_dismissedNoticeKey));
+  }
+
+  /// 閉じたお知らせは同じ文言のあいだ再表示しない（文言が変われば再び出る）
+  Future<void> _dismissNotice(String text) async {
+    setState(() => _dismissedNotice = text);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_dismissedNoticeKey, text);
   }
 
   Widget _mapStack(BuildContext context) {
@@ -1392,18 +1408,30 @@ class _GsiAttribution extends StatelessWidget {
 }
 
 class _NoticeBanner extends StatelessWidget {
-  const _NoticeBanner({required this.text});
+  const _NoticeBanner({required this.text, this.onClose});
 
   final String text;
+  final VoidCallback? onClose;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      bottom: false,
       child: Container(
         width: double.infinity,
         color: const Color(0xFFFFF3CD),
-        padding: const EdgeInsets.all(8),
-        child: Text(text, style: const TextStyle(fontSize: 13)),
+        padding: const EdgeInsets.fromLTRB(12, 8, 4, 8),
+        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Expanded(child: Text(text.trim(), style: const TextStyle(fontSize: 13))),
+          if (onClose != null)
+            IconButton(
+              icon: const Icon(Icons.close, size: 18),
+              padding: EdgeInsets.zero,
+              constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+              tooltip: '閉じる',
+              onPressed: onClose,
+            ),
+        ]),
       ),
     );
   }
