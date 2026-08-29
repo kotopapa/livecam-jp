@@ -1188,16 +1188,15 @@ class _MapScreenState extends State<MapScreen> {
               ]),
             Align(
               alignment: Alignment.bottomLeft,
-              child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
-                _GsiAttribution(worldTiles: _useWorldTiles),
-              ]),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
+              // 時刻スライダー → 凡例 → 出典 の順に縦に積む（重なり防止）。
+              // 右側のズーム/現在地ボタン(幅約60px)を避けて右に余白を取る
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 44, right: 60),
-                child: _nowcastSlider(),
+                padding: const EdgeInsets.only(right: 60),
+                child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Padding(padding: const EdgeInsets.only(bottom: 6), child: _nowcastSlider()),
+                  Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
+                  _GsiAttribution(worldTiles: _useWorldTiles),
+                ]),
               ),
             ),
           ],
