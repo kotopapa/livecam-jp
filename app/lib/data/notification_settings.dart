@@ -26,15 +26,13 @@ class NotificationSettings {
     for (var i = 1; i <= 47; i++) i.toString().padLeft(2, '0')
   ];
 
-  static const quakeLevels = ['4', '5-', '5+', '6-'];
+  static const quakeLevels = ['5-', '5+', '6-'];
   static const quakeLevelLabels = {
-    '4': '震度4以上',
     '5-': '震度5弱以上',
     '5+': '震度5強以上',
     '6-': '震度6弱以上',
   };
   static const _levelTopics = {
-    '4': 'quake4',
     '5-': 'quake5',
     '5+': 'quake5up',
     '6-': 'quake6low',

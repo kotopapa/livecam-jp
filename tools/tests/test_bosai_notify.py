@@ -176,19 +176,7 @@ def test_quake_multiple_reports_same_eid_send_single_push():
     assert eid == "20260823020005"
     assert title == "震度5弱の地震が発生しました"
     assert body.startswith("茨城県南部で震度5弱（M5.9・")
-    assert topics == ["quake4", "quake5"]
-
-
-def test_quake_intensity_4_goes_to_quake4_only():
-    # 震度4は「震度4以上」を選んだ利用者(quake4)にだけ届く
-    at = _recent_at()
-    entries = [{"eid": "e4", "maxi": "4", "anm": "千葉県東方沖", "mag": "4.8",
-                "at": at, "rdt": at}]
-    with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
-        events = bosai_notify.check_quakes({"notified_quakes": []})
-    assert len(events) == 1
-    assert events[0][3] == ["quake4"]
-    assert "震度4" in events[0][1]
+    assert topics == ["quake5"]
 
 
 def test_quake_sokuho_only_omits_empty_place_and_mag():
@@ -216,7 +204,7 @@ def test_quake_uses_highest_intensity_among_reports():
         events = bosai_notify.check_quakes({"notified_quakes": []})
     assert len(events) == 1
     assert "震度5強" in events[0][1]
-    assert events[0][3] == ["quake4", "quake5", "quake5up"]
+    assert events[0][3] == ["quake5", "quake5up"]
 
 
 def test_quake_already_notified_eid_skipped():
