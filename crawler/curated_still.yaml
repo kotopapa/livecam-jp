@@ -30742,3 +30742,713 @@ cameras:
     image_url: http://www.yamanashigreenenergy.jp/plant/tokushimazeki/camera2.jpg
     page_url: http://www.yamanashigreenenergy.jp/plant/tokushimazeki/index.php
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県韮崎市旭町'
+
+  # --- livecam.asia 索引経由の一次ソース確認分 (2026-08-29) ---
+  - id: curated-link-lcdb-2e70ef56
+    name: 小島海岸
+    operator: 豊橋市役所農業支援課
+    category: coast
+    prefecture: '23'
+    lat: 34.668972
+    lng: 137.445278
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=g-oTmfTbNBk
+    image_url: https://www.youtube.com/watch?v=g-oTmfTbNBk
+    page_url: https://www.city.toyohashi.lg.jp/12038.htm
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-9bdbb022
+    name: 小松原海岸東側
+    operator: 豊橋市農業支援課
+    category: coast
+    prefecture: '23'
+    lat: 34.668
+    lng: 137.438417
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=S8EGB7mcYXg
+    image_url: https://www.youtube.com/watch?v=S8EGB7mcYXg
+    page_url: https://www.city.toyohashi.lg.jp/12038.htm
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-dc45f58d
+    name: 小松原海岸西側
+    operator: 豊橋市農業支援課
+    category: coast
+    prefecture: '23'
+    lat: 34.668
+    lng: 137.438417
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=feauIt5F5Cw
+    image_url: https://www.youtube.com/watch?v=feauIt5F5Cw
+    page_url: https://www.city.toyohashi.lg.jp/12038.htm
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-dabd6ab3
+    name: 利根川烏川8拠点巡回
+    operator: 国土交通省関東地方整備局河川部水災害予報センター
+    category: river
+    prefecture: '12'
+    lat: 35.891152
+    lng: 139.629278
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=ssFGEK8BUI0
+    image_url: https://www.youtube.com/watch?v=ssFGEK8BUI0
+    page_url: https://www.ktr.mlit.go.jp/river/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-bc4d9e4f
+    name: 酒々井町排水路上岩橋国道51号上流
+    operator: 酒々井町役場
+    category: road
+    prefecture: '12'
+    lat: 35.73725
+    lng: 140.274778
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=xsQ_k9zncvw
+    image_url: https://www.youtube.com/watch?v=xsQ_k9zncvw
+    page_url: https://www.youtube.com/channel/UCyh5twlggEMNBT-f_i20G3Q
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-eff2a321
+    name: 酒々井町排水路京成横断
+    operator: 酒々井町役場
+    category: river
+    prefecture: '12'
+    lat: 35.737417
+    lng: 140.271222
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=4nwTJtb6V68
+    image_url: https://www.youtube.com/watch?v=4nwTJtb6V68
+    page_url: https://www.youtube.com/channel/UCyh5twlggEMNBT-f_i20G3Q
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-92baaf53
+    name: 酒々井町排水路水防活動拠点上流
+    operator: 酒々井町役場
+    category: river
+    prefecture: '12'
+    lat: 35.737417
+    lng: 140.271222
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=oFbCXUCC0gQ
+    image_url: https://www.youtube.com/watch?v=oFbCXUCC0gQ
+    page_url: https://www.youtube.com/channel/UCyh5twlggEMNBT-f_i20G3Q
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-1f6911ac
+    name: RCN笙の川
+    operator: 嶺南ケーブルネットワーク(つるがチャンネルLIVE)
+    category: river
+    prefecture: '18'
+    lat: 35.649861
+    lng: 136.061889
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=BXAfKaTix5A
+    image_url: https://www.youtube.com/watch?v=BXAfKaTix5A
+    page_url: https://www.rcn.ne.jp/wp-content/themes/minet/getCameraImage.php?number=3
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-22ab1991
+    name: 市立恵那病院恵那山方面
+    operator: 市立恵那病院
+    category: scenic
+    prefecture: '21'
+    lat: 35.464322
+    lng: 137.393556
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=cVoLbl03_vs
+    image_url: https://www.youtube.com/watch?v=cVoLbl03_vs
+    page_url: https://www.enahosp.jp/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-ed22aba8
+    name: 市立恵那病院ヘリポート方面
+    operator: 市立恵那病院
+    category: other
+    prefecture: '21'
+    lat: 35.464322
+    lng: 137.393556
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=OckdiVGYMSk
+    image_url: https://www.youtube.com/watch?v=OckdiVGYMSk
+    page_url: https://www.enahosp.jp/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-15d2a080
+    name: 市立恵那病院正面駐車場方面
+    operator: 市立恵那病院
+    category: other
+    prefecture: '21'
+    lat: 35.464322
+    lng: 137.393556
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=bUZ1s8KO_uM
+    image_url: https://www.youtube.com/watch?v=bUZ1s8KO_uM
+    page_url: https://www.enahosp.jp/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-c3952cc7
+    name: 桐生が岡動物園レッサーパンダ東エリア
+    operator: 桐生が岡動物園
+    category: other
+    prefecture: '10'
+    lat: 36.420818
+    lng: 139.335225
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=mbmp7hmMG_Q
+    image_url: https://www.youtube.com/watch?v=mbmp7hmMG_Q
+    page_url: https://www.city.kiryu.lg.jp/zoo/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-a2335e09
+    name: 御崎屋外スピーカー付近第1
+    operator: 利尻町役場(利尻町建設課)
+    category: coast
+    prefecture: '01'
+    lat: 45.099778
+    lng: 141.244
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=vj2pOiWolhk
+    image_url: https://www.youtube.com/watch?v=vj2pOiWolhk
+    page_url: https://www.youtube.com/channel/UCPWTeWcOqF1uDv1dHi5wJsg
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-e2e09637
+    name: 御崎屋外スピーカー付近第2
+    operator: 利尻町役場(利尻町建設課)
+    category: coast
+    prefecture: '01'
+    lat: 45.099778
+    lng: 141.244
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=Mn9EszbHh4Y
+    image_url: https://www.youtube.com/watch?v=Mn9EszbHh4Y
+    page_url: https://www.youtube.com/channel/UCPWTeWcOqF1uDv1dHi5wJsg
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-29272917
+    name: 栄浜灯台付近第1
+    operator: 利尻町役場(利尻町建設課)
+    category: coast
+    prefecture: '01'
+    lat: 45.213583
+    lng: 141.133639
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=WPDRuyBv6LE
+    image_url: https://www.youtube.com/watch?v=WPDRuyBv6LE
+    page_url: https://www.youtube.com/channel/UCPWTeWcOqF1uDv1dHi5wJsg
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-7cc296c9
+    name: 栄浜灯台付近第2
+    operator: 利尻町役場(利尻町建設課)
+    category: coast
+    prefecture: '01'
+    lat: 45.213583
+    lng: 141.133639
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=P9stiZVACSg
+    image_url: https://www.youtube.com/watch?v=P9stiZVACSg
+    page_url: https://www.youtube.com/channel/UCPWTeWcOqF1uDv1dHi5wJsg
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-33194eb5
+    name: 明石川JR橋梁付近
+    operator: 兵庫県庁土木部(ひょうご土木チャンネル)
+    category: river
+    prefecture: '28'
+    lat: 34.683164
+    lng: 134.906426
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=4wh97ib7cuQ
+    image_url: https://www.youtube.com/watch?v=4wh97ib7cuQ
+    page_url: https://web.pref.hyogo.lg.jp/org/kendo-somu/kendoseibi.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-5211ffaa
+    name: 播磨大橋内陸側
+    operator: 播磨町役場
+    category: river
+    prefecture: '28'
+    lat: 34.711028
+    lng: 134.859917
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=Yy0DgGrXLWg
+    image_url: https://www.youtube.com/watch?v=Yy0DgGrXLWg
+    page_url: http://acam1.hiplat.jp/mobicam/opt/view.php?ID=01051001&amp;RELOAD=1&amp;TIME=1
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-2b217888
+    name: 播磨大橋海側
+    operator: 播磨町役場
+    category: coast
+    prefecture: '28'
+    lat: 34.71
+    lng: 134.859111
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=3O3TVSoaMZk
+    image_url: https://www.youtube.com/watch?v=3O3TVSoaMZk
+    page_url: http://acam1.hiplat.jp/mobicam/opt/view.php?ID=01051002&amp;RELOAD=1&amp;TIME=1
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-c3eef4fc
+    name: 伊丹天神川上流
+    operator: 兵庫県庁土木部(ひょうご土木チャンネル)
+    category: river
+    prefecture: '28'
+    lat: 34.78619
+    lng: 135.387495
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=LRS8RX8lYwU
+    image_url: https://www.youtube.com/watch?v=LRS8RX8lYwU
+    page_url: https://web.pref.hyogo.lg.jp/org/kendo-somu/kendoseibi.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-b102bbd4
+    name: 伊丹天神川下流
+    operator: 兵庫県庁土木部(ひょうご土木チャンネル)
+    category: river
+    prefecture: '28'
+    lat: 34.78619
+    lng: 135.387495
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=-TOpyTaSh0w
+    image_url: https://www.youtube.com/watch?v=-TOpyTaSh0w
+    page_url: https://web.pref.hyogo.lg.jp/org/kendo-somu/kendoseibi.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-f3b3644f
+    name: 兵庫県道25号阿万福良湊線福良丙
+    operator: 兵庫県庁土木部(ひょうご土木チャンネル)
+    category: road
+    prefecture: '28'
+    lat: 34.250771
+    lng: 134.664008
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=avr-dsXUlDc
+    image_url: https://www.youtube.com/watch?v=avr-dsXUlDc
+    page_url: https://web.pref.hyogo.lg.jp/org/kendo-somu/kendoseibi.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-c478f262
+    name: ハチ高原
+    operator: かねいちや
+    category: scenic
+    prefecture: '28'
+    lat: 35.385846
+    lng: 134.528812
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=8Tc2jpzNHCA
+    image_url: https://www.youtube.com/watch?v=8Tc2jpzNHCA
+    page_url: https://www.kaneichiya.jp/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-b7c784f4
+    name: 兵庫県道87号関宮小代線轟
+    operator: 兵庫県庁土木部(ひょうご土木チャンネル)
+    category: road
+    prefecture: '28'
+    lat: 35.350479
+    lng: 134.591318
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=eL3MIhLVKeg
+    image_url: https://www.youtube.com/watch?v=eL3MIhLVKeg
+    page_url: https://web.pref.hyogo.lg.jp/org/kendo-somu/kendoseibi.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-96d3dbf1
+    name: 枕崎観光ホテル岩戸上空星空南側
+    operator: 枕崎観光ホテル岩戸
+    category: other
+    prefecture: '46'
+    lat: 31.266652
+    lng: 130.307425
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=3657YHx3w2g
+    image_url: https://www.youtube.com/watch?v=3657YHx3w2g
+    page_url: https://hotel-iwato.com/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-e24798c6
+    name: 屋久島田んぼ
+    operator: shingenn
+    category: other
+    prefecture: '46'
+    lat: 30.363483
+    lng: 130.407189
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=-IWoIwMbaZ0
+    image_url: https://www.youtube.com/watch?v=-IWoIwMbaZ0
+    page_url: https://www.youtube.com/watch?v=-IWoIwMbaZ0
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-54dbb816
+    name: いなべ市観光協会両ヶ池
+    operator: いなべ市観光協会
+    category: other
+    prefecture: '24'
+    lat: 35.103521
+    lng: 136.525144
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=TvwUbbGvjgc
+    image_url: https://www.youtube.com/watch?v=TvwUbbGvjgc
+    page_url: https://ssl.kanko-inabe.jp/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-beb7cb93
+    name: JAふれあい市よれっしゃこいっちゃ産直売場第1
+    operator: JAにいがた岩船
+    category: other
+    prefecture: '15'
+    lat: 38.218138
+    lng: 139.463448
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=EQ87vdKxwtU
+    image_url: https://www.youtube.com/watch?v=EQ87vdKxwtU
+    page_url: https://www.youtube.com/channel/UCPAuCLWsGBJDaS21WrGy2Jw
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-0460b25b
+    name: JAふれあい市よれっしゃこいっちゃ産直売場第2
+    operator: JAにいがた岩船
+    category: other
+    prefecture: '15'
+    lat: 38.218138
+    lng: 139.463448
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=cVssBgjzFMk
+    image_url: https://www.youtube.com/watch?v=cVssBgjzFMk
+    page_url: https://www.youtube.com/channel/UCPAuCLWsGBJDaS21WrGy2Jw
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-0694b417
+    name: JAふれあい市よれっしゃこいっちゃ産直売場第3
+    operator: JAにいがた岩船
+    category: other
+    prefecture: '15'
+    lat: 38.218138
+    lng: 139.463448
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=8dIYLkJMeOQ
+    image_url: https://www.youtube.com/watch?v=8dIYLkJMeOQ
+    page_url: https://www.youtube.com/channel/UCPAuCLWsGBJDaS21WrGy2Jw
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-e3d7494b
+    name: 岡山祇園寺大杉
+    operator: 祇園寺
+    category: scenic
+    prefecture: '33'
+    lat: 34.898345
+    lng: 133.609865
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=64neiQ6uQqg
+    image_url: https://www.youtube.com/watch?v=64neiQ6uQqg
+    page_url: https://www.youtube.com/watch?v=64neiQ6uQqg
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-2854d355
+    name: 岡山祇園寺雲海
+    operator: 祇園寺
+    category: coast
+    prefecture: '33'
+    lat: 34.898345
+    lng: 133.609865
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=SklXR7AJxUI
+    image_url: https://www.youtube.com/watch?v=SklXR7AJxUI
+    page_url: https://www.youtube.com/watch?v=SklXR7AJxUI
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-f1f37018
+    name: ひらたCATV丹堀川
+    operator: ひらたCATV(雲州わがとこテレビ)
+    category: river
+    prefecture: '32'
+    lat: 35.429833
+    lng: 132.809833
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=GI7JaHEFNWQ
+    image_url: https://www.youtube.com/watch?v=GI7JaHEFNWQ
+    page_url: https://www.wagatoko.tv/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-3430bd7d
+    name: ひらたCATV平田船川西郷土手
+    operator: ひらたCATV(雲州わがとこテレビ)
+    category: river
+    prefecture: '32'
+    lat: 35.434556
+    lng: 132.80075
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=E8XGONQ55Ds
+    image_url: https://www.youtube.com/watch?v=E8XGONQ55Ds
+    page_url: https://www.wagatoko.tv/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-da46cfb8
+    name: ひらたCATV宍道湖平田船川河口
+    operator: ひらたCATV(雲州わがとこテレビ)
+    category: river
+    prefecture: '32'
+    lat: 35.446222
+    lng: 132.863444
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=t-4KLrsSBHU
+    image_url: https://www.youtube.com/watch?v=t-4KLrsSBHU
+    page_url: https://www.wagatoko.tv/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-2ef2eb08
+    name: 洞貫川広瀬
+    operator: 安来市水位監視カメラ(安来市役所)
+    category: river
+    prefecture: '32'
+    lat: 35.367632
+    lng: 133.158984
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=ZDha8EvDzlM
+    image_url: https://www.youtube.com/watch?v=ZDha8EvDzlM
+    page_url: https://www.youtube.com/watch?v=ZDha8EvDzlM
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-0ee07d81
+    name: 田頼川中津
+    operator: 安来市水位監視カメラ(安来市役所)
+    category: river
+    prefecture: '32'
+    lat: 35.411615
+    lng: 133.210913
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=PGDwf0LGCkE
+    image_url: https://www.youtube.com/watch?v=PGDwf0LGCkE
+    page_url: https://www.youtube.com/watch?v=PGDwf0LGCkE
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-11a7078b
+    name: 富士川5拠点巡回
+    operator: 国土交通省関東地方整備局河川部水災害予報センター
+    category: river
+    prefecture: '22'
+    lat: 35.891152
+    lng: 139.629278
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=hhI7lG-XayM
+    image_url: https://www.youtube.com/watch?v=hhI7lG-XayM
+    page_url: https://www.ktr.mlit.go.jp/river/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-5a524183
+    name: 河津桜観光交流館駐車場第2
+    operator: 河津桜まつり実行委員会
+    category: other
+    prefecture: '22'
+    lat: 34.750666
+    lng: 138.989725
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=xTVFzc8vC48
+    image_url: https://www.youtube.com/watch?v=xTVFzc8vC48
+    page_url: https://kawazuzakura.jp/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-1e6fa6e2
+    name: 関東地方整備局遊水地放水路11拠点巡回
+    operator: 国土交通省関東地方整備局河川部水災害予報センター
+    category: river
+    prefecture: '13'
+    lat: 35.891152
+    lng: 139.629278
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=J1QzUo3L6YM
+    image_url: https://www.youtube.com/watch?v=J1QzUo3L6YM
+    page_url: https://www.ktr.mlit.go.jp/river/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-b7888db9
+    name: 国道1号桜田通り
+    operator: w-akrs-2
+    category: port
+    prefecture: '13'
+    lat: 35.649854
+    lng: 139.738767
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=L4kU0Ds8EGE
+    image_url: https://www.youtube.com/watch?v=L4kU0Ds8EGE
+    page_url: https://www.youtube.com/watch?v=L4kU0Ds8EGE
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-256b901f
+    name: 父島小港海岸
+    operator: 小笠原村役場
+    category: port
+    prefecture: '13'
+    lat: 27.060325
+    lng: 142.192941
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=cYN5f--ZLYQ
+    image_url: https://www.youtube.com/watch?v=cYN5f--ZLYQ
+    page_url: http://gajyumaru.it-ogasawara.com/cam5.php
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-3a4167f4
+    name: 有田川粟生
+    operator: 和歌山県庁(和歌山県河川雨量防災情報システム)
+    category: river
+    prefecture: '30'
+    lat: 34.046861
+    lng: 135.339833
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=Q404o621woA
+    image_url: https://www.youtube.com/watch?v=Q404o621woA
+    page_url: https://www.pref.wakayama.lg.jp/prefg/130400/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-71914c87
+    name: 有田川二川ダム上流側
+    operator: 和歌山県庁(和歌山県河川雨量防災情報システム)
+    category: dam
+    prefecture: '30'
+    lat: 34.080642
+    lng: 135.356873
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=8NTRQt2jmRI
+    image_url: https://www.youtube.com/watch?v=8NTRQt2jmRI
+    page_url: https://www.pref.wakayama.lg.jp/prefg/130400/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-f33679c7
+    name: 有田川二川ダム下流側
+    operator: 和歌山県庁(和歌山県河川雨量防災情報システム)
+    category: dam
+    prefecture: '30'
+    lat: 34.080642
+    lng: 135.356873
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=oLDrWLHB0NM
+    image_url: https://www.youtube.com/watch?v=oLDrWLHB0NM
+    page_url: https://www.pref.wakayama.lg.jp/prefg/130400/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-0eead515
+    name: 有田川金屋
+    operator: 和歌山県庁(和歌山県河川雨量防災情報システム)
+    category: river
+    prefecture: '30'
+    lat: 34.063111
+    lng: 135.252111
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=6qBOOrORlPA
+    image_url: https://www.youtube.com/watch?v=6qBOOrORlPA
+    page_url: https://www.pref.wakayama.lg.jp/prefg/130400/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-062b322d
+    name: 広川広川ダム上流側
+    operator: 和歌山県庁(和歌山県河川雨量防災情報システム)
+    category: dam
+    prefecture: '30'
+    lat: 33.974396
+    lng: 135.230585
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=bUCTW4vZMKk
+    image_url: https://www.youtube.com/watch?v=bUCTW4vZMKk
+    page_url: https://www.pref.wakayama.lg.jp/prefg/130400/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-5013d7f9
+    name: 広川広川ダム下流側
+    operator: 和歌山県庁(和歌山県河川雨量防災情報システム)
+    category: dam
+    prefecture: '30'
+    lat: 33.974396
+    lng: 135.230585
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=2mE4Iov8sFs
+    image_url: https://www.youtube.com/watch?v=2mE4Iov8sFs
+    page_url: https://www.pref.wakayama.lg.jp/prefg/130400/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-8e610177
+    name: 広川新広橋
+    operator: 和歌山県庁(和歌山県河川雨量防災情報システム)
+    category: river
+    prefecture: '30'
+    lat: 34.027389
+    lng: 135.181972
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=uD_ir-LQpPM
+    image_url: https://www.youtube.com/watch?v=uD_ir-LQpPM
+    page_url: https://www.pref.wakayama.lg.jp/prefg/130400/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-e61c193e
+    name: 山田川三之橋
+    operator: 和歌山県庁(和歌山県河川雨量防災情報システム)
+    category: river
+    prefecture: '30'
+    lat: 34.032333
+    lng: 135.192778
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=xw6UBOP2GdU
+    image_url: https://www.youtube.com/watch?v=xw6UBOP2GdU
+    page_url: https://www.pref.wakayama.lg.jp/prefg/130400/index.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-d5b8eaac
+    name: 松橋川舟松橋
+    operator: 舟形町役場
+    category: river
+    prefecture: '06'
+    lat: 38.657972
+    lng: 140.273583
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=La9U-pVYpOg
+    image_url: https://www.youtube.com/watch?v=La9U-pVYpOg
+    page_url: https://www.town.funagata.yamagata.jp/livecamera/kurashi/020/210/20200113014000.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-882c7675
+    name: フォレストインSANGOROスキー場ゲレンデ
+    operator: Forest inn SANGORO
+    category: scenic
+    prefecture: '06'
+    lat: 38.168355
+    lng: 140.418319
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=HupLpQ_BSXE
+    image_url: https://www.youtube.com/watch?v=HupLpQ_BSXE
+    page_url: http://sangoro.co.jp/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-c1218ed7
+    name: NNS国道20号広瀬交差点
+    operator: 日本ネットワークサービス(NNS)
+    category: road
+    prefecture: '19'
+    lat: 35.64482
+    lng: 138.62234
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=oW1GXwLw9uY
+    image_url: https://www.youtube.com/watch?v=oW1GXwLw9uY
+    page_url: http://www.nns-catv.co.jp/traffic/new_area06.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-2399ec3f
+    name: NNS中央自動車道双葉ジャンクション南側
+    operator: 日本ネットワークサービス(NNS)
+    category: scenic
+    prefecture: '19'
+    lat: 35.681472
+    lng: 138.504778
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=7XPWUbem-9Q
+    image_url: https://www.youtube.com/watch?v=7XPWUbem-9Q
+    page_url: http://www.nns-catv.co.jp/traffic/new_area09.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-dcf97cb2
+    name: NNS国道20号竜王駅入口交差点
+    operator: 日本ネットワークサービス(NNS)
+    category: road
+    prefecture: '19'
+    lat: 35.66375
+    lng: 138.517333
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=6kNklbke8Ts
+    image_url: https://www.youtube.com/watch?v=6kNklbke8Ts
+    page_url: http://www.nns-catv.co.jp/traffic/new_area07.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-4affebbf
+    name: 甲斐のホテル屋上
+    operator: 甲斐のホテル
+    category: scenic
+    prefecture: '19'
+    lat: 35.640003
+    lng: 138.543351
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=wYH1v2HnLfI
+    image_url: https://www.youtube.com/watch?v=wYH1v2HnLfI
+    page_url: https://kainohotel.com/
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  - id: curated-link-lcdb-65b2adfc
+    name: NNSアルプス通り貢川交番前交差点
+    operator: 日本ネットワークサービス(NNS)
+    category: road
+    prefecture: '19'
+    lat: 35.658639
+    lng: 138.5505
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=qjIJqwkqsDo
+    image_url: https://www.youtube.com/watch?v=qjIJqwkqsDo
+    page_url: http://www.nns-catv.co.jp/traffic/new_area03.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-becda8b8
+    name: NNS新荒川橋西側
+    operator: 日本ネットワークサービス(NNS)
+    category: river
+    prefecture: '19'
+    lat: 35.663639
+    lng: 138.551139
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=v9EDE_Hk3jk
+    image_url: https://www.youtube.com/watch?v=v9EDE_Hk3jk
+    page_url: http://www.nns-catv.co.jp/traffic/new_area02.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
+  - id: curated-link-lcdb-c05bd6c2
+    name: NNS山の手通り愛宕トンネル西側
+    operator: 日本ネットワークサービス(NNS)
+    category: road
+    prefecture: '19'
+    lat: 35.670722
+    lng: 138.575944
+    feed_type: web_page
+    feed_url: https://www.youtube.com/watch?v=ZKR-IpcW0-I
+    image_url: https://www.youtube.com/watch?v=ZKR-IpcW0-I
+    page_url: http://www.nns-catv.co.jp/traffic/new_area01.html
+    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
