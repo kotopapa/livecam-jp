@@ -103,11 +103,7 @@ def load_state() -> dict:
         return {"notified_quakes": [], "active_special": []}
 
 
-<<<<<<< HEAD
-_INTENSITY_ORDER = {"4": -1, "5-": 0, "5+": 1, "6-": 2, "6+": 3, "7": 4}
-=======
 _INTENSITY_ORDER = {"5-": 0, "5+": 1, "6-": 2, "6+": 3, "7": 4}
->>>>>>> parent of 4237708 (地震通知に「震度4以上」を追加(トピック quake4。サーバー側の震度→トピック対応とアプリの選択肢))
 
 
 def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
