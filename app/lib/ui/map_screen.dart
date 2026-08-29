@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -258,39 +259,81 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  void _showQuakeInfo(QuakePoint q) {
-    final t = q.at.toLocal();
+  /// タップした震源と、現在のズームで同じマーカーに重なる震源をまとめて表示する
+  /// （群発地震や同一震源の繰り返しで下に隠れた地震も選べるように）
+  /// 描画順: 弱い/古い地震を先に、強い/新しい地震を後に描いて上に重ねる
+  List<QuakePoint> get _quakesForDraw {
+    int rank(String m) => const ['', '1', '2', '3', '4', '5-', '5+', '6-', '6+', '7'].indexOf(m);
+    return [..._quakes]..sort((a, b) {
+        final r = rank(a.maxIntensity).compareTo(rank(b.maxIntensity));
+        return r != 0 ? r : a.at.compareTo(b.at);
+      });
+  }
+
+  void _showQuakeInfo(QuakePoint tapped) {
+    // マーカー直径28pxを緯度経度差に換算（Webメルカトル、経度は緯度で補正）
+    final degPerPx = 360 / (256 * math.pow(2, _zoom));
+    final tol = 28 * degPerPx;
+    final cosLat = math.cos(tapped.pos!.latitude * math.pi / 180).clamp(0.2, 1.0);
+    final group = _quakes.where((q) =>
+        (q.pos!.latitude - tapped.pos!.latitude).abs() <= tol &&
+        (q.pos!.longitude - tapped.pos!.longitude).abs() * cosLat <= tol).toList()
+      ..sort((a, b) => b.at.compareTo(a.at));
     String two(int v) => v.toString().padLeft(2, '0');
     showModalBottomSheet<void>(
       context: context,
       showDragHandle: true,
+      isScrollControlled: group.length > 4,
       builder: (ctx) => SafeArea(
-        child: Column(mainAxisSize: MainAxisSize.min, children: [
-          ListTile(
-            leading: CircleAvatar(
-                backgroundColor: JmaLayers.intensityColor(q.maxIntensity),
-                child: Text(q.maxIntensity.isEmpty ? '-' : q.maxIntensity,
-                    style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black87))),
-            title: Text(q.place.isEmpty ? '震源（詳細未発表）' : q.place),
-            subtitle: Text('${t.month}/${t.day} ${two(t.hour)}:${two(t.minute)}'
-                '${q.magnitude.isNotEmpty ? '　M${q.magnitude}' : ''}'
-                '${q.maxIntensity.isNotEmpty ? '　最大震度${q.maxIntensity}' : ''}'),
-          ),
-          ListTile(
-            leading: const Icon(Icons.videocam),
-            title: const Text('周辺のライブカメラ（50km以内）'),
-            onTap: () {
-              Navigator.pop(ctx);
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (_) => NearbyCamerasScreen(
-                      app: widget.app,
-                      title: '${q.place.isEmpty ? '震源' : q.place} 周辺のカメラ',
-                      lat: q.pos!.latitude,
-                      lng: q.pos!.longitude)));
-            },
-          ),
-          const SizedBox(height: 8),
-        ]),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxHeight: MediaQuery.of(ctx).size.height * 0.7),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            if (group.length > 1)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('この付近の地震 ${group.length}件',
+                      style: Theme.of(ctx).textTheme.titleSmall),
+                ),
+              ),
+            Flexible(
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  for (final q in group)
+                    ListTile(
+                      leading: CircleAvatar(
+                          backgroundColor: JmaLayers.intensityColor(q.maxIntensity),
+                          child: Text(q.maxIntensity.isEmpty ? '-' : q.maxIntensity,
+                              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black87))),
+                      title: Text(q.place.isEmpty ? '震源（詳細未発表）' : q.place),
+                      subtitle: Builder(builder: (_) {
+                        final t = q.at.toLocal();
+                        return Text('${t.month}/${t.day} ${two(t.hour)}:${two(t.minute)}'
+                            '${q.magnitude.isNotEmpty ? '　M${q.magnitude}' : ''}'
+                            '${q.maxIntensity.isNotEmpty ? '　最大震度${q.maxIntensity}' : ''}');
+                      }),
+                      trailing: const Icon(Icons.videocam),
+                      onTap: () {
+                        Navigator.pop(ctx);
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (_) => NearbyCamerasScreen(
+                                app: widget.app,
+                                title: '${q.place.isEmpty ? '震源' : q.place} 周辺のカメラ',
+                                lat: q.pos!.latitude,
+                                lng: q.pos!.longitude)));
+                      },
+                    ),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 8),
+              child: Text('タップで周辺のライブカメラ（50km以内）を表示', style: TextStyle(fontSize: 12, color: Colors.grey)),
+            ),
+          ]),
+        ),
       ),
     );
   }
@@ -441,7 +484,7 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.quakes:
         return [
           MarkerLayer(markers: [
-            for (final q in _quakes)
+            for (final q in _quakesForDraw)
               Marker(
                 point: q.pos!,
                 width: 28,
