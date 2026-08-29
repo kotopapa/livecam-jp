@@ -70,8 +70,10 @@ class FukuiRoadParser(SourceParser):
                 name=f"{name}（{address}）" if address and address not in name else name,
                 category="road",
                 prefecture="18",
-                feed_type="still_image",
-                feed_url=f"{BASE}assets/images/camera/{cid}.jpg",
+                # サイト規約「掲載されている内容の無断転載を禁じます」(2026-08-29確認)
+                # のため静止画は直接参照せず、カメラ一覧ページへの誘導型にする
+                feed_type="web_page",
+                feed_url=BASE + "camera-list.html",
                 fallback_url=BASE + "camera-list.html",
                 operator=operator,
                 page_url=BASE + "camera-list.html",

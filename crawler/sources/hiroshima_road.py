@@ -62,8 +62,10 @@ class HiroshimaRoadParser(SourceParser):
                 name=point,
                 category="road",
                 prefecture="34",
-                feed_type="still_image",
-                feed_url=f"{BASE}snow_pic/{c['id']}.jpg",
+                # サイト規約「広島県に無断で転載等を行うことはできません」(2026-08-29確認)
+                # のため静止画は直接参照せず、カメラ個別ページへの誘導型にする
+                feed_type="web_page",
+                feed_url=f"{BASE}camera_detail.php?id={c['id']}",
                 fallback_url=LIST_URL,
                 operator="広島県",
                 page_url=LIST_URL,
