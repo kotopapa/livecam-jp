@@ -1097,6 +1097,17 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // お知らせバナーは地図の上に重ねず、地図の上部に積む（台数チップや
+    // レイヤーボタンと重なって読めなくなるため。2026-08-30）
+    final notice = widget.app.notice;
+    if (notice == null) return _mapStack(context);
+    return Column(children: [
+      _NoticeBanner(text: notice),
+      Expanded(child: _mapStack(context)),
+    ]);
+  }
+
+  Widget _mapStack(BuildContext context) {
     final cams = widget.app.displayableCameras;
     final items = _cullToViewport(clusterCameras(cams, _zoom));
     return Stack(
@@ -1201,7 +1212,6 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ],
         ),
-        if (widget.app.notice != null) _NoticeBanner(text: widget.app.notice!),
         Positioned(
           left: 12,
           top: MediaQuery.of(context).padding.top + 12,
