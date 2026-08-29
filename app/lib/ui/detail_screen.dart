@@ -549,7 +549,9 @@ class _MediaView extends StatelessWidget {
         return _MediaFallback(
           text: isYoutube
               ? '提供者の設定により、この映像は\nアプリ内で再生できません'
-              : 'アプリ内再生非対応のカメラです',
+              // 運営者の利用条件（転載・直リンク不可）で誘導型にしているものが大半。
+              // 「非対応」だと不具合に見えるため理由を示す
+              : '配信元の利用条件により\nアプリ内では表示できません',
           action: url,
           actionLabel: isYoutube ? 'YouTubeで見る' : '元ページで見る',
           icon: isYoutube ? Icons.play_circle_outline : Icons.videocam_off,
