@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -13,7 +15,11 @@ import 'detail_screen.dart';
 /// 無料・認証不要のエンドポイントのみ使用（SPEC C2）。取得はこの画面を
 /// 開いたときだけ（ポーリングしない）。
 class BosaiScreen extends StatefulWidget {
-  const BosaiScreen({super.key, required this.app});
+  const BosaiScreen({super.key, required this.app, this.visible});
+
+  /// 親タブがこの画面を表示中かどうか（IndexedStackで常駐するため、
+  /// タブ切替時と表示中の定期更新に使う）。null なら常に表示中とみなす
+  final ValueListenable<bool>? visible;
 
   static const quakeListUrl =
       'https://www.jma.go.jp/bosai/quake/data/list.json';
@@ -86,8 +92,51 @@ const _advisoryNames = {
 };
 
 class _BosaiScreenState extends State<BosaiScreen>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   late final TabController _tabs = TabController(length: 2, vsync: this);
+
+  /// この時間より古ければタブを開いたとき・復帰時に自動で更新する
+  static const _staleAfter = Duration(minutes: 2);
+  /// 表示中は定期的に更新する（気象庁の更新頻度に合わせ5分）
+  static const _autoRefreshEvery = Duration(minutes: 5);
+  Timer? _autoRefresh;
+
+  bool get _isVisible => widget.visible?.value ?? true;
+
+  void _refreshIfStale() {
+    final t = _fetchedAt;
+    if (t == null || DateTime.now().difference(t) >= _staleAfter) {
+      _load();
+      _loadWarnings();
+    }
+  }
+
+  void _onVisibilityChanged() {
+    if (!mounted) return;
+    if (_isVisible) {
+      _refreshIfStale();
+      _startAutoRefresh();
+    } else {
+      _autoRefresh?.cancel();
+      _autoRefresh = null;
+    }
+  }
+
+  void _startAutoRefresh() {
+    _autoRefresh?.cancel();
+    _autoRefresh = Timer.periodic(_autoRefreshEvery, (_) {
+      if (mounted && _isVisible) {
+        _load();
+        _loadWarnings();
+      }
+    });
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // バックグラウンドから戻ったとき、表示中なら最新に更新する
+    if (state == AppLifecycleState.resumed && _isVisible) _refreshIfStale();
+  }
 
   /// 通知タップの要求（'bosai/quake'→地震・津波, 'bosai/warning'→気象警報）
   void _onNavigationRequest() {
@@ -125,12 +174,18 @@ class _BosaiScreenState extends State<BosaiScreen>
     _load();
     _loadWarnings();
     widget.app.navigationRequest.addListener(_onNavigationRequest);
+    widget.visible?.addListener(_onVisibilityChanged);
+    WidgetsBinding.instance.addObserver(this);
+    if (_isVisible) _startAutoRefresh();
     WidgetsBinding.instance.addPostFrameCallback((_) => _onNavigationRequest());
   }
 
   @override
   void dispose() {
     widget.app.navigationRequest.removeListener(_onNavigationRequest);
+    widget.visible?.removeListener(_onVisibilityChanged);
+    WidgetsBinding.instance.removeObserver(this);
+    _autoRefresh?.cancel();
     _tabs.dispose();
     super.dispose();
   }

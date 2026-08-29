@@ -23,6 +23,14 @@ class HomeShell extends StatefulWidget {
 
 class _HomeShellState extends State<HomeShell> {
   int _index = 0;
+  /// 災害速報タブが表示中か（BosaiScreen の自動更新に使う）
+  final ValueNotifier<bool> _bosaiVisible = ValueNotifier<bool>(false);
+
+  void _setIndex(int i) {
+    if (i == _index) return;
+    setState(() => _index = i);
+    _bosaiVisible.value = i == 2;
+  }
   bool _updateDialogShown = false;
 
   @override
@@ -38,8 +46,8 @@ class _HomeShellState extends State<HomeShell> {
   void _onNavigationRequest() {
     final r = widget.app.navigationRequest.value;
     if (r == null || !mounted) return;
-    if (r.startsWith('bosai') && _index != 2) setState(() => _index = 2);
-    if (r.startsWith('map') && _index != 0) setState(() => _index = 0);
+    if (r.startsWith('bosai')) _setIndex(2);
+    if (r.startsWith('map')) _setIndex(0);
   }
 
   @override
@@ -47,6 +55,7 @@ class _HomeShellState extends State<HomeShell> {
     widget.app.removeListener(_maybeShowUpdateDialog);
     widget.app.removeListener(_onAppChanged);
     widget.app.navigationRequest.removeListener(_onNavigationRequest);
+    _bosaiVisible.dispose();
     super.dispose();
   }
 
@@ -95,7 +104,7 @@ class _HomeShellState extends State<HomeShell> {
           child: IndexedStack(index: _index, children: [
             MapScreen(app: widget.app),
             ListScreen(app: widget.app),
-            BosaiScreen(app: widget.app),
+            BosaiScreen(app: widget.app, visible: _bosaiVisible),
             FavoritesScreen(app: widget.app),
             SettingsScreen(app: widget.app),
           ]),
@@ -105,7 +114,7 @@ class _HomeShellState extends State<HomeShell> {
       ]),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
-        onDestinationSelected: (i) => setState(() => _index = i),
+        onDestinationSelected: _setIndex,
         destinations: [
           const NavigationDestination(
               icon: Icon(Icons.map_outlined), label: '地図'),
