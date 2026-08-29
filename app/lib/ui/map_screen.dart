@@ -637,49 +637,6 @@ class _MapScreenState extends State<MapScreen> {
         '${c.center.latitude},${c.center.longitude},${c.zoom}');
   }
 
-  /// 都道府県ジャンプ（SPEC 9.2②）。承認済みカメラの重心へ移動する
-  void _showPrefectureJump(BuildContext context) {
-    final cams = widget.app.repository.displayableCameras();
-    final sums = <String, (double, double, int)>{};
-    for (final c in cams) {
-      if (!c.hasLocation) continue;
-      final cur = sums[c.prefecture] ?? (0.0, 0.0, 0);
-      sums[c.prefecture] = (cur.$1 + c.lat!, cur.$2 + c.lng!, cur.$3 + 1);
-    }
-    showModalBottomSheet(
-      context: context,
-      showDragHandle: true,
-      builder: (context) => SafeArea(
-        child: GridView.count(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-          crossAxisCount: 4,
-          mainAxisSpacing: 8,
-          crossAxisSpacing: 8,
-          childAspectRatio: 2.2,
-          children: [
-            for (final e in prefectureNames.entries)
-              if (sums.containsKey(e.key))
-                OutlinedButton(
-                  onPressed: () {
-                    final s = sums[e.key]!;
-                    Navigator.of(context).pop();
-                    _controller.move(
-                        LatLng(s.$1 / s.$3, s.$2 / s.$3), 9.5);
-                    setState(() => _zoom = 9.5);
-                    _savePosition();
-                  },
-                  style: OutlinedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      visualDensity: VisualDensity.compact),
-                  child: Text(e.value,
-                      style: const TextStyle(fontSize: 12)),
-                ),
-          ],
-        ),
-      ),
-    );
-  }
-
   // --- 場所検索（国土地理院ジオコーディング。無料・キー不要） ---
   final _placeController = TextEditingController();
 
@@ -1267,13 +1224,6 @@ class _MapScreenState extends State<MapScreen> {
               heroTag: 'legend_filter',
               onPressed: () => _showLegendFilter(context),
               child: const Icon(Icons.layers_outlined),
-            ),
-            const SizedBox(height: 8),
-            FloatingActionButton.small(
-              heroTag: 'pref_jump',
-              tooltip: '都道府県へ移動',
-              onPressed: () => _showPrefectureJump(context),
-              child: const Icon(Icons.travel_explore),
             ),
             const SizedBox(height: 8),
             FloatingActionButton.small(
