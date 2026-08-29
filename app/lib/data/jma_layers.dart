@@ -236,7 +236,9 @@ class JmaLayers {
           .get(Uri.parse('https://www.jma.go.jp/bosai/amedas/data/latest_time.txt'), headers: _ua)
           .timeout(const Duration(seconds: 10));
       if (lt.statusCode != 200) return const [];
-      final ts = DateTime.parse(lt.body.trim());
+      // latest_time.txt は "+09:00" 付きで、DateTime.parse はUTCに変換して返す。
+      // ファイル名はJST時刻なので明示的に+9hして組み立てる（端末のTZに依存しない）
+      final ts = DateTime.parse(lt.body.trim()).toUtc().add(const Duration(hours: 9));
       String two(int v) => v.toString().padLeft(2, '0');
       final key = '${ts.year}${two(ts.month)}${two(ts.day)}${two(ts.hour)}${two(ts.minute)}00';
       final r = await http
