@@ -161,3 +161,23 @@ def test_youtube_video_shell_response_keeps_ok():
     shell = FakeResponse(200, b'<html>consent</html>')
     r = check_camera(FakeSession([oembed, shell]), _yt_camera(), {})
     assert r["state"] == "ok"
+
+
+def test_yamaguchi_kasen_uses_resolved_image():
+    """都度解決型 yamaguchi_kasen: main.py が解決した URL を取得し image_url/image_time を返す。"""
+    from crawler.sources.yamaguchi_kasen import resolve_image_urls
+    html = (FIXTURES / "yamaguchi_kasen_list.html").read_text(encoding="utf-8")
+    url, at = resolve_image_urls(html)["001"]
+    cam = _camera()
+    cam["feed"] = {"type": "yamaguchi_kasen",
+                   "url": "https://y-bousai.pref.yamaguchi.lg.jp/citizen/camera/krc_camera_list.aspx",
+                   "camera_ref": "001", "headers": {}, "requires_referer": False}
+    cam["_resolved_image"] = {"url": url, "time": at}
+    s = FakeSession([FakeResponse(200, b"\xff\xd8" + b"x" * 6000, {"Content-Type": "image/jpeg"})])
+    r = check_camera(s, cam, {})
+    assert s.requests[0]["url"] == url
+    assert r["state"] == "ok" and r["image_url"] == url and r["image_time"] == at
+    # 未解決なら失敗として数える
+    cam.pop("_resolved_image")
+    r2 = check_camera(FakeSession([]), cam, {})
+    assert r2["state"] == "unknown" and r2["consecutive_failures"] == 1

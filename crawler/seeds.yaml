@@ -184,6 +184,12 @@ sources:
     note: 東近江市河川監視カメラ9台(河川6・道路アンダーパス3)。閲覧ページの
           自動更新JSON(json-cameralist.php)が座標つき台帳兼最新画像パス
           (都度解決型 feed=higashiomi_river)。license=unknown
+  - id: yamaguchi_kasen
+    enabled: true
+    note: 山口県土木防災情報システムの河川監視カメラ58台。krc_camera_list.aspx 1枚で
+          全台の最新画像(タイムスタンプ名)を解決する都度解決型(feed=yamaguchi_kasen)。
+          座標は地図ページ(kco_map 302先)の L.marker(小数3桁≒100m, approx)、
+          属性は krc_camera_station_info.aspx。リンク自由・転載禁止表記なし、license=unknown
   - id: tochigi_road
     enabled: true
     note: 栃木県道路ライブカメラ60台(モバイル版menu.htmlが市町村別一覧)。

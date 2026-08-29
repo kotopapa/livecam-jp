@@ -27,6 +27,7 @@ try:
 except ImportError:
     pass
 
+from crawler.sources.base import mount_legacy_tls
 from monitor.check import USER_AGENT, check_camera
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -89,6 +90,7 @@ def run(shard: str | None = None) -> int:
     throttle = HostThrottle()
     session = requests.Session()
     session.headers["User-Agent"] = USER_AGENT
+    mount_legacy_tls(session)   # 山口県土木防災(弱いDH鍵)向け
     lock = threading.Lock()
 
     # 都度解決型feed（mlit_roadinfo）: 解決元ページ1枚で整備局分の最新URLが取れるので、
@@ -290,14 +292,22 @@ def run(shard: str | None = None) -> int:
             if cam["id"] in sm_by_id:
                 cam["_resolved_image"] = sm_by_id[cam["id"]]
 
-    # 都度解決型feed（yamaguchi_romen）: 峠路面情報の一覧ページ1枚で9地点を解決
-    romen_cams = [c for c in all_cameras
-                  if c.get("review", {}).get("status") == "approved"
-                  and c["feed"]["type"] == "yamaguchi_romen"]
-    if romen_cams:
-        from crawler.sources.yamaguchi_romen import resolve_image_urls as romen_resolve
-        romen_map: dict[str, tuple[str, str]] = {}
-        for page_url in sorted({c["feed"]["url"] for c in romen_cams}):
+    # 都度解決型feed（yamaguchi_romen / yamaguchi_kasen）: 一覧ページ(HTML)1枚で全台を解決
+    # （feed.url が一覧ページ、camera_ref がキー。resolver(html, page_url) を呼ぶ）
+    from crawler.sources.yamaguchi_kasen import resolve_image_urls as kasen_resolve
+    from crawler.sources.yamaguchi_romen import resolve_image_urls as romen_resolve
+    page_resolvers = {
+        "yamaguchi_romen": romen_resolve,
+        "yamaguchi_kasen": kasen_resolve,
+    }
+    for ftype, resolver in page_resolvers.items():
+        page_cams = [c for c in all_cameras
+                     if c.get("review", {}).get("status") == "approved"
+                     and c["feed"]["type"] == ftype]
+        if not page_cams:
+            continue
+        page_map: dict[str, tuple[str, str]] = {}
+        for page_url in sorted({c["feed"]["url"] for c in page_cams}):
             host = urlparse(page_url).netloc
             try:
                 throttle.acquire(host)
@@ -306,15 +316,15 @@ def run(shard: str | None = None) -> int:
                 finally:
                     throttle.release(host)
                 if resp.status_code == 200:
-                    romen_map.update(romen_resolve(resp.text, page_url))
+                    page_map.update(resolver(resp.text, page_url))
             except requests.RequestException as e:
-                print(f"yamaguchi_romen解決失敗 {page_url}: {e}", file=sys.stderr)
-        romen_by_id = {}
-        for cam in romen_cams:
-            hit = romen_map.get(cam["feed"].get("camera_ref") or "")
+                print(f"{ftype}解決失敗 {page_url}: {e}", file=sys.stderr)
+        page_by_id = {}
+        for cam in page_cams:
+            hit = page_map.get(cam["feed"].get("camera_ref") or "")
             if hit:
                 cam["_resolved_image"] = {"url": hit[0], "time": hit[1]}
-                romen_by_id[cam["id"]] = cam["_resolved_image"]
+                page_by_id[cam["id"]] = cam["_resolved_image"]
                 st = statuses.setdefault(cam["id"], {
                     "state": "unknown", "last_ok_at": None,
                     "http_status": None, "frozen_since": None,
@@ -322,8 +332,8 @@ def run(shard: str | None = None) -> int:
                 })
                 st["image_url"], st["image_time"] = hit
         for cam in cameras:
-            if cam["id"] in romen_by_id:
-                cam["_resolved_image"] = romen_by_id[cam["id"]]
+            if cam["id"] in page_by_id:
+                cam["_resolved_image"] = page_by_id[cam["id"]]
 
     # 都度解決型feed（mie_douro）: camera_get_api.php 1リクエストで全台のbase64画像を取得
     mie_cams = [c for c in all_cameras

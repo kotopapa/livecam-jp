@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import ssl
 import time
 import urllib.robotparser
 from abc import ABC, abstractmethod
@@ -22,11 +23,35 @@ from typing import Any
 from urllib.parse import urlparse
 
 import requests
+from requests.adapters import HTTPAdapter
 
 USER_AGENT = "LiveCamJP-Crawler/1.0 (+https://github.com/kotopapa/livecam-jp)"
 CACHE_DIR = Path(__file__).resolve().parent.parent / ".cache" / "http"
 MIN_INTERVAL_SEC = 1.0
 TIMEOUT_SEC = 15
+
+
+# ---- legacy TLS ------------------------------------------------------
+
+# DHパラメータが弱く(1024bit)、OpenSSL 3 の既定 SECLEVEL=2 では
+# "DH_KEY_TOO_SMALL" で接続できない官公庁ホスト。そのホストだけ SECLEVEL=1 で繋ぐ
+LEGACY_TLS_HOSTS = (
+    "https://y-bousai.pref.yamaguchi.lg.jp/",   # 山口県土木防災情報システム
+)
+
+
+class LegacyTlsAdapter(HTTPAdapter):
+    def init_poolmanager(self, *args, **kwargs):
+        ctx = ssl.create_default_context()
+        ctx.set_ciphers("DEFAULT:@SECLEVEL=1")
+        kwargs["ssl_context"] = ctx
+        return super().init_poolmanager(*args, **kwargs)
+
+
+def mount_legacy_tls(session: requests.Session) -> None:
+    """LEGACY_TLS_HOSTS 向けのアダプタを requests.Session に登録する（crawler/monitor 共通）。"""
+    for prefix in LEGACY_TLS_HOSTS:
+        session.mount(prefix, LegacyTlsAdapter())
 
 
 @dataclass
@@ -65,6 +90,7 @@ class HttpSession:
     def __init__(self, cache_dir: Path = CACHE_DIR, min_interval: float = MIN_INTERVAL_SEC):
         self.session = requests.Session()
         self.session.headers["User-Agent"] = USER_AGENT
+        mount_legacy_tls(self.session)
         self.cache_dir = cache_dir
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         self.min_interval = min_interval

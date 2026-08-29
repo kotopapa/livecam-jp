@@ -28,6 +28,9 @@ enum FeedType {
   takashimaRiver('takashima_river'),
   higashiomiRiver('higashiomi_river'),
   yamaguchiRomen('yamaguchi_romen'),
+
+  /// 山口県土木防災情報システム 河川監視カメラ（都度解決型）
+  yamaguchiKasen('yamaguchi_kasen'),
   mieDouro('mie_douro'),
 
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する

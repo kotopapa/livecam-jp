@@ -41,6 +41,7 @@ from crawler.sources.tochigi_road import TochigiRoadParser
 from crawler.sources.takashima_river import TakashimaRiverParser
 from crawler.sources.tokyo_suibo import TokyoSuiboParser
 from crawler.sources.toyama_road import ToyamaRoadParser
+from crawler.sources.yamaguchi_kasen import YamaguchiKasenParser
 from crawler.sources.youtube_live import YoutubeLiveParser
 
 REGISTRY = {
@@ -84,6 +85,7 @@ REGISTRY = {
         TakashimaRiverParser,
         TokyoSuiboParser,
         ToyamaRoadParser,
+        YamaguchiKasenParser,
         YoutubeLiveParser,
     ]
 }
