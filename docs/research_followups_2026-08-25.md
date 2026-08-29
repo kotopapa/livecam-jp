@@ -25,3 +25,6 @@
 ## 2026-08-27 追記
 - **crawlワークフローが8/21から失敗**: 「GitHub Actions is not permitted to create or approve pull requests」。リポジトリ Settings → Actions → General → Workflow permissions の「Allow GitHub Actions to create and approve pull requests」を有効にする必要あり（ユーザー作業）。それまで新設カメラは自動で候補に上がらない
 - 上記の間に川の防災情報で新設された460台は手動で取り込み済み（配信18,306件）。kawabou全国11,819台中、当方11,762台（残りは同一画像URLの重複）
+
+## 2026-08-29 見送り記録
+- 「今見られているカメラ」(過去24h・1時間単位・閲覧数順): 無料枠内で実装可能(時間別カウンタ+30分ごと増分集計→trending.json)と調査済みだが**見送り**。Firestore書き込み20,000/日の上限は既存ランキングにも共通の制約(1日1万閲覧超で欠損)
