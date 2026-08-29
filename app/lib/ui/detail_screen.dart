@@ -122,8 +122,9 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
         ],
       ),
-      body: ListView(children: [
-        _MediaView(camera: camera, app: app, refreshTick: _refreshTick),
+      body: _buildBody(
+        media: _MediaView(camera: camera, app: app, refreshTick: _refreshTick),
+        details:
         Padding(
           padding: const EdgeInsets.all(12),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -144,9 +145,22 @@ class _DetailScreenState extends State<DetailScreen> {
                 style: TextStyle(fontSize: 11, color: Colors.grey[700])),
             const SizedBox(height: 16),
           ]),
-        ),
-      ]),
+        )
+      ),
     );
+  }
+
+  /// YouTube系は動画を画面上部に固定し、その下だけをスクロールさせる。
+  /// ListView内に置くと画面外へスクロールした時点でiOSのWebViewが画面階層から
+  /// 外れて再生が止まる（KeepAliveでは防げない）ため。静止画は従来どおり全体スクロール
+  Widget _buildBody({required Widget media, required Widget details}) {
+    final t = camera.feed.type;
+    final pinned = t == FeedType.youtubeVideo || t == FeedType.youtubeChannel || t == FeedType.hls;
+    if (!pinned) return ListView(children: [media, details]);
+    return Column(children: [
+      media,
+      Expanded(child: ListView(children: [details])),
+    ]);
   }
 
   /// 取得時刻を大きく表示 + 手動更新（60秒クールダウン）。
