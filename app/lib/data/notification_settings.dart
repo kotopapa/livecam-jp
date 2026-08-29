@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'dart:io' show Platform;
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -178,12 +180,15 @@ class NotificationSettings {
   Future<void> healTokenAndReapply() async {
     final fm = FirebaseMessaging.instance;
     try {
-      // APNsトークンは起動直後はnullのことがあるため少し粘る
+      // APNsトークンは起動直後はnullのことがあるため少し粘る（iOSのみ。
+      // AndroidにAPNsは無いので待たない）
       String? apns;
-      for (var i = 0; i < 10 && apns == null; i++) {
-        apns = await fm.getAPNSToken();
-        if (apns == null) {
-          await Future<void>.delayed(const Duration(seconds: 1));
+      if (Platform.isIOS) {
+        for (var i = 0; i < 10 && apns == null; i++) {
+          apns = await fm.getAPNSToken();
+          if (apns == null) {
+            await Future<void>.delayed(const Duration(seconds: 1));
+          }
         }
       }
       var fcm = await fm.getToken();

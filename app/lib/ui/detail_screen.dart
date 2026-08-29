@@ -131,7 +131,7 @@ class _DetailScreenState extends State<DetailScreen> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             // バナー広告（映像の直下。スクロールなしで見える位置。
             // 読み込み失敗時は区切り線ごと自動で消える）
-            const AdBannerPlaceholder(),
+            AdBannerPlaceholder(),
             _timeAndRefreshRow(st),
             const SizedBox(height: 8),
             _badges(st),
@@ -140,7 +140,7 @@ class _DetailScreenState extends State<DetailScreen> {
             const Divider(height: 24),
             // 地図の下にレクタングル広告(300×250)。上部バナーがスクロールで
             // 見えなくなる位置まで来た利用者向け。失敗時は区切り線ごと消える
-            const AdBannerPlaceholder(size: AdSize.mediumRectangle, adUnitId: admobRectangleUnitId),
+            AdBannerPlaceholder(size: AdSize.mediumRectangle, adUnitId: admobRectangleUnitId),
             _sourceSection(pageUrl),
             const Divider(height: 24),
             _nearbySection(),

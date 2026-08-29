@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 官公庁・自治体のライブカメラ静止画は http のみの配信元が多数
+     (IPアドレス直配信の防災カメラ含む)のため平文通信を許可する。
+     ユーザーデータの送信(Firebase等)は常時 https -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>
