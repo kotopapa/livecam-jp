@@ -498,7 +498,7 @@ class _MapScreenState extends State<MapScreen> {
                           style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.bold,
-                              color: r.mm24h >= 80 ? Colors.white : Colors.black87)),
+                              color: r.mm24h >= 100 ? Colors.white : Colors.black87)),
                     ),
                   ),
                 ),

@@ -198,16 +198,18 @@ class JmaLayers {
     }
   }
 
-  /// 24時間降水量の凡例色（気象庁の積算降水量配色）
+  /// 24時間降水量の凡例色。タイル(rasrf24h)の塗りと同じ気象庁の
+  /// 24時間積算用しきい値（1時間雨量の配色とは段階が異なる）。
+  /// 実タイルの画素色をアメダス観測値と照合して確認済み(2026-08-29)
   static const rain24hScale = <(double, Color, String)>[
-    (0.5, Color(0xFFF2F2FF), '〜10'),
-    (10, Color(0xFFA0D2FF), '10'),
-    (20, Color(0xFF218CFF), '20'),
-    (50, Color(0xFF0041FF), '50'),
-    (80, Color(0xFFFAF500), '80'),
-    (100, Color(0xFFFF9900), '100'),
-    (150, Color(0xFFFF2800), '150'),
-    (200, Color(0xFFB40068), '200mm〜'),
+    (0.5, Color(0xFFF2F2FF), '〜50'),
+    (50, Color(0xFFA0D2FF), '50'),
+    (80, Color(0xFF218CFF), '80'),
+    (100, Color(0xFF0041FF), '100'),
+    (150, Color(0xFFFAF500), '150'),
+    (200, Color(0xFFFF9900), '200'),
+    (250, Color(0xFFFF2800), '250'),
+    (300, Color(0xFFB40068), '300mm〜'),
   ];
 
   static Map<String, LatLng>? _stations;
@@ -259,14 +261,12 @@ class JmaLayers {
 
   static Map<String, String>? _stationNames;
 
-  /// 24時間雨量の色（気象庁の解析雨量配色に準拠した段階）
+  /// 24時間雨量の観測値ラベル色。rain24hScale と同じ段階でタイルの塗りに合わせる
   static Color rainColor(double mm) {
-    if (mm >= 200) return const Color(0xFFB40068);
-    if (mm >= 100) return const Color(0xFFFF2800);
-    if (mm >= 50) return const Color(0xFFFF9900);
-    if (mm >= 30) return const Color(0xFFFAF500);
-    if (mm >= 10) return const Color(0xFF0041FF);
-    return const Color(0xFF218CFF);
+    for (final s in rain24hScale.reversed) {
+      if (mm >= s.$1) return s.$2;
+    }
+    return rain24hScale.first.$2;
   }
 
   /// 最大震度の色（気象庁の震度配色）
