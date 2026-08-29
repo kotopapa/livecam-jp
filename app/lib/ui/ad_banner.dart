@@ -8,11 +8,14 @@ import '../config.dart';
 /// 読み込み完了までは高さだけ確保して何も描かず、読み込み失敗時は
 /// 高さ0に畳む（コンテンツの間なのでプレースホルダを見せない）。
 class AdBannerPlaceholder extends StatefulWidget {
-  const AdBannerPlaceholder({super.key, this.size = AdSize.banner});
+  const AdBannerPlaceholder({super.key, this.size = AdSize.banner, this.adUnitId = admobBannerUnitId});
 
   /// 広告サイズ。既定は320×50。詳細画面の地図下には
   /// [AdSize.mediumRectangle](300×250)を使う
   final AdSize size;
+
+  /// 広告ユニットID（サイズごとに別ユニットを使う）
+  final String adUnitId;
 
   static const double bannerHeight = 50;
 
@@ -29,7 +32,7 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
   void initState() {
     super.initState();
     _ad = BannerAd(
-      adUnitId: admobBannerUnitId,
+      adUnitId: widget.adUnitId,
       size: widget.size,
       request: const AdRequest(),
       listener: BannerAdListener(

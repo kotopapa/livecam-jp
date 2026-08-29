@@ -21,6 +21,9 @@ const String firebaseApiKey = 'AIzaSyBlNICazXyF_x9A5aLARTW3k2L-K62lae0';
 /// (ca-app-pub-3940256099942544/2934735716) に一時差し替えて使う。
 const String admobBannerUnitId = 'ca-app-pub-9639294688594011/6375938678';
 
+/// AdMob レクタングル広告ユニットID（詳細画面 ミニマップ下・300×250）。
+const String admobRectangleUnitId = 'ca-app-pub-9639294688594011/5827278377';
+
 /// App Store のアプリID（招待・評価導線用）。manifest の store_url が無い場合の既定
 const String appStoreId = '6802841521';
 const String appStoreUrl = 'https://apps.apple.com/jp/app/id$appStoreId';

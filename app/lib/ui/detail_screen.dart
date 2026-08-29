@@ -140,7 +140,7 @@ class _DetailScreenState extends State<DetailScreen> {
             const Divider(height: 24),
             // 地図の下にレクタングル広告(300×250)。上部バナーがスクロールで
             // 見えなくなる位置まで来た利用者向け。失敗時は区切り線ごと消える
-            const AdBannerPlaceholder(size: AdSize.mediumRectangle),
+            const AdBannerPlaceholder(size: AdSize.mediumRectangle, adUnitId: admobRectangleUnitId),
             _sourceSection(pageUrl),
             const Divider(height: 24),
             _nearbySection(),
