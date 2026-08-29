@@ -15,6 +15,7 @@ from crawler.sources.hiroshima_road import HiroshimaRoadParser
 from crawler.sources.ishikawa_road import IshikawaRoadParser
 from crawler.sources.iwate_road import IwateRoadParser
 from crawler.sources.jma_volcam import JmaVolcamParser
+from crawler.sources.jwa_river_cam import JwaRiverCamParser
 from crawler.sources.hbc_webcam import HbcWebcamParser
 from crawler.sources.higashiomi_river import HigashiomiRiverParser
 from crawler.sources.kaiho_webcam import KaihoWebcamParser
@@ -57,6 +58,7 @@ REGISTRY = {
         IshikawaRoadParser,
         IwateRoadParser,
         JmaVolcamParser,
+        JwaRiverCamParser,
         HbcWebcamParser,
         HigashiomiRiverParser,
         KaihoWebcamParser,

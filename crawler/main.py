@@ -32,6 +32,7 @@ from crawler import normalize, verify
 from crawler.geocode import Geocoder, fill_coordinates
 from crawler.sources import REGISTRY
 from crawler.sources.base import HttpSession, RateLimitedError
+from crawler.sources.jwa_river_cam import JwaRiverCamParser
 from crawler.sources.kawabou import KawabouPrefParser
 from crawler.validate import validate_camera_record
 
@@ -50,6 +51,8 @@ def load_enabled_sources() -> list:
         sid = src["id"]
         if sid == "kawabou_pref":
             parsers.append(KawabouPrefParser(pref_codes=src.get("pref_codes") or []))
+        elif sid == "jwa_river_cam":
+            parsers.append(JwaRiverCamParser(sites=src.get("sites")))
         elif sid in REGISTRY:
             parsers.append(REGISTRY[sid]())
         else:

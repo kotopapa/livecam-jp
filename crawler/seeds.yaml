@@ -164,6 +164,16 @@ sources:
     enabled: true
     note: さいたま市水位情報システムの河川カメラ14台。place.jsonが座標つき台帳、
           camera_latest.jsonで全台の最新画像を1リクエスト解決(都度解決型)
+  - id: jwa_river_cam
+    enabled: true
+    # JWA製「川の防災情報」テンプレートの県河川カメラ（埼玉264・和歌山344画像）。
+    # geojson座標 + chitenconfig/CameraList.csv → 固定URL hyoujidata/camera/<ID>.jpg
+    # (10分更新, still_image)。sites は jwa_river_cam.SITES のキーまたは
+    # {key, base_url, geojson_path, prefecture, operator, system_name, terms_url}。
+    # license=unknown。kawabou採用済み(埼玉79)と近接するものは note に重複候補を付ける。
+    sites: [saitama, wakayama]
+    note: 埼玉県 川の防災情報(suibo-river.pref.saitama.lg.jp)と和歌山県 河川雨量防災情報
+          (kasensabo01.pref.wakayama.lg.jp)。和歌山の curated_still 30件は同一URLでスキップ
   - id: takashima_river
     enabled: true
     note: 高島市河川防災カメラシステム5台。/cctv/api/cameras(認証なしJSON)で
