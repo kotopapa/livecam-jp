@@ -285,8 +285,8 @@ class _MapScreenState extends State<MapScreen> {
                   builder: (_) => NearbyCamerasScreen(
                       app: widget.app,
                       title: '${q.place.isEmpty ? '震源' : q.place} 周辺のカメラ',
-                      lat: q.pos.latitude,
-                      lng: q.pos.longitude)));
+                      lat: q.pos!.latitude,
+                      lng: q.pos!.longitude)));
             },
           ),
           const SizedBox(height: 8),
@@ -443,7 +443,7 @@ class _MapScreenState extends State<MapScreen> {
           MarkerLayer(markers: [
             for (final q in _quakes)
               Marker(
-                point: q.pos,
+                point: q.pos!,
                 width: 28,
                 height: 28,
                 child: GestureDetector(

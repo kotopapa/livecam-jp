@@ -67,7 +67,8 @@ class QuakePoint {
   final String place;
   final String magnitude;
   final String maxIntensity;
-  final LatLng pos;
+  /// 震度速報のみの段階では null（表示対象外）
+  final LatLng? pos;
 }
 
 class RainPoint {
@@ -149,31 +150,73 @@ class JmaLayers {
         QuakePeriod.week => const Duration(days: 7),
         QuakePeriod.month => const Duration(days: 30),
       });
-      final byEid = <String, QuakePoint>{};
-      for (final e in (jsonDecode(utf8.decode(r.bodyBytes)) as List).cast<Map<String, dynamic>>()) {
-        final cod = e['cod'] as String? ?? '';
-        final m = _codRe.firstMatch(cod);
-        if (m == null) continue;
-        final at = DateTime.tryParse(e['at'] as String? ?? '');
-        if (at == null || at.isBefore(since)) continue;
-        final eid = e['eid']?.toString() ?? cod;
-        final place = (e['anm'] as String?) ?? '';
-        // 震源名・Mが埋まっている報を優先
-        final cur = byEid[eid];
-        if (cur != null && cur.place.isNotEmpty && place.isEmpty) continue;
-        byEid[eid] = QuakePoint(
-          at: at,
-          place: place,
-          magnitude: (e['mag'] as String?) ?? '',
-          maxIntensity: (e['maxi'] as String?) ?? '',
-          pos: LatLng(double.parse(m.group(1)!), double.parse(m.group(2)!)),
-        );
-      }
-      final out = byEid.values.toList()..sort((a, b) => b.at.compareTo(a.at));
-      return out;
+      return mergeQuakeReports(
+          (jsonDecode(utf8.decode(r.bodyBytes)) as List).cast<Map<String, dynamic>>(),
+          since: since);
     } catch (_) {
       return const [];
     }
+  }
+
+  /// cod("+36.0+140.1-70000/")を緯度経度に変換。「顕著な地震の震源要素更新」報は
+  /// 度分形式("+3559.9+14005.7")で入るため、範囲外の値は度分として解釈する
+  static LatLng? parseCod(String cod) {
+    final m = _codRe.firstMatch(cod);
+    if (m == null) return null;
+    double? conv(String v, double limit) {
+      final d = double.tryParse(v);
+      if (d == null) return null;
+      if (d.abs() <= limit) return d;
+      final sign = d < 0 ? -1 : 1;
+      final abs = d.abs();
+      final deg = (abs / 100).floor();
+      final min = abs - deg * 100;
+      final out = sign * (deg + min / 60);
+      return out.abs() <= limit ? out : null;
+    }
+    final lat = conv(m.group(1)!, 90);
+    final lng = conv(m.group(2)!, 180);
+    if (lat == null || lng == null) return null;
+    return LatLng(lat, lng);
+  }
+
+  static int _intensityRank(String maxi) => switch (maxi) {
+        '1' => 1, '2' => 2, '3' => 3, '4' => 4, '5-' => 5, '5+' => 6, '6-' => 7, '6+' => 8, '7' => 9, _ => 0,
+      };
+
+  /// list.json は同一地震(eid)が震度速報(震源・M空)・震源に関する情報(震度空)・
+  /// 震源震度情報などで複数並ぶ。eidごとに各項目の埋まっている値を合成し、
+  /// 最大震度は報の中で最も大きいものを採る
+  static List<QuakePoint> mergeQuakeReports(List<Map<String, dynamic>> entries,
+      {required DateTime since}) {
+    final byEid = <String, QuakePoint>{};
+    for (final e in entries) {
+      final at = DateTime.tryParse(e['at'] as String? ?? '');
+      if (at == null || at.isBefore(since)) continue;
+      final pos = parseCod(e['cod'] as String? ?? '');
+      final eid = e['eid']?.toString() ?? '';
+      if (eid.isEmpty && pos == null) continue;
+      final place = (e['anm'] as String?) ?? '';
+      final mag = (e['mag'] as String?) ?? '';
+      final maxi = (e['maxi'] as String?) ?? '';
+      final key = eid.isEmpty ? '${e['cod']}' : eid;
+      final cur = byEid[key];
+      if (cur == null) {
+        // 座標のない震度速報だけの段階は pos=null で保留し、後続の報で補う
+        byEid[key] = QuakePoint(at: at, place: place, magnitude: mag, maxIntensity: maxi, pos: pos);
+        continue;
+      }
+      byEid[key] = QuakePoint(
+        at: cur.at,
+        place: cur.place.isNotEmpty ? cur.place : place,
+        magnitude: cur.magnitude.isNotEmpty ? cur.magnitude : mag,
+        maxIntensity: _intensityRank(maxi) > _intensityRank(cur.maxIntensity) ? maxi : cur.maxIntensity,
+        pos: cur.pos ?? pos,
+      );
+    }
+    final out = byEid.values.where((q) => q.pos != null).toList()
+      ..sort((a, b) => b.at.compareTo(a.at));
+    return out;
   }
 
   /// 24時間降水量の面タイル（気象庁 解析雨量の積算。実況・1時間ごと更新）
