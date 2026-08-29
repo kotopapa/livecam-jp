@@ -2762,3 +2762,14 @@ cameras:
     lng: -95.09
     accuracy: area
     note: "地球俯瞰/船内映像の24時間配信。軌道上のため座標は管制センター(ヒューストン)を代表点にしている"
+
+  # ---- 2026-08-29 追加 ----
+  - id: world-moody-gardens-penguin
+    name: ムーディガーデンズ水族館 ペンギン展示(ガルベストン)
+    operator: "Moody Gardens"
+    video_id: "HHp4rjhJsWI"
+    category: healing
+    country: "US"
+    lat: 29.2745
+    lng: -94.8520
+    note: "公式チャンネル(@TheMoodyGardens)のライブ。oEmbed 200・isLive確認(2026-08-29)"
