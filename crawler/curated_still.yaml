@@ -36144,3 +36144,39 @@ cameras:
     image_url: https://www.live-cam.pref.niigata.jp/camera/pc/724004.jpg
     page_url: https://www.live-cam.pref.niigata.jp/text/camera_select.php?form=2&city=10&area=3&class=1&id=125&highway=
     note: '地図マーカー実位置; 索引: https://livecam.asia/niigata/murakami/r7-shimootori.html'
+
+  # --- 2026-08-29 富士山関連(富士登山オフィシャルサイト掲載分) ---
+  - id: curated-link-goraikoukan-8-5
+    name: "富士山 吉田ルート八合五勺 御来光館（山小屋）"
+    operator: "御来光館"
+    category: scenic
+    prefecture: "19"
+    lat: 35.3667
+    lng: 138.7372
+    feed_type: web_page
+    feed_url: "https://www.goraikoukan.jp/livecamera/"
+    image_url: "https://www.goraikoukan.jp/livecamera/"
+    page_url: "https://www.goraikoukan.jp/livecamera/"
+    note: "標高約3,500m。運営者が『ライブ画像データへの直接リンクはNG、このページへのリンクを』と明記 → 誘導型。山小屋営業期間のみ配信。富士登山オフィシャルサイト掲載"
+  - id: curated-still-fujinomiya-cityhall
+    name: "富士宮市役所から見た富士山"
+    operator: "富士宮市 広報課"
+    category: scenic
+    prefecture: "22"
+    lat: 35.2221
+    lng: 138.6214
+    image_url: "https://www.fujinomiya-camera.jp/10photo/new.jpg"
+    page_url: "https://www.fujinomiya-camera.jp/livecam.htm"
+    note: "市役所屋上。利用条件の記載なし(license=unknown)。富士登山オフィシャルサイト掲載"
+  - id: curated-link-kintoki-summit
+    name: "金時山 山頂（金太郎茶屋）"
+    operator: "南足柄市 商工観光課"
+    category: scenic
+    prefecture: "14"
+    lat: 35.2903
+    lng: 139.0006
+    feed_type: web_page
+    feed_url: "https://www.city.minamiashigara.kanagawa.jp/kankou/livecamera/mt-kintoki.html"
+    image_url: "https://www.city.minamiashigara.kanagawa.jp/kankou/livecamera/mt-kintoki.html"
+    page_url: "https://www.city.minamiashigara.kanagawa.jp/kankou/livecamera/mt-kintoki.html"
+    note: "標高1,212m。ページ埋め込みプレイヤーの配信元が特定できないため誘導型。『基本的に自由に利用可、報道・商用は事前連絡』。富士登山オフィシャルサイト掲載"

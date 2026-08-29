@@ -82,6 +82,28 @@ def test_empty_image_body_fails():
     assert "last_modified" not in state
 
 
+def test_stale_last_modified_is_frozen_immediately():
+    # 実例(2026-08-29 スノーパークイエティ): 営業期間外で3月末の画像が配信され続ける。
+    # 履歴が溜まるのを待たず Last-Modified が7日以上前なら frozen
+    img = (FIXTURES / "kawabou_placeholder.png").read_bytes()  # デコード可能な画像なら何でもよい
+    stale = FakeResponse(200, b"\xff\xd8" + img, {"Content-Type": "image/jpeg",
+                                                   "Last-Modified": "Tue, 31 Mar 2026 15:57:14 GMT"})
+    state: dict = {}
+    r = check_camera(FakeSession([stale]), _camera(), state)
+    assert r["state"] == "frozen"
+    assert r["frozen_since"].startswith("2026-03-31")
+
+
+def test_recent_last_modified_stays_ok():
+    from datetime import datetime, timezone
+    from email.utils import format_datetime
+    fresh = FakeResponse(200, b"\xff\xd8" + b"x" * 6000, {"Content-Type": "image/jpeg",
+                                                       "Last-Modified": format_datetime(datetime.now(timezone.utc))})
+    state: dict = {}
+    r = check_camera(FakeSession([fresh]), _camera(), state)
+    assert r["state"] == "ok"
+
+
 def _yt_camera(ftype="youtube_video", url="abc123DEF45"):
     return {
         "id": "yt-1", "lat": 35.0, "lng": 139.0,

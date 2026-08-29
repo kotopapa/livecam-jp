@@ -71,7 +71,7 @@ class JmaVolcamParser(SourceParser):
         for f in features:
             props = f.get("properties") or {}
             code = props.get("code")
-            name = (props.get("name") or "").strip()
+            name = re.sub(r"<[^>]+>", "", (props.get("name") or "").strip()).strip()
             coords = (f.get("geometry") or {}).get("coordinates") or []
             if not code or not name or len(coords) != 2:
                 continue

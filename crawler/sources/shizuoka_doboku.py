@@ -51,7 +51,7 @@ class ShizuokaDobokuParser(SourceParser):
                              .replace("(県)", "県道"))
                 result.candidates.append(CameraCandidate(
                     id=f"shizuoka-doboku-{area}-{slug}",
-                    name=title.replace("　", " "),
+                    name=re.sub(r"<[^>]+>", "", title).replace("　", " ").strip(),
                     category="road",
                     prefecture="22",
                     feed_type="still_image",

@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 import time
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 import requests
@@ -105,6 +105,25 @@ def _check_roadinfo(session, camera, state, now, prev_failures) -> dict:
     return result
 
 
+STALE_LAST_MODIFIED_DAYS = 7
+
+
+def _stale_last_modified(value: str | None, now) -> str | None:
+    """Last-Modified が STALE_LAST_MODIFIED_DAYS より古ければその時刻(ISO)を返す。"""
+    if not value:
+        return None
+    try:
+        from email.utils import parsedate_to_datetime
+        lm = parsedate_to_datetime(value)
+    except (TypeError, ValueError):
+        return None
+    if lm.tzinfo is None:
+        lm = lm.replace(tzinfo=timezone.utc)
+    if now - lm > timedelta(days=STALE_LAST_MODIFIED_DAYS):
+        return lm.isoformat()
+    return None
+
+
 def _check_still(session, camera, state, now, prev_failures, url: str | None = None) -> dict:
     resp = _get(session, url or camera["feed"]["url"], _headers(camera, state))
     if resp is None or resp.status_code >= 400:
@@ -135,6 +154,19 @@ def _check_still(session, camera, state, now, prev_failures, url: str | None = N
     state["consecutive_failures"] = 0
     state["etag"] = resp.headers.get("ETag") or state.get("etag")
     state["last_modified"] = resp.headers.get("Last-Modified") or state.get("last_modified")
+
+    # サーバが画像の更新日時を返し、それが古すぎるなら履歴を待たずに frozen 扱い
+    # （季節営業のスキー場カメラ等。2026-08-29 イエティで3月末のまま配信されていた）
+    stale_since = _stale_last_modified(state.get("last_modified"), now)
+    if stale_since is not None:
+        return {
+            "state": "frozen",
+            "last_ok_at": state.get("last_ok_at"),
+            "http_status": resp.status_code,
+            "frozen_since": stale_since,
+            "consecutive_failures": 0,
+            "avg_interval_sec": state.get("avg_interval_sec"),
+        }
 
     # 更新間隔の実測: 画像が変わった時刻を記録
     if (not not_modified and history and history[-1].get("hash") is not None
