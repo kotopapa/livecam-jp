@@ -71,3 +71,17 @@ python site/build.py                            # 配信ファイル生成
 - **GitHub Actionsのcronは間引かれ・停止することがある**（2026-08-26〜27に5分cronが数時間おきになり、最後は8時間停止。大阪の大雨危険警報の通知が遅れた）。公開リポジトリで実行枠の問題ではなく、GitHub側のスケジュール取りこぼし
 - 対策として**ユーザーのGAS（Google Apps Script）から5分おきに`bosai-notify.yml`、30分おきに`monitor.yml`を`workflow_dispatch` APIで起動**している（Fine-grained PAT: livecam-jp限定・Actions Read/write）。GitHub側のcronは予備として併存。実行履歴で`workflow_dispatch`が5分ごとに並んでいれば正常。止まっていたらGASのトリガー/トークン期限(無期限設定)を疑う
 - 台帳の公開(publish)は全ユーザーに1MB(gzip)の再取得を発生させるため、1日1回程度にまとめる
+
+## カメラ調査の知見（2026-08-29追記）
+
+- **ライブカメラDB(livecam.asia)索引経由の取込**は tools/livecamdb_index.py（索引）→ tools/livecamdb_ingest.py（一次ソース確認）→ scratchpad の build_*_yaml.py / merge.py / approve_batch.py（消えたら再作成）で流す。座標はGoogleマップ埋め込みの `!2z`（マーカー実位置）を優先、`!2d/!3d` は中心で約200mずれる
+- **YouTubeチャンネルの現在ライブは `/streams` の ytInitialData から取れる**。2026-08時点で一覧は `lockupViewModel`（`contentId` + `thumbnailBadgeViewModel.badgeStyle == THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE`）に変わっており、旧 `videoRenderer` は出ない。索引由来の「チャンネルURLのみ」記録はこれで6割程度が現在の枠に解決できた。ニュース番組・院内番号案内・ペット部屋などカメラ映像でない配信が混ざるので名称/タイトルで除外する
+- **埼玉県川の防災情報と和歌山県河川雨量防災は同じJWAテンプレート**（`geojson/<pref>_camera.geojson` + `chitenconfig/CameraList.csv` + 固定URL `hyoujidata/camera/<ID>.jpg`）。`crawler/sources/jwa_river_cam.py` に県設定を足すだけで他県も対応できる。埼玉はkawabou由来と同一地点が72件あり保留中（候補のnoteに「kawabou重複候補」）
+- **転載禁止文言のため誘導型に切替済み**: みち情報ネットふくい（`camera.html?id=`）・ひろしま道路ナビ（`camera_detail.php?id=`）。県へ照会中（docs/inquiries_2026-08-29.md）。許諾が出たらパーサの feed_type を still_image に戻す
+- 掲載元システムの利用条件・取得構造の調査結果は docs/research_2026-08-29/system_parsers_terms.md（静岡SIPOS・名古屋市は要照会、NTTルパルクは不可、山口・島根・福岡は実装可/条件付き）
+
+## アプリの知見（2026-08-29追記）
+
+- **Dartの `DateTime.parse` は `+09:00` 付き文字列をUTCに変換して返す**。気象庁のファイル名（JST）を組み立てるときは `.toUtc().add(9h)` で明示的にJSTへ戻す（アメダスで9時間前のデータを読んでいた）。表示も `toLocal()` ではなく明示変換にする
+- 気象庁の24時間降水量タイル(rasrf24h)の配色しきい値は 〜50/50/80/100/150/200/250/300mm（1時間雨量の 10/20/50/80… とは別）。凡例・ラベル色はタイル画素とアメダス実測値で照合済み
+- quake/list.json の「顕著な地震の震源要素更新」報は cod が度分形式（`+3559.9+14005.7`）。同一eidの複数報は震度が空の報が混ざるので、値の埋まっている項目を合成し最大震度を採る（`JmaLayers.mergeQuakeReports`）
