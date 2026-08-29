@@ -31,7 +31,7 @@ def _notice() -> str | None:
     p = DATA / "notice.txt"
     if not p.exists():
         return None
-    t = p.read_text(encoding="utf-8").strip()
+    t = p.read_text(encoding="utf-8").rstrip()  # 先頭の空行は旧版の重なり回避に使うので残す
     return t or None
 
 
