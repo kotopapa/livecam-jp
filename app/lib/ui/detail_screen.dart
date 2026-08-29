@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart' show AdSize;
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:http/http.dart' as http;
@@ -137,6 +138,9 @@ class _DetailScreenState extends State<DetailScreen> {
             const Divider(height: 24),
             _locationSection(),
             const Divider(height: 24),
+            // 地図の下にレクタングル広告(300×250)。上部バナーがスクロールで
+            // 見えなくなる位置まで来た利用者向け。失敗時は区切り線ごと消える
+            const AdBannerPlaceholder(size: AdSize.mediumRectangle),
             _sourceSection(pageUrl),
             const Divider(height: 24),
             _nearbySection(),
