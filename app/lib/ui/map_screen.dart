@@ -490,9 +490,12 @@ class _MapScreenState extends State<MapScreen> {
                     child: Container(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: JmaLayers.rainColor(r.mm24h).withValues(alpha: 0.9),
+                        color: JmaLayers.rainColor(r.mm24h).withValues(alpha: 0.95),
                         borderRadius: BorderRadius.circular(4),
-                        border: Border.all(color: Colors.white, width: 1),
+                        // 「〜50」の薄色はタイルの塗りと同化して見つけにくいため、
+                        // 濃い縁取り+影で地図・塗りから浮かせる
+                        border: Border.all(color: Colors.black54, width: 1),
+                        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 2, offset: Offset(0, 1))],
                       ),
                       child: Text('${r.mm24h.round()}',
                           style: TextStyle(
