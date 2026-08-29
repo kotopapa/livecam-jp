@@ -1,0 +1,45 @@
+name: notice-clear
+
+# アプリ内お知らせバナー(data/notice.txt)を予定時刻に取り下げる。
+# 2026-08-30 18:00 JST (= 09:00 UTC)。GitHubのcronは遅延・欠落があるため
+# workflow_dispatch でも起動できる。空なら何もしない(冪等)
+on:
+  schedule:
+    - cron: "0 9 30 8 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: notice-clear
+  cancel-in-progress: false
+
+jobs:
+  clear:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pyyaml jsonschema
+      - name: お知らせを空にして配信ファイルを再生成
+        run: |
+          if [ ! -s data/notice.txt ]; then echo "already empty"; exit 0; fi
+          : > data/notice.txt
+          python site/build.py
+          git config user.name "livecam-jp-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/notice.txt site
+          git commit -m "お知らせバナーを取り下げ(予定: 2026-08-30 18:00 JST)"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && break
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 10))
+          done
+      - name: 配信を更新
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml || true
