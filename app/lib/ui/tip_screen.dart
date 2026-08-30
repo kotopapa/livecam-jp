@@ -141,7 +141,7 @@ class _TipScreenState extends State<TipScreen> {
           ),
         ),
         const SizedBox(height: 12),
-        Text('全国ライブカメラ地図の開発を応援する',
+        Text('開発者を応援する',
             textAlign: TextAlign.center,
             style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
         const SizedBox(height: 8),
