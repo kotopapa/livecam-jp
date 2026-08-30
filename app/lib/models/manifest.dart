@@ -56,6 +56,7 @@ class RecommendedApp {
     required this.tagline,
     required this.storeUrl,
     this.iconUrl,
+    this.collapsed = false,
   });
 
   final String id;
@@ -64,11 +65,15 @@ class RecommendedApp {
   final String storeUrl;
   final String? iconUrl;
 
+  /// true なら「その他を見る」を押すまで隠す
+  final bool collapsed;
+
   factory RecommendedApp.fromJson(Map<String, dynamic> j) => RecommendedApp(
         id: j['id']?.toString() ?? '',
         name: j['name'] as String? ?? '',
         tagline: j['tagline'] as String? ?? '',
         storeUrl: j['store_url'] as String? ?? '',
         iconUrl: j['icon_url'] as String?,
+        collapsed: j['collapsed'] == true,
       );
 }

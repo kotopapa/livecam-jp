@@ -41,6 +41,7 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
+  bool _showMoreApps = false;
   bool _clearingCache = false;
   final _notify = NotificationSettings();
   bool _notifyLoaded = false;
@@ -571,6 +572,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const Divider(),
           const _SectionHeader('開発者の他のアプリ'),
           for (final a in widget.app.repository.manifest!.apps)
+            if (!a.collapsed || _showMoreApps)
             ListTile(
               leading: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
@@ -583,6 +585,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
               subtitle: a.tagline.isEmpty ? null : Text(a.tagline),
               trailing: const Icon(Icons.open_in_new, size: 18),
               onTap: () => _open(a.storeUrl),
+            ),
+          if (!_showMoreApps &&
+              widget.app.repository.manifest!.apps.any((a) => a.collapsed))
+            TextButton.icon(
+              onPressed: () => setState(() => _showMoreApps = true),
+              icon: const Icon(Icons.expand_more),
+              label: const Text('その他のアプリを見る'),
             ),
         ],
         const Divider(),
