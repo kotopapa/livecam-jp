@@ -21,6 +21,8 @@ const _requestFormUrl =
     'https://docs.google.com/forms/d/e/1FAIpQLScRz0Enqfrq-lrbuDVBdFD1jwSyl4GJEZtgTJxAoZfYo-QWJw/viewform';
 const _termsUrl = 'https://kotopapa.github.io/livecam-jp/terms.html';
 const _privacyUrl = 'https://kotopapa.github.io/livecam-jp/privacy.html';
+/// 開発者のXアカウント（Xアプリがあればユニバーサルリンクでアプリが開く）
+const _xUrl = 'https://x.com/kotopapa8';
 
 Future<void> _open(String url) =>
     launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
@@ -564,6 +566,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
           title: const Text('アプリを評価する'),
           subtitle: const Text('App Storeでレビューを書く'),
           onTap: _openReview,
+        ),
+        ListTile(
+          leading: const Icon(Icons.alternate_email),
+          title: const Text('Xでフォローする'),
+          subtitle: const Text('@kotopapa8 — 新しいカメラや機能のお知らせ'),
+          onTap: () => _open(_xUrl),
         ),
         const Divider(),
         const _SectionHeader('免責'),
