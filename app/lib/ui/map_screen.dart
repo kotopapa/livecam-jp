@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io' show Directory, Platform;
+import 'dart:io' show Directory;
 import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart' show setEquals;
@@ -563,19 +563,17 @@ class _MapScreenState extends State<MapScreen> {
                 ),
             ]),
             const SizedBox(height: 12),
-            Row(children: [
-              Expanded(
-                child: FilledButton.icon(
+            // 2段に積む（横並びだと「周辺のライブカメラ」が途中で改行される）
+            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              FilledButton.icon(
                   icon: const Icon(Icons.directions, size: 18),
-                  label: const Text('経路を見る'),
+                  label: const Text('Googleマップで経路を見る'),
                   onPressed: () => launchUrl(
-                      ShelterLayers.routeUri(s, android: Platform.isAndroid),
+                      ShelterLayers.routeUri(s),
                       mode: LaunchMode.externalApplication),
                 ),
-              ),
-              const SizedBox(width: 8),
-              Expanded(
-                child: OutlinedButton.icon(
+              const SizedBox(height: 8),
+              OutlinedButton.icon(
                   icon: const Icon(Icons.videocam, size: 18),
                   label: const Text('周辺のライブカメラ'),
                   onPressed: () {
@@ -588,7 +586,6 @@ class _MapScreenState extends State<MapScreen> {
                             lng: s.lng)));
                   },
                 ),
-              ),
             ]),
             const SizedBox(height: 8),
             Text('${ShelterLayers.attribution}　${ShelterLayers.disclaimer}',

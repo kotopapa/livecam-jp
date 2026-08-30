@@ -162,9 +162,10 @@ class ShelterLayers {
           : [for (final s in shelters) if (s.hazards.contains(hazard)) s];
 
   /// Apple Maps / Google Maps の経路URL
-  static Uri routeUri(Shelter s, {required bool android}) => android
-      ? Uri.parse('https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}')
-      : Uri.parse('https://maps.apple.com/?daddr=${s.lat},${s.lng}');
+  /// 経路案内はGoogleマップに統一（2026-08-30ユーザー決定）。アプリがあれば
+  /// ユニバーサルリンクでGoogleマップが開き、無ければブラウザ版で開く
+  static Uri routeUri(Shelter s, {bool android = false}) =>
+      Uri.parse('https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}&travelmode=walking');
 }
 
 /// 県ファイルの取得・キャッシュ。UIは [addListener] で変更を受け取る

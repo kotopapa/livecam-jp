@@ -101,12 +101,14 @@ void main() {
     expect(ShelterLayers.filterByHazard(culled, 7), isEmpty);
   });
 
-  test('経路URL（iOS=Apple Maps / Android=Google Maps）', () {
+  test('経路URLは両OSともGoogleマップ(徒歩)', () {
     final s = sh('a', 35.457, 139.523);
-    expect(ShelterLayers.routeUri(s, android: false).toString(),
-        'https://maps.apple.com/?daddr=35.457,139.523');
-    expect(ShelterLayers.routeUri(s, android: true).toString(),
-        contains('destination=35.457,139.523'));
+    for (final android in [false, true]) {
+      final u = ShelterLayers.routeUri(s, android: android);
+      expect(u.host, 'www.google.com');
+      expect(u.toString(), contains('destination=35.457,139.523'));
+      expect(u.toString(), contains('travelmode=walking'));
+    }
   });
 
   test('汎用クラスタリングで件数が保存される', () {
