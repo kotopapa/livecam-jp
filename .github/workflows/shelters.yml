@@ -1,0 +1,61 @@
+name: shelters
+
+on:
+  schedule:
+    - cron: "0 18 1 * *"   # 毎月1日 JST 03:00（前日 18:00 UTC）
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "CSVが未更新でも再生成する"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: shelters
+  cancel-in-progress: false
+
+jobs:
+  shelters:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 国土地理院 指定緊急避難場所データを取り込み
+        run: |
+          if [ "${{ inputs.force }}" = "true" ]; then
+            python -m tools.shelters --force
+          else
+            python -m tools.shelters
+          fi
+      - name: 変更があればコミット
+        id: commit
+        run: |
+          git config user.name "livecam-jp-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/shelters data/shelters_state.json
+          if git diff --cached --quiet; then
+            echo "変更なし"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "shelters: monthly update"
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && break
+              git rebase --abort 2>/dev/null || true
+              sleep $((i * 10))
+            done
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: 配信を更新（GITHUB_TOKENのpushはpublishを起動しないため明示実行）
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml || true

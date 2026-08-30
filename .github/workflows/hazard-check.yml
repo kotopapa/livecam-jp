@@ -1,0 +1,69 @@
+name: hazard-check
+
+# 重ねるハザードマップ（国土地理院）のタイルID・タイル応答を月1回確認し、
+# 変化があれば Issue を立てる（アプリの hazard_layers.dart が陳腐化していないかの見張り）
+on:
+  schedule:
+    - cron: "0 0 1 * *"   # 毎月1日 09:00 JST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: hazard-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: タイル応答と一覧ページを前回と比較（1req/s）
+        id: check
+        run: |
+          set +e
+          python tools/hazard_check.py --report "$RUNNER_TEMP/hazard_report.md"
+          rc=$?
+          set -e
+          echo "rc=$rc"
+          if [ "$rc" = "3" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif [ "$rc" != "0" ]; then
+            exit "$rc"
+          fi
+      - name: 変化があれば Issue を作成
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "ハザードマップタイルの変化を検出 ($(date -u +%Y-%m-%d))" \
+            --label "hazard-check" \
+            --body-file "$RUNNER_TEMP/hazard_report.md" \
+          || gh issue create \
+            --title "ハザードマップタイルの変化を検出 ($(date -u +%Y-%m-%d))" \
+            --body-file "$RUNNER_TEMP/hazard_report.md"
+      - name: 前回確認結果をコミット（変化があるときのみ）
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "livecam-jp-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/hazard_layers_seen.json
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "hazard-check: seen update"
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && break
+              git rebase --abort 2>/dev/null || true
+              sleep $((i * 10))
+            done
+          fi

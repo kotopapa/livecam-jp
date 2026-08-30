@@ -7,6 +7,7 @@ on:
       - "data/cameras.json"
       - "data/status.json"
       - "data/global_ranking.json"
+      - "data/shelters/**"
       - "site/**"
   workflow_dispatch:
 

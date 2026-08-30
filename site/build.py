@@ -7,6 +7,7 @@
     site/v1/cameras.json            # 承認済み全件
     site/v1/cameras/<prefCode>.json # 都道府県別
     site/v1/status.json
+    site/v1/shelters/*.json         # 避難所（data/shelters/ のコピー。tools/shelters.py が月次生成）
 
 アプリに配るのは approved のみ。verification 等の内部フィールドは落とす。
 """
@@ -138,6 +139,13 @@ def build() -> int:
             "favorites": favs[:30],
         }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         print(f"ranking.json 生成: {len(entries)}台")
+
+    # 避難所データ（data/shelters/ を site/v1/shelters/ へコピー。無ければ何もしない）
+    sys.path.insert(0, str(REPO_ROOT))
+    from tools.shelters import sync_site
+    n_shelters = sync_site()
+    if n_shelters:
+        print(f"shelters: {n_shelters}ファイルをコピー")
 
     print(f"site/v1 生成: 承認済み {len(approved)}件, 都道府県 {len(by_pref)}")
     return 0

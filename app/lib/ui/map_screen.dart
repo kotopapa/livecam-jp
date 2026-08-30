@@ -10,6 +10,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../app_state.dart';
+import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
@@ -160,7 +161,7 @@ class _MapScreenState extends State<MapScreen> {
       }
       _layerFailed = false;
     });
-    if (kind == MapLayerKind.none) return;
+    if (kind == MapLayerKind.none || HazardLayers.isHazard(kind)) return;
     await _refreshLayer();
     // レイヤーON中だけ定期更新（雨雲5分・震源/雨量10分）
     _layerTimer = Timer.periodic(
@@ -196,6 +197,10 @@ class _MapScreenState extends State<MapScreen> {
         _rain = await JmaLayers.fetchRain24h();
         ok = tile != null || _rain.isNotEmpty;
       case MapLayerKind.none:
+      case MapLayerKind.hazardFlood:
+      case MapLayerKind.hazardLandslide:
+      case MapLayerKind.hazardTsunami:
+      case MapLayerKind.hazardHightide:
         break;
     }
     if (mounted) {
@@ -211,6 +216,7 @@ class _MapScreenState extends State<MapScreen> {
       context: context,
       showDragHandle: true,
       builder: (ctx) => SafeArea(
+        child: SingleChildScrollView(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           const ListTile(
               title: Text('気象レイヤー', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -253,8 +259,29 @@ class _MapScreenState extends State<MapScreen> {
             subtitle: const Text('気象庁の解析雨量（面）＋拡大でアメダス観測値'),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rain24h); },
           ),
+          const Divider(height: 8),
+          const ListTile(
+              title: Text('ハザードマップ', style: TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text('出典：ハザードマップポータルサイト（国土地理院）')),
+          for (final k in const [
+            MapLayerKind.hazardFlood,
+            MapLayerKind.hazardLandslide,
+            MapLayerKind.hazardTsunami,
+            MapLayerKind.hazardHightide,
+          ])
+            ListTile(
+              leading: Icon(_layer == k ? Icons.radio_button_checked : Icons.radio_button_off,
+                  color: _layer == k ? Theme.of(ctx).colorScheme.primary : null),
+              title: Text(HazardLayers.title(k)),
+              subtitle: Text(switch (k) {
+                MapLayerKind.hazardLandslide => '急傾斜地・土石流・地すべり（黄=警戒区域 / 赤=特別警戒区域）',
+                _ => '想定される浸水深を色分け表示',
+              }),
+              onTap: () { Navigator.pop(ctx); _setLayer(k); },
+            ),
           const SizedBox(height: 8),
         ]),
+        ),
       ),
     );
   }
@@ -439,9 +466,29 @@ class _MapScreenState extends State<MapScreen> {
         items.addAll([
           for (final s in JmaLayers.rain24hScale) swatch(s.$2, s.$3),
         ]);
+      case MapLayerKind.hazardFlood:
+      case MapLayerKind.hazardTsunami:
+      case MapLayerKind.hazardHightide:
+        title = HazardLayers.title(_layer);
+        items.addAll([for (final s in HazardLayers.depthScale) swatch(s.$1, s.$2)]);
+      case MapLayerKind.hazardLandslide:
+        title = '${HazardLayers.title(_layer)}（警戒 / 特別警戒）';
+        items.addAll([
+          for (final s in HazardLayers.landslideScale)
+            Padding(
+              padding: const EdgeInsets.only(right: 6),
+              child: Row(mainAxisSize: MainAxisSize.min, children: [
+                Container(width: 10, height: 10, color: s.$2),
+                Container(width: 10, height: 10, color: s.$3),
+                const SizedBox(width: 2),
+                Text(s.$1, style: const TextStyle(fontSize: 9)),
+              ]),
+            ),
+        ]);
       case MapLayerKind.none:
         title = '';
     }
+    final hazard = HazardLayers.isHazard(_layer);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
       decoration: BoxDecoration(
@@ -458,7 +505,7 @@ class _MapScreenState extends State<MapScreen> {
               child: Text('取得できません', style: TextStyle(fontSize: 9, color: Colors.red))),
         ]),
         Row(mainAxisSize: MainAxisSize.min, children: items),
-        const Text('出典：気象庁', style: TextStyle(fontSize: 9, color: Colors.black54)),
+        if (!hazard) const Text('出典：気象庁', style: TextStyle(fontSize: 9, color: Colors.black54)),
       ]),
     );
   }
@@ -549,6 +596,25 @@ class _MapScreenState extends State<MapScreen> {
                   ),
                 ),
             ]),
+        ];
+      case MapLayerKind.hazardFlood:
+      case MapLayerKind.hazardLandslide:
+      case MapLayerKind.hazardTsunami:
+      case MapLayerKind.hazardHightide:
+        // 地理院の静的タイル。データの無い範囲は404が正常。ズーム17超は拡大表示
+        return [
+          for (final id in HazardLayers.tileIds(_layer))
+            Opacity(
+              opacity: 0.65,
+              child: TileLayer(
+                key: ValueKey('hazard-$id'),
+                urlTemplate: HazardLayers.tileTemplate(id),
+                minNativeZoom: HazardLayers.minZoom,
+                maxNativeZoom: HazardLayers.maxZoom,
+                userAgentPackageName: 'jp.livecam.livecam_jp',
+                errorTileCallback: (_, _, _) {},
+              ),
+            ),
         ];
       case MapLayerKind.none:
         return const [];
@@ -1203,6 +1269,7 @@ class _MapScreenState extends State<MapScreen> {
                 child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Padding(padding: const EdgeInsets.only(bottom: 6), child: _nowcastSlider()),
                   Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
+                  if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
                   _GsiAttribution(worldTiles: _useWorldTiles),
                 ]),
               ),
@@ -1377,6 +1444,24 @@ class _GsiAttribution extends StatelessWidget {
       color: Colors.white70,
       child: Text(worldTiles ? '© OpenStreetMap contributors' : '地理院タイル',
           style: const TextStyle(fontSize: 10)),
+    );
+  }
+}
+
+/// ハザードマップ表示中の出典・免責（_GsiAttribution と同じ場所・様式で上に積む）
+class _HazardAttribution extends StatelessWidget {
+  const _HazardAttribution();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      color: Colors.white70,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: const [
+        Text(HazardLayers.attribution, style: TextStyle(fontSize: 10)),
+        Text(HazardLayers.disclaimer, style: TextStyle(fontSize: 9, color: Colors.black54)),
+      ]),
     );
   }
 }
