@@ -1,17 +1,22 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io' show Directory, Platform;
 import 'dart:math' as math;
 
+import 'package:flutter/foundation.dart' show setEquals;
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
+import '../data/shelter_layers.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
 import '../util/geo.dart';
@@ -122,11 +127,14 @@ class _MapScreenState extends State<MapScreen> {
     _controller.move(LatLng(lat, lng), 15);
     setState(() => _zoom = 15);
     _savePosition();
+    _requestSheltersForView();
   }
 
   @override
   void dispose() {
     _layerTimer?.cancel();
+    _shelters?.removeListener(_onDataChanged);
+    _shelters?.dispose();
     widget.app.navigationRequest.removeListener(_onNavigationRequest);
     widget.app.removeListener(_onDataChanged);
     _searchController.dispose();
@@ -137,7 +145,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _onDataChanged() => setState(() {});
 
-  // --- 気象レイヤー（雨雲レーダー / 震源 / 24時間雨量。排他表示） ---
+  // --- 地図レイヤー（雨雲レーダー / 震源 / 24時間雨量 / ハザードマップ / 避難場所。排他表示） ---
   MapLayerKind _layer = MapLayerKind.none;
   QuakePeriod _quakePeriod = QuakePeriod.week;
   NowcastTime? _nowcast;
@@ -161,6 +169,11 @@ class _MapScreenState extends State<MapScreen> {
       }
       _layerFailed = false;
     });
+    if (kind == MapLayerKind.shelters) {
+      await _showShelterNoticeOnce();
+      _requestSheltersForView();
+      return;
+    }
     if (kind == MapLayerKind.none || HazardLayers.isHazard(kind)) return;
     await _refreshLayer();
     // レイヤーON中だけ定期更新（雨雲5分・震源/雨量10分）
@@ -201,6 +214,7 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.hazardLandslide:
       case MapLayerKind.hazardTsunami:
       case MapLayerKind.hazardHightide:
+      case MapLayerKind.shelters:
         break;
     }
     if (mounted) {
@@ -219,8 +233,8 @@ class _MapScreenState extends State<MapScreen> {
         child: SingleChildScrollView(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           const ListTile(
-              title: Text('気象レイヤー', style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text('出典：気象庁。地図に1種類だけ重ねて表示します')),
+              title: Text('地図レイヤー', style: TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text('地図に1種類だけ重ねて表示します')),
           ListTile(
             leading: Icon(_layer == MapLayerKind.none ? Icons.radio_button_checked : Icons.radio_button_off,
                 color: _layer == MapLayerKind.none ? Theme.of(ctx).colorScheme.primary : null),
@@ -228,6 +242,10 @@ class _MapScreenState extends State<MapScreen> {
             
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.none); },
           ),
+          const Divider(height: 8),
+          const ListTile(
+              title: Text('気象', style: TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text('出典：気象庁')),
           ListTile(
             leading: Icon(_layer == MapLayerKind.rainRadar ? Icons.radio_button_checked : Icons.radio_button_off,
                 color: _layer == MapLayerKind.rainRadar ? Theme.of(ctx).colorScheme.primary : null),
@@ -279,6 +297,17 @@ class _MapScreenState extends State<MapScreen> {
               }),
               onTap: () { Navigator.pop(ctx); _setLayer(k); },
             ),
+          const Divider(height: 8),
+          const ListTile(
+              title: Text('避難場所', style: TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text('出典：国土地理院「指定緊急避難場所データ」')),
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.shelters ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.shelters ? Theme.of(ctx).colorScheme.primary : null),
+            title: const Text('避難場所（指定緊急避難場所・指定避難所）'),
+            subtitle: const Text('拡大すると表示。災害種別で絞り込みできます'),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.shelters); },
+          ),
           const SizedBox(height: 8),
         ]),
         ),
@@ -365,6 +394,249 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  // --- 避難場所レイヤー（国土地理院 指定緊急避難場所。県ファイルを表示範囲に応じて取得） ---
+  ShelterStore? _shelters;
+  int? _shelterHazard; // null=すべて
+  Set<String> _shelterPrefs = const {};
+  static const _shelterNoticeKey = 'shelter_notice_seen';
+
+  Future<ShelterStore> _shelterStore() async {
+    if (_shelters != null) return _shelters!;
+    Directory? dir;
+    try {
+      dir = await getTemporaryDirectory();
+    } catch (_) {
+      dir = null; // 保存できなくてもメモリキャッシュだけで動く
+    }
+    return _shelters ??= ShelterStore(cacheDir: dir)..addListener(_onDataChanged);
+  }
+
+  /// 初回ONのときだけ利用上の注意（index.notice の要点）を1回表示する
+  Future<void> _showShelterNoticeOnce() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool(_shelterNoticeKey) ?? false) return;
+    if (!mounted) return;
+    await showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('避難場所レイヤーについて'),
+        content: const SingleChildScrollView(
+          child: Text(
+            '・「指定緊急避難場所」は災害の危険から命を守るために逃げ込む場所、'
+            '「指定避難所」は一定期間滞在する施設です（二重枠で表示）\n'
+            '・指定緊急避難場所は災害種別ごとに指定されており、災害の種類によっては避難できない場合があります\n'
+            '・市町村から提供された情報のため、最新でない場合や掲載されていない場所があります。'
+            '正確な情報は当該市町村にご確認ください\n\n'
+            '${ShelterLayers.attribution}',
+            style: TextStyle(fontSize: 13),
+          ),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('OK')),
+        ],
+      ),
+    );
+    await prefs.setBool(_shelterNoticeKey, true);
+  }
+
+  /// 表示範囲（余白込み）。初回レイアウト前は null
+  (double south, double north, double west, double east)? _viewBoundsWithMargin() {
+    final LatLngBounds b;
+    try {
+      b = _controller.camera.visibleBounds;
+    } catch (_) {
+      return null;
+    }
+    final latMargin = (b.north - b.south) * 0.5;
+    final lngMargin = (b.east - b.west).abs() * 0.5;
+    return (b.south - latMargin, b.north + latMargin, b.west - lngMargin, b.east + lngMargin);
+  }
+
+  /// 表示範囲に掛かる県ファイルを要求する（ズーム11未満では何もしない）
+  Future<void> _requestSheltersForView() async {
+    if (_layer != MapLayerKind.shelters || _zoom < ShelterLayers.minZoom) return;
+    final v = _viewBoundsWithMargin();
+    if (v == null) return;
+    final prefs = ShelterLayers.prefsForBounds(
+      widget.app.repository.displayableCameras(),
+      south: v.$1, north: v.$2, west: v.$3, east: v.$4,
+      center: _controller.camera.center,
+    );
+    final store = await _shelterStore();
+    if (!mounted) return;
+    if (!setEquals(prefs, _shelterPrefs)) setState(() => _shelterPrefs = prefs);
+    store.request(prefs);
+  }
+
+  /// 画面内（余白込み）・災害種別フィルタ適用後の避難場所
+  List<Shelter> _visibleShelters() {
+    final store = _shelters;
+    if (store == null || _zoom < ShelterLayers.minZoom) return const [];
+    final v = _viewBoundsWithMargin();
+    if (v == null) return const [];
+    return ShelterLayers.filterByHazard(
+      ShelterLayers.cull(store.sheltersFor(_shelterPrefs),
+          south: v.$1, north: v.$2, west: v.$3, east: v.$4),
+      _shelterHazard,
+    );
+  }
+
+  /// 災害種別の絞り込みチップ（左下縦積みの先頭。雨雲スライダーと同じ位置）
+  Widget _shelterChips() {
+    if (_layer != MapLayerKind.shelters) return const SizedBox.shrink();
+    final hazards = _shelters?.hazards ?? ShelterLayers.defaultHazards;
+    Widget chip(String label, int? value) => Padding(
+          padding: const EdgeInsets.only(right: 6),
+          child: ChoiceChip(
+            label: Text(label, style: const TextStyle(fontSize: 12)),
+            selected: _shelterHazard == value,
+            visualDensity: VisualDensity.compact,
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            onSelected: (_) => setState(() => _shelterHazard = value),
+          ),
+        );
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+      decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.92),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          const Icon(Icons.home_work_outlined, size: 16),
+          const SizedBox(width: 6),
+          chip('すべて', null),
+          for (var i = 0; i < hazards.length; i++) chip(hazards[i], i),
+        ]),
+      ),
+    );
+  }
+
+  void _showShelterInfo(Shelter s) {
+    final hazards = _shelters?.hazards ?? ShelterLayers.defaultHazards;
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+          child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              const Padding(
+                padding: EdgeInsets.only(top: 2, right: 8),
+                child: _ShelterPin(designated: false, size: 22),
+              ),
+              Expanded(
+                child: Text(s.name.isEmpty ? '避難場所' : s.name,
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+              ),
+              if (s.designated)
+                Container(
+                  margin: const EdgeInsets.only(left: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                  decoration: BoxDecoration(
+                      color: _ShelterPin.color,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: const Text('指定避難所',
+                      style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white)),
+                ),
+            ]),
+            if (s.address.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: Text(s.address, style: TextStyle(fontSize: 13, color: Colors.grey[700])),
+              ),
+            const SizedBox(height: 8),
+            const Text('対応する災害種別', style: TextStyle(fontSize: 11, color: Colors.black54)),
+            const SizedBox(height: 4),
+            Wrap(spacing: 6, runSpacing: 4, children: [
+              for (var i = 0; i < hazards.length; i++)
+                Chip(
+                  label: Text(hazards[i], style: const TextStyle(fontSize: 11)),
+                  visualDensity: VisualDensity.compact,
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  backgroundColor: s.hazards.contains(i) ? _ShelterPin.color.withValues(alpha: 0.18) : null,
+                  side: s.hazards.contains(i) ? const BorderSide(color: _ShelterPin.color) : null,
+                  labelStyle: TextStyle(color: s.hazards.contains(i) ? Colors.black87 : Colors.black38),
+                ),
+            ]),
+            const SizedBox(height: 12),
+            Row(children: [
+              Expanded(
+                child: FilledButton.icon(
+                  icon: const Icon(Icons.directions, size: 18),
+                  label: const Text('経路を見る'),
+                  onPressed: () => launchUrl(
+                      ShelterLayers.routeUri(s, android: Platform.isAndroid),
+                      mode: LaunchMode.externalApplication),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: OutlinedButton.icon(
+                  icon: const Icon(Icons.videocam, size: 18),
+                  label: const Text('周辺のライブカメラ'),
+                  onPressed: () {
+                    Navigator.pop(ctx);
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => NearbyCamerasScreen(
+                            app: widget.app,
+                            title: '${s.name.isEmpty ? '避難場所' : s.name} 周辺のカメラ',
+                            lat: s.lat,
+                            lng: s.lng)));
+                  },
+                ),
+              ),
+            ]),
+            const SizedBox(height: 8),
+            Text('${ShelterLayers.attribution}　${ShelterLayers.disclaimer}',
+                style: const TextStyle(fontSize: 10, color: Colors.black54)),
+          ]),
+        ),
+      ),
+    );
+  }
+
+  /// 避難場所のマーカー（カメラピンより下に描く。400件超はクラスタ）
+  List<Widget> _shelterWidgets() {
+    if (_zoom < ShelterLayers.minZoom) return const [];
+    final list = _visibleShelters();
+    if (list.isEmpty) return const [];
+    if (list.length > ShelterLayers.clusterThreshold) {
+      final groups = clusterPoints(list, _zoom, (s) => s.lat, (s) => s.lng);
+      return [
+        MarkerLayer(markers: [
+          for (final g in groups)
+            if (g.count == 1)
+              _shelterMarker(g.items.first)
+            else
+              Marker(
+                point: LatLng(g.lat, g.lng),
+                width: 36,
+                height: 36,
+                child: GestureDetector(
+                  onTap: () => _controller.move(LatLng(g.lat, g.lng), _zoom + 2),
+                  child: _ShelterCluster(count: g.count),
+                ),
+              ),
+        ]),
+      ];
+    }
+    return [MarkerLayer(markers: [for (final s in list) _shelterMarker(s)])];
+  }
+
+  Marker _shelterMarker(Shelter s) => Marker(
+        point: s.pos,
+        width: 22,
+        height: 22,
+        child: GestureDetector(
+          onTap: () => _showShelterInfo(s),
+          child: _ShelterPin(designated: s.designated),
+        ),
+      );
+
   /// 雨雲レーダーの時刻スライダー（過去3時間の実況〜1時間先の予測）
   Widget _nowcastSlider() {
     if (_layer != MapLayerKind.rainRadar || _nowcastTimes.length < 2) {
@@ -430,7 +702,7 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  /// 気象レイヤーの凡例・出典（地図左下、地理院表記の上）
+  /// 地図レイヤーの凡例・出典（地図左下、地理院表記の上）
   Widget _layerLegend() {
     if (_layer == MapLayerKind.none) return const SizedBox.shrink();
     Widget swatch(Color c, String label) => Padding(
@@ -485,10 +757,36 @@ class _MapScreenState extends State<MapScreen> {
               ]),
             ),
         ]);
+      case MapLayerKind.shelters:
+        if (_zoom < ShelterLayers.minZoom) {
+          title = '避難場所（拡大すると避難場所を表示）';
+        } else {
+          final n = _visibleShelters().length;
+          title = '避難場所${_shelterHazard == null ? '' : '・${(_shelters?.hazards ?? ShelterLayers.defaultHazards)[_shelterHazard!]}'}（$n件${n > ShelterLayers.clusterThreshold ? '・まとめ表示' : ''}）';
+        }
+        items.addAll([
+          const Padding(
+            padding: EdgeInsets.only(right: 6),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              _ShelterPin(designated: false, size: 12),
+              SizedBox(width: 2),
+              Text('指定緊急避難場所', style: TextStyle(fontSize: 9)),
+            ]),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(right: 6),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              _ShelterPin(designated: true, size: 12),
+              SizedBox(width: 2),
+              Text('二重枠=指定避難所', style: TextStyle(fontSize: 9)),
+            ]),
+          ),
+        ]);
       case MapLayerKind.none:
         title = '';
     }
-    final hazard = HazardLayers.isHazard(_layer);
+    final hazard = HazardLayers.isHazard(_layer) || _layer == MapLayerKind.shelters;
+    final layerLoading = _layerLoading || (_layer == MapLayerKind.shelters && (_shelters?.loading ?? false));
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
       decoration: BoxDecoration(
@@ -497,7 +795,7 @@ class _MapScreenState extends State<MapScreen> {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
         Row(mainAxisSize: MainAxisSize.min, children: [
           Text(title, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
-          if (_layerLoading) const Padding(
+          if (layerLoading) const Padding(
               padding: EdgeInsets.only(left: 6),
               child: SizedBox(width: 10, height: 10, child: CircularProgressIndicator(strokeWidth: 1.5))),
           if (_layerFailed) const Padding(
@@ -510,7 +808,7 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  /// 気象レイヤーの地図要素（タイル/マーカー）
+  /// 地図レイヤーの地図要素（タイル/マーカー）
   List<Widget> _layerWidgets() {
     switch (_layer) {
       case MapLayerKind.rainRadar:
@@ -616,6 +914,8 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
         ];
+      case MapLayerKind.shelters:
+        return _shelterWidgets();
       case MapLayerKind.none:
         return const [];
     }
@@ -785,6 +1085,7 @@ class _MapScreenState extends State<MapScreen> {
             _controller.move(point, zoom);
             setState(() => _zoom = zoom);
             _savePosition();
+            _requestSheltersForView();
           }
 
           return SafeArea(
@@ -879,6 +1180,7 @@ class _MapScreenState extends State<MapScreen> {
     final z = (_controller.camera.zoom + delta).clamp(2.0, 18.0);
     _controller.move(_controller.camera.center, z);
     setState(() => _zoom = z);
+    _requestSheltersForView();
   }
 
   // 検索欄のコントローラは画面Stateと同寿命で保持する。
@@ -1204,6 +1506,7 @@ class _MapScreenState extends State<MapScreen> {
                 } else {
                   _maybeRebuildForPan(_controller.camera);
                 }
+                _requestSheltersForView();
               }
             },
           ),
@@ -1268,8 +1571,11 @@ class _MapScreenState extends State<MapScreen> {
                 padding: const EdgeInsets.only(right: 60),
                 child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Padding(padding: const EdgeInsets.only(bottom: 6), child: _nowcastSlider()),
+                  if (_layer == MapLayerKind.shelters)
+                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _shelterChips()),
                   Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
                   if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
+                  if (_layer == MapLayerKind.shelters) const _ShelterAttribution(),
                   _GsiAttribution(worldTiles: _useWorldTiles),
                 ]),
               ),
@@ -1304,7 +1610,7 @@ class _MapScreenState extends State<MapScreen> {
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             FloatingActionButton.small(
               heroTag: 'weather_layer',
-              tooltip: '気象レイヤー',
+              tooltip: '地図レイヤー',
               backgroundColor: _layer == MapLayerKind.none ? null : Theme.of(context).colorScheme.primary,
               foregroundColor: _layer == MapLayerKind.none ? null : Colors.white,
               onPressed: () => _showLayerPicker(context),
@@ -1462,6 +1768,79 @@ class _HazardAttribution extends StatelessWidget {
         Text(HazardLayers.attribution, style: TextStyle(fontSize: 10)),
         Text(HazardLayers.disclaimer, style: TextStyle(fontSize: 9, color: Colors.black54)),
       ]),
+    );
+  }
+}
+
+/// 避難場所表示中の出典・免責（_HazardAttribution と同じ様式）
+class _ShelterAttribution extends StatelessWidget {
+  const _ShelterAttribution();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      color: Colors.white70,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: const [
+        Text(ShelterLayers.attribution, style: TextStyle(fontSize: 10)),
+        Text(ShelterLayers.disclaimer, style: TextStyle(fontSize: 9, color: Colors.black54)),
+      ]),
+    );
+  }
+}
+
+/// 避難場所ピン（緑の丸＋家アイコン。指定避難所は二重枠）。カメラピンとは色・形で区別する
+class _ShelterPin extends StatelessWidget {
+  const _ShelterPin({required this.designated, this.size = 22});
+
+  static const color = Color(0xFF2E7D32);
+  final bool designated;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.9),
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.white, width: size >= 16 ? 1.5 : 1),
+        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 2, offset: Offset(0, 1))],
+      ),
+      child: designated
+          ? Container(
+              margin: EdgeInsets.all(size >= 16 ? 2 : 1),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.white, width: size >= 16 ? 1.2 : 1),
+              ),
+              child: Icon(Icons.home, size: size * 0.5, color: Colors.white),
+            )
+          : Icon(Icons.home, size: size * 0.6, color: Colors.white),
+    );
+  }
+}
+
+/// 避難場所のクラスタ（緑系。カメラの青いクラスタと区別）
+class _ShelterCluster extends StatelessWidget {
+  const _ShelterCluster({required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: _ShelterPin.color.withValues(alpha: 0.85),
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.white, width: 2),
+        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 3)],
+      ),
+      child: Text('$count',
+          style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
     );
   }
 }

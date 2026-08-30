@@ -11,7 +11,8 @@ import 'package:latlong2/latlong.dart';
 /// いずれもアプリが直接取得し、当方サーバーには保存しない。
 /// 気象庁サイト内部の公開ファイルのため、構造変更時は静かに失敗させる。
 
-/// 地図に重ねるレイヤー（排他）。hazard* は国土地理院の重ねるハザードマップ（hazard_layers.dart）
+/// 地図に重ねるレイヤー（排他）。hazard* は国土地理院の重ねるハザードマップ（hazard_layers.dart）、
+/// shelters は指定緊急避難場所（shelter_layers.dart）
 enum MapLayerKind {
   none,
   rainRadar,
@@ -21,6 +22,7 @@ enum MapLayerKind {
   hazardLandslide,
   hazardTsunami,
   hazardHightide,
+  shelters,
 }
 
 enum QuakePeriod { day, week, month }

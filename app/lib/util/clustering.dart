@@ -33,25 +33,45 @@ double cellSizeForZoom(double zoom) {
 /// [maxSingleZoom] 以上のズームではクラスタリングを行わない（全て個別ピン）。
 List<MapItem> clusterCameras(List<Camera> cameras, double zoom,
     {double maxSingleZoom = 13}) {
-  final located = cameras.where((c) => c.hasLocation);
+  final located = cameras.where((c) => c.hasLocation).toList();
   if (zoom >= maxSingleZoom) {
     return [for (final c in located) MapItem.single(c)];
   }
+  return [
+    for (final g in clusterPoints(located, zoom, (c) => c.lat!, (c) => c.lng!))
+      g.items.length == 1
+          ? MapItem.single(g.items.first)
+          : MapItem.cluster(g.items, g.lat, g.lng)
+  ];
+}
+
+/// 任意の点群のグリッドクラスタ（避難場所レイヤー等でも流用する）。
+/// 1件だけのセルも [PointCluster] として返す（items.length == 1）
+class PointCluster<T> {
+  const PointCluster(this.items, this.lat, this.lng);
+  final List<T> items;
+  final double lat;
+  final double lng;
+  int get count => items.length;
+}
+
+List<PointCluster<T>> clusterPoints<T>(List<T> points, double zoom,
+    double Function(T) latOf, double Function(T) lngOf) {
   final cell = cellSizeForZoom(zoom);
-  final buckets = <(int, int), List<Camera>>{};
-  for (final c in located) {
-    final key = ((c.lat! / cell).floor(), (c.lng! / cell).floor());
-    (buckets[key] ??= []).add(c);
+  final buckets = <(int, int), List<T>>{};
+  for (final p in points) {
+    final key = ((latOf(p) / cell).floor(), (lngOf(p) / cell).floor());
+    (buckets[key] ??= []).add(p);
   }
-  final items = <MapItem>[];
-  for (final group in buckets.values) {
-    if (group.length == 1) {
-      items.add(MapItem.single(group.first));
-    } else {
-      final lat = group.map((c) => c.lat!).reduce((a, b) => a + b) / group.length;
-      final lng = group.map((c) => c.lng!).reduce((a, b) => a + b) / group.length;
-      items.add(MapItem.cluster(group, lat, lng));
-    }
-  }
-  return items;
+  return [
+    for (final group in buckets.values)
+      if (group.length == 1)
+        PointCluster(group, latOf(group.first), lngOf(group.first))
+      else
+        PointCluster(
+          group,
+          group.map(latOf).reduce((a, b) => a + b) / group.length,
+          group.map(lngOf).reduce((a, b) => a + b) / group.length,
+        )
+  ];
 }
