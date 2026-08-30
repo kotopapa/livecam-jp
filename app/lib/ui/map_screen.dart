@@ -802,6 +802,21 @@ class _MapScreenState extends State<MapScreen> {
               padding: EdgeInsets.only(left: 6),
               child: Text('取得できません', style: TextStyle(fontSize: 9, color: Colors.red))),
         ]),
+        if (_layer == MapLayerKind.shelters &&
+            _zoom >= ShelterLayers.minZoom &&
+            (_shelters?.failed.intersection(_shelterPrefs).isNotEmpty ?? false))
+          InkWell(
+            onTap: () => _shelters?.retry(_shelterPrefs),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 2),
+              child: Row(mainAxisSize: MainAxisSize.min, children: [
+                Icon(Icons.error_outline, size: 12, color: Colors.red[700]),
+                const SizedBox(width: 3),
+                Text('避難場所を取得できませんでした（タップで再試行）',
+                    style: TextStyle(fontSize: 9, color: Colors.red[700], fontWeight: FontWeight.bold)),
+              ]),
+            ),
+          ),
         Row(mainAxisSize: MainAxisSize.min, children: items),
         if (!hazard) const Text('出典：気象庁', style: TextStyle(fontSize: 9, color: Colors.black54)),
       ]),

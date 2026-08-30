@@ -185,6 +185,14 @@ class ShelterStore extends ChangeNotifier {
   final Set<String> _inflight = {};
   final List<String> _queue = [];
 
+  /// 取得に失敗した県 → 失敗時刻。凡例の「取得できませんでした」表示と
+  /// 短時間の連続再試行の抑制に使う（[retryAfter] を過ぎれば自動で再試行）
+  final Map<String, DateTime> _failedAt = {};
+  static const retryAfter = Duration(seconds: 30);
+
+  /// 未取得のまま失敗している県の集合
+  Set<String> get failed => _failedAt.keys.where((p) => !_byPref.containsKey(p)).toSet();
+
   ShelterIndex? get index => _index;
   List<String> get hazards => _index?.hazards ?? ShelterLayers.defaultHazards;
   bool get loading => _inflight.isNotEmpty || _queue.isNotEmpty;
@@ -254,12 +262,24 @@ class ShelterStore extends ChangeNotifier {
 
   /// 必要な県を要求する。既にメモリにあれば何もしない。
   /// 未取得分はディスク→ネットワークの順で解決し、完了ごとに通知する
-  void request(Iterable<String> prefs) {
+  void request(Iterable<String> prefs, {bool force = false}) {
+    final now = DateTime.now();
     for (final p in prefs) {
       if (_byPref.containsKey(p) || _inflight.contains(p) || _queue.contains(p)) continue;
+      final t = _failedAt[p];
+      if (!force && t != null && now.difference(t) < retryAfter) continue; // 直後の連打を抑制
       _queue.add(p);
     }
     _pump();
+  }
+
+  /// 失敗した県を利用者の操作で即時に再試行する
+  void retry(Iterable<String> prefs) {
+    for (final p in prefs) {
+      _failedAt.remove(p);
+    }
+    request(prefs, force: true);
+    notifyListeners();
   }
 
   void _pump() {
@@ -281,11 +301,19 @@ class ShelterStore extends ChangeNotifier {
       var j = await _readDisk(pref);
       if (j != null && version != null && j['version'] != version) j = null;
       j ??= await _fetch(pref);
-      if (j == null) return; // 失敗は静かに無視（次回の表示更新で再試行）
+      if (j == null) {
+        // 失敗を記録して凡例に知らせる。次回の表示更新（30秒後以降）か
+        // 利用者の再試行で取り直す
+        _failedAt[pref] = DateTime.now();
+        notifyListeners();
+        return;
+      }
+      _failedAt.remove(pref);
       _byPref[pref] = ShelterLayers.parseFile(j);
       notifyListeners();
     } catch (_) {
-      // 同上
+      _failedAt[pref] = DateTime.now();
+      notifyListeners();
     }
   }
 }

@@ -175,14 +175,46 @@ void main() {
       expect(log3.where((p) => p.endsWith('/14.json')).length, 1);
     });
 
-    test('取得失敗は静かに無視され、再要求で再試行する', () async {
+    test('取得失敗は failed に記録され、retry で即時に取り直す', () async {
+      var calls = 0;
+      final client = MockClient((req) async {
+        calls++;
+        if (req.url.path.endsWith('index.json')) {
+          return http.Response.bytes(utf8.encode(jsonEncode({'version': 'v1', 'hazards': []})), 200,
+              headers: {'content-type': 'application/json; charset=utf-8'});
+        }
+        if (calls <= 2) return http.Response('down', 503);
+        return http.Response.bytes(
+            utf8.encode(jsonEncode({'version': 'v1', 'pref': '14', 'shelters': []})), 200,
+            headers: {'content-type': 'application/json; charset=utf-8'});
+      });
+      final dir = await Directory.systemTemp.createTemp('shelter_fail');
+      final store = ShelterStore(cacheDir: dir, client: client);
+      store.request(['14']);
+      await Future<void>.delayed(const Duration(milliseconds: 200));
+      expect(store.failed, contains('14'));
+      // 30秒以内の自動再要求は抑制される
+      store.request(['14']);
+      expect(store.loading, isFalse);
+      // 利用者の再試行は即時
+      store.retry(['14']);
+      await Future<void>.delayed(const Duration(milliseconds: 200));
+      expect(store.failed, isEmpty);
+      expect(store.hasPref('14'), isTrue);
+    });
+
+    test('取得失敗は失敗として記録され、直後の自動再要求は抑制・強制再要求は即時', () async {
       final log = <String>[];
       final store = ShelterStore(cacheDir: dir, client: client({'version': 'v1'}, {}, log));
       store.request(['13']);
       await Future<void>.delayed(const Duration(milliseconds: 200));
       expect(store.hasPref('13'), isFalse);
       expect(store.loading, isFalse);
-      store.request(['13']);
+      expect(store.failed, contains('13'));
+      store.request(['13']); // 30秒以内 → 抑制（連続アクセスを防ぐ）
+      await Future<void>.delayed(const Duration(milliseconds: 200));
+      expect(log.where((p) => p.endsWith('/13.json')).length, 1);
+      store.request(['13'], force: true); // 利用者の再試行相当
       await Future<void>.delayed(const Duration(milliseconds: 200));
       expect(log.where((p) => p.endsWith('/13.json')).length, 2);
     });
