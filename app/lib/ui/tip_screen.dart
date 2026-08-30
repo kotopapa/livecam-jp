@@ -41,7 +41,7 @@ const _tiers = <_Tier>[
   _Tier('jp.livecam.tip.lunch', 'LUNCH', 'ランチで開発ブースト',
       '次の新機能開発に向けた栄養満点ランチをごちそう', Icons.restaurant, Color(0xFF4E7A5A)),
   _Tier('jp.livecam.tip.devtools', 'DEV TOOLS', '開発ツール費を応援',
-      'カメラ調査やサーバー監視に使うAIサービス費を支援', Icons.auto_awesome, Color(0xFF6B4E9B)),
+      'カメラ調査やサーバー監視に使うサービス費を支援', Icons.auto_awesome, Color(0xFF6B4E9B)),
 ];
 
 class _TipScreenState extends State<TipScreen> {
