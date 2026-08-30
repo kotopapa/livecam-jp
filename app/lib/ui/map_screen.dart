@@ -638,6 +638,8 @@ class _MapScreenState extends State<MapScreen> {
 
   Future<void> _savePosition() async {
     final c = _controller.camera;
+    // 不正な値を保存すると次回起動から毎回落ちるため、有限値のときだけ保存
+    if (!c.center.latitude.isFinite || !c.center.longitude.isFinite || !c.zoom.isFinite) return;
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_posKey,
         '${c.center.latitude},${c.center.longitude},${c.zoom}');
