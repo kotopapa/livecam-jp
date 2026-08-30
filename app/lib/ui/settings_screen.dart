@@ -7,6 +7,8 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'tip_screen.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:in_app_review/in_app_review.dart';
@@ -573,6 +575,31 @@ class _SettingsScreenState extends State<SettingsScreen> {
           subtitle: const Text('@kotopapa8 — 新しいカメラや機能のお知らせ'),
           onTap: () => _open(_xUrl),
         ),
+        ListTile(
+          leading: const Icon(Icons.volunteer_activism_outlined),
+          title: const Text('開発者を応援する'),
+          subtitle: const Text('缶コーヒー1本から。アプリ内課金で開発を支援できます'),
+          onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const TipScreen())),
+        ),
+        if (widget.app.repository.manifest?.apps.isNotEmpty ?? false) ...[
+          const Divider(),
+          const _SectionHeader('開発者の他のアプリ'),
+          for (final a in widget.app.repository.manifest!.apps)
+            ListTile(
+              leading: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: a.iconUrl != null
+                    ? Image.network(a.iconUrl!, width: 44, height: 44, cacheWidth: 132,
+                        errorBuilder: (_, _, _) => const Icon(Icons.apps, size: 44))
+                    : const Icon(Icons.apps, size: 44),
+              ),
+              title: Text(a.name),
+              subtitle: a.tagline.isEmpty ? null : Text(a.tagline),
+              trailing: const Icon(Icons.open_in_new, size: 18),
+              onTap: () => _open(a.storeUrl),
+            ),
+        ],
         const Divider(),
         const _SectionHeader('免責'),
         Padding(

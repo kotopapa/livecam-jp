@@ -35,6 +35,16 @@ def _notice() -> str | None:
     return t or None
 
 
+def _recommended_apps() -> list[dict]:
+    p = DATA / "recommended_apps.json"
+    if not p.exists():
+        return []
+    try:
+        return json.loads(p.read_text(encoding="utf-8")).get("apps", [])
+    except (ValueError, AttributeError):
+        return []
+
+
 def build() -> int:
     cameras_src = json.loads((DATA / "cameras.json").read_text(encoding="utf-8"))
     approved = [
@@ -80,6 +90,8 @@ def build() -> int:
         # data/notice.txt があればアプリ内お知らせバナーとして配信（空なら非表示）。
         # bot の再ビルドでも消えないようファイルで持つ
         "notice": _notice(),
+        # 設定画面「開発者の他のアプリ」（data/recommended_apps.json。無ければ空）
+        "apps": _recommended_apps(),
     }
     (OUT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")

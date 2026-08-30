@@ -9,6 +9,7 @@ class Manifest {
     this.minAppVersion,
     this.storeUrl,
     this.notice,
+    this.apps = const [],
   });
 
   final int schemaVersion;
@@ -24,6 +25,9 @@ class Manifest {
   /// 緊急告知（あればアプリ上部にバナー表示。SPEC 8.1）
   final String? notice;
 
+  /// 開発者の他のアプリ（設定画面の下部に表示。配信側 data/recommended_apps.json）
+  final List<RecommendedApp> apps;
+
   factory Manifest.fromJson(Map<String, dynamic> json) {
     final cameras = (json['cameras'] as Map<String, dynamic>? ?? const {});
     final status = (json['status'] as Map<String, dynamic>? ?? const {});
@@ -36,6 +40,35 @@ class Manifest {
       minAppVersion: json['min_app_version'] as String?,
       storeUrl: json['store_url'] as String?,
       notice: json['notice'] as String?,
+      apps: [
+        for (final a in (json['apps'] as List? ?? const []))
+          if (a is Map<String, dynamic>) RecommendedApp.fromJson(a),
+      ],
     );
   }
+}
+
+/// 設定画面「開発者の他のアプリ」の1件
+class RecommendedApp {
+  const RecommendedApp({
+    required this.id,
+    required this.name,
+    required this.tagline,
+    required this.storeUrl,
+    this.iconUrl,
+  });
+
+  final String id;
+  final String name;
+  final String tagline;
+  final String storeUrl;
+  final String? iconUrl;
+
+  factory RecommendedApp.fromJson(Map<String, dynamic> j) => RecommendedApp(
+        id: j['id']?.toString() ?? '',
+        name: j['name'] as String? ?? '',
+        tagline: j['tagline'] as String? ?? '',
+        storeUrl: j['store_url'] as String? ?? '',
+        iconUrl: j['icon_url'] as String?,
+      );
 }
