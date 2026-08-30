@@ -455,16 +455,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             if (mounted) setState(() {});
           },
         ),
-        const ListTile(
-          leading: Icon(Icons.timer_outlined),
-          title: Text('手動更新の間隔'),
-          subtitle: Text('60秒固定です（カメラ提供元への配慮のため変更できません）'),
-        ),
-        const ListTile(
-          leading: Icon(Icons.monitor_heart_outlined),
-          title: Text('カメラの死活確認'),
-          subtitle: Text('約30分ごとに自動確認し、映らないカメラは地図から自動で非表示になります'),
-        ),
         ListTile(
           leading: const Icon(Icons.delete_outline),
           title: const Text('キャッシュを削除'),
