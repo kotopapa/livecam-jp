@@ -266,6 +266,8 @@ class _DetailScreenState extends State<DetailScreen> {
                       ? 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
                       : 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
                   userAgentPackageName: 'jp.livecam.livecam_jp',
+                  errorTileCallback: (_, _, _) {},
+                  maxNativeZoom: 18,
                 ),
                 MarkerLayer(markers: [
                   Marker(

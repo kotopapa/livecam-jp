@@ -583,6 +583,13 @@ class _MapScreenState extends State<MapScreen> {
         final lat = double.parse(parts[0]);
         final lng = double.parse(parts[1]);
         final zoom = double.parse(parts[2]);
+        // NaN/Infinity や範囲外の値が保存されていると flutter_map のタイル計算が
+        // 「Infinity or NaN toInt」で落ちる（Crashlytics で実発生）ため検証する
+        if (!lat.isFinite || !lng.isFinite || !zoom.isFinite ||
+            lat.abs() > 85 || lng.abs() > 180 || zoom < 2 || zoom > 18) {
+          await prefs.remove(_posKey);
+          return;
+        }
         if (!mounted) return;
         _controller.move(LatLng(lat, lng), zoom);
         setState(() => _zoom = zoom);
@@ -1080,6 +1087,18 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   Widget _mapStack(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      // レイアウト途中や非表示で幅・高さが0/無限のときに FlutterMap を組み立てると
+      // タイル範囲の計算が NaN になり例外を投げるため、その間は何も描かない
+      if (!constraints.maxWidth.isFinite || !constraints.maxHeight.isFinite ||
+          constraints.maxWidth < 1 || constraints.maxHeight < 1) {
+        return const SizedBox.shrink();
+      }
+      return _mapStackSized(context);
+    });
+  }
+
+  Widget _mapStackSized(BuildContext context) {
     final cams = widget.app.displayableCameras;
     final items = _cullToViewport(clusterCameras(cams, _zoom));
     return Stack(
@@ -1099,7 +1118,7 @@ class _MapScreenState extends State<MapScreen> {
               // ピンチ中の毎フレーム再構築はフリーズ→強制終了の原因になる。
               // ジェスチャー中はズーム2段以上の大変化だけ間引いて反映し、
               // 細かい追従は操作終了イベント(onMapEvent)でまとめて行う
-              if ((camera.zoom - _zoom).abs() >= 2.0) {
+              if (camera.zoom.isFinite && (camera.zoom - _zoom).abs() >= 2.0) {
                 setState(() => _zoom = camera.zoom);
               }
               _updateTileMode();
@@ -1111,6 +1130,7 @@ class _MapScreenState extends State<MapScreen> {
                   e is MapEventRotateEnd) {
                 _savePosition();
                 final z = _controller.camera.zoom;
+                if (!z.isFinite) return;
                 if ((z - _zoom).abs() >= 0.25) {
                   setState(() => _zoom = z);
                 } else {
@@ -1126,6 +1146,9 @@ class _MapScreenState extends State<MapScreen> {
                   ? 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
                   : 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
               userAgentPackageName: 'jp.livecam.livecam_jp',
+              // 海上・範囲外・高ズームのタイルは404が普通。例外として上げない
+              errorTileCallback: (_, _, _) {},
+              maxNativeZoom: 18,
             ),
             ..._layerWidgets(),
             MarkerLayer(

@@ -35,8 +35,10 @@ Future<void> main() async {
       await Firebase.initializeApp(options: options);
       // クラッシュ検知（HANDOFF 2-8-3）。デバッグビルドでは送信しない
       if (!kDebugMode) {
+        // Flutterフレームワークの例外（タイル画像の404等、アプリは継続する）は
+        // 非致命として記録し、本当の強制終了と区別できるようにする
         FlutterError.onError =
-            FirebaseCrashlytics.instance.recordFlutterFatalError;
+            FirebaseCrashlytics.instance.recordFlutterError;
         PlatformDispatcher.instance.onError = (error, stack) {
           FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
           return true;
