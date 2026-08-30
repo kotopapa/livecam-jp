@@ -233,6 +233,8 @@ def _load_state() -> dict:
 
 
 def _session() -> requests.Session:
+    import requests  # 遅延import: publish環境(site/build.py→sync_site)には requests が無い
+
     s = requests.Session()
     s.headers["User-Agent"] = USER_AGENT
     return s
