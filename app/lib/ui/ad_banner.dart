@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import '../app_state.dart';
 import '../config.dart';
 
 /// 詳細画面に置くAdMobバナー（320×50）。
@@ -146,6 +147,27 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
         width: _size!.width.toDouble(),
         height: _size!.height.toDouble(),
         child: AdWidget(ad: _ad!),
+      ),
+    );
+  }
+}
+
+
+/// push遷移した一覧画面(災害速報→地震/警報の先、ランキング等)の下部に置く
+/// アンカーバナー。HomeShellのバナーはタブ配下にしか出ないため、
+/// これらの画面では個別に置く。特別警報の発表中は非表示(HomeShellと同じ規則)
+class AdFooter extends StatelessWidget {
+  const AdFooter({super.key, required this.app});
+
+  final AppState app;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: app,
+      builder: (context, _) => Offstage(
+        offstage: app.specialWarningActive,
+        child: const AnchoredAdBanner(),
       ),
     );
   }

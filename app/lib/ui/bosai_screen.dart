@@ -9,6 +9,7 @@ import '../app_state.dart';
 import '../models/camera.dart';
 import '../util/geo.dart';
 import '../util/prefectures.dart';
+import 'ad_banner.dart';
 import 'detail_screen.dart';
 
 /// 気象庁の公開JSONから直近の地震を表示し、震源周辺のカメラへ誘導する。
@@ -824,6 +825,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
     return Scaffold(
       appBar: AppBar(
           title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+      bottomNavigationBar: AdFooter(app: widget.app),
       body: body,
     );
   }
@@ -910,6 +912,7 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
     return Scaffold(
       appBar: AppBar(
           title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+      bottomNavigationBar: AdFooter(app: widget.app),
       body: base.isEmpty
           ? const Center(child: Text('この都道府県のカメラがありません'))
           : Column(children: [
@@ -1017,6 +1020,7 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
     return Scaffold(
       appBar: AppBar(
           title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+      bottomNavigationBar: AdFooter(app: widget.app),
       body: base.isEmpty
           ? const Center(child: Text('50km以内にカメラがありません'))
           : Column(children: [

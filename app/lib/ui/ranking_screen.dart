@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import '../app_state.dart';
 import '../config.dart';
 import '../models/camera.dart';
+import 'ad_banner.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 
@@ -93,6 +94,7 @@ class _RankingScreenState extends State<RankingScreen> {
           IconButton(icon: const Icon(Icons.refresh), onPressed: _load),
         ],
       ),
+      bottomNavigationBar: AdFooter(app: widget.app),
       body: Column(children: [
         Padding(
           padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
