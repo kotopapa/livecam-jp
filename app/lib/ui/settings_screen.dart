@@ -694,6 +694,8 @@ class _SectionHeader extends StatelessWidget {
 }
 
 /// 出典・ライセンス一覧（SPEC 9.5: 設定画面に一括の出典一覧を置く）。
+/// 各行から提供元のサイトへ移動できる（利用規約URL → 掲載元ページの順で
+/// 台帳から導出。YouTube配信はアイコンで区別）
 class _AttributionScreen extends StatelessWidget {
   const _AttributionScreen({required this.app});
 
@@ -701,11 +703,25 @@ class _AttributionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // attribution 文字列ごとに台数を集計して多い順に並べる
+    // attribution 文字列ごとに台数と、代表URL(最頻)を集計して多い順に並べる
     final counts = <String, int>{};
+    final terms = <String, Map<String, int>>{};
+    final pages = <String, Map<String, int>>{};
     for (final c in app.repository.cameras) {
       final key = c.attribution.isNotEmpty ? c.attribution : c.operator;
       counts[key] = (counts[key] ?? 0) + 1;
+      final t = c.termsUrl;
+      if (t != null && t.isNotEmpty) {
+        (terms[key] ??= {})[t] = ((terms[key]![t]) ?? 0) + 1;
+      }
+      final pg = c.sourcePageUrl;
+      if (pg != null && pg.isNotEmpty) {
+        (pages[key] ??= {})[pg] = ((pages[key]![pg]) ?? 0) + 1;
+      }
+    }
+    String? mostCommon(Map<String, int>? m) {
+      if (m == null || m.isEmpty) return null;
+      return (m.entries.toList()..sort((a, b) => b.value.compareTo(a.value))).first.key;
     }
     final entries = counts.entries.toList()
       ..sort((a, b) => b.value.compareTo(a.value));
@@ -714,12 +730,29 @@ class _AttributionScreen extends StatelessWidget {
       body: ListView.separated(
         itemCount: entries.length,
         separatorBuilder: (_, _) => const Divider(height: 1),
-        itemBuilder: (context, i) => ListTile(
-          dense: true,
-          title: Text(entries[i].key),
-          trailing: Text('${entries[i].value}台',
-              style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-        ),
+        itemBuilder: (context, i) {
+          final key = entries[i].key;
+          final url = mostCommon(terms[key]) ?? mostCommon(pages[key]);
+          final isYoutube = url != null && url.contains('youtube.com');
+          return ListTile(
+            dense: true,
+            title: Text(key),
+            subtitle: url == null
+                ? null
+                : Text(isYoutube ? 'YouTubeで配信元を見る' : '提供元のサイトを開く',
+                    style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+            trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+              Text('${entries[i].value}台',
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+              if (url != null) ...[
+                const SizedBox(width: 8),
+                Icon(isYoutube ? Icons.play_circle_outline : Icons.open_in_new,
+                    size: 18, color: Colors.grey[600]),
+              ],
+            ]),
+            onTap: url == null ? null : () => _open(url),
+          );
+        },
       ),
     );
   }
