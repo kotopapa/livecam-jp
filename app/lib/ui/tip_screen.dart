@@ -34,14 +34,14 @@ class _Tier {
 }
 
 const _tiers = <_Tier>[
-  _Tier('jp.livecam.tip.coffee', 'COFFEE', 'カメラ調査のお供に一杯',
-      '全国のライブカメラを探して確認する作業の合間のコーヒー代に', Icons.coffee, Color(0xFF7A5C46)),
-  _Tier('jp.livecam.tip.sweets', 'SWEETS', '夜間の見守りに糖分補給',
-      '大雨や地震のときの通知対応・監視チェック中のお菓子代に', Icons.cake, Color(0xFFB0574A)),
-  _Tier('jp.livecam.tip.lunch', 'LUNCH', 'カメラ追加を加速するランチ',
-      '新しい地域のカメラ調査・追加や機能開発に向けたランチ代に', Icons.restaurant, Color(0xFF4E7A5A)),
-  _Tier('jp.livecam.tip.devtools', 'DEV TOOLS', 'サーバー・ツール費を応援',
-      '2万台のカメラを監視するサーバーや調査に使うAIツールの費用に', Icons.auto_awesome, Color(0xFF6B4E9B)),
+  _Tier('jp.livecam.tip.coffee', 'COFFEE', '缶コーヒーでひと息',
+      '開発の合間に飲む缶コーヒー代をプレゼント', Icons.coffee, Color(0xFF7A5C46)),
+  _Tier('jp.livecam.tip.sweets', 'SWEETS', 'スイーツで糖分補給',
+      '集中コーディング用の甘いお菓子＆カフェ代を支援', Icons.cake, Color(0xFFB0574A)),
+  _Tier('jp.livecam.tip.lunch', 'LUNCH', 'ランチで開発ブースト',
+      '次の新機能開発に向けた栄養満点ランチをごちそう', Icons.restaurant, Color(0xFF4E7A5A)),
+  _Tier('jp.livecam.tip.devtools', 'DEV TOOLS', '開発ツール費を応援',
+      'カメラ調査やサーバー監視に使うAIサービス費を支援', Icons.auto_awesome, Color(0xFF6B4E9B)),
 ];
 
 class _TipScreenState extends State<TipScreen> {
@@ -146,8 +146,8 @@ class _TipScreenState extends State<TipScreen> {
             style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
         const SizedBox(height: 8),
         Text(
-          'このアプリは個人で開発・運営しています。約2万台のカメラの調査・追加、'
-          '映らないカメラの監視、災害通知や気象レイヤーの維持に、ご支援を使わせていただきます。'
+          'このアプリは個人で開発・運営しています。カメラの調査・追加や監視サーバーの維持、'
+          '気象データの対応など、継続的なアップデートの励みになります。'
           '支援は任意で、機能の違いはありません。',
           textAlign: TextAlign.center,
           style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey[700]),
