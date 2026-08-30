@@ -337,6 +337,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('設定')),
       body: ListView(children: [
+        _SupportCard(onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(builder: (_) => const TipScreen()))),
         const _SectionHeader('災害通知'),
         SwitchListTile(
           secondary: const Icon(Icons.rss_feed),
@@ -575,13 +577,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
           subtitle: const Text('@kotopapa8 — 新しいカメラや機能のお知らせ'),
           onTap: () => _open(_xUrl),
         ),
-        ListTile(
-          leading: const Icon(Icons.volunteer_activism_outlined),
-          title: const Text('開発者を応援する'),
-          subtitle: const Text('缶コーヒー1本から。アプリ内課金で開発を支援できます'),
-          onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const TipScreen())),
-        ),
         if (widget.app.repository.manifest?.apps.isNotEmpty ?? false) ...[
           const Divider(),
           const _SectionHeader('開発者の他のアプリ'),
@@ -621,6 +616,64 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         const SizedBox(height: 16),
       ]),
+    );
+  }
+}
+
+/// 設定画面の最上部に置く「開発者を応援する」カード（目立つ配色・ボタン付き）
+class _SupportCard extends StatelessWidget {
+  const _SupportCard({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    const accent = Color(0xFF7A5C46);
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
+      child: Material(
+        color: const Color(0xFFFFF6EC),
+        borderRadius: BorderRadius.circular(16),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: accent.withValues(alpha: 0.35)),
+            ),
+            child: Row(children: [
+              Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                    color: accent.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(12)),
+                child: const Icon(Icons.volunteer_activism, color: accent, size: 28),
+              ),
+              const SizedBox(width: 12),
+              const Expanded(
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text('開発者を応援する',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: accent)),
+                  SizedBox(height: 2),
+                  Text('缶コーヒー1本(¥200)から。個人開発の継続を支えてください',
+                      style: TextStyle(fontSize: 12, color: Colors.black87)),
+                ]),
+              ),
+              const SizedBox(width: 8),
+              FilledButton(
+                style: FilledButton.styleFrom(
+                    backgroundColor: accent,
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10)),
+                onPressed: onTap,
+                child: const Text('応援', style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+            ]),
+          ),
+        ),
+      ),
     );
   }
 }
