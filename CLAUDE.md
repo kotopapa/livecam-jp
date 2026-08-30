@@ -93,3 +93,9 @@ python site/build.py                            # 配信ファイル生成
 
 - **本番トピック（special-warning / danger-warning / quake* とその都道府県別）へテスト送信をしてはならない**。一般ユーザー700人超に「【テスト】」通知が届く事故を起こした。切り分けは必ず `push-test.yml` の **mode=send + token指定（直接送信のみ）** で行う。トピック経路の確認が必要なときは、本番と別のテスト専用トピック（例: `test-only`。アプリは購読しない）を使うか、ユーザーに事前に確認を取る
 - push-test.yml は token 指定時にトピックへ送らないよう修正済み。topics の既定値も空
+
+## ハザードマップ・避難場所の知見（2026-08-30追記）
+
+- **ハザードマップ**は国土地理院「重ねるハザードマップ」のPNGタイル（`https://disaportaldata.gsi.go.jp/raster/<ID>/{z}/{x}/{y}.png`、z2〜17、データ無しは404）。ID一覧は https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html。土砂災害は `05_kyukeishakeikaikuiki` / `05_dosekiryukeikaikuiki` / `05_jisuberikeikaikuiki`（`_data/<県>`付きは県別）。東京中心で試すと土石流タイルは404だが大阪・広島では200（無いだけ）。凡例色はポータルの凡例画像の画素値（app/lib/data/hazard_layers.dart）。月次の `hazard-check.yml` がID一覧とタイル応答を前回(`data/hazard_layers_seen.json`)と比較し、変化時に Issue を作る。`tools/hazard_check.py` の APP_TILE_IDS は hazard_layers.dart と手動同期
+- **避難場所**は国土地理院の全国一括CSV（`hinanmap.gsi.go.jp/hinanjocp/defaultFtpData/csv/mergeFromCity_2.csv`=指定緊急避難場所(災害種別フラグ)、`mergeFromCity_1.csv`=指定避難所。市町村別ファイルのURLは取得不可）。`tools/shelters.py` が県別JSON `data/shelters/<JIS>.json`（キー n/a/lat/lng/f/s）と index.json を生成、`shelters.yml` が毎月1日にLast-Modified変化時だけ再生成→publish。site/build.py が `data/shelters/` を `site/v1/shelters/` へコピー（`tools.shelters.sync_site`。**publish環境に requests は無いので遅延import**）。アプリは表示中の県分だけ取得し一時ディレクトリに version 付きでキャッシュ（app/lib/data/shelter_layers.dart）
+- 利用条件: 国土地理院コンテンツ利用規約（出典明記）。避難場所は「最新でない場合がある・市町村に確認・災害種別ごとの指定」の注意を伝える必要あり（初回ダイアログ＋凡例下の免責で対応）
