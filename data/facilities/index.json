@@ -1,39 +1,41 @@
 {
- "version": "2026-08-31T07:15:15Z",
+ "version": "2026-08-31T10:41:21Z",
  "counts": {
   "05": 845,
   "07": 1697,
   "10": 5415,
-  "12": 7873,
-  "13": 6829,
+  "12": 7900,
+  "13": 185071,
   "14": 187,
   "20": 116,
   "22": 2507,
-  "23": 2493,
+  "23": 6681,
   "24": 8496,
   "25": 1217,
-  "26": 8209,
+  "26": 8228,
   "27": 19594,
   "28": 10890,
   "29": 3826,
-  "30": 5712,
-  "40": 32764,
+  "30": 6315,
+  "35": 6981,
+  "40": 32975,
   "41": 1704,
   "42": 7911,
-  "43": 6250,
-  "46": 8897,
+  "43": 6322,
+  "45": 378,
+  "46": 8975,
   "47": 5439
  },
- "total": 148871,
+ "total": 339670,
  "kinds": {
   "water": "給水拠点・応急給水施設",
   "stock": "防災備蓄倉庫",
   "fire_water": "消防水利（消火栓・防火水槽）"
  },
  "kind_counts": {
-  "fire_water": 147885,
+  "fire_water": 338656,
   "stock": 109,
-  "water": 877
+  "water": 905
  },
  "record_fields": {
   "id": "県ファイル内で一意",
@@ -46,7 +48,7 @@
   "s": "県ファイルの sources 配列のインデックス",
   "g": "1なら住所から国土地理院APIで補完した座標"
  },
- "geocoded": 15587,
+ "geocoded": 26312,
  "blocked_portals": [
   {
    "key": "sapporo",
@@ -59,6 +61,96 @@
    "name": "横浜市オープンデータポータル",
    "base": "https://data.city.yokohama.lg.jp",
    "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "gifu",
+   "name": "岐阜県オープンデータカタログ",
+   "base": "https://gifu-opendata.pref.gifu.lg.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "kanagawa",
+   "name": "神奈川県オープンデータカタログ",
+   "base": "https://catalog.opendata.pref.kanagawa.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "akita",
+   "name": "秋田県オープンデータポータル",
+   "base": "https://ckan.pref.akita.lg.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "odp_jig",
+   "name": "ODP（鯖江市ほか・jig.jp）",
+   "base": "https://ckan.odp.jig.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "aizu",
+   "name": "DATA for CITIZEN（会津若松市ほか）",
+   "base": "https://data.data4citizen.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "niigata",
+   "name": "新潟市オープンデータ",
+   "base": "http://opendata.city.niigata.lg.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "minato",
+   "name": "港区オープンデータカタログ",
+   "base": "https://opendata.city.minato.tokyo.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "utsunomiya",
+   "name": "宇都宮市オープンデータポータル",
+   "base": "https://catalog.city.utsunomiya.tochigi.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "kanazawa",
+   "name": "金沢市オープンデータカタログ",
+   "base": "https://catalog-data.city.kanazawa.ishikawa.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "machida",
+   "name": "町田市オープンデータカタログ",
+   "base": "http://opendata.city.machida.tokyo.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "toyama_city",
+   "name": "富山市オープンデータ",
+   "base": "https://opdt.city.toyama.lg.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "sagamihara",
+   "name": "相模原市オープンデータ",
+   "base": "http://opendata.city.sagamihara.kanagawa.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "tendo",
+   "name": "天童市オープンデータ",
+   "base": "http://data.city.tendo.yamagata.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "sumoto",
+   "name": "洲本市オープンデータ",
+   "base": "https://data.city.sumoto.lg.jp",
+   "reason": "robots.txt: Disallow: /api/"
+  },
+  {
+   "key": "geospatial",
+   "name": "G空間情報センター",
+   "base": "https://www.geospatial.jp/ckan",
+   "reason": "robots.txt: Disallow: /*?* （クエリ付きURL全面禁止＝package_search不可）"
   }
  ],
  "sources": [
@@ -109,13 +201,24 @@
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
    "org": "船橋市",
+   "title": "防災用井戸一覧",
+   "url": "https://data.bodik.jp/dataset/122041_bousaiyouido",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2022-07-13T05:40:28.417567",
+   "kind": "water",
+   "count": 28
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "船橋市",
    "title": "【船橋市】消防水利施設",
    "url": "https://data.bodik.jp/dataset/122041_shoubousuiru-prace",
    "license": "CC BY",
    "license_id": "cc-by-40-intl",
    "updated": "2025-08-25T06:26:46.816363",
    "kind": "fire_water",
-   "count": 7864
+   "count": 7863
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
@@ -207,6 +310,28 @@
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "豊田市",
+   "title": "防火水槽一覧（2024年4月1日時点）",
+   "url": "https://data.bodik.jp/dataset/232114_fire_protection_tank",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2024-07-04T05:24:58.501704",
+   "kind": "fire_water",
+   "count": 1284
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "豊田市",
+   "title": "消火栓一覧（2024年4月1日時点）",
+   "url": "https://data.bodik.jp/dataset/232114_hydrant",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2024-07-04T05:21:57.176595",
+   "kind": "fire_water",
+   "count": 2904
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
    "org": "四日市市",
    "title": "消防水利施設一覧",
    "url": "https://data.bodik.jp/dataset/242021_00128",
@@ -295,6 +420,17 @@
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "近江八幡市",
+   "title": "近江八幡市　消防水利施設一覧",
+   "url": "https://data.bodik.jp/dataset/252042_fire_hydrant",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2025-05-28T00:01:10.114961",
+   "kind": "fire_water",
+   "count": 0
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
    "org": "高島市",
    "title": "高島市　消防水利施設（公設）フォーマット（GTFS準拠）",
    "url": "https://data.bodik.jp/dataset/252123_fire_hydrant_format",
@@ -313,7 +449,7 @@
    "license_id": "cc-by-40-intl",
    "updated": "2022-07-08T04:24:04.436120",
    "kind": "fire_water",
-   "count": 5657
+   "count": 5676
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
@@ -325,6 +461,17 @@
    "updated": "2026-08-04T02:31:00.061185",
    "kind": "fire_water",
    "count": 2552
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "宇治市",
+   "title": "【宇治市】消防水利",
+   "url": "https://data.bodik.jp/dataset/262048_fire_hydrant",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2026-02-27T02:59:15.340827",
+   "kind": "fire_water",
+   "count": 0
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
@@ -493,6 +640,17 @@
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "紀美野町",
+   "title": "消防水利施設一覧",
+   "url": "https://data.bodik.jp/dataset/303046_fire_hydrant",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2025-05-14T07:31:27.760594",
+   "kind": "fire_water",
+   "count": 603
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
    "org": "北九州市",
    "title": "北九州市　消防水利施設一覧",
    "url": "https://data.bodik.jp/dataset/401005_fire_hydrant_ktq",
@@ -501,6 +659,17 @@
    "updated": "2025-03-28T00:54:10.123524",
    "kind": "fire_water",
    "count": 26458
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "福岡市",
+   "title": "福岡市　消防水利施設一覧",
+   "url": "https://data.bodik.jp/dataset/401307_suiri",
+   "license": "CC BY",
+   "license_id": "cc-by",
+   "updated": "2025-01-07T01:44:33.277258",
+   "kind": "fire_water",
+   "count": 0
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
@@ -523,6 +692,17 @@
    "updated": "2025-04-03T10:40:40.322791",
    "kind": "fire_water",
    "count": 1901
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "久山町",
+   "title": "久山町　消火栓",
+   "url": "https://data.bodik.jp/dataset/403482_syoukasenn",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2023-09-04T05:28:08.004697",
+   "kind": "fire_water",
+   "count": 211
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
@@ -698,7 +878,7 @@
    "license_id": "cc-by-40-intl",
    "updated": "2026-04-15T07:11:58.459050",
    "kind": "fire_water",
-   "count": 897
+   "count": 969
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
@@ -746,6 +926,28 @@
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "宮崎市",
+   "title": "応急給水資機材の配備場所",
+   "url": "https://data.bodik.jp/dataset/452017_mzksuido_011",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2026-03-13T08:11:22.045606",
+   "kind": "water",
+   "count": 0
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "川南町",
+   "title": "消防水利施設一覧",
+   "url": "https://data.bodik.jp/dataset/454052_fire_hydrant",
+   "license": "CC BY",
+   "license_id": "cc-by-40-intl",
+   "updated": "2019-10-01T01:36:11.954869",
+   "kind": "fire_water",
+   "count": 378
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
    "org": "垂水市",
    "title": "垂水市　消防水利施設一覧",
    "url": "https://data.bodik.jp/dataset/462144_fire_hydrant_2019",
@@ -764,7 +966,7 @@
    "license_id": "cc-by-40-intl",
    "updated": "2026-06-02T06:59:20.243515",
    "kind": "fire_water",
-   "count": 2556
+   "count": 2634
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
@@ -889,6 +1091,17 @@
   },
   {
    "portal": "東京都オープンデータカタログサイト",
+   "org": "東京消防庁",
+   "title": "東京消防庁 消火栓及び防火水槽等",
+   "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000017d0000000007",
+   "license": "CC BY",
+   "license_id": "CC-BY-4.0",
+   "updated": "2025-12-12T07:28:27.132529",
+   "kind": "fire_water",
+   "count": 178255
+  },
+  {
+   "portal": "東京都オープンデータカタログサイト",
    "org": "東京都水道局",
    "title": "給水拠点一覧データ",
    "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000019d0000000001",
@@ -951,7 +1164,7 @@
    "license_id": "CC-BY-4.0",
    "updated": "2025-12-12T08:24:59.227021",
    "kind": "fire_water",
-   "count": 2662
+   "count": 2648
   },
   {
    "portal": "東京都オープンデータカタログサイト",
@@ -1032,6 +1245,39 @@
   },
   {
    "portal": "東京都オープンデータカタログサイト",
+   "org": "練馬区",
+   "title": "防災井戸",
+   "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131202d0000000027",
+   "license": "CC BY",
+   "license_id": "CC-BY-4.0",
+   "updated": "2025-12-12T08:49:53.521082",
+   "kind": "water",
+   "count": 0
+  },
+  {
+   "portal": "東京都オープンデータカタログサイト",
+   "org": "練馬区",
+   "title": "学校防災井戸",
+   "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t131202d0000000028",
+   "license": "CC BY",
+   "license_id": "CC-BY-4.0",
+   "updated": "2025-12-12T08:49:54.599987",
+   "kind": "water",
+   "count": 0
+  },
+  {
+   "portal": "東京都オープンデータカタログサイト",
+   "org": "青梅市",
+   "title": "東京都青梅市における防火水槽一覧",
+   "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t132055d0000000008",
+   "license": "CC BY",
+   "license_id": "CC-BY-4.0",
+   "updated": "2025-12-12T09:02:45.930446",
+   "kind": "fire_water",
+   "count": 1
+  },
+  {
+   "portal": "東京都オープンデータカタログサイト",
    "org": "小金井市",
    "title": "消防水利施設一覧",
    "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t132101d0000000031",
@@ -1051,6 +1297,50 @@
    "updated": "2025-12-12T09:47:39.191462",
    "kind": "fire_water",
    "count": 1665
+  },
+  {
+   "portal": "山口県オープンデータカタログサイト",
+   "org": "下関市",
+   "title": "【下関市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/352012_fire_hydrant",
+   "license": "CC BY",
+   "license_id": "cc-by",
+   "updated": "2026-02-12T07:06:03.327487",
+   "kind": "fire_water",
+   "count": 5804
+  },
+  {
+   "portal": "山口県オープンデータカタログサイト",
+   "org": "下松市",
+   "title": "【下松市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/352071_fire_hydrant",
+   "license": "CC BY",
+   "license_id": "cc-by",
+   "updated": "2025-01-17T02:46:08.661117",
+   "kind": "fire_water",
+   "count": 926
+  },
+  {
+   "portal": "山口県オープンデータカタログサイト",
+   "org": "柳井市",
+   "title": "【柳井市】消防水利施設一覧(令和4年3月4日時点)",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/352128-firehydrant",
+   "license": "CC BY",
+   "license_id": "cc-by",
+   "updated": "2024-03-15T07:21:28.909898",
+   "kind": "fire_water",
+   "count": 175
+  },
+  {
+   "portal": "山口県オープンデータカタログサイト",
+   "org": "美祢市",
+   "title": "【美祢市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/352136_fire_hydrant",
+   "license": "CC BY",
+   "license_id": "cc-by",
+   "updated": "2024-02-21T02:24:44.847538",
+   "kind": "fire_water",
+   "count": 76
   }
  ],
  "rejected": [
@@ -1060,7 +1350,7 @@
    "title": "浦安市防災倉庫設置場所一覧（オープンデータ）",
    "url": "https://data.bodik.jp/dataset/122271_bousaisouko",
    "license": "CC BY",
-   "reason": "CSVリソースなし（PDF）"
+   "reason": "表形式リソースなし（PDF）"
   },
   {
    "portal": "bodik",
@@ -1068,39 +1358,7 @@
    "title": "消防水利施設一覧",
    "url": "https://data.bodik.jp/dataset/142123_p_28797_28797",
    "license": "CC BY",
-   "reason": "CSVリソースなし（XLS）"
-  },
-  {
-   "portal": "bodik",
-   "org": "豊田市",
-   "title": "防火水槽一覧（2024年4月1日時点）",
-   "url": "https://data.bodik.jp/dataset/232114_fire_protection_tank",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "bodik",
-   "org": "豊田市",
-   "title": "消火栓一覧（2024年4月1日時点）",
-   "url": "https://data.bodik.jp/dataset/232114_hydrant",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "bodik",
-   "org": "近江八幡市",
-   "title": "近江八幡市　消防水利施設一覧",
-   "url": "https://data.bodik.jp/dataset/252042_fire_hydrant",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "bodik",
-   "org": "宇治市",
-   "title": "【宇治市】消防水利",
-   "url": "https://data.bodik.jp/dataset/262048_fire_hydrant",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
+   "reason": "有効な行が0件（旧形式のXLS（openpyxl非対応））"
   },
   {
    "portal": "bodik",
@@ -1108,63 +1366,7 @@
    "title": "三田市避難所防災倉庫資機材一覧表",
    "url": "https://data.bodik.jp/dataset/282197_bousaisouko",
    "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "bodik",
-   "org": "紀美野町",
-   "title": "消防水利施設一覧",
-   "url": "https://data.bodik.jp/dataset/303046_fire_hydrant",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "bodik",
-   "org": "福岡市",
-   "title": "福岡市　消防水利施設一覧",
-   "url": "https://data.bodik.jp/dataset/401307_suiri",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "bodik",
-   "org": "久山町",
-   "title": "久山町　消火栓",
-   "url": "https://data.bodik.jp/dataset/403482_syoukasenn",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（?）"
-  },
-  {
-   "portal": "bodik",
-   "org": "宮崎市",
-   "title": "応急給水資機材の配備場所",
-   "url": "https://data.bodik.jp/dataset/452017_mzksuido_011",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "bodik",
-   "org": "川南町",
-   "title": "消防水利施設一覧",
-   "url": "https://data.bodik.jp/dataset/454052_fire_hydrant",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "tokyo",
-   "org": "東京消防庁",
-   "title": "東京消防庁 消火栓及び防火水槽等",
-   "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t000017d0000000007",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
-  },
-  {
-   "portal": "tokyo",
-   "org": "青梅市",
-   "title": "東京都青梅市における防火水槽一覧",
-   "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t132055d0000000008",
-   "license": "CC BY",
-   "reason": "CSVリソースなし（XLSX）"
+   "reason": "有効な行が0件（XLSXにヘッダ行を持つ表が無い）"
   },
   {
    "portal": "tokyo",
@@ -1172,7 +1374,7 @@
    "title": "消防水利施設一覧",
    "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t132128d3000000012",
    "license": "CC BY",
-   "reason": "CSVリソースなし（HTML）"
+   "reason": "表形式リソースなし（HTML）"
   },
   {
    "portal": "tokyo",
@@ -1180,7 +1382,7 @@
    "title": "消防水利施設一覧",
    "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t132217d0000000011",
    "license": "CC BY",
-   "reason": "CSVリソースなし（HTML）"
+   "reason": "表形式リソースなし（HTML）"
   },
   {
    "portal": "tokyo",
@@ -1188,7 +1390,95 @@
    "title": "応急給水拠点一覧",
    "url": "https://catalog.data.metro.tokyo.lg.jp/dataset/t132217d0000000024",
    "license": "CC BY",
-   "reason": "CSVリソースなし（HTML）"
+   "reason": "表形式リソースなし（HTML）"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "阿武町",
+   "title": "【阿武町】消火栓一図",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/02-syoukasen",
+   "license": "CC BY",
+   "reason": "表形式リソースなし（HTML）"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "宇部市",
+   "title": "【宇部市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/352021_shyoubousuiri",
+   "license": "不明",
+   "reason": "ライセンス未記載"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "防府市",
+   "title": "【防府市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/352063fire-h",
+   "license": "CC BY",
+   "reason": "表形式リソースなし（?）"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "岩国市",
+   "title": "【岩国市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/352080_fire_hydrant",
+   "license": "不明",
+   "reason": "ライセンス未記載"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "光市",
+   "title": "【光市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/352101_syoubou001",
+   "license": "CC BY",
+   "reason": "表形式リソースなし（?）"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "平生町",
+   "title": "【平生町】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/353442_fire_hydrant",
+   "license": "CC BY",
+   "reason": "表形式リソースなし（?）"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "周南市",
+   "title": "【周南市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/fire_hydrant",
+   "license": "notspecified License not specified",
+   "reason": "再配布可と判定できないライセンス"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "長門市",
+   "title": "【長門市】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/keibo",
+   "license": "CC BY",
+   "reason": "表形式リソースなし（?）"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "和木町",
+   "title": "【和木町】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/suiri",
+   "license": "不明",
+   "reason": "ライセンス未記載"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "周防大島町",
+   "title": "消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/suo-oshimasyoubou",
+   "license": "不明",
+   "reason": "ライセンス未記載"
+  },
+  {
+   "portal": "yamaguchi",
+   "org": "上関町",
+   "title": "【上関町】消防水利施設一覧",
+   "url": "https://yamaguchi-opendata.jp/ckan/dataset/syoubousuiri",
+   "license": "notspecified License not specified",
+   "reason": "再配布可と判定できないライセンス"
   }
  ],
  "notice": "本データは各自治体がオープンデータとして公開している「消防水利施設一覧」「応急給水施設一覧」「備蓄倉庫一覧」等を加工したものです。全国を網羅していません（公開している自治体のみ）。更新時期は自治体ごとに異なり、最新の状況と一致しない場合があります。消火栓・防火水槽は消防活動用の設備で、一般の方が使用するものではありません。給水拠点は災害時に開設されるもので、平常時に給水を受けられるとは限りません。正確な情報は各自治体にご確認ください。",

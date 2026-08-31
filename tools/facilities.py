@@ -17,6 +17,12 @@
     東京都・札幌市・横浜市などは独自CKANを持つ。どれも CKAN の package_search API を
     認証なしで叩ける。したがって「CKANを横断検索してタイトルで拾う」のが唯一現実的な集約手段。
 
+リソース形式:
+    CSV と XLSX を読む（`read_csv_text` / `read_xlsx`）。XLSX配信は東京消防庁・福岡市・
+    豊田市など件数の多い自治体に多く、1ファイル複数シート・先頭に説明行が入るのが普通なので
+    シートごとにヘッダ行を探してから読む。旧形式のXLS（BIFF）は openpyxl で読めないため
+    理由を rejected に残してスキップする。
+
 絶対制約（SPEC 2章）との関係:
     - C3/C4: 1req/s以下（BODIKはrobots.txtのCrawl-delay:2に合わせて2秒）、robots.txt を必ず確認
     - C5:    データセットごとにライセンスを記録し、**再配布可のものだけ**を採用する。
@@ -47,8 +53,8 @@ import shutil
 import sys
 import time
 import unicodedata
-from datetime import datetime, timezone
-from pathlib import Path
+from datetime import date, datetime, timezone
+from pathlib import Path, PurePosixPath
 from urllib.parse import urlsplit
 from urllib.robotparser import RobotFileParser
 
@@ -71,15 +77,54 @@ PORTALS = [
      "base": "https://data.bodik.jp", "delay": 2.0, "org_name_is_jis": True},
     {"key": "tokyo", "name": "東京都オープンデータカタログサイト",
      "base": "https://catalog.data.metro.tokyo.lg.jp", "delay": 1.5, "default_pref": "13"},
+    # 山口県は組織名(name)が全国地方公共団体コード5桁。robots.txt に /api/ の禁止が無い
+    {"key": "yamaguchi", "name": "山口県オープンデータカタログサイト",
+     "base": "https://yamaguchi-opendata.jp/ckan", "delay": 1.5,
+     "org_name_is_jis": True, "default_pref": "35"},
 ]
 
 # robots.txt が API を拒否しているため対象にしないCKAN（SPEC C4 / 10章）。
 # 許諾が得られれば PORTALS に移せる。data/facilities/index.json にも記録される
+# CKAN の配布時 robots.txt は User-agent:* に Disallow: /api/ を含む。そのため素のCKANを
+# 立てている自治体はほぼ全部ここに落ちる（2026-08-31 に1件ずつ robots.txt を取得して確認）。
+# BODIK が使えるのは /api/ の禁止が Sogou/Baiduspider/Bytespider/CCBot 限定だから
+_R_API = "robots.txt: Disallow: /api/"
 BLOCKED_PORTALS = [
     {"key": "sapporo", "name": "DATA-SMART CITY SAPPORO",
-     "base": "https://ckan.pf-sapporo.jp", "reason": "robots.txt: Disallow: /api/"},
+     "base": "https://ckan.pf-sapporo.jp", "reason": _R_API},
     {"key": "yokohama", "name": "横浜市オープンデータポータル",
-     "base": "https://data.city.yokohama.lg.jp", "reason": "robots.txt: Disallow: /api/"},
+     "base": "https://data.city.yokohama.lg.jp", "reason": _R_API},
+    {"key": "gifu", "name": "岐阜県オープンデータカタログ",
+     "base": "https://gifu-opendata.pref.gifu.lg.jp", "reason": _R_API},
+    {"key": "kanagawa", "name": "神奈川県オープンデータカタログ",
+     "base": "https://catalog.opendata.pref.kanagawa.jp", "reason": _R_API},
+    {"key": "akita", "name": "秋田県オープンデータポータル",
+     "base": "https://ckan.pref.akita.lg.jp", "reason": _R_API},
+    {"key": "odp_jig", "name": "ODP（鯖江市ほか・jig.jp）",
+     "base": "https://ckan.odp.jig.jp", "reason": _R_API},
+    {"key": "aizu", "name": "DATA for CITIZEN（会津若松市ほか）",
+     "base": "https://data.data4citizen.jp", "reason": _R_API},
+    {"key": "niigata", "name": "新潟市オープンデータ",
+     "base": "http://opendata.city.niigata.lg.jp", "reason": _R_API},
+    {"key": "minato", "name": "港区オープンデータカタログ",
+     "base": "https://opendata.city.minato.tokyo.jp", "reason": _R_API},
+    {"key": "utsunomiya", "name": "宇都宮市オープンデータポータル",
+     "base": "https://catalog.city.utsunomiya.tochigi.jp", "reason": _R_API},
+    {"key": "kanazawa", "name": "金沢市オープンデータカタログ",
+     "base": "https://catalog-data.city.kanazawa.ishikawa.jp", "reason": _R_API},
+    {"key": "machida", "name": "町田市オープンデータカタログ",
+     "base": "http://opendata.city.machida.tokyo.jp", "reason": _R_API},
+    {"key": "toyama_city", "name": "富山市オープンデータ",
+     "base": "https://opdt.city.toyama.lg.jp", "reason": _R_API},
+    {"key": "sagamihara", "name": "相模原市オープンデータ",
+     "base": "http://opendata.city.sagamihara.kanagawa.jp", "reason": _R_API},
+    {"key": "tendo", "name": "天童市オープンデータ",
+     "base": "http://data.city.tendo.yamagata.jp", "reason": _R_API},
+    {"key": "sumoto", "name": "洲本市オープンデータ",
+     "base": "https://data.city.sumoto.lg.jp", "reason": _R_API},
+    {"key": "geospatial", "name": "G空間情報センター",
+     "base": "https://www.geospatial.jp/ckan",
+     "reason": "robots.txt: Disallow: /*?* （クエリ付きURL全面禁止＝package_search不可）"},
 ]
 
 # CKAN(Solr)へは title: フィールド検索で投げる。全文検索(q=消防水利)は日本語の形態素解析で
@@ -89,7 +134,8 @@ SEARCH_QUERIES = [
     "消防水利", "消火栓", "防火水槽",
     "給水拠点", "応急給水", "災害時給水", "給水ステーション",
     "耐震性貯水槽", "飲料水兼用貯水槽", "緊急貯水槽",
-    "備蓄倉庫", "防災倉庫", "備蓄物資", "防災備蓄", "災害備蓄",
+    "備蓄倉庫", "防災倉庫", "備蓄物資", "防災備蓄", "災害備蓄", "備蓄品",
+    "井戸",   # 防災井戸／防災用井戸／災害時協力井戸（classify が井戸台帳を落とす）
 ]
 
 
@@ -99,7 +145,8 @@ SEARCH_QUERIES = [
 KIND_TITLE_KEYWORDS: list[tuple[str, tuple[str, ...]]] = [
     ("stock", ("備蓄倉庫", "防災倉庫", "備蓄物資", "防災備蓄", "備蓄品", "備蓄食料")),
     ("water", ("給水拠点", "応急給水", "災害時給水", "給水ステーション",
-               "耐震性貯水槽", "飲料水兼用貯水槽", "緊急貯水槽", "災害用井戸")),
+               "耐震性貯水槽", "飲料水兼用貯水槽", "緊急貯水槽",
+               "災害用井戸", "防災井戸", "防災用井戸", "協力井戸")),
     ("fire_water", ("消防水利", "消火栓", "防火水槽")),
 ]
 
@@ -218,6 +265,22 @@ def normalize_header(name: str) -> str:
     return re.sub(r"\s+", "", s)
 
 
+def _row_dict(cols: list[str], cells: list[str]) -> dict | None:
+    """列名リスト＋セル列 → dict。全セル空なら None（空行）。
+
+    同名の列が複数ある表（「設置場所」が2列など）では値が入っている方を残す。
+    """
+    row: dict[str, str] = {}
+    for i, col in enumerate(cols):
+        if not col:
+            continue
+        v = (cells[i] if i < len(cells) else "") or ""
+        v = v.strip()
+        if v or col not in row:
+            row[col] = v
+    return row if any(row.values()) else None
+
+
 def read_csv_text(text: str) -> list[dict]:
     """CSV文字列 → 正規化済み列名のdict列。"""
     reader = csv.reader(io.StringIO(text.lstrip("﻿")))
@@ -228,10 +291,9 @@ def read_csv_text(text: str) -> list[dict]:
     cols = [normalize_header(c) for c in header]
     rows = []
     for raw in reader:
-        if not any((c or "").strip() for c in raw):
-            continue
-        rows.append({c: (raw[i].strip() if i < len(raw) else "")
-                     for i, c in enumerate(cols) if c})
+        rec = _row_dict(cols, list(raw))
+        if rec is not None:
+            rows.append(rec)
     return rows
 
 
@@ -242,6 +304,146 @@ def decode_csv(body: bytes) -> str | None:
             return body.decode(enc)
         except UnicodeDecodeError:
             continue
+    return None
+
+
+# ---------------------------------------------------------------- XLSX 正規化
+
+# XLSX配信の自治体（東京消防庁・福岡市・豊田市など）は CSV と違い
+#   ・1ファイルに複数シート（消火栓／防火水槽、消防署ごと、年度ごと）
+#   ・先頭に「※この表は…」「令和6年4月1日現在」等の説明行が数行入る
+# のが普通なので、シートごとにヘッダ行を探してから読む。
+XLSX_HEADER_HINTS = (
+    "名称", "施設名", "所在地", "住所", "緯度", "経度", "種別", "水利", "番号",
+    "設置場所", "倉庫名", "備蓄", "口径", "町字", "市区町村", "都道府県",
+    "地方公共団体コード", "方書", "管理者", "No", "ＮＯ", "貯水", "管轄",
+)
+# 説明文の中にヒント語が入っていても数えないための上限（ヘッダの列名は短い）
+_HEADER_CELL_MAXLEN = 30
+
+
+def _cell_text(value) -> str:
+    """openpyxl のセル値 → 文字列。数値は「462209.0」にしない。"""
+    if value is None:
+        return ""
+    if isinstance(value, bool):
+        return "1" if value else "0"
+    if isinstance(value, float):
+        if value.is_integer():
+            return str(int(value))
+        return repr(value)
+    if isinstance(value, (datetime, date)):
+        return value.isoformat()
+    return str(value).strip()
+
+
+def _header_score(cells: list[str]) -> int:
+    """その行がヘッダ行らしいか（ヒント語に当たった列の数）。"""
+    score = 0
+    for c in cells:
+        c = normalize_header(c)
+        if not c or len(c) > _HEADER_CELL_MAXLEN:
+            continue
+        if any(h in c for h in XLSX_HEADER_HINTS):
+            score += 1
+    return score
+
+
+def _sheet_rows(ws, max_header_scan: int = 25) -> list[dict]:
+    """1シート → dict列。先頭数十行からヘッダ行を探し、その下を本文として読む。"""
+    it = ws.iter_rows(values_only=True)
+    head: list[list[str]] = []
+    for raw in it:
+        cells = [_cell_text(v) for v in raw]
+        if any(cells):
+            head.append(cells)
+        if len(head) >= max_header_scan:
+            break
+    if not head:
+        return []
+    best_i, best_score = -1, 0
+    for i, cells in enumerate(head):
+        s = _header_score(cells)
+        if s > best_score:      # 同点なら上の行を優先（説明行より本物のヘッダが下に来る）
+            best_i, best_score = i, s
+    if best_score < 2:
+        return []               # 凡例シート・グラフシートなど。誤読より捨てる方が安全
+    cols = [normalize_header(c) for c in head[best_i]]
+    rows: list[dict] = []
+    for cells in head[best_i + 1:]:
+        rec = _row_dict(cols, cells)
+        if rec is not None:
+            rows.append(rec)
+    for raw in it:
+        rec = _row_dict(cols, [_cell_text(v) for v in raw])
+        if rec is not None:
+            rows.append(rec)
+    return rows
+
+
+def xlsx_error(body: bytes) -> str | None:
+    """openpyxl で開けない理由（開けるなら None）。ダウンロード後に中身で判定する。
+
+    CKAN の format 欄は当てにならない（XLS と書いてあって実体は XLSX、逆もある）。
+    """
+    if body[:2] == b"PK":
+        return None
+    if body[:8] == b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1":
+        return "旧形式のXLS（openpyxl非対応）"
+    return "XLSXとして解釈できない内容"
+
+
+def read_xlsx(body: bytes, max_header_scan: int = 25) -> list[dict]:
+    """XLSXバイト列 → 正規化済み列名のdict列（全シート連結）。読めなければ []。"""
+    try:
+        import openpyxl   # 遅延import: publish環境(site/build.py→sync_site)には無い
+    except ImportError:
+        log.warning("openpyxl が入っていないため XLSX を読めない")
+        return []
+    try:
+        wb = openpyxl.load_workbook(io.BytesIO(body), read_only=True, data_only=True)
+    except Exception as e:
+        log.warning("XLSXを開けない (%s: %s)", type(e).__name__, e)
+        return []
+    rows: list[dict] = []
+    try:
+        for ws in wb.worksheets:
+            try:
+                rows.extend(_sheet_rows(ws, max_header_scan))
+            except Exception as e:
+                log.warning("シート %s を読めない (%s)", getattr(ws, "title", "?"),
+                            type(e).__name__)
+    finally:
+        try:
+            wb.close()
+        except Exception:
+            pass
+    return rows
+
+
+# CKAN の format 欄と URL の拡張子から、表として読めるリソースかを判定する
+_FMT_CSV = ("csv",)
+_FMT_XLSX = ("xlsx", "xlsm", "xltx", "excel", "msexcel", "vndmsexcel", "openxml")
+_FMT_XLS = ("xls",)
+
+
+def resource_format(res: dict) -> str | None:
+    """リソース → "csv" / "xlsx" / "xls" / None（表として読めない）。
+
+    実体を表す拡張子を format 欄より優先する（format に XLS と書きながら
+    実体が .xlsx の自治体が実在する）。
+    """
+    ext = PurePosixPath(urlsplit(res.get("url") or "").path).suffix.lower().lstrip(".")
+    fmt = re.sub(r"[^a-z]", "", (res.get("format") or "").lower())
+    for token in (ext, fmt):
+        if not token:
+            continue
+        if token in _FMT_CSV:
+            return "csv"
+        if token in _FMT_XLSX:
+            return "xlsx"
+        if token in _FMT_XLS:
+            return "xls"
     return None
 
 
@@ -266,7 +468,10 @@ LNG_EXACT = ("経度", "lon", "lng", "Lon", "LON", "longitude")
 _COORD_EXCLUDE = ("度分秒", "日本測地系", "旧", "X座標", "Y座標", "度分")
 
 NAME_EXACT = ("名称", "施設名", "施設・場所名", "拠点名", "倉庫名", "応急給水施設名称",
-              "所在地名称", "拠点給水施設設置場所", "設置場所", "水利種別名", "種別")
+              "所在地名称", "拠点給水施設設置場所")
+# 施設名でも種別でもない「置かれ方」の列（豊田市の設置場所は「歩道」「車道」）。
+# 名称が他に無いときだけ、KIND_EXACT より後に使う
+NAME_WEAK = ("設置場所", "場所")
 _NAME_EXCLUDE = ("カナ", "英字", "フリガナ", "地方公共団体名", "都道府県名", "市区町村名",
                  "市町村名", "団体名", "分団名", "管理者", "コード", "区域", "地区")
 
@@ -338,9 +543,13 @@ def rows_to_records(rows: list[dict], kind: str, source_index: int,
     stats = {"rows": len(rows), "no_pref": 0, "no_coord": 0, "no_name": 0}
     out: list[dict] = []
     for i, row in enumerate(rows):
-        pref = (pref_code_from_jis(_pick(row, JIS_EXACT))
-                or pref_code_from_text(_pick(row, PREF_NAME_EXACT))
-                or pref_code_from_text(_address(row))
+        addr = _address(row)
+        # **文字で書かれた県名をJISコードより優先する**。コードは打ち間違いが実在し
+        # （紀美野町の消防水利XLSXは市区町村コードが 030306＝岩手県になっていて
+        # 603件まるごと別の県に飛ぶ）、県名・住所の方が桁ずれを起こさない
+        pref = (pref_code_from_text(_pick(row, PREF_NAME_EXACT))
+                or pref_code_from_text(addr)
+                or pref_code_from_jis(_pick(row, JIS_EXACT))
                 or pref_code_from_text(org_title)
                 or default_pref)
         if not pref:
@@ -349,11 +558,13 @@ def rows_to_records(rows: list[dict], kind: str, source_index: int,
         name = _pick(row, NAME_EXACT, contains=("名称", "施設名"), exclude=_NAME_EXCLUDE)
         kind_label = _pick(row, KIND_EXACT)
         if not name:
-            name = kind_label or FALLBACK_NAMES[kind]
+            # 施設名が無いCSV/XLSXでは種別を名前にする（「消火栓」「防火水槽」）。
+            # 「設置場所」は種別が取れなかったときの最後の手段
+            name = kind_label or _pick(row, NAME_WEAK) or FALLBACK_NAMES[kind]
             stats["no_name"] += 1
-        addr = _address(row)
+        muni = _muni(row, org_title)
         rec = {"id": f"{source_index}-{id_start + i}", "n": name[:60], "a": addr[:80],
-               "k": kind, "o": _muni(row, org_title), "s": source_index, "_pref": pref}
+               "k": kind, "o": muni, "s": source_index, "_pref": pref}
         coord = parse_coord(_pick(row, LAT_EXACT, contains=("緯度",), exclude=_COORD_EXCLUDE),
                             _pick(row, LNG_EXACT, contains=("経度",), exclude=_COORD_EXCLUDE))
         if coord:
@@ -479,13 +690,14 @@ def collect(client: Client, portals: list[dict], limit_datasets: int | None = No
                 rejected.append({"portal": portal["key"], "org": org_title, "title": title,
                                  "url": page, "license": label, "reason": reason})
                 continue
-            csvs = [r for r in pkg.get("resources", [])
-                    if (r.get("format") or "").upper() == "CSV" and r.get("url")]
-            if not csvs:
+            tabular = [(r, resource_format(r)) for r in pkg.get("resources", [])
+                       if r.get("url")]
+            tabular = [(r, f) for r, f in tabular if f]
+            if not tabular:
                 fmts = sorted({(r.get("format") or "?").upper() for r in pkg.get("resources", [])})
                 rejected.append({"portal": portal["key"], "org": org_title, "title": title,
                                  "url": page, "license": label,
-                                 "reason": f"CSVリソースなし（{','.join(fmts) or 'なし'}）"})
+                                 "reason": f"表形式リソースなし（{','.join(fmts) or 'なし'}）"})
                 continue
             if limit_datasets is not None and picked >= limit_datasets:
                 break
@@ -493,9 +705,10 @@ def collect(client: Client, portals: list[dict], limit_datasets: int | None = No
             src = {"portal": portal["name"], "org": org_title, "title": title, "url": page,
                    "license": label, "license_id": pkg.get("license_id"),
                    "updated": pkg.get("metadata_modified"), "kind": kind, "count": 0}
-            rows_seen = 0   # 同一データセット内の複数CSVでIDが衝突しないための連番オフセット
+            rows_seen = 0   # 同一データセット内の複数ファイルでIDが衝突しないための連番オフセット
             kept = 0
-            for res in csvs:
+            errors: list[str] = []   # 読めなかったリソースの理由（rejected に残す）
+            for res, res_fmt in tabular:
                 if not (res.get("url") or "").startswith("http"):
                     continue
                 try:
@@ -503,28 +716,69 @@ def collect(client: Client, portals: list[dict], limit_datasets: int | None = No
                     resp.raise_for_status()
                 except PermissionError as e:
                     log.warning("robots.txt 拒否のため取得せず: %s", e)
+                    errors.append("robots.txt拒否")
                     continue
                 except Exception as e:
                     log.warning("取得失敗 %s (%s)", res["url"], type(e).__name__)
+                    errors.append(f"取得失敗({type(e).__name__})")
                     continue
-                text = decode_csv(resp.content)
-                if text is None:
-                    log.warning("文字コード判別不可: %s", res["url"])
-                    continue
-                recs, st = rows_to_records(read_csv_text(text), kind, source_index,
+                if res_fmt == "csv":
+                    text = decode_csv(resp.content)
+                    if text is None:
+                        log.warning("文字コード判別不可: %s", res["url"])
+                        errors.append("文字コード判別不可")
+                        continue
+                    rows = read_csv_text(text)
+                else:   # xlsx / xls（format欄は当てにならないので中身で判定する）
+                    err = xlsx_error(resp.content)
+                    if err:
+                        log.warning("%s: %s", res["url"], err)
+                        errors.append(err)
+                        continue
+                    rows = read_xlsx(resp.content)
+                    if not rows:
+                        errors.append("XLSXにヘッダ行を持つ表が無い")
+                        continue
+                recs, st = rows_to_records(rows, kind, source_index,
                                            org_title, _org_pref(pkg, portal), id_start=rows_seen)
                 records.extend(recs)
                 rows_seen += st["rows"]
                 kept += len(recs)
-                log.info("  %s / %s: %d行 → %d件（座標なし %d, 県不明 %d）",
-                         org_title, title, st["rows"], len(recs), st["no_coord"], st["no_pref"])
+                log.info("  %s / %s [%s]: %d行 → %d件（座標なし %d, 県不明 %d）",
+                         org_title, title, res_fmt, st["rows"], len(recs),
+                         st["no_coord"], st["no_pref"])
             if kept == 0:
+                reason = "有効な行が0件"
+                if errors:
+                    reason += f"（{'; '.join(sorted(set(errors)))}）"
                 rejected.append({"portal": portal["key"], "org": org_title, "title": title,
-                                 "url": page, "license": label, "reason": "有効な行が0件"})
+                                 "url": page, "license": label, "reason": reason})
                 continue
             sources.append(src)   # count は split_by_pref で配信件数に置き換える
             picked += 1
     return records, sources, rejected
+
+
+_PREF_BY_CODE = {v: k for k, v in PREFECTURES.items()}
+
+
+def geocode_query(addr: str, pref: str | None, muni: str | None) -> str:
+    """ジオコーディングに投げる住所を県・市区町村まで補って一意にする。
+
+    福岡市の消防水利は所在地が「西区姪の浜4丁目0004番地1号」で県も市も入っていない。
+    そのまま国土地理院APIに投げると新潟市西区などに当たってしまうため、
+    県名・市区町村名が含まれていなければ前に付ける。
+    """
+    addr = (addr or "").strip()
+    if not addr:
+        return ""
+    if pref_code_from_text(addr):
+        return addr                      # すでに県名が入っている
+    prefix = _PREF_BY_CODE.get(pref or "", "")
+    muni = (muni or "").strip()
+    if muni and muni not in addr:
+        prefix += muni
+    return prefix + addr
 
 
 def fill_missing_coords(records: list[dict], limit: int = 2000) -> dict:
@@ -539,6 +793,9 @@ def fill_missing_coords(records: list[dict], limit: int = 2000) -> dict:
             continue
         stats["target"] += 1
         addr = rec.get("a") or ""
+        if addr not in geo.cache:
+            # 既存キャッシュ（住所そのまま）を無駄にしないため、当たらないときだけ補う
+            addr = geocode_query(addr, rec.get("_pref"), rec.get("o"))
         cached = addr in geo.cache
         if not cached and tried >= limit:
             stats["skipped_over_limit"] += 1

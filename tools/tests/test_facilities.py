@@ -338,3 +338,169 @@ def test_write_outputs_clears_stale_pref_files(tmp_path):
 
 def test_sync_site_without_source_dir(tmp_path):
     assert facilities.sync_site(src=tmp_path / "nope", dst=tmp_path / "dst") == 0
+
+
+# ------------------------------------------------------------ XLSX
+
+def _xlsx_bytes(sheets: dict[str, list[list]]) -> bytes:
+    """{シート名: [[セル,...],...]} → XLSXバイト列。"""
+    import io as _io
+
+    import openpyxl
+    wb = openpyxl.Workbook()
+    wb.remove(wb.active)
+    for name, rows in sheets.items():
+        ws = wb.create_sheet(title=name)
+        for row in rows:
+            ws.append(row)
+    buf = _io.BytesIO()
+    wb.save(buf)
+    return buf.getvalue()
+
+
+def test_read_xlsx_finds_header_below_description_rows():
+    """先頭に説明行が数行ある自治体XLSX（東京消防庁型）でもヘッダ行を見つける。"""
+    body = _xlsx_bytes({"消火栓": [
+        ["東京消防庁 消火栓一覧"],
+        ["※この表は令和7年4月1日現在のものです。"],
+        [],
+        ["水利種別コード", "水利種別", "緯度", "経度", "所属"],
+        [1, "公設上水道消火栓", 35.690628, 139.761033, "丸の内"],
+        [1, "公設上水道消火栓", 35.6912, 139.7601, "丸の内"],
+    ]})
+    rows = facilities.read_xlsx(body)
+    assert len(rows) == 2
+    assert rows[0] == {"水利種別コード": "1", "水利種別": "公設上水道消火栓",
+                       "緯度": "35.690628", "経度": "139.761033", "所属": "丸の内"}
+    # 数値セルが "1.0" や "35.690628000000004" にならない
+    assert rows[0]["水利種別コード"] == "1"
+
+
+def test_read_xlsx_concatenates_multiple_sheets_and_skips_legend_sheets():
+    body = _xlsx_bytes({
+        "凡例": [["このファイルについて"], ["問い合わせ先: 消防本部"]],
+        "消火栓": [["種別", "所在地", "緯度", "経度"],
+                   ["消火栓", "宮崎県川南町平田1407-39", 32.1992362, 131.5276887]],
+        "防火水槽": [["種別", "所在地", "緯度", "経度"],
+                     ["防火水槽", "宮崎県川南町川南1200", 32.2001, 131.5301]],
+    })
+    rows = facilities.read_xlsx(body)
+    assert [r["種別"] for r in rows] == ["消火栓", "防火水槽"]   # 凡例シートは無視される
+
+
+def test_read_xlsx_blank_cells_and_blank_rows():
+    body = _xlsx_bytes({"S": [
+        ["名称", "所在地", "緯度", "経度", ""],          # 列名が空の列は捨てる
+        ["西小学校防災倉庫", "東京都墨田区吾妻橋1-23-20", None, None, "x"],
+        [None, None, None, None, None],                  # 空行は捨てる
+        ["", "", "", "", ""],
+        ["東小学校防災倉庫", "", 35.71, 139.80, ""],
+    ]})
+    rows = facilities.read_xlsx(body)
+    assert len(rows) == 2
+    assert rows[0] == {"名称": "西小学校防災倉庫", "所在地": "東京都墨田区吾妻橋1-23-20",
+                       "緯度": "", "経度": ""}
+    assert rows[1]["所在地"] == ""
+
+
+def test_read_xlsx_rows_feed_rows_to_records():
+    body = _xlsx_bytes({"Sheet1": [
+        ["令和6年4月1日現在"],
+        ["市町村コード", "消火栓種類", "水利番号", "所在地", "設置場所"],
+        [232114, "消火栓", "1-1", "愛知県豊田市八草町荒山 731-4", "歩道"],
+    ]})
+    recs, stats = facilities.rows_to_records(facilities.read_xlsx(body),
+                                             "fire_water", 0, "豊田市")
+    assert stats["rows"] == 1
+    assert recs[0]["_pref"] == "23"
+    # 「設置場所」（歩道／車道）ではなく種別列を名称にする
+    assert recs[0]["n"] == "消火栓"
+    assert recs[0]["a"] == "愛知県豊田市八草町荒山 731-4"
+    assert "lat" not in recs[0]        # 座標なし → ジオコーディングに回る
+
+
+def test_read_xlsx_without_header_like_row_returns_nothing():
+    body = _xlsx_bytes({"S": [["集計表"], ["合計", 120], ["前年比", "1.2%"]]})
+    assert facilities.read_xlsx(body) == []
+
+
+def test_xlsx_error_detects_legacy_xls_and_garbage():
+    assert facilities.xlsx_error(b"PK\x03\x04rest") is None
+    assert facilities.xlsx_error(b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1more") == "旧形式のXLS（openpyxl非対応）"
+    assert facilities.xlsx_error(b"<html>404</html>") == "XLSXとして解釈できない内容"
+    assert facilities.read_xlsx(b"not a zip at all") == []
+
+
+def test_read_xlsx_normalizes_fullwidth_header_names():
+    body = _xlsx_bytes({"S": [
+        ["　名称　", "所在地＿連結標記", "緯度", "経度"],
+        ["中央防災倉庫", "福岡県福岡市中央区", 33.58, 130.39],
+    ]})
+    rows = facilities.read_xlsx(body)
+    assert set(rows[0]) == {"名称", "所在地_連結標記", "緯度", "経度"}
+
+
+@pytest.mark.parametrize("res,expected", [
+    ({"format": "CSV", "url": "https://x/download/a.csv"}, "csv"),
+    ({"format": "XLSX", "url": "https://x/download/a.xlsx"}, "xlsx"),
+    ({"format": "", "url": "https://x/download/syoukasenn2023.xlsx"}, "xlsx"),   # 久山町
+    ({"format": "XLS", "url": "https://x/download/syoubousuiri.xls"}, "xls"),    # 厚木市
+    ({"format": "XLS", "url": "https://x/download/a.xlsx"}, "xlsx"),   # 拡張子を優先
+    ({"format": "CSV", "url": "https://x/api/download?id=3"}, "csv"),  # 拡張子なし
+    ({"format": "PDF", "url": "https://x/a.pdf"}, None),
+    ({"format": "HTML", "url": "https://x/page.html"}, None),
+    ({"format": "", "url": ""}, None),
+])
+def test_resource_format(res, expected):
+    assert facilities.resource_format(res) == expected
+
+
+# ------------------------------------------------------------ ジオコーディング用の住所補完
+
+def test_geocode_query_qualifies_address_without_prefecture():
+    # 福岡市の消防水利は所在地に県も市も入っていない
+    assert facilities.geocode_query("西区姪の浜4丁目0004番地1号", "40", "福岡市") \
+        == "福岡県福岡市西区姪の浜4丁目0004番地1号"
+    # 市区町村名が既に入っていれば県名だけ足す
+    assert facilities.geocode_query("宇治市六地蔵1丁目", "26", "宇治市") == "京都府宇治市六地蔵1丁目"
+    # 県名が入っていればそのまま
+    assert facilities.geocode_query("愛知県豊田市八草町荒山689-2", "23", "豊田市") \
+        == "愛知県豊田市八草町荒山689-2"
+    assert facilities.geocode_query("", "13", "品川区") == ""
+
+
+def test_fill_missing_coords_falls_back_to_qualified_address(monkeypatch):
+    """既存キャッシュ（住所そのまま）を優先し、無いときだけ県・市を補って問い合わせる。"""
+    import crawler.geocode
+    fake = _FakeGeocoder()
+    fake.cache = {"西区姪の浜1丁目": [33.58, 130.35]}
+    monkeypatch.setattr(crawler.geocode, "Geocoder", lambda cache_path=None: fake)
+    recs = [
+        {"id": "0-0", "a": "西区姪の浜1丁目", "o": "福岡市", "_pref": "40"},   # キャッシュ済み
+        {"id": "0-1", "a": "西区姪の浜2丁目", "o": "福岡市", "_pref": "40"},   # 新規
+    ]
+    facilities.fill_missing_coords(recs)
+    assert fake.calls == ["西区姪の浜1丁目", "福岡県福岡市西区姪の浜2丁目"]
+
+
+def test_rows_to_records_prefers_written_pref_over_broken_jis_code():
+    """コードの打ち間違いで別の県に飛ばさない（紀美野町の消防水利XLSXが実例）。
+
+    市区町村コードが 030306（＝岩手県と読めてしまう）でも、都道府県名と住所が
+    和歌山県なので和歌山県(30)に入れる。
+    """
+    rows = facilities.read_csv_text(
+        "市区町村コード,NO,都道府県名,市区町村名,種別,住所,緯度(世界測地系),経度(世界測地系)\n"
+        "030306,100,和歌山県,紀美野町,消火栓,和歌山県海草郡紀美野町東野,34.16826,135.36252\n")
+    recs, _ = facilities.rows_to_records(rows, "fire_water", 0, "紀美野町")
+    assert recs[0]["_pref"] == "30"
+
+
+def test_rows_to_records_uses_jis_code_when_no_pref_name():
+    """県名がどこにも書かれていないCSV/XLSX（福岡市型）ではJISコードを使う。"""
+    rows = facilities.read_csv_text(
+        "全国地方公共団体コード,地方公共団体名,種別,所在地_連結表記,緯度,経度\n"
+        "401307,福岡県福岡市,消火栓,西区姪の浜4丁目0004番地1号,,\n")
+    recs, _ = facilities.rows_to_records(rows, "fire_water", 0, "福岡市")
+    assert recs[0]["_pref"] == "40"
+    assert recs[0]["a"] == "西区姪の浜4丁目0004番地1号"

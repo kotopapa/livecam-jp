@@ -8,7 +8,7 @@ on:
       portal:
         description: "対象ポータル（空なら全部）"
         type: choice
-        options: ["", "bodik", "tokyo"]
+        options: ["", "bodik", "tokyo", "yamaguchi"]
         default: ""
       geocode_limit:
         description: "住所→座標の新規問い合わせ上限"
