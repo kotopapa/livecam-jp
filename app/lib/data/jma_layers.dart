@@ -27,6 +27,7 @@ enum MapLayerKind {
   hazardTsunami,
   hazardHightide,
   shelters,
+  facilities,
 }
 
 enum QuakePeriod { day, week, month }

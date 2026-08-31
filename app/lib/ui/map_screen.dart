@@ -14,6 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
+import '../data/facility_layers.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
 import '../data/shelter_layers.dart';
@@ -109,6 +110,7 @@ class _MapScreenState extends State<MapScreen> {
   void initState() {
     super.initState();
     _loadDismissedNotice();
+    _loadFacilityKinds();
     widget.app.addListener(_onDataChanged);
     // 初回フレーム後に前回位置へ移動（MapControllerはレイアウト後に有効）
     WidgetsBinding.instance.addPostFrameCallback((_) => _restorePosition());
@@ -128,7 +130,7 @@ class _MapScreenState extends State<MapScreen> {
     _controller.move(LatLng(lat, lng), 15);
     setState(() => _zoom = 15);
     _savePosition();
-    _requestSheltersForView();
+    _requestLayerDataForView();
   }
 
   @override
@@ -136,6 +138,8 @@ class _MapScreenState extends State<MapScreen> {
     _layerTimer?.cancel();
     _shelters?.removeListener(_onDataChanged);
     _shelters?.dispose();
+    _facilities?.removeListener(_onDataChanged);
+    _facilities?.dispose();
     widget.app.navigationRequest.removeListener(_onNavigationRequest);
     widget.app.removeListener(_onDataChanged);
     _searchController.dispose();
@@ -173,7 +177,12 @@ class _MapScreenState extends State<MapScreen> {
     });
     if (kind == MapLayerKind.shelters) {
       await _showShelterNoticeOnce();
-      _requestSheltersForView();
+      _requestLayerDataForView();
+      return;
+    }
+    if (kind == MapLayerKind.facilities) {
+      await _showFacilityNoticeOnce();
+      _requestLayerDataForView();
       return;
     }
     if (kind == MapLayerKind.none || HazardLayers.isHazard(kind)) return;
@@ -223,6 +232,7 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.hazardTsunami:
       case MapLayerKind.hazardHightide:
       case MapLayerKind.shelters:
+      case MapLayerKind.facilities:
         break;
     }
     if (mounted) {
@@ -327,6 +337,17 @@ class _MapScreenState extends State<MapScreen> {
             title: const Text('避難場所（指定緊急避難場所・指定避難所）'),
             subtitle: const Text('拡大すると表示。災害種別で絞り込みできます'),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.shelters); },
+          ),
+          const Divider(height: 8),
+          const ListTile(
+              title: Text('防災拠点', style: TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text('出典：各自治体のオープンデータ（公開している自治体のみ）')),
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.facilities ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.facilities ? Theme.of(ctx).colorScheme.primary : null),
+            title: const Text('防災拠点（給水・備蓄・消防水利）'),
+            subtitle: const Text('拡大すると表示。種別で絞り込みできます'),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.facilities); },
           ),
           const SizedBox(height: 8),
         ]),
@@ -659,6 +680,318 @@ class _MapScreenState extends State<MapScreen> {
         ),
       );
 
+  // --- 防災拠点レイヤー（給水拠点・防災備蓄倉庫・消防水利。自治体オープンデータ） ---
+  FacilityStore? _facilities;
+
+  /// 表示する種別（複数選択。既定は給水拠点＋防災備蓄倉庫）
+  Set<String> _facilityKinds = {...FacilityLayers.defaultSelectedKinds};
+  Set<String> _facilityPrefs = const {};
+  static const _facilityKindsKey = 'facility_kinds';
+  static const _facilityNoticeKey = 'facility_notice_seen';
+
+  Future<void> _loadFacilityKinds() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final saved = FacilityLayers.decodeKinds(prefs.getString(_facilityKindsKey));
+      if (!mounted) return;
+      if (!setEquals(saved, _facilityKinds)) setState(() => _facilityKinds = saved);
+    } catch (_) {
+      // 保存値が読めなくても既定で動く
+    }
+  }
+
+  Future<void> _saveFacilityKinds() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_facilityKindsKey, FacilityLayers.encodeKinds(_facilityKinds));
+    } catch (_) {
+      // 保存できなくても表示は続く
+    }
+  }
+
+  Future<FacilityStore> _facilityStore() async {
+    if (_facilities != null) return _facilities!;
+    Directory? dir;
+    try {
+      dir = await getTemporaryDirectory();
+    } catch (_) {
+      dir = null; // 保存できなくてもメモリキャッシュだけで動く
+    }
+    return _facilities ??= FacilityStore(cacheDir: dir)..addListener(_onDataChanged);
+  }
+
+  /// 初回ONのときだけ利用上の注意（index.notice の要点）を1回表示する
+  Future<void> _showFacilityNoticeOnce() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool(_facilityNoticeKey) ?? false) return;
+    if (!mounted) return;
+    await showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('防災拠点レイヤーについて'),
+        content: const SingleChildScrollView(
+          child: Text(
+            '・各自治体がオープンデータとして公開している「応急給水施設」「備蓄倉庫」'
+            '「消防水利施設」の一覧を集めたものです。公開している自治体のみで、全国は網羅していません\n'
+            '・消火栓・防火水槽は消防活動用の設備で、一般の方が使用するものではありません\n'
+            '・給水拠点は災害時に開設されるもので、平常時に給水を受けられるとは限りません\n'
+            '・更新時期は自治体ごとに異なります。正確な情報は各自治体にご確認ください\n\n'
+            '${FacilityLayers.attribution}',
+            style: TextStyle(fontSize: 13),
+          ),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('OK')),
+        ],
+      ),
+    );
+    await prefs.setBool(_facilityNoticeKey, true);
+  }
+
+  /// 表示範囲に掛かる県ファイルを要求する（ズーム13未満・データの無い県では何もしない）
+  Future<void> _requestFacilitiesForView() async {
+    if (_layer != MapLayerKind.facilities || _zoom < FacilityLayers.minZoom) return;
+    final v = _viewBoundsWithMargin();
+    if (v == null) return;
+    final prefs = FacilityLayers.prefsForBounds(
+      widget.app.repository.displayableCameras(),
+      south: v.$1, north: v.$2, west: v.$3, east: v.$4,
+      center: _controller.camera.center,
+    );
+    final store = await _facilityStore();
+    if (!mounted) return;
+    if (!setEquals(prefs, _facilityPrefs)) setState(() => _facilityPrefs = prefs);
+    // index が未取得のうちは素通しし、_load 側で対象外の県を弾く
+    store.request(FacilityLayers.availablePrefs(prefs, store.index));
+    await store.ensureIndex();
+  }
+
+  /// 避難場所・防災拠点の県ファイル要求（表示中のレイヤーの分だけ動く）
+  void _requestLayerDataForView() {
+    _requestSheltersForView();
+    _requestFacilitiesForView();
+  }
+
+  /// 画面内（余白込み）・種別フィルタ適用後の防災拠点
+  List<Facility> _visibleFacilities() {
+    final store = _facilities;
+    if (store == null || _zoom < FacilityLayers.minZoom) return const [];
+    final v = _viewBoundsWithMargin();
+    if (v == null) return const [];
+    return FacilityLayers.filterByKinds(
+      FacilityLayers.cull(store.facilitiesFor(_facilityPrefs),
+          south: v.$1, north: v.$2, west: v.$3, east: v.$4),
+      _facilityKinds,
+    );
+  }
+
+  /// 種別の絞り込みチップ（複数選択。避難場所の災害種別チップと同じ位置・体裁）
+  Widget _facilityChips() {
+    if (_layer != MapLayerKind.facilities) return const SizedBox.shrink();
+    Widget chip(String kind) => Padding(
+          padding: const EdgeInsets.only(right: 6),
+          child: FilterChip(
+            label: Text(FacilityLayers.shortLabel(kind), style: const TextStyle(fontSize: 12)),
+            avatar: Container(
+              width: 10,
+              height: 10,
+              decoration: BoxDecoration(
+                  color: _FacilityPin.colorOf(kind), shape: BoxShape.circle),
+            ),
+            selected: _facilityKinds.contains(kind),
+            visualDensity: VisualDensity.compact,
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            onSelected: (on) {
+              setState(() {
+                final next = {..._facilityKinds};
+                if (on) {
+                  next.add(kind);
+                } else {
+                  next.remove(kind);
+                }
+                _facilityKinds = next;
+              });
+              _saveFacilityKinds();
+            },
+          ),
+        );
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+      decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.92),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          const Icon(Icons.local_drink_outlined, size: 16),
+          const SizedBox(width: 6),
+          for (final k in FacilityLayers.kindKeys) chip(k),
+        ]),
+      ),
+    );
+  }
+
+  void _showFacilityInfo(Facility f) {
+    final store = _facilities;
+    final src = store?.sourceOf(f);
+    final kindLabel = store?.index?.labelOf(f.kind) ??
+        FacilityLayers.defaultKinds[f.kind] ??
+        f.kind;
+    final title = f.name.isEmpty ? kindLabel : f.name;
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+          child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 2, right: 8),
+                child: _FacilityPin(kind: f.kind, size: 22),
+              ),
+              Expanded(
+                child: Text(title,
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                decoration: BoxDecoration(
+                    color: _FacilityPin.colorOf(f.kind),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Text(FacilityLayers.shortLabel(f.kind),
+                    style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white)),
+              ),
+            ]),
+            if (f.address.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: Text(f.address, style: TextStyle(fontSize: 13, color: Colors.grey[700])),
+              ),
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: Text(kindLabel, style: TextStyle(fontSize: 12, color: Colors.grey[800])),
+            ),
+            if (f.owner.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Text('提供：${f.owner}', style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+              ),
+            // 標高（浸水時の判断材料。国土地理院の標高APIを1回だけ呼ぶ）
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: ElevationLabel(lat: f.lat, lng: f.lng),
+            ),
+            if (f.geocoded)
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Row(children: [
+                  Icon(Icons.info_outline, size: 13, color: Colors.orange[800]),
+                  const SizedBox(width: 4),
+                  Expanded(
+                    child: Text('住所から推定した位置です（実際の場所とずれる場合があります）',
+                        style: TextStyle(fontSize: 11, color: Colors.orange[800])),
+                  ),
+                ]),
+              ),
+            const SizedBox(height: 12),
+            // 2段に積む（横並びだと「周辺のライブカメラ」が途中で改行される）
+            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              FilledButton.icon(
+                  icon: const Icon(Icons.directions, size: 18),
+                  label: const Text('Googleマップで経路を見る'),
+                  onPressed: () => launchUrl(
+                      FacilityLayers.routeUri(f),
+                      mode: LaunchMode.externalApplication),
+                ),
+              const SizedBox(height: 8),
+              OutlinedButton.icon(
+                  icon: const Icon(Icons.videocam, size: 18),
+                  label: const Text('周辺のライブカメラ'),
+                  onPressed: () {
+                    Navigator.pop(ctx);
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => NearbyCamerasScreen(
+                            app: widget.app,
+                            title: '$title 周辺のカメラ',
+                            lat: f.lat,
+                            lng: f.lng)));
+                  },
+                ),
+            ]),
+            const SizedBox(height: 8),
+            if (src == null)
+              const Text('${FacilityLayers.attribution}　${FacilityLayers.disclaimer}',
+                  style: TextStyle(fontSize: 10, color: Colors.black54))
+            else ...[
+              const Text('出典（データセット）', style: TextStyle(fontSize: 10, color: Colors.black54)),
+              InkWell(
+                onTap: src.url.isEmpty
+                    ? null
+                    : () => launchUrl(Uri.parse(src.url), mode: LaunchMode.externalApplication),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 2),
+                  child: Text(src.label,
+                      style: TextStyle(
+                          fontSize: 11,
+                          color: src.url.isEmpty ? Colors.black54 : Colors.blue[800],
+                          decoration: src.url.isEmpty ? null : TextDecoration.underline)),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Text(FacilityLayers.disclaimer,
+                    style: const TextStyle(fontSize: 10, color: Colors.black54)),
+              ),
+            ],
+          ]),
+        ),
+      ),
+    );
+  }
+
+  /// 防災拠点のマーカー（カメラピンより下に描く。400件超はクラスタ）
+  List<Widget> _facilityWidgets() {
+    if (_zoom < FacilityLayers.minZoom) return const [];
+    final list = _visibleFacilities();
+    if (list.isEmpty) return const [];
+    if (list.length > FacilityLayers.clusterThreshold) {
+      final groups = clusterPoints(list, _zoom, (f) => f.lat, (f) => f.lng);
+      return [
+        MarkerLayer(markers: [
+          for (final g in groups)
+            if (g.count == 1)
+              _facilityMarker(g.items.first)
+            else
+              Marker(
+                point: LatLng(g.lat, g.lng),
+                width: 36,
+                height: 36,
+                child: GestureDetector(
+                  onTap: () => _controller.move(LatLng(g.lat, g.lng), _zoom + 2),
+                  child: _FacilityCluster(
+                      count: g.count, kind: FacilityLayers.dominantKind(g.items)),
+                ),
+              ),
+        ]),
+      ];
+    }
+    return [MarkerLayer(markers: [for (final f in list) _facilityMarker(f)])];
+  }
+
+  Marker _facilityMarker(Facility f) => Marker(
+        point: f.pos,
+        width: 22,
+        height: 22,
+        child: GestureDetector(
+          onTap: () => _showFacilityInfo(f),
+          child: _FacilityPin(kind: f.kind),
+        ),
+      );
+
   /// 雨雲レーダーの時刻スライダー（過去3時間の実況〜1時間先の予測）
   Widget _nowcastSlider() {
     if (_layer != MapLayerKind.rainRadar || _nowcastTimes.length < 2) {
@@ -825,11 +1158,38 @@ class _MapScreenState extends State<MapScreen> {
             ]),
           ),
         ]);
+      case MapLayerKind.facilities:
+        if (_zoom < FacilityLayers.minZoom) {
+          title = '防災拠点（拡大すると防災拠点を表示）';
+        } else if (_facilities?.allUnavailable(_facilityPrefs) ?? false) {
+          title = '防災拠点（${FacilityLayers.noDataMessage}）';
+        } else {
+          final n = _visibleFacilities().length;
+          title = '防災拠点（$n件${n > FacilityLayers.clusterThreshold ? '・まとめ表示' : ''}）';
+        }
+        items.addAll([
+          for (final k in FacilityLayers.kindKeys)
+            Padding(
+              padding: const EdgeInsets.only(right: 6),
+              child: Opacity(
+                opacity: _facilityKinds.contains(k) ? 1 : 0.35,
+                child: Row(mainAxisSize: MainAxisSize.min, children: [
+                  _FacilityPin(kind: k, size: 12),
+                  const SizedBox(width: 2),
+                  Text(FacilityLayers.shortLabel(k), style: const TextStyle(fontSize: 9)),
+                ]),
+              ),
+            ),
+        ]);
       case MapLayerKind.none:
         title = '';
     }
-    final hazard = HazardLayers.isHazard(_layer) || _layer == MapLayerKind.shelters;
-    final layerLoading = _layerLoading || (_layer == MapLayerKind.shelters && (_shelters?.loading ?? false));
+    final hazard = HazardLayers.isHazard(_layer) ||
+        _layer == MapLayerKind.shelters ||
+        _layer == MapLayerKind.facilities;
+    final layerLoading = _layerLoading ||
+        (_layer == MapLayerKind.shelters && (_shelters?.loading ?? false)) ||
+        (_layer == MapLayerKind.facilities && (_facilities?.loading ?? false));
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
       decoration: BoxDecoration(
@@ -856,6 +1216,21 @@ class _MapScreenState extends State<MapScreen> {
                 Icon(Icons.error_outline, size: 12, color: Colors.red[700]),
                 const SizedBox(width: 3),
                 Text('避難場所を取得できませんでした（タップで再試行）',
+                    style: TextStyle(fontSize: 9, color: Colors.red[700], fontWeight: FontWeight.bold)),
+              ]),
+            ),
+          ),
+        if (_layer == MapLayerKind.facilities &&
+            _zoom >= FacilityLayers.minZoom &&
+            (_facilities?.failed.intersection(_facilityPrefs).isNotEmpty ?? false))
+          InkWell(
+            onTap: () => _facilities?.retry(_facilityPrefs),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 2),
+              child: Row(mainAxisSize: MainAxisSize.min, children: [
+                Icon(Icons.error_outline, size: 12, color: Colors.red[700]),
+                const SizedBox(width: 3),
+                Text('防災拠点を取得できませんでした（タップで再試行）',
                     style: TextStyle(fontSize: 9, color: Colors.red[700], fontWeight: FontWeight.bold)),
               ]),
             ),
@@ -993,6 +1368,8 @@ class _MapScreenState extends State<MapScreen> {
         ];
       case MapLayerKind.shelters:
         return _shelterWidgets();
+      case MapLayerKind.facilities:
+        return _facilityWidgets();
       case MapLayerKind.none:
         return const [];
     }
@@ -1162,7 +1539,7 @@ class _MapScreenState extends State<MapScreen> {
             _controller.move(point, zoom);
             setState(() => _zoom = zoom);
             _savePosition();
-            _requestSheltersForView();
+            _requestLayerDataForView();
           }
 
           return SafeArea(
@@ -1257,7 +1634,7 @@ class _MapScreenState extends State<MapScreen> {
     final z = (_controller.camera.zoom + delta).clamp(2.0, 18.0);
     _controller.move(_controller.camera.center, z);
     setState(() => _zoom = z);
-    _requestSheltersForView();
+    _requestLayerDataForView();
   }
 
   // 検索欄のコントローラは画面Stateと同寿命で保持する。
@@ -1583,7 +1960,7 @@ class _MapScreenState extends State<MapScreen> {
                 } else {
                   _maybeRebuildForPan(_controller.camera);
                 }
-                _requestSheltersForView();
+                _requestLayerDataForView();
               }
             },
           ),
@@ -1650,9 +2027,13 @@ class _MapScreenState extends State<MapScreen> {
                   Padding(padding: const EdgeInsets.only(bottom: 6), child: _nowcastSlider()),
                   if (_layer == MapLayerKind.shelters)
                     Padding(padding: const EdgeInsets.only(bottom: 6), child: _shelterChips()),
+                  if (_layer == MapLayerKind.facilities)
+                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _facilityChips()),
                   Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
                   if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
                   if (_layer == MapLayerKind.shelters) const _ShelterAttribution(),
+                  if (_layer == MapLayerKind.facilities)
+                    _FacilityAttribution(notice: _facilities?.index?.attribution),
                   _GsiAttribution(worldTiles: _useWorldTiles),
                 ]),
               ),
@@ -1912,6 +2293,94 @@ class _ShelterCluster extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: _ShelterPin.color.withValues(alpha: 0.85),
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.white, width: 2),
+        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 3)],
+      ),
+      child: Text('$count',
+          style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
+    );
+  }
+}
+
+/// 防災拠点表示中の出典・注記（_ShelterAttribution と同じ様式）。
+/// [notice] は index.attribution（未取得なら定数の出典表記）
+class _FacilityAttribution extends StatelessWidget {
+  const _FacilityAttribution({this.notice});
+
+  final String? notice;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      color: Colors.white70,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+        Text(notice?.isNotEmpty == true ? notice! : FacilityLayers.attribution,
+            style: const TextStyle(fontSize: 10)),
+        const Text(FacilityLayers.disclaimer,
+            style: TextStyle(fontSize: 9, color: Colors.black54)),
+      ]),
+    );
+  }
+}
+
+/// 防災拠点ピン（種別で色分け。給水=青 / 備蓄=茶 / 消防水利=赤）。
+/// 避難場所の緑・カメラピンとは色で区別する
+class _FacilityPin extends StatelessWidget {
+  const _FacilityPin({required this.kind, this.size = 22});
+
+  static const waterColor = Color(0xFF1565C0);
+  static const stockColor = Color(0xFF795548);
+  static const fireWaterColor = Color(0xFFC62828);
+
+  static Color colorOf(String? kind) => switch (kind) {
+        'water' => waterColor,
+        'stock' => stockColor,
+        'fire_water' => fireWaterColor,
+        _ => const Color(0xFF546E7A),
+      };
+
+  static IconData iconOf(String? kind) => switch (kind) {
+        'water' => Icons.water_drop,
+        'stock' => Icons.inventory_2,
+        'fire_water' => Icons.local_fire_department,
+        _ => Icons.place,
+      };
+
+  final String kind;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        color: colorOf(kind).withValues(alpha: 0.9),
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.white, width: size >= 16 ? 1.5 : 1),
+        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 2, offset: Offset(0, 1))],
+      ),
+      child: Icon(iconOf(kind), size: size * 0.6, color: Colors.white),
+    );
+  }
+}
+
+/// 防災拠点のクラスタ（代表種別の色。カメラの青いクラスタと区別）
+class _FacilityCluster extends StatelessWidget {
+  const _FacilityCluster({required this.count, this.kind});
+
+  final int count;
+  final String? kind;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: _FacilityPin.colorOf(kind).withValues(alpha: 0.85),
         shape: BoxShape.circle,
         border: Border.all(color: Colors.white, width: 2),
         boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 3)],
