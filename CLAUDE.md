@@ -112,3 +112,4 @@ python site/build.py                            # 配信ファイル生成
 - **山口県 `yamaguchi-opendata.jp/ckan` を追加**。**CKANの配布時robots.txtは `User-agent:*` に `Disallow: /api/` を含むので、素のCKANを立てている自治体はほぼ全部クロール不可**（岐阜・神奈川・秋田・金沢・港区など16件を`BLOCKED_PORTALS`に記録）。BODIKが使えるのは`/api/`禁止をSogou/Baidu等のUAグループ限定に書き換えているから
 - **JISコードより「文字で書かれた県名」を優先する**（`rows_to_records`）。紀美野町の消防水利XLSXは市区町村コードが`030306`で、コード優先だと603件まるごと岩手県に飛んだ
 - 埼玉・岡山・広島・島根・宮城は dataeye系ポータル（`/ckan_api/`・robots全面許可）に消防水利がありrobots的には取れるが、**パッケージにライセンス欄が1つも無い**ためSPEC C5に従い不採用。利用規約を確認できれば5県増える（次の一手）
+- **YouTubeカメラの一斉点検（2026-08-31）**: 2,686台を watch ページの isLiveNow ＋ チャンネル `/streams`（`https://www.youtube.com/channel/<UC..>/streams` の形式でないと404）で判定し、追従201・退役240。要確認91台（営業時間のみ配信の施設カメラ・冬季のみのスキー場など。深夜に確認したため）は docs/research_2026-08-31/youtube_health.md に一覧。**日中に再確認する**こと。非公開/削除の69件はチャンネルIDが取れず自動追従不可（運営者名から新枠を探せば復活できる）
