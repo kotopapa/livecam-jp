@@ -11,13 +11,17 @@ import 'package:latlong2/latlong.dart';
 /// いずれもアプリが直接取得し、当方サーバーには保存しない。
 /// 気象庁サイト内部の公開ファイルのため、構造変更時は静かに失敗させる。
 
-/// 地図に重ねるレイヤー（排他）。hazard* は国土地理院の重ねるハザードマップ（hazard_layers.dart）、
+/// 地図に重ねるレイヤー（排他）。risk* は気象庁のキキクル（危険度分布。RiskLayers）、
+/// hazard* は国土地理院の重ねるハザードマップ（hazard_layers.dart）、
 /// shelters は指定緊急避難場所（shelter_layers.dart）
 enum MapLayerKind {
   none,
   rainRadar,
   quakes,
   rain24h,
+  riskLand,
+  riskInund,
+  riskFlood,
   hazardFlood,
   hazardLandslide,
   hazardTsunami,
@@ -52,19 +56,122 @@ class NowcastTime {
       };
 
   /// 気象庁の時刻表記はUTC。日本時間(JST=UTC+9)に直す
-  DateTime get validAtJst => DateTime.utc(
-        int.parse(validtime.substring(0, 4)),
-        int.parse(validtime.substring(4, 6)),
-        int.parse(validtime.substring(6, 8)),
-        int.parse(validtime.substring(8, 10)),
-        int.parse(validtime.substring(10, 12)),
-      ).add(const Duration(hours: 9));
+  DateTime get validAtJst => jmaTimeToJst(validtime);
 
   /// 表示用 HH:MM（JST）
-  String get label {
-    final d = validAtJst;
-    return '${d.hour.toString().padLeft(2, '0')}:${d.minute.toString().padLeft(2, '0')}';
+  String get label => jmaTimeLabel(validtime);
+}
+
+/// 気象庁タイルの時刻表記（UTCの yyyyMMddHHmmss）を日本時間(JST=UTC+9)に直す。
+/// 端末のタイムゾーンに依存しないよう UTC で組み立ててから +9時間する
+DateTime jmaTimeToJst(String t) => DateTime.utc(
+      int.parse(t.substring(0, 4)),
+      int.parse(t.substring(4, 6)),
+      int.parse(t.substring(6, 8)),
+      int.parse(t.substring(8, 10)),
+      int.parse(t.substring(10, 12)),
+    ).add(const Duration(hours: 9));
+
+/// 表示用 HH:MM（JST）
+String jmaTimeLabel(String t) {
+  final d = jmaTimeToJst(t);
+  return '${d.hour.toString().padLeft(2, '0')}:${d.minute.toString().padLeft(2, '0')}';
+}
+
+/// キキクル（危険度分布）の時刻。targetTimes.json は10分刻みで過去約6時間分が並び、
+/// すべて basetime == validtime の実況（予測のエントリは無い）。最新3件だけ member が
+/// immed0/immed1/immed2 で、それ以前は none。member はエントリの値をそのまま
+/// URLに入れないと404になる（実測 2026-08-31）
+class RiskTime {
+  const RiskTime(this.basetime, this.validtime, this.member);
+  final String basetime;
+  final String validtime;
+  final String member;
+
+  DateTime get validAtJst => jmaTimeToJst(validtime);
+  String get label => jmaTimeLabel(validtime);
+
+  /// flutter_map の urlTemplate（kind が risk* 以外なら空文字）
+  String tileTemplate(MapLayerKind kind) {
+    final el = RiskLayers.element(kind);
+    if (el.isEmpty) return '';
+    return '${RiskLayers.tileBase}/$basetime/$member/$validtime/surf/$el/{z}/{x}/{y}.png';
   }
+}
+
+/// 気象庁「キキクル（危険度分布）」のタイル（無料・認証不要。SPEC C2）。
+/// 大雨で「今どこが危ないか」を1kmメッシュ／河川区間ごとに示す実況。10分更新。
+/// 出典：気象庁ホームページ https://www.jma.go.jp/bosai/risk/
+class RiskLayers {
+  static const tileBase = 'https://www.jma.go.jp/bosai/jmatile/data/risk';
+  static const timesUrl = '$tileBase/targetTimes.json';
+
+  /// 気象庁自身の表示範囲（risk.properties の imageType land/inund/flood の minZoom/maxZoom）。
+  /// 範囲外・データ無しは404（透明タイルは200で334バイト）
+  static const minZoom = 4;
+  static const maxZoom = 14;
+
+  static bool isRisk(MapLayerKind k) => switch (k) {
+        MapLayerKind.riskLand ||
+        MapLayerKind.riskInund ||
+        MapLayerKind.riskFlood =>
+          true,
+        _ => false,
+      };
+
+  /// レイヤー種別 → タイルURLの element
+  static String element(MapLayerKind k) => switch (k) {
+        MapLayerKind.riskLand => 'land',
+        MapLayerKind.riskInund => 'inund',
+        MapLayerKind.riskFlood => 'flood',
+        _ => '',
+      };
+
+  static String title(MapLayerKind k) => switch (k) {
+        MapLayerKind.riskLand => '土砂キキクル',
+        MapLayerKind.riskInund => '浸水キキクル',
+        MapLayerKind.riskFlood => '洪水キキクル',
+        _ => '',
+      };
+
+  static String subtitle(MapLayerKind k) => switch (k) {
+        MapLayerKind.riskLand => '土砂災害の危険度（1kmメッシュ・10分ごとに更新）',
+        MapLayerKind.riskInund => '浸水害の危険度（1kmメッシュ・10分ごとに更新）',
+        MapLayerKind.riskFlood => '洪水災害の危険度（河川ごと・10分ごとに更新）',
+        _ => '',
+      };
+
+  /// 危険度の配色（低→高）。気象庁の4段階＋「今後の情報等に留意」。
+  /// 根拠（2026-08-31採取）:
+  /// (a) 実タイルの画素 …… land の実データ入りタイル
+  ///     .../risk/20260831034000/immed0/20260831034000/surf/land/6/56/25.png は
+  ///     8色パレットPNGで PLTE = ffffff,ffffff,ffffff,ffffff,f2e700,ff2800,aa00aa,0c000c
+  ///     （tRNS = 00,00,00,00,ff,ff,ff,ff ＝ 前半4色は透明）
+  /// (b) 気象庁公式凡例SVG …… https://www.jma.go.jp/bosai/risk/images/legend_jp_normal_land.svg
+  ///     （inund/flood も同じ値）に
+  ///     rgb(242,231,000)=注意【警戒レベル２相当】/ rgb(255,040,000)=警戒【３相当】/
+  ///     rgb(170,000,170)=危険【４相当】/ rgb(012,000,012)=災害切迫【５相当】、
+  ///     最下段は白（land・inund）＝「今後の情報等に留意」
+  /// (c) 洪水キキクルだけ最下段が rgb(060,255,255)=#3CFFFF（河川を線で描くため白では見えない）。
+  ///     legend_jp_flood_risk.svg の実値
+  /// ※「うす紫」は2022年6月の改正で廃止済み。現行は上記4段階
+  static const _levels = <(Color, String)>[
+    (Color(0xFFF2E700), '注意'),
+    (Color(0xFFFF2800), '警戒'),
+    (Color(0xFFAA00AA), '危険'),
+    (Color(0xFF0C000C), '切迫'),
+  ];
+
+  /// 「今後の情報等に留意」の色。土砂・浸水は白（タイル上は透明）、洪水は水色の線
+  static Color baseColor(MapLayerKind k) => k == MapLayerKind.riskFlood
+      ? const Color(0xFF3CFFFF)
+      : const Color(0xFFFFFFFF);
+
+  /// 凡例の5段階（低→高）
+  static List<(Color, String)> scale(MapLayerKind k) =>
+      [(baseColor(k), '留意'), ..._levels];
+
+  static const attribution = '出典：気象庁';
 }
 
 class QuakePoint {
@@ -145,6 +252,32 @@ class JmaLayers {
     for (final n in list.reversed) {
       if (!n.isForecast) return n;
     }
+    return list.isEmpty ? null : list.last;
+  }
+
+  /// キキクルの時刻一覧（古い順）。実況のみ（basetime == validtime）。取得失敗は空リスト
+  static Future<List<RiskTime>> fetchRiskTimes() async {
+    try {
+      final r = await http
+          .get(Uri.parse(RiskLayers.timesUrl), headers: _ua)
+          .timeout(const Duration(seconds: 15));
+      if (r.statusCode != 200) return const [];
+      final list = (jsonDecode(r.body) as List)
+          .cast<Map<String, dynamic>>()
+          .where((e) => e['basetime'] == e['validtime'])
+          .map((e) => RiskTime(e['basetime'] as String, e['validtime'] as String,
+              e['member'] as String? ?? 'none'))
+          .toList()
+        ..sort((a, b) => a.validtime.compareTo(b.validtime));
+      return list;
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  /// キキクルの最新実況
+  static Future<RiskTime?> fetchLatestRisk() async {
+    final list = await fetchRiskTimes();
     return list.isEmpty ? null : list.last;
   }
 

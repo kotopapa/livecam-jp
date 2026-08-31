@@ -145,7 +145,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _onDataChanged() => setState(() {});
 
-  // --- 地図レイヤー（雨雲レーダー / 震源 / 24時間雨量 / ハザードマップ / 避難場所。排他表示） ---
+  // --- 地図レイヤー（雨雲レーダー / 震源 / 24時間雨量 / キキクル / ハザードマップ / 避難場所。排他表示） ---
   MapLayerKind _layer = MapLayerKind.none;
   QuakePeriod _quakePeriod = QuakePeriod.week;
   NowcastTime? _nowcast;
@@ -155,6 +155,7 @@ class _MapScreenState extends State<MapScreen> {
   List<QuakePoint> _quakes = const [];
   List<RainPoint> _rain = const [];
   NowcastTime? _rain24hTile;
+  RiskTime? _risk;
   bool _layerLoading = false;
   bool _layerFailed = false;
   Timer? _layerTimer;
@@ -176,7 +177,7 @@ class _MapScreenState extends State<MapScreen> {
     }
     if (kind == MapLayerKind.none || HazardLayers.isHazard(kind)) return;
     await _refreshLayer();
-    // レイヤーON中だけ定期更新（雨雲5分・震源/雨量10分）
+    // レイヤーON中だけ定期更新（雨雲5分・震源/雨量/キキクル10分）
     _layerTimer = Timer.periodic(
         Duration(minutes: kind == MapLayerKind.rainRadar ? 5 : 10),
         (_) => _refreshLayer());
@@ -209,6 +210,12 @@ class _MapScreenState extends State<MapScreen> {
         if (tile != null) _rain24hTile = tile;
         _rain = await JmaLayers.fetchRain24h();
         ok = tile != null || _rain.isNotEmpty;
+      case MapLayerKind.riskLand:
+      case MapLayerKind.riskInund:
+      case MapLayerKind.riskFlood:
+        final t = await JmaLayers.fetchLatestRisk();
+        if (t != null) _risk = t;
+        ok = t != null;
       case MapLayerKind.none:
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardLandslide:
@@ -277,6 +284,18 @@ class _MapScreenState extends State<MapScreen> {
             subtitle: const Text('気象庁の解析雨量（面）＋拡大でアメダス観測値'),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rain24h); },
           ),
+          for (final k in const [
+            MapLayerKind.riskLand,
+            MapLayerKind.riskInund,
+            MapLayerKind.riskFlood,
+          ])
+            ListTile(
+              leading: Icon(_layer == k ? Icons.radio_button_checked : Icons.radio_button_off,
+                  color: _layer == k ? Theme.of(ctx).colorScheme.primary : null),
+              title: Text(RiskLayers.title(k)),
+              subtitle: Text(RiskLayers.subtitle(k)),
+              onTap: () { Navigator.pop(ctx); _setLayer(k); },
+            ),
           const Divider(height: 8),
           const ListTile(
               title: Text('ハザードマップ', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -735,6 +754,27 @@ class _MapScreenState extends State<MapScreen> {
         items.addAll([
           for (final s in JmaLayers.rain24hScale) swatch(s.$2, s.$3),
         ]);
+      case MapLayerKind.riskLand:
+      case MapLayerKind.riskInund:
+      case MapLayerKind.riskFlood:
+        title = '${RiskLayers.title(_layer)} ${_risk?.label ?? ''}';
+        // 「留意」は白／うすい水色で凡例の地に埋もれるため、色見本だけ細い枠を付ける
+        items.addAll([
+          for (final s in RiskLayers.scale(_layer))
+            Padding(
+              padding: const EdgeInsets.only(right: 6),
+              child: Row(mainAxisSize: MainAxisSize.min, children: [
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                      color: s.$1, border: Border.all(color: Colors.black26, width: 0.5)),
+                ),
+                const SizedBox(width: 2),
+                Text(s.$2, style: const TextStyle(fontSize: 9)),
+              ]),
+            ),
+        ]);
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardTsunami:
       case MapLayerKind.hazardHightide:
@@ -906,6 +946,25 @@ class _MapScreenState extends State<MapScreen> {
                   ),
                 ),
             ]),
+        ];
+      case MapLayerKind.riskLand:
+      case MapLayerKind.riskInund:
+      case MapLayerKind.riskFlood:
+        // キキクル。危険度が高まっていない範囲は透明タイル、データ領域外は404が正常
+        final risk = _risk;
+        if (risk == null) return const [];
+        return [
+          Opacity(
+            opacity: 0.65,
+            child: TileLayer(
+              key: ValueKey('risk-${RiskLayers.element(_layer)}-${risk.validtime}'),
+              urlTemplate: risk.tileTemplate(_layer),
+              minNativeZoom: RiskLayers.minZoom,
+              maxNativeZoom: RiskLayers.maxZoom,
+              userAgentPackageName: 'jp.livecam.livecam_jp',
+              errorTileCallback: (_, _, _) {},
+            ),
+          ),
         ];
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardLandslide:
