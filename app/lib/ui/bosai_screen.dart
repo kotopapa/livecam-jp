@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
+import '../data/jma_layers.dart';
+import '../data/quake_intensity.dart';
 import '../models/camera.dart';
 import '../util/geo.dart';
 import '../util/prefectures.dart';
@@ -45,6 +47,7 @@ class _Quake {
     required this.lat,
     required this.lng,
     this.isTsunami = false,
+    this.munis = const [],
   });
 
   final String place;
@@ -54,6 +57,51 @@ class _Quake {
   final double lat;
   final double lng;
   final bool isTsunami;
+
+  /// 揺れた市区町村（震度の大きい順）。震度速報のみで `int` が無い報では空
+  final List<MuniIntensity> munis;
+}
+
+/// 気象庁 area.json のキャッシュ（class10の親官署 / class20の市区町村名）。
+///
+/// 警報の市区町村詳細と、地震の市区町村別震度の表示名で同じファイルを使う。
+/// アプリの起動中に**1回だけ**取得して両方で共有する（地震側の機能追加で
+/// ネットワークアクセスを増やさないため）。取得に失敗しても空のまま続行し、
+/// 名前が引けない市区町村はコード表記にフォールバックする。
+class JmaAreaNames {
+  static const url = 'https://www.jma.go.jp/bosai/common/const/area.json';
+
+  static Map<String, String> _class10Office = const {};
+  static Map<String, String> _class20Name = const {};
+  static bool _loaded = false;
+  static Future<void>? _inflight;
+
+  static Map<String, String> get class10Office => _class10Office;
+  static Map<String, String> get class20Name => _class20Name;
+  static bool get isLoaded => _loaded;
+
+  static Future<void> load() {
+    if (_loaded) return Future<void>.value();
+    return _inflight ??= _fetch().whenComplete(() => _inflight = null);
+  }
+
+  static Future<void> _fetch() async {
+    final resp =
+        await http.get(Uri.parse(url)).timeout(const Duration(seconds: 20));
+    final data =
+        jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
+    final c10 = data['class10s'] as Map<String, dynamic>? ?? const {};
+    final c20 = data['class20s'] as Map<String, dynamic>? ?? const {};
+    _class10Office = {
+      for (final e in c10.entries)
+        e.key: ((e.value as Map<String, dynamic>)['parent'] as String? ?? '')
+    };
+    _class20Name = {
+      for (final e in c20.entries)
+        e.key: ((e.value as Map<String, dynamic>)['name'] as String? ?? '')
+    };
+    _loaded = true;
+  }
 }
 
 /// 気象警報コード → 表示名
@@ -194,21 +242,9 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// class10区域コード → 親官署コード（市区町村詳細ファイル名の解決用）。
   /// 「先頭3桁+000」の推定は北海道(014010→014100)や鹿児島(460010→460100)で
   /// 外れて404になるため、気象庁のarea.jsonから正しい対応を引く
-  static Map<String, String>? _class10OfficeCache;
-
   static Future<Map<String, String>> _loadClass10Offices() async {
-    if (_class10OfficeCache != null) return _class10OfficeCache!;
-    final resp = await http
-        .get(Uri.parse('https://www.jma.go.jp/bosai/common/const/area.json'))
-        .timeout(const Duration(seconds: 20));
-    final data =
-        jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
-    final c10 = data['class10s'] as Map<String, dynamic>? ?? const {};
-    _class10OfficeCache = {
-      for (final e in c10.entries)
-        e.key: ((e.value as Map<String, dynamic>)['parent'] as String? ?? '')
-    };
-    return _class10OfficeCache!;
+    await JmaAreaNames.load();
+    return JmaAreaNames.class10Office;
   }
 
   Future<void> _loadWarnings() async {
@@ -324,7 +360,11 @@ class _BosaiScreenState extends State<BosaiScreen>
       if (resp.statusCode != 200) {
         throw Exception('HTTP ${resp.statusCode}');
       }
-      final list = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
+      final entries = (jsonDecode(utf8.decode(resp.bodyBytes)) as List)
+          .cast<Map<String, dynamic>>();
+      // 市区町村別震度（int配列）。同一eidの複数報は市区町村ごとに最大震度を採る。
+      // 追加のネットワークアクセスは無し（この list.json の未使用フィールド）
+      final muniByEid = buildQuakeMuniIntensities(entries);
       final since = DateTime.now().subtract(const Duration(hours: 72));
       final seen = <String>{};
       final quakes = <_Quake>[];
@@ -355,7 +395,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       } catch (_) {
         // 津波リストが取れなくても地震は表示する
       }
-      for (final e in list.cast<Map<String, dynamic>>()) {
+      for (final e in entries) {
         final at = DateTime.tryParse(e['at'] as String? ?? '');
         final cod = _codRe.firstMatch(e['cod'] as String? ?? '');
         final maxi = e['maxi'] as String? ?? '';
@@ -370,6 +410,7 @@ class _BosaiScreenState extends State<BosaiScreen>
           at: at,
           lat: double.parse(cod.group(1)!),
           lng: double.parse(cod.group(2)!),
+          munis: sortMuniIntensities(muniByEid[eid] ?? const {}),
         ));
       }
       // 震度の大きい順 → 新しい順
@@ -439,6 +480,33 @@ class _BosaiScreenState extends State<BosaiScreen>
     );
   }
 
+  /// 地震をタップしたときの遷移。市区町村別震度があり、かつコードに
+  /// 一致するカメラが1台でもあれば市区町村一覧へ。無ければ（震度速報のみ／
+  /// 市町村合併等でコードがずれている）従来どおり震源周辺の距離検索へ。
+  void _openQuake(BuildContext context, _Quake q) {
+    final route = canUseMuniNavigation(
+            widget.app.repository.displayableCameras(), q.munis)
+        ? MaterialPageRoute<void>(
+            builder: (_) => QuakeMuniListScreen(
+              app: widget.app,
+              title: '${q.place}の震度',
+              place: q.place,
+              munis: q.munis,
+              lat: q.lat,
+              lng: q.lng,
+            ),
+          )
+        : MaterialPageRoute<void>(
+            builder: (_) => NearbyCamerasScreen(
+              app: widget.app,
+              title: '${q.place}周辺のカメラ',
+              lat: q.lat,
+              lng: q.lng,
+            ),
+          );
+    Navigator.of(context).push(route);
+  }
+
   Widget _buildQuakeTab() {
     return _error != null
           ? Center(child: Text(_error!))
@@ -458,7 +526,8 @@ class _BosaiScreenState extends State<BosaiScreen>
                           return Padding(
                             padding: const EdgeInsets.all(12),
                             child: Text(
-                              '出典：気象庁 地震情報（直近72時間）$ts。タップすると震源周辺のライブカメラ一覧を表示します。',
+                              '出典：気象庁 地震情報（直近72時間）$ts。タップすると揺れた市区町村の'
+                              'ライブカメラ一覧（市区町村別震度が無い場合は震源周辺）を表示します。',
                               style: TextStyle(
                                   fontSize: 11, color: Colors.grey[600]),
                             ),
@@ -485,19 +554,14 @@ class _BosaiScreenState extends State<BosaiScreen>
                           ),
                           title: Text(q.place),
                           subtitle: Text(
-                              'M${q.magnitude} · ${_when(q.at)}',
+                              [
+                                'M${q.magnitude}',
+                                _when(q.at),
+                                if (q.munis.isNotEmpty) '${q.munis.length}市区町村で観測',
+                              ].join(' · '),
                               style: const TextStyle(fontSize: 12)),
                           trailing: const Icon(Icons.chevron_right),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) => NearbyCamerasScreen(
-                                app: widget.app,
-                                title: '${q.place}周辺のカメラ',
-                                lat: q.lat,
-                                lng: q.lng,
-                              ),
-                            ),
-                          ),
+                          onTap: () => _openQuake(context, q),
                         );
                       },
                     );
@@ -597,6 +661,172 @@ class _BosaiScreenState extends State<BosaiScreen>
   }
 }
 
+/// 「横浜市北部」→「横浜市」のように気象庁の分割区域名を市名に丸める
+String jmaCityName(String name) =>
+    name.replaceFirst(RegExp(r'(北東|北西|南東|南西|中央|北|南|東|西)部$'), '');
+
+/// 震度バッジの文字色。震度4・5-の配色は明るいため黒文字にする
+Color intensityTextColor(String intensity) =>
+    (intensity == '4' || intensity == '5-')
+        ? const Color(0xFF202124)
+        : Colors.white;
+
+/// 揺れた市区町村の一覧（地震タップ後の中間画面）。
+///
+/// 気象庁 list.json の `int` 配列（市区町村別の観測震度）を震度の大きい順に
+/// 並べ、タップするとその市区町村のカメラ一覧を開く。市区町村コードに一致する
+/// カメラが無い場合（市町村合併等でコードがずれる）は、従来どおり震源からの
+/// 距離検索にフォールバックする。追加のネットワーク取得は行わない
+/// （市区町村名は警報タブと共有の area.json キャッシュから引く）。
+class QuakeMuniListScreen extends StatefulWidget {
+  const QuakeMuniListScreen({
+    super.key,
+    required this.app,
+    required this.title,
+    required this.place,
+    required this.munis,
+    required this.lat,
+    required this.lng,
+  });
+
+  final AppState app;
+  final String title;
+
+  /// 震源地名（フォールバック時の画面名に使う）
+  final String place;
+
+  /// 震度の大きい順に並んだ市区町村
+  final List<MuniIntensity> munis;
+  final double lat;
+  final double lng;
+
+  @override
+  State<QuakeMuniListScreen> createState() => _QuakeMuniListScreenState();
+}
+
+class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
+  /// 5桁市区町村コード → 表示名
+  Map<String, String> _names = const {};
+
+  @override
+  void initState() {
+    super.initState();
+    _applyNames();
+    if (!JmaAreaNames.isLoaded) {
+      // 警報タブが既に取得済みならネットワークアクセスは発生しない
+      JmaAreaNames.load().then((_) {
+        if (mounted) setState(_applyNames);
+      }).catchError((_) {
+        // 名前が引けなくてもコード表記で一覧は出す
+      });
+    }
+  }
+
+  void _applyNames() {
+    _names = {
+      for (final e in JmaAreaNames.class20Name.entries)
+        if (e.key.length >= 5) e.key.substring(0, 5): jmaCityName(e.value)
+    };
+  }
+
+  void _openNearby(BuildContext context) =>
+      Navigator.of(context).push(MaterialPageRoute<void>(
+        builder: (_) => NearbyCamerasScreen(
+          app: widget.app,
+          title: '${widget.place}周辺のカメラ',
+          lat: widget.lat,
+          lng: widget.lng,
+        ),
+      ));
+
+  @override
+  Widget build(BuildContext context) {
+    // 行ごとに台帳を走査しないよう、市区町村コードの索引を1回だけ作る
+    final index = MuniCameraIndex(widget.app.repository.displayableCameras());
+    return Scaffold(
+      appBar:
+          AppBar(title: Text(widget.title, overflow: TextOverflow.ellipsis)),
+      bottomNavigationBar: AdFooter(app: widget.app),
+      body: ListView.separated(
+        itemCount: widget.munis.length + 2,
+        separatorBuilder: (_, _) => const Divider(height: 1),
+        itemBuilder: (context, i) {
+          if (i == 0) {
+            return Padding(
+              padding: const EdgeInsets.all(12),
+              child: Text(
+                '出典：気象庁 地震情報（震度の大きい順）。タップするとその市区町村のカメラ一覧を'
+                '表示します。カメラがない市区町村は震源周辺のカメラを表示します。',
+                style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+              ),
+            );
+          }
+          if (i == 1) {
+            return ListTile(
+              leading: const Icon(Icons.my_location, color: Color(0xFF616E7C)),
+              title: const Text('震源周辺のカメラ（距離順）'),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => _openNearby(context),
+            );
+          }
+          final m = widget.munis[i - 2];
+          final name = _names[m.code] ?? '市区町村 ${m.code}';
+          final count = index.count(m.code);
+          return ListTile(
+            leading: Container(
+              width: 44,
+              height: 44,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: JmaLayers.intensityColor(m.intensity),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Text('震度\n${m.intensity}',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: intensityTextColor(m.intensity),
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      height: 1.2)),
+            ),
+            title: Row(children: [
+              Flexible(child: Text(name, overflow: TextOverflow.ellipsis)),
+              const SizedBox(width: 6),
+              Text(
+                count > 0 ? 'カメラ$count台' : 'カメラなし',
+                style: TextStyle(
+                    fontSize: 12,
+                    color: count > 0 ? Colors.grey[700] : Colors.grey[500]),
+              ),
+            ]),
+            subtitle: Text(
+              count > 0
+                  ? (prefectureNames[m.prefecture] ?? m.prefecture)
+                  : '${prefectureNames[m.prefecture] ?? m.prefecture}・震源周辺のカメラを表示します',
+              style: const TextStyle(fontSize: 12),
+            ),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              if (count == 0) {
+                _openNearby(context);
+                return;
+              }
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                builder: (_) => PrefCamerasScreen(
+                  app: widget.app,
+                  pref: m.prefecture,
+                  title: '$nameのカメラ（震度${m.intensity}）',
+                  municipality: m.code,
+                ),
+              ));
+            },
+          );
+        },
+      ),
+    );
+  }
+}
+
 /// 都道府県内のカメラ一覧（警報発表時の導線）。
 /// [warningOffices] を渡すと気象庁の官署別詳細（class20=市区町村単位）を
 /// 取得し、警報発表中の市区町村のカメラだけに絞り込む。
@@ -629,22 +859,10 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
   List<(String, String, List<String>)>? _munis;
   bool _failed = false;
 
-  /// class20コード(7桁)→市区町村名。気象庁area.jsonから一度だけ取得
-  static Map<String, String>? _class20Names;
-
+  /// class20コード(7桁)→市区町村名（共有キャッシュ。取得は一度だけ）
   static Future<Map<String, String>> _loadClass20Names() async {
-    if (_class20Names != null) return _class20Names!;
-    final resp = await http
-        .get(Uri.parse('https://www.jma.go.jp/bosai/common/const/area.json'))
-        .timeout(const Duration(seconds: 20));
-    final data =
-        jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
-    final c20 = data['class20s'] as Map<String, dynamic>? ?? const {};
-    _class20Names = {
-      for (final e in c20.entries)
-        e.key: ((e.value as Map<String, dynamic>)['name'] as String? ?? '')
-    };
-    return _class20Names!;
+    await JmaAreaNames.load();
+    return JmaAreaNames.class20Name;
   }
 
   @override
@@ -652,10 +870,6 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
     super.initState();
     _load();
   }
-
-  /// 「横浜市北部」→「横浜市」のように政令市の分割区域名を市名に丸める
-  static String _cityName(String name) =>
-      name.replaceFirst(RegExp(r'(北東|北西|南東|南西|中央|北|南|東|西)部$'), '');
 
   Future<void> _load() async {
     // 市区町村コード5桁単位で統合する（政令市の「横浜市北部/南部」等は
@@ -702,7 +916,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
               if (wname == null) continue;
               final muni = code.substring(0, 5);
               final entry = byMuni[muni] ??
-                  (_cityName(names[code] ?? '市区町村 $muni'), <String>{});
+                  (jmaCityName(names[code] ?? '市区町村 $muni'), <String>{});
               entry.$2.add(wname);
               byMuni[muni] = entry;
             }
