@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 
+import 'l10n_test_app.dart';
 import 'package:livecam_jp/app_state.dart';
 import 'package:livecam_jp/data/api_client.dart';
 import 'package:livecam_jp/data/cache_store.dart';
@@ -47,7 +48,7 @@ void main() {
     app.showWorld = true;
 
     await tester.pumpWidget(
-        MaterialApp(home: Scaffold(body: MapScreen(app: app))));
+        testApp(Scaffold(body: MapScreen(app: app))));
     await tester.pump(const Duration(milliseconds: 100));
 
     // 世界ズームまで引く → 横に大きくパン（経度±180跨ぎ相当） → ズームイン

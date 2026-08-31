@@ -7,6 +7,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
+import '../l10n/l10n.dart';
 import '../data/heat_alert.dart';
 import '../data/wbgt.dart';
 import '../data/jma_layers.dart';
@@ -107,40 +108,41 @@ class JmaAreaNames {
   }
 }
 
-/// 気象警報コード → 表示名
-const _warningNames = {
-  '02': '暴風雪警報', '03': '大雨警報', '04': '洪水警報', '05': '暴風警報',
-  '06': '大雪警報', '07': '波浪警報', '08': '高潮警報', '09': '土砂災害警報',
+/// 扱う気象警報コード（表示名は l10n で解決する。1.4.0 多言語化）。
+/// 表示名は気象庁「多言語辞書」準拠 → l10n/l10n.dart の warningNameOf()
+const _warningCodes = {
+  '02', '03', '04', '05', '06', '07', '08', '09',
   // 2026-05-28の新体系で追加された「危険警報」(警戒レベル4相当。コード=警報+40)
-  '43': '大雨危険警報', '44': '洪水危険警報', '48': '高潮危険警報',
-  '49': '土砂災害危険警報',
-  '32': '暴風雪特別警報', '33': '大雨特別警報', '34': '洪水特別警報',
-  '35': '暴風特別警報', '36': '大雪特別警報', '37': '波浪特別警報',
-  '38': '高潮特別警報', '39': '土砂災害特別警報',
+  '43', '44', '48', '49',
+  '32', '33', '34', '35', '36', '37', '38', '39',
 };
 
-/// 警報名 → 表示色（特別=赤 / 危険警報=紫(レベル4) / 警報=オレンジ）
-Color warningLevelColor(String name) {
-  if (name.contains('特別')) return const Color(0xFFD93025);
-  if (name.contains('危険警報')) return const Color(0xFF9334E6);
+/// 特別警報（警戒レベル5相当）のコード
+const _emergencyCodes = {'32', '33', '34', '35', '36', '37', '38', '39'};
+
+/// 危険警報（警戒レベル4相当）のコード
+const _dangerCodes = {'43', '44', '48', '49'};
+
+/// 警報コード → 表示色（特別=赤 / 危険警報=紫(レベル4) / 警報=オレンジ）
+Color warningLevelColor(String code) {
+  if (_emergencyCodes.contains(code)) return const Color(0xFFD93025);
+  if (_dangerCodes.contains(code)) return const Color(0xFF9334E6);
   return const Color(0xFFF29900);
 }
 
 /// 並び順ランク（特別→危険→警報）
-int warningLevelRank(String name) {
-  if (name.contains('特別')) return 0;
-  if (name.contains('危険警報')) return 1;
+int warningLevelRank(String code) {
+  if (_emergencyCodes.contains(code)) return 0;
+  if (_dangerCodes.contains(code)) return 1;
   return 2;
 }
 
-/// 注意報コード → 表示名（折りたたみ表示用）
-const _advisoryNames = {
-  '10': '大雨注意報', '12': '大雪注意報', '13': '風雪注意報', '14': '雷注意報',
-  '15': '強風注意報', '16': '波浪注意報', '17': '融雪注意報', '18': '洪水注意報',
-  '19': '高潮注意報', '20': '濃霧注意報', '21': '乾燥注意報', '22': 'なだれ注意報',
-  '23': '低温注意報', '24': '霜注意報', '25': '着氷注意報', '26': '着雪注意報',
+/// 扱う気象注意報コード（折りたたみ表示用。表示名は l10n で解決する）
+const _advisoryCodes = {
+  '10', '12', '13', '14', '15', '16', '17', '18',
+  '19', '20', '21', '22', '23', '24', '25', '26',
   // 2026-05-28新体系で追加（土砂災害系が大雨から独立した）
-  '29': '土砂災害注意報',
+  '29',
 };
 
 class _BosaiScreenState extends State<BosaiScreen>
@@ -212,7 +214,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   List<_Quake>? _quakes;
   String? _error;
   DateTime? _fetchedAt;
-  // 都道府県コード → 発表中の警報名セット（特別警報を先頭に）
+  // 都道府県コード → 発表中の警報コード（特別警報を先頭に。表示名は l10n で解決）
   Map<String, List<String>>? _warnings;
 
   /// 都道府県→警報を発表中の官署コード（市区町村単位の詳細取得に使う）
@@ -221,7 +223,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 都道府県→注意報を発表中の官署コード
   Map<String, Set<String>> _advisoryOffices = {};
 
-  // 都道府県コード → 発表中の注意報名セット（警報がない県の参考表示）
+  // 都道府県コード → 発表中の注意報コード（警報がない県の参考表示）
   Map<String, List<String>>? _advisories;
   String? _warningError;
   /// 警報の最終取得時刻（成功時のみ更新）と、取得に失敗して前回値を表示中かどうか
@@ -304,17 +306,15 @@ class _BosaiScreenState extends State<BosaiScreen>
             final status = w['status'] as String? ?? '';
             if (status == '解除' || status.contains('なし')) continue;
             final wc = w['code'] as String? ?? '';
-            final name = _warningNames[wc];
-            if (name != null) {
-              byPref.putIfAbsent(pref, () => {}).add(name);
+            if (_warningCodes.contains(wc)) {
+              byPref.putIfAbsent(pref, () => {}).add(wc);
               // 市区町村単位の詳細ファイルは官署コード単位（class10の先頭3桁+000）
               officesByPref
                   .putIfAbsent(pref, () => {})
                   .add(class10Office[code] ?? '${code.substring(0, 3)}000');
             } else {
-              final adv = _advisoryNames[wc];
-              if (adv != null) {
-                advByPref.putIfAbsent(pref, () => {}).add(adv);
+              if (_advisoryCodes.contains(wc)) {
+                advByPref.putIfAbsent(pref, () => {}).add(wc);
                 advOfficesByPref
                     .putIfAbsent(pref, () => {})
                     .add(class10Office[code] ?? '${code.substring(0, 3)}000');
@@ -613,7 +613,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('災害速報'),
+          title: Text(context.l10n.bosaiTitle),
           actions: [
             IconButton(
                 icon: const Icon(Icons.refresh),
@@ -623,10 +623,10 @@ class _BosaiScreenState extends State<BosaiScreen>
                   _loadHeat();
                 }),
           ],
-          bottom: TabBar(controller: _tabs, tabs: const [
-            Tab(text: '地震・津波'),
-            Tab(text: '気象警報'),
-            Tab(text: '熱中症'),
+          bottom: TabBar(controller: _tabs, tabs: [
+            Tab(text: context.l10n.bosaiTabQuake),
+            Tab(text: context.l10n.bosaiTabWarning),
+            Tab(text: context.l10n.bosaiTabHeat),
           ]),
         ),
         body: TabBarView(controller: _tabs, children: [
@@ -751,7 +751,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       return const Center(child: CircularProgressIndicator());
     }
     if (_warnings!.isEmpty && (_advisories?.isEmpty ?? true)) {
-      return const Center(child: Text('現在、発表中の警報・注意報はありません'));
+      return Center(child: Text(context.l10n.bosaiNoWarnings));
     }
     final prefs = _warnings!.keys.toList()
       ..sort((a, b) {
@@ -774,8 +774,8 @@ class _BosaiScreenState extends State<BosaiScreen>
               padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
               child: Text(
                 _warnings!.isEmpty
-                    ? '出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は下の一覧から確認できます。'
-                    : '出典：気象庁 気象警報・注意報。タップするとその都道府県のカメラ一覧を表示します。',
+                    ? context.l10n.bosaiWarningNoteNone
+                    : context.l10n.bosaiWarningNote,
                 style: TextStyle(fontSize: 11, color: Colors.grey[600]),
               ),
             ),
@@ -785,47 +785,52 @@ class _BosaiScreenState extends State<BosaiScreen>
           if (advPrefs.isEmpty) return const SizedBox.shrink();
           return ExpansionTile(
             leading: const Icon(Icons.info_outline, color: Color(0xFF616E7C)),
-            title: Text('注意報が発表中の地域（${advPrefs.length}都道府県）'),
+            title: Text(context.l10n.bosaiAdvisoryRegions(advPrefs.length)),
             children: [
               for (final pref in advPrefs)
                 ListTile(
                   dense: true,
-                  title: Text(prefectureNames[pref] ?? pref),
-                  subtitle: Text(_advisories![pref]!.join('・'),
+                  title: Text(prefectureNameOf(context.l10n, pref)),
+                  subtitle: Text(
+                      _advisories![pref]!
+                          .map((c) => advisoryNameOf(context.l10n, c) ?? c)
+                          .join('・'),
                       style: const TextStyle(fontSize: 12)),
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) => WarningMuniListScreen(
                           app: widget.app,
                           pref: pref,
-                          title: '${prefectureNames[pref] ?? pref}の注意報発表地域',
+                          title: context.l10n.bosaiAdvisoryAreasTitle(
+                              prefectureNameOf(context.l10n, pref)),
                           offices: _advisoryOffices[pref] ?? const {},
-                          codeNames: _advisoryNames))),
+                          isAdvisory: true))),
                 ),
             ],
           );
         }
         final pref = prefs[i - 1];
-        final names = _warnings![pref]!;
-        final topColor = names
+        final codes = _warnings![pref]!;
+        final topColor = codes
             .map(warningLevelColor)
             .firstWhere((_) => true, orElse: () => const Color(0xFFF29900));
-        final emergency = names.any((w) => w.contains('特別'));
+        final emergency = codes.any(_emergencyCodes.contains);
+        final prefName = prefectureNameOf(context.l10n, pref);
         return ListTile(
           leading: Icon(
             emergency ? Icons.warning : Icons.warning_amber_outlined,
             color: topColor,
           ),
-          title: Text(prefectureNames[pref] ?? pref),
+          title: Text(prefName),
           subtitle: Wrap(spacing: 4, runSpacing: 2, children: [
-            for (final n in names)
+            for (final c in codes)
               Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
                 decoration: BoxDecoration(
-                  color: warningLevelColor(n),
+                  color: warningLevelColor(c),
                   borderRadius: BorderRadius.circular(4),
                 ),
-                child: Text(n,
+                child: Text(warningNameOf(context.l10n, c) ?? c,
                     style:
                         const TextStyle(color: Colors.white, fontSize: 11)),
               ),
@@ -835,7 +840,7 @@ class _BosaiScreenState extends State<BosaiScreen>
               builder: (_) => WarningMuniListScreen(
                   app: widget.app,
                   pref: pref,
-                  title: '${prefectureNames[pref] ?? pref}の警報発表地域',
+                  title: context.l10n.bosaiWarningAreasTitle(prefName),
                   offices: _warningOffices[pref] ?? const {}))),
         );
       },
@@ -1267,22 +1272,22 @@ class WarningMuniListScreen extends StatefulWidget {
       required this.pref,
       required this.title,
       required this.offices,
-      this.codeNames = _warningNames});
+      this.isAdvisory = false});
 
   final AppState app;
   final String pref;
   final String title;
   final Set<String> offices;
 
-  /// 対象コード→表示名（警報 or 注意報。既定は警報）
-  final Map<String, String> codeNames;
+  /// true=注意報の一覧、false(既定)=警報の一覧。表示名は l10n で解決する
+  final bool isAdvisory;
 
   @override
   State<WarningMuniListScreen> createState() => _WarningMuniListScreenState();
 }
 
 class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
-  /// (市区町村コード5桁, 市区町村名, 警報名リスト)。null=読込中
+  /// (市区町村コード5桁, 市区町村名, 警報/注意報コードのリスト)。null=読込中
   List<(String, String, List<String>)>? _munis;
   bool _failed = false;
 
@@ -1339,12 +1344,15 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                 .cast<Map<String, dynamic>>()) {
               final status = w['status'] as String? ?? '';
               if (status == '解除' || status.contains('なし')) continue;
-              final wname = widget.codeNames[w['code'] as String? ?? ''];
-              if (wname == null) continue;
+              final wcode = w['code'] as String? ?? '';
+              final valid = widget.isAdvisory
+                  ? _advisoryCodes.contains(wcode)
+                  : _warningCodes.contains(wcode);
+              if (!valid) continue;
               final muni = code.substring(0, 5);
               final entry = byMuni[muni] ??
                   (jmaCityName(names[code] ?? '市区町村 $muni'), <String>{});
-              entry.$2.add(wname);
+              entry.$2.add(wcode);
               byMuni[muni] = entry;
             }
           }
@@ -1384,8 +1392,8 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                   padding: const EdgeInsets.all(24),
                   child: Text(
                       _failed
-                          ? '発表エリアの詳細を取得できませんでした'
-                          : '現在、発表中の市区町村はありません',
+                          ? context.l10n.bosaiMuniFetchFailed
+                          : context.l10n.bosaiMuniNone,
                       textAlign: TextAlign.center),
                 ),
               )
@@ -1396,7 +1404,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                   if (i == 0) {
                     return Padding(
                       padding: const EdgeInsets.all(12),
-                      child: Text('出典：気象庁。タップするとその市区町村のカメラ一覧を表示します',
+                      child: Text(context.l10n.bosaiMuniNote,
                           style: TextStyle(
                               fontSize: 11, color: Colors.grey[600])),
                     );
@@ -1408,10 +1416,10 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                           c.prefecture == widget.pref &&
                           c.municipality == muni)
                       .length;
-                  final emergency = warns.any((w) => w.contains('特別'));
-                  Color chipColor(String w) => w.contains('注意報')
+                  final emergency = warns.any(_emergencyCodes.contains);
+                  Color chipColor(String code) => widget.isAdvisory
                       ? const Color(0xFFF9A825)
-                      : warningLevelColor(w);
+                      : warningLevelColor(code);
                   final iconColor = warns.isEmpty
                       ? const Color(0xFFF29900)
                       : chipColor((warns.toList()
@@ -1431,7 +1439,9 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                               overflow: TextOverflow.ellipsis)),
                       const SizedBox(width: 6),
                       Text(
-                        camCount > 0 ? 'カメラ$camCount台' : 'カメラなし',
+                        camCount > 0
+                            ? context.l10n.bosaiCameraCount(camCount)
+                            : context.l10n.bosaiNoCamera,
                         style: TextStyle(
                             fontSize: 12,
                             color: camCount > 0
@@ -1448,7 +1458,11 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                             color: chipColor(w),
                             borderRadius: BorderRadius.circular(4),
                           ),
-                          child: Text(w,
+                          child: Text(
+                              (widget.isAdvisory
+                                      ? advisoryNameOf(context.l10n, w)
+                                      : warningNameOf(context.l10n, w)) ??
+                                  w,
                               style: const TextStyle(
                                   color: Colors.white, fontSize: 11)),
                         ),
@@ -1458,7 +1472,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                         builder: (_) => PrefCamerasScreen(
                             app: widget.app,
                             pref: widget.pref,
-                            title: '$nameのカメラ（警報発表中）',
+                            title: context.l10n.bosaiMuniCamerasTitle(name),
                             municipality: muni))),
                   );
                 },

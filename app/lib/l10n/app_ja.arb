@@ -1,0 +1,837 @@
+{
+  "@@locale": "ja",
+  "appTitle": "全国ライブカメラ地図",
+  "@appTitle": {
+    "description": "アプリ名（画面表示用）"
+  },
+  "commonClose": "閉じる",
+  "commonCancel": "キャンセル",
+  "commonOk": "決定",
+  "commonNext": "次へ",
+  "commonSkip": "スキップ",
+  "commonCopy": "コピー",
+  "commonShare": "共有",
+  "commonRetry": "再試行",
+  "commonOpenInSafari": "Safariで開く",
+  "commonSource": "出典",
+  "commonCameraCount": "{count}台",
+  "@commonCameraCount": {
+    "description": "カメラ台数（単位つき）",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalJapaneseAuthoritative": "この日本語版を正文とします。翻訳は参考です。",
+  "@legalJapaneseAuthoritative": {
+    "description": "SPEC 9.5 / 12.2: 免責・規約類は日本語を正文とする旨の明示"
+  },
+  "languageLabel": "言語",
+  "@languageLabel": {
+    "description": "設定画面の項目名"
+  },
+  "languageSettingTitle": "言語 / Language",
+  "@languageSettingTitle": {
+    "description": "設定画面の項目タイトル（常に両言語併記）"
+  },
+  "languageNameJa": "日本語",
+  "@languageNameJa": {
+    "description": "言語名。各言語のARBでも自称表記のままにする"
+  },
+  "languageNameJaHira": "やさしい日本語",
+  "@languageNameJaHira": {
+    "description": "言語名"
+  },
+  "languageNameEn": "English",
+  "@languageNameEn": {
+    "description": "言語名"
+  },
+  "languageFollowSystem": "端末の設定に合わせる",
+  "languageChooseTitle": "言語を選ぶ",
+  "tabMap": "地図",
+  "tabList": "一覧",
+  "tabBosai": "災害速報",
+  "tabFavorites": "お気に入り",
+  "tabSettings": "設定",
+  "onboardingTitle1": "地図からすぐに探せる",
+  "onboardingBody1": "全国1万台以上のライブカメラを地図に表示。河川・道路・海岸などカテゴリ別に色分けされています。",
+  "onboardingTitle2": "映らないカメラは自動で非表示",
+  "onboardingBody2": "定期的に自動確認し、取得できないカメラは地図から外れます。取得時刻を必ず表示します。",
+  "onboardingTitle3": "出典・ライセンスを明示",
+  "onboardingBody3": "すべての映像は提供元の明示とともに表示します。映像の権利は各提供元に帰属します。",
+  "onboardingDisclaimerTitle": "ご利用前の大切なお願い",
+  "onboardingAgreeAndStart": "同意してはじめる",
+  "disclaimerText": "カメラ映像は限られた範囲の状況を示すものです。カメラの性能上、光環境や気象条件により不鮮明になる場合があります。避難の判断は、水位情報・気象警報・自治体の避難情報に従ってください。本アプリは参考情報を提供するものです。",
+  "@disclaimerText": {
+    "description": "SPEC 9.5 の必須免責文。日本語版を正文とする（legalJapaneseAuthoritative を併記すること）"
+  },
+  "updateRequiredTitle": "アップデートが必要です",
+  "updateRequiredBody": "このバージョンはサポートが終了しました。\nApp Storeから最新版に更新してください。",
+  "updateOpenStore": "App Storeを開く",
+  "categoryRiver": "河川",
+  "categoryRoad": "道路",
+  "categoryVolcano": "火山",
+  "categoryDam": "ダム",
+  "categoryCoast": "海岸",
+  "categoryPort": "港湾",
+  "categoryScenic": "景観",
+  "categoryHealing": "癒し",
+  "categoryOther": "その他",
+  "pref01": "北海道",
+  "@pref01": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref02": "青森",
+  "@pref02": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref03": "岩手",
+  "@pref03": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref04": "宮城",
+  "@pref04": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref05": "秋田",
+  "@pref05": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref06": "山形",
+  "@pref06": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref07": "福島",
+  "@pref07": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref08": "茨城",
+  "@pref08": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref09": "栃木",
+  "@pref09": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref10": "群馬",
+  "@pref10": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref11": "埼玉",
+  "@pref11": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref12": "千葉",
+  "@pref12": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref13": "東京",
+  "@pref13": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref14": "神奈川",
+  "@pref14": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref15": "新潟",
+  "@pref15": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref16": "富山",
+  "@pref16": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref17": "石川",
+  "@pref17": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref18": "福井",
+  "@pref18": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref19": "山梨",
+  "@pref19": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref20": "長野",
+  "@pref20": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref21": "岐阜",
+  "@pref21": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref22": "静岡",
+  "@pref22": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref23": "愛知",
+  "@pref23": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref24": "三重",
+  "@pref24": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref25": "滋賀",
+  "@pref25": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref26": "京都",
+  "@pref26": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref27": "大阪",
+  "@pref27": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref28": "兵庫",
+  "@pref28": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref29": "奈良",
+  "@pref29": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref30": "和歌山",
+  "@pref30": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref31": "鳥取",
+  "@pref31": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref32": "島根",
+  "@pref32": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref33": "岡山",
+  "@pref33": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref34": "広島",
+  "@pref34": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref35": "山口",
+  "@pref35": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref36": "徳島",
+  "@pref36": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref37": "香川",
+  "@pref37": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref38": "愛媛",
+  "@pref38": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref39": "高知",
+  "@pref39": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref40": "福岡",
+  "@pref40": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref41": "佐賀",
+  "@pref41": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref42": "長崎",
+  "@pref42": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref43": "熊本",
+  "@pref43": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref44": "大分",
+  "@pref44": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref45": "宮崎",
+  "@pref45": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref46": "鹿児島",
+  "@pref46": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "pref47": "沖縄",
+  "@pref47": {
+    "description": "都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁"
+  },
+  "settingsTitle": "設定",
+  "settingsSupportTitle": "開発者を応援する",
+  "settingsSupportBody": "缶コーヒー1本(¥200)から。個人開発の継続を支えてください",
+  "settingsSupportButton": "応援",
+  "settingsSectionNotify": "災害通知",
+  "settingsQuakeTitle": "震度5弱以上の地震",
+  "@settingsQuakeTitle": {
+    "description": "震度階級は気象庁「多言語辞書」に準拠。出典：気象庁"
+  },
+  "settingsQuakeSubtitleOff": "大きな地震の発生を通知し、周辺カメラへ誘導します",
+  "settingsQuakeSubtitleOn": "通知レベル: {level}",
+  "@settingsQuakeSubtitleOn": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsWarningTitle": "特別警報",
+  "@settingsWarningTitle": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "settingsWarningSubtitle": "大雨・暴風・高潮などの特別警報の発表を通知します",
+  "settingsNotifyArea": "通知する地域",
+  "settingsNotifyAreaAll": "全国",
+  "settingsNotifyAreaSummary": "{first} など{count}件",
+  "@settingsNotifyAreaSummary": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsNotifyAreaHint": "選択した都道府県の特別警報のみ通知します。何も選ばない場合は全国が対象になります",
+  "settingsNotifyAreaResetAll": "全国に戻す",
+  "settingsNotifyLevel": "通知するレベル",
+  "settingsNotifyLevelSpecialOnly": "特別警報のみ（レベル5）",
+  "@settingsNotifyLevelSpecialOnly": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "settingsNotifyLevelDangerUp": "危険警報から（レベル4以上）",
+  "@settingsNotifyLevelDangerUp": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "settingsNotifyLevelNote": "危険警報は大雨・洪水・高潮・土砂災害の警戒レベル4相当の発表です",
+  "@settingsNotifyLevelNote": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "settingsNotifyDelayNote": "※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません",
+  "settingsNotifyDenied": "通知が許可されていません。iOSの設定アプリから通知を許可してください",
+  "settingsSectionData": "データ取得",
+  "settingsWifiOnly": "Wi-Fi接続時のみ画像を取得",
+  "settingsWifiOnlySubtitle": "モバイル通信量を抑えます（地図とカメラ一覧は表示されます）",
+  "settingsClearCache": "キャッシュを削除",
+  "settingsClearCacheSubtitle": "カメラ一覧などの保存データを消去して再取得します",
+  "settingsClearCacheDone": "キャッシュを削除して再取得しました",
+  "settingsSectionFilterDefaults": "フィルタの初期設定",
+  "settingsShowWorld": "世界のカメラを表示",
+  "settingsVideoOnly": "動画カメラのみ",
+  "settingsHideUncertain": "位置が曖昧なカメラを非表示",
+  "settingsHideUncertainSubtitle": "黄色い縁取りのピン（おおよそ/代表点）を隠します",
+  "settingsFilterDefaultsNote": "ここで設定した内容は次回起動時の初期状態になります（地図の凡例からも一時的に変更できます）",
+  "settingsSectionRequest": "カメラの追加・削除のご依頼",
+  "settingsRequestForm": "ご相談・依頼フォーム",
+  "settingsRequestFormSubtitle": "カメラの追加要請・掲載削除の依頼はこちらから（ログイン不要）。設置者・運営者の方からの削除のお申し出には速やかに対応します",
+  "settingsSectionLicense": "出典・ライセンス",
+  "settingsAttributionList": "出典・ライセンス一覧",
+  "settingsAttributionListSubtitle": "カメラ映像の提供元の一覧",
+  "settingsTerms": "利用規約",
+  "@settingsTerms": {
+    "description": "本文は日本語のみ（Webページ）。日本語を正文とする"
+  },
+  "settingsPrivacy": "プライバシーポリシー",
+  "@settingsPrivacy": {
+    "description": "本文は日本語のみ（Webページ）。日本語を正文とする"
+  },
+  "settingsLegalJapaneseOnly": "利用規約・プライバシーポリシーの本文は日本語のみです（日本語を正文とします）",
+  "settingsSectionAbout": "このアプリについて",
+  "settingsVersion": "バージョン",
+  "settingsInvite": "友達を招待する",
+  "settingsInviteSubtitle": "QRコードまたはリンクでApp Storeのページを共有",
+  "settingsInviteDialogBody": "QRコードを読み取るか、リンクを送ると\nApp Storeのアプリページが開きます",
+  "settingsInviteShareText": "全国ライブカメラ地図 - 河川・道路・防災",
+  "@settingsInviteShareText": {
+    "description": "共有シートの本文（末尾にURLが付く）"
+  },
+  "settingsLinkCopied": "リンクをコピーしました",
+  "settingsReview": "アプリを評価する",
+  "settingsReviewSubtitle": "App Storeでレビューを書く",
+  "settingsFollowX": "Xでフォローする",
+  "settingsFollowXSubtitle": "@kotopapa8 — 新しいカメラや機能のお知らせ",
+  "settingsOtherApps": "開発者の他のアプリ",
+  "settingsShowMoreApps": "その他のアプリを見る",
+  "settingsSectionDisclaimer": "免責",
+  "settingsOssLicenses": "OSSライセンス",
+  "settingsNotifyDiag": "通知診断",
+  "settingsNotifyDiagSubtitle": "通知が届かないときの状態確認",
+  "settingsNotifyDiagUnlocked": "通知診断を表示しました（災害通知の項目内）",
+  "settingsNotifyPermission": "通知許可: {value}",
+  "@settingsNotifyPermission": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsNotifyApns": "APNsトークン: {value}",
+  "@settingsNotifyApns": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsNotifyFcm": "FCMトークン:",
+  "settingsCopyToken": "トークンをコピー",
+  "settingsTokenCopied": "FCMトークンをコピーしました",
+  "settingsCrashDiag": "クラッシュ診断データ",
+  "settingsCrashDiagSubtitle": "強制終了の記録(MetricKit)を表示・コピー",
+  "settingsCrashDiagNone": "診断データはまだありません",
+  "settingsCrashDiagNoneHint": "診断データはまだありません。\nクラッシュ後にアプリを起動し直すと記録されます",
+  "settingsCopyFullText": "全文をコピー",
+  "settingsJsonCopied": "診断JSONをコピーしました",
+  "attributionScreenTitle": "出典・ライセンス一覧",
+  "attributionOpenYoutube": "YouTubeで配信元を見る",
+  "attributionOpenSite": "提供元のサイトを開く",
+  "listTitle": "一覧（{count}）",
+  "@listTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "listSearchHint": "カメラ名・河川名・路線名で検索",
+  "listEmpty": "条件に合うカメラがありません",
+  "listRanking": "ランキング",
+  "favoritesTitle": "お気に入り（{count}）",
+  "@favoritesTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "favoritesEmpty": "お気に入りはまだありません。\n地図でカメラを開いて★を押すと追加されます。",
+  "favoritesEmptyFiltered": "絞り込み条件に合うお気に入りがありません",
+  "favoritesSort": "並べ替え",
+  "favoritesSortNewest": "登録が新しい順",
+  "favoritesSortOldest": "登録が古い順",
+  "favoritesSortName": "名前順",
+  "favoritesSortCategory": "カテゴリ順",
+  "favoritesToggleView": "表示切替",
+  "favoritesRefreshAll": "一括更新（3件ずつ順次取得）",
+  "favoritesVideoOnly": "動画のみ",
+  "rankingTitle": "全国ランキング",
+  "rankingModeNow": "いま見られている（24時間 TOP10）",
+  "rankingModeWeek": "よく見られている（7日間 TOP30）",
+  "rankingModeFavorites": "お気に入り登録数",
+  "rankingNote": "全ユーザーの匿名統計に基づくランキングです（毎日更新）",
+  "rankingEmpty": "まだ集計データがありません（毎日1回更新されます）",
+  "rankingPreparing": "全国ランキングは準備中です。\n集計は3時間おきに行われます。",
+  "rankingFetchFailed": "取得に失敗しました",
+  "rankingFetchFailedHttp": "取得に失敗しました (HTTP {code})",
+  "@rankingFetchFailedHttp": {
+    "placeholders": {
+      "code": {
+        "type": "int"
+      }
+    }
+  },
+  "rankingUnitViews": "回",
+  "rankingUnitFavorites": "件",
+  "detailLive": "ライブ配信中",
+  "detailTimeUnknown": "取得時刻不明",
+  "detailRefreshEvery": "{sec}秒ごとに更新",
+  "@detailRefreshEvery": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "detailRefreshIn": "{sec}秒",
+  "@detailRefreshIn": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "detailRefreshNow": "更新",
+  "detailPosRepresentative": "位置は広域の代表点",
+  "detailPosApprox": "位置はおおよそ",
+  "detailNotUpdating": "画像が更新されていません",
+  "detailWorld": "海外",
+  "detailCategoryAndPlace": "カテゴリ・位置",
+  "detailOpenMap": "地図で見る",
+  "detailOpenSourceSite": "出典サイトを見る",
+  "detailOpenYoutube": "YouTubeで見る",
+  "detailOpenChannel": "チャンネルページを見る",
+  "detailOpenOriginalPage": "元ページで見る",
+  "detailReportProblem": "このカメラの不具合を報告",
+  "detailNearby": "周辺のカメラ",
+  "detailDistanceKm": "約{km}km",
+  "@detailDistanceKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "detailWifiOnlyBlocked": "設定により、画像の取得はWi-Fi接続時のみです",
+  "detailNoImage": "現在映像を取得できません",
+  "detailEmbedBlockedYoutube": "提供者の設定により、この映像は\nアプリ内で再生できません",
+  "detailEmbedBlockedPage": "配信元の利用条件により\nアプリ内では表示できません",
+  "detailIHighwayTitle": "NEXCO公式「iHighway」で\nライブカメラを表示",
+  "detailIHighwayBody": "タップするとアプリ内ブラウザで公式サイトを開き、\nこのカメラの位置まで自動で移動します",
+  "detailIHighwayHost": "ihighway.jp（NEXCO公式）",
+  "detailMapTileGsi": "地理院タイル",
+  "@detailMapTileGsi": {
+    "description": "国土地理院の地図タイルの出典表記。日本語の正式名は変更しない"
+  },
+  "elevationLoading": "標高 …",
+  "elevationValue": "標高 {value}（{source}）",
+  "@elevationValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "timeTakenAt": "{time} 取得{relative}",
+  "@timeTakenAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "relative": {
+        "type": "String"
+      }
+    }
+  },
+  "timeRelJustNow": "（たった今）",
+  "timeRelMinutes": "（{n}分前）",
+  "@timeRelMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "timeRelHours": "（{n}時間前）",
+  "@timeRelHours": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "timeMonthDay": "{month}月{day}日",
+  "@timeMonthDay": {
+    "placeholders": {
+      "month": {
+        "type": "int"
+      },
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "intensity5Lower": "5弱",
+  "@intensity5Lower": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "intensity5Upper": "5強",
+  "@intensity5Upper": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "intensity6Lower": "6弱",
+  "@intensity6Lower": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "intensity6Upper": "6強",
+  "@intensity6Upper": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "quakeLevel5Lower": "震度5弱以上",
+  "@quakeLevel5Lower": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "quakeLevel5Upper": "震度5強以上",
+  "@quakeLevel5Upper": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "quakeLevel6Lower": "震度6弱以上",
+  "@quakeLevel6Lower": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning02": "暴風雪警報",
+  "@warning02": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning03": "大雨警報",
+  "@warning03": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning04": "洪水警報",
+  "@warning04": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning05": "暴風警報",
+  "@warning05": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning06": "大雪警報",
+  "@warning06": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning07": "波浪警報",
+  "@warning07": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning08": "高潮警報",
+  "@warning08": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning09": "土砂災害警報",
+  "@warning09": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "warning43": "大雨危険警報",
+  "@warning43": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "warning44": "洪水危険警報",
+  "@warning44": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "warning48": "高潮危険警報",
+  "@warning48": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "warning49": "土砂災害危険警報",
+  "@warning49": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "warning32": "暴風雪特別警報",
+  "@warning32": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning33": "大雨特別警報",
+  "@warning33": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning34": "洪水特別警報",
+  "@warning34": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "warning35": "暴風特別警報",
+  "@warning35": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning36": "大雪特別警報",
+  "@warning36": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning37": "波浪特別警報",
+  "@warning37": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning38": "高潮特別警報",
+  "@warning38": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "warning39": "土砂災害特別警報",
+  "@warning39": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "advisory10": "大雨注意報",
+  "@advisory10": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory12": "大雪注意報",
+  "@advisory12": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory13": "風雪注意報",
+  "@advisory13": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory14": "雷注意報",
+  "@advisory14": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory15": "強風注意報",
+  "@advisory15": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory16": "波浪注意報",
+  "@advisory16": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory17": "融雪注意報",
+  "@advisory17": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory18": "洪水注意報",
+  "@advisory18": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory19": "高潮注意報",
+  "@advisory19": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory20": "濃霧注意報",
+  "@advisory20": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory21": "乾燥注意報",
+  "@advisory21": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory22": "なだれ注意報",
+  "@advisory22": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory23": "低温注意報",
+  "@advisory23": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory24": "霜注意報",
+  "@advisory24": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory25": "着氷注意報",
+  "@advisory25": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory26": "着雪注意報",
+  "@advisory26": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "advisory29": "土砂災害注意報",
+  "@advisory29": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
+  },
+  "mapLocationDenied": "位置情報の利用が許可されていません（設定から変更できます）",
+  "mapLocationFailed": "現在地を取得できませんでした",
+  "mapLegendTitle": "凡例・絞り込み",
+  "mapLegendSearchHint": "カメラ名・運営者・河川/路線名で検索",
+  "mapFilterFavoritesOnly": "お気に入りのみ",
+  "mapFilterOkOnly": "現在映っているもののみ",
+  "mapLegendLiveDot": "赤ドット = 動画（ライブ配信）",
+  "mapLegendUncertain": "黄色の縁 = 位置未確定（おおよそ/代表点）",
+  "mapLegendFrozen": "半透明 = 画像が長時間更新されていない",
+  "mapLegendFavorite": "金の星 = お気に入り登録済み",
+  "mapLegendCluster": "数字の丸 = 周辺カメラのまとまり（タップでズーム）",
+  "mapSearchTitle": "場所を検索",
+  "mapSearchHint": "地名・住所（例: 渋谷、金沢市広坂）",
+  "mapSearchNotFound": "見つかりませんでした。地名・住所・カメラ名でお試しください",
+  "mapSearchSectionCameras": "カメラ",
+  "mapSearchSectionPlaces": "場所",
+  "mapPointCameras": "この地点のカメラ（{count}台）",
+  "@mapPointCameras": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapFilteredCount": "絞り込み中 {count}台",
+  "@mapFilteredCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapTotalCount": "{count}台",
+  "@mapTotalCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapLayersTooltip": "地図レイヤー",
+  "bosaiTitle": "災害速報",
+  "bosaiTabQuake": "地震・津波",
+  "@bosaiTabQuake": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "bosaiTabWarning": "気象警報",
+  "@bosaiTabWarning": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "bosaiTabHeat": "熱中症",
+  "@bosaiTabHeat": {
+    "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと"
+  },
+  "bosaiNoWarnings": "現在、発表中の警報・注意報はありません",
+  "bosaiWarningNoteNone": "出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は下の一覧から確認できます。",
+  "@bosaiWarningNoteNone": {
+    "description": "出典表記（気象庁）はどの言語でも省略しない。SPEC C5"
+  },
+  "bosaiWarningNote": "出典：気象庁 気象警報・注意報。タップするとその都道府県のカメラ一覧を表示します。",
+  "@bosaiWarningNote": {
+    "description": "出典表記（気象庁）はどの言語でも省略しない。SPEC C5"
+  },
+  "bosaiAdvisoryRegions": "注意報が発表中の地域（{count}都道府県）",
+  "@bosaiAdvisoryRegions": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiWarningAreasTitle": "{pref}の警報発表地域",
+  "@bosaiWarningAreasTitle": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiAdvisoryAreasTitle": "{pref}の注意報発表地域",
+  "@bosaiAdvisoryAreasTitle": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiMuniNote": "出典：気象庁。タップするとその市区町村のカメラ一覧を表示します",
+  "@bosaiMuniNote": {
+    "description": "出典表記（気象庁）はどの言語でも省略しない。SPEC C5"
+  },
+  "bosaiMuniFetchFailed": "発表エリアの詳細を取得できませんでした",
+  "bosaiMuniNone": "現在、発表中の市区町村はありません",
+  "bosaiCameraCount": "カメラ{count}台",
+  "@bosaiCameraCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiNoCamera": "カメラなし",
+  "bosaiMuniCamerasTitle": "{name}のカメラ（警報発表中）",
+  "@bosaiMuniCamerasTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsJmaDictionary": "防災用語の翻訳について",
+  "settingsJmaDictionaryNote": "警報名・注意報名・震度などの各言語訳は、気象庁「気象情報等に関する多言語辞書」に準拠しています。出典：気象庁ホームページ",
+  "@settingsJmaDictionaryNote": {
+    "description": "SPEC C5 / 公共データ利用規約（第1.0版）の出典表示要件。省略しないこと"
+  }
+}

@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'l10n_test_app.dart';
 import 'package:livecam_jp/app_state.dart';
 import 'package:livecam_jp/data/api_client.dart';
 import 'package:livecam_jp/data/cache_store.dart';
@@ -34,7 +35,7 @@ Future<AppState> buildApp() async {
 void main() {
   testWidgets('空のときは案内文を表示する', (tester) async {
     final app = await buildApp();
-    await tester.pumpWidget(MaterialApp(home: FavoritesScreen(app: app)));
+    await tester.pumpWidget(testApp(FavoritesScreen(app: app)));
     expect(find.textContaining('お気に入りはまだありません'), findsOneWidget);
   });
 
@@ -43,7 +44,7 @@ void main() {
     app.repository.cameras = [cam('a', '渋谷カメラ'), cam('b', '雷門カメラ')];
     await app.toggleFavorite(app.repository.cameras.first);
 
-    await tester.pumpWidget(MaterialApp(home: FavoritesScreen(app: app)));
+    await tester.pumpWidget(testApp(FavoritesScreen(app: app)));
     expect(find.text('お気に入り（1）'), findsOneWidget);
     expect(find.byType(GridView), findsOneWidget, reason: '初期はカード表示');
     expect(find.text('渋谷カメラ'), findsOneWidget);

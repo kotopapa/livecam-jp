@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../app_state.dart';
+import '../l10n/l10n.dart';
 import '../config.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
@@ -19,12 +20,13 @@ class FavoritesScreen extends StatefulWidget {
 
 enum _FavSort { newest, oldest, name, category }
 
-const _favSortLabels = {
-  _FavSort.newest: '登録が新しい順',
-  _FavSort.oldest: '登録が古い順',
-  _FavSort.name: '名前順',
-  _FavSort.category: 'カテゴリ順',
-};
+/// 並べ替えの表示名（表示時に l10n で解決する）
+String _favSortLabel(AppLocalizations l10n, _FavSort sort) => switch (sort) {
+      _FavSort.newest => l10n.favoritesSortNewest,
+      _FavSort.oldest => l10n.favoritesSortOldest,
+      _FavSort.name => l10n.favoritesSortName,
+      _FavSort.category => l10n.favoritesSortCategory,
+    };
 
 class _FavoritesScreenState extends State<FavoritesScreen> {
   bool _cardView = true;
@@ -103,36 +105,37 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     for (final c in widget.app.repository.cameras) {
       if (ids.contains(c.id)) cats.add(c.category);
     }
-    return categoryLabels.keys.where(cats.contains).toList();
+    return categoryKeys.where(cats.contains).toList();
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     final favorites = _favorites;
     return Scaffold(
       appBar: AppBar(
-        title: Text('お気に入り（${favorites.length}）'),
+        title: Text(l10n.favoritesTitle(favorites.length)),
         actions: [
           PopupMenuButton<_FavSort>(
-            tooltip: '並べ替え',
+            tooltip: l10n.favoritesSort,
             icon: const Icon(Icons.sort),
             onSelected: (v) => setState(() => _sort = v),
             itemBuilder: (context) => [
-              for (final e in _favSortLabels.entries)
+              for (final sort in _FavSort.values)
                 CheckedPopupMenuItem(
-                  value: e.key,
-                  checked: _sort == e.key,
-                  child: Text(e.value),
+                  value: sort,
+                  checked: _sort == sort,
+                  child: Text(_favSortLabel(l10n, sort)),
                 ),
             ],
           ),
           IconButton(
-            tooltip: '表示切替',
+            tooltip: l10n.favoritesToggleView,
             icon: Icon(_cardView ? Icons.view_list : Icons.grid_view),
             onPressed: () => setState(() => _cardView = !_cardView),
           ),
           IconButton(
-            tooltip: '一括更新（3件ずつ順次取得）',
+            tooltip: l10n.favoritesRefreshAll,
             icon: _bulkRefreshing
                 ? const SizedBox(
                     width: 18, height: 18,
@@ -154,7 +157,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                   Padding(
                     padding: const EdgeInsets.only(right: 6),
                     child: FilterChip(
-                      label: Text(categoryLabels[cat] ?? cat,
+                      label: Text(categoryLabelOf(l10n, cat),
                           style: const TextStyle(fontSize: 12)),
                       selected: _filterCategories.contains(cat),
                       selectedColor:
@@ -167,7 +170,8 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                     ),
                   ),
                 FilterChip(
-                  label: const Text('動画のみ', style: TextStyle(fontSize: 12)),
+                  label: Text(l10n.favoritesVideoOnly,
+                      style: const TextStyle(fontSize: 12)),
                   selected: _videoOnly,
                   onSelected: (v) => setState(() => _videoOnly = v),
                 ),
@@ -180,17 +184,17 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   }
 
   Widget _buildBody(List<Camera> favorites) {
+    final l10n = context.l10n;
     if (widget.app.favorites.ids.isEmpty) {
-      return const Center(
+      return Center(
         child: Padding(
-          padding: EdgeInsets.all(24),
-          child: Text('お気に入りはまだありません。\n地図でカメラを開いて★を押すと追加されます。',
-              textAlign: TextAlign.center),
+          padding: const EdgeInsets.all(24),
+          child: Text(l10n.favoritesEmpty, textAlign: TextAlign.center),
         ),
       );
     }
     if (favorites.isEmpty) {
-      return const Center(child: Text('絞り込み条件に合うお気に入りがありません'));
+      return Center(child: Text(l10n.favoritesEmptyFiltered));
     }
     return _cardView
               ? GridView.builder(

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
+import '../l10n/l10n.dart';
 import '../config.dart';
 import '../models/camera.dart';
 import 'ad_banner.dart';
@@ -11,6 +12,9 @@ import 'detail_screen.dart';
 import 'pin_style.dart';
 
 enum _RankMode { day, recent, favorites }
+
+/// ランキング取得のエラー種別（文言は表示時に l10n で解決する）
+enum _RankError { preparing, http, failed }
 
 /// 全国ランキング画面。全ユーザーの匿名統計（GitHub Pagesの静的JSON）に基づく。
 /// 個人の履歴ではなく全国共通のランキングを表示する（毎日1回更新）。
@@ -27,7 +31,9 @@ class _RankingScreenState extends State<RankingScreen> {
   _RankMode _mode = _RankMode.day;
   Map<String, List<(String, int)>>? _data; // key -> [(cameraId, count)]
   bool _loading = false;
-  String? _error;
+  /// エラーの種類（文言は build 時に l10n で解決する）
+  _RankError? _error;
+  int _errorHttpCode = 0;
 
   @override
   void initState() {
@@ -46,9 +52,10 @@ class _RankingScreenState extends State<RankingScreen> {
           .get(Uri.parse('${apiBaseUrl}ranking.json'))
           .timeout(const Duration(seconds: 15));
       if (resp.statusCode == 404) {
-        _error = '全国ランキングは準備中です。\n集計は3時間おきに行われます。';
+        _error = _RankError.preparing;
       } else if (resp.statusCode != 200) {
-        _error = '取得に失敗しました (HTTP ${resp.statusCode})';
+        _error = _RankError.http;
+        _errorHttpCode = resp.statusCode;
       } else {
         final body =
             jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
@@ -64,7 +71,7 @@ class _RankingScreenState extends State<RankingScreen> {
         };
       }
     } catch (_) {
-      _error = '取得に失敗しました';
+      _error = _RankError.failed;
     } finally {
       if (mounted) setState(() => _loading = false);
     }
@@ -77,7 +84,10 @@ class _RankingScreenState extends State<RankingScreen> {
       _RankMode.recent => 'recent',
       _RankMode.favorites => 'favorites',
     };
-    final unit = _mode == _RankMode.favorites ? '件' : '回';
+    final l10n = context.l10n;
+    final unit = _mode == _RankMode.favorites
+        ? l10n.rankingUnitFavorites
+        : l10n.rankingUnitViews;
     return [
       for (final (id, n) in _data?[key] ?? const <(String, int)>[])
         if (byId[id] != null) (byId[id]!, '$n$unit'),
@@ -86,10 +96,17 @@ class _RankingScreenState extends State<RankingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     final ranked = _ranked();
+    final errorText = switch (_error) {
+      null => null,
+      _RankError.preparing => l10n.rankingPreparing,
+      _RankError.http => l10n.rankingFetchFailedHttp(_errorHttpCode),
+      _RankError.failed => l10n.rankingFetchFailed,
+    };
     return Scaffold(
       appBar: AppBar(
-        title: const Text('全国ランキング'),
+        title: Text(l10n.rankingTitle),
         actions: [
           IconButton(icon: const Icon(Icons.refresh), onPressed: _load),
         ],
@@ -100,17 +117,17 @@ class _RankingScreenState extends State<RankingScreen> {
           padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
           child: Wrap(spacing: 8, children: [
             ChoiceChip(
-              label: const Text('いま見られている（24時間 TOP10）'),
+              label: Text(l10n.rankingModeNow),
               selected: _mode == _RankMode.day,
               onSelected: (_) => setState(() => _mode = _RankMode.day),
             ),
             ChoiceChip(
-              label: const Text('よく見られている（7日間 TOP30）'),
+              label: Text(l10n.rankingModeWeek),
               selected: _mode == _RankMode.recent,
               onSelected: (_) => setState(() => _mode = _RankMode.recent),
             ),
             ChoiceChip(
-              label: const Text('お気に入り登録数'),
+              label: Text(l10n.rankingModeFavorites),
               selected: _mode == _RankMode.favorites,
               onSelected: (_) => setState(() => _mode = _RankMode.favorites),
             ),
@@ -119,23 +136,22 @@ class _RankingScreenState extends State<RankingScreen> {
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 6, 16, 0),
           child: Text(
-            '全ユーザーの匿名統計に基づくランキングです（毎日更新）',
+            l10n.rankingNote,
             style: TextStyle(fontSize: 11, color: Colors.grey[600]),
           ),
         ),
         Expanded(
           child: _loading
               ? const Center(child: CircularProgressIndicator())
-              : _error != null
+              : errorText != null
                   ? Center(
                       child: Padding(
                         padding: const EdgeInsets.all(24),
-                        child: Text(_error!, textAlign: TextAlign.center),
+                        child: Text(errorText, textAlign: TextAlign.center),
                       ),
                     )
                   : ranked.isEmpty
-                      ? const Center(
-                          child: Text('まだ集計データがありません（毎日1回更新されます）'))
+                      ? Center(child: Text(l10n.rankingEmpty))
                       : ListView.separated(
                           itemCount: ranked.length,
                           separatorBuilder: (_, _) => const Divider(height: 1),

@@ -31,11 +31,8 @@ class NotificationSettings {
   ];
 
   static const quakeLevels = ['5-', '5+', '6-'];
-  static const quakeLevelLabels = {
-    '5-': '震度5弱以上',
-    '5+': '震度5強以上',
-    '6-': '震度6弱以上',
-  };
+  // 表示名は多言語化のため l10n/l10n.dart の quakeLevelLabelOf() で解決する
+  // （1.4.0。気象庁「多言語辞書」準拠）
   static const _levelTopics = {
     '5-': 'quake5',
     '5+': 'quake5up',

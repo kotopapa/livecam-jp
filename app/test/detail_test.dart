@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'l10n_test_app.dart';
 import 'package:livecam_jp/app_state.dart';
 import 'package:livecam_jp/data/api_client.dart';
 import 'package:livecam_jp/data/cache_store.dart';
@@ -66,7 +67,7 @@ void main() {
 
       // mlit_roadinfo で status に image_url がない → フォールバック表示（ネットワーク不要）
       final camera = cam('c1', lat: 35.4, lng: 138.4);
-      await tester.pumpWidget(MaterialApp(home: DetailScreen(camera: camera, app: app)));
+      await tester.pumpWidget(testApp(DetailScreen(camera: camera, app: app)));
 
       expect(find.textContaining('避難の判断は、水位情報・気象警報'), findsOneWidget);
       expect(find.text('出典'), findsOneWidget);

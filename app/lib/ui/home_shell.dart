@@ -4,6 +4,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'ad_banner.dart';
 
 import '../app_state.dart';
+import '../data/locale_controller.dart';
+import '../l10n/l10n.dart';
 import 'bosai_screen.dart';
 import 'detail_screen.dart';
 import 'favorites_screen.dart';
@@ -14,9 +16,11 @@ import 'settings_screen.dart';
 /// 4タブのシェル（地図 / 一覧 / お気に入り / 設定。デザイン案準拠）。
 /// 地図以外は次フェーズで実装するプレースホルダ。
 class HomeShell extends StatefulWidget {
-  const HomeShell({super.key, required this.app});
+  const HomeShell(
+      {super.key, required this.app, required this.localeController});
 
   final AppState app;
+  final LocaleController localeController;
 
   @override
   State<HomeShell> createState() => _HomeShellState();
@@ -108,15 +112,14 @@ class _HomeShellState extends State<HomeShell> {
       builder: (context) => PopScope(
         canPop: false,
         child: AlertDialog(
-          title: const Text('アップデートが必要です'),
-          content: const Text('このバージョンはサポートが終了しました。\n'
-              'App Storeから最新版に更新してください。'),
+          title: Text(context.l10n.updateRequiredTitle),
+          content: Text(context.l10n.updateRequiredBody),
           actions: [
             if (storeUrl != null)
               FilledButton(
                 onPressed: () => launchUrl(Uri.parse(storeUrl),
                     mode: LaunchMode.externalApplication),
-                child: const Text('App Storeを開く'),
+                child: Text(context.l10n.updateOpenStore),
               ),
           ],
         ),
@@ -138,7 +141,8 @@ class _HomeShellState extends State<HomeShell> {
             ListScreen(app: widget.app),
             BosaiScreen(app: widget.app, visible: _bosaiVisible),
             FavoritesScreen(app: widget.app),
-            SettingsScreen(app: widget.app),
+            SettingsScreen(
+                app: widget.app, localeController: widget.localeController),
           ]),
         ),
         // Offstageで保持し、タブ切替で広告を読み直さない
@@ -148,21 +152,24 @@ class _HomeShellState extends State<HomeShell> {
         selectedIndex: _index,
         onDestinationSelected: _setIndex,
         destinations: [
-          const NavigationDestination(
-              icon: Icon(Icons.map_outlined), label: '地図'),
-          const NavigationDestination(icon: Icon(Icons.list), label: '一覧'),
+          NavigationDestination(
+              icon: const Icon(Icons.map_outlined), label: context.l10n.tabMap),
+          NavigationDestination(
+              icon: const Icon(Icons.list), label: context.l10n.tabList),
           NavigationDestination(
             icon: Badge(
               isLabelVisible: widget.app.specialWarningActive,
               backgroundColor: const Color(0xFFD93025),
               child: const Icon(Icons.crisis_alert),
             ),
-            label: '災害速報',
+            label: context.l10n.tabBosai,
           ),
-          const NavigationDestination(
-              icon: Icon(Icons.star_border), label: 'お気に入り'),
-          const NavigationDestination(
-              icon: Icon(Icons.settings_outlined), label: '設定'),
+          NavigationDestination(
+              icon: const Icon(Icons.star_border),
+              label: context.l10n.tabFavorites),
+          NavigationDestination(
+              icon: const Icon(Icons.settings_outlined),
+              label: context.l10n.tabSettings),
         ],
       ),
     );

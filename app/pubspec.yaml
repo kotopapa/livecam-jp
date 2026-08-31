@@ -30,6 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # 多言語対応（1.4.0）。ja / ja_Hira（やさしい日本語）/ en
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -80,6 +84,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  # ARB からローカライズクラスを生成する（設定は l10n.yaml）
+  generate: true
 
   assets:
     - assets/images/

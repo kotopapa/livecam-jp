@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/elevation.dart';
+import '../l10n/l10n.dart';
 
 /// 「標高 3.4m（国土地理院）」の1行。
 ///
@@ -52,12 +53,14 @@ class _ElevationLabelState extends State<ElevationLabel> {
     final color = widget.color ?? Colors.grey[700];
     if (!_done) {
       // 取得中：確定後と同じ高さで控えめに置いておく（行のガタつきを避ける）
-      return Text('標高 …',
+      return Text(context.l10n.elevationLoading,
           style: TextStyle(fontSize: widget.fontSize, color: Colors.grey[400]));
     }
     final m = _m;
     if (m == null) return const SizedBox.shrink(); // データ無し・失敗は出さない
-    return Text('標高 ${Elevation.format(m)}（${Elevation.attribution}）',
+    // 出典表記（Elevation.attribution）は原語のまま（SPEC C5 / 政府標準利用規約）
+    return Text(
+        context.l10n.elevationValue(Elevation.format(m), Elevation.attribution),
         style: TextStyle(fontSize: widget.fontSize, color: color));
   }
 }

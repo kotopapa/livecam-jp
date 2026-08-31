@@ -12,6 +12,8 @@ include: package:flutter_lints/flutter.yaml
 analyzer:
   exclude:
     - build/**
+    # flutter gen-l10n の生成物（ARBを直せば再生成される）
+    - lib/l10n/gen/**
 
 linter:
   # The lint rules applied to this project can be customized in the

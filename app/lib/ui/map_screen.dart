@@ -14,6 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
+import '../l10n/l10n.dart';
 import '../data/facility_layers.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
@@ -68,7 +69,7 @@ class _MapScreenState extends State<MapScreen> {
       }
       if (permission == LocationPermission.denied ||
           permission == LocationPermission.deniedForever) {
-        _showMessage('位置情報の利用が許可されていません（設定から変更できます）');
+        if (mounted) _showMessage(context.l10n.mapLocationDenied);
         return;
       }
       final pos = await Geolocator.getCurrentPosition(
@@ -92,7 +93,7 @@ class _MapScreenState extends State<MapScreen> {
         if (_following) _controller.move(here, _controller.camera.zoom);
       });
     } catch (_) {
-      _showMessage('現在地を取得できませんでした');
+      if (mounted) _showMessage(context.l10n.mapLocationFailed);
     } finally {
       if (mounted) setState(() => _locating = false);
     }
@@ -1555,7 +1556,7 @@ class _MapScreenState extends State<MapScreen> {
               padding: EdgeInsets.fromLTRB(20, 0, 20,
                   16 + MediaQuery.of(sheetContext).viewInsets.bottom),
               child: Column(mainAxisSize: MainAxisSize.min, children: [
-                const Text('場所を検索',
+                Text(context.l10n.mapSearchTitle,
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                 const SizedBox(height: 10),
@@ -1566,7 +1567,7 @@ class _MapScreenState extends State<MapScreen> {
                   decoration: InputDecoration(
                     isDense: true,
                     prefixIcon: const Icon(Icons.place_outlined, size: 20),
-                    hintText: '地名・住所（例: 渋谷、金沢市広坂）',
+                    hintText: context.l10n.mapSearchHint,
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
                     suffixIcon: IconButton(
@@ -1583,7 +1584,7 @@ class _MapScreenState extends State<MapScreen> {
                 else if (searched && results.isEmpty && cameraHits.isEmpty)
                   Padding(
                     padding: const EdgeInsets.all(16),
-                    child: Text('見つかりませんでした。地名・住所・カメラ名でお試しください',
+                    child: Text(context.l10n.mapSearchNotFound,
                         style: TextStyle(color: Colors.grey[600])),
                   )
                 else
@@ -1593,7 +1594,7 @@ class _MapScreenState extends State<MapScreen> {
                       if (cameraHits.isNotEmpty)
                         Padding(
                           padding: const EdgeInsets.only(top: 4, bottom: 2),
-                          child: Text('カメラ',
+                          child: Text(context.l10n.mapSearchSectionCameras,
                               style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.bold,
@@ -1615,7 +1616,7 @@ class _MapScreenState extends State<MapScreen> {
                       if (results.isNotEmpty)
                         Padding(
                           padding: const EdgeInsets.only(top: 4, bottom: 2),
-                          child: Text('場所',
+                          child: Text(context.l10n.mapSearchSectionPlaces,
                               style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.bold,
@@ -1667,7 +1668,7 @@ class _MapScreenState extends State<MapScreen> {
               padding: EdgeInsets.fromLTRB(20, 0, 20,
                   16 + MediaQuery.of(sheetContext).viewInsets.bottom),
               child: Column(mainAxisSize: MainAxisSize.min, children: [
-                const Text('凡例・絞り込み',
+                Text(context.l10n.mapLegendTitle,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                 const SizedBox(height: 10),
                 TextField(
@@ -1675,7 +1676,7 @@ class _MapScreenState extends State<MapScreen> {
                   decoration: InputDecoration(
                     isDense: true,
                     prefixIcon: const Icon(Icons.search, size: 20),
-                    hintText: 'カメラ名・運営者・河川/路線名で検索',
+                    hintText: context.l10n.mapLegendSearchHint,
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)),
                     suffixIcon: app.searchQuery.isEmpty
@@ -1701,16 +1702,15 @@ class _MapScreenState extends State<MapScreen> {
                     spacing: 8,
                     runSpacing: 8,
                     children: [
-                      for (final entry in categoryLabels.entries)
+                      for (final key in categoryKeys)
                         FilterChip(
                           avatar: CircleAvatar(
-                              backgroundColor: categoryColor(entry.key),
-                              radius: 6),
-                          label: Text(
-                              '${entry.value} ${counts[entry.key] ?? 0}'),
-                          selected: app.enabledCategories.contains(entry.key),
+                              backgroundColor: categoryColor(key), radius: 6),
+                          label: Text('${categoryLabelOf(context.l10n, key)} '
+                              '${counts[key] ?? 0}'),
+                          selected: app.enabledCategories.contains(key),
                           onSelected: (_) {
-                            app.toggleCategory(entry.key);
+                            app.toggleCategory(key);
                             setSheetState(() {});
                           },
                         ),
@@ -1719,7 +1719,7 @@ class _MapScreenState extends State<MapScreen> {
                 }),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
-                  title: const Text('動画カメラのみ'),
+                  title: Text(context.l10n.settingsVideoOnly),
                   value: app.videoOnly,
                   onChanged: (v) {
                     app.setVideoOnly(v);
@@ -1728,7 +1728,7 @@ class _MapScreenState extends State<MapScreen> {
                 ),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
-                  title: const Text('世界のカメラを表示'),
+                  title: Text(context.l10n.settingsShowWorld),
                   value: app.showWorld,
                   onChanged: (v) {
                     app.setShowWorld(v);
@@ -1737,7 +1737,7 @@ class _MapScreenState extends State<MapScreen> {
                 ),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
-                  title: const Text('位置が曖昧なカメラを非表示'),
+                  title: Text(context.l10n.settingsHideUncertain),
                   value: app.hideUncertain,
                   onChanged: (v) {
                     app.setHideUncertain(v);
@@ -1746,7 +1746,7 @@ class _MapScreenState extends State<MapScreen> {
                 ),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
-                  title: const Text('お気に入りのみ'),
+                  title: Text(context.l10n.mapFilterFavoritesOnly),
                   value: app.favoritesOnly,
                   onChanged: (v) {
                     app.setFavoritesOnly(v);
@@ -1755,7 +1755,7 @@ class _MapScreenState extends State<MapScreen> {
                 ),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
-                  title: const Text('現在映っているもののみ'),
+                  title: Text(context.l10n.mapFilterOkOnly),
                   value: app.okOnly,
                   onChanged: (v) {
                     app.setOkOnly(v);
@@ -1763,17 +1763,21 @@ class _MapScreenState extends State<MapScreen> {
                   },
                 ),
                 const Divider(),
-                const _LegendRow(
-                    kind: _LegendKind.liveDot, text: '赤ドット = 動画（ライブ配信）'),
-                const _LegendRow(
-                    kind: _LegendKind.uncertain, text: '黄色の縁 = 位置未確定（おおよそ/代表点）'),
-                const _LegendRow(
-                    kind: _LegendKind.frozen, text: '半透明 = 画像が長時間更新されていない'),
-                const _LegendRow(
-                    kind: _LegendKind.favorite, text: '金の星 = お気に入り登録済み'),
-                const _LegendRow(
+                _LegendRow(
+                    kind: _LegendKind.liveDot,
+                    text: context.l10n.mapLegendLiveDot),
+                _LegendRow(
+                    kind: _LegendKind.uncertain,
+                    text: context.l10n.mapLegendUncertain),
+                _LegendRow(
+                    kind: _LegendKind.frozen,
+                    text: context.l10n.mapLegendFrozen),
+                _LegendRow(
+                    kind: _LegendKind.favorite,
+                    text: context.l10n.mapLegendFavorite),
+                _LegendRow(
                     kind: _LegendKind.cluster,
-                    text: '数字の丸 = 周辺カメラのまとまり（タップでズーム）'),
+                    text: context.l10n.mapLegendCluster),
               ]),
             ),
           );
@@ -1806,7 +1810,7 @@ class _MapScreenState extends State<MapScreen> {
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           Padding(
             padding: const EdgeInsets.only(bottom: 4),
-            child: Text('この地点のカメラ（${near.length}台）',
+            child: Text(context.l10n.mapPointCameras(near.length),
                 style: const TextStyle(fontWeight: FontWeight.bold)),
           ),
           for (final c in near)
@@ -2062,8 +2066,8 @@ class _MapScreenState extends State<MapScreen> {
             ),
             child: Text(
               widget.app.hasActiveFilters
-                  ? '絞り込み中 ${cams.length}台'
-                  : '${cams.length}台',
+                  ? context.l10n.mapFilteredCount(cams.length)
+                  : context.l10n.mapTotalCount(cams.length),
               style: const TextStyle(
                   fontSize: 12, fontWeight: FontWeight.bold,
                   color: Colors.black87),
@@ -2076,7 +2080,7 @@ class _MapScreenState extends State<MapScreen> {
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             FloatingActionButton.small(
               heroTag: 'weather_layer',
-              tooltip: '地図レイヤー',
+              tooltip: context.l10n.mapLayersTooltip,
               backgroundColor: _layer == MapLayerKind.none ? null : Theme.of(context).colorScheme.primary,
               foregroundColor: _layer == MapLayerKind.none ? null : Colors.white,
               onPressed: () => _showLayerPicker(context),
@@ -2091,7 +2095,7 @@ class _MapScreenState extends State<MapScreen> {
             const SizedBox(height: 8),
             FloatingActionButton.small(
               heroTag: 'place_search',
-              tooltip: '場所を検索',
+              tooltip: context.l10n.mapSearchTitle,
               onPressed: () => _showPlaceSearch(context),
               child: const Icon(Icons.search),
             ),
@@ -2214,7 +2218,10 @@ class _GsiAttribution extends StatelessWidget {
       margin: const EdgeInsets.all(4),
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       color: Colors.white70,
-      child: Text(worldTiles ? '© OpenStreetMap contributors' : '地理院タイル',
+      child: Text(
+          worldTiles
+              ? '© OpenStreetMap contributors'
+              : context.l10n.detailMapTileGsi,
           style: const TextStyle(fontSize: 10)),
     );
   }
@@ -2420,7 +2427,7 @@ class _NoticeBanner extends StatelessWidget {
               icon: const Icon(Icons.close, size: 18),
               padding: EdgeInsets.zero,
               constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
-              tooltip: '閉じる',
+              tooltip: context.l10n.commonClose,
               onPressed: onClose,
             ),
         ]),

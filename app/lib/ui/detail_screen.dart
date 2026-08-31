@@ -14,20 +14,18 @@ import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 import '../app_state.dart';
 import '../config.dart';
+import '../l10n/l10n.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
 import '../util/geo.dart';
-import '../util/prefectures.dart';
 import '../util/time_format.dart';
 import 'ad_banner.dart';
 import 'elevation_label.dart';
 import 'pin_style.dart';
 
-/// 免責文言（SPEC 9.5。削ってはいけない）
-const disclaimerText =
-    'カメラ映像は限られた範囲の状況を示すものです。カメラの性能上、光環境や気象条件により'
-    '不鮮明になる場合があります。避難の判断は、水位情報・気象警報・自治体の避難情報に'
-    '従ってください。本アプリは参考情報を提供するものです。';
+/// 免責文言（SPEC 9.5。削ってはいけない）。
+/// 1.4.0 で多言語化。日本語版を正文とする（l10n.legalJapaneseAuthoritative を併記）
+String disclaimerTextOf(AppLocalizations l10n) => l10n.disclaimerText;
 
 /// カメラ詳細画面（SPEC 9.2③・デザイン画面6/7）。
 class DetailScreen extends StatefulWidget {
@@ -146,7 +144,7 @@ class _DetailScreenState extends State<DetailScreen> {
             const Divider(height: 24),
             _nearbySection(),
             const Divider(height: 24),
-            Text(disclaimerText,
+            Text(disclaimerTextOf(context.l10n),
                 style: TextStyle(fontSize: 11, color: Colors.grey[700])),
             const SizedBox(height: 16),
           ]),
@@ -177,41 +175,48 @@ class _DetailScreenState extends State<DetailScreen> {
         ? _imageLoadedAt.toIso8601String()
         : (st?.imageTime ?? st?.lastOkAt);
     final left = _cooldownLeft;
+    final l10n = context.l10n;
     if (camera.isVideo) {
-      return const Row(children: [
-        Icon(Icons.sensors, size: 18, color: Color(0xFFE53935)),
-        SizedBox(width: 6),
-        Text('ライブ配信中',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+      return Row(children: [
+        const Icon(Icons.sensors, size: 18, color: Color(0xFFE53935)),
+        const SizedBox(width: 6),
+        Text(l10n.detailLive,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
       ]);
     }
     return Row(children: [
       Expanded(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(time != null ? formatTakenTime(time) : '取得時刻不明',
+          Text(
+              time != null
+                  ? formatTakenTime(time, l10n: l10n)
+                  : l10n.detailTimeUnknown,
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          Text('${camera.feed.refreshSec ?? 600}秒ごとに更新',
+          Text(l10n.detailRefreshEvery(camera.feed.refreshSec ?? 600),
               style: TextStyle(fontSize: 12, color: Colors.grey[600])),
         ]),
       ),
       FilledButton.icon(
         onPressed: left > 0 ? null : _manualRefresh,
         icon: const Icon(Icons.refresh, size: 18),
-        label: Text(left > 0 ? '$left秒' : '更新'),
+        label: Text(
+            left > 0 ? l10n.detailRefreshIn(left) : l10n.detailRefreshNow),
       ),
     ]);
   }
 
   Widget _badges(CameraStatus? st) {
+    final l10n = context.l10n;
     final chips = <Widget>[];
     if (camera.coordAccuracy == CoordAccuracy.area) {
-      chips.add(const _InfoChip(
-          text: '位置は広域の代表点', color: uncertainBorderColor));
+      chips.add(_InfoChip(
+          text: l10n.detailPosRepresentative, color: uncertainBorderColor));
     } else if (camera.coordAccuracy.isUncertain) {
-      chips.add(const _InfoChip(text: '位置はおおよそ', color: uncertainBorderColor));
+      chips.add(
+          _InfoChip(text: l10n.detailPosApprox, color: uncertainBorderColor));
     }
     if (st?.state == CameraState.frozen) {
-      chips.add(const _InfoChip(text: '画像が更新されていません', color: Colors.grey));
+      chips.add(_InfoChip(text: l10n.detailNotUpdating, color: Colors.grey));
     }
     if (camera.riverOrRoute != null) {
       chips.add(_InfoChip(
@@ -222,9 +227,12 @@ class _DetailScreenState extends State<DetailScreen> {
 
   /// カテゴリと設置位置（ミニマップ）。ミニマップをタップすると地図タブへ移動する
   Widget _locationSection() {
+    final l10n = context.l10n;
     final cat = camera.category;
-    final label = categoryLabels[cat] ?? cat;
-    final pref = prefectureNames[camera.prefecture] ?? '';
+    final label = categoryLabelOf(l10n, cat);
+    final pref = camera.prefecture.isEmpty
+        ? ''
+        : prefectureNameOf(l10n, camera.prefecture);
     final chips = Wrap(spacing: 6, runSpacing: 4, children: [
       Chip(
         avatar: CircleAvatar(backgroundColor: categoryColor(cat), radius: 6),
@@ -234,18 +242,22 @@ class _DetailScreenState extends State<DetailScreen> {
       if (pref.isNotEmpty)
         Chip(label: Text(pref), visualDensity: VisualDensity.compact),
       if (camera.isWorld)
-        const Chip(label: Text('海外'), visualDensity: VisualDensity.compact),
+        Chip(
+            label: Text(l10n.detailWorld),
+            visualDensity: VisualDensity.compact),
     ]);
     if (!camera.hasLocation) {
       return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text('カテゴリ・位置', style: TextStyle(fontWeight: FontWeight.bold)),
+        Text(l10n.detailCategoryAndPlace,
+            style: const TextStyle(fontWeight: FontWeight.bold)),
         const SizedBox(height: 6),
         chips,
       ]);
     }
     final pos = LatLng(camera.lat!, camera.lng!);
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const Text('カテゴリ・位置', style: TextStyle(fontWeight: FontWeight.bold)),
+      Text(l10n.detailCategoryAndPlace,
+          style: const TextStyle(fontWeight: FontWeight.bold)),
       const SizedBox(height: 6),
       chips,
       // 標高（国土地理院の標高API。国内のみ・1画面1リクエスト）
@@ -293,7 +305,9 @@ class _DetailScreenState extends State<DetailScreen> {
               left: 4,
               bottom: 2,
               child: Text(
-                camera.isWorld ? '© OpenStreetMap contributors' : '地理院タイル',
+                camera.isWorld
+                    ? '© OpenStreetMap contributors'
+                    : l10n.detailMapTileGsi,
                 style: const TextStyle(fontSize: 9, color: Colors.black87),
               ),
             ),
@@ -319,7 +333,8 @@ class _DetailScreenState extends State<DetailScreen> {
                 decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.9),
                     borderRadius: BorderRadius.circular(12)),
-                child: const Text('地図で見る', style: TextStyle(fontSize: 11)),
+                child:
+                    Text(l10n.detailOpenMap, style: const TextStyle(fontSize: 11)),
               ),
             ),
           ]),
@@ -329,43 +344,46 @@ class _DetailScreenState extends State<DetailScreen> {
   }
 
   Widget _sourceSection(String? pageUrl) {
+    final l10n = context.l10n;
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const Text('出典', style: TextStyle(fontWeight: FontWeight.bold)),
+      Text(l10n.commonSource,
+          style: const TextStyle(fontWeight: FontWeight.bold)),
       const SizedBox(height: 4),
       Text(camera.attribution.isNotEmpty ? camera.attribution : camera.operator),
       if (pageUrl != null)
         TextButton(
           onPressed: () => _open(pageUrl),
-          child: const Text('出典サイトを見る'),
+          child: Text(l10n.detailOpenSourceSite),
         ),
       if (camera.feed.type == FeedType.youtubeChannel) ...[
         TextButton(
           onPressed: () =>
               _open('https://www.youtube.com/channel/${camera.feed.url}/live'),
-          child: const Text('YouTubeで見る'),
+          child: Text(l10n.detailOpenYoutube),
         ),
         TextButton(
           onPressed: () =>
               _open('https://www.youtube.com/channel/${camera.feed.url}'),
-          child: const Text('チャンネルページを見る'),
+          child: Text(l10n.detailOpenChannel),
         ),
       ],
       if (camera.feed.type == FeedType.youtubeVideo)
         TextButton(
           onPressed: () =>
               _open('https://www.youtube.com/watch?v=${camera.feed.url}'),
-          child: const Text('YouTubeで見る'),
+          child: Text(l10n.detailOpenYoutube),
         ),
       TextButton.icon(
         onPressed: _openReportForm,
         icon: const Icon(Icons.flag_outlined, size: 18),
-        label: const Text('このカメラの不具合を報告'),
+        label: Text(l10n.detailReportProblem),
         style: TextButton.styleFrom(foregroundColor: Colors.grey[700]),
       ),
     ]);
   }
 
-  /// 不具合報告: 依頼フォームをカメラ名・URL入りで開く（ログイン不要）
+  /// 不具合報告: 依頼フォームをカメラ名・URL入りで開く（ログイン不要）。
+  /// フォームの事前入力値は開発者が読むもののため、表示言語によらず日本語のまま
   void _openReportForm() {
     const base = 'https://docs.google.com/forms/d/e/'
         '1FAIpQLScRz0Enqfrq-lrbuDVBdFD1jwSyl4GJEZtgTJxAoZfYo-QWJw/viewform';
@@ -384,7 +402,8 @@ class _DetailScreenState extends State<DetailScreen> {
     final nearby = nearbyCameras(camera, app.displayableCameras);
     if (nearby.isEmpty) return const SizedBox.shrink();
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const Text('周辺のカメラ', style: TextStyle(fontWeight: FontWeight.bold)),
+      Text(context.l10n.detailNearby,
+          style: const TextStyle(fontWeight: FontWeight.bold)),
       const SizedBox(height: 8),
       SizedBox(
         height: 96,
@@ -418,7 +437,8 @@ class _DetailScreenState extends State<DetailScreen> {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(fontSize: 11)),
-                      Text('約${(dist / 1000).toStringAsFixed(1)}km',
+                      Text(context.l10n.detailDistanceKm(
+                          (dist / 1000).toStringAsFixed(1)),
                           style: TextStyle(
                               fontSize: 10, color: Colors.grey[600])),
                     ]),
@@ -462,8 +482,8 @@ class _MediaView extends StatelessWidget {
         if (url == null) {
           return _MediaFallback(
               text: app.imagesBlockedByWifiSetting
-                  ? '設定により、画像の取得はWi-Fi接続時のみです'
-                  : '現在映像を取得できません');
+                  ? context.l10n.detailWifiOnlyBlocked
+                  : context.l10n.detailNoImage);
         }
         // refreshTick をキーに含めて手動更新時に再取得する
         final headers = camera.feed.requiresReferer &&
@@ -480,7 +500,7 @@ class _MediaView extends StatelessWidget {
               fit: BoxFit.contain,
               headers: headers,
               errorBuilder: (_, _, _) =>
-                  const _MediaFallback(text: '現在映像を取得できません'),
+                  _MediaFallback(text: context.l10n.detailNoImage),
               loadingBuilder: (_, child, progress) => progress == null
                   ? child
                   : const Center(child: CircularProgressIndicator()),
@@ -531,21 +551,22 @@ class _MediaView extends StatelessWidget {
                           y: feedUri.queryParameters['y']!,
                           camId: feedUri.queryParameters['cam'] ?? '',
                         ))),
-                child: const Column(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.open_in_new, color: Colors.white, size: 36),
-                    SizedBox(height: 10),
-                    Text('NEXCO公式「iHighway」で\nライブカメラを表示',
+                    const Icon(Icons.open_in_new, color: Colors.white, size: 36),
+                    const SizedBox(height: 10),
+                    Text(context.l10n.detailIHighwayTitle,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 15,
                             fontWeight: FontWeight.bold)),
-                    SizedBox(height: 6),
-                    Text('タップするとアプリ内ブラウザで公式サイトを開き、\nこのカメラの位置まで自動で移動します',
+                    const SizedBox(height: 6),
+                    Text(context.l10n.detailIHighwayBody,
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white70, fontSize: 11)),
+                        style: const TextStyle(
+                            color: Colors.white70, fontSize: 11)),
                   ],
                 ),
               ),
@@ -557,12 +578,14 @@ class _MediaView extends StatelessWidget {
         final isYoutube = url != null && url.contains('youtube.com');
         return _MediaFallback(
           text: isYoutube
-              ? '提供者の設定により、この映像は\nアプリ内で再生できません'
+              ? context.l10n.detailEmbedBlockedYoutube
               // 運営者の利用条件（転載・直リンク不可）で誘導型にしているものが大半。
               // 「非対応」だと不具合に見えるため理由を示す
-              : '配信元の利用条件により\nアプリ内では表示できません',
+              : context.l10n.detailEmbedBlockedPage,
           action: url,
-          actionLabel: isYoutube ? 'YouTubeで見る' : '元ページで見る',
+          actionLabel: isYoutube
+              ? context.l10n.detailOpenYoutube
+              : context.l10n.detailOpenOriginalPage,
           icon: isYoutube ? Icons.play_circle_outline : Icons.videocam_off,
         );
     }
@@ -710,13 +733,13 @@ class _IHighwayBrowserScreenState extends State<_IHighwayBrowserScreen> {
             Text(widget.title,
                 style: const TextStyle(fontSize: 15),
                 overflow: TextOverflow.ellipsis),
-            const Text('ihighway.jp（NEXCO公式）',
-                style: TextStyle(fontSize: 11, color: Colors.white70)),
+            Text(context.l10n.detailIHighwayHost,
+                style: const TextStyle(fontSize: 11, color: Colors.white70)),
           ],
         ),
         actions: [
           IconButton(
-            tooltip: 'Safariで開く',
+            tooltip: context.l10n.commonOpenInSafari,
             icon: const Icon(Icons.open_in_browser),
             onPressed: () => launchUrl(Uri.parse(widget.url),
                 mode: LaunchMode.externalApplication),
@@ -784,7 +807,7 @@ class _MieDouroViewState extends State<_MieDouroView> {
 
   @override
   Widget build(BuildContext context) {
-    if (_error) return const _MediaFallback(text: '現在映像を取得できません');
+    if (_error) return _MediaFallback(text: context.l10n.detailNoImage);
     if (_bytes == null) {
       return const Center(child: CircularProgressIndicator());
     }
@@ -801,13 +824,14 @@ class _MediaFallback extends StatelessWidget {
   const _MediaFallback({
     required this.text,
     this.action,
-    this.actionLabel = '元ページで見る',
+    this.actionLabel,
     this.icon = Icons.videocam_off,
   });
 
   final String text;
   final String? action;
-  final String actionLabel;
+  /// null のときは「元ページで見る」（l10n から解決）
+  final String? actionLabel;
   final IconData icon;
 
   @override
@@ -824,7 +848,7 @@ class _MediaFallback extends StatelessWidget {
             FilledButton.tonal(
               onPressed: () => launchUrl(Uri.parse(action!),
                   mode: LaunchMode.externalApplication),
-              child: Text(actionLabel),
+              child: Text(actionLabel ?? context.l10n.detailOpenOriginalPage),
             ),
         ]),
       ),

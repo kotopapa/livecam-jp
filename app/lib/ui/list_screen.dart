@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
 import '../app_state.dart';
+import '../l10n/l10n.dart';
 import '../models/camera.dart';
 import '../util/geo.dart';
 import 'detail_screen.dart';
@@ -128,10 +129,10 @@ class _ListScreenState extends State<ListScreen> {
     final cams = _sortedCameras();
     return Scaffold(
       appBar: AppBar(
-        title: Text('一覧（${cams.length}）'),
+        title: Text(context.l10n.listTitle(cams.length)),
         actions: [
           IconButton(
-            tooltip: 'ランキング',
+            tooltip: context.l10n.listRanking,
             icon: const Icon(Icons.leaderboard_outlined),
             onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (_) => RankingScreen(app: widget.app))),
@@ -144,7 +145,7 @@ class _ListScreenState extends State<ListScreen> {
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
-                hintText: 'カメラ名・河川名・路線名で検索',
+                hintText: context.l10n.listSearchHint,
                 prefixIcon: const Icon(Icons.search),
                 suffixIcon: widget.app.searchQuery.isNotEmpty
                     ? IconButton(
@@ -167,7 +168,7 @@ class _ListScreenState extends State<ListScreen> {
         ),
       ),
       body: cams.isEmpty
-          ? const Center(child: Text('条件に合うカメラがありません'))
+          ? Center(child: Text(context.l10n.listEmpty))
           : ListView.separated(
               itemCount: cams.length,
               separatorBuilder: (_, _) => const Divider(height: 1),

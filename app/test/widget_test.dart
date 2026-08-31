@@ -8,6 +8,7 @@ import 'package:livecam_jp/app_state.dart';
 import 'package:livecam_jp/data/api_client.dart';
 import 'package:livecam_jp/data/cache_store.dart';
 import 'package:livecam_jp/data/camera_repository.dart';
+import 'package:livecam_jp/data/locale_controller.dart';
 import 'package:livecam_jp/main.dart';
 
 void main() {
@@ -20,11 +21,34 @@ void main() {
           client: MockClient((_) async => http.Response('not found', 404))),
       cache: CacheStore(tmp),
     ));
-    await tester.pumpWidget(LiveCamApp(app: app, onboardingDone: true));
+    await tester.pumpWidget(LiveCamApp(
+        app: app,
+        onboardingDone: true,
+        localeController: LocaleController(initial: AppLanguage.ja)));
     await tester.pump();
     expect(find.text('地図'), findsOneWidget);
     expect(find.text('一覧'), findsOneWidget);
     expect(find.text('お気に入り'), findsOneWidget);
     expect(find.text('設定'), findsOneWidget);
+  });
+
+  testWidgets('英語ロケールではタブ名が英語になる', (tester) async {
+    final tmp = Directory(Directory.systemTemp.path);
+    final app = AppState(CameraRepository(
+      api: ApiClient(
+          client: MockClient((_) async => http.Response('not found', 404))),
+      cache: CacheStore(tmp),
+    ));
+    await tester.pumpWidget(LiveCamApp(
+        app: app,
+        onboardingDone: true,
+        localeController: LocaleController(initial: AppLanguage.en)));
+    await tester.pump();
+    expect(find.text('Map'), findsOneWidget);
+    expect(find.text('List'), findsOneWidget);
+    expect(find.text('Disasters'), findsOneWidget);
+    expect(find.text('Favorites'), findsOneWidget);
+    expect(find.text('Settings'), findsOneWidget);
+    expect(find.text('地図'), findsNothing);
   });
 }

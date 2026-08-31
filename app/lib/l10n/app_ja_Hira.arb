@@ -1,0 +1,491 @@
+{
+  "@@locale": "ja_Hira",
+  "appTitle": "全国ライブカメラ地図",
+  "commonClose": "とじる",
+  "commonCancel": "やめる",
+  "commonOk": "けってい",
+  "commonNext": "つぎへ",
+  "commonSkip": "とばす",
+  "commonCopy": "コピー",
+  "commonShare": "ほかの人に おくる",
+  "commonRetry": "もう一回 やる",
+  "commonOpenInSafari": "Safariで ひらく",
+  "commonSource": "じょうほうの もとになった ところ（出典）",
+  "commonCameraCount": "{count}だい",
+  "@commonCameraCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalJapaneseAuthoritative": "この 日本語（にほんご）の 文（ぶん）が 正式（せいしき）です。ほかの ことばは さんこうです。",
+  "languageLabel": "ことば",
+  "languageSettingTitle": "ことば / Language",
+  "languageNameJa": "日本語",
+  "languageNameJaHira": "やさしい日本語",
+  "languageNameEn": "English",
+  "languageFollowSystem": "スマホの せっていに あわせる",
+  "languageChooseTitle": "ことばを えらぶ",
+  "tabMap": "ちず",
+  "tabList": "いちらん",
+  "tabBosai": "さいがいの おしらせ",
+  "tabFavorites": "おきにいり",
+  "tabSettings": "せってい",
+  "onboardingTitle1": "ちずから すぐに さがせます",
+  "onboardingBody1": "日本ぜんこくの ライブカメラを ちずに ならべます。かわ・どうろ・うみ など しゅるいごとに いろが ちがいます。",
+  "onboardingTitle2": "うつらない カメラは じどうで きえます",
+  "onboardingBody2": "アプリが ときどき じどうで しらべます。うつらない カメラは ちずから きえます。えいぞうを とった 時間（じかん）は かならず みせます。",
+  "onboardingTitle3": "だれが だしている えいぞうか わかります",
+  "onboardingBody3": "えいぞうは かならず 「だれが だしているか」と いっしょに みせます。えいぞうの けんりは だした ひとの ものです。",
+  "onboardingDisclaimerTitle": "つかう まえに よんでください",
+  "onboardingAgreeAndStart": "わかりました。はじめる",
+  "disclaimerText": "カメラの えいぞうは せまい ばしょの ようすだけです。くらい ときや 天気（てんき）が わるい ときは よく 見（み）えません。にげるか どうかは、川（かわ）の 水（みず）の たかさ・気象庁（きしょうちょう）の おしらせ・市役所（しやくしょ）の ひなんの おしらせを 見（み）て きめてください。この アプリは さんこうの じょうほうです。",
+  "updateRequiredTitle": "あたらしく してください",
+  "updateRequiredBody": "いまの アプリは もう つかえません。\nApp Storeで あたらしく してください。",
+  "updateOpenStore": "App Storeを ひらく",
+  "categoryRiver": "かわ（河川）",
+  "categoryRoad": "どうろ（道路）",
+  "categoryVolcano": "かざん（火山）",
+  "categoryDam": "ダム",
+  "categoryCoast": "うみ（海岸）",
+  "categoryPort": "みなと（港湾）",
+  "categoryScenic": "けしき（景観）",
+  "categoryHealing": "いやし",
+  "categoryOther": "そのほか",
+  "pref01": "北海道",
+  "pref02": "青森",
+  "pref03": "岩手",
+  "pref04": "宮城",
+  "pref05": "秋田",
+  "pref06": "山形",
+  "pref07": "福島",
+  "pref08": "茨城",
+  "pref09": "栃木",
+  "pref10": "群馬",
+  "pref11": "埼玉",
+  "pref12": "千葉",
+  "pref13": "東京",
+  "pref14": "神奈川",
+  "pref15": "新潟",
+  "pref16": "富山",
+  "pref17": "石川",
+  "pref18": "福井",
+  "pref19": "山梨",
+  "pref20": "長野",
+  "pref21": "岐阜",
+  "pref22": "静岡",
+  "pref23": "愛知",
+  "pref24": "三重",
+  "pref25": "滋賀",
+  "pref26": "京都",
+  "pref27": "大阪",
+  "pref28": "兵庫",
+  "pref29": "奈良",
+  "pref30": "和歌山",
+  "pref31": "鳥取",
+  "pref32": "島根",
+  "pref33": "岡山",
+  "pref34": "広島",
+  "pref35": "山口",
+  "pref36": "徳島",
+  "pref37": "香川",
+  "pref38": "愛媛",
+  "pref39": "高知",
+  "pref40": "福岡",
+  "pref41": "佐賀",
+  "pref42": "長崎",
+  "pref43": "熊本",
+  "pref44": "大分",
+  "pref45": "宮崎",
+  "pref46": "鹿児島",
+  "pref47": "沖縄",
+  "settingsTitle": "せってい",
+  "settingsSupportTitle": "つくった 人（ひと）を おうえんする",
+  "settingsSupportBody": "かんコーヒー 1本（200円）から。一人（ひとり）で つくって います。たすけて ください",
+  "settingsSupportButton": "おうえん",
+  "settingsSectionNotify": "さいがいの おしらせ",
+  "settingsQuakeTitle": "しんど 5弱（じゃく）いじょうの じしん",
+  "settingsQuakeSubtitleOff": "大（おお）きな じしんが あったら おしらせします。ちかくの カメラを 見（み）られます",
+  "settingsQuakeSubtitleOn": "おしらせする おおきさ: {level}",
+  "@settingsQuakeSubtitleOn": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsWarningTitle": "とくべつ けいほう（＝いちばん つよい おしらせ）",
+  "settingsWarningSubtitle": "大雨（おおあめ）・つよい かぜ・高潮（たかしお）などの とくべつ けいほうが 出（で）たら おしらせします",
+  "settingsNotifyArea": "おしらせを うけとる ばしょ",
+  "settingsNotifyAreaAll": "日本ぜんぶ",
+  "settingsNotifyAreaSummary": "{first} など{count}か しょ",
+  "@settingsNotifyAreaSummary": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsNotifyAreaHint": "えらんだ 県（けん）の とくべつ けいほうだけ おしらせします。えらばないと 日本ぜんぶが たいしょうです",
+  "settingsNotifyAreaResetAll": "日本ぜんぶに もどす",
+  "settingsNotifyLevel": "おしらせする つよさ",
+  "settingsNotifyLevelSpecialOnly": "とくべつ けいほうだけ（レベル5）",
+  "settingsNotifyLevelDangerUp": "危険（きけん）けいほうから（レベル4いじょう）",
+  "settingsNotifyLevelNote": "危険（きけん）けいほうは、大雨（おおあめ）・こうずい・高潮（たかしお）・どしゃくずれの レベル4の おしらせです",
+  "settingsNotifyDelayNote": "※おしらせは 気象庁（きしょうちょう）の はっぴょうより 5〜15分（ふん）くらい おそく なることが あります。きんきゅう じしん そくほうの かわりには なりません",
+  "settingsNotifyDenied": "おしらせが きんしに なって います。iOSの せっていで おしらせを ゆるして ください",
+  "settingsSectionData": "データの とりこみ",
+  "settingsWifiOnly": "Wi-Fiの ときだけ しゃしんを とりこむ",
+  "settingsWifiOnlySubtitle": "けいたいの つうしんりょうを へらせます（ちずと カメラの いちらんは 見（み）られます）",
+  "settingsClearCache": "ほぞんした データを けす",
+  "settingsClearCacheSubtitle": "カメラの いちらんなどの ほぞんデータを けして、とりなおします",
+  "settingsClearCacheDone": "ほぞんデータを けして、とりなおしました",
+  "settingsSectionFilterDefaults": "さいしょの しぼりこみ",
+  "settingsShowWorld": "せかいの カメラを 見（み）せる",
+  "settingsVideoOnly": "うごく えいぞうだけ",
+  "settingsHideUncertain": "ばしょが はっきり しない カメラを かくす",
+  "settingsHideUncertainSubtitle": "きいろい わくの ピン（だいたいの ばしょ）を かくします",
+  "settingsFilterDefaultsNote": "ここで きめた ことは、つぎに アプリを ひらいた ときの さいしょの じょうたいに なります（ちずの はんれいからも かえられます）",
+  "settingsSectionRequest": "カメラを ふやす・けす おねがい",
+  "settingsRequestForm": "そうだん・おねがいの フォーム",
+  "settingsRequestFormSubtitle": "カメラを ふやして ほしい とき・けして ほしい ときは ここから（ログインは いりません）。カメラを もって いる 人（ひと）からの 「けして ほしい」には すぐ たいおうします",
+  "settingsSectionLicense": "しゅってん・ライセンス",
+  "settingsAttributionList": "しゅってん・ライセンスの いちらん",
+  "settingsAttributionListSubtitle": "えいぞうを だして いる ところの いちらん",
+  "settingsTerms": "つかいかたの きまり（利用規約）",
+  "settingsPrivacy": "こじん じょうほうの あつかい（プライバシーポリシー）",
+  "settingsLegalJapaneseOnly": "つかいかたの きまりと こじん じょうほうの あつかいは 日本語（にほんご）だけです（日本語が 正式（せいしき）です）",
+  "settingsSectionAbout": "この アプリに ついて",
+  "settingsVersion": "バージョン",
+  "settingsInvite": "ともだちを さそう",
+  "settingsInviteSubtitle": "QRコードか リンクで App Storeの ページを おくる",
+  "settingsInviteDialogBody": "QRコードを よみとるか、リンクを おくると\nApp Storeの ページが ひらきます",
+  "settingsInviteShareText": "全国ライブカメラ地図 - かわ・どうろ・ぼうさい",
+  "settingsLinkCopied": "リンクを コピーしました",
+  "settingsReview": "アプリを ひょうかする",
+  "settingsReviewSubtitle": "App Storeに かんそうを かく",
+  "settingsFollowX": "Xで フォローする",
+  "settingsFollowXSubtitle": "@kotopapa8 — あたらしい カメラや きのうの おしらせ",
+  "settingsOtherApps": "つくった 人（ひと）の ほかの アプリ",
+  "settingsShowMoreApps": "ほかの アプリを 見（み）る",
+  "settingsSectionDisclaimer": "きを つけて ほしい こと（免責）",
+  "settingsOssLicenses": "OSSライセンス",
+  "settingsNotifyDiag": "おしらせの チェック",
+  "settingsNotifyDiagSubtitle": "おしらせが こない ときの チェック",
+  "settingsNotifyDiagUnlocked": "おしらせの チェックを 出（だ）しました（さいがいの おしらせの なかです）",
+  "settingsNotifyPermission": "おしらせの きょか: {value}",
+  "@settingsNotifyPermission": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsNotifyApns": "APNsトークン: {value}",
+  "@settingsNotifyApns": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsNotifyFcm": "FCMトークン:",
+  "settingsCopyToken": "トークンを コピー",
+  "settingsTokenCopied": "FCMトークンを コピーしました",
+  "settingsCrashDiag": "きゅうに とまった ときの きろく",
+  "settingsCrashDiagSubtitle": "きゅうに とまった ときの きろく（MetricKit）を 見（み）る・コピーする",
+  "settingsCrashDiagNone": "きろくは まだ ありません",
+  "settingsCrashDiagNoneHint": "きろくは まだ ありません。\nとまった あとに アプリを もう一回（いっかい）ひらくと きろくされます",
+  "settingsCopyFullText": "ぜんぶ コピー",
+  "settingsJsonCopied": "きろくの JSONを コピーしました",
+  "attributionScreenTitle": "しゅってん・ライセンスの いちらん",
+  "attributionOpenYoutube": "YouTubeで だしもとを 見（み）る",
+  "attributionOpenSite": "だしもとの サイトを ひらく",
+  "listTitle": "いちらん（{count}）",
+  "@listTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "listSearchHint": "カメラの なまえ・かわの なまえ・どうろの なまえで さがす",
+  "listEmpty": "じょうけんに あう カメラは ありません",
+  "listRanking": "ランキング",
+  "favoritesTitle": "おきにいり（{count}）",
+  "@favoritesTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "favoritesEmpty": "おきにいりは まだ ありません。\nちずで カメラを ひらいて ★を おすと ふえます。",
+  "favoritesEmptyFiltered": "しぼりこみに あう おきにいりは ありません",
+  "favoritesSort": "ならびかえ",
+  "favoritesSortNewest": "あたらしく いれた じゅん",
+  "favoritesSortOldest": "ふるく いれた じゅん",
+  "favoritesSortName": "なまえの じゅん",
+  "favoritesSortCategory": "しゅるいの じゅん",
+  "favoritesToggleView": "みせかたを かえる",
+  "favoritesRefreshAll": "まとめて あたらしく する（3つずつ）",
+  "favoritesVideoOnly": "うごく えいぞうだけ",
+  "rankingTitle": "ぜんこく ランキング",
+  "rankingModeNow": "いま よく 見（み）られて いる（24時間 トップ10）",
+  "rankingModeWeek": "よく 見（み）られて いる（7日間 トップ30）",
+  "rankingModeFavorites": "おきにいりの かず",
+  "rankingNote": "みんなの 名前（なまえ）の ない きろくから つくって います（まいにち あたらしく なります）",
+  "rankingEmpty": "まだ データが ありません（1日 1回 あたらしく なります）",
+  "rankingPreparing": "ぜんこく ランキングは じゅんびちゅうです。\n3時間ごとに あつめて います。",
+  "rankingFetchFailed": "とれませんでした",
+  "rankingFetchFailedHttp": "とれませんでした（HTTP {code}）",
+  "@rankingFetchFailedHttp": {
+    "placeholders": {
+      "code": {
+        "type": "int"
+      }
+    }
+  },
+  "rankingUnitViews": "かい",
+  "rankingUnitFavorites": "けん",
+  "detailLive": "いま ライブ",
+  "detailTimeUnknown": "とった 時間（じかん）が わかりません",
+  "detailRefreshEvery": "{sec}びょうごとに あたらしく なります",
+  "@detailRefreshEvery": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "detailRefreshIn": "{sec}びょう",
+  "@detailRefreshIn": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "detailRefreshNow": "あたらしく する",
+  "detailPosRepresentative": "ばしょは だいたいの ちてん",
+  "detailPosApprox": "ばしょは だいたい",
+  "detailNotUpdating": "しゃしんが あたらしく なって いません",
+  "detailWorld": "がいこく",
+  "detailCategoryAndPlace": "しゅるい・ばしょ",
+  "detailOpenMap": "ちずで 見（み）る",
+  "detailOpenSourceSite": "だしもとの サイトを 見（み）る",
+  "detailOpenYoutube": "YouTubeで 見（み）る",
+  "detailOpenChannel": "チャンネルの ページを 見（み）る",
+  "detailOpenOriginalPage": "もとの ページで 見（み）る",
+  "detailReportProblem": "この カメラの ちょうしが わるい ことを しらせる",
+  "detailNearby": "ちかくの カメラ",
+  "detailDistanceKm": "だいたい {km}km",
+  "@detailDistanceKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "detailWifiOnlyBlocked": "せっていで、Wi-Fiの ときだけ しゃしんを とる ように なって います",
+  "detailNoImage": "いまは えいぞうを とれません",
+  "detailEmbedBlockedYoutube": "だしもとの せっていで、この えいぞうは\nアプリの なかでは 見（み）られません",
+  "detailEmbedBlockedPage": "だしもとの きまりで\nアプリの なかでは 見（み）られません",
+  "detailIHighwayTitle": "NEXCOの こうしき「iHighway」で\nライブカメラを 見（み）る",
+  "detailIHighwayBody": "おすと アプリの なかで こうしきサイトが ひらいて、\nこの カメラの ばしょまで じどうで うごきます",
+  "detailIHighwayHost": "ihighway.jp（NEXCOの こうしき）",
+  "detailMapTileGsi": "地理院（ちりいん）タイル",
+  "elevationLoading": "たかさ …",
+  "elevationValue": "たかさ {value}（{source}）",
+  "@elevationValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "timeTakenAt": "{time} に とりました{relative}",
+  "@timeTakenAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "relative": {
+        "type": "String"
+      }
+    }
+  },
+  "timeRelJustNow": "（いま）",
+  "timeRelMinutes": "（{n}ふん まえ）",
+  "@timeRelMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "timeRelHours": "（{n}じかん まえ）",
+  "@timeRelHours": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "timeMonthDay": "{month}月{day}日",
+  "@timeMonthDay": {
+    "placeholders": {
+      "month": {
+        "type": "int"
+      },
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "intensity5Lower": "5弱（じゃく）",
+  "intensity5Upper": "5強（きょう）",
+  "intensity6Lower": "6弱（じゃく）",
+  "intensity6Upper": "6強（きょう）",
+  "quakeLevel5Lower": "しんど 5弱（じゃく）いじょう",
+  "quakeLevel5Upper": "しんど 5強（きょう）いじょう",
+  "quakeLevel6Lower": "しんど 6弱（じゃく）いじょう",
+  "warning02": "ゆきと つよい かぜの けいほう（暴風雪警報）",
+  "warning03": "大雨（おおあめ）の けいほう（大雨警報）",
+  "warning04": "こうずいの けいほう（洪水警報）",
+  "warning05": "つよい かぜの けいほう（暴風警報）",
+  "warning06": "大雪（おおゆき）の けいほう（大雪警報）",
+  "warning07": "たかい なみの けいほう（波浪警報）",
+  "warning08": "たかしおの けいほう（高潮警報）",
+  "warning09": "どしゃくずれの けいほう（土砂災害警報）",
+  "warning43": "大雨（おおあめ）が あぶない（大雨危険警報・レベル4）",
+  "warning44": "川（かわ）が あふれる きけんが あります（洪水危険警報・レベル4）",
+  "warning48": "たかしおが あぶない（高潮危険警報・レベル4）",
+  "warning49": "どしゃくずれが あぶない（土砂災害危険警報・レベル4）",
+  "warning32": "ゆきと かぜが とても きけん（暴風雪特別警報・レベル5）",
+  "warning33": "大雨（おおあめ）が とても きけん（大雨特別警報・レベル5）",
+  "warning34": "川（かわ）が あふれて とても きけん（洪水特別警報・レベル5）",
+  "warning35": "かぜが とても きけん（暴風特別警報・レベル5）",
+  "warning36": "大雪（おおゆき）が とても きけん（大雪特別警報・レベル5）",
+  "warning37": "なみが とても たかくて きけん（波浪特別警報・レベル5）",
+  "warning38": "たかしおが とても きけん（高潮特別警報・レベル5）",
+  "warning39": "どしゃくずれが とても きけん（土砂災害特別警報・レベル5）",
+  "advisory10": "大雨（おおあめ）に きを つけて（大雨注意報）",
+  "advisory12": "大雪（おおゆき）に きを つけて（大雪注意報）",
+  "advisory13": "ゆきと かぜに きを つけて（風雪注意報）",
+  "advisory14": "かみなりに きを つけて（雷注意報）",
+  "advisory15": "つよい かぜに きを つけて（強風注意報）",
+  "advisory16": "たかい なみに きを つけて（波浪注意報）",
+  "advisory17": "ゆきが とけるので きを つけて（融雪注意報）",
+  "advisory18": "こうずいに きを つけて（洪水注意報）",
+  "advisory19": "たかしおに きを つけて（高潮注意報）",
+  "advisory20": "こい きりに きを つけて（濃霧注意報）",
+  "advisory21": "くうきが かわいて います（乾燥注意報）",
+  "advisory22": "なだれに きを つけて（なだれ注意報）",
+  "advisory23": "きおんが ひくいので きを つけて（低温注意報）",
+  "advisory24": "しもに きを つけて（霜注意報）",
+  "advisory25": "こおりが つくので きを つけて（着氷注意報）",
+  "advisory26": "ゆきが つくので きを つけて（着雪注意報）",
+  "advisory29": "どしゃくずれに きを つけて（土砂災害注意報）",
+  "mapLocationDenied": "いまの ばしょを つかう ことが きんしに なって います（せっていで かえられます）",
+  "mapLocationFailed": "いまの ばしょが わかりませんでした",
+  "mapLegendTitle": "はんれい・しぼりこみ",
+  "mapLegendSearchHint": "カメラの なまえ・だしもと・かわ／どうろの なまえで さがす",
+  "mapFilterFavoritesOnly": "おきにいりだけ",
+  "mapFilterOkOnly": "いま うつって いる ものだけ",
+  "mapLegendLiveDot": "あかい てん ＝ うごく えいぞう（ライブ）",
+  "mapLegendUncertain": "きいろい わく ＝ ばしょが はっきり しない（だいたい）",
+  "mapLegendFrozen": "うすい ピン ＝ しゃしんが ながい あいだ あたらしく なって いない",
+  "mapLegendFavorite": "きんの ほし ＝ おきにいり",
+  "mapLegendCluster": "すうじの まる ＝ ちかくの カメラの まとまり（おすと ズーム）",
+  "mapSearchTitle": "ばしょを さがす",
+  "mapSearchHint": "ちめい・じゅうしょ（れい: 渋谷、金沢市広坂）",
+  "mapSearchNotFound": "見（み）つかりませんでした。ちめい・じゅうしょ・カメラの なまえで ためして ください",
+  "mapSearchSectionCameras": "カメラ",
+  "mapSearchSectionPlaces": "ばしょ",
+  "mapPointCameras": "ここの カメラ（{count}だい）",
+  "@mapPointCameras": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapFilteredCount": "しぼりこみちゅう {count}だい",
+  "@mapFilteredCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapTotalCount": "{count}だい",
+  "@mapTotalCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapLayersTooltip": "ちずの レイヤー",
+  "bosaiTitle": "さいがいの おしらせ",
+  "bosaiTabQuake": "じしん・つなみ",
+  "bosaiTabWarning": "きしょうの けいほう",
+  "bosaiTabHeat": "ねっちゅうしょう",
+  "bosaiNoWarnings": "いま、けいほうと ちゅういほうは 出（で）て いません",
+  "bosaiWarningNoteNone": "出典（しゅってん）：気象庁。いま けいほうは 出（で）て いません。ちゅういほうだけの ばしょは 下（した）の いちらんで 見（み）られます。",
+  "bosaiWarningNote": "出典（しゅってん）：気象庁。おすと その 県（けん）の カメラの いちらんが 出（で）ます。",
+  "bosaiAdvisoryRegions": "ちゅういほうが 出（で）て いる ばしょ（{count}の 県（けん）など）",
+  "@bosaiAdvisoryRegions": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiWarningAreasTitle": "{pref}で けいほうが 出（で）て いる ばしょ",
+  "@bosaiWarningAreasTitle": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiAdvisoryAreasTitle": "{pref}で ちゅういほうが 出（で）て いる ばしょ",
+  "@bosaiAdvisoryAreasTitle": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiMuniNote": "出典（しゅってん）：気象庁。おすと その 市（し）・町（まち）の カメラの いちらんが 出（で）ます",
+  "bosaiMuniFetchFailed": "くわしい ばしょが とれませんでした",
+  "bosaiMuniNone": "いま、出（で）て いる 市（し）・町（まち）は ありません",
+  "bosaiCameraCount": "カメラ {count}だい",
+  "@bosaiCameraCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiNoCamera": "カメラは ありません",
+  "bosaiMuniCamerasTitle": "{name}の カメラ（けいほうが 出（で）て います）",
+  "@bosaiMuniCamerasTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsJmaDictionary": "ぼうさいの ことばの ほんやくに ついて",
+  "settingsJmaDictionaryNote": "けいほうや しんどの ことばの ほんやくは、気象庁（きしょうちょう）の 「多言語辞書（たげんごじしょ）」を つかって います。出典（しゅってん）：気象庁ホームページ"
+}

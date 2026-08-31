@@ -15,14 +15,19 @@ import 'package:in_app_review/in_app_review.dart';
 
 import '../app_state.dart';
 import '../config.dart';
+import '../data/locale_controller.dart';
 import '../data/notification_settings.dart';
-import '../util/prefectures.dart';
-import 'detail_screen.dart' show disclaimerText;
+import '../l10n/l10n.dart';
+import 'detail_screen.dart' show disclaimerTextOf;
+import 'language_switcher.dart';
 
 const _requestFormUrl =
     'https://docs.google.com/forms/d/e/1FAIpQLScRz0Enqfrq-lrbuDVBdFD1jwSyl4GJEZtgTJxAoZfYo-QWJw/viewform';
 const _termsUrl = 'https://kotopapa.github.io/livecam-jp/terms.html';
 const _privacyUrl = 'https://kotopapa.github.io/livecam-jp/privacy.html';
+/// 気象庁「気象情報等に関する多言語辞書」（防災用語の各言語訳の出典）。
+/// 公共データ利用規約（第1.0版）＝CC BY 4.0互換。出典表示が必須
+const _jmaDictionaryUrl = 'https://www.data.jma.go.jp/developer/multilingual.html';
 /// 開発者のXアカウント（Xアプリがあればユニバーサルリンクでアプリが開く）
 const _xUrl = 'https://x.com/kotopapa8';
 
@@ -32,9 +37,11 @@ Future<void> _open(String url) =>
 /// 設定タブ（SPEC 9.2⑥）。
 /// 置いてはいけない項目: 更新間隔の変更（60秒固定）・プッシュ通知（スコープ外）。
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({super.key, required this.app});
+  const SettingsScreen(
+      {super.key, required this.app, required this.localeController});
 
   final AppState app;
+  final LocaleController localeController;
 
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
@@ -64,10 +71,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
     showDialog<void>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('友達を招待する'),
+        title: Text(context.l10n.settingsInvite),
         content: Column(mainAxisSize: MainAxisSize.min, children: [
-          const Text('QRコードを読み取るか、リンクを送ると\nApp Storeのアプリページが開きます',
-              textAlign: TextAlign.center, style: TextStyle(fontSize: 13)),
+          Text(context.l10n.settingsInviteDialogBody,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 13)),
           const SizedBox(height: 12),
           Container(
             color: Colors.white,
@@ -82,22 +90,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
         actions: [
           TextButton.icon(
             icon: const Icon(Icons.copy, size: 18),
-            label: const Text('コピー'),
+            label: Text(context.l10n.commonCopy),
             onPressed: () {
               Clipboard.setData(ClipboardData(text: url));
-              ScaffoldMessenger.of(this.context).showSnackBar(
-                  const SnackBar(content: Text('リンクをコピーしました')));
+              ScaffoldMessenger.of(this.context).showSnackBar(SnackBar(
+                  content: Text(this.context.l10n.settingsLinkCopied)));
             },
           ),
           TextButton.icon(
             icon: const Icon(Icons.ios_share, size: 18),
-            label: const Text('共有'),
+            label: Text(context.l10n.commonShare),
             onPressed: () => SharePlus.instance.share(ShareParams(
-                text: '全国ライブカメラ地図 - 河川・道路・防災\n$url')),
+                text: '${this.context.l10n.settingsInviteShareText}\n$url')),
           ),
           TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('閉じる')),
+              child: Text(context.l10n.commonClose)),
         ],
       ),
     );
@@ -115,8 +123,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   void _showPermissionDenied() {
-    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text('通知が許可されていません。iOSの設定アプリから通知を許可してください')));
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(context.l10n.settingsNotifyDenied)));
   }
 
   AppState get app => widget.app;
@@ -127,21 +135,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
       await app.clearCacheAndReload();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('キャッシュを削除して再取得しました')));
+            SnackBar(content: Text(context.l10n.settingsClearCacheDone)));
       }
     } finally {
       if (mounted) setState(() => _clearingCache = false);
     }
   }
 
-  String _warningPrefsSummary() {
+  String _warningPrefsSummary(AppLocalizations l10n) {
     final prefs = _notify.warningPrefs;
-    if (prefs.isEmpty) return '全国';
-    final names = (prefs.toList()..sort())
-        .map((c) => prefectureNames[c] ?? c)
-        .toList();
-    if (names.length <= 3) return names.join('・');
-    return '${names.take(3).join('・')} など${names.length}件';
+    if (prefs.isEmpty) return l10n.settingsNotifyAreaAll;
+    final names =
+        (prefs.toList()..sort()).map((c) => prefectureNameOf(l10n, c)).toList();
+    final sep =
+        Localizations.localeOf(context).languageCode == 'ja' ? '・' : ', ';
+    if (names.length <= 3) return names.join(sep);
+    return l10n.settingsNotifyAreaSummary(names.take(3).join(sep), names.length);
   }
 
   // 通知診断の隠し表示(バージョン5回タップで解放)
@@ -151,13 +160,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
   /// MetricKitがDocuments/mx_diagnosticsへ保存した診断JSONを表示する。
   /// クラッシュ翌回の起動時に配送されるため、再現直後に開くと記録がある
   Future<void> _showCrashDiagnosis() async {
+    final l10n = context.l10n;
     String summary = '';
     String latestJson = '';
     try {
       final docs = await getApplicationDocumentsDirectory();
       final dir = Directory('${docs.path}/mx_diagnostics');
       if (!dir.existsSync()) {
-        summary = '診断データはまだありません。\nクラッシュ後にアプリを起動し直すと記録されます';
+        summary = l10n.settingsCrashDiagNoneHint;
       } else {
         final files = dir
             .listSync()
@@ -166,7 +176,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             .toList()
           ..sort((a, b) => b.path.compareTo(a.path));
         if (files.isEmpty) {
-          summary = '診断データはまだありません';
+          summary = l10n.settingsCrashDiagNone;
         } else {
           summary = '記録: ${files.length}件\n最新: ${files.first.uri.pathSegments.last}';
           latestJson = files.first.readAsStringSync();
@@ -190,7 +200,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     showDialog<void>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('クラッシュ診断データ'),
+        title: Text(l10n.settingsCrashDiag),
         content: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -215,19 +225,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onPressed: () {
                 Clipboard.setData(ClipboardData(text: latestJson));
                 ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('診断JSONをコピーしました')));
+                    SnackBar(content: Text(l10n.settingsJsonCopied)));
               },
-              child: const Text('全文をコピー'),
+              child: Text(l10n.settingsCopyFullText),
             ),
           TextButton(
               onPressed: () => Navigator.of(ctx).pop(),
-              child: const Text('閉じる')),
+              child: Text(l10n.commonClose)),
         ],
       ),
     );
   }
 
   Future<void> _showNotifyDiagnosis() async {
+    final l10n = context.l10n;
     final fm = fbm.FirebaseMessaging.instance;
     String perm = '取得失敗', apns = '取得失敗', fcm = '取得失敗';
     try {
@@ -249,17 +260,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
     showDialog<void>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('通知診断'),
+        title: Text(l10n.settingsNotifyDiag),
         content: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('通知許可: $perm'),
+              Text(l10n.settingsNotifyPermission(perm)),
               const SizedBox(height: 6),
-              Text('APNsトークン: $apns'),
+              Text(l10n.settingsNotifyApns(apns)),
               const SizedBox(height: 6),
-              const Text('FCMトークン:'),
+              Text(l10n.settingsNotifyFcm),
               SelectableText(fcm, style: const TextStyle(fontSize: 11)),
             ],
           ),
@@ -269,32 +280,33 @@ class _SettingsScreenState extends State<SettingsScreen> {
             onPressed: () {
               Clipboard.setData(ClipboardData(text: fcm));
               ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('FCMトークンをコピーしました')));
+                  SnackBar(content: Text(l10n.settingsTokenCopied)));
             },
-            child: const Text('トークンをコピー'),
+            child: Text(l10n.settingsCopyToken),
           ),
           TextButton(
               onPressed: () => Navigator.of(ctx).pop(),
-              child: const Text('閉じる')),
+              child: Text(l10n.commonClose)),
         ],
       ),
     );
   }
 
   Future<void> _pickWarningPrefs() async {
+    final l10n = context.l10n;
     final selected = Set<String>.from(_notify.warningPrefs);
     final result = await showDialog<Set<String>>(
       context: context,
       builder: (context) => StatefulBuilder(
         builder: (context, setDialogState) => AlertDialog(
-          title: const Text('通知する地域'),
+          title: Text(l10n.settingsNotifyArea),
           contentPadding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
           content: SizedBox(
             width: double.maxFinite,
             child: Column(mainAxisSize: MainAxisSize.min, children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Text('選択した都道府県の特別警報のみ通知します。何も選ばない場合は全国が対象になります',
+                child: Text(l10n.settingsNotifyAreaHint,
                     style: TextStyle(fontSize: 12, color: Colors.grey[600])),
               ),
               Flexible(
@@ -302,7 +314,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   for (final code in NotificationSettings.allPrefCodes)
                     CheckboxListTile(
                       dense: true,
-                      title: Text(prefectureNames[code] ?? code),
+                      title: Text(prefectureNameOf(l10n, code)),
                       value: selected.contains(code),
                       onChanged: (v) => setDialogState(() =>
                           v! ? selected.add(code) : selected.remove(code)),
@@ -314,15 +326,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
           actions: [
             TextButton(
               onPressed: () => setDialogState(selected.clear),
-              child: const Text('全国に戻す'),
+              child: Text(l10n.settingsNotifyAreaResetAll),
             ),
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('キャンセル'),
+              child: Text(l10n.commonCancel),
             ),
             FilledButton(
               onPressed: () => Navigator.of(context).pop(selected),
-              child: const Text('決定'),
+              child: Text(l10n.commonOk),
             ),
           ],
         ),
@@ -335,18 +347,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Scaffold(
-      appBar: AppBar(title: const Text('設定')),
+      appBar: AppBar(title: Text(l10n.settingsTitle)),
       body: ListView(children: [
         _SupportCard(onTap: () => Navigator.of(context).push(
             MaterialPageRoute(builder: (_) => const TipScreen()))),
-        const _SectionHeader('災害通知'),
+        // 言語切替（1.4.0。いつでも切り替えられる。選択は端末に保存される）
+        LanguageSettingTile(controller: widget.localeController),
+        const Divider(),
+        _SectionHeader(l10n.settingsSectionNotify),
         SwitchListTile(
           secondary: const Icon(Icons.rss_feed),
-          title: const Text('震度5弱以上の地震'),
+          title: Text(l10n.settingsQuakeTitle),
           subtitle: Text(_notifyLoaded && _notify.quakeEnabled
-              ? '通知レベル: ${NotificationSettings.quakeLevelLabels[_notify.quakeLevel]}'
-              : '大きな地震の発生を通知し、周辺カメラへ誘導します'),
+              ? l10n.settingsQuakeSubtitleOn(
+                  quakeLevelLabelOf(l10n, _notify.quakeLevel))
+              : l10n.settingsQuakeSubtitleOff),
           value: _notifyLoaded && _notify.quakeEnabled,
           onChanged: !_notifyLoaded
               ? null
@@ -362,8 +379,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Wrap(spacing: 8, children: [
               for (final level in NotificationSettings.quakeLevels)
                 ChoiceChip(
-                  label: Text(
-                      NotificationSettings.quakeLevelLabels[level] ?? level),
+                  label: Text(quakeLevelLabelOf(l10n, level)),
                   selected: _notify.quakeLevel == level,
                   onSelected: (_) async {
                     await _notify.setQuakeLevel(level);
@@ -374,8 +390,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
         SwitchListTile(
           secondary: const Icon(Icons.warning_amber_outlined),
-          title: const Text('特別警報'),
-          subtitle: const Text('大雨・暴風・高潮などの特別警報の発表を通知します'),
+          title: Text(l10n.settingsWarningTitle),
+          subtitle: Text(l10n.settingsWarningSubtitle),
           value: _notifyLoaded && _notify.warningEnabled,
           onChanged: !_notifyLoaded
               ? null
@@ -388,8 +404,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
         if (_notifyLoaded && _notify.warningEnabled) ...[
           ListTile(
             contentPadding: const EdgeInsets.only(left: 72, right: 16),
-            title: const Text('通知する地域'),
-            subtitle: Text(_warningPrefsSummary()),
+            title: Text(l10n.settingsNotifyArea),
+            subtitle: Text(_warningPrefsSummary(l10n)),
             trailing: const Icon(Icons.chevron_right),
             onTap: _pickWarningPrefs,
           ),
@@ -398,11 +414,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('通知するレベル'),
+                Text(l10n.settingsNotifyLevel),
                 const SizedBox(height: 4),
                 Wrap(spacing: 8, children: [
                   ChoiceChip(
-                    label: const Text('特別警報のみ（レベル5）'),
+                    label: Text(l10n.settingsNotifyLevelSpecialOnly),
                     selected: _notify.warningLevel == '5',
                     onSelected: (_) async {
                       await _notify.setWarningLevel('5');
@@ -410,7 +426,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     },
                   ),
                   ChoiceChip(
-                    label: const Text('危険警報から（レベル4以上）'),
+                    label: Text(l10n.settingsNotifyLevelDangerUp),
                     selected: _notify.warningLevel == '4',
                     onSelected: (_) async {
                       await _notify.setWarningLevel('4');
@@ -419,7 +435,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                 ]),
                 const SizedBox(height: 2),
-                Text('危険警報は大雨・洪水・高潮・土砂災害の警戒レベル4相当の発表です',
+                Text(l10n.settingsNotifyLevelNote,
                     style: TextStyle(fontSize: 11, color: Colors.grey[600])),
               ],
             ),
@@ -428,28 +444,28 @@ class _SettingsScreenState extends State<SettingsScreen> {
         if (_diagUnlocked) ...[
           ListTile(
             leading: const Icon(Icons.troubleshoot),
-            title: const Text('通知診断'),
-            subtitle: const Text('通知が届かないときの状態確認'),
+            title: Text(l10n.settingsNotifyDiag),
+            subtitle: Text(l10n.settingsNotifyDiagSubtitle),
             onTap: _showNotifyDiagnosis,
           ),
           ListTile(
             leading: const Icon(Icons.bug_report_outlined),
-            title: const Text('クラッシュ診断データ'),
-            subtitle: const Text('強制終了の記録(MetricKit)を表示・コピー'),
+            title: Text(l10n.settingsCrashDiag),
+            subtitle: Text(l10n.settingsCrashDiagSubtitle),
             onTap: _showCrashDiagnosis,
           ),
         ],
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Text('※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません',
+          child: Text(l10n.settingsNotifyDelayNote,
               style: TextStyle(fontSize: 11, color: Colors.grey[600])),
         ),
         const Divider(),
-        const _SectionHeader('データ取得'),
+        _SectionHeader(l10n.settingsSectionData),
         SwitchListTile(
           secondary: const Icon(Icons.wifi),
-          title: const Text('Wi-Fi接続時のみ画像を取得'),
-          subtitle: const Text('モバイル通信量を抑えます（地図とカメラ一覧は表示されます）'),
+          title: Text(l10n.settingsWifiOnly),
+          subtitle: Text(l10n.settingsWifiOnlySubtitle),
           value: app.wifiOnly,
           onChanged: (v) async {
             await app.setWifiOnly(v);
@@ -458,8 +474,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         ListTile(
           leading: const Icon(Icons.delete_outline),
-          title: const Text('キャッシュを削除'),
-          subtitle: const Text('カメラ一覧などの保存データを消去して再取得します'),
+          title: Text(l10n.settingsClearCache),
+          subtitle: Text(l10n.settingsClearCacheSubtitle),
           trailing: _clearingCache
               ? const SizedBox(
                   width: 18, height: 18,
@@ -468,10 +484,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
           onTap: _clearingCache ? null : _clearCache,
         ),
         const Divider(),
-        const _SectionHeader('フィルタの初期設定'),
+        _SectionHeader(l10n.settingsSectionFilterDefaults),
         SwitchListTile(
           secondary: const Icon(Icons.public),
-          title: const Text('世界のカメラを表示'),
+          title: Text(l10n.settingsShowWorld),
           value: app.showWorld,
           onChanged: (v) async {
             app.setShowWorld(v);
@@ -481,7 +497,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         SwitchListTile(
           secondary: const Icon(Icons.videocam_outlined),
-          title: const Text('動画カメラのみ'),
+          title: Text(l10n.settingsVideoOnly),
           value: app.videoOnly,
           onChanged: (v) async {
             app.setVideoOnly(v);
@@ -491,8 +507,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         SwitchListTile(
           secondary: const Icon(Icons.location_off_outlined),
-          title: const Text('位置が曖昧なカメラを非表示'),
-          subtitle: const Text('黄色い縁取りのピン（おおよそ/代表点）を隠します'),
+          title: Text(l10n.settingsHideUncertain),
+          subtitle: Text(l10n.settingsHideUncertainSubtitle),
           value: app.hideUncertain,
           onChanged: (v) async {
             app.setHideUncertain(v);
@@ -502,42 +518,55 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Text('ここで設定した内容は次回起動時の初期状態になります（地図の凡例からも一時的に変更できます）',
+          child: Text(l10n.settingsFilterDefaultsNote,
               style: TextStyle(fontSize: 11, color: Colors.grey[600])),
         ),
         const Divider(),
-        const _SectionHeader('カメラの追加・削除のご依頼'),
+        _SectionHeader(l10n.settingsSectionRequest),
         ListTile(
           leading: const Icon(Icons.contact_support_outlined),
-          title: const Text('ご相談・依頼フォーム'),
-          subtitle: const Text('カメラの追加要請・掲載削除の依頼はこちらから（ログイン不要）。'
-              '設置者・運営者の方からの削除のお申し出には速やかに対応します'),
+          title: Text(l10n.settingsRequestForm),
+          subtitle: Text(l10n.settingsRequestFormSubtitle),
           onTap: () => _open(_requestFormUrl),
         ),
         const Divider(),
-        const _SectionHeader('出典・ライセンス'),
+        _SectionHeader(l10n.settingsSectionLicense),
         ListTile(
           leading: const Icon(Icons.source_outlined),
-          title: const Text('出典・ライセンス一覧'),
-          subtitle: const Text('カメラ映像の提供元の一覧'),
+          title: Text(l10n.settingsAttributionList),
+          subtitle: Text(l10n.settingsAttributionListSubtitle),
           onTap: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => _AttributionScreen(app: app))),
         ),
+        // 気象庁「気象情報等に関する多言語辞書」の出典表示（公共データ利用規約）
+        ListTile(
+          leading: const Icon(Icons.translate),
+          title: Text(l10n.settingsJmaDictionary),
+          subtitle: Text(l10n.settingsJmaDictionaryNote),
+          trailing: const Icon(Icons.open_in_new, size: 18),
+          onTap: () => _open(_jmaDictionaryUrl),
+        ),
         ListTile(
           leading: const Icon(Icons.gavel_outlined),
-          title: const Text('利用規約'),
+          title: Text(l10n.settingsTerms),
           onTap: () => _open(_termsUrl),
         ),
         ListTile(
           leading: const Icon(Icons.privacy_tip_outlined),
-          title: const Text('プライバシーポリシー'),
+          title: Text(l10n.settingsPrivacy),
           onTap: () => _open(_privacyUrl),
         ),
+        // 規約類の本文は日本語のみ。日本語を正文とする旨をアプリ内に明示する
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+          child: Text(l10n.settingsLegalJapaneseOnly,
+              style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+        ),
         const Divider(),
-        const _SectionHeader('このアプリについて'),
+        _SectionHeader(l10n.settingsSectionAbout),
         ListTile(
           leading: const Icon(Icons.info_outline),
-          title: const Text('バージョン'),
+          title: Text(l10n.settingsVersion),
           subtitle: const Text(appVersion),
           // 隠し機能: 5回タップで「通知診断」を表示する
           onTap: () {
@@ -545,32 +574,32 @@ class _SettingsScreenState extends State<SettingsScreen> {
             _diagTapCount++;
             if (_diagTapCount >= 5) {
               setState(() => _diagUnlocked = true);
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                  content: Text('通知診断を表示しました（災害通知の項目内）')));
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(l10n.settingsNotifyDiagUnlocked)));
             }
           },
         ),
         ListTile(
           leading: const Icon(Icons.qr_code_2),
-          title: const Text('友達を招待する'),
-          subtitle: const Text('QRコードまたはリンクでApp Storeのページを共有'),
+          title: Text(l10n.settingsInvite),
+          subtitle: Text(l10n.settingsInviteSubtitle),
           onTap: _showInvite,
         ),
         ListTile(
           leading: const Icon(Icons.star_rate_outlined),
-          title: const Text('アプリを評価する'),
-          subtitle: const Text('App Storeでレビューを書く'),
+          title: Text(l10n.settingsReview),
+          subtitle: Text(l10n.settingsReviewSubtitle),
           onTap: _openReview,
         ),
         ListTile(
           leading: const Icon(Icons.alternate_email),
-          title: const Text('Xでフォローする'),
-          subtitle: const Text('@kotopapa8 — 新しいカメラや機能のお知らせ'),
+          title: Text(l10n.settingsFollowX),
+          subtitle: Text(l10n.settingsFollowXSubtitle),
           onTap: () => _open(_xUrl),
         ),
         if (widget.app.repository.manifest?.apps.isNotEmpty ?? false) ...[
           const Divider(),
-          const _SectionHeader('開発者の他のアプリ'),
+          _SectionHeader(l10n.settingsOtherApps),
           for (final a in widget.app.repository.manifest!.apps)
             if (!a.collapsed || _showMoreApps)
             ListTile(
@@ -591,25 +620,32 @@ class _SettingsScreenState extends State<SettingsScreen> {
             TextButton.icon(
               onPressed: () => setState(() => _showMoreApps = true),
               icon: const Icon(Icons.expand_more),
-              label: const Text('その他のアプリを見る'),
+              label: Text(l10n.settingsShowMoreApps),
             ),
         ],
         const Divider(),
-        const _SectionHeader('免責'),
+        _SectionHeader(l10n.settingsSectionDisclaimer),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Text(disclaimerText,
-              style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(disclaimerTextOf(l10n),
+                style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+            if (widget.localeController.language != AppLanguage.ja) ...[
+              const SizedBox(height: 4),
+              Text(l10n.legalJapaneseAuthoritative,
+                  style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+            ],
+          ]),
         ),
         // OSSライセンス（表示義務あり。控えめなテキストリンクとして最下部に置く）
         Center(
           child: TextButton(
             onPressed: () => showLicensePage(
               context: context,
-              applicationName: '全国ライブカメラ地図',
+              applicationName: l10n.appTitle,
               applicationVersion: appVersion,
             ),
-            child: Text('OSSライセンス',
+            child: Text(l10n.settingsOssLicenses,
                 style: TextStyle(fontSize: 12, color: Colors.grey[600])),
           ),
         ),
@@ -652,13 +688,13 @@ class _SupportCard extends StatelessWidget {
                 child: const Icon(Icons.volunteer_activism, color: accent, size: 28),
               ),
               const SizedBox(width: 12),
-              const Expanded(
+              Expanded(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('開発者を応援する',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: accent)),
-                  SizedBox(height: 2),
-                  Text('缶コーヒー1本(¥200)から。個人開発の継続を支えてください',
-                      style: TextStyle(fontSize: 12, color: Colors.black87)),
+                  Text(context.l10n.settingsSupportTitle,
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: accent)),
+                  const SizedBox(height: 2),
+                  Text(context.l10n.settingsSupportBody,
+                      style: const TextStyle(fontSize: 12, color: Colors.black87)),
                 ]),
               ),
               const SizedBox(width: 8),
@@ -667,7 +703,8 @@ class _SupportCard extends StatelessWidget {
                     backgroundColor: accent,
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10)),
                 onPressed: onTap,
-                child: const Text('応援', style: TextStyle(fontWeight: FontWeight.bold)),
+                child: Text(context.l10n.settingsSupportButton,
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
               ),
             ]),
           ),
@@ -726,7 +763,7 @@ class _AttributionScreen extends StatelessWidget {
     final entries = counts.entries.toList()
       ..sort((a, b) => b.value.compareTo(a.value));
     return Scaffold(
-      appBar: AppBar(title: const Text('出典・ライセンス一覧')),
+      appBar: AppBar(title: Text(context.l10n.attributionScreenTitle)),
       body: ListView.separated(
         itemCount: entries.length,
         separatorBuilder: (_, _) => const Divider(height: 1),
@@ -739,10 +776,13 @@ class _AttributionScreen extends StatelessWidget {
             title: Text(key),
             subtitle: url == null
                 ? null
-                : Text(isYoutube ? 'YouTubeで配信元を見る' : '提供元のサイトを開く',
+                : Text(
+                    isYoutube
+                        ? context.l10n.attributionOpenYoutube
+                        : context.l10n.attributionOpenSite,
                     style: TextStyle(fontSize: 11, color: Colors.grey[600])),
             trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-              Text('${entries[i].value}台',
+              Text(context.l10n.commonCameraCount(entries[i].value),
                   style: TextStyle(fontSize: 12, color: Colors.grey[600])),
               if (url != null) ...[
                 const SizedBox(width: 8),

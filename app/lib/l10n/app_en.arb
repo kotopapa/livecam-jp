@@ -1,0 +1,491 @@
+{
+  "@@locale": "en",
+  "appTitle": "Japan Live Camera Map",
+  "commonClose": "Close",
+  "commonCancel": "Cancel",
+  "commonOk": "OK",
+  "commonNext": "Next",
+  "commonSkip": "Skip",
+  "commonCopy": "Copy",
+  "commonShare": "Share",
+  "commonRetry": "Retry",
+  "commonOpenInSafari": "Open in Safari",
+  "commonSource": "Source",
+  "commonCameraCount": "{count}",
+  "@commonCameraCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "legalJapaneseAuthoritative": "The Japanese text is the authoritative version. Translations are provided for reference only.",
+  "languageLabel": "Language",
+  "languageSettingTitle": "Language / 言語",
+  "languageNameJa": "日本語 (Japanese)",
+  "languageNameJaHira": "やさしい日本語 (Easy Japanese)",
+  "languageNameEn": "English",
+  "languageFollowSystem": "Follow device setting",
+  "languageChooseTitle": "Choose a language",
+  "tabMap": "Map",
+  "tabList": "List",
+  "tabBosai": "Disasters",
+  "tabFavorites": "Favorites",
+  "tabSettings": "Settings",
+  "onboardingTitle1": "Find cameras on the map",
+  "onboardingBody1": "Over 10,000 live cameras across Japan are shown on the map, colour-coded by type (rivers, roads, coasts and more).",
+  "onboardingTitle2": "Cameras that are down are hidden",
+  "onboardingBody2": "We check every camera regularly. Cameras we cannot reach are removed from the map, and the capture time is always shown.",
+  "onboardingTitle3": "Every source is credited",
+  "onboardingBody3": "Every video is shown together with its provider. All rights to the footage belong to the respective providers.",
+  "onboardingDisclaimerTitle": "Please read before you start",
+  "onboardingAgreeAndStart": "Agree and start",
+  "disclaimerText": "Camera images show only a limited area. Images may be unclear depending on lighting and weather. When deciding whether to evacuate, follow river water-level information, weather warnings and the evacuation information issued by your local authority. This app provides reference information only.",
+  "updateRequiredTitle": "Update required",
+  "updateRequiredBody": "This version is no longer supported.\nPlease update to the latest version from the App Store.",
+  "updateOpenStore": "Open the App Store",
+  "categoryRiver": "Rivers",
+  "categoryRoad": "Roads",
+  "categoryVolcano": "Volcanoes",
+  "categoryDam": "Dams",
+  "categoryCoast": "Coasts",
+  "categoryPort": "Ports",
+  "categoryScenic": "Scenery",
+  "categoryHealing": "Relaxing",
+  "categoryOther": "Other",
+  "pref01": "Hokkaido",
+  "pref02": "Aomori",
+  "pref03": "Iwate",
+  "pref04": "Miyagi",
+  "pref05": "Akita",
+  "pref06": "Yamagata",
+  "pref07": "Fukushima",
+  "pref08": "Ibaraki",
+  "pref09": "Tochigi",
+  "pref10": "Gunma",
+  "pref11": "Saitama",
+  "pref12": "Chiba",
+  "pref13": "Tokyo",
+  "pref14": "Kanagawa",
+  "pref15": "Niigata",
+  "pref16": "Toyama",
+  "pref17": "Ishikawa",
+  "pref18": "Fukui",
+  "pref19": "Yamanashi",
+  "pref20": "Nagano",
+  "pref21": "Gifu",
+  "pref22": "Shizuoka",
+  "pref23": "Aichi",
+  "pref24": "Mie",
+  "pref25": "Shiga",
+  "pref26": "Kyoto",
+  "pref27": "Osaka",
+  "pref28": "Hyogo",
+  "pref29": "Nara",
+  "pref30": "Wakayama",
+  "pref31": "Tottori",
+  "pref32": "Shimane",
+  "pref33": "Okayama",
+  "pref34": "Hiroshima",
+  "pref35": "Yamaguchi",
+  "pref36": "Tokushima",
+  "pref37": "Kagawa",
+  "pref38": "Ehime",
+  "pref39": "Kochi",
+  "pref40": "Fukuoka",
+  "pref41": "Saga",
+  "pref42": "Nagasaki",
+  "pref43": "Kumamoto",
+  "pref44": "Oita",
+  "pref45": "Miyazaki",
+  "pref46": "Kagoshima",
+  "pref47": "Okinawa",
+  "settingsTitle": "Settings",
+  "settingsSupportTitle": "Support the developer",
+  "settingsSupportBody": "From the price of a canned coffee (¥200). Help keep this independent app going",
+  "settingsSupportButton": "Support",
+  "settingsSectionNotify": "Disaster notifications",
+  "settingsQuakeTitle": "Earthquakes of intensity 5-lower or above",
+  "settingsQuakeSubtitleOff": "Get notified when a large earthquake occurs and jump to nearby cameras",
+  "settingsQuakeSubtitleOn": "Notification level: {level}",
+  "@settingsQuakeSubtitleOn": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsWarningTitle": "Emergency Warnings",
+  "settingsWarningSubtitle": "Get notified when an Emergency Warning is issued for heavy rain, storms, storm surges and more",
+  "settingsNotifyArea": "Areas to be notified about",
+  "settingsNotifyAreaAll": "All of Japan",
+  "settingsNotifyAreaSummary": "{first} and {count} areas",
+  "@settingsNotifyAreaSummary": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsNotifyAreaHint": "You will only be notified about the prefectures you select. If you select none, all of Japan is covered.",
+  "settingsNotifyAreaResetAll": "Reset to all of Japan",
+  "settingsNotifyLevel": "Notification level",
+  "settingsNotifyLevelSpecialOnly": "Emergency Warnings only (Level 5)",
+  "settingsNotifyLevelDangerUp": "From Urgent Warnings (Level 4 and above)",
+  "settingsNotifyLevelNote": "Urgent Warnings correspond to Alert Level 4 for heavy rain, floods, storm surges and landslides",
+  "settingsNotifyDelayNote": "Notifications may arrive 5–15 minutes after the JMA announcement. They are not a substitute for Earthquake Early Warnings.",
+  "settingsNotifyDenied": "Notifications are not allowed. Please enable them in the iOS Settings app.",
+  "settingsSectionData": "Data",
+  "settingsWifiOnly": "Load images on Wi-Fi only",
+  "settingsWifiOnlySubtitle": "Saves mobile data (the map and camera list still work)",
+  "settingsClearCache": "Clear cache",
+  "settingsClearCacheSubtitle": "Deletes saved data such as the camera list and downloads it again",
+  "settingsClearCacheDone": "Cache cleared and data reloaded",
+  "settingsSectionFilterDefaults": "Default filters",
+  "settingsShowWorld": "Show cameras outside Japan",
+  "settingsVideoOnly": "Video cameras only",
+  "settingsHideUncertain": "Hide cameras with imprecise locations",
+  "settingsHideUncertainSubtitle": "Hides pins with a yellow outline (approximate or representative points)",
+  "settingsFilterDefaultsNote": "These settings become the starting state next time you open the app (you can also change them temporarily from the map legend)",
+  "settingsSectionRequest": "Camera requests",
+  "settingsRequestForm": "Request form",
+  "settingsRequestFormSubtitle": "Use this form to request a new camera or ask for one to be removed (no sign-in needed). Removal requests from camera owners and operators are handled promptly.",
+  "settingsSectionLicense": "Sources and licences",
+  "settingsAttributionList": "List of sources and licences",
+  "settingsAttributionListSubtitle": "Every provider of the camera footage",
+  "settingsTerms": "Terms of Use",
+  "settingsPrivacy": "Privacy Policy",
+  "settingsLegalJapaneseOnly": "The Terms of Use and Privacy Policy are available in Japanese only (the Japanese text is authoritative)",
+  "settingsSectionAbout": "About this app",
+  "settingsVersion": "Version",
+  "settingsInvite": "Invite a friend",
+  "settingsInviteSubtitle": "Share the App Store page by QR code or link",
+  "settingsInviteDialogBody": "Scan the QR code or send the link to open the App Store page",
+  "settingsInviteShareText": "Japan Live Camera Map - rivers, roads and disaster info",
+  "settingsLinkCopied": "Link copied",
+  "settingsReview": "Rate this app",
+  "settingsReviewSubtitle": "Write a review on the App Store",
+  "settingsFollowX": "Follow on X",
+  "settingsFollowXSubtitle": "@kotopapa8 - news about new cameras and features",
+  "settingsOtherApps": "More apps by the developer",
+  "settingsShowMoreApps": "See more apps",
+  "settingsSectionDisclaimer": "Disclaimer",
+  "settingsOssLicenses": "Open-source licences",
+  "settingsNotifyDiag": "Notification diagnostics",
+  "settingsNotifyDiagSubtitle": "Check the state when notifications do not arrive",
+  "settingsNotifyDiagUnlocked": "Notification diagnostics are now shown (inside Disaster notifications)",
+  "settingsNotifyPermission": "Permission: {value}",
+  "@settingsNotifyPermission": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsNotifyApns": "APNs token: {value}",
+  "@settingsNotifyApns": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsNotifyFcm": "FCM token:",
+  "settingsCopyToken": "Copy token",
+  "settingsTokenCopied": "FCM token copied",
+  "settingsCrashDiag": "Crash diagnostics",
+  "settingsCrashDiagSubtitle": "View and copy force-quit records (MetricKit)",
+  "settingsCrashDiagNone": "No diagnostic data yet",
+  "settingsCrashDiagNoneHint": "No diagnostic data yet.\nRecords appear after you restart the app following a crash",
+  "settingsCopyFullText": "Copy all",
+  "settingsJsonCopied": "Diagnostic JSON copied",
+  "attributionScreenTitle": "Sources and licences",
+  "attributionOpenYoutube": "View the provider on YouTube",
+  "attributionOpenSite": "Open the provider's site",
+  "listTitle": "List ({count})",
+  "@listTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "listSearchHint": "Search by camera, river or road name",
+  "listEmpty": "No cameras match your filters",
+  "listRanking": "Ranking",
+  "favoritesTitle": "Favorites ({count})",
+  "@favoritesTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "favoritesEmpty": "You have no favorites yet.\nOpen a camera on the map and tap the star to add it.",
+  "favoritesEmptyFiltered": "No favorites match your filters",
+  "favoritesSort": "Sort",
+  "favoritesSortNewest": "Newest first",
+  "favoritesSortOldest": "Oldest first",
+  "favoritesSortName": "By name",
+  "favoritesSortCategory": "By category",
+  "favoritesToggleView": "Change view",
+  "favoritesRefreshAll": "Refresh all (3 at a time)",
+  "favoritesVideoOnly": "Video only",
+  "rankingTitle": "National ranking",
+  "rankingModeNow": "Trending now (24h top 10)",
+  "rankingModeWeek": "Most viewed (7-day top 30)",
+  "rankingModeFavorites": "Most favorited",
+  "rankingNote": "Based on anonymous statistics from all users (updated daily)",
+  "rankingEmpty": "No data yet (updated once a day)",
+  "rankingPreparing": "The national ranking is being prepared.\nData is aggregated every three hours.",
+  "rankingFetchFailed": "Could not load the data",
+  "rankingFetchFailedHttp": "Could not load the data (HTTP {code})",
+  "@rankingFetchFailedHttp": {
+    "placeholders": {
+      "code": {
+        "type": "int"
+      }
+    }
+  },
+  "rankingUnitViews": "views",
+  "rankingUnitFavorites": "favorites",
+  "detailLive": "Live",
+  "detailTimeUnknown": "Capture time unknown",
+  "detailRefreshEvery": "Updates every {sec} s",
+  "@detailRefreshEvery": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "detailRefreshIn": "{sec} s",
+  "@detailRefreshIn": {
+    "placeholders": {
+      "sec": {
+        "type": "int"
+      }
+    }
+  },
+  "detailRefreshNow": "Refresh",
+  "detailPosRepresentative": "Approximate area location",
+  "detailPosApprox": "Approximate location",
+  "detailNotUpdating": "Image is not updating",
+  "detailWorld": "Outside Japan",
+  "detailCategoryAndPlace": "Category and location",
+  "detailOpenMap": "View on map",
+  "detailOpenSourceSite": "Open the source site",
+  "detailOpenYoutube": "Watch on YouTube",
+  "detailOpenChannel": "Open the channel page",
+  "detailOpenOriginalPage": "Open the original page",
+  "detailReportProblem": "Report a problem with this camera",
+  "detailNearby": "Nearby cameras",
+  "detailDistanceKm": "About {km} km",
+  "@detailDistanceKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "detailWifiOnlyBlocked": "Your settings only allow images to load on Wi-Fi",
+  "detailNoImage": "The image is not available right now",
+  "detailEmbedBlockedYoutube": "The provider does not allow this video\nto be played inside the app",
+  "detailEmbedBlockedPage": "The provider's terms do not allow this\nto be shown inside the app",
+  "detailIHighwayTitle": "View the live camera on\nNEXCO's official iHighway site",
+  "detailIHighwayBody": "Tap to open the official site in an in-app browser and\njump automatically to this camera's location",
+  "detailIHighwayHost": "ihighway.jp (official NEXCO site)",
+  "detailMapTileGsi": "GSI Tiles",
+  "elevationLoading": "Elevation …",
+  "elevationValue": "Elevation {value} ({source})",
+  "@elevationValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "timeTakenAt": "Captured {time}{relative}",
+  "@timeTakenAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "relative": {
+        "type": "String"
+      }
+    }
+  },
+  "timeRelJustNow": " (just now)",
+  "timeRelMinutes": " ({n} min ago)",
+  "@timeRelMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "timeRelHours": " ({n} h ago)",
+  "@timeRelHours": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "timeMonthDay": "{month}/{day}",
+  "@timeMonthDay": {
+    "placeholders": {
+      "month": {
+        "type": "int"
+      },
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "intensity5Lower": "5-lower",
+  "intensity5Upper": "5-upper",
+  "intensity6Lower": "6-lower",
+  "intensity6Upper": "6-upper",
+  "quakeLevel5Lower": "Intensity 5-lower or above",
+  "quakeLevel5Upper": "Intensity 5-upper or above",
+  "quakeLevel6Lower": "Intensity 6-lower or above",
+  "warning02": "Snowstorm Warning",
+  "warning03": "Heavy Rain Warning",
+  "warning04": "Flood Warning",
+  "warning05": "Storm Warning",
+  "warning06": "Heavy Snow Warning",
+  "warning07": "High Wave Warning",
+  "warning08": "Storm Surge Warning",
+  "warning09": "Landslide Warning",
+  "warning43": "Heavy Rain Urgent Warning",
+  "warning44": "Flood Urgent Warning",
+  "warning48": "Storm Surge Urgent Warning",
+  "warning49": "Landslide Urgent Warning",
+  "warning32": "Snowstorm Emergency Warning",
+  "warning33": "Heavy Rain Emergency Warning",
+  "warning34": "Flood Emergency Warning",
+  "warning35": "Storm Emergency Warning",
+  "warning36": "Heavy Snow Emergency Warning",
+  "warning37": "High Wave Emergency Warning",
+  "warning38": "Storm Surge Emergency Warning",
+  "warning39": "Landslide Emergency Warning",
+  "advisory10": "Heavy Rain Advisory",
+  "advisory12": "Heavy Snow Advisory",
+  "advisory13": "Gale and Snow Advisory",
+  "advisory14": "Thunderstorm Advisory",
+  "advisory15": "Gale Advisory",
+  "advisory16": "High Wave Advisory",
+  "advisory17": "Snow Melting Advisory",
+  "advisory18": "Flood Advisory",
+  "advisory19": "Storm Surge Advisory",
+  "advisory20": "Dense Fog Advisory",
+  "advisory21": "Dry Air Advisory",
+  "advisory22": "Avalanche Advisory",
+  "advisory23": "Low Temperature Advisory",
+  "advisory24": "Frost Advisory",
+  "advisory25": "Ice Accretion Advisory",
+  "advisory26": "Snow Accretion Advisory",
+  "advisory29": "Landslide Advisory",
+  "mapLocationDenied": "Location access is not allowed (you can change this in Settings)",
+  "mapLocationFailed": "Could not get your current location",
+  "mapLegendTitle": "Legend and filters",
+  "mapLegendSearchHint": "Search by camera, provider, river or road name",
+  "mapFilterFavoritesOnly": "Favorites only",
+  "mapFilterOkOnly": "Working cameras only",
+  "mapLegendLiveDot": "Red dot = video (live stream)",
+  "mapLegendUncertain": "Yellow outline = imprecise location (approximate)",
+  "mapLegendFrozen": "Faded = image has not updated for a long time",
+  "mapLegendFavorite": "Gold star = in your favorites",
+  "mapLegendCluster": "Numbered circle = group of nearby cameras (tap to zoom in)",
+  "mapSearchTitle": "Search for a place",
+  "mapSearchHint": "Place name or address (e.g. Shibuya, Kanazawa Hirosaka)",
+  "mapSearchNotFound": "Nothing found. Try a place name, address or camera name.",
+  "mapSearchSectionCameras": "Cameras",
+  "mapSearchSectionPlaces": "Places",
+  "mapPointCameras": "Cameras here ({count})",
+  "@mapPointCameras": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapFilteredCount": "{count} shown (filtered)",
+  "@mapFilteredCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapTotalCount": "{count} cameras",
+  "@mapTotalCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapLayersTooltip": "Map layers",
+  "bosaiTitle": "Disaster updates",
+  "bosaiTabQuake": "Earthquakes",
+  "bosaiTabWarning": "Weather warnings",
+  "bosaiTabHeat": "Heat",
+  "bosaiNoWarnings": "No warnings or advisories are currently in effect",
+  "bosaiWarningNoteNone": "Source: JMA. No Warnings or Emergency Warnings are in effect. Areas with advisories only are listed below.",
+  "bosaiWarningNote": "Source: JMA Weather Warnings and Advisories. Tap a prefecture to see its cameras.",
+  "bosaiAdvisoryRegions": "Areas under advisory ({count} prefectures)",
+  "@bosaiAdvisoryRegions": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiWarningAreasTitle": "Areas under warning in {pref}",
+  "@bosaiWarningAreasTitle": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiAdvisoryAreasTitle": "Areas under advisory in {pref}",
+  "@bosaiAdvisoryAreasTitle": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiMuniNote": "Source: JMA. Tap a municipality to see its cameras.",
+  "bosaiMuniFetchFailed": "Could not load the detailed area list",
+  "bosaiMuniNone": "No municipalities are currently affected",
+  "bosaiCameraCount": "{count} cameras",
+  "@bosaiCameraCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiNoCamera": "No cameras",
+  "bosaiMuniCamerasTitle": "Cameras in {name} (warning in effect)",
+  "@bosaiMuniCamerasTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsJmaDictionary": "About the disaster-term translations",
+  "settingsJmaDictionaryNote": "Translations of warning names, advisory names and seismic intensity follow the JMA Multilingual Dictionary of Weather Information Terms. Source: Japan Meteorological Agency website"
+}

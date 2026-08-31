@@ -9,6 +9,7 @@ import 'package:firebase_messaging/firebase_messaging.dart'
     show FirebaseMessaging, RemoteMessage;
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'firebase_options.dart';
@@ -18,7 +19,9 @@ import 'app_state.dart';
 import 'data/api_client.dart';
 import 'data/cache_store.dart';
 import 'data/camera_repository.dart';
+import 'data/locale_controller.dart';
 import 'data/widget_bridge.dart';
+import 'l10n/l10n.dart';
 import 'ui/home_shell.dart';
 import 'ui/onboarding_screen.dart';
 
@@ -53,7 +56,12 @@ Future<void> main() async {
     cache: CacheStore(dir),
   ));
   final onboardingDone = await OnboardingScreen.isDone();
-  runApp(LiveCamApp(app: app, onboardingDone: onboardingDone));
+  // 表示言語（未設定なら端末の言語設定から自動判定。SPEC 1.4.0 多言語対応）
+  final localeController = await LocaleController.load();
+  runApp(LiveCamApp(
+      app: app,
+      onboardingDone: onboardingDone,
+      localeController: localeController));
   _hookNotificationTaps(app);
   _hookWidgetLinks(app);
   app.init(); // キャッシュ復元→バックグラウンド更新（待たずに起動する）
@@ -77,10 +85,14 @@ Future<void> _initAds() async {
 
 class LiveCamApp extends StatefulWidget {
   const LiveCamApp(
-      {super.key, required this.app, required this.onboardingDone});
+      {super.key,
+      required this.app,
+      required this.onboardingDone,
+      required this.localeController});
 
   final AppState app;
   final bool onboardingDone;
+  final LocaleController localeController;
 
   @override
   State<LiveCamApp> createState() => _LiveCamAppState();
@@ -119,13 +131,30 @@ class _LiveCamAppState extends State<LiveCamApp>
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '全国ライブカメラ地図',
-      theme: ThemeData(colorSchemeSeed: const Color(0xFF1E6FD9)),
-      home: _onboardingDone
-          ? HomeShell(app: widget.app)
-          : OnboardingScreen(
-              onDone: () => setState(() => _onboardingDone = true)),
+    // 言語切替は MaterialApp ごと作り直す（ListenableBuilder で locale を反映）
+    return ListenableBuilder(
+      listenable: widget.localeController,
+      builder: (context, _) => MaterialApp(
+        onGenerateTitle: (context) => context.l10n.appTitle,
+        theme: ThemeData(colorSchemeSeed: const Color(0xFF1E6FD9)),
+        locale: widget.localeController.locale,
+        supportedLocales: AppLocalizations.supportedLocales,
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        // 端末が ja-Hira 等を要求してくることは無いが、未知のロケールが来ても
+        // 落ちないように英語へ寄せる（ja 系だけ日本語）
+        localeResolutionCallback: resolveAppLocale,
+        home: _onboardingDone
+            ? HomeShell(
+                app: widget.app, localeController: widget.localeController)
+            : OnboardingScreen(
+                localeController: widget.localeController,
+                onDone: () => setState(() => _onboardingDone = true)),
+      ),
     );
   }
 }
@@ -161,4 +190,18 @@ void _hookNotificationTaps(AppState app) {
       app.navigationRequest.value = route(m);
     });
   } catch (_) {}
+}
+
+/// 端末やフレームワークから渡されたロケールを、対応3ロケールへ解決する。
+/// `MaterialApp.locale` を明示している間は基本的に呼ばれないが、
+/// `locale` が null になった場合の保険として同じ規則を持たせておく
+@visibleForTesting
+Locale resolveAppLocale(Locale? locale, Iterable<Locale> supported) {
+  if (locale == null) return const Locale('ja');
+  if (locale.languageCode == 'ja') {
+    return locale.scriptCode == 'Hira'
+        ? const Locale.fromSubtags(languageCode: 'ja', scriptCode: 'Hira')
+        : const Locale('ja');
+  }
+  return const Locale('en');
 }

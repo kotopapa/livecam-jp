@@ -16,18 +16,20 @@ const Map<String, Color> categoryColors = {
   'other': Color(0xFF8D6E63),   // その他=茶
 };
 
-/// カテゴリの表示名（凡例・フィルタで使う）
-const Map<String, String> categoryLabels = {
-  'river': '河川',
-  'road': '道路',
-  'volcano': '火山',
-  'dam': 'ダム',
-  'coast': '海岸',
-  'port': '港湾',
-  'scenic': '景観',
-  'healing': '癒し',
-  'other': 'その他',
-};
+/// カテゴリキーの表示順（凡例・フィルタで使う）。
+/// 表示名は多言語化のため `l10n/l10n.dart` の `categoryLabelOf(l10n, key)` で解決する
+/// （docs/research_2026-09-01/i18n_languages.md 8.6: データ層はキーのまま持つ）
+const List<String> categoryKeys = [
+  'river',
+  'road',
+  'volcano',
+  'dam',
+  'coast',
+  'port',
+  'scenic',
+  'healing',
+  'other',
+];
 
 /// 位置未確定（coord_accuracy が exact 以外）の縁取り色（SPEC 9.2②）
 const Color uncertainBorderColor = Color(0xFFFFC400);
