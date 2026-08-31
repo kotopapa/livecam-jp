@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:livecam_jp/util/jst.dart';
 import 'package:livecam_jp/util/time_format.dart';
 
 void main() {
@@ -20,7 +21,10 @@ void main() {
   });
 
   test('直近の時刻には相対表記が付く', () {
-    final recent = DateTime.now().subtract(const Duration(minutes: 5));
+    // オフセットなしの文字列は提供元（monitor の image_time）のJST表記なので、
+    // 端末ローカルではなくJSTの壁時計から組み立てる。端末TZが日本以外でも
+    // 「5分前」になること（2026-09-01 時刻点検）
+    final recent = jstNow().subtract(const Duration(minutes: 5));
     final raw = '${recent.year}-'
         '${recent.month.toString().padLeft(2, '0')}-'
         '${recent.day.toString().padLeft(2, '0')} '

@@ -42,12 +42,26 @@ void main() {
     // 02:40Z = 11:40 JST
     const t = RiskTime('20260831024000', '20260831024000', 'none');
     expect(t.label, '11:40');
-    expect(t.validAtJst, DateTime.utc(2026, 8, 31, 11, 40));
+    // JST側は「壁時計」＝素の DateTime（絶対時刻ではない）
+    expect(t.validAtJst, DateTime(2026, 8, 31, 11, 40));
+    expect(t.validAtJst.isUtc, isFalse);
+    // 絶対時刻は validAt（UTCフラグ付き）
+    expect(t.validAt, DateTime.utc(2026, 8, 31, 2, 40));
     // 日付をまたぐ場合
     expect(jmaTimeLabel('20260831154000'), '00:40');
-    expect(jmaTimeToJst('20260831154000'), DateTime.utc(2026, 9, 1, 0, 40));
+    expect(jmaTimeToJst('20260831154000'), DateTime(2026, 9, 1, 0, 40));
+    expect(jmaTimeToUtc('20260831154000'), DateTime.utc(2026, 8, 31, 15, 40));
     // 雨雲レーダー側と同じ変換であること
     expect(const NowcastTime('20260831024000', '20260831024000').label, t.label);
+  });
+
+  test('validAt の差はUTCの実時間差（スライダーの「n分前/後」）', () {
+    // 実況 02:40Z と 予測 03:10Z の差は +30分。JST壁時計ではなく絶対時刻で引く
+    const obs = NowcastTime('20260831024000', '20260831024000');
+    const fc = NowcastTime('20260831024000', '20260831031000');
+    expect(fc.validAt.difference(obs.validAt).inMinutes, 30);
+    // 壁時計どうしの差でも同じ値になること（DSTの無い端末TZでの回帰確認）
+    expect(fc.validAtJst.difference(obs.validAtJst).inMinutes, 30);
   });
 
   test('凡例は気象庁の危険度配色5段階（低→高）', () {

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 
+import '../util/jst.dart';
+
 /// 地図レイヤー用の気象庁公開データ（無料・認証不要。SPEC C2）。
 /// - 雨雲レーダー: 高解像度降水ナウキャストのタイル（5分更新）
 /// - 震源: 地震リスト（約30日分）
@@ -56,22 +58,32 @@ class NowcastTime {
           'https://www.jma.go.jp/bosai/jmatile/data/nowc/$basetime/none/$validtime/surf/hrpns/{z}/{x}/{y}.png',
       };
 
-  /// 気象庁の時刻表記はUTC。日本時間(JST=UTC+9)に直す
+  /// 気象庁の時刻表記はUTC。その**絶対時刻**（UTCフラグ付き）
+  DateTime get validAt => jmaTimeToUtc(validtime);
+
+  /// 日本時間(JST=UTC+9)の**壁時計**（素のDateTime）。表示・日付判定にだけ使う。
+  /// 絶対時刻ではないので `DateTime.now()` と引き算しないこと
   DateTime get validAtJst => jmaTimeToJst(validtime);
 
   /// 表示用 HH:MM（JST）
   String get label => jmaTimeLabel(validtime);
 }
 
-/// 気象庁タイルの時刻表記（UTCの yyyyMMddHHmmss）を日本時間(JST=UTC+9)に直す。
-/// 端末のタイムゾーンに依存しないよう UTC で組み立ててから +9時間する
-DateTime jmaTimeToJst(String t) => DateTime.utc(
+/// 気象庁タイルの時刻表記（UTCの yyyyMMddHHmmss）を**絶対時刻**（UTCフラグ付き）に直す。
+/// 時刻の引き算・大小比較にはこちらを使う
+DateTime jmaTimeToUtc(String t) => DateTime.utc(
       int.parse(t.substring(0, 4)),
       int.parse(t.substring(4, 6)),
       int.parse(t.substring(6, 8)),
       int.parse(t.substring(8, 10)),
       int.parse(t.substring(10, 12)),
-    ).add(const Duration(hours: 9));
+    );
+
+/// 気象庁タイルの時刻表記（UTC）を日本時間(JST=UTC+9)の**壁時計**（素のDateTime）に直す。
+/// 端末のタイムゾーンに依存しない。year/hour 等がJSTの値になるだけで絶対時刻では
+/// ないため、`DateTime.now()` や UTC由来の値と `difference` してはいけない
+/// （引き算したいときは [jmaTimeToUtc] を使う）
+DateTime jmaTimeToJst(String t) => toJstWallClock(jmaTimeToUtc(t));
 
 /// 表示用 HH:MM（JST）
 String jmaTimeLabel(String t) {
@@ -89,6 +101,10 @@ class RiskTime {
   final String validtime;
   final String member;
 
+  /// 絶対時刻（UTCフラグ付き）。引き算・大小比較用
+  DateTime get validAt => jmaTimeToUtc(validtime);
+
+  /// JSTの壁時計（素のDateTime）。表示用
   DateTime get validAtJst => jmaTimeToJst(validtime);
   String get label => jmaTimeLabel(validtime);
 

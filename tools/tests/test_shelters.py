@@ -75,3 +75,23 @@ def test_write_outputs(tmp_path):
     assert on_disk["version"] == "2026-09-01T00:00:00Z"
     assert len(on_disk["shelters"]) == 2
     assert json.loads((tmp_path / "index.json").read_text(encoding="utf-8"))["total"] == 4
+
+
+def test_parse_http_date_is_aware_and_locale_independent():
+    # strptime("%a, %d %b %Y %H:%M:%S %Z") は曜日/月名がロケール依存で、
+    # %Z が tzinfo を設定しない（naive になる）。email.utils なら常に aware。
+    dt = shelters.parse_http_date("Mon, 01 Jan 2024 00:00:00 GMT")
+    assert dt is not None and dt.tzinfo is not None
+    assert dt.utcoffset().total_seconds() == 0
+    # 数値オフセット表記（旧実装は %Z にマッチせず ValueError で捨てていた）
+    dt2 = shelters.parse_http_date("Mon, 01 Jan 2024 09:00:00 +0900")
+    assert dt2 == dt          # 同一時刻として比較できる
+    assert shelters.parse_http_date("not a date") is None
+    assert shelters.parse_http_date(None) is None
+
+
+def test_latest_compares_across_timezone_notations():
+    older = "Mon, 01 Jan 2024 00:00:00 GMT"       # = 09:00 JST
+    newer = "Mon, 01 Jan 2024 10:00:00 +0900"     # = 01:00 GMT（こちらが新しい）
+    assert shelters._latest(older, newer) == newer
+    assert shelters._latest(newer, older) == newer

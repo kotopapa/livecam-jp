@@ -18,7 +18,7 @@ import argparse
 import json
 import sys
 import time
-from datetime import date, datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -39,6 +39,18 @@ from monitor.freeze import dhash64, is_placeholder  # noqa: E402
 STATE_PATH = REPO_ROOT / "crawler" / ".cache" / "kawabou_sweep.json"
 VERIFY_MIN_GAP_SEC = 300
 SAVE_EVERY = 200
+
+JST = timezone(timedelta(hours=9))
+
+
+def jst_today() -> str:
+    """JSTの今日（YYYY-MM-DD）。
+
+    台帳の first_seen / last_updated / reviewed_at は日本の日付で記録する。
+    GitHub Actions のランナーは UTC で動くため date.today() を使うと
+    JST 00:00〜09:00 の実行が前日の日付になってしまう。
+    """
+    return datetime.now(JST).date().isoformat()
 
 
 def log(msg: str) -> None:
@@ -66,7 +78,7 @@ def save_candidates(records: list[dict]) -> None:
 
 
 def phase_a(session: HttpSession, pref_codes: list[int], state: dict) -> None:
-    today = date.today().isoformat()
+    today = jst_today()
     cameras = load_json(CAMERAS_PATH)
     decided_ids = {r["id"] for r in cameras.get("cameras", [])}
 

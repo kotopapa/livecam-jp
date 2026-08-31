@@ -229,3 +229,46 @@ def test_http_error_is_skipped():
     resp = mock.Mock(); resp.status_code = 503
     with mock.patch.object(bosai_notify.requests, "get", lambda url, timeout=30: resp):
         assert bosai_notify.check_quakes({"notified_quakes": []}) == []
+
+
+def test_parse_jma_time_always_returns_jst():
+    from datetime import datetime, timezone
+    # 通常表記（+09:00）
+    assert bosai_notify.parse_jma_time("2026-08-30T05:12:00+09:00").hour == 5
+    # UTC表記(Z)が来ても本文の時刻がJSTになる（そのまま使うと9時間ずれる）
+    assert bosai_notify.parse_jma_time("2026-08-29T20:12:00Z").strftime(
+        "%Y-%m-%d %H:%M") == "2026-08-30 05:12"
+    # オフセット無し（naive）はJSTとみなす。awareと比較できること
+    naive = bosai_notify.parse_jma_time("2026-08-30T05:12:00")
+    assert naive.tzinfo is not None
+    assert naive == datetime(2026, 8, 29, 20, 12, tzinfo=timezone.utc)
+    # 壊れた値でも例外を投げない（通知処理全体を落とさない）
+    assert bosai_notify.parse_jma_time("").year == 1970
+    assert bosai_notify.parse_jma_time(None).year == 1970
+
+
+def test_quake_body_time_is_jst_even_when_source_is_utc():
+    # 気象庁の at が "Z" 表記で来ても本文は JST 表記のままであること
+    from datetime import datetime, timedelta, timezone
+    at_utc = (datetime.now(timezone.utc) - timedelta(minutes=30)).replace(
+        microsecond=0)
+    entries = [{"eid": "e-utc", "maxi": "5-", "anm": "日向灘", "mag": "6.1",
+                "at": at_utc.strftime("%Y-%m-%dT%H:%M:%S") + "Z",
+                "rdt": at_utc.isoformat()}]
+    with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
+        events = bosai_notify.check_quakes({"notified_quakes": []})
+    assert len(events) == 1
+    expected = at_utc.astimezone(bosai_notify.JST).strftime("%H:%M")
+    assert f"{expected}頃" in events[0][2]
+
+
+def test_quake_naive_timestamp_does_not_crash():
+    # オフセットが欠けた at（naive）でも TypeError で全滅せず、JSTとして扱う
+    from datetime import datetime, timedelta
+    at = (datetime.now(bosai_notify.JST) - timedelta(minutes=10)).replace(
+        microsecond=0).strftime("%Y-%m-%dT%H:%M:%S")
+    entries = [{"eid": "e-naive", "maxi": "5+", "anm": "能登半島沖",
+                "mag": "6.5", "at": at, "rdt": at}]
+    with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
+        events = bosai_notify.check_quakes({"notified_quakes": []})
+    assert len(events) == 1 and at[11:16] + "頃" in events[0][2]

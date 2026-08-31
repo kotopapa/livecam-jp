@@ -1028,7 +1028,7 @@ class _MapScreenState extends State<MapScreen> {
     final n = _nowcastTimes[_nowcastIdx];
     final latestObs = _nowcastTimes.lastIndexWhere((x) => !x.isForecast);
     final diffMin = latestObs >= 0
-        ? n.validAtJst.difference(_nowcastTimes[latestObs].validAtJst).inMinutes
+        ? n.validAt.difference(_nowcastTimes[latestObs].validAt).inMinutes
         : 0;
     String span(int m) => m.abs() >= 60
         ? l10n.mapNowcastSpanHours(

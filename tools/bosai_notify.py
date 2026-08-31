@@ -105,6 +105,26 @@ def load_state() -> dict:
 
 _INTENSITY_ORDER = {"5-": 0, "5+": 1, "6-": 2, "6+": 3, "7": 4}
 
+_EPOCH_JST = datetime(1970, 1, 1, tzinfo=JST)
+
+
+def parse_jma_time(value: str | None) -> datetime:
+    """気象庁JSONの時刻文字列をJSTのaware datetimeにして返す。
+
+    通常 `at` は "2026-08-30T05:12:00+09:00" のようにオフセット付きだが、
+    - オフセットが欠けた表記 → naive になり aware との比較で TypeError（通知が全滅する）
+    - "Z" 付きの表記 → そのまま表示すると本文の時刻が9時間ずれる
+    のどちらも起こしうるため、naiveはJSTとみなし、awareは必ずJSTへ変換する。
+    解釈不能な値は epoch(JST) を返し、`since` 比較で古い扱いになる。
+    """
+    try:
+        dt = datetime.fromisoformat((value or "").replace("Z", "+00:00"))
+    except ValueError:
+        return _EPOCH_JST
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=JST)
+    return dt.astimezone(JST)
+
 
 def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
     """未通知の震度5弱以上を返す [(eid, title, body, topics)]。
@@ -134,8 +154,7 @@ def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
         # 震源地名→M→報告時刻の順で埋まっている報を採用する
         best = max(entries, key=lambda e: (
             bool(e.get("anm")), bool(e.get("mag")), e.get("rdt", "")))
-        at = datetime.fromisoformat(
-            best.get("at") or "1970-01-01T00:00:00+09:00")
+        at = parse_jma_time(best.get("at"))
         if at < since:  # 古い地震は通知しない（初回実行時の大量通知防止）
             continue
         label = INTENSITY_LABEL.get(maxi, maxi)

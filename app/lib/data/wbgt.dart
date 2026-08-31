@@ -31,6 +31,7 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
 import '../util/geo.dart';
+import '../util/jst.dart';
 import 'heat_alert.dart';
 
 /// 暑さ指数の段階（環境省の5段階）
@@ -192,7 +193,7 @@ class Wbgt {
   /// 地点マスタCSVを解析する。終了日が [asOf] より前の地点（廃止済み）は除く
   static List<WbgtPoint> parseMaster(String body, {DateTime? asOf}) {
     final out = <WbgtPoint>[];
-    final today = asOf ?? HeatAlerts.nowJstNaive();
+    final today = asWallClock(asOf ?? HeatAlerts.nowJstNaive());
     var first = true;
     for (final raw in const LineSplitter().convert(body)) {
       final line = raw.replaceFirst('\uFEFF', '').trimRight();
@@ -296,10 +297,9 @@ class Wbgt {
   static List<WbgtValue> upcoming(List<WbgtValue> forecast, DateTime nowJst) {
     // 予測コマ(e.at)はCSV由来の素のDateTime。UTCフラグ付きの値をそのまま比較すると
     // 9時間ずれるため、必ず素のDateTimeに正規化してから比べる
-    final now = DateTime(nowJst.year, nowJst.month, nowJst.day, nowJst.hour,
-        nowJst.minute, nowJst.second);
-    final limit = DateTime(now.year, now.month, now.day)
-        .add(const Duration(days: 2)); // 翌日24時 = 翌々日0時
+    final now = asWallClock(nowJst);
+    // 翌日24時 = 翌々日0時。Duration加算は夏時間のある端末TZで23時/1時にずれる
+    final limit = DateTime(now.year, now.month, now.day + 2);
     return forecast
         .where((e) => e.at.isAfter(now) && !e.at.isAfter(limit))
         .toList();
@@ -352,7 +352,7 @@ class Wbgt {
       {http.Client? client, DateTime? now}) async {
     final mem = _master;
     if (mem != null) return mem;
-    final jst = now ?? HeatAlerts.nowJstNaive();
+    final jst = asWallClock(now ?? HeatAlerts.nowJstNaive());
 
     final file = await _masterCacheFile();
     String? cachedBody;
@@ -400,7 +400,7 @@ class Wbgt {
   /// 失敗は例外にせず [WbgtPointData.failed] で返す（キャッシュしない）
   static Future<WbgtPointData> fetchPoint(WbgtPoint p,
       {DateTime? now, http.Client? client}) async {
-    final jst = now ?? HeatAlerts.nowJstNaive();
+    final jst = asWallClock(now ?? HeatAlerts.nowJstNaive());
     final key = hourKey(jst);
     final cached = _pointCache[p.id];
     if (cached != null && cached.hourKey == key) return cached;

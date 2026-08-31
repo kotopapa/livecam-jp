@@ -15,7 +15,7 @@ import sys
 import threading
 import time
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -34,6 +34,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CAMERAS_PATH = REPO_ROOT / "data" / "cameras.json"
 STATUS_PATH = REPO_ROOT / "data" / "status.json"
 STATE_PATH = REPO_ROOT / "monitor" / ".state" / "hashes.json"
+
+JST = timezone(timedelta(hours=9))
 
 HOST_MIN_INTERVAL = 1.0
 HOST_MAX_CONCURRENCY = 2
@@ -69,18 +71,25 @@ def monitor_host(camera: dict) -> str:
 
 
 # 低頻度で確認するホスト（運営者が定期的なデータ収集を控えるよう求めているもの）と、
-# 確認を行うUTC時刻。JST 03/09/15/21時の各1時間枠 = 1日4回
+# 確認を行うJST時刻。JST 03/09/15/21時の各1時間枠 = 1日4回（= UTC 18/00/06/12時台）
 LOW_FREQ_HOSTS = ("cam.river.go.jp", "www.river.go.jp", "river.go.jp")
-LOW_FREQ_HOURS_UTC = (18, 0, 6, 12)
+LOW_FREQ_HOURS_JST = (3, 9, 15, 21)
 
 
 def _skip_low_freq(camera: dict, now: datetime) -> bool:
-    """低頻度対象のカメラを、指定時刻の枠以外ではチェック対象から外す。"""
+    """低頻度対象のカメラを、指定時刻の枠以外ではチェック対象から外す。
+
+    枠はJSTで定義する。now は必ずJSTへ変換してから時刻を見るので、
+    UTCで渡しても（ランナーのTZが何であっても）同じ枠になる。
+    タイムゾーンなしの now は従来どおりUTCとみなす。
+    """
     url = (camera.get("feed", {}) or {}).get("url") or ""
     page = (camera.get("source", {}) or {}).get("page_url") or ""
     if not any(h in url or h in page for h in LOW_FREQ_HOSTS):
         return False
-    return now.hour not in LOW_FREQ_HOURS_UTC
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    return now.astimezone(JST).hour not in LOW_FREQ_HOURS_JST
 
 
 def run(shard: str | None = None) -> int:

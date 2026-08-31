@@ -69,11 +69,29 @@ def is_black_frame(image_bytes: bytes) -> bool:
     return mean < 26 and p90 < 32 and bright < 0.03
 
 
+def as_utc(value: datetime) -> datetime:
+    """aware datetime をUTCに揃える（tzinfoなしはUTCとみなす）。
+
+    このモジュールの時刻計算はすべてUTC基準。naive を astimezone() に渡すと
+    プロセスのローカルTZで解釈され、日本のマシンとUTCのCIランナーで
+    9時間ずれた結果になるため、明示的にUTC固定にする。
+    """
+    if value.tzinfo is None:
+        return value.replace(tzinfo=timezone.utc)
+    return value.astimezone(timezone.utc)
+
+
+def parse_utc(value: str) -> datetime:
+    """履歴のISO8601文字列を aware(UTC) にする（オフセット無しはUTCとみなす）。"""
+    return as_utc(datetime.fromisoformat(value.replace("Z", "+00:00")))
+
+
 def is_local_daytime(now: datetime, lng: float | None) -> bool:
     """経度から求めた概略の地方時で 9〜16時か（夜間の暗画像を誤検知しない）。"""
     if lng is None:
         return False
-    hour = (now.astimezone(timezone.utc).hour + now.minute / 60 + lng / 15.0) % 24
+    u = as_utc(now)
+    hour = (u.hour + u.minute / 60 + lng / 15.0) % 24
     return 9 <= hour <= 16
 
 
@@ -121,7 +139,8 @@ def judge_frozen(history: list[dict], now: datetime,
     if len(hashes) < 2 or len(set(hashes)) > 1:
         return False, None
 
-    oldest = datetime.fromisoformat(history[0]["at"])
+    now = as_utc(now)
+    oldest = parse_utc(history[0]["at"])
     if now - oldest < timedelta(hours=FROZEN_AFTER_HOURS):
         return False, None
 

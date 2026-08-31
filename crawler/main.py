@@ -23,7 +23,7 @@ try:
     truststore.inject_into_ssl()
 except ImportError:
     pass
-from datetime import date, datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import yaml
@@ -40,6 +40,18 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SEEDS_PATH = Path(__file__).resolve().parent / "seeds.yaml"
 CANDIDATES_PATH = REPO_ROOT / "data" / "candidates.json"
 CAMERAS_PATH = REPO_ROOT / "data" / "cameras.json"
+
+JST = timezone(timedelta(hours=9))
+
+
+def jst_today() -> str:
+    """JSTの今日（YYYY-MM-DD）。
+
+    台帳の first_seen / last_updated / reviewed_at は日本の日付で記録する。
+    GitHub Actions のランナーは UTC で動くため date.today() を使うと
+    JST 00:00〜09:00 の実行が前日の日付になってしまう。
+    """
+    return datetime.now(JST).date().isoformat()
 
 
 def load_enabled_sources() -> list:
@@ -138,7 +150,7 @@ def main() -> int:
         parsers = [REGISTRY[args.source]()]
 
     session = HttpSession()
-    today = date.today().isoformat()
+    today = jst_today()
     all_candidates = []
     all_errors: list[str] = []
 

@@ -23,7 +23,7 @@ import argparse
 import json
 import sys
 import webbrowser
-from datetime import date, datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -33,6 +33,18 @@ from crawler.validate import validate_camera_record  # noqa: E402
 
 CANDIDATES_PATH = REPO_ROOT / "data" / "candidates.json"
 CAMERAS_PATH = REPO_ROOT / "data" / "cameras.json"
+
+JST = timezone(timedelta(hours=9))
+
+
+def jst_today() -> str:
+    """JSTの今日（YYYY-MM-DD）。
+
+    台帳の first_seen / last_updated / reviewed_at は日本の日付で記録する。
+    GitHub Actions のランナーは UTC で動くため date.today() を使うと
+    JST 00:00〜09:00 の実行が前日の日付になってしまう。
+    """
+    return datetime.now(JST).date().isoformat()
 
 
 def load(path: Path) -> dict:
@@ -190,7 +202,7 @@ def bulk_main(args) -> int:
     note = "bulk: " + " ".join(
         f"{k}={v}" for k, v in filters.items() if v not in (None, [], False))
     approved, skipped = apply_bulk_approval(
-        selected, cameras, note, date.today().isoformat())
+        selected, cameras, note, jst_today())
     if approved:
         approved_set = set(approved)
         candidates["cameras"] = [r for r in candidates["cameras"]
@@ -232,7 +244,7 @@ def main() -> int:
         return 0
 
     print(f"{len(pending)}件の候補をレビューします。a=承認 r=却下 e=編集 s=スキップ o=開く q=終了")
-    today = date.today().isoformat()
+    today = jst_today()
     decided: list[str] = []
     try:
         for rec in pending:

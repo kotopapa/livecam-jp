@@ -15,8 +15,9 @@ from typing import Any
 
 import requests
 
-from monitor.freeze import (HISTORY_MAX, dhash64, is_black_frame,
-                            is_local_daytime, is_placeholder, judge_frozen)
+from monitor.freeze import (HISTORY_MAX, as_utc, dhash64, is_black_frame,
+                            is_local_daytime, is_placeholder, judge_frozen,
+                            parse_utc)
 
 USER_AGENT = "LiveCamJP-Monitor/1.0 (+https://github.com/kotopapa/livecam-jp)"
 TIMEOUT_SEC = 10
@@ -117,9 +118,8 @@ def _stale_last_modified(value: str | None, now) -> str | None:
         lm = parsedate_to_datetime(value)
     except (TypeError, ValueError):
         return None
-    if lm.tzinfo is None:
-        lm = lm.replace(tzinfo=timezone.utc)
-    if now - lm > timedelta(days=STALE_LAST_MODIFIED_DAYS):
+    lm = as_utc(lm)                 # RFC2822 の "-0000" は naive で返る
+    if as_utc(now) - lm > timedelta(days=STALE_LAST_MODIFIED_DAYS):
         return lm.isoformat()
     return None
 
@@ -175,7 +175,9 @@ def _check_still(session, camera, state, now, prev_failures, url: str | None = N
         times.append(now.isoformat())
         state["change_times"] = times[-10:]
         if len(times) >= 2:
-            ts = [datetime.fromisoformat(t) for t in times[-10:]]
+            # 古いstateにオフセット無しの記録が混ざっていても
+            # naive/aware比較でTypeErrorにならないようUTCへ揃える
+            ts = [parse_utc(t) for t in times[-10:]]
             deltas = [(b - a).total_seconds() for a, b in zip(ts, ts[1:])]
             state["avg_interval_sec"] = int(sum(deltas) / len(deltas))
 
@@ -249,10 +251,10 @@ def _youtube_watch_alive(text: str, now: datetime) -> bool:
     if not m:
         return False  # ライブ由来でない通常動画
     try:
-        start = datetime.fromisoformat(m.group(1).replace("Z", "+00:00"))
+        start = parse_utc(m.group(1))
     except ValueError:
         return False
-    return (now - start).total_seconds() <= 48 * 3600
+    return (as_utc(now) - start).total_seconds() <= 48 * 3600
 
 
 def _check_youtube(session, camera, state, now, prev_failures) -> dict:

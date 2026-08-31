@@ -171,8 +171,11 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget _timeAndRefreshRow(CameraStatus? st) {
     // 静止画はアプリがいま配信元から直接取得した画像なので、アプリの読込時刻を出す。
     // 都度解決型(roadinfo)はURL自体に撮影時刻が入っており status の image_time が正
+    // 端末の読込時刻は「絶対時刻」なので必ずUTC(末尾Z)で渡す。オフセットなしの
+    // 文字列は formatTakenTime が提供元のJST表記として扱うため、日本以外のTZの
+    // 端末で「たった今」が9時間ずれる
     final time = camera.feed.type == FeedType.stillImage
-        ? _imageLoadedAt.toIso8601String()
+        ? _imageLoadedAt.toUtc().toIso8601String()
         : (st?.imageTime ?? st?.lastOkAt);
     final left = _cooldownLeft;
     final l10n = context.l10n;

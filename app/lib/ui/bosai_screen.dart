@@ -14,6 +14,7 @@ import '../data/jma_layers.dart';
 import '../data/quake_intensity.dart';
 import '../models/camera.dart';
 import '../util/geo.dart';
+import '../util/jst.dart';
 import '../util/prefectures.dart';
 import 'ad_banner.dart';
 import 'detail_screen.dart';
@@ -428,7 +429,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 地点マスタは1セッション1回＋端末キャッシュ、実況・予測は同じ正時内は
   /// 再取得しない（Wbgt側）。失敗は静かにカード内の文言で示す
   Future<void> _loadWbgt() async {
-    final now = HeatAlerts.nowJst();
+    final now = HeatAlerts.nowJstNaive();
     if (!HeatAlerts.isInSeason(now) || _wbgtLoading) return;
     _wbgtLoading = true;
     try {
@@ -478,7 +479,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 熱中症警戒情報を取得する。運用期間（4/22〜10/21）外は取得もしない。
   /// 取得失敗は前回の内容を残して静かに諦める（気象警報の表示は妨げない）
   Future<void> _loadHeat() async {
-    final now = HeatAlerts.nowJst();
+    final now = HeatAlerts.nowJstNaive();
     if (!HeatAlerts.isInSeason(now)) {
       if (mounted && (_heat != null || _heatPrefs.isNotEmpty)) {
         setState(() {
@@ -612,14 +613,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     };
   }
 
-  String _when(DateTime at) {
-    final l10n = context.l10n;
-    final d = DateTime.now().difference(at);
-    if (d.inMinutes < 1) return l10n.bosaiTimeJustNow;
-    if (d.inMinutes < 60) return l10n.bosaiTimeMinutesAgo(d.inMinutes);
-    if (d.inHours < 24) return l10n.bosaiTimeHoursAgo(d.inHours);
-    return l10n.bosaiTimeMonthDayHour(at.month, at.day, at.hour);
-  }
+  String _when(DateTime at) => formatQuakeWhen(context.l10n, at);
 
   @override
   Widget build(BuildContext context) {
@@ -873,7 +867,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 熱中症タブ（環境省 熱中症警戒情報）。運用期間（4/22〜10/21）外はその旨を表示
   Widget _buildHeatTab() {
     final l10n = context.l10n;
-    final now = HeatAlerts.nowJst();
+    final now = HeatAlerts.nowJstNaive();
     if (!HeatAlerts.isInSeason(now)) {
       return Center(
         child: Padding(
@@ -1102,16 +1096,9 @@ class _BosaiScreenState extends State<BosaiScreen>
     );
   }
 
-  /// 予測コマの時刻表示。当日は「15時」、翌日は「翌3時」、それ以外は「9/2 12時」
   static String _wbgtTimeLabel(
-      AppLocalizations l10n, DateTime t, DateTime now) {
-    final today = DateTime(now.year, now.month, now.day);
-    final day = DateTime(t.year, t.month, t.day);
-    final diff = day.difference(today).inDays;
-    if (diff == 0) return l10n.bosaiWbgtHour(t.hour);
-    if (diff == 1) return l10n.bosaiWbgtNextDayHour(t.hour);
-    return l10n.bosaiWbgtDateHour(t.month, t.day, t.hour);
-  }
+          AppLocalizations l10n, DateTime t, DateTime now) =>
+      wbgtTimeLabel(l10n, t, now);
 
   /// 「今日 熱中症警戒」等のバッジ（警報一覧のチップと同じ様式）
   Widget _heatBadge(
@@ -1782,4 +1769,31 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
               },
             );
   }
+}
+
+/// 震源・津波の発生時刻の表示（24時間以内は相対、それ以降は「M月D日 H時頃」）。
+///
+/// [at] は気象庁 list.json の `"…+09:00"` を `DateTime.parse` したもので、
+/// **UTCフラグが付いている**（エポック値は正しい）。差の計算はそのままでよいが、
+/// `.month` / `.hour` をそのまま読むとUTCの値になり9時間ずれるため、
+/// 表示の直前に必ず `toLocal()` する（2026-09-01 の時刻点検で発見）。
+String formatQuakeWhen(AppLocalizations l10n, DateTime at, {DateTime? now}) {
+  final d = (now ?? DateTime.now()).difference(at);
+  if (d.inMinutes < 1) return l10n.bosaiTimeJustNow;
+  if (d.inMinutes < 60) return l10n.bosaiTimeMinutesAgo(d.inMinutes);
+  if (d.inHours < 24) return l10n.bosaiTimeHoursAgo(d.inHours);
+  final local = at.toLocal();
+  return l10n.bosaiTimeMonthDayHour(local.month, local.day, local.hour);
+}
+
+/// 暑さ指数の予測コマの時刻表示。当日は「15時」、翌日は「翌3時」、
+/// それ以外は「9/2 12時」。[t] [now] はいずれもJSTの壁時計（素のDateTime）。
+///
+/// `difference().inDays` は夏時間のある端末TZで23時間＝0日になり得るため、
+/// カレンダー上の日数差（[daysBetween]）で判定する。
+String wbgtTimeLabel(AppLocalizations l10n, DateTime t, DateTime now) {
+  final diff = daysBetween(asWallClock(now), asWallClock(t));
+  if (diff == 0) return l10n.bosaiWbgtHour(t.hour);
+  if (diff == 1) return l10n.bosaiWbgtNextDayHour(t.hour);
+  return l10n.bosaiWbgtDateHour(t.month, t.day, t.hour);
 }

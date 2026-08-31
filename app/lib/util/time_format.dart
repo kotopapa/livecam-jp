@@ -1,4 +1,5 @@
 import '../l10n/gen/app_localizations.dart';
+import 'jst.dart';
 
 /// 取得時刻の人向け表示（SPEC 9.2③: 相対時刻だけでなく絶対時刻も出す）。
 ///
@@ -11,8 +12,13 @@ import '../l10n/gen/app_localizations.dart';
 String formatTakenTime(String raw, {AppLocalizations? l10n}) {
   final dt = DateTime.tryParse(raw.trim().replaceFirst(' ', 'T'));
   if (dt == null) return raw;
-  final local = dt.isUtc || raw.contains('+') ? dt.toLocal() : dt;
-  final now = DateTime.now();
+  // オフセット付き(Z / +09:00)は DateTime.parse がUTCフラグ付きで返すので端末
+  // ローカルへ変換し、「今」もローカルで取る。
+  // オフセットなしは提供元の日本時間（monitor の image_time 等）なので表示は
+  // その壁時計のまま出し、「今」もJSTの壁時計で取る。両者を混ぜて引き算すると
+  // 日本以外のTZの端末で相対表記が9時間ずれる（SPEC 10章・時刻の扱い）
+  final local = dt.isUtc ? dt.toLocal() : dt;
+  final now = dt.isUtc ? DateTime.now() : jstNow();
 
   final sameDay = local.year == now.year &&
       local.month == now.month &&

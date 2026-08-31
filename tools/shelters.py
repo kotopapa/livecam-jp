@@ -32,6 +32,7 @@ import shutil
 import sys
 import time
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 
@@ -253,16 +254,35 @@ def _download(session: requests.Session, url: str) -> tuple[str, str | None]:
     return resp.text, resp.headers.get("Last-Modified")
 
 
+def parse_http_date(value: str | None) -> datetime | None:
+    """HTTP-date を aware datetime にする。解釈できなければ None。
+
+    strptime("%a, %d %b %Y %H:%M:%S %Z") は
+    - 曜日/月名がロケール依存（LC_TIME=ja_JP 等では必ず ValueError になる）
+    - %Z が tzinfo を設定しないため naive になり、他の aware と比較できない
+    の2点で危険なので、ロケール非依存で aware を返す email.utils を使う。
+    RFC2822 の "-0000"（ローカル不明）は naive で返るため UTC とみなす。
+    """
+    if not value:
+        return None
+    try:
+        dt = parsedate_to_datetime(value)
+    except (TypeError, ValueError):
+        return None
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
 def _latest(*values: str | None) -> str | None:
     """複数の Last-Modified から新しい方を返す。"""
     best, best_dt = None, None
     for v in values:
         if not v:
             continue
-        try:
-            dt = datetime.strptime(v, "%a, %d %b %Y %H:%M:%S %Z")
-        except ValueError:
-            dt = None
+        dt = parse_http_date(v)
         if best is None or (dt and best_dt and dt > best_dt) or (dt and best_dt is None):
             best, best_dt = v, dt
     return best

@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../config.dart';
+import '../util/jst.dart';
 
 /// 全国ランキング用の匿名閲覧カウント送信（Firestore RESTへの書き込み専用）。
 ///
@@ -48,6 +49,8 @@ class GlobalStats {
       if (_pending.isNotEmpty || _pendingFav.isNotEmpty) {
         _oldestPending = DateTime.now();
       }
+      // 旧版はローカル時刻の素の文字列で保存していた。どちらもエポック値で
+      // 比較されるため DateTime.tryParse のままでよい（Zならabs、無ければローカル）
       final lf = _prefs!.getString(_lastFlushKey);
       if (lf != null) _lastFlush = DateTime.tryParse(lf);
     } catch (_) {
@@ -113,10 +116,7 @@ class GlobalStats {
     }
     _flushing = true;
     try {
-      final jst = DateTime.now().toUtc().add(const Duration(hours: 9));
-      final day = '${jst.year}'
-          '${jst.month.toString().padLeft(2, '0')}'
-          '${jst.day.toString().padLeft(2, '0')}';
+      final day = jstDayKey(jstNow());
       final base = 'projects/$firebaseProjectId/databases/(default)/documents';
       final entries = _pending.entries.take(_maxWritesPerCommit).toList();
       final favEntries = _pendingFav.entries
@@ -168,8 +168,9 @@ class GlobalStats {
         _lastFlush = DateTime.now();
         await _prefs?.setString(_pendingKey, jsonEncode(_pending));
         await _prefs?.setString(_pendingFavKey, jsonEncode(_pendingFav));
+        // 端末のTZを変えても比較が狂わないよう、絶対時刻(UTC・末尾Z)で保存する
         await _prefs?.setString(
-            _lastFlushKey, _lastFlush!.toIso8601String());
+            _lastFlushKey, _lastFlush!.toUtc().toIso8601String());
       }
       // 失敗時はpendingを保持して次回に持ち越す（リトライの連打はしない）
     } catch (_) {

@@ -14,6 +14,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import '../util/jst.dart';
+
 /// フラグ（CSVの FlagExplanation より）
 /// `発表無し:0、熱中症警戒情報発表:1、熱中症特別警戒情報判定:2、
 ///  熱中症特別警戒情報発表:3、発表時間外:9`
@@ -169,17 +171,13 @@ class HeatAlerts {
     'User-Agent': 'LiveCamJP/1.0 (+https://kotopapa.github.io/livecam-jp/)'
   };
 
-  /// 端末のタイムゾーンに依存しない日本時間
-  /// 日本時間の「現在」。UTCフラグ付きで返るため、**素のDateTimeと大小比較しない**こと
-  /// （Dartの isAfter は絶対時刻で比べるため、9時間ずれる。2026-09-01 に暑さ指数の
-  /// 予測が9時間先から表示される不具合が実発生した）。比較用は [nowJstNaive] を使う
-  static DateTime nowJst() => DateTime.now().toUtc().add(const Duration(hours: 9));
-
-  /// 日本時間の「現在」を、CSV由来の素のDateTime（tz情報なし）と比較できる形で返す
-  static DateTime nowJstNaive() {
-    final j = nowJst();
-    return DateTime(j.year, j.month, j.day, j.hour, j.minute, j.second);
-  }
+  /// 日本時間の「現在」を、端末のTZに依存しない**素のDateTime（壁時計）**で返す。
+  ///
+  /// かつては `DateTime.now().toUtc().add(9h)` を返していたが、UTCフラグが付いた
+  /// まま値が9時間先にずれるため、CSV由来の素のDateTimeと `isAfter` すると
+  /// 予測が9時間先から表示される不具合が起きた（2026-09-01 実発生）。
+  /// 実装は [jstNow] に集約している（lib/util/jst.dart）
+  static DateTime nowJstNaive() => jstNow();
 
   /// 運用期間（4/22〜10/21）。期間外はCSVが404になるため機能自体を出さない
   static bool isInSeason(DateTime jst) {
@@ -196,14 +194,15 @@ class HeatAlerts {
 
   /// 新しい発表から順に試すURL。当日の発表済みの回（新しい順）→ 前日17時。
   /// 運用期間外の日付は除外する
-  static List<Uri> candidateUrls(DateTime nowJst) {
+  static List<Uri> candidateUrls(DateTime now) {
+    final nowJst = asWallClock(now);
     final out = <Uri>[];
     if (isInSeason(nowJst)) {
       for (final h in publishHours.reversed) {
         if (h <= nowJst.hour) out.add(urlFor(nowJst, h));
       }
     }
-    final prev = nowJst.subtract(const Duration(days: 1));
+    final prev = addDays(nowJst, -1);
     if (isInSeason(prev)) out.add(urlFor(prev, publishHours.last));
     return out.take(maxCandidates).toList();
   }
@@ -280,8 +279,7 @@ class HeatAlerts {
     required DateTime today,
     Map<String, String> prefNames = const {},
   }) {
-    final tomorrow = DateTime(today.year, today.month, today.day)
-        .add(const Duration(days: 1));
+    final tomorrow = DateTime(today.year, today.month, today.day + 1);
     final byPref = <String, HeatAlertPref>{};
     for (final a in report.areas) {
       final d1 = report.levelOn(a, today);
@@ -316,7 +314,7 @@ class HeatAlerts {
     DateTime? now,
     http.Client? client,
   }) async {
-    final urls = candidateUrls(now ?? nowJst());
+    final urls = candidateUrls(now ?? nowJstNaive());
     for (final u in urls) {
       try {
         final r = client == null
