@@ -3,10 +3,12 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
 import '../data/heat_alert.dart';
+import '../data/wbgt.dart';
 import '../data/jma_layers.dart';
 import '../data/quake_intensity.dart';
 import '../models/camera.dart';
@@ -232,6 +234,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     _load();
     _loadWarnings();
     _loadHeat();
+    _tabs.addListener(_onTabChanged);
     widget.app.navigationRequest.addListener(_onNavigationRequest);
     widget.visible?.addListener(_onVisibilityChanged);
     WidgetsBinding.instance.addObserver(this);
@@ -245,6 +248,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     widget.visible?.removeListener(_onVisibilityChanged);
     WidgetsBinding.instance.removeObserver(this);
     _autoRefresh?.cancel();
+    _tabs.removeListener(_onTabChanged);
     _tabs.dispose();
     super.dispose();
   }
@@ -383,6 +387,90 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 当日・翌日いずれかで発表中の都道府県（重い順）
   List<HeatAlertPref> _heatPrefs = const [];
 
+  /// 熱中症タブを開いたとき、近くの地点の暑さ指数を取りに行く
+  void _onTabChanged() {
+    if (_tabs.index == 2 && !_tabs.indexIsChanging) _loadWbgt();
+  }
+
+  /// 現在地に近い暑さ指数の地点（距離順）と取得結果。null は未取得
+  List<(WbgtPoint, double, WbgtPointData)>? _wbgtNearby;
+
+  /// 現在地が取れなかった（位置情報未許可・最終既知位置なし）
+  bool _wbgtNoLocation = false;
+
+  /// 地点マスタまたは全地点の取得に失敗した
+  bool _wbgtFailed = false;
+  bool _wbgtLoading = false;
+
+  /// 位置情報の権限が既にあるときだけ、OSが保持する最終既知位置を返す。
+  /// **ここでは新たに許可ダイアログを出さない**（地図画面の権限フローに任せる）
+  static Future<(double, double)?> _lastKnownLocation() async {
+    try {
+      final permission = await Geolocator.checkPermission();
+      if (permission != LocationPermission.always &&
+          permission != LocationPermission.whileInUse) {
+        return null;
+      }
+      final last = await Geolocator.getLastKnownPosition();
+      if (last == null) return null;
+      if (!last.latitude.isFinite || !last.longitude.isFinite) return null;
+      return (last.latitude, last.longitude);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// 近くの地点の暑さ指数（環境省）。運用期間外は取得しない。
+  /// 地点マスタは1セッション1回＋端末キャッシュ、実況・予測は同じ正時内は
+  /// 再取得しない（Wbgt側）。失敗は静かにカード内の文言で示す
+  Future<void> _loadWbgt() async {
+    final now = HeatAlerts.nowJst();
+    if (!HeatAlerts.isInSeason(now) || _wbgtLoading) return;
+    _wbgtLoading = true;
+    try {
+      final here = await _lastKnownLocation();
+      if (!mounted) return;
+      if (here == null) {
+        setState(() {
+          _wbgtNoLocation = true;
+          _wbgtFailed = false;
+        });
+        return;
+      }
+      final master = await Wbgt.loadMaster(now: now);
+      final near = Wbgt.nearest(master, here.$1, here.$2);
+      if (near.isEmpty) {
+        if (mounted) {
+          setState(() {
+            _wbgtNoLocation = false;
+            _wbgtFailed = true;
+          });
+        }
+        return;
+      }
+      final datas = await Future.wait(
+          near.map((e) => Wbgt.fetchPoint(e.$1, now: now)));
+      if (!mounted) return;
+      setState(() {
+        _wbgtNoLocation = false;
+        _wbgtFailed = false;
+        _wbgtNearby = [
+          for (var i = 0; i < near.length; i++)
+            (near[i].$1, near[i].$2, datas[i]),
+        ];
+      });
+    } catch (_) {
+      if (mounted && _wbgtNearby == null) {
+        setState(() {
+          _wbgtNoLocation = false;
+          _wbgtFailed = true;
+        });
+      }
+    } finally {
+      _wbgtLoading = false;
+    }
+  }
+
   /// 熱中症警戒情報を取得する。運用期間（4/22〜10/21）外は取得もしない。
   /// 取得失敗は前回の内容を残して静かに諦める（気象警報の表示は妨げない）
   Future<void> _loadHeat() async {
@@ -396,6 +484,8 @@ class _BosaiScreenState extends State<BosaiScreen>
       }
       return;
     }
+    // 熱中症タブを表示中なら近くの暑さ指数も同じタイミングで更新する
+    if (_tabs.index == 2) unawaited(_loadWbgt());
     final report = await HeatAlerts.fetch(now: now);
     if (!mounted || report == null) return;
     final list = HeatAlerts.byPrefecture(report,
@@ -779,9 +869,15 @@ class _BosaiScreenState extends State<BosaiScreen>
         style: TextStyle(fontSize: 11, color: Colors.grey[600]),
       ),
     );
+    // 出典ヘッダの下に「近くの地点の暑さ指数」カードを置く
+    final top = Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisSize: MainAxisSize.min,
+      children: [header, _buildWbgtCard(now)],
+    );
     if (list.isEmpty) {
       return ListView(children: [
-        header,
+        top,
         const Padding(
           padding: EdgeInsets.all(24),
           child: Center(child: Text('現在、熱中症警戒情報は発表されていません')),
@@ -792,7 +888,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       itemCount: list.length + 1,
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
-        if (i == 0) return header;
+        if (i == 0) return top;
         final p = list[i - 1];
         return ListTile(
           leading: Icon(Icons.thermostat, color: heatLevelColor(p.top)),
@@ -822,6 +918,162 @@ class _BosaiScreenState extends State<BosaiScreen>
         );
       },
     );
+  }
+
+  /// 近くの地点の暑さ指数（WBGT）カード。現在地が取れる場合は最寄り3地点
+  Widget _buildWbgtCard(DateTime now) {
+    final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
+    Widget body;
+    if (_wbgtNoLocation) {
+      body = Text('現在地を取得できませんでした', style: grey);
+    } else if (_wbgtNearby == null) {
+      body = _wbgtFailed
+          ? Text('取得できませんでした', style: grey)
+          : const Padding(
+              padding: EdgeInsets.symmetric(vertical: 8),
+              child: Center(
+                child: SizedBox(
+                    width: 16,
+                    height: 16,
+                    child: CircularProgressIndicator(strokeWidth: 2)),
+              ),
+            );
+    } else {
+      body = Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          for (final (i, e) in _wbgtNearby!.indexed) ...[
+            if (i > 0) const Divider(height: 12),
+            _wbgtPointTile(e.$1, e.$2, e.$3, now),
+          ],
+        ],
+      );
+    }
+    return Card(
+      margin: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 10, 12, 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(children: [
+              Icon(Icons.device_thermostat,
+                  size: 18, color: Colors.grey[700]),
+              const SizedBox(width: 4),
+              const Expanded(
+                child: Text('近くの地点の暑さ指数（WBGT）',
+                    style: TextStyle(
+                        fontSize: 13, fontWeight: FontWeight.bold)),
+              ),
+            ]),
+            const SizedBox(height: 6),
+            body,
+            const SizedBox(height: 6),
+            Text(Wbgt.attribution, style: TextStyle(fontSize: 10, color: Colors.grey[600])),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// 1地点分（観測所名・所在地・距離／現在の実況値／今後の予測チップ）
+  Widget _wbgtPointTile(
+      WbgtPoint p, double distance, WbgtPointData d, DateTime now) {
+    final cur = d.current;
+    final upcoming = Wbgt.upcoming(d.forecast, now);
+    final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.alphabetic,
+          children: [
+            Text(p.name,
+                style: const TextStyle(
+                    fontSize: 14, fontWeight: FontWeight.bold)),
+            const SizedBox(width: 6),
+            Text('約${Wbgt.formatDistance(distance)}', style: grey),
+            const SizedBox(width: 6),
+            Expanded(
+                child: Text(p.address,
+                    style: grey, overflow: TextOverflow.ellipsis)),
+          ],
+        ),
+        const SizedBox(height: 4),
+        if (d.failed)
+          Text('取得できませんでした', style: grey)
+        else ...[
+          Row(children: [
+            Text('現在', style: grey),
+            const SizedBox(width: 6),
+            if (cur == null)
+              Text('実況値なし', style: grey)
+            else ...[
+              _wbgtChip(cur, big: true),
+              const SizedBox(width: 6),
+              Text('${cur.level.label}（${_wbgtTimeLabel(cur.at, now)}）',
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[800])),
+            ],
+          ]),
+          if (upcoming.isNotEmpty) ...[
+            const SizedBox(height: 4),
+            Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text('予測', style: grey),
+              ),
+              const SizedBox(width: 6),
+              Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(children: [
+                    for (final (i, v) in upcoming.indexed) ...[
+                      if (i > 0) const SizedBox(width: 3),
+                      _wbgtChip(v, label: _wbgtTimeLabel(v.at, now)),
+                    ],
+                  ]),
+                ),
+              ),
+            ]),
+          ],
+        ],
+      ],
+    );
+  }
+
+  /// 値を段階色で塗ったチップ。[label] があれば上段に時刻を出す
+  Widget _wbgtChip(WbgtValue v, {String? label, bool big = false}) {
+    final lv = v.level;
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: big ? 8 : 5, vertical: 2),
+      decoration: BoxDecoration(
+        color: lv.color,
+        borderRadius: BorderRadius.circular(4),
+      ),
+      child: Column(mainAxisSize: MainAxisSize.min, children: [
+        if (label != null)
+          Text(label, style: TextStyle(fontSize: 9, color: lv.textColor)),
+        Text(v.value.toStringAsFixed(1),
+            style: TextStyle(
+                fontSize: big ? 16 : 12,
+                fontWeight: FontWeight.bold,
+                color: lv.textColor)),
+      ]),
+    );
+  }
+
+  /// 予測コマの時刻表示。当日は「15時」、翌日は「翌3時」、それ以外は「9/2 12時」
+  static String _wbgtTimeLabel(DateTime t, DateTime now) {
+    final today = DateTime(now.year, now.month, now.day);
+    final day = DateTime(t.year, t.month, t.day);
+    final diff = day.difference(today).inDays;
+    if (diff == 0) return '${t.hour}時';
+    if (diff == 1) return '翌${t.hour}時';
+    return '${t.month}/${t.day} ${t.hour}時';
   }
 
   /// 「今日 熱中症警戒」等のバッジ（警報一覧のチップと同じ様式）
