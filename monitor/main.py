@@ -68,6 +68,21 @@ def monitor_host(camera: dict) -> str:
     return urlparse(f["url"]).netloc
 
 
+# 低頻度で確認するホスト（運営者が定期的なデータ収集を控えるよう求めているもの）と、
+# 確認を行うUTC時刻。JST 03/09/15/21時の各1時間枠 = 1日4回
+LOW_FREQ_HOSTS = ("cam.river.go.jp", "www.river.go.jp", "river.go.jp")
+LOW_FREQ_HOURS_UTC = (18, 0, 6, 12)
+
+
+def _skip_low_freq(camera: dict, now: datetime) -> bool:
+    """低頻度対象のカメラを、指定時刻の枠以外ではチェック対象から外す。"""
+    url = (camera.get("feed", {}) or {}).get("url") or ""
+    page = (camera.get("source", {}) or {}).get("page_url") or ""
+    if not any(h in url or h in page for h in LOW_FREQ_HOSTS):
+        return False
+    return now.hour not in LOW_FREQ_HOURS_UTC
+
+
 def run(shard: str | None = None) -> int:
     if not CAMERAS_PATH.exists():
         print("data/cameras.json がない", file=sys.stderr)
@@ -77,6 +92,11 @@ def run(shard: str | None = None) -> int:
     if shard:
         idx, total = (int(x) for x in shard.split("/"))
         cameras = [c for i, c in enumerate(cameras) if i % total == idx]
+
+    # 川の防災情報(kawabou)は「ツール等による定期的なデータ収集はお控えください」と
+    # 明記されているため、30分ごとの全数チェックはせず1日4回の枠でのみ確認する
+    # (規約: https://www.river.go.jp/kawabou/kwb_apend/html/caution.html 2026-08-31確認)
+    cameras = [c for c in cameras if not _skip_low_freq(c, datetime.now(timezone.utc))]
 
     state_all: dict = {}
     if STATE_PATH.exists():

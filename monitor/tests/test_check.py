@@ -232,3 +232,20 @@ def test_shimane_suibo_uses_resolved_image():
     cam.pop("_resolved_image")
     r2 = check_camera(FakeSession([]), cam, {})
     assert r2["state"] == "unknown" and r2["consecutive_failures"] == 1
+
+
+def test_low_freq_hosts_are_skipped_outside_window():
+    # 川の防災情報は「定期的なデータ収集はお控えください」と明記されているため、
+    # 1日4回(UTC 18/0/6/12時台)の枠でのみ確認する
+    from datetime import datetime, timezone
+
+    from monitor.main import _skip_low_freq
+
+    cam = {"feed": {"url": "https://cam.river.go.jp/cam/now/104353114.jpg"},
+           "source": {"page_url": "https://www.river.go.jp/kawabou/pc/tm?scamId=1"}}
+    other = {"feed": {"url": "https://example.jp/a.jpg"}, "source": {}}
+    at = lambda h: datetime(2026, 8, 31, h, 30, tzinfo=timezone.utc)
+    assert _skip_low_freq(cam, at(6)) is False      # 枠内 → 確認する
+    assert _skip_low_freq(cam, at(0)) is False
+    assert _skip_low_freq(cam, at(7)) is True       # 枠外 → 飛ばす
+    assert _skip_low_freq(other, at(7)) is False    # 対象外ホストは常に確認
