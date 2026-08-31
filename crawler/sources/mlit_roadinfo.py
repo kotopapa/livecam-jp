@@ -32,7 +32,9 @@ from crawler.sources.base import (CameraCandidate, DiscoverResult, HttpSession,
 BASE = "https://www.road-info-prvs.mlit.go.jp/roadinfo/"
 PC_IMAGE_URL = BASE + "pc/pcImage_{cd}_1.html"
 IMG_BASE = BASE + "img/doro_gazo/pc/"
-TERMS_URL = "https://www.mlit.go.jp/link.html"   # 国交省サイト利用規約（推定・要確認）
+TERMS_URL = BASE + "pc/pcWhenUsing_00_0.html"   # 「ご利用に際して」(2026-08-31 実確認)
+# 規約に「各画像への直接のリンクはご遠慮ください」「独自のフレームの中に本サイトの
+# コンテンツを取り込んだ形のリンクをしないでください」の記載あり。扱いは要判断
 KOKUDO_JSON_RE = re.compile(r"id=[\"']kokudoJson[\"'][^>]*value='(.*?)'", re.S)
 
 BUREAUS = {

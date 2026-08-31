@@ -24,7 +24,7 @@ from crawler.sources.base import CameraCandidate, DiscoverResult, HttpSession
 BASE = "https://www.river.go.jp/kawabou/file/files"
 
 KAWABOU_ATTRIBUTION = "出典：国土交通省「川の防災情報」"
-KAWABOU_TERMS_URL = "https://www.river.go.jp/riyou"
+KAWABOU_TERMS_URL = "https://www.river.go.jp/kawabou/kwb_apend/html/caution.html"  # 「取り扱い上の注意」(2026-08-31 実確認。旧URLはSPAシェルで規約本文なし)
 
 
 def pref_jis(pref_cd: int) -> str:
