@@ -18,6 +18,7 @@ import 'app_state.dart';
 import 'data/api_client.dart';
 import 'data/cache_store.dart';
 import 'data/camera_repository.dart';
+import 'data/widget_bridge.dart';
 import 'ui/home_shell.dart';
 import 'ui/onboarding_screen.dart';
 
@@ -54,6 +55,7 @@ Future<void> main() async {
   final onboardingDone = await OnboardingScreen.isDone();
   runApp(LiveCamApp(app: app, onboardingDone: onboardingDone));
   _hookNotificationTaps(app);
+  _hookWidgetLinks(app);
   app.init(); // キャッシュ復元→バックグラウンド更新（待たずに起動する）
   Future.delayed(
       const Duration(milliseconds: 1600), FlutterNativeSplash.remove);
@@ -109,6 +111,10 @@ class _LiveCamAppState extends State<LiveCamApp>
       PaintingBinding.instance.imageCache.clear();
       PaintingBinding.instance.imageCache.clearLiveImages();
     }
+    // 復帰時にホーム画面ウィジェットの内容を最新化する
+    if (state == AppLifecycleState.resumed && widget.app.initialized) {
+      widget.app.syncWidgets();
+    }
   }
 
   @override
@@ -122,6 +128,15 @@ class _LiveCamAppState extends State<LiveCamApp>
               onDone: () => setState(() => _onboardingDone = true)),
     );
   }
+}
+
+/// ホーム画面ウィジェットのタップ（`livecamjp://camera/<id>` / `livecamjp://bosai`）を
+/// 通知タップと同じ遷移要求に流す。App Group の設定もここで行う（iOSのみ）
+void _hookWidgetLinks(AppState app) {
+  WidgetBridge.init(onRoute: (route) {
+    app.navigationRequest.value = null; // 同一値でも通知されるように
+    app.navigationRequest.value = route;
+  });
 }
 
 /// プッシュ通知のタップでアプリが開かれたら災害速報タブへ移動する。

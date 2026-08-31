@@ -12,6 +12,7 @@ import 'data/favorites_store.dart';
 import 'data/global_stats.dart';
 import 'data/review_prompter.dart';
 import 'data/view_history_store.dart';
+import 'data/widget_bridge.dart';
 import 'models/camera.dart';
 import 'models/status.dart';
 
@@ -42,9 +43,34 @@ class AppState extends ChangeNotifier {
 
   bool isFavorite(Camera c) => favorites.contains(c.id);
 
+  /// お気に入りカメラ（登録が新しい順）。ウィジェットの表示順もこれに従う
+  List<Camera> favoriteCameras() {
+    final byId = {for (final c in repository.cameras) c.id: c};
+    return [
+      for (final id in favorites.newestFirst)
+        if (byId[id] != null) byId[id]!,
+    ];
+  }
+
+  /// iOSホーム画面ウィジェットへ現在の状態を書き出す（お気に入り変更・
+  /// 起動・復帰・台帳更新のたびに呼ぶ。iOS以外では何もしない）
+  void syncWidgets() {
+    if (!WidgetBridge.supported) return;
+    WidgetBridge.syncFavorites(buildFavoritesWidgetData(
+      favorites: favoriteCameras(),
+      imageUrlFor: repository.imageUrlFor,
+      imageTimeFor: (c) {
+        final st = repository.status[c.id];
+        return st?.imageTime ?? st?.lastOkAt;
+      },
+    ));
+    unawaited(WidgetBridge.syncBosaiSettings());
+  }
+
   Future<void> toggleFavorite(Camera c) async {
     final added = await favorites.toggle(c.id);
     notifyListeners();
+    syncWidgets();
     await globalStats.addFavorite(c.id, added);
     if (added) {
       reviewPrompter.maybePrompt(
@@ -307,6 +333,8 @@ class AppState extends ChangeNotifier {
     }
     // 災害速報タブのバッジ用（失敗しても本体機能に影響させない）
     unawaited(checkSpecialWarnings());
+    // 台帳・status更新後の最新URLをウィジェットへ（都度解決型の image_url 等）
+    syncWidgets();
   }
 
   // --- 特別警報バッジ（災害速報タブに赤バッジを出す） ---

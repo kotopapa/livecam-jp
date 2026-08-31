@@ -5,6 +5,8 @@ import 'dart:io' show Platform;
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'widget_bridge.dart';
+
 /// 災害プッシュ通知の設定（FCMトピック購読の管理）。
 ///
 /// トピック設計（送信側 tools/bosai_notify.py と対応）:
@@ -158,6 +160,8 @@ class NotificationSettings {
     await _prefs?.setStringList(
         _warningPrefsKey, warningPrefs.toList()..sort());
     unawaited(_applyWarningTopics());
+    // 災害速報ウィジェットも同じ都道府県で絞り込む
+    unawaited(WidgetBridge.syncBosaiSettings(prefs: warningPrefs));
   }
 
   /// 起動時に保存済み設定の購読を再適用する（購読漏れの自己修復）。

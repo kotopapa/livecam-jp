@@ -26,6 +26,20 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<!-- ホーム画面ウィジェットからの起動 (livecamjp://camera/<id>, livecamjp://bosai) -->
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>jp.livecam.livecamJp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>livecamjp</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>

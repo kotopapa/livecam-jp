@@ -5,6 +5,7 @@ import 'ad_banner.dart';
 
 import '../app_state.dart';
 import 'bosai_screen.dart';
+import 'detail_screen.dart';
 import 'favorites_screen.dart';
 import 'list_screen.dart';
 import 'map_screen.dart';
@@ -42,12 +43,42 @@ class _HomeShellState extends State<HomeShell> {
     _onNavigationRequest(); // 起動前に届いていた要求(終了状態からの通知タップ)
   }
 
-  /// 通知タップ等の遷移要求（'bosai/...' なら災害速報タブへ）
+  /// 通知タップ等の遷移要求（'bosai/...' なら災害速報タブへ、
+  /// `camera/<id>` ならウィジェットからのカメラ詳細）
   void _onNavigationRequest() {
     final r = widget.app.navigationRequest.value;
     if (r == null || !mounted) return;
     if (r.startsWith('bosai')) _setIndex(2);
     if (r.startsWith('map')) _setIndex(0);
+    if (r.startsWith('camera/')) _openCamera(r.substring('camera/'.length));
+  }
+
+  /// 台帳がまだ読めていない起動直後はIDを保持し、読めた時点で開く
+  String? _pendingCameraId;
+
+  void _openCamera(String id) {
+    _pendingCameraId = id;
+    _tryOpenPendingCamera();
+  }
+
+  void _tryOpenPendingCamera() {
+    final id = _pendingCameraId;
+    if (id == null || !mounted) return;
+    final cameras = widget.app.repository.cameras;
+    if (cameras.isEmpty) return; // init() の loadCached/refresh 後に再試行
+    _pendingCameraId = null;
+    final camera = cameras.where((c) => c.id == id).firstOrNull;
+    if (camera == null) {
+      _setIndex(3); // 台帳から消えたカメラ: お気に入り一覧へ
+      return;
+    }
+    _setIndex(3);
+    // 起動直後(initState経由)はビルド中のためフレーム後に遷移する
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      Navigator.of(context).push(MaterialPageRoute<void>(
+          builder: (_) => DetailScreen(camera: camera, app: widget.app)));
+    });
   }
 
   @override
@@ -62,6 +93,7 @@ class _HomeShellState extends State<HomeShell> {
   /// 特別警報バッジ等の反映（AppState変更で下部バーを再描画する）
   void _onAppChanged() {
     if (mounted) setState(() {});
+    if (_pendingCameraId != null) _tryOpenPendingCamera();
   }
 
   /// 強制アップデート（HANDOFF 2-8-1）。manifest の min_app_version を
