@@ -10,9 +10,10 @@ from tools import facilities
 # ------------------------------------------------------------ 分類
 
 def test_classify_kinds():
-    assert facilities.classify("消防水利施設一覧") == "fire_water"
-    assert facilities.classify("【名古屋市】市有防火水槽一覧") == "fire_water"
-    assert facilities.classify("消火栓一覧（2024年4月1日時点）") == "fire_water"
+    # 2026-08-31: 消防水利（消火栓・防火水槽）は対象外にしたので分類されない
+    assert facilities.classify("消防水利施設一覧") is None
+    assert facilities.classify("【名古屋市】市有防火水槽一覧") is None
+    assert facilities.classify("消火栓一覧（2024年4月1日時点）") is None
     assert facilities.classify("給水拠点一覧データ") == "water"
     assert facilities.classify("応急給水施設一覧（2025年4月1日更新）") == "water"
     assert facilities.classify("災害時給水ステーション") == "water"
@@ -148,14 +149,14 @@ NAMED_CSV = """番号,緯度,経度,施設名,種別,確保水量（立方メー
 
 def test_rows_to_records_standard_format():
     rows = facilities.read_csv_text(STANDARD_CSV)
-    recs, stats = facilities.rows_to_records(rows, "fire_water", 0, "南さつま市")
+    recs, stats = facilities.rows_to_records(rows, "water", 0, "南さつま市")
     assert stats["rows"] == 4
     # 座標も住所も無い行だけ捨てる
     assert len(recs) == 3
     assert stats["no_coord"] == 2
     first = recs[0]
     assert first == {"id": "0-0", "n": "消火栓", "a": "鹿児島県南さつま市本町中央",
-                     "k": "fire_water", "o": "南さつま市", "s": 0, "_pref": "46",
+                     "k": "water", "o": "南さつま市", "s": 0, "_pref": "46",
                      "lat": 31.42024, "lng": 130.32092}
     # 所在地_連結表記があればそれを優先
     assert recs[1]["a"] == "鹿児島県南さつま市加世田川畑1-1"
@@ -167,7 +168,7 @@ def test_rows_to_records_standard_format():
 
 def test_rows_to_records_legacy_format_and_id_offset():
     recs, _ = facilities.rows_to_records(
-        facilities.read_csv_text(LEGACY_CSV), "fire_water", 3, "武蔵野市", id_start=10)
+        facilities.read_csv_text(LEGACY_CSV), "water", 3, "武蔵野市", id_start=10)
     assert len(recs) == 1
     assert recs[0]["id"] == "3-10"       # 同一データセットの2本目以降のCSVでもIDが衝突しない
     assert recs[0]["_pref"] == "13"
@@ -178,8 +179,8 @@ def test_rows_to_records_legacy_format_and_id_offset():
 def test_rows_to_records_falls_back_to_short_kind_name():
     """名称列も種別列も無いCSV（北九州市など）は短い種別名を表示名にする。"""
     rows = facilities.read_csv_text("水利番号(栓),緯度,経度\n1,33.88,130.87\n")
-    recs, stats = facilities.rows_to_records(rows, "fire_water", 0, "北九州市", default_pref="40")
-    assert recs[0]["n"] == "消防水利"
+    recs, stats = facilities.rows_to_records(rows, "water", 0, "北九州市", default_pref="40")
+    assert recs[0]["n"] == "給水拠点"
     assert recs[0]["a"] == ""
     assert stats["no_name"] == 1
 
@@ -195,12 +196,12 @@ def test_rows_to_records_prefers_facility_name_over_kind():
 
 def test_rows_to_records_default_pref_when_row_has_no_hint():
     rows = facilities.read_csv_text("管轄,水利番号,所在地,緯度,経度\n第一,1,西五反田1-1,35.62,139.72\n")
-    recs, stats = facilities.rows_to_records(rows, "fire_water", 0, "品川区", default_pref="13")
+    recs, stats = facilities.rows_to_records(rows, "water", 0, "品川区", default_pref="13")
     assert recs[0]["_pref"] == "13"
     assert recs[0]["o"] == "品川区"
     assert stats["no_pref"] == 0
     # 県が特定できなければ捨てる
-    recs2, stats2 = facilities.rows_to_records(rows, "fire_water", 0, "品川区")
+    recs2, stats2 = facilities.rows_to_records(rows, "water", 0, "品川区")
     assert recs2 == [] and stats2["no_pref"] == 1
 
 
@@ -285,11 +286,11 @@ def test_split_by_pref_dedupes_same_point_same_name():
     """住所ジオコーディングで同一座標に積み上がる重複を落とす。"""
     sources = [{"title": "A"}, {"title": "B"}]
     recs = [
-        {"id": "0-0", "n": "消火栓", "k": "fire_water", "s": 0, "_pref": "24",
+        {"id": "0-0", "n": "給水拠点", "k": "water", "s": 0, "_pref": "24",
          "lat": 34.85, "lng": 136.45, "g": 1},
-        {"id": "0-1", "n": "消火栓", "k": "fire_water", "s": 0, "_pref": "24",
+        {"id": "0-1", "n": "給水拠点", "k": "water", "s": 0, "_pref": "24",
          "lat": 34.85, "lng": 136.45, "g": 1},
-        {"id": "1-0", "n": "防火水槽", "k": "fire_water", "s": 1, "_pref": "24",
+        {"id": "1-0", "n": "防火水槽", "k": "water", "s": 1, "_pref": "24",
          "lat": 34.85, "lng": 136.45},          # 種別が違えば残す
     ]
     by_pref = facilities.split_by_pref(recs, sources)
@@ -299,8 +300,8 @@ def test_split_by_pref_dedupes_same_point_same_name():
 
 def test_write_outputs_and_sync_site(tmp_path):
     sources = [{"title": "消防水利施設一覧", "url": "https://example.jp/dataset/x",
-                "license": "CC BY", "kind": "fire_water"}]
-    recs = [{"id": "0-0", "n": "消火栓", "a": "鹿児島県南さつま市本町中央", "k": "fire_water",
+                "license": "CC BY", "kind": "water"}]
+    recs = [{"id": "0-0", "n": "消火栓", "a": "鹿児島県南さつま市本町中央", "k": "water",
              "o": "南さつま市", "s": 0, "_pref": "46", "lat": 31.42024, "lng": 130.32092}]
     out = tmp_path / "facilities"
     by_pref = facilities.split_by_pref(recs, sources)
@@ -308,7 +309,7 @@ def test_write_outputs_and_sync_site(tmp_path):
                                      "2026-08-31T00:00:00Z", {"filled": 0}, out_dir=out)
     assert index["total"] == 1
     assert index["counts"] == {"46": 1}
-    assert index["kind_counts"] == {"fire_water": 1}
+    assert index["kind_counts"] == {"water": 1}
     assert index["rejected"][0]["reason"] == "不明"
     assert index["attribution"] and index["notice"]
 
@@ -410,7 +411,7 @@ def test_read_xlsx_rows_feed_rows_to_records():
         [232114, "消火栓", "1-1", "愛知県豊田市八草町荒山 731-4", "歩道"],
     ]})
     recs, stats = facilities.rows_to_records(facilities.read_xlsx(body),
-                                             "fire_water", 0, "豊田市")
+                                             "water", 0, "豊田市")
     assert stats["rows"] == 1
     assert recs[0]["_pref"] == "23"
     # 「設置場所」（歩道／車道）ではなく種別列を名称にする
@@ -492,7 +493,7 @@ def test_rows_to_records_prefers_written_pref_over_broken_jis_code():
     rows = facilities.read_csv_text(
         "市区町村コード,NO,都道府県名,市区町村名,種別,住所,緯度(世界測地系),経度(世界測地系)\n"
         "030306,100,和歌山県,紀美野町,消火栓,和歌山県海草郡紀美野町東野,34.16826,135.36252\n")
-    recs, _ = facilities.rows_to_records(rows, "fire_water", 0, "紀美野町")
+    recs, _ = facilities.rows_to_records(rows, "water", 0, "紀美野町")
     assert recs[0]["_pref"] == "30"
 
 
@@ -501,6 +502,6 @@ def test_rows_to_records_uses_jis_code_when_no_pref_name():
     rows = facilities.read_csv_text(
         "全国地方公共団体コード,地方公共団体名,種別,所在地_連結表記,緯度,経度\n"
         "401307,福岡県福岡市,消火栓,西区姪の浜4丁目0004番地1号,,\n")
-    recs, _ = facilities.rows_to_records(rows, "fire_water", 0, "福岡市")
+    recs, _ = facilities.rows_to_records(rows, "water", 0, "福岡市")
     assert recs[0]["_pref"] == "40"
     assert recs[0]["a"] == "西区姪の浜4丁目0004番地1号"

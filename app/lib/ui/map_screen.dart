@@ -29,6 +29,9 @@ import 'pin_style.dart';
 /// 地図画面（SPEC 9.2②）。
 /// 地理院タイル + カテゴリ色ピン + 位置未確定の黄縁取り + クラスタリング。
 /// ピンをタップすると詳細画面へ直接遷移する。
+/// 防災拠点レイヤーを選択肢に出すか（配信データのカバーが広がるまで false）
+const bool showFacilitiesLayer = false;
+
 class MapScreen extends StatefulWidget {
   const MapScreen({super.key, required this.app});
 
@@ -338,17 +341,22 @@ class _MapScreenState extends State<MapScreen> {
             subtitle: const Text('拡大すると表示。災害種別で絞り込みできます'),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.shelters); },
           ),
-          const Divider(height: 8),
-          const ListTile(
-              title: Text('防災拠点', style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text('出典：各自治体のオープンデータ（公開している自治体のみ）')),
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.facilities ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.facilities ? Theme.of(ctx).colorScheme.primary : null),
-            title: const Text('防災拠点（給水・備蓄・消防水利）'),
-            subtitle: const Text('拡大すると表示。種別で絞り込みできます'),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.facilities); },
-          ),
+          // 防災拠点（給水拠点・防災備蓄倉庫）は公開自治体が4都県8自治体と少ないため
+          // 1.2.0 では選択肢に出さない（2026-08-31 ユーザー判断）。実装は残してあり、
+          // 配信データのカバーが広がったら showFacilitiesLayer を true にする
+          if (showFacilitiesLayer) ...[
+            const Divider(height: 8),
+            const ListTile(
+                title: Text('防災拠点', style: TextStyle(fontWeight: FontWeight.bold)),
+                subtitle: Text('出典：各自治体のオープンデータ（公開している自治体のみ）')),
+            ListTile(
+              leading: Icon(_layer == MapLayerKind.facilities ? Icons.radio_button_checked : Icons.radio_button_off,
+                  color: _layer == MapLayerKind.facilities ? Theme.of(ctx).colorScheme.primary : null),
+              title: const Text('防災拠点（給水拠点・防災備蓄倉庫）'),
+              subtitle: const Text('拡大すると表示。種別で絞り込みできます'),
+              onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.facilities); },
+            ),
+          ],
           const SizedBox(height: 8),
         ]),
         ),
