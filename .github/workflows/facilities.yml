@@ -1,0 +1,66 @@
+name: facilities
+
+on:
+  schedule:
+    - cron: "0 19 1 * *"   # 毎月1日 JST 04:00（前日 19:00 UTC）
+  workflow_dispatch:
+    inputs:
+      portal:
+        description: "対象ポータル（空なら全部）"
+        type: choice
+        options: ["", "bodik", "tokyo"]
+        default: ""
+      geocode_limit:
+        description: "住所→座標の新規問い合わせ上限"
+        type: string
+        default: "2000"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: facilities
+  cancel-in-progress: false
+
+jobs:
+  facilities:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120   # 1req/s以下でCKANを巡回するため長め
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 自治体オープンデータ（CKAN）から防災拠点を収集
+        run: |
+          ARGS="--geocode-limit ${{ inputs.geocode_limit || '2000' }}"
+          if [ -n "${{ inputs.portal }}" ]; then
+            ARGS="$ARGS --portal ${{ inputs.portal }}"
+          fi
+          python -m tools.facilities $ARGS
+      - name: 変更があればコミット
+        id: commit
+        run: |
+          git config user.name "livecam-jp-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/facilities data/facilities_state.json data/facilities_geocache.json
+          if git diff --cached --quiet; then
+            echo "変更なし"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "facilities: monthly update"
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && break
+              git rebase --abort 2>/dev/null || true
+              sleep $((i * 10))
+            done
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: 配信を更新（GITHUB_TOKENのpushはpublishを起動しないため明示実行）
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml || true

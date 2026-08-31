@@ -8,6 +8,7 @@ on:
       - "data/status.json"
       - "data/global_ranking.json"
       - "data/shelters/**"
+      - "data/facilities/**"
       - "site/**"
   workflow_dispatch:
 
