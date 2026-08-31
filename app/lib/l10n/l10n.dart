@@ -11,6 +11,8 @@ library;
 
 import 'package:flutter/widgets.dart';
 
+import '../data/heat_alert.dart' show HeatAlertLevel;
+import '../data/wbgt.dart' show WbgtLevel;
 import 'gen/app_localizations.dart';
 
 export 'gen/app_localizations.dart';
@@ -153,4 +155,102 @@ String quakeLevelLabelOf(AppLocalizations l10n, String code) =>
       '5+' => l10n.quakeLevel5Upper,
       '6-' => l10n.quakeLevel6Lower,
       _ => code,
+    };
+
+// ---------------------------------------------------------------------------
+// 地図レイヤー系（`lib/data/*_layers.dart` はキーだけを持ち、表示名はここで解決する）
+// ---------------------------------------------------------------------------
+
+/// ハザードマップのレイヤー名（`HazardLayers.titleKey()` のキー）
+String hazardLayerTitleOf(AppLocalizations l10n, String key) => switch (key) {
+      'flood' => l10n.hazardFloodTitle,
+      'landslide' => l10n.hazardLandslideTitle,
+      'tsunami' => l10n.hazardTsunamiTitle,
+      'hightide' => l10n.hazardHightideTitle,
+      _ => '',
+    };
+
+/// 土砂災害の区分（`HazardLayers.landslideScale` のキー）
+String landslideKindOf(AppLocalizations l10n, String key) => switch (key) {
+      'steepSlope' => l10n.hazardLandslideSteepSlope,
+      'debrisFlow' => l10n.hazardLandslideDebrisFlow,
+      'landslide' => l10n.hazardLandslideSlide,
+      _ => key,
+    };
+
+/// キキクルのレイヤー名（`RiskLayers.titleKey()` のキー。出典：気象庁）
+String riskLayerTitleOf(AppLocalizations l10n, String key) => switch (key) {
+      'land' => l10n.riskLandTitle,
+      'inund' => l10n.riskInundTitle,
+      'flood' => l10n.riskFloodTitle,
+      _ => '',
+    };
+
+/// キキクルのレイヤー説明
+String riskLayerSubtitleOf(AppLocalizations l10n, String key) => switch (key) {
+      'land' => l10n.riskLandSubtitle,
+      'inund' => l10n.riskInundSubtitle,
+      'flood' => l10n.riskFloodSubtitle,
+      _ => '',
+    };
+
+/// キキクルの危険度5段階（`RiskLayers.scale()` のキー。出典：気象庁）
+String riskLevelLabelOf(AppLocalizations l10n, String key) => switch (key) {
+      'watch' => l10n.riskLevelWatch,
+      'caution' => l10n.riskLevelCaution,
+      'warning' => l10n.riskLevelWarning,
+      'danger' => l10n.riskLevelDanger,
+      'critical' => l10n.riskLevelCritical,
+      _ => key,
+    };
+
+/// 避難場所の災害種別。配信JSONが日本語で送ってくるため、日本語名をキーにする
+String shelterHazardLabelOf(AppLocalizations l10n, String jaName) =>
+    switch (jaName) {
+      '洪水' => l10n.shelterHazardFlood,
+      '土砂' => l10n.shelterHazardSediment,
+      '高潮' => l10n.shelterHazardHightide,
+      '地震' => l10n.shelterHazardEarthquake,
+      '津波' => l10n.shelterHazardTsunami,
+      '火事' => l10n.shelterHazardFire,
+      '内水' => l10n.shelterHazardInlandFlood,
+      '火山' => l10n.shelterHazardVolcano,
+      _ => jaName,
+    };
+
+/// 防災拠点の種別（正式名称）
+String facilityKindLabelOf(AppLocalizations l10n, String kind) =>
+    switch (kind) {
+      'water' => l10n.facilityKindWater,
+      'stock' => l10n.facilityKindStock,
+      'fire_water' => l10n.facilityKindFireWater,
+      _ => kind,
+    };
+
+/// 防災拠点の種別（チップ・凡例用の短い名称）
+String facilityKindShortOf(AppLocalizations l10n, String kind) =>
+    switch (kind) {
+      'water' => l10n.facilityKindWaterShort,
+      'stock' => l10n.facilityKindStockShort,
+      'fire_water' => l10n.facilityKindFireWaterShort,
+      _ => kind,
+    };
+
+/// 暑さ指数（WBGT）の5段階（出典：環境省）
+String wbgtLevelLabelOf(AppLocalizations l10n, WbgtLevel level) =>
+    switch (level) {
+      WbgtLevel.danger => l10n.wbgtLevelDanger,
+      WbgtLevel.severeWarning => l10n.wbgtLevelSevereWarning,
+      WbgtLevel.warning => l10n.wbgtLevelWarning,
+      WbgtLevel.caution => l10n.wbgtLevelCaution,
+      WbgtLevel.safe => l10n.wbgtLevelSafe,
+    };
+
+/// 熱中症警戒アラートの区分（出典：環境省／気象庁 多言語辞書）
+String heatAlertLabelOf(AppLocalizations l10n, HeatAlertLevel level) =>
+    switch (level) {
+      HeatAlertLevel.special => l10n.heatAlertSpecial,
+      HeatAlertLevel.specialPending => l10n.heatAlertSpecialPending,
+      HeatAlertLevel.warning => l10n.heatAlertWarning,
+      _ => '',
     };

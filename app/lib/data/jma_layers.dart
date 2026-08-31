@@ -128,17 +128,12 @@ class RiskLayers {
         _ => '',
       };
 
-  static String title(MapLayerKind k) => switch (k) {
-        MapLayerKind.riskLand => '土砂キキクル',
-        MapLayerKind.riskInund => '浸水キキクル',
-        MapLayerKind.riskFlood => '洪水キキクル',
-        _ => '',
-      };
-
-  static String subtitle(MapLayerKind k) => switch (k) {
-        MapLayerKind.riskLand => '土砂災害の危険度（1kmメッシュ・10分ごとに更新）',
-        MapLayerKind.riskInund => '浸水害の危険度（1kmメッシュ・10分ごとに更新）',
-        MapLayerKind.riskFlood => '洪水災害の危険度（河川ごと・10分ごとに更新）',
+  /// レイヤー種別 → 表示名の l10n キー（表示名の解決は `lib/l10n/l10n.dart` の
+  /// `riskLayerTitleOf()` / `riskLayerSubtitleOf()`）
+  static String titleKey(MapLayerKind k) => switch (k) {
+        MapLayerKind.riskLand => 'land',
+        MapLayerKind.riskInund => 'inund',
+        MapLayerKind.riskFlood => 'flood',
         _ => '',
       };
 
@@ -156,11 +151,12 @@ class RiskLayers {
   /// (c) 洪水キキクルだけ最下段が rgb(060,255,255)=#3CFFFF（河川を線で描くため白では見えない）。
   ///     legend_jp_flood_risk.svg の実値
   /// ※「うす紫」は2022年6月の改正で廃止済み。現行は上記4段階
+  /// 第2要素は表示名ではなく l10n キー（`riskLevelLabelOf()` で解決する）
   static const _levels = <(Color, String)>[
-    (Color(0xFFF2E700), '注意'),
-    (Color(0xFFFF2800), '警戒'),
-    (Color(0xFFAA00AA), '危険'),
-    (Color(0xFF0C000C), '切迫'),
+    (Color(0xFFF2E700), 'caution'),
+    (Color(0xFFFF2800), 'warning'),
+    (Color(0xFFAA00AA), 'danger'),
+    (Color(0xFF0C000C), 'critical'),
   ];
 
   /// 「今後の情報等に留意」の色。土砂・浸水は白（タイル上は透明）、洪水は水色の線
@@ -170,9 +166,10 @@ class RiskLayers {
 
   /// 凡例の5段階（低→高）
   static List<(Color, String)> scale(MapLayerKind k) =>
-      [(baseColor(k), '留意'), ..._levels];
+      [(baseColor(k), 'watch'), ..._levels];
 
-  static const attribution = '出典：気象庁';
+  /// 出典表記は翻訳しない
+  static const attribution = JmaLayers.attribution;
 }
 
 class QuakePoint {
@@ -199,6 +196,9 @@ class RainPoint {
 }
 
 class JmaLayers {
+  /// 出典表記は翻訳しない（SPEC C5）。気象庁由来のレイヤー共通
+  static const attribution = '出典：気象庁';
+
   static const _ua = {'User-Agent': 'LiveCamJP/1.0 (+https://kotopapa.github.io/livecam-jp/)'};
 
   /// 雨雲の時間軸: 過去3時間の実況(5分刻み) + 1時間先まで(5分刻み) + 6時間先まで(1時間刻み)。

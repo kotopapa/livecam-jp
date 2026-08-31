@@ -12,13 +12,6 @@
   "commonOpenInSafari": "Safariで ひらく",
   "commonSource": "じょうほうの もとになった ところ（出典）",
   "commonCameraCount": "{count}だい",
-  "@commonCameraCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "legalJapaneseAuthoritative": "この 日本語（にほんご）の 文（ぶん）が 正式（せいしき）です。ほかの ことばは さんこうです。",
   "languageLabel": "ことば",
   "languageSettingTitle": "ことば / Language",
@@ -108,28 +101,11 @@
   "settingsQuakeTitle": "しんど 5弱（じゃく）いじょうの じしん",
   "settingsQuakeSubtitleOff": "大（おお）きな じしんが あったら おしらせします。ちかくの カメラを 見（み）られます",
   "settingsQuakeSubtitleOn": "おしらせする おおきさ: {level}",
-  "@settingsQuakeSubtitleOn": {
-    "placeholders": {
-      "level": {
-        "type": "String"
-      }
-    }
-  },
   "settingsWarningTitle": "とくべつ けいほう（＝いちばん つよい おしらせ）",
   "settingsWarningSubtitle": "大雨（おおあめ）・つよい かぜ・高潮（たかしお）などの とくべつ けいほうが 出（で）たら おしらせします",
   "settingsNotifyArea": "おしらせを うけとる ばしょ",
   "settingsNotifyAreaAll": "日本ぜんぶ",
   "settingsNotifyAreaSummary": "{first} など{count}か しょ",
-  "@settingsNotifyAreaSummary": {
-    "placeholders": {
-      "first": {
-        "type": "String"
-      },
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "settingsNotifyAreaHint": "えらんだ 県（けん）の とくべつ けいほうだけ おしらせします。えらばないと 日本ぜんぶが たいしょうです",
   "settingsNotifyAreaResetAll": "日本ぜんぶに もどす",
   "settingsNotifyLevel": "おしらせする つよさ",
@@ -178,21 +154,7 @@
   "settingsNotifyDiagSubtitle": "おしらせが こない ときの チェック",
   "settingsNotifyDiagUnlocked": "おしらせの チェックを 出（だ）しました（さいがいの おしらせの なかです）",
   "settingsNotifyPermission": "おしらせの きょか: {value}",
-  "@settingsNotifyPermission": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
   "settingsNotifyApns": "APNsトークン: {value}",
-  "@settingsNotifyApns": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
   "settingsNotifyFcm": "FCMトークン:",
   "settingsCopyToken": "トークンを コピー",
   "settingsTokenCopied": "FCMトークンを コピーしました",
@@ -206,24 +168,10 @@
   "attributionOpenYoutube": "YouTubeで だしもとを 見（み）る",
   "attributionOpenSite": "だしもとの サイトを ひらく",
   "listTitle": "いちらん（{count}）",
-  "@listTitle": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "listSearchHint": "カメラの なまえ・かわの なまえ・どうろの なまえで さがす",
   "listEmpty": "じょうけんに あう カメラは ありません",
   "listRanking": "ランキング",
   "favoritesTitle": "おきにいり（{count}）",
-  "@favoritesTitle": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "favoritesEmpty": "おきにいりは まだ ありません。\nちずで カメラを ひらいて ★を おすと ふえます。",
   "favoritesEmptyFiltered": "しぼりこみに あう おきにいりは ありません",
   "favoritesSort": "ならびかえ",
@@ -243,33 +191,12 @@
   "rankingPreparing": "ぜんこく ランキングは じゅんびちゅうです。\n3時間ごとに あつめて います。",
   "rankingFetchFailed": "とれませんでした",
   "rankingFetchFailedHttp": "とれませんでした（HTTP {code}）",
-  "@rankingFetchFailedHttp": {
-    "placeholders": {
-      "code": {
-        "type": "int"
-      }
-    }
-  },
   "rankingUnitViews": "かい",
   "rankingUnitFavorites": "けん",
   "detailLive": "いま ライブ",
   "detailTimeUnknown": "とった 時間（じかん）が わかりません",
   "detailRefreshEvery": "{sec}びょうごとに あたらしく なります",
-  "@detailRefreshEvery": {
-    "placeholders": {
-      "sec": {
-        "type": "int"
-      }
-    }
-  },
   "detailRefreshIn": "{sec}びょう",
-  "@detailRefreshIn": {
-    "placeholders": {
-      "sec": {
-        "type": "int"
-      }
-    }
-  },
   "detailRefreshNow": "あたらしく する",
   "detailPosRepresentative": "ばしょは だいたいの ちてん",
   "detailPosApprox": "ばしょは だいたい",
@@ -284,13 +211,6 @@
   "detailReportProblem": "この カメラの ちょうしが わるい ことを しらせる",
   "detailNearby": "ちかくの カメラ",
   "detailDistanceKm": "だいたい {km}km",
-  "@detailDistanceKm": {
-    "placeholders": {
-      "km": {
-        "type": "String"
-      }
-    }
-  },
   "detailWifiOnlyBlocked": "せっていで、Wi-Fiの ときだけ しゃしんを とる ように なって います",
   "detailNoImage": "いまは えいぞうを とれません",
   "detailEmbedBlockedYoutube": "だしもとの せっていで、この えいぞうは\nアプリの なかでは 見（み）られません",
@@ -301,55 +221,11 @@
   "detailMapTileGsi": "地理院（ちりいん）タイル",
   "elevationLoading": "たかさ …",
   "elevationValue": "たかさ {value}（{source}）",
-  "@elevationValue": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      },
-      "source": {
-        "type": "String"
-      }
-    }
-  },
   "timeTakenAt": "{time} に とりました{relative}",
-  "@timeTakenAt": {
-    "placeholders": {
-      "time": {
-        "type": "String"
-      },
-      "relative": {
-        "type": "String"
-      }
-    }
-  },
   "timeRelJustNow": "（いま）",
   "timeRelMinutes": "（{n}ふん まえ）",
-  "@timeRelMinutes": {
-    "placeholders": {
-      "n": {
-        "type": "int"
-      }
-    }
-  },
   "timeRelHours": "（{n}じかん まえ）",
-  "@timeRelHours": {
-    "placeholders": {
-      "n": {
-        "type": "int"
-      }
-    }
-  },
   "timeMonthDay": "{month}月{day}日",
-  "@timeMonthDay": {
-    "placeholders": {
-      "month": {
-        "type": "int"
-      },
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "intensity5Lower": "5弱（じゃく）",
   "intensity5Upper": "5強（きょう）",
   "intensity6Lower": "6弱（じゃく）",
@@ -411,29 +287,8 @@
   "mapSearchSectionCameras": "カメラ",
   "mapSearchSectionPlaces": "ばしょ",
   "mapPointCameras": "ここの カメラ（{count}だい）",
-  "@mapPointCameras": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "mapFilteredCount": "しぼりこみちゅう {count}だい",
-  "@mapFilteredCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "mapTotalCount": "{count}だい",
-  "@mapTotalCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "mapLayersTooltip": "ちずの レイヤー",
   "bosaiTitle": "さいがいの おしらせ",
   "bosaiTabQuake": "じしん・つなみ",
@@ -443,49 +298,209 @@
   "bosaiWarningNoteNone": "出典（しゅってん）：気象庁。いま けいほうは 出（で）て いません。ちゅういほうだけの ばしょは 下（した）の いちらんで 見（み）られます。",
   "bosaiWarningNote": "出典（しゅってん）：気象庁。おすと その 県（けん）の カメラの いちらんが 出（で）ます。",
   "bosaiAdvisoryRegions": "ちゅういほうが 出（で）て いる ばしょ（{count}の 県（けん）など）",
-  "@bosaiAdvisoryRegions": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "bosaiWarningAreasTitle": "{pref}で けいほうが 出（で）て いる ばしょ",
-  "@bosaiWarningAreasTitle": {
-    "placeholders": {
-      "pref": {
-        "type": "String"
-      }
-    }
-  },
   "bosaiAdvisoryAreasTitle": "{pref}で ちゅういほうが 出（で）て いる ばしょ",
-  "@bosaiAdvisoryAreasTitle": {
-    "placeholders": {
-      "pref": {
-        "type": "String"
-      }
-    }
-  },
   "bosaiMuniNote": "出典（しゅってん）：気象庁。おすと その 市（し）・町（まち）の カメラの いちらんが 出（で）ます",
   "bosaiMuniFetchFailed": "くわしい ばしょが とれませんでした",
   "bosaiMuniNone": "いま、出（で）て いる 市（し）・町（まち）は ありません",
   "bosaiCameraCount": "カメラ {count}だい",
-  "@bosaiCameraCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "bosaiNoCamera": "カメラは ありません",
   "bosaiMuniCamerasTitle": "{name}の カメラ（けいほうが 出（で）て います）",
-  "@bosaiMuniCamerasTitle": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
   "settingsJmaDictionary": "ぼうさいの ことばの ほんやくに ついて",
-  "settingsJmaDictionaryNote": "けいほうや しんどの ことばの ほんやくは、気象庁（きしょうちょう）の 「多言語辞書（たげんごじしょ）」を つかって います。出典（しゅってん）：気象庁ホームページ"
+  "settingsJmaDictionaryNote": "けいほうや しんどの ことばの ほんやくは、気象庁（きしょうちょう）の 「多言語辞書（たげんごじしょ）」を つかって います。出典（しゅってん）：気象庁ホームページ",
+  "hazardFloodTitle": "こうずいで 水（みず）が くる ところ（いちばん 大（おお）きい ばあい）",
+  "hazardLandslideTitle": "どしゃくずれが おきそうな ところ",
+  "hazardTsunamiTitle": "つなみで 水（みず）が くる ところ",
+  "hazardHightideTitle": "たかしおで 水（みず）が くる ところ",
+  "hazardLandslideSteepSlope": "きゅうな がけ",
+  "hazardLandslideDebrisFlow": "どせきりゅう（土（つち）と 石（いし）が ながれる）",
+  "hazardLandslideSlide": "じすべり（じめんが すべる）",
+  "hazardDisclaimer": "くわしいことは 住（す）んでいる 市（し）や 町（まち）の ハザードマップを 見（み）て ください。にげるかどうかは 市（し）や 町（まち）の おしらせに したがって ください",
+  "facilityKindWater": "水（みず）を もらえる ところ",
+  "facilityKindStock": "ひじょうよう ひんの そうこ",
+  "facilityKindFireWater": "しょうぼうの 水（みず）（しょうかせん・ぼうかすいそう）",
+  "facilityKindWaterShort": "水（みず）を もらえる ところ",
+  "facilityKindStockShort": "ひんの そうこ",
+  "facilityKindFireWaterShort": "しょうぼうの 水（みず）",
+  "facilityDisclaimer": "データを 出（だ）している 市（し）や 町（まち）だけです。あたらしい ことは 市（し）や 町（まち）に きいて ください",
+  "facilityNoData": "この ちいきの データは まだ ありません",
+  "shelterHazardFlood": "こうずい",
+  "shelterHazardSediment": "どしゃくずれ",
+  "shelterHazardHightide": "たかしお",
+  "shelterHazardEarthquake": "じしん",
+  "shelterHazardTsunami": "つなみ",
+  "shelterHazardFire": "かじ",
+  "shelterHazardInlandFlood": "ないすい（まちの 中（なか）の みずびたし）",
+  "shelterHazardVolcano": "かざん",
+  "shelterDisclaimer": "くわしいことは 市（し）や 町（まち）に きいて ください",
+  "riskLandTitle": "どしゃくずれの きけんど（キキクル）",
+  "riskInundTitle": "みずびたしの きけんど（キキクル）",
+  "riskFloodTitle": "こうずいの きけんど（キキクル）",
+  "riskLandSubtitle": "どしゃくずれの きけんど（1kmごと・10ぷんごとに あたらしくなる）",
+  "riskInundSubtitle": "みずびたしの きけんど（1kmごと・10ぷんごとに あたらしくなる）",
+  "riskFloodSubtitle": "こうずいの きけんど（かわごと・10ぷんごとに あたらしくなる）",
+  "riskLevelWatch": "気（き）を つける",
+  "riskLevelCaution": "ちゅうい",
+  "riskLevelWarning": "けいかい",
+  "riskLevelDanger": "きけん",
+  "riskLevelCritical": "とても あぶない",
+  "wbgtLevelDanger": "きけん",
+  "wbgtLevelSevereWarning": "とても 気（き）を つける",
+  "wbgtLevelWarning": "気（き）を つける",
+  "wbgtLevelCaution": "ちゅうい",
+  "wbgtLevelSafe": "だいたい あんぜん",
+  "heatAlertSpecial": "ねっちゅうしょう とくべつ けいかい",
+  "heatAlertSpecialPending": "ねっちゅうしょう とくべつ けいかい（きめる まえ）",
+  "heatAlertWarning": "ねっちゅうしょう けいかい",
+  "heatAlertDisclaimer": "これは さんこうの じょうほうです。ただしい おしらせは ねっちゅうしょう よぼう じょうほう サイトを 見（み）て ください",
+  "languageNameZhHans": "简体中文",
+  "languageNameZhHant": "繁體中文",
+  "languageNameKo": "한국어",
+  "languageNameVi": "Tiếng Việt",
+  "mapLayerPanelSubtitle": "地図（ちず）に かさねられるのは 1つだけです",
+  "mapLayerNone": "なにも 出（だ）さない",
+  "mapLayerSectionWeather": "天気（てんき）",
+  "mapLayerRainRadarTitle": "雨（あめ）のレーダー（いま）",
+  "mapLayerRainRadarSubtitle": "くわしい 雨（あめ）の 予報（よほう）。5分（ふん）ごとに 新（あたら）しくなります",
+  "mapLayerQuakesTitle": "地震（じしん）が おきた ところ",
+  "mapQuakePeriodDay": "24時間（じかん）",
+  "mapQuakePeriodWeek": "7日間（なのかかん）",
+  "mapQuakePeriodMonth": "30日間（さんじゅうにちかん）",
+  "mapLayerRain24hTitle": "24時間（じかん）に ふった 雨（あめ）の 量（りょう）",
+  "mapLayerRain24hSubtitle": "気象庁（きしょうちょう）が 出（だ）した 雨（あめ）の 量（りょう）。大（おお）きくすると 観測（かんそく）した 数字（すうじ）も 出（で）ます",
+  "mapLayerSectionHazard": "ハザードマップ（あぶない ところの 地図（ちず））",
+  "mapHazardLandslideSubtitle": "がけ・土石流（どせきりゅう）・地（じ）すべり（黄色（きいろ）＝あぶない ところ／赤（あか）＝とても あぶない ところ）",
+  "mapHazardDepthSubtitle": "水（みず）が どのくらい 深（ふか）く なるかを 色（いろ）で 見（み）せます",
+  "mapShelterTitle": "にげる ところ",
+  "mapLayerShelterTitle": "にげる ところ（すぐに にげる ところ・しばらく くらす ところ）",
+  "mapLayerShelterSubtitle": "地図（ちず）を 大（おお）きくすると 出（で）ます。災害（さいがい）の 種類（しゅるい）で えらべます",
+  "mapFacilityTitle": "防災（ぼうさい）の 施設（しせつ）",
+  "mapLayerFacilityTitle": "防災（ぼうさい）の 施設（しせつ）（水（みず）を くばる ところ・備蓄倉庫（びちくそうこ））",
+  "mapLayerFacilitySubtitle": "地図（ちず）を 大（おお）きくすると 出（で）ます。種類（しゅるい）で えらべます",
+  "mapQuakeNearbyTitle": "この 近（ちか）くの 地震（じしん） {count}件（けん）",
+  "mapQuakeUnknownPlace": "地震（じしん）が おきた ところ（くわしいことは まだ 発表（はっぴょう）されていません）",
+  "mapQuakeMaxIntensity": "いちばん 大（おお）きい ゆれ {value}",
+  "mapNearbyCamerasTitle": "{name}の 近（ちか）くの カメラ",
+  "mapQuakeTapHint": "さわると 近（ちか）く（50km いない）の カメラが 出（で）ます",
+  "mapShelterNoticeTitle": "にげる ところの 表示（ひょうじ）について",
+  "mapShelterNoticeBody": "・「指定緊急避難場所（していきんきゅうひなんばしょ）」は 災害（さいがい）から 命（いのち）を まもるために すぐ にげる ところです。「指定避難所（していひなんじょ）」は しばらく くらす ところです（二重（にじゅう）の わくで 見（み）せます）\n・指定緊急避難場所（していきんきゅうひなんばしょ）は 災害（さいがい）の 種類（しゅるい）ごとに きめられています。災害（さいがい）の 種類（しゅるい）に よっては にげられない ことが あります\n・市（し）や 町（まち）から もらった 情報（じょうほう）です。古（ふる）い ことや のっていない ところが あります。くわしいことは その 市（し）や 町（まち）に 聞（き）いてください",
+  "mapShelterHazardAll": "ぜんぶ",
+  "mapShelterDesignated": "くらす ところ",
+  "mapShelterHazardsLabel": "にげられる 災害（さいがい）の 種類（しゅるい）",
+  "mapOpenRoute": "Googleマップで 道（みち）を 見（み）る",
+  "mapNearbyCamerasButton": "近（ちか）くの カメラ",
+  "mapFacilityNoticeTitle": "防災（ぼうさい）の 施設（しせつ）の 表示（ひょうじ）について",
+  "mapFacilityNoticeBody": "・市（し）や 町（まち）が 公開（こうかい）している「水（みず）を くばる 施設（しせつ）」「備蓄倉庫（びちくそうこ）」「消防（しょうぼう）の 水（みず）の 施設（しせつ）」を あつめた ものです。公開（こうかい）している 市（し）や 町（まち）だけで、日本（にほん）ぜんぶでは ありません\n・消火栓（しょうかせん）や 防火水槽（ぼうかすいそう）は 消防（しょうぼう）が つかう ものです。ふつうの 人（ひと）は つかえません\n・水（みず）を くばる ところは 災害（さいがい）の ときに ひらきます。ふだんは 水（みず）を もらえない ことが あります\n・新（あたら）しくする 時期（じき）は 市（し）や 町（まち）に よって ちがいます。くわしいことは その 市（し）や 町（まち）に 聞（き）いてください",
+  "mapFacilityOwner": "出（だ）している ところ：{owner}",
+  "mapFacilityGeocodedNote": "住所（じゅうしょ）から おおよそで 出（だ）した 場所（ばしょ）です。本当（ほんとう）の 場所（ばしょ）と ちがう ことが あります",
+  "mapFacilitySourceDataset": "出（で）どころ（データ）",
+  "mapNowcastSpanHours": "{value}時間（じかん）",
+  "mapNowcastSpanMinutes": "{value}分（ふん）",
+  "mapNowcastNow": "いま（じっさいの ようす）",
+  "mapNowcastForecastHourly": "予報（よほう）・1時間（じかん）の 雨（あめ）の 量（りょう）",
+  "mapNowcastForecast": "よそく",
+  "mapNowcastAfter": "{span}あと（{kind}）",
+  "mapNowcastBefore": "{span}まえ（じっさいの ようす）",
+  "mapNowcastBackToNow": "いまに もどる",
+  "mapNowcastNowMarker": "▲ いま",
+  "mapNowcastLast": "{label}（6時間（じかん） さき）",
+  "mapLegendRainRadar": "雨（あめ）のレーダー {label}",
+  "mapLegendRainRadarKind": "雨（あめ）のレーダー {label}（{kind}）",
+  "mapLegendRainWeak": "よわい",
+  "mapLegendQuakes": "地震（じしん）が おきた ところ {period}（{count}件（けん））",
+  "mapLegendIntensity": "ゆれ {value}",
+  "mapLegendIntensity6Up": "6弱（じゃく）から うえ",
+  "mapLegendRain24h": "24時間（じかん）の 雨（あめ）の 量（りょう） {label}",
+  "mapLegendRain24hZoom": "24時間（じかん）の 雨（あめ）の 量（りょう） {label}（大（おお）きくすると 数字（すうじ）が 出（で）ます）",
+  "mapLegendLandslide": "{title}（あぶない／とても あぶない）",
+  "mapLegendShelterZoomIn": "にげる ところ（地図（ちず）を 大（おお）きくすると 出（で）ます）",
+  "mapLegendShelter": "にげる ところ（{count}件（けん））",
+  "mapLegendShelterCluster": "にげる ところ（{count}件（けん）・まとめて 見（み）せています）",
+  "mapLegendShelterHazard": "にげる ところ・{hazard}（{count}件（けん））",
+  "mapLegendShelterHazardCluster": "にげる ところ・{hazard}（{count}件（けん）・まとめて 見（み）せています）",
+  "mapLegendShelterEmergency": "すぐに にげる ところ",
+  "mapLegendShelterDesignated": "二重（にじゅう）の わく＝しばらく くらす ところ",
+  "mapLegendFacilityZoomIn": "防災（ぼうさい）の 施設（しせつ）（地図（ちず）を 大（おお）きくすると 出（で）ます）",
+  "mapLegendFacilityNoData": "防災（ぼうさい）の 施設（しせつ）（{message}）",
+  "mapLegendFacility": "防災（ぼうさい）の 施設（しせつ）（{count}件（けん））",
+  "mapLegendFacilityCluster": "防災（ぼうさい）の 施設（しせつ）（{count}件（けん）・まとめて 見（み）せています）",
+  "mapLegendFetchFailed": "とれません",
+  "mapShelterFetchFailed": "にげる ところの 情報（じょうほう）が とれませんでした（さわると もう一度（いちど））",
+  "mapFacilityFetchFailed": "防災（ぼうさい）の 施設（しせつ）の 情報（じょうほう）が とれませんでした（さわると もう一度（いちど））",
+  "mapRainTooltip": "{name} 24時間（じかん） {mm}mm",
+  "bosaiFetchFailedPull": "とれませんでした（下（した）に ひっぱると もう いちど ためせます）",
+  "bosaiTsunamiInfo": "つなみの おしらせ",
+  "bosaiUnknownPlace": "わかりません",
+  "bosaiFetchFailedDetail": "とれませんでした（{error}）",
+  "bosaiTimeJustNow": "いま",
+  "bosaiTimeMinutesAgo": "{n}ふん まえ",
+  "bosaiTimeHoursAgo": "{n}じかん まえ",
+  "bosaiTimeMonthDayHour": "{month}月{day}日 {hour}じ ごろ",
+  "bosaiQuakeIntensityTitle": "{place}の ゆれの つよさ（震度／しんど）",
+  "bosaiNearbyCamerasTitle": "{place}の ちかくの カメラ",
+  "bosaiQuakeEmpty": "この 72じかんに じしんの おしらせは ありません",
+  "bosaiQuakeAsOf": "（{time}の じょうほう・あたらしい じゅん）",
+  "bosaiQuakeNote": "出典（しゅってん）：気象庁 じしんの おしらせ（この 72じかん）{at}。おすと ゆれた 市（し）・町（まち）の ライブカメラの いちらんが 出（で）ます。市（し）・町（まち）ごとの しんどが ない ときは 震源（しんげん）の ちかくの カメラを 出（だ）します。",
+  "bosaiBadgeTsunami": "つなみ",
+  "bosaiBadgeIntensity": "しんど\n{value}",
+  "bosaiMuniObserved": "{count}の 市（し）・町（まち）で かんそく",
+  "bosaiWarningStaleAt": "あたらしい じょうほうが とれませんでした（{time}の じょうほうを 出（だ）して います）",
+  "bosaiWarningAsOf": "{time}の じょうほう",
+  "bosaiHeatOffSeason": "いまは ねっちゅうしょうの おしらせを 出（だ）す きかんでは ありません（まいとし 4月の おわりから 10月の おわりまで 出（で）ます）",
+  "bosaiHeatReportAt": "（{month}月{day}日 {hour}じに 出（で）ました）",
+  "bosaiHeatTapHint": "おすと その 県（けん）の カメラの いちらんが 出（で）ます。",
+  "bosaiHeatNone": "いま、ねっちゅうしょうの けいかいの おしらせは 出（で）て いません",
+  "bosaiHeatToday": "きょう",
+  "bosaiHeatTomorrow": "あした",
+  "bosaiHeatPrefCamerasTitle": "{pref}の カメラ（ねっちゅうしょう けいかい）",
+  "bosaiWbgtCardTitle": "ちかくの ばしょの あつさの ゆびすう（WBGT）",
+  "bosaiWbgtUnavailable": "とれませんでした",
+  "bosaiApproxDistance": "だいたい {value}",
+  "bosaiWbgtNow": "いま",
+  "bosaiWbgtNoCurrent": "いまの あたいは ありません",
+  "bosaiWbgtLevelAt": "{level}（{time}）",
+  "bosaiWbgtForecast": "よそく",
+  "bosaiWbgtHour": "{hour}じ",
+  "bosaiWbgtNextDayHour": "つぎの日（ひ）の {hour}じ",
+  "bosaiWbgtDateHour": "{month}月{day}日 {hour}じ",
+  "bosaiQuakeMuniNote": "出典（しゅってん）：気象庁 じしんの おしらせ（ゆれが つよい じゅん）。おすと その 市（し）・町（まち）の カメラの いちらんが 出（で）ます。カメラが ない ときは 震源（しんげん）の ちかくの カメラを 出（だ）します。",
+  "bosaiEpicenterNearby": "震源（しんげん）の ちかくの カメラ（ちかい じゅん）",
+  "bosaiMuniCodeFallback": "市（し）・町（まち） {code}",
+  "bosaiPrefEpicenterFallback": "{pref}・震源（しんげん）の ちかくの カメラを 出（だ）します",
+  "bosaiMuniIntensityCamerasTitle": "{name}の カメラ（しんど {intensity}）",
+  "bosaiLiveOnly": "ライブだけ（{count}）",
+  "bosaiMuniFallbackNote": "この 市（し）・町（まち）の カメラが ないので、県（けん）ぜんぶの カメラを 出（だ）して います",
+  "bosaiPrefNoCameras": "この 県（けん）には カメラが ありません",
+  "bosaiNoLiveCameras": "ライブの カメラは ありません",
+  "bosaiNoCamerasWithin50km": "50kmの なかに カメラは ありません",
+  "tipTitle": "つくった 人（ひと）を おうえん",
+  "tipIntro": "この アプリは 1人（ひとり）で つくって、うごかして います。カメラを さがして ふやす こと、サーバーを うごかしつづける こと、天気（てんき）の データに たいおうする ことの ちからに なります。おうえんは じゆうです。おうえんしても きのうは かわりません。",
+  "tipCoffeeTitle": "かんコーヒーで ひとやすみ",
+  "tipCoffeeSubtitle": "かいはつの あいまに のむ かんコーヒーを おくります",
+  "tipSweetsTitle": "あまい もので げんきを チャージ",
+  "tipSweetsSubtitle": "しゅうちゅうして つくる ときの おかしと カフェの おかねを たすけます",
+  "tipLunchTitle": "ひるごはんで かいはつを パワーアップ",
+  "tipLunchSubtitle": "つぎの あたらしい きのうの ために、えいようの ある ひるごはんを ごちそうします",
+  "tipDevToolsTitle": "かいはつの どうぐの おかねを おうえん",
+  "tipDevToolsSubtitle": "カメラを さがす ことや サーバーを みまもる ことに つかう サービスの おかねを たすけます",
+  "tipPreparing": "おうえんの メニューは まだ じゅんびちゅうです。あとで もういちど ためして ください。",
+  "tipUnavailable": "この きかいでは アプリの なかで おかねを はらう ことが できません。",
+  "tipPurchaseStartFailed": "かう てつづきを はじめられませんでした",
+  "tipThanks": "おうえん ありがとう ございます！かいはつの ちからに なります。",
+  "tipPurchaseFailed": "かう てつづきを おわらせられませんでした（{error}）",
+  "tipUnknownError": "わからない エラー",
+  "tipNoticeTitle": "かう まえに かくにん して ください",
+  "tipNoticeBody": "おうえんの おかねは App Storeの アプリない かきん（アプリの なかで はらう しくみ）で しはらいます。はらいもどしは Appleの きまりに したがいます。",
+  "tipEula": "EULA（Appleの つかいかたの やくそく）",
+  "settingsDiagCrashRecords": "きろく: {count}けん\nいちばん あたらしい: {name}",
+  "settingsDiagKindCrash": "きゅうに とまった（クラッシュ）",
+  "settingsDiagKindHang": "うごかなく なった（ハング）",
+  "settingsDiagKindCpu": "CPU（けいさんする ぶひん）の いじょう",
+  "settingsDiagKindDiskWrite": "ほぞんの いじょう（ディスクへの 書（か）きこみ）",
+  "settingsDiagCrashKinds": "しゅるい: {kinds}",
+  "settingsDiagReadError": "よみとりの エラー: {error}",
+  "settingsDiagFetchFailed": "とれませんでした",
+  "settingsDiagNotAcquired": "まだ ありません（null）",
+  "settingsDiagAcquired": "とれました（{prefix}…）",
+  "settingsDiagError": "エラー: {error}"
 }

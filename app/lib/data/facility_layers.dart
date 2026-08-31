@@ -165,14 +165,15 @@ class FacilityLayers {
   /// 種別の並び順（チップ・凡例の順序）
   static const kindKeys = ['water', 'stock', 'fire_water'];
 
-  /// index.kinds が取れないときの正式名称
+  /// index.kinds が取れないときの正式名称（日本語の既定値。UI表示は
+  /// `lib/l10n/l10n.dart` の `facilityKindLabelOf()` を使う）
   static const defaultKinds = {
     'water': '給水拠点・応急給水施設',
     'stock': '防災備蓄倉庫',
     'fire_water': '消防水利（消火栓・防火水槽）',
   };
 
-  /// チップ・凡例用の短い名称
+  /// チップ・凡例用の短い名称（日本語の既定値。UI表示は `facilityKindShortOf()`）
   static const shortLabels = {
     'water': '給水拠点',
     'stock': '防災備蓄倉庫',
@@ -182,11 +183,8 @@ class FacilityLayers {
   /// 既定の絞り込み（消防水利は14万件と多く一般利用者向けではないためOFF）
   static const defaultSelectedKinds = {'water', 'stock'};
 
+  /// 出典表記は翻訳しない
   static const attribution = '出典：各自治体のオープンデータ（CC BY 等）';
-  static const disclaimer = '公開している自治体のみ。最新の情報は各自治体にご確認ください';
-
-  /// この地域にデータがまだ無いときの案内
-  static const noDataMessage = 'この地域のデータはまだありません';
 
   /// 防災拠点ピンを描画する最小ズーム（消防水利が密集するため避難場所より深い）
   static const minZoom = 13.0;

@@ -66,6 +66,10 @@ class _Quake {
   final List<MuniIntensity> munis;
 }
 
+/// 津波情報を _Quake の「震度」欄に流用するための内部マーカー。
+/// 画面には出さない（表示は l10n の bosaiBadgeTsunami）
+const _tsunamiIntensityMark = 'tsunami';
+
 /// 気象庁 area.json のキャッシュ（class10の親官署 / class20の市区町村名）。
 ///
 /// 警報の市区町村詳細と、地震の市区町村別震度の表示名で同じファイルを使う。
@@ -352,7 +356,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       // 前回取得できていれば、その内容を残したまま「更新できず」を知らせる
       setState(() {
         if (_warnings == null) {
-          _warningError = '取得に失敗しました（引き下げてやり直せます）';
+          _warningError = context.l10n.bosaiFetchFailedPull;
         } else {
           _warningStale = true;
         }
@@ -516,6 +520,10 @@ class _BosaiScreenState extends State<BosaiScreen>
       }
       final entries = (jsonDecode(utf8.decode(resp.bodyBytes)) as List)
           .cast<Map<String, dynamic>>();
+      // 表示文言の解決はここで1回だけ（initState から呼ばれるため、
+      // 最初の await より後で context を触る）
+      if (!mounted) return;
+      final l10n = context.l10n;
       // 市区町村別震度（int配列）。同一eidの複数報は市区町村ごとに最大震度を採る。
       // 追加のネットワークアクセスは無し（この list.json の未使用フィールド）
       final muniByEid = buildQuakeMuniIntensities(entries);
@@ -536,9 +544,9 @@ class _BosaiScreenState extends State<BosaiScreen>
             if (at == null || cod == null || at.isBefore(since)) continue;
             if (!seen.add(eid)) continue;
             quakes.add(_Quake(
-              place: '【${e['ttl'] ?? '津波情報'}】${e['anm'] ?? ''}',
+              place: '【${e['ttl'] ?? l10n.bosaiTsunamiInfo}】${e['anm'] ?? ''}',
               magnitude: e['mag'] as String? ?? '-',
-              maxIntensity: '津波',
+              maxIntensity: _tsunamiIntensityMark,
               at: at,
               lat: double.parse(cod.group(1)!),
               lng: double.parse(cod.group(2)!),
@@ -558,7 +566,7 @@ class _BosaiScreenState extends State<BosaiScreen>
         if (at.isBefore(since)) continue;
         if (!seen.add(eid)) continue; // 同一地震の続報をまとめる
         quakes.add(_Quake(
-          place: e['anm'] as String? ?? '不明',
+          place: e['anm'] as String? ?? l10n.bosaiUnknownPlace,
           magnitude: e['mag'] as String? ?? '-',
           maxIntensity: maxi,
           at: at,
@@ -580,7 +588,9 @@ class _BosaiScreenState extends State<BosaiScreen>
         });
       }
     } catch (e) {
-      if (mounted) setState(() => _error = '取得に失敗しました（$e）');
+      if (mounted) {
+        setState(() => _error = context.l10n.bosaiFetchFailedDetail('$e'));
+      }
     }
   }
 
@@ -594,7 +604,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       };
 
   static Color _intensityColor(String maxi) {
-    if (maxi == '津波') return const Color(0xFF1E6FD9);
+    if (maxi == _tsunamiIntensityMark) return const Color(0xFF1E6FD9);
     return switch (_intensityRank(maxi)) {
       >= 5 => const Color(0xFFD93025),
       >= 3 => const Color(0xFFF29900),
@@ -603,10 +613,12 @@ class _BosaiScreenState extends State<BosaiScreen>
   }
 
   String _when(DateTime at) {
+    final l10n = context.l10n;
     final d = DateTime.now().difference(at);
-    if (d.inMinutes < 60) return '${d.inMinutes}分前';
-    if (d.inHours < 24) return '${d.inHours}時間前';
-    return '${at.month}月${at.day}日 ${at.hour}時頃';
+    if (d.inMinutes < 1) return l10n.bosaiTimeJustNow;
+    if (d.inMinutes < 60) return l10n.bosaiTimeMinutesAgo(d.inMinutes);
+    if (d.inHours < 24) return l10n.bosaiTimeHoursAgo(d.inHours);
+    return l10n.bosaiTimeMonthDayHour(at.month, at.day, at.hour);
   }
 
   @override
@@ -641,12 +653,13 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 一致するカメラが1台でもあれば市区町村一覧へ。無ければ（震度速報のみ／
   /// 市町村合併等でコードがずれている）従来どおり震源周辺の距離検索へ。
   void _openQuake(BuildContext context, _Quake q) {
+    final l10n = context.l10n;
     final route = canUseMuniNavigation(
             widget.app.repository.displayableCameras(), q.munis)
         ? MaterialPageRoute<void>(
             builder: (_) => QuakeMuniListScreen(
               app: widget.app,
-              title: '${q.place}の震度',
+              title: l10n.bosaiQuakeIntensityTitle(q.place),
               place: q.place,
               munis: q.munis,
               lat: q.lat,
@@ -656,7 +669,7 @@ class _BosaiScreenState extends State<BosaiScreen>
         : MaterialPageRoute<void>(
             builder: (_) => NearbyCamerasScreen(
               app: widget.app,
-              title: '${q.place}周辺のカメラ',
+              title: l10n.bosaiNearbyCamerasTitle(q.place),
               lat: q.lat,
               lng: q.lng,
             ),
@@ -665,12 +678,13 @@ class _BosaiScreenState extends State<BosaiScreen>
   }
 
   Widget _buildQuakeTab() {
+    final l10n = context.l10n;
     return _error != null
           ? Center(child: Text(_error!))
           : _quakes == null
               ? const Center(child: CircularProgressIndicator())
               : _quakes!.isEmpty
-                  ? const Center(child: Text('直近72時間の地震情報はありません'))
+                  ? Center(child: Text(l10n.bosaiQuakeEmpty))
                   : ListView.separated(
                       itemCount: _quakes!.length + 1,
                       separatorBuilder: (_, _) => const Divider(height: 1),
@@ -679,12 +693,13 @@ class _BosaiScreenState extends State<BosaiScreen>
                           final t = _fetchedAt;
                           final ts = t == null
                               ? ''
-                              : '（${t.hour.toString().padLeft(2, '0')}:${t.minute.toString().padLeft(2, '0')}時点・新しい順）';
+                              : l10n.bosaiQuakeAsOf(
+                                  '${t.hour.toString().padLeft(2, '0')}'
+                                  ':${t.minute.toString().padLeft(2, '0')}');
                           return Padding(
                             padding: const EdgeInsets.all(12),
                             child: Text(
-                              '出典：気象庁 地震情報（直近72時間）$ts。タップすると揺れた市区町村の'
-                              'ライブカメラ一覧（市区町村別震度が無い場合は震源周辺）を表示します。',
+                              l10n.bosaiQuakeNote(ts),
                               style: TextStyle(
                                   fontSize: 11, color: Colors.grey[600]),
                             ),
@@ -701,7 +716,10 @@ class _BosaiScreenState extends State<BosaiScreen>
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Text(
-                                q.isTsunami ? '津波' : '震度\n${q.maxIntensity}',
+                                q.isTsunami
+                                    ? l10n.bosaiBadgeTsunami
+                                    : l10n.bosaiBadgeIntensity(
+                                        intensityLabelOf(l10n, q.maxIntensity)),
                                 textAlign: TextAlign.center,
                                 style: const TextStyle(
                                     color: Colors.white,
@@ -714,7 +732,8 @@ class _BosaiScreenState extends State<BosaiScreen>
                               [
                                 'M${q.magnitude}',
                                 _when(q.at),
-                                if (q.munis.isNotEmpty) '${q.munis.length}市区町村で観測',
+                                if (q.munis.isNotEmpty)
+                                  l10n.bosaiMuniObserved(q.munis.length),
                               ].join(' · '),
                               style: const TextStyle(fontSize: 12)),
                           trailing: const Icon(Icons.chevron_right),
@@ -730,14 +749,16 @@ class _BosaiScreenState extends State<BosaiScreen>
     if (t == null) return null;
     String two(int v) => v.toString().padLeft(2, '0');
     final at = t.toLocal();
+    final l10n = context.l10n;
+    final hhmm = '${two(at.hour)}:${two(at.minute)}';
     return Container(
       width: double.infinity,
       color: _warningStale ? const Color(0xFFFFF3CD) : Colors.transparent,
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
       child: Text(
         _warningStale
-            ? '最新の情報を取得できませんでした（${two(at.hour)}:${two(at.minute)} 時点の情報を表示中）'
-            : '${two(at.hour)}:${two(at.minute)} 時点',
+            ? l10n.bosaiWarningStaleAt(hhmm)
+            : l10n.bosaiWarningAsOf(hhmm),
         style: TextStyle(
             fontSize: 11,
             color: _warningStale ? const Color(0xFF8A6D3B) : Colors.grey[600]),
@@ -851,13 +872,13 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 規約により「出典：環境省熱中症予防情報サイト」と参考情報である旨を必ず併記する
   /// 熱中症タブ（環境省 熱中症警戒情報）。運用期間（4/22〜10/21）外はその旨を表示
   Widget _buildHeatTab() {
+    final l10n = context.l10n;
     final now = HeatAlerts.nowJst();
     if (!HeatAlerts.isInSeason(now)) {
-      return const Center(
+      return Center(
         child: Padding(
-          padding: EdgeInsets.all(24),
-          child: Text('熱中症警戒情報の運用期間外です（毎年4月下旬〜10月下旬に発表されます）',
-              textAlign: TextAlign.center),
+          padding: const EdgeInsets.all(24),
+          child: Text(l10n.bosaiHeatOffSeason, textAlign: TextAlign.center),
         ),
       );
     }
@@ -865,12 +886,14 @@ class _BosaiScreenState extends State<BosaiScreen>
     final at = _heat?.reportAt;
     final when = at == null
         ? ''
-        : '（${at.month}/${at.day} ${at.hour.toString().padLeft(2, '0')}時発表）';
+        : l10n.bosaiHeatReportAt(
+            at.month, at.day, at.hour.toString().padLeft(2, '0'));
     final header = Padding(
       padding: const EdgeInsets.all(12),
+      // 出典表記（HeatAlerts.attribution）は規約により日本語のまま併記する
       child: Text(
-        '${HeatAlerts.attribution}$when\n${HeatAlerts.disclaimer}。'
-        '${list.isEmpty ? '' : 'タップするとその都道府県のカメラ一覧を表示します。'}',
+        '${HeatAlerts.attribution}$when\n${l10n.heatAlertDisclaimer}'
+        '${list.isEmpty ? '' : '\n${l10n.bosaiHeatTapHint}'}',
         style: TextStyle(fontSize: 11, color: Colors.grey[600]),
       ),
     );
@@ -883,9 +906,9 @@ class _BosaiScreenState extends State<BosaiScreen>
     if (list.isEmpty) {
       return ListView(children: [
         top,
-        const Padding(
-          padding: EdgeInsets.all(24),
-          child: Center(child: Text('現在、熱中症警戒情報は発表されていません')),
+        Padding(
+          padding: const EdgeInsets.all(24),
+          child: Center(child: Text(l10n.bosaiHeatNone)),
         ),
       ]);
     }
@@ -895,16 +918,19 @@ class _BosaiScreenState extends State<BosaiScreen>
       itemBuilder: (context, i) {
         if (i == 0) return top;
         final p = list[i - 1];
+        final prefName = prefectureNameOf(l10n, p.prefCode);
         return ListTile(
           leading: Icon(Icons.thermostat, color: heatLevelColor(p.top)),
-          title: Text(p.prefName),
+          title: Text(prefName),
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
               Wrap(spacing: 4, runSpacing: 2, children: [
-                if (p.today.isAlert) _heatBadge('今日', p.today),
-                if (p.tomorrow.isAlert) _heatBadge('明日', p.tomorrow),
+                if (p.today.isAlert)
+                  _heatBadge(l10n, l10n.bosaiHeatToday, p.today),
+                if (p.tomorrow.isAlert)
+                  _heatBadge(l10n, l10n.bosaiHeatTomorrow, p.tomorrow),
               ]),
               if (p.areas.isNotEmpty)
                 Padding(
@@ -919,7 +945,7 @@ class _BosaiScreenState extends State<BosaiScreen>
               builder: (_) => PrefCamerasScreen(
                   app: widget.app,
                   pref: p.prefCode,
-                  title: '${p.prefName}のカメラ（熱中症警戒情報）'))),
+                  title: l10n.bosaiHeatPrefCamerasTitle(prefName)))),
         );
       },
     );
@@ -927,13 +953,14 @@ class _BosaiScreenState extends State<BosaiScreen>
 
   /// 近くの地点の暑さ指数（WBGT）カード。現在地が取れる場合は最寄り3地点
   Widget _buildWbgtCard(DateTime now) {
+    final l10n = context.l10n;
     final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
     Widget body;
     if (_wbgtNoLocation) {
-      body = Text('現在地を取得できませんでした', style: grey);
+      body = Text(l10n.mapLocationFailed, style: grey);
     } else if (_wbgtNearby == null) {
       body = _wbgtFailed
-          ? Text('取得できませんでした', style: grey)
+          ? Text(l10n.bosaiWbgtUnavailable, style: grey)
           : const Padding(
               padding: EdgeInsets.symmetric(vertical: 8),
               child: Center(
@@ -965,9 +992,9 @@ class _BosaiScreenState extends State<BosaiScreen>
               Icon(Icons.device_thermostat,
                   size: 18, color: Colors.grey[700]),
               const SizedBox(width: 4),
-              const Expanded(
-                child: Text('近くの地点の暑さ指数（WBGT）',
-                    style: TextStyle(
+              Expanded(
+                child: Text(l10n.bosaiWbgtCardTitle,
+                    style: const TextStyle(
                         fontSize: 13, fontWeight: FontWeight.bold)),
               ),
             ]),
@@ -984,6 +1011,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 1地点分（観測所名・所在地・距離／現在の実況値／今後の予測チップ）
   Widget _wbgtPointTile(
       WbgtPoint p, double distance, WbgtPointData d, DateTime now) {
+    final l10n = context.l10n;
     final cur = d.current;
     final upcoming = Wbgt.upcoming(d.forecast, now);
     final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
@@ -998,7 +1026,8 @@ class _BosaiScreenState extends State<BosaiScreen>
                 style: const TextStyle(
                     fontSize: 14, fontWeight: FontWeight.bold)),
             const SizedBox(width: 6),
-            Text('約${Wbgt.formatDistance(distance)}', style: grey),
+            Text(l10n.bosaiApproxDistance(Wbgt.formatDistance(distance)),
+                style: grey),
             const SizedBox(width: 6),
             Expanded(
                 child: Text(p.address,
@@ -1007,17 +1036,19 @@ class _BosaiScreenState extends State<BosaiScreen>
         ),
         const SizedBox(height: 4),
         if (d.failed)
-          Text('取得できませんでした', style: grey)
+          Text(l10n.bosaiWbgtUnavailable, style: grey)
         else ...[
           Row(children: [
-            Text('現在', style: grey),
+            Text(l10n.bosaiWbgtNow, style: grey),
             const SizedBox(width: 6),
             if (cur == null)
-              Text('実況値なし', style: grey)
+              Text(l10n.bosaiWbgtNoCurrent, style: grey)
             else ...[
               _wbgtChip(cur, big: true),
               const SizedBox(width: 6),
-              Text('${cur.level.label}（${_wbgtTimeLabel(cur.at, now)}）',
+              Text(
+                  l10n.bosaiWbgtLevelAt(wbgtLevelLabelOf(l10n, cur.level),
+                      _wbgtTimeLabel(l10n, cur.at, now)),
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
@@ -1029,7 +1060,7 @@ class _BosaiScreenState extends State<BosaiScreen>
             Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Padding(
                 padding: const EdgeInsets.only(top: 4),
-                child: Text('予測', style: grey),
+                child: Text(l10n.bosaiWbgtForecast, style: grey),
               ),
               const SizedBox(width: 6),
               Expanded(
@@ -1038,7 +1069,7 @@ class _BosaiScreenState extends State<BosaiScreen>
                   child: Row(children: [
                     for (final (i, v) in upcoming.indexed) ...[
                       if (i > 0) const SizedBox(width: 3),
-                      _wbgtChip(v, label: _wbgtTimeLabel(v.at, now)),
+                      _wbgtChip(v, label: _wbgtTimeLabel(l10n, v.at, now)),
                     ],
                   ]),
                 ),
@@ -1072,23 +1103,26 @@ class _BosaiScreenState extends State<BosaiScreen>
   }
 
   /// 予測コマの時刻表示。当日は「15時」、翌日は「翌3時」、それ以外は「9/2 12時」
-  static String _wbgtTimeLabel(DateTime t, DateTime now) {
+  static String _wbgtTimeLabel(
+      AppLocalizations l10n, DateTime t, DateTime now) {
     final today = DateTime(now.year, now.month, now.day);
     final day = DateTime(t.year, t.month, t.day);
     final diff = day.difference(today).inDays;
-    if (diff == 0) return '${t.hour}時';
-    if (diff == 1) return '翌${t.hour}時';
-    return '${t.month}/${t.day} ${t.hour}時';
+    if (diff == 0) return l10n.bosaiWbgtHour(t.hour);
+    if (diff == 1) return l10n.bosaiWbgtNextDayHour(t.hour);
+    return l10n.bosaiWbgtDateHour(t.month, t.day, t.hour);
   }
 
   /// 「今日 熱中症警戒」等のバッジ（警報一覧のチップと同じ様式）
-  Widget _heatBadge(String day, HeatAlertLevel level) => Container(
+  Widget _heatBadge(
+          AppLocalizations l10n, String day, HeatAlertLevel level) =>
+      Container(
         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
         decoration: BoxDecoration(
           color: heatLevelColor(level),
           borderRadius: BorderRadius.circular(4),
         ),
-        child: Text('$day ${level.label}',
+        child: Text('$day ${heatAlertLabelOf(l10n, level)}',
             style: const TextStyle(color: Colors.white, fontSize: 11)),
       );
 }
@@ -1165,7 +1199,7 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
       Navigator.of(context).push(MaterialPageRoute<void>(
         builder: (_) => NearbyCamerasScreen(
           app: widget.app,
-          title: '${widget.place}周辺のカメラ',
+          title: context.l10n.bosaiNearbyCamerasTitle(widget.place),
           lat: widget.lat,
           lng: widget.lng,
         ),
@@ -1175,6 +1209,7 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
   Widget build(BuildContext context) {
     // 行ごとに台帳を走査しないよう、市区町村コードの索引を1回だけ作る
     final index = MuniCameraIndex(widget.app.repository.displayableCameras());
+    final l10n = context.l10n;
     return Scaffold(
       appBar:
           AppBar(title: Text(widget.title, overflow: TextOverflow.ellipsis)),
@@ -1187,8 +1222,7 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
             return Padding(
               padding: const EdgeInsets.all(12),
               child: Text(
-                '出典：気象庁 地震情報（震度の大きい順）。タップするとその市区町村のカメラ一覧を'
-                '表示します。カメラがない市区町村は震源周辺のカメラを表示します。',
+                l10n.bosaiQuakeMuniNote,
                 style: TextStyle(fontSize: 11, color: Colors.grey[600]),
               ),
             );
@@ -1196,13 +1230,13 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
           if (i == 1) {
             return ListTile(
               leading: const Icon(Icons.my_location, color: Color(0xFF616E7C)),
-              title: const Text('震源周辺のカメラ（距離順）'),
+              title: Text(l10n.bosaiEpicenterNearby),
               trailing: const Icon(Icons.chevron_right),
               onTap: () => _openNearby(context),
             );
           }
           final m = widget.munis[i - 2];
-          final name = _names[m.code] ?? '市区町村 ${m.code}';
+          final name = _names[m.code] ?? l10n.bosaiMuniCodeFallback(m.code);
           final count = index.count(m.code);
           return ListTile(
             leading: Container(
@@ -1213,7 +1247,8 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
                 color: JmaLayers.intensityColor(m.intensity),
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Text('震度\n${m.intensity}',
+              child: Text(
+                  l10n.bosaiBadgeIntensity(intensityLabelOf(l10n, m.intensity)),
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: intensityTextColor(m.intensity),
@@ -1225,7 +1260,7 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
               Flexible(child: Text(name, overflow: TextOverflow.ellipsis)),
               const SizedBox(width: 6),
               Text(
-                count > 0 ? 'カメラ$count台' : 'カメラなし',
+                count > 0 ? l10n.bosaiCameraCount(count) : l10n.bosaiNoCamera,
                 style: TextStyle(
                     fontSize: 12,
                     color: count > 0 ? Colors.grey[700] : Colors.grey[500]),
@@ -1233,8 +1268,9 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
             ]),
             subtitle: Text(
               count > 0
-                  ? (prefectureNames[m.prefecture] ?? m.prefecture)
-                  : '${prefectureNames[m.prefecture] ?? m.prefecture}・震源周辺のカメラを表示します',
+                  ? prefectureNameOf(l10n, m.prefecture)
+                  : l10n.bosaiPrefEpicenterFallback(
+                      prefectureNameOf(l10n, m.prefecture)),
               style: const TextStyle(fontSize: 12),
             ),
             trailing: const Icon(Icons.chevron_right),
@@ -1247,7 +1283,8 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
                 builder: (_) => PrefCamerasScreen(
                   app: widget.app,
                   pref: m.prefecture,
-                  title: '$nameのカメラ（震度${m.intensity}）',
+                  title: l10n.bosaiMuniIntensityCamerasTitle(
+                      name, intensityLabelOf(l10n, m.intensity)),
                   municipality: m.code,
                 ),
               ));
@@ -1312,6 +1349,9 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
     try {
       names = await _loadClass20Names();
     } catch (_) {}
+    if (!mounted) return;
+    // 表示文言の解決は最初の await より後で（initState から呼ばれるため）
+    final l10n = context.l10n;
     for (final office in widget.offices) {
       try {
         final resp = await http.get(
@@ -1351,7 +1391,8 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
               if (!valid) continue;
               final muni = code.substring(0, 5);
               final entry = byMuni[muni] ??
-                  (jmaCityName(names[code] ?? '市区町村 $muni'), <String>{});
+                  (jmaCityName(names[code] ?? l10n.bosaiMuniCodeFallback(muni)),
+                      <String>{});
               entry.$2.add(wcode);
               byMuni[muni] = entry;
             }
@@ -1508,7 +1549,7 @@ class _LiveOnlyBar extends StatelessWidget {
         child: Row(
           children: [
             FilterChip(
-              label: Text('LIVEのみ（$liveCount）'),
+              label: Text(context.l10n.bosaiLiveOnly(liveCount)),
               selected: liveOnly,
               onSelected: onChanged,
               visualDensity: VisualDensity.compact,
@@ -1544,6 +1585,7 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     final app = widget.app;
     final all = app.repository
         .displayableCameras()
@@ -1559,7 +1601,7 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
       if (matched.isNotEmpty) {
         base = matched;
       } else {
-        note = 'この市区町村に対応するカメラがないため、都道府県内の全カメラを表示しています';
+        note = l10n.bosaiMuniFallbackNote;
       }
     }
     final liveCount = base.where((c) => c.isLiveVideo).length;
@@ -1569,7 +1611,7 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
           title: Text(widget.title, overflow: TextOverflow.ellipsis)),
       bottomNavigationBar: AdFooter(app: widget.app),
       body: base.isEmpty
-          ? const Center(child: Text('この都道府県のカメラがありません'))
+          ? Center(child: Text(l10n.bosaiPrefNoCameras))
           : Column(children: [
               _LiveOnlyBar(
                 liveOnly: _liveOnly,
@@ -1578,7 +1620,7 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
               ),
               Expanded(
                   child: cams.isEmpty
-                      ? const Center(child: Text('LIVE配信のカメラがありません'))
+                      ? Center(child: Text(l10n.bosaiNoLiveCameras))
                       : _buildList(cams, note)),
             ]),
     );
@@ -1677,7 +1719,7 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
           title: Text(widget.title, overflow: TextOverflow.ellipsis)),
       bottomNavigationBar: AdFooter(app: widget.app),
       body: base.isEmpty
-          ? const Center(child: Text('50km以内にカメラがありません'))
+          ? Center(child: Text(context.l10n.bosaiNoCamerasWithin50km))
           : Column(children: [
               _LiveOnlyBar(
                 liveOnly: _liveOnly,
@@ -1691,8 +1733,9 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
 
   Widget _buildList(List<(Camera, double)> cams) {
     final app = widget.app;
+    final l10n = context.l10n;
     if (cams.isEmpty) {
-      return const Center(child: Text('LIVE配信のカメラがありません'));
+      return Center(child: Text(l10n.bosaiNoLiveCameras));
     }
     return ListView.separated(
               itemCount: cams.length,
@@ -1724,7 +1767,8 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
                   subtitle: Text(
                     [
                       if (camera.isVideo) 'LIVE',
-                      '約${(dist / 1000).toStringAsFixed(dist < 10000 ? 1 : 0)}km',
+                      l10n.detailDistanceKm(
+                          (dist / 1000).toStringAsFixed(dist < 10000 ? 1 : 0)),
                       camera.operator,
                     ].join(' · '),
                     maxLines: 1,

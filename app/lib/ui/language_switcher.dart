@@ -3,38 +3,83 @@ import 'package:flutter/material.dart';
 import '../data/locale_controller.dart';
 import '../l10n/l10n.dart';
 
-/// 言語名は「その言語自身の表記」で出す（英語話者にも日本語話者にも読めるように、
-/// どのロケールでも同じ3つのラベルを並べる）。
+/// 言語名は「その言語自身の表記（自称）」で出す（どの言語の話者にも読めるように、
+/// どのロケールでも同じ7つのラベルを並べる）。
 String languageDisplayName(AppLanguage language) => switch (language) {
       AppLanguage.ja => '日本語',
       AppLanguage.jaHira => 'やさしい日本語',
       AppLanguage.en => 'English',
+      AppLanguage.zhHans => '简体中文',
+      AppLanguage.zhHant => '繁體中文',
+      AppLanguage.ko => '한국어',
+      AppLanguage.vi => 'Tiếng Việt',
     };
 
 /// オンボーディング1画面目に常設する言語切替ボタン。押すと即座に切り替わる。
-class LanguageSwitcher extends StatelessWidget {
+///
+/// 7言語あり狭い端末では1行に収まらないため**横スクロール**にしている
+/// （Wrap で折り返すとオンボーディングの縦レイアウトが崩れるため）。
+/// 選択中のチップが画面外にならないよう、初回表示時にそこまでスクロールする。
+class LanguageSwitcher extends StatefulWidget {
   const LanguageSwitcher({super.key, required this.controller});
 
   final LocaleController controller;
 
   @override
+  State<LanguageSwitcher> createState() => _LanguageSwitcherState();
+}
+
+class _LanguageSwitcherState extends State<LanguageSwitcher> {
+  final ScrollController _scroll = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _revealSelected());
+  }
+
+  /// 選択中のチップがだいたい見える位置まで寄せる（正確な位置合わせは不要）
+  void _revealSelected() {
+    if (!_scroll.hasClients) return;
+    final i = AppLanguage.values.indexOf(widget.controller.language);
+    if (i < 0) return;
+    final max = _scroll.position.maxScrollExtent;
+    if (max <= 0) return; // 全部見えている
+    final target = (i / (AppLanguage.values.length - 1)) * max;
+    _scroll.jumpTo(target.clamp(0.0, max));
+  }
+
+  @override
+  void dispose() {
+    _scroll.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: controller,
-      builder: (context, _) => Wrap(
-        alignment: WrapAlignment.center,
-        spacing: 8,
-        runSpacing: 4,
-        children: [
-          for (final lang in AppLanguage.values)
-            ChoiceChip(
-              label: Text(languageDisplayName(lang),
-                  style: const TextStyle(fontSize: 12)),
-              visualDensity: VisualDensity.compact,
-              selected: controller.language == lang,
-              onSelected: (_) => controller.setLanguage(lang),
-            ),
-        ],
+      listenable: widget.controller,
+      builder: (context, _) => SingleChildScrollView(
+        controller: _scroll,
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            for (final lang in AppLanguage.values) ...[
+              ChoiceChip(
+                label: Text(languageDisplayName(lang),
+                    style: const TextStyle(fontSize: 12)),
+                visualDensity: VisualDensity.compact,
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                labelPadding: const EdgeInsets.symmetric(horizontal: 4),
+                selected: widget.controller.language == lang,
+                onSelected: (_) => widget.controller.setLanguage(lang),
+              ),
+              const SizedBox(width: 6),
+            ],
+          ],
+        ),
       ),
     );
   }

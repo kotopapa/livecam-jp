@@ -178,23 +178,28 @@ class _SettingsScreenState extends State<SettingsScreen> {
         if (files.isEmpty) {
           summary = l10n.settingsCrashDiagNone;
         } else {
-          summary = '記録: ${files.length}件\n最新: ${files.first.uri.pathSegments.last}';
+          summary = l10n.settingsDiagCrashRecords(
+              files.length, files.first.uri.pathSegments.last);
           latestJson = files.first.readAsStringSync();
           // 概要(クラッシュ種別)を先頭に抽出
           try {
             final d = jsonDecode(latestJson) as Map<String, dynamic>;
             final kinds = <String>[
-              if (d['crashDiagnostics'] != null) 'クラッシュ',
-              if (d['hangDiagnostics'] != null) 'ハング',
-              if (d['cpuExceptionDiagnostics'] != null) 'CPU異常',
-              if (d['diskWriteExceptionDiagnostics'] != null) 'ディスク書込異常',
+              if (d['crashDiagnostics'] != null) l10n.settingsDiagKindCrash,
+              if (d['hangDiagnostics'] != null) l10n.settingsDiagKindHang,
+              if (d['cpuExceptionDiagnostics'] != null) l10n.settingsDiagKindCpu,
+              if (d['diskWriteExceptionDiagnostics'] != null)
+                l10n.settingsDiagKindDiskWrite,
             ];
-            if (kinds.isNotEmpty) summary += '\n種別: ${kinds.join('・')}';
+            if (kinds.isNotEmpty) {
+              final sep = l10n.localeName.startsWith('ja') ? '・' : ', ';
+              summary += '\n${l10n.settingsDiagCrashKinds(kinds.join(sep))}';
+            }
           } catch (_) {}
         }
       }
     } catch (e) {
-      summary = '読み取りエラー: $e';
+      summary = l10n.settingsDiagReadError('$e');
     }
     if (!mounted) return;
     showDialog<void>(
@@ -240,21 +245,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Future<void> _showNotifyDiagnosis() async {
     final l10n = context.l10n;
     final fm = fbm.FirebaseMessaging.instance;
-    String perm = '取得失敗', apns = '取得失敗', fcm = '取得失敗';
+    final failed = l10n.settingsDiagFetchFailed;
+    String perm = failed, apns = failed, fcm = failed;
     try {
       final s = await fm.getNotificationSettings();
       perm = s.authorizationStatus.name;
     } catch (_) {}
     try {
       final a = await fm.getAPNSToken();
-      apns = a == null ? '未取得(null)' : '取得済み(${a.substring(0, 8)}…)';
+      apns = a == null
+          ? l10n.settingsDiagNotAcquired
+          : l10n.settingsDiagAcquired(a.substring(0, 8));
     } catch (e) {
-      apns = 'エラー: $e';
+      apns = l10n.settingsDiagError('$e');
     }
     try {
-      fcm = await fm.getToken() ?? '未取得(null)';
+      fcm = await fm.getToken() ?? l10n.settingsDiagNotAcquired;
     } catch (e) {
-      fcm = 'エラー: $e';
+      fcm = l10n.settingsDiagError('$e');
     }
     if (!mounted) return;
     showDialog<void>(

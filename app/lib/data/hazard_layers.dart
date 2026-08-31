@@ -38,11 +38,13 @@ class HazardLayers {
   static List<String> tileTemplates(MapLayerKind k) =>
       [for (final id in tileIds(k)) tileTemplate(id)];
 
-  static String title(MapLayerKind k) => switch (k) {
-        MapLayerKind.hazardFlood => '洪水浸水想定区域（想定最大規模）',
-        MapLayerKind.hazardLandslide => '土砂災害警戒区域',
-        MapLayerKind.hazardTsunami => '津波浸水想定',
-        MapLayerKind.hazardHightide => '高潮浸水想定区域',
+  /// レイヤー種別 → 表示名の l10n キー（表示名の解決は `lib/l10n/l10n.dart` の
+  /// `hazardLayerTitleOf()`。BuildContext を持たない層では名前を持たない）
+  static String titleKey(MapLayerKind k) => switch (k) {
+        MapLayerKind.hazardFlood => 'flood',
+        MapLayerKind.hazardLandslide => 'landslide',
+        MapLayerKind.hazardTsunami => 'tsunami',
+        MapLayerKind.hazardHightide => 'hightide',
         _ => '',
       };
 
@@ -57,14 +59,13 @@ class HazardLayers {
   ];
 
   /// 土砂災害の凡例。区分ごとに配色が異なる（keikai_kyukeisya/dosekiryu/jisuberi.png）
-  /// (区分名, 警戒区域, 特別警戒区域)
+  /// (区分キー, 警戒区域, 特別警戒区域)。表示名は `landslideKindOf()`
   static const landslideScale = <(String, Color, Color)>[
-    ('急傾斜地', Color(0xFFFAE600), Color(0xFFFA2800)),
-    ('土石流', Color(0xFFE6C832), Color(0xFFA50021)),
-    ('地すべり', Color(0xFFFF9900), Color(0xFFB40028)),
+    ('steepSlope', Color(0xFFFAE600), Color(0xFFFA2800)),
+    ('debrisFlow', Color(0xFFE6C832), Color(0xFFA50021)),
+    ('landslide', Color(0xFFFF9900), Color(0xFFB40028)),
   ];
 
+  /// 出典表記は翻訳しない（SPEC C5 / 政府標準利用規約の出典記載条件）
   static const attribution = '出典：ハザードマップポータルサイト（国土地理院）';
-  static const disclaimer =
-      '最新かつ詳細な情報は各市町村のハザードマップをご確認ください。避難判断は自治体の避難情報に従ってください';
 }

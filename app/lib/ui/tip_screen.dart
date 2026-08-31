@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../l10n/l10n.dart';
+
 /// 開発者を応援する（投げ銭）。消耗型のアプリ内課金4段階。
 ///
 /// App Store Connect に同じ商品IDの「消耗型」商品を登録しておくこと
@@ -24,24 +26,33 @@ class TipScreen extends StatefulWidget {
 }
 
 class _Tier {
-  const _Tier(this.id, this.badge, this.title, this.subtitle, this.icon, this.color);
+  const _Tier(this.id, this.badge, this.icon, this.color);
   final String id;
   final String badge;
-  final String title;
-  final String subtitle;
   final IconData icon;
   final Color color;
+
+  String title(AppLocalizations l10n) => switch (id) {
+        'jp.livecam.tip.coffee' => l10n.tipCoffeeTitle,
+        'jp.livecam.tip.sweets' => l10n.tipSweetsTitle,
+        'jp.livecam.tip.lunch' => l10n.tipLunchTitle,
+        _ => l10n.tipDevToolsTitle,
+      };
+
+  String subtitle(AppLocalizations l10n) => switch (id) {
+        'jp.livecam.tip.coffee' => l10n.tipCoffeeSubtitle,
+        'jp.livecam.tip.sweets' => l10n.tipSweetsSubtitle,
+        'jp.livecam.tip.lunch' => l10n.tipLunchSubtitle,
+        _ => l10n.tipDevToolsSubtitle,
+      };
 }
 
 const _tiers = <_Tier>[
-  _Tier('jp.livecam.tip.coffee', 'COFFEE', '缶コーヒーでひと息',
-      '開発の合間に飲む缶コーヒー代をプレゼント', Icons.coffee, Color(0xFF7A5C46)),
-  _Tier('jp.livecam.tip.sweets', 'SWEETS', 'スイーツで糖分補給',
-      '集中コーディング用の甘いお菓子＆カフェ代を支援', Icons.cake, Color(0xFFB0574A)),
-  _Tier('jp.livecam.tip.lunch', 'LUNCH', 'ランチで開発ブースト',
-      '次の新機能開発に向けた栄養満点ランチをごちそう', Icons.restaurant, Color(0xFF4E7A5A)),
-  _Tier('jp.livecam.tip.devtools', 'DEV TOOLS', '開発ツール費を応援',
-      'カメラ調査やサーバー監視に使うサービス費を支援', Icons.auto_awesome, Color(0xFF6B4E9B)),
+  _Tier('jp.livecam.tip.coffee', 'COFFEE', Icons.coffee, Color(0xFF7A5C46)),
+  _Tier('jp.livecam.tip.sweets', 'SWEETS', Icons.cake, Color(0xFFB0574A)),
+  _Tier('jp.livecam.tip.lunch', 'LUNCH', Icons.restaurant, Color(0xFF4E7A5A)),
+  _Tier('jp.livecam.tip.devtools', 'DEV TOOLS', Icons.auto_awesome,
+      Color(0xFF6B4E9B)),
 ];
 
 class _TipScreenState extends State<TipScreen> {
@@ -91,9 +102,10 @@ class _TipScreenState extends State<TipScreen> {
       await _iap.buyConsumable(purchaseParam: PurchaseParam(productDetails: p));
     } catch (_) {
       if (mounted) {
+        final l10n = context.l10n;
         setState(() {
           _busyId = null;
-          _message = '購入を開始できませんでした';
+          _message = l10n.tipPurchaseStartFailed;
         });
       }
     }
@@ -106,17 +118,20 @@ class _TipScreenState extends State<TipScreen> {
         case PurchaseStatus.restored:
           if (pd.pendingCompletePurchase) await _iap.completePurchase(pd);
           if (mounted) {
+            final l10n = context.l10n;
             setState(() {
               _busyId = null;
-              _message = 'ご支援ありがとうございます！開発の励みになります。';
+              _message = l10n.tipThanks;
             });
           }
         case PurchaseStatus.error:
           if (pd.pendingCompletePurchase) await _iap.completePurchase(pd);
           if (mounted) {
+            final l10n = context.l10n;
             setState(() {
               _busyId = null;
-              _message = '購入を完了できませんでした（${pd.error?.message ?? '不明なエラー'}）';
+              _message = l10n.tipPurchaseFailed(
+                  pd.error?.message ?? l10n.tipUnknownError);
             });
           }
         case PurchaseStatus.canceled:
@@ -130,8 +145,9 @@ class _TipScreenState extends State<TipScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final l10n = context.l10n;
     return Scaffold(
-      appBar: AppBar(title: const Text('開発者を応援')),
+      appBar: AppBar(title: Text(l10n.tipTitle)),
       body: ListView(padding: const EdgeInsets.all(16), children: [
         const SizedBox(height: 4),
         const Center(
@@ -141,14 +157,12 @@ class _TipScreenState extends State<TipScreen> {
           ),
         ),
         const SizedBox(height: 12),
-        Text('開発者を応援する',
+        Text(l10n.settingsSupportTitle,
             textAlign: TextAlign.center,
             style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
         const SizedBox(height: 8),
         Text(
-          'このアプリは個人で開発・運営しています。カメラの調査・追加や監視サーバーの維持、'
-          '気象データの対応など、継続的なアップデートの励みになります。'
-          '支援は任意で、機能の違いはありません。',
+          l10n.tipIntro,
           textAlign: TextAlign.center,
           style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey[700]),
         ),
@@ -163,16 +177,14 @@ class _TipScreenState extends State<TipScreen> {
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
-                _available
-                    ? '支援メニューは準備中です。しばらくしてからお試しください。'
-                    : 'このデバイスではアプリ内課金を利用できません。',
+                _available ? l10n.tipPreparing : l10n.tipUnavailable,
                 textAlign: TextAlign.center,
               ),
             ),
           )
         else
           for (final t in _tiers)
-            if (_products[t.id] != null) _tierCard(t, _products[t.id]!),
+            if (_products[t.id] != null) _tierCard(t, _products[t.id]!, l10n),
         if (_message != null)
           Padding(
             padding: const EdgeInsets.only(top: 8),
@@ -184,15 +196,15 @@ class _TipScreenState extends State<TipScreen> {
           child: Padding(
             padding: const EdgeInsets.all(12),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              const Text('購入前にご確認ください', style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(l10n.tipNoticeTitle, style: const TextStyle(fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
-              Text('支援はApp Storeのアプリ内課金で処理されます（返金はAppleの規定に従います）。',
+              Text(l10n.tipNoticeBody,
                   style: TextStyle(fontSize: 12, color: Colors.grey[700])),
               const SizedBox(height: 4),
-              _link('EULA（Apple標準使用許諾契約）',
+              _link(l10n.tipEula,
                   'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'),
-              _link('利用規約', 'https://kotopapa.github.io/livecam-jp/terms.html'),
-              _link('プライバシーポリシー', 'https://kotopapa.github.io/livecam-jp/privacy.html'),
+              _link(l10n.settingsTerms, 'https://kotopapa.github.io/livecam-jp/terms.html'),
+              _link(l10n.settingsPrivacy, 'https://kotopapa.github.io/livecam-jp/privacy.html'),
             ]),
           ),
         ),
@@ -212,7 +224,7 @@ class _TipScreenState extends State<TipScreen> {
         ),
       );
 
-  Widget _tierCard(_Tier t, ProductDetails p) {
+  Widget _tierCard(_Tier t, ProductDetails p, AppLocalizations l10n) {
     final busy = _busyId == t.id;
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 6),
@@ -238,8 +250,8 @@ class _TipScreenState extends State<TipScreen> {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(t.badge,
                     style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: t.color, letterSpacing: 1)),
-                Text(t.title, style: TextStyle(fontWeight: FontWeight.bold, color: t.color)),
-                Text(t.subtitle, style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                Text(t.title(l10n), style: TextStyle(fontWeight: FontWeight.bold, color: t.color)),
+                Text(t.subtitle(l10n), style: TextStyle(fontSize: 12, color: Colors.grey[700])),
               ]),
             ),
             const SizedBox(width: 8),

@@ -131,12 +131,8 @@ void main() {
       expect(wbgtLevelOf(-3.0), WbgtLevel.safe);
     });
 
-    test('ラベルと色（color_theme.css）', () {
-      expect(WbgtLevel.danger.label, '危険');
-      expect(WbgtLevel.severeWarning.label, '厳重警戒');
-      expect(WbgtLevel.warning.label, '警戒');
-      expect(WbgtLevel.caution.label, '注意');
-      expect(WbgtLevel.safe.label, 'ほぼ安全');
+    // 表示名は 1.4.0 で ARB へ移動した（`wbgtLevelLabelOf()` / i18n_test.dart）
+    test('色（color_theme.css）', () {
       expect(WbgtLevel.danger.color.toARGB32(), 0xFFFF2800);
       expect(WbgtLevel.severeWarning.color.toARGB32(), 0xFFFF9600);
       expect(WbgtLevel.warning.color.toARGB32(), 0xFFFAF500);

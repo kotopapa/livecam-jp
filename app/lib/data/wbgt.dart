@@ -50,13 +50,8 @@ enum WbgtLevel {
   /// 21未満
   safe;
 
-  String get label => switch (this) {
-        WbgtLevel.danger => '危険',
-        WbgtLevel.severeWarning => '厳重警戒',
-        WbgtLevel.warning => '警戒',
-        WbgtLevel.caution => '注意',
-        WbgtLevel.safe => 'ほぼ安全',
-      };
+  // 表示名は lib/l10n/l10n.dart の wbgtLevelLabelOf() で解決する
+  // （ここは BuildContext を持たないため名前を持たない）
 
   /// 背景色（環境省サイト color_theme.css の .wbgt_lv1〜5 と同じ）
   Color get color => switch (this) {

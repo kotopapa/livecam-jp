@@ -54,7 +54,9 @@ void main() {
     for (final k in kinds) {
       final s = RiskLayers.scale(k);
       expect(s.length, 5);
-      expect([for (final e in s) e.$2], ['留意', '注意', '警戒', '危険', '切迫']);
+      // 1.4.0: 表示名ではなく l10n キー（解決は riskLevelLabelOf）
+      expect([for (final e in s) e.$2],
+          ['watch', 'caution', 'warning', 'danger', 'critical']);
       // 注意=黄 / 警戒=赤 / 危険=紫 / 切迫=黒紫（実タイルPLTE・公式凡例SVGと一致）
       expect([for (final e in s.skip(1)) e.$1], const [
         Color(0xFFF2E700),
@@ -72,8 +74,8 @@ void main() {
   test('キキクルは名称を持ち、ハザードマップ/他レイヤーと排他に区別される', () {
     for (final k in kinds) {
       expect(RiskLayers.isRisk(k), isTrue);
-      expect(RiskLayers.title(k), isNotEmpty);
-      expect(RiskLayers.subtitle(k), isNotEmpty);
+      // 1.4.0: 表示名ではなく l10n キーを返す（解決は riskLayerTitleOf）
+      expect(RiskLayers.titleKey(k), isNotEmpty);
       // 出典行は「出典：気象庁」（ハザードマップ扱いにしない）
       expect(HazardLayers.isHazard(k), isFalse);
       expect(HazardLayers.tileIds(k), isEmpty);
@@ -88,7 +90,7 @@ void main() {
     ]) {
       expect(RiskLayers.isRisk(k), isFalse);
       expect(RiskLayers.element(k), '');
-      expect(RiskLayers.title(k), '');
+      expect(RiskLayers.titleKey(k), '');
     }
   });
 

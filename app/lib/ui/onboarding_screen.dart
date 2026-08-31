@@ -94,7 +94,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(24),
+            // 320px幅でベトナム語のボタン（Đồng ý và bắt đầu）が入るよう左右は16
+            padding: const EdgeInsets.fromLTRB(16, 24, 16, 24),
             child: Row(children: [
               // ページインジケータ
               for (var i = 0; i <= _pageCount; i++)
@@ -110,21 +111,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
               const Spacer(),
+              // 長い言語（ベトナム語・韓国語）でも横にあふれないよう縮められるようにする
               if (!_isLast)
-                TextButton(
-                  // スキップしても免責ページへ飛ぶ（免責は飛ばせない。SPEC 9.2①）
-                  onPressed: () => _controller.jumpToPage(_pageCount),
-                  child: Text(l10n.commonSkip),
+                Flexible(
+                  child: TextButton(
+                    // スキップしても免責ページへ飛ぶ（免責は飛ばせない。SPEC 9.2①）
+                    onPressed: () => _controller.jumpToPage(_pageCount),
+                    child: Text(l10n.commonSkip,
+                        maxLines: 1, overflow: TextOverflow.ellipsis),
+                  ),
                 ),
               const SizedBox(width: 8),
-              FilledButton(
-                onPressed: _isLast
-                    ? _finish
-                    : () => _controller.nextPage(
-                        duration: const Duration(milliseconds: 250),
-                        curve: Curves.easeOut),
-                child: Text(
-                    _isLast ? l10n.onboardingAgreeAndStart : l10n.commonNext),
+              Flexible(
+                child: FilledButton(
+                  onPressed: _isLast
+                      ? _finish
+                      : () => _controller.nextPage(
+                          duration: const Duration(milliseconds: 250),
+                          curve: Curves.easeOut),
+                  child: Text(
+                      _isLast ? l10n.onboardingAgreeAndStart : l10n.commonNext,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis),
+                ),
               ),
             ]),
           ),
@@ -144,20 +153,31 @@ class _PromisePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(32),
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Image.asset(image, height: 220, fit: BoxFit.contain),
-        const SizedBox(height: 32),
-        Text(title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-        const SizedBox(height: 12),
-        Text(body,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 14, color: Colors.grey[700])),
-      ]),
-    );
+    // 多言語対応で本文が長くなる言語（やさしい日本語・ベトナム語・韓国語）があるため、
+    // 画像の高さを画面に応じて縮め、それでも入らなければスクロールさせる
+    // （固定220pxのままだと iPhone SE 相当の 320x568 で縦にあふれる）
+    return LayoutBuilder(builder: (context, c) {
+      final imageHeight = c.maxHeight * 0.42 < 220.0 ? c.maxHeight * 0.42 : 220.0;
+      return SingleChildScrollView(
+        padding: const EdgeInsets.all(32),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+              minHeight: c.maxHeight - 64 > 0 ? c.maxHeight - 64 : 0),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Image.asset(image, height: imageHeight, fit: BoxFit.contain),
+            const SizedBox(height: 24),
+            Text(title,
+                textAlign: TextAlign.center,
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 12),
+            Text(body,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 14, color: Colors.grey[700])),
+          ]),
+        ),
+      );
+    });
   }
 }
 

@@ -45,13 +45,7 @@ enum HeatAlertLevel {
         _ => 9,
       };
 
-  /// バッジ用の短い表示名
-  String get label => switch (this) {
-        HeatAlertLevel.special => '熱中症特別警戒',
-        HeatAlertLevel.specialPending => '熱中症特別警戒（判定）',
-        HeatAlertLevel.warning => '熱中症警戒',
-        _ => '',
-      };
+  // バッジ用の短い表示名は lib/l10n/l10n.dart の heatAlertLabelOf() で解決する
 }
 
 /// フラグ文字列 → レベル。未知の値は [HeatAlertLevel.unknown]
@@ -161,8 +155,8 @@ class HeatAlertReport {
 
 /// 純粋関数群（テスト対象）＋取得
 class HeatAlerts {
+  /// 出典表記は翻訳しない
   static const attribution = '出典：環境省熱中症予防情報サイト';
-  static const disclaimer = '本情報は参考情報です。正式発表は熱中症予防情報サイト等をご確認ください';
   static const siteUrl = 'https://www.wbgt.env.go.jp/alert.php';
 
   /// 発表時刻（1日4回）

@@ -7,6 +7,9 @@ import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_en.dart';
 import 'app_localizations_ja.dart';
+import 'app_localizations_ko.dart';
+import 'app_localizations_vi.dart';
+import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
 
@@ -97,6 +100,10 @@ abstract class AppLocalizations {
     Locale('en'),
     Locale('ja'),
     Locale.fromSubtags(languageCode: 'ja', scriptCode: 'Hira'),
+    Locale('ko'),
+    Locale('vi'),
+    Locale('zh'),
+    Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
   ];
 
   /// アプリ名（画面表示用）
@@ -375,283 +382,283 @@ abstract class AppLocalizations {
   /// **'その他'**
   String get categoryOther;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'北海道'**
   String get pref01;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'青森'**
   String get pref02;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'岩手'**
   String get pref03;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'宮城'**
   String get pref04;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'秋田'**
   String get pref05;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'山形'**
   String get pref06;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'福島'**
   String get pref07;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'茨城'**
   String get pref08;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'栃木'**
   String get pref09;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'群馬'**
   String get pref10;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'埼玉'**
   String get pref11;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'千葉'**
   String get pref12;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'東京'**
   String get pref13;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'神奈川'**
   String get pref14;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'新潟'**
   String get pref15;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'富山'**
   String get pref16;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'石川'**
   String get pref17;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'福井'**
   String get pref18;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'山梨'**
   String get pref19;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'長野'**
   String get pref20;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'岐阜'**
   String get pref21;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'静岡'**
   String get pref22;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'愛知'**
   String get pref23;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'三重'**
   String get pref24;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'滋賀'**
   String get pref25;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'京都'**
   String get pref26;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'大阪'**
   String get pref27;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'兵庫'**
   String get pref28;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'奈良'**
   String get pref29;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'和歌山'**
   String get pref30;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'鳥取'**
   String get pref31;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'島根'**
   String get pref32;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'岡山'**
   String get pref33;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'広島'**
   String get pref34;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'山口'**
   String get pref35;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'徳島'**
   String get pref36;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'香川'**
   String get pref37;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'愛媛'**
   String get pref38;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'高知'**
   String get pref39;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'福岡'**
   String get pref40;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'佐賀'**
   String get pref41;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'長崎'**
   String get pref42;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'熊本'**
   String get pref43;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'大分'**
   String get pref44;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'宮崎'**
   String get pref45;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'鹿児島'**
   String get pref46;
 
-  /// 都道府県名。英語表記は気象庁「多言語辞書」の Prefecture 名から接尾辞を除いたもの。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「都道府県」から接尾辞（県/府/都・현/부/도・Tỉnh）を除去
   ///
   /// In ja, this message translates to:
   /// **'沖縄'**
@@ -1455,265 +1462,265 @@ abstract class AppLocalizations {
   /// **'{month}月{day}日'**
   String timeMonthDay(int month, int day);
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「震度５弱」から震度語を除いた短縮形（バッジ表示用）
   ///
   /// In ja, this message translates to:
   /// **'5弱'**
   String get intensity5Lower;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「震度５強」から震度語を除いた短縮形
   ///
   /// In ja, this message translates to:
   /// **'5強'**
   String get intensity5Upper;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「震度６弱」から震度語を除いた短縮形
   ///
   /// In ja, this message translates to:
   /// **'6弱'**
   String get intensity6Lower;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「震度６強」から震度語を除いた短縮形
   ///
   /// In ja, this message translates to:
   /// **'6強'**
   String get intensity6Upper;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「震度５弱以上」
   ///
   /// In ja, this message translates to:
   /// **'震度5弱以上'**
   String get quakeLevel5Lower;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: JMA「震度５弱以上」の型に「５強」を当てはめた　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'震度5強以上'**
   String get quakeLevel5Upper;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: JMA「震度５弱以上」の型に「６弱」を当てはめた　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'震度6弱以上'**
   String get quakeLevel6Lower;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「暴風雪警報」
   ///
   /// In ja, this message translates to:
   /// **'暴風雪警報'**
   String get warning02;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「大雨警報（土砂災害）」から括弧を除去
   ///
   /// In ja, this message translates to:
   /// **'大雨警報'**
   String get warning03;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「洪水警報」
   ///
   /// In ja, this message translates to:
   /// **'洪水警報'**
   String get warning04;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「暴風警報」
   ///
   /// In ja, this message translates to:
   /// **'暴風警報'**
   String get warning05;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「大雪警報」
   ///
   /// In ja, this message translates to:
   /// **'大雪警報'**
   String get warning06;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「波浪警報」
   ///
   /// In ja, this message translates to:
   /// **'波浪警報'**
   String get warning07;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「高潮警報」
   ///
   /// In ja, this message translates to:
   /// **'高潮警報'**
   String get warning08;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: JMA「土砂災害」＋「警報」の合成（2026新体系。辞書に単独項目なし）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'土砂災害警報'**
   String get warning09;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 防災気象情報「レベル４大雨危険警報」からレベル表記を除去（JMA_ADAPT）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'大雨危険警報'**
   String get warning43;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: JMA「レベル４氾濫危険警報」は氾濫語。本アプリのコード44は洪水危険警報のため「洪水」の訳語に差し替え　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'洪水危険警報'**
   String get warning44;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 防災気象情報「レベル４高潮危険警報」からレベル表記を除去（JMA_ADAPT）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'高潮危険警報'**
   String get warning48;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 防災気象情報「レベル４土砂災害危険警報」からレベル表記を除去（JMA_ADAPT）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'土砂災害危険警報'**
   String get warning49;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「暴風雪特別警報」
   ///
   /// In ja, this message translates to:
   /// **'暴風雪特別警報'**
   String get warning32;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「大雨特別警報（土砂災害）」から括弧を除去
   ///
   /// In ja, this message translates to:
   /// **'大雨特別警報'**
   String get warning33;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: JMA「洪水」＋「特別警報」の合成（2026新体系）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'洪水特別警報'**
   String get warning34;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「暴風特別警報」
   ///
   /// In ja, this message translates to:
   /// **'暴風特別警報'**
   String get warning35;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「大雪特別警報」
   ///
   /// In ja, this message translates to:
   /// **'大雪特別警報'**
   String get warning36;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「波浪特別警報」
   ///
   /// In ja, this message translates to:
   /// **'波浪特別警報'**
   String get warning37;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「高潮特別警報」
   ///
   /// In ja, this message translates to:
   /// **'高潮特別警報'**
   String get warning38;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: JMA「土砂災害」＋「特別警報」の合成（2026新体系）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'土砂災害特別警報'**
   String get warning39;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「大雨注意報」
   ///
   /// In ja, this message translates to:
   /// **'大雨注意報'**
   String get advisory10;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「大雪注意報」
   ///
   /// In ja, this message translates to:
   /// **'大雪注意報'**
   String get advisory12;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「風雪注意報」
   ///
   /// In ja, this message translates to:
   /// **'風雪注意報'**
   String get advisory13;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「雷注意報」
   ///
   /// In ja, this message translates to:
   /// **'雷注意報'**
   String get advisory14;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「強風注意報」
   ///
   /// In ja, this message translates to:
   /// **'強風注意報'**
   String get advisory15;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「波浪注意報」
   ///
   /// In ja, this message translates to:
   /// **'波浪注意報'**
   String get advisory16;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「融雪注意報」
   ///
   /// In ja, this message translates to:
   /// **'融雪注意報'**
   String get advisory17;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「洪水注意報」
   ///
   /// In ja, this message translates to:
   /// **'洪水注意報'**
   String get advisory18;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「高潮注意報」
   ///
   /// In ja, this message translates to:
   /// **'高潮注意報'**
   String get advisory19;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「濃霧注意報」
   ///
   /// In ja, this message translates to:
   /// **'濃霧注意報'**
   String get advisory20;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「乾燥注意報」
   ///
   /// In ja, this message translates to:
   /// **'乾燥注意報'**
   String get advisory21;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「なだれ注意報」
   ///
   /// In ja, this message translates to:
   /// **'なだれ注意報'**
   String get advisory22;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「低温注意報」
   ///
   /// In ja, this message translates to:
   /// **'低温注意報'**
   String get advisory23;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「霜注意報」
   ///
   /// In ja, this message translates to:
   /// **'霜注意報'**
   String get advisory24;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「着氷注意報」
   ///
   /// In ja, this message translates to:
   /// **'着氷注意報'**
   String get advisory25;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁。自由訳しないこと
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「着雪注意報」
   ///
   /// In ja, this message translates to:
   /// **'着雪注意報'**
   String get advisory26;
 
-  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: JMA「土砂災害」＋「注意報」の合成（2026新体系）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
   ///
   /// In ja, this message translates to:
   /// **'土砂災害注意報'**
@@ -1946,6 +1953,1176 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'警報名・注意報名・震度などの各言語訳は、気象庁「気象情報等に関する多言語辞書」に準拠しています。出典：気象庁ホームページ'**
   String get settingsJmaDictionaryNote;
+
+  /// No description provided for @hazardFloodTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'洪水浸水想定区域（想定最大規模）'**
+  String get hazardFloodTitle;
+
+  /// No description provided for @hazardLandslideTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'土砂災害警戒区域'**
+  String get hazardLandslideTitle;
+
+  /// No description provided for @hazardTsunamiTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'津波浸水想定'**
+  String get hazardTsunamiTitle;
+
+  /// No description provided for @hazardHightideTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'高潮浸水想定区域'**
+  String get hazardHightideTitle;
+
+  /// No description provided for @hazardLandslideSteepSlope.
+  ///
+  /// In ja, this message translates to:
+  /// **'急傾斜地'**
+  String get hazardLandslideSteepSlope;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「土石流」
+  ///
+  /// In ja, this message translates to:
+  /// **'土石流'**
+  String get hazardLandslideDebrisFlow;
+
+  /// No description provided for @hazardLandslideSlide.
+  ///
+  /// In ja, this message translates to:
+  /// **'地すべり'**
+  String get hazardLandslideSlide;
+
+  /// No description provided for @hazardDisclaimer.
+  ///
+  /// In ja, this message translates to:
+  /// **'最新かつ詳細な情報は各市町村のハザードマップをご確認ください。避難判断は自治体の避難情報に従ってください'**
+  String get hazardDisclaimer;
+
+  /// No description provided for @facilityKindWater.
+  ///
+  /// In ja, this message translates to:
+  /// **'給水拠点・応急給水施設'**
+  String get facilityKindWater;
+
+  /// No description provided for @facilityKindStock.
+  ///
+  /// In ja, this message translates to:
+  /// **'防災備蓄倉庫'**
+  String get facilityKindStock;
+
+  /// No description provided for @facilityKindFireWater.
+  ///
+  /// In ja, this message translates to:
+  /// **'消防水利（消火栓・防火水槽）'**
+  String get facilityKindFireWater;
+
+  /// No description provided for @facilityKindWaterShort.
+  ///
+  /// In ja, this message translates to:
+  /// **'給水拠点'**
+  String get facilityKindWaterShort;
+
+  /// No description provided for @facilityKindStockShort.
+  ///
+  /// In ja, this message translates to:
+  /// **'防災備蓄倉庫'**
+  String get facilityKindStockShort;
+
+  /// No description provided for @facilityKindFireWaterShort.
+  ///
+  /// In ja, this message translates to:
+  /// **'消防水利'**
+  String get facilityKindFireWaterShort;
+
+  /// No description provided for @facilityDisclaimer.
+  ///
+  /// In ja, this message translates to:
+  /// **'公開している自治体のみ。最新の情報は各自治体にご確認ください'**
+  String get facilityDisclaimer;
+
+  /// No description provided for @facilityNoData.
+  ///
+  /// In ja, this message translates to:
+  /// **'この地域のデータはまだありません'**
+  String get facilityNoData;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「洪水」
+  ///
+  /// In ja, this message translates to:
+  /// **'洪水'**
+  String get shelterHazardFlood;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「土砂災害」
+  ///
+  /// In ja, this message translates to:
+  /// **'土砂'**
+  String get shelterHazardSediment;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「高潮」（韓国語は辞書の注記<바다의 물이 늘어남>を除去）
+  ///
+  /// In ja, this message translates to:
+  /// **'高潮'**
+  String get shelterHazardHightide;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「地震情報」から情報語を除去
+  ///
+  /// In ja, this message translates to:
+  /// **'地震'**
+  String get shelterHazardEarthquake;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「津波警報」から警報語を除去
+  ///
+  /// In ja, this message translates to:
+  /// **'津波'**
+  String get shelterHazardTsunami;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: 辞書に「火事」なし（一般語のため各言語の通常語）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
+  ///
+  /// In ja, this message translates to:
+  /// **'火事'**
+  String get shelterHazardFire;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: 辞書に「内水」なし。JMA「浸水」(inundation) を基に合成　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
+  ///
+  /// In ja, this message translates to:
+  /// **'内水'**
+  String get shelterHazardInlandFlood;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「火山」
+  ///
+  /// In ja, this message translates to:
+  /// **'火山'**
+  String get shelterHazardVolcano;
+
+  /// No description provided for @shelterDisclaimer.
+  ///
+  /// In ja, this message translates to:
+  /// **'最新かつ詳細な状況は各市町村にご確認ください'**
+  String get shelterDisclaimer;
+
+  /// No description provided for @riskLandTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'土砂キキクル'**
+  String get riskLandTitle;
+
+  /// No description provided for @riskInundTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'浸水キキクル'**
+  String get riskInundTitle;
+
+  /// No description provided for @riskFloodTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'洪水キキクル'**
+  String get riskFloodTitle;
+
+  /// No description provided for @riskLandSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'土砂災害の危険度（1kmメッシュ・10分ごとに更新）'**
+  String get riskLandSubtitle;
+
+  /// No description provided for @riskInundSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'浸水害の危険度（1kmメッシュ・10分ごとに更新）'**
+  String get riskInundSubtitle;
+
+  /// No description provided for @riskFloodSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'洪水災害の危険度（河川ごと・10分ごとに更新）'**
+  String get riskFloodSubtitle;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: 気象庁凡例「今後の情報等に留意」に対応する語（辞書に単独項目なし）　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
+  ///
+  /// In ja, this message translates to:
+  /// **'留意'**
+  String get riskLevelWatch;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「警報の危険度分布・注意」
+  ///
+  /// In ja, this message translates to:
+  /// **'注意'**
+  String get riskLevelCaution;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「警報の危険度分布・警戒」
+  ///
+  /// In ja, this message translates to:
+  /// **'警戒'**
+  String get riskLevelWarning;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「警報の危険度分布・危険」
+  ///
+  /// In ja, this message translates to:
+  /// **'危険'**
+  String get riskLevelDanger;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「警報の危険度分布・災害切迫」
+  ///
+  /// In ja, this message translates to:
+  /// **'切迫'**
+  String get riskLevelCritical;
+
+  /// No description provided for @wbgtLevelDanger.
+  ///
+  /// In ja, this message translates to:
+  /// **'危険'**
+  String get wbgtLevelDanger;
+
+  /// No description provided for @wbgtLevelSevereWarning.
+  ///
+  /// In ja, this message translates to:
+  /// **'厳重警戒'**
+  String get wbgtLevelSevereWarning;
+
+  /// No description provided for @wbgtLevelWarning.
+  ///
+  /// In ja, this message translates to:
+  /// **'警戒'**
+  String get wbgtLevelWarning;
+
+  /// No description provided for @wbgtLevelCaution.
+  ///
+  /// In ja, this message translates to:
+  /// **'注意'**
+  String get wbgtLevelCaution;
+
+  /// No description provided for @wbgtLevelSafe.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほぼ安全'**
+  String get wbgtLevelSafe;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: JMA「熱中症警戒アラート」＋「特別警報」の合成　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
+  ///
+  /// In ja, this message translates to:
+  /// **'熱中症特別警戒'**
+  String get heatAlertSpecial;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: ADAPT: 上記に「判定」段階の注記を付けたもの　※ADAPT（辞書に単独項目が無く、辞書の語彙で合成した語）
+  ///
+  /// In ja, this message translates to:
+  /// **'熱中症特別警戒（判定）'**
+  String get heatAlertSpecialPending;
+
+  /// 気象庁「気象情報等に関する多言語辞書」(2026-03-26版) の公式対訳。出典：気象庁／**自由訳しないこと**。根拠: JMA 用語「熱中症警戒アラート」
+  ///
+  /// In ja, this message translates to:
+  /// **'熱中症警戒'**
+  String get heatAlertWarning;
+
+  /// No description provided for @heatAlertDisclaimer.
+  ///
+  /// In ja, this message translates to:
+  /// **'本情報は参考情報です。正式発表は熱中症予防情報サイト等をご確認ください'**
+  String get heatAlertDisclaimer;
+
+  /// 言語名。各言語のARBでも自称表記のままにする
+  ///
+  /// In ja, this message translates to:
+  /// **'简体中文'**
+  String get languageNameZhHans;
+
+  /// 言語名。各言語のARBでも自称表記のままにする
+  ///
+  /// In ja, this message translates to:
+  /// **'繁體中文'**
+  String get languageNameZhHant;
+
+  /// 言語名。各言語のARBでも自称表記のままにする
+  ///
+  /// In ja, this message translates to:
+  /// **'한국어'**
+  String get languageNameKo;
+
+  /// 言語名。各言語のARBでも自称表記のままにする
+  ///
+  /// In ja, this message translates to:
+  /// **'Tiếng Việt'**
+  String get languageNameVi;
+
+  /// No description provided for @mapLayerPanelSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'地図に1種類だけ重ねて表示します'**
+  String get mapLayerPanelSubtitle;
+
+  /// No description provided for @mapLayerNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'表示しない'**
+  String get mapLayerNone;
+
+  /// No description provided for @mapLayerSectionWeather.
+  ///
+  /// In ja, this message translates to:
+  /// **'気象'**
+  String get mapLayerSectionWeather;
+
+  /// No description provided for @mapLayerRainRadarTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'雨雲レーダー（現在）'**
+  String get mapLayerRainRadarTitle;
+
+  /// No description provided for @mapLayerRainRadarSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'高解像度降水ナウキャスト・5分ごとに更新'**
+  String get mapLayerRainRadarSubtitle;
+
+  /// No description provided for @mapLayerQuakesTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'震源'**
+  String get mapLayerQuakesTitle;
+
+  /// No description provided for @mapQuakePeriodDay.
+  ///
+  /// In ja, this message translates to:
+  /// **'24時間'**
+  String get mapQuakePeriodDay;
+
+  /// No description provided for @mapQuakePeriodWeek.
+  ///
+  /// In ja, this message translates to:
+  /// **'7日'**
+  String get mapQuakePeriodWeek;
+
+  /// No description provided for @mapQuakePeriodMonth.
+  ///
+  /// In ja, this message translates to:
+  /// **'30日'**
+  String get mapQuakePeriodMonth;
+
+  /// No description provided for @mapLayerRain24hTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'24時間降水量'**
+  String get mapLayerRain24hTitle;
+
+  /// ADAPT: 「解析雨量」は多言語辞書に無いため気象庁英語ページの Radar/Raingauge-Analyzed Precipitation を用いた
+  ///
+  /// In ja, this message translates to:
+  /// **'気象庁の解析雨量（面）＋拡大でアメダス観測値'**
+  String get mapLayerRain24hSubtitle;
+
+  /// No description provided for @mapLayerSectionHazard.
+  ///
+  /// In ja, this message translates to:
+  /// **'ハザードマップ'**
+  String get mapLayerSectionHazard;
+
+  /// ADAPT: 警戒区域/特別警戒区域は多言語辞書に無いため hazard area / special hazard area とした
+  ///
+  /// In ja, this message translates to:
+  /// **'急傾斜地・土石流・地すべり（黄=警戒区域 / 赤=特別警戒区域）'**
+  String get mapHazardLandslideSubtitle;
+
+  /// No description provided for @mapHazardDepthSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'想定される浸水深を色分け表示'**
+  String get mapHazardDepthSubtitle;
+
+  /// ADAPT: 避難場所レイヤーの見出し。名前のない避難場所の代替表示にも使う
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所'**
+  String get mapShelterTitle;
+
+  /// ADAPT: 国土地理院の用語。多言語辞書に無い
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所（指定緊急避難場所・指定避難所）'**
+  String get mapLayerShelterTitle;
+
+  /// No description provided for @mapLayerShelterSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'拡大すると表示。災害種別で絞り込みできます'**
+  String get mapLayerShelterSubtitle;
+
+  /// ADAPT: 多言語辞書に無い
+  ///
+  /// In ja, this message translates to:
+  /// **'防災拠点'**
+  String get mapFacilityTitle;
+
+  /// ADAPT: 多言語辞書に無い
+  ///
+  /// In ja, this message translates to:
+  /// **'防災拠点（給水拠点・防災備蓄倉庫）'**
+  String get mapLayerFacilityTitle;
+
+  /// No description provided for @mapLayerFacilitySubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'拡大すると表示。種別で絞り込みできます'**
+  String get mapLayerFacilitySubtitle;
+
+  /// No description provided for @mapQuakeNearbyTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'この付近の地震 {count}件'**
+  String mapQuakeNearbyTitle(int count);
+
+  /// No description provided for @mapQuakeUnknownPlace.
+  ///
+  /// In ja, this message translates to:
+  /// **'震源（詳細未発表）'**
+  String get mapQuakeUnknownPlace;
+
+  /// No description provided for @mapQuakeMaxIntensity.
+  ///
+  /// In ja, this message translates to:
+  /// **'最大震度{value}'**
+  String mapQuakeMaxIntensity(String value);
+
+  /// 震源・避難場所・防災拠点から開く周辺カメラ画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'{name} 周辺のカメラ'**
+  String mapNearbyCamerasTitle(String name);
+
+  /// No description provided for @mapQuakeTapHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'タップで周辺のライブカメラ（50km以内）を表示'**
+  String get mapQuakeTapHint;
+
+  /// No description provided for @mapShelterNoticeTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所レイヤーについて'**
+  String get mapShelterNoticeTitle;
+
+  /// ADAPT: 初回ONのときの注意ダイアログ本文。末尾に出典表記（日本語のまま）が続く
+  ///
+  /// In ja, this message translates to:
+  /// **'・「指定緊急避難場所」は災害の危険から命を守るために逃げ込む場所、「指定避難所」は一定期間滞在する施設です（二重枠で表示）\n・指定緊急避難場所は災害種別ごとに指定されており、災害の種類によっては避難できない場合があります\n・市町村から提供された情報のため、最新でない場合や掲載されていない場所があります。正確な情報は当該市町村にご確認ください'**
+  String get mapShelterNoticeBody;
+
+  /// No description provided for @mapShelterHazardAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'すべて'**
+  String get mapShelterHazardAll;
+
+  /// ADAPT: 多言語辞書に無い。詳細シートのバッジなので短く
+  ///
+  /// In ja, this message translates to:
+  /// **'指定避難所'**
+  String get mapShelterDesignated;
+
+  /// No description provided for @mapShelterHazardsLabel.
+  ///
+  /// In ja, this message translates to:
+  /// **'対応する災害種別'**
+  String get mapShelterHazardsLabel;
+
+  /// No description provided for @mapOpenRoute.
+  ///
+  /// In ja, this message translates to:
+  /// **'Googleマップで経路を見る'**
+  String get mapOpenRoute;
+
+  /// No description provided for @mapNearbyCamerasButton.
+  ///
+  /// In ja, this message translates to:
+  /// **'周辺のライブカメラ'**
+  String get mapNearbyCamerasButton;
+
+  /// No description provided for @mapFacilityNoticeTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'防災拠点レイヤーについて'**
+  String get mapFacilityNoticeTitle;
+
+  /// ADAPT: 初回ONのときの注意ダイアログ本文。末尾に出典表記（日本語のまま）が続く
+  ///
+  /// In ja, this message translates to:
+  /// **'・各自治体がオープンデータとして公開している「応急給水施設」「備蓄倉庫」「消防水利施設」の一覧を集めたものです。公開している自治体のみで、全国は網羅していません\n・消火栓・防火水槽は消防活動用の設備で、一般の方が使用するものではありません\n・給水拠点は災害時に開設されるもので、平常時に給水を受けられるとは限りません\n・更新時期は自治体ごとに異なります。正確な情報は各自治体にご確認ください'**
+  String get mapFacilityNoticeBody;
+
+  /// No description provided for @mapFacilityOwner.
+  ///
+  /// In ja, this message translates to:
+  /// **'提供：{owner}'**
+  String mapFacilityOwner(String owner);
+
+  /// No description provided for @mapFacilityGeocodedNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'住所から推定した位置です（実際の場所とずれる場合があります）'**
+  String get mapFacilityGeocodedNote;
+
+  /// No description provided for @mapFacilitySourceDataset.
+  ///
+  /// In ja, this message translates to:
+  /// **'出典（データセット）'**
+  String get mapFacilitySourceDataset;
+
+  /// 雨雲スライダーの時間差。mapNowcastAfter / mapNowcastBefore に埋め込む
+  ///
+  /// In ja, this message translates to:
+  /// **'{value}時間'**
+  String mapNowcastSpanHours(String value);
+
+  /// No description provided for @mapNowcastSpanMinutes.
+  ///
+  /// In ja, this message translates to:
+  /// **'{value}分'**
+  String mapNowcastSpanMinutes(int value);
+
+  /// No description provided for @mapNowcastNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在（実況）'**
+  String get mapNowcastNow;
+
+  /// No description provided for @mapNowcastForecastHourly.
+  ///
+  /// In ja, this message translates to:
+  /// **'予報・1時間雨量'**
+  String get mapNowcastForecastHourly;
+
+  /// No description provided for @mapNowcastForecast.
+  ///
+  /// In ja, this message translates to:
+  /// **'予測'**
+  String get mapNowcastForecast;
+
+  /// No description provided for @mapNowcastAfter.
+  ///
+  /// In ja, this message translates to:
+  /// **'{span}後（{kind}）'**
+  String mapNowcastAfter(String span, String kind);
+
+  /// No description provided for @mapNowcastBefore.
+  ///
+  /// In ja, this message translates to:
+  /// **'{span}前（実況）'**
+  String mapNowcastBefore(String span);
+
+  /// No description provided for @mapNowcastBackToNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在へ'**
+  String get mapNowcastBackToNow;
+
+  /// No description provided for @mapNowcastNowMarker.
+  ///
+  /// In ja, this message translates to:
+  /// **'▲ 現在'**
+  String get mapNowcastNowMarker;
+
+  /// No description provided for @mapNowcastLast.
+  ///
+  /// In ja, this message translates to:
+  /// **'{label}（6時間先）'**
+  String mapNowcastLast(String label);
+
+  /// No description provided for @mapLegendRainRadar.
+  ///
+  /// In ja, this message translates to:
+  /// **'雨雲レーダー {label}'**
+  String mapLegendRainRadar(String label);
+
+  /// No description provided for @mapLegendRainRadarKind.
+  ///
+  /// In ja, this message translates to:
+  /// **'雨雲レーダー {label}（{kind}）'**
+  String mapLegendRainRadarKind(String label, String kind);
+
+  /// No description provided for @mapLegendRainWeak.
+  ///
+  /// In ja, this message translates to:
+  /// **'弱'**
+  String get mapLegendRainWeak;
+
+  /// No description provided for @mapLegendQuakes.
+  ///
+  /// In ja, this message translates to:
+  /// **'震源 {period}（{count}件）'**
+  String mapLegendQuakes(String period, int count);
+
+  /// No description provided for @mapLegendIntensity.
+  ///
+  /// In ja, this message translates to:
+  /// **'震度{value}'**
+  String mapLegendIntensity(String value);
+
+  /// No description provided for @mapLegendIntensity6Up.
+  ///
+  /// In ja, this message translates to:
+  /// **'6弱〜'**
+  String get mapLegendIntensity6Up;
+
+  /// No description provided for @mapLegendRain24h.
+  ///
+  /// In ja, this message translates to:
+  /// **'24時間降水量 {label}'**
+  String mapLegendRain24h(String label);
+
+  /// No description provided for @mapLegendRain24hZoom.
+  ///
+  /// In ja, this message translates to:
+  /// **'24時間降水量 {label}（拡大で観測値）'**
+  String mapLegendRain24hZoom(String label);
+
+  /// ADAPT: 警戒区域/特別警戒区域は多言語辞書に無い
+  ///
+  /// In ja, this message translates to:
+  /// **'{title}（警戒 / 特別警戒）'**
+  String mapLegendLandslide(String title);
+
+  /// No description provided for @mapLegendShelterZoomIn.
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所（拡大すると避難場所を表示）'**
+  String get mapLegendShelterZoomIn;
+
+  /// No description provided for @mapLegendShelter.
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所（{count}件）'**
+  String mapLegendShelter(int count);
+
+  /// No description provided for @mapLegendShelterCluster.
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所（{count}件・まとめ表示）'**
+  String mapLegendShelterCluster(int count);
+
+  /// No description provided for @mapLegendShelterHazard.
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所・{hazard}（{count}件）'**
+  String mapLegendShelterHazard(String hazard, int count);
+
+  /// No description provided for @mapLegendShelterHazardCluster.
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所・{hazard}（{count}件・まとめ表示）'**
+  String mapLegendShelterHazardCluster(String hazard, int count);
+
+  /// ADAPT: 国土地理院の用語。多言語辞書に無い
+  ///
+  /// In ja, this message translates to:
+  /// **'指定緊急避難場所'**
+  String get mapLegendShelterEmergency;
+
+  /// ADAPT: 国土地理院の用語。多言語辞書に無い
+  ///
+  /// In ja, this message translates to:
+  /// **'二重枠=指定避難所'**
+  String get mapLegendShelterDesignated;
+
+  /// No description provided for @mapLegendFacilityZoomIn.
+  ///
+  /// In ja, this message translates to:
+  /// **'防災拠点（拡大すると防災拠点を表示）'**
+  String get mapLegendFacilityZoomIn;
+
+  /// {message} には facilityNoData が入る
+  ///
+  /// In ja, this message translates to:
+  /// **'防災拠点（{message}）'**
+  String mapLegendFacilityNoData(String message);
+
+  /// No description provided for @mapLegendFacility.
+  ///
+  /// In ja, this message translates to:
+  /// **'防災拠点（{count}件）'**
+  String mapLegendFacility(int count);
+
+  /// No description provided for @mapLegendFacilityCluster.
+  ///
+  /// In ja, this message translates to:
+  /// **'防災拠点（{count}件・まとめ表示）'**
+  String mapLegendFacilityCluster(int count);
+
+  /// No description provided for @mapLegendFetchFailed.
+  ///
+  /// In ja, this message translates to:
+  /// **'取得できません'**
+  String get mapLegendFetchFailed;
+
+  /// No description provided for @mapShelterFetchFailed.
+  ///
+  /// In ja, this message translates to:
+  /// **'避難場所を取得できませんでした（タップで再試行）'**
+  String get mapShelterFetchFailed;
+
+  /// No description provided for @mapFacilityFetchFailed.
+  ///
+  /// In ja, this message translates to:
+  /// **'防災拠点を取得できませんでした（タップで再試行）'**
+  String get mapFacilityFetchFailed;
+
+  /// No description provided for @mapRainTooltip.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name} 24時間 {mm}mm'**
+  String mapRainTooltip(String name, String mm);
+
+  /// No description provided for @bosaiFetchFailedPull.
+  ///
+  /// In ja, this message translates to:
+  /// **'取得に失敗しました（引き下げてやり直せます）'**
+  String get bosaiFetchFailedPull;
+
+  /// 気象庁の津波リストに見出し(ttl)が無いときの代替。出典：気象庁 多言語辞書（Tsunami Information）
+  ///
+  /// In ja, this message translates to:
+  /// **'津波情報'**
+  String get bosaiTsunamiInfo;
+
+  /// 震源地名が空のときの表示
+  ///
+  /// In ja, this message translates to:
+  /// **'不明'**
+  String get bosaiUnknownPlace;
+
+  /// No description provided for @bosaiFetchFailedDetail.
+  ///
+  /// In ja, this message translates to:
+  /// **'取得に失敗しました（{error}）'**
+  String bosaiFetchFailedDetail(String error);
+
+  /// No description provided for @bosaiTimeJustNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'たった今'**
+  String get bosaiTimeJustNow;
+
+  /// No description provided for @bosaiTimeMinutesAgo.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}分前'**
+  String bosaiTimeMinutesAgo(int n);
+
+  /// No description provided for @bosaiTimeHoursAgo.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}時間前'**
+  String bosaiTimeHoursAgo(int n);
+
+  /// No description provided for @bosaiTimeMonthDayHour.
+  ///
+  /// In ja, this message translates to:
+  /// **'{month}月{day}日 {hour}時頃'**
+  String bosaiTimeMonthDayHour(int month, int day, int hour);
+
+  /// 出典：気象庁 多言語辞書（震度=seismic intensity）
+  ///
+  /// In ja, this message translates to:
+  /// **'{place}の震度'**
+  String bosaiQuakeIntensityTitle(String place);
+
+  /// No description provided for @bosaiNearbyCamerasTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'{place}周辺のカメラ'**
+  String bosaiNearbyCamerasTitle(String place);
+
+  /// No description provided for @bosaiQuakeEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'直近72時間の地震情報はありません'**
+  String get bosaiQuakeEmpty;
+
+  /// bosaiQuakeNote の {at} に差し込む断片。英語は前の語と続けるため先頭に半角空白を入れている
+  ///
+  /// In ja, this message translates to:
+  /// **'（{time}時点・新しい順）'**
+  String bosaiQuakeAsOf(String time);
+
+  /// 出典表記（気象庁）はどの言語でも省略しない。SPEC C5。{at} は bosaiQuakeAsOf（無いときは空文字）
+  ///
+  /// In ja, this message translates to:
+  /// **'出典：気象庁 地震情報（直近72時間）{at}。タップすると揺れた市区町村のライブカメラ一覧（市区町村別震度が無い場合は震源周辺）を表示します。'**
+  String bosaiQuakeNote(String at);
+
+  /// 出典：気象庁 多言語辞書（Tsunami）
+  ///
+  /// In ja, this message translates to:
+  /// **'津波'**
+  String get bosaiBadgeTsunami;
+
+  /// ADAPT: 44pxのバッジに2行で入れるため、多言語辞書の seismic intensity を Intensity に短縮した
+  ///
+  /// In ja, this message translates to:
+  /// **'震度\n{value}'**
+  String bosaiBadgeIntensity(String value);
+
+  /// No description provided for @bosaiMuniObserved.
+  ///
+  /// In ja, this message translates to:
+  /// **'{count}市区町村で観測'**
+  String bosaiMuniObserved(int count);
+
+  /// No description provided for @bosaiWarningStaleAt.
+  ///
+  /// In ja, this message translates to:
+  /// **'最新の情報を取得できませんでした（{time} 時点の情報を表示中）'**
+  String bosaiWarningStaleAt(String time);
+
+  /// No description provided for @bosaiWarningAsOf.
+  ///
+  /// In ja, this message translates to:
+  /// **'{time} 時点'**
+  String bosaiWarningAsOf(String time);
+
+  /// 出典：気象庁 多言語辞書（熱中症警戒アラート=Heat Stroke Alert）
+  ///
+  /// In ja, this message translates to:
+  /// **'熱中症警戒情報の運用期間外です（毎年4月下旬〜10月下旬に発表されます）'**
+  String get bosaiHeatOffSeason;
+
+  /// 出典表記のうしろに続けて置く断片。英語は先頭に半角空白を入れている。hour は0埋め済みの文字列
+  ///
+  /// In ja, this message translates to:
+  /// **'（{month}/{day} {hour}時発表）'**
+  String bosaiHeatReportAt(int month, int day, String hour);
+
+  /// No description provided for @bosaiHeatTapHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'タップするとその都道府県のカメラ一覧を表示します。'**
+  String get bosaiHeatTapHint;
+
+  /// 出典：気象庁 多言語辞書（Heat Stroke Alert）
+  ///
+  /// In ja, this message translates to:
+  /// **'現在、熱中症警戒情報は発表されていません'**
+  String get bosaiHeatNone;
+
+  /// No description provided for @bosaiHeatToday.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日'**
+  String get bosaiHeatToday;
+
+  /// No description provided for @bosaiHeatTomorrow.
+  ///
+  /// In ja, this message translates to:
+  /// **'明日'**
+  String get bosaiHeatTomorrow;
+
+  /// No description provided for @bosaiHeatPrefCamerasTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'{pref}のカメラ（熱中症警戒情報）'**
+  String bosaiHeatPrefCamerasTitle(String pref);
+
+  /// 出典：気象庁 多言語辞書（暑さ指数=heat index）
+  ///
+  /// In ja, this message translates to:
+  /// **'近くの地点の暑さ指数（WBGT）'**
+  String get bosaiWbgtCardTitle;
+
+  /// No description provided for @bosaiWbgtUnavailable.
+  ///
+  /// In ja, this message translates to:
+  /// **'取得できませんでした'**
+  String get bosaiWbgtUnavailable;
+
+  /// value は '350m' / '3.2km' のように単位まで含む文字列
+  ///
+  /// In ja, this message translates to:
+  /// **'約{value}'**
+  String bosaiApproxDistance(String value);
+
+  /// No description provided for @bosaiWbgtNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在'**
+  String get bosaiWbgtNow;
+
+  /// No description provided for @bosaiWbgtNoCurrent.
+  ///
+  /// In ja, this message translates to:
+  /// **'実況値なし'**
+  String get bosaiWbgtNoCurrent;
+
+  /// No description provided for @bosaiWbgtLevelAt.
+  ///
+  /// In ja, this message translates to:
+  /// **'{level}（{time}）'**
+  String bosaiWbgtLevelAt(String level, String time);
+
+  /// No description provided for @bosaiWbgtForecast.
+  ///
+  /// In ja, this message translates to:
+  /// **'予測'**
+  String get bosaiWbgtForecast;
+
+  /// No description provided for @bosaiWbgtHour.
+  ///
+  /// In ja, this message translates to:
+  /// **'{hour}時'**
+  String bosaiWbgtHour(int hour);
+
+  /// No description provided for @bosaiWbgtNextDayHour.
+  ///
+  /// In ja, this message translates to:
+  /// **'翌{hour}時'**
+  String bosaiWbgtNextDayHour(int hour);
+
+  /// No description provided for @bosaiWbgtDateHour.
+  ///
+  /// In ja, this message translates to:
+  /// **'{month}/{day} {hour}時'**
+  String bosaiWbgtDateHour(int month, int day, int hour);
+
+  /// 出典表記（気象庁）はどの言語でも省略しない。SPEC C5
+  ///
+  /// In ja, this message translates to:
+  /// **'出典：気象庁 地震情報（震度の大きい順）。タップするとその市区町村のカメラ一覧を表示します。カメラがない市区町村は震源周辺のカメラを表示します。'**
+  String get bosaiQuakeMuniNote;
+
+  /// 出典：気象庁 多言語辞書（震源=Hypocenter）
+  ///
+  /// In ja, this message translates to:
+  /// **'震源周辺のカメラ（距離順）'**
+  String get bosaiEpicenterNearby;
+
+  /// 市区町村名が引けなかったときのコード表記
+  ///
+  /// In ja, this message translates to:
+  /// **'市区町村 {code}'**
+  String bosaiMuniCodeFallback(String code);
+
+  /// No description provided for @bosaiPrefEpicenterFallback.
+  ///
+  /// In ja, this message translates to:
+  /// **'{pref}・震源周辺のカメラを表示します'**
+  String bosaiPrefEpicenterFallback(String pref);
+
+  /// No description provided for @bosaiMuniIntensityCamerasTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name}のカメラ（震度{intensity}）'**
+  String bosaiMuniIntensityCamerasTitle(String name, String intensity);
+
+  /// No description provided for @bosaiLiveOnly.
+  ///
+  /// In ja, this message translates to:
+  /// **'LIVEのみ（{count}）'**
+  String bosaiLiveOnly(int count);
+
+  /// No description provided for @bosaiMuniFallbackNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'この市区町村に対応するカメラがないため、都道府県内の全カメラを表示しています'**
+  String get bosaiMuniFallbackNote;
+
+  /// No description provided for @bosaiPrefNoCameras.
+  ///
+  /// In ja, this message translates to:
+  /// **'この都道府県のカメラがありません'**
+  String get bosaiPrefNoCameras;
+
+  /// No description provided for @bosaiNoLiveCameras.
+  ///
+  /// In ja, this message translates to:
+  /// **'LIVE配信のカメラがありません'**
+  String get bosaiNoLiveCameras;
+
+  /// No description provided for @bosaiNoCamerasWithin50km.
+  ///
+  /// In ja, this message translates to:
+  /// **'50km以内にカメラがありません'**
+  String get bosaiNoCamerasWithin50km;
+
+  /// ADAPT 応援画面のAppBarタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'開発者を応援'**
+  String get tipTitle;
+
+  /// ADAPT 応援画面の説明文
+  ///
+  /// In ja, this message translates to:
+  /// **'このアプリは個人で開発・運営しています。カメラの調査・追加や監視サーバーの維持、気象データの対応など、継続的なアップデートの励みになります。支援は任意で、機能の違いはありません。'**
+  String get tipIntro;
+
+  /// ADAPT 投げ銭の段階名（COFFEE）
+  ///
+  /// In ja, this message translates to:
+  /// **'缶コーヒーでひと息'**
+  String get tipCoffeeTitle;
+
+  /// ADAPT
+  ///
+  /// In ja, this message translates to:
+  /// **'開発の合間に飲む缶コーヒー代をプレゼント'**
+  String get tipCoffeeSubtitle;
+
+  /// ADAPT 投げ銭の段階名（SWEETS）
+  ///
+  /// In ja, this message translates to:
+  /// **'スイーツで糖分補給'**
+  String get tipSweetsTitle;
+
+  /// ADAPT
+  ///
+  /// In ja, this message translates to:
+  /// **'集中コーディング用の甘いお菓子＆カフェ代を支援'**
+  String get tipSweetsSubtitle;
+
+  /// ADAPT 投げ銭の段階名（LUNCH）
+  ///
+  /// In ja, this message translates to:
+  /// **'ランチで開発ブースト'**
+  String get tipLunchTitle;
+
+  /// ADAPT
+  ///
+  /// In ja, this message translates to:
+  /// **'次の新機能開発に向けた栄養満点ランチをごちそう'**
+  String get tipLunchSubtitle;
+
+  /// ADAPT 投げ銭の段階名（DEV TOOLS）
+  ///
+  /// In ja, this message translates to:
+  /// **'開発ツール費を応援'**
+  String get tipDevToolsTitle;
+
+  /// ADAPT
+  ///
+  /// In ja, this message translates to:
+  /// **'カメラ調査やサーバー監視に使うサービス費を支援'**
+  String get tipDevToolsSubtitle;
+
+  /// ADAPT アプリ内課金の商品が取得できないとき
+  ///
+  /// In ja, this message translates to:
+  /// **'支援メニューは準備中です。しばらくしてからお試しください。'**
+  String get tipPreparing;
+
+  /// ADAPT
+  ///
+  /// In ja, this message translates to:
+  /// **'このデバイスではアプリ内課金を利用できません。'**
+  String get tipUnavailable;
+
+  /// ADAPT
+  ///
+  /// In ja, this message translates to:
+  /// **'購入を開始できませんでした'**
+  String get tipPurchaseStartFailed;
+
+  /// ADAPT 購入完了時のメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'ご支援ありがとうございます！開発の励みになります。'**
+  String get tipThanks;
+
+  /// ADAPT {error} はストアが返すエラーメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'購入を完了できませんでした（{error}）'**
+  String tipPurchaseFailed(String error);
+
+  /// ADAPT tipPurchaseFailed の {error} が空のときの代替文言
+  ///
+  /// In ja, this message translates to:
+  /// **'不明なエラー'**
+  String get tipUnknownError;
+
+  /// ADAPT
+  ///
+  /// In ja, this message translates to:
+  /// **'購入前にご確認ください'**
+  String get tipNoticeTitle;
+
+  /// ADAPT
+  ///
+  /// In ja, this message translates to:
+  /// **'支援はApp Storeのアプリ内課金で処理されます（返金はAppleの規定に従います）。'**
+  String get tipNoticeBody;
+
+  /// ADAPT Apple標準EULAへのリンクのラベル
+  ///
+  /// In ja, this message translates to:
+  /// **'EULA（Apple標準使用許諾契約）'**
+  String get tipEula;
+
+  /// ADAPT クラッシュ診断ダイアログ。{name} は診断JSONのファイル名
+  ///
+  /// In ja, this message translates to:
+  /// **'記録: {count}件\n最新: {name}'**
+  String settingsDiagCrashRecords(int count, String name);
+
+  /// ADAPT MetricKit の crashDiagnostics
+  ///
+  /// In ja, this message translates to:
+  /// **'クラッシュ'**
+  String get settingsDiagKindCrash;
+
+  /// ADAPT MetricKit の hangDiagnostics
+  ///
+  /// In ja, this message translates to:
+  /// **'ハング'**
+  String get settingsDiagKindHang;
+
+  /// ADAPT MetricKit の cpuExceptionDiagnostics
+  ///
+  /// In ja, this message translates to:
+  /// **'CPU異常'**
+  String get settingsDiagKindCpu;
+
+  /// ADAPT MetricKit の diskWriteExceptionDiagnostics
+  ///
+  /// In ja, this message translates to:
+  /// **'ディスク書込異常'**
+  String get settingsDiagKindDiskWrite;
+
+  /// ADAPT {kinds} は settingsDiagKind* を区切り文字で連結した文字列
+  ///
+  /// In ja, this message translates to:
+  /// **'種別: {kinds}'**
+  String settingsDiagCrashKinds(String kinds);
+
+  /// ADAPT 診断ファイルの読み取りに失敗したとき
+  ///
+  /// In ja, this message translates to:
+  /// **'読み取りエラー: {error}'**
+  String settingsDiagReadError(String error);
+
+  /// ADAPT 通知診断で通知許可・トークンが取得できなかったとき
+  ///
+  /// In ja, this message translates to:
+  /// **'取得失敗'**
+  String get settingsDiagFetchFailed;
+
+  /// ADAPT トークンが null のとき
+  ///
+  /// In ja, this message translates to:
+  /// **'未取得(null)'**
+  String get settingsDiagNotAcquired;
+
+  /// ADAPT {prefix} はAPNsトークンの先頭8文字
+  ///
+  /// In ja, this message translates to:
+  /// **'取得済み({prefix}…)'**
+  String settingsDiagAcquired(String prefix);
+
+  /// ADAPT 通知診断でトークン取得が例外になったとき
+  ///
+  /// In ja, this message translates to:
+  /// **'エラー: {error}'**
+  String settingsDiagError(String error);
 }
 
 class _AppLocalizationsDelegate
@@ -1959,7 +3136,7 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['en', 'ja'].contains(locale.languageCode);
+      <String>['en', 'ja', 'ko', 'vi', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -1976,6 +3153,14 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
         }
         break;
       }
+    case 'zh':
+      {
+        switch (locale.scriptCode) {
+          case 'Hant':
+            return AppLocalizationsZhHant();
+        }
+        break;
+      }
   }
 
   // Lookup logic when only language code is specified.
@@ -1984,6 +3169,12 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsEn();
     case 'ja':
       return AppLocalizationsJa();
+    case 'ko':
+      return AppLocalizationsKo();
+    case 'vi':
+      return AppLocalizationsVi();
+    case 'zh':
+      return AppLocalizationsZh();
   }
 
   throw FlutterError(

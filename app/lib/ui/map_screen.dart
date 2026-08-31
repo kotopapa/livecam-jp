@@ -248,41 +248,47 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   void _showLayerPicker(BuildContext context) {
+    final l10n = context.l10n;
     showModalBottomSheet<void>(
       context: context,
       showDragHandle: true,
       builder: (ctx) => SafeArea(
         child: SingleChildScrollView(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          const ListTile(
-              title: Text('地図レイヤー', style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text('地図に1種類だけ重ねて表示します')),
+          ListTile(
+              title: Text(l10n.mapLayersTooltip,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: Text(l10n.mapLayerPanelSubtitle)),
           ListTile(
             leading: Icon(_layer == MapLayerKind.none ? Icons.radio_button_checked : Icons.radio_button_off,
                 color: _layer == MapLayerKind.none ? Theme.of(ctx).colorScheme.primary : null),
-            title: const Text('表示しない'),
-            
+            title: Text(l10n.mapLayerNone),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.none); },
           ),
           const Divider(height: 8),
-          const ListTile(
-              title: Text('気象', style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text('出典：気象庁')),
+          ListTile(
+              title: Text(l10n.mapLayerSectionWeather,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: const Text(JmaLayers.attribution)),
           ListTile(
             leading: Icon(_layer == MapLayerKind.rainRadar ? Icons.radio_button_checked : Icons.radio_button_off,
                 color: _layer == MapLayerKind.rainRadar ? Theme.of(ctx).colorScheme.primary : null),
-            title: const Text('雨雲レーダー（現在）'),
-            subtitle: const Text('高解像度降水ナウキャスト・5分ごとに更新'),
+            title: Text(l10n.mapLayerRainRadarTitle),
+            subtitle: Text(l10n.mapLayerRainRadarSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rainRadar); },
           ),
           ListTile(
             leading: Icon(_layer == MapLayerKind.quakes ? Icons.radio_button_checked : Icons.radio_button_off,
                 color: _layer == MapLayerKind.quakes ? Theme.of(ctx).colorScheme.primary : null),
-            title: const Text('震源'),
+            title: Text(l10n.mapLayerQuakesTitle),
             subtitle: Row(children: [
               for (final p in QuakePeriod.values) ...[
                 ChoiceChip(
-                  label: Text(switch (p) { QuakePeriod.day => '24時間', QuakePeriod.week => '7日', QuakePeriod.month => '30日' }),
+                  label: Text(switch (p) {
+                    QuakePeriod.day => l10n.mapQuakePeriodDay,
+                    QuakePeriod.week => l10n.mapQuakePeriodWeek,
+                    QuakePeriod.month => l10n.mapQuakePeriodMonth,
+                  }),
                   selected: _layer == MapLayerKind.quakes && _quakePeriod == p,
                   visualDensity: VisualDensity.compact,
                   onSelected: (_) { Navigator.pop(ctx); _setLayer(MapLayerKind.quakes, period: p); },
@@ -295,8 +301,8 @@ class _MapScreenState extends State<MapScreen> {
           ListTile(
             leading: Icon(_layer == MapLayerKind.rain24h ? Icons.radio_button_checked : Icons.radio_button_off,
                 color: _layer == MapLayerKind.rain24h ? Theme.of(ctx).colorScheme.primary : null),
-            title: const Text('24時間降水量'),
-            subtitle: const Text('気象庁の解析雨量（面）＋拡大でアメダス観測値'),
+            title: Text(l10n.mapLayerRain24hTitle),
+            subtitle: Text(l10n.mapLayerRain24hSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rain24h); },
           ),
           for (final k in const [
@@ -307,14 +313,15 @@ class _MapScreenState extends State<MapScreen> {
             ListTile(
               leading: Icon(_layer == k ? Icons.radio_button_checked : Icons.radio_button_off,
                   color: _layer == k ? Theme.of(ctx).colorScheme.primary : null),
-              title: Text(RiskLayers.title(k)),
-              subtitle: Text(RiskLayers.subtitle(k)),
+              title: Text(riskLayerTitleOf(l10n, RiskLayers.titleKey(k))),
+              subtitle: Text(riskLayerSubtitleOf(l10n, RiskLayers.titleKey(k))),
               onTap: () { Navigator.pop(ctx); _setLayer(k); },
             ),
           const Divider(height: 8),
-          const ListTile(
-              title: Text('ハザードマップ', style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text('出典：ハザードマップポータルサイト（国土地理院）')),
+          ListTile(
+              title: Text(l10n.mapLayerSectionHazard,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: const Text(HazardLayers.attribution)),
           for (final k in const [
             MapLayerKind.hazardFlood,
             MapLayerKind.hazardLandslide,
@@ -324,22 +331,23 @@ class _MapScreenState extends State<MapScreen> {
             ListTile(
               leading: Icon(_layer == k ? Icons.radio_button_checked : Icons.radio_button_off,
                   color: _layer == k ? Theme.of(ctx).colorScheme.primary : null),
-              title: Text(HazardLayers.title(k)),
+              title: Text(hazardLayerTitleOf(l10n, HazardLayers.titleKey(k))),
               subtitle: Text(switch (k) {
-                MapLayerKind.hazardLandslide => '急傾斜地・土石流・地すべり（黄=警戒区域 / 赤=特別警戒区域）',
-                _ => '想定される浸水深を色分け表示',
+                MapLayerKind.hazardLandslide => l10n.mapHazardLandslideSubtitle,
+                _ => l10n.mapHazardDepthSubtitle,
               }),
               onTap: () { Navigator.pop(ctx); _setLayer(k); },
             ),
           const Divider(height: 8),
-          const ListTile(
-              title: Text('避難場所', style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text('出典：国土地理院「指定緊急避難場所データ」')),
+          ListTile(
+              title: Text(l10n.mapShelterTitle,
+                  style: const TextStyle(fontWeight: FontWeight.bold)),
+              subtitle: const Text(ShelterLayers.attribution)),
           ListTile(
             leading: Icon(_layer == MapLayerKind.shelters ? Icons.radio_button_checked : Icons.radio_button_off,
                 color: _layer == MapLayerKind.shelters ? Theme.of(ctx).colorScheme.primary : null),
-            title: const Text('避難場所（指定緊急避難場所・指定避難所）'),
-            subtitle: const Text('拡大すると表示。災害種別で絞り込みできます'),
+            title: Text(l10n.mapLayerShelterTitle),
+            subtitle: Text(l10n.mapLayerShelterSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.shelters); },
           ),
           // 防災拠点（給水拠点・防災備蓄倉庫）は公開自治体が4都県8自治体と少ないため
@@ -347,14 +355,16 @@ class _MapScreenState extends State<MapScreen> {
           // 配信データのカバーが広がったら showFacilitiesLayer を true にする
           if (showFacilitiesLayer) ...[
             const Divider(height: 8),
-            const ListTile(
-                title: Text('防災拠点', style: TextStyle(fontWeight: FontWeight.bold)),
-                subtitle: Text('出典：各自治体のオープンデータ（公開している自治体のみ）')),
+            ListTile(
+                title: Text(l10n.mapFacilityTitle,
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
+                // 出典表記は翻訳しない（SPEC C5）
+                subtitle: const Text('出典：各自治体のオープンデータ（公開している自治体のみ）')),
             ListTile(
               leading: Icon(_layer == MapLayerKind.facilities ? Icons.radio_button_checked : Icons.radio_button_off,
                   color: _layer == MapLayerKind.facilities ? Theme.of(ctx).colorScheme.primary : null),
-              title: const Text('防災拠点（給水拠点・防災備蓄倉庫）'),
-              subtitle: const Text('拡大すると表示。種別で絞り込みできます'),
+              title: Text(l10n.mapLayerFacilityTitle),
+              subtitle: Text(l10n.mapLayerFacilitySubtitle),
               onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.facilities); },
             ),
           ],
@@ -386,6 +396,7 @@ class _MapScreenState extends State<MapScreen> {
         (q.pos!.longitude - tapped.pos!.longitude).abs() * cosLat <= tol).toList()
       ..sort((a, b) => b.at.compareTo(a.at));
     String two(int v) => v.toString().padLeft(2, '0');
+    final l10n = context.l10n;
     showModalBottomSheet<void>(
       context: context,
       showDragHandle: true,
@@ -399,7 +410,7 @@ class _MapScreenState extends State<MapScreen> {
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 4),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Text('この付近の地震 ${group.length}件',
+                  child: Text(l10n.mapQuakeNearbyTitle(group.length),
                       style: Theme.of(ctx).textTheme.titleSmall),
                 ),
               ),
@@ -413,12 +424,13 @@ class _MapScreenState extends State<MapScreen> {
                           backgroundColor: JmaLayers.intensityColor(q.maxIntensity),
                           child: Text(q.maxIntensity.isEmpty ? '-' : q.maxIntensity,
                               style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black87))),
-                      title: Text(q.place.isEmpty ? '震源（詳細未発表）' : q.place),
+                      title: Text(
+                          q.place.isEmpty ? l10n.mapQuakeUnknownPlace : q.place),
                       subtitle: Builder(builder: (_) {
                         final t = q.at.toLocal();
                         return Text('${t.month}/${t.day} ${two(t.hour)}:${two(t.minute)}'
                             '${q.magnitude.isNotEmpty ? '　M${q.magnitude}' : ''}'
-                            '${q.maxIntensity.isNotEmpty ? '　最大震度${q.maxIntensity}' : ''}');
+                            '${q.maxIntensity.isNotEmpty ? '　${l10n.mapQuakeMaxIntensity(q.maxIntensity)}' : ''}');
                       }),
                       trailing: const Icon(Icons.videocam),
                       onTap: () {
@@ -426,7 +438,9 @@ class _MapScreenState extends State<MapScreen> {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (_) => NearbyCamerasScreen(
                                 app: widget.app,
-                                title: '${q.place.isEmpty ? '震源' : q.place} 周辺のカメラ',
+                                title: l10n.mapNearbyCamerasTitle(q.place.isEmpty
+                                    ? l10n.mapLayerQuakesTitle
+                                    : q.place),
                                 lat: q.pos!.latitude,
                                 lng: q.pos!.longitude)));
                       },
@@ -434,9 +448,10 @@ class _MapScreenState extends State<MapScreen> {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.fromLTRB(16, 0, 16, 8),
-              child: Text('タップで周辺のライブカメラ（50km以内）を表示', style: TextStyle(fontSize: 12, color: Colors.grey)),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+              child: Text(l10n.mapQuakeTapHint,
+                  style: const TextStyle(fontSize: 12, color: Colors.grey)),
             ),
           ]),
         ),
@@ -469,16 +484,11 @@ class _MapScreenState extends State<MapScreen> {
     await showDialog<void>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('避難場所レイヤーについて'),
-        content: const SingleChildScrollView(
+        title: Text(ctx.l10n.mapShelterNoticeTitle),
+        content: SingleChildScrollView(
           child: Text(
-            '・「指定緊急避難場所」は災害の危険から命を守るために逃げ込む場所、'
-            '「指定避難所」は一定期間滞在する施設です（二重枠で表示）\n'
-            '・指定緊急避難場所は災害種別ごとに指定されており、災害の種類によっては避難できない場合があります\n'
-            '・市町村から提供された情報のため、最新でない場合や掲載されていない場所があります。'
-            '正確な情報は当該市町村にご確認ください\n\n'
-            '${ShelterLayers.attribution}',
-            style: TextStyle(fontSize: 13),
+            '${ctx.l10n.mapShelterNoticeBody}\n\n${ShelterLayers.attribution}',
+            style: const TextStyle(fontSize: 13),
           ),
         ),
         actions: [
@@ -557,14 +567,16 @@ class _MapScreenState extends State<MapScreen> {
         child: Row(mainAxisSize: MainAxisSize.min, children: [
           const Icon(Icons.home_work_outlined, size: 16),
           const SizedBox(width: 6),
-          chip('すべて', null),
-          for (var i = 0; i < hazards.length; i++) chip(hazards[i], i),
+          chip(context.l10n.mapShelterHazardAll, null),
+          for (var i = 0; i < hazards.length; i++)
+            chip(shelterHazardLabelOf(context.l10n, hazards[i]), i),
         ]),
       ),
     );
   }
 
   void _showShelterInfo(Shelter s) {
+    final l10n = context.l10n;
     final hazards = _shelters?.hazards ?? ShelterLayers.defaultHazards;
     showModalBottomSheet<void>(
       context: context,
@@ -579,7 +591,7 @@ class _MapScreenState extends State<MapScreen> {
                 child: _ShelterPin(designated: false, size: 22),
               ),
               Expanded(
-                child: Text(s.name.isEmpty ? '避難場所' : s.name,
+                child: Text(s.name.isEmpty ? l10n.mapShelterTitle : s.name,
                     style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
               ),
               if (s.designated)
@@ -589,8 +601,8 @@ class _MapScreenState extends State<MapScreen> {
                   decoration: BoxDecoration(
                       color: _ShelterPin.color,
                       borderRadius: BorderRadius.circular(10)),
-                  child: const Text('指定避難所',
-                      style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white)),
+                  child: Text(l10n.mapShelterDesignated,
+                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white)),
                 ),
             ]),
             if (s.address.isNotEmpty)
@@ -604,12 +616,14 @@ class _MapScreenState extends State<MapScreen> {
               child: ElevationLabel(lat: s.lat, lng: s.lng),
             ),
             const SizedBox(height: 8),
-            const Text('対応する災害種別', style: TextStyle(fontSize: 11, color: Colors.black54)),
+            Text(l10n.mapShelterHazardsLabel,
+                style: const TextStyle(fontSize: 11, color: Colors.black54)),
             const SizedBox(height: 4),
             Wrap(spacing: 6, runSpacing: 4, children: [
               for (var i = 0; i < hazards.length; i++)
                 Chip(
-                  label: Text(hazards[i], style: const TextStyle(fontSize: 11)),
+                  label: Text(shelterHazardLabelOf(l10n, hazards[i]),
+                      style: const TextStyle(fontSize: 11)),
                   visualDensity: VisualDensity.compact,
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   backgroundColor: s.hazards.contains(i) ? _ShelterPin.color.withValues(alpha: 0.18) : null,
@@ -622,7 +636,7 @@ class _MapScreenState extends State<MapScreen> {
             Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
               FilledButton.icon(
                   icon: const Icon(Icons.directions, size: 18),
-                  label: const Text('Googleマップで経路を見る'),
+                  label: Text(l10n.mapOpenRoute),
                   onPressed: () => launchUrl(
                       ShelterLayers.routeUri(s),
                       mode: LaunchMode.externalApplication),
@@ -630,20 +644,21 @@ class _MapScreenState extends State<MapScreen> {
               const SizedBox(height: 8),
               OutlinedButton.icon(
                   icon: const Icon(Icons.videocam, size: 18),
-                  label: const Text('周辺のライブカメラ'),
+                  label: Text(l10n.mapNearbyCamerasButton),
                   onPressed: () {
                     Navigator.pop(ctx);
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (_) => NearbyCamerasScreen(
                             app: widget.app,
-                            title: '${s.name.isEmpty ? '避難場所' : s.name} 周辺のカメラ',
+                            title: l10n.mapNearbyCamerasTitle(
+                                s.name.isEmpty ? l10n.mapShelterTitle : s.name),
                             lat: s.lat,
                             lng: s.lng)));
                   },
                 ),
             ]),
             const SizedBox(height: 8),
-            Text('${ShelterLayers.attribution}　${ShelterLayers.disclaimer}',
+            Text('${ShelterLayers.attribution}　${l10n.shelterDisclaimer}',
                 style: const TextStyle(fontSize: 10, color: Colors.black54)),
           ]),
         ),
@@ -737,16 +752,11 @@ class _MapScreenState extends State<MapScreen> {
     await showDialog<void>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('防災拠点レイヤーについて'),
-        content: const SingleChildScrollView(
+        title: Text(ctx.l10n.mapFacilityNoticeTitle),
+        content: SingleChildScrollView(
           child: Text(
-            '・各自治体がオープンデータとして公開している「応急給水施設」「備蓄倉庫」'
-            '「消防水利施設」の一覧を集めたものです。公開している自治体のみで、全国は網羅していません\n'
-            '・消火栓・防火水槽は消防活動用の設備で、一般の方が使用するものではありません\n'
-            '・給水拠点は災害時に開設されるもので、平常時に給水を受けられるとは限りません\n'
-            '・更新時期は自治体ごとに異なります。正確な情報は各自治体にご確認ください\n\n'
-            '${FacilityLayers.attribution}',
-            style: TextStyle(fontSize: 13),
+            '${ctx.l10n.mapFacilityNoticeBody}\n\n${FacilityLayers.attribution}',
+            style: const TextStyle(fontSize: 13),
           ),
         ),
         actions: [
@@ -800,7 +810,8 @@ class _MapScreenState extends State<MapScreen> {
     Widget chip(String kind) => Padding(
           padding: const EdgeInsets.only(right: 6),
           child: FilterChip(
-            label: Text(FacilityLayers.shortLabel(kind), style: const TextStyle(fontSize: 12)),
+            label: Text(facilityKindShortOf(context.l10n, kind),
+                style: const TextStyle(fontSize: 12)),
             avatar: Container(
               width: 10,
               height: 10,
@@ -843,11 +854,16 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   void _showFacilityInfo(Facility f) {
+    final l10n = context.l10n;
     final store = _facilities;
     final src = store?.sourceOf(f);
-    final kindLabel = store?.index?.labelOf(f.kind) ??
-        FacilityLayers.defaultKinds[f.kind] ??
-        f.kind;
+    // 既知の種別は翻訳済みの正式名称を使い、未知のキーだけ配信JSON/既定値に落とす
+    final localizedKind = facilityKindLabelOf(l10n, f.kind);
+    final kindLabel = localizedKind != f.kind
+        ? localizedKind
+        : (store?.index?.labelOf(f.kind) ??
+            FacilityLayers.defaultKinds[f.kind] ??
+            f.kind);
     final title = f.name.isEmpty ? kindLabel : f.name;
     showModalBottomSheet<void>(
       context: context,
@@ -871,7 +887,7 @@ class _MapScreenState extends State<MapScreen> {
                 decoration: BoxDecoration(
                     color: _FacilityPin.colorOf(f.kind),
                     borderRadius: BorderRadius.circular(10)),
-                child: Text(FacilityLayers.shortLabel(f.kind),
+                child: Text(facilityKindShortOf(l10n, f.kind),
                     style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white)),
               ),
             ]),
@@ -887,7 +903,8 @@ class _MapScreenState extends State<MapScreen> {
             if (f.owner.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 2),
-                child: Text('提供：${f.owner}', style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                child: Text(l10n.mapFacilityOwner(f.owner),
+                    style: TextStyle(fontSize: 12, color: Colors.grey[700])),
               ),
             // 標高（浸水時の判断材料。国土地理院の標高APIを1回だけ呼ぶ）
             Padding(
@@ -901,7 +918,7 @@ class _MapScreenState extends State<MapScreen> {
                   Icon(Icons.info_outline, size: 13, color: Colors.orange[800]),
                   const SizedBox(width: 4),
                   Expanded(
-                    child: Text('住所から推定した位置です（実際の場所とずれる場合があります）',
+                    child: Text(l10n.mapFacilityGeocodedNote,
                         style: TextStyle(fontSize: 11, color: Colors.orange[800])),
                   ),
                 ]),
@@ -911,7 +928,7 @@ class _MapScreenState extends State<MapScreen> {
             Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
               FilledButton.icon(
                   icon: const Icon(Icons.directions, size: 18),
-                  label: const Text('Googleマップで経路を見る'),
+                  label: Text(l10n.mapOpenRoute),
                   onPressed: () => launchUrl(
                       FacilityLayers.routeUri(f),
                       mode: LaunchMode.externalApplication),
@@ -919,13 +936,13 @@ class _MapScreenState extends State<MapScreen> {
               const SizedBox(height: 8),
               OutlinedButton.icon(
                   icon: const Icon(Icons.videocam, size: 18),
-                  label: const Text('周辺のライブカメラ'),
+                  label: Text(l10n.mapNearbyCamerasButton),
                   onPressed: () {
                     Navigator.pop(ctx);
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (_) => NearbyCamerasScreen(
                             app: widget.app,
-                            title: '$title 周辺のカメラ',
+                            title: l10n.mapNearbyCamerasTitle(title),
                             lat: f.lat,
                             lng: f.lng)));
                   },
@@ -933,10 +950,11 @@ class _MapScreenState extends State<MapScreen> {
             ]),
             const SizedBox(height: 8),
             if (src == null)
-              const Text('${FacilityLayers.attribution}　${FacilityLayers.disclaimer}',
-                  style: TextStyle(fontSize: 10, color: Colors.black54))
+              Text('${FacilityLayers.attribution}　${l10n.facilityDisclaimer}',
+                  style: const TextStyle(fontSize: 10, color: Colors.black54))
             else ...[
-              const Text('出典（データセット）', style: TextStyle(fontSize: 10, color: Colors.black54)),
+              Text(l10n.mapFacilitySourceDataset,
+                  style: const TextStyle(fontSize: 10, color: Colors.black54)),
               InkWell(
                 onTap: src.url.isEmpty
                     ? null
@@ -952,7 +970,7 @@ class _MapScreenState extends State<MapScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 2),
-                child: Text(FacilityLayers.disclaimer,
+                child: Text(l10n.facilityDisclaimer,
                     style: const TextStyle(fontSize: 10, color: Colors.black54)),
               ),
             ],
@@ -1006,17 +1024,25 @@ class _MapScreenState extends State<MapScreen> {
     if (_layer != MapLayerKind.rainRadar || _nowcastTimes.length < 2) {
       return const SizedBox.shrink();
     }
+    final l10n = context.l10n;
     final n = _nowcastTimes[_nowcastIdx];
     final latestObs = _nowcastTimes.lastIndexWhere((x) => !x.isForecast);
     final diffMin = latestObs >= 0
         ? n.validAtJst.difference(_nowcastTimes[latestObs].validAtJst).inMinutes
         : 0;
-    String span(int m) => m.abs() >= 60 ? '${(m.abs() / 60).toStringAsFixed(m.abs() % 60 == 0 ? 0 : 1)}時間' : '${m.abs()}分';
+    String span(int m) => m.abs() >= 60
+        ? l10n.mapNowcastSpanHours(
+            (m.abs() / 60).toStringAsFixed(m.abs() % 60 == 0 ? 0 : 1))
+        : l10n.mapNowcastSpanMinutes(m.abs());
     final rel = diffMin == 0
-        ? '現在（実況）'
+        ? l10n.mapNowcastNow
         : diffMin > 0
-            ? '${span(diffMin)}後（${n.isHourly ? '予報・1時間雨量' : '予測'}）'
-            : '${span(diffMin)}前（実況）';
+            ? l10n.mapNowcastAfter(
+                span(diffMin),
+                n.isHourly
+                    ? l10n.mapNowcastForecastHourly
+                    : l10n.mapNowcastForecast)
+            : l10n.mapNowcastBefore(span(diffMin));
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 12),
       padding: const EdgeInsets.fromLTRB(12, 6, 12, 2),
@@ -1039,7 +1065,8 @@ class _MapScreenState extends State<MapScreen> {
                 _nowcastIdx = latestObs;
                 _nowcast = _nowcastTimes[latestObs];
               }),
-              child: const Text('現在へ', style: TextStyle(fontSize: 12)),
+              child: Text(l10n.mapNowcastBackToNow,
+                  style: const TextStyle(fontSize: 12)),
             ),
         ]),
         SliderTheme(
@@ -1059,8 +1086,10 @@ class _MapScreenState extends State<MapScreen> {
         ),
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Text(_nowcastTimes.first.label, style: const TextStyle(fontSize: 9, color: Colors.black54)),
-          const Text('▲ 現在', style: TextStyle(fontSize: 9, color: Colors.black54)),
-          Text('${_nowcastTimes.last.label}（6時間先）', style: const TextStyle(fontSize: 9, color: Colors.black54)),
+          Text(l10n.mapNowcastNowMarker,
+              style: const TextStyle(fontSize: 9, color: Colors.black54)),
+          Text(l10n.mapNowcastLast(_nowcastTimes.last.label),
+              style: const TextStyle(fontSize: 9, color: Colors.black54)),
         ]),
       ]),
     );
@@ -1069,6 +1098,7 @@ class _MapScreenState extends State<MapScreen> {
   /// 地図レイヤーの凡例・出典（地図左下、地理院表記の上）
   Widget _layerLegend() {
     if (_layer == MapLayerKind.none) return const SizedBox.shrink();
+    final l10n = context.l10n;
     Widget swatch(Color c, String label) => Padding(
           padding: const EdgeInsets.only(right: 6),
           child: Row(mainAxisSize: MainAxisSize.min, children: [
@@ -1081,31 +1111,46 @@ class _MapScreenState extends State<MapScreen> {
     String title;
     switch (_layer) {
       case MapLayerKind.rainRadar:
-        title = '雨雲レーダー ${_nowcast?.label ?? ''}${(_nowcast?.isHourly ?? false) ? '（予報・1時間雨量）' : (_nowcast?.isForecast ?? false) ? '（予測）' : ''}';
+        title = (_nowcast?.isHourly ?? false)
+            ? l10n.mapLegendRainRadarKind(
+                _nowcast?.label ?? '', l10n.mapNowcastForecastHourly)
+            : (_nowcast?.isForecast ?? false)
+                ? l10n.mapLegendRainRadarKind(
+                    _nowcast?.label ?? '', l10n.mapNowcastForecast)
+                : l10n.mapLegendRainRadar(_nowcast?.label ?? '');
         items.addAll([
-          swatch(const Color(0xFFB3E5FC), '弱'),
+          swatch(const Color(0xFFB3E5FC), l10n.mapLegendRainWeak),
           swatch(const Color(0xFF0041FF), '10'),
           swatch(const Color(0xFFFAF500), '30'),
           swatch(const Color(0xFFFF9900), '50'),
           swatch(const Color(0xFFFF2800), '80mm/h'),
         ]);
       case MapLayerKind.quakes:
-        title = '震源 ${switch (_quakePeriod) { QuakePeriod.day => '24時間', QuakePeriod.week => '7日', QuakePeriod.month => '30日' }}（${_quakes.length}件）';
+        title = l10n.mapLegendQuakes(
+            switch (_quakePeriod) {
+              QuakePeriod.day => l10n.mapQuakePeriodDay,
+              QuakePeriod.week => l10n.mapQuakePeriodWeek,
+              QuakePeriod.month => l10n.mapQuakePeriodMonth,
+            },
+            _quakes.length);
         items.addAll([
-          swatch(JmaLayers.intensityColor('3'), '震度3'),
+          swatch(JmaLayers.intensityColor('3'), l10n.mapLegendIntensity('3')),
           swatch(JmaLayers.intensityColor('4'), '4'),
-          swatch(JmaLayers.intensityColor('5-'), '5弱'),
-          swatch(JmaLayers.intensityColor('6-'), '6弱〜'),
+          swatch(JmaLayers.intensityColor('5-'), intensityLabelOf(l10n, '5-')),
+          swatch(JmaLayers.intensityColor('6-'), l10n.mapLegendIntensity6Up),
         ]);
       case MapLayerKind.rain24h:
-        title = '24時間降水量 ${_rain24hTile?.label ?? ''}${_zoom >= 9 ? '' : '（拡大で観測値）'}';
+        title = _zoom >= 9
+            ? l10n.mapLegendRain24h(_rain24hTile?.label ?? '')
+            : l10n.mapLegendRain24hZoom(_rain24hTile?.label ?? '');
         items.addAll([
           for (final s in JmaLayers.rain24hScale) swatch(s.$2, s.$3),
         ]);
       case MapLayerKind.riskLand:
       case MapLayerKind.riskInund:
       case MapLayerKind.riskFlood:
-        title = '${RiskLayers.title(_layer)} ${_risk?.label ?? ''}';
+        title =
+            '${riskLayerTitleOf(l10n, RiskLayers.titleKey(_layer))} ${_risk?.label ?? ''}';
         // 「留意」は白／うすい水色で凡例の地に埋もれるため、色見本だけ細い枠を付ける
         items.addAll([
           for (final s in RiskLayers.scale(_layer))
@@ -1119,17 +1164,19 @@ class _MapScreenState extends State<MapScreen> {
                       color: s.$1, border: Border.all(color: Colors.black26, width: 0.5)),
                 ),
                 const SizedBox(width: 2),
-                Text(s.$2, style: const TextStyle(fontSize: 9)),
+                Text(riskLevelLabelOf(l10n, s.$2),
+                    style: const TextStyle(fontSize: 9)),
               ]),
             ),
         ]);
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardTsunami:
       case MapLayerKind.hazardHightide:
-        title = HazardLayers.title(_layer);
+        title = hazardLayerTitleOf(l10n, HazardLayers.titleKey(_layer));
         items.addAll([for (final s in HazardLayers.depthScale) swatch(s.$1, s.$2)]);
       case MapLayerKind.hazardLandslide:
-        title = '${HazardLayers.title(_layer)}（警戒 / 特別警戒）';
+        title = l10n.mapLegendLandslide(
+            hazardLayerTitleOf(l10n, HazardLayers.titleKey(_layer)));
         items.addAll([
           for (final s in HazardLayers.landslideScale)
             Padding(
@@ -1138,43 +1185,61 @@ class _MapScreenState extends State<MapScreen> {
                 Container(width: 10, height: 10, color: s.$2),
                 Container(width: 10, height: 10, color: s.$3),
                 const SizedBox(width: 2),
-                Text(s.$1, style: const TextStyle(fontSize: 9)),
+                Text(landslideKindOf(l10n, s.$1),
+                    style: const TextStyle(fontSize: 9)),
               ]),
             ),
         ]);
       case MapLayerKind.shelters:
         if (_zoom < ShelterLayers.minZoom) {
-          title = '避難場所（拡大すると避難場所を表示）';
+          title = l10n.mapLegendShelterZoomIn;
         } else {
           final n = _visibleShelters().length;
-          title = '避難場所${_shelterHazard == null ? '' : '・${(_shelters?.hazards ?? ShelterLayers.defaultHazards)[_shelterHazard!]}'}（$n件${n > ShelterLayers.clusterThreshold ? '・まとめ表示' : ''}）';
+          final clustered = n > ShelterLayers.clusterThreshold;
+          if (_shelterHazard == null) {
+            title = clustered
+                ? l10n.mapLegendShelterCluster(n)
+                : l10n.mapLegendShelter(n);
+          } else {
+            final h = shelterHazardLabelOf(
+                l10n,
+                (_shelters?.hazards ??
+                    ShelterLayers.defaultHazards)[_shelterHazard!]);
+            title = clustered
+                ? l10n.mapLegendShelterHazardCluster(h, n)
+                : l10n.mapLegendShelterHazard(h, n);
+          }
         }
         items.addAll([
-          const Padding(
-            padding: EdgeInsets.only(right: 6),
+          Padding(
+            padding: const EdgeInsets.only(right: 6),
             child: Row(mainAxisSize: MainAxisSize.min, children: [
-              _ShelterPin(designated: false, size: 12),
-              SizedBox(width: 2),
-              Text('指定緊急避難場所', style: TextStyle(fontSize: 9)),
+              const _ShelterPin(designated: false, size: 12),
+              const SizedBox(width: 2),
+              Text(l10n.mapLegendShelterEmergency,
+                  style: const TextStyle(fontSize: 9)),
             ]),
           ),
-          const Padding(
-            padding: EdgeInsets.only(right: 6),
+          Padding(
+            padding: const EdgeInsets.only(right: 6),
             child: Row(mainAxisSize: MainAxisSize.min, children: [
-              _ShelterPin(designated: true, size: 12),
-              SizedBox(width: 2),
-              Text('二重枠=指定避難所', style: TextStyle(fontSize: 9)),
+              const _ShelterPin(designated: true, size: 12),
+              const SizedBox(width: 2),
+              Text(l10n.mapLegendShelterDesignated,
+                  style: const TextStyle(fontSize: 9)),
             ]),
           ),
         ]);
       case MapLayerKind.facilities:
         if (_zoom < FacilityLayers.minZoom) {
-          title = '防災拠点（拡大すると防災拠点を表示）';
+          title = l10n.mapLegendFacilityZoomIn;
         } else if (_facilities?.allUnavailable(_facilityPrefs) ?? false) {
-          title = '防災拠点（${FacilityLayers.noDataMessage}）';
+          title = l10n.mapLegendFacilityNoData(l10n.facilityNoData);
         } else {
           final n = _visibleFacilities().length;
-          title = '防災拠点（$n件${n > FacilityLayers.clusterThreshold ? '・まとめ表示' : ''}）';
+          title = n > FacilityLayers.clusterThreshold
+              ? l10n.mapLegendFacilityCluster(n)
+              : l10n.mapLegendFacility(n);
         }
         items.addAll([
           for (final k in FacilityLayers.kindKeys)
@@ -1185,7 +1250,8 @@ class _MapScreenState extends State<MapScreen> {
                 child: Row(mainAxisSize: MainAxisSize.min, children: [
                   _FacilityPin(kind: k, size: 12),
                   const SizedBox(width: 2),
-                  Text(FacilityLayers.shortLabel(k), style: const TextStyle(fontSize: 9)),
+                  Text(facilityKindShortOf(l10n, k),
+                      style: const TextStyle(fontSize: 9)),
                 ]),
               ),
             ),
@@ -1210,9 +1276,10 @@ class _MapScreenState extends State<MapScreen> {
           if (layerLoading) const Padding(
               padding: EdgeInsets.only(left: 6),
               child: SizedBox(width: 10, height: 10, child: CircularProgressIndicator(strokeWidth: 1.5))),
-          if (_layerFailed) const Padding(
-              padding: EdgeInsets.only(left: 6),
-              child: Text('取得できません', style: TextStyle(fontSize: 9, color: Colors.red))),
+          if (_layerFailed) Padding(
+              padding: const EdgeInsets.only(left: 6),
+              child: Text(l10n.mapLegendFetchFailed,
+                  style: const TextStyle(fontSize: 9, color: Colors.red))),
         ]),
         if (_layer == MapLayerKind.shelters &&
             _zoom >= ShelterLayers.minZoom &&
@@ -1224,7 +1291,7 @@ class _MapScreenState extends State<MapScreen> {
               child: Row(mainAxisSize: MainAxisSize.min, children: [
                 Icon(Icons.error_outline, size: 12, color: Colors.red[700]),
                 const SizedBox(width: 3),
-                Text('避難場所を取得できませんでした（タップで再試行）',
+                Text(l10n.mapShelterFetchFailed,
                     style: TextStyle(fontSize: 9, color: Colors.red[700], fontWeight: FontWeight.bold)),
               ]),
             ),
@@ -1239,13 +1306,15 @@ class _MapScreenState extends State<MapScreen> {
               child: Row(mainAxisSize: MainAxisSize.min, children: [
                 Icon(Icons.error_outline, size: 12, color: Colors.red[700]),
                 const SizedBox(width: 3),
-                Text('防災拠点を取得できませんでした（タップで再試行）',
+                Text(l10n.mapFacilityFetchFailed,
                     style: TextStyle(fontSize: 9, color: Colors.red[700], fontWeight: FontWeight.bold)),
               ]),
             ),
           ),
         Row(mainAxisSize: MainAxisSize.min, children: items),
-        if (!hazard) const Text('出典：気象庁', style: TextStyle(fontSize: 9, color: Colors.black54)),
+        if (!hazard)
+          const Text(JmaLayers.attribution,
+              style: TextStyle(fontSize: 9, color: Colors.black54)),
       ]),
     );
   }
@@ -1315,7 +1384,8 @@ class _MapScreenState extends State<MapScreen> {
                   width: 46,
                   height: 20,
                   child: Tooltip(
-                    message: '${r.name} 24時間 ${r.mm24h.toStringAsFixed(1)}mm',
+                    message: context.l10n
+                        .mapRainTooltip(r.name, r.mm24h.toStringAsFixed(1)),
                     triggerMode: TooltipTriggerMode.tap,
                     child: Container(
                       alignment: Alignment.center,
@@ -2237,9 +2307,10 @@ class _HazardAttribution extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       color: Colors.white70,
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: const [
-        Text(HazardLayers.attribution, style: TextStyle(fontSize: 10)),
-        Text(HazardLayers.disclaimer, style: TextStyle(fontSize: 9, color: Colors.black54)),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+        const Text(HazardLayers.attribution, style: TextStyle(fontSize: 10)),
+        Text(context.l10n.hazardDisclaimer,
+            style: const TextStyle(fontSize: 9, color: Colors.black54)),
       ]),
     );
   }
@@ -2255,9 +2326,10 @@ class _ShelterAttribution extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       color: Colors.white70,
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: const [
-        Text(ShelterLayers.attribution, style: TextStyle(fontSize: 10)),
-        Text(ShelterLayers.disclaimer, style: TextStyle(fontSize: 9, color: Colors.black54)),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+        const Text(ShelterLayers.attribution, style: TextStyle(fontSize: 10)),
+        Text(context.l10n.shelterDisclaimer,
+            style: const TextStyle(fontSize: 9, color: Colors.black54)),
       ]),
     );
   }
@@ -2334,8 +2406,8 @@ class _FacilityAttribution extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
         Text(notice?.isNotEmpty == true ? notice! : FacilityLayers.attribution,
             style: const TextStyle(fontSize: 10)),
-        const Text(FacilityLayers.disclaimer,
-            style: TextStyle(fontSize: 9, color: Colors.black54)),
+        Text(context.l10n.facilityDisclaimer,
+            style: const TextStyle(fontSize: 9, color: Colors.black54)),
       ]),
     );
   }

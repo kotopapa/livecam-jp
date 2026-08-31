@@ -992,6 +992,702 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String get settingsJmaDictionaryNote =>
       '警報名・注意報名・震度などの各言語訳は、気象庁「気象情報等に関する多言語辞書」に準拠しています。出典：気象庁ホームページ';
+
+  @override
+  String get hazardFloodTitle => '洪水浸水想定区域（想定最大規模）';
+
+  @override
+  String get hazardLandslideTitle => '土砂災害警戒区域';
+
+  @override
+  String get hazardTsunamiTitle => '津波浸水想定';
+
+  @override
+  String get hazardHightideTitle => '高潮浸水想定区域';
+
+  @override
+  String get hazardLandslideSteepSlope => '急傾斜地';
+
+  @override
+  String get hazardLandslideDebrisFlow => '土石流';
+
+  @override
+  String get hazardLandslideSlide => '地すべり';
+
+  @override
+  String get hazardDisclaimer =>
+      '最新かつ詳細な情報は各市町村のハザードマップをご確認ください。避難判断は自治体の避難情報に従ってください';
+
+  @override
+  String get facilityKindWater => '給水拠点・応急給水施設';
+
+  @override
+  String get facilityKindStock => '防災備蓄倉庫';
+
+  @override
+  String get facilityKindFireWater => '消防水利（消火栓・防火水槽）';
+
+  @override
+  String get facilityKindWaterShort => '給水拠点';
+
+  @override
+  String get facilityKindStockShort => '防災備蓄倉庫';
+
+  @override
+  String get facilityKindFireWaterShort => '消防水利';
+
+  @override
+  String get facilityDisclaimer => '公開している自治体のみ。最新の情報は各自治体にご確認ください';
+
+  @override
+  String get facilityNoData => 'この地域のデータはまだありません';
+
+  @override
+  String get shelterHazardFlood => '洪水';
+
+  @override
+  String get shelterHazardSediment => '土砂';
+
+  @override
+  String get shelterHazardHightide => '高潮';
+
+  @override
+  String get shelterHazardEarthquake => '地震';
+
+  @override
+  String get shelterHazardTsunami => '津波';
+
+  @override
+  String get shelterHazardFire => '火事';
+
+  @override
+  String get shelterHazardInlandFlood => '内水';
+
+  @override
+  String get shelterHazardVolcano => '火山';
+
+  @override
+  String get shelterDisclaimer => '最新かつ詳細な状況は各市町村にご確認ください';
+
+  @override
+  String get riskLandTitle => '土砂キキクル';
+
+  @override
+  String get riskInundTitle => '浸水キキクル';
+
+  @override
+  String get riskFloodTitle => '洪水キキクル';
+
+  @override
+  String get riskLandSubtitle => '土砂災害の危険度（1kmメッシュ・10分ごとに更新）';
+
+  @override
+  String get riskInundSubtitle => '浸水害の危険度（1kmメッシュ・10分ごとに更新）';
+
+  @override
+  String get riskFloodSubtitle => '洪水災害の危険度（河川ごと・10分ごとに更新）';
+
+  @override
+  String get riskLevelWatch => '留意';
+
+  @override
+  String get riskLevelCaution => '注意';
+
+  @override
+  String get riskLevelWarning => '警戒';
+
+  @override
+  String get riskLevelDanger => '危険';
+
+  @override
+  String get riskLevelCritical => '切迫';
+
+  @override
+  String get wbgtLevelDanger => '危険';
+
+  @override
+  String get wbgtLevelSevereWarning => '厳重警戒';
+
+  @override
+  String get wbgtLevelWarning => '警戒';
+
+  @override
+  String get wbgtLevelCaution => '注意';
+
+  @override
+  String get wbgtLevelSafe => 'ほぼ安全';
+
+  @override
+  String get heatAlertSpecial => '熱中症特別警戒';
+
+  @override
+  String get heatAlertSpecialPending => '熱中症特別警戒（判定）';
+
+  @override
+  String get heatAlertWarning => '熱中症警戒';
+
+  @override
+  String get heatAlertDisclaimer => '本情報は参考情報です。正式発表は熱中症予防情報サイト等をご確認ください';
+
+  @override
+  String get languageNameZhHans => '简体中文';
+
+  @override
+  String get languageNameZhHant => '繁體中文';
+
+  @override
+  String get languageNameKo => '한국어';
+
+  @override
+  String get languageNameVi => 'Tiếng Việt';
+
+  @override
+  String get mapLayerPanelSubtitle => '地図に1種類だけ重ねて表示します';
+
+  @override
+  String get mapLayerNone => '表示しない';
+
+  @override
+  String get mapLayerSectionWeather => '気象';
+
+  @override
+  String get mapLayerRainRadarTitle => '雨雲レーダー（現在）';
+
+  @override
+  String get mapLayerRainRadarSubtitle => '高解像度降水ナウキャスト・5分ごとに更新';
+
+  @override
+  String get mapLayerQuakesTitle => '震源';
+
+  @override
+  String get mapQuakePeriodDay => '24時間';
+
+  @override
+  String get mapQuakePeriodWeek => '7日';
+
+  @override
+  String get mapQuakePeriodMonth => '30日';
+
+  @override
+  String get mapLayerRain24hTitle => '24時間降水量';
+
+  @override
+  String get mapLayerRain24hSubtitle => '気象庁の解析雨量（面）＋拡大でアメダス観測値';
+
+  @override
+  String get mapLayerSectionHazard => 'ハザードマップ';
+
+  @override
+  String get mapHazardLandslideSubtitle => '急傾斜地・土石流・地すべり（黄=警戒区域 / 赤=特別警戒区域）';
+
+  @override
+  String get mapHazardDepthSubtitle => '想定される浸水深を色分け表示';
+
+  @override
+  String get mapShelterTitle => '避難場所';
+
+  @override
+  String get mapLayerShelterTitle => '避難場所（指定緊急避難場所・指定避難所）';
+
+  @override
+  String get mapLayerShelterSubtitle => '拡大すると表示。災害種別で絞り込みできます';
+
+  @override
+  String get mapFacilityTitle => '防災拠点';
+
+  @override
+  String get mapLayerFacilityTitle => '防災拠点（給水拠点・防災備蓄倉庫）';
+
+  @override
+  String get mapLayerFacilitySubtitle => '拡大すると表示。種別で絞り込みできます';
+
+  @override
+  String mapQuakeNearbyTitle(int count) {
+    return 'この付近の地震 $count件';
+  }
+
+  @override
+  String get mapQuakeUnknownPlace => '震源（詳細未発表）';
+
+  @override
+  String mapQuakeMaxIntensity(String value) {
+    return '最大震度$value';
+  }
+
+  @override
+  String mapNearbyCamerasTitle(String name) {
+    return '$name 周辺のカメラ';
+  }
+
+  @override
+  String get mapQuakeTapHint => 'タップで周辺のライブカメラ（50km以内）を表示';
+
+  @override
+  String get mapShelterNoticeTitle => '避難場所レイヤーについて';
+
+  @override
+  String get mapShelterNoticeBody =>
+      '・「指定緊急避難場所」は災害の危険から命を守るために逃げ込む場所、「指定避難所」は一定期間滞在する施設です（二重枠で表示）\n・指定緊急避難場所は災害種別ごとに指定されており、災害の種類によっては避難できない場合があります\n・市町村から提供された情報のため、最新でない場合や掲載されていない場所があります。正確な情報は当該市町村にご確認ください';
+
+  @override
+  String get mapShelterHazardAll => 'すべて';
+
+  @override
+  String get mapShelterDesignated => '指定避難所';
+
+  @override
+  String get mapShelterHazardsLabel => '対応する災害種別';
+
+  @override
+  String get mapOpenRoute => 'Googleマップで経路を見る';
+
+  @override
+  String get mapNearbyCamerasButton => '周辺のライブカメラ';
+
+  @override
+  String get mapFacilityNoticeTitle => '防災拠点レイヤーについて';
+
+  @override
+  String get mapFacilityNoticeBody =>
+      '・各自治体がオープンデータとして公開している「応急給水施設」「備蓄倉庫」「消防水利施設」の一覧を集めたものです。公開している自治体のみで、全国は網羅していません\n・消火栓・防火水槽は消防活動用の設備で、一般の方が使用するものではありません\n・給水拠点は災害時に開設されるもので、平常時に給水を受けられるとは限りません\n・更新時期は自治体ごとに異なります。正確な情報は各自治体にご確認ください';
+
+  @override
+  String mapFacilityOwner(String owner) {
+    return '提供：$owner';
+  }
+
+  @override
+  String get mapFacilityGeocodedNote => '住所から推定した位置です（実際の場所とずれる場合があります）';
+
+  @override
+  String get mapFacilitySourceDataset => '出典（データセット）';
+
+  @override
+  String mapNowcastSpanHours(String value) {
+    return '$value時間';
+  }
+
+  @override
+  String mapNowcastSpanMinutes(int value) {
+    return '$value分';
+  }
+
+  @override
+  String get mapNowcastNow => '現在（実況）';
+
+  @override
+  String get mapNowcastForecastHourly => '予報・1時間雨量';
+
+  @override
+  String get mapNowcastForecast => '予測';
+
+  @override
+  String mapNowcastAfter(String span, String kind) {
+    return '$span後（$kind）';
+  }
+
+  @override
+  String mapNowcastBefore(String span) {
+    return '$span前（実況）';
+  }
+
+  @override
+  String get mapNowcastBackToNow => '現在へ';
+
+  @override
+  String get mapNowcastNowMarker => '▲ 現在';
+
+  @override
+  String mapNowcastLast(String label) {
+    return '$label（6時間先）';
+  }
+
+  @override
+  String mapLegendRainRadar(String label) {
+    return '雨雲レーダー $label';
+  }
+
+  @override
+  String mapLegendRainRadarKind(String label, String kind) {
+    return '雨雲レーダー $label（$kind）';
+  }
+
+  @override
+  String get mapLegendRainWeak => '弱';
+
+  @override
+  String mapLegendQuakes(String period, int count) {
+    return '震源 $period（$count件）';
+  }
+
+  @override
+  String mapLegendIntensity(String value) {
+    return '震度$value';
+  }
+
+  @override
+  String get mapLegendIntensity6Up => '6弱〜';
+
+  @override
+  String mapLegendRain24h(String label) {
+    return '24時間降水量 $label';
+  }
+
+  @override
+  String mapLegendRain24hZoom(String label) {
+    return '24時間降水量 $label（拡大で観測値）';
+  }
+
+  @override
+  String mapLegendLandslide(String title) {
+    return '$title（警戒 / 特別警戒）';
+  }
+
+  @override
+  String get mapLegendShelterZoomIn => '避難場所（拡大すると避難場所を表示）';
+
+  @override
+  String mapLegendShelter(int count) {
+    return '避難場所（$count件）';
+  }
+
+  @override
+  String mapLegendShelterCluster(int count) {
+    return '避難場所（$count件・まとめ表示）';
+  }
+
+  @override
+  String mapLegendShelterHazard(String hazard, int count) {
+    return '避難場所・$hazard（$count件）';
+  }
+
+  @override
+  String mapLegendShelterHazardCluster(String hazard, int count) {
+    return '避難場所・$hazard（$count件・まとめ表示）';
+  }
+
+  @override
+  String get mapLegendShelterEmergency => '指定緊急避難場所';
+
+  @override
+  String get mapLegendShelterDesignated => '二重枠=指定避難所';
+
+  @override
+  String get mapLegendFacilityZoomIn => '防災拠点（拡大すると防災拠点を表示）';
+
+  @override
+  String mapLegendFacilityNoData(String message) {
+    return '防災拠点（$message）';
+  }
+
+  @override
+  String mapLegendFacility(int count) {
+    return '防災拠点（$count件）';
+  }
+
+  @override
+  String mapLegendFacilityCluster(int count) {
+    return '防災拠点（$count件・まとめ表示）';
+  }
+
+  @override
+  String get mapLegendFetchFailed => '取得できません';
+
+  @override
+  String get mapShelterFetchFailed => '避難場所を取得できませんでした（タップで再試行）';
+
+  @override
+  String get mapFacilityFetchFailed => '防災拠点を取得できませんでした（タップで再試行）';
+
+  @override
+  String mapRainTooltip(String name, String mm) {
+    return '$name 24時間 ${mm}mm';
+  }
+
+  @override
+  String get bosaiFetchFailedPull => '取得に失敗しました（引き下げてやり直せます）';
+
+  @override
+  String get bosaiTsunamiInfo => '津波情報';
+
+  @override
+  String get bosaiUnknownPlace => '不明';
+
+  @override
+  String bosaiFetchFailedDetail(String error) {
+    return '取得に失敗しました（$error）';
+  }
+
+  @override
+  String get bosaiTimeJustNow => 'たった今';
+
+  @override
+  String bosaiTimeMinutesAgo(int n) {
+    return '$n分前';
+  }
+
+  @override
+  String bosaiTimeHoursAgo(int n) {
+    return '$n時間前';
+  }
+
+  @override
+  String bosaiTimeMonthDayHour(int month, int day, int hour) {
+    return '$month月$day日 $hour時頃';
+  }
+
+  @override
+  String bosaiQuakeIntensityTitle(String place) {
+    return '$placeの震度';
+  }
+
+  @override
+  String bosaiNearbyCamerasTitle(String place) {
+    return '$place周辺のカメラ';
+  }
+
+  @override
+  String get bosaiQuakeEmpty => '直近72時間の地震情報はありません';
+
+  @override
+  String bosaiQuakeAsOf(String time) {
+    return '（$time時点・新しい順）';
+  }
+
+  @override
+  String bosaiQuakeNote(String at) {
+    return '出典：気象庁 地震情報（直近72時間）$at。タップすると揺れた市区町村のライブカメラ一覧（市区町村別震度が無い場合は震源周辺）を表示します。';
+  }
+
+  @override
+  String get bosaiBadgeTsunami => '津波';
+
+  @override
+  String bosaiBadgeIntensity(String value) {
+    return '震度\n$value';
+  }
+
+  @override
+  String bosaiMuniObserved(int count) {
+    return '$count市区町村で観測';
+  }
+
+  @override
+  String bosaiWarningStaleAt(String time) {
+    return '最新の情報を取得できませんでした（$time 時点の情報を表示中）';
+  }
+
+  @override
+  String bosaiWarningAsOf(String time) {
+    return '$time 時点';
+  }
+
+  @override
+  String get bosaiHeatOffSeason => '熱中症警戒情報の運用期間外です（毎年4月下旬〜10月下旬に発表されます）';
+
+  @override
+  String bosaiHeatReportAt(int month, int day, String hour) {
+    return '（$month/$day $hour時発表）';
+  }
+
+  @override
+  String get bosaiHeatTapHint => 'タップするとその都道府県のカメラ一覧を表示します。';
+
+  @override
+  String get bosaiHeatNone => '現在、熱中症警戒情報は発表されていません';
+
+  @override
+  String get bosaiHeatToday => '今日';
+
+  @override
+  String get bosaiHeatTomorrow => '明日';
+
+  @override
+  String bosaiHeatPrefCamerasTitle(String pref) {
+    return '$prefのカメラ（熱中症警戒情報）';
+  }
+
+  @override
+  String get bosaiWbgtCardTitle => '近くの地点の暑さ指数（WBGT）';
+
+  @override
+  String get bosaiWbgtUnavailable => '取得できませんでした';
+
+  @override
+  String bosaiApproxDistance(String value) {
+    return '約$value';
+  }
+
+  @override
+  String get bosaiWbgtNow => '現在';
+
+  @override
+  String get bosaiWbgtNoCurrent => '実況値なし';
+
+  @override
+  String bosaiWbgtLevelAt(String level, String time) {
+    return '$level（$time）';
+  }
+
+  @override
+  String get bosaiWbgtForecast => '予測';
+
+  @override
+  String bosaiWbgtHour(int hour) {
+    return '$hour時';
+  }
+
+  @override
+  String bosaiWbgtNextDayHour(int hour) {
+    return '翌$hour時';
+  }
+
+  @override
+  String bosaiWbgtDateHour(int month, int day, int hour) {
+    return '$month/$day $hour時';
+  }
+
+  @override
+  String get bosaiQuakeMuniNote =>
+      '出典：気象庁 地震情報（震度の大きい順）。タップするとその市区町村のカメラ一覧を表示します。カメラがない市区町村は震源周辺のカメラを表示します。';
+
+  @override
+  String get bosaiEpicenterNearby => '震源周辺のカメラ（距離順）';
+
+  @override
+  String bosaiMuniCodeFallback(String code) {
+    return '市区町村 $code';
+  }
+
+  @override
+  String bosaiPrefEpicenterFallback(String pref) {
+    return '$pref・震源周辺のカメラを表示します';
+  }
+
+  @override
+  String bosaiMuniIntensityCamerasTitle(String name, String intensity) {
+    return '$nameのカメラ（震度$intensity）';
+  }
+
+  @override
+  String bosaiLiveOnly(int count) {
+    return 'LIVEのみ（$count）';
+  }
+
+  @override
+  String get bosaiMuniFallbackNote => 'この市区町村に対応するカメラがないため、都道府県内の全カメラを表示しています';
+
+  @override
+  String get bosaiPrefNoCameras => 'この都道府県のカメラがありません';
+
+  @override
+  String get bosaiNoLiveCameras => 'LIVE配信のカメラがありません';
+
+  @override
+  String get bosaiNoCamerasWithin50km => '50km以内にカメラがありません';
+
+  @override
+  String get tipTitle => '開発者を応援';
+
+  @override
+  String get tipIntro =>
+      'このアプリは個人で開発・運営しています。カメラの調査・追加や監視サーバーの維持、気象データの対応など、継続的なアップデートの励みになります。支援は任意で、機能の違いはありません。';
+
+  @override
+  String get tipCoffeeTitle => '缶コーヒーでひと息';
+
+  @override
+  String get tipCoffeeSubtitle => '開発の合間に飲む缶コーヒー代をプレゼント';
+
+  @override
+  String get tipSweetsTitle => 'スイーツで糖分補給';
+
+  @override
+  String get tipSweetsSubtitle => '集中コーディング用の甘いお菓子＆カフェ代を支援';
+
+  @override
+  String get tipLunchTitle => 'ランチで開発ブースト';
+
+  @override
+  String get tipLunchSubtitle => '次の新機能開発に向けた栄養満点ランチをごちそう';
+
+  @override
+  String get tipDevToolsTitle => '開発ツール費を応援';
+
+  @override
+  String get tipDevToolsSubtitle => 'カメラ調査やサーバー監視に使うサービス費を支援';
+
+  @override
+  String get tipPreparing => '支援メニューは準備中です。しばらくしてからお試しください。';
+
+  @override
+  String get tipUnavailable => 'このデバイスではアプリ内課金を利用できません。';
+
+  @override
+  String get tipPurchaseStartFailed => '購入を開始できませんでした';
+
+  @override
+  String get tipThanks => 'ご支援ありがとうございます！開発の励みになります。';
+
+  @override
+  String tipPurchaseFailed(String error) {
+    return '購入を完了できませんでした（$error）';
+  }
+
+  @override
+  String get tipUnknownError => '不明なエラー';
+
+  @override
+  String get tipNoticeTitle => '購入前にご確認ください';
+
+  @override
+  String get tipNoticeBody => '支援はApp Storeのアプリ内課金で処理されます（返金はAppleの規定に従います）。';
+
+  @override
+  String get tipEula => 'EULA（Apple標準使用許諾契約）';
+
+  @override
+  String settingsDiagCrashRecords(int count, String name) {
+    return '記録: $count件\n最新: $name';
+  }
+
+  @override
+  String get settingsDiagKindCrash => 'クラッシュ';
+
+  @override
+  String get settingsDiagKindHang => 'ハング';
+
+  @override
+  String get settingsDiagKindCpu => 'CPU異常';
+
+  @override
+  String get settingsDiagKindDiskWrite => 'ディスク書込異常';
+
+  @override
+  String settingsDiagCrashKinds(String kinds) {
+    return '種別: $kinds';
+  }
+
+  @override
+  String settingsDiagReadError(String error) {
+    return '読み取りエラー: $error';
+  }
+
+  @override
+  String get settingsDiagFetchFailed => '取得失敗';
+
+  @override
+  String get settingsDiagNotAcquired => '未取得(null)';
+
+  @override
+  String settingsDiagAcquired(String prefix) {
+    return '取得済み($prefix…)';
+  }
+
+  @override
+  String settingsDiagError(String error) {
+    return 'エラー: $error';
+  }
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -1996,4 +2692,718 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String get settingsJmaDictionaryNote =>
       'けいほうや しんどの ことばの ほんやくは、気象庁（きしょうちょう）の 「多言語辞書（たげんごじしょ）」を つかって います。出典（しゅってん）：気象庁ホームページ';
+
+  @override
+  String get hazardFloodTitle => 'こうずいで 水（みず）が くる ところ（いちばん 大（おお）きい ばあい）';
+
+  @override
+  String get hazardLandslideTitle => 'どしゃくずれが おきそうな ところ';
+
+  @override
+  String get hazardTsunamiTitle => 'つなみで 水（みず）が くる ところ';
+
+  @override
+  String get hazardHightideTitle => 'たかしおで 水（みず）が くる ところ';
+
+  @override
+  String get hazardLandslideSteepSlope => 'きゅうな がけ';
+
+  @override
+  String get hazardLandslideDebrisFlow => 'どせきりゅう（土（つち）と 石（いし）が ながれる）';
+
+  @override
+  String get hazardLandslideSlide => 'じすべり（じめんが すべる）';
+
+  @override
+  String get hazardDisclaimer =>
+      'くわしいことは 住（す）んでいる 市（し）や 町（まち）の ハザードマップを 見（み）て ください。にげるかどうかは 市（し）や 町（まち）の おしらせに したがって ください';
+
+  @override
+  String get facilityKindWater => '水（みず）を もらえる ところ';
+
+  @override
+  String get facilityKindStock => 'ひじょうよう ひんの そうこ';
+
+  @override
+  String get facilityKindFireWater => 'しょうぼうの 水（みず）（しょうかせん・ぼうかすいそう）';
+
+  @override
+  String get facilityKindWaterShort => '水（みず）を もらえる ところ';
+
+  @override
+  String get facilityKindStockShort => 'ひんの そうこ';
+
+  @override
+  String get facilityKindFireWaterShort => 'しょうぼうの 水（みず）';
+
+  @override
+  String get facilityDisclaimer =>
+      'データを 出（だ）している 市（し）や 町（まち）だけです。あたらしい ことは 市（し）や 町（まち）に きいて ください';
+
+  @override
+  String get facilityNoData => 'この ちいきの データは まだ ありません';
+
+  @override
+  String get shelterHazardFlood => 'こうずい';
+
+  @override
+  String get shelterHazardSediment => 'どしゃくずれ';
+
+  @override
+  String get shelterHazardHightide => 'たかしお';
+
+  @override
+  String get shelterHazardEarthquake => 'じしん';
+
+  @override
+  String get shelterHazardTsunami => 'つなみ';
+
+  @override
+  String get shelterHazardFire => 'かじ';
+
+  @override
+  String get shelterHazardInlandFlood => 'ないすい（まちの 中（なか）の みずびたし）';
+
+  @override
+  String get shelterHazardVolcano => 'かざん';
+
+  @override
+  String get shelterDisclaimer => 'くわしいことは 市（し）や 町（まち）に きいて ください';
+
+  @override
+  String get riskLandTitle => 'どしゃくずれの きけんど（キキクル）';
+
+  @override
+  String get riskInundTitle => 'みずびたしの きけんど（キキクル）';
+
+  @override
+  String get riskFloodTitle => 'こうずいの きけんど（キキクル）';
+
+  @override
+  String get riskLandSubtitle => 'どしゃくずれの きけんど（1kmごと・10ぷんごとに あたらしくなる）';
+
+  @override
+  String get riskInundSubtitle => 'みずびたしの きけんど（1kmごと・10ぷんごとに あたらしくなる）';
+
+  @override
+  String get riskFloodSubtitle => 'こうずいの きけんど（かわごと・10ぷんごとに あたらしくなる）';
+
+  @override
+  String get riskLevelWatch => '気（き）を つける';
+
+  @override
+  String get riskLevelCaution => 'ちゅうい';
+
+  @override
+  String get riskLevelWarning => 'けいかい';
+
+  @override
+  String get riskLevelDanger => 'きけん';
+
+  @override
+  String get riskLevelCritical => 'とても あぶない';
+
+  @override
+  String get wbgtLevelDanger => 'きけん';
+
+  @override
+  String get wbgtLevelSevereWarning => 'とても 気（き）を つける';
+
+  @override
+  String get wbgtLevelWarning => '気（き）を つける';
+
+  @override
+  String get wbgtLevelCaution => 'ちゅうい';
+
+  @override
+  String get wbgtLevelSafe => 'だいたい あんぜん';
+
+  @override
+  String get heatAlertSpecial => 'ねっちゅうしょう とくべつ けいかい';
+
+  @override
+  String get heatAlertSpecialPending => 'ねっちゅうしょう とくべつ けいかい（きめる まえ）';
+
+  @override
+  String get heatAlertWarning => 'ねっちゅうしょう けいかい';
+
+  @override
+  String get heatAlertDisclaimer =>
+      'これは さんこうの じょうほうです。ただしい おしらせは ねっちゅうしょう よぼう じょうほう サイトを 見（み）て ください';
+
+  @override
+  String get languageNameZhHans => '简体中文';
+
+  @override
+  String get languageNameZhHant => '繁體中文';
+
+  @override
+  String get languageNameKo => '한국어';
+
+  @override
+  String get languageNameVi => 'Tiếng Việt';
+
+  @override
+  String get mapLayerPanelSubtitle => '地図（ちず）に かさねられるのは 1つだけです';
+
+  @override
+  String get mapLayerNone => 'なにも 出（だ）さない';
+
+  @override
+  String get mapLayerSectionWeather => '天気（てんき）';
+
+  @override
+  String get mapLayerRainRadarTitle => '雨（あめ）のレーダー（いま）';
+
+  @override
+  String get mapLayerRainRadarSubtitle =>
+      'くわしい 雨（あめ）の 予報（よほう）。5分（ふん）ごとに 新（あたら）しくなります';
+
+  @override
+  String get mapLayerQuakesTitle => '地震（じしん）が おきた ところ';
+
+  @override
+  String get mapQuakePeriodDay => '24時間（じかん）';
+
+  @override
+  String get mapQuakePeriodWeek => '7日間（なのかかん）';
+
+  @override
+  String get mapQuakePeriodMonth => '30日間（さんじゅうにちかん）';
+
+  @override
+  String get mapLayerRain24hTitle => '24時間（じかん）に ふった 雨（あめ）の 量（りょう）';
+
+  @override
+  String get mapLayerRain24hSubtitle =>
+      '気象庁（きしょうちょう）が 出（だ）した 雨（あめ）の 量（りょう）。大（おお）きくすると 観測（かんそく）した 数字（すうじ）も 出（で）ます';
+
+  @override
+  String get mapLayerSectionHazard => 'ハザードマップ（あぶない ところの 地図（ちず））';
+
+  @override
+  String get mapHazardLandslideSubtitle =>
+      'がけ・土石流（どせきりゅう）・地（じ）すべり（黄色（きいろ）＝あぶない ところ／赤（あか）＝とても あぶない ところ）';
+
+  @override
+  String get mapHazardDepthSubtitle =>
+      '水（みず）が どのくらい 深（ふか）く なるかを 色（いろ）で 見（み）せます';
+
+  @override
+  String get mapShelterTitle => 'にげる ところ';
+
+  @override
+  String get mapLayerShelterTitle => 'にげる ところ（すぐに にげる ところ・しばらく くらす ところ）';
+
+  @override
+  String get mapLayerShelterSubtitle =>
+      '地図（ちず）を 大（おお）きくすると 出（で）ます。災害（さいがい）の 種類（しゅるい）で えらべます';
+
+  @override
+  String get mapFacilityTitle => '防災（ぼうさい）の 施設（しせつ）';
+
+  @override
+  String get mapLayerFacilityTitle =>
+      '防災（ぼうさい）の 施設（しせつ）（水（みず）を くばる ところ・備蓄倉庫（びちくそうこ））';
+
+  @override
+  String get mapLayerFacilitySubtitle =>
+      '地図（ちず）を 大（おお）きくすると 出（で）ます。種類（しゅるい）で えらべます';
+
+  @override
+  String mapQuakeNearbyTitle(int count) {
+    return 'この 近（ちか）くの 地震（じしん） $count件（けん）';
+  }
+
+  @override
+  String get mapQuakeUnknownPlace =>
+      '地震（じしん）が おきた ところ（くわしいことは まだ 発表（はっぴょう）されていません）';
+
+  @override
+  String mapQuakeMaxIntensity(String value) {
+    return 'いちばん 大（おお）きい ゆれ $value';
+  }
+
+  @override
+  String mapNearbyCamerasTitle(String name) {
+    return '$nameの 近（ちか）くの カメラ';
+  }
+
+  @override
+  String get mapQuakeTapHint => 'さわると 近（ちか）く（50km いない）の カメラが 出（で）ます';
+
+  @override
+  String get mapShelterNoticeTitle => 'にげる ところの 表示（ひょうじ）について';
+
+  @override
+  String get mapShelterNoticeBody =>
+      '・「指定緊急避難場所（していきんきゅうひなんばしょ）」は 災害（さいがい）から 命（いのち）を まもるために すぐ にげる ところです。「指定避難所（していひなんじょ）」は しばらく くらす ところです（二重（にじゅう）の わくで 見（み）せます）\n・指定緊急避難場所（していきんきゅうひなんばしょ）は 災害（さいがい）の 種類（しゅるい）ごとに きめられています。災害（さいがい）の 種類（しゅるい）に よっては にげられない ことが あります\n・市（し）や 町（まち）から もらった 情報（じょうほう）です。古（ふる）い ことや のっていない ところが あります。くわしいことは その 市（し）や 町（まち）に 聞（き）いてください';
+
+  @override
+  String get mapShelterHazardAll => 'ぜんぶ';
+
+  @override
+  String get mapShelterDesignated => 'くらす ところ';
+
+  @override
+  String get mapShelterHazardsLabel => 'にげられる 災害（さいがい）の 種類（しゅるい）';
+
+  @override
+  String get mapOpenRoute => 'Googleマップで 道（みち）を 見（み）る';
+
+  @override
+  String get mapNearbyCamerasButton => '近（ちか）くの カメラ';
+
+  @override
+  String get mapFacilityNoticeTitle => '防災（ぼうさい）の 施設（しせつ）の 表示（ひょうじ）について';
+
+  @override
+  String get mapFacilityNoticeBody =>
+      '・市（し）や 町（まち）が 公開（こうかい）している「水（みず）を くばる 施設（しせつ）」「備蓄倉庫（びちくそうこ）」「消防（しょうぼう）の 水（みず）の 施設（しせつ）」を あつめた ものです。公開（こうかい）している 市（し）や 町（まち）だけで、日本（にほん）ぜんぶでは ありません\n・消火栓（しょうかせん）や 防火水槽（ぼうかすいそう）は 消防（しょうぼう）が つかう ものです。ふつうの 人（ひと）は つかえません\n・水（みず）を くばる ところは 災害（さいがい）の ときに ひらきます。ふだんは 水（みず）を もらえない ことが あります\n・新（あたら）しくする 時期（じき）は 市（し）や 町（まち）に よって ちがいます。くわしいことは その 市（し）や 町（まち）に 聞（き）いてください';
+
+  @override
+  String mapFacilityOwner(String owner) {
+    return '出（だ）している ところ：$owner';
+  }
+
+  @override
+  String get mapFacilityGeocodedNote =>
+      '住所（じゅうしょ）から おおよそで 出（だ）した 場所（ばしょ）です。本当（ほんとう）の 場所（ばしょ）と ちがう ことが あります';
+
+  @override
+  String get mapFacilitySourceDataset => '出（で）どころ（データ）';
+
+  @override
+  String mapNowcastSpanHours(String value) {
+    return '$value時間（じかん）';
+  }
+
+  @override
+  String mapNowcastSpanMinutes(int value) {
+    return '$value分（ふん）';
+  }
+
+  @override
+  String get mapNowcastNow => 'いま（じっさいの ようす）';
+
+  @override
+  String get mapNowcastForecastHourly => '予報（よほう）・1時間（じかん）の 雨（あめ）の 量（りょう）';
+
+  @override
+  String get mapNowcastForecast => 'よそく';
+
+  @override
+  String mapNowcastAfter(String span, String kind) {
+    return '$spanあと（$kind）';
+  }
+
+  @override
+  String mapNowcastBefore(String span) {
+    return '$spanまえ（じっさいの ようす）';
+  }
+
+  @override
+  String get mapNowcastBackToNow => 'いまに もどる';
+
+  @override
+  String get mapNowcastNowMarker => '▲ いま';
+
+  @override
+  String mapNowcastLast(String label) {
+    return '$label（6時間（じかん） さき）';
+  }
+
+  @override
+  String mapLegendRainRadar(String label) {
+    return '雨（あめ）のレーダー $label';
+  }
+
+  @override
+  String mapLegendRainRadarKind(String label, String kind) {
+    return '雨（あめ）のレーダー $label（$kind）';
+  }
+
+  @override
+  String get mapLegendRainWeak => 'よわい';
+
+  @override
+  String mapLegendQuakes(String period, int count) {
+    return '地震（じしん）が おきた ところ $period（$count件（けん））';
+  }
+
+  @override
+  String mapLegendIntensity(String value) {
+    return 'ゆれ $value';
+  }
+
+  @override
+  String get mapLegendIntensity6Up => '6弱（じゃく）から うえ';
+
+  @override
+  String mapLegendRain24h(String label) {
+    return '24時間（じかん）の 雨（あめ）の 量（りょう） $label';
+  }
+
+  @override
+  String mapLegendRain24hZoom(String label) {
+    return '24時間（じかん）の 雨（あめ）の 量（りょう） $label（大（おお）きくすると 数字（すうじ）が 出（で）ます）';
+  }
+
+  @override
+  String mapLegendLandslide(String title) {
+    return '$title（あぶない／とても あぶない）';
+  }
+
+  @override
+  String get mapLegendShelterZoomIn => 'にげる ところ（地図（ちず）を 大（おお）きくすると 出（で）ます）';
+
+  @override
+  String mapLegendShelter(int count) {
+    return 'にげる ところ（$count件（けん））';
+  }
+
+  @override
+  String mapLegendShelterCluster(int count) {
+    return 'にげる ところ（$count件（けん）・まとめて 見（み）せています）';
+  }
+
+  @override
+  String mapLegendShelterHazard(String hazard, int count) {
+    return 'にげる ところ・$hazard（$count件（けん））';
+  }
+
+  @override
+  String mapLegendShelterHazardCluster(String hazard, int count) {
+    return 'にげる ところ・$hazard（$count件（けん）・まとめて 見（み）せています）';
+  }
+
+  @override
+  String get mapLegendShelterEmergency => 'すぐに にげる ところ';
+
+  @override
+  String get mapLegendShelterDesignated => '二重（にじゅう）の わく＝しばらく くらす ところ';
+
+  @override
+  String get mapLegendFacilityZoomIn =>
+      '防災（ぼうさい）の 施設（しせつ）（地図（ちず）を 大（おお）きくすると 出（で）ます）';
+
+  @override
+  String mapLegendFacilityNoData(String message) {
+    return '防災（ぼうさい）の 施設（しせつ）（$message）';
+  }
+
+  @override
+  String mapLegendFacility(int count) {
+    return '防災（ぼうさい）の 施設（しせつ）（$count件（けん））';
+  }
+
+  @override
+  String mapLegendFacilityCluster(int count) {
+    return '防災（ぼうさい）の 施設（しせつ）（$count件（けん）・まとめて 見（み）せています）';
+  }
+
+  @override
+  String get mapLegendFetchFailed => 'とれません';
+
+  @override
+  String get mapShelterFetchFailed =>
+      'にげる ところの 情報（じょうほう）が とれませんでした（さわると もう一度（いちど））';
+
+  @override
+  String get mapFacilityFetchFailed =>
+      '防災（ぼうさい）の 施設（しせつ）の 情報（じょうほう）が とれませんでした（さわると もう一度（いちど））';
+
+  @override
+  String mapRainTooltip(String name, String mm) {
+    return '$name 24時間（じかん） ${mm}mm';
+  }
+
+  @override
+  String get bosaiFetchFailedPull => 'とれませんでした（下（した）に ひっぱると もう いちど ためせます）';
+
+  @override
+  String get bosaiTsunamiInfo => 'つなみの おしらせ';
+
+  @override
+  String get bosaiUnknownPlace => 'わかりません';
+
+  @override
+  String bosaiFetchFailedDetail(String error) {
+    return 'とれませんでした（$error）';
+  }
+
+  @override
+  String get bosaiTimeJustNow => 'いま';
+
+  @override
+  String bosaiTimeMinutesAgo(int n) {
+    return '$nふん まえ';
+  }
+
+  @override
+  String bosaiTimeHoursAgo(int n) {
+    return '$nじかん まえ';
+  }
+
+  @override
+  String bosaiTimeMonthDayHour(int month, int day, int hour) {
+    return '$month月$day日 $hourじ ごろ';
+  }
+
+  @override
+  String bosaiQuakeIntensityTitle(String place) {
+    return '$placeの ゆれの つよさ（震度／しんど）';
+  }
+
+  @override
+  String bosaiNearbyCamerasTitle(String place) {
+    return '$placeの ちかくの カメラ';
+  }
+
+  @override
+  String get bosaiQuakeEmpty => 'この 72じかんに じしんの おしらせは ありません';
+
+  @override
+  String bosaiQuakeAsOf(String time) {
+    return '（$timeの じょうほう・あたらしい じゅん）';
+  }
+
+  @override
+  String bosaiQuakeNote(String at) {
+    return '出典（しゅってん）：気象庁 じしんの おしらせ（この 72じかん）$at。おすと ゆれた 市（し）・町（まち）の ライブカメラの いちらんが 出（で）ます。市（し）・町（まち）ごとの しんどが ない ときは 震源（しんげん）の ちかくの カメラを 出（だ）します。';
+  }
+
+  @override
+  String get bosaiBadgeTsunami => 'つなみ';
+
+  @override
+  String bosaiBadgeIntensity(String value) {
+    return 'しんど\n$value';
+  }
+
+  @override
+  String bosaiMuniObserved(int count) {
+    return '$countの 市（し）・町（まち）で かんそく';
+  }
+
+  @override
+  String bosaiWarningStaleAt(String time) {
+    return 'あたらしい じょうほうが とれませんでした（$timeの じょうほうを 出（だ）して います）';
+  }
+
+  @override
+  String bosaiWarningAsOf(String time) {
+    return '$timeの じょうほう';
+  }
+
+  @override
+  String get bosaiHeatOffSeason =>
+      'いまは ねっちゅうしょうの おしらせを 出（だ）す きかんでは ありません（まいとし 4月の おわりから 10月の おわりまで 出（で）ます）';
+
+  @override
+  String bosaiHeatReportAt(int month, int day, String hour) {
+    return '（$month月$day日 $hourじに 出（で）ました）';
+  }
+
+  @override
+  String get bosaiHeatTapHint => 'おすと その 県（けん）の カメラの いちらんが 出（で）ます。';
+
+  @override
+  String get bosaiHeatNone => 'いま、ねっちゅうしょうの けいかいの おしらせは 出（で）て いません';
+
+  @override
+  String get bosaiHeatToday => 'きょう';
+
+  @override
+  String get bosaiHeatTomorrow => 'あした';
+
+  @override
+  String bosaiHeatPrefCamerasTitle(String pref) {
+    return '$prefの カメラ（ねっちゅうしょう けいかい）';
+  }
+
+  @override
+  String get bosaiWbgtCardTitle => 'ちかくの ばしょの あつさの ゆびすう（WBGT）';
+
+  @override
+  String get bosaiWbgtUnavailable => 'とれませんでした';
+
+  @override
+  String bosaiApproxDistance(String value) {
+    return 'だいたい $value';
+  }
+
+  @override
+  String get bosaiWbgtNow => 'いま';
+
+  @override
+  String get bosaiWbgtNoCurrent => 'いまの あたいは ありません';
+
+  @override
+  String bosaiWbgtLevelAt(String level, String time) {
+    return '$level（$time）';
+  }
+
+  @override
+  String get bosaiWbgtForecast => 'よそく';
+
+  @override
+  String bosaiWbgtHour(int hour) {
+    return '$hourじ';
+  }
+
+  @override
+  String bosaiWbgtNextDayHour(int hour) {
+    return 'つぎの日（ひ）の $hourじ';
+  }
+
+  @override
+  String bosaiWbgtDateHour(int month, int day, int hour) {
+    return '$month月$day日 $hourじ';
+  }
+
+  @override
+  String get bosaiQuakeMuniNote =>
+      '出典（しゅってん）：気象庁 じしんの おしらせ（ゆれが つよい じゅん）。おすと その 市（し）・町（まち）の カメラの いちらんが 出（で）ます。カメラが ない ときは 震源（しんげん）の ちかくの カメラを 出（だ）します。';
+
+  @override
+  String get bosaiEpicenterNearby => '震源（しんげん）の ちかくの カメラ（ちかい じゅん）';
+
+  @override
+  String bosaiMuniCodeFallback(String code) {
+    return '市（し）・町（まち） $code';
+  }
+
+  @override
+  String bosaiPrefEpicenterFallback(String pref) {
+    return '$pref・震源（しんげん）の ちかくの カメラを 出（だ）します';
+  }
+
+  @override
+  String bosaiMuniIntensityCamerasTitle(String name, String intensity) {
+    return '$nameの カメラ（しんど $intensity）';
+  }
+
+  @override
+  String bosaiLiveOnly(int count) {
+    return 'ライブだけ（$count）';
+  }
+
+  @override
+  String get bosaiMuniFallbackNote =>
+      'この 市（し）・町（まち）の カメラが ないので、県（けん）ぜんぶの カメラを 出（だ）して います';
+
+  @override
+  String get bosaiPrefNoCameras => 'この 県（けん）には カメラが ありません';
+
+  @override
+  String get bosaiNoLiveCameras => 'ライブの カメラは ありません';
+
+  @override
+  String get bosaiNoCamerasWithin50km => '50kmの なかに カメラは ありません';
+
+  @override
+  String get tipTitle => 'つくった 人（ひと）を おうえん';
+
+  @override
+  String get tipIntro =>
+      'この アプリは 1人（ひとり）で つくって、うごかして います。カメラを さがして ふやす こと、サーバーを うごかしつづける こと、天気（てんき）の データに たいおうする ことの ちからに なります。おうえんは じゆうです。おうえんしても きのうは かわりません。';
+
+  @override
+  String get tipCoffeeTitle => 'かんコーヒーで ひとやすみ';
+
+  @override
+  String get tipCoffeeSubtitle => 'かいはつの あいまに のむ かんコーヒーを おくります';
+
+  @override
+  String get tipSweetsTitle => 'あまい もので げんきを チャージ';
+
+  @override
+  String get tipSweetsSubtitle => 'しゅうちゅうして つくる ときの おかしと カフェの おかねを たすけます';
+
+  @override
+  String get tipLunchTitle => 'ひるごはんで かいはつを パワーアップ';
+
+  @override
+  String get tipLunchSubtitle => 'つぎの あたらしい きのうの ために、えいようの ある ひるごはんを ごちそうします';
+
+  @override
+  String get tipDevToolsTitle => 'かいはつの どうぐの おかねを おうえん';
+
+  @override
+  String get tipDevToolsSubtitle =>
+      'カメラを さがす ことや サーバーを みまもる ことに つかう サービスの おかねを たすけます';
+
+  @override
+  String get tipPreparing => 'おうえんの メニューは まだ じゅんびちゅうです。あとで もういちど ためして ください。';
+
+  @override
+  String get tipUnavailable => 'この きかいでは アプリの なかで おかねを はらう ことが できません。';
+
+  @override
+  String get tipPurchaseStartFailed => 'かう てつづきを はじめられませんでした';
+
+  @override
+  String get tipThanks => 'おうえん ありがとう ございます！かいはつの ちからに なります。';
+
+  @override
+  String tipPurchaseFailed(String error) {
+    return 'かう てつづきを おわらせられませんでした（$error）';
+  }
+
+  @override
+  String get tipUnknownError => 'わからない エラー';
+
+  @override
+  String get tipNoticeTitle => 'かう まえに かくにん して ください';
+
+  @override
+  String get tipNoticeBody =>
+      'おうえんの おかねは App Storeの アプリない かきん（アプリの なかで はらう しくみ）で しはらいます。はらいもどしは Appleの きまりに したがいます。';
+
+  @override
+  String get tipEula => 'EULA（Appleの つかいかたの やくそく）';
+
+  @override
+  String settingsDiagCrashRecords(int count, String name) {
+    return 'きろく: $countけん\nいちばん あたらしい: $name';
+  }
+
+  @override
+  String get settingsDiagKindCrash => 'きゅうに とまった（クラッシュ）';
+
+  @override
+  String get settingsDiagKindHang => 'うごかなく なった（ハング）';
+
+  @override
+  String get settingsDiagKindCpu => 'CPU（けいさんする ぶひん）の いじょう';
+
+  @override
+  String get settingsDiagKindDiskWrite => 'ほぞんの いじょう（ディスクへの 書（か）きこみ）';
+
+  @override
+  String settingsDiagCrashKinds(String kinds) {
+    return 'しゅるい: $kinds';
+  }
+
+  @override
+  String settingsDiagReadError(String error) {
+    return 'よみとりの エラー: $error';
+  }
+
+  @override
+  String get settingsDiagFetchFailed => 'とれませんでした';
+
+  @override
+  String get settingsDiagNotAcquired => 'まだ ありません（null）';
+
+  @override
+  String settingsDiagAcquired(String prefix) {
+    return 'とれました（$prefix…）';
+  }
+
+  @override
+  String settingsDiagError(String error) {
+    return 'エラー: $error';
+  }
 }

@@ -3,6 +3,12 @@
 #   ja       … 日本語
 #   ja_Hira  … やさしい日本語（BCP47 の ja-Hira。漢字を減らした平易な日本語）
 #   en       … English
+#   zh_Hans  … 简体中文（中国語 簡体字）
+#   zh_Hant  … 繁體中文（中国語 繁体字）
+#   ko       … 한국어
+#   vi       … Tiếng Việt
+# 防災用語は気象庁「気象情報等に関する多言語辞書」の該当言語列から転記する
+# （https://www.data.jma.go.jp/developer/multilingual.html ・自由訳しないこと）
 arb-dir: lib/l10n
 template-arb-file: app_ja.arb
 output-localization-file: app_localizations.dart

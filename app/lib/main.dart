@@ -192,16 +192,12 @@ void _hookNotificationTaps(AppState app) {
   } catch (_) {}
 }
 
-/// 端末やフレームワークから渡されたロケールを、対応3ロケールへ解決する。
+/// 端末やフレームワークから渡されたロケールを、対応7ロケールへ解決する。
 /// `MaterialApp.locale` を明示している間は基本的に呼ばれないが、
-/// `locale` が null になった場合の保険として同じ規則を持たせておく
+/// `locale` が null になった場合の保険として同じ規則を持たせておく。
+/// 判定規則は `AppLanguage.fromLocale()` と同一（`zh-TW`/`zh-HK`/`zh-MO` は繁体字）
 @visibleForTesting
 Locale resolveAppLocale(Locale? locale, Iterable<Locale> supported) {
   if (locale == null) return const Locale('ja');
-  if (locale.languageCode == 'ja') {
-    return locale.scriptCode == 'Hira'
-        ? const Locale.fromSubtags(languageCode: 'ja', scriptCode: 'Hira')
-        : const Locale('ja');
-  }
-  return const Locale('en');
+  return (AppLanguage.fromLocale(locale) ?? AppLanguage.en).locale;
 }

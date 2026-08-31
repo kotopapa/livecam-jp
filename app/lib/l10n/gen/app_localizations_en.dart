@@ -1028,4 +1028,738 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get settingsJmaDictionaryNote =>
       'Translations of warning names, advisory names and seismic intensity follow the JMA Multilingual Dictionary of Weather Information Terms. Source: Japan Meteorological Agency website';
+
+  @override
+  String get hazardFloodTitle =>
+      'Flood inundation area (maximum assumed scale)';
+
+  @override
+  String get hazardLandslideTitle => 'Landslide hazard area';
+
+  @override
+  String get hazardTsunamiTitle => 'Tsunami inundation assumption';
+
+  @override
+  String get hazardHightideTitle => 'Storm surge inundation area';
+
+  @override
+  String get hazardLandslideSteepSlope => 'Steep slope';
+
+  @override
+  String get hazardLandslideDebrisFlow => 'Debris flow';
+
+  @override
+  String get hazardLandslideSlide => 'Landslide';
+
+  @override
+  String get hazardDisclaimer =>
+      'For up-to-date and detailed information, check your municipality’s hazard map. Follow the evacuation information issued by your local government.';
+
+  @override
+  String get facilityKindWater =>
+      'Water supply points and emergency water facilities';
+
+  @override
+  String get facilityKindStock => 'Emergency supply warehouses';
+
+  @override
+  String get facilityKindFireWater =>
+      'Firefighting water supply (hydrants and cisterns)';
+
+  @override
+  String get facilityKindWaterShort => 'Water supply';
+
+  @override
+  String get facilityKindStockShort => 'Supply warehouse';
+
+  @override
+  String get facilityKindFireWaterShort => 'Fire water';
+
+  @override
+  String get facilityDisclaimer =>
+      'Only for municipalities that publish this data. Check with each municipality for the latest information.';
+
+  @override
+  String get facilityNoData => 'No data yet for this area';
+
+  @override
+  String get shelterHazardFlood => 'Flood';
+
+  @override
+  String get shelterHazardSediment => 'Landslide';
+
+  @override
+  String get shelterHazardHightide => 'Storm surge';
+
+  @override
+  String get shelterHazardEarthquake => 'Earthquake';
+
+  @override
+  String get shelterHazardTsunami => 'Tsunami';
+
+  @override
+  String get shelterHazardFire => 'Fire';
+
+  @override
+  String get shelterHazardInlandFlood => 'Inland flooding';
+
+  @override
+  String get shelterHazardVolcano => 'Volcano';
+
+  @override
+  String get shelterDisclaimer =>
+      'Check with each municipality for the latest and more detailed information.';
+
+  @override
+  String get riskLandTitle => 'Landslide Risk Map (Kikikuru)';
+
+  @override
+  String get riskInundTitle => 'Inundation Risk Map (Kikikuru)';
+
+  @override
+  String get riskFloodTitle => 'Flood Risk Map (Kikikuru)';
+
+  @override
+  String get riskLandSubtitle =>
+      'Risk of landslides (1 km mesh, updated every 10 minutes)';
+
+  @override
+  String get riskInundSubtitle =>
+      'Risk of inundation (1 km mesh, updated every 10 minutes)';
+
+  @override
+  String get riskFloodSubtitle =>
+      'Risk of flooding (by river, updated every 10 minutes)';
+
+  @override
+  String get riskLevelWatch => 'Stay alert';
+
+  @override
+  String get riskLevelCaution => 'Caution';
+
+  @override
+  String get riskLevelWarning => 'Warning';
+
+  @override
+  String get riskLevelDanger => 'Danger';
+
+  @override
+  String get riskLevelCritical => 'Imminent';
+
+  @override
+  String get wbgtLevelDanger => 'Danger';
+
+  @override
+  String get wbgtLevelSevereWarning => 'Severe warning';
+
+  @override
+  String get wbgtLevelWarning => 'Warning';
+
+  @override
+  String get wbgtLevelCaution => 'Caution';
+
+  @override
+  String get wbgtLevelSafe => 'Nearly safe';
+
+  @override
+  String get heatAlertSpecial => 'Heat Stroke Emergency Alert';
+
+  @override
+  String get heatAlertSpecialPending => 'Heat Stroke Emergency Alert (pending)';
+
+  @override
+  String get heatAlertWarning => 'Heat Stroke Alert';
+
+  @override
+  String get heatAlertDisclaimer =>
+      'This is reference information. Check the official Heat Illness Prevention Information site for authoritative announcements.';
+
+  @override
+  String get languageNameZhHans => '简体中文 (Chinese, Simplified)';
+
+  @override
+  String get languageNameZhHant => '繁體中文 (Chinese, Traditional)';
+
+  @override
+  String get languageNameKo => '한국어 (Korean)';
+
+  @override
+  String get languageNameVi => 'Tiếng Việt (Vietnamese)';
+
+  @override
+  String get mapLayerPanelSubtitle =>
+      'Only one layer at a time can be overlaid on the map.';
+
+  @override
+  String get mapLayerNone => 'None';
+
+  @override
+  String get mapLayerSectionWeather => 'Weather';
+
+  @override
+  String get mapLayerRainRadarTitle => 'Rain cloud radar (now)';
+
+  @override
+  String get mapLayerRainRadarSubtitle =>
+      'High-resolution Precipitation Nowcasts, updated every 5 minutes';
+
+  @override
+  String get mapLayerQuakesTitle => 'Hypocenter';
+
+  @override
+  String get mapQuakePeriodDay => '24 hours';
+
+  @override
+  String get mapQuakePeriodWeek => '7 days';
+
+  @override
+  String get mapQuakePeriodMonth => '30 days';
+
+  @override
+  String get mapLayerRain24hTitle => '24-hour precipitation';
+
+  @override
+  String get mapLayerRain24hSubtitle =>
+      'JMA Radar/Raingauge-Analyzed Precipitation, plus AMeDAS observations when zoomed in';
+
+  @override
+  String get mapLayerSectionHazard => 'Hazard maps';
+
+  @override
+  String get mapHazardLandslideSubtitle =>
+      'Steep slopes, debris flows and landslides (yellow = hazard area / red = special hazard area)';
+
+  @override
+  String get mapHazardDepthSubtitle =>
+      'Expected inundation depth shown by color';
+
+  @override
+  String get mapShelterTitle => 'Evacuation site';
+
+  @override
+  String get mapLayerShelterTitle =>
+      'Evacuation sites (designated emergency evacuation sites and designated shelters)';
+
+  @override
+  String get mapLayerShelterSubtitle =>
+      'Shown when you zoom in. Can be filtered by disaster type.';
+
+  @override
+  String get mapFacilityTitle => 'Disaster response facilities';
+
+  @override
+  String get mapLayerFacilityTitle =>
+      'Disaster response facilities (water supply points and emergency stockpile warehouses)';
+
+  @override
+  String get mapLayerFacilitySubtitle =>
+      'Shown when you zoom in. Can be filtered by type.';
+
+  @override
+  String mapQuakeNearbyTitle(int count) {
+    return 'Earthquakes near here ($count)';
+  }
+
+  @override
+  String get mapQuakeUnknownPlace => 'Hypocenter (details not yet announced)';
+
+  @override
+  String mapQuakeMaxIntensity(String value) {
+    return 'Maximum seismic intensity $value';
+  }
+
+  @override
+  String mapNearbyCamerasTitle(String name) {
+    return 'Cameras near $name';
+  }
+
+  @override
+  String get mapQuakeTapHint => 'Tap to see live cameras within 50 km.';
+
+  @override
+  String get mapShelterNoticeTitle => 'About the evacuation site layer';
+
+  @override
+  String get mapShelterNoticeBody =>
+      '- A \"designated emergency evacuation site\" is a place to escape to in order to protect your life from an imminent disaster. A \"designated shelter\" is a facility where you can stay for a period of time (shown with a double ring).\n- Designated emergency evacuation sites are designated for each disaster type, so depending on the type of disaster a site may not be usable.\n- The information is provided by municipalities, so it may not be up to date and some sites may be missing. Check with the relevant municipality for accurate information.';
+
+  @override
+  String get mapShelterHazardAll => 'All';
+
+  @override
+  String get mapShelterDesignated => 'Designated shelter';
+
+  @override
+  String get mapShelterHazardsLabel => 'Applicable disaster types';
+
+  @override
+  String get mapOpenRoute => 'See the route in Google Maps';
+
+  @override
+  String get mapNearbyCamerasButton => 'Nearby live cameras';
+
+  @override
+  String get mapFacilityNoticeTitle =>
+      'About the disaster response facility layer';
+
+  @override
+  String get mapFacilityNoticeBody =>
+      '- This is a collection of \"emergency water supply facilities\", \"stockpile warehouses\" and \"firefighting water facilities\" published as open data by each municipality. Only municipalities that publish the data are included, so coverage is not nationwide.\n- Fire hydrants and fire cisterns are equipment for firefighting and are not for use by the general public.\n- Water supply points are opened at the time of a disaster and may not provide water in normal times.\n- Update timing differs by municipality. Check with each municipality for accurate information.';
+
+  @override
+  String mapFacilityOwner(String owner) {
+    return 'Provided by: $owner';
+  }
+
+  @override
+  String get mapFacilityGeocodedNote =>
+      'This position is estimated from the address and may differ from the actual location.';
+
+  @override
+  String get mapFacilitySourceDataset => 'Source (dataset)';
+
+  @override
+  String mapNowcastSpanHours(String value) {
+    return '$value hours';
+  }
+
+  @override
+  String mapNowcastSpanMinutes(int value) {
+    return '$value min';
+  }
+
+  @override
+  String get mapNowcastNow => 'Now (observed)';
+
+  @override
+  String get mapNowcastForecastHourly => 'Forecast, hourly precipitation';
+
+  @override
+  String get mapNowcastForecast => 'Forecast';
+
+  @override
+  String mapNowcastAfter(String span, String kind) {
+    return '$span later ($kind)';
+  }
+
+  @override
+  String mapNowcastBefore(String span) {
+    return '$span ago (observed)';
+  }
+
+  @override
+  String get mapNowcastBackToNow => 'Now';
+
+  @override
+  String get mapNowcastNowMarker => '▲ Now';
+
+  @override
+  String mapNowcastLast(String label) {
+    return '$label (6 hours ahead)';
+  }
+
+  @override
+  String mapLegendRainRadar(String label) {
+    return 'Rain cloud radar $label';
+  }
+
+  @override
+  String mapLegendRainRadarKind(String label, String kind) {
+    return 'Rain cloud radar $label ($kind)';
+  }
+
+  @override
+  String get mapLegendRainWeak => 'Weak';
+
+  @override
+  String mapLegendQuakes(String period, int count) {
+    return 'Hypocenters, $period ($count)';
+  }
+
+  @override
+  String mapLegendIntensity(String value) {
+    return 'Intensity $value';
+  }
+
+  @override
+  String get mapLegendIntensity6Up => '6-lower and above';
+
+  @override
+  String mapLegendRain24h(String label) {
+    return '24-hour precipitation $label';
+  }
+
+  @override
+  String mapLegendRain24hZoom(String label) {
+    return '24-hour precipitation $label (zoom in for observed values)';
+  }
+
+  @override
+  String mapLegendLandslide(String title) {
+    return '$title (hazard area / special hazard area)';
+  }
+
+  @override
+  String get mapLegendShelterZoomIn =>
+      'Evacuation sites (zoom in to show them)';
+
+  @override
+  String mapLegendShelter(int count) {
+    return 'Evacuation sites ($count)';
+  }
+
+  @override
+  String mapLegendShelterCluster(int count) {
+    return 'Evacuation sites ($count, grouped)';
+  }
+
+  @override
+  String mapLegendShelterHazard(String hazard, int count) {
+    return 'Evacuation sites for $hazard ($count)';
+  }
+
+  @override
+  String mapLegendShelterHazardCluster(String hazard, int count) {
+    return 'Evacuation sites for $hazard ($count, grouped)';
+  }
+
+  @override
+  String get mapLegendShelterEmergency =>
+      'Designated emergency evacuation site';
+
+  @override
+  String get mapLegendShelterDesignated => 'Double ring = designated shelter';
+
+  @override
+  String get mapLegendFacilityZoomIn =>
+      'Disaster response facilities (zoom in to show them)';
+
+  @override
+  String mapLegendFacilityNoData(String message) {
+    return 'Disaster response facilities ($message)';
+  }
+
+  @override
+  String mapLegendFacility(int count) {
+    return 'Disaster response facilities ($count)';
+  }
+
+  @override
+  String mapLegendFacilityCluster(int count) {
+    return 'Disaster response facilities ($count, grouped)';
+  }
+
+  @override
+  String get mapLegendFetchFailed => 'Could not load';
+
+  @override
+  String get mapShelterFetchFailed =>
+      'Could not load evacuation sites (tap to retry)';
+
+  @override
+  String get mapFacilityFetchFailed =>
+      'Could not load disaster response facilities (tap to retry)';
+
+  @override
+  String mapRainTooltip(String name, String mm) {
+    return '$name, 24 h: $mm mm';
+  }
+
+  @override
+  String get bosaiFetchFailedPull =>
+      'Could not load the data (pull down to try again)';
+
+  @override
+  String get bosaiTsunamiInfo => 'Tsunami Information';
+
+  @override
+  String get bosaiUnknownPlace => 'Unknown';
+
+  @override
+  String bosaiFetchFailedDetail(String error) {
+    return 'Could not load the data ($error)';
+  }
+
+  @override
+  String get bosaiTimeJustNow => 'Just now';
+
+  @override
+  String bosaiTimeMinutesAgo(int n) {
+    return '$n min ago';
+  }
+
+  @override
+  String bosaiTimeHoursAgo(int n) {
+    return '$n h ago';
+  }
+
+  @override
+  String bosaiTimeMonthDayHour(int month, int day, int hour) {
+    return 'Around $month/$day $hour:00';
+  }
+
+  @override
+  String bosaiQuakeIntensityTitle(String place) {
+    return 'Seismic intensity for $place';
+  }
+
+  @override
+  String bosaiNearbyCamerasTitle(String place) {
+    return 'Cameras near $place';
+  }
+
+  @override
+  String get bosaiQuakeEmpty =>
+      'No earthquake information in the last 72 hours';
+
+  @override
+  String bosaiQuakeAsOf(String time) {
+    return ' (as of $time, newest first)';
+  }
+
+  @override
+  String bosaiQuakeNote(String at) {
+    return 'Source: JMA Earthquake Information (last 72 hours)$at. Tap an earthquake to see live cameras in the municipalities that felt it, or cameras near the hypocenter when no municipal intensities are available.';
+  }
+
+  @override
+  String get bosaiBadgeTsunami => 'Tsunami';
+
+  @override
+  String bosaiBadgeIntensity(String value) {
+    return 'Intensity\n$value';
+  }
+
+  @override
+  String bosaiMuniObserved(int count) {
+    return 'Recorded in $count municipalities';
+  }
+
+  @override
+  String bosaiWarningStaleAt(String time) {
+    return 'Could not load the latest information (showing data as of $time)';
+  }
+
+  @override
+  String bosaiWarningAsOf(String time) {
+    return 'As of $time';
+  }
+
+  @override
+  String get bosaiHeatOffSeason =>
+      'Heat Stroke Alerts are not in operation now (they are issued from late April to late October each year)';
+
+  @override
+  String bosaiHeatReportAt(int month, int day, String hour) {
+    return ' (issued $month/$day $hour:00)';
+  }
+
+  @override
+  String get bosaiHeatTapHint => 'Tap a prefecture to see its cameras.';
+
+  @override
+  String get bosaiHeatNone => 'No Heat Stroke Alert is currently in effect';
+
+  @override
+  String get bosaiHeatToday => 'Today';
+
+  @override
+  String get bosaiHeatTomorrow => 'Tomorrow';
+
+  @override
+  String bosaiHeatPrefCamerasTitle(String pref) {
+    return 'Cameras in $pref (Heat Stroke Alert)';
+  }
+
+  @override
+  String get bosaiWbgtCardTitle => 'Heat index (WBGT) near you';
+
+  @override
+  String get bosaiWbgtUnavailable => 'Could not load the data';
+
+  @override
+  String bosaiApproxDistance(String value) {
+    return 'About $value';
+  }
+
+  @override
+  String get bosaiWbgtNow => 'Now';
+
+  @override
+  String get bosaiWbgtNoCurrent => 'No current reading';
+
+  @override
+  String bosaiWbgtLevelAt(String level, String time) {
+    return '$level ($time)';
+  }
+
+  @override
+  String get bosaiWbgtForecast => 'Forecast';
+
+  @override
+  String bosaiWbgtHour(int hour) {
+    return '$hour:00';
+  }
+
+  @override
+  String bosaiWbgtNextDayHour(int hour) {
+    return '$hour:00 next day';
+  }
+
+  @override
+  String bosaiWbgtDateHour(int month, int day, int hour) {
+    return '$month/$day $hour:00';
+  }
+
+  @override
+  String get bosaiQuakeMuniNote =>
+      'Source: JMA Earthquake Information (strongest intensity first). Tap a municipality to see its cameras. If it has no cameras, cameras near the hypocenter are shown.';
+
+  @override
+  String get bosaiEpicenterNearby =>
+      'Cameras near the hypocenter (by distance)';
+
+  @override
+  String bosaiMuniCodeFallback(String code) {
+    return 'Municipality $code';
+  }
+
+  @override
+  String bosaiPrefEpicenterFallback(String pref) {
+    return '$pref · Showing cameras near the hypocenter';
+  }
+
+  @override
+  String bosaiMuniIntensityCamerasTitle(String name, String intensity) {
+    return 'Cameras in $name (seismic intensity $intensity)';
+  }
+
+  @override
+  String bosaiLiveOnly(int count) {
+    return 'Live only ($count)';
+  }
+
+  @override
+  String get bosaiMuniFallbackNote =>
+      'No cameras match this municipality, so all cameras in the prefecture are shown';
+
+  @override
+  String get bosaiPrefNoCameras => 'No cameras in this prefecture';
+
+  @override
+  String get bosaiNoLiveCameras => 'No live-streaming cameras';
+
+  @override
+  String get bosaiNoCamerasWithin50km => 'No cameras within 50 km';
+
+  @override
+  String get tipTitle => 'Support the developer';
+
+  @override
+  String get tipIntro =>
+      'This app is developed and run by one person. Your support helps with researching and adding cameras, keeping the monitoring server running, and supporting weather data, and it encourages continued updates. Support is optional and does not unlock any features.';
+
+  @override
+  String get tipCoffeeTitle => 'A canned coffee break';
+
+  @override
+  String get tipCoffeeSubtitle =>
+      'Give a canned coffee for a break between coding sessions';
+
+  @override
+  String get tipSweetsTitle => 'Sweets for a sugar boost';
+
+  @override
+  String get tipSweetsSubtitle =>
+      'Support sweets and cafe time for focused coding';
+
+  @override
+  String get tipLunchTitle => 'Lunch to boost development';
+
+  @override
+  String get tipLunchSubtitle =>
+      'Treat the developer to a hearty lunch for the next new feature';
+
+  @override
+  String get tipDevToolsTitle => 'Support development tool costs';
+
+  @override
+  String get tipDevToolsSubtitle =>
+      'Support the services used for camera research and server monitoring';
+
+  @override
+  String get tipPreparing =>
+      'The support options are not ready yet. Please try again later.';
+
+  @override
+  String get tipUnavailable =>
+      'In-app purchases are not available on this device.';
+
+  @override
+  String get tipPurchaseStartFailed => 'Could not start the purchase';
+
+  @override
+  String get tipThanks =>
+      'Thank you for your support! It really encourages development.';
+
+  @override
+  String tipPurchaseFailed(String error) {
+    return 'Could not complete the purchase ($error)';
+  }
+
+  @override
+  String get tipUnknownError => 'Unknown error';
+
+  @override
+  String get tipNoticeTitle => 'Before you purchase';
+
+  @override
+  String get tipNoticeBody =>
+      'Support is processed as an App Store in-app purchase (refunds follow Apple\'s policy).';
+
+  @override
+  String get tipEula => 'EULA (Apple Standard License Agreement)';
+
+  @override
+  String settingsDiagCrashRecords(int count, String name) {
+    return 'Records: $count\nLatest: $name';
+  }
+
+  @override
+  String get settingsDiagKindCrash => 'Crash';
+
+  @override
+  String get settingsDiagKindHang => 'Hang';
+
+  @override
+  String get settingsDiagKindCpu => 'CPU exception';
+
+  @override
+  String get settingsDiagKindDiskWrite => 'Disk write exception';
+
+  @override
+  String settingsDiagCrashKinds(String kinds) {
+    return 'Type: $kinds';
+  }
+
+  @override
+  String settingsDiagReadError(String error) {
+    return 'Read error: $error';
+  }
+
+  @override
+  String get settingsDiagFetchFailed => 'Failed to obtain';
+
+  @override
+  String get settingsDiagNotAcquired => 'Not obtained (null)';
+
+  @override
+  String settingsDiagAcquired(String prefix) {
+    return 'Obtained ($prefix…)';
+  }
+
+  @override
+  String settingsDiagError(String error) {
+    return 'Error: $error';
+  }
 }

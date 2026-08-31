@@ -12,13 +12,6 @@
   "commonOpenInSafari": "Open in Safari",
   "commonSource": "Source",
   "commonCameraCount": "{count}",
-  "@commonCameraCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "legalJapaneseAuthoritative": "The Japanese text is the authoritative version. Translations are provided for reference only.",
   "languageLabel": "Language",
   "languageSettingTitle": "Language / 言語",
@@ -108,28 +101,11 @@
   "settingsQuakeTitle": "Earthquakes of intensity 5-lower or above",
   "settingsQuakeSubtitleOff": "Get notified when a large earthquake occurs and jump to nearby cameras",
   "settingsQuakeSubtitleOn": "Notification level: {level}",
-  "@settingsQuakeSubtitleOn": {
-    "placeholders": {
-      "level": {
-        "type": "String"
-      }
-    }
-  },
   "settingsWarningTitle": "Emergency Warnings",
   "settingsWarningSubtitle": "Get notified when an Emergency Warning is issued for heavy rain, storms, storm surges and more",
   "settingsNotifyArea": "Areas to be notified about",
   "settingsNotifyAreaAll": "All of Japan",
   "settingsNotifyAreaSummary": "{first} and {count} areas",
-  "@settingsNotifyAreaSummary": {
-    "placeholders": {
-      "first": {
-        "type": "String"
-      },
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "settingsNotifyAreaHint": "You will only be notified about the prefectures you select. If you select none, all of Japan is covered.",
   "settingsNotifyAreaResetAll": "Reset to all of Japan",
   "settingsNotifyLevel": "Notification level",
@@ -178,21 +154,7 @@
   "settingsNotifyDiagSubtitle": "Check the state when notifications do not arrive",
   "settingsNotifyDiagUnlocked": "Notification diagnostics are now shown (inside Disaster notifications)",
   "settingsNotifyPermission": "Permission: {value}",
-  "@settingsNotifyPermission": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
   "settingsNotifyApns": "APNs token: {value}",
-  "@settingsNotifyApns": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      }
-    }
-  },
   "settingsNotifyFcm": "FCM token:",
   "settingsCopyToken": "Copy token",
   "settingsTokenCopied": "FCM token copied",
@@ -206,24 +168,10 @@
   "attributionOpenYoutube": "View the provider on YouTube",
   "attributionOpenSite": "Open the provider's site",
   "listTitle": "List ({count})",
-  "@listTitle": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "listSearchHint": "Search by camera, river or road name",
   "listEmpty": "No cameras match your filters",
   "listRanking": "Ranking",
   "favoritesTitle": "Favorites ({count})",
-  "@favoritesTitle": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "favoritesEmpty": "You have no favorites yet.\nOpen a camera on the map and tap the star to add it.",
   "favoritesEmptyFiltered": "No favorites match your filters",
   "favoritesSort": "Sort",
@@ -243,33 +191,12 @@
   "rankingPreparing": "The national ranking is being prepared.\nData is aggregated every three hours.",
   "rankingFetchFailed": "Could not load the data",
   "rankingFetchFailedHttp": "Could not load the data (HTTP {code})",
-  "@rankingFetchFailedHttp": {
-    "placeholders": {
-      "code": {
-        "type": "int"
-      }
-    }
-  },
   "rankingUnitViews": "views",
   "rankingUnitFavorites": "favorites",
   "detailLive": "Live",
   "detailTimeUnknown": "Capture time unknown",
   "detailRefreshEvery": "Updates every {sec} s",
-  "@detailRefreshEvery": {
-    "placeholders": {
-      "sec": {
-        "type": "int"
-      }
-    }
-  },
   "detailRefreshIn": "{sec} s",
-  "@detailRefreshIn": {
-    "placeholders": {
-      "sec": {
-        "type": "int"
-      }
-    }
-  },
   "detailRefreshNow": "Refresh",
   "detailPosRepresentative": "Approximate area location",
   "detailPosApprox": "Approximate location",
@@ -284,13 +211,6 @@
   "detailReportProblem": "Report a problem with this camera",
   "detailNearby": "Nearby cameras",
   "detailDistanceKm": "About {km} km",
-  "@detailDistanceKm": {
-    "placeholders": {
-      "km": {
-        "type": "String"
-      }
-    }
-  },
   "detailWifiOnlyBlocked": "Your settings only allow images to load on Wi-Fi",
   "detailNoImage": "The image is not available right now",
   "detailEmbedBlockedYoutube": "The provider does not allow this video\nto be played inside the app",
@@ -301,55 +221,11 @@
   "detailMapTileGsi": "GSI Tiles",
   "elevationLoading": "Elevation …",
   "elevationValue": "Elevation {value} ({source})",
-  "@elevationValue": {
-    "placeholders": {
-      "value": {
-        "type": "String"
-      },
-      "source": {
-        "type": "String"
-      }
-    }
-  },
   "timeTakenAt": "Captured {time}{relative}",
-  "@timeTakenAt": {
-    "placeholders": {
-      "time": {
-        "type": "String"
-      },
-      "relative": {
-        "type": "String"
-      }
-    }
-  },
   "timeRelJustNow": " (just now)",
   "timeRelMinutes": " ({n} min ago)",
-  "@timeRelMinutes": {
-    "placeholders": {
-      "n": {
-        "type": "int"
-      }
-    }
-  },
   "timeRelHours": " ({n} h ago)",
-  "@timeRelHours": {
-    "placeholders": {
-      "n": {
-        "type": "int"
-      }
-    }
-  },
   "timeMonthDay": "{month}/{day}",
-  "@timeMonthDay": {
-    "placeholders": {
-      "month": {
-        "type": "int"
-      },
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "intensity5Lower": "5-lower",
   "intensity5Upper": "5-upper",
   "intensity6Lower": "6-lower",
@@ -411,29 +287,8 @@
   "mapSearchSectionCameras": "Cameras",
   "mapSearchSectionPlaces": "Places",
   "mapPointCameras": "Cameras here ({count})",
-  "@mapPointCameras": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "mapFilteredCount": "{count} shown (filtered)",
-  "@mapFilteredCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "mapTotalCount": "{count} cameras",
-  "@mapTotalCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "mapLayersTooltip": "Map layers",
   "bosaiTitle": "Disaster updates",
   "bosaiTabQuake": "Earthquakes",
@@ -443,49 +298,209 @@
   "bosaiWarningNoteNone": "Source: JMA. No Warnings or Emergency Warnings are in effect. Areas with advisories only are listed below.",
   "bosaiWarningNote": "Source: JMA Weather Warnings and Advisories. Tap a prefecture to see its cameras.",
   "bosaiAdvisoryRegions": "Areas under advisory ({count} prefectures)",
-  "@bosaiAdvisoryRegions": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "bosaiWarningAreasTitle": "Areas under warning in {pref}",
-  "@bosaiWarningAreasTitle": {
-    "placeholders": {
-      "pref": {
-        "type": "String"
-      }
-    }
-  },
   "bosaiAdvisoryAreasTitle": "Areas under advisory in {pref}",
-  "@bosaiAdvisoryAreasTitle": {
-    "placeholders": {
-      "pref": {
-        "type": "String"
-      }
-    }
-  },
   "bosaiMuniNote": "Source: JMA. Tap a municipality to see its cameras.",
   "bosaiMuniFetchFailed": "Could not load the detailed area list",
   "bosaiMuniNone": "No municipalities are currently affected",
   "bosaiCameraCount": "{count} cameras",
-  "@bosaiCameraCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "bosaiNoCamera": "No cameras",
   "bosaiMuniCamerasTitle": "Cameras in {name} (warning in effect)",
-  "@bosaiMuniCamerasTitle": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
   "settingsJmaDictionary": "About the disaster-term translations",
-  "settingsJmaDictionaryNote": "Translations of warning names, advisory names and seismic intensity follow the JMA Multilingual Dictionary of Weather Information Terms. Source: Japan Meteorological Agency website"
+  "settingsJmaDictionaryNote": "Translations of warning names, advisory names and seismic intensity follow the JMA Multilingual Dictionary of Weather Information Terms. Source: Japan Meteorological Agency website",
+  "hazardFloodTitle": "Flood inundation area (maximum assumed scale)",
+  "hazardLandslideTitle": "Landslide hazard area",
+  "hazardTsunamiTitle": "Tsunami inundation assumption",
+  "hazardHightideTitle": "Storm surge inundation area",
+  "hazardLandslideSteepSlope": "Steep slope",
+  "hazardLandslideDebrisFlow": "Debris flow",
+  "hazardLandslideSlide": "Landslide",
+  "hazardDisclaimer": "For up-to-date and detailed information, check your municipality’s hazard map. Follow the evacuation information issued by your local government.",
+  "facilityKindWater": "Water supply points and emergency water facilities",
+  "facilityKindStock": "Emergency supply warehouses",
+  "facilityKindFireWater": "Firefighting water supply (hydrants and cisterns)",
+  "facilityKindWaterShort": "Water supply",
+  "facilityKindStockShort": "Supply warehouse",
+  "facilityKindFireWaterShort": "Fire water",
+  "facilityDisclaimer": "Only for municipalities that publish this data. Check with each municipality for the latest information.",
+  "facilityNoData": "No data yet for this area",
+  "shelterHazardFlood": "Flood",
+  "shelterHazardSediment": "Landslide",
+  "shelterHazardHightide": "Storm surge",
+  "shelterHazardEarthquake": "Earthquake",
+  "shelterHazardTsunami": "Tsunami",
+  "shelterHazardFire": "Fire",
+  "shelterHazardInlandFlood": "Inland flooding",
+  "shelterHazardVolcano": "Volcano",
+  "shelterDisclaimer": "Check with each municipality for the latest and more detailed information.",
+  "riskLandTitle": "Landslide Risk Map (Kikikuru)",
+  "riskInundTitle": "Inundation Risk Map (Kikikuru)",
+  "riskFloodTitle": "Flood Risk Map (Kikikuru)",
+  "riskLandSubtitle": "Risk of landslides (1 km mesh, updated every 10 minutes)",
+  "riskInundSubtitle": "Risk of inundation (1 km mesh, updated every 10 minutes)",
+  "riskFloodSubtitle": "Risk of flooding (by river, updated every 10 minutes)",
+  "riskLevelWatch": "Stay alert",
+  "riskLevelCaution": "Caution",
+  "riskLevelWarning": "Warning",
+  "riskLevelDanger": "Danger",
+  "riskLevelCritical": "Imminent",
+  "wbgtLevelDanger": "Danger",
+  "wbgtLevelSevereWarning": "Severe warning",
+  "wbgtLevelWarning": "Warning",
+  "wbgtLevelCaution": "Caution",
+  "wbgtLevelSafe": "Nearly safe",
+  "heatAlertSpecial": "Heat Stroke Emergency Alert",
+  "heatAlertSpecialPending": "Heat Stroke Emergency Alert (pending)",
+  "heatAlertWarning": "Heat Stroke Alert",
+  "heatAlertDisclaimer": "This is reference information. Check the official Heat Illness Prevention Information site for authoritative announcements.",
+  "languageNameZhHans": "简体中文 (Chinese, Simplified)",
+  "languageNameZhHant": "繁體中文 (Chinese, Traditional)",
+  "languageNameKo": "한국어 (Korean)",
+  "languageNameVi": "Tiếng Việt (Vietnamese)",
+  "mapLayerPanelSubtitle": "Only one layer at a time can be overlaid on the map.",
+  "mapLayerNone": "None",
+  "mapLayerSectionWeather": "Weather",
+  "mapLayerRainRadarTitle": "Rain cloud radar (now)",
+  "mapLayerRainRadarSubtitle": "High-resolution Precipitation Nowcasts, updated every 5 minutes",
+  "mapLayerQuakesTitle": "Hypocenter",
+  "mapQuakePeriodDay": "24 hours",
+  "mapQuakePeriodWeek": "7 days",
+  "mapQuakePeriodMonth": "30 days",
+  "mapLayerRain24hTitle": "24-hour precipitation",
+  "mapLayerRain24hSubtitle": "JMA Radar/Raingauge-Analyzed Precipitation, plus AMeDAS observations when zoomed in",
+  "mapLayerSectionHazard": "Hazard maps",
+  "mapHazardLandslideSubtitle": "Steep slopes, debris flows and landslides (yellow = hazard area / red = special hazard area)",
+  "mapHazardDepthSubtitle": "Expected inundation depth shown by color",
+  "mapShelterTitle": "Evacuation site",
+  "mapLayerShelterTitle": "Evacuation sites (designated emergency evacuation sites and designated shelters)",
+  "mapLayerShelterSubtitle": "Shown when you zoom in. Can be filtered by disaster type.",
+  "mapFacilityTitle": "Disaster response facilities",
+  "mapLayerFacilityTitle": "Disaster response facilities (water supply points and emergency stockpile warehouses)",
+  "mapLayerFacilitySubtitle": "Shown when you zoom in. Can be filtered by type.",
+  "mapQuakeNearbyTitle": "Earthquakes near here ({count})",
+  "mapQuakeUnknownPlace": "Hypocenter (details not yet announced)",
+  "mapQuakeMaxIntensity": "Maximum seismic intensity {value}",
+  "mapNearbyCamerasTitle": "Cameras near {name}",
+  "mapQuakeTapHint": "Tap to see live cameras within 50 km.",
+  "mapShelterNoticeTitle": "About the evacuation site layer",
+  "mapShelterNoticeBody": "- A \"designated emergency evacuation site\" is a place to escape to in order to protect your life from an imminent disaster. A \"designated shelter\" is a facility where you can stay for a period of time (shown with a double ring).\n- Designated emergency evacuation sites are designated for each disaster type, so depending on the type of disaster a site may not be usable.\n- The information is provided by municipalities, so it may not be up to date and some sites may be missing. Check with the relevant municipality for accurate information.",
+  "mapShelterHazardAll": "All",
+  "mapShelterDesignated": "Designated shelter",
+  "mapShelterHazardsLabel": "Applicable disaster types",
+  "mapOpenRoute": "See the route in Google Maps",
+  "mapNearbyCamerasButton": "Nearby live cameras",
+  "mapFacilityNoticeTitle": "About the disaster response facility layer",
+  "mapFacilityNoticeBody": "- This is a collection of \"emergency water supply facilities\", \"stockpile warehouses\" and \"firefighting water facilities\" published as open data by each municipality. Only municipalities that publish the data are included, so coverage is not nationwide.\n- Fire hydrants and fire cisterns are equipment for firefighting and are not for use by the general public.\n- Water supply points are opened at the time of a disaster and may not provide water in normal times.\n- Update timing differs by municipality. Check with each municipality for accurate information.",
+  "mapFacilityOwner": "Provided by: {owner}",
+  "mapFacilityGeocodedNote": "This position is estimated from the address and may differ from the actual location.",
+  "mapFacilitySourceDataset": "Source (dataset)",
+  "mapNowcastSpanHours": "{value} hours",
+  "mapNowcastSpanMinutes": "{value} min",
+  "mapNowcastNow": "Now (observed)",
+  "mapNowcastForecastHourly": "Forecast, hourly precipitation",
+  "mapNowcastForecast": "Forecast",
+  "mapNowcastAfter": "{span} later ({kind})",
+  "mapNowcastBefore": "{span} ago (observed)",
+  "mapNowcastBackToNow": "Now",
+  "mapNowcastNowMarker": "▲ Now",
+  "mapNowcastLast": "{label} (6 hours ahead)",
+  "mapLegendRainRadar": "Rain cloud radar {label}",
+  "mapLegendRainRadarKind": "Rain cloud radar {label} ({kind})",
+  "mapLegendRainWeak": "Weak",
+  "mapLegendQuakes": "Hypocenters, {period} ({count})",
+  "mapLegendIntensity": "Intensity {value}",
+  "mapLegendIntensity6Up": "6-lower and above",
+  "mapLegendRain24h": "24-hour precipitation {label}",
+  "mapLegendRain24hZoom": "24-hour precipitation {label} (zoom in for observed values)",
+  "mapLegendLandslide": "{title} (hazard area / special hazard area)",
+  "mapLegendShelterZoomIn": "Evacuation sites (zoom in to show them)",
+  "mapLegendShelter": "Evacuation sites ({count})",
+  "mapLegendShelterCluster": "Evacuation sites ({count}, grouped)",
+  "mapLegendShelterHazard": "Evacuation sites for {hazard} ({count})",
+  "mapLegendShelterHazardCluster": "Evacuation sites for {hazard} ({count}, grouped)",
+  "mapLegendShelterEmergency": "Designated emergency evacuation site",
+  "mapLegendShelterDesignated": "Double ring = designated shelter",
+  "mapLegendFacilityZoomIn": "Disaster response facilities (zoom in to show them)",
+  "mapLegendFacilityNoData": "Disaster response facilities ({message})",
+  "mapLegendFacility": "Disaster response facilities ({count})",
+  "mapLegendFacilityCluster": "Disaster response facilities ({count}, grouped)",
+  "mapLegendFetchFailed": "Could not load",
+  "mapShelterFetchFailed": "Could not load evacuation sites (tap to retry)",
+  "mapFacilityFetchFailed": "Could not load disaster response facilities (tap to retry)",
+  "mapRainTooltip": "{name}, 24 h: {mm} mm",
+  "bosaiFetchFailedPull": "Could not load the data (pull down to try again)",
+  "bosaiTsunamiInfo": "Tsunami Information",
+  "bosaiUnknownPlace": "Unknown",
+  "bosaiFetchFailedDetail": "Could not load the data ({error})",
+  "bosaiTimeJustNow": "Just now",
+  "bosaiTimeMinutesAgo": "{n} min ago",
+  "bosaiTimeHoursAgo": "{n} h ago",
+  "bosaiTimeMonthDayHour": "Around {month}/{day} {hour}:00",
+  "bosaiQuakeIntensityTitle": "Seismic intensity for {place}",
+  "bosaiNearbyCamerasTitle": "Cameras near {place}",
+  "bosaiQuakeEmpty": "No earthquake information in the last 72 hours",
+  "bosaiQuakeAsOf": " (as of {time}, newest first)",
+  "bosaiQuakeNote": "Source: JMA Earthquake Information (last 72 hours){at}. Tap an earthquake to see live cameras in the municipalities that felt it, or cameras near the hypocenter when no municipal intensities are available.",
+  "bosaiBadgeTsunami": "Tsunami",
+  "bosaiBadgeIntensity": "Intensity\n{value}",
+  "bosaiMuniObserved": "Recorded in {count} municipalities",
+  "bosaiWarningStaleAt": "Could not load the latest information (showing data as of {time})",
+  "bosaiWarningAsOf": "As of {time}",
+  "bosaiHeatOffSeason": "Heat Stroke Alerts are not in operation now (they are issued from late April to late October each year)",
+  "bosaiHeatReportAt": " (issued {month}/{day} {hour}:00)",
+  "bosaiHeatTapHint": "Tap a prefecture to see its cameras.",
+  "bosaiHeatNone": "No Heat Stroke Alert is currently in effect",
+  "bosaiHeatToday": "Today",
+  "bosaiHeatTomorrow": "Tomorrow",
+  "bosaiHeatPrefCamerasTitle": "Cameras in {pref} (Heat Stroke Alert)",
+  "bosaiWbgtCardTitle": "Heat index (WBGT) near you",
+  "bosaiWbgtUnavailable": "Could not load the data",
+  "bosaiApproxDistance": "About {value}",
+  "bosaiWbgtNow": "Now",
+  "bosaiWbgtNoCurrent": "No current reading",
+  "bosaiWbgtLevelAt": "{level} ({time})",
+  "bosaiWbgtForecast": "Forecast",
+  "bosaiWbgtHour": "{hour}:00",
+  "bosaiWbgtNextDayHour": "{hour}:00 next day",
+  "bosaiWbgtDateHour": "{month}/{day} {hour}:00",
+  "bosaiQuakeMuniNote": "Source: JMA Earthquake Information (strongest intensity first). Tap a municipality to see its cameras. If it has no cameras, cameras near the hypocenter are shown.",
+  "bosaiEpicenterNearby": "Cameras near the hypocenter (by distance)",
+  "bosaiMuniCodeFallback": "Municipality {code}",
+  "bosaiPrefEpicenterFallback": "{pref} · Showing cameras near the hypocenter",
+  "bosaiMuniIntensityCamerasTitle": "Cameras in {name} (seismic intensity {intensity})",
+  "bosaiLiveOnly": "Live only ({count})",
+  "bosaiMuniFallbackNote": "No cameras match this municipality, so all cameras in the prefecture are shown",
+  "bosaiPrefNoCameras": "No cameras in this prefecture",
+  "bosaiNoLiveCameras": "No live-streaming cameras",
+  "bosaiNoCamerasWithin50km": "No cameras within 50 km",
+  "tipTitle": "Support the developer",
+  "tipIntro": "This app is developed and run by one person. Your support helps with researching and adding cameras, keeping the monitoring server running, and supporting weather data, and it encourages continued updates. Support is optional and does not unlock any features.",
+  "tipCoffeeTitle": "A canned coffee break",
+  "tipCoffeeSubtitle": "Give a canned coffee for a break between coding sessions",
+  "tipSweetsTitle": "Sweets for a sugar boost",
+  "tipSweetsSubtitle": "Support sweets and cafe time for focused coding",
+  "tipLunchTitle": "Lunch to boost development",
+  "tipLunchSubtitle": "Treat the developer to a hearty lunch for the next new feature",
+  "tipDevToolsTitle": "Support development tool costs",
+  "tipDevToolsSubtitle": "Support the services used for camera research and server monitoring",
+  "tipPreparing": "The support options are not ready yet. Please try again later.",
+  "tipUnavailable": "In-app purchases are not available on this device.",
+  "tipPurchaseStartFailed": "Could not start the purchase",
+  "tipThanks": "Thank you for your support! It really encourages development.",
+  "tipPurchaseFailed": "Could not complete the purchase ({error})",
+  "tipUnknownError": "Unknown error",
+  "tipNoticeTitle": "Before you purchase",
+  "tipNoticeBody": "Support is processed as an App Store in-app purchase (refunds follow Apple's policy).",
+  "tipEula": "EULA (Apple Standard License Agreement)",
+  "settingsDiagCrashRecords": "Records: {count}\nLatest: {name}",
+  "settingsDiagKindCrash": "Crash",
+  "settingsDiagKindHang": "Hang",
+  "settingsDiagKindCpu": "CPU exception",
+  "settingsDiagKindDiskWrite": "Disk write exception",
+  "settingsDiagCrashKinds": "Type: {kinds}",
+  "settingsDiagReadError": "Read error: {error}",
+  "settingsDiagFetchFailed": "Failed to obtain",
+  "settingsDiagNotAcquired": "Not obtained (null)",
+  "settingsDiagAcquired": "Obtained ({prefix}…)",
+  "settingsDiagError": "Error: {error}"
 }

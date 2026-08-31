@@ -94,9 +94,13 @@ class ShelterIndex {
 /// 純粋関数群（テスト対象）
 class ShelterLayers {
   static const baseUrl = '${apiBaseUrl}shelters/';
+  /// 災害種別。**配信JSON（index.json）が日本語で送ってくる正準集合**なので
+  /// 日本語のまま保持する。UI表示は `lib/l10n/l10n.dart` の
+  /// `shelterHazardLabelOf()` で各言語へ解決する
   static const defaultHazards = ['洪水', '土砂', '高潮', '地震', '津波', '火事', '内水', '火山'];
+
+  /// 出典表記は翻訳しない
   static const attribution = '出典：国土地理院「指定緊急避難場所データ」';
-  static const disclaimer = '最新かつ詳細な状況は各市町村にご確認ください';
 
   /// 避難場所ピンを描画する最小ズーム
   static const minZoom = 11.0;

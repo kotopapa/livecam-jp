@@ -26,12 +26,13 @@ void main() {
     for (final k in [MapLayerKind.none, MapLayerKind.rainRadar, MapLayerKind.quakes, MapLayerKind.rain24h]) {
       expect(HazardLayers.isHazard(k), isFalse);
       expect(HazardLayers.tileIds(k), isEmpty);
-      expect(HazardLayers.title(k), '');
+      expect(HazardLayers.titleKey(k), '');
     }
     for (final k in [MapLayerKind.hazardFlood, MapLayerKind.hazardLandslide, MapLayerKind.hazardTsunami, MapLayerKind.hazardHightide]) {
       expect(HazardLayers.isHazard(k), isTrue);
       expect(HazardLayers.tileIds(k), isNotEmpty);
-      expect(HazardLayers.title(k), isNotEmpty);
+      // 1.4.0: 表示名ではなく l10n キーを返す（解決は hazardLayerTitleOf）
+      expect(HazardLayers.titleKey(k), isNotEmpty);
     }
   });
 
@@ -39,7 +40,8 @@ void main() {
     expect(HazardLayers.depthScale.length, 6);
     expect(HazardLayers.depthScale.first.$1, const Color(0xFFF7F5A9)); // 0.5m未満
     expect(HazardLayers.depthScale.last.$1, const Color(0xFFDC7ADC)); // 20m以上
-    expect(HazardLayers.landslideScale.map((s) => s.$1), ['急傾斜地', '土石流', '地すべり']);
+    expect(HazardLayers.landslideScale.map((s) => s.$1),
+        ['steepSlope', 'debrisFlow', 'landslide']);
     expect(HazardLayers.maxZoom, 17);
   });
 }
