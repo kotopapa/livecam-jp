@@ -192,7 +192,7 @@ class Wbgt {
   /// 地点マスタCSVを解析する。終了日が [asOf] より前の地点（廃止済み）は除く
   static List<WbgtPoint> parseMaster(String body, {DateTime? asOf}) {
     final out = <WbgtPoint>[];
-    final today = asOf ?? HeatAlerts.nowJst();
+    final today = asOf ?? HeatAlerts.nowJstNaive();
     var first = true;
     for (final raw in const LineSplitter().convert(body)) {
       final line = raw.replaceFirst('\uFEFF', '').trimRight();
@@ -294,10 +294,14 @@ class Wbgt {
 
   /// 今後の予測コマ（[nowJst] より後〜翌日24時まで）
   static List<WbgtValue> upcoming(List<WbgtValue> forecast, DateTime nowJst) {
-    final limit = DateTime(nowJst.year, nowJst.month, nowJst.day)
+    // 予測コマ(e.at)はCSV由来の素のDateTime。UTCフラグ付きの値をそのまま比較すると
+    // 9時間ずれるため、必ず素のDateTimeに正規化してから比べる
+    final now = DateTime(nowJst.year, nowJst.month, nowJst.day, nowJst.hour,
+        nowJst.minute, nowJst.second);
+    final limit = DateTime(now.year, now.month, now.day)
         .add(const Duration(days: 2)); // 翌日24時 = 翌々日0時
     return forecast
-        .where((e) => e.at.isAfter(nowJst) && !e.at.isAfter(limit))
+        .where((e) => e.at.isAfter(now) && !e.at.isAfter(limit))
         .toList();
   }
 
@@ -348,7 +352,7 @@ class Wbgt {
       {http.Client? client, DateTime? now}) async {
     final mem = _master;
     if (mem != null) return mem;
-    final jst = now ?? HeatAlerts.nowJst();
+    final jst = now ?? HeatAlerts.nowJstNaive();
 
     final file = await _masterCacheFile();
     String? cachedBody;
@@ -396,7 +400,7 @@ class Wbgt {
   /// 失敗は例外にせず [WbgtPointData.failed] で返す（キャッシュしない）
   static Future<WbgtPointData> fetchPoint(WbgtPoint p,
       {DateTime? now, http.Client? client}) async {
-    final jst = now ?? HeatAlerts.nowJst();
+    final jst = now ?? HeatAlerts.nowJstNaive();
     final key = hourKey(jst);
     final cached = _pointCache[p.id];
     if (cached != null && cached.hourKey == key) return cached;

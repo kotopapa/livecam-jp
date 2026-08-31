@@ -250,5 +250,19 @@ void main() {
       await Wbgt.fetchPoint(tokyo, now: now, client: client);
       expect(n, 4); // 再試行される
     });
+
+    test('UTCフラグ付きの「日本時間の現在」を渡しても9時間ずれない', () {
+      // 2026-09-01 に実発生: nowJst() は UTC フラグ付きで返るため、
+      // 素のDateTime（CSV由来）と isAfter で比べると9時間先まで捨てられていた
+      final forecast = [
+        WbgtValue(DateTime(2026, 9, 1, 9), 25.0),
+        WbgtValue(DateTime(2026, 9, 1, 12), 28.0),
+        WbgtValue(DateTime(2026, 9, 1, 18), 24.0),
+      ];
+      final nowUtcFlagged =
+          DateTime.utc(2026, 9, 1, 8, 18); // 「JSTの8:18」をUTCフラグで表したもの
+      final out = Wbgt.upcoming(forecast, nowUtcFlagged);
+      expect(out.map((e) => e.at.hour).toList(), [9, 12, 18]);
+    });
   });
 }

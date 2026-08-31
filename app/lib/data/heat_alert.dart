@@ -170,7 +170,16 @@ class HeatAlerts {
   };
 
   /// 端末のタイムゾーンに依存しない日本時間
+  /// 日本時間の「現在」。UTCフラグ付きで返るため、**素のDateTimeと大小比較しない**こと
+  /// （Dartの isAfter は絶対時刻で比べるため、9時間ずれる。2026-09-01 に暑さ指数の
+  /// 予測が9時間先から表示される不具合が実発生した）。比較用は [nowJstNaive] を使う
   static DateTime nowJst() => DateTime.now().toUtc().add(const Duration(hours: 9));
+
+  /// 日本時間の「現在」を、CSV由来の素のDateTime（tz情報なし）と比較できる形で返す
+  static DateTime nowJstNaive() {
+    final j = nowJst();
+    return DateTime(j.year, j.month, j.day, j.hour, j.minute, j.second);
+  }
 
   /// 運用期間（4/22〜10/21）。期間外はCSVが404になるため機能自体を出さない
   static bool isInSeason(DateTime jst) {
