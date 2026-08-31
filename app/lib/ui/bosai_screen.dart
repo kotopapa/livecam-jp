@@ -220,6 +220,9 @@ class _BosaiScreenState extends State<BosaiScreen>
   // 都道府県コード → 発表中の注意報名セット（警報がない県の参考表示）
   Map<String, List<String>>? _advisories;
   String? _warningError;
+  /// 警報の最終取得時刻（成功時のみ更新）と、取得に失敗して前回値を表示中かどうか
+  DateTime? _warningsAt;
+  bool _warningStale = false;
 
   @override
   void initState() {
@@ -253,23 +256,16 @@ class _BosaiScreenState extends State<BosaiScreen>
   }
 
   Future<void> _loadWarnings() async {
-    setState(() {
-      _warnings = null;
-      _warningError = null;
-    });
-    Map<String, String> class10Office = const {};
+    // 取得中に既存の表示を消さない（消すと、失敗・低速時に「警報が無い」ように
+    // 見えてしまう。2026-08-31 富山の土砂災害危険警報で実発生）
+    if (mounted && _warningError != null) setState(() => _warningError = null);
+    // 区域名(area.json)の取得は警報本体と並行に行う。取れなくても
+    // 従来の推定(先頭3桁+000)で続行できるため、待ってから始めない
+    final officeFuture = _loadClass10Offices()
+        .catchError((_) => const <String, String>{});
     try {
-      class10Office = await _loadClass10Offices();
-    } catch (_) {
-      // 取れなくても従来の推定(先頭3桁+000)で続行する
-    }
-    try {
-      final resp = await http.get(
-        Uri.parse('${BosaiScreen.warningMapUrl}'
-            '?_=${DateTime.now().millisecondsSinceEpoch}'),
-        headers: {'Cache-Control': 'no-cache'},
-      ).timeout(const Duration(seconds: 15));
-      if (resp.statusCode != 200) throw Exception('HTTP ${resp.statusCode}');
+      final resp = await _getWarningMap();
+      final class10Office = await officeFuture;
       // r8形式: 発表報のログ配列。官署は気象警報(VPWW55)と土砂災害(VPWW56)等を
       // 別々の報として同時刻に出すため、官署×報種別(dataTypeCode)ごとに
       // 最新報を採用して合算する（官署単位だと土砂災害の報が落ちる）
@@ -341,11 +337,42 @@ class _BosaiScreenState extends State<BosaiScreen>
           _advisories = advResult;
           _warningOffices = officesByPref;
           _advisoryOffices = advOfficesByPref;
+          _warningsAt = DateTime.now();
+          _warningStale = false;
         });
       }
     } catch (e) {
-      if (mounted) setState(() => _warningError = '取得に失敗しました');
+      if (!mounted) return;
+      // 前回取得できていれば、その内容を残したまま「更新できず」を知らせる
+      setState(() {
+        if (_warnings == null) {
+          _warningError = '取得に失敗しました（引き下げてやり直せます）';
+        } else {
+          _warningStale = true;
+        }
+      });
     }
+  }
+
+  /// 警報マップの取得（キャッシュ無効化つき。1回だけ再試行する）
+  Future<http.Response> _getWarningMap() async {
+    Object? lastError;
+    for (var i = 0; i < 2; i++) {
+      try {
+        final resp = await http.get(
+          Uri.parse('${BosaiScreen.warningMapUrl}'
+              '?_=${DateTime.now().millisecondsSinceEpoch}'),
+          headers: {'Cache-Control': 'no-cache'},
+        ).timeout(const Duration(seconds: 20));
+        if (resp.statusCode != 200) throw Exception('HTTP ${resp.statusCode}');
+        return resp;
+      } catch (e) {
+        // 待たずに1回だけ即再試行する（タイムアウト時点で十分な時間が経っており、
+        // ここで待つと画面破棄後にタイマーが残る）
+        lastError = e;
+      }
+    }
+    throw Exception(lastError);
   }
 
   /// 環境省の熱中症警戒アラート（最新の発表回）。運用期間外・取得失敗は null
@@ -603,6 +630,27 @@ class _BosaiScreenState extends State<BosaiScreen>
                     );
   }
 
+  /// 最終取得時刻と、更新できなかったときの注記（前回値を表示中の目印）
+  Widget? _warningFreshnessBar() {
+    final t = _warningsAt;
+    if (t == null) return null;
+    String two(int v) => v.toString().padLeft(2, '0');
+    final at = t.toLocal();
+    return Container(
+      width: double.infinity,
+      color: _warningStale ? const Color(0xFFFFF3CD) : Colors.transparent,
+      padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+      child: Text(
+        _warningStale
+            ? '最新の情報を取得できませんでした（${two(at.hour)}:${two(at.minute)} 時点の情報を表示中）'
+            : '${two(at.hour)}:${two(at.minute)} 時点',
+        style: TextStyle(
+            fontSize: 11,
+            color: _warningStale ? const Color(0xFF8A6D3B) : Colors.grey[600]),
+      ),
+    );
+  }
+
   Widget _buildWarningTab() {
     if (_warningError != null) return Center(child: Text(_warningError!));
     if (_warnings == null) {
@@ -627,15 +675,19 @@ class _BosaiScreenState extends State<BosaiScreen>
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
         if (i == 0) {
-          return Padding(
-            padding: const EdgeInsets.all(12),
-            child: Text(
-              _warnings!.isEmpty
-                  ? '出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は下の一覧から確認できます。'
-                  : '出典：気象庁 気象警報・注意報。タップするとその都道府県のカメラ一覧を表示します。',
-              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+          final bar = _warningFreshnessBar();
+          return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            ?bar,
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
+              child: Text(
+                _warnings!.isEmpty
+                    ? '出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は下の一覧から確認できます。'
+                    : '出典：気象庁 気象警報・注意報。タップするとその都道府県のカメラ一覧を表示します。',
+                style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+              ),
             ),
-          );
+          ]);
         }
         // 警報一覧の下に熱中症警戒情報（環境省）→ 注意報 の順で積む
         if (i == prefs.length + 1) return _heatSection();
