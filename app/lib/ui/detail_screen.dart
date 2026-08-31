@@ -20,6 +20,7 @@ import '../util/geo.dart';
 import '../util/prefectures.dart';
 import '../util/time_format.dart';
 import 'ad_banner.dart';
+import 'elevation_label.dart';
 import 'pin_style.dart';
 
 /// 免責文言（SPEC 9.5。削ってはいけない）
@@ -247,6 +248,12 @@ class _DetailScreenState extends State<DetailScreen> {
       const Text('カテゴリ・位置', style: TextStyle(fontWeight: FontWeight.bold)),
       const SizedBox(height: 6),
       chips,
+      // 標高（国土地理院の標高API。国内のみ・1画面1リクエスト）
+      if (!camera.isWorld)
+        Padding(
+          padding: const EdgeInsets.only(top: 6),
+          child: ElevationLabel(lat: pos.latitude, lng: pos.longitude),
+        ),
       const SizedBox(height: 8),
       ClipRRect(
         borderRadius: BorderRadius.circular(8),

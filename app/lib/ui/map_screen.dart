@@ -22,6 +22,7 @@ import '../util/clustering.dart';
 import '../util/geo.dart';
 import 'bosai_screen.dart' show NearbyCamerasScreen;
 import 'detail_screen.dart';
+import 'elevation_label.dart';
 import 'pin_style.dart';
 
 /// 地図画面（SPEC 9.2②）。
@@ -567,6 +568,11 @@ class _MapScreenState extends State<MapScreen> {
                 padding: const EdgeInsets.only(top: 6),
                 child: Text(s.address, style: TextStyle(fontSize: 13, color: Colors.grey[700])),
               ),
+            // 標高（津波・高潮のときの判断材料。国土地理院の標高APIを1回だけ呼ぶ）
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: ElevationLabel(lat: s.lat, lng: s.lng),
+            ),
             const SizedBox(height: 8),
             const Text('対応する災害種別', style: TextStyle(fontSize: 11, color: Colors.black54)),
             const SizedBox(height: 4),

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
+import '../data/heat_alert.dart';
 import '../data/jma_layers.dart';
 import '../data/quake_intensity.dart';
 import '../models/camera.dart';
@@ -157,6 +158,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     if (t == null || DateTime.now().difference(t) >= _staleAfter) {
       _load();
       _loadWarnings();
+      _loadHeat();
     }
   }
 
@@ -177,6 +179,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       if (mounted && _isVisible) {
         _load();
         _loadWarnings();
+        _loadHeat();
       }
     });
   }
@@ -199,6 +202,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     // 通知経由で開いたときは最新情報に更新する
     _load();
     _loadWarnings();
+    _loadHeat();
   }
 
   List<_Quake>? _quakes;
@@ -222,6 +226,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     super.initState();
     _load();
     _loadWarnings();
+    _loadHeat();
     widget.app.navigationRequest.addListener(_onNavigationRequest);
     widget.visible?.addListener(_onVisibilityChanged);
     WidgetsBinding.instance.addObserver(this);
@@ -341,6 +346,36 @@ class _BosaiScreenState extends State<BosaiScreen>
     } catch (e) {
       if (mounted) setState(() => _warningError = '取得に失敗しました');
     }
+  }
+
+  /// 環境省の熱中症警戒アラート（最新の発表回）。運用期間外・取得失敗は null
+  HeatAlertReport? _heat;
+
+  /// 当日・翌日いずれかで発表中の都道府県（重い順）
+  List<HeatAlertPref> _heatPrefs = const [];
+
+  /// 熱中症警戒情報を取得する。運用期間（4/22〜10/21）外は取得もしない。
+  /// 取得失敗は前回の内容を残して静かに諦める（気象警報の表示は妨げない）
+  Future<void> _loadHeat() async {
+    final now = HeatAlerts.nowJst();
+    if (!HeatAlerts.isInSeason(now)) {
+      if (mounted && (_heat != null || _heatPrefs.isNotEmpty)) {
+        setState(() {
+          _heat = null;
+          _heatPrefs = const [];
+        });
+      }
+      return;
+    }
+    final report = await HeatAlerts.fetch(now: now);
+    if (!mounted || report == null) return;
+    final list = HeatAlerts.byPrefecture(report,
+        today: DateTime(now.year, now.month, now.day),
+        prefNames: prefectureNames);
+    setState(() {
+      _heat = report;
+      _heatPrefs = list;
+    });
   }
 
   // "+37.5+137.2-10000/" 形式の震源座標をパースする
@@ -466,6 +501,7 @@ class _BosaiScreenState extends State<BosaiScreen>
                 onPressed: () {
                   _load();
                   _loadWarnings();
+                  _loadHeat();
                 }),
           ],
           bottom: TabBar(controller: _tabs, tabs: const [
@@ -572,7 +608,9 @@ class _BosaiScreenState extends State<BosaiScreen>
     if (_warnings == null) {
       return const Center(child: CircularProgressIndicator());
     }
-    if (_warnings!.isEmpty && (_advisories?.isEmpty ?? true)) {
+    if (_warnings!.isEmpty &&
+        (_advisories?.isEmpty ?? true) &&
+        _heatPrefs.isEmpty) {
       return const Center(child: Text('現在、発表中の警報・注意報はありません'));
     }
     final prefs = _warnings!.keys.toList()
@@ -585,7 +623,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       });
     final advPrefs = (_advisories ?? const {}).keys.toList()..sort();
     return ListView.separated(
-      itemCount: prefs.length + 2,
+      itemCount: prefs.length + 3,
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
         if (i == 0) {
@@ -599,7 +637,9 @@ class _BosaiScreenState extends State<BosaiScreen>
             ),
           );
         }
-        if (i == prefs.length + 1) {
+        // 警報一覧の下に熱中症警戒情報（環境省）→ 注意報 の順で積む
+        if (i == prefs.length + 1) return _heatSection();
+        if (i == prefs.length + 2) {
           if (advPrefs.isEmpty) return const SizedBox.shrink();
           return ExpansionTile(
             leading: const Icon(Icons.info_outline, color: Color(0xFF616E7C)),
@@ -659,6 +699,73 @@ class _BosaiScreenState extends State<BosaiScreen>
       },
     );
   }
+
+  /// 熱中症警戒情報（環境省）の都道府県一覧。運用期間外・発表無しは何も出さない。
+  /// 規約により「出典：環境省熱中症予防情報サイト」と参考情報である旨を必ず併記する
+  Widget _heatSection() {
+    final list = _heatPrefs;
+    if (list.isEmpty) return const SizedBox.shrink();
+    final at = _heat?.reportAt;
+    final when = at == null
+        ? ''
+        : '（${at.month}/${at.day} ${at.hour.toString().padLeft(2, '0')}時発表）';
+    return ExpansionTile(
+      // 気象警報が無い日は熱中症だけが情報になるので開いた状態で出す
+      initiallyExpanded: _warnings?.isEmpty ?? false,
+      leading: Icon(Icons.thermostat, color: heatLevelColor(list.first.top)),
+      title: Text('熱中症警戒情報が発表中の地域（${list.length}都道府県）'),
+      subtitle: Text('${HeatAlerts.attribution}$when',
+          style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+          child: Text(
+            '${HeatAlerts.disclaimer}。タップするとその都道府県のカメラ一覧を表示します。',
+            style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+          ),
+        ),
+        for (final p in list)
+          ListTile(
+            dense: true,
+            leading: Icon(Icons.thermostat, color: heatLevelColor(p.top)),
+            title: Text(p.prefName),
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Wrap(spacing: 4, runSpacing: 2, children: [
+                  if (p.today.isAlert) _heatBadge('今日', p.today),
+                  if (p.tomorrow.isAlert) _heatBadge('明日', p.tomorrow),
+                ]),
+                if (p.areas.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Text(p.areas.join('・'),
+                        style: const TextStyle(fontSize: 11)),
+                  ),
+              ],
+            ),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => PrefCamerasScreen(
+                    app: widget.app,
+                    pref: p.prefCode,
+                    title: '${p.prefName}のカメラ（熱中症警戒情報）'))),
+          ),
+      ],
+    );
+  }
+
+  /// 「今日 熱中症警戒」等のバッジ（警報一覧のチップと同じ様式）
+  Widget _heatBadge(String day, HeatAlertLevel level) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+        decoration: BoxDecoration(
+          color: heatLevelColor(level),
+          borderRadius: BorderRadius.circular(4),
+        ),
+        child: Text('$day ${level.label}',
+            style: const TextStyle(color: Colors.white, fontSize: 11)),
+      );
 }
 
 /// 「横浜市北部」→「横浜市」のように気象庁の分割区域名を市名に丸める
