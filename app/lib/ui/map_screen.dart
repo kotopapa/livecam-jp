@@ -24,6 +24,7 @@ import '../util/clustering.dart';
 import '../util/geo.dart';
 import 'bosai_screen.dart' show NearbyCamerasScreen;
 import 'detail_screen.dart';
+import 'favorites_screen.dart';
 import 'elevation_label.dart';
 import 'pin_style.dart';
 
@@ -2168,6 +2169,16 @@ class _MapScreenState extends State<MapScreen> {
               tooltip: context.l10n.mapSearchTitle,
               onPressed: () => _showPlaceSearch(context),
               child: const Icon(Icons.search),
+            ),
+            const SizedBox(height: 8),
+            // お気に入り一覧（1.4.1 でタブから地図画面へ移動）
+            FloatingActionButton.small(
+              heroTag: 'favorites',
+              tooltip: context.l10n.tabFavorites,
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                      builder: (_) => FavoritesScreen(app: widget.app))),
+              child: const Icon(Icons.star_outline),
             ),
           ]),
         ),

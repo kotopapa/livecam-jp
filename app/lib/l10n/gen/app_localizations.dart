@@ -250,6 +250,12 @@ abstract class AppLocalizations {
   /// **'お気に入り'**
   String get tabFavorites;
 
+  /// 下部タブ: 防災の備え（備蓄チェックリスト）
+  ///
+  /// In ja, this message translates to:
+  /// **'備え'**
+  String get tabStockpile;
+
   /// No description provided for @tabSettings.
   ///
   /// In ja, this message translates to:
@@ -3292,6 +3298,54 @@ abstract class AppLocalizations {
   /// **'項目を削除'**
   String get stockpileDeleteItem;
 
+  /// 品目シートのチェック項目（準備できたか）
+  ///
+  /// In ja, this message translates to:
+  /// **'準備できた'**
+  String get stockpileMarkPrepared;
+
+  /// 品目シートの期限の見出し
+  ///
+  /// In ja, this message translates to:
+  /// **'消費期限'**
+  String get stockpileSectionExpiry;
+
+  /// 一覧の上に出す操作の案内
+  ///
+  /// In ja, this message translates to:
+  /// **'項目をタップすると期限の登録・選び方・購入先を表示します'**
+  String get stockpileItemTapHint;
+
+  /// 定番商品のメーカー公式ページへの副リンク
+  ///
+  /// In ja, this message translates to:
+  /// **'公式サイト'**
+  String get stockpileOfficialSite;
+
+  /// 世帯人数（乳幼児。ミルク・おむつの計算に使う）
+  ///
+  /// In ja, this message translates to:
+  /// **'乳幼児（ミルク・おむつ）'**
+  String get stockpileInfants;
+
+  /// 同じ日に複数の品目の期限が近づいたときの通知本文
+  ///
+  /// In ja, this message translates to:
+  /// **'{names} の期限が近づいています（{date}）'**
+  String stockpileNotifyExpiryBodyMany(String names, String date);
+
+  /// 通知本文で品目名を省略したときの「ほかN件」
+  ///
+  /// In ja, this message translates to:
+  /// **'ほか{count}件'**
+  String stockpileNotifyMoreItems(int count);
+
+  /// 通知本文で品目名をつなぐ区切り
+  ///
+  /// In ja, this message translates to:
+  /// **'・'**
+  String get stockpileNotifyNameSeparator;
+
   /// 削除したときのメッセージ
   ///
   /// In ja, this message translates to:
@@ -3391,7 +3445,7 @@ abstract class AppLocalizations {
   /// 商品リンクの但し書き（価格・在庫は載せていない旨）
   ///
   /// In ja, this message translates to:
-  /// **'メーカー公式ページへのリンクです。販売状況・価格は各ショップでご確認ください。'**
+  /// **'商品名で提携ショップを検索します（行末の ↗ はメーカー公式ページ）。販売状況・価格は各ショップでご確認ください。'**
   String get stockpileGuideProductsNote;
 
   /// 商品シートの見出し（提携ショップ検索）

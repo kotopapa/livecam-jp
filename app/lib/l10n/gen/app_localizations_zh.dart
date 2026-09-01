@@ -83,6 +83,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tabFavorites => '收藏';
 
   @override
+  String get tabStockpile => '备灾';
+
+  @override
   String get tabSettings => '设置';
 
   @override
@@ -1775,6 +1778,34 @@ class AppLocalizationsZh extends AppLocalizations {
   String get stockpileDeleteItem => '删除项目';
 
   @override
+  String get stockpileMarkPrepared => '已备好';
+
+  @override
+  String get stockpileSectionExpiry => '保质期';
+
+  @override
+  String get stockpileItemTapHint => '点击项目可登记保质期、查看选购要点和购买链接';
+
+  @override
+  String get stockpileOfficialSite => '官方网站';
+
+  @override
+  String get stockpileInfants => '婴幼儿（奶粉、尿布）';
+
+  @override
+  String stockpileNotifyExpiryBodyMany(String names, String date) {
+    return '$names 即将到期（$date）';
+  }
+
+  @override
+  String stockpileNotifyMoreItems(int count) {
+    return '等$count项';
+  }
+
+  @override
+  String get stockpileNotifyNameSeparator => '、';
+
+  @override
   String stockpileDeleted(String item) {
     return '已删除“$item”';
   }
@@ -1827,7 +1858,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get stockpileGuideProducts => '可参考的产品';
 
   @override
-  String get stockpileGuideProductsNote => '链接指向厂商官方页面。是否有货及价格请在各商店确认。';
+  String get stockpileGuideProductsNote =>
+      '点击可在合作商店搜索该商品（行尾的 ↗ 为厂商官方页面）。库存与价格请在各商店确认。';
 
   @override
   String get stockpileGuideSearch => '查找商品';
@@ -2050,6 +2082,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get tabFavorites => '我的最愛';
+
+  @override
+  String get tabStockpile => '備災';
 
   @override
   String get tabSettings => '設定';
@@ -3745,6 +3780,34 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get stockpileDeleteItem => '刪除項目';
 
   @override
+  String get stockpileMarkPrepared => '已備妥';
+
+  @override
+  String get stockpileSectionExpiry => '保存期限';
+
+  @override
+  String get stockpileItemTapHint => '點選項目可登記保存期限、查看選購要點與購買連結';
+
+  @override
+  String get stockpileOfficialSite => '官方網站';
+
+  @override
+  String get stockpileInfants => '嬰幼兒（奶粉、尿布）';
+
+  @override
+  String stockpileNotifyExpiryBodyMany(String names, String date) {
+    return '$names 即將到期（$date）';
+  }
+
+  @override
+  String stockpileNotifyMoreItems(int count) {
+    return '等$count項';
+  }
+
+  @override
+  String get stockpileNotifyNameSeparator => '、';
+
+  @override
   String stockpileDeleted(String item) {
     return '已刪除「$item」';
   }
@@ -3797,7 +3860,8 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get stockpileGuideProducts => '可參考的產品';
 
   @override
-  String get stockpileGuideProductsNote => '連結指向廠商官方頁面。是否有貨及價格請於各商店確認。';
+  String get stockpileGuideProductsNote =>
+      '點選可在合作商店搜尋該商品（行尾的 ↗ 為廠商官方頁面）。庫存與價格請在各商店確認。';
 
   @override
   String get stockpileGuideSearch => '尋找商品';

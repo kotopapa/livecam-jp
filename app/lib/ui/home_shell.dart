@@ -5,19 +5,27 @@ import 'ad_banner.dart';
 
 import '../app_state.dart';
 import '../data/locale_controller.dart';
+import '../data/stockpile.dart';
 import '../l10n/l10n.dart';
+import '../util/jst.dart';
 import 'bosai_screen.dart';
 import 'detail_screen.dart';
 import 'favorites_screen.dart';
 import 'list_screen.dart';
 import 'map_screen.dart';
 import 'settings_screen.dart';
+import 'stockpile_screen.dart';
 
-/// 4タブのシェル（地図 / 一覧 / お気に入り / 設定。デザイン案準拠）。
-/// 地図以外は次フェーズで実装するプレースホルダ。
+/// 5タブのシェル（地図 / 一覧 / 災害速報 / 備え / 設定）。
+///
+/// お気に入りはタブではなく地図画面右上の★ボタンから開く（1.4.1）。
+/// 「防災の備え」は設定の中では見つけにくかったためタブに昇格した。
 class HomeShell extends StatefulWidget {
-  const HomeShell(
-      {super.key, required this.app, required this.localeController});
+  const HomeShell({
+    super.key,
+    required this.app,
+    required this.localeController,
+  });
 
   final AppState app;
   final LocaleController localeController;
@@ -28,14 +36,35 @@ class HomeShell extends StatefulWidget {
 
 class _HomeShellState extends State<HomeShell> {
   int _index = 0;
+
   /// 災害速報タブが表示中か（BosaiScreen の自動更新に使う）
   final ValueNotifier<bool> _bosaiVisible = ValueNotifier<bool>(false);
+
+  /// 備えタブが表示中か（開いた日の記録＝点検日バッジの解除に使う）
+  final ValueNotifier<bool> _stockpileVisible = ValueNotifier<bool>(false);
+
+  /// 備えタブのバッジ（期限1か月以内・期限切れの品目数＋点検日超過）
+  int _stockpileAlertCount = 0;
 
   void _setIndex(int i) {
     if (i == _index) return;
     setState(() => _index = i);
     _bosaiVisible.value = i == 2;
+    _stockpileVisible.value = i == 3;
   }
+
+  Future<void> _refreshStockpileAlerts() async {
+    try {
+      final s = await StockpileStore.load();
+      final count = computeStockpileAlerts(s, jstNow()).count;
+      if (mounted && count != _stockpileAlertCount) {
+        setState(() => _stockpileAlertCount = count);
+      }
+    } catch (_) {
+      // 保存領域が使えない環境（テスト等）ではバッジ無し
+    }
+  }
+
   bool _updateDialogShown = false;
 
   @override
@@ -44,6 +73,8 @@ class _HomeShellState extends State<HomeShell> {
     widget.app.addListener(_maybeShowUpdateDialog);
     widget.app.addListener(_onAppChanged);
     widget.app.navigationRequest.addListener(_onNavigationRequest);
+    StockpileStore.changes.addListener(_refreshStockpileAlerts);
+    _refreshStockpileAlerts();
     _onNavigationRequest(); // 起動前に届いていた要求(終了状態からの通知タップ)
   }
 
@@ -72,16 +103,15 @@ class _HomeShellState extends State<HomeShell> {
     if (cameras.isEmpty) return; // init() の loadCached/refresh 後に再試行
     _pendingCameraId = null;
     final camera = cameras.where((c) => c.id == id).firstOrNull;
-    if (camera == null) {
-      _setIndex(3); // 台帳から消えたカメラ: お気に入り一覧へ
-      return;
-    }
-    _setIndex(3);
+    _setIndex(0);
     // 起動直後(initState経由)はビルド中のためフレーム後に遷移する
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
-      Navigator.of(context).push(MaterialPageRoute<void>(
-          builder: (_) => DetailScreen(camera: camera, app: widget.app)));
+      // 台帳から消えたカメラ: お気に入り一覧へ
+      final page = camera == null
+          ? FavoritesScreen(app: widget.app)
+          : DetailScreen(camera: camera, app: widget.app);
+      Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => page));
     });
   }
 
@@ -90,7 +120,9 @@ class _HomeShellState extends State<HomeShell> {
     widget.app.removeListener(_maybeShowUpdateDialog);
     widget.app.removeListener(_onAppChanged);
     widget.app.navigationRequest.removeListener(_onNavigationRequest);
+    StockpileStore.changes.removeListener(_refreshStockpileAlerts);
     _bosaiVisible.dispose();
+    _stockpileVisible.dispose();
     super.dispose();
   }
 
@@ -117,8 +149,10 @@ class _HomeShellState extends State<HomeShell> {
           actions: [
             if (storeUrl != null)
               FilledButton(
-                onPressed: () => launchUrl(Uri.parse(storeUrl),
-                    mode: LaunchMode.externalApplication),
+                onPressed: () => launchUrl(
+                  Uri.parse(storeUrl),
+                  mode: LaunchMode.externalApplication,
+                ),
                 child: Text(context.l10n.updateOpenStore),
               ),
           ],
@@ -129,36 +163,50 @@ class _HomeShellState extends State<HomeShell> {
 
   @override
   Widget build(BuildContext context) {
-    // 下部固定バナー: 一覧・災害速報・お気に入りタブ（地図と設定には出さない）。
+    // 下部固定バナー: 一覧・災害速報・備えタブ（地図と設定には出さない）。
+    // 備えは以前リスト途中に 300×250 の大型広告を置いていたが、
+    // 邪魔だという指摘で他タブと同じ下部固定の横長バナーに統一した
     // 特別警報の発表中は防災アプリとして広告を出さない
-    final showAd = (_index == 1 || _index == 2 || _index == 3) &&
+    final showAd =
+        (_index == 1 || _index == 2 || _index == 3) &&
         !widget.app.specialWarningActive;
     return Scaffold(
-      body: Column(children: [
-        Expanded(
-          child: IndexedStack(index: _index, children: [
-            MapScreen(app: widget.app),
-            ListScreen(app: widget.app),
-            BosaiScreen(app: widget.app, visible: _bosaiVisible),
-            FavoritesScreen(app: widget.app),
-            SettingsScreen(
-                app: widget.app, localeController: widget.localeController),
-          ]),
-        ),
-        // 表示するタブのときだけ広告を組み立てる。
-        // 以前は Offstage で保持していたが、画面外のまま表示回数だけが積み上がり
-        // 「見られていない在庫」と評価されて eCPM が9円まで落ちていた
-        // （2026-09-01 実測。日本のバナーの相場は100〜300円）
-        if (showAd) const AnchoredAdBanner(),
-      ]),
+      body: Column(
+        children: [
+          Expanded(
+            child: IndexedStack(
+              index: _index,
+              children: [
+                MapScreen(app: widget.app),
+                ListScreen(app: widget.app),
+                BosaiScreen(app: widget.app, visible: _bosaiVisible),
+                StockpileScreen(app: widget.app, visible: _stockpileVisible),
+                SettingsScreen(
+                  app: widget.app,
+                  localeController: widget.localeController,
+                ),
+              ],
+            ),
+          ),
+          // 表示するタブのときだけ広告を組み立てる。
+          // 以前は Offstage で保持していたが、画面外のまま表示回数だけが積み上がり
+          // 「見られていない在庫」と評価されて eCPM が9円まで落ちていた
+          // （2026-09-01 実測。日本のバナーの相場は100〜300円）
+          if (showAd) const AnchoredAdBanner(),
+        ],
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
         onDestinationSelected: _setIndex,
         destinations: [
           NavigationDestination(
-              icon: const Icon(Icons.map_outlined), label: context.l10n.tabMap),
+            icon: const Icon(Icons.map_outlined),
+            label: context.l10n.tabMap,
+          ),
           NavigationDestination(
-              icon: const Icon(Icons.list), label: context.l10n.tabList),
+            icon: const Icon(Icons.list),
+            label: context.l10n.tabList,
+          ),
           NavigationDestination(
             icon: Badge(
               isLabelVisible: widget.app.specialWarningActive,
@@ -168,14 +216,20 @@ class _HomeShellState extends State<HomeShell> {
             label: context.l10n.tabBosai,
           ),
           NavigationDestination(
-              icon: const Icon(Icons.star_border),
-              label: context.l10n.tabFavorites),
+            icon: Badge(
+              isLabelVisible: _stockpileAlertCount > 0,
+              label: Text('$_stockpileAlertCount'),
+              backgroundColor: const Color(0xFFE8710A),
+              child: const Icon(Icons.inventory_2_outlined),
+            ),
+            label: context.l10n.tabStockpile,
+          ),
           NavigationDestination(
-              icon: const Icon(Icons.settings_outlined),
-              label: context.l10n.tabSettings),
+            icon: const Icon(Icons.settings_outlined),
+            label: context.l10n.tabSettings,
+          ),
         ],
       ),
     );
   }
 }
-

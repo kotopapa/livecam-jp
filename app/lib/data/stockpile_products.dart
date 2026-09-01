@@ -26,7 +26,10 @@ class ProductLink {
   static ProductLink? fromJson(Map<String, dynamic> j) {
     final name = (j['name'] ?? j['title']) as String?;
     final url = j['url'] as String?;
-    if (name == null || name.isEmpty || url == null || !url.startsWith('http')) {
+    if (name == null ||
+        name.isEmpty ||
+        url == null ||
+        !url.startsWith('http')) {
       return null;
     }
     return ProductLink(name: name, url: url);
@@ -50,10 +53,25 @@ class ProductRef {
   /// 最後にURLの生存を確認した日（YYYY-MM-DD）
   final String? checkedAt;
 
+  /// 提携ショップで検索するときの語。タイトルの括弧以降（仕様の補足）を落とす
+  /// 例: 「尾西食品 尾西の白飯 100g（保存5年…）」→「尾西食品 尾西の白飯 100g」
+  String get searchKeyword {
+    var t = title.trim();
+    for (final sep in const ['（', '(', '【', '［', '[']) {
+      final i = t.indexOf(sep);
+      if (i > 0) t = t.substring(0, i);
+    }
+    t = t.trim();
+    return t.isEmpty ? title.trim() : t;
+  }
+
   static ProductRef? fromJson(Map<String, dynamic> j) {
     final title = j['title'] as String?;
     final url = j['url'] as String?;
-    if (title == null || title.isEmpty || url == null || !url.startsWith('http')) {
+    if (title == null ||
+        title.isEmpty ||
+        url == null ||
+        !url.startsWith('http')) {
       return null;
     }
     return ProductRef(
@@ -135,16 +153,16 @@ class StockpileProductGuide {
       why: j['why'] as String? ?? '',
       sources: [
         for (final s in (j['sources'] as List? ?? const []))
-          if (s is Map<String, dynamic>) ?ProductLink.fromJson(s)
+          if (s is Map<String, dynamic>) ?ProductLink.fromJson(s),
       ],
       search: {
         for (final e in (j['search'] as Map? ?? const {}).entries)
           if (e.key is String && e.value is String)
-            e.key as String: e.value as String
+            e.key as String: e.value as String,
       },
       products: [
         for (final p in (j['products'] as List? ?? const []))
-          if (p is Map<String, dynamic>) ?ProductRef.fromJson(p)
+          if (p is Map<String, dynamic>) ?ProductRef.fromJson(p),
       ],
       cert: j['cert'] is Map<String, dynamic>
           ? ProductCert.fromJson(j['cert'] as Map<String, dynamic>)
@@ -202,7 +220,7 @@ class StockpileProducts {
       certNote: j['cert_note'] as String? ?? '',
       sources: [
         for (final s in (j['sources'] as List? ?? const []))
-          if (s is Map<String, dynamic>) ?ProductLink.fromJson(s)
+          if (s is Map<String, dynamic>) ?ProductLink.fromJson(s),
       ],
       byItemId: guides,
     );
@@ -215,7 +233,7 @@ class StockpileProducts {
 /// 優先する（古い控えでリコール品を出し続けない）。オフラインのときだけ控えを使う。
 class StockpileProductsRepository {
   StockpileProductsRepository({http.Client? client, this.cacheDir})
-      : _client = client ?? http.Client();
+    : _client = client ?? http.Client();
 
   static const String url = '${apiBaseUrl}stockpile/products.json';
   static const String _cacheName = 'stockpile_products.json';
@@ -237,7 +255,8 @@ class StockpileProductsRepository {
       final f = _file;
       if (f == null || !await f.exists()) return null;
       return StockpileProducts.fromJson(
-          jsonDecode(await f.readAsString()) as Map<String, dynamic>);
+        jsonDecode(await f.readAsString()) as Map<String, dynamic>,
+      );
     } catch (_) {
       return null;
     }
@@ -261,8 +280,9 @@ class StockpileProductsRepository {
           .timeout(const Duration(seconds: 20));
       if (r.statusCode != 200) return null;
       final raw = utf8.decode(r.bodyBytes);
-      final p =
-          StockpileProducts.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+      final p = StockpileProducts.fromJson(
+        jsonDecode(raw) as Map<String, dynamic>,
+      );
       if (p != null) await _writeDisk(raw);
       return p;
     } catch (_) {
@@ -272,5 +292,6 @@ class StockpileProductsRepository {
 
   /// ネットワーク優先で取得し、失敗したらディスクの控えを返す。
   /// どちらも無ければ null（画面はアプリ内の検索語にフォールバックする）
-  Future<StockpileProducts?> load() async => await _fetch() ?? await _readDisk();
+  Future<StockpileProducts?> load() async =>
+      await _fetch() ?? await _readDisk();
 }

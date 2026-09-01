@@ -83,6 +83,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tabFavorites => 'お気に入り';
 
   @override
+  String get tabStockpile => '備え';
+
+  @override
   String get tabSettings => '設定';
 
   @override
@@ -1786,6 +1789,34 @@ class AppLocalizationsJa extends AppLocalizations {
   String get stockpileDeleteItem => '項目を削除';
 
   @override
+  String get stockpileMarkPrepared => '準備できた';
+
+  @override
+  String get stockpileSectionExpiry => '消費期限';
+
+  @override
+  String get stockpileItemTapHint => '項目をタップすると期限の登録・選び方・購入先を表示します';
+
+  @override
+  String get stockpileOfficialSite => '公式サイト';
+
+  @override
+  String get stockpileInfants => '乳幼児（ミルク・おむつ）';
+
+  @override
+  String stockpileNotifyExpiryBodyMany(String names, String date) {
+    return '$names の期限が近づいています（$date）';
+  }
+
+  @override
+  String stockpileNotifyMoreItems(int count) {
+    return 'ほか$count件';
+  }
+
+  @override
+  String get stockpileNotifyNameSeparator => '・';
+
+  @override
   String stockpileDeleted(String item) {
     return '「$item」を削除しました';
   }
@@ -1841,7 +1872,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get stockpileGuideProductsNote =>
-      'メーカー公式ページへのリンクです。販売状況・価格は各ショップでご確認ください。';
+      '商品名で提携ショップを検索します（行末の ↗ はメーカー公式ページ）。販売状況・価格は各ショップでご確認ください。';
 
   @override
   String get stockpileGuideSearch => '商品を探す';
@@ -2065,6 +2096,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get tabFavorites => 'おきにいり';
+
+  @override
+  String get tabStockpile => 'そなえ';
 
   @override
   String get tabSettings => 'せってい';
@@ -3802,6 +3836,34 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get stockpileDeleteItem => 'こうもくを けす';
 
   @override
+  String get stockpileMarkPrepared => 'よういできた';
+
+  @override
+  String get stockpileSectionExpiry => 'きげん';
+
+  @override
+  String get stockpileItemTapHint => 'こうもくを おすと きげんや えらびかた、かうところが みられます';
+
+  @override
+  String get stockpileOfficialSite => 'こうしきサイト';
+
+  @override
+  String get stockpileInfants => 'あかちゃん（ミルク・おむつ）';
+
+  @override
+  String stockpileNotifyExpiryBodyMany(String names, String date) {
+    return '$names の きげんが ちかづいて います（$date）';
+  }
+
+  @override
+  String stockpileNotifyMoreItems(int count) {
+    return 'ほか $countこ';
+  }
+
+  @override
+  String get stockpileNotifyNameSeparator => '・';
+
+  @override
   String stockpileDeleted(String item) {
     return '「$item」を けしました';
   }
@@ -3858,7 +3920,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get stockpileGuideProductsNote =>
-      'つくった かいしゃの ページに とびます。うっているか・ねだんは おみせで たしかめて ください。';
+      'しょうひんの なまえで ショップを さがします（ぎょうの みぎの ↗ は メーカーの こうしきページ）。ねだんや うっているかは ショップで たしかめて ください。';
 
   @override
   String get stockpileGuideSearch => 'しょうひんを さがす';

@@ -82,8 +82,18 @@ AppBar（… メニュー → 初期状態に戻す）
 
 ```
 https://ck.jp.ap.valuecommerce.com/servlet/referral
-  ?sid=<サイトID>&pid=<広告主プログラムID>&vc_url=<URLエンコードした遷移先>
+  ?sid=<サイトID>&pid=<MyLinkのpid＝広告スペースID>&vc_url=<URLエンコードした遷移先>
 ```
+
+> **pid は「広告主プログラムID」ではない**（2026-09-01 に確認）。Yahoo!ショッピングの
+> プログラムID 2025875 を pid に入れると `error/invalid_link.html` へ転送される。
+> pid には VC 管理画面で「広告主 → 広告作成 → MyLink → 広告スペース選択」で生成した
+> コードの `pid=`（9桁。例 8926902xx）を入れる。生成コードの sid/pid と config が一致
+> していても `default_banner.html` に飛ぶ場合は、その広告スペースにその広告主の MyLink
+> 広告が紐付いていない（別広告主で作った・提携が未承認 等）。
+>
+> 動作確認（default_banner / invalid_link に飛ばず 302 で遷移先に向かえばOK）:
+> `curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' 'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=<sid>&pid=<pid>&vc_url=https%3A%2F%2Fshopping.yahoo.co.jp%2F'`
 
 `vc_url` は遷移先URL**全体**を `Uri.encodeComponent` でエンコードする
 （`?` `&` `=` `:` `/` もエンコードされる）。組み立ては

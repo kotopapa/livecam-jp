@@ -27,7 +27,7 @@ class NotificationSettings {
   static const _warningLevelKey = 'notify_warning_level'; // '5' | '4'
 
   static final List<String> allPrefCodes = [
-    for (var i = 1; i <= 47; i++) i.toString().padLeft(2, '0')
+    for (var i = 1; i <= 47; i++) i.toString().padLeft(2, '0'),
   ];
 
   static const quakeLevels = ['5-', '5+', '6-'];
@@ -56,8 +56,8 @@ class NotificationSettings {
     quakeLevel = _prefs!.getString(_quakeLevelKey) ?? '5-';
     warningEnabled = _prefs!.getBool(_warningEnabledKey) ?? false;
     warningLevel = _prefs!.getString(_warningLevelKey) ?? '5';
-    warningPrefs =
-        (_prefs!.getStringList(_warningPrefsKey) ?? const []).toSet();
+    warningPrefs = (_prefs!.getStringList(_warningPrefsKey) ?? const [])
+        .toSet();
   }
 
   Future<bool> _ensurePermission() async {
@@ -108,7 +108,7 @@ class NotificationSettings {
       for (final code in warningPrefs) ...{
         'special-warning-$code',
         if (danger) 'danger-warning-$code',
-      }
+      },
     };
   }
 
@@ -119,8 +119,8 @@ class NotificationSettings {
   Future<void> _applyWarningTopics() async {
     final fm = FirebaseMessaging.instance;
     final desired = _desiredWarningTopics();
-    final applied =
-        (_prefs?.getStringList(_appliedTopicsKey) ?? const []).toSet();
+    final applied = (_prefs?.getStringList(_appliedTopicsKey) ?? const [])
+        .toSet();
     final result = applied.toSet();
     for (final topic in applied.difference(desired)) {
       try {
@@ -155,7 +155,9 @@ class NotificationSettings {
   Future<void> setWarningPrefs(Set<String> prefs) async {
     warningPrefs = prefs.where(allPrefCodes.contains).toSet();
     await _prefs?.setStringList(
-        _warningPrefsKey, warningPrefs.toList()..sort());
+      _warningPrefsKey,
+      warningPrefs.toList()..sort(),
+    );
     unawaited(_applyWarningTopics());
     // 災害速報ウィジェットも同じ都道府県で絞り込む
     unawaited(WidgetBridge.syncBosaiSettings(prefs: warningPrefs));
@@ -179,8 +181,9 @@ class NotificationSettings {
   /// 実機で確認。直接送信は届くのにquake5等が不達）。APNsトークンの変化を
   /// 検知したらFCMトークンを破棄して再発行し、購読を作り直す。
   Future<void> healTokenAndReapply() async {
-    final fm = FirebaseMessaging.instance;
     try {
+      // Firebase 未初期化（テスト等）では instance 取得自体が投げるので try の内側で
+      final fm = FirebaseMessaging.instance;
       // APNsトークンは起動直後はnullのことがあるため少し粘る（iOSのみ。
       // AndroidにAPNsは無いので待たない）
       String? apns;
@@ -195,8 +198,11 @@ class NotificationSettings {
       var fcm = await fm.getToken();
       final lastApns = _prefs?.getString(_lastApnsTokenKey);
       final lastFcm = _prefs?.getString(_lastFcmTokenKey);
-      if (apns != null && lastApns != null && apns != lastApns &&
-          fcm != null && fcm == lastFcm) {
+      if (apns != null &&
+          lastApns != null &&
+          apns != lastApns &&
+          fcm != null &&
+          fcm == lastFcm) {
         // APNsだけが変わった＝トピック紐付けが腐っている可能性が高い。
         // トークンを再発行して購読を全て作り直す
         await fm.deleteToken();

@@ -39,6 +39,7 @@ library;
 
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart' show ChangeNotifier, Listenable;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../util/jst.dart';
@@ -113,7 +114,7 @@ class StockpileItemSpec {
     this.perPersonPerDay = 0,
     this.perPerson = 0,
     this.perHousehold = 0,
-    this.childrenOnly = false,
+    this.infantsOnly = false,
     this.expiryRelevant = false,
   });
 
@@ -122,8 +123,14 @@ class StockpileItemSpec {
   final StockpileCategory category;
   final StockpileUnit unit;
 
-  /// アフィリエイト検索に使う語（日本語。Amazon.co.jp を検索する）
+  /// アフィリエイト検索に使う語（日本語。Amazon.co.jp を検索する）。
+  /// **空なら購入導線を出さない**（現金・書類の写し・連絡先メモ・常備薬のように
+  /// 「買って備える」ものではない品目。以前は小銭入れ・防水ケースなど周辺用品の
+  /// 検索語を入れていたが、品目と噛み合わず不自然だった）
   final String searchKeyword;
+
+  /// ショップ検索の導線を出してよい品目か
+  bool get purchasable => searchKeyword.trim().isNotEmpty;
 
   /// 1人1日あたりの必要量
   final double perPersonPerDay;
@@ -134,24 +141,26 @@ class StockpileItemSpec {
   /// 世帯あたりの必要量（人数にも日数にも依存しない）
   final double perHousehold;
 
-  /// 子どもの人数だけで計算する品目（粉ミルク・おむつ）
-  final bool childrenOnly;
+  /// 乳幼児（ミルク・おむつが要る年齢）の人数だけで数える品目。
+  /// 「子ども」全員分を計上するとミルクを飲まない子にも積まれてしまう
+  final bool infantsOnly;
 
   /// 消費期限の管理が要る品目か（UIで期限欄を勧める）
   final bool expiryRelevant;
 
   /// 必要量（切り上げ・最低1）。
-  /// [adults] [children] は人数、[days] は備蓄日数。
+  /// [adults] [children] [infants] は人数、[days] は備蓄日数。
+  /// 乳幼児は水・食料などの一般品目でも1人として数える（安全側）
   int requiredQuantity({
     required int adults,
     required int children,
+    int infants = 0,
     required int days,
   }) {
-    final people = childrenOnly ? children : adults + children;
-    if (childrenOnly && children <= 0) return 0;
-    final total = perPersonPerDay * people * days +
-        perPerson * people +
-        perHousehold;
+    final people = infantsOnly ? infants : adults + children + infants;
+    if (infantsOnly && infants <= 0) return 0;
+    final total =
+        perPersonPerDay * people * days + perPerson * people + perHousehold;
     if (total <= 0) return 0;
     return total.ceil();
   }
@@ -203,7 +212,7 @@ const List<StockpileItemSpec> defaultStockpileItems = [
     unit: StockpileUnit.times,
     searchKeyword: '液体ミルク 備蓄',
     perPersonPerDay: 3,
-    childrenOnly: true,
+    infantsOnly: true,
     expiryRelevant: true,
   ),
   // --- 明かり・電源 -----------------------------------------------------
@@ -273,7 +282,7 @@ const List<StockpileItemSpec> defaultStockpileItems = [
     unit: StockpileUnit.sheet,
     searchKeyword: '紙おむつ 備蓄',
     perPersonPerDay: 6,
-    childrenOnly: true,
+    infantsOnly: true,
   ),
   // --- 救急・衛生用品 ---------------------------------------------------
   StockpileItemSpec(
@@ -287,7 +296,7 @@ const List<StockpileItemSpec> defaultStockpileItems = [
     id: 'medicine',
     category: StockpileCategory.firstAid,
     unit: StockpileUnit.days,
-    searchKeyword: 'お薬手帳 ケース 防災',
+    searchKeyword: '',
     perPersonPerDay: 1,
     expiryRelevant: true,
   ),
@@ -340,21 +349,21 @@ const List<StockpileItemSpec> defaultStockpileItems = [
     id: 'cash',
     category: StockpileCategory.valuables,
     unit: StockpileUnit.set,
-    searchKeyword: 'コインケース 小銭入れ',
+    searchKeyword: '',
     perHousehold: 1,
   ),
   StockpileItemSpec(
     id: 'idCopy',
     category: StockpileCategory.valuables,
     unit: StockpileUnit.piece,
-    searchKeyword: '防水ケース 書類 A4',
+    searchKeyword: '',
     perPerson: 1,
   ),
   StockpileItemSpec(
     id: 'contactMemo',
     category: StockpileCategory.valuables,
     unit: StockpileUnit.piece,
-    searchKeyword: '防災 連絡カード 耐水メモ',
+    searchKeyword: '',
     perHousehold: 1,
   ),
   StockpileItemSpec(
@@ -391,13 +400,13 @@ class StockpileEntry {
   bool get isCustom => customTitle != null;
 
   Map<String, dynamic> toJson() => {
-        'id': id,
-        'checked': checked,
-        if (expiry != null) 'expiry': formatDateKey(expiry!),
-        if (customTitle != null) 'title': customTitle,
-        if (customCategory != null) 'category': customCategory!.name,
-        if (customQuantity != null) 'quantity': customQuantity,
-      };
+    'id': id,
+    'checked': checked,
+    if (expiry != null) 'expiry': formatDateKey(expiry!),
+    if (customTitle != null) 'title': customTitle,
+    if (customCategory != null) 'category': customCategory!.name,
+    if (customQuantity != null) 'quantity': customQuantity,
+  };
 
   static StockpileEntry? fromJson(Map<String, dynamic> j) {
     final id = j['id'];
@@ -414,7 +423,8 @@ class StockpileEntry {
 }
 
 /// `yyyy-MM-dd`（JSTの壁時計の日付。時刻を混ぜない）
-String formatDateKey(DateTime d) => '${d.year.toString().padLeft(4, '0')}-'
+String formatDateKey(DateTime d) =>
+    '${d.year.toString().padLeft(4, '0')}-'
     '${d.month.toString().padLeft(2, '0')}-'
     '${d.day.toString().padLeft(2, '0')}';
 
@@ -442,20 +452,24 @@ ExpiryStatus expiryStatusOf(DateTime? expiry, DateTime now) {
   final today = startOfDay(asWallClock(now));
   final due = startOfDay(expiry);
   if (due.isBefore(today)) return ExpiryStatus.expired;
-  final noticeFrom =
-      DateTime(due.year, due.month - expiryReminderMonths, due.day);
+  final noticeFrom = DateTime(
+    due.year,
+    due.month - expiryReminderMonths,
+    due.day,
+  );
   return today.isBefore(noticeFrom) ? ExpiryStatus.ok : ExpiryStatus.soon;
 }
 
 /// 期限リマインドを出す日（期限の1か月前・JSTの壁時計の日付）
-DateTime expiryReminderDate(DateTime expiry) => DateTime(
-    expiry.year, expiry.month - expiryReminderMonths, expiry.day);
+DateTime expiryReminderDate(DateTime expiry) =>
+    DateTime(expiry.year, expiry.month - expiryReminderMonths, expiry.day);
 
 /// チェックリスト全体の状態（SharedPreferences に JSON で保存する）。
 class StockpileState {
   StockpileState({
     this.adults = 2,
     this.children = 0,
+    this.infants = 0,
     this.days = defaultStockpileDays,
     Map<String, StockpileEntry>? entries,
     List<StockpileEntry>? customItems,
@@ -463,13 +477,17 @@ class StockpileState {
     this.expiryReminderEnabled = false,
     this.inspectionReminderEnabled = false,
     List<String>? inspectionDays,
-  })  : entries = entries ?? <String, StockpileEntry>{},
-        customItems = customItems ?? <StockpileEntry>[],
-        removedItemIds = removedItemIds ?? <String>{},
-        inspectionDays = inspectionDays ?? List.of(defaultInspectionDays);
+    this.lastOpenedAt,
+  }) : entries = entries ?? <String, StockpileEntry>{},
+       customItems = customItems ?? <StockpileEntry>[],
+       removedItemIds = removedItemIds ?? <String>{},
+       inspectionDays = inspectionDays ?? List.of(defaultInspectionDays);
 
   int adults;
   int children;
+
+  /// 乳幼児（ミルク・おむつの対象）。[children] とは別に数える
+  int infants;
   int days;
 
   /// 既定品目のID → 状態
@@ -487,27 +505,39 @@ class StockpileState {
   /// 点検日（`MM-dd`）
   final List<String> inspectionDays;
 
-  /// 表示する既定品目（削除済みと、子どもがいないときの子ども専用品目を除く）
+  /// 最後に「備え」画面を開いた日（JSTの壁時計の日付）。
+  /// 点検日を過ぎてから開いていなければタブにバッジを出す
+  DateTime? lastOpenedAt;
+
+  /// チェックリストを使い始めているか（チェック・期限・カスタム項目のいずれかがある）
+  bool get isInUse =>
+      customItems.isNotEmpty ||
+      entries.values.any((e) => e.checked || e.expiry != null);
+
+  /// 表示する既定品目（削除済みと、乳幼児がいないときの乳幼児専用品目を除く）
   List<StockpileItemSpec> get visibleSpecs => [
-        for (final s in defaultStockpileItems)
-          if (!removedItemIds.contains(s.id) &&
-              !(s.childrenOnly && children <= 0))
-            s
-      ];
+    for (final s in defaultStockpileItems)
+      if (!removedItemIds.contains(s.id) && !(s.infantsOnly && infants <= 0)) s,
+  ];
 
   /// [spec] の状態（無ければ作って登録する）
   StockpileEntry entryOf(String id) =>
       entries.putIfAbsent(id, () => StockpileEntry(id: id));
 
   int requiredOf(StockpileItemSpec spec) => spec.requiredQuantity(
-      adults: adults, children: children, days: days);
+    adults: adults,
+    children: children,
+    infants: infants,
+    days: days,
+  );
 
   /// 必要量のめやす（サマリーカード用）
   int get totalWaterLiters =>
-      (waterLitersPerPersonPerDay * (adults + children) * days).ceil();
+      (waterLitersPerPersonPerDay * (adults + children + infants) * days)
+          .ceil();
 
   int get totalMeals =>
-      (mealsPerPersonPerDay * (adults + children) * days).ceil();
+      (mealsPerPersonPerDay * (adults + children + infants) * days).ceil();
 
   /// 進捗（チェック済み / 全項目）
   (int done, int total) get progress {
@@ -526,27 +556,29 @@ class StockpileState {
 
   /// 期限が登録されている全項目（既定＋カスタム）
   List<StockpileEntry> get datedEntries => [
-        for (final s in visibleSpecs)
-          if (entries[s.id]?.expiry != null) entries[s.id]!,
-        for (final c in customItems)
-          if (c.expiry != null) c,
-      ];
+    for (final s in visibleSpecs)
+      if (entries[s.id]?.expiry != null) entries[s.id]!,
+    for (final c in customItems)
+      if (c.expiry != null) c,
+  ];
 
   Map<String, dynamic> toJson() => {
-        'version': 1,
-        'adults': adults,
-        'children': children,
-        'days': days,
-        'entries': [
-          for (final e in entries.values)
-            if (e.checked || e.expiry != null) e.toJson()
-        ],
-        'custom': [for (final c in customItems) c.toJson()],
-        'removed': removedItemIds.toList()..sort(),
-        'expiryReminder': expiryReminderEnabled,
-        'inspectionReminder': inspectionReminderEnabled,
-        'inspectionDays': inspectionDays,
-      };
+    'version': 1,
+    'adults': adults,
+    'children': children,
+    'infants': infants,
+    'days': days,
+    'entries': [
+      for (final e in entries.values)
+        if (e.checked || e.expiry != null) e.toJson(),
+    ],
+    'custom': [for (final c in customItems) c.toJson()],
+    'removed': removedItemIds.toList()..sort(),
+    'expiryReminder': expiryReminderEnabled,
+    'inspectionReminder': inspectionReminderEnabled,
+    'inspectionDays': inspectionDays,
+    if (lastOpenedAt != null) 'lastOpened': formatDateKey(lastOpenedAt!),
+  };
 
   static StockpileState fromJson(Map<String, dynamic> j) {
     final entries = <String, StockpileEntry>{};
@@ -565,31 +597,96 @@ class StockpileState {
     return StockpileState(
       adults: ((j['adults'] as num?)?.toInt() ?? 2).clamp(1, 20),
       children: ((j['children'] as num?)?.toInt() ?? 0).clamp(0, 20),
+      infants: ((j['infants'] as num?)?.toInt() ?? 0).clamp(0, 20),
       days: stockpileDayOptions.contains(days) ? days : defaultStockpileDays,
       entries: entries,
       customItems: custom,
       removedItemIds: {
         for (final r in (j['removed'] as List? ?? const []))
-          if (r is String) r
+          if (r is String) r,
       },
       expiryReminderEnabled: j['expiryReminder'] == true,
       inspectionReminderEnabled: j['inspectionReminder'] == true,
-      inspectionDays: [
-        for (final d in (j['inspectionDays'] as List? ?? const []))
-          if (d is String && RegExp(r'^\d{2}-\d{2}$').hasMatch(d)) d
-      ].isEmpty
+      inspectionDays:
+          [
+            for (final d in (j['inspectionDays'] as List? ?? const []))
+              if (d is String && RegExp(r'^\d{2}-\d{2}$').hasMatch(d)) d,
+          ].isEmpty
           ? List.of(defaultInspectionDays)
           : [
               for (final d in (j['inspectionDays'] as List))
-                if (d is String && RegExp(r'^\d{2}-\d{2}$').hasMatch(d)) d
+                if (d is String && RegExp(r'^\d{2}-\d{2}$').hasMatch(d)) d,
             ],
+      lastOpenedAt: parseDateKey(j['lastOpened'] as String?),
     );
   }
 }
 
 /// SharedPreferences への保存・復元。
+/// 「備え」タブのバッジに使う注意の内訳
+class StockpileAlerts {
+  const StockpileAlerts({required this.expiring, required this.inspectionDue});
+
+  /// 期限まで1か月以内・期限切れの品目数
+  final int expiring;
+
+  /// 点検日を過ぎてから画面を開いていない
+  final bool inspectionDue;
+
+  int get count => expiring + (inspectionDue ? 1 : 0);
+}
+
+/// `MM-dd` の一覧のうち、[now]（JSTの壁時計）以前で最も新しい到来日
+DateTime? lastInspectionDate(List<String> inspectionDays, DateTime now) {
+  final today = startOfDay(asWallClock(now));
+  DateTime? latest;
+  for (final md in inspectionDays) {
+    final m = RegExp(r'^(\d{2})-(\d{2})$').firstMatch(md);
+    if (m == null) continue;
+    final mo = int.parse(m.group(1)!);
+    final d = int.parse(m.group(2)!);
+    for (final year in [today.year, today.year - 1]) {
+      final at = DateTime(year, mo, d);
+      if (at.month != mo || at.day != d) continue;
+      if (at.isAfter(today)) continue;
+      if (latest == null || at.isAfter(latest)) latest = at;
+      break;
+    }
+  }
+  return latest;
+}
+
+/// タブのバッジに出す注意を数える（純関数）。
+/// - 期限: 1か月以内・期限切れの品目（期限を更新するまで残る）
+/// - 点検日: 使い始めている（または点検通知ON）世帯で、直近の点検日より後に
+///   画面を開いていない場合（開けば消える）
+StockpileAlerts computeStockpileAlerts(StockpileState s, DateTime now) {
+  var expiring = 0;
+  for (final e in s.datedEntries) {
+    final st = expiryStatusOf(e.expiry, now);
+    if (st == ExpiryStatus.soon || st == ExpiryStatus.expired) expiring++;
+  }
+  var inspectionDue = false;
+  if (s.inspectionReminderEnabled || s.isInUse) {
+    final last = lastInspectionDate(s.inspectionDays, now);
+    if (last != null) {
+      final opened = s.lastOpenedAt;
+      inspectionDue = opened == null || startOfDay(opened).isBefore(last);
+    }
+  }
+  return StockpileAlerts(expiring: expiring, inspectionDue: inspectionDue);
+}
+
+class _StockpileChanges extends ChangeNotifier {
+  void notify() => notifyListeners();
+}
+
 class StockpileStore {
   static const prefsKey = 'stockpile_v1';
+
+  /// 保存・消去のたびに通知する（HomeShell がタブのバッジを更新するため）
+  static final _StockpileChanges _changes = _StockpileChanges();
+  static Listenable get changes => _changes;
 
   /// 保存済みの状態を読む（未保存・壊れていれば既定値）
   static Future<StockpileState> load() async {
@@ -600,11 +697,13 @@ class StockpileStore {
   static Future<void> save(StockpileState state) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(prefsKey, jsonEncode(state.toJson()));
+    _changes.notify();
   }
 
   static Future<void> clear() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(prefsKey);
+    _changes.notify();
   }
 
   /// JSON文字列 → 状態（テストしやすいように分離）

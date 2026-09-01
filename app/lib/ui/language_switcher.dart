@@ -6,79 +6,108 @@ import '../l10n/l10n.dart';
 /// 言語名は「その言語自身の表記（自称）」で出す（どの言語の話者にも読めるように、
 /// どのロケールでも同じ7つのラベルを並べる）。
 String languageDisplayName(AppLanguage language) => switch (language) {
-      AppLanguage.ja => '日本語',
-      AppLanguage.jaHira => 'やさしい日本語',
-      AppLanguage.en => 'English',
-      AppLanguage.zhHans => '简体中文',
-      AppLanguage.zhHant => '繁體中文',
-      AppLanguage.ko => '한국어',
-      AppLanguage.vi => 'Tiếng Việt',
-    };
+  AppLanguage.ja => '日本語',
+  AppLanguage.jaHira => 'やさしい日本語',
+  AppLanguage.en => 'English',
+  AppLanguage.zhHans => '简体中文',
+  AppLanguage.zhHant => '繁體中文',
+  AppLanguage.ko => '한국어',
+  AppLanguage.vi => 'Tiếng Việt',
+};
 
-/// オンボーディング1画面目に常設する言語切替ボタン。押すと即座に切り替わる。
+/// 言語選択シート。オンボーディングと設定画面で共通。
 ///
-/// 7言語あり狭い端末では1行に収まらないため**横スクロール**にしている
-/// （Wrap で折り返すとオンボーディングの縦レイアウトが崩れるため）。
-/// 選択中のチップが画面外にならないよう、初回表示時にそこまでスクロールする。
-class LanguageSwitcher extends StatefulWidget {
+/// 選んだらシートを閉じてから切り替える（切り替えは MaterialApp ごと作り直すため、
+/// 開いたままのルートが残らないように順序を固定する）。
+Future<void> showLanguageSheet(
+  BuildContext context,
+  LocaleController controller, {
+  bool showFollowSystem = false,
+}) {
+  final l10n = context.l10n;
+  return showModalBottomSheet<void>(
+    context: context,
+    useSafeArea: true,
+    showDragHandle: true,
+    builder: (sheetContext) => SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(24, 0, 24, 8),
+            child: Text(
+              // 今の言語が読めない人にも分かるよう英語を併記する
+              controller.language == AppLanguage.en
+                  ? l10n.languageChooseTitle
+                  : '${l10n.languageChooseTitle} / Language',
+              style: Theme.of(sheetContext).textTheme.titleMedium,
+            ),
+          ),
+          for (final lang in AppLanguage.values)
+            ListTile(
+              title: Text(languageDisplayName(lang)),
+              trailing: controller.language == lang
+                  ? Icon(
+                      Icons.check,
+                      color: Theme.of(sheetContext).colorScheme.primary,
+                    )
+                  : null,
+              selected: controller.language == lang,
+              onTap: () {
+                Navigator.of(sheetContext).pop();
+                controller.setLanguage(lang);
+              },
+            ),
+          if (showFollowSystem) ...[
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.smartphone),
+              title: Text(l10n.languageFollowSystem),
+              enabled: controller.isExplicit,
+              onTap: () {
+                Navigator.of(sheetContext).pop();
+                controller.followSystem();
+              },
+            ),
+          ],
+          const SizedBox(height: 8),
+        ],
+      ),
+    ),
+  );
+}
+
+/// オンボーディングに常設する言語切替ボタン。
+///
+/// 「🌐 現在の言語 ▾」の1ボタンで、押すと全言語の一覧シートが開く。
+/// 以前はチップを横スクロールで並べていたが、端で見切れて他の言語があると
+/// 分からず、画面上部を占有していたため、標準的なドロップダウン型に変更した。
+class LanguageSwitcher extends StatelessWidget {
   const LanguageSwitcher({super.key, required this.controller});
 
   final LocaleController controller;
 
   @override
-  State<LanguageSwitcher> createState() => _LanguageSwitcherState();
-}
-
-class _LanguageSwitcherState extends State<LanguageSwitcher> {
-  final ScrollController _scroll = ScrollController();
-
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _revealSelected());
-  }
-
-  /// 選択中のチップがだいたい見える位置まで寄せる（正確な位置合わせは不要）
-  void _revealSelected() {
-    if (!_scroll.hasClients) return;
-    final i = AppLanguage.values.indexOf(widget.controller.language);
-    if (i < 0) return;
-    final max = _scroll.position.maxScrollExtent;
-    if (max <= 0) return; // 全部見えている
-    final target = (i / (AppLanguage.values.length - 1)) * max;
-    _scroll.jumpTo(target.clamp(0.0, max));
-  }
-
-  @override
-  void dispose() {
-    _scroll.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: widget.controller,
-      builder: (context, _) => SingleChildScrollView(
-        controller: _scroll,
-        scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 8),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            for (final lang in AppLanguage.values) ...[
-              ChoiceChip(
-                label: Text(languageDisplayName(lang),
-                    style: const TextStyle(fontSize: 12)),
-                visualDensity: VisualDensity.compact,
-                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                labelPadding: const EdgeInsets.symmetric(horizontal: 4),
-                selected: widget.controller.language == lang,
-                onSelected: (_) => widget.controller.setLanguage(lang),
-              ),
-              const SizedBox(width: 6),
+      listenable: controller,
+      builder: (context, _) => Align(
+        alignment: Alignment.centerRight,
+        child: OutlinedButton.icon(
+          onPressed: () => showLanguageSheet(context, controller),
+          icon: const Icon(Icons.language, size: 20),
+          label: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(languageDisplayName(controller.language)),
+              const Icon(Icons.arrow_drop_down, size: 20),
             ],
-          ],
+          ),
+          style: OutlinedButton.styleFrom(
+            padding: const EdgeInsets.fromLTRB(12, 0, 6, 0),
+            visualDensity: VisualDensity.compact,
+          ),
         ),
       ),
     );
@@ -91,38 +120,6 @@ class LanguageSettingTile extends StatelessWidget {
 
   final LocaleController controller;
 
-  Future<void> _pick(BuildContext context) async {
-    final l10n = context.l10n;
-    await showDialog<void>(
-      context: context,
-      builder: (dialogContext) => SimpleDialog(
-        title: Text(l10n.languageChooseTitle),
-        children: [
-          for (final lang in AppLanguage.values)
-            ListTile(
-              leading: Icon(controller.language == lang
-                  ? Icons.radio_button_checked
-                  : Icons.radio_button_unchecked),
-              title: Text(languageDisplayName(lang)),
-              onTap: () {
-                controller.setLanguage(lang);
-                Navigator.of(dialogContext).pop();
-              },
-            ),
-          ListTile(
-            leading: const Icon(Icons.smartphone),
-            title: Text(l10n.languageFollowSystem),
-            enabled: controller.isExplicit,
-            onTap: () {
-              controller.followSystem();
-              Navigator.of(dialogContext).pop();
-            },
-          ),
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
@@ -132,7 +129,8 @@ class LanguageSettingTile extends StatelessWidget {
         title: Text(context.l10n.languageSettingTitle),
         subtitle: Text(languageDisplayName(controller.language)),
         trailing: const Icon(Icons.chevron_right),
-        onTap: () => _pick(context),
+        onTap: () =>
+            showLanguageSheet(context, controller, showFollowSystem: true),
       ),
     );
   }

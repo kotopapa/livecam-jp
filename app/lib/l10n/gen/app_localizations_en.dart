@@ -84,6 +84,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tabFavorites => 'Favorites';
 
   @override
+  String get tabStockpile => 'Prepare';
+
+  @override
   String get tabSettings => 'Settings';
 
   @override
@@ -1863,6 +1866,35 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockpileDeleteItem => 'Remove item';
 
   @override
+  String get stockpileMarkPrepared => 'Prepared';
+
+  @override
+  String get stockpileSectionExpiry => 'Expiry date';
+
+  @override
+  String get stockpileItemTapHint =>
+      'Tap an item to set its expiry date and see tips and where to buy';
+
+  @override
+  String get stockpileOfficialSite => 'Official site';
+
+  @override
+  String get stockpileInfants => 'Infants (formula, diapers)';
+
+  @override
+  String stockpileNotifyExpiryBodyMany(String names, String date) {
+    return '$names expire soon ($date)';
+  }
+
+  @override
+  String stockpileNotifyMoreItems(int count) {
+    return 'and $count more';
+  }
+
+  @override
+  String get stockpileNotifyNameSeparator => ', ';
+
+  @override
   String stockpileDeleted(String item) {
     return 'Removed “$item”';
   }
@@ -1922,7 +1954,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get stockpileGuideProductsNote =>
-      'Links go to the manufacturers’ own pages. Check availability and price at each shop.';
+      'Tap to search partner shops for the product (↗ at the end of the row opens the manufacturer’s page). Check availability and price at each shop.';
 
   @override
   String get stockpileGuideSearch => 'Find products';

@@ -53,6 +53,10 @@
   "tabList": "一覧",
   "tabBosai": "災害速報",
   "tabFavorites": "お気に入り",
+  "tabStockpile": "備え",
+  "@tabStockpile": {
+    "description": "下部タブ: 防災の備え（備蓄チェックリスト）"
+  },
   "tabSettings": "設定",
   "onboardingTitle1": "地図からすぐに探せる",
   "onboardingBody1": "全国1万台以上のライブカメラを地図に表示。河川・道路・海岸などカテゴリ別に色分けされています。",
@@ -1802,6 +1806,45 @@
   "@stockpileDeleteItem": {
     "description": "項目の削除"
   },
+  "stockpileMarkPrepared": "準備できた",
+  "@stockpileMarkPrepared": {
+    "description": "品目シートのチェック項目（準備できたか）"
+  },
+  "stockpileSectionExpiry": "消費期限",
+  "@stockpileSectionExpiry": {
+    "description": "品目シートの期限の見出し"
+  },
+  "stockpileItemTapHint": "項目をタップすると期限の登録・選び方・購入先を表示します",
+  "@stockpileItemTapHint": {
+    "description": "一覧の上に出す操作の案内"
+  },
+  "stockpileOfficialSite": "公式サイト",
+  "@stockpileOfficialSite": {
+    "description": "定番商品のメーカー公式ページへの副リンク"
+  },
+  "stockpileInfants": "乳幼児（ミルク・おむつ）",
+  "@stockpileInfants": {
+    "description": "世帯人数（乳幼児。ミルク・おむつの計算に使う）"
+  },
+  "stockpileNotifyExpiryBodyMany": "{names} の期限が近づいています（{date}）",
+  "@stockpileNotifyExpiryBodyMany": {
+    "description": "同じ日に複数の品目の期限が近づいたときの通知本文",
+    "placeholders": {
+      "names": {"type": "String"},
+      "date": {"type": "String"}
+    }
+  },
+  "stockpileNotifyMoreItems": "ほか{count}件",
+  "@stockpileNotifyMoreItems": {
+    "description": "通知本文で品目名を省略したときの「ほかN件」",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "stockpileNotifyNameSeparator": "・",
+  "@stockpileNotifyNameSeparator": {
+    "description": "通知本文で品目名をつなぐ区切り"
+  },
   "stockpileDeleted": "「{item}」を削除しました",
   "@stockpileDeleted": {
     "description": "削除したときのメッセージ",
@@ -1876,7 +1919,7 @@
   "@stockpileGuideProducts": {
     "description": "商品シートの見出し（メーカー公式ページの一覧）"
   },
-  "stockpileGuideProductsNote": "メーカー公式ページへのリンクです。販売状況・価格は各ショップでご確認ください。",
+  "stockpileGuideProductsNote": "商品名で提携ショップを検索します（行末の ↗ はメーカー公式ページ）。販売状況・価格は各ショップでご確認ください。",
   "@stockpileGuideProductsNote": {
     "description": "商品リンクの但し書き（価格・在庫は載せていない旨）"
   },

@@ -28,7 +28,24 @@ import 'stockpile.dart';
 /// 通知の種類
 enum ReminderKind { expiry, inspection }
 
-/// 予約する1件の通知（表示文言は持たない＝UI層でl10n解決する）
+/// 期限リマインドの対象1件
+class ReminderItem {
+  const ReminderItem({this.itemId, this.customTitle, required this.expiry});
+
+  /// 既定品目のID（カスタム項目は null）
+  final String? itemId;
+
+  /// カスタム項目の名称（既定品目は null）
+  final String? customTitle;
+
+  /// 消費期限（JSTの壁計の日付）
+  final DateTime expiry;
+}
+
+/// 予約する1件の通知（表示文言は持たない＝UI層でl10n解決する）。
+///
+/// 期限リマインドは**通知日が同じ品目を1通にまとめる**（[items]）。
+/// [itemId] [customTitle] [expiry] は先頭の品目の値（後方互換）
 class StockpileReminder {
   const StockpileReminder({
     required this.id,
@@ -37,6 +54,7 @@ class StockpileReminder {
     this.itemId,
     this.customTitle,
     this.expiry,
+    this.items = const [],
   });
 
   /// 通知ID（[reminderIdBase] 以降）
@@ -54,6 +72,9 @@ class StockpileReminder {
 
   /// 対象の消費期限（JSTの壁時計の日付）
   final DateTime? expiry;
+
+  /// この通知でまとめて知らせる品目（期限リマインドのみ。通知日順・期限順）
+  final List<ReminderItem> items;
 }
 
 /// 通知IDのレンジ先頭（7100〜7199を使う）
@@ -68,8 +89,10 @@ const int maxExpiryReminders = 40;
 /// 予約すべき通知の一覧を作る（純関数。テスト対象）。
 ///
 /// [now] は **JSTの壁時計**。過ぎた日時は予約しない。
-List<StockpileReminder> buildReminders(StockpileState state,
-    {required DateTime now}) {
+List<StockpileReminder> buildReminders(
+  StockpileState state, {
+  required DateTime now,
+}) {
   final wallNow = asWallClock(now);
   final out = <StockpileReminder>[];
 
@@ -78,30 +101,52 @@ List<StockpileReminder> buildReminders(StockpileState state,
     for (final md in state.inspectionDays) {
       final at = nextInspectionDate(md, wallNow);
       if (at == null) continue;
-      out.add(StockpileReminder(
-          id: id++, kind: ReminderKind.inspection, at: at));
+      out.add(
+        StockpileReminder(id: id++, kind: ReminderKind.inspection, at: at),
+      );
     }
   }
 
   if (state.expiryReminderEnabled) {
-    final dated = [
-      for (final e in state.datedEntries) e,
-    ]..sort((a, b) => a.expiry!.compareTo(b.expiry!));
-    var id = reminderIdBase + 10;
+    final dated = [for (final e in state.datedEntries) e]
+      ..sort((a, b) => a.expiry!.compareTo(b.expiry!));
+    // 通知日（期限の1か月前）が同じ品目は1通にまとめる
+    final byDay = <DateTime, List<ReminderItem>>{};
     for (final e in dated) {
       final noticeDay = expiryReminderDate(e.expiry!);
       final at = DateTime(
-          noticeDay.year, noticeDay.month, noticeDay.day, reminderHour);
+        noticeDay.year,
+        noticeDay.month,
+        noticeDay.day,
+        reminderHour,
+      );
       if (!at.isAfter(wallNow)) continue; // 過ぎている分は予約しない
-      out.add(StockpileReminder(
-        id: id++,
-        kind: ReminderKind.expiry,
-        at: at,
-        itemId: e.isCustom ? null : e.id,
-        customTitle: e.customTitle,
-        expiry: e.expiry,
-      ));
-      if (out.length >= maxExpiryReminders) break;
+      byDay
+          .putIfAbsent(at, () => [])
+          .add(
+            ReminderItem(
+              itemId: e.isCustom ? null : e.id,
+              customTitle: e.customTitle,
+              expiry: e.expiry!,
+            ),
+          );
+    }
+    var id = reminderIdBase + 10;
+    var count = 0;
+    for (final day in byDay.keys.toList()..sort()) {
+      final items = byDay[day]!;
+      out.add(
+        StockpileReminder(
+          id: id++,
+          kind: ReminderKind.expiry,
+          at: day,
+          itemId: items.first.itemId,
+          customTitle: items.first.customTitle,
+          expiry: items.first.expiry,
+          items: items,
+        ),
+      );
+      if (++count >= maxExpiryReminders) break;
     }
   }
   return out;
@@ -117,7 +162,9 @@ DateTime? nextInspectionDate(String monthDay, DateTime now) {
   final wallNow = asWallClock(now);
   var at = DateTime(wallNow.year, mo, d, reminderHour);
   if (at.month != mo || at.day != d) return null; // 2月30日など
-  if (!at.isAfter(wallNow)) at = DateTime(wallNow.year + 1, mo, d, reminderHour);
+  if (!at.isAfter(wallNow)) {
+    at = DateTime(wallNow.year + 1, mo, d, reminderHour);
+  }
   return at;
 }
 
@@ -164,14 +211,21 @@ class StockpileReminderService {
   Future<bool> requestPermission() async {
     await ensureInitialized();
     if (Platform.isIOS) {
-      final ios = _plugin.resolvePlatformSpecificImplementation<
-          IOSFlutterLocalNotificationsPlugin>();
+      final ios = _plugin
+          .resolvePlatformSpecificImplementation<
+            IOSFlutterLocalNotificationsPlugin
+          >();
       return await ios?.requestPermissions(
-              alert: true, badge: true, sound: true) ??
+            alert: true,
+            badge: true,
+            sound: true,
+          ) ??
           false;
     }
-    final android = _plugin.resolvePlatformSpecificImplementation<
-        AndroidFlutterLocalNotificationsPlugin>();
+    final android = _plugin
+        .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin
+        >();
     return await android?.requestNotificationsPermission() ?? true;
   }
 
@@ -206,7 +260,12 @@ class StockpileReminderService {
           title: t.title,
           body: t.body,
           scheduledDate: tz.TZDateTime(
-              tz.local, r.at.year, r.at.month, r.at.day, r.at.hour),
+            tz.local,
+            r.at.year,
+            r.at.month,
+            r.at.day,
+            r.at.hour,
+          ),
           notificationDetails: _details,
           androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
         );

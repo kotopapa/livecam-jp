@@ -18,19 +18,23 @@
 library;
 
 import '../config.dart';
+import 'stockpile_products.dart' show ProductRef;
 
 class AffiliateLinks {
   const AffiliateLinks._();
 
   /// 有効な広告主だけを取り出す（テストのため一覧を差し替えられるようにする）
-  static List<VcMerchant> enabledIn(List<VcMerchant> merchants) =>
-      [for (final m in merchants) if (m.enabled && m.pid.isNotEmpty) m];
+  static List<VcMerchant> enabledIn(List<VcMerchant> merchants) => [
+    for (final m in merchants)
+      if (m.enabled && m.pid.isNotEmpty) m,
+  ];
 
   /// いま画面に出してよい広告主（提携承認済みのものだけ）
   static List<VcMerchant> get enabledMerchants => enabledIn(vcMerchants);
 
   /// 導線が使えるか（sid未設定・全店舗未承認なら false → ボタンを出さない）
-  static bool get isAvailable => vcSid.isNotEmpty && enabledMerchants.isNotEmpty;
+  static bool get isAvailable =>
+      vcSid.isNotEmpty && enabledMerchants.isNotEmpty;
 
   /// 有効な広告主が2つ以上あるか（true なら「探す」で店舗選択シートを出す）
   static bool needsPickerIn(List<VcMerchant> merchants) =>
@@ -51,9 +55,10 @@ class AffiliateLinks {
     required String sid,
     required String pid,
     required Uri destination,
-  }) =>
-      Uri.parse('$vcReferralEndpoint?sid=$sid&pid=$pid'
-          '&vc_url=${Uri.encodeComponent(destination.toString())}');
+  }) => Uri.parse(
+    '$vcReferralEndpoint?sid=$sid&pid=$pid'
+    '&vc_url=${Uri.encodeComponent(destination.toString())}',
+  );
 
   /// 検索語 [keyword] を [merchant] で検索するアフィリエイトリンク。
   /// 未承認の広告主・空の検索語では null を返す。
@@ -78,4 +83,33 @@ class AffiliateLinks {
 
   static Uri? soleSearchLink(String keyword) =>
       soleSearchLinkIn(keyword, vcMerchants);
+
+  /// 定番商品 [product] を [merchant] で開くアフィリエイトリンク。
+  ///
+  /// - `shop` が店舗キーと一致する（モール上の商品ページ）ならその商品ページを
+  ///   リファラルで包む
+  /// - それ以外（メーカー公式ページなど）は商品名で店舗を検索する。
+  ///   公式ページをリファラルで包んでも成果にならないため
+  static Uri? productLink(ProductRef product, VcMerchant merchant) {
+    if (!merchant.enabled || merchant.pid.isEmpty || vcSid.isEmpty) return null;
+    if (product.shop == merchant.key) {
+      final dest = Uri.tryParse(product.url);
+      if (dest == null) return null;
+      return referral(sid: vcSid, pid: merchant.pid, destination: dest);
+    }
+    return searchLink(product.searchKeyword, merchant);
+  }
+
+  /// [product] に出す店舗。モール商品ページならその店舗だけ、公式ページなら全提携先
+  static List<VcMerchant> productMerchantsIn(
+    ProductRef product,
+    List<VcMerchant> merchants,
+  ) {
+    final enabled = enabledIn(merchants);
+    final own = enabled.where((m) => m.key == product.shop).toList();
+    return own.isNotEmpty ? own : enabled;
+  }
+
+  static List<VcMerchant> productMerchants(ProductRef product) =>
+      productMerchantsIn(product, vcMerchants);
 }

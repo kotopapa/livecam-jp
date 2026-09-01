@@ -84,6 +84,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get tabFavorites => 'Yêu thích';
 
   @override
+  String get tabStockpile => 'Chuẩn bị';
+
+  @override
   String get tabSettings => 'Cài đặt';
 
   @override
@@ -1870,6 +1873,35 @@ class AppLocalizationsVi extends AppLocalizations {
   String get stockpileDeleteItem => 'Xóa mục';
 
   @override
+  String get stockpileMarkPrepared => 'Đã chuẩn bị';
+
+  @override
+  String get stockpileSectionExpiry => 'Hạn dùng';
+
+  @override
+  String get stockpileItemTapHint =>
+      'Chạm vào mục để đặt hạn dùng, xem cách chọn và nơi mua';
+
+  @override
+  String get stockpileOfficialSite => 'Trang chính thức';
+
+  @override
+  String get stockpileInfants => 'Trẻ nhỏ (sữa, tã)';
+
+  @override
+  String stockpileNotifyExpiryBodyMany(String names, String date) {
+    return '$names sắp hết hạn ($date)';
+  }
+
+  @override
+  String stockpileNotifyMoreItems(int count) {
+    return 'và $count mục khác';
+  }
+
+  @override
+  String get stockpileNotifyNameSeparator => ', ';
+
+  @override
   String stockpileDeleted(String item) {
     return 'Đã xóa “$item”';
   }
@@ -1929,7 +1961,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get stockpileGuideProductsNote =>
-      'Liên kết dẫn đến trang chính thức của nhà sản xuất. Hãy kiểm tra tình trạng còn hàng và giá tại từng cửa hàng.';
+      'Chạm để tìm sản phẩm tại cửa hàng liên kết (↗ ở cuối dòng mở trang chính thức của nhà sản xuất). Vui lòng kiểm tra tình trạng bán và giá tại từng cửa hàng.';
 
   @override
   String get stockpileGuideSearch => 'Tìm sản phẩm';

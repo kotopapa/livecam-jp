@@ -83,6 +83,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tabFavorites => '즐겨찾기';
 
   @override
+  String get tabStockpile => '대비';
+
+  @override
   String get tabSettings => '설정';
 
   @override
@@ -1796,6 +1799,34 @@ class AppLocalizationsKo extends AppLocalizations {
   String get stockpileDeleteItem => '항목 삭제';
 
   @override
+  String get stockpileMarkPrepared => '준비 완료';
+
+  @override
+  String get stockpileSectionExpiry => '유통기한';
+
+  @override
+  String get stockpileItemTapHint => '항목을 누르면 기한 등록·선택 요령·구매처를 볼 수 있습니다';
+
+  @override
+  String get stockpileOfficialSite => '공식 사이트';
+
+  @override
+  String get stockpileInfants => '영유아(분유·기저귀)';
+
+  @override
+  String stockpileNotifyExpiryBodyMany(String names, String date) {
+    return '$names의 기한이 다가옵니다($date)';
+  }
+
+  @override
+  String stockpileNotifyMoreItems(int count) {
+    return '외 $count건';
+  }
+
+  @override
+  String get stockpileNotifyNameSeparator => ', ';
+
+  @override
   String stockpileDeleted(String item) {
     return '「$item」을(를) 삭제했습니다';
   }
@@ -1853,7 +1884,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get stockpileGuideProductsNote =>
-      '제조사 공식 페이지로 연결됩니다. 판매 여부와 가격은 각 쇼핑몰에서 확인하세요.';
+      '누르면 제휴 쇼핑몰에서 해당 상품을 검색합니다(행 끝의 ↗는 제조사 공식 페이지). 판매 여부와 가격은 각 쇼핑몰에서 확인하세요.';
 
   @override
   String get stockpileGuideSearch => '상품 찾기';

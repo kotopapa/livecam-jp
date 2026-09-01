@@ -10,19 +10,22 @@ void main() {
   testWidgets('スキップしても免責ページに行き、同意ボタンで完了する', (tester) async {
     SharedPreferences.setMockInitialValues({});
     var done = false;
-    await tester.pumpWidget(MaterialApp(
-      locale: const Locale('ja'),
-      supportedLocales: AppLocalizations.supportedLocales,
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      home: OnboardingScreen(
+    await tester.pumpWidget(
+      MaterialApp(
+        locale: const Locale('ja'),
+        supportedLocales: AppLocalizations.supportedLocales,
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        home: OnboardingScreen(
           onDone: () => done = true,
-          localeController: LocaleController(initial: AppLanguage.ja)),
-    ));
+          localeController: LocaleController(initial: AppLanguage.ja),
+        ),
+      ),
+    );
 
     // 1ページ目に「はじめる」はない（免責は飛ばせない）
     expect(find.text('同意してはじめる'), findsNothing);
@@ -48,17 +51,46 @@ void main() {
 
     expect(find.text('地図からすぐに探せる'), findsOneWidget);
 
-    // English に切り替える → その場で反映される
+    // 言語ボタン → 一覧シートから English を選ぶ → その場で反映される
+    await tester.tap(find.byIcon(Icons.language));
+    await tester.pumpAndSettle();
+    expect(find.text('Tiếng Việt'), findsOneWidget); // 全言語が並ぶ
     await tester.tap(find.text('English'));
     await tester.pumpAndSettle();
     expect(find.text('Find cameras on the map'), findsOneWidget);
     expect(controller.language, AppLanguage.en);
 
-    // やさしい日本語へ
+    // やさしい日本語へ（ボタンの表示も切り替わっている）
+    expect(find.text('English'), findsOneWidget);
+    await tester.tap(find.byIcon(Icons.language));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('やさしい日本語'));
     await tester.pumpAndSettle();
     expect(find.text('ちずから すぐに さがせます'), findsOneWidget);
     expect(controller.language, AppLanguage.jaHira);
+  });
+
+  testWidgets('幅320pxのベトナム語でも最終ページのボタンがあふれず省略もされない', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    tester.view.physicalSize = const Size(320, 640);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    final controller = LocaleController(initial: AppLanguage.vi);
+    await tester.pumpWidget(_OnboardingHost(controller: controller));
+
+    await tester.tap(find.byType(TextButton)); // スキップ
+    await tester.pumpAndSettle();
+    // レイアウトの overflow はテストでは例外になるので、ここまで来れば収まっている
+    final text = tester.widget<Text>(
+      find.descendant(
+        of: find.byType(FilledButton),
+        matching: find.byType(Text),
+      ),
+    );
+    expect(text.data, 'Đồng ý và bắt đầu');
+    final size = tester.getSize(find.byType(FilledButton));
+    // ボタンが文字幅ぶん確保できている（半分に制限されると省略される）
+    expect(size.width, greaterThan(150));
   });
 }
 
@@ -70,17 +102,17 @@ class _OnboardingHost extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ListenableBuilder(
-        listenable: controller,
-        builder: (context, _) => MaterialApp(
-          locale: controller.locale,
-          supportedLocales: AppLocalizations.supportedLocales,
-          localizationsDelegates: const [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          home: OnboardingScreen(onDone: () {}, localeController: controller),
-        ),
-      );
+    listenable: controller,
+    builder: (context, _) => MaterialApp(
+      locale: controller.locale,
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      home: OnboardingScreen(onDone: () {}, localeController: controller),
+    ),
+  );
 }

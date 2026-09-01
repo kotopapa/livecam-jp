@@ -8,7 +8,6 @@ import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'stockpile_screen.dart';
 import 'tip_screen.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -26,9 +25,12 @@ const _requestFormUrl =
     'https://docs.google.com/forms/d/e/1FAIpQLScRz0Enqfrq-lrbuDVBdFD1jwSyl4GJEZtgTJxAoZfYo-QWJw/viewform';
 const _termsUrl = 'https://kotopapa.github.io/livecam-jp/terms.html';
 const _privacyUrl = 'https://kotopapa.github.io/livecam-jp/privacy.html';
+
 /// 気象庁「気象情報等に関する多言語辞書」（防災用語の各言語訳の出典）。
 /// 公共データ利用規約（第1.0版）＝CC BY 4.0互換。出典表示が必須
-const _jmaDictionaryUrl = 'https://www.data.jma.go.jp/developer/multilingual.html';
+const _jmaDictionaryUrl =
+    'https://www.data.jma.go.jp/developer/multilingual.html';
+
 /// 開発者のXアカウント（Xアプリがあればユニバーサルリンクでアプリが開く）
 const _xUrl = 'https://x.com/kotopapa8';
 
@@ -38,8 +40,11 @@ Future<void> _open(String url) =>
 /// 設定タブ（SPEC 9.2⑥）。
 /// 置いてはいけない項目: 更新間隔の変更（60秒固定）・プッシュ通知（スコープ外）。
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen(
-      {super.key, required this.app, required this.localeController});
+  const SettingsScreen({
+    super.key,
+    required this.app,
+    required this.localeController,
+  });
 
   final AppState app;
   final LocaleController localeController;
@@ -73,40 +78,52 @@ class _SettingsScreenState extends State<SettingsScreen> {
       context: context,
       builder: (context) => AlertDialog(
         title: Text(context.l10n.settingsInvite),
-        content: Column(mainAxisSize: MainAxisSize.min, children: [
-          Text(context.l10n.settingsInviteDialogBody,
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              context.l10n.settingsInviteDialogBody,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 13)),
-          const SizedBox(height: 12),
-          Container(
-            color: Colors.white,
-            padding: const EdgeInsets.all(8),
-            child: QrImageView(data: url, size: 200),
-          ),
-          const SizedBox(height: 12),
-          SelectableText(url,
+              style: const TextStyle(fontSize: 13),
+            ),
+            const SizedBox(height: 12),
+            Container(
+              color: Colors.white,
+              padding: const EdgeInsets.all(8),
+              child: QrImageView(data: url, size: 200),
+            ),
+            const SizedBox(height: 12),
+            SelectableText(
+              url,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 12, color: Colors.blueGrey)),
-        ]),
+              style: const TextStyle(fontSize: 12, color: Colors.blueGrey),
+            ),
+          ],
+        ),
         actions: [
           TextButton.icon(
             icon: const Icon(Icons.copy, size: 18),
             label: Text(context.l10n.commonCopy),
             onPressed: () {
               Clipboard.setData(ClipboardData(text: url));
-              ScaffoldMessenger.of(this.context).showSnackBar(SnackBar(
-                  content: Text(this.context.l10n.settingsLinkCopied)));
+              ScaffoldMessenger.of(this.context).showSnackBar(
+                SnackBar(content: Text(this.context.l10n.settingsLinkCopied)),
+              );
             },
           ),
           TextButton.icon(
             icon: const Icon(Icons.ios_share, size: 18),
             label: Text(context.l10n.commonShare),
-            onPressed: () => SharePlus.instance.share(ShareParams(
-                text: '${this.context.l10n.settingsInviteShareText}\n$url')),
+            onPressed: () => SharePlus.instance.share(
+              ShareParams(
+                text: '${this.context.l10n.settingsInviteShareText}\n$url',
+              ),
+            ),
           ),
           TextButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: Text(context.l10n.commonClose)),
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(context.l10n.commonClose),
+          ),
         ],
       ),
     );
@@ -118,14 +135,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
       final review = InAppReview.instance;
       await review.openStoreListing(appStoreId: appStoreId);
     } catch (_) {
-      await launchUrl(Uri.parse('$_storeUrl?action=write-review'),
-          mode: LaunchMode.externalApplication);
+      await launchUrl(
+        Uri.parse('$_storeUrl?action=write-review'),
+        mode: LaunchMode.externalApplication,
+      );
     }
   }
 
   void _showPermissionDenied() {
-    ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(context.l10n.settingsNotifyDenied)));
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(context.l10n.settingsNotifyDenied)));
   }
 
   AppState get app => widget.app;
@@ -136,7 +156,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
       await app.clearCacheAndReload();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(context.l10n.settingsClearCacheDone)));
+          SnackBar(content: Text(context.l10n.settingsClearCacheDone)),
+        );
       }
     } finally {
       if (mounted) setState(() => _clearingCache = false);
@@ -146,12 +167,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
   String _warningPrefsSummary(AppLocalizations l10n) {
     final prefs = _notify.warningPrefs;
     if (prefs.isEmpty) return l10n.settingsNotifyAreaAll;
-    final names =
-        (prefs.toList()..sort()).map((c) => prefectureNameOf(l10n, c)).toList();
-    final sep =
-        Localizations.localeOf(context).languageCode == 'ja' ? '・' : ', ';
+    final names = (prefs.toList()..sort())
+        .map((c) => prefectureNameOf(l10n, c))
+        .toList();
+    final sep = Localizations.localeOf(context).languageCode == 'ja'
+        ? '・'
+        : ', ';
     if (names.length <= 3) return names.join(sep);
-    return l10n.settingsNotifyAreaSummary(names.take(3).join(sep), names.length);
+    return l10n.settingsNotifyAreaSummary(
+      names.take(3).join(sep),
+      names.length,
+    );
   }
 
   // 通知診断の隠し表示(バージョン5回タップで解放)
@@ -170,17 +196,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
       if (!dir.existsSync()) {
         summary = l10n.settingsCrashDiagNoneHint;
       } else {
-        final files = dir
-            .listSync()
-            .whereType<File>()
-            .where((f) => f.path.endsWith('.json'))
-            .toList()
-          ..sort((a, b) => b.path.compareTo(a.path));
+        final files =
+            dir
+                .listSync()
+                .whereType<File>()
+                .where((f) => f.path.endsWith('.json'))
+                .toList()
+              ..sort((a, b) => b.path.compareTo(a.path));
         if (files.isEmpty) {
           summary = l10n.settingsCrashDiagNone;
         } else {
           summary = l10n.settingsDiagCrashRecords(
-              files.length, files.first.uri.pathSegments.last);
+            files.length,
+            files.first.uri.pathSegments.last,
+          );
           latestJson = files.first.readAsStringSync();
           // 概要(クラッシュ種別)を先頭に抽出
           try {
@@ -188,7 +217,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
             final kinds = <String>[
               if (d['crashDiagnostics'] != null) l10n.settingsDiagKindCrash,
               if (d['hangDiagnostics'] != null) l10n.settingsDiagKindHang,
-              if (d['cpuExceptionDiagnostics'] != null) l10n.settingsDiagKindCpu,
+              if (d['cpuExceptionDiagnostics'] != null)
+                l10n.settingsDiagKindCpu,
               if (d['diskWriteExceptionDiagnostics'] != null)
                 l10n.settingsDiagKindDiskWrite,
             ];
@@ -231,13 +261,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onPressed: () {
                 Clipboard.setData(ClipboardData(text: latestJson));
                 ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text(l10n.settingsJsonCopied)));
+                  SnackBar(content: Text(l10n.settingsJsonCopied)),
+                );
               },
               child: Text(l10n.settingsCopyFullText),
             ),
           TextButton(
-              onPressed: () => Navigator.of(ctx).pop(),
-              child: Text(l10n.commonClose)),
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: Text(l10n.commonClose),
+          ),
         ],
       ),
     );
@@ -288,14 +320,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
           TextButton(
             onPressed: () {
               Clipboard.setData(ClipboardData(text: fcm));
-              ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(l10n.settingsTokenCopied)));
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(l10n.settingsTokenCopied)));
             },
             child: Text(l10n.settingsCopyToken),
           ),
           TextButton(
-              onPressed: () => Navigator.of(ctx).pop(),
-              child: Text(l10n.commonClose)),
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: Text(l10n.commonClose),
+          ),
         ],
       ),
     );
@@ -312,25 +346,35 @@ class _SettingsScreenState extends State<SettingsScreen> {
           contentPadding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
           content: SizedBox(
             width: double.maxFinite,
-            child: Column(mainAxisSize: MainAxisSize.min, children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Text(l10n.settingsNotifyAreaHint,
-                    style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-              ),
-              Flexible(
-                child: ListView(shrinkWrap: true, children: [
-                  for (final code in NotificationSettings.allPrefCodes)
-                    CheckboxListTile(
-                      dense: true,
-                      title: Text(prefectureNameOf(l10n, code)),
-                      value: selected.contains(code),
-                      onChanged: (v) => setDialogState(() =>
-                          v! ? selected.add(code) : selected.remove(code)),
-                    ),
-                ]),
-              ),
-            ]),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Text(
+                    l10n.settingsNotifyAreaHint,
+                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                  ),
+                ),
+                Flexible(
+                  child: ListView(
+                    shrinkWrap: true,
+                    children: [
+                      for (final code in NotificationSettings.allPrefCodes)
+                        CheckboxListTile(
+                          dense: true,
+                          title: Text(prefectureNameOf(l10n, code)),
+                          value: selected.contains(code),
+                          onChanged: (v) => setDialogState(
+                            () =>
+                                v! ? selected.add(code) : selected.remove(code),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
           actions: [
             TextButton(
@@ -359,316 +403,348 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final l10n = context.l10n;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settingsTitle)),
-      body: ListView(children: [
-        _SupportCard(onTap: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (_) => const TipScreen()))),
-        // 防災の備え（備蓄チェックリスト）。1.4.0 で追加
-        ListTile(
-          leading: const Icon(Icons.inventory_2_outlined),
-          title: Text(l10n.stockpileEntryTitle),
-          subtitle: Text(l10n.stockpileEntrySubtitle),
-          trailing: const Icon(Icons.chevron_right),
-          onTap: () => Navigator.of(context).push(MaterialPageRoute(
-              builder: (_) => StockpileScreen(app: widget.app))),
-        ),
-        // 言語切替（1.4.0。いつでも切り替えられる。選択は端末に保存される）
-        LanguageSettingTile(controller: widget.localeController),
-        const Divider(),
-        _SectionHeader(l10n.settingsSectionNotify),
-        SwitchListTile(
-          secondary: const Icon(Icons.rss_feed),
-          title: Text(l10n.settingsQuakeTitle),
-          subtitle: Text(_notifyLoaded && _notify.quakeEnabled
-              ? l10n.settingsQuakeSubtitleOn(
-                  quakeLevelLabelOf(l10n, _notify.quakeLevel))
-              : l10n.settingsQuakeSubtitleOff),
-          value: _notifyLoaded && _notify.quakeEnabled,
-          onChanged: !_notifyLoaded
-              ? null
-              : (v) async {
-                  final ok = await _notify.setQuakeEnabled(v);
-                  if (!ok && mounted) _showPermissionDenied();
-                  if (mounted) setState(() {});
-                },
-        ),
-        if (_notifyLoaded && _notify.quakeEnabled)
-          Padding(
-            padding: const EdgeInsets.only(left: 72, right: 16),
-            child: Wrap(spacing: 8, children: [
-              for (final level in NotificationSettings.quakeLevels)
-                ChoiceChip(
-                  label: Text(quakeLevelLabelOf(l10n, level)),
-                  selected: _notify.quakeLevel == level,
-                  onSelected: (_) async {
-                    await _notify.setQuakeLevel(level);
+      body: ListView(
+        children: [
+          _SupportCard(
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const TipScreen())),
+          ),
+          // 言語切替（1.4.0。いつでも切り替えられる。選択は端末に保存される）
+          LanguageSettingTile(controller: widget.localeController),
+          const Divider(),
+          _SectionHeader(l10n.settingsSectionNotify),
+          SwitchListTile(
+            secondary: const Icon(Icons.rss_feed),
+            title: Text(l10n.settingsQuakeTitle),
+            subtitle: Text(
+              _notifyLoaded && _notify.quakeEnabled
+                  ? l10n.settingsQuakeSubtitleOn(
+                      quakeLevelLabelOf(l10n, _notify.quakeLevel),
+                    )
+                  : l10n.settingsQuakeSubtitleOff,
+            ),
+            value: _notifyLoaded && _notify.quakeEnabled,
+            onChanged: !_notifyLoaded
+                ? null
+                : (v) async {
+                    final ok = await _notify.setQuakeEnabled(v);
+                    if (!ok && mounted) _showPermissionDenied();
                     if (mounted) setState(() {});
                   },
-                ),
-            ]),
           ),
-        SwitchListTile(
-          secondary: const Icon(Icons.warning_amber_outlined),
-          title: Text(l10n.settingsWarningTitle),
-          subtitle: Text(l10n.settingsWarningSubtitle),
-          value: _notifyLoaded && _notify.warningEnabled,
-          onChanged: !_notifyLoaded
-              ? null
-              : (v) async {
-                  final ok = await _notify.setWarningEnabled(v);
-                  if (!ok && mounted) _showPermissionDenied();
-                  if (mounted) setState(() {});
-                },
-        ),
-        if (_notifyLoaded && _notify.warningEnabled) ...[
+          if (_notifyLoaded && _notify.quakeEnabled)
+            Padding(
+              padding: const EdgeInsets.only(left: 72, right: 16),
+              child: Wrap(
+                spacing: 8,
+                children: [
+                  for (final level in NotificationSettings.quakeLevels)
+                    ChoiceChip(
+                      label: Text(quakeLevelLabelOf(l10n, level)),
+                      selected: _notify.quakeLevel == level,
+                      onSelected: (_) async {
+                        await _notify.setQuakeLevel(level);
+                        if (mounted) setState(() {});
+                      },
+                    ),
+                ],
+              ),
+            ),
+          SwitchListTile(
+            secondary: const Icon(Icons.warning_amber_outlined),
+            title: Text(l10n.settingsWarningTitle),
+            subtitle: Text(l10n.settingsWarningSubtitle),
+            value: _notifyLoaded && _notify.warningEnabled,
+            onChanged: !_notifyLoaded
+                ? null
+                : (v) async {
+                    final ok = await _notify.setWarningEnabled(v);
+                    if (!ok && mounted) _showPermissionDenied();
+                    if (mounted) setState(() {});
+                  },
+          ),
+          if (_notifyLoaded && _notify.warningEnabled) ...[
+            ListTile(
+              contentPadding: const EdgeInsets.only(left: 72, right: 16),
+              title: Text(l10n.settingsNotifyArea),
+              subtitle: Text(_warningPrefsSummary(l10n)),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: _pickWarningPrefs,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 72, right: 16, bottom: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(l10n.settingsNotifyLevel),
+                  const SizedBox(height: 4),
+                  Wrap(
+                    spacing: 8,
+                    children: [
+                      ChoiceChip(
+                        label: Text(l10n.settingsNotifyLevelSpecialOnly),
+                        selected: _notify.warningLevel == '5',
+                        onSelected: (_) async {
+                          await _notify.setWarningLevel('5');
+                          if (mounted) setState(() {});
+                        },
+                      ),
+                      ChoiceChip(
+                        label: Text(l10n.settingsNotifyLevelDangerUp),
+                        selected: _notify.warningLevel == '4',
+                        onSelected: (_) async {
+                          await _notify.setWarningLevel('4');
+                          if (mounted) setState(() {});
+                        },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    l10n.settingsNotifyLevelNote,
+                    style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                  ),
+                ],
+              ),
+            ),
+          ],
+          if (_diagUnlocked) ...[
+            ListTile(
+              leading: const Icon(Icons.troubleshoot),
+              title: Text(l10n.settingsNotifyDiag),
+              subtitle: Text(l10n.settingsNotifyDiagSubtitle),
+              onTap: _showNotifyDiagnosis,
+            ),
+            ListTile(
+              leading: const Icon(Icons.bug_report_outlined),
+              title: Text(l10n.settingsCrashDiag),
+              subtitle: Text(l10n.settingsCrashDiagSubtitle),
+              onTap: _showCrashDiagnosis,
+            ),
+          ],
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+            child: Text(
+              l10n.settingsNotifyDelayNote,
+              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+            ),
+          ),
+          const Divider(),
+          _SectionHeader(l10n.settingsSectionData),
+          SwitchListTile(
+            secondary: const Icon(Icons.wifi),
+            title: Text(l10n.settingsWifiOnly),
+            subtitle: Text(l10n.settingsWifiOnlySubtitle),
+            value: app.wifiOnly,
+            onChanged: (v) async {
+              await app.setWifiOnly(v);
+              if (mounted) setState(() {});
+            },
+          ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 72, right: 16),
-            title: Text(l10n.settingsNotifyArea),
-            subtitle: Text(_warningPrefsSummary(l10n)),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: _pickWarningPrefs,
+            leading: const Icon(Icons.delete_outline),
+            title: Text(l10n.settingsClearCache),
+            subtitle: Text(l10n.settingsClearCacheSubtitle),
+            trailing: _clearingCache
+                ? const SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  )
+                : null,
+            onTap: _clearingCache ? null : _clearCache,
+          ),
+          const Divider(),
+          _SectionHeader(l10n.settingsSectionFilterDefaults),
+          SwitchListTile(
+            secondary: const Icon(Icons.public),
+            title: Text(l10n.settingsShowWorld),
+            value: app.showWorld,
+            onChanged: (v) async {
+              app.setShowWorld(v);
+              await app.saveFilterDefault('showWorld', v);
+              if (mounted) setState(() {});
+            },
+          ),
+          SwitchListTile(
+            secondary: const Icon(Icons.videocam_outlined),
+            title: Text(l10n.settingsVideoOnly),
+            value: app.videoOnly,
+            onChanged: (v) async {
+              app.setVideoOnly(v);
+              await app.saveFilterDefault('videoOnly', v);
+              if (mounted) setState(() {});
+            },
+          ),
+          SwitchListTile(
+            secondary: const Icon(Icons.location_off_outlined),
+            title: Text(l10n.settingsHideUncertain),
+            subtitle: Text(l10n.settingsHideUncertainSubtitle),
+            value: app.hideUncertain,
+            onChanged: (v) async {
+              app.setHideUncertain(v);
+              await app.saveFilterDefault('hideUncertain', v);
+              if (mounted) setState(() {});
+            },
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 72, right: 16, bottom: 8),
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+            child: Text(
+              l10n.settingsFilterDefaultsNote,
+              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+            ),
+          ),
+          const Divider(),
+          _SectionHeader(l10n.settingsSectionRequest),
+          ListTile(
+            leading: const Icon(Icons.contact_support_outlined),
+            title: Text(l10n.settingsRequestForm),
+            subtitle: Text(l10n.settingsRequestFormSubtitle),
+            onTap: () => _open(_requestFormUrl),
+          ),
+          const Divider(),
+          _SectionHeader(l10n.settingsSectionLicense),
+          ListTile(
+            leading: const Icon(Icons.source_outlined),
+            title: Text(l10n.settingsAttributionList),
+            subtitle: Text(l10n.settingsAttributionListSubtitle),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => _AttributionScreen(app: app)),
+            ),
+          ),
+          // 気象庁「気象情報等に関する多言語辞書」の出典表示（公共データ利用規約）
+          ListTile(
+            leading: const Icon(Icons.translate),
+            title: Text(l10n.settingsJmaDictionary),
+            subtitle: Text(l10n.settingsJmaDictionaryNote),
+            trailing: const Icon(Icons.open_in_new, size: 18),
+            onTap: () => _open(_jmaDictionaryUrl),
+          ),
+          ListTile(
+            leading: const Icon(Icons.gavel_outlined),
+            title: Text(l10n.settingsTerms),
+            onTap: () => _open(_termsUrl),
+          ),
+          ListTile(
+            leading: const Icon(Icons.privacy_tip_outlined),
+            title: Text(l10n.settingsPrivacy),
+            onTap: () => _open(_privacyUrl),
+          ),
+          // 規約類の本文は日本語のみ。日本語を正文とする旨をアプリ内に明示する
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+            child: Text(
+              l10n.settingsLegalJapaneseOnly,
+              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+            ),
+          ),
+          const Divider(),
+          _SectionHeader(l10n.settingsSectionAbout),
+          ListTile(
+            leading: const Icon(Icons.info_outline),
+            title: Text(l10n.settingsVersion),
+            subtitle: const Text(appVersion),
+            // 隠し機能: 5回タップで「通知診断」を表示する
+            onTap: () {
+              if (_diagUnlocked) return;
+              _diagTapCount++;
+              if (_diagTapCount >= 5) {
+                setState(() => _diagUnlocked = true);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text(l10n.settingsNotifyDiagUnlocked)),
+                );
+              }
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.qr_code_2),
+            title: Text(l10n.settingsInvite),
+            subtitle: Text(l10n.settingsInviteSubtitle),
+            onTap: _showInvite,
+          ),
+          ListTile(
+            leading: const Icon(Icons.star_rate_outlined),
+            title: Text(l10n.settingsReview),
+            subtitle: Text(l10n.settingsReviewSubtitle),
+            onTap: _openReview,
+          ),
+          ListTile(
+            leading: const Icon(Icons.alternate_email),
+            title: Text(l10n.settingsFollowX),
+            subtitle: Text(l10n.settingsFollowXSubtitle),
+            onTap: () => _open(_xUrl),
+          ),
+          if (widget.app.repository.manifest?.apps.isNotEmpty ?? false) ...[
+            const Divider(),
+            _SectionHeader(l10n.settingsOtherApps),
+            for (final a in widget.app.repository.manifest!.apps)
+              if (!a.collapsed || _showMoreApps)
+                ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: a.iconUrl != null
+                        ? Image.network(
+                            a.iconUrl!,
+                            width: 44,
+                            height: 44,
+                            cacheWidth: 132,
+                            errorBuilder: (_, _, _) =>
+                                const Icon(Icons.apps, size: 44),
+                          )
+                        : const Icon(Icons.apps, size: 44),
+                  ),
+                  title: Text(a.name),
+                  subtitle: a.tagline.isEmpty ? null : Text(a.tagline),
+                  trailing: const Icon(Icons.open_in_new, size: 18),
+                  onTap: () => _open(a.storeUrl),
+                ),
+            if (!_showMoreApps &&
+                widget.app.repository.manifest!.apps.any((a) => a.collapsed))
+              TextButton.icon(
+                onPressed: () => setState(() => _showMoreApps = true),
+                icon: const Icon(Icons.expand_more),
+                label: Text(l10n.settingsShowMoreApps),
+              ),
+          ],
+          const Divider(),
+          _SectionHeader(l10n.settingsSectionDisclaimer),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(l10n.settingsNotifyLevel),
-                const SizedBox(height: 4),
-                Wrap(spacing: 8, children: [
-                  ChoiceChip(
-                    label: Text(l10n.settingsNotifyLevelSpecialOnly),
-                    selected: _notify.warningLevel == '5',
-                    onSelected: (_) async {
-                      await _notify.setWarningLevel('5');
-                      if (mounted) setState(() {});
-                    },
+                Text(
+                  disclaimerTextOf(l10n),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[700]),
+                ),
+                if (widget.localeController.language != AppLanguage.ja) ...[
+                  const SizedBox(height: 4),
+                  Text(
+                    l10n.legalJapaneseAuthoritative,
+                    style: TextStyle(fontSize: 11, color: Colors.grey[600]),
                   ),
-                  ChoiceChip(
-                    label: Text(l10n.settingsNotifyLevelDangerUp),
-                    selected: _notify.warningLevel == '4',
-                    onSelected: (_) async {
-                      await _notify.setWarningLevel('4');
-                      if (mounted) setState(() {});
-                    },
-                  ),
-                ]),
-                const SizedBox(height: 2),
-                Text(l10n.settingsNotifyLevelNote,
-                    style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+                ],
               ],
             ),
           ),
-        ],
-        if (_diagUnlocked) ...[
-          ListTile(
-            leading: const Icon(Icons.troubleshoot),
-            title: Text(l10n.settingsNotifyDiag),
-            subtitle: Text(l10n.settingsNotifyDiagSubtitle),
-            onTap: _showNotifyDiagnosis,
-          ),
-          ListTile(
-            leading: const Icon(Icons.bug_report_outlined),
-            title: Text(l10n.settingsCrashDiag),
-            subtitle: Text(l10n.settingsCrashDiagSubtitle),
-            onTap: _showCrashDiagnosis,
-          ),
-        ],
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Text(l10n.settingsNotifyDelayNote,
-              style: TextStyle(fontSize: 11, color: Colors.grey[600])),
-        ),
-        const Divider(),
-        _SectionHeader(l10n.settingsSectionData),
-        SwitchListTile(
-          secondary: const Icon(Icons.wifi),
-          title: Text(l10n.settingsWifiOnly),
-          subtitle: Text(l10n.settingsWifiOnlySubtitle),
-          value: app.wifiOnly,
-          onChanged: (v) async {
-            await app.setWifiOnly(v);
-            if (mounted) setState(() {});
-          },
-        ),
-        ListTile(
-          leading: const Icon(Icons.delete_outline),
-          title: Text(l10n.settingsClearCache),
-          subtitle: Text(l10n.settingsClearCacheSubtitle),
-          trailing: _clearingCache
-              ? const SizedBox(
-                  width: 18, height: 18,
-                  child: CircularProgressIndicator(strokeWidth: 2))
-              : null,
-          onTap: _clearingCache ? null : _clearCache,
-        ),
-        const Divider(),
-        _SectionHeader(l10n.settingsSectionFilterDefaults),
-        SwitchListTile(
-          secondary: const Icon(Icons.public),
-          title: Text(l10n.settingsShowWorld),
-          value: app.showWorld,
-          onChanged: (v) async {
-            app.setShowWorld(v);
-            await app.saveFilterDefault('showWorld', v);
-            if (mounted) setState(() {});
-          },
-        ),
-        SwitchListTile(
-          secondary: const Icon(Icons.videocam_outlined),
-          title: Text(l10n.settingsVideoOnly),
-          value: app.videoOnly,
-          onChanged: (v) async {
-            app.setVideoOnly(v);
-            await app.saveFilterDefault('videoOnly', v);
-            if (mounted) setState(() {});
-          },
-        ),
-        SwitchListTile(
-          secondary: const Icon(Icons.location_off_outlined),
-          title: Text(l10n.settingsHideUncertain),
-          subtitle: Text(l10n.settingsHideUncertainSubtitle),
-          value: app.hideUncertain,
-          onChanged: (v) async {
-            app.setHideUncertain(v);
-            await app.saveFilterDefault('hideUncertain', v);
-            if (mounted) setState(() {});
-          },
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Text(l10n.settingsFilterDefaultsNote,
-              style: TextStyle(fontSize: 11, color: Colors.grey[600])),
-        ),
-        const Divider(),
-        _SectionHeader(l10n.settingsSectionRequest),
-        ListTile(
-          leading: const Icon(Icons.contact_support_outlined),
-          title: Text(l10n.settingsRequestForm),
-          subtitle: Text(l10n.settingsRequestFormSubtitle),
-          onTap: () => _open(_requestFormUrl),
-        ),
-        const Divider(),
-        _SectionHeader(l10n.settingsSectionLicense),
-        ListTile(
-          leading: const Icon(Icons.source_outlined),
-          title: Text(l10n.settingsAttributionList),
-          subtitle: Text(l10n.settingsAttributionListSubtitle),
-          onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => _AttributionScreen(app: app))),
-        ),
-        // 気象庁「気象情報等に関する多言語辞書」の出典表示（公共データ利用規約）
-        ListTile(
-          leading: const Icon(Icons.translate),
-          title: Text(l10n.settingsJmaDictionary),
-          subtitle: Text(l10n.settingsJmaDictionaryNote),
-          trailing: const Icon(Icons.open_in_new, size: 18),
-          onTap: () => _open(_jmaDictionaryUrl),
-        ),
-        ListTile(
-          leading: const Icon(Icons.gavel_outlined),
-          title: Text(l10n.settingsTerms),
-          onTap: () => _open(_termsUrl),
-        ),
-        ListTile(
-          leading: const Icon(Icons.privacy_tip_outlined),
-          title: Text(l10n.settingsPrivacy),
-          onTap: () => _open(_privacyUrl),
-        ),
-        // 規約類の本文は日本語のみ。日本語を正文とする旨をアプリ内に明示する
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Text(l10n.settingsLegalJapaneseOnly,
-              style: TextStyle(fontSize: 11, color: Colors.grey[600])),
-        ),
-        const Divider(),
-        _SectionHeader(l10n.settingsSectionAbout),
-        ListTile(
-          leading: const Icon(Icons.info_outline),
-          title: Text(l10n.settingsVersion),
-          subtitle: const Text(appVersion),
-          // 隠し機能: 5回タップで「通知診断」を表示する
-          onTap: () {
-            if (_diagUnlocked) return;
-            _diagTapCount++;
-            if (_diagTapCount >= 5) {
-              setState(() => _diagUnlocked = true);
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text(l10n.settingsNotifyDiagUnlocked)));
-            }
-          },
-        ),
-        ListTile(
-          leading: const Icon(Icons.qr_code_2),
-          title: Text(l10n.settingsInvite),
-          subtitle: Text(l10n.settingsInviteSubtitle),
-          onTap: _showInvite,
-        ),
-        ListTile(
-          leading: const Icon(Icons.star_rate_outlined),
-          title: Text(l10n.settingsReview),
-          subtitle: Text(l10n.settingsReviewSubtitle),
-          onTap: _openReview,
-        ),
-        ListTile(
-          leading: const Icon(Icons.alternate_email),
-          title: Text(l10n.settingsFollowX),
-          subtitle: Text(l10n.settingsFollowXSubtitle),
-          onTap: () => _open(_xUrl),
-        ),
-        if (widget.app.repository.manifest?.apps.isNotEmpty ?? false) ...[
-          const Divider(),
-          _SectionHeader(l10n.settingsOtherApps),
-          for (final a in widget.app.repository.manifest!.apps)
-            if (!a.collapsed || _showMoreApps)
-            ListTile(
-              leading: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: a.iconUrl != null
-                    ? Image.network(a.iconUrl!, width: 44, height: 44, cacheWidth: 132,
-                        errorBuilder: (_, _, _) => const Icon(Icons.apps, size: 44))
-                    : const Icon(Icons.apps, size: 44),
+          // OSSライセンス（表示義務あり。控えめなテキストリンクとして最下部に置く）
+          Center(
+            child: TextButton(
+              onPressed: () => showLicensePage(
+                context: context,
+                applicationName: l10n.appTitle,
+                applicationVersion: appVersion,
               ),
-              title: Text(a.name),
-              subtitle: a.tagline.isEmpty ? null : Text(a.tagline),
-              trailing: const Icon(Icons.open_in_new, size: 18),
-              onTap: () => _open(a.storeUrl),
+              child: Text(
+                l10n.settingsOssLicenses,
+                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+              ),
             ),
-          if (!_showMoreApps &&
-              widget.app.repository.manifest!.apps.any((a) => a.collapsed))
-            TextButton.icon(
-              onPressed: () => setState(() => _showMoreApps = true),
-              icon: const Icon(Icons.expand_more),
-              label: Text(l10n.settingsShowMoreApps),
-            ),
-        ],
-        const Divider(),
-        _SectionHeader(l10n.settingsSectionDisclaimer),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(disclaimerTextOf(l10n),
-                style: TextStyle(fontSize: 12, color: Colors.grey[700])),
-            if (widget.localeController.language != AppLanguage.ja) ...[
-              const SizedBox(height: 4),
-              Text(l10n.legalJapaneseAuthoritative,
-                  style: TextStyle(fontSize: 11, color: Colors.grey[600])),
-            ],
-          ]),
-        ),
-        // OSSライセンス（表示義務あり。控えめなテキストリンクとして最下部に置く）
-        Center(
-          child: TextButton(
-            onPressed: () => showLicensePage(
-              context: context,
-              applicationName: l10n.appTitle,
-              applicationVersion: appVersion,
-            ),
-            child: Text(l10n.settingsOssLicenses,
-                style: TextStyle(fontSize: 12, color: Colors.grey[600])),
           ),
-        ),
-        const SizedBox(height: 16),
-      ]),
+          const SizedBox(height: 16),
+        ],
+      ),
     );
   }
 }
@@ -696,35 +772,62 @@ class _SupportCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: accent.withValues(alpha: 0.35)),
             ),
-            child: Row(children: [
-              Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
+            child: Row(
+              children: [
+                Container(
+                  width: 48,
+                  height: 48,
+                  decoration: BoxDecoration(
                     color: accent.withValues(alpha: 0.12),
-                    borderRadius: BorderRadius.circular(12)),
-                child: const Icon(Icons.volunteer_activism, color: accent, size: 28),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(context.l10n.settingsSupportTitle,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: accent)),
-                  const SizedBox(height: 2),
-                  Text(context.l10n.settingsSupportBody,
-                      style: const TextStyle(fontSize: 12, color: Colors.black87)),
-                ]),
-              ),
-              const SizedBox(width: 8),
-              FilledButton(
-                style: FilledButton.styleFrom(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(
+                    Icons.volunteer_activism,
+                    color: accent,
+                    size: 28,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        context.l10n.settingsSupportTitle,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: accent,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        context.l10n.settingsSupportBody,
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.black87,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 8),
+                FilledButton(
+                  style: FilledButton.styleFrom(
                     backgroundColor: accent,
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10)),
-                onPressed: onTap,
-                child: Text(context.l10n.settingsSupportButton,
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
-              ),
-            ]),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 14,
+                      vertical: 10,
+                    ),
+                  ),
+                  onPressed: onTap,
+                  child: Text(
+                    context.l10n.settingsSupportButton,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -739,13 +842,16 @@ class _SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
-        child: Text(text,
-            style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.primary)),
-      );
+    padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
+    child: Text(
+      text,
+      style: TextStyle(
+        fontSize: 13,
+        fontWeight: FontWeight.bold,
+        color: Theme.of(context).colorScheme.primary,
+      ),
+    ),
+  );
 }
 
 /// 出典・ライセンス一覧（SPEC 9.5: 設定画面に一括の出典一覧を置く）。
@@ -776,8 +882,11 @@ class _AttributionScreen extends StatelessWidget {
     }
     String? mostCommon(Map<String, int>? m) {
       if (m == null || m.isEmpty) return null;
-      return (m.entries.toList()..sort((a, b) => b.value.compareTo(a.value))).first.key;
+      return (m.entries.toList()..sort((a, b) => b.value.compareTo(a.value)))
+          .first
+          .key;
     }
+
     final entries = counts.entries.toList()
       ..sort((a, b) => b.value.compareTo(a.value));
     return Scaffold(
@@ -798,16 +907,25 @@ class _AttributionScreen extends StatelessWidget {
                     isYoutube
                         ? context.l10n.attributionOpenYoutube
                         : context.l10n.attributionOpenSite,
-                    style: TextStyle(fontSize: 11, color: Colors.grey[600])),
-            trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-              Text(context.l10n.commonCameraCount(entries[i].value),
-                  style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-              if (url != null) ...[
-                const SizedBox(width: 8),
-                Icon(isYoutube ? Icons.play_circle_outline : Icons.open_in_new,
-                    size: 18, color: Colors.grey[600]),
+                    style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                  ),
+            trailing: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  context.l10n.commonCameraCount(entries[i].value),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                ),
+                if (url != null) ...[
+                  const SizedBox(width: 8),
+                  Icon(
+                    isYoutube ? Icons.play_circle_outline : Icons.open_in_new,
+                    size: 18,
+                    color: Colors.grey[600],
+                  ),
+                ],
               ],
-            ]),
+            ),
             onTap: url == null ? null : () => _open(url),
           );
         },
