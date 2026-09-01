@@ -9,6 +9,7 @@ on:
       - "data/global_ranking.json"
       - "data/shelters/**"
       - "data/facilities/**"
+      - "data/stockpile/**"
       - "site/**"
   workflow_dispatch:
 

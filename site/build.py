@@ -9,6 +9,7 @@
     site/v1/status.json
     site/v1/shelters/*.json         # 避難所（data/shelters/ のコピー。tools/shelters.py が月次生成）
     site/v1/facilities/*.json       # 防災拠点（data/facilities/ のコピー。tools/facilities.py が月次生成）
+    site/v1/stockpile/*.json        # 備蓄推奨商品（data/stockpile/ のコピー。tools/stockpile_check.py が月次点検）
 
 アプリに配るのは approved のみ。verification 等の内部フィールドは落とす。
 """
@@ -153,6 +154,12 @@ def build() -> int:
     n_facilities = sync_facilities()
     if n_facilities:
         print(f"facilities: {n_facilities}ファイルをコピー")
+
+    # 防災備蓄チェックリストの推奨商品（data/stockpile/ を site/v1/stockpile/ へ）
+    from tools.stockpile_check import sync_site as sync_stockpile
+    n_stockpile = sync_stockpile()
+    if n_stockpile:
+        print(f"stockpile: {n_stockpile}ファイルをコピー")
 
     print(f"site/v1 生成: 承認済み {len(approved)}件, 都道府県 {len(by_pref)}")
     return 0

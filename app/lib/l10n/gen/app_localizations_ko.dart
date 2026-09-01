@@ -1698,4 +1698,303 @@ class AppLocalizationsKo extends AppLocalizations {
   String settingsDiagError(String error) {
     return '오류: $error';
   }
+
+  @override
+  String get stockpileTitle => '재해 대비 비축';
+
+  @override
+  String get stockpileEntryTitle => '재해 대비 비축(체크리스트)';
+
+  @override
+  String get stockpileEntrySubtitle => '가족 수에 맞춰 필요량을 계산하고 확인할 수 있습니다';
+
+  @override
+  String get stockpileBosaiLink => '비축은 충분한가요? 체크리스트 열기';
+
+  @override
+  String get stockpileHouseholdTitle => '세대 인원';
+
+  @override
+  String get stockpileAdults => '성인';
+
+  @override
+  String get stockpileChildren => '어린이';
+
+  @override
+  String get stockpileDaysLabel => '비축 일수';
+
+  @override
+  String stockpileDaysValue(int days) {
+    return '$days일분';
+  }
+
+  @override
+  String get stockpileSummaryTitle => '필요량 기준';
+
+  @override
+  String stockpileSummaryWater(int liters) {
+    return '물 ${liters}L';
+  }
+
+  @override
+  String stockpileSummaryMeals(int meals) {
+    return '식량 $meals끼';
+  }
+
+  @override
+  String get stockpileSummaryNote => '일본 내각부·농림수산성 기준(1인 1일 물 3L·3끼)에 따른 계산입니다';
+
+  @override
+  String get stockpileSourceMaff => '농림수산성 「가정 비축 포털」';
+
+  @override
+  String get stockpileSourceCao => '내각부 「방재 정보 페이지」';
+
+  @override
+  String stockpileProgress(int done, int total) {
+    return '$done/$total 완료';
+  }
+
+  @override
+  String stockpileRequired(String quantity, String unit) {
+    return '필요 $quantity$unit';
+  }
+
+  @override
+  String get stockpileSearchButton => '찾기';
+
+  @override
+  String get stockpileExpirySet => '유통기한 등록';
+
+  @override
+  String stockpileExpiryOn(String date) {
+    return '기한 $date';
+  }
+
+  @override
+  String get stockpileExpirySoon => '기한 임박';
+
+  @override
+  String get stockpileExpired => '기한 경과';
+
+  @override
+  String get stockpileExpiryClear => '기한 삭제';
+
+  @override
+  String get stockpileAddItem => '항목 추가';
+
+  @override
+  String get stockpileItemNameLabel => '품목명';
+
+  @override
+  String get stockpileItemQuantityLabel => '필요 수량';
+
+  @override
+  String get stockpileItemCategoryLabel => '분류';
+
+  @override
+  String get stockpileDeleteItem => '항목 삭제';
+
+  @override
+  String stockpileDeleted(String item) {
+    return '「$item」을(를) 삭제했습니다';
+  }
+
+  @override
+  String get stockpileUndo => '되돌리기';
+
+  @override
+  String get stockpileReset => '초기 상태로 되돌리기';
+
+  @override
+  String get stockpileResetConfirm =>
+      '체크·기한·추가한 항목을 모두 지우고 초기 상태로 되돌립니다. 계속할까요?';
+
+  @override
+  String get stockpileSectionReminder => '알림';
+
+  @override
+  String get stockpileExpiryReminder => '기한 1개월 전에 알림';
+
+  @override
+  String get stockpileExpiryReminderSubtitle =>
+      '등록한 기한 1개월 전 오전 9시에 이 기기에서 알립니다';
+
+  @override
+  String get stockpileInspectionReminder => '점검일에 알림';
+
+  @override
+  String get stockpileInspectionReminderSubtitle =>
+      '3월 11일과 9월 1일(방재의 날) 오전 9시에 알립니다';
+
+  @override
+  String get stockpileNotifyDenied => '알림이 허용되어 있지 않습니다. 설정 앱에서 알림을 허용해 주십시오';
+
+  @override
+  String get stockpileNotifyTitle => '재해 대비 비축 점검';
+
+  @override
+  String stockpileNotifyExpiryBody(String item, String date) {
+    return '「$item」의 기한이 다가옵니다($date)';
+  }
+
+  @override
+  String get stockpileNotifyInspectionBody => '비축품의 기한과 수량을 점검합시다';
+
+  @override
+  String get stockpileAffiliateNotice =>
+      '※상품 링크에는 제휴 마케팅(어필리에이트) 프로그램을 이용하고 있습니다';
+
+  @override
+  String get stockpileGuideWhy => '고르는 요령';
+
+  @override
+  String get stockpileGuideProducts => '참고할 만한 제품';
+
+  @override
+  String get stockpileGuideProductsNote =>
+      '제조사 공식 페이지로 연결됩니다. 판매 여부와 가격은 각 쇼핑몰에서 확인하세요.';
+
+  @override
+  String get stockpileGuideSearch => '상품 찾기';
+
+  @override
+  String stockpileGuideSearchAt(String shop) {
+    return '$shop에서 찾기';
+  }
+
+  @override
+  String get stockpileGuideSources => '출처';
+
+  @override
+  String get stockpileDisclaimer => '필요량은 참고값입니다. 가정 사정에 맞게 조정해 주십시오';
+
+  @override
+  String get stockpileCatWaterFood => '물·식량';
+
+  @override
+  String get stockpileCatLightPower => '조명·전원';
+
+  @override
+  String get stockpileCatSanitation => '위생';
+
+  @override
+  String get stockpileCatFirstAid => '응급·위생용품';
+
+  @override
+  String get stockpileCatEvacuation => '피난용';
+
+  @override
+  String get stockpileCatValuables => '귀중품·정보';
+
+  @override
+  String get stockpileUnitLiter => 'L';
+
+  @override
+  String get stockpileUnitMeal => '끼';
+
+  @override
+  String get stockpileUnitPiece => '개';
+
+  @override
+  String get stockpileUnitSheet => '장';
+
+  @override
+  String get stockpileUnitRoll => '롤';
+
+  @override
+  String get stockpileUnitPair => '켤레';
+
+  @override
+  String get stockpileUnitPack => '팩';
+
+  @override
+  String get stockpileUnitTimes => '회분';
+
+  @override
+  String get stockpileUnitDays => '일분';
+
+  @override
+  String get stockpileUnitSet => '세트';
+
+  @override
+  String get stockpileItemWater => '보존수(생수)';
+
+  @override
+  String get stockpileItemStapleFood => '비상식(주식)';
+
+  @override
+  String get stockpileItemRetortFood => '레토르트 식품';
+
+  @override
+  String get stockpileItemCannedFood => '통조림';
+
+  @override
+  String get stockpileItemBabyFormula => '분유·액상 분유';
+
+  @override
+  String get stockpileItemFlashlight => '손전등';
+
+  @override
+  String get stockpileItemBatteries => '건전지';
+
+  @override
+  String get stockpileItemPowerBank => '보조 배터리';
+
+  @override
+  String get stockpileItemRadio => '휴대용 라디오';
+
+  @override
+  String get stockpileItemPortableToilet => '간이 화장실';
+
+  @override
+  String get stockpileItemToiletPaper => '화장지';
+
+  @override
+  String get stockpileItemWetWipes => '물티슈';
+
+  @override
+  String get stockpileItemGarbageBags => '쓰레기봉투';
+
+  @override
+  String get stockpileItemDiapers => '기저귀';
+
+  @override
+  String get stockpileItemFirstAidKit => '구급세트';
+
+  @override
+  String get stockpileItemMedicine => '상비약';
+
+  @override
+  String get stockpileItemMask => '마스크';
+
+  @override
+  String get stockpileItemDisinfectant => '소독제';
+
+  @override
+  String get stockpileItemBackpack => '방재 배낭';
+
+  @override
+  String get stockpileItemBlanket => '알루미늄 담요';
+
+  @override
+  String get stockpileItemGloves => '목장갑';
+
+  @override
+  String get stockpileItemRope => '로프';
+
+  @override
+  String get stockpileItemCash => '현금(동전 포함)';
+
+  @override
+  String get stockpileItemIdCopy => '신분증 사본';
+
+  @override
+  String get stockpileItemContactMemo => '연락처 메모';
+
+  @override
+  String get stockpileItemCable => '충전 케이블';
+
+  @override
+  String get stockpileChooseShop => '상점 선택';
 }

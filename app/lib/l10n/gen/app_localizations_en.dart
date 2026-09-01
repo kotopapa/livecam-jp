@@ -1762,4 +1762,309 @@ class AppLocalizationsEn extends AppLocalizations {
   String settingsDiagError(String error) {
     return 'Error: $error';
   }
+
+  @override
+  String get stockpileTitle => 'Emergency stockpile';
+
+  @override
+  String get stockpileEntryTitle => 'Emergency stockpile checklist';
+
+  @override
+  String get stockpileEntrySubtitle =>
+      'Work out what your household needs and tick off what you have';
+
+  @override
+  String get stockpileBosaiLink =>
+      'Is your stockpile enough? Open the checklist';
+
+  @override
+  String get stockpileHouseholdTitle => 'People in your household';
+
+  @override
+  String get stockpileAdults => 'Adults';
+
+  @override
+  String get stockpileChildren => 'Children';
+
+  @override
+  String get stockpileDaysLabel => 'Days to cover';
+
+  @override
+  String stockpileDaysValue(int days) {
+    return '$days days';
+  }
+
+  @override
+  String get stockpileSummaryTitle => 'What you need';
+
+  @override
+  String stockpileSummaryWater(int liters) {
+    return 'Water $liters L';
+  }
+
+  @override
+  String stockpileSummaryMeals(int meals) {
+    return 'Food $meals meals';
+  }
+
+  @override
+  String get stockpileSummaryNote =>
+      'Based on Japanese government guidance: 3 L of water and 3 meals per person per day';
+
+  @override
+  String get stockpileSourceMaff => 'MAFF – Household Food Stockpiling Portal';
+
+  @override
+  String get stockpileSourceCao => 'Cabinet Office – Disaster Management';
+
+  @override
+  String stockpileProgress(int done, int total) {
+    return '$done of $total done';
+  }
+
+  @override
+  String stockpileRequired(String quantity, String unit) {
+    return 'Need $quantity $unit';
+  }
+
+  @override
+  String get stockpileSearchButton => 'Shop';
+
+  @override
+  String get stockpileExpirySet => 'Set expiry date';
+
+  @override
+  String stockpileExpiryOn(String date) {
+    return 'Expires $date';
+  }
+
+  @override
+  String get stockpileExpirySoon => 'Expiring soon';
+
+  @override
+  String get stockpileExpired => 'Expired';
+
+  @override
+  String get stockpileExpiryClear => 'Clear date';
+
+  @override
+  String get stockpileAddItem => 'Add an item';
+
+  @override
+  String get stockpileItemNameLabel => 'Item name';
+
+  @override
+  String get stockpileItemQuantityLabel => 'Quantity';
+
+  @override
+  String get stockpileItemCategoryLabel => 'Category';
+
+  @override
+  String get stockpileDeleteItem => 'Remove item';
+
+  @override
+  String stockpileDeleted(String item) {
+    return 'Removed “$item”';
+  }
+
+  @override
+  String get stockpileUndo => 'Undo';
+
+  @override
+  String get stockpileReset => 'Reset the list';
+
+  @override
+  String get stockpileResetConfirm =>
+      'This clears all ticks, expiry dates and items you added. Continue?';
+
+  @override
+  String get stockpileSectionReminder => 'Reminders';
+
+  @override
+  String get stockpileExpiryReminder => 'Remind me a month before expiry';
+
+  @override
+  String get stockpileExpiryReminderSubtitle =>
+      'Your device notifies you at 9 a.m. one month before each date you set';
+
+  @override
+  String get stockpileInspectionReminder => 'Remind me on check-up days';
+
+  @override
+  String get stockpileInspectionReminderSubtitle =>
+      '9 a.m. on 11 March and 1 September (Disaster Prevention Day)';
+
+  @override
+  String get stockpileNotifyDenied =>
+      'Notifications are turned off. Allow them in the Settings app';
+
+  @override
+  String get stockpileNotifyTitle => 'Stockpile check';
+
+  @override
+  String stockpileNotifyExpiryBody(String item, String date) {
+    return '“$item” expires soon ($date)';
+  }
+
+  @override
+  String get stockpileNotifyInspectionBody =>
+      'Time to check the dates and amounts in your stockpile';
+
+  @override
+  String get stockpileAffiliateNotice =>
+      'This page uses affiliate links. We may earn a commission from purchases.';
+
+  @override
+  String get stockpileGuideWhy => 'How to choose';
+
+  @override
+  String get stockpileGuideProducts => 'Example products';
+
+  @override
+  String get stockpileGuideProductsNote =>
+      'Links go to the manufacturers’ own pages. Check availability and price at each shop.';
+
+  @override
+  String get stockpileGuideSearch => 'Find products';
+
+  @override
+  String stockpileGuideSearchAt(String shop) {
+    return 'Search on $shop';
+  }
+
+  @override
+  String get stockpileGuideSources => 'Sources';
+
+  @override
+  String get stockpileDisclaimer =>
+      'These amounts are guidance figures. Adjust them to suit your household.';
+
+  @override
+  String get stockpileCatWaterFood => 'Water & food';
+
+  @override
+  String get stockpileCatLightPower => 'Light & power';
+
+  @override
+  String get stockpileCatSanitation => 'Sanitation';
+
+  @override
+  String get stockpileCatFirstAid => 'First aid & health';
+
+  @override
+  String get stockpileCatEvacuation => 'For evacuation';
+
+  @override
+  String get stockpileCatValuables => 'Valuables & documents';
+
+  @override
+  String get stockpileUnitLiter => 'L';
+
+  @override
+  String get stockpileUnitMeal => 'meals';
+
+  @override
+  String get stockpileUnitPiece => 'pcs';
+
+  @override
+  String get stockpileUnitSheet => 'pcs';
+
+  @override
+  String get stockpileUnitRoll => 'rolls';
+
+  @override
+  String get stockpileUnitPair => 'pairs';
+
+  @override
+  String get stockpileUnitPack => 'packs';
+
+  @override
+  String get stockpileUnitTimes => 'uses';
+
+  @override
+  String get stockpileUnitDays => 'days';
+
+  @override
+  String get stockpileUnitSet => 'set';
+
+  @override
+  String get stockpileItemWater => 'Bottled water';
+
+  @override
+  String get stockpileItemStapleFood => 'Staple food';
+
+  @override
+  String get stockpileItemRetortFood => 'Retort pouch meals';
+
+  @override
+  String get stockpileItemCannedFood => 'Canned food';
+
+  @override
+  String get stockpileItemBabyFormula => 'Baby formula';
+
+  @override
+  String get stockpileItemFlashlight => 'Flashlight';
+
+  @override
+  String get stockpileItemBatteries => 'Batteries';
+
+  @override
+  String get stockpileItemPowerBank => 'Power bank';
+
+  @override
+  String get stockpileItemRadio => 'Portable radio';
+
+  @override
+  String get stockpileItemPortableToilet => 'Portable toilet';
+
+  @override
+  String get stockpileItemToiletPaper => 'Toilet paper';
+
+  @override
+  String get stockpileItemWetWipes => 'Wet wipes';
+
+  @override
+  String get stockpileItemGarbageBags => 'Bin bags';
+
+  @override
+  String get stockpileItemDiapers => 'Nappies';
+
+  @override
+  String get stockpileItemFirstAidKit => 'First aid kit';
+
+  @override
+  String get stockpileItemMedicine => 'Regular medication';
+
+  @override
+  String get stockpileItemMask => 'Face masks';
+
+  @override
+  String get stockpileItemDisinfectant => 'Disinfectant';
+
+  @override
+  String get stockpileItemBackpack => 'Emergency backpack';
+
+  @override
+  String get stockpileItemBlanket => 'Emergency blanket';
+
+  @override
+  String get stockpileItemGloves => 'Work gloves';
+
+  @override
+  String get stockpileItemRope => 'Rope';
+
+  @override
+  String get stockpileItemCash => 'Cash (incl. coins)';
+
+  @override
+  String get stockpileItemIdCopy => 'Copy of your ID';
+
+  @override
+  String get stockpileItemContactMemo => 'Contact list';
+
+  @override
+  String get stockpileItemCable => 'Charging cable';
+
+  @override
+  String get stockpileChooseShop => 'Choose a shop';
 }

@@ -1768,4 +1768,310 @@ class AppLocalizationsVi extends AppLocalizations {
   String settingsDiagError(String error) {
     return 'Lỗi: $error';
   }
+
+  @override
+  String get stockpileTitle => 'Dự trữ phòng chống thiên tai';
+
+  @override
+  String get stockpileEntryTitle => 'Danh sách dự trữ phòng chống thiên tai';
+
+  @override
+  String get stockpileEntrySubtitle =>
+      'Tính lượng cần thiết theo số người trong gia đình và đánh dấu';
+
+  @override
+  String get stockpileBosaiLink => 'Dự trữ đã đủ chưa? Mở danh sách kiểm tra';
+
+  @override
+  String get stockpileHouseholdTitle => 'Số người trong gia đình';
+
+  @override
+  String get stockpileAdults => 'Người lớn';
+
+  @override
+  String get stockpileChildren => 'Trẻ em';
+
+  @override
+  String get stockpileDaysLabel => 'Số ngày dự trữ';
+
+  @override
+  String stockpileDaysValue(int days) {
+    return '$days ngày';
+  }
+
+  @override
+  String get stockpileSummaryTitle => 'Lượng cần thiết (tham khảo)';
+
+  @override
+  String stockpileSummaryWater(int liters) {
+    return 'Nước $liters L';
+  }
+
+  @override
+  String stockpileSummaryMeals(int meals) {
+    return 'Thực phẩm $meals bữa';
+  }
+
+  @override
+  String get stockpileSummaryNote =>
+      'Tính theo hướng dẫn của chính phủ Nhật Bản (3 L nước và 3 bữa/người/ngày)';
+
+  @override
+  String get stockpileSourceMaff =>
+      'Bộ Nông Lâm Ngư nghiệp – Cổng dự trữ thực phẩm gia đình';
+
+  @override
+  String get stockpileSourceCao =>
+      'Nội các phủ – Trang thông tin phòng chống thiên tai';
+
+  @override
+  String stockpileProgress(int done, int total) {
+    return 'Đã xong $done/$total';
+  }
+
+  @override
+  String stockpileRequired(String quantity, String unit) {
+    return 'Cần $quantity $unit';
+  }
+
+  @override
+  String get stockpileSearchButton => 'Tìm mua';
+
+  @override
+  String get stockpileExpirySet => 'Đặt hạn dùng';
+
+  @override
+  String stockpileExpiryOn(String date) {
+    return 'Hạn $date';
+  }
+
+  @override
+  String get stockpileExpirySoon => 'Sắp hết hạn';
+
+  @override
+  String get stockpileExpired => 'Đã hết hạn';
+
+  @override
+  String get stockpileExpiryClear => 'Xóa hạn';
+
+  @override
+  String get stockpileAddItem => 'Thêm mục';
+
+  @override
+  String get stockpileItemNameLabel => 'Tên vật phẩm';
+
+  @override
+  String get stockpileItemQuantityLabel => 'Số lượng';
+
+  @override
+  String get stockpileItemCategoryLabel => 'Nhóm';
+
+  @override
+  String get stockpileDeleteItem => 'Xóa mục';
+
+  @override
+  String stockpileDeleted(String item) {
+    return 'Đã xóa “$item”';
+  }
+
+  @override
+  String get stockpileUndo => 'Hoàn tác';
+
+  @override
+  String get stockpileReset => 'Khôi phục ban đầu';
+
+  @override
+  String get stockpileResetConfirm =>
+      'Thao tác này xóa mọi đánh dấu, hạn dùng và mục đã thêm. Tiếp tục?';
+
+  @override
+  String get stockpileSectionReminder => 'Nhắc nhở';
+
+  @override
+  String get stockpileExpiryReminder => 'Nhắc trước hạn 1 tháng';
+
+  @override
+  String get stockpileExpiryReminderSubtitle =>
+      'Máy sẽ báo lúc 9 giờ sáng, một tháng trước mỗi hạn bạn đặt';
+
+  @override
+  String get stockpileInspectionReminder => 'Nhắc vào ngày kiểm tra';
+
+  @override
+  String get stockpileInspectionReminderSubtitle =>
+      'Lúc 9 giờ sáng ngày 11/3 và 1/9 (Ngày phòng chống thiên tai)';
+
+  @override
+  String get stockpileNotifyDenied =>
+      'Thông báo chưa được cho phép. Hãy bật trong ứng dụng Cài đặt';
+
+  @override
+  String get stockpileNotifyTitle => 'Kiểm tra đồ dự trữ';
+
+  @override
+  String stockpileNotifyExpiryBody(String item, String date) {
+    return '“$item” sắp hết hạn ($date)';
+  }
+
+  @override
+  String get stockpileNotifyInspectionBody =>
+      'Hãy kiểm tra hạn dùng và số lượng đồ dự trữ';
+
+  @override
+  String get stockpileAffiliateNotice =>
+      '※Các liên kết sản phẩm có sử dụng chương trình tiếp thị liên kết (affiliate)';
+
+  @override
+  String get stockpileGuideWhy => 'Cách chọn';
+
+  @override
+  String get stockpileGuideProducts => 'Sản phẩm tham khảo';
+
+  @override
+  String get stockpileGuideProductsNote =>
+      'Liên kết dẫn đến trang chính thức của nhà sản xuất. Hãy kiểm tra tình trạng còn hàng và giá tại từng cửa hàng.';
+
+  @override
+  String get stockpileGuideSearch => 'Tìm sản phẩm';
+
+  @override
+  String stockpileGuideSearchAt(String shop) {
+    return 'Tìm trên $shop';
+  }
+
+  @override
+  String get stockpileGuideSources => 'Nguồn';
+
+  @override
+  String get stockpileDisclaimer =>
+      'Đây là số liệu tham khảo. Hãy điều chỉnh cho phù hợp với gia đình bạn';
+
+  @override
+  String get stockpileCatWaterFood => 'Nước & thực phẩm';
+
+  @override
+  String get stockpileCatLightPower => 'Ánh sáng & điện';
+
+  @override
+  String get stockpileCatSanitation => 'Vệ sinh';
+
+  @override
+  String get stockpileCatFirstAid => 'Sơ cứu & y tế';
+
+  @override
+  String get stockpileCatEvacuation => 'Đồ sơ tán';
+
+  @override
+  String get stockpileCatValuables => 'Giấy tờ & thông tin';
+
+  @override
+  String get stockpileUnitLiter => 'L';
+
+  @override
+  String get stockpileUnitMeal => 'bữa';
+
+  @override
+  String get stockpileUnitPiece => 'cái';
+
+  @override
+  String get stockpileUnitSheet => 'tờ';
+
+  @override
+  String get stockpileUnitRoll => 'cuộn';
+
+  @override
+  String get stockpileUnitPair => 'đôi';
+
+  @override
+  String get stockpileUnitPack => 'gói';
+
+  @override
+  String get stockpileUnitTimes => 'lần';
+
+  @override
+  String get stockpileUnitDays => 'ngày';
+
+  @override
+  String get stockpileUnitSet => 'bộ';
+
+  @override
+  String get stockpileItemWater => 'Nước đóng chai';
+
+  @override
+  String get stockpileItemStapleFood => 'Lương thực chính';
+
+  @override
+  String get stockpileItemRetortFood => 'Đồ ăn đóng gói tiệt trùng';
+
+  @override
+  String get stockpileItemCannedFood => 'Đồ hộp';
+
+  @override
+  String get stockpileItemBabyFormula => 'Sữa bột / sữa pha sẵn';
+
+  @override
+  String get stockpileItemFlashlight => 'Đèn pin';
+
+  @override
+  String get stockpileItemBatteries => 'Pin';
+
+  @override
+  String get stockpileItemPowerBank => 'Sạc dự phòng';
+
+  @override
+  String get stockpileItemRadio => 'Radio cầm tay';
+
+  @override
+  String get stockpileItemPortableToilet => 'Nhà vệ sinh di động';
+
+  @override
+  String get stockpileItemToiletPaper => 'Giấy vệ sinh';
+
+  @override
+  String get stockpileItemWetWipes => 'Khăn ướt';
+
+  @override
+  String get stockpileItemGarbageBags => 'Túi rác';
+
+  @override
+  String get stockpileItemDiapers => 'Tã giấy';
+
+  @override
+  String get stockpileItemFirstAidKit => 'Bộ sơ cứu';
+
+  @override
+  String get stockpileItemMedicine => 'Thuốc thường dùng';
+
+  @override
+  String get stockpileItemMask => 'Khẩu trang';
+
+  @override
+  String get stockpileItemDisinfectant => 'Dung dịch sát khuẩn';
+
+  @override
+  String get stockpileItemBackpack => 'Ba lô khẩn cấp';
+
+  @override
+  String get stockpileItemBlanket => 'Chăn giữ nhiệt';
+
+  @override
+  String get stockpileItemGloves => 'Găng tay lao động';
+
+  @override
+  String get stockpileItemRope => 'Dây thừng';
+
+  @override
+  String get stockpileItemCash => 'Tiền mặt (gồm tiền xu)';
+
+  @override
+  String get stockpileItemIdCopy => 'Bản sao giấy tờ tùy thân';
+
+  @override
+  String get stockpileItemContactMemo => 'Ghi chú liên lạc';
+
+  @override
+  String get stockpileItemCable => 'Cáp sạc';
+
+  @override
+  String get stockpileChooseShop => 'Chọn cửa hàng';
 }

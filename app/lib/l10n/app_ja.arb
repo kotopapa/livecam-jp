@@ -1653,5 +1653,427 @@
         "type": "String"
       }
     }
+  },
+  "stockpileTitle": "防災の備え",
+  "@stockpileTitle": {
+    "description": "防災備蓄チェックリスト画面のタイトル"
+  },
+  "stockpileEntryTitle": "防災の備え（備蓄チェックリスト）",
+  "@stockpileEntryTitle": {
+    "description": "設定画面の入口の項目名"
+  },
+  "stockpileEntrySubtitle": "家族の人数から必要量を計算してチェックできます",
+  "@stockpileEntrySubtitle": {
+    "description": "設定画面の入口の説明"
+  },
+  "stockpileBosaiLink": "備蓄は足りていますか？ チェックリストを開く",
+  "@stockpileBosaiLink": {
+    "description": "災害速報タブ 気象警報タブ最下部の控えめな導線"
+  },
+  "stockpileHouseholdTitle": "世帯の人数",
+  "@stockpileHouseholdTitle": {
+    "description": "世帯人数カードの見出し"
+  },
+  "stockpileAdults": "大人",
+  "@stockpileAdults": {
+    "description": "世帯人数（大人）"
+  },
+  "stockpileChildren": "子ども",
+  "@stockpileChildren": {
+    "description": "世帯人数（子ども）"
+  },
+  "stockpileDaysLabel": "備蓄する日数",
+  "@stockpileDaysLabel": {
+    "description": "備蓄日数の選択"
+  },
+  "stockpileDaysValue": "{days}日分",
+  "@stockpileDaysValue": {
+    "description": "備蓄日数の選択肢（3日分・7日分）",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "stockpileSummaryTitle": "必要量のめやす",
+  "@stockpileSummaryTitle": {
+    "description": "必要量サマリーの見出し"
+  },
+  "stockpileSummaryWater": "水 {liters}L",
+  "@stockpileSummaryWater": {
+    "description": "必要な水の量（L）",
+    "placeholders": {
+      "liters": {
+        "type": "int"
+      }
+    }
+  },
+  "stockpileSummaryMeals": "食料 {meals}食",
+  "@stockpileSummaryMeals": {
+    "description": "必要な食事の回数",
+    "placeholders": {
+      "meals": {
+        "type": "int"
+      }
+    }
+  },
+  "stockpileSummaryNote": "内閣府・農林水産省の目安（1人1日あたり 水3L・3食）にもとづく試算です",
+  "@stockpileSummaryNote": {
+    "description": "必要量の根拠（内閣府・農林水産省の目安）"
+  },
+  "stockpileSourceMaff": "農林水産省「家庭備蓄ポータル」",
+  "@stockpileSourceMaff": {
+    "description": "出典リンク（農林水産省 家庭備蓄ポータル）"
+  },
+  "stockpileSourceCao": "内閣府「防災情報のページ」",
+  "@stockpileSourceCao": {
+    "description": "出典リンク（内閣府 防災情報のページ）"
+  },
+  "stockpileProgress": "{done}/{total} 完了",
+  "@stockpileProgress": {
+    "description": "チェック済み件数",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "stockpileRequired": "必要 {quantity}{unit}",
+  "@stockpileRequired": {
+    "description": "必要量（数量＋単位）",
+    "placeholders": {
+      "quantity": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "stockpileSearchButton": "探す",
+  "@stockpileSearchButton": {
+    "description": "アフィリエイト検索ボタン"
+  },
+  "stockpileExpirySet": "期限を登録",
+  "@stockpileExpirySet": {
+    "description": "期限を登録するボタン"
+  },
+  "stockpileExpiryOn": "期限 {date}",
+  "@stockpileExpiryOn": {
+    "description": "登録済みの期限（日付はYYYY-MM-DD）",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "stockpileExpirySoon": "まもなく期限",
+  "@stockpileExpirySoon": {
+    "description": "期限まで1か月以内"
+  },
+  "stockpileExpired": "期限切れ",
+  "@stockpileExpired": {
+    "description": "期限切れ"
+  },
+  "stockpileExpiryClear": "期限を消す",
+  "@stockpileExpiryClear": {
+    "description": "登録した期限を消す"
+  },
+  "stockpileAddItem": "項目を追加",
+  "@stockpileAddItem": {
+    "description": "項目の追加"
+  },
+  "stockpileItemNameLabel": "品名",
+  "@stockpileItemNameLabel": {
+    "description": "追加ダイアログの品名欄"
+  },
+  "stockpileItemQuantityLabel": "必要数",
+  "@stockpileItemQuantityLabel": {
+    "description": "追加ダイアログの必要数欄"
+  },
+  "stockpileItemCategoryLabel": "カテゴリ",
+  "@stockpileItemCategoryLabel": {
+    "description": "追加ダイアログのカテゴリ欄"
+  },
+  "stockpileDeleteItem": "項目を削除",
+  "@stockpileDeleteItem": {
+    "description": "項目の削除"
+  },
+  "stockpileDeleted": "「{item}」を削除しました",
+  "@stockpileDeleted": {
+    "description": "削除したときのメッセージ",
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "stockpileUndo": "元に戻す",
+  "@stockpileUndo": {
+    "description": "削除の取り消し"
+  },
+  "stockpileReset": "初期状態に戻す",
+  "@stockpileReset": {
+    "description": "チェックリストを初期状態に戻す"
+  },
+  "stockpileResetConfirm": "チェック・期限・追加した項目をすべて消して、最初の状態に戻します。よろしいですか？",
+  "@stockpileResetConfirm": {
+    "description": "初期化の確認"
+  },
+  "stockpileSectionReminder": "リマインド",
+  "@stockpileSectionReminder": {
+    "description": "リマインド設定の見出し"
+  },
+  "stockpileExpiryReminder": "期限の1か月前に知らせる",
+  "@stockpileExpiryReminder": {
+    "description": "期限リマインドのスイッチ"
+  },
+  "stockpileExpiryReminderSubtitle": "登録した期限の1か月前の午前9時に、この端末で通知します",
+  "@stockpileExpiryReminderSubtitle": {
+    "description": "期限リマインドの説明"
+  },
+  "stockpileInspectionReminder": "点検日に知らせる",
+  "@stockpileInspectionReminder": {
+    "description": "点検日リマインドのスイッチ"
+  },
+  "stockpileInspectionReminderSubtitle": "3月11日と9月1日（防災の日）の午前9時に通知します",
+  "@stockpileInspectionReminderSubtitle": {
+    "description": "点検日リマインドの説明（3/11・9/1）"
+  },
+  "stockpileNotifyDenied": "端末の通知が許可されていません。設定アプリから通知を許可してください",
+  "@stockpileNotifyDenied": {
+    "description": "通知が許可されなかったとき"
+  },
+  "stockpileNotifyTitle": "防災備蓄の点検",
+  "@stockpileNotifyTitle": {
+    "description": "ローカル通知のタイトル"
+  },
+  "stockpileNotifyExpiryBody": "「{item}」の期限が近づいています（{date}）",
+  "@stockpileNotifyExpiryBody": {
+    "description": "期限リマインドの本文",
+    "placeholders": {
+      "item": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "stockpileNotifyInspectionBody": "備蓄品の期限と数量を点検しましょう",
+  "@stockpileNotifyInspectionBody": {
+    "description": "点検日リマインドの本文"
+  },
+  "stockpileAffiliateNotice": "※商品リンクにはアフィリエイトプログラムを利用しています",
+  "stockpileGuideWhy": "選び方のポイント",
+  "@stockpileGuideWhy": {
+    "description": "商品シートの見出し（公的資料にもとづく選び方）"
+  },
+  "stockpileGuideProducts": "参考になる製品",
+  "@stockpileGuideProducts": {
+    "description": "商品シートの見出し（メーカー公式ページの一覧）"
+  },
+  "stockpileGuideProductsNote": "メーカー公式ページへのリンクです。販売状況・価格は各ショップでご確認ください。",
+  "@stockpileGuideProductsNote": {
+    "description": "商品リンクの但し書き（価格・在庫は載せていない旨）"
+  },
+  "stockpileGuideSearch": "商品を探す",
+  "@stockpileGuideSearch": {
+    "description": "商品シートの見出し（提携ショップ検索）"
+  },
+  "stockpileGuideSearchAt": "{shop}で探す",
+  "@stockpileGuideSearchAt": {
+    "description": "提携ショップの検索ボタン。{shop}は店舗名（固有名詞なので翻訳しない）",
+    "placeholders": {
+      "shop": {
+        "type": "String"
+      }
+    }
+  },
+  "stockpileGuideSources": "出典",
+  "@stockpileGuideSources": {
+    "description": "商品シートの見出し（出典リンク）"
+  },
+  "@stockpileAffiliateNotice": {
+    "description": "景表法のステマ規制（令和5年10月1日施行）対応。商品リンクのある画面に必須"
+  },
+  "stockpileDisclaimer": "必要量は公的機関の目安にもとづく参考値です。ご家庭の事情に合わせて調整してください",
+  "@stockpileDisclaimer": {
+    "description": "必要量は参考値である旨"
+  },
+  "stockpileCatWaterFood": "水・食料",
+  "@stockpileCatWaterFood": {
+    "description": "カテゴリ名"
+  },
+  "stockpileCatLightPower": "明かり・電源",
+  "@stockpileCatLightPower": {
+    "description": "カテゴリ名"
+  },
+  "stockpileCatSanitation": "衛生",
+  "@stockpileCatSanitation": {
+    "description": "カテゴリ名"
+  },
+  "stockpileCatFirstAid": "救急・衛生用品",
+  "@stockpileCatFirstAid": {
+    "description": "カテゴリ名"
+  },
+  "stockpileCatEvacuation": "避難用",
+  "@stockpileCatEvacuation": {
+    "description": "カテゴリ名"
+  },
+  "stockpileCatValuables": "貴重品・情報",
+  "@stockpileCatValuables": {
+    "description": "カテゴリ名"
+  },
+  "stockpileUnitLiter": "L",
+  "@stockpileUnitLiter": {
+    "description": "単位"
+  },
+  "stockpileUnitMeal": "食",
+  "@stockpileUnitMeal": {
+    "description": "単位"
+  },
+  "stockpileUnitPiece": "個",
+  "@stockpileUnitPiece": {
+    "description": "単位"
+  },
+  "stockpileUnitSheet": "枚",
+  "@stockpileUnitSheet": {
+    "description": "単位"
+  },
+  "stockpileUnitRoll": "ロール",
+  "@stockpileUnitRoll": {
+    "description": "単位"
+  },
+  "stockpileUnitPair": "双",
+  "@stockpileUnitPair": {
+    "description": "単位"
+  },
+  "stockpileUnitPack": "パック",
+  "@stockpileUnitPack": {
+    "description": "単位"
+  },
+  "stockpileUnitTimes": "回分",
+  "@stockpileUnitTimes": {
+    "description": "単位"
+  },
+  "stockpileUnitDays": "日分",
+  "@stockpileUnitDays": {
+    "description": "単位"
+  },
+  "stockpileUnitSet": "式",
+  "@stockpileUnitSet": {
+    "description": "単位"
+  },
+  "stockpileItemWater": "保存水",
+  "@stockpileItemWater": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemStapleFood": "非常食（主食）",
+  "@stockpileItemStapleFood": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemRetortFood": "レトルト食品",
+  "@stockpileItemRetortFood": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemCannedFood": "缶詰",
+  "@stockpileItemCannedFood": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemBabyFormula": "粉ミルク・液体ミルク",
+  "@stockpileItemBabyFormula": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemFlashlight": "懐中電灯",
+  "@stockpileItemFlashlight": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemBatteries": "乾電池",
+  "@stockpileItemBatteries": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemPowerBank": "モバイルバッテリー",
+  "@stockpileItemPowerBank": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemRadio": "携帯ラジオ",
+  "@stockpileItemRadio": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemPortableToilet": "簡易トイレ",
+  "@stockpileItemPortableToilet": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemToiletPaper": "トイレットペーパー",
+  "@stockpileItemToiletPaper": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemWetWipes": "ウェットティッシュ",
+  "@stockpileItemWetWipes": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemGarbageBags": "ゴミ袋",
+  "@stockpileItemGarbageBags": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemDiapers": "おむつ",
+  "@stockpileItemDiapers": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemFirstAidKit": "救急セット",
+  "@stockpileItemFirstAidKit": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemMedicine": "常備薬",
+  "@stockpileItemMedicine": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemMask": "マスク",
+  "@stockpileItemMask": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemDisinfectant": "消毒液",
+  "@stockpileItemDisinfectant": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemBackpack": "防災リュック",
+  "@stockpileItemBackpack": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemBlanket": "アルミブランケット",
+  "@stockpileItemBlanket": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemGloves": "軍手",
+  "@stockpileItemGloves": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemRope": "ロープ",
+  "@stockpileItemRope": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemCash": "現金（小銭を含む）",
+  "@stockpileItemCash": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemIdCopy": "身分証のコピー",
+  "@stockpileItemIdCopy": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemContactMemo": "連絡先メモ",
+  "@stockpileItemContactMemo": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileItemCable": "充電ケーブル",
+  "@stockpileItemCable": {
+    "description": "備蓄品の名称"
+  },
+  "stockpileChooseShop": "店舗を選ぶ",
+  "@stockpileChooseShop": {
+    "description": "「探す」を押したときの店舗選択シートの見出し"
   }
 }

@@ -1688,6 +1688,303 @@ class AppLocalizationsJa extends AppLocalizations {
   String settingsDiagError(String error) {
     return 'エラー: $error';
   }
+
+  @override
+  String get stockpileTitle => '防災の備え';
+
+  @override
+  String get stockpileEntryTitle => '防災の備え（備蓄チェックリスト）';
+
+  @override
+  String get stockpileEntrySubtitle => '家族の人数から必要量を計算してチェックできます';
+
+  @override
+  String get stockpileBosaiLink => '備蓄は足りていますか？ チェックリストを開く';
+
+  @override
+  String get stockpileHouseholdTitle => '世帯の人数';
+
+  @override
+  String get stockpileAdults => '大人';
+
+  @override
+  String get stockpileChildren => '子ども';
+
+  @override
+  String get stockpileDaysLabel => '備蓄する日数';
+
+  @override
+  String stockpileDaysValue(int days) {
+    return '$days日分';
+  }
+
+  @override
+  String get stockpileSummaryTitle => '必要量のめやす';
+
+  @override
+  String stockpileSummaryWater(int liters) {
+    return '水 ${liters}L';
+  }
+
+  @override
+  String stockpileSummaryMeals(int meals) {
+    return '食料 $meals食';
+  }
+
+  @override
+  String get stockpileSummaryNote => '内閣府・農林水産省の目安（1人1日あたり 水3L・3食）にもとづく試算です';
+
+  @override
+  String get stockpileSourceMaff => '農林水産省「家庭備蓄ポータル」';
+
+  @override
+  String get stockpileSourceCao => '内閣府「防災情報のページ」';
+
+  @override
+  String stockpileProgress(int done, int total) {
+    return '$done/$total 完了';
+  }
+
+  @override
+  String stockpileRequired(String quantity, String unit) {
+    return '必要 $quantity$unit';
+  }
+
+  @override
+  String get stockpileSearchButton => '探す';
+
+  @override
+  String get stockpileExpirySet => '期限を登録';
+
+  @override
+  String stockpileExpiryOn(String date) {
+    return '期限 $date';
+  }
+
+  @override
+  String get stockpileExpirySoon => 'まもなく期限';
+
+  @override
+  String get stockpileExpired => '期限切れ';
+
+  @override
+  String get stockpileExpiryClear => '期限を消す';
+
+  @override
+  String get stockpileAddItem => '項目を追加';
+
+  @override
+  String get stockpileItemNameLabel => '品名';
+
+  @override
+  String get stockpileItemQuantityLabel => '必要数';
+
+  @override
+  String get stockpileItemCategoryLabel => 'カテゴリ';
+
+  @override
+  String get stockpileDeleteItem => '項目を削除';
+
+  @override
+  String stockpileDeleted(String item) {
+    return '「$item」を削除しました';
+  }
+
+  @override
+  String get stockpileUndo => '元に戻す';
+
+  @override
+  String get stockpileReset => '初期状態に戻す';
+
+  @override
+  String get stockpileResetConfirm =>
+      'チェック・期限・追加した項目をすべて消して、最初の状態に戻します。よろしいですか？';
+
+  @override
+  String get stockpileSectionReminder => 'リマインド';
+
+  @override
+  String get stockpileExpiryReminder => '期限の1か月前に知らせる';
+
+  @override
+  String get stockpileExpiryReminderSubtitle => '登録した期限の1か月前の午前9時に、この端末で通知します';
+
+  @override
+  String get stockpileInspectionReminder => '点検日に知らせる';
+
+  @override
+  String get stockpileInspectionReminderSubtitle =>
+      '3月11日と9月1日（防災の日）の午前9時に通知します';
+
+  @override
+  String get stockpileNotifyDenied => '端末の通知が許可されていません。設定アプリから通知を許可してください';
+
+  @override
+  String get stockpileNotifyTitle => '防災備蓄の点検';
+
+  @override
+  String stockpileNotifyExpiryBody(String item, String date) {
+    return '「$item」の期限が近づいています（$date）';
+  }
+
+  @override
+  String get stockpileNotifyInspectionBody => '備蓄品の期限と数量を点検しましょう';
+
+  @override
+  String get stockpileAffiliateNotice => '※商品リンクにはアフィリエイトプログラムを利用しています';
+
+  @override
+  String get stockpileGuideWhy => '選び方のポイント';
+
+  @override
+  String get stockpileGuideProducts => '参考になる製品';
+
+  @override
+  String get stockpileGuideProductsNote =>
+      'メーカー公式ページへのリンクです。販売状況・価格は各ショップでご確認ください。';
+
+  @override
+  String get stockpileGuideSearch => '商品を探す';
+
+  @override
+  String stockpileGuideSearchAt(String shop) {
+    return '$shopで探す';
+  }
+
+  @override
+  String get stockpileGuideSources => '出典';
+
+  @override
+  String get stockpileDisclaimer => '必要量は公的機関の目安にもとづく参考値です。ご家庭の事情に合わせて調整してください';
+
+  @override
+  String get stockpileCatWaterFood => '水・食料';
+
+  @override
+  String get stockpileCatLightPower => '明かり・電源';
+
+  @override
+  String get stockpileCatSanitation => '衛生';
+
+  @override
+  String get stockpileCatFirstAid => '救急・衛生用品';
+
+  @override
+  String get stockpileCatEvacuation => '避難用';
+
+  @override
+  String get stockpileCatValuables => '貴重品・情報';
+
+  @override
+  String get stockpileUnitLiter => 'L';
+
+  @override
+  String get stockpileUnitMeal => '食';
+
+  @override
+  String get stockpileUnitPiece => '個';
+
+  @override
+  String get stockpileUnitSheet => '枚';
+
+  @override
+  String get stockpileUnitRoll => 'ロール';
+
+  @override
+  String get stockpileUnitPair => '双';
+
+  @override
+  String get stockpileUnitPack => 'パック';
+
+  @override
+  String get stockpileUnitTimes => '回分';
+
+  @override
+  String get stockpileUnitDays => '日分';
+
+  @override
+  String get stockpileUnitSet => '式';
+
+  @override
+  String get stockpileItemWater => '保存水';
+
+  @override
+  String get stockpileItemStapleFood => '非常食（主食）';
+
+  @override
+  String get stockpileItemRetortFood => 'レトルト食品';
+
+  @override
+  String get stockpileItemCannedFood => '缶詰';
+
+  @override
+  String get stockpileItemBabyFormula => '粉ミルク・液体ミルク';
+
+  @override
+  String get stockpileItemFlashlight => '懐中電灯';
+
+  @override
+  String get stockpileItemBatteries => '乾電池';
+
+  @override
+  String get stockpileItemPowerBank => 'モバイルバッテリー';
+
+  @override
+  String get stockpileItemRadio => '携帯ラジオ';
+
+  @override
+  String get stockpileItemPortableToilet => '簡易トイレ';
+
+  @override
+  String get stockpileItemToiletPaper => 'トイレットペーパー';
+
+  @override
+  String get stockpileItemWetWipes => 'ウェットティッシュ';
+
+  @override
+  String get stockpileItemGarbageBags => 'ゴミ袋';
+
+  @override
+  String get stockpileItemDiapers => 'おむつ';
+
+  @override
+  String get stockpileItemFirstAidKit => '救急セット';
+
+  @override
+  String get stockpileItemMedicine => '常備薬';
+
+  @override
+  String get stockpileItemMask => 'マスク';
+
+  @override
+  String get stockpileItemDisinfectant => '消毒液';
+
+  @override
+  String get stockpileItemBackpack => '防災リュック';
+
+  @override
+  String get stockpileItemBlanket => 'アルミブランケット';
+
+  @override
+  String get stockpileItemGloves => '軍手';
+
+  @override
+  String get stockpileItemRope => 'ロープ';
+
+  @override
+  String get stockpileItemCash => '現金（小銭を含む）';
+
+  @override
+  String get stockpileItemIdCopy => '身分証のコピー';
+
+  @override
+  String get stockpileItemContactMemo => '連絡先メモ';
+
+  @override
+  String get stockpileItemCable => '充電ケーブル';
+
+  @override
+  String get stockpileChooseShop => '店舗を選ぶ';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -3406,4 +3703,303 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String settingsDiagError(String error) {
     return 'エラー: $error';
   }
+
+  @override
+  String get stockpileTitle => 'ぼうさいの そなえ（防災の備え）';
+
+  @override
+  String get stockpileEntryTitle => 'ぼうさいの そなえ（備蓄チェックリスト）';
+
+  @override
+  String get stockpileEntrySubtitle => 'かぞくの 人数（にんずう）から ひつような 量（りょう）を けいさん します';
+
+  @override
+  String get stockpileBosaiLink => 'そなえは たりて いますか？ リストを ひらく';
+
+  @override
+  String get stockpileHouseholdTitle => 'いっしょに すむ 人（ひと）の 人数（にんずう）';
+
+  @override
+  String get stockpileAdults => 'おとな';
+
+  @override
+  String get stockpileChildren => 'こども';
+
+  @override
+  String get stockpileDaysLabel => 'なんにち ぶん そなえるか';
+
+  @override
+  String stockpileDaysValue(int days) {
+    return '$days日（にち）ぶん';
+  }
+
+  @override
+  String get stockpileSummaryTitle => 'ひつような 量（りょう）の めやす';
+
+  @override
+  String stockpileSummaryWater(int liters) {
+    return 'みず $litersリットル';
+  }
+
+  @override
+  String stockpileSummaryMeals(int meals) {
+    return 'たべもの $meals食（しょく）';
+  }
+
+  @override
+  String get stockpileSummaryNote =>
+      'くにの めやす（1人（ひとり）1日（にち）で みず3リットル・3食（しょく））で けいさん して います';
+
+  @override
+  String get stockpileSourceMaff => 'のうりんすいさんしょう「家庭備蓄ポータル」';
+
+  @override
+  String get stockpileSourceCao => 'ないかくふ「防災情報のページ」';
+
+  @override
+  String stockpileProgress(int done, int total) {
+    return '$totalこ の うち $doneこ できた';
+  }
+
+  @override
+  String stockpileRequired(String quantity, String unit) {
+    return 'ひつよう $quantity$unit';
+  }
+
+  @override
+  String get stockpileSearchButton => 'さがす';
+
+  @override
+  String get stockpileExpirySet => 'きげんを いれる';
+
+  @override
+  String stockpileExpiryOn(String date) {
+    return 'きげん $date';
+  }
+
+  @override
+  String get stockpileExpirySoon => 'もうすぐ きげん';
+
+  @override
+  String get stockpileExpired => 'きげんが すぎた';
+
+  @override
+  String get stockpileExpiryClear => 'きげんを けす';
+
+  @override
+  String get stockpileAddItem => 'こうもくを ふやす';
+
+  @override
+  String get stockpileItemNameLabel => 'なまえ';
+
+  @override
+  String get stockpileItemQuantityLabel => 'ひつような かず';
+
+  @override
+  String get stockpileItemCategoryLabel => 'なかま わけ';
+
+  @override
+  String get stockpileDeleteItem => 'こうもくを けす';
+
+  @override
+  String stockpileDeleted(String item) {
+    return '「$item」を けしました';
+  }
+
+  @override
+  String get stockpileUndo => 'もとに もどす';
+
+  @override
+  String get stockpileReset => 'さいしょに もどす';
+
+  @override
+  String get stockpileResetConfirm => 'チェックと きげんと ふやした こうもくを ぜんぶ けします。いいですか？';
+
+  @override
+  String get stockpileSectionReminder => 'おしらせ';
+
+  @override
+  String get stockpileExpiryReminder => 'きげんの 1かげつ まえに おしらせ';
+
+  @override
+  String get stockpileExpiryReminderSubtitle =>
+      'きげんの 1かげつ まえの あさ9じに この スマホが おしらせ します';
+
+  @override
+  String get stockpileInspectionReminder => 'てんけんの 日（ひ）に おしらせ';
+
+  @override
+  String get stockpileInspectionReminderSubtitle =>
+      '3月（がつ）11日（にち）と 9月（がつ）1日（にち）の あさ9じに おしらせ します';
+
+  @override
+  String get stockpileNotifyDenied =>
+      'おしらせが きょか されて いません。スマホの せっていで きょか して ください';
+
+  @override
+  String get stockpileNotifyTitle => 'そなえの てんけん';
+
+  @override
+  String stockpileNotifyExpiryBody(String item, String date) {
+    return '「$item」の きげんが ちかづいて います（$date）';
+  }
+
+  @override
+  String get stockpileNotifyInspectionBody => 'そなえた ものの きげんと かずを たしかめましょう';
+
+  @override
+  String get stockpileAffiliateNotice => '※しょうひんの リンクは アフィリエイト（こうこく）です';
+
+  @override
+  String get stockpileGuideWhy => 'えらびかたの ポイント';
+
+  @override
+  String get stockpileGuideProducts => 'さんこうに なる せいひん';
+
+  @override
+  String get stockpileGuideProductsNote =>
+      'つくった かいしゃの ページに とびます。うっているか・ねだんは おみせで たしかめて ください。';
+
+  @override
+  String get stockpileGuideSearch => 'しょうひんを さがす';
+
+  @override
+  String stockpileGuideSearchAt(String shop) {
+    return '$shopで さがす';
+  }
+
+  @override
+  String get stockpileGuideSources => 'でどころ';
+
+  @override
+  String get stockpileDisclaimer => 'ひつような 量（りょう）は めやすです。かぞくに あわせて かえて ください';
+
+  @override
+  String get stockpileCatWaterFood => 'みずと たべもの';
+
+  @override
+  String get stockpileCatLightPower => 'あかりと でんき';
+
+  @override
+  String get stockpileCatSanitation => 'せいけつに する もの';
+
+  @override
+  String get stockpileCatFirstAid => 'きゅうきゅうと くすり';
+
+  @override
+  String get stockpileCatEvacuation => 'にげる ときの もの';
+
+  @override
+  String get stockpileCatValuables => 'たいせつな ものと じょうほう';
+
+  @override
+  String get stockpileUnitLiter => 'リットル';
+
+  @override
+  String get stockpileUnitMeal => '食（しょく）';
+
+  @override
+  String get stockpileUnitPiece => 'こ';
+
+  @override
+  String get stockpileUnitSheet => 'まい';
+
+  @override
+  String get stockpileUnitRoll => 'ロール';
+
+  @override
+  String get stockpileUnitPair => 'くみ';
+
+  @override
+  String get stockpileUnitPack => 'パック';
+
+  @override
+  String get stockpileUnitTimes => 'かいぶん';
+
+  @override
+  String get stockpileUnitDays => 'にちぶん';
+
+  @override
+  String get stockpileUnitSet => 'セット';
+
+  @override
+  String get stockpileItemWater => 'ほぞんすい（みず）';
+
+  @override
+  String get stockpileItemStapleFood => 'ひじょうしょく（ごはん・パン）';
+
+  @override
+  String get stockpileItemRetortFood => 'レトルトしょくひん';
+
+  @override
+  String get stockpileItemCannedFood => 'かんづめ';
+
+  @override
+  String get stockpileItemBabyFormula => 'あかちゃんの ミルク';
+
+  @override
+  String get stockpileItemFlashlight => 'かいちゅうでんとう（ライト）';
+
+  @override
+  String get stockpileItemBatteries => 'かんでんち';
+
+  @override
+  String get stockpileItemPowerBank => 'モバイルバッテリー';
+
+  @override
+  String get stockpileItemRadio => 'ラジオ';
+
+  @override
+  String get stockpileItemPortableToilet => 'かんいトイレ';
+
+  @override
+  String get stockpileItemToiletPaper => 'トイレットペーパー';
+
+  @override
+  String get stockpileItemWetWipes => 'ウェットティッシュ';
+
+  @override
+  String get stockpileItemGarbageBags => 'ゴミぶくろ';
+
+  @override
+  String get stockpileItemDiapers => 'おむつ';
+
+  @override
+  String get stockpileItemFirstAidKit => 'きゅうきゅうセット';
+
+  @override
+  String get stockpileItemMedicine => 'いつも のむ くすり';
+
+  @override
+  String get stockpileItemMask => 'マスク';
+
+  @override
+  String get stockpileItemDisinfectant => 'しょうどくえき';
+
+  @override
+  String get stockpileItemBackpack => 'ぼうさいリュック';
+
+  @override
+  String get stockpileItemBlanket => 'アルミの ブランケット';
+
+  @override
+  String get stockpileItemGloves => 'ぐんて（てぶくろ）';
+
+  @override
+  String get stockpileItemRope => 'ロープ';
+
+  @override
+  String get stockpileItemCash => 'げんきん（こぜにも）';
+
+  @override
+  String get stockpileItemIdCopy => 'みぶんしょうめいしょの コピー';
+
+  @override
+  String get stockpileItemContactMemo => 'れんらくさきの メモ';
+
+  @override
+  String get stockpileItemCable => 'じゅうでんケーブル';
+
+  @override
+  String get stockpileChooseShop => 'みせを えらぶ';
 }

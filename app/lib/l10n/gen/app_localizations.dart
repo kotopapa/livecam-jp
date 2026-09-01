@@ -3123,6 +3123,558 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'エラー: {error}'**
   String settingsDiagError(String error);
+
+  /// 防災備蓄チェックリスト画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'防災の備え'**
+  String get stockpileTitle;
+
+  /// 設定画面の入口の項目名
+  ///
+  /// In ja, this message translates to:
+  /// **'防災の備え（備蓄チェックリスト）'**
+  String get stockpileEntryTitle;
+
+  /// 設定画面の入口の説明
+  ///
+  /// In ja, this message translates to:
+  /// **'家族の人数から必要量を計算してチェックできます'**
+  String get stockpileEntrySubtitle;
+
+  /// 災害速報タブ 気象警報タブ最下部の控えめな導線
+  ///
+  /// In ja, this message translates to:
+  /// **'備蓄は足りていますか？ チェックリストを開く'**
+  String get stockpileBosaiLink;
+
+  /// 世帯人数カードの見出し
+  ///
+  /// In ja, this message translates to:
+  /// **'世帯の人数'**
+  String get stockpileHouseholdTitle;
+
+  /// 世帯人数（大人）
+  ///
+  /// In ja, this message translates to:
+  /// **'大人'**
+  String get stockpileAdults;
+
+  /// 世帯人数（子ども）
+  ///
+  /// In ja, this message translates to:
+  /// **'子ども'**
+  String get stockpileChildren;
+
+  /// 備蓄日数の選択
+  ///
+  /// In ja, this message translates to:
+  /// **'備蓄する日数'**
+  String get stockpileDaysLabel;
+
+  /// 備蓄日数の選択肢（3日分・7日分）
+  ///
+  /// In ja, this message translates to:
+  /// **'{days}日分'**
+  String stockpileDaysValue(int days);
+
+  /// 必要量サマリーの見出し
+  ///
+  /// In ja, this message translates to:
+  /// **'必要量のめやす'**
+  String get stockpileSummaryTitle;
+
+  /// 必要な水の量（L）
+  ///
+  /// In ja, this message translates to:
+  /// **'水 {liters}L'**
+  String stockpileSummaryWater(int liters);
+
+  /// 必要な食事の回数
+  ///
+  /// In ja, this message translates to:
+  /// **'食料 {meals}食'**
+  String stockpileSummaryMeals(int meals);
+
+  /// 必要量の根拠（内閣府・農林水産省の目安）
+  ///
+  /// In ja, this message translates to:
+  /// **'内閣府・農林水産省の目安（1人1日あたり 水3L・3食）にもとづく試算です'**
+  String get stockpileSummaryNote;
+
+  /// 出典リンク（農林水産省 家庭備蓄ポータル）
+  ///
+  /// In ja, this message translates to:
+  /// **'農林水産省「家庭備蓄ポータル」'**
+  String get stockpileSourceMaff;
+
+  /// 出典リンク（内閣府 防災情報のページ）
+  ///
+  /// In ja, this message translates to:
+  /// **'内閣府「防災情報のページ」'**
+  String get stockpileSourceCao;
+
+  /// チェック済み件数
+  ///
+  /// In ja, this message translates to:
+  /// **'{done}/{total} 完了'**
+  String stockpileProgress(int done, int total);
+
+  /// 必要量（数量＋単位）
+  ///
+  /// In ja, this message translates to:
+  /// **'必要 {quantity}{unit}'**
+  String stockpileRequired(String quantity, String unit);
+
+  /// アフィリエイト検索ボタン
+  ///
+  /// In ja, this message translates to:
+  /// **'探す'**
+  String get stockpileSearchButton;
+
+  /// 期限を登録するボタン
+  ///
+  /// In ja, this message translates to:
+  /// **'期限を登録'**
+  String get stockpileExpirySet;
+
+  /// 登録済みの期限（日付はYYYY-MM-DD）
+  ///
+  /// In ja, this message translates to:
+  /// **'期限 {date}'**
+  String stockpileExpiryOn(String date);
+
+  /// 期限まで1か月以内
+  ///
+  /// In ja, this message translates to:
+  /// **'まもなく期限'**
+  String get stockpileExpirySoon;
+
+  /// 期限切れ
+  ///
+  /// In ja, this message translates to:
+  /// **'期限切れ'**
+  String get stockpileExpired;
+
+  /// 登録した期限を消す
+  ///
+  /// In ja, this message translates to:
+  /// **'期限を消す'**
+  String get stockpileExpiryClear;
+
+  /// 項目の追加
+  ///
+  /// In ja, this message translates to:
+  /// **'項目を追加'**
+  String get stockpileAddItem;
+
+  /// 追加ダイアログの品名欄
+  ///
+  /// In ja, this message translates to:
+  /// **'品名'**
+  String get stockpileItemNameLabel;
+
+  /// 追加ダイアログの必要数欄
+  ///
+  /// In ja, this message translates to:
+  /// **'必要数'**
+  String get stockpileItemQuantityLabel;
+
+  /// 追加ダイアログのカテゴリ欄
+  ///
+  /// In ja, this message translates to:
+  /// **'カテゴリ'**
+  String get stockpileItemCategoryLabel;
+
+  /// 項目の削除
+  ///
+  /// In ja, this message translates to:
+  /// **'項目を削除'**
+  String get stockpileDeleteItem;
+
+  /// 削除したときのメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'「{item}」を削除しました'**
+  String stockpileDeleted(String item);
+
+  /// 削除の取り消し
+  ///
+  /// In ja, this message translates to:
+  /// **'元に戻す'**
+  String get stockpileUndo;
+
+  /// チェックリストを初期状態に戻す
+  ///
+  /// In ja, this message translates to:
+  /// **'初期状態に戻す'**
+  String get stockpileReset;
+
+  /// 初期化の確認
+  ///
+  /// In ja, this message translates to:
+  /// **'チェック・期限・追加した項目をすべて消して、最初の状態に戻します。よろしいですか？'**
+  String get stockpileResetConfirm;
+
+  /// リマインド設定の見出し
+  ///
+  /// In ja, this message translates to:
+  /// **'リマインド'**
+  String get stockpileSectionReminder;
+
+  /// 期限リマインドのスイッチ
+  ///
+  /// In ja, this message translates to:
+  /// **'期限の1か月前に知らせる'**
+  String get stockpileExpiryReminder;
+
+  /// 期限リマインドの説明
+  ///
+  /// In ja, this message translates to:
+  /// **'登録した期限の1か月前の午前9時に、この端末で通知します'**
+  String get stockpileExpiryReminderSubtitle;
+
+  /// 点検日リマインドのスイッチ
+  ///
+  /// In ja, this message translates to:
+  /// **'点検日に知らせる'**
+  String get stockpileInspectionReminder;
+
+  /// 点検日リマインドの説明（3/11・9/1）
+  ///
+  /// In ja, this message translates to:
+  /// **'3月11日と9月1日（防災の日）の午前9時に通知します'**
+  String get stockpileInspectionReminderSubtitle;
+
+  /// 通知が許可されなかったとき
+  ///
+  /// In ja, this message translates to:
+  /// **'端末の通知が許可されていません。設定アプリから通知を許可してください'**
+  String get stockpileNotifyDenied;
+
+  /// ローカル通知のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'防災備蓄の点検'**
+  String get stockpileNotifyTitle;
+
+  /// 期限リマインドの本文
+  ///
+  /// In ja, this message translates to:
+  /// **'「{item}」の期限が近づいています（{date}）'**
+  String stockpileNotifyExpiryBody(String item, String date);
+
+  /// 点検日リマインドの本文
+  ///
+  /// In ja, this message translates to:
+  /// **'備蓄品の期限と数量を点検しましょう'**
+  String get stockpileNotifyInspectionBody;
+
+  /// 景表法のステマ規制（令和5年10月1日施行）対応。商品リンクのある画面に必須
+  ///
+  /// In ja, this message translates to:
+  /// **'※商品リンクにはアフィリエイトプログラムを利用しています'**
+  String get stockpileAffiliateNotice;
+
+  /// 商品シートの見出し（公的資料にもとづく選び方）
+  ///
+  /// In ja, this message translates to:
+  /// **'選び方のポイント'**
+  String get stockpileGuideWhy;
+
+  /// 商品シートの見出し（メーカー公式ページの一覧）
+  ///
+  /// In ja, this message translates to:
+  /// **'参考になる製品'**
+  String get stockpileGuideProducts;
+
+  /// 商品リンクの但し書き（価格・在庫は載せていない旨）
+  ///
+  /// In ja, this message translates to:
+  /// **'メーカー公式ページへのリンクです。販売状況・価格は各ショップでご確認ください。'**
+  String get stockpileGuideProductsNote;
+
+  /// 商品シートの見出し（提携ショップ検索）
+  ///
+  /// In ja, this message translates to:
+  /// **'商品を探す'**
+  String get stockpileGuideSearch;
+
+  /// 提携ショップの検索ボタン。{shop}は店舗名（固有名詞なので翻訳しない）
+  ///
+  /// In ja, this message translates to:
+  /// **'{shop}で探す'**
+  String stockpileGuideSearchAt(String shop);
+
+  /// 商品シートの見出し（出典リンク）
+  ///
+  /// In ja, this message translates to:
+  /// **'出典'**
+  String get stockpileGuideSources;
+
+  /// 必要量は参考値である旨
+  ///
+  /// In ja, this message translates to:
+  /// **'必要量は公的機関の目安にもとづく参考値です。ご家庭の事情に合わせて調整してください'**
+  String get stockpileDisclaimer;
+
+  /// カテゴリ名
+  ///
+  /// In ja, this message translates to:
+  /// **'水・食料'**
+  String get stockpileCatWaterFood;
+
+  /// カテゴリ名
+  ///
+  /// In ja, this message translates to:
+  /// **'明かり・電源'**
+  String get stockpileCatLightPower;
+
+  /// カテゴリ名
+  ///
+  /// In ja, this message translates to:
+  /// **'衛生'**
+  String get stockpileCatSanitation;
+
+  /// カテゴリ名
+  ///
+  /// In ja, this message translates to:
+  /// **'救急・衛生用品'**
+  String get stockpileCatFirstAid;
+
+  /// カテゴリ名
+  ///
+  /// In ja, this message translates to:
+  /// **'避難用'**
+  String get stockpileCatEvacuation;
+
+  /// カテゴリ名
+  ///
+  /// In ja, this message translates to:
+  /// **'貴重品・情報'**
+  String get stockpileCatValuables;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'L'**
+  String get stockpileUnitLiter;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'食'**
+  String get stockpileUnitMeal;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'個'**
+  String get stockpileUnitPiece;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'枚'**
+  String get stockpileUnitSheet;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'ロール'**
+  String get stockpileUnitRoll;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'双'**
+  String get stockpileUnitPair;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'パック'**
+  String get stockpileUnitPack;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'回分'**
+  String get stockpileUnitTimes;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'日分'**
+  String get stockpileUnitDays;
+
+  /// 単位
+  ///
+  /// In ja, this message translates to:
+  /// **'式'**
+  String get stockpileUnitSet;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'保存水'**
+  String get stockpileItemWater;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'非常食（主食）'**
+  String get stockpileItemStapleFood;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'レトルト食品'**
+  String get stockpileItemRetortFood;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'缶詰'**
+  String get stockpileItemCannedFood;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'粉ミルク・液体ミルク'**
+  String get stockpileItemBabyFormula;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'懐中電灯'**
+  String get stockpileItemFlashlight;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'乾電池'**
+  String get stockpileItemBatteries;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'モバイルバッテリー'**
+  String get stockpileItemPowerBank;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'携帯ラジオ'**
+  String get stockpileItemRadio;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'簡易トイレ'**
+  String get stockpileItemPortableToilet;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'トイレットペーパー'**
+  String get stockpileItemToiletPaper;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'ウェットティッシュ'**
+  String get stockpileItemWetWipes;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'ゴミ袋'**
+  String get stockpileItemGarbageBags;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'おむつ'**
+  String get stockpileItemDiapers;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'救急セット'**
+  String get stockpileItemFirstAidKit;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'常備薬'**
+  String get stockpileItemMedicine;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'マスク'**
+  String get stockpileItemMask;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'消毒液'**
+  String get stockpileItemDisinfectant;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'防災リュック'**
+  String get stockpileItemBackpack;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'アルミブランケット'**
+  String get stockpileItemBlanket;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'軍手'**
+  String get stockpileItemGloves;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'ロープ'**
+  String get stockpileItemRope;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'現金（小銭を含む）'**
+  String get stockpileItemCash;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'身分証のコピー'**
+  String get stockpileItemIdCopy;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'連絡先メモ'**
+  String get stockpileItemContactMemo;
+
+  /// 備蓄品の名称
+  ///
+  /// In ja, this message translates to:
+  /// **'充電ケーブル'**
+  String get stockpileItemCable;
+
+  /// 「探す」を押したときの店舗選択シートの見出し
+  ///
+  /// In ja, this message translates to:
+  /// **'店舗を選ぶ'**
+  String get stockpileChooseShop;
 }
 
 class _AppLocalizationsDelegate

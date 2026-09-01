@@ -1,0 +1,1325 @@
+{
+ "version": "2026-09-01T11:21:09Z",
+ "notice": "商品リンクにはアフィリエイトプログラムを利用しています。",
+ "disclaimer": "掲載しているのは公的機関の備蓄品目リスト・規格適合・長期の販売実績を根拠に選んだ「例」です。特定の商品を推奨・保証するものではなく、価格・在庫は各ショップでご確認ください。仕様は2026年9月1日にメーカー公式ページで確認した時点のもので、変更・廃番の可能性があります。",
+ "sources": [
+  {
+   "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+   "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+  },
+  {
+   "name": "農林水産省 家庭備蓄ポータル「大事な水、どうやって備えますか？」",
+   "url": "https://www.maff.go.jp/j/zyukyu/foodstock/imadoki/imadoki02_10.html"
+  },
+  {
+   "name": "農林水産省 食品ストックガイド",
+   "url": "https://www.maff.go.jp/j/zyukyu/foodstock/chapter01.html"
+  },
+  {
+   "name": "総務省消防庁 地震防災マニュアル「備蓄品を備える」",
+   "url": "https://www.fdma.go.jp/relocation/bousai_manual/pre/preparation081.html"
+  },
+  {
+   "name": "総務省消防庁 備蓄品チェックシート",
+   "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+  },
+  {
+   "name": "総務省消防庁 非常用持出品チェックシート",
+   "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+  },
+  {
+   "name": "東京都「東京備蓄ナビ」",
+   "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+  },
+  {
+   "name": "内閣府 広報ぼうさい第111号（出典：経済産業省製造産業局生活製品課）",
+   "url": "https://www.bousai.go.jp/kohou/kouhoubousai/r06/111/news_08.html"
+  },
+  {
+   "name": "一般社団法人 防災安全協会「防災製品等推奨品」制度",
+   "url": "https://bousai-anzen.com/system/"
+  }
+ ],
+ "cert_note": "「防災製品等推奨品」は一般社団法人 防災安全協会の認証制度。協会は認定品一覧をPDFカタログでのみ公開しており（カタログには無断転載禁止の明記があるため本データには転載していない）、認定番号も「第○号」形式では公開していない。そのため本データでは、メーカー自身の公式製品ページに認証取得の記載があるものだけに cert を付けている。cert が無いことは「認定されていない」ことを意味しない。",
+ "categories": [
+  {
+   "key": "waterFood",
+   "name": "水・食料",
+   "items": [
+    {
+     "id": "water",
+     "name": "長期保存水（5年以上保存）",
+     "spec": "500ml / 2L ボトル、賞味期限5年〜（製品により7〜15年）",
+     "why": "内閣府・農林水産省・消防庁・東京都のいずれも「1人1日3リットル・最低3日分（9L）」を目安としている。通常のミネラルウォーター（賞味期限1〜2年）ではなく5年以上の保存水を選ぶと入替えの回数が減る。",
+     "sources": [
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      },
+      {
+       "name": "農林水産省 家庭備蓄ポータル「大事な水、どうやって備えますか？」",
+       "url": "https://www.maff.go.jp/j/zyukyu/foodstock/imadoki/imadoki02_10.html"
+      },
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "長期保存水 5年 500ml 24本",
+      "rakuten": "保存水 5年 2L 6本 備蓄",
+      "amazon": "非常用 保存水 5年 500ml 24本"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "富士ミネラルウォーター 非常用5年保存水（賞味期限5年6か月・硬度40mg/L・1971年から販売）",
+       "url": "https://www.fujimineral.jp/products/hijou/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "赤穂化成 備蓄水（室戸海洋深層水・5年保存）",
+       "url": "https://web.ako-kasei.co.jp/catalogue/product/bichikusui",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "stapleFood",
+     "name": "主食（アルファ米・保存食セット）",
+     "spec": "アルファ米 1食100g（出来上がり約260g・360kcal前後）／保存5年。注水または熱湯で調理",
+     "why": "消防庁の備蓄品チェックシートが「アルファ米」を明記。内閣府も「ご飯（アルファ米などを一人5食分）」を例示。1日3食×3日分＝1人9食が目安（東京備蓄ナビはレトルトご飯を大人1人1日3食で計算）。",
+     "sources": [
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      },
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "尾西食品 アルファ米 白飯 100g 50食",
+      "rakuten": "アルファ米 5年保存 五目ごはん 50食",
+      "amazon": "非常食 アルファ米 5年保存 セット"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "尾西食品 尾西の白飯 100g（保存5年・出来上がり260g・366kcal。同社は1944年にアルファ米を開発）",
+       "url": "https://www.onisifoods.co.jp/products/hakuhan.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "尾西食品 尾西の五目ごはん 100g（保存5年・377kcal・肉魚不使用）",
+       "url": "https://www.onisifoods.co.jp/products/gomoku.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "サタケ マジックライス 保存食（全9種・各100g・保存5年・注水量でごはん/雑炊を選べる。1995年前後から30年のロングセラー）",
+       "url": "https://www.satake-fb.co.jp/products/hozon/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "アルファー食品 安心米（保存5年・国産米100%・特定原材料等28品目不使用）",
+       "url": "https://www.alpha-come.co.jp/product/longlife.php",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "尾西食品 尾西の長期保存食セット3日分（保存5年・主食＋パン＋保存水500ml×4本）",
+       "url": "https://www.onisifoods.co.jp/products/longtermstoragefood_3.html",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "retortFood",
+     "name": "主菜・副菜（常温で食べられるレトルト）",
+     "spec": "1食170〜200g／賞味期間4年1か月〜5年6か月。温めずにそのまま食べられるタイプ",
+     "why": "消防庁の備蓄品チェックシートが「レトルト食品（ごはん・おかゆなど）」を明記。停電・ガス停止を想定し、加熱しなくても食べられる（植物油脂使用などで冷えても固まらない）製品を選ぶ。ハウス「温めずにおいしいカレー」は日本災害食学会の日本災害食認証、レスキューフーズは同学会の本格レスキュー食認定を公式に表示している。",
+     "sources": [
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "常備用カレー職人 170g 10個",
+      "rakuten": "温めずにおいしいカレー 5年6ヶ月 備蓄",
+      "amazon": "レトルト 非常食 温めずに食べられる 長期保存"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "江崎グリコ 常備用カレー職人 中辛 170g（賞味期限66か月・温めずに食べられる。2012年発売のロングセラー）",
+       "url": "https://www.glico.com/jp/product/food_curry/curryshokunin/45105/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ハウス食品 温めずにおいしいカレー まろやか野菜カレー 200g（賞味期間4年1か月・日本災害食認証）",
+       "url": "https://housefoods.jp/products/catalog/cd_1,092501,ret,curry,ata.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ホリカフーズ レスキューフーズ 一食ボックス カレーライス（賞味期間5年6か月・発熱剤同梱で火も水も不要）",
+       "url": "https://www.foricafoods.co.jp/rescue/rm_curry_riceb.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "カゴメ 野菜の保存食セット（野菜一日これ一本 長期保存用190g＋野菜たっぷりスープ160g・賞味期間5.5年）",
+       "url": "https://www.kagome.co.jp/products/hozon-yasai/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "cannedFood",
+     "name": "缶詰・缶詰パン",
+     "spec": "パンの缶詰 1缶100g前後／保存3年6か月〜5年。フリーズドライ缶は最長25年",
+     "why": "消防庁の非常用持出品チェックシートが「乾パン・缶詰」を、内閣府が「ビスケット・板チョコ・乾パン」を例示。缶詰パンは開缶してそのまま食べられ、水も調理器具も要らない。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      }
+     ],
+     "search": {
+      "yahoo": "パンの缶詰 5年保存 24缶",
+      "rakuten": "缶詰パン 非常食 長期保存 セット",
+      "amazon": "パンの缶詰 非常食 5年保存"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "パン・アキモト パンの缶詰 PANCAN（100g・賞味期限5年・乳酸菌L-137配合。阪神・淡路大震災を機に開発）",
+       "url": "https://www.panakimoto.com/products_pancan/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "パン・アキモト 救缶鳥（200g・賞味期限5年。期限1年前に回収して飢餓地域へ届ける仕組み）",
+       "url": "https://www.panakimoto.com/products_kyucancho/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "アスト 新・食・缶ベーカリー（100g・5年保存4種／3年保存4種・卵不使用ラインあり）",
+       "url": "https://www.ast-corp.jp/shop/ichiran/bakery/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "セイエンタプライズ サバイバルフーズ 大缶（422g・約10食分・賞味期限25年）",
+       "url": "https://www.sei-inc.co.jp/lineup/l-chickenstew",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "babyFormula",
+     "name": "乳児用ミルク（液体ミルク・粉ミルク）",
+     "spec": "液体ミルク 125ml前後／常温そのまま授乳可。粉ミルクはスティックタイプが計量不要",
+     "why": "東京備蓄ナビは乳幼児1人あたり1日6食（粉ミルクスティックまたは液体ミルク）＋使い捨て哺乳瓶を計上している。断水・停電時は調乳ができないため、常温でそのまま飲ませられる液体ミルクを一定量含める。",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "液体ミルク 常温 備蓄 まとめ買い",
+      "rakuten": "液体ミルク 災害 備蓄 使い捨て哺乳瓶",
+      "amazon": "液体ミルク 常温保存 備蓄"
+     }
+    },
+    {
+     "id": "cassetteStove",
+     "name": "カセットコンロ",
+     "spec": "最大発熱量 2.1〜3.5kW（1,800〜3,000kcal/h）／本体は製造から10年で買い替えが目安",
+     "why": "消防庁の備蓄品チェックシート・内閣府の生活用品例・東京備蓄ナビのいずれもカセットコンロを備蓄品目に挙げている。岩谷産業は本体を「製造から10年を目安に買い替え」と公式に案内している。（この項目はアプリの既定チェックリストには無い。必要ならカスタム項目として追加する）",
+     "sources": [
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      },
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      },
+      {
+       "name": "岩谷産業「カセットボンベの使用期限」（製造から約7年、こんろ本体は10年が目安）",
+       "url": "https://www.iwatani.co.jp/jpn/consumer/products/cg/useful/bombe/"
+      }
+     ],
+     "search": {
+      "yahoo": "イワタニ カセットコンロ 達人スリム CB-TS-5",
+      "rakuten": "カセットコンロ 防災 イワタニ",
+      "amazon": "イワタニ カセットフー カセットコンロ"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "岩谷産業 カセットフー 達人スリムV CB-TS-5（3.4kW・連続燃焼約68分・約1.3kg。達人スリム系4世代目）",
+       "url": "https://www.iwatani.co.jp/jpn/consumer/products/cg/stove/cb-ts-5/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "岩谷産業 カセットフー タフまる CB-ODX-1（3.3kW・連続燃焼約75分・ダブル風防・耐荷重20kg。屋外の炊き出し向け）",
+       "url": "https://www.iwatani.co.jp/jpn/consumer/products/cg/outdoor/cb-odx-1/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ニチネン マイコンロ（KC-353A ほか。3.5kW／小型のKC-333Aは0.85kWで連続燃焼約230分とガス効率が高い）",
+       "url": "https://www.nitinen.com/konro.html",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "gasCanister",
+     "name": "カセットボンベ",
+     "spec": "250g×3本パックが標準（120gの小型もあり）／使用期限は製造から約7年が目安",
+     "why": "東京備蓄ナビはカセットボンベを「コンロ1台につき1日4/3本」で計算している（3日で4本、7日で約9〜10本）。岩谷産業は「製造から約7年以内に使い切る」を公式の目安としており、缶底の製造年月で入替えを管理できる。寒冷地・冬季はイソブタン比率を高めた低温対応品を選ぶ。",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      },
+      {
+       "name": "岩谷産業「カセットボンベの使用期限」（製造から約7年、こんろ本体は10年が目安）",
+       "url": "https://www.iwatani.co.jp/jpn/consumer/products/cg/useful/bombe/"
+      }
+     ],
+     "search": {
+      "yahoo": "イワタニ カセットガス 3本 CB-250-OR",
+      "rakuten": "カセットボンベ 250g 3本 備蓄",
+      "amazon": "イワタニ カセットガス 250g 3本パック"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "岩谷産業 カセットガス（オレンジ）3P CB-250-OR（250g×3本・日本/中国製）",
+       "url": "https://www.iwatani.co.jp/jpn/consumer/products/cg/cb/cb-250-or/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "岩谷産業 カセットガス パワーゴールド3P CB-250-3PG（イソブタン比率を高めた低温時対応）",
+       "url": "https://www.iwatani.co.jp/jpn/consumer/products/cg/cb/cb-250-3pg/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ニチネン マイ・ボンベL 250g（国内生産）",
+       "url": "https://www.nitinen.com/item/421/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "lightPower",
+   "name": "明かり・電源",
+   "items": [
+    {
+     "id": "flashlight",
+     "name": "懐中電灯（LED）",
+     "spec": "14〜350lm／連続点灯 6〜55時間／単1〜単4形の乾電池式",
+     "why": "消防庁の非常用持出品チェックシートに「懐中電灯（できれば一人に一つ用意したい）」と明記。備蓄では明るさより連続点灯時間と電池の入手性が効くため、乾電池式（充電式でないもの）を選ぶ。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "懐中電灯 LED 乾電池 防災",
+      "rakuten": "LED懐中電灯 防災 単1 長時間",
+      "amazon": "懐中電灯 LED 防災 乾電池式"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "パナソニック 電池がどれでもライト BF-BM10（単1〜単4形のどれか1本で点灯。単1形1本で約55時間）",
+       "url": "https://panasonic.jp/flashlight/products/BF-BM10/spec.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "GENTOS 閃 参 SG-535（350lm・単4形×3本・IP64・2m落下耐久。SG-505の公式後継）",
+       "url": "https://www.gentos.jp/products/series/senn/senn-san/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "パナソニック LED防水ライト BF-SG01N（18lm・約77時間・水深20m30分の防水）",
+       "url": "https://panasonic.jp/flashlight/products/BF-SG01N/spec.html",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "lantern",
+     "name": "LEDランタン（乾電池式）",
+     "spec": "110〜800lm／連続点灯 8時間〜1,000時間（最小照度時）／単3形または単1形",
+     "why": "東京備蓄ナビが生活用品に「LEDランタン 最低3台」を挙げている（手元を照らす懐中電灯と違い、部屋全体を面で照らせる）。調光できる機種は最小照度で数百〜千時間もつため、長期停電に向く。（この項目はアプリの既定チェックリストには無い。必要ならカスタム項目として追加する）",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      },
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "LEDランタン 乾電池式 防災",
+      "rakuten": "LEDランタン 電池式 防災 調光",
+      "amazon": "LEDランタン 乾電池 防災 長時間"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "パナソニック 乾電池エボルタNEO付き LEDランタン BF-AL06N（最大110lm・最長約2,200時間・単3形×3本・防滴）",
+       "url": "https://panasonic.jp/flashlight/products/BF-AL06N/spec.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "パナソニック 多機能強力ランタン BF-BL45M（最大800lm・最小照度で約1,000時間・単1形×3本・IPX2）",
+       "url": "https://panasonic.jp/flashlight/products/BF-BL45M/spec.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "GENTOS Explorer EX-236D（430lm・Ecoで142時間・単3形×6本・IP68準拠。EX-136Sの公式後継）",
+       "url": "https://www.gentos.jp/products/series/explorer/ex-236d/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "batteries",
+     "name": "乾電池（アルカリ・長期保存タイプ）",
+     "spec": "使用推奨期限10年のアルカリ乾電池。単1〜単4形を機器に合わせて",
+     "why": "消防庁の非常用持出品チェックシートに「予備の乾電池」、東京備蓄ナビにも「乾電池 単1〜単4のセット」がある。備蓄では使用推奨期限10年・液もれ防止をうたう製品を選ぶと入替え頻度が下がる。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "アルカリ乾電池 単3 10年保存 まとめ買い",
+      "rakuten": "乾電池 単3 単4 アルカリ 10年 防災",
+      "amazon": "アルカリ乾電池 単3形 20本 長期保存"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "マクセル アルカリ乾電池 ボルテージ（使用推奨期限10年・10年間液もれ補償）",
+       "url": "https://www.maxell.jp/consumer/voltage.html",
+       "checked_at": "2026-09-01",
+       "cert": {
+        "name": "防災製品等推奨品",
+        "no": null,
+        "url": "https://www.maxell.jp/consumer/voltage.html",
+        "note": "メーカー公式製品ページに認証取得の記載あり（協会は認定番号を「第○号」形式では公開していない）"
+       }
+      },
+      {
+       "shop": "official",
+       "title": "パナソニック 乾電池エボルタNEO（10年保存・液もれ防止製法Ag+）",
+       "url": "https://panasonic.jp/battery/drycell/evoltaneo.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "東芝ライフスタイル アルカリ1（10年長期保存）",
+       "url": "https://www.toshiba-lifestyle.com/jp/batteries/lr20an/",
+       "checked_at": "2026-09-01"
+      }
+     ],
+     "cert": {
+      "name": "防災製品等推奨品",
+      "no": null,
+      "url": "https://www.maxell.jp/consumer/voltage.html",
+      "note": "メーカー公式製品ページに認証取得の記載あり（協会は認定番号を「第○号」形式では公開していない）"
+     }
+    },
+    {
+     "id": "powerBank",
+     "name": "モバイルバッテリー（PSE適合）",
+     "spec": "10,000mAh前後（スマホ約2回分）／PD 18W以上／丸形PSEマーク必須",
+     "why": "東京備蓄ナビが生活用品に「携帯電話充電器」を計上。モバイルバッテリーは2019年2月以降、丸形PSEマークの表示が義務化されており、無表示品は販売できない。**リチウムイオン電池は自己放電と経年劣化があるため、備蓄は年1回の残量確認とセットで運用する。**",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "モバイルバッテリー 10000mAh PSE 防災",
+      "rakuten": "モバイルバッテリー 大容量 PSE 防災 備蓄",
+      "amazon": "モバイルバッテリー 10000mAh PSE 大容量"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "cheero Power Plus 5 10000mAh with Power Delivery 18W（CHE-101。公式ページにPSEマーク付商品と明記）",
+       "url": "https://cheero.net/powerplus5_10000/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "batteryCharger",
+     "name": "乾電池式充電器",
+     "spec": "単3形×4本でスマホを約0.5〜0.7回充電／LEDライト兼用機あり",
+     "why": "リチウムイオン電池と違って自己放電・経年劣化を気にせず備蓄でき、電池を入れ替えれば何度でも使える。停電が数日に及ぶとモバイルバッテリーは使い切るため、乾電池式を併せ持つと復旧まで持たせやすい。（この項目はアプリの既定チェックリストには無い。必要ならカスタム項目として追加する）",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "乾電池式 モバイルバッテリー 単3",
+      "rakuten": "乾電池式 充電器 スマホ 防災 単3",
+      "amazon": "乾電池式 モバイルバッテリー 単3形 防災"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "パナソニック 乾電池式モバイルバッテリー BH-BZ40K（単3形×4本・LEDライト約80時間）",
+       "url": "https://panasonic.jp/battery/products/BH-BZ40K/spec.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "パナソニック USB入出力付急速充電器 BQ-CC87L（充電池の充電に加え、単3形乾電池でもスマホへ出力可・LEDライト約11時間）",
+       "url": "https://panasonic.jp/battery/products/BQ-CC87L/spec.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "多摩電子工業 アルカリ乾電池4本交換式充電器 C変換付 FFD48SCW（単3形×4本・USB-C変換付）",
+       "url": "https://tamadenco.co.jp/product/ffd48scw/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "radio",
+     "name": "防災ラジオ（手回し・ソーラー充電）",
+     "spec": "AM/FM（ワイドFM 76〜108MHz）対応／手回し1分で約14〜15分受信／乾電池も併用できる機種",
+     "why": "消防庁の非常用持出品チェックシートに「携帯ラジオ」、内閣府にも「手回しの懐中電灯つき携帯ラジオ」がある。AM放送のFM補完（ワイドFM）に対応していないと受信できない地域があるため、76〜108MHz対応を確認する。内蔵充電池の劣化を避けたい場合はコンデンサー蓄電式や乾電池併用機を選ぶ。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "防災ラジオ 手回し ソーラー ワイドFM",
+      "rakuten": "手回し充電ラジオ 防災 ソーラー スマホ充電",
+      "amazon": "防災ラジオ 手回し 充電 ワイドFM"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "ソニー ICF-B300（手回し／ソーラー／USB充電・ワイドFM・スマホ充電可・IPX4・395g）",
+       "url": "https://www.sony.jp/radio/products/ICF-B300/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "東芝ライフスタイル TY-JKR6（内蔵コンデンサー蓄電＋単4形乾電池・手回し1分でラジオ約15分・IP54・サイレン）",
+       "url": "https://www.toshiba-lifestyle.com/jp/pro_radio/ty-jkr6/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "パナソニック RF-TJ20（ワイドFM・単4形×3本・手回し1分で約14分・サイレン・蓄光電源ボタン）",
+       "url": "https://panasonic.jp/radio/products/RF-TJ20/spec.html",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "sanitation",
+   "name": "衛生",
+   "items": [
+    {
+     "id": "portableToilet",
+     "name": "簡易トイレ・携帯トイレ",
+     "spec": "凝固剤＋排便袋のセット。1回分ずつの個包装／保存年数5〜15年",
+     "why": "内閣府 広報ぼうさい111号（出典：経済産業省）が「成人の1日の平均排泄回数は1人あたり5回」とし、「5（1人5回分/日）×人数×日数」で必要数を示している。神奈川県・目黒区も同じ計算式を案内。断水すると水洗トイレは使えず、汚水の逆流を招くため流してはいけない。備蓄の中で最も不足しやすい品目。",
+     "sources": [
+      {
+       "name": "内閣府 広報ぼうさい第111号（出典：経済産業省製造産業局生活製品課）",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/r06/111/news_08.html"
+      },
+      {
+       "name": "神奈川県「携帯トイレを備蓄しましょう」",
+       "url": "https://www.pref.kanagawa.jp/docs/j8g/bousai/keitaitoirebitiku.html"
+      },
+      {
+       "name": "東京都目黒区「災害時のトイレは家庭での備蓄が重要です」",
+       "url": "https://www.city.meguro.tokyo.jp/bousai/bousaianzen/bousai/saigai_toilet.html"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      },
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "簡易トイレ 非常用 100回分 凝固剤",
+      "rakuten": "携帯トイレ 防災 備蓄 凝固剤 100回分",
+      "amazon": "簡易トイレ 非常用 凝固剤 長期保存"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "総合サービス サニタクリーン／簡単トイレ（吸水シート一体型で凝固剤散布不要・1個で約1,000cc吸収・保管期間7年。累計出荷1億枚）",
+       "url": "https://sanitaclean.com/disposal-toilet-products/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "まいにち マイレット S-100（100回分・抗菌性凝固剤7g×100・保存年数10年・約2.4kg）",
+       "url": "https://www.mylet.jp/view/item/000000000008",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "クリロン化成 BOS 非常用臭わないトイレセット（防臭袋BOS採用・1回/5回/15回/30回/50回/100回/400回）",
+       "url": "https://bos-bos.com/product/toilet/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "エクセルシア ほっ！トイレ（石灰系タブレット式・保存年数5年）",
+       "url": "https://www.excelsior-inc.com/products/hot-toilet/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "toiletPaper",
+     "name": "トイレットペーパー",
+     "spec": "大人1人1日あたり約0.3ロール（3日で1ロール、7日で約2〜3ロール）",
+     "why": "東京備蓄ナビが大人1人1日0.3ロールで計算。内閣府・消防庁とも生活用品の例に挙げている。ふだん使う分を多めに買って古いものから使う（ローリングストック）だけで備蓄になる。",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      },
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      },
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "トイレットペーパー 長巻き 備蓄",
+      "rakuten": "トイレットペーパー まとめ買い 備蓄 長巻",
+      "amazon": "トイレットペーパー 備蓄 まとめ買い"
+     }
+    },
+    {
+     "id": "wetWipes",
+     "name": "ウェットティッシュ・からだ拭き",
+     "spec": "からだ拭きは大判40×30cm前後／除菌タイプは120枚入前後。ノンアルコールは肌が弱い人・乳幼児向け",
+     "why": "東京備蓄ナビは大人1人1日「除菌ウェットティッシュ10枚」「歯みがき用ウェットティッシュ10枚程度」「ウェットボディタオル1枚」を計上。消防庁の感染症対策物品にもウェットティッシュがある。断水中は入浴も手洗いもできないため、からだ拭き（大判・厚手）と除菌用を分けて備える。",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      },
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      }
+     ],
+     "search": {
+      "yahoo": "からだふきタオル 超大判 ノンアルコール 30枚",
+      "rakuten": "ウェットティッシュ ノンアルコール 大判 防災",
+      "amazon": "ウェットティッシュ 大容量 からだ拭き 防災"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "日本製紙クレシア アクティ からだふきタオル 超大判・超厚手（40×30cm・30枚入・ノンアルコール弱酸性）",
+       "url": "https://acty.crecia.jp/product/raku-care.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "日本製紙クレシア スコッティ ウェットティシュー 除菌ノンアルコールタイプ（120枚・つめかえ式）",
+       "url": "https://scottie.crecia.jp/wet/nonalcohol.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "大王製紙 エリエール 除菌できるノンアルコールタオル（42枚入・135×185mm・菌を99.9%除去）",
+       "url": "https://www.elleair.jp/product/detail/jokin_13_0001",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "garbageBags",
+     "name": "ゴミ袋（大型・防臭）",
+     "spec": "災害ごみ用は90L・厚み0.045mm前後。汚物用は消臭タイプの中〜大サイズ",
+     "why": "内閣府・消防庁・東京備蓄ナビのいずれもビニール袋／ポリ袋を備蓄品目に挙げている。断水中はゴミ収集も止まるため、汚物を封じる防臭袋と、瓦礫・ガラス片に耐える厚手の大型袋を分けて備える。大型袋は雨具・簡易トイレの外袋・給水袋の補助にも転用できる。",
+     "sources": [
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      },
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "ゴミ袋 90L 厚手 0.045mm 業務用",
+      "rakuten": "防臭袋 消臭ゴミ袋 防災 45L",
+      "amazon": "ゴミ袋 大型 90L 厚手 防災"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "日本サニパック 業務用ポリ袋 90L 透明 N9C（900×1000mm・0.045mm・30枚入）",
+       "url": "https://www.sanipak.jp/products_search/general_garbage_bag_90l/item_n9c",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "日本サニパック ニオワイナ 消臭ポリ袋（硫化水素94.7%・アンモニア83%削減など消臭性能を数値公表）",
+       "url": "https://www.sanipak.jp/series/niowaina.html",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "compressedTowel",
+     "name": "圧縮タオル",
+     "spec": "フェイスタオル 35×85cm／バスタオル 120×60cm（圧縮後 約12.6×21×3.2cm）",
+     "why": "圧縮することで非常用持ち出し袋の容積を大きく削れる。断水中は洗濯もできないため、使い切り前提で人数×日数分を持つ。備蓄倉庫・自治会向けに100枚単位で流通している。（この項目はアプリの既定チェックリストには無い。必要ならカスタム項目として追加する）",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "圧縮タオル 防災 備蓄 まとめ買い",
+      "rakuten": "非常用 圧縮タオル フェイスタオル 綿100%",
+      "amazon": "圧縮タオル 圧縮おしぼり 防災 非常用"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "足立織物 非常用圧縮タオル（SK-FT1 フェイスタオル35×85cm／SK-BW バスタオル120×60cm・綿100%）",
+       "url": "https://www.atec1945.co.jp/bousai-product/bousai-towel",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "diapers",
+     "name": "紙おむつ・おしりふき",
+     "spec": "乳幼児1人1日 おむつ10枚／おしりふき1パックが目安",
+     "why": "東京備蓄ナビが乳幼児用品として「おむつ10個／おしりふき1パック（1人1日）」を計上している。サイズが合わなくなるため、備蓄は必ずローリングストック（ふだん使う分を多めに持ち古いものから使う）で運用する。",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "紙おむつ 備蓄 まとめ買い",
+      "rakuten": "紙おむつ 防災 備蓄 おしりふき",
+      "amazon": "紙おむつ 備蓄 ケース"
+     }
+    }
+   ]
+  },
+  {
+   "key": "firstAid",
+   "name": "救急",
+   "items": [
+    {
+     "id": "firstAidKit",
+     "name": "救急セット（応急手当セット）",
+     "spec": "絆創膏・滅菌ガーゼ・包帯・三角巾・消毒液・はさみ・手袋などをまとめたもの",
+     "why": "消防庁の非常用持出品チェックシートに「救急箱（絆創膏・消毒液など）」が明記されている。被災直後は医療機関が機能しないため、切り傷・擦り傷を自分で処置できる最低限を持つ。災害後の片付けでガラス片・釘による受傷が多いことから、ガーゼ・包帯は多めに。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "救急セット 防災 応急手当",
+      "rakuten": "救急箱 防災 備蓄 救急用品セット",
+      "amazon": "救急セット 防災 応急手当 携帯"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "日赤サービス 応急手当セット N115（115×190×50mm・日本赤十字社の救急法テキスト同梱）",
+       "url": "https://www.jrcsc.co.jp/view/item/000000000007",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "日進医療器 リーダー 防災用救急セット（アルミ 20人用・50人用／木製・ポリ救急箱）",
+       "url": "https://www.nissin-iryouki.jp/product/bousai",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "medicine",
+     "name": "常備薬・お薬手帳ケース",
+     "spec": "処方薬は最低3日分＋お薬手帳（またはその写し）。診察券・保険証をまとめられるケース",
+     "why": "消防庁の非常用持出品チェックシートに「処方箋の控え」「胃腸薬・便秘薬・持病の薬」が明記されている。被災地では同じ薬が手に入らないことがあり、薬品名・用量が分かる記録があれば代替処方を受けやすい。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "お薬手帳 ケース 保険証 診察券",
+      "rakuten": "お薬手帳ケース 診察券 保険証 収納",
+      "amazon": "ピルケース 1週間 携帯 お薬手帳ケース"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "リヒトラブ ホスピタルポーチ A-7205（115×12×140mm・お薬手帳＋診察券＋保険証をまとめて携行）",
+       "url": "https://www.lihit-lab.com/products/catalog/a-7205.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "リヒトラブ おくすり手帳ホルダー HM532（114×159mm）",
+       "url": "https://www.lihit-lab.com/products/catalog/hm532.html",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "mask",
+     "name": "マスク（不織布）",
+     "spec": "大人1人1日1枚（東京備蓄ナビ）。JIS T 9001（一般用マスク）適合品を選ぶ",
+     "why": "消防庁の感染症対策物品、東京備蓄ナビとも1人1日1枚で計上。避難所は密になりやすく、倒壊家屋の粉じん・アスベスト対策としても必要。国内の一般用マスクの性能は JIS T 9001 の適合で示されるため、適合番号または JIS マークの有無を比較軸にする（BFE/PFE/VFE の数値は各社とも公式には非公表）。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "不織布マスク 50枚 JIS T9001",
+      "rakuten": "マスク 不織布 大容量 100枚 備蓄",
+      "amazon": "不織布マスク 個包装 備蓄 大容量"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "興和 三次元マスク（JIS T 9001 一般用マスク 規格適合番号 G42107003 を公式に明記・4層構造・日本製）",
+       "url": "https://hc.kowa.co.jp/3jigen/detail_3jigen.php",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ユニ・チャーム 超立体マスク スタンダード（30枚入・JIS T 9001 認証マーク表示）",
+       "url": "https://jp.unicharm-mask.com/ja/products/rittai-standard.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "玉川衛材 フィッティ 7DAYSマスク EXプラス 100枚入（50枚×2袋・サイズ5展開。備蓄向けの大容量分包）",
+       "url": "https://www.tamagawa-eizai.co.jp/product/mask/7days_explus100/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "disinfectant",
+     "name": "消毒液（手指用アルコール）",
+     "spec": "大人1人1日 アルコールスプレー0.1本（＝10日で1本）が目安。指定医薬部外品を選ぶ",
+     "why": "消防庁の感染症対策物品に「手指消毒用アルコール」、東京備蓄ナビにも計上されている。断水中は手洗いができず、避難所では感染性胃腸炎が広がりやすい。**大量に備蓄する場合はアルコール60重量%以上が消防法上の危険物にあたるため、保管量に注意するか、消防法非該当をメーカーが明記している製品を選ぶ。**",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "手指消毒 アルコール 指定医薬部外品",
+      "rakuten": "アルコール消毒液 詰替 業務用 手指",
+      "amazon": "手指消毒液 アルコール 携帯 指定医薬部外品"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "花王プロフェッショナル ハンドスキッシュEX 800mL（指定医薬部外品・エタノール65vol%。消防法上の危険物に該当せず「備蓄等にも適しています」と公式に明記）",
+       "url": "https://pro.kao.com/jp/products/kps01/4901301507310/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "健栄製薬 手ピカジェル（指定医薬部外品・エタノール76.9〜81.4vol%・60mL/300mL）",
+       "url": "https://www.kenei-pharm.com/tepika/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "サラヤ アルソフト 手指消毒ローション（指定医薬部外品・250mL/60mL/480mL詰替）",
+       "url": "https://family.saraya.com/products/alsoft/alsoft.html",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "evacuation",
+   "name": "避難用",
+   "items": [
+    {
+     "id": "backpack",
+     "name": "防災リュック（非常用持ち出し袋セット）",
+     "spec": "1人用で容量18〜30L・総重量2〜5kg。同梱の保存食・保存水は5年前後",
+     "why": "消防庁は「非常持出品は、備蓄品の中から避難生活に必要なものを選ぶのがよい」としている。セット品は不足を作りにくい反面、**同梱の食品・水・電池には期限があるため、買って置きっぱなしにせず年1回の点検日（3月11日・9月1日）に中身を確認する**。背負って階段を降りられる重さ（成人で体重の1〜2割程度）に収めることが実効性を左右する。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "内閣府 広報ぼうさい第83号 特集3「地震に備える」",
+       "url": "https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html"
+      }
+     ],
+     "search": {
+      "yahoo": "防災リュック 1人用 セット 防災士監修",
+      "rakuten": "防災セット リュック 非常用持ち出し袋",
+      "amazon": "防災リュック 非常用持ち出し袋 セット"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "LA・PITA 防災セット SHELTER プレミアム 1人用（約30品目・リュック約30L・総重量約5.0kg・保存食/保存水5年）",
+       "url": "https://lapita.co.jp/item/10000170/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "山善 防災バッグ 一次避難用 災害対策30点セット YBG-30（18L・1.97kg・防災士監修）",
+       "url": "https://yamazenbizcom.jp/item/22666.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ミドリ安全 非常持出セット17（9点・保存年数5年）",
+       "url": "https://ec.midori-anzen.com/shop/g/g4082100554/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "blanket",
+     "name": "アルミブランケット（エマージェンシーシート）",
+     "spec": "使用時 約142×213cm／収納時 手のひら大／重量 48〜91g",
+     "why": "消防庁の非常用持出品チェックシートに「毛布」がある。アルミ蒸着シートは体熱の8〜9割を反射し、毛布とは比べものにならない軽さ・小ささで持ち出し袋に入る。冬季の車中泊・屋外待機での低体温症対策。使い捨て前提のため、人数分＋予備を持つ。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "エマージェンシーブランケット 防災 保温",
+      "rakuten": "エマージェンシーシート アルミ 防災 まとめ買い",
+      "amazon": "エマージェンシーブランケット 防災 アルミ"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "SOL エマージェンシーブランケット 1人用 12132-6（約142×213cm・約65g・体熱の90%を反射。輸入元スター商事）",
+       "url": "https://www.star-corp.co.jp/shop/products/detail/10124",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "SOL エマージェンシーブランケット 備蓄用パック 12347-4（1パック200枚のバルク品。公式に「自治体や企業の防災用備蓄品としてお奨め」と明記）",
+       "url": "https://www.star-corp.co.jp/shop/products/detail/20004",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ハイマウント サバイバルシートII 22130（約210×130cm・約48g・アルミ蒸着ポリエステル）",
+       "url": "https://highmount.jp/brands/highmount/survival-sheet/",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "gloves",
+     "name": "軍手・作業用手袋",
+     "spec": "普段使いは背抜き手袋。片付け作業には EN 388 の耐切創レベルが表示された手袋",
+     "why": "消防庁の非常用持出品チェックシートに「厚手の手袋」、東京備蓄ナビにも「軍手」がある。**倒壊家屋・割れたガラス・金属片の片付けでは、綿の軍手では簡単に貫通する。本気で片付けをするなら EN 388:2016 の耐切創レベルが表示されたものを1双は用意する。**一方、火気を扱う場面では溶けない綿100%（7ゲージ厚手）が向く。用途で使い分ける。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "作業用手袋 背抜き 防災",
+      "rakuten": "耐切創手袋 EN388 ガラス 片付け 防災",
+      "amazon": "軍手 作業用 防災 耐切創"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "ショーワグローブ No.310 グリップ（背抜き手袋のロングセラーと公式に明記・10ゲージシームレス・抗菌防臭）",
+       "url": "https://www.showaglove.co.jp/product/detail/professional/21",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ショーワグローブ S-TEX 581（EN 388:2016 / EN ISO 13997 耐切創レベルE・アラミド＋ステンレス繊維）",
+       "url": "https://www.showaglove.co.jp/product/detail/industrial/660",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "ショーワグローブ No.281 テムレス（透湿防水。濡れた瓦礫・冬季の作業向け）",
+       "url": "https://www.showaglove.co.jp/product/detail/professional/421",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "helmet",
+     "name": "防災用ヘルメット・防災ずきん",
+     "spec": "ヘルメットは厚生労働省の保護帽規格の国家検定合格品（労・検ラベル）。区分は「飛来・落下物用」／「墜落時保護用」",
+     "why": "消防庁の非常用持出品チェックシートに「ヘルメット・防災ずきん」が明記されている。**購入時は国家検定合格品かどうかと、どの区分（飛来・落下物用／墜落時保護用）に合格しているかを必ず確認する。**日本ヘルメット工業会は熱可塑性樹脂（ABS/PC/PE）製で使用開始から3年以内、熱硬化性樹脂（FRP等）製で5年以内、着装体は1年以内の交換を推奨している（法規制ではなく目安）。防災ずきんは（公財）日本防炎協会の防炎製品ラベルが対象品目に含まれる。（この項目はアプリの既定チェックリストには無い。必要ならカスタム項目として追加する）",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      },
+      {
+       "name": "一般社団法人 日本ヘルメット工業会 FAQ（保護帽の交換目安）",
+       "url": "https://japan-helmet.com/faq/"
+      },
+      {
+       "name": "公益財団法人 日本防炎協会 防炎製品ラベル（対象品目に防災頭巾）",
+       "url": "https://www.jfra.or.jp/member/s06.html"
+      }
+     ],
+     "search": {
+      "yahoo": "折りたたみ ヘルメット 防災 国家検定",
+      "rakuten": "防災ヘルメット 折りたたみ 飛来落下物用",
+      "amazon": "防災用ヘルメット 折りたたみ 国家検定合格品"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "DICプラスチック IZANO2（450g・折りたたみ時厚63mm・頭囲47〜62cm・「飛来落下物用」「墜落時保護用」の2区分で国家検定取得）",
+       "url": "https://www.dic-plas.co.jp/products/helmet/izano2/index.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "加賀産業 オサメット KGO-1（約375g・収納時A4サイズ厚45mm・ABS樹脂・国家検定合格「飛来落下物用」）",
+       "url": "https://www.kagahelmet.com/products/osamet/osamet-1.html",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "トーヨーセフティー BLOOM No.100（約430g・折りたたみ345×195×80mm・日本製・国家検定合格「飛来落下物用」）",
+       "url": "https://www.toyo-safety.co.jp/products/100/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "デビカ 防災ずきん 衝撃吸収パッド入り 143544/143545（W300×D90×H430mm・376g・難燃加工繊維）",
+       "url": "https://debika.co.jp/products/detail.php?product_id=741",
+       "checked_at": "2026-09-01",
+       "cert": {
+        "name": "防災製品等推奨品",
+        "no": null,
+        "url": "https://debika.co.jp/products/detail.php?product_id=741",
+        "note": "メーカー公式製品ページに「防災製品等推奨品マーク」認証取得の記載あり"
+       }
+      },
+      {
+       "shop": "official",
+       "title": "デビカ 防災ずきんアルミ 143515（W260×D50×H450mm・378g・防炎加工。日本防炎協会認定品と公式に明記）",
+       "url": "https://debika.co.jp/products/detail.php?product_id=269",
+       "checked_at": "2026-09-01"
+      }
+     ],
+     "cert": {
+      "name": "防災製品等推奨品",
+      "no": null,
+      "url": "https://debika.co.jp/products/detail.php?product_id=741",
+      "note": "メーカー公式製品ページに「防災製品等推奨品マーク」認証取得の記載あり"
+     }
+    },
+    {
+     "id": "whistle",
+     "name": "ホイッスル（防災笛）",
+     "spec": "音量 109〜115dB。可動部（コルク玉）のないピーレス構造は水濡れ・凍結に強い",
+     "why": "倒壊家屋の下敷きになったとき、声は数分で出なくなるがホイッスルは消耗せず鳴らせる。非常用持ち出し袋に入れるだけでなく、常時携行できる小型のものを1人1個持つ。コルク玉入りは湿気・凍結で鳴らないことがあるため、可動部のないピーレス構造を選ぶ。（この項目はアプリの既定チェックリストには無い。必要ならカスタム項目として追加する）",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "防災 ホイッスル 救助笛 大音量",
+      "rakuten": "ホイッスル 防災 避難 首かけ",
+      "amazon": "防災 ホイッスル 救助笛 大音量"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "Fox 40 Classic（115dB・3チャンバーのピーレス構造で可動部なし・自己排水）",
+       "url": "https://www.fox40world.com/classic",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "モルテン ホイッスル ドルフィンプロ WDFP（109dB／1m・コルクなし）",
+       "url": "https://shop.moltensports.jp/products/wdfp",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "rope",
+     "name": "ロープ（避難用・多用途）",
+     "spec": "避難用は径12mm・長さ5〜6m・約50cm間隔のコブ加工＋カラビナ付き（使用荷重115〜150kgf）",
+     "why": "消防庁の備蓄品チェックシートに「ロープ」が挙げられている。2階からの脱出、荷物の固定、洗濯物・目隠しの設営など用途が広い。**市販の「簡易避難ロープ」は消防法上の避難器具ではない。**メーカー自身がそう明記しているとおり、高層階からの避難手段としては使えない点に注意する。",
+     "sources": [
+      {
+       "name": "総務省消防庁 備蓄品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/store.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "避難ロープ コブ付き カラビナ 12mm",
+      "rakuten": "防災 避難ロープ 5m 難燃 ベランダ",
+      "amazon": "避難用ロープ 結び目 カラビナ付き"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "ユタカメイク 簡易避難用ロープ AK-700（12mm×5m・コブ11個・ポリエステル難燃素材・使用荷重115kgf以下・カラビナ付）",
+       "url": "https://yutakamake.co.jp/product/rope/rope21/2112",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "valuables",
+   "name": "貴重品・情報",
+   "items": [
+    {
+     "id": "cash",
+     "name": "現金（小銭）",
+     "spec": "10円玉を中心に小銭。公衆電話・自動販売機用",
+     "why": "消防庁の非常用持出品チェックシートが貴重品類の筆頭に「現金（10円玉）」を挙げている。停電するとキャッシュレス決済もATMも使えず、公衆電話は10円玉でしか使えない機種がある。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "コインケース 小銭入れ 防災",
+      "rakuten": "コインホルダー 小銭 携帯 防災",
+      "amazon": "コインケース 小銭入れ 携帯"
+     }
+    },
+    {
+     "id": "idCopy",
+     "name": "身分証・書類の写しと防水ケース",
+     "spec": "スマホ用防水ケースは IPX8 相当（水深10〜30m相当の試験）。書類はA4が入る防水袋",
+     "why": "消防庁の非常用持出品チェックシートに「預金通帳・印鑑・保険証・免許証」が挙げられている。原本を持ち出せないことを想定し写しを防水ケースに入れておく。同じケースはスマホの浸水対策にもなり、水害・豪雨時の避難で効く。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "防水ケース スマホ IPX8 防災",
+      "rakuten": "防水ケース 書類 A4 防災 スマホ",
+      "amazon": "スマホ 防水ケース IPX8 防災"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "サンワサプライ スマートフォン防水ケース PDA-SPCWP2W（IPX8相当・最大5.7インチ・48g）",
+       "url": "https://www.sanwa.co.jp/product/syohin?code=PDA-SPCWP2W",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "オウルテック 2WAY防水ケース OWL-WPCSP19（IPX8相当／水深30m相当の防水テスト合格・最大6.7インチ）",
+       "url": "https://www.owltech.co.jp/product-top/cat_goods/cat_goods-waterproof-case/wpcsp19/",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "Aquapac Waterproof Floating Phone Case – Plus（IPX8／水深10m・フロートパッド内蔵で水に浮く・ケースのまま操作可）",
+       "url": "https://aquapac.net/products/waterproof-phone-case-plus",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "id": "contactMemo",
+     "name": "連絡先メモ（耐水）",
+     "spec": "家族の連絡先・集合場所・災害用伝言ダイヤル(171)の使い方を書いた耐水メモ",
+     "why": "消防庁の救急用具に「処方箋の控え」、避難用具に情報の携行が挙げられている。スマホは電池切れ・水没・紛失で使えなくなるため、連絡先を紙で持つ。濡れても読める耐水紙、または防水ケースに入れる。",
+     "sources": [
+      {
+       "name": "総務省消防庁 非常用持出品チェックシート",
+       "url": "https://www.fdma.go.jp/relocation/bousai_manual/too/pdf/mocidashi.pdf"
+      }
+     ],
+     "search": {
+      "yahoo": "耐水メモ 防災 連絡カード",
+      "rakuten": "防災 連絡カード 耐水メモ 家族",
+      "amazon": "耐水メモ帳 防災 連絡先カード"
+     }
+    },
+    {
+     "id": "cable",
+     "name": "充電ケーブル",
+     "spec": "端末に合う端子（USB-C / Lightning）で1〜1.8m。Lightning は Apple MFi 認証品",
+     "why": "東京備蓄ナビが生活用品に「携帯電話充電器」を計上。避難所の共用電源やモバイルバッテリーがあってもケーブルが無ければ充電できない。断線しやすい部位なので、ふだん使いとは別に予備を1本、持ち出し袋へ入れておく。",
+     "sources": [
+      {
+       "name": "東京都「東京備蓄ナビ」",
+       "url": "https://www.bichiku.metro.tokyo.lg.jp/"
+      }
+     ],
+     "search": {
+      "yahoo": "USB-C ケーブル 1.8m MFi",
+      "rakuten": "充電ケーブル USB-C ライトニング 防災 予備",
+      "amazon": "充電ケーブル USB-C Lightning MFi認証"
+     },
+     "products": [
+      {
+       "shop": "official",
+       "title": "Anker PowerLine III Flow USB-C & ライトニングケーブル（0.9m/1.8m・Apple MFi認証済みと公式に明記・約25,000回の折り曲げ試験）",
+       "url": "https://www.ankerjapan.com/products/a866",
+       "checked_at": "2026-09-01"
+      },
+      {
+       "shop": "official",
+       "title": "サンワサプライ USB2.0 Type-Cケーブル KU-CCP6015W（1.5m・USB-IF認証品・PD 60W）",
+       "url": "https://www.sanwa.co.jp/product/syohin?code=KU-CCP6015W",
+       "checked_at": "2026-09-01"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

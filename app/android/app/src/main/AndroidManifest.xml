@@ -5,6 +5,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <!-- Android 13+ の通知許可（災害プッシュ通知） -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <!-- 再起動後にローカル通知（防災備蓄のリマインド）を再登録するため。
+         flutter_local_notifications v16以降はアプリ側で宣言する必要がある。
+         正確な時刻は要らないので SCHEDULE_EXACT_ALARM は使わない
+         （AndroidScheduleMode.inexactAllowWhileIdle で予約している） -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <!-- 広告ID（AdMob。Android 13+ で必要） -->
     <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
     <application
@@ -50,6 +55,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!-- 予約したローカル通知（防災備蓄のリマインド）の表示・再登録 -->
+        <receiver android:exported="false"
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
+        <receiver android:exported="false"
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

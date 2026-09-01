@@ -1677,6 +1677,300 @@ class AppLocalizationsZh extends AppLocalizations {
   String settingsDiagError(String error) {
     return '错误：$error';
   }
+
+  @override
+  String get stockpileTitle => '防灾储备';
+
+  @override
+  String get stockpileEntryTitle => '防灾储备（物资清单）';
+
+  @override
+  String get stockpileEntrySubtitle => '根据家庭人数计算所需数量并逐项确认';
+
+  @override
+  String get stockpileBosaiLink => '储备够了吗？打开物资清单';
+
+  @override
+  String get stockpileHouseholdTitle => '家庭人数';
+
+  @override
+  String get stockpileAdults => '成人';
+
+  @override
+  String get stockpileChildren => '儿童';
+
+  @override
+  String get stockpileDaysLabel => '储备天数';
+
+  @override
+  String stockpileDaysValue(int days) {
+    return '$days天份';
+  }
+
+  @override
+  String get stockpileSummaryTitle => '所需数量参考';
+
+  @override
+  String stockpileSummaryWater(int liters) {
+    return '水 ${liters}L';
+  }
+
+  @override
+  String stockpileSummaryMeals(int meals) {
+    return '食物 $meals餐';
+  }
+
+  @override
+  String get stockpileSummaryNote => '基于日本内阁府、农林水产省的参考标准（每人每天3L水、3餐）计算';
+
+  @override
+  String get stockpileSourceMaff => '农林水产省“家庭储备门户”';
+
+  @override
+  String get stockpileSourceCao => '内阁府“防灾信息页面”';
+
+  @override
+  String stockpileProgress(int done, int total) {
+    return '已完成 $done/$total';
+  }
+
+  @override
+  String stockpileRequired(String quantity, String unit) {
+    return '需要 $quantity$unit';
+  }
+
+  @override
+  String get stockpileSearchButton => '查找';
+
+  @override
+  String get stockpileExpirySet => '登记保质期';
+
+  @override
+  String stockpileExpiryOn(String date) {
+    return '保质期 $date';
+  }
+
+  @override
+  String get stockpileExpirySoon => '即将到期';
+
+  @override
+  String get stockpileExpired => '已过期';
+
+  @override
+  String get stockpileExpiryClear => '清除保质期';
+
+  @override
+  String get stockpileAddItem => '添加项目';
+
+  @override
+  String get stockpileItemNameLabel => '物品名称';
+
+  @override
+  String get stockpileItemQuantityLabel => '需要数量';
+
+  @override
+  String get stockpileItemCategoryLabel => '分类';
+
+  @override
+  String get stockpileDeleteItem => '删除项目';
+
+  @override
+  String stockpileDeleted(String item) {
+    return '已删除“$item”';
+  }
+
+  @override
+  String get stockpileUndo => '撤销';
+
+  @override
+  String get stockpileReset => '恢复初始状态';
+
+  @override
+  String get stockpileResetConfirm => '将清除所有勾选、保质期和添加的项目，恢复初始状态。确定吗？';
+
+  @override
+  String get stockpileSectionReminder => '提醒';
+
+  @override
+  String get stockpileExpiryReminder => '保质期前1个月提醒';
+
+  @override
+  String get stockpileExpiryReminderSubtitle => '在所登记保质期前1个月的上午9点，本机会发出通知';
+
+  @override
+  String get stockpileInspectionReminder => '检查日提醒';
+
+  @override
+  String get stockpileInspectionReminderSubtitle => '3月11日和9月1日（防灾日）上午9点通知';
+
+  @override
+  String get stockpileNotifyDenied => '未允许通知。请在系统“设置”中允许通知';
+
+  @override
+  String get stockpileNotifyTitle => '防灾储备检查';
+
+  @override
+  String stockpileNotifyExpiryBody(String item, String date) {
+    return '“$item”即将到期（$date）';
+  }
+
+  @override
+  String get stockpileNotifyInspectionBody => '请检查储备物资的保质期和数量';
+
+  @override
+  String get stockpileAffiliateNotice => '※商品链接使用了联盟营销（affiliate）计划';
+
+  @override
+  String get stockpileGuideWhy => '选购要点';
+
+  @override
+  String get stockpileGuideProducts => '可参考的产品';
+
+  @override
+  String get stockpileGuideProductsNote => '链接指向厂商官方页面。是否有货及价格请在各商店确认。';
+
+  @override
+  String get stockpileGuideSearch => '查找商品';
+
+  @override
+  String stockpileGuideSearchAt(String shop) {
+    return '在$shop查找';
+  }
+
+  @override
+  String get stockpileGuideSources => '出处';
+
+  @override
+  String get stockpileDisclaimer => '所需数量为参考值，请根据家庭情况调整';
+
+  @override
+  String get stockpileCatWaterFood => '水与食物';
+
+  @override
+  String get stockpileCatLightPower => '照明与电源';
+
+  @override
+  String get stockpileCatSanitation => '卫生';
+
+  @override
+  String get stockpileCatFirstAid => '急救与卫生用品';
+
+  @override
+  String get stockpileCatEvacuation => '避难用品';
+
+  @override
+  String get stockpileCatValuables => '贵重物品与信息';
+
+  @override
+  String get stockpileUnitLiter => 'L';
+
+  @override
+  String get stockpileUnitMeal => '餐';
+
+  @override
+  String get stockpileUnitPiece => '个';
+
+  @override
+  String get stockpileUnitSheet => '张';
+
+  @override
+  String get stockpileUnitRoll => '卷';
+
+  @override
+  String get stockpileUnitPair => '双';
+
+  @override
+  String get stockpileUnitPack => '包';
+
+  @override
+  String get stockpileUnitTimes => '次份';
+
+  @override
+  String get stockpileUnitDays => '天份';
+
+  @override
+  String get stockpileUnitSet => '套';
+
+  @override
+  String get stockpileItemWater => '长期保存水';
+
+  @override
+  String get stockpileItemStapleFood => '主食类应急食品';
+
+  @override
+  String get stockpileItemRetortFood => '软罐头食品';
+
+  @override
+  String get stockpileItemCannedFood => '罐头';
+
+  @override
+  String get stockpileItemBabyFormula => '婴儿奶粉、液态奶';
+
+  @override
+  String get stockpileItemFlashlight => '手电筒';
+
+  @override
+  String get stockpileItemBatteries => '干电池';
+
+  @override
+  String get stockpileItemPowerBank => '移动电源';
+
+  @override
+  String get stockpileItemRadio => '便携收音机';
+
+  @override
+  String get stockpileItemPortableToilet => '简易厕所';
+
+  @override
+  String get stockpileItemToiletPaper => '卫生纸';
+
+  @override
+  String get stockpileItemWetWipes => '湿纸巾';
+
+  @override
+  String get stockpileItemGarbageBags => '垃圾袋';
+
+  @override
+  String get stockpileItemDiapers => '纸尿裤';
+
+  @override
+  String get stockpileItemFirstAidKit => '急救包';
+
+  @override
+  String get stockpileItemMedicine => '常备药';
+
+  @override
+  String get stockpileItemMask => '口罩';
+
+  @override
+  String get stockpileItemDisinfectant => '消毒液';
+
+  @override
+  String get stockpileItemBackpack => '防灾背包';
+
+  @override
+  String get stockpileItemBlanket => '铝箔保温毯';
+
+  @override
+  String get stockpileItemGloves => '劳保手套';
+
+  @override
+  String get stockpileItemRope => '绳索';
+
+  @override
+  String get stockpileItemCash => '现金（含硬币）';
+
+  @override
+  String get stockpileItemIdCopy => '身份证件复印件';
+
+  @override
+  String get stockpileItemContactMemo => '联系方式备忘';
+
+  @override
+  String get stockpileItemCable => '充电线';
+
+  @override
+  String get stockpileChooseShop => '选择商店';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -3353,4 +3647,298 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String settingsDiagError(String error) {
     return '錯誤：$error';
   }
+
+  @override
+  String get stockpileTitle => '防災儲備';
+
+  @override
+  String get stockpileEntryTitle => '防災儲備（物資清單）';
+
+  @override
+  String get stockpileEntrySubtitle => '依家庭人數計算所需數量並逐項確認';
+
+  @override
+  String get stockpileBosaiLink => '儲備夠了嗎？打開物資清單';
+
+  @override
+  String get stockpileHouseholdTitle => '家庭人數';
+
+  @override
+  String get stockpileAdults => '成人';
+
+  @override
+  String get stockpileChildren => '兒童';
+
+  @override
+  String get stockpileDaysLabel => '儲備天數';
+
+  @override
+  String stockpileDaysValue(int days) {
+    return '$days天份';
+  }
+
+  @override
+  String get stockpileSummaryTitle => '所需數量參考';
+
+  @override
+  String stockpileSummaryWater(int liters) {
+    return '水 ${liters}L';
+  }
+
+  @override
+  String stockpileSummaryMeals(int meals) {
+    return '食物 $meals餐';
+  }
+
+  @override
+  String get stockpileSummaryNote => '依據日本內閣府、農林水產省的參考標準（每人每天3L水、3餐）計算';
+
+  @override
+  String get stockpileSourceMaff => '農林水產省「家庭儲備入口網」';
+
+  @override
+  String get stockpileSourceCao => '內閣府「防災資訊網頁」';
+
+  @override
+  String stockpileProgress(int done, int total) {
+    return '已完成 $done/$total';
+  }
+
+  @override
+  String stockpileRequired(String quantity, String unit) {
+    return '需要 $quantity$unit';
+  }
+
+  @override
+  String get stockpileSearchButton => '查找';
+
+  @override
+  String get stockpileExpirySet => '登記保存期限';
+
+  @override
+  String stockpileExpiryOn(String date) {
+    return '保存期限 $date';
+  }
+
+  @override
+  String get stockpileExpirySoon => '即將到期';
+
+  @override
+  String get stockpileExpired => '已過期';
+
+  @override
+  String get stockpileExpiryClear => '清除保存期限';
+
+  @override
+  String get stockpileAddItem => '新增項目';
+
+  @override
+  String get stockpileItemNameLabel => '物品名稱';
+
+  @override
+  String get stockpileItemQuantityLabel => '需要數量';
+
+  @override
+  String get stockpileItemCategoryLabel => '分類';
+
+  @override
+  String get stockpileDeleteItem => '刪除項目';
+
+  @override
+  String stockpileDeleted(String item) {
+    return '已刪除「$item」';
+  }
+
+  @override
+  String get stockpileUndo => '復原';
+
+  @override
+  String get stockpileReset => '恢復初始狀態';
+
+  @override
+  String get stockpileResetConfirm => '將清除所有勾選、保存期限與新增的項目，恢復初始狀態。確定嗎？';
+
+  @override
+  String get stockpileSectionReminder => '提醒';
+
+  @override
+  String get stockpileExpiryReminder => '保存期限前1個月提醒';
+
+  @override
+  String get stockpileExpiryReminderSubtitle => '在所登記保存期限前1個月的上午9點，本機會發出通知';
+
+  @override
+  String get stockpileInspectionReminder => '檢查日提醒';
+
+  @override
+  String get stockpileInspectionReminderSubtitle => '3月11日與9月1日（防災日）上午9點通知';
+
+  @override
+  String get stockpileNotifyDenied => '未允許通知。請在系統「設定」中允許通知';
+
+  @override
+  String get stockpileNotifyTitle => '防災儲備檢查';
+
+  @override
+  String stockpileNotifyExpiryBody(String item, String date) {
+    return '「$item」即將到期（$date）';
+  }
+
+  @override
+  String get stockpileNotifyInspectionBody => '請檢查儲備物資的保存期限與數量';
+
+  @override
+  String get stockpileAffiliateNotice => '※商品連結使用了聯盟行銷（affiliate）計畫';
+
+  @override
+  String get stockpileGuideWhy => '選購要點';
+
+  @override
+  String get stockpileGuideProducts => '可參考的產品';
+
+  @override
+  String get stockpileGuideProductsNote => '連結指向廠商官方頁面。是否有貨及價格請於各商店確認。';
+
+  @override
+  String get stockpileGuideSearch => '尋找商品';
+
+  @override
+  String stockpileGuideSearchAt(String shop) {
+    return '在$shop尋找';
+  }
+
+  @override
+  String get stockpileGuideSources => '出處';
+
+  @override
+  String get stockpileDisclaimer => '所需數量為參考值，請依家庭情況調整';
+
+  @override
+  String get stockpileCatWaterFood => '水與食物';
+
+  @override
+  String get stockpileCatLightPower => '照明與電源';
+
+  @override
+  String get stockpileCatSanitation => '衛生';
+
+  @override
+  String get stockpileCatFirstAid => '急救與衛生用品';
+
+  @override
+  String get stockpileCatEvacuation => '避難用品';
+
+  @override
+  String get stockpileCatValuables => '貴重物品與資訊';
+
+  @override
+  String get stockpileUnitLiter => 'L';
+
+  @override
+  String get stockpileUnitMeal => '餐';
+
+  @override
+  String get stockpileUnitPiece => '個';
+
+  @override
+  String get stockpileUnitSheet => '張';
+
+  @override
+  String get stockpileUnitRoll => '卷';
+
+  @override
+  String get stockpileUnitPair => '雙';
+
+  @override
+  String get stockpileUnitPack => '包';
+
+  @override
+  String get stockpileUnitTimes => '次份';
+
+  @override
+  String get stockpileUnitDays => '天份';
+
+  @override
+  String get stockpileUnitSet => '套';
+
+  @override
+  String get stockpileItemWater => '長期保存水';
+
+  @override
+  String get stockpileItemStapleFood => '主食類應急食品';
+
+  @override
+  String get stockpileItemRetortFood => '軟罐頭食品';
+
+  @override
+  String get stockpileItemCannedFood => '罐頭';
+
+  @override
+  String get stockpileItemBabyFormula => '嬰兒奶粉、液態奶';
+
+  @override
+  String get stockpileItemFlashlight => '手電筒';
+
+  @override
+  String get stockpileItemBatteries => '乾電池';
+
+  @override
+  String get stockpileItemPowerBank => '行動電源';
+
+  @override
+  String get stockpileItemRadio => '攜帶式收音機';
+
+  @override
+  String get stockpileItemPortableToilet => '簡易廁所';
+
+  @override
+  String get stockpileItemToiletPaper => '衛生紙';
+
+  @override
+  String get stockpileItemWetWipes => '濕紙巾';
+
+  @override
+  String get stockpileItemGarbageBags => '垃圾袋';
+
+  @override
+  String get stockpileItemDiapers => '紙尿褲';
+
+  @override
+  String get stockpileItemFirstAidKit => '急救包';
+
+  @override
+  String get stockpileItemMedicine => '常備藥';
+
+  @override
+  String get stockpileItemMask => '口罩';
+
+  @override
+  String get stockpileItemDisinfectant => '消毒液';
+
+  @override
+  String get stockpileItemBackpack => '防災背包';
+
+  @override
+  String get stockpileItemBlanket => '鋁箔保溫毯';
+
+  @override
+  String get stockpileItemGloves => '工作手套';
+
+  @override
+  String get stockpileItemRope => '繩索';
+
+  @override
+  String get stockpileItemCash => '現金（含硬幣）';
+
+  @override
+  String get stockpileItemIdCopy => '身分證件影本';
+
+  @override
+  String get stockpileItemContactMemo => '聯絡方式備忘';
+
+  @override
+  String get stockpileItemCable => '充電線';
+
+  @override
+  String get stockpileChooseShop => '選擇商店';
 }

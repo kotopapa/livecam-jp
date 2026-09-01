@@ -1,0 +1,86 @@
+name: stockpile-check
+
+# 防災備蓄チェックリストの推奨商品リンク（data/stockpile/products.json）を月1回点検する。
+# 404・検索ページへのリダイレクトになった商品を products から外し（search は残す）、
+# 変更があれば bot コミット → publish 起動。除去が多いときは Issue を立てて人手の再調査を促す。
+on:
+  schedule:
+    - cron: "0 19 1 * *"   # 毎月2日 JST 04:00（1日 19:00 UTC。shelters と時間をずらす）
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "判定だけして products.json を書き換えない"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+concurrency:
+  group: stockpile-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 商品URLの生存確認（1req/s）
+        id: check
+        run: |
+          set +e
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python -m tools.stockpile_check --dry-run --report "$RUNNER_TEMP/stockpile_report.md"
+          else
+            python -m tools.stockpile_check --report "$RUNNER_TEMP/stockpile_report.md"
+          fi
+          rc=$?
+          set -e
+          echo "rc=$rc"
+          if [ "$rc" != "0" ] && [ "$rc" != "3" ]; then
+            exit "$rc"
+          fi
+      - name: 変更があればコミット
+        id: commit
+        if: steps.check.outputs.changed == 'true' && inputs.dry_run != true
+        run: |
+          git config user.name "livecam-jp-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/stockpile
+          if git diff --cached --quiet; then
+            echo "変更なし"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "stockpile: monthly link check"
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && break
+              git rebase --abort 2>/dev/null || true
+              sleep $((i * 10))
+            done
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: 配信を更新（GITHUB_TOKENのpushはpublishを起動しないため明示実行）
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml || true
+      - name: 死んだ商品が多ければ Issue を作成
+        if: steps.check.outputs.issue == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "備蓄推奨商品のリンク切れを検出 ($(date -u +%Y-%m-%d))" \
+            --label "stockpile-check" \
+            --body-file "$RUNNER_TEMP/stockpile_report.md" \
+          || gh issue create \
+            --title "備蓄推奨商品のリンク切れを検出 ($(date -u +%Y-%m-%d))" \
+            --body-file "$RUNNER_TEMP/stockpile_report.md"

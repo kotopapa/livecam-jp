@@ -8,6 +8,7 @@ import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'stockpile_screen.dart';
 import 'tip_screen.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -361,6 +362,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: ListView(children: [
         _SupportCard(onTap: () => Navigator.of(context).push(
             MaterialPageRoute(builder: (_) => const TipScreen()))),
+        // 防災の備え（備蓄チェックリスト）。1.4.0 で追加
+        ListTile(
+          leading: const Icon(Icons.inventory_2_outlined),
+          title: Text(l10n.stockpileEntryTitle),
+          subtitle: Text(l10n.stockpileEntrySubtitle),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => StockpileScreen(app: widget.app))),
+        ),
         // 言語切替（1.4.0。いつでも切り替えられる。選択は端末に保存される）
         LanguageSettingTile(controller: widget.localeController),
         const Divider(),

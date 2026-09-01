@@ -12,6 +12,7 @@ library;
 import 'package:flutter/widgets.dart';
 
 import '../data/heat_alert.dart' show HeatAlertLevel;
+import '../data/stockpile.dart' show StockpileCategory, StockpileUnit;
 import '../data/wbgt.dart' show WbgtLevel;
 import 'gen/app_localizations.dart';
 
@@ -253,4 +254,68 @@ String heatAlertLabelOf(AppLocalizations l10n, HeatAlertLevel level) =>
       HeatAlertLevel.specialPending => l10n.heatAlertSpecialPending,
       HeatAlertLevel.warning => l10n.heatAlertWarning,
       _ => '',
+    };
+
+// ---------------------------------------------------------------------------
+// 防災備蓄チェックリスト（`lib/data/stockpile.dart` はキーだけを持つ）
+// ---------------------------------------------------------------------------
+
+/// 備蓄品のカテゴリ名
+String stockpileCategoryNameOf(
+        AppLocalizations l10n, StockpileCategory category) =>
+    switch (category) {
+      StockpileCategory.waterFood => l10n.stockpileCatWaterFood,
+      StockpileCategory.lightPower => l10n.stockpileCatLightPower,
+      StockpileCategory.sanitation => l10n.stockpileCatSanitation,
+      StockpileCategory.firstAid => l10n.stockpileCatFirstAid,
+      StockpileCategory.evacuation => l10n.stockpileCatEvacuation,
+      StockpileCategory.valuables => l10n.stockpileCatValuables,
+    };
+
+/// 数量の単位
+String stockpileUnitNameOf(AppLocalizations l10n, StockpileUnit unit) =>
+    switch (unit) {
+      StockpileUnit.liter => l10n.stockpileUnitLiter,
+      StockpileUnit.meal => l10n.stockpileUnitMeal,
+      StockpileUnit.piece => l10n.stockpileUnitPiece,
+      StockpileUnit.sheet => l10n.stockpileUnitSheet,
+      StockpileUnit.roll => l10n.stockpileUnitRoll,
+      StockpileUnit.pair => l10n.stockpileUnitPair,
+      StockpileUnit.pack => l10n.stockpileUnitPack,
+      StockpileUnit.times => l10n.stockpileUnitTimes,
+      StockpileUnit.days => l10n.stockpileUnitDays,
+      StockpileUnit.set => l10n.stockpileUnitSet,
+    };
+
+/// 既定の備蓄品の名称（`StockpileItemSpec.id` → 表示名）。
+/// 未知のIDは null（カスタム項目はユーザーが入力した名称をそのまま出す）
+String? stockpileItemNameOf(AppLocalizations l10n, String id) =>
+    switch (id) {
+      'water' => l10n.stockpileItemWater,
+      'stapleFood' => l10n.stockpileItemStapleFood,
+      'retortFood' => l10n.stockpileItemRetortFood,
+      'cannedFood' => l10n.stockpileItemCannedFood,
+      'babyFormula' => l10n.stockpileItemBabyFormula,
+      'flashlight' => l10n.stockpileItemFlashlight,
+      'batteries' => l10n.stockpileItemBatteries,
+      'powerBank' => l10n.stockpileItemPowerBank,
+      'radio' => l10n.stockpileItemRadio,
+      'portableToilet' => l10n.stockpileItemPortableToilet,
+      'toiletPaper' => l10n.stockpileItemToiletPaper,
+      'wetWipes' => l10n.stockpileItemWetWipes,
+      'garbageBags' => l10n.stockpileItemGarbageBags,
+      'diapers' => l10n.stockpileItemDiapers,
+      'firstAidKit' => l10n.stockpileItemFirstAidKit,
+      'medicine' => l10n.stockpileItemMedicine,
+      'mask' => l10n.stockpileItemMask,
+      'disinfectant' => l10n.stockpileItemDisinfectant,
+      'backpack' => l10n.stockpileItemBackpack,
+      'blanket' => l10n.stockpileItemBlanket,
+      'gloves' => l10n.stockpileItemGloves,
+      'rope' => l10n.stockpileItemRope,
+      'cash' => l10n.stockpileItemCash,
+      'idCopy' => l10n.stockpileItemIdCopy,
+      'contactMemo' => l10n.stockpileItemContactMemo,
+      'cable' => l10n.stockpileItemCable,
+      _ => null,
     };

@@ -18,6 +18,7 @@ import '../util/jst.dart';
 import '../util/prefectures.dart';
 import 'ad_banner.dart';
 import 'detail_screen.dart';
+import 'stockpile_screen.dart';
 
 /// 気象庁の公開JSONから直近の地震を表示し、震源周辺のカメラへ誘導する。
 /// 無料・認証不要のエンドポイントのみ使用（SPEC C2）。取得はこの画面を
@@ -766,7 +767,12 @@ class _BosaiScreenState extends State<BosaiScreen>
       return const Center(child: CircularProgressIndicator());
     }
     if (_warnings!.isEmpty && (_advisories?.isEmpty ?? true)) {
-      return Center(child: Text(context.l10n.bosaiNoWarnings));
+      return ListView(children: [
+        const SizedBox(height: 72),
+        Center(child: Text(context.l10n.bosaiNoWarnings)),
+        const SizedBox(height: 24),
+        _stockpileLink(),
+      ]);
     }
     final prefs = _warnings!.keys.toList()
       ..sort((a, b) {
@@ -778,9 +784,11 @@ class _BosaiScreenState extends State<BosaiScreen>
       });
     final advPrefs = (_advisories ?? const {}).keys.toList()..sort();
     return ListView.separated(
-      itemCount: prefs.length + 2,
+      // 末尾の1件は備蓄チェックリストへの導線（控えめに1つだけ）
+      itemCount: prefs.length + 3,
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
+        if (i == prefs.length + 2) return _stockpileLink();
         if (i == 0) {
           final bar = _warningFreshnessBar();
           return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -861,6 +869,18 @@ class _BosaiScreenState extends State<BosaiScreen>
       },
     );
   }
+
+  /// 気象警報タブ最下部の控えめな導線（防災の備え＝備蓄チェックリスト）
+  Widget _stockpileLink() => Padding(
+        padding: const EdgeInsets.fromLTRB(12, 8, 12, 20),
+        child: TextButton.icon(
+          onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => StockpileScreen(app: widget.app))),
+          icon: const Icon(Icons.inventory_2_outlined, size: 18),
+          label: Text(context.l10n.stockpileBosaiLink,
+              style: const TextStyle(fontSize: 12)),
+        ),
+      );
 
   /// 熱中症警戒情報（環境省）の都道府県一覧。運用期間外・発表無しは何も出さない。
   /// 規約により「出典：環境省熱中症予防情報サイト」と参考情報である旨を必ず併記する
