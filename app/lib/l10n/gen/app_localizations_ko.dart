@@ -97,7 +97,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get onboardingBody2 =>
-      '정기적으로 자동 확인하여 영상을 가져올 수 없는 카메라는 지도에서 제외합니다. 촬영 시각은 반드시 표시합니다.';
+      '정기적으로 자동 확인하여 영상을 가져올 수 없는 카메라는 지도에서 제외합니다. 이미지를 가져온 시각은 반드시 표시합니다.';
 
   @override
   String get onboardingTitle3 => '출처·라이선스 명시';
@@ -621,7 +621,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get detailLive => '라이브 방송 중';
 
   @override
-  String get detailTimeUnknown => '촬영 시각 불명';
+  String get detailTimeUnknown => '취득 시각 불명';
 
   @override
   String detailRefreshEvery(int sec) {
@@ -646,7 +646,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get detailNotUpdating => '이미지가 갱신되지 않았습니다';
 
   @override
-  String get detailWorld => '해외';
+  String get detailWorld => '일본 국외';
 
   @override
   String get detailCategoryAndPlace => '카테고리·위치';
@@ -712,7 +712,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String timeTakenAt(String time, String relative) {
-    return '$time 촬영$relative';
+    return '$time 취득$relative';
   }
 
   @override
@@ -773,7 +773,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get warning07 => '풍랑 경보';
 
   @override
-  String get warning08 => '고위 경보';
+  String get warning08 => '폭풍 해일 경보';
 
   @override
   String get warning09 => '토사 재해 경보';
@@ -839,7 +839,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get advisory18 => '홍수 주의보';
 
   @override
-  String get advisory19 => '고조 주의보';
+  String get advisory19 => '폭풍 해일 주의보';
 
   @override
   String get advisory20 => '짙은 안개 주의보';
@@ -1008,7 +1008,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get hazardTsunamiTitle => '지진해일 침수 상정';
 
   @override
-  String get hazardHightideTitle => '고조 침수 예상 구역';
+  String get hazardHightideTitle => '폭풍 해일 침수 예상 구역';
 
   @override
   String get hazardLandslideSteepSlope => '급경사지';
@@ -1280,7 +1280,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get mapNowcastNow => '현재(실황)';
+  String get mapNowcastNow => '현재(관측)';
 
   @override
   String get mapNowcastForecastHourly => '예보·1시간 강수량';
@@ -1295,7 +1295,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String mapNowcastBefore(String span) {
-    return '$span 전(실황)';
+    return '$span 전(관측)';
   }
 
   @override
@@ -1530,7 +1530,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get bosaiWbgtNow => '현재';
 
   @override
-  String get bosaiWbgtNoCurrent => '실황값 없음';
+  String get bosaiWbgtNoCurrent => '관측값 없음';
 
   @override
   String bosaiWbgtLevelAt(String level, String time) {

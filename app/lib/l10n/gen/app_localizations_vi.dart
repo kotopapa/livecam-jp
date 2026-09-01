@@ -343,7 +343,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get settingsNotifyAreaHint =>
-      'Bạn chỉ nhận thông báo về các tỉnh thành đã chọn. Nếu không chọn tỉnh thành nào thì toàn quốc sẽ là đối tượng thông báo';
+      'Chỉ thông báo cảnh báo đặc biệt của các tỉnh thành đã chọn. Nếu không chọn tỉnh thành nào thì toàn quốc sẽ là đối tượng thông báo';
 
   @override
   String get settingsNotifyAreaResetAll => 'Đặt lại về toàn quốc';
@@ -668,7 +668,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get detailNotUpdating => 'Hình ảnh không được cập nhật';
 
   @override
-  String get detailWorld => 'Nước ngoài';
+  String get detailWorld => 'Ngoài Nhật Bản';
 
   @override
   String get detailCategoryAndPlace => 'Danh mục và vị trí';
@@ -1037,16 +1037,16 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get hazardFloodTitle =>
-      'Khu vực dự báo ngập lụt do lũ (quy mô tối đa giả định)';
+      'Khu vực ngập lụt giả định do lũ (quy mô tối đa giả định)';
 
   @override
   String get hazardLandslideTitle => 'Khu vực cảnh giác tai họa sạt lở đất';
 
   @override
-  String get hazardTsunamiTitle => 'Dự báo ngập lụt do sóng thần';
+  String get hazardTsunamiTitle => 'Khu vực ngập lụt giả định do sóng thần';
 
   @override
-  String get hazardHightideTitle => 'Khu vực dự báo ngập lụt do triều cường';
+  String get hazardHightideTitle => 'Khu vực ngập lụt giả định do triều cường';
 
   @override
   String get hazardLandslideSteepSlope => 'Sườn dốc đứng';
@@ -1210,7 +1210,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Bản tin lượng nước mưa có độ phân giải cao, cập nhật 5 phút một lần';
 
   @override
-  String get mapLayerQuakesTitle => 'Chấn tiêu';
+  String get mapLayerQuakesTitle => 'Tâm chấn';
 
   @override
   String get mapQuakePeriodDay => '24 giờ';
@@ -1267,7 +1267,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get mapQuakeUnknownPlace => 'Chấn tiêu (chưa công bố chi tiết)';
+  String get mapQuakeUnknownPlace => 'Tâm chấn (chưa công bố chi tiết)';
 
   @override
   String mapQuakeMaxIntensity(String value) {
@@ -1335,7 +1335,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get mapNowcastNow => 'Hiện tại (thực trạng)';
+  String get mapNowcastNow => 'Hiện tại (quan trắc)';
 
   @override
   String get mapNowcastForecastHourly => 'Dự báo, lượng mưa 1 giờ';
@@ -1350,7 +1350,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String mapNowcastBefore(String span) {
-    return 'Trước $span (thực trạng)';
+    return 'Trước $span (quan trắc)';
   }
 
   @override
@@ -1379,12 +1379,12 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String mapLegendQuakes(String period, int count) {
-    return 'Chấn tiêu $period ($count trận)';
+    return 'Tâm chấn $period ($count trận)';
   }
 
   @override
   String mapLegendIntensity(String value) {
-    return 'Cường độ $value';
+    return 'Cường độ địa chấn $value';
   }
 
   @override
@@ -1524,7 +1524,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String bosaiQuakeNote(String at) {
-    return 'Nguồn: Cơ quan Khí tượng, Thông tin động đất (72 giờ gần nhất)$at. Nhấn vào một trận động đất để xem danh sách camera trực tiếp tại các quận, huyện, thành phố đã rung lắc (nếu không có cường độ địa chấn theo quận, huyện, thành phố thì hiển thị camera quanh chấn tiêu).';
+    return 'Nguồn: Cơ quan Khí tượng, Thông tin động đất (72 giờ gần nhất)$at. Nhấn vào một trận động đất để xem danh sách camera trực tiếp tại các quận, huyện, thành phố đã rung lắc (nếu không có cường độ địa chấn theo quận, huyện, thành phố thì hiển thị camera quanh tâm chấn).';
   }
 
   @override
@@ -1593,7 +1593,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get bosaiWbgtNow => 'Hiện tại';
 
   @override
-  String get bosaiWbgtNoCurrent => 'Không có giá trị thực đo';
+  String get bosaiWbgtNoCurrent => 'Không có giá trị quan trắc';
 
   @override
   String bosaiWbgtLevelAt(String level, String time) {
@@ -1620,11 +1620,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get bosaiQuakeMuniNote =>
-      'Nguồn: Cơ quan Khí tượng, Thông tin động đất (theo cường độ địa chấn giảm dần). Nhấn vào một quận, huyện, thành phố để xem danh sách camera tại đó. Nơi không có camera sẽ hiển thị camera quanh chấn tiêu.';
+      'Nguồn: Cơ quan Khí tượng, Thông tin động đất (theo cường độ địa chấn giảm dần). Nhấn vào một quận, huyện, thành phố để xem danh sách camera tại đó. Nơi không có camera sẽ hiển thị camera quanh tâm chấn.';
 
   @override
-  String get bosaiEpicenterNearby =>
-      'Camera quanh chấn tiêu (theo khoảng cách)';
+  String get bosaiEpicenterNearby => 'Camera quanh tâm chấn (theo khoảng cách)';
 
   @override
   String bosaiMuniCodeFallback(String code) {
@@ -1633,7 +1632,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String bosaiPrefEpicenterFallback(String pref) {
-    return '$pref · Hiển thị camera quanh chấn tiêu';
+    return '$pref · Hiển thị camera quanh tâm chấn';
   }
 
   @override

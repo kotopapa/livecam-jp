@@ -634,7 +634,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get detailNotUpdating => '图像未更新';
 
   @override
-  String get detailWorld => '海外';
+  String get detailWorld => '日本境外';
 
   @override
   String get detailCategoryAndPlace => '类别与位置';
@@ -987,7 +987,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get hazardFloodTitle => '洪水淹水预想区域（假定最大规模）';
 
   @override
-  String get hazardLandslideTitle => '土石流灾害警戒区域';
+  String get hazardLandslideTitle => '土砂灾害警戒区域（崖崩·泥石流·滑坡）';
 
   @override
   String get hazardTsunamiTitle => '海啸淹水预想';
@@ -1262,7 +1262,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get mapNowcastNow => '当前（实况）';
+  String get mapNowcastNow => '当前（实测）';
 
   @override
   String get mapNowcastForecastHourly => '预报、1小时雨量';
@@ -1277,7 +1277,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String mapNowcastBefore(String span) {
-    return '$span前（实况）';
+    return '$span前（实测）';
   }
 
   @override
@@ -1511,7 +1511,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get bosaiWbgtNow => '当前';
 
   @override
-  String get bosaiWbgtNoCurrent => '无实况值';
+  String get bosaiWbgtNoCurrent => '无实测值';
 
   @override
   String bosaiWbgtLevelAt(String level, String time) {
@@ -1849,7 +1849,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get pref08 => '茨城';
 
   @override
-  String get pref09 => '櫔木';
+  String get pref09 => '栃木';
 
   @override
   String get pref10 => '群馬';
@@ -2310,7 +2310,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get detailNotUpdating => '影像未更新';
 
   @override
-  String get detailWorld => '海外';
+  String get detailWorld => '日本境外';
 
   @override
   String get detailCategoryAndPlace => '類別・位置';
@@ -2663,7 +2663,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get hazardFloodTitle => '洪水淹水預想區域（假設最大規模）';
 
   @override
-  String get hazardLandslideTitle => '土石流災害警戒區域';
+  String get hazardLandslideTitle => '土砂災害警戒區域（崖崩·土石流·地滑）';
 
   @override
   String get hazardTsunamiTitle => '海嘯淹水預想';
@@ -2822,7 +2822,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get mapLayerRainRadarSubtitle => '高清降水即時預測・每 5 分鐘更新';
 
   @override
-  String get mapLayerQuakesTitle => '地震位置';
+  String get mapLayerQuakesTitle => '震源';
 
   @override
   String get mapQuakePeriodDay => '24 小時';
@@ -2872,7 +2872,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get mapQuakeUnknownPlace => '地震位置（詳細尚未發布）';
+  String get mapQuakeUnknownPlace => '震源（詳細尚未發布）';
 
   @override
   String mapQuakeMaxIntensity(String value) {
@@ -2938,7 +2938,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get mapNowcastNow => '現在（實況）';
+  String get mapNowcastNow => '現在（實測）';
 
   @override
   String get mapNowcastForecastHourly => '預報・1 小時雨量';
@@ -2953,7 +2953,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String mapNowcastBefore(String span) {
-    return '$span前（實況）';
+    return '$span前（實測）';
   }
 
   @override
@@ -2982,7 +2982,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String mapLegendQuakes(String period, int count) {
-    return '地震位置 $period（$count 件）';
+    return '震源 $period（$count 件）';
   }
 
   @override
@@ -3121,7 +3121,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String bosaiQuakeNote(String at) {
-    return '來源：氣象廳 地震資訊（最近 72 小時）$at。點選後會顯示感受到搖晃的市區町村的即時攝影機列表（若無各市區町村的震度，則顯示地震位置周邊）。';
+    return '來源：氣象廳 地震資訊（最近 72 小時）$at。點選後會顯示感受到搖晃的市區町村的即時攝影機列表（若無各市區町村的震度，則顯示震源周邊）。';
   }
 
   @override
@@ -3187,7 +3187,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get bosaiWbgtNow => '現在';
 
   @override
-  String get bosaiWbgtNoCurrent => '無實況值';
+  String get bosaiWbgtNoCurrent => '無實測值';
 
   @override
   String bosaiWbgtLevelAt(String level, String time) {
@@ -3214,10 +3214,10 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get bosaiQuakeMuniNote =>
-      '來源：氣象廳 地震資訊（依震度由大到小）。點選後會顯示該市區町村的攝影機列表。沒有攝影機的市區町村，將顯示地震位置周邊的攝影機。';
+      '來源：氣象廳 地震資訊（依震度由大到小）。點選後會顯示該市區町村的攝影機列表。沒有攝影機的市區町村，將顯示震源周邊的攝影機。';
 
   @override
-  String get bosaiEpicenterNearby => '地震位置周邊的攝影機（依距離排序）';
+  String get bosaiEpicenterNearby => '震源周邊的攝影機（依距離排序）';
 
   @override
   String bosaiMuniCodeFallback(String code) {
@@ -3226,7 +3226,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String bosaiPrefEpicenterFallback(String pref) {
-    return '$pref・顯示地震位置周邊的攝影機';
+    return '$pref・顯示震源周邊的攝影機';
   }
 
   @override

@@ -145,8 +145,11 @@ class _HomeShellState extends State<HomeShell> {
                 app: widget.app, localeController: widget.localeController),
           ]),
         ),
-        // Offstageで保持し、タブ切替で広告を読み直さない
-        Offstage(offstage: !showAd, child: const AnchoredAdBanner()),
+        // 表示するタブのときだけ広告を組み立てる。
+        // 以前は Offstage で保持していたが、画面外のまま表示回数だけが積み上がり
+        // 「見られていない在庫」と評価されて eCPM が9円まで落ちていた
+        // （2026-09-01 実測。日本のバナーの相場は100〜300円）
+        if (showAd) const AnchoredAdBanner(),
       ]),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,

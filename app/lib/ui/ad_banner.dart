@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
+import 'package:visibility_detector/visibility_detector.dart';
 
 import '../app_state.dart';
 import '../config.dart';
@@ -28,10 +29,17 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
   BannerAd? _ad;
   bool _loaded = false;
   bool _failed = false;
+  bool _requested = false;
 
-  @override
-  void initState() {
-    super.initState();
+  /// 画面に入ってから読み込む。画面外で読み込むと「見られていない在庫」として
+  /// 評価され、単価(eCPM)が大きく下がる（2026-09-01 に実測して判明）
+  void _onVisibility(VisibilityInfo info) {
+    if (_requested || !mounted || info.visibleFraction < 0.5) return;
+    _requested = true;
+    _load();
+  }
+
+  void _load() {
     _ad = BannerAd(
       adUnitId: widget.adUnitId,
       size: widget.size,
@@ -59,7 +67,10 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
     // 失敗時は区切り線ごと消す（前後のDividerが二重にならないように
     // 下側の区切り線はこのウィジェットが持つ）
     if (_failed) return const SizedBox.shrink();
-    return Column(children: [
+    return VisibilityDetector(
+      key: Key('ad-${widget.adUnitId}-${widget.size.height}-${identityHashCode(this)}'),
+      onVisibilityChanged: _onVisibility,
+      child: Column(children: [
       SizedBox(
         height: widget.size.height.toDouble(),
         child: _loaded && _ad != null
@@ -73,7 +84,8 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
             : const SizedBox.shrink(),
       ),
       const Divider(height: 24),
-    ]);
+    ]),
+    );
   }
 }
 

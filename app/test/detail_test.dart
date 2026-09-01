@@ -15,6 +15,7 @@ import 'package:livecam_jp/models/camera.dart';
 import 'package:livecam_jp/ui/detail_screen.dart';
 import 'package:livecam_jp/util/geo.dart';
 import 'package:flutter/material.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 Camera cam(String id, {double? lat, double? lng, FeedType type = FeedType.mlitRoadinfo}) =>
     Camera(
@@ -27,6 +28,9 @@ Camera cam(String id, {double? lat, double? lng, FeedType type = FeedType.mlitRo
     );
 
 void main() {
+  // VisibilityDetector は既定で500msのタイマーを持ち、テスト終了時に残る
+  VisibilityDetectorController.instance.updateInterval = Duration.zero;
+
   group('geo', () {
     test('距離計算と10km以内の近傍抽出', () {
       final origin = cam('o', lat: 35.0, lng: 139.0);

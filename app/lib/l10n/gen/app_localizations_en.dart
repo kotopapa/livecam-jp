@@ -343,7 +343,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsNotifyAreaHint =>
-      'You will only be notified about the prefectures you select. If you select none, all of Japan is covered.';
+      'You will only be notified about emergency warnings for the prefectures you select. If you select none, all of Japan is covered.';
 
   @override
   String get settingsNotifyAreaResetAll => 'Reset to all of Japan';
@@ -964,7 +964,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get bosaiTitle => 'Disaster updates';
 
   @override
-  String get bosaiTabQuake => 'Earthquakes';
+  String get bosaiTabQuake => 'Quake & Tsunami';
 
   @override
   String get bosaiTabWarning => 'Weather warnings';

@@ -2154,7 +2154,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get settingsFollowX => 'Xで フォローする';
 
   @override
-  String get settingsFollowXSubtitle => '@kotopapa8 — あたらしい カメラや きのうの おしらせ';
+  String get settingsFollowXSubtitle => '@kotopapa8 — あたらしい カメラや アプリの おしらせ';
 
   @override
   String get settingsOtherApps => 'つくった 人（ひと）の ほかの アプリ';
@@ -2722,7 +2722,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get facilityKindWater => '水（みず）を もらえる ところ';
 
   @override
-  String get facilityKindStock => 'ひじょうよう ひんの そうこ';
+  String get facilityKindStock => 'ひじょうようひんの そうこ（防災備蓄倉庫）';
 
   @override
   String get facilityKindFireWater => 'しょうぼうの 水（みず）（しょうかせん・ぼうかすいそう）';
@@ -2731,7 +2731,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get facilityKindWaterShort => '水（みず）を もらえる ところ';
 
   @override
-  String get facilityKindStockShort => 'ひんの そうこ';
+  String get facilityKindStockShort => 'ひじょうようひんの そうこ';
 
   @override
   String get facilityKindFireWaterShort => 'しょうぼうの 水（みず）';
@@ -3307,7 +3307,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get tipIntro =>
-      'この アプリは 1人（ひとり）で つくって、うごかして います。カメラを さがして ふやす こと、サーバーを うごかしつづける こと、天気（てんき）の データに たいおうする ことの ちからに なります。おうえんは じゆうです。おうえんしても きのうは かわりません。';
+      'この アプリは 1人（ひとり）で つくって、うごかして います。カメラを さがして ふやす こと、サーバーを うごかしつづける こと、天気（てんき）の データに たいおうする ことの ちからに なります。おうえんは じゆうです。おうえんしても できることは かわりません。';
 
   @override
   String get tipCoffeeTitle => 'かんコーヒーで ひとやすみ';
@@ -3325,7 +3325,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get tipLunchTitle => 'ひるごはんで かいはつを パワーアップ';
 
   @override
-  String get tipLunchSubtitle => 'つぎの あたらしい きのうの ために、えいようの ある ひるごはんを ごちそうします';
+  String get tipLunchSubtitle => 'つぎの あたらしい しくみの ために、えいようの ある ひるごはんを ごちそうします';
 
   @override
   String get tipDevToolsTitle => 'かいはつの どうぐの おかねを おうえん';
