@@ -1225,7 +1225,7 @@ abstract class AppLocalizations {
   /// No description provided for @rankingModeFavorites.
   ///
   /// In ja, this message translates to:
-  /// **'お気に入り登録数'**
+  /// **'お気に入り登録（TOP20）'**
   String get rankingModeFavorites;
 
   /// No description provided for @rankingNote.

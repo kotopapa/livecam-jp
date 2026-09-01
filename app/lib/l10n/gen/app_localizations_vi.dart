@@ -613,7 +613,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get rankingModeWeek => 'Được xem nhiều (TOP 30 trong 7 ngày)';
 
   @override
-  String get rankingModeFavorites => 'Số lượt thêm vào yêu thích';
+  String get rankingModeFavorites => 'Được yêu thích (Top 20)';
 
   @override
   String get rankingNote =>

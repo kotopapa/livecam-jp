@@ -583,7 +583,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get rankingModeWeek => '观看较多（7天 TOP30）';
 
   @override
-  String get rankingModeFavorites => '收藏数';
+  String get rankingModeFavorites => '收藏最多（TOP20）';
 
   @override
   String get rankingNote => '基于全体用户的匿名统计生成的排行榜（每天更新）';
@@ -2585,7 +2585,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get rankingModeWeek => '熱門觀看（7 天 TOP30）';
 
   @override
-  String get rankingModeFavorites => '最愛收藏數';
+  String get rankingModeFavorites => '收藏最多（TOP20）';
 
   @override
   String get rankingNote => '依據所有使用者的匿名統計製作的排行榜（每日更新）';

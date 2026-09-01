@@ -612,7 +612,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get rankingModeWeek => 'Most viewed (7-day top 30)';
 
   @override
-  String get rankingModeFavorites => 'Most favorited';
+  String get rankingModeFavorites => 'Most favorited (Top 20)';
 
   @override
   String get rankingNote =>

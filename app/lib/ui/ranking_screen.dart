@@ -31,6 +31,7 @@ class _RankingScreenState extends State<RankingScreen> {
   _RankMode _mode = _RankMode.day;
   Map<String, List<(String, int)>>? _data; // key -> [(cameraId, count)]
   bool _loading = false;
+
   /// エラーの種類（文言は build 時に l10n で解決する）
   _RankError? _error;
   int _errorHttpCode = 0;
@@ -60,10 +61,10 @@ class _RankingScreenState extends State<RankingScreen> {
         final body =
             jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
         List<(String, int)> parse(String key, String countKey) => [
-              for (final e in (body[key] as List? ?? const [])
-                  .cast<Map<String, dynamic>>())
-                (e['id'] as String, e[countKey] as int),
-            ];
+          for (final e
+              in (body[key] as List? ?? const []).cast<Map<String, dynamic>>())
+            (e['id'] as String, e[countKey] as int),
+        ];
         _data = {
           'day': parse('day', 'day'),
           'recent': parse('recent', 'recent'),
@@ -88,10 +89,16 @@ class _RankingScreenState extends State<RankingScreen> {
     final unit = _mode == _RankMode.favorites
         ? l10n.rankingUnitFavorites
         : l10n.rankingUnitViews;
-    return [
+    // 「いま見られている（24時間）」と「お気に入り登録」は順位だけ出して
+    // 実数は伏せる（アクセスの少ない時間帯に過疎が見えてしまうため。2026-09-02）。
+    // お気に入りは上位20件まで
+    final showCount = _mode == _RankMode.recent;
+    final limit = _mode == _RankMode.favorites ? 20 : null;
+    final rows = [
       for (final (id, n) in _data?[key] ?? const <(String, int)>[])
-        if (byId[id] != null) (byId[id]!, '$n$unit'),
+        if (byId[id] != null) (byId[id]!, showCount ? '$n$unit' : ''),
     ];
+    return limit == null ? rows : rows.take(limit).toList();
   }
 
   @override
@@ -112,112 +119,140 @@ class _RankingScreenState extends State<RankingScreen> {
         ],
       ),
       bottomNavigationBar: AdFooter(app: widget.app),
-      body: Column(children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
-          child: Wrap(spacing: 8, children: [
-            ChoiceChip(
-              label: Text(l10n.rankingModeNow),
-              selected: _mode == _RankMode.day,
-              onSelected: (_) => setState(() => _mode = _RankMode.day),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
+            child: Wrap(
+              spacing: 8,
+              children: [
+                ChoiceChip(
+                  label: Text(l10n.rankingModeNow),
+                  selected: _mode == _RankMode.day,
+                  onSelected: (_) => setState(() => _mode = _RankMode.day),
+                ),
+                ChoiceChip(
+                  label: Text(l10n.rankingModeWeek),
+                  selected: _mode == _RankMode.recent,
+                  onSelected: (_) => setState(() => _mode = _RankMode.recent),
+                ),
+                ChoiceChip(
+                  label: Text(l10n.rankingModeFavorites),
+                  selected: _mode == _RankMode.favorites,
+                  onSelected: (_) =>
+                      setState(() => _mode = _RankMode.favorites),
+                ),
+              ],
             ),
-            ChoiceChip(
-              label: Text(l10n.rankingModeWeek),
-              selected: _mode == _RankMode.recent,
-              onSelected: (_) => setState(() => _mode = _RankMode.recent),
-            ),
-            ChoiceChip(
-              label: Text(l10n.rankingModeFavorites),
-              selected: _mode == _RankMode.favorites,
-              onSelected: (_) => setState(() => _mode = _RankMode.favorites),
-            ),
-          ]),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 6, 16, 0),
-          child: Text(
-            l10n.rankingNote,
-            style: TextStyle(fontSize: 11, color: Colors.grey[600]),
           ),
-        ),
-        Expanded(
-          child: _loading
-              ? const Center(child: CircularProgressIndicator())
-              : errorText != null
-                  ? Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(24),
-                        child: Text(errorText, textAlign: TextAlign.center),
-                      ),
-                    )
-                  : ranked.isEmpty
-                      ? Center(child: Text(l10n.rankingEmpty))
-                      : ListView.separated(
-                          itemCount: ranked.length,
-                          separatorBuilder: (_, _) => const Divider(height: 1),
-                          itemBuilder: (context, i) {
-                            final (camera, label) = ranked[i];
-                            final url = widget.app.imageUrlFor(camera);
-                            return ListTile(
-                              leading: SizedBox(
-                                width: 88,
-                                child: Row(children: [
-                                  SizedBox(
-                                    width: 24,
-                                    child: Text('${i + 1}',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            color: i < 3
-                                                ? const Color(0xFFF29900)
-                                                : Colors.grey[600])),
-                                  ),
-                                  const SizedBox(width: 4),
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(4),
-                                    child: SizedBox(
-                                      width: 60,
-                                      height: 40,
-                                      child: url != null
-                                          ? Image.network(url,
-                                              fit: BoxFit.cover,
-                                              // 60×40表示への縮小デコード
-                                              cacheWidth: 180,
-                                              errorBuilder: (_, _, _) =>
-                                                  Container(
-                                                      color: Colors.grey[300]))
-                                          : Container(
-                                              color: Colors.grey[300],
-                                              child: Icon(Icons.videocam,
-                                                  size: 16,
-                                                  color: Colors.grey[600])),
-                                    ),
-                                  ),
-                                ]),
-                              ),
-                              title: Text(camera.name,
-                                  maxLines: 1, overflow: TextOverflow.ellipsis),
-                              subtitle: Text(
-                                [if (camera.isVideo) 'LIVE', camera.operator]
-                                    .join(' · '),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(fontSize: 12),
-                              ),
-                              trailing: Text(label,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 6, 16, 0),
+            child: Text(
+              l10n.rankingNote,
+              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+            ),
+          ),
+          Expanded(
+            child: _loading
+                ? const Center(child: CircularProgressIndicator())
+                : errorText != null
+                ? Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(24),
+                      child: Text(errorText, textAlign: TextAlign.center),
+                    ),
+                  )
+                : ranked.isEmpty
+                ? Center(child: Text(l10n.rankingEmpty))
+                : ListView.separated(
+                    itemCount: ranked.length,
+                    separatorBuilder: (_, _) => const Divider(height: 1),
+                    itemBuilder: (context, i) {
+                      final (camera, label) = ranked[i];
+                      final url = widget.app.imageUrlFor(camera);
+                      return ListTile(
+                        leading: SizedBox(
+                          width: 88,
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                width: 24,
+                                child: Text(
+                                  '${i + 1}',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: 12,
-                                      color: categoryColor(camera.category),
-                                      fontWeight: FontWeight.bold)),
-                              onTap: () => Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (_) => DetailScreen(
-                                          camera: camera, app: widget.app))),
-                            );
-                          },
+                                    fontWeight: FontWeight.bold,
+                                    color: i < 3
+                                        ? const Color(0xFFF29900)
+                                        : Colors.grey[600],
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 4),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(4),
+                                child: SizedBox(
+                                  width: 60,
+                                  height: 40,
+                                  child: url != null
+                                      ? Image.network(
+                                          url,
+                                          fit: BoxFit.cover,
+                                          // 60×40表示への縮小デコード
+                                          cacheWidth: 180,
+                                          errorBuilder: (_, _, _) => Container(
+                                            color: Colors.grey[300],
+                                          ),
+                                        )
+                                      : Container(
+                                          color: Colors.grey[300],
+                                          child: Icon(
+                                            Icons.videocam,
+                                            size: 16,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-        ),
-      ]),
+                        title: Text(
+                          camera.name,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        subtitle: Text(
+                          [
+                            if (camera.isVideo) 'LIVE',
+                            camera.operator,
+                          ].join(' · '),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(fontSize: 12),
+                        ),
+                        trailing: label.isEmpty
+                            ? null
+                            : Text(
+                                label,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: categoryColor(camera.category),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) =>
+                                DetailScreen(camera: camera, app: widget.app),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+          ),
+        ],
+      ),
     );
   }
 }

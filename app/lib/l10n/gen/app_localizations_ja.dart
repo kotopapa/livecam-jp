@@ -591,7 +591,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get rankingModeWeek => 'よく見られている（7日間 TOP30）';
 
   @override
-  String get rankingModeFavorites => 'お気に入り登録数';
+  String get rankingModeFavorites => 'お気に入り登録（TOP20）';
 
   @override
   String get rankingNote => '全ユーザーの匿名統計に基づくランキングです（毎日更新）';
@@ -2616,7 +2616,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get rankingModeWeek => 'よく 見（み）られて いる（7日間 トップ30）';
 
   @override
-  String get rankingModeFavorites => 'おきにいりの かず';
+  String get rankingModeFavorites => 'おきにいり とうろく（TOP20）';
 
   @override
   String get rankingNote => 'みんなの 名前（なまえ）の ない きろくから つくって います（まいにち あたらしく なります）';

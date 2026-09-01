@@ -595,7 +595,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get rankingModeWeek => '많이 본 순(7일간 TOP30)';
 
   @override
-  String get rankingModeFavorites => '즐겨찾기 등록 수';
+  String get rankingModeFavorites => '즐겨찾기 등록(TOP 20)';
 
   @override
   String get rankingNote => '전체 사용자의 익명 통계를 바탕으로 한 랭킹입니다(매일 갱신)';
