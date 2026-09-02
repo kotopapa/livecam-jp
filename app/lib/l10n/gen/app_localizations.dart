@@ -298,6 +298,18 @@ abstract class AppLocalizations {
   /// **'すべての映像は提供元の明示とともに表示します。映像の権利は各提供元に帰属します。'**
   String get onboardingBody3;
 
+  /// オンボーディング免責ページの災害通知トグル（既定ON）
+  ///
+  /// In ja, this message translates to:
+  /// **'災害通知を受け取る'**
+  String get onboardingNotifyOptIn;
+
+  /// 災害通知トグルの説明
+  ///
+  /// In ja, this message translates to:
+  /// **'震度5弱以上の地震と特別警報（全国）をお知らせします。あとから設定で変更できます。'**
+  String get onboardingNotifyOptInDetail;
+
   /// No description provided for @onboardingDisclaimerTitle.
   ///
   /// In ja, this message translates to:

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/locale_controller.dart';
+import '../data/notification_settings.dart';
 import '../l10n/l10n.dart';
 import 'detail_screen.dart' show disclaimerTextOf;
 import 'language_switcher.dart';
@@ -40,6 +41,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final _controller = PageController();
   int _page = 0;
 
+  /// 災害通知（震度5弱以上・特別警報）の既定ON トグル（免責ページに表示）。
+  /// 「同意してはじめる」でONのまま完了したときに通知許可を求めて購読する
+  bool _notifyOptIn = true;
+
   static const _pageCount = 3;
 
   List<_PromiseContent> _pages(AppLocalizations l10n) => [
@@ -71,6 +76,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Future<void> _finish() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(OnboardingScreen.prefsKey, true);
+    if (_notifyOptIn) {
+      // ここで初めてOSの通知許可を求める。拒否されても完了は妨げない。
+      // 既定: 地震=震度5弱以上(quake5)・特別警報=全国(special-warning)
+      try {
+        final notify = NotificationSettings();
+        await notify.load();
+        if (await notify.setWarningEnabled(true)) {
+          await notify.setQuakeEnabled(true);
+        }
+      } catch (_) {
+        // Firebaseが使えない環境（テスト等）でも先へ進む
+      }
+    }
     widget.onDone();
   }
 
@@ -93,7 +111,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 children: [
                   for (final p in _pages(l10n))
                     _PromisePage(image: p.image, title: p.title, body: p.body),
-                  const _DisclaimerPage(),
+                  _DisclaimerPage(
+                    notifyOptIn: _notifyOptIn,
+                    onNotifyChanged: (v) => setState(() => _notifyOptIn = v),
+                  ),
                 ],
               ),
             ),
@@ -225,7 +246,13 @@ class _PromisePage extends StatelessWidget {
 }
 
 class _DisclaimerPage extends StatelessWidget {
-  const _DisclaimerPage();
+  const _DisclaimerPage({
+    required this.notifyOptIn,
+    required this.onNotifyChanged,
+  });
+
+  final bool notifyOptIn;
+  final ValueChanged<bool> onNotifyChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -257,6 +284,30 @@ class _DisclaimerPage extends StatelessWidget {
               child: Text(
                 disclaimerTextOf(l10n),
                 style: const TextStyle(fontSize: 13, height: 1.6),
+              ),
+            ),
+            const SizedBox(height: 16),
+            // 災害通知の既定ONトグル（1.4.0。「同意してはじめる」で許可を求める）
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey[300]!),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: SwitchListTile(
+                value: notifyOptIn,
+                onChanged: onNotifyChanged,
+                title: Text(
+                  l10n.onboardingNotifyOptIn,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                subtitle: Text(
+                  l10n.onboardingNotifyOptInDetail,
+                  style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+                ),
+                secondary: const Icon(Icons.notifications_active_outlined),
               ),
             ),
             // 翻訳は参考。日本語を正文とする（SPEC 12.2）

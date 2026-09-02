@@ -111,6 +111,13 @@ class AppLocalizationsEn extends AppLocalizations {
       'Every video is shown together with its provider. All rights to the footage belong to the respective providers.';
 
   @override
+  String get onboardingNotifyOptIn => 'Receive disaster alerts';
+
+  @override
+  String get onboardingNotifyOptInDetail =>
+      'Notifies you of earthquakes of intensity 5-lower or above and Emergency Warnings (nationwide). You can change this later in Settings.';
+
+  @override
   String get onboardingDisclaimerTitle => 'Please read before you start';
 
   @override

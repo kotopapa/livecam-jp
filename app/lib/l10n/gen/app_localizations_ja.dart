@@ -108,6 +108,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get onboardingBody3 => 'すべての映像は提供元の明示とともに表示します。映像の権利は各提供元に帰属します。';
 
   @override
+  String get onboardingNotifyOptIn => '災害通知を受け取る';
+
+  @override
+  String get onboardingNotifyOptInDetail =>
+      '震度5弱以上の地震と特別警報（全国）をお知らせします。あとから設定で変更できます。';
+
+  @override
   String get onboardingDisclaimerTitle => 'ご利用前の大切なお願い';
 
   @override
@@ -2123,6 +2130,13 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String get onboardingBody3 =>
       'えいぞうは かならず 「だれが だしているか」と いっしょに みせます。えいぞうの けんりは だした ひとの ものです。';
+
+  @override
+  String get onboardingNotifyOptIn => 'さいがいの おしらせを うけとる';
+
+  @override
+  String get onboardingNotifyOptInDetail =>
+      'しんど 5弱（じゃく）いじょうの じしんと とくべつ けいほうを おしらせします。あとで せっていで かえられます。';
 
   @override
   String get onboardingDisclaimerTitle => 'つかう まえに よんでください';

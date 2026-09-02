@@ -107,6 +107,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get onboardingBody3 => '所有画面都与提供方的名称一并显示。画面的权利归各提供方所有。';
 
   @override
+  String get onboardingNotifyOptIn => '接收灾害通知';
+
+  @override
+  String get onboardingNotifyOptInDetail =>
+      '当发生烈度5弱以上的地震或发布特别警报（全国）时通知您。之后可在设置中更改。';
+
+  @override
   String get onboardingDisclaimerTitle => '使用前的重要提示';
 
   @override
@@ -2106,6 +2113,13 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get onboardingBody3 => '所有影像都會與提供者一併顯示。影像的權利歸各提供者所有。';
+
+  @override
+  String get onboardingNotifyOptIn => '接收災害通知';
+
+  @override
+  String get onboardingNotifyOptInDetail =>
+      '當發生震度5弱以上的地震或發布特別警報（全國）時通知您。之後可在設定中變更。';
 
   @override
   String get onboardingDisclaimerTitle => '使用前的重要提醒';

@@ -111,6 +111,13 @@ class AppLocalizationsVi extends AppLocalizations {
       'Mọi hình ảnh đều được hiển thị kèm tên đơn vị cung cấp. Quyền đối với hình ảnh thuộc về từng đơn vị cung cấp.';
 
   @override
+  String get onboardingNotifyOptIn => 'Nhận thông báo thiên tai';
+
+  @override
+  String get onboardingNotifyOptInDetail =>
+      'Thông báo khi có động đất cường độ 5 yếu trở lên hoặc Cảnh báo đặc biệt (toàn quốc). Bạn có thể thay đổi trong Cài đặt.';
+
+  @override
   String get onboardingDisclaimerTitle => 'Lưu ý quan trọng trước khi sử dụng';
 
   @override

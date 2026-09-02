@@ -37,6 +37,19 @@ void main() {
     expect(find.text('ご利用前の大切なお願い'), findsOneWidget);
     expect(find.textContaining('避難の判断'), findsOneWidget);
 
+    // 災害通知のトグルが既定ONで表示されている（OFFにもできる）
+    expect(find.text('災害通知を受け取る'), findsOneWidget);
+    final sw = tester.widget<SwitchListTile>(find.byType(SwitchListTile));
+    expect(sw.value, isTrue);
+    await tester.tap(find.byType(SwitchListTile));
+    await tester.pump();
+    expect(
+      tester.widget<SwitchListTile>(find.byType(SwitchListTile)).value,
+      isFalse,
+    );
+    await tester.tap(find.byType(SwitchListTile));
+    await tester.pump();
+
     // 同意して完了 → フラグが立つ
     await tester.tap(find.text('同意してはじめる'));
     await tester.pumpAndSettle();

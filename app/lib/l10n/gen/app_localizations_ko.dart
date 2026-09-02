@@ -109,6 +109,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get onboardingBody3 => '모든 영상은 제공처를 명시하여 표시합니다. 영상의 권리는 각 제공처에 있습니다.';
 
   @override
+  String get onboardingNotifyOptIn => '재해 알림 받기';
+
+  @override
+  String get onboardingNotifyOptInDetail =>
+      '진도 5약 이상 지진과 특별 경보(전국)를 알려드립니다. 나중에 설정에서 변경할 수 있습니다.';
+
+  @override
   String get onboardingDisclaimerTitle => '이용 전 꼭 확인해 주십시오';
 
   @override
