@@ -114,3 +114,12 @@ python site/build.py                            # 配信ファイル生成
 - **JISコードより「文字で書かれた県名」を優先する**（`rows_to_records`）。紀美野町の消防水利XLSXは市区町村コードが`030306`で、コード優先だと603件まるごと岩手県に飛んだ
 - 埼玉・岡山・広島・島根・宮城は dataeye系ポータル（`/ckan_api/`・robots全面許可）に消防水利がありrobots的には取れるが、**パッケージにライセンス欄が1つも無い**ためSPEC C5に従い不採用。利用規約を確認できれば5県増える（次の一手）
 - **YouTubeカメラの一斉点検（2026-08-31）**: 2,686台を watch ページの isLiveNow ＋ チャンネル `/streams`（`https://www.youtube.com/channel/<UC..>/streams` の形式でないと404）で判定し、追従201・退役240。要確認91台（営業時間のみ配信の施設カメラ・冬季のみのスキー場など。深夜に確認したため）は docs/research_2026-08-31/youtube_health.md に一覧。**日中に再確認する**こと。非公開/削除の69件はチャンネルIDが取れず自動追従不可（運営者名から新枠を探せば復活できる）
+
+## 海外カメラ調査の知見（2026-09-02追記）
+
+- 海外カメラは `crawler/curated_world.yaml`（人手台帳）→ `curated_world` パーサ → cameras.json。ID は `world-<sha1(video_id)[:8]>`。**yaml でコメントアウトしただけでは cameras.json から消えない**（8/31 退役分が残っていた）。退役時は cameras.json からも除去し version を更新する
+- 2026-09-02 の調査で +454台・退役136台（21,939台、海外630台）。手順・鉱脈・見送り理由は docs/research_2026-09-02/world_cameras.md。取り込み/点検スクリプト（`merge_world.py` / `health_world.py` / `retire_follow.py` / `apply_plan.py`）は scratchpad に置いたので消えたら同文書を元に再作成する
+- **SkylineWebcams・feratel・EarthCam は個別カメラの YouTube 配信をやめ巡回コンピレーションのみ**になった。同運営者の個別枠は復活しない前提で扱う。Explore.org は動画IDを別カメラに付け替える（名称と映像が食い違う）ので定期点検が要る
+- YouTube watch ページは並列取得で 429 になる。2〜3秒間隔＋429時30〜90秒待ちで安定。調査エージェントの WebSearch は1セッション200回で上限に達するので、後半は YouTube 検索結果ページ（ライブ絞り込み）と既知チャンネルの `/streams` 追跡が有効
+- 追従判定のタイトル一致は誤マッチする（例: ハミングバード→ワシの巣、カホンパス→ジョージア）。自動追従は必ず目視で精査する
+- cameras.json に同一動画IDの二重登録が12件ある（主に `curated-lcdb-*` と既登録の重複）。未解消
