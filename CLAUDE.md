@@ -118,8 +118,9 @@ python site/build.py                            # 配信ファイル生成
 ## 海外カメラ調査の知見（2026-09-02追記）
 
 - 海外カメラは `crawler/curated_world.yaml`（人手台帳）→ `curated_world` パーサ → cameras.json。ID は `world-<sha1(video_id)[:8]>`。**yaml でコメントアウトしただけでは cameras.json から消えない**（8/31 退役分が残っていた）。退役時は cameras.json からも除去し version を更新する
-- 2026-09-02 の調査で +454台・退役136台（21,939台、海外630台）。手順・鉱脈・見送り理由は docs/research_2026-09-02/world_cameras.md。取り込み/点検スクリプト（`merge_world.py` / `health_world.py` / `retire_follow.py` / `apply_plan.py`）は scratchpad に置いたので消えたら同文書を元に再作成する
+- 2026-09-02 の調査で第1波 +454台・退役136台、第2波（空白地帯・ランドマーク・絶景）+402台（22,341台、海外1,032台）。手順・鉱脈・見送り理由・**YouTube枠が無い有名地点の公式カメラ一覧（静止画/独自プレーヤー。curated_still 化の候補）**は docs/research_2026-09-02/world_cameras.md。取り込み/点検スクリプト（`merge_world.py` / `health_world.py` / `retire_follow.py` / `apply_plan.py`）は scratchpad に置いたので消えたら同文書を元に再作成する
 - **SkylineWebcams・feratel・EarthCam は個別カメラの YouTube 配信をやめ巡回コンピレーションのみ**になった。同運営者の個別枠は復活しない前提で扱う。Explore.org は動画IDを別カメラに付け替える（名称と映像が食い違う）ので定期点検が要る
 - YouTube watch ページは並列取得で 429 になる。2〜3秒間隔＋429時30〜90秒待ちで安定。調査エージェントの WebSearch は1セッション200回で上限に達するので、後半は YouTube 検索結果ページ（ライブ絞り込み）と既知チャンネルの `/streams` 追跡が有効
 - 追従判定のタイトル一致は誤マッチする（例: ハミングバード→ワシの巣、カホンパス→ジョージア）。自動追従は必ず目視で精査する
 - cameras.json に同一動画IDの二重登録が12件ある（主に `curated-lcdb-*` と既登録の重複）。未解消
+- 宗教団体が画面に聖句・祈りのテロップを重ねるカメラは中立性の観点で不採用。メッカ・メディナはサウジ放送庁の公式チャンネルのみ（再配信多数）。モスクワ中心部の24h固定カメラはYouTube上に無い（ロシアの都市カメラは VK/Rutube に移行）
