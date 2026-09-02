@@ -9472,14 +9472,14 @@ cameras:
     video_id: Wrq2z5ZyaLE
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.youtube.com/channel/UCsMqZQxBAhVbDupWFUu4VMA'
   - id: curated-lcdb-61bcac01
-    name: RAB青森放送
+    name: RAB青森放送 情報カメラ
     operator: 青森放送(RAB)
     category: other
     prefecture: '02'
-    lat: 40.885642
-    lng: 140.2105
+    lat: 40.819733
+    lng: 140.767654
     video_id: zPib6KyF5Nk
-    note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.rab.co.jp/'
+    note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。青森市街・港・空港など複数地点＋ラジオ生放送のマルチカメラ枠のため、座標は本社(青森市松森1-4-8、国土地理院AddressSearch)。旧座標は地図中心の概略値で海上だった(2026-09-02修正)。掲載元: https://www.rab.co.jp/'
   - id: curated-lcdb-752f9643
     name: 朝日新聞成田空港滑走路
     operator: 朝日新聞社(朝日新聞デジタル)
