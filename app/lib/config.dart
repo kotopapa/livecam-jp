@@ -22,20 +22,24 @@ const String firebaseApiKey = 'AIzaSyBlNICazXyF_x9A5aLARTW3k2L-K62lae0';
 /// デバッグ検証にはGoogle公式テストID
 /// (ca-app-pub-3940256099942544/2934735716) に一時差し替えて使う。
 const String _admobBannerUnitIdIos = 'ca-app-pub-9639294688594011/6375938678';
-const String _admobRectangleUnitIdIos = 'ca-app-pub-9639294688594011/5827278377';
+const String _admobRectangleUnitIdIos =
+    'ca-app-pub-9639294688594011/5827278377';
 
 /// Android用ユニットID。AdMobでAndroidアプリを登録してユニットを発行するまでは
 /// Google公式テストID（本番配布前に必ず差し替える）
-const String _admobBannerUnitIdAndroid = 'ca-app-pub-3940256099942544/6300978111';
-const String _admobRectangleUnitIdAndroid = 'ca-app-pub-3940256099942544/6300978111';
+const String _admobBannerUnitIdAndroid =
+    'ca-app-pub-3940256099942544/6300978111';
+const String _admobRectangleUnitIdAndroid =
+    'ca-app-pub-3940256099942544/6300978111';
 
 /// AdMob バナー広告ユニットID（映像直下・各タブ下部）
 String get admobBannerUnitId =>
     Platform.isAndroid ? _admobBannerUnitIdAndroid : _admobBannerUnitIdIos;
 
 /// AdMob レクタングル広告ユニットID（詳細画面 ミニマップ下・300×250）
-String get admobRectangleUnitId =>
-    Platform.isAndroid ? _admobRectangleUnitIdAndroid : _admobRectangleUnitIdIos;
+String get admobRectangleUnitId => Platform.isAndroid
+    ? _admobRectangleUnitIdAndroid
+    : _admobRectangleUnitIdIos;
 
 /// App Store のアプリID（招待・評価導線用）。manifest の store_url が無い場合の既定
 const String appStoreId = '6802841521';
@@ -83,20 +87,28 @@ class VcMerchant {
 }
 
 Uri _yahooSearchUrl(String keyword) => Uri.parse(
-    'https://shopping.yahoo.co.jp/search?p=${Uri.encodeQueryComponent(keyword)}');
+  'https://shopping.yahoo.co.jp/search?p=${Uri.encodeQueryComponent(keyword)}',
+);
 
 Uri _rakutenSearchUrl(String keyword) => Uri.parse(
-    'https://search.rakuten.co.jp/search/mall/${Uri.encodeComponent(keyword)}/');
+  'https://search.rakuten.co.jp/search/mall/${Uri.encodeComponent(keyword)}/',
+);
 
 Uri _amazonSearchUrl(String keyword) => Uri.parse(
-    'https://www.amazon.co.jp/s?k=${Uri.encodeQueryComponent(keyword)}');
+  'https://www.amazon.co.jp/s?k=${Uri.encodeQueryComponent(keyword)}',
+);
 
 /// 提携先の一覧（表示順）。
 ///
 /// 2026-09-01 時点の状態:
 /// - Yahoo!ショッピング … 提携済み（**唯一有効**）
-/// - 楽天市場 … バリューコマースで審査中 → 承認されたら `enabled: true` にする
-/// - Amazon.co.jp … 審査中 → 承認されたら `enabled: true` にする
+/// - 楽天市場 … バリューコマースで審査中
+/// - Amazon.co.jp … 審査中
+///
+/// **承認後の有効化はアプリ更新不要**: `data/stockpile/products.json` の
+/// `merchants.<key>.enabled` を true にして publish すると、配信JSONを読んだ
+/// アプリ側で `AffiliateLinks.remoteFlags` がここの値を上書きする（1.4.0）。
+/// ここの `enabled` は配信が届く前・取得失敗時の既定値
 ///
 /// 手順は docs/stockpile_1.4.0.md「広告主を増やす／有効にする手順」を参照。
 const List<VcMerchant> vcMerchants = <VcMerchant>[

@@ -450,6 +450,62 @@ void main() {
       expect(AffiliateLinks.productLink(official, rakuten), isNull);
     });
 
+    test('配信JSONの merchants で承認済み店舗をアプリ更新なしで有効化できる', () {
+      addTearDown(() => AffiliateLinks.applyRemoteFlags(const {}));
+      // 既定（配信未取得）: config どおり Yahoo! だけ
+      AffiliateLinks.applyRemoteFlags(const {});
+      expect(AffiliateLinks.enabledMerchants.map((m) => m.key), ['yahoo']);
+
+      // 配信で楽天を承認済みに → 追加される。未知のキーは無視
+      final p = StockpileProducts.fromJson({
+        'version': 'v',
+        'categories': [
+          {
+            'items': [
+              {'id': 'water', 'name': '水'},
+            ],
+          },
+        ],
+        'merchants': {
+          'rakuten': {'enabled': true},
+          'amazon': false,
+          'unknown': {'enabled': true},
+          'yahoo': {'enabled': 'yes'}, // 不正値は無視
+        },
+      })!;
+      // 未知のキーは保持されるが、判定側（vcMerchants に無い）では無視される
+      expect(p.merchants, {'rakuten': true, 'amazon': false, 'unknown': true});
+      AffiliateLinks.applyRemoteFlags(p.merchants);
+      expect(AffiliateLinks.enabledMerchants.map((m) => m.key), [
+        'yahoo',
+        'rakuten',
+      ]);
+      expect(AffiliateLinks.needsMerchantPicker, isTrue);
+      expect(
+        AffiliateLinks.searchLink('保存水', AffiliateLinks.merchantOf('rakuten')!),
+        isNotNull,
+      );
+
+      // 配信で Yahoo! を止めることもできる（緊急停止）
+      AffiliateLinks.applyRemoteFlags(const {'yahoo': false});
+      expect(AffiliateLinks.isAvailable, isFalse);
+
+      // merchants 節が無い配信 → 既定値のまま
+      final q = StockpileProducts.fromJson({
+        'version': 'v',
+        'categories': [
+          {
+            'items': [
+              {'id': 'water', 'name': '水'},
+            ],
+          },
+        ],
+      })!;
+      expect(q.merchants, isEmpty);
+      AffiliateLinks.applyRemoteFlags(q.merchants);
+      expect(AffiliateLinks.enabledMerchants.map((m) => m.key), ['yahoo']);
+    });
+
     test('買って備える品目には検索語があり、そうでない品目には購入導線を出さない', () {
       final notPurchasable = <String>{};
       for (final s in defaultStockpileItems) {

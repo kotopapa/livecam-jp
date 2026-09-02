@@ -23,6 +23,29 @@ import 'stockpile_products.dart' show ProductRef;
 class AffiliateLinks {
   const AffiliateLinks._();
 
+  /// 配信JSON（stockpile/products.json の `merchants`）から受け取った有効フラグ。
+  /// config.dart の `enabled` を上書きする。承認された広告主をアプリ更新なしで
+  /// 有効化するため（1.4.0）。未取得のうちは空＝config の既定値
+  static Map<String, bool> remoteFlags = const {};
+
+  static void applyRemoteFlags(Map<String, bool> flags) {
+    remoteFlags = Map.unmodifiable(flags);
+  }
+
+  /// 配信フラグを反映した広告主一覧（pid の無い店舗は有効化されても出ない）
+  static List<VcMerchant> get merchants => [
+    for (final m in vcMerchants)
+      remoteFlags.containsKey(m.key)
+          ? VcMerchant(
+              key: m.key,
+              name: m.name,
+              pid: m.pid,
+              enabled: remoteFlags[m.key]!,
+              searchUrl: m.searchUrl,
+            )
+          : m,
+  ];
+
   /// 有効な広告主だけを取り出す（テストのため一覧を差し替えられるようにする）
   static List<VcMerchant> enabledIn(List<VcMerchant> merchants) => [
     for (final m in merchants)
@@ -30,7 +53,7 @@ class AffiliateLinks {
   ];
 
   /// いま画面に出してよい広告主（提携承認済みのものだけ）
-  static List<VcMerchant> get enabledMerchants => enabledIn(vcMerchants);
+  static List<VcMerchant> get enabledMerchants => enabledIn(merchants);
 
   /// 導線が使えるか（sid未設定・全店舗未承認なら false → ボタンを出さない）
   static bool get isAvailable =>
@@ -40,7 +63,7 @@ class AffiliateLinks {
   static bool needsPickerIn(List<VcMerchant> merchants) =>
       enabledIn(merchants).length > 1;
 
-  static bool get needsMerchantPicker => needsPickerIn(vcMerchants);
+  static bool get needsMerchantPicker => needsPickerIn(merchants);
 
   /// キーから広告主を引く（未定義・無効なら null）
   static VcMerchant? merchantOf(String key) =>
@@ -82,7 +105,7 @@ class AffiliateLinks {
   }
 
   static Uri? soleSearchLink(String keyword) =>
-      soleSearchLinkIn(keyword, vcMerchants);
+      soleSearchLinkIn(keyword, merchants);
 
   /// 定番商品 [product] を [merchant] で開くアフィリエイトリンク。
   ///
@@ -111,5 +134,5 @@ class AffiliateLinks {
   }
 
   static List<VcMerchant> productMerchants(ProductRef product) =>
-      productMerchantsIn(product, vcMerchants);
+      productMerchantsIn(product, merchants);
 }

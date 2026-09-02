@@ -81,7 +81,10 @@ class _StockpileScreenState extends State<StockpileScreen> {
       repo = StockpileProductsRepository(cacheDir: dir);
     }
     final p = await repo.load();
-    if (mounted && p != null) setState(() => _products = p);
+    if (p == null) return;
+    // 承認済みの提携先を配信側のフラグで反映（アプリ更新なしで有効化できる）
+    AffiliateLinks.applyRemoteFlags(p.merchants);
+    if (mounted) setState(() => _products = p);
   }
 
   @override

@@ -180,6 +180,7 @@ class StockpileProducts {
     required this.certNote,
     required this.sources,
     required this.byItemId,
+    this.merchants = const {},
   });
 
   final String version;
@@ -197,6 +198,11 @@ class StockpileProducts {
 
   /// 品目ID → 選び方・商品
   final Map<String, StockpileProductGuide> byItemId;
+
+  /// 提携ショップの有効フラグ（店舗キー → enabled）。配信側で承認状況を反映し、
+  /// アプリ更新なしで楽天・Amazon 等を後から有効化できる（1.4.0）。
+  /// 無いキーは config.dart の既定値のまま
+  final Map<String, bool> merchants;
 
   StockpileProductGuide? guideFor(String itemId) => byItemId[itemId];
 
@@ -223,7 +229,26 @@ class StockpileProducts {
           if (s is Map<String, dynamic>) ?ProductLink.fromJson(s),
       ],
       byItemId: guides,
+      merchants: parseMerchants(j['merchants']),
     );
+  }
+
+  /// `{"yahoo": {"enabled": true}}` と `{"yahoo": true}` の両方を受け付ける。
+  /// 不正な値は無視する（既定値にフォールバック）
+  static Map<String, bool> parseMerchants(Object? raw) {
+    if (raw is! Map) return const {};
+    final out = <String, bool>{};
+    for (final e in raw.entries) {
+      final k = e.key;
+      final v = e.value;
+      if (k is! String || k.isEmpty) continue;
+      if (v is bool) {
+        out[k] = v;
+      } else if (v is Map && v['enabled'] is bool) {
+        out[k] = v['enabled'] as bool;
+      }
+    }
+    return out;
   }
 }
 

@@ -99,6 +99,23 @@ https://ck.jp.ap.valuecommerce.com/servlet/referral
 （`?` `&` `=` `:` `/` もエンコードされる）。組み立ては
 `AffiliateLinks.referral()`、検索リンクは `AffiliateLinks.searchLink()`。
 
+### 承認後の有効化（アプリ更新不要・1.4.0）
+
+`data/stockpile/products.json` の `merchants` 節が config の `enabled` を上書きする:
+
+```json
+"merchants": {
+  "yahoo":   {"enabled": true},
+  "rakuten": {"enabled": false},
+  "amazon":  {"enabled": false}
+}
+```
+
+楽天・Amazon の提携が承認されたら ①上の curl で `VIEW_URL` が default_banner でないことを確認
+②該当キーを `true` にして `version` を現在UTCに更新 ③publish。アプリは起動時に配信JSONを読み、
+`AffiliateLinks.applyRemoteFlags()` で反映する（未取得・不正値は config の既定値）。
+キーは `vcMerchants.key`（yahoo / rakuten / amazon）。pid が空の店舗は true にしても出ない。
+
 ### 現在の設定（`app/lib/config.dart`）
 
 - `vcSid = '3780235'`
