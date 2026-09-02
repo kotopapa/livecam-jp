@@ -1,0 +1,313 @@
+<title>台風の夜 絵コンテ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F8FB; --ink:#131C2E; --muted:#5B6678; --rule:#D3DAE4; --panel:#FFFFFF;
+  --accent:#1E6FD9; --accent-ink:#0F4FA3; --signal:#E8871E; --red:#D6394B;
+  --night:#0B1B33; --night-ink:#E6EEF9; --code:#0E1726; --code-ink:#DDE6F3;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C1424; --ink:#E7EEF8; --muted:#9AA8BC; --rule:#25324A; --panel:#121C31;
+    --accent:#5FA8FF; --accent-ink:#9CC8FF; --signal:#FFA640; --red:#FF6B7A;
+    --night:#06101F; --night-ink:#E6EEF9; --code:#070D1A; --code-ink:#D3DEEE;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C1424; --ink:#E7EEF8; --muted:#9AA8BC; --rule:#25324A; --panel:#121C31;
+  --accent:#5FA8FF; --accent-ink:#9CC8FF; --signal:#FFA640; --red:#FF6B7A;
+  --night:#06101F; --night-ink:#E6EEF9; --code:#070D1A; --code-ink:#D3DEEE;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.7;font-size:15px}
+.wrap{max-width:900px;margin:0 auto;padding:40px 24px 96px}
+h1,h2,h3{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;text-wrap:balance;line-height:1.25;margin:0}
+h1{font-size:34px;font-weight:900;letter-spacing:.01em}
+h2{font-size:20px;font-weight:700;margin-top:56px;padding-bottom:10px;border-bottom:2px solid var(--rule)}
+h3{font-size:17px;font-weight:700}
+p{margin:.5em 0}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.lead{color:var(--muted);max-width:62ch}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px 24px;margin:24px 0 0;padding:18px 20px;background:var(--panel);border:1px solid var(--rule);border-radius:10px}
+.meta div span{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.meta div b{font-weight:700;font-variant-numeric:tabular-nums}
+.timeline{display:flex;gap:4px;margin:28px 0 0;height:34px;border-radius:6px;overflow:hidden}
+.timeline a{display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;text-decoration:none;font-family:"JetBrains Mono",monospace;letter-spacing:.02em;min-width:0;white-space:nowrap;overflow:hidden}
+.timeline a:focus-visible{outline:2px solid var(--signal);outline-offset:-2px}
+.t-night{background:#22304D}.t-turn{background:var(--accent)}.t-app{background:#2E7BE0}.t-world{background:#3C8D6B}.t-out{background:#22304D}
+.cut{display:grid;grid-template-columns:150px 1fr;gap:22px;margin-top:36px;padding-top:28px;border-top:1px solid var(--rule)}
+.cut:first-of-type{border-top:0;padding-top:0}
+.frame{aspect-ratio:9/16;border-radius:10px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;color:var(--night-ink);font-size:11.5px;line-height:1.5;background:var(--night);border:1px solid var(--rule)}
+.frame.light{background:linear-gradient(160deg,#EAF3FF,#DCEBFF);color:#14213D}
+.frame.world{background:linear-gradient(160deg,#0E3B73,#0B1B33)}
+.frame .tc{font-family:"JetBrains Mono",monospace;font-size:11px;opacity:.75}
+.frame .big{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:15px;line-height:1.3;text-wrap:balance}
+.frame .big.red{color:#FF6B7A;text-decoration:line-through;text-decoration-thickness:3px}
+.frame .big.sig{color:var(--signal)}
+.cut-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.cut-head .num{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted)}
+.cut-head .dur{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent-ink);background:color-mix(in srgb,var(--accent) 12%,transparent);padding:2px 8px;border-radius:999px}
+.src{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:2px 9px;border-radius:999px;border:1px solid var(--rule);color:var(--muted)}
+.src.gen{color:var(--signal);border-color:color-mix(in srgb,var(--signal) 50%,transparent)}
+.src.shot{color:var(--accent-ink);border-color:color-mix(in srgb,var(--accent) 50%,transparent)}
+.rows{display:grid;grid-template-columns:96px 1fr;gap:6px 14px;margin-top:12px}
+.rows dt{font-size:12px;letter-spacing:.08em;color:var(--muted);font-weight:700;padding-top:3px}
+.rows dd{margin:0}
+.ontext{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:19px;line-height:1.35}
+.ontext small{display:block;font-family:"Noto Sans JP",sans-serif;font-weight:500;font-size:13px;color:var(--muted)}
+.prompt{position:relative;margin-top:6px;background:var(--code);color:var(--code-ink);border-radius:8px;padding:12px 14px 12px;font-family:"JetBrains Mono",monospace;font-size:12.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+.prompt button{position:absolute;top:8px;right:8px;font:600 11px "Noto Sans JP",sans-serif;background:rgba(255,255,255,.12);color:var(--code-ink);border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:3px 9px;cursor:pointer}
+.prompt button:hover{background:rgba(255,255,255,.22)}
+.prompt button:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+.note{font-size:13px;color:var(--muted)}
+.motion{font-size:13.5px}
+.motion b{color:var(--accent-ink)}
+.rule-list{margin:10px 0 0;padding-left:1.2em}
+.rule-list li{margin:.35em 0}
+.palette{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.sw{width:118px;padding:8px 10px;border-radius:8px;font-size:11.5px;line-height:1.4;font-family:"JetBrains Mono",monospace}
+table{border-collapse:collapse;width:100%;margin-top:12px;font-size:13.5px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tablewrap{overflow-x:auto}
+kbd{font-family:"JetBrains Mono",monospace;font-size:12px;background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:1px 5px}
+@media (max-width:640px){.cut{grid-template-columns:1fr}.frame{max-width:180px}.rows{grid-template-columns:1fr}.rows dt{padding-top:6px}}
+@media (prefers-reduced-motion:no-preference){.prompt button{transition:background .15s}}
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">全国ライブカメラ地図 ｜ SNS広告動画 ｜ 画像構成案</p>
+  <h1>台風の夜 絵コンテ</h1>
+  <p class="lead">MiniMax で動画化する前提の10カット構成。各カットに ChatGPT 画像生成用のプロンプト、画面に載せる文字、MiniMax での動きの指示を付けています。<b>アプリ画面はAIで生成せず、実機スクリーンショットを使います</b>（実在しないUIを作らないため）。</p>
+
+  <div class="meta">
+    <div><span>フォーマット</span><b>9:16 縦 ・ 1080×1920</b></div>
+    <div><span>尺</span><b>約 25 秒（10カット）</b></div>
+    <div><span>生成画像</span><b>7 枚（＋差し替え用 2）</b></div>
+    <div><span>実機スクショ</span><b>5 枚</b></div>
+    <div><span>音</span><b>雨音 → 無音 → BGM（別途）</b></div>
+  </div>
+
+  <div class="timeline" aria-label="時間配分">
+    <a class="t-night" style="flex:1.4" href="#c1">1</a>
+    <a class="t-night" style="flex:1.6" href="#c2">2</a>
+    <a class="t-night" style="flex:1.6" href="#c3">3</a>
+    <a class="t-turn" style="flex:2.4" href="#c4">4</a>
+    <a class="t-app" style="flex:2.8" href="#c5">5</a>
+    <a class="t-app" style="flex:3" href="#c6">6</a>
+    <a class="t-app" style="flex:2.8" href="#c7">7</a>
+    <a class="t-world" style="flex:2.6" href="#c8">8</a>
+    <a class="t-app" style="flex:2" href="#c9">9</a>
+    <a class="t-out" style="flex:5" href="#c10">10</a>
+  </div>
+
+  <h2>共通ルール（先に読む）</h2>
+  <h3>画像の統一感を出すための共通プレフィックス</h3>
+  <p class="note">生成画像すべての冒頭に付けます。カットごとのプロンプトはこの後ろに続けてください。</p>
+  <div class="prompt" id="p-prefix">Cinematic photorealistic still frame for a vertical 9:16 mobile video ad, 1080x1920. Moody blue-navy color grade with subtle cyan highlights, film grain, shallow depth of field, natural motivated lighting. Japanese setting. No text, no letters, no logos, no watermarks, no UI elements anywhere in the image.<button type="button" data-copy="p-prefix">コピー</button></div>
+
+  <div class="palette">
+    <div class="sw" style="background:#0B1B33;color:#fff">#0B1B33<br>夜のネイビー（地）</div>
+    <div class="sw" style="background:#1E6FD9;color:#fff">#1E6FD9<br>アプリの青（転換）</div>
+    <div class="sw" style="background:#39C0FF;color:#0B1B33">#39C0FF<br>シアン（強調）</div>
+    <div class="sw" style="background:#FFA726;color:#0B1B33">#FFA726<br>オレンジ（数字）</div>
+    <div class="sw" style="background:#FF3B4E;color:#fff">#FF3B4E<br>赤（否定・警告）</div>
+    <div class="sw" style="background:#F6F9FF;color:#0B1B33;border:1px solid #D3DAE4">#F6F9FF<br>明転の白</div>
+  </div>
+
+  <ul class="rule-list">
+    <li><b>文字は画像に入れない。</b>キャッチコピーは MiniMax（またはCapCut等）でテロップとして重ねる。生成画像内の文字は崩れやすく、修正もできないため。</li>
+    <li><b>スマホ画面は必ず実機スクリーンショット。</b>生成画像でスマホを出すときは「画面は真っ黒（消灯）または単色」で生成し、後から画面領域にスクショを合成する。</li>
+    <li><b>人物は顔を映さない。</b>手元・後ろ姿・シルエットに限定（肖像の問題を避け、視聴者が自分ごと化しやすい）。</li>
+    <li><b>各カット、生成は3〜4枚出して1枚選ぶ。</b>雨・水面・夜景は当たり外れが大きい。</li>
+    <li><b>MiniMax の動きは「ゆっくり・1方向」。</b>1カットに1つのカメラワークだけ。速い動きは画像が破綻する。</li>
+    <li>テロップの安全域: 上 200px・下 260px は避ける（TikTok/Reels の UI と重なる）。</li>
+  </ul>
+
+  <h2>カット表</h2>
+
+  <section class="cut" id="c1">
+    <div class="frame"><span class="tc">0.0 – 1.4s</span><span class="big">台風の夜。</span><span>暗い部屋の窓／雨</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 01</span><h3>台風の夜</h3><span class="dur">1.4s</span><span class="src gen">生成画像</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>明るいフィードの中で「暗転」して指を止める。説明はしない。</dd>
+        <dt>画面テキスト</dt><dd class="ontext">台風の夜。<small>中央・小さめ・字間広め。0.2秒で表示</small></dd>
+        <dt>ビジュアル</dt><dd>夜、室内から見た窓。ガラスを雨が激しく叩き、外は街灯がにじむ。画面の大半は暗い。</dd>
+        <dt>プロンプト</dt><dd><div class="prompt" id="p1">Interior of a dark Japanese apartment at night during a typhoon, looking out through a rain-streaked window. Heavy rain drops and streaks on the glass in sharp focus, blurred orange street lights and swaying trees outside, faint reflection of the room. Very low-key lighting, deep navy shadows, one small warm light source off-frame. Vertical composition with the window filling the frame.<button type="button" data-copy="p1">コピー</button></div></dd>
+        <dt>MiniMax</dt><dd class="motion"><b>Slow push-in</b>（ゆっくり窓へ寄る）＋雨筋が下へ流れる。1.4秒。終わり際に一瞬白くフラッシュ（稲光）。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c2">
+    <div class="frame"><span class="tc">1.4 – 3.0s</span><span class="big">川の様子、気になる。</span><span>増水した川と橋</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 02</span><h3>川の様子、気になる。</h3><span class="dur">1.6s</span><span class="src gen">生成画像</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>問題提示。「自分も見に行きたくなる」状況を1枚で示す。</dd>
+        <dt>画面テキスト</dt><dd class="ontext">川の様子、気になる。<small>中央・1行・白。1.6秒表示</small></dd>
+        <dt>ビジュアル</dt><dd>夜の河川。茶色く増水した流れが橋脚に迫る。堤防の街灯と雨。人は写さない。</dd>
+        <dt>プロンプト</dt><dd><div class="prompt" id="p2">A Japanese river swollen with brown floodwater at night during heavy rain, seen from the riverbank levee. Fast muddy water rushing close to the underside of a concrete bridge, white foam, rain falling through the beams of a few sodium street lamps, wet levee path in the foreground. Ominous, tense atmosphere, no people. Vertical composition, river running from bottom to top of frame.<button type="button" data-copy="p2">コピー</button></div></dd>
+        <dt>MiniMax</dt><dd class="motion"><b>Slow tilt down</b>（橋から水面へ視線を落とす）。水面は流れる。1.6秒。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c3">
+    <div class="frame"><span class="tc">3.0 – 4.6s</span><span class="big red">見に行かない。</span><span>玄関・傘に伸びる手</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 03</span><h3>見に行かない。</h3><span class="dur">1.6s</span><span class="src gen">生成画像</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>否定でひねる。赤い取り消し線と小さな揺れで「止まる」感覚を作る。</dd>
+        <dt>画面テキスト</dt><dd class="ontext"><span style="color:var(--red);text-decoration:line-through;text-decoration-thickness:3px">見に行かない。</span><small>赤・取り消し線は0.3秒で左から引く。表示と同時に画面を軽く揺らす</small></dd>
+        <dt>ビジュアル</dt><dd>玄関の暗がり。傘立ての傘に手が伸びかけて止まっている。ドアの隙間から雨の音が聞こえそうな絵。</dd>
+        <dt>プロンプト</dt><dd><div class="prompt" id="p3">A dim Japanese genkan entryway at night, a hand reaching toward a wet umbrella in an umbrella stand and hesitating, front door slightly ajar with heavy rain visible outside and a wet doormat. Only the hand and forearm visible, no face. Cold blue light from outside, warm dim light from inside. Tense, still moment. Vertical composition.<button type="button" data-copy="p3">コピー</button></div></dd>
+        <dt>MiniMax</dt><dd class="motion"><b>ほぼ静止</b>（微かな手の揺れのみ）。テロップの瞬間に <b>カメラシェイク</b> 0.3秒。赤い半透明フラッシュ。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c4">
+    <div class="frame light"><span class="tc">4.6 – 7.0s</span><span class="big">スマホで、見る。</span><span>ソファでスマホ／画面は実機スクショ合成</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 04</span><h3>スマホで、見る。</h3><span class="dur">2.4s</span><span class="src gen">生成画像</span><span class="src shot">＋スクショ合成</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>暗→明の転換で目を覚まさせる。解決策の提示。</dd>
+        <dt>画面テキスト</dt><dd class="ontext">スマホで、見る。<small>下部・大。補足「安全な場所から、いまの様子を」を小さく</small></dd>
+        <dt>ビジュアル</dt><dd>明るいリビング、ソファで手に持ったスマホ。画面は<b>消灯状態で生成</b>し、後から「カメラ詳細画面（東京駅ライブ）」のスクショを合成する。</dd>
+        <dt>プロンプト</dt><dd><div class="prompt" id="p4">Close-up of a hand holding a modern smartphone with a completely black turned-off screen, seated on a sofa in a bright, calm Japanese living room in the morning. Soft daylight from a window, warm wood and linen tones, a mug on a side table, shallow depth of field on the phone. Phone held vertically, screen facing the camera and fully visible, occupying the center of the frame. Only the hand visible, no face. Vertical composition.<button type="button" data-copy="p4">コピー</button></div></dd>
+        <dt>スクショ</dt><dd class="note">アプリ「カメラ詳細（東京駅 鉄道ライブカメラ）」。画面領域に角丸で合成。</dd>
+        <dt>MiniMax</dt><dd class="motion">白フラッシュで入り、<b>Slow push-in</b>（スマホ画面へ寄る）。2.4秒。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c5">
+    <div class="frame light"><span class="tc">7.0 – 9.8s</span><span class="big sig">20,162台</span><span>実機スクショ：地図（東京）</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 05</span><h3>地図から、さがす。</h3><span class="dur">2.8s</span><span class="src shot">実機スクショ</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>規模感を数字1つで殴る。地図にピンが並ぶ画で「探せる」を見せる。</dd>
+        <dt>画面テキスト</dt><dd class="ontext"><span style="color:var(--signal)">20,162台</span><small>0.8秒でカウントアップ → 「地図から、さがす。」に切替</small></dd>
+        <dt>ビジュアル</dt><dd>アプリの地図画面（東京駅周辺・ピン多数）を全画面に。</dd>
+        <dt>スクショ</dt><dd class="note">地図タブ・ズーム14前後・現在地の青丸が入る位置。「20165台」チップが写っていてもよい。</dd>
+        <dt>MiniMax</dt><dd class="motion">1.5倍から<b>Slow zoom-out</b>（引きながら全体を見せる）。2.8秒。画像に動きを付けるより、テロップの動きで見せる。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c6">
+    <div class="frame"><span class="tc">9.8 – 12.8s</span><span class="big">ライブで、見る。</span><span>生成：手持ちスマホ（夜景・屋外）／画面合成</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 06</span><h3>ライブで、見る。</h3><span class="dur">3.0s</span><span class="src gen">生成画像</span><span class="src shot">＋スクショ合成</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>「今の映像がその場で動く」体験。端末を斜めに持たせて立体感を出す。</dd>
+        <dt>画面テキスト</dt><dd class="ontext">ライブで、見る。<small>下部。右上に小さく「LIVE」バッジ（赤丸点滅はMiniMaxで）</small></dd>
+        <dt>ビジュアル</dt><dd>夜のベランダで、街の夜景を背にスマホを斜めに持つ手。画面は消灯で生成し、東京駅ライブ映像（スクショ）を合成。</dd>
+        <dt>プロンプト</dt><dd><div class="prompt" id="p6">A hand holding a smartphone at a slight three-quarter angle on a night balcony, city lights bokeh in the background, light rain, the phone screen completely black and reflective. Cinematic blue-navy night grade with warm bokeh dots, shallow depth of field, phone edges catching a rim light. Only the hand visible. Vertical composition with the phone large in the lower two-thirds of the frame.<button type="button" data-copy="p6">コピー</button></div></dd>
+        <dt>スクショ</dt><dd class="note">カメラ詳細（動画再生中のもの）。斜め合成が難しければ CUT 04 と同じ正面カットを流用し、こちらは<b>3Dパース変形</b>で対応。</dd>
+        <dt>MiniMax</dt><dd class="motion"><b>Slow orbit</b>（端末の周りをわずかに回り込む）＋背景ボケが揺れる。3.0秒。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c7">
+    <div class="frame light"><span class="tc">12.8 – 15.6s</span><span class="big">知る。そなえる。</span><span>実機スクショ2枚：災害速報／備え</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 07</span><h3>知る。そなえる。</h3><span class="dur">2.8s</span><span class="src shot">実機スクショ×2</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>防災アプリとしての厚み。2画面を縦にスライドさせて情報量を見せる。</dd>
+        <dt>画面テキスト</dt><dd class="ontext">知る。<br><span style="color:var(--accent-ink)">そなえる。</span><small>2段・左寄せ。補足「速報も備蓄も、この1本で」</small></dd>
+        <dt>ビジュアル</dt><dd>左: 災害速報タブ（地震一覧）／右: 備えタブ（チェックリスト・ロゴが並ぶ位置）。2分割。</dd>
+        <dt>スクショ</dt><dd class="note">災害速報は「地震・津波」タブ。備えは「水・食料」セクションが見える位置までスクロール。</dd>
+        <dt>MiniMax</dt><dd class="motion">左列は<b>上へ</b>、右列は<b>下へ</b>ゆっくりスライド（速度差で奥行き）。2.8秒。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c8">
+    <div class="frame world"><span class="tc">15.6 – 18.2s</span><span class="big sig">世界 630か所</span><span>生成：絶景コラージュ（3分割）</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 08</span><h3>世界の絶景も、いまを。</h3><span class="dur">2.6s</span><span class="src gen">生成画像×3</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>防災だけでなく「見て楽しい」を打ち出す。海外カメラ拡充（630か所）の訴求。</dd>
+        <dt>画面テキスト</dt><dd class="ontext"><span style="color:var(--signal)">世界 630か所</span>の絶景も。<small>「サファリ・オーロラ・火山・港」を小さく</small></dd>
+        <dt>ビジュアル</dt><dd>縦3分割。①ナイアガラの滝 ②サバンナの水場に集まるゾウ ③北欧のオーロラ。いずれも実カメラの雰囲気（固定カメラ視点・やや広角）。</dd>
+        <dt>プロンプト①</dt><dd><div class="prompt" id="p8a">Niagara Falls seen from a fixed elevated webcam viewpoint at golden hour, mist rising, Horseshoe Falls filling the frame, slightly wide angle, no people. Vertical composition.<button type="button" data-copy="p8a">コピー</button></div></dd>
+        <dt>プロンプト②</dt><dd><div class="prompt" id="p8b">A savanna waterhole in Kenya at dawn seen from a fixed wildlife camera, a family of elephants drinking, warm low sunlight, dust in the air, slightly wide angle, documentary realism. Vertical composition.<button type="button" data-copy="p8b">コピー</button></div></dd>
+        <dt>プロンプト③</dt><dd><div class="prompt" id="p8c">Green aurora borealis over a snowy Lapland lake seen from a fixed sky camera, small cabin lights at the shoreline, stars, long-exposure look, slightly wide angle. Vertical composition.<button type="button" data-copy="p8c">コピー</button></div></dd>
+        <dt>MiniMax</dt><dd class="motion">3枚を横並びにし、それぞれ<b>Slow push-in</b>。水・ゾウ・オーロラが微かに動く。2.6秒。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c9">
+    <div class="frame world"><span class="tc">18.2 – 20.2s</span><span class="big sig">7言語 対応。</span><span>背景：言語名のティッカー（テロップのみ）</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 09</span><h3>7言語対応</h3><span class="dur">2.0s</span><span class="src">テロップのみ</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>差別化ポイントを1つだけ。画像は不要、文字の動きで見せる。</dd>
+        <dt>画面テキスト</dt><dd class="ontext"><span style="color:var(--signal)">7言語</span> 対応。<small>背景に「日本語・やさしい日本語・English・简体中文・繁體中文・한국어・Tiếng Việt」が左右に流れる（薄く）</small></dd>
+        <dt>ビジュアル</dt><dd>ネイビーのグラデーション背景（CUT 08 の色と連続）。画像生成は不要。</dd>
+        <dt>MiniMax</dt><dd class="motion">中央の文字が<b>スケールイン</b>、背景の言語名は2段が逆方向にゆっくり流れる。2.0秒。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cut" id="c10">
+    <div class="frame"><span class="tc">20.2 – 25.0s</span><span class="big">全国ライブカメラ地図</span><span>生成：夜明けの空（希望）＋アイコン＋CTA</span></div>
+    <div>
+      <div class="cut-head"><span class="num">CUT 10</span><h3>アウトロ</h3><span class="dur">4.8s</span><span class="src gen">生成画像</span><span class="src shot">アプリアイコン</span></div>
+      <dl class="rows">
+        <dt>狙い</dt><dd>「台風の夜」で始めた物語を「夜明け」で閉じる。CTAは1つだけ。</dd>
+        <dt>画面テキスト</dt><dd class="ontext">全国ライブカメラ地図<small>アイコン → 名前 → バッジ「無料／広告最小／7言語対応」→ 白いボタン「App Store で今すぐ」→「『全国ライブカメラ地図』で検索」</small></dd>
+        <dt>ビジュアル</dt><dd>雨上がりの夜明け。川と橋の上に晴れ間が広がる（CUT 02 と同じ川の「その後」）。上半分は空の余白＝テロップの置き場。</dd>
+        <dt>プロンプト</dt><dd><div class="prompt" id="p10">The same Japanese river and concrete bridge the morning after a typhoon, water level receded and calm, wet levee path glistening, clearing sky at dawn with soft orange and blue light breaking through clouds, a few birds, peaceful and hopeful. Wide open sky occupying the upper half of the frame, no people. Vertical composition.<button type="button" data-copy="p10">コピー</button></div></dd>
+        <dt>MiniMax</dt><dd class="motion"><b>Slow tilt up</b>（川から空へ）、雲がゆっくり流れる。4.8秒。アイコンは着地時に軽くバウンド、ボタンは上を光が走る。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <h2>準備する素材一覧</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>#</th><th>種類</th><th>内容</th><th>使うカット</th></tr></thead>
+    <tbody>
+      <tr><td>G1</td><td>生成</td><td>雨の窓（室内から）</td><td>01</td></tr>
+      <tr><td>G2</td><td>生成</td><td>増水した川と橋（夜）</td><td>02</td></tr>
+      <tr><td>G3</td><td>生成</td><td>玄関・傘に伸びる手</td><td>03</td></tr>
+      <tr><td>G4</td><td>生成</td><td>明るい部屋・消灯スマホを持つ手（正面）</td><td>04（06の予備）</td></tr>
+      <tr><td>G5</td><td>生成</td><td>夜のベランダ・消灯スマホを斜めに持つ手</td><td>06</td></tr>
+      <tr><td>G6a/b/c</td><td>生成</td><td>ナイアガラ／サバンナの水場／オーロラ</td><td>08</td></tr>
+      <tr><td>G7</td><td>生成</td><td>雨上がりの夜明け・同じ川</td><td>10</td></tr>
+      <tr><td>S1</td><td>実機</td><td>カメラ詳細（東京駅 鉄道ライブ・再生中）</td><td>04, 06</td></tr>
+      <tr><td>S2</td><td>実機</td><td>地図タブ（東京駅周辺・ピン多数）</td><td>05</td></tr>
+      <tr><td>S3</td><td>実機</td><td>災害速報タブ（地震・津波）</td><td>07</td></tr>
+      <tr><td>S4</td><td>実機</td><td>備えタブ（水・食料が見える位置）</td><td>07</td></tr>
+      <tr><td>S5</td><td>実機</td><td>アプリアイコン（1024px PNG）</td><td>10</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">スクショは本番ビルド（DEBUGリボン無し）で、広告バナーが読み込まれる前に撮る。ステータスバーの時刻は 9:41 に揃えると綺麗。</p>
+
+  <h2>ChatGPT での生成のコツ</h2>
+  <ul class="rule-list">
+    <li>まず共通プレフィックスだけで1枚作り、色味が気に入ったらその画像を「参照」として各カットを続ける（同じ会話内で生成すると調子が揃いやすい）。</li>
+    <li>雨・水面は「rain streaks in sharp focus」「muddy floodwater」など<b>質感の語</b>を1つ足すと安定する。</li>
+    <li>スマホは「completely black turned-off screen」を必ず入れる。画面に何か描かれたらやり直す（合成できない）。</li>
+    <li>縦構図が崩れるときは「vertical composition, subject in the lower two-thirds」のように<b>被写体の置き場</b>を指定する。</li>
+    <li>MiniMax に入れる前に、全画像を 1080×1920 に切り抜いて色味を揃える（明るさ・彩度をまとめて調整）。</li>
+  </ul>
+</div>
+<script>
+document.querySelectorAll('button[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.getAttribute('data-copy'));
+    var text=el.childNodes[0].textContent.trim();
+    var pre=document.getElementById('p-prefix').childNodes[0].textContent.trim();
+    if(b.getAttribute('data-copy')!=='p-prefix'){text=pre+'\n\n'+text;}
+    navigator.clipboard.writeText(text).then(function(){var t=b.textContent;b.textContent='コピー済み';setTimeout(function(){b.textContent=t;},1200);});
+  });
+});
+</script>
