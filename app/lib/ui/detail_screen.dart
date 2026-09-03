@@ -72,7 +72,7 @@ class _DetailScreenState extends State<DetailScreen> {
     _prepareHotelLinks();
   }
 
-  // --- この付近の宿を探す（1.5.0） ---------------------------------------
+  // --- この付近の宿を探す（1.4.1） ---------------------------------------
 
   /// 配信フラグ（products.json の merchants）はアプリ起動中1回だけ読む
   static Future<void>? _hotelFlagsFuture;

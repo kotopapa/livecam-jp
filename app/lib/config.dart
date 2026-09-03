@@ -5,7 +5,7 @@ const String apiBaseUrl = 'https://kotopapa.github.io/livecam-jp/v1/';
 const String manifestUrl = '${apiBaseUrl}manifest.json';
 
 /// アプリのバージョン表記（pubspec.yaml の version と一致させる）。
-const String appVersion = '1.4.0';
+const String appVersion = '1.4.1';
 
 /// アクセス制御（SPEC 9.4）。ユーザーが変更できない下限値。
 const Duration minRefetchInterval = Duration(seconds: 60);
@@ -139,7 +139,7 @@ const List<VcMerchant> vcMerchants = <VcMerchant>[
 const String vcPidPrimary = '892690203';
 
 // ---------------------------------------------------------------------------
-// カメラ詳細「この付近の宿を探す」の宿泊予約サイト（1.5.0）
+// カメラ詳細「この付近の宿を探す」の宿泊予約サイト（1.4.1）
 // ---------------------------------------------------------------------------
 
 /// 宿泊予約サイト1件の定義。URLの組み立ては `data/hotel_links.dart`。

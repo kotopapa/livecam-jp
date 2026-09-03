@@ -135,7 +135,7 @@ python site/build.py                            # 配信ファイル生成
 
 ## 宿泊予約サイト導線の知見（2026-09-03追記）
 
-- カメラ詳細「この付近の宿を探す」は観光系カテゴリ（scenic/coast/volcano/healing）と海外カメラのみ。設計と実機確認項目は docs/hotel_links_1.5.0.md
+- カメラ詳細「この付近の宿を探す」は観光系カテゴリ（scenic/coast/volcano/healing）と海外カメラのみ。設計と実機確認項目は docs/hotel_links_1.4.1.md
 - **広告と宿導線を伏せる条件は「利用者が特別警報（レベル5）の発表エリアに居る」**（`AppState.viewerInSpecialWarningArea`。2026-09-03 ユーザー決定）。カメラの所在地では判定しない（県外の人が警報エリアのカメラを見るのは普通、復旧期は宿を出す方が支援になる）。現在地は発表中だけ `data/viewer_area.dart`（許可済みの最終既知位置→国土地理院逆ジオコーダ `mreversegeocoder.gsi.go.jp`）で求め、**不明（位置情報オフ等）なら無条件で出す**（警報時ほどアクセスが増えるためのユーザー判断）。危険警報（レベル4）は対象外
 - **じゃらんのキーワード検索は Shift_JIS のパーセントエンコード限定**（UTF-8 は0件）。`tools/hotel_keywords.py` が気象庁 area.json から `app/assets/data/municipalities.json` を生成して同梱。市町村合併時に再生成
 - 楽天トラベルの座標検索は日本測地系の秒（f_ido/f_kdo）＋宿泊日必須。JTB は県パス必須。各社URLの実測は docs/research_2026-09-03/hotel_deeplinks.md
