@@ -349,9 +349,10 @@ class AppState extends ChangeNotifier {
   /// 位置情報が使えない・海上・国外なら null
   String? viewerPrefecture;
 
-  /// 現在地→都道府県の解決（テストで差し替える）
+  /// 現在地→都道府県の解決（テストで差し替える）。HTTPクライアントは使い回す
+  static final ViewerArea _viewerArea = ViewerArea();
   Future<String?> Function() viewerPrefectureResolver =
-      () => ViewerArea().currentPrefecture();
+      () => _viewerArea.currentPrefecture();
 
   /// **利用者が特別警報の発表エリアに居る**か。広告と「この付近の宿を探す」を
   /// 伏せる条件（1.5.0・2026-09-03 ユーザー決定）。
@@ -367,6 +368,44 @@ class AppState extends ChangeNotifier {
     return specialWarningPrefectures.contains(pref);
   }
 
+  /// r8 map.json（報の一覧）から、特別警報の有無と発表中の都道府県を取り出す。
+  ///
+  /// - 報は**官署×報種別（dataTypeCode）**ごとに最新1報を採る。官署だけで絞ると
+  ///   気象警報（VPWW55）に土砂災害（VPWW56）が上書きされて落ちる（CLAUDE.md）
+  /// - 一次細分区域は `class10Items[].areaCode`（6桁。先頭2桁が都道府県）
+  @visibleForTesting
+  static ({bool active, Set<String> prefs}) parseSpecialWarnings(
+      List<dynamic> reports) {
+    final latest = <String, Map<String, dynamic>>{};
+    for (final rep in reports.cast<Map<String, dynamic>>()) {
+      final key = '${rep['publishingOffice'] ?? ''}/${rep['dataTypeCode'] ?? ''}';
+      final dt = rep['reportDatetime'] as String? ?? '';
+      final cur = latest[key];
+      if (cur == null ||
+          dt.compareTo(cur['reportDatetime'] as String? ?? '') > 0) {
+        latest[key] = rep;
+      }
+    }
+    var active = false;
+    final prefs = <String>{};
+    for (final rep in latest.values) {
+      final warning = rep['warning'] as Map<String, dynamic>? ?? const {};
+      for (final area in (warning['class10Items'] as List? ?? const [])
+          .cast<Map<String, dynamic>>()) {
+        final areaCode = (area['areaCode'] ?? area['code'])?.toString() ?? '';
+        for (final w in (area['kinds'] as List? ?? const [])
+            .cast<Map<String, dynamic>>()) {
+          final status = w['status'] as String? ?? '';
+          if (status == '解除' || status.contains('なし')) continue;
+          if (!_specialCodes.contains(w['code']?.toString() ?? '')) continue;
+          active = true;
+          if (areaCode.length >= 2) prefs.add(areaCode.substring(0, 2));
+        }
+      }
+    }
+    return (active: active, prefs: prefs);
+  }
+
   Future<void> checkSpecialWarnings() async {
     try {
       final resp = await http
@@ -375,34 +414,7 @@ class AppState extends ChangeNotifier {
           .timeout(const Duration(seconds: 15));
       if (resp.statusCode != 200) return;
       final reports = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
-      final latestByOffice = <String, Map<String, dynamic>>{};
-      for (final rep in reports.cast<Map<String, dynamic>>()) {
-        final office = rep['publishingOffice'] as String? ?? '';
-        final dt = rep['reportDatetime'] as String? ?? '';
-        final cur = latestByOffice[office];
-        if (cur == null ||
-            dt.compareTo(cur['reportDatetime'] as String? ?? '') > 0) {
-          latestByOffice[office] = rep;
-        }
-      }
-      var active = false;
-      final prefs = <String>{};
-      for (final rep in latestByOffice.values) {
-        final warning = rep['warning'] as Map<String, dynamic>? ?? const {};
-        for (final area in (warning['class10Items'] as List? ?? const [])
-            .cast<Map<String, dynamic>>()) {
-          // 一次細分区域コード（6桁）の先頭2桁が都道府県コード
-          final areaCode = area['code'] as String? ?? '';
-          for (final w in (area['kinds'] as List? ?? const [])
-              .cast<Map<String, dynamic>>()) {
-            final status = w['status'] as String? ?? '';
-            if (status == '解除' || status.contains('なし')) continue;
-            if (!_specialCodes.contains(w['code'] as String? ?? '')) continue;
-            active = true;
-            if (areaCode.length >= 2) prefs.add(areaCode.substring(0, 2));
-          }
-        }
-      }
+      final (:active, :prefs) = parseSpecialWarnings(reports);
       // 発表中だけ現在地の県を求める（平時は位置情報も逆ジオコーダも使わない）
       String? viewer;
       if (active) {

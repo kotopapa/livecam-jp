@@ -141,4 +141,6 @@ python site/build.py                            # 配信ファイル生成
 - 楽天トラベルの座標検索は日本測地系の秒（f_ido/f_kdo）＋宿泊日必須。JTB は県パス必須。各社URLの実測は docs/research_2026-09-03/hotel_deeplinks.md
 - **VC の referral は中継の VIEW_URL が固定LPでも vc_url が最終的に優先される**。curl で確認するときは `atrrd…resolve?u=` の中の entry.php に `&vc_url=` を付けて追う
 - 宿サイトの有効/無効も products.json の `merchants`（jalan/rakuten_travel/jtb/expedia）で切替
+- **国内カメラの municipality（JIS 5桁）は約5,100件が未設定だった**（2026-09-03 時点）。`tools/fill_municipality.py` が国土地理院逆ジオコーダで補完する（控え: data/municipality_geocache.json、県違いは書かずに報告）。新規取り込みで municipality を付けられなかったときはこれを回す。じゃらん導線と震度連動の市区町村カメラ一覧に効く
+- **気象庁 r8 map.json の一次細分区域コードのキーは `areaCode`**（`code` ではない）。`AppState.parseSpecialWarnings` は官署×dataTypeCode で最新報を採る
 - **アフィリエイトの明示は画面に出さない**（備え・宿導線とも）。利用規約 site/terms.html 第6条とプライバシーポリシー第5条でカバーする（2026-09-03 ユーザー判断）。新しい購入導線を作るときも画面内表記は不要、規約の記載範囲に含まれているかだけ確認する
