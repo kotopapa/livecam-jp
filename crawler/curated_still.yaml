@@ -36221,3 +36221,188 @@ cameras:
     image_url: "https://www.city.minamiashigara.kanagawa.jp/kankou/livecamera/mt-kintoki.html"
     page_url: "https://www.city.minamiashigara.kanagawa.jp/kankou/livecamera/mt-kintoki.html"
     note: "標高1,212m。ページ埋め込みプレイヤーの配信元が特定できないため誘導型。『基本的に自由に利用可、報道・商用は事前連絡』。富士登山オフィシャルサイト掲載"
+
+  # ---- 2026-09-03 沖縄・離島カメラ調査 追加 ----
+  - id: curated-oki-8bef48ac
+    name: 伊江島 城山（タッチュー）カメラ
+    operator: 伊江村
+    category: scenic
+    prefecture: '47'
+    lat: 26.7228
+    lng: 127.8025
+    refresh_sec: 600
+    feed_type: web_page
+    feed_url: http://camsv1.iejima.org/gusukuyama
+    image_url: http://camsv1.iejima.org/gusukuyama
+    page_url: https://www.iejima.org/bunya/bosai/
+    note: 掲載元注意書き『村HP全体の著作権表記（無断転載・複製・改変等禁止。私的使用・引用を除く）。ライブカメラページ個別の禁止文言は無し』→誘導型。配信形式はMJPEG（multipart/x-mixed-replace
+      の /video_feed）で静止画URLは無い→誘導型。ページは60秒毎にmeta refresh。 2026-09-03の確認では /video_feed
+      が2回ともタイムアウト（城山カメラは停止中の可能性。役場・伊江港・本部港は応答あり）。座標は城山山頂の概略。
+  - id: curated-oki-ec4b701d
+    name: 伊江村役場屋上カメラ
+    operator: 伊江村
+    category: scenic
+    prefecture: '47'
+    lat: 26.7134
+    lng: 127.8071
+    refresh_sec: 600
+    feed_type: web_page
+    feed_url: http://camsv2.iejima.org/yakuba
+    image_url: http://camsv2.iejima.org/yakuba
+    page_url: https://www.iejima.org/bunya/bosai/
+    note: 掲載元注意書き『村HP全体の著作権表記（無断転載・複製・改変等禁止。私的使用・引用を除く）。ライブカメラページ個別の禁止文言は無し』→誘導型。配信形式はMJPEG（multipart/x-mixed-replace
+      の /video_feed）で静止画URLは無い→誘導型。ページは60秒毎にmeta refresh。 2026-09-03 配信応答あり。座標は伊江村役場（国土地理院）。
+  - id: curated-oki-6b846b2e
+    name: 伊江港ターミナルカメラ
+    operator: 伊江村
+    category: port
+    prefecture: '47'
+    lat: 26.7057
+    lng: 127.8024
+    refresh_sec: 600
+    feed_type: web_page
+    feed_url: http://camsv1.iejima.org/ieport
+    image_url: http://camsv1.iejima.org/ieport
+    page_url: https://www.iejima.org/bunya/bosai/
+    note: 掲載元注意書き『村HP全体の著作権表記（無断転載・複製・改変等禁止。私的使用・引用を除く）。ライブカメラページ個別の禁止文言は無し』→誘導型。配信形式はMJPEG（multipart/x-mixed-replace
+      の /video_feed）で静止画URLは無い→誘導型。ページは60秒毎にmeta refresh。 村営フェリー乗り場。2026-09-03 配信応答あり。座標は伊江港（国土地理院）。
+  - id: curated-oki-e2f70969
+    name: 本部港 伊江島フェリー乗り場カメラ（伊江村設置）
+    operator: 伊江村
+    category: port
+    prefecture: '47'
+    lat: 26.6565
+    lng: 127.8935
+    refresh_sec: 600
+    feed_type: web_page
+    feed_url: http://camsv2.iejima.org/motobuport
+    image_url: http://camsv2.iejima.org/motobuport
+    page_url: https://www.iejima.org/bunya/bosai/
+    note: 掲載元注意書き『村HP全体の著作権表記（無断転載・複製・改変等禁止。私的使用・引用を除く）。ライブカメラページ個別の禁止文言は無し』→誘導型。配信形式はMJPEG（multipart/x-mixed-replace
+      の /video_feed）で静止画URLは無い→誘導型。ページは60秒毎にmeta refresh。 本島側・本部港（崎本部）に伊江村が設置。瀬底大橋方面が映る。2026-09-03
+      配信応答あり。座標は本部港ターミナルの概略。
+  - id: curated-oki-e7449f2e
+    name: 東村防災監視カメラ 東漁港（平良湾）
+    operator: 東村（総務財政課）
+    category: port
+    prefecture: '47'
+    lat: 26.6355
+    lng: 128.1575
+    refresh_sec: 60
+    feed_type: still_image
+    feed_url: "http://www2.vill.higashi.okinawa.jp/photo/higashi-port.jpg"
+    image_url: "http://www2.vill.higashi.okinawa.jp/photo/higashi-port.jpg"
+    page_url: http://www2.vill.higashi.okinawa.jp/higashi-port.html
+    note: '村内6箇所（8画像）の防災監視カメラ。ページは10秒毎に画像を再読込（refresh_secは負荷を考え60を提案）。座標は平良・東漁港の概略値（要確認）。2026-09-03
+      画像更新あり（Last-Modified 当日）。 公式案内: https://www.vill.higashi.okinawa.jp/soshikikarasagasu/somuzaiseika/1/3083.html'
+  - id: curated-oki-dbbdf50a
+    name: 東村防災監視カメラ 中央公民館（平良海岸）
+    operator: 東村（総務財政課）
+    category: coast
+    prefecture: '47'
+    lat: 26.6322
+    lng: 128.1536
+    refresh_sec: 60
+    feed_type: still_image
+    feed_url: "http://www2.vill.higashi.okinawa.jp/photo/center-pbh.jpg"
+    image_url: "http://www2.vill.higashi.okinawa.jp/photo/center-pbh.jpg"
+    page_url: http://www2.vill.higashi.okinawa.jp/center-pbh.html
+    note: '村内6箇所（8画像）の防災監視カメラ。ページは10秒毎に画像を再読込（refresh_secは負荷を考え60を提案）。座標は平良・中央公民館の概略値（要確認）。2026-09-03
+      画像更新あり。 公式案内: https://www.vill.higashi.okinawa.jp/soshikikarasagasu/somuzaiseika/1/3083.html'
+  - id: curated-oki-3af65f38
+    name: 東村防災監視カメラ 慶佐次ふれあいヒルギ公園（慶佐次川）
+    operator: 東村（総務財政課）
+    category: river
+    prefecture: '47'
+    lat: 26.6015
+    lng: 128.1445
+    refresh_sec: 60
+    feed_type: still_image
+    feed_url: "http://www2.vill.higashi.okinawa.jp/photo/hirugi.jpg"
+    image_url: "http://www2.vill.higashi.okinawa.jp/photo/hirugi.jpg"
+    page_url: http://www2.vill.higashi.okinawa.jp/hirugi.html
+    note: '村内6箇所（8画像）の防災監視カメラ。ページは10秒毎に画像を再読込（refresh_secは負荷を考え60を提案）。座標は慶佐次・ヒルギ公園の概略値（要確認）。2026-09-03
+      画像更新あり。マングローブ・慶佐次大橋・国道331号。 公式案内: https://www.vill.higashi.okinawa.jp/soshikikarasagasu/somuzaiseika/1/3083.html'
+  - id: curated-oki-0d1786be
+    name: 東村防災監視カメラ 有銘小学校グランド（有銘川）
+    operator: 東村（総務財政課）
+    category: river
+    prefecture: '47'
+    lat: 26.604
+    lng: 128.12
+    refresh_sec: 60
+    feed_type: still_image
+    feed_url: "http://www2.vill.higashi.okinawa.jp/photo/arime-school.jpg"
+    image_url: "http://www2.vill.higashi.okinawa.jp/photo/arime-school.jpg"
+    page_url: http://www2.vill.higashi.okinawa.jp/arime-school.html
+    note: '村内6箇所（8画像）の防災監視カメラ。ページは10秒毎に画像を再読込（refresh_secは負荷を考え60を提案）。座標は有銘の概略値（要確認）。2026-09-02
+      画像更新あり。 公式案内: https://www.vill.higashi.okinawa.jp/soshikikarasagasu/somuzaiseika/1/3083.html'
+  - id: curated-oki-e49baaab
+    name: 東村防災監視カメラ 東小中学校（川田）
+    operator: 東村（総務財政課）
+    category: other
+    prefecture: '47'
+    lat: 26.629
+    lng: 128.167
+    refresh_sec: 60
+    feed_type: still_image
+    feed_url: "http://www2.vill.higashi.okinawa.jp/photo/higashi-school.jpg"
+    image_url: "http://www2.vill.higashi.okinawa.jp/photo/higashi-school.jpg"
+    page_url: http://www2.vill.higashi.okinawa.jp/higashi-school.html
+    note: '村内6箇所（8画像）の防災監視カメラ。ページは10秒毎に画像を再読込（refresh_secは負荷を考え60を提案）。座標は川田・東小中学校の概略値（要確認）。2026-09-03
+      画像更新あり。校舎・グラウンド・周辺河川。 公式案内: https://www.vill.higashi.okinawa.jp/soshikikarasagasu/somuzaiseika/1/3083.html'
+  - id: curated-oki-e0cc271a
+    name: 東村防災監視カメラ 高江小学校正門（新川川）
+    operator: 東村（総務財政課）
+    category: other
+    prefecture: '47'
+    lat: 26.6637
+    lng: 128.249
+    refresh_sec: 60
+    feed_type: still_image
+    feed_url: "http://www2.vill.higashi.okinawa.jp/photo/takae-school-seimon.jpg"
+    image_url: "http://www2.vill.higashi.okinawa.jp/photo/takae-school-seimon.jpg"
+    page_url: http://www2.vill.higashi.okinawa.jp/takae-school-seimon.html
+    note: '村内6箇所（8画像）の防災監視カメラ。ページは10秒毎に画像を再読込（refresh_secは負荷を考え60を提案）。座標は高江の概略値（要確認）。2026-09-03
+      画像更新あり。正門・農村公園・新川川。 公式案内: https://www.vill.higashi.okinawa.jp/soshikikarasagasu/somuzaiseika/1/3083.html'
+  - id: curated-oki-8e439c0f
+    name: 泊ふ頭旅客ターミナル「とまりん」港LIVEカメラ（泊港・泊大橋）
+    operator: 泊ふ頭開発株式会社
+    category: port
+    prefecture: '47'
+    lat: 26.2246
+    lng: 127.6816
+    refresh_sec: 60
+    feed_type: still_image
+    feed_url: http://tomarin.miemasu.net/SnapshotJPEG?Resolution=640x480
+    image_url: http://tomarin.miemasu.net/SnapshotJPEG?Resolution=640x480
+    page_url: https://tomarin.co.jp/
+    note: 公式サイト「港LIVEカメラ」→ http://tomarin.miemasu.net/live/index.html?Language=1&ViewMode=pull
+      （Panasonic BB-ST162、閲覧者操作可能なPTZのため向きが変わる）。SnapshotJPEGは2026-09-03に取得OK（image/jpeg
+      43KB）。サイト上に転載禁止等の記載は見当たらず（プライバシーポリシーのみ）。
+  - id: curated-oki-dbf85bc1
+    name: 石垣市川平（ウェザーニュース ライブカメラ）
+    operator: 株式会社ウェザーニューズ
+    category: scenic
+    prefecture: '47'
+    lat: 24.4525
+    lng: 124.1435
+    refresh_sec: 600
+    feed_type: web_page
+    feed_url: https://weathernews.jp/onebox/livecam/okinawa/7CDDE908BA73/
+    image_url: https://weathernews.jp/onebox/livecam/okinawa/7CDDE908BA73/
+    page_url: https://weathernews.jp/onebox/livecam/okinawa/7CDDE908BA73/
+    note: '掲載元注意書き『利用規約第9条: 本コンテンツの複製・二次利用、WNI以外のウェブサイトへの転載・転用は事前許諾なく禁止 → 誘導型のみ』→誘導型。10分間/24時間タイムラプス付きの独自プレーヤー。ページ内の座標値は石垣市代表点(24.345,124.185)で川平の実位置ではないため、座標は川平公園付近の概略値。設置場所の詳細非公開'
+  - id: curated-oki-c5b646ba
+    name: 石垣市真栄里（ウェザーニュース ライブカメラ）
+    operator: 株式会社ウェザーニューズ
+    category: scenic
+    prefecture: '47'
+    lat: 24.3451
+    lng: 124.1847
+    refresh_sec: 600
+    feed_type: web_page
+    feed_url: https://weathernews.jp/onebox/livecam/okinawa/7CDDE908B2D6/
+    image_url: https://weathernews.jp/onebox/livecam/okinawa/7CDDE908B2D6/
+    page_url: https://weathernews.jp/onebox/livecam/okinawa/7CDDE908B2D6/
+    note: '掲載元注意書き『利用規約第9条: 本コンテンツの複製・二次利用、WNI以外のウェブサイトへの転載・転用は事前許諾なく禁止 → 誘導型のみ』→誘導型。石垣市上空天気カメラ。設置場所の詳細非公開（座標はページ埋め込み値）'

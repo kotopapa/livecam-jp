@@ -4450,13 +4450,13 @@ cameras:
     lng: 136.803
 
   - id: curated-ryukyushimpo-nahashiyakusho-mae
-    name: "那覇市役所前交差点"
+    name: 那覇 国際通り・県庁前（りゅうちゃんカメラ）
     operator: "琉球新報社（泉崎本社）"
-    video_id: "nU41kpfKLJM"
+    video_id: "j1nfkpuQDLQ"
     category: road
     prefecture: "47"
-    lat: 26.2123
-    lng: 127.6792
+    lat: 26.2129
+    lng: 127.6803
 
   # --- 2026-08-22 新カテゴリ(天体・海づり・遊園地等) ---
 
@@ -4649,11 +4649,11 @@ cameras:
   - id: curated-ishigaki-730
     name: 石垣島 730交差点（国道390号）
     operator: 石垣島ライブカメラ（個人チャンネル）
-    video_id: _jcl6NuIiuw
+    channel_id: "UCQJE3qm7Sjc5-JXAYjAfkrw"
     category: road
     prefecture: "47"
-    lat: 24.339369
-    lng: 124.155464
+    lat: 24.3379
+    lng: 124.1554
     note: 個人運営の24時間配信。配信枠更新でID変動の可能性。oEmbed埋め込み可確認済み
 
 
@@ -4714,7 +4714,7 @@ cameras:
   - id: curated-kintaka-naha-4screen
     name: "那覇新港・泊大橋・クルーズターミナル（4画面）"
     operator: "KIN-TAKA"
-    video_id: "MsFAwwIGohU"
+    video_id: "6gQAoFDq1W8"
     category: "port"
     prefecture: "47"
     lat: 26.235369
@@ -4725,7 +4725,7 @@ cameras:
   - id: curated-kintaka-tomari-ohashi
     name: "泊大橋〜曙（国道58号 渋滞状況）"
     operator: "KIN-TAKA"
-    video_id: "j1TZPBCL0j0"
+    video_id: "0XpS37JKd80"
     category: "road"
     prefecture: "47"
     lat: 26.2354
@@ -4736,7 +4736,7 @@ cameras:
   - id: curated-kintaka-naha-cruise-terminal
     name: "那覇クルーズターミナル・泊港入口"
     operator: "KIN-TAKA"
-    video_id: "k7H1WGBspJ0"
+    video_id: "SO9HIoSfyuA"
     category: "port"
     prefecture: "47"
     lat: 26.2295
@@ -7339,24 +7339,24 @@ cameras:
 
   # 2026-08-31 配信枠更新: XBvOwSfafF0 → GyjtMUInR3Q
   - id: curated-other-ishigaki-airport-flight-info
-    name: "南ぬ島石垣空港 国内線フライトインフォメーション"
+    name: 南ぬ島石垣空港 国内線フライトインフォメーション
     operator: "石垣空港ターミナル株式会社"
-    video_id: "GyjtMUInR3Q"
+    channel_id: "UCEweZV-lYYv3DXDiBBFM5Og"
     category: "other"
     prefecture: "47"
-    lat: 24.396
-    lng: 124.245
+    lat: 24.3965
+    lng: 124.2445
     note: "oEmbed 200 / isLiveNow:true。表示板の映像(屋内)。座標: 石垣空港"
 
   # 2026-08-31 配信枠更新: aGGhY9UcUDU → RV-nBbWAHaQ
   - id: curated-port-ishigaki-euglena-ritou-terminal
-    name: "石垣島 ユーグレナ離島ターミナル側"
+    name: 石垣島 ユーグレナ石垣港離島ターミナル側
     operator: "石垣島ユーグレナ離島ターミナル側LIVEカメラ（個人チャンネル）"
-    video_id: "RV-nBbWAHaQ"
+    channel_id: "UCMBkpkdFghMYW6TQp7X77wA"
     category: "port"
     prefecture: "47"
-    lat: 24.337
-    lng: 124.156
+    lat: 24.3355
+    lng: 124.1562
     note: "oEmbed 200 / LIVEバッジ。既登録の730交差点(個人チャンネル)と同系統。座標: 石垣港離島ターミナル"
 
   - id: curated-coast-ishigaki-ema-nagurawan
@@ -17127,13 +17127,13 @@ cameras:
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: FMたまん　LIVE配信)。oEmbed 200。座標は地図中心(概略)。掲載元: https://fm-taman.com/'
   # 2026-08-31 配信枠更新: dFrH4uIY0c8 → KrwVmC7TXT4
   - id: curated-lcdb-9b89a1c5
-    name: 小浜島
+    name: 石垣島 名蔵湾・フサキビーチ（YAEYAMA LIVE）
     operator: 八重山リアルタイム(YAEYAMALIVE)
     category: coast
     prefecture: '47'
-    lat: 24.339191
-    lng: 123.968826
-    video_id: KrwVmC7TXT4
+    lat: 24.387
+    lng: 124.1285
+    channel_id: "UCWFKZJdFJIIH1E9DGYBaY0A"
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 8月29日(土)｜【LIVE】石垣島ライブカメラ（名蔵湾・フサキビーチ） ／ I)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@yaeyamalive'
   # 2026-09-01 配信枠更新: Bx3lpf_tmx8 → _Ay4lbV4bBA
   - id: curated-lcdb-bb59ac5c
@@ -17921,15 +17921,16 @@ cameras:
     video_id: Omn3bd49Lqs
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【LIVE.3】MORECA富士山ライブカメラ（太郎坊） 富士山麓太郎坊からライ)。oEmbed 200。座標は地図中心(概略)。掲載元: https://npofuji3776.org/'
   # 2026-08-31 配信枠更新: WF9NsaLIBwU → MsFAwwIGohU
-  - id: curated-lcdb-a3b504c7
-    name: KINTAKA那覇新港入口
-    operator: KIN-TAKA
-    category: port
-    prefecture: '47'
-    lat: 26.235376
-    lng: 127.688604
-    video_id: MsFAwwIGohU
-    note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: ★🛑沖縄ライブカメラ同時モニター【LIVE】那覇新港 那覇空港北側 那覇市 ライ)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@KIN-TAKA'
+  # 2026-09-03 退役(二重登録・旧ID終了):
+  # - id: curated-lcdb-a3b504c7
+  #   name: KINTAKA那覇新港入口
+  #   operator: KIN-TAKA
+  #   category: port
+  #   prefecture: '47'
+  #   lat: 26.235376
+  #   lng: 127.688604
+  #   video_id: MsFAwwIGohU
+  #   note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: ★🛑沖縄ライブカメラ同時モニター【LIVE】那覇新港 那覇空港北側 那覇市 ライ)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@KIN-TAKA'
   - id: curated-lcdb-d9790db3
     name: MORECA東京スカイツリー
     operator: エッチエスストロング
@@ -18024,15 +18025,16 @@ cameras:
     video_id: 1pz9qohYegc
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 湯原温泉 ライブカメラ　湯原ダム下流の河川　Yubara Onsen Live )。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@39k'
   # 2026-08-31 配信枠更新: FF7bifdSGB8 → j1TZPBCL0j0
-  - id: curated-lcdb-92ff48cb
-    name: KINTAKA那覇新港
-    operator: KIN-TAKA
-    category: port
-    prefecture: '47'
-    lat: 26.235376
-    lng: 127.68899
-    video_id: j1TZPBCL0j0
-    note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 💙【LIVE】沖縄ライブカメラ 那覇市 泊大橋～曙  渋滞状況  沖縄県 NAH)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@KIN-TAKA'
+  # 2026-09-03 退役(二重登録・旧ID終了):
+  # - id: curated-lcdb-92ff48cb
+  #   name: KINTAKA那覇新港
+  #   operator: KIN-TAKA
+  #   category: port
+  #   prefecture: '47'
+  #   lat: 26.235376
+  #   lng: 127.68899
+  #   video_id: j1TZPBCL0j0
+  #   note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 💙【LIVE】沖縄ライブカメラ 那覇市 泊大橋～曙  渋滞状況  沖縄県 NAH)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@KIN-TAKA'
   # 2026-08-31 配信枠更新: -cW1KoSj6kM → 96palHpngE4
   - id: curated-lcdb-00cd5a29
     name: 三ヶ日みかん神明川支流河川
@@ -18193,5 +18195,119 @@ cameras:
     prefecture: '47'
     lat: 26.235376
     lng: 127.68899
-    video_id: MktRaErggt0
+    video_id: "JR9eUItQqo8"
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 💚【LIVE】沖縄ライブ カメラ 那覇市  那覇新港  那覇空港 滑走路北側 O)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@KIN-TAKA'
+
+  # ---- 2026-09-03 沖縄・離島カメラ調査 追加 ----
+  - id: curated-oki-053db1d2
+    name: アオカワダイビングサービス 砂辺海岸（砂辺遺跡ポイント）
+    operator: アオカワダイビングサービス
+    video_id: j63a6aJJq60
+    category: coast
+    prefecture: '47'
+    lat: 26.3305
+    lng: 127.744
+    note: チャンネル UCvUBcvvQUNaD2D33TS48kqA。2026-09-03 isLiveNow=true。過去に動画IDが変わっている（xCvo-CG03mY→j63a6aJJq60）ので
+      channel_id 併記推奨。砂辺海岸・遊歩道・沖のリーフが映る。
+  - id: curated-oki-5c0e2237
+    name: hotel cava 古宇利島（古宇利島・トケイ浜方面）
+    operator: hotel cava（ホテルカヴァ）
+    channel_id: UCCrL4ymJPyBbg2H8U1WCQFA
+    category: coast
+    prefecture: '47'
+    lat: 26.7005
+    lng: 128.02
+    note: 現在のライブ動画ID FL11_MpJveA（タイトル「【台風LIVE】沖縄・古宇利島の今」。台風時以外も配信履歴あり）。配信ごとに動画IDが変わるためチャンネル型で登録。ライブカメラDBでは「古宇利島」「古宇利大橋側」の2画角が紹介されているが現在ライブは1本。座標はホテル所在の概略（要確認）。
+  - id: curated-oki-d9cecbb0
+    name: 国際通り 安里三叉路（マキシアルパビル）
+    operator: '8131 okichan（設置: マキシアルパビル）'
+    video_id: HVs3QN2P7RI
+    category: road
+    prefecture: '47'
+    lat: 26.2188
+    lng: 127.6953
+    note: 既存の okichan（てだこ浦西）と同一チャンネル UCo_JM-fsLQQLz8hovcKkK0A。2026-09-03 isLiveNow=true。既存の那覇8件（牧志交番前・バクノビジョン等）とは別地点。
+  - id: curated-oki-f85f4dda
+    name: 那覇市松山 泊大橋・波の上ビーチ方面
+    operator: 8131 okichan
+    video_id: gVoF4H68CKA
+    category: coast
+    prefecture: '47'
+    lat: 26.2185
+    lng: 127.6781
+    note: チャンネル UCo_JM-fsLQQLz8hovcKkK0A。2026-09-03 isLiveNow=true。松山公園付近から泊大橋・波の上方面。座標は松山の概略。
+  - id: curated-oki-47112bb0
+    name: 久米島 球美の里（イーフビーチ・奥武島・はての浜方面）
+    operator: 'NPO法人 沖縄・球美の里（YouTubeチャンネル名: Hair Studio Foundation）'
+    channel_id: UCuyA_qFHnmPvl-PJUwO9hlA
+    category: scenic
+    prefecture: '47'
+    lat: 26.3325
+    lng: 126.784
+    note: 公式サイトに「久米島の景色をライブ配信中！配信時間はAM6:00〜PM8:00」と記載。配信は日ごとに新しい動画ID（例 7/31 -dAL0rRAsls、直近は「Hair
+      Studio Foundation がライブ配信中！」uc9lEPrCWIE）で行われ、2026-09-03 08:40 JST時点では isLiveNow=false。日中に再確認要。久米島で唯一の公開カメラ。座標は施設所在（山城）の概略。
+  - id: curated-oki-368ca05e
+    name: FMくめじま（仲泊・東シナ海方面）
+    operator: FMくめじま
+    channel_id: UCFH71QX8Yhx9k4roApiRaiw
+    category: coast
+    prefecture: '47'
+    lat: 26.348
+    lng: 126.7466
+    note: ライブカメラDBに「東シナ海が見える」カメラとして掲載。チャンネルには配信履歴2本（A-iGQmh0EzM 1440p / 9BjersFzUu0）のみで2026-09-03はライブ無し。公式サイトにカメラ案内は見当たらず。要再確認。
+  - id: curated-oki-25d2e132
+    name: 名護市大浦 防災カメラ（大浦川・マングローブ）
+    operator: 大浦区事務所（名護市大浦区）
+    channel_id: UC0ctq-pbMyUtN9LVPa9quFQ
+    category: river
+    prefecture: '47'
+    lat: 26.5629
+    lng: 128.0406
+    note: 「名護市大浦防災カメラ」「大浦区公民館防災カメラ」として断続的に配信（直近 w-_MU4wfzH8）。2026-09-03ライブ無し。
+  - id: curated-oki-43691f57
+    name: ブセナの海なう（ブセナ海中公園アウトリーフ・マリンハウス）
+    operator: アイランドブリーズ（Breeze Island、名護市喜瀬）
+    channel_id: UCsYAUASVVDpUIiF1BKLlf3A
+    category: coast
+    prefecture: '47'
+    lat: 26.533
+    lng: 127.935
+    note: 「ブセナの海なう」として日中に断続配信（10本、直近 Gj0IkOK6xH0）。別チャンネル @breezeisland8163（UCs-nnquub_nOyfG4A-jPLhA）でも同名配信あり。2026-09-03ライブ無し。
+  - id: curated-oki-505fc709
+    name: 名護湾（脱毛サロンラベル屋上カメラ／FMやんばる）
+    operator: 'FMやんばる（設置: 脱毛サロンラベル 名護市大中）'
+    channel_id: UCI7neTeopdMoHhYW1sgVBiA
+    category: coast
+    prefecture: '47'
+    lat: 26.588
+    lng: 127.97
+    note: 「脱毛サロンラベルカメラ 24時間配信！！」として繰り返し配信（直近 3v9OipsYf3k）。名護湾・国道58号・タピックスタジアム名護。2026-09-03ライブ無し。
+  - id: curated-oki-04ebee81
+    name: 石垣島天文台 星空ライブカメラ（動画）
+    operator: 石垣島天文台 有松亘（国立天文台 石垣島天文台 研究者の個人チャンネル）
+    channel_id: UCbU9TQlRGeBGc9SjUYmsGAw
+    category: scenic
+    prefecture: '47'
+    lat: 24.3733
+    lng: 124.1391
+    note: 現在の枠 QzFmToex1Aw「沖縄・石垣島天文台 星空ライブカメラ(ベータ版)」。既存 curated-still-obs-naoj-ishigaki（国立天文台の静止画）とは別系統の動画配信。ベータ版表記のため継続性は要観察
+  - id: curated-oki-810d990f
+    name: 西表島 上原（ヤシガニNET お天気カメラ：バラス島・ウナリ崎・トゥドゥマリ浜）
+    operator: 西表島動画配信サイト（ヤシガニNET）／西表パイン園
+    channel_id: UCaWSwCh3Sy07sj5x2iyh11Q
+    category: coast
+    prefecture: '47'
+    lat: 24.399
+    lng: 123.7995
+    note: '西表島で唯一の24時間ライブ配信元（3カメラ切替: バラス島/高速船、ウナリ崎/月ヶ浜、360度）。2026-09-03 深夜の確認では /live
+      が 9cNKCgLckAg を指すが isLiveNow=false（一時停止か配信間隔中）。日中に再確認して採用可否を判断。座標は西表パイン園（上原）付近の概略値'
+  - id: curated-oki-8671843a
+    name: 宮古島 上野 星空ライブカメラ（南西向き）
+    operator: 宮古島星空観察部つきいちみやこ
+    channel_id: UCeGeNFOeUuMPf9gpFCXaqlw
+    category: scenic
+    prefecture: '47'
+    lat: 24.74
+    lng: 125.33
+    note: 宮古島市上野から南西向き（TAPO C325WB）。星空観察の雲量確認用で、配信は不定期（台風時・七夕など）。2026-09-03 時点は配信なし。設置点の詳細非公開のため座標は上野地区の概略値。採用するなら
+      youtube_channel で不定期配信の注記付き
