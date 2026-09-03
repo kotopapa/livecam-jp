@@ -132,3 +132,13 @@ python site/build.py                            # 配信ファイル生成
 - 国内の取り込みでは市町村名→JISコード変換が必要（沖縄41市町村の表は取り込みスクリプト内。震度連動の市区町村カメラ一覧に効く）
 - 自治体HPの「一般的な著作権表記」は転載禁止文言ではないので静止画の直接表示可（東村防災カメラ）。明示的な転載禁止（ウェザーニュース規約第9条、arksystem）は誘導型か不採用
 - 運営会社名を確認できない設置事業者（livecamera24.jp 系）は見送り。特定できれば沖縄本島南部に7本追加できる
+
+## 宿泊予約サイト導線の知見（2026-09-03追記）
+
+- カメラ詳細「この付近の宿を探す」は観光系カテゴリ（scenic/coast/volcano/healing）と海外カメラのみ。設計と実機確認項目は docs/hotel_links_1.5.0.md
+- **広告と宿導線を伏せる条件は「利用者が特別警報（レベル5）の発表エリアに居る」**（`AppState.viewerInSpecialWarningArea`。2026-09-03 ユーザー決定）。カメラの所在地では判定しない（県外の人が警報エリアのカメラを見るのは普通、復旧期は宿を出す方が支援になる）。現在地は発表中だけ `data/viewer_area.dart`（許可済みの最終既知位置→国土地理院逆ジオコーダ `mreversegeocoder.gsi.go.jp`）で求め、**不明（位置情報オフ等）なら無条件で出す**（警報時ほどアクセスが増えるためのユーザー判断）。危険警報（レベル4）は対象外
+- **じゃらんのキーワード検索は Shift_JIS のパーセントエンコード限定**（UTF-8 は0件）。`tools/hotel_keywords.py` が気象庁 area.json から `app/assets/data/municipalities.json` を生成して同梱。市町村合併時に再生成
+- 楽天トラベルの座標検索は日本測地系の秒（f_ido/f_kdo）＋宿泊日必須。JTB は県パス必須。各社URLの実測は docs/research_2026-09-03/hotel_deeplinks.md
+- **VC の referral は中継の VIEW_URL が固定LPでも vc_url が最終的に優先される**。curl で確認するときは `atrrd…resolve?u=` の中の entry.php に `&vc_url=` を付けて追う
+- 宿サイトの有効/無効も products.json の `merchants`（jalan/rakuten_travel/jtb/expedia）で切替
+- **アフィリエイトの明示は画面に出さない**（備え・宿導線とも）。利用規約 site/terms.html 第6条とプライバシーポリシー第5条でカバーする（2026-09-03 ユーザー判断）。新しい購入導線を作るときも画面内表記は不要、規約の記載範囲に含まれているかだけ確認する

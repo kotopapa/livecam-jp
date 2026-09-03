@@ -653,6 +653,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get detailOpenMap => '在地图上查看';
 
   @override
+  String get detailHotelsTitle => '查找附近住宿';
+
+  @override
   String get detailOpenSourceSite => '查看出处网站';
 
   @override
@@ -1856,9 +1859,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get stockpileNotifyInspectionBody => '请检查储备物资的保质期和数量';
 
   @override
-  String get stockpileAffiliateNotice => '※商品链接使用了联盟营销（affiliate）计划';
-
-  @override
   String get stockpileGuideWhy => '选购要点';
 
   @override
@@ -2660,6 +2660,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get detailOpenMap => '在地圖上查看';
+
+  @override
+  String get detailHotelsTitle => '尋找附近住宿';
 
   @override
   String get detailOpenSourceSite => '查看來源網站';
@@ -3863,9 +3866,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get stockpileNotifyInspectionBody => '請檢查儲備物資的保存期限與數量';
-
-  @override
-  String get stockpileAffiliateNotice => '※商品連結使用了聯盟行銷（affiliate）計畫';
 
   @override
   String get stockpileGuideWhy => '選購要點';

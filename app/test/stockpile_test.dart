@@ -711,7 +711,6 @@ void main() {
         }
         // 画面の主要文言
         expect(l10n.stockpileTitle.trim(), isNotEmpty);
-        expect(l10n.stockpileAffiliateNotice.trim(), isNotEmpty);
         expect(l10n.stockpileSummaryWater(18), contains('18'));
         expect(l10n.stockpileProgress(3, 10), contains('3'));
         expect(
@@ -761,7 +760,7 @@ void main() {
       expect(find.text('水 63L'), findsOneWidget);
     });
 
-    testWidgets('品目をタップすると期限・購入先のシートが開き、明示が出ている', (tester) async {
+    testWidgets('品目をタップすると期限・購入先のシートが開く', (tester) async {
       SharedPreferences.setMockInitialValues({});
       final app = makeApp();
       await tester.pumpWidget(testApp(StockpileScreen(app: app)));
@@ -825,13 +824,8 @@ void main() {
       );
       expect(find.text('1/24 完了'), findsOneWidget);
 
-      // 景表法のステマ規制対応の明示は必須（画面最下部）
-      await tester.scrollUntilVisible(
-        find.text('※商品リンクにはアフィリエイトプログラムを利用しています'),
-        400,
-        scrollable: find.byType(Scrollable).first,
-      );
-      expect(find.text('※商品リンクにはアフィリエイトプログラムを利用しています'), findsOneWidget);
+      // アフィリエイトの明示は利用規約側で行い、画面には出さない（2026-09-03）
+      expect(find.textContaining('アフィリエイト'), findsNothing);
       // 中央の大型広告は廃止（下部固定バナーは HomeShell が出す）
       expect(find.byType(AdBannerPlaceholder), findsNothing);
     });

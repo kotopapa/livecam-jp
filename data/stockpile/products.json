@@ -1,8 +1,8 @@
 {
- "version": "2026-09-02T07:50:28Z",
+ "version": "2026-09-03T09:13:46Z",
  "notice": "商品リンクにはアフィリエイトプログラムを利用しています。",
  "merchants": {
-  "_comment": "バリューコマースの提携承認状況。true にして publish するとアプリ更新なしで購入導線に出る（キーは app/lib/config.dart の vcMerchants.key）",
+  "_comment": "バリューコマースの提携承認状況。true にして publish するとアプリ更新なしで導線に出る（キーは app/lib/config.dart の vcMerchants.key / hotelSites.key）",
   "yahoo": {
    "enabled": true,
    "note": "2026-09-02 サイト審査承認・疎通確認済み"
@@ -14,6 +14,22 @@
   "amazon": {
    "enabled": false,
    "note": "提携審査中"
+  },
+  "jalan": {
+   "enabled": true,
+   "note": "カメラ詳細「この付近の宿を探す」(1.5.0)。広告スペース892691492。2026-09-03 vc_url 疎通確認済み"
+  },
+  "rakuten_travel": {
+   "enabled": true,
+   "note": "アフィリエイト無し（バリューコマースに無い）。座標検索の導線のみ"
+  },
+  "jtb": {
+   "enabled": true,
+   "note": "広告スペース892691495。2026-09-03 vc_url 疎通確認済み"
+  },
+  "expedia": {
+   "enabled": true,
+   "note": "海外カメラ向け。広告スペース892691493。2026-09-03 vc_url 疎通確認済み"
   }
  },
  "disclaimer": "掲載しているのは公的機関の備蓄品目リスト・規格適合・長期の販売実績を根拠に選んだ「例」です。特定の商品を推奨・保証するものではなく、価格・在庫は各ショップでご確認ください。仕様は2026年9月1日にメーカー公式ページで確認した時点のもので、変更・廃番の可能性があります。",

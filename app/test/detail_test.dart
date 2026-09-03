@@ -11,6 +11,7 @@ import 'package:livecam_jp/data/api_client.dart';
 import 'package:livecam_jp/data/cache_store.dart';
 import 'package:livecam_jp/data/camera_repository.dart';
 import 'package:livecam_jp/data/favorites_store.dart';
+import 'package:livecam_jp/data/hotel_links.dart';
 import 'package:livecam_jp/models/camera.dart';
 import 'package:livecam_jp/ui/detail_screen.dart';
 import 'package:livecam_jp/util/geo.dart';
@@ -87,6 +88,70 @@ void main() {
 
       // 画面を破棄してクールダウンタイマーを確実に止める（実時計依存のため
       // pumpでは消化できない）
+      await tester.pumpWidget(const SizedBox());
+    });
+
+    testWidgets('観光系カメラには「この付近の宿を探す」が出て、警報中の県では伏せる',
+        (tester) async {
+      tester.view.physicalSize = const Size(1200, 3200);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.reset);
+      SharedPreferences.setMockInitialValues({});
+      final tmp = Directory(Directory.systemTemp.path);
+      final app = AppState(CameraRepository(
+        api: ApiClient(client: MockClient((_) async => http.Response('x', 404))),
+        cache: CacheStore(tmp),
+      ));
+      await app.favorites.load();
+      // testWidgets内では実I/Oを待てないので、アセットと配信フラグは読まずに済ませる
+      MunicipalityNames.setTable({'19430': ['富士河口湖町', '%95x%8Em%89%CD%8C%FB%8C%CE%92%AC']});
+      addTearDown(() => MunicipalityNames.setTable(null));
+      DetailScreen.skipHotelFlagsFetch();
+
+      Camera scenic(String id, {String category = 'scenic'}) => Camera(
+            id: id, name: '$idカメラ', category: category, prefecture: '19',
+            municipality: '19430',
+            feed: Feed(type: FeedType.mlitRoadinfo, url: 'https://example.jp/p.html', cameraRef: 'X1'),
+            operator: '例', attribution: '出典：例',
+            sourcePageUrl: 'https://example.jp/p.html',
+            lat: 35.5036, lng: 138.7648, coordAccuracy: CoordAccuracy.exact,
+          );
+
+      await tester.pumpWidget(testApp(DetailScreen(camera: scenic('s1'), app: app)));
+      await tester.pump();
+      expect(find.text('この付近の宿を探す'), findsOneWidget);
+      expect(find.text('じゃらん'), findsOneWidget);
+      expect(find.text('楽天トラベル'), findsOneWidget);
+      expect(find.text('JTB'), findsOneWidget);
+      expect(find.text('Expedia'), findsNothing); // 国内には出さない
+      // アフィリエイトの明示は利用規約側（画面には出さない）
+      expect(find.textContaining('アフィリエイト'), findsNothing);
+
+      // 利用者が特別警報の発表エリア（山梨）に居る → 伏せる
+      app.specialWarningActive = true;
+      app.specialWarningPrefectures = const {'19'};
+      app.viewerPrefecture = '19';
+      await tester.pumpWidget(testApp(DetailScreen(camera: scenic('s2'), app: app)));
+      await tester.pump();
+      expect(find.text('この付近の宿を探す'), findsNothing);
+      // 県外（東京）の利用者が同じカメラを見る → 出す（復旧支援のため）
+      app.viewerPrefecture = '13';
+      await tester.pumpWidget(testApp(DetailScreen(camera: scenic('s2b'), app: app)));
+      await tester.pump();
+      expect(find.text('この付近の宿を探す'), findsOneWidget);
+      // 現在地が分からない（位置情報オフ等）→ 無条件で出す
+      app.viewerPrefecture = null;
+      await tester.pumpWidget(testApp(DetailScreen(camera: scenic('s2c'), app: app)));
+      await tester.pump();
+      expect(find.text('この付近の宿を探す'), findsOneWidget);
+      app.specialWarningActive = false;
+      app.specialWarningPrefectures = const {};
+
+      // 防災カメラ（道路）には出さない
+      await tester.pumpWidget(testApp(DetailScreen(camera: scenic('s3', category: 'road'), app: app)));
+      await tester.pump();
+      expect(find.text('この付近の宿を探す'), findsNothing);
+
       await tester.pumpWidget(const SizedBox());
     });
   });

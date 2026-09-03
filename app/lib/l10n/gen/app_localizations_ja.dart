@@ -661,6 +661,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get detailOpenMap => '地図で見る';
 
   @override
+  String get detailHotelsTitle => 'この付近の宿を探す';
+
+  @override
   String get detailOpenSourceSite => '出典サイトを見る';
 
   @override
@@ -1869,9 +1872,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String get stockpileNotifyInspectionBody => '備蓄品の期限と数量を点検しましょう';
 
   @override
-  String get stockpileAffiliateNotice => '※商品リンクにはアフィリエイトプログラムを利用しています';
-
-  @override
   String get stockpileGuideWhy => '選び方のポイント';
 
   @override
@@ -2691,6 +2691,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get detailOpenMap => 'ちずで 見（み）る';
+
+  @override
+  String get detailHotelsTitle => 'この ちかくの やどを さがす';
 
   @override
   String get detailOpenSourceSite => 'だしもとの サイトを 見（み）る';
@@ -3922,9 +3925,6 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get stockpileNotifyInspectionBody => 'そなえた ものの きげんと かずを たしかめましょう';
-
-  @override
-  String get stockpileAffiliateNotice => '※しょうひんの リンクは アフィリエイト（こうこく）です';
 
   @override
   String get stockpileGuideWhy => 'えらびかたの ポイント';

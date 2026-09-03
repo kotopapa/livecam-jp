@@ -665,6 +665,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get detailOpenMap => '지도에서 보기';
 
   @override
+  String get detailHotelsTitle => '근처 숙소 찾기';
+
+  @override
   String get detailOpenSourceSite => '출처 사이트 보기';
 
   @override
@@ -1878,10 +1881,6 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get stockpileNotifyInspectionBody => '비축품의 기한과 수량을 점검합시다';
-
-  @override
-  String get stockpileAffiliateNotice =>
-      '※상품 링크에는 제휴 마케팅(어필리에이트) 프로그램을 이용하고 있습니다';
 
   @override
   String get stockpileGuideWhy => '고르는 요령';

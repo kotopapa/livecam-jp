@@ -140,8 +140,9 @@ https://ck.jp.ap.valuecommerce.com/servlet/referral
 
 - **必ず外部ブラウザで開く**（`LaunchMode.externalApplication`）。アプリ内WebViewは
   Cookieが分離されて成果が計測されないうえ、広告主によっては規約違反になる
-- **アフィリエイトの明示**（景品表示法のステルスマーケティング規制・令和5年10月1日施行）を
-  画面下部と店舗選択シートに常時表示（ARB `stockpileAffiliateNotice`・7言語）
+- **アフィリエイトの明示**は利用規約（site/terms.html 第6条「広告およびアフィリエイトプログラム」）と
+  プライバシーポリシー第5条で行う。画面内の表記は 2026-09-03 のユーザー判断で撤去した
+  （ARB `stockpileAffiliateNotice` も削除。配信JSONの `notice` はアプリでは表示しない）
 - 未承認の広告主のリンクは出さない（`enabled: false`）
 - 1×1のインプレッション用画像（`ad.jp.ap.valuecommerce.com/servlet/gifbanner`）は
   Webサイト用なので**アプリでは使わない**。計測は referral リンクで行われる

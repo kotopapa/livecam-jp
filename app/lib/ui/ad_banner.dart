@@ -167,7 +167,8 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
 
 /// push遷移した一覧画面(災害速報→地震/警報の先、ランキング等)の下部に置く
 /// アンカーバナー。HomeShellのバナーはタブ配下にしか出ないため、
-/// これらの画面では個別に置く。特別警報の発表中は非表示(HomeShellと同じ規則)
+/// これらの画面では個別に置く。利用者が特別警報の発表エリアに居る間は
+/// 非表示(HomeShellと同じ規則)
 class AdFooter extends StatelessWidget {
   const AdFooter({super.key, required this.app});
 
@@ -178,7 +179,7 @@ class AdFooter extends StatelessWidget {
     return ListenableBuilder(
       listenable: app,
       builder: (context, _) => Offstage(
-        offstage: app.specialWarningActive,
+        offstage: app.viewerInSpecialWarningArea,
         child: const AnchoredAdBanner(),
       ),
     );

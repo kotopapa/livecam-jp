@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart' show AdSize;
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -14,10 +16,14 @@ import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 import '../app_state.dart';
 import '../config.dart';
+import '../data/affiliate.dart';
+import '../data/hotel_links.dart';
+import '../data/stockpile_products.dart';
 import '../l10n/l10n.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
 import '../util/geo.dart';
+import '../util/jst.dart';
 import '../util/time_format.dart';
 import 'ad_banner.dart';
 import 'elevation_label.dart';
@@ -33,6 +39,12 @@ class DetailScreen extends StatefulWidget {
 
   final Camera camera;
   final AppState app;
+
+  /// テスト用: 宿サイトの配信フラグ取得（ネットワーク）を省く
+  @visibleForTesting
+  static void skipHotelFlagsFetch() {
+    _DetailScreenState._hotelFlagsFuture = Future.value();
+  }
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();
@@ -57,6 +69,71 @@ class _DetailScreenState extends State<DetailScreen> {
     _viewTimer = Timer(const Duration(seconds: 5), () {
       if (mounted) app.recordView(camera);
     });
+    _prepareHotelLinks();
+  }
+
+  // --- この付近の宿を探す（1.5.0） ---------------------------------------
+
+  /// 配信フラグ（products.json の merchants）はアプリ起動中1回だけ読む
+  static Future<void>? _hotelFlagsFuture;
+
+  void _prepareHotelLinks() {
+    if (!HotelLinks.eligible(camera)) return;
+    final waits = <Future<void>>[];
+    if (!camera.isWorld && !MunicipalityNames.isLoaded) {
+      waits.add(MunicipalityNames.load());
+    }
+    waits.add(_hotelFlagsFuture ??= _loadHotelFlags());
+    Future.wait(waits).then((_) {
+      if (mounted) setState(() {});
+    });
+  }
+
+  static Future<void> _loadHotelFlags() async {
+    try {
+      Directory? dir;
+      try {
+        dir = await getTemporaryDirectory();
+      } catch (_) {
+        dir = null;
+      }
+      final p = await StockpileProductsRepository(cacheDir: dir).load();
+      if (p != null) AffiliateLinks.applyRemoteFlags(p.merchants);
+    } catch (_) {
+      // 取得できなければ config.dart の既定値で出す
+    }
+  }
+
+  /// 観光系カテゴリ・海外カメラのみ。利用者が特別警報の発表エリアに居る間は伏せる
+  /// （カメラの所在地では判定しない。広告と同じ規則）
+  bool get _showHotels =>
+      HotelLinks.eligible(camera) && !app.viewerInSpecialWarningArea;
+
+  Widget? _hotelSection() {
+    final l10n = context.l10n;
+    final lang = Localizations.localeOf(context).languageCode;
+    final links = HotelLinks.linksFor(
+      camera,
+      checkIn: jstNow().add(const Duration(days: 1)),
+      jalanKeyword: MunicipalityNames.sjisKeywordOf(camera.municipality),
+    );
+    if (links.isEmpty) return null;
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(l10n.detailHotelsTitle,
+          style: const TextStyle(fontWeight: FontWeight.bold)),
+      const SizedBox(height: 6),
+      Wrap(spacing: 8, runSpacing: 4, children: [
+        for (final l in links)
+          OutlinedButton.icon(
+            // アフィリエイトリンクは必ず外部ブラウザで開く（affiliate.dart）
+            onPressed: () =>
+                launchUrl(l.url, mode: LaunchMode.externalApplication),
+            icon: const Icon(Icons.hotel, size: 18),
+            label: Text(l.site.nameFor(lang)),
+          ),
+      ]),
+      // アフィリエイトの明示は利用規約（terms.html）で行い、画面には出さない
+    ]);
   }
 
   @override
@@ -103,6 +180,7 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     final st = app.repository.status[camera.id];
     final pageUrl = camera.sourcePageUrl ?? camera.fallbackUrl;
+    final hotels = _showHotels ? _hotelSection() : null;
     return Scaffold(
       appBar: AppBar(
         title: Text(camera.name, overflow: TextOverflow.ellipsis),
@@ -137,6 +215,7 @@ class _DetailScreenState extends State<DetailScreen> {
             const Divider(height: 24),
             _locationSection(),
             const Divider(height: 24),
+            if (hotels != null) ...[hotels, const Divider(height: 24)],
             // 地図の下にレクタングル広告(300×250)。上部バナーがスクロールで
             // 見えなくなる位置まで来た利用者向け。失敗時は区切り線ごと消える
             AdBannerPlaceholder(size: AdSize.mediumRectangle, adUnitId: admobRectangleUnitId),

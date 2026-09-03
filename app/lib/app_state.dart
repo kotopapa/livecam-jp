@@ -12,6 +12,7 @@ import 'data/favorites_store.dart';
 import 'data/global_stats.dart';
 import 'data/review_prompter.dart';
 import 'data/view_history_store.dart';
+import 'data/viewer_area.dart';
 import 'data/widget_bridge.dart';
 import 'models/camera.dart';
 import 'models/status.dart';
@@ -341,6 +342,31 @@ class AppState extends ChangeNotifier {
   bool specialWarningActive = false;
   static const _specialCodes = {'32', '33', '34', '35', '36', '37', '38', '39'};
 
+  /// 特別警報（レベル5）が出ている都道府県（JIS 2桁）
+  Set<String> specialWarningPrefectures = const {};
+
+  /// 利用者がいま居る都道府県（JIS 2桁）。特別警報の発表中にだけ現在地から求める。
+  /// 位置情報が使えない・海上・国外なら null
+  String? viewerPrefecture;
+
+  /// 現在地→都道府県の解決（テストで差し替える）
+  Future<String?> Function() viewerPrefectureResolver =
+      () => ViewerArea().currentPrefecture();
+
+  /// **利用者が特別警報の発表エリアに居る**か。広告と「この付近の宿を探す」を
+  /// 伏せる条件（1.5.0・2026-09-03 ユーザー決定）。
+  ///
+  /// カメラの所在地では判定しない: 県外の人が警報エリアのカメラを見るのは普通で、
+  /// 復旧期には宿を出した方が支援につながる。**現在地が分からない人（位置情報オフ・
+  /// 海上・国外・取得失敗）には無条件で出す**（警報時ほどアクセスが増えるため。
+  /// 2026-09-03 ユーザー決定）。伏せるのは位置が取れていて発表エリアに居る人だけ
+  bool get viewerInSpecialWarningArea {
+    if (!specialWarningActive) return false;
+    final pref = viewerPrefecture;
+    if (pref == null) return false;
+    return specialWarningPrefectures.contains(pref);
+  }
+
   Future<void> checkSpecialWarnings() async {
     try {
       final resp = await http
@@ -360,28 +386,44 @@ class AppState extends ChangeNotifier {
         }
       }
       var active = false;
-      outer:
+      final prefs = <String>{};
       for (final rep in latestByOffice.values) {
         final warning = rep['warning'] as Map<String, dynamic>? ?? const {};
         for (final area in (warning['class10Items'] as List? ?? const [])
             .cast<Map<String, dynamic>>()) {
+          // 一次細分区域コード（6桁）の先頭2桁が都道府県コード
+          final areaCode = area['code'] as String? ?? '';
           for (final w in (area['kinds'] as List? ?? const [])
               .cast<Map<String, dynamic>>()) {
             final status = w['status'] as String? ?? '';
             if (status == '解除' || status.contains('なし')) continue;
-            if (_specialCodes.contains(w['code'] as String? ?? '')) {
-              active = true;
-              break outer;
-            }
+            if (!_specialCodes.contains(w['code'] as String? ?? '')) continue;
+            active = true;
+            if (areaCode.length >= 2) prefs.add(areaCode.substring(0, 2));
           }
         }
       }
-      if (active != specialWarningActive) {
-        specialWarningActive = active;
-        notifyListeners();
+      // 発表中だけ現在地の県を求める（平時は位置情報も逆ジオコーダも使わない）
+      String? viewer;
+      if (active) {
+        try {
+          viewer = await viewerPrefectureResolver();
+        } catch (_) {
+          viewer = null;
+        }
       }
+      final changed = active != specialWarningActive ||
+          viewer != viewerPrefecture ||
+          !_setEquals(prefs, specialWarningPrefectures);
+      specialWarningActive = active;
+      specialWarningPrefectures = Set.unmodifiable(prefs);
+      viewerPrefecture = viewer;
+      if (changed) notifyListeners();
     } catch (_) {
       // 取得失敗時はバッジ状態を維持
     }
   }
+
+  static bool _setEquals(Set<String> a, Set<String> b) =>
+      a.length == b.length && a.containsAll(b);
 }

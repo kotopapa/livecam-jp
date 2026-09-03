@@ -1348,6 +1348,12 @@ abstract class AppLocalizations {
   /// **'地図で見る'**
   String get detailOpenMap;
 
+  /// No description provided for @detailHotelsTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'この付近の宿を探す'**
+  String get detailHotelsTitle;
+
   /// No description provided for @detailOpenSourceSite.
   ///
   /// In ja, this message translates to:
@@ -3435,12 +3441,6 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'備蓄品の期限と数量を点検しましょう'**
   String get stockpileNotifyInspectionBody;
-
-  /// 景表法のステマ規制（令和5年10月1日施行）対応。商品リンクのある画面に必須
-  ///
-  /// In ja, this message translates to:
-  /// **'※商品リンクにはアフィリエイトプログラムを利用しています'**
-  String get stockpileAffiliateNotice;
 
   /// 商品シートの見出し（公的資料にもとづく選び方）
   ///

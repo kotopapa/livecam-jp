@@ -166,10 +166,11 @@ class _HomeShellState extends State<HomeShell> {
     // 下部固定バナー: 一覧・災害速報・備えタブ（地図と設定には出さない）。
     // 備えは以前リスト途中に 300×250 の大型広告を置いていたが、
     // 邪魔だという指摘で他タブと同じ下部固定の横長バナーに統一した
-    // 特別警報の発表中は防災アプリとして広告を出さない
+    // 利用者が特別警報の発表エリアに居る間は防災アプリとして広告を出さない
+    // （エリア外の人には出す。AppState.viewerInSpecialWarningArea）
     final showAd =
         (_index == 1 || _index == 2 || _index == 3) &&
-        !widget.app.specialWarningActive;
+        !widget.app.viewerInSpecialWarningArea;
     return Scaffold(
       body: Column(
         children: [

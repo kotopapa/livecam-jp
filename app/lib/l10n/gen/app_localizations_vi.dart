@@ -687,6 +687,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get detailOpenMap => 'Xem trên bản đồ';
 
   @override
+  String get detailHotelsTitle => 'Tìm chỗ nghỉ gần đây';
+
+  @override
   String get detailOpenSourceSite => 'Xem trang nguồn';
 
   @override
@@ -1955,10 +1958,6 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get stockpileNotifyInspectionBody =>
       'Hãy kiểm tra hạn dùng và số lượng đồ dự trữ';
-
-  @override
-  String get stockpileAffiliateNotice =>
-      '※Các liên kết sản phẩm có sử dụng chương trình tiếp thị liên kết (affiliate)';
 
   @override
   String get stockpileGuideWhy => 'Cách chọn';

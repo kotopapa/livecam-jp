@@ -684,6 +684,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get detailOpenMap => 'View on map';
 
   @override
+  String get detailHotelsTitle => 'Find hotels nearby';
+
+  @override
   String get detailOpenSourceSite => 'Open the source site';
 
   @override
@@ -1948,10 +1951,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get stockpileNotifyInspectionBody =>
       'Time to check the dates and amounts in your stockpile';
-
-  @override
-  String get stockpileAffiliateNotice =>
-      'This page uses affiliate links. We may earn a commission from purchases.';
 
   @override
   String get stockpileGuideWhy => 'How to choose';

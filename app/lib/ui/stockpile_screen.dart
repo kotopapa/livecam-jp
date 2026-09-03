@@ -292,12 +292,8 @@ class _StockpileScreenState extends State<StockpileScreen> {
               ),
               _sourceLink(l10n.stockpileSourceCao, _sourceCaoUrl),
               _sourceLink(l10n.stockpileSourceMaff, _sourceMaffUrl),
-              const SizedBox(height: 12),
-              // 景表法のステマ規制対応。商品リンクのある画面に必須の明示
-              Text(
-                l10n.stockpileAffiliateNotice,
-                style: TextStyle(fontSize: 11, color: Colors.grey[700]),
-              ),
+              // アフィリエイトの明示は利用規約（terms.html）で行い、画面には出さない
+              // （2026-09-03 ユーザー判断）
             ],
           ),
         ),
@@ -986,17 +982,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
                     products.disclaimer,
                     style: TextStyle(fontSize: 11, color: Colors.grey[700]),
                   ),
-                if (merchants.isNotEmpty ||
-                    (guide?.products.isNotEmpty ?? false)) ...[
-                  const SizedBox(height: 6),
-                  // 景表法のステマ規制対応。商品リンクのある画面に必須の明示
-                  Text(
-                    products != null && products.notice.isNotEmpty
-                        ? products.notice
-                        : l10n.stockpileAffiliateNotice,
-                    style: TextStyle(fontSize: 11, color: Colors.grey[700]),
-                  ),
-                ],
+                // アフィリエイトの明示は利用規約で行う（画面には出さない）
                 // 削除はカスタム項目だけ（既定の品目には出さない）
                 if (onDelete != null) ...[
                   const Divider(height: 24),

@@ -137,3 +137,84 @@ const List<VcMerchant> vcMerchants = <VcMerchant>[
 
 /// 既定（先頭）の広告主プログラムID。いまは Yahoo!ショッピング。
 const String vcPidPrimary = '892690203';
+
+// ---------------------------------------------------------------------------
+// カメラ詳細「この付近の宿を探す」の宿泊予約サイト（1.5.0）
+// ---------------------------------------------------------------------------
+
+/// 宿泊予約サイト1件の定義。URLの組み立ては `data/hotel_links.dart`。
+///
+/// - [pid] が空のサイトはアフィリエイト無し（楽天トラベルはバリューコマースに無い）
+/// - 承認状況の切替は備蓄品と同じく `data/stockpile/products.json` の
+///   `merchants.<key>.enabled` で行える（[enabled] は配信が届く前の既定値）
+class HotelSite {
+  const HotelSite({
+    required this.key,
+    required this.name,
+    required this.nameEn,
+    required this.pid,
+    required this.enabled,
+    this.domestic = true,
+    this.world = false,
+  });
+
+  /// 内部キー（配信フラグ・テスト用）
+  final String key;
+
+  /// 日本語表示名（固有名詞）
+  final String name;
+
+  /// 日本語以外のロケールでの表示名
+  final String nameEn;
+
+  /// バリューコマースの広告スペースID（空ならリファラルで包まない）
+  final String pid;
+
+  /// 提携承認済みか（配信フラグで上書きされる）
+  final bool enabled;
+
+  /// 国内カメラに出すか
+  final bool domestic;
+
+  /// 海外カメラに出すか
+  final bool world;
+
+  bool get isAffiliate => pid.isNotEmpty;
+
+  String nameFor(String languageCode) => languageCode == 'ja' ? name : nameEn;
+}
+
+/// 宿泊予約サイトの一覧（表示順）。2026-09-03 に各社の検索URLを実測して決めた
+/// （docs/research_2026-09-03/hotel_deeplinks.md）。
+const List<HotelSite> hotelSites = <HotelSite>[
+  HotelSite(
+    key: 'jalan',
+    name: 'じゃらん',
+    nameEn: 'Jalan',
+    pid: '892691492',
+    enabled: true,
+  ),
+  HotelSite(
+    key: 'rakuten_travel',
+    name: '楽天トラベル',
+    nameEn: 'Rakuten Travel',
+    pid: '', // バリューコマースに無いためアフィリエイト無しで導線だけ出す
+    enabled: true,
+  ),
+  HotelSite(
+    key: 'jtb',
+    name: 'JTB',
+    nameEn: 'JTB',
+    pid: '892691495',
+    enabled: true,
+  ),
+  HotelSite(
+    key: 'expedia',
+    name: 'Expedia',
+    nameEn: 'Expedia',
+    pid: '892691493',
+    enabled: true,
+    domestic: false,
+    world: true,
+  ),
+];
