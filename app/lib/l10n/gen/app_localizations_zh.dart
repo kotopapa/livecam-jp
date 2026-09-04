@@ -459,12 +459,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsReviewSubtitle => '在 App Store 撰写评价';
 
   @override
-  String get settingsFollowX => '在 X 上关注';
-
-  @override
-  String get settingsFollowXSubtitle => '@kotopapa8 — 新摄像头和新功能的通知';
-
-  @override
   String get settingsOtherApps => '开发者的其他软件';
 
   @override
@@ -2466,12 +2460,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get settingsReviewSubtitle => '在 App Store 撰寫評論';
-
-  @override
-  String get settingsFollowX => '在 X 上追蹤';
-
-  @override
-  String get settingsFollowXSubtitle => '@kotopapa8 — 新攝影機與新功能的消息';
 
   @override
   String get settingsOtherApps => '開發者的其他應用程式';

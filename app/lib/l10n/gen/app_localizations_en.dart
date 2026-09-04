@@ -482,13 +482,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsReviewSubtitle => 'Write a review on the App Store';
 
   @override
-  String get settingsFollowX => 'Follow on X';
-
-  @override
-  String get settingsFollowXSubtitle =>
-      '@kotopapa8 - news about new cameras and features';
-
-  @override
   String get settingsOtherApps => 'More apps by the developer';
 
   @override

@@ -470,12 +470,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get settingsReviewSubtitle => 'App Store에 리뷰 작성';
 
   @override
-  String get settingsFollowX => 'X에서 팔로우하기';
-
-  @override
-  String get settingsFollowXSubtitle => '@kotopapa8 — 새 카메라와 기능 소식';
-
-  @override
   String get settingsOtherApps => '개발자의 다른 앱';
 
   @override

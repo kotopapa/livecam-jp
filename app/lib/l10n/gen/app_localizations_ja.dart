@@ -466,12 +466,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsReviewSubtitle => 'App Storeでレビューを書く';
 
   @override
-  String get settingsFollowX => 'Xでフォローする';
-
-  @override
-  String get settingsFollowXSubtitle => '@kotopapa8 — 新しいカメラや機能のお知らせ';
-
-  @override
   String get settingsOtherApps => '開発者の他のアプリ';
 
   @override
@@ -2494,12 +2488,6 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get settingsReviewSubtitle => 'App Storeに かんそうを かく';
-
-  @override
-  String get settingsFollowX => 'Xで フォローする';
-
-  @override
-  String get settingsFollowXSubtitle => '@kotopapa8 — あたらしい カメラや アプリの おしらせ';
 
   @override
   String get settingsOtherApps => 'つくった 人（ひと）の ほかの アプリ';

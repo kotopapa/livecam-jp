@@ -988,18 +988,6 @@ abstract class AppLocalizations {
   /// **'App Storeでレビューを書く'**
   String get settingsReviewSubtitle;
 
-  /// No description provided for @settingsFollowX.
-  ///
-  /// In ja, this message translates to:
-  /// **'Xでフォローする'**
-  String get settingsFollowX;
-
-  /// No description provided for @settingsFollowXSubtitle.
-  ///
-  /// In ja, this message translates to:
-  /// **'@kotopapa8 — 新しいカメラや機能のお知らせ'**
-  String get settingsFollowXSubtitle;
-
   /// No description provided for @settingsOtherApps.
   ///
   /// In ja, this message translates to:

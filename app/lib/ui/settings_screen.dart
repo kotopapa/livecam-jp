@@ -32,7 +32,6 @@ const _jmaDictionaryUrl =
     'https://www.data.jma.go.jp/developer/multilingual.html';
 
 /// 開発者のXアカウント（Xアプリがあればユニバーサルリンクでアプリが開く）
-const _xUrl = 'https://x.com/kotopapa8';
 
 Future<void> _open(String url) =>
     launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
@@ -668,12 +667,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             title: Text(l10n.settingsReview),
             subtitle: Text(l10n.settingsReviewSubtitle),
             onTap: _openReview,
-          ),
-          ListTile(
-            leading: const Icon(Icons.alternate_email),
-            title: Text(l10n.settingsFollowX),
-            subtitle: Text(l10n.settingsFollowXSubtitle),
-            onTap: () => _open(_xUrl),
           ),
           if (widget.app.repository.manifest?.apps.isNotEmpty ?? false) ...[
             const Divider(),

@@ -482,13 +482,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get settingsReviewSubtitle => 'Viết đánh giá trên App Store';
 
   @override
-  String get settingsFollowX => 'Theo dõi trên X';
-
-  @override
-  String get settingsFollowXSubtitle =>
-      '@kotopapa8 — thông báo về camera và tính năng mới';
-
-  @override
   String get settingsOtherApps => 'Ứng dụng khác của nhà phát triển';
 
   @override
