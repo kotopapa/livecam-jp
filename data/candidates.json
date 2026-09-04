@@ -1,5 +1,5 @@
 {
- "version": "2026-08-29T08:58:53Z",
+ "version": "2026-09-04T20:50:05Z",
  "cameras": [
   {
    "id": "curated-lcdb-5621ad43",
@@ -38,7 +38,7 @@
    },
    "verification": null,
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "curated-lcdb-d132db4d",
@@ -77,15 +77,15 @@
    },
    "verification": null,
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "fukuoka-kasen-281",
    "name": "久保橋（久原川）",
    "name_kana": null,
-   "lat": null,
-   "lng": null,
-   "coord_accuracy": null,
+   "lat": 33.646667,
+   "lng": 130.5,
+   "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "40",
    "country": null,
@@ -117,7 +117,51 @@
    },
    "verification": null,
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-09-05"
+  },
+  {
+   "id": "hiroshima-road-158",
+   "name": "山手町",
+   "name_kana": null,
+   "lat": 34.49865,
+   "lng": 133.322586,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "34",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "（一）御幸松永線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.roadnavi.pref.hiroshima.lg.jp/snow_pic/158.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.roadnavi.pref.hiroshima.lg.jp/camera_detail.php?id=158"
+   },
+   "operator": "広島県",
+   "source": {
+    "page_url": "https://www.roadnavi.pref.hiroshima.lg.jp/camera_list.php",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：広島県「ひろしま道路ナビ」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "広島県道路カメラ。座標は住所ジオコーディング。利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 86166
+   },
+   "first_seen": "2026-09-05",
+   "last_updated": "2026-09-05"
   },
   {
    "id": "miyagi-road-hokubu-soto",
@@ -156,12 +200,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 98346
+    "bytes": 96909
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "miyagi-road-hokubu-yanagi1",
@@ -200,12 +244,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 73718
+    "bytes": 88798
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "miyagi-road-hokubu-yanagi2",
@@ -244,12 +288,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 107443
+    "bytes": 94593
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "miyagi-road-tobu-oosawa",
@@ -288,12 +332,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 7984
+    "bytes": 10113
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "nagano-road-oomachi-003",
@@ -332,12 +376,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 41776
+    "bytes": 46777
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "nagano-road-oomachi-009",
@@ -376,12 +420,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 47697
+    "bytes": 46330
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "nagano-road-saku-001",
@@ -422,10 +466,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 40717
+    "bytes": 43064
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "nagano-road-suzaka-003",
@@ -469,7 +513,7 @@
     "bytes": 105557
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   },
   {
    "id": "shizukawa-coast-kanbara-takahama",
@@ -508,12 +552,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": true,
+    "image_changed": false,
     "content_type": "image/jpeg",
-    "bytes": 68960
+    "bytes": 88890
    },
    "first_seen": "2026-08-22",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-09-05"
   }
  ]
 }
