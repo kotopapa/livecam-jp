@@ -1,7 +1,10 @@
 """フリーズ判定（SPEC 7.2）。
 
 - 画像の知覚ハッシュ dHash 64bit を Pillow だけで計算
-- 履歴（最大48件=24時間分）が全て同一ハッシュ かつ 最古から6時間以上 → frozen 候補
+- 履歴（最大48件）の末尾で同一ハッシュが続いている区間を見て、
+  その区間の先頭から6時間以上経過 → frozen 候補
+  （監視はシャード制で1台あたり約5時間に1回のため、履歴全体=約10日分。
+  「全件同一」を条件にすると10日間止まらないと検知できない）
 - ただし夜間の真っ暗画像による誤判定を防ぐため、
   「日の出時刻±1時間を跨いだ比較」のときのみ frozen を確定する
 """
@@ -25,6 +28,7 @@ PLACEHOLDER_HASHES = [
     0x153169713131d890,     # 道路情報提供システム road-info-prvs の no_data.jpeg
     0x2d27000100,           # 沖縄県河川情報システム img_cam/p-NN.jpg の「運用停止中」(黒地白文字)
     0x8304c4c300000,       # 金沢河川国道 防災情報(bousai-info-ishikawa) の「工事中」(青地黄文字)
+    0x4000f4f030100000,    # 中部地整 名港国道等(cbr.mlit.go.jp) の「現在、この地点の画像配信は行っておりません」
 ]
 PLACEHOLDER_MAX_DISTANCE = 2
 
@@ -133,14 +137,20 @@ def judge_frozen(history: list[dict], now: datetime,
     history: [{"at": iso8601, "hash": int}, ...]（古い順）
     戻り値: (frozen?, frozen_since iso8601 or None)
     """
-    if len(history) < 2:
+    entries = [h for h in history if h.get("hash") is not None]
+    if len(entries) < 2:
         return False, None
-    hashes = [h["hash"] for h in history if h.get("hash") is not None]
-    if len(hashes) < 2 or len(set(hashes)) > 1:
+    # 末尾から遡って、最新と同一ハッシュが続いている区間（同一区間）を取る
+    last_hash = entries[-1]["hash"]
+    start = len(entries) - 1
+    while start > 0 and entries[start - 1]["hash"] == last_hash:
+        start -= 1
+    run = entries[start:]
+    if len(run) < 2:
         return False, None
 
     now = as_utc(now)
-    oldest = parse_utc(history[0]["at"])
+    oldest = parse_utc(run[0]["at"])
     if now - oldest < timedelta(hours=FROZEN_AFTER_HOURS):
         return False, None
 
@@ -149,8 +159,8 @@ def judge_frozen(history: list[dict], now: datetime,
         for d in (now.date(), (now - timedelta(days=1)).date()):
             sr = sunrise_utc(lat, lng, d)
             if sr and oldest <= sr - timedelta(hours=1) and now >= sr + timedelta(hours=1):
-                return True, history[0]["at"]
+                return True, run[0]["at"]
         return False, None      # まだ日の出窓を跨いでいない → 保留（ok扱い）
 
     # 座標不明ならば従来判定（6時間同一）
-    return True, history[0]["at"]
+    return True, run[0]["at"]

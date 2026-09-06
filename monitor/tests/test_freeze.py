@@ -67,6 +67,29 @@ def test_night_dark_not_frozen():
     assert not frozen
 
 
+def test_frozen_detected_from_trailing_identical_run():
+    """シャード制（1台あたり約5時間に1回）では履歴48件が約10日分になる。
+    直前まで画像が変わっていても、末尾の同一区間だけで凍結を判定できること
+    （2026-09-07 埼玉県 栄橋の不具合報告: 19時間止まっても ok のままだった）"""
+    # JST 09:44 = UTC 00:44。末尾4件（15時間分）が同一で、JST 05:17 の日の出を跨いでいる
+    now = datetime(2026, 9, 7, 0, 44, tzinfo=timezone.utc)
+    lat, lng = 35.836, 139.580
+    history = []
+    for i in range(44):                                    # 変化していた古い履歴
+        at = now - timedelta(hours=5) * (48 - i)
+        history.append({"at": at.isoformat(), "hash": 1000 + i})
+    for i in range(4):                                     # 同一区間: -20h, -15h, -10h, -5h
+        at = now - timedelta(hours=5) * (4 - i)
+        history.append({"at": at.isoformat(), "hash": 42})
+    frozen, since = judge_frozen(history, now, lat, lng)
+    assert frozen
+    assert since == history[44]["at"]
+    # 同一区間が最新1件だけなら判定しない
+    history[-2]["hash"] = 7
+    frozen, _ = judge_frozen(history, now, lat, lng)
+    assert not frozen
+
+
 def test_no_coords_falls_back_to_6h():
     now = datetime(2026, 8, 17, 3, 0, tzinfo=timezone.utc)
     frozen, _ = judge_frozen(_history(8, 16, True, now), now, None, None)
@@ -79,3 +102,13 @@ def test_okinawa_kasen_placeholder_detected():
     fx = Path(__file__).resolve().parent.parent.parent / "crawler" / "tests" / "fixtures"
     h = dhash64((fx / "okinawa_kasen_placeholder.jpg").read_bytes())
     assert is_placeholder(h)
+
+
+def test_cbr_road_placeholder_detected():
+    from pathlib import Path
+    from monitor.freeze import is_placeholder
+    # 中部地整の道路カメラは配信停止中に「現在、この地点の画像配信は行っておりません」を
+    # HTTP 200 で返す（2026-09-07 中川運河橋右岸ほか4台で確認）
+    data = (Path(__file__).resolve().parents[2] / "crawler" / "tests" / "fixtures"
+            / "cbr_road_placeholder.jpeg").read_bytes()
+    assert is_placeholder(dhash64(data))

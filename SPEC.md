@@ -407,8 +407,8 @@ GitHub Actions で **週次実行**（`.github/workflows/crawl.yml`）。差分�
 ```
 取得成功 かつ Content-Type が image/*
   → 画像の知覚ハッシュ（dHash 64bit）を計算
-  → 直近の履歴（最大48件、= 24時間分）と比較
-  → 全て同一ハッシュ かつ 最古の記録から6時間以上経過 → frozen
+  → 直近の履歴（最大48件。監視はシャード制で1台あたり約5時間に1回のため約10日分）と比較
+  → 末尾で同一ハッシュが続く区間（2件以上）の先頭から6時間以上経過 → frozen
   → それ以外 → ok
 取得失敗（4xx/5xx/timeout）
   → consecutive_failures++

@@ -71,6 +71,8 @@ python site/build.py                            # 配信ファイル生成
 - **GitHub Actionsのcronは間引かれ・停止することがある**（2026-08-26〜27に5分cronが数時間おきになり、最後は8時間停止。大阪の大雨危険警報の通知が遅れた）。公開リポジトリで実行枠の問題ではなく、GitHub側のスケジュール取りこぼし
 - 対策として**ユーザーのGAS（Google Apps Script）から5分おきに`bosai-notify.yml`、30分おきに`monitor.yml`を`workflow_dispatch` APIで起動**している（Fine-grained PAT: livecam-jp限定・Actions Read/write）。GitHub側のcronは予備として併存。実行履歴で`workflow_dispatch`が5分ごとに並んでいれば正常。止まっていたらGASのトリガー/トークン期限(無期限設定)を疑う
 - 台帳の公開(publish)は全ユーザーに1MB(gzip)の再取得を発生させるため、1日1回程度にまとめる
+- **監視は10シャード制（1台あたり約5時間に1回）なので、ハッシュ履歴48件は約10日分**。凍結判定は「履歴全件が同一」ではなく「末尾の同一区間の先頭から6時間以上（＋日の出跨ぎ）」で行う（2026-09-07 栄橋の不具合報告: 配信元が19時間止まっても ok のままだった）。配信元サーバが同じ画像を毎回新しい Last-Modified で返すため、ヘッダでは検知できない
+- 中部地整(cbr.mlit.go.jp)の道路カメラは配信停止中に「現在、この地点の画像配信は行っておりません」を HTTP 200 で返す → dHash を PLACEHOLDER_HASHES に登録済み（フィクスチャ cbr_road_placeholder.jpeg）
 
 ## カメラ調査の知見（2026-08-29追記）
 
