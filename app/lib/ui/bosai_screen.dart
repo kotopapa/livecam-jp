@@ -7,6 +7,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
+import '../data/analytics.dart';
 import '../l10n/l10n.dart';
 import '../data/heat_alert.dart';
 import '../data/wbgt.dart';
@@ -240,6 +241,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   @override
   void initState() {
     super.initState();
+    Analytics.screen('bosai');
     _load();
     _loadWarnings();
     _loadHeat();

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../data/analytics.dart';
 import '../l10n/l10n.dart';
 
 /// 開発者を応援する（投げ銭）。消耗型のアプリ内課金4段階。
@@ -67,6 +68,7 @@ class _TipScreenState extends State<TipScreen> {
   @override
   void initState() {
     super.initState();
+    Analytics.screen('tip');
     _sub = _iap.purchaseStream.listen(_onPurchases, onError: (_) {});
     _load();
   }

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import '../data/analytics.dart';
 import '../app_state.dart';
 import '../l10n/l10n.dart';
 import '../config.dart';
@@ -39,6 +40,7 @@ class _RankingScreenState extends State<RankingScreen> {
   @override
   void initState() {
     super.initState();
+    Analytics.screen('ranking');
     _load();
   }
 

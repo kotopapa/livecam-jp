@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../data/analytics.dart';
 import '../app_state.dart';
 import '../config.dart' show VcMerchant;
 import '../data/affiliate.dart';
@@ -60,6 +61,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
   @override
   void initState() {
     super.initState();
+    Analytics.screen('stockpile');
     StockpileStore.load().then((s) {
       if (!mounted) return;
       setState(() => _state = s);

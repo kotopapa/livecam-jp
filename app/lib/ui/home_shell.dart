@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'ad_banner.dart';
 
 import '../app_state.dart';
+import '../data/analytics.dart';
 import '../data/locale_controller.dart';
 import '../data/stockpile.dart';
 import '../l10n/l10n.dart';
@@ -46,9 +47,12 @@ class _HomeShellState extends State<HomeShell> {
   /// 備えタブのバッジ（期限1か月以内・期限切れの品目数＋点検日超過）
   int _stockpileAlertCount = 0;
 
+  static const _tabScreenNames = ['map', 'list', 'bosai', 'stockpile', 'favorites'];
+
   void _setIndex(int i) {
     if (i == _index) return;
     setState(() => _index = i);
+    if (i < _tabScreenNames.length) Analytics.screen(_tabScreenNames[i]);
     _bosaiVisible.value = i == 2;
     _stockpileVisible.value = i == 3;
   }

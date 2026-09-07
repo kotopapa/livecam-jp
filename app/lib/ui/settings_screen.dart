@@ -13,6 +13,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:in_app_review/in_app_review.dart';
 
+import '../data/analytics.dart';
 import '../app_state.dart';
 import '../config.dart';
 import '../data/locale_controller.dart';
@@ -61,6 +62,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   void initState() {
     super.initState();
+    Analytics.screen('settings');
     _notify.load().then((_) {
       // トークン健全性チェック込みの自己修復（APNs入替え等での不達を復旧）
       unawaited(_notify.healTokenAndReapply());

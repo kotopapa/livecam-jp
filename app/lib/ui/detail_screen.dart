@@ -17,6 +17,7 @@ import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 import '../app_state.dart';
 import '../config.dart';
 import '../data/affiliate.dart';
+import '../data/analytics.dart';
 import '../data/hotel_links.dart';
 import '../data/stockpile_products.dart';
 import '../l10n/l10n.dart';
@@ -70,6 +71,8 @@ class _DetailScreenState extends State<DetailScreen> {
     _viewTimer = Timer(const Duration(seconds: 5), () {
       if (mounted) app.recordView(camera);
     });
+    Analytics.screen('detail');
+    Analytics.cameraView(camera);
     _prepareHotelLinks();
   }
 

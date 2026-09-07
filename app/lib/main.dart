@@ -23,6 +23,7 @@ import 'data/locale_controller.dart';
 import 'data/widget_bridge.dart';
 import 'l10n/l10n.dart';
 import 'ui/home_shell.dart';
+import 'data/analytics.dart';
 import 'ui/onboarding_screen.dart';
 
 Future<void> main() async {
@@ -37,6 +38,8 @@ Future<void> main() async {
     final options = DefaultFirebaseOptions.currentPlatform;
     if (options != null) {
       await Firebase.initializeApp(options: options);
+      // 利用状況の集計（Firebase Analytics）。デバッグビルドでは収集しない
+      await Analytics.init(enabled: !kDebugMode);
       // クラッシュ検知（HANDOFF 2-8-3）。デバッグビルドでは送信しない
       if (!kDebugMode) {
         // Flutterフレームワークの例外（タイル画像の404等、アプリは継続する）は

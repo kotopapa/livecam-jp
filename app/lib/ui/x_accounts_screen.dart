@@ -3,6 +3,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../data/x_accounts.dart';
+import '../data/analytics.dart';
 import '../l10n/l10n.dart';
 
 /// 自治体・国の機関の災害情報 X アカウント一覧。
@@ -27,6 +28,7 @@ class _XAccountsScreenState extends State<XAccountsScreen> {
   @override
   void initState() {
     super.initState();
+    Analytics.screen('x_accounts');
     _load();
   }
 
