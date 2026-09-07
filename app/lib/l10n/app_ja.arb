@@ -2121,5 +2121,46 @@
   "stockpileChooseShop": "店舗を選ぶ",
   "@stockpileChooseShop": {
     "description": "「探す」を押したときの店舗選択シートの見出し"
-  }
+  },
+  "xAccountsTitle": "自治体の災害情報（X）",
+  "@xAccountsTitle": {
+    "description": "自治体の災害情報Xアカウント一覧画面のタイトル"
+  },
+  "xAccountsIntro": "都道府県・国の機関が運営する災害情報アカウントです。公式性は各機関のサイトで確認しています。タップすると外部のXを開きます。運営主体の種別を必ず確認してください。",
+  "@xAccountsIntro": {
+    "description": "一覧冒頭の説明（外部Xを開く・運営主体の確認）"
+  },
+  "xAccountsBosaiLink": "自治体の災害情報アカウント（X）を見る",
+  "@xAccountsBosaiLink": {
+    "description": "災害速報タブ 気象警報タブ最下部の導線"
+  },
+  "xAccountsDetailLink": "{pref}の災害情報アカウント（X）",
+  "@xAccountsDetailLink": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
+  },
+  "xAccountsSectionPrefectures": "都道府県",
+  "xAccountsSectionNational": "国の機関",
+  "xAccountsSectionMunicipalities": "市区町村",
+  "xAccountsSectionArea": "この地域",
+  "@xAccountsSectionArea": {
+    "description": "開いた都道府県に関係するアカウントの見出し"
+  },
+  "xAccountsSectionAll": "すべて",
+  "xAccountsEmpty": "一覧を読み込めませんでした",
+  "xAccountsNotDedicated": "総合アカウント（防災専用ではありません）",
+  "@xAccountsNotDedicated": {
+    "description": "防災専用ではない県の総合アカウントに付ける注記"
+  },
+  "xAccountsTypeOfficial": "自治体公式",
+  "xAccountsTypeGovRelated": "自治体関連施設",
+  "xAccountsTypeNational": "国の機関（公式）",
+  "xAccountsTypeCompany": "民間企業",
+  "xAccountsTypeOrganization": "団体",
+  "xAccountsTypeIndividual": "個人",
+  "xAccountsTypeOtherArea": "別自治体",
+  "xAccountsTypeUnknown": "運営主体不明"
 }

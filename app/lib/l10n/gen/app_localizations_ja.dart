@@ -2017,6 +2017,66 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get stockpileChooseShop => '店舗を選ぶ';
+
+  @override
+  String get xAccountsTitle => '自治体の災害情報（X）';
+
+  @override
+  String get xAccountsIntro =>
+      '都道府県・国の機関が運営する災害情報アカウントです。公式性は各機関のサイトで確認しています。タップすると外部のXを開きます。運営主体の種別を必ず確認してください。';
+
+  @override
+  String get xAccountsBosaiLink => '自治体の災害情報アカウント（X）を見る';
+
+  @override
+  String xAccountsDetailLink(String pref) {
+    return '$prefの災害情報アカウント（X）';
+  }
+
+  @override
+  String get xAccountsSectionPrefectures => '都道府県';
+
+  @override
+  String get xAccountsSectionNational => '国の機関';
+
+  @override
+  String get xAccountsSectionMunicipalities => '市区町村';
+
+  @override
+  String get xAccountsSectionArea => 'この地域';
+
+  @override
+  String get xAccountsSectionAll => 'すべて';
+
+  @override
+  String get xAccountsEmpty => '一覧を読み込めませんでした';
+
+  @override
+  String get xAccountsNotDedicated => '総合アカウント（防災専用ではありません）';
+
+  @override
+  String get xAccountsTypeOfficial => '自治体公式';
+
+  @override
+  String get xAccountsTypeGovRelated => '自治体関連施設';
+
+  @override
+  String get xAccountsTypeNational => '国の機関（公式）';
+
+  @override
+  String get xAccountsTypeCompany => '民間企業';
+
+  @override
+  String get xAccountsTypeOrganization => '団体';
+
+  @override
+  String get xAccountsTypeIndividual => '個人';
+
+  @override
+  String get xAccountsTypeOtherArea => '別自治体';
+
+  @override
+  String get xAccountsTypeUnknown => '運営主体不明';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -4066,4 +4126,64 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get stockpileChooseShop => 'みせを えらぶ';
+
+  @override
+  String get xAccountsTitle => 'やくしょの さいがい じょうほう（X）';
+
+  @override
+  String get xAccountsIntro =>
+      'けんや くにの やくしょが だしている さいがいの じょうほうです。おすと そとの Xが ひらきます。だれが だしているかを かならず みてください。';
+
+  @override
+  String get xAccountsBosaiLink => 'やくしょの さいがい じょうほう（X）を みる';
+
+  @override
+  String xAccountsDetailLink(String pref) {
+    return '$prefの さいがい じょうほう（X）';
+  }
+
+  @override
+  String get xAccountsSectionPrefectures => 'けん';
+
+  @override
+  String get xAccountsSectionNational => 'くにの やくしょ';
+
+  @override
+  String get xAccountsSectionMunicipalities => 'し・まち・むら';
+
+  @override
+  String get xAccountsSectionArea => 'この ちいき';
+
+  @override
+  String get xAccountsSectionAll => 'ぜんぶ';
+
+  @override
+  String get xAccountsEmpty => 'リストを よみこめませんでした';
+
+  @override
+  String get xAccountsNotDedicated => 'ふつうの アカウント（さいがい せんようでは ありません）';
+
+  @override
+  String get xAccountsTypeOfficial => 'けん・しの こうしき';
+
+  @override
+  String get xAccountsTypeGovRelated => 'けん・しの しせつ';
+
+  @override
+  String get xAccountsTypeNational => 'くにの やくしょ（こうしき）';
+
+  @override
+  String get xAccountsTypeCompany => 'かいしゃ';
+
+  @override
+  String get xAccountsTypeOrganization => 'だんたい';
+
+  @override
+  String get xAccountsTypeIndividual => 'こじん';
+
+  @override
+  String get xAccountsTypeOtherArea => 'べつの まち';
+
+  @override
+  String get xAccountsTypeUnknown => 'だれが だしているか ふめい';
 }

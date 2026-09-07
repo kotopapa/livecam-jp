@@ -2028,4 +2028,64 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get stockpileChooseShop => '상점 선택';
+
+  @override
+  String get xAccountsTitle => '지자체 재난 정보(X)';
+
+  @override
+  String get xAccountsIntro =>
+      '도도부현·국가 기관이 운영하는 재난 정보 계정입니다. 공식 여부는 각 기관 사이트에서 확인했습니다. 누르면 외부 X가 열립니다. 운영 주체의 종류를 반드시 확인하세요.';
+
+  @override
+  String get xAccountsBosaiLink => '지자체 재난 정보 계정(X) 보기';
+
+  @override
+  String xAccountsDetailLink(String pref) {
+    return '$pref의 재난 정보 계정(X)';
+  }
+
+  @override
+  String get xAccountsSectionPrefectures => '도도부현';
+
+  @override
+  String get xAccountsSectionNational => '국가 기관';
+
+  @override
+  String get xAccountsSectionMunicipalities => '시구정촌';
+
+  @override
+  String get xAccountsSectionArea => '이 지역';
+
+  @override
+  String get xAccountsSectionAll => '전체';
+
+  @override
+  String get xAccountsEmpty => '목록을 불러올 수 없습니다';
+
+  @override
+  String get xAccountsNotDedicated => '종합 계정(재난 전용이 아님)';
+
+  @override
+  String get xAccountsTypeOfficial => '지자체 공식';
+
+  @override
+  String get xAccountsTypeGovRelated => '지자체 관련 시설';
+
+  @override
+  String get xAccountsTypeNational => '국가 기관(공식)';
+
+  @override
+  String get xAccountsTypeCompany => '민간 기업';
+
+  @override
+  String get xAccountsTypeOrganization => '단체';
+
+  @override
+  String get xAccountsTypeIndividual => '개인';
+
+  @override
+  String get xAccountsTypeOtherArea => '다른 지자체';
+
+  @override
+  String get xAccountsTypeUnknown => '운영 주체 불명';
 }

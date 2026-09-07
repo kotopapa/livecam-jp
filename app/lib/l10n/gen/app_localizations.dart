@@ -3729,6 +3729,120 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'店舗を選ぶ'**
   String get stockpileChooseShop;
+
+  /// 自治体の災害情報Xアカウント一覧画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'自治体の災害情報（X）'**
+  String get xAccountsTitle;
+
+  /// 一覧冒頭の説明（外部Xを開く・運営主体の確認）
+  ///
+  /// In ja, this message translates to:
+  /// **'都道府県・国の機関が運営する災害情報アカウントです。公式性は各機関のサイトで確認しています。タップすると外部のXを開きます。運営主体の種別を必ず確認してください。'**
+  String get xAccountsIntro;
+
+  /// 災害速報タブ 気象警報タブ最下部の導線
+  ///
+  /// In ja, this message translates to:
+  /// **'自治体の災害情報アカウント（X）を見る'**
+  String get xAccountsBosaiLink;
+
+  /// No description provided for @xAccountsDetailLink.
+  ///
+  /// In ja, this message translates to:
+  /// **'{pref}の災害情報アカウント（X）'**
+  String xAccountsDetailLink(String pref);
+
+  /// No description provided for @xAccountsSectionPrefectures.
+  ///
+  /// In ja, this message translates to:
+  /// **'都道府県'**
+  String get xAccountsSectionPrefectures;
+
+  /// No description provided for @xAccountsSectionNational.
+  ///
+  /// In ja, this message translates to:
+  /// **'国の機関'**
+  String get xAccountsSectionNational;
+
+  /// No description provided for @xAccountsSectionMunicipalities.
+  ///
+  /// In ja, this message translates to:
+  /// **'市区町村'**
+  String get xAccountsSectionMunicipalities;
+
+  /// 開いた都道府県に関係するアカウントの見出し
+  ///
+  /// In ja, this message translates to:
+  /// **'この地域'**
+  String get xAccountsSectionArea;
+
+  /// No description provided for @xAccountsSectionAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'すべて'**
+  String get xAccountsSectionAll;
+
+  /// No description provided for @xAccountsEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'一覧を読み込めませんでした'**
+  String get xAccountsEmpty;
+
+  /// 防災専用ではない県の総合アカウントに付ける注記
+  ///
+  /// In ja, this message translates to:
+  /// **'総合アカウント（防災専用ではありません）'**
+  String get xAccountsNotDedicated;
+
+  /// No description provided for @xAccountsTypeOfficial.
+  ///
+  /// In ja, this message translates to:
+  /// **'自治体公式'**
+  String get xAccountsTypeOfficial;
+
+  /// No description provided for @xAccountsTypeGovRelated.
+  ///
+  /// In ja, this message translates to:
+  /// **'自治体関連施設'**
+  String get xAccountsTypeGovRelated;
+
+  /// No description provided for @xAccountsTypeNational.
+  ///
+  /// In ja, this message translates to:
+  /// **'国の機関（公式）'**
+  String get xAccountsTypeNational;
+
+  /// No description provided for @xAccountsTypeCompany.
+  ///
+  /// In ja, this message translates to:
+  /// **'民間企業'**
+  String get xAccountsTypeCompany;
+
+  /// No description provided for @xAccountsTypeOrganization.
+  ///
+  /// In ja, this message translates to:
+  /// **'団体'**
+  String get xAccountsTypeOrganization;
+
+  /// No description provided for @xAccountsTypeIndividual.
+  ///
+  /// In ja, this message translates to:
+  /// **'個人'**
+  String get xAccountsTypeIndividual;
+
+  /// No description provided for @xAccountsTypeOtherArea.
+  ///
+  /// In ja, this message translates to:
+  /// **'別自治体'**
+  String get xAccountsTypeOtherArea;
+
+  /// No description provided for @xAccountsTypeUnknown.
+  ///
+  /// In ja, this message translates to:
+  /// **'運営主体不明'**
+  String get xAccountsTypeUnknown;
 }
 
 class _AppLocalizationsDelegate

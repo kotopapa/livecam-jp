@@ -19,6 +19,7 @@ import '../util/prefectures.dart';
 import 'ad_banner.dart';
 import 'detail_screen.dart';
 import 'stockpile_screen.dart';
+import 'x_accounts_screen.dart';
 
 /// 気象庁の公開JSONから直近の地震を表示し、震源周辺のカメラへ誘導する。
 /// 無料・認証不要のエンドポイントのみ使用（SPEC C2）。取得はこの画面を
@@ -772,6 +773,7 @@ class _BosaiScreenState extends State<BosaiScreen>
         Center(child: Text(context.l10n.bosaiNoWarnings)),
         const SizedBox(height: 24),
         _stockpileLink(),
+        _xAccountsLink(),
       ]);
     }
     final prefs = _warnings!.keys.toList()
@@ -785,9 +787,10 @@ class _BosaiScreenState extends State<BosaiScreen>
     final advPrefs = (_advisories ?? const {}).keys.toList()..sort();
     return ListView.separated(
       // 末尾の1件は備蓄チェックリストへの導線（控えめに1つだけ）
-      itemCount: prefs.length + 3,
+      itemCount: prefs.length + 4,
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
+        if (i == prefs.length + 3) return _xAccountsLink();
         if (i == prefs.length + 2) return _stockpileLink();
         if (i == 0) {
           final bar = _warningFreshnessBar();
@@ -878,6 +881,18 @@ class _BosaiScreenState extends State<BosaiScreen>
               builder: (_) => StockpileScreen(app: widget.app))),
           icon: const Icon(Icons.inventory_2_outlined, size: 18),
           label: Text(context.l10n.stockpileBosaiLink,
+              style: const TextStyle(fontSize: 12)),
+        ),
+      );
+
+  /// 自治体・国の機関の災害情報 X アカウント一覧への導線（外部リンクのみ）
+  Widget _xAccountsLink() => Padding(
+        padding: const EdgeInsets.fromLTRB(12, 0, 12, 20),
+        child: TextButton.icon(
+          onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => const XAccountsScreen())),
+          icon: const Icon(Icons.campaign_outlined, size: 18),
+          label: Text(context.l10n.xAccountsBosaiLink,
               style: const TextStyle(fontSize: 12)),
         ),
       );

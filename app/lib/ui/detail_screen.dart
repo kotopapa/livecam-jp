@@ -28,6 +28,7 @@ import '../util/time_format.dart';
 import 'ad_banner.dart';
 import 'elevation_label.dart';
 import 'pin_style.dart';
+import 'x_accounts_screen.dart';
 
 /// 免責文言（SPEC 9.5。削ってはいけない）。
 /// 1.4.0 で多言語化。日本語版を正文とする（l10n.legalJapaneseAuthoritative を併記）
@@ -328,12 +329,29 @@ class _DetailScreenState extends State<DetailScreen> {
             label: Text(l10n.detailWorld),
             visualDensity: VisualDensity.compact),
     ]);
+    // 国内カメラは所在県の災害情報 X アカウント一覧へ誘導する（外部リンクのみ）
+    final xLink = (camera.isWorld || pref.isEmpty)
+        ? null
+        : Align(
+            alignment: Alignment.centerLeft,
+            child: TextButton.icon(
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => XAccountsScreen(pref: camera.prefecture))),
+              icon: const Icon(Icons.campaign_outlined, size: 16),
+              label: Text(l10n.xAccountsDetailLink(pref),
+                  style: const TextStyle(fontSize: 12)),
+              style: TextButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  visualDensity: VisualDensity.compact),
+            ),
+          );
     if (!camera.hasLocation) {
       return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(l10n.detailCategoryAndPlace,
             style: const TextStyle(fontWeight: FontWeight.bold)),
         const SizedBox(height: 6),
         chips,
+        ?xLink,
       ]);
     }
     final pos = LatLng(camera.lat!, camera.lng!);
@@ -342,6 +360,7 @@ class _DetailScreenState extends State<DetailScreen> {
           style: const TextStyle(fontWeight: FontWeight.bold)),
       const SizedBox(height: 6),
       chips,
+      ?xLink,
       // 標高（国土地理院の標高API。国内のみ・1画面1リクエスト）
       if (!camera.isWorld)
         Padding(

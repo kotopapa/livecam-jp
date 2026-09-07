@@ -2098,4 +2098,64 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get stockpileChooseShop => 'Choose a shop';
+
+  @override
+  String get xAccountsTitle => 'Official disaster accounts on X';
+
+  @override
+  String get xAccountsIntro =>
+      'Disaster information accounts run by prefectures and national agencies. Their official status was verified on each agency\'s website. Tapping opens X in an external browser. Always check who operates the account.';
+
+  @override
+  String get xAccountsBosaiLink => 'See official disaster accounts on X';
+
+  @override
+  String xAccountsDetailLink(String pref) {
+    return 'Disaster accounts for $pref (X)';
+  }
+
+  @override
+  String get xAccountsSectionPrefectures => 'Prefectures';
+
+  @override
+  String get xAccountsSectionNational => 'National agencies';
+
+  @override
+  String get xAccountsSectionMunicipalities => 'Municipalities';
+
+  @override
+  String get xAccountsSectionArea => 'This area';
+
+  @override
+  String get xAccountsSectionAll => 'All';
+
+  @override
+  String get xAccountsEmpty => 'Could not load the list';
+
+  @override
+  String get xAccountsNotDedicated => 'General account (not disaster-only)';
+
+  @override
+  String get xAccountsTypeOfficial => 'Local government (official)';
+
+  @override
+  String get xAccountsTypeGovRelated => 'Local government facility';
+
+  @override
+  String get xAccountsTypeNational => 'National agency (official)';
+
+  @override
+  String get xAccountsTypeCompany => 'Private company';
+
+  @override
+  String get xAccountsTypeOrganization => 'Organization';
+
+  @override
+  String get xAccountsTypeIndividual => 'Individual';
+
+  @override
+  String get xAccountsTypeOtherArea => 'Other municipality';
+
+  @override
+  String get xAccountsTypeUnknown => 'Operator unknown';
 }

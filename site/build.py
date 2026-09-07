@@ -10,6 +10,7 @@
     site/v1/shelters/*.json         # 避難所（data/shelters/ のコピー。tools/shelters.py が月次生成）
     site/v1/facilities/*.json       # 防災拠点（data/facilities/ のコピー。tools/facilities.py が月次生成）
     site/v1/stockpile/*.json        # 備蓄推奨商品（data/stockpile/ のコピー。tools/stockpile_check.py が月次点検）
+    site/v1/x_accounts.json         # 自治体・国の機関の災害情報Xアカウント（data/x_accounts.json の採用分。tools/x_accounts_publish.py）
 
 アプリに配るのは approved のみ。verification 等の内部フィールドは落とす。
 """
@@ -160,6 +161,12 @@ def build() -> int:
     n_stockpile = sync_stockpile()
     if n_stockpile:
         print(f"stockpile: {n_stockpile}ファイルをコピー")
+
+    # 自治体・国の機関の災害情報 X アカウント（data/x_accounts.json の採用分のみ配信）
+    from tools.x_accounts_publish import sync_site as sync_x_accounts
+    n_x = sync_x_accounts()
+    if n_x:
+        print(f"x_accounts: {n_x}件")
 
     print(f"site/v1 生成: 承認済み {len(approved)}件, 都道府県 {len(by_pref)}")
     return 0

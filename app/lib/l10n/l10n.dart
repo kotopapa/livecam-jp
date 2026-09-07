@@ -14,6 +14,7 @@ import 'package:flutter/widgets.dart';
 import '../data/heat_alert.dart' show HeatAlertLevel;
 import '../data/stockpile.dart' show StockpileCategory, StockpileUnit;
 import '../data/wbgt.dart' show WbgtLevel;
+import '../data/x_accounts.dart' show XAccountType;
 import 'gen/app_localizations.dart';
 
 export 'gen/app_localizations.dart';
@@ -318,4 +319,17 @@ String? stockpileItemNameOf(AppLocalizations l10n, String id) =>
       'contactMemo' => l10n.stockpileItemContactMemo,
       'cable' => l10n.stockpileItemCable,
       _ => null,
+    };
+
+/// 災害情報 X アカウントの運営主体の種別 → 表示名（必ず併記する。誤認防止）
+String xAccountTypeLabelOf(AppLocalizations l10n, XAccountType type) =>
+    switch (type) {
+      XAccountType.official => l10n.xAccountsTypeOfficial,
+      XAccountType.govRelated => l10n.xAccountsTypeGovRelated,
+      XAccountType.national => l10n.xAccountsTypeNational,
+      XAccountType.company => l10n.xAccountsTypeCompany,
+      XAccountType.organization => l10n.xAccountsTypeOrganization,
+      XAccountType.individual => l10n.xAccountsTypeIndividual,
+      XAccountType.otherArea => l10n.xAccountsTypeOtherArea,
+      XAccountType.unknown => l10n.xAccountsTypeUnknown,
     };

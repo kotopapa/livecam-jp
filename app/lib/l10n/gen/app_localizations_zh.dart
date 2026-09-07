@@ -2004,6 +2004,66 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get stockpileChooseShop => '选择商店';
+
+  @override
+  String get xAccountsTitle => '地方政府灾害信息（X）';
+
+  @override
+  String get xAccountsIntro =>
+      '由都道府县及国家机关运营的灾害信息账号。官方性已在各机关网站确认。点击将打开外部X。请务必确认运营主体的类别。';
+
+  @override
+  String get xAccountsBosaiLink => '查看地方政府灾害信息账号（X）';
+
+  @override
+  String xAccountsDetailLink(String pref) {
+    return '$pref的灾害信息账号（X）';
+  }
+
+  @override
+  String get xAccountsSectionPrefectures => '都道府县';
+
+  @override
+  String get xAccountsSectionNational => '国家机关';
+
+  @override
+  String get xAccountsSectionMunicipalities => '市区町村';
+
+  @override
+  String get xAccountsSectionArea => '本地区';
+
+  @override
+  String get xAccountsSectionAll => '全部';
+
+  @override
+  String get xAccountsEmpty => '无法加载列表';
+
+  @override
+  String get xAccountsNotDedicated => '综合账号（非灾害专用）';
+
+  @override
+  String get xAccountsTypeOfficial => '地方政府官方';
+
+  @override
+  String get xAccountsTypeGovRelated => '地方政府相关设施';
+
+  @override
+  String get xAccountsTypeNational => '国家机关（官方）';
+
+  @override
+  String get xAccountsTypeCompany => '民营企业';
+
+  @override
+  String get xAccountsTypeOrganization => '团体';
+
+  @override
+  String get xAccountsTypeIndividual => '个人';
+
+  @override
+  String get xAccountsTypeOtherArea => '其他地方政府';
+
+  @override
+  String get xAccountsTypeUnknown => '运营主体不明';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4007,4 +4067,64 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get stockpileChooseShop => '選擇商店';
+
+  @override
+  String get xAccountsTitle => '地方政府災害資訊（X）';
+
+  @override
+  String get xAccountsIntro =>
+      '由都道府縣及國家機關營運的災害資訊帳號。官方性已於各機關網站確認。點選將開啟外部X。請務必確認營運主體的類別。';
+
+  @override
+  String get xAccountsBosaiLink => '查看地方政府災害資訊帳號（X）';
+
+  @override
+  String xAccountsDetailLink(String pref) {
+    return '$pref的災害資訊帳號（X）';
+  }
+
+  @override
+  String get xAccountsSectionPrefectures => '都道府縣';
+
+  @override
+  String get xAccountsSectionNational => '國家機關';
+
+  @override
+  String get xAccountsSectionMunicipalities => '市區町村';
+
+  @override
+  String get xAccountsSectionArea => '本地區';
+
+  @override
+  String get xAccountsSectionAll => '全部';
+
+  @override
+  String get xAccountsEmpty => '無法載入清單';
+
+  @override
+  String get xAccountsNotDedicated => '綜合帳號（非災害專用）';
+
+  @override
+  String get xAccountsTypeOfficial => '地方政府官方';
+
+  @override
+  String get xAccountsTypeGovRelated => '地方政府相關設施';
+
+  @override
+  String get xAccountsTypeNational => '國家機關（官方）';
+
+  @override
+  String get xAccountsTypeCompany => '民營企業';
+
+  @override
+  String get xAccountsTypeOrganization => '團體';
+
+  @override
+  String get xAccountsTypeIndividual => '個人';
+
+  @override
+  String get xAccountsTypeOtherArea => '其他地方政府';
+
+  @override
+  String get xAccountsTypeUnknown => '營運主體不明';
 }

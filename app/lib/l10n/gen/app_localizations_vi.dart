@@ -2105,4 +2105,66 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get stockpileChooseShop => 'Chọn cửa hàng';
+
+  @override
+  String get xAccountsTitle => 'Thông tin thiên tai của chính quyền (X)';
+
+  @override
+  String get xAccountsIntro =>
+      'Tài khoản thông tin thiên tai do tỉnh và cơ quan nhà nước vận hành. Tính chính thức đã được xác nhận trên trang web của từng cơ quan. Chạm để mở X bên ngoài. Hãy luôn kiểm tra loại đơn vị vận hành.';
+
+  @override
+  String get xAccountsBosaiLink =>
+      'Xem tài khoản thông tin thiên tai của chính quyền (X)';
+
+  @override
+  String xAccountsDetailLink(String pref) {
+    return 'Tài khoản thông tin thiên tai của $pref (X)';
+  }
+
+  @override
+  String get xAccountsSectionPrefectures => 'Tỉnh';
+
+  @override
+  String get xAccountsSectionNational => 'Cơ quan nhà nước';
+
+  @override
+  String get xAccountsSectionMunicipalities => 'Thành phố/thị trấn/làng';
+
+  @override
+  String get xAccountsSectionArea => 'Khu vực này';
+
+  @override
+  String get xAccountsSectionAll => 'Tất cả';
+
+  @override
+  String get xAccountsEmpty => 'Không tải được danh sách';
+
+  @override
+  String get xAccountsNotDedicated =>
+      'Tài khoản tổng hợp (không chuyên về thiên tai)';
+
+  @override
+  String get xAccountsTypeOfficial => 'Chính quyền địa phương (chính thức)';
+
+  @override
+  String get xAccountsTypeGovRelated => 'Cơ sở thuộc chính quyền';
+
+  @override
+  String get xAccountsTypeNational => 'Cơ quan nhà nước (chính thức)';
+
+  @override
+  String get xAccountsTypeCompany => 'Doanh nghiệp tư nhân';
+
+  @override
+  String get xAccountsTypeOrganization => 'Tổ chức';
+
+  @override
+  String get xAccountsTypeIndividual => 'Cá nhân';
+
+  @override
+  String get xAccountsTypeOtherArea => 'Chính quyền địa phương khác';
+
+  @override
+  String get xAccountsTypeUnknown => 'Không rõ đơn vị vận hành';
 }

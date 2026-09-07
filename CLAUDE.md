@@ -146,3 +146,12 @@ python site/build.py                            # 配信ファイル生成
 - **国内カメラの municipality（JIS 5桁）は約5,100件が未設定だった**（2026-09-03 時点）。`tools/fill_municipality.py` が国土地理院逆ジオコーダで補完する（控え: data/municipality_geocache.json、県違いは書かずに報告）。新規取り込みで municipality を付けられなかったときはこれを回す。じゃらん導線と震度連動の市区町村カメラ一覧に効く
 - **気象庁 r8 map.json の一次細分区域コードのキーは `areaCode`**（`code` ではない）。`AppState.parseSpecialWarnings` は官署×dataTypeCode で最新報を採る
 - **アフィリエイトの明示は画面に出さない**（備え・宿導線とも）。利用規約 site/terms.html 第6条とプライバシーポリシー第5条でカバーする（2026-09-03 ユーザー判断）。新しい購入導線を作るときも画面内表記は不要、規約の記載範囲に含まれているかだけ確認する
+
+## 災害情報Xアカウントの知見（2026-09-07追記）
+
+- 自治体・国の機関の災害情報Xアカウントは `data/x_accounts.json`（採用: prefectures / municipalities / national_offices、調査用: candidates / excluded / unresolved_prefectures）。**アプリ内にポストは出さず外部Xを開くだけ**（X APIは従量課金・埋め込みは未ログインで表示されない）。運営主体の種別（type）は必ず併記する
+- 配信は `tools/x_accounts_publish.py` → `site/v1/x_accounts.json`（採用分・表示に要る欄だけ。type が official / national / gov_related 以外は落とす）。アプリは `app/lib/data/x_accounts.dart` が取得し6時間はメモリ控え、失敗時はディスク控え
+- **採用条件は「県サイトのSNS一覧など一次ソースに掲載されていること」**。ハンドル名の推測で見つかる「〇〇県防災」の多くは個人・休眠・別自治体。防災専用が無い県は県の総合公式を `dedicated=false` で載せる（アプリで「総合アカウント」と併記）
+- 実在確認は `tools/x_account_verify.py`（x.com の og メタデータ）。投稿確認 `tools/x_account_posts.py` は429が出やすく1件4分以上空ける
+- 国の機関（河川事務所等）は管轄が複数県にまたがるので `area_codes` 配列で持つ（例: 江戸川河川事務所 = 11/12/13）
+
