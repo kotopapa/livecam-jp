@@ -98,6 +98,24 @@ def test_aggregate_multiple_kinds_same_pref_merged():
     assert "ほか1件" in pref_push[0][1]
 
 
+def test_aggregate_danger_prefs_do_not_mix_in_pref_topics():
+    """同一チェックで福島=土砂災害危険警報・茨城=大雨危険警報が並んでも、
+    県別トピックの本文に他県の警報が混ざらない（2026-09-07 の実発表パターン）"""
+    events = [("07", "49", "danger", "土砂災害危険警報"),
+              ("08", "43", "danger", "大雨危険警報")]
+    pushes = {p[0]: (p[1], p[2]) for p in bosai_notify.aggregate_warning_pushes(events)}
+    assert set(pushes) == {"danger-warning", "danger-warning-07", "danger-warning-08"}
+    nat_title, nat_body = pushes["danger-warning"]
+    assert nat_title == "危険警報が発表されました（警戒レベル4相当）"
+    assert "福島県に土砂災害危険警報" in nat_body and "茨城県に大雨危険警報" in nat_body
+    t07, b07 = pushes["danger-warning-07"]
+    assert t07.startswith("土砂災害危険警報が発表されました")
+    assert b07.startswith("福島県に土砂災害危険警報") and "大雨" not in b07 and "茨城" not in b07
+    t08, b08 = pushes["danger-warning-08"]
+    assert t08.startswith("大雨危険警報が発表されました")
+    assert b08.startswith("茨城県に大雨危険警報") and "土砂" not in b08 and "福島" not in b08
+
+
 def test_aggregate_danger_family_separate_topic_and_tag():
     events = [("14", "43", "danger", "大雨危険警報"),
               ("13", "33", "special", "大雨特別警報")]

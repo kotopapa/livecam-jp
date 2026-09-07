@@ -48,6 +48,13 @@ class _MapScreenState extends State<MapScreen> {
   static const _initialZoom = 5.0;
 
   final MapController _controller = MapController();
+  // flutter_map 8.3.x はフリック/ピンチの端で内部カメラが NaN になることがある
+  // (fleaflet/flutter_map#2221, #2244。Crashlytics「Infinity or NaN toInt」)。
+  // NaN のままだとタイル計算が毎フレーム失敗して地図が固まるため、
+  // 直前の正常な位置へ戻して復旧する
+  LatLng _lastGoodCenter = _initialCenter;
+  double _lastGoodZoom = _initialZoom;
+  bool _recovering = false;
   double _zoom = _initialZoom;
   LatLng? _myLocation;
   bool _locating = false;
@@ -1710,6 +1717,25 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  static bool _isFiniteCamera(MapCamera c) =>
+      c.center.latitude.isFinite &&
+      c.center.longitude.isFinite &&
+      c.zoom.isFinite;
+
+  /// カメラが NaN/Infinity になったら次フレームで直前の正常値へ戻す。
+  /// フリングのアニメーション中は毎フレーム呼ばれるので1回にまとめる
+  void _recoverCamera() {
+    if (_recovering) return;
+    _recovering = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _recovering = false;
+      if (!mounted) return;
+      try {
+        _controller.move(_lastGoodCenter, _lastGoodZoom);
+      } catch (_) {}
+    });
+  }
+
   void _zoomBy(double delta) {
     final z = (_controller.camera.zoom + delta).clamp(2.0, 18.0);
     _controller.move(_controller.camera.center, z);
@@ -2021,6 +2047,12 @@ class _MapScreenState extends State<MapScreen> {
             interactionOptions: const InteractionOptions(
                 flags: InteractiveFlag.all & ~InteractiveFlag.rotate),
             onPositionChanged: (camera, hasGesture) {
+              if (!_isFiniteCamera(camera)) {
+                _recoverCamera();
+                return;
+              }
+              _lastGoodCenter = camera.center;
+              _lastGoodZoom = camera.zoom;
               if (hasGesture && _following) _stopFollowing();
               // ピンチ中の毎フレーム再構築はフリーズ→強制終了の原因になる。
               // ジェスチャー中はズーム2段以上の大変化だけ間引いて反映し、
