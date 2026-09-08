@@ -167,14 +167,14 @@ class _HomeShellState extends State<HomeShell> {
 
   @override
   Widget build(BuildContext context) {
-    // 下部固定バナー: 一覧・災害速報・備えタブ（地図と設定には出さない）。
+    // 下部固定バナー: 地図・一覧・災害速報・備えタブ（設定には出さない）。
+    // 地図は最も見られている画面なので 1.4.3 から表示する（2026-09-08 ユーザー判断）。
+    // 地図の下に置く（IndexedStack の外）ので、地図の凡例・操作ボタンとは重ならない
     // 備えは以前リスト途中に 300×250 の大型広告を置いていたが、
     // 邪魔だという指摘で他タブと同じ下部固定の横長バナーに統一した
     // 利用者が特別警報の発表エリアに居る間は防災アプリとして広告を出さない
     // （エリア外の人には出す。AppState.viewerInSpecialWarningArea）
-    final showAd =
-        (_index == 1 || _index == 2 || _index == 3) &&
-        !widget.app.viewerInSpecialWarningArea;
+    final showAd = _index != 4 && !widget.app.viewerInSpecialWarningArea;
     return Scaffold(
       body: Column(
         children: [

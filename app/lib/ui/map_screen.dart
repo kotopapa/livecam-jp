@@ -15,6 +15,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
 import '../l10n/l10n.dart';
+import '../data/even_zoom_tile_provider.dart';
 import '../data/facility_layers.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
@@ -1336,12 +1337,9 @@ class _MapScreenState extends State<MapScreen> {
         return [
           Opacity(
             opacity: 0.6,
-            child: TileLayer(
-              key: ValueKey('nowc-${n.validtime}'),
+            child: _jmaTileLayer(
+              layerKey: 'nowc-${n.product}',
               urlTemplate: n.tileTemplate,
-              maxNativeZoom: 10,
-              userAgentPackageName: 'jp.livecam.livecam_jp',
-              errorTileCallback: (_, _, _) {},
             ),
           ),
         ];
@@ -1375,12 +1373,9 @@ class _MapScreenState extends State<MapScreen> {
           if (tile != null)
             Opacity(
               opacity: 0.65,
-              child: TileLayer(
-                key: ValueKey('rasrf24h-${tile.validtime}'),
+              child: _jmaTileLayer(
+                layerKey: 'rasrf24h',
                 urlTemplate: tile.tileTemplate,
-                maxNativeZoom: 10,
-                userAgentPackageName: 'jp.livecam.livecam_jp',
-                errorTileCallback: (_, _, _) {},
               ),
             ),
           // 市街地ズームでは観測点の実測値(mm)を重ねる（tenki.jp方式）
@@ -1424,13 +1419,9 @@ class _MapScreenState extends State<MapScreen> {
         return [
           Opacity(
             opacity: 0.65,
-            child: TileLayer(
-              key: ValueKey('risk-${RiskLayers.element(_layer)}-${risk.validtime}'),
+            child: _jmaTileLayer(
+              layerKey: 'risk-${RiskLayers.element(_layer)}',
               urlTemplate: risk.tileTemplate(_layer),
-              minNativeZoom: RiskLayers.minZoom,
-              maxNativeZoom: RiskLayers.maxZoom,
-              userAgentPackageName: 'jp.livecam.livecam_jp',
-              errorTileCallback: (_, _, _) {},
             ),
           ),
         ];
@@ -1475,6 +1466,26 @@ class _MapScreenState extends State<MapScreen> {
     if (world != _useWorldTiles) {
       setState(() => _useWorldTiles = world);
     }
+  }
+
+  /// 気象庁タイル（偶数ズームのみ生成。maxNativeZoom 10）用の TileLayer。
+  /// 奇数ズームは EvenZoomTileProvider が親タイルの4分の1を拡大して埋める。
+  /// [layerKey] はレイヤー種別ごとに固定にする（時刻を含めない）。時刻更新は
+  /// urlTemplate の変更として flutter_map が前の画像を残したまま差し替えるので、
+  /// レイヤーを作り直したときのような一瞬の消えが起きない
+  Widget _jmaTileLayer({
+    required String layerKey,
+    required String urlTemplate,
+  }) {
+    return TileLayer(
+      key: ValueKey(layerKey),
+      urlTemplate: urlTemplate,
+      tileProvider: EvenZoomTileProvider(),
+      minNativeZoom: 4,
+      maxNativeZoom: 10,
+      userAgentPackageName: 'jp.livecam.livecam_jp',
+      errorTileCallback: (_, _, _) {},
+    );
   }
 
   // --- 起動時の初期位置 ---

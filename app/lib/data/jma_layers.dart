@@ -116,6 +116,12 @@ class RiskTime {
   }
 }
 
+/// 気象庁タイル（雨雲レーダー hrpns・降水短時間予報 rasrf/rasrf24h・キキクル land/inund/
+/// flood_mesh）は**偶数ズームのタイルしか生成されない**（各 properties.xml の
+/// `zoomUse="even"`、maxNativeZoom 10〜11）。奇数ズームやそれ以上のズームで同じ z の
+/// タイルを要求すると透明タイル（334バイト）が返り何も描画されない（2026-09-08 不具合報告）。
+/// 地図側は `EvenZoomTileProvider`（奇数ズームは親タイルの4分の1を拡大）と
+/// maxNativeZoom 10 で対応する。
 /// 気象庁「キキクル（危険度分布）」のタイル（無料・認証不要。SPEC C2）。
 /// 大雨で「今どこが危ないか」を1kmメッシュ／河川区間ごとに示す実況。10分更新。
 /// 出典：気象庁ホームページ https://www.jma.go.jp/bosai/risk/
@@ -136,11 +142,14 @@ class RiskLayers {
         _ => false,
       };
 
-  /// レイヤー種別 → タイルURLの element
+  /// レイヤー種別 → タイルURLの element。
+  /// 洪水は `flood`（気象庁サイトの河川線。実体は pbf ベクタで、PNG は全国常に透明）
+  /// ではなく、メッシュ形式の PNG `flood_mesh` を使う（2026-09-08 確認。凡例は
+  /// legend_jp_normal_flood.svg「洪水害の危険度」で土砂・浸水と同じ4段階）
   static String element(MapLayerKind k) => switch (k) {
         MapLayerKind.riskLand => 'land',
         MapLayerKind.riskInund => 'inund',
-        MapLayerKind.riskFlood => 'flood',
+        MapLayerKind.riskFlood => 'flood_mesh',
         _ => '',
       };
 

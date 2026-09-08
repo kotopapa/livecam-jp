@@ -12,7 +12,7 @@ void main() {
   test('レイヤー種別 → element とタイルURL', () {
     expect(RiskLayers.element(MapLayerKind.riskLand), 'land');
     expect(RiskLayers.element(MapLayerKind.riskInund), 'inund');
-    expect(RiskLayers.element(MapLayerKind.riskFlood), 'flood');
+    expect(RiskLayers.element(MapLayerKind.riskFlood), 'flood_mesh'); // PNG は flood_mesh（surf/flood は常に透明）
 
     // targetTimes.json の実エントリ。member はエントリの値をそのまま使う（none にすると404）
     const t = RiskTime('20260831034000', '20260831034000', 'immed0');
@@ -26,13 +26,13 @@ void main() {
     );
     expect(
       t.tileTemplate(MapLayerKind.riskFlood),
-      'https://www.jma.go.jp/bosai/jmatile/data/risk/20260831034000/immed0/20260831034000/surf/flood/{z}/{x}/{y}.png',
+      'https://www.jma.go.jp/bosai/jmatile/data/risk/20260831034000/immed0/20260831034000/surf/flood_mesh/{z}/{x}/{y}.png',
     );
     // 実況の古いエントリは member=none
     const old = RiskTime('20260831020000', '20260831020000', 'none');
     expect(
       old.tileTemplate(MapLayerKind.riskFlood),
-      'https://www.jma.go.jp/bosai/jmatile/data/risk/20260831020000/none/20260831020000/surf/flood/{z}/{x}/{y}.png',
+      'https://www.jma.go.jp/bosai/jmatile/data/risk/20260831020000/none/20260831020000/surf/flood_mesh/{z}/{x}/{y}.png',
     );
     // キキクル以外は空文字（URL を組み立てない）
     expect(t.tileTemplate(MapLayerKind.rainRadar), '');
