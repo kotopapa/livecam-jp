@@ -1,10 +1,11 @@
 {
  "cameras": {
   "curated-ginza-sukiyabashi": {
-   "total": 5,
+   "total": 6,
    "days": {
     "20260905": 1,
-    "20260906": 2
+    "20260906": 2,
+    "20260909": 1
    }
   },
   "curated-ishigaki-rbc": {
@@ -20,7 +21,6 @@
   "curated-katase-higashihama": {
    "total": 7,
    "days": {
-    "20260902": 2,
     "20260904": 1,
     "20260906": 2
    }
@@ -35,13 +35,13 @@
    }
   },
   "curated-r2-9be53e5b": {
-   "total": 18,
+   "total": 19,
    "days": {
-    "20260902": 1,
     "20260903": 2,
     "20260906": 3,
     "20260907": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-r2-c3b76507": {
@@ -82,18 +82,18 @@
   "curated-r2-8da9df43": {
    "total": 11,
    "days": {
-    "20260902": 1,
     "20260903": 1,
     "20260904": 1,
     "20260907": 2
    }
   },
   "curated-r2-9895fb0c": {
-   "total": 8,
+   "total": 12,
    "days": {
     "20260904": 1,
     "20260907": 3,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 4
    }
   },
   "curated-r2-f9ea5a50": {
@@ -104,13 +104,14 @@
    }
   },
   "curated-shibuya-ann": {
-   "total": 11,
+   "total": 13,
    "days": {
     "20260903": 1,
     "20260904": 2,
     "20260906": 1,
     "20260907": 2,
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 2
    }
   },
   "world-609bfded": {
@@ -130,25 +131,28 @@
    "days": {}
   },
   "curated-r2-f299c0dd": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260906": 2,
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-still-yokohama-546644": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-tokushima-kachidoki": {
-   "total": 15,
+   "total": 18,
    "days": {
     "20260904": 4,
     "20260907": 3,
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 3
    }
   },
   "jma-volcam-31001": {
@@ -178,26 +182,24 @@
    "days": {}
   },
   "curated-enoshima-riviera": {
-   "total": 8,
+   "total": 9,
    "days": {
     "20260903": 2,
     "20260904": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-r2-64c66778": {
    "total": 9,
    "days": {
-    "20260902": 1,
     "20260906": 1,
     "20260908": 2
    }
   },
   "curated-r2-e66c94b8": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-rito-toshima": {
    "total": 2,
@@ -228,11 +230,12 @@
    }
   },
   "curated-still-arctic-nyalesund": {
-   "total": 16,
+   "total": 17,
    "days": {
     "20260903": 2,
     "20260905": 1,
-    "20260906": 2
+    "20260906": 2,
+    "20260909": 1
    }
   },
   "curated-still-ihighway-02013": {
@@ -286,8 +289,10 @@
    }
   },
   "world-1e199877": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "world-4b26cc58": {
    "total": 2,
@@ -406,9 +411,10 @@
    "days": {}
   },
   "curated-coast-chosei-hitotsumatsu": {
-   "total": 5,
+   "total": 6,
    "days": {
-    "20260906": 4
+    "20260906": 4,
+    "20260909": 1
    }
   },
   "curated-mable-kasugakita": {
@@ -429,9 +435,7 @@
   },
   "curated-other-minamiawaji-fujii-carwash-2": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-street-obiyamachi-kochi": {
    "total": 1,
@@ -462,9 +466,10 @@
    }
   },
   "curated-amaharashi": {
-   "total": 23,
+   "total": 24,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-arimabaru-beach-motobu": {
@@ -486,9 +491,7 @@
   },
   "curated-hakata-kbc": {
    "total": 7,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-healing-yanbaru-aha-ikimono": {
    "total": 2,
@@ -500,9 +503,7 @@
   },
   "curated-kariyushi-beach": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-link-healing-lake-furen": {
    "total": 1,
@@ -519,10 +520,11 @@
    }
   },
   "curated-r2-b86f9a98": {
-   "total": 4,
+   "total": 6,
    "days": {
     "20260905": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-r2-e3dd3964": {
@@ -533,16 +535,15 @@
   },
   "curated-road-awaji-sa-akashi-kaikyo": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-shibuya-fnn": {
-   "total": 5,
+   "total": 7,
    "days": {
     "20260904": 1,
     "20260907": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-still-kaiho-saromako-entrance-lt": {
@@ -554,40 +555,42 @@
    "days": {}
   },
   "curated-still-osaka-kasen11": {
-   "total": 4,
-   "days": {}
+   "total": 5,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-still-other-amagi-yakuba": {
    "total": 4,
    "days": {}
   },
   "curated-street-fst-ikuno-koreatown": {
-   "total": 5,
+   "total": 6,
    "days": {
-    "20260902": 1
+    "20260909": 1
    }
   },
   "curated-tokushima-pref-katsuuragawa-komatsushima": {
-   "total": 13,
+   "total": 15,
    "days": {
-    "20260902": 2,
     "20260903": 1,
     "20260905": 1,
     "20260906": 1,
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-tokushima-pref-nakagawa-kito": {
-   "total": 26,
+   "total": 28,
    "days": {
-    "20260902": 4,
     "20260903": 3,
     "20260904": 4,
     "20260905": 2,
     "20260906": 2,
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "kawabou-106913068": {
@@ -677,10 +680,11 @@
    "days": {}
   },
   "yt-skr-6b773bb4d8": {
-   "total": 5,
+   "total": 6,
    "days": {
     "20260904": 1,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-achi-namiai-park-hoshizora": {
@@ -690,7 +694,6 @@
   "curated-asahi-chiba-city": {
    "total": 28,
    "days": {
-    "20260902": 3,
     "20260903": 1,
     "20260906": 3,
     "20260907": 15,
@@ -747,7 +750,6 @@
   "curated-fbc-daimyocho": {
    "total": 25,
    "days": {
-    "20260902": 1,
     "20260903": 1,
     "20260904": 2,
     "20260906": 1,
@@ -757,39 +759,38 @@
   "curated-fbc-echizen-port": {
    "total": 8,
    "days": {
-    "20260902": 2,
     "20260908": 1
    }
   },
   "curated-fbc-fukui-owada": {
-   "total": 48,
+   "total": 49,
    "days": {
     "20260903": 1,
     "20260906": 2,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-fbc-fukui-sta": {
-   "total": 16,
+   "total": 17,
    "days": {
-    "20260902": 2,
     "20260904": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-fctv-kida-bashi": {
-   "total": 53,
+   "total": 54,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260906": 2,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-fctv-mikuni-sunset": {
    "total": 12,
    "days": {
-    "20260902": 1,
     "20260907": 2,
     "20260908": 1
    }
@@ -803,7 +804,6 @@
   "curated-fukui-owada": {
    "total": 35,
    "days": {
-    "20260902": 1,
     "20260905": 1,
     "20260906": 2
    }
@@ -914,15 +914,15 @@
    "days": {}
   },
   "curated-karuizawa-yukawa": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-kashiwa-r16": {
    "total": 9,
    "days": {
-    "20260902": 2,
     "20260904": 1,
     "20260906": 2,
     "20260907": 1,
@@ -930,12 +930,12 @@
    }
   },
   "curated-kbn-seto-ohashi": {
-   "total": 6,
+   "total": 8,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260906": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-knb-namerikawa": {
@@ -958,8 +958,10 @@
    "days": {}
   },
   "curated-kotohira-meteor-asahi": {
-   "total": 2,
-   "days": {}
+   "total": 4,
+   "days": {
+    "20260909": 2
+   }
   },
   "curated-kusatsu-onsenmon": {
    "total": 1,
@@ -970,8 +972,10 @@
    "days": {}
   },
   "curated-lcv-area-roads": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-link-coast-yoron-paradise-beach": {
    "total": 2,
@@ -998,9 +1002,10 @@
    "days": {}
   },
   "curated-marina-yokohama-bayside-marina-1": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-mitake-takimoto": {
@@ -1025,18 +1030,17 @@
   },
   "curated-muni-komatsu-fire-hq": {
    "total": 16,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-muni-oshino-nijumagari": {
    "total": 1,
    "days": {}
   },
   "curated-nagoya-sta-ctv": {
-   "total": 12,
+   "total": 19,
    "days": {
-    "20260908": 11
+    "20260908": 11,
+    "20260909": 7
    }
   },
   "curated-ncc-nagasaki-airport": {
@@ -1052,14 +1056,17 @@
    "days": {}
   },
   "curated-omaezaki-port": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-onsen-yarimikan-yarigatake": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-osaka-castle-tvo": {
    "total": 6,
@@ -1099,10 +1106,11 @@
    }
   },
   "curated-r2-27a284f1": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-r2-30ccae15": {
@@ -1132,9 +1140,10 @@
    "days": {}
   },
   "curated-r2-6e69c75e": {
-   "total": 4,
+   "total": 6,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "curated-r2-81277eca": {
@@ -1159,12 +1168,12 @@
    }
   },
   "curated-r2-990b2549": {
-   "total": 14,
+   "total": 16,
    "days": {
-    "20260902": 6,
     "20260903": 1,
     "20260904": 2,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "curated-r2-9b54c53f": {
@@ -1210,7 +1219,6 @@
   "curated-r2-ddfe315c": {
    "total": 7,
    "days": {
-    "20260902": 2,
     "20260904": 1,
     "20260907": 1,
     "20260908": 1
@@ -1243,18 +1251,20 @@
    "days": {}
   },
   "curated-rito-oshima": {
-   "total": 13,
+   "total": 15,
    "days": {
     "20260906": 3,
     "20260907": 5,
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 2
    }
   },
   "curated-river-kinokawa-city-chozuki": {
-   "total": 7,
+   "total": 8,
    "days": {
     "20260907": 1,
-    "20260908": 5
+    "20260908": 5,
+    "20260909": 1
    }
   },
   "curated-road-hikone-log-morido-r8": {
@@ -1266,16 +1276,16 @@
    "days": {}
   },
   "curated-satta-kotsu": {
-   "total": 4,
+   "total": 7,
    "days": {
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 3
    }
   },
   "curated-scenic-asahi-miyazaki-oyodogawa": {
    "total": 15,
    "days": {
-    "20260902": 3,
     "20260904": 7,
     "20260905": 2,
     "20260906": 2
@@ -1301,12 +1311,12 @@
    "days": {}
   },
   "curated-scenic-tsukiji-asahi": {
-   "total": 9,
+   "total": 10,
    "days": {
-    "20260902": 3,
     "20260905": 1,
     "20260906": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-shrine-toudaijima-inari-urayasu": {
@@ -1314,8 +1324,10 @@
    "days": {}
   },
   "curated-shrine-toyokawa-susanoo": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-ski-hakodateyama-parking": {
    "total": 1,
@@ -1366,7 +1378,6 @@
   "curated-still-hotel-ichihara-marine": {
    "total": 6,
    "days": {
-    "20260902": 1,
     "20260906": 2,
     "20260907": 1
    }
@@ -1390,7 +1401,6 @@
   "curated-still-ihighway-04033": {
    "total": 6,
    "days": {
-    "20260902": 1,
     "20260905": 3
    }
   },
@@ -1447,15 +1457,15 @@
   "curated-still-ihighway-952515201100": {
    "total": 7,
    "days": {
-    "20260902": 1,
     "20260906": 3,
     "20260907": 1
    }
   },
   "curated-still-ihighway-952515201300": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "curated-still-ihighway-952515201550": {
@@ -1523,14 +1533,11 @@
   },
   "curated-still-kaiho-miirakunagasakihana-lt": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-still-kanagawa-coast-chigasaki": {
    "total": 5,
    "days": {
-    "20260902": 1,
     "20260904": 1
    }
   },
@@ -1609,7 +1616,6 @@
   "curated-still-port-inage-yacht-harbor": {
    "total": 14,
    "days": {
-    "20260902": 2,
     "20260904": 1,
     "20260906": 1,
     "20260907": 6
@@ -1685,10 +1691,11 @@
    }
   },
   "curated-street-fst-kadoma-costco": {
-   "total": 6,
+   "total": 8,
    "days": {
     "20260906": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-street-fst-kadoma-ic": {
@@ -1716,17 +1723,16 @@
   "curated-street-fst-shinsaibashi-shinbashi": {
    "total": 7,
    "days": {
-    "20260902": 2,
     "20260903": 1
    }
   },
   "curated-street-kabukicho-godzilla": {
-   "total": 12,
+   "total": 13,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260907": 1,
-    "20260908": 5
+    "20260908": 5,
+    "20260909": 1
    }
   },
   "curated-street-kanda-sta-kita": {
@@ -1740,15 +1746,15 @@
   "curated-street-nipponbashi-bouhan110": {
    "total": 7,
    "days": {
-    "20260902": 1,
     "20260904": 2
    }
   },
   "curated-street-omoide-yokocho": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260904": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-street-tanukikoji-4": {
@@ -1770,21 +1776,23 @@
    }
   },
   "curated-tokyo-catguardian": {
-   "total": 8,
+   "total": 10,
    "days": {
     "20260904": 1,
     "20260906": 3,
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "curated-tokyo-dome-city-official": {
-   "total": 8,
+   "total": 11,
    "days": {
     "20260904": 2,
     "20260905": 1,
     "20260906": 1,
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 3
    }
   },
   "curated-univ-showa-womens": {
@@ -2132,8 +2140,10 @@
    "days": {}
   },
   "ishikawa-road-48": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "ishikawa-road-49": {
    "total": 2,
@@ -2159,12 +2169,12 @@
    "days": {}
   },
   "ishikawa-road-55": {
-   "total": 236,
+   "total": 237,
    "days": {
-    "20260902": 1,
     "20260903": 4,
     "20260906": 4,
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 1
    }
   },
   "ishikawa-road-56": {
@@ -2316,15 +2326,11 @@
   },
   "kawabou-100513038": {
    "total": 7,
-   "days": {
-    "20260902": 4
-   }
+   "days": {}
   },
   "kawabou-100513040": {
    "total": 3,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "kawabou-101281001": {
    "total": 1,
@@ -2339,8 +2345,10 @@
    "days": {}
   },
   "kawabou-102049016": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-102049021": {
    "total": 1,
@@ -2355,8 +2363,10 @@
    "days": {}
   },
   "kawabou-102049033": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-102049037": {
    "total": 1,
@@ -2448,7 +2458,6 @@
   "kawabou-103073054": {
    "total": 7,
    "days": {
-    "20260902": 1,
     "20260906": 1,
     "20260907": 4
    }
@@ -2539,7 +2548,6 @@
   "kawabou-104353006": {
    "total": 69,
    "days": {
-    "20260902": 4,
     "20260903": 3,
     "20260905": 1
    }
@@ -2563,7 +2571,6 @@
   "kawabou-104353009": {
    "total": 46,
    "days": {
-    "20260902": 1,
     "20260906": 1,
     "20260908": 1
    }
@@ -2591,9 +2598,10 @@
    "days": {}
   },
   "kawabou-104353019": {
-   "total": 17,
+   "total": 18,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-104353020": {
@@ -2607,9 +2615,10 @@
    "days": {}
   },
   "kawabou-104353022": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-104353023": {
@@ -2651,8 +2660,10 @@
    "days": {}
   },
   "kawabou-104353045": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-104353046": {
    "total": 3,
@@ -2829,16 +2840,18 @@
    }
   },
   "kawabou-104353115": {
-   "total": 58,
+   "total": 59,
    "days": {
     "20260903": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-104353116": {
-   "total": 12,
+   "total": 13,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "kawabou-104353118": {
@@ -2879,9 +2892,7 @@
   },
   "kawabou-104353129": {
    "total": 23,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-104353130": {
    "total": 4,
@@ -2974,8 +2985,10 @@
    "days": {}
   },
   "kawabou-104353177": {
-   "total": 3,
-   "days": {}
+   "total": 4,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-104353180": {
    "total": 1,
@@ -3120,8 +3133,10 @@
    "days": {}
   },
   "kawabou-11701201001": {
-   "total": 5,
-   "days": {}
+   "total": 6,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-11701201002": {
    "total": 1,
@@ -3155,7 +3170,6 @@
   "kawabou-121555068": {
    "total": 27,
    "days": {
-    "20260902": 1,
     "20260903": 1
    }
   },
@@ -3204,7 +3218,6 @@
   "kawabou-122845090": {
    "total": 6,
    "days": {
-    "20260902": 1,
     "20260904": 2,
     "20260905": 1,
     "20260906": 1
@@ -3221,26 +3234,20 @@
   "kawabou-221013012": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260905": 1
    }
   },
   "kawabou-221013013": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-221013025": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-221013032": {
    "total": 6,
    "days": {
-    "20260902": 3,
     "20260903": 2
    }
   },
@@ -3261,9 +3268,10 @@
    "days": {}
   },
   "kawabou-221271002": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-221271007": {
@@ -3271,8 +3279,10 @@
    "days": {}
   },
   "kawabou-221271018": {
-   "total": 1,
-   "days": {}
+   "total": 4,
+   "days": {
+    "20260909": 3
+   }
   },
   "kawabou-221271019": {
    "total": 1,
@@ -3283,12 +3293,16 @@
    "days": {}
   },
   "kawabou-221279013": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-221279029": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-221279035": {
    "total": 1,
@@ -3301,15 +3315,16 @@
   "kawabou-221281001": {
    "total": 8,
    "days": {
-    "20260902": 1,
     "20260905": 1,
     "20260906": 2,
     "20260907": 2
    }
   },
   "kawabou-221281005": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-221281007": {
    "total": 3,
@@ -3370,8 +3385,10 @@
    "days": {}
   },
   "kawabou-221335067": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-221335068": {
    "total": 1,
@@ -3547,8 +3564,10 @@
    "days": {}
   },
   "kawabou-221555040": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-221555041": {
    "total": 6,
@@ -3706,9 +3725,7 @@
   },
   "kawabou-221565044": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-221565046": {
    "total": 4,
@@ -3739,15 +3756,17 @@
    "days": {}
   },
   "kawabou-221782026": {
-   "total": 9,
+   "total": 16,
    "days": {
-    "20260908": 8
+    "20260908": 8,
+    "20260909": 7
    }
   },
   "kawabou-221782028": {
-   "total": 8,
+   "total": 10,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 2
    }
   },
   "kawabou-221801036": {
@@ -3797,8 +3816,10 @@
    "days": {}
   },
   "kawabou-222068022": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-222068025": {
    "total": 1,
@@ -3824,9 +3845,7 @@
   },
   "kawabou-222097006": {
    "total": 9,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-222097007": {
    "total": 2,
@@ -3835,7 +3854,6 @@
   "kawabou-222097011": {
    "total": 14,
    "days": {
-    "20260902": 2,
     "20260908": 1
    }
   },
@@ -3846,9 +3864,10 @@
    }
   },
   "kawabou-222549017": {
-   "total": 2,
+   "total": 6,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 4
    }
   },
   "kawabou-222551008": {
@@ -3872,8 +3891,10 @@
    "days": {}
   },
   "kawabou-302049025": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-302049027": {
    "total": 2,
@@ -4030,13 +4051,16 @@
    }
   },
   "kawabou-304103004": {
-   "total": 12,
-   "days": {}
+   "total": 13,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-304103005": {
-   "total": 19,
+   "total": 20,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "kawabou-304103006": {
@@ -4103,9 +4127,7 @@
   },
   "kawabou-304353005": {
    "total": 15,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-304353007": {
    "total": 1,
@@ -4133,9 +4155,7 @@
   },
   "kawabou-304353013": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-304353015": {
    "total": 8,
@@ -4168,9 +4188,10 @@
    "days": {}
   },
   "kawabou-304353023": {
-   "total": 13,
+   "total": 15,
    "days": {
-    "20260906": 2
+    "20260906": 2,
+    "20260909": 2
    }
   },
   "kawabou-304353024": {
@@ -4178,9 +4199,10 @@
    "days": {}
   },
   "kawabou-304353025": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "kawabou-304353026": {
@@ -4209,7 +4231,6 @@
   "kawabou-304353033": {
    "total": 43,
    "days": {
-    "20260902": 1,
     "20260903": 1,
     "20260905": 1,
     "20260906": 2
@@ -4322,8 +4343,10 @@
    "days": {}
   },
   "kawabou-307185002": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-309729006": {
    "total": 1,
@@ -4369,18 +4392,17 @@
   },
   "mlit-hrr-road-761031": {
    "total": 5,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "mlit-hrr-road-761032": {
    "total": 1,
    "days": {}
   },
   "mlit-hrr-road-761087": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "mlit-hrr-road-761158": {
@@ -4388,8 +4410,10 @@
    "days": {}
   },
   "mlit-hrr-road-761173": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "mlit-hrr-road-761175": {
    "total": 4,
@@ -4422,8 +4446,10 @@
    "days": {}
   },
   "mlit-ktr-221320027": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "mlit-ktr-221320031": {
    "total": 7,
@@ -4435,11 +4461,12 @@
    }
   },
   "mlit-ktr-221320032": {
-   "total": 17,
+   "total": 18,
    "days": {
     "20260904": 2,
     "20260906": 9,
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "mlit-ktr-221320045": {
@@ -4479,9 +4506,10 @@
    "days": {}
   },
   "mlit-ktr-road-oomiya-39c": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "mlit-ktr-road-oomiya-55a": {
@@ -4521,9 +4549,10 @@
    "days": {}
   },
   "muni-kasugai-6840bbbe54": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "muni-yokosuka-8b5b95e18e": {
@@ -4559,9 +4588,10 @@
    "days": {}
   },
   "tokyo-suibo-002": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "tokyo-suibo-007": {
@@ -4569,11 +4599,12 @@
    "days": {}
   },
   "tokyo-suibo-011": {
-   "total": 9,
+   "total": 10,
    "days": {
     "20260906": 3,
     "20260907": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "tokyo-suibo-026": {
@@ -4583,10 +4614,11 @@
    }
   },
   "tokyo-suibo-031": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260906": 3,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "tokyo-suibo-032": {
@@ -4636,8 +4668,10 @@
    "days": {}
   },
   "toyama-road-062": {
-   "total": 5,
-   "days": {}
+   "total": 6,
+   "days": {
+    "20260909": 1
+   }
   },
   "toyama-road-066": {
    "total": 1,
@@ -4692,9 +4726,10 @@
    "days": {}
   },
   "toyama-road-221": {
-   "total": 20,
+   "total": 22,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "toyama-road-223": {
@@ -4752,12 +4787,16 @@
    "days": {}
   },
   "toyama-road-255": {
-   "total": 1,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 2
+   }
   },
   "toyama-road-256": {
-   "total": 9,
-   "days": {}
+   "total": 10,
+   "days": {
+    "20260909": 1
+   }
   },
   "toyama-road-257": {
    "total": 3,
@@ -4770,8 +4809,10 @@
    "days": {}
   },
   "toyama-road-260": {
-   "total": 3,
-   "days": {}
+   "total": 4,
+   "days": {
+    "20260909": 1
+   }
   },
   "toyama-road-262": {
    "total": 1,
@@ -4828,30 +4869,34 @@
    "days": {}
   },
   "toyama-road-308": {
-   "total": 15,
+   "total": 16,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "toyama-road-309": {
-   "total": 19,
+   "total": 20,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "toyama-road-310": {
-   "total": 40,
+   "total": 41,
    "days": {
     "20260903": 1,
     "20260904": 1,
     "20260906": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "toyama-road-311": {
-   "total": 34,
+   "total": 35,
    "days": {
-    "20260906": 3
+    "20260906": 3,
+    "20260909": 1
    }
   },
   "toyama-road-312": {
@@ -4869,8 +4914,10 @@
    "days": {}
   },
   "toyama-road-341": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "toyama-road-342": {
    "total": 5,
@@ -4927,9 +4974,10 @@
    "days": {}
   },
   "world-604a0246": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "world-6115eac8": {
@@ -4970,9 +5018,7 @@
   },
   "yt-hrr-c270b07fda": {
    "total": 3,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "yt-hrr-fdfd833249": {
    "total": 7,
@@ -5019,9 +5065,10 @@
    "days": {}
   },
   "curated-fctv-fukui-nishi": {
-   "total": 18,
+   "total": 19,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "curated-fctv-nanjo-sa": {
@@ -5037,13 +5084,14 @@
   "curated-fctv-shinkuzuryu": {
    "total": 31,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "curated-fuji-5thstation": {
-   "total": 5,
-   "days": {}
+   "total": 7,
+   "days": {
+    "20260909": 2
+   }
   },
   "curated-fukuoka-tnc": {
    "total": 6,
@@ -5092,9 +5140,10 @@
    }
   },
   "curated-kyoto-hachijoguchi": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260905": 1
+    "20260905": 1,
+    "20260909": 1
    }
   },
   "curated-kyoto-higashihonganji-morishin": {
@@ -5110,9 +5159,10 @@
    "days": {}
   },
   "curated-lcdb-040c6858": {
-   "total": 13,
+   "total": 14,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-25880da9": {
@@ -5127,9 +5177,10 @@
    }
   },
   "curated-lcdb-40b72f46": {
-   "total": 19,
+   "total": 23,
    "days": {
-    "20260908": 18
+    "20260908": 18,
+    "20260909": 4
    }
   },
   "curated-lcdb-43b92242": {
@@ -5156,7 +5207,6 @@
   "curated-lcdb-9f674d26": {
    "total": 14,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260906": 1,
     "20260908": 1
@@ -5182,8 +5232,10 @@
    "days": {}
   },
   "curated-link-lcdb-bc4d9e4f": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-link-lcdb-eff2a321": {
    "total": 1,
@@ -5284,9 +5336,10 @@
    "days": {}
   },
   "curated-r2-8cc2e499": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-r2-b8749198": {
@@ -5322,14 +5375,17 @@
    "days": {}
   },
   "curated-shinjuku-kuyakusho": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-shinjuku-yasukuni": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260904": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-still-antarctica-southpole": {
@@ -5396,10 +5452,10 @@
    "days": {}
   },
   "curated-still-kanagawa-coast-shonan-port": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260902": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-still-kushimoto-marine-park-underwater": {
@@ -5421,8 +5477,10 @@
    "days": {}
   },
   "curated-still-lcdb-8020304e": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-still-lcdb-965afd8c": {
    "total": 1,
@@ -5503,17 +5561,15 @@
    }
   },
   "curated-street-uchisaiwaicho-tokyoshimbun": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260902": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-stv-sapporo": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-temple-higashihonganji-westsky": {
    "total": 1,
@@ -5652,9 +5708,7 @@
   },
   "kawabou-101281008": {
    "total": 3,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-101537040": {
    "total": 1,
@@ -5727,9 +5781,10 @@
    }
   },
   "kawabou-105889011": {
-   "total": 12,
+   "total": 13,
    "days": {
-    "20260908": 10
+    "20260908": 10,
+    "20260909": 1
    }
   },
   "kawabou-106145005": {
@@ -5912,9 +5967,10 @@
    }
   },
   "kawabou-221818007": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-221818013": {
@@ -5953,9 +6009,7 @@
   },
   "kawabou-222097010": {
    "total": 8,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-222097014": {
    "total": 9,
@@ -5969,9 +6023,7 @@
   },
   "kawabou-222097036": {
    "total": 12,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-222297032": {
    "total": 1,
@@ -6077,8 +6129,10 @@
    "days": {}
   },
   "muni-gujo-kasen-camera-5": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "shimane-suibo-8193-90-4": {
    "total": 2,
@@ -6097,7 +6151,6 @@
   "tokyo-suibo-039": {
    "total": 19,
    "days": {
-    "20260902": 1,
     "20260904": 3,
     "20260906": 4,
     "20260907": 2,
@@ -6105,11 +6158,11 @@
    }
   },
   "tokyo-suibo-077": {
-   "total": 5,
+   "total": 7,
    "days": {
-    "20260902": 1,
     "20260906": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "tokyo-suibo-101": {
@@ -6195,8 +6248,10 @@
    "days": {}
   },
   "world-7cb8df6d": {
-   "total": 4,
-   "days": {}
+   "total": 5,
+   "days": {
+    "20260909": 1
+   }
   },
   "world-7d7adb1b": {
    "total": 3,
@@ -6289,14 +6344,16 @@
    }
   },
   "curated-cms-sunport-takamatsu": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260902": 1
+    "20260909": 1
    }
   },
   "curated-dojocco-ekimae": {
-   "total": 2,
-   "days": {}
+   "total": 4,
+   "days": {
+    "20260909": 2
+   }
   },
   "curated-dojocco-kenzakai": {
    "total": 2,
@@ -6342,25 +6399,26 @@
   "curated-lcdb-01254b7b": {
    "total": 5,
    "days": {
-    "20260902": 1,
     "20260906": 1,
     "20260908": 1
    }
   },
   "curated-lcdb-06a3738a": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-lcdb-07ef4213": {
    "total": 1,
    "days": {}
   },
   "curated-lcdb-09b70c17": {
-   "total": 5,
+   "total": 6,
    "days": {
-    "20260902": 1,
     "20260907": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-0a43059b": {
@@ -6412,7 +6470,6 @@
   "curated-lcdb-2044fce3": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260907": 1
    }
   },
@@ -6427,9 +6484,10 @@
    }
   },
   "curated-lcdb-2cdf5209": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-32016c7b": {
@@ -6444,12 +6502,13 @@
    "days": {}
   },
   "curated-lcdb-43577e7d": {
-   "total": 7,
+   "total": 8,
    "days": {
     "20260905": 2,
     "20260906": 2,
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-4f1f1254": {
@@ -6464,8 +6523,10 @@
    "days": {}
   },
   "curated-lcdb-549c5f84": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-lcdb-55eda9b5": {
    "total": 3,
@@ -6481,9 +6542,7 @@
   },
   "curated-lcdb-60c66048": {
    "total": 3,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-69662f32": {
    "total": 6,
@@ -6502,20 +6561,22 @@
    }
   },
   "curated-lcdb-7153fa80": {
-   "total": 5,
+   "total": 6,
    "days": {
     "20260904": 1,
     "20260906": 1,
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-75259bd7": {
-   "total": 5,
+   "total": 8,
    "days": {
     "20260906": 2,
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 3
    }
   },
   "curated-lcdb-7f9ece00": {
@@ -6523,17 +6584,19 @@
    "days": {}
   },
   "curated-lcdb-879b9f0e": {
-   "total": 3,
-   "days": {
-    "20260904": 1,
-    "20260907": 1
-   }
-  },
-  "curated-lcdb-8af541af": {
    "total": 4,
    "days": {
     "20260904": 1,
-    "20260906": 2
+    "20260907": 1,
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-8af541af": {
+   "total": 6,
+   "days": {
+    "20260904": 1,
+    "20260906": 2,
+    "20260909": 2
    }
   },
   "curated-lcdb-8c126318": {
@@ -6559,8 +6622,10 @@
    "days": {}
   },
   "curated-lcdb-a41070b9": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-lcdb-a5dbaa71": {
    "total": 1,
@@ -6581,11 +6646,11 @@
    "days": {}
   },
   "curated-lcdb-b65a2b0a": {
-   "total": 5,
+   "total": 7,
    "days": {
-    "20260902": 1,
     "20260905": 1,
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 2
    }
   },
   "curated-lcdb-b6622d7c": {
@@ -6600,8 +6665,10 @@
    "days": {}
   },
   "curated-lcdb-c9a96f8a": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-lcdb-cb7756c6": {
    "total": 1,
@@ -6630,21 +6697,25 @@
    "days": {}
   },
   "curated-lcdb-e7bac8e5": {
-   "total": 1,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 2
+   }
   },
   "curated-lcdb-e852a9fe": {
-   "total": 9,
+   "total": 13,
    "days": {
-    "20260902": 3,
     "20260904": 1,
     "20260906": 2,
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 4
    }
   },
   "curated-lcdb-e8ec5961": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-lcdb-e960de1a": {
    "total": 3,
@@ -6659,12 +6730,16 @@
    }
   },
   "curated-lcdb-fa2a455e": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-lcdb-fa625eeb": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-lcdb-fb3ef1c6": {
    "total": 1,
@@ -6678,9 +6753,7 @@
   },
   "curated-link-lcdb-1f6911ac": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-link-lcdb-35fdc592": {
    "total": 2,
@@ -6767,10 +6840,11 @@
    }
   },
   "curated-r2-997a2477": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260906": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-shonan-fuji-enoshima": {
@@ -6796,8 +6870,10 @@
    "days": {}
   },
   "curated-still-ihighway-03012": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-still-ihighway-70008": {
    "total": 1,
@@ -6875,7 +6951,6 @@
   "curated-still-lcdb-6f5e32ba": {
    "total": 4,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
@@ -6963,7 +7038,6 @@
   "curated-street-kasumigaseki-tokyoshimbun": {
    "total": 6,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260907": 2,
     "20260908": 1
@@ -6985,9 +7059,7 @@
   },
   "curated-tannan-1": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-tannan-2": {
    "total": 3,
@@ -7000,11 +7072,11 @@
    }
   },
   "curated-temple-tsukiji-hongwanji": {
-   "total": 4,
+   "total": 6,
    "days": {
-    "20260902": 1,
     "20260906": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-tottori-sakyu": {
@@ -7022,15 +7094,15 @@
    }
   },
   "curated-transport-port-wakkanai-surfeel": {
-   "total": 3,
+   "total": 5,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 2
    }
   },
   "fukui-road-1": {
    "total": 20,
    "days": {
-    "20260902": 3,
     "20260906": 1,
     "20260907": 1,
     "20260908": 1
@@ -7094,7 +7166,6 @@
   "fukui-road-22": {
    "total": 7,
    "days": {
-    "20260902": 1,
     "20260903": 1,
     "20260906": 1
    }
@@ -7125,9 +7196,7 @@
   },
   "fukui-road-30": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "fukui-road-31": {
    "total": 2,
@@ -7168,9 +7237,7 @@
   },
   "fukui-road-41": {
    "total": 14,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "fukui-road-447": {
    "total": 3,
@@ -7285,7 +7352,6 @@
   "fukui-road-478": {
    "total": 4,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
@@ -7304,15 +7370,14 @@
   "fukui-road-492": {
    "total": 12,
    "days": {
-    "20260902": 1,
     "20260907": 1
    }
   },
   "fukui-road-493": {
-   "total": 6,
+   "total": 7,
    "days": {
-    "20260902": 2,
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "fukui-road-498": {
@@ -7324,8 +7389,10 @@
    "days": {}
   },
   "fukui-road-503": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "fukui-road-517": {
    "total": 1,
@@ -7381,9 +7448,7 @@
   },
   "fukui-road-575": {
    "total": 2,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "fukui-road-576": {
    "total": 7,
@@ -7417,9 +7482,7 @@
   },
   "fukui-road-62": {
    "total": 9,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "fukui-road-63": {
    "total": 1,
@@ -7494,8 +7557,10 @@
    "days": {}
   },
   "fukui-road-99": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "fukui-road-997": {
    "total": 2,
@@ -7518,19 +7583,23 @@
    "days": {}
   },
   "gifu-road-501": {
-   "total": 1,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 2
+   }
   },
   "gifu-road-502": {
-   "total": 2,
+   "total": 14,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 12
    }
   },
   "gifu-road-503": {
-   "total": 3,
+   "total": 25,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 22
    }
   },
   "gifu-road-515": {
@@ -7544,9 +7613,10 @@
    }
   },
   "gifu-road-529": {
-   "total": 6,
+   "total": 14,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 8
    }
   },
   "gifu-road-533": {
@@ -7592,9 +7662,10 @@
    "days": {}
   },
   "jwa-river-saitama-55201100144": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "jwa-river-wakayama-k02858": {
@@ -7624,8 +7695,10 @@
    "days": {}
   },
   "kawabou-101025027": {
-   "total": 2,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-101537004": {
    "total": 1,
@@ -7653,10 +7726,11 @@
    }
   },
   "kawabou-103073009": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260906": 1,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-103073101": {
@@ -7677,8 +7751,10 @@
    }
   },
   "kawabou-103585064": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-103585089": {
    "total": 2,
@@ -7713,15 +7789,17 @@
    }
   },
   "kawabou-105889013": {
-   "total": 41,
+   "total": 47,
    "days": {
-    "20260908": 40
+    "20260908": 40,
+    "20260909": 6
    }
   },
   "kawabou-105889027": {
-   "total": 22,
+   "total": 42,
    "days": {
-    "20260908": 21
+    "20260908": 21,
+    "20260909": 20
    }
   },
   "kawabou-105889028": {
@@ -7813,12 +7891,16 @@
    }
   },
   "kawabou-121271260": {
-   "total": 1,
-   "days": {}
+   "total": 4,
+   "days": {
+    "20260909": 3
+   }
   },
   "kawabou-121280168": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-121320171": {
    "total": 2,
@@ -7837,14 +7919,14 @@
    "days": {}
   },
   "kawabou-121811087": {
-   "total": 3,
-   "days": {}
+   "total": 5,
+   "days": {
+    "20260909": 2
+   }
   },
   "kawabou-122097013": {
    "total": 11,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-122816001": {
    "total": 1,
@@ -7879,17 +7961,22 @@
    "days": {}
   },
   "kawabou-221271015": {
-   "total": 2,
-   "days": {}
+   "total": 12,
+   "days": {
+    "20260909": 10
+   }
   },
   "kawabou-221271016": {
-   "total": 1,
-   "days": {}
+   "total": 4,
+   "days": {
+    "20260909": 3
+   }
   },
   "kawabou-221281006": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "kawabou-221539007": {
@@ -7927,21 +8014,24 @@
    "days": {}
   },
   "kawabou-221782013": {
-   "total": 13,
+   "total": 18,
    "days": {
-    "20260908": 12
+    "20260908": 12,
+    "20260909": 5
    }
   },
   "kawabou-221782022": {
-   "total": 18,
+   "total": 23,
    "days": {
-    "20260908": 16
+    "20260908": 16,
+    "20260909": 5
    }
   },
   "kawabou-221782023": {
-   "total": 13,
+   "total": 19,
    "days": {
-    "20260908": 12
+    "20260908": 12,
+    "20260909": 6
    }
   },
   "kawabou-221782037": {
@@ -7951,9 +8041,10 @@
    }
   },
   "kawabou-221811013": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-221811014": {
@@ -7961,9 +8052,10 @@
    "days": {}
   },
   "kawabou-221811056": {
-   "total": 7,
+   "total": 8,
    "days": {
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 1
    }
   },
   "kawabou-221811057": {
@@ -7971,9 +8063,10 @@
    "days": {}
   },
   "kawabou-221811059": {
-   "total": 4,
+   "total": 9,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 5
    }
   },
   "kawabou-222039015": {
@@ -8002,8 +8095,10 @@
    "days": {}
   },
   "kawabou-222087023": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-222087024": {
    "total": 2,
@@ -8035,7 +8130,6 @@
   "kawabou-222097008": {
    "total": 16,
    "days": {
-    "20260902": 3,
     "20260904": 1
    }
   },
@@ -8044,10 +8138,10 @@
    "days": {}
   },
   "kawabou-222097012": {
-   "total": 15,
+   "total": 16,
    "days": {
-    "20260902": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-222097013": {
@@ -8065,18 +8159,23 @@
    }
   },
   "kawabou-222097017": {
-   "total": 9,
-   "days": {}
+   "total": 10,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-222097018": {
-   "total": 31,
+   "total": 32,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "kawabou-222097019": {
-   "total": 3,
-   "days": {}
+   "total": 4,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-222097020": {
    "total": 2,
@@ -8114,9 +8213,7 @@
   },
   "kawabou-222097029": {
    "total": 14,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-222097030": {
    "total": 8,
@@ -8135,15 +8232,12 @@
   "kawabou-222097034": {
    "total": 4,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "kawabou-222097035": {
    "total": 4,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-222303037": {
    "total": 1,
@@ -8202,9 +8296,10 @@
    "days": {}
   },
   "mlit-cbr-road-023-039": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-023-043": {
@@ -8255,10 +8350,11 @@
    }
   },
   "mlit-ktr-221320006": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260906": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "mlit-ktr-221320008": {
@@ -8276,10 +8372,11 @@
    }
   },
   "mlit-ktr-221320016": {
-   "total": 7,
+   "total": 9,
    "days": {
     "20260906": 4,
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 2
    }
   },
   "mlit-ktr-221320030": {
@@ -8290,12 +8387,13 @@
    }
   },
   "mlit-ktr-221320033": {
-   "total": 7,
+   "total": 8,
    "days": {
     "20260904": 1,
     "20260906": 2,
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "mlit-ktr-road-c02030": {
@@ -8321,10 +8419,11 @@
    "days": {}
   },
   "mlit-roadinfo-86c03937": {
-   "total": 9,
+   "total": 10,
    "days": {
     "20260903": 1,
-    "20260906": 2
+    "20260906": 2,
+    "20260909": 1
    }
   },
   "muni-gujo-05-1": {
@@ -8367,16 +8466,19 @@
    "days": {}
   },
   "tokyo-suibo-001": {
-   "total": 5,
+   "total": 8,
    "days": {
     "20260906": 1,
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 3
    }
   },
   "tokyo-suibo-003": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "tokyo-suibo-004": {
    "total": 1,
@@ -8390,16 +8492,18 @@
    }
   },
   "tokyo-suibo-025": {
-   "total": 3,
+   "total": 5,
    "days": {
     "20260904": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "tokyo-suibo-029": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "tokyo-suibo-034": {
@@ -8419,11 +8523,12 @@
    }
   },
   "tokyo-suibo-081": {
-   "total": 7,
+   "total": 8,
    "days": {
     "20260906": 2,
     "20260907": 1,
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 1
    }
   },
   "tokyo-suibo-104": {
@@ -8473,7 +8578,6 @@
   "curated-coast-enoshima-zoom-flyingsuika": {
    "total": 13,
    "days": {
-    "20260902": 2,
     "20260904": 5,
     "20260906": 2,
     "20260907": 1,
@@ -8504,10 +8608,11 @@
    "days": {}
   },
   "curated-lcdb-8b4d7d81": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260906": 1,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-bc66043d": {
@@ -8537,8 +8642,10 @@
    "days": {}
   },
   "curated-r2-3026d840": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-r2-7c0fa32e": {
    "total": 2,
@@ -8616,8 +8723,10 @@
    "days": {}
   },
   "curated-still-road-tottori-yukinavi-223": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-still-road-tottori-yukinavi-225": {
    "total": 1,
@@ -8633,7 +8742,6 @@
   "fukui-road-46": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
@@ -8654,13 +8762,14 @@
    "days": {}
   },
   "kawabou-102817011": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-103073064": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260903": 1
    }
   },
@@ -8739,37 +8848,38 @@
   "kawabou-222293010": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260904": 1
    }
   },
   "kawabou-222293011": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260904": 1
    }
   },
   "kawabou-222570002": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260905": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-222570013": {
-   "total": 5,
+   "total": 6,
    "days": {
     "20260905": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-222570016": {
-   "total": 5,
+   "total": 6,
    "days": {
     "20260903": 1,
     "20260906": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-222570023": {
@@ -8823,11 +8933,12 @@
    "days": {}
   },
   "mlit-roadinfo-82a30101": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260903": 1,
     "20260904": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "tochigi-road-022": {
@@ -8899,9 +9010,10 @@
    }
   },
   "curated-lcdb-6b753015": {
-   "total": 2,
+   "total": 4,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-lcdb-8b9ff31b": {
@@ -8924,17 +9036,20 @@
    "days": {}
   },
   "curated-lcdb-d123472d": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "curated-lcdb-ddadb15a": {
    "total": 1,
    "days": {}
   },
   "curated-lcdb-f7f38adf": {
-   "total": 2,
+   "total": 5,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 3
    }
   },
   "curated-marina-otaru-port-scape": {
@@ -8977,10 +9092,11 @@
    "days": {}
   },
   "ehime-road-6-48": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260905": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "ehime-road-6-51": {
@@ -9063,9 +9179,10 @@
    }
   },
   "kawabou-106913058": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260905": 2
+    "20260905": 2,
+    "20260909": 1
    }
   },
   "kawabou-106913103": {
@@ -9082,16 +9199,16 @@
    }
   },
   "kawabou-107172002": {
-   "total": 4,
+   "total": 15,
    "days": {
-    "20260902": 2,
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 11
    }
   },
   "kawabou-107172018": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260902": 1
+    "20260909": 1
    }
   },
   "kawabou-107425027": {
@@ -9105,8 +9222,10 @@
    }
   },
   "kawabou-122068008": {
-   "total": 1,
-   "days": {}
+   "total": 2,
+   "days": {
+    "20260909": 1
+   }
   },
   "kawabou-12301211008": {
    "total": 1,
@@ -9129,8 +9248,10 @@
    "days": {}
   },
   "kawabou-222068005": {
-   "total": 1,
-   "days": {}
+   "total": 3,
+   "days": {
+    "20260909": 2
+   }
   },
   "kawabou-222068012": {
    "total": 1,
@@ -9151,10 +9272,11 @@
    "days": {}
   },
   "kawabou-222570003": {
-   "total": 5,
+   "total": 6,
    "days": {
     "20260904": 2,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-222570011": {
@@ -9177,9 +9299,10 @@
    }
   },
   "kawabou-222570022": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "kawabou-222570025": {
@@ -9249,9 +9372,10 @@
    "days": {}
   },
   "tokyo-suibo-087": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "toyama-road-220": {
@@ -9289,121 +9413,99 @@
    "days": {}
   },
   "curated-aomori-yanagimachi": {
-   "total": 6,
+   "total": 7,
    "days": {
-    "20260902": 3,
-    "20260903": 3
+    "20260903": 3,
+    "20260909": 1
    }
   },
   "curated-awaji-monkey": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-coast-hatomajima": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-coast-koshigoe-flyingsuika": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260906": 1
    }
   },
   "curated-ebc-uwajima": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260908": 2
    }
   },
   "curated-giken-nakajima": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-hakone-turnpike": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-kumamoto-sta-rkk": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260904": 2
    }
   },
   "curated-lcdb-066df361": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-0b6db6c5": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260902": 2,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-128eee66": {
    "total": 6,
    "days": {
-    "20260902": 5,
     "20260906": 1
    }
   },
   "curated-lcdb-17ab0560": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-23553d19": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260902": 1,
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-28c8e5a4": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-32326081": {
    "total": 2,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "curated-lcdb-3333e316": {
-   "total": 3,
+   "total": 5,
    "days": {
-    "20260902": 1,
-    "20260905": 2
+    "20260905": 2,
+    "20260909": 2
    }
   },
   "curated-lcdb-3f2381cb": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "curated-lcdb-4eedd4ef": {
    "total": 6,
    "days": {
-    "20260902": 1,
     "20260905": 1,
     "20260906": 4
    }
@@ -9411,7 +9513,6 @@
   "curated-lcdb-54a96978": {
    "total": 6,
    "days": {
-    "20260902": 4,
     "20260904": 1,
     "20260906": 1
    }
@@ -9419,7 +9520,6 @@
   "curated-lcdb-604d2450": {
    "total": 7,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260907": 5
    }
@@ -9427,162 +9527,142 @@
   "curated-lcdb-61bcac01": {
    "total": 3,
    "days": {
-    "20260902": 2,
     "20260903": 1
    }
   },
   "curated-lcdb-8005e8d1": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260902": 1
+    "20260909": 1
    }
   },
   "curated-lcdb-84fa524b": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-8ad8d4d3": {
-   "total": 10,
+   "total": 11,
    "days": {
-    "20260902": 4,
     "20260905": 1,
     "20260906": 1,
     "20260907": 3,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-91ae1f56": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260902": 2
+    "20260909": 1
    }
   },
   "curated-lcdb-92f593e8": {
    "total": 3,
    "days": {
-    "20260902": 2,
     "20260906": 1
    }
   },
   "curated-lcdb-94195feb": {
    "total": 4,
    "days": {
-    "20260902": 1,
     "20260906": 2,
     "20260907": 1
    }
   },
   "curated-lcdb-94740a3a": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260906": 1,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-9f08e943": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260902": 1,
-    "20260905": 1
+    "20260905": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-abb54edc": {
-   "total": 5,
+   "total": 6,
    "days": {
-    "20260902": 2,
     "20260907": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-ac7fbc8e": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-bcf1bbe2": {
    "total": 4,
    "days": {
-    "20260902": 3,
     "20260908": 1
    }
   },
   "curated-lcdb-c2452d32": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260902": 1,
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-cfbff66e": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-d052d3b3": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-d0c8d4f4": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260908": 1
    }
   },
   "curated-lcdb-d50e23fa": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-lcdb-df051046": {
-   "total": 6,
+   "total": 8,
    "days": {
-    "20260902": 2,
     "20260903": 1,
-    "20260907": 3
+    "20260907": 3,
+    "20260909": 2
    }
   },
   "curated-lcdb-e0b99f3a": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "curated-lcdb-e1b167be": {
-   "total": 6,
+   "total": 7,
    "days": {
-    "20260902": 3,
-    "20260907": 3
+    "20260907": 3,
+    "20260909": 1
    }
   },
   "curated-link-lcdb-71914c87": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-parking-narita-superparking-1": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260907": 1
    }
   },
   "curated-port-miyazaki-airport-mrt": {
    "total": 4,
    "days": {
-    "20260902": 1,
     "20260904": 2,
     "20260908": 1
    }
@@ -9590,114 +9670,89 @@
   "curated-r2-72e017f6": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260906": 1
    }
   },
   "curated-road-interluck-r10-miyazaki": {
-   "total": 8,
+   "total": 9,
    "days": {
-    "20260902": 1,
     "20260904": 2,
     "20260906": 2,
     "20260907": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-still-coast-mbc-kikai-wan": {
    "total": 4,
    "days": {
-    "20260902": 1,
     "20260904": 3
    }
   },
   "curated-still-kaiho-hachinohe-ss": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260903": 1
    }
   },
   "curated-still-kawasaki-kyoku3": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260906": 1,
     "20260907": 1
    }
   },
   "curated-still-kyoto-kosha-kamimiyazu": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-still-lcdb-74d4aac2": {
    "total": 2,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "curated-still-lcdb-cdf51ebe": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-still-lcdb-e9fbbb49": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-still-lcdb-f121891c": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-still-mie-douro-14-04": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-still-mountain-atv-hirosaki-iwakisan": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260907": 2
    }
   },
   "curated-still-river-tottori-kasen-098": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-still-road-fukuoka-urban-exp-1": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-street-fst-tadaoka-marina": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260907": 1
    }
   },
   "curated-street-takatsuki-radio171": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-street-tama-center": {
    "total": 5,
    "days": {
-    "20260902": 1,
     "20260904": 2,
     "20260906": 1,
     "20260908": 1
@@ -9705,27 +9760,21 @@
   },
   "curated-stv-sapporo-sta": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-surf-otake-wavegarage": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260906": 2
    }
   },
   "curated-teiten-ryugudori": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "curated-transport-airport-aomori-aba": {
    "total": 7,
    "days": {
-    "20260902": 1,
     "20260903": 1,
     "20260904": 3,
     "20260907": 2
@@ -9734,113 +9783,90 @@
   "jma-volcam-20201": {
    "total": 4,
    "days": {
-    "20260902": 2,
     "20260903": 1,
     "20260907": 1
    }
   },
   "jma-volcam-20302": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "jma-volcam-31502": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "jma-volcam-31504": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "jma-volcam-50503": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "jwa-river-saitama-55201100907": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260902": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "jwa-river-wakayama-c04100": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "jwa-river-wakayama-k02855": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "kawabou-100257013": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-100513005": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260902": 2,
     "20260903": 1,
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "kawabou-100513009": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260903": 1
    }
   },
   "kawabou-100513012": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-100513015": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260903": 2
    }
   },
   "kawabou-100513019": {
    "total": 5,
    "days": {
-    "20260902": 2,
     "20260903": 3
    }
   },
   "kawabou-100513020": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-100513035": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-100513041": {
    "total": 11,
    "days": {
-    "20260902": 5,
     "20260903": 3,
     "20260904": 1,
     "20260907": 1,
@@ -9850,73 +9876,58 @@
   "kawabou-100513042": {
    "total": 5,
    "days": {
-    "20260902": 3,
     "20260903": 2
    }
   },
   "kawabou-100513045": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-100513056": {
    "total": 2,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "kawabou-100513067": {
    "total": 4,
    "days": {
-    "20260902": 2,
     "20260904": 2
    }
   },
   "kawabou-100513073": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-100513074": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-100513075": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260903": 1
    }
   },
   "kawabou-100513078": {
    "total": 4,
    "days": {
-    "20260902": 3,
     "20260903": 1
    }
   },
   "kawabou-100513083": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260904": 1
    }
   },
   "kawabou-101281017": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260903": 2
    }
   },
   "kawabou-101537068": {
    "total": 7,
    "days": {
-    "20260902": 1,
     "20260903": 2,
     "20260904": 2,
     "20260905": 1,
@@ -9925,119 +9936,91 @@
   },
   "kawabou-102305059": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-102305060": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "kawabou-103073057": {
    "total": 4,
    "days": {
-    "20260902": 2,
     "20260906": 1,
     "20260907": 1
    }
   },
   "kawabou-103073082": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-105121260": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-105121262": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-106401003": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-106657051": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260903": 1,
     "20260908": 1
    }
   },
   "kawabou-111009048": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-121013001": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260907": 1
    }
   },
   "kawabou-121013003": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260907": 1
    }
   },
   "kawabou-121013008": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-121013010": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-121801062": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-220737029": {
    "total": 5,
    "days": {
-    "20260902": 1,
     "20260903": 4
    }
   },
   "kawabou-221013001": {
    "total": 2,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "kawabou-221013002": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260903": 1
    }
   },
   "kawabou-221013003": {
    "total": 6,
    "days": {
-    "20260902": 3,
     "20260903": 1,
     "20260904": 1,
     "20260907": 1
@@ -10046,27 +10029,22 @@
   "kawabou-221013004": {
    "total": 4,
    "days": {
-    "20260902": 2,
     "20260903": 2
    }
   },
   "kawabou-221013005": {
    "total": 3,
    "days": {
-    "20260902": 1,
     "20260903": 2
    }
   },
   "kawabou-221013007": {
    "total": 2,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "kawabou-221013008": {
    "total": 4,
    "days": {
-    "20260902": 1,
     "20260904": 2,
     "20260907": 1
    }
@@ -10074,154 +10052,115 @@
   "kawabou-221013009": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260904": 1
    }
   },
   "kawabou-221013011": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "kawabou-221013014": {
    "total": 3,
    "days": {
-    "20260902": 2,
     "20260904": 1
    }
   },
   "kawabou-221013015": {
    "total": 3,
-   "days": {
-    "20260902": 3
-   }
+   "days": {}
   },
   "kawabou-221013016": {
    "total": 4,
    "days": {
-    "20260902": 3,
     "20260903": 1
    }
   },
   "kawabou-221013017": {
    "total": 7,
    "days": {
-    "20260902": 3,
     "20260903": 2,
     "20260907": 2
    }
   },
   "kawabou-221013024": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-221565045": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-221781063": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-222087056": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "kawabou-222826001": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-222826017": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-304353069": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "kawabou-309729032": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "mlit-hrr-road-761298": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260903": 1
    }
   },
   "mlit-ktr-road-nagano-211156": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "mlit-qsr-yt-uccn1d6khxwkantngru995uw": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "mlit-roadinfo-82a20136": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "mlit-roadinfo-82c00023": {
    "total": 2,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "mlit-roadinfo-82c02820": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "mlit-roadinfo-82c03282": {
    "total": 2,
-   "days": {
-    "20260902": 2
-   }
+   "days": {}
   },
   "mlit-roadinfo-82c03284": {
    "total": 2,
    "days": {
-    "20260902": 1,
     "20260908": 1
    }
   },
   "mlit-roadinfo-82c06045": {
    "total": 1,
-   "days": {
-    "20260902": 1
-   }
+   "days": {}
   },
   "tochigi-road-035": {
    "total": 5,
    "days": {
-    "20260902": 1,
     "20260907": 2,
     "20260908": 2
    }
@@ -10229,7 +10168,6 @@
   "tokyo-suibo-024": {
    "total": 5,
    "days": {
-    "20260902": 1,
     "20260904": 1,
     "20260906": 1,
     "20260907": 1,
@@ -10239,29 +10177,27 @@
   "tokyo-suibo-040": {
    "total": 4,
    "days": {
-    "20260902": 1,
     "20260908": 3
    }
   },
   "tokyo-suibo-041": {
    "total": 6,
    "days": {
-    "20260902": 1,
     "20260906": 1,
     "20260908": 4
    }
   },
   "tokyo-suibo-043": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260902": 1
+    "20260909": 1
    }
   },
   "tokyo-suibo-090": {
-   "total": 2,
+   "total": 4,
    "days": {
-    "20260902": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 2
    }
   },
   "curated-coast-hebara-wowpow-1": {
@@ -10300,9 +10236,10 @@
    }
   },
   "curated-lcdb-562b7950": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-71d3a66b": {
@@ -10337,10 +10274,11 @@
    }
   },
   "curated-lcdb-e66d62b5": {
-   "total": 2,
+   "total": 4,
    "days": {
     "20260903": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-lcdb-f3c4d381": {
@@ -10373,16 +10311,18 @@
    }
   },
   "curated-port-aogashima-sanpo-village": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260903": 1,
-    "20260905": 1
+    "20260905": 1,
+    "20260909": 1
    }
   },
   "curated-r2-0516a7d0": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "curated-r2-8bb8e066": {
@@ -10815,9 +10755,10 @@
    }
   },
   "kawabou-221271011": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 2
    }
   },
   "kawabou-221531023": {
@@ -11010,9 +10951,10 @@
    }
   },
   "world-809bf2c3": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260903": 1
+    "20260903": 1,
+    "20260909": 1
    }
   },
   "world-c32315cc": {
@@ -11028,16 +10970,18 @@
    }
   },
   "yt-skr-f35db696be": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260903": 1,
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "curated-akihabara-aisan": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "curated-akihabara-aisan-chuo-dori": {
@@ -11103,10 +11047,11 @@
    }
   },
   "curated-lcdb-1519ef25": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260904": 1,
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 1
    }
   },
   "curated-lcdb-17e0fee2": {
@@ -11137,10 +11082,11 @@
    }
   },
   "curated-lcdb-4f36f136": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260904": 1,
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-571ef302": {
@@ -11151,10 +11097,11 @@
    }
   },
   "curated-lcdb-5c4bcbaa": {
-   "total": 2,
+   "total": 4,
    "days": {
     "20260904": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-lcdb-6b040258": {
@@ -11184,11 +11131,12 @@
    }
   },
   "curated-lcdb-86946e2c": {
-   "total": 7,
+   "total": 8,
    "days": {
     "20260904": 1,
     "20260906": 2,
-    "20260907": 4
+    "20260907": 4,
+    "20260909": 1
    }
   },
   "curated-lcdb-91bf4aa0": {
@@ -11250,10 +11198,11 @@
    }
   },
   "curated-lcdb-fa1474b3": {
-   "total": 5,
+   "total": 6,
    "days": {
     "20260904": 3,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-fb6a2fdb": {
@@ -11276,10 +11225,11 @@
    }
   },
   "curated-link-lcdb-e4ef6ce7": {
-   "total": 4,
+   "total": 6,
    "days": {
     "20260904": 2,
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 2
    }
   },
   "curated-link-other-akihabara-entas": {
@@ -11290,9 +11240,10 @@
    }
   },
   "curated-link-river-mlit-tottori-03": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 2
    }
   },
   "curated-link-river-tokushima-04": {
@@ -11339,9 +11290,10 @@
    }
   },
   "curated-r2-763d189b": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "curated-r2-bbbd5737": {
@@ -11358,11 +11310,12 @@
    }
   },
   "curated-r2-efd92ce6": {
-   "total": 3,
+   "total": 5,
    "days": {
     "20260904": 1,
     "20260906": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-river-qsr-oyodogawa-live": {
@@ -11400,11 +11353,12 @@
    }
   },
   "curated-station-motoyawata-north": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260904": 1,
     "20260906": 1,
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "curated-still-coast-kaike-ondochi-kakou": {
@@ -11568,9 +11522,10 @@
    }
   },
   "curated-still-trail-chogatake-hutte": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "curated-street-fst-minoh-aonoshinke": {
@@ -11587,27 +11542,30 @@
    }
   },
   "curated-tateyama-hojo": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260904": 2,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-temple-byodoji": {
-   "total": 3,
+   "total": 5,
    "days": {
     "20260904": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-tokushima-bizan-live": {
-   "total": 11,
+   "total": 16,
    "days": {
     "20260904": 2,
     "20260905": 1,
     "20260906": 1,
     "20260907": 5,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 5
    }
   },
   "curated-towadako": {
@@ -11618,12 +11576,13 @@
    }
   },
   "curated-zoo-nihondaira-polarbear": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260904": 1,
     "20260906": 1,
     "20260907": 3,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "ehime-road-6-29": {
@@ -11885,9 +11844,10 @@
    }
   },
   "kawabou-121270037": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "kawabou-121801047": {
@@ -11903,9 +11863,10 @@
    }
   },
   "kawabou-122068011": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "kawabou-122069002": {
@@ -12005,9 +11966,10 @@
    }
   },
   "kawabou-221281008": {
-   "total": 1,
+   "total": 5,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 4
    }
   },
   "kawabou-221293007": {
@@ -12311,16 +12273,18 @@
    }
   },
   "kawabou-311531007": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260904": 2,
-    "20260905": 1
+    "20260905": 1,
+    "20260909": 1
    }
   },
   "kawabou-311531011": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 1
    }
   },
   "kobe-river-04": {
@@ -12433,9 +12397,10 @@
    }
   },
   "tokyo-suibo-022": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260904": 1
+    "20260904": 1,
+    "20260909": 2
    }
   },
   "tokyo-suibo-069": {
@@ -12529,9 +12494,10 @@
    }
   },
   "curated-lcdb-6f1dd9eb": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260905": 2
+    "20260905": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-712dd73c": {
@@ -12599,15 +12565,17 @@
    }
   },
   "curated-nakasu-mainichi": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260905": 1
+    "20260905": 1,
+    "20260909": 1
    }
   },
   "curated-r2-a05a513a": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260905": 2
+    "20260905": 2,
+    "20260909": 1
    }
   },
   "curated-scenic-yakushima-nagatadake": {
@@ -12696,11 +12664,12 @@
    }
   },
   "curated-still-obs-naoj-mitaka-solar": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260905": 1,
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-still-road-chitamaru-10": {
@@ -12722,16 +12691,18 @@
    }
   },
   "curated-transport-airport-itami-mbs": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260905": 2
+    "20260905": 2,
+    "20260909": 1
    }
   },
   "curated-utsumi-beach": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260905": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-volcano-kyt-kuchinoerabujima": {
@@ -12998,10 +12969,11 @@
    }
   },
   "kawabou-221335065": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260905": 1,
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "kawabou-221531044": {
@@ -13011,9 +12983,10 @@
    }
   },
   "kawabou-221558029": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260905": 1
+    "20260905": 1,
+    "20260909": 1
    }
   },
   "kawabou-222057036": {
@@ -13060,10 +13033,11 @@
    }
   },
   "kawabou-303329022": {
-   "total": 2,
+   "total": 4,
    "days": {
     "20260905": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "kawabou-303585012": {
@@ -13207,11 +13181,12 @@
    }
   },
   "tokyo-suibo-074": {
-   "total": 9,
+   "total": 12,
    "days": {
     "20260905": 1,
     "20260907": 3,
-    "20260908": 5
+    "20260908": 5,
+    "20260909": 3
    }
   },
   "world-1de86643": {
@@ -13289,10 +13264,11 @@
    }
   },
   "curated-ichinomiya-city-station-rotary": {
-   "total": 15,
+   "total": 20,
    "days": {
     "20260906": 1,
-    "20260908": 14
+    "20260908": 14,
+    "20260909": 5
    }
   },
   "curated-ishigaki-730": {
@@ -13302,9 +13278,10 @@
    }
   },
   "curated-karuizawa-prince": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-karuizawa-shinkaru": {
@@ -13344,9 +13321,10 @@
    }
   },
   "curated-lcdb-05885fb3": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-0ad900db": {
@@ -13388,16 +13366,18 @@
    }
   },
   "curated-lcdb-2c7e9814": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260906": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-3694d947": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-3d40d36a": {
@@ -13407,11 +13387,12 @@
    }
   },
   "curated-lcdb-4a357a97": {
-   "total": 9,
+   "total": 12,
    "days": {
     "20260906": 2,
     "20260907": 4,
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 3
    }
   },
   "curated-lcdb-4acdad41": {
@@ -13434,10 +13415,11 @@
    }
   },
   "curated-lcdb-55ec1184": {
-   "total": 14,
+   "total": 21,
    "days": {
     "20260906": 1,
-    "20260908": 13
+    "20260908": 13,
+    "20260909": 7
    }
   },
   "curated-lcdb-59cec47e": {
@@ -13488,9 +13470,10 @@
    }
   },
   "curated-lcdb-71ff9032": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-7331ffb4": {
@@ -13502,10 +13485,11 @@
    }
   },
   "curated-lcdb-752f9643": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260906": 2,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-75eeb60f": {
@@ -13535,10 +13519,11 @@
    }
   },
   "curated-lcdb-8e49a31f": {
-   "total": 3,
+   "total": 5,
    "days": {
     "20260906": 2,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "curated-lcdb-956e3c89": {
@@ -13567,10 +13552,11 @@
    }
   },
   "curated-lcdb-a7cf73d0": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260906": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-a9ada66b": {
@@ -13589,9 +13575,10 @@
    }
   },
   "curated-lcdb-b7f89dd4": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-be259ef0": {
@@ -13608,9 +13595,10 @@
    }
   },
   "curated-lcdb-c16aa2e5": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-c31f6308": {
@@ -13635,17 +13623,19 @@
    }
   },
   "curated-lcdb-cd98998b": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-d0bb36c2": {
-   "total": 15,
+   "total": 17,
    "days": {
     "20260906": 2,
     "20260907": 6,
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 2
    }
   },
   "curated-lcdb-d44c2092": {
@@ -13663,16 +13653,18 @@
    }
   },
   "curated-lcdb-d6d0e5ea": {
-   "total": 3,
+   "total": 5,
    "days": {
     "20260906": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "curated-lcdb-d7784971": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-d78d3d0a": {
@@ -13695,11 +13687,12 @@
    }
   },
   "curated-lcdb-e264a5cf": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260906": 1,
     "20260907": 4,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-eac56e56": {
@@ -13826,9 +13819,10 @@
    }
   },
   "curated-r2-a70a9fe8": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-r2-d8e14cab": {
@@ -13850,18 +13844,20 @@
    }
   },
   "curated-sakae-trinity": {
-   "total": 23,
+   "total": 30,
    "days": {
     "20260906": 4,
     "20260907": 1,
-    "20260908": 18
+    "20260908": 18,
+    "20260909": 7
    }
   },
   "curated-sendai-mmt": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260906": 1,
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "curated-shimoda-port": {
@@ -13883,11 +13879,12 @@
    }
   },
   "curated-shrine-suzuka-myojin": {
-   "total": 3,
+   "total": 5,
    "days": {
     "20260906": 1,
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-skytree-toyo": {
@@ -13928,9 +13925,10 @@
    }
   },
   "curated-still-jcg-irosaki-lighthouse-shizuoka": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-still-kaiho-11th-rcgh": {
@@ -13977,10 +13975,11 @@
    }
   },
   "curated-still-lcdb-159c3333": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260906": 1,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-still-lcdb-1711696a": {
@@ -14122,9 +14121,10 @@
    }
   },
   "curated-street-motoyawata-minami": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "curated-street-motoyawata-taxi": {
@@ -14135,10 +14135,11 @@
    }
   },
   "curated-street-seya-seya": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260906": 1,
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 1
    }
   },
   "curated-transport-airport-shonai-tuy": {
@@ -14263,9 +14264,10 @@
    }
   },
   "jwa-river-saitama-55201100222": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "jwa-river-saitama-55201101033": {
@@ -14296,11 +14298,12 @@
    }
   },
   "jwa-river-wakayama-c04800": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260906": 2,
     "20260907": 2,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "jwa-river-wakayama-c10205": {
@@ -14427,9 +14430,10 @@
    }
   },
   "kawabou-103073011": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-103073013": {
@@ -14553,9 +14557,10 @@
    }
   },
   "kawabou-103585028": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-103585031": {
@@ -14616,9 +14621,10 @@
    }
   },
   "kawabou-104865046": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-106145054": {
@@ -14628,10 +14634,11 @@
    }
   },
   "kawabou-106913077": {
-   "total": 13,
+   "total": 16,
    "days": {
     "20260906": 7,
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 3
    }
   },
   "kawabou-107183001": {
@@ -14715,10 +14722,11 @@
    }
   },
   "kawabou-221279053": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260906": 1,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-221279060": {
@@ -14842,11 +14850,12 @@
    }
   },
   "kawabou-221827024": {
-   "total": 13,
+   "total": 14,
    "days": {
     "20260906": 5,
     "20260907": 4,
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 1
    }
   },
   "kawabou-222039001": {
@@ -14906,9 +14915,10 @@
    }
   },
   "kawabou-222846016": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "kawabou-303329001": {
@@ -14953,10 +14963,11 @@
    }
   },
   "kawabou-303585011": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260906": 1,
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-303585015": {
@@ -15057,10 +15068,11 @@
    }
   },
   "mlit-cbr-road-019-015": {
-   "total": 12,
+   "total": 14,
    "days": {
     "20260906": 4,
-    "20260908": 8
+    "20260908": 8,
+    "20260909": 2
    }
   },
   "mlit-ktr-103585002": {
@@ -15130,15 +15142,17 @@
    }
   },
   "mlit-ktr-221320038": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "mlit-ktr-221320039": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260906": 2
+    "20260906": 2,
+    "20260909": 1
    }
   },
   "mlit-ktr-221320040": {
@@ -15215,9 +15229,10 @@
    }
   },
   "tokyo-suibo-009": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260906": 1
+    "20260906": 1,
+    "20260909": 1
    }
   },
   "tokyo-suibo-013": {
@@ -15241,10 +15256,11 @@
    }
   },
   "tokyo-suibo-036": {
-   "total": 2,
+   "total": 5,
    "days": {
     "20260906": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 3
    }
   },
   "tokyo-suibo-037": {
@@ -15261,10 +15277,11 @@
    }
   },
   "tokyo-suibo-046": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260906": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "tokyo-suibo-048": {
@@ -15300,11 +15317,12 @@
    }
   },
   "tokyo-suibo-103": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260906": 1,
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "toyama-road-226": {
@@ -15405,15 +15423,17 @@
    }
   },
   "curated-lcdb-107908d3": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260907": 4
+    "20260907": 4,
+    "20260909": 1
    }
   },
   "curated-lcdb-1173cbe9": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-13659194": {
@@ -15448,10 +15468,11 @@
    }
   },
   "curated-lcdb-33a53291": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260907": 2,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-34ca3abe": {
@@ -15500,10 +15521,11 @@
    }
   },
   "curated-lcdb-71a72e6f": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-7261b29d": {
@@ -15526,9 +15548,10 @@
    }
   },
   "curated-lcdb-7afb22eb": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-7cd0ab1b": {
@@ -15558,10 +15581,11 @@
    }
   },
   "curated-lcdb-8ffec82e": {
-   "total": 14,
+   "total": 16,
    "days": {
     "20260907": 7,
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 2
    }
   },
   "curated-lcdb-9d6e446a": {
@@ -15584,10 +15608,11 @@
    }
   },
   "curated-lcdb-ce9a3598": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260907": 2,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-d87aa444": {
@@ -15605,9 +15630,10 @@
    }
   },
   "curated-lcdb-dcaf98a4": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-dd57deb5": {
@@ -15654,10 +15680,11 @@
    }
   },
   "curated-link-lcdb-aaf76267": {
-   "total": 2,
+   "total": 3,
    "days": {
     "20260907": 1,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-link-river-mlit-tottori-04": {
@@ -15667,9 +15694,10 @@
    }
   },
   "curated-link-river-tokushima-09": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "curated-link-river-tokushima-22": {
@@ -15679,9 +15707,10 @@
    }
   },
   "curated-link-river-tokushima-23": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "curated-marina-seabornia-riviera": {
@@ -15697,9 +15726,10 @@
    }
   },
   "curated-mboso-shiokaze": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "curated-mboso-shiramazu-hanabatake": {
@@ -15745,9 +15775,10 @@
    }
   },
   "curated-rito-niijima": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-rito-shikinejima": {
@@ -15757,10 +15788,11 @@
    }
   },
   "curated-satta-hiroshige": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-sbs-shimizu-yui": {
@@ -15771,16 +15803,18 @@
    }
   },
   "curated-sbs-shizuoka-mix": {
-   "total": 3,
+   "total": 4,
    "days": {
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-scenic-kanozan-kujukutani": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260907": 4
+    "20260907": 4,
+    "20260909": 1
    }
   },
   "curated-sky-maihama-livecamera": {
@@ -15850,9 +15884,10 @@
    }
   },
   "curated-still-ihighway-954525400070": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-still-ioworld-kagoshima-kuroshio": {
@@ -15904,9 +15939,10 @@
    }
   },
   "curated-still-lcdb-3d4125da": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "curated-still-lcdb-4dc57671": {
@@ -15952,9 +15988,10 @@
    }
   },
   "curated-still-muni-imabetsu-seikan": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "curated-still-muni-sanjo-03": {
@@ -16055,24 +16092,27 @@
    }
   },
   "curated-tokushima-pref-otanigawa": {
-   "total": 2,
-   "days": {
-    "20260907": 1,
-    "20260908": 1
-   }
-  },
-  "curated-transport-airport-matsumoto-official": {
-   "total": 2,
-   "days": {
-    "20260907": 1,
-    "20260908": 1
-   }
-  },
-  "curated-transport-airport-nagoya-starcat": {
    "total": 3,
    "days": {
     "20260907": 1,
-    "20260908": 2
+    "20260908": 1,
+    "20260909": 1
+   }
+  },
+  "curated-transport-airport-matsumoto-official": {
+   "total": 3,
+   "days": {
+    "20260907": 1,
+    "20260908": 1,
+    "20260909": 1
+   }
+  },
+  "curated-transport-airport-nagoya-starcat": {
+   "total": 6,
+   "days": {
+    "20260907": 1,
+    "20260908": 2,
+    "20260909": 3
    }
   },
   "fukui-road-57": {
@@ -16112,22 +16152,25 @@
    }
   },
   "jwa-river-saitama-55201100110": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "jwa-river-saitama-55201100150": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "jwa-river-saitama-55201100194": {
-   "total": 7,
+   "total": 9,
    "days": {
     "20260907": 3,
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 2
    }
   },
   "jwa-river-saitama-55201100242": {
@@ -16188,9 +16231,10 @@
    }
   },
   "jwa-river-saitama-55201101048": {
-   "total": 1,
+   "total": 4,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 3
    }
   },
   "kawabou-100257498": {
@@ -16458,9 +16502,10 @@
    }
   },
   "kawabou-102049028": {
-   "total": 2,
+   "total": 4,
    "days": {
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 2
    }
   },
   "kawabou-102049029": {
@@ -16500,9 +16545,10 @@
    }
   },
   "kawabou-102049101": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-102049102": {
@@ -16580,9 +16626,10 @@
    }
   },
   "kawabou-103073019": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-103073020": {
@@ -16757,9 +16804,10 @@
    }
   },
   "kawabou-105121252": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-105121253": {
@@ -16781,16 +16829,18 @@
    }
   },
   "kawabou-105889007": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260907": 2
+    "20260907": 2,
+    "20260909": 1
    }
   },
   "kawabou-105889025": {
-   "total": 11,
+   "total": 12,
    "days": {
     "20260907": 1,
-    "20260908": 10
+    "20260908": 10,
+    "20260909": 1
    }
   },
   "kawabou-107425028": {
@@ -16866,9 +16916,10 @@
    }
   },
   "kawabou-121271228": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-121271229": {
@@ -17037,9 +17088,10 @@
    }
   },
   "kawabou-221271014": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-221271029": {
@@ -17055,9 +17107,10 @@
    }
   },
   "kawabou-221279015": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "kawabou-221279020": {
@@ -17110,9 +17163,10 @@
    }
   },
   "kawabou-221281003": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-221281004": {
@@ -17123,10 +17177,11 @@
    }
   },
   "kawabou-221321001": {
-   "total": 6,
+   "total": 7,
    "days": {
     "20260907": 5,
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-221335064": {
@@ -17208,9 +17263,10 @@
    }
   },
   "kawabou-222068003": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-222068040": {
@@ -17241,9 +17297,10 @@
    }
   },
   "kawabou-222549010": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "kawabou-222549015": {
@@ -17254,9 +17311,10 @@
    }
   },
   "kawabou-222551002": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "kawabou-222551004": {
@@ -17302,9 +17360,10 @@
    }
   },
   "kawabou-303329024": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 2
    }
   },
   "kawabou-303585001": {
@@ -17402,10 +17461,11 @@
    }
   },
   "mlit-cbr-road-001-043": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260907": 1,
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-023-009": {
@@ -17454,22 +17514,25 @@
    }
   },
   "mlit-ktr-221320043": {
-   "total": 5,
+   "total": 7,
    "days": {
     "20260907": 3,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "mlit-ktr-road-nagano-042039": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260907": 1
+    "20260907": 1,
+    "20260909": 1
    }
   },
   "mlit-ktr-road-oomiya-14a": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260907": 3
+    "20260907": 3,
+    "20260909": 1
    }
   },
   "mlit-ktr-road-oomiya-33a": {
@@ -17570,10 +17633,11 @@
    }
   },
   "muni-kasugai-e4d339fd3e": {
-   "total": 21,
+   "total": 28,
    "days": {
     "20260907": 1,
-    "20260908": 20
+    "20260908": 20,
+    "20260909": 7
    }
   },
   "muni-yokosuka-1bdb0a419b": {
@@ -17616,10 +17680,11 @@
    }
   },
   "tokyo-suibo-019": {
-   "total": 4,
+   "total": 5,
    "days": {
     "20260907": 1,
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 1
    }
   },
   "tokyo-suibo-023": {
@@ -17643,24 +17708,27 @@
    }
   },
   "tokyo-suibo-055": {
-   "total": 12,
+   "total": 14,
    "days": {
     "20260907": 5,
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 2
    }
   },
   "tokyo-suibo-062": {
-   "total": 5,
+   "total": 6,
    "days": {
     "20260907": 1,
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 1
    }
   },
   "tokyo-suibo-072": {
-   "total": 3,
+   "total": 5,
    "days": {
     "20260907": 1,
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "tokyo-suibo-085": {
@@ -17825,15 +17893,17 @@
    }
   },
   "curated-lcdb-0aa78694": {
-   "total": 3,
+   "total": 6,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 3
    }
   },
   "curated-lcdb-1071cfa0": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-154a2aa0": {
@@ -17849,9 +17919,10 @@
    }
   },
   "curated-lcdb-1fc00d78": {
-   "total": 14,
+   "total": 16,
    "days": {
-    "20260908": 14
+    "20260908": 14,
+    "20260909": 2
    }
   },
   "curated-lcdb-237dad9e": {
@@ -17861,9 +17932,10 @@
    }
   },
   "curated-lcdb-29f8b603": {
-   "total": 4,
+   "total": 6,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 2
    }
   },
   "curated-lcdb-2c6f33a2": {
@@ -17885,9 +17957,10 @@
    }
   },
   "curated-lcdb-3fe84875": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-lcdb-45177453": {
@@ -17897,9 +17970,10 @@
    }
   },
   "curated-lcdb-45d001cb": {
-   "total": 3,
+   "total": 5,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 2
    }
   },
   "curated-lcdb-4fc24af3": {
@@ -17915,15 +17989,17 @@
    }
   },
   "curated-lcdb-574d3aba": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-58810415": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-58f74708": {
@@ -17933,9 +18009,10 @@
    }
   },
   "curated-lcdb-5ff2d29b": {
-   "total": 10,
+   "total": 11,
    "days": {
-    "20260908": 10
+    "20260908": 10,
+    "20260909": 1
    }
   },
   "curated-lcdb-63da7735": {
@@ -17945,21 +18022,24 @@
    }
   },
   "curated-lcdb-67970d90": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-67f2bb5c": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 1
    }
   },
   "curated-lcdb-6c015449": {
-   "total": 5,
+   "total": 6,
    "days": {
-    "20260908": 5
+    "20260908": 5,
+    "20260909": 1
    }
   },
   "curated-lcdb-74868eab": {
@@ -17969,9 +18049,10 @@
    }
   },
   "curated-lcdb-79711efe": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-7a428023": {
@@ -17981,15 +18062,17 @@
    }
   },
   "curated-lcdb-7aa7bcc0": {
-   "total": 12,
+   "total": 13,
    "days": {
-    "20260908": 12
+    "20260908": 12,
+    "20260909": 1
    }
   },
   "curated-lcdb-7b628d57": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-7ca7311c": {
@@ -18023,9 +18106,10 @@
    }
   },
   "curated-lcdb-92eb5db5": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-lcdb-9583c3e0": {
@@ -18065,9 +18149,10 @@
    }
   },
   "curated-lcdb-a7ab3033": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-b25d8735": {
@@ -18077,15 +18162,17 @@
    }
   },
   "curated-lcdb-b63cb05d": {
-   "total": 10,
+   "total": 12,
    "days": {
-    "20260908": 10
+    "20260908": 10,
+    "20260909": 2
    }
   },
   "curated-lcdb-bc9ab16a": {
-   "total": 6,
+   "total": 8,
    "days": {
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 2
    }
   },
   "curated-lcdb-bfa3aa5e": {
@@ -18119,9 +18206,10 @@
    }
   },
   "curated-lcdb-d2870f23": {
-   "total": 11,
+   "total": 14,
    "days": {
-    "20260908": 11
+    "20260908": 11,
+    "20260909": 3
    }
   },
   "curated-lcdb-d781adc4": {
@@ -18131,27 +18219,31 @@
    }
   },
   "curated-lcdb-db8aab73": {
-   "total": 4,
+   "total": 6,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 2
    }
   },
   "curated-lcdb-db9f2e5e": {
-   "total": 4,
+   "total": 6,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 2
    }
   },
   "curated-lcdb-e0c92d72": {
-   "total": 18,
+   "total": 23,
    "days": {
-    "20260908": 18
+    "20260908": 18,
+    "20260909": 5
    }
   },
   "curated-lcdb-e3b3d8fa": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-lcdb-e5c9a0c1": {
@@ -18161,9 +18253,10 @@
    }
   },
   "curated-lcdb-f38e7d33": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-lcdb-fa00f5ba": {
@@ -18179,9 +18272,10 @@
    }
   },
   "curated-link-lcdb-1b85c8da": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-link-lcdb-72729ee1": {
@@ -18197,15 +18291,17 @@
    }
   },
   "curated-link-river-tokushima-07": {
-   "total": 1,
+   "total": 4,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 3
    }
   },
   "curated-link-river-tokushima-13": {
-   "total": 1,
+   "total": 3,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 2
    }
   },
   "curated-link-river-wakayama-kaiso-06": {
@@ -18233,21 +18329,24 @@
    }
   },
   "curated-nagoya-sta-starcat": {
-   "total": 8,
+   "total": 10,
    "days": {
-    "20260908": 8
+    "20260908": 8,
+    "20260909": 2
    }
   },
   "curated-nagoya-taiko-starcat": {
-   "total": 9,
+   "total": 15,
    "days": {
-    "20260908": 9
+    "20260908": 9,
+    "20260909": 6
    }
   },
   "curated-nakano-hogoneko": {
-   "total": 2,
+   "total": 4,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "curated-onomichi-senkoji": {
@@ -18311,9 +18410,10 @@
    }
   },
   "curated-r2-9fc3fa49": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "curated-r2-c606b6be": {
@@ -18335,9 +18435,10 @@
    }
   },
   "curated-r2-eb837885": {
-   "total": 5,
+   "total": 6,
    "days": {
-    "20260908": 5
+    "20260908": 5,
+    "20260909": 1
    }
   },
   "curated-rito-hahajima": {
@@ -18401,9 +18502,10 @@
    }
   },
   "curated-still-ihighway-03007": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-still-ihighway-954525700120": {
@@ -18449,9 +18551,10 @@
    }
   },
   "curated-still-lcdb-46cafa03": {
-   "total": 5,
+   "total": 9,
    "days": {
-    "20260908": 5
+    "20260908": 5,
+    "20260909": 4
    }
   },
   "curated-still-lcdb-4e2bb4d4": {
@@ -18473,9 +18576,10 @@
    }
   },
   "curated-still-lcdb-65bdcf3c": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-still-lcdb-65f36744": {
@@ -18755,15 +18859,17 @@
    }
   },
   "curated-toba-kuzaki": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "curated-wink-bypass": {
-   "total": 1,
+   "total": 4,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 3
    }
   },
   "curated-zao-360": {
@@ -18821,9 +18927,10 @@
    }
   },
   "gifu-road-517": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "gifu-road-518": {
@@ -18833,9 +18940,10 @@
    }
   },
   "gifu-road-534": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "gifu-road-542": {
@@ -18857,9 +18965,10 @@
    }
   },
   "gifu-road-9002": {
-   "total": 5,
+   "total": 9,
    "days": {
-    "20260908": 5
+    "20260908": 5,
+    "20260909": 4
    }
   },
   "jma-volcam-31602": {
@@ -18995,9 +19104,10 @@
    }
   },
   "jwa-river-saitama-55201100909": {
-   "total": 3,
+   "total": 13,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 10
    }
   },
   "jwa-river-saitama-55201100916": {
@@ -19073,9 +19183,10 @@
    }
   },
   "jwa-river-saitama-55201101032": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "jwa-river-wakayama-c00600": {
@@ -19175,9 +19286,10 @@
    }
   },
   "jwa-river-wakayama-k03139": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "jwa-river-wakayama-k03441": {
@@ -19397,15 +19509,17 @@
    }
   },
   "kawabou-105377063": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "kawabou-105377064": {
-   "total": 3,
+   "total": 5,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 2
    }
   },
   "kawabou-105377065": {
@@ -19427,39 +19541,45 @@
    }
   },
   "kawabou-105889012": {
-   "total": 4,
+   "total": 6,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 2
    }
   },
   "kawabou-105889014": {
-   "total": 26,
+   "total": 29,
    "days": {
-    "20260908": 26
+    "20260908": 26,
+    "20260909": 3
    }
   },
   "kawabou-105889015": {
-   "total": 16,
+   "total": 18,
    "days": {
-    "20260908": 16
+    "20260908": 16,
+    "20260909": 2
    }
   },
   "kawabou-105889016": {
-   "total": 12,
+   "total": 14,
    "days": {
-    "20260908": 12
+    "20260908": 12,
+    "20260909": 2
    }
   },
   "kawabou-105889017": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-105889018": {
-   "total": 1,
+   "total": 4,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 3
    }
   },
   "kawabou-105889023": {
@@ -19469,9 +19589,10 @@
    }
   },
   "kawabou-105889029": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 1
    }
   },
   "kawabou-106145004": {
@@ -19481,9 +19602,10 @@
    }
   },
   "kawabou-106145008": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-106145013": {
@@ -19547,21 +19669,24 @@
    }
   },
   "kawabou-106657052": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-106913046": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-106913053": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-106913074": {
@@ -19673,9 +19798,10 @@
    }
   },
   "kawabou-121280106": {
-   "total": 2,
+   "total": 4,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "kawabou-121280119": {
@@ -19709,9 +19835,10 @@
    }
   },
   "kawabou-121280227": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-121284002": {
@@ -19739,9 +19866,10 @@
    }
   },
   "kawabou-121811078": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-121811083": {
@@ -19751,9 +19879,10 @@
    }
   },
   "kawabou-121811084": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-121811085": {
@@ -19769,9 +19898,10 @@
    }
   },
   "kawabou-122068010": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-122069005": {
@@ -19787,9 +19917,10 @@
    }
   },
   "kawabou-122549002": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-122549005": {
@@ -19997,21 +20128,24 @@
    }
   },
   "kawabou-221782002": {
-   "total": 6,
+   "total": 7,
    "days": {
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 1
    }
   },
   "kawabou-221782003": {
-   "total": 7,
+   "total": 8,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 1
    }
   },
   "kawabou-221782005": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 1
    }
   },
   "kawabou-221782006": {
@@ -20021,63 +20155,73 @@
    }
   },
   "kawabou-221782007": {
-   "total": 6,
+   "total": 7,
    "days": {
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 1
    }
   },
   "kawabou-221782008": {
-   "total": 14,
+   "total": 20,
    "days": {
-    "20260908": 14
+    "20260908": 14,
+    "20260909": 6
    }
   },
   "kawabou-221782009": {
-   "total": 7,
+   "total": 10,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 3
    }
   },
   "kawabou-221782010": {
-   "total": 7,
+   "total": 10,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 3
    }
   },
   "kawabou-221782011": {
-   "total": 7,
+   "total": 17,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 10
    }
   },
   "kawabou-221782012": {
-   "total": 7,
+   "total": 13,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 6
    }
   },
   "kawabou-221782014": {
-   "total": 1,
+   "total": 7,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 6
    }
   },
   "kawabou-221782015": {
-   "total": 25,
+   "total": 35,
    "days": {
-    "20260908": 25
+    "20260908": 25,
+    "20260909": 10
    }
   },
   "kawabou-221782016": {
-   "total": 22,
+   "total": 29,
    "days": {
-    "20260908": 22
+    "20260908": 22,
+    "20260909": 7
    }
   },
   "kawabou-221782017": {
-   "total": 4,
+   "total": 8,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 4
    }
   },
   "kawabou-221782018": {
@@ -20087,15 +20231,17 @@
    }
   },
   "kawabou-221782019": {
-   "total": 12,
+   "total": 15,
    "days": {
-    "20260908": 12
+    "20260908": 12,
+    "20260909": 3
    }
   },
   "kawabou-221782020": {
-   "total": 19,
+   "total": 27,
    "days": {
-    "20260908": 19
+    "20260908": 19,
+    "20260909": 8
    }
   },
   "kawabou-221782021": {
@@ -20105,51 +20251,59 @@
    }
   },
   "kawabou-221782024": {
-   "total": 2,
+   "total": 5,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 3
    }
   },
   "kawabou-221782025": {
-   "total": 12,
+   "total": 18,
    "days": {
-    "20260908": 12
+    "20260908": 12,
+    "20260909": 6
    }
   },
   "kawabou-221782027": {
-   "total": 7,
+   "total": 10,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 3
    }
   },
   "kawabou-221782029": {
-   "total": 3,
+   "total": 8,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 5
    }
   },
   "kawabou-221782030": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-221782032": {
-   "total": 18,
+   "total": 19,
    "days": {
-    "20260908": 18
+    "20260908": 18,
+    "20260909": 1
    }
   },
   "kawabou-221782033": {
-   "total": 13,
+   "total": 23,
    "days": {
-    "20260908": 13
+    "20260908": 13,
+    "20260909": 10
    }
   },
   "kawabou-221782034": {
-   "total": 17,
+   "total": 25,
    "days": {
-    "20260908": 17
+    "20260908": 17,
+    "20260909": 8
    }
   },
   "kawabou-221782035": {
@@ -20159,9 +20313,10 @@
    }
   },
   "kawabou-221782036": {
-   "total": 29,
+   "total": 39,
    "days": {
-    "20260908": 29
+    "20260908": 29,
+    "20260909": 10
    }
   },
   "kawabou-221794001": {
@@ -20171,9 +20326,10 @@
    }
   },
   "kawabou-221794002": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "kawabou-221801010": {
@@ -20219,15 +20375,17 @@
    }
   },
   "kawabou-221811010": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "kawabou-221811011": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-221811038": {
@@ -20237,9 +20395,10 @@
    }
   },
   "kawabou-221811040": {
-   "total": 2,
+   "total": 5,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 3
    }
   },
   "kawabou-221811054": {
@@ -20249,15 +20408,17 @@
    }
   },
   "kawabou-221811060": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-221811075": {
-   "total": 2,
+   "total": 4,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "kawabou-221818012": {
@@ -20423,9 +20584,10 @@
    }
   },
   "kawabou-222549018": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-222806002": {
@@ -20489,15 +20651,17 @@
    }
   },
   "kawabou-303329021": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-303585009": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "kawabou-303585039": {
@@ -20585,15 +20749,17 @@
    }
   },
   "mlit-cbr-road-001-037": {
-   "total": 4,
+   "total": 5,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-001-042": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-001-045": {
@@ -20615,9 +20781,10 @@
    }
   },
   "mlit-cbr-road-019-011": {
-   "total": 4,
+   "total": 6,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 2
    }
   },
   "mlit-cbr-road-019-019": {
@@ -20627,21 +20794,24 @@
    }
   },
   "mlit-cbr-road-019-021": {
-   "total": 7,
+   "total": 8,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-019-022": {
-   "total": 5,
+   "total": 6,
    "days": {
-    "20260908": 5
+    "20260908": 5,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-019-023": {
-   "total": 3,
+   "total": 6,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 3
    }
   },
   "mlit-cbr-road-019-026": {
@@ -20663,15 +20833,17 @@
    }
   },
   "mlit-cbr-road-022-007": {
-   "total": 4,
+   "total": 6,
    "days": {
-    "20260908": 4
+    "20260908": 4,
+    "20260909": 2
    }
   },
   "mlit-cbr-road-022-009": {
-   "total": 3,
+   "total": 6,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 3
    }
   },
   "mlit-cbr-road-023-034": {
@@ -20729,27 +20901,31 @@
    }
   },
   "mlit-cbr-road-023-076": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-041-002": {
-   "total": 10,
+   "total": 12,
    "days": {
-    "20260908": 10
+    "20260908": 10,
+    "20260909": 2
    }
   },
   "mlit-cbr-road-153-001": {
-   "total": 1,
+   "total": 4,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 3
    }
   },
   "mlit-cbr-road-153-006": {
-   "total": 1,
+   "total": 7,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 6
    }
   },
   "mlit-cbr-road-155-002": {
@@ -20759,27 +20935,31 @@
    }
   },
   "mlit-cbr-road-302-003": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-302-007": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-302-011": {
-   "total": 3,
+   "total": 4,
    "days": {
-    "20260908": 3
+    "20260908": 3,
+    "20260909": 1
    }
   },
   "mlit-cbr-road-302-015": {
-   "total": 2,
+   "total": 4,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 2
    }
   },
   "mlit-cbr-road-302-017": {
@@ -20933,15 +21113,17 @@
    }
   },
   "muni-kasugai-1b8deaade7": {
-   "total": 7,
+   "total": 11,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 4
    }
   },
   "muni-kasugai-53e8dd1501": {
-   "total": 6,
+   "total": 9,
    "days": {
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 3
    }
   },
   "niigata-road-toujyou": {
@@ -20987,15 +21169,17 @@
    }
   },
   "shizuoka-doboku-fuji-03-fujinomiya": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "shizuoka-doboku-fuji-08-hitoana": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "tochigi-road-033": {
@@ -21011,21 +21195,24 @@
    }
   },
   "tokyo-suibo-012": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "tokyo-suibo-015": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "tokyo-suibo-033": {
-   "total": 6,
+   "total": 8,
    "days": {
-    "20260908": 6
+    "20260908": 6,
+    "20260909": 2
    }
   },
   "tokyo-suibo-038": {
@@ -21041,15 +21228,17 @@
    }
   },
   "tokyo-suibo-053": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "tokyo-suibo-057": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "tokyo-suibo-059": {
@@ -21059,15 +21248,17 @@
    }
   },
   "tokyo-suibo-060": {
-   "total": 7,
+   "total": 8,
    "days": {
-    "20260908": 7
+    "20260908": 7,
+    "20260909": 1
    }
   },
   "tokyo-suibo-061": {
-   "total": 9,
+   "total": 10,
    "days": {
-    "20260908": 9
+    "20260908": 9,
+    "20260909": 1
    }
   },
   "tokyo-suibo-063": {
@@ -21083,9 +21274,10 @@
    }
   },
   "tokyo-suibo-076": {
-   "total": 2,
+   "total": 3,
    "days": {
-    "20260908": 2
+    "20260908": 2,
+    "20260909": 1
    }
   },
   "tokyo-suibo-084": {
@@ -21209,9 +21401,10 @@
    }
   },
   "world-f9893651": {
-   "total": 1,
+   "total": 2,
    "days": {
-    "20260908": 1
+    "20260908": 1,
+    "20260909": 1
    }
   },
   "yt-kyosai-2c5f16a5d1": {
@@ -21231,698 +21424,2055 @@
    "days": {
     "20260908": 1
    }
+  },
+  "curated-coast-hounohama-beach": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-gate-sugari": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-karuizawa-kyukaru": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-kyoto-chikurin": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-kyoto-heian-jingu": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-kyoto-oharano": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-lcdb-00dcd725": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-05d0a0dd": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-0adcfb8e": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-0e3b8281": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-175c3d19": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-1b2ac37f": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-23a0035a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-3044dffd": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-33a8f16d": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-53e75dba": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-642e0e7a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-6c3567be": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-6fc8d4c3": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-71343c83": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-7767d5dc": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-7b9ae89a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-7ef7c0f2": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-80750243": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-8279a8e9": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-8ddfde85": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-8e7cfb97": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-98feb823": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-lcdb-9b08a527": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-9c6051c4": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-a0fbf8ff": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-a6be8dfa": {
+   "total": 3,
+   "days": {
+    "20260909": 3
+   }
+  },
+  "curated-lcdb-a7540271": {
+   "total": 3,
+   "days": {
+    "20260909": 3
+   }
+  },
+  "curated-lcdb-a934ca2d": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-af7d69ea": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-af7d8d0a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-b33e99ba": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-bb7dd882": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-lcdb-c02c693a": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-lcdb-c478b480": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-c5852c86": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-caa011ca": {
+   "total": 3,
+   "days": {
+    "20260909": 3
+   }
+  },
+  "curated-lcdb-cda06458": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-d5c8a6dc": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-d5cdb887": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-d965e5e3": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-dc2113b4": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-dca63d8f": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-dfe7cc45": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-f2d2887a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-f75ec576": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-lcdb-fd9c96b0": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-lcdb-047b5f1a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-lcdb-64c0acd4": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-lcdb-65b2adfc": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-lcdb-7d96cae1": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-lcdb-cede1088": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-river-tokushima-01": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-river-tokushima-03": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-link-river-tokushima-10": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-link-river-tokushima-14": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-river-tokushima-16": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-river-tokushima-19": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-link-river-tokushima-20": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-river-tokushima-21": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-link-river-wakayama-hidaka-32": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-link-river-wakayama-kaiso-02": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-mountain-toyooka-toyoterrace-chuoalps": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-muni-funagata-wakaayu": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-namiai-hoshizora": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-port-iki-gonoura": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-r2-035e188f": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-r2-05f6e2fa": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-r2-0dd2f850": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-r2-2fda414c": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-r2-4457f7ee": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-r2-5302b9a8": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-r2-f9a2389b": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-road-kanteikyoku-matsudo-r6": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-cms-kamemizu": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-ihighway-00073": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-still-ihighway-951511100580": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-ihighway-952515201250": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-ihighway-952525600050": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-still-kaiho-bisan-martis": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-kaiho-hashidahana-lt": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-still-lcdb-0010cd87": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-0f571210": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-2102f1fc": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-224a1ae7": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-28de516f": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-2fcf6f13": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-4a189dff": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-5e537f58": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-8c47979d": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-a9d841a7": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-b52fad48": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-c422a7e9": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-c9d31ea5": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-e6e4ee88": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-eec8013f": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-f53f0c05": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-still-lcdb-f9c8da46": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-lcdb-fda27d1e": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-mie-douro-11-07": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-mima-udatsu-1": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-mountain-ikedaonsen-ikedayama": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-muni-shirakawacho-fujiibashi": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-norikura-kogen-norikuradake": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-other-matsumoto-airport-wni": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-river-tottori-kasen-073": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-road-chitamaru-08": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-shima-azuri-beach-mie": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-skr-r32-shimokawa": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-yokohama-546641": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-yokohama-546646": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-yokohama-546683": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-still-yokohama-546687": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-still-yokohama-546810": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-street-sankei-kunitachi": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-street-zazacity-hamamatsu": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-takayama-koku-koen-2": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "curated-temple-toyokawa-inari-somon": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-transport-airport-kobe-ytv": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "curated-yuriage-kahoku": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "gifu-road-1009": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "gifu-road-1012": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "gifu-road-4006": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "gifu-road-520": {
+   "total": 3,
+   "days": {
+    "20260909": 3
+   }
+  },
+  "gifu-road-521": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "gifu-road-527": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "gifu-road-544": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "gifu-road-656": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "gifu-road-7014": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jma-volcam-11303": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jma-volcam-31201": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100004": {
+   "total": 5,
+   "days": {
+    "20260909": 5
+   }
+  },
+  "jwa-river-saitama-55201100014": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100096": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100101": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100105": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100122": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100151": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100221": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100917": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100934": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100993": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201100994": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201101005": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201101043": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201101044": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-saitama-55201101045": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-wakayama-c02300": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-wakayama-c10301": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-wakayama-c10454": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-wakayama-c10554": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-wakayama-c10555": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-wakayama-c11555": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-wakayama-k02859": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "jwa-river-wakayama-k03960": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-100257279": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-100513058": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-100513061": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-101025023": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-101793014": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-101793034": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-101793147": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102049003": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-102049015": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102049034": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102049035": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-102049040": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102049070": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102305007": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102305008": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102305025": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102305026": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102305032": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102305074": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-102817037": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-103073003": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-103585015": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-103585042": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-103841109": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-104353145": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-104865020": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-104865053": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-105121007": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-105121022": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-105121032": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-105121033": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-105121105": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-105121106": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-105121190": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-105121219": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-105121235": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-105377031": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-105377036": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-105377070": {
+   "total": 3,
+   "days": {
+    "20260909": 3
+   }
+  },
+  "kawabou-105377071": {
+   "total": 6,
+   "days": {
+    "20260909": 6
+   }
+  },
+  "kawabou-105377072": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-106145061": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-106145076": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-106913054": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-107177014": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-107177027": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-107184010": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-107184013": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-107184018": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-108449037": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-109473007": {
+   "total": 3,
+   "days": {
+    "20260909": 3
+   }
+  },
+  "kawabou-109473008": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-109473016": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-109985025": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-110753021": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121063332": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121261080": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121261081": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121271180": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121271181": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121271185": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121271256": {
+   "total": 3,
+   "days": {
+    "20260909": 3
+   }
+  },
+  "kawabou-121271257": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121271261": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121271262": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-121280167": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121781058": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121831050": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121831051": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121831052": {
+   "total": 5,
+   "days": {
+    "20260909": 5
+   }
+  },
+  "kawabou-121831055": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121831061": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-121831062": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-122313084": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-12301211001": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221259014": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221259033": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221261004": {
+   "total": 4,
+   "days": {
+    "20260909": 4
+   }
+  },
+  "kawabou-221261026": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221261027": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221271010": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221271012": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221279001": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221279004": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-221279026": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221279036": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-221279061": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221279062": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221279068": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221279072": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221279081": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221335017": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221335029": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221539018": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221539019": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221546054": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221547002": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221547003": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221558022": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221565004": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221781040": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221781059": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221781064": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221782004": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-221811017": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-221811018": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-221811030": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221811061": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221813010": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221818009": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221818040": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221818051": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221824039": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221831004": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-221831011": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221831012": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221831013": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-221831014": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222068004": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-222068013": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222068020": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222069013": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222069016": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222313029": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222313037": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222539004": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222549003": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222552001": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-222846006": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-302049004": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-302049005": {
+   "total": 3,
+   "days": {
+    "20260909": 3
+   }
+  },
+  "kawabou-302049007": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-302049021": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-302049098": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-303585052": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-303585061": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "kawabou-307425005": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "kawabou-309729001": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-cbr-road-023-044": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-cbr-road-041-012": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "mlit-ktr-103585001": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-ktr-road-koufu-20": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-ktr-road-nagano-214116": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-ktr-road-oomiya-53a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-roadinfo-811bf00201": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-roadinfo-86c00066": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-roadinfo-86c00453": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "mlit-roadinfo-89c00874": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
+  },
+  "muni-yokosuka-4ff4efb38c": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "muni-yokosuka-6f1975ec75": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "muni-yokosuka-9f46c94d44": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "nagano-road-kiso-003": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "shizukawa-coast-fuji-momosato": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "shizukawa-coast-kanbara-shucchousho": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "shizukawa-coast-suruga-haibara": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "shizukawa-coast-suruga-ooigawakakou": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "shizukawa-coast-suruga-sumiyoshi": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "shizuoka-doboku-fuji-01-nehara": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "tokyo-suibo-021": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "tokyo-suibo-068": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "tokyo-suibo-075": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "tokyo-suibo-102": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "toyama-road-261": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-09ec367e": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-280faac7": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-2a54d42a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-895dec5a": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-96f072bb": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-a4691b0c": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-b63311e7": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-bd2d6e92": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-cf714831": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-d49c1c0b": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-dcb9137b": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "world-ea66f47b": {
+   "total": 1,
+   "days": {
+    "20260909": 1
+   }
+  },
+  "yt-skr-6275bccb33": {
+   "total": 2,
+   "days": {
+    "20260909": 2
+   }
   }
  },
- "updated": "2026-09-09T20:34:59+09:00",
+ "updated": "2026-09-10T01:46:00+09:00",
  "today_partial": {
-  "date": "20260909",
+  "date": "20260910",
   "counts": {
-   "curated-akihabara-aisan": 1,
-   "curated-amaharashi": 1,
-   "curated-cms-sunport-takamatsu": 1,
-   "curated-coast-chosei-hitotsumatsu": 1,
-   "curated-coast-hounohama-beach": 1,
-   "curated-dojocco-ekimae": 2,
-   "curated-enoshima-riviera": 1,
-   "curated-fbc-fukui-owada": 1,
-   "curated-fbc-fukui-sta": 1,
-   "curated-fctv-fukui-nishi": 1,
-   "curated-fctv-kida-bashi": 1,
-   "curated-fuji-5thstation": 2,
-   "curated-gate-sugari": 1,
-   "curated-ichinomiya-city-station-rotary": 5,
-   "curated-karuizawa-kyukaru": 1,
-   "curated-karuizawa-prince": 1,
-   "curated-karuizawa-yukawa": 1,
-   "curated-kbn-seto-ohashi": 2,
-   "curated-kotohira-meteor-asahi": 1,
-   "curated-kyoto-chikurin": 1,
-   "curated-kyoto-hachijoguchi": 1,
-   "curated-kyoto-heian-jingu": 1,
-   "curated-kyoto-oharano": 2,
-   "curated-lcdb-00dcd725": 1,
-   "curated-lcdb-040c6858": 1,
-   "curated-lcdb-05885fb3": 1,
-   "curated-lcdb-05d0a0dd": 1,
-   "curated-lcdb-06a3738a": 1,
-   "curated-lcdb-0aa78694": 3,
-   "curated-lcdb-0adcfb8e": 1,
-   "curated-lcdb-0e3b8281": 1,
-   "curated-lcdb-1071cfa0": 1,
-   "curated-lcdb-107908d3": 1,
-   "curated-lcdb-1173cbe9": 1,
-   "curated-lcdb-175c3d19": 1,
-   "curated-lcdb-1b2ac37f": 1,
-   "curated-lcdb-1fc00d78": 2,
-   "curated-lcdb-23a0035a": 1,
-   "curated-lcdb-29f8b603": 2,
-   "curated-lcdb-2c7e9814": 1,
-   "curated-lcdb-2cdf5209": 1,
-   "curated-lcdb-3333e316": 2,
-   "curated-lcdb-33a53291": 1,
-   "curated-lcdb-33a8f16d": 1,
-   "curated-lcdb-3694d947": 1,
-   "curated-lcdb-3fe84875": 2,
-   "curated-lcdb-40b72f46": 3,
-   "curated-lcdb-45d001cb": 2,
-   "curated-lcdb-4a357a97": 3,
-   "curated-lcdb-4f36f136": 1,
-   "curated-lcdb-53e75dba": 1,
-   "curated-lcdb-549c5f84": 1,
-   "curated-lcdb-55ec1184": 7,
-   "curated-lcdb-562b7950": 1,
-   "curated-lcdb-574d3aba": 1,
-   "curated-lcdb-58810415": 1,
-   "curated-lcdb-5c4bcbaa": 1,
-   "curated-lcdb-642e0e7a": 1,
-   "curated-lcdb-67970d90": 1,
-   "curated-lcdb-67f2bb5c": 1,
-   "curated-lcdb-6b753015": 2,
-   "curated-lcdb-6c015449": 1,
-   "curated-lcdb-6c3567be": 1,
-   "curated-lcdb-6fc8d4c3": 1,
-   "curated-lcdb-71343c83": 1,
-   "curated-lcdb-71a72e6f": 1,
-   "curated-lcdb-71ff9032": 1,
-   "curated-lcdb-75259bd7": 1,
-   "curated-lcdb-79711efe": 1,
-   "curated-lcdb-7aa7bcc0": 1,
-   "curated-lcdb-7afb22eb": 1,
-   "curated-lcdb-7b628d57": 1,
-   "curated-lcdb-7b9ae89a": 1,
-   "curated-lcdb-7ef7c0f2": 1,
-   "curated-lcdb-80750243": 1,
-   "curated-lcdb-86946e2c": 1,
-   "curated-lcdb-879b9f0e": 1,
-   "curated-lcdb-8af541af": 2,
-   "curated-lcdb-8ddfde85": 1,
-   "curated-lcdb-8e49a31f": 2,
-   "curated-lcdb-8e7cfb97": 1,
-   "curated-lcdb-8ffec82e": 2,
-   "curated-lcdb-92eb5db5": 2,
-   "curated-lcdb-94740a3a": 1,
-   "curated-lcdb-98feb823": 2,
-   "curated-lcdb-9c6051c4": 1,
-   "curated-lcdb-a0fbf8ff": 1,
-   "curated-lcdb-a41070b9": 1,
-   "curated-lcdb-a6be8dfa": 3,
-   "curated-lcdb-a7540271": 3,
-   "curated-lcdb-a7ab3033": 1,
-   "curated-lcdb-a7cf73d0": 1,
-   "curated-lcdb-abb54edc": 1,
-   "curated-lcdb-af7d69ea": 1,
-   "curated-lcdb-b33e99ba": 1,
-   "curated-lcdb-b63cb05d": 2,
-   "curated-lcdb-bc9ab16a": 2,
-   "curated-lcdb-c02c693a": 2,
-   "curated-lcdb-c16aa2e5": 1,
-   "curated-lcdb-c2452d32": 1,
-   "curated-lcdb-c478b480": 1,
-   "curated-lcdb-c9a96f8a": 1,
-   "curated-lcdb-caa011ca": 3,
-   "curated-lcdb-ce9a3598": 1,
-   "curated-lcdb-d0bb36c2": 2,
-   "curated-lcdb-d2870f23": 2,
-   "curated-lcdb-d5cdb887": 1,
-   "curated-lcdb-d6d0e5ea": 2,
-   "curated-lcdb-d965e5e3": 1,
-   "curated-lcdb-db8aab73": 1,
-   "curated-lcdb-db9f2e5e": 2,
-   "curated-lcdb-dc2113b4": 1,
-   "curated-lcdb-dca63d8f": 1,
-   "curated-lcdb-dcaf98a4": 1,
-   "curated-lcdb-dfe7cc45": 1,
-   "curated-lcdb-e0c92d72": 4,
-   "curated-lcdb-e1b167be": 1,
-   "curated-lcdb-e264a5cf": 1,
-   "curated-lcdb-e3b3d8fa": 1,
-   "curated-lcdb-e66d62b5": 2,
-   "curated-lcdb-e852a9fe": 2,
-   "curated-lcdb-f75ec576": 1,
-   "curated-lcdb-f7f38adf": 3,
-   "curated-lcdb-fa1474b3": 1,
-   "curated-lcdb-fa2a455e": 1,
-   "curated-lcv-area-roads": 1,
-   "curated-link-lcdb-047b5f1a": 1,
-   "curated-link-lcdb-1b85c8da": 1,
-   "curated-link-lcdb-64c0acd4": 1,
-   "curated-link-lcdb-65b2adfc": 1,
-   "curated-link-lcdb-7d96cae1": 1,
-   "curated-link-lcdb-aaf76267": 1,
-   "curated-link-lcdb-cede1088": 1,
-   "curated-link-lcdb-e4ef6ce7": 2,
-   "curated-link-river-mlit-tottori-03": 2,
-   "curated-link-river-tokushima-01": 1,
-   "curated-link-river-tokushima-03": 2,
-   "curated-link-river-tokushima-07": 2,
-   "curated-link-river-tokushima-09": 2,
-   "curated-link-river-tokushima-10": 2,
-   "curated-link-river-tokushima-13": 2,
-   "curated-link-river-tokushima-14": 1,
-   "curated-link-river-tokushima-16": 1,
-   "curated-link-river-tokushima-19": 2,
-   "curated-link-river-tokushima-20": 1,
-   "curated-link-river-tokushima-21": 2,
-   "curated-link-river-tokushima-23": 2,
-   "curated-link-river-wakayama-hidaka-32": 1,
-   "curated-link-river-wakayama-kaiso-02": 1,
-   "curated-mboso-shiokaze": 1,
-   "curated-mountain-toyooka-toyoterrace-chuoalps": 1,
-   "curated-muni-funagata-wakaayu": 1,
-   "curated-nagoya-sta-ctv": 7,
-   "curated-nagoya-sta-starcat": 2,
-   "curated-nagoya-taiko-starcat": 6,
-   "curated-nakano-hogoneko": 1,
-   "curated-namiai-hoshizora": 1,
-   "curated-omaezaki-port": 1,
-   "curated-onsen-yarimikan-yarigatake": 1,
-   "curated-port-aogashima-sanpo-village": 1,
-   "curated-port-iki-gonoura": 1,
-   "curated-r2-035e188f": 1,
-   "curated-r2-0516a7d0": 1,
-   "curated-r2-0dd2f850": 1,
-   "curated-r2-27a284f1": 1,
-   "curated-r2-2fda414c": 1,
-   "curated-r2-4457f7ee": 1,
-   "curated-r2-6e69c75e": 2,
-   "curated-r2-763d189b": 1,
-   "curated-r2-9895fb0c": 3,
-   "curated-r2-990b2549": 1,
-   "curated-r2-997a2477": 1,
-   "curated-r2-9fc3fa49": 1,
-   "curated-r2-a70a9fe8": 1,
-   "curated-r2-b86f9a98": 2,
-   "curated-r2-eb837885": 1,
-   "curated-r2-f299c0dd": 1,
-   "curated-rito-niijima": 1,
-   "curated-rito-oshima": 2,
-   "curated-river-kinokawa-city-chozuki": 1,
-   "curated-road-interluck-r10-miyazaki": 1,
-   "curated-road-kanteikyoku-matsudo-r6": 1,
-   "curated-sakae-trinity": 7,
-   "curated-satta-hiroshige": 1,
-   "curated-satta-kotsu": 3,
-   "curated-sbs-shizuoka-mix": 1,
-   "curated-scenic-kanozan-kujukutani": 1,
-   "curated-shibuya-ann": 1,
-   "curated-shibuya-fnn": 1,
-   "curated-shrine-suzuka-myojin": 2,
-   "curated-shrine-toyokawa-susanoo": 1,
-   "curated-station-motoyawata-north": 1,
-   "curated-still-arctic-nyalesund": 1,
-   "curated-still-cms-kamemizu": 1,
-   "curated-still-ihighway-00073": 1,
-   "curated-still-ihighway-03007": 1,
-   "curated-still-ihighway-03012": 1,
-   "curated-still-ihighway-951511100580": 1,
-   "curated-still-ihighway-952515201300": 1,
-   "curated-still-ihighway-952525600050": 2,
-   "curated-still-ihighway-954525400070": 1,
-   "curated-still-jcg-irosaki-lighthouse-shizuoka": 1,
-   "curated-still-kaiho-bisan-martis": 1,
-   "curated-still-kaiho-hashidahana-lt": 2,
-   "curated-still-kanagawa-coast-shonan-port": 1,
-   "curated-still-lcdb-0010cd87": 1,
-   "curated-still-lcdb-0f571210": 1,
-   "curated-still-lcdb-159c3333": 1,
-   "curated-still-lcdb-2102f1fc": 1,
-   "curated-still-lcdb-224a1ae7": 1,
-   "curated-still-lcdb-28de516f": 1,
-   "curated-still-lcdb-2fcf6f13": 1,
-   "curated-still-lcdb-3d4125da": 2,
-   "curated-still-lcdb-46cafa03": 4,
-   "curated-still-lcdb-4a189dff": 1,
-   "curated-still-lcdb-5e537f58": 1,
-   "curated-still-lcdb-65bdcf3c": 1,
-   "curated-still-lcdb-8020304e": 1,
-   "curated-still-lcdb-8c47979d": 1,
-   "curated-still-lcdb-a9d841a7": 1,
-   "curated-still-lcdb-b52fad48": 1,
-   "curated-still-lcdb-c422a7e9": 1,
-   "curated-still-lcdb-e6e4ee88": 1,
-   "curated-still-lcdb-eec8013f": 1,
-   "curated-still-lcdb-f53f0c05": 1,
-   "curated-still-lcdb-f9c8da46": 1,
-   "curated-still-lcdb-fda27d1e": 1,
-   "curated-still-mie-douro-11-07": 1,
-   "curated-still-mima-udatsu-1": 1,
-   "curated-still-mountain-ikedaonsen-ikedayama": 1,
-   "curated-still-muni-shirakawacho-fujiibashi": 1,
-   "curated-still-obs-naoj-mitaka-solar": 1,
-   "curated-still-osaka-kasen11": 1,
-   "curated-still-river-tottori-kasen-073": 1,
-   "curated-still-road-chitamaru-08": 1,
-   "curated-still-road-tottori-yukinavi-223": 1,
-   "curated-still-shima-azuri-beach-mie": 1,
-   "curated-still-skr-r32-shimokawa": 1,
-   "curated-still-trail-chogatake-hutte": 1,
-   "curated-still-yokohama-546641": 1,
-   "curated-still-yokohama-546683": 1,
-   "curated-street-fst-ikuno-koreatown": 1,
-   "curated-street-fst-kadoma-costco": 2,
-   "curated-street-motoyawata-minami": 1,
-   "curated-street-omoide-yokocho": 1,
-   "curated-street-sankei-kunitachi": 1,
-   "curated-street-seya-seya": 1,
-   "curated-street-uchisaiwaicho-tokyoshimbun": 1,
-   "curated-street-zazacity-hamamatsu": 2,
-   "curated-tateyama-hojo": 1,
-   "curated-temple-toyokawa-inari-somon": 1,
-   "curated-toba-kuzaki": 1,
-   "curated-tokushima-bizan-live": 5,
-   "curated-tokushima-kachidoki": 3,
-   "curated-tokushima-pref-katsuuragawa-komatsushima": 2,
-   "curated-tokushima-pref-nakagawa-kito": 1,
-   "curated-tokushima-pref-otanigawa": 1,
-   "curated-tokyo-dome-city-official": 1,
-   "curated-transport-airport-kobe-ytv": 1,
-   "curated-transport-airport-matsumoto-official": 1,
-   "curated-transport-airport-nagoya-starcat": 3,
-   "curated-transport-port-wakkanai-surfeel": 2,
-   "curated-utsumi-beach": 1,
-   "curated-wink-bypass": 2,
-   "curated-yuriage-kahoku": 1,
-   "curated-zoo-nihondaira-polarbear": 1,
-   "ehime-road-6-48": 1,
-   "fukui-road-493": 1,
-   "fukui-road-503": 1,
-   "fukui-road-99": 1,
-   "gifu-road-1009": 2,
-   "gifu-road-1012": 1,
-   "gifu-road-4006": 1,
-   "gifu-road-501": 2,
-   "gifu-road-502": 12,
-   "gifu-road-503": 22,
-   "gifu-road-517": 1,
-   "gifu-road-520": 1,
-   "gifu-road-521": 1,
-   "gifu-road-527": 1,
-   "gifu-road-529": 8,
-   "gifu-road-534": 1,
-   "gifu-road-544": 1,
-   "gifu-road-656": 1,
-   "gifu-road-7014": 1,
-   "gifu-road-9002": 4,
-   "ishikawa-road-48": 1,
-   "ishikawa-road-55": 1,
-   "jma-volcam-31201": 1,
-   "jwa-river-saitama-55201100004": 2,
-   "jwa-river-saitama-55201100014": 1,
-   "jwa-river-saitama-55201100096": 1,
-   "jwa-river-saitama-55201100101": 1,
-   "jwa-river-saitama-55201100110": 1,
-   "jwa-river-saitama-55201100144": 1,
-   "jwa-river-saitama-55201100151": 1,
-   "jwa-river-saitama-55201100194": 2,
-   "jwa-river-saitama-55201100907": 1,
-   "jwa-river-saitama-55201100909": 10,
-   "jwa-river-saitama-55201100917": 1,
-   "jwa-river-saitama-55201100934": 1,
-   "jwa-river-saitama-55201100993": 1,
-   "jwa-river-saitama-55201100994": 1,
-   "jwa-river-saitama-55201101005": 1,
-   "jwa-river-saitama-55201101032": 1,
-   "jwa-river-saitama-55201101043": 1,
-   "jwa-river-saitama-55201101045": 1,
-   "jwa-river-saitama-55201101048": 2,
-   "jwa-river-wakayama-c02300": 1,
-   "jwa-river-wakayama-c04800": 1,
-   "jwa-river-wakayama-c10301": 1,
-   "jwa-river-wakayama-c10454": 1,
-   "jwa-river-wakayama-c10554": 1,
-   "jwa-river-wakayama-c10555": 1,
-   "jwa-river-wakayama-c11555": 1,
-   "jwa-river-wakayama-k02859": 1,
-   "jwa-river-wakayama-k03139": 1,
-   "jwa-river-wakayama-k03960": 2,
-   "kawabou-101025023": 1,
-   "kawabou-101793034": 1,
-   "kawabou-101793147": 1,
-   "kawabou-102049003": 1,
-   "kawabou-102049015": 1,
-   "kawabou-102049016": 1,
-   "kawabou-102049028": 2,
-   "kawabou-102049033": 1,
-   "kawabou-102049034": 1,
-   "kawabou-102049035": 1,
-   "kawabou-102049040": 1,
-   "kawabou-102049070": 1,
-   "kawabou-102049101": 1,
-   "kawabou-103073003": 1,
-   "kawabou-103073011": 1,
-   "kawabou-103073019": 1,
-   "kawabou-103585015": 1,
-   "kawabou-103585028": 1,
-   "kawabou-103585042": 1,
-   "kawabou-103585064": 1,
-   "kawabou-103841109": 2,
-   "kawabou-104353019": 1,
-   "kawabou-104353022": 1,
-   "kawabou-104353045": 1,
-   "kawabou-104353115": 1,
-   "kawabou-104353116": 1,
-   "kawabou-104353145": 1,
-   "kawabou-104353177": 1,
-   "kawabou-104865020": 1,
-   "kawabou-104865046": 1,
-   "kawabou-104865053": 1,
-   "kawabou-105121007": 1,
-   "kawabou-105121022": 1,
-   "kawabou-105121032": 2,
-   "kawabou-105121033": 2,
-   "kawabou-105121190": 2,
-   "kawabou-105121219": 1,
-   "kawabou-105121235": 1,
-   "kawabou-105121252": 1,
-   "kawabou-105377031": 1,
-   "kawabou-105377036": 1,
-   "kawabou-105377063": 1,
-   "kawabou-105377064": 2,
-   "kawabou-105377070": 3,
-   "kawabou-105377071": 6,
-   "kawabou-105377072": 1,
-   "kawabou-105889007": 1,
-   "kawabou-105889011": 1,
-   "kawabou-105889013": 6,
-   "kawabou-105889014": 3,
-   "kawabou-105889015": 2,
-   "kawabou-105889016": 2,
-   "kawabou-105889018": 2,
-   "kawabou-105889025": 1,
-   "kawabou-105889027": 20,
-   "kawabou-105889029": 1,
-   "kawabou-106145008": 1,
-   "kawabou-106145061": 1,
-   "kawabou-106145076": 1,
-   "kawabou-106657052": 1,
-   "kawabou-106913046": 1,
-   "kawabou-106913053": 1,
-   "kawabou-106913054": 1,
-   "kawabou-106913058": 1,
-   "kawabou-106913077": 3,
-   "kawabou-107172002": 11,
-   "kawabou-107172018": 1,
-   "kawabou-107177014": 1,
-   "kawabou-107177027": 1,
-   "kawabou-107184010": 1,
-   "kawabou-107184013": 2,
-   "kawabou-107184018": 1,
-   "kawabou-108449037": 1,
-   "kawabou-109473007": 3,
-   "kawabou-109473008": 1,
-   "kawabou-109473016": 1,
-   "kawabou-109985025": 1,
-   "kawabou-110753021": 1,
-   "kawabou-11701201001": 1,
-   "kawabou-121063332": 1,
-   "kawabou-121261080": 1,
-   "kawabou-121261081": 1,
-   "kawabou-121270037": 1,
-   "kawabou-121271180": 1,
-   "kawabou-121271181": 1,
-   "kawabou-121271185": 1,
-   "kawabou-121271228": 1,
-   "kawabou-121271256": 2,
-   "kawabou-121271257": 1,
-   "kawabou-121271260": 3,
-   "kawabou-121271261": 1,
-   "kawabou-121271262": 2,
-   "kawabou-121280106": 2,
-   "kawabou-121280167": 1,
-   "kawabou-121280168": 1,
-   "kawabou-121280227": 1,
-   "kawabou-121781058": 1,
-   "kawabou-121811078": 1,
-   "kawabou-121811084": 1,
-   "kawabou-121811087": 2,
-   "kawabou-121831050": 1,
-   "kawabou-121831051": 1,
-   "kawabou-121831052": 5,
-   "kawabou-121831055": 1,
-   "kawabou-121831061": 1,
-   "kawabou-121831062": 1,
-   "kawabou-122068008": 1,
-   "kawabou-122068010": 1,
-   "kawabou-122068011": 1,
-   "kawabou-122313084": 1,
-   "kawabou-122549002": 1,
-   "kawabou-12301211001": 1,
-   "kawabou-221259033": 1,
-   "kawabou-221261004": 4,
-   "kawabou-221261026": 1,
-   "kawabou-221261027": 1,
-   "kawabou-221271002": 1,
-   "kawabou-221271010": 1,
-   "kawabou-221271011": 2,
-   "kawabou-221271012": 1,
-   "kawabou-221271014": 1,
-   "kawabou-221271015": 10,
-   "kawabou-221271016": 2,
-   "kawabou-221271018": 3,
-   "kawabou-221279013": 1,
-   "kawabou-221279015": 2,
-   "kawabou-221279036": 2,
-   "kawabou-221279053": 1,
-   "kawabou-221279068": 1,
-   "kawabou-221281003": 1,
-   "kawabou-221281005": 1,
-   "kawabou-221281006": 1,
-   "kawabou-221281008": 4,
-   "kawabou-221335017": 1,
-   "kawabou-221335029": 1,
-   "kawabou-221335065": 1,
-   "kawabou-221335067": 1,
-   "kawabou-221539018": 1,
-   "kawabou-221539019": 1,
-   "kawabou-221546054": 1,
-   "kawabou-221555040": 1,
-   "kawabou-221558029": 1,
-   "kawabou-221565004": 1,
-   "kawabou-221781040": 1,
-   "kawabou-221781059": 1,
-   "kawabou-221781064": 1,
-   "kawabou-221782002": 1,
-   "kawabou-221782003": 1,
-   "kawabou-221782004": 1,
-   "kawabou-221782005": 1,
-   "kawabou-221782007": 1,
-   "kawabou-221782008": 6,
-   "kawabou-221782009": 2,
-   "kawabou-221782010": 3,
-   "kawabou-221782011": 10,
-   "kawabou-221782012": 6,
-   "kawabou-221782013": 4,
-   "kawabou-221782014": 6,
-   "kawabou-221782015": 9,
-   "kawabou-221782016": 7,
-   "kawabou-221782017": 4,
-   "kawabou-221782019": 3,
-   "kawabou-221782020": 8,
-   "kawabou-221782022": 5,
-   "kawabou-221782023": 6,
-   "kawabou-221782024": 2,
-   "kawabou-221782025": 6,
-   "kawabou-221782026": 6,
-   "kawabou-221782027": 3,
-   "kawabou-221782028": 2,
-   "kawabou-221782029": 5,
-   "kawabou-221782030": 1,
-   "kawabou-221782032": 1,
-   "kawabou-221782033": 10,
-   "kawabou-221782034": 8,
-   "kawabou-221782036": 10,
-   "kawabou-221794002": 1,
-   "kawabou-221811010": 1,
-   "kawabou-221811011": 1,
-   "kawabou-221811013": 1,
-   "kawabou-221811017": 2,
-   "kawabou-221811018": 2,
-   "kawabou-221811030": 1,
-   "kawabou-221811040": 3,
-   "kawabou-221811056": 1,
-   "kawabou-221811059": 5,
-   "kawabou-221811060": 1,
-   "kawabou-221811061": 1,
-   "kawabou-221811075": 2,
-   "kawabou-221813010": 1,
-   "kawabou-221818007": 1,
-   "kawabou-221818009": 1,
-   "kawabou-221818040": 1,
-   "kawabou-221818051": 1,
-   "kawabou-221824039": 1,
-   "kawabou-221827024": 1,
-   "kawabou-221831004": 2,
-   "kawabou-221831011": 1,
-   "kawabou-221831012": 1,
-   "kawabou-221831013": 1,
-   "kawabou-221831014": 1,
-   "kawabou-222068003": 1,
-   "kawabou-222068004": 2,
-   "kawabou-222068005": 1,
-   "kawabou-222068013": 1,
-   "kawabou-222068020": 1,
-   "kawabou-222068022": 1,
-   "kawabou-222069013": 1,
-   "kawabou-222069016": 1,
-   "kawabou-222087023": 1,
-   "kawabou-222097012": 1,
-   "kawabou-222097017": 1,
-   "kawabou-222097018": 1,
-   "kawabou-222097019": 1,
-   "kawabou-222313029": 1,
-   "kawabou-222313037": 1,
-   "kawabou-222539004": 1,
-   "kawabou-222549003": 1,
-   "kawabou-222549010": 2,
-   "kawabou-222549017": 4,
-   "kawabou-222549018": 1,
-   "kawabou-222551002": 1,
-   "kawabou-222552001": 1,
-   "kawabou-222570002": 1,
-   "kawabou-222570003": 1,
-   "kawabou-222570013": 1,
-   "kawabou-222570016": 1,
-   "kawabou-222570022": 1,
-   "kawabou-222846006": 1,
-   "kawabou-222846016": 1,
-   "kawabou-302049021": 1,
-   "kawabou-302049025": 1,
-   "kawabou-302049098": 1,
-   "kawabou-303329021": 1,
-   "kawabou-303329022": 2,
-   "kawabou-303329024": 2,
-   "kawabou-303585009": 1,
-   "kawabou-303585052": 1,
-   "kawabou-304103004": 1,
-   "kawabou-304103005": 1,
-   "kawabou-304353023": 2,
-   "kawabou-304353025": 1,
-   "kawabou-307425005": 1,
-   "kawabou-309729001": 1,
-   "kawabou-311531007": 1,
-   "kawabou-311531011": 1,
-   "mlit-cbr-road-001-037": 1,
-   "mlit-cbr-road-001-042": 1,
-   "mlit-cbr-road-001-043": 1,
-   "mlit-cbr-road-019-011": 2,
-   "mlit-cbr-road-019-015": 2,
-   "mlit-cbr-road-019-021": 1,
-   "mlit-cbr-road-019-022": 1,
-   "mlit-cbr-road-019-023": 3,
-   "mlit-cbr-road-022-007": 2,
-   "mlit-cbr-road-022-009": 3,
-   "mlit-cbr-road-023-039": 1,
-   "mlit-cbr-road-023-044": 1,
-   "mlit-cbr-road-023-076": 1,
-   "mlit-cbr-road-041-002": 2,
-   "mlit-cbr-road-041-012": 2,
-   "mlit-cbr-road-153-001": 3,
-   "mlit-cbr-road-153-006": 6,
-   "mlit-cbr-road-302-003": 1,
-   "mlit-cbr-road-302-007": 1,
-   "mlit-cbr-road-302-011": 1,
-   "mlit-cbr-road-302-015": 2,
-   "mlit-hrr-road-761087": 1,
-   "mlit-hrr-road-761173": 1,
-   "mlit-ktr-103585001": 1,
+   "curated-lcdb-044032a7": 1,
+   "curated-lcdb-a26df088": 1,
+   "curated-lcdb-b7f89dd4": 1,
+   "curated-lcdb-d2870f23": 1,
+   "curated-nagoya-sta-ctv": 1,
+   "curated-still-lcdb-c3ffc640": 1,
+   "jwa-river-saitama-55201100125": 2,
+   "jwa-river-saitama-55201100126": 1,
+   "jwa-river-saitama-55201101004": 1,
+   "kawabou-221827045": 1,
+   "kawabou-303585006": 1,
    "mlit-ktr-221320006": 1,
-   "mlit-ktr-221320016": 2,
-   "mlit-ktr-221320027": 1,
-   "mlit-ktr-221320032": 1,
-   "mlit-ktr-221320033": 1,
-   "mlit-ktr-221320038": 1,
-   "mlit-ktr-221320039": 1,
-   "mlit-ktr-221320043": 2,
-   "mlit-ktr-road-koufu-20": 1,
-   "mlit-ktr-road-nagano-042039": 1,
-   "mlit-ktr-road-nagano-214116": 1,
-   "mlit-roadinfo-82a30101": 1,
-   "mlit-roadinfo-86c00066": 1,
-   "mlit-roadinfo-86c00453": 1,
-   "mlit-roadinfo-86c03937": 1,
-   "mlit-roadinfo-89c00874": 2,
-   "muni-gujo-kasen-camera-5": 1,
-   "muni-kasugai-1b8deaade7": 4,
-   "muni-kasugai-53e8dd1501": 3,
-   "muni-kasugai-6840bbbe54": 1,
-   "muni-kasugai-e4d339fd3e": 7,
-   "muni-yokosuka-4ff4efb38c": 1,
-   "muni-yokosuka-6f1975ec75": 1,
-   "muni-yokosuka-9f46c94d44": 1,
-   "nagano-road-kiso-003": 1,
-   "shizukawa-coast-fuji-momosato": 1,
-   "shizukawa-coast-kanbara-shucchousho": 1,
-   "shizuoka-doboku-fuji-01-nehara": 1,
-   "shizuoka-doboku-fuji-03-fujinomiya": 1,
-   "shizuoka-doboku-fuji-08-hitoana": 1,
-   "tokyo-suibo-001": 2,
-   "tokyo-suibo-002": 1,
-   "tokyo-suibo-003": 1,
-   "tokyo-suibo-009": 1,
-   "tokyo-suibo-011": 1,
-   "tokyo-suibo-012": 1,
-   "tokyo-suibo-015": 1,
-   "tokyo-suibo-019": 1,
-   "tokyo-suibo-021": 1,
-   "tokyo-suibo-022": 2,
-   "tokyo-suibo-025": 2,
-   "tokyo-suibo-029": 1,
-   "tokyo-suibo-031": 1,
-   "tokyo-suibo-033": 2,
-   "tokyo-suibo-036": 3,
-   "tokyo-suibo-043": 1,
-   "tokyo-suibo-046": 1,
-   "tokyo-suibo-053": 1,
-   "tokyo-suibo-055": 2,
-   "tokyo-suibo-057": 1,
-   "tokyo-suibo-060": 1,
+   "mlit-ktr-221320009": 1,
+   "mlit-ktr-road-oomiya-39c": 1,
+   "saitama-flood-034": 1,
+   "shizukawa-coast-suruga-takashinden": 1,
+   "tokyo-suibo-059": 1,
    "tokyo-suibo-061": 1,
-   "tokyo-suibo-062": 1,
-   "tokyo-suibo-068": 1,
-   "tokyo-suibo-072": 2,
-   "tokyo-suibo-074": 3,
-   "tokyo-suibo-075": 1,
-   "tokyo-suibo-076": 1,
-   "tokyo-suibo-077": 2,
-   "tokyo-suibo-081": 1,
-   "tokyo-suibo-090": 2,
-   "tokyo-suibo-102": 1,
-   "tokyo-suibo-103": 1,
-   "toyama-road-062": 1,
-   "toyama-road-221": 2,
-   "toyama-road-255": 2,
-   "toyama-road-256": 1,
-   "toyama-road-260": 1,
-   "toyama-road-261": 1,
-   "toyama-road-308": 1,
-   "toyama-road-309": 1,
-   "toyama-road-310": 1,
-   "toyama-road-311": 1,
-   "toyama-road-341": 1,
-   "world-09ec367e": 1,
-   "world-1e199877": 1,
-   "world-280faac7": 1,
-   "world-2a54d42a": 1,
-   "world-604a0246": 1,
-   "world-7cb8df6d": 1,
-   "world-809bf2c3": 1,
-   "world-895dec5a": 1,
-   "world-96f072bb": 1,
-   "world-a4691b0c": 1,
-   "world-bd2d6e92": 1,
-   "world-cf714831": 1,
-   "world-dcb9137b": 1,
-   "world-ea66f47b": 1,
-   "world-f9893651": 1,
-   "yt-skr-6275bccb33": 2,
-   "yt-skr-6b773bb4d8": 1,
-   "yt-skr-f35db696be": 1
+   "world-9461b902": 1
   }
  },
  "favorites": {
   "curated-aso-kusasenri": 1,
   "curated-cahaya-bulan-bise": 1,
+  "curated-cms-sunport-takamatsu": 1,
   "curated-coast-ishigaki-ema-nagurawan": 1,
+  "curated-dojocco-ekimae": 1,
   "curated-farm-iizasa-narita-2": 1,
   "curated-farm-isb-katori-1": 1,
   "curated-fbc-fukui-owada": 2,
@@ -21938,6 +23488,7 @@
   "curated-knb-toyama": 1,
   "curated-kotsukigawa-kako": 1,
   "curated-kyoto-ekimae-bus": 1,
+  "curated-kyoto-hachijoguchi": 1,
   "curated-lcdb-42cd7909": 1,
   "curated-lcdb-49c67661": 1,
   "curated-lcdb-4d37bb36": 1,
@@ -21951,8 +23502,10 @@
   "curated-lcdb-e4895271": 1,
   "curated-lcdb-e66d62b5": 1,
   "curated-lcdb-ebe3fb6c": 1,
+  "curated-link-river-tokushima-19": 1,
   "curated-mountain-jukkoku-toge-fuji": 1,
   "curated-mountain-kurodake-rinyu": 1,
+  "curated-nakano-hogoneko": 2,
   "curated-ncm-nabekanmuriyama": 1,
   "curated-nkt-hamada-port": 1,
   "curated-parking-kusatsu-tenguyama-p1": 1,
@@ -21970,6 +23523,7 @@
   "curated-r2-e54499ad": 1,
   "curated-rnb-matsuyamajo": 1,
   "curated-sakae-trinity": 1,
+  "curated-satta-kotsu": 1,
   "curated-scenic-asahi-miyazaki-oyodogawa": 1,
   "curated-scenic-rishiri-senposhi-misaki": 1,
   "curated-shonan-enoden-134": 2,
@@ -21982,7 +23536,6 @@
   "curated-still-lcdb-0f24c6af": 1,
   "curated-still-lcdb-4f113f6d": 1,
   "curated-still-lcdb-65a810d4": 1,
-  "curated-still-lcdb-65bdcf3c": 1,
   "curated-still-lcdb-b297ecba": 1,
   "curated-still-lcdb-e3441e5f": 1,
   "curated-still-muni-shimamaki-enoshima": 1,
@@ -21992,12 +23545,14 @@
   "curated-still-toda-fire-hq-camera": 2,
   "curated-still-trail-chogatake-hutte": 1,
   "curated-still-trail-karasawa-hyutte": 1,
+  "curated-street-fst-kadoma-costco": 1,
   "curated-street-fst-kitashinchi": 1,
   "curated-tokushima-bizan-live": 2,
   "curated-tokushima-kachidoki": 2,
   "curated-tokushima-pref-katsuuragawa-komatsushima": 1,
   "curated-tokushima-pref-nakagawa-kito": 1,
   "curated-tokyo-dome-city-official": 1,
+  "curated-transport-port-wakkanai-surfeel": 1,
   "curated-yushima-nekojima": 3,
   "curated-zoo-x-zoo-llama-matsudo": 1,
   "fukuoka-city-c014": 1,
@@ -22013,10 +23568,15 @@
   "ishikawa-road-25": 1,
   "ishikawa-road-55": 4,
   "jma-volcam-20201": 1,
+  "jwa-river-saitama-55201100004": 1,
+  "jwa-river-saitama-55201100030": 1,
   "jwa-river-saitama-55201100101": 1,
   "jwa-river-saitama-55201100194": 1,
+  "jwa-river-saitama-55201100204": 1,
   "jwa-river-saitama-55201100919": 1,
   "jwa-river-saitama-55201101033": 1,
+  "jwa-river-saitama-55201101040": 1,
+  "jwa-river-saitama-55201101048": 1,
   "jwa-river-wakayama-c01800": 1,
   "jwa-river-wakayama-c04800": 1,
   "jwa-river-wakayama-c10357": 1,
@@ -22050,14 +23610,17 @@
   "kawabou-105889014": 1,
   "kawabou-105889015": 1,
   "kawabou-105889024": 1,
-  "kawabou-105889027": 1,
+  "kawabou-105889027": 2,
   "kawabou-106401008": 2,
   "kawabou-106401009": 2,
   "kawabou-106913004": 1,
   "kawabou-106913012": 1,
   "kawabou-106913014": 1,
+  "kawabou-106913046": 1,
+  "kawabou-106913068": 1,
   "kawabou-106913072": 1,
   "kawabou-106913092": 1,
+  "kawabou-106913103": 1,
   "kawabou-106913126": 1,
   "kawabou-11701201001": 1,
   "kawabou-121270037": 1,
@@ -22074,6 +23637,11 @@
   "kawabou-221270028": 1,
   "kawabou-221270031": 1,
   "kawabou-221270034": 1,
+  "kawabou-221279001": 1,
+  "kawabou-221279036": 1,
+  "kawabou-221279061": 1,
+  "kawabou-221279062": 1,
+  "kawabou-221279081": 1,
   "kawabou-221280027": 1,
   "kawabou-221281001": 1,
   "kawabou-221281010": 1,
@@ -22111,6 +23679,7 @@
   "kawabou-221811013": 1,
   "kawabou-221811014": 1,
   "kawabou-221811039": 2,
+  "kawabou-221811040": 1,
   "kawabou-221811053": 2,
   "kawabou-221811055": 2,
   "kawabou-221811056": 1,
@@ -22126,6 +23695,7 @@
   "kawabou-221827022": 1,
   "kawabou-221827023": 1,
   "kawabou-221827024": 1,
+  "kawabou-222068021": 1,
   "kawabou-222068037": 2,
   "kawabou-222068038": 2,
   "kawabou-222069023": 1,
@@ -22135,6 +23705,7 @@
   "kawabou-222549002": 1,
   "kawabou-222549009": 1,
   "kawabou-222549015": 1,
+  "kawabou-222549017": 1,
   "kawabou-223297034": 1,
   "kawabou-223297079": 1,
   "kawabou-303329001": 1,
@@ -22191,5 +23762,5 @@
   "world-f8260cfe": 1,
   "world-iss-live": 1
  },
- "favorites_date": "20260909"
+ "favorites_date": "20260910"
 }
