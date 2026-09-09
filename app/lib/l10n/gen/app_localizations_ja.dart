@@ -2077,6 +2077,11 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get xAccountsTypeUnknown => '運営主体不明';
+
+  @override
+  String detailNotUpdatingSince(String date) {
+    return '$dateから画像が更新されていません';
+  }
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -4186,4 +4191,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get xAccountsTypeUnknown => 'だれが だしているか ふめい';
+
+  @override
+  String detailNotUpdatingSince(String date) {
+    return '$dateから がぞうが かわって いません';
+  }
 }

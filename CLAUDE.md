@@ -30,6 +30,7 @@ python site/build.py                            # 配信ファイル生成
 
 - **Firebase 系パッケージ（firebase_core / messaging / crashlytics / analytics）は必ず一緒に上げる**。1つだけ `pub add` すると firebase_core だけ新しくなり、SwiftPM が「firebase-ios-sdk 12.18.0 と 12.17.0 が競合」で解決できず `flutter build ios --config-only` が失敗する（2026-09-07 firebase_analytics 追加時に発生）。`flutter pub upgrade firebase_core firebase_messaging firebase_crashlytics firebase_analytics` で揃える
 - 利用状況の集計は Firebase Analytics（`app/lib/data/analytics.dart`）。名前付きルートを使っていないので各画面の initState から `Analytics.screen()` を明示的に呼ぶ。デバッグビルドは収集しない。プライバシーポリシー 3-4 に記載済み。App Store Connect の「アプリのプライバシー」に「製品の操作」「デバイスID」の申告が必要
+- **バージョンを上げたら必ず `flutter build ios --config-only` を実行する**。Xcode は `ios/Flutter/Generated.xcconfig` の FLUTTER_BUILD_NAME / FLUTTER_BUILD_NUMBER を使うため、pubspec だけ書き換えてアーカイブすると前のバージョン番号で出る（2026-09-08 に 1.4.4 が 1.4.3 としてアーカイブされた）
 - **`flutter pub get` を実行すると `app/ios/Flutter/ephemeral/.../FlutterGeneratedPluginSwiftPackage/Package.swift` の platforms が `.iOS("13.0")` にリセットされる**（Flutter 3.44系の挙動）。Firebase系SwiftPMパッケージはiOS 15.0必須のため、そのままXcodeビルドすると「requires minimum platform version 15.0」エラーになる。`flutter build ios --config-only` だけがプロジェクトの17.0を反映する。**対策としてRunner.xcschemeのビルド前スクリプトにsedによる自動修正を組み込み済み**（xcode_backend.sh prepare の直後）。pub get / pub add / flutter test を実行した後は `flutter build ios --config-only` を実行しておくと安全
 
 ## 道路カメラの知見（2026-08-18追記）

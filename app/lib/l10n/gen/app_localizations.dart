@@ -3843,6 +3843,12 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'運営主体不明'**
   String get xAccountsTypeUnknown;
+
+  /// 凍結カメラのチップ。監視が同一画像を確認し始めた日付を添える
+  ///
+  /// In ja, this message translates to:
+  /// **'{date}から画像が更新されていません'**
+  String detailNotUpdatingSince(String date);
 }
 
 class _AppLocalizationsDelegate

@@ -2158,4 +2158,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get xAccountsTypeUnknown => 'Operator unknown';
+
+  @override
+  String detailNotUpdatingSince(String date) {
+    return 'Image not updated since $date';
+  }
 }

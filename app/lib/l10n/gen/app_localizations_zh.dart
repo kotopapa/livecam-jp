@@ -2064,6 +2064,11 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get xAccountsTypeUnknown => '运营主体不明';
+
+  @override
+  String detailNotUpdatingSince(String date) {
+    return '自$date起图像未更新';
+  }
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4127,4 +4132,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get xAccountsTypeUnknown => '營運主體不明';
+
+  @override
+  String detailNotUpdatingSince(String date) {
+    return '自$date起影像未更新';
+  }
 }

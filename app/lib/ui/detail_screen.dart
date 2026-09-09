@@ -302,7 +302,22 @@ class _DetailScreenState extends State<DetailScreen> {
           _InfoChip(text: l10n.detailPosApprox, color: uncertainBorderColor));
     }
     if (st?.state == CameraState.frozen) {
-      chips.add(_InfoChip(text: l10n.detailNotUpdating, color: Colors.grey));
+      // いつから止まっているかを添える（何年も前の画像が「ライブ」に見える事故の判別用）。
+      // frozen_since は監視が同一画像を確認し始めた時刻（UTC）→ JST の日付で表示
+      final since = st?.frozenSince;
+      String? sinceLabel;
+      if (since != null) {
+        final at = DateTime.tryParse(since);
+        if (at != null) {
+          final j = toJstWallClock(at.toUtc());
+          sinceLabel = '${j.year}/${j.month}/${j.day}';
+        }
+      }
+      chips.add(_InfoChip(
+          text: sinceLabel == null
+              ? l10n.detailNotUpdating
+              : l10n.detailNotUpdatingSince(sinceLabel),
+          color: Colors.grey));
     }
     if (camera.riverOrRoute != null) {
       chips.add(_InfoChip(

@@ -2088,4 +2088,9 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get xAccountsTypeUnknown => '운영 주체 불명';
+
+  @override
+  String detailNotUpdatingSince(String date) {
+    return '$date부터 이미지가 갱신되지 않음';
+  }
 }

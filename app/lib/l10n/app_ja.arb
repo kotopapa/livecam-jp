@@ -2162,5 +2162,14 @@
   "xAccountsTypeOrganization": "団体",
   "xAccountsTypeIndividual": "個人",
   "xAccountsTypeOtherArea": "別自治体",
-  "xAccountsTypeUnknown": "運営主体不明"
+  "xAccountsTypeUnknown": "運営主体不明",
+  "detailNotUpdatingSince": "{date}から画像が更新されていません",
+  "@detailNotUpdatingSince": {
+    "description": "凍結カメラのチップ。監視が同一画像を確認し始めた日付を添える",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  }
 }

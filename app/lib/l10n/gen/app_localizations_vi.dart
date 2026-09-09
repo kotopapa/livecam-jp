@@ -2167,4 +2167,9 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get xAccountsTypeUnknown => 'Không rõ đơn vị vận hành';
+
+  @override
+  String detailNotUpdatingSince(String date) {
+    return 'Hình ảnh chưa được cập nhật kể từ $date';
+  }
 }
