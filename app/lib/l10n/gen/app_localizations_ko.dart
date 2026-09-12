@@ -129,11 +129,14 @@ class AppLocalizationsKo extends AppLocalizations {
   String get updateRequiredTitle => '업데이트가 필요합니다';
 
   @override
-  String get updateRequiredBody =>
-      '이 버전은 지원이 종료되었습니다.\nApp Store에서 최신 버전으로 업데이트해 주십시오.';
+  String updateRequiredBody(String store) {
+    return '이 버전은 지원이 종료되었습니다.\n$store에서 최신 버전으로 업데이트해 주십시오.';
+  }
 
   @override
-  String get updateOpenStore => 'App Store 열기';
+  String updateOpenStore(String store) {
+    return '$store 열기';
+  }
 
   @override
   String get categoryRiver => '하천';
@@ -373,7 +376,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get settingsNotifyDenied =>
-      '알림이 허용되어 있지 않습니다. iOS 설정 앱에서 알림을 허용해 주십시오';
+      '알림이 허용되어 있지 않습니다. 기기의 설정 앱에서 알림을 허용해 주십시오';
 
   @override
   String get settingsSectionData => '데이터 수신';
@@ -451,11 +454,14 @@ class AppLocalizationsKo extends AppLocalizations {
   String get settingsInvite => '친구 초대하기';
 
   @override
-  String get settingsInviteSubtitle => 'QR 코드 또는 링크로 App Store 페이지를 공유';
+  String settingsInviteSubtitle(String store) {
+    return 'QR 코드 또는 링크로 $store 페이지를 공유';
+  }
 
   @override
-  String get settingsInviteDialogBody =>
-      'QR 코드를 스캔하거나 링크를 보내면\nApp Store의 앱 페이지가 열립니다';
+  String settingsInviteDialogBody(String store) {
+    return 'QR 코드를 스캔하거나 링크를 보내면\n$store의 앱 페이지가 열립니다';
+  }
 
   @override
   String get settingsInviteShareText => 'Japan Live Camera Map - 하천·도로·방재';
@@ -467,7 +473,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get settingsReview => '앱 평가하기';
 
   @override
-  String get settingsReviewSubtitle => 'App Store에 리뷰 작성';
+  String settingsReviewSubtitle(String store) {
+    return '$store에 리뷰 작성';
+  }
 
   @override
   String get settingsOtherApps => '개발자의 다른 앱';
@@ -1657,8 +1665,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tipNoticeTitle => '구입 전에 확인해 주십시오';
 
   @override
-  String get tipNoticeBody =>
-      '후원은 App Store의 앱 내 구입으로 처리됩니다(환불은 Apple의 규정에 따릅니다).';
+  String tipNoticeBody(String store, String vendor) {
+    return '후원은 $store의 앱 내 구입으로 처리됩니다(환불은 $vendor의 규정에 따릅니다).';
+  }
 
   @override
   String get tipEula => 'EULA(Apple 표준 사용권 계약)';

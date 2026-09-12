@@ -7,6 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'config.dart';
 import 'data/camera_repository.dart';
 import 'data/favorites_store.dart';
 import 'data/global_stats.dart';
@@ -105,7 +106,12 @@ class AppState extends ChangeNotifier {
 
   void _checkUpdateRequired() {
     final min = repository.manifest?.minAppVersion;
-    storeUrl = repository.manifest?.storeUrl;
+    // Android は Play のページ、それ以外は App Store（manifest が無ければアプリ既定値）
+    final mf = repository.manifest;
+    storeUrl = (defaultTargetPlatform == TargetPlatform.android
+            ? mf?.playStoreUrl
+            : mf?.storeUrl) ??
+        defaultStoreUrl;
     if (min == null || _appVersion.isEmpty) return;
     final required = isVersionBelow(_appVersion, min);
     if (required != updateRequired) {

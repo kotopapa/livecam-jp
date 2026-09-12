@@ -79,8 +79,22 @@
     "description": "SPEC 9.5 の必須免責文。日本語版を正文とする（legalJapaneseAuthoritative を併記すること）"
   },
   "updateRequiredTitle": "アップデートが必要です",
-  "updateRequiredBody": "このバージョンはサポートが終了しました。\nApp Storeから最新版に更新してください。",
-  "updateOpenStore": "App Storeを開く",
+  "updateRequiredBody": "このバージョンはサポートが終了しました。\n{store}から最新版に更新してください。",
+  "@updateRequiredBody": {
+    "placeholders": {
+      "store": {
+        "type": "String"
+      }
+    }
+  },
+  "updateOpenStore": "{store}を開く",
+  "@updateOpenStore": {
+    "placeholders": {
+      "store": {
+        "type": "String"
+      }
+    }
+  },
   "categoryRiver": "河川",
   "categoryRoad": "道路",
   "categoryVolcano": "火山",
@@ -330,7 +344,7 @@
     "description": "気象庁「気象情報等に関する多言語辞書」(2026-03-26版) を語順のみ既存訳に合わせて調整。出典：気象庁"
   },
   "settingsNotifyDelayNote": "※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません",
-  "settingsNotifyDenied": "通知が許可されていません。iOSの設定アプリから通知を許可してください",
+  "settingsNotifyDenied": "通知が許可されていません。端末の設定アプリから通知を許可してください",
   "settingsSectionData": "データ取得",
   "settingsWifiOnly": "Wi-Fi接続時のみ画像を取得",
   "settingsWifiOnlySubtitle": "モバイル通信量を抑えます（地図とカメラ一覧は表示されます）",
@@ -361,15 +375,36 @@
   "settingsSectionAbout": "このアプリについて",
   "settingsVersion": "バージョン",
   "settingsInvite": "友達を招待する",
-  "settingsInviteSubtitle": "QRコードまたはリンクでApp Storeのページを共有",
-  "settingsInviteDialogBody": "QRコードを読み取るか、リンクを送ると\nApp Storeのアプリページが開きます",
+  "settingsInviteSubtitle": "QRコードまたはリンクで{store}のページを共有",
+  "@settingsInviteSubtitle": {
+    "placeholders": {
+      "store": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsInviteDialogBody": "QRコードを読み取るか、リンクを送ると\n{store}のアプリページが開きます",
+  "@settingsInviteDialogBody": {
+    "placeholders": {
+      "store": {
+        "type": "String"
+      }
+    }
+  },
   "settingsInviteShareText": "全国ライブカメラ地図 - 河川・道路・防災",
   "@settingsInviteShareText": {
     "description": "共有シートの本文（末尾にURLが付く）"
   },
   "settingsLinkCopied": "リンクをコピーしました",
   "settingsReview": "アプリを評価する",
-  "settingsReviewSubtitle": "App Storeでレビューを書く",
+  "settingsReviewSubtitle": "{store}でレビューを書く",
+  "@settingsReviewSubtitle": {
+    "placeholders": {
+      "store": {
+        "type": "String"
+      }
+    }
+  },
   "settingsOtherApps": "開発者の他のアプリ",
   "settingsShowMoreApps": "その他のアプリを見る",
   "settingsSectionDisclaimer": "免責",
@@ -1585,9 +1620,17 @@
   "@tipNoticeTitle": {
     "description": "ADAPT"
   },
-  "tipNoticeBody": "支援はApp Storeのアプリ内課金で処理されます（返金はAppleの規定に従います）。",
+  "tipNoticeBody": "支援は{store}のアプリ内課金で処理されます（返金は{vendor}の規定に従います）。",
   "@tipNoticeBody": {
-    "description": "ADAPT"
+    "description": "ADAPT",
+    "placeholders": {
+      "store": {
+        "type": "String"
+      },
+      "vendor": {
+        "type": "String"
+      }
+    }
   },
   "tipEula": "EULA（Apple標準使用許諾契約）",
   "@tipEula": {

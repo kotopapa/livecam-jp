@@ -70,7 +70,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     });
   }
 
-  String get _storeUrl => app.storeUrl ?? appStoreUrl;
+  String get _storeUrl => app.storeUrl ?? defaultStoreUrl;
 
   /// 友達を招待: App Store ページのQRコードとURL（コピー・共有）
   void _showInvite() {
@@ -83,7 +83,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              context.l10n.settingsInviteDialogBody,
+              context.l10n.settingsInviteDialogBody(storeName),
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 13),
             ),
@@ -130,16 +130,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  /// アプリを評価: App Store のレビュー画面へ（開けない場合はストアページ）
+  /// アプリを評価: ストアのレビュー画面へ（開けない場合はストアページ）。
+  /// Android は in_app_review がパッケージ名で Play を開く。App Store だけ
+  /// `?action=write-review` でレビュー欄へ直接飛ばせる
   Future<void> _openReview() async {
     try {
       final review = InAppReview.instance;
       await review.openStoreListing(appStoreId: appStoreId);
     } catch (_) {
-      await launchUrl(
-        Uri.parse('$_storeUrl?action=write-review'),
-        mode: LaunchMode.externalApplication,
-      );
+      final url = Platform.isAndroid ? _storeUrl : '$_storeUrl?action=write-review';
+      await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
     }
   }
 
@@ -661,13 +661,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ListTile(
             leading: const Icon(Icons.qr_code_2),
             title: Text(l10n.settingsInvite),
-            subtitle: Text(l10n.settingsInviteSubtitle),
+            subtitle: Text(l10n.settingsInviteSubtitle(storeName)),
             onTap: _showInvite,
           ),
           ListTile(
             leading: const Icon(Icons.star_rate_outlined),
             title: Text(l10n.settingsReview),
-            subtitle: Text(l10n.settingsReviewSubtitle),
+            subtitle: Text(l10n.settingsReviewSubtitle(storeName)),
             onTap: _openReview,
           ),
           if (widget.app.repository.manifest?.apps.isNotEmpty ?? false) ...[

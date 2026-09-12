@@ -337,14 +337,14 @@ abstract class AppLocalizations {
   /// No description provided for @updateRequiredBody.
   ///
   /// In ja, this message translates to:
-  /// **'このバージョンはサポートが終了しました。\nApp Storeから最新版に更新してください。'**
-  String get updateRequiredBody;
+  /// **'このバージョンはサポートが終了しました。\n{store}から最新版に更新してください。'**
+  String updateRequiredBody(String store);
 
   /// No description provided for @updateOpenStore.
   ///
   /// In ja, this message translates to:
-  /// **'App Storeを開く'**
-  String get updateOpenStore;
+  /// **'{store}を開く'**
+  String updateOpenStore(String store);
 
   /// No description provided for @categoryRiver.
   ///
@@ -805,7 +805,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsNotifyDenied.
   ///
   /// In ja, this message translates to:
-  /// **'通知が許可されていません。iOSの設定アプリから通知を許可してください'**
+  /// **'通知が許可されていません。端末の設定アプリから通知を許可してください'**
   String get settingsNotifyDenied;
 
   /// No description provided for @settingsSectionData.
@@ -955,14 +955,14 @@ abstract class AppLocalizations {
   /// No description provided for @settingsInviteSubtitle.
   ///
   /// In ja, this message translates to:
-  /// **'QRコードまたはリンクでApp Storeのページを共有'**
-  String get settingsInviteSubtitle;
+  /// **'QRコードまたはリンクで{store}のページを共有'**
+  String settingsInviteSubtitle(String store);
 
   /// No description provided for @settingsInviteDialogBody.
   ///
   /// In ja, this message translates to:
-  /// **'QRコードを読み取るか、リンクを送ると\nApp Storeのアプリページが開きます'**
-  String get settingsInviteDialogBody;
+  /// **'QRコードを読み取るか、リンクを送ると\n{store}のアプリページが開きます'**
+  String settingsInviteDialogBody(String store);
 
   /// 共有シートの本文（末尾にURLが付く）
   ///
@@ -985,8 +985,8 @@ abstract class AppLocalizations {
   /// No description provided for @settingsReviewSubtitle.
   ///
   /// In ja, this message translates to:
-  /// **'App Storeでレビューを書く'**
-  String get settingsReviewSubtitle;
+  /// **'{store}でレビューを書く'**
+  String settingsReviewSubtitle(String store);
 
   /// No description provided for @settingsOtherApps.
   ///
@@ -3061,8 +3061,8 @@ abstract class AppLocalizations {
   /// ADAPT
   ///
   /// In ja, this message translates to:
-  /// **'支援はApp Storeのアプリ内課金で処理されます（返金はAppleの規定に従います）。'**
-  String get tipNoticeBody;
+  /// **'支援は{store}のアプリ内課金で処理されます（返金は{vendor}の規定に従います）。'**
+  String tipNoticeBody(String store, String vendor);
 
   /// ADAPT Apple標準EULAへのリンクのラベル
   ///

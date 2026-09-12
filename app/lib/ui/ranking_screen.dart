@@ -87,18 +87,13 @@ class _RankingScreenState extends State<RankingScreen> {
       _RankMode.recent => 'recent',
       _RankMode.favorites => 'favorites',
     };
-    final l10n = context.l10n;
-    final unit = _mode == _RankMode.favorites
-        ? l10n.rankingUnitFavorites
-        : l10n.rankingUnitViews;
-    // 「いま見られている（24時間）」と「お気に入り登録」は順位だけ出して
-    // 実数は伏せる（アクセスの少ない時間帯に過疎が見えてしまうため。2026-09-02）。
-    // お気に入りは上位20件まで
-    final showCount = _mode == _RankMode.recent;
+    // すべてのモードで順位だけ出して実数は伏せる（アクセスの少ない時間帯に
+    // 過疎が見えてしまうため。24時間・お気に入りは 2026-09-02、7日間も
+    // 2026-09-11 に非表示にした）。お気に入りは上位20件まで
     final limit = _mode == _RankMode.favorites ? 20 : null;
     final rows = [
-      for (final (id, n) in _data?[key] ?? const <(String, int)>[])
-        if (byId[id] != null) (byId[id]!, showCount ? '$n$unit' : ''),
+      for (final (id, _) in _data?[key] ?? const <(String, int)>[])
+        if (byId[id] != null) (byId[id]!, ''),
     ];
     return limit == null ? rows : rows.take(limit).toList();
   }

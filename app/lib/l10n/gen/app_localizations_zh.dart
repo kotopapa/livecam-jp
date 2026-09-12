@@ -127,10 +127,14 @@ class AppLocalizationsZh extends AppLocalizations {
   String get updateRequiredTitle => '需要更新';
 
   @override
-  String get updateRequiredBody => '此版本已停止支持。\n请从 App Store 更新到最新版本。';
+  String updateRequiredBody(String store) {
+    return '此版本已停止支持。\n请从 $store 更新到最新版本。';
+  }
 
   @override
-  String get updateOpenStore => '打开 App Store';
+  String updateOpenStore(String store) {
+    return '打开 $store';
+  }
 
   @override
   String get categoryRiver => '河川';
@@ -365,7 +369,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsNotifyDelayNote => '※通知可能比气象厅发布晚5〜15分钟左右，不能代替紧急地震速报';
 
   @override
-  String get settingsNotifyDenied => '未获得通知权限。请在 iOS 的“设置”应用中允许通知';
+  String get settingsNotifyDenied => '未获得通知权限。请在设备的“设置”应用中允许通知';
 
   @override
   String get settingsSectionData => '数据获取';
@@ -441,10 +445,14 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsInvite => '邀请好友';
 
   @override
-  String get settingsInviteSubtitle => '通过二维码或链接分享 App Store 页面';
+  String settingsInviteSubtitle(String store) {
+    return '通过二维码或链接分享 $store 页面';
+  }
 
   @override
-  String get settingsInviteDialogBody => '扫描二维码或发送链接，\n即可打开 App Store 的应用页面';
+  String settingsInviteDialogBody(String store) {
+    return '扫描二维码或发送链接，\n即可打开 $store 的应用页面';
+  }
 
   @override
   String get settingsInviteShareText => 'Japan Live Camera Map - 河川、道路、防灾';
@@ -456,7 +464,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsReview => '为本软件评分';
 
   @override
-  String get settingsReviewSubtitle => '在 App Store 撰写评价';
+  String settingsReviewSubtitle(String store) {
+    return '在 $store 撰写评价';
+  }
 
   @override
   String get settingsOtherApps => '开发者的其他软件';
@@ -1637,7 +1647,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tipNoticeTitle => '购买前请确认';
 
   @override
-  String get tipNoticeBody => '支持将通过 App Store 的应用内购买处理（退款遵循 Apple 的规定）。';
+  String tipNoticeBody(String store, String vendor) {
+    return '支持将通过 $store 的应用内购买处理（退款遵循 $vendor 的规定）。';
+  }
 
   @override
   String get tipEula => 'EULA（Apple 标准使用许可协议）';
@@ -2194,10 +2206,14 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get updateRequiredTitle => '需要更新';
 
   @override
-  String get updateRequiredBody => '此版本已停止支援。\n請至 App Store 更新至最新版本。';
+  String updateRequiredBody(String store) {
+    return '此版本已停止支援。\n請至 $store 更新至最新版本。';
+  }
 
   @override
-  String get updateOpenStore => '開啟 App Store';
+  String updateOpenStore(String store) {
+    return '開啟 $store';
+  }
 
   @override
   String get categoryRiver => '河川';
@@ -2432,7 +2448,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get settingsNotifyDelayNote => '※通知可能比氣象廳發布晚 5～15 分鐘左右，無法取代緊急地震速報';
 
   @override
-  String get settingsNotifyDenied => '尚未允許通知。請於 iOS 的「設定」App 中允許通知';
+  String get settingsNotifyDenied => '尚未允許通知。請於裝置的「設定」App 中允許通知';
 
   @override
   String get settingsSectionData => '資料取得';
@@ -2508,11 +2524,14 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get settingsInvite => '邀請朋友';
 
   @override
-  String get settingsInviteSubtitle => '以 QR 碼或連結分享 App Store 頁面';
+  String settingsInviteSubtitle(String store) {
+    return '以 QR 碼或連結分享 $store 頁面';
+  }
 
   @override
-  String get settingsInviteDialogBody =>
-      '掃描 QR 碼或傳送連結，\n即可開啟 App Store 的應用程式頁面';
+  String settingsInviteDialogBody(String store) {
+    return '掃描 QR 碼或傳送連結，\n即可開啟 $store 的應用程式頁面';
+  }
 
   @override
   String get settingsInviteShareText => 'Japan Live Camera Map - 河川、道路、防災';
@@ -2524,7 +2543,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get settingsReview => '為應用程式評分';
 
   @override
-  String get settingsReviewSubtitle => '在 App Store 撰寫評論';
+  String settingsReviewSubtitle(String store) {
+    return '在 $store 撰寫評論';
+  }
 
   @override
   String get settingsOtherApps => '開發者的其他應用程式';
@@ -3705,7 +3726,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get tipNoticeTitle => '購買前請確認';
 
   @override
-  String get tipNoticeBody => '支持將透過 App Store 的應用程式內購買處理（退款依 Apple 的規定辦理）。';
+  String tipNoticeBody(String store, String vendor) {
+    return '支持將透過 $store 的應用程式內購買處理（退款依 $vendor 的規定辦理）。';
+  }
 
   @override
   String get tipEula => 'EULA（Apple 標準使用許可協議）';

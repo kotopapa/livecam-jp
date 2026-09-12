@@ -128,11 +128,14 @@ class AppLocalizationsJa extends AppLocalizations {
   String get updateRequiredTitle => 'アップデートが必要です';
 
   @override
-  String get updateRequiredBody =>
-      'このバージョンはサポートが終了しました。\nApp Storeから最新版に更新してください。';
+  String updateRequiredBody(String store) {
+    return 'このバージョンはサポートが終了しました。\n$storeから最新版に更新してください。';
+  }
 
   @override
-  String get updateOpenStore => 'App Storeを開く';
+  String updateOpenStore(String store) {
+    return '$storeを開く';
+  }
 
   @override
   String get categoryRiver => '河川';
@@ -369,7 +372,7 @@ class AppLocalizationsJa extends AppLocalizations {
       '※通知は気象庁の発表から5〜15分程度遅れることがあります。緊急地震速報の代わりにはなりません';
 
   @override
-  String get settingsNotifyDenied => '通知が許可されていません。iOSの設定アプリから通知を許可してください';
+  String get settingsNotifyDenied => '通知が許可されていません。端末の設定アプリから通知を許可してください';
 
   @override
   String get settingsSectionData => 'データ取得';
@@ -447,11 +450,14 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsInvite => '友達を招待する';
 
   @override
-  String get settingsInviteSubtitle => 'QRコードまたはリンクでApp Storeのページを共有';
+  String settingsInviteSubtitle(String store) {
+    return 'QRコードまたはリンクで$storeのページを共有';
+  }
 
   @override
-  String get settingsInviteDialogBody =>
-      'QRコードを読み取るか、リンクを送ると\nApp Storeのアプリページが開きます';
+  String settingsInviteDialogBody(String store) {
+    return 'QRコードを読み取るか、リンクを送ると\n$storeのアプリページが開きます';
+  }
 
   @override
   String get settingsInviteShareText => '全国ライブカメラ地図 - 河川・道路・防災';
@@ -463,7 +469,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsReview => 'アプリを評価する';
 
   @override
-  String get settingsReviewSubtitle => 'App Storeでレビューを書く';
+  String settingsReviewSubtitle(String store) {
+    return '$storeでレビューを書く';
+  }
 
   @override
   String get settingsOtherApps => '開発者の他のアプリ';
@@ -1648,7 +1656,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tipNoticeTitle => '購入前にご確認ください';
 
   @override
-  String get tipNoticeBody => '支援はApp Storeのアプリ内課金で処理されます（返金はAppleの規定に従います）。';
+  String tipNoticeBody(String store, String vendor) {
+    return '支援は$storeのアプリ内課金で処理されます（返金は$vendorの規定に従います）。';
+  }
 
   @override
   String get tipEula => 'EULA（Apple標準使用許諾契約）';
@@ -2211,11 +2221,14 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get updateRequiredTitle => 'あたらしく してください';
 
   @override
-  String get updateRequiredBody =>
-      'いまの アプリは もう つかえません。\nApp Storeで あたらしく してください。';
+  String updateRequiredBody(String store) {
+    return 'いまの アプリは もう つかえません。\n$storeで あたらしく してください。';
+  }
 
   @override
-  String get updateOpenStore => 'App Storeを ひらく';
+  String updateOpenStore(String store) {
+    return '$storeを ひらく';
+  }
 
   @override
   String get categoryRiver => 'かわ（河川）';
@@ -2457,7 +2470,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get settingsNotifyDenied =>
-      'おしらせが きんしに なって います。iOSの せっていで おしらせを ゆるして ください';
+      'おしらせが きんしに なって います。スマホの せっていで おしらせを ゆるして ください';
 
   @override
   String get settingsSectionData => 'データの とりこみ';
@@ -2536,11 +2549,14 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get settingsInvite => 'ともだちを さそう';
 
   @override
-  String get settingsInviteSubtitle => 'QRコードか リンクで App Storeの ページを おくる';
+  String settingsInviteSubtitle(String store) {
+    return 'QRコードか リンクで $storeの ページを おくる';
+  }
 
   @override
-  String get settingsInviteDialogBody =>
-      'QRコードを よみとるか、リンクを おくると\nApp Storeの ページが ひらきます';
+  String settingsInviteDialogBody(String store) {
+    return 'QRコードを よみとるか、リンクを おくると\n$storeの ページが ひらきます';
+  }
 
   @override
   String get settingsInviteShareText => '全国ライブカメラ地図 - かわ・どうろ・ぼうさい';
@@ -2552,7 +2568,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get settingsReview => 'アプリを ひょうかする';
 
   @override
-  String get settingsReviewSubtitle => 'App Storeに かんそうを かく';
+  String settingsReviewSubtitle(String store) {
+    return '$storeに かんそうを かく';
+  }
 
   @override
   String get settingsOtherApps => 'つくった 人（ひと）の ほかの アプリ';
@@ -3759,8 +3777,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get tipNoticeTitle => 'かう まえに かくにん して ください';
 
   @override
-  String get tipNoticeBody =>
-      'おうえんの おかねは App Storeの アプリない かきん（アプリの なかで はらう しくみ）で しはらいます。はらいもどしは Appleの きまりに したがいます。';
+  String tipNoticeBody(String store, String vendor) {
+    return 'おうえんの おかねは $storeの アプリない かきん（アプリの なかで はらう しくみ）で しはらいます。はらいもどしは $vendorの きまりに したがいます。';
+  }
 
   @override
   String get tipEula => 'EULA（Appleの つかいかたの やくそく）';

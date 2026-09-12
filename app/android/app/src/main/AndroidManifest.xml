@@ -18,11 +18,10 @@
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/network_security_config">
-        <!-- AdMob アプリID。Android用IDが発行されるまでは Google 公式テストID。
-             本番IDに差し替えるまで Play へは出さないこと -->
+        <!-- AdMob アプリID（Android。2026-09-10 発行の本番ID） -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-9639294688594011~2743659899"/>
         <!-- FCM: バックグラウンド受信時の通知アイコン・色・既定チャンネル -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"

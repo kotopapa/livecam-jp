@@ -131,11 +131,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get updateRequiredTitle => 'Update required';
 
   @override
-  String get updateRequiredBody =>
-      'This version is no longer supported.\nPlease update to the latest version from the App Store.';
+  String updateRequiredBody(String store) {
+    return 'This version is no longer supported.\nPlease update to the latest version from $store.';
+  }
 
   @override
-  String get updateOpenStore => 'Open the App Store';
+  String updateOpenStore(String store) {
+    return 'Open $store';
+  }
 
   @override
   String get categoryRiver => 'Rivers';
@@ -379,7 +382,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsNotifyDenied =>
-      'Notifications are not allowed. Please enable them in the iOS Settings app.';
+      'Notifications are not allowed. Please enable them in your device\'s Settings app.';
 
   @override
   String get settingsSectionData => 'Data';
@@ -461,12 +464,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsInvite => 'Invite a friend';
 
   @override
-  String get settingsInviteSubtitle =>
-      'Share the App Store page by QR code or link';
+  String settingsInviteSubtitle(String store) {
+    return 'Share the $store page by QR code or link';
+  }
 
   @override
-  String get settingsInviteDialogBody =>
-      'Scan the QR code or send the link to open the App Store page';
+  String settingsInviteDialogBody(String store) {
+    return 'Scan the QR code or send the link to open the $store page';
+  }
 
   @override
   String get settingsInviteShareText =>
@@ -479,7 +484,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsReview => 'Rate this app';
 
   @override
-  String get settingsReviewSubtitle => 'Write a review on the App Store';
+  String settingsReviewSubtitle(String store) {
+    return 'Write a review on $store';
+  }
 
   @override
   String get settingsOtherApps => 'More apps by the developer';
@@ -1720,8 +1727,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tipNoticeTitle => 'Before you purchase';
 
   @override
-  String get tipNoticeBody =>
-      'Support is processed as an App Store in-app purchase (refunds follow Apple\'s policy).';
+  String tipNoticeBody(String store, String vendor) {
+    return 'Support is processed as a $store in-app purchase (refunds follow $vendor\'s policy).';
+  }
 
   @override
   String get tipEula => 'EULA (Apple Standard License Agreement)';

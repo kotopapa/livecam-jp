@@ -8,6 +8,7 @@ class Manifest {
     required this.statusUrl,
     this.minAppVersion,
     this.storeUrl,
+    this.playStoreUrl,
     this.notice,
     this.apps = const [],
   });
@@ -21,6 +22,9 @@ class Manifest {
 
   /// App Store のURL（強制アップデートダイアログの誘導先。未公開の間はnull）
   final String? storeUrl;
+
+  /// Google Play のアプリページ（Android 向け。無ければアプリ既定値）
+  final String? playStoreUrl;
 
   /// 緊急告知（あればアプリ上部にバナー表示。SPEC 8.1）
   final String? notice;
@@ -39,6 +43,7 @@ class Manifest {
       statusUrl: status['url'] as String? ?? '/v1/status.json',
       minAppVersion: json['min_app_version'] as String?,
       storeUrl: json['store_url'] as String?,
+      playStoreUrl: json['play_store_url'] as String?,
       notice: json['notice'] as String?,
       apps: [
         for (final a in (json['apps'] as List? ?? const []))

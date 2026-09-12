@@ -160,3 +160,10 @@ python site/build.py                            # 配信ファイル生成
 - 実在確認は `tools/x_account_verify.py`（x.com の og メタデータ）。投稿確認 `tools/x_account_posts.py` は429が出やすく1件4分以上空ける
 - 国の機関（河川事務所等）は管轄が複数県にまたがるので `area_codes` 配列で持つ（例: 江戸川河川事務所 = 11/12/13）
 
+## Android版の知見（2026-09-10追記）
+
+- Android のリリース手順・Play Console の設定値・コード側の残作業は [docs/playstore_setup.md](docs/playstore_setup.md)。AdMob の Android ID は 2026-09-10 に本番値へ差し替え済み（AndroidManifest と config.dart）
+- `flutter build apk/appbundle` は **core library desugaring 必須**（flutter_local_notifications v16+）。`android/app/build.gradle.kts` に `isCoreLibraryDesugaringEnabled = true` と `coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")` を設定済み
+- ホーム画面ウィジェットは iOS のみ（`WidgetBridge.supported`）。ATT（app_tracking_transparency）は Android では notSupported を返すだけで無害
+- 署名鍵 `android/upload-keystore.jks` と `key.properties` は gitignore 対象。紛失すると Play へ更新できなくなる
+

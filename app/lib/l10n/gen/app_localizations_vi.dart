@@ -131,11 +131,14 @@ class AppLocalizationsVi extends AppLocalizations {
   String get updateRequiredTitle => 'Cần cập nhật ứng dụng';
 
   @override
-  String get updateRequiredBody =>
-      'Phiên bản này đã ngừng được hỗ trợ.\nVui lòng cập nhật lên bản mới nhất từ App Store.';
+  String updateRequiredBody(String store) {
+    return 'Phiên bản này đã ngừng được hỗ trợ.\nVui lòng cập nhật lên bản mới nhất từ $store.';
+  }
 
   @override
-  String get updateOpenStore => 'Mở App Store';
+  String updateOpenStore(String store) {
+    return 'Mở $store';
+  }
 
   @override
   String get categoryRiver => 'Sông ngòi';
@@ -379,7 +382,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get settingsNotifyDenied =>
-      'Thông báo chưa được cho phép. Vui lòng bật thông báo trong ứng dụng Cài đặt của iOS';
+      'Thông báo chưa được cho phép. Vui lòng bật thông báo trong ứng dụng Cài đặt của thiết bị';
 
   @override
   String get settingsSectionData => 'Lấy dữ liệu';
@@ -461,12 +464,14 @@ class AppLocalizationsVi extends AppLocalizations {
   String get settingsInvite => 'Mời bạn bè';
 
   @override
-  String get settingsInviteSubtitle =>
-      'Chia sẻ trang App Store bằng mã QR hoặc đường liên kết';
+  String settingsInviteSubtitle(String store) {
+    return 'Chia sẻ trang $store bằng mã QR hoặc đường liên kết';
+  }
 
   @override
-  String get settingsInviteDialogBody =>
-      'Quét mã QR hoặc gửi đường liên kết\nđể mở trang ứng dụng trên App Store';
+  String settingsInviteDialogBody(String store) {
+    return 'Quét mã QR hoặc gửi đường liên kết\nđể mở trang ứng dụng trên $store';
+  }
 
   @override
   String get settingsInviteShareText =>
@@ -479,7 +484,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get settingsReview => 'Đánh giá ứng dụng';
 
   @override
-  String get settingsReviewSubtitle => 'Viết đánh giá trên App Store';
+  String settingsReviewSubtitle(String store) {
+    return 'Viết đánh giá trên $store';
+  }
 
   @override
   String get settingsOtherApps => 'Ứng dụng khác của nhà phát triển';
@@ -1726,8 +1733,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get tipNoticeTitle => 'Vui lòng xác nhận trước khi mua';
 
   @override
-  String get tipNoticeBody =>
-      'Việc ủng hộ được xử lý bằng thanh toán trong ứng dụng của App Store (việc hoàn tiền tuân theo quy định của Apple).';
+  String tipNoticeBody(String store, String vendor) {
+    return 'Việc ủng hộ được xử lý bằng thanh toán trong ứng dụng của $store (việc hoàn tiền tuân theo quy định của $vendor).';
+  }
 
   @override
   String get tipEula => 'EULA (Hợp đồng cấp phép sử dụng tiêu chuẩn của Apple)';

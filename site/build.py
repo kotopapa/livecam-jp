@@ -28,6 +28,8 @@ OUT = REPO_ROOT / "site" / "v1"
 MIN_APP_VERSION = "1.0.0"
 # App Store 公開後にURLを設定する（強制アップデートダイアログの誘導先）
 STORE_URL = "https://apps.apple.com/jp/app/id6802841521"
+# Google Play のアプリページ（Android の強制アップデート・招待・レビュー導線）
+PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=jp.livecam.livecam_jp"
 INTERNAL_FIELDS = {"verification"}
 
 
@@ -91,6 +93,7 @@ def build() -> int:
         "prefectures": sorted(by_pref),
         "min_app_version": MIN_APP_VERSION,
         "store_url": STORE_URL,
+        "play_store_url": PLAY_STORE_URL,
         # data/notice.txt があればアプリ内お知らせバナーとして配信（空なら非表示）。
         # bot の再ビルドでも消えないようファイルで持つ
         "notice": _notice(),

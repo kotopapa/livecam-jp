@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../data/analytics.dart';
+import '../config.dart';
 import '../l10n/l10n.dart';
 
 /// 開発者を応援する（投げ銭）。消耗型のアプリ内課金4段階。
@@ -200,11 +202,13 @@ class _TipScreenState extends State<TipScreen> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(l10n.tipNoticeTitle, style: const TextStyle(fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
-              Text(l10n.tipNoticeBody,
+              Text(l10n.tipNoticeBody(storeName, storeVendorName),
                   style: TextStyle(fontSize: 12, color: Colors.grey[700])),
               const SizedBox(height: 4),
-              _link(l10n.tipEula,
-                  'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'),
+              // Apple の標準 EULA は iOS のみ（Android は Google Play 利用規約が適用される）
+              if (!Platform.isAndroid)
+                _link(l10n.tipEula,
+                    'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'),
               _link(l10n.settingsTerms, 'https://kotopapa.github.io/livecam-jp/terms.html'),
               _link(l10n.settingsPrivacy, 'https://kotopapa.github.io/livecam-jp/privacy.html'),
             ]),

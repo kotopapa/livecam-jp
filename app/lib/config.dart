@@ -25,12 +25,11 @@ const String _admobBannerUnitIdIos = 'ca-app-pub-9639294688594011/6375938678';
 const String _admobRectangleUnitIdIos =
     'ca-app-pub-9639294688594011/5827278377';
 
-/// Android用ユニットID。AdMobでAndroidアプリを登録してユニットを発行するまでは
-/// Google公式テストID（本番配布前に必ず差し替える）
+/// Android用ユニットID（2026-09-10 発行。アプリID ~2743659899 は AndroidManifest）
 const String _admobBannerUnitIdAndroid =
-    'ca-app-pub-3940256099942544/6300978111';
+    'ca-app-pub-9639294688594011/8466408213';
 const String _admobRectangleUnitIdAndroid =
-    'ca-app-pub-3940256099942544/6300978111';
+    'ca-app-pub-9639294688594011/6926095832';
 
 /// AdMob バナー広告ユニットID（映像直下・各タブ下部）
 String get admobBannerUnitId =>
@@ -44,6 +43,18 @@ String get admobRectangleUnitId => Platform.isAndroid
 /// App Store のアプリID（招待・評価導線用）。manifest の store_url が無い場合の既定
 const String appStoreId = '6802841521';
 const String appStoreUrl = 'https://apps.apple.com/jp/app/id$appStoreId';
+
+/// Google Play のアプリページ（Android。manifest の play_store_url が無いときの既定）
+const String androidPackageName = 'jp.livecam.livecam_jp';
+const String playStoreUrl =
+    'https://play.google.com/store/apps/details?id=$androidPackageName';
+
+/// 実行中プラットフォームのストア名・運営者名（文言の {store} / {vendor} に差し込む）
+String get storeName => Platform.isAndroid ? 'Google Play' : 'App Store';
+String get storeVendorName => Platform.isAndroid ? 'Google' : 'Apple';
+
+/// 実行中プラットフォームのストアURL（配信 manifest で上書き可）
+String get defaultStoreUrl => Platform.isAndroid ? playStoreUrl : appStoreUrl;
 
 // ---------------------------------------------------------------------------
 // アフィリエイト（バリューコマース）

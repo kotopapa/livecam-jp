@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'ad_banner.dart';
 
 import '../app_state.dart';
+import '../config.dart';
 import '../data/analytics.dart';
 import '../data/locale_controller.dart';
 import '../data/stockpile.dart';
@@ -149,7 +150,7 @@ class _HomeShellState extends State<HomeShell> {
         canPop: false,
         child: AlertDialog(
           title: Text(context.l10n.updateRequiredTitle),
-          content: Text(context.l10n.updateRequiredBody),
+          content: Text(context.l10n.updateRequiredBody(storeName)),
           actions: [
             if (storeUrl != null)
               FilledButton(
@@ -157,7 +158,7 @@ class _HomeShellState extends State<HomeShell> {
                   Uri.parse(storeUrl),
                   mode: LaunchMode.externalApplication,
                 ),
-                child: Text(context.l10n.updateOpenStore),
+                child: Text(context.l10n.updateOpenStore(storeName)),
               ),
           ],
         ),
