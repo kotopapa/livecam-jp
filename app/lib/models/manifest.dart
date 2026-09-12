@@ -60,6 +60,7 @@ class RecommendedApp {
     required this.name,
     required this.tagline,
     required this.storeUrl,
+    this.playStoreUrl,
     this.iconUrl,
     this.collapsed = false,
   });
@@ -67,7 +68,12 @@ class RecommendedApp {
   final String id;
   final String name;
   final String tagline;
+
+  /// App Store のページ
   final String storeUrl;
+
+  /// Google Play のページ。無いアプリは Android では一覧に出さない
+  final String? playStoreUrl;
   final String? iconUrl;
 
   /// true なら「その他を見る」を押すまで隠す
@@ -78,6 +84,7 @@ class RecommendedApp {
         name: j['name'] as String? ?? '',
         tagline: j['tagline'] as String? ?? '',
         storeUrl: j['store_url'] as String? ?? '',
+        playStoreUrl: j['play_store_url'] as String?,
         iconUrl: j['icon_url'] as String?,
         collapsed: j['collapsed'] == true,
       );

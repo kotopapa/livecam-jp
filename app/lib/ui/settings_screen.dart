@@ -19,6 +19,7 @@ import '../config.dart';
 import '../data/locale_controller.dart';
 import '../data/notification_settings.dart';
 import '../l10n/l10n.dart';
+import '../models/manifest.dart';
 import 'detail_screen.dart' show disclaimerTextOf;
 import 'language_switcher.dart';
 
@@ -71,6 +72,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   String get _storeUrl => app.storeUrl ?? defaultStoreUrl;
+
+  /// 設定画面に出す「開発者の他のアプリ」。Android は Play のページがあるものだけ
+  List<RecommendedApp> get _otherApps {
+    final apps = app.repository.manifest?.apps ?? const <RecommendedApp>[];
+    if (!Platform.isAndroid) return apps;
+    return [for (final a in apps) if (a.playStoreUrl?.isNotEmpty ?? false) a];
+  }
 
   /// 友達を招待: App Store ページのQRコードとURL（コピー・共有）
   void _showInvite() {
@@ -670,10 +678,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
             subtitle: Text(l10n.settingsReviewSubtitle(storeName)),
             onTap: _openReview,
           ),
-          if (widget.app.repository.manifest?.apps.isNotEmpty ?? false) ...[
+          // 開発者の他のアプリ。Android は Play のページがあるものだけ出す
+          // （現状は全件 App Store のみなので Android ではセクションごと非表示）
+          if (_otherApps.isNotEmpty) ...[
             const Divider(),
             _SectionHeader(l10n.settingsOtherApps),
-            for (final a in widget.app.repository.manifest!.apps)
+            for (final a in _otherApps)
               if (!a.collapsed || _showMoreApps)
                 ListTile(
                   leading: ClipRRect(
@@ -692,10 +702,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   title: Text(a.name),
                   subtitle: a.tagline.isEmpty ? null : Text(a.tagline),
                   trailing: const Icon(Icons.open_in_new, size: 18),
-                  onTap: () => _open(a.storeUrl),
+                  onTap: () => _open(Platform.isAndroid ? a.playStoreUrl! : a.storeUrl),
                 ),
             if (!_showMoreApps &&
-                widget.app.repository.manifest!.apps.any((a) => a.collapsed))
+                _otherApps.any((a) => a.collapsed))
               TextButton.icon(
                 onPressed: () => setState(() => _showMoreApps = true),
                 icon: const Icon(Icons.expand_more),
