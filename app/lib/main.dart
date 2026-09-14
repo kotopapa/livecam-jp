@@ -24,6 +24,7 @@ import 'data/widget_bridge.dart';
 import 'l10n/l10n.dart';
 import 'ui/home_shell.dart';
 import 'data/analytics.dart';
+import 'data/fcm_channel.dart';
 import 'ui/onboarding_screen.dart';
 
 Future<void> main() async {
@@ -38,6 +39,8 @@ Future<void> main() async {
     final options = DefaultFirebaseOptions.currentPlatform;
     if (options != null) {
       await Firebase.initializeApp(options: options);
+      // Android: FCM の通知チャンネル bosai を重要度「高」で作る（iOS は no-op）
+      await FcmChannel.ensure();
       // 利用状況の集計（Firebase Analytics）。デバッグビルドでは収集しない
       await Analytics.init(enabled: !kDebugMode);
       // クラッシュ検知（HANDOFF 2-8-3）。デバッグビルドでは送信しない

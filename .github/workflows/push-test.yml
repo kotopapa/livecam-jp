@@ -85,6 +85,9 @@ jobs:
                                        "body": os.environ["BODY"]},
                       "apns": {"headers": {"apns-priority": "10"},
                                "payload": {"aps": {"sound": "default"}}},
+                      "android": {"priority": "high",
+                                  "notification": {"channel_id": "bosai",
+                                                   "sound": "default"}},
                   }}, timeout=30)
               print("direct:", r.status_code, r.text[:300])
               # token指定時は直接送信のみ。既定トピックに流れて一般ユーザーへ

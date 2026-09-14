@@ -76,6 +76,11 @@ def send_push(token: str, project: str, topic: str,
             "data": {"screen": "bosai", "tab": tab},
             "apns": {"headers": {"apns-priority": "10"},
                      "payload": {"aps": {"sound": "default"}}},
+            # Android: 省電力(Doze)中でも即時配信する high 優先度と、アプリが
+            # 起動時に作る重要度「高」のチャンネル bosai（無いと「その他」に落ちる）
+            "android": {"priority": "high",
+                        "notification": {"channel_id": "bosai",
+                                         "sound": "default"}},
         }},
         timeout=30)
     r.raise_for_status()

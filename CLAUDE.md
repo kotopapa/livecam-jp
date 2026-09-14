@@ -166,4 +166,5 @@ python site/build.py                            # 配信ファイル生成
 - `flutter build apk/appbundle` は **core library desugaring 必須**（flutter_local_notifications v16+）。`android/app/build.gradle.kts` に `isCoreLibraryDesugaringEnabled = true` と `coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")` を設定済み
 - ホーム画面ウィジェットは iOS のみ（`WidgetBridge.supported`）。ATT（app_tracking_transparency）は Android では notSupported を返すだけで無害
 - 署名鍵 `android/upload-keystore.jks` と `key.properties` は gitignore 対象。紛失すると Play へ更新できなくなる
+- **Android の FCM 通知はチャンネル `bosai` を起動時に作る**（`app/lib/data/fcm_channel.dart`、重要度「高」）。マニフェストの default_notification_channel_id に書いてあるだけでは作られず、予備の「その他」チャンネル（ポップアップなし）に落ちる。送信側（bosai_notify.py / push-test.yml）は `android.priority: high` と `android.notification.channel_id: bosai` を付ける
 

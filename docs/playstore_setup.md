@@ -97,7 +97,7 @@ flutter build appbundle --release      # build/app/outputs/bundle/release/app-re
 | 4 | 「App Store」「iOS の設定」を含む文言の Android 版（更新案内・招待・レビュー・通知許可の説明）。7言語 | ARB（updateRequiredBody / updateOpenStore / settingsNotifyDenied / settingsInvite* / settingsReviewSubtitle / tipNoticeBody） | **済**（2026-09-11。config.dart の storeName / storeVendorName を差し込む。通知許可の説明は「端末の設定」に統一） |
 | 5 | ストア URL を Android では Play のものに（manifest の `store_url` は iOS 固定。`site/build.py` に `play_store_url` を追加し、アプリは Platform で使い分け） | site/build.py / manifest.dart / settings_screen.dart | **済**（2026-09-11。manifest に play_store_url、AppState.storeUrl がプラットフォームで選択） |
 | 6 | 招待の QR・共有リンクも同様に Play の URL へ | settings_screen.dart | **済**（2026-09-11。_storeUrl 経由で Play の URL） |
-| 7 | 通知チャンネル: FCM の既定チャンネル `bosai` はマニフェストで指定済み。Android 13+ の通知許可は flutter_local_notifications の `requestNotificationsPermission()` を使用（実装済み）。実機で通知が届くこと・タップで災害速報が開くことを確認 | notification_settings.dart | 要実機確認 |
+| 7 | 通知チャンネル `bosai` を起動時に重要度「高」で作成（fcm_channel.dart）、送信側に android.priority=high / channel_id を追加（2026-09-14）。実機で通知が届くこと・ポップアップすること・タップで災害速報が開くことを確認 | fcm_channel.dart / bosai_notify.py | 実装済・要実機確認 |
 | 8 | YouTube 埋め込み（WebView）・全画面・ピンチ拡大・位置情報許可ダイアログ・戻るボタンの挙動を Android 実機で確認 | | 要実機確認 |
 | 9 | 16 KB ページサイズ対応（Play の 2025-11 以降の要件）。Flutter 3.44 と現在のプラグインは対応済みだが、Play Console のアップロード時警告を確認 | | 要確認 |
 | 10 | Crashlytics の難読化マッピング: `com.google.firebase.crashlytics` Gradle プラグインが AAB ビルド時に自動アップロード（設定済み）。初回クラッシュがシンボル化されるか確認 | | 要確認 |
