@@ -2205,6 +2205,60 @@ class AppLocalizationsJa extends AppLocalizations {
   String bosaiRiverPrefCameras(String pref) {
     return '$prefのカメラを見る';
   }
+
+  @override
+  String get mapRouteTooltip => 'ルート沿いのカメラ';
+
+  @override
+  String get routeSheetSubtitle => '出発地と目的地を入れると、経路の近くにあるカメラだけを地図に表示します';
+
+  @override
+  String get routeOrigin => '出発地（住所・地名）';
+
+  @override
+  String get routeDestination => '目的地（住所・地名）';
+
+  @override
+  String get routeUseCurrentLocation => '現在地';
+
+  @override
+  String get routeWidthLabel => '道路からの距離';
+
+  @override
+  String get routeSearch => '経路を検索';
+
+  @override
+  String get routeNotAvailable => '経路検索は現在利用できません';
+
+  @override
+  String routePlaceNotFound(String query) {
+    return '「$query」の場所が見つかりませんでした';
+  }
+
+  @override
+  String get routeNotFound => '経路が見つかりませんでした';
+
+  @override
+  String routeBanner(int count, String km) {
+    return 'ルート沿い $count台 · 約${km}km';
+  }
+
+  @override
+  String get routeClear => '解除';
+
+  @override
+  String get routeListTitle => 'ルート沿いのカメラ（出発地から順）';
+
+  @override
+  String routeAlongKm(String km) {
+    return '出発地から${km}km';
+  }
+
+  @override
+  String get routeNoCameras => 'この経路の近くにカメラはありません';
+
+  @override
+  String get routeDisclaimer => '経路は参考情報です。運転中は操作しないでください';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -4441,4 +4495,58 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String bosaiRiverPrefCameras(String pref) {
     return '$prefの カメラを みる';
   }
+
+  @override
+  String get mapRouteTooltip => 'みちに そった カメラ';
+
+  @override
+  String get routeSheetSubtitle => 'しゅっぱつと もくてきちを いれると、みちの ちかくの カメラだけ みえます';
+
+  @override
+  String get routeOrigin => 'しゅっぱつち';
+
+  @override
+  String get routeDestination => 'もくてきち';
+
+  @override
+  String get routeUseCurrentLocation => 'いまの ばしょ';
+
+  @override
+  String get routeWidthLabel => 'みちからの きょり';
+
+  @override
+  String get routeSearch => 'みちを さがす';
+
+  @override
+  String get routeNotAvailable => 'いまは みちを さがせません';
+
+  @override
+  String routePlaceNotFound(String query) {
+    return '「$query」が みつかりません';
+  }
+
+  @override
+  String get routeNotFound => 'みちが みつかりません';
+
+  @override
+  String routeBanner(int count, String km) {
+    return 'みちに そった カメラ $countだい · やく${km}km';
+  }
+
+  @override
+  String get routeClear => 'やめる';
+
+  @override
+  String get routeListTitle => 'みちに そった カメラ';
+
+  @override
+  String routeAlongKm(String km) {
+    return 'しゅっぱつちから ${km}km';
+  }
+
+  @override
+  String get routeNoCameras => 'この みちの ちかくに カメラは ありません';
+
+  @override
+  String get routeDisclaimer => 'みちは さんこうです。うんてんちゅうは つかわないで ください';
 }

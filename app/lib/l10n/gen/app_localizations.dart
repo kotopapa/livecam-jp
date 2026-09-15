@@ -4035,6 +4035,102 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'{pref}のカメラを見る'**
   String bosaiRiverPrefCameras(String pref);
+
+  /// No description provided for @mapRouteTooltip.
+  ///
+  /// In ja, this message translates to:
+  /// **'ルート沿いのカメラ'**
+  String get mapRouteTooltip;
+
+  /// No description provided for @routeSheetSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'出発地と目的地を入れると、経路の近くにあるカメラだけを地図に表示します'**
+  String get routeSheetSubtitle;
+
+  /// No description provided for @routeOrigin.
+  ///
+  /// In ja, this message translates to:
+  /// **'出発地（住所・地名）'**
+  String get routeOrigin;
+
+  /// No description provided for @routeDestination.
+  ///
+  /// In ja, this message translates to:
+  /// **'目的地（住所・地名）'**
+  String get routeDestination;
+
+  /// No description provided for @routeUseCurrentLocation.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在地'**
+  String get routeUseCurrentLocation;
+
+  /// No description provided for @routeWidthLabel.
+  ///
+  /// In ja, this message translates to:
+  /// **'道路からの距離'**
+  String get routeWidthLabel;
+
+  /// No description provided for @routeSearch.
+  ///
+  /// In ja, this message translates to:
+  /// **'経路を検索'**
+  String get routeSearch;
+
+  /// No description provided for @routeNotAvailable.
+  ///
+  /// In ja, this message translates to:
+  /// **'経路検索は現在利用できません'**
+  String get routeNotAvailable;
+
+  /// No description provided for @routePlaceNotFound.
+  ///
+  /// In ja, this message translates to:
+  /// **'「{query}」の場所が見つかりませんでした'**
+  String routePlaceNotFound(String query);
+
+  /// No description provided for @routeNotFound.
+  ///
+  /// In ja, this message translates to:
+  /// **'経路が見つかりませんでした'**
+  String get routeNotFound;
+
+  /// No description provided for @routeBanner.
+  ///
+  /// In ja, this message translates to:
+  /// **'ルート沿い {count}台 · 約{km}km'**
+  String routeBanner(int count, String km);
+
+  /// No description provided for @routeClear.
+  ///
+  /// In ja, this message translates to:
+  /// **'解除'**
+  String get routeClear;
+
+  /// No description provided for @routeListTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ルート沿いのカメラ（出発地から順）'**
+  String get routeListTitle;
+
+  /// No description provided for @routeAlongKm.
+  ///
+  /// In ja, this message translates to:
+  /// **'出発地から{km}km'**
+  String routeAlongKm(String km);
+
+  /// No description provided for @routeNoCameras.
+  ///
+  /// In ja, this message translates to:
+  /// **'この経路の近くにカメラはありません'**
+  String get routeNoCameras;
+
+  /// No description provided for @routeDisclaimer.
+  ///
+  /// In ja, this message translates to:
+  /// **'経路は参考情報です。運転中は操作しないでください'**
+  String get routeDisclaimer;
 }
 
 class _AppLocalizationsDelegate

@@ -2287,4 +2287,60 @@ class AppLocalizationsEn extends AppLocalizations {
   String bosaiRiverPrefCameras(String pref) {
     return 'See cameras in $pref';
   }
+
+  @override
+  String get mapRouteTooltip => 'Cameras along a route';
+
+  @override
+  String get routeSheetSubtitle =>
+      'Enter a start and a destination to show only cameras near the route';
+
+  @override
+  String get routeOrigin => 'Start (address or place)';
+
+  @override
+  String get routeDestination => 'Destination (address or place)';
+
+  @override
+  String get routeUseCurrentLocation => 'Current location';
+
+  @override
+  String get routeWidthLabel => 'Distance from the road';
+
+  @override
+  String get routeSearch => 'Find route';
+
+  @override
+  String get routeNotAvailable => 'Route search is not available right now';
+
+  @override
+  String routePlaceNotFound(String query) {
+    return 'Could not find \"$query\"';
+  }
+
+  @override
+  String get routeNotFound => 'No route found';
+
+  @override
+  String routeBanner(int count, String km) {
+    return '$count cameras along route · approx. $km km';
+  }
+
+  @override
+  String get routeClear => 'Clear';
+
+  @override
+  String get routeListTitle => 'Cameras along the route (from start)';
+
+  @override
+  String routeAlongKm(String km) {
+    return '$km km from start';
+  }
+
+  @override
+  String get routeNoCameras => 'No cameras near this route';
+
+  @override
+  String get routeDisclaimer =>
+      'The route is for reference only. Do not operate while driving.';
 }

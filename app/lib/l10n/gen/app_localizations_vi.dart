@@ -2296,4 +2296,60 @@ class AppLocalizationsVi extends AppLocalizations {
   String bosaiRiverPrefCameras(String pref) {
     return 'Xem camera ở $pref';
   }
+
+  @override
+  String get mapRouteTooltip => 'Camera dọc tuyến đường';
+
+  @override
+  String get routeSheetSubtitle =>
+      'Nhập điểm đi và điểm đến để chỉ hiển thị camera gần tuyến đường';
+
+  @override
+  String get routeOrigin => 'Điểm đi (địa chỉ, địa danh)';
+
+  @override
+  String get routeDestination => 'Điểm đến (địa chỉ, địa danh)';
+
+  @override
+  String get routeUseCurrentLocation => 'Vị trí hiện tại';
+
+  @override
+  String get routeWidthLabel => 'Khoảng cách từ đường';
+
+  @override
+  String get routeSearch => 'Tìm tuyến đường';
+
+  @override
+  String get routeNotAvailable => 'Hiện không thể tìm tuyến đường';
+
+  @override
+  String routePlaceNotFound(String query) {
+    return 'Không tìm thấy \"$query\"';
+  }
+
+  @override
+  String get routeNotFound => 'Không tìm thấy tuyến đường';
+
+  @override
+  String routeBanner(int count, String km) {
+    return '$count camera dọc tuyến · khoảng $km km';
+  }
+
+  @override
+  String get routeClear => 'Bỏ';
+
+  @override
+  String get routeListTitle => 'Camera dọc tuyến (từ điểm đi)';
+
+  @override
+  String routeAlongKm(String km) {
+    return 'Cách điểm đi $km km';
+  }
+
+  @override
+  String get routeNoCameras => 'Không có camera gần tuyến đường này';
+
+  @override
+  String get routeDisclaimer =>
+      'Tuyến đường chỉ mang tính tham khảo. Không thao tác khi đang lái xe.';
 }

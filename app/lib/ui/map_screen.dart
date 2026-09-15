@@ -20,6 +20,7 @@ import '../data/facility_layers.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
+import '../data/route_corridor.dart';
 import '../data/shelter_layers.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
@@ -27,6 +28,7 @@ import '../util/geo.dart';
 import 'bosai_screen.dart' show NearbyCamerasScreen;
 import 'detail_screen.dart';
 import 'favorites_screen.dart';
+import 'route_cameras_screen.dart';
 import 'elevation_label.dart';
 import 'pin_style.dart';
 
@@ -181,6 +183,11 @@ class _MapScreenState extends State<MapScreen> {
   NowcastTime? _rain24hTile;
   RiskTime? _risk;
   List<Typhoon> _typhoons = const [];
+  /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
+  RouteResult? _route;
+  List<CorridorCamera> _routeCameras = const [];
+  Set<String> _routeCameraIds = const {};
+  double _routeWidthM = 3000;
   bool _layerLoading = false;
   bool _layerFailed = false;
   Timer? _layerTimer;
@@ -2199,8 +2206,212 @@ class _MapScreenState extends State<MapScreen> {
     if (notice == null || notice == _dismissedNotice) return _mapStack(context);
     return Column(children: [
       _NoticeBanner(text: notice, onClose: () => _dismissNotice(notice)),
+      if (_route != null) _routeBanner(context),
       Expanded(child: _mapStack(context)),
     ]);
+  }
+
+  /// ルート沿い表示中の帯: 台数・距離、一覧、解除
+  Widget _routeBanner(BuildContext context) {
+    final l10n = context.l10n;
+    final r = _route!;
+    final km = (r.distanceM / 1000).toStringAsFixed(r.distanceM < 10000 ? 1 : 0);
+    return Material(
+      color: const Color(0xFFE3F2FD),
+      child: SafeArea(
+        bottom: false,
+        child: Row(children: [
+          const SizedBox(width: 12),
+          const Icon(Icons.route_outlined, size: 18, color: Color(0xFF1E88E5)),
+          const SizedBox(width: 6),
+          Expanded(
+            child: Text(l10n.routeBanner(_routeCameras.length, km),
+                style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+          ),
+          TextButton(
+            onPressed: _routeCameras.isEmpty
+                ? null
+                : () => Navigator.of(context).push(MaterialPageRoute<void>(
+                    builder: (_) => RouteCamerasScreen(
+                        app: widget.app, cameras: _routeCameras))),
+            child: const Icon(Icons.list, size: 20),
+          ),
+          TextButton(
+            onPressed: _clearRoute,
+            child: Text(l10n.routeClear, style: const TextStyle(fontSize: 12)),
+          ),
+        ]),
+      ),
+    );
+  }
+
+  void _clearRoute() {
+    setState(() {
+      _route = null;
+      _routeCameras = const [];
+      _routeCameraIds = const {};
+    });
+  }
+
+  /// 出発地・目的地を入れて経路を引き、経路沿いのカメラだけを表示する
+  void _showRouteSheet(BuildContext context) {
+    final l10n = context.l10n;
+    final originCtl = TextEditingController();
+    final destCtl = TextEditingController();
+    LatLng? originPos; // 「現在地」ボタンで確定した座標（入力欄より優先）
+    var width = _routeWidthM;
+    var busy = false;
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      showDragHandle: true,
+      builder: (sheetContext) => StatefulBuilder(
+        builder: (context, setSheetState) {
+          Future<void> run() async {
+            if (busy) return;
+            final oq = originCtl.text.trim();
+            final dq = destCtl.text.trim();
+            if ((originPos == null && oq.isEmpty) || dq.isEmpty) return;
+            setSheetState(() => busy = true);
+            String? error;
+            try {
+              LatLng? o = originPos;
+              if (o == null) {
+                final hits = await _searchPlace(oq);
+                if (hits.isEmpty) error = l10n.routePlaceNotFound(oq);
+                o = hits.isEmpty ? null : hits.first.$2;
+              }
+              LatLng? d;
+              if (error == null) {
+                final hits = await _searchPlace(dq);
+                if (hits.isEmpty) error = l10n.routePlaceNotFound(dq);
+                d = hits.isEmpty ? null : hits.first.$2;
+              }
+              if (error == null && o != null && d != null) {
+                final route = await RouteCorridor.fetchRoute(o, d,
+                    apiKey: widget.app.routeOrsKey);
+                if (route == null) {
+                  error = l10n.routeNotFound;
+                } else {
+                  final cams = RouteCorridor.camerasAlong(
+                      widget.app.displayableCameras, route.points,
+                      widthM: width);
+                  if (!mounted) return;
+                  setState(() {
+                    _route = route;
+                    _routeWidthM = width;
+                    _routeCameras = cams;
+                    _routeCameraIds = {for (final c in cams) c.camera.id};
+                  });
+                  _stopFollowing();
+                  try {
+                    _controller.fitCamera(CameraFit.bounds(
+                      bounds: LatLngBounds.fromPoints(route.points),
+                      padding: const EdgeInsets.fromLTRB(32, 120, 32, 160),
+                      maxZoom: 14,
+                    ));
+                    final z = _controller.camera.zoom;
+                    if (z.isFinite) setState(() => _zoom = z);
+                  } catch (_) {}
+                  _requestLayerDataForView();
+                }
+              }
+            } catch (_) {
+              error = l10n.routeNotFound;
+            }
+            if (!sheetContext.mounted) return;
+            setSheetState(() => busy = false);
+            if (error != null) {
+              ScaffoldMessenger.of(sheetContext)
+                  .showSnackBar(SnackBar(content: Text(error)));
+            } else {
+              Navigator.of(sheetContext).pop();
+            }
+          }
+
+          Future<void> useCurrent() async {
+            try {
+              final last = await Geolocator.getLastKnownPosition();
+              final pos = last ??
+                  await Geolocator.getCurrentPosition(
+                      locationSettings: const LocationSettings(
+                          accuracy: LocationAccuracy.medium));
+              setSheetState(() {
+                originPos = LatLng(pos.latitude, pos.longitude);
+                originCtl.text = l10n.routeUseCurrentLocation;
+              });
+            } catch (_) {}
+          }
+
+          return Padding(
+            padding: EdgeInsets.fromLTRB(
+                16, 0, 16, MediaQuery.of(context).viewInsets.bottom + 16),
+            child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(l10n.mapRouteTooltip,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+              const SizedBox(height: 4),
+              Text(l10n.routeSheetSubtitle,
+                  style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+              const SizedBox(height: 12),
+              TextField(
+                controller: originCtl,
+                onChanged: (_) => originPos = null,
+                decoration: InputDecoration(
+                  labelText: l10n.routeOrigin,
+                  isDense: true,
+                  border: const OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    tooltip: l10n.routeUseCurrentLocation,
+                    icon: const Icon(Icons.my_location, size: 20),
+                    onPressed: useCurrent,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 8),
+              TextField(
+                controller: destCtl,
+                textInputAction: TextInputAction.search,
+                onSubmitted: (_) => run(),
+                decoration: InputDecoration(
+                  labelText: l10n.routeDestination,
+                  isDense: true,
+                  border: const OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Row(children: [
+                Text(l10n.routeWidthLabel, style: const TextStyle(fontSize: 12)),
+                const SizedBox(width: 8),
+                for (final w in const [1000.0, 3000.0, 5000.0]) ...[
+                  ChoiceChip(
+                    label: Text('${(w / 1000).round()}km'),
+                    selected: width == w,
+                    visualDensity: VisualDensity.compact,
+                    onSelected: (_) => setSheetState(() => width = w),
+                  ),
+                  const SizedBox(width: 4),
+                ],
+              ]),
+              const SizedBox(height: 10),
+              FilledButton.icon(
+                onPressed: busy ? null : run,
+                icon: busy
+                    ? const SizedBox(
+                        width: 16, height: 16,
+                        child: CircularProgressIndicator(strokeWidth: 2))
+                    : const Icon(Icons.route_outlined),
+                label: Text(l10n.routeSearch),
+              ),
+              const SizedBox(height: 6),
+              Text(l10n.routeDisclaimer,
+                  style: TextStyle(fontSize: 10, color: Colors.grey[600])),
+              Text(RouteCorridor.attribution,
+                  style: TextStyle(fontSize: 9, color: Colors.grey[600])),
+            ]),
+          );
+        },
+      ),
+    );
   }
 
   static const _dismissedNoticeKey = 'notice_dismissed';
@@ -2231,7 +2442,10 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   Widget _mapStackSized(BuildContext context) {
-    final cams = widget.app.displayableCameras;
+    var cams = widget.app.displayableCameras;
+    if (_route != null) {
+      cams = cams.where((c) => _routeCameraIds.contains(c.id)).toList();
+    }
     final items = _cullToViewport(clusterCameras(cams, _zoom));
     return Stack(
       children: [
@@ -2290,6 +2504,17 @@ class _MapScreenState extends State<MapScreen> {
               maxNativeZoom: 18,
             ),
             ..._layerWidgets(),
+            if (_route != null)
+              PolylineLayer(polylines: [
+                Polyline(
+                    points: _route!.points,
+                    color: Colors.white,
+                    strokeWidth: 7),
+                Polyline(
+                    points: _route!.points,
+                    color: const Color(0xFF1E88E5),
+                    strokeWidth: 4),
+              ]),
             MarkerLayer(
               markers: [
                 for (final item in items)
@@ -2402,6 +2627,18 @@ class _MapScreenState extends State<MapScreen> {
               child: const Icon(Icons.search),
             ),
             const SizedBox(height: 8),
+            // ルート沿いカメラ（配信 manifest にキーがある間だけ出す）
+            if (widget.app.routeOrsKey.isNotEmpty) ...[
+              FloatingActionButton.small(
+                heroTag: 'route_corridor',
+                tooltip: context.l10n.mapRouteTooltip,
+                backgroundColor: _route == null ? null : Theme.of(context).colorScheme.primary,
+                foregroundColor: _route == null ? null : Colors.white,
+                onPressed: () => _showRouteSheet(context),
+                child: const Icon(Icons.route_outlined),
+              ),
+              const SizedBox(height: 8),
+            ],
             // お気に入り一覧（1.4.1 でタブから地図画面へ移動）
             FloatingActionButton.small(
               heroTag: 'favorites',

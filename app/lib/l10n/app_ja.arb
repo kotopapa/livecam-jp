@@ -2339,5 +2339,45 @@
         "type": "String"
       }
     }
-  }
+  },
+  "mapRouteTooltip": "ルート沿いのカメラ",
+  "routeSheetSubtitle": "出発地と目的地を入れると、経路の近くにあるカメラだけを地図に表示します",
+  "routeOrigin": "出発地（住所・地名）",
+  "routeDestination": "目的地（住所・地名）",
+  "routeUseCurrentLocation": "現在地",
+  "routeWidthLabel": "道路からの距離",
+  "routeSearch": "経路を検索",
+  "routeNotAvailable": "経路検索は現在利用できません",
+  "routePlaceNotFound": "「{query}」の場所が見つかりませんでした",
+  "@routePlaceNotFound": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "routeNotFound": "経路が見つかりませんでした",
+  "routeBanner": "ルート沿い {count}台 · 約{km}km",
+  "@routeBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "routeClear": "解除",
+  "routeListTitle": "ルート沿いのカメラ（出発地から順）",
+  "routeAlongKm": "出発地から{km}km",
+  "@routeAlongKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "routeNoCameras": "この経路の近くにカメラはありません",
+  "routeDisclaimer": "経路は参考情報です。運転中は操作しないでください"
 }

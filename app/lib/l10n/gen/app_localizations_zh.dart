@@ -2194,6 +2194,60 @@ class AppLocalizationsZh extends AppLocalizations {
   String bosaiRiverPrefCameras(String pref) {
     return '查看$pref的摄像头';
   }
+
+  @override
+  String get mapRouteTooltip => '沿途摄像头';
+
+  @override
+  String get routeSheetSubtitle => '输入出发地和目的地，仅显示路线附近的摄像头';
+
+  @override
+  String get routeOrigin => '出发地（地址·地名）';
+
+  @override
+  String get routeDestination => '目的地（地址·地名）';
+
+  @override
+  String get routeUseCurrentLocation => '当前位置';
+
+  @override
+  String get routeWidthLabel => '距道路的距离';
+
+  @override
+  String get routeSearch => '搜索路线';
+
+  @override
+  String get routeNotAvailable => '目前无法搜索路线';
+
+  @override
+  String routePlaceNotFound(String query) {
+    return '未找到“$query”';
+  }
+
+  @override
+  String get routeNotFound => '未找到路线';
+
+  @override
+  String routeBanner(int count, String km) {
+    return '沿途 $count 个 · 约 $km km';
+  }
+
+  @override
+  String get routeClear => '清除';
+
+  @override
+  String get routeListTitle => '沿途摄像头（从出发地起）';
+
+  @override
+  String routeAlongKm(String km) {
+    return '距出发地 $km km';
+  }
+
+  @override
+  String get routeNoCameras => '该路线附近没有摄像头';
+
+  @override
+  String get routeDisclaimer => '路线仅供参考。驾驶时请勿操作。';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4386,4 +4440,58 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String bosaiRiverPrefCameras(String pref) {
     return '查看$pref的攝影機';
   }
+
+  @override
+  String get mapRouteTooltip => '沿途攝影機';
+
+  @override
+  String get routeSheetSubtitle => '輸入出發地與目的地，只顯示路線附近的攝影機';
+
+  @override
+  String get routeOrigin => '出發地（地址·地名）';
+
+  @override
+  String get routeDestination => '目的地（地址·地名）';
+
+  @override
+  String get routeUseCurrentLocation => '目前位置';
+
+  @override
+  String get routeWidthLabel => '距道路的距離';
+
+  @override
+  String get routeSearch => '搜尋路線';
+
+  @override
+  String get routeNotAvailable => '目前無法搜尋路線';
+
+  @override
+  String routePlaceNotFound(String query) {
+    return '找不到「$query」';
+  }
+
+  @override
+  String get routeNotFound => '找不到路線';
+
+  @override
+  String routeBanner(int count, String km) {
+    return '沿途 $count 個 · 約 $km km';
+  }
+
+  @override
+  String get routeClear => '清除';
+
+  @override
+  String get routeListTitle => '沿途攝影機（從出發地起）';
+
+  @override
+  String routeAlongKm(String km) {
+    return '距出發地 $km km';
+  }
+
+  @override
+  String get routeNoCameras => '此路線附近沒有攝影機';
+
+  @override
+  String get routeDisclaimer => '路線僅供參考。駕駛時請勿操作。';
 }

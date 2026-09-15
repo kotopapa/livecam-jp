@@ -175,3 +175,9 @@ python site/build.py                            # 配信ファイル生成
 - 洪水予報のプッシュは `tools/bosai_notify.py` の `check_flood_forecasts`。氾濫危険=danger（レベル4）・氾濫発生=special（レベル5）として気象警報と同じトピックに流し、キー `<pref>:flood<band>:<riverCode>` を active_special に同居させる
 - 気象庁の英語表記は JMA 英語サイトに合わせた（Typhoon / Tropical depression / Probability circle / Storm warning area）。洪水予報の英訳は暫定（Flood advisory / warning / danger warning / occurrence）で、多言語辞書での確認が残っている
 
+## ルート沿いカメラの知見（2026-09-16追記）
+
+- 地図の「ルート」ボタン → 出発地・目的地（国土地理院 AddressSearch で座標化。出発地は現在地も可）→ openrouteservice（`app/lib/data/route_corridor.dart`、自動車経路）→ 経路から 1/3/5km 以内のカメラだけを地図に表示し、一覧（`route_cameras_screen.dart`）は出発地からの経路上距離順。照合は Douglas–Peucker で間引いた線分との距離（外接矩形で前処理）
+- **ORS の API キーはアプリに埋め込まず、配信 manifest の `route_ors_key` で渡す**（site/build.py が環境変数 ORS_API_KEY を読み、publish.yml が GitHub Secret から注入）。キーが空なら地図のルートボタン自体を出さない。無料枠は 1日2,000回・40回/分（キー単位）。openrouteservice.org でアカウントを作りキーを Secret に登録すれば、アプリ更新なしで有効になる
+- 経路データの出典表記「経路: openrouteservice / © OpenStreetMap contributors」をシートと一覧に表示。運転中の操作禁止の注意も併記
+

@@ -9,6 +9,7 @@ class Manifest {
     this.minAppVersion,
     this.storeUrl,
     this.playStoreUrl,
+    this.routeOrsKey = '',
     this.notice,
     this.apps = const [],
   });
@@ -25,6 +26,9 @@ class Manifest {
 
   /// Google Play のアプリページ（Android 向け。無ければアプリ既定値）
   final String? playStoreUrl;
+
+  /// ルート沿いカメラの経路計算（openrouteservice）の API キー。空なら機能を出さない
+  final String routeOrsKey;
 
   /// 緊急告知（あればアプリ上部にバナー表示。SPEC 8.1）
   final String? notice;
@@ -44,6 +48,7 @@ class Manifest {
       minAppVersion: json['min_app_version'] as String?,
       storeUrl: json['store_url'] as String?,
       playStoreUrl: json['play_store_url'] as String?,
+      routeOrsKey: json['route_ors_key'] as String? ?? '',
       notice: json['notice'] as String?,
       apps: [
         for (final a in (json['apps'] as List? ?? const []))

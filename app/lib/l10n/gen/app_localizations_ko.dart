@@ -2215,4 +2215,58 @@ class AppLocalizationsKo extends AppLocalizations {
   String bosaiRiverPrefCameras(String pref) {
     return '$pref의 카메라 보기';
   }
+
+  @override
+  String get mapRouteTooltip => '경로 주변 카메라';
+
+  @override
+  String get routeSheetSubtitle => '출발지와 목적지를 입력하면 경로 근처의 카메라만 표시합니다';
+
+  @override
+  String get routeOrigin => '출발지(주소·지명)';
+
+  @override
+  String get routeDestination => '목적지(주소·지명)';
+
+  @override
+  String get routeUseCurrentLocation => '현재 위치';
+
+  @override
+  String get routeWidthLabel => '도로에서의 거리';
+
+  @override
+  String get routeSearch => '경로 검색';
+
+  @override
+  String get routeNotAvailable => '현재 경로 검색을 이용할 수 없습니다';
+
+  @override
+  String routePlaceNotFound(String query) {
+    return '\"$query\"을(를) 찾을 수 없습니다';
+  }
+
+  @override
+  String get routeNotFound => '경로를 찾을 수 없습니다';
+
+  @override
+  String routeBanner(int count, String km) {
+    return '경로 주변 $count대 · 약 ${km}km';
+  }
+
+  @override
+  String get routeClear => '해제';
+
+  @override
+  String get routeListTitle => '경로 주변 카메라(출발지부터)';
+
+  @override
+  String routeAlongKm(String km) {
+    return '출발지에서 ${km}km';
+  }
+
+  @override
+  String get routeNoCameras => '이 경로 근처에 카메라가 없습니다';
+
+  @override
+  String get routeDisclaimer => '경로는 참고용입니다. 운전 중에는 조작하지 마세요.';
 }

@@ -18,6 +18,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -94,6 +95,9 @@ def build() -> int:
         "min_app_version": MIN_APP_VERSION,
         "store_url": STORE_URL,
         "play_store_url": PLAY_STORE_URL,
+        # ルート沿いカメラの経路計算キー（openrouteservice）。publish の Secret ORS_API_KEY。
+        # 未設定なら空文字でアプリは機能を出さない
+        "route_ors_key": os.environ.get("ORS_API_KEY", ""),
         # data/notice.txt があればアプリ内お知らせバナーとして配信（空なら非表示）。
         # bot の再ビルドでも消えないようファイルで持つ
         "notice": _notice(),

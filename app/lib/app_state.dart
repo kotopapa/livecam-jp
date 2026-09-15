@@ -84,6 +84,9 @@ class AppState extends ChangeNotifier {
   // --- 強制アップデート（HANDOFF 2-8-1。manifest.min_app_version と比較） ---
   bool updateRequired = false;
   String? storeUrl;
+
+  /// ルート沿いカメラの経路計算キー（配信 manifest）。空なら機能を出さない
+  String get routeOrsKey => repository.manifest?.routeOrsKey ?? '';
   String _appVersion = '';
 
   /// "1.2.3" 形式の比較。current < minimum のとき true

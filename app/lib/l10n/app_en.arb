@@ -654,5 +654,21 @@
   "bosaiFloodIssuedAt": "Issued {time}",
   "bosaiRiverCamerasTitle": "Cameras on {river}",
   "bosaiRiverNoCameras": "No cameras are registered for this river",
-  "bosaiRiverPrefCameras": "See cameras in {pref}"
+  "bosaiRiverPrefCameras": "See cameras in {pref}",
+  "mapRouteTooltip": "Cameras along a route",
+  "routeSheetSubtitle": "Enter a start and a destination to show only cameras near the route",
+  "routeOrigin": "Start (address or place)",
+  "routeDestination": "Destination (address or place)",
+  "routeUseCurrentLocation": "Current location",
+  "routeWidthLabel": "Distance from the road",
+  "routeSearch": "Find route",
+  "routeNotAvailable": "Route search is not available right now",
+  "routePlaceNotFound": "Could not find \"{query}\"",
+  "routeNotFound": "No route found",
+  "routeBanner": "{count} cameras along route · approx. {km} km",
+  "routeClear": "Clear",
+  "routeListTitle": "Cameras along the route (from start)",
+  "routeAlongKm": "{km} km from start",
+  "routeNoCameras": "No cameras near this route",
+  "routeDisclaimer": "The route is for reference only. Do not operate while driving."
 }

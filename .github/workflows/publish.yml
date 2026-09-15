@@ -31,6 +31,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: site/v1 を生成
+        env:
+          ORS_API_KEY: ${{ secrets.ORS_API_KEY }}
         run: python site/build.py
       - uses: actions/upload-pages-artifact@v3
         with:
