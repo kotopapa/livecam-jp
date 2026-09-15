@@ -2269,4 +2269,26 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get routeDisclaimer => '경로는 참고용입니다. 운전 중에는 조작하지 마세요.';
+
+  @override
+  String get mapLayerSnowDepthTitle => '적설 깊이';
+
+  @override
+  String get mapLayerSnowDepthSubtitle => '기상청 해석 적설 깊이(매시·겨울)';
+
+  @override
+  String get mapLayerSnowfall24hTitle => '24시간 강설량';
+
+  @override
+  String get mapLayerSnowfall24hSubtitle => '기상청 해석 강설량(지난 24시간·겨울)';
+
+  @override
+  String mapLegendSnowDepth(String time) {
+    return '적설 깊이 $time(cm)';
+  }
+
+  @override
+  String mapLegendSnowfall24h(String time) {
+    return '24시간 강설량 $time(cm)';
+  }
 }

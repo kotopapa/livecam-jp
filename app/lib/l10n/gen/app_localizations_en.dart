@@ -2343,4 +2343,28 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get routeDisclaimer =>
       'The route is for reference only. Do not operate while driving.';
+
+  @override
+  String get mapLayerSnowDepthTitle => 'Snow depth';
+
+  @override
+  String get mapLayerSnowDepthSubtitle =>
+      'JMA analysed snow depth (hourly, winter)';
+
+  @override
+  String get mapLayerSnowfall24hTitle => '24-hour snowfall';
+
+  @override
+  String get mapLayerSnowfall24hSubtitle =>
+      'JMA analysed snowfall in the past 24 hours (winter)';
+
+  @override
+  String mapLegendSnowDepth(String time) {
+    return 'Snow depth $time (cm)';
+  }
+
+  @override
+  String mapLegendSnowfall24h(String time) {
+    return '24-hour snowfall $time (cm)';
+  }
 }

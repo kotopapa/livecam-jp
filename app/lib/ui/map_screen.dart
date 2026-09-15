@@ -183,6 +183,7 @@ class _MapScreenState extends State<MapScreen> {
   NowcastTime? _rain24hTile;
   RiskTime? _risk;
   List<Typhoon> _typhoons = const [];
+  SnowTime? _snowTime;
   /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
   RouteResult? _route;
   List<CorridorCamera> _routeCameras = const [];
@@ -260,6 +261,11 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.typhoon:
         // 発表中の台風が無いのは正常（凡例に「ありません」と出す）
         _typhoons = await JmaTyphoon.fetchAll();
+      case MapLayerKind.snowDepth:
+      case MapLayerKind.snowfall24h:
+        final st = await JmaLayers.fetchLatestSnow();
+        if (st != null) _snowTime = st;
+        ok = st != null;
       case MapLayerKind.none:
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardLandslide:
@@ -342,6 +348,18 @@ class _MapScreenState extends State<MapScreen> {
             subtitle: Text(l10n.mapLayerTyphoonSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.typhoon); },
           ),
+          for (final k in const [MapLayerKind.snowDepth, MapLayerKind.snowfall24h])
+            ListTile(
+              leading: Icon(_layer == k ? Icons.radio_button_checked : Icons.radio_button_off,
+                  color: _layer == k ? Theme.of(ctx).colorScheme.primary : null),
+              title: Text(k == MapLayerKind.snowDepth
+                  ? l10n.mapLayerSnowDepthTitle
+                  : l10n.mapLayerSnowfall24hTitle),
+              subtitle: Text(k == MapLayerKind.snowDepth
+                  ? l10n.mapLayerSnowDepthSubtitle
+                  : l10n.mapLayerSnowfall24hSubtitle),
+              onTap: () { Navigator.pop(ctx); _setLayer(k); },
+            ),
           for (final k in const [
             MapLayerKind.riskLand,
             MapLayerKind.riskInund,
@@ -1176,6 +1194,12 @@ class _MapScreenState extends State<MapScreen> {
           swatch(JmaLayers.intensityColor('5-'), intensityLabelOf(l10n, '5-')),
           swatch(JmaLayers.intensityColor('6-'), l10n.mapLegendIntensity6Up),
         ]);
+      case MapLayerKind.snowDepth:
+        title = l10n.mapLegendSnowDepth(_snowTime?.label ?? '');
+        items.addAll([for (final s in SnowLayers.depthScale) swatch(s.$1, s.$2)]);
+      case MapLayerKind.snowfall24h:
+        title = l10n.mapLegendSnowfall24h(_snowTime?.label ?? '');
+        items.addAll([for (final s in SnowLayers.snowfall24hScale) swatch(s.$1, s.$2)]);
       case MapLayerKind.typhoon:
         if (_typhoons.isEmpty) {
           title = l10n.mapLayerTyphoonNone;
@@ -1639,6 +1663,19 @@ class _MapScreenState extends State<MapScreen> {
         ];
       case MapLayerKind.typhoon:
         return _typhoonWidgets();
+      case MapLayerKind.snowDepth:
+      case MapLayerKind.snowfall24h:
+        final st = _snowTime;
+        if (st == null) return const [];
+        return [
+          Opacity(
+            opacity: 0.65,
+            child: _jmaTileLayer(
+              layerKey: 'snow-${SnowLayers.element(_layer)}',
+              urlTemplate: st.tileTemplate(_layer),
+            ),
+          ),
+        ];
       case MapLayerKind.shelters:
         return _shelterWidgets();
       case MapLayerKind.facilities:

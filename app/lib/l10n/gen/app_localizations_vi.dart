@@ -2352,4 +2352,28 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get routeDisclaimer =>
       'Tuyến đường chỉ mang tính tham khảo. Không thao tác khi đang lái xe.';
+
+  @override
+  String get mapLayerSnowDepthTitle => 'Độ dày tuyết';
+
+  @override
+  String get mapLayerSnowDepthSubtitle =>
+      'Độ dày tuyết phân tích của JMA (mỗi giờ, mùa đông)';
+
+  @override
+  String get mapLayerSnowfall24hTitle => 'Lượng tuyết rơi 24 giờ';
+
+  @override
+  String get mapLayerSnowfall24hSubtitle =>
+      'Lượng tuyết rơi 24 giờ qua theo phân tích của JMA (mùa đông)';
+
+  @override
+  String mapLegendSnowDepth(String time) {
+    return 'Độ dày tuyết $time (cm)';
+  }
+
+  @override
+  String mapLegendSnowfall24h(String time) {
+    return 'Lượng tuyết 24 giờ $time (cm)';
+  }
 }

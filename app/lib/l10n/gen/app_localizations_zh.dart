@@ -2248,6 +2248,28 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get routeDisclaimer => '路线仅供参考。驾驶时请勿操作。';
+
+  @override
+  String get mapLayerSnowDepthTitle => '积雪深度';
+
+  @override
+  String get mapLayerSnowDepthSubtitle => '气象厅解析积雪深度（每小时·冬季）';
+
+  @override
+  String get mapLayerSnowfall24hTitle => '24小时降雪量';
+
+  @override
+  String get mapLayerSnowfall24hSubtitle => '气象厅解析降雪量（过去24小时·冬季）';
+
+  @override
+  String mapLegendSnowDepth(String time) {
+    return '积雪深度 $time（cm）';
+  }
+
+  @override
+  String mapLegendSnowfall24h(String time) {
+    return '24小时降雪量 $time（cm）';
+  }
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4494,4 +4516,26 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get routeDisclaimer => '路線僅供參考。駕駛時請勿操作。';
+
+  @override
+  String get mapLayerSnowDepthTitle => '積雪深度';
+
+  @override
+  String get mapLayerSnowDepthSubtitle => '氣象廳解析積雪深度（每小時·冬季）';
+
+  @override
+  String get mapLayerSnowfall24hTitle => '24小時降雪量';
+
+  @override
+  String get mapLayerSnowfall24hSubtitle => '氣象廳解析降雪量（過去24小時·冬季）';
+
+  @override
+  String mapLegendSnowDepth(String time) {
+    return '積雪深度 $time（cm）';
+  }
+
+  @override
+  String mapLegendSnowfall24h(String time) {
+    return '24小時降雪量 $time（cm）';
+  }
 }

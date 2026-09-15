@@ -2379,5 +2379,25 @@
     }
   },
   "routeNoCameras": "この経路の近くにカメラはありません",
-  "routeDisclaimer": "経路は参考情報です。運転中は操作しないでください"
+  "routeDisclaimer": "経路は参考情報です。運転中は操作しないでください",
+  "mapLayerSnowDepthTitle": "積雪深",
+  "mapLayerSnowDepthSubtitle": "気象庁の解析積雪深（1時間ごと・冬季）",
+  "mapLayerSnowfall24hTitle": "24時間降雪量",
+  "mapLayerSnowfall24hSubtitle": "気象庁の解析降雪量（過去24時間・冬季）",
+  "mapLegendSnowDepth": "積雪深 {time}（cm）",
+  "@mapLegendSnowDepth": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "mapLegendSnowfall24h": "24時間降雪量 {time}（cm）",
+  "@mapLegendSnowfall24h": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  }
 }

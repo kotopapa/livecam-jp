@@ -2259,6 +2259,28 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get routeDisclaimer => '経路は参考情報です。運転中は操作しないでください';
+
+  @override
+  String get mapLayerSnowDepthTitle => '積雪深';
+
+  @override
+  String get mapLayerSnowDepthSubtitle => '気象庁の解析積雪深（1時間ごと・冬季）';
+
+  @override
+  String get mapLayerSnowfall24hTitle => '24時間降雪量';
+
+  @override
+  String get mapLayerSnowfall24hSubtitle => '気象庁の解析降雪量（過去24時間・冬季）';
+
+  @override
+  String mapLegendSnowDepth(String time) {
+    return '積雪深 $time（cm）';
+  }
+
+  @override
+  String mapLegendSnowfall24h(String time) {
+    return '24時間降雪量 $time（cm）';
+  }
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -4549,4 +4571,26 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get routeDisclaimer => 'みちは さんこうです。うんてんちゅうは つかわないで ください';
+
+  @override
+  String get mapLayerSnowDepthTitle => 'つもった ゆきの ふかさ';
+
+  @override
+  String get mapLayerSnowDepthSubtitle => 'きしょうちょうの ゆきの ふかさ（ふゆ）';
+
+  @override
+  String get mapLayerSnowfall24hTitle => '24じかんに ふった ゆき';
+
+  @override
+  String get mapLayerSnowfall24hSubtitle => 'きしょうちょうの ふった ゆきの りょう（ふゆ）';
+
+  @override
+  String mapLegendSnowDepth(String time) {
+    return 'ゆきの ふかさ $time（cm）';
+  }
+
+  @override
+  String mapLegendSnowfall24h(String time) {
+    return '24じかんの ゆき $time（cm）';
+  }
 }

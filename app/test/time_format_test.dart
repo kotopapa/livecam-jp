@@ -32,8 +32,8 @@ void main() {
         '${recent.minute.toString().padLeft(2, '0')}:00';
     final s = formatTakenTime(raw);
     expect(s.contains('分前'), isTrue);
-    // 同日なので日付は出ない
-    expect(s.contains('月'), isFalse);
+    // 同日なら日付は出ない（0時直後にテストすると5分前が前日になるので、その場合は見ない）
+    if (recent.day == jstNow().day) expect(s.contains('月'), isFalse);
   });
 
   test('解釈できない文字列は原文のまま返す', () {

@@ -33,6 +33,12 @@ enum MapLayerKind {
 
   /// 気象庁の台風情報（jma_typhoon.dart）。進路・予報円・暴風警戒域
   typhoon,
+
+  /// 気象庁の解析積雪深（SnowLayers）
+  snowDepth,
+
+  /// 気象庁の解析降雪量（24時間）
+  snowfall24h,
 }
 
 enum QuakePeriod { day, week, month }
@@ -198,6 +204,64 @@ class RiskLayers {
 
   /// 出典表記は翻訳しない
   static const attribution = JmaLayers.attribution;
+}
+
+/// 気象庁「今後の雪」（解析積雪深・解析降雪量）のタイル。偶数ズームのみ生成
+/// （snow.properties: zoomUse="even"・maxNativeZoom 10）で、雨雲と同じ
+/// EvenZoomTileProvider で表示する。凡例色は気象庁の legend_deep_snowd.svg /
+/// legend_deep_snowf24h.svg の実値（2026-09-16採取）。
+/// 出典：気象庁ホームページ https://www.jma.go.jp/bosai/snow/
+class SnowLayers {
+  static const tileBase = 'https://www.jma.go.jp/bosai/jmatile/data/snow';
+  static const timesUrl = '$tileBase/targetTimes.json';
+
+  static bool isSnow(MapLayerKind k) =>
+      k == MapLayerKind.snowDepth || k == MapLayerKind.snowfall24h;
+
+  static String element(MapLayerKind k) => switch (k) {
+        MapLayerKind.snowDepth => 'snowd',
+        MapLayerKind.snowfall24h => 'snowf24h',
+        _ => '',
+      };
+
+  /// 積雪深（cm）の凡例（低→高）
+  static const depthScale = <(Color, String)>[
+    (Color(0xFFA0D2FF), '5'),
+    (Color(0xFF218CFF), '20'),
+    (Color(0xFF0041FF), '50'),
+    (Color(0xFFFFF500), '100'),
+    (Color(0xFFFF9900), '150'),
+    (Color(0xFFFF2800), '200cm'),
+    (Color(0xFFB40068), ''),
+  ];
+
+  /// 24時間降雪量（cm）の凡例（低→高）
+  static const snowfall24hScale = <(Color, String)>[
+    (Color(0xFFF0F0F8), '〜10'),
+    (Color(0xFFA0D2FF), '10'),
+    (Color(0xFF218CFF), '20'),
+    (Color(0xFF0041FF), '30'),
+    (Color(0xFFFFF500), '40'),
+    (Color(0xFFFF9900), '50'),
+    (Color(0xFFFF2800), '60'),
+    (Color(0xFFB40068), '70cm'),
+  ];
+}
+
+/// 解析積雪深・降雪量の時刻（実況。basetime == validtime）
+class SnowTime {
+  const SnowTime(this.basetime, this.validtime);
+  final String basetime;
+  final String validtime;
+
+  String tileTemplate(MapLayerKind kind) {
+    final el = SnowLayers.element(kind);
+    if (el.isEmpty) return '';
+    return '${SnowLayers.tileBase}/$basetime/none/$validtime/surf/$el/{z}/{x}/{y}.png';
+  }
+
+  DateTime get validAt => jmaTimeToUtc(validtime);
+  String get label => jmaTimeLabel(validtime);
 }
 
 class QuakePoint {
@@ -413,6 +477,34 @@ class JmaLayers {
     } catch (_) {
       return null;
     }
+  }
+
+  /// 解析積雪深・降雪量の最新実況時刻（1時間ごと）。取得失敗は null
+  static Future<SnowTime?> fetchLatestSnow() async {
+    try {
+      final r = await http
+          .get(Uri.parse(SnowLayers.timesUrl), headers: _ua)
+          .timeout(const Duration(seconds: 12));
+      if (r.statusCode != 200) return null;
+      return latestSnowTime(jsonDecode(r.body));
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// targetTimes.json（実況と予測が混在・降順とは限らない）から最新の実況を選ぶ
+  static SnowTime? latestSnowTime(Object? json) {
+    if (json is! List) return null;
+    String? best;
+    for (final e in json) {
+      if (e is! Map) continue;
+      final b = e['basetime'], v = e['validtime'];
+      if (b is! String || v is! String || b != v) continue;
+      final els = e['elements'];
+      if (els is List && !els.contains('snowd')) continue;
+      if (best == null || b.compareTo(best) > 0) best = b;
+    }
+    return best == null ? null : SnowTime(best, best);
   }
 
   /// 24時間降水量の凡例色。タイル(rasrf24h)の塗りと同じ気象庁の

@@ -4131,6 +4131,42 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'経路は参考情報です。運転中は操作しないでください'**
   String get routeDisclaimer;
+
+  /// No description provided for @mapLayerSnowDepthTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'積雪深'**
+  String get mapLayerSnowDepthTitle;
+
+  /// No description provided for @mapLayerSnowDepthSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'気象庁の解析積雪深（1時間ごと・冬季）'**
+  String get mapLayerSnowDepthSubtitle;
+
+  /// No description provided for @mapLayerSnowfall24hTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'24時間降雪量'**
+  String get mapLayerSnowfall24hTitle;
+
+  /// No description provided for @mapLayerSnowfall24hSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'気象庁の解析降雪量（過去24時間・冬季）'**
+  String get mapLayerSnowfall24hSubtitle;
+
+  /// No description provided for @mapLegendSnowDepth.
+  ///
+  /// In ja, this message translates to:
+  /// **'積雪深 {time}（cm）'**
+  String mapLegendSnowDepth(String time);
+
+  /// No description provided for @mapLegendSnowfall24h.
+  ///
+  /// In ja, this message translates to:
+  /// **'24時間降雪量 {time}（cm）'**
+  String mapLegendSnowfall24h(String time);
 }
 
 class _AppLocalizationsDelegate
