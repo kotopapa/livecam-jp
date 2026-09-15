@@ -2369,4 +2369,40 @@ class AppLocalizationsEn extends AppLocalizations {
   String mapLegendSnowfall24h(String time) {
     return '24-hour snowfall $time (cm)';
   }
+
+  @override
+  String get situationTitle => 'Happening now';
+
+  @override
+  String situationSpecial(String prefs) {
+    return 'Emergency warning: $prefs';
+  }
+
+  @override
+  String situationDanger(String prefs) {
+    return 'Danger warning (alert level 4): $prefs';
+  }
+
+  @override
+  String situationTyphoon(String name, String location) {
+    return '$name near $location';
+  }
+
+  @override
+  String situationFlood(String river, String kind) {
+    return 'Flood forecast: $river $kind';
+  }
+
+  @override
+  String situationQuake(String intensity, String place, String time) {
+    return 'Earthquake, intensity $intensity, $place ($time)';
+  }
+
+  @override
+  String situationMore(int n) {
+    return '+$n more';
+  }
+
+  @override
+  String get situationSource => 'Source: JMA · tap for details';
 }

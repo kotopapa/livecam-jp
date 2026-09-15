@@ -2291,4 +2291,40 @@ class AppLocalizationsKo extends AppLocalizations {
   String mapLegendSnowfall24h(String time) {
     return '24시간 강설량 $time(cm)';
   }
+
+  @override
+  String get situationTitle => '지금 일어나는 일';
+
+  @override
+  String situationSpecial(String prefs) {
+    return '특별경보: $prefs';
+  }
+
+  @override
+  String situationDanger(String prefs) {
+    return '위험경보(경계레벨 4): $prefs';
+  }
+
+  @override
+  String situationTyphoon(String name, String location) {
+    return '$name $location 부근';
+  }
+
+  @override
+  String situationFlood(String river, String kind) {
+    return '홍수 예보: $river $kind';
+  }
+
+  @override
+  String situationQuake(String intensity, String place, String time) {
+    return '지진 진도 $intensity $place($time)';
+  }
+
+  @override
+  String situationMore(int n) {
+    return '외 $n건';
+  }
+
+  @override
+  String get situationSource => '출처: 기상청 · 눌러서 자세히';
 }

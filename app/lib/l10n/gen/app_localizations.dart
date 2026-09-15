@@ -4167,6 +4167,54 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'24時間降雪量 {time}（cm）'**
   String mapLegendSnowfall24h(String time);
+
+  /// No description provided for @situationTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'いま起きていること'**
+  String get situationTitle;
+
+  /// No description provided for @situationSpecial.
+  ///
+  /// In ja, this message translates to:
+  /// **'特別警報: {prefs}'**
+  String situationSpecial(String prefs);
+
+  /// No description provided for @situationDanger.
+  ///
+  /// In ja, this message translates to:
+  /// **'危険警報（警戒レベル4相当）: {prefs}'**
+  String situationDanger(String prefs);
+
+  /// No description provided for @situationTyphoon.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name} {location}付近'**
+  String situationTyphoon(String name, String location);
+
+  /// No description provided for @situationFlood.
+  ///
+  /// In ja, this message translates to:
+  /// **'洪水予報: {river} {kind}'**
+  String situationFlood(String river, String kind);
+
+  /// No description provided for @situationQuake.
+  ///
+  /// In ja, this message translates to:
+  /// **'地震 震度{intensity} {place}（{time}）'**
+  String situationQuake(String intensity, String place, String time);
+
+  /// No description provided for @situationMore.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほか{n}件'**
+  String situationMore(int n);
+
+  /// No description provided for @situationSource.
+  ///
+  /// In ja, this message translates to:
+  /// **'出典：気象庁 · タップで詳細'**
+  String get situationSource;
 }
 
 class _AppLocalizationsDelegate

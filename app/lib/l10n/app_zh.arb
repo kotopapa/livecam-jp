@@ -676,5 +676,13 @@
   "mapLayerSnowfall24hTitle": "24小时降雪量",
   "mapLayerSnowfall24hSubtitle": "气象厅解析降雪量（过去24小时·冬季）",
   "mapLegendSnowDepth": "积雪深度 {time}（cm）",
-  "mapLegendSnowfall24h": "24小时降雪量 {time}（cm）"
+  "mapLegendSnowfall24h": "24小时降雪量 {time}（cm）",
+  "situationTitle": "当前状况",
+  "situationSpecial": "特别警报: {prefs}",
+  "situationDanger": "危险警报（警戒级别4）: {prefs}",
+  "situationTyphoon": "{name} {location}附近",
+  "situationFlood": "洪水预报: {river} {kind}",
+  "situationQuake": "地震 震度{intensity} {place}（{time}）",
+  "situationMore": "另有{n}项",
+  "situationSource": "来源：气象厅 · 点击查看详情"
 }

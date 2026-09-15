@@ -676,5 +676,13 @@
   "mapLayerSnowfall24hTitle": "24-hour snowfall",
   "mapLayerSnowfall24hSubtitle": "JMA analysed snowfall in the past 24 hours (winter)",
   "mapLegendSnowDepth": "Snow depth {time} (cm)",
-  "mapLegendSnowfall24h": "24-hour snowfall {time} (cm)"
+  "mapLegendSnowfall24h": "24-hour snowfall {time} (cm)",
+  "situationTitle": "Happening now",
+  "situationSpecial": "Emergency warning: {prefs}",
+  "situationDanger": "Danger warning (alert level 4): {prefs}",
+  "situationTyphoon": "{name} near {location}",
+  "situationFlood": "Flood forecast: {river} {kind}",
+  "situationQuake": "Earthquake, intensity {intensity}, {place} ({time})",
+  "situationMore": "+{n} more",
+  "situationSource": "Source: JMA · tap for details"
 }

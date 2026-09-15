@@ -2281,6 +2281,42 @@ class AppLocalizationsJa extends AppLocalizations {
   String mapLegendSnowfall24h(String time) {
     return '24時間降雪量 $time（cm）';
   }
+
+  @override
+  String get situationTitle => 'いま起きていること';
+
+  @override
+  String situationSpecial(String prefs) {
+    return '特別警報: $prefs';
+  }
+
+  @override
+  String situationDanger(String prefs) {
+    return '危険警報（警戒レベル4相当）: $prefs';
+  }
+
+  @override
+  String situationTyphoon(String name, String location) {
+    return '$name $location付近';
+  }
+
+  @override
+  String situationFlood(String river, String kind) {
+    return '洪水予報: $river $kind';
+  }
+
+  @override
+  String situationQuake(String intensity, String place, String time) {
+    return '地震 震度$intensity $place（$time）';
+  }
+
+  @override
+  String situationMore(int n) {
+    return 'ほか$n件';
+  }
+
+  @override
+  String get situationSource => '出典：気象庁 · タップで詳細';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -4593,4 +4629,40 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String mapLegendSnowfall24h(String time) {
     return '24じかんの ゆき $time（cm）';
   }
+
+  @override
+  String get situationTitle => 'いま おきて いること';
+
+  @override
+  String situationSpecial(String prefs) {
+    return 'とくべつ けいほう: $prefs';
+  }
+
+  @override
+  String situationDanger(String prefs) {
+    return 'きけん けいほう（レベル4）: $prefs';
+  }
+
+  @override
+  String situationTyphoon(String name, String location) {
+    return '$name $locationの ちかく';
+  }
+
+  @override
+  String situationFlood(String river, String kind) {
+    return 'かわの はんらん: $river $kind';
+  }
+
+  @override
+  String situationQuake(String intensity, String place, String time) {
+    return 'じしん しんど$intensity $place（$time）';
+  }
+
+  @override
+  String situationMore(int n) {
+    return 'ほか $nこ';
+  }
+
+  @override
+  String get situationSource => 'しゅってん：きしょうちょう · おすと くわしく';
 }

@@ -2399,5 +2399,67 @@
         "type": "String"
       }
     }
-  }
+  },
+  "situationTitle": "いま起きていること",
+  "situationSpecial": "特別警報: {prefs}",
+  "@situationSpecial": {
+    "placeholders": {
+      "prefs": {
+        "type": "String"
+      }
+    }
+  },
+  "situationDanger": "危険警報（警戒レベル4相当）: {prefs}",
+  "@situationDanger": {
+    "placeholders": {
+      "prefs": {
+        "type": "String"
+      }
+    }
+  },
+  "situationTyphoon": "{name} {location}付近",
+  "@situationTyphoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "location": {
+        "type": "String"
+      }
+    }
+  },
+  "situationFlood": "洪水予報: {river} {kind}",
+  "@situationFlood": {
+    "placeholders": {
+      "river": {
+        "type": "String"
+      },
+      "kind": {
+        "type": "String"
+      }
+    }
+  },
+  "situationQuake": "地震 震度{intensity} {place}（{time}）",
+  "@situationQuake": {
+    "placeholders": {
+      "intensity": {
+        "type": "String"
+      },
+      "place": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "situationMore": "ほか{n}件",
+  "@situationMore": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "situationSource": "出典：気象庁 · タップで詳細"
 }

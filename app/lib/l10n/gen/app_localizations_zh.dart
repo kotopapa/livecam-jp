@@ -2270,6 +2270,42 @@ class AppLocalizationsZh extends AppLocalizations {
   String mapLegendSnowfall24h(String time) {
     return '24小时降雪量 $time（cm）';
   }
+
+  @override
+  String get situationTitle => '当前状况';
+
+  @override
+  String situationSpecial(String prefs) {
+    return '特别警报: $prefs';
+  }
+
+  @override
+  String situationDanger(String prefs) {
+    return '危险警报（警戒级别4）: $prefs';
+  }
+
+  @override
+  String situationTyphoon(String name, String location) {
+    return '$name $location附近';
+  }
+
+  @override
+  String situationFlood(String river, String kind) {
+    return '洪水预报: $river $kind';
+  }
+
+  @override
+  String situationQuake(String intensity, String place, String time) {
+    return '地震 震度$intensity $place（$time）';
+  }
+
+  @override
+  String situationMore(int n) {
+    return '另有$n项';
+  }
+
+  @override
+  String get situationSource => '来源：气象厅 · 点击查看详情';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4538,4 +4574,40 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String mapLegendSnowfall24h(String time) {
     return '24小時降雪量 $time（cm）';
   }
+
+  @override
+  String get situationTitle => '目前狀況';
+
+  @override
+  String situationSpecial(String prefs) {
+    return '特別警報: $prefs';
+  }
+
+  @override
+  String situationDanger(String prefs) {
+    return '危險警報（警戒級別4）: $prefs';
+  }
+
+  @override
+  String situationTyphoon(String name, String location) {
+    return '$name $location附近';
+  }
+
+  @override
+  String situationFlood(String river, String kind) {
+    return '洪水預報: $river $kind';
+  }
+
+  @override
+  String situationQuake(String intensity, String place, String time) {
+    return '地震 震度$intensity $place（$time）';
+  }
+
+  @override
+  String situationMore(int n) {
+    return '另有$n項';
+  }
+
+  @override
+  String get situationSource => '來源：氣象廳 · 點選查看詳情';
 }

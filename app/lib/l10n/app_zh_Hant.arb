@@ -676,5 +676,13 @@
   "mapLayerSnowfall24hTitle": "24小時降雪量",
   "mapLayerSnowfall24hSubtitle": "氣象廳解析降雪量（過去24小時·冬季）",
   "mapLegendSnowDepth": "積雪深度 {time}（cm）",
-  "mapLegendSnowfall24h": "24小時降雪量 {time}（cm）"
+  "mapLegendSnowfall24h": "24小時降雪量 {time}（cm）",
+  "situationTitle": "目前狀況",
+  "situationSpecial": "特別警報: {prefs}",
+  "situationDanger": "危險警報（警戒級別4）: {prefs}",
+  "situationTyphoon": "{name} {location}附近",
+  "situationFlood": "洪水預報: {river} {kind}",
+  "situationQuake": "地震 震度{intensity} {place}（{time}）",
+  "situationMore": "另有{n}項",
+  "situationSource": "來源：氣象廳 · 點選查看詳情"
 }

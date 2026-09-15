@@ -2377,4 +2377,40 @@ class AppLocalizationsVi extends AppLocalizations {
   String mapLegendSnowfall24h(String time) {
     return 'Lượng tuyết 24 giờ $time (cm)';
   }
+
+  @override
+  String get situationTitle => 'Đang diễn ra';
+
+  @override
+  String situationSpecial(String prefs) {
+    return 'Cảnh báo đặc biệt: $prefs';
+  }
+
+  @override
+  String situationDanger(String prefs) {
+    return 'Cảnh báo nguy hiểm (cấp 4): $prefs';
+  }
+
+  @override
+  String situationTyphoon(String name, String location) {
+    return '$name gần $location';
+  }
+
+  @override
+  String situationFlood(String river, String kind) {
+    return 'Dự báo lũ: $river $kind';
+  }
+
+  @override
+  String situationQuake(String intensity, String place, String time) {
+    return 'Động đất, cường độ $intensity, $place ($time)';
+  }
+
+  @override
+  String situationMore(int n) {
+    return '+$n mục khác';
+  }
+
+  @override
+  String get situationSource => 'Nguồn: JMA · chạm để xem chi tiết';
 }

@@ -676,5 +676,13 @@
   "mapLayerSnowfall24hTitle": "24시간 강설량",
   "mapLayerSnowfall24hSubtitle": "기상청 해석 강설량(지난 24시간·겨울)",
   "mapLegendSnowDepth": "적설 깊이 {time}(cm)",
-  "mapLegendSnowfall24h": "24시간 강설량 {time}(cm)"
+  "mapLegendSnowfall24h": "24시간 강설량 {time}(cm)",
+  "situationTitle": "지금 일어나는 일",
+  "situationSpecial": "특별경보: {prefs}",
+  "situationDanger": "위험경보(경계레벨 4): {prefs}",
+  "situationTyphoon": "{name} {location} 부근",
+  "situationFlood": "홍수 예보: {river} {kind}",
+  "situationQuake": "지진 진도 {intensity} {place}({time})",
+  "situationMore": "외 {n}건",
+  "situationSource": "출처: 기상청 · 눌러서 자세히"
 }

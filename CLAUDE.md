@@ -182,3 +182,10 @@ python site/build.py                            # 配信ファイル生成
 - **ORS の API キーはアプリに埋め込まず、配信 manifest の `route_ors_key` で渡す**（site/build.py が環境変数 ORS_API_KEY を読み、publish.yml が GitHub Secret から注入）。キーが空なら地図のルートボタン自体を出さない。無料枠は 1日2,000回・40回/分（キー単位）。openrouteservice.org でアカウントを作りキーを Secret に登録すれば、アプリ更新なしで有効になる
 - 経路データの出典表記「経路: openrouteservice / © OpenStreetMap contributors」をシートと一覧に表示。運転中の操作禁止の注意も併記
 
+## 「いま起きていること」カードの知見（2026-09-16追記）
+
+- 地図の左上に重ねるカード（`app/lib/ui/situation_card.dart`、要約は `app/lib/data/situation.dart`）。特別警報・危険警報の県、台風、指定河川洪水予報、直近24時間の震度4以上があるときだけ出す（平時は何も出ない）。起動時と10分ごとに気象庁の4系統（r8 map.json / 台風 / 洪水予報 / 地震一覧）を並列取得し、失敗した系統は空として扱う
+- 閉じたカードは内容の識別子（`Situation.signature`）が同じあいだ再表示しない（SharedPreferences `situation_dismissed`）。内容が変われば再び出る
+- 行タップは `navigationRequest`（'bosai/warning' / 'bosai/quake'）と台風レイヤー切替。Analytics イベント `situation_open`（kind）で何が開かれたかを取る
+- ホーム画面（ダッシュボード）は新タブを増やさず、この「災害時にだけ現れるカード」方式にした（2026-09-16 ユーザー決定。案1）
+

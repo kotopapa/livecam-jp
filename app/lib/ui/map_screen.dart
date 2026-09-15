@@ -15,12 +15,14 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../app_state.dart';
 import '../l10n/l10n.dart';
+import '../data/analytics.dart';
 import '../data/even_zoom_tile_provider.dart';
 import '../data/facility_layers.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
 import '../data/route_corridor.dart';
+import '../data/situation.dart';
 import '../data/shelter_layers.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
@@ -29,6 +31,7 @@ import 'bosai_screen.dart' show NearbyCamerasScreen;
 import 'detail_screen.dart';
 import 'favorites_screen.dart';
 import 'route_cameras_screen.dart';
+import 'situation_card.dart';
 import 'elevation_label.dart';
 import 'pin_style.dart';
 
@@ -131,6 +134,54 @@ class _MapScreenState extends State<MapScreen> {
     // 初回フレーム後に前回位置へ移動（MapControllerはレイアウト後に有効）
     WidgetsBinding.instance.addPostFrameCallback((_) => _restorePosition());
     widget.app.navigationRequest.addListener(_onNavigationRequest);
+    _loadSituation();
+    _situationTimer = Timer.periodic(const Duration(minutes: 10), (_) => _loadSituation());
+  }
+
+  Future<void> _loadSituation() async {
+    if (_dismissedSituation == null) {
+      try {
+        final prefs = await SharedPreferences.getInstance();
+        _dismissedSituation = prefs.getString(_dismissedSituationKey) ?? '';
+      } catch (_) {
+        _dismissedSituation = '';
+      }
+    }
+    final s = await SituationLoader.load();
+    if (!mounted) return;
+    setState(() => _situation = s);
+  }
+
+  Future<void> _dismissSituation() async {
+    final sig = _situation?.signature ?? '';
+    setState(() => _dismissedSituation = sig);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_dismissedSituationKey, sig);
+    } catch (_) {}
+  }
+
+  Widget? _situationCard() {
+    final s = _situation;
+    if (s == null || !s.isNotable || s.signature == _dismissedSituation) return null;
+    return SituationCard(
+      situation: s,
+      onClose: _dismissSituation,
+      onOpenWarning: () {
+        Analytics.event('situation_open', params: const {'kind': 'warning'});
+        widget.app.navigationRequest.value = null;
+        widget.app.navigationRequest.value = 'bosai/warning';
+      },
+      onOpenQuake: () {
+        Analytics.event('situation_open', params: const {'kind': 'quake'});
+        widget.app.navigationRequest.value = null;
+        widget.app.navigationRequest.value = 'bosai/quake';
+      },
+      onOpenTyphoon: () {
+        Analytics.event('situation_open', params: const {'kind': 'typhoon'});
+        _setLayer(MapLayerKind.typhoon);
+      },
+    );
   }
 
   /// 詳細画面の「地図で見る」等からの移動要求（`map/lat,lng` 形式）
@@ -157,6 +208,7 @@ class _MapScreenState extends State<MapScreen> {
   @override
   void dispose() {
     _layerTimer?.cancel();
+    _situationTimer?.cancel();
     _shelters?.removeListener(_onDataChanged);
     _shelters?.dispose();
     _facilities?.removeListener(_onDataChanged);
@@ -184,6 +236,11 @@ class _MapScreenState extends State<MapScreen> {
   RiskTime? _risk;
   List<Typhoon> _typhoons = const [];
   SnowTime? _snowTime;
+  /// 「いま起きていること」カード（起動時と10分ごとに更新。閉じた内容は再表示しない）
+  Situation? _situation;
+  String? _dismissedSituation;
+  Timer? _situationTimer;
+  static const _dismissedSituationKey = 'situation_dismissed';
   /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
   RouteResult? _route;
   List<CorridorCamera> _routeCameras = const [];
@@ -2638,6 +2695,13 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
         ),
+        if (_situationCard() != null)
+          Positioned(
+            left: 12,
+            right: 76,
+            top: MediaQuery.of(context).padding.top + 12,
+            child: _situationCard()!,
+          ),
         Positioned(
           right: 16,
           top: MediaQuery.of(context).padding.top + 12,
