@@ -123,12 +123,13 @@ Uri _amazonSearchUrl(String keyword) => Uri.parse(
 ///
 /// 手順は docs/stockpile_1.4.0.md「広告主を増やす／有効にする手順」を参照。
 const List<VcMerchant> vcMerchants = <VcMerchant>[
+  // 並び順が店舗選択シートの表示順（2026-09-15 ユーザー指定: Amazon → 楽天 → Yahoo!）
   VcMerchant(
-    key: 'yahoo',
-    name: 'Yahoo!ショッピング',
-    pid: '892690203',
-    enabled: true,
-    searchUrl: _yahooSearchUrl,
+    key: 'amazon',
+    name: 'Amazon.co.jp',
+    pid: '892690207',
+    enabled: true, // 2026-09-15 提携承認
+    searchUrl: _amazonSearchUrl,
   ),
   VcMerchant(
     key: 'rakuten',
@@ -138,16 +139,16 @@ const List<VcMerchant> vcMerchants = <VcMerchant>[
     searchUrl: _rakutenSearchUrl,
   ),
   VcMerchant(
-    key: 'amazon',
-    name: 'Amazon.co.jp',
-    pid: '892690207',
-    enabled: true, // 2026-09-15 提携承認
-    searchUrl: _amazonSearchUrl,
+    key: 'yahoo',
+    name: 'Yahoo!ショッピング',
+    pid: '892690203',
+    enabled: true,
+    searchUrl: _yahooSearchUrl,
   ),
 ];
 
-/// 既定（先頭）の広告主プログラムID。いまは Yahoo!ショッピング。
-const String vcPidPrimary = '892690203';
+/// 既定（先頭）の広告スペースID。いまは Amazon.co.jp。
+const String vcPidPrimary = '892690207';
 
 // ---------------------------------------------------------------------------
 // カメラ詳細「この付近の宿を探す」の宿泊予約サイト（1.4.1）

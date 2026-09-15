@@ -292,7 +292,7 @@ void main() {
 
     test('config の広告主は sid/pid が揃っていて Yahoo! だけが有効', () {
       expect(vcSid, '3780235');
-      expect(vcPidPrimary, '892690203');
+      expect(vcPidPrimary, '892690207');
       expect(
         vcMerchants.map((m) => m.pid).toSet().length,
         vcMerchants.length,
@@ -304,7 +304,7 @@ void main() {
       );
       // 2026-09-15 に楽天・Amazon も提携承認され、既定で3店舗とも有効
       expect(AffiliateLinks.enabledMerchants.map((m) => m.key),
-          ['yahoo', 'rakuten', 'amazon']);
+          ['amazon', 'rakuten', 'yahoo']);
       expect(AffiliateLinks.needsMerchantPicker, isTrue);
       expect(AffiliateLinks.isAvailable, isTrue);
     });
@@ -456,7 +456,7 @@ void main() {
       // 既定（配信未取得）: config どおり3店舗
       AffiliateLinks.applyRemoteFlags(const {});
       expect(AffiliateLinks.enabledMerchants.map((m) => m.key),
-          ['yahoo', 'rakuten', 'amazon']);
+          ['amazon', 'rakuten', 'yahoo']);
 
       // 配信で Amazon を止める → 外れる。未知のキーは無視
       final p = StockpileProducts.fromJson({
@@ -479,8 +479,8 @@ void main() {
       expect(p.merchants, {'rakuten': true, 'amazon': false, 'unknown': true});
       AffiliateLinks.applyRemoteFlags(p.merchants);
       expect(AffiliateLinks.enabledMerchants.map((m) => m.key), [
-        'yahoo',
         'rakuten',
+        'yahoo',
       ]);
       expect(AffiliateLinks.needsMerchantPicker, isTrue);
       expect(
@@ -507,7 +507,7 @@ void main() {
       expect(q.merchants, isEmpty);
       AffiliateLinks.applyRemoteFlags(q.merchants);
       expect(AffiliateLinks.enabledMerchants.map((m) => m.key),
-          ['yahoo', 'rakuten', 'amazon']);
+          ['amazon', 'rakuten', 'yahoo']);
     });
 
     test('買って備える品目には検索語があり、そうでない品目には購入導線を出さない', () {
