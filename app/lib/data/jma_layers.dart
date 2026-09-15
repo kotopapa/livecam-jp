@@ -30,6 +30,9 @@ enum MapLayerKind {
   hazardHightide,
   shelters,
   facilities,
+
+  /// 気象庁の台風情報（jma_typhoon.dart）。進路・予報円・暴風警戒域
+  typhoon,
 }
 
 enum QuakePeriod { day, week, month }

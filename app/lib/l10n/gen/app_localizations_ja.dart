@@ -2092,6 +2092,119 @@ class AppLocalizationsJa extends AppLocalizations {
   String detailNotUpdatingSince(String date) {
     return '$dateから画像が更新されていません';
   }
+
+  @override
+  String get mapLayerTyphoonTitle => '台風情報';
+
+  @override
+  String get mapLayerTyphoonSubtitle => '進路予想・予報円・暴風警戒域';
+
+  @override
+  String get mapLayerTyphoonNone => '現在、発表中の台風・熱帯低気圧はありません';
+
+  @override
+  String get mapLegendTyphoonTrack => '経路';
+
+  @override
+  String get mapLegendTyphoonForecast => '予報進路';
+
+  @override
+  String get mapLegendTyphoonCircle => '予報円';
+
+  @override
+  String get mapLegendTyphoonStorm => '暴風域・暴風警戒域';
+
+  @override
+  String get mapLegendTyphoonGale => '強風域';
+
+  @override
+  String typhoonNameNumber(int n) {
+    return '台風第$n号';
+  }
+
+  @override
+  String get typhoonNameTd => '熱帯低気圧（台風になる見込み）';
+
+  @override
+  String typhoonIntensity(String intensity) {
+    return '$intensity';
+  }
+
+  @override
+  String get typhoonIntensityStrong => '強い';
+
+  @override
+  String get typhoonIntensityVeryStrong => '非常に強い';
+
+  @override
+  String get typhoonIntensityViolent => '猛烈な';
+
+  @override
+  String bosaiTyphoonNow(String location, String pressure, String wind) {
+    return '$location付近 · 中心気圧 ${pressure}hPa · 最大風速 ${wind}m/s';
+  }
+
+  @override
+  String bosaiTyphoonMoving(String course, String speed, String time) {
+    return '$courseへ ${speed}km/h · $time現在';
+  }
+
+  @override
+  String get bosaiTyphoonShowMap => '地図で進路を見る';
+
+  @override
+  String get bosaiTyphoonCamerasNow => '現在位置の周辺カメラ';
+
+  @override
+  String bosaiTyphoonCamerasAt(int hours) {
+    return '$hours時間後の接近地域のカメラ';
+  }
+
+  @override
+  String bosaiTyphoonCamerasTitle(String name, int hours) {
+    return '$name $hours時間後の周辺カメラ';
+  }
+
+  @override
+  String get bosaiNoCamerasNearby => '周辺にカメラがありません';
+
+  @override
+  String get bosaiFloodSectionTitle => '指定河川洪水予報';
+
+  @override
+  String bosaiFloodLevel(int n) {
+    return 'レベル$n';
+  }
+
+  @override
+  String get bosaiFloodKindCaution => '氾濫注意情報';
+
+  @override
+  String get bosaiFloodKindWarning => '氾濫警戒情報';
+
+  @override
+  String get bosaiFloodKindDanger => '氾濫危険情報';
+
+  @override
+  String get bosaiFloodKindOccurred => '氾濫発生情報';
+
+  @override
+  String bosaiFloodIssuedAt(String time) {
+    return '$time発表';
+  }
+
+  @override
+  String bosaiRiverCamerasTitle(String river) {
+    return '$riverのカメラ';
+  }
+
+  @override
+  String get bosaiRiverNoCameras => 'この河川に登録されたカメラはありません';
+
+  @override
+  String bosaiRiverPrefCameras(String pref) {
+    return '$prefのカメラを見る';
+  }
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -4214,5 +4327,118 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String detailNotUpdatingSince(String date) {
     return '$dateから がぞうが かわって いません';
+  }
+
+  @override
+  String get mapLayerTyphoonTitle => 'たいふうの じょうほう';
+
+  @override
+  String get mapLayerTyphoonSubtitle => 'すすむ みちと あぶない はんい';
+
+  @override
+  String get mapLayerTyphoonNone => 'いま たいふうは ありません';
+
+  @override
+  String get mapLegendTyphoonTrack => 'とおった みち';
+
+  @override
+  String get mapLegendTyphoonForecast => 'すすむ みち';
+
+  @override
+  String get mapLegendTyphoonCircle => 'よほうえん';
+
+  @override
+  String get mapLegendTyphoonStorm => 'つよい かぜの はんい';
+
+  @override
+  String get mapLegendTyphoonGale => 'かぜが つよい はんい';
+
+  @override
+  String typhoonNameNumber(int n) {
+    return 'たいふう $nごう';
+  }
+
+  @override
+  String get typhoonNameTd => 'ねったい ていきあつ（たいふうに なりそう）';
+
+  @override
+  String typhoonIntensity(String intensity) {
+    return '$intensity';
+  }
+
+  @override
+  String get typhoonIntensityStrong => 'つよい';
+
+  @override
+  String get typhoonIntensityVeryStrong => 'とても つよい';
+
+  @override
+  String get typhoonIntensityViolent => 'ものすごく つよい';
+
+  @override
+  String bosaiTyphoonNow(String location, String pressure, String wind) {
+    return '$locationの ちかく · きあつ ${pressure}hPa · かぜ ${wind}m/s';
+  }
+
+  @override
+  String bosaiTyphoonMoving(String course, String speed, String time) {
+    return '$courseへ じそく${speed}km · $timeの じょうほう';
+  }
+
+  @override
+  String get bosaiTyphoonShowMap => 'ちずで みる';
+
+  @override
+  String get bosaiTyphoonCamerasNow => 'いまの ばしょの ちかくの カメラ';
+
+  @override
+  String bosaiTyphoonCamerasAt(int hours) {
+    return '$hoursじかんごに ちかづく ところの カメラ';
+  }
+
+  @override
+  String bosaiTyphoonCamerasTitle(String name, int hours) {
+    return '$name $hoursじかんごの ちかくの カメラ';
+  }
+
+  @override
+  String get bosaiNoCamerasNearby => 'ちかくに カメラが ありません';
+
+  @override
+  String get bosaiFloodSectionTitle => 'かわの はんらんの よほう';
+
+  @override
+  String bosaiFloodLevel(int n) {
+    return 'レベル$n';
+  }
+
+  @override
+  String get bosaiFloodKindCaution => 'はんらん ちゅうい じょうほう';
+
+  @override
+  String get bosaiFloodKindWarning => 'はんらん けいかい じょうほう';
+
+  @override
+  String get bosaiFloodKindDanger => 'はんらん きけん じょうほう';
+
+  @override
+  String get bosaiFloodKindOccurred => 'はんらんが おきた じょうほう';
+
+  @override
+  String bosaiFloodIssuedAt(String time) {
+    return '$timeに はっぴょう';
+  }
+
+  @override
+  String bosaiRiverCamerasTitle(String river) {
+    return '$riverの カメラ';
+  }
+
+  @override
+  String get bosaiRiverNoCameras => 'この かわの カメラは ありません';
+
+  @override
+  String bosaiRiverPrefCameras(String pref) {
+    return '$prefの カメラを みる';
   }
 }

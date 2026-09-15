@@ -21,6 +21,8 @@ JST = timezone(timedelta(hours=9))
 STATE_PATH = "data/bosai_notify_state.json"
 QUAKE_URL = "https://www.jma.go.jp/bosai/quake/data/list.json"
 WARNING_URL = "https://www.jma.go.jp/bosai/warning/data/r8/map.json"  # 旧warning/map.jsonは2026-05で凍結
+# 指定河川洪水予報（発表中の報の配列。無ければ []）。氾濫危険情報=レベル4相当、氾濫発生情報=レベル5相当
+FLOOD_URL = "https://www.jma.go.jp/bosai/flood/data/r8/flood_xml.json"
 
 STRONG_INTENSITY = {"5-", "5+", "6-", "6+", "7"}
 # 震度→通知対象トピック（クライアントは選択レベルの1トピックだけ購読する）
@@ -212,6 +214,44 @@ def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], lis
     return out, sorted(current)
 
 
+def check_flood_forecasts(state: dict) -> tuple[list[tuple[str, str, str, str]], list[str]]:
+    """指定河川洪水予報の新規発表 [(prefJIS, code, family, 名称)] と現在の発表中キーを返す。
+
+    氾濫危険情報（コード40台）は danger（レベル4相当）、氾濫発生情報（50台）は special
+    （レベル5相当）として、気象警報と同じトピックへ流す。キーは "<pref>:flood<band>:<riverCode>"
+    で active_special に同居させる（気象警報のキー "<pref>:<code>" とは衝突しない）。
+    取得失敗時は前回のキーを保って再通知を防ぐ。"""
+    previous = set(state["active_special"])
+    kept = sorted(k for k in previous if ":flood" in k)
+    reports = _fetch_json(FLOOD_URL)
+    if reports is None or not isinstance(reports, list):
+        return [], kept
+    current: dict[str, tuple[str, str, str, str]] = {}
+    for rep in reports:
+        if not isinstance(rep, dict) or rep.get("infoType") == "訓練":
+            continue
+        item = rep.get("item") if isinstance(rep.get("item"), dict) else {}
+        code = str(item.get("code") or rep.get("status") or "")
+        river = str(rep.get("riverName") or "")
+        river_code = str(rep.get("riverCode") or "")
+        if not code or not river or not river_code:
+            continue
+        if code.startswith("5"):
+            family, band, kind = "special", "5", "氾濫発生情報"
+        elif code.startswith("4"):
+            family, band, kind = "danger", "4", "氾濫危険情報"
+        else:
+            continue
+        prefs = {str(c)[:2] for c in (rep.get("class20s") or []) if len(str(c)) >= 2}
+        for pref in sorted(prefs):
+            if pref not in PREF_NAMES:
+                continue
+            key = f"{pref}:flood{band}:{river_code}"
+            current[key] = (pref, f"flood{band}", family, f"{river}の{kind}")
+    out = [current[k] for k in sorted(current) if k not in previous]
+    return out, sorted(current)
+
+
 TAIL = "。周辺のライブカメラを確認できます"
 
 
@@ -269,6 +309,11 @@ def main() -> int:
     state = load_state()
     quake_events = check_quakes(state)
     warning_events, current_special = check_special_warnings(state)
+    flood_events, current_flood = check_flood_forecasts(state)
+    # 気象警報のキーと洪水予報のキーは同じ active_special に同居させる
+    current_special = sorted(
+        {k for k in current_special if ":flood" not in k} | set(current_flood))
+    warning_events = warning_events + flood_events
 
     changed = False
     if quake_events or warning_events:

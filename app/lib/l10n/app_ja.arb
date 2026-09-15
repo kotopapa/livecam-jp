@@ -2214,5 +2214,130 @@
         "type": "String"
       }
     }
+  },
+  "mapLayerTyphoonTitle": "台風情報",
+  "mapLayerTyphoonSubtitle": "進路予想・予報円・暴風警戒域",
+  "mapLayerTyphoonNone": "現在、発表中の台風・熱帯低気圧はありません",
+  "mapLegendTyphoonTrack": "経路",
+  "mapLegendTyphoonForecast": "予報進路",
+  "mapLegendTyphoonCircle": "予報円",
+  "mapLegendTyphoonStorm": "暴風域・暴風警戒域",
+  "mapLegendTyphoonGale": "強風域",
+  "typhoonNameNumber": "台風第{n}号",
+  "@typhoonNameNumber": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "typhoonNameTd": "熱帯低気圧（台風になる見込み）",
+  "typhoonIntensity": "{intensity}",
+  "@typhoonIntensity": {
+    "description": "台風の強さ（強い/非常に強い/猛烈な）の表示。値は typhoonIntensity* で解決",
+    "placeholders": {
+      "intensity": {
+        "type": "String"
+      }
+    }
+  },
+  "typhoonIntensityStrong": "強い",
+  "typhoonIntensityVeryStrong": "非常に強い",
+  "typhoonIntensityViolent": "猛烈な",
+  "bosaiTyphoonNow": "{location}付近 · 中心気圧 {pressure}hPa · 最大風速 {wind}m/s",
+  "@bosaiTyphoonNow": {
+    "description": "台風カードの実況行",
+    "placeholders": {
+      "location": {
+        "type": "String"
+      },
+      "pressure": {
+        "type": "String"
+      },
+      "wind": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiTyphoonMoving": "{course}へ {speed}km/h · {time}現在",
+  "@bosaiTyphoonMoving": {
+    "description": "台風カードの進行方向と時刻",
+    "placeholders": {
+      "course": {
+        "type": "String"
+      },
+      "speed": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiTyphoonShowMap": "地図で進路を見る",
+  "bosaiTyphoonCamerasNow": "現在位置の周辺カメラ",
+  "bosaiTyphoonCamerasAt": "{hours}時間後の接近地域のカメラ",
+  "@bosaiTyphoonCamerasAt": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiTyphoonCamerasTitle": "{name} {hours}時間後の周辺カメラ",
+  "@bosaiTyphoonCamerasTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiNoCamerasNearby": "周辺にカメラがありません",
+  "bosaiFloodSectionTitle": "指定河川洪水予報",
+  "bosaiFloodLevel": "レベル{n}",
+  "@bosaiFloodLevel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiFloodKindCaution": "氾濫注意情報",
+  "@bosaiFloodKindCaution": {
+    "description": "気象庁の洪水予報の名称。レベル2相当"
+  },
+  "bosaiFloodKindWarning": "氾濫警戒情報",
+  "bosaiFloodKindDanger": "氾濫危険情報",
+  "bosaiFloodKindOccurred": "氾濫発生情報",
+  "@bosaiFloodKindOccurred": {
+    "description": "レベル5相当"
+  },
+  "bosaiFloodIssuedAt": "{time}発表",
+  "@bosaiFloodIssuedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiRiverCamerasTitle": "{river}のカメラ",
+  "@bosaiRiverCamerasTitle": {
+    "placeholders": {
+      "river": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiRiverNoCameras": "この河川に登録されたカメラはありません",
+  "bosaiRiverPrefCameras": "{pref}のカメラを見る",
+  "@bosaiRiverPrefCameras": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
   }
 }

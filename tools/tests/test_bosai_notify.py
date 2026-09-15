@@ -290,3 +290,60 @@ def test_quake_naive_timestamp_does_not_crash():
     with mock.patch.object(bosai_notify.requests, "get", _quake_get(entries)):
         events = bosai_notify.check_quakes({"notified_quakes": []})
     assert len(events) == 1 and at[11:16] + "頃" in events[0][2]
+
+
+FLOOD_REPORTS = [
+    {"riverCode": "R1", "riverName": "荒川", "reportDatetime": "2026-09-15T10:00:00Z",
+     "infoType": "通常", "item": {"code": "40", "name": "氾濫危険情報"},
+     "class20s": ["11100", "11201", "13101"]},
+    {"riverCode": "R2", "riverName": "利根川", "reportDatetime": "2026-09-15T10:00:00Z",
+     "infoType": "通常", "item": {"code": "52", "name": "氾濫発生情報"},
+     "class20s": ["08201"]},
+    {"riverCode": "R3", "riverName": "多摩川", "reportDatetime": "2026-09-15T10:00:00Z",
+     "infoType": "通常", "item": {"code": "30", "name": "氾濫警戒情報"},
+     "class20s": ["13101"]},
+    {"riverCode": "R4", "riverName": "訓練川", "reportDatetime": "2026-09-15T10:00:00Z",
+     "infoType": "訓練", "item": {"code": "50", "name": "氾濫発生情報"},
+     "class20s": ["27100"]},
+]
+
+
+def _flood_get(url, timeout=30):
+    resp = mock.Mock(); resp.status_code = 200
+    resp.json.return_value = FLOOD_REPORTS
+    return resp
+
+
+def test_flood_forecast_danger_and_occurrence_become_level4_and_5_events():
+    with mock.patch.object(bosai_notify.requests, "get", _flood_get):
+        events, current = bosai_notify.check_flood_forecasts({"active_special": []})
+    # 荒川=埼玉・東京の2県に氾濫危険(レベル4相当)、利根川=茨城に氾濫発生(レベル5相当)。
+    # 氾濫警戒(レベル3)と訓練は対象外
+    assert events == [
+        ("08", "flood5", "special", "利根川の氾濫発生情報"),
+        ("11", "flood4", "danger", "荒川の氾濫危険情報"),
+        ("13", "flood4", "danger", "荒川の氾濫危険情報"),
+    ]
+    assert current == ["08:flood5:R2", "11:flood4:R1", "13:flood4:R1"]
+    pushes = bosai_notify.aggregate_warning_pushes(events)
+    topics = [p[0] for p in pushes]
+    assert topics == ["special-warning", "special-warning-08",
+                      "danger-warning", "danger-warning-11", "danger-warning-13"]
+    assert pushes[1][2].startswith("茨城県に利根川の氾濫発生情報")
+    assert pushes[3][1] == "荒川の氾濫危険情報が発表されました（警戒レベル4相当）"
+
+
+def test_flood_forecast_already_active_not_renotified_and_failure_keeps_keys():
+    state = {"active_special": ["11:flood4:R1", "13:43"]}
+    with mock.patch.object(bosai_notify.requests, "get", _flood_get):
+        events, current = bosai_notify.check_flood_forecasts(state)
+    assert [e[0] for e in events] == ["08", "13"]  # 埼玉の荒川は通知済み
+    assert "11:flood4:R1" in current
+    # 取得失敗: 前回の洪水キーだけ保つ（気象警報のキーは対象外）
+    def _fail(url, timeout=30):
+        resp = mock.Mock(); resp.status_code = 503
+        return resp
+    with mock.patch.object(bosai_notify.requests, "get", _fail):
+        events, current = bosai_notify.check_flood_forecasts(state)
+    assert events == [] and current == ["11:flood4:R1"]
+

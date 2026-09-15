@@ -2102,4 +2102,117 @@ class AppLocalizationsKo extends AppLocalizations {
   String detailNotUpdatingSince(String date) {
     return '$date부터 이미지가 갱신되지 않음';
   }
+
+  @override
+  String get mapLayerTyphoonTitle => '태풍 정보';
+
+  @override
+  String get mapLayerTyphoonSubtitle => '진로 예보·예보원·폭풍 경계 구역';
+
+  @override
+  String get mapLayerTyphoonNone => '현재 발표 중인 태풍·열대저기압이 없습니다';
+
+  @override
+  String get mapLegendTyphoonTrack => '경로';
+
+  @override
+  String get mapLegendTyphoonForecast => '예보 진로';
+
+  @override
+  String get mapLegendTyphoonCircle => '예보원';
+
+  @override
+  String get mapLegendTyphoonStorm => '폭풍역·폭풍 경계 구역';
+
+  @override
+  String get mapLegendTyphoonGale => '강풍역';
+
+  @override
+  String typhoonNameNumber(int n) {
+    return '태풍 제$n호';
+  }
+
+  @override
+  String get typhoonNameTd => '열대저기압(태풍으로 발달 전망)';
+
+  @override
+  String typhoonIntensity(String intensity) {
+    return '$intensity';
+  }
+
+  @override
+  String get typhoonIntensityStrong => '강한';
+
+  @override
+  String get typhoonIntensityVeryStrong => '매우 강한';
+
+  @override
+  String get typhoonIntensityViolent => '맹렬한';
+
+  @override
+  String bosaiTyphoonNow(String location, String pressure, String wind) {
+    return '$location 부근 · 중심기압 ${pressure}hPa · 최대풍속 ${wind}m/s';
+  }
+
+  @override
+  String bosaiTyphoonMoving(String course, String speed, String time) {
+    return '$course 방향 ${speed}km/h · $time 기준';
+  }
+
+  @override
+  String get bosaiTyphoonShowMap => '지도에서 진로 보기';
+
+  @override
+  String get bosaiTyphoonCamerasNow => '현재 위치 주변 카메라';
+
+  @override
+  String bosaiTyphoonCamerasAt(int hours) {
+    return '$hours시간 후 접근 지역의 카메라';
+  }
+
+  @override
+  String bosaiTyphoonCamerasTitle(String name, int hours) {
+    return '$name $hours시간 후 주변 카메라';
+  }
+
+  @override
+  String get bosaiNoCamerasNearby => '주변에 카메라가 없습니다';
+
+  @override
+  String get bosaiFloodSectionTitle => '지정 하천 홍수 예보';
+
+  @override
+  String bosaiFloodLevel(int n) {
+    return '레벨 $n';
+  }
+
+  @override
+  String get bosaiFloodKindCaution => '범람 주의 정보';
+
+  @override
+  String get bosaiFloodKindWarning => '범람 경계 정보';
+
+  @override
+  String get bosaiFloodKindDanger => '범람 위험 정보';
+
+  @override
+  String get bosaiFloodKindOccurred => '범람 발생 정보';
+
+  @override
+  String bosaiFloodIssuedAt(String time) {
+    return '$time 발표';
+  }
+
+  @override
+  String bosaiRiverCamerasTitle(String river) {
+    return '$river의 카메라';
+  }
+
+  @override
+  String get bosaiRiverNoCameras => '이 하천에 등록된 카메라가 없습니다';
+
+  @override
+  String bosaiRiverPrefCameras(String pref) {
+    return '$pref의 카메라 보기';
+  }
 }

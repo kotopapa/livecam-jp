@@ -2081,6 +2081,119 @@ class AppLocalizationsZh extends AppLocalizations {
   String detailNotUpdatingSince(String date) {
     return '自$date起图像未更新';
   }
+
+  @override
+  String get mapLayerTyphoonTitle => '台风信息';
+
+  @override
+  String get mapLayerTyphoonSubtitle => '路径预报、预报圆、暴风警戒区';
+
+  @override
+  String get mapLayerTyphoonNone => '目前没有发布中的台风或热带低气压';
+
+  @override
+  String get mapLegendTyphoonTrack => '路径';
+
+  @override
+  String get mapLegendTyphoonForecast => '预报路径';
+
+  @override
+  String get mapLegendTyphoonCircle => '预报圆';
+
+  @override
+  String get mapLegendTyphoonStorm => '暴风区·暴风警戒区';
+
+  @override
+  String get mapLegendTyphoonGale => '强风区';
+
+  @override
+  String typhoonNameNumber(int n) {
+    return '台风第$n号';
+  }
+
+  @override
+  String get typhoonNameTd => '热带低气压（预计将发展为台风）';
+
+  @override
+  String typhoonIntensity(String intensity) {
+    return '$intensity';
+  }
+
+  @override
+  String get typhoonIntensityStrong => '强';
+
+  @override
+  String get typhoonIntensityVeryStrong => '非常强';
+
+  @override
+  String get typhoonIntensityViolent => '猛烈';
+
+  @override
+  String bosaiTyphoonNow(String location, String pressure, String wind) {
+    return '$location附近 · 中心气压 ${pressure}hPa · 最大风速 ${wind}m/s';
+  }
+
+  @override
+  String bosaiTyphoonMoving(String course, String speed, String time) {
+    return '向$course移动 ${speed}km/h · $time时';
+  }
+
+  @override
+  String get bosaiTyphoonShowMap => '在地图上查看路径';
+
+  @override
+  String get bosaiTyphoonCamerasNow => '当前位置周边的摄像头';
+
+  @override
+  String bosaiTyphoonCamerasAt(int hours) {
+    return '$hours小时后临近地区的摄像头';
+  }
+
+  @override
+  String bosaiTyphoonCamerasTitle(String name, int hours) {
+    return '$name $hours小时后周边的摄像头';
+  }
+
+  @override
+  String get bosaiNoCamerasNearby => '周边没有摄像头';
+
+  @override
+  String get bosaiFloodSectionTitle => '指定河流洪水预报';
+
+  @override
+  String bosaiFloodLevel(int n) {
+    return '级别$n';
+  }
+
+  @override
+  String get bosaiFloodKindCaution => '泛滥注意信息';
+
+  @override
+  String get bosaiFloodKindWarning => '泛滥警戒信息';
+
+  @override
+  String get bosaiFloodKindDanger => '泛滥危险信息';
+
+  @override
+  String get bosaiFloodKindOccurred => '泛滥发生信息';
+
+  @override
+  String bosaiFloodIssuedAt(String time) {
+    return '$time发布';
+  }
+
+  @override
+  String bosaiRiverCamerasTitle(String river) {
+    return '$river的摄像头';
+  }
+
+  @override
+  String get bosaiRiverNoCameras => '该河流没有登记的摄像头';
+
+  @override
+  String bosaiRiverPrefCameras(String pref) {
+    return '查看$pref的摄像头';
+  }
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4159,5 +4272,118 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   @override
   String detailNotUpdatingSince(String date) {
     return '自$date起影像未更新';
+  }
+
+  @override
+  String get mapLayerTyphoonTitle => '颱風資訊';
+
+  @override
+  String get mapLayerTyphoonSubtitle => '路徑預報、預報圓、暴風警戒區';
+
+  @override
+  String get mapLayerTyphoonNone => '目前沒有發布中的颱風或熱帶性低氣壓';
+
+  @override
+  String get mapLegendTyphoonTrack => '路徑';
+
+  @override
+  String get mapLegendTyphoonForecast => '預報路徑';
+
+  @override
+  String get mapLegendTyphoonCircle => '預報圓';
+
+  @override
+  String get mapLegendTyphoonStorm => '暴風區·暴風警戒區';
+
+  @override
+  String get mapLegendTyphoonGale => '強風區';
+
+  @override
+  String typhoonNameNumber(int n) {
+    return '颱風第$n號';
+  }
+
+  @override
+  String get typhoonNameTd => '熱帶性低氣壓（預計將發展為颱風）';
+
+  @override
+  String typhoonIntensity(String intensity) {
+    return '$intensity';
+  }
+
+  @override
+  String get typhoonIntensityStrong => '強';
+
+  @override
+  String get typhoonIntensityVeryStrong => '非常強';
+
+  @override
+  String get typhoonIntensityViolent => '猛烈';
+
+  @override
+  String bosaiTyphoonNow(String location, String pressure, String wind) {
+    return '$location附近 · 中心氣壓 ${pressure}hPa · 最大風速 ${wind}m/s';
+  }
+
+  @override
+  String bosaiTyphoonMoving(String course, String speed, String time) {
+    return '向$course移動 ${speed}km/h · $time時';
+  }
+
+  @override
+  String get bosaiTyphoonShowMap => '在地圖上查看路徑';
+
+  @override
+  String get bosaiTyphoonCamerasNow => '目前位置周邊的攝影機';
+
+  @override
+  String bosaiTyphoonCamerasAt(int hours) {
+    return '$hours小時後接近地區的攝影機';
+  }
+
+  @override
+  String bosaiTyphoonCamerasTitle(String name, int hours) {
+    return '$name $hours小時後周邊的攝影機';
+  }
+
+  @override
+  String get bosaiNoCamerasNearby => '周邊沒有攝影機';
+
+  @override
+  String get bosaiFloodSectionTitle => '指定河川洪水預報';
+
+  @override
+  String bosaiFloodLevel(int n) {
+    return '級別$n';
+  }
+
+  @override
+  String get bosaiFloodKindCaution => '氾濫注意資訊';
+
+  @override
+  String get bosaiFloodKindWarning => '氾濫警戒資訊';
+
+  @override
+  String get bosaiFloodKindDanger => '氾濫危險資訊';
+
+  @override
+  String get bosaiFloodKindOccurred => '氾濫發生資訊';
+
+  @override
+  String bosaiFloodIssuedAt(String time) {
+    return '$time發布';
+  }
+
+  @override
+  String bosaiRiverCamerasTitle(String river) {
+    return '$river的攝影機';
+  }
+
+  @override
+  String get bosaiRiverNoCameras => '此河川沒有登錄的攝影機';
+
+  @override
+  String bosaiRiverPrefCameras(String pref) {
+    return '查看$pref的攝影機';
   }
 }

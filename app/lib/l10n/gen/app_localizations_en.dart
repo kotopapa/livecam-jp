@@ -2171,4 +2171,120 @@ class AppLocalizationsEn extends AppLocalizations {
   String detailNotUpdatingSince(String date) {
     return 'Image not updated since $date';
   }
+
+  @override
+  String get mapLayerTyphoonTitle => 'Typhoon';
+
+  @override
+  String get mapLayerTyphoonSubtitle =>
+      'Forecast track, probability circles, storm warning area';
+
+  @override
+  String get mapLayerTyphoonNone =>
+      'No typhoon or tropical depression is currently active';
+
+  @override
+  String get mapLegendTyphoonTrack => 'Track';
+
+  @override
+  String get mapLegendTyphoonForecast => 'Forecast';
+
+  @override
+  String get mapLegendTyphoonCircle => 'Probability circle';
+
+  @override
+  String get mapLegendTyphoonStorm => 'Storm area / warning area';
+
+  @override
+  String get mapLegendTyphoonGale => 'Gale area';
+
+  @override
+  String typhoonNameNumber(int n) {
+    return 'Typhoon No. $n';
+  }
+
+  @override
+  String get typhoonNameTd =>
+      'Tropical depression (expected to become a typhoon)';
+
+  @override
+  String typhoonIntensity(String intensity) {
+    return '$intensity';
+  }
+
+  @override
+  String get typhoonIntensityStrong => 'Strong';
+
+  @override
+  String get typhoonIntensityVeryStrong => 'Very strong';
+
+  @override
+  String get typhoonIntensityViolent => 'Violent';
+
+  @override
+  String bosaiTyphoonNow(String location, String pressure, String wind) {
+    return 'Near $location · $pressure hPa · max wind $wind m/s';
+  }
+
+  @override
+  String bosaiTyphoonMoving(String course, String speed, String time) {
+    return 'Moving $course at $speed km/h · as of $time';
+  }
+
+  @override
+  String get bosaiTyphoonShowMap => 'Show track on map';
+
+  @override
+  String get bosaiTyphoonCamerasNow => 'Cameras near current position';
+
+  @override
+  String bosaiTyphoonCamerasAt(int hours) {
+    return 'Cameras in the area approached in $hours h';
+  }
+
+  @override
+  String bosaiTyphoonCamerasTitle(String name, int hours) {
+    return '$name: cameras near the $hours h position';
+  }
+
+  @override
+  String get bosaiNoCamerasNearby => 'No cameras nearby';
+
+  @override
+  String get bosaiFloodSectionTitle => 'Flood forecasts for designated rivers';
+
+  @override
+  String bosaiFloodLevel(int n) {
+    return 'Level $n';
+  }
+
+  @override
+  String get bosaiFloodKindCaution => 'Flood advisory';
+
+  @override
+  String get bosaiFloodKindWarning => 'Flood warning';
+
+  @override
+  String get bosaiFloodKindDanger => 'Flood danger warning';
+
+  @override
+  String get bosaiFloodKindOccurred => 'Flood occurrence information';
+
+  @override
+  String bosaiFloodIssuedAt(String time) {
+    return 'Issued $time';
+  }
+
+  @override
+  String bosaiRiverCamerasTitle(String river) {
+    return 'Cameras on $river';
+  }
+
+  @override
+  String get bosaiRiverNoCameras => 'No cameras are registered for this river';
+
+  @override
+  String bosaiRiverPrefCameras(String pref) {
+    return 'See cameras in $pref';
+  }
 }

@@ -14,6 +14,8 @@ import 'package:flutter/widgets.dart';
 import '../data/heat_alert.dart' show HeatAlertLevel;
 import '../data/stockpile.dart' show StockpileCategory, StockpileUnit;
 import '../data/wbgt.dart' show WbgtLevel;
+import '../data/jma_flood.dart' show FloodLevel;
+import '../data/jma_typhoon.dart' show Typhoon;
 import '../data/x_accounts.dart' show XAccountType;
 import 'gen/app_localizations.dart';
 
@@ -333,3 +335,28 @@ String xAccountTypeLabelOf(AppLocalizations l10n, XAccountType type) =>
       XAccountType.otherArea => l10n.xAccountsTypeOtherArea,
       XAccountType.unknown => l10n.xAccountsTypeUnknown,
     };
+
+/// 台風の呼称（台風第N号／台風になる見込みの熱帯低気圧）
+String typhoonNameOf(AppLocalizations l10n, Typhoon t) {
+  final n = t.number;
+  return n == null ? l10n.typhoonNameTd : l10n.typhoonNameNumber(n);
+}
+
+/// 台風の強さ（気象庁の日本語表記 → 各言語）。空なら空
+String typhoonIntensityOf(AppLocalizations l10n, String jp) => switch (jp) {
+      '強い' => l10n.typhoonIntensityStrong,
+      '非常に強い' => l10n.typhoonIntensityVeryStrong,
+      '猛烈な' => l10n.typhoonIntensityViolent,
+      _ => jp,
+    };
+
+/// 指定河川洪水予報の発表情報名（気象庁の4段階）
+String floodKindNameOf(AppLocalizations l10n, FloodLevel level) =>
+    switch (level) {
+      FloodLevel.occurred => l10n.bosaiFloodKindOccurred,
+      FloodLevel.danger => l10n.bosaiFloodKindDanger,
+      FloodLevel.warning => l10n.bosaiFloodKindWarning,
+      FloodLevel.caution => l10n.bosaiFloodKindCaution,
+      FloodLevel.none => '',
+    };
+

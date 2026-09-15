@@ -2180,4 +2180,120 @@ class AppLocalizationsVi extends AppLocalizations {
   String detailNotUpdatingSince(String date) {
     return 'Hình ảnh chưa được cập nhật kể từ $date';
   }
+
+  @override
+  String get mapLayerTyphoonTitle => 'Thông tin bão';
+
+  @override
+  String get mapLayerTyphoonSubtitle =>
+      'Đường đi dự báo, vòng dự báo, vùng cảnh báo gió bão';
+
+  @override
+  String get mapLayerTyphoonNone =>
+      'Hiện không có bão hoặc áp thấp nhiệt đới nào';
+
+  @override
+  String get mapLegendTyphoonTrack => 'Đường đã đi';
+
+  @override
+  String get mapLegendTyphoonForecast => 'Dự báo';
+
+  @override
+  String get mapLegendTyphoonCircle => 'Vòng dự báo';
+
+  @override
+  String get mapLegendTyphoonStorm => 'Vùng gió bão / cảnh báo';
+
+  @override
+  String get mapLegendTyphoonGale => 'Vùng gió mạnh';
+
+  @override
+  String typhoonNameNumber(int n) {
+    return 'Bão số $n';
+  }
+
+  @override
+  String get typhoonNameTd => 'Áp thấp nhiệt đới (dự kiến mạnh lên thành bão)';
+
+  @override
+  String typhoonIntensity(String intensity) {
+    return '$intensity';
+  }
+
+  @override
+  String get typhoonIntensityStrong => 'Mạnh';
+
+  @override
+  String get typhoonIntensityVeryStrong => 'Rất mạnh';
+
+  @override
+  String get typhoonIntensityViolent => 'Dữ dội';
+
+  @override
+  String bosaiTyphoonNow(String location, String pressure, String wind) {
+    return 'Gần $location · $pressure hPa · gió mạnh nhất $wind m/s';
+  }
+
+  @override
+  String bosaiTyphoonMoving(String course, String speed, String time) {
+    return 'Di chuyển $course $speed km/h · lúc $time';
+  }
+
+  @override
+  String get bosaiTyphoonShowMap => 'Xem đường đi trên bản đồ';
+
+  @override
+  String get bosaiTyphoonCamerasNow => 'Camera gần vị trí hiện tại';
+
+  @override
+  String bosaiTyphoonCamerasAt(int hours) {
+    return 'Camera ở khu vực bão đến sau $hours giờ';
+  }
+
+  @override
+  String bosaiTyphoonCamerasTitle(String name, int hours) {
+    return '$name: camera gần vị trí sau $hours giờ';
+  }
+
+  @override
+  String get bosaiNoCamerasNearby => 'Không có camera gần đây';
+
+  @override
+  String get bosaiFloodSectionTitle => 'Dự báo lũ các sông được chỉ định';
+
+  @override
+  String bosaiFloodLevel(int n) {
+    return 'Cấp $n';
+  }
+
+  @override
+  String get bosaiFloodKindCaution => 'Thông tin chú ý ngập lụt';
+
+  @override
+  String get bosaiFloodKindWarning => 'Thông tin cảnh giác ngập lụt';
+
+  @override
+  String get bosaiFloodKindDanger => 'Thông tin nguy hiểm ngập lụt';
+
+  @override
+  String get bosaiFloodKindOccurred => 'Thông tin đã xảy ra ngập lụt';
+
+  @override
+  String bosaiFloodIssuedAt(String time) {
+    return 'Phát lúc $time';
+  }
+
+  @override
+  String bosaiRiverCamerasTitle(String river) {
+    return 'Camera trên $river';
+  }
+
+  @override
+  String get bosaiRiverNoCameras =>
+      'Không có camera nào được đăng ký cho sông này';
+
+  @override
+  String bosaiRiverPrefCameras(String pref) {
+    return 'Xem camera ở $pref';
+  }
 }

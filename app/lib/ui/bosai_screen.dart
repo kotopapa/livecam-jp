@@ -11,7 +11,9 @@ import '../data/analytics.dart';
 import '../l10n/l10n.dart';
 import '../data/heat_alert.dart';
 import '../data/wbgt.dart';
+import '../data/jma_flood.dart';
 import '../data/jma_layers.dart';
+import '../data/jma_typhoon.dart';
 import '../data/quake_intensity.dart';
 import '../models/camera.dart';
 import '../util/geo.dart';
@@ -227,6 +229,9 @@ class _BosaiScreenState extends State<BosaiScreen>
 
   /// 都道府県→警報を発表中の官署コード（市区町村単位の詳細取得に使う）
   Map<String, Set<String>> _warningOffices = {};
+  /// 台風情報と指定河川洪水予報（気象警報タブの先頭に出す。取得失敗は空/未取得のまま）
+  List<Typhoon> _typhoons = const [];
+  List<FloodForecast>? _floods;
 
   /// 都道府県→注意報を発表中の官署コード
   Map<String, Set<String>> _advisoryOffices = {};
@@ -280,6 +285,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     // 従来の推定(先頭3桁+000)で続行できるため、待ってから始めない
     final officeFuture = _loadClass10Offices()
         .catchError((_) => const <String, String>{});
+    _loadTyphoonAndFlood();
     try {
       final resp = await _getWarningMap();
       final class10Office = await officeFuture;
@@ -741,6 +747,174 @@ class _BosaiScreenState extends State<BosaiScreen>
                     );
   }
 
+  /// 台風情報と指定河川洪水予報。警報の取得とは独立に走らせ、失敗しても
+  /// 警報表示に影響させない（台風は無いのが普通、洪水予報は無ければ空）
+  Future<void> _loadTyphoonAndFlood() async {
+    final results = await Future.wait<Object?>([
+      JmaTyphoon.fetchAll(),
+      JmaFlood.fetch(),
+    ]);
+    if (!mounted) return;
+    setState(() {
+      _typhoons = (results[0] as List<Typhoon>?) ?? const [];
+      final f = results[1] as List<FloodForecast>?;
+      if (f != null) _floods = f; // 取得失敗時は前回値を保つ
+    });
+  }
+
+  /// 気象警報タブの先頭に差し込む台風カードと洪水予報一覧
+  List<Widget> _extraSections() => [
+        for (final t in _typhoons) _typhoonCard(t),
+        if (_floods != null && _floods!.isNotEmpty) _floodSection(_floods!),
+      ];
+
+  static String _hhmm(DateTime utc) {
+    final j = toJstWallClock(utc.toUtc());
+    return '${j.hour.toString().padLeft(2, '0')}:${j.minute.toString().padLeft(2, '0')}';
+  }
+
+  /// 台風が接近する地点（実況と各予報時刻）のうち、予報円＋暴風域の範囲に
+  /// カメラが1台でもあるもの。多くても先頭2件
+  List<(TyphoonPoint, double)> _approachPoints(Typhoon t) {
+    final cams = widget.app.repository.displayableCameras();
+    final out = <(TyphoonPoint, double)>[];
+    for (final p in t.points) {
+      final radius = (p.probabilityRadiusM ?? 0) +
+          ((p.stormRadiusKm ?? p.galeRadiusKm ?? 100) * 1000);
+      final r = radius.clamp(50000.0, 500000.0);
+      final hit = cams.any((c) =>
+          c.hasLocation &&
+          distanceMeters(p.center.latitude, p.center.longitude, c.lat!, c.lng!) <= r);
+      if (hit) out.add((p, r));
+      if (out.length >= 2) break;
+    }
+    return out;
+  }
+
+  Widget _typhoonCard(Typhoon t) {
+    final l10n = context.l10n;
+    final a = t.analysis;
+    final name = typhoonNameOf(l10n, t);
+    final intensity = typhoonIntensityOf(l10n, a.intensity);
+    final approach = _approachPoints(t);
+    return Card(
+      margin: const EdgeInsets.fromLTRB(12, 8, 12, 4),
+      color: const Color(0xFFFFF3E0),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 10, 12, 4),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Row(children: [
+            const Icon(Icons.cyclone, color: Color(0xFFD32F2F)),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                intensity.isEmpty ? name : '$name（$intensity）',
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              ),
+            ),
+          ]),
+          const SizedBox(height: 4),
+          Text(
+            l10n.bosaiTyphoonNow(
+              a.location.isEmpty ? '-' : a.location,
+              a.pressureHpa?.toString() ?? '-',
+              a.maxWindMs?.round().toString() ?? '-',
+            ),
+            style: const TextStyle(fontSize: 12),
+          ),
+          Text(
+            l10n.bosaiTyphoonMoving(
+              a.course.isEmpty ? '-' : a.course,
+              a.speedKmh?.round().toString() ?? '-',
+              _hhmm(a.validAt),
+            ),
+            style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+          ),
+          Wrap(spacing: 4, children: [
+            TextButton.icon(
+              onPressed: () {
+                widget.app.navigationRequest.value = null;
+                widget.app.navigationRequest.value = 'map/typhoon';
+              },
+              icon: const Icon(Icons.map_outlined, size: 18),
+              label: Text(l10n.bosaiTyphoonShowMap),
+            ),
+            for (final (p, r) in approach)
+              TextButton.icon(
+                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => NearbyCamerasScreen(
+                          app: widget.app,
+                          title: p.isAnalysis
+                              ? l10n.bosaiTyphoonCamerasNow
+                              : l10n.bosaiTyphoonCamerasTitle(name, p.hours),
+                          lat: p.center.latitude,
+                          lng: p.center.longitude,
+                          radiusMeters: r,
+                          limit: 150,
+                        ))),
+                icon: const Icon(Icons.videocam_outlined, size: 18),
+                label: Text(p.isAnalysis
+                    ? l10n.bosaiTyphoonCamerasNow
+                    : l10n.bosaiTyphoonCamerasAt(p.hours)),
+              ),
+          ]),
+          Text(JmaTyphoon.attribution,
+              style: TextStyle(fontSize: 9, color: Colors.grey[600])),
+        ]),
+      ),
+    );
+  }
+
+  Widget _floodSection(List<FloodForecast> floods) {
+    final l10n = context.l10n;
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      Padding(
+        padding: const EdgeInsets.fromLTRB(16, 10, 16, 2),
+        child: Text(l10n.bosaiFloodSectionTitle,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+      ),
+      for (final f in floods)
+        ListTile(
+          dense: true,
+          leading: Container(
+            width: 44,
+            height: 36,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: f.level.color,
+              borderRadius: BorderRadius.circular(6),
+            ),
+            child: Text(l10n.bosaiFloodLevel(f.level.level),
+                style: TextStyle(
+                    color: f.level == FloodLevel.caution
+                        ? Colors.black87
+                        : Colors.white,
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold)),
+          ),
+          title: Text(f.riverName),
+          subtitle: Text(
+            [
+              floodKindNameOf(l10n, f.level),
+              l10n.bosaiFloodIssuedAt(_hhmm(f.reportAt)),
+              for (final pref in f.prefectures.take(3))
+                if (prefectureNames.containsKey(pref)) prefectureNameOf(l10n, pref),
+            ].join(' · '),
+            style: const TextStyle(fontSize: 11),
+          ),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => RiverCamerasScreen(app: widget.app, forecast: f))),
+        ),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 6),
+        child: Text(JmaFlood.attribution,
+            style: TextStyle(fontSize: 9, color: Colors.grey[600])),
+      ),
+      const Divider(height: 1),
+    ]);
+  }
+
   /// 最終取得時刻と、更新できなかったときの注記（前回値を表示中の目印）
   Widget? _warningFreshnessBar() {
     final t = _warningsAt;
@@ -771,6 +945,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     }
     if (_warnings!.isEmpty && (_advisories?.isEmpty ?? true)) {
       return ListView(children: [
+        ..._extraSections(),
         const SizedBox(height: 72),
         Center(child: Text(context.l10n.bosaiNoWarnings)),
         const SizedBox(height: 24),
@@ -807,6 +982,7 @@ class _BosaiScreenState extends State<BosaiScreen>
                 style: TextStyle(fontSize: 11, color: Colors.grey[600]),
               ),
             ),
+            ..._extraSections(),
           ]);
         }
         if (i == prefs.length + 1) {
@@ -1711,12 +1887,20 @@ class NearbyCamerasScreen extends StatefulWidget {
     required this.title,
     required this.lat,
     required this.lng,
+    this.radiusMeters = 50000,
+    this.limit,
   });
 
   final AppState app;
   final String title;
   final double lat;
   final double lng;
+
+  /// 検索半径（既定50km。台風の予報円では数百kmを渡す）
+  final double radiusMeters;
+
+  /// 近い順の上限件数（null は無制限）
+  final int? limit;
 
   @override
   State<NearbyCamerasScreen> createState() => _NearbyCamerasScreenState();
@@ -1732,9 +1916,11 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
     for (final c in app.repository.displayableCameras()) {
       if (!c.hasLocation) continue;
       final d = distanceMeters(widget.lat, widget.lng, c.lat!, c.lng!);
-      if (d <= 50000) base.add((c, d));
+      if (d <= widget.radiusMeters) base.add((c, d));
     }
     base.sort((a, b) => a.$2.compareTo(b.$2));
+    final limit = widget.limit;
+    if (limit != null && base.length > limit) base.removeRange(limit, base.length);
     final liveCount = base.where((e) => e.$1.isLiveVideo).length;
     final cams =
         _liveOnly ? base.where((e) => e.$1.isLiveVideo).toList() : base;
@@ -1743,7 +1929,10 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
           title: Text(widget.title, overflow: TextOverflow.ellipsis)),
       bottomNavigationBar: AdFooter(app: widget.app),
       body: base.isEmpty
-          ? Center(child: Text(context.l10n.bosaiNoCamerasWithin50km))
+          ? Center(
+              child: Text(widget.radiusMeters == 50000
+                  ? context.l10n.bosaiNoCamerasWithin50km
+                  : context.l10n.bosaiNoCamerasNearby))
           : Column(children: [
               _LiveOnlyBar(
                 liveOnly: _liveOnly,
@@ -1834,3 +2023,95 @@ String wbgtTimeLabel(AppLocalizations l10n, DateTime t, DateTime now) {
   if (diff == 1) return l10n.bosaiWbgtNextDayHour(t.hour);
   return l10n.bosaiWbgtDateHour(t.month, t.day, t.hour);
 }
+
+/// 指定河川洪水予報の河川に紐づくカメラ一覧（台帳の river_or_route で照合）。
+/// 該当が無ければ対象都道府県のカメラ一覧へ誘導する
+class RiverCamerasScreen extends StatelessWidget {
+  const RiverCamerasScreen({super.key, required this.app, required this.forecast});
+
+  final AppState app;
+  final FloodForecast forecast;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = context.l10n;
+    final cams = forecast.matchCameras(app.repository.displayableCameras());
+    final prefs = forecast.prefectures.where(prefectureNames.containsKey).toList()..sort();
+    return Scaffold(
+      appBar: AppBar(
+          title: Text(l10n.bosaiRiverCamerasTitle(forecast.riverName),
+              overflow: TextOverflow.ellipsis)),
+      bottomNavigationBar: AdFooter(app: app),
+      body: Column(children: [
+        Container(
+          width: double.infinity,
+          color: forecast.level.color.withValues(alpha: 0.12),
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+          child: Text(
+            '${floodKindNameOf(l10n, forecast.level)} · ${l10n.bosaiFloodLevel(forecast.level.level)}',
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+          ),
+        ),
+        Expanded(
+          child: cams.isEmpty
+              ? Center(
+                  child: Column(mainAxisSize: MainAxisSize.min, children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Text(l10n.bosaiRiverNoCameras, textAlign: TextAlign.center),
+                    ),
+                    for (final pref in prefs)
+                      TextButton(
+                        onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                            builder: (_) => PrefCamerasScreen(
+                                  app: app,
+                                  pref: pref,
+                                  title: prefectureNameOf(l10n, pref),
+                                ))),
+                        child: Text(l10n.bosaiRiverPrefCameras(prefectureNameOf(l10n, pref))),
+                      ),
+                  ]),
+                )
+              : ListView.separated(
+                  itemCount: cams.length,
+                  separatorBuilder: (_, _) => const Divider(height: 1),
+                  itemBuilder: (context, i) {
+                    final camera = cams[i];
+                    final url = app.imageUrlFor(camera);
+                    return ListTile(
+                      leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(6),
+                        child: SizedBox(
+                          width: 72,
+                          height: 48,
+                          child: url != null
+                              ? Image.network(url,
+                                  fit: BoxFit.cover,
+                                  cacheWidth: 216,
+                                  errorBuilder: (_, _, _) =>
+                                      Container(color: Colors.grey[300]))
+                              : Container(
+                                  color: Colors.grey[300],
+                                  child: Icon(Icons.videocam,
+                                      size: 20, color: Colors.grey[600])),
+                        ),
+                      ),
+                      title: Text(camera.name,
+                          maxLines: 1, overflow: TextOverflow.ellipsis),
+                      subtitle: Text(
+                        [if (camera.isVideo) 'LIVE', camera.operator].join(' · '),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontSize: 12),
+                      ),
+                      onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                          builder: (_) => DetailScreen(camera: camera, app: app))),
+                    );
+                  },
+                ),
+        ),
+      ]),
+    );
+  }
+}
+

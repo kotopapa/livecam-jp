@@ -3849,6 +3849,192 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'{date}から画像が更新されていません'**
   String detailNotUpdatingSince(String date);
+
+  /// No description provided for @mapLayerTyphoonTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'台風情報'**
+  String get mapLayerTyphoonTitle;
+
+  /// No description provided for @mapLayerTyphoonSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'進路予想・予報円・暴風警戒域'**
+  String get mapLayerTyphoonSubtitle;
+
+  /// No description provided for @mapLayerTyphoonNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在、発表中の台風・熱帯低気圧はありません'**
+  String get mapLayerTyphoonNone;
+
+  /// No description provided for @mapLegendTyphoonTrack.
+  ///
+  /// In ja, this message translates to:
+  /// **'経路'**
+  String get mapLegendTyphoonTrack;
+
+  /// No description provided for @mapLegendTyphoonForecast.
+  ///
+  /// In ja, this message translates to:
+  /// **'予報進路'**
+  String get mapLegendTyphoonForecast;
+
+  /// No description provided for @mapLegendTyphoonCircle.
+  ///
+  /// In ja, this message translates to:
+  /// **'予報円'**
+  String get mapLegendTyphoonCircle;
+
+  /// No description provided for @mapLegendTyphoonStorm.
+  ///
+  /// In ja, this message translates to:
+  /// **'暴風域・暴風警戒域'**
+  String get mapLegendTyphoonStorm;
+
+  /// No description provided for @mapLegendTyphoonGale.
+  ///
+  /// In ja, this message translates to:
+  /// **'強風域'**
+  String get mapLegendTyphoonGale;
+
+  /// No description provided for @typhoonNameNumber.
+  ///
+  /// In ja, this message translates to:
+  /// **'台風第{n}号'**
+  String typhoonNameNumber(int n);
+
+  /// No description provided for @typhoonNameTd.
+  ///
+  /// In ja, this message translates to:
+  /// **'熱帯低気圧（台風になる見込み）'**
+  String get typhoonNameTd;
+
+  /// 台風の強さ（強い/非常に強い/猛烈な）の表示。値は typhoonIntensity* で解決
+  ///
+  /// In ja, this message translates to:
+  /// **'{intensity}'**
+  String typhoonIntensity(String intensity);
+
+  /// No description provided for @typhoonIntensityStrong.
+  ///
+  /// In ja, this message translates to:
+  /// **'強い'**
+  String get typhoonIntensityStrong;
+
+  /// No description provided for @typhoonIntensityVeryStrong.
+  ///
+  /// In ja, this message translates to:
+  /// **'非常に強い'**
+  String get typhoonIntensityVeryStrong;
+
+  /// No description provided for @typhoonIntensityViolent.
+  ///
+  /// In ja, this message translates to:
+  /// **'猛烈な'**
+  String get typhoonIntensityViolent;
+
+  /// 台風カードの実況行
+  ///
+  /// In ja, this message translates to:
+  /// **'{location}付近 · 中心気圧 {pressure}hPa · 最大風速 {wind}m/s'**
+  String bosaiTyphoonNow(String location, String pressure, String wind);
+
+  /// 台風カードの進行方向と時刻
+  ///
+  /// In ja, this message translates to:
+  /// **'{course}へ {speed}km/h · {time}現在'**
+  String bosaiTyphoonMoving(String course, String speed, String time);
+
+  /// No description provided for @bosaiTyphoonShowMap.
+  ///
+  /// In ja, this message translates to:
+  /// **'地図で進路を見る'**
+  String get bosaiTyphoonShowMap;
+
+  /// No description provided for @bosaiTyphoonCamerasNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在位置の周辺カメラ'**
+  String get bosaiTyphoonCamerasNow;
+
+  /// No description provided for @bosaiTyphoonCamerasAt.
+  ///
+  /// In ja, this message translates to:
+  /// **'{hours}時間後の接近地域のカメラ'**
+  String bosaiTyphoonCamerasAt(int hours);
+
+  /// No description provided for @bosaiTyphoonCamerasTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name} {hours}時間後の周辺カメラ'**
+  String bosaiTyphoonCamerasTitle(String name, int hours);
+
+  /// No description provided for @bosaiNoCamerasNearby.
+  ///
+  /// In ja, this message translates to:
+  /// **'周辺にカメラがありません'**
+  String get bosaiNoCamerasNearby;
+
+  /// No description provided for @bosaiFloodSectionTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'指定河川洪水予報'**
+  String get bosaiFloodSectionTitle;
+
+  /// No description provided for @bosaiFloodLevel.
+  ///
+  /// In ja, this message translates to:
+  /// **'レベル{n}'**
+  String bosaiFloodLevel(int n);
+
+  /// 気象庁の洪水予報の名称。レベル2相当
+  ///
+  /// In ja, this message translates to:
+  /// **'氾濫注意情報'**
+  String get bosaiFloodKindCaution;
+
+  /// No description provided for @bosaiFloodKindWarning.
+  ///
+  /// In ja, this message translates to:
+  /// **'氾濫警戒情報'**
+  String get bosaiFloodKindWarning;
+
+  /// No description provided for @bosaiFloodKindDanger.
+  ///
+  /// In ja, this message translates to:
+  /// **'氾濫危険情報'**
+  String get bosaiFloodKindDanger;
+
+  /// レベル5相当
+  ///
+  /// In ja, this message translates to:
+  /// **'氾濫発生情報'**
+  String get bosaiFloodKindOccurred;
+
+  /// No description provided for @bosaiFloodIssuedAt.
+  ///
+  /// In ja, this message translates to:
+  /// **'{time}発表'**
+  String bosaiFloodIssuedAt(String time);
+
+  /// No description provided for @bosaiRiverCamerasTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'{river}のカメラ'**
+  String bosaiRiverCamerasTitle(String river);
+
+  /// No description provided for @bosaiRiverNoCameras.
+  ///
+  /// In ja, this message translates to:
+  /// **'この河川に登録されたカメラはありません'**
+  String get bosaiRiverNoCameras;
+
+  /// No description provided for @bosaiRiverPrefCameras.
+  ///
+  /// In ja, this message translates to:
+  /// **'{pref}のカメラを見る'**
+  String bosaiRiverPrefCameras(String pref);
 }
 
 class _AppLocalizationsDelegate

@@ -19,6 +19,7 @@ import '../data/even_zoom_tile_provider.dart';
 import '../data/facility_layers.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
+import '../data/jma_typhoon.dart';
 import '../data/shelter_layers.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
@@ -134,6 +135,11 @@ class _MapScreenState extends State<MapScreen> {
   void _onNavigationRequest() {
     final r = widget.app.navigationRequest.value ?? '';
     if (!r.startsWith('map/')) return;
+    // 災害速報の台風カード「地図で進路を見る」
+    if (r == 'map/typhoon') {
+      if (mounted) _setLayer(MapLayerKind.typhoon);
+      return;
+    }
     final parts = r.substring(4).split(',');
     if (parts.length < 2) return;
     final lat = double.tryParse(parts[0]);
@@ -174,6 +180,7 @@ class _MapScreenState extends State<MapScreen> {
   List<RainPoint> _rain = const [];
   NowcastTime? _rain24hTile;
   RiskTime? _risk;
+  List<Typhoon> _typhoons = const [];
   bool _layerLoading = false;
   bool _layerFailed = false;
   Timer? _layerTimer;
@@ -200,6 +207,10 @@ class _MapScreenState extends State<MapScreen> {
     }
     if (kind == MapLayerKind.none || HazardLayers.isHazard(kind)) return;
     await _refreshLayer();
+    // 台風: 経路と予報円が収まるように地図を寄せる（無ければそのまま）
+    if (kind == MapLayerKind.typhoon && _typhoons.isNotEmpty && mounted) {
+      _fitToTyphoon(_typhoons.first);
+    }
     // レイヤーON中だけ定期更新（雨雲5分・震源/雨量/キキクル10分）
     _layerTimer = Timer.periodic(
         Duration(minutes: kind == MapLayerKind.rainRadar ? 5 : 10),
@@ -239,6 +250,9 @@ class _MapScreenState extends State<MapScreen> {
         final t = await JmaLayers.fetchLatestRisk();
         if (t != null) _risk = t;
         ok = t != null;
+      case MapLayerKind.typhoon:
+        // 発表中の台風が無いのは正常（凡例に「ありません」と出す）
+        _typhoons = await JmaTyphoon.fetchAll();
       case MapLayerKind.none:
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardLandslide:
@@ -313,6 +327,13 @@ class _MapScreenState extends State<MapScreen> {
             title: Text(l10n.mapLayerRain24hTitle),
             subtitle: Text(l10n.mapLayerRain24hSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rain24h); },
+          ),
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.typhoon ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.typhoon ? Theme.of(ctx).colorScheme.primary : null),
+            title: Text(l10n.mapLayerTyphoonTitle),
+            subtitle: Text(l10n.mapLayerTyphoonSubtitle),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.typhoon); },
           ),
           for (final k in const [
             MapLayerKind.riskLand,
@@ -1148,6 +1169,25 @@ class _MapScreenState extends State<MapScreen> {
           swatch(JmaLayers.intensityColor('5-'), intensityLabelOf(l10n, '5-')),
           swatch(JmaLayers.intensityColor('6-'), l10n.mapLegendIntensity6Up),
         ]);
+      case MapLayerKind.typhoon:
+        if (_typhoons.isEmpty) {
+          title = l10n.mapLayerTyphoonNone;
+        } else {
+          final t = _typhoons.first;
+          final intensity = typhoonIntensityOf(l10n, t.analysis.intensity);
+          title = [
+            typhoonNameOf(l10n, t),
+            if (intensity.isNotEmpty) intensity,
+            if (_typhoons.length > 1) '+${_typhoons.length - 1}',
+          ].join(' ');
+          items.addAll([
+            swatch(_typhoonTrackColor, l10n.mapLegendTyphoonTrack),
+            swatch(_typhoonForecastColor, l10n.mapLegendTyphoonForecast),
+            swatch(_typhoonCircleColor, l10n.mapLegendTyphoonCircle),
+            swatch(_typhoonStormColor, l10n.mapLegendTyphoonStorm),
+            swatch(_typhoonGaleColor, l10n.mapLegendTyphoonGale),
+          ]);
+        }
       case MapLayerKind.rain24h:
         title = _zoom >= 9
             ? l10n.mapLegendRain24h(_rain24hTile?.label ?? '')
@@ -1328,6 +1368,152 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  static const _typhoonTrackColor = Color(0xFF616E7C);
+  static const _typhoonForecastColor = Color(0xFFD32F2F);
+  static const _typhoonCircleColor = Color(0xFF1E88E5);
+  static const _typhoonStormColor = Color(0xFFE53935);
+  static const _typhoonGaleColor = Color(0xFFFFB300);
+
+  /// 台風の経路・予報円・暴風警戒域が収まる範囲に地図を寄せる
+  void _fitToTyphoon(Typhoon t) {
+    final pts = <LatLng>[...t.track];
+    for (final p in t.points) {
+      pts.add(p.center);
+      final r = (p.probabilityRadiusM ?? 0) + (p.stormRadiusKm ?? 0) * 1000;
+      if (r > 0) {
+        // 半径分だけ四隅を広げる（緯度1度≒111km）
+        final dLat = r / 111000;
+        final dLng = r / (111000 * math.cos(p.center.latitude * math.pi / 180));
+        pts.add(LatLng(p.center.latitude + dLat, p.center.longitude + dLng));
+        pts.add(LatLng(p.center.latitude - dLat, p.center.longitude - dLng));
+      }
+    }
+    if (pts.length < 2) return;
+    try {
+      _controller.fitCamera(CameraFit.bounds(
+        bounds: LatLngBounds.fromPoints(pts),
+        padding: const EdgeInsets.fromLTRB(24, 80, 24, 160),
+        maxZoom: 8,
+      ));
+      final z = _controller.camera.zoom;
+      if (z.isFinite) setState(() => _zoom = z);
+    } catch (_) {}
+  }
+
+  /// 台風情報の描画: 経路（実線）→ 予報進路（破線）→ 予報円 → 暴風警戒域 → 中心
+  List<Widget> _typhoonWidgets() {
+    if (_typhoons.isEmpty) return const [];
+    final circles = <CircleMarker>[];
+    final lines = <Polyline>[];
+    final markers = <Marker>[];
+    final l10n = context.l10n;
+    for (final t in _typhoons) {
+      final a = t.analysis;
+      // 実況の強風域・暴風域
+      if (a.galeRadiusKm != null) {
+        circles.add(CircleMarker(
+          point: a.center,
+          radius: a.galeRadiusKm! * 1000,
+          useRadiusInMeter: true,
+          color: _typhoonGaleColor.withValues(alpha: 0.18),
+          borderColor: _typhoonGaleColor,
+          borderStrokeWidth: 1,
+        ));
+      }
+      if (a.stormRadiusKm != null) {
+        circles.add(CircleMarker(
+          point: a.center,
+          radius: a.stormRadiusKm! * 1000,
+          useRadiusInMeter: true,
+          color: _typhoonStormColor.withValues(alpha: 0.25),
+          borderColor: _typhoonStormColor,
+          borderStrokeWidth: 1,
+        ));
+      }
+      for (final f in t.forecasts) {
+        final pr = f.probabilityRadiusM;
+        // 暴風警戒域: 予報円の半径＋暴風域の半径（気象庁の包絡線を円で近似）
+        if (pr != null && f.stormRadiusKm != null) {
+          circles.add(CircleMarker(
+            point: f.center,
+            radius: pr + f.stormRadiusKm! * 1000,
+            useRadiusInMeter: true,
+            color: _typhoonStormColor.withValues(alpha: 0.10),
+            borderColor: _typhoonStormColor.withValues(alpha: 0.6),
+            borderStrokeWidth: 1,
+          ));
+        }
+        if (pr != null) {
+          circles.add(CircleMarker(
+            point: f.center,
+            radius: pr,
+            useRadiusInMeter: true,
+            color: Colors.transparent,
+            borderColor: _typhoonCircleColor,
+            borderStrokeWidth: 1.5,
+          ));
+        }
+      }
+      if (t.track.length >= 2) {
+        lines.add(Polyline(
+            points: t.track, color: _typhoonTrackColor, strokeWidth: 2.5));
+      }
+      final fc = [a.center, ...t.forecasts.map((f) => f.center)];
+      if (fc.length >= 2) {
+        lines.add(Polyline(
+          points: fc,
+          color: _typhoonForecastColor,
+          strokeWidth: 2.5,
+          pattern: StrokePattern.dashed(segments: const [10, 8]),
+        ));
+      }
+      for (final f in t.forecasts) {
+        markers.add(Marker(
+          point: f.center,
+          width: 44,
+          height: 20,
+          child: Container(
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.85),
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: Text('${f.hours}h',
+                style: const TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.bold,
+                    color: _typhoonForecastColor)),
+          ),
+        ));
+      }
+      markers.add(Marker(
+        point: a.center,
+        width: 120,
+        height: 52,
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          const Icon(Icons.cyclone, color: _typhoonForecastColor, size: 28),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.9),
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: Text(typhoonNameOf(l10n, t),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                    fontSize: 10, fontWeight: FontWeight.bold)),
+          ),
+        ]),
+      ));
+    }
+    return [
+      if (circles.isNotEmpty) CircleLayer(circles: circles),
+      if (lines.isNotEmpty) PolylineLayer(polylines: lines),
+      if (markers.isNotEmpty) MarkerLayer(markers: markers),
+    ];
+  }
+
   /// 地図レイヤーの地図要素（タイル/マーカー）
   List<Widget> _layerWidgets() {
     switch (_layer) {
@@ -1444,6 +1630,8 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
         ];
+      case MapLayerKind.typhoon:
+        return _typhoonWidgets();
       case MapLayerKind.shelters:
         return _shelterWidgets();
       case MapLayerKind.facilities:
