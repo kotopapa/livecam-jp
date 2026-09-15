@@ -134,14 +134,14 @@ const List<VcMerchant> vcMerchants = <VcMerchant>[
     key: 'rakuten',
     name: '楽天市場',
     pid: '892690205',
-    enabled: false, // 審査中。承認されたら true にするだけで画面に出る
+    enabled: true, // 2026-09-15 提携承認
     searchUrl: _rakutenSearchUrl,
   ),
   VcMerchant(
     key: 'amazon',
     name: 'Amazon.co.jp',
     pid: '892690207',
-    enabled: false, // 審査中。承認されたら true にするだけで画面に出る
+    enabled: true, // 2026-09-15 提携承認
     searchUrl: _amazonSearchUrl,
   ),
 ];

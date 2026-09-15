@@ -302,9 +302,10 @@ void main() {
         {for (final m in vcMerchants) m.key: m.pid},
         {'yahoo': '892690203', 'rakuten': '892690205', 'amazon': '892690207'},
       );
-      // 審査中の楽天・Amazon は無効
-      expect(AffiliateLinks.enabledMerchants.map((m) => m.key), ['yahoo']);
-      expect(AffiliateLinks.needsMerchantPicker, isFalse);
+      // 2026-09-15 に楽天・Amazon も提携承認され、既定で3店舗とも有効
+      expect(AffiliateLinks.enabledMerchants.map((m) => m.key),
+          ['yahoo', 'rakuten', 'amazon']);
+      expect(AffiliateLinks.needsMerchantPicker, isTrue);
       expect(AffiliateLinks.isAvailable, isTrue);
     });
 
@@ -452,11 +453,12 @@ void main() {
 
     test('配信JSONの merchants で承認済み店舗をアプリ更新なしで有効化できる', () {
       addTearDown(() => AffiliateLinks.applyRemoteFlags(const {}));
-      // 既定（配信未取得）: config どおり Yahoo! だけ
+      // 既定（配信未取得）: config どおり3店舗
       AffiliateLinks.applyRemoteFlags(const {});
-      expect(AffiliateLinks.enabledMerchants.map((m) => m.key), ['yahoo']);
+      expect(AffiliateLinks.enabledMerchants.map((m) => m.key),
+          ['yahoo', 'rakuten', 'amazon']);
 
-      // 配信で楽天を承認済みに → 追加される。未知のキーは無視
+      // 配信で Amazon を止める → 外れる。未知のキーは無視
       final p = StockpileProducts.fromJson({
         'version': 'v',
         'categories': [
@@ -486,8 +488,9 @@ void main() {
         isNotNull,
       );
 
-      // 配信で Yahoo! を止めることもできる（緊急停止）
-      AffiliateLinks.applyRemoteFlags(const {'yahoo': false});
+      // 配信で全店舗を止めることもできる（緊急停止）
+      AffiliateLinks.applyRemoteFlags(
+          const {'yahoo': false, 'rakuten': false, 'amazon': false});
       expect(AffiliateLinks.isAvailable, isFalse);
 
       // merchants 節が無い配信 → 既定値のまま
@@ -503,7 +506,8 @@ void main() {
       })!;
       expect(q.merchants, isEmpty);
       AffiliateLinks.applyRemoteFlags(q.merchants);
-      expect(AffiliateLinks.enabledMerchants.map((m) => m.key), ['yahoo']);
+      expect(AffiliateLinks.enabledMerchants.map((m) => m.key),
+          ['yahoo', 'rakuten', 'amazon']);
     });
 
     test('買って備える品目には検索語があり、そうでない品目には購入導線を出さない', () {

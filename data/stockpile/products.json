@@ -1,5 +1,5 @@
 {
- "version": "2026-09-03T09:13:46Z",
+ "version": "2026-09-15T04:15:18Z",
  "notice": "商品リンクにはアフィリエイトプログラムを利用しています。",
  "merchants": {
   "_comment": "バリューコマースの提携承認状況。true にして publish するとアプリ更新なしで導線に出る（キーは app/lib/config.dart の vcMerchants.key / hotelSites.key）",
@@ -8,12 +8,12 @@
    "note": "2026-09-02 サイト審査承認・疎通確認済み"
   },
   "rakuten": {
-   "enabled": false,
-   "note": "提携審査中"
+   "enabled": true,
+   "note": "2026-09-15 提携承認・vc_url が検索結果まで届くことを確認（curl はブラウザ相当の Accept/UA ヘッダが必要）"
   },
   "amazon": {
-   "enabled": false,
-   "note": "提携審査中"
+   "enabled": true,
+   "note": "2026-09-15 提携承認・vc_url が検索結果まで届くことを確認（curl はブラウザ相当の Accept/UA ヘッダが必要）"
   },
   "jalan": {
    "enabled": true,
