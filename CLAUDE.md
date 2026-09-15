@@ -174,7 +174,7 @@ python site/build.py                            # 配信ファイル生成
 - **台風情報**は気象庁の公開JSON `bosai/typhoon/data/targetTc.json`（発表中の熱帯低気圧一覧。`typhoonNumber` が英字 "a" 等なら「台風になる見込みの熱帯低気圧」、4桁 "2618" なら台風第18号）→ `data/<TC>/specifications.json`（実況・予報の位置・気圧・風速・予報円半径km・暴風警戒域 stormWarning.range）と `data/<TC>/forecast.json`（経路 track.preTyphoon/typhoon、予報円半径 m、暴風警戒域の包絡線 arc/line）。アプリは `app/lib/data/jma_typhoon.dart` で結合し、地図レイヤー `MapLayerKind.typhoon`（経路・予報進路・予報円・暴風警戒域を円で近似）と災害速報タブのカードに出す。5分メモリ控え
 - **指定河川洪水予報**は `bosai/flood/data/r8/flood_xml.json`（発表中の報の配列。無ければ `[]`）。項目は気象庁ページの JS から確認: riverCode / riverName / reportDatetime / infoType（訓練は除外）/ item{code,name} / class20s（対象市町村→都道府県）/ officeCodes。コード 20台=氾濫注意(L2)・30台=氾濫警戒(L3)・40台=氾濫危険(L4)・50台=氾濫発生(L5)。**実データが空のときに構造を確認したため、初回の実発表時に表示を必ず確認する**。アプリは `app/lib/data/jma_flood.dart`、台帳の `river_or_route` と河川名で照合して `RiverCamerasScreen` に出す
 - 洪水予報のプッシュは `tools/bosai_notify.py` の `check_flood_forecasts`。氾濫危険=danger（レベル4）・氾濫発生=special（レベル5）として気象警報と同じトピックに流し、キー `<pref>:flood<band>:<riverCode>` を active_special に同居させる
-- 気象庁の英語表記は JMA 英語サイトに合わせた（Typhoon / Tropical depression / Probability circle / Storm warning area）。洪水予報の英訳は暫定（Flood advisory / warning / danger warning / occurrence）で、多言語辞書での確認が残っている
+- 洪水予報4段階・予報円・暴風警戒域・強風域・熱帯低気圧の各言語訳は気象庁 多言語辞書（`https://www.data.jma.go.jp/developer/jma_multilingual.xlsx`、シート「多言語辞書（本体）」、openpyxl で引ける）の公式訳に揃えた（2026-09-16）。「台風第N号」「強い/非常に強い/猛烈な」「降雪量」は辞書に無いので独自訳
 
 ## ルート沿いカメラの知見（2026-09-16追記）
 

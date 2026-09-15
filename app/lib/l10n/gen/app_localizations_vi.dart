@@ -2199,13 +2199,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapLegendTyphoonForecast => 'Dự báo';
 
   @override
-  String get mapLegendTyphoonCircle => 'Vòng dự báo';
+  String get mapLegendTyphoonCircle => 'Vòng tròn dự báo';
 
   @override
-  String get mapLegendTyphoonStorm => 'Vùng gió bão / cảnh báo';
+  String get mapLegendTyphoonStorm => 'Khu vực gió bão dữ dội / cảnh giác';
 
   @override
-  String get mapLegendTyphoonGale => 'Vùng gió mạnh';
+  String get mapLegendTyphoonGale => 'Khu vực gió mạnh';
 
   @override
   String typhoonNameNumber(int n) {
@@ -2213,7 +2213,8 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get typhoonNameTd => 'Áp thấp nhiệt đới (dự kiến mạnh lên thành bão)';
+  String get typhoonNameTd =>
+      'Khí áp thấp nhiệt đới (dự kiến mạnh lên thành bão)';
 
   @override
   String typhoonIntensity(String intensity) {
@@ -2259,7 +2260,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get bosaiNoCamerasNearby => 'Không có camera gần đây';
 
   @override
-  String get bosaiFloodSectionTitle => 'Dự báo lũ các sông được chỉ định';
+  String get bosaiFloodSectionTitle => 'Dự báo lũ lụt sông chỉ định';
 
   @override
   String bosaiFloodLevel(int n) {
@@ -2267,16 +2268,16 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get bosaiFloodKindCaution => 'Thông tin chú ý ngập lụt';
+  String get bosaiFloodKindCaution => 'Tin lưu ý lũ tràn';
 
   @override
-  String get bosaiFloodKindWarning => 'Thông tin cảnh giác ngập lụt';
+  String get bosaiFloodKindWarning => 'Thông tin cảnh giác lũ tràn';
 
   @override
-  String get bosaiFloodKindDanger => 'Thông tin nguy hiểm ngập lụt';
+  String get bosaiFloodKindDanger => 'Thông tin nguy hiểm lũ tràn';
 
   @override
-  String get bosaiFloodKindOccurred => 'Thông tin đã xảy ra ngập lụt';
+  String get bosaiFloodKindOccurred => 'Thông tin phát sinh lũ tràn';
 
   @override
   String bosaiFloodIssuedAt(String time) {

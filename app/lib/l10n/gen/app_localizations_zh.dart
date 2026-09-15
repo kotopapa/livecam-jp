@@ -2098,13 +2098,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapLegendTyphoonForecast => '预报路径';
 
   @override
-  String get mapLegendTyphoonCircle => '预报圆';
+  String get mapLegendTyphoonCircle => '台风圈';
 
   @override
-  String get mapLegendTyphoonStorm => '暴风区·暴风警戒区';
+  String get mapLegendTyphoonStorm => '暴风范围·暴风警戒范围';
 
   @override
-  String get mapLegendTyphoonGale => '强风区';
+  String get mapLegendTyphoonGale => '强风范围';
 
   @override
   String typhoonNameNumber(int n) {
@@ -2112,7 +2112,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get typhoonNameTd => '热带低气压（预计将发展为台风）';
+  String get typhoonNameTd => '热带低气旋（预计将发展为台风）';
 
   @override
   String typhoonIntensity(String intensity) {
@@ -2158,7 +2158,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get bosaiNoCamerasNearby => '周边没有摄像头';
 
   @override
-  String get bosaiFloodSectionTitle => '指定河流洪水预报';
+  String get bosaiFloodSectionTitle => '指定河川有洪水通知';
 
   @override
   String bosaiFloodLevel(int n) {
@@ -2166,13 +2166,13 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get bosaiFloodKindCaution => '泛滥注意信息';
+  String get bosaiFloodKindCaution => '泛滥注意通知';
 
   @override
-  String get bosaiFloodKindWarning => '泛滥警戒信息';
+  String get bosaiFloodKindWarning => '泛滥警戒通知';
 
   @override
-  String get bosaiFloodKindDanger => '泛滥危险信息';
+  String get bosaiFloodKindDanger => '泛滥危险通知';
 
   @override
   String get bosaiFloodKindOccurred => '泛滥发生信息';
@@ -4366,13 +4366,13 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get mapLegendTyphoonForecast => '預報路徑';
 
   @override
-  String get mapLegendTyphoonCircle => '預報圓';
+  String get mapLegendTyphoonCircle => '颱風圈';
 
   @override
-  String get mapLegendTyphoonStorm => '暴風區·暴風警戒區';
+  String get mapLegendTyphoonStorm => '暴風範圍·暴風警戒範圍';
 
   @override
-  String get mapLegendTyphoonGale => '強風區';
+  String get mapLegendTyphoonGale => '強風範圍';
 
   @override
   String typhoonNameNumber(int n) {
@@ -4380,7 +4380,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get typhoonNameTd => '熱帶性低氣壓（預計將發展為颱風）';
+  String get typhoonNameTd => '熱帶低氣壓（預計將發展為颱風）';
 
   @override
   String typhoonIntensity(String intensity) {
@@ -4426,7 +4426,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get bosaiNoCamerasNearby => '周邊沒有攝影機';
 
   @override
-  String get bosaiFloodSectionTitle => '指定河川洪水預報';
+  String get bosaiFloodSectionTitle => '指定河川有洪水通知';
 
   @override
   String bosaiFloodLevel(int n) {
@@ -4434,16 +4434,16 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get bosaiFloodKindCaution => '氾濫注意資訊';
+  String get bosaiFloodKindCaution => '氾濫注意通知';
 
   @override
-  String get bosaiFloodKindWarning => '氾濫警戒資訊';
+  String get bosaiFloodKindWarning => '氾濫警戒通知';
 
   @override
-  String get bosaiFloodKindDanger => '氾濫危險資訊';
+  String get bosaiFloodKindDanger => '氾濫危險通知';
 
   @override
-  String get bosaiFloodKindOccurred => '氾濫發生資訊';
+  String get bosaiFloodKindOccurred => '泛濫發生通知';
 
   @override
   String bosaiFloodIssuedAt(String time) {

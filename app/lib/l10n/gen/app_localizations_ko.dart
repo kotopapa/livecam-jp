@@ -2119,13 +2119,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapLegendTyphoonForecast => '예보 진로';
 
   @override
-  String get mapLegendTyphoonCircle => '예보원';
+  String get mapLegendTyphoonCircle => '예보 원';
 
   @override
-  String get mapLegendTyphoonStorm => '폭풍역·폭풍 경계 구역';
+  String get mapLegendTyphoonStorm => '폭풍 지역·폭풍 경계 지역';
 
   @override
-  String get mapLegendTyphoonGale => '강풍역';
+  String get mapLegendTyphoonGale => '강풍 지역';
 
   @override
   String typhoonNameNumber(int n) {
@@ -2133,7 +2133,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get typhoonNameTd => '열대저기압(태풍으로 발달 전망)';
+  String get typhoonNameTd => '열대 저기압(태풍으로 발달 전망)';
 
   @override
   String typhoonIntensity(String intensity) {

@@ -3988,7 +3988,7 @@ abstract class AppLocalizations {
   /// **'レベル{n}'**
   String bosaiFloodLevel(int n);
 
-  /// 気象庁の洪水予報の名称。レベル2相当
+  /// 気象庁の洪水予報の名称。レベル2相当。各言語は気象庁 多言語辞書(2026-03-26版)の公式訳
   ///
   /// In ja, this message translates to:
   /// **'氾濫注意情報'**

@@ -2193,10 +2193,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapLegendTyphoonCircle => 'Probability circle';
 
   @override
-  String get mapLegendTyphoonStorm => 'Storm area / warning area';
+  String get mapLegendTyphoonStorm => 'Storm area / storm warning area';
 
   @override
-  String get mapLegendTyphoonGale => 'Gale area';
+  String get mapLegendTyphoonGale => 'Area of 30kt winds or more';
 
   @override
   String typhoonNameNumber(int n) {
@@ -2204,8 +2204,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get typhoonNameTd =>
-      'Tropical depression (expected to become a typhoon)';
+  String get typhoonNameTd => 'Tropical Cyclone (expected to become a typhoon)';
 
   @override
   String typhoonIntensity(String intensity) {
@@ -2251,7 +2250,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get bosaiNoCamerasNearby => 'No cameras nearby';
 
   @override
-  String get bosaiFloodSectionTitle => 'Flood forecasts for designated rivers';
+  String get bosaiFloodSectionTitle =>
+      'Flood Warnings and Advisories for designated rivers';
 
   @override
   String bosaiFloodLevel(int n) {
@@ -2259,16 +2259,18 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get bosaiFloodKindCaution => 'Flood advisory';
+  String get bosaiFloodKindCaution =>
+      'Information to call attention to flooding';
 
   @override
-  String get bosaiFloodKindWarning => 'Flood warning';
+  String get bosaiFloodKindWarning =>
+      'Information to provide a warning on flooding';
 
   @override
-  String get bosaiFloodKindDanger => 'Flood danger warning';
+  String get bosaiFloodKindDanger => 'Information on potential flood hazards';
 
   @override
-  String get bosaiFloodKindOccurred => 'Flood occurrence information';
+  String get bosaiFloodKindOccurred => 'Information on flooding';
 
   @override
   String bosaiFloodIssuedAt(String time) {
