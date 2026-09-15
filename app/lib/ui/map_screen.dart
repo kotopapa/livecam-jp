@@ -2297,9 +2297,13 @@ class _MapScreenState extends State<MapScreen> {
     // お知らせバナーは地図の上に重ねず、地図の上部に積む（台数チップや
     // レイヤーボタンと重なって読めなくなるため。2026-08-30）
     final notice = widget.app.notice;
-    if (notice == null || notice == _dismissedNotice) return _mapStack(context);
+    final showNotice = notice != null && notice != _dismissedNotice;
+    // お知らせもルートも無い平常時は地図だけ（Column を挟まない）
+    if (!showNotice && _route == null) return _mapStack(context);
     return Column(children: [
-      _NoticeBanner(text: notice, onClose: () => _dismissNotice(notice)),
+      if (showNotice)
+        _NoticeBanner(text: notice, onClose: () => _dismissNotice(notice)),
+      // ルート沿い表示中の帯（台数・一覧・解除）。お知らせの有無に関係なく出す
       if (_route != null) _routeBanner(context),
       Expanded(child: _mapStack(context)),
     ]);
