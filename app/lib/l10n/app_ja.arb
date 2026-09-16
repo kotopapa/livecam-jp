@@ -2461,5 +2461,24 @@
       }
     }
   },
-  "situationSource": "出典：気象庁 · タップで詳細"
+  "situationSource": "出典：気象庁 · タップで詳細",
+  "routePickPlaceTitle": "「{query}」の候補",
+  "@routePickPlaceTitle": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "routeCandidateCamera": "{name}（カメラ・{pref}）",
+  "@routeCandidateCamera": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "pref": {
+        "type": "String"
+      }
+    }
+  }
 }

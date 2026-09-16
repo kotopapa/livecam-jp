@@ -4215,6 +4215,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'出典：気象庁 · タップで詳細'**
   String get situationSource;
+
+  /// No description provided for @routePickPlaceTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'「{query}」の候補'**
+  String routePickPlaceTitle(String query);
+
+  /// No description provided for @routeCandidateCamera.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name}（カメラ・{pref}）'**
+  String routeCandidateCamera(String name, String pref);
 }
 
 class _AppLocalizationsDelegate

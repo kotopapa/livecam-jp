@@ -2306,6 +2306,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get situationSource => '来源：气象厅 · 点击查看详情';
+
+  @override
+  String routePickPlaceTitle(String query) {
+    return '“$query”的候选';
+  }
+
+  @override
+  String routeCandidateCamera(String name, String pref) {
+    return '$name（摄像头·$pref）';
+  }
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4610,4 +4620,14 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get situationSource => '來源：氣象廳 · 點選查看詳情';
+
+  @override
+  String routePickPlaceTitle(String query) {
+    return '「$query」的候選';
+  }
+
+  @override
+  String routeCandidateCamera(String name, String pref) {
+    return '$name（攝影機·$pref）';
+  }
 }

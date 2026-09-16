@@ -2413,4 +2413,14 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get situationSource => 'Nguồn: JMA · chạm để xem chi tiết';
+
+  @override
+  String routePickPlaceTitle(String query) {
+    return 'Kết quả cho “$query”';
+  }
+
+  @override
+  String routeCandidateCamera(String name, String pref) {
+    return '$name (camera, $pref)';
+  }
 }

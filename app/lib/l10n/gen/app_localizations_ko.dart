@@ -2327,4 +2327,14 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get situationSource => '출처: 기상청 · 눌러서 자세히';
+
+  @override
+  String routePickPlaceTitle(String query) {
+    return '“$query” 후보';
+  }
+
+  @override
+  String routeCandidateCamera(String name, String pref) {
+    return '$name(카메라·$pref)';
+  }
 }

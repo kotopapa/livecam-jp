@@ -86,6 +86,43 @@ void main() {
     expect(RouteCorridor.parseGeoJson('x'), isNull);
   });
 
+  test('geocode: Pelias 応答を「名称（地域 市区町村）」と座標にする', () {
+    final hits = RouteCorridor.parseGeocode({
+      'features': [
+        {
+          'geometry': {'coordinates': [139.645066, 35.452281]},
+          'properties': {'name': '赤レンガ倉庫', 'region': '神奈川', 'locality': '横浜市'},
+        },
+        {
+          'geometry': {'coordinates': [136.074534, 35.661958]},
+          'properties': {'name': '赤レンガ倉庫', 'region': '福井', 'locality': '敦賀市'},
+        },
+        {
+          'geometry': {'coordinates': [135.437597, 34.651466]},
+          'properties': {'name': '赤レンガ倉庫横広場', 'region': '大阪', 'locality': '大阪'},
+        },
+        {'geometry': {'coordinates': ['x', 1]}, 'properties': {'name': '壊れ'}},
+      ]
+    });
+    expect(hits.map((h) => h.$1).toList(),
+        ['赤レンガ倉庫（神奈川 横浜市）', '赤レンガ倉庫（福井 敦賀市）', '赤レンガ倉庫横広場（大阪）']);
+    expect(hits.first.$2.latitude, 35.452281);
+    expect(RouteCorridor.parseGeocode({'features': []}), isEmpty);
+    expect(RouteCorridor.parseGeocode(null), isEmpty);
+  });
+
+  test('geocode: キーが無ければ呼ばない', () async {
+    var calls = 0;
+    final client = MockClient((_) async {
+      calls++;
+      return http.Response('{"features":[]}', 200);
+    });
+    expect(await RouteCorridor.geocode('横浜', apiKey: '', client: client), isEmpty);
+    expect(calls, 0);
+    expect(await RouteCorridor.geocode('横浜', apiKey: 'KEY', client: client), isEmpty);
+    expect(calls, 1);
+  });
+
   test('fetchRoute: キーが無ければ呼ばない、200 以外は null', () async {
     var calls = 0;
     final client = MockClient((req) async {

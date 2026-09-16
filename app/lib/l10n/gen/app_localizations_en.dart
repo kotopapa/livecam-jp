@@ -2405,4 +2405,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get situationSource => 'Source: JMA · tap for details';
+
+  @override
+  String routePickPlaceTitle(String query) {
+    return 'Matches for “$query”';
+  }
+
+  @override
+  String routeCandidateCamera(String name, String pref) {
+    return '$name (camera, $pref)';
+  }
 }

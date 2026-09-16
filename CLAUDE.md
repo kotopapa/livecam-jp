@@ -181,6 +181,7 @@ python site/build.py                            # 配信ファイル生成
 - 地図の「ルート」ボタン → 出発地・目的地（国土地理院 AddressSearch で座標化。出発地は現在地も可）→ openrouteservice（`app/lib/data/route_corridor.dart`、自動車経路）→ 経路から 1/3/5km 以内のカメラだけを地図に表示し、一覧（`route_cameras_screen.dart`）は出発地からの経路上距離順。照合は Douglas–Peucker で間引いた線分との距離（外接矩形で前処理）
 - **ORS の API キーはアプリに埋め込まず、配信 manifest の `route_ors_key` で渡す**（site/build.py が環境変数 ORS_API_KEY を読み、publish.yml が GitHub Secret から注入）。キーが空なら地図のルートボタン自体を出さない。無料枠は 1日2,000回・40回/分（キー単位）。openrouteservice.org でアカウントを作りキーを Secret に登録すれば、アプリ更新なしで有効になる
 - 経路データの出典表記「経路: openrouteservice / © OpenStreetMap contributors」をシートと一覧に表示。運転中の操作禁止の注意も併記
+- **地名の座標化は国土地理院 AddressSearch だけでは不十分**（住所専用で「赤レンガ倉庫」が福岡県赤村に部分一致した。2026-09-16）。ルート検索は 台帳のカメラ名 → ORS の Geocoding API（`geocode/search`、`lang=ja`、無料枠 1日1,000回。表示名は「名称（地域 市区町村）」）→ 地理院住所検索 の順で候補を集め、複数あれば選択ダイアログを出す（`RouteCorridor.geocode` / map_screen の candidates()）
 
 ## 「いま起きていること」カードの知見（2026-09-16追記）
 

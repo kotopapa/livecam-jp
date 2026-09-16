@@ -2317,6 +2317,16 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get situationSource => '出典：気象庁 · タップで詳細';
+
+  @override
+  String routePickPlaceTitle(String query) {
+    return '「$query」の候補';
+  }
+
+  @override
+  String routeCandidateCamera(String name, String pref) {
+    return '$name（カメラ・$pref）';
+  }
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -4665,4 +4675,14 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get situationSource => 'しゅってん：きしょうちょう · おすと くわしく';
+
+  @override
+  String routePickPlaceTitle(String query) {
+    return '「$query」の こうほ';
+  }
+
+  @override
+  String routeCandidateCamera(String name, String pref) {
+    return '$name（カメラ・$pref）';
+  }
 }

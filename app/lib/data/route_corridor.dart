@@ -85,6 +85,67 @@ class RouteCorridor {
     }
   }
 
+  /// 地名・施設名の検索（openrouteservice の Geocoding API。OSM ベースで
+  /// 「赤レンガ倉庫」のような施設名に対応。無料枠 1日1,000回）。
+  /// 国土地理院の住所検索は住所専用で、施設名を入れると部分一致の住所が返るため
+  /// （「赤レンガ倉庫」→「福岡県赤村」）、こちらを主に使う。失敗は空
+  static Future<List<(String, LatLng)>> geocode(
+    String query, {
+    required String apiKey,
+    http.Client? client,
+    int size = 8,
+  }) async {
+    final q = query.trim();
+    if (apiKey.isEmpty || q.isEmpty) return const [];
+    final c = client ?? http.Client();
+    try {
+      final uri = Uri.https('api.openrouteservice.org', '/geocode/search', {
+        'api_key': apiKey,
+        'text': q,
+        'boundary.country': 'JP',
+        'size': '$size',
+        'lang': 'ja',
+      });
+      final r = await c.get(uri, headers: _ua).timeout(const Duration(seconds: 15));
+      if (r.statusCode != 200) return const [];
+      return parseGeocode(jsonDecode(utf8.decode(r.bodyBytes)));
+    } catch (_) {
+      return const [];
+    } finally {
+      if (client == null) c.close();
+    }
+  }
+
+  /// Pelias 形式の応答 → (表示名, 座標)。表示名は「名称（地域 市区町村）」
+  static List<(String, LatLng)> parseGeocode(Object? json) {
+    if (json is! Map) return const [];
+    final features = json['features'];
+    if (features is! List) return const [];
+    final out = <(String, LatLng)>[];
+    final seen = <String>{};
+    for (final f in features) {
+      if (f is! Map) continue;
+      final geom = f['geometry'];
+      final coords = geom is Map ? geom['coordinates'] : null;
+      if (coords is! List || coords.length < 2 || coords[0] is! num || coords[1] is! num) {
+        continue;
+      }
+      final props = f['properties'];
+      if (props is! Map) continue;
+      final name = props['name']?.toString() ?? '';
+      if (name.isEmpty) continue;
+      final region = props['region']?.toString() ?? '';
+      final locality = (props['locality'] ?? props['county'])?.toString() ?? '';
+      final where = [region, if (locality.isNotEmpty && locality != region) locality]
+          .where((e) => e.isNotEmpty)
+          .join(' ');
+      final label = where.isEmpty ? name : '$name（$where）';
+      if (!seen.add(label)) continue;
+      out.add((label, LatLng((coords[1] as num).toDouble(), (coords[0] as num).toDouble())));
+    }
+    return out;
+  }
+
   /// ORS の GeoJSON 応答（features[0].geometry.coordinates = [[lng,lat],...]）
   static RouteResult? parseGeoJson(Object? json) {
     if (json is! Map) return null;

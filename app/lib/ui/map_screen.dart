@@ -2356,9 +2356,49 @@ class _MapScreenState extends State<MapScreen> {
     final l10n = context.l10n;
     final originCtl = TextEditingController();
     final destCtl = TextEditingController();
-    LatLng? originPos; // 「現在地」ボタンで確定した座標（入力欄より優先）
+    LatLng? originPos; // 「現在地」または候補選択で確定した座標（入力欄より優先）
+    LatLng? destPos; // 候補選択で確定した座標
     var width = _routeWidthM;
     var busy = false;
+
+    /// 地名を座標にする。候補が複数あれば選ばせる（同名の別地点の取り違え防止。
+    /// 例:「赤レンガ倉庫」は横浜・函館・舞鶴にある）。null は見つからない／取消
+    /// 候補: 台帳のカメラ名 → openrouteservice の地名検索（施設名に強い）→
+    /// 国土地理院の住所検索（住所向け）の順に集める
+    Future<List<(String, LatLng)>> candidates(String query) async {
+      final out = <(String, LatLng)>[];
+      for (final c in _searchCameras(query).take(5)) {
+        if (!c.hasLocation) continue;
+        final pref = c.prefecture.isEmpty ? '' : prefectureNameOf(l10n, c.prefecture);
+        out.add((l10n.routeCandidateCamera(c.name, pref), LatLng(c.lat!, c.lng!)));
+      }
+      final geo = await RouteCorridor.geocode(query, apiKey: widget.app.routeOrsKey);
+      out.addAll(geo);
+      if (geo.isEmpty) {
+        try {
+          out.addAll((await _searchPlace(query)).take(5));
+        } catch (_) {}
+      }
+      return out;
+    }
+
+    Future<(String, LatLng)?> pick(
+        BuildContext ctx, String query, List<(String, LatLng)> hits) async {
+      if (!ctx.mounted) return null;
+      return showDialog<(String, LatLng)>(
+        context: ctx,
+        builder: (dctx) => SimpleDialog(
+          title: Text(l10n.routePickPlaceTitle(query)),
+          children: [
+            for (final h in hits.take(10))
+              SimpleDialogOption(
+                onPressed: () => Navigator.of(dctx).pop(h),
+                child: Text(h.$1, style: const TextStyle(fontSize: 14)),
+              ),
+          ],
+        ),
+      );
+    }
     showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,
@@ -2369,23 +2409,55 @@ class _MapScreenState extends State<MapScreen> {
             if (busy) return;
             final oq = originCtl.text.trim();
             final dq = destCtl.text.trim();
-            if ((originPos == null && oq.isEmpty) || dq.isEmpty) return;
+            if ((originPos == null && oq.isEmpty) ||
+                (destPos == null && dq.isEmpty)) {
+              return;
+            }
             setSheetState(() => busy = true);
             String? error;
+            var cancelled = false;
             try {
               LatLng? o = originPos;
               if (o == null) {
-                final hits = await _searchPlace(oq);
-                if (hits.isEmpty) error = l10n.routePlaceNotFound(oq);
-                o = hits.isEmpty ? null : hits.first.$2;
+                final hits = await candidates(oq);
+                if (hits.isEmpty) {
+                  error = l10n.routePlaceNotFound(oq);
+                } else if (!sheetContext.mounted) {
+                  return;
+                } else {
+                  final picked = hits.length == 1
+                      ? hits.first
+                      : await pick(sheetContext, oq, hits);
+                  if (picked == null) {
+                    cancelled = true;
+                  } else {
+                    o = picked.$2;
+                    originPos = o;
+                    originCtl.text = picked.$1;
+                  }
+                }
               }
-              LatLng? d;
-              if (error == null) {
-                final hits = await _searchPlace(dq);
-                if (hits.isEmpty) error = l10n.routePlaceNotFound(dq);
-                d = hits.isEmpty ? null : hits.first.$2;
+              LatLng? d = destPos;
+              if (error == null && !cancelled && d == null) {
+                final hits = await candidates(dq);
+                if (hits.isEmpty) {
+                  error = l10n.routePlaceNotFound(dq);
+                } else if (!sheetContext.mounted) {
+                  return;
+                } else {
+                  final picked = hits.length == 1
+                      ? hits.first
+                      : await pick(sheetContext, dq, hits);
+                  if (picked == null) {
+                    cancelled = true;
+                  } else {
+                    d = picked.$2;
+                    destPos = d;
+                    destCtl.text = picked.$1;
+                  }
+                }
               }
-              if (error == null && o != null && d != null) {
+              if (error == null && !cancelled && o != null && d != null) {
                 final route = await RouteCorridor.fetchRoute(o, d,
                     apiKey: widget.app.routeOrsKey);
                 if (route == null) {
@@ -2422,7 +2494,7 @@ class _MapScreenState extends State<MapScreen> {
             if (error != null) {
               ScaffoldMessenger.of(sheetContext)
                   .showSnackBar(SnackBar(content: Text(error)));
-            } else {
+            } else if (!cancelled) {
               Navigator.of(sheetContext).pop();
             }
           }
@@ -2469,6 +2541,7 @@ class _MapScreenState extends State<MapScreen> {
               TextField(
                 controller: destCtl,
                 textInputAction: TextInputAction.search,
+                onChanged: (_) => destPos = null,
                 onSubmitted: (_) => run(),
                 decoration: InputDecoration(
                   labelText: l10n.routeDestination,
