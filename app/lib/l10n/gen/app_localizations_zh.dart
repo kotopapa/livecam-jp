@@ -2107,6 +2107,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapLegendTyphoonGale => '强风范围';
 
   @override
+  String get mapTyphoonAll => '全部';
+
+  @override
   String typhoonNameNumber(int n) {
     return '台风第$n号';
   }
@@ -4419,6 +4422,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapLegendTyphoonGale => '強風範圍';
+
+  @override
+  String get mapTyphoonAll => '全部';
 
   @override
   String typhoonNameNumber(int n) {

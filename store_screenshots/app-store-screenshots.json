@@ -1,0 +1,1532 @@
+{
+  "schemaVersion": 2,
+  "appName": "全国ライブカメラ地図",
+  "themeId": "livecam-sky",
+  "connectedCanvas": false,
+  "locales": [
+    "ja"
+  ],
+  "locale": "ja",
+  "device": "iphone",
+  "orientation": "portrait",
+  "appIcon": "/app-icon.png",
+  "slidesByDevice": {
+    "iphone": [
+      {
+        "id": "iphone_01",
+        "layout": "hero",
+        "label": {
+          "ja": "全国ライブカメラ地図"
+        },
+        "headline": {
+          "ja": "近くの川を、\n家から確認。"
+        },
+        "screenshot": "/screenshots/apple/iphone/ja/01_detail_river.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 80,
+            "y": 140,
+            "width": 1160,
+            "height": 450,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 195,
+            "y": 1020,
+            "width": 1090,
+            "height": 2220.5284,
+            "rotation": -5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "川"
+            },
+            "transform": {
+              "x": 512,
+              "y": 236,
+              "width": 144,
+              "height": 172.8,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 144,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "metric-count",
+            "text": {
+              "ja": "2万台以上"
+            },
+            "transform": {
+              "x": 80,
+              "y": 665,
+              "width": 690,
+              "height": 165,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 120,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "hero-free",
+            "text": {
+              "ja": "無料・登録不要"
+            },
+            "transform": {
+              "x": 785,
+              "y": 712,
+              "width": 455,
+              "height": 94,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 44,
+            "fontWeight": 700,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "全国のカメラをひとつの地図に"
+            },
+            "transform": {
+              "x": 80,
+              "y": 858,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 50,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_02",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "川も、道路も。地図から探す"
+        },
+        "headline": {
+          "ja": "いつもの道も、\n地図でひと目。"
+        },
+        "screenshot": "/screenshots/apple/iphone/ja/02_map_tokyo_pins.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 80,
+            "y": 140,
+            "width": 1160,
+            "height": 450,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 210,
+            "y": 850,
+            "width": 910,
+            "height": 1853.8356,
+            "rotation": 6,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "地図"
+            },
+            "transform": {
+              "x": 80,
+              "y": 408.8,
+              "width": 288,
+              "height": 172.8,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 144,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "近くのカメラをタップ"
+            },
+            "transform": {
+              "x": 80,
+              "y": 650,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 54,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_03",
+        "layout": "device-top",
+        "label": {
+          "ja": "台風進路・雨雲レーダー"
+        },
+        "headline": {
+          "ja": "台風の進路を\nわが家の目線で。"
+        },
+        "screenshot": "/screenshots/apple/iphone/ja/03_layer_typhoon.png",
+        "inverted": true,
+        "transforms": {
+          "caption": {
+            "x": 80,
+            "y": 2070,
+            "width": 1160,
+            "height": 450,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 210,
+            "y": -190,
+            "width": 980,
+            "height": 1996.4384,
+            "rotation": -5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "台風"
+            },
+            "transform": {
+              "x": 80,
+              "y": 2166,
+              "width": 288,
+              "height": 172.8,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 144,
+            "fontWeight": 900,
+            "color": "#A5D9F6",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "天気の動きを地図に重ねて"
+            },
+            "transform": {
+              "x": 80,
+              "y": 2590,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 54,
+            "fontWeight": 500,
+            "color": "#C5DEEE",
+            "align": "left"
+          },
+          {
+            "id": "chip-typhoon",
+            "text": {
+              "ja": "台風第25号・進路予報"
+            },
+            "transform": {
+              "x": 80,
+              "y": 1860,
+              "width": 800,
+              "height": 110,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 48,
+            "fontWeight": 700,
+            "color": "#A5D9F6",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_04",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "災害速報・プッシュ通知"
+        },
+        "headline": {
+          "ja": "地震も警報も\n通知で気づく。"
+        },
+        "screenshot": "/screenshots/apple/iphone/ja/04_bosai_warning.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 80,
+            "y": 140,
+            "width": 1160,
+            "height": 450,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 205,
+            "y": 865,
+            "width": 910,
+            "height": 1853.8356,
+            "rotation": 0,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "通知"
+            },
+            "transform": {
+              "x": 156,
+              "y": 408.8,
+              "width": 288,
+              "height": 172.8,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 144,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "chip-region",
+            "text": {
+              "ja": "家族が暮らす地域の情報も"
+            },
+            "transform": {
+              "x": 190,
+              "y": 652,
+              "width": 940,
+              "height": 108,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 50,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "center"
+          }
+        ]
+      },
+      {
+        "id": "iphone_05",
+        "layout": "two-devices",
+        "label": {
+          "ja": "避難場所・ハザードマップ"
+        },
+        "headline": {
+          "ja": "家族と決める\n避難先。"
+        },
+        "screenshot": "/screenshots/apple/iphone/ja/05_layer_shelters.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 80,
+            "y": 140,
+            "width": 1160,
+            "height": 450,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 530,
+            "y": 990,
+            "width": 880,
+            "height": 1792.7202,
+            "rotation": 5,
+            "zIndex": 3
+          },
+          "deviceSecondary": {
+            "x": -130,
+            "y": 1150,
+            "width": 850,
+            "height": 1731.6047,
+            "rotation": -7,
+            "zIndex": 2
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "避難先"
+            },
+            "transform": {
+              "x": 372,
+              "y": 408.8,
+              "width": 432,
+              "height": 172.8,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 144,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "いざという日の前に"
+            },
+            "transform": {
+              "x": 80,
+              "y": 650,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 54,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "center"
+          }
+        ],
+        "screenshotSecondary": "/screenshots/apple/iphone/ja/06_layer_hazard_flood.png"
+      },
+      {
+        "id": "iphone_06",
+        "layout": "device-top",
+        "label": {
+          "ja": "みんなのランキング"
+        },
+        "headline": {
+          "ja": "みんなが見てる\n今の注目地点。"
+        },
+        "screenshot": "/screenshots/apple/iphone/ja/07_ranking.png",
+        "inverted": true,
+        "transforms": {
+          "caption": {
+            "x": 80,
+            "y": 2040,
+            "width": 1160,
+            "height": 450,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 120,
+            "y": -120,
+            "width": 1040,
+            "height": 2118.6693,
+            "rotation": 5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "注目"
+            },
+            "transform": {
+              "x": 368,
+              "y": 2308.8,
+              "width": 288,
+              "height": 172.8,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 144,
+            "fontWeight": 900,
+            "color": "#A5D9F6",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "気になる景色を見つけよう"
+            },
+            "transform": {
+              "x": 80,
+              "y": 2550,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 54,
+            "fontWeight": 500,
+            "color": "#C5DEEE",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_07",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "備蓄チェック・期限リマインド"
+        },
+        "headline": {
+          "ja": "備蓄の期限、\n忘れる前に。"
+        },
+        "screenshot": "/screenshots/apple/iphone/ja/08_stockpile.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 80,
+            "y": 140,
+            "width": 1160,
+            "height": 450,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 230,
+            "y": 855,
+            "width": 910,
+            "height": 1853.8356,
+            "rotation": -4,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "期限"
+            },
+            "transform": {
+              "x": 512,
+              "y": 236,
+              "width": 288,
+              "height": 172.8,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 144,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "家族の備えを、毎日の中に"
+            },
+            "transform": {
+              "x": 80,
+              "y": 650,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 54,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_08",
+        "layout": "no-device",
+        "label": {
+          "ja": "全国ライブカメラ地図"
+        },
+        "headline": {
+          "ja": "近所も、旅先も。\n今を見に行こう。"
+        },
+        "screenshot": "/screenshots/apple/iphone/ja/09_detail_fuji.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 80,
+            "y": 140,
+            "width": 1160,
+            "height": 450,
+            "rotation": 0,
+            "zIndex": 4
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "今"
+            },
+            "transform": {
+              "x": 80,
+              "y": 408.8,
+              "width": 144,
+              "height": 172.8,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 144,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-1",
+            "text": {
+              "ja": "見る。"
+            },
+            "transform": {
+              "x": 80,
+              "y": 850,
+              "width": 1160,
+              "height": 330,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 236,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-1",
+            "text": {
+              "ja": "川・道路のライブカメラ"
+            },
+            "transform": {
+              "x": 80,
+              "y": 1195,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 52,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-2",
+            "text": {
+              "ja": "備える。"
+            },
+            "transform": {
+              "x": 80,
+              "y": 1390,
+              "width": 1160,
+              "height": 330,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 236,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-2",
+            "text": {
+              "ja": "天気・警報・避難先・備蓄"
+            },
+            "transform": {
+              "x": 80,
+              "y": 1735,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 52,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-3",
+            "text": {
+              "ja": "旅する。"
+            },
+            "transform": {
+              "x": 80,
+              "y": 1930,
+              "width": 1160,
+              "height": 330,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 236,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-3",
+            "text": {
+              "ja": "世界70カ国の景色も"
+            },
+            "transform": {
+              "x": 80,
+              "y": 2275,
+              "width": 1160,
+              "height": 78,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 52,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "chip-free",
+            "text": {
+              "ja": "無料・登録不要"
+            },
+            "transform": {
+              "x": 80,
+              "y": 2570,
+              "width": 650,
+              "height": 110,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 52,
+            "fontWeight": 700,
+            "color": "#1E6FD9",
+            "align": "left"
+          }
+        ],
+        "screenshotSecondary": "/screenshots/apple/iphone/ja/10_detail_coast.png"
+      }
+    ],
+    "android": [
+      {
+        "id": "android_01",
+        "layout": "hero",
+        "label": {
+          "ja": "全国ライブカメラ地図"
+        },
+        "headline": {
+          "ja": "近くの川を、\n家から確認。"
+        },
+        "screenshot": "/screenshots/android/phone/ja/01_detail_river.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 65.4545,
+            "y": 90,
+            "width": 949.0909,
+            "height": 368.1818,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 175,
+            "y": 805,
+            "width": 790,
+            "height": 1711.6667,
+            "rotation": -5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "川"
+            },
+            "transform": {
+              "x": 418.9091,
+              "y": 168.5455,
+              "width": 117.8182,
+              "height": 141.3818,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 117.818182,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "metric-count",
+            "text": {
+              "ja": "2万台以上"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 505,
+              "width": 564.5455,
+              "height": 135,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 98.181818,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "hero-free",
+            "text": {
+              "ja": "無料・登録不要"
+            },
+            "transform": {
+              "x": 642.2727,
+              "y": 544,
+              "width": 372.2727,
+              "height": 76.9091,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 36,
+            "fontWeight": 700,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "全国のカメラをひとつの地図に"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 663,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 40.909091,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "android_02",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "川も、道路も。地図から探す"
+        },
+        "headline": {
+          "ja": "いつもの道も、\n地図でひと目。"
+        },
+        "screenshot": "/screenshots/android/phone/ja/02_map_tokyo_pins.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 65.4545,
+            "y": 90,
+            "width": 949.0909,
+            "height": 368.1818,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 250,
+            "y": 620,
+            "width": 580,
+            "height": 1256.6667,
+            "rotation": 5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "地図"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 309.9273,
+              "width": 235.6364,
+              "height": 141.3818,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 117.818182,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "近くのカメラをタップ"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 510,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 44.181818,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "android_03",
+        "layout": "device-top",
+        "label": {
+          "ja": "台風進路・雨雲レーダー"
+        },
+        "headline": {
+          "ja": "台風の進路を\nわが家の目線で。"
+        },
+        "screenshot": "/screenshots/android/phone/ja/03_layer_typhoon.png",
+        "inverted": true,
+        "transforms": {
+          "caption": {
+            "x": 65.4545,
+            "y": 1380,
+            "width": 949.0909,
+            "height": 368.1818,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 225,
+            "y": -200,
+            "width": 650,
+            "height": 1408.3333,
+            "rotation": -5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "台風"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 1458.5455,
+              "width": 235.6364,
+              "height": 141.3818,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 117.818182,
+            "fontWeight": 900,
+            "color": "#A5D9F6",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "天気の動きを地図に重ねて"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 1800,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 44.181818,
+            "fontWeight": 500,
+            "color": "#C5DEEE",
+            "align": "left"
+          },
+          {
+            "id": "chip-typhoon",
+            "text": {
+              "ja": "台風第25号・進路予報"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 1220,
+              "width": 654.5455,
+              "height": 90,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 39.272727,
+            "fontWeight": 700,
+            "color": "#A5D9F6",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "android_04",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "災害速報・プッシュ通知"
+        },
+        "headline": {
+          "ja": "地震も警報も\n通知で気づく。"
+        },
+        "screenshot": "/screenshots/android/phone/ja/04_bosai_warning.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 65.4545,
+            "y": 90,
+            "width": 949.0909,
+            "height": 368.1818,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 255,
+            "y": 650,
+            "width": 570,
+            "height": 1235,
+            "rotation": 0,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "通知"
+            },
+            "transform": {
+              "x": 127.6364,
+              "y": 309.9273,
+              "width": 235.6364,
+              "height": 141.3818,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 117.818182,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "chip-region",
+            "text": {
+              "ja": "家族が暮らす地域の情報も"
+            },
+            "transform": {
+              "x": 155.4545,
+              "y": 514,
+              "width": 769.0909,
+              "height": 88.3636,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 40.909091,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "center"
+          }
+        ]
+      },
+      {
+        "id": "android_05",
+        "layout": "two-devices",
+        "label": {
+          "ja": "避難場所・ハザードマップ"
+        },
+        "headline": {
+          "ja": "家族と決める\n避難先。"
+        },
+        "screenshot": "/screenshots/android/phone/ja/05_layer_shelters.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 65.4545,
+            "y": 90,
+            "width": 949.0909,
+            "height": 368.1818,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 445,
+            "y": 715,
+            "width": 630,
+            "height": 1365,
+            "rotation": 5,
+            "zIndex": 3
+          },
+          "deviceSecondary": {
+            "x": -115,
+            "y": 875,
+            "width": 625,
+            "height": 1354.1667,
+            "rotation": -7,
+            "zIndex": 2
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "避難先"
+            },
+            "transform": {
+              "x": 304.3636,
+              "y": 309.9273,
+              "width": 353.4545,
+              "height": 141.3818,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 117.818182,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "いざという日の前に"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 510,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 44.181818,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "center"
+          }
+        ],
+        "screenshotSecondary": "/screenshots/android/phone/ja/06_layer_hazard_flood.png"
+      },
+      {
+        "id": "android_06",
+        "layout": "device-top",
+        "label": {
+          "ja": "みんなのランキング"
+        },
+        "headline": {
+          "ja": "みんなが見てる\n今の注目地点。"
+        },
+        "screenshot": "/screenshots/android/phone/ja/07_ranking.png",
+        "inverted": true,
+        "transforms": {
+          "caption": {
+            "x": 65.4545,
+            "y": 1380,
+            "width": 949.0909,
+            "height": 368.1818,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 180,
+            "y": -135,
+            "width": 690,
+            "height": 1495,
+            "rotation": 5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "注目"
+            },
+            "transform": {
+              "x": 301.0909,
+              "y": 1599.9273,
+              "width": 235.6364,
+              "height": 141.3818,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 117.818182,
+            "fontWeight": 900,
+            "color": "#A5D9F6",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "気になる景色を見つけよう"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 1800,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 44.181818,
+            "fontWeight": 500,
+            "color": "#C5DEEE",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "android_07",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "備蓄チェック・期限リマインド"
+        },
+        "headline": {
+          "ja": "備蓄の期限、\n忘れる前に。"
+        },
+        "screenshot": "/screenshots/android/phone/ja/08_stockpile.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 65.4545,
+            "y": 90,
+            "width": 949.0909,
+            "height": 368.1818,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 265,
+            "y": 650,
+            "width": 570,
+            "height": 1235,
+            "rotation": -4,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "期限"
+            },
+            "transform": {
+              "x": 418.9091,
+              "y": 168.5455,
+              "width": 235.6364,
+              "height": 141.3818,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 117.818182,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "家族の備えを、毎日の中に"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 510,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 44.181818,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "android_08",
+        "layout": "no-device",
+        "label": {
+          "ja": "全国ライブカメラ地図"
+        },
+        "headline": {
+          "ja": "近所も、旅先も。\n今を見に行こう。"
+        },
+        "screenshot": "/screenshots/android/phone/ja/09_detail_fuji.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 65.4545,
+            "y": 90,
+            "width": 949.0909,
+            "height": 368.1818,
+            "rotation": 0,
+            "zIndex": 4
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "今"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 309.9273,
+              "width": 117.8182,
+              "height": 141.3818,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 117.818182,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-1",
+            "text": {
+              "ja": "見る。"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 620,
+              "width": 949.0909,
+              "height": 250,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 193.090909,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-1",
+            "text": {
+              "ja": "川・道路のライブカメラ"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 885,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 42.545455,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-2",
+            "text": {
+              "ja": "備える。"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 995,
+              "width": 949.0909,
+              "height": 250,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 193.090909,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-2",
+            "text": {
+              "ja": "天気・警報・避難先・備蓄"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 1260,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 42.545455,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-3",
+            "text": {
+              "ja": "旅する。"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 1370,
+              "width": 949.0909,
+              "height": 250,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 193.090909,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-3",
+            "text": {
+              "ja": "世界70カ国の景色も"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 1635,
+              "width": 949.0909,
+              "height": 63.8182,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 42.545455,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "chip-free",
+            "text": {
+              "ja": "無料・登録不要"
+            },
+            "transform": {
+              "x": 65.4545,
+              "y": 1805,
+              "width": 531.8182,
+              "height": 90,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 42.545455,
+            "fontWeight": 700,
+            "color": "#1E6FD9",
+            "align": "left"
+          }
+        ],
+        "screenshotSecondary": "/screenshots/android/phone/ja/10_detail_coast.png"
+      }
+    ],
+    "ipad": [
+      {
+        "id": "s_mu4oblh0_a",
+        "layout": "hero",
+        "label": {
+          "en": "MEET YOUR APP"
+        },
+        "headline": {
+          "en": "Made for\nthe big screen."
+        },
+        "screenshot": ""
+      },
+      {
+        "id": "s_mu4oblh0_b",
+        "layout": "device-bottom",
+        "label": {
+          "en": "FEATURE 01"
+        },
+        "headline": {
+          "en": "Built for\nfocus."
+        },
+        "screenshot": ""
+      },
+      {
+        "id": "s_mu4oblh0_c",
+        "layout": "device-top",
+        "label": {
+          "en": "FEATURE 02"
+        },
+        "headline": {
+          "en": "Always within reach."
+        },
+        "screenshot": "",
+        "inverted": true
+      }
+    ],
+    "android-7": [
+      {
+        "id": "s_mu4oblh0_d",
+        "layout": "hero",
+        "label": {
+          "en": "MEET YOUR APP"
+        },
+        "headline": {
+          "en": "Pocket-sized\npower."
+        },
+        "screenshot": ""
+      },
+      {
+        "id": "s_mu4oblh0_e",
+        "layout": "split-landscape",
+        "label": {
+          "en": "FEATURE 01"
+        },
+        "headline": {
+          "en": "Wide canvas,\nbigger ideas."
+        },
+        "screenshot": ""
+      }
+    ],
+    "android-10": [
+      {
+        "id": "s_mu4oblh0_f",
+        "layout": "hero",
+        "label": {
+          "en": "MEET YOUR APP"
+        },
+        "headline": {
+          "en": "Made for\nthe big screen."
+        },
+        "screenshot": ""
+      },
+      {
+        "id": "s_mu4oblh0_g",
+        "layout": "split-landscape",
+        "label": {
+          "en": "FEATURE 01"
+        },
+        "headline": {
+          "en": "Wide canvas,\nbigger ideas."
+        },
+        "screenshot": ""
+      }
+    ],
+    "feature-graphic": [
+      {
+        "id": "fg_01",
+        "layout": "feature-graphic",
+        "label": {
+          "ja": "河川・道路・防災"
+        },
+        "headline": {
+          "ja": "全国2万台のライブカメラを地図から"
+        },
+        "screenshot": ""
+      }
+    ]
+  }
+}

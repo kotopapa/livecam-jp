@@ -3898,6 +3898,12 @@ abstract class AppLocalizations {
   /// **'強風域'**
   String get mapLegendTyphoonGale;
 
+  /// 台風レイヤーの切替チップ（複数発生時）。全台風を表示
+  ///
+  /// In ja, this message translates to:
+  /// **'すべて'**
+  String get mapTyphoonAll;
+
   /// No description provided for @typhoonNameNumber.
   ///
   /// In ja, this message translates to:

@@ -2128,6 +2128,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapLegendTyphoonGale => '강풍 지역';
 
   @override
+  String get mapTyphoonAll => '전체';
+
+  @override
   String typhoonNameNumber(int n) {
     return '태풍 제$n호';
   }

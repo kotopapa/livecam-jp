@@ -23,7 +23,8 @@ class SituationCard extends StatelessWidget {
   final VoidCallback onClose;
   final VoidCallback onOpenWarning;
   final VoidCallback onOpenQuake;
-  final VoidCallback onOpenTyphoon;
+  /// 台風行のタップ（TC番号を渡す。地図はその台風だけを表示する）
+  final ValueChanged<String> onOpenTyphoon;
 
   static const _maxRows = 4;
 
@@ -58,7 +59,7 @@ class SituationCard extends StatelessWidget {
         icon: Icons.cyclone,
         color: const Color(0xFFD32F2F),
         text: l10n.situationTyphoon(name, a.location.isEmpty ? '-' : a.location),
-        onTap: onOpenTyphoon,
+        onTap: () => onOpenTyphoon(t.id),
       ));
     }
     if (s.floods.isNotEmpty) {

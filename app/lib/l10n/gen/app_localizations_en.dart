@@ -2199,6 +2199,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapLegendTyphoonGale => 'Area of 30kt winds or more';
 
   @override
+  String get mapTyphoonAll => 'All';
+
+  @override
   String typhoonNameNumber(int n) {
     return 'Typhoon No. $n';
   }

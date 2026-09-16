@@ -2208,6 +2208,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapLegendTyphoonGale => 'Khu vực gió mạnh';
 
   @override
+  String get mapTyphoonAll => 'Tất cả';
+
+  @override
   String typhoonNameNumber(int n) {
     return 'Bão số $n';
   }

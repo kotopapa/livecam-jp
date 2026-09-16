@@ -834,7 +834,7 @@ class _BosaiScreenState extends State<BosaiScreen>
             TextButton.icon(
               onPressed: () {
                 widget.app.navigationRequest.value = null;
-                widget.app.navigationRequest.value = 'map/typhoon';
+                widget.app.navigationRequest.value = 'map/typhoon/${t.id}';
               },
               icon: const Icon(Icons.map_outlined, size: 18),
               label: Text(l10n.bosaiTyphoonShowMap),

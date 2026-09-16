@@ -177,9 +177,9 @@ class _MapScreenState extends State<MapScreen> {
         widget.app.navigationRequest.value = null;
         widget.app.navigationRequest.value = 'bosai/quake';
       },
-      onOpenTyphoon: () {
+      onOpenTyphoon: (id) {
         Analytics.event('situation_open', params: const {'kind': 'typhoon'});
-        _setLayer(MapLayerKind.typhoon);
+        _setLayer(MapLayerKind.typhoon, typhoonId: id);
       },
     );
   }
@@ -188,9 +188,10 @@ class _MapScreenState extends State<MapScreen> {
   void _onNavigationRequest() {
     final r = widget.app.navigationRequest.value ?? '';
     if (!r.startsWith('map/')) return;
-    // 災害速報の台風カード「地図で進路を見る」
-    if (r == 'map/typhoon') {
-      if (mounted) _setLayer(MapLayerKind.typhoon);
+    // 災害速報の台風カード「地図で進路を見る」（'map/typhoon' または 'map/typhoon/<TC番号>'）
+    if (r == 'map/typhoon' || r.startsWith('map/typhoon/')) {
+      final id = r.length > 'map/typhoon/'.length ? r.substring('map/typhoon/'.length) : null;
+      if (mounted) _setLayer(MapLayerKind.typhoon, typhoonId: id);
       return;
     }
     final parts = r.substring(4).split(',');
@@ -235,6 +236,8 @@ class _MapScreenState extends State<MapScreen> {
   NowcastTime? _rain24hTile;
   RiskTime? _risk;
   List<Typhoon> _typhoons = const [];
+  /// 台風レイヤーで表示する台風の TC番号。null なら発表中の全台風
+  String? _typhoonId;
   SnowTime? _snowTime;
   /// 「いま起きていること」カード（起動時と10分ごとに更新。閉じた内容は再表示しない）
   Situation? _situation;
@@ -250,7 +253,8 @@ class _MapScreenState extends State<MapScreen> {
   bool _layerFailed = false;
   Timer? _layerTimer;
 
-  Future<void> _setLayer(MapLayerKind kind, {QuakePeriod? period}) async {
+  Future<void> _setLayer(MapLayerKind kind,
+      {QuakePeriod? period, String? typhoonId}) async {
     _layerTimer?.cancel();
     setState(() {
       _layer = kind;
@@ -258,6 +262,8 @@ class _MapScreenState extends State<MapScreen> {
       if (period != null) {
         _quakePeriod = period;
       }
+      // 台風: 指定があればその1つだけ、無ければ全台風を表示する
+      if (kind == MapLayerKind.typhoon) _typhoonId = typhoonId;
       _layerFailed = false;
     });
     if (kind == MapLayerKind.shelters) {
@@ -272,9 +278,9 @@ class _MapScreenState extends State<MapScreen> {
     }
     if (kind == MapLayerKind.none || HazardLayers.isHazard(kind)) return;
     await _refreshLayer();
-    // 台風: 経路と予報円が収まるように地図を寄せる（無ければそのまま）
+    // 台風: 表示対象の経路と予報円が収まるように地図を寄せる（無ければそのまま）
     if (kind == MapLayerKind.typhoon && _typhoons.isNotEmpty && mounted) {
-      _fitToTyphoon(_typhoons.first);
+      _fitToTyphoons(_selectedTyphoons);
     }
     // レイヤーON中だけ定期更新（雨雲5分・震源/雨量/キキクル10分）
     _layerTimer = Timer.periodic(
@@ -318,6 +324,10 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.typhoon:
         // 発表中の台風が無いのは正常（凡例に「ありません」と出す）
         _typhoons = await JmaTyphoon.fetchAll();
+        // 選択中の台風が一覧から消えた（温帯低気圧化など）ら全表示に戻す
+        if (_typhoonId != null && !_typhoons.any((t) => t.id == _typhoonId)) {
+          _typhoonId = null;
+        }
       case MapLayerKind.snowDepth:
       case MapLayerKind.snowfall24h:
         final st = await JmaLayers.fetchLatestSnow();
@@ -1261,13 +1271,17 @@ class _MapScreenState extends State<MapScreen> {
         if (_typhoons.isEmpty) {
           title = l10n.mapLayerTyphoonNone;
         } else {
-          final t = _typhoons.first;
-          final intensity = typhoonIntensityOf(l10n, t.analysis.intensity);
-          title = [
-            typhoonNameOf(l10n, t),
-            if (intensity.isNotEmpty) intensity,
-            if (_typhoons.length > 1) '+${_typhoons.length - 1}',
-          ].join(' ');
+          final sel = _selectedTyphoons;
+          if (sel.length == 1) {
+            final t = sel.first;
+            final intensity = typhoonIntensityOf(l10n, t.analysis.intensity);
+            title = [
+              typhoonNameOf(l10n, t),
+              if (intensity.isNotEmpty) intensity,
+            ].join(' ');
+          } else {
+            title = sel.map((t) => typhoonNameOf(l10n, t)).join('・');
+          }
           items.addAll([
             swatch(_typhoonTrackColor, l10n.mapLegendTyphoonTrack),
             swatch(_typhoonForecastColor, l10n.mapLegendTyphoonForecast),
@@ -1462,18 +1476,68 @@ class _MapScreenState extends State<MapScreen> {
   static const _typhoonStormColor = Color(0xFFE53935);
   static const _typhoonGaleColor = Color(0xFFFFB300);
 
-  /// 台風の経路・予報円・暴風警戒域が収まる範囲に地図を寄せる
-  void _fitToTyphoon(Typhoon t) {
-    final pts = <LatLng>[...t.track];
-    for (final p in t.points) {
-      pts.add(p.center);
-      final r = (p.probabilityRadiusM ?? 0) + (p.stormRadiusKm ?? 0) * 1000;
-      if (r > 0) {
-        // 半径分だけ四隅を広げる（緯度1度≒111km）
-        final dLat = r / 111000;
-        final dLng = r / (111000 * math.cos(p.center.latitude * math.pi / 180));
-        pts.add(LatLng(p.center.latitude + dLat, p.center.longitude + dLng));
-        pts.add(LatLng(p.center.latitude - dLat, p.center.longitude - dLng));
+  /// 台風レイヤーの表示対象（選択中の1つ、または全台風）
+  List<Typhoon> get _selectedTyphoons {
+    final id = _typhoonId;
+    if (id == null) return _typhoons;
+    final one = _typhoons.where((t) => t.id == id).toList();
+    return one.isEmpty ? _typhoons : one;
+  }
+
+  /// 台風の切替チップ（複数発生時のみ。「すべて」＋台風ごと）
+  Widget _typhoonChips() {
+    if (_layer != MapLayerKind.typhoon || _typhoons.length < 2) {
+      return const SizedBox.shrink();
+    }
+    final l10n = context.l10n;
+    void select(String? id) {
+      setState(() => _typhoonId = id);
+      _fitToTyphoons(_selectedTyphoons);
+    }
+    Widget chip(String label, String? id) => Padding(
+          padding: const EdgeInsets.only(right: 6),
+          child: ChoiceChip(
+            label: Text(label, style: const TextStyle(fontSize: 12)),
+            selected: _typhoonId == id,
+            visualDensity: VisualDensity.compact,
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            onSelected: (_) => select(id),
+          ),
+        );
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+      decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.92),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          const Icon(Icons.cyclone, size: 16, color: _typhoonForecastColor),
+          const SizedBox(width: 6),
+          chip(l10n.mapTyphoonAll, null),
+          for (final t in _typhoons) chip(typhoonNameOf(l10n, t), t.id),
+        ]),
+      ),
+    );
+  }
+
+  /// 台風の経路・予報円・暴風警戒域が収まる範囲に地図を寄せる（複数なら全部）
+  void _fitToTyphoons(Iterable<Typhoon> typhoons) {
+    final pts = <LatLng>[];
+    for (final t in typhoons) {
+      pts.addAll(t.track);
+      for (final p in t.points) {
+        pts.add(p.center);
+        final r = (p.probabilityRadiusM ?? 0) + (p.stormRadiusKm ?? 0) * 1000;
+        if (r > 0) {
+          // 半径分だけ四隅を広げる（緯度1度≒111km）
+          final dLat = r / 111000;
+          final dLng = r / (111000 * math.cos(p.center.latitude * math.pi / 180));
+          pts.add(LatLng(p.center.latitude + dLat, p.center.longitude + dLng));
+          pts.add(LatLng(p.center.latitude - dLat, p.center.longitude - dLng));
+        }
       }
     }
     if (pts.length < 2) return;
@@ -1495,7 +1559,7 @@ class _MapScreenState extends State<MapScreen> {
     final lines = <Polyline>[];
     final markers = <Marker>[];
     final l10n = context.l10n;
-    for (final t in _typhoons) {
+    for (final t in _selectedTyphoons) {
       final a = t.analysis;
       // 実況の強風域・暴風域
       if (a.galeRadiusKm != null) {
@@ -2739,6 +2803,8 @@ class _MapScreenState extends State<MapScreen> {
                     Padding(padding: const EdgeInsets.only(bottom: 6), child: _shelterChips()),
                   if (_layer == MapLayerKind.facilities)
                     Padding(padding: const EdgeInsets.only(bottom: 6), child: _facilityChips()),
+                  if (_layer == MapLayerKind.typhoon && _typhoons.length > 1)
+                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _typhoonChips()),
                   Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
                   if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
                   if (_layer == MapLayerKind.shelters) const _ShelterAttribution(),

@@ -2118,6 +2118,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapLegendTyphoonGale => '強風域';
 
   @override
+  String get mapTyphoonAll => 'すべて';
+
+  @override
   String typhoonNameNumber(int n) {
     return '台風第$n号';
   }
@@ -4474,6 +4477,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapLegendTyphoonGale => 'かぜが つよい はんい';
+
+  @override
+  String get mapTyphoonAll => 'ぜんぶ';
 
   @override
   String typhoonNameNumber(int n) {

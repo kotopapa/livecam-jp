@@ -171,7 +171,7 @@ python site/build.py                            # 配信ファイル生成
 
 ## 台風情報・指定河川洪水予報の知見（2026-09-16追記）
 
-- **台風情報**は気象庁の公開JSON `bosai/typhoon/data/targetTc.json`（発表中の熱帯低気圧一覧。`typhoonNumber` が英字 "a" 等なら「台風になる見込みの熱帯低気圧」、4桁 "2618" なら台風第18号）→ `data/<TC>/specifications.json`（実況・予報の位置・気圧・風速・予報円半径km・暴風警戒域 stormWarning.range）と `data/<TC>/forecast.json`（経路 track.preTyphoon/typhoon、予報円半径 m、暴風警戒域の包絡線 arc/line）。アプリは `app/lib/data/jma_typhoon.dart` で結合し、地図レイヤー `MapLayerKind.typhoon`（経路・予報進路・予報円・暴風警戒域を円で近似）と災害速報タブのカードに出す。5分メモリ控え
+- **台風情報**は気象庁の公開JSON `bosai/typhoon/data/targetTc.json`（発表中の熱帯低気圧一覧。`typhoonNumber` が英字 "a" 等なら「台風になる見込みの熱帯低気圧」、4桁 "2618" なら台風第18号）→ `data/<TC>/specifications.json`（実況・予報の位置・気圧・風速・予報円半径km・暴風警戒域 stormWarning.range）と `data/<TC>/forecast.json`（経路 track.preTyphoon/typhoon、予報円半径 m、暴風警戒域の包絡線 arc/line）。アプリは `app/lib/data/jma_typhoon.dart` で結合し、地図レイヤー `MapLayerKind.typhoon`（経路・予報進路・予報円・暴風警戒域を円で近似）と災害速報タブのカードに出す。5分メモリ控え。**複数発生時は地図左下に「すべて／台風第N号…」の切替チップ**を出し、選択中の台風だけ描く（`_typhoonId`、null=全部）。災害速報タブの「地図で進路を見る」と「いま起きていること」の台風行は `navigationRequest = 'map/typhoon/<TC番号>'` でその台風だけを選択して開く。選択中の台風が一覧から消えたら全表示に戻す
 - **指定河川洪水予報**は `bosai/flood/data/r8/flood_xml.json`（発表中の報の配列。無ければ `[]`）。項目は気象庁ページの JS から確認: riverCode / riverName / reportDatetime / infoType（訓練は除外）/ item{code,name} / class20s（対象市町村→都道府県）/ officeCodes。コード 20台=氾濫注意(L2)・30台=氾濫警戒(L3)・40台=氾濫危険(L4)・50台=氾濫発生(L5)。**実データが空のときに構造を確認したため、初回の実発表時に表示を必ず確認する**。アプリは `app/lib/data/jma_flood.dart`、台帳の `river_or_route` と河川名で照合して `RiverCamerasScreen` に出す
 - 洪水予報のプッシュは `tools/bosai_notify.py` の `check_flood_forecasts`。氾濫危険=danger（レベル4）・氾濫発生=special（レベル5）として気象警報と同じトピックに流し、キー `<pref>:flood<band>:<riverCode>` を active_special に同居させる
 - 洪水予報4段階・予報円・暴風警戒域・強風域・熱帯低気圧の各言語訳は気象庁 多言語辞書（`https://www.data.jma.go.jp/developer/jma_multilingual.xlsx`、シート「多言語辞書（本体）」、openpyxl で引ける）の公式訳に揃えた（2026-09-16）。「台風第N号」「強い/非常に強い/猛烈な」「降雪量」は辞書に無いので独自訳
@@ -190,3 +190,12 @@ python site/build.py                            # 配信ファイル生成
 - 行タップは `navigationRequest`（'bosai/warning' / 'bosai/quake'）と台風レイヤー切替。Analytics イベント `situation_open`（kind）で何が開かれたかを取る
 - ホーム画面（ダッシュボード）は新タブを増やさず、この「災害時にだけ現れるカード」方式にした（2026-09-16 ユーザー決定。案1）
 
+
+## ストア用スクリーンショットの知見（2026-09-17追記）
+
+- **撮影用のコードはアプリ本体に残さない**（2026-09-17 ユーザー指示。リリースに影響させない）。`tools/screenshot_capture/` の patch（`screenshotMode`＝`--dart-define=SCREENSHOT_MODE=true` でデバッグリボン・広告・ATT・起動時の位置情報許可要求を止める）と integration_test / test_driver を、撮るときだけ `app/` に当てて終わったら `git checkout` で戻す。手順は [docs/store_screenshots.md](docs/store_screenshots.md)
+- **iOS で起動時に OS の許可ダイアログ（位置情報）が出ると Flutter の初回フレームが描画されず、25枚全部が起動画面（LaunchScreen）になる**。`xcrun simctl privacy grant` は drive の再インストールで消えるので、撮影モードでは一覧タブの起動時 `requestPermission` を止めて対処した
+- `integration_test_driver_extended` の `onScreenshot` は **テスト終了後にまとめて呼ばれる**。そこで `simctl io screenshot` を撮っても全部同じ画面になる。画像はアプリ側 `binding.takeScreenshot()` のバイト列（1206×2622 の実解像度）を使う
+- **ユーザーはデザインの素案を Codex に作らせる方針**（`/Applications/ChatGPT.app/Contents/Resources/codex exec`）。文言・配置を自前で決めず、素案→書き出し→目視確認の順で回す
+- Android は25枚を1回で返すと VM Service ごと落ちる（`Service has disappeared`）ので `--dart-define=CAPTURE_SET=maps|details|tabs` で分割して撮る
+- 編集・書き出しは `store_screenshots/`（ParthJadhav/app-store-screenshots のテンプレート。`npm install --legacy-peer-deps` → `npm run dev` → http://localhost:3000）。文言と構成は `app-store-screenshots.json`、フォントは Noto Sans JP、テーマ `livecam-sky`（ブランド色 #1E6FD9）。デザイン素案は `store_screenshots/DESIGN.md`（Codex 作成。強調語は textElements で重ねているので文言変更時は位置も直す）。ヘッドレス書き出しは `store_screenshots/tools/export.mjs`（Playwright）。書き出し済み PNG は `app/store_assets/ios/screenshots/<WxH>/ja/`・`app/store_assets/android/screenshots/`
