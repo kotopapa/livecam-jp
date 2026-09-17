@@ -15,6 +15,7 @@ import '../data/jma_flood.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
 import '../data/quake_intensity.dart';
+import '../data/ward_names.dart';
 import '../models/camera.dart';
 import '../util/geo.dart';
 import '../util/jst.dart';
@@ -1389,7 +1390,11 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
   }
 
   void _applyNames() {
+    // 気象庁 area.json は政令指定都市を「横浜市北部」等の単位でしか持たず、
+    // 地震情報の区コード（1410200=横浜市神奈川区）の名前が引けないため、
+    // 同梱の区名テーブル（data/ward_names.dart）を下敷きにする
     _names = {
+      ...wardNames,
       for (final e in JmaAreaNames.class20Name.entries)
         if (e.key.length >= 5) e.key.substring(0, 5): jmaCityName(e.value)
     };
