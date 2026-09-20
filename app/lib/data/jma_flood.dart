@@ -91,11 +91,21 @@ class FloodForecast {
   /// 訓練報（表示しない）
   final bool training;
 
-  /// 対象都道府県（JIS 2桁）。class20s から導く
-  Set<String> get prefectures => {
-        for (final c in class20s)
-          if (c.length >= 2) c.substring(0, 2),
-      };
+  /// 対象都道府県（JIS 2桁）。class20s から導き、無ければ officeCodes
+  /// （官署コード 6桁。先頭2桁が都道府県。例 130000=東京）から導く。
+  /// 2026-09-20 善福寺川の実発表で class20s が無く、都道府県が空になって
+  /// プッシュが送られなかった
+  Set<String> get prefectures {
+    final fromCities = {
+      for (final c in class20s)
+        if (c.length >= 2) c.substring(0, 2),
+    };
+    if (fromCities.isNotEmpty) return fromCities;
+    return {
+      for (final o in officeCodes)
+        if (o.length >= 2) o.substring(0, 2),
+    };
+  }
 
   /// 河川名の照合用（「水系」「（上流）」などの補足を落とす）
   static String normalizeRiver(String s) {

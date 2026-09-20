@@ -347,3 +347,21 @@ def test_flood_forecast_already_active_not_renotified_and_failure_keeps_keys():
         events, current = bosai_notify.check_flood_forecasts(state)
     assert events == [] and current == ["11:flood4:R1"]
 
+
+
+def test_flood_forecast_without_class20s_uses_office_code_prefecture():
+    """2026-09-20 善福寺川（東京都）の実データ: class20s が無く officeCodes のみ"""
+    real = [{"riverName": "善福寺川", "riverCode": "830304004900",
+             "reportDatetime": "2026-09-20T21:50:00+09:00", "infoType": "発表",
+             "item": {"name": "レベル４氾濫危険警報", "code": "40",
+                      "condition": "レベル４氾濫危険警報（発表）",
+                      "areas": [{"name": "善福寺川", "code": "830304004900"}]},
+             "officeCodes": ["130000"]}]
+
+    def get(url, timeout=30):
+        return mock.Mock(status_code=200, json=lambda: real, text="[]")
+
+    with mock.patch.object(bosai_notify.requests, "get", get):
+        events, current = bosai_notify.check_flood_forecasts({"active_special": []})
+    assert events == [("13", "flood4", "danger", "善福寺川の氾濫危険情報")]
+    assert current == ["13:flood4:830304004900"]

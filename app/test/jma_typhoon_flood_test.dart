@@ -91,7 +91,8 @@ void main() {
   group('指定河川洪水予報', () {
     Map<String, dynamic> rec(String code, String river, String status,
             {String at = '2026-09-15T10:00:00Z', String info = '通常',
-            List<String> munis = const ['11100', '11201']}) =>
+            List<String> munis = const ['11100', '11201'],
+            List<String> offices = const ['110000']}) =>
         {
           'riverCode': code,
           'riverName': river,
@@ -99,7 +100,7 @@ void main() {
           'infoType': info,
           'item': {'code': status, 'name': _kindName(status)},
           'class20s': munis,
-          'officeCodes': ['110000'],
+          'officeCodes': offices,
           'text': '本文',
         };
 
@@ -143,9 +144,32 @@ void main() {
         _cam('e', '11', null),
       ];
       expect(f.matchCameras(cams).map((c) => c.id).toList(), ['a', 'b']);
-      // 対象市町村が無い報は全国から名前だけで引く
+      // 対象市町村が無い報は官署コードから都道府県を導く（110000=埼玉）
       final g = JmaFlood.parse([rec('R9', '荒川', '40', munis: [])]).single;
-      expect(g.matchCameras(cams).map((c) => c.id).toList(), ['a', 'b', 'c']);
+      expect(g.prefectures, {'11'});
+      expect(g.matchCameras(cams).map((c) => c.id).toList(), ['a', 'b']);
+      // 市町村も官署も無ければ全国から名前だけで引く
+      final h = JmaFlood.parse([rec('R9', '荒川', '40', munis: [], offices: [])]).single;
+      expect(h.matchCameras(cams).map((c) => c.id).toList(), ['a', 'b', 'c']);
+    });
+
+    test('class20s が無い実発表（2026-09-20 善福寺川）は officeCodes から都道府県を導く', () {
+      final f = FloodForecast.fromJson({
+        'riverName': '善福寺川',
+        'riverCode': '830304004900',
+        'reportDatetime': '2026-09-20T21:50:00+09:00',
+        'infoType': '発表',
+        'item': {
+          'name': 'レベル４氾濫危険警報',
+          'code': '40',
+          'condition': 'レベル４氾濫危険警報（発表）',
+          'areas': [{'name': '善福寺川', 'code': '830304004900'}],
+        },
+        'officeCodes': ['130000'],
+      })!;
+      expect(f.level, FloodLevel.danger);
+      expect(f.kindName, 'レベル４氾濫危険警報');
+      expect(f.prefectures, {'13'});
     });
 
     test('項目名の揺れ（status / kind）にも耐える', () {

@@ -243,6 +243,10 @@ def check_flood_forecasts(state: dict) -> tuple[list[tuple[str, str, str, str]],
         else:
             continue
         prefs = {str(c)[:2] for c in (rep.get("class20s") or []) if len(str(c)) >= 2}
+        if not prefs:
+            # 2026-09-20 善福寺川の実発表: class20s が無く officeCodes(130000=東京)だけ
+            # だったため対象なし扱いになり送信されなかった。官署コードの先頭2桁で補う
+            prefs = {str(o)[:2] for o in (rep.get("officeCodes") or []) if len(str(o)) >= 2}
         for pref in sorted(prefs):
             if pref not in PREF_NAMES:
                 continue
