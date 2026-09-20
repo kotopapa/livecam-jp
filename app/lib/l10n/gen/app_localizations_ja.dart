@@ -1606,7 +1606,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tipIntro =>
-      'このアプリは個人で開発・運営しています。カメラの調査・追加や監視サーバーの維持、気象データの対応など、継続的なアップデートの励みになります。支援は任意で、機能の違いはありません。';
+      'このアプリは個人で開発・運営しています。カメラの調査・追加や監視サーバーの維持、気象データの対応など、継続的なアップデートの励みになります。支援は任意です。機能に違いはなく、お礼として広告を一定期間表示しないだけです。';
 
   @override
   String get tipCoffeeTitle => '缶コーヒーでひと息';
@@ -1657,8 +1657,8 @@ class AppLocalizationsJa extends AppLocalizations {
       '支援はあくまで開発者への応援で、広告の非表示を購入するものではありません。ささやかなお礼として、ご支援いただいた後は一定期間、アプリ内の広告を表示しません。';
 
   @override
-  String tipAdFreeTier(int months) {
-    return 'お礼：広告を$monthsか月表示しません';
+  String tipAdFreeTier(int months, String perMonth) {
+    return 'お礼：広告を$monthsか月表示しません（1か月あたり$perMonth）';
   }
 
   @override
@@ -3995,7 +3995,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get tipIntro =>
-      'この アプリは 1人（ひとり）で つくって、うごかして います。カメラを さがして ふやす こと、サーバーを うごかしつづける こと、天気（てんき）の データに たいおうする ことの ちからに なります。おうえんは じゆうです。おうえんしても できることは かわりません。';
+      'この アプリは 1人（ひとり）で つくって、うごかして います。カメラを さがして ふやす こと、サーバーを うごかしつづける こと、天気（てんき）の データに たいおうする ことの ちからに なります。おうえんは じゆうです。できることは かわりません。おれいに、しばらく こうこくを ださないだけです。';
 
   @override
   String get tipCoffeeTitle => 'かんコーヒーで ひとやすみ';
@@ -4047,8 +4047,8 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
       'しえんは、つくっている ひとを おうえんする ものです。こうこくを けす ために はらう ものでは ありません。おれいとして、しえんの あとは しばらく こうこくを だしません。';
 
   @override
-  String tipAdFreeTier(int months) {
-    return 'おれい：こうこくを $monthsかげつ だしません';
+  String tipAdFreeTier(int months, String perMonth) {
+    return 'おれい：こうこくを $monthsかげつ だしません（1かげつ あたり $perMonth）';
   }
 
   @override

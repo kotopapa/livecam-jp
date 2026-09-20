@@ -155,6 +155,16 @@ class _TipScreenState extends State<TipScreen> {
     }
   }
 
+  /// 1か月あたりの支援額（ストアの価格 ÷ お礼の月数）。日本円など小数の無い通貨は整数
+  static String _perMonth(ProductDetails p, int months) {
+    if (months <= 0) return p.price;
+    final v = p.rawPrice / months;
+    final zeroDecimal = const {'JPY', 'KRW', 'VND'}.contains(p.currencyCode.toUpperCase());
+    final symbol = p.currencySymbol.isNotEmpty ? p.currencySymbol : p.currencyCode;
+    final f = NumberFormat.currency(symbol: symbol, decimalDigits: zeroDecimal ? 0 : 2);
+    return f.format(v);
+  }
+
   /// 期限の表示（端末ロケールの日付。UTC→ローカル）
   static String _fmtDate(BuildContext context, DateTime utc) =>
       DateFormat.yMMMd(Localizations.localeOf(context).toString())
@@ -302,7 +312,7 @@ class _TipScreenState extends State<TipScreen> {
                     style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: t.color, letterSpacing: 1)),
                 Text(t.title(l10n), style: TextStyle(fontWeight: FontWeight.bold, color: t.color)),
                 Text(t.subtitle(l10n), style: TextStyle(fontSize: 12, color: Colors.grey[700])),
-                Text(l10n.tipAdFreeTier(AdFree.monthsFor(t.id)),
+                Text(l10n.tipAdFreeTier(AdFree.monthsFor(t.id), _perMonth(p, AdFree.monthsFor(t.id))),
                     style: TextStyle(fontSize: 11, color: t.color)),
               ]),
             ),

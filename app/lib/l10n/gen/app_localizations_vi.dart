@@ -1676,7 +1676,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get tipIntro =>
-      'Ứng dụng này do một cá nhân phát triển và vận hành. Sự ủng hộ của bạn giúp khảo sát và bổ sung camera, duy trì máy chủ giám sát, xử lý dữ liệu khí tượng, và là động lực để tiếp tục cập nhật. Việc ủng hộ là tự nguyện và không tạo ra khác biệt về tính năng.';
+      'Ứng dụng này do một cá nhân phát triển và vận hành. Sự ủng hộ của bạn giúp khảo sát và bổ sung camera, duy trì máy chủ giám sát, xử lý dữ liệu khí tượng, và là động lực để tiếp tục cập nhật. Việc ủng hộ là tự nguyện. Tính năng không khác biệt; điểm khác duy nhất là, để cảm ơn, quảng cáo sẽ được ẩn trong một thời gian.';
 
   @override
   String get tipCoffeeTitle => 'Nghỉ giải lao với lon cà phê';
@@ -1734,8 +1734,8 @@ class AppLocalizationsVi extends AppLocalizations {
       'Ủng hộ là lời động viên dành cho nhà phát triển, không phải mua tính năng tắt quảng cáo. Như một lời cảm ơn nhỏ, ứng dụng sẽ không hiển thị quảng cáo trong một thời gian sau khi bạn ủng hộ.';
 
   @override
-  String tipAdFreeTier(int months) {
-    return 'Cảm ơn: không quảng cáo trong $months tháng';
+  String tipAdFreeTier(int months, String perMonth) {
+    return 'Cảm ơn: không quảng cáo trong $months tháng ($perMonth mỗi tháng)';
   }
 
   @override

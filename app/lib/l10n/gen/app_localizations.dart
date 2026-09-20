@@ -2965,7 +2965,7 @@ abstract class AppLocalizations {
   /// ADAPT 応援画面の説明文
   ///
   /// In ja, this message translates to:
-  /// **'このアプリは個人で開発・運営しています。カメラの調査・追加や監視サーバーの維持、気象データの対応など、継続的なアップデートの励みになります。支援は任意で、機能の違いはありません。'**
+  /// **'このアプリは個人で開発・運営しています。カメラの調査・追加や監視サーバーの維持、気象データの対応など、継続的なアップデートの励みになります。支援は任意です。機能に違いはなく、お礼として広告を一定期間表示しないだけです。'**
   String get tipIntro;
 
   /// ADAPT 投げ銭の段階名（COFFEE）
@@ -3058,11 +3058,11 @@ abstract class AppLocalizations {
   /// **'支援はあくまで開発者への応援で、広告の非表示を購入するものではありません。ささやかなお礼として、ご支援いただいた後は一定期間、アプリ内の広告を表示しません。'**
   String get tipAdFreeIntro;
 
-  /// 支援段階ごとのお礼の期間。{months} は月数
+  /// 支援段階ごとのお礼の期間。{months} は月数、{perMonth} は1か月あたりの金額（通貨記号付き）
   ///
   /// In ja, this message translates to:
-  /// **'お礼：広告を{months}か月表示しません'**
-  String tipAdFreeTier(int months);
+  /// **'お礼：広告を{months}か月表示しません（1か月あたり{perMonth}）'**
+  String tipAdFreeTier(int months, String perMonth);
 
   /// お礼期間の終了日
   ///

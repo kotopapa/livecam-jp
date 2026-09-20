@@ -1670,7 +1670,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tipIntro =>
-      'This app is developed and run by one person. Your support helps with researching and adding cameras, keeping the monitoring server running, and supporting weather data, and it encourages continued updates. Support is optional and does not unlock any features.';
+      'This app is developed and run by one person. Your support helps with researching and adding cameras, keeping the monitoring server running, and supporting weather data, and it encourages continued updates. Support is optional. It does not unlock any features; the only difference is that, as a thank-you, ads are hidden for a while.';
 
   @override
   String get tipCoffeeTitle => 'A canned coffee break';
@@ -1728,8 +1728,8 @@ class AppLocalizationsEn extends AppLocalizations {
       'Your support is a tip to the developer, not a purchase of ad removal. As a small thank-you, the app hides its ads for a while after you support it.';
 
   @override
-  String tipAdFreeTier(int months) {
-    return 'Thank-you: no ads for $months months';
+  String tipAdFreeTier(int months, String perMonth) {
+    return 'Thank-you: no ads for $months months ($perMonth per month)';
   }
 
   @override

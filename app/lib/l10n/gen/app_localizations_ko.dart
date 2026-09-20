@@ -1615,7 +1615,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get tipIntro =>
-      '이 앱은 개인이 개발·운영하고 있습니다. 카메라 조사와 추가, 모니터링 서버 유지, 기상 데이터 대응 등 지속적인 업데이트에 큰 힘이 됩니다. 후원은 선택 사항이며 기능 차이는 없습니다.';
+      '이 앱은 개인이 개발·운영하고 있습니다. 카메라 조사와 추가, 모니터링 서버 유지, 기상 데이터 대응 등 지속적인 업데이트에 큰 힘이 됩니다. 후원은 선택 사항입니다. 기능에 차이는 없으며, 감사의 표시로 일정 기간 광고를 표시하지 않을 뿐입니다.';
 
   @override
   String get tipCoffeeTitle => '캔커피로 한숨 돌리기';
@@ -1666,8 +1666,8 @@ class AppLocalizationsKo extends AppLocalizations {
       '후원은 개발자를 응원하는 것이며 광고 제거를 구매하는 것이 아닙니다. 작은 감사의 표시로, 후원 후 일정 기간 동안 앱 내 광고를 표시하지 않습니다.';
 
   @override
-  String tipAdFreeTier(int months) {
-    return '감사: $months개월 동안 광고 없음';
+  String tipAdFreeTier(int months, String perMonth) {
+    return '감사: $months개월 동안 광고 없음 (월 $perMonth)';
   }
 
   @override

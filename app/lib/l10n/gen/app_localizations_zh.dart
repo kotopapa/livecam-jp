@@ -1597,7 +1597,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get tipIntro =>
-      '本软件由个人开发和运营。您的支持将用于摄像头的调查与添加、监控服务器的维护、气象数据的支持等，也是持续更新的动力。支持完全自愿，不会带来功能上的差别。';
+      '本软件由个人开发和运营。您的支持将用于摄像头的调查与添加、监控服务器的维护、气象数据的支持等，也是持续更新的动力。支持完全自愿。功能没有差别，只是作为答谢，在一段时间内不显示广告。';
 
   @override
   String get tipCoffeeTitle => '用一罐咖啡歇口气';
@@ -1648,8 +1648,8 @@ class AppLocalizationsZh extends AppLocalizations {
       '您的支持是对开发者的鼓励，并非购买去广告功能。作为小小的答谢，在您支持之后的一段时间内，应用不会显示广告。';
 
   @override
-  String tipAdFreeTier(int months) {
-    return '答谢：$months个月不显示广告';
+  String tipAdFreeTier(int months, String perMonth) {
+    return '答谢：$months个月不显示广告（每月$perMonth）';
   }
 
   @override
@@ -3944,7 +3944,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get tipIntro =>
-      '本應用程式由個人開發與營運。您的支持將用於攝影機的調查與新增、監控伺服器的維護、氣象資料的對應等，也是持續更新的動力。支持完全出於自願，不會有功能上的差異。';
+      '本應用程式由個人開發與營運。您的支持將用於攝影機的調查與新增、監控伺服器的維護、氣象資料的對應等，也是持續更新的動力。支持完全出於自願。功能沒有差異，只是作為答謝，在一段時間內不顯示廣告。';
 
   @override
   String get tipCoffeeTitle => '用罐裝咖啡休息一下';
@@ -3995,8 +3995,8 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
       '您的支持是對開發者的鼓勵，並非購買去廣告功能。作為小小的答謝，在您支持之後的一段時間內，App 不會顯示廣告。';
 
   @override
-  String tipAdFreeTier(int months) {
-    return '答謝：$months個月不顯示廣告';
+  String tipAdFreeTier(int months, String perMonth) {
+    return '答謝：$months個月不顯示廣告（每月$perMonth）';
   }
 
   @override
