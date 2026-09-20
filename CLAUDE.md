@@ -169,6 +169,12 @@ python site/build.py                            # 配信ファイル生成
 - 実在確認は `tools/x_account_verify.py`（x.com の og メタデータ）。投稿確認 `tools/x_account_posts.py` は429が出やすく1件4分以上空ける
 - 国の機関（河川事務所等）は管轄が複数県にまたがるので `area_codes` 配列で持つ（例: 江戸川河川事務所 = 11/12/13）
 
+## 支援へのお礼（広告非表示期間）の知見（2026-09-20追記）
+
+- **広告非表示は「買う」ものではなく、開発者支援（投げ銭）へのお礼**（2026-09-20 ユーザー決定。文言もそう書く）。`app/lib/data/ad_free.dart` の `AdFree.instance` が期限（SharedPreferences `ad_free_until`、UTC）と履歴（`tip_history`）を持ち、`AdBannerPlaceholder` / `AnchoredAdBanner` は期間中は読み込みもしない。日数は coffee 30 / sweets 90 / lunch 240 / devtools 730（月単価が上位ほど下がる設計）。期間中の再支援は残りに加算
+- **ストア側（App Store Connect / Play Console）の変更は不要**。商品は消耗型4種のまま。消耗型は復元できないため期限は端末内のみ（再インストール・機種変更で消える）と支援画面に明記。「永久」は非消耗型を別に作らない限り約束しない
+- 購入時に Analytics イベント `tip_purchased`（product）を送る。それ以前の支援者は端末からもストアからも特定できない（集計だけ可能）
+
 ## Android版の知見（2026-09-10追記）
 
 - Android のリリース手順・Play Console の設定値・コード側の残作業は [docs/playstore_setup.md](docs/playstore_setup.md)。AdMob の Android ID は 2026-09-10 に本番値へ差し替え済み（AndroidManifest と config.dart）

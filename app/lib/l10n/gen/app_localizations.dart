@@ -3046,6 +3046,48 @@ abstract class AppLocalizations {
   /// **'購入を完了できませんでした（{error}）'**
   String tipPurchaseFailed(String error);
 
+  /// No description provided for @tipAdFreeTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ご支援へのお礼'**
+  String get tipAdFreeTitle;
+
+  /// No description provided for @tipAdFreeIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'支援はあくまで開発者への応援で、広告の非表示を購入するものではありません。ささやかなお礼として、ご支援いただいた後は一定期間、アプリ内の広告を表示しません。'**
+  String get tipAdFreeIntro;
+
+  /// 支援段階ごとのお礼の期間。{months} は月数
+  ///
+  /// In ja, this message translates to:
+  /// **'お礼：広告を{months}か月表示しません'**
+  String tipAdFreeTier(int months);
+
+  /// お礼期間の終了日
+  ///
+  /// In ja, this message translates to:
+  /// **'お礼の広告非表示期間：{date}まで'**
+  String tipAdFreeActive(String date);
+
+  /// 購入完了メッセージ。{date} はお礼期間の終了日
+  ///
+  /// In ja, this message translates to:
+  /// **'ご支援ありがとうございます！お礼として{date}まで広告を表示しません。'**
+  String tipAdFreeThanks(String date);
+
+  /// No description provided for @tipAdFreeNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'お礼の期間は端末内に保存されます。再インストールや機種変更では引き継がれません。期間中に再度ご支援いただいた場合は、残りの期間に加算します。'**
+  String get tipAdFreeNote;
+
+  /// 設定画面の応援カードに出すお礼期間
+  ///
+  /// In ja, this message translates to:
+  /// **'お礼の広告非表示：{date}まで'**
+  String settingsSupportAdFree(String date);
+
   /// ADAPT tipPurchaseFailed の {error} が空のときの代替文言
   ///
   /// In ja, this message translates to:

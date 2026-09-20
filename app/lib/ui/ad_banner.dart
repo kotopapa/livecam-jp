@@ -4,6 +4,7 @@ import 'package:visibility_detector/visibility_detector.dart';
 
 import '../app_state.dart';
 import '../config.dart';
+import '../data/ad_free.dart';
 
 /// 詳細画面に置くAdMobバナー（320×50）。
 ///
@@ -57,7 +58,18 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    AdFree.instance.addListener(_onAdFreeChanged);
+  }
+
+  void _onAdFreeChanged() {
+    if (mounted) setState(() {});
+  }
+
+  @override
   void dispose() {
+    AdFree.instance.removeListener(_onAdFreeChanged);
     _ad?.dispose();
     super.dispose();
   }
@@ -65,8 +77,8 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
   @override
   Widget build(BuildContext context) {
     // 失敗時は区切り線ごと消す（前後のDividerが二重にならないように
-    // 下側の区切り線はこのウィジェットが持つ）
-    if (_failed) return const SizedBox.shrink();
+    // 下側の区切り線はこのウィジェットが持つ）。支援へのお礼期間中は出さない
+    if (_failed || AdFree.instance.isActive) return const SizedBox.shrink();
     return VisibilityDetector(
       key: Key('ad-${widget.adUnitId}-${widget.size.height}-${identityHashCode(this)}'),
       onVisibilityChanged: _onVisibility,
@@ -140,14 +152,26 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    AdFree.instance.addListener(_onAdFreeChanged);
+  }
+
+  void _onAdFreeChanged() {
+    if (mounted) setState(() {});
+  }
+
+  @override
   void dispose() {
+    AdFree.instance.removeListener(_onAdFreeChanged);
     _ad?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_failed) return const SizedBox.shrink();
+    // 支援へのお礼期間中は読み込みもしない（見られない在庫を作らない）
+    if (_failed || AdFree.instance.isActive) return const SizedBox.shrink();
     if (_ad == null) {
       WidgetsBinding.instance.addPostFrameCallback((_) => _load(context));
       return const SizedBox.shrink();

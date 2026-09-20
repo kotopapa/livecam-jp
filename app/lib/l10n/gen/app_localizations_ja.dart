@@ -1650,6 +1650,37 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
+  String get tipAdFreeTitle => 'ご支援へのお礼';
+
+  @override
+  String get tipAdFreeIntro =>
+      '支援はあくまで開発者への応援で、広告の非表示を購入するものではありません。ささやかなお礼として、ご支援いただいた後は一定期間、アプリ内の広告を表示しません。';
+
+  @override
+  String tipAdFreeTier(int months) {
+    return 'お礼：広告を$monthsか月表示しません';
+  }
+
+  @override
+  String tipAdFreeActive(String date) {
+    return 'お礼の広告非表示期間：$dateまで';
+  }
+
+  @override
+  String tipAdFreeThanks(String date) {
+    return 'ご支援ありがとうございます！お礼として$dateまで広告を表示しません。';
+  }
+
+  @override
+  String get tipAdFreeNote =>
+      'お礼の期間は端末内に保存されます。再インストールや機種変更では引き継がれません。期間中に再度ご支援いただいた場合は、残りの期間に加算します。';
+
+  @override
+  String settingsSupportAdFree(String date) {
+    return 'お礼の広告非表示：$dateまで';
+  }
+
+  @override
   String get tipUnknownError => '不明なエラー';
 
   @override
@@ -4006,6 +4037,37 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String tipPurchaseFailed(String error) {
     return 'かう てつづきを おわらせられませんでした（$error）';
+  }
+
+  @override
+  String get tipAdFreeTitle => 'おれい';
+
+  @override
+  String get tipAdFreeIntro =>
+      'しえんは、つくっている ひとを おうえんする ものです。こうこくを けす ために はらう ものでは ありません。おれいとして、しえんの あとは しばらく こうこくを だしません。';
+
+  @override
+  String tipAdFreeTier(int months) {
+    return 'おれい：こうこくを $monthsかげつ だしません';
+  }
+
+  @override
+  String tipAdFreeActive(String date) {
+    return 'おれいで こうこくを ださない きかん：$dateまで';
+  }
+
+  @override
+  String tipAdFreeThanks(String date) {
+    return 'しえん ありがとうございます！おれいに $dateまで こうこくを だしません。';
+  }
+
+  @override
+  String get tipAdFreeNote =>
+      'おれいの きかんは この スマホの なかに ほぞんします。いれなおしたり、スマホを かえると なくなります。きかんちゅうに また しえんすると、のこりの きかんに たします。';
+
+  @override
+  String settingsSupportAdFree(String date) {
+    return 'おれいで こうこくを ださない：$dateまで';
   }
 
   @override

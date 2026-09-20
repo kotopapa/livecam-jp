@@ -23,6 +23,7 @@ import 'data/locale_controller.dart';
 import 'data/widget_bridge.dart';
 import 'l10n/l10n.dart';
 import 'ui/home_shell.dart';
+import 'data/ad_free.dart';
 import 'data/analytics.dart';
 import 'data/fcm_channel.dart';
 import 'ui/onboarding_screen.dart';
@@ -62,6 +63,8 @@ Future<void> main() async {
     cache: CacheStore(dir),
   ));
   final onboardingDone = await OnboardingScreen.isDone();
+  // 支援へのお礼（広告非表示期間）。広告ウィジェットが参照する
+  await AdFree.instance.load();
   // 表示言語（未設定なら端末の言語設定から自動判定。SPEC 1.4.0 多言語対応）
   final localeController = await LocaleController.load();
   runApp(LiveCamApp(

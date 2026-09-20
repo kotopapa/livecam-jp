@@ -1641,6 +1641,36 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
+  String get tipAdFreeTitle => '对您支持的答谢';
+
+  @override
+  String get tipAdFreeIntro =>
+      '您的支持是对开发者的鼓励，并非购买去广告功能。作为小小的答谢，在您支持之后的一段时间内，应用不会显示广告。';
+
+  @override
+  String tipAdFreeTier(int months) {
+    return '答谢：$months个月不显示广告';
+  }
+
+  @override
+  String tipAdFreeActive(String date) {
+    return '答谢的无广告期间：至$date';
+  }
+
+  @override
+  String tipAdFreeThanks(String date) {
+    return '感谢您的支持！作为答谢，到$date为止不会显示广告。';
+  }
+
+  @override
+  String get tipAdFreeNote => '答谢期间仅保存在本设备中，重新安装或更换手机时不会继承。期间内再次支持时，会累加到剩余期间。';
+
+  @override
+  String settingsSupportAdFree(String date) {
+    return '答谢的无广告期间：至$date';
+  }
+
+  @override
   String get tipUnknownError => '未知错误';
 
   @override
@@ -3955,6 +3985,36 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   @override
   String tipPurchaseFailed(String error) {
     return '無法完成購買（$error）';
+  }
+
+  @override
+  String get tipAdFreeTitle => '對您支持的答謝';
+
+  @override
+  String get tipAdFreeIntro =>
+      '您的支持是對開發者的鼓勵，並非購買去廣告功能。作為小小的答謝，在您支持之後的一段時間內，App 不會顯示廣告。';
+
+  @override
+  String tipAdFreeTier(int months) {
+    return '答謝：$months個月不顯示廣告';
+  }
+
+  @override
+  String tipAdFreeActive(String date) {
+    return '答謝的無廣告期間：至$date';
+  }
+
+  @override
+  String tipAdFreeThanks(String date) {
+    return '感謝您的支持！作為答謝，到$date為止不會顯示廣告。';
+  }
+
+  @override
+  String get tipAdFreeNote => '答謝期間僅保存在本裝置中，重新安裝或更換手機時不會繼承。期間內再次支持時，會累加到剩餘期間。';
+
+  @override
+  String settingsSupportAdFree(String date) {
+    return '答謝的無廣告期間：至$date';
   }
 
   @override

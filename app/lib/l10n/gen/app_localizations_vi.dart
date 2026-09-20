@@ -1727,6 +1727,37 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
+  String get tipAdFreeTitle => 'Lời cảm ơn vì đã ủng hộ';
+
+  @override
+  String get tipAdFreeIntro =>
+      'Ủng hộ là lời động viên dành cho nhà phát triển, không phải mua tính năng tắt quảng cáo. Như một lời cảm ơn nhỏ, ứng dụng sẽ không hiển thị quảng cáo trong một thời gian sau khi bạn ủng hộ.';
+
+  @override
+  String tipAdFreeTier(int months) {
+    return 'Cảm ơn: không quảng cáo trong $months tháng';
+  }
+
+  @override
+  String tipAdFreeActive(String date) {
+    return 'Thời gian không quảng cáo (cảm ơn): đến $date';
+  }
+
+  @override
+  String tipAdFreeThanks(String date) {
+    return 'Cảm ơn bạn đã ủng hộ! Để cảm ơn, quảng cáo sẽ không hiển thị cho đến $date.';
+  }
+
+  @override
+  String get tipAdFreeNote =>
+      'Thời gian cảm ơn chỉ được lưu trên thiết bị này và không chuyển sang khi cài lại hoặc đổi máy. Nếu ủng hộ lại trong thời gian này, thời gian còn lại sẽ được cộng thêm.';
+
+  @override
+  String settingsSupportAdFree(String date) {
+    return 'Không quảng cáo (cảm ơn): đến $date';
+  }
+
+  @override
   String get tipUnknownError => 'Lỗi không xác định';
 
   @override

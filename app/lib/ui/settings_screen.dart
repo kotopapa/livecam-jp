@@ -7,12 +7,14 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:intl/intl.dart';
 
 import 'tip_screen.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:in_app_review/in_app_review.dart';
 
+import '../data/ad_free.dart';
 import '../data/analytics.dart';
 import '../app_state.dart';
 import '../config.dart';
@@ -813,6 +815,21 @@ class _SupportCard extends StatelessWidget {
                           color: Colors.black87,
                         ),
                       ),
+                      if (AdFree.instance.isActive)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4),
+                          child: Text(
+                            context.l10n.settingsSupportAdFree(
+                                DateFormat.yMMMd(
+                                        Localizations.localeOf(context).toString())
+                                    .format(AdFree.instance.until!.toLocal())),
+                            style: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: accent,
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),

@@ -3,13 +3,17 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../data/ad_free.dart';
 import '../data/analytics.dart';
 import '../config.dart';
 import '../l10n/l10n.dart';
 
 /// 開発者を応援する（投げ銭）。消耗型のアプリ内課金4段階。
+/// 支援への **お礼** として一定期間広告を出さない（data/ad_free.dart）。
+/// 広告非表示を売る形にはしない（文言もそう書く）。
 ///
 /// App Store Connect に同じ商品IDの「消耗型」商品を登録しておくこと
 /// （未登録・審査前は商品が取得できず「準備中」表示になる）。
@@ -121,11 +125,16 @@ class _TipScreenState extends State<TipScreen> {
         case PurchaseStatus.purchased:
         case PurchaseStatus.restored:
           if (pd.pendingCompletePurchase) await _iap.completePurchase(pd);
+          // お礼の広告非表示期間を付与（restored は消耗型では来ないが同じ扱い）
+          final until = await AdFree.instance.grant(pd.productID);
+          Analytics.event('tip_purchased', params: {'product': pd.productID});
           if (mounted) {
             final l10n = context.l10n;
             setState(() {
               _busyId = null;
-              _message = l10n.tipThanks;
+              _message = until == null
+                  ? l10n.tipThanks
+                  : l10n.tipAdFreeThanks(_fmtDate(context, until));
             });
           }
         case PurchaseStatus.error:
@@ -146,10 +155,16 @@ class _TipScreenState extends State<TipScreen> {
     }
   }
 
+  /// 期限の表示（端末ロケールの日付。UTC→ローカル）
+  static String _fmtDate(BuildContext context, DateTime utc) =>
+      DateFormat.yMMMd(Localizations.localeOf(context).toString())
+          .format(utc.toLocal());
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final l10n = context.l10n;
+    final adFree = AdFree.instance;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.tipTitle)),
       body: ListView(padding: const EdgeInsets.all(16), children: [
@@ -170,7 +185,36 @@ class _TipScreenState extends State<TipScreen> {
           textAlign: TextAlign.center,
           style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey[700]),
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: 12),
+        // お礼としての広告非表示（購入対象ではないことを明記）
+        Card(
+          color: theme.colorScheme.primaryContainer.withValues(alpha: 0.35),
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Row(children: [
+                Icon(Icons.card_giftcard, size: 18, color: theme.colorScheme.primary),
+                const SizedBox(width: 6),
+                Text(l10n.tipAdFreeTitle,
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
+              ]),
+              const SizedBox(height: 6),
+              Text(l10n.tipAdFreeIntro, style: const TextStyle(fontSize: 12)),
+              if (adFree.isActive) ...[
+                const SizedBox(height: 6),
+                Text(l10n.tipAdFreeActive(_fmtDate(context, adFree.until!)),
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: theme.colorScheme.primary)),
+              ],
+              const SizedBox(height: 4),
+              Text(l10n.tipAdFreeNote,
+                  style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+            ]),
+          ),
+        ),
+        const SizedBox(height: 12),
         if (_loading)
           const Padding(
             padding: EdgeInsets.all(24),
@@ -258,6 +302,8 @@ class _TipScreenState extends State<TipScreen> {
                     style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: t.color, letterSpacing: 1)),
                 Text(t.title(l10n), style: TextStyle(fontWeight: FontWeight.bold, color: t.color)),
                 Text(t.subtitle(l10n), style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                Text(l10n.tipAdFreeTier(AdFree.monthsFor(t.id)),
+                    style: TextStyle(fontSize: 11, color: t.color)),
               ]),
             ),
             const SizedBox(width: 8),

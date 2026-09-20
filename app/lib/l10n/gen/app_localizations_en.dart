@@ -1721,6 +1721,37 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get tipAdFreeTitle => 'A thank-you for your support';
+
+  @override
+  String get tipAdFreeIntro =>
+      'Your support is a tip to the developer, not a purchase of ad removal. As a small thank-you, the app hides its ads for a while after you support it.';
+
+  @override
+  String tipAdFreeTier(int months) {
+    return 'Thank-you: no ads for $months months';
+  }
+
+  @override
+  String tipAdFreeActive(String date) {
+    return 'Ad-free thank-you period: until $date';
+  }
+
+  @override
+  String tipAdFreeThanks(String date) {
+    return 'Thank you for your support! As a thank-you, no ads will be shown until $date.';
+  }
+
+  @override
+  String get tipAdFreeNote =>
+      'The thank-you period is stored on this device only and is not carried over when you reinstall or change phones. Supporting again during the period adds to the remaining time.';
+
+  @override
+  String settingsSupportAdFree(String date) {
+    return 'Ad-free thank-you: until $date';
+  }
+
+  @override
   String get tipUnknownError => 'Unknown error';
 
   @override

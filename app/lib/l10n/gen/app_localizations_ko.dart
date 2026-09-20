@@ -1659,6 +1659,37 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
+  String get tipAdFreeTitle => '후원에 대한 감사';
+
+  @override
+  String get tipAdFreeIntro =>
+      '후원은 개발자를 응원하는 것이며 광고 제거를 구매하는 것이 아닙니다. 작은 감사의 표시로, 후원 후 일정 기간 동안 앱 내 광고를 표시하지 않습니다.';
+
+  @override
+  String tipAdFreeTier(int months) {
+    return '감사: $months개월 동안 광고 없음';
+  }
+
+  @override
+  String tipAdFreeActive(String date) {
+    return '감사 광고 없음 기간: $date까지';
+  }
+
+  @override
+  String tipAdFreeThanks(String date) {
+    return '후원해 주셔서 감사합니다! 감사의 표시로 $date까지 광고를 표시하지 않습니다.';
+  }
+
+  @override
+  String get tipAdFreeNote =>
+      '감사 기간은 이 기기에만 저장되며, 재설치나 기기 변경 시 이어지지 않습니다. 기간 중 다시 후원하시면 남은 기간에 추가됩니다.';
+
+  @override
+  String settingsSupportAdFree(String date) {
+    return '감사 광고 없음: $date까지';
+  }
+
+  @override
   String get tipUnknownError => '알 수 없는 오류';
 
   @override
