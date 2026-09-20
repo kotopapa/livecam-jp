@@ -36406,3 +36406,543 @@ cameras:
     image_url: https://weathernews.jp/onebox/livecam/okinawa/7CDDE908B2D6/
     page_url: https://weathernews.jp/onebox/livecam/okinawa/7CDDE908B2D6/
     note: '掲載元注意書き『利用規約第9条: 本コンテンツの複製・二次利用、WNI以外のウェブサイトへの転載・転用は事前許諾なく禁止 → 誘導型のみ』→誘導型。石垣市上空天気カメラ。設置場所の詳細非公開（座標はページ埋め込み値）'
+
+  # 2026-09-20 国道50号の追加要請。ケーブルテレビ株式会社（CC9・栃木市/館林/結城/筑西）の
+  # 地域ライブカメラ（静止画・約1分更新）。リンク規定が「リンクはトップページへ」のため
+  # 画像の直接表示ではなく誘導型（配信ページの地域パネルへ）で掲載。座標は設置地点の目視推定。
+  # 同じページURLだと crawler が重複として落とすため #panel_〜 のアンカーで区別する。
+  - id: curated-still-cc9-r50-mikamo
+    name: "国道50号 道の駅みかも（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "09"
+    lat: 36.29642
+    lng: 139.62497
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#panel_tochigi"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t09.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "国道50号 栃木市藤岡町大田和・道の駅みかも付近"
+
+  - id: curated-still-cc9-r50-odabayashi
+    name: "国道50号 小田林（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "08"
+    lat: 36.29725
+    lng: 139.84425
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#panel_ibaraki"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i08.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "国道50号（結城バイパス）結城市小田林・小田林西交差点付近"
+
+  # 2026-09-20 CC9（ケーブルテレビ株式会社）の残り39台。位置はまとめサイト掲載値または地名からの推定（approx）。
+  # 掲載元の同一ページに誘導する。crawler は feed_url が同じ候補を重複として落とすため、カメラごとのダイアログ要素 id（#livecamera-〜）をアンカーに付けて区別する。渡良瀬川（藤岡大橋）は栃木・群馬両パネルに載るため1件のみ。
+
+  - id: curated-still-cc9-uzumagawa-muromachi
+    name: "巴波川（室町）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.376056
+    lng: 139.732333
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-001"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t17.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市室町"
+
+  - id: curated-still-cc9-naganogawa-mutsumibashi-joryu
+    name: "永野川（薗部町 睦橋上流）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.377583
+    lng: 139.713083
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-002"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t18.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市薗部町"
+
+  - id: curated-still-cc9-naganogawa-mutsumibashi-karyu
+    name: "永野川（薗部町 睦橋下流）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.378278
+    lng: 139.713
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-003"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t19.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市薗部町"
+
+  - id: curated-still-cc9-hakonomori-kousaten
+    name: "箱森交差点（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "09"
+    lat: 36.392361
+    lng: 139.72375
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-004"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t21.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市箱森町・栃木環状線"
+
+  - id: curated-still-cc9-ogaki-jujiro
+    name: "大柿十字路（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "09"
+    lat: 36.455639
+    lng: 139.708333
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-006"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t07.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市都賀町大柿"
+
+  - id: curated-still-cc9-shiriuchibashi-higashi
+    name: "尻内橋東交差点（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "09"
+    lat: 36.433139
+    lng: 139.678083
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-007"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t05.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市尻内町"
+
+  - id: curated-still-cc9-tagawa-kawanagobashi
+    name: "田川（川中子橋）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.444806
+    lng: 139.889111
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-008"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t01.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "上三川町川中子"
+
+  - id: curated-still-cc9-sugatagawa-hosoyabashi
+    name: "姿川（細谷橋）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.430083
+    lng: 139.842833
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-009"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t02.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "下野市細谷"
+
+  - id: curated-still-cc9-naganogawa-hoshinobashi
+    name: "永野川（星野橋）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.472194
+    lng: 139.62525
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-010"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t03.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市星野町"
+
+  - id: curated-still-cc9-akazugawa-fukiage
+    name: "赤津川（吹上町周辺）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.412583
+    lng: 139.713889
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-011"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t04.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市吹上町"
+
+  - id: curated-still-cc9-akazugawa-sakasagawa
+    name: "赤津川・逆川の合流地点（通称：龍の頭）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.45625
+    lng: 139.715194
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-012"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t06.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市都賀町大柿・通称「龍の頭」"
+
+  - id: curated-still-cc9-naganogawa-yamashitabashi
+    name: "永野川（山下橋）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.343944
+    lng: 139.720139
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-013"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t08.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市大平町蔵井"
+
+  - id: curated-still-cc9-watarasegawa-fujiokaohashi
+    name: "渡良瀬川（藤岡大橋）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.263472
+    lng: 139.651222
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-007"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t10.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市藤岡町藤岡。群馬パネルにも同一カメラが載る"
+
+  - id: curated-still-cc9-sugatagawa-yodobashi
+    name: "姿川（淀橋）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.500917
+    lng: 139.831861
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-015"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t11.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "壬生町安塚"
+
+  - id: curated-still-cc9-uzumagawa-shiyakusho
+    name: "巴波川（市役所裏）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.382222
+    lng: 139.733361
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-016"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t14.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市万町・栃木市役所裏"
+
+  - id: curated-still-cc9-uzumagawa-kouraibashi
+    name: "巴波川（幸来橋）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.378583
+    lng: 139.730722
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-017"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t15.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市湊町"
+
+  - id: curated-still-cc9-kuranomachi-odori
+    name: "蔵の街大通り（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: scenic
+    prefecture: "09"
+    lat: 36.379639
+    lng: 139.733556
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-018"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t20.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市倭町・とちぎ蔵の街大通り"
+
+  - id: curated-still-cc9-ohirasan-sancho
+    name: "太平山山頂からの眺め（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: scenic
+    prefecture: "09"
+    lat: 36.378
+    lng: 139.694
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-019"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t22.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市平井町・太平山山頂付近（座標は山頂の推定）"
+
+  - id: curated-still-cc9-uzumagawa-fujimicho
+    name: "巴波川（富士見町付近）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "09"
+    lat: 36.377194
+    lng: 139.73
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-020"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t23.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "栃木市富士見町"
+
+  - id: curated-still-cc9-tsutsujigaoka-koen
+    name: "つつじが岡公園（館林市）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.2511
+    lng: 139.5572
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-001"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g06.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "館林市花山町・つつじが岡公園（座標は公園の推定）"
+
+  - id: curated-still-cc9-chiyoda-shokokai-minami
+    name: "千代田町商工会の南側（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "10"
+    lat: 36.211889
+    lng: 139.438611
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-002"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g01.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "千代田町赤岩・利根加用水"
+
+  - id: curated-still-cc9-gunma-suigo-hirutabashi
+    name: "群馬の水郷公園付近・蛭田橋（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "10"
+    lat: 36.22
+    lng: 139.425
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-003"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g02.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "千代田町・群馬の水郷公園付近 蛭田橋（座標は公園付近の推定）"
+
+  - id: curated-still-cc9-kendo7-shiromachi
+    name: "県道7号（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "10"
+    lat: 36.243639
+    lng: 139.538778
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-004"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g03.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "館林市松原・県道7号佐野行田線 城町"
+
+  - id: curated-still-cc9-r122-aoyagi-kousaten
+    name: "国道122号 青柳交差点（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "10"
+    lat: 36.22271
+    lng: 139.517166
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-005"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g04.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "館林市青柳町（座標は町域の推定）"
+
+  - id: curated-still-cc9-r122-showabashi
+    name: "国道122号 昭和橋（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "10"
+    lat: 36.198361
+    lng: 139.513056
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-006"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g05.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "明和町川俣・利根川 昭和橋"
+
+  - id: curated-still-cc9-maigi-ninosekibashi
+    name: "千代田町舞木二ノ堰橋付近（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "10"
+    lat: 36.224278
+    lng: 139.422583
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-008"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g07.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "千代田町舞木"
+
+  - id: curated-still-cc9-akaiwa-tosenba
+    name: "千代田町赤岩渡船場（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "10"
+    lat: 36.206694
+    lng: 139.435278
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-009"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g08.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "千代田町赤岩・赤岩渡船場"
+
+  - id: curated-still-cc9-sedoi-kyukeijo
+    name: "千代田町瀬戸井休憩所（桜）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.19799
+    lng: 139.452881
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-010"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g09.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "千代田町瀬戸井・利根川 瀬戸井休憩所（桜。座標は地区の推定）"
+
+  - id: curated-still-cc9-shimodate-eki-kitaguchi
+    name: "下館駅北口（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: scenic
+    prefecture: "08"
+    lat: 36.306
+    lng: 139.9838
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-002"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i04.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "筑西市乙・下館駅北口（座標は駅の推定）"
+
+  - id: curated-still-cc9-tagawa-kinusho
+    name: "田川 鬼怒商付近（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "08"
+    lat: 36.288556
+    lng: 139.897472
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-003"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i01.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "結城市小森・鬼怒商業高校付近"
+
+  - id: curated-still-cc9-gogyogawa-gongyo-ryokuchi
+    name: "五行川 勤行緑地（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "08"
+    lat: 36.320889
+    lng: 139.976556
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-004"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i03.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "筑西市小林・勤行緑地"
+
+  - id: curated-still-cc9-kinugawa-sakaebashi
+    name: "鬼怒川 栄橋（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "08"
+    lat: 36.276333
+    lng: 139.907389
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-005"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i05.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "筑西市船玉・栄橋"
+
+  - id: curated-still-cc9-oyagawa-nodonohashi
+    name: "大谷川（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "08"
+    lat: 36.277528
+    lng: 139.971028
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-006"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i06.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "筑西市野殿・野殿橋"
+
+  - id: curated-still-cc9-tagawa-akiyasebashi
+    name: "田川 秋谷瀬橋（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "08"
+    lat: 36.301333
+    lng: 139.892083
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-007"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i07.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "結城市結城・秋谷瀬橋"
+
+  - id: curated-still-cc9-jikken-dori-nishiushigaya
+    name: "十間通り 西牛谷辺見線付近（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "08"
+    lat: 36.1955
+    lng: 139.7185
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-008"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_kg01.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "古河市・十間通り×西牛谷辺見線付近（座標は推定）"
+
+  - id: curated-still-cc9-chuo-undokoen-dori
+    name: "中央運動公園通り（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "08"
+    lat: 36.184
+    lng: 139.755
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-009"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_kg02.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "古河市・中央運動公園通り（座標は推定）"
+
+  - id: curated-still-cc9-nishiniregawa-r125
+    name: "西仁連川 国道125号線付近（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: river
+    prefecture: "08"
+    lat: 36.200694
+    lng: 139.8315
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-010"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_kg03.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "古河市尾崎・西仁連川 国道125号付近"
+
+  - id: curated-still-cc9-jikken-dori-kogaeki-higashi
+    name: "十間通り 古河駅東口交差点付近（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: road
+    prefecture: "08"
+    lat: 36.1955
+    lng: 139.7085
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-011"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_kg04.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "古河市本町・古河駅東口交差点付近（座標は駅の推定）"
+
+  - id: curated-still-cc9-watarase-yusuichi-koga
+    name: "渡良瀬遊水地（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: scenic
+    prefecture: "08"
+    lat: 36.2125
+    lng: 139.685
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-012"
+    image_url: "https://www.cc9.jp/lc/web-cam/lifecam_kg05.jpg"
+    page_url: "https://www.cc9.jp/community/livecamera/"
+    note: "古河市・渡良瀬遊水地（座標は遊水地古河側の推定）"
