@@ -2213,6 +2213,50 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
+  String get mapLayerUnderpassTitle => 'Tình trạng ngập hầm chui';
+
+  @override
+  String get mapLayerUnderpassSubtitle =>
+      'Theo cảm biến: đi được / thận trọng / cấm đi (TP Chiba, Saitama, Shizuoka, Takamatsu và tỉnh Hyogo)';
+
+  @override
+  String mapLegendUnderpass(int n) {
+    return 'Tình trạng ngập hầm chui ($n điểm)';
+  }
+
+  @override
+  String get underpassLevel0 => 'Đi được';
+
+  @override
+  String get underpassLevel1 => 'Thận trọng';
+
+  @override
+  String get underpassLevel2 => 'Cấm đi';
+
+  @override
+  String get underpassLevelUnknown => 'Không rõ';
+
+  @override
+  String underpassUpdated(String at) {
+    return 'Nguồn cập nhật: $at';
+  }
+
+  @override
+  String get underpassOpenSource => 'Mở trang nguồn';
+
+  @override
+  String get underpassNotice =>
+      'Chỉ là trạng thái cảm biến, không phải video. Hãy tuân theo biển báo và điều tiết giao thông tại chỗ.';
+
+  @override
+  String situationUnderpass(String source, String names, String label) {
+    return '$source: $names $label';
+  }
+
+  @override
+  String get mapLayerUnderpassNone => 'Không có dữ liệu tình trạng ngập';
+
+  @override
   String get mapLayerTyphoonTitle => 'Thông tin bão';
 
   @override

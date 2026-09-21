@@ -1,0 +1,87 @@
+{
+ "Success": true,
+ "Data": [
+  {
+   "ObserverPointCd": 50,
+   "ObserverPointName": "柚木",
+   "AlertMode": "正常",
+   "WaterLevel": -173,
+   "PowerState": "正常",
+   "CommunicationState": "正常",
+   "Pumps": [
+    {
+     "PumpCd": 1,
+     "PumpState": "停止"
+    },
+    {
+     "PumpCd": 2,
+     "PumpState": "停止"
+    },
+    {
+     "PumpCd": 3,
+     "PumpState": "停止"
+    }
+   ],
+   "UpdateDate": "2026-09-21 09:45:00",
+   "Geometry": {
+    "Type": "POINT",
+    "Coordinates": [
+     138.40733,
+     34.980576
+    ]
+   }
+  },
+  {
+   "ObserverPointCd": 51,
+   "ObserverPointName": "鎌田",
+   "AlertMode": "注意",
+   "WaterLevel": -157,
+   "PowerState": "正常",
+   "CommunicationState": "正常",
+   "Pumps": [
+    {
+     "PumpCd": 1,
+     "PumpState": "停止"
+    },
+    {
+     "PumpCd": 2,
+     "PumpState": "停止"
+    },
+    {
+     "PumpCd": 3,
+     "PumpState": "停止"
+    }
+   ],
+   "UpdateDate": "2026-09-21 09:45:00",
+   "Geometry": {
+    "Type": "POINT",
+    "Coordinates": [
+     138.36426,
+     34.944454
+    ]
+   }
+  },
+  {
+   "ObserverPointCd": 52,
+   "ObserverPointName": "巴町(静鉄)",
+   "AlertMode": "通行止",
+   "WaterLevel": -30,
+   "PowerState": "－",
+   "CommunicationState": "正常",
+   "Pumps": [
+    {
+     "PumpCd": 1,
+     "PumpState": "停止"
+    }
+   ],
+   "UpdateDate": "2026-09-21 09:45:00",
+   "Geometry": {
+    "Type": "POINT",
+    "Coordinates": [
+     138.48628,
+     35.016933
+    ]
+   }
+  }
+ ]
+}

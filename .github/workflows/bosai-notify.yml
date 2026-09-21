@@ -25,10 +25,12 @@ jobs:
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: python tools/bosai_notify.py
+      - name: 地下道の冠水状況を取得（段階が変わったときだけ更新）
+        run: python tools/underpass.py
       - name: 通知状態をコミット（変更があるときのみ）
         run: |
           git config user.name "livecam-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/bosai_notify_state.json
+          git add data/bosai_notify_state.json data/underpass_status.json
           git diff --cached --quiet || git commit -m "bosai: notify state"
           git push || (git pull --rebase --autostash && git push) || (sleep 20 && git pull --rebase --autostash && git push)

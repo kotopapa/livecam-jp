@@ -2135,6 +2135,50 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
+  String get mapLayerUnderpassTitle => '지하차도 침수 상황';
+
+  @override
+  String get mapLayerUnderpassSubtitle =>
+      '센서 기반 통행 가능·주의·통행 금지（지바시·사이타마시·시즈오카시·다카마쓰시·효고현）';
+
+  @override
+  String mapLegendUnderpass(int n) {
+    return '지하차도 침수 상황（$n곳）';
+  }
+
+  @override
+  String get underpassLevel0 => '통행 가능';
+
+  @override
+  String get underpassLevel1 => '통행 주의';
+
+  @override
+  String get underpassLevel2 => '통행 금지';
+
+  @override
+  String get underpassLevelUnknown => '불명';
+
+  @override
+  String underpassUpdated(String at) {
+    return '정보원 갱신: $at';
+  }
+
+  @override
+  String get underpassOpenSource => '정보원 페이지 열기';
+
+  @override
+  String get underpassNotice =>
+      '센서 상태 표시이며 영상이 아닙니다. 실제 통행 여부는 현장의 도로 정보판과 교통 규제를 따르세요.';
+
+  @override
+  String situationUnderpass(String source, String names, String label) {
+    return '$source: $names $label';
+  }
+
+  @override
+  String get mapLayerUnderpassNone => '침수 상황 데이터가 없습니다';
+
+  @override
   String get mapLayerTyphoonTitle => '태풍 정보';
 
   @override

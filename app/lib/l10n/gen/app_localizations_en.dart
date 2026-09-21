@@ -2204,6 +2204,50 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get mapLayerUnderpassTitle => 'Underpass flooding status';
+
+  @override
+  String get mapLayerUnderpassSubtitle =>
+      'Sensor-based passable / caution / closed (Chiba, Saitama, Shizuoka, Takamatsu and Hyogo Pref.)';
+
+  @override
+  String mapLegendUnderpass(int n) {
+    return 'Underpass flooding status ($n sites)';
+  }
+
+  @override
+  String get underpassLevel0 => 'Passable';
+
+  @override
+  String get underpassLevel1 => 'Caution';
+
+  @override
+  String get underpassLevel2 => 'Closed';
+
+  @override
+  String get underpassLevelUnknown => 'Unknown';
+
+  @override
+  String underpassUpdated(String at) {
+    return 'Source updated: $at';
+  }
+
+  @override
+  String get underpassOpenSource => 'Open the source page';
+
+  @override
+  String get underpassNotice =>
+      'Sensor status only, not video. Follow the road signs and traffic controls on site.';
+
+  @override
+  String situationUnderpass(String source, String names, String label) {
+    return '$source: $names $label';
+  }
+
+  @override
+  String get mapLayerUnderpassNone => 'No flooding status data';
+
+  @override
   String get mapLayerTyphoonTitle => 'Typhoon';
 
   @override

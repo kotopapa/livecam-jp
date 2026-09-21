@@ -1,0 +1,68 @@
+{
+ "error": false,
+ "data": [
+  {
+   "id": "jp.takamatsu.smartcity.flood.FloodSituation.1",
+   "msg": {
+    "coords": [
+     134.118465,
+     34.339928
+    ],
+    "type": "FloodSituation",
+    "address": "高松町　木村内科南",
+    "application": "OPERATOR",
+    "dateIssued": "2025-10-30T04:37:00.000Z",
+    "firmwareVersion": "2.0.1",
+    "geoCrosses": "JR高徳線",
+    "name": "市道明神永之谷線",
+    "relatedEntity": "jp.takamatsu.smartcity.flood.Rainfall.0002",
+    "status": 0,
+    "uploadDate": "2019-06-12T15:00:00.000Z"
+   },
+   "tilehash": "2432242434344222431114321",
+   "ttl": 1789956771
+  },
+  {
+   "id": "jp.takamatsu.smartcity.flood.FloodSituation.10",
+   "msg": {
+    "coords": [
+     133.999697,
+     34.332593
+    ],
+    "type": "FloodSituation",
+    "address": "鬼無町藤井　キナシ大林病院南",
+    "application": "OPERATOR",
+    "dateIssued": "2026-09-21T01:12:00.000Z",
+    "firmwareVersion": "2.0.1",
+    "geoCrosses": "JR予讃線",
+    "name": "市道木太鬼無線",
+    "relatedEntity": "jp.takamatsu.smartcity.flood.Rainfall.0003",
+    "status": 1,
+    "uploadDate": "2019-06-12T15:00:00.000Z"
+   },
+   "tilehash": "2432242434334132244112434",
+   "ttl": 1789956772
+  },
+  {
+   "id": "jp.takamatsu.smartcity.flood.FloodSituation.11",
+   "msg": {
+    "coords": [
+     133.992101,
+     34.294558
+    ],
+    "type": "FloodSituation",
+    "address": "中間町　高松西ＩＣ東",
+    "application": "OPERATOR",
+    "dateIssued": "2026-09-21T01:12:00.000Z",
+    "firmwareVersion": "2.0.1",
+    "geoCrosses": "主要地方道三木国分寺線",
+    "name": "市道中間地下道1号線",
+    "relatedEntity": "jp.takamatsu.smartcity.flood.Rainfall.0003",
+    "status": 0,
+    "uploadDate": "2019-06-12T15:00:00.000Z"
+   },
+   "tilehash": "2432244212112131431114312",
+   "ttl": 1789956772
+  }
+ ]
+}

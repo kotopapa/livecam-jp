@@ -17,6 +17,7 @@ class SituationCard extends StatelessWidget {
     required this.onOpenWarning,
     required this.onOpenQuake,
     required this.onOpenTyphoon,
+    required this.onOpenUnderpass,
   });
 
   final Situation situation;
@@ -25,6 +26,9 @@ class SituationCard extends StatelessWidget {
   final VoidCallback onOpenQuake;
   /// 台風行のタップ（TC番号を渡す。地図はその台風だけを表示する）
   final ValueChanged<String> onOpenTyphoon;
+
+  /// 地下道の冠水行のタップ（地図の冠水状況レイヤーを開く）
+  final VoidCallback onOpenUnderpass;
 
   static const _maxRows = 4;
 
@@ -73,6 +77,20 @@ class SituationCard extends StatelessWidget {
         color: f.level == FloodLevel.caution ? const Color(0xFFB8A800) : f.level.color,
         text: text,
         onTap: onOpenWarning,
+      ));
+    }
+    for (final src in s.underpass) {
+      final alerts = src.alerts;
+      if (alerts.isEmpty) continue;
+      final worst = alerts.map((p) => p.level).reduce((a, b) => a > b ? a : b);
+      final names = alerts.take(3).map((p) => p.name).join('・') +
+          (alerts.length > 3 ? ' ${l10n.situationMore(alerts.length - 3)}' : '');
+      rows.add(_Row(
+        icon: Icons.water_damage,
+        color: worst >= 2 ? const Color(0xFFD32F2F) : const Color(0xFFF9A825),
+        text: l10n.situationUnderpass(src.operator.isNotEmpty ? src.operator : src.name, names,
+            worst >= 2 ? l10n.underpassLevel2 : l10n.underpassLevel1),
+        onTap: onOpenUnderpass,
       ));
     }
     if (s.quakes.isNotEmpty) {

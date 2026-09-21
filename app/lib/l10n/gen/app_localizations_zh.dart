@@ -2113,6 +2113,49 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
+  String get mapLayerUnderpassTitle => '地下通道积水状况';
+
+  @override
+  String get mapLayerUnderpassSubtitle =>
+      '基于传感器的可通行／注意／禁止通行（千叶市、埼玉市、静冈市、高松市、兵库县）';
+
+  @override
+  String mapLegendUnderpass(int n) {
+    return '地下通道积水状况（$n处）';
+  }
+
+  @override
+  String get underpassLevel0 => '可通行';
+
+  @override
+  String get underpassLevel1 => '注意通行';
+
+  @override
+  String get underpassLevel2 => '禁止通行';
+
+  @override
+  String get underpassLevelUnknown => '不明';
+
+  @override
+  String underpassUpdated(String at) {
+    return '信息源更新: $at';
+  }
+
+  @override
+  String get underpassOpenSource => '打开信息源页面';
+
+  @override
+  String get underpassNotice => '仅为传感器状态显示，并非视频。实际能否通行请遵循现场道路信息板和交通管制。';
+
+  @override
+  String situationUnderpass(String source, String names, String label) {
+    return '$source: $names$label';
+  }
+
+  @override
+  String get mapLayerUnderpassNone => '没有积水状况数据';
+
+  @override
   String get mapLayerTyphoonTitle => '台风信息';
 
   @override
@@ -4458,6 +4501,49 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String detailNotUpdatingSince(String date) {
     return '自$date起影像未更新';
   }
+
+  @override
+  String get mapLayerUnderpassTitle => '地下道積水狀況';
+
+  @override
+  String get mapLayerUnderpassSubtitle =>
+      '依感測器判定的可通行／注意／禁止通行（千葉市、埼玉市、靜岡市、高松市、兵庫縣）';
+
+  @override
+  String mapLegendUnderpass(int n) {
+    return '地下道積水狀況（$n處）';
+  }
+
+  @override
+  String get underpassLevel0 => '可通行';
+
+  @override
+  String get underpassLevel1 => '注意通行';
+
+  @override
+  String get underpassLevel2 => '禁止通行';
+
+  @override
+  String get underpassLevelUnknown => '不明';
+
+  @override
+  String underpassUpdated(String at) {
+    return '資訊來源更新: $at';
+  }
+
+  @override
+  String get underpassOpenSource => '開啟資訊來源頁面';
+
+  @override
+  String get underpassNotice => '僅為感測器狀態顯示，並非影像。實際能否通行請依現場道路資訊板與交通管制。';
+
+  @override
+  String situationUnderpass(String source, String names, String label) {
+    return '$source: $names$label';
+  }
+
+  @override
+  String get mapLayerUnderpassNone => '沒有積水狀況資料';
 
   @override
   String get mapLayerTyphoonTitle => '颱風資訊';

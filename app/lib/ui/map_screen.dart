@@ -24,6 +24,7 @@ import '../data/jma_typhoon.dart';
 import '../data/route_corridor.dart';
 import '../data/situation.dart';
 import '../data/shelter_layers.dart';
+import '../data/underpass.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
 import '../util/geo.dart';
@@ -181,6 +182,10 @@ class _MapScreenState extends State<MapScreen> {
         Analytics.event('situation_open', params: const {'kind': 'typhoon'});
         _setLayer(MapLayerKind.typhoon, typhoonId: id);
       },
+      onOpenUnderpass: () {
+        Analytics.event('situation_open', params: const {'kind': 'underpass'});
+        _openUnderpassLayer();
+      },
     );
   }
 
@@ -238,6 +243,8 @@ class _MapScreenState extends State<MapScreen> {
   List<Typhoon> _typhoons = const [];
   /// 台風レイヤーで表示する台風の TC番号。null なら発表中の全台風
   String? _typhoonId;
+  /// 地下道の冠水状況（自治体センサー。data/underpass.dart）
+  UnderpassStatus _underpass = UnderpassStatus.empty;
   SnowTime? _snowTime;
   /// 「いま起きていること」カード（起動時と10分ごとに更新。閉じた内容は再表示しない）
   Situation? _situation;
@@ -333,6 +340,9 @@ class _MapScreenState extends State<MapScreen> {
         final st = await JmaLayers.fetchLatestSnow();
         if (st != null) _snowTime = st;
         ok = st != null;
+      case MapLayerKind.underpass:
+        _underpass = await Underpass.fetch();
+        ok = _underpass.sources.isNotEmpty;
       case MapLayerKind.none:
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardLandslide:
@@ -471,6 +481,14 @@ class _MapScreenState extends State<MapScreen> {
             title: Text(l10n.mapLayerShelterTitle),
             subtitle: Text(l10n.mapLayerShelterSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.shelters); },
+          ),
+          // 地下道（アンダーパス）の冠水状況（自治体センサーの状態表示。1.5.1）
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.underpass ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.underpass ? Theme.of(ctx).colorScheme.primary : null),
+            title: Text(l10n.mapLayerUnderpassTitle),
+            subtitle: Text(l10n.mapLayerUnderpassSubtitle),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.underpass); },
           ),
           // 防災拠点（給水拠点・防災備蓄倉庫）は公開自治体が4都県8自治体と少ないため
           // 1.2.0 では選択肢に出さない（2026-08-31 ユーザー判断）。実装は残してあり、
@@ -1407,12 +1425,24 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
         ]);
+      case MapLayerKind.underpass:
+        if (_underpass.sources.isEmpty) {
+          title = l10n.mapLayerUnderpassNone;
+        } else {
+          title = l10n.mapLegendUnderpass(_underpass.allPoints.length);
+          items.addAll([
+            swatch(const Color(0xFF1E88E5), l10n.underpassLevel0),
+            swatch(const Color(0xFFF9A825), l10n.underpassLevel1),
+            swatch(const Color(0xFFD32F2F), l10n.underpassLevel2),
+          ]);
+        }
       case MapLayerKind.none:
         title = '';
     }
     final hazard = HazardLayers.isHazard(_layer) ||
         _layer == MapLayerKind.shelters ||
-        _layer == MapLayerKind.facilities;
+        _layer == MapLayerKind.facilities ||
+        _layer == MapLayerKind.underpass;
     final layerLoading = _layerLoading ||
         (_layer == MapLayerKind.shelters && (_shelters?.loading ?? false)) ||
         (_layer == MapLayerKind.facilities && (_facilities?.loading ?? false));
@@ -1463,6 +1493,9 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
         Row(mainAxisSize: MainAxisSize.min, children: items),
+        if (_layer == MapLayerKind.underpass)
+          for (final s in _underpass.sources)
+            Text(s.attribution, style: const TextStyle(fontSize: 9, color: Colors.black54)),
         if (!hazard)
           const Text(JmaLayers.attribution,
               style: TextStyle(fontSize: 9, color: Colors.black54)),
@@ -1666,6 +1699,130 @@ class _MapScreenState extends State<MapScreen> {
     ];
   }
 
+  // --- 地下道（アンダーパス）の冠水状況レイヤー（自治体センサーの状態表示） ---
+
+  /// カードや通知から: レイヤーを開き、注意・止めの地下道があればそこへ寄せる
+  Future<void> _openUnderpassLayer() async {
+    await _setLayer(MapLayerKind.underpass);
+    final alerts = _underpass.alerts;
+    if (alerts.isEmpty || !mounted) return;
+    if (alerts.length == 1) {
+      _controller.move(alerts.first.pos, 14);
+    } else {
+      try {
+        _controller.fitCamera(CameraFit.bounds(
+          bounds: LatLngBounds.fromPoints([for (final p in alerts) p.pos]),
+          padding: const EdgeInsets.fromLTRB(40, 120, 40, 200),
+          maxZoom: 14,
+        ));
+      } catch (_) {}
+    }
+    final z = _controller.camera.zoom;
+    if (z.isFinite && mounted) setState(() => _zoom = z);
+  }
+
+  List<Widget> _underpassWidgets() {
+    final markers = <Marker>[];
+    for (final s in _underpass.sources) {
+      for (final p in s.points) {
+        markers.add(Marker(
+          point: p.pos,
+          width: 120,
+          height: 46,
+          child: GestureDetector(
+            onTap: () => _showUnderpassInfo(s, p),
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              Container(
+                width: 22,
+                height: 22,
+                decoration: BoxDecoration(
+                  color: p.color,
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white, width: 2),
+                  boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 3)],
+                ),
+                child: Icon(
+                    p.level >= 2 ? Icons.block : (p.level == 1 ? Icons.priority_high : Icons.check),
+                    size: 14,
+                    color: Colors.white),
+              ),
+              if (p.isAlert || _zoom >= 13)
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.9),
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  child: Text(p.name,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          color: p.isAlert ? p.color : Colors.black87)),
+                ),
+            ]),
+          ),
+        ));
+      }
+    }
+    return [if (markers.isNotEmpty) MarkerLayer(markers: markers)];
+  }
+
+  void _showUnderpassInfo(UnderpassSource s, UnderpassPoint p) {
+    final l10n = context.l10n;
+    final label = switch (p.level) {
+      0 => l10n.underpassLevel0,
+      1 => l10n.underpassLevel1,
+      2 => l10n.underpassLevel2,
+      _ => l10n.underpassLevelUnknown,
+    };
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+          child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(children: [
+              Container(
+                width: 14,
+                height: 14,
+                decoration: BoxDecoration(color: p.color, shape: BoxShape.circle),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(p.name,
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(color: p.color, borderRadius: BorderRadius.circular(12)),
+                child: Text(label,
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12)),
+              ),
+            ]),
+            const SizedBox(height: 8),
+            if (p.at.isNotEmpty)
+              Text(l10n.underpassUpdated(p.at),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+            const SizedBox(height: 4),
+            Text(l10n.underpassNotice, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+            const SizedBox(height: 4),
+            Text(s.attribution, style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+            const SizedBox(height: 8),
+            if (s.url.isNotEmpty)
+              OutlinedButton.icon(
+                onPressed: () => launchUrl(Uri.parse(s.url), mode: LaunchMode.externalApplication),
+                icon: const Icon(Icons.open_in_new, size: 16),
+                label: Text(l10n.underpassOpenSource),
+              ),
+          ]),
+        ),
+      ),
+    );
+  }
+
   /// 地図レイヤーの地図要素（タイル/マーカー）
   List<Widget> _layerWidgets() {
     switch (_layer) {
@@ -1801,6 +1958,8 @@ class _MapScreenState extends State<MapScreen> {
         return _shelterWidgets();
       case MapLayerKind.facilities:
         return _facilityWidgets();
+      case MapLayerKind.underpass:
+        return _underpassWidgets();
       case MapLayerKind.none:
         return const [];
     }

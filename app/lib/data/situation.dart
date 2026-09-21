@@ -13,6 +13,7 @@ import 'package:http/http.dart' as http;
 import 'jma_flood.dart';
 import 'jma_layers.dart';
 import 'jma_typhoon.dart';
+import 'underpass.dart';
 
 /// 特別警報・危険警報が出ている都道府県（r8 map.json）
 class WarningPrefs {
@@ -69,6 +70,7 @@ class Situation {
     required this.floods,
     required this.quakes,
     required this.loadedAt,
+    this.underpass = const [],
   });
 
   final WarningPrefs warnings;
@@ -80,6 +82,9 @@ class Situation {
 
   /// 取得時刻（[empty] だけ null）
   final DateTime? loadedAt;
+
+  /// 通行注意・通行止めの地下道がある情報源（自治体の冠水情報システム）
+  final List<UnderpassSource> underpass;
 
   static const empty = Situation(
     warnings: WarningPrefs(),
@@ -95,7 +100,8 @@ class Situation {
       warnings.danger.isNotEmpty ||
       typhoons.isNotEmpty ||
       floods.isNotEmpty ||
-      quakes.isNotEmpty;
+      quakes.isNotEmpty ||
+      underpass.isNotEmpty;
 
   /// 内容の識別子。閉じたカードは同じ内容のあいだ再表示しない（内容が変われば出る）
   String get signature => [
@@ -104,6 +110,7 @@ class Situation {
         't:${typhoons.map((t) => '${t.id}/${t.analysis.categoryEn}').join(',')}',
         'f:${floods.map((f) => '${f.riverCode}/${f.level.level}').join(',')}',
         'q:${quakes.map((q) => '${q.at.toUtc().toIso8601String()}/${q.maxIntensity}').join(',')}',
+        'u:${underpass.map((s) => s.alerts.map((p) => '${s.id}/${p.id}/${p.level}').join(',')).join(',')}',
       ].join('|');
 
   /// 震度4以上か（'4','5-','5+','6-','6+','7'）
@@ -135,13 +142,14 @@ class SituationLoader {
     }
   }
 
-  /// 4系統を並列に取得。失敗した系統は空として扱う
+  /// 5系統を並列に取得。失敗した系統は空として扱う
   static Future<Situation> load() async {
     final results = await Future.wait<Object?>([
       fetchWarnings().catchError((_) => const WarningPrefs()),
       JmaTyphoon.fetchAll().catchError((_) => const <Typhoon>[]),
       JmaFlood.fetch().catchError((_) => null),
       JmaLayers.fetchQuakes(QuakePeriod.day).catchError((_) => const <QuakePoint>[]),
+      Underpass.fetch().catchError((_) => UnderpassStatus.empty),
     ]);
     final quakes = (results[3] as List<QuakePoint>? ?? const [])
         .where((q) => Situation.intensityAtLeast4(q.maxIntensity))
@@ -153,6 +161,7 @@ class SituationLoader {
       floods: results[2] as List<FloodForecast>? ?? const [],
       quakes: quakes,
       loadedAt: DateTime.now(),
+      underpass: (results[4] as UnderpassStatus? ?? UnderpassStatus.empty).alertSources,
     );
   }
 }

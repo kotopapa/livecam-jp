@@ -1,0 +1,97 @@
+{
+ "sigfox_states": [
+  {
+   "change_datetime": "2026-09-21 09:00:00",
+   "device_id": "ML1004580962",
+   "device_name": "春日地下道",
+   "location_latitude": "35.621485965514310",
+   "location_longitude": "140.104723870754240",
+   "group_cd": "e904a834d16c5b18a1e785d8b5722443",
+   "is_observation_paused": 0,
+   "group_name": "春日地下道",
+   "status1": "通行可能",
+   "raw_status1": "OPEN"
+  },
+  {
+   "change_datetime": "2026-09-21 09:00:00",
+   "device_id": "ML1058310462",
+   "device_name": "商高前地下道",
+   "location_latitude": "35.618563812561460",
+   "location_longitude": "140.106993622290470",
+   "group_cd": "00dea00336b1d034dc4846d62f7d91b7",
+   "is_observation_paused": 0,
+   "group_name": "商高前地下道",
+   "status1": "通行注意",
+   "raw_status1": "CAUTION"
+  },
+  {
+   "change_datetime": "2026-09-21 09:00:00",
+   "device_id": "ML1085237862",
+   "device_name": "弁天地下道",
+   "location_latitude": "35.614190542399570",
+   "location_longitude": "140.118433567009730",
+   "group_cd": "afa42ed244fe2163796c532b4ef5e42a",
+   "is_observation_paused": 0,
+   "group_name": "弁天地下道",
+   "status1": "通行止め",
+   "raw_status1": "CLOSE"
+  }
+ ],
+ "map_marker": {
+  "e904a834d16c5b18a1e785d8b5722443": {
+   "group_cd": "e904a834d16c5b18a1e785d8b5722443",
+   "group_name": "春日地下道",
+   "alarm_level": 0,
+   "status_message": "春日地下道",
+   "observation_type": []
+  },
+  "00dea00336b1d034dc4846d62f7d91b7": {
+   "group_cd": "00dea00336b1d034dc4846d62f7d91b7",
+   "group_name": "商高前地下道",
+   "alarm_level": 1,
+   "status_message": "商高前地下道",
+   "observation_type": []
+  },
+  "afa42ed244fe2163796c532b4ef5e42a": {
+   "group_cd": "afa42ed244fe2163796c532b4ef5e42a",
+   "group_name": "弁天地下道",
+   "alarm_level": 2,
+   "status_message": "弁天地下道",
+   "observation_type": []
+  }
+ },
+ "latest_information": {
+  "latest_data": [
+   {
+    "group_cd": "e904a834d16c5b18a1e785d8b5722443",
+    "group_name": "春日地下道",
+    "device_id": "ML1004580962",
+    "device_name": "春日地下道",
+    "change_datetime": "9/21 09:00",
+    "observation_type": {
+     "CONTACT_CONTROL_DI8": "通行可能"
+    }
+   },
+   {
+    "group_cd": "00dea00336b1d034dc4846d62f7d91b7",
+    "group_name": "商高前地下道",
+    "device_id": "ML1058310462",
+    "device_name": "商高前地下道",
+    "change_datetime": "9/21 09:00",
+    "observation_type": {
+     "CONTACT_CONTROL_DI8": "通行可能"
+    }
+   },
+   {
+    "group_cd": "afa42ed244fe2163796c532b4ef5e42a",
+    "group_name": "弁天地下道",
+    "device_id": "ML1085237862",
+    "device_name": "弁天地下道",
+    "change_datetime": "9/21 09:00",
+    "observation_type": {
+     "CONTACT_CONTROL_DI8": "通行可能"
+    }
+   }
+  ]
+ }
+}

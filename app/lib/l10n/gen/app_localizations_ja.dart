@@ -2125,6 +2125,50 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
+  String get mapLayerUnderpassTitle => '地下道の冠水状況';
+
+  @override
+  String get mapLayerUnderpassSubtitle =>
+      '自治体のセンサーによる通行可・注意・止め（千葉市・さいたま市・静岡市・高松市・兵庫県）';
+
+  @override
+  String mapLegendUnderpass(int n) {
+    return '地下道の冠水状況（$nか所）';
+  }
+
+  @override
+  String get underpassLevel0 => '通行可';
+
+  @override
+  String get underpassLevel1 => '通行注意';
+
+  @override
+  String get underpassLevel2 => '通行止め';
+
+  @override
+  String get underpassLevelUnknown => '不明';
+
+  @override
+  String underpassUpdated(String at) {
+    return '情報源の更新: $at';
+  }
+
+  @override
+  String get underpassOpenSource => '情報源のページを開く';
+
+  @override
+  String get underpassNotice =>
+      'センサーの状態表示で、映像ではありません。実際の通行可否は現地の道路情報板と交通規制に従ってください。';
+
+  @override
+  String situationUnderpass(String source, String names, String label) {
+    return '$source: $namesが$label';
+  }
+
+  @override
+  String get mapLayerUnderpassNone => '冠水状況のデータがありません';
+
+  @override
   String get mapLayerTyphoonTitle => '台風情報';
 
   @override
@@ -4515,6 +4559,50 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String detailNotUpdatingSince(String date) {
     return '$dateから がぞうが かわって いません';
   }
+
+  @override
+  String get mapLayerUnderpassTitle => 'ちかどうの みずの じょうたい';
+
+  @override
+  String get mapLayerUnderpassSubtitle =>
+      'とおれる・ちゅうい・とおれない（ちばし・さいたまし・しずおかし・たかまつし・ひょうごけん）';
+
+  @override
+  String mapLegendUnderpass(int n) {
+    return 'ちかどうの みずの じょうたい（$nかしょ）';
+  }
+
+  @override
+  String get underpassLevel0 => 'とおれる';
+
+  @override
+  String get underpassLevel1 => 'ちゅうい';
+
+  @override
+  String get underpassLevel2 => 'とおれない';
+
+  @override
+  String get underpassLevelUnknown => 'わからない';
+
+  @override
+  String underpassUpdated(String at) {
+    return 'こうしん: $at';
+  }
+
+  @override
+  String get underpassOpenSource => 'もとの ページを ひらく';
+
+  @override
+  String get underpassNotice =>
+      'センサーの じょうほうで、えいぞうでは ありません。じっさいは げんちの あんないに したがって ください。';
+
+  @override
+  String situationUnderpass(String source, String names, String label) {
+    return '$source: $namesが$label';
+  }
+
+  @override
+  String get mapLayerUnderpassNone => 'データが ありません';
 
   @override
   String get mapLayerTyphoonTitle => 'たいふうの じょうほう';

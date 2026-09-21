@@ -11,6 +11,7 @@
     site/v1/facilities/*.json       # 防災拠点（data/facilities/ のコピー。tools/facilities.py が月次生成）
     site/v1/stockpile/*.json        # 備蓄推奨商品（data/stockpile/ のコピー。tools/stockpile_check.py が月次点検）
     site/v1/x_accounts.json         # 自治体・国の機関の災害情報Xアカウント（data/x_accounts.json の採用分。tools/x_accounts_publish.py）
+    site/v1/underpass_status.json   # 地下道の冠水状況（data/underpass_status.json。tools/underpass.py）
 
 アプリに配るのは approved のみ。verification 等の内部フィールドは落とす。
 """
@@ -168,6 +169,11 @@ def build() -> int:
     n_stockpile = sync_stockpile()
     if n_stockpile:
         print(f"stockpile: {n_stockpile}ファイルをコピー")
+
+    # 地下道（アンダーパス）の冠水状況（data/underpass_status.json。tools/underpass.py が5分おきに更新）
+    from tools.underpass import sync_site as sync_underpass
+    if sync_underpass():
+        print("underpass_status.json: コピー")
 
     # 自治体・国の機関の災害情報 X アカウント（data/x_accounts.json の採用分のみ配信）
     from tools.x_accounts_publish import sync_site as sync_x_accounts

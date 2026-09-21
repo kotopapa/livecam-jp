@@ -10,6 +10,7 @@ on:
       - "data/shelters/**"
       - "data/facilities/**"
       - "data/stockpile/**"
+      - "data/underpass_status.json"
       - "site/**"
   workflow_dispatch:
 

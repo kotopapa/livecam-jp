@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+	<Document>
+		<name>SubmergenceMap</name>
+		<Style id="1">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SubmergGreen.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="2">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SubmergOrange.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="3">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SubmergRed.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="99">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SubmergValueUnknown.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Folder>
+			<Placemark>
+				<name>久寿川地下道</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>路面冠水</value>
+					</Data>
+					<Data name="冠水センサID">
+						<value>107</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#1</styleUrl>
+				<Point>
+					<coordinates>135.356056820805,34.7275771156089,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>神祇官地下道</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>路面冠水</value>
+					</Data>
+					<Data name="冠水センサID">
+						<value>108</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#2</styleUrl>
+				<Point>
+					<coordinates>135.352656520702,34.7389825922608,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>栄根JRｱﾝﾀﾞｰ交差部</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>路面冠水</value>
+					</Data>
+					<Data name="冠水センサID">
+						<value>114</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#3</styleUrl>
+				<Point>
+					<coordinates>135.41287867677,34.8235091126217,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>御着JR交差部</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>路面冠水</value>
+					</Data>
+					<Data name="冠水センサID">
+						<value>122</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#99</styleUrl>
+				<Point>
+					<coordinates>134.736955789047,34.8160459395967,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>

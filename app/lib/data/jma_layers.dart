@@ -39,6 +39,9 @@ enum MapLayerKind {
 
   /// 気象庁の解析降雪量（24時間）
   snowfall24h,
+
+  /// 地下道（アンダーパス）の冠水状況（自治体センサー。data/underpass.dart）
+  underpass,
 }
 
 enum QuakePeriod { day, week, month }

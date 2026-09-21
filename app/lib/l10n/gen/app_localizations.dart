@@ -3892,6 +3892,78 @@ abstract class AppLocalizations {
   /// **'{date}から画像が更新されていません'**
   String detailNotUpdatingSince(String date);
 
+  /// No description provided for @mapLayerUnderpassTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'地下道の冠水状況'**
+  String get mapLayerUnderpassTitle;
+
+  /// No description provided for @mapLayerUnderpassSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'自治体のセンサーによる通行可・注意・止め（千葉市・さいたま市・静岡市・高松市・兵庫県）'**
+  String get mapLayerUnderpassSubtitle;
+
+  /// No description provided for @mapLegendUnderpass.
+  ///
+  /// In ja, this message translates to:
+  /// **'地下道の冠水状況（{n}か所）'**
+  String mapLegendUnderpass(int n);
+
+  /// No description provided for @underpassLevel0.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行可'**
+  String get underpassLevel0;
+
+  /// No description provided for @underpassLevel1.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行注意'**
+  String get underpassLevel1;
+
+  /// No description provided for @underpassLevel2.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行止め'**
+  String get underpassLevel2;
+
+  /// No description provided for @underpassLevelUnknown.
+  ///
+  /// In ja, this message translates to:
+  /// **'不明'**
+  String get underpassLevelUnknown;
+
+  /// No description provided for @underpassUpdated.
+  ///
+  /// In ja, this message translates to:
+  /// **'情報源の更新: {at}'**
+  String underpassUpdated(String at);
+
+  /// No description provided for @underpassOpenSource.
+  ///
+  /// In ja, this message translates to:
+  /// **'情報源のページを開く'**
+  String get underpassOpenSource;
+
+  /// No description provided for @underpassNotice.
+  ///
+  /// In ja, this message translates to:
+  /// **'センサーの状態表示で、映像ではありません。実際の通行可否は現地の道路情報板と交通規制に従ってください。'**
+  String get underpassNotice;
+
+  /// 「いま起きていること」カードの行。{source}=情報源名（千葉市地下道冠水情報システム）、{names}=地下道名（・区切り）、{label}=通行注意/通行止め
+  ///
+  /// In ja, this message translates to:
+  /// **'{source}: {names}が{label}'**
+  String situationUnderpass(String source, String names, String label);
+
+  /// No description provided for @mapLayerUnderpassNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'冠水状況のデータがありません'**
+  String get mapLayerUnderpassNone;
+
   /// No description provided for @mapLayerTyphoonTitle.
   ///
   /// In ja, this message translates to:

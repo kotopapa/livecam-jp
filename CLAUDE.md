@@ -76,6 +76,21 @@ python site/build.py                            # 配信ファイル生成
 - **ケーブルテレビ株式会社（CC9・栃木市/館林/結城/筑西/古河）の地域カメラ 44台**（`cc9.jp/community/livecamera/`、静止画 `cc9.jp/lc/web-cam/lifecam_*.jpg` 約1分更新）。リンク規定が「リンクは必ずトップページへ」のため画像直接表示ではなく誘導型（`#panel_tochigi` 等のパネルアンカー付き）で採用（curated_still.yaml）。まず国道50号の2台、続いてユーザー指示で残り39台（重複の藤岡大橋を除く）を追加し計41台。座標はまとめサイト掲載値か地名からの推定（approx）。**同一 feed_url の候補は crawler が重複として落とす**ので誘導型は URL にアンカーを付けて区別する
 - review_cli の `--bulk` は件数入力の確認プロンプトがある（非対話なら `echo <件数> |` で渡す）。review_cli の保存は台帳の並び順を変えて diff が3万行になるので、HEAD の順序を保って追記し直した
 
+## 千葉市カメラ調査の知見（2026-09-21追記）
+
+- 千葉市内の公開カメラは少ない。河川は千葉県の簡易型河川監視カメラ4台（都川2・葭川・村田川。川の防災情報 ownCd=3073、県内168台は全て収録済み）のみで、**千葉市が独自に公開する河川カメラ・道路カメラは無い**（市の「地下道冠水情報システム」pub.os-alert.info/chiba/devmap は通行可/注意/止めの状態表示だけで映像なし。将来の情報源候補）。国交省千葉国道事務所のライブカメラは柏市の国道16号と道の駅とみうらだけ、道路情報提供システム(CD83)にも千葉県のカメラは無い
+- 高速は NEXCO の iHighway 誘導型（千葉北IC・大宮IC・貝塚IC）。**貝塚IC が大阪府貝塚市の座標（OSM ジオコーディングの取り違え）で登録されていた**のを千葉市若葉区へ修正。iHighway 由来の座標は同名地名に注意
+- YouTube: 本千葉町交差点（個人 hare teka、channel_id 登録）を追加。稲毛ヨットハーバー（千葉市スポーツ協会）は収録済み。bayfm 幕張・UQ 海浜幕張・ちーサービス緑区・千葉大学・東京情報大学は休止/調整中、千葉ポートタワーの旧ライブ（kankou.city.chiba.jp）は消滅
+- **livecamera24.jp 系（運営者未特定）の4台（若葉区小倉町・中野町、中央区新宿・中央港）は 2026-09-21 ユーザー判断で採用**（curated_youtube.yaml、channel_id 登録、削除依頼即応）。同系の沖縄本島南部7本も同じ判断で追加できる
+- ウェザーニュース（千葉市内28か所）は規約第9条で画像転載不可だが、**外部ページへの誘導型（web_page）なら可**（石垣で前例あり）。座標はページに無いので町名からの推定になる
+
+## 地下道（アンダーパス）冠水状況の知見（2026-09-21追記）
+
+- `tools/underpass.py` が5分おき（bosai-notify.yml）に自治体の公開センサー情報を取り `data/underpass_status.json` に書く。**段階（通行可0/注意1/止め2/不明-1）が変わったときだけ更新**して publish を起こす（時刻だけの変化では書かない）。site/build.py が `site/v1/underpass_status.json` へコピー。アプリは `app/lib/data/underpass.dart` → 地図レイヤー `MapLayerKind.underpass`（色付きピン＋タップで状態・情報源リンク）と「いま起きていること」カードの行（注意・止めがあるときだけ）
+- 情報源: 千葉市地下道冠水情報システム（オサシ・テクノス「フィールド監視システム」 `pub.os-alert.info/chiba/devmap/JSONlist4`、map_marker.alarm_level が正）と 静岡市「しずみちinfo」（`shizuokashi-road.appspot.com/pub1/flood/underpath`。WebAPIRoot は resources/config_pub.xml、API はオープンデータ提供）。**しずみちinfo の AlertMode は「正常」しか実測できていない**（注意/警戒/通行止の表記は推定でキーワード判定。初回の実発生時に確認する）。全国的にはリアルタイム公開は稀（多くは冠水想定箇所マップのみ）。os-alert の他テナント（sendai/nagoya 等）は JSON なし
+- 状態表示は映像ではないので、アプリでは「現地の道路情報板と交通規制に従う」注意書きを必ず添える
+- **全国調査（2026-09-21、47都道府県＋総務省調査＋メーカー事例）の結果、センサー状態を機械可読で公開しているのは 千葉市・静岡市・さいたま市・高松市・兵庫県の5者だけ**。兵庫県道路総合管理システム（`RoadLan/InternetGeneral/Map/SubmergenceMap.aspx` の KML、styleUrl #1通常/#2注意/#3通行止/#99故障、県管理25か所。免責のみで転載・リンク制限なし）、さいたま市水位情報システム（`ja/place.json`＋`data/water_level_latest.json`、CC BY 4.0、道路22か所。平常時 -0.30m で降雨時だけ注意0.1/警戒0.2m を超える）、たかまつマイセーフティマップ（Geolonia 中継 `cityos-kawaga-takamatsu-FloodSituation/messages`、市オープンデータ CC BY 4.0。中継エンドポイントは開発者ドキュメント非掲載）を追加済み。国交省「浸水センサ表示システム」(c-sensor.river.go.jp、アンダーパス397基) は**二次利用不可・ツール収集お断り**のため不採用。岐阜県「道の情報」は同等の API（`api/getUnderpath`）を持つが公開画面が off・全地点欠測で県へ照会が要る。静岡県の `kansui.json.php` は冠水を原因とする規制区間（センサー状態ではない）。仙台市・奈良県・浜松市は職員更新の告知/規制情報のみ、名古屋市はカメラ画像のみ（規約同意画面あり）。他は静的な冠水想定箇所マップだけ。予防的通行規制（レベル4連動）を導入する自治体が2026-09以降増えているので、Web公開の再確認は年1回程度で足りる
+
 ## 定期実行の知見（2026-08-28追記）
 
 - **GitHub Actionsのcronは間引かれ・停止することがある**（2026-08-26〜27に5分cronが数時間おきになり、最後は8時間停止。大阪の大雨危険警報の通知が遅れた）。公開リポジトリで実行枠の問題ではなく、GitHub側のスケジュール取りこぼし
@@ -187,6 +202,7 @@ python site/build.py                            # 配信ファイル生成
 
 - **台風情報**は気象庁の公開JSON `bosai/typhoon/data/targetTc.json`（発表中の熱帯低気圧一覧。`typhoonNumber` が英字 "a" 等なら「台風になる見込みの熱帯低気圧」、4桁 "2618" なら台風第18号）→ `data/<TC>/specifications.json`（実況・予報の位置・気圧・風速・予報円半径km・暴風警戒域 stormWarning.range）と `data/<TC>/forecast.json`（経路 track.preTyphoon/typhoon、予報円半径 m、暴風警戒域の包絡線 arc/line）。アプリは `app/lib/data/jma_typhoon.dart` で結合し、地図レイヤー `MapLayerKind.typhoon`（経路・予報進路・予報円・暴風警戒域を円で近似）と災害速報タブのカードに出す。5分メモリ控え。**複数発生時は地図左下に「すべて／台風第N号…」の切替チップ**を出し、選択中の台風だけ描く（`_typhoonId`、null=全部）。災害速報タブの「地図で進路を見る」と「いま起きていること」の台風行は `navigationRequest = 'map/typhoon/<TC番号>'` でその台風だけを選択して開く。選択中の台風が一覧から消えたら全表示に戻す
 - **指定河川洪水予報**は `bosai/flood/data/r8/flood_xml.json`（発表中の報の配列。無ければ `[]`）。項目は気象庁ページの JS から確認: riverCode / riverName / reportDatetime / infoType（訓練は除外）/ item{code,name} / class20s（対象市町村→都道府県）/ officeCodes。コード 20台=氾濫注意(L2)・30台=氾濫警戒(L3)・40台=氾濫危険(L4)・50台=氾濫発生(L5)。**2026-09-20 善福寺川（東京都・レベル4氾濫危険警報）の実発表で確認: `class20s` は無く `item.areas`（河川）と `officeCodes`（130000=東京）だけ**。都道府県は class20s が無ければ officeCodes の先頭2桁で導く（アプリ・bosai_notify とも。未対応だったため初回はプッシュが送られなかった）。アプリは `app/lib/data/jma_flood.dart`、台帳の `river_or_route` と河川名で照合して `RiverCamerasScreen` に出す
+- 災害速報タブの洪水予報の発表時刻は「9/20 21:50発表」と月日付き（前日の発表が翌日まで残るため。2026-09-21 ユーザー要望）
 - 洪水予報のプッシュは `tools/bosai_notify.py` の `check_flood_forecasts`。氾濫危険=danger（レベル4）・氾濫発生=special（レベル5）として気象警報と同じトピックに流し、キー `<pref>:flood<band>:<riverCode>` を active_special に同居させる
 - 洪水予報4段階・予報円・暴風警戒域・強風域・熱帯低気圧の各言語訳は気象庁 多言語辞書（`https://www.data.jma.go.jp/developer/jma_multilingual.xlsx`、シート「多言語辞書（本体）」、openpyxl で引ける）の公式訳に揃えた（2026-09-16）。「台風第N号」「強い/非常に強い/猛烈な」「降雪量」は辞書に無いので独自訳
 

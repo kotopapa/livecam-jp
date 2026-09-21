@@ -81,7 +81,7 @@ void main() {
       loadedAt: DateTime.utc(2026, 9, 15, 4),
     );
     expect(s.isNotable, isTrue);
-    expect(s.signature, 's:|d:11|t:|f:R1/4|q:2026-09-15T03:00:00.000Z/4');
+    expect(s.signature, 's:|d:11|t:|f:R1/4|q:2026-09-15T03:00:00.000Z/4|u:');
     // 内容が同じなら signature も同じ（閉じた状態を保つ判定に使う）
     final s2 = Situation(
       warnings: const WarningPrefs(danger: {'11'}),
