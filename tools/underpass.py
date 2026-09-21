@@ -49,6 +49,10 @@
 - 佐世保市道路冠水モニタリングシステム（https://sasebo.geoorm.com/ 、市道9路線）。トップ HTML の
   `<meta name="monitoring" data-list="…">` に JSON 配列（coordinate_lat/lon, monitoring_name, status 0=未検知 /
   1=5cm / 2=30cm / 3=50cm の冠水センサー段数, photo1_datetime）。著作権条項は柏市と同型（引用時は出典記載）
+- 掛川市河川水位道路冠水等情報システム（https://kakegawa.anw-suite.com/waterlevel/ 、道路冠水観測装置7か所）
+  `data_suii.cgi?road=<road_cd,…>` 1リクエスト → data[].kansuisu 0=正常 / 1=注意 / 2=危険 / 255=低温保護モード。
+  座標は `common/js/map.js` の maker_road 固定値（KAKEGAWA_POINTS）。規約に「営利目的利用不可・無断転載禁止」が
+  あるが 2026-09-21 ユーザー判断で採用（出典明記）。市への照会先は維持管理課 0537-21-1154
 
 level: 0=通行可 / 1=通行注意 / 2=通行止め / -1=不明（観測停止・取得失敗）
 """
@@ -164,7 +168,25 @@ SOURCES: list[dict[str, Any]] = [
         "attribution": "出典：佐世保市道路冠水モニタリングシステム（https://sasebo.geoorm.com/）",
         "kind": "sasebo",
     },
+    {
+        "id": "kakegawa",
+        "name": "掛川市河川水位道路冠水等情報システム",
+        "operator": "掛川市",
+        "prefecture": "22",
+        "url": "https://kakegawa.anw-suite.com/waterlevel/",
+        "api": "https://kakegawa.anw-suite.com/waterlevel/data_suii.cgi?road=1F73E70,1F73EA6,1F73A6E,1F73EB8,1F73BFF,1F73BEC,1F73E60",
+        "attribution": "出典：掛川市河川水位道路冠水等情報システム",
+        "kind": "kakegawa",
+    },
 ]
+
+# 掛川市の道路冠水観測装置（common/js/map.js の maker_road。2026-09-21 取得）
+KAKEGAWA_POINTS = {
+    "1F73E70": (34.760804, 137.972592), "1F73EA6": (34.768049, 137.975037), "1F73A6E": (34.761504, 137.998557),
+    "1F73EB8": (34.768682, 138.008041), "1F73BFF": (34.684230, 137.973089), "1F73BEC": (34.675401, 138.043625),
+    "1F73E60": (34.654673, 138.066594),
+}
+KAKEGAWA_STATUS = {0: (0, "正常"), 1: (1, "注意"), 2: (2, "危険")}
 
 SASEBO_STATUS = {0: (0, "冠水なし"), 1: (1, "冠水を検知（5cm）"), 2: (2, "冠水を検知（30cm）"), 3: (2, "冠水を検知（50cm）")}
 
@@ -485,6 +507,26 @@ def parse_sasebo(page: str) -> list[dict[str, Any]]:
     return sorted(out, key=lambda p: p["name"])
 
 
+def parse_kakegawa(data: dict[str, Any]) -> list[dict[str, Any]]:
+    """掛川市 data_suii.cgi の道路要素 → 点（座標は KAKEGAWA_POINTS）。"""
+    out = []
+    for x in (data or {}).get("data") or []:
+        if not isinstance(x, dict) or x.get("dat_ptn") != "road" or str(x.get("open_flg") or "1") != "1":
+            continue
+        cd = str(x.get("road_cd") or "")
+        if cd not in KAKEGAWA_POINTS:
+            continue
+        name = str(x.get("name") or "").strip()
+        if not name:
+            continue
+        k = x.get("kansuisu")
+        level, label = KAKEGAWA_STATUS.get(k if isinstance(k, int) else -1,
+                                           (-1, "低温保護モード" if k == 255 else "不明"))
+        lat, lng = KAKEGAWA_POINTS[cd]
+        out.append({"id": cd, "name": name, "lat": lat, "lng": lng, "level": level, "label": label, "at": ""})
+    return sorted(out, key=lambda p: p["name"])
+
+
 def parse_os_alert(data: dict[str, Any]) -> list[dict[str, Any]]:
     """フィールド監視システムの JSONlist4 → 地下道ごとの [{id,name,lat,lng,level,label,at}]。"""
     markers = data.get("map_marker") or {}
@@ -555,6 +597,8 @@ def fetch_source(src: dict[str, Any]) -> list[dict[str, Any]] | None:
             m = requests.get(src["master"], headers=headers, timeout=30)
             m.raise_for_status()
             return parse_riskma(m.json(), r.json())
+        if kind == "kakegawa":
+            return parse_kakegawa(r.json())
         if kind == "sasebo":
             return parse_sasebo(r.text)
         if kind == "fukui":

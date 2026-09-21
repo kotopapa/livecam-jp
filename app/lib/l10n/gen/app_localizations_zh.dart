@@ -2117,7 +2117,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get mapLayerUnderpassSubtitle =>
-      '基于传感器的可通行／注意／禁止通行（千叶市、埼玉市、柏市、静冈市、福井县、兵库县、加古川市、高松市、佐世保市）';
+      '基于传感器的可通行／注意／禁止通行（千叶市、埼玉市、柏市、静冈市、挂川市、福井县、兵库县、加古川市、高松市、佐世保市）';
 
   @override
   String mapLegendUnderpass(int n) {
@@ -4507,7 +4507,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapLayerUnderpassSubtitle =>
-      '依感測器判定的可通行／注意／禁止通行（千葉市、埼玉市、柏市、靜岡市、福井縣、兵庫縣、加古川市、高松市、佐世保市）';
+      '依感測器判定的可通行／注意／禁止通行（千葉市、埼玉市、柏市、靜岡市、掛川市、福井縣、兵庫縣、加古川市、高松市、佐世保市）';
 
   @override
   String mapLegendUnderpass(int n) {

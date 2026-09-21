@@ -145,3 +145,14 @@ def test_parse_sasebo_meta_json():
     assert (by["真申線（㈱福勇生コン周辺）"]["level"], by["真申線（㈱福勇生コン周辺）"]["label"]) == (2, "冠水を検知（50cm）")
     assert by["新橋線（三浦ふれあい橋周辺）"]["at"] == "2026-09-21 14:10" and abs(by["新橋線（三浦ふれあい橋周辺）"]["lat"] - 33.3037) < 0.001
     assert underpass.parse_sasebo("<html></html>") == []
+
+
+def test_parse_kakegawa_kansuisu():
+    pts = underpass.parse_kakegawa(json.loads((FIX.parent / "underpass_kakegawa.json").read_text(encoding="utf-8")))
+    by = {p["name"]: p for p in pts}
+    assert len(by) == 7
+    assert (by["市道国一富部線（領家地内）"]["level"], by["市道国一富部線（領家地内）"]["label"]) == (1, "注意")
+    assert (by["市道資生堂南線（長谷三丁目地内）"]["level"], by["市道資生堂南線（長谷三丁目地内）"]["label"]) == (2, "危険")
+    assert (by["市道旧県道相良大須賀線（大坂地内）"]["level"], by["市道旧県道相良大須賀線（大坂地内）"]["label"]) == (-1, "低温保護モード")
+    assert by["市道北村線（国安地内）"]["level"] == 0 and abs(by["市道北村線（国安地内）"]["lat"] - 34.6547) < 0.001
+    assert by["市道上張城西線（中央二丁目地内）"]["id"] == "1F73EB8"

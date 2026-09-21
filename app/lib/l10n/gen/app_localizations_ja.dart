@@ -2129,7 +2129,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mapLayerUnderpassSubtitle =>
-      '自治体の冠水センサーによる通行可・注意・止め・冠水検知（千葉市・さいたま市・柏市・静岡市・福井県・兵庫県・加古川市・高松市・佐世保市）';
+      '自治体の冠水センサーによる通行可・注意・止め・冠水検知（千葉市・さいたま市・柏市・静岡市・掛川市・福井県・兵庫県・加古川市・高松市・佐世保市）';
 
   @override
   String mapLegendUnderpass(int n) {
@@ -4565,7 +4565,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapLayerUnderpassSubtitle =>
-      'とおれる・ちゅうい・とおれない（ちばし・さいたまし・かしわし・しずおかし・ふくいけん・ひょうごけん・かこがわし・たかまつし・させぼし）';
+      'とおれる・ちゅうい・とおれない（ちばし・さいたまし・かしわし・しずおかし・かけがわし・ふくいけん・ひょうごけん・かこがわし・たかまつし・させぼし）';
 
   @override
   String mapLegendUnderpass(int n) {

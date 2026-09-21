@@ -2217,7 +2217,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get mapLayerUnderpassSubtitle =>
-      'Theo cảm biến: đi được / thận trọng / cấm đi (Chiba, Saitama, Kashiwa, Shizuoka, tỉnh Fukui, tỉnh Hyogo, Kakogawa, Takamatsu, Sasebo)';
+      'Theo cảm biến: đi được / thận trọng / cấm đi (Chiba, Saitama, Kashiwa, Shizuoka, Kakegawa, tỉnh Fukui, tỉnh Hyogo, Kakogawa, Takamatsu, Sasebo)';
 
   @override
   String mapLegendUnderpass(int n) {
