@@ -1664,9 +1664,10 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                   final (muni, name, warns) = _munis![i - 1];
                   final camCount = widget.app.repository
                       .displayableCameras()
+                      // 政令市（千葉市 12100 など）は配下の区のカメラも数える（2026-09-21: 千葉市が4台と出ていた）
                       .where((c) =>
                           c.prefecture == widget.pref &&
-                          c.municipality == muni)
+                          c.inMunicipality(muni))
                       .length;
                   final emergency = warns.any(_emergencyCodes.contains);
                   Color chipColor(String code) => widget.isAdvisory
