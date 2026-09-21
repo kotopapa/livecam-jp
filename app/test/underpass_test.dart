@@ -43,4 +43,15 @@ void main() {
     expect(sit.signature, endsWith('u:chiba/b/1,chiba/c/2'));
     expect(Situation.empty.signature, endsWith('u:'));
   });
+
+  test('冠水センサーの想定冠水範囲（lines）を [lat,lng] の折れ線として読む', () {
+    final p = UnderpassPoint.fromJson({
+      'id': '151', 'name': '指扇2385付近（冠水センサー）', 'lat': 35.914, 'lng': 139.572, 'level': 2, 'label': '冠水を検知',
+      'lines': [[[35.91402, 139.571877], [35.914005, 139.572311]], [[35.9, 139.5]], 'x'],
+    })!;
+    expect(p.lines.length, 1);
+    expect(p.lines.first.first.latitude, 35.91402);
+    expect(p.lines.first.first.longitude, 139.571877);
+    expect(UnderpassPoint.fromJson({'id': 'a', 'name': 'n', 'lat': 1.0, 'lng': 2.0, 'level': 0})!.lines, isEmpty);
+  });
 }

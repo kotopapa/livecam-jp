@@ -17,10 +17,12 @@
   `pub1/flood/underpath` → {Success, Data:[{ObserverPointName, AlertMode（正常 等）,
   WaterLevel, UpdateDate, Geometry{Coordinates:[lon,lat]}}]}。19か所
 - さいたま市水位情報システム（https://www.flood-info.city.saitama.jp/ 、CC BY 4.0・出典明記）
-  地点マスタ `ja/place.json`（place_type 2=道路（アンダーパス）17か所・4=道路（平面）5か所。
-  6=冠水センサー40か所は平面道路の「〇〇付近」なので対象外）と最新値 `data/water_level_latest.json`
-  （1分更新。type W/WC の水位計は a9 / a0 / c0=欠測・メンテナンス, a3=警戒水位超過, a2=注意水位超過,
-  それ以外=平常水位。判定順は SPA の setKansokuLatest と同じ）
+  地点マスタ `ja/place.json`（place_type 2=道路（アンダーパス）17か所・4=道路（平面）5か所・
+  6=冠水センサー40か所（平面道路の「〇〇付近」。2026-09-21 ユーザー決定でアンダーパス以外の冠水も見える化））
+  と最新値 `data/water_level_latest.json`（1分更新。type W/WC の水位計は a9 / a0 / c0=欠測・メンテナンス,
+  a3=警戒水位超過, a2=注意水位超過, それ以外=平常水位。type S の冠水センサーは s0=1 で冠水検知。
+  判定順は SPA の setKansokuLatest と同じ）。冠水センサーの「想定される冠水範囲」は `data/FLine.geojson`
+  （properties.number=place_no、LineString/MultiLineString）で、点の `lines` に [[lat,lng],...] の配列で持たせる
 - たかまつマイセーフティマップ（高松市。https://safetymap.takamatsu-fact.com/ 、市オープンデータ CC BY 4.0）
   市道アンダーパスの冠水センサー18か所。地図が読む Geolonia 中継の FIWARE ライブデータ
   `api-ws-admin.geolonia.com/v1/channels/cityos-kawaga-takamatsu-FloodSituation/messages`（GET・認証なし。
@@ -79,6 +81,7 @@ SOURCES: list[dict[str, Any]] = [
         "url": "https://www.flood-info.city.saitama.jp/",
         "api": "https://www.flood-info.city.saitama.jp/data/water_level_latest.json",
         "master": "https://www.flood-info.city.saitama.jp/ja/place.json",
+        "lines": "https://www.flood-info.city.saitama.jp/data/FLine.geojson",
         "attribution": "出典：さいたま市 水位情報システム（http://www.flood-info.city.saitama.jp）を加工して作成",
         "kind": "saitama",
     },
@@ -108,7 +111,7 @@ SOURCES: list[dict[str, Any]] = [
 HYOGO_STYLE = {"1": (0, "通常"), "2": (1, "冠水通行注意"), "3": (2, "冠水通行止"), "99": (-1, "不明（故障）")}
 
 JST = timezone(timedelta(hours=9))
-SAITAMA_ROAD_TYPES = {2: "道路（アンダーパス）", 4: "道路（平面）"}
+SAITAMA_ROAD_TYPES = {2: "道路（アンダーパス）", 4: "道路（平面）", 6: "冠水センサー"}
 TAKAMATSU_STALE = timedelta(hours=24)
 
 LEVEL_BY_TEXT = {"通行可能": 0, "通行可": 0, "通行注意": 1, "通行止め": 2, "通行止": 2}
@@ -155,7 +158,35 @@ def parse_shizumichi(data: dict[str, Any]) -> list[dict[str, Any]]:
     return sorted(out, key=lambda p: p["name"])
 
 
-def parse_saitama(places: list[dict[str, Any]], latest: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def saitama_lines(geojson: dict[str, Any] | None) -> dict[str, list[list[list[float]]]]:
+    """FLine.geojson → {place_no: [[[lat,lng],...], ...]}（想定される冠水範囲の折れ線）。"""
+    out: dict[str, list[list[list[float]]]] = {}
+    for f in (geojson or {}).get("features") or []:
+        props = f.get("properties") or {}
+        geom = f.get("geometry") or {}
+        no = str(props.get("number") or "")
+        coords = geom.get("coordinates") or []
+        if geom.get("type") == "LineString":
+            coords = [coords]
+        elif geom.get("type") != "MultiLineString":
+            continue
+        lines = []
+        for line in coords:
+            pts = []
+            for c in line:
+                try:
+                    pts.append([round(float(c[1]), 6), round(float(c[0]), 6)])
+                except (TypeError, ValueError, IndexError):
+                    continue
+            if len(pts) >= 2:
+                lines.append(pts)
+        if no and lines:
+            out.setdefault(no, []).extend(lines)
+    return out
+
+
+def parse_saitama(places: list[dict[str, Any]], latest: list[dict[str, Any]],
+                  lines: dict[str, list[list[list[float]]]] | None = None) -> list[dict[str, Any]]:
     """さいたま市水位情報システムの place.json + water_level_latest.json → 道路地点ごとの点。"""
     by_no: dict[str, dict[str, Any]] = {}
     for x in latest or []:
@@ -174,7 +205,13 @@ def parse_saitama(places: list[dict[str, Any]], latest: list[dict[str, Any]]) ->
             continue
         x = by_no.get(str(p.get("place_no")))
         level, label, at = -1, "欠測", ""
-        if x and str(x.get("type") or "") in ("W", "WC"):
+        if p.get("place_type") == 6:
+            name = f"{name}（冠水センサー）"
+        if x and str(x.get("type") or "") == "S":
+            s0 = str(x.get("s0") if x.get("s0") is not None else "")
+            level, label = {"1": (2, "冠水を検知"), "0": (0, "冠水なし")}.get(s0, (-1, "欠測"))
+            at = str(x.get("dt") or "")
+        elif x and str(x.get("type") or "") in ("W", "WC"):
             def flag(k: str) -> bool:
                 return str(x.get(k) or "0") == "1"
             if flag("a9") or flag("a0") or flag("c0"):
@@ -192,8 +229,11 @@ def parse_saitama(places: list[dict[str, Any]], latest: list[dict[str, Any]]) ->
             except (TypeError, ValueError):
                 pass
             at = str(x.get("dt") or "")
-        out.append({"id": str(p.get("place_no")), "name": name, "lat": lat, "lng": lng,
-                    "level": level, "label": label, "at": at})
+        pt = {"id": str(p.get("place_no")), "name": name, "lat": lat, "lng": lng,
+              "level": level, "label": label, "at": at}
+        if lines and str(p.get("place_no")) in lines:
+            pt["lines"] = lines[str(p.get("place_no"))]
+        out.append(pt)
     return sorted(out, key=lambda q: q["name"])
 
 
@@ -325,7 +365,13 @@ def fetch_source(src: dict[str, Any]) -> list[dict[str, Any]] | None:
         if kind == "saitama":
             m = requests.get(src["master"], headers=UA, timeout=30)
             m.raise_for_status()
-            return parse_saitama(m.json(), r.json())
+            lines = None
+            try:
+                g = requests.get(src["lines"], headers=UA, timeout=30)
+                lines = saitama_lines(g.json()) if g.ok else None
+            except Exception:  # noqa: BLE001
+                pass
+            return parse_saitama(m.json(), r.json(), lines)
         if kind == "takamatsu":
             return parse_takamatsu(r.json())
         if kind == "hyogo":
@@ -360,8 +406,10 @@ def build(previous: dict[str, Any] | None, fetched: dict[str, list[dict[str, Any
     return {"version": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "sources": sources}
 
 
-def levels_signature(doc: dict[str, Any]) -> list[tuple[str, str, int]]:
-    return sorted((s["id"], p["id"], int(p["level"])) for s in doc.get("sources", []) for p in s.get("points", []))
+def levels_signature(doc: dict[str, Any]) -> list[tuple[str, str, int, int]]:
+    """段階と、冠水範囲の折れ線の有無（本数）だけを比較する（時刻・水位の変化では更新しない）。"""
+    return sorted((s["id"], p["id"], int(p["level"]), len(p.get("lines") or []))
+                  for s in doc.get("sources", []) for p in s.get("points", []))
 
 
 def sync_site() -> int:

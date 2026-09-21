@@ -2135,7 +2135,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get mapLayerUnderpassTitle => '지하차도 침수 상황';
+  String get mapLayerUnderpassTitle => '도로·지하차도 침수 상황';
 
   @override
   String get mapLayerUnderpassSubtitle =>
@@ -2143,7 +2143,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String mapLegendUnderpass(int n) {
-    return '지하차도 침수 상황（$n곳）';
+    return '도로·지하차도 침수 상황（$n곳）';
   }
 
   @override
@@ -2153,7 +2153,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get underpassLevel1 => '통행 주의';
 
   @override
-  String get underpassLevel2 => '통행 금지';
+  String get underpassLevel2 => '통행 금지·침수';
 
   @override
   String get underpassLevelUnknown => '불명';

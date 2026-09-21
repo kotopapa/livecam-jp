@@ -3895,19 +3895,19 @@ abstract class AppLocalizations {
   /// No description provided for @mapLayerUnderpassTitle.
   ///
   /// In ja, this message translates to:
-  /// **'地下道の冠水状況'**
+  /// **'道路・地下道の冠水状況'**
   String get mapLayerUnderpassTitle;
 
   /// No description provided for @mapLayerUnderpassSubtitle.
   ///
   /// In ja, this message translates to:
-  /// **'自治体のセンサーによる通行可・注意・止め（千葉市・さいたま市・静岡市・高松市・兵庫県）'**
+  /// **'自治体の冠水センサーによる通行可・注意・止め・冠水検知（千葉市・さいたま市・静岡市・高松市・兵庫県）'**
   String get mapLayerUnderpassSubtitle;
 
   /// No description provided for @mapLegendUnderpass.
   ///
   /// In ja, this message translates to:
-  /// **'地下道の冠水状況（{n}か所）'**
+  /// **'道路・地下道の冠水状況（{n}か所）'**
   String mapLegendUnderpass(int n);
 
   /// No description provided for @underpassLevel0.
@@ -3925,7 +3925,7 @@ abstract class AppLocalizations {
   /// No description provided for @underpassLevel2.
   ///
   /// In ja, this message translates to:
-  /// **'通行止め'**
+  /// **'通行止め・冠水'**
   String get underpassLevel2;
 
   /// No description provided for @underpassLevelUnknown.

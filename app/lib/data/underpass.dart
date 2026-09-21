@@ -22,6 +22,7 @@ class UnderpassPoint {
     required this.level,
     required this.label,
     required this.at,
+    this.lines = const [],
   });
 
   final String id;
@@ -37,6 +38,9 @@ class UnderpassPoint {
   /// 情報源の更新時刻表記（"9/21 09:00" のような文字列。そのまま出す）
   final String at;
 
+  /// 冠水センサーの「想定される冠水範囲」（さいたま市 FLine.geojson）。無ければ空
+  final List<List<LatLng>> lines;
+
   bool get isAlert => level >= 1;
 
   Color get color => switch (level) {
@@ -51,6 +55,19 @@ class UnderpassPoint {
     final lng = (j['lng'] as num?)?.toDouble();
     final name = j['name']?.toString() ?? '';
     if (lat == null || lng == null || name.isEmpty) return null;
+    final lines = <List<LatLng>>[];
+    if (j['lines'] is List) {
+      for (final line in j['lines'] as List) {
+        if (line is! List) continue;
+        final pts = <LatLng>[];
+        for (final c in line) {
+          if (c is List && c.length >= 2 && c[0] is num && c[1] is num) {
+            pts.add(LatLng((c[0] as num).toDouble(), (c[1] as num).toDouble()));
+          }
+        }
+        if (pts.length >= 2) lines.add(pts);
+      }
+    }
     return UnderpassPoint(
       id: j['id']?.toString() ?? name,
       name: name,
@@ -58,6 +75,7 @@ class UnderpassPoint {
       level: (j['level'] as num?)?.toInt() ?? -1,
       label: j['label']?.toString() ?? '',
       at: j['at']?.toString() ?? '',
+      lines: lines,
     );
   }
 }

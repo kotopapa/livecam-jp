@@ -2125,15 +2125,15 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get mapLayerUnderpassTitle => '地下道の冠水状況';
+  String get mapLayerUnderpassTitle => '道路・地下道の冠水状況';
 
   @override
   String get mapLayerUnderpassSubtitle =>
-      '自治体のセンサーによる通行可・注意・止め（千葉市・さいたま市・静岡市・高松市・兵庫県）';
+      '自治体の冠水センサーによる通行可・注意・止め・冠水検知（千葉市・さいたま市・静岡市・高松市・兵庫県）';
 
   @override
   String mapLegendUnderpass(int n) {
-    return '地下道の冠水状況（$nか所）';
+    return '道路・地下道の冠水状況（$nか所）';
   }
 
   @override
@@ -2143,7 +2143,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get underpassLevel1 => '通行注意';
 
   @override
-  String get underpassLevel2 => '通行止め';
+  String get underpassLevel2 => '通行止め・冠水';
 
   @override
   String get underpassLevelUnknown => '不明';
@@ -4561,7 +4561,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   }
 
   @override
-  String get mapLayerUnderpassTitle => 'ちかどうの みずの じょうたい';
+  String get mapLayerUnderpassTitle => 'どうろ・ちかどうの みずの じょうたい';
 
   @override
   String get mapLayerUnderpassSubtitle =>
@@ -4569,7 +4569,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String mapLegendUnderpass(int n) {
-    return 'ちかどうの みずの じょうたい（$nかしょ）';
+    return 'どうろ・ちかどうの みずの じょうたい（$nかしょ）';
   }
 
   @override
@@ -4579,7 +4579,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get underpassLevel1 => 'ちゅうい';
 
   @override
-  String get underpassLevel2 => 'とおれない';
+  String get underpassLevel2 => 'とおれない・みずびたし';
 
   @override
   String get underpassLevelUnknown => 'わからない';

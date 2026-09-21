@@ -2213,7 +2213,7 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get mapLayerUnderpassTitle => 'Tình trạng ngập hầm chui';
+  String get mapLayerUnderpassTitle => 'Ngập đường và hầm chui';
 
   @override
   String get mapLayerUnderpassSubtitle =>
@@ -2221,7 +2221,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String mapLegendUnderpass(int n) {
-    return 'Tình trạng ngập hầm chui ($n điểm)';
+    return 'Ngập đường và hầm chui ($n điểm)';
   }
 
   @override
@@ -2231,7 +2231,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get underpassLevel1 => 'Thận trọng';
 
   @override
-  String get underpassLevel2 => 'Cấm đi';
+  String get underpassLevel2 => 'Cấm đi / ngập';
 
   @override
   String get underpassLevelUnknown => 'Không rõ';

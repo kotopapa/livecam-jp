@@ -1723,6 +1723,14 @@ class _MapScreenState extends State<MapScreen> {
 
   List<Widget> _underpassWidgets() {
     final markers = <Marker>[];
+    // 冠水センサーが検知中（注意以上）のときだけ「想定される冠水範囲」を道路に沿って描く
+    final polylines = <Polyline>[
+      for (final s in _underpass.sources)
+        for (final p in s.points)
+          if (p.isAlert)
+            for (final line in p.lines)
+              Polyline(points: line, color: p.color.withValues(alpha: 0.85), strokeWidth: 6),
+    ];
     for (final s in _underpass.sources) {
       for (final p in s.points) {
         markers.add(Marker(
@@ -1766,7 +1774,10 @@ class _MapScreenState extends State<MapScreen> {
         ));
       }
     }
-    return [if (markers.isNotEmpty) MarkerLayer(markers: markers)];
+    return [
+      if (polylines.isNotEmpty) PolylineLayer(polylines: polylines),
+      if (markers.isNotEmpty) MarkerLayer(markers: markers),
+    ];
   }
 
   void _showUnderpassInfo(UnderpassSource s, UnderpassPoint p) {

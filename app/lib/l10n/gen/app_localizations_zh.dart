@@ -2113,7 +2113,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get mapLayerUnderpassTitle => '地下通道积水状况';
+  String get mapLayerUnderpassTitle => '道路与地下通道积水状况';
 
   @override
   String get mapLayerUnderpassSubtitle =>
@@ -2121,7 +2121,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String mapLegendUnderpass(int n) {
-    return '地下通道积水状况（$n处）';
+    return '道路与地下通道积水状况（$n处）';
   }
 
   @override
@@ -2131,7 +2131,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get underpassLevel1 => '注意通行';
 
   @override
-  String get underpassLevel2 => '禁止通行';
+  String get underpassLevel2 => '禁止通行／积水';
 
   @override
   String get underpassLevelUnknown => '不明';
@@ -4503,7 +4503,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get mapLayerUnderpassTitle => '地下道積水狀況';
+  String get mapLayerUnderpassTitle => '道路與地下道積水狀況';
 
   @override
   String get mapLayerUnderpassSubtitle =>
@@ -4511,7 +4511,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String mapLegendUnderpass(int n) {
-    return '地下道積水狀況（$n處）';
+    return '道路與地下道積水狀況（$n處）';
   }
 
   @override
@@ -4521,7 +4521,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get underpassLevel1 => '注意通行';
 
   @override
-  String get underpassLevel2 => '禁止通行';
+  String get underpassLevel2 => '禁止通行／積水';
 
   @override
   String get underpassLevelUnknown => '不明';

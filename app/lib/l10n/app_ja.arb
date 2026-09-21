@@ -2226,13 +2226,13 @@
       }
     }
   },
-  "mapLayerUnderpassTitle": "地下道の冠水状況",
-  "mapLayerUnderpassSubtitle": "自治体のセンサーによる通行可・注意・止め（千葉市・さいたま市・静岡市・高松市・兵庫県）",
-  "mapLegendUnderpass": "地下道の冠水状況（{n}か所）",
+  "mapLayerUnderpassTitle": "道路・地下道の冠水状況",
+  "mapLayerUnderpassSubtitle": "自治体の冠水センサーによる通行可・注意・止め・冠水検知（千葉市・さいたま市・静岡市・高松市・兵庫県）",
+  "mapLegendUnderpass": "道路・地下道の冠水状況（{n}か所）",
   "@mapLegendUnderpass": {"placeholders": {"n": {"type": "int"}}},
   "underpassLevel0": "通行可",
   "underpassLevel1": "通行注意",
-  "underpassLevel2": "通行止め",
+  "underpassLevel2": "通行止め・冠水",
   "underpassLevelUnknown": "不明",
   "underpassUpdated": "情報源の更新: {at}",
   "@underpassUpdated": {"placeholders": {"at": {"type": "String"}}},

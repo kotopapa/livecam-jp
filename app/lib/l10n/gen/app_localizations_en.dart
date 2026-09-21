@@ -2204,7 +2204,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get mapLayerUnderpassTitle => 'Underpass flooding status';
+  String get mapLayerUnderpassTitle => 'Road & underpass flooding';
 
   @override
   String get mapLayerUnderpassSubtitle =>
@@ -2212,7 +2212,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String mapLegendUnderpass(int n) {
-    return 'Underpass flooding status ($n sites)';
+    return 'Road & underpass flooding ($n sites)';
   }
 
   @override
@@ -2222,7 +2222,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get underpassLevel1 => 'Caution';
 
   @override
-  String get underpassLevel2 => 'Closed';
+  String get underpassLevel2 => 'Closed / flooded';
 
   @override
   String get underpassLevelUnknown => 'Unknown';

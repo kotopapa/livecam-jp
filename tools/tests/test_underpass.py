@@ -53,11 +53,18 @@ def test_parse_shizumichi_levels():
 def test_parse_saitama_levels_and_types():
     places = json.loads((FIX.parent / "underpass_saitama_place.json").read_text(encoding="utf-8"))
     latest = json.loads((FIX.parent / "underpass_saitama_latest.json").read_text(encoding="utf-8"))
-    pts = underpass.parse_saitama(places, latest)
+    lines = underpass.saitama_lines(json.loads((FIX.parent / "underpass_saitama_fline.geojson").read_text(encoding="utf-8")))
+    pts = underpass.parse_saitama(places, latest, lines)
     by = {p["name"]: p for p in pts}
-    # 冠水センサー（place_type 6）とカメラのみ地点は対象外、道路（アンダーパス/平面）だけ
+    # 冠水センサーには想定される冠水範囲の折れ線（[lat,lng]）が付く。水位計には付かない
+    assert len(by["指扇2385付近（冠水センサー）"]["lines"]) == 2 and by["指扇2385付近（冠水センサー）"]["lines"][0][0] == [35.91402, 139.571877]
+    assert "lines" not in by["馬込地下道（東北道）"]
+    # カメラのみ地点は対象外。道路（アンダーパス/平面）と冠水センサー（place_type 6）を出す
     assert set(by) == {"宮原町4丁目地下道（JR線）", "馬込地下道（東北道）", "東岩槻5丁目3番地（上野・長宮線）",
-                       "村国710番地（さいたま越谷線）", "西掘8丁目(西堀氷川トンネル)"}
+                       "村国710番地（さいたま越谷線）", "西掘8丁目(西堀氷川トンネル)",
+                       "指扇2385付近（冠水センサー）", "馬込732付近（冠水センサー）"}
+    assert (by["馬込732付近（冠水センサー）"]["level"], by["馬込732付近（冠水センサー）"]["label"]) == (2, "冠水を検知")
+    assert (by["指扇2385付近（冠水センサー）"]["level"], by["指扇2385付近（冠水センサー）"]["label"]) == (0, "冠水なし")
     assert by["馬込地下道（東北道）"]["level"] == 2 and by["馬込地下道（東北道）"]["label"] == "警戒水位超過（水位1.26m）"
     assert by["宮原町4丁目地下道（JR線）"]["level"] == 1 and by["宮原町4丁目地下道（JR線）"]["label"].startswith("注意水位超過")
     assert by["西掘8丁目(西堀氷川トンネル)"]["level"] == 0 and by["西掘8丁目(西堀氷川トンネル)"]["label"] == "平常水位（水位-0.30m）"
