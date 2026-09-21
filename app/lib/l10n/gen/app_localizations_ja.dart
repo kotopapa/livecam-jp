@@ -2364,6 +2364,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get situationTitle => 'いま起きていること';
 
   @override
+  String situationCount(int n) {
+    return '$n件';
+  }
+
+  @override
   String situationSpecial(String prefs) {
     return '特別警報: $prefs';
   }
@@ -4798,6 +4803,11 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get situationTitle => 'いま おきて いること';
+
+  @override
+  String situationCount(int n) {
+    return '$nけん';
+  }
 
   @override
   String situationSpecial(String prefs) {

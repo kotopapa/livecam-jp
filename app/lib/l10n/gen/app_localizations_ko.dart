@@ -2374,6 +2374,11 @@ class AppLocalizationsKo extends AppLocalizations {
   String get situationTitle => '지금 일어나는 일';
 
   @override
+  String situationCount(int n) {
+    return '$n건';
+  }
+
+  @override
   String situationSpecial(String prefs) {
     return '특별경보: $prefs';
   }

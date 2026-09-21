@@ -2351,6 +2351,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get situationTitle => '当前状况';
 
   @override
+  String situationCount(int n) {
+    return '$n项';
+  }
+
+  @override
   String situationSpecial(String prefs) {
     return '特别警报: $prefs';
   }
@@ -4739,6 +4744,11 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get situationTitle => '目前狀況';
+
+  @override
+  String situationCount(int n) {
+    return '$n項';
+  }
 
   @override
   String situationSpecial(String prefs) {

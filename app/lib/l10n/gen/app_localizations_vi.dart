@@ -2460,6 +2460,11 @@ class AppLocalizationsVi extends AppLocalizations {
   String get situationTitle => 'Đang diễn ra';
 
   @override
+  String situationCount(int n) {
+    return '$n mục';
+  }
+
+  @override
   String situationSpecial(String prefs) {
     return 'Cảnh báo đặc biệt: $prefs';
   }

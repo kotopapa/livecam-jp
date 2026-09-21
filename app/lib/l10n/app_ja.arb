@@ -2429,6 +2429,8 @@
     }
   },
   "situationTitle": "いま起きていること",
+  "situationCount": "{n}件",
+  "@situationCount": {"description": "折りたたみ時の件数", "placeholders": {"n": {"type": "int"}}},
   "situationSpecial": "特別警報: {prefs}",
   "@situationSpecial": {
     "placeholders": {

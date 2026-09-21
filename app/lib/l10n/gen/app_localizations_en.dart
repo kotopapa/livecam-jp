@@ -2452,6 +2452,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get situationTitle => 'Happening now';
 
   @override
+  String situationCount(int n) {
+    return '$n items';
+  }
+
+  @override
   String situationSpecial(String prefs) {
     return 'Emergency warning: $prefs';
   }

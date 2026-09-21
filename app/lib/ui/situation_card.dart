@@ -18,10 +18,16 @@ class SituationCard extends StatelessWidget {
     required this.onOpenQuake,
     required this.onOpenTyphoon,
     required this.onOpenUnderpass,
+    this.collapsed = false,
+    this.onToggle,
   });
 
   final Situation situation;
   final VoidCallback onClose;
+
+  /// 折りたたみ（見出し行だけ表示）。地図を広く使いたいときのため（2026-09-21 要望）
+  final bool collapsed;
+  final VoidCallback? onToggle;
   final VoidCallback onOpenWarning;
   final VoidCallback onOpenQuake;
   /// 台風行のタップ（TC番号を渡す。地図はその台風だけを表示する）
@@ -119,8 +125,22 @@ class SituationCard extends StatelessWidget {
         child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
             Expanded(
-              child: Text(l10n.situationTitle,
-                  style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+              child: InkWell(
+                onTap: onToggle,
+                child: Row(children: [
+                  Flexible(
+                    child: Text(
+                        collapsed
+                            ? '${l10n.situationTitle} · ${l10n.situationCount(rows.length)}'
+                            : l10n.situationTitle,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                  ),
+                  if (onToggle != null)
+                    Icon(collapsed ? Icons.expand_more : Icons.expand_less, size: 18, color: Colors.black54),
+                ]),
+              ),
             ),
             InkWell(
               onTap: onClose,
@@ -131,8 +151,9 @@ class SituationCard extends StatelessWidget {
               ),
             ),
           ]),
-          for (final r in shown)
-            InkWell(
+          if (!collapsed)
+            for (final r in shown)
+              InkWell(
               onTap: r.onTap,
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 3),
@@ -149,17 +170,18 @@ class SituationCard extends StatelessWidget {
                 ]),
               ),
             ),
-          if (hidden > 0)
+          if (!collapsed && hidden > 0)
             Padding(
               padding: const EdgeInsets.only(left: 22, top: 2),
               child: Text(l10n.situationMore(hidden),
                   style: TextStyle(fontSize: 11, color: Colors.grey[700])),
             ),
-          Padding(
-            padding: const EdgeInsets.only(top: 2),
-            child: Text(l10n.situationSource,
-                style: TextStyle(fontSize: 9, color: Colors.grey[600])),
-          ),
+          if (!collapsed)
+            Padding(
+              padding: const EdgeInsets.only(top: 2),
+              child: Text(l10n.situationSource,
+                  style: TextStyle(fontSize: 9, color: Colors.grey[600])),
+            ),
         ]),
       ),
     );

@@ -137,6 +137,32 @@ class _MapScreenState extends State<MapScreen> {
     widget.app.navigationRequest.addListener(_onNavigationRequest);
     _loadSituation();
     _situationTimer = Timer.periodic(const Duration(minutes: 10), (_) => _loadSituation());
+    _loadPanelPrefs();
+  }
+
+  Future<void> _loadPanelPrefs() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final s = prefs.getBool(_situationCollapsedKey) ?? false;
+      final l = prefs.getBool(_legendCollapsedKey) ?? false;
+      if (!mounted) return;
+      setState(() {
+        _situationCollapsed = s;
+        _legendCollapsed = l;
+      });
+    } catch (_) {}
+  }
+
+  Future<void> _togglePanel({bool? situation, bool? legend}) async {
+    setState(() {
+      if (situation != null) _situationCollapsed = situation;
+      if (legend != null) _legendCollapsed = legend;
+    });
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      if (situation != null) await prefs.setBool(_situationCollapsedKey, situation);
+      if (legend != null) await prefs.setBool(_legendCollapsedKey, legend);
+    } catch (_) {}
   }
 
   Future<void> _loadSituation() async {
@@ -167,6 +193,8 @@ class _MapScreenState extends State<MapScreen> {
     if (s == null || !s.isNotable || s.signature == _dismissedSituation) return null;
     return SituationCard(
       situation: s,
+      collapsed: _situationCollapsed,
+      onToggle: () => _togglePanel(situation: !_situationCollapsed),
       onClose: _dismissSituation,
       onOpenWarning: () {
         Analytics.event('situation_open', params: const {'kind': 'warning'});
@@ -251,6 +279,12 @@ class _MapScreenState extends State<MapScreen> {
   String? _dismissedSituation;
   Timer? _situationTimer;
   static const _dismissedSituationKey = 'situation_dismissed';
+
+  /// 左上カード・左下凡例の折りたたみ（端末ごとに記憶。2026-09-21 要望）
+  bool _situationCollapsed = false;
+  bool _legendCollapsed = false;
+  static const _situationCollapsedKey = 'situation_collapsed';
+  static const _legendCollapsedKey = 'map_legend_collapsed';
   /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
   RouteResult? _route;
   List<CorridorCamera> _routeCameras = const [];
@@ -1452,8 +1486,11 @@ class _MapScreenState extends State<MapScreen> {
           color: Colors.white.withValues(alpha: 0.9),
           borderRadius: BorderRadius.circular(6)),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
-        Row(mainAxisSize: MainAxisSize.min, children: [
+        InkWell(
+          onTap: () => _togglePanel(legend: !_legendCollapsed),
+          child: Row(mainAxisSize: MainAxisSize.min, children: [
           Text(title, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
+          Icon(_legendCollapsed ? Icons.expand_less : Icons.expand_more, size: 14, color: Colors.black54),
           if (layerLoading) const Padding(
               padding: EdgeInsets.only(left: 6),
               child: SizedBox(width: 10, height: 10, child: CircularProgressIndicator(strokeWidth: 1.5))),
@@ -1461,7 +1498,9 @@ class _MapScreenState extends State<MapScreen> {
               padding: const EdgeInsets.only(left: 6),
               child: Text(l10n.mapLegendFetchFailed,
                   style: const TextStyle(fontSize: 9, color: Colors.red))),
-        ]),
+          ]),
+        ),
+        if (!_legendCollapsed) ...[
         if (_layer == MapLayerKind.shelters &&
             _zoom >= ShelterLayers.minZoom &&
             (_shelters?.failed.intersection(_shelterPrefs).isNotEmpty ?? false))
@@ -1499,6 +1538,7 @@ class _MapScreenState extends State<MapScreen> {
         if (!hazard)
           const Text(JmaLayers.attribution,
               style: TextStyle(fontSize: 9, color: Colors.black54)),
+        ],
       ]),
     );
   }

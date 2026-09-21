@@ -4294,6 +4294,12 @@ abstract class AppLocalizations {
   /// **'いま起きていること'**
   String get situationTitle;
 
+  /// 折りたたみ時の件数
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}件'**
+  String situationCount(int n);
+
   /// No description provided for @situationSpecial.
   ///
   /// In ja, this message translates to:
