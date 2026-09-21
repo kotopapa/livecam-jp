@@ -156,3 +156,13 @@ def test_parse_kakegawa_kansuisu():
     assert (by["市道旧県道相良大須賀線（大坂地内）"]["level"], by["市道旧県道相良大須賀線（大坂地内）"]["label"]) == (-1, "低温保護モード")
     assert by["市道北村線（国安地内）"]["level"] == 0 and abs(by["市道北村線（国安地内）"]["lat"] - 34.6547) < 0.001
     assert by["市道上張城西線（中央二丁目地内）"]["id"] == "1F73EB8"
+
+
+def test_render_sources_html_lists_every_source():
+    doc = {"sources": [{"id": "chiba", "points": [{}] * 15}, {"id": "saitama", "points": [{}] * 62}]}
+    page = underpass.render_sources_html(doc)
+    for src in underpass.SOURCES:
+        assert src["name"] in page and src["url"] in page
+    assert "15か所" in page and "62か所" in page and "77か所" in page
+    assert "加古川市によって保証されたものではありません" in page
+    assert "<script" not in page

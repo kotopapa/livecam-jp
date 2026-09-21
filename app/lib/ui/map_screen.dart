@@ -283,10 +283,9 @@ class _MapScreenState extends State<MapScreen> {
   /// 左上カード・左下凡例の折りたたみ（端末ごとに記憶。2026-09-21 要望）
   bool _situationCollapsed = false;
 
-  /// 凡例の出典行の折りたたみ。未設定（null）なら冠水状況レイヤーだけ閉じた状態で始める
-  /// （出典が10行あり画面を埋めるため。色と段階の文字は閉じていても見せる）
+  /// 凡例の出典行の折りたたみ（色と段階の文字は閉じていても見せる）
   bool? _legendCollapsedPref;
-  bool get _legendCollapsed => _legendCollapsedPref ?? (_layer == MapLayerKind.underpass);
+  bool get _legendCollapsed => _legendCollapsedPref ?? false;
   static const _situationCollapsedKey = 'situation_collapsed';
   static const _legendCollapsedKey = 'map_legend_collapsed';
   /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
@@ -1537,9 +1536,16 @@ class _MapScreenState extends State<MapScreen> {
         Row(mainAxisSize: MainAxisSize.min, children: items),
         // 出典行だけ折りたたむ（色と段階の文字は常に出す）
         if (!_legendCollapsed) ...[
+          // 冠水状況の出典は情報源が多いので1行にまとめ、一覧ページへリンクする（各地点の詳細にも出典を出す）
           if (_layer == MapLayerKind.underpass)
-            for (final s in _underpass.sources)
-              Text(s.attribution, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+            InkWell(
+              onTap: () => launchUrl(Uri.parse(underpassSourcesPageUrl), mode: LaunchMode.externalApplication),
+              child: Row(mainAxisSize: MainAxisSize.min, children: [
+                Text(l10n.mapLegendUnderpassSources(_underpass.sources.length),
+                    style: const TextStyle(fontSize: 9, color: Colors.black54, decoration: TextDecoration.underline)),
+                const Icon(Icons.open_in_new, size: 10, color: Colors.black54),
+              ]),
+            ),
           if (!hazard)
             const Text(JmaLayers.attribution,
                 style: TextStyle(fontSize: 9, color: Colors.black54)),

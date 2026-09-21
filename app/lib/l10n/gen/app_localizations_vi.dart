@@ -2225,6 +2225,11 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
+  String mapLegendUnderpassSources(int n) {
+    return 'Cảm biến ngập từ $n nguồn của chính quyền. Mở danh sách nguồn';
+  }
+
+  @override
   String get underpassLevel0 => 'Đi được';
 
   @override

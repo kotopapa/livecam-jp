@@ -2137,6 +2137,11 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
+  String mapLegendUnderpassSources(int n) {
+    return '$n自治体の冠水センサー情報。出典一覧を開く';
+  }
+
+  @override
   String get underpassLevel0 => '通行可';
 
   @override
@@ -4575,6 +4580,11 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String mapLegendUnderpass(int n) {
     return 'どうろ・ちかどうの みずの じょうたい（$nかしょ）';
+  }
+
+  @override
+  String mapLegendUnderpassSources(int n) {
+    return '$nこの じちたいの じょうほう。しゅってんを みる';
   }
 
   @override

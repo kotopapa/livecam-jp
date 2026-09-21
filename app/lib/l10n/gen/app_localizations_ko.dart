@@ -2147,6 +2147,11 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
+  String mapLegendUnderpassSources(int n) {
+    return '$n개 지자체의 침수 센서 정보. 출처 목록 열기';
+  }
+
+  @override
   String get underpassLevel0 => '통행 가능';
 
   @override

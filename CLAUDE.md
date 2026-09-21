@@ -218,7 +218,7 @@ python site/build.py                            # 配信ファイル生成
 ## 「いま起きていること」カードの知見（2026-09-16追記）
 
 - 地図の左上に重ねるカード（`app/lib/ui/situation_card.dart`、要約は `app/lib/data/situation.dart`）。特別警報・危険警報の県、台風、指定河川洪水予報、直近24時間の震度4以上があるときだけ出す（平時は何も出ない）。起動時と10分ごとに気象庁の4系統（r8 map.json / 台風 / 洪水予報 / 地震一覧）を並列取得し、失敗した系統は空として扱う
-- カードの見出しタップで折りたたみ（見出し＋件数だけ）。左下の凡例もタイトルタップで折りたたみ（**隠すのは出典行だけ**。色と段階の文字は常に表示。未設定なら冠水状況レイヤーだけ閉じて始める）。どちらも SharedPreferences（`situation_collapsed` / `map_legend_collapsed`）に記憶（2026-09-21 要望「画面の大半が埋まる」）
+- カードの見出しタップで折りたたみ（見出し＋件数だけ）。左下の凡例もタイトルタップで折りたたみ（**隠すのは出典行だけ**。色と段階の文字は常に表示）。冠水状況の出典は10行並べず、`site/underpass_sources.html`（`tools/underpass.py` の `render_sources_html` が sync_site で生成）へリンクする1行にまとめた（2026-09-21 要望）。各地点の詳細シートには個別の出典を出す。どちらも SharedPreferences（`situation_collapsed` / `map_legend_collapsed`）に記憶（2026-09-21 要望「画面の大半が埋まる」）
 - 閉じたカードは内容の識別子（`Situation.signature`）が同じあいだ再表示しない（SharedPreferences `situation_dismissed`）。内容が変われば再び出る
 - 行タップは `navigationRequest`（'bosai/warning' / 'bosai/quake'）と台風レイヤー切替。Analytics イベント `situation_open`（kind）で何が開かれたかを取る
 - ホーム画面（ダッシュボード）は新タブを増やさず、この「災害時にだけ現れるカード」方式にした（2026-09-16 ユーザー決定。案1）

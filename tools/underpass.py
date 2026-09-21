@@ -70,6 +70,7 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = REPO_ROOT / "data" / "underpass_status.json"
 SITE_PATH = REPO_ROOT / "site" / "v1" / "underpass_status.json"
+SOURCES_PAGE = REPO_ROOT / "site" / "underpass_sources.html"  # 出典一覧（アプリの凡例からリンク）
 UA = {"User-Agent": "livecam-jp underpass (+https://kotopapa.github.io/livecam-jp/)"}
 
 SOURCES: list[dict[str, Any]] = [
@@ -643,12 +644,63 @@ def levels_signature(doc: dict[str, Any]) -> list[tuple[str, str, int, int]]:
                   for s in doc.get("sources", []) for p in s.get("points", []))
 
 
+def render_sources_html(doc: dict[str, Any] | None) -> str:
+    """出典一覧ページ。凡例に10行並べる代わりにここへリンクする（2026-09-21 要望）。"""
+    import html as _html
+    counts = {s.get("id"): len(s.get("points") or []) for s in (doc or {}).get("sources", [])}
+    rows = []
+    for src in SOURCES:
+        n = counts.get(src["id"])
+        rows.append(
+            "<tr><td><a href=\"{url}\" target=\"_blank\" rel=\"noopener\">{name}</a></td>"
+            "<td>{op}</td><td class=\"num\">{n}</td><td class=\"attr\">{attr}</td></tr>".format(
+                url=_html.escape(src["url"]), name=_html.escape(src["name"]), op=_html.escape(src["operator"]),
+                n="" if n is None else f"{n}か所", attr=_html.escape(src["attribution"])))
+    total = sum(v for v in counts.values())
+    return f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>道路・地下道の冠水状況の出典 | 全国ライブカメラ地図</title>
+<style>
+body {{ font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+       max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; line-height: 1.7; color: #333; }}
+h1 {{ font-size: 1.3rem; border-bottom: 2px solid #1E6FD9; padding-bottom: 8px; }}
+.notice {{ background: #FFF8E1; border-radius: 8px; padding: 12px 16px; font-size: .95rem; }}
+table {{ border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: 1em; }}
+th, td {{ border-bottom: 1px solid #ddd; padding: 8px 6px; text-align: left; vertical-align: top; }}
+th {{ background: #F3F6FB; }}
+td.num {{ white-space: nowrap; }}
+td.attr {{ font-size: .82rem; color: #555; }}
+footer {{ margin-top: 3em; font-size: .85rem; color: #777; }}
+</style>
+</head>
+<body>
+<h1>道路・地下道の冠水状況の出典</h1>
+<p>アプリの地図レイヤー「道路・地下道の冠水状況」は、次の自治体が公開している冠水センサー・水位計の状態を、各提供元から取得して表示しています（{len(SOURCES)}情報源・{total}か所）。映像ではなく状態の表示です。</p>
+<div class="notice">実際の通行可否は、現地の道路情報板と交通規制に従ってください。センサーの点検・故障・通信障害により、実際と異なる表示になることがあります。</div>
+<table>
+<thead><tr><th>情報源</th><th>運営</th><th>地点数</th><th>出典表記</th></tr></thead>
+<tbody>
+{chr(10).join(rows)}
+</tbody>
+</table>
+<p>各データの著作権はそれぞれの提供元に帰属します。表示している状態は各提供元の公開情報を加工したもので、内容は提供元によって保証されたものではありません。</p>
+<footer><a href="./index.html">全国ライブカメラ地図</a> · <a href="./terms.html">利用規約</a></footer>
+</body>
+</html>
+"""
+
+
 def sync_site() -> int:
-    """data/underpass_status.json を site/v1/ へコピー（無ければ 0）。"""
+    """data/underpass_status.json を site/v1/ へコピーし、出典一覧ページを書く（無ければ 0）。"""
     if not DATA_PATH.exists():
         return 0
     SITE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    SITE_PATH.write_text(DATA_PATH.read_text(encoding="utf-8"), encoding="utf-8")
+    text = DATA_PATH.read_text(encoding="utf-8")
+    SITE_PATH.write_text(text, encoding="utf-8")
+    SOURCES_PAGE.write_text(render_sources_html(json.loads(text)), encoding="utf-8")
     return 1
 
 

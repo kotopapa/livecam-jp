@@ -2216,6 +2216,11 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String mapLegendUnderpassSources(int n) {
+    return 'Flood sensors from $n municipal sources. Open the source list';
+  }
+
+  @override
   String get underpassLevel0 => 'Passable';
 
   @override

@@ -3910,6 +3910,12 @@ abstract class AppLocalizations {
   /// **'道路・地下道の冠水状況（{n}か所）'**
   String mapLegendUnderpass(int n);
 
+  /// No description provided for @mapLegendUnderpassSources.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}自治体の冠水センサー情報。出典一覧を開く'**
+  String mapLegendUnderpassSources(int n);
+
   /// No description provided for @underpassLevel0.
   ///
   /// In ja, this message translates to:

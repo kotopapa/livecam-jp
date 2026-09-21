@@ -2125,6 +2125,11 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
+  String mapLegendUnderpassSources(int n) {
+    return '来自$n个地方政府的积水传感器信息。打开来源列表';
+  }
+
+  @override
   String get underpassLevel0 => '可通行';
 
   @override
@@ -4517,6 +4522,11 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   @override
   String mapLegendUnderpass(int n) {
     return '道路與地下道積水狀況（$n處）';
+  }
+
+  @override
+  String mapLegendUnderpassSources(int n) {
+    return '來自$n個地方政府的積水感測器資訊。開啟來源列表';
   }
 
   @override
