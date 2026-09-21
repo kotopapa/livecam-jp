@@ -2292,6 +2292,49 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapLayerRoadRegulationNone => 'No road regulation data';
 
   @override
+  String get mapLayerRoadClosuresTitle => 'Road closures & restrictions';
+
+  @override
+  String get mapLayerRoadClosuresSubtitle =>
+      'Colored by cause: municipal flood sensors plus MLIT regulations (construction excluded)';
+
+  @override
+  String mapLegendRoadClosures(int n) {
+    return 'Road closures & restrictions ($n)';
+  }
+
+  @override
+  String get closureCauseFlood => 'Flooding';
+
+  @override
+  String get closureCauseLandslide => 'Landslide';
+
+  @override
+  String get closureCauseWeather => 'Weather';
+
+  @override
+  String get closureCauseOther => 'Other';
+
+  @override
+  String get closureFilterAll => 'All';
+
+  @override
+  String get closureLegendNote =>
+      'Filled = closed / outlined = restricted / small dot = sensor normal';
+
+  @override
+  String get closureClosed => 'Closed';
+
+  @override
+  String get closureRestricted => 'Restricted';
+
+  @override
+  String get closureNormal => 'Passable (sensor normal)';
+
+  @override
+  String get mapLayerRoadClosuresNone => 'No closure data';
+
+  @override
   String get mapLayerTyphoonTitle => 'Typhoon';
 
   @override

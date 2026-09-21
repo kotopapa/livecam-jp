@@ -24,6 +24,7 @@ import '../data/jma_typhoon.dart';
 import '../data/route_corridor.dart';
 import '../data/situation.dart';
 import '../data/shelter_layers.dart';
+import '../data/road_closures.dart';
 import '../data/road_regulation.dart';
 import '../data/underpass.dart';
 import '../models/camera.dart';
@@ -277,6 +278,15 @@ class _MapScreenState extends State<MapScreen> {
 
   /// 道路の通行規制（国交省 道路情報提供システム。data/road_regulation.dart）
   RoadRegulationStatus _roadReg = RoadRegulationStatus.empty;
+
+  /// 統合レイヤー「道路の通行止め・規制」の原因での絞り込み（null=すべて）
+  ClosureCause? _closureFilter;
+
+  List<ClosureItem> get _closureItems {
+    final all = RoadClosures.merge(_underpass, _roadReg);
+    final f = _closureFilter;
+    return f == null ? all : [for (final i in all) if (i.cause == f) i];
+  }
   SnowTime? _snowTime;
   /// 「いま起きていること」カード（起動時と10分ごとに更新。閉じた内容は再表示しない）
   Situation? _situation;
@@ -387,6 +397,11 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.roadRegulation:
         _roadReg = await RoadRegulation.fetch();
         ok = _roadReg.sources.isNotEmpty;
+      case MapLayerKind.roadClosures:
+        final results = await Future.wait([Underpass.fetch(), RoadRegulation.fetch()]);
+        _underpass = results[0] as UnderpassStatus;
+        _roadReg = results[1] as RoadRegulationStatus;
+        ok = _underpass.sources.isNotEmpty || _roadReg.sources.isNotEmpty;
       case MapLayerKind.none:
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardLandslide:
@@ -526,21 +541,14 @@ class _MapScreenState extends State<MapScreen> {
             subtitle: Text(l10n.mapLayerShelterSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.shelters); },
           ),
-          // 地下道（アンダーパス）の冠水状況（自治体センサーの状態表示。1.5.1）
+          // 道路の通行止め・規制（自治体の冠水センサー＋国交省の規制情報を統合。色＝原因。1.5.2）
+          // 旧「地下道の冠水状況」「道路の通行規制」の描画コードは残してあるが選択肢には出さない
           ListTile(
-            leading: Icon(_layer == MapLayerKind.underpass ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.underpass ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerUnderpassTitle),
-            subtitle: Text(l10n.mapLayerUnderpassSubtitle),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.underpass); },
-          ),
-          // 道路の通行規制（国交省 道路情報提供システム。工事を除く災害・気象由来。1.5.2）
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.roadRegulation ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.roadRegulation ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerRoadRegulationTitle),
-            subtitle: Text(l10n.mapLayerRoadRegulationSubtitle),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.roadRegulation); },
+            leading: Icon(_layer == MapLayerKind.roadClosures ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.roadClosures ? Theme.of(ctx).colorScheme.primary : null),
+            title: Text(l10n.mapLayerRoadClosuresTitle),
+            subtitle: Text(l10n.mapLayerRoadClosuresSubtitle),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.roadClosures); },
           ),
           // 防災拠点（給水拠点・防災備蓄倉庫）は公開自治体が4都県8自治体と少ないため
           // 1.2.0 では選択肢に出さない（2026-08-31 ユーザー判断）。実装は残してあり、
@@ -1498,6 +1506,14 @@ class _MapScreenState extends State<MapScreen> {
             swatch(const Color(0xFFF57C00), l10n.roadRegulationLevel1),
           ]);
         }
+      case MapLayerKind.roadClosures:
+        final items = _closureItems;
+        if (_underpass.sources.isEmpty && _roadReg.sources.isEmpty) {
+          title = l10n.mapLayerRoadClosuresNone;
+        } else {
+          title = l10n.mapLegendRoadClosures(items.where((i) => i.isAlert).length);
+          items.clear();
+        }
       case MapLayerKind.none:
         title = '';
     }
@@ -1505,7 +1521,8 @@ class _MapScreenState extends State<MapScreen> {
         _layer == MapLayerKind.shelters ||
         _layer == MapLayerKind.facilities ||
         _layer == MapLayerKind.underpass ||
-        _layer == MapLayerKind.roadRegulation;
+        _layer == MapLayerKind.roadRegulation ||
+        _layer == MapLayerKind.roadClosures;
     final layerLoading = _layerLoading ||
         (_layer == MapLayerKind.shelters && (_shelters?.loading ?? false)) ||
         (_layer == MapLayerKind.facilities && (_facilities?.loading ?? false));
@@ -1560,14 +1577,21 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
         Row(mainAxisSize: MainAxisSize.min, children: items),
+        if (_layer == MapLayerKind.roadClosures && (_underpass.sources.isNotEmpty || _roadReg.sources.isNotEmpty)) ...[
+          // 色＝原因、形＝重さ
+          Row(mainAxisSize: MainAxisSize.min, children: [
+            for (final c in ClosureCause.values) swatch(closureCauseColor(c), closureCauseNameOf(l10n, c)),
+          ]),
+          Text(l10n.closureLegendNote, style: const TextStyle(fontSize: 9, color: Colors.black87)),
+        ],
         // 出典行だけ折りたたむ（色と段階の文字は常に出す）
         if (!_legendCollapsed) ...[
           // 冠水状況の出典は情報源が多いので1行にまとめ、一覧ページへリンクする（各地点の詳細にも出典を出す）
-          if (_layer == MapLayerKind.underpass)
+          if (_layer == MapLayerKind.underpass || _layer == MapLayerKind.roadClosures)
             InkWell(
               onTap: () => launchUrl(Uri.parse(underpassSourcesPageUrl), mode: LaunchMode.externalApplication),
               child: Row(mainAxisSize: MainAxisSize.min, children: [
-                Text(l10n.mapLegendUnderpassSources(_underpass.sources.length),
+                Text(l10n.mapLegendUnderpassSources(_underpass.sources.length + _roadReg.sources.length),
                     style: const TextStyle(fontSize: 9, color: Colors.black54, decoration: TextDecoration.underline)),
                 const Icon(Icons.open_in_new, size: 10, color: Colors.black54),
               ]),
@@ -1783,7 +1807,8 @@ class _MapScreenState extends State<MapScreen> {
 
   /// カードや通知から: レイヤーを開き、注意・止めの地下道があればそこへ寄せる
   Future<void> _openUnderpassLayer() async {
-    await _setLayer(MapLayerKind.underpass);
+    setState(() => _closureFilter = ClosureCause.flood);
+    await _setLayer(MapLayerKind.roadClosures);
     final alerts = _underpass.alerts;
     if (alerts.isEmpty || !mounted) return;
     if (alerts.length == 1) {
@@ -2025,6 +2050,154 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  /// 統合レイヤーの原因チップ（すべて／冠水／土砂／気象／その他）
+  Widget _closureChips() {
+    final l10n = context.l10n;
+    final all = RoadClosures.merge(_underpass, _roadReg);
+    int count(ClosureCause? c) => all.where((i) => i.isAlert && (c == null || i.cause == c)).length;
+    Widget chip(String label, ClosureCause? c, Color? color) => Padding(
+          padding: const EdgeInsets.only(right: 6),
+          child: ChoiceChip(
+            avatar: color == null
+                ? null
+                : Container(width: 10, height: 10, decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
+            label: Text('$label ${count(c)}', style: const TextStyle(fontSize: 12)),
+            selected: _closureFilter == c,
+            visualDensity: VisualDensity.compact,
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            onSelected: (_) => setState(() => _closureFilter = c),
+          ),
+        );
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+      decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.92),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          chip(l10n.closureFilterAll, null, null),
+          for (final c in ClosureCause.values) chip(closureCauseNameOf(l10n, c), c, closureCauseColor(c)),
+        ]),
+      ),
+    );
+  }
+
+  /// 統合レイヤー: 線（色＝原因、太さ＝重さ）＋ピン（塗りつぶし＝通行止め／白抜き＝規制／小さい丸＝センサー正常）
+  List<Widget> _roadClosuresWidgets() {
+    final items = _closureItems;
+    final polylines = <Polyline>[
+      for (final it in items)
+        if (it.isAlert)
+          for (final line in it.lines)
+            Polyline(points: line, color: it.color.withValues(alpha: 0.85), strokeWidth: it.level >= 2 ? 6 : 4),
+    ];
+    final markers = <Marker>[];
+    for (final it in items) {
+      final closed = it.level >= 2;
+      final normal = it.level <= 0;
+      markers.add(Marker(
+        point: it.pos,
+        width: 130,
+        height: normal ? 14 : 46,
+        child: GestureDetector(
+          onTap: () => _showClosureInfo(it),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Container(
+              width: normal ? 10 : 22,
+              height: normal ? 10 : 22,
+              decoration: BoxDecoration(
+                color: closed ? it.color : Colors.white,
+                shape: BoxShape.circle,
+                border: Border.all(color: normal ? it.color.withValues(alpha: 0.7) : (closed ? Colors.white : it.color), width: 2),
+                boxShadow: normal ? null : const [BoxShadow(color: Colors.black26, blurRadius: 3)],
+              ),
+              child: normal
+                  ? null
+                  : Icon(closed ? Icons.block : Icons.priority_high, size: 13, color: closed ? Colors.white : it.color),
+            ),
+            if (!normal && (closed || _zoom >= 11))
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.9),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Text(it.name,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: it.color)),
+              ),
+          ]),
+        ),
+      ));
+    }
+    return [
+      if (polylines.isNotEmpty) PolylineLayer(polylines: polylines),
+      if (markers.isNotEmpty) MarkerLayer(markers: markers),
+    ];
+  }
+
+  void _showClosureInfo(ClosureItem it) {
+    final l10n = context.l10n;
+    final level = switch (it.level) {
+      2 => l10n.closureClosed,
+      1 => l10n.closureRestricted,
+      0 => l10n.closureNormal,
+      _ => l10n.underpassLevelUnknown,
+    };
+    final badgeColor = it.level >= 1 ? it.color : Colors.grey;
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+          child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(children: [
+              Container(width: 14, height: 14, decoration: BoxDecoration(color: it.color, shape: BoxShape.circle)),
+              const SizedBox(width: 8),
+              Expanded(child: Text(it.name, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(color: badgeColor, borderRadius: BorderRadius.circular(12)),
+                child: Text(level, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12)),
+              ),
+            ]),
+            const SizedBox(height: 8),
+            Text('${closureCauseNameOf(l10n, it.cause)} · ${it.label}',
+                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+            if (it.section.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text(l10n.roadRegulationSection(it.section), style: const TextStyle(fontSize: 13)),
+              ),
+            if (it.at.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Text(it.isSensor ? l10n.underpassUpdated(it.at) : l10n.roadRegulationSince(it.at),
+                    style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+              ),
+            const SizedBox(height: 6),
+            Text(it.isSensor ? l10n.underpassNotice : l10n.roadRegulationNotice,
+                style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+            const SizedBox(height: 4),
+            Text(it.attribution, style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+            const SizedBox(height: 8),
+            if (it.sourceUrl.isNotEmpty)
+              OutlinedButton.icon(
+                onPressed: () => launchUrl(Uri.parse(it.sourceUrl), mode: LaunchMode.externalApplication),
+                icon: const Icon(Icons.open_in_new, size: 16),
+                label: Text(it.isSensor ? l10n.underpassOpenSource : l10n.roadRegulationOpenSource),
+              ),
+          ]),
+        ),
+      ),
+    );
+  }
+
   /// 地図レイヤーの地図要素（タイル/マーカー）
   List<Widget> _layerWidgets() {
     switch (_layer) {
@@ -2164,6 +2337,8 @@ class _MapScreenState extends State<MapScreen> {
         return _underpassWidgets();
       case MapLayerKind.roadRegulation:
         return _roadRegulationWidgets();
+      case MapLayerKind.roadClosures:
+        return _roadClosuresWidgets();
       case MapLayerKind.none:
         return const [];
     }
@@ -3168,6 +3343,8 @@ class _MapScreenState extends State<MapScreen> {
                     Padding(padding: const EdgeInsets.only(bottom: 6), child: _facilityChips()),
                   if (_layer == MapLayerKind.typhoon && _typhoons.length > 1)
                     Padding(padding: const EdgeInsets.only(bottom: 6), child: _typhoonChips()),
+                  if (_layer == MapLayerKind.roadClosures)
+                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _closureChips()),
                   Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
                   if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
                   if (_layer == MapLayerKind.shelters) const _ShelterAttribution(),
@@ -3593,3 +3770,11 @@ class _NoticeBanner extends StatelessWidget {
     );
   }
 }
+
+/// 統合レイヤーの原因名（冠水／土砂／気象／その他）
+String closureCauseNameOf(AppLocalizations l10n, ClosureCause c) => switch (c) {
+      ClosureCause.flood => l10n.closureCauseFlood,
+      ClosureCause.landslide => l10n.closureCauseLandslide,
+      ClosureCause.weather => l10n.closureCauseWeather,
+      ClosureCause.other => l10n.closureCauseOther,
+    };

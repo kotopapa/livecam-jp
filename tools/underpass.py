@@ -840,6 +840,20 @@ def render_sources_html(doc: dict[str, Any] | None) -> str:
     import html as _html
     counts = {s.get("id"): len(s.get("points") or []) for s in (doc or {}).get("sources", [])}
     rows = []
+    # 国交省の通行規制（tools/road_regulation.py）も同じレイヤーに出すので一覧に載せる
+    try:
+        from tools.road_regulation import DATA_PATH as RR_PATH, SOURCE as RR_SOURCE
+        rr_n = None
+        if RR_PATH.exists():
+            rr_doc = json.loads(RR_PATH.read_text(encoding="utf-8"))
+            rr_n = sum(len(x.get("items") or []) for x in rr_doc.get("sources", []))
+        rows.append(
+            "<tr><td><a href=\"{url}\" target=\"_blank\" rel=\"noopener\">{name}</a></td>"
+            "<td>{op}</td><td class=\"num\">{n}</td><td class=\"attr\">{attr}</td></tr>".format(
+                url=_html.escape(RR_SOURCE["url"]), name=_html.escape(RR_SOURCE["name"]), op=_html.escape(RR_SOURCE["operator"]),
+                n="" if rr_n is None else f"{rr_n}件", attr=_html.escape(RR_SOURCE["attribution"])))
+    except Exception:  # noqa: BLE001
+        pass
     for src in SOURCES:
         n = counts.get(src["id"])
         rows.append(
@@ -853,7 +867,7 @@ def render_sources_html(doc: dict[str, Any] | None) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>道路・地下道の冠水状況の出典 | 全国ライブカメラ地図</title>
+<title>道路の通行止め・規制の出典 | 全国ライブカメラ地図</title>
 <style>
 body {{ font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
        max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; line-height: 1.7; color: #333; }}
@@ -868,8 +882,8 @@ footer {{ margin-top: 3em; font-size: .85rem; color: #777; }}
 </style>
 </head>
 <body>
-<h1>道路・地下道の冠水状況の出典</h1>
-<p>アプリの地図レイヤー「道路・地下道の冠水状況」は、次の自治体が公開している冠水センサー・水位計の状態を、各提供元から取得して表示しています（{len(SOURCES)}情報源・{total}か所）。映像ではなく状態の表示です。</p>
+<h1>道路の通行止め・規制の出典</h1>
+<p>アプリの地図レイヤー「道路の通行止め・規制」は、国土交通省の道路情報提供システムの通行規制（工事を除く）と、次の自治体が公開している冠水センサー・水位計の状態を、各提供元から取得して表示しています（冠水センサー {len(SOURCES)}情報源・{total}か所）。映像ではなく状態の表示です。</p>
 <div class="notice">実際の通行可否は、現地の道路情報板と交通規制に従ってください。センサーの点検・故障・通信障害により、実際と異なる表示になることがあります。</div>
 <table>
 <thead><tr><th>情報源</th><th>運営</th><th>地点数</th><th>出典表記</th></tr></thead>

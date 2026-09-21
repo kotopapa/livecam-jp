@@ -33,4 +33,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/bosai_notify_state.json data/underpass_status.json
           git diff --cached --quiet || git commit -m "bosai: notify state"
-          git push || (git pull --rebase --autostash && git push) || (sleep 20 && git pull --rebase --autostash && git push)
+          # 状態ファイルと冠水状況は毎回この run が最新なので、競合したら自分側(-X theirs)を採る
+          git push || (git pull --rebase -X theirs --autostash origin main && git push) || (git rebase --abort 2>/dev/null; sleep 20 && git pull --rebase -X theirs --autostash origin main && git push)

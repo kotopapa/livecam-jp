@@ -2199,6 +2199,48 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapLayerRoadRegulationNone => '没有通行管制数据';
 
   @override
+  String get mapLayerRoadClosuresTitle => '道路禁止通行・管制';
+
+  @override
+  String get mapLayerRoadClosuresSubtitle =>
+      '按原因着色显示（地方政府积水传感器＋国土交通省管制信息，不含施工）';
+
+  @override
+  String mapLegendRoadClosures(int n) {
+    return '道路禁止通行・管制（$n件）';
+  }
+
+  @override
+  String get closureCauseFlood => '积水';
+
+  @override
+  String get closureCauseLandslide => '塌方';
+
+  @override
+  String get closureCauseWeather => '气象';
+
+  @override
+  String get closureCauseOther => '其他';
+
+  @override
+  String get closureFilterAll => '全部';
+
+  @override
+  String get closureLegendNote => '实心＝禁止通行／空心＝管制・注意／小圆点＝传感器正常';
+
+  @override
+  String get closureClosed => '禁止通行';
+
+  @override
+  String get closureRestricted => '管制・注意';
+
+  @override
+  String get closureNormal => '可通行（传感器正常）';
+
+  @override
+  String get mapLayerRoadClosuresNone => '没有数据';
+
+  @override
   String get mapLayerTyphoonTitle => '台风信息';
 
   @override
@@ -4635,6 +4677,48 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapLayerRoadRegulationNone => '沒有通行管制資料';
+
+  @override
+  String get mapLayerRoadClosuresTitle => '道路禁止通行・管制';
+
+  @override
+  String get mapLayerRoadClosuresSubtitle =>
+      '依原因著色顯示（地方政府積水感測器＋國土交通省管制資訊，不含施工）';
+
+  @override
+  String mapLegendRoadClosures(int n) {
+    return '道路禁止通行・管制（$n件）';
+  }
+
+  @override
+  String get closureCauseFlood => '積水';
+
+  @override
+  String get closureCauseLandslide => '土石';
+
+  @override
+  String get closureCauseWeather => '氣象';
+
+  @override
+  String get closureCauseOther => '其他';
+
+  @override
+  String get closureFilterAll => '全部';
+
+  @override
+  String get closureLegendNote => '實心＝禁止通行／空心＝管制・注意／小圓點＝感測器正常';
+
+  @override
+  String get closureClosed => '禁止通行';
+
+  @override
+  String get closureRestricted => '管制・注意';
+
+  @override
+  String get closureNormal => '可通行（感測器正常）';
+
+  @override
+  String get mapLayerRoadClosuresNone => '沒有資料';
 
   @override
   String get mapLayerTyphoonTitle => '颱風資訊';

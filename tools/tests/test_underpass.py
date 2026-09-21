@@ -165,6 +165,7 @@ def test_render_sources_html_lists_every_source():
         assert src["name"] in page and src["url"] in page
     assert "15か所" in page and "62か所" in page and "77か所" in page
     assert "加古川市によって保証されたものではありません" in page
+    assert "道路情報提供システム" in page  # 国交省の規制も同じレイヤーなので一覧に載る
     assert "<script" not in page
 
 

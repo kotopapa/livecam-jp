@@ -4030,6 +4030,84 @@ abstract class AppLocalizations {
   /// **'通行規制のデータがありません'**
   String get mapLayerRoadRegulationNone;
 
+  /// No description provided for @mapLayerRoadClosuresTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'道路の通行止め・規制'**
+  String get mapLayerRoadClosuresTitle;
+
+  /// No description provided for @mapLayerRoadClosuresSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行止め・規制を原因別の色で表示（自治体の冠水センサー＋国交省の規制情報。工事は除く）'**
+  String get mapLayerRoadClosuresSubtitle;
+
+  /// No description provided for @mapLegendRoadClosures.
+  ///
+  /// In ja, this message translates to:
+  /// **'道路の通行止め・規制（{n}件）'**
+  String mapLegendRoadClosures(int n);
+
+  /// No description provided for @closureCauseFlood.
+  ///
+  /// In ja, this message translates to:
+  /// **'冠水'**
+  String get closureCauseFlood;
+
+  /// No description provided for @closureCauseLandslide.
+  ///
+  /// In ja, this message translates to:
+  /// **'土砂'**
+  String get closureCauseLandslide;
+
+  /// No description provided for @closureCauseWeather.
+  ///
+  /// In ja, this message translates to:
+  /// **'気象'**
+  String get closureCauseWeather;
+
+  /// No description provided for @closureCauseOther.
+  ///
+  /// In ja, this message translates to:
+  /// **'その他'**
+  String get closureCauseOther;
+
+  /// No description provided for @closureFilterAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'すべて'**
+  String get closureFilterAll;
+
+  /// No description provided for @closureLegendNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'塗りつぶし＝通行止め／白抜き＝規制・注意／小さい丸＝センサー正常'**
+  String get closureLegendNote;
+
+  /// No description provided for @closureClosed.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行止め'**
+  String get closureClosed;
+
+  /// No description provided for @closureRestricted.
+  ///
+  /// In ja, this message translates to:
+  /// **'規制・注意'**
+  String get closureRestricted;
+
+  /// No description provided for @closureNormal.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行可（センサー正常）'**
+  String get closureNormal;
+
+  /// No description provided for @mapLayerRoadClosuresNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行止め・規制のデータがありません'**
+  String get mapLayerRoadClosuresNone;
+
   /// No description provided for @mapLayerTyphoonTitle.
   ///
   /// In ja, this message translates to:

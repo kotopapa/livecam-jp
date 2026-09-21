@@ -2222,6 +2222,48 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapLayerRoadRegulationNone => '통행 규제 데이터가 없습니다';
 
   @override
+  String get mapLayerRoadClosuresTitle => '도로 통행 금지·규제';
+
+  @override
+  String get mapLayerRoadClosuresSubtitle =>
+      '원인별 색상으로 표시（지자체 침수 센서＋국토교통성 규제 정보. 공사 제외）';
+
+  @override
+  String mapLegendRoadClosures(int n) {
+    return '도로 통행 금지·규제（$n건）';
+  }
+
+  @override
+  String get closureCauseFlood => '침수';
+
+  @override
+  String get closureCauseLandslide => '토사';
+
+  @override
+  String get closureCauseWeather => '기상';
+
+  @override
+  String get closureCauseOther => '기타';
+
+  @override
+  String get closureFilterAll => '전체';
+
+  @override
+  String get closureLegendNote => '채움＝통행 금지／테두리＝규제·주의／작은 점＝센서 정상';
+
+  @override
+  String get closureClosed => '통행 금지';
+
+  @override
+  String get closureRestricted => '규제·주의';
+
+  @override
+  String get closureNormal => '통행 가능（센서 정상）';
+
+  @override
+  String get mapLayerRoadClosuresNone => '통행 금지·규제 데이터가 없습니다';
+
+  @override
   String get mapLayerTyphoonTitle => '태풍 정보';
 
   @override

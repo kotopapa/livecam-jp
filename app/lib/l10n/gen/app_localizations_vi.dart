@@ -2300,6 +2300,49 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapLayerRoadRegulationNone => 'Không có dữ liệu cấm đường';
 
   @override
+  String get mapLayerRoadClosuresTitle => 'Đường cấm & hạn chế';
+
+  @override
+  String get mapLayerRoadClosuresSubtitle =>
+      'Tô màu theo nguyên nhân: cảm biến ngập của chính quyền và quy định của MLIT (trừ thi công)';
+
+  @override
+  String mapLegendRoadClosures(int n) {
+    return 'Đường cấm & hạn chế ($n)';
+  }
+
+  @override
+  String get closureCauseFlood => 'Ngập';
+
+  @override
+  String get closureCauseLandslide => 'Sạt lở';
+
+  @override
+  String get closureCauseWeather => 'Thời tiết';
+
+  @override
+  String get closureCauseOther => 'Khác';
+
+  @override
+  String get closureFilterAll => 'Tất cả';
+
+  @override
+  String get closureLegendNote =>
+      'Đặc = cấm / viền = hạn chế / chấm nhỏ = cảm biến bình thường';
+
+  @override
+  String get closureClosed => 'Cấm đi';
+
+  @override
+  String get closureRestricted => 'Hạn chế';
+
+  @override
+  String get closureNormal => 'Đi được (cảm biến bình thường)';
+
+  @override
+  String get mapLayerRoadClosuresNone => 'Không có dữ liệu';
+
+  @override
   String get mapLayerTyphoonTitle => 'Thông tin bão';
 
   @override

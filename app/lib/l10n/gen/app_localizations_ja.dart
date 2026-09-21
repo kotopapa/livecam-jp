@@ -2212,6 +2212,48 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapLayerRoadRegulationNone => '通行規制のデータがありません';
 
   @override
+  String get mapLayerRoadClosuresTitle => '道路の通行止め・規制';
+
+  @override
+  String get mapLayerRoadClosuresSubtitle =>
+      '通行止め・規制を原因別の色で表示（自治体の冠水センサー＋国交省の規制情報。工事は除く）';
+
+  @override
+  String mapLegendRoadClosures(int n) {
+    return '道路の通行止め・規制（$n件）';
+  }
+
+  @override
+  String get closureCauseFlood => '冠水';
+
+  @override
+  String get closureCauseLandslide => '土砂';
+
+  @override
+  String get closureCauseWeather => '気象';
+
+  @override
+  String get closureCauseOther => 'その他';
+
+  @override
+  String get closureFilterAll => 'すべて';
+
+  @override
+  String get closureLegendNote => '塗りつぶし＝通行止め／白抜き＝規制・注意／小さい丸＝センサー正常';
+
+  @override
+  String get closureClosed => '通行止め';
+
+  @override
+  String get closureRestricted => '規制・注意';
+
+  @override
+  String get closureNormal => '通行可（センサー正常）';
+
+  @override
+  String get mapLayerRoadClosuresNone => '通行止め・規制のデータがありません';
+
+  @override
   String get mapLayerTyphoonTitle => '台風情報';
 
   @override
@@ -4694,6 +4736,47 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapLayerRoadRegulationNone => 'データが ありません';
+
+  @override
+  String get mapLayerRoadClosuresTitle => 'どうろの とおれない ところ';
+
+  @override
+  String get mapLayerRoadClosuresSubtitle => 'げんいんごとの いろで ひょうじ（こうじは ふくまない）';
+
+  @override
+  String mapLegendRoadClosures(int n) {
+    return 'どうろの きせい（$nけん）';
+  }
+
+  @override
+  String get closureCauseFlood => 'みず';
+
+  @override
+  String get closureCauseLandslide => 'どしゃ';
+
+  @override
+  String get closureCauseWeather => 'てんき';
+
+  @override
+  String get closureCauseOther => 'そのほか';
+
+  @override
+  String get closureFilterAll => 'すべて';
+
+  @override
+  String get closureLegendNote => 'ぬりつぶし＝とおれない／しろぬき＝ちゅうい／ちいさい まる＝いじょうなし';
+
+  @override
+  String get closureClosed => 'とおれない';
+
+  @override
+  String get closureRestricted => 'ちゅうい';
+
+  @override
+  String get closureNormal => 'とおれる';
+
+  @override
+  String get mapLayerRoadClosuresNone => 'データが ありません';
 
   @override
   String get mapLayerTyphoonTitle => 'たいふうの じょうほう';
