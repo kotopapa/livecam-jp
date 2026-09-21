@@ -45,8 +45,6 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-import requests
-
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = REPO_ROOT / "data" / "underpass_status.json"
 SITE_PATH = REPO_ROOT / "site" / "v1" / "underpass_status.json"
@@ -316,6 +314,8 @@ def parse_os_alert(data: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def fetch_source(src: dict[str, Any]) -> list[dict[str, Any]] | None:
+    import requests  # publish 環境（site/build.py の sync_site）には requests が無いので遅延 import
+
     try:
         r = requests.get(src["api"], headers=UA, timeout=30)
         r.raise_for_status()
