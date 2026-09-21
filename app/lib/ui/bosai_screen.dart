@@ -774,6 +774,12 @@ class _BosaiScreenState extends State<BosaiScreen>
     return '${j.hour.toString().padLeft(2, '0')}:${j.minute.toString().padLeft(2, '0')}';
   }
 
+  /// 「9/20 21:50」。洪水予報は前日の発表が翌日まで残るので月日を付ける（2026-09-21 要望）
+  static String _mdHm(DateTime utc) {
+    final j = toJstWallClock(utc.toUtc());
+    return '${j.month}/${j.day} ${_hhmm(utc)}';
+  }
+
   /// 台風が接近する地点（実況と各予報時刻）のうち、予報円＋暴風域の範囲に
   /// カメラが1台でもあるもの。多くても先頭2件
   List<(TyphoonPoint, double)> _approachPoints(Typhoon t) {
@@ -897,7 +903,7 @@ class _BosaiScreenState extends State<BosaiScreen>
           subtitle: Text(
             [
               floodKindNameOf(l10n, f.level),
-              l10n.bosaiFloodIssuedAt(_hhmm(f.reportAt)),
+              l10n.bosaiFloodIssuedAt(_mdHm(f.reportAt)),
               for (final pref in f.prefectures.take(3))
                 if (prefectureNames.containsKey(pref)) prefectureNameOf(l10n, pref),
             ].join(' · '),
