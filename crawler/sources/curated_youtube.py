@@ -46,6 +46,12 @@ class CuratedYoutubeParser(SourceParser):
                     feed_type = "youtube_video"
                     feed_url = cam["video_id"]
                     fallback = f"https://www.youtube.com/watch?v={feed_url}"
+                if cam.get("embed") is False:
+                    # 運営者が埋め込みを無効にしている（playableInEmbed=false）。
+                    # 2026-08-25 の方針どおりライブ中なら誘導型（web_page）で登録し、YouTube 側で見てもらう
+                    feed_type = "web_page"
+                    feed_url = fallback
+                    note += " 埋め込み不可のため YouTube へ誘導。"
                 result.candidates.append(CameraCandidate(
                     id=cam["id"],
                     name=cam["name"],

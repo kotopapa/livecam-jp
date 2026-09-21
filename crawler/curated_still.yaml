@@ -5577,18 +5577,19 @@ cameras:
     page_url: "http://www.douro.pref.mie.jp/camera_map.php"
     note: "三重県道路規制情報。画像はAPI応答内base64のみのため専用feed型。座標は所在地住所から(town_level)"
 
-  - id: curated-asahi-chiba-city
-    name: "千葉市街（朝日新聞千葉総局）"
-    operator: "朝日新聞社（朝日新聞LIVE）"
-    category: road
-    prefecture: "12"
-    lat: 35.605
-    lng: 140.11
-    feed_type: youtube_video
-    feed_url: "vaifJWjqu0k"
-    image_url: "https://www.youtube.com/watch?v=vaifJWjqu0k"
-    page_url: "https://www.youtube.com/watch?v=vaifJWjqu0k"
-    note: "千葉市中央区から市街・道路を望む24時間配信。isLiveNow/oEmbed埋め込み可確認済み。座標は総局周辺(town_level)"
+  # 2026-09-21 退役: 朝日新聞LIVEの配信一覧に千葉の枠が無くなり、動画 vaifJWjqu0k は「記録はご覧いただけません」
+  #   - id: curated-asahi-chiba-city
+  #     name: "千葉市街（朝日新聞千葉総局）"
+  #     operator: "朝日新聞社（朝日新聞LIVE）"
+  #     category: road
+  #     prefecture: "12"
+  #     lat: 35.605
+  #     lng: 140.11
+  #     feed_type: youtube_video
+  #     feed_url: "vaifJWjqu0k"
+  #     image_url: "https://www.youtube.com/watch?v=vaifJWjqu0k"
+  #     page_url: "https://www.youtube.com/watch?v=vaifJWjqu0k"
+  #     note: "千葉市中央区から市街・道路を望む24時間配信。isLiveNow/oEmbed埋め込み可確認済み。座標は総局周辺(town_level)"
 
   # ---- 2026-08-22 NEXCO iHighway 高速道路カメラ221台(リンク誘導型・画像転載なし) ----
   - id: curated-still-ihighway-954525500100
