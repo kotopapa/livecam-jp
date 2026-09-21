@@ -24,6 +24,7 @@ import '../data/jma_typhoon.dart';
 import '../data/route_corridor.dart';
 import '../data/situation.dart';
 import '../data/shelter_layers.dart';
+import '../data/road_regulation.dart';
 import '../data/underpass.dart';
 import '../models/camera.dart';
 import '../util/clustering.dart';
@@ -273,6 +274,9 @@ class _MapScreenState extends State<MapScreen> {
   String? _typhoonId;
   /// 地下道の冠水状況（自治体センサー。data/underpass.dart）
   UnderpassStatus _underpass = UnderpassStatus.empty;
+
+  /// 道路の通行規制（国交省 道路情報提供システム。data/road_regulation.dart）
+  RoadRegulationStatus _roadReg = RoadRegulationStatus.empty;
   SnowTime? _snowTime;
   /// 「いま起きていること」カード（起動時と10分ごとに更新。閉じた内容は再表示しない）
   Situation? _situation;
@@ -380,6 +384,9 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.underpass:
         _underpass = await Underpass.fetch();
         ok = _underpass.sources.isNotEmpty;
+      case MapLayerKind.roadRegulation:
+        _roadReg = await RoadRegulation.fetch();
+        ok = _roadReg.sources.isNotEmpty;
       case MapLayerKind.none:
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardLandslide:
@@ -526,6 +533,14 @@ class _MapScreenState extends State<MapScreen> {
             title: Text(l10n.mapLayerUnderpassTitle),
             subtitle: Text(l10n.mapLayerUnderpassSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.underpass); },
+          ),
+          // 道路の通行規制（国交省 道路情報提供システム。工事を除く災害・気象由来。1.5.2）
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.roadRegulation ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.roadRegulation ? Theme.of(ctx).colorScheme.primary : null),
+            title: Text(l10n.mapLayerRoadRegulationTitle),
+            subtitle: Text(l10n.mapLayerRoadRegulationSubtitle),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.roadRegulation); },
           ),
           // 防災拠点（給水拠点・防災備蓄倉庫）は公開自治体が4都県8自治体と少ないため
           // 1.2.0 では選択肢に出さない（2026-08-31 ユーザー判断）。実装は残してあり、
@@ -1473,13 +1488,24 @@ class _MapScreenState extends State<MapScreen> {
             swatch(const Color(0xFFD32F2F), l10n.underpassLevel2),
           ]);
         }
+      case MapLayerKind.roadRegulation:
+        if (_roadReg.sources.isEmpty) {
+          title = l10n.mapLayerRoadRegulationNone;
+        } else {
+          title = l10n.mapLegendRoadRegulation(_roadReg.allItems.length);
+          items.addAll([
+            swatch(const Color(0xFFD32F2F), l10n.roadRegulationLevel2),
+            swatch(const Color(0xFFF57C00), l10n.roadRegulationLevel1),
+          ]);
+        }
       case MapLayerKind.none:
         title = '';
     }
     final hazard = HazardLayers.isHazard(_layer) ||
         _layer == MapLayerKind.shelters ||
         _layer == MapLayerKind.facilities ||
-        _layer == MapLayerKind.underpass;
+        _layer == MapLayerKind.underpass ||
+        _layer == MapLayerKind.roadRegulation;
     final layerLoading = _layerLoading ||
         (_layer == MapLayerKind.shelters && (_shelters?.loading ?? false)) ||
         (_layer == MapLayerKind.facilities && (_facilities?.loading ?? false));
@@ -1546,6 +1572,9 @@ class _MapScreenState extends State<MapScreen> {
                 const Icon(Icons.open_in_new, size: 10, color: Colors.black54),
               ]),
             ),
+          if (_layer == MapLayerKind.roadRegulation)
+            for (final s in _roadReg.sources)
+              Text(s.attribution, style: const TextStyle(fontSize: 9, color: Colors.black54)),
           if (!hazard)
             const Text(JmaLayers.attribution,
                 style: TextStyle(fontSize: 9, color: Colors.black54)),
@@ -1885,6 +1914,117 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  /// 道路の通行規制: 規制区間の線＋起点のピン（拡大時にラベル）
+  List<Widget> _roadRegulationWidgets() {
+    final polylines = <Polyline>[
+      for (final s in _roadReg.sources)
+        for (final it in s.items)
+          for (final line in it.lines)
+            Polyline(points: line, color: it.color.withValues(alpha: 0.85), strokeWidth: 5),
+    ];
+    final markers = <Marker>[];
+    for (final s in _roadReg.sources) {
+      for (final it in s.items) {
+        markers.add(Marker(
+          point: it.pos,
+          width: 130,
+          height: 44,
+          child: GestureDetector(
+            onTap: () => _showRoadRegulationInfo(s, it),
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              Container(
+                width: 20,
+                height: 20,
+                decoration: BoxDecoration(
+                  color: it.color,
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white, width: 2),
+                  boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 3)],
+                ),
+                child: Icon(it.level >= 2 ? Icons.block : Icons.remove_road, size: 12, color: Colors.white),
+              ),
+              if (_zoom >= 11)
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.9),
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  child: Text(it.name,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: it.color)),
+                ),
+            ]),
+          ),
+        ));
+      }
+    }
+    return [
+      if (polylines.isNotEmpty) PolylineLayer(polylines: polylines),
+      if (markers.isNotEmpty) MarkerLayer(markers: markers),
+    ];
+  }
+
+  void _showRoadRegulationInfo(RoadRegulationSource s, RoadRegulationItem it) {
+    final l10n = context.l10n;
+    final level = it.level >= 2 ? l10n.roadRegulationLevel2 : l10n.roadRegulationLevel1;
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+          child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(children: [
+              Container(width: 14, height: 14, decoration: BoxDecoration(color: it.color, shape: BoxShape.circle)),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(it.name, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(color: it.color, borderRadius: BorderRadius.circular(12)),
+                child: Text(level,
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12)),
+              ),
+            ]),
+            const SizedBox(height: 8),
+            if (it.label.isNotEmpty)
+              Text(it.label, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+            if (it.section.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text(l10n.roadRegulationSection(it.section), style: const TextStyle(fontSize: 13)),
+              ),
+            if (it.direction.isNotEmpty || it.kind.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Text([if (it.kind.isNotEmpty) it.kind, if (it.direction.isNotEmpty) it.direction].join(' · '),
+                    style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+              ),
+            if (it.at.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                child: Text(l10n.roadRegulationSince(it.at), style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+              ),
+            const SizedBox(height: 6),
+            Text(l10n.roadRegulationNotice, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+            const SizedBox(height: 4),
+            Text(s.attribution, style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+            const SizedBox(height: 8),
+            if (s.url.isNotEmpty)
+              OutlinedButton.icon(
+                onPressed: () => launchUrl(Uri.parse(s.url), mode: LaunchMode.externalApplication),
+                icon: const Icon(Icons.open_in_new, size: 16),
+                label: Text(l10n.roadRegulationOpenSource),
+              ),
+          ]),
+        ),
+      ),
+    );
+  }
+
   /// 地図レイヤーの地図要素（タイル/マーカー）
   List<Widget> _layerWidgets() {
     switch (_layer) {
@@ -2022,6 +2162,8 @@ class _MapScreenState extends State<MapScreen> {
         return _facilityWidgets();
       case MapLayerKind.underpass:
         return _underpassWidgets();
+      case MapLayerKind.roadRegulation:
+        return _roadRegulationWidgets();
       case MapLayerKind.none:
         return const [];
     }

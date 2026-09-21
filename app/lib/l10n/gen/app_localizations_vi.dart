@@ -2262,6 +2262,44 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapLayerUnderpassNone => 'Không có dữ liệu tình trạng ngập';
 
   @override
+  String get mapLayerRoadRegulationTitle => 'Đường cấm (thiên tai / thời tiết)';
+
+  @override
+  String get mapLayerRoadRegulationSubtitle =>
+      'Cấm đường và hạn chế (trừ thi công) từ hệ thống thông tin đường bộ của MLIT (quốc lộ, cao tốc, một số tỉnh lộ)';
+
+  @override
+  String mapLegendRoadRegulation(int n) {
+    return 'Đường cấm ($n)';
+  }
+
+  @override
+  String get roadRegulationLevel2 => 'Cấm đi';
+
+  @override
+  String get roadRegulationLevel1 => 'Hạn chế làn / một chiều';
+
+  @override
+  String roadRegulationSection(String section) {
+    return 'Đoạn: $section';
+  }
+
+  @override
+  String roadRegulationSince(String at) {
+    return 'Từ: $at';
+  }
+
+  @override
+  String get roadRegulationNotice =>
+      'Dữ liệu từ hệ thống thông tin đường bộ của MLIT (không gồm thi công). Hãy theo biển báo tại chỗ và thông tin giao thông mới nhất.';
+
+  @override
+  String get roadRegulationOpenSource => 'Mở hệ thống thông tin đường bộ';
+
+  @override
+  String get mapLayerRoadRegulationNone => 'Không có dữ liệu cấm đường';
+
+  @override
   String get mapLayerTyphoonTitle => 'Thông tin bão';
 
   @override

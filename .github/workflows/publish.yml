@@ -11,6 +11,7 @@ on:
       - "data/facilities/**"
       - "data/stockpile/**"
       - "data/underpass_status.json"
+      - "data/road_regulation.json"
       - "site/**"
   workflow_dispatch:
 

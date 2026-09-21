@@ -2253,6 +2253,45 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapLayerUnderpassNone => 'No flooding status data';
 
   @override
+  String get mapLayerRoadRegulationTitle =>
+      'Road closures (disaster / weather)';
+
+  @override
+  String get mapLayerRoadRegulationSubtitle =>
+      'Closures and restrictions excluding construction, from MLIT\'s road information system (national routes, expressways, some prefectural roads)';
+
+  @override
+  String mapLegendRoadRegulation(int n) {
+    return 'Road closures ($n)';
+  }
+
+  @override
+  String get roadRegulationLevel2 => 'Closed';
+
+  @override
+  String get roadRegulationLevel1 => 'Lane / one-way restriction';
+
+  @override
+  String roadRegulationSection(String section) {
+    return 'Section: $section';
+  }
+
+  @override
+  String roadRegulationSince(String at) {
+    return 'Since: $at';
+  }
+
+  @override
+  String get roadRegulationNotice =>
+      'Regulation data from MLIT\'s road information system (construction excluded). Follow on-site signs and traffic information for the latest status.';
+
+  @override
+  String get roadRegulationOpenSource => 'Open the road information system';
+
+  @override
+  String get mapLayerRoadRegulationNone => 'No road regulation data';
+
+  @override
   String get mapLayerTyphoonTitle => 'Typhoon';
 
   @override

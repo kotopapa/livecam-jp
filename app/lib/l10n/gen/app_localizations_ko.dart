@@ -2184,6 +2184,44 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapLayerUnderpassNone => '침수 상황 데이터가 없습니다';
 
   @override
+  String get mapLayerRoadRegulationTitle => '도로 통행 규제（재해·기상）';
+
+  @override
+  String get mapLayerRoadRegulationSubtitle =>
+      '국토교통성 도로정보시스템의 통행 금지·규제（공사 제외. 국도·고속도로·일부 현도）';
+
+  @override
+  String mapLegendRoadRegulation(int n) {
+    return '도로 통행 규제（$n건）';
+  }
+
+  @override
+  String get roadRegulationLevel2 => '통행 금지';
+
+  @override
+  String get roadRegulationLevel1 => '차선·편측 등 규제';
+
+  @override
+  String roadRegulationSection(String section) {
+    return '구간: $section';
+  }
+
+  @override
+  String roadRegulationSince(String at) {
+    return '규제 시작: $at';
+  }
+
+  @override
+  String get roadRegulationNotice =>
+      '국토교통성 도로정보시스템의 규제 정보입니다（공사 규제 제외）. 최신 상황은 현지 표시와 교통정보를 따르세요.';
+
+  @override
+  String get roadRegulationOpenSource => '도로정보시스템 열기';
+
+  @override
+  String get mapLayerRoadRegulationNone => '통행 규제 데이터가 없습니다';
+
+  @override
   String get mapLayerTyphoonTitle => '태풍 정보';
 
   @override

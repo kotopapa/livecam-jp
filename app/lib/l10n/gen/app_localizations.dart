@@ -3970,6 +3970,66 @@ abstract class AppLocalizations {
   /// **'冠水状況のデータがありません'**
   String get mapLayerUnderpassNone;
 
+  /// No description provided for @mapLayerRoadRegulationTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'道路の通行規制（災害・気象）'**
+  String get mapLayerRoadRegulationTitle;
+
+  /// No description provided for @mapLayerRoadRegulationSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'国交省の道路情報提供システムから、工事を除く通行止め・規制（国道・高速・一部の県道）'**
+  String get mapLayerRoadRegulationSubtitle;
+
+  /// No description provided for @mapLegendRoadRegulation.
+  ///
+  /// In ja, this message translates to:
+  /// **'道路の通行規制（{n}件）'**
+  String mapLegendRoadRegulation(int n);
+
+  /// No description provided for @roadRegulationLevel2.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行止め'**
+  String get roadRegulationLevel2;
+
+  /// No description provided for @roadRegulationLevel1.
+  ///
+  /// In ja, this message translates to:
+  /// **'車線・片側などの規制'**
+  String get roadRegulationLevel1;
+
+  /// No description provided for @roadRegulationSection.
+  ///
+  /// In ja, this message translates to:
+  /// **'区間: {section}'**
+  String roadRegulationSection(String section);
+
+  /// No description provided for @roadRegulationSince.
+  ///
+  /// In ja, this message translates to:
+  /// **'規制開始: {at}'**
+  String roadRegulationSince(String at);
+
+  /// No description provided for @roadRegulationNotice.
+  ///
+  /// In ja, this message translates to:
+  /// **'国交省の道路情報提供システムの規制情報です（工事による規制は含みません）。最新の状況は現地の表示と交通情報に従ってください。'**
+  String get roadRegulationNotice;
+
+  /// No description provided for @roadRegulationOpenSource.
+  ///
+  /// In ja, this message translates to:
+  /// **'道路情報提供システムを開く'**
+  String get roadRegulationOpenSource;
+
+  /// No description provided for @mapLayerRoadRegulationNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'通行規制のデータがありません'**
+  String get mapLayerRoadRegulationNone;
+
   /// No description provided for @mapLayerTyphoonTitle.
   ///
   /// In ja, this message translates to:

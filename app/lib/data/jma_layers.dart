@@ -42,6 +42,9 @@ enum MapLayerKind {
 
   /// 地下道（アンダーパス）の冠水状況（自治体センサー。data/underpass.dart）
   underpass,
+
+  /// 道路の通行規制（災害・気象由来。国交省 道路情報提供システム。data/road_regulation.dart）
+  roadRegulation,
 }
 
 enum QuakePeriod { day, week, month }

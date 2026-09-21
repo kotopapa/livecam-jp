@@ -2174,6 +2174,44 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapLayerUnderpassNone => '冠水状況のデータがありません';
 
   @override
+  String get mapLayerRoadRegulationTitle => '道路の通行規制（災害・気象）';
+
+  @override
+  String get mapLayerRoadRegulationSubtitle =>
+      '国交省の道路情報提供システムから、工事を除く通行止め・規制（国道・高速・一部の県道）';
+
+  @override
+  String mapLegendRoadRegulation(int n) {
+    return '道路の通行規制（$n件）';
+  }
+
+  @override
+  String get roadRegulationLevel2 => '通行止め';
+
+  @override
+  String get roadRegulationLevel1 => '車線・片側などの規制';
+
+  @override
+  String roadRegulationSection(String section) {
+    return '区間: $section';
+  }
+
+  @override
+  String roadRegulationSince(String at) {
+    return '規制開始: $at';
+  }
+
+  @override
+  String get roadRegulationNotice =>
+      '国交省の道路情報提供システムの規制情報です（工事による規制は含みません）。最新の状況は現地の表示と交通情報に従ってください。';
+
+  @override
+  String get roadRegulationOpenSource => '道路情報提供システムを開く';
+
+  @override
+  String get mapLayerRoadRegulationNone => '通行規制のデータがありません';
+
+  @override
   String get mapLayerTyphoonTitle => '台風情報';
 
   @override
@@ -4618,6 +4656,44 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapLayerUnderpassNone => 'データが ありません';
+
+  @override
+  String get mapLayerRoadRegulationTitle => 'どうろの とおれない ところ';
+
+  @override
+  String get mapLayerRoadRegulationSubtitle =>
+      'こうじ いがいの とおれない・きせいの みち（こくどう・こうそく・いちぶの けんどう）';
+
+  @override
+  String mapLegendRoadRegulation(int n) {
+    return 'どうろの きせい（$nけん）';
+  }
+
+  @override
+  String get roadRegulationLevel2 => 'とおれない';
+
+  @override
+  String get roadRegulationLevel1 => 'いちぶ きせい';
+
+  @override
+  String roadRegulationSection(String section) {
+    return 'くかん: $section';
+  }
+
+  @override
+  String roadRegulationSince(String at) {
+    return 'はじまり: $at';
+  }
+
+  @override
+  String get roadRegulationNotice =>
+      'こくどこうつうしょうの じょうほうです（こうじは ふくみません）。さいしんの じょうきょうは げんちの ひょうじに したがってください。';
+
+  @override
+  String get roadRegulationOpenSource => 'もとの ページを ひらく';
+
+  @override
+  String get mapLayerRoadRegulationNone => 'データが ありません';
 
   @override
   String get mapLayerTyphoonTitle => 'たいふうの じょうほう';

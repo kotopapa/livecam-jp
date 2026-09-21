@@ -2161,6 +2161,44 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapLayerUnderpassNone => '没有积水状况数据';
 
   @override
+  String get mapLayerRoadRegulationTitle => '道路通行管制（灾害・气象）';
+
+  @override
+  String get mapLayerRoadRegulationSubtitle =>
+      '来自国土交通省道路信息系统的禁止通行・管制（不含施工。国道・高速・部分县道）';
+
+  @override
+  String mapLegendRoadRegulation(int n) {
+    return '道路通行管制（$n件）';
+  }
+
+  @override
+  String get roadRegulationLevel2 => '禁止通行';
+
+  @override
+  String get roadRegulationLevel1 => '车道・单侧等管制';
+
+  @override
+  String roadRegulationSection(String section) {
+    return '区间: $section';
+  }
+
+  @override
+  String roadRegulationSince(String at) {
+    return '管制开始: $at';
+  }
+
+  @override
+  String get roadRegulationNotice =>
+      '国土交通省道路信息系统的管制信息（不含施工管制）。最新情况请以现场标识和交通信息为准。';
+
+  @override
+  String get roadRegulationOpenSource => '打开道路信息系统';
+
+  @override
+  String get mapLayerRoadRegulationNone => '没有通行管制数据';
+
+  @override
   String get mapLayerTyphoonTitle => '台风信息';
 
   @override
@@ -4559,6 +4597,44 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapLayerUnderpassNone => '沒有積水狀況資料';
+
+  @override
+  String get mapLayerRoadRegulationTitle => '道路通行管制（災害・氣象）';
+
+  @override
+  String get mapLayerRoadRegulationSubtitle =>
+      '來自國土交通省道路資訊系統的禁止通行・管制（不含施工。國道・高速・部分縣道）';
+
+  @override
+  String mapLegendRoadRegulation(int n) {
+    return '道路通行管制（$n件）';
+  }
+
+  @override
+  String get roadRegulationLevel2 => '禁止通行';
+
+  @override
+  String get roadRegulationLevel1 => '車道・單側等管制';
+
+  @override
+  String roadRegulationSection(String section) {
+    return '區間: $section';
+  }
+
+  @override
+  String roadRegulationSince(String at) {
+    return '管制開始: $at';
+  }
+
+  @override
+  String get roadRegulationNotice =>
+      '國土交通省道路資訊系統的管制資訊（不含施工管制）。最新情況請以現場標示與交通資訊為準。';
+
+  @override
+  String get roadRegulationOpenSource => '開啟道路資訊系統';
+
+  @override
+  String get mapLayerRoadRegulationNone => '沒有通行管制資料';
 
   @override
   String get mapLayerTyphoonTitle => '颱風資訊';
