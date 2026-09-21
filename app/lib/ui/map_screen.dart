@@ -144,11 +144,11 @@ class _MapScreenState extends State<MapScreen> {
     try {
       final prefs = await SharedPreferences.getInstance();
       final s = prefs.getBool(_situationCollapsedKey) ?? false;
-      final l = prefs.getBool(_legendCollapsedKey) ?? false;
+      final l = prefs.getBool(_legendCollapsedKey);
       if (!mounted) return;
       setState(() {
         _situationCollapsed = s;
-        _legendCollapsed = l;
+        _legendCollapsedPref = l;
       });
     } catch (_) {}
   }
@@ -156,7 +156,7 @@ class _MapScreenState extends State<MapScreen> {
   Future<void> _togglePanel({bool? situation, bool? legend}) async {
     setState(() {
       if (situation != null) _situationCollapsed = situation;
-      if (legend != null) _legendCollapsed = legend;
+      if (legend != null) _legendCollapsedPref = legend;
     });
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -282,7 +282,11 @@ class _MapScreenState extends State<MapScreen> {
 
   /// 左上カード・左下凡例の折りたたみ（端末ごとに記憶。2026-09-21 要望）
   bool _situationCollapsed = false;
-  bool _legendCollapsed = false;
+
+  /// 凡例の出典行の折りたたみ。未設定（null）なら冠水状況レイヤーだけ閉じた状態で始める
+  /// （出典が10行あり画面を埋めるため。色と段階の文字は閉じていても見せる）
+  bool? _legendCollapsedPref;
+  bool get _legendCollapsed => _legendCollapsedPref ?? (_layer == MapLayerKind.underpass);
   static const _situationCollapsedKey = 'situation_collapsed';
   static const _legendCollapsedKey = 'map_legend_collapsed';
   /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
@@ -1500,7 +1504,6 @@ class _MapScreenState extends State<MapScreen> {
                   style: const TextStyle(fontSize: 9, color: Colors.red))),
           ]),
         ),
-        if (!_legendCollapsed) ...[
         if (_layer == MapLayerKind.shelters &&
             _zoom >= ShelterLayers.minZoom &&
             (_shelters?.failed.intersection(_shelterPrefs).isNotEmpty ?? false))
@@ -1532,12 +1535,14 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
         Row(mainAxisSize: MainAxisSize.min, children: items),
-        if (_layer == MapLayerKind.underpass)
-          for (final s in _underpass.sources)
-            Text(s.attribution, style: const TextStyle(fontSize: 9, color: Colors.black54)),
-        if (!hazard)
-          const Text(JmaLayers.attribution,
-              style: TextStyle(fontSize: 9, color: Colors.black54)),
+        // 出典行だけ折りたたむ（色と段階の文字は常に出す）
+        if (!_legendCollapsed) ...[
+          if (_layer == MapLayerKind.underpass)
+            for (final s in _underpass.sources)
+              Text(s.attribution, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+          if (!hazard)
+            const Text(JmaLayers.attribution,
+                style: TextStyle(fontSize: 9, color: Colors.black54)),
         ],
       ]),
     );
