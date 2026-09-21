@@ -2139,7 +2139,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get mapLayerUnderpassSubtitle =>
-      '센서 기반 통행 가능·주의·통행 금지（지바시·사이타마시·가시와시·히라쓰카시·시즈오카시·가케가와시·후쿠이현·효고현·가코가와시·다카마쓰시·사세보시）';
+      '센서 기반 통행 가능·주의·통행 금지（지바시·사이타마시·가시와시·히라쓰카시·시즈오카시·가케가와시·시즈오카현·후쿠이현·효고현·가코가와시·다카마쓰시·사세보시）';
 
   @override
   String mapLegendUnderpass(int n) {

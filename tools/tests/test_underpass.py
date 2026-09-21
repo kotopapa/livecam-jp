@@ -178,3 +178,38 @@ def test_parse_riskma_keeps_hiratsuka_style_names():
     assert [p["name"] for p in pts] == ["豊田打間木（水路）", "豊田打間木（道路）"]
     assert next(p for p in pts if p["id"] == "14203_1")["level"] == 2
     assert next(p for p in pts if p["id"] == "14203_2")["level"] == -1  # 現況が無い
+
+
+def test_parse_shizuoka_pref_sotei_and_regulation_lines():
+    data = json.loads((FIX.parent / "underpass_shizuoka_pref.json").read_text(encoding="utf-8"))
+    pts = underpass.parse_shizuoka_pref(data)
+    reg = [p for p in pts if p["level"] == 2]
+    sotei = [p for p in pts if p["level"] == 0]
+    assert len(sotei) == 3 and sotei[0]["label"] == "冠水想定箇所（規制なし）"
+    assert any(p["name"].startswith("東中鉄道橋（国道414号・下田市）") for p in sotei)
+    assert len(reg) == 2
+    a = next(p for p in reg if p["id"] == "kisei-9001-1")
+    assert a["name"] == "国道414号（下田市）" and a["label"] == "冠水による通行規制"
+    assert abs(a["lat"] - 34.6892) < 0.001 and abs(a["lng"] - 138.943) < 0.001  # POINT(3857) → 緯度経度
+    assert len(a["lines"]) == 1 and len(a["lines"][0]) == 3
+    b = next(p for p in reg if p["id"] == "kisei-9002-1")
+    assert b["name"] == "県道12号（沼津市・三島市）" and len(b["lines"]) == 2  # MULTILINESTRING
+    assert underpass.parse_shizuoka_pref({"rowcol_area": None, "rowcol_sotei": []}) == []
+
+
+def test_parse_hyogo_regulation_filters_flood_reasons_and_joins_kml():
+    kml = (FIX.parent / "underpass_hyogo_regulation.kml").read_bytes()
+    page = (FIX.parent / "underpass_hyogo_reglist.html").read_text(encoding="utf-8")
+    rows = underpass.hyogo_regulation_rows(page)
+    # 工事情報（16309）と冬期は区分ごと除外、災害時2行＋気象1行が残る
+    assert [r["rid"] for r in rows] == ["16223", "16357", "99999"]
+    pts = underpass.parse_hyogo_regulation(kml, [page])
+    # 99999 は KML に座標が無いので落ちる。16357 は「大雨による土砂流出」で語に一致
+    assert [p["id"] for p in pts] == ["16223", "16357"] or [p["id"] for p in pts] == ["16357", "16223"]
+    a = next(p for p in pts if p["id"] == "16223")
+    assert a["level"] == 2 and a["label"] == "全面通行止め（路面冠水のため）" and a["name"].startswith("（主）県道43号高砂北条線 加古川市")
+    assert abs(a["lat"] - 34.8867) < 0.001 and a["at"].startswith("R 8/9/21")
+    b = next(p for p in pts if p["id"] == "16357")
+    assert b["level"] == 1  # 片側通行止め（styleUrl #3）
+    real = (FIX.parent / "underpass_hyogo_reglist.html").read_text(encoding="utf-8").replace("路面冠水のため", "舗装工事")
+    assert [p["id"] for p in underpass.parse_hyogo_regulation(kml, [real])] == ["16357"]

@@ -2208,7 +2208,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mapLayerUnderpassSubtitle =>
-      'Sensor-based passable / caution / closed (Chiba, Saitama, Kashiwa, Hiratsuka, Shizuoka, Kakegawa, Fukui Pref., Hyogo Pref., Kakogawa, Takamatsu, Sasebo)';
+      'Sensor-based passable / caution / closed (Chiba, Saitama, Kashiwa, Hiratsuka, Shizuoka, Kakegawa, Shizuoka Pref., Fukui Pref., Hyogo Pref., Kakogawa, Takamatsu, Sasebo)';
 
   @override
   String mapLegendUnderpass(int n) {

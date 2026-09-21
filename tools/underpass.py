@@ -52,6 +52,15 @@
 - 佐世保市道路冠水モニタリングシステム（https://sasebo.geoorm.com/ 、市道9路線）。トップ HTML の
   `<meta name="monitoring" data-list="…">` に JSON 配列（coordinate_lat/lon, monitoring_name, status 0=未検知 /
   1=5cm / 2=30cm / 3=50cm の冠水センサー段数, photo1_datetime）。著作権条項は柏市と同型（引用時は出典記載）
+- 静岡県道路通行規制情報提供システム 冠水情報（https://douro.pref.shizuoka.jp/ 、県管理道路）
+  `kisei/program/map/kansui.json.php` → rowcol_sotei（冠水想定箇所42・緯度経度）と rowcol_area（冠水を原因とする
+  現在の規制。null なら無し。the_geom_line_string_3857 の WKT LINESTRING/MULTILINESTRING を経緯度に直して
+  `lines` に持たせる）。規制は「県が規制をかけた区間」でセンサー状態ではない。想定箇所は level 0 で常時表示
+- 兵庫県道路総合管理システム 道路規制情報（冠水・大雨を理由とする通行規制）。地点は KML
+  `Map/RegulationMap.aspx`（Placemark name=規制番号, ExtendedData 規制ID / 地物種別, styleUrl #1=全面通行止 #2=大型
+  #3=片側交互 #4=幅員減少 #5=一方通行 #9=その他。線は無い）。原因は地域別一覧 `kisei/RoadLan_Regulation_List.aspx?AreaID=<2..7>&Period=0`
+  の「災害時通行規制情報」「気象状況」区分の行（路線 / 規制内容 / 期間 / 区間 / 理由、詳細リンクの RID=規制ID）から取り、
+  理由・内容に 冠水/浸水/大雨/雨量/豪雨/台風/異常気象 を含むものだけを KML の座標で出す（工事・冬期は除外）
 - 掛川市河川水位道路冠水等情報システム（https://kakegawa.anw-suite.com/waterlevel/ 、道路冠水観測装置7か所）
   `data_suii.cgi?road=<road_cd,…>` 1リクエスト → data[].kansuisu 0=正常 / 1=注意 / 2=危険 / 255=低温保護モード。
   座標は `common/js/map.js` の maker_road 固定値（KAKEGAWA_POINTS）。規約に「営利目的利用不可・無断転載禁止」が
@@ -62,6 +71,7 @@ level: 0=通行可 / 1=通行注意 / 2=通行止め / -1=不明（観測停止�
 from __future__ import annotations
 
 import json
+import math
 import re
 import sys
 import unicodedata
@@ -183,6 +193,28 @@ SOURCES: list[dict[str, Any]] = [
         "api": "https://sasebo.geoorm.com/",
         "attribution": "出典：佐世保市道路冠水モニタリングシステム（https://sasebo.geoorm.com/）",
         "kind": "sasebo",
+    },
+    {
+        "id": "shizuoka_pref",
+        "name": "静岡県道路通行規制情報 冠水情報",
+        "operator": "静岡県",
+        "prefecture": "22",
+        "url": "https://douro.pref.shizuoka.jp/",
+        "api": "https://douro.pref.shizuoka.jp/kisei/program/map/kansui.json.php",
+        "attribution": "出典：静岡県道路通行規制情報提供システム",
+        "kind": "shizuoka_pref",
+    },
+    {
+        "id": "hyogo_reg",
+        "name": "兵庫県道路総合管理システム 道路規制情報（冠水・大雨）",
+        "operator": "兵庫県",
+        "prefecture": "28",
+        "url": "https://road.civil.pref.hyogo.lg.jp/",
+        "api": "https://road.civil.pref.hyogo.lg.jp/RoadLan/InternetGeneral/Map/RegulationMap.aspx",
+        "lists": [f"https://road.civil.pref.hyogo.lg.jp/RoadLan/InternetGeneral/kisei/RoadLan_Regulation_List.aspx?AreaID={a}&Period=0"
+                  for a in range(2, 8)],
+        "attribution": "出典：兵庫県道路総合管理システム",
+        "kind": "hyogo_reg",
     },
     {
         "id": "kakegawa",
@@ -527,6 +559,134 @@ def parse_sasebo(page: str) -> list[dict[str, Any]]:
     return sorted(out, key=lambda p: p["name"])
 
 
+HYOGO_REG_STYLE = {"1": (2, "全面通行止め"), "2": (2, "大型車通行止め"), "3": (1, "片側交互通行"),
+                   "4": (1, "幅員減少"), "5": (1, "一方通行"), "9": (1, "その他の規制")}
+HYOGO_REG_WORDS = re.compile("冠水|浸水|大雨|雨量|豪雨|台風|異常気象")
+_HYOGO_ROW = re.compile(
+    r"<tr>\s*<td>(?P<route>[^<]*)</td>\s*<td>\s*<font[^>]*>\s*(?P<content>[^<]*?)\s*</font>\s*</td>\s*<td>(?P<period>[^<]*)</td>"
+    r".*?RID=(?P<rid>\d+).*?</tr>\s*<tr>\s*<td>(?P<section>[^<]*)</td>\s*<td[^>]*>(?P<reason>[^<]*)</td>", re.S)
+
+
+def hyogo_regulation_rows(page: str) -> list[dict[str, str]]:
+    """規制一覧 HTML → 災害時・気象の区分にある行（工事・冬期は除く）。"""
+    import html as _html
+    rows = []
+    parts = re.split(r'<a name="(DisasterTCInfo|EngineeringWorkInfo|WeatherStatus|WIS)"', page)
+    # parts: [前, anchor1, 本文1, anchor2, 本文2, ...]
+    for i in range(1, len(parts) - 1, 2):
+        anchor, body = parts[i], parts[i + 1]
+        if anchor not in ("DisasterTCInfo", "WeatherStatus"):
+            continue
+        for m in _HYOGO_ROW.finditer(body):
+            d = {k: _html.unescape(" ".join((v or "").replace("\xa0", " ").split())) for k, v in m.groupdict().items()}
+            d["kind"] = "災害時通行規制" if anchor == "DisasterTCInfo" else "気象状況"
+            rows.append(d)
+    return rows
+
+
+def parse_hyogo_regulation(kml: bytes | str, pages: list[str]) -> list[dict[str, Any]]:
+    """規制 KML（座標）＋地域別一覧（原因）→ 冠水・大雨を理由とする規制の点。"""
+    root = ET.fromstring(kml)
+    ns = root.tag[1:].split("}")[0] if root.tag.startswith("{") else ""
+    q = (lambda t: f"{{{ns}}}{t}") if ns else (lambda t: t)
+    by_id: dict[str, tuple[float, float, str]] = {}
+    for pm in root.iter(q("Placemark")):
+        coords = (pm.findtext(f".//{q('coordinates')}") or "").strip().split(",")
+        rid = ""
+        for d in pm.iter(q("Data")):
+            if d.get("name") == "規制ID":
+                rid = (d.findtext(q("value")) or "").strip()
+        try:
+            lng, lat = float(coords[0]), float(coords[1])
+        except (ValueError, IndexError):
+            continue
+        if rid:
+            by_id[rid] = (lat, lng, (pm.findtext(q("styleUrl")) or "").lstrip("#"))
+    out = []
+    seen = set()
+    for page in pages:
+        for r in hyogo_regulation_rows(page):
+            if not HYOGO_REG_WORDS.search(r["reason"] + r["content"]):
+                continue
+            hit = by_id.get(r["rid"])
+            if hit is None or r["rid"] in seen:
+                continue
+            seen.add(r["rid"])
+            lat, lng, style = hit
+            level, _ = HYOGO_REG_STYLE.get(style, (1, ""))
+            if "全面通行止" in r["content"]:
+                level = 2
+            label = f"{r['content']}（{r['reason']}）" if r["reason"] else r["content"]
+            name = f"{r['route']} {r['section']}".strip()
+            out.append({"id": r["rid"], "name": name, "lat": lat, "lng": lng, "level": level,
+                        "label": label, "at": r["period"]})
+    return sorted(out, key=lambda p: p["name"])
+
+
+def merc_to_latlng(x: float, y: float) -> list[float]:
+    """EPSG:3857 → [lat, lng]（小数6桁）。"""
+    lng = x / 20037508.34 * 180.0
+    lat = math.degrees(2 * math.atan(math.exp(y / 6378137.0)) - math.pi / 2)
+    return [round(lat, 6), round(lng, 6)]
+
+
+def wkt_lines_3857(wkt: str | None) -> list[list[list[float]]]:
+    """WKT の LINESTRING / MULTILINESTRING（EPSG:3857）→ [[[lat,lng],...], ...]。"""
+    if not wkt:
+        return []
+    out = []
+    for group in re.findall(r"\(([^()]+)\)", wkt):
+        pts = []
+        for pair in group.split(","):
+            xy = pair.split()
+            if len(xy) < 2:
+                continue
+            try:
+                pts.append(merc_to_latlng(float(xy[0]), float(xy[1])))
+            except ValueError:
+                continue
+        if len(pts) >= 2:
+            out.append(pts)
+    return out
+
+
+def parse_shizuoka_pref(data: dict[str, Any]) -> list[dict[str, Any]]:
+    """静岡県 kansui.json.php → 冠水想定箇所（level 0）と冠水規制区間（level 2・lines 付き）。"""
+    out = []
+    for r in (data or {}).get("rowcol_sotei") or []:
+        if not isinstance(r, dict):
+            continue
+        try:
+            lat, lng = float(r.get("緯度")), float(r.get("経度"))
+        except (TypeError, ValueError):
+            continue
+        spot = " ".join(str(r.get("箇所名") or "").split())
+        route = f"{r.get('道路種別') or ''}{r.get('路線名') or ''}".strip()
+        name = f"{spot}（{route}・{r.get('市町名') or ''}）" if spot else f"{route}（{r.get('市町名') or ''}）"
+        out.append({"id": f"sotei-{r.get('gid')}", "name": name, "lat": lat, "lng": lng,
+                    "level": 0, "label": "冠水想定箇所（規制なし）", "at": ""})
+    for r in (data or {}).get("rowcol_area") or []:
+        if not isinstance(r, dict):
+            continue
+        lines = wkt_lines_3857(str(r.get("the_geom_line_string_3857") or ""))
+        pt = wkt_lines_3857("LINESTRING(" + re.sub(r"[A-Z()]", "", str(r.get("the_geom_point_string_3857") or "")) + ",0 0)")
+        if pt and pt[0]:
+            lat, lng = pt[0][0]
+        elif lines:
+            mid = lines[0][len(lines[0]) // 2]
+            lat, lng = mid
+        else:
+            continue
+        city = "・".join(c for c in (str(r.get("city1") or ""), str(r.get("city2") or "")) if c)
+        name = f"{r.get('rosen') or '規制区間'}（{city}）" if city else str(r.get("rosen") or "規制区間")
+        p = {"id": f"kisei-{r.get('kisei_id')}-{r.get('kisei_eda')}", "name": name, "lat": lat, "lng": lng,
+             "level": 2, "label": "冠水による通行規制", "at": ""}
+        if lines:
+            p["lines"] = lines
+        out.append(p)
+    return sorted(out, key=lambda q: (q["level"] == 0, q["name"]))
+
+
 def parse_kakegawa(data: dict[str, Any]) -> list[dict[str, Any]]:
     """掛川市 data_suii.cgi の道路要素 → 点（座標は KAKEGAWA_POINTS）。"""
     out = []
@@ -619,6 +779,18 @@ def fetch_source(src: dict[str, Any]) -> list[dict[str, Any]] | None:
             return parse_riskma(m.json(), r.json())
         if kind == "kakegawa":
             return parse_kakegawa(r.json())
+        if kind == "shizuoka_pref":
+            return parse_shizuoka_pref(r.json())
+        if kind == "hyogo_reg":
+            pages = []
+            for u in src["lists"]:
+                try:
+                    lr = requests.get(u, headers=headers, timeout=30)
+                    if lr.ok:
+                        pages.append(lr.text)
+                except Exception:  # noqa: BLE001
+                    pass
+            return parse_hyogo_regulation(r.content, pages)
         if kind == "sasebo":
             return parse_sasebo(r.text)
         if kind == "fukui":

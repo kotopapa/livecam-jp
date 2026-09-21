@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+	<Document>
+		<name>RegulationRelayMap</name>
+		<description>2026/09/21 16:45:22</description>
+		<Style id="1">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_RegulationAllStop.png</href>
+					<gx:w>24</gx:w>
+					<gx:h>24</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="2">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_RegulationLargeStop.png</href>
+					<gx:w>24</gx:w>
+					<gx:h>24</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="3">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_RegulationSideBySide.png</href>
+					<gx:w>24</gx:w>
+					<gx:h>24</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="4">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_RegulationTight.png</href>
+					<gx:w>24</gx:w>
+					<gx:h>24</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="5">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_RegulationOneWay.png</href>
+					<gx:w>24</gx:w>
+					<gx:h>24</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="9">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_RegulationOther.png</href>
+					<gx:w>24</gx:w>
+					<gx:h>24</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Folder>
+						<Placemark>
+				<name>20250203-R0004</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>通行規制（工事）</value>
+					</Data>
+					<Data name="規制ID">
+						<value>16223</value>
+					</Data>
+					<Data name="規制区間ID">
+						<value>1</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#1</styleUrl>
+				<Point>
+					<coordinates>135.011544346035,34.8866749519984,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>20250301-R0032</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>通行規制（工事）</value>
+					</Data>
+					<Data name="規制ID">
+						<value>16357</value>
+					</Data>
+					<Data name="規制区間ID">
+						<value>1</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#3</styleUrl>
+				<Point>
+					<coordinates>134.835347757154,34.8080888024163,0</coordinates>
+				</Point>
+			</Placemark>
+			</Folder>
+	</Document>
+</kml>
