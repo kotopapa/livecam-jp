@@ -18311,3 +18311,58 @@ cameras:
     lng: 125.33
     note: 宮古島市上野から南西向き（TAPO C325WB）。星空観察の雲量確認用で、配信は不定期（台風時・七夕など）。2026-09-03 時点は配信なし。設置点の詳細非公開のため座標は上野地区の概略値。採用するなら
       youtube_channel で不定期配信の注記付き
+
+  # 2026-09-21 千葉市の道路カメラ調査で追加。個人チャンネル（hare teka）の固定カメラ。
+  # 千葉都市モノレール・県庁前・JR外房線/内房線/京成千原線が写る交差点。1チャンネル1配信のため channel_id で登録
+  - id: curated-chiba-honchiba-crossing
+    name: 千葉市 本千葉町交差点（モノレール・県庁前）
+    operator: "hare teka（個人・YouTubeチャンネル）"
+    channel_id: "UCfkQNSJWL1CYhMdpjdx3ccQ"
+    category: road
+    prefecture: "12"
+    lat: 35.6063
+    lng: 140.1196
+    note: "2026-09-21 ライブ配信中(8wR0DN9mDao)を確認。個人運営のため削除依頼即応"
+
+  # 2026-09-21 千葉市の民間カメラ調査。設置事業者 livecamera24.jp（会社概要なし・登録者非公開で運営者は未特定）。
+  # 2026-09-21 ユーザー判断で採用（削除依頼即応）。1チャンネル1配信のため channel_id で登録。座標は町域からの推定
+  - id: curated-chiba-lc24-ogura
+    name: 千葉市若葉区小倉町（街の定点カメラ）
+    operator: "ライブカメラ24（livecamera24.jp）"
+    channel_id: "UCBxJya83ShohqlwdODw0kPQ"
+    category: road
+    prefecture: "12"
+    lat: 35.6280
+    lng: 140.1671
+    note: "配信 qNrznGDfMjA。運営者未特定のため削除依頼即応"
+
+  - id: curated-chiba-lc24-nakano
+    name: 千葉市若葉区中野町（街の定点カメラ）
+    operator: "ライブカメラ24（livecamera24.jp）"
+    channel_id: "UChsaDZFZ5xLlO5zDZTdLagg"
+    category: road
+    prefecture: "12"
+    lat: 35.5784
+    lng: 140.2717
+    note: "配信 K421Z_cXljM。運営者未特定のため削除依頼即応"
+
+  - id: curated-chiba-lc24-shinjuku
+    name: 千葉市中央区新宿（街の定点カメラ）
+    operator: "ライブカメラ24（livecamera24.jp）"
+    channel_id: "UCMCA3rrbXs2_yt0S0IZk1Nw"
+    category: road
+    prefecture: "12"
+    lat: 35.6051
+    lng: 140.1136
+    note: "配信 0ONq0jNN5e0。運営者未特定のため削除依頼即応"
+
+  - id: curated-chiba-lc24-chuoko
+    name: 千葉市中央区中央港（千葉港の定点カメラ）
+    operator: "ライブカメラ24（livecamera24.jp）"
+    channel_id: "UCvnckiYgpaVMF37Cx8IDy2w"
+    category: coast
+    prefecture: "12"
+    lat: 35.6018
+    lng: 140.1014
+    note: "配信 mTfNTSW7wGU（確認時は配信停止中・数時間で復旧との案内）。運営者未特定のため削除依頼即応"
+

@@ -7389,14 +7389,14 @@ cameras:
     name: "京葉道路 貝塚IC"
     operator: "NEXCO各社（iHighway）"
     category: road
-    prefecture: "27"
-    lat: 34.3892878
-    lng: 135.3898348
+    prefecture: "12"
+    lat: 35.630583
+    lng: 140.128306
     feed_type: web_page
     feed_url: "https://ihighway.jp/pcsite/index.html?contents=map&area=area04&cam=952515201000&x=7620&y=6690"
     image_url: "https://ihighway.jp/pcsite/index.html?contents=map&area=area04&cam=952515201000&x=7620&y=6690"
     page_url: "https://ihighway.jp/pcsite/index.html?contents=map&area=area04&cam=952515201000&x=7620&y=6690"
-    note: "iHighwayカメラ個別ページへのリンク誘導のみ(画像転載なし)。座標はOSM由来(© OpenStreetMap contributors)"
+    note: "iHighwayカメラ個別ページへのリンク誘導のみ(画像転載なし)。座標は大阪府貝塚市に誤ジオコーディングされていたのを2026-09-21に千葉市若葉区東寺山町へ修正"
 
   - id: curated-still-ihighway-952515201100
     name: "千葉東金道路 大宮IC"
