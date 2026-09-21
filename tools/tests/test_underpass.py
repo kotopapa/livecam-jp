@@ -166,3 +166,15 @@ def test_render_sources_html_lists_every_source():
     assert "15か所" in page and "62か所" in page and "77か所" in page
     assert "加古川市によって保証されたものではありません" in page
     assert "<script" not in page
+
+
+def test_parse_riskma_keeps_hiratsuka_style_names():
+    master = {"observatories": [
+        {"id": "14203_1", "name": "豊田打間木（道路）", "lat": 35.362983, "lng": 139.341018, "type": 43},
+        {"id": "14203_2", "name": "豊田打間木（水路）", "lat": 35.363301, "lng": 139.342513, "type": 43},
+    ]}
+    status = {"suijins": {"14203_1": {"status": "topFlooded", "date": "2026/09/21 10:00"}}}
+    pts = underpass.parse_riskma(master, status)
+    assert [p["name"] for p in pts] == ["豊田打間木（水路）", "豊田打間木（道路）"]
+    assert next(p for p in pts if p["id"] == "14203_1")["level"] == 2
+    assert next(p for p in pts if p["id"] == "14203_2")["level"] == -1  # 現況が無い

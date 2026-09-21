@@ -39,6 +39,9 @@
   （waiting=冠水なし / flooded=浸水注意（水路の注意ライン） / topFlooded=浸水検知 / maintenace）。
   **`Origin: https://kashiwa.riskma.jp` ヘッダ必須**（無いと 422）。規約は一般的な著作権表記＋
   「引用時は出典記載（記載例あり）」→ 出典明記で利用（2026-09-21）。他の *.riskma.jp も同型
+- RisKma平塚市（https://hiratsuka.riskma.jp/ 、浸水センサ4か所=道路2・水路2。柏市と同じ data.riskma.net 経路）。
+  2026-09-21 の *.riskma.jp 総当たり（1,695 市区町村ローマ字の DNS 解決で26テナント）で type 43 を持つのは
+  柏・平塚・静岡市（shizuoka.riskma.jp → 職員向け「巴川予測システム」へ転送。122か所あるが一般公開ページでないため不採用）
 - みち情報ネットふくい 冠水情報（福井県道路保全課。`hozen/yuki/sp/assets/jsons/floodings.json` 1リクエスト、
   県管理アンダーパス9か所。data.state.id 0=冠水なし / 1=注意 / 2=冠水、map.icons[0].lat/lng）。
   無断転載禁止の文言は静止画カメラと同じ扱い（2026-08-29 ユーザー判断で出典明記のうえ継続・県へ照会中）
@@ -137,6 +140,18 @@ SOURCES: list[dict[str, Any]] = [
         "master": "https://data.riskma.net/bosai/observatories?domain=kashiwa.riskma.jp",
         "headers": {"Origin": "https://kashiwa.riskma.jp"},
         "attribution": "出典：柏市管路内水位観測システム（https://kashiwa.riskma.jp/）",
+        "kind": "riskma",
+    },
+    {
+        "id": "hiratsuka",
+        "name": "RisKma平塚市（浸水センサ）",
+        "operator": "平塚市",
+        "prefecture": "14",
+        "url": "https://hiratsuka.riskma.jp/",
+        "api": "https://data.riskma.net/bosai/observatories/status/v2?domain=hiratsuka.riskma.jp",
+        "master": "https://data.riskma.net/bosai/observatories?domain=hiratsuka.riskma.jp",
+        "headers": {"Origin": "https://hiratsuka.riskma.jp"},
+        "attribution": "出典：平塚市（RisKma平塚市）",
         "kind": "riskma",
     },
     {
@@ -410,15 +425,19 @@ def parse_riskma(master: dict[str, Any], status: dict[str, Any]) -> list[dict[st
             lat, lng = float(o["lat"]), float(o["lng"])
         except (KeyError, TypeError, ValueError):
             continue
-        name = str(o.get("name") or "").replace("(浸水センサ)", "").strip()
+        raw = str(o.get("name") or "").strip()
+        # 柏市は「西原六丁目(浸水センサ)」、平塚市は「豊田打間木（道路）」。種別が名前に無ければ添える
+        name = raw.replace("(浸水センサ)", "").strip()
         if not name:
             continue
+        if "浸水センサ" in raw or not any(k in name for k in ("道路", "水路")):
+            name = f"{name}（浸水センサ）"
         x = sj.get(str(o.get("id"))) or {}
         st = str(x.get("status") or "")
         if x.get("isTopFlooded") is True:
             st = "topFlooded"
         level, label = RISKMA_STATUS.get(st, (-1, "不明（メンテナンス）" if st else "欠測"))
-        out.append({"id": str(o.get("id")), "name": f"{name}（浸水センサ）", "lat": lat, "lng": lng,
+        out.append({"id": str(o.get("id")), "name": name, "lat": lat, "lng": lng,
                     "level": level, "label": label, "at": str(x.get("date") or "")})
     return sorted(out, key=lambda p: p["name"])
 
