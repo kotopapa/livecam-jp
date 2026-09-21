@@ -564,7 +564,7 @@ HYOGO_REG_STYLE = {"1": (2, "全面通行止め"), "2": (2, "大型車通行止�
 HYOGO_REG_WORDS = re.compile("冠水|浸水|大雨|雨量|豪雨|台風|異常気象")
 _HYOGO_ROW = re.compile(
     r"<tr>\s*<td>(?P<route>[^<]*)</td>\s*<td>\s*<font[^>]*>\s*(?P<content>[^<]*?)\s*</font>\s*</td>\s*<td>(?P<period>[^<]*)</td>"
-    r".*?RID=(?P<rid>\d+).*?</tr>\s*<tr>\s*<td>(?P<section>[^<]*)</td>\s*<td[^>]*>(?P<reason>[^<]*)</td>", re.S)
+    r".*?[?&]RID=(?P<rid>\d+).*?</tr>\s*<tr>\s*<td>(?P<section>[^<]*)</td>\s*<td[^>]*>(?P<reason>[^<]*)</td>", re.S)
 
 
 def hyogo_regulation_rows(page: str) -> list[dict[str, str]]:
@@ -578,7 +578,7 @@ def hyogo_regulation_rows(page: str) -> list[dict[str, str]]:
         if anchor not in ("DisasterTCInfo", "WeatherStatus"):
             continue
         for m in _HYOGO_ROW.finditer(body):
-            d = {k: _html.unescape(" ".join((v or "").replace("\xa0", " ").split())) for k, v in m.groupdict().items()}
+            d = {k: " ".join(_html.unescape(v or "").replace("\xa0", " ").split()) for k, v in m.groupdict().items()}
             d["kind"] = "災害時通行規制" if anchor == "DisasterTCInfo" else "気象状況"
             rows.append(d)
     return rows
