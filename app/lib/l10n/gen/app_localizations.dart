@@ -3901,7 +3901,7 @@ abstract class AppLocalizations {
   /// No description provided for @mapLayerUnderpassSubtitle.
   ///
   /// In ja, this message translates to:
-  /// **'自治体の冠水センサーによる通行可・注意・止め・冠水検知（千葉市・さいたま市・静岡市・高松市・兵庫県）'**
+  /// **'自治体の冠水センサーによる通行可・注意・止め・冠水検知（千葉市・さいたま市・柏市・静岡市・福井県・兵庫県・加古川市・高松市・佐世保市）'**
   String get mapLayerUnderpassSubtitle;
 
   /// No description provided for @mapLegendUnderpass.

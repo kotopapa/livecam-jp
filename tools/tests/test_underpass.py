@@ -101,3 +101,47 @@ def test_parse_hyogo_kml_styles_and_nfkc():
     assert underpass.hyogo_list_time("<td>9月21日 13時26分現在の冠水情報です。</td>",
                                      datetime(2026, 9, 21, tzinfo=timezone.utc)) == "2026-09-21 13:26"
     assert underpass.hyogo_list_time("no time") == ""
+
+
+def test_parse_riskma_statuses():
+    master = json.loads((FIX.parent / "underpass_kashiwa_obs.json").read_text(encoding="utf-8"))
+    status = json.loads((FIX.parent / "underpass_kashiwa_status.json").read_text(encoding="utf-8"))
+    pts = underpass.parse_riskma(master, status)
+    by = {p["name"]: p for p in pts}
+    # type 43 以外（雨量計）は入らない。名前の「(浸水センサ)」は付け直す
+    assert set(by) == {"西原六丁目（浸水センサ）", "地金堀(松葉町6丁目)（浸水センサ）", "篠籠田481（浸水センサ）", "大塚町７番先（浸水センサ）"}
+    assert (by["西原六丁目（浸水センサ）"]["level"], by["西原六丁目（浸水センサ）"]["label"]) == (0, "冠水なし")
+    assert (by["地金堀(松葉町6丁目)（浸水センサ）"]["level"], by["地金堀(松葉町6丁目)（浸水センサ）"]["label"]) == (1, "浸水注意")
+    assert (by["篠籠田481（浸水センサ）"]["level"], by["篠籠田481（浸水センサ）"]["label"]) == (2, "浸水検知")
+    assert by["大塚町７番先（浸水センサ）"]["level"] == -1
+    assert by["西原六丁目（浸水センサ）"]["id"] == "12217_1" and by["西原六丁目（浸水センサ）"]["at"].startswith("2026/09/21")
+
+
+def test_parse_fukui_states():
+    pts = underpass.parse_fukui(json.loads((FIX.parent / "underpass_fukui.json").read_text(encoding="utf-8")))
+    by = {p["name"]: p for p in pts}
+    assert (by["菅野アンダー（県123）"]["level"], by["菅野アンダー（県123）"]["label"]) == (0, "冠水なし")
+    assert (by["中筋アンダー（県160）"]["level"], by["中筋アンダー（県160）"]["label"]) == (2, "冠水")
+    # id=1 でも表示名が「冠水なし」なら平常（サイトの表示名を正とする）
+    three = next(p for p in pts if p["name"].startswith("三本木"))
+    assert three["level"] == 0 and three["label"] == "冠水なし"
+    assert by["菅野アンダー（県123）"]["at"] == "2026-09-08 14:58" and abs(by["菅野アンダー（県123）"]["lat"] - 36.2118) < 0.001
+
+
+def test_parse_kakogawa_status():
+    pts = underpass.parse_kakogawa(json.loads((FIX.parent / "underpass_kakogawa.json").read_text(encoding="utf-8")))
+    assert [(p["name"], p["level"], p["label"]) for p in pts] == [
+        ("加古川バイパス アンダーパス（東神吉町砂部）", 2, "浸水検知"),
+        ("山陽電車 アンダーパス（別府町新野辺）", 0, "冠水なし")]
+    assert abs(pts[0]["lat"] - 34.7846) < 0.001 and abs(pts[0]["lng"] - 134.8279) < 0.001
+
+
+def test_parse_sasebo_meta_json():
+    pts = underpass.parse_sasebo((FIX.parent / "underpass_sasebo.html").read_text(encoding="utf-8"))
+    by = {p["name"]: p for p in pts}
+    assert set(by) == {"山手浦2号線及び土肥ノ浦口ノ里線（鹿町工業高校周辺）", "新橋線（三浦ふれあい橋周辺）", "真申線（㈱福勇生コン周辺）"}
+    assert (by["山手浦2号線及び土肥ノ浦口ノ里線（鹿町工業高校周辺）"]["level"], by["山手浦2号線及び土肥ノ浦口ノ里線（鹿町工業高校周辺）"]["label"]) == (0, "冠水なし")
+    assert (by["新橋線（三浦ふれあい橋周辺）"]["level"], by["新橋線（三浦ふれあい橋周辺）"]["label"]) == (1, "冠水を検知（5cm）")
+    assert (by["真申線（㈱福勇生コン周辺）"]["level"], by["真申線（㈱福勇生コン周辺）"]["label"]) == (2, "冠水を検知（50cm）")
+    assert by["新橋線（三浦ふれあい橋周辺）"]["at"] == "2026-09-21 14:10" and abs(by["新橋線（三浦ふれあい橋周辺）"]["lat"] - 33.3037) < 0.001
+    assert underpass.parse_sasebo("<html></html>") == []

@@ -33,6 +33,22 @@
   #3=冠水通行止 / #99=不明（故障）。名前は半角カナ混じりなので NFKC 正規化）。更新時刻は地域別一覧
   `Submerg/RoadLan_Submergence_List.aspx?AreaID=2&Period=0` の「M月D日 H時M分現在」から取る。
   トップページは免責のみで転載・リンク制限の文言なし、robots.txt 無し（2026-09-21 確認）
+- 柏市管路内水位観測システム（RisKma・建設技術研究所。https://kashiwa.riskma.jp/ ）
+  道路・水路の浸水センサ 28か所（observatories の type 43）。`data.riskma.net/bosai/observatories?domain=kashiwa.riskma.jp`
+  と `.../observatories/status/v2?domain=...&date=<UTC YYYY/MM/DD HH:mm>` の suijins[id].status
+  （waiting=冠水なし / flooded=浸水注意（水路の注意ライン） / topFlooded=浸水検知 / maintenace）。
+  **`Origin: https://kashiwa.riskma.jp` ヘッダ必須**（無いと 422）。規約は一般的な著作権表記＋
+  「引用時は出典記載（記載例あり）」→ 出典明記で利用（2026-09-21）。他の *.riskma.jp も同型
+- みち情報ネットふくい 冠水情報（福井県道路保全課。`hozen/yuki/sp/assets/jsons/floodings.json` 1リクエスト、
+  県管理アンダーパス9か所。data.state.id 0=冠水なし / 1=注意 / 2=冠水、map.icons[0].lat/lng）。
+  無断転載禁止の文言は静止画カメラと同じ扱い（2026-08-29 ユーザー判断で出典明記のうえ継続・県へ照会中）
+- 加古川市 行政情報ダッシュボード（加古川市オープンデータAPI。`gis.opendata-api-kakogawa.jp/backend/water-level/onecoin/underpass`
+  GeoJSON・認証なし、アンダーパス2か所、os_status 0=平時。市全域のワンコイン浸水センサ層は OAuth 必須で対象外。
+  規約: API 利用サービスは「このサービスは、『加古川市オープンデータカタログサイト』のAPI機能を使用していますが、
+  サービスの内容は加古川市によって保証されたものではありません。」を表示 → attribution に含める）
+- 佐世保市道路冠水モニタリングシステム（https://sasebo.geoorm.com/ 、市道9路線）。トップ HTML の
+  `<meta name="monitoring" data-list="…">` に JSON 配列（coordinate_lat/lon, monitoring_name, status 0=未検知 /
+  1=5cm / 2=30cm / 3=50cm の冠水センサー段数, photo1_datetime）。著作権条項は柏市と同型（引用時は出典記載）
 
 level: 0=通行可 / 1=通行注意 / 2=通行止め / -1=不明（観測停止・取得失敗）
 """
@@ -106,7 +122,54 @@ SOURCES: list[dict[str, Any]] = [
         "attribution": "出典：兵庫県道路総合管理システム",
         "kind": "hyogo",
     },
+    {
+        "id": "kashiwa",
+        "name": "柏市管路内水位観測システム",
+        "operator": "柏市",
+        "prefecture": "12",
+        "url": "https://kashiwa.riskma.jp/",
+        "api": "https://data.riskma.net/bosai/observatories/status/v2?domain=kashiwa.riskma.jp",
+        "master": "https://data.riskma.net/bosai/observatories?domain=kashiwa.riskma.jp",
+        "headers": {"Origin": "https://kashiwa.riskma.jp"},
+        "attribution": "出典：柏市管路内水位観測システム（https://kashiwa.riskma.jp/）",
+        "kind": "riskma",
+    },
+    {
+        "id": "fukui",
+        "name": "みち情報ネットふくい 冠水情報",
+        "operator": "福井県",
+        "prefecture": "18",
+        "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/sp/flooding-list.html",
+        "api": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/sp/assets/jsons/floodings.json",
+        "attribution": "出典：みち情報ネットふくい（福井県）",
+        "kind": "fukui",
+    },
+    {
+        "id": "kakogawa",
+        "name": "加古川市行政情報ダッシュボード",
+        "operator": "加古川市",
+        "prefecture": "28",
+        "url": "https://gis.opendata-api-kakogawa.jp/",
+        "api": "https://gis.opendata-api-kakogawa.jp/backend/water-level/onecoin/underpass",
+        "attribution": "出典：加古川市オープンデータカタログサイト（行政情報ダッシュボード）。このサービスは、『加古川市オープンデータカタログサイト』のAPI機能を使用していますが、サービスの内容は加古川市によって保証されたものではありません。",
+        "kind": "kakogawa",
+    },
+    {
+        "id": "sasebo",
+        "name": "佐世保市道路冠水モニタリングシステム",
+        "operator": "佐世保市",
+        "prefecture": "42",
+        "url": "https://sasebo.geoorm.com/",
+        "api": "https://sasebo.geoorm.com/",
+        "attribution": "出典：佐世保市道路冠水モニタリングシステム（https://sasebo.geoorm.com/）",
+        "kind": "sasebo",
+    },
 ]
+
+SASEBO_STATUS = {0: (0, "冠水なし"), 1: (1, "冠水を検知（5cm）"), 2: (2, "冠水を検知（30cm）"), 3: (2, "冠水を検知（50cm）")}
+
+RISKMA_STATUS = {"waiting": (0, "冠水なし"), "flooded": (1, "浸水注意"), "topFlooded": (2, "浸水検知")}
+FUKUI_STATE = {0: (0, "冠水なし"), 1: (1, "冠水注意"), 2: (2, "冠水")}
 
 HYOGO_STYLE = {"1": (0, "通常"), "2": (1, "冠水通行注意"), "3": (2, "冠水通行止"), "99": (-1, "不明（故障）")}
 
@@ -312,6 +375,116 @@ def hyogo_list_time(html: str, now: datetime | None = None) -> str:
     return f"{year}-{int(m[1]):02d}-{int(m[2]):02d} {int(m[3]):02d}:{int(m[4]):02d}"
 
 
+def parse_riskma(master: dict[str, Any], status: dict[str, Any]) -> list[dict[str, Any]]:
+    """RisKma の observatories（type 43=浸水センサ）+ status/v2 の suijins → 点。"""
+    sj = status.get("suijins") if isinstance(status, dict) else None
+    sj = sj if isinstance(sj, dict) else {}
+    out = []
+    for o in master.get("observatories") or []:
+        if not isinstance(o, dict) or o.get("type") != 43:
+            continue
+        try:
+            lat, lng = float(o["lat"]), float(o["lng"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        name = str(o.get("name") or "").replace("(浸水センサ)", "").strip()
+        if not name:
+            continue
+        x = sj.get(str(o.get("id"))) or {}
+        st = str(x.get("status") or "")
+        if x.get("isTopFlooded") is True:
+            st = "topFlooded"
+        level, label = RISKMA_STATUS.get(st, (-1, "不明（メンテナンス）" if st else "欠測"))
+        out.append({"id": str(o.get("id")), "name": f"{name}（浸水センサ）", "lat": lat, "lng": lng,
+                    "level": level, "label": label, "at": str(x.get("date") or "")})
+    return sorted(out, key=lambda p: p["name"])
+
+
+def parse_fukui(data: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """みち情報ネットふくい floodings.json → アンダーパスごとの点。"""
+    out = []
+    for x in data if isinstance(data, list) else []:
+        if not isinstance(x, dict):
+            continue
+        icons = ((x.get("map") or {}).get("icons") or [])
+        icon = next((i for i in icons if isinstance(i, dict) and i.get("isMain")), icons[0] if icons else None)
+        try:
+            lat, lng = float(icon["lat"]), float(icon["lng"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        name = str(x.get("name") or "").strip()
+        if not name:
+            continue
+        d = x.get("data") or {}
+        state = d.get("state") or {}
+        # 表示名（冠水なし/注意/冠水）を正とし、無ければ id で判定（三本木アンダーは id=1 でも名前が「冠水なし」のまま）
+        sname = str(state.get("name") or "")
+        lv = level_from_text(sname) if sname else None
+        if "冠水なし" in sname:
+            lv = 0
+        elif lv is None and sname and "冠水" in sname:
+            lv = 2
+        if lv is not None:
+            level, label = lv, sname
+        else:
+            st = state.get("id")
+            level, label = FUKUI_STATE.get(st if isinstance(st, int) else -1, (-1, "不明"))
+        at = str(d.get("updatedAt") or "")[:16]
+        route = ((x.get("route") or {}).get("rname") or "").strip()
+        out.append({"id": str(x.get("id")), "name": f"{name}（{route}）" if route else name, "lat": lat, "lng": lng,
+                    "level": level, "label": label, "at": at})
+    return sorted(out, key=lambda p: p["name"])
+
+
+def parse_kakogawa(geojson: dict[str, Any]) -> list[dict[str, Any]]:
+    """加古川市 onecoin/underpass GeoJSON → 点。os_status 0=平時、それ以外=浸水検知として扱う。"""
+    out = []
+    for f in (geojson or {}).get("features") or []:
+        props = f.get("properties") or {}
+        coords = (f.get("geometry") or {}).get("coordinates") or []
+        try:
+            lng, lat = float(coords[0]), float(coords[1])
+        except (TypeError, ValueError, IndexError):
+            continue
+        name = " ".join(str(props.get("os_place_name") or "").split())
+        if not name:
+            continue
+        st = props.get("os_status")
+        if st in (0, "0"):
+            level, label = 0, "冠水なし"
+        elif st is None or st == "":
+            level, label = -1, "不明"
+        else:
+            level, label = 2, "浸水検知"
+        out.append({"id": name, "name": name, "lat": lat, "lng": lng, "level": level, "label": label, "at": ""})
+    return sorted(out, key=lambda p: p["name"])
+
+
+def parse_sasebo(page: str) -> list[dict[str, Any]]:
+    """佐世保市のトップ HTML（meta name="monitoring" data-list）→ 市道ごとの点。"""
+    import html as _html
+    m = re.search(r'<meta[^>]*name="monitoring"[^>]*data-list="([^"]*)"', page)
+    if not m:
+        return []
+    out = []
+    for x in json.loads(_html.unescape(m.group(1))):
+        if not isinstance(x, dict):
+            continue
+        try:
+            lat, lng = float(x["coordinate_lat"]), float(x["coordinate_lon"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        name = str(x.get("monitoring_name") or "").strip()
+        if not name:
+            continue
+        sub = str(x.get("monitoring_address_sub") or "").strip()
+        st = x.get("status")
+        level, label = SASEBO_STATUS.get(st if isinstance(st, int) else -1, (-1, "不明"))
+        out.append({"id": str(x.get("monitoring_id")), "name": f"{name}{sub}", "lat": lat, "lng": lng,
+                    "level": level, "label": label, "at": str(x.get("photo1_datetime") or "")})
+    return sorted(out, key=lambda p: p["name"])
+
+
 def parse_os_alert(data: dict[str, Any]) -> list[dict[str, Any]]:
     """フィールド監視システムの JSONlist4 → 地下道ごとの [{id,name,lat,lng,level,label,at}]。"""
     markers = data.get("map_marker") or {}
@@ -356,8 +529,12 @@ def parse_os_alert(data: dict[str, Any]) -> list[dict[str, Any]]:
 def fetch_source(src: dict[str, Any]) -> list[dict[str, Any]] | None:
     import requests  # publish 環境（site/build.py の sync_site）には requests が無いので遅延 import
 
+    headers = UA | (src.get("headers") or {})
     try:
-        r = requests.get(src["api"], headers=UA, timeout=30)
+        url = src["api"]
+        if src.get("kind") == "riskma":
+            url += "&date=" + datetime.now(timezone.utc).strftime("%Y/%m/%d %H:%M").replace(" ", "%20")
+        r = requests.get(url, headers=headers, timeout=30)
         r.raise_for_status()
         kind = src.get("kind")
         if kind == "shizumichi":
@@ -374,10 +551,20 @@ def fetch_source(src: dict[str, Any]) -> list[dict[str, Any]] | None:
             return parse_saitama(m.json(), r.json(), lines)
         if kind == "takamatsu":
             return parse_takamatsu(r.json())
+        if kind == "riskma":
+            m = requests.get(src["master"], headers=headers, timeout=30)
+            m.raise_for_status()
+            return parse_riskma(m.json(), r.json())
+        if kind == "sasebo":
+            return parse_sasebo(r.text)
+        if kind == "fukui":
+            return parse_fukui(r.json())
+        if kind == "kakogawa":
+            return parse_kakogawa(r.json())
         if kind == "hyogo":
             at = ""
             try:
-                lst = requests.get(src["list"], headers=UA, timeout=30)
+                lst = requests.get(src["list"], headers=headers, timeout=30)
                 at = hyogo_list_time(lst.text) if lst.ok else ""
             except Exception:  # noqa: BLE001
                 pass

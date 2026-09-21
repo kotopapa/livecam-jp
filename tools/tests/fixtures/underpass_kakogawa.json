@@ -1,0 +1,37 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     134.841851,
+     34.735634
+    ]
+   },
+   "properties": {
+    "os_place_name": "山陽電車　アンダーパス（別府町新野辺）",
+    "os_place_address": "兵庫県加古川市",
+    "os_status": 0,
+    "installation_height": -8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     134.827887,
+     34.784603
+    ]
+   },
+   "properties": {
+    "os_place_name": "加古川バイパス　アンダーパス（東神吉町砂部）",
+    "os_place_address": "兵庫県加古川市",
+    "os_status": 1,
+    "installation_height": -40
+   }
+  }
+ ]
+}

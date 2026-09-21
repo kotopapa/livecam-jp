@@ -1,0 +1,161 @@
+[
+ {
+  "id": 6,
+  "name": "菅野アンダー",
+  "rname": "菅野アンダー",
+  "sort": 12512301,
+  "category": {
+   "id": 12,
+   "name": "冠水",
+   "rname": "冠水",
+   "sort": 1,
+   "parentCategory": {
+    "id": 6,
+    "identifier": "flooding"
+   }
+  },
+  "organize": {
+   "id": 12,
+   "name": "三国土木事務所",
+   "rname": "三国土木"
+  },
+  "route": {
+   "id": 870,
+   "name": "(県123)芦原温泉停車場北野線",
+   "rname": "県123"
+  },
+  "map": {
+   "id": 572,
+   "icons": [
+    {
+     "id": 572,
+     "lat": 36.211803,
+     "lng": 136.235088,
+     "isMain": 1,
+     "image": "assets/images/map/flooding.svg"
+    }
+   ],
+   "lines": null
+  },
+  "area": {
+   "id": 1,
+   "name": "嶺北北部",
+   "sname": "嶺北北部"
+  },
+  "address": "あわら市",
+  "data": {
+   "state": {
+    "id": 0,
+    "name": "冠水なし"
+   },
+   "id": 6,
+   "updatedAt": "2026-09-08 14:58:06.0000000"
+  }
+ },
+ {
+  "id": 7,
+  "name": "中筋アンダー",
+  "rname": "中筋アンダー",
+  "sort": 12516001,
+  "category": {
+   "id": 12,
+   "name": "冠水",
+   "rname": "冠水",
+   "sort": 1,
+   "parentCategory": {
+    "id": 6,
+    "identifier": "flooding"
+   }
+  },
+  "organize": {
+   "id": 12,
+   "name": "三国土木事務所",
+   "rname": "三国土木"
+  },
+  "route": {
+   "id": 1200,
+   "name": "(県160)板倉高江線",
+   "rname": "県160"
+  },
+  "map": {
+   "id": 573,
+   "icons": [
+    {
+     "id": 573,
+     "lat": 36.12628,
+     "lng": 136.22823,
+     "isMain": 1,
+     "image": "assets/images/map/flooding.svg"
+    }
+   ],
+   "lines": null
+  },
+  "area": {
+   "id": 1,
+   "name": "嶺北北部",
+   "sname": "嶺北北部"
+  },
+  "address": "坂井市",
+  "data": {
+   "state": {
+    "id": 2,
+    "name": "冠水"
+   },
+   "id": 7,
+   "updatedAt": "2026-09-08 23:45:21.0000000"
+  }
+ },
+ {
+  "id": 5,
+  "name": "三本木アンダー",
+  "rname": "三本木アンダー",
+  "sort": 11519101,
+  "category": {
+   "id": 12,
+   "name": "冠水",
+   "rname": "冠水",
+   "sort": 1,
+   "parentCategory": {
+    "id": 6,
+    "identifier": "flooding"
+   }
+  },
+  "organize": {
+   "id": 11,
+   "name": "福井土木事務所",
+   "rname": "福井土木"
+  },
+  "route": {
+   "id": 1490,
+   "name": "(県191)鯖江浅水線",
+   "rname": "県191"
+  },
+  "map": {
+   "id": 571,
+   "icons": [
+    {
+     "id": 571,
+     "lat": 35.987433,
+     "lng": 136.205681,
+     "isMain": 1,
+     "image": "assets/images/map/flooding.svg"
+    }
+   ],
+   "lines": null
+  },
+  "area": {
+   "id": 1,
+   "name": "嶺北北部",
+   "sname": "嶺北北部"
+  },
+  "address": "福井市",
+  "data": {
+   "state": {
+    "id": 1,
+    "name": "冠水なし"
+   },
+   "id": 5,
+   "updatedAt": "2026-09-08 23:44:42.0000000"
+  }
+ }
+]
