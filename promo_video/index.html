@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>全国ライブカメラ地図 プロモーション</title>
+<!--
+  30秒プロモーション動画（1080×1920・30fps・900フレーム）。
+  設計は STORYBOARD.md（Codex 作成。1〜8章＝v1、9章＝v2 の改訂が優先）。
+  window.render(frame) がフレーム番号だけから全要素の状態を決める（実時間・CSSアニメーションは使わない）。
+  書き出しは render.mjs。ブラウザで開くと ?play でプレビュー再生、?f=123 で特定フレームを表示。
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=block" rel="stylesheet">
+<style>
+  :root { --navy: #102E49; --blue: #1E6FD9; --sub: #42627A; --mint: #70D6CB; }
+  html, body { margin: 0; padding: 0; background: #0b1624; }
+  #stage {
+    position: relative; width: 1080px; height: 1920px; overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif; color: var(--navy);
+    -webkit-font-smoothing: antialiased; font-kerning: none; letter-spacing: 0;
+  }
+  .abs { position: absolute; left: 0; top: 0; }
+  #bg, #light { width: 1080px; height: 1920px; }
+  #light { background: radial-gradient(circle 650px at 190px 700px, rgba(255,255,255,.65), rgba(255,255,255,0) 100%); }
+  svg#topo { width: 1080px; height: 1920px; }
+  .scene { position: absolute; inset: 0; display: none; }
+  .device {
+    position: absolute; box-sizing: border-box; border: 6px solid var(--navy); background: #fff;
+    overflow: hidden; transform-origin: 50% 50%;
+    box-shadow: 0 10px 20px rgba(16,46,73,.14), 0 3px 6px rgba(16,46,73,.10);
+  }
+  .device > img.screen { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .card {
+    position: absolute; box-sizing: border-box; background: #fff; border: 2px solid rgba(255,255,255,.9);
+    border-radius: 28px; overflow: hidden; transform-origin: 50% 50%;
+    box-shadow: 0 10px 20px rgba(16,46,73,.14), 0 3px 6px rgba(16,46,73,.10);
+  }
+  .card > img { position: absolute; display: block; }
+  /* 見出しは行ごとに固定の行ボックス（v2 9.2） */
+  .ln { position: absolute; font-weight: 900; white-space: nowrap; }
+  .ln .tx { display: inline-block; transform-origin: 0 60%; }
+  .em { color: var(--blue); display: inline-block; transform-origin: 50% 60%; }
+  .sub { position: absolute; font-size: 40px; line-height: 54px; font-weight: 500; color: var(--sub); white-space: nowrap; }
+  /* 出典・画面例（白帯を廃止し下部余白に直接置く） */
+  .credit { position: absolute; left: 84px; top: 1400px; width: 816px; font-size: 32px; line-height: 36px; font-weight: 500; color: var(--sub); }
+  .credit div { white-space: nowrap; }
+  .credit div:first-child { font-weight: 700; }
+  .creditbar { position: absolute; left: 84px; top: 1382px; width: 40px; height: 3px; background: var(--blue); opacity: .6; }
+  .sticker {
+    position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;
+    background: #fff; color: var(--blue); border: 3px solid var(--blue); border-radius: 12px;
+    font-size: 40px; font-weight: 700; transform-origin: 50% 50%;
+  }
+  svg.uline { position: absolute; overflow: visible; pointer-events: none; }
+  #wipe { position: absolute; left: 0; top: 180px; width: 1080px; height: 1180px; background: var(--mint); display: none; }
+  #circle { position: absolute; border-radius: 50%; background: var(--blue); display: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg" class="abs"></div>
+  <div id="light" class="abs"></div>
+  <svg id="topo" class="abs" viewBox="0 0 1080 1920"></svg>
+  <div id="circle"></div>
+  <div id="scenes"></div>
+  <div id="wipe"></div>
+  <div id="credits"></div>
+</div>
+<script>
+'use strict';
+// ------------------------------------------------------------------
+// イージングと補間（STORYBOARD 6章）
+// ------------------------------------------------------------------
+function bezier(x1, y1, x2, y2) {
+  const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+  const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+  const sx = t => ((ax * t + bx) * t + cx) * t;
+  const sy = t => ((ay * t + by) * t + cy) * t;
+  return x => {
+    if (x <= 0) return 0; if (x >= 1) return 1;
+    let lo = 0, hi = 1, t = x;
+    for (let i = 0; i < 40; i++) { const v = sx(t); if (Math.abs(v - x) < 1e-7) break; if (v < x) lo = t; else hi = t; t = (lo + hi) / 2; }
+    return sy(t);
+  };
+}
+const E = {
+  OUT: bezier(0.16, 1, 0.3, 1), IN: bezier(0.4, 0, 1, 1),
+  INOUT: bezier(0.65, 0, 0.35, 1), SMOOTH: bezier(0.37, 0, 0.63, 1), LIN: t => t,
+};
+const clamp01 = t => Math.max(0, Math.min(1, t));
+/** ローカルフレーム L の a→b 区間の補間（区間外は端の値） */
+function tw(L, a, b, v0, v1, ease = E.OUT) {
+  if (L <= a) return v0; if (L >= b) return v1;
+  return v0 + (v1 - v0) * ease((L - a) / (b - a));
+}
+/** キーフレーム列 [[f, v, ease], ...]。ease はその区間へ入るときの補間 */
+function kf(L, keys) {
+  if (L <= keys[0][0]) return keys[0][1];
+  for (let i = 1; i < keys.length; i++) {
+    const [f1, v1, e] = keys[i];
+    if (L < f1) { const [f0, v0] = keys[i - 1]; return v0 + (v1 - v0) * (e || E.LIN)((L - f0) / (f1 - f0)); }
+  }
+  return keys[keys.length - 1][1];
+}
+/** 単語スタンプ（9.3）: 0F 0.78/−6°/0 → 6F 1.08/+2°/1 → 12F 1/0°/1 */
+function stamp(L, start) {
+  const l = L - start;
+  return {
+    s: kf(l, [[0, 0.78], [6, 1.08, E.OUT], [12, 1, E.INOUT]]),
+    r: kf(l, [[0, -6], [6, 2, E.OUT], [12, 0, E.INOUT]]),
+    o: tw(l, 0, 6, 0, 1, E.OUT),
+  };
+}
+/** 横リビール（左→右）。文字の変形はしない */
+function reveal(el, p) {
+  const r = (1 - clamp01(p)) * 100;
+  el.style.clipPath = `inset(-40px ${r}% -40px -40px)`;
+}
+
+// ------------------------------------------------------------------
+// 要素ビルダー
+// ------------------------------------------------------------------
+const CAP = '../app/store_assets/captures/ios/';
+const SRC_W = 1206, SRC_H = 2622;
+const px = v => v + 'px';
+function div(parent, cls, style = {}, html = '') {
+  const d = document.createElement('div');
+  if (cls) d.className = cls;
+  Object.assign(d.style, style);
+  if (html) d.innerHTML = html;
+  parent.appendChild(d);
+  return d;
+}
+/** 端末フレーム。(x,y,w) は画面部分。外枠6pxは外側に付く */
+function device(parent, file, x, y, w) {
+  const h = w * SRC_H / SRC_W;
+  const d = div(parent, 'device', { left: px(x - 6), top: px(y - 6), width: px(w + 12), height: px(h + 12), borderRadius: px(0.065 * w) });
+  const img = document.createElement('img');
+  img.className = 'screen'; img.src = CAP + file;
+  img.style.borderRadius = px(0.065 * w - 6);
+  d.appendChild(img);
+  return { el: d, w, h };
+}
+/** 実画面の一部を抜き出したカード。crop は元画像比 (左,上,幅,高さ)、等比 contain */
+function cropCard(parent, file, crop, x, y, w, h) {
+  const c = div(parent, 'card', { left: px(x), top: px(y), width: px(w), height: px(h) });
+  const [cl, ct, cw, ch] = crop;
+  const cropW = Math.round(cw * SRC_W), cropH = Math.round(ch * SRC_H);
+  const iw = w - 4, ih = h - 4;
+  const s = Math.min(iw / cropW, ih / cropH);
+  const img = document.createElement('img');
+  img.src = CAP + file;
+  Object.assign(img.style, {
+    width: px(SRC_W * s), height: px(SRC_H * s),
+    left: px((iw - cropW * s) / 2 - Math.round(cl * SRC_W) * s),
+    top: px((ih - cropH * s) / 2 - Math.round(ct * SRC_H) * s),
+  });
+  c.appendChild(img);
+  return c;
+}
+/** 見出し1行。[[ ]] 内は強調語（青）。返り値 { box, tx, ems } */
+function line(parent, text, x, y, size, lh, color = 'var(--navy)') {
+  const box = div(parent, 'ln', { left: px(x), top: px(y), fontSize: px(size), lineHeight: px(lh), height: px(lh), color });
+  const tx = div(box, 'tx');
+  const ems = [];
+  for (const p of text.split(/(\[\[.*?\]\])/).filter(Boolean)) {
+    if (p.startsWith('[[')) { const s = document.createElement('span'); s.className = 'em'; s.textContent = p.slice(2, -2); tx.appendChild(s); ems.push(s); }
+    else tx.appendChild(document.createTextNode(p));
+  }
+  return { box, tx, ems };
+}
+/** 標準の2行見出し（104px、行高116、y224／340） */
+function head2(parent, l1, l2) {
+  return [line(parent, l1, 84, 224, 104, 116), line(parent, l2, 84, 340, 104, 116)];
+}
+/** 強調語の二重下線（文字幅＋8px、文字下端+8と+15に2本） */
+function underline(parent, target) {
+  const stage = document.getElementById('stage').getBoundingClientRect();
+  const r = target.getBoundingClientRect();
+  const fs = parseFloat(getComputedStyle(target).fontSize);
+  const lh = parseFloat(getComputedStyle(target.closest('.ln')).lineHeight);
+  // 文字の下端 ≒ 行ボックス下端から (行高 − 1em)/2 上
+  const box = target.closest('.ln').getBoundingClientRect();
+  const base = box.bottom - stage.top - (lh - fs) / 2;
+  const w = r.width + 8, x = r.left - stage.left - 4;
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('class', 'uline');
+  Object.assign(svg.style, { left: px(x), top: px(base), width: px(w), height: '24px' });
+  const mk = (y0, y1, sw, op) => {
+    const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p.setAttribute('d', `M0 ${y0} Q ${w / 2} ${(y0 + y1) / 2 + 2} ${w} ${y1}`);
+    Object.entries({ fill: 'none', stroke: `rgba(30,111,217,${op})`, 'stroke-width': sw, 'stroke-linecap': 'round' }).forEach(([k, v]) => p.setAttribute(k, v));
+    svg.appendChild(p); return p;
+  };
+  const a = mk(10, 5, 4, 0.75), b = mk(17, 14, 3, 0.45);
+  parent.appendChild(svg);
+  const len = w + 12;
+  [a, b].forEach(p => { p.style.strokeDasharray = len; p.style.strokeDashoffset = len; });
+  return t => [a, b].forEach((p, i) => { p.style.strokeDashoffset = len * (1 - clamp01(i ? t * 1.15 - 0.15 : t)); });
+}
+function T(el, { x = 0, y = 0, r = 0, s = 1, o = 1 } = {}) {
+  el.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg) scale(${s})`;
+  el.style.opacity = o;
+}
+
+// ------------------------------------------------------------------
+// 背景（面A/B/C）と地形線（不透明度0.10、y600〜1328のみ）
+// ------------------------------------------------------------------
+const SURF = { A: ['#F6FAFC', '#E8F4FA', '#C9E5F3'], B: ['#F5FBFA', '#E1F3F1', '#CCEAE7'], C: ['#F7F9FC', '#EAF0F6', '#DDE7F0'] };
+function setBg(k) {
+  const [c0, c1, c2] = SURF[k];
+  document.getElementById('bg').style.background = `linear-gradient(180deg, ${c0} 0%, ${c1} 50%, ${c2} 100%)`;
+}
+(function buildTopo() {
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = document.getElementById('topo');
+  const defs = document.createElementNS(NS, 'defs');
+  defs.innerHTML = '<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.06" stop-color="#fff" stop-opacity="1"/><stop offset="0.92" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>'
+    + '<mask id="band"><rect x="0" y="600" width="1080" height="728" fill="url(#fade)"/></mask>';
+  svg.appendChild(defs);
+  const g = document.createElementNS(NS, 'g');
+  g.setAttribute('mask', 'url(#band)');
+  svg.appendChild(g);
+  [250, 340, 430, 520, 610, 700].forEach((R, k) => {
+    const pts = [];
+    for (let i = 0; i <= 96; i++) {
+      const a = i / 96 * Math.PI * 2;
+      const wob = 1 + 0.07 * Math.sin(3 * a + k * 0.9) + 0.045 * Math.sin(5 * a + 1.7 + k * 0.4) + 0.025 * Math.sin(9 * a + k);
+      const x = Math.cos(a) * R * wob * 1.35, y = Math.sin(a) * R * wob, th = -18 * Math.PI / 180;
+      pts.push([110 + x * Math.cos(th) - y * Math.sin(th), 1350 + x * Math.sin(th) + y * Math.cos(th)]);
+    }
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', 'M' + pts.map(q => q.map(v => v.toFixed(1)).join(' ')).join(' L') + ' Z');
+    Object.entries({ fill: 'none', stroke: 'rgba(117,171,199,0.10)', 'stroke-width': 2 }).forEach(([k2, v]) => p.setAttribute(k2, v));
+    g.appendChild(p);
+  });
+})();
+const topo = document.getElementById('topo');
+
+// ------------------------------------------------------------------
+// 出典・画面例（S01〜S10。シーン開始から終了直前まで常時表示）
+// ------------------------------------------------------------------
+const creditsRoot = document.getElementById('credits');
+function credit(lines) {
+  const wrap = div(creditsRoot, '', { display: 'none' });
+  div(wrap, 'creditbar');
+  const c = div(wrap, 'credit');
+  lines.forEach(l => div(c, '', {}, l));
+  return wrap;
+}
+
+// ------------------------------------------------------------------
+// シーン
+// ------------------------------------------------------------------
+const SCENES = [];
+function scene(id, start, end, opts, build) { SCENES.push({ id, start, end, ...opts, build }); }
+
+// S01 F000–044：問いを大きく
+scene('S01', 0, 45, { surf: 'A', credit: ['撮影時の画面例', '映像提供：葛飾区役所', '地理院タイル'] }, root => {
+  const dev = device(root, 'detail_river.png', 302, 554, 352);
+  const l1 = line(root, '近くの[[川]]、', 84, 224, 120, 140);
+  const l2box = div(root, 'ln', { left: '84px', top: '374px', fontSize: '144px', lineHeight: '164px', height: '164px' });
+  const imadou = div(l2box, 'tx', {}, '今どう');
+  const q = div(l2box, 'tx', { transformOrigin: '50% 80%' }, '？');
+  const ul = underline(root, l1.ems[0]);
+  return L => {
+    T(dev.el, { s: tw(L, 0, 12, 1.03, 1) });
+    T(imadou, { x: tw(L, 0, 8, -24, 0) });
+    T(q, { y: tw(L, 0, 10, -20, 0), s: tw(L, 0, 10, 1.18, 1), r: tw(L, 0, 10, 8, 0) });
+    ul(tw(L, 12, 20, 0, 1));
+  };
+});
+
+// S02 F045–134：数字と単位のスケール差
+scene('S02', 45, 135, { surf: 'A', topo: false, credit: ['撮影時の画面例', '地理院タイル・気象庁'] }, root => {
+  const dev = device(root, 'map_japan.png', 300, 514, 376);
+  const mint = div(root, '', { position: 'absolute', left: '72px', top: '248px', width: '492px', height: '140px', borderRadius: '28px', background: 'rgba(112,214,203,.24)', transformOrigin: '50% 50%' });
+  // 「2万」(188px・青) と「台以上」(88px・紺) を同じ行に置き、ベースラインを自然にそろえる
+  const big = line(root, '2万', 84, 212, 188, 204, 'var(--blue)');
+  const unit = { tx: document.createElement('span') };
+  unit.tx.textContent = '台以上';
+  Object.assign(unit.tx.style, { display: 'inline-block', fontSize: '88px', color: 'var(--navy)', marginLeft: '22px' });
+  big.box.appendChild(unit.tx);
+  const sub = div(root, 'sub', { left: '84px', top: '438px', fontSize: '48px', lineHeight: '60px', fontWeight: 700, color: 'var(--navy)' }, '全国の今が見える');
+  const bw = big.tx.getBoundingClientRect().width;
+  mint.style.width = px(bw + 36);
+  big.tx.style.transformOrigin = '50% 60%';
+  return L => {
+    T(mint, { r: -3 });
+    mint.style.transform = `rotate(-3deg) scaleX(${tw(L, 0, 10, 0, 1)})`;
+    const st = stamp(L, 0);
+    T(big.tx, { s: st.s, r: st.r, o: st.o });
+    reveal(unit.tx, tw(L, 6, 16, 0, 1));
+    T(sub, { o: tw(L, 12, 20, 0, 1) });
+    T(dev.el, { x: tw(L, 0, 18, 64, 0), s: tw(L, 0, 18, 0.90, 1) * tw(L, 84, 90, 1, 1.018, E.INOUT) });
+  };
+});
+
+// S03 F135–224：文字は横、画面は静止
+scene('S03', 135, 225, { surf: 'B', credit: ['撮影時の画面例', '地理院タイル'] }, root => {
+  const dev = device(root, 'map_tokyo_pins_clean.png', 300, 510, 376);
+  const [a, b] = head2(root, '[[地図]]から、', '見つかる。');
+  return L => {
+    reveal(a.tx, tw(L, 0, 10, 0, 1));
+    reveal(b.tx, tw(L, 4, 14, 0, 1));
+    T(dev.el, { s: tw(L, 0, 10, 1.018, 1) });
+  };
+});
+
+// S04 F225–314：景色が開く山場（面スライドW）
+scene('S04', 225, 315, { surf: 'B', wipe: true, credit: ['撮影時の画面例', '映像提供：株式会社財宝', '地理院タイル'] }, root => {
+  const dev = device(root, 'detail_sakurajima.png', 490, 504, 364);
+  const hd = line(root, '[[旅先]]の今へ。', 84, 224, 120, 144);
+  const stk = div(root, 'sticker', { left: '108px', top: '564px', width: '270px', height: '82px' }, '旅先の今');
+  const card = cropCard(root, 'detail_sakurajima.png', [0, 0.135, 1, 0.259], 84, 698, 816, 458);
+  return L => {
+    T(dev.el, { r: 3 });
+    T(hd.box, {});
+    T(card, {
+      s: kf(L, [[6, 0.72], [20, 1.03, E.OUT], [26, 1, E.INOUT]]),
+      r: kf(L, [[6, 5], [20, -2.5, E.OUT], [26, -2, E.INOUT]]),
+    });
+    T(stk, { r: -4, s: tw(L, 14, 26, 0.78, 1), o: tw(L, 14, 26, 0, 1) });
+  };
+});
+
+// S05 F315–404：動きを引き、情報へ
+scene('S05', 315, 405, { surf: 'A', credit: ['撮影時の画面例', '出典：気象庁・地理院タイル'] }, root => {
+  device(root, 'layer_rain_radar.png', 300, 510, 376);
+  const [, b] = head2(root, '[[雨雲]]も、', '同じ地図で。');
+  return L => { reveal(b.tx, tw(L, 0, 12, 0, 1)); };
+});
+
+// S06 F405–449：短い編集カット
+scene('S06', 405, 450, { surf: 'A', credit: ['撮影時の画面例', '現在の情報ではありません', '出典：気象庁', '© OpenStreetMap contributors'] }, root => {
+  device(root, 'layer_typhoon.png', 300, 510, 376);
+  const hd = line(root, '台風の[[進路]]も。', 84, 224, 104, 124);
+  return L => { hd.ems[0].style.opacity = tw(L, 0, 8, 0.5, 1); };
+});
+
+// S07 F450–539：通知は落ち着いて
+scene('S07', 450, 540, { surf: 'C', credit: ['撮影時の画面例', '現在の情報ではありません', '出典：気象庁'] }, root => {
+  const dev = device(root, 'bosai_warning.png', 318, 576, 344);
+  const [, b] = head2(root, '警報・地震を', '[[通知]]で。');
+  div(root, 'sub', { left: '84px', top: '484px' }, '特別警報・危険警報・地震');
+  return L => {
+    T(b.tx, { x: tw(L, 0, 12, -32, 0), o: tw(L, 0, 12, 0, 1) });
+    T(dev.el, { o: tw(L, 0, 12, 0, 1) });
+  };
+});
+
+// S08 F540–629：面を開いて「ふだん」の備えへ（面スライドW）
+scene('S08', 540, 630, { surf: 'B', wipe: true, credit: ['撮影時の画面例', '出典：国土地理院・地理院タイル', '最新の避難場所情報は', '市町村にご確認ください'] }, root => {
+  const dev = device(root, 'layer_shelters.png', 300, 518, 372);
+  head2(root, '[[避難先]]も、', 'ふだんから。');
+  return L => { T(dev.el, { x: tw(L, 6, 18, 48, 0) }); };
+});
+
+// S09 F630–689：ランキングのカードで軽快さを戻す
+scene('S09', 630, 690, { surf: 'A', credit: ['撮影時の画面例'] }, root => {
+  const dev = device(root, 'ranking.png', 544, 574, 328);
+  const [, b] = head2(root, 'みんなの', '[[注目]]スポット。');
+  div(root, 'sub', { left: '84px', top: '484px' }, 'みんなのランキング');
+  const card = cropCard(root, 'ranking.png', [0.03, 0.35, 0.94, 0.48], 100, 624, 592, 656);
+  return L => {
+    T(dev.el, { r: 2 });
+    T(card, { x: tw(L, 0, 12, -740, 0), r: tw(L, 0, 12, -5, -2) });
+    b.ems[0].style.opacity = tw(L, 0, 10, 0.6, 1);
+  };
+});
+
+// S10 F690–779：大きいリマインドカード
+scene('S10', 690, 780, { surf: 'C', credit: ['撮影時の画面例'] }, root => {
+  const dev = device(root, 'stockpile.png', 400, 530, 352);
+  const [a] = head2(root, '備蓄の[[期限]]、', '忘れる前に。');
+  const card = cropCard(root, 'stockpile.png', [0.035, 0.67, 0.93, 0.135], 84, 954, 816, 236);
+  const ul = underline(root, a.ems[0]);
+  return L => {
+    T(dev.el, { r: -2 });
+    T(card, {
+      s: kf(L, [[0, 0.90], [12, 1.025, E.OUT], [18, 1, E.INOUT]]),
+      y: tw(L, 0, 12, 24, 0), o: tw(L, 0, 12, 0, 1),
+    });
+    ul(tw(L, 18, 28, 0, 1));
+  };
+});
+
+// S11 F780–899：「今」を残すエンドカード（円形リビールC）
+scene('S11', 780, 900, { surf: 'C', topo: false, light: false }, root => {
+  const W = '#FFFFFF';
+  const ima = line(root, '今', 84, 220, 320, 350, W);
+  ima.tx.style.transformOrigin = '50% 50%';
+  const rest = line(root, 'を見に行こう。', 490, 408, 56, 76, W);
+  const bar = div(root, '', { position: 'absolute', left: '100px', top: '584px', width: '768px', height: '12px', borderRadius: '6px', background: 'var(--mint)', transformOrigin: '0 50%' });
+  const n1 = line(root, '全国ライブカメラ', 84, 680, 100, 112, W);
+  const n2 = line(root, '地図', 84, 792, 100, 112, W);
+  const stk = div(root, 'sticker', { left: '84px', top: '964px', width: '540px', height: '96px', fontSize: '56px', border: '0', borderRadius: '16px' }, '無料・登録不要');
+  const cta = div(root, 'sticker', { left: '84px', top: '1144px', width: '816px', height: '120px', fontSize: '64px', fontWeight: 900, border: '0', borderRadius: '20px', background: 'var(--mint)', color: 'var(--navy)' }, 'アプリ名で検索');
+  const store = div(root, 'sub', { left: '84px', top: '1310px', width: '816px', height: '68px', lineHeight: '68px', fontSize: '44px', color: W, textAlign: 'center' }, 'App Store / Google Play');
+  // 「今」の実測中心（完成時）。入りの間だけ中心を (330,454) から寄せる（9.5）
+  return L => {
+    const c = document.getElementById('circle');
+    const rad = tw(L, 0, 12, 0, 1900, E.INOUT);
+    Object.assign(c.style, { display: 'block', left: px(492 - rad), top: px(480 - rad), width: px(rad * 2), height: px(rad * 2) });
+    const k = tw(L, 4, 18, 0, 1);
+    T(ima.tx, { x: (1 - k) * 46, y: (1 - k) * 59, s: 1.28 + (1 - 1.28) * k, r: -8 + 8 * k, o: tw(L, 4, 8, 0, 1, E.LIN) });
+    reveal(rest.tx, tw(L, 10, 22, 0, 1));
+    T(n1.tx, { o: tw(L, 10, 20, 0, 1) });
+    T(n2.tx, { o: tw(L, 12, 22, 0, 1) });
+    T(stk, { s: kf(L, [[14, 0.82], [21, 1.04, E.OUT], [26, 1, E.INOUT]]), r: tw(L, 14, 26, -8, -3), o: tw(L, 14, 18, 0, 1, E.LIN) });
+    bar.style.transform = `scaleX(${tw(L, 18, 28, 0, 1)})`;
+    T(cta, { y: tw(L, 18, 28, 24, 0), o: tw(L, 18, 28, 0, 1) });
+    T(store, { o: tw(L, 22, 30, 0, 1) });
+  };
+});
+
+// ------------------------------------------------------------------
+// フレーム描画
+// ------------------------------------------------------------------
+let built = false;
+function buildAll() {
+  const root = document.getElementById('scenes');
+  for (const s of SCENES) {
+    s.root = div(root, 'scene', { display: 'block' });
+    if (s.credit) s.creditEl = credit(s.credit);
+    s.draw = s.build(s.root);
+    s.root.style.display = 'none';
+  }
+  built = true;
+}
+function show(s, L, withCredit = true) {
+  s.root.style.display = 'block';
+  if (s.creditEl) s.creditEl.style.display = withCredit ? 'block' : 'none';
+  s.draw(L);
+}
+window.render = function (frame) {
+  if (!built) buildAll();
+  for (const s of SCENES) { s.root.style.display = 'none'; if (s.creditEl) s.creditEl.style.display = 'none'; }
+  const wipe = document.getElementById('wipe');
+  wipe.style.display = 'none';
+  document.getElementById('circle').style.display = 'none';
+  const i = SCENES.findIndex(s => frame >= s.start && frame < s.end);
+  const s = SCENES[i];
+  const L = frame - s.start;
+  // 面スライドW: L0〜6 は前シーンの最終フレームを下敷きに（出典も前シーンのまま）、L6 で新シーンへ
+  let cur = s, curL = L;
+  if (s.wipe && L < 6) { cur = SCENES[i - 1]; curL = cur.end - cur.start - 1; }
+  setBg(cur.surf);
+  document.getElementById('light').style.display = cur.light === false ? 'none' : 'block';
+  topo.style.display = cur.topo === false || (s.wipe && L < 12) ? 'none' : 'block';
+  show(cur, curL);
+  if (s.wipe && L < 12) {
+    wipe.style.display = 'block';
+    wipe.style.transform = `translateX(${tw(L, 0, 12, -1080, 1080, E.INOUT)}px)`;
+  }
+};
+window.FRAMES = 900;
+window.ready = (async () => {
+  await document.fonts.ready;
+  const probe = 'あ全国ライブカメラ地図2万台以上今どう？近くの川旅先雨雲台風進路警報通知避難先注目期限無料登録不要検索';
+  await Promise.all(['400', '500', '700', '900'].map(w => document.fonts.load(`${w} 40px "Noto Sans JP"`, probe)));
+  await Promise.all([...document.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; })));
+  buildAll();
+  // 全シーンの文字を一度表示してサブセットフォントを読み込ませてから、実測値を使う要素を組み直す
+  for (const s of SCENES) s.root.style.display = 'block';
+  await document.fonts.ready;
+  document.getElementById('scenes').innerHTML = ''; creditsRoot.innerHTML = '';
+  buildAll();
+  await Promise.all([...document.images].map(i => (i.decode ? i.decode().catch(() => 0) : 0)));
+  return true;
+})();
+(async () => {
+  await window.ready;
+  const q = new URLSearchParams(location.search);
+  if (q.has('play')) {
+    const t0 = performance.now();
+    const loop = () => { window.render(Math.floor((performance.now() - t0) / 1000 * 30) % 900); requestAnimationFrame(loop); };
+    loop();
+  } else {
+    window.render(parseInt(q.get('f') || '0', 10));
+  }
+})();
+</script>
+</body>
+</html>
