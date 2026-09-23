@@ -17,6 +17,7 @@ import 'package:livecam_jp/ui/home_shell.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  _legendSheetTests();
   testWidgets('アプリが起動して4タブのシェルが表示される', (tester) async {
     // testWidgets(fake async)内で実I/Oをawaitするとハングするため、
     // ディレクトリは作成せず既存パスを渡す（このテストではキャッシュ未使用）
@@ -193,5 +194,61 @@ void main() {
         reason: '${lang.tag} のホーム画面でオーバーフロー',
       );
     }
+  });
+}
+
+/// 凡例・絞り込みシートは、文言の長い言語（英語など）で内容が画面より高くなっても
+/// 外側（バリア）をタップして閉じられること。以前は isScrollControlled のシートが
+/// 画面いっぱいまで伸びてバリアが消え、iOS では戻れなくなっていた（2026-09-23 報告）
+/// 地図画面は常時アニメーションがあり pumpAndSettle が終わらないので、
+/// シートの開閉アニメーション分だけ時間を進める
+Future<void> settle(WidgetTester tester) async {
+  for (var i = 0; i < 4; i++) {
+    await tester.pump(const Duration(milliseconds: 250));
+  }
+}
+
+void _legendSheetTests() {
+  testWidgets('英語・小さい画面でも凡例シートの外側をタップして閉じられる',
+      (tester) async {
+    tester.view.physicalSize = const Size(640, 1136); // 320x568 @2x
+    tester.view.devicePixelRatio = 2.0;
+    addTearDown(tester.view.reset);
+    final tmp = Directory(Directory.systemTemp.path);
+    final app = AppState(
+      CameraRepository(
+        api: ApiClient(
+          client: MockClient((_) async => http.Response('not found', 404)),
+        ),
+        cache: CacheStore(tmp),
+      ),
+    );
+    await tester.pumpWidget(
+      LiveCamApp(
+        app: app,
+        onboardingDone: true,
+        localeController: LocaleController(initial: AppLanguage.en),
+      ),
+    );
+    await tester.pump();
+    final fab = find.byWidgetPredicate(
+        (w) => w is FloatingActionButton && w.heroTag == 'legend_filter');
+    await tester.tap(fab);
+    await settle(tester);
+    expect(find.text('Legend and filters'), findsOneWidget);
+    // シートは画面上部に余白を残す（= バリアが残る）
+    final sheet = tester.getRect(find.byType(BottomSheet));
+    expect(sheet.top, greaterThan(20));
+    // 上端の余白をタップすると閉じる
+    await tester.tapAt(const Offset(160, 5));
+    await settle(tester);
+    expect(find.text('Legend and filters'), findsNothing);
+
+    // 見出しの閉じるボタンでも閉じる
+    await tester.tap(fab);
+    await settle(tester);
+    await tester.tap(find.byTooltip('Close'));
+    await settle(tester);
+    expect(find.text('Legend and filters'), findsNothing);
   });
 }

@@ -2506,6 +2506,7 @@ class _MapScreenState extends State<MapScreen> {
       context: context,
       showDragHandle: true,
       isScrollControlled: true,
+      constraints: _sheetConstraints(context),
       builder: (sheetContext) => StatefulBuilder(
         builder: (context, setSheetState) {
           Future<void> run() async {
@@ -2651,6 +2652,11 @@ class _MapScreenState extends State<MapScreen> {
   //   閉アニメーション中にTextFieldが破棄済みコントローラを参照して落ちる
   final _searchController = TextEditingController();
 
+  /// 全画面まで伸びるシートの上限。画面の上 12% は必ずバリアとして残し、
+  /// 外側タップで閉じられる状態を保つ（多言語で文言が長い場合の対策）
+  static BoxConstraints _sheetConstraints(BuildContext context) =>
+      BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.88);
+
   /// 凡例 + カテゴリフィルタのボトムシート
   void _showLegendFilter(BuildContext context) {
     final searchController = _searchController
@@ -2659,6 +2665,10 @@ class _MapScreenState extends State<MapScreen> {
       context: context,
       showDragHandle: true,
       isScrollControlled: true,
+      // 英語などで文言が長いとシートが画面いっぱいまで伸び、外側（バリア）を
+      // タップして閉じられなくなる（iOS はスワイプで戻れない）。上に余白を
+      // 残して常に閉じられるようにし、見出しにも閉じるボタンを置く
+      constraints: _sheetConstraints(context),
       builder: (sheetContext) => StatefulBuilder(
         builder: (context, setSheetState) {
           final app = widget.app;
@@ -2667,9 +2677,19 @@ class _MapScreenState extends State<MapScreen> {
               padding: EdgeInsets.fromLTRB(20, 0, 20,
                   16 + MediaQuery.of(sheetContext).viewInsets.bottom),
               child: Column(mainAxisSize: MainAxisSize.min, children: [
-                Text(context.l10n.mapLegendTitle,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                const SizedBox(height: 10),
+                Row(children: [
+                  Expanded(
+                    child: Text(context.l10n.mapLegendTitle,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16)),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.close),
+                    tooltip: context.l10n.commonClose,
+                    onPressed: () => Navigator.of(sheetContext).pop(),
+                  ),
+                ]),
+                const SizedBox(height: 4),
                 TextField(
                   controller: searchController,
                   decoration: InputDecoration(
@@ -3005,6 +3025,7 @@ class _MapScreenState extends State<MapScreen> {
       context: context,
       isScrollControlled: true,
       showDragHandle: true,
+      constraints: _sheetConstraints(context),
       builder: (sheetContext) => StatefulBuilder(
         builder: (context, setSheetState) {
           Future<void> run() async {
