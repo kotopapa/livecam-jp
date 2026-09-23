@@ -48,10 +48,11 @@ cameras:
     lat: 44.4605
     lng: -110.8281
 
+  # 2026-09-23 配信枠更新: 2LVxvDw7dfY → WT69M210Z18
   - id: world-81e0e5f5
     name: マイアミ サウスビーチ
     operator: "ZeroEight"
-    video_id: "2LVxvDw7dfY"
+    video_id: WT69M210Z18
     category: scenic
     country: "US"
     lat: 25.7825
@@ -381,10 +382,11 @@ cameras:
     lat: 37.5125
     lng: 126.997
 
+  # 2026-09-23 配信枠更新: jj5wczH-Jag → 3-HOia4LCxI
   - id: world-f884f97b
     name: ソウル 東大門DDP
     operator: "DDP Live Seoul"
-    video_id: "jj5wczH-Jag"
+    video_id: 3-HOia4LCxI
     category: scenic
     country: "KR"
     lat: 37.5665
@@ -412,10 +414,11 @@ cameras:
   # lng: 126.9769
   # note: "埋め込み不可→誘導型"
 
+  # 2026-09-23 配信枠更新: dx3hdEHNZV8 → 1IJB-QjOzvM
   - id: world-4a3b255b
     name: 釜山 広安里・広安大橋
     operator: "BusanLive"
-    video_id: "dx3hdEHNZV8"
+    video_id: 1IJB-QjOzvM
     category: scenic
     country: "KR"
     lat: 35.1532
@@ -430,14 +433,15 @@ cameras:
     lat: 35.1785
     lng: 129.2003
 
-  - id: world-6115eac8
-    name: 済州島 漢拏山
-    operator: "FunJeju"
-    video_id: "UTHiHLuHsA0"
-    category: scenic
-    country: "KR"
-    lat: 33.3617
-    lng: 126.5292
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-6115eac8
+  # name: 済州島 漢拏山
+  # operator: "FunJeju"
+  # video_id: "UTHiHLuHsA0"
+  # category: scenic
+  # country: "KR"
+  # lat: 33.3617
+  # lng: 126.5292
 
   # 2026-09-02 退役(no live on channel):
   # - id: world-09f04176
@@ -477,10 +481,11 @@ cameras:
     lng: 121.8446
 
   # 2026-08-31 配信枠更新: b6LvHqv0VwI → a2vb2goV9QE
+  # 2026-09-23 配信枠更新: a2vb2goV9QE → jBfml3Xlhdg
   - id: world-46cd3130
     name: 香港 ビクトリアピーク
     operator: "HK360VR"
-    video_id: "a2vb2goV9QE"
+    video_id: jBfml3Xlhdg
     category: scenic
     country: "HK"
     lat: 22.2759
@@ -507,10 +512,11 @@ cameras:
   # lng: 114.1694
 
   # 2026-08-31 配信枠更新: YJyMPPTc8xY → 3ZGuyCXD6-8
+  # 2026-09-23 配信枠更新: N_Az11sKhlQ → 2xlNSVDPrpg
   - id: world-e80f6e06
     name: シンガポール マリーナベイ
     operator: "DIKIPIDIA"
-    video_id: "N_Az11sKhlQ"
+    video_id: 2xlNSVDPrpg
     category: scenic
     country: "SG"
     lat: 1.2836
@@ -754,10 +760,11 @@ cameras:
     lat: -36.8434
     lng: 174.7633
 
+  # 2026-09-23 配信枠更新: NbM7eDkDeMg → F-SlZ8hRfAk
   - id: world-929174ba
     name: ウェリントン ハーバー
     operator: "Neil Lockhart"
-    video_id: "NbM7eDkDeMg"
+    video_id: F-SlZ8hRfAk
     category: scenic
     country: "NZ"
     lat: -41.2889
@@ -851,10 +858,11 @@ cameras:
     lng: -156.6825
 
   # 2026-08-31 配信枠更新: fQtvQSWW_SE → 1V9nWQHwIwQ
+  # 2026-09-23 配信枠更新: 1V9nWQHwIwQ → y5XS3fMISRk
   - id: world-404621c0
     name: ホノルル アラモアナビーチ
     operator: "WOZ ERE"
-    video_id: "1V9nWQHwIwQ"
+    video_id: y5XS3fMISRk
     category: scenic
     country: "US"
     lat: 21.2864
@@ -890,10 +898,11 @@ cameras:
   # lat: 19.64
   # lng: -155.9969
 
+  # 2026-09-23 配信枠更新: PO04G-ukSZg → ntNGa4qWW3c
   - id: world-19cd667d
     name: ハワイ島(周回)
     operator: "AlohaLiveCam"
-    video_id: "PO04G-ukSZg"
+    video_id: ntNGa4qWW3c
     category: scenic
     country: "US"
     lat: 19.4194
@@ -988,10 +997,11 @@ cameras:
     lng: 28.1811
     note: "季節性"
 
+  # 2026-09-23 配信枠更新: sUrl5nXLpt8 → exshoGpNXZk
   - id: world-e8287128
     name: レイキャビク オーロラ
     operator: "Aurora Reykjavik"
-    video_id: "sUrl5nXLpt8"
+    video_id: exshoGpNXZk
     category: scenic
     country: "IS"
     lat: 64.1265
@@ -1633,20 +1643,22 @@ cameras:
     lng: -1.0933
 
   # 2026-08-31 配信枠更新: Thp35hChuhE → 4sK0DqkOY_8
+  # 2026-09-23 日替わり配信枠のためチャンネル登録に変更（旧 R6zVikJMBLE）
   - id: world-bd2d6e92
     name: ヒースロー空港 北滑走路
     operator: "Flight Focus 365"
-    video_id: "R6zVikJMBLE"
+    channel_id: "UC6q_hfBThkGdmQ5Vb4kWjWA"
     category: scenic
     country: "GB"
     lat: 51.4775
     lng: -0.4614
 
   # 2026-08-31 配信枠更新: KX8UuSWJkhI → fbG0z7apNAM
+  # 2026-09-23 日替わり配信枠のためチャンネル登録に変更（旧 6BBCnLk9zYg）
   - id: world-a014976c
     name: リスボン空港
     operator: "AVIACAO TV"
-    video_id: "6BBCnLk9zYg"
+    channel_id: "UC0R-K3crhMX9jzswbmfIORw"
     category: scenic
     country: "PT"
     lat: 38.7813
@@ -1943,10 +1955,11 @@ cameras:
   # lat: 41.1408
   # lng: -8.611
 
+  # 2026-09-23 配信枠更新: MTczfN3ANUM → tKIgNtEgLN0
   - id: world-1aa89e52
     name: リスボン市街
     operator: "I love Lx"
-    video_id: "MTczfN3ANUM"
+    video_id: tKIgNtEgLN0
     category: scenic
     country: "PT"
     lat: 38.7169
@@ -2377,10 +2390,11 @@ cameras:
     lng: -68.6667
 
   # 2026-08-31 配信枠更新: fz9zxPfI5Gg → nKsxaDEiJc0
+  # 2026-09-23 配信枠更新: nKsxaDEiJc0 → ngTSRF7Co2c
   - id: world-6d0950f2
     name: セブンマイルビーチ(ケイマン)
     operator: "Christopher Columbus Condos"
-    video_id: "nKsxaDEiJc0"
+    video_id: ngTSRF7Co2c
     category: scenic
     country: "KY"
     lat: 19.34
@@ -2456,10 +2470,11 @@ cameras:
   # lat: -33.35
   # lng: -70.3167
 
+  # 2026-09-23 配信枠更新: C0b9QQKZg74 → vXKn4qUQFMA
   - id: world-df40e70a
     name: サンティアゴ市街
     operator: "Ledrium"
-    video_id: "C0b9QQKZg74"
+    video_id: vXKn4qUQFMA
     category: scenic
     country: "CL"
     lat: -33.421
@@ -2485,10 +2500,11 @@ cameras:
   # lng: -90.312
 
   # 2026-08-31 配信枠更新: 9JzOVzuvQlg → RXUFzvf5Qek
+  # 2026-09-23 配信枠更新: A1QgNGZ6R48 → 7EJ38iv2pB0
   - id: world-26d90f0b
     name: ペリト・モレノ氷河(エルカラファテ)
     operator: "Titin Calafate"
-    video_id: "A1QgNGZ6R48"
+    video_id: 7EJ38iv2pB0
     category: scenic
     country: "AR"
     lat: -50.3379
@@ -2722,10 +2738,11 @@ cameras:
   # lng: 108.2208
 
   # 2026-08-31 配信枠更新: ew0xbUrUjnY → dhVyIpJ0CsM
+  # 2026-09-23 配信枠更新: dhVyIpJ0CsM → 6BY2ei7U2Hg
   - id: world-50207ade
     name: ハノイ ヴィンツイ橋
     operator: "Ha Noi Live"
-    video_id: "dhVyIpJ0CsM"
+    video_id: 6BY2ei7U2Hg
     category: scenic
     country: "VN"
     lat: 21.0086
@@ -2822,10 +2839,11 @@ cameras:
     lat: 25.1751
     lng: 121.3958
 
+  # 2026-09-23 配信枠更新: 8rFVhLx8ORE → 5vR4vg91sGY
   - id: world-5baec040
     name: 淡水 渡船頭
     operator: "紅樹林有線電視"
-    video_id: "8rFVhLx8ORE"
+    video_id: 5vR4vg91sGY
     category: scenic
     country: "TW"
     lat: 25.1687
@@ -3048,14 +3066,15 @@ cameras:
     lat: 56.1835
     lng: -131.893
     note: 夏季(7〜8月)のみ。同運営者の別アングル G839-Yj4Cvo(Explore Bears)もライブ中
-  - id: world-0a12403f
-    name: エル・レベンタドール火山(エクアドル)
-    operator: afarTV
-    video_id: zoOw0-kZ9bs
-    category: volcano
-    country: EC
-    lat: -0.0775
-    lng: -77.656
+  # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
+  # - id: world-0a12403f
+  # name: エル・レベンタドール火山(エクアドル)
+  # operator: afarTV
+  # video_id: zoOw0-kZ9bs
+  # category: volcano
+  # country: EC
+  # lat: -0.0775
+  # lng: -77.656
   - id: world-261de0e5
     name: サンガイ火山とアマゾン熱帯雨林(エクアドル)
     operator: afarTV
@@ -3064,15 +3083,16 @@ cameras:
     country: EC
     lat: -2.005
     lng: -78.341
-  - id: world-32a0f23f
-    name: サンタマリア(サンティアギート)火山(グアテマラ)
-    operator: afarTV
-    video_id: y5JltVvFWyo
-    category: volcano
-    country: GT
-    lat: 14.745
-    lng: -91.567
-    note: Cam C
+  # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
+  # - id: world-32a0f23f
+  # name: サンタマリア(サンティアギート)火山(グアテマラ)
+  # operator: afarTV
+  # video_id: y5JltVvFWyo
+  # category: volcano
+  # country: GT
+  # lat: 14.745
+  # lng: -91.567
+  # note: Cam C
   - id: world-b011ffe1
     name: フエゴ火山(グアテマラ)
     operator: afarTV
@@ -3082,15 +3102,16 @@ cameras:
     lat: 14.4747
     lng: -90.8806
     note: スペイン語版枠 mRRrJJlO0vg も並行配信
-  - id: world-45c6bf06
-    name: ポポカテペトル火山(サンペドロ・ベニート・フアレス側)
-    operator: afarTV
-    video_id: 1j3T1kbrD1c
-    category: volcano
-    country: MX
-    lat: 19.0
-    lng: -98.56
-    note: 既存のTlamacas(webcamsdemexico)とは別地点・別運営者のプエブラ側視点
+  # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
+  # - id: world-45c6bf06
+  # name: ポポカテペトル火山(サンペドロ・ベニート・フアレス側)
+  # operator: afarTV
+  # video_id: 1j3T1kbrD1c
+  # category: volcano
+  # country: MX
+  # lat: 19.0
+  # lng: -98.56
+  # note: 既存のTlamacas(webcamsdemexico)とは別地点・別運営者のプエブラ側視点
   - id: world-3a7489ca
     name: マウイ島 ナピリ湾
     operator: afarTV
@@ -3116,27 +3137,30 @@ cameras:
     country: US
     lat: 26.1224
     lng: -80.1049
-  - id: world-dac2b3cb
-    name: イグアスの滝(アルゼンチン側 上部回廊)
-    operator: Parque Nacional Iguazú Oficial
-    video_id: JngDu_kcP2s
-    category: scenic
-    country: AR
-    lat: -25.69
-    lng: -54.437
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。公園開園時間(8〜18時)のみ配信。2026-08開始 / 埋め込み不可(oEmbed E401)
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-dac2b3cb
+  # name: イグアスの滝(アルゼンチン側 上部回廊)
+  # operator: Parque Nacional Iguazú Oficial
+  # video_id: JngDu_kcP2s
+  # category: scenic
+  # country: AR
+  # lat: -25.69
+  # lng: -54.437
+  # note: 埋め込み不可(oEmbed 401)→誘導型で登録。公園開園時間(8〜18時)のみ配信。2026-08開始 / 埋め込み不可(oEmbed E401)
+  # 2026-09-23 配信枠更新: I-7mv4-BJ7M → h_NkY62h7uM
   - id: world-0ab6ee19
     name: ケベック港
     operator: Port de Québec
-    video_id: I-7mv4-BJ7M
+    video_id: h_NkY62h7uM
     category: scenic
     country: CA
     lat: 46.818
     lng: -71.203
+  # 2026-09-23 配信枠更新: ZGk4fkhBTvU → UjFnKH_LW4Q
   - id: world-c22817e3
     name: サグネ
     operator: Ville de Saguenay
-    video_id: ZGk4fkhBTvU
+    video_id: UjFnKH_LW4Q
     category: scenic
     country: CA
     lat: 48.428
@@ -3192,10 +3216,11 @@ cameras:
     lat: -54.8019
     lng: -68.303
     note: 市内複数カメラ切替
+  # 2026-09-23 配信枠更新: qYTe6yIArXE → O_JAplYN4AA
   - id: world-0ab29bcd
     name: セロ・カストル スキー場(ウシュアイア)
     operator: Cerro Castor
-    video_id: qYTe6yIArXE
+    video_id: O_JAplYN4AA
     category: scenic
     country: AR
     lat: -54.728
@@ -3210,14 +3235,15 @@ cameras:
     lat: -38.59
     lng: -58.72
     note: 個人チャンネル
-  - id: world-63681bde
-    name: バリローチェ市街(ミトレ通り)
-    operator: Gnet
-    video_id: TPI_nEZmA-w
-    category: scenic
-    country: AR
-    lat: -41.1335
-    lng: -71.3103
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-63681bde
+  # name: バリローチェ市街(ミトレ通り)
+  # operator: Gnet
+  # video_id: TPI_nEZmA-w
+  # category: scenic
+  # country: AR
+  # lat: -41.1335
+  # lng: -71.3103
   - id: world-055f8934
     name: バジェ・ネバド スキーリゾート
     operator: Valle Nevado Ski Resort
@@ -3253,18 +3279,21 @@ cameras:
     country: CL
     lat: -36.827
     lng: -73.05
+  # 2026-09-23 配信枠更新: gbGUJtl-IMs → yuVNNxNADCs
   - id: world-1573da9b
     name: マイポ川河口(サンアントニオ)
     operator: sanantonioimagen
-    video_id: gbGUJtl-IMs
+    video_id: yuVNNxNADCs
     category: scenic
     country: CL
     lat: -33.617
     lng: -71.63
+  # 2026-09-23 配信枠更新: SxrTLvn-YTQ → Yyp1_Di0LU4（埋め込み不可のため誘導型）
   - id: world-9929520f
     name: パナマシティ
     operator: Panama City Live Cam
-    video_id: SxrTLvn-YTQ
+    video_id: Yyp1_Di0LU4
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: PA
     lat: 8.9824
@@ -3326,15 +3355,16 @@ cameras:
     country: US
     lat: 58.417
     lng: -134.548
-  - id: world-5a85e93a
-    name: バルディーズ(アラスカ)
-    operator: City of Valdez
-    video_id: 59epa9cG1wQ
-    category: scenic
-    country: US
-    lat: 61.13
-    lng: -146.348
-    note: 市の複数カメラ切替
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-5a85e93a
+  # name: バルディーズ(アラスカ)
+  # operator: City of Valdez
+  # video_id: 59epa9cG1wQ
+  # category: scenic
+  # country: US
+  # lat: 61.13
+  # lng: -146.348
+  # note: 市の複数カメラ切替
   - id: world-65f9c3e4
     name: アラスカ動物園 ホッキョクグマ
     operator: The Alaska Zoo
@@ -3417,10 +3447,11 @@ cameras:
     country: BR
     lat: -24.01
     lng: -46.41
+  # 2026-09-23 配信枠更新: hvv9FOkmckE → sCmXpBwHvqY
   - id: world-e1ad7bf5
     name: カリェタス海岸(レシフェ近郊)
     operator: TARTADRONE
-    video_id: hvv9FOkmckE
+    video_id: sCmXpBwHvqY
     category: scenic
     country: BR
     lat: -8.327
@@ -3450,14 +3481,15 @@ cameras:
     country: PA
     lat: 8.67
     lng: -80.12
-  - id: world-1bebebce
-    name: イルリサット 氷山(グリーンランド)
-    operator: afarTV
-    video_id: h8O0UXsL7uk
-    category: scenic
-    country: GL
-    lat: 69.22
-    lng: -51.1
+  # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
+  # - id: world-1bebebce
+  # name: イルリサット 氷山(グリーンランド)
+  # operator: afarTV
+  # video_id: h8O0UXsL7uk
+  # category: scenic
+  # country: GL
+  # lat: 69.22
+  # lng: -51.1
   - id: world-0468f4d8
     name: ホモサッサ・スプリングス 水中マナティー
     operator: Explore.org
@@ -3483,14 +3515,15 @@ cameras:
     country: BR
     lat: -26.919
     lng: -49.066
-  - id: world-28951657
-    name: ブルメナウ クルーベ・ナウティコ・アメリカ
-    operator: BNU.tv
-    video_id: lH4pFHeoDkw
-    category: scenic
-    country: BR
-    lat: -26.91
-    lng: -49.07
+  # 2026-09-23 退役: 現行の配信枠が既登録カメラ（ブルメナウ プライーニャ）と同一映像
+  # - id: world-28951657
+  # name: ブルメナウ クルーベ・ナウティコ・アメリカ
+  # operator: BNU.tv
+  # video_id: lH4pFHeoDkw
+  # category: scenic
+  # country: BR
+  # lat: -26.91
+  # lng: -49.07
   - id: world-bf4e7cd2
     name: プエルトバジャルタ ロスムエルトス桟橋
     operator: El Dorado Restaurant
@@ -3585,6 +3618,7 @@ cameras:
     name: ペギーズコーブ灯台
     operator: Nova Scotia Webcams
     video_id: SFoS6nBL138
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: CA
     lat: 44.492
@@ -3593,6 +3627,7 @@ cameras:
     name: バーントコートヘッド(ファンディ湾)
     operator: Nova Scotia Webcams
     video_id: RdQ-e-iCkVI
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: CA
     lat: 45.308
@@ -3614,10 +3649,11 @@ cameras:
     country: CA
     lat: 49.017
     lng: -122.803
+  # 2026-09-23 配信枠更新: jrleSsjuNqw → RyLT77adi5Q
   - id: world-70712ff5
     name: カボフリオ プライア・ド・フォルテ
     operator: Point do Forte
-    video_id: jrleSsjuNqw
+    video_id: RyLT77adi5Q
     category: scenic
     country: BR
     lat: -22.888
@@ -3638,10 +3674,11 @@ cameras:
     country: BR
     lat: -5.778
     lng: -35.195
+  # 2026-09-23 配信枠更新: yCeQueusZxs → Q7VS4S-fNFI
   - id: world-c4bce5a9
     name: ポルトアレグレ グアイバ湖
     operator: None
-    video_id: yCeQueusZxs
+    video_id: Q7VS4S-fNFI
     category: scenic
     country: BR
     lat: -30.033
@@ -3710,10 +3747,11 @@ cameras:
     country: AR
     lat: -37.11
     lng: -56.856
+  # 2026-09-23 配信枠更新: PK2kYc1p9R0 → gGz5hQGhOmc
   - id: world-939ec07a
     name: ビーニャ・デル・マール レニャカ海岸
     operator: Marejadas UV
-    video_id: PK2kYc1p9R0
+    video_id: gGz5hQGhOmc
     category: scenic
     country: CL
     lat: -32.972
@@ -3795,10 +3833,11 @@ cameras:
     lat: 39.48
     lng: -106.067
     note: 不動産会社の設置カメラ
+  # 2026-09-23 配信枠更新: SzW_7MPhLt4 → Q6AkaJ48pKk
   - id: world-9728635b
     name: パイクスピーク山頂
     operator: Colorado Live Cams
-    video_id: SzW_7MPhLt4
+    video_id: Q6AkaJ48pKk
     category: scenic
     country: US
     lat: 38.8409
@@ -3990,24 +4029,26 @@ cameras:
     lat: 49.193
     lng: -123.956
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可
+  # 2026-09-23 配信枠更新: s0aC_c2qftk → D2cbO73EvY8
   - id: world-44f9e18c
     name: バンクーバー イングリッシュベイ
     operator: Bluemist
-    video_id: s0aC_c2qftk
+    video_id: D2cbO73EvY8
     category: scenic
     country: CA
     lat: 49.286
     lng: -123.143
     note: 複数ビュー切替。既存バンクーバー港とは別地点
-  - id: world-0e8ec0c9
-    name: ユーコン オーロラカメラ(カレイドロッジ)
-    operator: Kaleido Lodge Yukon
-    video_id: e0TyCYudT2g
-    category: scenic
-    country: CA
-    lat: 60.85
-    lng: -135.2
-    note: 夜間のオーロラ
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-0e8ec0c9
+  # name: ユーコン オーロラカメラ(カレイドロッジ)
+  # operator: Kaleido Lodge Yukon
+  # video_id: e0TyCYudT2g
+  # category: scenic
+  # country: CA
+  # lat: 60.85
+  # lng: -135.2
+  # note: 夜間のオーロラ
   - id: world-3b616e29
     name: アンギラ サンディグラウンド エルヴィス・ビーチバー
     operator: Caribbean Webcams
@@ -4033,10 +4074,11 @@ cameras:
     country: HN
     lat: 16.09
     lng: -86.9
+  # 2026-09-23 配信枠更新: zKsgtmgGHt4 → wwLPOjLHVO4
   - id: world-88acf9ab
     name: ポルト・デ・ガリーニャス海岸
     operator: Transmissão ao Vivo Cidade
-    video_id: zKsgtmgGHt4
+    video_id: wwLPOjLHVO4
     category: scenic
     country: BR
     lat: -8.506
@@ -4049,10 +4091,11 @@ cameras:
     country: BR
     lat: -5.881
     lng: -35.172
+  # 2026-09-23 配信枠更新: FhwYRtl_Br8 → BTxcF9y93sI
   - id: world-6a703eba
     name: レシフェ ボアビアージェン
     operator: Pernambuco Fishing
-    video_id: FhwYRtl_Br8
+    video_id: BTxcF9y93sI
     category: scenic
     country: BR
     lat: -8.12
@@ -4067,18 +4110,20 @@ cameras:
     lat: -3.138
     lng: -59.904
     note: ネグロ川とソリモンエス川の合流
+  # 2026-09-23 配信枠更新: Do1JDNtFaIw → ynVfX52TbZg
   - id: world-4a4662be
     name: ウバトゥバ プライア・グランデ
     operator: UBACAM
-    video_id: Do1JDNtFaIw
+    video_id: ynVfX52TbZg
     category: scenic
     country: BR
     lat: -23.47
     lng: -45.063
+  # 2026-09-23 配信枠更新: qzZZ80PoddQ → BLGWtJU1Pjg
   - id: world-214e262f
     name: アライアル・ド・カボ
     operator: Pontal NeTv
-    video_id: qzZZ80PoddQ
+    video_id: BLGWtJU1Pjg
     category: scenic
     country: BR
     lat: -22.966
@@ -4091,14 +4136,15 @@ cameras:
     country: BR
     lat: -29.379
     lng: -50.873
-  - id: world-72efdbf1
-    name: コスメル ウォーターフロント
-    operator: CindyCozumel
-    video_id: JMkh6DQuE14
-    category: scenic
-    country: MX
-    lat: 20.51
-    lng: -86.95
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-72efdbf1
+  # name: コスメル ウォーターフロント
+  # operator: CindyCozumel
+  # video_id: JMkh6DQuE14
+  # category: scenic
+  # country: MX
+  # lat: 20.51
+  # lng: -86.95
   - id: world-f976c424
     name: プラヤ・デル・カルメン
     operator: Webcams de México
@@ -4181,24 +4227,26 @@ cameras:
     country: KR
     lat: 36.3752
     lng: 127.3845
-  - id: world-3d7f9497
-    name: 済州 馬羅島
-    operator: 펀제주(FunJeju)
-    video_id: I4a3moh62aM
-    category: scenic
-    country: KR
-    lat: 33.117
-    lng: 126.268
-    note: 既存「済州島 漢拏山」と同運営者の別地点
-  - id: world-4192330c
-    name: 済州 西帰浦 エント滝
-    operator: 펀제주(FunJeju)
-    video_id: rzX1emU7UFE
-    category: scenic
-    country: KR
-    lat: 33.2704
-    lng: 126.514
-    note: 大雨のときだけ流れる滝
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-3d7f9497
+  # name: 済州 馬羅島
+  # operator: 펀제주(FunJeju)
+  # video_id: I4a3moh62aM
+  # category: scenic
+  # country: KR
+  # lat: 33.117
+  # lng: 126.268
+  # note: 既存「済州島 漢拏山」と同運営者の別地点
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-4192330c
+  # name: 済州 西帰浦 エント滝
+  # operator: 펀제주(FunJeju)
+  # video_id: rzX1emU7UFE
+  # category: scenic
+  # country: KR
+  # lat: 33.2704
+  # lng: 126.514
+  # note: 大雨のときだけ流れる滝
   - id: world-6ef7824d
     name: ソウル 漢江 汝矣島漢江公園(オリンピック大路)
     operator: 서울 한강 라이브 247 Seoul Live Cam
@@ -4218,10 +4266,11 @@ cameras:
     lng: 129.123
     note: 既存「釜山 広安里・広安大橋」(BusanLive)と同ランドマーク。橋上からの公式配信で別視点。既存BusanLiveの動画IDは dx3hdEHNZV8
       に変わっている
+  # 2026-09-23 配信枠更新: ge-dlQ0V2kA → vmQAODg20_Y
   - id: world-3a40959d
     name: 江原道 高城郡 海岸(鰐津・巨津ほか)
     operator: 강원고성군(高城郡)
-    video_id: ge-dlQ0V2kA
+    video_id: vmQAODg20_Y
     category: scenic
     country: KR
     lat: 38.279
@@ -4235,10 +4284,12 @@ cameras:
     country: KR
     lat: 37.658
     lng: 128.673
+  # 2026-09-23 配信枠更新: NlwR-8A8WYs → 5LORKhLbkIo（埋め込み不可のため誘導型）
   - id: world-0ed6d5d7
     name: 旌善 市街
     operator: 정선군(旌善郡)
-    video_id: NlwR-8A8WYs
+    video_id: 5LORKhLbkIo
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: KR
     lat: 37.38
@@ -4513,10 +4564,11 @@ cameras:
     country: TW
     lat: 21.964
     lng: 120.812
+  # 2026-09-23 配信枠更新: POk4BTN3q3I → bzXZlW7CgKU
   - id: world-3b5f769b
     name: 恒春 関山(夕日)
     operator: 半島秘境達人工作坊
-    video_id: POk4BTN3q3I
+    video_id: bzXZlW7CgKU
     category: scenic
     country: TW
     lat: 21.952
@@ -4557,10 +4609,11 @@ cameras:
     lat: 24.04168
     lng: 121.622258
     note: 防災カメラだが七星潭海岸を4Kで映す。座標は説明欄記載値
+  # 2026-09-23 配信枠更新: pVMlIZ-i4sc → r_iitJ6JmM8
   - id: world-ae0a10a5
     name: 花蓮 東大門夜市
     operator: 花蓮県政府観光処
-    video_id: pVMlIZ-i4sc
+    video_id: r_iitJ6JmM8
     category: scenic
     country: TW
     lat: 23.977
@@ -4635,37 +4688,42 @@ cameras:
     lat: 23.964
     lng: 120.327
     note: 4K
+  # 2026-09-23 配信枠更新: VAK8DkBgjMs → WkcmApaOvWc
   - id: world-dcb9137b
     name: 香港 銅鑼湾 避風塘
     operator: Brainrolling Workshop
-    video_id: VAK8DkBgjMs
+    video_id: WkcmApaOvWc
     category: scenic
     country: HK
     lat: 22.286
     lng: 114.183
     note: 4K。BGM付き
+  # 2026-09-23 配信枠更新: 2djWrry6m94 → Fwr8lBTaBtE（埋め込み不可のため誘導型）
   - id: world-11aea96d
     name: 香港 尖沙咀 海浜
     operator: Brainrolling Workshop
-    video_id: 2djWrry6m94
+    video_id: Fwr8lBTaBtE
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: HK
     lat: 22.293
     lng: 114.172
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可
+  # 2026-09-23 配信枠更新: 5CjI3E7rnQc → RqwBvGHOcnQ
   - id: world-3ba22d4c
     name: 香港 鴨脷洲 海怡半島
     operator: 香港人の日常生活
-    video_id: 5CjI3E7rnQc
+    video_id: RqwBvGHOcnQ
     category: scenic
     country: HK
     lat: 22.242
     lng: 114.15
     note: 既存「香港 アバディーン港」と同運営者の別地点
+  # 2026-09-23 配信枠更新: xyPsNmVd698 → Z-g8M1QGKbg
   - id: world-0ac06f2d
     name: 上海 東方明珠・外白渡橋
     operator: Brainrolling Workshop
-    video_id: xyPsNmVd698
+    video_id: Z-g8M1QGKbg
     category: scenic
     country: CN
     lat: 31.247
@@ -4680,22 +4738,24 @@ cameras:
     lat: 30.733
     lng: 104.147
     note: 既存の臥龍・慕田峪と同運営者の別地点
-  - id: world-47b00065
-    name: シンガポール ダウンタウン
-    operator: SingReef
-    video_id: p39VVXzGdwI
-    category: scenic
-    country: SG
-    lat: 1.283
-    lng: 103.85
-  - id: world-2641f8a3
-    name: シンガポール ダウンタウン 海岸側
-    operator: SingReef
-    video_id: jEZ6bahjFm0
-    category: scenic
-    country: SG
-    lat: 1.28
-    lng: 103.855
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-47b00065
+  # name: シンガポール ダウンタウン
+  # operator: SingReef
+  # video_id: p39VVXzGdwI
+  # category: scenic
+  # country: SG
+  # lat: 1.283
+  # lng: 103.85
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-2641f8a3
+  # name: シンガポール ダウンタウン 海岸側
+  # operator: SingReef
+  # video_id: jEZ6bahjFm0
+  # category: scenic
+  # country: SG
+  # lat: 1.28
+  # lng: 103.855
   - id: world-8852ae61
     name: サムイ島 ラマイ クリスタルベイ
     operator: The Real Samui Webcam
@@ -4746,37 +4806,41 @@ cameras:
     lat: 13.743
     lng: 100.556
     note: 街路カメラ
+  # 2026-09-23 配信枠更新: JQrVv-wYjUc → ws1PBK-OoSA
   - id: world-5c843a83
     name: バンコク スカイライン
     operator: Bangkok 360
-    video_id: JQrVv-wYjUc
+    video_id: ws1PBK-OoSA
     category: scenic
     country: TH
     lat: 13.746
     lng: 100.535
     note: 設置場所非公表のため座標は市中心の概略
+  # 2026-09-23 配信枠更新: qH4rM7SIPvQ → Qa5LqU9xxtc
   - id: world-c041eaed
     name: パタヤ ビーチロード
     operator: PattayaBob360IRL
-    video_id: qH4rM7SIPvQ
+    video_id: Qa5LqU9xxtc
     category: scenic
     country: TH
     lat: 12.944
     lng: 100.883
     note: Soi 1付近のコンドミニアムから
-  - id: world-14f001e7
-    name: サウスパタヤ
-    operator: SOUTH PATTAYA LIVE CAM
-    video_id: ZPpdZUR9XFM
-    category: scenic
-    country: TH
-    lat: 12.92
-    lng: 100.87
-    note: ビーチとプラタムナック丘を切替
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-14f001e7
+  # name: サウスパタヤ
+  # operator: SOUTH PATTAYA LIVE CAM
+  # video_id: ZPpdZUR9XFM
+  # category: scenic
+  # country: TH
+  # lat: 12.92
+  # lng: 100.87
+  # note: ビーチとプラタムナック丘を切替
+  # 2026-09-23 配信枠更新: GQnjaPRYHsU → eF5Utg6Rx6s
   - id: world-30e95ab4
     name: パタヤ ソイ・ブアカオ
     operator: ole petter løbak (kaarethai)
-    video_id: GQnjaPRYHsU
+    video_id: eF5Utg6Rx6s
     category: scenic
     country: TH
     lat: 12.93
@@ -4809,15 +4873,16 @@ cameras:
     lat: -8.108
     lng: 112.922
     note: Cam A 0DcHe8kUF70 / Cam B Hr1Sv6B-kfM / Cam C _lxxEz6xYIY も配信中
-  - id: world-2993f28e
-    name: ブロモ山・スメル山
-    operator: afarTV
-    video_id: rYTH1oIrNaU
-    category: volcano
-    country: ID
-    lat: -7.942
-    lng: 112.953
-    note: 4K
+  # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
+  # - id: world-2993f28e
+  # name: ブロモ山・スメル山
+  # operator: afarTV
+  # video_id: rYTH1oIrNaU
+  # category: volcano
+  # country: ID
+  # lat: -7.942
+  # lng: 112.953
+  # note: 4K
   - id: world-876f3487
     name: ムラピ山(ジョグジャカルタ)
     operator: afarTV
@@ -4926,10 +4991,11 @@ cameras:
     lat: 28.63
     lng: 83.61
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可
+  # 2026-09-23 配信枠更新: XW7bVO4igEc → e2DcVUYB5sU
   - id: world-e2c0cb84
     name: カトマンズ市街(WEBCAM NEPAL)
     operator: WEBCAM NEPAL CITIES & TOWNS
-    video_id: XW7bVO4igEc
+    video_id: e2DcVUYB5sU
     category: scenic
     country: NP
     lat: 27.71
@@ -4944,15 +5010,16 @@ cameras:
     lat: 27.693
     lng: 85.329
     note: G.STARビル設置。日本人運営
-  - id: world-d49c1c0b
-    name: ケララ カンヌール
-    operator: Live Cam Kerala India
-    video_id: Dvplmlq6N3M
-    category: scenic
-    country: IN
-    lat: 11.8745
-    lng: 75.3704
-    note: 説明欄で新チャンネル(UCrHSnIc82zTsmeqfvKuJ0oQ)への移行を告知しており、ID変更の可能性
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-d49c1c0b
+  # name: ケララ カンヌール
+  # operator: Live Cam Kerala India
+  # video_id: Dvplmlq6N3M
+  # category: scenic
+  # country: IN
+  # lat: 11.8745
+  # lng: 75.3704
+  # note: 説明欄で新チャンネル(UCrHSnIc82zTsmeqfvKuJ0oQ)への移行を告知しており、ID変更の可能性
   - id: world-5c105c40
     name: ビシュケク アラトー広場
     operator: Saima Telecom
@@ -4969,15 +5036,16 @@ cameras:
     country: KZ
     lat: 43.238
     lng: 76.945
-  - id: world-259fb724
-    name: グアム ビーチ
-    operator: Guam Live Cam
-    video_id: jZA983dEvKM
-    category: scenic
-    country: GU
-    lat: 13.515
-    lng: 144.805
-    note: 設置場所非公表(タモン湾の可能性あり。既存Visual Postcards with Markと重複の可能性)
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-259fb724
+  # name: グアム ビーチ
+  # operator: Guam Live Cam
+  # video_id: jZA983dEvKM
+  # category: scenic
+  # country: GU
+  # lat: 13.515
+  # lng: 144.805
+  # note: 設置場所非公表(タモン湾の可能性あり。既存Visual Postcards with Markと重複の可能性)
   - id: world-e050ad64
     name: シドニー ハーバー(WebcamSydney 固定4K)
     operator: WebcamSydney
@@ -4996,33 +5064,36 @@ cameras:
     lat: -33.848
     lng: 151.226
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。約180°パン。埋め込み不可
+  # 2026-09-23 配信枠更新: uFKLtjWkVFw → kMlDawzYOEI
   - id: world-aa5ad235
     name: シドニー ハーバーブリッジ・オペラハウス(マクマホンズポイント)
     operator: Sydney Harbour LIVE
-    video_id: uFKLtjWkVFw
+    video_id: kMlDawzYOEI
     category: scenic
     country: AU
     lat: -33.846
     lng: 151.204
     note: 4K 2台
+  # 2026-09-23 配信枠更新: nw4pdgy3-U0 → FjYG9QhxkzU
   - id: world-0e423b6c
     name: シドニー オリンピックパーク オジロワシの巣
     operator: Sea-EagleCAM / BirdLife Australia
-    video_id: nw4pdgy3-U0
+    video_id: FjYG9QhxkzU
     category: healing
     country: AU
     lat: -33.848
     lng: 151.074
     note: 繁殖期(6〜11月)中心
-  - id: world-691551f4
-    name: メルボルン スカイライン
-    operator: Melbourne City Skyline Cam
-    video_id: Kl_L2zZ4xj8
-    category: scenic
-    country: AU
-    lat: -37.79
-    lng: 144.96
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可。既存Melbourne Luxury Accommodationとは別運営者
+  # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
+  # - id: world-691551f4
+  # name: メルボルン スカイライン
+  # operator: Melbourne City Skyline Cam
+  # video_id: Kl_L2zZ4xj8
+  # category: scenic
+  # country: AU
+  # lat: -37.79
+  # lng: 144.96
+  # note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可。既存Melbourne Luxury Accommodationとは別運営者
   - id: world-4aa650ff
     name: モーニントン ハーバー
     operator: Mornington Yacht Club
@@ -5273,14 +5344,15 @@ cameras:
     lat: 61.235
     lng: 10.44
     note: スキーリゾート
-  - id: world-d90bfcf0
-    name: エトナ山(シチリア)
-    operator: afarTV
-    video_id: 6-WqLFrrAtw
-    category: volcano
-    country: IT
-    lat: 37.751
-    lng: 14.9934
+  # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
+  # - id: world-d90bfcf0
+  # name: エトナ山(シチリア)
+  # operator: afarTV
+  # video_id: 6-WqLFrrAtw
+  # category: volcano
+  # country: IT
+  # lat: 37.751
+  # lng: 14.9934
   - id: world-2976f7f0
     name: サッソルンゴ・セッラ峠(ドロミテ)
     operator: Scenari Digitali
@@ -5534,6 +5606,7 @@ cameras:
     name: セント・アイヴス港(コーンウォール)
     operator: Aspects Holidays
     video_id: T83mKGf_c3k
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: GB
     lat: 50.213
@@ -5615,15 +5688,16 @@ cameras:
     country: FR
     lat: 48.8867
     lng: 2.3431
-  - id: world-2ef88a18
-    name: パリ セーヌ川・ノートルダム大聖堂
-    operator: Le Son de la Terre
-    video_id: 7OgCYX4Inr8
-    category: scenic
-    country: FR
-    lat: 48.853
-    lng: 2.35
-    note: 係留船「Le Son de la Terre」から
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-2ef88a18
+  # name: パリ セーヌ川・ノートルダム大聖堂
+  # operator: Le Son de la Terre
+  # video_id: 7OgCYX4Inr8
+  # category: scenic
+  # country: FR
+  # lat: 48.853
+  # lng: 2.35
+  # note: 係留船「Le Son de la Terre」から
   - id: world-03834bfe
     name: ザントフォールト ビーチ
     operator: Strandweer.nu
@@ -5681,15 +5755,16 @@ cameras:
     country: IT
     lat: 45.485
     lng: 9.19
-  - id: world-b89fc510
-    name: エトナ山(ロボットカメラ)
-    operator: Vedetta Live Webcam Streaming
-    video_id: RUXwwsMzkQY
-    category: volcano
-    country: IT
-    lat: 37.751
-    lng: 14.9934
-    note: afarTVとは別運営者・別アングル
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-b89fc510
+  # name: エトナ山(ロボットカメラ)
+  # operator: Vedetta Live Webcam Streaming
+  # video_id: RUXwwsMzkQY
+  # category: volcano
+  # country: IT
+  # lat: 37.751
+  # lng: 14.9934
+  # note: afarTVとは別運営者・別アングル
   - id: world-7ac78c67
     name: パリ市街(SurveillanceMap)
     operator: SurveillanceMap Foundation
@@ -5748,10 +5823,11 @@ cameras:
     lat: 27.757
     lng: -15.571
     note: 複数地点切替。座標はプラヤ・デル・イングレス
+  # 2026-09-23 配信枠更新: Vlem55ooFxQ → M8pncpjkzkc
   - id: world-c9c758bc
     name: ランサローテ コスタ・テギセ ビーチ
     operator: Beach Bar Lanzarote
-    video_id: Vlem55ooFxQ
+    video_id: M8pncpjkzkc
     category: scenic
     country: ES
     lat: 28.999
@@ -5765,10 +5841,11 @@ cameras:
     lat: 50.0617
     lng: 19.9373
     note: 複数都市を巡回表示。座標はクラクフ中央広場
+  # 2026-09-23 配信枠更新: -EUKSIjHw4c → gtcm1kVESKw
   - id: world-01bfeee9
     name: ベルヒテスガーデン 町の中心
     operator: TONI_TIME
-    video_id: -EUKSIjHw4c
+    video_id: gtcm1kVESKw
     category: scenic
     country: DE
     lat: 47.631
@@ -5888,26 +5965,29 @@ cameras:
     country: GB
     lat: 50.545
     lng: -3.499
+  # 2026-09-23 配信枠更新: P0jRqh_82uE → alkBHeV2wWg
   - id: world-02e10102
     name: スランディドノ ノースパレード
     operator: Min y Don Llandudno
-    video_id: P0jRqh_82uE
+    video_id: alkBHeV2wWg
     category: scenic
     country: GB
     lat: 53.326
     lng: -3.825
+  # 2026-09-23 配信枠更新: pqLgf0q27Rw → vsjE5ERdZzM
   - id: world-85c50365
     name: ママイア ビーチ(黒海)
     operator: Webcam Romania
-    video_id: pqLgf0q27Rw
+    video_id: vsjE5ERdZzM
     category: scenic
     country: RO
     lat: 44.245
     lng: 28.628
+  # 2026-09-23 配信枠更新: UhHMXSYofv8 → i38jzOTVGu8
   - id: world-428f0e42
     name: トランサルピナ スキーリゾート
     operator: Webcam Romania
-    video_id: UhHMXSYofv8
+    video_id: i38jzOTVGu8
     category: scenic
     country: RO
     lat: 45.376
@@ -6022,27 +6102,30 @@ cameras:
     country: PT
     lat: 32.642
     lng: -16.913
-  - id: world-219efccb
-    name: ロス・オン・シー(北ウェールズ) 海岸
-    operator: Colin Hazelden
-    video_id: 8bPRF24YaLA
-    category: scenic
-    country: GB
-    lat: 53.308
-    lng: -3.737
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-219efccb
+  # name: ロス・オン・シー(北ウェールズ) 海岸
+  # operator: Colin Hazelden
+  # video_id: 8bPRF24YaLA
+  # category: scenic
+  # country: GB
+  # lat: 53.308
+  # lng: -3.737
+  # 2026-09-23 配信枠更新: 3HXRJ-4tOCw → jHfZ4ZYsaOA
   - id: world-347fed21
     name: ウツヨキ オーロラカメラ(最北ラップランド)
     operator: Aurora Holidays
-    video_id: 3HXRJ-4tOCw
+    video_id: jHfZ4ZYsaOA
     category: scenic
     country: FI
     lat: 69.908
     lng: 27.027
     note: 夜間はオーロラ・スカイカメラ
+  # 2026-09-23 配信枠更新: NRb1-WHgndQ → yVoI1qxNNc4
   - id: world-1ef02f41
     name: ブカレスト ヴィクトリエイ通り
     operator: Caught on camera
-    video_id: NRb1-WHgndQ
+    video_id: yVoI1qxNNc4
     category: scenic
     country: RO
     lat: 44.439
@@ -6362,10 +6445,11 @@ cameras:
     lat: -33.94
     lng: 18.375
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)
+  # 2026-09-23 配信枠更新: lht-x2Su0CA → H_wV0IBf_R8
   - id: world-7e7ff38e
     name: 南アフリカ ケープタウン マイゼンバーグビーチ
     operator: REEF South Africa
-    video_id: lht-x2Su0CA
+    video_id: H_wV0IBf_R8
     category: scenic
     country: ZA
     lat: -34.108
@@ -6397,10 +6481,11 @@ cameras:
     country: ZA
     lat: -33.92
     lng: 18.39
+  # 2026-09-23 配信枠更新: G1X73kqNHJk → VjGTxu0lKUg
   - id: world-794c2544
     name: 南アフリカ ゴードンズベイ ビキニビーチ
     operator: Cape Ocean Adventures
-    video_id: G1X73kqNHJk
+    video_id: VjGTxu0lKUg
     category: scenic
     country: ZA
     lat: -34.16
@@ -6415,19 +6500,21 @@ cameras:
     lat: -34.03
     lng: 24.93
     note: サーフポイント
-  - id: world-030c2fbe
-    name: 南アフリカ クルーガー クロコダイル川(Latest Sightings)
-    operator: Latest Sightings
-    video_id: bWmNvDqw3aA
-    category: healing
-    country: ZA
-    lat: -25.36
-    lng: 31.6
-    note: マーロスパーク側から。座標は概略
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-030c2fbe
+  # name: 南アフリカ クルーガー クロコダイル川(Latest Sightings)
+  # operator: Latest Sightings
+  # video_id: bWmNvDqw3aA
+  # category: healing
+  # country: ZA
+  # lat: -25.36
+  # lng: 31.6
+  # note: マーロスパーク側から。座標は概略
+  # 2026-09-23 配信枠更新: U38JzZMBoZw → xAgK67VscQQ
   - id: world-3b03ecfa
     name: 南アフリカ クルーガー クロコダイル川 サウスポスト
     operator: South Post at Kruger
-    video_id: U38JzZMBoZw
+    video_id: xAgK67VscQQ
     category: healing
     country: ZA
     lat: -25.37
@@ -6469,10 +6556,11 @@ cameras:
     lat: 37.74
     lng: 15.19
     note: カメラ位置はマスカリ側
+  # 2026-09-23 配信枠更新: s33QEel5zQo → yRtQgF9KrCk
   - id: world-e411cbf7
     name: エトナ山 北側(ピアノ・プロヴェンツァーナ)
     operator: Weather Italy - WS Cam
-    video_id: s33QEel5zQo
+    video_id: yRtQgF9KrCk
     category: volcano
     country: IT
     lat: 37.8
@@ -6486,10 +6574,11 @@ cameras:
     lat: 37.7
     lng: 15.0
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)
+  # 2026-09-23 配信枠更新: 0DcHe8kUF70 → ZQcPQx8PKQ8
   - id: world-1f14376c
     name: インドネシア スメル山
     operator: afarTV
-    video_id: 0DcHe8kUF70
+    video_id: ZQcPQx8PKQ8
     category: volcano
     country: ID
     lat: -8.108
@@ -6923,10 +7012,11 @@ cameras:
     country: IT
     lat: 41.925
     lng: 12.447
+  # 2026-09-23 配信枠更新: yRTTjMYVCXY → y1pYOFJ8n8o
   - id: world-7c09b93c
     name: ローマ ヴェネツィア広場
     operator: Roma Five Suites
-    video_id: yRTTjMYVCXY
+    video_id: y1pYOFJ8n8o
     category: scenic
     country: IT
     lat: 41.896
@@ -6940,24 +7030,26 @@ cameras:
     lat: 51.4925
     lng: 0.054
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。
-  - id: world-9ad3b41e
-    name: ロンドン ノッティングヒル・ゲート
-    operator: Notting Hill Gate Cam
-    video_id: ojp4cGntBCw
-    category: scenic
-    country: GB
-    lat: 51.509
-    lng: -0.1965
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。
-  - id: world-ce147c4b
-    name: ロンドン ロンドン橋・テムズ川(ゴールデン・ハインド号)
-    operator: Beach Life Cams
-    video_id: y54kaDjmCzY
-    category: scenic
-    country: GB
-    lat: 51.5067
-    lng: -0.0903
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-9ad3b41e
+  # name: ロンドン ノッティングヒル・ゲート
+  # operator: Notting Hill Gate Cam
+  # video_id: ojp4cGntBCw
+  # category: scenic
+  # country: GB
+  # lat: 51.509
+  # lng: -0.1965
+  # note: 埋め込み不可(oEmbed 401)→誘導型で登録。
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-ce147c4b
+  # name: ロンドン ロンドン橋・テムズ川(ゴールデン・ハインド号)
+  # operator: Beach Life Cams
+  # video_id: y54kaDjmCzY
+  # category: scenic
+  # country: GB
+  # lat: 51.5067
+  # lng: -0.0903
+  # note: 埋め込み不可(oEmbed 401)→誘導型で登録。
   - id: world-36a18adc
     name: アムステルダム ダムラック・ベウルスプレイン
     operator: WebCam.NL
@@ -7099,18 +7191,20 @@ cameras:
     lat: 37.964
     lng: 23.765
     note: イミトス山麓から西向き。中央にリカベトスの丘、左にアクロポリス
+  # 2026-09-23 配信枠更新: FWeeD8QNGbc → tYRZGFxrArU
   - id: world-2f8aef94
     name: シカゴ サウス・ループからループ方面
     operator: Chicago Southern Skyline
-    video_id: FWeeD8QNGbc
+    video_id: tYRZGFxrArU
     category: scenic
     country: US
     lat: 41.86
     lng: -87.628
+  # 2026-09-23 配信枠更新: Gg1awyWoZlU → t3keHnCkm-A
   - id: world-70f40d53
     name: シカゴ レイクフロント(ネイビーピア) 4K
     operator: Lakefront Live
-    video_id: Gg1awyWoZlU
+    video_id: t3keHnCkm-A
     category: scenic
     country: US
     lat: 41.8919
@@ -7147,10 +7241,11 @@ cameras:
     country: US
     lat: 40.758
     lng: -73.9855
+  # 2026-09-23 配信枠更新: Zmmskdpi4QE → QIIVxUJzJQw
   - id: world-80aa47b7
     name: ニューヨーク ブライアント・パーク
     operator: Bryant Park NYC
-    video_id: Zmmskdpi4QE
+    video_id: QIIVxUJzJQw
     category: scenic
     country: US
     lat: 40.7536
@@ -7180,10 +7275,11 @@ cameras:
     country: US
     lat: 37.619
     lng: -122.498
+  # 2026-09-23 配信枠更新: 4oN611Ges3Y → ZJq237TDfxE
   - id: world-e32e4678
     name: ブルックリン橋・マンハッタン橋(イーストリバー)
     operator: Brooklyn Waterfront Cams
-    video_id: 4oN611Ges3Y
+    video_id: ZJq237TDfxE
     category: scenic
     country: US
     lat: 40.705
@@ -7221,18 +7317,20 @@ cameras:
     country: US
     lat: 36.11
     lng: -115.17
-  - id: world-7a8d8fb1
-    name: ラスベガス ストリップ
-    operator: LV Strip Cam
-    video_id: MYMlgk9n8A0
-    category: scenic
-    country: US
-    lat: 36.12
-    lng: -115.172
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-7a8d8fb1
+  # name: ラスベガス ストリップ
+  # operator: LV Strip Cam
+  # video_id: MYMlgk9n8A0
+  # category: scenic
+  # country: US
+  # lat: 36.12
+  # lng: -115.172
+  # 2026-09-23 配信枠更新: KtCweD6zjfA → F102Hz6oyIA
   - id: world-777ee55a
     name: ラスベガス市庁舎屋上
     operator: City of Las Vegas
-    video_id: KtCweD6zjfA
+    video_id: F102Hz6oyIA
     category: scenic
     country: US
     lat: 36.1673
@@ -7253,14 +7351,15 @@ cameras:
     country: US
     lat: 33.987
     lng: -118.473
-  - id: world-7d35792d
-    name: ロサンゼルス ベニスビーチ(Venice Vive)
-    operator: Venice Vive
-    video_id: Hk9Mzv7H_RY
-    category: scenic
-    country: US
-    lat: 33.985
-    lng: -118.472
+  # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
+  # - id: world-7d35792d
+  # name: ロサンゼルス ベニスビーチ(Venice Vive)
+  # operator: Venice Vive
+  # video_id: Hk9Mzv7H_RY
+  # category: scenic
+  # country: US
+  # lat: 33.985
+  # lng: -118.472
   - id: world-2b9c36db
     name: ロサンゼルス国際空港(SurveillanceMap)
     operator: SurveillanceMap Foundation
@@ -7334,14 +7433,15 @@ cameras:
     country: NZ
     lat: -36.8485
     lng: 174.762
-  - id: world-80d6eecd
-    name: Nソウルタワー パノラマ(YTN)
-    operator: YTN서울타워
-    video_id: M6lq50Ptp1g
-    category: scenic
-    country: KR
-    lat: 37.5512
-    lng: 126.9882
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-80d6eecd
+  # name: Nソウルタワー パノラマ(YTN)
+  # operator: YTN서울타워
+  # video_id: M6lq50Ptp1g
+  # category: scenic
+  # country: KR
+  # lat: 37.5512
+  # lng: 126.9882
   - id: world-022bd26a
     name: ソウル 漢江 加陽大橋・江辺北路
     operator: 서울 한강 라이브 / Seoul Hangang Live
@@ -7367,27 +7467,30 @@ cameras:
     country: KR
     lat: 37.64
     lng: 127.06
+  # 2026-09-23 配信枠更新: DY4RGWcfuWw → VNovRti7emg
   - id: world-360df129
     name: バンコク スカイライン(Adventure Dood)
     operator: Adventure Dood
-    video_id: DY4RGWcfuWw
+    video_id: VNovRti7emg
     category: scenic
     country: TH
     lat: 13.74
     lng: 100.56
     note: 位置は概略
-  - id: world-78085a2d
-    name: バンコク トゥルー・デジタル・パーク
-    operator: ExpatHub
-    video_id: zbaW8o3J8oA
-    category: scenic
-    country: TH
-    lat: 13.696
-    lng: 100.61
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-78085a2d
+  # name: バンコク トゥルー・デジタル・パーク
+  # operator: ExpatHub
+  # video_id: zbaW8o3J8oA
+  # category: scenic
+  # country: TH
+  # lat: 13.696
+  # lng: 100.61
+  # 2026-09-23 配信枠更新: 6OICn5EvsZ8 → ziRYhdl55F0
   - id: world-1da876c4
     name: ケープタウン テーブルマウンテン〜ライオンズヘッド パノラマ
     operator: FLOORING.CO.ZA
-    video_id: 6OICn5EvsZ8
+    video_id: ziRYhdl55F0
     category: scenic
     country: ZA
     lat: -33.92
@@ -7417,18 +7520,20 @@ cameras:
     country: BR
     lat: -29.379
     lng: -50.874
+  # 2026-09-23 配信枠更新: R-naZWDvLVw → TQW3IqKsUzc
   - id: world-53d832c4
     name: サンタ・マリア中心部(リオグランデ・ド・スル)
     operator: Câmeras ao Vivo RS
-    video_id: R-naZWDvLVw
+    video_id: TQW3IqKsUzc
     category: scenic
     country: BR
     lat: -29.684
     lng: -53.807
+  # 2026-09-23 配信枠更新: fCBfwATvBBI → ymtBWXMyTJU
   - id: world-4cfbb46f
     name: サントス ゴンザガ海岸 4K
     operator: Olhar 013
-    video_id: fCBfwATvBBI
+    video_id: ymtBWXMyTJU
     category: scenic
     country: BR
     lat: -23.969
@@ -7442,18 +7547,20 @@ cameras:
     lat: -5.062
     lng: -35.509
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。
-  - id: world-0c7c8f3c
-    name: サン・ビセンテ イタラレ海岸
-    operator: Tem Onda / Olhar 013
-    video_id: qqcsE-v9Cac
-    category: scenic
-    country: BR
-    lat: -23.972
-    lng: -46.368
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-0c7c8f3c
+  # name: サン・ビセンテ イタラレ海岸
+  # operator: Tem Onda / Olhar 013
+  # video_id: qqcsE-v9Cac
+  # category: scenic
+  # country: BR
+  # lat: -23.972
+  # lng: -46.368
+  # 2026-09-23 配信枠更新: R1nXsBCG--s → N-qiV6w3HmE
   - id: world-41b7cc9f
     name: シャペコ中心部
     operator: Portal Chapecó
-    video_id: R1nXsBCG--s
+    video_id: N-qiV6w3HmE
     category: scenic
     country: BR
     lat: -27.096
@@ -7540,10 +7647,11 @@ cameras:
     lat: -28.483
     lng: -48.781
     note: 既存のラグーナ(Portal Agora Laguna)とは別カメラ
+  # 2026-09-23 配信枠更新: 7ecGJrsCv60 → k2QzfrPLQSg
   - id: world-51a9e772
     name: リオデジャネイロ コパカバーナ ポスト3
     operator: Homes in Rio
-    video_id: 7ecGJrsCv60
+    video_id: k2QzfrPLQSg
     category: scenic
     country: BR
     lat: -22.97
@@ -7556,27 +7664,30 @@ cameras:
     country: BR
     lat: -22.986
     lng: -43.188
+  # 2026-09-23 配信枠更新: SOUnDgwTSic → 27uSAi8oOxQ
   - id: world-cb11c4ee
     name: リオデジャネイロ コルコバード キリスト像(パイネイラス)
     operator: Paineiras Corcovado
-    video_id: SOUnDgwTSic
+    video_id: 27uSAi8oOxQ
     category: scenic
     country: BR
     lat: -22.9519
     lng: -43.2105
     note: 公式運営(コルコバードのビジターセンター)
+  # 2026-09-23 配信枠更新: E9FK3QGdpqE → _Nrt155MExU
   - id: world-2f6189af
     name: サンティアゴ ニュニョア
     operator: Santiago Skyline Live
-    video_id: E9FK3QGdpqE
+    video_id: _Nrt155MExU
     category: scenic
     country: CL
     lat: -33.457
     lng: -70.596
+  # 2026-09-23 配信枠更新: nllueA0D7TY → pXe8MpU7uzk
   - id: world-96f072bb
     name: ウルバンバ ハチドリ保護区(Ensifera Ensifera)
     operator: Hummingbird Spot
-    video_id: nllueA0D7TY
+    video_id: pXe8MpU7uzk
     category: healing
     country: PE
     lat: -13.306
@@ -7623,15 +7734,16 @@ cameras:
     lat: 10.45
     lng: -83.98
     note: 位置は概略
-  - id: world-78c857ae
-    name: サンホセ(コスタリカ) 4K
-    operator: San Jose Costa Rica 4K Live Cam
-    video_id: CJmr2bA06oM
-    category: scenic
-    country: CR
-    lat: 9.933
-    lng: -84.08
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。位置は概略。埋め込み不可
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-78c857ae
+  # name: サンホセ(コスタリカ) 4K
+  # operator: San Jose Costa Rica 4K Live Cam
+  # video_id: CJmr2bA06oM
+  # category: scenic
+  # country: CR
+  # lat: 9.933
+  # lng: -84.08
+  # note: 埋め込み不可(oEmbed 401)→誘導型で登録。位置は概略。埋め込み不可
   - id: world-c3d09b68
     name: ノサラ プラヤ・ギオネス
     operator: Vacation Nosara
@@ -7656,22 +7768,24 @@ cameras:
     country: PA
     lat: 8.602
     lng: -80.127
-  - id: world-c403e2c2
-    name: グアイナボ スカイカム(787 Daily)
-    operator: 787 Daily
-    video_id: a3Pz43jT7AY
-    category: scenic
-    country: PR
-    lat: 18.36
-    lng: -66.11
-  - id: world-1b200522
-    name: サンフアン ディストリト・T-モバイル
-    operator: PuertoRicoSkyCam.com
-    video_id: 1R2FKgheck8
-    category: scenic
-    country: PR
-    lat: 18.43
-    lng: -66.074
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-c403e2c2
+  # name: グアイナボ スカイカム(787 Daily)
+  # operator: 787 Daily
+  # video_id: a3Pz43jT7AY
+  # category: scenic
+  # country: PR
+  # lat: 18.36
+  # lng: -66.11
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-1b200522
+  # name: サンフアン ディストリト・T-モバイル
+  # operator: PuertoRicoSkyCam.com
+  # video_id: 1R2FKgheck8
+  # category: scenic
+  # country: PR
+  # lat: 18.43
+  # lng: -66.074
   - id: world-9599a95f
     name: アカプルコ コンデサ海岸
     operator: Webcams de México TV
@@ -7680,10 +7794,11 @@ cameras:
     country: MX
     lat: 16.853
     lng: -99.87
+  # 2026-09-23 配信枠更新: rRlI9fp_rII → lrnOUZtoBwY
   - id: world-17a6b01c
     name: アカプルコ マリーナ
     operator: Webcams de México TV
-    video_id: rRlI9fp_rII
+    video_id: lrnOUZtoBwY
     category: scenic
     country: MX
     lat: 16.848
@@ -7752,10 +7867,11 @@ cameras:
     country: MX
     lat: 21.125
     lng: -86.759
+  # 2026-09-23 配信枠更新: ELgxvY636bo → ZEy93tkfhy4
   - id: world-2b3dffd7
     name: カンクン(ホテル・ソラリス)
     operator: Hoteles Solaris
-    video_id: ELgxvY636bo
+    video_id: ZEy93tkfhy4
     category: scenic
     country: MX
     lat: 21.105
@@ -7864,10 +7980,11 @@ cameras:
     country: MX
     lat: 20.568
     lng: -105.247
+  # 2026-09-23 配信枠更新: 8rxufMBP9DY → w9at4FtWOjQ
   - id: world-9af61654
     name: プラヤ・デル・カルメン 5番街
     operator: Webcams de México TV
-    video_id: 8rxufMBP9DY
+    video_id: w9at4FtWOjQ
     category: scenic
     country: MX
     lat: 20.629
@@ -8098,10 +8215,11 @@ cameras:
     lat: 32.552
     lng: 34.95
     note: 繁殖期(3〜7月)以外は不在のことがある
+  # 2026-09-23 配信枠更新: PLkCnLrKN8Q → eC4LfEVxvKg
   - id: world-a4691b0c
     name: メッカ マスジド・ハラーム（サウジ国営 クルアーンTV 公式）
     operator: قناة القرآن الكريم / Saudi Broadcasting Authority（公式）
-    video_id: PLkCnLrKN8Q
+    video_id: eC4LfEVxvKg
     category: scenic
     country: SA
     lat: 21.4225
@@ -8125,10 +8243,11 @@ cameras:
     lat: 23.588
     lng: 58.3829
     note: AXIS Q6318-LE による崖上からの海岸・工事現場カメラ（CamStreamer経由）。開発完了で終了の可能性
+  # 2026-09-23 配信枠更新: EcuxoC50ccw → bHMXLnc0PzM
   - id: world-3beb3014
     name: イスタンブール ガラタ塔と乙女の塔 ボスポラス眺望
     operator: 'Istanbul: Golden Horn Live（運営者名不詳・個人/施設）'
-    video_id: EcuxoC50ccw
+    video_id: bHMXLnc0PzM
     category: scenic
     country: TR
     lat: 41.023
@@ -8296,10 +8415,11 @@ cameras:
     lat: 42.958
     lng: -0.333
     note: ピレネー。approx
+  # 2026-09-23 配信枠更新: CWn2dEuJrA4 → IYTZmjU4V4c
   - id: world-7812f319
     name: ダンタ・ディ・カドーレ(ドロミテ)
     operator: Webcam DANTA
-    video_id: CWn2dEuJrA4
+    video_id: IYTZmjU4V4c
     category: scenic
     country: IT
     lat: 46.567
@@ -8314,10 +8434,11 @@ cameras:
     lat: 46.557
     lng: 11.676
     note: 観光局公式。セルヴァ/S.クリスティーナ/オルティゼイの複数パノラマカメラを巡回表示(代表地点で登録)
+  # 2026-09-23 配信枠更新: fVkP1ri9oaU → RBbSItqtFFQ
   - id: world-af8a69df
     name: ベアテンベルク アイガー・メンヒ・ユングフラウ
     operator: Chalet Hinkelstein (Tour-Tips)
-    video_id: fVkP1ri9oaU
+    video_id: RBbSItqtFFQ
     category: scenic
     country: CH
     lat: 46.699
@@ -8386,10 +8507,11 @@ cameras:
     lat: 71.11
     lng: 25.825
     note: approx
+  # 2026-09-23 配信枠更新: QEZZHkxx6SM → YiiGXYPRRI4
   - id: world-10499c24
     name: テ・アナウ湖(フィヨルドランド)
     operator: Southland App Live
-    video_id: QEZZHkxx6SM
+    video_id: YiiGXYPRRI4
     category: scenic
     country: NZ
     lat: -45.415
@@ -8413,10 +8535,11 @@ cameras:
     lat: 45.882
     lng: 10.845
     note: approx
+  # 2026-09-23 配信枠更新: w_g5gO4Bg-0 → 8s1AfGR2i1c
   - id: world-161ae03f
     name: ガルダ湖 トッリ・デル・ベナコ
     operator: Hotel Benacus
-    video_id: w_g5gO4Bg-0
+    video_id: 8s1AfGR2i1c
     category: scenic
     country: IT
     lat: 45.61
@@ -8485,10 +8608,11 @@ cameras:
     lat: -18.63
     lng: 26.95
     note: approx
+  # 2026-09-23 配信枠更新: nXI-kWu6BLo → ljLeMq_KXpY
   - id: world-dfde7005
     name: ワンゲ ザ・ハイド 水場
     operator: Africam
-    video_id: nXI-kWu6BLo
+    video_id: ljLeMq_KXpY
     category: healing
     country: ZW
     lat: -18.6
@@ -8620,10 +8744,12 @@ cameras:
     lat: -4.32
     lng: 55.87
     note: 既存ノース島と同運営者。ループ映像の可能性あり要目視。approx
+  # 2026-09-23 配信枠更新: sdgEUQQ4SzQ → upNOSgmrDYk（埋め込み不可のため誘導型）
   - id: world-07b43231
     name: マウイ島 カアナパリ(ホエラー・コンド)
     operator: Maui Live Cam (WhalerCondo.net)
-    video_id: sdgEUQQ4SzQ
+    video_id: upNOSgmrDYk
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: US
     lat: 20.923
@@ -8764,10 +8890,11 @@ cameras:
     lat: 37.538
     lng: 25.16
     note: approx
+  # 2026-09-23 配信枠更新: k9_uTRCJy7Q → utSWHPcdMWw
   - id: world-1aaa4e32
     name: スキアトス島 港
     operator: Ship Spotter's Paradise
-    video_id: k9_uTRCJy7Q
+    video_id: utSWHPcdMWw
     category: scenic
     country: GR
     lat: 39.16
@@ -8998,24 +9125,26 @@ cameras:
     lat: 50.8
     lng: 15.78
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。approx
-  - id: world-a7c15a1b
-    name: リンゲン・ノース オーロラカメラ(ロツンド)
-    operator: Lyngen North
-    video_id: faFFtmS6xSs
-    category: scenic
-    country: 'NO'
-    lat: 69.763
-    lng: 20.465
-    note: 夜間はオーロラ・昼はフィヨルド
-  - id: world-26442779
-    name: リンゲン南部(Fablab)
-    operator: Fablab Lyngen
-    video_id: LaSg-8tTISc
-    category: scenic
-    country: 'NO'
-    lat: 69.58
-    lng: 20.22
-    note: approx
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-a7c15a1b
+  # name: リンゲン・ノース オーロラカメラ(ロツンド)
+  # operator: Lyngen North
+  # video_id: faFFtmS6xSs
+  # category: scenic
+  # country: 'NO'
+  # lat: 69.763
+  # lng: 20.465
+  # note: 夜間はオーロラ・昼はフィヨルド
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-26442779
+  # name: リンゲン南部(Fablab)
+  # operator: Fablab Lyngen
+  # video_id: LaSg-8tTISc
+  # category: scenic
+  # country: 'NO'
+  # lat: 69.58
+  # lng: 20.22
+  # note: approx
   - id: world-a2d23c42
     name: ミルクダーレン
     operator: Norway Live
@@ -9160,10 +9289,11 @@ cameras:
     lat: 34.003
     lng: -119.363
     note: approx
+  # 2026-09-23 配信枠更新: roQfWrHBCc0 → WOTkHFaHT0w
   - id: world-b63311e7
     name: パシクダ(スリランカ東海岸)
     operator: Live (個人)
-    video_id: roQfWrHBCc0
+    video_id: WOTkHFaHT0w
     category: scenic
     country: LK
     lat: 7.92
@@ -9205,10 +9335,11 @@ cameras:
     lat: 41.65
     lng: 9.15
     note: approx
+  # 2026-09-23 配信枠更新: pxm0cXCZyl4 → V2mO-6X0EwM
   - id: world-1cf19799
     name: コモ湖 リフージョ・メナッジョ
     operator: Como Cam
-    video_id: pxm0cXCZyl4
+    video_id: V2mO-6X0EwM
     category: scenic
     country: IT
     lat: 46.045
@@ -9250,10 +9381,11 @@ cameras:
     lat: -41.42
     lng: 148.27
     note: approx
+  # 2026-09-23 配信枠更新: MPwMmEvl6F0 → gfJ4wIhnULQ
   - id: world-fedeb549
     name: ネルソン/タスマン 星空カメラ
     operator: WISP Tasman
-    video_id: MPwMmEvl6F0
+    video_id: gfJ4wIhnULQ
     category: scenic
     country: NZ
     lat: -41.3
@@ -9646,19 +9778,22 @@ cameras:
     lat: -39.42
     lng: 175.4
     note: approx
+  # 2026-09-23 配信枠更新: b3JLiw_arrA → MYYs93NSVEE（埋め込み不可のため誘導型）
   - id: world-4ba13242
     name: オカナガン湖
     operator: Okanagan Lake Live Cam
-    video_id: b3JLiw_arrA
+    video_id: MYYs93NSVEE
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: CA
     lat: 49.7
     lng: -119.7
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。approx
+  # 2026-09-23 配信枠更新: AWTNsq3easY → JkgfWXFz1N4
   - id: world-82fb308c
     name: レーニア山とタコマ(ピアース郡)
     operator: Pierce County TV
-    video_id: AWTNsq3easY
+    video_id: JkgfWXFz1N4
     category: scenic
     country: US
     lat: 47.25
@@ -9673,10 +9808,11 @@ cameras:
     lat: 38.958
     lng: -106.99
     note: 個人運営(著名な気象観測者)。approx
+  # 2026-09-23 配信枠更新: NEK2iTuyOX4 → rSEpoAdnKjQ
   - id: world-a0ccf3a2
     name: パウエル湖 マリーナ
     operator: XINSURANCE Sports
-    video_id: NEK2iTuyOX4
+    video_id: rSEpoAdnKjQ
     category: scenic
     country: US
     lat: 36.96
@@ -9839,10 +9975,11 @@ cameras:
     lat: 60.725
     lng: 114.928
     note: 同チャンネルに5カメラ(レナ川眺望 HTxGH7rcHQE 等)
+  # 2026-09-23 配信枠更新: HTxGH7rcHQE → c6LNlgV2gjM
   - id: world-8f46e6a7
     name: レンスク レナ川眺望
     operator: LarryRos
-    video_id: HTxGH7rcHQE
+    video_id: c6LNlgV2gjM
     category: scenic
     country: RU
     lat: 60.722
@@ -9874,23 +10011,25 @@ cameras:
     lat: 41.5495
     lng: 44.993
     note: 地方局
-  - id: world-cc6284af
-    name: エレバン アララト山・母なるアルメニア像
-    operator: AraratNow
-    video_id: DQxUEe_u7fQ
-    category: scenic
-    country: AM
-    lat: 40.1935
-    lng: 44.5245
-  - id: world-6fad5c7e
-    name: セヴァン湖(チャンバラク Altitude 1900ホテル)
-    operator: Altitude 1900 Hotel
-    video_id: kKQfjpwczVU
-    category: scenic
-    country: AM
-    lat: 40.5967
-    lng: 45.3487
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。ホテル設置・気象表示付き
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-cc6284af
+  # name: エレバン アララト山・母なるアルメニア像
+  # operator: AraratNow
+  # video_id: DQxUEe_u7fQ
+  # category: scenic
+  # country: AM
+  # lat: 40.1935
+  # lng: 44.5245
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-6fad5c7e
+  # name: セヴァン湖(チャンバラク Altitude 1900ホテル)
+  # operator: Altitude 1900 Hotel
+  # video_id: kKQfjpwczVU
+  # category: scenic
+  # country: AM
+  # lat: 40.5967
+  # lng: 45.3487
+  # note: 埋め込み不可(oEmbed 401)→誘導型で登録。ホテル設置・気象表示付き
   - id: world-d61ff8b6
     name: ツァフカゾール ロープウェイ
     operator: Ropeway Armenia
@@ -9915,15 +10054,16 @@ cameras:
     country: LT
     lat: 54.8985
     lng: 23.9036
-  - id: world-068e3c71
-    name: クライペダ 港
-    operator: Klaipeda Live Camera
-    video_id: PPu1XLud75I
-    category: scenic
-    country: LT
-    lat: 55.71
-    lng: 21.13
-    note: 日替わりで新規配信(タイトルに日付)。channel_id指定推奨。BGM付き
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: world-068e3c71
+  # name: クライペダ 港
+  # operator: Klaipeda Live Camera
+  # video_id: PPu1XLud75I
+  # category: scenic
+  # country: LT
+  # lat: 55.71
+  # lng: 21.13
+  # note: 日替わりで新規配信(タイトルに日付)。channel_id指定推奨。BGM付き
   - id: world-041b5b5c
     name: オジロワシの巣(ドゥルベ)
     operator: Latvijas Dabas fonds
@@ -9996,28 +10136,31 @@ cameras:
     lat: 58.7
     lng: 25.8
     note: 営巣期以外は空の巣。場所非公開・座標は概略
-  - id: world-0d77260b
-    name: ソフィア/ボヤナ/ヴィトシャ山チェルニ・ヴラフ
-    operator: Hik System Live
-    video_id: LKYcD-VAUjc
-    category: scenic
-    country: BG
-    lat: 42.64
-    lng: 23.26
-    note: 複数カメラを自動切替
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-0d77260b
+  # name: ソフィア/ボヤナ/ヴィトシャ山チェルニ・ヴラフ
+  # operator: Hik System Live
+  # video_id: LKYcD-VAUjc
+  # category: scenic
+  # country: BG
+  # lat: 42.64
+  # lng: 23.26
+  # note: 複数カメラを自動切替
+  # 2026-09-23 日替わり配信枠のためチャンネル登録に変更（旧 m90lbw5syLc）
   - id: world-fd5212c0
     name: バンスコ スキーリゾート
     operator: Bansko Ski Conditions Archive
-    video_id: m90lbw5syLc
+    channel_id: "UCjYIMaXG8IO8t4_0dvMFKNA"
     category: scenic
     country: BG
     lat: 41.82
     lng: 23.485
     note: 日替わりで新規配信(タイトルに日付)。channel_id指定推奨。リゾート非公式
+  # 2026-09-23 配信枠更新: mvrFgFOcz08 → OsDvrPWjpd8
   - id: world-d9d52ec9
     name: ヴェリコ・タルノヴォ
     operator: Даниел Панов
-    video_id: mvrFgFOcz08
+    video_id: OsDvrPWjpd8
     category: scenic
     country: BG
     lat: 43.08
@@ -10188,18 +10331,20 @@ cameras:
     country: MK
     lat: 41.34
     lng: 21.95
+  # 2026-09-23 配信枠更新: jLun451s8-g → 67hIw4nhWMM
   - id: world-b2c6d363
     name: ヴロラ湾
     operator: Vlora Bay Live
-    video_id: jLun451s8-g
+    video_id: 67hIw4nhWMM
     category: scenic
     country: AL
     lat: 40.466
     lng: 19.489
+  # 2026-09-23 配信枠更新: jrrtzcg0Q0E → Bz2QmlUVdG0
   - id: world-e760245f
     name: サラエボ 市街パノラマ
     operator: Live Sarajevo 4K
-    video_id: jrrtzcg0Q0E
+    video_id: Bz2QmlUVdG0
     category: scenic
     country: BA
     lat: 43.8563
@@ -10222,15 +10367,16 @@ cameras:
     lat: 49.84
     lng: 24.03
     note: 営巣期以外は空の巣。座標は概略。観光・自然カメラのみ採用
-  - id: world-d8cfa496
-    name: クラスノヤルスク 市街
-    operator: владислав
-    video_id: W1vNhrqXQ8k
-    category: scenic
-    country: RU
-    lat: 56.0153
-    lng: 92.8932
-    note: 個人。設置場所の記載なし・座標は市中心の概略
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: world-d8cfa496
+  # name: クラスノヤルスク 市街
+  # operator: владислав
+  # video_id: W1vNhrqXQ8k
+  # category: scenic
+  # country: RU
+  # lat: 56.0153
+  # lng: 92.8932
+  # note: 個人。設置場所の記載なし・座標は市中心の概略
   - id: world-efb57188
     name: モンテゴベイ サムシャープ広場
     operator: See Jamaica

@@ -20841,6 +20841,7 @@ cameras:
     feed_url: "https://www.youtube.com/watch?v=lrPqs4XuTgM"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「呉市宝町」。運営者はチャンネル名、事業主体は要確認"
 
+  # 2026-09-23 配信枠更新: dt8DExSt-b8 → 8dZ1dktPSws（埋め込み不可のため誘導型）
   - id: curated-link-other-ohara-hospital-parking
     name: "大原綜合病院 大町まちなかパーキング（福島市）"
     operator: "大原記念財団"
@@ -20848,10 +20849,10 @@ cameras:
     prefecture: "07"
     lat: 37.752384
     lng: 140.467712
-    image_url: "https://www.youtube.com/watch?v=dt8DExSt-b8"
-    page_url: "https://www.youtube.com/watch?v=dt8DExSt-b8"
+    image_url: "https://www.youtube.com/watch?v=8dZ1dktPSws"
+    page_url: "https://www.youtube.com/watch?v=8dZ1dktPSws"
     feed_type: "web_page"
-    feed_url: "https://www.youtube.com/watch?v=dt8DExSt-b8"
+    feed_url: "https://www.youtube.com/watch?v=8dZ1dktPSws"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「福島市大町6-11」"
 
   - id: curated-link-scenic-hakata-nakasu
@@ -20921,6 +20922,7 @@ cameras:
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:Nominatim「秋葉原エンタス」"
 
   # 2026-09-01 配信枠更新: UKfyhbRI3rY → M6EIQQbr9Pg
+  # 2026-09-23 配信枠更新: M6EIQQbr9Pg → oDs8UWPYLhw（埋め込み不可のため誘導型）
   - id: curated-link-coast-yoron-paradise-beach
     name: "パラダイス・ビーチ（与論島）"
     operator: "株式会社ヨロン島"
@@ -20928,25 +20930,26 @@ cameras:
     prefecture: "46"
     lat: 27.0195
     lng: 128.3985
-    image_url: "https://www.youtube.com/watch?v=M6EIQQbr9Pg"
-    page_url: "https://www.youtube.com/watch?v=M6EIQQbr9Pg"
+    image_url: "https://www.youtube.com/watch?v=oDs8UWPYLhw"
+    page_url: "https://www.youtube.com/watch?v=oDs8UWPYLhw"
     feed_type: "web_page"
-    feed_url: "https://www.youtube.com/watch?v=M6EIQQbr9Pg"
+    feed_url: "https://www.youtube.com/watch?v=oDs8UWPYLhw"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:与論町茶花南西のパラダイスビーチ概略(ジオコーダ不可のため地図読み)"
 
   # 2026-08-31 配信枠更新: VXz-FQIbsMg → ux24JqzmnXI
-  - id: curated-link-scenic-betsukai-hoppo
-    name: "別海町 北方領土ライブカメラ（野付半島）"
-    operator: "別海町"
-    category: "scenic"
-    prefecture: "01"
-    lat: 43.590353
-    lng: 145.334905
-    image_url: "https://www.youtube.com/watch?v=ux24JqzmnXI"
-    page_url: "https://www.youtube.com/watch?v=ux24JqzmnXI"
-    feed_type: "web_page"
-    feed_url: "https://www.youtube.com/watch?v=ux24JqzmnXI"
-    note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:Nominatim「野付半島ネイチャーセンター」"
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-scenic-betsukai-hoppo
+  # name: "別海町 北方領土ライブカメラ（野付半島）"
+  # operator: "別海町"
+  # category: "scenic"
+  # prefecture: "01"
+  # lat: 43.590353
+  # lng: 145.334905
+  # image_url: "https://www.youtube.com/watch?v=ux24JqzmnXI"
+  # page_url: "https://www.youtube.com/watch?v=ux24JqzmnXI"
+  # feed_type: "web_page"
+  # feed_url: "https://www.youtube.com/watch?v=ux24JqzmnXI"
+  # note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:Nominatim「野付半島ネイチャーセンター」"
 
   - id: curated-link-scenic-mihama-american-village
     name: "美浜アメリカンビレッジ（北谷町）"
@@ -20961,6 +20964,7 @@ cameras:
     feed_url: "https://www.youtube.com/watch?v=briBfx5IZbg"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「北谷町美浜」(概略)"
 
+  # 2026-09-23 配信枠更新: cKOUqWab-Q4 → xoFcwCSdGT0（埋め込み不可のため誘導型）
   - id: curated-link-coast-kabira-bay
     name: "川平湾（昼）/星空（夜）石垣島"
     operator: "八重山諸島の風景 /Scenery of the Yaeyama Islands"
@@ -20968,13 +20972,14 @@ cameras:
     prefecture: "47"
     lat: 24.455191
     lng: 124.128746
-    image_url: "https://www.youtube.com/watch?v=cKOUqWab-Q4"
-    page_url: "https://www.youtube.com/watch?v=cKOUqWab-Q4"
+    image_url: "https://www.youtube.com/watch?v=xoFcwCSdGT0"
+    page_url: "https://www.youtube.com/watch?v=xoFcwCSdGT0"
     feed_type: "web_page"
-    feed_url: "https://www.youtube.com/watch?v=cKOUqWab-Q4"
+    feed_url: "https://www.youtube.com/watch?v=xoFcwCSdGT0"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「石垣市川平」(概略)"
 
   # 2026-08-31 配信枠更新: fJQ54oqoQE8 → sufZXPA740I
+  # 2026-09-23 配信枠更新: sufZXPA740I → VdIUYnTnzlY（埋め込み不可のため誘導型）
   - id: curated-link-port-yoron-kuri-port
     name: "与論町供利港"
     operator: "与論町"
@@ -20982,10 +20987,10 @@ cameras:
     prefecture: "46"
     lat: 27.040003
     lng: 128.401474
-    image_url: "https://www.youtube.com/watch?v=sufZXPA740I"
-    page_url: "https://www.youtube.com/watch?v=sufZXPA740I"
+    image_url: "https://www.youtube.com/watch?v=VdIUYnTnzlY"
+    page_url: "https://www.youtube.com/watch?v=VdIUYnTnzlY"
     feed_type: "web_page"
-    feed_url: "https://www.youtube.com/watch?v=sufZXPA740I"
+    feed_url: "https://www.youtube.com/watch?v=VdIUYnTnzlY"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:Nominatim「供利港 与論町」(指向灯)"
 
   # 2026-08-31 退役: YouTube上で非公開動画になっている(oEmbed 403)
@@ -21003,6 +21008,7 @@ cameras:
   # note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「右京区御室大内33」"
 
   # 2026-08-31 配信枠更新: ml_6E371x_A → HXakj5mD26A
+  # 2026-09-23 配信枠更新: HXakj5mD26A → Zl7Pz35wjZo（埋め込み不可のため誘導型）
   - id: curated-link-healing-lake-furen
     name: "風蓮湖 野鳥ライブカメラ（レイクサンセット）"
     operator: "レイクサンセット"
@@ -21010,10 +21016,10 @@ cameras:
     prefecture: "01"
     lat: 43.243557
     lng: 145.495316
-    image_url: "https://www.youtube.com/watch?v=HXakj5mD26A"
-    page_url: "https://www.youtube.com/watch?v=HXakj5mD26A"
+    image_url: "https://www.youtube.com/watch?v=Zl7Pz35wjZo"
+    page_url: "https://www.youtube.com/watch?v=Zl7Pz35wjZo"
     feed_type: "web_page"
-    feed_url: "https://www.youtube.com/watch?v=HXakj5mD26A"
+    feed_url: "https://www.youtube.com/watch?v=Zl7Pz35wjZo"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「根室市東梅」(概略)"
 
   - id: curated-link-port-yawatahama-ferry-parking
@@ -31199,18 +31205,19 @@ cameras:
     image_url: https://www.youtube.com/watch?v=PGDwf0LGCkE
     page_url: https://www.youtube.com/watch?v=PGDwf0LGCkE
     note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
-  - id: curated-link-lcdb-11a7078b
-    name: 富士川5拠点巡回
-    operator: 国土交通省関東地方整備局河川部水災害予報センター
-    category: river
-    prefecture: '22'
-    lat: 35.891152
-    lng: 139.629278
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=hhI7lG-XayM
-    image_url: https://www.youtube.com/watch?v=hhI7lG-XayM
-    page_url: https://www.ktr.mlit.go.jp/river/index.html
-    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-11a7078b
+  # name: 富士川5拠点巡回
+  # operator: 国土交通省関東地方整備局河川部水災害予報センター
+  # category: river
+  # prefecture: '22'
+  # lat: 35.891152
+  # lng: 139.629278
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=hhI7lG-XayM
+  # image_url: https://www.youtube.com/watch?v=hhI7lG-XayM
+  # page_url: https://www.ktr.mlit.go.jp/river/index.html
+  # note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
   - id: curated-link-lcdb-5a524183
     name: 河津桜観光交流館駐車場第2
     operator: 河津桜まつり実行委員会
@@ -31223,18 +31230,19 @@ cameras:
     image_url: https://www.youtube.com/watch?v=xTVFzc8vC48
     page_url: https://kawazuzakura.jp/
     note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
-  - id: curated-link-lcdb-1e6fa6e2
-    name: 関東地方整備局遊水地放水路11拠点巡回
-    operator: 国土交通省関東地方整備局河川部水災害予報センター
-    category: river
-    prefecture: '13'
-    lat: 35.891152
-    lng: 139.629278
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=J1QzUo3L6YM
-    image_url: https://www.youtube.com/watch?v=J1QzUo3L6YM
-    page_url: https://www.ktr.mlit.go.jp/river/index.html
-    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-1e6fa6e2
+  # name: 関東地方整備局遊水地放水路11拠点巡回
+  # operator: 国土交通省関東地方整備局河川部水災害予報センター
+  # category: river
+  # prefecture: '13'
+  # lat: 35.891152
+  # lng: 139.629278
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=J1QzUo3L6YM
+  # image_url: https://www.youtube.com/watch?v=J1QzUo3L6YM
+  # page_url: https://www.ktr.mlit.go.jp/river/index.html
+  # note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
   - id: curated-link-lcdb-b7888db9
     name: 国道1号桜田通り
     operator: w-akrs-2
@@ -31465,6 +31473,7 @@ cameras:
     note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
 
   # --- livecam.asia 索引経由の一次ソース確認分 (2026-08-29) ---
+  # 2026-09-23 配信枠更新: GANJ-xhywUY → _b-sqU3B8zk（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-aaf76267
     name: アイコクアルファいこいの広場
     operator: アイコクアルファいこいの広場
@@ -31473,8 +31482,8 @@ cameras:
     lat: 35.246404
     lng: 136.735096
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=GANJ-xhywUY
-    image_url: https://www.youtube.com/watch?v=GANJ-xhywUY
+    feed_url: https://www.youtube.com/watch?v=_b-sqU3B8zk
+    image_url: https://www.youtube.com/watch?v=_b-sqU3B8zk
     page_url: https://www.aikoku.co.jp/corporate/ikoi/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: アイコクアルファ いこいの広場 のライブ配信)。座標は地図中心(概略)'
   - id: curated-link-lcdb-d400e753
@@ -31578,6 +31587,7 @@ cameras:
   # image_url: https://www.youtube.com/watch?v=lv1v0pi-Xzk
   # page_url: https://www.youtube.com/channel/UC3Br7vuqYHcfrj7yPzjDkaA
   # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【愛媛県】三島川之江港　リアルタイム動画 Live Stream - 2026-)。座標は地図マーカー実位置'
+  # 2026-09-23 配信枠更新: JnaSrU5N_J0 → bLo5k-dSaLA（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-85d2c4a9
     name: 若狭さとうみパーク
     operator: 若狭町役場
@@ -31586,8 +31596,8 @@ cameras:
     lat: 35.547692
     lng: 135.906762
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=JnaSrU5N_J0
-    image_url: https://www.youtube.com/watch?v=JnaSrU5N_J0
+    feed_url: https://www.youtube.com/watch?v=bLo5k-dSaLA
+    image_url: https://www.youtube.com/watch?v=bLo5k-dSaLA
     page_url: https://www.town.fukui-wakasa.lg.jp/soshiki/kyoikuiinkaijimukyoku_shakaikyoiku/gyomuannai/2/790.html
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 若狭さとうみパーク のライブ配信)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: odVWcR9CeZw → ha4U8rH9wFk
@@ -31615,6 +31625,7 @@ cameras:
     image_url: https://www.youtube.com/watch?v=98OuCgpMM9s
     page_url: http://sinkouseisakusyo.com/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 下関観光PR・北九州市・門司区・関門橋・船舶・小鳥・イルカ・その他追尾※よろしけ)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: CearIzrdOOA → gBIeS7ByJS0（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-d5b5d8e4
     name: 松見寺永代供養塔
     operator: 松見寺
@@ -31623,8 +31634,8 @@ cameras:
     lat: 35.515126
     lng: 136.867224
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=CearIzrdOOA
-    image_url: https://www.youtube.com/watch?v=CearIzrdOOA
+    feed_url: https://www.youtube.com/watch?v=gBIeS7ByJS0
+    image_url: https://www.youtube.com/watch?v=gBIeS7ByJS0
     page_url: https://shokenji.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 松見寺岐阜 のライブ配信)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: llNNjI8g6x4 → 6x5SJ5ATEqE
@@ -31664,19 +31675,21 @@ cameras:
     image_url: https://www.youtube.com/watch?v=-Smzgr-11XU
     page_url: https://www.youtube.com/channel/UCm-9KnFHnauvCIgLe4iCxtA
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 厚岸町国道44号門静地区)。座標は地図マーカー実位置'
-  - id: curated-link-lcdb-084ba111
-    name: 函館湯の川上空天気
-    operator: 函館湯の川温泉の空
-    category: coast
-    prefecture: '01'
-    lat: 41.77838
-    lng: 140.780398
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=XWeYpO5XXdQ
-    image_url: https://www.youtube.com/watch?v=XWeYpO5XXdQ
-    page_url: https://www.youtube.com/channel/UC8paTCu5lo1tyFvQMgHe-1w
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 函館湯の川温泉の空 のライブ配信)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-084ba111
+  # name: 函館湯の川上空天気
+  # operator: 函館湯の川温泉の空
+  # category: coast
+  # prefecture: '01'
+  # lat: 41.77838
+  # lng: 140.780398
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=XWeYpO5XXdQ
+  # image_url: https://www.youtube.com/watch?v=XWeYpO5XXdQ
+  # page_url: https://www.youtube.com/channel/UC8paTCu5lo1tyFvQMgHe-1w
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 函館湯の川温泉の空 のライブ配信)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: 399lRHS2qSs → NEMzh_WCeFE
+  # 2026-09-23 配信枠更新: NEMzh_WCeFE → ThMVcmTIp0g（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-75938554
     name: 一映マリーナ
     operator: 一映マリーン企画
@@ -31685,8 +31698,8 @@ cameras:
     lat: 41.799917
     lng: 140.715795
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=NEMzh_WCeFE
-    image_url: https://www.youtube.com/watch?v=NEMzh_WCeFE
+    feed_url: https://www.youtube.com/watch?v=ThMVcmTIp0g
+    image_url: https://www.youtube.com/watch?v=ThMVcmTIp0g
     page_url: http://www.ichiei-marine.co.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 一映マリーナ のライブ配信)。座標は地図中心(概略)'
   - id: curated-link-lcdb-f3de2239
@@ -31701,18 +31714,19 @@ cameras:
     image_url: https://www.youtube.com/watch?v=k_B0kVRA31w
     page_url: https://www.youtube.com/channel/UCU8I0l7Aw_R6DsHpu9M6Ong
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【LIVE】癒しのサロマ湖｜美しい夕陽と四季の風景をLIVE配信【北海道北見市常)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-fe851518
-    name: 釧路飼料正面
-    operator: 釧路飼料
-    category: port
-    prefecture: '01'
-    lat: 43.001714
-    lng: 144.333077
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=9DYQy6TdLhI
-    image_url: https://www.youtube.com/watch?v=9DYQy6TdLhI
-    page_url: https://kushiroshiryo.jp/
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 釧路飼料株式会社 トラック待機列の混雑状況 正面)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-fe851518
+  # name: 釧路飼料正面
+  # operator: 釧路飼料
+  # category: port
+  # prefecture: '01'
+  # lat: 43.001714
+  # lng: 144.333077
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=9DYQy6TdLhI
+  # image_url: https://www.youtube.com/watch?v=9DYQy6TdLhI
+  # page_url: https://kushiroshiryo.jp/
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 釧路飼料株式会社 トラック待機列の混雑状況 正面)。座標は地図中心(概略)'
   - id: curated-link-lcdb-c3b08c62
     name: ホテルルナコーストルナ海岸
     operator: ルナコースト
@@ -31800,6 +31814,7 @@ cameras:
     page_url: https://www.youtube.com/channel/UCBwMveYOYbQhVgZi6fhKMyg
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 柴山港 （避難港）ライブ映像)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: AhaHem4fQzQ → X4QBQ6DifJ0
+  # 2026-09-23 配信枠更新: X4QBQ6DifJ0 → xawu8H7wSao（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-dfab1d74
     name: 神戸舞子
     operator: 舞子らいぶカメラ
@@ -31808,8 +31823,8 @@ cameras:
     lat: 34.623266
     lng: 135.008549
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=X4QBQ6DifJ0
-    image_url: https://www.youtube.com/watch?v=X4QBQ6DifJ0
+    feed_url: https://www.youtube.com/watch?v=xawu8H7wSao
+    image_url: https://www.youtube.com/watch?v=xawu8H7wSao
     page_url: https://www.youtube.com/channel/UCBMfAeEZ1FxZ6jlzZ95pQQA
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 神戸　舞子ライブカメラ　海沿いの電車　JR神戸線　舞子駅　山陽電車　舞子公園駅　)。座標は地図中心(概略)'
   - id: curated-link-lcdb-785f686e
@@ -31836,6 +31851,7 @@ cameras:
     image_url: https://www.youtube.com/watch?v=AYOncKEu2jc
     page_url: http://www.tenkumosekiyu.co.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 純水セルフ洗車高松西店 のライブ配信)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: M6EIQQbr9Pg → oDs8UWPYLhw（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-3bfa2310
     name: 与論島パラダイスビーチ
     operator: ヨロン島
@@ -31844,22 +31860,23 @@ cameras:
     lat: 27.043088
     lng: 128.395568
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=M6EIQQbr9Pg
-    image_url: https://www.youtube.com/watch?v=M6EIQQbr9Pg
+    feed_url: https://www.youtube.com/watch?v=oDs8UWPYLhw
+    image_url: https://www.youtube.com/watch?v=oDs8UWPYLhw
     page_url: https://yorontoh.stores.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【Live！】パラダイス・ビーチ（与論島/蒼い珊瑚礁）)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-a8408504
-    name: ホテルグリーンプラザ箱根富士山
-    operator: 安達グリーンワールド
-    category: river
-    prefecture: '14'
-    lat: 35.245525
-    lng: 139.004148
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=eUC-JqzWz08
-    image_url: https://www.youtube.com/watch?v=eUC-JqzWz08
-    page_url: https://www.hgp.co.jp/hakone/
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: HGP箱根富士山ライブ映像 のライブ配信)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-a8408504
+  # name: ホテルグリーンプラザ箱根富士山
+  # operator: 安達グリーンワールド
+  # category: river
+  # prefecture: '14'
+  # lat: 35.245525
+  # lng: 139.004148
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=eUC-JqzWz08
+  # image_url: https://www.youtube.com/watch?v=eUC-JqzWz08
+  # page_url: https://www.hgp.co.jp/hakone/
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: HGP箱根富士山ライブ映像 のライブ配信)。座標は地図中心(概略)'
   - id: curated-link-lcdb-3efe432a
     name: 土屋銭洗い辯財天妙圓寺
     operator: 妙圓寺
@@ -31885,6 +31902,7 @@ cameras:
     image_url: https://www.youtube.com/watch?v=DuShoTsNWCc
     page_url: https://www.kartland.co.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 神奈川県足柄上郡 大井松田カートランドコース ライブカメラ)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: 2FblaMm6D5c → wWM5e7ge97k（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-fc063964
     name: 通潤橋
     operator: 山都町役場
@@ -31893,8 +31911,8 @@ cameras:
     lat: 32.681655
     lng: 130.991655
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=2FblaMm6D5c
-    image_url: https://www.youtube.com/watch?v=2FblaMm6D5c
+    feed_url: https://www.youtube.com/watch?v=wWM5e7ge97k
+    image_url: https://www.youtube.com/watch?v=wWM5e7ge97k
     page_url: https://tsujunbridge.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 山都町　国宝　通潤橋　live配信　“Live streaming of Tsu)。座標は地図中心(概略)'
   - id: curated-link-lcdb-59abca54
@@ -31922,19 +31940,21 @@ cameras:
     image_url: https://www.youtube.com/watch?v=_eKatlNuNcg
     page_url: https://www.youtube.com/channel/UCseutlhy_ByR9lG5UAGKIqw
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【LIVE】叡山電車 Kyoto Local Railway【ライブカメラ】)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-7b24b1fa
-    name: 仙台測器社社屋前
-    operator: 仙台測器社
-    category: scenic
-    prefecture: '04'
-    lat: 38.257147
-    lng: 140.919266
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=e66Zu1a2oNE
-    image_url: https://www.youtube.com/watch?v=e66Zu1a2oNE
-    page_url: https://sensoku.co.jp/
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 仙台測器社 のライブ配信　社屋前の様子)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-7b24b1fa
+  # name: 仙台測器社社屋前
+  # operator: 仙台測器社
+  # category: scenic
+  # prefecture: '04'
+  # lat: 38.257147
+  # lng: 140.919266
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=e66Zu1a2oNE
+  # image_url: https://www.youtube.com/watch?v=e66Zu1a2oNE
+  # page_url: https://sensoku.co.jp/
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 仙台測器社 のライブ配信　社屋前の様子)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: s8Lv2Pz8iWc → NX4Kod3I-iM
+  # 2026-09-23 配信枠更新: NX4Kod3I-iM → k_Vy-XfKzHo（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-3363c774
     name: 道の駅風穴の里
     operator: 道の駅風穴の里
@@ -31943,8 +31963,8 @@ cameras:
     lat: 36.153211
     lng: 137.74971
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=NX4Kod3I-iM
-    image_url: https://www.youtube.com/watch?v=NX4Kod3I-iM
+    feed_url: https://www.youtube.com/watch?v=k_Vy-XfKzHo
+    image_url: https://www.youtube.com/watch?v=k_Vy-XfKzHo
     page_url: https://www.fu-ketsu.com/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 道の駅風穴の里 のライブ配信)。座標は地図中心(概略)'
   - id: curated-link-lcdb-5f81a93b
@@ -31972,6 +31992,7 @@ cameras:
     page_url: https://momijien.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: もみじ園ライブカメラ門側 のライブ配信)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: eBIWiBAHUrg → agZ_c39MKwI
+  # 2026-09-23 配信枠更新: agZ_c39MKwI → OW9Wi84rVj8（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-e8b419fa
     name: 坂上興産株式会社西区営業所
     operator: 坂上興産
@@ -31980,11 +32001,12 @@ cameras:
     lat: 37.853823
     lng: 138.98403
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=agZ_c39MKwI
-    image_url: https://www.youtube.com/watch?v=agZ_c39MKwI
+    feed_url: https://www.youtube.com/watch?v=OW9Wi84rVj8
+    image_url: https://www.youtube.com/watch?v=OW9Wi84rVj8
     page_url: http://www.sakaue-kousan.co.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 坂上興産株式会社 西区営業所 のライブ配信)。座標は地図中心(概略)'
   # 2026-09-01 配信枠更新: z1ttXn5HTUs → QCa5Qqv4RK4
+  # 2026-09-23 配信枠更新: QCa5Qqv4RK4 → K1hJ4FiQQLI（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-b4a4a3ce
     name: セレーノディプリマヴェーラ
     operator: セレーノディプリマヴェーラ
@@ -31993,8 +32015,8 @@ cameras:
     lat: 34.655956
     lng: 134.030614
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=QCa5Qqv4RK4
-    image_url: https://www.youtube.com/watch?v=QCa5Qqv4RK4
+    feed_url: https://www.youtube.com/watch?v=K1hJ4FiQQLI
+    image_url: https://www.youtube.com/watch?v=K1hJ4FiQQLI
     page_url: https://www.youtube.com/channel/UC8PKNdoEcd3CFyC8_rVB24Q
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 本日のランチ内容と来客状況)。座標は地図中心(概略)'
   - id: curated-link-lcdb-11366ad6
@@ -32057,18 +32079,19 @@ cameras:
     image_url: https://www.youtube.com/watch?v=nEc_F7cpnHo
     page_url: https://www.saispo.jp/sakura/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: じゃぶじゃぶ池)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-bbc6c23e
-    name: さいたま市立病院外来表示盤
-    operator: さいたま市立病院
-    category: other
-    prefecture: '11'
-    lat: 35.891132
-    lng: 139.675576
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=v3cLd3Mb3SA
-    image_url: https://www.youtube.com/watch?v=v3cLd3Mb3SA
-    page_url: https://www.city.saitama.jp/hospital/
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: さいたま市立病院外来表示盤ライブ配信)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-bbc6c23e
+  # name: さいたま市立病院外来表示盤
+  # operator: さいたま市立病院
+  # category: other
+  # prefecture: '11'
+  # lat: 35.891132
+  # lng: 139.675576
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=v3cLd3Mb3SA
+  # image_url: https://www.youtube.com/watch?v=v3cLd3Mb3SA
+  # page_url: https://www.city.saitama.jp/hospital/
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: さいたま市立病院外来表示盤ライブ配信)。座標は地図中心(概略)'
   - id: curated-link-lcdb-fb69d6cb
     name: 太郎坊
     operator: 滋賀報知新聞社
@@ -32093,6 +32116,7 @@ cameras:
     image_url: https://www.youtube.com/watch?v=PVLZsz1oj5k
     page_url: https://www.youtube.com/channel/UCAbUdHb6fPtH3AL8peGo2Rw
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 奥出雲おろちループ のライブ配信)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: XrYUPnNL66o → IFhYAED9Wzc（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-cede1088
     name: 佐藤精機富士山
     operator: 佐藤精機
@@ -32101,10 +32125,11 @@ cameras:
     lat: 35.242744
     lng: 138.608297
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=XrYUPnNL66o
-    image_url: https://www.youtube.com/watch?v=XrYUPnNL66o
+    feed_url: https://www.youtube.com/watch?v=IFhYAED9Wzc
+    image_url: https://www.youtube.com/watch?v=IFhYAED9Wzc
     page_url: https://www.satoseiki.co.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 富士山ライブカメラ パワースポットの地  富士宮 (静岡) から)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: jS9fAxWTfpY → wZAAwnrFv6E（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-985b09cf
     name: 古川河川監視
     operator: 伊豆市役所
@@ -32113,10 +32138,11 @@ cameras:
     lat: 34.921219
     lng: 138.598126
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=jS9fAxWTfpY
-    image_url: https://www.youtube.com/watch?v=jS9fAxWTfpY
+    feed_url: https://www.youtube.com/watch?v=wZAAwnrFv6E
+    image_url: https://www.youtube.com/watch?v=wZAAwnrFv6E
     page_url: https://www.youtube.com/channel/UCZHXl0A-BcjVZ4X5KpuoIUg
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 古川監視カメラ のライブ配信)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: FI6vLJARxtI → BCGFwzz5_t4（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-9c7fcb6c
     name: 大見川河川監視
     operator: 伊豆市役所
@@ -32125,10 +32151,11 @@ cameras:
     lat: 34.921219
     lng: 138.598126
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=FI6vLJARxtI
-    image_url: https://www.youtube.com/watch?v=FI6vLJARxtI
+    feed_url: https://www.youtube.com/watch?v=BCGFwzz5_t4
+    image_url: https://www.youtube.com/watch?v=BCGFwzz5_t4
     page_url: https://www.youtube.com/channel/UCYWagAEYt6HqWvC2AczRCew
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 大見川監視カメラ のライブ配信)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: RR5EWRPxCMY → gShtiiLgmMI（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-ef599dea
     name: 山田川河川監視
     operator: 伊豆市役所
@@ -32137,8 +32164,8 @@ cameras:
     lat: 34.921219
     lng: 138.598126
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=RR5EWRPxCMY
-    image_url: https://www.youtube.com/watch?v=RR5EWRPxCMY
+    feed_url: https://www.youtube.com/watch?v=gShtiiLgmMI
+    image_url: https://www.youtube.com/watch?v=gShtiiLgmMI
     page_url: https://www.youtube.com/channel/UCf4lFcL1h-UKkXOaRd6yKsg
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 山田川監視カメラ のライブ配信)。座標は地図中心(概略)'
   - id: curated-link-lcdb-13571af6
@@ -32202,18 +32229,19 @@ cameras:
     image_url: https://www.youtube.com/watch?v=IepIF8OP4pg
     page_url: https://www.youtube.com/channel/UCV34I8Tqr-BDXTtPTVEQzpg
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 町田の遠景ライブカメラ(北東から町田駅方向) のライブ配信)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-60fcde5c
-    name: 立山山麓あわすのスキー場
-    operator: あわすの
-    category: scenic
-    prefecture: '16'
-    lat: 36.575968
-    lng: 137.438368
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=mApU3sYq1k8
-    image_url: https://www.youtube.com/watch?v=mApU3sYq1k8
-    page_url: https://awasuno.com/winter
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: あわすのスキー場)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-60fcde5c
+  # name: 立山山麓あわすのスキー場
+  # operator: あわすの
+  # category: scenic
+  # prefecture: '16'
+  # lat: 36.575968
+  # lng: 137.438368
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=mApU3sYq1k8
+  # image_url: https://www.youtube.com/watch?v=mApU3sYq1k8
+  # page_url: https://awasuno.com/winter
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: あわすのスキー場)。座標は地図中心(概略)'
   # 2026-08-31 退役: YouTube上で非公開動画になっている(oEmbed 403)
   # - id: curated-link-lcdb-1a0866d4
   # name: 穴池
@@ -32227,18 +32255,20 @@ cameras:
   # image_url: https://www.youtube.com/watch?v=lhWwCoJeszw
   # page_url: https://www.town.hidakagawa.lg.jp/bousai/hazardmap/tameike_hazard.html
   # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 日高川町農業振興課　穴池 - 2026-08-29 PM)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-1b85c8da
-    name: 別小江神社
-    operator: 別小江神社
-    category: scenic
-    prefecture: '23'
-    lat: 35.210577
-    lng: 136.918702
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=O2CNvmv83E4
-    image_url: https://www.youtube.com/watch?v=O2CNvmv83E4
-    page_url: https://wakeoe.com/
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 別小江神社公式 のライブ ストリーム)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-1b85c8da
+  # name: 別小江神社
+  # operator: 別小江神社
+  # category: scenic
+  # prefecture: '23'
+  # lat: 35.210577
+  # lng: 136.918702
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=O2CNvmv83E4
+  # image_url: https://www.youtube.com/watch?v=O2CNvmv83E4
+  # page_url: https://wakeoe.com/
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 別小江神社公式 のライブ ストリーム)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: pl7aVQpD0N4 → 3pz0Z0wyY2Y（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-9da999a5
     name: 山田農園ドッグラン
     operator: 山田農園
@@ -32247,8 +32277,8 @@ cameras:
     lat: 34.946541
     lng: 137.199394
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=pl7aVQpD0N4
-    image_url: https://www.youtube.com/watch?v=pl7aVQpD0N4
+    feed_url: https://www.youtube.com/watch?v=3pz0Z0wyY2Y
+    image_url: https://www.youtube.com/watch?v=3pz0Z0wyY2Y
     page_url: https://www.youtube.com/@yamadanoen-dogrun
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 山田農園ドッグラン のライブ配信)。座標は地図中心(概略)'
   - id: curated-link-lcdb-380cb2e4
@@ -32276,6 +32306,7 @@ cameras:
     page_url: https://mts-p.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: -Live Camera Stream of Japanese Landscap)。座標は地図中心(概略)'
   # 2026-09-01 配信枠更新: z5oryGuVvMo → dT2e2babVIo
+  # 2026-09-23 配信枠更新: dT2e2babVIo → 24NSjh_1tTQ（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-0db20af1
     name: ひるがの高原別荘管理センター
     operator: ひるがの高原別荘管理センター(ひるがの別荘管理センター)
@@ -32284,11 +32315,12 @@ cameras:
     lat: 36.010382
     lng: 136.881398
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=dT2e2babVIo
-    image_url: https://www.youtube.com/watch?v=dT2e2babVIo
+    feed_url: https://www.youtube.com/watch?v=24NSjh_1tTQ
+    image_url: https://www.youtube.com/watch?v=24NSjh_1tTQ
     page_url: https://www.hirugano.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 岐阜県郡上市高鷲町ひるがの高原別荘管理センター のライブ配信ライブカメラ)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: qA_iGCA0gE4 → F6Nq1aG6Imo
+  # 2026-09-23 配信枠更新: F6Nq1aG6Imo → a4f9_OeWqlk（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-38cef1c4
     name: 竹原市上空天気
     operator: meteoron(メテオロン)
@@ -32297,11 +32329,12 @@ cameras:
     lat: 34.362434
     lng: 132.826917
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=F6Nq1aG6Imo
-    image_url: https://www.youtube.com/watch?v=F6Nq1aG6Imo
+    feed_url: https://www.youtube.com/watch?v=a4f9_OeWqlk
+    image_url: https://www.youtube.com/watch?v=a4f9_OeWqlk
     page_url: https://www.youtube.com/@meteoron
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【ライブ配信】　ぼ～っと空を見上げたい時にどうぞ　　広島県  竹原市　 JAPA)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: T8SCVr4zcXQ → HXakj5mD26A
+  # 2026-09-23 配信枠更新: HXakj5mD26A → Zl7Pz35wjZo（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-cb6473b7
     name: レイクサンセット風蓮湖
     operator: レイクサンセット
@@ -32310,8 +32343,8 @@ cameras:
     lat: 43.263706
     lng: 145.459521
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=HXakj5mD26A
-    image_url: https://www.youtube.com/watch?v=HXakj5mD26A
+    feed_url: https://www.youtube.com/watch?v=Zl7Pz35wjZo
+    image_url: https://www.youtube.com/watch?v=Zl7Pz35wjZo
     page_url: https://lakesunset.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【🔴ライブカメラ】野鳥の宝庫『風蓮湖』　Hokkaido -Lake Furen)。座標は地図中心(概略)'
   - id: curated-link-lcdb-fe47b7c7
@@ -32327,6 +32360,7 @@ cameras:
     page_url: https://www.youtube.com/@QS-Niseko-Live
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: Niseko Live Cam 24/7｜ニセコ ライブカメラ｜現在の天気・積雪)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: Oxk3p2CrWps → eBR__DrbMxo
+  # 2026-09-23 配信枠更新: eBR__DrbMxo → xoYkc30cmHs（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-22015bca
     name: JR苗穂駅
     operator: DF200ミスター54
@@ -32335,11 +32369,12 @@ cameras:
     lat: 43.068561
     lng: 141.369192
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=eBR__DrbMxo
-    image_url: https://www.youtube.com/watch?v=eBR__DrbMxo
+    feed_url: https://www.youtube.com/watch?v=xoYkc30cmHs
+    image_url: https://www.youtube.com/watch?v=xoYkc30cmHs
     page_url: https://www.youtube.com/@df20054
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 苗穂JRライブ配信＜本線向きカメラ＞)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: RcHvD0ktWAc → GC4cLzkVMTQ
+  # 2026-09-23 配信枠更新: GC4cLzkVMTQ → bmSxEyt9zXU（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-c5457dd0
     name: JR苗穂工場
     operator: dd51ミスター54
@@ -32348,8 +32383,8 @@ cameras:
     lat: 43.068732
     lng: 141.37415
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=GC4cLzkVMTQ
-    image_url: https://www.youtube.com/watch?v=GC4cLzkVMTQ
+    feed_url: https://www.youtube.com/watch?v=bmSxEyt9zXU
+    image_url: https://www.youtube.com/watch?v=bmSxEyt9zXU
     page_url: https://www.youtube.com/@df20055
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 苗穂JRライブ配信＜苗穂工場向きカメラ＞)。座標は地図中心(概略)'
   - id: curated-link-lcdb-2dbf2aa5
@@ -32378,6 +32413,7 @@ cameras:
   # page_url: https://www.youtube.com/@emilivecamera
   # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 寄合池（兵庫県淡路市）EDGEMATRIXため池監視 のライブ映像 - 2026)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: 6LZWXi80MMg → x6UkBHv0Fj8
+  # 2026-09-23 配信枠更新: x6UkBHv0Fj8 → 1KHNqzgJ6lw（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-b29e0f0b
     name: 六甲ターミナル待機場混雑状況
     operator: 三井倉庫阪神港運支店六甲ターミナル事務所
@@ -32386,10 +32422,11 @@ cameras:
     lat: 34.684887
     lng: 135.25458
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=x6UkBHv0Fj8
-    image_url: https://www.youtube.com/watch?v=x6UkBHv0Fj8
+    feed_url: https://www.youtube.com/watch?v=1KHNqzgJ6lw
+    image_url: https://www.youtube.com/watch?v=1KHNqzgJ6lw
     page_url: https://www.mitsui-rokko.jp/blank-5
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 三井六甲ライブカメラ)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: qAPWUsiQqrs → QTyrO1Dw8Qc（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-a2086fd2
     name: 神戸市立工業高等専門学校
     operator: 神戸市立工業高等専門学校
@@ -32398,10 +32435,11 @@ cameras:
     lat: 34.678872
     lng: 135.065154
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=qAPWUsiQqrs
-    image_url: https://www.youtube.com/watch?v=qAPWUsiQqrs
+    feed_url: https://www.youtube.com/watch?v=QTyrO1Dw8Qc
+    image_url: https://www.youtube.com/watch?v=QTyrO1Dw8Qc
     page_url: https://www.kobe-kosen.ac.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: KCCT Sky Monitor (2026.08.21 - 常時配信))。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: v7Pk2Fhfrk0 → tavDUedAVZ8（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-52891044
     name: 桜島ミュージアム
     operator: みんなの桜島協議会事務局(桜島ミュージアム)
@@ -32410,8 +32448,8 @@ cameras:
     lat: 31.597039
     lng: 130.604014
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=v7Pk2Fhfrk0
-    image_url: https://www.youtube.com/watch?v=v7Pk2Fhfrk0
+    feed_url: https://www.youtube.com/watch?v=tavDUedAVZ8
+    image_url: https://www.youtube.com/watch?v=tavDUedAVZ8
     page_url: http://www.sakurajima.gr.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 桜島火山のライブカメラ　Sakurajima Volcano Live Came)。座標は地図中心(概略)'
   - id: curated-link-lcdb-b8580801
@@ -32439,6 +32477,7 @@ cameras:
     page_url: http://miyagi-pub.jp/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: wakuya action sports park PUB. ライブカメラ)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: rFKFmcZm8I0 → wmdvPgcgM-M
+  # 2026-09-23 配信枠更新: wmdvPgcgM-M → n3gvxaBt_dY（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-64c0acd4
     name: 安曇野穂高山麓
     operator: azumino Live
@@ -32447,8 +32486,8 @@ cameras:
     lat: 36.331505
     lng: 137.763879
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=wmdvPgcgM-M
-    image_url: https://www.youtube.com/watch?v=wmdvPgcgM-M
+    feed_url: https://www.youtube.com/watch?v=n3gvxaBt_dY
+    image_url: https://www.youtube.com/watch?v=n3gvxaBt_dY
     page_url: https://www.youtube.com/@maki-verry
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 安曇野穂高山麓ライブカメラ)。座標は地図中心(概略)'
   - id: curated-link-lcdb-69da803b
@@ -32463,6 +32502,7 @@ cameras:
     image_url: https://www.youtube.com/watch?v=JQBCyfQ1Sds
     page_url: https://www.youtube.com/@kominnka
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【LIVE】やま・長野県)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: RK55WFyzHQo → PWFEy4-mHYY（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-e723adfa
     name: 田ノ尻日本海
     operator: oomoto3
@@ -32471,8 +32511,8 @@ cameras:
     lat: 37.629199
     lng: 138.760582
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=RK55WFyzHQo
-    image_url: https://www.youtube.com/watch?v=RK55WFyzHQo
+    feed_url: https://www.youtube.com/watch?v=PWFEy4-mHYY
+    image_url: https://www.youtube.com/watch?v=PWFEy4-mHYY
     page_url: https://www.youtube.com/@oomoto3
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 田ノ尻の海　令和3年1月5日～)。座標は地図中心(概略)'
   - id: curated-link-lcdb-a51b0944
@@ -32524,18 +32564,19 @@ cameras:
     image_url: https://www.youtube.com/watch?v=dNGqB5n7lxo
     page_url: https://sakuradaigolf.net/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: さくら台ゴルフ練習場　駐車場の空き状況)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-5679bb35
-    name: さくら台ゴルフ練習場
-    operator: さくら台ゴルフ練習場(sakuradai_golf)
-    category: scenic
-    prefecture: 09
-    lat: 37.009891
-    lng: 140.118895
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=zoiUWZ5YUOE
-    image_url: https://www.youtube.com/watch?v=zoiUWZ5YUOE
-    page_url: https://sakuradaigolf.net/
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: さくら台ゴルフ練習場　打席の空き状況)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-5679bb35
+  # name: さくら台ゴルフ練習場
+  # operator: さくら台ゴルフ練習場(sakuradai_golf)
+  # category: scenic
+  # prefecture: 09
+  # lat: 37.009891
+  # lng: 140.118895
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=zoiUWZ5YUOE
+  # image_url: https://www.youtube.com/watch?v=zoiUWZ5YUOE
+  # page_url: https://sakuradaigolf.net/
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: さくら台ゴルフ練習場　打席の空き状況)。座標は地図中心(概略)'
   - id: curated-link-lcdb-ccd2590c
     name: 塩原温泉ホテルおおるり
     operator: おおるり
@@ -32609,18 +32650,20 @@ cameras:
     image_url: https://www.youtube.com/watch?v=sst5KY_XRc8
     page_url: https://www.koto-hsc.or.jp/sports_center5/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 8/29（土）東砂スポーツセンタープール混雑状況)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-6ebc8138
-    name: ヤマタネ深川営業所隅田川
-    operator: ヤマタネ(ベイネット防災)
-    category: river
-    prefecture: '13'
-    lat: 35.671919
-    lng: 139.787649
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=zyfLpBySyfo
-    image_url: https://www.youtube.com/watch?v=zyfLpBySyfo
-    page_url: https://www.yamatane.co.jp/
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: ヤマタネ深川営業所屋上カメラ)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-6ebc8138
+  # name: ヤマタネ深川営業所隅田川
+  # operator: ヤマタネ(ベイネット防災)
+  # category: river
+  # prefecture: '13'
+  # lat: 35.671919
+  # lng: 139.787649
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=zyfLpBySyfo
+  # image_url: https://www.youtube.com/watch?v=zyfLpBySyfo
+  # page_url: https://www.yamatane.co.jp/
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: ヤマタネ深川営業所屋上カメラ)。座標は地図中心(概略)'
+  # 2026-09-23 配信枠更新: xjKA-_2Fzas → 2Z8isClEimg（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-31f3323c
     name: 品川鉄道立体交差
     operator: 鉄道立体交差LIVE CAMERA
@@ -32629,22 +32672,23 @@ cameras:
     lat: 35.613102
     lng: 139.714107
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=xjKA-_2Fzas
-    image_url: https://www.youtube.com/watch?v=xjKA-_2Fzas
+    feed_url: https://www.youtube.com/watch?v=2Z8isClEimg
+    image_url: https://www.youtube.com/watch?v=2Z8isClEimg
     page_url: https://www.youtube.com/@shimoshimmei
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【 LIVE】鉄道立体交差ライブカメラ【東京】)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-68c4da3d
-    name: 高仙寺しだれ桜
-    operator: 高仙寺
-    category: scenic
-    prefecture: '06'
-    lat: 38.153118
-    lng: 140.299297
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=JQiKhq7x4pw
-    image_url: https://www.youtube.com/watch?v=JQiKhq7x4pw
-    page_url: https://sengoku-kousenji.com/sakura
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 高仙寺のしだれ桜　LIVE配信)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-68c4da3d
+  # name: 高仙寺しだれ桜
+  # operator: 高仙寺
+  # category: scenic
+  # prefecture: '06'
+  # lat: 38.153118
+  # lng: 140.299297
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=JQiKhq7x4pw
+  # image_url: https://www.youtube.com/watch?v=JQiKhq7x4pw
+  # page_url: https://sengoku-kousenji.com/sakura
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 高仙寺のしだれ桜　LIVE配信)。座標は地図中心(概略)'
   - id: curated-link-lcdb-d159dd97
     name: SORAMADO cafe 1387 ISAHANA
     operator: CKD
@@ -32719,6 +32763,7 @@ cameras:
     page_url: https://prozack3.wixsite.com/visitorcentre
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: みずがき湖ビジターセンターの西空)。座標は地図中心(概略)'
   # 2026-08-31 配信枠更新: RS7n_Gu7eDk → grGi5dgztyw
+  # 2026-09-23 配信枠更新: grGi5dgztyw → 7bYXmgRaRJ4（埋め込み不可のため誘導型）
   - id: curated-link-lcdb-af2e8b4b
     name: 猪苗代スキー場幸せの鐘
     operator: マックアースリゾート福島
@@ -32727,8 +32772,8 @@ cameras:
     lat: 37.572803
     lng: 140.08995
     feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=grGi5dgztyw
-    image_url: https://www.youtube.com/watch?v=grGi5dgztyw
+    feed_url: https://www.youtube.com/watch?v=7bYXmgRaRJ4
+    image_url: https://www.youtube.com/watch?v=7bYXmgRaRJ4
     page_url: https://www.inawashiro-ski.com/
     note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: 【ライブ配信】絶景・猪苗代スキー場  思い出2.0®幸せの鐘カメラ)。座標は地図中心(概略)'
   - id: curated-link-lcdb-951987b0
@@ -32793,18 +32838,19 @@ cameras:
   # image_url: https://www.youtube.com/watch?v=yrW9LNELgc0
   # page_url: https://www.seibulions.jp/
   # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: ３塁メインコンコース売店（デッキ側）)。座標は地図中心(概略)'
-  - id: curated-link-lcdb-a7ee12d8
-    name: あわじ花さじき生の花園方向
-    operator: あわじ花さじき
-    category: other
-    prefecture: '28'
-    lat: 34.553752
-    lng: 134.975564
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=BQbJSN9OR88
-    image_url: https://www.youtube.com/watch?v=BQbJSN9OR88
-    page_url: https://awajihanasajiki.jp/
-    note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: あわじ花さじきLive配信 のライブ配信（展望デッキから大阪湾を望む）)。座標は地図中心(概略)'
+  # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
+  # - id: curated-link-lcdb-a7ee12d8
+  # name: あわじ花さじき生の花園方向
+  # operator: あわじ花さじき
+  # category: other
+  # prefecture: '28'
+  # lat: 34.553752
+  # lng: 134.975564
+  # feed_type: web_page
+  # feed_url: https://www.youtube.com/watch?v=BQbJSN9OR88
+  # image_url: https://www.youtube.com/watch?v=BQbJSN9OR88
+  # page_url: https://awajihanasajiki.jp/
+  # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: あわじ花さじきLive配信 のライブ配信（展望デッキから大阪湾を望む）)。座標は地図中心(概略)'
 
   # --- livecam.asia 索引経由の一次ソース確認分 (2026-08-29) ---
   - id: curated-still-lcdb-e450e6d2

@@ -4,8 +4,8 @@
 機械クロールはせず、IDを検証したカメラだけを人手で追加する。
 
 - prefecture は "99"（海外）固定。country に ISO 3166-1 alpha-2 を持つ
-- feed.type=youtube_video（embeddable=false のものは note の指示に従い
-  承認後に web_page 誘導型へ変換する）
+- feed.type=youtube_video。channel_id を書けば youtube_channel（1チャンネル1配信の
+  日替わり枠向け）、embed: false なら誘導型（web_page）になる（curated_youtube と同じ）
 - license=unknown（削除依頼即応）
 """
 
@@ -37,18 +37,31 @@ class CuratedWorldParser(SourceParser):
                 note = "世界の有名スポット（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。"
                 if cam.get("note"):
                     note += f" {cam['note']}"
-                vid = str(cam["video_id"])
+                # 国内の curated_youtube と同じ規則: channel_id があれば youtube_channel、
+                # embed: false なら誘導型（web_page）に落とす
+                if cam.get("channel_id"):
+                    feed_type = "youtube_channel"
+                    feed_url = str(cam["channel_id"])
+                    fallback = f"https://www.youtube.com/channel/{feed_url}/live"
+                else:
+                    feed_type = "youtube_video"
+                    feed_url = str(cam["video_id"])
+                    fallback = f"https://www.youtube.com/watch?v={feed_url}"
+                if cam.get("embed") is False:
+                    feed_type = "web_page"
+                    feed_url = fallback
+                    note += " 埋め込み不可のため YouTube へ誘導。"
                 result.candidates.append(CameraCandidate(
                     id=str(cam["id"]),
                     name=str(cam["name"]),
                     category=str(cam.get("category", "scenic")),
                     prefecture="99",
                     country=str(cam["country"]),
-                    feed_type="youtube_video",
-                    feed_url=vid,
-                    fallback_url=f"https://www.youtube.com/watch?v={vid}",
+                    feed_type=feed_type,
+                    feed_url=feed_url,
+                    fallback_url=fallback,
                     operator=str(cam["operator"]),
-                    page_url=f"https://www.youtube.com/watch?v={vid}",
+                    page_url=fallback,
                     attribution=f"映像提供：{cam['operator']}（YouTubeライブ）",
                     license="unknown",
                     lat=float(cam["lat"]), lng=float(cam["lng"]),

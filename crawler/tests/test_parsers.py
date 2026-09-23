@@ -245,6 +245,26 @@ def test_curated_world_yaml():
     assert validate_camera_record(c.to_record("2026-08-19")) == []
 
 
+def test_curated_world_channel_and_embed(monkeypatch, tmp_path):
+    from crawler.sources import curated_world as cw
+    y = tmp_path / "w.yaml"
+    y.write_text(
+        "cameras:\n"
+        "  - id: world-t1\n    name: A\n    operator: op\n    country: GB\n    channel_id: UCx\n    lat: 51.0\n    lng: 0.0\n"
+        "  - id: world-t2\n    name: B\n    operator: op\n    country: PA\n    video_id: vid1\n    embed: false\n    lat: 9.0\n    lng: -79.0\n"
+        "  - id: world-t3\n    name: C\n    operator: op\n    country: US\n    video_id: vid2\n    lat: 40.0\n    lng: -74.0\n",
+        encoding="utf-8")
+    monkeypatch.setattr(cw, "load_world", lambda path=None: __import__("yaml").safe_load(y.read_text(encoding="utf-8"))["cameras"])
+    res = cw.CuratedWorldParser().discover(None)
+    by = {c.id: c for c in res.candidates}
+    assert by["world-t1"].feed_type == "youtube_channel" and by["world-t1"].feed_url == "UCx"
+    assert by["world-t1"].fallback_url == "https://www.youtube.com/channel/UCx/live"
+    assert by["world-t2"].feed_type == "web_page" and by["world-t2"].feed_url == "https://www.youtube.com/watch?v=vid1"
+    assert by["world-t3"].feed_type == "youtube_video" and by["world-t3"].feed_url == "vid2"
+    for c in by.values():
+        assert validate_camera_record(c.to_record("2026-09-23")) == []
+
+
 def test_shimane_road_parse():
     from crawler.sources.shimane_road import parse_points
     raw = (FIXTURES / "shimane_point.json5").read_text(encoding="utf-8")
