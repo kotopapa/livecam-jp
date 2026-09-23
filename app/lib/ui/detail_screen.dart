@@ -636,6 +636,17 @@ class _MediaView extends StatelessWidget {
             refreshTick: refreshTick,
           ),
         );
+      case FeedType.sakuraBosaicam:
+        // 佐倉市 河川等監視カメラ: wholemap.json の STATIONS[].CAMERA.PICT_ENCODED（base64）
+        return AspectRatio(
+          aspectRatio: 4 / 3,
+          child: _MieDouroView(
+            apiUrl: camera.feed.url,
+            cameraRef: camera.feed.cameraRef ?? '',
+            refreshTick: refreshTick,
+            format: _Base64JsonFormat.sakura,
+          ),
+        );
       case FeedType.youtubeChannel:
         // IFrame Player（embed/live_stream）をWebViewで表示（SPEC C6遵守）
         return AspectRatio(
@@ -873,15 +884,26 @@ class _IHighwayBrowserScreenState extends State<_IHighwayBrowserScreen> {
 /// 三重県道路規制情報のカメラ表示。
 /// 画像は camera_get_api.php の応答内にbase64でのみ含まれる（直URLなし）ため、
 /// アプリが提供元APIを直接取得してデコード表示する（自前中継はしない）。
+/// 画像が JSON 内の base64 で配られる情報源の形式
+enum _Base64JsonFormat {
+  /// 三重県: {<camera_ref>: {picture: "data:...base64,..."}}
+  mie,
+
+  /// 佐倉市: {STATIONS: [{STATION_ID, CAMERA: {ICON_FLG, PICT_ENCODED}}]}（ICON_FLG 501 のみ有効）
+  sakura,
+}
+
 class _MieDouroView extends StatefulWidget {
   const _MieDouroView(
       {required this.apiUrl,
       required this.cameraRef,
-      required this.refreshTick});
+      required this.refreshTick,
+      this.format = _Base64JsonFormat.mie});
 
   final String apiUrl;
   final String cameraRef;
   final int refreshTick;
+  final _Base64JsonFormat format;
 
   @override
   State<_MieDouroView> createState() => _MieDouroViewState();
@@ -912,9 +934,25 @@ class _MieDouroViewState extends State<_MieDouroView> {
       final resp = await http
           .get(Uri.parse(widget.apiUrl))
           .timeout(const Duration(seconds: 20));
-      final data = jsonDecode(resp.body) as Map<String, dynamic>;
-      final ent = data[widget.cameraRef] as Map<String, dynamic>?;
-      final pic = ent?['picture'] as String? ?? '';
+      final data = jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
+      String pic = '';
+      if (widget.format == _Base64JsonFormat.sakura) {
+        final stations = data['STATIONS'];
+        if (stations is List) {
+          for (final st in stations) {
+            if (st is Map && st['STATION_ID']?.toString() == widget.cameraRef) {
+              final cam = st['CAMERA'];
+              if (cam is Map && cam['ICON_FLG']?.toString() == '501') {
+                pic = cam['PICT_ENCODED']?.toString() ?? '';
+              }
+              break;
+            }
+          }
+        }
+      } else {
+        final ent = data[widget.cameraRef] as Map<String, dynamic>?;
+        pic = ent?['picture'] as String? ?? '';
+      }
       final i = pic.indexOf('base64,');
       if (i < 0) throw const FormatException('no image');
       final bytes = base64Decode(pic.substring(i + 7));

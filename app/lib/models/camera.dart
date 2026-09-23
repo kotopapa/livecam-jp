@@ -39,6 +39,12 @@ enum FeedType {
   /// 福岡県河川防災情報 河川監視カメラ（都度解決型）
   fukuokaKasen('fukuoka_kasen'),
 
+  /// 八千代市 1号幹線水位監視カメラ（連番URLの都度解決型。status.json の image_url）
+  yachiyoKansen('yachiyo_kansen'),
+
+  /// 佐倉市 河川等監視カメラ（画像は wholemap.json 内の base64 のみ。_MieDouroView の sakura 形式）
+  sakuraBosaicam('sakura_bosaicam'),
+
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する
   unknown('unknown');
 

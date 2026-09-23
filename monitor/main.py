@@ -198,10 +198,11 @@ def run(shard: str | None = None) -> int:
     # 都度解決型feed（thr_camxml / camidx_latest）: 参照ファイルから最新画像名を解決する
     ref_cams = [c for c in all_cameras
                 if c.get("review", {}).get("status") == "approved"
-                and c["feed"]["type"] in ("thr_camxml", "camidx_latest", "kochi_suibo", "sizenken")]
+                and c["feed"]["type"] in ("thr_camxml", "camidx_latest", "kochi_suibo", "sizenken", "yachiyo_kansen")]
     if ref_cams:
         from crawler.sources.kochi_suibo import resolve_image_url as kochi_resolve
         from crawler.sources.sizenken import resolve_image_url as sizenken_resolve
+        from crawler.sources.yachiyo_kansen import resolve_image_url as yachiyo_resolve
         from crawler.sources.thr_camxml import (resolve_camidx_url,
                                                 resolve_image_url as thr_resolve)
         ref_by_id = {}
@@ -225,6 +226,8 @@ def run(shard: str | None = None) -> int:
                 hit = kochi_resolve(ref_url, resp.text)
             elif cam["feed"]["type"] == "sizenken":
                 hit = sizenken_resolve(ref_url, resp.text)
+            elif cam["feed"]["type"] == "yachiyo_kansen":
+                hit = yachiyo_resolve(ref_url, resp.text)
             else:
                 hit = resolve_camidx_url(ref_url, resp.text)
             if hit:
@@ -403,6 +406,35 @@ def run(shard: str | None = None) -> int:
         for cam in cameras:
             if cam["id"] in mie_by_id:
                 cam["_mie_bytes"], cam["_mie_time"] = mie_by_id[cam["id"]]
+
+    # 都度解決型feed（sakura_bosaicam）: wholemap.json 1リクエストで全台のbase64画像（mie_douro と同じ扱い）
+    sakura_cams = [c for c in all_cameras
+                   if c.get("review", {}).get("status") == "approved"
+                   and c["feed"]["type"] == "sakura_bosaicam"]
+    if sakura_cams:
+        from crawler.sources.sakura_bosaicam import resolve_images as sakura_resolve
+        api_url = sakura_cams[0]["feed"]["url"]
+        host = urlparse(api_url).netloc
+        imgs: dict = {}
+        try:
+            throttle.acquire(host)
+            try:
+                resp = session.get(api_url, timeout=30)
+            finally:
+                throttle.release(host)
+            if resp.status_code == 200:
+                imgs = sakura_resolve(resp.json())
+        except (requests.RequestException, ValueError) as e:
+            print(f"sakura_bosaicam解決失敗 {api_url}: {e}", file=sys.stderr)
+        sakura_by_id = {}
+        for cam in sakura_cams:
+            hit = imgs.get(str(cam["feed"].get("camera_ref") or ""))
+            if hit:
+                sakura_by_id[cam["id"]] = hit
+                cam["_mie_bytes"], cam["_mie_time"] = hit
+        for cam in cameras:
+            if cam["id"] in sakura_by_id:
+                cam["_mie_bytes"], cam["_mie_time"] = sakura_by_id[cam["id"]]
 
     def work(camera: dict):
         host = monitor_host(camera)

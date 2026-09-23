@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>八千代１号幹線水位監視カメラ（八千代台西）</title>
+<script laguage="JavaScript"><!--
+function changeImg()
+ {
+ location.reload();
+}
+ // --></script>
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!--[if lt IE 9]>
+   <script src="js/html5shiv.js"></script>
+   <script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+<body onLoad="setInterval('changeImg()',1000*30)">
+<header>
+<h1>No1（八千代台西）</h1>
+</header>
+
+<div id="contents">
+<main>
+<div class="twoCol">
+    <div>
+        <h4>現在の状況（30秒毎に更新します。）</h4>
+		            <img src="camera1/2663.jpg" width = "360px"/>
+        
+    </div>
+    <div>
+        <h4>通常時</h4>
+        <img src="images/camera1.jpg" width = "360px"/>        
+    </div>
+</div>
+
+<section>
+<h2>直近の状況（30秒毎に更新します。）</h2>
+<div class="twoCol_S">
+    <div>
+                <img src="camera1/2654.jpg" width = "280px" />  
+      <h4>5分前</h4>
+    </div>
+    <div>
+                <img src="camera1/2644.jpg" width = "280px" />  
+        <h4>10分前</h4>
+    </div>
+</div>
+<div class="twoCol_S">
+    <div>
+                <img src="camera1/2604.jpg" width = "280px" />  
+        <h4>30分前</h4>
+    </div>
+    <div>
+                <img src="camera1/2544.jpg" width = "280px" />  
+        <h4>1時間前</h4>
+    </div>
+</div><!-- /.twoCol -->
+</section>
+<p><a href="index.php">カメラ選択画面へ戻る</a>
+</p><br>
+<p>画像が正しく表示されない場合は「Ｆ５」ボタンをクリックしてください。
+</p>
+</main>
+</div><!-- /.contents -->
+</body>
+</html>

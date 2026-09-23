@@ -107,7 +107,8 @@ class CameraRepository {
         c.feed.type == FeedType.yamaguchiRomen ||
         c.feed.type == FeedType.yamaguchiKasen ||
         c.feed.type == FeedType.shimaneSuibo ||
-        c.feed.type == FeedType.fukuokaKasen) {
+        c.feed.type == FeedType.fukuokaKasen ||
+        c.feed.type == FeedType.yachiyoKansen) {
       return status[c.id]?.imageUrl;
     }
     if (c.feed.type == FeedType.stillImage) return c.feed.url;

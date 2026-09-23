@@ -36948,3 +36948,85 @@ cameras:
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_kg05.jpg"
     page_url: "https://www.cc9.jp/community/livecamera/"
     note: "古河市・渡良瀬遊水地（座標は遊水地古河側の推定）"
+
+  # ---- 2026-09-23 印旛沼流域（2026-09-22 北印旛沼堤防決壊）で追加。佐倉市は base64 型、八千代市は連番URL型の都度解決 ----
+  - id: curated-still-sakura-bosaicam-101
+    name: "佐倉市 印旛沼第2三号幹線（臼井田）"
+    operator: "佐倉市"
+    category: river
+    prefecture: "12"
+    lat: 35.7393
+    lng: 140.1973
+    feed_type: sakura_bosaicam
+    feed_url: "https://bosaicam.city.sakura.lg.jp/sakura/data/wholemap.json"
+    camera_ref: "101"
+    image_url: "https://bosaicam.city.sakura.lg.jp/sakura/data/wholemap.json"
+    page_url: "https://bosaicam.city.sakura.lg.jp/sakura/contents/wholemap/wholemap.html"
+    note: "佐倉市河川等監視カメラ。画像は wholemap.json 内の base64（1分更新）。座標は臼井田の推定"
+
+  - id: curated-still-sakura-bosaicam-102
+    name: "佐倉市 手繰川第1一号幹線（中志津2丁目）"
+    operator: "佐倉市"
+    category: river
+    prefecture: "12"
+    lat: 35.712
+    lng: 140.1549
+    feed_type: sakura_bosaicam
+    feed_url: "https://bosaicam.city.sakura.lg.jp/sakura/data/wholemap.json"
+    camera_ref: "102"
+    image_url: "https://bosaicam.city.sakura.lg.jp/sakura/data/wholemap.json"
+    page_url: "https://bosaicam.city.sakura.lg.jp/sakura/contents/wholemap/wholemap.html"
+    note: "佐倉市河川等監視カメラ。座標は中志津2丁目の推定"
+
+  - id: curated-still-sakura-bosaicam-103
+    name: "佐倉市 高崎川（表町2丁目）"
+    operator: "佐倉市"
+    category: river
+    prefecture: "12"
+    lat: 35.7122
+    lng: 140.2231
+    feed_type: sakura_bosaicam
+    feed_url: "https://bosaicam.city.sakura.lg.jp/sakura/data/wholemap.json"
+    camera_ref: "103"
+    image_url: "https://bosaicam.city.sakura.lg.jp/sakura/data/wholemap.json"
+    page_url: "https://bosaicam.city.sakura.lg.jp/sakura/contents/wholemap/wholemap.html"
+    note: "佐倉市河川等監視カメラ。2026-09-23 時点で市の案内は「カメラ不具合につき当面閲覧不可」（ICON_FLG 502）。復旧すれば自動で映る"
+
+  - id: curated-still-yachiyo-kansen-1
+    name: "八千代市 1号幹線水位監視カメラ No1（八千代台西）"
+    operator: "八千代市上下水道局"
+    category: river
+    prefecture: "12"
+    lat: 35.7014
+    lng: 140.0885
+    feed_type: yachiyo_kansen
+    feed_url: "https://www.yachiyo-1goukansen-suii.jp/No1.php"
+    image_url: "https://www.yachiyo-1goukansen-suii.jp/No1.php"
+    page_url: "https://www.yachiyo-1goukansen-suii.jp/"
+    note: "八千代市上下水道局。幹線下水道の水位監視。連番URLの都度解決型（30秒更新）。座標は地区名からの推定"
+
+  - id: curated-still-yachiyo-kansen-2
+    name: "八千代市 1号幹線水位監視カメラ No2（八千代台北）"
+    operator: "八千代市上下水道局"
+    category: river
+    prefecture: "12"
+    lat: 35.7025
+    lng: 140.0911
+    feed_type: yachiyo_kansen
+    feed_url: "https://www.yachiyo-1goukansen-suii.jp/No2.php"
+    image_url: "https://www.yachiyo-1goukansen-suii.jp/No2.php"
+    page_url: "https://www.yachiyo-1goukansen-suii.jp/"
+    note: "同上"
+
+  - id: curated-still-yachiyo-kansen-3
+    name: "八千代市 1号幹線水位監視カメラ No3（大和田）"
+    operator: "八千代市上下水道局"
+    category: river
+    prefecture: "12"
+    lat: 35.715
+    lng: 140.1051
+    feed_type: yachiyo_kansen
+    feed_url: "https://www.yachiyo-1goukansen-suii.jp/No3.php"
+    image_url: "https://www.yachiyo-1goukansen-suii.jp/No3.php"
+    page_url: "https://www.yachiyo-1goukansen-suii.jp/"
+    note: "同上"
