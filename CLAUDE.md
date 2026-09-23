@@ -252,3 +252,4 @@ python site/build.py                            # 配信ファイル生成
 - **台帳を直したら curated_youtube.yaml / curated_world.yaml / curated_still.yaml を必ず同期する**。週次 crawl.yml の `refresh_approved_feeds` が YAML の video_id で台帳の youtube_video を上書きするため、YAML が古いと追従が戻る。退役は YAML 側をコメントアウト（`# 2026-09-23 退役: 理由`）、追従は `# 2026-09-23 配信枠更新: 旧 → 新` の見出し付きで video_id を差し替える。台帳は review.status=rejected のまま残す（decided_ids に入るので候補に再登場しない）
 - curated_world.yaml も `channel_id` / `embed: false` が使える（2026-09-23 に curated_youtube と同じ規則をパーサに追加）
 - 結果（2026-09-23）: 追従311・誘導型40・チャンネル登録21・退役198。据え置き141台（複数ライブで特定できず94、配信休止32、別映像化9、休止中同一3、オフライン3）は次回点検で再確認する。日中に配信が始まる施設カメラが多いので**点検は日中に行う**
+- **youtube_channel 型の埋め込み（`embed/live_stream?channel=`）は、チャンネルが配信中でも「この動画は再生できません」になることがある**（2026-09-23 湯島「猫島」。同じ配信を動画IDで埋め込むと再生できた）。不具合報告があったら同チャンネルの動画ID登録に切り替える。点検スクリプトは /live の解決で判定するためこの失敗は検知できない
