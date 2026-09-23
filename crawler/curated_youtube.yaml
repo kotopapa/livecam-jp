@@ -1585,6 +1585,7 @@ cameras:
     name: 保護猫カフェキズナ
     operator: "保護猫カフェキズナ"
     channel_id: "UCML_lMEOqOL78bghrm_7APw"
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: healing
     prefecture: "14"
     lat: 35.4437
@@ -1899,6 +1900,7 @@ cameras:
     name: 大磯海岸・大磯港
     operator: "神奈川県"
     video_id: "WV9DtVXgwqE"
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: coast
     prefecture: "14"
     lat: 35.306
@@ -2053,6 +2055,7 @@ cameras:
     name: 大瀬崎・駿河湾
     operator: "ネイチャーイン大瀬館"
     video_id: "UDBdjmAyr4Y"
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: coast
     prefecture: "22"
     lat: 35.027
@@ -2208,6 +2211,7 @@ cameras:
     name: 姫路城
     operator: "WINK姫路ケーブルテレビ"
     video_id: "76M1BK8_chY"
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     prefecture: "28"
     lat: 34.839
@@ -2380,6 +2384,7 @@ cameras:
     name: 関門海峡（下関・門司）
     operator: "新興製作所"
     video_id: "98OuCgpMM9s"
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: port
     prefecture: "35"
     lat: 33.945
@@ -3726,6 +3731,7 @@ cameras:
     name: 高松空港(高山航空公園)
     operator: "香川県綾川町"
     video_id: "leFhfdptn_Y"
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: other
     prefecture: "37"
     lat: 34.2144
@@ -16477,6 +16483,7 @@ cameras:
     lat: 42.51945
     lng: 142.11363
     video_id: H1DpFnz2Qwk
+    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 大放牧地カメラ配信　2026年8月29日 | ヴェルサイユリゾートファーム)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.versailles-resort.com/'
   # 2026-08-31 配信枠更新: wE4JRWOY3YI → aFfWHJnvAwY
   - id: curated-lcdb-71cbd694
