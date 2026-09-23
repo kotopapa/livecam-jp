@@ -2592,4 +2592,55 @@ class AppLocalizationsVi extends AppLocalizations {
   String routeCandidateCamera(String name, String pref) {
     return '$name (camera, $pref)';
   }
+
+  @override
+  String get bosaiTabSnow => 'Tuyết';
+
+  @override
+  String get bosaiSnowNone => 'Hiện không có điểm nào quan trắc được tuyết phủ';
+
+  @override
+  String get bosaiSnowUnavailable => 'Không lấy được số liệu độ dày tuyết';
+
+  @override
+  String bosaiSnowObservedAt(int month, int day, String hour, String minute) {
+    return ' (quan trắc $month/$day $hour:$minute)';
+  }
+
+  @override
+  String get bosaiSnowDisclaimer =>
+      'Là số liệu tại các trạm AMeDAS, có thể khác với tuyết phủ trên toàn khu vực.';
+
+  @override
+  String get bosaiSnowTapHint =>
+      'Chạm vào tỉnh để xem các trạm theo từng thành phố/thị trấn.';
+
+  @override
+  String bosaiSnowPrefSummary(int cm, String station, int n) {
+    return 'Dày nhất $cm cm ($station) · $n trạm';
+  }
+
+  @override
+  String bosaiSnowDepthCm(int cm) {
+    return 'Độ dày tuyết $cm cm';
+  }
+
+  @override
+  String bosaiSnow24hCm(int cm) {
+    return 'Tuyết rơi 24 giờ $cm cm';
+  }
+
+  @override
+  String get bosaiSnowNearbyTitle => 'Độ dày tuyết gần bạn';
+
+  @override
+  String get bosaiSnowNoSnowAtPoint => 'Không có tuyết phủ';
+
+  @override
+  String get bosaiSnowMuniCameras => 'Xem camera ở thành phố/thị trấn này';
+
+  @override
+  String bosaiSnowPrefCamerasTitle(String pref) {
+    return 'Camera ở $pref (tuyết)';
+  }
 }

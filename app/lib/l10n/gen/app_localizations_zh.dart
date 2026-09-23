@@ -2482,6 +2482,55 @@ class AppLocalizationsZh extends AppLocalizations {
   String routeCandidateCamera(String name, String pref) {
     return '$name（摄像头·$pref）';
   }
+
+  @override
+  String get bosaiTabSnow => '积雪';
+
+  @override
+  String get bosaiSnowNone => '目前没有观测到积雪的地点';
+
+  @override
+  String get bosaiSnowUnavailable => '无法获取积雪观测值';
+
+  @override
+  String bosaiSnowObservedAt(int month, int day, String hour, String minute) {
+    return '（$month/$day $hour:$minute 观测）';
+  }
+
+  @override
+  String get bosaiSnowDisclaimer => '为AMeDAS观测点的数值，可能与整个地区的积雪情况不同。';
+
+  @override
+  String get bosaiSnowTapHint => '点按都道府县可查看各市区町村的观测点。';
+
+  @override
+  String bosaiSnowPrefSummary(int cm, String station, int n) {
+    return '最深 ${cm}cm（$station）・观测点 $n处';
+  }
+
+  @override
+  String bosaiSnowDepthCm(int cm) {
+    return '积雪深度 ${cm}cm';
+  }
+
+  @override
+  String bosaiSnow24hCm(int cm) {
+    return '24小时降雪量 ${cm}cm';
+  }
+
+  @override
+  String get bosaiSnowNearbyTitle => '附近观测点的积雪';
+
+  @override
+  String get bosaiSnowNoSnowAtPoint => '无积雪';
+
+  @override
+  String get bosaiSnowMuniCameras => '查看该市区町村的摄像头';
+
+  @override
+  String bosaiSnowPrefCamerasTitle(String pref) {
+    return '$pref的摄像头（积雪）';
+  }
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4961,5 +5010,54 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   @override
   String routeCandidateCamera(String name, String pref) {
     return '$name（攝影機·$pref）';
+  }
+
+  @override
+  String get bosaiTabSnow => '積雪';
+
+  @override
+  String get bosaiSnowNone => '目前沒有觀測到積雪的地點';
+
+  @override
+  String get bosaiSnowUnavailable => '無法取得積雪觀測值';
+
+  @override
+  String bosaiSnowObservedAt(int month, int day, String hour, String minute) {
+    return '（$month/$day $hour:$minute 觀測）';
+  }
+
+  @override
+  String get bosaiSnowDisclaimer => '為AMeDAS觀測點的數值，可能與整個地區的積雪情況不同。';
+
+  @override
+  String get bosaiSnowTapHint => '點選都道府縣可查看各市區町村的觀測點。';
+
+  @override
+  String bosaiSnowPrefSummary(int cm, String station, int n) {
+    return '最深 ${cm}cm（$station）・觀測點 $n處';
+  }
+
+  @override
+  String bosaiSnowDepthCm(int cm) {
+    return '積雪深度 ${cm}cm';
+  }
+
+  @override
+  String bosaiSnow24hCm(int cm) {
+    return '24小時降雪量 ${cm}cm';
+  }
+
+  @override
+  String get bosaiSnowNearbyTitle => '附近觀測點的積雪';
+
+  @override
+  String get bosaiSnowNoSnowAtPoint => '無積雪';
+
+  @override
+  String get bosaiSnowMuniCameras => '查看該市區町村的攝影機';
+
+  @override
+  String bosaiSnowPrefCamerasTitle(String pref) {
+    return '$pref的攝影機（積雪）';
   }
 }

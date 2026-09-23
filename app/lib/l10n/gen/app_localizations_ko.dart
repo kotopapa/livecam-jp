@@ -2505,4 +2505,53 @@ class AppLocalizationsKo extends AppLocalizations {
   String routeCandidateCamera(String name, String pref) {
     return '$name(카메라·$pref)';
   }
+
+  @override
+  String get bosaiTabSnow => '적설';
+
+  @override
+  String get bosaiSnowNone => '현재 적설이 관측되는 지점이 없습니다';
+
+  @override
+  String get bosaiSnowUnavailable => '적설 관측값을 가져오지 못했습니다';
+
+  @override
+  String bosaiSnowObservedAt(int month, int day, String hour, String minute) {
+    return '($month/$day $hour:$minute 관측)';
+  }
+
+  @override
+  String get bosaiSnowDisclaimer => 'AMeDAS 관측 지점의 값이며, 지역 전체의 적설과 다를 수 있습니다.';
+
+  @override
+  String get bosaiSnowTapHint => '도도부현을 탭하면 시구정촌별 관측 지점을 표시합니다.';
+
+  @override
+  String bosaiSnowPrefSummary(int cm, String station, int n) {
+    return '최심 ${cm}cm($station)・관측 지점 $n곳';
+  }
+
+  @override
+  String bosaiSnowDepthCm(int cm) {
+    return '적설 ${cm}cm';
+  }
+
+  @override
+  String bosaiSnow24hCm(int cm) {
+    return '24시간 신적설 ${cm}cm';
+  }
+
+  @override
+  String get bosaiSnowNearbyTitle => '가까운 관측 지점의 적설';
+
+  @override
+  String get bosaiSnowNoSnowAtPoint => '적설 없음';
+
+  @override
+  String get bosaiSnowMuniCameras => '이 시구정촌의 카메라 보기';
+
+  @override
+  String bosaiSnowPrefCamerasTitle(String pref) {
+    return '$pref의 카메라(적설)';
+  }
 }

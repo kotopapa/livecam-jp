@@ -731,5 +731,18 @@
   "situationMore": "외 {n}건",
   "situationSource": "출처: 기상청 · 눌러서 자세히",
   "routePickPlaceTitle": "“{query}” 후보",
-  "routeCandidateCamera": "{name}(카메라·{pref})"
+  "routeCandidateCamera": "{name}(카메라·{pref})",
+  "bosaiTabSnow": "적설",
+  "bosaiSnowNone": "현재 적설이 관측되는 지점이 없습니다",
+  "bosaiSnowUnavailable": "적설 관측값을 가져오지 못했습니다",
+  "bosaiSnowObservedAt": "({month}/{day} {hour}:{minute} 관측)",
+  "bosaiSnowDisclaimer": "AMeDAS 관측 지점의 값이며, 지역 전체의 적설과 다를 수 있습니다.",
+  "bosaiSnowTapHint": "도도부현을 탭하면 시구정촌별 관측 지점을 표시합니다.",
+  "bosaiSnowPrefSummary": "최심 {cm}cm({station})・관측 지점 {n}곳",
+  "bosaiSnowDepthCm": "적설 {cm}cm",
+  "bosaiSnow24hCm": "24시간 신적설 {cm}cm",
+  "bosaiSnowNearbyTitle": "가까운 관측 지점의 적설",
+  "bosaiSnowNoSnowAtPoint": "적설 없음",
+  "bosaiSnowMuniCameras": "이 시구정촌의 카메라 보기",
+  "bosaiSnowPrefCamerasTitle": "{pref}의 카메라(적설)"
 }

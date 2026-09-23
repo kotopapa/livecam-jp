@@ -2539,5 +2539,72 @@
         "type": "String"
       }
     }
+  },
+  "bosaiTabSnow": "積雪",
+  "@bosaiTabSnow": {
+    "description": "災害速報タブの3番目。熱中症警戒情報の運用期間外（10/22〜4/21）に熱中症と入れ替わる。気象庁 多言語辞書「積雪」に準拠"
+  },
+  "bosaiSnowNone": "現在、積雪を観測している地点はありません",
+  "bosaiSnowUnavailable": "積雪の観測値を取得できませんでした",
+  "bosaiSnowObservedAt": "（{month}/{day} {hour}:{minute} 観測）",
+  "@bosaiSnowObservedAt": {
+    "description": "出典表記のうしろに続けて置く断片。英語・ベトナム語は先頭に半角空白",
+    "placeholders": {
+      "month": {
+        "type": "int"
+      },
+      "day": {
+        "type": "int"
+      },
+      "hour": {
+        "type": "String"
+      },
+      "minute": {
+        "type": "String"
+      }
+    }
+  },
+  "bosaiSnowDisclaimer": "アメダス観測点の値です。地域全体の積雪とは異なることがあります。",
+  "bosaiSnowTapHint": "都道府県をタップすると市区町村ごとの観測点を表示します。",
+  "bosaiSnowPrefSummary": "最深 {cm}cm（{station}）・観測点 {n}か所",
+  "@bosaiSnowPrefSummary": {
+    "placeholders": {
+      "cm": {
+        "type": "int"
+      },
+      "station": {
+        "type": "String"
+      },
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiSnowDepthCm": "積雪 {cm}cm",
+  "@bosaiSnowDepthCm": {
+    "placeholders": {
+      "cm": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiSnow24hCm": "24時間降雪 {cm}cm",
+  "@bosaiSnow24hCm": {
+    "placeholders": {
+      "cm": {
+        "type": "int"
+      }
+    }
+  },
+  "bosaiSnowNearbyTitle": "近くの観測点の積雪",
+  "bosaiSnowNoSnowAtPoint": "積雪なし",
+  "bosaiSnowMuniCameras": "この市区町村のカメラを見る",
+  "bosaiSnowPrefCamerasTitle": "{pref}のカメラ（積雪）",
+  "@bosaiSnowPrefCamerasTitle": {
+    "placeholders": {
+      "pref": {
+        "type": "String"
+      }
+    }
   }
 }

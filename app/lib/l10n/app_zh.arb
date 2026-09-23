@@ -731,5 +731,18 @@
   "situationMore": "另有{n}项",
   "situationSource": "来源：气象厅 · 点击查看详情",
   "routePickPlaceTitle": "“{query}”的候选",
-  "routeCandidateCamera": "{name}（摄像头·{pref}）"
+  "routeCandidateCamera": "{name}（摄像头·{pref}）",
+  "bosaiTabSnow": "积雪",
+  "bosaiSnowNone": "目前没有观测到积雪的地点",
+  "bosaiSnowUnavailable": "无法获取积雪观测值",
+  "bosaiSnowObservedAt": "（{month}/{day} {hour}:{minute} 观测）",
+  "bosaiSnowDisclaimer": "为AMeDAS观测点的数值，可能与整个地区的积雪情况不同。",
+  "bosaiSnowTapHint": "点按都道府县可查看各市区町村的观测点。",
+  "bosaiSnowPrefSummary": "最深 {cm}cm（{station}）・观测点 {n}处",
+  "bosaiSnowDepthCm": "积雪深度 {cm}cm",
+  "bosaiSnow24hCm": "24小时降雪量 {cm}cm",
+  "bosaiSnowNearbyTitle": "附近观测点的积雪",
+  "bosaiSnowNoSnowAtPoint": "无积雪",
+  "bosaiSnowMuniCameras": "查看该市区町村的摄像头",
+  "bosaiSnowPrefCamerasTitle": "{pref}的摄像头（积雪）"
 }

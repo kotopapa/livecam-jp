@@ -7,9 +7,11 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
+import '../data/amedas_snow.dart';
 import '../data/analytics.dart';
 import '../l10n/l10n.dart';
 import '../data/heat_alert.dart';
+import '../data/hotel_links.dart' show MunicipalityNames;
 import '../data/wbgt.dart';
 import '../data/jma_flood.dart';
 import '../data/jma_layers.dart';
@@ -211,7 +213,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     if (!mounted || !r.startsWith('bosai')) return;
     if (r.endsWith('/warning')) {
       _tabs.animateTo(1);
-    } else if (r.endsWith('/heat')) {
+    } else if (r.endsWith('/heat') || r.endsWith('/snow')) {
       _tabs.animateTo(2);
     } else if (r.endsWith('/quake')) {
       _tabs.animateTo(0);
@@ -405,7 +407,59 @@ class _BosaiScreenState extends State<BosaiScreen>
 
   /// 熱中症タブを開いたとき、近くの地点の暑さ指数を取りに行く
   void _onTabChanged() {
-    if (_tabs.index == 2 && !_tabs.indexIsChanging) _loadWbgt();
+    if (_tabs.index != 2 || _tabs.indexIsChanging) return;
+    if (AmedasSnow.isSeason(HeatAlerts.nowJstNaive())) {
+      _loadSnow();
+    } else {
+      _loadWbgt();
+    }
+  }
+
+  // ---- 積雪（冬季。熱中症の運用期間外に3番目のタブを入れ替える）----
+
+  /// アメダス積雪深の最新10分値。冬季外・取得失敗は null
+  SnowReport? _snow;
+  bool _snowFailed = false;
+  bool _snowLoading = false;
+
+  /// 現在地に近い観測点（距離順）。null は未取得、空は位置不明
+  List<(SnowStation, double)>? _snowNearby;
+  bool _snowNoLocation = false;
+
+  /// 積雪を取得する（冬季のみ）。同じ観測時刻のあいだは AmedasSnow 側で
+  /// 再取得しない。失敗は前回の内容を残して静かに諦める
+  Future<void> _loadSnow() async {
+    final now = HeatAlerts.nowJstNaive();
+    if (!AmedasSnow.isSeason(now)) {
+      if (mounted && _snow != null) setState(() => _snow = null);
+      return;
+    }
+    if (_snowLoading) return;
+    _snowLoading = true;
+    try {
+      // 市区町村名の表（じゃらん導線と共用のアセット）を先に読んでおく
+      await MunicipalityNames.load();
+      final report = await AmedasSnow.fetch();
+      if (!mounted) return;
+      setState(() {
+        if (report != null) _snow = report;
+        _snowFailed = report == null && _snow == null;
+      });
+      if (_snowNearby == null && !_snowNoLocation) {
+        final here = await _lastKnownLocation();
+        if (!mounted) return;
+        if (here == null) {
+          setState(() => _snowNoLocation = true);
+        } else {
+          final stations = await AmedasSnow.loadStations();
+          if (!mounted) return;
+          setState(() => _snowNearby =
+              AmedasSnow.nearest(stations, here.$1, here.$2));
+        }
+      }
+    } finally {
+      _snowLoading = false;
+    }
   }
 
   /// 現在地に近い暑さ指数の地点（距離順）と取得結果。null は未取得
@@ -498,6 +552,8 @@ class _BosaiScreenState extends State<BosaiScreen>
           _heatPrefs = const [];
         });
       }
+      // 冬季は同じ枠で積雪を出す
+      unawaited(_loadSnow());
       return;
     }
     // 熱中症タブを表示中なら近くの暑さ指数も同じタイミングで更新する
@@ -643,7 +699,10 @@ class _BosaiScreenState extends State<BosaiScreen>
           bottom: TabBar(controller: _tabs, tabs: [
             Tab(text: context.l10n.bosaiTabQuake),
             Tab(text: context.l10n.bosaiTabWarning),
-            Tab(text: context.l10n.bosaiTabHeat),
+            Tab(
+                text: AmedasSnow.isSeason(HeatAlerts.nowJstNaive())
+                    ? context.l10n.bosaiTabSnow
+                    : context.l10n.bosaiTabHeat),
           ]),
         ),
         body: TabBarView(controller: _tabs, children: [
@@ -1088,14 +1147,8 @@ class _BosaiScreenState extends State<BosaiScreen>
   Widget _buildHeatTab() {
     final l10n = context.l10n;
     final now = HeatAlerts.nowJstNaive();
-    if (!HeatAlerts.isInSeason(now)) {
-      return Center(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Text(l10n.bosaiHeatOffSeason, textAlign: TextAlign.center),
-        ),
-      );
-    }
+    // 熱中症警戒情報の運用期間外（10/22〜4/21）は積雪に入れ替える
+    if (!HeatAlerts.isInSeason(now)) return _buildSnowTab();
     final list = _heatPrefs;
     final at = _heat?.reportAt;
     final when = at == null
@@ -1163,6 +1216,158 @@ class _BosaiScreenState extends State<BosaiScreen>
         );
       },
     );
+  }
+
+  /// 積雪タブ（冬季）。出典・観測時刻の見出し → 近くの観測点カード →
+  /// 積雪のある都道府県（最深の深い順）。都道府県を開くと市区町村＞観測点
+  Widget _buildSnowTab() {
+    final l10n = context.l10n;
+    final report = _snow;
+    final at = report?.observedAt;
+    final when = at == null
+        ? ''
+        : l10n.bosaiSnowObservedAt(at.month, at.day,
+            at.hour.toString().padLeft(2, '0'),
+            at.minute.toString().padLeft(2, '0'));
+    final prefs = report?.byPrefecture() ?? const <SnowPrefecture>[];
+    final header = Padding(
+      padding: const EdgeInsets.all(12),
+      child: Text(
+        '${AmedasSnow.attribution}$when\n${l10n.bosaiSnowDisclaimer}'
+        '${prefs.isEmpty ? '' : '\n${l10n.bosaiSnowTapHint}'}',
+        style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+      ),
+    );
+    final top = Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisSize: MainAxisSize.min,
+      children: [header, _buildSnowNearbyCard()],
+    );
+    if (prefs.isEmpty) {
+      final Widget body;
+      if (report == null && !_snowFailed) {
+        body = const Padding(
+          padding: EdgeInsets.all(24),
+          child: Center(child: CircularProgressIndicator()),
+        );
+      } else {
+        body = Padding(
+          padding: const EdgeInsets.all(24),
+          child: Center(
+              child: Text(
+                  report == null ? l10n.bosaiSnowUnavailable : l10n.bosaiSnowNone,
+                  textAlign: TextAlign.center)),
+        );
+      }
+      return ListView(children: [top, body]);
+    }
+    return ListView.separated(
+      itemCount: prefs.length + 1,
+      separatorBuilder: (_, _) => const Divider(height: 1),
+      itemBuilder: (context, i) {
+        if (i == 0) return top;
+        final p = prefs[i - 1];
+        final prefName = prefectureNameOf(l10n, p.prefCode);
+        return ListTile(
+          leading: Icon(Icons.ac_unit, color: snowDepthColor(p.maxDepth)),
+          title: Text(prefName),
+          subtitle: Text(l10n.bosaiSnowPrefSummary(
+              p.maxDepth, p.deepest.station.name, p.stationCount)),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => SnowPrefectureScreen(
+                  app: widget.app, title: prefName, data: p))),
+        );
+      },
+    );
+  }
+
+  /// 近くの観測点の積雪カード。現在地が取れる場合は最寄り3地点
+  Widget _buildSnowNearbyCard() {
+    final l10n = context.l10n;
+    final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
+    final near = _snowNearby;
+    Widget body;
+    if (_snowNoLocation) {
+      body = Text(l10n.mapLocationFailed, style: grey);
+    } else if (near == null) {
+      body = const Padding(
+        padding: EdgeInsets.symmetric(vertical: 8),
+        child: Center(
+          child: SizedBox(
+              width: 16,
+              height: 16,
+              child: CircularProgressIndicator(strokeWidth: 2)),
+        ),
+      );
+    } else {
+      final byId = {
+        for (final o in _snow?.observations ?? const <SnowObs>[])
+          o.station.id: o
+      };
+      body = Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          for (final (i, e) in near.indexed) ...[
+            if (i > 0) const Divider(height: 12),
+            _snowPointRow(e.$1, e.$2, byId[e.$1.id]),
+          ],
+        ],
+      );
+    }
+    return Card(
+      margin: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 10, 12, 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(children: [
+              Icon(Icons.ac_unit, size: 18, color: Colors.grey[700]),
+              const SizedBox(width: 4),
+              Expanded(
+                child: Text(l10n.bosaiSnowNearbyTitle,
+                    style: const TextStyle(
+                        fontSize: 13, fontWeight: FontWeight.bold)),
+              ),
+            ]),
+            const SizedBox(height: 6),
+            body,
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// 1観測点分（観測所名・距離／積雪深・24時間降雪）。積雪が無ければその旨
+  Widget _snowPointRow(SnowStation s, double distance, SnowObs? o) {
+    final l10n = context.l10n;
+    final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
+    return Row(children: [
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.alphabetic,
+          children: [
+            Text(s.name,
+                style: const TextStyle(
+                    fontSize: 14, fontWeight: FontWeight.bold)),
+            const SizedBox(width: 6),
+            Text(l10n.bosaiApproxDistance(Wbgt.formatDistance(distance)),
+                style: grey),
+            const SizedBox(width: 6),
+            Expanded(
+                child: Text(municipalityNameOf(s.municipality),
+                    style: grey, overflow: TextOverflow.ellipsis)),
+          ],
+        ),
+      ),
+      const SizedBox(width: 8),
+      if (o == null)
+        Text(l10n.bosaiSnowNoSnowAtPoint, style: grey)
+      else
+        snowDepthChip(l10n, o),
+    ]);
   }
 
   /// 近くの地点の暑さ指数（WBGT）カード。現在地が取れる場合は最寄り3地点
@@ -2127,3 +2332,104 @@ class RiverCamerasScreen extends StatelessWidget {
   }
 }
 
+
+
+/// 積雪深（cm）の色。地図の積雪深レイヤーの凡例（SnowLayers.depthScale）と同じ段階
+Color snowDepthColor(int cm) {
+  if (cm >= 200) return const Color(0xFFB40068);
+  if (cm >= 150) return const Color(0xFFFF2800);
+  if (cm >= 100) return const Color(0xFFFF9900);
+  if (cm >= 50) return const Color(0xFFE0C000);
+  if (cm >= 20) return const Color(0xFF0041FF);
+  if (cm >= 5) return const Color(0xFF218CFF);
+  return const Color(0xFF7FB2E5);
+}
+
+/// 市区町村コード（JIS 5桁）の表示名。政令市の区は同梱の区名表、
+/// それ以外は気象庁 area.json 由来の市区町村表で引く
+String municipalityNameOf(String? code) {
+  if (code == null) return '';
+  return wardNames[code] ?? MunicipalityNames.nameOf(code) ?? '市区町村 $code';
+}
+
+/// 積雪深（と24時間降雪量）のチップ
+Widget snowDepthChip(AppLocalizations l10n, SnowObs o) {
+  final color = snowDepthColor(o.depth);
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.end,
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.15),
+          border: Border.all(color: color),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Text(l10n.bosaiSnowDepthCm(o.depth),
+            style: TextStyle(
+                fontSize: 13, fontWeight: FontWeight.bold, color: color)),
+      ),
+      if (o.snow24h != null && o.snow24h! > 0)
+        Padding(
+          padding: const EdgeInsets.only(top: 2),
+          child: Text(l10n.bosaiSnow24hCm(o.snow24h!),
+              style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+        ),
+    ],
+  );
+}
+
+/// 都道府県の積雪一覧：市区町村（最深の深い順）ごとに観測点を並べ、
+/// 市区町村の行からその市区町村のカメラ一覧へ進める
+class SnowPrefectureScreen extends StatelessWidget {
+  const SnowPrefectureScreen(
+      {super.key, required this.app, required this.title, required this.data});
+
+  final AppState app;
+  final String title;
+  final SnowPrefecture data;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = context.l10n;
+    final rows = <Widget>[];
+    for (final m in data.municipalities) {
+      final name = municipalityNameOf(m.code);
+      rows.add(ListTile(
+        tileColor: Theme.of(context).colorScheme.surfaceContainerHighest,
+        leading: Icon(Icons.ac_unit, color: snowDepthColor(m.maxDepth)),
+        title: Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
+        subtitle: Text(l10n.bosaiSnowMuniCameras,
+            style: const TextStyle(fontSize: 11)),
+        trailing: const Icon(Icons.videocam_outlined),
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (_) => PrefCamerasScreen(
+                app: app,
+                pref: data.prefCode,
+                municipality: m.code,
+                title: l10n.bosaiSnowPrefCamerasTitle(name)))),
+      ));
+      for (final o in m.stations) {
+        rows.add(ListTile(
+          dense: true,
+          contentPadding: const EdgeInsets.fromLTRB(32, 0, 16, 0),
+          title: Text(o.station.name),
+          trailing: snowDepthChip(l10n, o),
+        ));
+      }
+    }
+    return Scaffold(
+      appBar: AppBar(title: Text(title)),
+      body: ListView(children: [
+        Padding(
+          padding: const EdgeInsets.all(12),
+          child: Text(
+              '${AmedasSnow.attribution}\n${l10n.bosaiSnowDisclaimer}',
+              style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+        ),
+        ...rows,
+      ]),
+    );
+  }
+}

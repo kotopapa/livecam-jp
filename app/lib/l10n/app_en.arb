@@ -731,5 +731,18 @@
   "situationMore": "+{n} more",
   "situationSource": "Source: JMA · tap for details",
   "routePickPlaceTitle": "Matches for “{query}”",
-  "routeCandidateCamera": "{name} (camera, {pref})"
+  "routeCandidateCamera": "{name} (camera, {pref})",
+  "bosaiTabSnow": "Snow",
+  "bosaiSnowNone": "No station is currently observing snow cover",
+  "bosaiSnowUnavailable": "Snow depth observations could not be loaded",
+  "bosaiSnowObservedAt": " (observed {month}/{day} {hour}:{minute})",
+  "bosaiSnowDisclaimer": "Values are from AMeDAS stations and may differ from snow cover across the area.",
+  "bosaiSnowTapHint": "Tap a prefecture to see stations by municipality.",
+  "bosaiSnowPrefSummary": "Deepest {cm} cm ({station}) · {n} stations",
+  "bosaiSnowDepthCm": "Snow depth {cm} cm",
+  "bosaiSnow24hCm": "24-h snowfall {cm} cm",
+  "bosaiSnowNearbyTitle": "Snow depth near you",
+  "bosaiSnowNoSnowAtPoint": "No snow cover",
+  "bosaiSnowMuniCameras": "See cameras in this municipality",
+  "bosaiSnowPrefCamerasTitle": "Cameras in {pref} (snow)"
 }

@@ -2495,6 +2495,55 @@ class AppLocalizationsJa extends AppLocalizations {
   String routeCandidateCamera(String name, String pref) {
     return '$name（カメラ・$pref）';
   }
+
+  @override
+  String get bosaiTabSnow => '積雪';
+
+  @override
+  String get bosaiSnowNone => '現在、積雪を観測している地点はありません';
+
+  @override
+  String get bosaiSnowUnavailable => '積雪の観測値を取得できませんでした';
+
+  @override
+  String bosaiSnowObservedAt(int month, int day, String hour, String minute) {
+    return '（$month/$day $hour:$minute 観測）';
+  }
+
+  @override
+  String get bosaiSnowDisclaimer => 'アメダス観測点の値です。地域全体の積雪とは異なることがあります。';
+
+  @override
+  String get bosaiSnowTapHint => '都道府県をタップすると市区町村ごとの観測点を表示します。';
+
+  @override
+  String bosaiSnowPrefSummary(int cm, String station, int n) {
+    return '最深 ${cm}cm（$station）・観測点 $nか所';
+  }
+
+  @override
+  String bosaiSnowDepthCm(int cm) {
+    return '積雪 ${cm}cm';
+  }
+
+  @override
+  String bosaiSnow24hCm(int cm) {
+    return '24時間降雪 ${cm}cm';
+  }
+
+  @override
+  String get bosaiSnowNearbyTitle => '近くの観測点の積雪';
+
+  @override
+  String get bosaiSnowNoSnowAtPoint => '積雪なし';
+
+  @override
+  String get bosaiSnowMuniCameras => 'この市区町村のカメラを見る';
+
+  @override
+  String bosaiSnowPrefCamerasTitle(String pref) {
+    return '$prefのカメラ（積雪）';
+  }
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -5019,5 +5068,55 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String routeCandidateCamera(String name, String pref) {
     return '$name（カメラ・$pref）';
+  }
+
+  @override
+  String get bosaiTabSnow => 'ゆき（せきせつ）';
+
+  @override
+  String get bosaiSnowNone => 'いま、雪（ゆき）が つもって いる ところは ありません';
+
+  @override
+  String get bosaiSnowUnavailable => '雪（ゆき）の データを とれませんでした';
+
+  @override
+  String bosaiSnowObservedAt(int month, int day, String hour, String minute) {
+    return '（$month/$day $hour:$minute に はかった あたい）';
+  }
+
+  @override
+  String get bosaiSnowDisclaimer =>
+      'アメダスの ばしょで はかった あたいです。まちぜんたいの 雪（ゆき）とは ちがう ことが あります。';
+
+  @override
+  String get bosaiSnowTapHint => '県（けん）を おすと 市（し）や 町（まち）ごとの ばしょが 出（で）ます。';
+
+  @override
+  String bosaiSnowPrefSummary(int cm, String station, int n) {
+    return 'いちばん ふかい ところ ${cm}cm（$station）・$nか所';
+  }
+
+  @override
+  String bosaiSnowDepthCm(int cm) {
+    return '雪（ゆき） ${cm}cm';
+  }
+
+  @override
+  String bosaiSnow24hCm(int cm) {
+    return '24じかんで ${cm}cm ふった';
+  }
+
+  @override
+  String get bosaiSnowNearbyTitle => 'ちかくの ばしょの 雪（ゆき）';
+
+  @override
+  String get bosaiSnowNoSnowAtPoint => '雪（ゆき）なし';
+
+  @override
+  String get bosaiSnowMuniCameras => 'この 市（し）・町（まち）の カメラを 見（み）る';
+
+  @override
+  String bosaiSnowPrefCamerasTitle(String pref) {
+    return '$prefの カメラ（雪（ゆき））';
   }
 }

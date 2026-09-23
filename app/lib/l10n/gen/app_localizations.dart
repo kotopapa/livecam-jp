@@ -4497,6 +4497,84 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'{name}（カメラ・{pref}）'**
   String routeCandidateCamera(String name, String pref);
+
+  /// 災害速報タブの3番目。熱中症警戒情報の運用期間外（10/22〜4/21）に熱中症と入れ替わる。気象庁 多言語辞書「積雪」に準拠
+  ///
+  /// In ja, this message translates to:
+  /// **'積雪'**
+  String get bosaiTabSnow;
+
+  /// No description provided for @bosaiSnowNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在、積雪を観測している地点はありません'**
+  String get bosaiSnowNone;
+
+  /// No description provided for @bosaiSnowUnavailable.
+  ///
+  /// In ja, this message translates to:
+  /// **'積雪の観測値を取得できませんでした'**
+  String get bosaiSnowUnavailable;
+
+  /// 出典表記のうしろに続けて置く断片。英語・ベトナム語は先頭に半角空白
+  ///
+  /// In ja, this message translates to:
+  /// **'（{month}/{day} {hour}:{minute} 観測）'**
+  String bosaiSnowObservedAt(int month, int day, String hour, String minute);
+
+  /// No description provided for @bosaiSnowDisclaimer.
+  ///
+  /// In ja, this message translates to:
+  /// **'アメダス観測点の値です。地域全体の積雪とは異なることがあります。'**
+  String get bosaiSnowDisclaimer;
+
+  /// No description provided for @bosaiSnowTapHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'都道府県をタップすると市区町村ごとの観測点を表示します。'**
+  String get bosaiSnowTapHint;
+
+  /// No description provided for @bosaiSnowPrefSummary.
+  ///
+  /// In ja, this message translates to:
+  /// **'最深 {cm}cm（{station}）・観測点 {n}か所'**
+  String bosaiSnowPrefSummary(int cm, String station, int n);
+
+  /// No description provided for @bosaiSnowDepthCm.
+  ///
+  /// In ja, this message translates to:
+  /// **'積雪 {cm}cm'**
+  String bosaiSnowDepthCm(int cm);
+
+  /// No description provided for @bosaiSnow24hCm.
+  ///
+  /// In ja, this message translates to:
+  /// **'24時間降雪 {cm}cm'**
+  String bosaiSnow24hCm(int cm);
+
+  /// No description provided for @bosaiSnowNearbyTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'近くの観測点の積雪'**
+  String get bosaiSnowNearbyTitle;
+
+  /// No description provided for @bosaiSnowNoSnowAtPoint.
+  ///
+  /// In ja, this message translates to:
+  /// **'積雪なし'**
+  String get bosaiSnowNoSnowAtPoint;
+
+  /// No description provided for @bosaiSnowMuniCameras.
+  ///
+  /// In ja, this message translates to:
+  /// **'この市区町村のカメラを見る'**
+  String get bosaiSnowMuniCameras;
+
+  /// No description provided for @bosaiSnowPrefCamerasTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'{pref}のカメラ（積雪）'**
+  String bosaiSnowPrefCamerasTitle(String pref);
 }
 
 class _AppLocalizationsDelegate

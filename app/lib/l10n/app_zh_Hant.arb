@@ -731,5 +731,18 @@
   "situationMore": "另有{n}項",
   "situationSource": "來源：氣象廳 · 點選查看詳情",
   "routePickPlaceTitle": "「{query}」的候選",
-  "routeCandidateCamera": "{name}（攝影機·{pref}）"
+  "routeCandidateCamera": "{name}（攝影機·{pref}）",
+  "bosaiTabSnow": "積雪",
+  "bosaiSnowNone": "目前沒有觀測到積雪的地點",
+  "bosaiSnowUnavailable": "無法取得積雪觀測值",
+  "bosaiSnowObservedAt": "（{month}/{day} {hour}:{minute} 觀測）",
+  "bosaiSnowDisclaimer": "為AMeDAS觀測點的數值，可能與整個地區的積雪情況不同。",
+  "bosaiSnowTapHint": "點選都道府縣可查看各市區町村的觀測點。",
+  "bosaiSnowPrefSummary": "最深 {cm}cm（{station}）・觀測點 {n}處",
+  "bosaiSnowDepthCm": "積雪深度 {cm}cm",
+  "bosaiSnow24hCm": "24小時降雪量 {cm}cm",
+  "bosaiSnowNearbyTitle": "附近觀測點的積雪",
+  "bosaiSnowNoSnowAtPoint": "無積雪",
+  "bosaiSnowMuniCameras": "查看該市區町村的攝影機",
+  "bosaiSnowPrefCamerasTitle": "{pref}的攝影機（積雪）"
 }

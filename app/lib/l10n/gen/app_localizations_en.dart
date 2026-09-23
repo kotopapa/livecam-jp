@@ -2585,4 +2585,56 @@ class AppLocalizationsEn extends AppLocalizations {
   String routeCandidateCamera(String name, String pref) {
     return '$name (camera, $pref)';
   }
+
+  @override
+  String get bosaiTabSnow => 'Snow';
+
+  @override
+  String get bosaiSnowNone => 'No station is currently observing snow cover';
+
+  @override
+  String get bosaiSnowUnavailable =>
+      'Snow depth observations could not be loaded';
+
+  @override
+  String bosaiSnowObservedAt(int month, int day, String hour, String minute) {
+    return ' (observed $month/$day $hour:$minute)';
+  }
+
+  @override
+  String get bosaiSnowDisclaimer =>
+      'Values are from AMeDAS stations and may differ from snow cover across the area.';
+
+  @override
+  String get bosaiSnowTapHint =>
+      'Tap a prefecture to see stations by municipality.';
+
+  @override
+  String bosaiSnowPrefSummary(int cm, String station, int n) {
+    return 'Deepest $cm cm ($station) · $n stations';
+  }
+
+  @override
+  String bosaiSnowDepthCm(int cm) {
+    return 'Snow depth $cm cm';
+  }
+
+  @override
+  String bosaiSnow24hCm(int cm) {
+    return '24-h snowfall $cm cm';
+  }
+
+  @override
+  String get bosaiSnowNearbyTitle => 'Snow depth near you';
+
+  @override
+  String get bosaiSnowNoSnowAtPoint => 'No snow cover';
+
+  @override
+  String get bosaiSnowMuniCameras => 'See cameras in this municipality';
+
+  @override
+  String bosaiSnowPrefCamerasTitle(String pref) {
+    return 'Cameras in $pref (snow)';
+  }
 }
