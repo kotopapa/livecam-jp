@@ -1572,14 +1572,15 @@ cameras:
     lat: 26.655
     lng: 127.978
 
-  - id: curated-yushima-nekojima
-    name: 湯島「猫島」ありのままライブ
-    operator: "熊本日日新聞社"
-    channel_id: "UC9pARxM8ajMNB0rA8xBamLg"
-    category: healing
-    prefecture: "43"
-    lat: 32.547
-    lng: 130.453
+  # 2026-09-23 退役: チャンネル埋め込み(live_stream?channel=)が再生不可になり、同じ配信を動画IDで登録済みの curated-healing-yushima-nekojima に一本化（座標も海上で誤りだった）
+  # - id: curated-yushima-nekojima
+  # name: 湯島「猫島」ありのままライブ
+  # operator: "熊本日日新聞社"
+  # channel_id: "UC9pARxM8ajMNB0rA8xBamLg"
+  # category: healing
+  # prefecture: "43"
+  # lat: 32.547
+  # lng: 130.453
 
   - id: curated-toba-rakko
     name: 鳥羽水族館 ラッコ水槽
@@ -7371,7 +7372,7 @@ cameras:
 
   - id: curated-healing-yushima-nekojima
     name: "湯島（猫島）定点カメラ"
-    operator: "湯島猫島ありのまま（YouTubeチャンネル）"
+    operator: "熊本日日新聞社（湯島猫島ありのまま）"
     video_id: "g-tfZ65pdn4"
     category: "healing"
     prefecture: "43"
