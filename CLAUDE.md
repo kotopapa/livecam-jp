@@ -244,3 +244,11 @@ python site/build.py                            # 配信ファイル生成
 - **ユーザーはデザインの素案を Codex に作らせる方針**（`/Applications/ChatGPT.app/Contents/Resources/codex exec`）。文言・配置を自前で決めず、素案→書き出し→目視確認の順で回す
 - Android は25枚を1回で返すと VM Service ごと落ちる（`Service has disappeared`）ので `--dart-define=CAPTURE_SET=maps|details|tabs` で分割して撮る
 - 編集・書き出しは `store_screenshots/`（ParthJadhav/app-store-screenshots のテンプレート。`npm install --legacy-peer-deps` → `npm run dev` → http://localhost:3000）。文言と構成は `app-store-screenshots.json`、フォントは Noto Sans JP、テーマ `livecam-sky`（ブランド色 #1E6FD9）。デザイン素案は `store_screenshots/DESIGN.md`（Codex 作成。強調語は textElements で重ねているので文言変更時は位置も直す）。ヘッドレス書き出しは `store_screenshots/tools/export.mjs`（Playwright）。書き出し済み PNG は `app/store_assets/ios/screenshots/<WxH>/ja/`・`app/store_assets/android/screenshots/`
+
+## YouTube 全国点検の知見（2026-09-23追記）
+
+- **点検手順**: ①watch ページの `playabilityStatus.status`（OK / UNPLAYABLE / LOGIN_REQUIRED / LIVE_STREAM_OFFLINE / ERROR）・`isLiveNow`・`playableInEmbed` を取り、②NG のものはチャンネル `/streams` の ytInitialData（lockupViewModel＋THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE）で現行ライブ一覧を取り、③各ライブの oEmbed でタイトル（401＝埋め込み不可）を取る。watch は2〜3秒間隔（429 対策）。3,251台で約2時間。スクリプトは scratchpad の yt_health_all.py / yt_follow_all.py / apply_yt_all.py（消えたらこの手順で再作成）。**`requests` は Homebrew の python3 に無いので `/Library/Frameworks/Python.framework/Versions/3.10/bin/python3` を使う**
+- **判断規則（2026-09-23 適用）**: チャンネルの現行ライブが1本 → 追従（タイトルが明らかに別地点なら追従しない）。タイトルに日付が入る日替わり枠は youtube_channel に変更（**1チャンネル1配信のときだけ**。複数配信チャンネルの日替わり枠は動画IDで追従し要定期追従）。新枠が oEmbed 401 なら誘導型（web_page）。複数ライブはタイトルで該当カメラを人手で選ぶ（特定できなければ据え置き）。追従先が既登録カメラと同じ動画になるときは重複なので退役。現行ライブが無く動画も再生不可/削除/ログイン必須なら退役、`ok_notlive`（動画は生きているが配信休止）と LIVE_STREAM_OFFLINE は据え置き（営業時間・季節限定が多い）
+- **台帳を直したら curated_youtube.yaml / curated_world.yaml / curated_still.yaml を必ず同期する**。週次 crawl.yml の `refresh_approved_feeds` が YAML の video_id で台帳の youtube_video を上書きするため、YAML が古いと追従が戻る。退役は YAML 側をコメントアウト（`# 2026-09-23 退役: 理由`）、追従は `# 2026-09-23 配信枠更新: 旧 → 新` の見出し付きで video_id を差し替える。台帳は review.status=rejected のまま残す（decided_ids に入るので候補に再登場しない）
+- curated_world.yaml も `channel_id` / `embed: false` が使える（2026-09-23 に curated_youtube と同じ規則をパーサに追加）
+- 結果（2026-09-23）: 追従311・誘導型40・チャンネル登録21・退役198。据え置き141台（複数ライブで特定できず94、配信休止32、別映像化9、休止中同一3、オフライン3）は次回点検で再確認する。日中に配信が始まる施設カメラが多いので**点検は日中に行う**
