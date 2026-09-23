@@ -21076,10 +21076,10 @@ cameras:
     prefecture: "12"
     lat: 35.723137
     lng: 140.119019
-    image_url: "https://www.youtube.com/watch?v=HmdscgFbqQQ"
-    page_url: "https://www.youtube.com/watch?v=HmdscgFbqQQ"
+    image_url: "https://www.youtube.com/watch?v=KZbE3BTgaWk"
+    page_url: "https://www.youtube.com/watch?v=KZbE3BTgaWk"
     feed_type: "web_page"
-    feed_url: "https://www.youtube.com/watch?v=HmdscgFbqQQ"
+    feed_url: "https://www.youtube.com/watch?v=KZbE3BTgaWk"
     note: "埋め込み不可(oEmbed 401)のため誘導型。youtubei player(WEB) isLive=true で配信中確認(2026-08-25)。座標:GSI「八千代村上駅」(説明文「八千代村上駅方面の映像」)"
 
   # ===== 2026-08-25 全国空白地帯・離島・ジャンル横断調査分 (8件) =====
@@ -30790,18 +30790,19 @@ cameras:
     image_url: https://www.youtube.com/watch?v=feauIt5F5Cw
     page_url: https://www.city.toyohashi.lg.jp/12038.htm
     note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図マーカー実位置
-  - id: curated-link-lcdb-dabd6ab3
-    name: 利根川烏川8拠点巡回
-    operator: 国土交通省関東地方整備局河川部水災害予報センター
-    category: river
-    prefecture: '12'
-    lat: 35.891152
-    lng: 139.629278
-    feed_type: web_page
-    feed_url: https://www.youtube.com/watch?v=ssFGEK8BUI0
-    image_url: https://www.youtube.com/watch?v=ssFGEK8BUI0
-    page_url: https://www.ktr.mlit.go.jp/river/index.html
-    note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  # 2026-09-23 退役: 配信終了
+  #   - id: curated-link-lcdb-dabd6ab3
+  #     name: 利根川烏川8拠点巡回
+  #     operator: 国土交通省関東地方整備局河川部水災害予報センター
+  #     category: river
+  #     prefecture: '12'
+  #     lat: 35.891152
+  #     lng: 139.629278
+  #     feed_type: web_page
+  #     feed_url: https://www.youtube.com/watch?v=ssFGEK8BUI0
+  #     image_url: https://www.youtube.com/watch?v=ssFGEK8BUI0
+  #     page_url: https://www.ktr.mlit.go.jp/river/index.html
+  #     note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
   - id: curated-link-lcdb-bc4d9e4f
     name: 酒々井町排水路上岩橋国道51号上流
     operator: 酒々井町役場

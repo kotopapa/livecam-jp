@@ -138,14 +138,15 @@ cameras:
     lng: 139.7840
 
   # 2026-08-31 退役: 朝日新聞LIVEの成田空港A滑走路の配信枠が終了（現行ライブは銀座のみ）
-  # - id: curated-narita-a-asahi
-  # name: 成田空港 A滑走路
-  # operator: 朝日新聞社（朝日新聞LIVE）
-  # video_id: ZIHxOzhFFUc
-  # category: other
-  # prefecture: "12"
-  # lat: 35.7767
-  # lng: 140.3830
+  # 2026-09-23 朝日新聞LIVE の現在枠（A滑走路 南側）に追従して復活
+  - id: curated-narita-a-asahi
+    name: 成田空港 A滑走路
+    operator: 朝日新聞社（朝日新聞LIVE）
+    video_id: OuCbntsMsWY
+    category: other
+    prefecture: "12"
+    lat: 35.7767
+    lng: 140.3830
 
   - id: curated-enoshima-riviera
     name: 江の島ヨットハーバー
@@ -2030,15 +2031,15 @@ cameras:
     lat: 35.802
     lng: 137.244
 
-  - id: curated-kamogawa-maehara
-    name: 鴨川 前原海岸
-    operator: "波のスケッチ"
-    video_id: "lEcdg6Xx7t4"
-    category: coast
-    prefecture: "12"
-    lat: 35.113
-    lng: 140.103
-
+  # 2026-09-23 退役: 配信終了
+  #   - id: curated-kamogawa-maehara
+  #     name: 鴨川 前原海岸
+  #     operator: "波のスケッチ"
+  #     video_id: "lEcdg6Xx7t4"
+  #     category: coast
+  #     prefecture: "12"
+  #     lat: 35.113
+  #     lng: 140.103
   - id: curated-tateyama-hojo
     name: 館山 北条海岸
     operator: "e-CAM（イーカム）"
@@ -4044,7 +4045,7 @@ cameras:
   - id: curated-r2-f9ea5a50
     name: 部原海岸
     operator: "サンセットタウン"
-    video_id: "Ay5sDDxzh5Q"
+    video_id: "gm1-4Y5qURE"
     category: coast
     prefecture: "12"
     lat: 35.17
@@ -4470,14 +4471,15 @@ cameras:
     lng: 137.6706
 
   # 2026-08-31 退役: チャンネルの現行ライブは全て他カメラで使用中（配信終了 2024-11-24）
-  # - id: curated-ichihara-umizuri-sanbashi
-  # name: "オリジナルメーカー海づり公園 桟橋釣り場側カメラ"
-  # operator: "オリジナルメーカー海づり公園"
-  # video_id: "gww15EqFelQ"
-  # category: coast
-  # prefecture: "12"
-  # lat: 35.5425
-  # lng: 140.0605
+  # 2026-09-23 桟橋側は終了、駐車場側カメラの現在枠に追従して復活
+  - id: curated-ichihara-umizuri-sanbashi
+    name: "オリジナルメーカー海づり公園 駐車場側カメラ"
+    operator: "オリジナルメーカー海づり公園"
+    video_id: "vs91kpippxI"
+    category: coast
+    prefecture: "12"
+    lat: 35.5425
+    lng: 140.0605
 
   - id: curated-ichihara-umizuri-parking
     name: "オリジナルメーカー海づり公園 駐車場側カメラ"
@@ -5185,31 +5187,31 @@ cameras:
     note: "oEmbed 200 (author 徳島県河川整備課3)"
 
   # 2026-09-01 配信枠更新: KpJEUTLAwgo → 4ctvWHma_Tk
-  - id: curated-golf-chibacc-umesato
-    name: "千葉カントリークラブ 梅郷コース"
-    operator: "千葉カントリークラブ"
-    video_id: "4ctvWHma_Tk"
-    category: "other"
-    prefecture: "12"
-    lat: 35.9407
-    lng: 139.8886
-    note: "oEmbed 200 / isLive:true。公式サイト chibacc.co.jp に live_stream 埋め込み(channel=UC23ZFVG_LpV2EzMdYdeERxw)。野田市堤根"
-
-  - id: curated-golf-chibacc-kawama
-    name: "千葉カントリークラブ 川間コース"
-    operator: "千葉カントリークラブ"
-    video_id: "U043Bu7KUXQ"
-    category: "other"
-    prefecture: "12"
-    lat: 35.9872
-    lng: 139.8329
-    note: "oEmbed 200 / isLive:true。channel=UCE2s58gSpG8Idsd6AVu7k7A。野田市尾崎(住所ジオコーディング)"
-
+  # 2026-09-23 退役: 配信終了
+  #   - id: curated-golf-chibacc-umesato
+  #     name: "千葉カントリークラブ 梅郷コース"
+  #     operator: "千葉カントリークラブ"
+  #     video_id: "4ctvWHma_Tk"
+  #     category: "other"
+  #     prefecture: "12"
+  #     lat: 35.9407
+  #     lng: 139.8886
+  #     note: "oEmbed 200 / isLive:true。公式サイト chibacc.co.jp に live_stream 埋め込み(channel=UC23ZFVG_LpV2EzMdYdeERxw)。野田市堤根"
+  # 2026-09-23 退役: 配信終了
+  #   - id: curated-golf-chibacc-kawama
+  #     name: "千葉カントリークラブ 川間コース"
+  #     operator: "千葉カントリークラブ"
+  #     video_id: "U043Bu7KUXQ"
+  #     category: "other"
+  #     prefecture: "12"
+  #     lat: 35.9872
+  #     lng: 139.8329
+  #     note: "oEmbed 200 / isLive:true。channel=UCE2s58gSpG8Idsd6AVu7k7A。野田市尾崎(住所ジオコーディング)"
   # 2026-09-01 配信枠更新: PQbq23tuAH4 → OBYgpuRExZQ
   - id: curated-golf-chibacc-noda
     name: "千葉カントリークラブ 野田コース"
     operator: "千葉カントリークラブ"
-    video_id: "OBYgpuRExZQ"
+    video_id: "CtCYRbOU974"
     category: "other"
     prefecture: "12"
     lat: 35.9753
@@ -5217,16 +5219,16 @@ cameras:
     note: "oEmbed 200 / isLive:true。channel=UCSVGuiepq8jYmd562YU8fWw。野田市蕃昌"
 
   # 2026-08-31 配信枠更新: yGVFJOigXIY → oq5EdSSc6NU
-  - id: curated-temple-honkoji-ichikawa
-    name: "本光寺（市川）本堂・駐車場"
-    operator: "日蓮宗 光胤山 本光寺"
-    video_id: "oq5EdSSc6NU"
-    category: "other"
-    prefecture: "12"
-    lat: 35.7559
-    lng: 139.9536
-    note: "oEmbed 200 / @honkouji/live canonical isLive:true。24時間ライブ(遥拝用)。市川市大野町3-1695"
-
+  # 2026-09-23 退役: 動画エラー・配信なし
+  #   - id: curated-temple-honkoji-ichikawa
+  #     name: "本光寺（市川）本堂・駐車場"
+  #     operator: "日蓮宗 光胤山 本光寺"
+  #     video_id: "oq5EdSSc6NU"
+  #     category: "other"
+  #     prefecture: "12"
+  #     lat: 35.7559
+  #     lng: 139.9536
+  #     note: "oEmbed 200 / @honkouji/live canonical isLive:true。24時間ライブ(遥拝用)。市川市大野町3-1695"
   - id: curated-scenic-tateyama-shiroyama-park
     name: "館山 城山公園"
     operator: "館山城・城山公園（tateyamacastle.jp）"
@@ -5240,7 +5242,7 @@ cameras:
   - id: curated-scenic-tateyama-castle-summit
     name: "館山城 山頂（市街・館山湾）"
     operator: "館山城・城山公園（tateyamacastle.jp）"
-    video_id: "LGJ44kmVA6I"
+    video_id: "TcN_bBZjcjY"
     category: "scenic"
     prefecture: "12"
     lat: 34.9841
@@ -5250,7 +5252,7 @@ cameras:
   - id: curated-station-motoyawata-north
     name: "JR本八幡駅 北口"
     operator: "千葉県タクシー協会京葉支部"
-    video_id: "3NZQIHZziuw"
+    video_id: "oQVfclB6nvY"
     category: "other"
     prefecture: "12"
     lat: 35.7218
@@ -5281,7 +5283,7 @@ cameras:
   - id: curated-road-kanteikyoku-matsudo-r6
     name: "国道6号 松戸二ツ木（かんてい局松戸店前）"
     operator: "質屋かんてい局松戸店"
-    video_id: "z4rIwOcmyYI"
+    video_id: "41Yotl8zIaY"
     category: "road"
     prefecture: "12"
     lat: 35.8198
@@ -5292,7 +5294,7 @@ cameras:
   - id: curated-road-mobara-hayano-hobundo
     name: "県道27号 茂原大多喜線 茂原早野（豊文堂前）"
     operator: "豊文堂"
-    video_id: "Gk8erKK6uPU"
+    video_id: "otqdCa58RiE"
     category: "road"
     prefecture: "12"
     lat: 35.4154
@@ -5332,7 +5334,7 @@ cameras:
   - id: curated-coast-boso-clubhouse-1
     name: "金谷 房総クラブハウス カメラ1"
     operator: "ネットワークカメラライブ（房総クラブハウス）"
-    video_id: "w6Z3l3S-s5Y"
+    video_id: "4Oa0zcIyhEk"
     category: "coast"
     prefecture: "12"
     lat: 35.1739
@@ -5342,7 +5344,7 @@ cameras:
   - id: curated-coast-boso-clubhouse-2
     name: "金谷 房総クラブハウス カメラ2"
     operator: "ネットワークカメラライブ（房総クラブハウス）"
-    video_id: "Rp6Ut0kBQoE"
+    video_id: "Iepwu9_ntt8"
     category: "coast"
     prefecture: "12"
     lat: 35.1739
@@ -5450,16 +5452,16 @@ cameras:
     lng: 139.8443
     note: "oEmbed 200 / isLive:true。南房総市久枝"
 
-  - id: curated-coast-kamogawa-seaside-2026
-    name: "鴨川 前原海岸（鴨川シーサイド）"
-    operator: "波のスケッチ"
-    video_id: "lEcdg6Xx7t4"
-    category: "coast"
-    prefecture: "12"
-    lat: 35.1015
-    lng: 140.1038
-    note: "既存『鴨川 前原海岸』(LWJPoRLAo5w, 同チャンネル)の更新候補。channel UCEDn0tLxpVqEvI3NJyE2DRA の現行ライブ=lEcdg6Xx7t4 isLive:true"
-
+  # 2026-09-23 退役: 配信終了
+  #   - id: curated-coast-kamogawa-seaside-2026
+  #     name: "鴨川 前原海岸（鴨川シーサイド）"
+  #     operator: "波のスケッチ"
+  #     video_id: "lEcdg6Xx7t4"
+  #     category: "coast"
+  #     prefecture: "12"
+  #     lat: 35.1015
+  #     lng: 140.1038
+  #     note: "既存『鴨川 前原海岸』(LWJPoRLAo5w, 同チャンネル)の更新候補。channel UCEDn0tLxpVqEvI3NJyE2DRA の現行ライブ=lEcdg6Xx7t4 isLive:true"
   - id: curated-scenic-kanozan-kujukutani
     name: "鹿野山 九十九谷展望公園"
     operator: "Green Base"
@@ -5485,7 +5487,7 @@ cameras:
   - id: curated-zoo-x-zoo-llama-matsudo
     name: "エクス動物園 リャマ（松戸）"
     operator: "エクス動物園（エクスアリーナ松戸）"
-    video_id: "-19SL15ZBJc"
+    video_id: "mfgAT2R-SiQ"
     category: "healing"
     prefecture: "12"
     lat: 35.7583
@@ -5495,7 +5497,7 @@ cameras:
   - id: curated-other-rc-stadium-sodegaura
     name: "RCスタジアム袖ケ浦（K2 International Circuit）"
     operator: "RCスタジアム袖ケ浦"
-    video_id: "4EqSSbpMMEU"
+    video_id: "ZEtd_AKuANU"
     category: "other"
     prefecture: "12"
     lat: 35.3785
@@ -5516,7 +5518,7 @@ cameras:
   - id: curated-other-dogpark-tenten-nagareyama
     name: "Dogpark&Cafe TENTEN（流山）"
     operator: "Dogpark and cafe TENTEN"
-    video_id: "6v2y_Bf2nLQ"
+    video_id: "m5788-gdi0I"
     category: "other"
     prefecture: "12"
     lat: 35.8417
@@ -5524,16 +5526,16 @@ cameras:
     note: "oEmbed 200 / isLive:true"
 
   # 2026-08-31 配信枠更新: v_GOxe9PSvY → z-5S9dRd-Yg
-  - id: curated-sky-maihama-livecamera
-    name: "舞浜上空（東京ディズニーリゾート方面）"
-    operator: "舞浜ライブカメラ- MaihamaLivecamera -"
-    video_id: "z-5S9dRd-Yg"
-    category: "other"
-    prefecture: "12"
-    lat: 35.6321
-    lng: 139.8816
-    note: "oEmbed 200 / @maihamalivecamera/live isLive:true。個人チャンネル(チャンネル名=運営者)。配信IDが頻繁に更新される(過去 1cnbKGLJ_mQ 等)→channel追従推奨"
-
+  # 2026-09-23 退役: 配信終了（アーカイブのみ）
+  #   - id: curated-sky-maihama-livecamera
+  #     name: "舞浜上空（東京ディズニーリゾート方面）"
+  #     operator: "舞浜ライブカメラ- MaihamaLivecamera -"
+  #     video_id: "z-5S9dRd-Yg"
+  #     category: "other"
+  #     prefecture: "12"
+  #     lat: 35.6321
+  #     lng: 139.8816
+  #     note: "oEmbed 200 / @maihamalivecamera/live isLive:true。個人チャンネル(チャンネル名=運営者)。配信IDが頻繁に更新される(過去 1cnbKGLJ_mQ 等)→channel追従推奨"
   # 2026-08-31 退役: 2021-12以降ライブ配信なし(チャンネルに現行ライブ無し)
   # - id: curated-shrine-toudaijima-inari-urayasu
   # name: "当代島稲荷神社（浦安）"
@@ -14985,15 +14987,16 @@ cameras:
     video_id: eSRTGmPD6U0
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【ライブカメラ】ライブカメラ生中継／千葉県松戸市新坂川桜並木／2026年8月29)。oEmbed 200。座標は地図マーカー実位置。掲載元: https://ameblo.jp/souhonjin/'
   # 2026-08-31 配信枠更新: Pz4XSbxM6cw → -19SL15ZBJc
-  - id: curated-lcdb-228bbce6
-    name: 【休止中】エクスアリーナ松戸店ヤギ
-    operator: こ〜ちゃんとヤギのふれあい日記
-    category: other
-    prefecture: '12'
-    lat: 35.762477
-    lng: 139.934994
-    video_id: -19SL15ZBJc
-    note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: エクス動物園　リャマ日記)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/channel/UCkmM2oMx4qfg0BGy4M7FmmQ'
+  # 2026-09-23 退役: 休止のまま配信なし（リャマのみ継続）
+  #   - id: curated-lcdb-228bbce6
+  #     name: 【休止中】エクスアリーナ松戸店ヤギ
+  #     operator: こ〜ちゃんとヤギのふれあい日記
+  #     category: other
+  #     prefecture: '12'
+  #     lat: 35.762477
+  #     lng: 139.934994
+  #     video_id: -19SL15ZBJc
+  #     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: エクス動物園　リャマ日記)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/channel/UCkmM2oMx4qfg0BGy4M7FmmQ'
   - id: curated-lcdb-86946e2c
     name: 北森ペット病院駐車場
     operator: 北森ペット病院
