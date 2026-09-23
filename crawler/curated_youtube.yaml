@@ -18372,3 +18372,35 @@ cameras:
     lng: 140.1014
     note: "埋め込み不可のため誘導型。運営者未特定のため削除依頼即応"
 
+  # 2026-09-23 印旛沼調査（2026-09-22 北印旛沼堤防決壊）で追加
+  - id: curated-inbanuma-kyoso-breach
+    name: 印旛沼 堤防決壊箇所（北印旛沼東岸・成田市）
+    operator: "京相農園（成田市・YouTubeチャンネル）"
+    video_id: "yWe7BfKUt9M"
+    category: river
+    prefecture: "12"
+    lat: 35.800924
+    lng: 140.263637
+    note: "農業者による臨時配信（埋め込み可）。回線都合で停止しうる。配信終了時は退役。削除依頼即応"
+
+  - id: curated-shisui-r51-crossing
+    name: 酒々井町排水路 国道51号横断（上岩橋地先）
+    operator: "酒々井町役場"
+    video_id: "yiLfO5PsRQ8"
+    embed: false   # playableInEmbed=false → 誘導型
+    category: river
+    prefecture: "12"
+    lat: 35.7368
+    lng: 140.2740
+    note: "町の排水路カメラ4本のうち未登録だった1本。座標は上岩橋地先の推定"
+
+  - id: curated-sakura-yagi-lc24
+    name: 千葉県佐倉市八木（街の定点カメラ）
+    operator: "ライブカメラ24（livecamera24.jp）"
+    channel_id: "UCaCVRmnmzQapYrxg78k8h-Q"
+    category: road
+    prefecture: "12"
+    lat: 35.7036
+    lng: 140.2556
+    note: "千葉市の同系4台と同じユーザー判断で採用（削除依頼即応）。埋め込み可"
+
