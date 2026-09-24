@@ -2643,4 +2643,63 @@ class AppLocalizationsVi extends AppLocalizations {
   String bosaiSnowPrefCamerasTitle(String pref) {
     return 'Camera ở $pref (tuyết)';
   }
+
+  @override
+  String get mapLayerOldMapTitle => 'Bản đồ xưa (Konjaku Map)';
+
+  @override
+  String get mapLayerOldMapSubtitle =>
+      'So sánh bản đồ địa hình từ thời Minh Trị đến Bình Thành với hiện nay (59 khu vực)';
+
+  @override
+  String mapLegendOldMap(String region, String era) {
+    return 'Bản đồ $region, $era';
+  }
+
+  @override
+  String get mapOldMapNoRegion =>
+      'Không có bản đồ xưa ở nơi này (hãy di chuyển đến khu vực có dữ liệu)';
+
+  @override
+  String get mapOldMapCompareVertical => 'So sánh trái/phải';
+
+  @override
+  String get mapOldMapCompareHorizontal => 'So sánh trên/dưới';
+
+  @override
+  String get mapOldMapCompareOpacity => 'So sánh bằng độ trong suốt';
+
+  @override
+  String get mapOldMapOldSide => 'Xưa';
+
+  @override
+  String get mapOldMapNewSide => 'Nay';
+
+  @override
+  String mapOldMapEraRange(int start, int end) {
+    return '$start–$end';
+  }
+
+  @override
+  String mapOldMapEraSingle(int year) {
+    return '$year';
+  }
+
+  @override
+  String get mapOldMapNoticeTitle => 'Về bản đồ xưa';
+
+  @override
+  String get mapOldMapNoticeBody =>
+      '- Bản đồ địa hình cũ từ \"Konjaku Map on the web\" được phủ lên bản đồ hiện nay. Kéo tay nắm trên đường ranh để so sánh xưa và nay\n- Bản đồ cũ có thể lệch vị trí hàng chục mét trở lên ở một số nơi\n- Chỉ là tham khảo về nơi từng là sông hoặc biển. Khi quyết định phòng chống thiên tai, hãy xem thêm bản đồ nguy cơ và thông tin của chính quyền địa phương';
+
+  @override
+  String get oldMapDisclaimer =>
+      'Bản đồ cũ có thể lệch vị trí. Chỉ là tham khảo về sự hình thành của đất';
+
+  @override
+  String get settingsKjmap => 'Konjaku Map on the web (bản đồ xưa)';
+
+  @override
+  String get settingsKjmapNote =>
+      'Trang xem bản đồ địa hình theo thời gian ((C) Kenji Tani). Nguồn của lớp \"Bản đồ xưa\"';
 }

@@ -2637,4 +2637,63 @@ class AppLocalizationsEn extends AppLocalizations {
   String bosaiSnowPrefCamerasTitle(String pref) {
     return 'Cameras in $pref (snow)';
   }
+
+  @override
+  String get mapLayerOldMapTitle => 'Old maps (Konjaku Map)';
+
+  @override
+  String get mapLayerOldMapSubtitle =>
+      'Compare topographic maps from the 1890s onward with today (59 areas)';
+
+  @override
+  String mapLegendOldMap(String region, String era) {
+    return '$region map, $era';
+  }
+
+  @override
+  String get mapOldMapNoRegion =>
+      'No old map for this place (move to a covered area)';
+
+  @override
+  String get mapOldMapCompareVertical => 'Compare left/right';
+
+  @override
+  String get mapOldMapCompareHorizontal => 'Compare top/bottom';
+
+  @override
+  String get mapOldMapCompareOpacity => 'Compare by opacity';
+
+  @override
+  String get mapOldMapOldSide => 'Then';
+
+  @override
+  String get mapOldMapNewSide => 'Now';
+
+  @override
+  String mapOldMapEraRange(int start, int end) {
+    return '$start–$end';
+  }
+
+  @override
+  String mapOldMapEraSingle(int year) {
+    return '$year';
+  }
+
+  @override
+  String get mapOldMapNoticeTitle => 'About old maps';
+
+  @override
+  String get mapOldMapNoticeBody =>
+      '- Old topographic maps from \"Konjaku Map on the web\" are overlaid on today\'s map. Drag the handle on the divider to compare then and now\n- Old maps can be offset by tens of meters or more in some places\n- Use this as a guide to where rivers and the sea used to be. For safety decisions, also check hazard maps and municipal information';
+
+  @override
+  String get oldMapDisclaimer =>
+      'Old maps may be offset. A guide to how the land was formed';
+
+  @override
+  String get settingsKjmap => 'Konjaku Map on the web (old maps)';
+
+  @override
+  String get settingsKjmapNote =>
+      'Time-series topographic map viewer ((C) Kenji Tani). Source of the old maps layer';
 }

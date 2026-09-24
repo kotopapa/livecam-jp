@@ -21,6 +21,7 @@ import '../data/facility_layers.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
+import '../data/kjmap.dart';
 import '../data/route_corridor.dart';
 import '../data/situation.dart';
 import '../data/shelter_layers.dart';
@@ -311,6 +312,19 @@ class _MapScreenState extends State<MapScreen> {
   bool _layerFailed = false;
   Timer? _layerTimer;
 
+  // ---- 昔の地図（今昔マップ）----
+  /// 地図の中心を含む地域（無ければ null＝未収録）
+  KjmapRegion? _kjRegion;
+  /// 選択中の時期（地域の eras の folder）
+  String? _kjEra;
+  /// 比較の方法。既定は縦線のスワイプ（2026-09-25 ユーザー決定）
+  _KjCompare _kjCompare = _KjCompare.vertical;
+  /// 境界の位置（0〜1。縦線なら左からの割合、横線なら上からの割合）
+  double _kjSplit = 0.5;
+  /// 透過比較のときの昔の地図の不透明度
+  double _kjOpacity = 0.7;
+  static const _kjNoticeKey = 'kjmap_notice_seen';
+
   Future<void> _setLayer(MapLayerKind kind,
       {QuakePeriod? period, String? typhoonId}) async {
     _layerTimer?.cancel();
@@ -332,6 +346,12 @@ class _MapScreenState extends State<MapScreen> {
     if (kind == MapLayerKind.facilities) {
       await _showFacilityNoticeOnce();
       _requestLayerDataForView();
+      return;
+    }
+    if (kind == MapLayerKind.oldMap) {
+      await Kjmap.load();
+      await _showKjNoticeOnce();
+      _updateKjRegion();
       return;
     }
     if (kind == MapLayerKind.none || HazardLayers.isHazard(kind)) return;
@@ -409,6 +429,7 @@ class _MapScreenState extends State<MapScreen> {
       case MapLayerKind.hazardHightide:
       case MapLayerKind.shelters:
       case MapLayerKind.facilities:
+      case MapLayerKind.oldMap:
         break;
     }
     if (mounted) {
@@ -549,6 +570,13 @@ class _MapScreenState extends State<MapScreen> {
             title: Text(l10n.mapLayerRoadClosuresTitle),
             subtitle: Text(l10n.mapLayerRoadClosuresSubtitle),
             onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.roadClosures); },
+          ),
+          ListTile(
+            leading: Icon(_layer == MapLayerKind.oldMap ? Icons.radio_button_checked : Icons.radio_button_off,
+                color: _layer == MapLayerKind.oldMap ? Theme.of(ctx).colorScheme.primary : null),
+            title: Text(l10n.mapLayerOldMapTitle),
+            subtitle: Text(l10n.mapLayerOldMapSubtitle),
+            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.oldMap); },
           ),
           // 防災拠点（給水拠点・防災備蓄倉庫）は公開自治体が4都県8自治体と少ないため
           // 1.2.0 では選択肢に出さない（2026-08-31 ユーザー判断）。実装は残してあり、
@@ -697,6 +725,122 @@ class _MapScreenState extends State<MapScreen> {
       ),
     );
     await prefs.setBool(_shelterNoticeKey, true);
+  }
+
+  /// 昔の地図を初めてONにしたときの注意（位置ずれ・目安であること）
+  Future<void> _showKjNoticeOnce() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool(_kjNoticeKey) ?? false) return;
+    if (!mounted) return;
+    await showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(ctx.l10n.mapOldMapNoticeTitle),
+        content: SingleChildScrollView(
+          child: Text(
+            '${ctx.l10n.mapOldMapNoticeBody}\n\n${Kjmap.attribution}',
+            style: const TextStyle(fontSize: 13),
+          ),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('OK')),
+        ],
+      ),
+    );
+    await prefs.setBool(_kjNoticeKey, true);
+  }
+
+  /// 地図の中心を含む今昔マップの地域を選び直す。地域が変わっても同じ時期があれば維持し、
+  /// 無ければ最も古い時期にする。範囲外なら null（凡例に「未収録」と出す）
+  void _updateKjRegion() {
+    if (_layer != MapLayerKind.oldMap) return;
+    final LatLng center;
+    try {
+      center = _controller.camera.center;
+    } catch (_) {
+      return;
+    }
+    final regions = Kjmap.regions;
+    KjmapRegion? next = _kjRegion;
+    if (next == null || !next.contains(center)) {
+      final hits = Kjmap.regionsAt(regions, center);
+      next = hits.isEmpty ? null : hits.first;
+    }
+    String? era = _kjEra;
+    if (next != null && (era == null || next.era(era) == null)) era = next.eras.first.folder;
+    if (next == null) era = null;
+    if (next?.id != _kjRegion?.id || era != _kjEra) {
+      setState(() {
+        _kjRegion = next;
+        _kjEra = era;
+      });
+    }
+  }
+
+  /// 昔の地図の操作（時期のチップ／比較方法／透過スライダー）。地図左下に積む
+  Widget _kjChips() {
+    final l10n = context.l10n;
+    final region = _kjRegion;
+    Widget modeButton(_KjCompare m, IconData icon, String tooltip) => IconButton(
+          icon: Icon(icon, size: 18),
+          tooltip: tooltip,
+          visualDensity: VisualDensity.compact,
+          isSelected: _kjCompare == m,
+          style: IconButton.styleFrom(
+              backgroundColor: _kjCompare == m ? Theme.of(context).colorScheme.primaryContainer : null),
+          onPressed: () => setState(() => _kjCompare = m),
+        );
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+      decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.92),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
+      child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+        if (region != null)
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              const Icon(Icons.history, size: 16, color: Colors.brown),
+              const SizedBox(width: 6),
+              for (final e in region.eras)
+                Padding(
+                  padding: const EdgeInsets.only(right: 6),
+                  child: ChoiceChip(
+                    label: Text(_kjEraLabel(e), style: const TextStyle(fontSize: 12)),
+                    selected: _kjEra == e.folder,
+                    visualDensity: VisualDensity.compact,
+                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    onSelected: (_) => setState(() => _kjEra = e.folder),
+                  ),
+                ),
+            ]),
+          ),
+        Row(mainAxisSize: MainAxisSize.min, children: [
+          modeButton(_KjCompare.vertical, Icons.vertical_split, l10n.mapOldMapCompareVertical),
+          modeButton(_KjCompare.horizontal, Icons.horizontal_split, l10n.mapOldMapCompareHorizontal),
+          modeButton(_KjCompare.opacity, Icons.opacity, l10n.mapOldMapCompareOpacity),
+          if (_kjCompare == _KjCompare.opacity)
+            SizedBox(
+              width: 140,
+              child: Slider(
+                value: _kjOpacity,
+                min: 0.1,
+                max: 1,
+                onChanged: (v) => setState(() => _kjOpacity = v),
+              ),
+            ),
+        ]),
+      ]),
+    );
+  }
+
+  String _kjEraLabel(KjmapEra e) {
+    final l10n = context.l10n;
+    return e.start == e.end
+        ? l10n.mapOldMapEraSingle(e.start)
+        : l10n.mapOldMapEraRange(e.start, e.end);
   }
 
   /// 表示範囲（余白込み）。初回レイアウト前は null
@@ -1514,6 +1658,12 @@ class _MapScreenState extends State<MapScreen> {
           title = l10n.mapLegendRoadClosures(items.where((i) => i.isAlert).length);
           items.clear();
         }
+      case MapLayerKind.oldMap:
+        final r = _kjRegion;
+        final e = r == null || _kjEra == null ? null : r.era(_kjEra!);
+        title = r == null || e == null
+            ? l10n.mapOldMapNoRegion
+            : l10n.mapLegendOldMap(r.name, _kjEraLabel(e));
       case MapLayerKind.none:
         title = '';
     }
@@ -2339,6 +2489,30 @@ class _MapScreenState extends State<MapScreen> {
         return _roadRegulationWidgets();
       case MapLayerKind.roadClosures:
         return _roadClosuresWidgets();
+      case MapLayerKind.oldMap:
+        final r = _kjRegion;
+        final era = _kjEra;
+        if (r == null || era == null) return const [];
+        // 配信元のタイルを直接読む（複製配信は禁止）。TMS＝y が南西始点
+        final tiles = TileLayer(
+          key: ValueKey('kjmap-${r.id}-$era'),
+          urlTemplate: Kjmap.tileTemplate(r.id, era),
+          tms: true,
+          minNativeZoom: Kjmap.minZoom,
+          maxNativeZoom: r.maxZoom,
+          userAgentPackageName: 'jp.livecam.livecam_jp',
+          errorTileCallback: (_, _, _) {},
+        );
+        if (_kjCompare == _KjCompare.opacity) {
+          return [Opacity(opacity: _kjOpacity, child: tiles)];
+        }
+        // スワイプ: 境界より左（上）だけ昔の地図を描く
+        return [
+          ClipRect(
+            clipper: _SplitClipper(vertical: _kjCompare == _KjCompare.vertical, split: _kjSplit),
+            child: tiles,
+          ),
+        ];
       case MapLayerKind.none:
         return const [];
     }
@@ -3283,6 +3457,7 @@ class _MapScreenState extends State<MapScreen> {
                   _maybeRebuildForPan(_controller.camera);
                 }
                 _requestLayerDataForView();
+                _updateKjRegion();
               }
             },
           ),
@@ -3366,9 +3541,12 @@ class _MapScreenState extends State<MapScreen> {
                     Padding(padding: const EdgeInsets.only(bottom: 6), child: _typhoonChips()),
                   if (_layer == MapLayerKind.roadClosures)
                     Padding(padding: const EdgeInsets.only(bottom: 6), child: _closureChips()),
+                  if (_layer == MapLayerKind.oldMap)
+                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _kjChips()),
                   Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
                   if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
                   if (_layer == MapLayerKind.shelters) const _ShelterAttribution(),
+                  if (_layer == MapLayerKind.oldMap) const _KjmapAttribution(),
                   if (_layer == MapLayerKind.facilities)
                     _FacilityAttribution(notice: _facilities?.index?.attribution),
                   _GsiAttribution(worldTiles: _useWorldTiles),
@@ -3377,6 +3555,17 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ],
         ),
+        // 昔の地図の新旧スワイプの境界線（取っ手をドラッグで移動）。地図の上・ボタンの下
+        if (_layer == MapLayerKind.oldMap && _kjRegion != null && _kjCompare != _KjCompare.opacity)
+          Positioned.fill(
+            child: _KjDivider(
+              vertical: _kjCompare == _KjCompare.vertical,
+              split: _kjSplit,
+              oldLabel: context.l10n.mapOldMapOldSide,
+              newLabel: context.l10n.mapOldMapNewSide,
+              onChanged: (v) => setState(() => _kjSplit = v),
+            ),
+          ),
         Positioned(
           left: 12,
           top: MediaQuery.of(context).padding.top + 12,
@@ -3799,3 +3988,134 @@ String closureCauseNameOf(AppLocalizations l10n, ClosureCause c) => switch (c) {
       ClosureCause.weather => l10n.closureCauseWeather,
       ClosureCause.other => l10n.closureCauseOther,
     };
+
+
+/// 昔の地図の比較方法
+enum _KjCompare { vertical, horizontal, opacity }
+
+/// 新旧スワイプ用: 境界より左（上）だけを描く
+class _SplitClipper extends CustomClipper<Rect> {
+  const _SplitClipper({required this.vertical, required this.split});
+
+  final bool vertical;
+  final double split;
+
+  @override
+  Rect getClip(Size size) => vertical
+      ? Rect.fromLTWH(0, 0, size.width * split, size.height)
+      : Rect.fromLTWH(0, 0, size.width, size.height * split);
+
+  @override
+  bool shouldReclip(_SplitClipper old) => old.vertical != vertical || old.split != split;
+}
+
+/// 新旧スワイプの境界線と取っ手。線に沿った細い帯だけがドラッグを受け、地図の操作は妨げない
+class _KjDivider extends StatelessWidget {
+  const _KjDivider({
+    required this.vertical,
+    required this.split,
+    required this.oldLabel,
+    required this.newLabel,
+    required this.onChanged,
+  });
+
+  final bool vertical;
+  final double split;
+  final String oldLabel;
+  final String newLabel;
+  final ValueChanged<double> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, c) {
+      final w = c.maxWidth, h = c.maxHeight;
+      final pos = (vertical ? w : h) * split;
+      const band = 36.0;
+      Widget label(String t) => Container(
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+            decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(4)),
+            child: Text(t, style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
+          );
+      final handle = Container(
+        width: 36,
+        height: 36,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.circle,
+          boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 4)],
+        ),
+        child: const Icon(Icons.unfold_more, size: 22, color: Colors.black87),
+      );
+      // 境界線（白い線に薄い影。Positioned は Stack の直下に置く）
+      final line = IgnorePointer(
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: const [BoxShadow(color: Colors.black45, blurRadius: 3)],
+          ),
+        ),
+      );
+      return Stack(children: [
+        if (vertical)
+          Positioned(left: pos - 1.5, top: 0, bottom: 0, width: 3, child: line)
+        else
+          Positioned(top: pos - 1.5, left: 0, right: 0, height: 3, child: line),
+        // 昔／今のラベル（境界の両側）
+        if (vertical)
+          Positioned(
+            left: pos - 60, top: MediaQuery.of(context).padding.top + 64, width: 120,
+            child: IgnorePointer(
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [label(oldLabel), label(newLabel)])),
+          )
+        else
+          Positioned(
+            left: 12, top: pos - 30, height: 60,
+            child: IgnorePointer(
+                child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start, children: [label(oldLabel), label(newLabel)])),
+          ),
+        // ドラッグ帯（線に沿った細い帯）＋取っ手
+        if (vertical)
+          Positioned(
+            left: pos - band / 2, top: 0, bottom: 0, width: band,
+            child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onPanUpdate: (d) => onChanged(((pos + d.delta.dx) / w).clamp(0.05, 0.95)),
+              child: Center(child: RotatedBox(quarterTurns: 1, child: handle)),
+            ),
+          )
+        else
+          Positioned(
+            top: pos - band / 2, left: 0, right: 0, height: band,
+            child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onPanUpdate: (d) => onChanged(((pos + d.delta.dy) / h).clamp(0.05, 0.95)),
+              child: Center(child: handle),
+            ),
+          ),
+      ]);
+    });
+  }
+}
+
+/// 昔の地図表示中の出典（利用条件: 「今昔マップ on the web」の文字を画面に入れる。常時表示）
+class _KjmapAttribution extends StatelessWidget {
+  const _KjmapAttribution();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      color: Colors.white70,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+        InkWell(
+          onTap: () => launchUrl(Uri.parse(Kjmap.siteUrl), mode: LaunchMode.externalApplication),
+          child: const Text(Kjmap.attribution, style: TextStyle(fontSize: 10, decoration: TextDecoration.underline)),
+        ),
+        Text(context.l10n.oldMapDisclaimer,
+            style: const TextStyle(fontSize: 9, color: Colors.black54)),
+      ]),
+    );
+  }
+}

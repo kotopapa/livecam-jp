@@ -261,3 +261,12 @@ python site/build.py                            # 配信ファイル生成
 - 観測点表は同梱アセット `app/assets/data/amedas_snow_stations.json`（`tools/amedas_snow_stations.py` 生成）。`amedastable.json` の `elems` 6文字目が '1' の地点が積雪深観測点（2026-09 時点 336地点。宮崎・鹿児島にもある）。座標は度分→十進、市区町村（JIS 5桁、政令市は区）は国土地理院逆ジオコーダ（控えは `data/municipality_geocache.json`、fill_municipality と共用）。観測点の追加・移設は年に数回なので冬前に一度回せば足りる
 - 画面は 都道府県（最深の深い順。最深の観測点名と観測点数）→ `SnowPrefectureScreen`（市区町村ごとに観測点と積雪深・24時間降雪。市区町村行からその市区町村のカメラ一覧 `PrefCamerasScreen(municipality:)`）。市区町村名は `wardNames`（政令市の区）→ `MunicipalityNames`（じゃらん導線と共用の municipalities.json）の順で引く。近くの観測点カードは WBGT と同じく最終既知位置から最寄り3地点。色は地図の積雪深レイヤーの凡例（5/20/50/100/150/200cm）に揃えた
 - **2026-09 時点では無雪期のため実データでの表示確認ができていない**（フィクスチャによる単体テストのみ）。初雪のあと、都道府県の並び・市区町村名・24時間降雪の表示を実機で確認すること。10/22〜初雪までは「現在、積雪を観測している地点はありません」と出る
+
+## 昔の地図レイヤー（今昔マップ）の知見（2026-09-25追記）
+
+- 地図レイヤー「昔の地図（今昔マップ）」は「今昔マップ on the web」（埼玉大学 谷謙二氏。2022年8月逝去、現在は今昔マップ運営委員会が更新）の旧版地形図タイル `https://ktgis.net/kjmapw/kjtilemap/<地域>/<時期>/{z}/{x}/{y}.png` を配信元から直接読む（**複製配信は禁止**）。**TMS（y は南西始点）なので flutter_map の `tms: true`**。ズーム 8〜16（東北地方太平洋岸・関東は 15）
+- 地域・時期・範囲の表は `app/assets/data/kjmap_regions.json`（`tools/kjmap_regions.py` が配信元の `kjmapdata.js` の kjmapDataSet[地域].age[].mapList[] の図郭から生成。59地域・318時期）。アプリは地図の中心を含む地域（狭い順）を選び、地図を動かすたびに `_updateKjRegion` で選び直す。範囲外は凡例に「未収録」
+- **利用条件**: 画面に「今昔マップ on the web」の文字を入れる（`_KjmapAttribution` を常時表示、折りたたみ対象外）。使用上の注意ページに「条件を守れば許諾のメール連絡は不要」、タイルサービスのページに「アプリで一般公開する場合は連絡いただけると幸い」→ **公開時に kjmap@ktgis.net へ一報する**（運営委員会宛と添える）
+- 比較は3方式（`_KjCompare`）: 縦線スワイプ（既定、2026-09-25 ユーザー決定）・横線スワイプ・透過スライダー。スワイプは昔の地図の TileLayer を `ClipRect(_SplitClipper)` で切り抜き、境界の取っ手（`_KjDivider`。線に沿った36pxの帯だけがドラッグを受ける）で `_kjSplit` を動かす。透過は Opacity
+- 初回ONの注意ダイアログ（位置ずれ・目安であること）は SharedPreferences `kjmap_notice_seen`
+- 実タイルでの見た目確認はウィジェットテストで可能: `HttpOverrides.global` を素の HttpOverrides 派生に差し替え、`NetworkTileProvider(cachingProvider: const DisabledMapCachingProvider())`（ディスクキャッシュが path_provider を呼んで MissingPluginException になる）、`tester.runAsync` 内で待ってから `matchesGoldenFile` を `--update-goldens` で書く

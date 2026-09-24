@@ -2544,6 +2544,61 @@ class AppLocalizationsJa extends AppLocalizations {
   String bosaiSnowPrefCamerasTitle(String pref) {
     return '$prefのカメラ（積雪）';
   }
+
+  @override
+  String get mapLayerOldMapTitle => '昔の地図（今昔マップ）';
+
+  @override
+  String get mapLayerOldMapSubtitle => '明治〜平成の地形図を今の地図と比較（全国59地域）';
+
+  @override
+  String mapLegendOldMap(String region, String era) {
+    return '$regionの地形図 $era';
+  }
+
+  @override
+  String get mapOldMapNoRegion => 'この場所の昔の地図はありません（対象地域へ動かしてください）';
+
+  @override
+  String get mapOldMapCompareVertical => '左右で比較';
+
+  @override
+  String get mapOldMapCompareHorizontal => '上下で比較';
+
+  @override
+  String get mapOldMapCompareOpacity => '透過で比較';
+
+  @override
+  String get mapOldMapOldSide => '昔';
+
+  @override
+  String get mapOldMapNewSide => '今';
+
+  @override
+  String mapOldMapEraRange(int start, int end) {
+    return '$start〜$end年';
+  }
+
+  @override
+  String mapOldMapEraSingle(int year) {
+    return '$year年';
+  }
+
+  @override
+  String get mapOldMapNoticeTitle => '昔の地図について';
+
+  @override
+  String get mapOldMapNoticeBody =>
+      '・「今昔マップ on the web」の旧版地形図を今の地図に重ねます。境界線の取っ手を動かすと新旧を見比べられます\n・古い地図は場所によって位置が数十メートル以上ずれることがあります\n・昔は川や海だった場所を知るための目安です。防災の判断はハザードマップや自治体の情報と合わせてご確認ください';
+
+  @override
+  String get oldMapDisclaimer => '古い地図は位置がずれることがあります。土地の成り立ちの目安としてご覧ください';
+
+  @override
+  String get settingsKjmap => '今昔マップ on the web（昔の地図）';
+
+  @override
+  String get settingsKjmapNote => '時系列地形図閲覧サイト（(C)谷 謙二）。地図レイヤー「昔の地図」の出典';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -5119,4 +5174,63 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String bosaiSnowPrefCamerasTitle(String pref) {
     return '$prefの カメラ（雪（ゆき））';
   }
+
+  @override
+  String get mapLayerOldMapTitle => 'むかしの 地図（ちず）';
+
+  @override
+  String get mapLayerOldMapSubtitle =>
+      '明治（めいじ）から 平成（へいせい）の 地図（ちず）を いまと くらべる（全国（ぜんこく）59の ちいき）';
+
+  @override
+  String mapLegendOldMap(String region, String era) {
+    return '$regionの むかしの 地図（ちず） $era';
+  }
+
+  @override
+  String get mapOldMapNoRegion =>
+      'この ばしょの むかしの 地図（ちず）は ありません（ある ちいきへ うごかしてください）';
+
+  @override
+  String get mapOldMapCompareVertical => '左右（さゆう）で くらべる';
+
+  @override
+  String get mapOldMapCompareHorizontal => '上下（じょうげ）で くらべる';
+
+  @override
+  String get mapOldMapCompareOpacity => 'すかして くらべる';
+
+  @override
+  String get mapOldMapOldSide => 'むかし';
+
+  @override
+  String get mapOldMapNewSide => 'いま';
+
+  @override
+  String mapOldMapEraRange(int start, int end) {
+    return '$start〜$end年（ねん）';
+  }
+
+  @override
+  String mapOldMapEraSingle(int year) {
+    return '$year年（ねん）';
+  }
+
+  @override
+  String get mapOldMapNoticeTitle => 'むかしの 地図（ちず）に ついて';
+
+  @override
+  String get mapOldMapNoticeBody =>
+      '・「今昔マップ on the web」の むかしの 地図（ちず）を いまの 地図（ちず）に かさねます。さかいめの まるを うごかすと くらべられます\n・ふるい 地図（ちず）は ばしょが 何十（なんじゅう）メートルも ずれる ことが あります\n・むかし 川（かわ）や 海（うみ）だった ばしょを 知（し）る めやすです。ひなんの はんだんは ハザードマップや 市（し）や 町（まち）の じょうほうと いっしょに かくにんしてください';
+
+  @override
+  String get oldMapDisclaimer =>
+      'ふるい 地図（ちず）は ばしょが ずれる ことが あります。土地（とち）の なりたちの めやすです';
+
+  @override
+  String get settingsKjmap => '今昔マップ on the web（むかしの 地図（ちず））';
+
+  @override
+  String get settingsKjmapNote =>
+      'むかしの 地図（ちず）を 見（み）る サイト（(C)谷 謙二）。「むかしの 地図（ちず）」の しゅってん';
 }

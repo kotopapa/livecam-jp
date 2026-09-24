@@ -4575,6 +4575,102 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'{pref}のカメラ（積雪）'**
   String bosaiSnowPrefCamerasTitle(String pref);
+
+  /// No description provided for @mapLayerOldMapTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'昔の地図（今昔マップ）'**
+  String get mapLayerOldMapTitle;
+
+  /// No description provided for @mapLayerOldMapSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'明治〜平成の地形図を今の地図と比較（全国59地域）'**
+  String get mapLayerOldMapSubtitle;
+
+  /// No description provided for @mapLegendOldMap.
+  ///
+  /// In ja, this message translates to:
+  /// **'{region}の地形図 {era}'**
+  String mapLegendOldMap(String region, String era);
+
+  /// No description provided for @mapOldMapNoRegion.
+  ///
+  /// In ja, this message translates to:
+  /// **'この場所の昔の地図はありません（対象地域へ動かしてください）'**
+  String get mapOldMapNoRegion;
+
+  /// No description provided for @mapOldMapCompareVertical.
+  ///
+  /// In ja, this message translates to:
+  /// **'左右で比較'**
+  String get mapOldMapCompareVertical;
+
+  /// No description provided for @mapOldMapCompareHorizontal.
+  ///
+  /// In ja, this message translates to:
+  /// **'上下で比較'**
+  String get mapOldMapCompareHorizontal;
+
+  /// No description provided for @mapOldMapCompareOpacity.
+  ///
+  /// In ja, this message translates to:
+  /// **'透過で比較'**
+  String get mapOldMapCompareOpacity;
+
+  /// No description provided for @mapOldMapOldSide.
+  ///
+  /// In ja, this message translates to:
+  /// **'昔'**
+  String get mapOldMapOldSide;
+
+  /// No description provided for @mapOldMapNewSide.
+  ///
+  /// In ja, this message translates to:
+  /// **'今'**
+  String get mapOldMapNewSide;
+
+  /// No description provided for @mapOldMapEraRange.
+  ///
+  /// In ja, this message translates to:
+  /// **'{start}〜{end}年'**
+  String mapOldMapEraRange(int start, int end);
+
+  /// No description provided for @mapOldMapEraSingle.
+  ///
+  /// In ja, this message translates to:
+  /// **'{year}年'**
+  String mapOldMapEraSingle(int year);
+
+  /// No description provided for @mapOldMapNoticeTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'昔の地図について'**
+  String get mapOldMapNoticeTitle;
+
+  /// ADAPT: 昔の地図レイヤーを初めてONにしたときの注意。末尾に出典表記（日本語のまま）が続く。サイト名「今昔マップ on the web」は利用条件により固定
+  ///
+  /// In ja, this message translates to:
+  /// **'・「今昔マップ on the web」の旧版地形図を今の地図に重ねます。境界線の取っ手を動かすと新旧を見比べられます\n・古い地図は場所によって位置が数十メートル以上ずれることがあります\n・昔は川や海だった場所を知るための目安です。防災の判断はハザードマップや自治体の情報と合わせてご確認ください'**
+  String get mapOldMapNoticeBody;
+
+  /// No description provided for @oldMapDisclaimer.
+  ///
+  /// In ja, this message translates to:
+  /// **'古い地図は位置がずれることがあります。土地の成り立ちの目安としてご覧ください'**
+  String get oldMapDisclaimer;
+
+  /// No description provided for @settingsKjmap.
+  ///
+  /// In ja, this message translates to:
+  /// **'今昔マップ on the web（昔の地図）'**
+  String get settingsKjmap;
+
+  /// No description provided for @settingsKjmapNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'時系列地形図閲覧サイト（(C)谷 謙二）。地図レイヤー「昔の地図」の出典'**
+  String get settingsKjmapNote;
 }
 
 class _AppLocalizationsDelegate

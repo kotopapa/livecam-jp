@@ -16,6 +16,7 @@ import 'package:in_app_review/in_app_review.dart';
 
 import '../data/ad_free.dart';
 import '../data/analytics.dart';
+import '../data/kjmap.dart';
 import '../app_state.dart';
 import '../config.dart';
 import '../data/locale_controller.dart';
@@ -631,6 +632,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
             subtitle: Text(l10n.settingsJmaDictionaryNote),
             trailing: const Icon(Icons.open_in_new, size: 18),
             onTap: () => _open(_jmaDictionaryUrl),
+          ),
+          // 昔の地図レイヤーの出典（利用条件: サイト名の表示。タイルは配信元を直接読む）
+          ListTile(
+            leading: const Icon(Icons.history),
+            title: Text(l10n.settingsKjmap),
+            subtitle: Text(l10n.settingsKjmapNote),
+            trailing: const Icon(Icons.open_in_new, size: 18),
+            onTap: () => _open(Kjmap.siteUrl),
           ),
           ListTile(
             leading: const Icon(Icons.gavel_outlined),

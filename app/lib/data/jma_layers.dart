@@ -48,6 +48,9 @@ enum MapLayerKind {
 
   /// 道路の通行止め・規制（冠水センサー＋国交省の規制を統合。色＝原因。data/road_closures.dart）
   roadClosures,
+
+  /// 昔の地図（今昔マップ on the web の旧版地形図。data/kjmap.dart）。今の地図と新旧を比べる
+  oldMap,
 }
 
 enum QuakePeriod { day, week, month }

@@ -2554,4 +2554,59 @@ class AppLocalizationsKo extends AppLocalizations {
   String bosaiSnowPrefCamerasTitle(String pref) {
     return '$pref의 카메라(적설)';
   }
+
+  @override
+  String get mapLayerOldMapTitle => '옛 지도(今昔マップ)';
+
+  @override
+  String get mapLayerOldMapSubtitle => '메이지~헤이세이 시대의 지형도를 현재와 비교(전국 59개 지역)';
+
+  @override
+  String mapLegendOldMap(String region, String era) {
+    return '$region 지형도 $era';
+  }
+
+  @override
+  String get mapOldMapNoRegion => '이 장소의 옛 지도가 없습니다(대상 지역으로 이동해 주세요)';
+
+  @override
+  String get mapOldMapCompareVertical => '좌우로 비교';
+
+  @override
+  String get mapOldMapCompareHorizontal => '상하로 비교';
+
+  @override
+  String get mapOldMapCompareOpacity => '투명도로 비교';
+
+  @override
+  String get mapOldMapOldSide => '과거';
+
+  @override
+  String get mapOldMapNewSide => '현재';
+
+  @override
+  String mapOldMapEraRange(int start, int end) {
+    return '$start~$end년';
+  }
+
+  @override
+  String mapOldMapEraSingle(int year) {
+    return '$year년';
+  }
+
+  @override
+  String get mapOldMapNoticeTitle => '옛 지도에 대하여';
+
+  @override
+  String get mapOldMapNoticeBody =>
+      '・「今昔マップ on the web」의 옛 지형도를 현재 지도에 겹칩니다. 경계선의 손잡이를 움직이면 과거와 현재를 비교할 수 있습니다\n・옛 지도는 장소에 따라 위치가 수십 미터 이상 어긋날 수 있습니다\n・과거에 강이나 바다였던 곳을 아는 참고 자료입니다. 방재 판단은 해저드맵과 지자체 정보를 함께 확인하세요';
+
+  @override
+  String get oldMapDisclaimer => '옛 지도는 위치가 어긋날 수 있습니다. 토지 형성의 참고용입니다';
+
+  @override
+  String get settingsKjmap => '今昔マップ on the web(옛 지도)';
+
+  @override
+  String get settingsKjmapNote => '시계열 지형도 열람 사이트((C)谷 謙二). 「옛 지도」 레이어의 출처';
 }

@@ -2606,5 +2606,51 @@
         "type": "String"
       }
     }
-  }
+  },
+  "mapLayerOldMapTitle": "昔の地図（今昔マップ）",
+  "mapLayerOldMapSubtitle": "明治〜平成の地形図を今の地図と比較（全国59地域）",
+  "mapLegendOldMap": "{region}の地形図 {era}",
+  "@mapLegendOldMap": {
+    "placeholders": {
+      "region": {
+        "type": "String"
+      },
+      "era": {
+        "type": "String"
+      }
+    }
+  },
+  "mapOldMapNoRegion": "この場所の昔の地図はありません（対象地域へ動かしてください）",
+  "mapOldMapCompareVertical": "左右で比較",
+  "mapOldMapCompareHorizontal": "上下で比較",
+  "mapOldMapCompareOpacity": "透過で比較",
+  "mapOldMapOldSide": "昔",
+  "mapOldMapNewSide": "今",
+  "mapOldMapEraRange": "{start}〜{end}年",
+  "@mapOldMapEraRange": {
+    "placeholders": {
+      "start": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "mapOldMapEraSingle": "{year}年",
+  "@mapOldMapEraSingle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "mapOldMapNoticeTitle": "昔の地図について",
+  "mapOldMapNoticeBody": "・「今昔マップ on the web」の旧版地形図を今の地図に重ねます。境界線の取っ手を動かすと新旧を見比べられます\n・古い地図は場所によって位置が数十メートル以上ずれることがあります\n・昔は川や海だった場所を知るための目安です。防災の判断はハザードマップや自治体の情報と合わせてご確認ください",
+  "@mapOldMapNoticeBody": {
+    "description": "ADAPT: 昔の地図レイヤーを初めてONにしたときの注意。末尾に出典表記（日本語のまま）が続く。サイト名「今昔マップ on the web」は利用条件により固定"
+  },
+  "oldMapDisclaimer": "古い地図は位置がずれることがあります。土地の成り立ちの目安としてご覧ください",
+  "settingsKjmap": "今昔マップ on the web（昔の地図）",
+  "settingsKjmapNote": "時系列地形図閲覧サイト（(C)谷 謙二）。地図レイヤー「昔の地図」の出典"
 }

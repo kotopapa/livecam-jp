@@ -2531,6 +2531,61 @@ class AppLocalizationsZh extends AppLocalizations {
   String bosaiSnowPrefCamerasTitle(String pref) {
     return '$pref的摄像头（积雪）';
   }
+
+  @override
+  String get mapLayerOldMapTitle => '旧地图（今昔地图）';
+
+  @override
+  String get mapLayerOldMapSubtitle => '将明治至平成时期的地形图与现在对比（全国59个地区）';
+
+  @override
+  String mapLegendOldMap(String region, String era) {
+    return '$region地形图 $era';
+  }
+
+  @override
+  String get mapOldMapNoRegion => '此处没有旧地图（请移动到有数据的地区）';
+
+  @override
+  String get mapOldMapCompareVertical => '左右对比';
+
+  @override
+  String get mapOldMapCompareHorizontal => '上下对比';
+
+  @override
+  String get mapOldMapCompareOpacity => '透明度对比';
+
+  @override
+  String get mapOldMapOldSide => '过去';
+
+  @override
+  String get mapOldMapNewSide => '现在';
+
+  @override
+  String mapOldMapEraRange(int start, int end) {
+    return '$start〜$end年';
+  }
+
+  @override
+  String mapOldMapEraSingle(int year) {
+    return '$year年';
+  }
+
+  @override
+  String get mapOldMapNoticeTitle => '关于旧地图';
+
+  @override
+  String get mapOldMapNoticeBody =>
+      '・将“今昔マップ on the web”的旧版地形图叠加在现在的地图上。拖动分界线上的把手即可比较新旧\n・旧地图在部分地点可能有数十米以上的位置偏差\n・仅供了解过去曾是河流或海洋的地方。防灾判断请结合灾害地图及自治体信息确认';
+
+  @override
+  String get oldMapDisclaimer => '旧地图可能存在位置偏差。仅作为了解土地形成的参考';
+
+  @override
+  String get settingsKjmap => '今昔マップ on the web（旧地图）';
+
+  @override
+  String get settingsKjmapNote => '时间序列地形图浏览网站（(C)谷 謙二）。“旧地图”图层的来源';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -5060,4 +5115,59 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String bosaiSnowPrefCamerasTitle(String pref) {
     return '$pref的攝影機（積雪）';
   }
+
+  @override
+  String get mapLayerOldMapTitle => '舊地圖（今昔地圖）';
+
+  @override
+  String get mapLayerOldMapSubtitle => '將明治至平成時期的地形圖與現在比較（全國59個地區）';
+
+  @override
+  String mapLegendOldMap(String region, String era) {
+    return '$region地形圖 $era';
+  }
+
+  @override
+  String get mapOldMapNoRegion => '此處沒有舊地圖（請移動到有資料的地區）';
+
+  @override
+  String get mapOldMapCompareVertical => '左右比較';
+
+  @override
+  String get mapOldMapCompareHorizontal => '上下比較';
+
+  @override
+  String get mapOldMapCompareOpacity => '透明度比較';
+
+  @override
+  String get mapOldMapOldSide => '過去';
+
+  @override
+  String get mapOldMapNewSide => '現在';
+
+  @override
+  String mapOldMapEraRange(int start, int end) {
+    return '$start〜$end年';
+  }
+
+  @override
+  String mapOldMapEraSingle(int year) {
+    return '$year年';
+  }
+
+  @override
+  String get mapOldMapNoticeTitle => '關於舊地圖';
+
+  @override
+  String get mapOldMapNoticeBody =>
+      '・將「今昔マップ on the web」的舊版地形圖疊在現在的地圖上。拖曳分界線上的把手即可比較新舊\n・舊地圖在部分地點可能有數十公尺以上的位置偏差\n・僅供了解過去曾是河流或海洋的地方。防災判斷請一併確認災害地圖及地方政府資訊';
+
+  @override
+  String get oldMapDisclaimer => '舊地圖可能有位置偏差。僅作為了解土地形成的參考';
+
+  @override
+  String get settingsKjmap => '今昔マップ on the web（舊地圖）';
+
+  @override
+  String get settingsKjmapNote => '時間序列地形圖瀏覽網站（(C)谷 謙二）。「舊地圖」圖層的來源';
 }
