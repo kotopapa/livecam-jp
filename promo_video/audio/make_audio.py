@@ -331,8 +331,8 @@ fx(sweep_noise(1.0, 400, 7000, 0.45), 15.0, 0.25)
 # 1. 問いかけ：スライドと、1文字ずつ跳ねる「今、どう？」
 fx(whoosh(0.4), S["hook"] + 0.0, 0.8, -0.4)
 fx(whoosh(0.5), S["hook"] + 2 * F, 0.5, 0.3)
-for i in range(5):
-    fx(pop(midi(PENTA[i])), S["hook"] + (10 + 3 * i) * F + 3 * F, 0.55)
+for i in range(7):  # 「今どうなってる」7文字（delay 10・stagger 2）
+    fx(pop(midi(PENTA[i])), S["hook"] + (10 + 2 * i) * F + 3 * F, 0.5)
 
 # 2. カウントアップの刻み（0→32F）と着地のチャイム、文字が右から
 for k in range(0, 32, 2):
@@ -349,8 +349,8 @@ fx(sweep_noise(1.5, 300, 2500, 0.4), S["map"] + 34 * F, 0.18)
 
 # 4. 旅先：横から見出し、「今へ。」のポップ、3台のスマホ
 fx(whoosh(0.4, up=False), S["travel"], 0.7, 0.5)
-for i in range(3):
-    fx(pop(midi(PENTA[2 + i * 2])), S["travel"] + (8 + 4 * i) * F + 4 * F, 0.7)
+for i in range(5):  # 「旅先の今を」5文字（delay 8・stagger 3）
+    fx(pop(midi(PENTA[1 + i])), S["travel"] + (8 + 3 * i) * F + 4 * F, 0.65)
 for i, (d, pan) in enumerate([(10, -0.6), (16, 0.0), (22, 0.6)]):
     fx(whoosh(0.35), S["travel"] + d * F, 0.45, pan)
 
@@ -360,11 +360,12 @@ fx(whoosh(0.35, up=False), S["weather"] + 42 * F, 0.6, -0.6)
 fx(sweep_noise(0.55, 500, 6000, 0.35), S["weather"] + 44 * F, 0.55)
 fx(thud(), S["weather"] + 58 * F, 0.7)
 fx(whoosh(0.4), S["weather"] + 50 * F, 0.55)
+fx(whoosh(0.35, up=False), S["weather"] + 6 * F, 0.45, 0.5)  # 「地図に重ねて」が右から
 
 # 6. 通知：1文字ずつ跳ねる、「通知で。」が落ちてくる、ラベルが左から
-for i in range(8):
+for i in range(6):  # 「警報も地震も」
     fx(tick(900 + i * 60), S["alert"] + (2 * i + 3) * F, 0.5)
-for i in range(4):
+for i in range(5):  # 「通知で届く」が落ちてくる
     fx(thud(), S["alert"] + (12 + 4 * i) * F + 8 * F, 0.55)
 for i, d in enumerate([24, 30, 36]):
     fx(whoosh(0.3), S["alert"] + d * F, 0.4, -0.6)
@@ -378,20 +379,20 @@ fx(whoosh(0.55), S["shelter"] + 4 * F, 0.5, -0.6)
 # 8. 注目と備え：2台が上下から、文字が左右から
 fx(whoosh(0.45, up=False), S["daily"], 0.55, -0.4)
 fx(whoosh(0.45), S["daily"] + 8 * F, 0.55, 0.4)
-for i in range(8):
+for i in range(7):  # 「みんなの人気も」
     fx(tick(1000 + i * 70), S["daily"] + (2 * i + 4) * F, 0.35, -0.3)
-for i in range(7):
+for i in range(6):  # 「備蓄の期限も」
     fx(tick(1400 + i * 70), S["daily"] + (20 + 2 * i + 4) * F, 0.35, 0.3)
 
 # 9. ぜんぶ：回転しながら着地、画面が流れる
-for i in range(4):
-    fx(pop(midi(PENTA[i + 3])), S["all"] + (3 * i + 5) * F, 0.6)
+for i in range(6):  # 「ここまで全部」
+    fx(pop(midi(PENTA[i + 2])), S["all"] + (3 * i + 5) * F, 0.55)
 fx(sweep_noise(1.9, 3000, 600, 0.5, up_gain=False), S["all"], 0.25)
 
 # 10. 締め：「今を、」のポップ、名前、無料のラベル
-for i in range(3):
-    fx(pop(midi(PENTA[3 + 2 * i])), S["end"] + (4 * i + 4) * F, 0.8)
-fx(whoosh(0.4, up=False), S["end"] + 8 * F, 0.5, 0.5)
+fx(whoosh(0.4, up=False), S["end"], 0.5, 0.5)  # 「気になる場所の」が右から
+for i in range(5):  # 「今を見よう」（delay 8・stagger 3）
+    fx(pop(midi(PENTA[2 + i])), S["end"] + (8 + 3 * i) * F + 4 * F, 0.75)
 fx(chime(midi(86)), S["end"] + 30 * F, 0.45)
 fx(chime(midi(90)), S["end"] + 31 * F, 0.3)
 fx(chime(midi(93)), S["end"] + 32 * F, 0.25)

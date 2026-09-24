@@ -15,9 +15,9 @@ export const Hook: React.FC = () => {
       <Giant text="今" size={1250} top={440} color={C.blue} delay={0} />
       <Phone src="detail_river" width={560} x={560} y={1330 + (1 - p) * 1100} ry={-38 + 26 * p + f * 0.12} rz={10 - 15 * p} rx={8} />
       <Slide dir="left" delay={0} style={{ left: 70, top: 150 }}>
-        <Chars text="近くの[[川]]、" size={130} stagger={0} />
+        <Chars text="近くの[[川]]" size={130} stagger={0} />
       </Slide>
-      <Chars text="今、どう？" from="bottom" delay={10} stagger={3} size={210} style={{ position: "absolute", left: 62, top: 310 }} />
+      <Chars text="[[今]]どうなってる" from="bottom" delay={10} stagger={2} size={134} em={C.sky} style={{ position: "absolute", left: 64, top: 320 }} />
       <Credit lines={["撮影時の画面例　映像提供：葛飾区役所"]} />
     </AbsoluteFill>
   );
@@ -32,7 +32,7 @@ export const Count: React.FC = () => {
     <AbsoluteFill style={{ background: `linear-gradient(170deg, ${C.blue} 0%, ${C.blueDeep} 60%, #062E70 100%)` }}>
       <Giant text="全国" size={720} top={820} color="rgba(255,255,255,.55)" outline delay={4} drift={1.2} />
       <Counter to={20000} delay={0} dur={32} style={{ position: "absolute", top: 110, width: "100%", textAlign: "center", fontSize: 250, color: C.white, letterSpacing: "-0.03em", scale: `${iv(f, [0, 32, 38, 44], [0.7, 1, 1.08, 1])}` }} />
-      <Chars text="台以上のライブカメラ" from="right" delay={20} stagger={1.5} size={88} style={{ position: "absolute", top: 490, width: "100%", textAlign: "center" }} />
+      <Chars text="台以上の[[ライブカメラ]]" from="right" delay={20} stagger={1.5} size={88} style={{ position: "absolute", top: 490, width: "100%", textAlign: "center" }} />
       <Phone src="map_japan" width={540} x={540} y={1340} ry={180 - 192 * p + (f > 28 ? (f - 28) * 0.1 : 0)} rx={6} scale={0.8 + 0.2 * p} />
       <Credit lines={["撮影時の画面例　地理院タイル・気象庁"]} />
     </AbsoluteFill>
@@ -47,10 +47,10 @@ export const MapScene: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "linear-gradient(180deg, #F4F9FF, #DCEBFA)" }}>
       <Slide dir="top" delay={0} distance={1600} style={{ left: 20, top: 150 }}>
-        <div style={{ fontFamily, fontWeight: 900, fontSize: 250, lineHeight: 1, writingMode: "vertical-rl", color: C.blue }}>地図で</div>
+        <div style={{ fontFamily, fontWeight: 900, fontSize: 230, lineHeight: 1, writingMode: "vertical-rl", color: C.blue }}>地図から</div>
       </Slide>
-      <Slide dir="bottom" delay={6} distance={1800} style={{ left: 810, top: 620 }}>
-        <div style={{ fontFamily, fontWeight: 900, fontSize: 250, lineHeight: 1, writingMode: "vertical-rl", color: C.ink }}>さがす。</div>
+      <Slide dir="bottom" delay={6} distance={1800} style={{ left: 830, top: 760 }}>
+        <div style={{ fontFamily, fontWeight: 900, fontSize: 230, lineHeight: 1, writingMode: "vertical-rl", color: C.ink }}>見つける</div>
       </Slide>
       <Phone
         src="map_tokyo_pins_clean" width={520} x={545} y={1080}
@@ -73,9 +73,9 @@ export const Travel: React.FC = () => {
       <CropFill src="detail_sakurajima" crop={[0, 0.137, 1, 0.255]} zoom={iv(f, [0, 120], [1.35, 1.1], INOUT)} />
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(4,20,45,.55) 0%, rgba(4,20,45,0) 38%, rgba(4,20,45,0) 55%, rgba(4,20,45,.65) 100%)" }} />
       <Slide dir="right" delay={0} style={{ left: 70, top: 140 }}>
-        <Chars text="旅先の、" size={150} stagger={0} />
+        <Chars text="出かける前に" size={140} stagger={0} style={{ textShadow: "0 6px 28px rgba(0,20,50,.55)" }} />
       </Slide>
-      <Chars text="今へ。" from="pop" delay={8} stagger={4} size={280} em={C.mint} style={{ position: "absolute", left: 60, top: 300 }} />
+      <Chars text="[[旅先の今]]を" from="pop" delay={8} stagger={3} size={190} em="#FFD36B" style={{ position: "absolute", left: 60, top: 300, textShadow: "0 6px 28px rgba(0,20,50,.6)" }} />
       <Phone src="detail_live" width={380} x={255} y={1420 + (1 - a) * 1200} rz={-14 * a} ry={22} />
       <Phone src="detail_tokyotower" width={380} x={825} y={1420 + (1 - c) * 1200} rz={14 * c} ry={-22} />
       <Phone src="detail_sakurajima" width={440} x={540} y={1330 + (1 - b) * 1200} rx={4} ry={iv(f, [20, 120], [8, -8])} scale={iv(f, [22, 120], [1, 1.04])} />
@@ -100,10 +100,13 @@ export const Weather: React.FC = () => {
       </div>
       <Phone src="layer_rain_radar" backSrc="layer_typhoon" width={540} x={540} y={1250 + (1 - enter) * 900} ry={-16 + flip + iv(f, [0, 105], [0, 12])} rx={4} />
       <Slide dir="top" delay={0} exitAt={42} exitDir="left" style={{ left: 70, top: 150 }}>
-        <Chars text="[[雨雲]]も。" size={190} stagger={0} em={C.sky} />
+        <Chars text="[[雨雲]]も" size={190} stagger={0} em={C.sky} />
       </Slide>
       <Slide dir="bottom" delay={50} style={{ left: 70, top: 150 }}>
-        <Chars text="[[台風]]の進路も。" size={150} stagger={0} em={C.mint} style={{ marginTop: 20 }} />
+        <Chars text="[[台風の進路]]も" size={150} stagger={0} em={C.mint} style={{ marginTop: 20 }} />
+      </Slide>
+      <Slide dir="right" delay={6} style={{ left: 74, top: 370 }}>
+        <Chars text="地図に重ねて" size={112} stagger={0} />
       </Slide>
       <Credit lines={["撮影時の画面例・現在の情報ではありません", "出典：気象庁・地理院タイル・© OpenStreetMap contributors"]} />
     </AbsoluteFill>
@@ -119,8 +122,8 @@ export const Alert: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "linear-gradient(180deg, #F2F6FF, #D3E2FF)" }}>
       <Giant text="通知" size={560} top={900} color="rgba(30,111,217,.10)" delay={0} />
-      <Chars text="警報も、地震も、" from="bottom" delay={0} stagger={2} size={116} color={C.ink} style={{ position: "absolute", left: 70, top: 150 }} />
-      <Chars text="[[通知]]で。" from="drop" delay={12} stagger={4} size={230} color={C.ink} em={C.blue} style={{ position: "absolute", left: 62, top: 290 }} />
+      <Chars text="警報も地震も" from="bottom" delay={0} stagger={2} size={130} color={C.ink} style={{ position: "absolute", left: 70, top: 150 }} />
+      <Chars text="[[通知]]で届く" from="drop" delay={12} stagger={4} size={180} color={C.ink} em={C.blue} style={{ position: "absolute", left: 62, top: 290 }} />
       <Phone src="bosai_warning" width={500} x={720 + (1 - p) * 900} y={1260} ry={-30 + 14 * p} rz={4} />
       <div style={{ position: "absolute", left: 60, top: 820, transform: `translateX(${(1 - pill(24)) * -900}px) rotate(-6deg)` }}>
         <Pill bg={C.blue} color={C.white}>特別警報</Pill>
@@ -145,10 +148,10 @@ export const Shelter: React.FC = () => {
     <AbsoluteFill style={{ background: "linear-gradient(170deg, #14B3A2, #0B6F80)" }}>
       <Giant text="避難先" size={400} top={820} color="rgba(255,255,255,.7)" outline delay={2} drift={-1} />
       <Slide dir="top" delay={0} style={{ left: 70, top: 150 }}>
-        <Chars text="[[避難先]]も、" size={160} stagger={0} em="#FFF3B0" />
+        <Chars text="避難場所を" size={160} stagger={0} />
       </Slide>
       <Slide dir="bottom" delay={6} style={{ left: 70, top: 335 }}>
-        <Chars text="ふだんから。" size={160} stagger={0} />
+        <Chars text="[[ふだん]]から" size={160} stagger={0} em="#FFF3B0" />
       </Slide>
       <Phone src="layer_shelters" width={520} x={600 - (1 - p) * 1100} y={1270} ry={40 - 28 * p + f * 0.08} rz={-4} rx={4} />
       <Credit lines={["撮影時の画面例　出典：国土地理院・地理院タイル", "最新の避難場所情報は市町村にご確認ください"]} />
@@ -163,10 +166,10 @@ export const Daily: React.FC = () => {
   const a = bouncy(f, fps, 0, 14, 120), b = bouncy(f, fps, 8, 14, 120);
   return (
     <AbsoluteFill style={{ background: "linear-gradient(180deg, #EAF5FF, #BCDDFF)" }}>
-      <Chars text="みんなの[[注目]]も、" from="left" delay={0} stagger={2} size={112} color={C.ink} em={C.blue} style={{ position: "absolute", left: 70, top: 150 }} />
+      <Chars text="みんなの[[人気]]も" from="left" delay={0} stagger={2} size={112} color={C.ink} em={C.blue} style={{ position: "absolute", left: 70, top: 150 }} />
       <Phone src="ranking" width={430} x={330} y={1010 - (1 - a) * 1700} rz={-8} ry={18} />
       <Phone src="stockpile" width={430} x={760} y={1130 + (1 - b) * 1700} rz={8} ry={-18} />
-      <Chars text="備えの[[期限]]も。" from="right" delay={20} stagger={2} size={112} color={C.ink} em={C.blue} style={{ position: "absolute", left: 70, top: 1640 }} />
+      <Chars text="備蓄の[[期限]]も" from="right" delay={20} stagger={2} size={112} color={C.ink} em={C.blue} style={{ position: "absolute", left: 70, top: 1640 }} />
       <Credit dark lines={["撮影時の画面例"]} />
     </AbsoluteFill>
   );
@@ -178,8 +181,8 @@ export const All: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill style={{ background: `linear-gradient(180deg, ${C.blue}, ${C.blueDeep})` }}>
-      <Chars text="ぜんぶ、" from="spin" delay={0} stagger={3} size={190} style={{ position: "absolute", left: 70, top: 170 }} />
-      <Chars text="ひとつのアプリに。" from="bottom" delay={10} stagger={2} size={104} em={C.mint} style={{ position: "absolute", left: 70, top: 400 }} />
+      <Chars text="ここまで全部" from="spin" delay={0} stagger={3} size={150} style={{ position: "absolute", left: 70, top: 170 }} />
+      <Chars text="[[ひとつ]]のアプリ" from="bottom" delay={10} stagger={2} size={120} em={C.mint} style={{ position: "absolute", left: 70, top: 400 }} />
       {ALL.map((s, i) => {
         const x = 1400 + i * 340 - f * 52;
         return <Phone key={s} src={s} width={320} x={x} y={1220 + (i % 2 ? 60 : -60)} ry={-24} rz={i % 2 ? 4 : -4} />;
@@ -197,8 +200,8 @@ export const End: React.FC = () => {
   const name = smooth(f, fps, 22, 16);
   return (
     <AbsoluteFill style={{ background: "linear-gradient(180deg, #FFFFFF, #E4F0FF)" }}>
-      <Chars text="今を、" from="pop" delay={0} stagger={4} size={250} color={C.blue} style={{ position: "absolute", left: 62, top: 150 }} />
-      <Chars text="見に行こう。" from="right" delay={8} stagger={2} size={150} color={C.ink} style={{ position: "absolute", left: 70, top: 420 }} />
+      <Chars text="気になる場所の" from="right" delay={0} stagger={2} size={124} color={C.ink} style={{ position: "absolute", left: 70, top: 150 }} />
+      <Chars text="[[今]]を見よう" from="pop" delay={8} stagger={3} size={180} color={C.ink} em={C.blue} style={{ position: "absolute", left: 64, top: 320 }} />
       <div style={{ position: "absolute", left: 70, top: 690, fontFamily, fontWeight: 900, fontSize: 92, color: C.ink, opacity: name, transform: `translateY(${(1 - name) * 40}px)` }}>
         全国ライブカメラ地図
       </div>
@@ -206,7 +209,7 @@ export const End: React.FC = () => {
         <Pill bg={C.blue} color={C.white} size={58}>無料・登録不要</Pill>
       </div>
       <div style={{ position: "absolute", left: 70, top: 1000, fontFamily, fontWeight: 700, fontSize: 46, color: C.ink, opacity: iv(f, [34, 44], [0, 1]) }}>
-        App Store / Google Play で検索
+        App Store／Google Play で検索
       </div>
       <Phone src="map_japan" width={560} x={540} y={1790 + (1 - p) * 700} ry={iv(f, [14, 90], [-20, -6], OUT)} rx={10} />
     </AbsoluteFill>
