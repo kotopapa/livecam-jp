@@ -664,7 +664,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ListTile(
             leading: const Icon(Icons.info_outline),
             title: Text(l10n.settingsVersion),
-            subtitle: const Text(appVersion),
+            subtitle: Text(app.runtimeVersion),
             // 隠し機能: 5回タップで「通知診断」を表示する
             onTap: () {
               if (_diagUnlocked) return;
@@ -750,7 +750,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onPressed: () => showLicensePage(
                 context: context,
                 applicationName: l10n.appTitle,
-                applicationVersion: appVersion,
+                applicationVersion: app.runtimeVersion,
               ),
               child: Text(
                 l10n.settingsOssLicenses,

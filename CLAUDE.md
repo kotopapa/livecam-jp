@@ -270,3 +270,4 @@ python site/build.py                            # 配信ファイル生成
 - 比較は3方式（`_KjCompare`）: 縦線スワイプ（既定、2026-09-25 ユーザー決定）・横線スワイプ・透過スライダー。スワイプは昔の地図の TileLayer を `ClipRect(_SplitClipper)` で切り抜き、境界の取っ手（`_KjDivider`。線に沿った36pxの帯だけがドラッグを受ける）で `_kjSplit` を動かす。透過は Opacity
 - 初回ONの注意ダイアログ（位置ずれ・目安であること）は SharedPreferences `kjmap_notice_seen`
 - 実タイルでの見た目確認はウィジェットテストで可能: `HttpOverrides.global` を素の HttpOverrides 派生に差し替え、`NetworkTileProvider(cachingProvider: const DisabledMapCachingProvider())`（ディスクキャッシュが path_provider を呼んで MissingPluginException になる）、`tester.runAsync` 内で待ってから `matchesGoldenFile` を `--update-goldens` で書く
+- **設定画面のバージョン表示は `AppState.runtimeVersion`（PackageInfo）を使う**。`config.dart` の `appVersion` 定数は UA 文字列などの控えで、`test/app_version_test.dart` が pubspec の version と一致するか照合する（1.5.2・1.5.3 で定数の更新が漏れ、設定画面に 1.5.1 と出ていた。2026-09-25）。バージョンを上げるときは pubspec・config.dart の両方を変え、`flutter build ios --config-only` を実行する

@@ -89,6 +89,10 @@ class AppState extends ChangeNotifier {
   String get routeOrsKey => repository.manifest?.routeOrsKey ?? '';
   String _appVersion = '';
 
+  /// 画面に出すバージョン。実行時に PackageInfo から取った値を優先し、未取得なら config の定数
+  /// （1.5.3 が定数の更新漏れで「1.5.1」と表示された。2026-09-25）
+  String get runtimeVersion => _appVersion.isNotEmpty ? _appVersion : appVersion;
+
   /// "1.2.3" 形式の比較。current < minimum のとき true
   @visibleForTesting
   static bool isVersionBelow(String current, String minimum) {
