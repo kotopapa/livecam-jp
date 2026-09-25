@@ -5728,15 +5728,16 @@ cameras:
     lng: 132.8639
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(竹原市吉名町)。geo=瀬戸内ゴルフリゾート, 竹原吉名線, 吉名町, 竹原市, 広島県, 725-0013, 日本"
 
-  - id: curated-golf-emerald-coast-miyako
-    name: "宮古島 エメラルドコーストゴルフリンクス"
-    operator: "KuROKO-宮古島映像-（個人ch。エメラルドコーストGL設置カメラ）"
-    video_id: "ij8oqydLVLo"
-    category: "scenic"
-    prefecture: "47"
-    lat: 24.72599
-    lng: 125.28342
-    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。運営者はチャンネル名扱い。座標:Nominatim(宮古島市下地与那覇)。geo=エメラルドコーストゴルフリンクス, 1, 宮古島市, 沖縄県, 906-0305, 日本"
+  # 2026-09-25 退役: 配信枠 ij8oqydLVLo が終了。同チャンネルの現行ライブはウォーターマークホテル＆リゾーツ沖縄 宮古島（別地点）
+  # - id: curated-golf-emerald-coast-miyako
+  # name: "宮古島 エメラルドコーストゴルフリンクス"
+  # operator: "KuROKO-宮古島映像-（個人ch。エメラルドコーストGL設置カメラ）"
+  # video_id: "ij8oqydLVLo"
+  # category: "scenic"
+  # prefecture: "47"
+  # lat: 24.72599
+  # lng: 125.28342
+  # note: "oEmbed 200確認(2026-08-24)。座標:Nominatim(宮古島市下地与那覇)"
 
   # 2026-09-23 配信枠更新: 5mIEuHXYmgY → EpTE14HEGf4
   - id: curated-golf-takanezawa-park-daseki
@@ -18695,6 +18696,7 @@ cameras:
     name: 宮古島 上野 星空ライブカメラ（南西向き）
     operator: 宮古島星空観察部つきいちみやこ
     channel_id: UCeGeNFOeUuMPf9gpFCXaqlw
+    embed: false   # 2026-09-25 不定期配信で通常はライブが無く埋め込みが再生不可になるため誘導型
     category: scenic
     prefecture: '47'
     lat: 24.74
