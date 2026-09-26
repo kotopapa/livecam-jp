@@ -132,9 +132,10 @@ class AppState extends ChangeNotifier {
   String? notice;
 
   /// 地図のフィルタ（カテゴリ・動画のみ）
-  final Set<String> enabledCategories = {
+  static const Set<String> _allCategories = {
     'river', 'road', 'volcano', 'dam', 'coast', 'port', 'scenic', 'healing', 'other'
   };
+  final Set<String> enabledCategories = {..._allCategories};
   bool videoOnly = false;
   bool showWorld = true; // 世界(海外)カメラの表示
   bool hideUncertain = false; // 位置情報が曖昧なカメラを非表示
@@ -201,6 +202,35 @@ class AppState extends ChangeNotifier {
       favoritesOnly ||
       okOnly ||
       enabledCategories.length != 9;
+
+  /// 効いている絞り込み条件の数（地図下部パネルの「絞り込み {count}」表示用）。
+  /// 検索語・動画のみ・海外非表示・位置不確か非表示・お気に入りのみ・正常のみを
+  /// それぞれ1、カテゴリが9種未満なら1として数える
+  int get activeFilterCount {
+    var n = 0;
+    if (searchQuery.isNotEmpty) n++;
+    if (videoOnly) n++;
+    if (!showWorld) n++;
+    if (hideUncertain) n++;
+    if (favoritesOnly) n++;
+    if (okOnly) n++;
+    if (enabledCategories.length != 9) n++;
+    return n;
+  }
+
+  /// 絞り込みを全解除する（0件案内の「解除」ボタン用）
+  void clearFilters() {
+    searchQuery = '';
+    videoOnly = false;
+    hideUncertain = false;
+    favoritesOnly = false;
+    okOnly = false;
+    showWorld = true;
+    enabledCategories
+      ..clear()
+      ..addAll(_allCategories);
+    notifyListeners();
+  }
 
   /// カテゴリ以外の共通フィルタ（一覧・地図・件数集計で共用）
   bool _matchesCommonFilters(Camera c) =>

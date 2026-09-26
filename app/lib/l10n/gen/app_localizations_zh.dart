@@ -930,13 +930,30 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String mapFilteredCount(int count) {
-    return '筛选中 $count台';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '筛选中 $countString台';
   }
 
   @override
   String mapTotalCount(int count) {
-    return '$count台';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '$countString台';
   }
+
+  @override
+  String get mapCountLoading => '加载中…';
+
+  @override
+  String get mapCountNoMatch => '没有符合条件的摄像头';
+
+  @override
+  String get mapClearFilters => '清除';
 
   @override
   String get mapLayersTooltip => '地图图层';
@@ -952,6 +969,11 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get mapPanelFilter => '筛选';
+
+  @override
+  String mapPanelFilterCount(int count) {
+    return '筛选 $count';
+  }
 
   @override
   String get mapPanelMore => '更多';
@@ -3564,13 +3586,30 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String mapFilteredCount(int count) {
-    return '篩選中 $count 台';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '篩選中 $countString 台';
   }
 
   @override
   String mapTotalCount(int count) {
-    return '$count 台';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '$countString 台';
   }
+
+  @override
+  String get mapCountLoading => '載入中…';
+
+  @override
+  String get mapCountNoMatch => '沒有符合條件的攝影機';
+
+  @override
+  String get mapClearFilters => '清除';
 
   @override
   String get mapLayersTooltip => '地圖圖層';
@@ -3586,6 +3625,11 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapPanelFilter => '篩選';
+
+  @override
+  String mapPanelFilterCount(int count) {
+    return '篩選 $count';
+  }
 
   @override
   String get mapPanelMore => '更多';

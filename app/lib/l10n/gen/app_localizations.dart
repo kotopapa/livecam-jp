@@ -1864,6 +1864,24 @@ abstract class AppLocalizations {
   /// **'{count}台'**
   String mapTotalCount(int count);
 
+  /// No description provided for @mapCountLoading.
+  ///
+  /// In ja, this message translates to:
+  /// **'読み込み中…'**
+  String get mapCountLoading;
+
+  /// No description provided for @mapCountNoMatch.
+  ///
+  /// In ja, this message translates to:
+  /// **'条件に一致するカメラはありません'**
+  String get mapCountNoMatch;
+
+  /// No description provided for @mapClearFilters.
+  ///
+  /// In ja, this message translates to:
+  /// **'解除'**
+  String get mapClearFilters;
+
   /// No description provided for @mapLayersTooltip.
   ///
   /// In ja, this message translates to:
@@ -1893,6 +1911,12 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'絞り込み'**
   String get mapPanelFilter;
+
+  /// No description provided for @mapPanelFilterCount.
+  ///
+  /// In ja, this message translates to:
+  /// **'絞り込み {count}'**
+  String mapPanelFilterCount(int count);
 
   /// No description provided for @mapPanelMore.
   ///

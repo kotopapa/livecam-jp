@@ -68,6 +68,13 @@ class _MapScreenState extends State<MapScreen> {
   double _lastGoodZoom = _initialZoom;
   bool _recovering = false;
   double _zoom = _initialZoom;
+
+  /// 地図をドラッグ中か（下部パネルを沈めるための状態。onPositionChanged の
+  /// hasGesture で立て、onMapEvent の操作終了イベントで戻す。ピンのタップ等の
+  /// 単なるタップでは onPositionChanged 自体が呼ばれないため沈まない）
+  bool _mapDragging = false;
+  // ジェスチャー終了イベントを取り逃した場合のフェイルセーフ
+  Timer? _mapDraggingFailsafe;
   LatLng? _myLocation;
   bool _locating = false;
   bool _following = false; // 現在地追従モード
@@ -227,6 +234,7 @@ class _MapScreenState extends State<MapScreen> {
   void dispose() {
     _layerTimer?.cancel();
     _situationTimer?.cancel();
+    _mapDraggingFailsafe?.cancel();
     _shelters?.removeListener(_onDataChanged);
     _shelters?.dispose();
     _facilities?.removeListener(_onDataChanged);
@@ -2874,7 +2882,10 @@ class _MapScreenState extends State<MapScreen> {
                       for (final key in categoryKeys)
                         FilterChip(
                           avatar: CircleAvatar(
-                              backgroundColor: categoryColor(key), radius: 6),
+                              backgroundColor: categoryColor(key),
+                              radius: 6,
+                              child: Icon(categoryIcon(key),
+                                  size: 8, color: Colors.white)),
                           label: Text('${categoryLabelOf(context.l10n, key)} '
                               '${counts[key] ?? 0}'),
                           selected: app.enabledCategories.contains(key),
@@ -3419,6 +3430,18 @@ class _MapScreenState extends State<MapScreen> {
               _lastGoodCenter = camera.center;
               _lastGoodZoom = camera.zoom;
               if (hasGesture && _following) _stopFollowing();
+              // 地図ドラッグ中は下部パネルを沈める（1回だけ setState。ピンのタップ等の
+              // 単なるタップでは onPositionChanged が呼ばれないため沈まない）
+              if (hasGesture && !_mapDragging) {
+                setState(() => _mapDragging = true);
+              }
+              if (hasGesture) {
+                // 操作終了イベントを取り逃した場合のフェイルセーフ
+                _mapDraggingFailsafe?.cancel();
+                _mapDraggingFailsafe = Timer(const Duration(milliseconds: 600), () {
+                  if (mounted) setState(() => _mapDragging = false);
+                });
+              }
               // ピンチ中の毎フレーム再構築はフリーズ→強制終了の原因になる。
               // ジェスチャー中はズーム2段以上の大変化だけ間引いて反映し、
               // 細かい追従は操作終了イベント(onMapEvent)でまとめて行う
@@ -3432,6 +3455,8 @@ class _MapScreenState extends State<MapScreen> {
                   e is MapEventFlingAnimationEnd ||
                   e is MapEventDoubleTapZoomEnd ||
                   e is MapEventRotateEnd) {
+                _mapDraggingFailsafe?.cancel();
+                if (_mapDragging) setState(() => _mapDragging = false);
                 _savePosition();
                 final z = _controller.camera.zoom;
                 if (!z.isFinite) return;
@@ -3472,29 +3497,35 @@ class _MapScreenState extends State<MapScreen> {
               markers: [
                 for (final item in items)
                   if (item.isCluster)
+                    // 見た目はクラスタピンの直径(40)のまま、タップ領域だけ44×44に広げる
                     Marker(
                       point: LatLng(item.latitude, item.longitude),
-                      width: 40,
-                      height: 40,
+                      width: 44,
+                      height: 44,
                       child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
                         onTap: () => _controller.move(
                           LatLng(item.latitude, item.longitude),
                           _zoom + 2,
                         ),
-                        child: ClusterPin(count: item.count),
+                        child: Center(child: ClusterPin(count: item.count)),
                       ),
                     )
                   else
+                    // 見た目はピンの直径(26)のまま、タップ領域だけ44×44に広げる
                     Marker(
                       point: LatLng(item.latitude, item.longitude),
-                      width: 26,
-                      height: 26,
+                      width: 44,
+                      height: 44,
                       child: GestureDetector(
+                        behavior: HitTestBehavior.opaque,
                         onTap: () => _onPinTap(item.camera!),
-                        child: CameraPin(
-                          camera: item.camera!,
-                          state: widget.app.stateOf(item.camera!),
-                          favorite: widget.app.isFavorite(item.camera!),
+                        child: Center(
+                          child: CameraPin(
+                            camera: item.camera!,
+                            state: widget.app.stateOf(item.camera!),
+                            favorite: widget.app.isFavorite(item.camera!),
+                          ),
                         ),
                       ),
                     ),
@@ -3574,7 +3605,9 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   /// 下部の固定領域（下から順に: パネル → 出典帯 → 操作板 → ズーム/現在地）。
-  /// design/map_ui/PROPOSAL.md 第1段階。地図の Stack 内で bottom 固定にする
+  /// design/map_ui/PROPOSAL.md 第1段階。地図の Stack 内で bottom 固定にする。
+  /// 地図をドラッグ中は下部パネルだけ沈める（出典帯が最下段になる。単なるタップでは
+  /// 沈まない。_mapDragging 参照）
   Widget _bottomArea(BuildContext context, List<Camera> cams) {
     // stretch で各段を全幅にする（ズーム/現在地だけ内部で右寄せにする）
     return Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -3582,13 +3615,21 @@ class _MapScreenState extends State<MapScreen> {
       const SizedBox(height: 12),
       _controlPanel(),
       _sourceBar(context, cams),
-      MapBottomPanel(
-        layerActive: _layer != MapLayerKind.none,
-        filterActive: widget.app.hasActiveFilters,
-        onSearch: () => _showPlaceSearch(context),
-        onLayers: () => _showLayerPicker(context),
-        onFilter: () => _showLegendFilter(context),
-        onMore: () => _showMoreSheet(context),
+      AnimatedSize(
+        duration: const Duration(milliseconds: 180),
+        curve: Curves.easeOut,
+        alignment: Alignment.topCenter,
+        child: _mapDragging
+            ? const SizedBox.shrink()
+            : MapBottomPanel(
+                layerActive: _layer != MapLayerKind.none,
+                filterActive: widget.app.hasActiveFilters,
+                filterCount: widget.app.activeFilterCount,
+                onSearch: () => _showPlaceSearch(context),
+                onLayers: () => _showLayerPicker(context),
+                onFilter: () => _showLegendFilter(context),
+                onMore: () => _showMoreSheet(context),
+              ),
       ),
     ]);
   }
@@ -3752,8 +3793,14 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  /// パネル上端に接する出典帯（高さ約20、半透明白）。左に出典、右端に台数
+  /// パネル上端に接する出典帯（高さ約20、半透明白）。左に出典、右端に台数。
+  /// 台帳が未取得なら「読み込み中…」、絞り込みで0件なら案内＋「解除」を出す
+  /// （文言が長くなるので右側は Wrap で必要なら2行に折り返す）
   Widget _sourceBar(BuildContext context, List<Camera> cams) {
+    const countStyle =
+        TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87);
+    final loaded = widget.app.repository.cameras.isNotEmpty;
+    final noMatch = loaded && cams.isEmpty && widget.app.hasActiveFilters;
     return Container(
       color: Colors.white.withValues(alpha: 0.85),
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
@@ -3769,11 +3816,37 @@ class _MapScreenState extends State<MapScreen> {
           ]),
         ),
         const SizedBox(width: 8),
-        Text(
-          widget.app.hasActiveFilters
-              ? context.l10n.mapFilteredCount(cams.length)
-              : context.l10n.mapTotalCount(cams.length),
-          style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87),
+        Flexible(
+          child: Wrap(
+            alignment: WrapAlignment.end,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: 6,
+            children: [
+              if (!loaded)
+                Text(context.l10n.mapCountLoading, style: countStyle)
+              else if (noMatch) ...[
+                Text(context.l10n.mapCountNoMatch,
+                    textAlign: TextAlign.right, style: countStyle),
+                TextButton(
+                  key: const Key('map_clear_filters'),
+                  onPressed: widget.app.clearFilters,
+                  style: TextButton.styleFrom(
+                    minimumSize: Size.zero,
+                    padding: const EdgeInsets.symmetric(horizontal: 2),
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    textStyle: countStyle.copyWith(decoration: TextDecoration.underline),
+                  ),
+                  child: Text(context.l10n.mapClearFilters),
+                ),
+              ] else
+                Text(
+                  widget.app.hasActiveFilters
+                      ? context.l10n.mapFilteredCount(cams.length)
+                      : context.l10n.mapTotalCount(cams.length),
+                  style: countStyle,
+                ),
+            ],
+          ),
         ),
       ]),
     );

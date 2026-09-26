@@ -279,6 +279,16 @@ void main() {
     });
   });
 
+  group('件数の桁区切り', () {
+    testWidgets('mapTotalCount/mapFilteredCount は3桁ごとにカンマを入れる（ja）',
+        (tester) async {
+      final l10n = await _load(tester, const Locale('ja'));
+      expect(l10n.mapTotalCount(20757), '20,757台');
+      expect(l10n.mapFilteredCount(1234), '絞り込み中 1,234台');
+      expect(l10n.mapTotalCount(999), '999台', reason: '4桁未満はカンマ無し');
+    });
+  });
+
   group('表示名の解決', () {
     testWidgets('都道府県47件が全ロケールで解決できる', (tester) async {
       for (final locale in _allLocales) {

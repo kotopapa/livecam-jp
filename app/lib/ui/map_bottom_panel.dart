@@ -16,6 +16,7 @@ class MapBottomPanel extends StatelessWidget {
     required this.onMore,
     this.layerActive = false,
     this.filterActive = false,
+    this.filterCount = 0,
   });
 
   final VoidCallback onSearch;
@@ -28,6 +29,10 @@ class MapBottomPanel extends StatelessWidget {
 
   /// 絞り込み条件がある（AppState.hasActiveFilters）
   final bool filterActive;
+
+  /// 効いている絞り込み条件の数（AppState.activeFilterCount）。
+  /// 1以上なら「絞り込み {count}」、0なら従来の「絞り込み」を表示する
+  final int filterCount;
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +66,9 @@ class MapBottomPanel extends StatelessWidget {
                   child: _PanelButton(
                     key: const Key('map_panel_filter'),
                     icon: Icons.tune,
-                    label: l10n.mapPanelFilter,
+                    label: filterCount > 0
+                        ? l10n.mapPanelFilterCount(filterCount)
+                        : l10n.mapPanelFilter,
                     active: filterActive,
                     onTap: onFilter,
                   ),

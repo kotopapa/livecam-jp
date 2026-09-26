@@ -969,13 +969,30 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String mapFilteredCount(int count) {
-    return '$count shown (filtered)';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '$countString shown (filtered)';
   }
 
   @override
   String mapTotalCount(int count) {
-    return '$count cameras';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '$countString cameras';
   }
+
+  @override
+  String get mapCountLoading => 'Loading…';
+
+  @override
+  String get mapCountNoMatch => 'No cameras match these filters';
+
+  @override
+  String get mapClearFilters => 'Clear';
 
   @override
   String get mapLayersTooltip => 'Map layers';
@@ -991,6 +1008,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mapPanelFilter => 'Filter';
+
+  @override
+  String mapPanelFilterCount(int count) {
+    return 'Filter ($count)';
+  }
 
   @override
   String get mapPanelMore => 'More';

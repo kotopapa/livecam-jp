@@ -937,13 +937,30 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String mapFilteredCount(int count) {
-    return '絞り込み中 $count台';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '絞り込み中 $countString台';
   }
 
   @override
   String mapTotalCount(int count) {
-    return '$count台';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '$countString台';
   }
+
+  @override
+  String get mapCountLoading => '読み込み中…';
+
+  @override
+  String get mapCountNoMatch => '条件に一致するカメラはありません';
+
+  @override
+  String get mapClearFilters => '解除';
 
   @override
   String get mapLayersTooltip => '地図レイヤー';
@@ -959,6 +976,11 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mapPanelFilter => '絞り込み';
+
+  @override
+  String mapPanelFilterCount(int count) {
+    return '絞り込み $count';
+  }
 
   @override
   String get mapPanelMore => 'その他';
@@ -3596,13 +3618,30 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String mapFilteredCount(int count) {
-    return 'しぼりこみちゅう $countだい';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return 'しぼりこみちゅう $countStringだい';
   }
 
   @override
   String mapTotalCount(int count) {
-    return '$countだい';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '$countStringだい';
   }
+
+  @override
+  String get mapCountLoading => 'よみこみちゅう…';
+
+  @override
+  String get mapCountNoMatch => 'あてはまる カメラが ありません';
+
+  @override
+  String get mapClearFilters => 'かいじょ';
 
   @override
   String get mapLayersTooltip => 'ちずの レイヤー';
@@ -3618,6 +3657,11 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapPanelFilter => 'しぼりこみ';
+
+  @override
+  String mapPanelFilterCount(int count) {
+    return 'しぼりこみ $count';
+  }
 
   @override
   String get mapPanelMore => 'その他';

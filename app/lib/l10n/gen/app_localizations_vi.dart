@@ -972,13 +972,30 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String mapFilteredCount(int count) {
-    return 'Đang lọc: $count camera';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return 'Đang lọc: $countString camera';
   }
 
   @override
   String mapTotalCount(int count) {
-    return '$count camera';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '$countString camera';
   }
+
+  @override
+  String get mapCountLoading => 'Đang tải…';
+
+  @override
+  String get mapCountNoMatch => 'Không có camera phù hợp với bộ lọc';
+
+  @override
+  String get mapClearFilters => 'Xóa bộ lọc';
 
   @override
   String get mapLayersTooltip => 'Lớp bản đồ';
@@ -994,6 +1011,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get mapPanelFilter => 'Bộ lọc';
+
+  @override
+  String mapPanelFilterCount(int count) {
+    return 'Bộ lọc $count';
+  }
 
   @override
   String get mapPanelMore => 'Khác';

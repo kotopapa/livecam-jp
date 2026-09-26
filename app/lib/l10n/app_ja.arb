@@ -795,7 +795,8 @@
   "@mapFilteredCount": {
     "placeholders": {
       "count": {
-        "type": "int"
+        "type": "int",
+        "format": "decimalPattern"
       }
     }
   },
@@ -803,15 +804,27 @@
   "@mapTotalCount": {
     "placeholders": {
       "count": {
-        "type": "int"
+        "type": "int",
+        "format": "decimalPattern"
       }
     }
   },
+  "mapCountLoading": "読み込み中…",
+  "mapCountNoMatch": "条件に一致するカメラはありません",
+  "mapClearFilters": "解除",
   "mapLayersTooltip": "地図レイヤー",
   "mapPanelSearchHint": "地名・カメラ名で検索",
   "mapPanelLayers": "レイヤー",
   "mapPanelLayersOn": "レイヤー ON",
   "mapPanelFilter": "絞り込み",
+  "mapPanelFilterCount": "絞り込み {count}",
+  "@mapPanelFilterCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "mapPanelMore": "その他",
   "mapPanelMoreTitle": "地図の操作",
   "mapPanelMoreSubtitle": "いつもの場所と、これから通る道へ",

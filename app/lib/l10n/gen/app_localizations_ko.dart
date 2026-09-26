@@ -941,13 +941,30 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String mapFilteredCount(int count) {
-    return '필터 중 $count대';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '필터 중 $countString대';
   }
 
   @override
   String mapTotalCount(int count) {
-    return '$count대';
+    final intl.NumberFormat countNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String countString = countNumberFormat.format(count);
+
+    return '$countString대';
   }
+
+  @override
+  String get mapCountLoading => '불러오는 중…';
+
+  @override
+  String get mapCountNoMatch => '조건에 맞는 카메라가 없습니다';
+
+  @override
+  String get mapClearFilters => '해제';
 
   @override
   String get mapLayersTooltip => '지도 레이어';
@@ -963,6 +980,11 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get mapPanelFilter => '필터';
+
+  @override
+  String mapPanelFilterCount(int count) {
+    return '필터 $count';
+  }
 
   @override
   String get mapPanelMore => '더보기';
