@@ -271,3 +271,12 @@ python site/build.py                            # 配信ファイル生成
 - 初回ONの注意ダイアログ（位置ずれ・目安であること）は SharedPreferences `kjmap_notice_seen`
 - 実タイルでの見た目確認はウィジェットテストで可能: `HttpOverrides.global` を素の HttpOverrides 派生に差し替え、`NetworkTileProvider(cachingProvider: const DisabledMapCachingProvider())`（ディスクキャッシュが path_provider を呼んで MissingPluginException になる）、`tester.runAsync` 内で待ってから `matchesGoldenFile` を `--update-goldens` で書く
 - **設定画面のバージョン表示は `AppState.runtimeVersion`（PackageInfo）を使う**。`config.dart` の `appVersion` 定数は UA 文字列などの控えで、`test/app_version_test.dart` が pubspec の version と一致するか照合する（1.5.2・1.5.3 で定数の更新が漏れ、設定画面に 1.5.1 と出ていた。2026-09-25）。バージョンを上げるときは pubspec・config.dart の両方を変え、`flutter build ios --config-only` を実行する
+
+## 地図画面の操作UI（2026-09-26 再設計）
+
+- 設計書は `design/map_ui/PROPOSAL.md`（**design/ は .gitignore 対象でローカルのみ**。Codex 素案を5回改訂。`mockup.html` / `mockup_sheets.html` は HTML モック）。FAB 8個を撤去し、**下部固定パネル**（`app/lib/ui/map_bottom_panel.dart`: 検索48＋ボタン行44「レイヤー／絞り込み／…」）＋**出典帯**（パネル上端の半透明帯。左に出典、右に台数）＋**地図上は＋／−ピルと現在地だけ**（`_zoomAndLocation`。操作板の上端に追従）。「…」は `_showMoreSheet`（ルート沿い・お気に入り一覧）。`_mapStackSized` の下部は `_bottomArea` の Column（下から パネル→出典帯→操作板→ズーム/現在地）
+- **レイヤー操作板**は `_controlPanel()` の1枚カード。既定は圧縮（タイトル行48＋雨雲だけ細い時刻スライダー24）、タイトル行タップで展開（詳しいスライダー・チップ・凡例）。展開状態は SharedPreferences `map_controller_expanded`。旧 `map_legend_collapsed`（出典行の折りたたみ）は廃止
+- **「いま起きていること」は右上の「！」丸ボタン**（`SituationButton` / `SituationOverlay` in situation_card.dart。件数バッジ・最上位段階の色）。タップでボタン中心を起点に 250ms `Cubic(.05,.7,.1,1)` で scale 0.6→1.025→1 のカード展開、×／外側タップで 200ms で閉じてボタンに戻る。**新しい signature のときだけ自動で開き**（`_situationExpanded = signature != _dismissedSituation`）、閉じると `_dismissSituation()` が signature を保存。新着時はリング脈動2回（`_pendingPulse` を didChangeDependencies で起動。initState で MediaQuery を触ると assert）。`MediaQuery.disableAnimationsOf` で即時切替
+- レイヤー選択シートは2列タイルのグリッド（`_layerGridTile`。サブタイトルは長押し Tooltip）、絞り込みシートは見出し「カメラの絞り込み」＋「地図に戻る」ボタン
+- ウィジェットテストは Key（`map_panel_search/layers/filter/more`・`map_zoom_in/out`・`map_my_location`・`map_control_panel_title`・`situation_button`）で操作する
+- **シミュレータでの見た目確認**は `tools/screenshot_capture/` のパッチ＋自前の integration_test（Key でタップして `binding.takeScreenshot`）で撮る。`CAPTURE_VIA=simctl` は使えない（onScreenshot はテスト終了後にまとめて呼ばれる）。**一度 ATT ダイアログを出したシミュレータは Flutter の初回フレームが描画されず全部起動画面になる**ので、`flutter run` で起動したことのない別のシミュレータを使う。`git apply` が失敗したら `git apply -3`（ad_banner.dart は「ours」＝広告を出したままで可）

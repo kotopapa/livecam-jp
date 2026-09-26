@@ -767,10 +767,12 @@
   },
   "mapLocationDenied": "位置情報の利用が許可されていません（設定から変更できます）",
   "mapLocationFailed": "現在地を取得できませんでした",
-  "mapLegendTitle": "凡例・絞り込み",
+  "mapLegendTitle": "カメラの絞り込み",
   "mapLegendSearchHint": "カメラ名・運営者・河川/路線名で検索",
   "mapFilterFavoritesOnly": "お気に入りのみ",
   "mapFilterOkOnly": "現在映っているもののみ",
+  "mapFilterIntro": "変更はすぐ反映されます。レイヤーは変わりません。",
+  "mapFilterBackToMap": "地図に戻る",
   "mapLegendLiveDot": "赤ドット = 動画（ライブ配信）",
   "mapLegendUncertain": "黄色の縁 = 位置未確定（おおよそ/代表点）",
   "mapLegendFrozen": "半透明 = 画像が長時間更新されていない",
@@ -806,6 +808,16 @@
     }
   },
   "mapLayersTooltip": "地図レイヤー",
+  "mapPanelSearchHint": "地名・カメラ名で検索",
+  "mapPanelLayers": "レイヤー",
+  "mapPanelLayersOn": "レイヤー ON",
+  "mapPanelFilter": "絞り込み",
+  "mapPanelMore": "その他",
+  "mapPanelMoreTitle": "地図の操作",
+  "mapPanelMoreSubtitle": "いつもの場所と、これから通る道へ",
+  "mapZoomIn": "拡大",
+  "mapZoomOut": "縮小",
+  "mapMyLocation": "現在地",
   "bosaiTitle": "災害速報",
   "bosaiTabQuake": "地震・津波",
   "@bosaiTabQuake": {
@@ -993,6 +1005,8 @@
     "description": "言語名。各言語のARBでも自称表記のままにする"
   },
   "mapLayerPanelSubtitle": "地図に1種類だけ重ねて表示します",
+  "mapControllerExpand": "展開",
+  "mapControllerCollapse": "たたむ",
   "mapLayerNone": "表示しない",
   "mapLayerSectionWeather": "気象",
   "mapLayerRainRadarTitle": "雨雲レーダー（現在）",
@@ -2398,6 +2412,7 @@
     }
   },
   "mapRouteTooltip": "ルート沿いのカメラ",
+  "mapRouteMenu": "ルート沿いのカメラ",
   "routeSheetSubtitle": "出発地と目的地を入れると、経路の近くにあるカメラだけを地図に表示します",
   "routeOrigin": "出発地（住所・地名）",
   "routeDestination": "目的地（住所・地名）",
@@ -2460,6 +2475,8 @@
   "situationTitle": "いま起きていること",
   "situationCount": "{n}件",
   "@situationCount": {"description": "折りたたみ時の件数", "placeholders": {"n": {"type": "int"}}},
+  "situationButtonLabel": "{count}件のお知らせ",
+  "@situationButtonLabel": {"description": "右上の「！」ボタンの読み上げ・バッジ", "placeholders": {"count": {"type": "int"}}},
   "situationSpecial": "特別警報: {prefs}",
   "@situationSpecial": {
     "placeholders": {

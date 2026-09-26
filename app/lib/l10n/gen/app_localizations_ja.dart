@@ -883,7 +883,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapLocationFailed => '現在地を取得できませんでした';
 
   @override
-  String get mapLegendTitle => '凡例・絞り込み';
+  String get mapLegendTitle => 'カメラの絞り込み';
 
   @override
   String get mapLegendSearchHint => 'カメラ名・運営者・河川/路線名で検索';
@@ -893,6 +893,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mapFilterOkOnly => '現在映っているもののみ';
+
+  @override
+  String get mapFilterIntro => '変更はすぐ反映されます。レイヤーは変わりません。';
+
+  @override
+  String get mapFilterBackToMap => '地図に戻る';
 
   @override
   String get mapLegendLiveDot => '赤ドット = 動画（ライブ配信）';
@@ -941,6 +947,36 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mapLayersTooltip => '地図レイヤー';
+
+  @override
+  String get mapPanelSearchHint => '地名・カメラ名で検索';
+
+  @override
+  String get mapPanelLayers => 'レイヤー';
+
+  @override
+  String get mapPanelLayersOn => 'レイヤー ON';
+
+  @override
+  String get mapPanelFilter => '絞り込み';
+
+  @override
+  String get mapPanelMore => 'その他';
+
+  @override
+  String get mapPanelMoreTitle => '地図の操作';
+
+  @override
+  String get mapPanelMoreSubtitle => 'いつもの場所と、これから通る道へ';
+
+  @override
+  String get mapZoomIn => '拡大';
+
+  @override
+  String get mapZoomOut => '縮小';
+
+  @override
+  String get mapMyLocation => '現在地';
 
   @override
   String get bosaiTitle => '災害速報';
@@ -1158,6 +1194,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mapLayerPanelSubtitle => '地図に1種類だけ重ねて表示します';
+
+  @override
+  String get mapControllerExpand => '展開';
+
+  @override
+  String get mapControllerCollapse => 'たたむ';
 
   @override
   String get mapLayerNone => '表示しない';
@@ -2373,6 +2415,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapRouteTooltip => 'ルート沿いのカメラ';
 
   @override
+  String get mapRouteMenu => 'ルート沿いのカメラ';
+
+  @override
   String get routeSheetSubtitle => '出発地と目的地を入れると、経路の近くにあるカメラだけを地図に表示します';
 
   @override
@@ -2451,6 +2496,11 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String situationCount(int n) {
     return '$n件';
+  }
+
+  @override
+  String situationButtonLabel(int count) {
+    return '$count件のお知らせ';
   }
 
   @override
@@ -3492,7 +3542,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get mapLocationFailed => 'いまの ばしょが わかりませんでした';
 
   @override
-  String get mapLegendTitle => 'はんれい・しぼりこみ';
+  String get mapLegendTitle => 'カメラの しぼりこみ';
 
   @override
   String get mapLegendSearchHint => 'カメラの なまえ・だしもと・かわ／どうろの なまえで さがす';
@@ -3502,6 +3552,12 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapFilterOkOnly => 'いま うつって いる ものだけ';
+
+  @override
+  String get mapFilterIntro => 'かえると すぐに はんえいされます。レイヤーは かわりません。';
+
+  @override
+  String get mapFilterBackToMap => 'ちずに もどる';
 
   @override
   String get mapLegendLiveDot => 'あかい てん ＝ うごく えいぞう（ライブ）';
@@ -3550,6 +3606,36 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapLayersTooltip => 'ちずの レイヤー';
+
+  @override
+  String get mapPanelSearchHint => 'ちめい・カメラの なまえで さがす';
+
+  @override
+  String get mapPanelLayers => 'レイヤー';
+
+  @override
+  String get mapPanelLayersOn => 'レイヤー オン';
+
+  @override
+  String get mapPanelFilter => 'しぼりこみ';
+
+  @override
+  String get mapPanelMore => 'その他';
+
+  @override
+  String get mapPanelMoreTitle => 'ちずの そうさ';
+
+  @override
+  String get mapPanelMoreSubtitle => 'いつもの ばしょと、これから とおる みちへ';
+
+  @override
+  String get mapZoomIn => 'かくだい';
+
+  @override
+  String get mapZoomOut => 'しゅくしょう';
+
+  @override
+  String get mapMyLocation => 'げんざいち';
 
   @override
   String get bosaiTitle => 'さいがいの おしらせ';
@@ -3771,6 +3857,12 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapLayerPanelSubtitle => '地図（ちず）に かさねられるのは 1つだけです';
+
+  @override
+  String get mapControllerExpand => 'ひろげる';
+
+  @override
+  String get mapControllerCollapse => 'たたむ';
 
   @override
   String get mapLayerNone => 'なにも 出（だ）さない';
@@ -5002,6 +5094,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get mapRouteTooltip => 'みちに そった カメラ';
 
   @override
+  String get mapRouteMenu => 'みちに そった カメラ';
+
+  @override
   String get routeSheetSubtitle => 'しゅっぱつと もくてきちを いれると、みちの ちかくの カメラだけ みえます';
 
   @override
@@ -5080,6 +5175,11 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String situationCount(int n) {
     return '$nけん';
+  }
+
+  @override
+  String situationButtonLabel(int count) {
+    return '$countけんの おしらせ';
   }
 
   @override

@@ -42,11 +42,85 @@ void main() {
     expect(find.text('一覧'), findsOneWidget);
     expect(find.text('備え'), findsOneWidget);
     expect(find.text('設定'), findsOneWidget);
-    // お気に入りはタブではなく地図右上の★から開く
+    // お気に入りはタブではなく地図下部パネルの「…」から開く
     expect(find.text('お気に入り'), findsNothing);
-    await tester.tap(find.byTooltip('お気に入り'));
-    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('map_panel_more')));
+    await settle(tester);
+    await tester.tap(find.text('お気に入り'));
+    await settle(tester);
     expect(find.byType(FavoritesScreen), findsOneWidget);
+  });
+
+  testWidgets('地図に FloatingActionButton が無く、下部パネルとズーム・現在地が出る', (tester) async {
+    final tmp = Directory(Directory.systemTemp.path);
+    final app = AppState(
+      CameraRepository(
+        api: ApiClient(
+          client: MockClient((_) async => http.Response('not found', 404)),
+        ),
+        cache: CacheStore(tmp),
+      ),
+    );
+    await tester.pumpWidget(
+      LiveCamApp(
+        app: app,
+        onboardingDone: true,
+        localeController: LocaleController(initial: AppLanguage.ja),
+      ),
+    );
+    await tester.pump();
+    // design/map_ui/PROPOSAL.md 第1段階：右上5個・右下3個の FAB は下部パネル・
+    // ズーム/現在地ボタンへ置き換わり、地図上に FloatingActionButton は残らない
+    expect(find.byType(FloatingActionButton), findsNothing);
+    expect(find.byKey(const Key('map_panel_search')), findsOneWidget);
+    expect(find.byKey(const Key('map_panel_layers')), findsOneWidget);
+    expect(find.byKey(const Key('map_panel_filter')), findsOneWidget);
+    expect(find.byKey(const Key('map_panel_more')), findsOneWidget);
+    expect(find.byKey(const Key('map_zoom_in')), findsOneWidget);
+    expect(find.byKey(const Key('map_zoom_out')), findsOneWidget);
+    expect(find.byKey(const Key('map_my_location')), findsOneWidget);
+  });
+
+  testWidgets('レイヤーONで操作板カードが出て、タイトル行タップで展開される', (tester) async {
+    final tmp = Directory(Directory.systemTemp.path);
+    final app = AppState(
+      CameraRepository(
+        api: ApiClient(
+          client: MockClient((_) async => http.Response('not found', 404)),
+        ),
+        cache: CacheStore(tmp),
+      ),
+    );
+    await tester.pumpWidget(
+      LiveCamApp(
+        app: app,
+        onboardingDone: true,
+        localeController: LocaleController(initial: AppLanguage.ja),
+      ),
+    );
+    await tester.pump();
+    // レイヤーOFFのときは操作板カードを出さない
+    expect(find.byKey(const Key('map_control_panel_title')), findsNothing);
+
+    await tester.tap(find.byKey(const Key('map_panel_layers')));
+    await settle(tester);
+    // レイヤー選択シート（グリッド）から台風情報のタイルを選ぶ
+    await tester.tap(find.text('台風情報'));
+    await settle(tester);
+
+    // レイヤーONで操作板カードが出る（既定は圧縮。凡例はまだ見えない）
+    expect(find.byKey(const Key('map_control_panel_title')), findsOneWidget);
+    expect(find.text('現在、発表中の台風・熱帯低気圧はありません'), findsNothing);
+
+    // タイトル行タップで展開すると凡例が見える
+    await tester.tap(find.byKey(const Key('map_control_panel_title')));
+    await settle(tester);
+    expect(find.text('現在、発表中の台風・熱帯低気圧はありません'), findsOneWidget);
+
+    // もう一度タップすると圧縮に戻る
+    await tester.tap(find.byKey(const Key('map_control_panel_title')));
+    await settle(tester);
+    expect(find.text('現在、発表中の台風・熱帯低気圧はありません'), findsNothing);
   });
 
   testWidgets('期限切れの品目があると備えタブにバッジが出る', (tester) async {
@@ -209,8 +283,7 @@ Future<void> settle(WidgetTester tester) async {
 }
 
 void _legendSheetTests() {
-  testWidgets('英語・小さい画面でも凡例シートの外側をタップして閉じられる',
-      (tester) async {
+  testWidgets('英語・小さい画面でも凡例シートの外側をタップして閉じられる', (tester) async {
     tester.view.physicalSize = const Size(640, 1136); // 320x568 @2x
     tester.view.devicePixelRatio = 2.0;
     addTearDown(tester.view.reset);
@@ -231,24 +304,23 @@ void _legendSheetTests() {
       ),
     );
     await tester.pump();
-    final fab = find.byWidgetPredicate(
-        (w) => w is FloatingActionButton && w.heroTag == 'legend_filter');
-    await tester.tap(fab);
+    final filterButton = find.byKey(const Key('map_panel_filter'));
+    await tester.tap(filterButton);
     await settle(tester);
-    expect(find.text('Legend and filters'), findsOneWidget);
+    expect(find.text('Filter cameras'), findsOneWidget);
     // シートは画面上部に余白を残す（= バリアが残る）
     final sheet = tester.getRect(find.byType(BottomSheet));
     expect(sheet.top, greaterThan(20));
     // 上端の余白をタップすると閉じる
     await tester.tapAt(const Offset(160, 5));
     await settle(tester);
-    expect(find.text('Legend and filters'), findsNothing);
+    expect(find.text('Filter cameras'), findsNothing);
 
     // 見出しの閉じるボタンでも閉じる
-    await tester.tap(fab);
+    await tester.tap(filterButton);
     await settle(tester);
     await tester.tap(find.byTooltip('Close'));
     await settle(tester);
-    expect(find.text('Legend and filters'), findsNothing);
+    expect(find.text('Filter cameras'), findsNothing);
   });
 }

@@ -876,7 +876,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapLocationFailed => '无法获取当前位置';
 
   @override
-  String get mapLegendTitle => '图例与筛选';
+  String get mapLegendTitle => '摄像头筛选';
 
   @override
   String get mapLegendSearchHint => '按摄像头名、运营方、河川／路线名搜索';
@@ -886,6 +886,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get mapFilterOkOnly => '仅当前有画面的';
+
+  @override
+  String get mapFilterIntro => '更改会立即生效。图层不会改变。';
+
+  @override
+  String get mapFilterBackToMap => '返回地图';
 
   @override
   String get mapLegendLiveDot => '红点 = 视频（直播）';
@@ -934,6 +940,36 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get mapLayersTooltip => '地图图层';
+
+  @override
+  String get mapPanelSearchHint => '按地名・摄像头名称搜索';
+
+  @override
+  String get mapPanelLayers => '图层';
+
+  @override
+  String get mapPanelLayersOn => '图层 已开启';
+
+  @override
+  String get mapPanelFilter => '筛选';
+
+  @override
+  String get mapPanelMore => '更多';
+
+  @override
+  String get mapPanelMoreTitle => '地图操作';
+
+  @override
+  String get mapPanelMoreSubtitle => '前往常去的地点和即将经过的道路';
+
+  @override
+  String get mapZoomIn => '放大';
+
+  @override
+  String get mapZoomOut => '缩小';
+
+  @override
+  String get mapMyLocation => '当前位置';
 
   @override
   String get bosaiTitle => '灾害速报';
@@ -1149,6 +1185,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get mapLayerPanelSubtitle => '地图上一次只能叠加一种图层。';
+
+  @override
+  String get mapControllerExpand => '展开';
+
+  @override
+  String get mapControllerCollapse => '收起';
 
   @override
   String get mapLayerNone => '不显示';
@@ -2360,6 +2402,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapRouteTooltip => '沿途摄像头';
 
   @override
+  String get mapRouteMenu => '沿途摄像头';
+
+  @override
   String get routeSheetSubtitle => '输入出发地和目的地，仅显示路线附近的摄像头';
 
   @override
@@ -2438,6 +2483,11 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String situationCount(int n) {
     return '$n项';
+  }
+
+  @override
+  String situationButtonLabel(int count) {
+    return '$count条提醒';
   }
 
   @override
@@ -3460,7 +3510,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get mapLocationFailed => '無法取得目前位置';
 
   @override
-  String get mapLegendTitle => '圖例・篩選';
+  String get mapLegendTitle => '篩選攝影機';
 
   @override
   String get mapLegendSearchHint => '以攝影機、營運者、河川／路線名稱搜尋';
@@ -3470,6 +3520,12 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapFilterOkOnly => '僅顯示目前有影像的';
+
+  @override
+  String get mapFilterIntro => '變更會立即套用。圖層不會改變。';
+
+  @override
+  String get mapFilterBackToMap => '回到地圖';
 
   @override
   String get mapLegendLiveDot => '紅點 = 影片（直播）';
@@ -3518,6 +3574,36 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapLayersTooltip => '地圖圖層';
+
+  @override
+  String get mapPanelSearchHint => '以地名・攝影機名稱搜尋';
+
+  @override
+  String get mapPanelLayers => '圖層';
+
+  @override
+  String get mapPanelLayersOn => '圖層 已開啟';
+
+  @override
+  String get mapPanelFilter => '篩選';
+
+  @override
+  String get mapPanelMore => '更多';
+
+  @override
+  String get mapPanelMoreTitle => '地圖操作';
+
+  @override
+  String get mapPanelMoreSubtitle => '前往常去的地點與即將經過的道路';
+
+  @override
+  String get mapZoomIn => '放大';
+
+  @override
+  String get mapZoomOut => '縮小';
+
+  @override
+  String get mapMyLocation => '目前位置';
 
   @override
   String get bosaiTitle => '災害快報';
@@ -3733,6 +3819,12 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapLayerPanelSubtitle => '地圖上僅能疊加顯示一種圖層';
+
+  @override
+  String get mapControllerExpand => '展開';
+
+  @override
+  String get mapControllerCollapse => '收合';
 
   @override
   String get mapLayerNone => '不顯示';
@@ -4944,6 +5036,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get mapRouteTooltip => '沿途攝影機';
 
   @override
+  String get mapRouteMenu => '沿途攝影機';
+
+  @override
   String get routeSheetSubtitle => '輸入出發地與目的地，只顯示路線附近的攝影機';
 
   @override
@@ -5022,6 +5117,11 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   @override
   String situationCount(int n) {
     return '$n項';
+  }
+
+  @override
+  String situationButtonLabel(int count) {
+    return '$count項提醒';
   }
 
   @override

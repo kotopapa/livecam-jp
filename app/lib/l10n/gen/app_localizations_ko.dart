@@ -887,7 +887,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapLocationFailed => '현재 위치를 가져오지 못했습니다';
 
   @override
-  String get mapLegendTitle => '범례·필터';
+  String get mapLegendTitle => '카메라 필터';
 
   @override
   String get mapLegendSearchHint => '카메라명·운영자·하천/노선명으로 검색';
@@ -897,6 +897,12 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get mapFilterOkOnly => '현재 보이는 것만';
+
+  @override
+  String get mapFilterIntro => '변경 사항은 즉시 반영됩니다. 레이어는 바뀌지 않습니다.';
+
+  @override
+  String get mapFilterBackToMap => '지도로 돌아가기';
 
   @override
   String get mapLegendLiveDot => '빨간 점 = 동영상(라이브 방송)';
@@ -945,6 +951,36 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get mapLayersTooltip => '지도 레이어';
+
+  @override
+  String get mapPanelSearchHint => '지명・카메라명으로 검색';
+
+  @override
+  String get mapPanelLayers => '레이어';
+
+  @override
+  String get mapPanelLayersOn => '레이어 켜짐';
+
+  @override
+  String get mapPanelFilter => '필터';
+
+  @override
+  String get mapPanelMore => '더보기';
+
+  @override
+  String get mapPanelMoreTitle => '지도 조작';
+
+  @override
+  String get mapPanelMoreSubtitle => '자주 가는 곳과 앞으로 지나갈 길로';
+
+  @override
+  String get mapZoomIn => '확대';
+
+  @override
+  String get mapZoomOut => '축소';
+
+  @override
+  String get mapMyLocation => '현재 위치';
 
   @override
   String get bosaiTitle => '재해 속보';
@@ -1164,6 +1200,12 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get mapLayerPanelSubtitle => '지도에는 한 종류만 겹쳐서 표시합니다';
+
+  @override
+  String get mapControllerExpand => '펼치기';
+
+  @override
+  String get mapControllerCollapse => '접기';
 
   @override
   String get mapLayerNone => '표시 안 함';
@@ -2383,6 +2425,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapRouteTooltip => '경로 주변 카메라';
 
   @override
+  String get mapRouteMenu => '경로 주변 카메라';
+
+  @override
   String get routeSheetSubtitle => '출발지와 목적지를 입력하면 경로 근처의 카메라만 표시합니다';
 
   @override
@@ -2461,6 +2506,11 @@ class AppLocalizationsKo extends AppLocalizations {
   @override
   String situationCount(int n) {
     return '$n건';
+  }
+
+  @override
+  String situationButtonLabel(int count) {
+    return '$count건의 알림';
   }
 
   @override

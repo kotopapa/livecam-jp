@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 import '../data/jma_flood.dart';
@@ -201,4 +203,278 @@ class _Row {
   final Color color;
   final String text;
   final VoidCallback onTap;
+}
+
+/// カードの行数（[SituationCard] の build() と同じ条件で数える。ボタンの
+/// 件数バッジ用に、l10n を使わず数だけ数える）
+int situationRowCount(Situation s) {
+  var n = 0;
+  if (s.warnings.special.isNotEmpty) n++;
+  if (s.warnings.danger.isNotEmpty) n++;
+  n += s.typhoons.length;
+  if (s.floods.isNotEmpty) n++;
+  n += s.underpass.where((src) => src.alerts.isNotEmpty).length;
+  if (s.quakes.isNotEmpty) n++;
+  return n;
+}
+
+/// 発生時だけ出す右上の丸い「！」ボタン（design/map_ui/PROPOSAL.md 第5案）。
+/// 件数バッジ付き。タップで [SituationOverlay] のカードを開く
+class SituationButton extends StatelessWidget {
+  const SituationButton({super.key, required this.situation, required this.onTap});
+
+  final Situation situation;
+  final VoidCallback onTap;
+
+  /// 最上位段階の色（特別警報 > 危険警報 > その他）
+  static Color colorOf(Situation s) {
+    if (s.warnings.special.isNotEmpty) return const Color(0xFF9C27B0);
+    if (s.warnings.danger.isNotEmpty) return const Color(0xFFAA00AA);
+    return const Color(0xFFD32F2F);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final count = situationRowCount(situation);
+    final color = colorOf(situation);
+    return Semantics(
+      button: true,
+      label: context.l10n.situationButtonLabel(count),
+      child: Material(
+        color: color,
+        shape: const CircleBorder(),
+        elevation: 4,
+        child: InkWell(
+          key: const Key('situation_button'),
+          onTap: onTap,
+          customBorder: const CircleBorder(),
+          child: SizedBox(
+            width: 48,
+            height: 48,
+            child: Stack(clipBehavior: Clip.none, children: [
+              const Center(
+                child: Icon(Icons.priority_high, color: Colors.white, size: 26),
+              ),
+              if (count > 0)
+                Positioned(
+                  right: 0,
+                  top: 0,
+                  child: Container(
+                    constraints: const BoxConstraints(minWidth: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: color, width: 1),
+                    ),
+                    child: Text('$count',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 10, fontWeight: FontWeight.bold, color: color)),
+                  ),
+                ),
+            ]),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// ボタンとカードの開閉（design 第5案）。展開状態は呼び出し側（map_screen.dart）が
+/// `expanded` で渡し、開閉アニメーションとリングの脈動はこのウィジェットが担当する。
+/// 開く: 250ms `Cubic(.05,.7,.1,1.0)`（emphasized decelerate相当）、
+/// scale 0.6→1.025(80%)→1、opacity 0→1。閉じる: 200ms `Cubic(.3,0,.8,.15)`、
+/// scale 1→0.6、opacity 1→0（オーバーシュートなし）。`isNew` が false→true に
+/// 変わったときだけ、ボタンの外側に600ms×2回のリング脈動を出す
+class SituationOverlay extends StatefulWidget {
+  const SituationOverlay({
+    super.key,
+    required this.situation,
+    required this.expanded,
+    required this.isNew,
+    required this.onOpen,
+    required this.onClose,
+    required this.onOpenWarning,
+    required this.onOpenQuake,
+    required this.onOpenTyphoon,
+    required this.onOpenUnderpass,
+  });
+
+  final Situation situation;
+  final bool expanded;
+
+  /// 前回読み込みと signature が変わった直後か（脈動の起動条件）
+  final bool isNew;
+  final VoidCallback onOpen;
+  final VoidCallback onClose;
+  final VoidCallback onOpenWarning;
+  final VoidCallback onOpenQuake;
+  final ValueChanged<String> onOpenTyphoon;
+  final VoidCallback onOpenUnderpass;
+
+  static const _openCurve = Cubic(0.05, 0.7, 0.1, 1.0);
+  static const _closeCurve = Cubic(0.3, 0, 0.8, 0.15);
+
+  @override
+  State<SituationOverlay> createState() => _SituationOverlayState();
+}
+
+class _SituationOverlayState extends State<SituationOverlay>
+    with TickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 250),
+    reverseDuration: const Duration(milliseconds: 200),
+    value: widget.expanded ? 1 : 0,
+  );
+  AnimationController? _pulse;
+
+  bool get _reduceMotion => MediaQuery.disableAnimationsOf(context);
+  // initState では MediaQuery を参照できない（assert になる）ので、
+  // 脈動の開始は didChangeDependencies まで持ち越す
+  bool _pendingPulse = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _pendingPulse = widget.isNew;
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_pendingPulse) {
+      _pendingPulse = false;
+      _maybeStartPulse();
+    }
+  }
+
+  @override
+  void didUpdateWidget(SituationOverlay old) {
+    super.didUpdateWidget(old);
+    if (widget.expanded != old.expanded) {
+      if (_reduceMotion) {
+        _controller.value = widget.expanded ? 1 : 0;
+      } else if (widget.expanded) {
+        _controller.forward(from: 0);
+      } else {
+        _controller.reverse(from: 1);
+      }
+    }
+    if (widget.isNew && !old.isNew) _maybeStartPulse();
+  }
+
+  /// リングの脈動を600ms×2回（有限）。無限ループにしない
+  void _maybeStartPulse() {
+    if (_reduceMotion) return;
+    final c = AnimationController(vsync: this, duration: const Duration(milliseconds: 600));
+    _pulse?.dispose();
+    // initState / didUpdateWidget 直後に build() が走るので setState は不要
+    // （setState は完了後の後始末だけで使う。build中に呼ぶとエラーになる）
+    _pulse = c;
+    c.forward().then((_) {
+      if (!mounted) return;
+      c.forward(from: 0).whenComplete(() {
+        if (mounted && _pulse == c) setState(() => _pulse = null);
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    _pulse?.dispose();
+    super.dispose();
+  }
+
+  /// 開く/閉じるで別カーブ（オーバーシュートは開くときだけ）
+  double _scaleFor(double t) {
+    if (_controller.status == AnimationStatus.reverse) {
+      final e = SituationOverlay._closeCurve.transform(t);
+      return 0.6 + 0.4 * e;
+    }
+    final e = SituationOverlay._openCurve.transform(t).clamp(0.0, 1.2);
+    if (e <= 0.8) return 0.6 + (1.025 - 0.6) * (e / 0.8);
+    return 1.025 + (1.0 - 1.025) * ((e - 0.8) / 0.2);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final s = widget.situation;
+    final color = SituationButton.colorOf(s);
+    return Stack(
+      clipBehavior: Clip.none,
+      alignment: Alignment.topRight,
+      children: [
+        if (_pulse != null)
+          AnimatedBuilder(
+            animation: _pulse!,
+            builder: (context, _) {
+              final t = _pulse!.value;
+              final size = 48 * (1 + 0.55 * t);
+              final opacity = (0.65 * (1 - t)).clamp(0.0, 1.0);
+              return IgnorePointer(
+                child: Opacity(
+                  opacity: opacity,
+                  child: SizedBox(
+                    width: size,
+                    height: size,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: color, width: 2)),
+                    ),
+                  ),
+                ),
+              );
+            },
+          ),
+        // ボタンはカードが開くにつれて消える（カードはボタンの位置から広がる）
+        AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            final t = _controller.value;
+            return IgnorePointer(
+              ignoring: t > 0.5,
+              child: Opacity(opacity: (1 - t).clamp(0.0, 1.0), child: child),
+            );
+          },
+          child: SituationButton(situation: s, onTap: widget.onOpen),
+        ),
+        AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            final t = _controller.value;
+            if (t == 0) return const SizedBox.shrink();
+            return Opacity(
+              opacity: t.clamp(0.0, 1.0),
+              child: Transform.scale(
+                // 起点はボタンの中心（右上から 24px 内側）
+                alignment: const Alignment(0.87, -1),
+                scale: _scaleFor(t),
+                child: child,
+              ),
+            );
+          },
+          // カード本体は横幅を明示（Rowの Expanded がある文中省略のため）。
+          // design/map_ui/PROPOSAL.md 通り左右12pxの余白を確保する
+          child: Padding(
+            padding: EdgeInsets.zero,
+            child: SizedBox(
+              width: math.max(200, MediaQuery.sizeOf(context).width - 24),
+              child: SituationCard(
+                situation: s,
+                onClose: widget.onClose,
+                onOpenWarning: widget.onOpenWarning,
+                onOpenQuake: widget.onOpenQuake,
+                onOpenTyphoon: widget.onOpenTyphoon,
+                onOpenUnderpass: widget.onOpenUnderpass,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }

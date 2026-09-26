@@ -1753,7 +1753,7 @@ abstract class AppLocalizations {
   /// No description provided for @mapLegendTitle.
   ///
   /// In ja, this message translates to:
-  /// **'凡例・絞り込み'**
+  /// **'カメラの絞り込み'**
   String get mapLegendTitle;
 
   /// No description provided for @mapLegendSearchHint.
@@ -1773,6 +1773,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'現在映っているもののみ'**
   String get mapFilterOkOnly;
+
+  /// No description provided for @mapFilterIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'変更はすぐ反映されます。レイヤーは変わりません。'**
+  String get mapFilterIntro;
+
+  /// No description provided for @mapFilterBackToMap.
+  ///
+  /// In ja, this message translates to:
+  /// **'地図に戻る'**
+  String get mapFilterBackToMap;
 
   /// No description provided for @mapLegendLiveDot.
   ///
@@ -1857,6 +1869,66 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'地図レイヤー'**
   String get mapLayersTooltip;
+
+  /// No description provided for @mapPanelSearchHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'地名・カメラ名で検索'**
+  String get mapPanelSearchHint;
+
+  /// No description provided for @mapPanelLayers.
+  ///
+  /// In ja, this message translates to:
+  /// **'レイヤー'**
+  String get mapPanelLayers;
+
+  /// No description provided for @mapPanelLayersOn.
+  ///
+  /// In ja, this message translates to:
+  /// **'レイヤー ON'**
+  String get mapPanelLayersOn;
+
+  /// No description provided for @mapPanelFilter.
+  ///
+  /// In ja, this message translates to:
+  /// **'絞り込み'**
+  String get mapPanelFilter;
+
+  /// No description provided for @mapPanelMore.
+  ///
+  /// In ja, this message translates to:
+  /// **'その他'**
+  String get mapPanelMore;
+
+  /// No description provided for @mapPanelMoreTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'地図の操作'**
+  String get mapPanelMoreTitle;
+
+  /// No description provided for @mapPanelMoreSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'いつもの場所と、これから通る道へ'**
+  String get mapPanelMoreSubtitle;
+
+  /// No description provided for @mapZoomIn.
+  ///
+  /// In ja, this message translates to:
+  /// **'拡大'**
+  String get mapZoomIn;
+
+  /// No description provided for @mapZoomOut.
+  ///
+  /// In ja, this message translates to:
+  /// **'縮小'**
+  String get mapZoomOut;
+
+  /// No description provided for @mapMyLocation.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在地'**
+  String get mapMyLocation;
 
   /// No description provided for @bosaiTitle.
   ///
@@ -2265,6 +2337,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'地図に1種類だけ重ねて表示します'**
   String get mapLayerPanelSubtitle;
+
+  /// No description provided for @mapControllerExpand.
+  ///
+  /// In ja, this message translates to:
+  /// **'展開'**
+  String get mapControllerExpand;
+
+  /// No description provided for @mapControllerCollapse.
+  ///
+  /// In ja, this message translates to:
+  /// **'たたむ'**
+  String get mapControllerCollapse;
 
   /// No description provided for @mapLayerNone.
   ///
@@ -4306,6 +4390,12 @@ abstract class AppLocalizations {
   /// **'ルート沿いのカメラ'**
   String get mapRouteTooltip;
 
+  /// No description provided for @mapRouteMenu.
+  ///
+  /// In ja, this message translates to:
+  /// **'ルート沿いのカメラ'**
+  String get mapRouteMenu;
+
   /// No description provided for @routeSheetSubtitle.
   ///
   /// In ja, this message translates to:
@@ -4443,6 +4533,12 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'{n}件'**
   String situationCount(int n);
+
+  /// 右上の「！」ボタンの読み上げ・バッジ
+  ///
+  /// In ja, this message translates to:
+  /// **'{count}件のお知らせ'**
+  String situationButtonLabel(int count);
 
   /// No description provided for @situationSpecial.
   ///

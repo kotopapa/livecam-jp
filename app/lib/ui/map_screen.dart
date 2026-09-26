@@ -34,6 +34,7 @@ import '../util/geo.dart';
 import 'bosai_screen.dart' show NearbyCamerasScreen;
 import 'detail_screen.dart';
 import 'favorites_screen.dart';
+import 'map_bottom_panel.dart';
 import 'route_cameras_screen.dart';
 import 'situation_card.dart';
 import 'elevation_label.dart';
@@ -146,25 +147,17 @@ class _MapScreenState extends State<MapScreen> {
   Future<void> _loadPanelPrefs() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      final s = prefs.getBool(_situationCollapsedKey) ?? false;
-      final l = prefs.getBool(_legendCollapsedKey);
+      final e = prefs.getBool(_controllerExpandedKey);
       if (!mounted) return;
-      setState(() {
-        _situationCollapsed = s;
-        _legendCollapsedPref = l;
-      });
+      setState(() => _controllerExpandedPref = e);
     } catch (_) {}
   }
 
-  Future<void> _togglePanel({bool? situation, bool? legend}) async {
-    setState(() {
-      if (situation != null) _situationCollapsed = situation;
-      if (legend != null) _legendCollapsedPref = legend;
-    });
+  Future<void> _setControllerExpanded(bool expanded) async {
+    setState(() => _controllerExpandedPref = expanded);
     try {
       final prefs = await SharedPreferences.getInstance();
-      if (situation != null) await prefs.setBool(_situationCollapsedKey, situation);
-      if (legend != null) await prefs.setBool(_legendCollapsedKey, legend);
+      await prefs.setBool(_controllerExpandedKey, expanded);
     } catch (_) {}
   }
 
@@ -179,7 +172,13 @@ class _MapScreenState extends State<MapScreen> {
     }
     final s = await SituationLoader.load();
     if (!mounted) return;
-    setState(() => _situation = s);
+    // 前回読み込みと signature が変わっていれば「新着」（ボタンのリング脈動の起動条件）
+    final isNewContent = s.isNotable && s.signature != _lastSituationSignature;
+    _lastSituationSignature = s.signature;
+    setState(() {
+      _situation = s;
+      _situationJustChanged = isNewContent;
+    });
   }
 
   Future<void> _dismissSituation() async {
@@ -191,34 +190,16 @@ class _MapScreenState extends State<MapScreen> {
     } catch (_) {}
   }
 
-  Widget? _situationCard() {
+  /// 展開状態は内容の識別子で決める（新しい内容なら自動展開、閉じた内容と同じなら
+  /// 閉じたまま）。「！」ボタンをタップして再展開する場合はここで dismissed を
+  /// クリアする（永続化はしない。次に閉じたときに現在の signature で上書きされる）
+  bool get _situationExpanded {
     final s = _situation;
-    if (s == null || !s.isNotable || s.signature == _dismissedSituation) return null;
-    return SituationCard(
-      situation: s,
-      collapsed: _situationCollapsed,
-      onToggle: () => _togglePanel(situation: !_situationCollapsed),
-      onClose: _dismissSituation,
-      onOpenWarning: () {
-        Analytics.event('situation_open', params: const {'kind': 'warning'});
-        widget.app.navigationRequest.value = null;
-        widget.app.navigationRequest.value = 'bosai/warning';
-      },
-      onOpenQuake: () {
-        Analytics.event('situation_open', params: const {'kind': 'quake'});
-        widget.app.navigationRequest.value = null;
-        widget.app.navigationRequest.value = 'bosai/quake';
-      },
-      onOpenTyphoon: (id) {
-        Analytics.event('situation_open', params: const {'kind': 'typhoon'});
-        _setLayer(MapLayerKind.typhoon, typhoonId: id);
-      },
-      onOpenUnderpass: () {
-        Analytics.event('situation_open', params: const {'kind': 'underpass'});
-        _openUnderpassLayer();
-      },
-    );
+    if (s == null || !s.isNotable) return false;
+    return s.signature != (_dismissedSituation ?? '');
   }
+
+  void _reopenSituation() => setState(() => _dismissedSituation = '');
 
   /// 詳細画面の「地図で見る」等からの移動要求（`map/lat,lng` 形式）
   void _onNavigationRequest() {
@@ -289,20 +270,23 @@ class _MapScreenState extends State<MapScreen> {
     return f == null ? all : [for (final i in all) if (i.cause == f) i];
   }
   SnowTime? _snowTime;
-  /// 「いま起きていること」カード（起動時と10分ごとに更新。閉じた内容は再表示しない）
+  /// 「いま起きていること」（起動時と10分ごとに更新。閉じた内容は再表示しない）
   Situation? _situation;
   String? _dismissedSituation;
   Timer? _situationTimer;
   static const _dismissedSituationKey = 'situation_dismissed';
 
-  /// 左上カード・左下凡例の折りたたみ（端末ごとに記憶。2026-09-21 要望）
-  bool _situationCollapsed = false;
+  /// 前回読み込みの signature（新着判定・リング脈動の起動条件に使う）
+  String? _lastSituationSignature;
 
-  /// 凡例の出典行の折りたたみ（色と段階の文字は閉じていても見せる）
-  bool? _legendCollapsedPref;
-  bool get _legendCollapsed => _legendCollapsedPref ?? false;
-  static const _situationCollapsedKey = 'situation_collapsed';
-  static const _legendCollapsedKey = 'map_legend_collapsed';
+  /// 直前の読み込みで内容が変わった（新着）か。ボタンの脈動は false→true の
+  /// 変化時だけ起動するので、同じ内容が続く間は再発火しない
+  bool _situationJustChanged = false;
+
+  /// レイヤー操作板カードの展開状態（既定は圧縮）
+  bool? _controllerExpandedPref;
+  bool get _controllerExpanded => _controllerExpandedPref ?? false;
+  static const _controllerExpandedKey = 'map_controller_expanded';
   /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
   RouteResult? _route;
   List<CorridorCamera> _routeCameras = const [];
@@ -440,166 +424,168 @@ class _MapScreenState extends State<MapScreen> {
     }
   }
 
+  /// レイヤー選択シートのタイル1個（2列グリッド）。サブタイトルは長押しで
+  /// Tooltip表示にする（タイルに文言を出すと縦に長くなりすぎるため）
+  Widget _layerGridTile(
+    BuildContext ctx, {
+    required MapLayerKind kind,
+    String? tooltip,
+    bool fullWidth = false,
+    VoidCallback? onTap,
+  }) {
+    final selected = _layer == kind;
+    final scheme = Theme.of(ctx).colorScheme;
+    final body = Container(
+      height: 48,
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      decoration: BoxDecoration(
+        color: selected ? scheme.primaryContainer : null,
+        border: Border.all(
+            color: selected ? scheme.primary : Colors.black26,
+            width: selected ? 1.5 : 1),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(children: [
+        Icon(_layerIcon(kind),
+            size: 18, color: selected ? scheme.onPrimaryContainer : Colors.black54),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(_layerTitle(kind),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: selected ? FontWeight.bold : FontWeight.normal,
+                  color: selected ? scheme.onPrimaryContainer : Colors.black87)),
+        ),
+        if (selected) Icon(Icons.check, size: 16, color: scheme.primary),
+      ]),
+    );
+    final tapped = Material(
+      color: Colors.transparent,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: onTap ?? () { Navigator.pop(ctx); _setLayer(kind); },
+        child: body,
+      ),
+    );
+    final withTooltip = tooltip == null || tooltip.isEmpty
+        ? tapped
+        : Tooltip(message: tooltip, child: tapped);
+    if (fullWidth) return withTooltip;
+    return SizedBox(width: (MediaQuery.sizeOf(ctx).width - 56) / 2, child: withTooltip);
+  }
+
   void _showLayerPicker(BuildContext context) {
     final l10n = context.l10n;
     showModalBottomSheet<void>(
       context: context,
       showDragHandle: true,
-      builder: (ctx) => SafeArea(
-        child: SingleChildScrollView(
-        child: Column(mainAxisSize: MainAxisSize.min, children: [
-          ListTile(
-              title: Text(l10n.mapLayersTooltip,
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text(l10n.mapLayerPanelSubtitle)),
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.none ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.none ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerNone),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.none); },
-          ),
-          const Divider(height: 8),
-          ListTile(
-              title: Text(l10n.mapLayerSectionWeather,
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: const Text(JmaLayers.attribution)),
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.rainRadar ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.rainRadar ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerRainRadarTitle),
-            subtitle: Text(l10n.mapLayerRainRadarSubtitle),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rainRadar); },
-          ),
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.quakes ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.quakes ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerQuakesTitle),
-            subtitle: Row(children: [
-              for (final p in QuakePeriod.values) ...[
-                ChoiceChip(
-                  label: Text(switch (p) {
-                    QuakePeriod.day => l10n.mapQuakePeriodDay,
-                    QuakePeriod.week => l10n.mapQuakePeriodWeek,
-                    QuakePeriod.month => l10n.mapQuakePeriodMonth,
-                  }),
-                  selected: _layer == MapLayerKind.quakes && _quakePeriod == p,
-                  visualDensity: VisualDensity.compact,
-                  onSelected: (_) { Navigator.pop(ctx); _setLayer(MapLayerKind.quakes, period: p); },
+      isScrollControlled: true,
+      constraints: _sheetConstraints(context),
+      builder: (ctx) {
+        Widget sectionHeading(String title, Widget subtitle) => Padding(
+              padding: const EdgeInsets.fromLTRB(0, 12, 0, 6),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                DefaultTextStyle.merge(
+                    style: TextStyle(fontSize: 11, color: Colors.grey[600]), child: subtitle),
+              ]),
+            );
+        return SafeArea(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+              Row(children: [
+                Expanded(
+                  child: Text(l10n.mapLayersTooltip,
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                 ),
-                const SizedBox(width: 6),
+                IconButton(
+                  icon: const Icon(Icons.close),
+                  tooltip: l10n.commonClose,
+                  onPressed: () => Navigator.of(ctx).pop(),
+                ),
+              ]),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Text(l10n.mapLayerPanelSubtitle,
+                    style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+              ),
+              _layerGridTile(ctx, kind: MapLayerKind.none, fullWidth: true),
+              sectionHeading(l10n.mapLayerSectionWeather, const Text(JmaLayers.attribution)),
+              Wrap(spacing: 16, runSpacing: 8, children: [
+                _layerGridTile(ctx, kind: MapLayerKind.rainRadar, tooltip: l10n.mapLayerRainRadarSubtitle),
+                _layerGridTile(ctx, kind: MapLayerKind.quakes),
+                _layerGridTile(ctx, kind: MapLayerKind.rain24h, tooltip: l10n.mapLayerRain24hSubtitle),
+                _layerGridTile(ctx, kind: MapLayerKind.typhoon, tooltip: l10n.mapLayerTyphoonSubtitle),
+                _layerGridTile(ctx, kind: MapLayerKind.snowDepth, tooltip: l10n.mapLayerSnowDepthSubtitle),
+                _layerGridTile(ctx, kind: MapLayerKind.snowfall24h, tooltip: l10n.mapLayerSnowfall24hSubtitle),
+                for (final k in const [
+                  MapLayerKind.riskLand,
+                  MapLayerKind.riskInund,
+                  MapLayerKind.riskFlood,
+                ])
+                  _layerGridTile(ctx, kind: k, tooltip: riskLayerSubtitleOf(l10n, RiskLayers.titleKey(k))),
+              ]),
+              // 地震の期間（震源タイルをタップしなくても選べる。選ぶと震源レイヤーへ切替）
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Row(children: [
+                  Icon(Icons.vibration, size: 16, color: Colors.grey[600]),
+                  const SizedBox(width: 6),
+                  for (final p in QuakePeriod.values) ...[
+                    ChoiceChip(
+                      label: Text(switch (p) {
+                        QuakePeriod.day => l10n.mapQuakePeriodDay,
+                        QuakePeriod.week => l10n.mapQuakePeriodWeek,
+                        QuakePeriod.month => l10n.mapQuakePeriodMonth,
+                      }),
+                      selected: _layer == MapLayerKind.quakes && _quakePeriod == p,
+                      visualDensity: VisualDensity.compact,
+                      onSelected: (_) { Navigator.pop(ctx); _setLayer(MapLayerKind.quakes, period: p); },
+                    ),
+                    const SizedBox(width: 6),
+                  ],
+                ]),
+              ),
+              sectionHeading(l10n.mapLayerSectionHazard, const Text(HazardLayers.attribution)),
+              Wrap(spacing: 16, runSpacing: 8, children: [
+                for (final k in const [
+                  MapLayerKind.hazardFlood,
+                  MapLayerKind.hazardLandslide,
+                  MapLayerKind.hazardTsunami,
+                  MapLayerKind.hazardHightide,
+                ])
+                  _layerGridTile(ctx,
+                      kind: k,
+                      tooltip: k == MapLayerKind.hazardLandslide
+                          ? l10n.mapHazardLandslideSubtitle
+                          : l10n.mapHazardDepthSubtitle),
+              ]),
+              sectionHeading(l10n.mapShelterTitle, const Text(ShelterLayers.attribution)),
+              Wrap(spacing: 16, runSpacing: 8, children: [
+                _layerGridTile(ctx, kind: MapLayerKind.shelters, tooltip: l10n.mapLayerShelterSubtitle),
+                // 道路の通行止め・規制（自治体の冠水センサー＋国交省の規制情報を統合。色＝原因。1.5.2）
+                // 旧「地下道の冠水状況」「道路の通行規制」の描画コードは残してあるが選択肢には出さない
+                _layerGridTile(ctx, kind: MapLayerKind.roadClosures, tooltip: l10n.mapLayerRoadClosuresSubtitle),
+                _layerGridTile(ctx, kind: MapLayerKind.oldMap, tooltip: l10n.mapLayerOldMapSubtitle),
+              ]),
+              // 防災拠点（給水拠点・防災備蓄倉庫）は公開自治体が4都県8自治体と少ないため
+              // 1.2.0 では選択肢に出さない（2026-08-31 ユーザー判断）。実装は残してあり、
+              // 配信データのカバーが広がったら showFacilitiesLayer を true にする
+              if (showFacilitiesLayer) ...[
+                // 出典表記は翻訳しない（SPEC C5）
+                sectionHeading(l10n.mapFacilityTitle,
+                    const Text('出典：各自治体のオープンデータ（公開している自治体のみ）')),
+                Wrap(spacing: 16, runSpacing: 8, children: [
+                  _layerGridTile(ctx, kind: MapLayerKind.facilities, tooltip: l10n.mapLayerFacilitySubtitle),
+                ]),
               ],
             ]),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.quakes); },
           ),
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.rain24h ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.rain24h ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerRain24hTitle),
-            subtitle: Text(l10n.mapLayerRain24hSubtitle),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.rain24h); },
-          ),
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.typhoon ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.typhoon ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerTyphoonTitle),
-            subtitle: Text(l10n.mapLayerTyphoonSubtitle),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.typhoon); },
-          ),
-          for (final k in const [MapLayerKind.snowDepth, MapLayerKind.snowfall24h])
-            ListTile(
-              leading: Icon(_layer == k ? Icons.radio_button_checked : Icons.radio_button_off,
-                  color: _layer == k ? Theme.of(ctx).colorScheme.primary : null),
-              title: Text(k == MapLayerKind.snowDepth
-                  ? l10n.mapLayerSnowDepthTitle
-                  : l10n.mapLayerSnowfall24hTitle),
-              subtitle: Text(k == MapLayerKind.snowDepth
-                  ? l10n.mapLayerSnowDepthSubtitle
-                  : l10n.mapLayerSnowfall24hSubtitle),
-              onTap: () { Navigator.pop(ctx); _setLayer(k); },
-            ),
-          for (final k in const [
-            MapLayerKind.riskLand,
-            MapLayerKind.riskInund,
-            MapLayerKind.riskFlood,
-          ])
-            ListTile(
-              leading: Icon(_layer == k ? Icons.radio_button_checked : Icons.radio_button_off,
-                  color: _layer == k ? Theme.of(ctx).colorScheme.primary : null),
-              title: Text(riskLayerTitleOf(l10n, RiskLayers.titleKey(k))),
-              subtitle: Text(riskLayerSubtitleOf(l10n, RiskLayers.titleKey(k))),
-              onTap: () { Navigator.pop(ctx); _setLayer(k); },
-            ),
-          const Divider(height: 8),
-          ListTile(
-              title: Text(l10n.mapLayerSectionHazard,
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: const Text(HazardLayers.attribution)),
-          for (final k in const [
-            MapLayerKind.hazardFlood,
-            MapLayerKind.hazardLandslide,
-            MapLayerKind.hazardTsunami,
-            MapLayerKind.hazardHightide,
-          ])
-            ListTile(
-              leading: Icon(_layer == k ? Icons.radio_button_checked : Icons.radio_button_off,
-                  color: _layer == k ? Theme.of(ctx).colorScheme.primary : null),
-              title: Text(hazardLayerTitleOf(l10n, HazardLayers.titleKey(k))),
-              subtitle: Text(switch (k) {
-                MapLayerKind.hazardLandslide => l10n.mapHazardLandslideSubtitle,
-                _ => l10n.mapHazardDepthSubtitle,
-              }),
-              onTap: () { Navigator.pop(ctx); _setLayer(k); },
-            ),
-          const Divider(height: 8),
-          ListTile(
-              title: Text(l10n.mapShelterTitle,
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: const Text(ShelterLayers.attribution)),
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.shelters ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.shelters ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerShelterTitle),
-            subtitle: Text(l10n.mapLayerShelterSubtitle),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.shelters); },
-          ),
-          // 道路の通行止め・規制（自治体の冠水センサー＋国交省の規制情報を統合。色＝原因。1.5.2）
-          // 旧「地下道の冠水状況」「道路の通行規制」の描画コードは残してあるが選択肢には出さない
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.roadClosures ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.roadClosures ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerRoadClosuresTitle),
-            subtitle: Text(l10n.mapLayerRoadClosuresSubtitle),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.roadClosures); },
-          ),
-          ListTile(
-            leading: Icon(_layer == MapLayerKind.oldMap ? Icons.radio_button_checked : Icons.radio_button_off,
-                color: _layer == MapLayerKind.oldMap ? Theme.of(ctx).colorScheme.primary : null),
-            title: Text(l10n.mapLayerOldMapTitle),
-            subtitle: Text(l10n.mapLayerOldMapSubtitle),
-            onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.oldMap); },
-          ),
-          // 防災拠点（給水拠点・防災備蓄倉庫）は公開自治体が4都県8自治体と少ないため
-          // 1.2.0 では選択肢に出さない（2026-08-31 ユーザー判断）。実装は残してあり、
-          // 配信データのカバーが広がったら showFacilitiesLayer を true にする
-          if (showFacilitiesLayer) ...[
-            const Divider(height: 8),
-            ListTile(
-                title: Text(l10n.mapFacilityTitle,
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
-                // 出典表記は翻訳しない（SPEC C5）
-                subtitle: const Text('出典：各自治体のオープンデータ（公開している自治体のみ）')),
-            ListTile(
-              leading: Icon(_layer == MapLayerKind.facilities ? Icons.radio_button_checked : Icons.radio_button_off,
-                  color: _layer == MapLayerKind.facilities ? Theme.of(ctx).colorScheme.primary : null),
-              title: Text(l10n.mapLayerFacilityTitle),
-              subtitle: Text(l10n.mapLayerFacilitySubtitle),
-              onTap: () { Navigator.pop(ctx); _setLayer(MapLayerKind.facilities); },
-            ),
-          ],
-          const SizedBox(height: 8),
-        ]),
-        ),
-      ),
+        );
+      },
     );
   }
 
@@ -790,14 +776,8 @@ class _MapScreenState extends State<MapScreen> {
               backgroundColor: _kjCompare == m ? Theme.of(context).colorScheme.primaryContainer : null),
           onPressed: () => setState(() => _kjCompare = m),
         );
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 12),
-      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
-      decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.92),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
-      child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+    // 操作板カードの展開部に置くので、以前の単独フロート用の白背景・影は持たない
+    return Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
         if (region != null)
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -832,8 +812,7 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
         ]),
-      ]),
-    );
+      ]);
   }
 
   String _kjEraLabel(KjmapEra e) {
@@ -899,23 +878,15 @@ class _MapScreenState extends State<MapScreen> {
             onSelected: (_) => setState(() => _shelterHazard = value),
           ),
         );
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 12),
-      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
-      decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.92),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(mainAxisSize: MainAxisSize.min, children: [
-          const Icon(Icons.home_work_outlined, size: 16),
-          const SizedBox(width: 6),
-          chip(context.l10n.mapShelterHazardAll, null),
-          for (var i = 0; i < hazards.length; i++)
-            chip(shelterHazardLabelOf(context.l10n, hazards[i]), i),
-        ]),
-      ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(mainAxisSize: MainAxisSize.min, children: [
+        const Icon(Icons.home_work_outlined, size: 16),
+        const SizedBox(width: 6),
+        chip(context.l10n.mapShelterHazardAll, null),
+        for (var i = 0; i < hazards.length; i++)
+          chip(shelterHazardLabelOf(context.l10n, hazards[i]), i),
+      ]),
     );
   }
 
@@ -1179,21 +1150,13 @@ class _MapScreenState extends State<MapScreen> {
             },
           ),
         );
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 12),
-      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
-      decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.92),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(mainAxisSize: MainAxisSize.min, children: [
-          const Icon(Icons.local_drink_outlined, size: 16),
-          const SizedBox(width: 6),
-          for (final k in FacilityLayers.kindKeys) chip(k),
-        ]),
-      ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(mainAxisSize: MainAxisSize.min, children: [
+        const Icon(Icons.local_drink_outlined, size: 16),
+        const SizedBox(width: 6),
+        for (final k in FacilityLayers.kindKeys) chip(k),
+      ]),
     );
   }
 
@@ -1364,12 +1327,10 @@ class _MapScreenState extends State<MapScreen> {
       );
 
   /// 雨雲レーダーの時刻スライダー（過去3時間の実況〜1時間先の予測）
-  Widget _nowcastSlider() {
-    if (_layer != MapLayerKind.rainRadar || _nowcastTimes.length < 2) {
-      return const SizedBox.shrink();
-    }
+  /// 雨雲レーダーの相対表記（「現在」「30分後（予報）」等）。ナウキャストの
+  /// 詳しいスライダー・操作板カードのタイトル行の時刻表示で共通に使う
+  String _nowcastRelLabel(NowcastTime n) {
     final l10n = context.l10n;
-    final n = _nowcastTimes[_nowcastIdx];
     final latestObs = _nowcastTimes.lastIndexWhere((x) => !x.isForecast);
     final diffMin = latestObs >= 0
         ? n.validAt.difference(_nowcastTimes[latestObs].validAt).inMinutes
@@ -1378,7 +1339,7 @@ class _MapScreenState extends State<MapScreen> {
         ? l10n.mapNowcastSpanHours(
             (m.abs() / 60).toStringAsFixed(m.abs() % 60 == 0 ? 0 : 1))
         : l10n.mapNowcastSpanMinutes(m.abs());
-    final rel = diffMin == 0
+    return diffMin == 0
         ? l10n.mapNowcastNow
         : diffMin > 0
             ? l10n.mapNowcastAfter(
@@ -1387,14 +1348,48 @@ class _MapScreenState extends State<MapScreen> {
                     ? l10n.mapNowcastForecastHourly
                     : l10n.mapNowcastForecast)
             : l10n.mapNowcastBefore(span(diffMin));
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 12),
-      padding: const EdgeInsets.fromLTRB(12, 6, 12, 2),
-      decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.92),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
-      child: Column(mainAxisSize: MainAxisSize.min, children: [
+  }
+
+  /// 圧縮表示でも雨雲の時刻だけは操作できるようにする細いスライダー（最頻の操作なので
+  /// 展開必須にしない）。両端に最初と最後の時刻ラベルを小さく出す
+  Widget _nowcastCompactSlider() {
+    final n = _nowcastTimes[_nowcastIdx];
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(14, 0, 14, 8),
+      child: Row(children: [
+        Text(_nowcastTimes.first.label, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+        Expanded(
+          child: SliderTheme(
+            data: const SliderThemeData(trackHeight: 2),
+            child: Slider(
+              min: 0,
+              max: (_nowcastTimes.length - 1).toDouble(),
+              divisions: _nowcastTimes.length - 1,
+              value: _nowcastIdx.toDouble(),
+              activeColor: n.isForecast ? Colors.orange : null,
+              onChanged: (v) => setState(() {
+                _nowcastUserMoved = true;
+                _nowcastIdx = v.round();
+                _nowcast = _nowcastTimes[_nowcastIdx];
+              }),
+            ),
+          ),
+        ),
+        Text(_nowcastTimes.last.label, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+      ]),
+    );
+  }
+
+  /// 展開表示のときに出す詳しいスライダー（「現在に戻る」ボタン含む）
+  Widget _nowcastSlider() {
+    if (_layer != MapLayerKind.rainRadar || _nowcastTimes.length < 2) {
+      return const SizedBox.shrink();
+    }
+    final l10n = context.l10n;
+    final n = _nowcastTimes[_nowcastIdx];
+    final latestObs = _nowcastTimes.lastIndexWhere((x) => !x.isForecast);
+    final rel = _nowcastRelLabel(n);
+    return Column(mainAxisSize: MainAxisSize.min, children: [
         Row(children: [
           const Icon(Icons.cloud_outlined, size: 16),
           const SizedBox(width: 6),
@@ -1435,8 +1430,7 @@ class _MapScreenState extends State<MapScreen> {
           Text(l10n.mapNowcastLast(_nowcastTimes.last.label),
               style: const TextStyle(fontSize: 9, color: Colors.black54)),
         ]),
-      ]),
-    );
+      ]);
   }
 
   /// 地図レイヤーの凡例・出典（地図左下、地理院表記の上）
@@ -1676,17 +1670,11 @@ class _MapScreenState extends State<MapScreen> {
     final layerLoading = _layerLoading ||
         (_layer == MapLayerKind.shelters && (_shelters?.loading ?? false)) ||
         (_layer == MapLayerKind.facilities && (_facilities?.loading ?? false));
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-      decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.9),
-          borderRadius: BorderRadius.circular(6)),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
-        InkWell(
-          onTap: () => _togglePanel(legend: !_legendCollapsed),
-          child: Row(mainAxisSize: MainAxisSize.min, children: [
-          Text(title, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
-          Icon(_legendCollapsed ? Icons.expand_less : Icons.expand_more, size: 14, color: Colors.black54),
+    // 操作板カードの展開部に置くので、以前の単独フロート用の白背景は持たない。
+    // 展開しているあいだは常に全部見えるので、出典行の折りたたみは不要になった
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+        Row(mainAxisSize: MainAxisSize.min, children: [
+          Text(title, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
           if (layerLoading) const Padding(
               padding: EdgeInsets.only(left: 6),
               child: SizedBox(width: 10, height: 10, child: CircularProgressIndicator(strokeWidth: 1.5))),
@@ -1695,7 +1683,6 @@ class _MapScreenState extends State<MapScreen> {
               child: Text(l10n.mapLegendFetchFailed,
                   style: const TextStyle(fontSize: 9, color: Colors.red))),
           ]),
-        ),
         if (_layer == MapLayerKind.shelters &&
             _zoom >= ShelterLayers.minZoom &&
             (_shelters?.failed.intersection(_shelterPrefs).isNotEmpty ?? false))
@@ -1734,27 +1721,24 @@ class _MapScreenState extends State<MapScreen> {
           ]),
           Text(l10n.closureLegendNote, style: const TextStyle(fontSize: 9, color: Colors.black87)),
         ],
-        // 出典行だけ折りたたむ（色と段階の文字は常に出す）
-        if (!_legendCollapsed) ...[
-          // 冠水状況の出典は情報源が多いので1行にまとめ、一覧ページへリンクする（各地点の詳細にも出典を出す）
-          if (_layer == MapLayerKind.underpass || _layer == MapLayerKind.roadClosures)
-            InkWell(
-              onTap: () => launchUrl(Uri.parse(underpassSourcesPageUrl), mode: LaunchMode.externalApplication),
-              child: Row(mainAxisSize: MainAxisSize.min, children: [
-                Text(l10n.mapLegendUnderpassSources(_underpass.sources.length + _roadReg.sources.length),
-                    style: const TextStyle(fontSize: 9, color: Colors.black54, decoration: TextDecoration.underline)),
-                const Icon(Icons.open_in_new, size: 10, color: Colors.black54),
-              ]),
-            ),
-          if (_layer == MapLayerKind.roadRegulation)
-            for (final s in _roadReg.sources)
-              Text(s.attribution, style: const TextStyle(fontSize: 9, color: Colors.black54)),
-          if (!hazard)
-            const Text(JmaLayers.attribution,
-                style: TextStyle(fontSize: 9, color: Colors.black54)),
-        ],
-      ]),
-    );
+        // 展開表示は常に全部見えるので、出典行も常に出す
+        // 冠水状況の出典は情報源が多いので1行にまとめ、一覧ページへリンクする（各地点の詳細にも出典を出す）
+        if (_layer == MapLayerKind.underpass || _layer == MapLayerKind.roadClosures)
+          InkWell(
+            onTap: () => launchUrl(Uri.parse(underpassSourcesPageUrl), mode: LaunchMode.externalApplication),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              Text(l10n.mapLegendUnderpassSources(_underpass.sources.length + _roadReg.sources.length),
+                  style: const TextStyle(fontSize: 9, color: Colors.black54, decoration: TextDecoration.underline)),
+              const Icon(Icons.open_in_new, size: 10, color: Colors.black54),
+            ]),
+          ),
+        if (_layer == MapLayerKind.roadRegulation)
+          for (final s in _roadReg.sources)
+            Text(s.attribution, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+        if (!hazard)
+          const Text(JmaLayers.attribution,
+              style: TextStyle(fontSize: 9, color: Colors.black54)),
+      ]);
   }
 
   static const _typhoonTrackColor = Color(0xFF616E7C);
@@ -1791,22 +1775,14 @@ class _MapScreenState extends State<MapScreen> {
             onSelected: (_) => select(id),
           ),
         );
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 12),
-      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
-      decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.92),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(mainAxisSize: MainAxisSize.min, children: [
-          const Icon(Icons.cyclone, size: 16, color: _typhoonForecastColor),
-          const SizedBox(width: 6),
-          chip(l10n.mapTyphoonAll, null),
-          for (final t in _typhoons) chip(typhoonNameOf(l10n, t), t.id),
-        ]),
-      ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(mainAxisSize: MainAxisSize.min, children: [
+        const Icon(Icons.cyclone, size: 16, color: _typhoonForecastColor),
+        const SizedBox(width: 6),
+        chip(l10n.mapTyphoonAll, null),
+        for (final t in _typhoons) chip(typhoonNameOf(l10n, t), t.id),
+      ]),
     );
   }
 
@@ -2218,20 +2194,12 @@ class _MapScreenState extends State<MapScreen> {
             onSelected: (_) => setState(() => _closureFilter = c),
           ),
         );
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 12),
-      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
-      decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.92),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)]),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(mainAxisSize: MainAxisSize.min, children: [
-          chip(l10n.closureFilterAll, null, null),
-          for (final c in ClosureCause.values) chip(closureCauseNameOf(l10n, c), c, closureCauseColor(c)),
-        ]),
-      ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(mainAxisSize: MainAxisSize.min, children: [
+        chip(l10n.closureFilterAll, null, null),
+        for (final c in ClosureCause.values) chip(closureCauseNameOf(l10n, c), c, closureCauseColor(c)),
+      ]),
     );
   }
 
@@ -2863,6 +2831,14 @@ class _MapScreenState extends State<MapScreen> {
                     onPressed: () => Navigator.of(sheetContext).pop(),
                   ),
                 ]),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 6),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(context.l10n.mapFilterIntro,
+                        style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+                  ),
+                ),
                 const SizedBox(height: 4),
                 TextField(
                   controller: searchController,
@@ -2971,6 +2947,14 @@ class _MapScreenState extends State<MapScreen> {
                 _LegendRow(
                     kind: _LegendKind.cluster,
                     text: context.l10n.mapLegendCluster),
+                const SizedBox(height: 12),
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton(
+                    onPressed: () => Navigator.of(sheetContext).pop(),
+                    child: Text(context.l10n.mapFilterBackToMap),
+                  ),
+                ),
               ]),
             ),
           );
@@ -3525,34 +3509,6 @@ class _MapScreenState extends State<MapScreen> {
                   child: const _MyLocationDot(),
                 ),
               ]),
-            Align(
-              alignment: Alignment.bottomLeft,
-              // 時刻スライダー → 凡例 → 出典 の順に縦に積む（重なり防止）。
-              // 右側のズーム/現在地ボタン(幅約60px)を避けて右に余白を取る
-              child: Padding(
-                padding: const EdgeInsets.only(right: 60),
-                child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Padding(padding: const EdgeInsets.only(bottom: 6), child: _nowcastSlider()),
-                  if (_layer == MapLayerKind.shelters)
-                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _shelterChips()),
-                  if (_layer == MapLayerKind.facilities)
-                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _facilityChips()),
-                  if (_layer == MapLayerKind.typhoon && _typhoons.length > 1)
-                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _typhoonChips()),
-                  if (_layer == MapLayerKind.roadClosures)
-                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _closureChips()),
-                  if (_layer == MapLayerKind.oldMap)
-                    Padding(padding: const EdgeInsets.only(bottom: 6), child: _kjChips()),
-                  Padding(padding: const EdgeInsets.only(left: 4, bottom: 2), child: _layerLegend()),
-                  if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
-                  if (_layer == MapLayerKind.shelters) const _ShelterAttribution(),
-                  if (_layer == MapLayerKind.oldMap) const _KjmapAttribution(),
-                  if (_layer == MapLayerKind.facilities)
-                    _FacilityAttribution(notice: _facilities?.index?.attribution),
-                  _GsiAttribution(worldTiles: _useWorldTiles),
-                ]),
-              ),
-            ),
           ],
         ),
         // 昔の地図の新旧スワイプの境界線（取っ手をドラッグで移動）。地図の上・ボタンの下
@@ -3566,113 +3522,391 @@ class _MapScreenState extends State<MapScreen> {
               onChanged: (v) => setState(() => _kjSplit = v),
             ),
           ),
+        // 下部の固定パネル・出典帯・操作板・ズーム/現在地（design/map_ui/PROPOSAL.md 第1段階）
         Positioned(
-          left: 12,
-          top: MediaQuery.of(context).padding.top + 12,
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.92),
-              borderRadius: BorderRadius.circular(16),
-              boxShadow: const [
-                BoxShadow(color: Colors.black26, blurRadius: 3)
-              ],
-            ),
-            child: Text(
-              widget.app.hasActiveFilters
-                  ? context.l10n.mapFilteredCount(cams.length)
-                  : context.l10n.mapTotalCount(cams.length),
-              style: const TextStyle(
-                  fontSize: 12, fontWeight: FontWeight.bold,
-                  color: Colors.black87),
-            ),
-          ),
+          left: 0,
+          right: 0,
+          bottom: 0,
+          child: _bottomArea(context, cams),
         ),
-        if (_situationCard() != null)
-          Positioned(
-            left: 12,
-            right: 76,
-            top: MediaQuery.of(context).padding.top + 12,
-            child: _situationCard()!,
-          ),
-        Positioned(
-          right: 16,
-          top: MediaQuery.of(context).padding.top + 12,
-          child: Column(mainAxisSize: MainAxisSize.min, children: [
-            FloatingActionButton.small(
-              heroTag: 'weather_layer',
-              tooltip: context.l10n.mapLayersTooltip,
-              backgroundColor: _layer == MapLayerKind.none ? null : Theme.of(context).colorScheme.primary,
-              foregroundColor: _layer == MapLayerKind.none ? null : Colors.white,
-              onPressed: () => _showLayerPicker(context),
-              child: const Icon(Icons.cloud_outlined),
-            ),
-            const SizedBox(height: 8),
-            FloatingActionButton.small(
-              heroTag: 'legend_filter',
-              onPressed: () => _showLegendFilter(context),
-              child: const Icon(Icons.layers_outlined),
-            ),
-            const SizedBox(height: 8),
-            FloatingActionButton.small(
-              heroTag: 'place_search',
-              tooltip: context.l10n.mapSearchTitle,
-              onPressed: () => _showPlaceSearch(context),
-              child: const Icon(Icons.search),
-            ),
-            const SizedBox(height: 8),
-            // ルート沿いカメラ（配信 manifest にキーがある間だけ出す）
-            if (widget.app.routeOrsKey.isNotEmpty) ...[
-              FloatingActionButton.small(
-                heroTag: 'route_corridor',
-                tooltip: context.l10n.mapRouteTooltip,
-                backgroundColor: _route == null ? null : Theme.of(context).colorScheme.primary,
-                foregroundColor: _route == null ? null : Colors.white,
-                onPressed: () => _showRouteSheet(context),
-                child: const Icon(Icons.route_outlined),
+        // 「いま起きていること」（発生時だけ右上に丸いボタン。展開中は外側タップで閉じる）
+        if (_situation != null && _situation!.isNotable) ...[
+          if (_situationExpanded)
+            Positioned.fill(
+              child: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: _dismissSituation,
+                child: const SizedBox.expand(),
               ),
-              const SizedBox(height: 8),
-            ],
-            // お気に入り一覧（1.4.1 でタブから地図画面へ移動）
-            FloatingActionButton.small(
-              heroTag: 'favorites',
-              tooltip: context.l10n.tabFavorites,
-              onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                      builder: (_) => FavoritesScreen(app: widget.app))),
-              child: const Icon(Icons.star_outline),
             ),
-          ]),
-        ),
-        Positioned(
-          right: 16,
-          bottom: 24,
-          child: Column(mainAxisSize: MainAxisSize.min, children: [
-            FloatingActionButton.small(
-              heroTag: 'zoom_in',
-              onPressed: () => _zoomBy(1),
-              child: const Icon(Icons.add),
+          Positioned(
+            right: 12,
+            top: MediaQuery.of(context).padding.top + 12,
+            child: SituationOverlay(
+              situation: _situation!,
+              expanded: _situationExpanded,
+              isNew: _situationJustChanged,
+              onOpen: _reopenSituation,
+              onClose: _dismissSituation,
+              onOpenWarning: () {
+                Analytics.event('situation_open', params: const {'kind': 'warning'});
+                widget.app.navigationRequest.value = null;
+                widget.app.navigationRequest.value = 'bosai/warning';
+              },
+              onOpenQuake: () {
+                Analytics.event('situation_open', params: const {'kind': 'quake'});
+                widget.app.navigationRequest.value = null;
+                widget.app.navigationRequest.value = 'bosai/quake';
+              },
+              onOpenTyphoon: (id) {
+                Analytics.event('situation_open', params: const {'kind': 'typhoon'});
+                _setLayer(MapLayerKind.typhoon, typhoonId: id);
+              },
+              onOpenUnderpass: () {
+                Analytics.event('situation_open', params: const {'kind': 'underpass'});
+                _openUnderpassLayer();
+              },
             ),
-            const SizedBox(height: 8),
-            FloatingActionButton.small(
-              heroTag: 'zoom_out',
-              onPressed: () => _zoomBy(-1),
-              child: const Icon(Icons.remove),
-            ),
-            const SizedBox(height: 8),
-            FloatingActionButton.small(
-              heroTag: 'my_location',
-              onPressed: _goToMyLocation,
-              child: _locating
-                  ? const SizedBox(
-                      width: 18,
-                      height: 18,
-                      child: CircularProgressIndicator(strokeWidth: 2))
-                  : Icon(_following ? Icons.my_location : Icons.location_searching),
-            ),
-          ]),
-        ),
+          ),
+        ],
       ],
+    );
+  }
+
+  /// 下部の固定領域（下から順に: パネル → 出典帯 → 操作板 → ズーム/現在地）。
+  /// design/map_ui/PROPOSAL.md 第1段階。地図の Stack 内で bottom 固定にする
+  Widget _bottomArea(BuildContext context, List<Camera> cams) {
+    // stretch で各段を全幅にする（ズーム/現在地だけ内部で右寄せにする）
+    return Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      _zoomAndLocation(),
+      const SizedBox(height: 12),
+      _controlPanel(),
+      _sourceBar(context, cams),
+      MapBottomPanel(
+        layerActive: _layer != MapLayerKind.none,
+        filterActive: widget.app.hasActiveFilters,
+        onSearch: () => _showPlaceSearch(context),
+        onLayers: () => _showLayerPicker(context),
+        onFilter: () => _showLegendFilter(context),
+        onMore: () => _showMoreSheet(context),
+      ),
+    ]);
+  }
+
+  /// レイヤー名（`_showLayerPicker` の各項目タイトルと同じ文字列）。
+  /// 操作板カードのタイトル行・レイヤー選択シートのタイル見出しで共通に使う
+  String _layerTitle(MapLayerKind kind) {
+    final l10n = context.l10n;
+    return switch (kind) {
+      MapLayerKind.none => l10n.mapLayerNone,
+      MapLayerKind.rainRadar => l10n.mapLayerRainRadarTitle,
+      MapLayerKind.quakes => l10n.mapLayerQuakesTitle,
+      MapLayerKind.rain24h => l10n.mapLayerRain24hTitle,
+      MapLayerKind.riskLand ||
+      MapLayerKind.riskInund ||
+      MapLayerKind.riskFlood =>
+        riskLayerTitleOf(l10n, RiskLayers.titleKey(kind)),
+      MapLayerKind.hazardFlood ||
+      MapLayerKind.hazardLandslide ||
+      MapLayerKind.hazardTsunami ||
+      MapLayerKind.hazardHightide =>
+        hazardLayerTitleOf(l10n, HazardLayers.titleKey(kind)),
+      MapLayerKind.shelters => l10n.mapLayerShelterTitle,
+      MapLayerKind.facilities => l10n.mapLayerFacilityTitle,
+      MapLayerKind.typhoon => l10n.mapLayerTyphoonTitle,
+      MapLayerKind.snowDepth => l10n.mapLayerSnowDepthTitle,
+      MapLayerKind.snowfall24h => l10n.mapLayerSnowfall24hTitle,
+      MapLayerKind.underpass => l10n.mapLayerUnderpassTitle,
+      MapLayerKind.roadRegulation => l10n.mapLayerRoadRegulationTitle,
+      MapLayerKind.roadClosures => l10n.mapLayerRoadClosuresTitle,
+      MapLayerKind.oldMap => l10n.mapLayerOldMapTitle,
+    };
+  }
+
+  /// レイヤーのアイコン。操作板カードのタイトル行・レイヤー選択シートのタイルで使う
+  IconData _layerIcon(MapLayerKind kind) => switch (kind) {
+        MapLayerKind.none => Icons.layers_outlined,
+        MapLayerKind.rainRadar => Icons.cloud_outlined,
+        MapLayerKind.quakes => Icons.vibration,
+        MapLayerKind.rain24h => Icons.water_drop_outlined,
+        MapLayerKind.riskLand ||
+        MapLayerKind.riskInund ||
+        MapLayerKind.riskFlood =>
+          Icons.warning_amber_outlined,
+        MapLayerKind.hazardFlood ||
+        MapLayerKind.hazardLandslide ||
+        MapLayerKind.hazardTsunami ||
+        MapLayerKind.hazardHightide =>
+          Icons.map_outlined,
+        MapLayerKind.shelters => Icons.home_work_outlined,
+        MapLayerKind.facilities => Icons.local_drink_outlined,
+        MapLayerKind.typhoon => Icons.cyclone,
+        MapLayerKind.snowDepth || MapLayerKind.snowfall24h => Icons.ac_unit,
+        MapLayerKind.underpass ||
+        MapLayerKind.roadRegulation ||
+        MapLayerKind.roadClosures =>
+          Icons.block,
+        MapLayerKind.oldMap => Icons.history,
+      };
+
+  /// 操作板カードのタイトル行に出す「時刻」（雨雲・24時間降水量・キキクル・積雪。
+  /// state に無ければ null＝省略）。雨雲は選択中の時刻＋現在/予測の相対表記も付ける
+  String? _layerTimeText() {
+    switch (_layer) {
+      case MapLayerKind.rainRadar:
+        if (_nowcastTimes.isEmpty) return null;
+        final n = _nowcastTimes[_nowcastIdx];
+        return '${n.label}　${_nowcastRelLabel(n)}';
+      case MapLayerKind.rain24h:
+        return _rain24hTile?.label;
+      case MapLayerKind.riskLand:
+      case MapLayerKind.riskInund:
+      case MapLayerKind.riskFlood:
+        return _risk?.label;
+      case MapLayerKind.snowDepth:
+      case MapLayerKind.snowfall24h:
+        return _snowTime?.label;
+      default:
+        return null;
+    }
+  }
+
+  /// レイヤー操作板（1枚のカード。タイトル行のタップで展開／圧縮）。
+  /// レイヤーOFFのときは何も出さない
+  Widget _controlPanel() {
+    if (_layer == MapLayerKind.none) return const SizedBox.shrink();
+    final expanded = _controllerExpanded;
+    final showCompactSlider =
+        !expanded && _layer == MapLayerKind.rainRadar && _nowcastTimes.length >= 2;
+    final timeText = _layerTimeText();
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 0, 12, 6),
+      child: Material(
+        color: Colors.white,
+        elevation: 3,
+        shadowColor: Colors.black45,
+        borderRadius: BorderRadius.circular(20),
+        clipBehavior: Clip.antiAlias,
+        child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          InkWell(
+            key: const Key('map_control_panel_title'),
+            onTap: () => _setControllerExpanded(!expanded),
+            child: SizedBox(
+              height: 48,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                child: Row(children: [
+                  Icon(_layerIcon(_layer), size: 20, color: Theme.of(context).colorScheme.primary),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(_layerTitle(_layer),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                  ),
+                  if (timeText != null && timeText.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(left: 6),
+                      child: Text(timeText,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(fontSize: 11, color: Colors.black54)),
+                    ),
+                  const SizedBox(width: 4),
+                  Tooltip(
+                    message: expanded
+                        ? context.l10n.mapControllerCollapse
+                        : context.l10n.mapControllerExpand,
+                    child: Icon(expanded ? Icons.expand_less : Icons.expand_more,
+                        size: 20, color: Colors.black54),
+                  ),
+                ]),
+              ),
+            ),
+          ),
+          // 雨雲の時刻操作は最頻の操作なので、圧縮中でも細いスライダーだけ残す
+          if (showCompactSlider) _nowcastCompactSlider(),
+          if (expanded) ...[
+            const Divider(height: 1),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
+              child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                if (_layer == MapLayerKind.rainRadar)
+                  Padding(padding: const EdgeInsets.only(bottom: 6), child: _nowcastSlider()),
+                if (_layer == MapLayerKind.shelters)
+                  Padding(padding: const EdgeInsets.only(bottom: 6), child: _shelterChips()),
+                if (_layer == MapLayerKind.facilities)
+                  Padding(padding: const EdgeInsets.only(bottom: 6), child: _facilityChips()),
+                if (_layer == MapLayerKind.typhoon && _typhoons.length > 1)
+                  Padding(padding: const EdgeInsets.only(bottom: 6), child: _typhoonChips()),
+                if (_layer == MapLayerKind.roadClosures)
+                  Padding(padding: const EdgeInsets.only(bottom: 6), child: _closureChips()),
+                if (_layer == MapLayerKind.oldMap)
+                  Padding(padding: const EdgeInsets.only(bottom: 6), child: _kjChips()),
+                _layerLegend(),
+              ]),
+            ),
+          ],
+        ]),
+      ),
+    );
+  }
+
+  /// パネル上端に接する出典帯（高さ約20、半透明白）。左に出典、右端に台数
+  Widget _sourceBar(BuildContext context, List<Camera> cams) {
+    return Container(
+      color: Colors.white.withValues(alpha: 0.85),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
+      child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Expanded(
+          child: Wrap(spacing: 4, runSpacing: 2, crossAxisAlignment: WrapCrossAlignment.center, children: [
+            if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
+            if (_layer == MapLayerKind.shelters) const _ShelterAttribution(),
+            if (_layer == MapLayerKind.oldMap) const _KjmapAttribution(),
+            if (_layer == MapLayerKind.facilities)
+              _FacilityAttribution(notice: _facilities?.index?.attribution),
+            _GsiAttribution(worldTiles: _useWorldTiles),
+          ]),
+        ),
+        const SizedBox(width: 8),
+        Text(
+          widget.app.hasActiveFilters
+              ? context.l10n.mapFilteredCount(cams.length)
+              : context.l10n.mapTotalCount(cams.length),
+          style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87),
+        ),
+      ]),
+    );
+  }
+
+  /// 地図上に残す現在地・ズーム（右寄せ。操作板の上端から12px上に追従する）。
+  /// 親の Column は stretch のため、Align で自分だけ右寄せにする
+  Widget _zoomAndLocation() {
+    final l10n = context.l10n;
+    return Align(
+      alignment: Alignment.centerRight,
+      child: Padding(
+        padding: const EdgeInsets.only(right: 12),
+        child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.center, children: [
+          // ＋／−（各40×40の見た目、48×48のタップ領域を持つ縦型ピル）。
+          // Divider が横に無限に広がるので幅を 48 に固定する
+          Material(
+            color: Theme.of(context).colorScheme.surface,
+            elevation: 3,
+            borderRadius: BorderRadius.circular(24),
+            child: SizedBox(width: 48, child: Column(mainAxisSize: MainAxisSize.min, children: [
+              _zoomPillButton(
+                key: const Key('map_zoom_in'),
+                icon: Icons.add,
+                label: l10n.mapZoomIn,
+                onTap: () => _zoomBy(1),
+              ),
+              const Divider(height: 1),
+              _zoomPillButton(
+                key: const Key('map_zoom_out'),
+                icon: Icons.remove,
+                label: l10n.mapZoomOut,
+                onTap: () => _zoomBy(-1),
+              ),
+            ])),
+          ),
+          const SizedBox(height: 8),
+          // 現在地（48×48の丸。追従中は塗りつぶし＋白アイコン）
+          Material(
+            color: _following ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.surface,
+            shape: const CircleBorder(),
+            elevation: 3,
+            child: InkWell(
+              key: const Key('map_my_location'),
+              onTap: _goToMyLocation,
+              customBorder: const CircleBorder(),
+              child: Semantics(
+                button: true,
+                label: l10n.mapMyLocation,
+                child: SizedBox(
+                  width: 48,
+                  height: 48,
+                  child: Center(
+                    child: _locating
+                        ? SizedBox(
+                            width: 18,
+                            height: 18,
+                            child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: _following ? Colors.white : null),
+                          )
+                        : Icon(
+                            _following ? Icons.my_location : Icons.location_searching,
+                            color: _following ? Colors.white : null,
+                          ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ]),
+      ),
+    );
+  }
+
+  /// ＋／−の1個。見た目は40×40、タップ領域は48×48（Semantics でも操作名を伝える）
+  Widget _zoomPillButton({
+    required Key key,
+    required IconData icon,
+    required String label,
+    required VoidCallback onTap,
+  }) {
+    return Semantics(
+      button: true,
+      label: label,
+      child: InkWell(
+        key: key,
+        onTap: onTap,
+        child: SizedBox(
+          width: 48,
+          height: 48,
+          child: Center(child: Icon(icon, size: 20)),
+        ),
+      ),
+    );
+  }
+
+  /// 「…」シート（design 第1段階：ルート沿いのカメラ・お気に入り一覧のみ）
+  void _showMoreSheet(BuildContext context) {
+    final l10n = context.l10n;
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: SingleChildScrollView(
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            ListTile(
+                title: Text(l10n.mapPanelMoreTitle,
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
+                subtitle: Text(l10n.mapPanelMoreSubtitle)),
+            // ルート沿いカメラ（配信 manifest にキーがある間だけ出す）
+            if (widget.app.routeOrsKey.isNotEmpty)
+              ListTile(
+                leading: const Icon(Icons.route_outlined),
+                title: Text(l10n.mapRouteMenu),
+                trailing: _route == null ? null : const Icon(Icons.check, color: Colors.green),
+                onTap: () {
+                  Navigator.pop(ctx);
+                  _showRouteSheet(context);
+                },
+              ),
+            ListTile(
+              leading: const Icon(Icons.star_outline),
+              title: Text(l10n.tabFavorites),
+              onTap: () {
+                Navigator.pop(ctx);
+                Navigator.of(context).push(
+                    MaterialPageRoute<void>(builder: (_) => FavoritesScreen(app: widget.app)));
+              },
+            ),
+          ]),
+        ),
+      ),
     );
   }
 }

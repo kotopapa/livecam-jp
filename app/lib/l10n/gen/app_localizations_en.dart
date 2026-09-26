@@ -909,7 +909,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapLocationFailed => 'Could not get your current location';
 
   @override
-  String get mapLegendTitle => 'Legend and filters';
+  String get mapLegendTitle => 'Filter cameras';
 
   @override
   String get mapLegendSearchHint =>
@@ -920,6 +920,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mapFilterOkOnly => 'Working cameras only';
+
+  @override
+  String get mapFilterIntro =>
+      'Changes apply right away. The map layer stays the same.';
+
+  @override
+  String get mapFilterBackToMap => 'Back to map';
 
   @override
   String get mapLegendLiveDot => 'Red dot = video (live stream)';
@@ -972,6 +979,36 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mapLayersTooltip => 'Map layers';
+
+  @override
+  String get mapPanelSearchHint => 'Search by place or camera name';
+
+  @override
+  String get mapPanelLayers => 'Layers';
+
+  @override
+  String get mapPanelLayersOn => 'Layers ON';
+
+  @override
+  String get mapPanelFilter => 'Filter';
+
+  @override
+  String get mapPanelMore => 'More';
+
+  @override
+  String get mapPanelMoreTitle => 'Map controls';
+
+  @override
+  String get mapPanelMoreSubtitle => 'Your usual spots, and the road ahead';
+
+  @override
+  String get mapZoomIn => 'Zoom in';
+
+  @override
+  String get mapZoomOut => 'Zoom out';
+
+  @override
+  String get mapMyLocation => 'My location';
 
   @override
   String get bosaiTitle => 'Disaster updates';
@@ -1202,6 +1239,12 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get mapLayerPanelSubtitle =>
       'Only one layer at a time can be overlaid on the map.';
+
+  @override
+  String get mapControllerExpand => 'Expand';
+
+  @override
+  String get mapControllerCollapse => 'Collapse';
 
   @override
   String get mapLayerNone => 'None';
@@ -2459,6 +2502,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapRouteTooltip => 'Cameras along a route';
 
   @override
+  String get mapRouteMenu => 'Cameras along a route';
+
+  @override
   String get routeSheetSubtitle =>
       'Enter a start and a destination to show only cameras near the route';
 
@@ -2541,6 +2587,11 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String situationCount(int n) {
     return '$n items';
+  }
+
+  @override
+  String situationButtonLabel(int count) {
+    return '$count alerts';
   }
 
   @override

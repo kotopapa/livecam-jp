@@ -912,7 +912,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapLocationFailed => 'Không lấy được vị trí hiện tại';
 
   @override
-  String get mapLegendTitle => 'Chú giải và bộ lọc';
+  String get mapLegendTitle => 'Lọc camera';
 
   @override
   String get mapLegendSearchHint =>
@@ -923,6 +923,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get mapFilterOkOnly => 'Chỉ camera đang hoạt động';
+
+  @override
+  String get mapFilterIntro =>
+      'Thay đổi được áp dụng ngay. Lớp bản đồ không thay đổi.';
+
+  @override
+  String get mapFilterBackToMap => 'Quay lại bản đồ';
 
   @override
   String get mapLegendLiveDot => 'Chấm đỏ = video (phát trực tiếp)';
@@ -975,6 +982,37 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get mapLayersTooltip => 'Lớp bản đồ';
+
+  @override
+  String get mapPanelSearchHint => 'Tìm theo địa danh hoặc tên camera';
+
+  @override
+  String get mapPanelLayers => 'Lớp bản đồ';
+
+  @override
+  String get mapPanelLayersOn => 'Lớp bản đồ: BẬT';
+
+  @override
+  String get mapPanelFilter => 'Bộ lọc';
+
+  @override
+  String get mapPanelMore => 'Khác';
+
+  @override
+  String get mapPanelMoreTitle => 'Điều khiển bản đồ';
+
+  @override
+  String get mapPanelMoreSubtitle =>
+      'Đến những nơi quen thuộc và tuyến đường sắp đi';
+
+  @override
+  String get mapZoomIn => 'Phóng to';
+
+  @override
+  String get mapZoomOut => 'Thu nhỏ';
+
+  @override
+  String get mapMyLocation => 'Vị trí của tôi';
 
   @override
   String get bosaiTitle => 'Tin thảm họa';
@@ -1208,6 +1246,12 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get mapLayerPanelSubtitle =>
       'Mỗi lần chỉ chồng được một lớp lên bản đồ.';
+
+  @override
+  String get mapControllerExpand => 'Mở rộng';
+
+  @override
+  String get mapControllerCollapse => 'Thu gọn';
 
   @override
   String get mapLayerNone => 'Không hiển thị';
@@ -2466,6 +2510,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapRouteTooltip => 'Camera dọc tuyến đường';
 
   @override
+  String get mapRouteMenu => 'Camera dọc tuyến đường';
+
+  @override
   String get routeSheetSubtitle =>
       'Nhập điểm đi và điểm đến để chỉ hiển thị camera gần tuyến đường';
 
@@ -2548,6 +2595,11 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String situationCount(int n) {
     return '$n mục';
+  }
+
+  @override
+  String situationButtonLabel(int count) {
+    return '$count thông báo';
   }
 
   @override

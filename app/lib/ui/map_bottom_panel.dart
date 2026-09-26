@@ -1,0 +1,219 @@
+import 'package:flutter/material.dart';
+
+import '../l10n/l10n.dart';
+
+/// 地図下部に固定する操作パネル（design/map_ui/PROPOSAL.md 第1段階）。
+///
+/// 検索バー（高さ48）＋ボタン行「レイヤー」「絞り込み」「…」（高さ44、タップ領域は
+/// 48以上）の2段。地図の Stack 内で bottom 固定にして使う。選択の実処理・状態は
+/// 呼び出し側（map_screen.dart）が持ち、このウィジェットは見た目と入口だけを持つ。
+class MapBottomPanel extends StatelessWidget {
+  const MapBottomPanel({
+    super.key,
+    required this.onSearch,
+    required this.onLayers,
+    required this.onFilter,
+    required this.onMore,
+    this.layerActive = false,
+    this.filterActive = false,
+  });
+
+  final VoidCallback onSearch;
+  final VoidCallback onLayers;
+  final VoidCallback onFilter;
+  final VoidCallback onMore;
+
+  /// レイヤーを選択中（「表示しない」以外）。ONの文言と塗りに反映する
+  final bool layerActive;
+
+  /// 絞り込み条件がある（AppState.hasActiveFilters）
+  final bool filterActive;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = context.l10n;
+    return Material(
+      color: Theme.of(context).colorScheme.surface,
+      elevation: 8,
+      borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            _SearchBar(hint: l10n.mapPanelSearchHint, onTap: onSearch),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(
+                  child: _PanelButton(
+                    key: const Key('map_panel_layers'),
+                    icon: Icons.layers_outlined,
+                    label: layerActive
+                        ? l10n.mapPanelLayersOn
+                        : l10n.mapPanelLayers,
+                    active: layerActive,
+                    onTap: onLayers,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: _PanelButton(
+                    key: const Key('map_panel_filter'),
+                    icon: Icons.tune,
+                    label: l10n.mapPanelFilter,
+                    active: filterActive,
+                    onTap: onFilter,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                // 「…」はアイコンだけの固定幅（文字付き3等分だと「レイヤー ON」が欠ける）
+                SizedBox(
+                  width: 56,
+                  child: Tooltip(
+                    message: l10n.mapPanelMore,
+                    child: _PanelButton(
+                      key: const Key('map_panel_more'),
+                      icon: Icons.more_horiz,
+                      label: '',
+                      semanticsLabel: l10n.mapPanelMore,
+                      active: false,
+                      onTap: onMore,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// 検索バー（高さ48）。文字入力欄ではなく、タップで既存の検索シートを開く入口
+class _SearchBar extends StatelessWidget {
+  const _SearchBar({required this.hint, required this.onTap});
+
+  final String hint;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return SizedBox(
+      height: 48,
+      child: Material(
+        color: scheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(24),
+        child: InkWell(
+          key: const Key('map_panel_search'),
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(24),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              children: [
+                Icon(Icons.search, size: 20, color: scheme.onSurfaceVariant),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    hint,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: scheme.onSurfaceVariant,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// ボタン行の1個（見た目の高さ44、タップ領域は48以上）
+class _PanelButton extends StatelessWidget {
+  const _PanelButton({
+    super.key,
+    required this.icon,
+    required this.label,
+    required this.active,
+    required this.onTap,
+    this.semanticsLabel,
+  });
+
+  final IconData icon;
+  /// 空文字ならアイコンだけ（読み上げは [semanticsLabel]）
+  final String label;
+  final bool active;
+  final VoidCallback onTap;
+  final String? semanticsLabel;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Semantics(
+      button: true,
+      label: label.isEmpty ? semanticsLabel : null,
+      child: SizedBox(
+      height: 48,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(22),
+          child: Align(
+            child: Container(
+              height: 44,
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                color: active
+                    ? scheme.primaryContainer
+                    : scheme.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(22),
+              ),
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    icon,
+                    size: 20,
+                    color: active
+                        ? scheme.onPrimaryContainer
+                        : scheme.onSurfaceVariant,
+                  ),
+                  if (label.isNotEmpty) ...[
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Text(
+                        label,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: active
+                              ? FontWeight.bold
+                              : FontWeight.normal,
+                          color: active
+                              ? scheme.onPrimaryContainer
+                              : scheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+      ),
+    );
+  }
+}
