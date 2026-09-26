@@ -2884,8 +2884,7 @@ class _MapScreenState extends State<MapScreen> {
                           avatar: CircleAvatar(
                               backgroundColor: categoryColor(key),
                               radius: 6,
-                              child: Icon(categoryIcon(key),
-                                  size: 8, color: Colors.white)),
+                              child: CategoryGlyph(key, size: 8)),
                           label: Text('${categoryLabelOf(context.l10n, key)} '
                               '${counts[key] ?? 0}'),
                           selected: app.enabledCategories.contains(key),

@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 import '../models/camera.dart';
@@ -19,18 +21,111 @@ const Map<String, Color> categoryColors = {
 };
 
 /// カテゴリ別の記号（ピン中央・絞り込みチップに白で描く）。
-/// Material Icons に完全一致が無いものは近いものを使う
-IconData categoryIcon(String key) => switch (key) {
-      'river' => Icons.waves,
+/// 河川とダムは Material Icons に該当が無いので [CategoryGlyph] が自前で描く。
+/// 2026-09-27 ユーザー選定: 河川=蛇行線 / 道路=標識 / 火山=噴火 / ダム=堤体＋水 /
+/// 海岸=波 / 港湾=錨 / 景観=山 / 癒し=肉球 / その他=カメラ
+IconData? categoryIcon(String key) => switch (key) {
+      'river' => null, // 自前描画
       'road' => Icons.signpost_outlined,
-      'volcano' => Icons.local_fire_department,
-      'dam' => Icons.water_drop,
-      'coast' => Icons.beach_access,
+      'volcano' => Icons.volcano,
+      'dam' => null, // 自前描画
+      'coast' => Icons.waves,
       'port' => Icons.anchor,
       'scenic' => Icons.landscape,
-      'healing' => Icons.spa,
+      'healing' => Icons.pets,
       _ => Icons.videocam, // 'other' 及び未知キー
     };
+
+/// カテゴリ記号を [size] 四方に描く（Icon か自前の CustomPaint）
+class CategoryGlyph extends StatelessWidget {
+  const CategoryGlyph(this.category, {super.key, required this.size, this.color = Colors.white});
+
+  final String category;
+  final double size;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    final icon = categoryIcon(category);
+    if (icon != null) return Icon(icon, size: size, color: color);
+    return CustomPaint(
+      size: Size.square(size),
+      painter: category == 'dam' ? _DamGlyphPainter(color) : _RiverGlyphPainter(color),
+    );
+  }
+}
+
+/// 川: 上から下へ蛇行する2本の線
+class _RiverGlyphPainter extends CustomPainter {
+  const _RiverGlyphPainter(this.color);
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final r = size.width / 2 * 0.95;
+    final cx = size.width / 2, cy = size.height / 2;
+    final paint = Paint()
+      ..color = color
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size.width * 0.13
+      ..strokeCap = StrokeCap.round;
+    for (final off in [-r * 0.32, r * 0.32]) {
+      final path = Path();
+      for (var k = 0; k <= 24; k++) {
+        final t = k / 24;
+        final x = cx + off + math.sin(t * math.pi * 2) * r * 0.45;
+        final y = cy - r + 2 * r * t;
+        if (k == 0) {
+          path.moveTo(x, y);
+        } else {
+          path.lineTo(x, y);
+        }
+      }
+      canvas.drawPath(path, paint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_RiverGlyphPainter old) => old.color != color;
+}
+
+/// ダム: 上に堤体（太い横棒）、下に水面の波2本
+class _DamGlyphPainter extends CustomPainter {
+  const _DamGlyphPainter(this.color);
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final r = size.width / 2 * 0.95;
+    final cx = size.width / 2, cy = size.height / 2;
+    final w = size.width * 0.13;
+    canvas.drawRRect(
+      RRect.fromLTRBR(cx - r, cy - r * 0.9, cx + r, cy - r * 0.2, Radius.circular(w)),
+      Paint()..color = color,
+    );
+    final wave = Paint()
+      ..color = color
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = w * 0.7
+      ..strokeCap = StrokeCap.round;
+    for (final yy in [cy + r * 0.25, cy + r * 0.75]) {
+      final path = Path();
+      for (var i = 0; i <= 16; i++) {
+        final x = cx - r + i * (2 * r / 16);
+        final y = yy + (i.isOdd ? r * 0.18 : -r * 0.18);
+        if (i == 0) {
+          path.moveTo(x, y);
+        } else {
+          path.lineTo(x, y);
+        }
+      }
+      canvas.drawPath(path, wave);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_DamGlyphPainter old) => old.color != color;
+}
 
 /// カテゴリキーの表示順（凡例・フィルタで使う）。
 /// 表示名は多言語化のため `l10n/l10n.dart` の `categoryLabelOf(l10n, key)` で解決する
@@ -99,8 +194,7 @@ class CameraPin extends StatelessWidget {
         ],
       ),
       // 記号は丸の直径の約55%
-      child: Icon(categoryIcon(camera.category),
-          size: pinDiameter * 0.55, color: Colors.white),
+      child: Center(child: CategoryGlyph(camera.category, size: pinDiameter * 0.55)),
     );
     final badges = <Widget>[
       // 動画カメラは右上に赤ドット（LIVEインジケータ）
