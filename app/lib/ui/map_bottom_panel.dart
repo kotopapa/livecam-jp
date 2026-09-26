@@ -37,7 +37,10 @@ class MapBottomPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    return Material(
+    // 端末の文字サイズ設定が大きくてもパネルが地図を食わないよう拡大率は 1.3 で頭打ち
+    return MediaQuery.withClampedTextScaling(
+      maxScaleFactor: 1.3,
+      child: Material(
       color: Theme.of(context).colorScheme.surface,
       elevation: 8,
       borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
@@ -93,6 +96,7 @@ class MapBottomPanel extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

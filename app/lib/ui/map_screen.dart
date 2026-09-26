@@ -4,6 +4,7 @@ import 'dart:io' show Directory;
 import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart' show setEquals;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:http/http.dart' as http;
@@ -73,6 +74,9 @@ class _MapScreenState extends State<MapScreen> {
   /// hasGesture で立て、onMapEvent の操作終了イベントで戻す。ピンのタップ等の
   /// 単なるタップでは onPositionChanged 自体が呼ばれないため沈まない）
   bool _mapDragging = false;
+  /// 出典帯の「今昔マップ on the web」リンク（build ごとに作らず使い回す）
+  late final TapGestureRecognizer _kjmapTap = TapGestureRecognizer()
+    ..onTap = () => launchUrl(Uri.parse(Kjmap.siteUrl), mode: LaunchMode.externalApplication);
   // ジェスチャー終了イベントを取り逃した場合のフェイルセーフ
   Timer? _mapDraggingFailsafe;
   LatLng? _myLocation;
@@ -232,6 +236,7 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   void dispose() {
+    _kjmapTap.dispose();
     _layerTimer?.cancel();
     _situationTimer?.cancel();
     _mapDraggingFailsafe?.cancel();
@@ -3784,12 +3789,31 @@ class _MapScreenState extends State<MapScreen> {
                 if (_layer == MapLayerKind.oldMap)
                   Padding(padding: const EdgeInsets.only(bottom: 6), child: _kjChips()),
                 _layerLegend(),
+                // レイヤーの免責文（出典帯には入れず、展開したときだけ出す）
+                if (_layerDisclaimer() != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(_layerDisclaimer()!,
+                        style: const TextStyle(fontSize: 9, color: Colors.black54)),
+                  ),
               ]),
             ),
           ],
         ]),
       ),
     );
+  }
+
+  /// 表示中レイヤーの免責文（無ければ null）
+  String? _layerDisclaimer() {
+    final l10n = context.l10n;
+    if (HazardLayers.isHazard(_layer)) return l10n.hazardDisclaimer;
+    return switch (_layer) {
+      MapLayerKind.shelters => l10n.shelterDisclaimer,
+      MapLayerKind.facilities => l10n.facilityDisclaimer,
+      MapLayerKind.oldMap => l10n.oldMapDisclaimer,
+      _ => null,
+    };
   }
 
   /// パネル上端に接する出典帯（高さ約20、半透明白）。左に出典、右端に台数。
@@ -3800,19 +3824,34 @@ class _MapScreenState extends State<MapScreen> {
         TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87);
     final loaded = widget.app.repository.cameras.isNotEmpty;
     final noMatch = loaded && cams.isEmpty && widget.app.hasActiveFilters;
+    // 出典は1本の文にまとめて最大2行（免責文は操作板の展開側に置く）。
+    // 端末の文字サイズ設定が大きくても帯が膨らまないよう拡大率は 1.2 で頭打ち
+    const srcStyle = TextStyle(fontSize: 10, color: Colors.black87);
+    final sources = <InlineSpan>[
+      if (HazardLayers.isHazard(_layer)) const TextSpan(text: '${HazardLayers.attribution}｜'),
+      if (_layer == MapLayerKind.shelters) const TextSpan(text: '${ShelterLayers.attribution}｜'),
+      if (_layer == MapLayerKind.facilities)
+        TextSpan(text: '${_facilities?.index?.attribution.isNotEmpty == true ? _facilities!.index!.attribution : FacilityLayers.attribution}｜'),
+      if (_layer == MapLayerKind.oldMap)
+        TextSpan(
+          text: Kjmap.attribution,
+          style: const TextStyle(decoration: TextDecoration.underline),
+          recognizer: _kjmapTap,
+        ),
+      if (_layer == MapLayerKind.oldMap) const TextSpan(text: '｜'),
+      TextSpan(text: _useWorldTiles ? '© OpenStreetMap contributors' : context.l10n.detailMapTileGsi),
+    ];
     return Container(
       color: Colors.white.withValues(alpha: 0.85),
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
       child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
         Expanded(
-          child: Wrap(spacing: 4, runSpacing: 2, crossAxisAlignment: WrapCrossAlignment.center, children: [
-            if (HazardLayers.isHazard(_layer)) const _HazardAttribution(),
-            if (_layer == MapLayerKind.shelters) const _ShelterAttribution(),
-            if (_layer == MapLayerKind.oldMap) const _KjmapAttribution(),
-            if (_layer == MapLayerKind.facilities)
-              _FacilityAttribution(notice: _facilities?.index?.attribution),
-            _GsiAttribution(worldTiles: _useWorldTiles),
-          ]),
+          child: Text.rich(
+            TextSpan(style: srcStyle, children: sources),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            textScaler: MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.2),
+          ),
         ),
         const SizedBox(width: 8),
         Flexible(
@@ -3843,6 +3882,7 @@ class _MapScreenState extends State<MapScreen> {
                       ? context.l10n.mapFilteredCount(cams.length)
                       : context.l10n.mapTotalCount(cams.length),
                   style: countStyle,
+                  textScaler: MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.2),
                 ),
             ],
           ),
@@ -4056,64 +4096,6 @@ class _MyLocationDot extends StatelessWidget {
   }
 }
 
-class _GsiAttribution extends StatelessWidget {
-  const _GsiAttribution({this.worldTiles = false});
-
-  final bool worldTiles;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(4),
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      color: Colors.white70,
-      child: Text(
-          worldTiles
-              ? '© OpenStreetMap contributors'
-              : context.l10n.detailMapTileGsi,
-          style: const TextStyle(fontSize: 10)),
-    );
-  }
-}
-
-/// ハザードマップ表示中の出典・免責（_GsiAttribution と同じ場所・様式で上に積む）
-class _HazardAttribution extends StatelessWidget {
-  const _HazardAttribution();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      color: Colors.white70,
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
-        const Text(HazardLayers.attribution, style: TextStyle(fontSize: 10)),
-        Text(context.l10n.hazardDisclaimer,
-            style: const TextStyle(fontSize: 9, color: Colors.black54)),
-      ]),
-    );
-  }
-}
-
-/// 避難場所表示中の出典・免責（_HazardAttribution と同じ様式）
-class _ShelterAttribution extends StatelessWidget {
-  const _ShelterAttribution();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      color: Colors.white70,
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
-        const Text(ShelterLayers.attribution, style: TextStyle(fontSize: 10)),
-        Text(context.l10n.shelterDisclaimer,
-            style: const TextStyle(fontSize: 9, color: Colors.black54)),
-      ]),
-    );
-  }
-}
-
 /// 避難場所ピン（緑の丸＋家アイコン。指定避難所は二重枠）。カメラピンとは色・形で区別する
 class _ShelterPin extends StatelessWidget {
   const _ShelterPin({required this.designated, this.size = 22});
@@ -4165,29 +4147,6 @@ class _ShelterCluster extends StatelessWidget {
       ),
       child: Text('$count',
           style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-    );
-  }
-}
-
-/// 防災拠点表示中の出典・注記（_ShelterAttribution と同じ様式）。
-/// [notice] は index.attribution（未取得なら定数の出典表記）
-class _FacilityAttribution extends StatelessWidget {
-  const _FacilityAttribution({this.notice});
-
-  final String? notice;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      color: Colors.white70,
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
-        Text(notice?.isNotEmpty == true ? notice! : FacilityLayers.attribution,
-            style: const TextStyle(fontSize: 10)),
-        Text(context.l10n.facilityDisclaimer,
-            style: const TextStyle(fontSize: 9, color: Colors.black54)),
-      ]),
     );
   }
 }
@@ -4404,24 +4363,3 @@ class _KjDivider extends StatelessWidget {
   }
 }
 
-/// 昔の地図表示中の出典（利用条件: 「今昔マップ on the web」の文字を画面に入れる。常時表示）
-class _KjmapAttribution extends StatelessWidget {
-  const _KjmapAttribution();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-      color: Colors.white70,
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
-        InkWell(
-          onTap: () => launchUrl(Uri.parse(Kjmap.siteUrl), mode: LaunchMode.externalApplication),
-          child: const Text(Kjmap.attribution, style: TextStyle(fontSize: 10, decoration: TextDecoration.underline)),
-        ),
-        Text(context.l10n.oldMapDisclaimer,
-            style: const TextStyle(fontSize: 9, color: Colors.black54)),
-      ]),
-    );
-  }
-}
