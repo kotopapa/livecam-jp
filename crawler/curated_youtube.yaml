@@ -18762,15 +18762,16 @@ cameras:
     note: "埋め込み不可のため誘導型。運営者未特定のため削除依頼即応"
 
   # 2026-09-23 印旛沼調査（2026-09-22 北印旛沼堤防決壊）で追加
-  - id: curated-inbanuma-kyoso-breach
-    name: 印旛沼 堤防決壊箇所（北印旛沼東岸・成田市）
-    operator: "京相農園（成田市・YouTubeチャンネル）"
-    video_id: "yWe7BfKUt9M"
-    category: river
-    prefecture: "12"
-    lat: 35.800924
-    lng: 140.263637
-    note: "農業者による臨時配信（埋め込み可）。回線都合で停止しうる。配信終了時は退役。削除依頼即応"
+  # 2026-09-27 退役: 臨時配信が終了（記録閲覧不可・京相農園チャンネルに後継ライブなし）
+  #   - id: curated-inbanuma-kyoso-breach
+  #     name: 印旛沼 堤防決壊箇所（北印旛沼東岸・成田市）
+  #     operator: "京相農園（成田市・YouTubeチャンネル）"
+  #     video_id: "yWe7BfKUt9M"
+  #     category: river
+  #     prefecture: "12"
+  #     lat: 35.800924
+  #     lng: 140.263637
+  #     note: "農業者による臨時配信（埋め込み可）。回線都合で停止しうる。配信終了時は退役。削除依頼即応"
 
   - id: curated-shisui-r51-crossing
     name: 酒々井町排水路 国道51号横断（上岩橋地先）
