@@ -2416,6 +2416,12 @@ abstract class AppLocalizations {
   /// **'震源'**
   String get mapLayerQuakesTitle;
 
+  /// No description provided for @mapQuakePeriodLabel.
+  ///
+  /// In ja, this message translates to:
+  /// **'震源の期間'**
+  String get mapQuakePeriodLabel;
+
   /// No description provided for @mapQuakePeriodDay.
   ///
   /// In ja, this message translates to:

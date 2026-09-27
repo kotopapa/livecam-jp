@@ -1238,6 +1238,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapLayerQuakesTitle => '震源';
 
   @override
+  String get mapQuakePeriodLabel => '震源时段';
+
+  @override
   String get mapQuakePeriodDay => '24小时';
 
   @override
@@ -3900,6 +3903,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapLayerQuakesTitle => '震源';
+
+  @override
+  String get mapQuakePeriodLabel => '震源時段';
 
   @override
   String get mapQuakePeriodDay => '24 小時';

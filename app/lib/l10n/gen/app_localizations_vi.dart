@@ -1300,6 +1300,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapLayerQuakesTitle => 'Tâm chấn';
 
   @override
+  String get mapQuakePeriodLabel => 'Động đất trong';
+
+  @override
   String get mapQuakePeriodDay => '24 giờ';
 
   @override

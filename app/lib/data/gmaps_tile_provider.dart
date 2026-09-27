@@ -66,46 +66,47 @@ class UrlTileProvider implements TileProvider {
   @override
   Future<Tile> getTile(int x, int y, int? zoom) async {
     if (zoom == null) return TileProvider.noTile;
-    if ((minZoom != null && zoom < minZoom!) ||
-        (maxZoom != null && zoom > maxZoom!)) {
-      return TileProvider.noTile;
+    if (minZoom != null && zoom < minZoom!) return TileProvider.noTile;
+    // 配信元の最大ズームより拡大したときは、最大ズーム（偶数ズーム限定なら
+    // それ以下の偶数）の祖先タイルの該当部分を拡大して返す（旧 flutter_map の
+    // maxNativeZoom 相当。無いとズームインした瞬間にレイヤーが消えていた）
+    var srcZ = zoom;
+    if (maxZoom != null && zoom > maxZoom!) srcZ = maxZoom!;
+    if (evenZoomOnly && srcZ.isOdd) srcZ -= 1;
+    final d = zoom - srcZ;
+    if (d > 6) return TileProvider.noTile; // 64倍超は粗すぎるので出さない
+    Uint8List? bytes;
+    if (d == 0) {
+      bytes = await _fetch(zoom, x, y);
+    } else {
+      final src = await _fetch(srcZ, x >> d, y >> d);
+      if (src != null) {
+        final mask = (1 << d) - 1;
+        try {
+          bytes = await _extractPart(src, 1 << d, x & mask, y & mask);
+        } catch (_) {
+          bytes = null; // 破損データ等は透明タイル
+        }
+      }
     }
-    final bytes = evenZoomOnly
-        ? await _evenZoomBytes(zoom, x, y)
-        : await _fetch(zoom, x, y);
     if (bytes == null || bytes.isEmpty) return TileProvider.noTile;
     return Tile(256, 256, bytes);
   }
 
-  /// 偶数ズームならそのまま取得。奇数ズームは1段下の親タイルを取得し、該当する
-  /// 4分の1を切り出して返す
-  Future<Uint8List?> _evenZoomBytes(int z, int x, int y) async {
-    final p = UrlTileProvider.parentFor(z, x, y);
-    if (p == null) return _fetch(z, x, y);
-    final parent = await _fetch(p.z, p.x, p.y);
-    if (parent == null) return null;
-    try {
-      return await _extractQuadrant(parent, p.qx, p.qy);
-    } catch (_) {
-      // 破損データ等でデコードに失敗した場合は透明タイルにする
-      return null;
-    }
-  }
-
-  /// 親PNGの4分の1（[qx], [qy]）を[size]px四方に拡大したPNGを返す（補間なし）
-  Future<Uint8List> _extractQuadrant(Uint8List parentPng, int qx, int qy,
+  /// 祖先PNGを [div]×[div] に分けた (sx, sy) 番目を [size]px 四方に拡大したPNG（補間なし）
+  Future<Uint8List> _extractPart(Uint8List parentPng, int div, int sx, int sy,
       {int size = 256}) async {
     final codec = await ui.instantiateImageCodec(parentPng);
     final frame = await codec.getNextFrame();
     final img = frame.image;
     try {
-      final w = img.width / 2;
-      final h = img.height / 2;
+      final w = img.width / div;
+      final h = img.height / div;
       final recorder = ui.PictureRecorder();
       final canvas = ui.Canvas(recorder);
       canvas.drawImageRect(
         img,
-        ui.Rect.fromLTWH(qx * w, qy * h, w, h),
+        ui.Rect.fromLTWH(sx * w, sy * h, w, h),
         ui.Rect.fromLTWH(0, 0, size.toDouble(), size.toDouble()),
         ui.Paint()..filterQuality = ui.FilterQuality.none,
       );

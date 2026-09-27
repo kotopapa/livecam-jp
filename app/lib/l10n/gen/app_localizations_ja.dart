@@ -1247,6 +1247,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapLayerQuakesTitle => '震源';
 
   @override
+  String get mapQuakePeriodLabel => '震源の期間';
+
+  @override
   String get mapQuakePeriodDay => '24時間';
 
   @override
@@ -3939,6 +3942,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapLayerQuakesTitle => '地震（じしん）が おきた ところ';
+
+  @override
+  String get mapQuakePeriodLabel => 'しんげんの きかん';
 
   @override
   String get mapQuakePeriodDay => '24時間（じかん）';

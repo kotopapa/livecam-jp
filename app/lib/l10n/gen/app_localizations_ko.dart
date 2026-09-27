@@ -1253,6 +1253,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapLayerQuakesTitle => '진원';
 
   @override
+  String get mapQuakePeriodLabel => '진원 표시 기간';
+
+  @override
   String get mapQuakePeriodDay => '24시간';
 
   @override

@@ -1293,6 +1293,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapLayerQuakesTitle => 'Hypocenter';
 
   @override
+  String get mapQuakePeriodLabel => 'Earthquakes in';
+
+  @override
   String get mapQuakePeriodDay => '24 hours';
 
   @override

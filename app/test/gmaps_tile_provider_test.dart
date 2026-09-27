@@ -93,22 +93,28 @@ void main() {
     expect(requested!.path, '/4/3/10.png');
   });
 
-  testWidgets('範囲外のズームは通信せず noTile', (tester) async {
-    var called = false;
+  testWidgets('最小ズーム未満は通信せず noTile、最大ズーム超は祖先タイルを取りに行く', (tester) async {
+    final urls = <String>[];
     final provider = UrlTileProvider(
       template: 'https://example.jp/{z}/{x}/{y}.png',
       minZoom: 4,
       maxZoom: 10,
       client: MockClient((req) async {
-        called = true;
-        return http.Response.bytes(const [1, 2, 3], 200);
+        urls.add(req.url.path);
+        return http.Response.bytes(const [], 404);
       }),
     );
     final below = await provider.getTile(0, 0, 3);
-    final above = await provider.getTile(0, 0, 11);
     expect(below.data, isNull);
-    expect(above.data, isNull);
-    expect(called, isFalse);
+    expect(urls, isEmpty);
+    // z12 の (13, 7) → z10 の (3, 1) を取得（拡大は取得成功時のみ）
+    await tester.runAsync(() => provider.getTile(13, 7, 12));
+    expect(urls, ['/10/3/1.png']);
+    // 7段以上の拡大は粗すぎるので取りに行かない
+    urls.clear();
+    final far = await provider.getTile(0, 0, 17);
+    expect(far.data, isNull);
+    expect(urls, isEmpty);
   });
 
   testWidgets('取得失敗（404・空本文）は noTile', (tester) async {

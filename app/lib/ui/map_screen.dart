@@ -686,9 +686,14 @@ class _MapScreenState extends State<MapScreen> {
               // 地震の期間（震源タイルをタップしなくても選べる。選ぶと震源レイヤーへ切替）
               Padding(
                 padding: const EdgeInsets.only(top: 4),
-                child: Row(children: [
-                  Icon(Icons.vibration, size: 16, color: Colors.grey[600]),
-                  const SizedBox(width: 6),
+                child: Wrap(spacing: 6, runSpacing: 4, crossAxisAlignment: WrapCrossAlignment.center, children: [
+                  // アイコンだけでは何の選択か分からないので文字で示す（2026-09-27 要望）
+                  Row(mainAxisSize: MainAxisSize.min, children: [
+                    Icon(Icons.vibration, size: 16, color: Colors.grey[700]),
+                    const SizedBox(width: 4),
+                    Text(l10n.mapQuakePeriodLabel,
+                        style: TextStyle(fontSize: 13, color: Colors.grey[800])),
+                  ]),
                   for (final p in QuakePeriod.values) ...[
                     ChoiceChip(
                       label: Text(switch (p) {
@@ -700,7 +705,6 @@ class _MapScreenState extends State<MapScreen> {
                       visualDensity: VisualDensity.compact,
                       onSelected: (_) { Navigator.pop(ctx); _setLayer(MapLayerKind.quakes, period: p); },
                     ),
-                    const SizedBox(width: 6),
                   ],
                 ]),
               ),
