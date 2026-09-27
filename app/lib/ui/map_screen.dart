@@ -6,6 +6,7 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart' show setEquals;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart' as gmaps;
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
@@ -87,6 +88,11 @@ class _MapScreenState extends State<MapScreen> {
   /// ジェスチャーとプログラム移動を区別しないので、これが true の間は「追従解除・
   /// パネルを沈める・状況カードを閉じる」の利用者操作向けの処理をしない
   bool _programmaticMove = false;
+  /// 今昔マップのスワイプ比較で、どちらの地図が操作の起点か。2枚とも操作を受け、
+  /// 起点になった側がもう一方をアニメーション無しで追従させる（2026-09-27 実機で
+  /// 上の地図が操作不可だと、その下の地図にもタッチが届かずピンチできなかった）
+  bool _kjTopDriving = false;
+  bool _kjBottomDriving = false;
   /// 出典帯の「今昔マップ on the web」リンク（build ごとに作らず使い回す）
   late final TapGestureRecognizer _kjmapTap = TapGestureRecognizer()
     ..onTap = () => launchUrl(Uri.parse(Kjmap.siteUrl), mode: LaunchMode.externalApplication);
@@ -3784,7 +3790,20 @@ class _MapScreenState extends State<MapScreen> {
     }
   }
 
+  /// 利用者が地図を動かし始めた（追従解除・状況カードを閉じる・シートを沈める）
+  void _onUserGestureStart() {
+    if (_following) _stopFollowing();
+    if (_situationExpanded) _dismissSituation();
+    if (!_mapDragging) setState(() => _mapDragging = true);
+    // 操作終了イベントを取り逃した場合のフェイルセーフ
+    _mapDraggingFailsafe?.cancel();
+    _mapDraggingFailsafe = Timer(const Duration(milliseconds: 600), () {
+      if (mounted) setState(() => _mapDragging = false);
+    });
+  }
+
   Future<void> _onCameraIdle() async {
+    _kjBottomDriving = false;
     final wasProgrammatic = _programmaticMove;
     _programmaticMove = false;
     _mapDraggingFailsafe?.cancel();
@@ -3867,21 +3886,15 @@ class _MapScreenState extends State<MapScreen> {
           circles: _vectorCircles(),
           onMapCreated: _onMapCreated,
           onCameraMoveStarted: () {
-            if (_programmaticMove) return; // アプリ側の移動（追従・位置復元・寄せ）
-            if (_following) _stopFollowing();
-            if (_situationExpanded) _dismissSituation();
-            if (!_mapDragging) setState(() => _mapDragging = true);
-            // 操作終了イベントを取り逃した場合のフェイルセーフ
-            _mapDraggingFailsafe?.cancel();
-            _mapDraggingFailsafe = Timer(const Duration(milliseconds: 600), () {
-              if (mounted) setState(() => _mapDragging = false);
-            });
+            if (_programmaticMove || _kjTopDriving) return; // アプリ側の移動・上の地図からの追従
+            _onUserGestureStart();
           },
           onCameraMove: (pos) {
             _center = _l(pos.target);
             // 今昔マップのスワイプ比較中は2枚目の GoogleMap（操作不可）を毎フレーム
             // 追従させる（setState は不要。表示だけ同期する）
-            if (kjSwipeActive) {
+            if (kjSwipeActive && !_kjTopDriving) {
+              _kjBottomDriving = true;
               // moveCamera は Future を返す非同期メソッドで、この
               // コールバック自体は同期のため await できない。同期例外だけでなく
               // Future の失敗も拾えるよう catchError で受ける（例外を投げない
@@ -3910,7 +3923,7 @@ class _MapScreenState extends State<MapScreen> {
         // 2枚目は操作不可（IgnorePointer）で、下の地図の onCameraMove に同期する
         if (kjSwipeActive)
           Positioned.fill(
-            child: IgnorePointer(
+            child: _NoClipHitTest(
               child: ClipRect(
                 clipper: _SplitClipper(
                     vertical: _kjCompare == _KjCompare.vertical, split: _kjSplit),
@@ -3926,11 +3939,32 @@ class _MapScreenState extends State<MapScreen> {
                   zoomControlsEnabled: false,
                   mapToolbarEnabled: false,
                   compassEnabled: false,
-                  myLocationEnabled: false,
+                  myLocationEnabled: _locationPermissionGranted,
                   myLocationButtonEnabled: false,
+                  buildingsEnabled: false,
                   liteModeEnabled: false,
                   padding: EdgeInsets.only(top: topPad, bottom: _bottomPadding ?? 0),
                   tileOverlays: _kjSwipeOverlay(),
+                  // 昔の地図側にもカメラ・現在地を出す（下の地図のピンは上の地図に隠れるため）
+                  markers: markers,
+                  onCameraMoveStarted: () {
+                    if (_kjBottomDriving || _programmaticMove) return;
+                    _kjTopDriving = true;
+                    _onUserGestureStart();
+                  },
+                  onCameraMove: (pos) {
+                    if (!_kjTopDriving) return;
+                    _center = _l(pos.target);
+                    _programmaticMove = true;
+                    _gmapController
+                        ?.moveCamera(gmaps.CameraUpdate.newCameraPosition(pos))
+                        .catchError((_) {});
+                  },
+                  onCameraIdle: () {
+                    if (!_kjTopDriving) return;
+                    _kjTopDriving = false;
+                    _savePosition();
+                  },
                   onMapCreated: (c) {
                     _kjOverlayController = c;
                     c
@@ -4795,3 +4829,26 @@ class _KjDivider extends StatelessWidget {
   }
 }
 
+/// 子を ClipRect で切り抜いても、タッチは切り抜き外でも子に届ける（今昔マップの
+/// 2枚目の地図用）。iOS のネイティブ地図は画面全体を覆うので、切り抜き外で
+/// タッチを捨てると下の地図にも届かず操作できなくなる
+class _NoClipHitTest extends SingleChildRenderObjectWidget {
+  const _NoClipHitTest({required super.child});
+
+  @override
+  RenderObject createRenderObject(BuildContext context) => _RenderNoClipHitTest();
+}
+
+class _RenderNoClipHitTest extends RenderProxyBox {
+  @override
+  bool hitTestChildren(BoxHitTestResult result, {required Offset position}) {
+    final c = child;
+    if (c == null) return false;
+    // ClipRect（RenderClipRect）の切り抜き判定を飛ばし、その子を直接当てる
+    if (c is RenderClipRect && c.child != null) {
+      return result.addWithPaintOffset(
+          offset: null, position: position, hitTest: (r, p) => c.child!.hitTest(r, position: p));
+    }
+    return c.hitTest(result, position: position);
+  }
+}
