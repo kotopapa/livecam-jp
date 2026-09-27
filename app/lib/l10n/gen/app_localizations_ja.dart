@@ -1001,6 +1001,14 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapMyLocation => '現在地';
 
   @override
+  String get mapSheetTitle => 'レイヤー・絞り込み';
+
+  @override
+  String mapSheetLayerPrefix(String name) {
+    return 'レイヤー: $name';
+  }
+
+  @override
   String get bosaiTitle => '災害速報';
 
   @override
@@ -3680,6 +3688,14 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapMyLocation => 'げんざいち';
+
+  @override
+  String get mapSheetTitle => 'レイヤーと しぼりこみ';
+
+  @override
+  String mapSheetLayerPrefix(String name) {
+    return 'レイヤー: $name';
+  }
 
   @override
   String get bosaiTitle => 'さいがいの おしらせ';

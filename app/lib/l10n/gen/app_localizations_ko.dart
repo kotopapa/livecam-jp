@@ -1005,6 +1005,14 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapMyLocation => '현재 위치';
 
   @override
+  String get mapSheetTitle => '레이어・필터';
+
+  @override
+  String mapSheetLayerPrefix(String name) {
+    return '레이어: $name';
+  }
+
+  @override
   String get bosaiTitle => '재해 속보';
 
   @override

@@ -994,6 +994,14 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapMyLocation => '当前位置';
 
   @override
+  String get mapSheetTitle => '图层和筛选';
+
+  @override
+  String mapSheetLayerPrefix(String name) {
+    return '图层: $name';
+  }
+
+  @override
   String get bosaiTitle => '灾害速报';
 
   @override
@@ -3648,6 +3656,14 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapMyLocation => '目前位置';
+
+  @override
+  String get mapSheetTitle => '圖層與篩選';
+
+  @override
+  String mapSheetLayerPrefix(String name) {
+    return '圖層: $name';
+  }
 
   @override
   String get bosaiTitle => '災害快報';

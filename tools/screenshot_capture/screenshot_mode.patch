@@ -1,10 +1,10 @@
 diff --git a/app/lib/config.dart b/app/lib/config.dart
-index 7801387..fe5ab13 100644
+index e8947d1e..d1e130fc 100644
 --- a/app/lib/config.dart
 +++ b/app/lib/config.dart
-@@ -7,6 +7,10 @@ const String manifestUrl = '${apiBaseUrl}manifest.json';
- /// アプリのバージョン表記（pubspec.yaml の version と一致させる）。
- const String appVersion = '1.5.0';
+@@ -8,6 +8,10 @@ const String manifestUrl = '${apiBaseUrl}manifest.json';
+ /// 画面の表示には実行時の PackageInfo（AppState.runtimeVersion）を使い、この定数は UA 文字列などの控えに使う
+ const String appVersion = '1.6.0';
  
 +/// ストア用スクリーンショット撮影モード（`--dart-define=SCREENSHOT_MODE=true`）。
 +/// デバッグリボンと広告を出さず、ATT ダイアログも出さない。通常ビルドでは false
@@ -14,7 +14,7 @@ index 7801387..fe5ab13 100644
  const Duration minRefetchInterval = Duration(seconds: 60);
  const int maxConcurrentFetches = 3;
 diff --git a/app/lib/main.dart b/app/lib/main.dart
-index ab83db5..7968762 100644
+index 9021e491..fd0bd145 100644
 --- a/app/lib/main.dart
 +++ b/app/lib/main.dart
 @@ -16,6 +16,7 @@ import 'firebase_options.dart';
@@ -25,7 +25,7 @@ index ab83db5..7968762 100644
  import 'data/api_client.dart';
  import 'data/cache_store.dart';
  import 'data/camera_repository.dart';
-@@ -73,7 +74,7 @@ Future<void> main() async {
+@@ -76,7 +77,7 @@ Future<void> main() async {
    app.init(); // キャッシュ復元→バックグラウンド更新（待たずに起動する）
    Future.delayed(
        const Duration(milliseconds: 1600), FlutterNativeSplash.remove);
@@ -34,7 +34,7 @@ index ab83db5..7968762 100644
  }
  
  /// 広告の初期化。ATT（トラッキング許可）の回答を待ってからSDKを起動する。
-@@ -142,6 +143,7 @@ class _LiveCamAppState extends State<LiveCamApp>
+@@ -145,6 +146,7 @@ class _LiveCamAppState extends State<LiveCamApp>
        listenable: widget.localeController,
        builder: (context, _) => MaterialApp(
          onGenerateTitle: (context) => context.l10n.appTitle,
@@ -43,31 +43,36 @@ index ab83db5..7968762 100644
          locale: widget.localeController.locale,
          supportedLocales: AppLocalizations.supportedLocales,
 diff --git a/app/lib/ui/ad_banner.dart b/app/lib/ui/ad_banner.dart
-index c99f855..238fc08 100644
+index 6364d8d1..1425f77b 100644
 --- a/app/lib/ui/ad_banner.dart
 +++ b/app/lib/ui/ad_banner.dart
-@@ -65,8 +65,8 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
-   @override
+@@ -1,4 +1,6 @@
+ import 'package:flutter/material.dart';
++
++import '../config.dart' show screenshotMode;
+ import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
+ import 'package:visibility_detector/visibility_detector.dart';
+ 
+@@ -78,7 +80,7 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
    Widget build(BuildContext context) {
      // 失敗時は区切り線ごと消す（前後のDividerが二重にならないように
--    // 下側の区切り線はこのウィジェットが持つ）
--    if (_failed) return const SizedBox.shrink();
-+    // 下側の区切り線はこのウィジェットが持つ）。撮影モードでは出さない
-+    if (screenshotMode || _failed) return const SizedBox.shrink();
+     // 下側の区切り線はこのウィジェットが持つ）。支援へのお礼期間中は出さない
+-    if (_failed || AdFree.instance.isActive) return const SizedBox.shrink();
++    if (screenshotMode || _failed || AdFree.instance.isActive) return const SizedBox.shrink();
      return VisibilityDetector(
        key: Key('ad-${widget.adUnitId}-${widget.size.height}-${identityHashCode(this)}'),
        onVisibilityChanged: _onVisibility,
-@@ -147,7 +147,7 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
- 
+@@ -171,7 +173,7 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
    @override
    Widget build(BuildContext context) {
--    if (_failed) return const SizedBox.shrink();
-+    if (screenshotMode || _failed) return const SizedBox.shrink();
+     // 支援へのお礼期間中は読み込みもしない（見られない在庫を作らない）
+-    if (_failed || AdFree.instance.isActive) return const SizedBox.shrink();
++    if (screenshotMode || _failed || AdFree.instance.isActive) return const SizedBox.shrink();
      if (_ad == null) {
        WidgetsBinding.instance.addPostFrameCallback((_) => _load(context));
        return const SizedBox.shrink();
 diff --git a/app/lib/ui/list_screen.dart b/app/lib/ui/list_screen.dart
-index 42ca05e..004b581 100644
+index 42ca05e8..004b5814 100644
 --- a/app/lib/ui/list_screen.dart
 +++ b/app/lib/ui/list_screen.dart
 @@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
@@ -89,15 +94,15 @@ index 42ca05e..004b581 100644
        }
        if (permission == LocationPermission.denied ||
 diff --git a/app/pubspec.yaml b/app/pubspec.yaml
-index ffe4a77..2552b1e 100644
+index 8f52dd50..3cb5c204 100644
 --- a/app/pubspec.yaml
 +++ b/app/pubspec.yaml
-@@ -77,6 +77,8 @@ dev_dependencies:
-   # package. See that file for information about deactivating specific lint
-   # rules and activating additional ones.
-   flutter_lints: ^6.0.0
+@@ -70,6 +70,8 @@ dependencies:
+ dev_dependencies:
+   flutter_test:
+     sdk: flutter
 +  integration_test:
 +    sdk: flutter
+   flutter_launcher_icons: ^0.14.4
  
- # For information on the generic Dart part of this file, see the
- # following page: https://dart.dev/tools/pub/pubspec
+   # The "flutter_lints" package below contains a set of recommended lints to

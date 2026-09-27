@@ -2,15 +2,69 @@ import 'package:flutter/material.dart';
 
 import '../l10n/l10n.dart';
 
-/// 地図下部に固定する操作パネル（design/map_ui/PROPOSAL.md 第1段階）。
+/// 地図上部に浮かせる検索ピル（Googleマップ風レイアウト。2026-09-27）。
 ///
-/// 検索バー（高さ48）＋ボタン行「レイヤー」「絞り込み」「…」（高さ44、タップ領域は
-/// 48以上）の2段。地図の Stack 内で bottom 固定にして使う。選択の実処理・状態は
-/// 呼び出し側（map_screen.dart）が持ち、このウィジェットは見た目と入口だけを持つ。
+/// 高さ48の白い浮きピル。文字入力欄ではなく、タップで既存の検索シートを開く入口。
+/// 地図の Stack 内で top 固定にして使う
+class MapSearchPill extends StatelessWidget {
+  const MapSearchPill({super.key, required this.hint, required this.onTap});
+
+  final String hint;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    // 端末の文字サイズ設定が大きくてもピルが伸びすぎないよう拡大率は 1.3 で頭打ち
+    return MediaQuery.withClampedTextScaling(
+      maxScaleFactor: 1.3,
+      child: SizedBox(
+        height: 48,
+        child: Material(
+          color: Colors.white,
+          elevation: 3,
+          shadowColor: Colors.black45,
+          borderRadius: BorderRadius.circular(24),
+          child: InkWell(
+            key: const Key('map_panel_search'),
+            onTap: onTap,
+            borderRadius: BorderRadius.circular(24),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                children: [
+                  Icon(Icons.search, size: 20, color: scheme.onSurfaceVariant),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      hint,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: scheme.onSurfaceVariant,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// 下部シートの中身（ボタン行のみ。design/map_ui/PROPOSAL.md 第1段階の名残。
+/// 検索バーは [MapSearchPill] へ移動したのでここには置かない）。
+///
+/// ボタン行「レイヤー」「絞り込み」「…」（高さ44、タップ領域は48以上）。
+/// シートの開閉・出典行は呼び出し側（map_screen.dart）が持ち、このウィジェットは
+/// 見た目と入口だけを持つ。
 class MapBottomPanel extends StatelessWidget {
   const MapBottomPanel({
     super.key,
-    required this.onSearch,
     required this.onLayers,
     required this.onFilter,
     required this.onMore,
@@ -19,7 +73,6 @@ class MapBottomPanel extends StatelessWidget {
     this.filterCount = 0,
   });
 
-  final VoidCallback onSearch;
   final VoidCallback onLayers;
   final VoidCallback onFilter;
   final VoidCallback onMore;
@@ -40,107 +93,50 @@ class MapBottomPanel extends StatelessWidget {
     // 端末の文字サイズ設定が大きくてもパネルが地図を食わないよう拡大率は 1.3 で頭打ち
     return MediaQuery.withClampedTextScaling(
       maxScaleFactor: 1.3,
-      child: Material(
-      color: Theme.of(context).colorScheme.surface,
-      elevation: 8,
-      borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+        padding: const EdgeInsets.fromLTRB(12, 0, 12, 10),
+        child: Row(
           children: [
-            _SearchBar(hint: l10n.mapPanelSearchHint, onTap: onSearch),
-            const SizedBox(height: 8),
-            Row(
-              children: [
-                Expanded(
-                  child: _PanelButton(
-                    key: const Key('map_panel_layers'),
-                    icon: Icons.layers_outlined,
-                    label: layerActive
-                        ? l10n.mapPanelLayersOn
-                        : l10n.mapPanelLayers,
-                    active: layerActive,
-                    onTap: onLayers,
-                  ),
+            Expanded(
+              child: _PanelButton(
+                key: const Key('map_panel_layers'),
+                icon: Icons.layers_outlined,
+                label: layerActive
+                    ? l10n.mapPanelLayersOn
+                    : l10n.mapPanelLayers,
+                active: layerActive,
+                onTap: onLayers,
+              ),
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: _PanelButton(
+                key: const Key('map_panel_filter'),
+                icon: Icons.tune,
+                label: filterCount > 0
+                    ? l10n.mapPanelFilterCount(filterCount)
+                    : l10n.mapPanelFilter,
+                active: filterActive,
+                onTap: onFilter,
+              ),
+            ),
+            const SizedBox(width: 8),
+            // 「…」はアイコンだけの固定幅（文字付き3等分だと「レイヤー ON」が欠ける）
+            SizedBox(
+              width: 56,
+              child: Tooltip(
+                message: l10n.mapPanelMore,
+                child: _PanelButton(
+                  key: const Key('map_panel_more'),
+                  icon: Icons.more_horiz,
+                  label: '',
+                  semanticsLabel: l10n.mapPanelMore,
+                  active: false,
+                  onTap: onMore,
                 ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: _PanelButton(
-                    key: const Key('map_panel_filter'),
-                    icon: Icons.tune,
-                    label: filterCount > 0
-                        ? l10n.mapPanelFilterCount(filterCount)
-                        : l10n.mapPanelFilter,
-                    active: filterActive,
-                    onTap: onFilter,
-                  ),
-                ),
-                const SizedBox(width: 8),
-                // 「…」はアイコンだけの固定幅（文字付き3等分だと「レイヤー ON」が欠ける）
-                SizedBox(
-                  width: 56,
-                  child: Tooltip(
-                    message: l10n.mapPanelMore,
-                    child: _PanelButton(
-                      key: const Key('map_panel_more'),
-                      icon: Icons.more_horiz,
-                      label: '',
-                      semanticsLabel: l10n.mapPanelMore,
-                      active: false,
-                      onTap: onMore,
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
           ],
-        ),
-      ),
-      ),
-    );
-  }
-}
-
-/// 検索バー（高さ48）。文字入力欄ではなく、タップで既存の検索シートを開く入口
-class _SearchBar extends StatelessWidget {
-  const _SearchBar({required this.hint, required this.onTap});
-
-  final String hint;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    return SizedBox(
-      height: 48,
-      child: Material(
-        color: scheme.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(24),
-        child: InkWell(
-          key: const Key('map_panel_search'),
-          onTap: onTap,
-          borderRadius: BorderRadius.circular(24),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Row(
-              children: [
-                Icon(Icons.search, size: 20, color: scheme.onSurfaceVariant),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Text(
-                    hint,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: scheme.onSurfaceVariant,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
         ),
       ),
     );

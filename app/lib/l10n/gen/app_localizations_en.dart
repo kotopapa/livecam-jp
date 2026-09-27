@@ -1033,6 +1033,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapMyLocation => 'My location';
 
   @override
+  String get mapSheetTitle => 'Layers & Filter';
+
+  @override
+  String mapSheetLayerPrefix(String name) {
+    return 'Layer: $name';
+  }
+
+  @override
   String get bosaiTitle => 'Disaster updates';
 
   @override

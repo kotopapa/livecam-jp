@@ -1954,6 +1954,18 @@ abstract class AppLocalizations {
   /// **'現在地'**
   String get mapMyLocation;
 
+  /// No description provided for @mapSheetTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'レイヤー・絞り込み'**
+  String get mapSheetTitle;
+
+  /// No description provided for @mapSheetLayerPrefix.
+  ///
+  /// In ja, this message translates to:
+  /// **'レイヤー: {name}'**
+  String mapSheetLayerPrefix(String name);
+
   /// No description provided for @bosaiTitle.
   ///
   /// In ja, this message translates to:

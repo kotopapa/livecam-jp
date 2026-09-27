@@ -831,6 +831,15 @@
   "mapZoomIn": "拡大",
   "mapZoomOut": "縮小",
   "mapMyLocation": "現在地",
+  "mapSheetTitle": "レイヤー・絞り込み",
+  "mapSheetLayerPrefix": "レイヤー: {name}",
+  "@mapSheetLayerPrefix": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "bosaiTitle": "災害速報",
   "bosaiTabQuake": "地震・津波",
   "@bosaiTabQuake": {

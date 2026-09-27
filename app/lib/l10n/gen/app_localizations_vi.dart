@@ -1037,6 +1037,14 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapMyLocation => 'Vị trí của tôi';
 
   @override
+  String get mapSheetTitle => 'Lớp bản đồ và bộ lọc';
+
+  @override
+  String mapSheetLayerPrefix(String name) {
+    return 'Lớp: $name';
+  }
+
+  @override
   String get bosaiTitle => 'Tin thảm họa';
 
   @override

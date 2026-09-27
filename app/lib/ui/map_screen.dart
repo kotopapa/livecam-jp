@@ -235,8 +235,12 @@ class _MapScreenState extends State<MapScreen> {
     try {
       final prefs = await SharedPreferences.getInstance();
       final e = prefs.getBool(_controllerExpandedKey);
+      final sheet = prefs.getBool(_sheetExpandedKey);
       if (!mounted) return;
-      setState(() => _controllerExpandedPref = e);
+      setState(() {
+        _controllerExpandedPref = e;
+        _sheetExpandedPref = sheet;
+      });
     } catch (_) {}
   }
 
@@ -247,6 +251,16 @@ class _MapScreenState extends State<MapScreen> {
       await prefs.setBool(_controllerExpandedKey, expanded);
     } catch (_) {}
   }
+
+  Future<void> _setSheetExpanded(bool expanded) async {
+    setState(() => _sheetExpandedPref = expanded);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setBool(_sheetExpandedKey, expanded);
+    } catch (_) {}
+  }
+
+  void _toggleSheet() => _setSheetExpanded(!_sheetExpanded);
 
   Future<void> _loadSituation() async {
     if (_dismissedSituation == null) {
@@ -378,6 +392,12 @@ class _MapScreenState extends State<MapScreen> {
   bool? _controllerExpandedPref;
   bool get _controllerExpanded => _controllerExpandedPref ?? false;
   static const _controllerExpandedKey = 'map_controller_expanded';
+
+  /// 下部シート（Googleマップ風の折りたたみシート）の展開状態（既定は圧縮）。
+  /// 地図ドラッグ中は強制的に畳み、離したらこの値に戻す（2026-09-27）
+  bool? _sheetExpandedPref;
+  bool get _sheetExpanded => _sheetExpandedPref ?? false;
+  static const _sheetExpandedKey = 'map_sheet_expanded';
   /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
   RouteResult? _route;
   List<CorridorCamera> _routeCameras = const [];
@@ -3766,6 +3786,9 @@ class _MapScreenState extends State<MapScreen> {
     // 判定を固定しておく。build途中で _kjRegion 等が変わっても揃えるため）
     final kjSwipeActive = _kjSwipeActive;
     if (!kjSwipeActive) _kjOverlayController = null;
+    // 上部の検索ピル（高さ48・上12px）の分だけ地図内部コントロールを下げる
+    // （Googleマップ風レイアウト。2026-09-27）
+    final topPad = MediaQuery.of(context).padding.top + 60;
     return Stack(
       children: [
         gmaps.GoogleMap(
@@ -3781,7 +3804,7 @@ class _MapScreenState extends State<MapScreen> {
           buildingsEnabled: false,
           myLocationButtonEnabled: false,
           myLocationEnabled: _locationPermissionGranted,
-          padding: EdgeInsets.only(bottom: _bottomPadding ?? 0),
+          padding: EdgeInsets.only(top: topPad, bottom: _bottomPadding ?? 0),
           markers: markers,
           tileOverlays: _tileOverlays(),
           polylines: _vectorPolylines(),
@@ -3848,7 +3871,7 @@ class _MapScreenState extends State<MapScreen> {
                   myLocationEnabled: false,
                   myLocationButtonEnabled: false,
                   liteModeEnabled: false,
-                  padding: EdgeInsets.only(bottom: _bottomPadding ?? 0),
+                  padding: EdgeInsets.only(top: topPad, bottom: _bottomPadding ?? 0),
                   tileOverlays: _kjSwipeOverlay(),
                   onMapCreated: (c) {
                     _kjOverlayController = c;
@@ -3877,13 +3900,23 @@ class _MapScreenState extends State<MapScreen> {
           bottom: 0,
           child: _bottomArea(context, cams),
         ),
-        // 「いま起きていること」（発生時だけ右上に丸いボタン）。展開中も地図は
-        // 触れるままにし、地図を動かしたらボタンに戻す（透明バリアで地図を塞ぐと
+        // 検索ピル（Googleマップ風。上12px・左右12px・高さ48）
+        Positioned(
+          left: 12,
+          right: 12,
+          top: MediaQuery.of(context).padding.top + 12,
+          child: MapSearchPill(
+            hint: context.l10n.mapPanelSearchHint,
+            onTap: () => _showPlaceSearch(context),
+          ),
+        ),
+        // 「いま起きていること」（発生時だけ検索ピルの下・右端に丸いボタン）。展開中も
+        // 地図は触れるままにし、地図を動かしたらボタンに戻す（透明バリアで地図を塞ぐと
         // 「カードが出ている間は地図が触れない」不具合になる。2026-09-27 報告）
         if (_situation != null && _situation!.isNotable) ...[
           Positioned(
             right: 12,
-            top: MediaQuery.of(context).padding.top + 12,
+            top: MediaQuery.of(context).padding.top + 12 + 48 + 8,
             child: SituationOverlay(
               situation: _situation!,
               expanded: _situationExpanded,
@@ -3915,10 +3948,9 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  /// 下部の固定領域（下から順に: パネル → 出典帯 → 操作板 → ズーム/現在地）。
-  /// design/map_ui/PROPOSAL.md 第1段階。地図の Stack 内で bottom 固定にする。
-  /// 地図をドラッグ中は下部パネルだけ沈める（出典帯が最下段になる。単なるタップでは
-  /// 沈まない。_mapDragging 参照）
+  /// 下部の固定領域（下から順に: 折りたたみシート → 操作板 → ズーム/現在地）。
+  /// Googleマップ風レイアウト（2026-09-27）。検索は上部ピルへ移したのでここには無い。
+  /// 地図の Stack 内で bottom 固定にする。
   Widget _bottomArea(BuildContext context, List<Camera> cams) {
     // stretch で各段を全幅にする（ズーム/現在地だけ内部で右寄せにする）。
     // _bottomAreaKey は高さを測って GoogleMap の padding（Googleロゴが隠れないように）
@@ -3928,26 +3960,178 @@ class _MapScreenState extends State<MapScreen> {
       const SizedBox(height: 12),
       // ズーム/現在地ボタンは含めず、地図を覆う帯の高さだけを GoogleMap の padding にする
       Column(key: _bottomAreaKey, mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-      _controlPanel(),
-      _sourceBar(context, cams),
-      AnimatedSize(
-        duration: const Duration(milliseconds: 180),
-        curve: Curves.easeOut,
-        alignment: Alignment.topCenter,
-        child: _mapDragging
-            ? const SizedBox.shrink()
-            : MapBottomPanel(
-                layerActive: _layer != MapLayerKind.none,
-                filterActive: widget.app.hasActiveFilters,
-                filterCount: widget.app.activeFilterCount,
-                onSearch: () => _showPlaceSearch(context),
-                onLayers: () => _showLayerPicker(context),
-                onFilter: () => _showLegendFilter(context),
-                onMore: () => _showMoreSheet(context),
-              ),
-      ),
+        _controlPanel(),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
+          child: _bottomSheetPanel(context, cams),
+        ),
       ]),
     ]);
+  }
+
+  /// 下部の折りたたみシート（Googleマップの「エリアの注目情報」風。2026-09-27）。
+  /// 畳み: 取っ手＋見出し行（レイヤー名・絞り込み件数・台数）のみ、高さ約44。
+  /// 展開: 上記に加えてボタン行（レイヤー／絞り込み／…）。
+  /// 出典（気象庁・ハザードマップ・今昔マップ等。現在のレイヤーに紐づく1件だけ）は
+  /// 畳み・展開どちらでも見えるよう見出し行の下に常時1行足す（今昔マップは利用条件で
+  /// 画面表示が必須で、展開時だけにすると畳んだときに消えてしまうため。折り込み方は
+  /// 「畳み行の下に1行足す」案を採用した。2026-09-27 判断）
+  /// 地図ドラッグ中は強制的に畳んで表示し、離したら [_sheetExpanded] の値に戻す
+  Widget _bottomSheetPanel(BuildContext context, List<Camera> cams) {
+    final effectiveExpanded = _sheetExpanded && !_mapDragging;
+    final attributions = _sheetAttributionSpans(context);
+    return Material(
+      color: Colors.white,
+      elevation: 8,
+      borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+      clipBehavior: Clip.antiAlias,
+      child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        GestureDetector(
+          key: const Key('map_sheet_handle'),
+          behavior: HitTestBehavior.opaque,
+          onTap: _toggleSheet,
+          onVerticalDragEnd: (details) {
+            final v = details.primaryVelocity ?? 0;
+            if (v < -200 && !_sheetExpanded) {
+              _setSheetExpanded(true);
+            } else if (v > 200 && _sheetExpanded) {
+              _setSheetExpanded(false);
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(14, 6, 14, 6),
+            child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              Center(
+                child: Container(
+                  width: 32,
+                  height: 4,
+                  decoration: BoxDecoration(
+                      color: Colors.black26, borderRadius: BorderRadius.circular(2)),
+                ),
+              ),
+              const SizedBox(height: 6),
+              Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+                Expanded(
+                  child: Text(
+                    _sheetHeaderText(context),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                _sheetCountArea(context, cams),
+              ]),
+            ]),
+          ),
+        ),
+        if (attributions.isNotEmpty)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(14, 0, 14, 6),
+            child: Text.rich(
+              TextSpan(
+                  style: const TextStyle(fontSize: 10, color: Colors.black87),
+                  children: attributions),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              textScaler: MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.2),
+            ),
+          ),
+        AnimatedSize(
+          duration: const Duration(milliseconds: 180),
+          curve: Curves.easeOut,
+          alignment: Alignment.topCenter,
+          child: effectiveExpanded
+              ? MapBottomPanel(
+                  layerActive: _layer != MapLayerKind.none,
+                  filterActive: widget.app.hasActiveFilters,
+                  filterCount: widget.app.activeFilterCount,
+                  onLayers: () => _showLayerPicker(context),
+                  onFilter: () => _showLegendFilter(context),
+                  onMore: () => _showMoreSheet(context),
+                )
+              : const SizedBox.shrink(),
+        ),
+      ]),
+    );
+  }
+
+  /// シート見出し行の左側テキスト。レイヤーOFF・絞り込み無しなら「レイヤー・絞り込み」、
+  /// レイヤーONなら「レイヤー: {名前}」、絞り込み中ならそれも併記する
+  String _sheetHeaderText(BuildContext context) {
+    final l10n = context.l10n;
+    final parts = <String>[];
+    if (_layer != MapLayerKind.none) {
+      parts.add(l10n.mapSheetLayerPrefix(_layerTitle(_layer)));
+    }
+    if (widget.app.hasActiveFilters) {
+      final n = widget.app.activeFilterCount;
+      parts.add(n > 0 ? l10n.mapPanelFilterCount(n) : l10n.mapPanelFilter);
+    }
+    if (parts.isEmpty) return l10n.mapSheetTitle;
+    return parts.join('・');
+  }
+
+  /// 現在のレイヤーに紐づく出典（気象庁・ハザードマップ・今昔マップ等。GoogleMap移行後は
+  /// ベース地図の出典は不要＝Googleロゴ・帰属はSDKが地図左下に出す）
+  List<InlineSpan> _sheetAttributionSpans(BuildContext context) {
+    return <InlineSpan>[
+      if (HazardLayers.isHazard(_layer)) const TextSpan(text: HazardLayers.attribution),
+      if (_layer == MapLayerKind.shelters) const TextSpan(text: ShelterLayers.attribution),
+      if (_layer == MapLayerKind.facilities)
+        TextSpan(
+            text: _facilities?.index?.attribution.isNotEmpty == true
+                ? _facilities!.index!.attribution
+                : FacilityLayers.attribution),
+      if (_layer == MapLayerKind.oldMap)
+        TextSpan(
+          text: Kjmap.attribution,
+          style: const TextStyle(decoration: TextDecoration.underline),
+          recognizer: _kjmapTap,
+        ),
+    ];
+  }
+
+  /// シート見出し行の右側（台数）。台帳が未取得なら「読み込み中…」、絞り込みで0件なら
+  /// 案内＋「解除」を出す
+  Widget _sheetCountArea(BuildContext context, List<Camera> cams) {
+    const countStyle =
+        TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87);
+    final loaded = widget.app.repository.cameras.isNotEmpty;
+    final noMatch = loaded && cams.isEmpty && widget.app.hasActiveFilters;
+    return Flexible(
+      child: Wrap(
+        alignment: WrapAlignment.end,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: 6,
+        children: [
+          if (!loaded)
+            Text(context.l10n.mapCountLoading, style: countStyle)
+          else if (noMatch) ...[
+            Text(context.l10n.mapCountNoMatch,
+                textAlign: TextAlign.right, style: countStyle),
+            TextButton(
+              key: const Key('map_clear_filters'),
+              onPressed: widget.app.clearFilters,
+              style: TextButton.styleFrom(
+                minimumSize: Size.zero,
+                padding: const EdgeInsets.symmetric(horizontal: 2),
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                textStyle: countStyle.copyWith(decoration: TextDecoration.underline),
+              ),
+              child: Text(context.l10n.mapClearFilters),
+            ),
+          ] else
+            Text(
+              widget.app.hasActiveFilters
+                  ? context.l10n.mapFilteredCount(cams.length)
+                  : context.l10n.mapTotalCount(cams.length),
+              style: countStyle,
+              textScaler: MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.2),
+            ),
+        ],
+      ),
+    );
   }
 
   /// レイヤー名（`_showLayerPicker` の各項目タイトルと同じ文字列）。
@@ -4126,91 +4310,6 @@ class _MapScreenState extends State<MapScreen> {
       MapLayerKind.oldMap => l10n.oldMapDisclaimer,
       _ => null,
     };
-  }
-
-  /// パネル上端に接する出典帯（高さ約20、半透明白）。左に出典、右端に台数。
-  /// 台帳が未取得なら「読み込み中…」、絞り込みで0件なら案内＋「解除」を出す
-  /// （文言が長くなるので右側は Wrap で必要なら2行に折り返す）
-  Widget _sourceBar(BuildContext context, List<Camera> cams) {
-    const countStyle =
-        TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87);
-    final loaded = widget.app.repository.cameras.isNotEmpty;
-    final noMatch = loaded && cams.isEmpty && widget.app.hasActiveFilters;
-    // 出典は1本の文にまとめて最大2行（免責文は操作板の展開側に置く）。
-    // 端末の文字サイズ設定が大きくても帯が膨らまないよう拡大率は 1.2 で頭打ち
-    const srcStyle = TextStyle(fontSize: 10, color: Colors.black87);
-    // GoogleMap移行後はベース地図の出典（旧「地理院タイル」「© OpenStreetMap
-    // contributors」）は不要（Googleロゴ・帰属はSDKが地図左下に出す）。
-    // 気象庁・ハザードマップ・今昔マップなど重ねているレイヤーの出典だけを並べる
-    final attributions = <InlineSpan>[
-      if (HazardLayers.isHazard(_layer)) const TextSpan(text: HazardLayers.attribution),
-      if (_layer == MapLayerKind.shelters) const TextSpan(text: ShelterLayers.attribution),
-      if (_layer == MapLayerKind.facilities)
-        TextSpan(
-            text: _facilities?.index?.attribution.isNotEmpty == true
-                ? _facilities!.index!.attribution
-                : FacilityLayers.attribution),
-      if (_layer == MapLayerKind.oldMap)
-        TextSpan(
-          text: Kjmap.attribution,
-          style: const TextStyle(decoration: TextDecoration.underline),
-          recognizer: _kjmapTap,
-        ),
-    ];
-    final sources = <InlineSpan>[
-      for (var i = 0; i < attributions.length; i++) ...[
-        if (i > 0) const TextSpan(text: '｜'),
-        attributions[i],
-      ],
-    ];
-    return Container(
-      color: Colors.white.withValues(alpha: 0.85),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
-      child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        Expanded(
-          child: Text.rich(
-            TextSpan(style: srcStyle, children: sources),
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            textScaler: MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.2),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Flexible(
-          child: Wrap(
-            alignment: WrapAlignment.end,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            spacing: 6,
-            children: [
-              if (!loaded)
-                Text(context.l10n.mapCountLoading, style: countStyle)
-              else if (noMatch) ...[
-                Text(context.l10n.mapCountNoMatch,
-                    textAlign: TextAlign.right, style: countStyle),
-                TextButton(
-                  key: const Key('map_clear_filters'),
-                  onPressed: widget.app.clearFilters,
-                  style: TextButton.styleFrom(
-                    minimumSize: Size.zero,
-                    padding: const EdgeInsets.symmetric(horizontal: 2),
-                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    textStyle: countStyle.copyWith(decoration: TextDecoration.underline),
-                  ),
-                  child: Text(context.l10n.mapClearFilters),
-                ),
-              ] else
-                Text(
-                  widget.app.hasActiveFilters
-                      ? context.l10n.mapFilteredCount(cams.length)
-                      : context.l10n.mapTotalCount(cams.length),
-                  style: countStyle,
-                  textScaler: MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.2),
-                ),
-            ],
-          ),
-        ),
-      ]),
-    );
   }
 
   /// 地図上に残す現在地・ズーム（右寄せ。操作板の上端から12px上に追従する）。

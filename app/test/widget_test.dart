@@ -51,8 +51,11 @@ void main() {
     expect(find.text('一覧'), findsOneWidget);
     expect(find.text('備え'), findsOneWidget);
     expect(find.text('設定'), findsOneWidget);
-    // お気に入りはタブではなく地図下部パネルの「…」から開く
+    // お気に入りはタブではなく地図下部シートの「…」から開く（既定は畳み状態
+    // なので、取っ手をタップして展開してからボタンを押す）
     expect(find.text('お気に入り'), findsNothing);
+    await tester.tap(find.byKey(const Key('map_sheet_handle')));
+    await settle(tester);
     await tester.tap(find.byKey(const Key('map_panel_more')));
     await settle(tester);
     await tester.tap(find.text('お気に入り'));
@@ -78,16 +81,22 @@ void main() {
       ),
     );
     await tester.pump();
-    // design/map_ui/PROPOSAL.md 第1段階：右上5個・右下3個の FAB は下部パネル・
-    // ズーム/現在地ボタンへ置き換わり、地図上に FloatingActionButton は残らない
+    // design/map_ui/PROPOSAL.md 第1段階：右上5個・右下3個の FAB は検索ピル・
+    // 下部シート・ズーム/現在地ボタンへ置き換わり、地図上に FloatingActionButton は残らない
     expect(find.byType(FloatingActionButton), findsNothing);
+    // 検索ピルは上部固定（シートの折りたたみに関係なく常に見える）
     expect(find.byKey(const Key('map_panel_search')), findsOneWidget);
-    expect(find.byKey(const Key('map_panel_layers')), findsOneWidget);
-    expect(find.byKey(const Key('map_panel_filter')), findsOneWidget);
-    expect(find.byKey(const Key('map_panel_more')), findsOneWidget);
     expect(find.byKey(const Key('map_zoom_in')), findsOneWidget);
     expect(find.byKey(const Key('map_zoom_out')), findsOneWidget);
     expect(find.byKey(const Key('map_my_location')), findsOneWidget);
+    // 下部シートは既定で畳み状態＝ボタン行はまだ見えない
+    expect(find.byKey(const Key('map_panel_layers')), findsNothing);
+    // 取っ手をタップして展開するとボタン行が出る
+    await tester.tap(find.byKey(const Key('map_sheet_handle')));
+    await settle(tester);
+    expect(find.byKey(const Key('map_panel_layers')), findsOneWidget);
+    expect(find.byKey(const Key('map_panel_filter')), findsOneWidget);
+    expect(find.byKey(const Key('map_panel_more')), findsOneWidget);
   });
 
   testWidgets('レイヤーONで操作板カードが出て、タイトル行タップで展開される', (tester) async {
@@ -111,6 +120,9 @@ void main() {
     // レイヤーOFFのときは操作板カードを出さない
     expect(find.byKey(const Key('map_control_panel_title')), findsNothing);
 
+    // 下部シートは既定で畳み状態なので、取っ手をタップして展開する
+    await tester.tap(find.byKey(const Key('map_sheet_handle')));
+    await settle(tester);
     await tester.tap(find.byKey(const Key('map_panel_layers')));
     await settle(tester);
     // レイヤー選択シート（グリッド）から台風情報のタイルを選ぶ
@@ -313,6 +325,9 @@ void _legendSheetTests() {
       ),
     );
     await tester.pump();
+    // 下部シートは既定で畳み状態なので、取っ手をタップして展開する
+    await tester.tap(find.byKey(const Key('map_sheet_handle')));
+    await settle(tester);
     final filterButton = find.byKey(const Key('map_panel_filter'));
     await tester.tap(filterButton);
     await settle(tester);
