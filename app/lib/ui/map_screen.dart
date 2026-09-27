@@ -4029,7 +4029,12 @@ class _MapScreenState extends State<MapScreen> {
                   filterCount: widget.app.activeFilterCount,
                   onLayers: () => _showLayerPicker(context),
                   onFilter: () => _showLegendFilter(context),
-                  onMore: () => _showMoreSheet(context),
+                  onFavorites: () => Navigator.of(context).push(
+                      MaterialPageRoute<void>(builder: (_) => FavoritesScreen(app: widget.app))),
+                  onRoute: (_hasGoogleRouteKey || widget.app.routeOrsKey.isNotEmpty)
+                      ? () => _showRouteSheet(context)
+                      : null,
+                  routeActive: _route != null,
                 )
               : const SizedBox.shrink(),
         ),
@@ -4391,45 +4396,6 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  /// 「…」シート（design 第1段階：ルート沿いのカメラ・お気に入り一覧のみ）
-  void _showMoreSheet(BuildContext context) {
-    final l10n = context.l10n;
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (ctx) => SafeArea(
-        child: SingleChildScrollView(
-          child: Column(mainAxisSize: MainAxisSize.min, children: [
-            ListTile(
-                title: Text(l10n.mapPanelMoreTitle,
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
-                subtitle: Text(l10n.mapPanelMoreSubtitle)),
-            // ルート沿いカメラ（Google キー(ネイティブ)か ORS キー(配信manifest)の
-            // どちらかがある間だけ出す）
-            if (_hasGoogleRouteKey || widget.app.routeOrsKey.isNotEmpty)
-              ListTile(
-                leading: const Icon(Icons.route_outlined),
-                title: Text(l10n.mapRouteMenu),
-                trailing: _route == null ? null : const Icon(Icons.check, color: Colors.green),
-                onTap: () {
-                  Navigator.pop(ctx);
-                  _showRouteSheet(context);
-                },
-              ),
-            ListTile(
-              leading: const Icon(Icons.star_outline),
-              title: Text(l10n.tabFavorites),
-              onTap: () {
-                Navigator.pop(ctx);
-                Navigator.of(context).push(
-                    MaterialPageRoute<void>(builder: (_) => FavoritesScreen(app: widget.app)));
-              },
-            ),
-          ]),
-        ),
-      ),
-    );
-  }
 }
 
 enum _LegendKind { liveDot, uncertain, frozen, favorite, cluster }

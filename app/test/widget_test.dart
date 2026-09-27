@@ -51,14 +51,12 @@ void main() {
     expect(find.text('一覧'), findsOneWidget);
     expect(find.text('備え'), findsOneWidget);
     expect(find.text('設定'), findsOneWidget);
-    // お気に入りはタブではなく地図下部シートの「…」から開く（既定は畳み状態
+    // お気に入りはタブではなく地図下部シートのボタンから開く（既定は畳み状態
     // なので、取っ手をタップして展開してからボタンを押す）
     expect(find.text('お気に入り'), findsNothing);
     await tester.tap(find.byKey(const Key('map_sheet_handle')));
     await settle(tester);
-    await tester.tap(find.byKey(const Key('map_panel_more')));
-    await settle(tester);
-    await tester.tap(find.text('お気に入り'));
+    await tester.tap(find.byKey(const Key('map_panel_favorites')));
     await settle(tester);
     expect(find.byType(FavoritesScreen), findsOneWidget);
   });
@@ -96,7 +94,7 @@ void main() {
     await settle(tester);
     expect(find.byKey(const Key('map_panel_layers')), findsOneWidget);
     expect(find.byKey(const Key('map_panel_filter')), findsOneWidget);
-    expect(find.byKey(const Key('map_panel_more')), findsOneWidget);
+    expect(find.byKey(const Key('map_panel_favorites')), findsOneWidget);
   });
 
   testWidgets('レイヤーONで操作板カードが出て、タイトル行タップで展開される', (tester) async {

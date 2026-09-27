@@ -1013,6 +1013,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapPanelSearchHint => 'Search by place or camera name';
 
   @override
+  String get mapPanelRoute => 'Route';
+
+  @override
   String get mapPanelLayers => 'Layers';
 
   @override

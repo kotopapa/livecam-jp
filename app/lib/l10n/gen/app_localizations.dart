@@ -1918,6 +1918,12 @@ abstract class AppLocalizations {
   /// **'地名・カメラ名で検索'**
   String get mapPanelSearchHint;
 
+  /// No description provided for @mapPanelRoute.
+  ///
+  /// In ja, this message translates to:
+  /// **'ルート'**
+  String get mapPanelRoute;
+
   /// No description provided for @mapPanelLayers.
   ///
   /// In ja, this message translates to:

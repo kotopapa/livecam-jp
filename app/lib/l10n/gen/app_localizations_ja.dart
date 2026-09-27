@@ -981,6 +981,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapPanelSearchHint => '地名・カメラ名で検索';
 
   @override
+  String get mapPanelRoute => 'ルート';
+
+  @override
   String get mapPanelLayers => 'レイヤー';
 
   @override
@@ -3683,6 +3686,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapPanelSearchHint => 'ちめい・カメラの なまえで さがす';
+
+  @override
+  String get mapPanelRoute => 'ルート';
 
   @override
   String get mapPanelLayers => 'レイヤー';

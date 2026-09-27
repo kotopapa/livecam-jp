@@ -985,6 +985,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapPanelSearchHint => '지명・카메라명으로 검색';
 
   @override
+  String get mapPanelRoute => '경로';
+
+  @override
   String get mapPanelLayers => '레이어';
 
   @override

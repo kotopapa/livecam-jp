@@ -974,6 +974,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapPanelSearchHint => '按地名・摄像头名称搜索';
 
   @override
+  String get mapPanelRoute => '路线';
+
+  @override
   String get mapPanelLayers => '图层';
 
   @override
@@ -3651,6 +3654,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapPanelSearchHint => '以地名・攝影機名稱搜尋';
+
+  @override
+  String get mapPanelRoute => '路線';
 
   @override
   String get mapPanelLayers => '圖層';

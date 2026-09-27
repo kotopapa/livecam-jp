@@ -1016,6 +1016,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapPanelSearchHint => 'Tìm theo địa danh hoặc tên camera';
 
   @override
+  String get mapPanelRoute => 'Lộ trình';
+
+  @override
   String get mapPanelLayers => 'Lớp bản đồ';
 
   @override
