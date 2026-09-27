@@ -3190,9 +3190,13 @@ class _MapScreenState extends State<MapScreen> {
       _openDetail(camera);
       return;
     }
+    // 台数が多いとシートが画面に収まらずスクロールもできなかったので、
+    // 高さに上限を付けて一覧部分をスクロールさせる（2026-09-27）
     showModalBottomSheet(
       context: context,
       showDragHandle: true,
+      isScrollControlled: true,
+      constraints: _sheetConstraints(context),
       builder: (sheetContext) => SafeArea(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           Padding(
@@ -3200,14 +3204,14 @@ class _MapScreenState extends State<MapScreen> {
             child: Text(context.l10n.mapPointCameras(near.length),
                 style: const TextStyle(fontWeight: FontWeight.bold)),
           ),
+          Flexible(
+            child: ListView(shrinkWrap: true, children: [
           for (final c in near)
             ListTile(
-              leading: Container(
-                width: 14,
-                height: 14,
-                decoration: BoxDecoration(
-                    color: categoryColor(c.category),
-                    shape: BoxShape.circle),
+              leading: CircleAvatar(
+                radius: 12,
+                backgroundColor: categoryColor(c.category),
+                child: CategoryGlyph(c.category, size: 14),
               ),
               title: Text(c.name,
                   maxLines: 1, overflow: TextOverflow.ellipsis),
@@ -3223,6 +3227,8 @@ class _MapScreenState extends State<MapScreen> {
                 _openDetail(c);
               },
             ),
+            ]),
+          ),
           const SizedBox(height: 8),
         ]),
       ),
