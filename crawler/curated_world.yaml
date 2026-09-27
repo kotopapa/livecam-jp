@@ -34,7 +34,7 @@ cameras:
     name: ワイキキビーチ
     operator: "Ozolio Live"
     video_id: "G1zgkkguCyc"
-    category: scenic
+    category: coast
     country: "US"
     lat: 21.2761
     lng: -157.8269
@@ -53,7 +53,7 @@ cameras:
     name: マイアミ サウスビーチ
     operator: "ZeroEight"
     video_id: WT69M210Z18
-    category: scenic
+    category: coast
     country: "US"
     lat: 25.7825
     lng: -80.1341
@@ -122,7 +122,7 @@ cameras:
     name: バンクーバー港
     operator: "Vancouver City Views"
     video_id: "rxyNjFKwzJA"
-    category: scenic
+    category: port
     country: "CA"
     lat: 49.2888
     lng: -123.1111
@@ -170,7 +170,7 @@ cameras:
     name: サンタモニカ ビーチ&桟橋
     operator: "Explore.org"
     video_id: "v97JpT3ZA0w"
-    category: scenic
+    category: coast
     country: "US"
     lat: 34.0094
     lng: -118.4973
@@ -179,7 +179,7 @@ cameras:
     name: キーウエスト港
     operator: "PTZtv"
     video_id: "iHJbTrQSZys"
-    category: scenic
+    category: port
     country: "US"
     lat: 24.5601
     lng: -81.8058
@@ -278,7 +278,7 @@ cameras:
     name: ベネチア リアルト橋
     operator: "I Love You Venice"
     video_id: "Kmf_wiTFuXY"
-    category: scenic
+    category: river
     country: "IT"
     lat: 45.438
     lng: 12.3358
@@ -368,7 +368,7 @@ cameras:
     name: ソウル 漢江(汝矣島・ワールドカップ大橋)
     operator: "RIVERWORKER"
     video_id: "vk5BHoDxXf0"
-    category: scenic
+    category: river
     country: "KR"
     lat: 37.535
     lng: 126.902
@@ -377,7 +377,7 @@ cameras:
     name: ソウル 盤浦大橋 漢江ビュー
     operator: "DailySeoul"
     video_id: "RVvYQghFCXk"
-    category: scenic
+    category: river
     country: "KR"
     lat: 37.5125
     lng: 126.997
@@ -419,7 +419,7 @@ cameras:
     name: 釜山 広安里・広安大橋
     operator: "BusanLive"
     video_id: 1IJB-QjOzvM
-    category: scenic
+    category: coast
     country: "KR"
     lat: 35.1532
     lng: 129.1186
@@ -428,7 +428,7 @@ cameras:
     name: 釜山 松亭海水浴場
     operator: "Olla Hotel"
     video_id: "NBZdNZYF1gI"
-    category: scenic
+    category: coast
     country: "KR"
     lat: 35.1785
     lng: 129.2003
@@ -496,7 +496,7 @@ cameras:
     name: 香港 アバディーン港
     operator: "香港人の日常生活"
     video_id: "B_PPdZmkpwo"
-    category: scenic
+    category: port
     country: "HK"
     lat: 22.2481
     lng: 114.1552
@@ -526,7 +526,7 @@ cameras:
     name: バンコク チャオプラヤー川(Jack's Bar)
     operator: "Randomly Entertained"
     video_id: "_nvG0c9keWI"
-    category: scenic
+    category: river
     country: "TH"
     lat: 13.7593
     lng: 100.4977
@@ -566,7 +566,7 @@ cameras:
     name: ニャチャン ビーチ
     operator: "Nha Trang Live"
     video_id: "n8lmPY3dEfA"
-    category: scenic
+    category: coast
     country: "VN"
     lat: 12.2388
     lng: 109.1967
@@ -755,7 +755,7 @@ cameras:
     name: オークランド ハーバー2
     operator: "Auckland City Views"
     video_id: "PaLDpyFxpXE"
-    category: scenic
+    category: port
     country: "NZ"
     lat: -36.8434
     lng: 174.7633
@@ -765,7 +765,7 @@ cameras:
     name: ウェリントン ハーバー
     operator: "Neil Lockhart"
     video_id: F-SlZ8hRfAk
-    category: scenic
+    category: port
     country: "NZ"
     lat: -41.2889
     lng: 174.7772
@@ -863,7 +863,7 @@ cameras:
     name: ホノルル アラモアナビーチ
     operator: "WOZ ERE"
     video_id: y5XS3fMISRk
-    category: scenic
+    category: coast
     country: "US"
     lat: 21.2864
     lng: -157.8459
@@ -873,7 +873,7 @@ cameras:
     name: ホノルル アラモアナビーチ2
     operator: "WOZ ERE"
     video_id: "xpg2OcXUR6Y"
-    category: scenic
+    category: coast
     country: "US"
     lat: 21.2864
     lng: -157.8459
@@ -1400,7 +1400,7 @@ cameras:
     name: マイアミ港
     operator: "PTZtv"
     video_id: "DxZziUUr6CY"
-    category: scenic
+    category: port
     country: "US"
     lat: 25.7764
     lng: -80.177
@@ -1678,7 +1678,7 @@ cameras:
     name: キール運河 ブルンスビュッテル閘門
     operator: "livespotting"
     video_id: "zGXXy1hclkA"
-    category: scenic
+    category: river
     country: "DE"
     lat: 53.8963
     lng: 9.1332
@@ -1687,7 +1687,7 @@ cameras:
     name: キール運河 キール・ホルテナウ閘門
     operator: "livespotting"
     video_id: "7AWAGFNept8"
-    category: scenic
+    category: river
     country: "DE"
     lat: 54.3729
     lng: 10.1571
@@ -1706,7 +1706,7 @@ cameras:
     name: ロッテルダム港 ニーウェ・ワーターウェグ
     operator: "Port of Rotterdam"
     video_id: "_KVWehizoNU"
-    category: scenic
+    category: port
     country: "NL"
     lat: 51.9775
     lng: 4.12
@@ -1715,7 +1715,7 @@ cameras:
     name: ロッテルダム港 アマゾネハーヴェン
     operator: "Port of Rotterdam"
     video_id: "M09NaBVPjAI"
-    category: scenic
+    category: port
     country: "NL"
     lat: 51.9575
     lng: 4.045
@@ -1890,7 +1890,7 @@ cameras:
     name: ヘルシンキ 南港
     operator: "Port of Helsinki"
     video_id: "CvOB-Is_yYU"
-    category: scenic
+    category: port
     country: "FI"
     lat: 60.1673
     lng: 24.9528
@@ -2000,7 +2000,7 @@ cameras:
     name: カンヌ パームビーチ
     operator: "Cannes webcams"
     video_id: "8cff6yAO9bw"
-    category: scenic
+    category: coast
     country: "FR"
     lat: 43.548
     lng: 7.025
@@ -2269,7 +2269,7 @@ cameras:
     name: ボストン ハーバー
     operator: "Our World Live"
     video_id: "tYgGEC-ESTw"
-    category: scenic
+    category: port
     country: "US"
     lat: 42.3601
     lng: -71.0589
@@ -2301,7 +2301,7 @@ cameras:
     name: マホビーチ(セントマーティン)
     operator: "SHOWME Caribbean"
     video_id: "iSeH45R-8R0"
-    category: scenic
+    category: coast
     country: "SX"
     lat: 18.041
     lng: -63.1126
@@ -2311,7 +2311,7 @@ cameras:
     name: マホビーチ 航空機トラッカー
     operator: "Flightradar24"
     video_id: "2IQmpCXbOmM"
-    category: scenic
+    category: coast
     country: "SX"
     lat: 18.0411
     lng: -63.1127
@@ -2320,7 +2320,7 @@ cameras:
     name: イーグルビーチ(アルバ)
     operator: "SHOWME Caribbean"
     video_id: "_ZXMjk5K0_s"
-    category: scenic
+    category: coast
     country: "AW"
     lat: 12.5578
     lng: -70.0398
@@ -2348,7 +2348,7 @@ cameras:
     name: サンフアン コンダドビーチ
     operator: "Ozolio Live"
     video_id: "taI7GiyvDxE"
-    category: scenic
+    category: coast
     country: "PR"
     lat: 18.4585
     lng: -66.0754
@@ -2357,7 +2357,7 @@ cameras:
     name: アビラビーチ(キュラソー)
     operator: "SHOWME Caribbean"
     video_id: "-oiR7FxcwYU"
-    category: scenic
+    category: coast
     country: "CW"
     lat: 12.1194
     lng: -68.9174
@@ -2366,7 +2366,7 @@ cameras:
     name: マンボビーチ(キュラソー)
     operator: "SHOWME Caribbean"
     video_id: "loHbMM9JfCs"
-    category: scenic
+    category: coast
     country: "CW"
     lat: 12.0929
     lng: -68.8814
@@ -2395,7 +2395,7 @@ cameras:
     name: セブンマイルビーチ(ケイマン)
     operator: "Christopher Columbus Condos"
     video_id: ngTSRF7Co2c
-    category: scenic
+    category: coast
     country: "KY"
     lat: 19.34
     lng: -81.38
@@ -2743,7 +2743,7 @@ cameras:
     name: ハノイ ヴィンツイ橋
     operator: "Ha Noi Live"
     video_id: 6BY2ei7U2Hg
-    category: scenic
+    category: road
     country: "VN"
     lat: 21.0086
     lng: 105.8734
@@ -2816,7 +2816,7 @@ cameras:
     name: 高雄 旗津海水浴場
     operator: "高雄市観光局"
     video_id: "ka7FV0sCvxQ"
-    category: scenic
+    category: coast
     country: "TW"
     lat: 22.6163
     lng: 120.2694
@@ -2834,7 +2834,7 @@ cameras:
     name: 淡水 漁人碼頭
     operator: "新北市観光局"
     video_id: "xwAWSh35uuw"
-    category: scenic
+    category: port
     country: "TW"
     lat: 25.1751
     lng: 121.3958
@@ -2862,7 +2862,7 @@ cameras:
     name: 釜山 海雲台海水浴場
     operator: "Busan Haeundae Live"
     video_id: "LGuktGeHQxI"
-    category: scenic
+    category: coast
     country: "KR"
     lat: 35.1587
     lng: 129.1604
@@ -2901,7 +2901,7 @@ cameras:
     name: デイトナビーチ
     operator: "FOX 35 Orlando"
     video_id: "8FOpii0O2mU"
-    category: scenic
+    category: coast
     country: "US"
     lat: 29.2108
     lng: -81.0228
@@ -2953,7 +2953,7 @@ cameras:
     name: ダルース 船舶運河
     operator: Duluth Harbor Cam
     video_id: HPS48TMmNag
-    category: scenic
+    category: river
     country: US
     lat: 46.7797
     lng: -92.0929
@@ -2962,7 +2962,7 @@ cameras:
     name: ダルース エアリアルリフト橋
     operator: Duluth Harbor Cam
     video_id: 36MiI7NltHk
-    category: scenic
+    category: river
     country: US
     lat: 46.7792
     lng: -92.0928
@@ -2970,7 +2970,7 @@ cameras:
     name: スプリットロック灯台(スペリオル湖)
     operator: Duluth Harbor Cam
     video_id: 9EnmgL3fXW8
-    category: scenic
+    category: coast
     country: US
     lat: 47.2001
     lng: -91.3672
@@ -2978,7 +2978,7 @@ cameras:
     name: トゥーハーバーズ ボートランチ(スペリオル湖)
     operator: Duluth Harbor Cam
     video_id: sThx7mQM3Uc
-    category: scenic
+    category: port
     country: US
     lat: 47.0139
     lng: -91.6664
@@ -3002,7 +3002,7 @@ cameras:
     name: イタジャイ港
     operator: ConexãoDCTV
     video_id: tclkS75MV5I
-    category: scenic
+    category: port
     country: BR
     lat: -26.9062
     lng: -48.6543
@@ -3133,7 +3133,7 @@ cameras:
     name: フォートローダーデール ビーチ
     operator: PTZtv
     video_id: pXx3YQVSUGg
-    category: scenic
+    category: coast
     country: US
     lat: 26.1224
     lng: -80.1049
@@ -3152,7 +3152,7 @@ cameras:
     name: ケベック港
     operator: Port de Québec
     video_id: h_NkY62h7uM
-    category: scenic
+    category: port
     country: CA
     lat: 46.818
     lng: -71.203
@@ -3169,7 +3169,7 @@ cameras:
     name: ポートコルボーン ウェランド運河
     operator: StreamTime Live
     video_id: yF7XdpkL34w
-    category: scenic
+    category: river
     country: CA
     lat: 42.886
     lng: -79.25
@@ -3178,7 +3178,7 @@ cameras:
     name: ブロックビル セントローレンス川
     operator: City of Brockville
     video_id: k36fwVlkzBM
-    category: scenic
+    category: river
     country: CA
     lat: 44.589
     lng: -75.684
@@ -3230,7 +3230,7 @@ cameras:
     name: ネコチェア海岸
     operator: Nahuel Valentini
     video_id: I2VvSE0fyz4
-    category: scenic
+    category: coast
     country: AR
     lat: -38.59
     lng: -58.72
@@ -3266,7 +3266,7 @@ cameras:
     name: ビーニャ・デル・マール アカプルコ海岸
     operator: Marejadas UV
     video_id: HK7E_u6E8aw
-    category: scenic
+    category: coast
     country: CL
     lat: -33.014
     lng: -71.556
@@ -3284,7 +3284,7 @@ cameras:
     name: マイポ川河口(サンアントニオ)
     operator: sanantonioimagen
     video_id: yuVNNxNADCs
-    category: scenic
+    category: river
     country: CL
     lat: -33.617
     lng: -71.63
@@ -3318,7 +3318,7 @@ cameras:
     name: マートルビーチ ボードウォーク
     operator: Myrtle Beach Today
     video_id: UKtfCDXhCq0
-    category: scenic
+    category: coast
     country: US
     lat: 33.69
     lng: -78.883
@@ -3326,7 +3326,7 @@ cameras:
     name: ハリウッドビーチ ブロードウォーク(フロリダ)
     operator: City of Hollywood
     video_id: cmkAbDUEoyA
-    category: scenic
+    category: coast
     country: US
     lat: 26.014
     lng: -80.117
@@ -3419,7 +3419,7 @@ cameras:
     name: セントジョン島 クルーズベイ ビーチバー
     operator: St. John USVI
     video_id: 2wqpy036z24
-    category: scenic
+    category: coast
     country: VI
     lat: 18.331
     lng: -64.794
@@ -3435,7 +3435,7 @@ cameras:
     name: パナマシティビーチ(フロリダ)
     operator: Florida Live
     video_id: EYs8y8gOwf0
-    category: scenic
+    category: coast
     country: US
     lat: 30.176
     lng: -85.806
@@ -3443,7 +3443,7 @@ cameras:
     name: プライア・グランデ ボケイラン海岸
     operator: Guia Turístico de Praia Grande
     video_id: VykzH5wVZW4
-    category: scenic
+    category: coast
     country: BR
     lat: -24.01
     lng: -46.41
@@ -3452,7 +3452,7 @@ cameras:
     name: カリェタス海岸(レシフェ近郊)
     operator: TARTADRONE
     video_id: sCmXpBwHvqY
-    category: scenic
+    category: coast
     country: BR
     lat: -8.327
     lng: -34.944
@@ -3469,7 +3469,7 @@ cameras:
     name: シウダー・デル・エステ 友情の橋
     operator: Transmissão ao Vivo Cidade
     video_id: Tldo8RNCT-0
-    category: scenic
+    category: road
     country: PY
     lat: -25.509
     lng: -54.606
@@ -3503,7 +3503,7 @@ cameras:
     name: バルネアリオ・カンボリウ ラランジェイラス海岸
     operator: ConexãoDCTV
     video_id: lFlovxrE9Og
-    category: scenic
+    category: coast
     country: BR
     lat: -27.028
     lng: -48.588
@@ -3511,7 +3511,7 @@ cameras:
     name: ブルメナウ プライーニャ(イタジャイ・アスー川)
     operator: BNU.tv
     video_id: luJMi327bkM
-    category: scenic
+    category: river
     country: BR
     lat: -26.919
     lng: -49.066
@@ -3528,7 +3528,7 @@ cameras:
     name: プエルトバジャルタ ロスムエルトス桟橋
     operator: El Dorado Restaurant
     video_id: OpYVUzkLzGw
-    category: scenic
+    category: coast
     country: MX
     lat: 20.603
     lng: -105.238
@@ -3536,7 +3536,7 @@ cameras:
     name: カボサンルーカス エルメダノ海岸
     operator: Webcams de México
     video_id: POijZWZ1qwc
-    category: scenic
+    category: coast
     country: MX
     lat: 22.89
     lng: -109.904
@@ -3553,7 +3553,7 @@ cameras:
     name: シワタネホ ラ・ロパ海岸
     operator: Ixtapa y Zihuatanejo
     video_id: e756N1tufY8
-    category: scenic
+    category: coast
     country: MX
     lat: 17.628
     lng: -101.547
@@ -3561,7 +3561,7 @@ cameras:
     name: ロレト(バハ・カリフォルニア)
     operator: Villa del Palmar Loreto
     video_id: 0GwE1vu460k
-    category: scenic
+    category: coast
     country: MX
     lat: 25.962
     lng: -111.347
@@ -3594,7 +3594,7 @@ cameras:
     name: セントトーマス島 サファイアビーチ
     operator: Sapphire Beach USVI
     video_id: QuowSqkjImk
-    category: scenic
+    category: coast
     country: VI
     lat: 18.335
     lng: -64.854
@@ -3619,7 +3619,7 @@ cameras:
     operator: Nova Scotia Webcams
     video_id: SFoS6nBL138
     embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
-    category: scenic
+    category: coast
     country: CA
     lat: 44.492
     lng: -63.918
@@ -3645,7 +3645,7 @@ cameras:
     name: ホワイトロック桟橋(BC)
     operator: City of White Rock
     video_id: 4MK3E9EWDSY
-    category: scenic
+    category: coast
     country: CA
     lat: 49.017
     lng: -122.803
@@ -3687,7 +3687,7 @@ cameras:
     name: サントス港 入口水路
     operator: Praticagem de São Paulo
     video_id: 5BxqzvR6TgM
-    category: scenic
+    category: port
     country: BR
     lat: -23.987
     lng: -46.302
@@ -3695,7 +3695,7 @@ cameras:
     name: グアルジャ エンセアダ海岸
     operator: Surfistafotografo
     video_id: v5Y6WsD577M
-    category: scenic
+    category: coast
     country: BR
     lat: -23.986
     lng: -46.21
@@ -3743,7 +3743,7 @@ cameras:
     name: ピナマール海岸
     operator: None
     video_id: sQfqxlZvVDQ
-    category: scenic
+    category: coast
     country: AR
     lat: -37.11
     lng: -56.856
@@ -3752,7 +3752,7 @@ cameras:
     name: ビーニャ・デル・マール レニャカ海岸
     operator: Marejadas UV
     video_id: gGz5hQGhOmc
-    category: scenic
+    category: coast
     country: CL
     lat: -32.972
     lng: -71.548
@@ -3761,7 +3761,7 @@ cameras:
     name: ビーニャ・デル・マール ペルー通り
     operator: Marejadas UV
     video_id: KrkiUwDYTP4
-    category: scenic
+    category: coast
     country: CL
     lat: -33.007
     lng: -71.554
@@ -3778,7 +3778,7 @@ cameras:
     name: デトロイト川(ドッシン博物館)
     operator: BoatNerd
     video_id: VA5zde5zPGk
-    category: scenic
+    category: river
     country: US
     lat: 42.339
     lng: -82.984
@@ -3804,7 +3804,7 @@ cameras:
     name: ロレイン灯台(エリー湖)
     operator: Lorain Port and Finance Authority
     video_id: AinDIqEXEu4
-    category: scenic
+    category: coast
     country: US
     lat: 41.476
     lng: -82.188
@@ -3812,7 +3812,7 @@ cameras:
     name: グランドマレ港(スペリオル湖)
     operator: Visit Cook County MN
     video_id: n0H5FkWkjjs
-    category: scenic
+    category: port
     country: US
     lat: 47.748
     lng: -90.338
@@ -3883,7 +3883,7 @@ cameras:
     name: シーサイド(オレゴン海岸)
     operator: KOIN 6
     video_id: Ce_vAKq1kUA
-    category: scenic
+    category: coast
     country: US
     lat: 45.993
     lng: -123.929
@@ -3891,7 +3891,7 @@ cameras:
     name: バーハーバー(メイン)
     operator: Boston and Maine Live
     video_id: OteVW3af3BU
-    category: scenic
+    category: port
     country: US
     lat: 44.391
     lng: -68.204
@@ -3900,7 +3900,7 @@ cameras:
     name: サウスウェストハーバー(アカディア国立公園)
     operator: Boston and Maine Live
     video_id: LwzKzhHb0XM
-    category: scenic
+    category: port
     country: US
     lat: 44.276
     lng: -68.326
@@ -3908,7 +3908,7 @@ cameras:
     name: ケープコッド運河
     operator: Massachusetts Maritime Academy
     video_id: _OeFhA2XqqA
-    category: scenic
+    category: river
     country: US
     lat: 41.742
     lng: -70.617
@@ -3916,7 +3916,7 @@ cameras:
     name: マーサズ・ヴィニヤード エドガータウン港
     operator: Go Martha's Vineyard
     video_id: FoAvYeGRjU4
-    category: scenic
+    category: port
     country: US
     lat: 41.39
     lng: -70.51
@@ -3983,7 +3983,7 @@ cameras:
     name: ボルティモア港 航路
     operator: StreamTime Live
     video_id: t_VfYNtprYE
-    category: scenic
+    category: port
     country: US
     lat: 39.217
     lng: -76.533
@@ -4024,7 +4024,7 @@ cameras:
     name: ナナイモ ディパーチャーベイ(BCフェリー)
     operator: Departure Bay LIVE
     video_id: VF2WmFgrtGg
-    category: scenic
+    category: port
     country: CA
     lat: 49.193
     lng: -123.956
@@ -4053,7 +4053,7 @@ cameras:
     name: アンギラ サンディグラウンド エルヴィス・ビーチバー
     operator: Caribbean Webcams
     video_id: SPj4hMttgJM
-    category: scenic
+    category: coast
     country: AI
     lat: 18.201
     lng: -63.094
@@ -4079,7 +4079,7 @@ cameras:
     name: ポルト・デ・ガリーニャス海岸
     operator: Transmissão ao Vivo Cidade
     video_id: wwLPOjLHVO4
-    category: scenic
+    category: coast
     country: BR
     lat: -8.506
     lng: -35.004
@@ -4087,7 +4087,7 @@ cameras:
     name: ナタール ポンタネグラ海岸
     operator: Live Cam Natal
     video_id: pY75jOvfcIc
-    category: scenic
+    category: coast
     country: BR
     lat: -5.881
     lng: -35.172
@@ -4105,7 +4105,7 @@ cameras:
     name: マナウス 水の出会い(アマゾン川)
     operator: AmzLive
     video_id: 79yBWYzMkeg
-    category: scenic
+    category: river
     country: BR
     lat: -3.138
     lng: -59.904
@@ -4165,7 +4165,7 @@ cameras:
     name: ヌーク港(グリーンランド)
     operator: Sikuki Nuuk Harbour
     video_id: Tf4z_xtroi4
-    category: scenic
+    category: port
     country: GL
     lat: 64.176
     lng: -51.725
@@ -4173,7 +4173,7 @@ cameras:
     name: 江陵 江門海岸
     operator: GiGAeyes Live TV(KTテレコップ)
     video_id: n8mJCRXGoXc
-    category: scenic
+    category: coast
     country: KR
     lat: 37.7975
     lng: 128.912
@@ -4215,7 +4215,7 @@ cameras:
     name: ソウル 漢江 蚕室大橋
     operator: GiGAeyes Live TV(KTテレコップ)
     video_id: OCfFNf1oUFo
-    category: scenic
+    category: river
     country: KR
     lat: 37.5205
     lng: 127.087
@@ -4251,7 +4251,7 @@ cameras:
     name: ソウル 漢江 汝矣島漢江公園(オリンピック大路)
     operator: 서울 한강 라이브 247 Seoul Live Cam
     video_id: ZL1SUWuFxKQ
-    category: scenic
+    category: river
     country: KR
     lat: 37.527
     lng: 126.933
@@ -4260,7 +4260,7 @@ cameras:
     name: 釜山 広安大橋(橋上公式カメラ)
     operator: 광안대교(広安大橋 公式)
     video_id: jmVmZlsQIL8
-    category: scenic
+    category: road
     country: KR
     lat: 35.1485
     lng: 129.123
@@ -4271,7 +4271,7 @@ cameras:
     name: 江原道 高城郡 海岸(鰐津・巨津ほか)
     operator: 강원고성군(高城郡)
     video_id: vmQAODg20_Y
-    category: scenic
+    category: coast
     country: KR
     lat: 38.279
     lng: 128.562
@@ -4442,7 +4442,7 @@ cameras:
     name: 緑島 南寮漁港
     operator: 東部海岸国家風景区管理処
     video_id: wTHhv7M0vCI
-    category: scenic
+    category: port
     country: TW
     lat: 22.665
     lng: 121.474
@@ -4459,7 +4459,7 @@ cameras:
     name: 花蓮 長虹橋(秀姑巒渓河口)
     operator: 東部海岸国家風景区管理処
     video_id: JnD8Rk3o0BM
-    category: scenic
+    category: river
     country: TW
     lat: 23.4677
     lng: 121.4889
@@ -4535,7 +4535,7 @@ cameras:
     name: 墾丁 船帆石海岸
     operator: 墾丁国家公園管理処
     video_id: 7WOJMh_eSfY
-    category: scenic
+    category: coast
     country: TW
     lat: 21.939
     lng: 120.827
@@ -4604,7 +4604,7 @@ cameras:
     name: 花蓮 七星潭(北埔安検所)
     operator: 経済部水利署 水利防災組
     video_id: qg-aHp2mvS8
-    category: scenic
+    category: coast
     country: TW
     lat: 24.04168
     lng: 121.622258
@@ -4631,7 +4631,7 @@ cameras:
     name: 澎湖 南海遊客中心埠頭
     operator: 交通部観光署澎湖国家風景区管理処
     video_id: rbrlNykp6SY
-    category: scenic
+    category: port
     country: TW
     lat: 23.562
     lng: 119.566
@@ -4683,7 +4683,7 @@ cameras:
     name: 彰化 王功漁港
     operator: 彰化県政府(愛玩彰化)
     video_id: bsmxwRLdB3k
-    category: scenic
+    category: port
     country: TW
     lat: 23.964
     lng: 120.327
@@ -4693,7 +4693,7 @@ cameras:
     name: 香港 銅鑼湾 避風塘
     operator: Brainrolling Workshop
     video_id: WkcmApaOvWc
-    category: scenic
+    category: port
     country: HK
     lat: 22.286
     lng: 114.183
@@ -4714,7 +4714,7 @@ cameras:
     name: 香港 鴨脷洲 海怡半島
     operator: 香港人の日常生活
     video_id: RqwBvGHOcnQ
-    category: scenic
+    category: port
     country: HK
     lat: 22.242
     lng: 114.15
@@ -4769,7 +4769,7 @@ cameras:
     name: サムイ島 ラマイ ビーチ(Villa Tao)
     operator: The Real Samui Webcam
     video_id: RiSXbSQmTyw
-    category: scenic
+    category: coast
     country: TH
     lat: 9.47
     lng: 100.048
@@ -4821,7 +4821,7 @@ cameras:
     name: パタヤ ビーチロード
     operator: PattayaBob360IRL
     video_id: Qa5LqU9xxtc
-    category: scenic
+    category: coast
     country: TH
     lat: 12.944
     lng: 100.883
@@ -4850,7 +4850,7 @@ cameras:
     name: ホアヒン センタラ・グランド・ビーチリゾート
     operator: Centara Grand Beach Resort Hua Hin
     video_id: PPJ55qdY3pw
-    category: scenic
+    category: coast
     country: TH
     lat: 12.57
     lng: 99.96
@@ -4859,7 +4859,7 @@ cameras:
     name: ダナン ドラゴンブリッジ西交差点
     operator: Phát Triển Đà Nẵng
     video_id: oC8ttZHG50I
-    category: scenic
+    category: road
     country: VN
     lat: 16.061
     lng: 108.223
@@ -5005,7 +5005,7 @@ cameras:
     name: カトマンズ バグマティ川支流(ZAZA)
     operator: ZAZAマガジンチャンネル
     video_id: PVvIVCkmQDY
-    category: scenic
+    category: river
     country: NP
     lat: 27.693
     lng: 85.329
@@ -5140,7 +5140,7 @@ cameras:
     name: ヌーサ川
     operator: Noosa Yacht & Rowing Club
     video_id: 8U0f2BXXjv4
-    category: scenic
+    category: river
     country: AU
     lat: -26.393
     lng: 153.07
@@ -5174,7 +5174,7 @@ cameras:
     name: オークランド ビーチヘイブン
     operator: Pablo Stockto
     video_id: FOuXD98JpK4
-    category: scenic
+    category: coast
     country: NZ
     lat: -36.796
     lng: 174.68
@@ -5200,7 +5200,7 @@ cameras:
     name: キャッスルポイント灯台
     operator: Castlepoint Lighthouse
     video_id: t0nYqriNf-w
-    category: scenic
+    category: coast
     country: NZ
     lat: -40.906
     lng: 176.228
@@ -5216,7 +5216,7 @@ cameras:
     name: ハンブルク 聖ミヒャエル教会から港展望
     operator: livespotting
     video_id: OmyDLXvaus4
-    category: scenic
+    category: port
     country: DE
     lat: 53.5484
     lng: 9.9787
@@ -5224,7 +5224,7 @@ cameras:
     name: ヴァルネミュンデ 灯台・港口
     operator: livespotting
     video_id: YKK7qxWQ5d8
-    category: scenic
+    category: port
     country: DE
     lat: 54.181
     lng: 12.087
@@ -5250,7 +5250,7 @@ cameras:
     name: ベネチア 大運河(カ・アンジェリ)
     operator: I Love You Venice
     video_id: zKGzYuT5tg0
-    category: scenic
+    category: river
     country: IT
     lat: 45.436
     lng: 12.332
@@ -5266,7 +5266,7 @@ cameras:
     name: ベネチア スカルツィ橋
     operator: I Love You Venice
     video_id: 9r4CJfpflmA
-    category: scenic
+    category: river
     country: IT
     lat: 45.441
     lng: 12.321
@@ -5274,7 +5274,7 @@ cameras:
     name: ベネチア グーリエ橋・ストラーダ・ノーヴァ
     operator: I Love You Venice
     video_id: GQbUdGhHw_o
-    category: scenic
+    category: river
     country: IT
     lat: 45.4437
     lng: 12.3272
@@ -5282,7 +5282,7 @@ cameras:
     name: イェーゾロ・リド ビーチ
     operator: I Love You Venice
     video_id: JFpV_LBgK3M
-    category: scenic
+    category: coast
     country: IT
     lat: 45.505
     lng: 12.645
@@ -5290,7 +5290,7 @@ cameras:
     name: キオッジャ ソットマリーナ ビーチ
     operator: I Love You Venice
     video_id: 3LGl860wEaY
-    category: scenic
+    category: coast
     country: IT
     lat: 45.211
     lng: 12.305
@@ -5445,7 +5445,7 @@ cameras:
     name: カットリカ ビーチ(アドリア海)
     operator: Paesaggi Digitali
     video_id: 5QVUohwo8ss
-    category: scenic
+    category: coast
     country: IT
     lat: 43.964
     lng: 12.738
@@ -5486,7 +5486,7 @@ cameras:
     name: クノッケ=ヘイスト 海岸遊歩道
     operator: Weercamera
     video_id: fPc6v5QFTcE
-    category: scenic
+    category: coast
     country: BE
     lat: 51.352
     lng: 3.29
@@ -5494,7 +5494,7 @@ cameras:
     name: オーステンデ ビーチ
     operator: Weercamera
     video_id: I09L5RCJkjo
-    category: scenic
+    category: coast
     country: BE
     lat: 51.233
     lng: 2.913
@@ -5502,7 +5502,7 @@ cameras:
     name: ブランケンベルヘ ビーチ
     operator: Weercamera
     video_id: AZeifyx8GaA
-    category: scenic
+    category: coast
     country: BE
     lat: 51.316
     lng: 3.131
@@ -5510,7 +5510,7 @@ cameras:
     name: ニューポールト 海岸
     operator: Weercamera
     video_id: 7KXim_pTDD4
-    category: scenic
+    category: coast
     country: BE
     lat: 51.156
     lng: 2.72
@@ -5550,7 +5550,7 @@ cameras:
     name: マシコ港(マデイラ)
     operator: Webcamtaxi / Madeira-Web
     video_id: MhOuCDXuP_0
-    category: scenic
+    category: port
     country: PT
     lat: 32.716
     lng: -16.762
@@ -5566,7 +5566,7 @@ cameras:
     name: フンシャル マリーナ
     operator: Madeira-Web
     video_id: -p1Xnt9n0yg
-    category: scenic
+    category: port
     country: PT
     lat: 32.645
     lng: -16.91
@@ -5582,7 +5582,7 @@ cameras:
     name: カリェタ ビーチ(マデイラ)
     operator: Madeira-Web
     video_id: t4x0u0ARLwo
-    category: scenic
+    category: coast
     country: PT
     lat: 32.718
     lng: -17.175
@@ -5598,7 +5598,7 @@ cameras:
     name: フヴァル港(クロアチア)
     operator: Hvar Live
     video_id: 0wHWHAFnNh0
-    category: scenic
+    category: port
     country: HR
     lat: 43.172
     lng: 16.441
@@ -5607,7 +5607,7 @@ cameras:
     operator: Aspects Holidays
     video_id: T83mKGf_c3k
     embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
-    category: scenic
+    category: port
     country: GB
     lat: 50.213
     lng: -5.479
@@ -5632,7 +5632,7 @@ cameras:
     name: スヘフェニンゲン 北ブールバード・ビーチ
     operator: Strandweer.nu
     video_id: DaG5JReOYEw
-    category: scenic
+    category: coast
     country: NL
     lat: 52.112
     lng: 4.276
@@ -5641,7 +5641,7 @@ cameras:
     name: スヘフェニンゲン ブールバード・ビーチ
     operator: Strandweer.nu
     video_id: A5kXiKzbBFs
-    category: scenic
+    category: coast
     country: NL
     lat: 52.107
     lng: 4.282
@@ -5702,7 +5702,7 @@ cameras:
     name: ザントフォールト ビーチ
     operator: Strandweer.nu
     video_id: q0-DDh1zdY4
-    category: scenic
+    category: coast
     country: NL
     lat: 52.374
     lng: 4.528
@@ -5710,7 +5710,7 @@ cameras:
     name: ノールトウェイク 灯台・ブールバード
     operator: Strandweer.nu
     video_id: L76VKII_Z7k
-    category: scenic
+    category: coast
     country: NL
     lat: 52.243
     lng: 4.431
@@ -5718,7 +5718,7 @@ cameras:
     name: エフモント・アーン・ゼー ビーチ
     operator: Strandweer.nu
     video_id: mI1Os7TFdGc
-    category: scenic
+    category: coast
     country: NL
     lat: 52.62
     lng: 4.625
@@ -5794,7 +5794,7 @@ cameras:
     name: デューピヴォグル港(アイスランド東部)
     operator: SurveillanceMap Foundation
     video_id: eAm6iAB1pQQ
-    category: scenic
+    category: port
     country: IS
     lat: 64.656
     lng: -14.283
@@ -5828,7 +5828,7 @@ cameras:
     name: ランサローテ コスタ・テギセ ビーチ
     operator: Beach Bar Lanzarote
     video_id: M8pncpjkzkc
-    category: scenic
+    category: coast
     country: ES
     lat: 28.999
     lng: -13.494
@@ -5854,7 +5854,7 @@ cameras:
     name: ランサローテ プエルト・デル・カルメン ビーチ
     operator: LanzaroteWebcam
     video_id: YlRJXr4fCgM
-    category: scenic
+    category: coast
     country: ES
     lat: 28.921
     lng: -13.662
@@ -5862,7 +5862,7 @@ cameras:
     name: ランサローテ クルーズ船埠頭(アレシフェ)
     operator: LanzaroteWebcam
     video_id: U2hp0tRcOUU
-    category: scenic
+    category: port
     country: ES
     lat: 28.958
     lng: -13.529
@@ -5945,7 +5945,7 @@ cameras:
     name: ダートマス ダート川ウォーターフロント
     operator: Coast Cams
     video_id: c1-8Qg8bQec
-    category: scenic
+    category: river
     country: GB
     lat: 50.352
     lng: -3.579
@@ -5953,7 +5953,7 @@ cameras:
     name: ドーリッシュ ビーチ(シーブリーズ)
     operator: Coast Cams
     video_id: succ1fhHm7I
-    category: scenic
+    category: coast
     country: GB
     lat: 50.58
     lng: -3.464
@@ -5961,7 +5961,7 @@ cameras:
     name: ティンマス バックビーチ
     operator: Coast Cams
     video_id: O5weUpesXfc
-    category: scenic
+    category: coast
     country: GB
     lat: 50.545
     lng: -3.499
@@ -5979,7 +5979,7 @@ cameras:
     name: ママイア ビーチ(黒海)
     operator: Webcam Romania
     video_id: vsjE5ERdZzM
-    category: scenic
+    category: coast
     country: RO
     lat: 44.245
     lng: 28.628
@@ -6073,7 +6073,7 @@ cameras:
     name: マヨルカ カンプ・デ・マル ビーチ
     operator: Mallorca Webcam
     video_id: AtHeW1Eut7s
-    category: scenic
+    category: coast
     country: ES
     lat: 39.539
     lng: 2.423
@@ -6081,7 +6081,7 @@ cameras:
     name: トレモリノス バホンディージョ ビーチ
     operator: meteo365es
     video_id: qVpEwuoIUzc
-    category: scenic
+    category: coast
     country: ES
     lat: 36.623
     lng: -4.493
@@ -6098,7 +6098,7 @@ cameras:
     name: フンシャル ポンティーニャ港
     operator: Portal Netmadeira
     video_id: QZeuP3PjPDw
-    category: scenic
+    category: port
     country: PT
     lat: 32.642
     lng: -16.913
@@ -6142,7 +6142,7 @@ cameras:
     name: ベニドルム レバンテ・ビーチ
     operator: meteo365es
     video_id: 7i5qu1dotFY
-    category: scenic
+    category: coast
     country: ES
     lat: 38.539
     lng: -0.118
@@ -6169,7 +6169,7 @@ cameras:
     name: タリファ ロス・ランセス・ビーチ(カイトサーフ)
     operator: meteo365es
     video_id: dx6jgEqsjBE
-    category: scenic
+    category: coast
     country: ES
     lat: 36.023
     lng: -5.622
@@ -6178,7 +6178,7 @@ cameras:
     name: マラガ港 灯台
     operator: meteo365es
     video_id: sxgx5ZqAAxo
-    category: scenic
+    category: port
     country: ES
     lat: 36.713
     lng: -4.413
@@ -6440,7 +6440,7 @@ cameras:
     name: 南アフリカ ケープタウン クリフトン4thビーチ
     operator: SA Webcams
     video_id: IGu55JrxyHU
-    category: scenic
+    category: coast
     country: ZA
     lat: -33.94
     lng: 18.375
@@ -6450,7 +6450,7 @@ cameras:
     name: 南アフリカ ケープタウン マイゼンバーグビーチ
     operator: REEF South Africa
     video_id: H_wV0IBf_R8
-    category: scenic
+    category: coast
     country: ZA
     lat: -34.108
     lng: 18.47
@@ -6459,7 +6459,7 @@ cameras:
     name: 南アフリカ ケープタウン ストランドビーチ
     operator: Key to Cape Town
     video_id: nK3l-mKYCwc
-    category: scenic
+    category: coast
     country: ZA
     lat: -34.11
     lng: 18.82
@@ -6486,7 +6486,7 @@ cameras:
     name: 南アフリカ ゴードンズベイ ビキニビーチ
     operator: Cape Ocean Adventures
     video_id: VjGTxu0lKUg
-    category: scenic
+    category: coast
     country: ZA
     lat: -34.16
     lng: 18.86
@@ -6542,7 +6542,7 @@ cameras:
     name: セーシェル ノース島 海岸
     operator: Luxury Island (YouTubeチャンネル)
     video_id: Thtj8Ht7Z_c
-    category: scenic
+    category: coast
     country: SC
     lat: -4.39
     lng: 55.25
@@ -6660,7 +6660,7 @@ cameras:
     name: ノルウェー ハンメルフェスト港
     operator: Live Norway
     video_id: 5VoO4DGb3K4
-    category: scenic
+    category: port
     country: 'NO'
     lat: 70.663
     lng: 23.68
@@ -6942,7 +6942,7 @@ cameras:
     name: ベネチア ホテル・パウザニア前の運河
     operator: I Love You Venice
     video_id: ofyDg3_72-s
-    category: scenic
+    category: river
     country: IT
     lat: 45.4333
     lng: 12.3245
@@ -6950,7 +6950,7 @@ cameras:
     name: ベネチア ホテル・モナコ(大運河河口)
     operator: World Cams
     video_id: qVBeoaEl6HQ
-    category: scenic
+    category: river
     country: IT
     lat: 45.433
     lng: 12.3365
@@ -6967,7 +6967,7 @@ cameras:
     name: ベネチア 大運河(ホテル・サン・カッシアーノ)
     operator: I Love You Venice
     video_id: tdE-Uu87XmE
-    category: scenic
+    category: river
     country: IT
     lat: 45.44
     lng: 12.332
@@ -6975,7 +6975,7 @@ cameras:
     name: ベネチア 大運河(リストランテから 4K)
     operator: I Love You Venice
     video_id: r8N6IsoIkTk
-    category: scenic
+    category: river
     country: IT
     lat: 45.436
     lng: 12.333
@@ -6983,7 +6983,7 @@ cameras:
     name: ベネチア 大運河(ロカンダ・ストゥリオン)
     operator: World Cams / Locanda Sturion
     video_id: WUphkO4YveU
-    category: scenic
+    category: river
     country: IT
     lat: 45.438
     lng: 12.3355
@@ -7025,7 +7025,7 @@ cameras:
     name: ロンドン ウーリッジ・ドックヤード(テムズ川)
     operator: Woolwich Dockyard
     video_id: 9yPL7N6CFEs
-    category: scenic
+    category: port
     country: GB
     lat: 51.4925
     lng: 0.054
@@ -7254,7 +7254,7 @@ cameras:
     name: ニューヨーク港・ブルックリン 4K
     operator: Brooklyn Waterfront Cams
     video_id: obqnslJKrxc
-    category: scenic
+    category: port
     country: US
     lat: 40.69
     lng: -74.0
@@ -7280,7 +7280,7 @@ cameras:
     name: ブルックリン橋・マンハッタン橋(イーストリバー)
     operator: Brooklyn Waterfront Cams
     video_id: ZJq237TDfxE
-    category: scenic
+    category: river
     country: US
     lat: 40.705
     lng: -73.995
@@ -7297,7 +7297,7 @@ cameras:
     name: マリブ・ビーチ(LA Times)
     operator: LA Times Studios
     video_id: E0TZTmTK-Ws
-    category: scenic
+    category: coast
     country: US
     lat: 34.037
     lng: -118.68
@@ -7347,7 +7347,7 @@ cameras:
     name: ロサンゼルス ベニスビーチ(Venice V Hotel)
     operator: Teleport.camera
     video_id: EO_1LWqsCNE
-    category: scenic
+    category: coast
     country: US
     lat: 33.987
     lng: -118.473
@@ -7380,7 +7380,7 @@ cameras:
     name: バンクーバー カンビー橋・フォルスクリーク
     operator: Vancouver Yaletown Live
     video_id: aByyCUuaI0Q
-    category: scenic
+    category: river
     country: CA
     lat: 49.274
     lng: -123.115
@@ -7397,7 +7397,7 @@ cameras:
     name: バンクーバー港 パノラマ(Vancouver Port Live)
     operator: Vancouver Port Live
     video_id: aq8s2lIbpCQ
-    category: scenic
+    category: port
     country: CA
     lat: 49.288
     lng: -123.112
@@ -7413,7 +7413,7 @@ cameras:
     name: メルボルン ウェストゲート橋
     operator: Spotswood Trailers
     video_id: 0-xvuP6Caio
-    category: scenic
+    category: road
     country: AU
     lat: -37.83
     lng: 144.899
@@ -7446,7 +7446,7 @@ cameras:
     name: ソウル 漢江 加陽大橋・江辺北路
     operator: 서울 한강 라이브 / Seoul Hangang Live
     video_id: HDblGb_WV5Y
-    category: scenic
+    category: river
     country: KR
     lat: 37.562
     lng: 126.86
@@ -7454,7 +7454,7 @@ cameras:
     name: ソウル 漢江 盤浦漢江公園・盤浦大橋 4K
     operator: 한강 라이브 365
     video_id: 5gVrWGRZo9s
-    category: scenic
+    category: river
     country: KR
     lat: 37.51
     lng: 126.996
@@ -7500,7 +7500,7 @@ cameras:
     name: カンデイアス海岸(ジャボアタン)
     operator: TARTADRONE
     video_id: W_MfFb3qKN4
-    category: scenic
+    category: coast
     country: BR
     lat: -8.199
     lng: -34.92
@@ -7508,7 +7508,7 @@ cameras:
     name: グアルジャ ピタンゲイラス海岸
     operator: Surfistafotografo
     video_id: q5jrRV0Tc-Y
-    category: scenic
+    category: coast
     country: BR
     lat: -23.999
     lng: -46.256
@@ -7534,7 +7534,7 @@ cameras:
     name: サントス ゴンザガ海岸 4K
     operator: Olhar 013
     video_id: ymtBWXMyTJU
-    category: scenic
+    category: coast
     country: BR
     lat: -23.969
     lng: -46.329
@@ -7542,7 +7542,7 @@ cameras:
     name: サント・アルベルト灯台(リオグランデ・ド・ノルテ)
     operator: FVF Drone
     video_id: z5Z1zGFqeqo
-    category: scenic
+    category: coast
     country: BR
     lat: -5.062
     lng: -35.509
@@ -7569,7 +7569,7 @@ cameras:
     name: シャングリラ海岸(リオグランデ・ド・スル)
     operator: Câmeras ao Vivo RS
     video_id: D5VLbXaqZfg
-    category: scenic
+    category: coast
     country: BR
     lat: -29.796
     lng: -50.045
@@ -7577,7 +7577,7 @@ cameras:
     name: ジェリコアコアラ海岸(ヴィラ・カランゴ)
     operator: Vila Kalango
     video_id: vlF11mhf-90
-    category: scenic
+    category: coast
     country: BR
     lat: -2.796
     lng: -40.514
@@ -7593,7 +7593,7 @@ cameras:
     name: ナタール チロル・ポテンジ川
     operator: FVF DRONE LIVES 24H
     video_id: JxN06DJgRaw
-    category: scenic
+    category: river
     country: BR
     lat: -5.79
     lng: -35.205
@@ -7609,7 +7609,7 @@ cameras:
     name: フォス・ド・イグアス タンクレド・ネベス橋・友情の橋(ブラジル側)
     operator: Transmissão ao Vivo Cidade
     video_id: -tNaNq2TqEA
-    category: scenic
+    category: road
     country: BR
     lat: -25.598
     lng: -54.588
@@ -7626,7 +7626,7 @@ cameras:
     name: マナウス ポンタ・ネグラ海岸
     operator: AmzLive
     video_id: xt5k4nWXOEc
-    category: scenic
+    category: coast
     country: BR
     lat: -3.088
     lng: -60.102
@@ -7790,7 +7790,7 @@ cameras:
     name: アカプルコ コンデサ海岸
     operator: Webcams de México TV
     video_id: PxtTX4Z3uPU
-    category: scenic
+    category: coast
     country: MX
     lat: 16.853
     lng: -99.87
@@ -7799,7 +7799,7 @@ cameras:
     name: アカプルコ マリーナ
     operator: Webcams de México TV
     video_id: lrnOUZtoBwY
-    category: scenic
+    category: port
     country: MX
     lat: 16.848
     lng: -99.905
@@ -7807,7 +7807,7 @@ cameras:
     name: イスタパ 中央海岸
     operator: Webcams de México TV
     video_id: bpLSXpXtRbk
-    category: scenic
+    category: coast
     country: MX
     lat: 17.66
     lng: -101.63
@@ -7815,7 +7815,7 @@ cameras:
     name: イスタパ 西海岸
     operator: Webcams de México TV
     video_id: kYrxFTGpX3Y
-    category: scenic
+    category: coast
     country: MX
     lat: 17.672
     lng: -101.652
@@ -7888,7 +7888,7 @@ cameras:
     name: コスメル ブカノス・ビーチクラブ
     operator: Buccanos Beach Club
     video_id: JX1O3DKjY-k
-    category: scenic
+    category: coast
     country: MX
     lat: 20.53
     lng: -86.934
@@ -8051,7 +8051,7 @@ cameras:
     name: キングストン港
     operator: See Jamaica Live
     video_id: zZigIeqAoFY
-    category: scenic
+    category: port
     country: JM
     lat: 17.966
     lng: -76.793
@@ -8123,7 +8123,7 @@ cameras:
     name: ボネール ソロボン・ビーチ(ラック湾)
     operator: SHOWME Caribbean
     video_id: EcumU_n6fTY
-    category: scenic
+    category: coast
     country: BQ
     lat: 12.1
     lng: -68.22
@@ -8238,7 +8238,7 @@ cameras:
     name: マスカット イッティ AIDA 海岸（DarGlobal）
     operator: DarGlobal（不動産開発会社）
     video_id: lgQ8-E3rJ_4
-    category: scenic
+    category: coast
     country: OM
     lat: 23.588
     lng: 58.3829
@@ -8257,7 +8257,7 @@ cameras:
     name: フェティエ チャルシュ・ビーチ（Vostok Travel）
     operator: Fethiye Holidays and Excursions – Vostok Travel（Lukkaレストラン設置）
     video_id: -24yGDMKZUs
-    category: scenic
+    category: coast
     country: TR
     lat: 36.651
     lng: 29.106
@@ -8284,7 +8284,7 @@ cameras:
     name: パフォス エリジウム・リゾート 海岸
     operator: Elysium Resort and Spa（ホテル公式）
     video_id: kOzNBWZlfHk
-    category: scenic
+    category: coast
     country: CY
     lat: 34.7745
     lng: 32.403
@@ -8293,7 +8293,7 @@ cameras:
     name: エル・ゴウナ KBC カイトビーチ
     operator: KBC Kiteboarding Club El Gouna（公式）
     video_id: BQEmcimEO-I
-    category: scenic
+    category: coast
     country: EG
     lat: 27.396
     lng: 33.679
@@ -8320,7 +8320,7 @@ cameras:
     name: ガイランゲル クルーズ港
     operator: Geirangerfjord cruise port (Stranda Hamnevesen)
     video_id: yMSc-qqW3To
-    category: scenic
+    category: port
     country: 'NO'
     lat: 62.101
     lng: 7.206
@@ -8329,7 +8329,7 @@ cameras:
     name: ヘレシルト クルーズ港(ガイランゲルフィヨルド)
     operator: Geirangerfjord cruise port (Stranda Hamnevesen)
     video_id: S4aJlRY39fo
-    category: scenic
+    category: port
     country: 'NO'
     lat: 62.086
     lng: 6.873
@@ -8475,7 +8475,7 @@ cameras:
     name: ボードー港 シェーガタ
     operator: Livestream Sjøgata 1
     video_id: 04jMCyigPQM
-    category: scenic
+    category: port
     country: 'NO'
     lat: 67.284
     lng: 14.38
@@ -8685,7 +8685,7 @@ cameras:
     name: イエローストーン川 ガーディナー
     operator: See Jackson Hole
     video_id: IvZ22jZgvOI
-    category: scenic
+    category: river
     country: US
     lat: 45.031
     lng: -110.705
@@ -8694,7 +8694,7 @@ cameras:
     name: キャニオンシティ アーカンソー川ウェーブ
     operator: City of Cañon City
     video_id: X_iECBFS7gY
-    category: scenic
+    category: river
     country: US
     lat: 38.438
     lng: -105.24
@@ -8768,7 +8768,7 @@ cameras:
     name: カウアイ島 ポイプ ラワイ・ビーチ
     operator: Lawai Beach Resort
     video_id: 3ATYHKN2hIg
-    category: scenic
+    category: coast
     country: US
     lat: 21.878
     lng: -159.47
@@ -8777,7 +8777,7 @@ cameras:
     name: カウアイ島 カラパキ・ビーチ
     operator: Ozolio Live
     video_id: M6kN1wlNSk4
-    category: scenic
+    category: coast
     country: US
     lat: 21.96
     lng: -159.35
@@ -8822,7 +8822,7 @@ cameras:
     name: セントクロイ島 クリスチャンステッド港
     operator: VisitStCroix.com
     video_id: II9_tyn1HDI
-    category: scenic
+    category: port
     country: VI
     lat: 17.748
     lng: -64.703
@@ -8831,7 +8831,7 @@ cameras:
     name: イスキア島(パルコ・スメラルド)
     operator: Leonic Hotels
     video_id: CBrvIRmTBTA
-    category: scenic
+    category: coast
     country: IT
     lat: 40.705
     lng: 13.905
@@ -8876,7 +8876,7 @@ cameras:
     name: タソス島 リメナス旧港
     operator: Hotel Angelica Thassos
     video_id: Zksbxgm6VHA
-    category: scenic
+    category: port
     country: GR
     lat: 40.78
     lng: 24.712
@@ -8885,7 +8885,7 @@ cameras:
     name: ティノス島 港
     operator: Tinos Web Tv
     video_id: PAK2GoHG7Hs
-    category: scenic
+    category: port
     country: GR
     lat: 37.538
     lng: 25.16
@@ -8895,7 +8895,7 @@ cameras:
     name: スキアトス島 港
     operator: Ship Spotter's Paradise
     video_id: utSWHPcdMWw
-    category: scenic
+    category: port
     country: GR
     lat: 39.16
     lng: 23.492
@@ -8922,7 +8922,7 @@ cameras:
     name: アルテア ビーチ
     operator: Camping Cap-Blanch
     video_id: hvsK8Fvz4rE
-    category: scenic
+    category: coast
     country: ES
     lat: 38.6
     lng: 0.052
@@ -8931,7 +8931,7 @@ cameras:
     name: アルブフェイラ ビーチ(アルガルヴェ)
     operator: WEBCAMS ONLINE / Hotel Sol e Mar
     video_id: GeQVAs9N490
-    category: scenic
+    category: coast
     country: PT
     lat: 37.087
     lng: -8.25
@@ -8940,7 +8940,7 @@ cameras:
     name: ポルティマン マリーナ(アルガルヴェ)
     operator: Playocean
     video_id: w7rzgn6WXs8
-    category: scenic
+    category: port
     country: PT
     lat: 37.12
     lng: -8.53
@@ -9294,7 +9294,7 @@ cameras:
     name: パシクダ(スリランカ東海岸)
     operator: Live (個人)
     video_id: WOTkHFaHT0w
-    category: scenic
+    category: coast
     country: LK
     lat: 7.92
     lng: 81.56
@@ -9303,7 +9303,7 @@ cameras:
     name: エトルタの断崖
     operator: Webcams des Côtes Seinomarines
     video_id: 7vI2bhEwCKA
-    category: scenic
+    category: coast
     country: FR
     lat: 49.708
     lng: 0.2
@@ -9539,7 +9539,7 @@ cameras:
     name: ナザレ 巨大波カメラ
     operator: Explore.org
     video_id: _Gi8UC_HPKM
-    category: scenic
+    category: coast
     country: PT
     lat: 39.605
     lng: -9.085
@@ -9593,7 +9593,7 @@ cameras:
     name: フロム港 ピア6(アウルランフィヨルド)
     operator: Port of Flåm
     video_id: o6obskJPWdw
-    category: scenic
+    category: port
     country: 'NO'
     lat: 60.862
     lng: 7.113
@@ -9611,7 +9611,7 @@ cameras:
     name: ノールフィヨルドエイド港
     operator: Live Norway
     video_id: 0V59F4M3o88
-    category: scenic
+    category: port
     country: 'NO'
     lat: 61.905
     lng: 5.99
@@ -9692,7 +9692,7 @@ cameras:
     name: ボッパルト ゲデオンスエック(ライン川大蛇行)
     operator: viewatch.tv
     video_id: zLlwPU3Xtrk
-    category: scenic
+    category: river
     country: DE
     lat: 50.23
     lng: 7.59
@@ -9746,7 +9746,7 @@ cameras:
     name: フェーア島 ウーターズム海岸
     operator: Gemeinde Utersum
     video_id: G6ko2s4PYtE
-    category: scenic
+    category: coast
     country: DE
     lat: 54.71
     lng: 8.41
@@ -9755,7 +9755,7 @@ cameras:
     name: ウーゼドム島 アールベック桟橋
     operator: UsedomTravel
     video_id: Uvhj6SvU5WI
-    category: scenic
+    category: coast
     country: DE
     lat: 53.94
     lng: 14.19
@@ -9764,7 +9764,7 @@ cameras:
     name: テセル島 デ・コーフ海岸
     operator: TexelInformatie
     video_id: Hq2Qbcuph4w
-    category: scenic
+    category: coast
     country: NL
     lat: 53.1
     lng: 4.75
@@ -9813,7 +9813,7 @@ cameras:
     name: パウエル湖 マリーナ
     operator: XINSURANCE Sports
     video_id: rSEpoAdnKjQ
-    category: scenic
+    category: port
     country: US
     lat: 36.96
     lng: -111.44
@@ -9893,7 +9893,7 @@ cameras:
     name: サンクトペテルブルク 宮殿橋・ネヴァ川
     operator: Mobotix Webcams Russia | Marathon to 100k
     video_id: CjtIYbmVfck
-    category: scenic
+    category: river
     country: RU
     lat: 59.941
     lng: 30.3085
@@ -9902,7 +9902,7 @@ cameras:
     name: サンクトペテルブルク 宮殿河岸・ネヴァ川
     operator: Mobotix Webcams Russia | Marathon to 100k
     video_id: LO_YkXikm1g
-    category: scenic
+    category: river
     country: RU
     lat: 59.942
     lng: 30.314
@@ -9935,7 +9935,7 @@ cameras:
     name: サンクトペテルブルク グリボエードフ運河(イサク聖堂・ニコリスキー聖堂遠望)
     operator: Mobotix Webcams Russia Live
     video_id: byKS0r0Skn0
-    category: scenic
+    category: river
     country: RU
     lat: 59.9265
     lng: 30.299
@@ -9980,7 +9980,7 @@ cameras:
     name: レンスク レナ川眺望
     operator: LarryRos
     video_id: c6LNlgV2gjM
-    category: scenic
+    category: river
     country: RU
     lat: 60.722
     lng: 114.935
@@ -10170,7 +10170,7 @@ cameras:
     name: ツァレヴォ港(黒海)
     operator: Milen Petrov
     video_id: wXNYNGF3JNg
-    category: scenic
+    category: port
     country: BG
     lat: 42.172
     lng: 27.853
@@ -10247,7 +10247,7 @@ cameras:
     name: オフリド Cuba Libre ビーチ
     operator: Ohrid Info by 2S
     video_id: KiVRekJsExg
-    category: scenic
+    category: coast
     country: MK
     lat: 41.115
     lng: 20.8

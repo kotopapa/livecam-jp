@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+from typing import Callable
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
@@ -24,6 +25,22 @@ VIDEO_RE = re.compile(
     r"(?:youtu\.be/|youtube\.com/(?:watch\?v=|live/|embed/))([A-Za-z0-9_-]{6,})")
 
 
+def categorize_yokosuka(name: str) -> str:
+    """横須賀市「災害監視カメラ」（海岸・漁港・道路・河川混在）を地点名から振り分ける。
+
+    キーワードに当たらないものは other のまま（レビューで個別判断）。
+    """
+    if re.search(r"海岸|海水浴", name):
+        return "coast"
+    if re.search(r"漁港|港", name):
+        return "port"
+    if re.search(r"国道|県道|交差点|トンネル|跨線橋|歩道橋|通り|IC", name):
+        return "road"
+    if re.search(r"川", name):
+        return "river"
+    return "other"
+
+
 @dataclass(frozen=True)
 class MuniSeed:
     key: str
@@ -32,6 +49,7 @@ class MuniSeed:
     prefecture: str
     hint_prefix: str            # ジオコーディング用（例: 栃木県大田原市）
     category: str = "river"
+    category_fn: Callable[[str], str] | None = None   # 指定時はcategoryより優先（地点名で判定）
 
 
 SEEDS = [
@@ -49,7 +67,9 @@ SEEDS = [
                     "https://www.city.yokosuka.kanagawa.jp/camera/area_02/index.html",
                     "https://www.city.yokosuka.kanagawa.jp/camera/area_03/index.html"),
              operator="横須賀市", prefecture="14", hint_prefix="神奈川県横須賀市",
-             category="other"),   # 災害監視（海岸・道路・河川の混在）
+             category="other", category_fn=categorize_yokosuka),
+             # 災害監視（海岸・漁港・道路・河川の混在）。地点名から振り分け、
+             # 該当しないもの（公園・交差点以外の目印等）は other のまま（2026-09-27）
 ]
 
 
@@ -94,10 +114,11 @@ class MuniYoutubeParser(SourceParser):
                         continue
                     import hashlib
                     h = hashlib.sha1(f"{seed.key}:{name}".encode()).hexdigest()[:10]
+                    category = seed.category_fn(name) if seed.category_fn else seed.category
                     result.candidates.append(CameraCandidate(
                         id=f"muni-{seed.key}-{h}",
                         name=f"{seed.operator} {name}",
-                        category=seed.category,
+                        category=category,
                         prefecture=seed.prefecture,
                         feed_type="youtube_video",
                         feed_url=vid,

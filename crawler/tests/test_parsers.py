@@ -139,7 +139,8 @@ def test_curated_youtube_yaml():
 
 
 def test_muni_youtube_extract():
-    from crawler.sources.muni_youtube import clean_spot_name, extract_video_links
+    from crawler.sources.muni_youtube import (categorize_yokosuka, clean_spot_name,
+                                               extract_video_links)
     html = (FIXTURES / "muni_ohtawara.html").read_text(encoding="utf-8", errors="replace")
     links = extract_video_links(html, "https://www.city.ohtawara.tochigi.jp/docs/2013082781499/")
     ids = dict(links)
@@ -150,6 +151,17 @@ def test_muni_youtube_extract():
     ylinks = extract_video_links(yoko, "https://www.city.yokosuka.kanagawa.jp/camera/area_01/index.html")
     assert len(ylinks) >= 9
     assert clean_spot_name("蛇尾橋付近（外部リンク）") == "蛇尾橋付近"
+
+    # 横須賀市の災害監視カメラ（海岸・漁港・道路・河川混在）は地点名から振り分ける
+    assert categorize_yokosuka("長浜海岸") == "coast"
+    assert categorize_yokosuka("長井漁港（本港）") == "port"
+    assert categorize_yokosuka("浦賀港") == "port"
+    assert categorize_yokosuka("上町3丁目交差点") == "road"
+    assert categorize_yokosuka("国道16号 コースカ前") == "road"
+    assert categorize_yokosuka("湘南鷹取跨線橋付近") == "road"
+    assert categorize_yokosuka("川間川") == "river"
+    assert categorize_yokosuka("ヴェルニー公園") == "other"
+    assert categorize_yokosuka("佐島（芦名）") == "other"
 
 
 def test_mbc_webcam_extract():
