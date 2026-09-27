@@ -3342,6 +3342,30 @@ class _MapScreenState extends State<MapScreen> {
   // クラスタリングは全体で行い、描画は表示領域+余白分だけに絞る
   LatLng? _lastCullCenter;
 
+  static const _maxCameraMarkers = 120;
+  static const _maxLayerMarkers = 120;
+
+  /// 画面付近（上下左右に2割の余白）のマーカーだけを、地図の中心に近い順に [max] 個まで残す
+  Set<gmaps.Marker> _capMarkers(Set<gmaps.Marker> markers, int max) {
+    final b = _visibleBounds;
+    Iterable<gmaps.Marker> list = markers;
+    if (b != null && (b.east - b.west).abs() < 300) {
+      final latM = (b.north - b.south) * 0.2, lngM = (b.east - b.west).abs() * 0.2;
+      list = list.where((m) =>
+          m.position.latitude >= b.south - latM && m.position.latitude <= b.north + latM &&
+          m.position.longitude >= b.west - lngM && m.position.longitude <= b.east + lngM);
+    }
+    final l = list.toList();
+    if (l.length <= max) return l.toSet();
+    final c = _center;
+    double d(gmaps.Marker m) {
+      final dy = m.position.latitude - c.latitude, dx = m.position.longitude - c.longitude;
+      return dx * dx + dy * dy;
+    }
+    l.sort((a, b) => d(a).compareTo(d(b)));
+    return l.take(max).toSet();
+  }
+
   List<MapItem> _cullToViewport(List<MapItem> items) {
     final b = _visibleBounds;
     if (b == null) return items; // 初回レイアウト前（onMapCreated後に再構築される）
@@ -3808,7 +3832,12 @@ class _MapScreenState extends State<MapScreen> {
       cams = cams.where((c) => _routeCameraIds.contains(c.id)).toList();
     }
     final items = _cullToViewport(clusterCameras(cams, _zoom));
-    final markers = _buildCameraMarkers(items, pins)..addAll(_vectorMarkers(pins));
+    // iOS の Google Maps SDK はマーカーを1つ足すたびに全マーカーのアクセシビリティ
+    // 情報を作り直す（-[GMSVectorMapView buildVisibleAccessibilityItems]）ため、
+    // 一度に数百個を足すと主スレッドが10秒以上止まりウォッチドッグで強制終了される
+    // （2026-09-27 実機の 0x8BADF00D で確認）。画面付近・中心に近い順に上限を設ける
+    final markers = _capMarkers(_buildCameraMarkers(items, pins), _maxCameraMarkers)
+      ..addAll(_capMarkers(_vectorMarkers(pins), _maxLayerMarkers));
     // 今昔マップのスワイプ比較中は2枚目の GoogleMap を重ねる（このフレームでの
     // 判定を固定しておく。build途中で _kjRegion 等が変わっても揃えるため）
     final kjSwipeActive = _kjSwipeActive;
