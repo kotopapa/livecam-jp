@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io' show Directory;
 import 'dart:math' as math;
 
@@ -8,7 +7,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart' as gmaps;
-import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:path_provider/path_provider.dart';
@@ -46,6 +44,7 @@ import 'situation_card.dart';
 import 'elevation_label.dart';
 import 'pin_bitmaps.dart';
 import 'pin_style.dart';
+import 'place_search_screen.dart';
 
 /// 地図画面（SPEC 9.2②）。
 /// 地理院タイル + カテゴリ色ピン + 位置未確定の黄縁取り + クラスタリング。
@@ -358,7 +357,6 @@ class _MapScreenState extends State<MapScreen> {
     widget.app.removeListener(_onDataChanged);
     _searchController.dispose();
     _posSub?.cancel();
-    _placeController.dispose();
     for (final p in _tileProviders.values) {
       p.dispose();
     }
@@ -2925,35 +2923,11 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   // --- 場所検索（国土地理院ジオコーディング。無料・キー不要） ---
-  final _placeController = TextEditingController();
 
-  Future<List<(String, LatLng)>> _searchPlace(String query) async {
-    final uri = Uri.parse(
-        'https://msearch.gsi.go.jp/address-search/AddressSearch'
-        '?q=${Uri.encodeQueryComponent(query)}');
-    final resp = await http.get(uri).timeout(const Duration(seconds: 10));
-    if (resp.statusCode != 200) return const [];
-    final list = jsonDecode(utf8.decode(resp.bodyBytes)) as List;
-    final hits = [
-      for (final e in list.cast<Map<String, dynamic>>())
-        (
-          (e['properties'] as Map<String, dynamic>)['title'] as String? ?? '',
-          LatLng(
-            ((e['geometry'] as Map<String, dynamic>)['coordinates']
-                as List)[1] as double,
-            ((e['geometry'] as Map<String, dynamic>)['coordinates']
-                as List)[0] as double,
-          ),
-        ),
-    ];
-    // 地理院APIは部分一致の住所も多く返すため、クエリ全体を含む候補を優先する
-    hits.sort((a, b) {
-      final am = a.$1.contains(query) ? 0 : 1;
-      final bm = b.$1.contains(query) ? 0 : 1;
-      return am.compareTo(bm);
-    });
-    return hits.take(15).toList();
-  }
+  /// フォールバック: Google Places が使えない/該当なしのときの住所検索
+  /// （実装は places_search.dart に移設。route_cameras の候補集めからも使う）
+  Future<List<(String, LatLng)>> _searchPlace(String query) =>
+      PlacesSearch.addressSearch(query);
 
   /// 登録済みカメラ名からの検索（地理院が施設名に弱いのを補完する）
   List<Camera> _searchCameras(String query) {
@@ -2967,128 +2941,38 @@ class _MapScreenState extends State<MapScreen> {
         .toList();
   }
 
-  void _showPlaceSearch(BuildContext context) {
-    List<(String, LatLng)> results = const [];
-    List<Camera> cameraHits = const [];
-    bool searching = false;
-    bool searched = false;
-    showModalBottomSheet(
-      context: context,
-      showDragHandle: true,
-      isScrollControlled: true,
-      constraints: _sheetConstraints(context),
-      builder: (sheetContext) => StatefulBuilder(
-        builder: (context, setSheetState) {
-          Future<void> run() async {
-            final q = _placeController.text.trim();
-            if (q.isEmpty) return;
-            setSheetState(() => searching = true);
-            cameraHits = _searchCameras(q);
-            try {
-              final places = await PlacesSearch.textSearch(q,
-                  bias: _center, languageCode: Localizations.localeOf(context).languageCode);
-              results = places ?? await _searchPlace(q);
-            } catch (_) {
-              results = const [];
-            }
-            searched = true;
-            setSheetState(() => searching = false);
-          }
-
-          void goTo(LatLng point, double zoom) {
-            Navigator.of(sheetContext).pop();
-            _stopFollowing();
-            _moveCamera(point, zoom);
-            _savePosition();
-            _requestLayerDataForView();
-          }
-
-          return SafeArea(
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(20, 0, 20,
-                  16 + MediaQuery.of(sheetContext).viewInsets.bottom),
-              child: Column(mainAxisSize: MainAxisSize.min, children: [
-                Text(context.l10n.mapSearchTitle,
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: _placeController,
-                  autofocus: true,
-                  textInputAction: TextInputAction.search,
-                  decoration: InputDecoration(
-                    isDense: true,
-                    prefixIcon: const Icon(Icons.place_outlined, size: 20),
-                    hintText: context.l10n.mapSearchHint,
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    suffixIcon: IconButton(
-                        icon: const Icon(Icons.search), onPressed: run),
-                  ),
-                  onSubmitted: (_) => run(),
-                ),
-                const SizedBox(height: 8),
-                if (searching)
-                  const Padding(
-                    padding: EdgeInsets.all(16),
-                    child: CircularProgressIndicator(),
-                  )
-                else if (searched && results.isEmpty && cameraHits.isEmpty)
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Text(context.l10n.mapSearchNotFound,
-                        style: TextStyle(color: Colors.grey[600])),
-                  )
-                else
-                  ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 360),
-                    child: ListView(shrinkWrap: true, children: [
-                      if (cameraHits.isNotEmpty)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 4, bottom: 2),
-                          child: Text(context.l10n.mapSearchSectionCameras,
-                              style: TextStyle(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey[600])),
-                        ),
-                      for (final c in cameraHits)
-                        ListTile(
-                          dense: true,
-                          leading: Icon(Icons.videocam,
-                              size: 18, color: categoryColor(c.category)),
-                          title: Text(c.name,
-                              maxLines: 1, overflow: TextOverflow.ellipsis),
-                          subtitle: Text(c.operator,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(fontSize: 11)),
-                          onTap: () => goTo(LatLng(c.lat!, c.lng!), 14),
-                        ),
-                      if (results.isNotEmpty)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 4, bottom: 2),
-                          child: Text(context.l10n.mapSearchSectionPlaces,
-                              style: TextStyle(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey[600])),
-                        ),
-                      for (final r in results)
-                        ListTile(
-                          dense: true,
-                          leading: const Icon(Icons.place, size: 18),
-                          title: Text(r.$1),
-                          onTap: () => goTo(r.$2, 13),
-                        ),
-                    ]),
-                  ),
-              ]),
-            ),
-          );
-        },
+  /// 検索ピルの入口。Googleマップ風の全画面検索を開き、選ばれた場所/カメラへ
+  /// 地図を寄せる（結果は Navigator.pop の戻り値で受け取る）
+  Future<void> _openPlaceSearch(BuildContext context) async {
+    final result = await Navigator.of(context).push<PlaceSearchResult>(
+      PageRouteBuilder(
+        transitionDuration: const Duration(milliseconds: 200),
+        reverseTransitionDuration: const Duration(milliseconds: 150),
+        pageBuilder: (_, _, _) => PlaceSearchScreen(
+          app: widget.app,
+          center: _center,
+          searchCameras: _searchCameras,
+        ),
+        transitionsBuilder: (_, animation, _, child) =>
+            FadeTransition(opacity: animation, child: child),
       ),
     );
+    if (!mounted || result == null) return;
+    switch (result) {
+      case PlacePickResult(point: final point):
+        _stopFollowing();
+        _moveCamera(point, 15);
+        _savePosition();
+        _requestLayerDataForView();
+      case CameraPickResult(camera: final camera):
+        if (camera.hasLocation) {
+          _stopFollowing();
+          _moveCamera(LatLng(camera.lat!, camera.lng!), 15);
+          _savePosition();
+          _requestLayerDataForView();
+        }
+        _onPinTap(camera);
+    }
   }
 
   // 旧・flutter_map の NaN カメラ復旧ワークアラウンド(_isFiniteCamera/
@@ -4001,7 +3885,7 @@ class _MapScreenState extends State<MapScreen> {
           top: MediaQuery.of(context).padding.top + 12,
           child: MapSearchPill(
             hint: context.l10n.mapPanelSearchHint,
-            onTap: () => _showPlaceSearch(context),
+            onTap: () => _openPlaceSearch(context),
           ),
         ),
         // 「いま起きていること」（発生時だけ検索ピルの下・右端に丸いボタン）。展開中も

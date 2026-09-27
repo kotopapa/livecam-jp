@@ -935,6 +935,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapSearchSectionPlaces => '장소';
 
   @override
+  String get placeSearchBack => '뒤로';
+
+  @override
+  String get placeSearchClear => '지우기';
+
+  @override
+  String get placeSearchFillTooltip => '후보 텍스트를 입력란에 넣기';
+
+  @override
+  String get placeSearchRecentTitle => '최근 검색';
+
+  @override
   String mapPointCameras(int count) {
     return '이 지점의 카메라($count대)';
   }

@@ -931,6 +931,18 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapSearchSectionPlaces => '場所';
 
   @override
+  String get placeSearchBack => '戻る';
+
+  @override
+  String get placeSearchClear => 'クリア';
+
+  @override
+  String get placeSearchFillTooltip => '候補を入力欄に入れる';
+
+  @override
+  String get placeSearchRecentTitle => '最近の検索';
+
+  @override
   String mapPointCameras(int count) {
     return 'この地点のカメラ（$count台）';
   }
@@ -3621,6 +3633,18 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapSearchSectionPlaces => 'ばしょ';
+
+  @override
+  String get placeSearchBack => 'もどる';
+
+  @override
+  String get placeSearchClear => 'クリア';
+
+  @override
+  String get placeSearchFillTooltip => 'この こうほの もじを にゅうりょくらんに いれる';
+
+  @override
+  String get placeSearchRecentTitle => 'さいきん けんさくした もの';
 
   @override
   String mapPointCameras(int count) {

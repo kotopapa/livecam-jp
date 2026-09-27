@@ -1846,6 +1846,30 @@ abstract class AppLocalizations {
   /// **'場所'**
   String get mapSearchSectionPlaces;
 
+  /// No description provided for @placeSearchBack.
+  ///
+  /// In ja, this message translates to:
+  /// **'戻る'**
+  String get placeSearchBack;
+
+  /// No description provided for @placeSearchClear.
+  ///
+  /// In ja, this message translates to:
+  /// **'クリア'**
+  String get placeSearchClear;
+
+  /// No description provided for @placeSearchFillTooltip.
+  ///
+  /// In ja, this message translates to:
+  /// **'候補を入力欄に入れる'**
+  String get placeSearchFillTooltip;
+
+  /// No description provided for @placeSearchRecentTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'最近の検索'**
+  String get placeSearchRecentTitle;
+
   /// No description provided for @mapPointCameras.
   ///
   /// In ja, this message translates to:

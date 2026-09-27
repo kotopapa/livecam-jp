@@ -963,6 +963,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapSearchSectionPlaces => 'Places';
 
   @override
+  String get placeSearchBack => 'Back';
+
+  @override
+  String get placeSearchClear => 'Clear';
+
+  @override
+  String get placeSearchFillTooltip => 'Put this suggestion in the search box';
+
+  @override
+  String get placeSearchRecentTitle => 'Recent searches';
+
+  @override
   String mapPointCameras(int count) {
     return 'Cameras here ($count)';
   }

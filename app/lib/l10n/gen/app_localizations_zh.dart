@@ -924,6 +924,18 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapSearchSectionPlaces => '地点';
 
   @override
+  String get placeSearchBack => '返回';
+
+  @override
+  String get placeSearchClear => '清除';
+
+  @override
+  String get placeSearchFillTooltip => '将该建议填入搜索框';
+
+  @override
+  String get placeSearchRecentTitle => '最近搜索';
+
+  @override
   String mapPointCameras(int count) {
     return '此地点的摄像头（$count台）';
   }
@@ -3589,6 +3601,18 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapSearchSectionPlaces => '地點';
+
+  @override
+  String get placeSearchBack => '返回';
+
+  @override
+  String get placeSearchClear => '清除';
+
+  @override
+  String get placeSearchFillTooltip => '將該建議填入搜尋框';
+
+  @override
+  String get placeSearchRecentTitle => '最近搜尋';
 
   @override
   String mapPointCameras(int count) {

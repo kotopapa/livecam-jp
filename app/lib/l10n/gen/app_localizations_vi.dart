@@ -966,6 +966,18 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapSearchSectionPlaces => 'Địa điểm';
 
   @override
+  String get placeSearchBack => 'Quay lại';
+
+  @override
+  String get placeSearchClear => 'Xóa';
+
+  @override
+  String get placeSearchFillTooltip => 'Điền gợi ý vào ô tìm kiếm';
+
+  @override
+  String get placeSearchRecentTitle => 'Tìm kiếm gần đây';
+
+  @override
   String mapPointCameras(int count) {
     return 'Camera tại điểm này ($count)';
   }
