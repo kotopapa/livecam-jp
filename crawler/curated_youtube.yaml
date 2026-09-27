@@ -9323,7 +9323,9 @@ cameras:
   - id: curated-street-seya-seya
     name: "瀬谷区瀬谷"
     operator: "神奈川県瀬谷区瀬谷ライブカメラ（livecamera24.jp）"
-    video_id: Mq6Olemx8TM
+    # 2026-09-27 配信枠更新: Mq6Olemx8TM（配信終了・記録を再生していた）→ WN-NSVIM8Kc。配信IDが変わるのでチャンネル登録
+    video_id: WN-NSVIM8Kc
+    channel_id: "UCvdARqNMW9I3zkAWIXlnf8A"
     category: "other"
     prefecture: "14"
     lat: 35.4704
