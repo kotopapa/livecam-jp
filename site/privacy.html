@@ -20,16 +20,17 @@ footer { margin-top: 3em; font-size: .85rem; color: #777; }
 <p>本アプリは、利用者を識別できる個人情報（氏名・メールアドレス・電話番号等）を収集しません。アカウント登録もありません。</p>
 
 <h2>2. 位置情報の利用</h2>
-<p>本アプリは、現在地周辺のカメラ表示・距離順の並べ替えのために、利用者の許可を得た場合に限り端末の位置情報を利用します。位置情報は<strong>端末内でのみ処理され、開発者や第三者のサーバーへ送信・保存されることはありません</strong>。位置情報の利用は端末の設定からいつでも無効にできます。</p>
+<p>本アプリは、現在地周辺のカメラ表示・距離順の並べ替えのために、利用者の許可を得た場合に限り端末の位置情報を利用します。位置情報は<strong>端末内で処理され、開発者のサーバーへ送信・保存されることはありません</strong>。地図上の現在地表示には Google Maps Platform の機能を用いるため、位置情報の利用を許可している場合は Google のプライバシーポリシーに基づき Google が位置情報を取り扱うことがあります（3-5 参照）。位置情報の利用は端末の設定からいつでも無効にできます。</p>
 
 <h2>3. 通信先について</h2>
 <p>本アプリは動作のために以下の外部サービスと通信します。それぞれの通信には各運営者のプライバシーポリシーが適用されます。</p>
 <ul>
 <li><strong>GitHub Pages</strong>（カメラ一覧などの配信データの取得）</li>
-<li><strong>国土地理院 地理院タイル</strong>（地図の表示）</li>
+<li><strong>Google Maps Platform（Google）</strong>（地図の表示。下記参照）</li>
 <li><strong>YouTube（Google）</strong>（ライブ映像の埋め込み再生）</li>
 <li><strong>気象庁</strong>（雨雲レーダー・降水量・地震情報などの公開データの取得。個人情報は送信しません）</li>
-<li><strong>国土地理院</strong>（地図タイル、ハザードマップ（重ねるハザードマップ）タイル、指定緊急避難場所データの取得。個人情報は送信しません）</li>
+<li><strong>国土地理院</strong>（ハザードマップ（重ねるハザードマップ）タイル、指定緊急避難場所データの取得。個人情報は送信しません）</li>
+<li><strong>今昔マップ on the web（谷謙二／今昔マップ運営委員会）</strong>（昔の地図レイヤーの地図タイルの取得。個人情報は送信しません）</li>
 <li><strong>各カメラ提供元のサーバー</strong>（カメラ画像の取得。国土交通省・自治体・放送局・民間事業者等）</li>
 <li><strong>Google Firebase（Firestore）</strong>（全国ランキングのための匿名の閲覧カウント送信。下記参照）</li>
 <li><strong>Google Firebase（Crashlytics）</strong>（アプリの安定性向上のためのクラッシュ情報の収集。下記参照）</li>
@@ -45,6 +46,9 @@ footer { margin-top: 3em; font-size: .85rem; color: #777; }
 <h2>3-4. 利用状況の統計（Firebase Analytics）</h2>
 <p>本アプリの改善のため、<strong>Google Firebase Analytics（Google アナリティクス for Firebase）</strong>を利用して、利用者数・表示された画面・閲覧されたカメラのカテゴリや都道府県などの利用状況を統計的に収集します。あわせて、端末のモデル名・OSバージョン・アプリのバージョン・おおまかな地域（国・都市単位）・アプリごとに割り当てられる識別子（アプリインスタンスID）が Google に送信されます。氏名・メールアドレス・端末の位置情報など個人を特定する情報は送信しません。収集された情報は利用状況の把握と機能改善のみに使用し、広告の個別化には使用しません。詳細は <a href="https://firebase.google.com/support/privacy?hl=ja">Firebaseのプライバシー情報</a> および <a href="https://policies.google.com/technologies/partner-sites?hl=ja">Google のパートナーサイトでの情報利用</a> をご覧ください。</p>
 
+<h2>3-5. 地図の表示（Google Maps Platform）</h2>
+<p>本アプリの地図は <strong>Google Maps Platform（Maps SDK for iOS / Android）</strong>で表示しています。地図の表示にあたり、表示中の地図の範囲・端末のモデル名とOSバージョン・IPアドレス等が Google に送信されます。位置情報の利用を許可している場合は、地図上の現在地表示のために Google Maps Platform が端末の位置情報を利用します。これらの情報の取り扱いは <a href="https://policies.google.com/privacy?hl=ja">Google プライバシーポリシー</a> および <a href="https://cloud.google.com/maps-platform/terms?hl=ja">Google Maps Platform 利用規約</a> に従います。開発者が Google から個人を特定する情報を受け取ることはありません。</p>
+
 <h2>4. お気に入り等の設定情報</h2>
 <p>お気に入り登録・アプリ内の設定は端末内にのみ保存され、外部へ送信されません。</p>
 
@@ -58,6 +62,6 @@ footer { margin-top: 3em; font-size: .85rem; color: #777; }
 <h2>7. 改定</h2>
 <p>本ポリシーは必要に応じて改定されることがあります。重要な変更がある場合は本ページで告知します。</p>
 
-<footer>制定日: 2026年8月19日（2026年8月20日改定: クラッシュ情報収集の追記／2026年9月7日改定: 利用状況の統計の追記）<br>全国ライブカメラ地図 開発者</footer>
+<footer>制定日: 2026年8月19日（2026年8月20日改定: クラッシュ情報収集の追記／2026年9月7日改定: 利用状況の統計の追記／2026年9月27日改定: 地図表示を Google Maps Platform に変更）<br>全国ライブカメラ地図 開発者</footer>
 </body>
 </html>
