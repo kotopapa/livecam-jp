@@ -683,31 +683,6 @@ class _MapScreenState extends State<MapScreen> {
                 ])
                   _layerGridTile(ctx, kind: k, tooltip: riskLayerSubtitleOf(l10n, RiskLayers.titleKey(k))),
               ]),
-              // 地震の期間（震源タイルをタップしなくても選べる。選ぶと震源レイヤーへ切替）
-              Padding(
-                padding: const EdgeInsets.only(top: 4),
-                child: Wrap(spacing: 6, runSpacing: 4, crossAxisAlignment: WrapCrossAlignment.center, children: [
-                  // アイコンだけでは何の選択か分からないので文字で示す（2026-09-27 要望）
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                    Icon(Icons.vibration, size: 16, color: Colors.grey[700]),
-                    const SizedBox(width: 4),
-                    Text(l10n.mapQuakePeriodLabel,
-                        style: TextStyle(fontSize: 13, color: Colors.grey[800])),
-                  ]),
-                  for (final p in QuakePeriod.values) ...[
-                    ChoiceChip(
-                      label: Text(switch (p) {
-                        QuakePeriod.day => l10n.mapQuakePeriodDay,
-                        QuakePeriod.week => l10n.mapQuakePeriodWeek,
-                        QuakePeriod.month => l10n.mapQuakePeriodMonth,
-                      }),
-                      selected: _layer == MapLayerKind.quakes && _quakePeriod == p,
-                      visualDensity: VisualDensity.compact,
-                      onSelected: (_) { Navigator.pop(ctx); _setLayer(MapLayerKind.quakes, period: p); },
-                    ),
-                  ],
-                ]),
-              ),
               sectionHeading(l10n.mapLayerSectionHazard, const Text(HazardLayers.attribution)),
               Wrap(spacing: 16, runSpacing: 8, children: [
                 for (final k in const [
@@ -1551,6 +1526,29 @@ class _MapScreenState extends State<MapScreen> {
 
   /// 圧縮表示でも雨雲の時刻だけは操作できるようにする細いスライダー（最頻の操作なので
   /// 展開必須にしない）。両端に最初と最後の時刻ラベルを小さく出す
+  Widget _quakePeriodChips() {
+    final l10n = context.l10n;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+      child: Wrap(spacing: 6, runSpacing: 4, crossAxisAlignment: WrapCrossAlignment.center, children: [
+        Text(l10n.mapQuakePeriodLabel, style: TextStyle(fontSize: 12, color: Colors.grey[800])),
+        for (final p in QuakePeriod.values)
+          ChoiceChip(
+            label: Text(switch (p) {
+              QuakePeriod.day => l10n.mapQuakePeriodDay,
+              QuakePeriod.week => l10n.mapQuakePeriodWeek,
+              QuakePeriod.month => l10n.mapQuakePeriodMonth,
+            }),
+            selected: _quakePeriod == p,
+            visualDensity: VisualDensity.compact,
+            onSelected: (_) {
+              if (_quakePeriod != p) _setLayer(MapLayerKind.quakes, period: p);
+            },
+          ),
+      ]),
+    );
+  }
+
   Widget _nowcastCompactSlider() {
     final n = _nowcastTimes[_nowcastIdx];
     return Padding(
@@ -4369,6 +4367,9 @@ class _MapScreenState extends State<MapScreen> {
           ),
           // 雨雲の時刻操作は最頻の操作なので、圧縮中でも細いスライダーだけ残す
           if (showCompactSlider) _nowcastCompactSlider(),
+          // 震源の期間（24時間／7日／30日）。レイヤー選択画面ではなく、震源を表示中の
+          // カードで切り替える（2026-09-27 要望）
+          if (_layer == MapLayerKind.quakes) _quakePeriodChips(),
           if (expanded) ...[
             const Divider(height: 1),
             Padding(
