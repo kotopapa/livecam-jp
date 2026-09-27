@@ -50,14 +50,15 @@ class CategoryGlyph extends StatelessWidget {
     if (icon != null) return Icon(icon, size: size, color: color);
     return CustomPaint(
       size: Size.square(size),
-      painter: category == 'dam' ? _DamGlyphPainter(color) : _RiverGlyphPainter(color),
+      painter: category == 'dam' ? DamGlyphPainter(color) : RiverGlyphPainter(color),
     );
   }
 }
 
-/// 川: 上から下へ蛇行する2本の線
-class _RiverGlyphPainter extends CustomPainter {
-  const _RiverGlyphPainter(this.color);
+/// 川: 上から下へ蛇行する2本の線。
+/// GoogleMap移行のピン画像化（pin_bitmaps.dart）でも同じ描画を使うため公開している
+class RiverGlyphPainter extends CustomPainter {
+  const RiverGlyphPainter(this.color);
   final Color color;
 
   @override
@@ -86,12 +87,13 @@ class _RiverGlyphPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(_RiverGlyphPainter old) => old.color != color;
+  bool shouldRepaint(RiverGlyphPainter old) => old.color != color;
 }
 
-/// ダム: 上に堤体（太い横棒）、下に水面の波2本
-class _DamGlyphPainter extends CustomPainter {
-  const _DamGlyphPainter(this.color);
+/// ダム: 上に堤体（太い横棒）、下に水面の波2本。
+/// GoogleMap移行のピン画像化（pin_bitmaps.dart）でも同じ描画を使うため公開している
+class DamGlyphPainter extends CustomPainter {
+  const DamGlyphPainter(this.color);
   final Color color;
 
   @override
@@ -124,7 +126,7 @@ class _DamGlyphPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(_DamGlyphPainter old) => old.color != color;
+  bool shouldRepaint(DamGlyphPainter old) => old.color != color;
 }
 
 /// カテゴリキーの表示順（凡例・フィルタで使う）。

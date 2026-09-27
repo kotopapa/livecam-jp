@@ -17,7 +17,7 @@ void main() {
     expect(JmaLayers.latestSnowTime('x'), isNull);
   });
 
-  test('タイルURLは要素ごと（偶数ズームのみ生成。EvenZoomTileProvider で表示）', () {
+  test('タイルURLは要素ごと（偶数ズームのみ生成。UrlTileProvider の evenZoomOnly で表示）', () {
     const t = SnowTime('20260915140000', '20260915140000');
     expect(t.tileTemplate(MapLayerKind.snowDepth),
         'https://www.jma.go.jp/bosai/jmatile/data/snow/20260915140000/none/20260915140000/surf/snowd/{z}/{x}/{y}.png');

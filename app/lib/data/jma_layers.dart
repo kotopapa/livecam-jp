@@ -141,7 +141,7 @@ class RiskTime {
 /// flood_mesh）は**偶数ズームのタイルしか生成されない**（各 properties.xml の
 /// `zoomUse="even"`、maxNativeZoom 10〜11）。奇数ズームやそれ以上のズームで同じ z の
 /// タイルを要求すると透明タイル（334バイト）が返り何も描画されない（2026-09-08 不具合報告）。
-/// 地図側は `EvenZoomTileProvider`（奇数ズームは親タイルの4分の1を拡大）と
+/// 地図側は `UrlTileProvider`（evenZoomOnly。奇数ズームは親タイルの4分の1を拡大）と
 /// maxNativeZoom 10 で対応する。
 /// 気象庁「キキクル（危険度分布）」のタイル（無料・認証不要。SPEC C2）。
 /// 大雨で「今どこが危ないか」を1kmメッシュ／河川区間ごとに示す実況。10分更新。
@@ -220,7 +220,7 @@ class RiskLayers {
 
 /// 気象庁「今後の雪」（解析積雪深・解析降雪量）のタイル。偶数ズームのみ生成
 /// （snow.properties: zoomUse="even"・maxNativeZoom 10）で、雨雲と同じ
-/// EvenZoomTileProvider で表示する。凡例色は気象庁の legend_deep_snowd.svg /
+/// UrlTileProvider（evenZoomOnly）で表示する。凡例色は気象庁の legend_deep_snowd.svg /
 /// legend_deep_snowf24h.svg の実値（2026-09-16採取）。
 /// 出典：気象庁ホームページ https://www.jma.go.jp/bosai/snow/
 class SnowLayers {

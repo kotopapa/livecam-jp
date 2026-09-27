@@ -2,9 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 
+import 'fake_google_maps_platform.dart';
 import 'l10n_test_app.dart';
 import 'package:livecam_jp/app_state.dart';
 import 'package:livecam_jp/data/api_client.dart';
@@ -30,6 +32,13 @@ Camera _cam(String id, double lat, double lng,
     })!;
 
 void main() {
+  // GoogleMap は platform view のため、ウィジェットテストではフェイクに差し替える
+  // （実際のドラッグ操作でカメラは動かないが、MapScreen 自体が例外なく組み立てられ、
+  // ジェスチャーを受け取れることは確認できる）
+  setUp(() {
+    GoogleMapsFlutterPlatform.instance = FakeGoogleMapsFlutterPlatform();
+  });
+
   testWidgets('世界カメラ表示中に地図をズーム・移動してもクラッシュしない', (tester) async {
     final repo = CameraRepository(
       api: ApiClient(

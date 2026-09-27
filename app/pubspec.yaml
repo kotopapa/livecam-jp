@@ -38,7 +38,6 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  flutter_map: ^8.3.2
   shared_preferences: ^2.5.5
   youtube_player_iframe: ^6.0.2
   http: ^1.6.0
@@ -65,6 +64,8 @@ dependencies:
   flutter_local_notifications: ^22.3.0
   timezone: ^0.11.1
   firebase_analytics: ^12.5.0
+  google_maps_flutter: ^2.18.1
+  google_maps_flutter_ios_sdk10: ^2.19.0
 
 dev_dependencies:
   flutter_test:
@@ -77,6 +78,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  google_maps_flutter_platform_interface: ^2.17.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

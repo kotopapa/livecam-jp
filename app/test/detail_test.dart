@@ -1,10 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'fake_google_maps_platform.dart';
 import 'l10n_test_app.dart';
 import 'package:livecam_jp/app_state.dart';
 import 'package:livecam_jp/data/api_client.dart';
@@ -31,6 +33,11 @@ Camera cam(String id, {double? lat, double? lng, FeedType type = FeedType.mlitRo
 void main() {
   // VisibilityDetector は既定で500msのタイマーを持ち、テスト終了時に残る
   VisibilityDetectorController.instance.updateInterval = Duration.zero;
+  // 詳細画面の小地図が GoogleMap を使うため、ウィジェットテストではフェイクの
+  // platform interface に差し替える（実機の platform view は不要）
+  setUp(() {
+    GoogleMapsFlutterPlatform.instance = FakeGoogleMapsFlutterPlatform();
+  });
 
   group('geo', () {
     test('距離計算と10km以内の近傍抽出', () {

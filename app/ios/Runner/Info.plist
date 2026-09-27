@@ -108,6 +108,9 @@
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-9639294688594011~9169622974</string>
+	<!-- Google Maps SDK for iOS。値は ios/Flutter/Secrets.xcconfig（gitignore対象）から -->
+	<key>GMSApiKey</key>
+	<string>$(GOOGLE_MAPS_API_KEY)</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>広告を最適化するために利用します。許可しない場合も広告は表示されますが、関連性の低い広告になります。</string>
 	<key>SKAdNetworkItems</key>

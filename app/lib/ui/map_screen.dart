@@ -6,7 +6,7 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart' show setEquals;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart' as gmaps;
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
@@ -17,8 +17,9 @@ import 'package:url_launcher/url_launcher.dart';
 import '../app_state.dart';
 import '../l10n/l10n.dart';
 import '../data/analytics.dart';
-import '../data/even_zoom_tile_provider.dart';
 import '../data/facility_layers.dart';
+import '../data/geo.dart';
+import '../data/gmaps_tile_provider.dart';
 import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
@@ -30,6 +31,7 @@ import '../data/road_closures.dart';
 import '../data/road_regulation.dart';
 import '../data/underpass.dart';
 import '../models/camera.dart';
+import '../models/status.dart' show CameraState;
 import '../util/clustering.dart';
 import '../util/geo.dart';
 import 'bosai_screen.dart' show NearbyCamerasScreen;
@@ -39,6 +41,7 @@ import 'map_bottom_panel.dart';
 import 'route_cameras_screen.dart';
 import 'situation_card.dart';
 import 'elevation_label.dart';
+import 'pin_bitmaps.dart';
 import 'pin_style.dart';
 
 /// 地図画面（SPEC 9.2②）。
@@ -60,29 +63,105 @@ class _MapScreenState extends State<MapScreen> {
   static const _initialCenter = LatLng(36.2, 138.25); // 本州中心
   static const _initialZoom = 5.0;
 
-  final MapController _controller = MapController();
-  // flutter_map 8.3.x はフリック/ピンチの端で内部カメラが NaN になることがある
-  // (fleaflet/flutter_map#2221, #2244。Crashlytics「Infinity or NaN toInt」)。
-  // NaN のままだとタイル計算が毎フレーム失敗して地図が固まるため、
-  // 直前の正常な位置へ戻して復旧する
-  LatLng _lastGoodCenter = _initialCenter;
-  double _lastGoodZoom = _initialZoom;
-  bool _recovering = false;
+  // GoogleMap 移行（第1段階。docs/google_maps_migration.md）。
+  // 内部の座標型は latlong2 の LatLng のまま扱い、境界（GoogleMap への
+  // 出入り）だけ _g/_l で gmaps.LatLng に変換する
+  gmaps.GoogleMapController? _gmapController;
+  LatLng _center = _initialCenter; // 現在のカメラ中心（onCameraMove/Idle で追従）
   double _zoom = _initialZoom;
+  /// 直近の可視領域（onCameraIdle で getVisibleRegion() を取り直す。flutter_map の
+  /// LatLngBounds 型をそのまま再利用している。初回レイアウト前は null）
+  LatLngBounds? _visibleBounds;
 
-  /// 地図をドラッグ中か（下部パネルを沈めるための状態。onPositionChanged の
-  /// hasGesture で立て、onMapEvent の操作終了イベントで戻す。ピンのタップ等の
-  /// 単なるタップでは onPositionChanged 自体が呼ばれないため沈まない）
+  /// 地図をドラッグ中か（下部パネルを沈めるための状態。onCameraMoveStarted で
+  /// 立て、onCameraIdle で戻す。ピンのタップ等の単なるタップでは
+  /// onCameraMoveStarted 自体が呼ばれないため沈まない）
   bool _mapDragging = false;
+  /// アプリ側からのカメラ移動中（animateCamera 等）。GoogleMap の onCameraMoveStarted は
+  /// ジェスチャーとプログラム移動を区別しないので、これが true の間は「追従解除・
+  /// パネルを沈める・状況カードを閉じる」の利用者操作向けの処理をしない
+  bool _programmaticMove = false;
   /// 出典帯の「今昔マップ on the web」リンク（build ごとに作らず使い回す）
   late final TapGestureRecognizer _kjmapTap = TapGestureRecognizer()
     ..onTap = () => launchUrl(Uri.parse(Kjmap.siteUrl), mode: LaunchMode.externalApplication);
   // ジェスチャー終了イベントを取り逃した場合のフェイルセーフ
   Timer? _mapDraggingFailsafe;
-  LatLng? _myLocation;
+  /// 位置情報の権限が既に許可されているか（myLocationEnabled のゲート。
+  /// GoogleMap 自身の青い現在地ドットに任せるので自前のマーカーは持たない）
+  bool _locationPermissionGranted = false;
   bool _locating = false;
   bool _following = false; // 現在地追従モード
   StreamSubscription<Position>? _posSub;
+
+  gmaps.LatLng _g(LatLng p) => gmaps.LatLng(p.latitude, p.longitude);
+  LatLng _l(gmaps.LatLng p) => LatLng(p.latitude, p.longitude);
+
+  void _onMapCreated(gmaps.GoogleMapController controller) {
+    _gmapController = controller;
+    // _restorePosition 等が onMapCreated より先に解決して _center/_zoom を
+    // 書き換えていた場合に備え、現在値へ一度だけ同期する（無駄なら no-op）
+    controller.moveCamera(gmaps.CameraUpdate.newLatLngZoom(_g(_center), _zoom));
+    _syncVisibleBounds();
+  }
+
+  Future<void> _syncVisibleBounds() async {
+    final c = _gmapController;
+    if (c == null) return;
+    try {
+      final r = await c.getVisibleRegion();
+      if (!mounted) return;
+      setState(() {
+        _visibleBounds = LatLngBounds(
+          LatLng(r.southwest.latitude, r.southwest.longitude),
+          LatLng(r.northeast.latitude, r.northeast.longitude),
+        );
+      });
+    } catch (_) {}
+  }
+
+  /// 指定地点へアニメーション移動（flutter_map の `MapController.move` 相当）。
+  /// `_center`/`_zoom` は同期的に更新するので、直後に `_savePosition()` 等を
+  /// 呼んでも最新値が読める
+  Future<void> _moveCamera(LatLng center, double zoom) async {
+    if (mounted) {
+      setState(() {
+        _center = center;
+        _zoom = zoom;
+      });
+    } else {
+      _center = center;
+      _zoom = zoom;
+    }
+    final c = _gmapController;
+    if (c == null) return;
+    _programmaticMove = true;
+    try {
+      await c.animateCamera(gmaps.CameraUpdate.newLatLngZoom(_g(center), zoom));
+    } catch (_) {}
+  }
+
+  /// 複数地点が収まるように地図を寄せる（flutter_map の `CameraFit.bounds` 相当）。
+  /// google_maps_flutter の `newLatLngBounds` は上下左右一律の padding(px) しか
+  /// 取れないため、4辺のうち最大値を使う（非対称の余白は近似になる）
+  Future<void> _fitBounds(List<LatLng> points,
+      {EdgeInsets padding = const EdgeInsets.all(60)}) async {
+    if (points.length < 2) return;
+    final c = _gmapController;
+    if (c == null) return;
+    final b = LatLngBounds.fromPoints(points);
+    final pad = [padding.left, padding.top, padding.right, padding.bottom]
+        .reduce(math.max);
+    _programmaticMove = true;
+    try {
+      await c.animateCamera(gmaps.CameraUpdate.newLatLngBounds(
+        gmaps.LatLngBounds(
+          southwest: _g(LatLng(b.south, b.west)),
+          northeast: _g(LatLng(b.north, b.east)),
+        ),
+        pad,
+      ));
+    } catch (_) {}
+  }
 
   /// 現在地ボタン（SPEC 9.2②）。タップで追従モードをトグルする。
   /// 追従中は位置の更新に合わせて地図が動き、手で地図を動かすと解除される
@@ -109,19 +188,16 @@ class _MapScreenState extends State<MapScreen> {
           .timeout(const Duration(seconds: 10));
       final here = LatLng(pos.latitude, pos.longitude);
       setState(() {
-        _myLocation = here;
+        _locationPermissionGranted = true;
         _following = true;
-        _zoom = 13;
       });
-      _controller.move(here, 13);
+      _moveCamera(here, 13);
       _posSub = Geolocator.getPositionStream(
         locationSettings: const LocationSettings(
             accuracy: LocationAccuracy.medium, distanceFilter: 10),
       ).listen((p) {
-        final here = LatLng(p.latitude, p.longitude);
         if (!mounted) return;
-        setState(() => _myLocation = here);
-        if (_following) _controller.move(here, _controller.camera.zoom);
+        if (_following) _moveCamera(LatLng(p.latitude, p.longitude), _zoom);
       });
     } catch (_) {
       if (mounted) _showMessage(context.l10n.mapLocationFailed);
@@ -228,8 +304,7 @@ class _MapScreenState extends State<MapScreen> {
     final lng = double.tryParse(parts[1]);
     if (lat == null || lng == null || !mounted) return;
     _stopFollowing();
-    _controller.move(LatLng(lat, lng), 15);
-    setState(() => _zoom = 15);
+    _moveCamera(LatLng(lat, lng), 15);
     _savePosition();
     _requestLayerDataForView();
   }
@@ -249,6 +324,9 @@ class _MapScreenState extends State<MapScreen> {
     _searchController.dispose();
     _posSub?.cancel();
     _placeController.dispose();
+    for (final p in _tileProviders.values) {
+      p.dispose();
+    }
     super.dispose();
   }
 
@@ -316,11 +394,32 @@ class _MapScreenState extends State<MapScreen> {
   String? _kjEra;
   /// 比較の方法。既定は縦線のスワイプ（2026-09-25 ユーザー決定）
   _KjCompare _kjCompare = _KjCompare.vertical;
-  /// 境界の位置（0〜1。縦線なら左からの割合、横線なら上からの割合）
+  /// 境界の位置（0〜1。縦線なら左からの割合、横線なら上からの割合）。
+  /// `_KjDivider` の取っ手のドラッグで更新する
   double _kjSplit = 0.5;
   /// 透過比較のときの昔の地図の不透明度
   double _kjOpacity = 0.7;
   static const _kjNoticeKey = 'kjmap_notice_seen';
+
+  /// 新旧スワイプ（縦線／横線）用に重ねる2枚目の GoogleMap のコントローラ。
+  /// 透過比較モードでは使わない（1枚の地図に TileOverlay を重ねるだけ）
+  gmaps.GoogleMapController? _kjOverlayController;
+
+  /// 今、2枚目の GoogleMap（スワイプ比較の昔の地図）を出す必要があるか
+  bool get _kjSwipeActive =>
+      _layer == MapLayerKind.oldMap &&
+      _kjCompare != _KjCompare.opacity &&
+      _kjRegion != null &&
+      _kjEra != null;
+
+  // ---- 気象庁タイル・ハザードマップ・今昔マップ（TileOverlay）----
+  /// レイヤー種別ごとに固定の TileOverlayId を持つ UrlTileProvider を保持する。
+  /// 時刻更新・レイヤー切替のたびに作り直すと clearTileCache が効かず一瞬消えるため、
+  /// 既存があれば template だけ書き換えて再利用する（_tileProvider）
+  final Map<String, UrlTileProvider> _tileProviders = {};
+  static const _tileHeaders = {
+    'User-Agent': 'LiveCamJP/1.0 (+https://kotopapa.github.io/livecam-jp/)',
+  };
 
   Future<void> _setLayer(MapLayerKind kind,
       {QuakePeriod? period, String? typhoonId}) async {
@@ -753,12 +852,7 @@ class _MapScreenState extends State<MapScreen> {
   /// 無ければ最も古い時期にする。範囲外なら null（凡例に「未収録」と出す）
   void _updateKjRegion() {
     if (_layer != MapLayerKind.oldMap) return;
-    final LatLng center;
-    try {
-      center = _controller.camera.center;
-    } catch (_) {
-      return;
-    }
+    final center = _center;
     final regions = Kjmap.regions;
     KjmapRegion? next = _kjRegion;
     if (next == null || !next.contains(center)) {
@@ -837,12 +931,8 @@ class _MapScreenState extends State<MapScreen> {
 
   /// 表示範囲（余白込み）。初回レイアウト前は null
   (double south, double north, double west, double east)? _viewBoundsWithMargin() {
-    final LatLngBounds b;
-    try {
-      b = _controller.camera.visibleBounds;
-    } catch (_) {
-      return null;
-    }
+    final b = _visibleBounds;
+    if (b == null) return null;
     final latMargin = (b.north - b.south) * 0.5;
     final lngMargin = (b.east - b.west).abs() * 0.5;
     return (b.south - latMargin, b.north + latMargin, b.west - lngMargin, b.east + lngMargin);
@@ -856,7 +946,7 @@ class _MapScreenState extends State<MapScreen> {
     final prefs = ShelterLayers.prefsForBounds(
       widget.app.repository.displayableCameras(),
       south: v.$1, north: v.$2, west: v.$3, east: v.$4,
-      center: _controller.camera.center,
+      center: _center,
     );
     final store = await _shelterStore();
     if (!mounted) return;
@@ -995,42 +1085,67 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   /// 避難場所のマーカー（カメラピンより下に描く。400件超はクラスタ）
-  List<Widget> _shelterWidgets() {
-    if (_zoom < ShelterLayers.minZoom) return const [];
+  Set<gmaps.Marker> _shelterMarkers(PinBitmaps pins) {
+    if (_zoom < ShelterLayers.minZoom) return const {};
     final list = _visibleShelters();
-    if (list.isEmpty) return const [];
+    if (list.isEmpty) return const {};
+    final markers = <gmaps.Marker>{};
     if (list.length > ShelterLayers.clusterThreshold) {
       final groups = clusterPoints(list, _zoom, (s) => s.lat, (s) => s.lng);
-      return [
-        MarkerLayer(markers: [
-          for (final g in groups)
-            if (g.count == 1)
-              _shelterMarker(g.items.first)
-            else
-              Marker(
-                point: LatLng(g.lat, g.lng),
-                width: 36,
-                height: 36,
-                child: GestureDetector(
-                  onTap: () => _controller.move(LatLng(g.lat, g.lng), _zoom + 2),
-                  child: _ShelterCluster(count: g.count),
-                ),
-              ),
-        ]),
-      ];
+      for (final g in groups) {
+        if (g.count == 1) {
+          markers.add(_shelterMarker(g.items.first, pins));
+        } else {
+          final icon = pins.dotGlyph(
+                fillColor: _ShelterPin.color.withValues(alpha: 0.85),
+                borderColor: Colors.white,
+                borderWidth: 2,
+                diameter: 36,
+                text: '${g.count}',
+                textStyle: const TextStyle(
+                    color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                onReady: _onPinReady,
+              ) ??
+              gmaps.BitmapDescriptor.defaultMarker;
+          markers.add(gmaps.Marker(
+            markerId: gmaps.MarkerId(
+                'shelter-cluster-${g.lat.toStringAsFixed(4)}-${g.lng.toStringAsFixed(4)}-${g.count}'),
+            position: _g(LatLng(g.lat, g.lng)),
+            icon: icon,
+            anchor: PinBitmaps.dotGlyphAnchor(diameter: 36),
+            onTap: () => _moveCamera(LatLng(g.lat, g.lng), _zoom + 2),
+          ));
+        }
+      }
+    } else {
+      for (final s in list) {
+        markers.add(_shelterMarker(s, pins));
+      }
     }
-    return [MarkerLayer(markers: [for (final s in list) _shelterMarker(s)])];
+    return markers;
   }
 
-  Marker _shelterMarker(Shelter s) => Marker(
-        point: s.pos,
-        width: 22,
-        height: 22,
-        child: GestureDetector(
-          onTap: () => _showShelterInfo(s),
-          child: _ShelterPin(designated: s.designated),
-        ),
-      );
+  gmaps.Marker _shelterMarker(Shelter s, PinBitmaps pins) {
+    final icon = pins.dotGlyph(
+          fillColor: _ShelterPin.color.withValues(alpha: 0.9),
+          borderColor: Colors.white,
+          borderWidth: 1.5,
+          diameter: 22,
+          icon: Icons.home,
+          iconScale: s.designated ? 0.5 : 0.6,
+          innerRing: s.designated,
+          onReady: _onPinReady,
+        ) ??
+        gmaps.BitmapDescriptor.defaultMarker;
+    return gmaps.Marker(
+      markerId: gmaps.MarkerId(
+          'shelter-${s.pos.latitude.toStringAsFixed(6)},${s.pos.longitude.toStringAsFixed(6)},${s.name}'),
+      position: _g(s.pos),
+      icon: icon,
+      anchor: PinBitmaps.dotGlyphAnchor(diameter: 22),
+      onTap: () => _showShelterInfo(s),
+    );
+  }
 
   // --- 防災拠点レイヤー（給水拠点・防災備蓄倉庫・消防水利。自治体オープンデータ） ---
   FacilityStore? _facilities;
@@ -1103,7 +1218,7 @@ class _MapScreenState extends State<MapScreen> {
     final prefs = FacilityLayers.prefsForBounds(
       widget.app.repository.displayableCameras(),
       south: v.$1, north: v.$2, west: v.$3, east: v.$4,
-      center: _controller.camera.center,
+      center: _center,
     );
     final store = await _facilityStore();
     if (!mounted) return;
@@ -1301,43 +1416,67 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   /// 防災拠点のマーカー（カメラピンより下に描く。400件超はクラスタ）
-  List<Widget> _facilityWidgets() {
-    if (_zoom < FacilityLayers.minZoom) return const [];
+  Set<gmaps.Marker> _facilityMarkers(PinBitmaps pins) {
+    if (_zoom < FacilityLayers.minZoom) return const {};
     final list = _visibleFacilities();
-    if (list.isEmpty) return const [];
+    if (list.isEmpty) return const {};
+    final markers = <gmaps.Marker>{};
     if (list.length > FacilityLayers.clusterThreshold) {
       final groups = clusterPoints(list, _zoom, (f) => f.lat, (f) => f.lng);
-      return [
-        MarkerLayer(markers: [
-          for (final g in groups)
-            if (g.count == 1)
-              _facilityMarker(g.items.first)
-            else
-              Marker(
-                point: LatLng(g.lat, g.lng),
-                width: 36,
-                height: 36,
-                child: GestureDetector(
-                  onTap: () => _controller.move(LatLng(g.lat, g.lng), _zoom + 2),
-                  child: _FacilityCluster(
-                      count: g.count, kind: FacilityLayers.dominantKind(g.items)),
-                ),
-              ),
-        ]),
-      ];
+      for (final g in groups) {
+        if (g.count == 1) {
+          markers.add(_facilityMarker(g.items.first, pins));
+        } else {
+          final kind = FacilityLayers.dominantKind(g.items);
+          final icon = pins.dotGlyph(
+                fillColor: _FacilityPin.colorOf(kind).withValues(alpha: 0.85),
+                borderColor: Colors.white,
+                borderWidth: 2,
+                diameter: 36,
+                text: '${g.count}',
+                textStyle: const TextStyle(
+                    color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                onReady: _onPinReady,
+              ) ??
+              gmaps.BitmapDescriptor.defaultMarker;
+          markers.add(gmaps.Marker(
+            markerId: gmaps.MarkerId(
+                'facility-cluster-${g.lat.toStringAsFixed(4)}-${g.lng.toStringAsFixed(4)}-${g.count}'),
+            position: _g(LatLng(g.lat, g.lng)),
+            icon: icon,
+            anchor: PinBitmaps.dotGlyphAnchor(diameter: 36),
+            onTap: () => _moveCamera(LatLng(g.lat, g.lng), _zoom + 2),
+          ));
+        }
+      }
+    } else {
+      for (final f in list) {
+        markers.add(_facilityMarker(f, pins));
+      }
     }
-    return [MarkerLayer(markers: [for (final f in list) _facilityMarker(f)])];
+    return markers;
   }
 
-  Marker _facilityMarker(Facility f) => Marker(
-        point: f.pos,
-        width: 22,
-        height: 22,
-        child: GestureDetector(
-          onTap: () => _showFacilityInfo(f),
-          child: _FacilityPin(kind: f.kind),
-        ),
-      );
+  gmaps.Marker _facilityMarker(Facility f, PinBitmaps pins) {
+    final icon = pins.dotGlyph(
+          fillColor: _FacilityPin.colorOf(f.kind).withValues(alpha: 0.9),
+          borderColor: Colors.white,
+          borderWidth: 1.5,
+          diameter: 22,
+          icon: _FacilityPin.iconOf(f.kind),
+          iconScale: 0.6,
+          onReady: _onPinReady,
+        ) ??
+        gmaps.BitmapDescriptor.defaultMarker;
+    return gmaps.Marker(
+      markerId: gmaps.MarkerId(
+          'facility-${f.pos.latitude.toStringAsFixed(6)},${f.pos.longitude.toStringAsFixed(6)},${f.kind},${f.name}'),
+      position: _g(f.pos),
+      icon: icon,
+      anchor: PinBitmaps.dotGlyphAnchor(diameter: 22),
+      onTap: () => _showFacilityInfo(f),
+    );
+  }
 
   /// 雨雲レーダーの時刻スライダー（過去3時間の実況〜1時間先の予測）
   /// 雨雲レーダーの相対表記（「現在」「30分後（予報）」等）。ナウキャストの
@@ -1816,130 +1955,181 @@ class _MapScreenState extends State<MapScreen> {
         }
       }
     }
-    if (pts.length < 2) return;
-    try {
-      _controller.fitCamera(CameraFit.bounds(
-        bounds: LatLngBounds.fromPoints(pts),
-        padding: const EdgeInsets.fromLTRB(24, 80, 24, 160),
-        maxZoom: 8,
-      ));
-      final z = _controller.camera.zoom;
-      if (z.isFinite) setState(() => _zoom = z);
-    } catch (_) {}
+    _fitBounds(pts, padding: const EdgeInsets.fromLTRB(24, 80, 24, 160));
   }
 
-  /// 台風情報の描画: 経路（実線）→ 予報進路（破線）→ 予報円 → 暴風警戒域 → 中心
-  List<Widget> _typhoonWidgets() {
-    if (_typhoons.isEmpty) return const [];
-    final circles = <CircleMarker>[];
-    final lines = <Polyline>[];
-    final markers = <Marker>[];
-    final l10n = context.l10n;
+  /// 台風の実況・予報円・暴風警戒域（気象庁の包絡線を円で近似。旧実装のまま）
+  Set<gmaps.Circle> _typhoonCircles() {
+    final circles = <gmaps.Circle>{};
+    var i = 0;
     for (final t in _selectedTyphoons) {
       final a = t.analysis;
-      // 実況の強風域・暴風域
       if (a.galeRadiusKm != null) {
-        circles.add(CircleMarker(
-          point: a.center,
+        circles.add(gmaps.Circle(
+          circleId: gmaps.CircleId('typhoon-gale-${t.id}-${i++}'),
+          center: _g(a.center),
           radius: a.galeRadiusKm! * 1000,
-          useRadiusInMeter: true,
-          color: _typhoonGaleColor.withValues(alpha: 0.18),
-          borderColor: _typhoonGaleColor,
-          borderStrokeWidth: 1,
+          fillColor: _typhoonGaleColor.withValues(alpha: 0.18),
+          strokeColor: _typhoonGaleColor,
+          strokeWidth: 1,
         ));
       }
       if (a.stormRadiusKm != null) {
-        circles.add(CircleMarker(
-          point: a.center,
+        circles.add(gmaps.Circle(
+          circleId: gmaps.CircleId('typhoon-storm-${t.id}-${i++}'),
+          center: _g(a.center),
           radius: a.stormRadiusKm! * 1000,
-          useRadiusInMeter: true,
-          color: _typhoonStormColor.withValues(alpha: 0.25),
-          borderColor: _typhoonStormColor,
-          borderStrokeWidth: 1,
+          fillColor: _typhoonStormColor.withValues(alpha: 0.25),
+          strokeColor: _typhoonStormColor,
+          strokeWidth: 1,
         ));
       }
       for (final f in t.forecasts) {
         final pr = f.probabilityRadiusM;
         // 暴風警戒域: 予報円の半径＋暴風域の半径（気象庁の包絡線を円で近似）
         if (pr != null && f.stormRadiusKm != null) {
-          circles.add(CircleMarker(
-            point: f.center,
+          circles.add(gmaps.Circle(
+            circleId: gmaps.CircleId('typhoon-stormwarn-${t.id}-${i++}'),
+            center: _g(f.center),
             radius: pr + f.stormRadiusKm! * 1000,
-            useRadiusInMeter: true,
-            color: _typhoonStormColor.withValues(alpha: 0.10),
-            borderColor: _typhoonStormColor.withValues(alpha: 0.6),
-            borderStrokeWidth: 1,
+            fillColor: _typhoonStormColor.withValues(alpha: 0.10),
+            strokeColor: _typhoonStormColor.withValues(alpha: 0.6),
+            strokeWidth: 1,
           ));
         }
         if (pr != null) {
-          circles.add(CircleMarker(
-            point: f.center,
+          circles.add(gmaps.Circle(
+            circleId: gmaps.CircleId('typhoon-prob-${t.id}-${i++}'),
+            center: _g(f.center),
             radius: pr,
-            useRadiusInMeter: true,
-            color: Colors.transparent,
-            borderColor: _typhoonCircleColor,
-            borderStrokeWidth: 1.5,
+            fillColor: Colors.transparent,
+            strokeColor: _typhoonCircleColor,
+            strokeWidth: 2,
           ));
         }
       }
+    }
+    return circles;
+  }
+
+  /// 台風の経路（実線）と予報進路（破線）
+  Set<gmaps.Polyline> _typhoonPolylines() {
+    final lines = <gmaps.Polyline>{};
+    for (final t in _selectedTyphoons) {
+      final a = t.analysis;
       if (t.track.length >= 2) {
-        lines.add(Polyline(
-            points: t.track, color: _typhoonTrackColor, strokeWidth: 2.5));
+        lines.add(gmaps.Polyline(
+          polylineId: gmaps.PolylineId('typhoon-track-${t.id}'),
+          points: [for (final p in t.track) _g(p)],
+          color: _typhoonTrackColor,
+          width: 3,
+        ));
       }
       final fc = [a.center, ...t.forecasts.map((f) => f.center)];
       if (fc.length >= 2) {
-        lines.add(Polyline(
-          points: fc,
-          color: _typhoonForecastColor,
-          strokeWidth: 2.5,
-          pattern: StrokePattern.dashed(segments: const [10, 8]),
-        ));
+        // 破線は PatternItem を使わず、自前で短い実線に分割して描く。
+        // iOS の PatternItem は線の長さ÷画面上のダッシュ長ぶんのスパンを作るため、
+        // 2,000km 級の予報進路を高ズームで描くとメモリが爆発して即ジェットサムされる
+        // （2026-09-27 実測）
+        var k = 0;
+        for (final seg in _dashSegments(fc, dashKm: 25, gapKm: 15)) {
+          lines.add(gmaps.Polyline(
+            polylineId: gmaps.PolylineId('typhoon-forecast-${t.id}-${k++}'),
+            points: [for (final p in seg) _g(p)],
+            color: _typhoonForecastColor,
+            width: 3,
+          ));
+        }
       }
+    }
+    return lines;
+  }
+
+  /// 折れ線を「dashKm の実線・gapKm の空白」の繰り返しに分割する（破線の自前描画）。
+  /// 距離は緯度経度の近似（1度≒111km）で十分
+  static List<List<LatLng>> _dashSegments(List<LatLng> pts,
+      {required double dashKm, required double gapKm}) {
+    final out = <List<LatLng>>[];
+    if (pts.length < 2) return out;
+    var drawing = true;
+    var remain = dashKm;
+    var cur = <LatLng>[pts.first];
+    for (var i = 0; i < pts.length - 1; i++) {
+      var a = pts[i];
+      final b = pts[i + 1];
+      final cosLat = math.cos((a.latitude + b.latitude) / 2 * math.pi / 180);
+      var segKm = math.sqrt(math.pow((b.latitude - a.latitude) * 111, 2) +
+          math.pow((b.longitude - a.longitude) * 111 * cosLat, 2));
+      while (segKm > remain) {
+        final t = remain / segKm;
+        final m = LatLng(a.latitude + (b.latitude - a.latitude) * t,
+            a.longitude + (b.longitude - a.longitude) * t);
+        if (drawing) {
+          cur.add(m);
+          out.add(cur);
+          cur = <LatLng>[];
+        } else {
+          cur = <LatLng>[m];
+        }
+        segKm -= remain;
+        a = m;
+        drawing = !drawing;
+        remain = drawing ? dashKm : gapKm;
+      }
+      remain -= segKm;
+      if (drawing) cur.add(b);
+    }
+    if (drawing && cur.length >= 2) out.add(cur);
+    return out;
+  }
+
+  /// 台風の予報時間ラベルと中心（記号＋名称）
+  Set<gmaps.Marker> _typhoonMarkers(PinBitmaps pins) {
+    if (_typhoons.isEmpty) return const {};
+    final markers = <gmaps.Marker>{};
+    final l10n = context.l10n;
+    for (final t in _selectedTyphoons) {
+      final a = t.analysis;
       for (final f in t.forecasts) {
-        markers.add(Marker(
-          point: f.center,
-          width: 44,
-          height: 20,
-          child: Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.85),
-              borderRadius: BorderRadius.circular(4),
-            ),
-            child: Text('${f.hours}h',
-                style: const TextStyle(
-                    fontSize: 9,
-                    fontWeight: FontWeight.bold,
-                    color: _typhoonForecastColor)),
-          ),
+        final icon = pins.labelBadge(
+              text: '${f.hours}h',
+              textColor: _typhoonForecastColor,
+              bg: Colors.white.withValues(alpha: 0.85),
+              fontSize: 9,
+              onReady: _onPinReady,
+            ) ??
+            gmaps.BitmapDescriptor.defaultMarker;
+        markers.add(gmaps.Marker(
+          markerId: gmaps.MarkerId('typhoon-fc-${t.id}-${f.hours}'),
+          position: _g(f.center),
+          icon: icon,
+          anchor: const Offset(0.5, 0.5),
+          zIndexInt: 1,
         ));
       }
-      markers.add(Marker(
-        point: a.center,
-        width: 120,
-        height: 52,
-        child: Column(mainAxisSize: MainAxisSize.min, children: [
-          const Icon(Icons.cyclone, color: _typhoonForecastColor, size: 28),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.9),
-              borderRadius: BorderRadius.circular(4),
-            ),
-            child: Text(typhoonNameOf(l10n, t),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                    fontSize: 10, fontWeight: FontWeight.bold)),
-          ),
-        ]),
+      final centerIcon = pins.dotGlyph(
+            fillColor: Colors.transparent,
+            borderColor: Colors.transparent,
+            borderWidth: 0,
+            diameter: 28,
+            icon: Icons.cyclone,
+            iconScale: 1,
+            iconColor: _typhoonForecastColor,
+            shadow: false,
+            label: typhoonNameOf(l10n, t),
+            labelColor: Colors.black87,
+            onReady: _onPinReady,
+          ) ??
+          gmaps.BitmapDescriptor.defaultMarker;
+      markers.add(gmaps.Marker(
+        markerId: gmaps.MarkerId('typhoon-center-${t.id}'),
+        position: _g(a.center),
+        icon: centerIcon,
+        anchor: PinBitmaps.dotGlyphAnchor(diameter: 28, hasLabel: true),
+        zIndexInt: 2,
       ));
     }
-    return [
-      if (circles.isNotEmpty) CircleLayer(circles: circles),
-      if (lines.isNotEmpty) PolylineLayer(polylines: lines),
-      if (markers.isNotEmpty) MarkerLayer(markers: markers),
-    ];
+    return markers;
   }
 
   // --- 地下道（アンダーパス）の冠水状況レイヤー（自治体センサーの状態表示） ---
@@ -1951,77 +2141,62 @@ class _MapScreenState extends State<MapScreen> {
     final alerts = _underpass.alerts;
     if (alerts.isEmpty || !mounted) return;
     if (alerts.length == 1) {
-      _controller.move(alerts.first.pos, 14);
+      _moveCamera(alerts.first.pos, 14);
     } else {
-      try {
-        _controller.fitCamera(CameraFit.bounds(
-          bounds: LatLngBounds.fromPoints([for (final p in alerts) p.pos]),
-          padding: const EdgeInsets.fromLTRB(40, 120, 40, 200),
-          maxZoom: 14,
-        ));
-      } catch (_) {}
+      _fitBounds([for (final p in alerts) p.pos],
+          padding: const EdgeInsets.fromLTRB(40, 120, 40, 200));
     }
-    final z = _controller.camera.zoom;
-    if (z.isFinite && mounted) setState(() => _zoom = z);
   }
 
-  List<Widget> _underpassWidgets() {
-    final markers = <Marker>[];
-    // 冠水センサーが検知中（注意以上）のときだけ「想定される冠水範囲」を道路に沿って描く
-    final polylines = <Polyline>[
-      for (final s in _underpass.sources)
-        for (final p in s.points)
-          if (p.isAlert)
-            for (final line in p.lines)
-              Polyline(points: line, color: p.color.withValues(alpha: 0.85), strokeWidth: 6),
-    ];
+  /// 冠水センサーが検知中（注意以上）のときだけ「想定される冠水範囲」を道路に沿って描く
+  Set<gmaps.Polyline> _underpassPolylines() {
+    final lines = <gmaps.Polyline>{};
     for (final s in _underpass.sources) {
       for (final p in s.points) {
-        markers.add(Marker(
-          point: p.pos,
-          width: 120,
-          height: 46,
-          child: GestureDetector(
-            onTap: () => _showUnderpassInfo(s, p),
-            child: Column(mainAxisSize: MainAxisSize.min, children: [
-              Container(
-                width: 22,
-                height: 22,
-                decoration: BoxDecoration(
-                  color: p.color,
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white, width: 2),
-                  boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 3)],
-                ),
-                child: Icon(
-                    p.level >= 2 ? Icons.block : (p.level == 1 ? Icons.priority_high : Icons.check),
-                    size: 14,
-                    color: Colors.white),
-              ),
-              if (p.isAlert || _zoom >= 13)
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.9),
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Text(p.name,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          color: p.isAlert ? p.color : Colors.black87)),
-                ),
-            ]),
-          ),
+        if (!p.isAlert) continue;
+        for (var i = 0; i < p.lines.length; i++) {
+          lines.add(gmaps.Polyline(
+            polylineId: gmaps.PolylineId('underpass-${s.id}-${p.id}-$i'),
+            points: [for (final ll in p.lines[i]) _g(ll)],
+            color: p.color.withValues(alpha: 0.85),
+            width: 6,
+          ));
+        }
+      }
+    }
+    return lines;
+  }
+
+  Set<gmaps.Marker> _underpassMarkers(PinBitmaps pins) {
+    final markers = <gmaps.Marker>{};
+    for (final s in _underpass.sources) {
+      for (final p in s.points) {
+        final showLabel = p.isAlert || _zoom >= 13;
+        final label = showLabel ? p.name : null;
+        final icon = pins.dotGlyph(
+              fillColor: p.color,
+              borderColor: Colors.white,
+              borderWidth: 2,
+              diameter: 22,
+              icon: p.level >= 2
+                  ? Icons.block
+                  : (p.level == 1 ? Icons.priority_high : Icons.check),
+              iconScale: 14 / 22,
+              label: label,
+              labelColor: p.isAlert ? p.color : Colors.black87,
+              onReady: _onPinReady,
+            ) ??
+            gmaps.BitmapDescriptor.defaultMarker;
+        markers.add(gmaps.Marker(
+          markerId: gmaps.MarkerId('underpass-${s.id}-${p.id}'),
+          position: _g(p.pos),
+          icon: icon,
+          anchor: PinBitmaps.dotGlyphAnchor(diameter: 22, hasLabel: label != null),
+          onTap: () => _showUnderpassInfo(s, p),
         ));
       }
     }
-    return [
-      if (polylines.isNotEmpty) PolylineLayer(polylines: polylines),
-      if (markers.isNotEmpty) MarkerLayer(markers: markers),
-    ];
+    return markers;
   }
 
   void _showUnderpassInfo(UnderpassSource s, UnderpassPoint p) {
@@ -2078,56 +2253,52 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  /// 道路の通行規制: 規制区間の線＋起点のピン（拡大時にラベル）
-  List<Widget> _roadRegulationWidgets() {
-    final polylines = <Polyline>[
-      for (final s in _roadReg.sources)
-        for (final it in s.items)
-          for (final line in it.lines)
-            Polyline(points: line, color: it.color.withValues(alpha: 0.85), strokeWidth: 5),
-    ];
-    final markers = <Marker>[];
+  /// 道路の通行規制: 規制区間の線
+  Set<gmaps.Polyline> _roadRegulationPolylines() {
+    final lines = <gmaps.Polyline>{};
     for (final s in _roadReg.sources) {
       for (final it in s.items) {
-        markers.add(Marker(
-          point: it.pos,
-          width: 130,
-          height: 44,
-          child: GestureDetector(
-            onTap: () => _showRoadRegulationInfo(s, it),
-            child: Column(mainAxisSize: MainAxisSize.min, children: [
-              Container(
-                width: 20,
-                height: 20,
-                decoration: BoxDecoration(
-                  color: it.color,
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white, width: 2),
-                  boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 3)],
-                ),
-                child: Icon(it.level >= 2 ? Icons.block : Icons.remove_road, size: 12, color: Colors.white),
-              ),
-              if (_zoom >= 11)
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.9),
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Text(it.name,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: it.color)),
-                ),
-            ]),
-          ),
+        for (var i = 0; i < it.lines.length; i++) {
+          lines.add(gmaps.Polyline(
+            polylineId: gmaps.PolylineId('roadreg-${s.id}-${it.id}-$i'),
+            points: [for (final ll in it.lines[i]) _g(ll)],
+            color: it.color.withValues(alpha: 0.85),
+            width: 5,
+          ));
+        }
+      }
+    }
+    return lines;
+  }
+
+  /// 道路の通行規制: 起点のピン（拡大時にラベル）
+  Set<gmaps.Marker> _roadRegulationMarkers(PinBitmaps pins) {
+    final markers = <gmaps.Marker>{};
+    for (final s in _roadReg.sources) {
+      for (final it in s.items) {
+        final label = _zoom >= 11 ? it.name : null;
+        final icon = pins.dotGlyph(
+              fillColor: it.color,
+              borderColor: Colors.white,
+              borderWidth: 2,
+              diameter: 20,
+              icon: it.level >= 2 ? Icons.block : Icons.remove_road,
+              iconScale: 12 / 20,
+              label: label,
+              labelColor: it.color,
+              onReady: _onPinReady,
+            ) ??
+            gmaps.BitmapDescriptor.defaultMarker;
+        markers.add(gmaps.Marker(
+          markerId: gmaps.MarkerId('roadreg-${s.id}-${it.id}'),
+          position: _g(it.pos),
+          icon: icon,
+          anchor: PinBitmaps.dotGlyphAnchor(diameter: 20, hasLabel: label != null),
+          onTap: () => _showRoadRegulationInfo(s, it),
         ));
       }
     }
-    return [
-      if (polylines.isNotEmpty) PolylineLayer(polylines: polylines),
-      if (markers.isNotEmpty) MarkerLayer(markers: markers),
-    ];
+    return markers;
   }
 
   void _showRoadRegulationInfo(RoadRegulationSource s, RoadRegulationItem it) {
@@ -2216,59 +2387,56 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  /// 統合レイヤー: 線（色＝原因、太さ＝重さ）＋ピン（塗りつぶし＝通行止め／白抜き＝規制／小さい丸＝センサー正常）
-  List<Widget> _roadClosuresWidgets() {
-    final items = _closureItems;
-    final polylines = <Polyline>[
-      for (final it in items)
-        if (it.isAlert)
-          for (final line in it.lines)
-            Polyline(points: line, color: it.color.withValues(alpha: 0.85), strokeWidth: it.level >= 2 ? 6 : 4),
-    ];
-    final markers = <Marker>[];
-    for (final it in items) {
+  /// 統合レイヤー: 線（色＝原因、太さ＝重さ）
+  Set<gmaps.Polyline> _roadClosuresPolylines() {
+    final lines = <gmaps.Polyline>{};
+    for (final it in _closureItems) {
+      if (!it.isAlert) continue;
+      for (var i = 0; i < it.lines.length; i++) {
+        lines.add(gmaps.Polyline(
+          polylineId: gmaps.PolylineId('closure-${it.id}-$i'),
+          points: [for (final ll in it.lines[i]) _g(ll)],
+          color: it.color.withValues(alpha: 0.85),
+          width: it.level >= 2 ? 6 : 4,
+        ));
+      }
+    }
+    return lines;
+  }
+
+  /// 統合レイヤー: ピン（塗りつぶし＝通行止め／白抜き＝規制／小さい丸＝センサー正常）
+  Set<gmaps.Marker> _roadClosuresMarkers(PinBitmaps pins) {
+    final markers = <gmaps.Marker>{};
+    for (final it in _closureItems) {
       final closed = it.level >= 2;
       final normal = it.level <= 0;
-      markers.add(Marker(
-        point: it.pos,
-        width: 130,
-        height: normal ? 14 : 46,
-        child: GestureDetector(
-          onTap: () => _showClosureInfo(it),
-          child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Container(
-              width: normal ? 10 : 22,
-              height: normal ? 10 : 22,
-              decoration: BoxDecoration(
-                color: closed ? it.color : Colors.white,
-                shape: BoxShape.circle,
-                border: Border.all(color: normal ? it.color.withValues(alpha: 0.7) : (closed ? Colors.white : it.color), width: 2),
-                boxShadow: normal ? null : const [BoxShadow(color: Colors.black26, blurRadius: 3)],
-              ),
-              child: normal
-                  ? null
-                  : Icon(closed ? Icons.block : Icons.priority_high, size: 13, color: closed ? Colors.white : it.color),
-            ),
-            if (!normal && (closed || _zoom >= 11))
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.9),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                child: Text(it.name,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: it.color)),
-              ),
-          ]),
-        ),
+      final diameter = normal ? 10.0 : 22.0;
+      // ラベルは画像化されるため低ズームでは密集する。通行止めは z8 以上、規制・注意は z11 以上で出す
+      final label = normal ? null : (((closed && _zoom >= 8) || _zoom >= 11) ? it.name : null);
+      final icon = pins.dotGlyph(
+            fillColor: closed ? it.color : Colors.white,
+            borderColor: normal
+                ? it.color.withValues(alpha: 0.7)
+                : (closed ? Colors.white : it.color),
+            borderWidth: 2,
+            diameter: diameter,
+            icon: normal ? null : (closed ? Icons.block : Icons.priority_high),
+            iconScale: 13 / 22,
+            shadow: !normal,
+            label: label,
+            labelColor: it.color,
+            onReady: _onPinReady,
+          ) ??
+          gmaps.BitmapDescriptor.defaultMarker;
+      markers.add(gmaps.Marker(
+        markerId: gmaps.MarkerId('closure-${it.id}'),
+        position: _g(it.pos),
+        icon: icon,
+        anchor: PinBitmaps.dotGlyphAnchor(diameter: diameter, hasLabel: label != null),
+        onTap: () => _showClosureInfo(it),
       ));
     }
-    return [
-      if (polylines.isNotEmpty) PolylineLayer(polylines: polylines),
-      if (markers.isNotEmpty) MarkerLayer(markers: markers),
-    ];
+    return markers;
   }
 
   void _showClosureInfo(ClosureItem it) {
@@ -2329,209 +2497,321 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  /// 地図レイヤーの地図要素（タイル/マーカー）
-  List<Widget> _layerWidgets() {
+  /// 震源のマーカー（円＋最大震度の数字。タップで近傍をまとめて表示）
+  Set<gmaps.Marker> _quakeMarkers(PinBitmaps pins) {
+    final markers = <gmaps.Marker>{};
+    for (final q in _quakesForDraw) {
+      final icon = pins.dotGlyph(
+            fillColor: JmaLayers.intensityColor(q.maxIntensity).withValues(alpha: 0.85),
+            borderColor: Colors.white,
+            borderWidth: 1.5,
+            diameter: 28,
+            text: q.maxIntensity.isEmpty ? '' : q.maxIntensity,
+            shadow: false,
+            onReady: _onPinReady,
+          ) ??
+          gmaps.BitmapDescriptor.defaultMarker;
+      markers.add(gmaps.Marker(
+        markerId: gmaps.MarkerId(
+            'quake-${q.at.toIso8601String()}-${q.pos!.latitude.toStringAsFixed(4)},${q.pos!.longitude.toStringAsFixed(4)}'),
+        position: _g(q.pos!),
+        icon: icon,
+        anchor: PinBitmaps.dotGlyphAnchor(diameter: 28),
+        onTap: () => _showQuakeInfo(q),
+      ));
+    }
+    return markers;
+  }
+
+  /// 24時間降水の観測値ラベル（市街地ズームのみ。tenki.jp方式）
+  Set<gmaps.Marker> _rain24hMarkers(PinBitmaps pins) {
+    if (_zoom < 9) return const {};
+    final markers = <gmaps.Marker>{};
+    for (final r in _rain) {
+      final icon = pins.labelBadge(
+            text: '${r.mm24h.round()}',
+            textColor: r.mm24h >= 100 ? Colors.white : Colors.black87,
+            bg: JmaLayers.rainColor(r.mm24h).withValues(alpha: 0.95),
+            fontSize: 10,
+            border: true,
+            onReady: _onPinReady,
+          ) ??
+          gmaps.BitmapDescriptor.defaultMarker;
+      markers.add(gmaps.Marker(
+        markerId: gmaps.MarkerId('rain24h-${r.name}-${r.pos.latitude},${r.pos.longitude}'),
+        position: _g(r.pos),
+        icon: icon,
+        anchor: const Offset(0.5, 0.5),
+        // 旧実装の Tooltip(タップで表示) 相当。タップすると吹き出し(InfoWindow)で
+        // 観測点名と実測値を出す
+        infoWindow: gmaps.InfoWindow(
+            snippet: context.l10n.mapRainTooltip(r.name, r.mm24h.toStringAsFixed(1))),
+      ));
+    }
+    return markers;
+  }
+
+  /// 表示中のベクタ系レイヤー（台風・震源・避難場所・防災拠点・地下道冠水・
+  /// 道路規制・通行止め統合・24時間雨量の観測値ラベル）のマーカー一式。
+  /// タイル系（雨雲・キキクル・積雪・ハザードマップ・今昔マップ）は
+  /// `_tileOverlays()` 側（GoogleMap移行 第2段階）
+  Set<gmaps.Marker> _vectorMarkers(PinBitmaps pins) {
+    switch (_layer) {
+      case MapLayerKind.quakes:
+        return _quakeMarkers(pins);
+      case MapLayerKind.rain24h:
+        return _rain24hMarkers(pins);
+      case MapLayerKind.typhoon:
+        return _typhoonMarkers(pins);
+      case MapLayerKind.shelters:
+        return _shelterMarkers(pins);
+      case MapLayerKind.facilities:
+        return _facilityMarkers(pins);
+      case MapLayerKind.underpass:
+        return _underpassMarkers(pins);
+      case MapLayerKind.roadRegulation:
+        return _roadRegulationMarkers(pins);
+      case MapLayerKind.roadClosures:
+        return _roadClosuresMarkers(pins);
+      case MapLayerKind.rainRadar:
+      case MapLayerKind.riskLand:
+      case MapLayerKind.riskInund:
+      case MapLayerKind.riskFlood:
+      case MapLayerKind.hazardFlood:
+      case MapLayerKind.hazardLandslide:
+      case MapLayerKind.hazardTsunami:
+      case MapLayerKind.hazardHightide:
+      case MapLayerKind.snowDepth:
+      case MapLayerKind.snowfall24h:
+      case MapLayerKind.oldMap:
+      case MapLayerKind.none:
+        return const {};
+    }
+  }
+
+  /// 表示中のベクタ系レイヤーの線（台風・地下道冠水・道路規制・通行止め統合）＋
+  /// ルート沿いの経路線（`_layer` に関係なく表示中は常に描く）
+  Set<gmaps.Polyline> _vectorPolylines() {
+    final lines = <gmaps.Polyline>{};
+    switch (_layer) {
+      case MapLayerKind.typhoon:
+        lines.addAll(_typhoonPolylines());
+      case MapLayerKind.underpass:
+        lines.addAll(_underpassPolylines());
+      case MapLayerKind.roadRegulation:
+        lines.addAll(_roadRegulationPolylines());
+      case MapLayerKind.roadClosures:
+        lines.addAll(_roadClosuresPolylines());
+      case MapLayerKind.quakes:
+      case MapLayerKind.rain24h:
+      case MapLayerKind.shelters:
+      case MapLayerKind.facilities:
+      case MapLayerKind.rainRadar:
+      case MapLayerKind.riskLand:
+      case MapLayerKind.riskInund:
+      case MapLayerKind.riskFlood:
+      case MapLayerKind.hazardFlood:
+      case MapLayerKind.hazardLandslide:
+      case MapLayerKind.hazardTsunami:
+      case MapLayerKind.hazardHightide:
+      case MapLayerKind.snowDepth:
+      case MapLayerKind.snowfall24h:
+      case MapLayerKind.oldMap:
+      case MapLayerKind.none:
+        break;
+    }
+    final route = _route;
+    if (route != null) {
+      // 白い縁取り+青の線（旧 flutter_map 実装と同じ2本重ね）
+      lines.add(gmaps.Polyline(
+        polylineId: const gmaps.PolylineId('route-halo'),
+        points: [for (final p in route.points) _g(p)],
+        color: Colors.white,
+        width: 7,
+        zIndex: 1,
+      ));
+      lines.add(gmaps.Polyline(
+        polylineId: const gmaps.PolylineId('route-line'),
+        points: [for (final p in route.points) _g(p)],
+        color: const Color(0xFF1E88E5),
+        width: 4,
+        zIndex: 2,
+      ));
+    }
+    return lines;
+  }
+
+  /// 表示中のベクタ系レイヤーの円（台風の暴風警戒域・強風域・予報円のみ）
+  Set<gmaps.Circle> _vectorCircles() =>
+      _layer == MapLayerKind.typhoon ? _typhoonCircles() : const {};
+
+  // 旧・地理院タイル/OSMタイルの出し分け（_useWorldTiles/_updateTileMode）は
+  // GoogleMap のベース地図に一本化したため不要になり削除した
+  // （2026-09-27 GoogleMap移行 第1段階）。
+
+  /// 気象庁タイル（偶数ズームのみ生成。maxNativeZoom 10）・ハザードマップ・今昔マップ用
+  /// の TileOverlay をまとめて返す（GoogleMap移行 第2段階）。同一 id の provider が
+  /// あれば template だけ書き換えて再利用し、変わっていれば clearTileCache する
+  /// （時刻更新・レイヤー切替のたびに作り直すと一瞬消えるため）。
+  /// 今昔マップのスワイプ比較（縦線／横線）はここでは載せず、2枚目の GoogleMap
+  /// （_kjSwipeOverlay）にだけ載せる
+  Set<gmaps.TileOverlay> _tileOverlays() {
+    final overlays = <gmaps.TileOverlay>{};
+    void add(
+      String id, {
+      required String template,
+      bool tms = false,
+      int? minZoom,
+      int? maxZoom,
+      bool evenZoomOnly = false,
+      double transparency = 0,
+      int zIndex = 0,
+      gmaps.GoogleMapController? controller,
+    }) {
+      overlays.add(gmaps.TileOverlay(
+        tileOverlayId: gmaps.TileOverlayId(id),
+        tileProvider: _tileProvider(
+          id,
+          template: template,
+          tms: tms,
+          minZoom: minZoom,
+          maxZoom: maxZoom,
+          evenZoomOnly: evenZoomOnly,
+          controller: controller,
+        ),
+        transparency: transparency,
+        zIndex: zIndex,
+        fadeIn: false,
+      ));
+    }
+
     switch (_layer) {
       case MapLayerKind.rainRadar:
         final n = _nowcast;
-        if (n == null) return const [];
-        return [
-          Opacity(
-            opacity: 0.6,
-            child: _jmaTileLayer(
-              layerKey: 'nowc-${n.product}',
-              urlTemplate: n.tileTemplate,
-            ),
-          ),
-        ];
-      case MapLayerKind.quakes:
-        return [
-          MarkerLayer(markers: [
-            for (final q in _quakesForDraw)
-              Marker(
-                point: q.pos!,
-                width: 28,
-                height: 28,
-                child: GestureDetector(
-                  onTap: () => _showQuakeInfo(q),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: JmaLayers.intensityColor(q.maxIntensity).withValues(alpha: 0.85),
-                      border: Border.all(color: Colors.white, width: 1.5),
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(q.maxIntensity.isEmpty ? '' : q.maxIntensity,
-                        style: const TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.black87)),
-                  ),
-                ),
-              ),
-          ]),
-        ];
+        if (n != null) {
+          add('jma-nowc',
+              template: n.tileTemplate,
+              minZoom: 4, maxZoom: 10, evenZoomOnly: true,
+              transparency: 0.4, controller: _gmapController);
+        }
       case MapLayerKind.rain24h:
         final tile = _rain24hTile;
-        return [
-          if (tile != null)
-            Opacity(
-              opacity: 0.65,
-              child: _jmaTileLayer(
-                layerKey: 'rasrf24h',
-                urlTemplate: tile.tileTemplate,
-              ),
-            ),
-          // 市街地ズームでは観測点の実測値(mm)を重ねる（tenki.jp方式）
-          if (_zoom >= 9)
-            MarkerLayer(markers: [
-              for (final r in _rain)
-                Marker(
-                  point: r.pos,
-                  width: 46,
-                  height: 20,
-                  child: Tooltip(
-                    message: context.l10n
-                        .mapRainTooltip(r.name, r.mm24h.toStringAsFixed(1)),
-                    triggerMode: TooltipTriggerMode.tap,
-                    child: Container(
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: JmaLayers.rainColor(r.mm24h).withValues(alpha: 0.95),
-                        borderRadius: BorderRadius.circular(4),
-                        // 「〜50」の薄色はタイルの塗りと同化して見つけにくいため、
-                        // 濃い縁取り+影で地図・塗りから浮かせる
-                        border: Border.all(color: Colors.black54, width: 1),
-                        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 2, offset: Offset(0, 1))],
-                      ),
-                      child: Text('${r.mm24h.round()}',
-                          style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                              color: r.mm24h >= 100 ? Colors.white : Colors.black87)),
-                    ),
-                  ),
-                ),
-            ]),
-        ];
+        if (tile != null) {
+          add('jma-rain24h',
+              template: tile.tileTemplate,
+              minZoom: 4, maxZoom: 10, evenZoomOnly: true,
+              transparency: 0.35, controller: _gmapController);
+        }
       case MapLayerKind.riskLand:
       case MapLayerKind.riskInund:
       case MapLayerKind.riskFlood:
         // キキクル。危険度が高まっていない範囲は透明タイル、データ領域外は404が正常
         final risk = _risk;
-        if (risk == null) return const [];
-        return [
-          Opacity(
-            opacity: 0.65,
-            child: _jmaTileLayer(
-              layerKey: 'risk-${RiskLayers.element(_layer)}',
-              urlTemplate: risk.tileTemplate(_layer),
-            ),
-          ),
-        ];
+        if (risk != null) {
+          add('jma-risk-${RiskLayers.element(_layer)}',
+              template: risk.tileTemplate(_layer),
+              minZoom: 4, maxZoom: 10, evenZoomOnly: true,
+              transparency: 0.35, controller: _gmapController);
+        }
+      case MapLayerKind.snowDepth:
+      case MapLayerKind.snowfall24h:
+        final st = _snowTime;
+        if (st != null) {
+          add('jma-snow-${SnowLayers.element(_layer)}',
+              template: st.tileTemplate(_layer),
+              minZoom: 4, maxZoom: 10, evenZoomOnly: true,
+              transparency: 0.35, controller: _gmapController);
+        }
       case MapLayerKind.hazardFlood:
       case MapLayerKind.hazardLandslide:
       case MapLayerKind.hazardTsunami:
       case MapLayerKind.hazardHightide:
-        // 地理院の静的タイル。データの無い範囲は404が正常。ズーム17超は拡大表示
-        return [
-          for (final id in HazardLayers.tileIds(_layer))
-            Opacity(
-              opacity: 0.65,
-              child: TileLayer(
-                key: ValueKey('hazard-$id'),
-                urlTemplate: HazardLayers.tileTemplate(id),
-                minNativeZoom: HazardLayers.minZoom,
-                maxNativeZoom: HazardLayers.maxZoom,
-                userAgentPackageName: 'jp.livecam.livecam_jp',
-                errorTileCallback: (_, _, _) {},
-              ),
-            ),
-        ];
-      case MapLayerKind.typhoon:
-        return _typhoonWidgets();
-      case MapLayerKind.snowDepth:
-      case MapLayerKind.snowfall24h:
-        final st = _snowTime;
-        if (st == null) return const [];
-        return [
-          Opacity(
-            opacity: 0.65,
-            child: _jmaTileLayer(
-              layerKey: 'snow-${SnowLayers.element(_layer)}',
-              urlTemplate: st.tileTemplate(_layer),
-            ),
-          ),
-        ];
-      case MapLayerKind.shelters:
-        return _shelterWidgets();
-      case MapLayerKind.facilities:
-        return _facilityWidgets();
-      case MapLayerKind.underpass:
-        return _underpassWidgets();
-      case MapLayerKind.roadRegulation:
-        return _roadRegulationWidgets();
-      case MapLayerKind.roadClosures:
-        return _roadClosuresWidgets();
+        // 地理院の静的タイル。データの無い範囲は404が正常
+        final ids = HazardLayers.tileIds(_layer);
+        for (var i = 0; i < ids.length; i++) {
+          add('hazard-${ids[i]}',
+              template: HazardLayers.tileTemplate(ids[i]),
+              minZoom: HazardLayers.minZoom, maxZoom: HazardLayers.maxZoom,
+              transparency: 0.35, zIndex: i, controller: _gmapController);
+        }
       case MapLayerKind.oldMap:
+        // 透過比較のときだけ、この（下の）地図に直接重ねる。スワイプ比較は
+        // 2枚目の GoogleMap（_kjSwipeOverlay）にだけ載せる
         final r = _kjRegion;
         final era = _kjEra;
-        if (r == null || era == null) return const [];
-        // 配信元のタイルを直接読む（複製配信は禁止）。TMS＝y が南西始点
-        final tiles = TileLayer(
-          key: ValueKey('kjmap-${r.id}-$era'),
-          urlTemplate: Kjmap.tileTemplate(r.id, era),
-          tms: true,
-          minNativeZoom: Kjmap.minZoom,
-          maxNativeZoom: r.maxZoom,
-          userAgentPackageName: 'jp.livecam.livecam_jp',
-          errorTileCallback: (_, _, _) {},
-        );
-        if (_kjCompare == _KjCompare.opacity) {
-          return [Opacity(opacity: _kjOpacity, child: tiles)];
+        if (r != null && era != null && _kjCompare == _KjCompare.opacity) {
+          add('kjmap',
+              template: Kjmap.tileTemplate(r.id, era),
+              tms: true, minZoom: Kjmap.minZoom, maxZoom: r.maxZoom,
+              transparency: 1 - _kjOpacity, controller: _gmapController);
         }
-        // スワイプ: 境界より左（上）だけ昔の地図を描く
-        return [
-          ClipRect(
-            clipper: _SplitClipper(vertical: _kjCompare == _KjCompare.vertical, split: _kjSplit),
-            child: tiles,
-          ),
-        ];
+      case MapLayerKind.quakes:
+      case MapLayerKind.typhoon:
+      case MapLayerKind.shelters:
+      case MapLayerKind.facilities:
+      case MapLayerKind.underpass:
+      case MapLayerKind.roadRegulation:
+      case MapLayerKind.roadClosures:
       case MapLayerKind.none:
-        return const [];
+        break;
     }
+    return overlays;
   }
 
-  // 日本域外・広域表示ではOSMタイルへ切替（地理院タイルは日本のみ提供のため）
-  bool _useWorldTiles = false;
-
-  static bool _outsideJapan(double lat, double lng) =>
-      lat < 20 || lat > 46 || lng < 122 || lng > 154;
-
-  void _updateTileMode() {
-    final c = _controller.camera;
-    final world = c.zoom < 4.5 ||
-        _outsideJapan(c.center.latitude, c.center.longitude);
-    if (world != _useWorldTiles) {
-      setState(() => _useWorldTiles = world);
-    }
+  /// 今昔マップのスワイプ比較（縦線／横線）用に2枚目の GoogleMap に載せる
+  /// TileOverlay（不透明。切り抜きは ClipRect 側で行う）
+  Set<gmaps.TileOverlay> _kjSwipeOverlay() {
+    final r = _kjRegion;
+    final era = _kjEra;
+    if (r == null || era == null) return const {};
+    return {
+      gmaps.TileOverlay(
+        tileOverlayId: const gmaps.TileOverlayId('kjmap-swipe'),
+        tileProvider: _tileProvider(
+          'kjmap-swipe',
+          template: Kjmap.tileTemplate(r.id, era),
+          tms: true,
+          minZoom: Kjmap.minZoom,
+          maxZoom: r.maxZoom,
+          controller: _kjOverlayController,
+        ),
+        fadeIn: false,
+      ),
+    };
   }
 
-  /// 気象庁タイル（偶数ズームのみ生成。maxNativeZoom 10）用の TileLayer。
-  /// 奇数ズームは EvenZoomTileProvider が親タイルの4分の1を拡大して埋める。
-  /// [layerKey] はレイヤー種別ごとに固定にする（時刻を含めない）。時刻更新は
-  /// urlTemplate の変更として flutter_map が前の画像を残したまま差し替えるので、
-  /// レイヤーを作り直したときのような一瞬の消えが起きない
-  Widget _jmaTileLayer({
-    required String layerKey,
-    required String urlTemplate,
+  /// id ごとに UrlTileProvider を再利用する。template が変わっていれば書き換え、
+  /// [controller] があれば `clearTileCache` を呼ぶ（時刻更新・地域/時期変更時に、
+  /// レイヤーが一瞬消えないようにするため）
+  UrlTileProvider _tileProvider(
+    String id, {
+    required String template,
+    bool tms = false,
+    int? minZoom,
+    int? maxZoom,
+    bool evenZoomOnly = false,
+    gmaps.GoogleMapController? controller,
   }) {
-    return TileLayer(
-      key: ValueKey(layerKey),
-      urlTemplate: urlTemplate,
-      tileProvider: EvenZoomTileProvider(),
-      minNativeZoom: 4,
-      maxNativeZoom: 10,
-      userAgentPackageName: 'jp.livecam.livecam_jp',
-      errorTileCallback: (_, _, _) {},
+    final existing = _tileProviders[id];
+    if (existing != null) {
+      if (existing.template != template) {
+        existing.template = template;
+        // clearTileCache も Future を返す非同期メソッド。呼び出し元
+        // （build内）は同期のため await できず、catchError で失敗を受ける
+        controller?.clearTileCache(gmaps.TileOverlayId(id)).catchError((_) {});
+      }
+      return existing;
+    }
+    final p = UrlTileProvider(
+      template: template,
+      tms: tms,
+      minZoom: minZoom,
+      maxZoom: maxZoom,
+      evenZoomOnly: evenZoomOnly,
+      headers: _tileHeaders,
     );
+    _tileProviders[id] = p;
+    return p;
   }
 
   // --- 起動時の初期位置 ---
@@ -2547,16 +2827,14 @@ class _MapScreenState extends State<MapScreen> {
         final lat = double.parse(parts[0]);
         final lng = double.parse(parts[1]);
         final zoom = double.parse(parts[2]);
-        // NaN/Infinity や範囲外の値が保存されていると flutter_map のタイル計算が
-        // 「Infinity or NaN toInt」で落ちる（Crashlytics で実発生）ため検証する
+        // NaN/Infinity や範囲外の値を渡すと地図の初期化に支障が出るため検証する
         if (!lat.isFinite || !lng.isFinite || !zoom.isFinite ||
             lat.abs() > 85 || lng.abs() > 180 || zoom < 2 || zoom > 18) {
           await prefs.remove(_posKey);
           return;
         }
         if (!mounted) return;
-        _controller.move(LatLng(lat, lng), zoom);
-        setState(() => _zoom = zoom);
+        _moveCamera(LatLng(lat, lng), zoom);
       }
     } catch (_) {
       // 記憶がない/壊れている場合は既定位置のまま
@@ -2571,16 +2849,12 @@ class _MapScreenState extends State<MapScreen> {
           permission != LocationPermission.whileInUse) {
         return;
       }
+      if (mounted) setState(() => _locationPermissionGranted = true);
       // まずOSが保持する最終既知位置へ即座に移動する（屋内等でGPS測位が
       // 8秒以内に終わらず、前回位置のまま起動してしまう問題の対策）
       final last = await Geolocator.getLastKnownPosition();
       if (last != null && mounted) {
-        final approx = LatLng(last.latitude, last.longitude);
-        setState(() {
-          _myLocation = approx;
-          _zoom = 11;
-        });
-        _controller.move(approx, 11);
+        _moveCamera(LatLng(last.latitude, last.longitude), 11);
         _savePosition();
       }
       final pos = await Geolocator.getCurrentPosition(
@@ -2588,12 +2862,7 @@ class _MapScreenState extends State<MapScreen> {
                   const LocationSettings(accuracy: LocationAccuracy.medium))
           .timeout(const Duration(seconds: 15));
       if (!mounted) return;
-      final here = LatLng(pos.latitude, pos.longitude);
-      setState(() {
-        _myLocation = here;
-        _zoom = 11;
-      });
-      _controller.move(here, 11);
+      _moveCamera(LatLng(pos.latitude, pos.longitude), 11);
       _savePosition();
     } catch (_) {
       // 取得できなければ最終既知位置または前回位置のまま
@@ -2601,12 +2870,11 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   Future<void> _savePosition() async {
-    final c = _controller.camera;
-    // 不正な値を保存すると次回起動から毎回落ちるため、有限値のときだけ保存
-    if (!c.center.latitude.isFinite || !c.center.longitude.isFinite || !c.zoom.isFinite) return;
+    // 不正な値を保存すると次回起動から毎回支障が出るため、有限値のときだけ保存
+    if (!_center.latitude.isFinite || !_center.longitude.isFinite || !_zoom.isFinite) return;
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_posKey,
-        '${c.center.latitude},${c.center.longitude},${c.zoom}');
+    await prefs.setString(
+        _posKey, '${_center.latitude},${_center.longitude},$_zoom');
   }
 
   // --- 場所検索（国土地理院ジオコーディング。無料・キー不要） ---
@@ -2681,8 +2949,7 @@ class _MapScreenState extends State<MapScreen> {
           void goTo(LatLng point, double zoom) {
             Navigator.of(sheetContext).pop();
             _stopFollowing();
-            _controller.move(point, zoom);
-            setState(() => _zoom = zoom);
+            _moveCamera(point, zoom);
             _savePosition();
             _requestLayerDataForView();
           }
@@ -2775,29 +3042,15 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  static bool _isFiniteCamera(MapCamera c) =>
-      c.center.latitude.isFinite &&
-      c.center.longitude.isFinite &&
-      c.zoom.isFinite;
-
-  /// カメラが NaN/Infinity になったら次フレームで直前の正常値へ戻す。
-  /// フリングのアニメーション中は毎フレーム呼ばれるので1回にまとめる
-  void _recoverCamera() {
-    if (_recovering) return;
-    _recovering = true;
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _recovering = false;
-      if (!mounted) return;
-      try {
-        _controller.move(_lastGoodCenter, _lastGoodZoom);
-      } catch (_) {}
-    });
-  }
+  // 旧・flutter_map の NaN カメラ復旧ワークアラウンド(_isFiniteCamera/
+  // _recoverCamera)は同パッケージ固有の不具合対策だったため、GoogleMap
+  // 移行時に削除した（ネイティブ SDK の地図なので同種の不具合は起きない）。
 
   void _zoomBy(double delta) {
-    final z = (_controller.camera.zoom + delta).clamp(2.0, 18.0);
-    _controller.move(_controller.camera.center, z);
+    final z = (_zoom + delta).clamp(2.0, 18.0);
     setState(() => _zoom = z);
+    _programmaticMove = true; // ボタン操作ではパネルを沈めない
+    _gmapController?.animateCamera(gmaps.CameraUpdate.zoomBy(delta));
     _requestLayerDataForView();
   }
 
@@ -3049,13 +3302,9 @@ class _MapScreenState extends State<MapScreen> {
   LatLng? _lastCullCenter;
 
   List<MapItem> _cullToViewport(List<MapItem> items) {
-    final LatLngBounds b;
-    try {
-      b = _controller.camera.visibleBounds;
-    } catch (_) {
-      return items; // 初回レイアウト前（直後のフレームで再構築される）
-    }
-    _lastCullCenter = _controller.camera.center;
+    final b = _visibleBounds;
+    if (b == null) return items; // 初回レイアウト前（onMapCreated後に再構築される）
+    _lastCullCenter = _center;
     final lngSpan = (b.east - b.west).abs();
     if (lngSpan >= 300) return items; // ほぼ全世界が見えている
     final latMargin = (b.north - b.south) * 0.5;
@@ -3075,14 +3324,14 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   /// パンで表示領域が1/4以上動いたらマーカーを再構築する（余白を食い潰す前に）
-  void _maybeRebuildForPan(MapCamera camera) {
+  void _maybeRebuildForPan() {
     final last = _lastCullCenter;
-    if (last == null) return;
-    final b = camera.visibleBounds;
+    final b = _visibleBounds;
+    if (last == null || b == null) return;
     final latSpan = b.north - b.south;
     final lngSpan = (b.east - b.west).abs();
-    if ((camera.center.latitude - last.latitude).abs() > latSpan * 0.25 ||
-        (camera.center.longitude - last.longitude).abs() > lngSpan * 0.25) {
+    if ((_center.latitude - last.latitude).abs() > latSpan * 0.25 ||
+        (_center.longitude - last.longitude).abs() > lngSpan * 0.25) {
       setState(() {});
     }
   }
@@ -3270,15 +3519,8 @@ class _MapScreenState extends State<MapScreen> {
                     _routeCameraIds = {for (final c in cams) c.camera.id};
                   });
                   _stopFollowing();
-                  try {
-                    _controller.fitCamera(CameraFit.bounds(
-                      bounds: LatLngBounds.fromPoints(route.points),
-                      padding: const EdgeInsets.fromLTRB(32, 120, 32, 160),
-                      maxZoom: 14,
-                    ));
-                    final z = _controller.camera.zoom;
-                    if (z.isFinite) setState(() => _zoom = z);
-                  } catch (_) {}
+                  _fitBounds(route.points,
+                      padding: const EdgeInsets.fromLTRB(32, 120, 32, 160));
                   _requestLayerDataForView();
                 }
               }
@@ -3398,8 +3640,8 @@ class _MapScreenState extends State<MapScreen> {
 
   Widget _mapStack(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      // レイアウト途中や非表示で幅・高さが0/無限のときに FlutterMap を組み立てると
-      // タイル範囲の計算が NaN になり例外を投げるため、その間は何も描かない
+      // レイアウト途中や非表示で幅・高さが0/無限のときに GoogleMap を組み立てると
+      // 初期カメラ位置の計算等で例外になりうるため、その間は何も描かない
       if (!constraints.maxWidth.isFinite || !constraints.maxHeight.isFinite ||
           constraints.maxWidth < 1 || constraints.maxHeight < 1) {
         return const SizedBox.shrink();
@@ -3408,146 +3650,217 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
+  /// ピン画像のキャッシュ（dpr が確定してから作る。MediaQuery は build 内でしか
+  /// 読めないため、初回の _mapStackSized で一度だけ生成する）
+  PinBitmaps? _pinBitmapsCache;
+  bool _pinsPreloaded = false;
+
+  PinBitmaps _pinBitmapsFor(BuildContext context) =>
+      _pinBitmapsCache ??= PinBitmaps(MediaQuery.devicePixelRatioOf(context));
+
+  void _onPinReady() {
+    if (mounted) setState(() {});
+  }
+
+  /// カメラ・クラスタの Marker 一式（GoogleMap の markers に渡す）。
+  /// ピン画像が未生成のキーは defaultMarker を仮に使い、生成完了時に
+  /// _onPinReady が setState して差し替える
+  Set<gmaps.Marker> _buildCameraMarkers(List<MapItem> items, PinBitmaps pins) {
+    final markers = <gmaps.Marker>{};
+    for (final item in items) {
+      if (item.isCluster) {
+        final label =
+            item.count >= 1000 ? '${item.count ~/ 1000}k' : '${item.count}';
+        final icon = pins.clusterPin(label, onReady: _onPinReady) ??
+            gmaps.BitmapDescriptor.defaultMarker;
+        markers.add(gmaps.Marker(
+          markerId: gmaps.MarkerId(
+              'cluster-${item.latitude.toStringAsFixed(4)}-${item.longitude.toStringAsFixed(4)}-${item.count}'),
+          position: _g(LatLng(item.latitude, item.longitude)),
+          icon: icon,
+          anchor: const Offset(0.5, 0.5),
+          onTap: () => _moveCamera(LatLng(item.latitude, item.longitude), _zoom + 2),
+        ));
+      } else {
+        final camera = item.camera!;
+        final icon = pins.cameraPin(
+              category: camera.category,
+              isVideo: camera.isVideo,
+              favorite: widget.app.isFavorite(camera),
+              uncertain: camera.coordAccuracy.isUncertain,
+              frozen: widget.app.stateOf(camera) == CameraState.frozen,
+              onReady: _onPinReady,
+            ) ??
+            gmaps.BitmapDescriptor.defaultMarker;
+        markers.add(gmaps.Marker(
+          markerId: gmaps.MarkerId(camera.id),
+          position: _g(LatLng(camera.lat!, camera.lng!)),
+          icon: icon,
+          anchor: const Offset(0.5, 0.5),
+          onTap: () => _onPinTap(camera),
+        ));
+      }
+    }
+    return markers;
+  }
+
+  /// GoogleMap の下から測った現在の下部オーバーレイの高さ（padding に使う）
+  final GlobalKey _bottomAreaKey = GlobalKey();
+  double? _bottomPadding;
+
+  void _measureBottomArea() {
+    final h = _bottomAreaKey.currentContext?.size?.height;
+    if (h != null && h != _bottomPadding && mounted) {
+      setState(() => _bottomPadding = h);
+    }
+  }
+
+  Future<void> _onCameraIdle() async {
+    _programmaticMove = false;
+    _mapDraggingFailsafe?.cancel();
+    final c = _gmapController;
+    LatLngBounds? bounds;
+    double? zoom;
+    if (c != null) {
+      try {
+        final r = await c.getVisibleRegion();
+        bounds = LatLngBounds(
+          LatLng(r.southwest.latitude, r.southwest.longitude),
+          LatLng(r.northeast.latitude, r.northeast.longitude),
+        );
+      } catch (_) {}
+      try {
+        zoom = await c.getZoomLevel();
+      } catch (_) {}
+    }
+    if (!mounted) return;
+    // onCameraMove は2段以上のズーム変化だけ反映するので、ここで実際の値に確定させる
+    final zoomJumped = zoom != null && zoom.isFinite && (zoom - _zoom).abs() >= 0.25;
+    setState(() {
+      _mapDragging = false;
+      if (bounds != null) _visibleBounds = bounds;
+      if (zoomJumped) _zoom = zoom!;
+    });
+    if (!zoomJumped) _maybeRebuildForPan();
+    _savePosition();
+    _requestLayerDataForView();
+    _updateKjRegion();
+  }
+
   Widget _mapStackSized(BuildContext context) {
+    final pins = _pinBitmapsFor(context);
+    if (!_pinsPreloaded) {
+      _pinsPreloaded = true;
+      pins.preloadCommon(onReady: _onPinReady);
+    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _measureBottomArea();
+    });
     var cams = widget.app.displayableCameras;
     if (_route != null) {
       cams = cams.where((c) => _routeCameraIds.contains(c.id)).toList();
     }
     final items = _cullToViewport(clusterCameras(cams, _zoom));
+    final markers = _buildCameraMarkers(items, pins)..addAll(_vectorMarkers(pins));
+    // 今昔マップのスワイプ比較中は2枚目の GoogleMap を重ねる（このフレームでの
+    // 判定を固定しておく。build途中で _kjRegion 等が変わっても揃えるため）
+    final kjSwipeActive = _kjSwipeActive;
+    if (!kjSwipeActive) _kjOverlayController = null;
     return Stack(
       children: [
-        FlutterMap(
-          mapController: _controller,
-          options: MapOptions(
-            initialCenter: _initialCenter,
-            initialZoom: _initialZoom,
-            minZoom: 2,
-            maxZoom: 18,
-            // ピンチズーム等は既定で有効。二本指ひねりの回転だけ無効化（北固定）
-            interactionOptions: const InteractionOptions(
-                flags: InteractiveFlag.all & ~InteractiveFlag.rotate),
-            onPositionChanged: (camera, hasGesture) {
-              if (!_isFiniteCamera(camera)) {
-                _recoverCamera();
-                return;
-              }
-              _lastGoodCenter = camera.center;
-              _lastGoodZoom = camera.zoom;
-              if (hasGesture && _following) _stopFollowing();
-              // 地図ドラッグ中は下部パネルを沈める（1回だけ setState。ピンのタップ等の
-              // 単なるタップでは onPositionChanged が呼ばれないため沈まない）
-              if (hasGesture && !_mapDragging) {
-                setState(() => _mapDragging = true);
-              }
-              if (hasGesture) {
-                // 操作終了イベントを取り逃した場合のフェイルセーフ
-                _mapDraggingFailsafe?.cancel();
-                _mapDraggingFailsafe = Timer(const Duration(milliseconds: 600), () {
-                  if (mounted) setState(() => _mapDragging = false);
-                });
-              }
-              // ピンチ中の毎フレーム再構築はフリーズ→強制終了の原因になる。
-              // ジェスチャー中はズーム2段以上の大変化だけ間引いて反映し、
-              // 細かい追従は操作終了イベント(onMapEvent)でまとめて行う
-              if (camera.zoom.isFinite && (camera.zoom - _zoom).abs() >= 2.0) {
-                setState(() => _zoom = camera.zoom);
-              }
-              _updateTileMode();
-            },
-            onMapEvent: (e) {
-              if (e is MapEventMoveEnd ||
-                  e is MapEventFlingAnimationEnd ||
-                  e is MapEventDoubleTapZoomEnd ||
-                  e is MapEventRotateEnd) {
-                _mapDraggingFailsafe?.cancel();
-                if (_mapDragging) setState(() => _mapDragging = false);
-                _savePosition();
-                final z = _controller.camera.zoom;
-                if (!z.isFinite) return;
-                if ((z - _zoom).abs() >= 0.25) {
-                  setState(() => _zoom = z);
-                } else {
-                  _maybeRebuildForPan(_controller.camera);
-                }
-                _requestLayerDataForView();
-                _updateKjRegion();
-              }
-            },
-          ),
-          children: [
-            TileLayer(
-              // 日本域=地理院タイル(淡色)、世界=OpenStreetMap。出典表示は必須
-              urlTemplate: _useWorldTiles
-                  ? 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
-                  : 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
-              userAgentPackageName: 'jp.livecam.livecam_jp',
-              // 海上・範囲外・高ズームのタイルは404が普通。例外として上げない
-              errorTileCallback: (_, _, _) {},
-              maxNativeZoom: 18,
-            ),
-            ..._layerWidgets(),
-            if (_route != null)
-              PolylineLayer(polylines: [
-                Polyline(
-                    points: _route!.points,
-                    color: Colors.white,
-                    strokeWidth: 7),
-                Polyline(
-                    points: _route!.points,
-                    color: const Color(0xFF1E88E5),
-                    strokeWidth: 4),
-              ]),
-            MarkerLayer(
-              markers: [
-                for (final item in items)
-                  if (item.isCluster)
-                    // 見た目はクラスタピンの直径(40)のまま、タップ領域だけ44×44に広げる
-                    Marker(
-                      point: LatLng(item.latitude, item.longitude),
-                      width: 44,
-                      height: 44,
-                      child: GestureDetector(
-                        behavior: HitTestBehavior.opaque,
-                        onTap: () => _controller.move(
-                          LatLng(item.latitude, item.longitude),
-                          _zoom + 2,
-                        ),
-                        child: Center(child: ClusterPin(count: item.count)),
-                      ),
-                    )
-                  else
-                    // 見た目はピンの直径(26)のまま、タップ領域だけ44×44に広げる
-                    Marker(
-                      point: LatLng(item.latitude, item.longitude),
-                      width: 44,
-                      height: 44,
-                      child: GestureDetector(
-                        behavior: HitTestBehavior.opaque,
-                        onTap: () => _onPinTap(item.camera!),
-                        child: Center(
-                          child: CameraPin(
-                            camera: item.camera!,
-                            state: widget.app.stateOf(item.camera!),
-                            favorite: widget.app.isFavorite(item.camera!),
-                          ),
-                        ),
-                      ),
-                    ),
-              ],
-            ),
-            if (_myLocation != null)
-              MarkerLayer(markers: [
-                Marker(
-                  point: _myLocation!,
-                  width: 20,
-                  height: 20,
-                  child: const _MyLocationDot(),
-                ),
-              ]),
-          ],
+        gmaps.GoogleMap(
+          initialCameraPosition: gmaps.CameraPosition(
+              target: _g(_initialCenter), zoom: _initialZoom),
+          minMaxZoomPreference: const gmaps.MinMaxZoomPreference(2, 18),
+          // 二本指ひねりの回転・チルトは無効化（北固定の方針）
+          rotateGesturesEnabled: false,
+          tiltGesturesEnabled: false,
+          zoomControlsEnabled: false,
+          mapToolbarEnabled: false,
+          compassEnabled: false,
+          buildingsEnabled: false,
+          myLocationButtonEnabled: false,
+          myLocationEnabled: _locationPermissionGranted,
+          padding: EdgeInsets.only(bottom: _bottomPadding ?? 0),
+          markers: markers,
+          tileOverlays: _tileOverlays(),
+          polylines: _vectorPolylines(),
+          circles: _vectorCircles(),
+          onMapCreated: _onMapCreated,
+          onCameraMoveStarted: () {
+            if (_programmaticMove) return; // アプリ側の移動（追従・位置復元・寄せ）
+            if (_following) _stopFollowing();
+            if (_situationExpanded) _dismissSituation();
+            if (!_mapDragging) setState(() => _mapDragging = true);
+            // 操作終了イベントを取り逃した場合のフェイルセーフ
+            _mapDraggingFailsafe?.cancel();
+            _mapDraggingFailsafe = Timer(const Duration(milliseconds: 600), () {
+              if (mounted) setState(() => _mapDragging = false);
+            });
+          },
+          onCameraMove: (pos) {
+            _center = _l(pos.target);
+            // 今昔マップのスワイプ比較中は2枚目の GoogleMap（操作不可）を毎フレーム
+            // 追従させる（setState は不要。表示だけ同期する）
+            if (kjSwipeActive) {
+              // moveCamera は Future を返す非同期メソッドで、この
+              // コールバック自体は同期のため await できない。同期例外だけでなく
+              // Future の失敗も拾えるよう catchError で受ける（例外を投げない
+              // フェイクの controller でも無害）
+              _kjOverlayController
+                  ?.moveCamera(gmaps.CameraUpdate.newCameraPosition(pos))
+                  .catchError((_) {});
+            }
+            // 長いドラッグ中にフェイルセーフが先に発火してパネルが戻らないよう延長する
+            if (_mapDragging && _mapDraggingFailsafe != null) {
+              _mapDraggingFailsafe!.cancel();
+              _mapDraggingFailsafe = Timer(const Duration(milliseconds: 600), () {
+                if (mounted) setState(() => _mapDragging = false);
+              });
+            }
+            // ピンチ中の毎フレーム再構築はフリーズ→強制終了の原因になるため、
+            // ズーム2段以上の大変化だけ間引いて反映する（細かい追従は onCameraIdle）
+            if (pos.zoom.isFinite && (pos.zoom - _zoom).abs() >= 2.0) {
+              setState(() => _zoom = pos.zoom);
+            }
+          },
+          onCameraIdle: _onCameraIdle,
         ),
-        // 昔の地図の新旧スワイプの境界線（取っ手をドラッグで移動）。地図の上・ボタンの下
-        if (_layer == MapLayerKind.oldMap && _kjRegion != null && _kjCompare != _KjCompare.opacity)
+        // 今昔マップの新旧スワイプ（縦線／横線）: 下の地図の上に、今昔マップだけを
+        // 載せた2枚目の GoogleMap を重ね、境界より片側だけを ClipRect で見せる。
+        // 2枚目は操作不可（IgnorePointer）で、下の地図の onCameraMove に同期する
+        if (kjSwipeActive)
+          Positioned.fill(
+            child: IgnorePointer(
+              child: ClipRect(
+                clipper: _SplitClipper(
+                    vertical: _kjCompare == _KjCompare.vertical, split: _kjSplit),
+                child: gmaps.GoogleMap(
+                  key: const ValueKey('kjOverlayMap'),
+                  initialCameraPosition:
+                      gmaps.CameraPosition(target: _g(_center), zoom: _zoom),
+                  minMaxZoomPreference: const gmaps.MinMaxZoomPreference(2, 18),
+                  rotateGesturesEnabled: false,
+                  tiltGesturesEnabled: false,
+                  zoomControlsEnabled: false,
+                  mapToolbarEnabled: false,
+                  compassEnabled: false,
+                  myLocationEnabled: false,
+                  myLocationButtonEnabled: false,
+                  liteModeEnabled: false,
+                  padding: EdgeInsets.only(bottom: _bottomPadding ?? 0),
+                  tileOverlays: _kjSwipeOverlay(),
+                  onMapCreated: (c) {
+                    _kjOverlayController = c;
+                    c
+                        .moveCamera(gmaps.CameraUpdate.newLatLngZoom(_g(_center), _zoom))
+                        .catchError((_) {});
+                  },
+                ),
+              ),
+            ),
+          ),
+        if (kjSwipeActive)
           Positioned.fill(
             child: _KjDivider(
               vertical: _kjCompare == _KjCompare.vertical,
@@ -3564,16 +3877,10 @@ class _MapScreenState extends State<MapScreen> {
           bottom: 0,
           child: _bottomArea(context, cams),
         ),
-        // 「いま起きていること」（発生時だけ右上に丸いボタン。展開中は外側タップで閉じる）
+        // 「いま起きていること」（発生時だけ右上に丸いボタン）。展開中も地図は
+        // 触れるままにし、地図を動かしたらボタンに戻す（透明バリアで地図を塞ぐと
+        // 「カードが出ている間は地図が触れない」不具合になる。2026-09-27 報告）
         if (_situation != null && _situation!.isNotable) ...[
-          if (_situationExpanded)
-            Positioned.fill(
-              child: GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onTap: _dismissSituation,
-                child: const SizedBox.expand(),
-              ),
-            ),
           Positioned(
             right: 12,
             top: MediaQuery.of(context).padding.top + 12,
@@ -3613,10 +3920,14 @@ class _MapScreenState extends State<MapScreen> {
   /// 地図をドラッグ中は下部パネルだけ沈める（出典帯が最下段になる。単なるタップでは
   /// 沈まない。_mapDragging 参照）
   Widget _bottomArea(BuildContext context, List<Camera> cams) {
-    // stretch で各段を全幅にする（ズーム/現在地だけ内部で右寄せにする）
+    // stretch で各段を全幅にする（ズーム/現在地だけ内部で右寄せにする）。
+    // _bottomAreaKey は高さを測って GoogleMap の padding（Googleロゴが隠れないように）
+    // に使う（_measureBottomArea）
     return Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       _zoomAndLocation(),
       const SizedBox(height: 12),
+      // ズーム/現在地ボタンは含めず、地図を覆う帯の高さだけを GoogleMap の padding にする
+      Column(key: _bottomAreaKey, mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       _controlPanel(),
       _sourceBar(context, cams),
       AnimatedSize(
@@ -3635,6 +3946,7 @@ class _MapScreenState extends State<MapScreen> {
                 onMore: () => _showMoreSheet(context),
               ),
       ),
+      ]),
     ]);
   }
 
@@ -3827,19 +4139,29 @@ class _MapScreenState extends State<MapScreen> {
     // 出典は1本の文にまとめて最大2行（免責文は操作板の展開側に置く）。
     // 端末の文字サイズ設定が大きくても帯が膨らまないよう拡大率は 1.2 で頭打ち
     const srcStyle = TextStyle(fontSize: 10, color: Colors.black87);
-    final sources = <InlineSpan>[
-      if (HazardLayers.isHazard(_layer)) const TextSpan(text: '${HazardLayers.attribution}｜'),
-      if (_layer == MapLayerKind.shelters) const TextSpan(text: '${ShelterLayers.attribution}｜'),
+    // GoogleMap移行後はベース地図の出典（旧「地理院タイル」「© OpenStreetMap
+    // contributors」）は不要（Googleロゴ・帰属はSDKが地図左下に出す）。
+    // 気象庁・ハザードマップ・今昔マップなど重ねているレイヤーの出典だけを並べる
+    final attributions = <InlineSpan>[
+      if (HazardLayers.isHazard(_layer)) const TextSpan(text: HazardLayers.attribution),
+      if (_layer == MapLayerKind.shelters) const TextSpan(text: ShelterLayers.attribution),
       if (_layer == MapLayerKind.facilities)
-        TextSpan(text: '${_facilities?.index?.attribution.isNotEmpty == true ? _facilities!.index!.attribution : FacilityLayers.attribution}｜'),
+        TextSpan(
+            text: _facilities?.index?.attribution.isNotEmpty == true
+                ? _facilities!.index!.attribution
+                : FacilityLayers.attribution),
       if (_layer == MapLayerKind.oldMap)
         TextSpan(
           text: Kjmap.attribution,
           style: const TextStyle(decoration: TextDecoration.underline),
           recognizer: _kjmapTap,
         ),
-      if (_layer == MapLayerKind.oldMap) const TextSpan(text: '｜'),
-      TextSpan(text: _useWorldTiles ? '© OpenStreetMap contributors' : context.l10n.detailMapTileGsi),
+    ];
+    final sources = <InlineSpan>[
+      for (var i = 0; i < attributions.length; i++) ...[
+        if (i > 0) const TextSpan(text: '｜'),
+        attributions[i],
+      ],
     ];
     return Container(
       color: Colors.white.withValues(alpha: 0.85),
@@ -4079,22 +4401,8 @@ class _LegendRow extends StatelessWidget {
   }
 }
 
-/// 現在地の青い点。
-class _MyLocationDot extends StatelessWidget {
-  const _MyLocationDot();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFF1A73E8),
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.white, width: 3),
-        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 4)],
-      ),
-    );
-  }
-}
+// 現在地の青い点（旧 _MyLocationDot）は GoogleMap 標準の myLocationEnabled が
+// 同等のドットを描くため、GoogleMap移行時に削除した（2026-09-27 第1段階）。
 
 /// 避難場所ピン（緑の丸＋家アイコン。指定避難所は二重枠）。カメラピンとは色・形で区別する
 class _ShelterPin extends StatelessWidget {
@@ -4129,27 +4437,8 @@ class _ShelterPin extends StatelessWidget {
   }
 }
 
-/// 避難場所のクラスタ（緑系。カメラの青いクラスタと区別）
-class _ShelterCluster extends StatelessWidget {
-  const _ShelterCluster({required this.count});
-
-  final int count;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: _ShelterPin.color.withValues(alpha: 0.85),
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.white, width: 2),
-        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 3)],
-      ),
-      child: Text('$count',
-          style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-    );
-  }
-}
+// 避難場所のクラスタ（旧 _ShelterCluster）は地図のマーカーが PinBitmaps.dotGlyph
+// で画像化されたため不要になり削除した（2026-09-27 GoogleMap移行 第3段階）。
 
 /// 防災拠点ピン（種別で色分け。給水=青 / 備蓄=茶 / 消防水利=赤）。
 /// 避難場所の緑・カメラピンとは色で区別する
@@ -4193,28 +4482,7 @@ class _FacilityPin extends StatelessWidget {
   }
 }
 
-/// 防災拠点のクラスタ（代表種別の色。カメラの青いクラスタと区別）
-class _FacilityCluster extends StatelessWidget {
-  const _FacilityCluster({required this.count, this.kind});
-
-  final int count;
-  final String? kind;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: _FacilityPin.colorOf(kind).withValues(alpha: 0.85),
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.white, width: 2),
-        boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 3)],
-      ),
-      child: Text('$count',
-          style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-    );
-  }
-}
+// 防災拠点のクラスタ（旧 _FacilityCluster）も同様に削除した。
 
 class _NoticeBanner extends StatelessWidget {
   const _NoticeBanner({required this.text, this.onClose});
@@ -4274,7 +4542,7 @@ class _SplitClipper extends CustomClipper<Rect> {
   bool shouldReclip(_SplitClipper old) => old.vertical != vertical || old.split != split;
 }
 
-/// 新旧スワイプの境界線と取っ手。線に沿った細い帯だけがドラッグを受け、地図の操作は妨げない
+/// 新旧スワイプの境界線と取っ手。線に沿った細い帯だけがドラッグを受け、地図の操作は妨げない。
 class _KjDivider extends StatelessWidget {
   const _KjDivider({
     required this.vertical,

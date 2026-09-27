@@ -24,3 +24,6 @@ crawl_nationwide*.log
 *.local.md
 ChatGPT Image*
 design/
+
+# Google Maps 等の API キー（ローカルのみ）
+app/secrets/

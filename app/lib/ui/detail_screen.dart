@@ -4,8 +4,8 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart' as gmaps;
 import 'package:google_mobile_ads/google_mobile_ads.dart' show AdSize;
-import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
@@ -28,6 +28,7 @@ import '../util/jst.dart';
 import '../util/time_format.dart';
 import 'ad_banner.dart';
 import 'elevation_label.dart';
+import 'pin_bitmaps.dart';
 import 'pin_style.dart';
 import 'x_accounts_screen.dart';
 
@@ -63,6 +64,16 @@ class _DetailScreenState extends State<DetailScreen> {
   AppState get app => widget.app;
 
   Timer? _viewTimer;
+
+  /// 小地図のカメラピン画像（map_screen.dart と同じ仕組み。dpr が確定してから
+  /// 一度だけ作る）
+  PinBitmaps? _pinBitmaps;
+  PinBitmaps _pinsFor(BuildContext context) =>
+      _pinBitmaps ??= PinBitmaps(MediaQuery.devicePixelRatioOf(context));
+
+  void _onPinReady() {
+    if (mounted) setState(() {});
+  }
 
   @override
   void initState() {
@@ -391,44 +402,36 @@ class _DetailScreenState extends State<DetailScreen> {
         child: SizedBox(
           height: 170,
           child: Stack(children: [
-            FlutterMap(
-              options: MapOptions(
-                initialCenter: pos,
-                initialZoom: 13,
-                interactionOptions:
-                    const InteractionOptions(flags: InteractiveFlag.none),
-              ),
-              children: [
-                TileLayer(
-                  urlTemplate: camera.isWorld
-                      ? 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
-                      : 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
-                  userAgentPackageName: 'jp.livecam.livecam_jp',
-                  errorTileCallback: (_, _, _) {},
-                  maxNativeZoom: 18,
+            gmaps.GoogleMap(
+              initialCameraPosition: gmaps.CameraPosition(
+                  target: gmaps.LatLng(pos.latitude, pos.longitude), zoom: 14),
+              // Android は軽量表示（liteModeEnabled）に切り替えて描画負荷を抑える。
+              // iOS はこのフラグを無視するため、下の各種 Enabled:false で操作を止める
+              liteModeEnabled: true,
+              scrollGesturesEnabled: false,
+              zoomGesturesEnabled: false,
+              tiltGesturesEnabled: false,
+              rotateGesturesEnabled: false,
+              zoomControlsEnabled: false,
+              mapToolbarEnabled: false,
+              compassEnabled: false,
+              myLocationButtonEnabled: false,
+              markers: {
+                gmaps.Marker(
+                  markerId: gmaps.MarkerId(camera.id),
+                  position: gmaps.LatLng(pos.latitude, pos.longitude),
+                  icon: _pinsFor(context).cameraPin(
+                        category: camera.category,
+                        isVideo: camera.isVideo,
+                        favorite: app.isFavorite(camera),
+                        uncertain: camera.coordAccuracy.isUncertain,
+                        frozen: app.stateOf(camera) == CameraState.frozen,
+                        onReady: _onPinReady,
+                      ) ??
+                      gmaps.BitmapDescriptor.defaultMarker,
+                  anchor: const Offset(0.5, 0.5),
                 ),
-                MarkerLayer(markers: [
-                  Marker(
-                    point: pos,
-                    width: 26,
-                    height: 26,
-                    child: CameraPin(
-                        camera: camera,
-                        state: app.stateOf(camera),
-                        favorite: app.isFavorite(camera)),
-                  ),
-                ]),
-              ],
-            ),
-            Positioned(
-              left: 4,
-              bottom: 2,
-              child: Text(
-                camera.isWorld
-                    ? '© OpenStreetMap contributors'
-                    : l10n.detailMapTileGsi,
-                style: const TextStyle(fontSize: 9, color: Colors.black87),
-              ),
+              },
             ),
             // タップで地図タブへ（この位置を中心に表示）
             Positioned.fill(

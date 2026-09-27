@@ -12,3 +12,6 @@ GeneratedPluginRegistrant.java
 key.properties
 **/*.keystore
 **/*.jks
+
+# Google Maps Platform の API キー（docs/google_maps_migration.md 参照）
+secrets.properties

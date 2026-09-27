@@ -22,6 +22,10 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9639294688594011~2743659899"/>
+        <!-- Google Maps SDK for Android。値は android/secrets.properties（gitignore対象）から -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${googleMapsApiKey}"/>
         <!-- FCM: バックグラウンド受信時の通知アイコン・色・既定チャンネル -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"

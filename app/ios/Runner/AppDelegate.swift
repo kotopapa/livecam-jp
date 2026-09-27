@@ -2,6 +2,7 @@ import Flutter
 import UIKit
 import UserNotifications
 import FirebaseMessaging
+import GoogleMaps
 import MetricKit
 
 @main
@@ -11,6 +12,14 @@ import MetricKit
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
+    // Google Maps SDK。キーは Info.plist の GMSApiKey (Secrets.xcconfig 由来)。
+    // 未設定（キー控えが無い開発環境）でもビルドが落ちないようログのみ出す
+    if let mapsKey = Bundle.main.object(forInfoDictionaryKey: "GMSApiKey") as? String,
+        !mapsKey.isEmpty {
+      GMSServices.provideAPIKey(mapsKey)
+    } else {
+      NSLog("GMSApiKey が未設定のため Google Maps を初期化しません")
+    }
     // 新しいFlutterテンプレート(scene lifecycle)ではfirebase_messagingの
     // 自動登録が効かないことがあるため、APNs登録を明示的に行う
     application.registerForRemoteNotifications()

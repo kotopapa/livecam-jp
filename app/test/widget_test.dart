@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 
@@ -16,7 +17,15 @@ import 'package:livecam_jp/ui/favorites_screen.dart';
 import 'package:livecam_jp/ui/home_shell.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'fake_google_maps_platform.dart';
+
 void main() {
+  // 地図タブ(MapScreen)が GoogleMap を使うため、ウィジェットテストでは
+  // フェイクの platform interface に差し替える（実機の platform view は不要）
+  setUp(() {
+    GoogleMapsFlutterPlatform.instance = FakeGoogleMapsFlutterPlatform();
+  });
+
   _legendSheetTests();
   testWidgets('アプリが起動して4タブのシェルが表示される', (tester) async {
     // testWidgets(fake async)内で実I/Oをawaitするとハングするため、
