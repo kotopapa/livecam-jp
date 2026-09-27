@@ -33,7 +33,7 @@ IconData? categoryIcon(String key) => switch (key) {
       'port' => Icons.anchor,
       'scenic' => Icons.photo_camera, // 2026-09-27 ユーザー選定（双眼鏡は小さいと判別できなかった）
       'healing' => Icons.pets,
-      _ => Icons.videocam, // 'other' 及び未知キー
+      _ => Icons.location_city, // 'other' 及び未知キー（街角・施設が多いのでビル群。2026-09-27 ユーザー選定）
     };
 
 /// カテゴリ記号を [size] 四方に描く（Icon か自前の CustomPaint）
