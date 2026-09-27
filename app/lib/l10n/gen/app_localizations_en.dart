@@ -972,6 +972,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get placeSearchFillTooltip => 'Put this suggestion in the search box';
 
   @override
+  String get placeSearchClearAll => 'Clear all';
+
+  @override
+  String get placeSearchClearAllConfirm => 'Clear all recent searches?';
+
+  @override
+  String get placeSearchRemoveOne => 'Remove from history';
+
+  @override
   String get placeSearchRecentTitle => 'Recent searches';
 
   @override

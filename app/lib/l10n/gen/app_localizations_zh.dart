@@ -933,6 +933,15 @@ class AppLocalizationsZh extends AppLocalizations {
   String get placeSearchFillTooltip => '将该建议填入搜索框';
 
   @override
+  String get placeSearchClearAll => '全部删除';
+
+  @override
+  String get placeSearchClearAllConfirm => '要删除全部搜索记录吗？';
+
+  @override
+  String get placeSearchRemoveOne => '从记录中删除';
+
+  @override
   String get placeSearchRecentTitle => '最近搜索';
 
   @override
@@ -3616,6 +3625,15 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get placeSearchFillTooltip => '將該建議填入搜尋框';
+
+  @override
+  String get placeSearchClearAll => '全部刪除';
+
+  @override
+  String get placeSearchClearAllConfirm => '要刪除全部搜尋記錄嗎？';
+
+  @override
+  String get placeSearchRemoveOne => '從記錄中刪除';
 
   @override
   String get placeSearchRecentTitle => '最近搜尋';

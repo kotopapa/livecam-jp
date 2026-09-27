@@ -292,6 +292,52 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
     } catch (_) {}
   }
 
+  /// 履歴から1件消す（[entry] が null ならすべて）
+  Future<void> _removeRecent(_RecentEntry? entry) async {
+    setState(() {
+      _recent = entry == null
+          ? const []
+          : _recent.where((e) => e.dedupeKey != entry.dedupeKey).toList();
+    });
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      if (entry == null) {
+        await prefs.remove(_recentSearchesKey);
+        return;
+      }
+      final raw = prefs.getStringList(_recentSearchesKey) ?? const [];
+      final list = raw.where((s) {
+        try {
+          final m = jsonDecode(s) as Map<String, dynamic>;
+          final key = m['type'] == 'camera' ? 'c:${m['id']}' : 'p:${m['label']}';
+          return key != entry.dedupeKey;
+        } catch (_) {
+          return true;
+        }
+      }).toList();
+      await prefs.setStringList(_recentSearchesKey, list);
+    } catch (_) {}
+  }
+
+  Future<void> _confirmClearRecent() async {
+    final l10n = context.l10n;
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        content: Text(l10n.placeSearchClearAllConfirm),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(l10n.commonCancel)),
+          TextButton(
+            key: const Key('recent_clear_all_ok'),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(l10n.placeSearchClearAll),
+          ),
+        ],
+      ),
+    );
+    if (ok == true) await _removeRecent(null);
+  }
+
   Future<void> _saveRecent(_RecentEntry entry) async {
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -399,18 +445,40 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
         itemBuilder: (context, i) {
           if (i == 0) {
             return Padding(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
-              child: Text(
-                l10n.placeSearchRecentTitle,
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[600],
+              padding: const EdgeInsets.fromLTRB(16, 4, 4, 0),
+              child: Row(children: [
+                Expanded(
+                  child: Text(
+                    l10n.placeSearchRecentTitle,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[600],
+                    ),
+                  ),
                 ),
-              ),
+                TextButton(
+                  key: const Key('recent_clear_all'),
+                  onPressed: _confirmClearRecent,
+                  child: Text(l10n.placeSearchClearAll, style: const TextStyle(fontSize: 12)),
+                ),
+              ]),
             );
           }
-          return _recentRow(context, _recent[i - 1]);
+          final e = _recent[i - 1];
+          // 左へスワイプで1件削除（Google マップと同じ操作）
+          return Dismissible(
+            key: ValueKey('recent_dismiss_${e.dedupeKey}'),
+            direction: DismissDirection.endToStart,
+            background: Container(
+              color: Colors.red[400],
+              alignment: Alignment.centerRight,
+              padding: const EdgeInsets.only(right: 20),
+              child: const Icon(Icons.delete_outline, color: Colors.white),
+            ),
+            onDismissed: (_) => _removeRecent(e),
+            child: _recentRow(context, e),
+          );
         },
       );
     }
@@ -541,6 +609,8 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
       onTap: () =>
           e.isCamera ? _pickCamera(e.camera!) : _pickPlace(e.label, e.point!),
       onFill: () => _fillText(e.label),
+      onRemove: () => _removeRecent(e),
+      removeTooltip: context.l10n.placeSearchRemoveOne,
     );
   }
 }
@@ -556,6 +626,8 @@ class _ResultRow extends StatelessWidget {
     required this.distanceLabel,
     required this.onTap,
     required this.onFill,
+    this.onRemove,
+    this.removeTooltip,
   });
 
   final Widget leading;
@@ -564,6 +636,10 @@ class _ResultRow extends StatelessWidget {
   final String? distanceLabel;
   final VoidCallback onTap;
   final VoidCallback onFill;
+
+  /// 最近の検索の行だけ: 履歴から消す×ボタン
+  final VoidCallback? onRemove;
+  final String? removeTooltip;
 
   @override
   Widget build(BuildContext context) {
@@ -624,6 +700,13 @@ class _ResultRow extends StatelessWidget {
                 tooltip: context.l10n.placeSearchFillTooltip,
                 onPressed: onFill,
               ),
+              if (onRemove != null)
+                IconButton(
+                  key: ValueKey('recent_remove_$title'),
+                  icon: const Icon(Icons.close, size: 20),
+                  tooltip: removeTooltip,
+                  onPressed: onRemove,
+                ),
             ],
           ),
         ),

@@ -1864,6 +1864,24 @@ abstract class AppLocalizations {
   /// **'候補を入力欄に入れる'**
   String get placeSearchFillTooltip;
 
+  /// No description provided for @placeSearchClearAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'すべて削除'**
+  String get placeSearchClearAll;
+
+  /// No description provided for @placeSearchClearAllConfirm.
+  ///
+  /// In ja, this message translates to:
+  /// **'検索履歴をすべて削除しますか？'**
+  String get placeSearchClearAllConfirm;
+
+  /// No description provided for @placeSearchRemoveOne.
+  ///
+  /// In ja, this message translates to:
+  /// **'履歴から削除'**
+  String get placeSearchRemoveOne;
+
   /// No description provided for @placeSearchRecentTitle.
   ///
   /// In ja, this message translates to:

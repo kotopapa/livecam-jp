@@ -940,6 +940,15 @@ class AppLocalizationsJa extends AppLocalizations {
   String get placeSearchFillTooltip => '候補を入力欄に入れる';
 
   @override
+  String get placeSearchClearAll => 'すべて削除';
+
+  @override
+  String get placeSearchClearAllConfirm => '検索履歴をすべて削除しますか？';
+
+  @override
+  String get placeSearchRemoveOne => '履歴から削除';
+
+  @override
   String get placeSearchRecentTitle => '最近の検索';
 
   @override
@@ -3648,6 +3657,15 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get placeSearchFillTooltip => 'この こうほの もじを にゅうりょくらんに いれる';
+
+  @override
+  String get placeSearchClearAll => 'すべて けす';
+
+  @override
+  String get placeSearchClearAllConfirm => 'けんさくの りれきを すべて けしますか？';
+
+  @override
+  String get placeSearchRemoveOne => 'りれきから けす';
 
   @override
   String get placeSearchRecentTitle => 'さいきん けんさくした もの';

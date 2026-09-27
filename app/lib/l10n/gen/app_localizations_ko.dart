@@ -944,6 +944,15 @@ class AppLocalizationsKo extends AppLocalizations {
   String get placeSearchFillTooltip => '후보 텍스트를 입력란에 넣기';
 
   @override
+  String get placeSearchClearAll => '모두 삭제';
+
+  @override
+  String get placeSearchClearAllConfirm => '최근 검색 기록을 모두 삭제할까요?';
+
+  @override
+  String get placeSearchRemoveOne => '기록에서 삭제';
+
+  @override
   String get placeSearchRecentTitle => '최근 검색';
 
   @override

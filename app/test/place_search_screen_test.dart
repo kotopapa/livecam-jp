@@ -288,6 +288,35 @@ void main() {
     expect(find.text('横浜駅（神奈川県）'), findsOneWidget);
   });
 
+  testWidgets('最近の検索は×で1件ずつ、「すべて削除」でまとめて消せる（保存も消える）', (tester) async {
+    SharedPreferences.setMockInitialValues({
+      'recent_place_searches': [
+        '{"type":"place","label":"横浜駅（神奈川県）","lat":35.4657,"lng":139.622}',
+        '{"type":"place","label":"東京駅（東京都）","lat":35.681,"lng":139.767}',
+        '{"type":"place","label":"大阪駅（大阪府）","lat":34.702,"lng":135.495}',
+      ],
+    });
+    final app = await buildApp();
+    await pushSearch(tester, app: app, searchCameras: (_) => const []);
+    await tester.pumpAndSettle();
+    expect(find.byIcon(Icons.history), findsNWidgets(3));
+
+    await tester.tap(find.byKey(const ValueKey('recent_remove_横浜駅（神奈川県）')));
+    await tester.pumpAndSettle();
+    expect(find.text('横浜駅（神奈川県）'), findsNothing);
+    expect(find.byIcon(Icons.history), findsNWidgets(2));
+    var prefs = await SharedPreferences.getInstance();
+    expect(prefs.getStringList('recent_place_searches')!.length, 2);
+
+    await tester.tap(find.byKey(const Key('recent_clear_all')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('recent_clear_all_ok')));
+    await tester.pumpAndSettle();
+    expect(find.byIcon(Icons.history), findsNothing);
+    prefs = await SharedPreferences.getInstance();
+    expect(prefs.getStringList('recent_place_searches'), isNull);
+  });
+
   testWidgets('入力が空で最近の検索も無ければ何も表示しない', (tester) async {
     final app = await buildApp();
     await pushSearch(tester, app: app, searchCameras: (_) => const []);

@@ -975,6 +975,15 @@ class AppLocalizationsVi extends AppLocalizations {
   String get placeSearchFillTooltip => 'Điền gợi ý vào ô tìm kiếm';
 
   @override
+  String get placeSearchClearAll => 'Xóa tất cả';
+
+  @override
+  String get placeSearchClearAllConfirm => 'Xóa toàn bộ lịch sử tìm kiếm?';
+
+  @override
+  String get placeSearchRemoveOne => 'Xóa khỏi lịch sử';
+
+  @override
   String get placeSearchRecentTitle => 'Tìm kiếm gần đây';
 
   @override
