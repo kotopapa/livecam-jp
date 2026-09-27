@@ -158,7 +158,8 @@ class PinBitmaps {
     // 本体の右上隅 = (c+r, c-r)。ドット中心はそこから (dotSize/2-2) だけ外側
     if (isVideo) {
       const dotSize = 10.0;
-      final center = Offset(c + r + dotSize / 2 - 2, c - r - dotSize / 2 + 2);
+      // 旧 CameraPin の Positioned(top:-2, right:-2) と同じ位置＝丸の中心から右上へ (+10, -10)
+      final center = Offset(c + r - 3, c - r + 3);
       canvas.drawCircle(center, dotSize / 2, Paint()..color = liveDotColor);
       canvas.drawCircle(
         center,
