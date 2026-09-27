@@ -3711,6 +3711,8 @@ class _MapScreenState extends State<MapScreen> {
     if (_following) _stopFollowing();
     if (_situationExpanded) _dismissSituation();
     if (!_mapDragging) setState(() => _mapDragging = true);
+    // 地図を動かしたらシートは畳み、止まっても開き直さない（畳んだら畳んだまま。2026-09-27 要望）
+    if (_sheetExpanded) _setSheetExpanded(false);
     // 操作終了イベントを取り逃した場合のフェイルセーフ
     _mapDraggingFailsafe?.cancel();
     _mapDraggingFailsafe = Timer(const Duration(milliseconds: 600), () {
@@ -4051,7 +4053,7 @@ class _MapScreenState extends State<MapScreen> {
   /// 「畳み行の下に1行足す」案を採用した。2026-09-27 判断）
   /// 地図ドラッグ中は強制的に畳んで表示し、離したら [_sheetExpanded] の値に戻す
   Widget _bottomSheetPanel(BuildContext context, List<Camera> cams) {
-    final effectiveExpanded = _sheetExpanded && !_mapDragging;
+    final effectiveExpanded = _sheetExpanded;
     final attributions = _sheetAttributionSpans(context);
     return Material(
       color: Colors.white,
