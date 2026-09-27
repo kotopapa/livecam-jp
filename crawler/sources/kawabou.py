@@ -27,6 +27,11 @@ KAWABOU_ATTRIBUTION = "出典：国土交通省「川の防災情報」"
 KAWABOU_TERMS_URL = "https://www.river.go.jp/kawabou/kwb_apend/html/caution.html"  # 「取り扱い上の注意」(2026-08-31 実確認。旧URLはSPAシェルで規約本文なし)
 
 
+def _category(name: str, own_name: str) -> str:
+    """ダム（名称かダム管理所の設置）は dam、それ以外は river"""
+    return "dam" if ("ダム" in name or "ダム" in own_name) else "river"
+
+
 def pref_jis(pref_cd: int) -> str:
     """kawabou の prefCd（101〜4701）→ JIS X 0401 2桁コード。
 
@@ -149,7 +154,7 @@ def candidate_from_obsinfo(
         lat=lat,
         lng=lon,
         coord_accuracy="exact" if (lat and lon) else None,
-        category="river",
+        category=_category(name, own_name),
         prefecture=pref_jis(pref_cd),
         municipality=municipality_jis(pref_cd, obs.get("twnCd")),
         river_or_route=(obs.get("rvrNm") or None),
