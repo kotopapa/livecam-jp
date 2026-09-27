@@ -21,7 +21,7 @@ const Map<String, Color> categoryColors = {
 };
 
 /// カテゴリ別の記号（ピン中央・絞り込みチップに白で描く）。
-/// 河川・ダム・景観（双眼鏡）は Material Icons に該当が無いので [CategoryGlyph] が自前で描く。
+/// 河川・ダムは Material Icons に該当が無いので [CategoryGlyph] が自前で描く。
 /// 2026-09-27 ユーザー選定: 河川=蛇行線 / 道路=標識 / 火山=噴火 / ダム=堤体＋水 /
 /// 海岸=波 / 港湾=錨 / 景観=山 / 癒し=肉球 / その他=カメラ
 IconData? categoryIcon(String key) => switch (key) {
@@ -31,7 +31,7 @@ IconData? categoryIcon(String key) => switch (key) {
       'dam' => null, // 自前描画
       'coast' => Icons.waves,
       'port' => Icons.anchor,
-      'scenic' => null, // 自前描画（双眼鏡。街中の展望にも合うように。2026-09-27 要望）
+      'scenic' => Icons.photo_camera, // 2026-09-27 ユーザー選定（双眼鏡は小さいと判別できなかった）
       'healing' => Icons.pets,
       _ => Icons.videocam, // 'other' 及び未知キー
     };
@@ -60,32 +60,8 @@ class CategoryGlyph extends StatelessWidget {
 /// 自前描画の記号（河川・ダム・景観）
 CustomPainter glyphPainterFor(String category, Color color) => switch (category) {
       'dam' => DamGlyphPainter(color),
-      'scenic' => BinocularsGlyphPainter(color),
       _ => RiverGlyphPainter(color),
     };
-
-/// 景観: 双眼鏡（左右のレンズ筒＋中央のブリッジ）
-class BinocularsGlyphPainter extends CustomPainter {
-  const BinocularsGlyphPainter(this.color);
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final w = size.width, h = size.height;
-    final fill = Paint()..color = color;
-    // 上部の接眼部（左右の小さな筒）
-    canvas.drawRRect(RRect.fromLTRBR(w * 0.18, h * 0.14, w * 0.40, h * 0.42, Radius.circular(w * 0.05)), fill);
-    canvas.drawRRect(RRect.fromLTRBR(w * 0.60, h * 0.14, w * 0.82, h * 0.42, Radius.circular(w * 0.05)), fill);
-    // 中央のブリッジ
-    canvas.drawRect(Rect.fromLTRB(w * 0.38, h * 0.30, w * 0.62, h * 0.46), fill);
-    // 下部の対物レンズ（大きな円）
-    canvas.drawCircle(Offset(w * 0.27, h * 0.66), w * 0.22, fill);
-    canvas.drawCircle(Offset(w * 0.73, h * 0.66), w * 0.22, fill);
-  }
-
-  @override
-  bool shouldRepaint(BinocularsGlyphPainter old) => old.color != color;
-}
 
 class RiverGlyphPainter extends CustomPainter {
   const RiverGlyphPainter(this.color);
