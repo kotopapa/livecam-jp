@@ -114,7 +114,14 @@ class NiigataRoadParser(SourceParser):
                 license="unknown",
                 refresh_sec=120,
                 river_or_route=route,
-                address_hint=f"新潟県{city or ''}{point}",
+                # pointは末尾一致で市名込みの表記になっていることが多い
+                # （例:「十日町市樽沢」）。cityを重ねて付けると
+                # 「新潟県十日町市十日町市樽沢」のようになりGSIが解決できず
+                # 市町村レベルへフォールバックしてしまうため、
+                # 既にcityで始まっている場合は重ねない
+                address_hint=(f"新潟県{point}"
+                              if city and norm(point).startswith(norm(city))
+                              else f"新潟県{city or ''}{point}"),
                 review_note="新潟県土木部の道路カメラ。利用条件はレビューで確認",
             ))
         if not result.candidates:
