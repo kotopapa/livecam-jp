@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'dart:async';
 import 'dart:collection';
 import 'dart:typed_data';
@@ -23,21 +24,30 @@ import 'package:http/http.dart' as http;
 /// `GoogleMapController.clearTileCache(id)` を呼ぶこと（このクラス自身は
 /// controller を持たないため。map_screen.dart 側で行う）
 class UrlTileProvider implements TileProvider {
+  /// 拡大して切り出したタイル（キーは要求座標。template が変わったら捨てる）
+  final Map<String, Uint8List> _partCache = <String, Uint8List>{};
+
   UrlTileProvider({
-    required this.template,
+    required String template,
     this.tms = false,
     this.minZoom,
     this.maxZoom,
     this.headers,
     this.evenZoomOnly = false,
     http.Client? client,
-  })  : _client = client ?? http.Client(),
+  })  : _template = template, // ignore: prefer_initializing_formals
+        _client = client ?? http.Client(),
         _ownsClient = client == null;
 
   /// タイルURLのテンプレート（`{z}/{x}/{y}` を含む）。書き換え後は呼び出し側で
   /// `GoogleMapController.clearTileCache(id)` を呼ぶこと（このクラス自身は
   /// controller を持たない）
-  String template;
+  String get template => _template;
+  set template(String v) {
+    if (v != _template) _partCache.clear();
+    _template = v;
+  }
+  String _template;
   final bool tms;
   final int? minZoom;
   final int? maxZoom;
@@ -79,13 +89,26 @@ class UrlTileProvider implements TileProvider {
     if (d == 0) {
       bytes = await _fetch(zoom, x, y);
     } else {
-      final src = await _fetch(srcZ, x >> d, y >> d);
-      if (src != null) {
-        final mask = (1 << d) - 1;
-        try {
-          bytes = await _extractPart(src, 1 << d, x & mask, y & mask);
-        } catch (_) {
-          bytes = null; // 破損データ等は透明タイル
+      // 切り出し結果もキャッシュする（iOS の SDK は同じタイルを何度も要求し、
+      // そのたびにデコード・再エンコードすると実機で表示が追いつかなかった）
+      final key = '$zoom/$x/$y';
+      final hit = _partCache.remove(key);
+      if (hit != null) {
+        _partCache[key] = hit;
+        bytes = hit;
+      } else {
+        final src = await _fetch(srcZ, x >> d, y >> d);
+        if (src != null) {
+          final mask = (1 << d) - 1;
+          try {
+            bytes = await _extractPart(src, 1 << d, x & mask, y & mask);
+          } catch (_) {
+            bytes = null; // 破損データ等は透明タイル
+          }
+          if (bytes != null) {
+            _partCache[key] = bytes;
+            if (_partCache.length > 200) _partCache.remove(_partCache.keys.first);
+          }
         }
       }
     }
@@ -108,7 +131,8 @@ class UrlTileProvider implements TileProvider {
         img,
         ui.Rect.fromLTWH(sx * w, sy * h, w, h),
         ui.Rect.fromLTWH(0, 0, size.toDouble(), size.toDouble()),
-        ui.Paint()..filterQuality = ui.FilterQuality.none,
+        // メッシュ（気象庁の偶数ズーム）は補間なし、地図画像（今昔マップ等）は滑らかに
+        ui.Paint()..filterQuality = evenZoomOnly ? ui.FilterQuality.none : ui.FilterQuality.medium,
       );
       final out = await recorder.endRecording().toImage(size, size);
       try {

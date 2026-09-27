@@ -3315,7 +3315,15 @@ class _MapScreenState extends State<MapScreen> {
         _NoticeBanner(text: notice, onClose: () => _dismissNotice(notice)),
       // ルート沿い表示中の帯（台数・一覧・解除）。お知らせの有無に関係なく出す
       if (_route != null) _routeBanner(context),
-      Expanded(child: _mapStack(context)),
+      // バナーが上の安全領域を使うので、地図側では上余白を取り除く（検索窓がバナー分
+      // さらに下がっていた。2026-09-27）
+      Expanded(
+        child: MediaQuery.removePadding(
+          context: context,
+          removeTop: true,
+          child: Builder(builder: _mapStack),
+        ),
+      ),
     ]);
   }
 
