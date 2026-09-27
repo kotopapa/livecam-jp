@@ -257,12 +257,9 @@ class _MapScreenState extends State<MapScreen> {
     try {
       final prefs = await SharedPreferences.getInstance();
       final e = prefs.getBool(_controllerExpandedKey);
-      final sheet = prefs.getBool(_sheetExpandedKey);
       if (!mounted) return;
-      setState(() {
-        _controllerExpandedPref = e;
-        _sheetExpandedPref = sheet;
-      });
+      // シートは起動直後は開いた状態にする（前回の開閉は引き継がない。2026-09-27 要望）
+      setState(() => _controllerExpandedPref = e);
     } catch (_) {}
   }
 
@@ -274,12 +271,8 @@ class _MapScreenState extends State<MapScreen> {
     } catch (_) {}
   }
 
-  Future<void> _setSheetExpanded(bool expanded) async {
+  void _setSheetExpanded(bool expanded) {
     setState(() => _sheetExpandedPref = expanded);
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setBool(_sheetExpandedKey, expanded);
-    } catch (_) {}
   }
 
   void _toggleSheet() => _setSheetExpanded(!_sheetExpanded);
@@ -417,8 +410,7 @@ class _MapScreenState extends State<MapScreen> {
   /// 下部シート（Googleマップ風の折りたたみシート）の展開状態（既定は圧縮）。
   /// 地図ドラッグ中は強制的に畳み、離したらこの値に戻す（2026-09-27）
   bool? _sheetExpandedPref;
-  bool get _sheetExpanded => _sheetExpandedPref ?? false;
-  static const _sheetExpandedKey = 'map_sheet_expanded';
+  bool get _sheetExpanded => _sheetExpandedPref ?? true;
   /// ルート沿いカメラ（RouteCorridor）。null なら通常表示
   RouteResult? _route;
   List<CorridorCamera> _routeCameras = const [];
@@ -4076,15 +4068,9 @@ class _MapScreenState extends State<MapScreen> {
           child: Padding(
             padding: const EdgeInsets.fromLTRB(14, 6, 14, 6),
             child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-              Center(
-                child: Container(
-                  width: 32,
-                  height: 4,
-                  decoration: BoxDecoration(
-                      color: Colors.black26, borderRadius: BorderRadius.circular(2)),
-                ),
-              ),
-              const SizedBox(height: 6),
+              // 灰色のバーだけでは持ち上げられることが分かりにくいので、上向きの矢印を
+              // ぴょこぴょこ動かして示す（開いているときは下向き・静止。2026-09-27 要望）
+              Center(child: _SheetChevron(expanded: effectiveExpanded)),
               Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
                 Expanded(
                   child: Text(
@@ -4804,3 +4790,68 @@ class _RenderNoClipHitTest extends RenderProxyBox {
     return c.hitTest(result, position: position);
   }
 }
+
+/// シートの取っ手の矢印。畳んでいるときは上向きで、表示されるたびに3回はねる
+/// （無限には動かさない）。開いているときは下向きで静止
+class _SheetChevron extends StatefulWidget {
+  const _SheetChevron({required this.expanded});
+  final bool expanded;
+
+  @override
+  State<_SheetChevron> createState() => _SheetChevronState();
+}
+
+class _SheetChevronState extends State<_SheetChevron> with SingleTickerProviderStateMixin {
+  late final AnimationController _c =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 700));
+  Timer? _again;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _bounce());
+  }
+
+  @override
+  void didUpdateWidget(_SheetChevron old) {
+    super.didUpdateWidget(old);
+    if (old.expanded && !widget.expanded) _bounce();
+  }
+
+  /// 3回はねたあと、20秒おきにもう一度だけ知らせる（畳んでいる間）
+  Future<void> _bounce() async {
+    _again?.cancel();
+    if (!mounted || widget.expanded || MediaQuery.disableAnimationsOf(context)) return;
+    for (var i = 0; i < 3 && mounted && !widget.expanded; i++) {
+      await _c.forward(from: 0);
+    }
+    if (!mounted) return;
+    _again = Timer(const Duration(seconds: 20), _bounce);
+  }
+
+  @override
+  void dispose() {
+    _again?.cancel();
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final color = Theme.of(context).colorScheme.onSurfaceVariant;
+    return AnimatedBuilder(
+      animation: _c,
+      builder: (context, child) {
+        // 0→1 で上に4px跳ねて戻る（sin の半周）
+        final dy = widget.expanded ? 0.0 : -4 * math.sin(_c.value * math.pi);
+        return Transform.translate(offset: Offset(0, dy), child: child);
+      },
+      child: Icon(
+        widget.expanded ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_up,
+        size: 22,
+        color: color,
+      ),
+    );
+  }
+}
+

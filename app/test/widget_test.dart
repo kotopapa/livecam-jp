@@ -51,11 +51,9 @@ void main() {
     expect(find.text('一覧'), findsOneWidget);
     expect(find.text('備え'), findsOneWidget);
     expect(find.text('設定'), findsOneWidget);
-    // お気に入りはタブではなく地図下部シートのボタンから開く（既定は畳み状態
-    // なので、取っ手をタップして展開してからボタンを押す）
-    expect(find.text('お気に入り'), findsNothing);
-    await tester.tap(find.byKey(const Key('map_sheet_handle')));
-    await settle(tester);
+    // お気に入りはタブではなく地図下部シートのボタンから開く（起動直後はシートが開いている）
+    // お気に入りは下部タブには無い（地図のシートのボタンにある）
+    expect(find.widgetWithText(NavigationDestination, 'お気に入り'), findsNothing);
     await tester.tap(find.byKey(const Key('map_panel_favorites')));
     await settle(tester);
     expect(find.byType(FavoritesScreen), findsOneWidget);
@@ -87,14 +85,14 @@ void main() {
     expect(find.byKey(const Key('map_zoom_in')), findsOneWidget);
     expect(find.byKey(const Key('map_zoom_out')), findsOneWidget);
     expect(find.byKey(const Key('map_my_location')), findsOneWidget);
-    // 下部シートは既定で畳み状態＝ボタン行はまだ見えない
-    expect(find.byKey(const Key('map_panel_layers')), findsNothing);
-    // 取っ手をタップして展開するとボタン行が出る
-    await tester.tap(find.byKey(const Key('map_sheet_handle')));
-    await settle(tester);
+    // 下部シートは起動直後は開いている＝ボタン行が見える
     expect(find.byKey(const Key('map_panel_layers')), findsOneWidget);
     expect(find.byKey(const Key('map_panel_filter')), findsOneWidget);
     expect(find.byKey(const Key('map_panel_favorites')), findsOneWidget);
+    // 取っ手をタップすると畳まれ、ボタン行が消える
+    await tester.tap(find.byKey(const Key('map_sheet_handle')));
+    await settle(tester);
+    expect(find.byKey(const Key('map_panel_layers')), findsNothing);
   });
 
   testWidgets('レイヤーONで操作板カードが出て、タイトル行タップで展開される', (tester) async {
@@ -119,8 +117,6 @@ void main() {
     expect(find.byKey(const Key('map_control_panel_title')), findsNothing);
 
     // 下部シートは既定で畳み状態なので、取っ手をタップして展開する
-    await tester.tap(find.byKey(const Key('map_sheet_handle')));
-    await settle(tester);
     await tester.tap(find.byKey(const Key('map_panel_layers')));
     await settle(tester);
     // レイヤー選択シート（グリッド）から台風情報のタイルを選ぶ
@@ -324,8 +320,6 @@ void _legendSheetTests() {
     );
     await tester.pump();
     // 下部シートは既定で畳み状態なので、取っ手をタップして展開する
-    await tester.tap(find.byKey(const Key('map_sheet_handle')));
-    await settle(tester);
     final filterButton = find.byKey(const Key('map_panel_filter'));
     await tester.tap(filterButton);
     await settle(tester);
