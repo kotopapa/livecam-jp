@@ -155,8 +155,12 @@ class _MapScreenState extends State<MapScreen> {
     final c = _gmapController;
     if (c == null) return;
     final b = LatLngBounds.fromPoints(points);
-    final pad = [padding.left, padding.top, padding.right, padding.bottom]
-        .reduce(math.max);
+    // google_maps_flutter の newLatLngBounds は4辺一律の余白しか取れず、旧実装の
+    // 160px をそのまま渡すと幅390の画面で320px分が余白になり大きくズームアウトする。
+    // 下部の操作板・上部の検索ピルは GoogleMap.padding で既に避けているので、
+    // ここは小さめの余白で足りる
+    final pad = math.min(
+        [padding.left, padding.top, padding.right, padding.bottom].reduce(math.max), 40.0);
     _programmaticMove = true;
     try {
       await c.animateCamera(gmaps.CameraUpdate.newLatLngBounds(
@@ -1973,12 +1977,14 @@ class _MapScreenState extends State<MapScreen> {
 
   /// 台風の経路・予報円・暴風警戒域が収まる範囲に地図を寄せる（複数なら全部）
   void _fitToTyphoons(Iterable<Typhoon> typhoons) {
+    // 実況の中心と予報の中心・予報円だけに寄せる。過去の経路と暴風域まで含めると
+    // 東アジア全体が入る広域表示になってしまう（2026-09-27 要望）
     final pts = <LatLng>[];
     for (final t in typhoons) {
-      pts.addAll(t.track);
-      for (final p in t.points) {
+      pts.add(t.analysis.center);
+      for (final p in t.forecasts) {
         pts.add(p.center);
-        final r = (p.probabilityRadiusM ?? 0) + (p.stormRadiusKm ?? 0) * 1000;
+        final r = p.probabilityRadiusM ?? 0;
         if (r > 0) {
           // 半径分だけ四隅を広げる（緯度1度≒111km）
           final dLat = r / 111000;
@@ -2887,7 +2893,7 @@ class _MapScreenState extends State<MapScreen> {
       // 8秒以内に終わらず、前回位置のまま起動してしまう問題の対策）
       final last = await Geolocator.getLastKnownPosition();
       if (last != null && mounted) {
-        _moveCamera(LatLng(last.latitude, last.longitude), 11);
+        _moveCamera(LatLng(last.latitude, last.longitude), 13);
         _savePosition();
       }
       final pos = await Geolocator.getCurrentPosition(
@@ -2895,7 +2901,7 @@ class _MapScreenState extends State<MapScreen> {
                   const LocationSettings(accuracy: LocationAccuracy.medium))
           .timeout(const Duration(seconds: 15));
       if (!mounted) return;
-      _moveCamera(LatLng(pos.latitude, pos.longitude), 11);
+      _moveCamera(LatLng(pos.latitude, pos.longitude), 13);
       _savePosition();
     } catch (_) {
       // 取得できなければ最終既知位置または前回位置のまま
@@ -3755,6 +3761,7 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   Future<void> _onCameraIdle() async {
+    final wasProgrammatic = _programmaticMove;
     _programmaticMove = false;
     _mapDraggingFailsafe?.cancel();
     final c = _gmapController;
@@ -3781,7 +3788,8 @@ class _MapScreenState extends State<MapScreen> {
       if (zoomJumped) _zoom = zoom!;
     });
     if (!zoomJumped) _maybeRebuildForPan();
-    _savePosition();
+    // 台風の寄せ等アプリ側の移動で止まった位置は保存しない（次回起動が広域になってしまう）
+    if (!wasProgrammatic) _savePosition();
     _requestLayerDataForView();
     _updateKjRegion();
   }
@@ -3879,6 +3887,8 @@ class _MapScreenState extends State<MapScreen> {
                     vertical: _kjCompare == _KjCompare.vertical, split: _kjSplit),
                 child: gmaps.GoogleMap(
                   key: const ValueKey('kjOverlayMap'),
+                  // 2枚目はベース地図を描かない（今昔マップのタイルだけ。実機のメモリ・GPU 負荷を抑える）
+                  mapType: gmaps.MapType.none,
                   initialCameraPosition:
                       gmaps.CameraPosition(target: _g(_center), zoom: _zoom),
                   minMaxZoomPreference: const gmaps.MinMaxZoomPreference(2, 18),
