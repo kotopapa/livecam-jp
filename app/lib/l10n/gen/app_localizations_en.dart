@@ -2569,6 +2569,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get routeWidthLabel => 'Distance from the road';
 
   @override
+  String get routeToHere => 'Route here';
+
+  @override
   String get routeSearch => 'Find route';
 
   @override

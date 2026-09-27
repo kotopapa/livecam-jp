@@ -4498,6 +4498,12 @@ abstract class AppLocalizations {
   /// **'道路からの距離'**
   String get routeWidthLabel;
 
+  /// No description provided for @routeToHere.
+  ///
+  /// In ja, this message translates to:
+  /// **'ここへのルート'**
+  String get routeToHere;
+
   /// No description provided for @routeSearch.
   ///
   /// In ja, this message translates to:

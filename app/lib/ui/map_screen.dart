@@ -87,6 +87,8 @@ class _MapScreenState extends State<MapScreen> {
   /// ジェスチャーとプログラム移動を区別しないので、これが true の間は「追従解除・
   /// パネルを沈める・状況カードを閉じる」の利用者操作向けの処理をしない
   bool _programmaticMove = false;
+  /// 上部の検索で選んだ場所（地図に赤いピンと「ここへのルート」カードを出す）
+  ({String label, LatLng point})? _pickedPlace;
   /// 今昔マップのスワイプ比較で、どちらの地図が操作の起点か。2枚とも操作を受け、
   /// 起点になった側がもう一方をアニメーション無しで追従させる（2026-09-27 実機で
   /// 上の地図が操作不可だと、その下の地図にもタッチが届かずピンチできなかった）
@@ -2959,7 +2961,8 @@ class _MapScreenState extends State<MapScreen> {
     );
     if (!mounted || result == null) return;
     switch (result) {
-      case PlacePickResult(point: final point):
+      case PlacePickResult(point: final point, label: final label):
+        setState(() => _pickedPlace = (label: label, point: point));
         _stopFollowing();
         _moveCamera(point, 15);
         _savePosition();
@@ -3361,12 +3364,14 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   /// 出発地・目的地を入れて経路を引き、経路沿いのカメラだけを表示する
-  void _showRouteSheet(BuildContext context) {
+  void _showRouteSheet(BuildContext context, {String? destLabel, LatLng? destPoint}) {
     final l10n = context.l10n;
     final originCtl = TextEditingController();
-    final destCtl = TextEditingController();
+    final destCtl = TextEditingController(text: destLabel ?? '');
     LatLng? originPos; // 「現在地」または候補選択で確定した座標（入力欄より優先）
-    LatLng? destPos; // 候補選択で確定した座標
+    LatLng? destPos = destPoint; // 候補選択で確定した座標
+    // 検索した場所から開いたときは、出発地に現在地を自動で入れる
+    var autoOrigin = destPoint != null;
     var width = _routeWidthM;
     var busy = false;
 
@@ -3516,6 +3521,11 @@ class _MapScreenState extends State<MapScreen> {
                 originCtl.text = l10n.routeUseCurrentLocation;
               });
             } catch (_) {}
+          }
+
+          if (autoOrigin) {
+            autoOrigin = false;
+            WidgetsBinding.instance.addPostFrameCallback((_) => useCurrent());
           }
 
           return Padding(
@@ -3749,6 +3759,13 @@ class _MapScreenState extends State<MapScreen> {
     // （2026-09-27 実機の 0x8BADF00D で確認）。画面付近・中心に近い順に上限を設ける
     final markers = _capMarkers(_buildCameraMarkers(items, pins), _maxCameraMarkers)
       ..addAll(_capMarkers(_vectorMarkers(pins), _maxLayerMarkers));
+    if (_pickedPlace != null) {
+      markers.add(gmaps.Marker(
+        markerId: const gmaps.MarkerId('picked_place'),
+        position: _g(_pickedPlace!.point),
+        zIndexInt: 10,
+      ));
+    }
     // 今昔マップのスワイプ比較中は2枚目の GoogleMap を重ねる（このフレームでの
     // 判定を固定しておく。build途中で _kjRegion 等が変わっても揃えるため）
     final kjSwipeActive = _kjSwipeActive;
@@ -3935,6 +3952,51 @@ class _MapScreenState extends State<MapScreen> {
   /// 下部の固定領域（下から順に: 折りたたみシート → 操作板 → ズーム/現在地）。
   /// Googleマップ風レイアウト（2026-09-27）。検索は上部ピルへ移したのでここには無い。
   /// 地図の Stack 内で bottom 固定にする。
+  /// 検索で選んだ場所のカード（名称・「ここへのルート」・閉じる）
+  Widget _pickedPlaceCard(BuildContext context) {
+    final l10n = context.l10n;
+    final p = _pickedPlace!;
+    final canRoute = _hasGoogleRouteKey || widget.app.routeOrsKey.isNotEmpty;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+      child: Material(
+        color: Theme.of(context).colorScheme.surface,
+        elevation: 3,
+        borderRadius: BorderRadius.circular(16),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(14, 6, 4, 6),
+          child: Row(children: [
+            const Icon(Icons.place, color: Color(0xFFD93025)),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(p.label,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+            ),
+            if (canRoute)
+              FilledButton.icon(
+                key: const Key('picked_place_route'),
+                onPressed: () {
+                  final pp = _pickedPlace!;
+                  setState(() => _pickedPlace = null);
+                  _showRouteSheet(context, destLabel: pp.label, destPoint: pp.point);
+                },
+                icon: const Icon(Icons.directions, size: 18),
+                label: Text(l10n.routeToHere),
+                style: FilledButton.styleFrom(visualDensity: VisualDensity.compact),
+              ),
+            IconButton(
+              tooltip: l10n.commonClose,
+              icon: const Icon(Icons.close),
+              onPressed: () => setState(() => _pickedPlace = null),
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+
   Widget _bottomArea(BuildContext context, List<Camera> cams) {
     // stretch で各段を全幅にする（ズーム/現在地だけ内部で右寄せにする）。
     // _bottomAreaKey は高さを測って GoogleMap の padding（Googleロゴが隠れないように）
@@ -3944,6 +4006,7 @@ class _MapScreenState extends State<MapScreen> {
       const SizedBox(height: 12),
       // ズーム/現在地ボタンは含めず、地図を覆う帯の高さだけを GoogleMap の padding にする
       Column(key: _bottomAreaKey, mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      if (_pickedPlace != null) _pickedPlaceCard(context),
         _controlPanel(),
         Padding(
           padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),

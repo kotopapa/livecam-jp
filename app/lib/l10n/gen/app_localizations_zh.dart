@@ -2468,6 +2468,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get routeWidthLabel => '距道路的距离';
 
   @override
+  String get routeToHere => '到这里的路线';
+
+  @override
   String get routeSearch => '搜索路线';
 
   @override
@@ -5148,6 +5151,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get routeWidthLabel => '距道路的距離';
+
+  @override
+  String get routeToHere => '到這裡的路線';
 
   @override
   String get routeSearch => '搜尋路線';

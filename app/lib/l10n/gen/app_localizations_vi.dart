@@ -2577,6 +2577,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get routeWidthLabel => 'Khoảng cách từ đường';
 
   @override
+  String get routeToHere => 'Chỉ đường';
+
+  @override
   String get routeSearch => 'Tìm tuyến đường';
 
   @override

@@ -2481,6 +2481,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get routeWidthLabel => '道路からの距離';
 
   @override
+  String get routeToHere => 'ここへのルート';
+
+  @override
   String get routeSearch => '経路を検索';
 
   @override
@@ -5206,6 +5209,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get routeWidthLabel => 'みちからの きょり';
+
+  @override
+  String get routeToHere => 'ここへの ルート';
 
   @override
   String get routeSearch => 'みちを さがす';

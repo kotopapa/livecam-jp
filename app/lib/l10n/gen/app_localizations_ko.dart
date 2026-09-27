@@ -2491,6 +2491,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get routeWidthLabel => '도로에서의 거리';
 
   @override
+  String get routeToHere => '여기로 경로';
+
+  @override
   String get routeSearch => '경로 검색';
 
   @override
