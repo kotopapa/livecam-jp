@@ -3072,10 +3072,16 @@ class _MapScreenState extends State<MapScreen> {
                     children: [
                       for (final key in categoryKeys)
                         FilterChip(
-                          avatar: CircleAvatar(
-                              backgroundColor: categoryColor(key),
-                              radius: 6,
-                              child: CategoryGlyph(key, size: 8)),
+                          // 選択時のチェックマークがアイコンに重なって見分けられなかったため
+                          // チェックは出さず、選択は塗りと記号の濃さで示す（2026-09-27）
+                          showCheckmark: false,
+                          avatar: Opacity(
+                            opacity: app.enabledCategories.contains(key) ? 1 : 0.35,
+                            child: CircleAvatar(
+                                backgroundColor: categoryColor(key),
+                                radius: 10,
+                                child: CategoryGlyph(key, size: 12)),
+                          ),
                           label: Text('${categoryLabelOf(context.l10n, key)} '
                               '${counts[key] ?? 0}'),
                           selected: app.enabledCategories.contains(key),
