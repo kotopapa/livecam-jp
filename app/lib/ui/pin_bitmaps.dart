@@ -250,7 +250,7 @@ class PinBitmaps {
   void _paintGlyph(Canvas canvas, String category, double size, Color color) {
     final icon = categoryIcon(category);
     if (icon == null) {
-      final painter = category == 'dam' ? DamGlyphPainter(color) : RiverGlyphPainter(color);
+      final painter = glyphPainterFor(category, color);
       painter.paint(canvas, Size.square(size));
       return;
     }
