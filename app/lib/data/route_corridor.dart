@@ -1,10 +1,12 @@
 /// ルート沿いカメラ: 出発地と目的地の経路を引き、経路から一定距離（コリドー）内の
 /// カメラだけを取り出す。
 ///
-/// 経路は openrouteservice（OSMベース。無料枠 1日2,000回・APIキー必要）で計算する。
-/// キーはアプリに埋め込まず、配信 manifest の `route_ors_key`（publish 時に GitHub の
-/// Secret ORS_API_KEY から入れる）で受け取る。キーが無い環境では機能を出さない。
-/// 経路データの出典表記: openrouteservice / © OpenStreetMap contributors
+/// 経路は Google Routes API（ネイティブ側の Google Maps 用キーを NativeConfig
+/// 経由で流用）を優先し、キー未設定・エラー・割り当て超過などで失敗したときは
+/// openrouteservice（OSMベース。無料枠 1日2,000回・APIキー必要。キーはアプリに
+/// 埋め込まず配信 manifest の `route_ors_key` で受け取る）にフォールバックする。
+/// どちらも使えない環境では機能を出さない。
+/// 出典表記は使ったサービスに応じて切り替える（[RouteResult.attribution]）
 library;
 
 import 'dart:convert';
@@ -14,6 +16,7 @@ import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 
 import '../models/camera.dart';
+import 'native_config.dart';
 
 /// 経路計算の結果
 class RouteResult {
@@ -21,11 +24,19 @@ class RouteResult {
     required this.points,
     required this.distanceM,
     required this.durationS,
+    required this.source,
   });
 
   final List<LatLng> points;
   final double distanceM;
   final double durationS;
+
+  /// 経路を計算したサービス: 'google' または 'ors'
+  final String source;
+
+  /// 出典表記（画面表示用）
+  String get attribution =>
+      source == 'google' ? RouteCorridor.attributionGoogle : RouteCorridor.attribution;
 }
 
 /// 経路上の位置付きのカメラ（一覧の並び順に使う）
@@ -45,12 +56,90 @@ class RouteCorridor {
   RouteCorridor._();
 
   static const attribution = '経路: openrouteservice / © OpenStreetMap contributors';
+  static const attributionGoogle = '経路: Google';
+
+  /// ルート検索シートで、実際に使うサービスが決まる前に出す案内文
+  static const attributionNotice =
+      '経路: Google（利用できない場合は openrouteservice / © OpenStreetMap contributors）';
+
   static const _ua = {
     'User-Agent': 'LiveCamJP/1.0 (+https://kotopapa.github.io/livecam-jp/)'
   };
 
-  /// openrouteservice の自動車経路。失敗は null
+  /// 自動車経路。Google Routes API を優先し、キー未設定・エラー・割り当て超過
+  /// などで使えないときは openrouteservice にフォールバックする。両方失敗なら null。
+  /// [googleApiKey] / [googleHeaders] を渡すとテストで固定できる（null なら
+  /// NativeConfig から都度取得）
   static Future<RouteResult?> fetchRoute(
+    LatLng origin,
+    LatLng destination, {
+    required String orsApiKey,
+    http.Client? client,
+    String? googleApiKey,
+    Map<String, String>? googleHeaders,
+  }) async {
+    final gKey = googleApiKey ?? await NativeConfig.instance.getGoogleMapsApiKey();
+    if (gKey != null && gKey.isNotEmpty) {
+      final headers = googleHeaders ?? await NativeConfig.instance.getAppRestrictionHeaders();
+      final g = await _fetchGoogleRoute(origin, destination,
+          apiKey: gKey, headers: headers, client: client);
+      if (g != null) return g;
+    }
+    return _fetchOrsRoute(origin, destination, apiKey: orsApiKey, client: client);
+  }
+
+  /// Google Routes API (computeRoutes) の自動車経路。失敗は null
+  static Future<RouteResult?> _fetchGoogleRoute(
+    LatLng origin,
+    LatLng destination, {
+    required String apiKey,
+    required Map<String, String> headers,
+    http.Client? client,
+  }) async {
+    final c = client ?? http.Client();
+    try {
+      final r = await c
+          .post(
+            Uri.parse('https://routes.googleapis.com/directions/v2:computeRoutes'),
+            headers: {
+              ...headers,
+              'Content-Type': 'application/json',
+              'X-Goog-Api-Key': apiKey,
+              'X-Goog-FieldMask':
+                  'routes.polyline.encodedPolyline,routes.distanceMeters,routes.duration',
+            },
+            body: jsonEncode({
+              'origin': {
+                'location': {
+                  'latLng': {'latitude': origin.latitude, 'longitude': origin.longitude}
+                }
+              },
+              'destination': {
+                'location': {
+                  'latLng': {
+                    'latitude': destination.latitude,
+                    'longitude': destination.longitude
+                  }
+                }
+              },
+              'travelMode': 'DRIVE',
+              'polylineQuality': 'OVERVIEW',
+              'languageCode': 'ja',
+              'units': 'METRIC',
+            }),
+          )
+          .timeout(const Duration(seconds: 20));
+      if (r.statusCode != 200) return null;
+      return parseGoogleRoutes(jsonDecode(utf8.decode(r.bodyBytes)));
+    } catch (_) {
+      return null;
+    } finally {
+      if (client == null) c.close();
+    }
+  }
+
+  /// openrouteservice の自動車経路。失敗は null
+  static Future<RouteResult?> _fetchOrsRoute(
     LatLng origin,
     LatLng destination, {
     required String apiKey,
@@ -85,65 +174,29 @@ class RouteCorridor {
     }
   }
 
-  /// 地名・施設名の検索（openrouteservice の Geocoding API。OSM ベースで
-  /// 「赤レンガ倉庫」のような施設名に対応。無料枠 1日1,000回）。
-  /// 国土地理院の住所検索は住所専用で、施設名を入れると部分一致の住所が返るため
-  /// （「赤レンガ倉庫」→「福岡県赤村」）、こちらを主に使う。失敗は空
-  static Future<List<(String, LatLng)>> geocode(
-    String query, {
-    required String apiKey,
-    http.Client? client,
-    int size = 8,
-  }) async {
-    final q = query.trim();
-    if (apiKey.isEmpty || q.isEmpty) return const [];
-    final c = client ?? http.Client();
-    try {
-      final uri = Uri.https('api.openrouteservice.org', '/geocode/search', {
-        'api_key': apiKey,
-        'text': q,
-        'boundary.country': 'JP',
-        'size': '$size',
-        'lang': 'ja',
-      });
-      final r = await c.get(uri, headers: _ua).timeout(const Duration(seconds: 15));
-      if (r.statusCode != 200) return const [];
-      return parseGeocode(jsonDecode(utf8.decode(r.bodyBytes)));
-    } catch (_) {
-      return const [];
-    } finally {
-      if (client == null) c.close();
-    }
-  }
-
-  /// Pelias 形式の応答 → (表示名, 座標)。表示名は「名称（地域 市区町村）」
-  static List<(String, LatLng)> parseGeocode(Object? json) {
-    if (json is! Map) return const [];
-    final features = json['features'];
-    if (features is! List) return const [];
-    final out = <(String, LatLng)>[];
-    final seen = <String>{};
-    for (final f in features) {
-      if (f is! Map) continue;
-      final geom = f['geometry'];
-      final coords = geom is Map ? geom['coordinates'] : null;
-      if (coords is! List || coords.length < 2 || coords[0] is! num || coords[1] is! num) {
-        continue;
-      }
-      final props = f['properties'];
-      if (props is! Map) continue;
-      final name = props['name']?.toString() ?? '';
-      if (name.isEmpty) continue;
-      final region = props['region']?.toString() ?? '';
-      final locality = (props['locality'] ?? props['county'])?.toString() ?? '';
-      final where = [region, if (locality.isNotEmpty && locality != region) locality]
-          .where((e) => e.isNotEmpty)
-          .join(' ');
-      final label = where.isEmpty ? name : '$name（$where）';
-      if (!seen.add(label)) continue;
-      out.add((label, LatLng((coords[1] as num).toDouble(), (coords[0] as num).toDouble())));
-    }
-    return out;
+  /// Google Routes API (computeRoutes) の応答 → RouteResult。
+  /// duration は "1234s" 形式の文字列で返る
+  static RouteResult? parseGoogleRoutes(Object? json) {
+    if (json is! Map) return null;
+    final routes = json['routes'];
+    if (routes is! List || routes.isEmpty) return null;
+    final route = routes.first;
+    if (route is! Map) return null;
+    final polyline = route['polyline'];
+    final encoded = polyline is Map ? polyline['encodedPolyline'] as String? : null;
+    if (encoded == null || encoded.isEmpty) return null;
+    final pts = decodePolyline(encoded);
+    if (pts.length < 2) return null;
+    final distance = route['distanceMeters'];
+    final durationStr = route['duration']?.toString() ?? '';
+    final durationS =
+        double.tryParse(durationStr.replaceAll(RegExp(r'[^0-9.]'), '')) ?? 0;
+    return RouteResult(
+      points: pts,
+      distanceM: distance is num ? distance.toDouble() : 0,
+      durationS: durationS,
+      source: 'google',
+    );
   }
 
   /// ORS の GeoJSON 応答（features[0].geometry.coordinates = [[lng,lat],...]）
@@ -170,7 +223,42 @@ class RouteCorridor {
       points: pts,
       distanceM: summary is Map ? asDouble(summary['distance']) : 0,
       durationS: summary is Map ? asDouble(summary['duration']) : 0,
+      source: 'ors',
     );
+  }
+
+  /// Google のエンコード済みポリライン（精度5）をデコードする。
+  /// google_maps_flutter にはデコーダが無いため自前実装（アルゴリズムは
+  /// https://developers.google.com/maps/documentation/utilities/polylinealgorithm）
+  static List<LatLng> decodePolyline(String encoded) {
+    final points = <LatLng>[];
+    var index = 0;
+    var lat = 0;
+    var lng = 0;
+    final len = encoded.length;
+    while (index < len) {
+      var result = 0;
+      var shift = 0;
+      int b;
+      do {
+        b = encoded.codeUnitAt(index++) - 63;
+        result |= (b & 0x1f) << shift;
+        shift += 5;
+      } while (b >= 0x20);
+      lat += (result & 1) != 0 ? ~(result >> 1) : (result >> 1);
+
+      result = 0;
+      shift = 0;
+      do {
+        b = encoded.codeUnitAt(index++) - 63;
+        result |= (b & 0x1f) << shift;
+        shift += 5;
+      } while (b >= 0x20);
+      lng += (result & 1) != 0 ? ~(result >> 1) : (result >> 1);
+
+      points.add(LatLng(lat / 1e5, lng / 1e5));
+    }
+    return points;
   }
 
   /// 経路の点列を間引く（Douglas–Peucker、許容誤差 m）。カメラ照合の計算量を抑える

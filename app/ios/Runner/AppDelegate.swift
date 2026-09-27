@@ -39,6 +39,23 @@ import MetricKit
 
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
+    // ルート検索(Google Routes API)・地名検索(Google Places API (New))用:
+    // 新しいAPIキーは発行せず、地図表示に使っているGoogle Mapsキー(GMSApiKey)を
+    // Dart側へ渡す。キーはバンドルIDで制限されているため、REST呼び出し用に
+    // バンドルIDもヘッダー用に返す（lib/data/native_config.dart）
+    let configChannel = FlutterMethodChannel(
+      name: "livecam/native_config",
+      binaryMessenger: engineBridge.applicationRegistrar.messenger())
+    configChannel.setMethodCallHandler { call, result in
+      switch call.method {
+      case "getGoogleMapsApiKey":
+        result(Bundle.main.object(forInfoDictionaryKey: "GMSApiKey") as? String ?? "")
+      case "getAppRestrictionHeaders":
+        result(["X-Ios-Bundle-Identifier": Bundle.main.bundleIdentifier ?? ""])
+      default:
+        result(FlutterMethodNotImplemented)
+      }
+    }
   }
 
   // APNsトークンをFirebase Messagingへ明示的に紐付ける

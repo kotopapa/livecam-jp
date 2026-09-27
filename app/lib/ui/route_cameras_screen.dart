@@ -9,10 +9,18 @@ import 'detail_screen.dart';
 
 /// ルート沿いのカメラ一覧（出発地からの経路上距離の順）
 class RouteCamerasScreen extends StatefulWidget {
-  const RouteCamerasScreen({super.key, required this.app, required this.cameras});
+  const RouteCamerasScreen({
+    super.key,
+    required this.app,
+    required this.cameras,
+    this.attribution = RouteCorridor.attribution,
+  });
 
   final AppState app;
   final List<CorridorCamera> cameras;
+
+  /// 出典表記。経路計算に使ったサービスにより異なる（RouteResult.attribution）
+  final String attribution;
 
   @override
   State<RouteCamerasScreen> createState() => _RouteCamerasScreenState();
@@ -41,7 +49,7 @@ class _RouteCamerasScreenState extends State<RouteCamerasScreen> {
                 if (i == widget.cameras.length) {
                   return Padding(
                     padding: const EdgeInsets.all(12),
-                    child: Text(RouteCorridor.attribution,
+                    child: Text(widget.attribution,
                         style: TextStyle(fontSize: 10, color: Colors.grey[600])),
                   );
                 }

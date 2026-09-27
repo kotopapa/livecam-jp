@@ -19,6 +19,25 @@ Camera _cam(String id, double lat, double lng) => Camera.tryParse({
       'review': {'status': 'approved'},
     })!;
 
+/// Google の公式サンプルのエンコード済みポリライン（精度5）。
+/// デコード結果: (38.5,-120.2), (40.7,-120.95), (43.252,-126.453)
+/// https://developers.google.com/maps/documentation/utilities/polylinealgorithm
+const _googleSamplePolyline = '_p~iF~ps|U_ulLnnqC_mqNvxq`@';
+
+Map<String, Object?> _googleRoutesJson({
+  String polyline = _googleSamplePolyline,
+  num distanceMeters = 12345,
+  String duration = '600s',
+}) => {
+      'routes': [
+        {
+          'polyline': {'encodedPolyline': polyline},
+          'distanceMeters': distanceMeters,
+          'duration': duration,
+        }
+      ],
+    };
+
 void main() {
   // 東京駅(35.681,139.767) → 横浜駅(35.466,139.622) をほぼ直線で結ぶ経路
   final route = [
@@ -60,7 +79,7 @@ void main() {
     expect(RouteCorridor.simplify(pts.take(2).toList(), 50).length, 2);
   });
 
-  test('ORS の GeoJSON 応答を経路にする', () {
+  test('ORS の GeoJSON 応答を経路にする（source=ors、出典はopenrouteservice）', () {
     final r = RouteCorridor.parseGeoJson({
       'type': 'FeatureCollection',
       'features': [
@@ -82,54 +101,78 @@ void main() {
     expect(r.points.first.latitude, 35.681);
     expect(r.distanceM, 31234.5);
     expect(r.durationS, 2400);
+    expect(r.source, 'ors');
+    expect(r.attribution, RouteCorridor.attribution);
     expect(RouteCorridor.parseGeoJson({'features': []}), isNull);
     expect(RouteCorridor.parseGeoJson('x'), isNull);
   });
 
-  test('geocode: Pelias 応答を「名称（地域 市区町村）」と座標にする', () {
-    final hits = RouteCorridor.parseGeocode({
-      'features': [
-        {
-          'geometry': {'coordinates': [139.645066, 35.452281]},
-          'properties': {'name': '赤レンガ倉庫', 'region': '神奈川', 'locality': '横浜市'},
-        },
-        {
-          'geometry': {'coordinates': [136.074534, 35.661958]},
-          'properties': {'name': '赤レンガ倉庫', 'region': '福井', 'locality': '敦賀市'},
-        },
-        {
-          'geometry': {'coordinates': [135.437597, 34.651466]},
-          'properties': {'name': '赤レンガ倉庫横広場', 'region': '大阪', 'locality': '大阪'},
-        },
-        {'geometry': {'coordinates': ['x', 1]}, 'properties': {'name': '壊れ'}},
-      ]
-    });
-    expect(hits.map((h) => h.$1).toList(),
-        ['赤レンガ倉庫（神奈川 横浜市）', '赤レンガ倉庫（福井 敦賀市）', '赤レンガ倉庫横広場（大阪）']);
-    expect(hits.first.$2.latitude, 35.452281);
-    expect(RouteCorridor.parseGeocode({'features': []}), isEmpty);
-    expect(RouteCorridor.parseGeocode(null), isEmpty);
+  test('decodePolyline: Google公式サンプルを既知の3点にデコードする', () {
+    final pts = RouteCorridor.decodePolyline(_googleSamplePolyline);
+    expect(pts.length, 3);
+    expect(pts[0].latitude, closeTo(38.5, 1e-4));
+    expect(pts[0].longitude, closeTo(-120.2, 1e-4));
+    expect(pts[1].latitude, closeTo(40.7, 1e-4));
+    expect(pts[1].longitude, closeTo(-120.95, 1e-4));
+    expect(pts[2].latitude, closeTo(43.252, 1e-4));
+    expect(pts[2].longitude, closeTo(-126.453, 1e-4));
   });
 
-  test('geocode: キーが無ければ呼ばない', () async {
-    var calls = 0;
-    final client = MockClient((_) async {
-      calls++;
-      return http.Response('{"features":[]}', 200);
-    });
-    expect(await RouteCorridor.geocode('横浜', apiKey: '', client: client), isEmpty);
-    expect(calls, 0);
-    expect(await RouteCorridor.geocode('横浜', apiKey: 'KEY', client: client), isEmpty);
-    expect(calls, 1);
+  test('Google Routes API の応答を経路にする（source=google、出典はGoogle）', () {
+    final r = RouteCorridor.parseGoogleRoutes(_googleRoutesJson())!;
+    expect(r.points.length, 3);
+    expect(r.distanceM, 12345);
+    expect(r.durationS, 600);
+    expect(r.source, 'google');
+    expect(r.attribution, RouteCorridor.attributionGoogle);
+    expect(RouteCorridor.parseGoogleRoutes({'routes': []}), isNull);
+    expect(RouteCorridor.parseGoogleRoutes('x'), isNull);
+    expect(
+        RouteCorridor.parseGoogleRoutes({
+          'routes': [{'polyline': {}}]
+        }),
+        isNull);
+    expect(
+        RouteCorridor.parseGoogleRoutes({
+          'routes': [{'polyline': {'encodedPolyline': ''}}]
+        }),
+        isNull);
   });
 
-  test('fetchRoute: キーが無ければ呼ばない、200 以外は null', () async {
-    var calls = 0;
+  test('fetchRoute: Google が使えれば優先し、ORS は呼ばない', () async {
+    var googleCalls = 0;
+    var orsCalls = 0;
     final client = MockClient((req) async {
-      calls++;
-      expect(req.headers['Authorization'], 'KEY');
-      final body = jsonDecode(req.body) as Map;
-      expect((body['coordinates'] as List).length, 2);
+      if (req.url.host == 'routes.googleapis.com') {
+        googleCalls++;
+        expect(req.headers['X-Goog-Api-Key'], 'GKEY');
+        expect(req.headers['X-Goog-FieldMask'], contains('encodedPolyline'));
+        expect(req.headers['X-Ios-Bundle-Identifier'], 'jp.livecam.livecamJp');
+        final body = jsonDecode(req.body) as Map;
+        expect(body['travelMode'], 'DRIVE');
+        expect(body['origin']['location']['latLng']['latitude'], route.first.latitude);
+        return http.Response(jsonEncode(_googleRoutesJson()), 200);
+      }
+      orsCalls++;
+      return http.Response('quota', 429);
+    });
+    final r = await RouteCorridor.fetchRoute(route.first, route.last,
+        orsApiKey: 'ORSKEY',
+        googleApiKey: 'GKEY',
+        googleHeaders: const {'X-Ios-Bundle-Identifier': 'jp.livecam.livecamJp'},
+        client: client);
+    expect(r, isNotNull);
+    expect(r!.source, 'google');
+    expect(googleCalls, 1);
+    expect(orsCalls, 0);
+  });
+
+  test('fetchRoute: Google が失敗（キー制限・割り当て超過等）したら ORS にフォールバック', () async {
+    final client = MockClient((req) async {
+      if (req.url.host == 'routes.googleapis.com') {
+        return http.Response('error', 403);
+      }
+      expect(req.headers['Authorization'], 'ORSKEY');
       return http.Response(
           jsonEncode({
             'features': [
@@ -137,7 +180,7 @@ void main() {
                 'geometry': {
                   'coordinates': [
                     [139.767, 35.681],
-                    [139.622, 35.466]
+                    [139.622, 35.466],
                   ]
                 },
                 'properties': {
@@ -148,19 +191,51 @@ void main() {
           }),
           200);
     });
-    expect(
-        await RouteCorridor.fetchRoute(route.first, route.last,
-            apiKey: '', client: client),
-        isNull);
-    expect(calls, 0);
     final r = await RouteCorridor.fetchRoute(route.first, route.last,
-        apiKey: 'KEY', client: client);
+        orsApiKey: 'ORSKEY', googleApiKey: 'GKEY', googleHeaders: const {}, client: client);
     expect(r, isNotNull);
+    expect(r!.source, 'ors');
+  });
+
+  test('fetchRoute: Google キー無し・ORS キー無しなら両方呼ばず null', () async {
+    var calls = 0;
+    final client = MockClient((_) async {
+      calls++;
+      return http.Response('', 200);
+    });
+    final r = await RouteCorridor.fetchRoute(route.first, route.last,
+        orsApiKey: '', googleApiKey: '', client: client);
+    expect(r, isNull);
+    expect(calls, 0);
+  });
+
+  test('fetchRoute: Google キー無し・ORS キーありなら ORS だけ呼ぶ', () async {
+    var calls = 0;
+    final client = MockClient((req) async {
+      calls++;
+      expect(req.url.host, 'api.openrouteservice.org');
+      return http.Response(
+          jsonEncode({
+            'features': [
+              {
+                'geometry': {
+                  'coordinates': [
+                    [139.767, 35.681],
+                    [139.622, 35.466],
+                  ]
+                },
+                'properties': {
+                  'summary': {'distance': 1, 'duration': 1}
+                },
+              }
+            ]
+          }),
+          200);
+    });
+    final r = await RouteCorridor.fetchRoute(route.first, route.last,
+        orsApiKey: 'ORSKEY', googleApiKey: '', client: client);
+    expect(r, isNotNull);
+    expect(r!.source, 'ors');
     expect(calls, 1);
-    final bad = MockClient((_) async => http.Response('quota', 429));
-    expect(
-        await RouteCorridor.fetchRoute(route.first, route.last,
-            apiKey: 'KEY', client: bad),
-        isNull);
   });
 }

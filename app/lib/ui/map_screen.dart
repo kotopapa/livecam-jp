@@ -24,6 +24,8 @@ import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
 import '../data/kjmap.dart';
+import '../data/native_config.dart';
+import '../data/places_search.dart';
 import '../data/route_corridor.dart';
 import '../data/situation.dart';
 import '../data/shelter_layers.dart';
@@ -69,6 +71,10 @@ class _MapScreenState extends State<MapScreen> {
   gmaps.GoogleMapController? _gmapController;
   LatLng _center = _initialCenter; // 現在のカメラ中心（onCameraMove/Idle で追従）
   double _zoom = _initialZoom;
+  /// Google Maps 用キー（ネイティブ側）がルート検索に使えるか。NativeConfig の
+  /// 取得は非同期のため initState で先読みして bool に落とす（ルートボタンの
+  /// 表示条件は「Google キーがある or ORS キーがある」）
+  bool _hasGoogleRouteKey = false;
   /// 直近の可視領域（onCameraIdle で getVisibleRegion() を取り直す。flutter_map の
   /// LatLngBounds 型をそのまま再利用している。初回レイアウト前は null）
   LatLngBounds? _visibleBounds;
@@ -229,6 +235,11 @@ class _MapScreenState extends State<MapScreen> {
     _loadSituation();
     _situationTimer = Timer.periodic(const Duration(minutes: 10), (_) => _loadSituation());
     _loadPanelPrefs();
+    NativeConfig.instance.getGoogleMapsApiKey().then((k) {
+      if (mounted && k != null && k.isNotEmpty) {
+        setState(() => _hasGoogleRouteKey = true);
+      }
+    });
   }
 
   Future<void> _loadPanelPrefs() async {
@@ -2960,7 +2971,9 @@ class _MapScreenState extends State<MapScreen> {
             setSheetState(() => searching = true);
             cameraHits = _searchCameras(q);
             try {
-              results = await _searchPlace(q);
+              final places = await PlacesSearch.textSearch(q,
+                  bias: _center, languageCode: Localizations.localeOf(context).languageCode);
+              results = places ?? await _searchPlace(q);
             } catch (_) {
               results = const [];
             }
@@ -3397,7 +3410,9 @@ class _MapScreenState extends State<MapScreen> {
                 ? null
                 : () => Navigator.of(context).push(MaterialPageRoute<void>(
                     builder: (_) => RouteCamerasScreen(
-                        app: widget.app, cameras: _routeCameras))),
+                        app: widget.app,
+                        cameras: _routeCameras,
+                        attribution: _route?.attribution ?? RouteCorridor.attribution))),
             child: const Icon(Icons.list, size: 20),
           ),
           TextButton(
@@ -3429,8 +3444,8 @@ class _MapScreenState extends State<MapScreen> {
 
     /// 地名を座標にする。候補が複数あれば選ばせる（同名の別地点の取り違え防止。
     /// 例:「赤レンガ倉庫」は横浜・函館・舞鶴にある）。null は見つからない／取消
-    /// 候補: 台帳のカメラ名 → openrouteservice の地名検索（施設名に強い）→
-    /// 国土地理院の住所検索（住所向け）の順に集める
+    /// 候補: 台帳のカメラ名 → Google Places（施設名に強い）→
+    /// 国土地理院の住所検索（住所向け・Google が使えないときのフォールバック）の順に集める
     Future<List<(String, LatLng)>> candidates(String query) async {
       final out = <(String, LatLng)>[];
       for (final c in _searchCameras(query).take(5)) {
@@ -3438,9 +3453,11 @@ class _MapScreenState extends State<MapScreen> {
         final pref = c.prefecture.isEmpty ? '' : prefectureNameOf(l10n, c.prefecture);
         out.add((l10n.routeCandidateCamera(c.name, pref), LatLng(c.lat!, c.lng!)));
       }
-      final geo = await RouteCorridor.geocode(query, apiKey: widget.app.routeOrsKey);
-      out.addAll(geo);
-      if (geo.isEmpty) {
+      final places = await PlacesSearch.textSearch(query,
+          bias: _center, languageCode: Localizations.localeOf(context).languageCode);
+      if (places != null && places.isNotEmpty) {
+        out.addAll(places);
+      } else {
         try {
           out.addAll((await _searchPlace(query)).take(5));
         } catch (_) {}
@@ -3526,7 +3543,7 @@ class _MapScreenState extends State<MapScreen> {
               }
               if (error == null && !cancelled && o != null && d != null) {
                 final route = await RouteCorridor.fetchRoute(o, d,
-                    apiKey: widget.app.routeOrsKey);
+                    orsApiKey: widget.app.routeOrsKey);
                 if (route == null) {
                   error = l10n.routeNotFound;
                 } else {
@@ -3636,7 +3653,7 @@ class _MapScreenState extends State<MapScreen> {
               const SizedBox(height: 6),
               Text(l10n.routeDisclaimer,
                   style: TextStyle(fontSize: 10, color: Colors.grey[600])),
-              Text(RouteCorridor.attribution,
+              Text(RouteCorridor.attributionNotice,
                   style: TextStyle(fontSize: 9, color: Colors.grey[600])),
             ]),
           );
@@ -4425,8 +4442,9 @@ class _MapScreenState extends State<MapScreen> {
                 title: Text(l10n.mapPanelMoreTitle,
                     style: const TextStyle(fontWeight: FontWeight.bold)),
                 subtitle: Text(l10n.mapPanelMoreSubtitle)),
-            // ルート沿いカメラ（配信 manifest にキーがある間だけ出す）
-            if (widget.app.routeOrsKey.isNotEmpty)
+            // ルート沿いカメラ（Google キー(ネイティブ)か ORS キー(配信manifest)の
+            // どちらかがある間だけ出す）
+            if (_hasGoogleRouteKey || widget.app.routeOrsKey.isNotEmpty)
               ListTile(
                 leading: const Icon(Icons.route_outlined),
                 title: Text(l10n.mapRouteMenu),
