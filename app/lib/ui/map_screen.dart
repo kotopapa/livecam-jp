@@ -4013,7 +4013,17 @@ class _MapScreenState extends State<MapScreen> {
       _zoomAndLocation(),
       const SizedBox(height: 12),
       // ズーム/現在地ボタンは含めず、地図を覆う帯の高さだけを GoogleMap の padding にする
-      Column(key: _bottomAreaKey, mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      // シートの開閉アニメーション（AnimatedSize）の途中・終了でも高さを測り直し、
+      // GoogleMap の padding（左下の Google ロゴの位置）を追従させる
+      NotificationListener<SizeChangedLayoutNotification>(
+        onNotification: (_) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (mounted) _measureBottomArea();
+          });
+          return true;
+        },
+        child: SizeChangedLayoutNotifier(
+        child: Column(key: _bottomAreaKey, mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       if (_pickedPlace != null) _pickedPlaceCard(context),
         _controlPanel(),
         Padding(
@@ -4021,6 +4031,8 @@ class _MapScreenState extends State<MapScreen> {
           child: _bottomSheetPanel(context, cams),
         ),
       ]),
+      ),
+      ),
     ]);
   }
 

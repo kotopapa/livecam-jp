@@ -4,6 +4,8 @@ import 'dart:collection';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
+import 'package:image/image.dart' as imglib;
+
 import 'package:google_maps_flutter/google_maps_flutter.dart' show Tile, TileProvider;
 import 'package:http/http.dart' as http;
 
@@ -136,8 +138,21 @@ class UrlTileProvider implements TileProvider {
       );
       final out = await recorder.endRecording().toImage(size, size);
       try {
-        final data = await out.toByteData(format: ui.ImageByteFormat.png);
-        return data!.buffer.asUint8List();
+        // Flutter の PNG 書き出し（RGBA＋sBIT）は iOS 実機の Google Maps SDK が
+        // 「Don't support little endian bitmaps」で受け付けず、拡大したタイルが
+        // 空白になっていた（2026-09-27 実機ログで確認）。生の画素から image パッケージで
+        // 書き出し直す（透過が要らない地図画像は RGB、気象庁の重ね図は RGBA）
+        final raw = await out.toByteData(format: ui.ImageByteFormat.rawRgba);
+        final rgba = raw!.buffer.asUint8List();
+        final im = imglib.Image.fromBytes(
+          width: size,
+          height: size,
+          bytes: rgba.buffer,
+          numChannels: 4,
+          order: imglib.ChannelOrder.rgba,
+        );
+        final outImg = evenZoomOnly ? im : im.convert(numChannels: 3);
+        return imglib.encodePng(outImg, level: 1);
       } finally {
         out.dispose();
       }
