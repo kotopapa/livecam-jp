@@ -949,11 +949,11 @@ class AppLocalizationsVi extends AppLocalizations {
       'Vòng tròn có số = nhóm camera lân cận (nhấn để phóng to)';
 
   @override
-  String get mapSearchTitle => 'Tìm địa điểm';
+  String get mapSearchTitle => 'Tìm địa danh và camera';
 
   @override
   String get mapSearchHint =>
-      'Tên địa danh hoặc địa chỉ (ví dụ: Shibuya, Kanazawa Hirosaka)';
+      'Địa danh, địa chỉ hoặc tên camera (VD: Shibuya, sông Sumida)';
 
   @override
   String get mapSearchNotFound =>

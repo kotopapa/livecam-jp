@@ -920,10 +920,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapLegendCluster => '숫자 원 = 주변 카메라 묶음(탭하면 확대)';
 
   @override
-  String get mapSearchTitle => '장소 검색';
+  String get mapSearchTitle => '지명・카메라 이름으로 검색';
 
   @override
-  String get mapSearchHint => '지명·주소(예: 시부야, 가나자와시 히로사카)';
+  String get mapSearchHint => '지명・주소・카메라 이름 (예: 시부야, 스미다강)';
 
   @override
   String get mapSearchNotFound => '찾지 못했습니다. 지명·주소·카메라명으로 시도해 보십시오';

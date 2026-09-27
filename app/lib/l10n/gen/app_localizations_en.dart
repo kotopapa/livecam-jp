@@ -946,11 +946,11 @@ class AppLocalizationsEn extends AppLocalizations {
       'Numbered circle = group of nearby cameras (tap to zoom in)';
 
   @override
-  String get mapSearchTitle => 'Search for a place';
+  String get mapSearchTitle => 'Search places and cameras';
 
   @override
   String get mapSearchHint =>
-      'Place name or address (e.g. Shibuya, Kanazawa Hirosaka)';
+      'Place, address or camera name (e.g. Shibuya, Sumida River)';
 
   @override
   String get mapSearchNotFound =>

@@ -43,17 +43,16 @@ index 9021e491..fd0bd145 100644
          locale: widget.localeController.locale,
          supportedLocales: AppLocalizations.supportedLocales,
 diff --git a/app/lib/ui/ad_banner.dart b/app/lib/ui/ad_banner.dart
-index 6364d8d1..1425f77b 100644
+index 6364d8d1..eec8b892 100644
 --- a/app/lib/ui/ad_banner.dart
 +++ b/app/lib/ui/ad_banner.dart
-@@ -1,4 +1,6 @@
+@@ -1,4 +1,5 @@
  import 'package:flutter/material.dart';
 +
-+import '../config.dart' show screenshotMode;
  import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
  import 'package:visibility_detector/visibility_detector.dart';
  
-@@ -78,7 +80,7 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
+@@ -78,7 +79,7 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
    Widget build(BuildContext context) {
      // 失敗時は区切り線ごと消す（前後のDividerが二重にならないように
      // 下側の区切り線はこのウィジェットが持つ）。支援へのお礼期間中は出さない
@@ -62,7 +61,7 @@ index 6364d8d1..1425f77b 100644
      return VisibilityDetector(
        key: Key('ad-${widget.adUnitId}-${widget.size.height}-${identityHashCode(this)}'),
        onVisibilityChanged: _onVisibility,
-@@ -171,7 +173,7 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
+@@ -171,7 +172,7 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
    @override
    Widget build(BuildContext context) {
      // 支援へのお礼期間中は読み込みもしない（見られない在庫を作らない）

@@ -1819,13 +1819,13 @@ abstract class AppLocalizations {
   /// No description provided for @mapSearchTitle.
   ///
   /// In ja, this message translates to:
-  /// **'場所を検索'**
+  /// **'地名・カメラ名で検索'**
   String get mapSearchTitle;
 
   /// No description provided for @mapSearchHint.
   ///
   /// In ja, this message translates to:
-  /// **'地名・住所（例: 渋谷、金沢市広坂）'**
+  /// **'地名・住所・カメラ名（例: 渋谷、隅田川）'**
   String get mapSearchHint;
 
   /// No description provided for @mapSearchNotFound.

@@ -454,6 +454,8 @@ class _MapScreenState extends State<MapScreen> {
       if (kind == MapLayerKind.typhoon) _typhoonId = typhoonId;
       _layerFailed = false;
     });
+    // レイヤーを ON にしたらシートは畳む（操作板カードが出るので地図を広く見せる。2026-09-27 要望）
+    if (kind != MapLayerKind.none && _sheetExpanded) _setSheetExpanded(false);
     if (kind == MapLayerKind.shelters) {
       await _showShelterNoticeOnce();
       _requestLayerDataForView();
@@ -4020,8 +4022,11 @@ class _MapScreenState extends State<MapScreen> {
                   ),
                 ),
                 const SizedBox(width: 8),
+                // 台数は右端に内容幅で置く（Flexible にすると左の文字と幅を折半して
+                // レイヤー名が切れる）。0件案内は長いので次の行に出す
                 _sheetCountArea(context, cams),
               ]),
+              if (_sheetNoMatch(cams)) _sheetNoMatchRow(context),
             ]),
           ),
         ),
@@ -4098,40 +4103,43 @@ class _MapScreenState extends State<MapScreen> {
     const countStyle =
         TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87);
     final loaded = widget.app.repository.cameras.isNotEmpty;
-    final noMatch = loaded && cams.isEmpty && widget.app.hasActiveFilters;
-    return Flexible(
-      child: Wrap(
-        alignment: WrapAlignment.end,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: 6,
-        children: [
-          if (!loaded)
-            Text(context.l10n.mapCountLoading, style: countStyle)
-          else if (noMatch) ...[
-            Text(context.l10n.mapCountNoMatch,
-                textAlign: TextAlign.right, style: countStyle),
-            TextButton(
-              key: const Key('map_clear_filters'),
-              onPressed: widget.app.clearFilters,
-              style: TextButton.styleFrom(
-                minimumSize: Size.zero,
-                padding: const EdgeInsets.symmetric(horizontal: 2),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                textStyle: countStyle.copyWith(decoration: TextDecoration.underline),
-              ),
-              child: Text(context.l10n.mapClearFilters),
-            ),
-          ] else
-            Text(
-              widget.app.hasActiveFilters
-                  ? context.l10n.mapFilteredCount(cams.length)
-                  : context.l10n.mapTotalCount(cams.length),
-              style: countStyle,
-              textScaler: MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.2),
-            ),
-        ],
-      ),
+    if (_sheetNoMatch(cams)) return const SizedBox.shrink();
+    return Text(
+      !loaded
+          ? context.l10n.mapCountLoading
+          : widget.app.hasActiveFilters
+              ? context.l10n.mapFilteredCount(cams.length)
+              : context.l10n.mapTotalCount(cams.length),
+      style: countStyle,
+      textAlign: TextAlign.right,
+      textScaler: MediaQuery.textScalerOf(context).clamp(maxScaleFactor: 1.2),
     );
+  }
+
+  bool _sheetNoMatch(List<Camera> cams) =>
+      widget.app.repository.cameras.isNotEmpty && cams.isEmpty && widget.app.hasActiveFilters;
+
+  /// 絞り込みで0件のときの案内＋「解除」（見出し行の下に右寄せで1行）
+  Widget _sheetNoMatchRow(BuildContext context) {
+    const countStyle =
+        TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87);
+    return Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+      Flexible(
+        child: Text(context.l10n.mapCountNoMatch,
+            textAlign: TextAlign.right, style: countStyle, maxLines: 2),
+      ),
+      TextButton(
+        key: const Key('map_clear_filters'),
+        onPressed: widget.app.clearFilters,
+        style: TextButton.styleFrom(
+          minimumSize: Size.zero,
+          padding: const EdgeInsets.symmetric(horizontal: 4),
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          textStyle: countStyle.copyWith(decoration: TextDecoration.underline),
+        ),
+        child: Text(context.l10n.mapClearFilters),
+      ),
+    ]);
   }
 
   /// レイヤー名（`_showLayerPicker` の各項目タイトルと同じ文字列）。

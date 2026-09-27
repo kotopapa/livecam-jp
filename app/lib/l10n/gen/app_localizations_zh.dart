@@ -909,10 +909,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapLegendCluster => '数字圆圈 = 周边摄像头的聚合（点击可放大）';
 
   @override
-  String get mapSearchTitle => '搜索地点';
+  String get mapSearchTitle => '搜索地名・摄像头';
 
   @override
-  String get mapSearchHint => '地名或地址（例：涩谷、金泽市广坂）';
+  String get mapSearchHint => '地名・地址・摄像头名称（例：涩谷、隅田川）';
 
   @override
   String get mapSearchNotFound => '未找到。请尝试用地名、地址或摄像头名搜索';
@@ -3573,10 +3573,10 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get mapLegendCluster => '數字圓圈 = 周邊攝影機的集合（點選可放大）';
 
   @override
-  String get mapSearchTitle => '搜尋地點';
+  String get mapSearchTitle => '搜尋地名・攝影機';
 
   @override
-  String get mapSearchHint => '地名、地址（例：渋谷、金沢市広坂）';
+  String get mapSearchHint => '地名・地址・攝影機名稱（例：澀谷、隅田川）';
 
   @override
   String get mapSearchNotFound => '找不到結果。請改以地名、地址或攝影機名稱試試';

@@ -916,10 +916,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapLegendCluster => '数字の丸 = 周辺カメラのまとまり（タップでズーム）';
 
   @override
-  String get mapSearchTitle => '場所を検索';
+  String get mapSearchTitle => '地名・カメラ名で検索';
 
   @override
-  String get mapSearchHint => '地名・住所（例: 渋谷、金沢市広坂）';
+  String get mapSearchHint => '地名・住所・カメラ名（例: 渋谷、隅田川）';
 
   @override
   String get mapSearchNotFound => '見つかりませんでした。地名・住所・カメラ名でお試しください';
@@ -3605,10 +3605,10 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get mapLegendCluster => 'すうじの まる ＝ ちかくの カメラの まとまり（おすと ズーム）';
 
   @override
-  String get mapSearchTitle => 'ばしょを さがす';
+  String get mapSearchTitle => 'ちめい・カメラめいで けんさく';
 
   @override
-  String get mapSearchHint => 'ちめい・じゅうしょ（れい: 渋谷、金沢市広坂）';
+  String get mapSearchHint => 'ちめい・じゅうしょ・カメラめい（れい: しぶや、すみだがわ）';
 
   @override
   String get mapSearchNotFound => '見（み）つかりませんでした。ちめい・じゅうしょ・カメラの なまえで ためして ください';
