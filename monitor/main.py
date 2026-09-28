@@ -28,7 +28,7 @@ except ImportError:
     pass
 
 from crawler.sources.base import mount_legacy_tls
-from monitor.check import USER_AGENT, check_camera
+from monitor.check import USER_AGENT, check_camera, resolve_youtube_channel_live
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CAMERAS_PATH = REPO_ROOT / "data" / "cameras.json"
@@ -462,6 +462,36 @@ def run(shard: str | None = None) -> int:
         threads.append(t)
     for t in threads:
         t.join()
+
+    # youtube_channel: いまの配信の動画IDを毎回解決して status.json の video_id で配信する。
+    # アプリはこれがあれば動画IDで埋め込む（live_stream?channel= は再生できないことがある）。
+    # 配信の切り替わりに追従するため、シャード外も含めて全台を毎回解決する（2026-09-29）
+    for cam in all_cameras:
+        if (cam.get("review", {}).get("status") != "approved"
+                or cam["feed"]["type"] != "youtube_channel"):
+            continue
+        url = f"https://www.youtube.com/channel/{cam['feed']['url']}/live"
+        try:
+            throttle.acquire("www.youtube.com")
+            try:
+                resp = session.get(url, timeout=30, headers={"Accept-Language": "ja"})
+            finally:
+                throttle.release("www.youtube.com")
+        except requests.RequestException as e:
+            print(f"youtube_channel解決失敗 {url}: {e}", file=sys.stderr)
+            continue
+        if resp.status_code != 200:
+            continue
+        vid = resolve_youtube_channel_live(resp.text)
+        st = statuses.setdefault(cam["id"], {
+            "state": "unknown", "last_ok_at": None,
+            "http_status": None, "frozen_since": None,
+            "consecutive_failures": 0, "avg_interval_sec": None,
+        })
+        if vid:
+            st["video_id"] = vid
+        else:
+            st.pop("video_id", None)
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
