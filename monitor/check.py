@@ -258,6 +258,22 @@ def _youtube_watch_alive(text: str, now: datetime) -> bool:
     return (as_utc(now) - start).total_seconds() <= 48 * 3600
 
 
+_YT_CANONICAL_WATCH_RE = re.compile(
+    r'<link rel="canonical" href="https://www\.youtube\.com/watch\?v=([\w-]{11})"')
+
+
+def resolve_youtube_channel_live(text: str) -> str | None:
+    """/channel/<id>/live のページから、いま配信中（または待機枠）の動画IDを取り出す。
+
+    配信があるとき canonical が watch?v=<ID> になり、無いときはチャンネルURLになる。
+    アプリの `embed/live_stream?channel=` はチャンネルが配信中でも「この動画は
+    再生できません」になることがある（2026-09 湯島・富士見台で発生）ため、
+    status.json の video_id で動画IDの埋め込みに切り替えてもらう
+    """
+    m = _YT_CANONICAL_WATCH_RE.search(text)
+    return m.group(1) if m else None
+
+
 def _check_youtube(session, camera, state, now, prev_failures) -> dict:
     """oEmbed / チャンネルURLの応答コードで判定する（Data APIは使わない）。
 

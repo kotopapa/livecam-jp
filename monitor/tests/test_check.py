@@ -249,3 +249,13 @@ def test_low_freq_hosts_are_skipped_outside_window():
     assert _skip_low_freq(cam, at(0)) is False
     assert _skip_low_freq(cam, at(7)) is True       # 枠外 → 飛ばす
     assert _skip_low_freq(other, at(7)) is False    # 対象外ホストは常に確認
+
+
+def test_resolve_youtube_channel_live():
+    from monitor.check import resolve_youtube_channel_live
+    live = ('<html><head><link rel="canonical" '
+            'href="https://www.youtube.com/watch?v=WHC1TlIwQBw"></head></html>')
+    idle = ('<html><head><link rel="canonical" '
+            'href="https://www.youtube.com/channel/UCtM-h7mwQraxaT7-WIWC_lw"></head></html>')
+    assert resolve_youtube_channel_live(live) == "WHC1TlIwQBw"
+    assert resolve_youtube_channel_live(idle) is None
