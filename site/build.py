@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -228,7 +229,42 @@ def build_lp_data(approved: list[dict]) -> int:
                    separators=(",", ":")),
         encoding="utf-8",
     )
+    update_lp_numbers(len(approved), cats)
     return len(seen)
+
+
+def update_lp_numbers(total: int, cats: dict[str, int]) -> None:
+    """site/index.html に文章として書いた台数（説明文・FAQ・構造化データ・機能カード）を
+    台帳の実数に合わせる。「約」付きは百の位で四捨五入、「〜台以上」は百の位で切り捨て。
+    画面の演出で数え上がる数字は lp/data.json から読むのでここでは触らない
+    """
+    def approx(n: int) -> str:
+        return f"{int(n / 100 + 0.5) * 100:,}"
+
+    def floor(n: int) -> str:
+        return f"{n // 100 * 100:,}"
+
+    num = r"[\d,]+"
+    rules = [
+        (rf"(約){num}(台のライブカメラ)", approx(total)),                # meta・og・構造化データ
+        (rf"(カメラ約){num}(台です)", approx(total)),                    # FAQ
+        (rf'(id="heroTotal">約){num}(</b>)', approx(total)),             # 見出し下（JS で上書きされる前の表示）
+        (rf"(DATA\.total : ){num}(;)", str(total)),                      # data.json が読めないときの控え
+        (rf"(河川カメラ約){num}(台)", approx(cats["river"])),              # 機能カード
+        (rf"(約){num}(台の河川カメラ)", approx(cats["river"])),            # 構造化データの FAQ
+        (rf'(id="riverN">){num}(</b> 台以上)', floor(cats["river"])),    # 大雨の場面
+        (rf"(道路カメラ約){num}(台)", approx(cats["road"])),               # 機能カード
+    ]
+    path = REPO_ROOT / "site" / "index.html"
+    html = path.read_text(encoding="utf-8")
+    new = html
+    for pat, val in rules:
+        new, n = re.subn(pat, lambda m, v=val: m.group(1) + v + m.group(2), new)
+        if n == 0:
+            print(f"警告: site/index.html に台数の書き換え先が見つからない: {pat}", file=sys.stderr)
+    if new != html:
+        path.write_text(new, encoding="utf-8")
+        print("site/index.html: 台数の表記を台帳に合わせて更新")
 
 
 if __name__ == "__main__":
