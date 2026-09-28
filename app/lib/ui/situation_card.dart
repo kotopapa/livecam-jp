@@ -330,6 +330,13 @@ class _SituationOverlayState extends State<SituationOverlay>
   );
   AnimationController? _pulse;
 
+  /// ボタンの周りで常にふくらんでは消える光（2026-09-28 要望「ぼわぼわと
+  /// アプローチしたい」）。カードを閉じているあいだだけ回す
+  late final AnimationController _aura = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 2200),
+  );
+
   bool get _reduceMotion => MediaQuery.disableAnimationsOf(context);
   // initState では MediaQuery を参照できない（assert になる）ので、
   // 脈動の開始は didChangeDependencies まで持ち越す
@@ -348,6 +355,16 @@ class _SituationOverlayState extends State<SituationOverlay>
       _pendingPulse = false;
       _maybeStartPulse();
     }
+    _syncAura();
+  }
+
+  void _syncAura() {
+    final run = !widget.expanded && !_reduceMotion;
+    if (run && !_aura.isAnimating) {
+      _aura.repeat();
+    } else if (!run && _aura.isAnimating) {
+      _aura.stop();
+    }
   }
 
   @override
@@ -363,6 +380,7 @@ class _SituationOverlayState extends State<SituationOverlay>
       }
     }
     if (widget.isNew && !old.isNew) _maybeStartPulse();
+    _syncAura();
   }
 
   /// リングの脈動を600ms×2回（有限）。無限ループにしない
@@ -385,6 +403,7 @@ class _SituationOverlayState extends State<SituationOverlay>
   void dispose() {
     _controller.dispose();
     _pulse?.dispose();
+    _aura.dispose();
     super.dispose();
   }
 
@@ -407,6 +426,23 @@ class _SituationOverlayState extends State<SituationOverlay>
       clipBehavior: Clip.none,
       alignment: Alignment.topRight,
       children: [
+        // ボタンの後ろの光。カードが開くにつれて薄くする
+        if (!_reduceMotion)
+          IgnorePointer(
+            child: RepaintBoundary(
+              child: AnimatedBuilder(
+                animation: Listenable.merge([_aura, _controller]),
+                builder: (context, _) => CustomPaint(
+                  size: const Size(48, 48),
+                  painter: _AuraPainter(
+                    t: _aura.value,
+                    color: color,
+                    fade: (1 - _controller.value).clamp(0.0, 1.0),
+                  ),
+                ),
+              ),
+            ),
+          ),
         if (_pulse != null)
           AnimatedBuilder(
             animation: _pulse!,
@@ -477,4 +513,49 @@ class _SituationOverlayState extends State<SituationOverlay>
       ],
     );
   }
+}
+
+
+/// 「！」ボタンの周りの光。中心から2つの波が半周期ずらしてふくらみ、
+/// 外へ行くほど薄くなって消える。ぼかした円で描くので輪郭は柔らかい。
+/// 描画はボタン（48×48）の外へはみ出す
+class _AuraPainter extends CustomPainter {
+  _AuraPainter({required this.t, required this.color, required this.fade});
+
+  final double t;
+  final Color color;
+  final double fade;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (fade <= 0) return;
+    final c = size.center(Offset.zero);
+    final base = size.shortestSide / 2;
+    // 常に灯っている後光（ゆっくり呼吸する）
+    final breath = 0.5 - 0.5 * math.cos(t * 2 * math.pi);
+    canvas.drawCircle(
+      c,
+      base * (1.15 + 0.15 * breath),
+      Paint()
+        ..color = color.withValues(alpha: (0.35 + 0.25 * breath) * fade)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 10),
+    );
+    // 外へふくらんで消える波
+    for (final phase in [t, (t + 0.5) % 1.0]) {
+      final e = Curves.easeOutCubic.transform(phase);
+      final r = base * (1.0 + 1.1 * e);
+      final a = 0.7 * (1 - phase) * (1 - phase) * fade;
+      canvas.drawCircle(
+        c,
+        r,
+        Paint()
+          ..color = color.withValues(alpha: a)
+          ..maskFilter = MaskFilter.blur(BlurStyle.normal, 8 + 10 * e),
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(_AuraPainter old) =>
+      old.t != t || old.color != color || old.fade != fade;
 }
