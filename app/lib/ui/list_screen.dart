@@ -207,8 +207,8 @@ class _CameraTile extends StatelessWidget {
                   fit: BoxFit.cover,
                   // 72×48表示にフル解像度(1枚8MB級)をデコードしない
                   cacheWidth: 216,
-                  errorBuilder: (_, _, _) => _placeholder())
-              : _placeholder(),
+                  errorBuilder: (_, _, _) => _placeholder(context))
+              : _placeholder(context),
         ),
       ),
       title: Text(camera.name, maxLines: 1, overflow: TextOverflow.ellipsis),
@@ -231,7 +231,9 @@ class _CameraTile extends StatelessWidget {
           ),
           if (distanceLabel.isNotEmpty)
             Text(distanceLabel,
-                style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+                style: TextStyle(
+                    fontSize: 11,
+                    color: Theme.of(context).colorScheme.onSurfaceVariant)),
         ],
       ),
       onTap: () => Navigator.of(context).push(MaterialPageRoute(
@@ -239,12 +241,15 @@ class _CameraTile extends StatelessWidget {
     );
   }
 
-  Widget _placeholder() => Container(
-        color: Colors.grey[300],
-        alignment: Alignment.center,
-        child: Icon(
-            camera.isVideo ? Icons.play_circle_outline : Icons.photo_camera,
-            size: 20,
-            color: Colors.grey[600]),
-      );
+  Widget _placeholder(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Container(
+      color: scheme.surfaceContainerHighest,
+      alignment: Alignment.center,
+      child: Icon(
+          camera.isVideo ? Icons.play_circle_outline : Icons.photo_camera,
+          size: 20,
+          color: scheme.onSurfaceVariant),
+    );
+  }
 }

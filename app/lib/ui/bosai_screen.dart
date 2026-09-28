@@ -150,6 +150,15 @@ int warningLevelRank(String code) {
   return 2;
 }
 
+/// 淡い色付きの面（カード・注記帯の下地）をダークモードでも成立させる。
+/// ライトは元の色のまま、ダークは colorScheme.surface に薄く混ぜて
+/// 明るすぎる面にならないようにする
+Color tintedSurface(BuildContext context, Color base) {
+  final scheme = Theme.of(context).colorScheme;
+  if (scheme.brightness != Brightness.dark) return base;
+  return Color.alphaBlend(base.withValues(alpha: 0.18), scheme.surface);
+}
+
 /// 扱う気象注意報コード（折りたたみ表示用。表示名は l10n で解決する）
 const _advisoryCodes = {
   '10', '12', '13', '14', '15', '16', '17', '18',
@@ -765,7 +774,7 @@ class _BosaiScreenState extends State<BosaiScreen>
                             child: Text(
                               l10n.bosaiQuakeNote(ts),
                               style: TextStyle(
-                                  fontSize: 11, color: Colors.grey[600]),
+                                  fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
                             ),
                           );
                         }
@@ -865,7 +874,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     final approach = _approachPoints(t);
     return Card(
       margin: const EdgeInsets.fromLTRB(12, 8, 12, 4),
-      color: const Color(0xFFFFF3E0),
+      color: tintedSurface(context, const Color(0xFFFFF3E0)),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(12, 10, 12, 4),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -894,7 +903,7 @@ class _BosaiScreenState extends State<BosaiScreen>
               a.speedKmh?.round().toString() ?? '-',
               _hhmm(a.validAt),
             ),
-            style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+            style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
           ),
           Wrap(spacing: 4, children: [
             TextButton.icon(
@@ -925,7 +934,7 @@ class _BosaiScreenState extends State<BosaiScreen>
               ),
           ]),
           Text(JmaTyphoon.attribution,
-              style: TextStyle(fontSize: 9, color: Colors.grey[600])),
+              style: TextStyle(fontSize: 9, color: Theme.of(context).colorScheme.onSurfaceVariant)),
         ]),
       ),
     );
@@ -975,7 +984,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       Padding(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 6),
         child: Text(JmaFlood.attribution,
-            style: TextStyle(fontSize: 9, color: Colors.grey[600])),
+            style: TextStyle(fontSize: 9, color: Theme.of(context).colorScheme.onSurfaceVariant)),
       ),
       const Divider(height: 1),
     ]);
@@ -989,9 +998,12 @@ class _BosaiScreenState extends State<BosaiScreen>
     final at = t.toLocal();
     final l10n = context.l10n;
     final hhmm = '${two(at.hour)}:${two(at.minute)}';
+    final dark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       width: double.infinity,
-      color: _warningStale ? const Color(0xFFFFF3CD) : Colors.transparent,
+      color: _warningStale
+          ? tintedSurface(context, const Color(0xFFFFF3CD))
+          : Colors.transparent,
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
       child: Text(
         _warningStale
@@ -999,7 +1011,9 @@ class _BosaiScreenState extends State<BosaiScreen>
             : l10n.bosaiWarningAsOf(hhmm),
         style: TextStyle(
             fontSize: 11,
-            color: _warningStale ? const Color(0xFF8A6D3B) : Colors.grey[600]),
+            color: _warningStale
+                ? (dark ? const Color(0xFFE0C070) : const Color(0xFF8A6D3B))
+                : Theme.of(context).colorScheme.onSurfaceVariant),
       ),
     );
   }
@@ -1045,7 +1059,7 @@ class _BosaiScreenState extends State<BosaiScreen>
                 _warnings!.isEmpty
                     ? context.l10n.bosaiWarningNoteNone
                     : context.l10n.bosaiWarningNote,
-                style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
               ),
             ),
             ..._extraSections(),
@@ -1161,7 +1175,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       child: Text(
         '${HeatAlerts.attribution}$when\n${l10n.heatAlertDisclaimer}'
         '${list.isEmpty ? '' : '\n${l10n.bosaiHeatTapHint}'}',
-        style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+        style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
       ),
     );
     // 出典ヘッダの下に「近くの地点の暑さ指数」カードを置く
@@ -1235,7 +1249,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       child: Text(
         '${AmedasSnow.attribution}$when\n${l10n.bosaiSnowDisclaimer}'
         '${prefs.isEmpty ? '' : '\n${l10n.bosaiSnowTapHint}'}',
-        style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+        style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
       ),
     );
     final top = Column(
@@ -1285,7 +1299,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 近くの観測点の積雪カード。現在地が取れる場合は最寄り3地点
   Widget _buildSnowNearbyCard() {
     final l10n = context.l10n;
-    final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
+    final grey = TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant);
     final near = _snowNearby;
     Widget body;
     if (_snowNoLocation) {
@@ -1323,7 +1337,7 @@ class _BosaiScreenState extends State<BosaiScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(children: [
-              Icon(Icons.ac_unit, size: 18, color: Colors.grey[700]),
+              Icon(Icons.ac_unit, size: 18, color: Theme.of(context).colorScheme.onSurfaceVariant),
               const SizedBox(width: 4),
               Expanded(
                 child: Text(l10n.bosaiSnowNearbyTitle,
@@ -1342,7 +1356,7 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 1観測点分（観測所名・距離／積雪深・24時間降雪）。積雪が無ければその旨
   Widget _snowPointRow(SnowStation s, double distance, SnowObs? o) {
     final l10n = context.l10n;
-    final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
+    final grey = TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant);
     return Row(children: [
       Expanded(
         child: Row(
@@ -1366,14 +1380,14 @@ class _BosaiScreenState extends State<BosaiScreen>
       if (o == null)
         Text(l10n.bosaiSnowNoSnowAtPoint, style: grey)
       else
-        snowDepthChip(l10n, o),
+        snowDepthChip(context, l10n, o),
     ]);
   }
 
   /// 近くの地点の暑さ指数（WBGT）カード。現在地が取れる場合は最寄り3地点
   Widget _buildWbgtCard(DateTime now) {
     final l10n = context.l10n;
-    final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
+    final grey = TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant);
     Widget body;
     if (_wbgtNoLocation) {
       body = Text(l10n.mapLocationFailed, style: grey);
@@ -1409,7 +1423,7 @@ class _BosaiScreenState extends State<BosaiScreen>
           children: [
             Row(children: [
               Icon(Icons.device_thermostat,
-                  size: 18, color: Colors.grey[700]),
+                  size: 18, color: Theme.of(context).colorScheme.onSurfaceVariant),
               const SizedBox(width: 4),
               Expanded(
                 child: Text(l10n.bosaiWbgtCardTitle,
@@ -1420,7 +1434,7 @@ class _BosaiScreenState extends State<BosaiScreen>
             const SizedBox(height: 6),
             body,
             const SizedBox(height: 6),
-            Text(Wbgt.attribution, style: TextStyle(fontSize: 10, color: Colors.grey[600])),
+            Text(Wbgt.attribution, style: TextStyle(fontSize: 10, color: Theme.of(context).colorScheme.onSurfaceVariant)),
           ],
         ),
       ),
@@ -1433,7 +1447,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     final l10n = context.l10n;
     final cur = d.current;
     final upcoming = Wbgt.upcoming(d.forecast, now);
-    final grey = TextStyle(fontSize: 11, color: Colors.grey[600]);
+    final grey = TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1471,7 +1485,7 @@ class _BosaiScreenState extends State<BosaiScreen>
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
-                      color: Colors.grey[800])),
+                      color: Theme.of(context).colorScheme.onSurfaceVariant)),
             ],
           ]),
           if (upcoming.isNotEmpty) ...[
@@ -1639,7 +1653,7 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
               padding: const EdgeInsets.all(12),
               child: Text(
                 l10n.bosaiQuakeMuniNote,
-                style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
               ),
             );
           }
@@ -1679,7 +1693,7 @@ class _QuakeMuniListScreenState extends State<QuakeMuniListScreen> {
                 count > 0 ? l10n.bosaiCameraCount(count) : l10n.bosaiNoCamera,
                 style: TextStyle(
                     fontSize: 12,
-                    color: count > 0 ? Colors.grey[700] : Colors.grey[500]),
+                    color: count > 0 ? Theme.of(context).colorScheme.onSurfaceVariant : Theme.of(context).colorScheme.onSurfaceVariant),
               ),
             ]),
             subtitle: Text(
@@ -1863,7 +1877,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                       padding: const EdgeInsets.all(12),
                       child: Text(context.l10n.bosaiMuniNote,
                           style: TextStyle(
-                              fontSize: 11, color: Colors.grey[600])),
+                              fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant)),
                     );
                   }
                   final (muni, name, warns) = _munis![i - 1];
@@ -1903,8 +1917,8 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                         style: TextStyle(
                             fontSize: 12,
                             color: camCount > 0
-                                ? Colors.grey[700]
-                                : Colors.grey[500]),
+                                ? Theme.of(context).colorScheme.onSurfaceVariant
+                                : Theme.of(context).colorScheme.onSurfaceVariant),
                       ),
                     ]),
                     subtitle: Wrap(spacing: 4, runSpacing: 2, children: [
@@ -1961,7 +1975,9 @@ class _LiveOnlyBar extends StatelessWidget {
       color: Theme.of(context).colorScheme.surface,
       child: Container(
         decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.grey[300]!))),
+            border: Border(
+                bottom: BorderSide(
+                    color: Theme.of(context).colorScheme.outlineVariant))),
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         child: Row(
           children: [
@@ -2049,13 +2065,17 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
               itemCount: cams.length + (note != null ? 1 : 0),
               itemBuilder: (context, i) {
                 if (note != null && i == 0) {
+                  final dark = Theme.of(context).brightness == Brightness.dark;
                   return Container(
-                    color: const Color(0xFFFFF4E5),
+                    color: tintedSurface(context, const Color(0xFFFFF4E5)),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 16, vertical: 8),
                     child: Text(note,
                         style: TextStyle(
-                            fontSize: 12, color: Colors.orange[900])),
+                            fontSize: 12,
+                            color: dark
+                                ? Colors.orange[200]
+                                : Colors.orange[900])),
                   );
                 }
                 final camera = cams[note != null ? i - 1 : i];
@@ -2072,11 +2092,11 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
                               // 72×48表示への縮小デコード(メモリ削減)
                               cacheWidth: 216,
                               errorBuilder: (_, _, _) =>
-                                  Container(color: Colors.grey[300]))
+                                  Container(color: Theme.of(context).colorScheme.surfaceContainerHighest))
                           : Container(
-                              color: Colors.grey[300],
+                              color: Theme.of(context).colorScheme.surfaceContainerHighest,
                               child: Icon(Icons.videocam,
-                                  size: 20, color: Colors.grey[600])),
+                                  size: 20, color: Theme.of(context).colorScheme.onSurfaceVariant)),
                     ),
                   ),
                   title: Text(camera.name,
@@ -2185,11 +2205,11 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
                               // 72×48表示への縮小デコード(メモリ削減)
                               cacheWidth: 216,
                               errorBuilder: (_, _, _) =>
-                                  Container(color: Colors.grey[300]))
+                                  Container(color: Theme.of(context).colorScheme.surfaceContainerHighest))
                           : Container(
-                              color: Colors.grey[300],
+                              color: Theme.of(context).colorScheme.surfaceContainerHighest,
                               child: Icon(Icons.videocam,
-                                  size: 20, color: Colors.grey[600])),
+                                  size: 20, color: Theme.of(context).colorScheme.onSurfaceVariant)),
                     ),
                   ),
                   title: Text(camera.name,
@@ -2306,11 +2326,11 @@ class RiverCamerasScreen extends StatelessWidget {
                                   fit: BoxFit.cover,
                                   cacheWidth: 216,
                                   errorBuilder: (_, _, _) =>
-                                      Container(color: Colors.grey[300]))
+                                      Container(color: Theme.of(context).colorScheme.surfaceContainerHighest))
                               : Container(
-                                  color: Colors.grey[300],
+                                  color: Theme.of(context).colorScheme.surfaceContainerHighest,
                                   child: Icon(Icons.videocam,
-                                      size: 20, color: Colors.grey[600])),
+                                      size: 20, color: Theme.of(context).colorScheme.onSurfaceVariant)),
                         ),
                       ),
                       title: Text(camera.name,
@@ -2353,7 +2373,7 @@ String municipalityNameOf(String? code) {
 }
 
 /// 積雪深（と24時間降雪量）のチップ
-Widget snowDepthChip(AppLocalizations l10n, SnowObs o) {
+Widget snowDepthChip(BuildContext context, AppLocalizations l10n, SnowObs o) {
   final color = snowDepthColor(o.depth);
   return Column(
     crossAxisAlignment: CrossAxisAlignment.end,
@@ -2374,7 +2394,7 @@ Widget snowDepthChip(AppLocalizations l10n, SnowObs o) {
         Padding(
           padding: const EdgeInsets.only(top: 2),
           child: Text(l10n.bosaiSnow24hCm(o.snow24h!),
-              style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+              style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant)),
         ),
     ],
   );
@@ -2415,7 +2435,7 @@ class SnowPrefectureScreen extends StatelessWidget {
           dense: true,
           contentPadding: const EdgeInsets.fromLTRB(32, 0, 16, 0),
           title: Text(o.station.name),
-          trailing: snowDepthChip(l10n, o),
+          trailing: snowDepthChip(context, l10n, o),
         ));
       }
     }
@@ -2426,7 +2446,7 @@ class SnowPrefectureScreen extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           child: Text(
               '${AmedasSnow.attribution}\n${l10n.bosaiSnowDisclaimer}',
-              style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+              style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant)),
         ),
         ...rows,
       ]),

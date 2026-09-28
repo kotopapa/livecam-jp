@@ -50,11 +50,14 @@ class _ElevationLabelState extends State<ElevationLabel> {
 
   @override
   Widget build(BuildContext context) {
-    final color = widget.color ?? Colors.grey[700];
+    final scheme = Theme.of(context).colorScheme;
+    final color = widget.color ?? scheme.onSurfaceVariant;
     if (!_done) {
       // 取得中：確定後と同じ高さで控えめに置いておく（行のガタつきを避ける）
       return Text(context.l10n.elevationLoading,
-          style: TextStyle(fontSize: widget.fontSize, color: Colors.grey[400]));
+          style: TextStyle(
+              fontSize: widget.fontSize,
+              color: scheme.onSurfaceVariant.withValues(alpha: 0.6)));
     }
     final m = _m;
     if (m == null) return const SizedBox.shrink(); // データ無し・失敗は出さない

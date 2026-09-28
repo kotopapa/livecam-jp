@@ -133,7 +133,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         shape: BoxShape.circle,
                         color: i == _page
                             ? Theme.of(context).colorScheme.primary
-                            : Colors.grey[300],
+                            : Theme.of(context).colorScheme.outlineVariant,
                       ),
                     ),
                   const SizedBox(width: 12),
@@ -234,7 +234,9 @@ class _PromisePage extends StatelessWidget {
                 Text(
                   body,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 14, color: Colors.grey[700]),
+                  style: TextStyle(
+                      fontSize: 14,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant),
                 ),
               ],
             ),
@@ -290,7 +292,8 @@ class _DisclaimerPage extends StatelessWidget {
             // 災害通知の既定ONトグル（1.4.0。「同意してはじめる」で許可を求める）
             Container(
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey[300]!),
+                border: Border.all(
+                    color: Theme.of(context).colorScheme.outlineVariant),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: SwitchListTile(
@@ -305,7 +308,9 @@ class _DisclaimerPage extends StatelessWidget {
                 ),
                 subtitle: Text(
                   l10n.onboardingNotifyOptInDetail,
-                  style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+                  style: TextStyle(
+                      fontSize: 11,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant),
                 ),
                 secondary: const Icon(Icons.notifications_active_outlined),
               ),
@@ -317,7 +322,9 @@ class _DisclaimerPage extends StatelessWidget {
               Text(
                 l10n.legalJapaneseAuthoritative,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                style: TextStyle(
+                    fontSize: 11,
+                    color: Theme.of(context).colorScheme.onSurfaceVariant),
               ),
             ],
           ],

@@ -225,15 +225,16 @@ void _openDetail(BuildContext context, Camera camera, AppState app) {
       MaterialPageRoute(builder: (_) => DetailScreen(camera: camera, app: app)));
 }
 
-Widget _thumb(AppState app, Camera camera, int tick,
+Widget _thumb(BuildContext context, AppState app, Camera camera, int tick,
     {BoxFit fit = BoxFit.cover, int cacheWidth = 216}) {
+  final scheme = Theme.of(context).colorScheme;
   final url = app.imageUrlFor(camera);
   if (url == null) {
     return Container(
-      color: Colors.grey[300],
+      color: scheme.surfaceContainerHighest,
       alignment: Alignment.center,
       child: Icon(camera.isVideo ? Icons.play_circle_outline : Icons.videocam_off,
-          color: Colors.grey[600]),
+          color: scheme.onSurfaceVariant),
     );
   }
   return Image.network(url,
@@ -242,9 +243,9 @@ Widget _thumb(AppState app, Camera camera, int tick,
       // 表示サイズに合わせた縮小デコード（フル解像度8MB級を防ぐ）
       cacheWidth: cacheWidth,
       errorBuilder: (_, _, _) => Container(
-          color: Colors.grey[300],
+          color: scheme.surfaceContainerHighest,
           alignment: Alignment.center,
-          child: const Icon(Icons.videocam_off, color: Colors.grey)));
+          child: Icon(Icons.videocam_off, color: scheme.onSurfaceVariant)));
 }
 
 /// カード（グリッド）表示の1枚。
@@ -267,7 +268,7 @@ class _FavoriteCard extends StatelessWidget {
           Expanded(
             child: Stack(fit: StackFit.expand, children: [
               // カード表示は大きめ(画面半分幅)なので縮小幅も大きめに取る
-              _thumb(app, camera, refreshTick, cacheWidth: 640),
+              _thumb(context, app, camera, refreshTick, cacheWidth: 640),
               if (camera.isVideo)
                 Positioned(
                   left: 6,
@@ -306,8 +307,9 @@ class _FavoriteCard extends StatelessWidget {
                   Text(camera.operator,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style:
-                          TextStyle(fontSize: 11, color: Colors.grey[600])),
+                      style: TextStyle(
+                          fontSize: 11,
+                          color: Theme.of(context).colorScheme.onSurfaceVariant)),
                 ]),
           ),
         ]),
@@ -331,7 +333,7 @@ class _FavoriteTile extends StatelessWidget {
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(6),
         child: SizedBox(
-            width: 72, height: 48, child: _thumb(app, camera, refreshTick)),
+            width: 72, height: 48, child: _thumb(context, app, camera, refreshTick)),
       ),
       title: Text(camera.name, maxLines: 1, overflow: TextOverflow.ellipsis),
       subtitle: Text(

@@ -366,7 +366,7 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Column(
           children: [
@@ -453,7 +453,7 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
-                      color: Colors.grey[600],
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
                     ),
                   ),
                 ),
@@ -499,7 +499,8 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
             padding: const EdgeInsets.all(24),
             child: Text(
               l10n.mapSearchNotFound,
-              style: TextStyle(color: Colors.grey[600]),
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.onSurfaceVariant),
             ),
           ),
         );
@@ -546,17 +547,18 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
   }
 
   Widget _predictionRow(BuildContext context, PlacePrediction p) {
+    final scheme = Theme.of(context).colorScheme;
     return _ResultRow(
       key: ValueKey('pred_${p.placeId}'),
       leading: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: scheme.surfaceContainerHighest,
           shape: BoxShape.circle,
         ),
         child: Icon(
           p.isTransit ? Icons.train : Icons.place_outlined,
           size: 22,
-          color: Colors.grey[700],
+          color: scheme.onSurfaceVariant,
         ),
       ),
       title: p.mainText,
@@ -576,14 +578,15 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
       point.latitude,
       point.longitude,
     );
+    final scheme = Theme.of(context).colorScheme;
     return _ResultRow(
       key: ValueKey('place_${point.latitude}_${point.longitude}_$label'),
       leading: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: scheme.surfaceContainerHighest,
           shape: BoxShape.circle,
         ),
-        child: Icon(Icons.place_outlined, size: 22, color: Colors.grey[700]),
+        child: Icon(Icons.place_outlined, size: 22, color: scheme.onSurfaceVariant),
       ),
       title: label,
       subtitle: '',
@@ -594,14 +597,15 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
   }
 
   Widget _recentRow(BuildContext context, _RecentEntry e) {
+    final scheme = Theme.of(context).colorScheme;
     return _ResultRow(
       key: ValueKey('recent_${e.dedupeKey}'),
       leading: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: scheme.surfaceContainerHighest,
           shape: BoxShape.circle,
         ),
-        child: Icon(Icons.history, size: 22, color: Colors.grey[700]),
+        child: Icon(Icons.history, size: 22, color: scheme.onSurfaceVariant),
       ),
       title: e.label,
       subtitle: e.isCamera ? e.camera!.operator : '',
@@ -661,7 +665,9 @@ class _ResultRow extends StatelessWidget {
                       const SizedBox(height: 2),
                       Text(
                         distanceLabel!,
-                        style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                        style: TextStyle(
+                            fontSize: 11,
+                            color: Theme.of(context).colorScheme.onSurfaceVariant),
                       ),
                     ],
                   ],
@@ -688,7 +694,7 @@ class _ResultRow extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 13,
-                            color: Colors.grey[600],
+                            color: Theme.of(context).colorScheme.onSurfaceVariant,
                           ),
                         ),
                       ),

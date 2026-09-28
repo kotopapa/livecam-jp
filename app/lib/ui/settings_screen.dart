@@ -108,7 +108,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SelectableText(
               url,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 12, color: Colors.blueGrey),
+              style: TextStyle(
+                  fontSize: 12,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant),
             ),
           ],
         ),
@@ -365,7 +367,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
                     l10n.settingsNotifyAreaHint,
-                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: Theme.of(context).colorScheme.onSurfaceVariant),
                   ),
                 ),
                 Flexible(
@@ -515,7 +519,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   const SizedBox(height: 2),
                   Text(
                     l10n.settingsNotifyLevelNote,
-                    style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                    style: TextStyle(
+                        fontSize: 11,
+                        color: Theme.of(context).colorScheme.onSurfaceVariant),
                   ),
                 ],
               ),
@@ -539,7 +545,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
             child: Text(
               l10n.settingsNotifyDelayNote,
-              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+              style: TextStyle(
+                  fontSize: 11,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant),
             ),
           ),
           const Divider(),
@@ -604,7 +612,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
             child: Text(
               l10n.settingsFilterDefaultsNote,
-              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+              style: TextStyle(
+                  fontSize: 11,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant),
             ),
           ),
           const Divider(),
@@ -656,7 +666,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
             child: Text(
               l10n.settingsLegalJapaneseOnly,
-              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+              style: TextStyle(
+                  fontSize: 11,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant),
             ),
           ),
           const Divider(),
@@ -732,13 +744,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
               children: [
                 Text(
                   disclaimerTextOf(l10n),
-                  style: TextStyle(fontSize: 12, color: Colors.grey[700]),
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant),
                 ),
                 if (widget.localeController.language != AppLanguage.ja) ...[
                   const SizedBox(height: 4),
                   Text(
                     l10n.legalJapaneseAuthoritative,
-                    style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                    style: TextStyle(
+                        fontSize: 11,
+                        color: Theme.of(context).colorScheme.onSurfaceVariant),
                   ),
                 ],
               ],
@@ -754,7 +770,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               child: Text(
                 l10n.settingsOssLicenses,
-                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                style: TextStyle(
+                    fontSize: 12,
+                    color: Theme.of(context).colorScheme.onSurfaceVariant),
               ),
             ),
           ),
@@ -929,6 +947,7 @@ class _AttributionScreen extends StatelessWidget {
           final key = entries[i].key;
           final url = mostCommon(terms[key]) ?? mostCommon(pages[key]);
           final isYoutube = url != null && url.contains('youtube.com');
+          final scheme = Theme.of(context).colorScheme;
           return ListTile(
             dense: true,
             title: Text(key),
@@ -938,21 +957,21 @@ class _AttributionScreen extends StatelessWidget {
                     isYoutube
                         ? context.l10n.attributionOpenYoutube
                         : context.l10n.attributionOpenSite,
-                    style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+                    style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant),
                   ),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
                   context.l10n.commonCameraCount(entries[i].value),
-                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                  style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
                 ),
                 if (url != null) ...[
                   const SizedBox(width: 8),
                   Icon(
                     isYoutube ? Icons.play_circle_outline : Icons.open_in_new,
                     size: 18,
-                    color: Colors.grey[600],
+                    color: scheme.onSurfaceVariant,
                   ),
                 ],
               ],

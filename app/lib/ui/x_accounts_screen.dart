@@ -76,7 +76,9 @@ class _XAccountsScreenState extends State<XAccountsScreen> {
       Padding(
         padding: const EdgeInsets.fromLTRB(12, 12, 12, 8),
         child: Text(l10n.xAccountsIntro,
-            style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+            style: TextStyle(
+                fontSize: 11,
+                color: Theme.of(context).colorScheme.onSurfaceVariant)),
       ),
       if (area.isNotEmpty) ...[
         _header(context, l10n.xAccountsSectionArea),

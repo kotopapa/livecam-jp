@@ -146,6 +146,11 @@ class _LiveCamAppState extends State<LiveCamApp>
       builder: (context, _) => MaterialApp(
         onGenerateTitle: (context) => context.l10n.appTitle,
         theme: ThemeData(colorSchemeSeed: const Color(0xFF1E6FD9)),
+        // 夜間は端末の外観設定（自動なら夜にダーク）に合わせる。Google マップも
+        // 端末の設定に従って暗くなるので、アプリ側も同じ瞬間に切り替わる（2026-09-28）
+        darkTheme: ThemeData(
+            colorSchemeSeed: const Color(0xFF1E6FD9), brightness: Brightness.dark),
+        themeMode: ThemeMode.system,
         locale: widget.localeController.locale,
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: const [

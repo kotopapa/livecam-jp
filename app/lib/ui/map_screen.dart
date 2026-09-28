@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io' show Directory;
 import 'dart:math' as math;
 
-import 'package:flutter/foundation.dart' show setEquals;
+import 'package:flutter/foundation.dart' show defaultTargetPlatform, setEquals;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -23,6 +23,7 @@ import '../data/hazard_layers.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
 import '../data/kjmap.dart';
+import '../data/map_dark_style.dart';
 import '../data/native_config.dart';
 import '../data/places_search.dart';
 import '../data/route_corridor.dart';
@@ -35,7 +36,7 @@ import '../models/camera.dart';
 import '../models/status.dart' show CameraState;
 import '../util/clustering.dart';
 import '../util/geo.dart';
-import 'bosai_screen.dart' show NearbyCamerasScreen;
+import 'bosai_screen.dart' show NearbyCamerasScreen, tintedSurface;
 import 'detail_screen.dart';
 import 'favorites_screen.dart';
 import 'map_bottom_panel.dart';
@@ -588,13 +589,13 @@ class _MapScreenState extends State<MapScreen> {
       decoration: BoxDecoration(
         color: selected ? scheme.primaryContainer : null,
         border: Border.all(
-            color: selected ? scheme.primary : Colors.black26,
+            color: selected ? scheme.primary : scheme.outlineVariant,
             width: selected ? 1.5 : 1),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(children: [
         Icon(_layerIcon(kind),
-            size: 18, color: selected ? scheme.onPrimaryContainer : Colors.black54),
+            size: 18, color: selected ? scheme.onPrimaryContainer : scheme.onSurfaceVariant),
         const SizedBox(width: 8),
         Expanded(
           child: Text(_layerTitle(kind),
@@ -603,7 +604,7 @@ class _MapScreenState extends State<MapScreen> {
               style: TextStyle(
                   fontSize: 13,
                   fontWeight: selected ? FontWeight.bold : FontWeight.normal,
-                  color: selected ? scheme.onPrimaryContainer : Colors.black87)),
+                  color: selected ? scheme.onPrimaryContainer : scheme.onSurface)),
         ),
         if (selected) Icon(Icons.check, size: 16, color: scheme.primary),
       ]),
@@ -625,6 +626,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _showLayerPicker(BuildContext context) {
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     showModalBottomSheet<void>(
       context: context,
       showDragHandle: true,
@@ -636,7 +638,7 @@ class _MapScreenState extends State<MapScreen> {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
                 DefaultTextStyle.merge(
-                    style: TextStyle(fontSize: 11, color: Colors.grey[600]), child: subtitle),
+                    style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant), child: subtitle),
               ]),
             );
         return SafeArea(
@@ -657,7 +659,7 @@ class _MapScreenState extends State<MapScreen> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 4),
                 child: Text(l10n.mapLayerPanelSubtitle,
-                    style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+                    style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
               ),
               _layerGridTile(ctx, kind: MapLayerKind.none, fullWidth: true),
               sectionHeading(l10n.mapLayerSectionWeather, const Text(JmaLayers.attribution)),
@@ -737,6 +739,7 @@ class _MapScreenState extends State<MapScreen> {
       ..sort((a, b) => b.at.compareTo(a.at));
     String two(int v) => v.toString().padLeft(2, '0');
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     showModalBottomSheet<void>(
       context: context,
       showDragHandle: true,
@@ -791,7 +794,7 @@ class _MapScreenState extends State<MapScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
               child: Text(l10n.mapQuakeTapHint,
-                  style: const TextStyle(fontSize: 12, color: Colors.grey)),
+                  style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
             ),
           ]),
         ),
@@ -1009,6 +1012,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _showShelterInfo(Shelter s) {
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     final hazards = _shelters?.hazards ?? ShelterLayers.defaultHazards;
     showModalBottomSheet<void>(
       context: context,
@@ -1040,7 +1044,7 @@ class _MapScreenState extends State<MapScreen> {
             if (s.address.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 6),
-                child: Text(s.address, style: TextStyle(fontSize: 13, color: Colors.grey[700])),
+                child: Text(s.address, style: TextStyle(fontSize: 13, color: scheme.onSurfaceVariant)),
               ),
             // 標高（津波・高潮のときの判断材料。国土地理院の標高APIを1回だけ呼ぶ）
             Padding(
@@ -1049,7 +1053,7 @@ class _MapScreenState extends State<MapScreen> {
             ),
             const SizedBox(height: 8),
             Text(l10n.mapShelterHazardsLabel,
-                style: const TextStyle(fontSize: 11, color: Colors.black54)),
+                style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
             const SizedBox(height: 4),
             Wrap(spacing: 6, runSpacing: 4, children: [
               for (var i = 0; i < hazards.length; i++)
@@ -1060,7 +1064,10 @@ class _MapScreenState extends State<MapScreen> {
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   backgroundColor: s.hazards.contains(i) ? _ShelterPin.color.withValues(alpha: 0.18) : null,
                   side: s.hazards.contains(i) ? const BorderSide(color: _ShelterPin.color) : null,
-                  labelStyle: TextStyle(color: s.hazards.contains(i) ? Colors.black87 : Colors.black38),
+                  labelStyle: TextStyle(
+                      color: s.hazards.contains(i)
+                          ? scheme.onSurface
+                          : scheme.onSurface.withValues(alpha: 0.38)),
                 ),
             ]),
             const SizedBox(height: 12),
@@ -1091,7 +1098,7 @@ class _MapScreenState extends State<MapScreen> {
             ]),
             const SizedBox(height: 8),
             Text('${ShelterLayers.attribution}　${l10n.shelterDisclaimer}',
-                style: const TextStyle(fontSize: 10, color: Colors.black54)),
+                style: TextStyle(fontSize: 10, color: scheme.onSurfaceVariant)),
           ]),
         ),
       ),
@@ -1304,6 +1311,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _showFacilityInfo(Facility f) {
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     final store = _facilities;
     final src = store?.sourceOf(f);
     // 既知の種別は翻訳済みの正式名称を使い、未知のキーだけ配信JSON/既定値に落とす
@@ -1343,17 +1351,17 @@ class _MapScreenState extends State<MapScreen> {
             if (f.address.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 6),
-                child: Text(f.address, style: TextStyle(fontSize: 13, color: Colors.grey[700])),
+                child: Text(f.address, style: TextStyle(fontSize: 13, color: scheme.onSurfaceVariant)),
               ),
             Padding(
               padding: const EdgeInsets.only(top: 4),
-              child: Text(kindLabel, style: TextStyle(fontSize: 12, color: Colors.grey[800])),
+              child: Text(kindLabel, style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
             ),
             if (f.owner.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 2),
                 child: Text(l10n.mapFacilityOwner(f.owner),
-                    style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                    style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
               ),
             // 標高（浸水時の判断材料。国土地理院の標高APIを1回だけ呼ぶ）
             Padding(
@@ -1400,10 +1408,10 @@ class _MapScreenState extends State<MapScreen> {
             const SizedBox(height: 8),
             if (src == null)
               Text('${FacilityLayers.attribution}　${l10n.facilityDisclaimer}',
-                  style: const TextStyle(fontSize: 10, color: Colors.black54))
+                  style: TextStyle(fontSize: 10, color: scheme.onSurfaceVariant))
             else ...[
               Text(l10n.mapFacilitySourceDataset,
-                  style: const TextStyle(fontSize: 10, color: Colors.black54)),
+                  style: TextStyle(fontSize: 10, color: scheme.onSurfaceVariant)),
               InkWell(
                 onTap: src.url.isEmpty
                     ? null
@@ -1413,14 +1421,14 @@ class _MapScreenState extends State<MapScreen> {
                   child: Text(src.label,
                       style: TextStyle(
                           fontSize: 11,
-                          color: src.url.isEmpty ? Colors.black54 : Colors.blue[800],
+                          color: src.url.isEmpty ? scheme.onSurfaceVariant : scheme.primary,
                           decoration: src.url.isEmpty ? null : TextDecoration.underline)),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 2),
                 child: Text(l10n.facilityDisclaimer,
-                    style: const TextStyle(fontSize: 10, color: Colors.black54)),
+                    style: TextStyle(fontSize: 10, color: scheme.onSurfaceVariant)),
               ),
             ],
           ]),
@@ -1520,10 +1528,11 @@ class _MapScreenState extends State<MapScreen> {
   /// 展開必須にしない）。両端に最初と最後の時刻ラベルを小さく出す
   Widget _quakePeriodChips() {
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
       child: Wrap(spacing: 6, runSpacing: 4, crossAxisAlignment: WrapCrossAlignment.center, children: [
-        Text(l10n.mapQuakePeriodLabel, style: TextStyle(fontSize: 12, color: Colors.grey[800])),
+        Text(l10n.mapQuakePeriodLabel, style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
         for (final p in QuakePeriod.values)
           ChoiceChip(
             label: Text(switch (p) {
@@ -1543,10 +1552,11 @@ class _MapScreenState extends State<MapScreen> {
 
   Widget _nowcastCompactSlider() {
     final n = _nowcastTimes[_nowcastIdx];
+    final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.fromLTRB(14, 0, 14, 8),
       child: Row(children: [
-        Text(_nowcastTimes.first.label, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+        Text(_nowcastTimes.first.label, style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
         Expanded(
           child: SliderTheme(
             data: const SliderThemeData(trackHeight: 2),
@@ -1564,7 +1574,7 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
         ),
-        Text(_nowcastTimes.last.label, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+        Text(_nowcastTimes.last.label, style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
       ]),
     );
   }
@@ -1575,6 +1585,7 @@ class _MapScreenState extends State<MapScreen> {
       return const SizedBox.shrink();
     }
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     final n = _nowcastTimes[_nowcastIdx];
     final latestObs = _nowcastTimes.lastIndexWhere((x) => !x.isForecast);
     final rel = _nowcastRelLabel(n);
@@ -1613,11 +1624,11 @@ class _MapScreenState extends State<MapScreen> {
           ),
         ),
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Text(_nowcastTimes.first.label, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+          Text(_nowcastTimes.first.label, style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
           Text(l10n.mapNowcastNowMarker,
-              style: const TextStyle(fontSize: 9, color: Colors.black54)),
+              style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
           Text(l10n.mapNowcastLast(_nowcastTimes.last.label),
-              style: const TextStyle(fontSize: 9, color: Colors.black54)),
+              style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
         ]),
       ]);
   }
@@ -1626,6 +1637,7 @@ class _MapScreenState extends State<MapScreen> {
   Widget _layerLegend() {
     if (_layer == MapLayerKind.none) return const SizedBox.shrink();
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     Widget swatch(Color c, String label) => Padding(
           padding: const EdgeInsets.only(right: 6),
           child: Row(mainAxisSize: MainAxisSize.min, children: [
@@ -1717,7 +1729,7 @@ class _MapScreenState extends State<MapScreen> {
                   width: 10,
                   height: 10,
                   decoration: BoxDecoration(
-                      color: s.$1, border: Border.all(color: Colors.black26, width: 0.5)),
+                      color: s.$1, border: Border.all(color: scheme.outlineVariant, width: 0.5)),
                 ),
                 const SizedBox(width: 2),
                 Text(riskLevelLabelOf(l10n, s.$2),
@@ -1908,7 +1920,7 @@ class _MapScreenState extends State<MapScreen> {
           Row(mainAxisSize: MainAxisSize.min, children: [
             for (final c in ClosureCause.values) swatch(closureCauseColor(c), closureCauseNameOf(l10n, c)),
           ]),
-          Text(l10n.closureLegendNote, style: const TextStyle(fontSize: 9, color: Colors.black87)),
+          Text(l10n.closureLegendNote, style: TextStyle(fontSize: 9, color: scheme.onSurface)),
         ],
         // 展開表示は常に全部見えるので、出典行も常に出す
         // 冠水状況の出典は情報源が多いので1行にまとめ、一覧ページへリンクする（各地点の詳細にも出典を出す）
@@ -1917,16 +1929,16 @@ class _MapScreenState extends State<MapScreen> {
             onTap: () => launchUrl(Uri.parse(underpassSourcesPageUrl), mode: LaunchMode.externalApplication),
             child: Row(mainAxisSize: MainAxisSize.min, children: [
               Text(l10n.mapLegendUnderpassSources(_underpass.sources.length + _roadReg.sources.length),
-                  style: const TextStyle(fontSize: 9, color: Colors.black54, decoration: TextDecoration.underline)),
-              const Icon(Icons.open_in_new, size: 10, color: Colors.black54),
+                  style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant, decoration: TextDecoration.underline)),
+              Icon(Icons.open_in_new, size: 10, color: scheme.onSurfaceVariant),
             ]),
           ),
         if (_layer == MapLayerKind.roadRegulation)
           for (final s in _roadReg.sources)
-            Text(s.attribution, style: const TextStyle(fontSize: 9, color: Colors.black54)),
+            Text(s.attribution, style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
         if (!hazard)
-          const Text(JmaLayers.attribution,
-              style: TextStyle(fontSize: 9, color: Colors.black54)),
+          Text(JmaLayers.attribution,
+              style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
       ]);
   }
 
@@ -2240,6 +2252,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _showUnderpassInfo(UnderpassSource s, UnderpassPoint p) {
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     final label = switch (p.level) {
       0 => l10n.underpassLevel0,
       1 => l10n.underpassLevel1,
@@ -2274,11 +2287,11 @@ class _MapScreenState extends State<MapScreen> {
             const SizedBox(height: 8),
             if (p.at.isNotEmpty)
               Text(l10n.underpassUpdated(p.at),
-                  style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                  style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
             const SizedBox(height: 4),
-            Text(l10n.underpassNotice, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+            Text(l10n.underpassNotice, style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
             const SizedBox(height: 4),
-            Text(s.attribution, style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+            Text(s.attribution, style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
             const SizedBox(height: 8),
             if (s.url.isNotEmpty)
               OutlinedButton.icon(
@@ -2342,6 +2355,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _showRoadRegulationInfo(RoadRegulationSource s, RoadRegulationItem it) {
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     final level = it.level >= 2 ? l10n.roadRegulationLevel2 : l10n.roadRegulationLevel1;
     showModalBottomSheet<void>(
       context: context,
@@ -2375,17 +2389,17 @@ class _MapScreenState extends State<MapScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 2),
                 child: Text([if (it.kind.isNotEmpty) it.kind, if (it.direction.isNotEmpty) it.direction].join(' · '),
-                    style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                    style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
               ),
             if (it.at.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 2),
-                child: Text(l10n.roadRegulationSince(it.at), style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                child: Text(l10n.roadRegulationSince(it.at), style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
               ),
             const SizedBox(height: 6),
-            Text(l10n.roadRegulationNotice, style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+            Text(l10n.roadRegulationNotice, style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
             const SizedBox(height: 4),
-            Text(s.attribution, style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+            Text(s.attribution, style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
             const SizedBox(height: 8),
             if (s.url.isNotEmpty)
               OutlinedButton.icon(
@@ -2480,6 +2494,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _showClosureInfo(ClosureItem it) {
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     final level = switch (it.level) {
       2 => l10n.closureClosed,
       1 => l10n.closureRestricted,
@@ -2516,13 +2531,13 @@ class _MapScreenState extends State<MapScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 2),
                 child: Text(it.isSensor ? l10n.underpassUpdated(it.at) : l10n.roadRegulationSince(it.at),
-                    style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                    style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
               ),
             const SizedBox(height: 6),
             Text(it.isSensor ? l10n.underpassNotice : l10n.roadRegulationNotice,
-                style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
             const SizedBox(height: 4),
-            Text(it.attribution, style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+            Text(it.attribution, style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
             const SizedBox(height: 8),
             if (it.sourceUrl.isNotEmpty)
               OutlinedButton.icon(
@@ -3008,6 +3023,7 @@ class _MapScreenState extends State<MapScreen> {
       builder: (sheetContext) => StatefulBuilder(
         builder: (context, setSheetState) {
           final app = widget.app;
+          final scheme = Theme.of(context).colorScheme;
           return SafeArea(
             child: SingleChildScrollView(
               padding: EdgeInsets.fromLTRB(20, 0, 20,
@@ -3030,7 +3046,7 @@ class _MapScreenState extends State<MapScreen> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(context.l10n.mapFilterIntro,
-                        style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+                        style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
                   ),
                 ),
                 const SizedBox(height: 4),
@@ -3331,7 +3347,7 @@ class _MapScreenState extends State<MapScreen> {
     final r = _route!;
     final km = (r.distanceM / 1000).toStringAsFixed(r.distanceM < 10000 ? 1 : 0);
     return Material(
-      color: const Color(0xFFE3F2FD),
+      color: tintedSurface(context, const Color(0xFFE3F2FD)),
       child: SafeArea(
         bottom: false,
         child: Row(children: [
@@ -3428,6 +3444,7 @@ class _MapScreenState extends State<MapScreen> {
       constraints: _sheetConstraints(context),
       builder: (sheetContext) => StatefulBuilder(
         builder: (context, setSheetState) {
+          final scheme = Theme.of(context).colorScheme;
           Future<void> run() async {
             if (busy) return;
             final oq = originCtl.text.trim();
@@ -3542,7 +3559,7 @@ class _MapScreenState extends State<MapScreen> {
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
               const SizedBox(height: 4),
               Text(l10n.routeSheetSubtitle,
-                  style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                  style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
               const SizedBox(height: 12),
               TextField(
                 controller: originCtl,
@@ -3596,9 +3613,9 @@ class _MapScreenState extends State<MapScreen> {
               ),
               const SizedBox(height: 6),
               Text(l10n.routeDisclaimer,
-                  style: TextStyle(fontSize: 10, color: Colors.grey[600])),
+                  style: TextStyle(fontSize: 10, color: scheme.onSurfaceVariant)),
               Text(RouteCorridor.attributionNotice,
-                  style: TextStyle(fontSize: 9, color: Colors.grey[600])),
+                  style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
             ]),
           );
         },
@@ -3786,6 +3803,12 @@ class _MapScreenState extends State<MapScreen> {
         gmaps.GoogleMap(
           initialCameraPosition: gmaps.CameraPosition(
               target: _g(_initialCenter), zoom: _initialZoom),
+          // iOS は端末の外観設定で自動的に暗くなる。Android は追従しないので
+          // アプリがダーク表示のときだけ夜間スタイルを当てる
+          style: defaultTargetPlatform == TargetPlatform.android &&
+                  Theme.of(context).brightness == Brightness.dark
+              ? kAndroidMapDarkStyle
+              : null,
           minMaxZoomPreference: const gmaps.MinMaxZoomPreference(2, 18),
           // 二本指ひねりの回転・チルトは無効化（北固定の方針）
           rotateGesturesEnabled: false,
@@ -4048,7 +4071,7 @@ class _MapScreenState extends State<MapScreen> {
     final effectiveExpanded = _sheetExpanded;
     final attributions = _sheetAttributionSpans(context);
     return Material(
-      color: Colors.white,
+      color: Theme.of(context).colorScheme.surface,
       elevation: 8,
       borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
       clipBehavior: Clip.antiAlias,
@@ -4094,7 +4117,7 @@ class _MapScreenState extends State<MapScreen> {
             padding: const EdgeInsets.fromLTRB(14, 0, 14, 6),
             child: Text.rich(
               TextSpan(
-                  style: const TextStyle(fontSize: 10, color: Colors.black87),
+                  style: TextStyle(fontSize: 10, color: Theme.of(context).colorScheme.onSurface),
                   children: attributions),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
@@ -4164,8 +4187,8 @@ class _MapScreenState extends State<MapScreen> {
   /// シート見出し行の右側（台数）。台帳が未取得なら「読み込み中…」、絞り込みで0件なら
   /// 案内＋「解除」を出す
   Widget _sheetCountArea(BuildContext context, List<Camera> cams) {
-    const countStyle =
-        TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87);
+    final countStyle = TextStyle(
+        fontSize: 11, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.onSurface);
     final loaded = widget.app.repository.cameras.isNotEmpty;
     if (_sheetNoMatch(cams)) return const SizedBox.shrink();
     return Text(
@@ -4185,8 +4208,8 @@ class _MapScreenState extends State<MapScreen> {
 
   /// 絞り込みで0件のときの案内＋「解除」（見出し行の下に右寄せで1行）
   Widget _sheetNoMatchRow(BuildContext context) {
-    const countStyle =
-        TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.black87);
+    final countStyle = TextStyle(
+        fontSize: 11, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.onSurface);
     return Row(mainAxisAlignment: MainAxisAlignment.end, children: [
       Flexible(
         child: Text(context.l10n.mapCountNoMatch,
@@ -4292,10 +4315,11 @@ class _MapScreenState extends State<MapScreen> {
     final showCompactSlider =
         !expanded && _layer == MapLayerKind.rainRadar && _nowcastTimes.length >= 2;
     final timeText = _layerTimeText();
+    final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.fromLTRB(12, 0, 12, 6),
       child: Material(
-        color: Colors.white,
+        color: scheme.surface,
         elevation: 3,
         shadowColor: Colors.black45,
         borderRadius: BorderRadius.circular(20),
@@ -4323,7 +4347,7 @@ class _MapScreenState extends State<MapScreen> {
                       child: Text(timeText,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(fontSize: 11, color: Colors.black54)),
+                          style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
                     ),
                   const SizedBox(width: 4),
                   Tooltip(
@@ -4331,7 +4355,7 @@ class _MapScreenState extends State<MapScreen> {
                         ? context.l10n.mapControllerCollapse
                         : context.l10n.mapControllerExpand,
                     child: Icon(expanded ? Icons.expand_less : Icons.expand_more,
-                        size: 20, color: Colors.black54),
+                        size: 20, color: scheme.onSurfaceVariant),
                   ),
                 ]),
               ),
@@ -4365,7 +4389,7 @@ class _MapScreenState extends State<MapScreen> {
                   Padding(
                     padding: const EdgeInsets.only(top: 4),
                     child: Text(_layerDisclaimer()!,
-                        style: const TextStyle(fontSize: 9, color: Colors.black54)),
+                        style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
                   ),
               ]),
             ),
@@ -4632,7 +4656,7 @@ class _NoticeBanner extends StatelessWidget {
       bottom: false,
       child: Container(
         width: double.infinity,
-        color: const Color(0xFFFFF3CD),
+        color: tintedSurface(context, const Color(0xFFFFF3CD)),
         padding: const EdgeInsets.fromLTRB(12, 8, 4, 8),
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Expanded(child: Text(text.trim(), style: const TextStyle(fontSize: 13))),
@@ -4709,11 +4733,11 @@ class _KjDivider extends StatelessWidget {
         width: 36,
         height: 36,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.surface,
           shape: BoxShape.circle,
           boxShadow: const [BoxShadow(color: Colors.black38, blurRadius: 4)],
         ),
-        child: const Icon(Icons.unfold_more, size: 22, color: Colors.black87),
+        child: Icon(Icons.unfold_more, size: 22, color: Theme.of(context).colorScheme.onSurface),
       );
       // 境界線（白い線に薄い影。Positioned は Stack の直下に置く）
       final line = IgnorePointer(

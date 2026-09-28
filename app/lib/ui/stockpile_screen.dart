@@ -19,6 +19,14 @@ const _sourceMaffUrl = 'https://www.maff.go.jp/j/zyukyu/foodstock/';
 const _sourceCaoUrl =
     'https://www.bousai.go.jp/kohou/kouhoubousai/h28/83/special_03.html';
 
+/// 淡い色付きの面（カードの下地）をダークモードでも成立させる。
+/// ライトは元の色のまま、ダークは colorScheme.surface に薄く混ぜる
+Color _tintedSurface(BuildContext context, Color base) {
+  final scheme = Theme.of(context).colorScheme;
+  if (scheme.brightness != Brightness.dark) return base;
+  return Color.alphaBlend(base.withValues(alpha: 0.18), scheme.surface);
+}
+
 /// 防災の備え（備蓄チェックリスト）。
 ///
 /// - 世帯人数と備蓄日数から必要量を自動計算する（根拠は `data/stockpile.dart`）
@@ -242,13 +250,13 @@ class _StockpileScreenState extends State<StockpileScreen> {
                   Icon(
                     Icons.touch_app_outlined,
                     size: 14,
-                    color: Colors.grey[600],
+                    color: Theme.of(context).colorScheme.onSurfaceVariant,
                   ),
                   const SizedBox(width: 4),
                   Expanded(
                     child: Text(
                       l10n.stockpileItemTapHint,
-                      style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+                      style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
                     ),
                   ),
                 ],
@@ -282,7 +290,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
             children: [
               Text(
                 l10n.stockpileDisclaimer,
-                style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+                style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
               ),
               const SizedBox(height: 8),
               Text(
@@ -325,11 +333,15 @@ class _StockpileScreenState extends State<StockpileScreen> {
           Flexible(
             child: Text(
               label,
-              style: const TextStyle(fontSize: 11, color: Colors.blue),
+              style: TextStyle(
+                fontSize: 11,
+                color: Theme.of(context).colorScheme.primary,
+              ),
             ),
           ),
           const SizedBox(width: 4),
-          const Icon(Icons.open_in_new, size: 12, color: Colors.blue),
+          Icon(Icons.open_in_new,
+              size: 12, color: Theme.of(context).colorScheme.primary),
         ],
       ),
     ),
@@ -447,7 +459,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
             s.expiryReminderEnabled
                 ? l10n.stockpileExpiryReminderSubtitle
                 : l10n.stockpileInspectionReminderSubtitle,
-            style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+            style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
           ),
         ],
       ),
@@ -494,7 +506,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
 
   Widget _summaryCard(AppLocalizations l10n, StockpileState s) => Card(
     margin: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-    color: const Color(0xFFF1F6FF),
+    color: _tintedSurface(context, const Color(0xFFF1F6FF)),
     child: Padding(
       padding: const EdgeInsets.all(12),
       child: Column(
@@ -531,7 +543,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
           const SizedBox(height: 6),
           Text(
             l10n.stockpileSummaryNote,
-            style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+            style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
           ),
         ],
       ),
@@ -641,7 +653,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
                       decoration: entry.checked
                           ? TextDecoration.lineThrough
                           : null,
-                      color: entry.checked ? Colors.grey[600] : null,
+                      color: entry.checked ? Theme.of(context).colorScheme.onSurfaceVariant : null,
                     ),
                   ),
                   const SizedBox(height: 2),
@@ -672,7 +684,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
                 ],
               ),
             ),
-            Icon(Icons.chevron_right, size: 20, color: Colors.grey[500]),
+            Icon(Icons.chevron_right, size: 20, color: Theme.of(context).colorScheme.onSurfaceVariant),
             // 提携ショップのロゴ。押すとその店の検索結果へ直接飛ぶ（外部ブラウザ）。
             // 承認済みの店舗だけ並ぶ（config.dart の vcMerchants）
             if (purchasable && AffiliateLinks.isAvailable)
@@ -939,7 +951,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
                     _sheetHeader(l10n.stockpileGuideWhy),
                     Text(
                       guide.why,
-                      style: TextStyle(fontSize: 13, color: Colors.grey[800]),
+                      style: TextStyle(fontSize: 13, color: Theme.of(context).colorScheme.onSurfaceVariant),
                     ),
                   ],
                   if (guide.products.isNotEmpty) ...[
@@ -949,7 +961,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
                     const SizedBox(height: 4),
                     Text(
                       l10n.stockpileGuideProductsNote,
-                      style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+                      style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
                     ),
                   ],
                 ],
@@ -982,7 +994,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
                 if (products != null && products.disclaimer.isNotEmpty)
                   Text(
                     products.disclaimer,
-                    style: TextStyle(fontSize: 11, color: Colors.grey[700]),
+                    style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
                   ),
                 // アフィリエイトの明示は利用規約で行う（画面には出さない）
                 // 削除はカスタム項目だけ（既定の品目には出さない）

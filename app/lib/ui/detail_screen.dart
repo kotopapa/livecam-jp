@@ -239,7 +239,7 @@ class _DetailScreenState extends State<DetailScreen> {
             _nearbySection(),
             const Divider(height: 24),
             Text(disclaimerTextOf(context.l10n),
-                style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant)),
             const SizedBox(height: 16),
           ]),
         )
@@ -290,7 +290,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   : l10n.detailTimeUnknown,
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           Text(l10n.detailRefreshEvery(camera.feed.refreshSec ?? 600),
-              style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+              style: TextStyle(fontSize: 12, color: Theme.of(context).colorScheme.onSurfaceVariant)),
         ]),
       ),
       FilledButton.icon(
@@ -499,7 +499,7 @@ class _DetailScreenState extends State<DetailScreen> {
         onPressed: _openReportForm,
         icon: const Icon(Icons.flag_outlined, size: 18),
         label: Text(l10n.detailReportProblem),
-        style: TextButton.styleFrom(foregroundColor: Colors.grey[700]),
+        style: TextButton.styleFrom(foregroundColor: Theme.of(context).colorScheme.onSurfaceVariant),
       ),
     ]);
   }
@@ -547,7 +547,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         child: Container(
                           width: 120,
                           decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: Theme.of(context).colorScheme.surfaceContainerHighest,
                             borderRadius: BorderRadius.circular(6),
                           ),
                           alignment: Alignment.center,
@@ -562,7 +562,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       Text(context.l10n.detailDistanceKm(
                           (dist / 1000).toStringAsFixed(1)),
                           style: TextStyle(
-                              fontSize: 10, color: Colors.grey[600])),
+                              fontSize: 10, color: Theme.of(context).colorScheme.onSurfaceVariant)),
                     ]),
               ),
             );
@@ -999,9 +999,9 @@ class _MediaFallback extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 4 / 3,
       child: Container(
-        color: Colors.grey[200],
+        color: Theme.of(context).colorScheme.surfaceContainerHighest,
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Icon(icon, size: 40, color: Colors.grey),
+          Icon(icon, size: 40, color: Theme.of(context).colorScheme.onSurfaceVariant),
           const SizedBox(height: 8),
           Text(text, textAlign: TextAlign.center),
           if (action != null)

@@ -21,7 +21,7 @@ class MapSearchPill extends StatelessWidget {
       child: SizedBox(
         height: 48,
         child: Material(
-          color: Colors.white,
+          color: scheme.surface,
           elevation: 3,
           shadowColor: Colors.black45,
           borderRadius: BorderRadius.circular(24),

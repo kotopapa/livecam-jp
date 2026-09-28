@@ -193,7 +193,8 @@ class _TipScreenState extends State<TipScreen> {
         Text(
           l10n.tipIntro,
           textAlign: TextAlign.center,
-          style: theme.textTheme.bodyMedium?.copyWith(color: Colors.grey[700]),
+          style: theme.textTheme.bodyMedium
+              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
         ),
         const SizedBox(height: 12),
         // お礼としての広告非表示（購入対象ではないことを明記）
@@ -220,7 +221,8 @@ class _TipScreenState extends State<TipScreen> {
               ],
               const SizedBox(height: 4),
               Text(l10n.tipAdFreeNote,
-                  style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                  style: TextStyle(
+                      fontSize: 11, color: theme.colorScheme.onSurfaceVariant)),
             ]),
           ),
         ),
@@ -257,7 +259,8 @@ class _TipScreenState extends State<TipScreen> {
               Text(l10n.tipNoticeTitle, style: const TextStyle(fontWeight: FontWeight.bold)),
               const SizedBox(height: 6),
               Text(l10n.tipNoticeBody(storeName, storeVendorName),
-                  style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                  style: TextStyle(
+                      fontSize: 12, color: theme.colorScheme.onSurfaceVariant)),
               const SizedBox(height: 4),
               // Apple の標準 EULA は iOS のみ（Android は Google Play 利用規約が適用される）
               if (!Platform.isAndroid)
@@ -311,7 +314,10 @@ class _TipScreenState extends State<TipScreen> {
                 Text(t.badge,
                     style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: t.color, letterSpacing: 1)),
                 Text(t.title(l10n), style: TextStyle(fontWeight: FontWeight.bold, color: t.color)),
-                Text(t.subtitle(l10n), style: TextStyle(fontSize: 12, color: Colors.grey[700])),
+                Text(t.subtitle(l10n),
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: Theme.of(context).colorScheme.onSurfaceVariant)),
                 Text(l10n.tipAdFreeTier(AdFree.monthsFor(t.id), _perMonth(p, AdFree.monthsFor(t.id))),
                     style: TextStyle(fontSize: 11, color: t.color)),
               ]),

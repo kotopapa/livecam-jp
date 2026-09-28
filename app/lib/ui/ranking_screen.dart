@@ -146,7 +146,9 @@ class _RankingScreenState extends State<RankingScreen> {
             padding: const EdgeInsets.fromLTRB(16, 6, 16, 0),
             child: Text(
               l10n.rankingNote,
-              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+              style: TextStyle(
+                  fontSize: 11,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant),
             ),
           ),
           Expanded(
@@ -167,6 +169,7 @@ class _RankingScreenState extends State<RankingScreen> {
                     itemBuilder: (context, i) {
                       final (camera, label) = ranked[i];
                       final url = widget.app.imageUrlFor(camera);
+                      final scheme = Theme.of(context).colorScheme;
                       return ListTile(
                         leading: SizedBox(
                           width: 88,
@@ -181,7 +184,7 @@ class _RankingScreenState extends State<RankingScreen> {
                                     fontWeight: FontWeight.bold,
                                     color: i < 3
                                         ? const Color(0xFFF29900)
-                                        : Colors.grey[600],
+                                        : scheme.onSurfaceVariant,
                                   ),
                                 ),
                               ),
@@ -198,15 +201,15 @@ class _RankingScreenState extends State<RankingScreen> {
                                           // 60×40表示への縮小デコード
                                           cacheWidth: 180,
                                           errorBuilder: (_, _, _) => Container(
-                                            color: Colors.grey[300],
+                                            color: scheme.surfaceContainerHighest,
                                           ),
                                         )
                                       : Container(
-                                          color: Colors.grey[300],
+                                          color: scheme.surfaceContainerHighest,
                                           child: Icon(
                                             Icons.videocam,
                                             size: 16,
-                                            color: Colors.grey[600],
+                                            color: scheme.onSurfaceVariant,
                                           ),
                                         ),
                                 ),

@@ -43,6 +43,7 @@ class SituationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
     final rows = <_Row>[];
     final s = situation;
     if (s.warnings.special.isNotEmpty) {
@@ -121,7 +122,7 @@ class SituationCard extends StatelessWidget {
     return Material(
       elevation: 3,
       borderRadius: BorderRadius.circular(10),
-      color: Colors.white.withValues(alpha: 0.96),
+      color: scheme.surface.withValues(alpha: 0.96),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(10, 6, 4, 6),
         child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -140,7 +141,7 @@ class SituationCard extends StatelessWidget {
                         style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                   ),
                   if (onToggle != null)
-                    Icon(collapsed ? Icons.expand_more : Icons.expand_less, size: 18, color: Colors.black54),
+                    Icon(collapsed ? Icons.expand_more : Icons.expand_less, size: 18, color: scheme.onSurfaceVariant),
                 ]),
               ),
             ),
@@ -168,7 +169,7 @@ class SituationCard extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(fontSize: 12)),
                   ),
-                  const Icon(Icons.chevron_right, size: 16, color: Colors.black38),
+                  Icon(Icons.chevron_right, size: 16, color: scheme.onSurface.withValues(alpha: 0.38)),
                 ]),
               ),
             ),
@@ -176,13 +177,13 @@ class SituationCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 22, top: 2),
               child: Text(l10n.situationMore(hidden),
-                  style: TextStyle(fontSize: 11, color: Colors.grey[700])),
+                  style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
             ),
           if (!collapsed)
             Padding(
               padding: const EdgeInsets.only(top: 2),
               child: Text(l10n.situationSource,
-                  style: TextStyle(fontSize: 9, color: Colors.grey[600])),
+                  style: TextStyle(fontSize: 9, color: scheme.onSurfaceVariant)),
             ),
         ]),
       ),

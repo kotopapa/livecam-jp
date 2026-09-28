@@ -46,11 +46,13 @@ class _RouteCamerasScreenState extends State<RouteCamerasScreen> {
               itemCount: widget.cameras.length + 1,
               separatorBuilder: (_, _) => const Divider(height: 1),
               itemBuilder: (context, i) {
+                final scheme = Theme.of(context).colorScheme;
                 if (i == widget.cameras.length) {
                   return Padding(
                     padding: const EdgeInsets.all(12),
                     child: Text(widget.attribution,
-                        style: TextStyle(fontSize: 10, color: Colors.grey[600])),
+                        style: TextStyle(
+                            fontSize: 10, color: scheme.onSurfaceVariant)),
                   );
                 }
                 final cc = widget.cameras[i];
@@ -68,11 +70,11 @@ class _RouteCamerasScreenState extends State<RouteCamerasScreen> {
                               fit: BoxFit.cover,
                               cacheWidth: 216,
                               errorBuilder: (_, _, _) =>
-                                  Container(color: Colors.grey[300]))
+                                  Container(color: scheme.surfaceContainerHighest))
                           : Container(
-                              color: Colors.grey[300],
+                              color: scheme.surfaceContainerHighest,
                               child: Icon(Icons.videocam,
-                                  size: 20, color: Colors.grey[600])),
+                                  size: 20, color: scheme.onSurfaceVariant)),
                     ),
                   ),
                   title: Text(camera.name, maxLines: 1, overflow: TextOverflow.ellipsis),
