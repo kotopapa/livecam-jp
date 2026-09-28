@@ -651,11 +651,14 @@ class _MediaView extends StatelessWidget {
           ),
         );
       case FeedType.youtubeChannel:
-        // IFrame Player（embed/live_stream）をWebViewで表示（SPEC C6遵守）
+        // IFrame Player をWebViewで表示（SPEC C6遵守）。いまの配信の動画IDを monitor が
+        // 解決していればそれで埋め込む。live_stream?channel= はチャンネルが配信中でも
+        // 「この動画は再生できません」になることがある（2026-09 富士見台どうぶつ病院で報告）
+        final liveId = app.repository.status[camera.id]?.videoId;
         return AspectRatio(
           aspectRatio: 16 / 9,
           child: _YoutubeEmbedView(
-              embedPath: 'live_stream?channel=${camera.feed.url}'),
+              embedPath: liveId ?? 'live_stream?channel=${camera.feed.url}'),
         );
       case FeedType.youtubeVideo:
         // 動画ID固定のIFrame埋め込み（1チャンネル多配信のライブ用）

@@ -20,6 +20,7 @@ class CameraStatus {
     this.avgIntervalSec,
     this.imageUrl,
     this.imageTime,
+    this.videoId,
   });
 
   final CameraState state;
@@ -33,6 +34,10 @@ class CameraStatus {
   final String? imageUrl;
   final String? imageTime;
 
+  /// youtube_channel の、いま配信中の動画ID（monitorが30分ごとに解決。配信が無ければ null）。
+  /// `embed/live_stream?channel=` は配信中でも再生できないことがあるため、あれば動画IDで埋め込む
+  final String? videoId;
+
   factory CameraStatus.fromJson(Map<String, dynamic> json) => CameraStatus(
         state: CameraState.parse(json['state'] as String?),
         lastOkAt: json['last_ok_at'] as String?,
@@ -40,6 +45,7 @@ class CameraStatus {
         avgIntervalSec: (json['avg_interval_sec'] as num?)?.toInt(),
         imageUrl: json['image_url'] as String?,
         imageTime: json['image_time'] as String?,
+        videoId: json['video_id'] as String?,
       );
 }
 
