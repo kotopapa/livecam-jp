@@ -791,11 +791,16 @@ class _SupportCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const accent = Color(0xFF7A5C46);
+    // ダークでは茶色を暗い面に薄く混ぜた下地＋明るい茶の差し色にする
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    final scheme = Theme.of(context).colorScheme;
+    final accent = dark ? const Color(0xFFE0B892) : const Color(0xFF7A5C46);
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
       child: Material(
-        color: const Color(0xFFFFF6EC),
+        color: dark
+            ? Color.alphaBlend(const Color(0xFF7A5C46).withValues(alpha: 0.28), scheme.surface)
+            : const Color(0xFFFFF6EC),
         borderRadius: BorderRadius.circular(16),
         child: InkWell(
           borderRadius: BorderRadius.circular(16),
@@ -815,7 +820,7 @@ class _SupportCard extends StatelessWidget {
                     color: accent.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.volunteer_activism,
                     color: accent,
                     size: 28,
@@ -828,7 +833,7 @@ class _SupportCard extends StatelessWidget {
                     children: [
                       Text(
                         context.l10n.settingsSupportTitle,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                           color: accent,
@@ -837,9 +842,9 @@ class _SupportCard extends StatelessWidget {
                       const SizedBox(height: 2),
                       Text(
                         context.l10n.settingsSupportBody,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 12,
-                          color: Colors.black87,
+                          color: dark ? scheme.onSurface : Colors.black87,
                         ),
                       ),
                       if (AdFree.instance.isActive)
@@ -850,7 +855,7 @@ class _SupportCard extends StatelessWidget {
                                 DateFormat.yMMMd(
                                         Localizations.localeOf(context).toString())
                                     .format(AdFree.instance.until!.toLocal())),
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
                               color: accent,
@@ -864,6 +869,7 @@ class _SupportCard extends StatelessWidget {
                 FilledButton(
                   style: FilledButton.styleFrom(
                     backgroundColor: accent,
+                    foregroundColor: dark ? const Color(0xFF3A2A1E) : Colors.white,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 14,
                       vertical: 10,
