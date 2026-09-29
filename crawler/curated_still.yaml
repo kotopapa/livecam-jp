@@ -37076,3 +37076,1554 @@ cameras:
     image_url: "https://www.yachiyo-1goukansen-suii.jp/No3.php"
     page_url: "https://www.yachiyo-1goukansen-suii.jp/"
     note: "同上"
+
+
+  # ===== 2026-09-30 全国多角調査（星空・気象/牧場・自然/街・庁舎/交通・文化/産業・季節）=====
+
+  - id: curated-stars-rikubetsu-ginganomori-east
+    name: "銀河の森天文台 ライブカメラ（陸別町・阿寒方面）"
+    operator: "陸別町（りくべつ宇宙地球科学館 銀河の森天文台）"
+    category: healing
+    prefecture: "01"
+    lat: 43.4548
+    lng: 143.7663
+    image_url: "https://www.rikubetsu.jp/image/tenmondai/sun000.jpg"
+    page_url: "https://www.rikubetsu.jp/tenmon/livecam/"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:30 JST 検証: image/jpeg 25KB、60秒で内容変化（Last-Modified も更新）。天文台2階制御室東側窓から阿寒方面の空模様。運営者注記: 明るい時間帯のみ撮影・暗い時間の白点は星ではない。規約: 一般的な著作権表記のみ（転載禁止文言なし）"
+
+  - id: curated-stars-kyoto-sangyo-koyama-skymon
+    name: "京都産業大学 神山天文台 スカイモニター（京都市北区）"
+    operator: "京都産業大学 神山天文台"
+    category: healing
+    prefecture: "26"
+    lat: 35.066345
+    lng: 135.754211
+    image_url: "http://www.cc.kyoto-su.ac.jp/~kao/skymon/skymon.jpg"
+    page_url: "http://www.cc.kyoto-su.ac.jp/~kao/skymon/skymon.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:40 JST 検証: image/jpeg 23KB、ページは60秒リフレッシュ、75秒で内容変化（Last-Modified 12:40→12:41 UTC）。https でも取得可（www.cc.kyoto-su.ac.jp）。同ページに気温・湿度・雨量グラフ併設。規約: 転載禁止文言なし"
+
+  - id: curated-stars-higashihiroshima-tenmondai-skymon
+    name: "東広島天文台 環境モニタ 空カメラ（広島大学）"
+    operator: "広島大学 宇宙科学センター 東広島天文台"
+    category: healing
+    prefecture: "34"
+    lat: 34.3776
+    lng: 132.7767
+    image_url: "https://hasc.hiroshima-u.ac.jp/environ/current_srk.jpg"
+    page_url: "http://hasc.hiroshima-u.ac.jp/environ/skymon_summary.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:40 JST 検証: image/jpeg 78KB、ページは60秒リフレッシュ、Last-Modified は75秒で更新（夜間のため画素は同一）。http は https にリダイレクト。規約: 転載禁止文言なし。ライブカメラDB では 1.5m かなた望遠鏡の観測環境モニタとして掲載"
+
+  - id: curated-weather-seikei-obs-cloudcam
+    name: "成蹊気象観測所 雲カメラ（武蔵野市・全天）"
+    operator: "成蹊学園 成蹊気象観測所"
+    category: other
+    prefecture: "13"
+    lat: 35.710575
+    lng: 139.572693
+    image_url: "https://www.seikei.ac.jp/obs/smodata/allskycam.jpg"
+    page_url: "https://www.seikei.ac.jp/gakuen/esd/obs/realtime/cloud.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:40 JST 検証: image/jpeg 40KB、10分ごと更新（ページ記載）、75秒で内容変化。理科棟屋上の全天カメラ（魚眼、右下にタイムスタンプ）。1926年から続く気象観測所のリアルタイムデータの一部。規約: 転載禁止文言なし（定期点検で停止する旨の告知あり）"
+
+  - id: curated-weather-jaist-live-camera
+    name: "Live!JAIST ライブカメラ（北陸先端科学技術大学院大学・能美市）"
+    operator: "国立大学法人 北陸先端科学技術大学院大学"
+    category: other
+    prefecture: "17"
+    lat: 36.442867
+    lng: 136.59256
+    image_url: "http://live.jaist.ac.jp/cgi-bin/camera_data.cgi"
+    page_url: "http://live.jaist.ac.jp/live_camera/"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:40 JST 検証: image/jpeg 約780KB（CGI、Last-Modified なし）、75秒で内容変化。気象観測データ（気温・風向風速）併設の学内気象ステーション。ライセンス表記: CC 表示-非営利-継承 2.1 日本（NC 条件のため広告付きアプリでの直接表示は要判断。誘導型なら問題なし）"
+
+  - id: curated-volcano-kyoto-u-aso-hondo-cam
+    name: "阿蘇火山研究センター 本堂カメラ（京都大学・南阿蘇村）"
+    operator: "京都大学大学院理学研究科附属 地球熱学研究施設 火山研究センター"
+    category: volcano
+    prefecture: "43"
+    lat: 32.86985
+    lng: 131.000519
+    image_url: "http://www.aso.vgs.kyoto-u.ac.jp/hondocam/hondoimg.jpg"
+    page_url: "http://www.aso.vgs.kyoto-u.ac.jp/camera/hondo/index.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:55 JST 検証: image/jpeg 217KB、約1分で自動更新（ページ記載）、65秒で内容変化。研究センター（本堂）から阿蘇中岳方面。https でも取得可。同サイト /camera/avl/ は夜間（20:00〜7:30）休止のため未採用。規約: 転載禁止文言なし"
+
+  - id: curated-unkai-takachiho-kunimigaoka
+    name: "国見ヶ丘 ライブカメラ（高千穂町・雲海）"
+    operator: "高千穂町（企画観光課）"
+    category: scenic
+    prefecture: "45"
+    lat: 32.7148
+    lng: 131.2903
+    image_url: "http://118.21.109.43:50000/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.town-takachiho.jp/top/soshiki/kikakukanko/2/2/kunimigaoka.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:50 JST 検証: 町公式ページが Panasonic ネットワークカメラ（直IP・http、ImageViewer）を iframe 埋め込み。SnapshotJPEG は image/jpeg 640x480 約42KB、30秒で内容変化。雲海側（東）と阿蘇涅槃像側を自動旋回。秋〜冬の早朝に雲海。町の注記: メンテナンスで一時休止あり。規約: 転載禁止文言なし。直IP・http のため URL 変更に注意"
+
+  - id: curated-unkai-asago-takeda-castle
+    name: "竹田城跡 ライブカメラ（朝来市・立雲峡側）"
+    operator: "朝来市"
+    category: scenic
+    prefecture: "28"
+    lat: 35.2985
+    lng: 134.8455
+    image_url: "http://anet-alert.jp/tenku/index.files/image001.jpg"
+    page_url: "https://www.city.asago.hyogo.jp/site/takeda/3085.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 22:00 JST 検証: image/jpeg 20KB、Last-Modified 16:59 JST（市ページ記載どおり公開は5時〜17時、5分ごと自動更新。夜間は最終画像のまま）。早朝に画面が白いときは雲海。1〜2月は閉山。規約: 市サイトの一般的な著作権表記のみ。画像ホストが anet-alert.jp（市が使う配信システム）である点に注意"
+
+  - id: curated-mountain-karasawa-goya-kamikochi-vc
+    name: "涸沢小屋（前穂高岳）山小屋カメラ"
+    operator: "環境省 上高地ビジターセンター（写真提供: 北アルプスブロードバンドネットワーク）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.2909
+    lng: 137.6612
+    image_url: "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/karasawakoya.jpg"
+    page_url: "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:45 JST 検証: image/jpeg 41KB、Last-Modified 21:45 JST（当日更新）、60秒では同一（山小屋カメラは10分〜1時間間隔）。台帳の同シリーズ（蝶ヶ岳ヒュッテ・燕山荘・涸沢ヒュッテ・北穂高小屋・西穂山荘）と同じ配信元で未収録分。同ページの ヒュッテ西岳 nishidake.jpg（8/10）・槍ヶ岳山荘北側 yarigatakekita.jpg（7/26）は更新停止のため見送り。注記: 山小屋の都合で更新が止まることあり"
+
+  - id: curated-link-bioweather-tokyo-komazawa
+    name: "いであ 本社（世田谷区駒沢）お天気ライブカメラ"
+    operator: "いであ株式会社（バイオウェザーサービス）"
+    category: scenic
+    prefecture: "13"
+    lat: 35.630703
+    lng: 139.654526
+    feed_type: web_page
+    feed_url: "https://www.bioweather.net/livecam/index_list.php#tokyo"
+    image_url: "https://www.bioweather.net/livecam/index_list.php#tokyo"
+    page_url: "https://www.bioweather.net/livecam/index_list.php#tokyo"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。一覧の「東京」（kmz_now.jpg）。10分更新。転載禁止規約のため直接表示不可"
+
+  - id: curated-link-bioweather-shizuoka-yaizu
+    name: "いであ 環境創造研究所（焼津市）お天気ライブカメラ"
+    operator: "いであ株式会社（バイオウェザーサービス）"
+    category: scenic
+    prefecture: "22"
+    lat: 34.788067
+    lng: 138.295471
+    feed_type: web_page
+    feed_url: "https://www.bioweather.net/livecam/index_list.php#shizuoka"
+    image_url: "https://www.bioweather.net/livecam/index_list.php#shizuoka"
+    page_url: "https://www.bioweather.net/livecam/index_list.php#shizuoka"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。一覧の「静岡」（szk_now.jpg）。10分更新。転載禁止規約のため直接表示不可"
+
+  - id: curated-link-bioweather-nagoya
+    name: "いであ 名古屋支店（港区入船）お天気ライブカメラ"
+    operator: "いであ株式会社（バイオウェザーサービス）"
+    category: scenic
+    prefecture: "23"
+    lat: 35.092884
+    lng: 136.882965
+    feed_type: web_page
+    feed_url: "https://www.bioweather.net/livecam/index_list.php#nagoya"
+    image_url: "https://www.bioweather.net/livecam/index_list.php#nagoya"
+    page_url: "https://www.bioweather.net/livecam/index_list.php#nagoya"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。一覧の「名古屋」（ngy_now.jpg）。10分更新。転載禁止規約のため直接表示不可"
+
+  - id: curated-link-bioweather-osaka-nanko
+    name: "いであ 大阪支社（住之江区南港北）お天気ライブカメラ"
+    operator: "いであ株式会社（バイオウェザーサービス）"
+    category: scenic
+    prefecture: "27"
+    lat: 34.642265
+    lng: 135.415665
+    feed_type: web_page
+    feed_url: "https://www.bioweather.net/livecam/index_list.php#osaka"
+    image_url: "https://www.bioweather.net/livecam/index_list.php#osaka"
+    page_url: "https://www.bioweather.net/livecam/index_list.php#osaka"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。一覧の「大阪」（osk_now.jpg）。10分更新。転載禁止規約のため直接表示不可"
+
+  - id: curated-link-bioweather-hiroshima
+    name: "いであ 中国支店（広島市中区舟入町）お天気ライブカメラ"
+    operator: "いであ株式会社（バイオウェザーサービス）"
+    category: scenic
+    prefecture: "34"
+    lat: 34.390903
+    lng: 132.445526
+    feed_type: web_page
+    feed_url: "https://www.bioweather.net/livecam/index_list.php#hiroshima"
+    image_url: "https://www.bioweather.net/livecam/index_list.php#hiroshima"
+    page_url: "https://www.bioweather.net/livecam/index_list.php#hiroshima"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。一覧の「広島」（hrm_now.jpg）。10分更新。転載禁止規約のため直接表示不可"
+
+  - id: curated-link-bioweather-fukuoka
+    name: "いであ 九州支店（福岡市東区東浜）お天気ライブカメラ"
+    operator: "いであ株式会社（バイオウェザーサービス）"
+    category: scenic
+    prefecture: "40"
+    lat: 33.616718
+    lng: 130.414062
+    feed_type: web_page
+    feed_url: "https://www.bioweather.net/livecam/index_list.php#fukuoka"
+    image_url: "https://www.bioweather.net/livecam/index_list.php#fukuoka"
+    page_url: "https://www.bioweather.net/livecam/index_list.php#fukuoka"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。一覧の「福岡」（hkt_now.jpg）。10分更新。転載禁止規約のため直接表示不可"
+
+  - id: curated-link-bioweather-naha
+    name: "いであ 沖縄支社（那覇市安謝）お天気ライブカメラ"
+    operator: "いであ株式会社（バイオウェザーサービス）"
+    category: scenic
+    prefecture: "47"
+    lat: 26.236015
+    lng: 127.687294
+    feed_type: web_page
+    feed_url: "https://www.bioweather.net/livecam/index_list.php#naha"
+    image_url: "https://www.bioweather.net/livecam/index_list.php#naha"
+    page_url: "https://www.bioweather.net/livecam/index_list.php#naha"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。一覧の「那覇」（okn_now.jpg）。10分更新。転載禁止規約のため直接表示不可"
+
+  - id: curated-link-nanto-ainokura-gassho
+    name: "相倉合掌造り集落 ライブカメラ（南砺市・星空も見える）"
+    operator: "南砺市（南砺市観光ガイド）"
+    category: scenic
+    prefecture: "16"
+    lat: 36.4232
+    lng: 136.9195
+    feed_type: web_page
+    feed_url: "http://live.city.nanto.toyama.jp/livecam/index06.jsp"
+    image_url: "http://live.city.nanto.toyama.jp/livecam/index06.jsp"
+    page_url: "http://live.city.nanto.toyama.jp/livecam/index06.jsp"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。サイトに「このサイト内にあるすべての画像は無断転載禁止です」と明記のため直接表示不可。方向切替で「棚田」を選ぶと空が写り夜は星空が見える（星空ライブカメラ紹介記事で言及）。台帳の 南砺 21件・五箇山 2件に相倉は無し（dedupe 0件）"
+
+  - id: curated-mountain-alpenroute-murodo
+    name: "立山室堂平 ライブカメラ（立山黒部アルペンルート）"
+    operator: "立山黒部貫光株式会社"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5773
+    lng: 137.5953
+    image_url: "https://live.alpen-route.co.jp/livecam/2012/img.php?n=2"
+    page_url: "https://www.alpen-route.com/live_camera/murodou.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-30 05:05 JST 検証: image/jpeg 81KB、65秒で内容変化（Last-Modified なし、PHP 経由の最新静止画）。標高2,450m の室堂平（立山主峰・みくりが池方面）。台帳の 立山室堂 は BBT/チューリップテレビ/kawabou で、アルペンルート公式の静止画は未収録（live.alpen-route 0件）。ページの「休止中」表記は HTML コメント内（冬季閉鎖時に表示）。同社サイトポリシーに転載禁止文言なし"
+
+  - id: curated-mountain-alpenroute-daikanbo
+    name: "大観峰 ライブカメラ（立山黒部アルペンルート・黒部湖方面）"
+    operator: "立山黒部貫光株式会社"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5763
+    lng: 137.6265
+    image_url: "https://live.alpen-route.co.jp/livecam/2012/img.php?n=3"
+    page_url: "https://www.alpen-route.com/live_camera/daikanbou.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-30 05:05 JST 検証: image/jpeg 96KB、65秒で内容変化。大観峰から黒部湖・後立山連峰。台帳の「大観峰」1件は阿蘇の別地点"
+
+  - id: curated-mountain-alpenroute-midagahara
+    name: "弥陀ヶ原 ライブカメラ（立山黒部アルペンルート）"
+    operator: "立山黒部貫光株式会社"
+    category: scenic
+    prefecture: "16"
+    lat: 36.5645
+    lng: 137.537
+    image_url: "https://live.alpen-route.co.jp/livecam/2012/img.php?n=1"
+    page_url: "https://www.alpen-route.com/live_camera/midagahara.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-30 05:05 JST 検証: image/jpeg 65KB、65秒で内容変化。ページ注記（コメント内）に「休止中（4月頃に再開予定）」＝冬季閉鎖期間は停止する。台帳の「弥陀ヶ原」2件は URL 別（kawabou 等）"
+
+  - id: curated-mountain-alpenroute-kurobedaira
+    name: "黒部平 ライブカメラ（立山黒部アルペンルート）"
+    operator: "立山黒部貫光株式会社"
+    category: scenic
+    prefecture: "16"
+    lat: 36.57
+    lng: 137.64
+    image_url: "https://live.alpen-route.co.jp/livecam/2012/img.php?n=4"
+    page_url: "https://www.alpen-route.com/live_camera/kurobedaira.html"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-30 05:05 JST 検証: image/jpeg 204KB、65秒で内容変化。黒部平から立山連峰・タンボ平。台帳に「黒部平」0件"
+
+  - id: curated-dam-kurobe-dam-official
+    name: "黒部ダム ライブカメラ（黒部ダムオフィシャルサイト）"
+    operator: "関西電力株式会社（黒部ダムオフィシャルサイト）"
+    category: dam
+    prefecture: "20"
+    lat: 36.566
+    lng: 137.663
+    image_url: "https://www.kurobe-dam.com/live-photo/latest-photo/camera_live_image.jpg"
+    page_url: "https://www.kurobe-dam.com/livecamera/"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-30 05:05 JST 検証: image/jpeg 150KB、約60秒ごとに切替（ページ記載）、65秒で内容変化（Last-Modified 更新）。台帳の「黒部ダム」1件は kawabou の別カメラで公式サイト画像は未収録（kurobe-dam.com 0件）。観光放水（6/26〜10/15）の様子。規約: サイトに転載禁止文言なし"
+
+  - id: curated-mountain-higashikawa-asahidake-summit-cam
+    name: "旭岳山頂カメラ（東川町）"
+    operator: "東川町"
+    category: scenic
+    prefecture: "01"
+    lat: 43.652
+    lng: 142.776
+    image_url: "http://211.18.244.62/webcam/webimg/asahidake.JPG"
+    page_url: "http://211.18.244.62/webcam/support/index.cgi"
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-30 05:05 JST 検証: image/jpeg 44KB、Last-Modified 04:53 JST（ページ記載どおり1時間ごと更新、過去7日分を保持）。ページ標題「旭岳山頂 | 写真の町 北海道上川郡東川町」＝町の公式ウェブカメラ（直IP・http。日本百名山ライブカメラ集から到達）。町注記: 電話回線不調で転送されない場合あり。台帳の 東川町から見る旭岳（北工学園 YouTube）・sizenken とは別カメラ（asahidake.JPG 0件）。撮影地点はレビュー時に映像で要確認"
+
+  - id: curated-link-shiojiri-takabotchi
+    name: "高ボッチ高原 ライブカメラ（塩尻市観光協会・富士山/諏訪湖/北アルプス）"
+    operator: "塩尻市観光協会（時めぐり）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.1416
+    lng: 138.03
+    feed_type: web_page
+    feed_url: "http://takabocchi.float-zone.com:8888/viewer/live/?mode=showcontrol"
+    image_url: "http://takabocchi.float-zone.com:8888/viewer/live/?mode=showcontrol"
+    page_url: "http://takabocchi.float-zone.com:8888/viewer/live/?mode=showcontrol"
+    note: "2026-09-30 全国多角調査(stars_weather)。誘導型。塩尻市観光協会サイト（tokimeguri.jp）のトップから「ライブカメラ」として Canon ネットワークカメラの操作型ビューア（float-zone.com:8888）へリンク。静止画 API（/-wvhttp-01-/GetOneShot）は text/plain を返し取得不可のためビューアへ誘導。富士山・諏訪湖・雲海・北アルプスの絶景地点で台帳に 0件（高ボッチ）。2026-09-30 05:10 JST ビューア HTTP 200 を確認"
+
+  - id: curated-farm-tateshina-daini-bokujo
+    name: "蓼科第二牧場（立科町）"
+    operator: "蓼科ケーブルビジョン株式会社"
+    category: healing
+    prefecture: "20"
+    lat: 36.1323
+    lng: 138.2783
+    image_url: "https://tcv21.com/live6.jpg"
+    page_url: "https://tcv21.com/live6/"
+    note: "2026-09-30 全国多角調査(farm_nature)。image/jpeg 約200KB、15秒間隔の2回取得でハッシュ・Last-Modified とも更新（2026-09-29 21:50 JST）。同社の live5.jpg（道の駅女神の里たてしな）は台帳採用済みなので同一運営者。ページに転載禁止文言なし"
+
+  - id: curated-wild-izumi-arasaki-crane
+    name: "荒崎ツル保護区（出水市ツル観察センター）"
+    operator: "出水市"
+    category: healing
+    prefecture: "46"
+    lat: 32.1016
+    lng: 130.2779
+    image_url: "http://camera.city.izumi.kagoshima.jp/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "http://www.city.kagoshima-izumi.lg.jp/page/page_80098.html"
+    note: "2026-09-30 全国多角調査(farm_nature)。市ページ「今のツルの様子（ライブカメラ）」の Canon VB ビューア（PTZ 遠隔操作可）の GetOneShot を直接取得。image/jpeg 約28KB、2回取得で内容が変化（2026-09-29 21:40 JST、夜間）。ツル越冬期は11〜3月。台帳の「出水平野のツル」は環境省 sizenken（no=94）で別カメラ。市サイトは一般的な著作権表記のみ。http のみ（https なし）"
+
+  - id: curated-wild-gyoda-tone-oozeki-fishway
+    name: "利根大堰 魚道観察室（アユ・サケ遡上）"
+    operator: "独立行政法人水資源機構 利根導水総合管理所"
+    category: healing
+    prefecture: "11"
+    lat: 36.1846
+    lng: 139.481
+    feed_type: web_page
+    feed_url: "https://www.water.go.jp/kanto/tone/water/live/live-tone.html"
+    image_url: "https://www.water.go.jp/kanto/tone/water/live/live-tone.html"
+    page_url: "https://www.water.go.jp/kanto/tone/water/live/live-tone.html"
+    note: "2026-09-30 全国多角調査(farm_nature)。誘導型（web_page）。ページの livecam.js が期間・時刻判定で rtmp.kannet.ne.jp の再生ページ（HLS）を iframe 表示するため画像URLなし。表示期間は 4/10〜6/30（アユ）・7/15〜8/31・10/1〜12/25（サケ）の 6:30〜18:00 のみ。2026-09-01〜設備メンテで停止中の告知あり（10/1 再開見込み）。水資源機構の他ダムは台帳採用済み"
+
+  - id: curated-lake-sizenken-88-kutcharo
+    name: "クッチャロ湖のハクチョウ（浜頓別町 水鳥観察館）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: healing
+    prefecture: "01"
+    lat: 45.1272
+    lng: 142.3497
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=88"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=88"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=88"
+    note: "2026-09-30 全国多角調査(farm_nature)。sizenken 型（feed.type=sizenken、既存パーサ）。最新画像 2026-09-29 20:00 を確認（毎時更新）。ラムサール条約湿地・コハクチョウ中継地。台帳未登録"
+
+  - id: curated-lake-sizenken-75-kominato
+    name: "小湊海岸のハクチョウ（平内町 浅所海岸）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: healing
+    prefecture: "02"
+    lat: 40.9161
+    lng: 140.9625
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=75"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=75"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=75"
+    note: "2026-09-30 全国多角調査(farm_nature)。sizenken 型。最新画像 2026-09-29 20:00 を確認。特別天然記念物「小湊のハクチョウおよびその渡来地」。台帳未登録"
+
+  - id: curated-lake-sizenken-120-mikatako
+    name: "三方湖の水鳥（若狭町 三方青年の家）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: healing
+    prefecture: "18"
+    lat: 35.5532
+    lng: 135.9034
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=120"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=120"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=120"
+    note: "2026-09-30 全国多角調査(farm_nature)。sizenken 型。最新画像 2026-09-29 19:00 を確認。三方五湖（ラムサール条約湿地）。台帳に三方五湖のカメラは無い"
+
+  - id: curated-lake-sizenken-78-sarobetsu-horonobe
+    name: "幌延ビジターセンターからみたサロベツ湿原（幌延町）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所／幌延ビジターセンター"
+    category: healing
+    prefecture: "01"
+    lat: 45.037
+    lng: 141.7488
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=78"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=78"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=78"
+    note: "2026-09-30 全国多角調査(farm_nature)。sizenken 型。最新画像 2026-09-29 20:00 を確認。台帳の「サロベツ湿原センターからみたサロベツ湿原」（no=119、豊富町側）は現在停止中で、こちらは南側の幌延VCからの別カメラ"
+
+  - id: curated-lake-sizenken-118-bihoro-pass
+    name: "美幌峠からみた屈斜路湖（美幌町）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "01"
+    lat: 43.6671
+    lng: 144.2018
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=118"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=118"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=118"
+    note: "2026-09-30 全国多角調査(farm_nature)。sizenken 型。最新画像 2026-09-29 20:00 を確認。台帳の美幌峠は道路情報提供システムの路面カメラ2台のみで、湖の眺望カメラは未登録"
+
+  - id: curated-lake-sizenken-81-yunoko
+    name: "奥日光 湯ノ湖（日光市湯元）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "09"
+    lat: 36.8126
+    lng: 139.4204
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=81"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=81"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=81"
+    note: "2026-09-30 全国多角調査(farm_nature)。sizenken 型。最新画像 2026-09-29 20:00 を確認。奥日光の湿原（ラムサール条約湿地）の一部。台帳に湯ノ湖のカメラは無い"
+
+  - id: curated-lake-sizenken-76-hakka-pass-towada
+    name: "発荷峠からみた十和田湖（小坂町）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "05"
+    lat: 40.4586
+    lng: 140.8239
+    feed_type: sizenken
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=76"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=76"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=76"
+    note: "2026-09-30 全国多角調査(farm_nature)。sizenken 型。最新画像 2026-09-29 20:00 を確認。台帳の十和田湖2台（trSGa-eTSrk・ゴルフクラブ）は湖畔からで、発荷峠の俯瞰は未登録"
+
+  - id: curated-town-chiyoda-kousho-cam1
+    name: "千代田区役所 高所カメラ Camera1（庁舎から北東を望む）"
+    operator: "千代田区（政策経営部災害対策・危機管理課）"
+    category: other
+    prefecture: "13"
+    lat: 35.693947
+    lng: 139.75354
+    image_url: "https://bosai-kousho-2.bousai.city.chiyoda.lg.jp/kousho/images/camera1.jpg"
+    page_url: "https://www.city.chiyoda.lg.jp/koho/kurashi/bosai/johotekyo/camera/map1.html"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 image/jpeg 72KB、30秒間隔で Last-Modified・ハッシュとも更新（約30秒更新）。区役所本庁舎屋上鉄塔の2台で区全域を見渡す。サイトに転載禁止文言なし（通常の著作権表記）"
+
+  - id: curated-town-chiyoda-kousho-cam2
+    name: "千代田区役所 高所カメラ Camera2（庁舎から西を望む）"
+    operator: "千代田区（政策経営部災害対策・危機管理課）"
+    category: other
+    prefecture: "13"
+    lat: 35.693947
+    lng: 139.75354
+    image_url: "https://bosai-kousho-2.bousai.city.chiyoda.lg.jp/kousho/images/camera2.jpg"
+    page_url: "https://www.city.chiyoda.lg.jp/koho/kurashi/bosai/johotekyo/camera/map2.html"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 image/jpeg 70KB、30秒で更新確認。Camera1 と同じ鉄塔"
+
+  - id: curated-town-yurihonjo-cityhall-roof
+    name: "由利本荘市役所 本庁舎屋上"
+    operator: "由利本荘市"
+    category: other
+    prefecture: "05"
+    lat: 39.38583
+    lng: 140.048904
+    feed_type: web_page
+    feed_url: "http://videodlv.city.yurihonjo.akita.jp/map_pc.php"
+    image_url: "http://videodlv.city.yurihonjo.akita.jp/map_pc.php"
+    page_url: "http://videodlv.city.yurihonjo.akita.jp/map_pc.php"
+    note: "2026-09-30 全国多角調査(town_gov)。誘導型。ArgosView（Panasonic）の HLS 動画配信で固定画像URLなし。配信ステータス『ライブ中カメラは10台』、01_由利本荘市役所本庁舎屋上ほか。市公式ページ https://www.city.yurihonjo.lg.jp/1001506/1001548/1004390.html から外部リンク。転載禁止文言なし"
+
+  - id: curated-town-hirosaki-park-eastgate
+    name: "弘前公園 東門"
+    operator: "弘前市"
+    category: other
+    prefecture: "02"
+    lat: 40.608
+    lng: 140.466
+    image_url: "http://live1.hi-it.jp/-wvhttp-01-/GetOneShot"
+    page_url: "https://www.city.hirosaki.aomori.jp/gaiyou/livecam/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 Canon VB-C60 の GetOneShot、image/jpeg 6KB、30秒でハッシュ変化。市ページは『Copyright © Hirosaki City』のみ。同一ホスト live4（弘前城天守）は台帳登録済み、東門(live1)・りんご公園(live2)は未登録"
+
+  - id: curated-town-hirosaki-apple-park
+    name: "弘前市りんご公園"
+    operator: "弘前市"
+    category: scenic
+    prefecture: "02"
+    lat: 40.588799
+    lng: 140.441971
+    image_url: "http://live2.hi-it.jp/-wvhttp-01-/GetOneShot"
+    page_url: "https://www.city.hirosaki.aomori.jp/gaiyou/livecam/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 GetOneShot image/jpeg 3KB、30秒でハッシュ変化（夜間のため小さい）"
+
+  - id: curated-town-ikaho-ishidangai
+    name: "伊香保温泉 石段街"
+    operator: "渋川市（商工観光部観光課）"
+    category: other
+    prefecture: "10"
+    lat: 36.490005
+    lng: 138.922348
+    image_url: "https://camera.city.shibukawa.lg.jp/-wvhttp-01-/image.cgi"
+    page_url: "https://www.city.shibukawa.lg.jp/kankou/kankou/ikahoonsen/streetsofikaho/p000210.html"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 54KB、25秒でハッシュ変化（ページ記載は約10分間隔更新）。GetOneShot は text を返すため image.cgi を使う。転載禁止文言なし。台帳の『伊香保』は1件（別カメラ）"
+
+  - id: curated-town-kami-yunagi-hill
+    name: "香美町 夕凪の丘（今子浦）"
+    operator: "香美町"
+    category: coast
+    prefecture: "28"
+    lat: 35.6507
+    lng: 134.5918
+    image_url: "https://imago-cam.town.mikata-kami.lg.jp/-wvhttp-01-/image.cgi"
+    page_url: "https://www.town.mikata-kami.lg.jp/live-camera/index.html#yuunaginooka"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 55KB、25秒でハッシュ変化。町ページ『4か所のライブカメラ、アングルを自由に操作』、転載禁止文言なし。ホスト名 imago=今子浦、ページのアンカー順（夕凪の丘/余部/鮎の里/スカイバレイ）と対応"
+
+  - id: curated-town-kami-amarube
+    name: "香美町 余部（余部橋梁）"
+    operator: "香美町"
+    category: scenic
+    prefecture: "28"
+    lat: 35.647
+    lng: 134.554
+    image_url: "https://amarube-cam.town.mikata-kami.lg.jp/-wvhttp-01-/image.cgi"
+    page_url: "https://www.town.mikata-kami.lg.jp/live-camera/index.html#amarube"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 27KB、20秒でハッシュ変化"
+
+  - id: curated-town-kami-ayunosato
+    name: "香美町 鮎の里（矢田川）"
+    operator: "香美町"
+    category: river
+    prefecture: "28"
+    lat: 35.545
+    lng: 134.635
+    image_url: "https://yadagawa-cam.town.mikata-kami.lg.jp/-wvhttp-01-/image.cgi"
+    page_url: "https://www.town.mikata-kami.lg.jp/live-camera/index.html#ayunosato"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 73KB、20秒でハッシュ変化。座標は矢田川中流の推定なので要確認"
+
+  - id: curated-town-kami-skyvalley
+    name: "香美町 スカイバレイ（村岡区大笹）"
+    operator: "香美町"
+    category: scenic
+    prefecture: "28"
+    lat: 35.423
+    lng: 134.5665
+    image_url: "https://skyvalley-cam.town.mikata-kami.lg.jp/-wvhttp-01-/image.cgi"
+    page_url: "https://www.town.mikata-kami.lg.jp/live-camera/index.html#skyvalley"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 21KB、20秒でハッシュ変化"
+
+  - id: curated-town-maniwa-katsuyama-machinami
+    name: "真庭市 勝山町並み保存地区（町裏）"
+    operator: "真庭市"
+    category: other
+    prefecture: "33"
+    lat: 35.088093
+    lng: 133.705276
+    image_url: "https://www.city.maniwa.lg.jp/live/images/katsuyama/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 image/jpeg 31KB、Last-Modified が取得直前（1分更新）。同サイトの湯原温泉街・北房ダム等4件は台帳登録済みで利用条件は同じ。醍醐桜(daigo)・ほたる公園(kikikanri6)は0バイトのため除外"
+
+  - id: curated-town-maniwa-hiruzen-shinkokyoku
+    name: "真庭市 中蒜山（蒜山振興局から）"
+    operator: "真庭市"
+    category: scenic
+    prefecture: "33"
+    lat: 35.309883
+    lng: 133.626846
+    image_url: "https://www.city.maniwa.lg.jp/live/images/shinkoukyoku/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 image/jpeg 33KB、1分更新。庁舎（蒜山振興局）から中蒜山"
+
+  - id: curated-town-maniwa-hiruzen-sanza
+    name: "真庭市 蒜山三座"
+    operator: "真庭市"
+    category: scenic
+    prefecture: "33"
+    lat: 35.3
+    lng: 133.65
+    image_url: "https://www.city.maniwa.lg.jp/live/images/tenbou/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 29KB、20秒でハッシュ変化（1分更新）"
+
+  - id: curated-town-maniwa-kanba-falls
+    name: "真庭市 神庭の滝"
+    operator: "真庭市"
+    category: scenic
+    prefecture: "33"
+    lat: 35.107319
+    lng: 133.690765
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kannba/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 39KB、20秒でハッシュ変化"
+
+  - id: curated-town-seibu-chichibu-station
+    name: "西武秩父駅前（秩父観光協会）"
+    operator: "一般社団法人秩父観光協会"
+    category: other
+    prefecture: "11"
+    lat: 35.989964
+    lng: 139.084198
+    image_url: "http://www.chichibuji.gr.jp/station-live/chichibu.jpg"
+    page_url: "http://www.chichibuji.gr.jp/live-station/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 image/jpeg 157KB、30秒で Last-Modified・ハッシュ変化（数分更新）。転載禁止文言なし。台帳の秩父25件は道路・港のみ"
+
+  - id: curated-town-ueda-station-ucv
+    name: "上田駅前ロータリー（UCV）"
+    operator: "上田ケーブルビジョン（UCV）"
+    category: other
+    prefecture: "20"
+    lat: 36.397022
+    lng: 138.250031
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/uedaeki.html"
+    image_url: "https://live.ucv.co.jp/uedaeki.html"
+    page_url: "https://live.ucv.co.jp/uedaeki.html"
+    note: "2026-09-30 全国多角調査(town_gov)。誘導型。camstreamer 埋め込み（YouTube ではない）。サイトは『画像などを許可なく複製、使用することを禁じます』の一方『UCVライブカメラへのリンクは下記バナーをお使いください』とリンク歓迎 → ページ誘導のみ。台帳の UCV は上田城跡公園など YouTube 分のみで駅前は未登録"
+
+  - id: curated-town-ichinomiya-ginza-icc
+    name: "一宮駅東口 銀座通り（ICC）"
+    operator: "株式会社アイ・シー・シー（ICC、一宮のケーブルテレビ）"
+    category: other
+    prefecture: "23"
+    lat: 35.301613
+    lng: 136.797745
+    feed_type: web_page
+    feed_url: "https://livecam.icc-media.co.jp/2.html"
+    image_url: "https://livecam.icc-media.co.jp/2.html"
+    page_url: "https://livecam.icc-media.co.jp/2.html"
+    note: "2026-09-30 全国多角調査(town_gov)。誘導型。自社 HLS（/hls/2/master.m3u8）で固定画像なし。転載・リンクの記載なし。台帳の一宮市役所屋上カメラ（市・ICC技術協力）とは別"
+
+  - id: curated-town-yonago-station-rotary-chukai
+    name: "米子駅前ロータリー（中海テレビ）"
+    operator: "中海テレビ放送（コミュニティチャンネル）"
+    category: other
+    prefecture: "31"
+    lat: 35.422791
+    lng: 133.336426
+    feed_type: web_page
+    feed_url: "https://www.chukai.co.jp/community/live/rotary/"
+    image_url: "https://www.chukai.co.jp/community/live/rotary/"
+    page_url: "https://www.chukai.co.jp/community/live/rotary/"
+    note: "2026-09-30 全国多角調査(town_gov)。誘導型。自社 HLS（webcast.chukai.ne.jp/live/03-yonagostation.m3u8）。ページは © 表記のみで転載・リンク制限なし。台帳の JR米子駅（NKT）とは別運営者"
+
+  - id: curated-town-yonago-hotel-agenda-chukai
+    name: "米子 公会堂前交差点（ホテルアジェンダ・中海テレビ）"
+    operator: "中海テレビ放送（コミュニティチャンネル）"
+    category: other
+    prefecture: "31"
+    lat: 35.430752
+    lng: 133.334152
+    feed_type: web_page
+    feed_url: "https://www.chukai.co.jp/community/live/hotel/"
+    image_url: "https://www.chukai.co.jp/community/live/hotel/"
+    page_url: "https://www.chukai.co.jp/community/live/hotel/"
+    note: "2026-09-30 全国多角調査(town_gov)。誘導型。HLS 02-agenda.m3u8。cametan では『公会堂前交差点』"
+
+  - id: curated-town-yonago-hotel-wakou-chukai
+    name: "米子 ホテルわこう前（中海テレビ）"
+    operator: "中海テレビ放送（コミュニティチャンネル）"
+    category: other
+    prefecture: "31"
+    lat: 35.424255
+    lng: 133.33548
+    feed_type: web_page
+    feed_url: "https://www.chukai.co.jp/community/live/wakou/"
+    image_url: "https://www.chukai.co.jp/community/live/wakou/"
+    page_url: "https://www.chukai.co.jp/community/live/wakou/"
+    note: "2026-09-30 全国多角調査(town_gov)。誘導型。HLS 01-wakou.m3u8"
+
+  - id: curated-town-yonago-yuyu-ichibankan-chukai
+    name: "米子 ゆうゆう壱番館屋よなご（西福原・中海テレビ）"
+    operator: "中海テレビ放送（コミュニティチャンネル）"
+    category: other
+    prefecture: "31"
+    lat: 35.440517
+    lng: 133.34314
+    feed_type: web_page
+    feed_url: "https://www.chukai.co.jp/community/live/ichibankan/"
+    image_url: "https://www.chukai.co.jp/community/live/ichibankan/"
+    page_url: "https://www.chukai.co.jp/community/live/ichibankan/"
+    note: "2026-09-30 全国多角調査(town_gov)。誘導型。HLS 12-yuuyuu.m3u8"
+
+  - id: curated-town-nichinan-bunka-center-chukai
+    name: "日南町総合文化センター（中海テレビ）"
+    operator: "中海テレビ放送（コミュニティチャンネル）"
+    category: other
+    prefecture: "31"
+    lat: 35.158714
+    lng: 133.303146
+    feed_type: web_page
+    feed_url: "https://www.chukai.co.jp/community/live/nichinan/"
+    image_url: "https://www.chukai.co.jp/community/live/nichinan/"
+    page_url: "https://www.chukai.co.jp/community/live/nichinan/"
+    note: "2026-09-30 全国多角調査(town_gov)。誘導型。HLS 04-nichinan.m3u8。町中心部の公共施設前"
+
+  - id: curated-town-gifu-meitetsu-station-ccn
+    name: "名鉄岐阜駅前交差点（CCN）"
+    operator: "シーシーエヌ株式会社（CCN、岐阜のケーブルテレビ）"
+    category: other
+    prefecture: "21"
+    lat: 35.412306
+    lng: 136.759583
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/meitetsu.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/meitetsu.html"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 33KB、30秒で Last-Modified・ハッシュ変化。ページに転載・リンク制限なし（© 2019 CCN のみ、サイトポリシーは未確認）。CCN は防災情報として岐阜・下呂の41地点を公開（他は交差点・河川）。JR岐阜駅南口ページは404"
+
+  - id: curated-town-gifu-kano-shinhonmachi-ccn
+    name: "加納新本町交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.406944
+    lng: 136.748722
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/kano002.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/kano002.html"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 35KB、20秒でハッシュ変化。市街地交差点"
+
+  - id: curated-town-gifu-jonan-dori-ccn
+    name: "城南通り（岐阜市加納・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.402
+    lng: 136.755
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/jonan.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/jonan.html"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 29KB、20秒でハッシュ変化。茜部本郷(akanebe)は2回目が0バイトだったため除外"
+
+  - id: curated-town-hakodate-mihara3-ncv
+    name: "函館市 美原3丁目交差点（NCV函館センター）"
+    operator: "株式会社ニューメディア（NCV函館センター）"
+    category: road
+    prefecture: "01"
+    lat: 41.8145
+    lng: 140.7605
+    image_url: "https://www.ncv.co.jp/livecamera/hakodate/camera063.jpg"
+    page_url: "https://www.ncv.co.jp/hakodate/#center-livecamera"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 148KB、Last-Modified 22:11JST（約5分ごと自動更新と明記）、30秒では同一。台帳に NCV 米沢・新潟・福島の静止画6件あり同形式。同ページの『住吉漁港_1』(camera095) は港カテゴリで別担当向け"
+
+  - id: curated-town-akita-selion-city-side
+    name: "秋田港ポートタワー・セリオン 展望（街側）"
+    operator: "道の駅あきた港（秋田港ポートタワー・セリオン）"
+    category: scenic
+    prefecture: "05"
+    lat: 39.752747
+    lng: 140.061676
+    image_url: "http://selion.miemasu.net:81/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://selion.miemasu.net:81/CgiStart?page=Single&Language=1"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 Panasonic SnapshotJPEG image/jpeg 31KB、25秒でハッシュ変化。cametan では『道の駅あきた港』運営として掲載。運営者ページ側の利用条件は未取得（要確認）"
+
+  - id: curated-town-soemoncho-01-fukujudo
+    name: "宗右衛門町商店街 1 福寿堂秀信前"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.669773
+    lng: 135.504257
+    image_url: "http://soemon-cho.miemasu.net:63101/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 47KB CHANGED"
+
+  - id: curated-town-soemoncho-02-pare373
+    name: "宗右衛門町商店街 2 パレ373ビル前"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.6697
+    lng: 135.5039
+    image_url: "http://soemon-cho.miemasu.net:63102/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 44KB CHANGED"
+
+  - id: curated-town-soemoncho-03-shunpan
+    name: "宗右衛門町商店街 3 春帆ビル前"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.66968
+    lng: 135.5035
+    image_url: "http://soemon-cho.miemasu.net:63103/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 31KB CHANGED"
+
+  - id: curated-town-soemoncho-04-aiaubashi
+    name: "宗右衛門町商店街 4 相合橋北詰"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.66955
+    lng: 135.5045
+    image_url: "http://soemon-cho.miemasu.net:63104/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 31KB CHANGED"
+
+  - id: curated-town-soemoncho-05-edelplatze
+    name: "宗右衛門町商店街 5 エーデルプラッツェビル前"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.66966
+    lng: 135.5031
+    image_url: "http://soemon-cho.miemasu.net:63105/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 28KB CHANGED"
+
+  - id: curated-town-soemoncho-06-dotonborigawa
+    name: "宗右衛門町商店街 6 道頓堀川沿い"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.66935
+    lng: 135.504
+    image_url: "http://soemon-cho.miemasu.net:63106/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 32KB CHANGED"
+
+  - id: curated-town-soemoncho-07-donki
+    name: "宗右衛門町商店街 7 ドン・キホーテ道頓堀店前"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.669415
+    lng: 135.502563
+    image_url: "http://soemon-cho.miemasu.net:63107/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 30KB CHANGED"
+
+  - id: curated-town-soemoncho-08-hishitomi
+    name: "宗右衛門町商店街 8 菱富ビル前"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.66972
+    lng: 135.5047
+    image_url: "http://soemon-cho.miemasu.net:63108/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 42KB CHANGED"
+
+  - id: curated-town-soemoncho-09-nisso
+    name: "宗右衛門町商店街 9 日装四国ビル前"
+    operator: "宗右衛門町商店街振興組合"
+    category: other
+    prefecture: "27"
+    lat: 34.66975
+    lng: 135.505
+    image_url: "http://soemon-cho.miemasu.net:63109/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://soemon-cho.com/active/camera/"
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 24KB CHANGED"
+
+  - id: curated-tc-nakayamadera-hondo
+    name: "大本山中山寺 本堂（宝塚市）"
+    operator: "大本山 中山寺"
+    category: other
+    prefecture: "28"
+    lat: 34.832
+    lng: 135.3535
+    feed_type: web_page
+    feed_url: "https://www.nakayamadera.or.jp/live/hondo.html"
+    image_url: "https://www.nakayamadera.or.jp/live/hondo.html"
+    page_url: "https://www.nakayamadera.or.jp/live/hondo.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。公式ライブページに「ライブカメラの直接リンクは固くお断り」明記 → 誘導型のみ。裏の YouTube 枠（CAM2 IL3maW-NJdE）は 22:30 に live 確認済みだが直接は使わない（CLAUDE.md の中山寺 直リンク禁止と整合）"
+
+  - id: curated-tc-nakayamadera-daiganto
+    name: "大本山中山寺 大願塔（宝塚市）"
+    operator: "大本山 中山寺"
+    category: other
+    prefecture: "28"
+    lat: 34.832
+    lng: 135.3535
+    feed_type: web_page
+    feed_url: "https://www.nakayamadera.or.jp/live/daiganto.html"
+    image_url: "https://www.nakayamadera.or.jp/live/daiganto.html"
+    page_url: "https://www.nakayamadera.or.jp/live/daiganto.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。同上（YouTube 枠 CAM1 K_ja_AnJYak は live 確認済み）。誘導型のみ"
+
+  - id: curated-tc-isshinji-osaka
+    name: "一心寺 本堂・境内（大阪市天王寺区）"
+    operator: "一心寺"
+    category: other
+    prefecture: "27"
+    lat: 34.6543
+    lng: 135.5116
+    feed_type: web_page
+    feed_url: "https://www.isshinji.or.jp/camera.php"
+    image_url: "https://www.isshinji.or.jp/camera.php"
+    page_url: "https://www.isshinji.or.jp/camera.php"
+    note: "2026-09-30 全国多角調査(transport_culture)。公式ページに「無断複写・転載を禁じます」明記 → 誘導型。静止画 camera_hondou.php / camera_keidai.php（タイムスタンプ付き）で本堂・境内の2画角を配信（22:30 確認）"
+
+  - id: curated-tc-shudo-univ-campus
+    name: "広島修道大学 キャンパスカメラ（本館前ロータリー・図書館前広場）"
+    operator: "広島修道大学"
+    category: other
+    prefecture: "34"
+    lat: 34.4337
+    lng: 132.4036
+    feed_type: web_page
+    feed_url: "https://www.shudo-u.ac.jp/information/campusmap/camera.html"
+    image_url: "https://www.shudo-u.ac.jp/information/campusmap/camera.html"
+    page_url: "https://www.shudo-u.ac.jp/information/campusmap/camera.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。静止画 camera1.jpg / camera2.jpg は1分更新で 60 秒後に変化を確認（22:15）。ただし画像に oncontextmenu「画像のコピーは禁止です」を付けているため直接表示は避け誘導型"
+
+  - id: curated-tc-ucv-ikushima-east-gate
+    name: "生島足島神社 東門（UCV）"
+    operator: "上田ケーブルビジョン株式会社"
+    category: other
+    prefecture: "20"
+    lat: 36.3664
+    lng: 138.2333
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/ikushima.html"
+    image_url: "https://live.ucv.co.jp/ikushima.html"
+    page_url: "https://live.ucv.co.jp/ikushima.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。camstreamer 埋め込みのため誘導型（22:45）。ikushima2.html（東の神門→駐車場）も同型。旧 YouTube ID（KYlw5tpjZSI 等）は ERROR で失効"
+
+  - id: curated-tc-ucv-ikushima-goshinkyo
+    name: "生島足島神社 御神橋・御本社（UCV）"
+    operator: "上田ケーブルビジョン株式会社"
+    category: other
+    prefecture: "20"
+    lat: 36.3664
+    lng: 138.2333
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/ikushima3.html"
+    image_url: "https://live.ucv.co.jp/ikushima3.html"
+    page_url: "https://live.ucv.co.jp/ikushima3.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。camstreamer 埋め込みのため誘導型（22:45）"
+
+  - id: curated-tc-kanda-myojin-sando
+    name: "神田明神 参道（隨神門前・第2カメラ）"
+    operator: "神田明神（神田神社）"
+    category: other
+    prefecture: "13"
+    lat: 35.702
+    lng: 139.768
+    image_url: "https://explowd.com/photo/img/zuishinmon2.jpg"
+    page_url: "https://www.kandamyoujin.or.jp/liveCam/"
+    note: "2026-09-30 全国多角調査(transport_culture)。公式「神田明神混雑状況」ページの2枚目。Last-Modified 21:40 JST、約10分更新（60秒内は同一）。台帳は zuishinmon1（境内）のみ収録"
+
+  - id: curated-tc-yanagawa-horiwari-kanpo
+    name: "柳川 掘割（かんぽの宿柳川より）"
+    operator: "柳川市"
+    category: other
+    prefecture: "40"
+    lat: 33.1519
+    lng: 130.3958
+    image_url: "http://www.m3.ws302.smilestart.ne.jp/img/kanpono_yado2.jpg"
+    page_url: "http://www.city.yanagawa.fukuoka.jp/WebCamera/WebCamera.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。市公式「Webカメラ映像配信」。60秒で内容変化（22:15）。http のみ"
+
+  - id: curated-tc-yanagawa-horiwari-ntt
+    name: "柳川 掘割（NTT西日本柳川ビル鉄塔より）"
+    operator: "柳川市"
+    category: other
+    prefecture: "40"
+    lat: 33.166
+    lng: 130.407
+    image_url: "http://www.m3.ws302.smilestart.ne.jp/img/tettou1.jpg"
+    page_url: "http://www.city.yanagawa.fukuoka.jp/WebCamera/WebCamera2.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。同上。60秒で内容変化（22:15）"
+
+  - id: curated-tc-obihiro-univ-rotary
+    name: "帯広畜産大学 総合研究棟Ⅰ号館前ロータリー"
+    operator: "国立大学法人帯広畜産大学"
+    category: other
+    prefecture: "01"
+    lat: 42.8755
+    lng: 143.1745
+    image_url: "https://univ.obihiro.ac.jp/~livecamera/chcamera1.jpg"
+    page_url: "https://www.obihiro.ac.jp/live-camera"
+    note: "2026-09-30 全国多角調査(transport_culture)。「ちくだいライブカメラ」。60秒で内容変化（22:15）。サイトの転載禁止表記は刊行物・動画に対するもので、カメラページには制限表記なし"
+
+  - id: curated-tc-obihiro-univ-bldg3
+    name: "帯広畜産大学 総合研究棟Ⅰ号館前（Ⅲ号館6階から）"
+    operator: "国立大学法人帯広畜産大学"
+    category: other
+    prefecture: "01"
+    lat: 42.8755
+    lng: 143.1745
+    image_url: "https://univ.obihiro.ac.jp/~livecamera/chcamera2.jpg"
+    page_url: "https://www.obihiro.ac.jp/live-camera"
+    note: "2026-09-30 全国多角調査(transport_culture)。同上。60秒で内容変化（22:15）"
+
+  - id: curated-tc-seibu-chichibu-sta
+    name: "西武秩父駅前（秩父観光協会）"
+    operator: "一般社団法人秩父観光協会"
+    category: other
+    prefecture: "11"
+    lat: 35.9887
+    lng: 139.0829
+    image_url: "https://www.chichibuji.gr.jp/station-live/chichibu.jpg"
+    page_url: "https://www.chichibuji.gr.jp/live-station/"
+    note: "2026-09-30 全国多角調査(transport_culture)。60秒で内容変化（22:15）。台帳に西武秩父駅は無し"
+
+  - id: curated-tc-kawaguchiko-sta-town
+    name: "河口湖駅前（富士河口湖町 防災カメラ）"
+    operator: "富士河口湖町"
+    category: other
+    prefecture: "19"
+    lat: 35.4985
+    lng: 138.7662
+    image_url: "https://www.lcnet.jp/~live-cam/ekimae/ekimae-capt.jpg"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/ekimae.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。60秒で内容変化（22:15）。台帳の河口湖駅前は UTY（富士観光開発本社カメラ）で別カメラ。町の防災ページには他地区（chiku/*.html）もあり鉱脈"
+
+  - id: curated-tc-ccs-shin-nanyo-sta
+    name: "新南陽駅前（シティーケーブル周南）"
+    operator: "株式会社シティーケーブル周南"
+    category: other
+    prefecture: "35"
+    lat: 34.0518
+    lng: 131.7756
+    image_url: "https://livecam.ccsonline.jp/img/st-shin/st-shin-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "2026-09-30 全国多角調査(transport_culture)。60秒で内容変化（22:15）。同社の望海台・ソレーネ周南は台帳収録済み（直接表示の前例あり）。同一覧に 東横・東IC・鹿野・久米・中須・尾崎・須々万 の未収録カメラあり（道路系、鉱脈）"
+
+  - id: curated-tc-ncv-hakodate-sumiyoshi-port
+    name: "函館市 住吉漁港（NCV）"
+    operator: "株式会社ニューメディア（NCV函館）"
+    category: port
+    prefecture: "01"
+    lat: 41.7495
+    lng: 140.7215
+    image_url: "https://www.ncv.co.jp/livecamera/hakodate/camera095.jpg"
+    page_url: "https://www.ncv.co.jp/hakodate/"
+    note: "2026-09-30 全国多角調査(transport_culture)。同上（5分更新）"
+
+  - id: curated-tc-shinshoji-bishamonten
+    name: "真照寺 毘沙門天立像（横浜市磯子区）"
+    operator: "高野山真言宗 禅馬山真照寺"
+    category: other
+    prefecture: "14"
+    lat: 35.4157
+    lng: 139.6199
+    image_url: "http://shinsyouji.miemasu.net:50003/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.shinsyouji.com/ご参拝-ご祈祷"
+    note: "2026-09-30 全国多角調査(transport_culture)。Panasonic ネットワークカメラ（miemasu.net）。60秒で内容変化（22:25）。寺公式「ご参拝・ご祈祷」ページからリンクされていることを確認"
+
+  - id: curated-tc-shinshoji-amida
+    name: "真照寺 阿弥陀如来像（横浜市磯子区）"
+    operator: "高野山真言宗 禅馬山真照寺"
+    category: other
+    prefecture: "14"
+    lat: 35.4157
+    lng: 139.6199
+    image_url: "http://shinsyouji.miemasu.net:50002/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.shinsyouji.com/ご参拝-ご祈祷"
+    note: "2026-09-30 全国多角調査(transport_culture)。60秒で内容変化（22:40）"
+
+  - id: curated-tc-shinshoji-kobo-daishi
+    name: "真照寺 弘法大師像（横浜市磯子区）"
+    operator: "高野山真言宗 禅馬山真照寺"
+    category: other
+    prefecture: "14"
+    lat: 35.4157
+    lng: 139.6199
+    image_url: "http://shinsyouji.miemasu.net:50001/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.shinsyouji.com/ご参拝-ご祈祷"
+    note: "2026-09-30 全国多角調査(transport_culture)。60秒で内容変化（22:40）"
+
+  - id: curated-tc-otsuki-sta-iwadonosan
+    name: "大月駅前からの岩殿山（大月市）"
+    operator: "大月市"
+    category: other
+    prefecture: "19"
+    lat: 35.6124
+    lng: 138.9403
+    image_url: "http://otsukishoukoukai.miemasu.net/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.city.otsuki.yamanashi.jp/kanko/livecamerajyouhou.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。市公式「大月市ライブカメラ情報」（カメラ2＝大月駅前からの岩殿山。静止画が数秒毎に更新）。60秒で内容変化（22:25）。プライバシー配慮の記載あり、転載禁止表記なし"
+
+  - id: curated-tc-reishoji-omachi
+    name: "霊松寺 山門周辺（大町市）"
+    operator: "曹洞宗 霊松寺"
+    category: other
+    prefecture: "20"
+    lat: 36.503
+    lng: 137.8509
+    image_url: "http://www.reishoji.jp/LIVECAMERA/gt.jpg"
+    page_url: "http://www.reishoji.jp/livecamera_1.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。配信時間は午前5時〜午後6時（ページ記載）。Last-Modified 17:55 JST で運用時間と整合。夜間は更新停止するため凍結判定に注意"
+
+  - id: curated-tc-keihan-gotenyama-sta
+    name: "京阪御殿山駅付近（学校法人東洋学園）"
+    operator: "学校法人東洋学園"
+    category: other
+    prefecture: "27"
+    lat: 34.8294
+    lng: 135.6519
+    image_url: "https://live.toyocollege.com/gotenyama/image/live/licam.jpg"
+    page_url: "https://live.toyocollege.com/gotenyama/"
+    note: "2026-09-30 全国多角調査(transport_culture)。60秒で内容変化（22:55）。ページに著作権表記のみ（転載禁止文言なし）。同法人は千林・京橋・奈良のライブカメラも運営（バナー）、鉱脈"
+
+  - id: curated-tc-dazaifu-tenmangu-p1
+    name: "太宰府天満宮 第一駐車場（太宰府市 交通情報案内システム）"
+    operator: "太宰府市"
+    category: other
+    prefecture: "40"
+    lat: 33.5214
+    lng: 130.533
+    image_url: "http://dzf1.sakura.ne.jp/cgi-bin/img_dai1/web1.jpg"
+    page_url: "http://dazaifucity-parking.com/?page_id=1701"
+    note: "2026-09-30 全国多角調査(transport_culture)。同システムの交差点カメラ8台は台帳収録済み（dzf1/dzf2）。この2台は未収録。Last-Modified 20:59 JST で以後1時間更新なし（22:00時点）→ 更新間隔が長いか夜間停止の可能性。日中に再確認推奨"
+
+  - id: curated-tc-dazaifu-tenmangu-p2
+    name: "太宰府天満宮 第二駐車場（太宰府市 交通情報案内システム）"
+    operator: "太宰府市"
+    category: other
+    prefecture: "40"
+    lat: 33.519
+    lng: 130.531
+    image_url: "http://dzf1.sakura.ne.jp/cgi-bin/img2/web1.jpg"
+    page_url: "http://dazaifucity-parking.com/?page_id=1701"
+    note: "2026-09-30 全国多角調査(transport_culture)。Last-Modified 20:49 → 21:53 JST と更新を確認（約1時間間隔）。凍結判定の閾値に注意"
+
+  - id: curated-tc-takato-castle-park-ina
+    name: "高遠城址公園（伊那市）"
+    operator: "伊那市"
+    category: other
+    prefecture: "20"
+    lat: 35.8348
+    lng: 138.064
+    image_url: "http://203.141.205.184/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.inacity.jp/koho/livecamera/camera_joshikoen.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。市公式ページが http://203.141.205.184/live/ の Panasonic ビューアへリンク。SnapshotJPEG で60秒内に内容変化（22:50）。台帳の高遠はダムのみ"
+
+  - id: curated-tc-negoroji-iwade
+    name: "根来寺（岩出市 ライブカメラ）"
+    operator: "岩出市"
+    category: other
+    prefecture: "30"
+    lat: 34.2939
+    lng: 135.3208
+    image_url: "http://www4.city.iwade.wakayama.jp/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "https://www.city.iwade.lg.jp/soshiki/16/1608.html"
+    note: "2026-09-30 全国多角調査(transport_culture)。市公式ページの Canon VB-C60 ビューア。GetOneShot で60秒内に内容変化（22:50）"
+
+  - id: curated-tc-hodosan-ropeway
+    name: "宝登山ロープウェイ（長瀞町）"
+    operator: "宝登山ロープウェイ株式会社"
+    category: scenic
+    prefecture: "11"
+    lat: 36.0985
+    lng: 139.1085
+    image_url: "http://153.156.166.84/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "https://hodosan-ropeway.co.jp/"
+    note: "2026-09-30 全国多角調査(transport_culture)。公式サイトトップが http://153.156.166.84/viewer/live/ の Canon ビューアへリンク。GetOneShot で60秒内に内容変化（23:00）。山麓/山頂どちらの画角かは要確認"
+
+  - id: curated-tc-ina-inasse-crossing
+    name: "いなっせ前交差点（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社"
+    category: road
+    prefecture: "20"
+    lat: 35.8385
+    lng: 137.9535
+    image_url: "https://ina-dani.net/liveimage/inasse.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/8"
+    note: "2026-09-30 全国多角調査(transport_culture)。60秒で内容変化（22:50）。伊那谷ねっと ライブカメラ一覧（show/2,4,5,6,8,9,11,12,20,21,27,28）は台帳未収録で鉱脈（他は河川・道路系）"
+
+  - id: curated-kouji-omoigawa-nanma-dam
+    name: "思川開発事業（南摩ダム）工事現場ライブカメラ（ダム左岸上流・下流／大芦川・黒川取水放流工）"
+    operator: "独立行政法人水資源機構 思川開発建設所"
+    category: dam
+    prefecture: "09"
+    lat: 36.5534
+    lng: 139.6637
+    feed_type: web_page
+    feed_url: "https://omoigawa-cam.arksystem.jp/"
+    image_url: "https://omoigawa-cam.arksystem.jp/"
+    page_url: "https://omoigawa-cam.arksystem.jp/"
+    note: "2026-09-30 全国多角調査(industry_season)。誘導型。arksystem 配信（HLS/DASH の JW Player、既知の転載禁止系）で映像の直接表示はしない。4カメラ（/client/camera2/1〜4）。トップに一覧と設置位置図。2026-09-29 ページ生存・サムネイル更新確認。"
+
+  - id: curated-industry-satsumasendai-terayama
+    name: "薩摩川内市 寺山公園（中心市街地・川内川、柳山ウインドファームの風車が見える）"
+    operator: "薩摩川内市"
+    category: scenic
+    prefecture: "46"
+    lat: 31.833
+    lng: 130.3297
+    image_url: "http://camera1.city.satsumasendai.lg.jp/-wvhttp-01-/GetOneShot"
+    page_url: "https://www.city.satsumasendai.lg.jp/kurashi_tetsuzuki/lifeservice_sodan/5531.html"
+    note: "2026-09-30 全国多角調査(industry_season)。Canon ネットワークカメラ。2回取得で変化。市公式ページからリンク。市サイトは一般的な著作権表記のみ。MBC 寺山公園（誘導型）とは別カメラ。"
+
+  - id: curated-industry-satsumasendai-nishikata
+    name: "薩摩川内市 東シナ海（西方海岸、南に柳山ウインドファームの風車）"
+    operator: "薩摩川内市"
+    category: coast
+    prefecture: "46"
+    lat: 31.9153
+    lng: 130.2289
+    image_url: "http://camera3.city.satsumasendai.lg.jp/-wvhttp-01-/GetOneShot"
+    page_url: "https://www.city.satsumasendai.lg.jp/kurashi_tetsuzuki/lifeservice_sodan/5531.html"
+    note: "2026-09-30 全国多角調査(industry_season)。2026-09-29 2回取得で変化（59KB→98KB）。"
+
+  - id: curated-rito-koshikijima-satoko
+    name: "甑島 里港（薩摩川内市）"
+    operator: "薩摩川内市"
+    category: port
+    prefecture: "46"
+    lat: 31.8405
+    lng: 129.9065
+    image_url: "http://camera7.city.satsumasendai.lg.jp/-wvhttp-01-/GetOneShot"
+    page_url: "https://www.city.satsumasendai.lg.jp/kurashi_tetsuzuki/lifeservice_sodan/5531.html"
+    note: "2026-09-30 全国多角調査(industry_season)。離島（上甑島）。MBC 里港は rejected 済みだが本件は市の自前カメラ。2回取得で変化。"
+
+  - id: curated-rito-koshikijima-ohashi
+    name: "甑大橋（甑島・旧鳥ノ巣灯台付近）"
+    operator: "薩摩川内市"
+    category: coast
+    prefecture: "46"
+    lat: 31.7581
+    lng: 129.7858
+    image_url: "http://camera5.city.satsumasendai.lg.jp/-wvhttp-01-/GetOneShot"
+    page_url: "https://www.city.satsumasendai.lg.jp/kurashi_tetsuzuki/lifeservice_sodan/5531.html"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。camera8（甑大明神橋）は接続不可、camera6（ナポレオン岩）はエラー文字列を返すため除外。"
+
+  - id: curated-industry-ooi-futo-shinagawa-seiso
+    name: "大井埠頭北部陸橋 南側方面（品川清掃工場屋上）"
+    operator: "東京港埠頭株式会社"
+    category: port
+    prefecture: "13"
+    lat: 35.6118
+    lng: 139.754
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=1&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera"
+    note: "2026-09-30 全国多角調査(industry_season)。1分更新の静止画 API。2回取得で変化。同 API の cameraid=1,2,5 も画像を返すが名称未確認（保留に記載）。"
+
+  - id: curated-industry-oyama-recycle-north
+    name: "小山広域保健衛生組合 リサイクルセンター（北側搬入路門扉方向）"
+    operator: "小山広域保健衛生組合"
+    category: other
+    prefecture: "09"
+    lat: 36.3647
+    lng: 139.8723
+    image_url: "http://shimotsuke-01.miemasu.net:8081/cgi-bin/camera?resolution=640"
+    page_url: "http://www.oyama-k-recyclingcenter.jp/"
+    note: "2026-09-30 全国多角調査(industry_season)。ごみ搬入の混雑状況カメラ。公式トップページに埋め込み（5秒更新）。resolution=280 で検証、2回取得で変化。"
+
+  - id: curated-industry-oyama-recycle-east
+    name: "小山広域保健衛生組合 リサイクルセンター（カメラ2）"
+    operator: "小山広域保健衛生組合"
+    category: other
+    prefecture: "09"
+    lat: 36.3647
+    lng: 139.8723
+    image_url: "http://shimotsuke-01.miemasu.net:8080/cgi-bin/camera?resolution=640"
+    page_url: "http://www.oyama-k-recyclingcenter.jp/"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。"
+
+  - id: curated-industry-view-clean-okuetsu
+    name: "ビュークリーンおくえつ ごみ受入計量棟前"
+    operator: "大野・勝山地区広域行政事務組合"
+    category: other
+    prefecture: "18"
+    lat: 36.0119
+    lng: 136.5103
+    image_url: "http://ok-kouiki.sakura.ne.jp/img/shisetsu/shisetsu001/camera.jpg"
+    page_url: "http://ok-kouiki.sakura.ne.jp/shisetsu/shisetsu001/shisetsu004.html"
+    note: "2026-09-30 全国多角調査(industry_season)。約1分更新。2回取得で変化。"
+
+  - id: curated-industry-miyanojin-clean-center
+    name: "宮ノ陣クリーンセンター 受付前 混雑状況"
+    operator: "くるめハイトラスト株式会社（久留米市 宮ノ陣クリーンセンター運営）"
+    category: other
+    prefecture: "40"
+    lat: 33.3493
+    lng: 130.5621
+    image_url: "http://www.kurume-ht.com/traffic_jam/image/view.jpg"
+    page_url: "http://www.kurume-ht.com/congestion.html"
+    note: "2026-09-30 全国多角調査(industry_season)。1分更新と記載。夜間検証のため2回取得は同一（Last-Modified 当日17:00 JST）。受入時間内のみ更新の可能性。"
+
+  - id: curated-industry-kanesaku-apple
+    name: "かねさく果樹園（まぐらりんご・鳥海山方面）"
+    operator: "かねさく果樹園"
+    category: scenic
+    prefecture: "05"
+    lat: 39.2587
+    lng: 140.5252
+    image_url: "http://210.136.200.86/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.kanesaku-magura.com/"
+    note: "2026-09-30 全国多角調査(industry_season)。Panasonic ネットワークカメラ。2回取得で変化。運営者公式サイトからリンク。"
+
+  - id: curated-industry-maruka-apple
+    name: "マルカりんご園（羽山りんご）"
+    operator: "マルカりんご園"
+    category: scenic
+    prefecture: "07"
+    lat: 37.5736
+    lng: 140.6052
+    image_url: "http://maruka.aa2.netvolante.jp/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://www.hayamaringo.com/"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。"
+
+  - id: curated-industry-hirosaki-ringo-park
+    name: "弘前市りんご公園（岩木山・ふじ準原木）"
+    operator: "弘前市"
+    category: scenic
+    prefecture: "02"
+    lat: 40.5888
+    lng: 140.442
+    image_url: "http://live2.hi-it.jp/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "https://www.city.hirosaki.aomori.jp/gaiyou/livecam/"
+    note: "2026-09-30 全国多角調査(industry_season)。市公式ライブカメラページ。2回取得で変化。台帳の弘前城天守（live4）と同系列。"
+
+  - id: curated-industry-himawari-mura-tsubata
+    name: "ひまわり村（河北潟干拓地）"
+    operator: "河北潟干拓土地改良区"
+    category: scenic
+    prefecture: "17"
+    lat: 36.6764
+    lng: 136.6953
+    image_url: "http://183.77.125.199/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "http://183.77.125.199/viewer/live/index.html?lang=ja"
+    note: "2026-09-30 全国多角調査(industry_season)。ひまわり畑（7〜8月）。通年配信。2回取得で変化（7KB 程度の小画像）。"
+
+  - id: curated-industry-shiroyone-senmaida
+    name: "白米千枚田（輪島市）"
+    operator: "輪島市"
+    category: scenic
+    prefecture: "17"
+    lat: 37.418
+    lng: 137.0007
+    feed_type: web_page
+    feed_url: "https://www.city.wajima.ishikawa.jp/docs/2013032600122/"
+    image_url: "https://www.city.wajima.ishikawa.jp/docs/2013032600122/"
+    page_url: "https://www.city.wajima.ishikawa.jp/docs/2013032600122/"
+    note: "2026-09-30 全国多角調査(industry_season)。誘導型。Panasonic ビューア（senmaida.city.wajima.ishikawa.jp）は静止画エンドポイントが認証要求のため直接表示不可。冬のイルミネーション「あぜのきらめき」も映る。"
+
+  - id: curated-industry-obihiro-univ-1
+    name: "帯広畜産大学 総合研究棟Ⅰ号館前ロータリー"
+    operator: "国立大学法人 帯広畜産大学"
+    category: other
+    prefecture: "01"
+    lat: 42.8735
+    lng: 143.173
+    image_url: "http://univ.obihiro.ac.jp/~livecamera/chcamera1.jpg"
+    page_url: "https://www.obihiro.ac.jp/live-camera"
+    note: "2026-09-30 全国多角調査(industry_season)。大学公式ページの「ちくだいライブカメラ」。取得時 Last-Modified が当日直近。無断転載禁止の表記は「刊行物・動画」に対するもの。"
+
+  - id: curated-industry-obihiro-univ-2
+    name: "帯広畜産大学 総合研究棟Ⅲ号館6階から"
+    operator: "国立大学法人 帯広畜産大学"
+    category: other
+    prefecture: "01"
+    lat: 42.8735
+    lng: 143.173
+    image_url: "http://univ.obihiro.ac.jp/~livecamera/chcamera2.jpg"
+    page_url: "https://www.obihiro.ac.jp/live-camera"
+    note: "2026-09-30 全国多角調査(industry_season)。同上。"
+
+  - id: curated-season-fujireien-sakura
+    name: "冨士霊園 第一ロータリー（桜並木・日本さくら名所100選）"
+    operator: "公益財団法人 冨士霊園"
+    category: scenic
+    prefecture: "22"
+    lat: 35.3705
+    lng: 138.8984
+    image_url: "https://fujireien.sakura.ne.jp/camera/02_sakura/_cam_sakura.jpg"
+    page_url: "https://fujireien.sakura.ne.jp/livecamera/index.html"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化（約2分更新）。All Rights Reserved のみ。"
+
+  - id: curated-season-fujireien-ireito
+    name: "冨士霊園 桜並木・園内全景（慰霊塔側）"
+    operator: "公益財団法人 冨士霊園"
+    category: scenic
+    prefecture: "22"
+    lat: 35.3705
+    lng: 138.8984
+    image_url: "https://fujireien.sakura.ne.jp/camera/04_ireito/_cam_ireito.jpg"
+    page_url: "https://fujireien.sakura.ne.jp/livecamera/live02.html"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。"
+
+  - id: curated-season-fujireien-fujisan
+    name: "冨士霊園から富士山"
+    operator: "公益財団法人 冨士霊園"
+    category: scenic
+    prefecture: "22"
+    lat: 35.3705
+    lng: 138.8984
+    image_url: "https://fujireien.sakura.ne.jp/camera/01_fujisan/_cam_fujisan.jpg"
+    page_url: "https://fujireien.sakura.ne.jp/livecamera/live03.html"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。"
+
+  - id: curated-season-hirosaki-park-higashimon
+    name: "弘前公園（東門前）"
+    operator: "弘前市"
+    category: scenic
+    prefecture: "02"
+    lat: 40.6085
+    lng: 140.4685
+    image_url: "http://live1.hi-it.jp/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "https://www.city.hirosaki.aomori.jp/gaiyou/livecam/"
+    note: "2026-09-30 全国多角調査(industry_season)。さくらまつりの定点。2回取得で変化。追手門前（outemon.hirosaki-livecam.jp）は静止画エンドポイントなし。"
+
+  - id: curated-season-farm-tomita-hanabito
+    name: "ファーム富田 花人の畑"
+    operator: "株式会社ファーム富田"
+    category: scenic
+    prefecture: "01"
+    lat: 43.4186
+    lng: 142.427
+    image_url: "https://camera.farm-tomita.co.jp/img.jpg"
+    page_url: "https://www.farm-tomita.co.jp/"
+    note: "2026-09-30 全国多角調査(industry_season)。公式トップに埋め込み。2回取得で変化（約1分更新）。転載禁止文言なし（サイトポリシーページは存在せず）。ラベンダー（7月）ほか通年。"
+
+  - id: curated-season-farm-tomita-traditional
+    name: "ファーム富田 トラディショナルラベンダー畑"
+    operator: "株式会社ファーム富田"
+    category: scenic
+    prefecture: "01"
+    lat: 43.4186
+    lng: 142.427
+    image_url: "https://camera.farm-tomita.co.jp/camera2/img.jpg"
+    page_url: "https://www.farm-tomita.co.jp/"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。"
+
+  - id: curated-season-akagi-summit-1
+    name: "赤城山頂（前橋まるごとガイド カメラ1）"
+    operator: "公益財団法人 前橋観光コンベンション協会（前橋まるごとガイド）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.544
+    lng: 139.1677
+    image_url: "https://coji.coji.jp/kimtec/fcam3/nowab.jpg"
+    page_url: "https://coji.coji.jp/kimtec/livec/indexs.php"
+    note: "2026-09-30 全国多角調査(industry_season)。65秒更新。2回取得で変化。著作権・転載表記なし。毎時アニメーションあり。"
+
+  - id: curated-season-akagi-summit-2
+    name: "赤城山頂（前橋まるごとガイド カメラ2）"
+    operator: "公益財団法人 前橋観光コンベンション協会（前橋まるごとガイド）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.5462
+    lng: 139.1719
+    image_url: "https://coji.coji.jp/kimtec/fcam4/nowab.jpg"
+    page_url: "https://coji.coji.jp/kimtec/livec/indexs.php"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。"
+
+  - id: curated-season-akagi-nanroku-1
+    name: "赤城山南麓（赤城南面千本桜付近・カメラ1）"
+    operator: "公益財団法人 前橋観光コンベンション協会（前橋まるごとガイド）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.4591
+    lng: 139.1364
+    image_url: "https://coji.coji.jp/kimtec/fcam2/nowab.jpg"
+    page_url: "https://coji.coji.jp/kimtec/livec/indexs.php"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。台帳の『赤城南麓北方面』(YouTube zLA5p5loU8M) とは別配信。"
+
+  - id: curated-season-akagi-nanroku-2
+    name: "赤城山南麓（カメラ2）"
+    operator: "公益財団法人 前橋観光コンベンション協会（前橋まるごとガイド）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.473
+    lng: 139.1874
+    image_url: "https://coji.coji.jp/kimtec/fcam/nowab.jpg"
+    page_url: "https://coji.coji.jp/kimtec/livec/indexs.php"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。"
+
+  - id: curated-season-yonezawa-uesugi-moat
+    name: "上杉神社お堀（米沢城址・松が岬公園）"
+    operator: "一般社団法人 米沢観光コンベンション協会"
+    category: scenic
+    prefecture: "06"
+    lat: 37.9088
+    lng: 140.1061
+    image_url: "http://116.199.245.91/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://yonezawa.info/live_camera/"
+    note: "2026-09-30 全国多角調査(industry_season)。協会公式ページから Panasonic ビューアへリンク。2回取得で変化（初回のみ0バイトが返ることがある）。桜・雪灯篭まつりの定点。"
+
+  - id: curated-season-kitakobushi-shiretoko
+    name: "北こぶし知床 ホテル＆リゾートから ウトロ漁港・知床連山（流氷）"
+    operator: "北こぶし知床 ホテル＆リゾート（知床グランドホテル）"
+    category: coast
+    prefecture: "01"
+    lat: 44.0766
+    lng: 145.0137
+    image_url: "http://shiretoko.miemasu.net:50000/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://shiretoko.miemasu.net:50000/CgiStart?page=Single&Language=1"
+    note: "2026-09-30 全国多角調査(industry_season)。Panasonic ネットワークカメラ直公開。2回取得で変化。ホテル公式サイトからのリンク有無は投入前に確認（livecam.asia 経由で発見）。"
+
+  - id: curated-season-ueda-tomi-central-park
+    name: "東御中央公園（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.3602
+    lng: 138.3306
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/tomipark.html"
+    image_url: "https://live.ucv.co.jp/tomipark.html"
+    page_url: "https://live.ucv.co.jp/tomipark.html"
+    note: "2026-09-30 全国多角調査(industry_season)。誘導型。UCV は『画像などの無断複製・転載禁止』を明記。桜の名所。台帳の UCV 分（上田城千本桜等）は YouTube 版で登録済み、本件は YouTube 枠なし。"
+
+  - id: curated-season-ueda-sanada-shrine
+    name: "眞田神社（上田城跡公園・UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.4033
+    lng: 138.2448
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/sanada2.html"
+    image_url: "https://live.ucv.co.jp/sanada2.html"
+    page_url: "https://live.ucv.co.jp/sanada2.html"
+    note: "2026-09-30 全国多角調査(industry_season)。誘導型（camstreamer 埋め込み・転載禁止明記）。"
+
+  - id: curated-season-niyodogawa-hyotan-zakura
+    name: "ひょうたん桜（仁淀川町）"
+    operator: "仁淀川町"
+    category: scenic
+    prefecture: "39"
+    lat: 33.5913
+    lng: 133.1707
+    feed_type: web_page
+    feed_url: "https://www.town.niyodogawa.lg.jp/kanko/camera.php"
+    image_url: "https://www.town.niyodogawa.lg.jp/kanko/camera.php"
+    page_url: "https://www.town.niyodogawa.lg.jp/kanko/camera.php"
+    note: "2026-09-30 全国多角調査(industry_season)。誘導型。静止画は https://niyodogawa-cam.sakura.ne.jp/sakura.jpg（10分更新）だが町サイトに『無断転載を禁じます』。同町の中津渓谷・安居渓谷・鳥形山は台帳で still_image 登録済みのため扱いの統一を要検討。"
+
+  - id: curated-season-cc9-treasure-garden
+    name: "東武トレジャーガーデン（館林・芝桜）（CC9）"
+    operator: "ケーブルテレビ株式会社（CC9）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.2394
+    lng: 139.5577
+    feed_type: web_page
+    feed_url: "https://www.cc9.jp/community/livecamera/#panel_gunma"
+    image_url: "https://www.cc9.jp/community/livecamera/#panel_gunma"
+    page_url: "https://www.cc9.jp/community/livecamera/#panel_gunma"
+    note: "2026-09-30 全国多角調査(industry_season)。誘導型（CC9 のリンク規定に従い既存41台と同じ形）。静止画 lifecam_t07.jpg。芝桜（4〜5月）。台帳の CC9 群馬分（つつじが岡公園）に未収録。"
+
+  - id: curated-marina-fukuoka-yacht-harbor-1
+    name: "福岡市ヨットハーバー（小戸）カメラ1"
+    operator: "福岡市ヨットハーバー（指定管理: 小戸サンセットハーバー共同事業体）"
+    category: port
+    prefecture: "40"
+    lat: 33.5906
+    lng: 130.3128
+    image_url: "https://fyh.jp/_lib/wp-content/themes/odo_yh.wp/01/snap_c1.jpg"
+    page_url: "https://fyh.jp/live/"
+    note: "2026-09-30 全国多角調査(industry_season)。公式ライブカメラページ。2回取得で変化。All Rights Reserved のみ。"
+
+  - id: curated-marina-fukuoka-yacht-harbor-2
+    name: "福岡市ヨットハーバー（小戸）カメラ2"
+    operator: "福岡市ヨットハーバー（指定管理: 小戸サンセットハーバー共同事業体）"
+    category: port
+    prefecture: "40"
+    lat: 33.5906
+    lng: 130.3128
+    image_url: "https://fyh.jp/_lib/wp-content/themes/odo_yh.wp/02/snap_c1.jpg"
+    page_url: "https://fyh.jp/live/"
+    note: "2026-09-30 全国多角調査(industry_season)。2回取得で変化。"
+
+  - id: curated-marina-velasis-uraga
+    name: "シティマリーナ ヴェラシス（浦賀水道）"
+    operator: "ユニマットプレシャス株式会社（シティマリーナヴェラシス）"
+    category: port
+    prefecture: "14"
+    lat: 35.23
+    lng: 139.7261
+    image_url: "http://61.125.205.99/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://www.velasis.com/"
+    note: "2026-09-30 全国多角調査(industry_season)。Panasonic ビューア。2回取得で変化。マリーナ公式サイトからのリンクは投入前に確認（livecam.asia 経由で発見）。"
+
+  - id: curated-healing-fujimae-higata
+    name: "藤前干潟（名古屋市野鳥観察館）"
+    operator: "名古屋市野鳥観察館"
+    category: healing
+    prefecture: "23"
+    lat: 35.0735
+    lng: 136.8502
+    image_url: "http://180.43.84.117:50000/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://www.inae-bird-watching-place.org/"
+    note: "2026-09-30 全国多角調査(industry_season)。ラムサール条約登録湿地の野鳥。2回取得で変化。"

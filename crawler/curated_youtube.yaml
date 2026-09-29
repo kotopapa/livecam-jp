@@ -1356,10 +1356,11 @@ cameras:
 
   # 2026-08-31 配信枠更新: ixZ4rgr6y2E → Rd4XwLJRmVQ
   # 2026-09-23 配信枠更新: Rd4XwLJRmVQ → ygib_yD_M5w
+  # 2026-09-30 配信枠更新: ygib_yD_M5w → NraGnE6edMY（旧枠が記録閲覧不可）
   - id: curated-kyoto-karasuma
     name: 京都 烏丸通（京都新聞社前）
     operator: "京都新聞社"
-    video_id: ygib_yD_M5w
+    video_id: "NraGnE6edMY"
     category: road
     prefecture: "26"
     lat: 35.01
@@ -4333,10 +4334,11 @@ cameras:
     lng: 139.3239
     note: "埋め込み不可→誘導型"
 
+  # 2026-09-30 配信枠更新: bYCPLjNi_R0 → K2Q6LJf275I（旧枠が配信終了・同チャンネルの現行枠（埋め込み不可のまま誘導型））
   - id: curated-r2-0f1d066a
     name: だいこんの花 リスと小鳥の森
     operator: "温泉山荘だいこんの花"
-    video_id: "bYCPLjNi_R0"
+    video_id: "K2Q6LJf275I"
     category: healing
     prefecture: "04"
     lat: 38.1719
@@ -10500,6 +10502,7 @@ cameras:
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.akkeshi-town.jp/bousai/livecamera/'
   # 2026-08-31 配信枠更新: r7W90hKKpKA → 0u8El2HX1hI
   # 2026-09-23 配信枠更新: 0u8El2HX1hI → NgP7VE90aHQ
+  # 2026-09-30 配信枠更新: NgP7VE90aHQ → 0don49a2U4Y（旧枠が配信終了・同チャンネルの現行枠）
   - id: curated-lcdb-64a207b6
     name: 北海道録画センター旭川上空天気
     operator: 北海道録画センター
@@ -10507,7 +10510,7 @@ cameras:
     prefecture: '01'
     lat: 43.770132
     lng: 142.36985
-    video_id: NgP7VE90aHQ
+    video_id: "0don49a2U4Y"
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: http://www.eolas.co.jp/rokuga/'
   - id: curated-lcdb-652a7c27
     name: 霧多布湿原
@@ -13709,6 +13712,7 @@ cameras:
     lng: 139.331707
     video_id: s_vU0voWLOA
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://araihoudai.com/stores/store-0004/'
+  # 2026-09-30 配信枠更新: 7IygrRRgXYQ → SWjwYvrGQYc（旧枠が記録閲覧不可）
   - id: curated-lcdb-390fd34f
     name: 八丈島八重根漁港
     operator: 東京都伊豆・小笠原諸島港湾ライブカメラ
@@ -13716,7 +13720,7 @@ cameras:
     prefecture: '13'
     lat: 33.09925
     lng: 139.774778
-    video_id: 7IygrRRgXYQ
+    video_id: "SWjwYvrGQYc"
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.kouwan.metro.tokyo.lg.jp/'
   - id: curated-lcdb-b3d4da22
     name: 秋川東秋川橋合流部
@@ -17219,6 +17223,7 @@ cameras:
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: オニコウベスキー場 のライブ配信)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.onikoube.com/'
   # 2026-08-31 配信枠更新: EDVNfGsNxoc → NIXM5xQQLCw
   # 2026-09-23 配信枠更新: NIXM5xQQLCw → KBwh_qOGSws
+  # 2026-09-30 配信枠更新: KBwh_qOGSws → Kpb4ub84XvU（旧枠が記録閲覧不可）
   - id: curated-lcdb-3dde73ab
     name: 八ヶ岳西麓
     operator: izuminojp
@@ -17226,7 +17231,7 @@ cameras:
     prefecture: '20'
     lat: 36.014742
     lng: 138.173061
-    video_id: KBwh_qOGSws
+    video_id: "Kpb4ub84XvU"
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 長野県茅野市　八ヶ岳西麓の空模様　「Yatsugatake Informatio)。oEmbed 200。座標は地図中心(概略)。掲載元: https://yatsugatake.info/'
   - id: curated-lcdb-37b263f2
     name: 白馬岩岳マウンテンリゾート
@@ -18797,3 +18802,819 @@ cameras:
     lng: 140.2556
     note: "千葉市の同系4台と同じユーザー判断で採用（削除依頼即応）。埋め込み可"
 
+
+
+  # ===== 2026-09-30 全国多角調査（星空・気象/牧場・自然/街・庁舎/交通・文化/産業・季節）=====
+
+  - id: curated-stars-kurabuchi-kodomo-tenmondai
+    name: "くらぶちこども天文台 お空カメラ（高崎市倉渕町）"
+    operator: "くらぶちこども天文台（高崎市）"
+    category: healing
+    channel_id: "UCR3AJmhTKeTwqaTq4K2dmqg"
+    prefecture: "10"
+    lat: 36.404106
+    lng: 138.781586
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:40 JST 検証: 現行ライブ UbBKEl0vlZw status=OK isLiveNow=true playableInEmbed=true。チャンネル「くらぶちこども天文台LIVE」は常時1本配信なので channel_id 登録。上空の空模様を24時間配信（星空・雲）。高崎市設置のバリアフリー天文台。規約: 転載禁止文言なし"
+
+  - id: curated-unkai-nojiriko-terrace
+    name: "野尻湖テラス LIVEカメラ（タングラム斑尾・信濃町）"
+    operator: "タングラム斑尾東急リゾート（東急リゾーツ＆ステイ株式会社）"
+    category: scenic
+    channel_id: "UCnO4Bd0YTXkth8dpxVOq1xQ"
+    prefecture: "20"
+    lat: 36.847206
+    lng: 138.248276
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 22:10 JST 検証: 現行ライブ m7Ti4P1IlAM「【24時間配信中】野尻湖テラスLIVEカメラ」status=OK isLiveNow=true playableInEmbed=true。チャンネル /live が同IDに解決し配信は1本のみ→channel_id 登録。野尻湖・北信五岳・雲海。冬季はスキー場運営のため配信内容が変わる可能性"
+
+  - id: curated-unkai-echizen-ono-castle
+    name: "越前大野城 雲海カメラ（大野市）"
+    operator: "大野市"
+    category: scenic
+    channel_id: "UCN49xErOp1mK0MVSR7CJUvw"
+    prefecture: "18"
+    lat: 35.9847
+    lng: 136.4823
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 22:15 JST 検証: チャンネル /live → uFr15cC4Sk4「越前大野城雲海カメラ（2023.5.8～）」status=OK isLiveNow=true playableInEmbed=true。ライブカメラDB 掲載の旧ID LV-rRs9jvE4 は UNPLAYABLE（枠が更新済み）→ID 変化に備え channel_id 登録（市公式チャンネル「結の故郷 越前おおの」、ライブは1本）。天守から城下町・雲海（10〜4月の早朝）"
+
+  - id: curated-unkai-kameoka-kiri-terrace
+    name: "かめおか霧のテラス ライブカメラ（亀岡市）"
+    operator: "agataJapan（亀岡市観光協会サイトで公式掲載）"
+    category: scenic
+    video_id: "0s5kMFZ1FfQ"
+    prefecture: "26"
+    lat: 34.99267
+    lng: 135.56167
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 22:10 JST 検証: status=OK isLiveNow=true playableInEmbed=true。タイトルに当日日付「2026/09/29 【LIVE CAMERA】#亀岡 #かめおか霧のテラス」が入る日替わり枠で、agataJapan チャンネルは同時7本配信のため channel_id 不可→video_id 登録・要定期追従。丹波霧（雲海）の名所。運営者 agataJapan は亀岡市観光協会ページからリンクされた公式配信（法人格の表記は未確認）"
+
+  - id: curated-weather-bbt-himi
+    name: "氷見市 お天気カメラ（富山テレビ・氷見駅付近）"
+    operator: "富山テレビ放送株式会社（BBT）"
+    category: coast
+    video_id: "RQCfW6u7tYQ"
+    prefecture: "16"
+    lat: 36.850212
+    lng: 136.992157
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:45 JST 検証: status=OK isLiveNow=true playableInEmbed=true「【氷見市】お天気カメラライブ配信【富山県】」。BBT 公式チャンネルは同時3本配信（本社・立山室堂は台帳収録済み、氷見のみ未収録）なので video_id 登録。富山湾・氷見漁港・唐島方面"
+
+  - id: curated-weather-kyt-kagoshima-city
+    name: "KYT 情報カメラ（鹿児島市）"
+    operator: "鹿児島読売テレビ（KYT）"
+    category: other
+    channel_id: "UCmGV3cjwDinrtulXJH6Yc4g"
+    prefecture: "46"
+    lat: 31.5747
+    lng: 130.5601
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 22:00 JST 検証: 専用チャンネル「KYT 情報カメラ(鹿児島市) -鹿児島読売テレビ」の /live → rXiCXTbnfWw status=OK isLiveNow=true playableInEmbed=true。ライブは1本のみで枠が切り替わる運用（過去枠多数）のため channel_id 登録。台帳の KYT 各カメラ（新燃岳・空港・口永良部島）とは別枠"
+
+  - id: curated-farm-namie-kibou-bokujo
+    name: "希望の牧場・ふくしま 放牧地（浪江町）"
+    operator: "希望の牧場・ふくしま（一般社団法人）"
+    category: healing
+    video_id: "RWNVRJYSVMA"
+    prefecture: "07"
+    lat: 37.5128
+    lng: 140.9292
+    note: "2026-09-30 全国多角調査(farm_nature)。「希望の牧場 放牧地ライブカメラ 左側」status=OK isLiveNow=true playableInEmbed=true（2026-09-29）。被災牛を飼養する牧場の放牧地。チャンネルは配信1本のみなので channel_id UCxPicg6DpwGHwLe-Hl6Y17Q でも可。旧枠 VmNc4HoYl6c は記録閲覧不可"
+
+  - id: curated-farm-kamishihoro-naitai
+    name: "ナイタイ高原牧場（上士幌町）"
+    operator: "上士幌町（かみしほろスマートPASSチャンネル）"
+    category: healing
+    channel_id: "UCNt-rAHD7y9ErDC_cO-VfeA"
+    prefecture: "01"
+    lat: 43.2969
+    lng: 143.1697
+    note: "2026-09-30 全国多角調査(farm_nature)。現行枠 Hp1PCyp2nqk「北海道上士幌町ナイタイ高原 ライブカメラ」status=OK isLiveNow=true playableInEmbed=true。過去枠が同名で繰り返し（1チャンネル1配信）なので channel_id 登録。日本一広い公共牧場。かみしほろスマートPASS（kamishihoro.space）は町サイトからリンクされる町の施策サイトだが、チャンネル運営主体の明記は見つからず要確認"
+
+  - id: curated-farm-setagaya-teruya-bee
+    name: "テルヤ電機 本社屋上 養蜂（世田谷区用賀）"
+    operator: "テルヤ電機株式会社（養蜂部 BeeT）"
+    category: healing
+    video_id: "CDHojsJ4tBg"
+    prefecture: "13"
+    lat: 35.6259
+    lng: 139.6322
+    note: "2026-09-30 全国多角調査(farm_nature)。【復活候補】台帳に curated-lcdb-edb1af04（旧枠 Fm1De3uvGIA）が「動画削除のため退役」で rejected あり。新枠 CDHojsJ4tBg は status=OK isLiveNow=true playableInEmbed=true（24時間定点）。内容却下ではなく枠消失による退役なので再提案。採否は要判断"
+
+  - id: curated-farm-jinsekikogen-akiba-bee
+    name: "Akiba.TV ニホンミツバチ巣箱（神石高原町）"
+    operator: "神石高原町観光情報チャンネル × Akiba.TV（ニホンミツバチ巣箱オーナープロジェクト）"
+    category: healing
+    video_id: "GZLaT1FdcCQ"
+    prefecture: "34"
+    lat: 34.7102
+    lng: 133.2569
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true（24時間ライブ）。チャンネル名は「広島県神石高原町観光情報チャンネル」。巣箱の正確な位置は公開されておらず町中心の概略座標"
+
+  - id: curated-wild-shiretoko-forestnotes-animal
+    name: "知床 動物観察カメラ（知床自然センター近く・Forest Notes）"
+    operator: "株式会社JVCケンウッド（Forest Notes）／公益財団法人知床財団／斜里町"
+    category: healing
+    video_id: "CcgT5MFiL6Q"
+    prefecture: "01"
+    lat: 44.2007
+    lng: 145.2395
+    note: "2026-09-30 全国多角調査(farm_nature)。「知床 動物観察カメラライブ（07/17～）」status=OK isLiveNow=true playableInEmbed=true。赤外線カメラ24時間。環境省の特別許可で世界自然遺産地域内に設置。台帳の ForestNotes 奥多摩（ND9M0h2o5DQ）と同運営者。同チャンネルに複数配信があるため video_id 登録（枠は期間ごとに更新されるので要追従）"
+
+  - id: curated-wild-shiretoko-forestnotes-360
+    name: "知床 360°4Kカメラ（知床自然センター近く・Forest Notes）"
+    operator: "株式会社JVCケンウッド（Forest Notes）／公益財団法人知床財団／斜里町"
+    category: healing
+    video_id: "QkJ8KoMPYTQ"
+    prefecture: "01"
+    lat: 44.2007
+    lng: 145.2395
+    note: "2026-09-30 全国多角調査(farm_nature)。「知床 360° 4K カメラライブ 7/17 ~」status=OK isLiveNow=true playableInEmbed=true。上と同地点の別カメラ"
+
+  - id: curated-wild-iizuna-owl-nestbox
+    name: "フクロウ巣箱ライブ（飯綱町）"
+    operator: "hukurou shimasen（個人運営）"
+    category: healing
+    video_id: "GanUTU5qUe0"
+    prefecture: "20"
+    lat: 36.7545
+    lng: 138.2354
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true（2026年枠は5/27に巣立ち済みだが配信継続中）。台帳の「飯綱町ムササビ巣箱（オオタカします？）」と同様の個人運営型。繁殖期（2〜5月）以外は空の巣箱が映る。運営者が個人名義のため採否要判断"
+
+  - id: curated-wild-niikappu-dimaccio-birds
+    name: "太陽の森ディマシオ美術館 庭園 小鳥・お天気カメラ（新冠町）"
+    operator: "動物支援コノド × 太陽の森ディマシオ美術館"
+    category: healing
+    video_id: "dHElrtDv-Yo"
+    prefecture: "01"
+    lat: 42.4039
+    lng: 142.3538
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。配信チャンネルは「動物支援コノドch」（台帳の新冠 馬の映るお天気カメラと同じコノド氏）で、美術館公式サイトが告知ページで紹介。コノドchは複数配信なので video_id"
+
+  - id: curated-wild-kitahiroshima-livehokkaido-fox
+    name: "LIVEHOKKAIDO エゾリスとキタキツネ（北広島市）"
+    operator: "LIVE-HOKKAIDO"
+    category: healing
+    video_id: "O0jZ8tkKFlg"
+    prefecture: "01"
+    lat: 42.9577
+    lng: 141.4227
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。台帳採用済みの LIVE-HOKKAIDO 2台（給餌台 vijshwmzK1g・水飲み場 BKXZsjWMe-U）と同チャンネルの3本目。同一場所の別アングル"
+
+  - id: curated-wild-asago-giant-salamander
+    name: "たんようあさご オオサンショウウオLABO 巣穴内（朝来市）"
+    operator: "朝来市自然環境保全センター たんようあさごオオサンショウウオLABO"
+    category: healing
+    video_id: "nVCRTB29k_I"
+    prefecture: "28"
+    lat: 35.2232
+    lng: 134.8809
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。夜行性のため夜に活発。公式サイトに「予告なく変更・終了」「メンテ中非公開」の注意のみで転載禁止文言なし。旧枠 8xIaG3Fs5AE は非公開化済み。チャンネルは配信1本なので channel_id UCYZGRyqIG4QiKbpn2x3LoqA でも可（ライブカメラ2は休止中）"
+
+  - id: curated-wild-oarai-aquaworld-shark
+    name: "アクアワールド茨城県大洗水族館 サメ水槽（ANN 24時間ライブ）"
+    operator: "テレビ朝日 ANNnewsCH × アクアワールド茨城県大洗水族館"
+    category: healing
+    video_id: "4GyL-3_I9Kc"
+    prefecture: "08"
+    lat: 36.3241
+    lng: 140.588
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。ANNnewsCH は多数配信のため video_id。シロワニなど。放送局系ライブは台帳に前例多数（KAB/RKK 等）"
+
+  - id: curated-bird-toyooka-toshima-wetland
+    name: "ハチゴロウの戸島湿地 コウノトリ人工巣塔（豊岡市城崎町）"
+    operator: "豊岡市立ハチゴロウの戸島湿地（NPO法人コウノトリ湿地ネット）"
+    category: healing
+    channel_id: "UCSlshvB_Cju4fxhM6vZZlyw"
+    prefecture: "28"
+    lat: 35.6186
+    lng: 134.7966
+    note: "2026-09-30 全国多角調査(farm_nature)。現行枠 BlPz8Cn5V-I「戸島湿地ライブ」status=OK isLiveNow=true playableInEmbed=true。チャンネルは常時1本を同名で更新するため channel_id 登録。台帳のコウノトリは野田市・小山市のみ"
+
+  - id: curated-bird-tochigi-watarase-north-stork
+    name: "渡良瀬遊水地 北エントランス コウノトリ見守りカメラ（栃木市）"
+    operator: "栃木市（栃木市渡良瀬遊水地チャンネル）"
+    category: healing
+    video_id: "MXhpl-s12cc"
+    prefecture: "09"
+    lat: 36.2284
+    lng: 139.6734
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。第1調節池内の人工巣塔。市ページに「映像の権利は栃木市に帰属。無許可の転載・複製・転用を禁じます」とあるため、YouTube 埋め込みの扱い（誘導型にするか）は要判断。チャンネルは配信1本なので channel_id UCff9A602X79BDm5L_rHm75g でも可。台帳の小山市（It-U1mjwU8s）は第2調節池で別地点"
+
+  - id: curated-bird-chino-tateshina-ichibankan
+    name: "プチペンション蓼科壱番館 リスと小鳥の森（茅野市北山）"
+    operator: "プチペンション蓼科壱番館"
+    category: healing
+    channel_id: "UCbmb-sYch9L_7ESd7H1_UUw"
+    prefecture: "20"
+    lat: 36.0628
+    lng: 138.2548
+    note: "2026-09-30 全国多角調査(farm_nature)。現行枠 o7U_z-Pfo8U status=OK isLiveNow=true playableInEmbed=true。チャンネルは配信1本のみ。えさ台に野鳥・リス"
+
+  - id: curated-bird-komoro-takamine-onsen
+    name: "高峰温泉 野鳥餌場・高峯山（小諸市）"
+    operator: "高峰温泉（株式会社高峰温泉）"
+    category: healing
+    channel_id: "UCYYrcZYAyGUF7aMxuN7KWOA"
+    embed: false
+    prefecture: "20"
+    lat: 36.3588
+    lng: 138.4388
+    note: "2026-09-30 全国多角調査(farm_nature)。現行枠 k5D5yd-yLr0 status=OK isLiveNow=true だが playableInEmbed=false → 誘導型。チャンネルは配信1本のみ。標高2,000m の温泉宿の餌場。台帳の「高峰マウンテンパーク」2台は別運営者（スキー場）"
+
+  - id: curated-cat-chichibu-niconyanko-3f
+    name: "笑にゃんこ王国 大人猫の部屋3階（秩父市）"
+    operator: "一般社団法人笑にゃんこ王国"
+    category: healing
+    video_id: "4aqhJm5CeCk"
+    prefecture: "11"
+    lat: 36.0373
+    lng: 139.0254
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。100匹規模のオープンシェルター。同チャンネルで2階と3階の2本を同時配信のため video_id"
+
+  - id: curated-cat-chichibu-niconyanko-2f
+    name: "笑にゃんこ王国 大人猫の部屋2階（秩父市）"
+    operator: "一般社団法人笑にゃんこ王国"
+    category: healing
+    video_id: "zZLnDd5iO2g"
+    prefecture: "11"
+    lat: 36.0373
+    lng: 139.0254
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true"
+
+  - id: curated-cat-beppu-aratama-ryokan
+    name: "新玉旅館 看板猫おもち部屋（別府市浜脇）"
+    operator: "新玉旅館（にゃんたま旅館）"
+    category: healing
+    video_id: "rHl6y4e06t0"
+    prefecture: "44"
+    lat: 33.27
+    lng: 131.5068
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。80匹の保護猫と暮らす温泉旅館。チャンネルは8本同時配信のため video_id。台帳の「新玉」ヒットは新玉手橋（河川）で無関係"
+
+  - id: curated-cat-beppu-hamawaki-community-cats
+    name: "別府市浜脇 地域猫見守りカメラ（新玉旅館）"
+    operator: "新玉旅館（にゃんたま旅館）"
+    category: healing
+    video_id: "lweBJVwHZAI"
+    prefecture: "44"
+    lat: 33.27
+    lng: 131.5068
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。屋外の地域猫。同運営者の他6本（猫部屋・お天気カメラ等）は必要なら追加可"
+
+  - id: curated-cat-oita-ikariyama-onsen
+    name: "いかりやま温泉 猫神社前（大分市片島）"
+    operator: "いかりやま温泉（ぽかにゃん）"
+    category: healing
+    video_id: "HZp-ZUVlAiA"
+    prefecture: "44"
+    lat: 33.2153
+    lng: 131.6236
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。猫のいる日帰り温泉。同チャンネルは5本同時配信（キャットタワー sakf5R_BEE4・屋上・猫部屋・お天気）でタイトルに日付が入るため動画IDが日替わりの可能性あり → 要定期追従"
+
+  - id: curated-cat-ibusuki-hachiware-farm
+    name: "はちわれ農園・necohara 保護猫（指宿市山川）"
+    operator: "はちわれ農園（トロピカルファーム山川）"
+    category: healing
+    channel_id: "UCmBFVWzMm3QjqZ2ib6KXqEw"
+    embed: false
+    prefecture: "46"
+    lat: 31.1959
+    lng: 130.6299
+    note: "2026-09-30 全国多角調査(farm_nature)。現行枠 dRn09qPa4e8 status=OK isLiveNow=true だが playableInEmbed=false → 誘導型。チャンネルは配信1本のみ。マンゴー農園内カフェ兼保護猫コワーキング"
+
+  - id: curated-cat-sakai-qol-shelter
+    name: "QOL南大阪保護猫シェルター メインルーム（堺市北区）"
+    operator: "QOL南大阪保護猫シェルター"
+    category: healing
+    video_id: "EcVq7pqmWkE"
+    prefecture: "27"
+    lat: 34.5753
+    lng: 135.53
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。チャンネルは配信1本のみなので channel_id UC5MgdG0uYs5RokQl2FHTjZQ でも可"
+
+  - id: curated-dog-minamikyushu-kawanabe-dogrun
+    name: "オートキャンプ森のかわなべ ドッグラン（南九州市川辺町）"
+    operator: "オートキャンプ森のかわなべ（かわなべアウトドアセンター）"
+    category: healing
+    video_id: "1T6un9j_ZgI"
+    prefecture: "46"
+    lat: 31.4293
+    lng: 130.4618
+    note: "2026-09-30 全国多角調査(farm_nature)。status=OK isLiveNow=true playableInEmbed=true。西日本最大級のドッグラン。チャンネルは配信1本のみなので channel_id UCADTPa3ApvqilJJmAbe8sew でも可。台帳のドッグラン前例（霊桃寺・山田農園等）と同型"
+
+  - id: curated-town-otawara-cityhall-weather
+    name: "大田原市役所 本庁舎屋上（お天気カメラ）"
+    operator: "大田原市（栃木県大田原市 公式YouTubeチャンネル）"
+    category: other
+    video_id: "88oTKzJNubg"
+    embed: false
+    prefecture: "09"
+    lat: 36.870312
+    lng: 140.016251
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 isLiveNow=true, playableInEmbed=false → 誘導型。同チャンネルの河川監視カメラ7本は台帳登録済み、お天気カメラのみ未登録。市役所屋上から市街・大田原体育館方面"
+
+  - id: curated-town-toyama-cityhall-tateyama-east
+    name: "富山市役所展望塔 立山映像ライブカメラ（立山連峰東側）"
+    operator: "富山市"
+    category: scenic
+    video_id: "1bQXtWosIFs"
+    embed: false
+    prefecture: "16"
+    lat: 36.695351
+    lng: 137.213165
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 isLiveNow=true, playableInEmbed=false → 誘導型。チャンネル『富山市EastCamera』(UC6HR78K_ZaPUlPXeG9AdLBg) は1配信のみ。中心市街地の市役所展望塔から立山連峰"
+
+  - id: curated-town-toyama-cityhall-tateyama-south
+    name: "富山市役所展望塔 立山映像ライブカメラ（立山連峰南側）"
+    operator: "富山市"
+    category: scenic
+    video_id: "I8vGYDACOzw"
+    embed: false
+    prefecture: "16"
+    lat: 36.695351
+    lng: 137.213165
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 isLiveNow=true, playableInEmbed=false → 誘導型。チャンネル『富山市SouthCamera』(UChAzc2K1-9Iw23yMuD3pBdw)"
+
+  - id: curated-town-hamanaka-kiritappu-mgroad
+    name: "浜中町 霧多布湿原センターからのMGロード"
+    operator: "浜中町"
+    category: scenic
+    video_id: "E7wTZ6vmkFI"
+    embed: false
+    prefecture: "01"
+    lat: 43.085564
+    lng: 145.05925
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 isLiveNow=true, playableInEmbed=true だが町ページに『ストリーミング画面や内容を許可なく他のウェブサイト、著作物などに転載しないでください』→ 誘導型で登録。チャンネル『浜中町ライブカメラ』(UCeb8nozSSdpVcYqm8yruuWA) は1配信"
+
+  - id: curated-town-aomori-station-aba
+    name: "青森駅前（ABA青森朝日放送）"
+    operator: "ABA青森朝日放送"
+    category: other
+    video_id: "sSt19_O8Xyg"
+    prefecture: "02"
+    lat: 40.827059
+    lng: 140.734774
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 status=OK, isLiveNow=true, playableInEmbed=true。ABA(UCE5ajTJVTrsmxZJ-V3y8CLA) は青森空港（台帳登録済み）と本件の2本を常時配信。青森駅前・青森ベイブリッジ方面"
+
+  - id: curated-town-tokyo-station-marunouchi-omy
+    name: "東京駅丸の内口（大丸有まちづくり協議会）"
+    operator: "一般社団法人大手町・丸の内・有楽町地区まちづくり協議会（大丸有協議会）"
+    category: other
+    video_id: "ZN4gh5IOowM"
+    prefecture: "13"
+    lat: 35.681563
+    lng: 139.76518
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 status=OK, isLiveNow=true, playableInEmbed=true。チャンネル about に tokyo-omy-council.jp のプライバシーポリシーへのリンク。台帳の東京駅は鉄道ビュー・八重洲口タクシーのみで丸の内駅前広場は未登録"
+
+  - id: curated-town-akihabara-onoden
+    name: "秋葉原 中央通り（オノデン本店から秋葉原駅方向）"
+    operator: "株式会社オノデン（秋葉原電気街振興会 動画コーナー掲載）"
+    category: other
+    channel_id: "UChRQpufaxclkezElsQ04VXw"
+    prefecture: "13"
+    lat: 35.698345
+    lng: 139.771072
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 現行枠 Bhex8SfpYLQ status=OK, isLiveNow=true, playableInEmbed=true。チャンネルは同名の枠を日々作り直しており常時1本のみライブ → channel_id 登録。振興会サイトが live_stream?channel= で埋め込んでいる。台帳の秋葉原3件（愛三電機=却下、他）とは別カメラ"
+
+  - id: curated-town-kita-hokutopia
+    name: "北区観光ライブカメラ（北とぴあを横断する新幹線・王子駅前）"
+    operator: "東京北区観光協会（北区観光ホームページ）"
+    category: other
+    video_id: "WoRkaZ7QRDA"
+    prefecture: "13"
+    lat: 35.754681
+    lng: 139.736511
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 status=OK, isLiveNow=true, playableInEmbed=true。配信チャンネル『PR Station』(UCQ6oAVLHLS_BhttxMqcyfcw) は about に『東京北区観光協会公式YouTubeチャンネル』。区の観光サイトが埋め込み"
+
+  - id: curated-town-fukui-seiren-mro
+    name: "福井市街（MRO北陸放送・セーレン本社）"
+    operator: "MRO北陸放送"
+    category: other
+    video_id: "PqpzIJ0wueo"
+    prefecture: "18"
+    lat: 36.055573
+    lng: 136.217041
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 status=OK, isLiveNow=true, playableInEmbed=true。台帳の福井駅3件（FBC等）とは別枠。設置ビルの特定はセーレン本社の推定"
+
+  - id: curated-town-himeji-tenma-station
+    name: "山陽電鉄 天満駅前（姫路市）"
+    operator: "定点カメラチャンネル 兵庫県（YouTube。台帳の『高松市上天神』と同一運営者）"
+    category: other
+    video_id: "MoLx7N9szL0"
+    prefecture: "28"
+    lat: 34.7877
+    lng: 134.6247
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 status=OK, isLiveNow=true, playableInEmbed=true。『試験配信中』表記。運営者は個人色の強いチャンネルだが台帳が同チャンネルの高松上天神を承認済みなので同基準で候補化"
+
+  - id: curated-town-fukuoka-tenjin-kita-newgaea
+    name: "福岡 天神北（福岡都市高速・博多港方面）"
+    operator: "ニューガイアグループ（newgaea-holdings.com）"
+    category: other
+    video_id: "cNBqpIDVVG4"
+    prefecture: "40"
+    lat: 33.5945
+    lng: 130.4005
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 status=OK, isLiveNow=true, playableInEmbed=true（UCR3gAq9N4mtRb2NUb7tyWig、about に会社サイト newgaea-holdings.com）"
+
+  - id: curated-town-fukuoka-tenjin-1chome-log
+    name: "福岡 天神1丁目交差点（LOG FUKUOKA）"
+    operator: "LOG FUKUOKA（log-fukuoka.jp）"
+    category: other
+    video_id: "3JbsYB5OTrA"
+    prefecture: "40"
+    lat: 33.5908
+    lng: 130.402
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 status=OK, isLiveNow=true, playableInEmbed=true（UCDH5mMaQjT_4nYliCNxd47g、about に公式サイト log-fukuoka.jp）"
+
+  - id: curated-town-morioka-odori-lc24
+    name: "盛岡市 大通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市の同系4台をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCPRNqMOl98Sywzz8BzBcq0A"
+    prefecture: "03"
+    lat: 39.7008
+    lng: 141.147
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 現行枠 dltmZtGou8A status=OK, isLiveNow=true, playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-town-tsu-shinmachi-station-lc24
+    name: "津新町駅前（三重県津市西丸之内）"
+    operator: "livecamera24.jp（運営会社未特定。同系採用実績あり）"
+    category: other
+    channel_id: "UCvADhql-jdXsWEmoy-_A2pA"
+    embed: false
+    prefecture: "24"
+    lat: 34.718128
+    lng: 136.503082
+    note: "2026-09-30 全国多角調査(town_gov)。2026-09-29 現行枠 OFO97aKx8Jo status=OK, isLiveNow=true, playableInEmbed=false → 誘導型（channel/live）。日替わり枠"
+
+  - id: curated-tc-kintetsu-koriyama-sta
+    name: "近鉄郡山駅周辺（大和郡山市）"
+    operator: "大和郡山市"
+    category: other
+    video_id: "BELHA3BvF7w"
+    prefecture: "29"
+    lat: 34.6497
+    lng: 135.7826
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true playableInEmbed=true（2026-09-29 22:10）。チャンネル author=Yamatokoriyama City。台帳の大和郡山市は郡山城跡・駐車場のみで駅前は未収録"
+
+  - id: curated-tc-hiroshima-sta-tram-htv
+    name: "広島駅 2階乗り入れ路面電車（駅前大橋ルート・広島テレビ）"
+    operator: "広島テレビ放送株式会社"
+    category: other
+    video_id: "4IYYByR29A0"
+    prefecture: "34"
+    lat: 34.3977
+    lng: 132.4751
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:10）。台帳の広島駅3件は RCC の新幹線ホーム/南口で、広電乗り入れ画角は未収録"
+
+  - id: curated-tc-zao-chuo-ropeway-parking
+    name: "蔵王中央ロープウェイ 第一駐車場（蔵王温泉）"
+    operator: "蔵王索道協会"
+    category: other
+    video_id: "1vhtYFrjxBw"
+    prefecture: "06"
+    lat: 38.1731
+    lng: 140.4058
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:10）。author=蔵王索道協会。台帳の蔵王ロープウェイ駐車場（Rs4CcR79sWA）とは別カメラ"
+
+  - id: curated-tc-ueji-ontakesan
+    name: "上地御嶽山 境内（岡崎市）"
+    operator: "上地御嶽山"
+    category: other
+    video_id: "w5t-yN0u7Ss"
+    prefecture: "23"
+    lat: 34.8999
+    lng: 137.1581
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:10）。公式サイトがこのチャンネル（UCXNIeuiduVm_00mfXYBiP4w）へリンク。チャンネルの配信は1本のみ"
+
+  - id: curated-tc-cvn-vistapalace-iida
+    name: "飯田市街 ヴィスタパレス屋上（飯田ケーブルテレビ）"
+    operator: "株式会社シーブイエヌ（飯田ケーブルテレビ）"
+    category: other
+    video_id: "29ImiCvl6Q0"
+    prefecture: "20"
+    lat: 35.5148
+    lng: 137.8255
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:10）。cvn 公式ライブカメラ一覧に掲載。同一覧に約27本の youtube_channel 埋め込みあり（鉱脈）"
+
+  - id: curated-tc-cvn-iida-sta-platform
+    name: "JR飯田駅 ホーム（飯田ケーブルテレビ）"
+    operator: "株式会社シーブイエヌ（飯田ケーブルテレビ）"
+    category: other
+    channel_id: "UCv6bLM0gYcsx7i_XveUNvqA"
+    prefecture: "20"
+    lat: 35.5153
+    lng: 137.8215
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:30）。カメラごとに専用チャンネル（1チャンネル1配信）なので channel_id 登録可。台帳の飯田駅前（5NJZVXZnWp8）は駅前広場で別画角"
+
+  - id: curated-tc-sanada-jinja-ucv
+    name: "眞田神社（上田城跡・UCV）"
+    operator: "上田ケーブルビジョン株式会社"
+    category: other
+    video_id: "suruSSIwV_g"
+    prefecture: "20"
+    lat: 36.4042
+    lng: 138.2447
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:10）。author=ucv。UCV ライブカメラの多くは camstreamer 埋め込みだがこの1本は YouTube"
+
+  - id: curated-tc-zenkyoan-kyoto
+    name: "禅居庵 摩利支天堂（京都・建仁寺塔頭）"
+    operator: "禅居庵"
+    category: other
+    channel_id: "UCoZukhk-EBlJbmOcPvHQaag"
+    prefecture: "26"
+    lat: 35.0007
+    lng: 135.774
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:10）。以前の枠 D8AlstxJhuk は LOGIN_REQUIRED（非公開）で現行枠に切替済み。枠が変わりやすいので channel_id 併記"
+
+  - id: curated-tc-hotel-kuu-kyoto-higashihonganji
+    name: "京都 東本願寺・烏丸通（HOTEL KUU KYOTO）"
+    operator: "HOTEL KUU KYOTO"
+    category: other
+    video_id: "ylwAxICbJkA"
+    prefecture: "26"
+    lat: 34.9925
+    lng: 135.759
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:20）。ホテル公式チャンネル、配信1本。台帳の東本願寺3件（森信三郎商舗・お東さん広場・西の空）とは別"
+
+  - id: curated-tc-koyasan-sainanin-garden
+    name: "高野山 西南院 庭園"
+    operator: "高野山 西南院"
+    category: other
+    channel_id: "UCs2IojRYx4-FZKE9hfAgdKQ"
+    prefecture: "30"
+    lat: 34.2121
+    lng: 135.582
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:20）。宿坊公式チャンネル。台帳の高野山3件（テレビ和歌山・大門南・中央案内所）とは別"
+
+  - id: curated-tc-nara-rekishi-geijutsu-bunkamura
+    name: "なら歴史芸術文化村（天理市）"
+    operator: "なら歴史芸術文化村（奈良県）"
+    category: other
+    channel_id: "UC0Cm7pJs0Jxj79vWUQ88ZYA"
+    prefecture: "29"
+    lat: 34.5919
+    lng: 135.8509
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:20）。施設公式チャンネル、配信1本"
+
+  - id: curated-tc-kinkaitei-shinmaiko
+    name: "新舞子海岸（民宿錦海亭・富津市）"
+    operator: "民宿 錦海亭"
+    category: coast
+    channel_id: "UCf1zdGuQfgQppi4YQ3dgZnw"
+    prefecture: "12"
+    lat: 35.3156
+    lng: 139.8296
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:20）。説明文「千葉県富津市の民宿錦海亭より新舞子海岸の現在の映像」。台帳の新舞子（知多）とは別地点"
+
+  - id: curated-tc-karuizawa-jhs-road
+    name: "軽井沢中学校付近（軽井沢町）"
+    operator: "軽井沢町"
+    category: road
+    video_id: "y2xaFSo83aM"
+    prefecture: "20"
+    lat: 36.3389
+    lng: 138.5911
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:30）。author=長野県軽井沢町。台帳の軽井沢町カメラ8本に無い地点"
+
+  - id: curated-tc-akamondera-funabashi
+    name: "あかもん寺遥拝所（龍王山大覚院・船橋市）"
+    operator: "龍王山大覚院（あかもん寺）"
+    category: other
+    channel_id: "UCD4yq4zVv7BVYTdxAz9AOeQ"
+    prefecture: "12"
+    lat: 35.7002
+    lng: 139.9785
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:40）。寺公式チャンネル、配信1本"
+
+  - id: curated-tc-moiwa-ropeway-summit
+    name: "札幌もいわ山ロープウェイ 山頂（標高看板前）"
+    operator: "札幌もいわ山ロープウェイ（株式会社札幌振興公社）"
+    category: scenic
+    channel_id: "UCQIw-e2W8a1e628l4_P1ZfQ"
+    prefecture: "01"
+    lat: 43.021
+    lng: 141.322
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:40）。公式サイトのライブカメラページから誘導、配信1本（24時間）。同ページに10分ごとの静止画アーカイブ（moiwa72h/file/yyyymmddHHMM.jpg）もあるが日付入りURLのため YouTube を採用"
+
+  - id: curated-tc-tsukigatani-onsen
+    name: "月ヶ谷温泉（上勝町）"
+    operator: "徳島県上勝町"
+    category: other
+    video_id: "GJzW0EpIkmo"
+    prefecture: "36"
+    lat: 33.8794
+    lng: 134.4236
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:40）。上勝町公式チャンネル（配信2本のうち温泉側）"
+
+  - id: curated-tc-masaki-dam-kamikatsu
+    name: "正木ダム（上勝町）"
+    operator: "徳島県上勝町"
+    category: dam
+    video_id: "OMu9kA76SrI"
+    prefecture: "36"
+    lat: 33.8855
+    lng: 134.3995
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:40）。上勝町公式チャンネルのもう1本。台帳に正木ダム無し"
+
+  - id: curated-tc-matsumoto-airport-p2
+    name: "信州まつもと空港 第二駐車場"
+    operator: "松本空港（信州まつもと空港）"
+    category: other
+    video_id: "0J6BZnQs9iY"
+    prefecture: "20"
+    lat: 36.1668
+    lng: 137.9228
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:50）。author=松本空港（滑走路カメラ WAzZUkjgT4k は台帳に収録済み、駐車場は未収録）"
+
+  - id: curated-tc-kobe-airport-t1-taxi
+    name: "神戸空港 第1ターミナル タクシー乗り場"
+    operator: "兵庫県タクシー協会 神戸阪神間支部"
+    category: other
+    video_id: "vJ_SpJeyRog"
+    prefecture: "28"
+    lat: 34.6328
+    lng: 135.2239
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:50）。千葉県・福井県タクシー協会と同型の乗り場カメラ"
+
+  - id: curated-tc-kobe-airport-ktv
+    name: "神戸空港（カンテレ）"
+    operator: "関西テレビ放送株式会社"
+    category: other
+    video_id: "hpnh6OKjqII"
+    prefecture: "28"
+    lat: 34.6328
+    lng: 135.2239
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:55）。台帳の神戸空港は YTV の1件のみ"
+
+  - id: curated-tc-echizen-takefu-sta-taxi
+    name: "越前たけふ駅 タクシー乗場（福井県タクシー協会）"
+    operator: "福井県タクシー協会"
+    category: other
+    video_id: "4xEExtH3vE0"
+    embed: false
+    prefecture: "18"
+    lat: 35.8955
+    lng: 136.1968
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true だが playableInEmbed=false → 誘導型（22:10）"
+
+  - id: curated-tc-kosenji-kusatsu-keidai
+    name: "草津山光泉寺 境内（草津温泉）"
+    operator: "草津山光泉寺"
+    category: other
+    video_id: "r6lxvPy1_rQ"
+    embed: false
+    prefecture: "10"
+    lat: 36.6222
+    lng: 138.5962
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true playableInEmbed=false → 誘導型（22:10）。寺公式チャンネル（配信2本）"
+
+  - id: curated-tc-kosenji-kusatsu-pagoda
+    name: "草津山光泉寺 五重塔（草津温泉）"
+    operator: "草津山光泉寺"
+    category: other
+    video_id: "ciDt_O0h7v4"
+    embed: false
+    prefecture: "10"
+    lat: 36.6222
+    lng: 138.5962
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true playableInEmbed=false → 誘導型（22:10）"
+
+  - id: curated-tc-shingetsusai-live2
+    name: "心月齋 観音霊場の梅と桜（美浜町）"
+    operator: "心月齋"
+    category: other
+    video_id: "rHB67eETiGA"
+    embed: false
+    prefecture: "23"
+    lat: 34.81
+    lng: 136.886
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true playableInEmbed=false → 誘導型（22:40）。台帳の心月齋2本（境内 LIVE3・一葉観音 LIVE1）と別の LIVE2"
+
+  - id: curated-tc-kobe-airport-t2-taxi
+    name: "神戸空港 第2ターミナル タクシー乗場"
+    operator: "兵庫県タクシー協会 神戸阪神間支部"
+    category: other
+    video_id: "1FPpY-LSfzw"
+    embed: false
+    prefecture: "28"
+    lat: 34.6328
+    lng: 135.2239
+    note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true playableInEmbed=false → 誘導型（22:50）"
+
+  - id: curated-kouji-kanazawa-ninomaru
+    name: "金沢城公園 二の丸御殿復元工事現場"
+    operator: "石川県土木部公園緑地課"
+    category: other
+    video_id: "46WANaCUyug"
+    prefecture: "17"
+    lat: 36.5652
+    lng: 136.6586
+    note: "2026-09-30 全国多角調査(industry_season)。2026-09-29 isLiveNow=true, playableInEmbed=true。県公式チャンネル（兼六園・三の丸・玉泉院丸と同じ）。復元工事の定点。"
+
+  - id: curated-industry-nanbu-relay-center
+    name: "県央県南南部リレーセンター（ごみ処理施設入口混雑状況）"
+    operator: "県央県南広域環境組合"
+    category: other
+    video_id: "D3heJsLB--s"
+    prefecture: "42"
+    lat: 32.6492
+    lng: 130.2561
+    note: "2026-09-30 全国多角調査(industry_season)。2026-09-29 isLiveNow=true, playableInEmbed=true。"
+
+  - id: curated-industry-matsuyama-minami-clean-center
+    name: "松山市南クリーンセンター 入口付近（重信川沿い）"
+    operator: "松山市清掃施設課"
+    category: other
+    video_id: "C0gpM_qIIl0"
+    embed: false
+    prefecture: "38"
+    lat: 33.8094
+    lng: 132.7446
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true だが playableInEmbed=false → 誘導型。チャンネル UC4e4gaT5BGXjIZ67pmAAb1w の /live で解決。"
+
+  - id: curated-season-gassenba-shidarezakura
+    name: "合戦場のしだれ桜（二本松市）"
+    operator: "いわしろ夢現塾"
+    category: scenic
+    video_id: "MhSWFRiy48Y"
+    prefecture: "07"
+    lat: 37.5335
+    lng: 140.5959
+    note: "2026-09-30 全国多角調査(industry_season)。2026-09-29 isLiveNow=true, playableInEmbed=true。同運営者の安達太良山カメラは台帳登録済み。通年配信。"
+
+  - id: curated-season-omi-butai-zakura
+    name: "麻績の里 舞台桜（飯田市座光寺）"
+    operator: "cvn 麻績の里ライブカメラ（飯田ケーブルテレビ系。カメ探では飯田ケーブルテレビ扱い）"
+    category: scenic
+    video_id: "YISJ0yec1pI"
+    prefecture: "20"
+    lat: 35.5435
+    lng: 137.841
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true。oEmbed author『cvn 麻績の里ライブカメラ』。運営主体の正式名は投入前に要確認（ICTV系の別チャンネルとみられる）。"
+
+  - id: curated-season-gyokusenin-maru-garden
+    name: "金沢城公園 玉泉院丸庭園"
+    operator: "石川県土木部公園緑地課"
+    category: scenic
+    video_id: "WBk0do7-Av0"
+    prefecture: "17"
+    lat: 36.5632
+    lng: 136.657
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true。紅葉・雪吊り・ライトアップ。同チャンネルの兼六園は Cy03efFcGyk で配信中（台帳の 5uNwdsIUZOw と異なる → 要点検）。"
+
+  - id: curated-season-asahidake-ropeway
+    name: "大雪山旭岳ロープウェイ（旭岳ライブ配信）"
+    operator: "大雪山旭岳ロープウェイ（ワカサリゾート株式会社）"
+    category: scenic
+    video_id: "cLSIgV6MkA4"
+    prefecture: "01"
+    lat: 43.6597
+    lng: 142.8139
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true。紅葉（9月下旬）・初冠雪。台帳の旭岳（sizenken／北工学園）とは別。"
+
+  - id: curated-season-shiretoko-daiichi-utoro
+    name: "知床第一ホテルから ウトロ港・オホーツク海（流氷）"
+    operator: "知床第一ホテル"
+    category: coast
+    video_id: "AOvEe2dEXAc"
+    prefecture: "01"
+    lat: 44.0647
+    lng: 145.0091
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true（公式チャンネル）。冬は流氷・観光船おーろら。"
+
+  - id: curated-rito-kozushima-port-tokyo
+    name: "神津島港（神津島）"
+    operator: "東京都港湾局（東京都伊豆・小笠原諸島港湾ライブカメラ）"
+    category: port
+    video_id: "oI5HK8rLvYQ"
+    prefecture: "13"
+    lat: 34.2065
+    lng: 139.1355
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true。同チャンネル18枠のうち台帳未登録分。"
+
+  - id: curated-rito-miyakejima-miike-port
+    name: "三池港（三宅島）"
+    operator: "東京都港湾局（東京都伊豆・小笠原諸島港湾ライブカメラ）"
+    category: port
+    video_id: "FPDC_vKXuzk"
+    prefecture: "13"
+    lat: 34.0868
+    lng: 139.5532
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true。"
+
+  - id: curated-rito-hachijo-kaminato-fishing-port
+    name: "神湊漁港（八丈島）"
+    operator: "東京都港湾局（東京都伊豆・小笠原諸島港湾ライブカメラ）"
+    category: port
+    video_id: "ciBuVo8Sozk"
+    prefecture: "13"
+    lat: 33.116
+    lng: 139.801
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true。台帳の底土港（1Vl2OrZkwsM）とは別枠。"
+
+  - id: curated-rito-shikinejima-nobushi-port
+    name: "野伏漁港（式根島）"
+    operator: "東京都港湾局（東京都伊豆・小笠原諸島港湾ライブカメラ）"
+    category: port
+    video_id: "f-pmgHI_VgM"
+    prefecture: "13"
+    lat: 34.33
+    lng: 139.208
+    note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true。"

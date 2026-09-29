@@ -10386,3 +10386,26 @@ cameras:
     lat: 18.4762
     lng: -77.9161
     note: 旧枠 BPNCPQ-UDZA はデヴォンハウスへ流用(2026-09-02)
+
+
+  # ===== 2026-09-30 全国多角調査（星空・気象/牧場・自然/街・庁舎/交通・文化/産業・季節）=====
+
+  - id: curated-stars-world-subaru-asahi-east
+    name: "マウナケア すばる望遠鏡 星空ライブカメラ（東向き・朝日新聞宇宙部）"
+    operator: "朝日新聞社 × 国立天文台（Asahi Astro LIVE 朝日新聞宇宙部）"
+    category: healing
+    video_id: "Kj5DjRYkzD8"
+    country: "US"
+    lat: 19.8256
+    lng: -155.4761
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:35 JST 検証: status=OK isLiveNow=true playableInEmbed=true「MaunaKea East view & Meteor shower LIVE from Subaru telescope NAOJ」。同チャンネルは同時5本配信（木曽・滝川渓谷・ALMA は台帳収録済み）→video_id 登録。台帳の world 系は CFHT 静止画のみでマウナケアの YouTube 枠は未収録。国立天文台 livecam ページの静止画 subaru-asahi-640x360.jpg は Last-Modified 2026-03-06 で更新停止のため不採用"
+
+  - id: curated-stars-world-cfht-asahi-west
+    name: "マウナケア CFHT 星空ライブカメラ（西向き・朝日新聞宇宙部）"
+    operator: "朝日新聞社 × 国立天文台 / CFHT（Asahi Astro LIVE 朝日新聞宇宙部）"
+    category: healing
+    video_id: "Q3UhCgsWDw8"
+    country: "US"
+    lat: 19.8253
+    lng: -155.4689
+    note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:35 JST 検証: status=OK isLiveNow=true playableInEmbed=true「MaunaKea West view & Meteor shower LIVE from CFHT」。video_id 登録（同上）"
