@@ -1276,6 +1276,18 @@ abstract class AppLocalizations {
   /// **'ライブ配信中'**
   String get detailLive;
 
+  /// No description provided for @detailLiveOffline.
+  ///
+  /// In ja, this message translates to:
+  /// **'配信休止中'**
+  String get detailLiveOffline;
+
+  /// No description provided for @detailLiveOfflineHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'このチャンネルは今は配信していません（営業時間外など）。配信が始まると自動で表示されます。'**
+  String get detailLiveOfflineHint;
+
   /// No description provided for @detailTimeUnknown.
   ///
   /// In ja, this message translates to:

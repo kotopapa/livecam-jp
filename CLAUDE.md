@@ -252,7 +252,7 @@ python site/build.py                            # 配信ファイル生成
 - **台帳を直したら curated_youtube.yaml / curated_world.yaml / curated_still.yaml を必ず同期する**。週次 crawl.yml の `refresh_approved_feeds` が YAML の video_id で台帳の youtube_video を上書きするため、YAML が古いと追従が戻る。退役は YAML 側をコメントアウト（`# 2026-09-23 退役: 理由`）、追従は `# 2026-09-23 配信枠更新: 旧 → 新` の見出し付きで video_id を差し替える。台帳は review.status=rejected のまま残す（decided_ids に入るので候補に再登場しない）
 - curated_world.yaml も `channel_id` / `embed: false` が使える（2026-09-23 に curated_youtube と同じ規則をパーサに追加）
 - 結果（2026-09-23）: 追従311・誘導型40・チャンネル登録21・退役198。据え置き141台（複数ライブで特定できず94、配信休止32、別映像化9、休止中同一3、オフライン3）は次回点検で再確認する。日中に配信が始まる施設カメラが多いので**点検は日中に行う**
-- **youtube_channel 型の埋め込み（`embed/live_stream?channel=`）は、チャンネルが配信中でも「この動画は再生できません」になることがある**（2026-09-23 湯島「猫島」。同じ配信を動画IDで埋め込むと再生できた）。不具合報告があったら同チャンネルの動画ID登録に切り替える。点検スクリプトは /live の解決で判定するためこの失敗は検知できない。**2026-09-29 恒久対策**: monitor が毎回全 youtube_channel の `/channel/<id>/live` の canonical（`watch?v=<ID>`）から現在の配信IDを解決し status.json の `video_id` で配信、アプリ（1.6.1〜）はそれがあれば動画IDで埋め込む（無ければ従来の live_stream）
+- **youtube_channel 型の埋め込み（`embed/live_stream?channel=`）は、チャンネルが配信中でも「この動画は再生できません」になることがある**（2026-09-23 湯島「猫島」。同じ配信を動画IDで埋め込むと再生できた）。不具合報告があったら同チャンネルの動画ID登録に切り替える。点検スクリプトは /live の解決で判定するためこの失敗は検知できない。**2026-09-29 恒久対策**: monitor が毎回全 youtube_channel の `/channel/<id>/live` の canonical（`watch?v=<ID>`）から現在の配信IDを解決し status.json の `video_id` で配信、アプリ（1.6.1〜）はそれがあれば動画IDで埋め込む（無ければ従来の live_stream）。**2026-09-30**: 足寄町のチャンネルで `/live` が 2024-02 の「配信予定」のまま放置された枠を指し、アプリに2年前の待機画面が出た。解決は `/streams` のライブ印（lockupViewModel の THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE）を優先し、`/live` は status OK かつ isUpcoming でないときだけ採用。配信が無ければ status.json に `live: false` を書き、アプリは埋め込まず「配信休止中」を出す
 
 ## 積雪タブ（冬季の熱中症タブ入れ替え）の知見（2026-09-23追記）
 

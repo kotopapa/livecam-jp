@@ -28,7 +28,7 @@ except ImportError:
     pass
 
 from crawler.sources.base import mount_legacy_tls
-from monitor.check import USER_AGENT, check_camera, resolve_youtube_channel_live
+from monitor.check import USER_AGENT, check_camera, find_live_in_streams, resolve_youtube_channel_live
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CAMERAS_PATH = REPO_ROOT / "data" / "cameras.json"
@@ -470,19 +470,24 @@ def run(shard: str | None = None) -> int:
         if (cam.get("review", {}).get("status") != "approved"
                 or cam["feed"]["type"] != "youtube_channel"):
             continue
-        url = f"https://www.youtube.com/channel/{cam['feed']['url']}/live"
-        try:
-            throttle.acquire("www.youtube.com")
+        # 配信中の判定は /streams のライブ印が確実（/live は放置された古い予定枠や
+        # 切り替え前の枠を指すことがある）。/streams で見つからないときだけ /live を見る
+        vid = None
+        base = f"https://www.youtube.com/channel/{cam['feed']['url']}"
+        for path, resolver in (("/streams", find_live_in_streams), ("/live", resolve_youtube_channel_live)):
             try:
-                resp = session.get(url, timeout=30, headers={"Accept-Language": "ja"})
-            finally:
-                throttle.release("www.youtube.com")
-        except requests.RequestException as e:
-            print(f"youtube_channel解決失敗 {url}: {e}", file=sys.stderr)
-            continue
-        if resp.status_code != 200:
-            continue
-        vid = resolve_youtube_channel_live(resp.text)
+                throttle.acquire("www.youtube.com")
+                try:
+                    resp = session.get(base + path, timeout=30, headers={"Accept-Language": "ja"})
+                finally:
+                    throttle.release("www.youtube.com")
+            except requests.RequestException as e:
+                print(f"youtube_channel解決失敗 {base}{path}: {e}", file=sys.stderr)
+                continue
+            if resp.status_code == 200:
+                vid = resolver(resp.text)
+            if vid:
+                break
         st = statuses.setdefault(cam["id"], {
             "state": "unknown", "last_ok_at": None,
             "http_status": None, "frozen_since": None,
@@ -490,8 +495,12 @@ def run(shard: str | None = None) -> int:
         })
         if vid:
             st["video_id"] = vid
+            st["live"] = True
         else:
+            # 配信なし（営業時間外・季節休止など）。アプリは埋め込みの代わりに
+            # 「配信休止中」を出す（古い予定枠の待機画面を見せない）
             st.pop("video_id", None)
+            st["live"] = False
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)

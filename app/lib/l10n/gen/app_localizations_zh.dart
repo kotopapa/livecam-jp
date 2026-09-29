@@ -623,6 +623,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get detailLive => '直播中';
 
   @override
+  String get detailLiveOffline => '当前未直播';
+
+  @override
+  String get detailLiveOfflineHint => '该频道目前没有直播（如营业时间外）。开始直播后会自动显示。';
+
+  @override
   String get detailTimeUnknown => '获取时间不明';
 
   @override
@@ -3315,6 +3321,12 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get detailLive => '直播中';
+
+  @override
+  String get detailLiveOffline => '目前未直播';
+
+  @override
+  String get detailLiveOfflineHint => '此頻道目前沒有直播（如營業時間外）。開始直播後會自動顯示。';
 
   @override
   String get detailTimeUnknown => '取得時間不明';

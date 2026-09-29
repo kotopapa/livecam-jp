@@ -257,5 +257,18 @@ def test_resolve_youtube_channel_live():
             'href="https://www.youtube.com/watch?v=WHC1TlIwQBw"></head></html>')
     idle = ('<html><head><link rel="canonical" '
             'href="https://www.youtube.com/channel/UCtM-h7mwQraxaT7-WIWC_lw"></head></html>')
-    assert resolve_youtube_channel_live(live) == "WHC1TlIwQBw"
-    assert resolve_youtube_channel_live(idle) is None
+    # canonical だけでは採用しない（再生可の印が要る）
+    assert resolve_youtube_channel_live(live) is None
+    assert resolve_youtube_channel_live(live + '"status":"OK"') == "WHC1TlIwQBw"
+    # 2024年の予定枠のまま放置されたチャンネル（足寄町）: LIVE_STREAM_OFFLINE + isUpcoming
+    assert resolve_youtube_channel_live(live + '"status":"LIVE_STREAM_OFFLINE","isUpcoming":true') is None
+    assert resolve_youtube_channel_live(idle + '"status":"OK"') is None
+
+
+def test_find_live_in_streams():
+    from monitor.check import find_live_in_streams
+    page = ('{"contentId":"AAAAAAAAAA1","badgeStyle":"THUMBNAIL_OVERLAY_BADGE_STYLE_DEFAULT"}'
+            '{"contentId":"BBBBBBBBBB2","badgeStyle":"THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE"}'
+            '{"contentId":"CCCCCCCCCC3"}')
+    assert find_live_in_streams(page) == "BBBBBBBBBB2"
+    assert find_live_in_streams(page.replace("_LIVE", "_DEFAULT")) is None

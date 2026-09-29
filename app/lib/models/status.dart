@@ -21,6 +21,7 @@ class CameraStatus {
     this.imageUrl,
     this.imageTime,
     this.videoId,
+    this.live,
   });
 
   final CameraState state;
@@ -38,6 +39,9 @@ class CameraStatus {
   /// `embed/live_stream?channel=` は配信中でも再生できないことがあるため、あれば動画IDで埋め込む
   final String? videoId;
 
+  /// youtube_channel の配信状況（monitor が解決。true=配信中、false=配信なし、null=未判定）
+  final bool? live;
+
   factory CameraStatus.fromJson(Map<String, dynamic> json) => CameraStatus(
         state: CameraState.parse(json['state'] as String?),
         lastOkAt: json['last_ok_at'] as String?,
@@ -46,6 +50,7 @@ class CameraStatus {
         imageUrl: json['image_url'] as String?,
         imageTime: json['image_time'] as String?,
         videoId: json['video_id'] as String?,
+        live: json['live'] as bool?,
       );
 }
 

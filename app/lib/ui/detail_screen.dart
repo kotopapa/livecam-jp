@@ -274,10 +274,13 @@ class _DetailScreenState extends State<DetailScreen> {
     final left = _cooldownLeft;
     final l10n = context.l10n;
     if (camera.isVideo) {
+      final offline = camera.feed.type == FeedType.youtubeChannel && st?.live == false;
       return Row(children: [
-        const Icon(Icons.sensors, size: 18, color: Color(0xFFE53935)),
+        Icon(offline ? Icons.sensors_off : Icons.sensors,
+            size: 18,
+            color: offline ? Theme.of(context).colorScheme.onSurfaceVariant : const Color(0xFFE53935)),
         const SizedBox(width: 6),
-        Text(l10n.detailLive,
+        Text(offline ? l10n.detailLiveOffline : l10n.detailLive,
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
       ]);
     }
@@ -654,7 +657,19 @@ class _MediaView extends StatelessWidget {
         // IFrame Player をWebViewで表示（SPEC C6遵守）。いまの配信の動画IDを monitor が
         // 解決していればそれで埋め込む。live_stream?channel= はチャンネルが配信中でも
         // 「この動画は再生できません」になることがある（2026-09 富士見台どうぶつ病院で報告）
-        final liveId = app.repository.status[camera.id]?.videoId;
+        final chSt = app.repository.status[camera.id];
+        if (chSt?.live == false) {
+          // 配信なし（営業時間外・季節休止など）。live_stream?channel= を埋め込むと
+          // 放置された古い「配信予定」枠の待機画面が出ることがあるため出さない
+          return AspectRatio(
+            aspectRatio: 16 / 9,
+            child: _MediaFallback(
+              icon: Icons.videocam_off_outlined,
+              text: context.l10n.detailLiveOfflineHint,
+            ),
+          );
+        }
+        final liveId = chSt?.videoId;
         return AspectRatio(
           aspectRatio: 16 / 9,
           child: _YoutubeEmbedView(

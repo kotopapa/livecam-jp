@@ -271,7 +271,31 @@ def resolve_youtube_channel_live(text: str) -> str | None:
     status.json の video_id で動画IDの埋め込みに切り替えてもらう
     """
     m = _YT_CANONICAL_WATCH_RE.search(text)
-    return m.group(1) if m else None
+    if not m:
+        return None
+    # canonical が指す枠が「配信予定のまま放置された古い枠」のことがある（足寄町
+    # 2024-02 の枠に 2026-09 でも解決され、アプリに2年前の待機画面が出た）。
+    # /live ページの player 情報には isLiveNow が入らないので、再生可（status OK）かつ
+    # 予定枠（isUpcoming）でないときだけ採用する。配信中の判定は /streams の
+    # ライブ印（find_live_in_streams）を優先し、こちらはその代替
+    if '"status":"OK"' not in text or '"isUpcoming":true' in text:
+        return None
+    return m.group(1)
+
+
+def find_live_in_streams(text: str) -> str | None:
+    """チャンネルの /streams ページ（ytInitialData）から配信中の動画IDを1つ返す。
+
+    一覧の各項目は lockupViewModel（`"contentId":"<ID>"`）で、配信中の項目だけ
+    同じブロック内に `THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE` を持つ（2026-08 時点の構造）。
+    /live が古い予定枠を指すときの代替として使う
+    """
+    ids = [(m.start(), m.group(1)) for m in re.finditer(r'"contentId":"([\w-]{11})"', text)]
+    for i, (pos, vid) in enumerate(ids):
+        end = ids[i + 1][0] if i + 1 < len(ids) else len(text)
+        if "THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE" in text[pos:end]:
+            return vid
+    return None
 
 
 def _check_youtube(session, camera, state, now, prev_failures) -> dict:

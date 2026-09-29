@@ -650,6 +650,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get detailLive => 'Live';
 
   @override
+  String get detailLiveOffline => 'Not streaming right now';
+
+  @override
+  String get detailLiveOfflineHint =>
+      'This channel is not live at the moment (e.g. outside business hours). It will appear automatically once streaming starts.';
+
+  @override
   String get detailTimeUnknown => 'Capture time unknown';
 
   @override

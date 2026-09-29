@@ -652,6 +652,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get detailLive => 'Đang phát trực tiếp';
 
   @override
+  String get detailLiveOffline => 'Hiện không phát trực tiếp';
+
+  @override
+  String get detailLiveOfflineHint =>
+      'Kênh này hiện không phát trực tiếp (ví dụ: ngoài giờ mở cửa). Sẽ tự động hiển thị khi bắt đầu phát.';
+
+  @override
   String get detailTimeUnknown => 'Không rõ thời điểm chụp';
 
   @override

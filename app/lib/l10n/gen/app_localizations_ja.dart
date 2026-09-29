@@ -629,6 +629,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get detailLive => 'ライブ配信中';
 
   @override
+  String get detailLiveOffline => '配信休止中';
+
+  @override
+  String get detailLiveOfflineHint =>
+      'このチャンネルは今は配信していません（営業時間外など）。配信が始まると自動で表示されます。';
+
+  @override
   String get detailTimeUnknown => '取得時刻不明';
 
   @override
@@ -3345,6 +3352,13 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get detailLive => 'いま ライブ';
+
+  @override
+  String get detailLiveOffline => 'いまは はいしんして いません';
+
+  @override
+  String get detailLiveOfflineHint =>
+      'この チャンネルは いま はいしんして いません（えいぎょうじかんの そとなど）。はいしんが はじまると じどうで ひょうじされます。';
 
   @override
   String get detailTimeUnknown => 'とった 時間（じかん）が わかりません';

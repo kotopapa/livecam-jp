@@ -633,6 +633,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get detailLive => '라이브 방송 중';
 
   @override
+  String get detailLiveOffline => '현재 방송 중이 아님';
+
+  @override
+  String get detailLiveOfflineHint =>
+      '이 채널은 지금 방송하고 있지 않습니다(영업시간 외 등). 방송이 시작되면 자동으로 표시됩니다.';
+
+  @override
   String get detailTimeUnknown => '취득 시각 불명';
 
   @override
