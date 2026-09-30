@@ -30308,6 +30308,7 @@ cameras:
     image_url: https://cam.river.go.jp/cam/now/121053181.jpg
     page_url: https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=121053181
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 山形県河北町溝延'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-675d1107
     name: NCV上小松
     operator: ニューメディア(NCV米沢センター)
@@ -30316,8 +30317,9 @@ cameras:
     lat: 38.00125
     lng: 140.051778
     image_url: https://www.ncv.co.jp/livecamera/yonezawa/camera023.jpg
-    page_url: https://www.ncv.co.jp/
+    page_url: "https://www.ncv.co.jp/yonezawa/"
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒999-0121 山形県川西町上小松'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-85dc884b
     name: NCV国道13号川樋
     operator: ニューメディア(NCV米沢センター)
@@ -30326,7 +30328,7 @@ cameras:
     lat: 38.091333
     lng: 140.191
     image_url: https://www.ncv.co.jp/livecamera/yonezawa/camera030.jpg
-    page_url: https://www.ncv.co.jp/
+    page_url: "https://www.ncv.co.jp/yonezawa/"
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 山形県南陽市川樋'
   - id: curated-still-lcdb-d5beb6ff
     name: 荒川穴渕砂防堰堤
@@ -30358,6 +30360,7 @@ cameras:
     image_url: https://www.hrr.mlit.go.jp/bosai/img/722957.jpg
     page_url: https://www.hrr.mlit.go.jp/bosai/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山形県小国町小玉川'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-2784e8b5
     name: NCV高畠町役場前
     operator: ニューメディア(NCV米沢センター)
@@ -30366,7 +30369,7 @@ cameras:
     lat: 38.003667
     lng: 140.18925
     image_url: https://www.ncv.co.jp/livecamera/yonezawa/camera013.jpg
-    page_url: https://www.ncv.co.jp/
+    page_url: "https://www.ncv.co.jp/yonezawa/"
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒992-0351 山形県高畠町高畠'
   - id: curated-still-lcdb-d62d58e7
     name: 赤川馬渡
@@ -30378,6 +30381,7 @@ cameras:
     image_url: https://cam.river.go.jp/cam/now/121055266.jpg
     page_url: https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=121055266
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 山形県鶴岡市馬渡'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-81de6f74
     name: NCV住之江橋大町四丁目
     operator: ニューメディア(NCV米沢センター)
@@ -30386,7 +30390,7 @@ cameras:
     lat: 37.911
     lng: 140.117361
     image_url: https://www.ncv.co.jp/livecamera/yonezawa/camera006.jpg
-    page_url: https://www.ncv.co.jp/
+    page_url: "https://www.ncv.co.jp/yonezawa/"
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 山形県米沢市大町４丁目'
   - id: curated-still-lcdb-5ef7f228
     name: 山口県道32号萩秋芳線雲雀峠
@@ -31435,8 +31439,9 @@ cameras:
     image_url: https://www.youtube.com/watch?v=wYH1v2HnLfI
     page_url: https://kainohotel.com/
     note: 埋め込み不可(oEmbed 401)のため誘導型。isLive確認。座標は地図中心(概略)
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-link-lcdb-65b2adfc
-    name: NNSアルプス通り貢川交番前交差点
+    name: "NNSアルプス通り 新貢川橋南1交差点"
     operator: 日本ネットワークサービス(NNS)
     category: road
     prefecture: '19'
@@ -32853,53 +32858,58 @@ cameras:
   # note: '埋め込み不可(oEmbed 401)のため誘導型。チャンネル配信一覧でライブ中確認(タイトル: あわじ花さじきLive配信 のライブ配信（展望デッキから大阪湾を望む）)。座標は地図中心(概略)'
 
   # --- livecam.asia 索引経由の一次ソース確認分 (2026-08-29) ---
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-e450e6d2
-    name: 伊勢湾岸自動車道電光掲示板
+    name: "伊勢湾岸道 情報板（国道155号 豊田南IC付近）"
     operator: ひまわりネットワーク株式会社（地域情報サイト「まちクル」）
     category: other
     prefecture: '23'
-    lat: 35.1410903107872
-    lng: 137.17078889961087
+    lat: 35.031
+    lng: 137.072
     image_url: http://www.himawari.co.jp/webcam/live_image/cam3_server3_00001.jpg
     page_url: http://www.machikuru.jp/traffic/
     note: '地図中心(概略); 索引: https://livecam.asia/aichi/toyota/isewangan-expressway-electric-bulletin-board.html'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-00294738
-    name: 国道153号小坂町10丁目
+    name: "国道153号 広久手町6丁目東（ひまわりネットワーク）"
     operator: ひまわりネットワーク株式会社（地域情報サイト「まちクル」）
     category: road
     prefecture: '23'
-    lat: 35.084638589947346
-    lng: 137.14352585825074
+    lat: 35.0824
+    lng: 137.1344
     image_url: http://www.himawari.co.jp/webcam/live_image/cam1_server1_00001.jpg
     page_url: http://www.machikuru.jp/traffic/
     note: '地図中心(概略); 索引: https://livecam.asia/aichi/toyota/r153-kozaka.html'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-181bb11a
-    name: 国道248号錦町1丁目
+    name: "国道248号 下林町付近（ひまわりネットワーク）"
     operator: ひまわりネットワーク株式会社（地域情報サイト「まちクル」）
     category: road
     prefecture: '23'
-    lat: 35.07496354633267
-    lng: 137.1581915292432
+    lat: 35.0709
+    lng: 137.1607
     image_url: http://www.himawari.co.jp/webcam/live_image/cam4_server1_00001.jpg
     page_url: http://www.machikuru.jp/traffic/
     note: '地図中心(概略); 索引: https://livecam.asia/aichi/toyota/r248-nishiki1.html'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-7264cb4f
-    name: 国道248号下市場
+    name: "国道248号 下市場町5丁目交差点（ひまわりネットワーク）"
     operator: ひまわりネットワーク株式会社（地域情報サイト「まちクル」）
     category: road
     prefecture: '23'
-    lat: 35.0663138210559
-    lng: 137.15530766555887
+    lat: 35.065
+    lng: 137.1596
     image_url: http://www.himawari.co.jp/webcam/live_image/cam3_server1_00001.jpg
     page_url: http://www.machikuru.jp/traffic/
     note: '地図中心(概略); 索引: https://livecam.asia/aichi/toyota/r248-shimoichiba.html'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-1b8f5fb1
-    name: 国道301号御立町3丁目
+    name: "国道301号 御立町1丁目交差点付近（ひまわりネットワーク）"
     operator: ひまわりネットワーク株式会社（地域情報サイト「まちクル」）
     category: road
     prefecture: '23'
-    lat: 35.07795094012763
-    lng: 137.17287105825068
+    lat: 35.0803
+    lng: 137.1706
     image_url: http://www.himawari.co.jp/webcam/live_image/cam1_server2_00001.jpg
     page_url: http://www.machikuru.jp/traffic/
     note: '地図中心(概略); 索引: https://livecam.asia/aichi/toyota/r301-mitachi.html'
@@ -32913,23 +32923,25 @@ cameras:
     image_url: http://www.himawari.co.jp/webcam/live_image/cam2_server2_00001.jpg
     page_url: http://www.machikuru.jp/traffic/
     note: '地図中心(概略); 索引: https://livecam.asia/aichi/toyota/r419-metsubo9.html'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-9d2d6150
-    name: 東海環状自動車道道電光掲示板
+    name: "東海環状道 情報板（国道301号 豊田松平IC付近）"
     operator: ひまわりネットワーク株式会社（地域情報サイト「まちクル」）
     category: road
     prefecture: '23'
-    lat: 35.1410903107872
-    lng: 137.17078889961087
+    lat: 35.064
+    lng: 137.206
     image_url: http://www.himawari.co.jp/webcam/live_image/cam2_server3_00001.jpg
     page_url: http://www.machikuru.jp/traffic/
     note: '地図中心(概略); 索引: https://livecam.asia/aichi/toyota/tokaikanjo-expressway-electric-bulletin-board.html'
+  # 2026-09-30 台帳点検で名称/座標/掲載元を修正
   - id: curated-still-lcdb-ec5cc952
-    name: 東名高速道路電光掲示板
+    name: "東名高速 情報板（豊田IC付近）"
     operator: ひまわりネットワーク株式会社（地域情報サイト「まちクル」）
     category: road
     prefecture: '23'
-    lat: 35.1410903107872
-    lng: 137.17078889961087
+    lat: 35.072
+    lng: 137.129
     image_url: http://www.himawari.co.jp/webcam/live_image/cam4_server2_00001.jpg
     page_url: http://www.machikuru.jp/traffic/
     note: '地図中心(概略); 索引: https://livecam.asia/aichi/toyota/tomei-expressway-electric-bulletin-board.html'
@@ -42572,3 +42584,974 @@ cameras:
     image_url: "https://www.magara.co.jp/uploads/energy/pic_nio1.jpg"
     page_url: "https://www.magara.co.jp/modules/energy/index.php?content_id=1"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:28〜05:43 検証: image/jpeg 24KB、Last-Modified 20:27:56Z → 20:42:56Z、内容変化（15分更新）。600kW。所在地の精度が低いのでレビューで位置確認"
+
+
+  # ===== 2026-09-30 全国多角調査 再確認（CTY/CNS 三重ほか）=====
+
+  - id: curated-catv-himawari-heiseikinenbashi
+    name: "平成記念橋（矢作川・豊田市）まちクル道路ライブカメラ"
+    operator: "ひまわりネットワーク株式会社（地域情報サイト「まちクル」）"
+    category: road
+    prefecture: "23"
+    lat: 35.0941
+    lng: 137.1821
+    image_url: "https://www.himawari.co.jp/webcam/live_image/heiseikinebasi.jpg"
+    page_url: "https://www.machikuru.jp/traffic/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:08 JST image/jpeg 51KB→52KB、75秒で内容変化・Last-Modified 02:08→02:10 UTC。アーチ橋（平成記念橋）と矢作川を俯瞰。前回調査の「画像なし」は一時的な欠落だった模様"
+
+  - id: curated-catv-himawari-toyotaohashi
+    name: "豊田大橋（矢作川・豊田スタジアム前）まちクル道路ライブカメラ"
+    operator: "ひまわりネットワーク株式会社（地域情報サイト「まちクル」）"
+    category: road
+    prefecture: "23"
+    lat: 35.0844
+    lng: 137.1699
+    image_url: "https://www.himawari.co.jp/webcam/live_image/toyotaoohasi.jpg"
+    page_url: "https://www.machikuru.jp/traffic/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:08 JST image/jpeg 69KB→68KB、75秒で内容変化・Last-Modified 02:08→02:09 UTC。豊田大橋（2連アーチ）を俯瞰"
+
+  - id: curated-vd-tptc-oi-16
+    name: "大井車両待機場 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5998
+    lng: 139.7592
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=16&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:05 JST image/jpeg 82KB、90秒で内容変化（前回は170秒同一）。名称は camera.js LIVE_CAMERAS の OI id=16。画像に日時焼き込み。更新は数分間隔なので monitor の凍結判定に注意"
+
+  - id: curated-catv-cty-maruka
+    name: "東名阪　四日市IC付近（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.988
+    lng: 136.566
+    image_url: "https://cty-cns.jp/livecamera/img/cty/19_maruka/maruka.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 91KB、Last-Modified 02:08:00→02:14:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-yokkaichi-east-ic
+    name: "東名阪　四日市東IC入口（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.014
+    lng: 136.59
+    image_url: "https://cty-cns.jp/livecamera/img/cty/27_yokkaichi-east-ic/yokkaichi-east-ic.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 84KB、Last-Modified 02:05:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-tomisuhara
+    name: "国道1号（松原あさひホール前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.0109
+    lng: 136.6552
+    image_url: "https://cty-cns.jp/livecamera/img/cty/06_tomisuhara/tomisuhara.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 63KB、Last-Modified 01:50:01→02:14:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-amikan
+    name: "国道1号（富田浜元町 アミカン本社前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.0001
+    lng: 136.6536
+    image_url: "https://cty-cns.jp/livecamera/img/cty/43_amikan/amikan.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 94KB、Last-Modified 02:07:01→02:07:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-jushi-higashikawara
+    name: "十四川（四日市市大字茂福東川原橋）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.00664
+    lng: 136.63393
+    image_url: "https://cty-cns.jp/livecamera/img/yokkaichi/05_jushi-higashikawara/jushi-higashikawara.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 82KB、Last-Modified 02:04:01→02:04:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。画像パスが img/yokkaichi/ 配下（四日市市提供の河川カメラとみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-jushi
+    name: "近鉄富田駅付近（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.0033
+    lng: 136.6478
+    image_url: "https://cty-cns.jp/livecamera/img/cty/33_jushi/jushi.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 94KB、Last-Modified 01:52:00→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-jushi-tomida
+    name: "十四川（四日市市南富田）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.00273
+    lng: 136.64954
+    image_url: "https://cty-cns.jp/livecamera/img/cty/40_jushi-tomida/jushi-tomida.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 114KB、Last-Modified 02:03:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-keirin
+    name: "国道23号（四日市競輪場前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.9938
+    lng: 136.6395
+    image_url: "https://cty-cns.jp/livecamera/img/cty/21_keirin/keirin.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 103KB、Last-Modified 02:09:01→02:09:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-yokkaichiportbuil
+    name: "四日市港（ポートビル屋上）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: port
+    prefecture: "24"
+    lat: 34.9925
+    lng: 136.659
+    image_url: "https://cty-cns.jp/livecamera/img/cty/36_yokkaichiportbuil/yokkaichiportbuil.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 75KB、Last-Modified 02:11:00→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-komaki
+    name: "朝明川上流（四日市市小牧町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.04458
+    lng: 136.5721
+    image_url: "https://cty-cns.jp/livecamera/img/cty/32_komaki/komaki.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 95KB、Last-Modified 02:09:01→02:09:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-asakeshinkawa-kitayama
+    name: "朝明新川（四日市市北山町下野小学校前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.04288
+    lng: 136.58916
+    image_url: "https://cty-cns.jp/livecamera/img/yokkaichi/02_asakeshinkawa-kitayama/asakeshinkawa-kitayama.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 78KB、Last-Modified 02:08:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。画像パスが img/yokkaichi/ 配下（四日市市提供の河川カメラとみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-asakeshinkawa-oogane
+    name: "朝明新川（四日市市大鐘町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.038
+    lng: 136.60646
+    image_url: "https://cty-cns.jp/livecamera/img/yokkaichi/03_asakeshinkawa-oogane/asakeshinkawa-oogane.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 79KB、Last-Modified 02:09:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。画像パスが img/yokkaichi/ 配下（四日市市提供の河川カメラとみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-yasato
+    name: "朝明川（八郷地区市民センター前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.036
+    lng: 136.597
+    image_url: "https://cty-cns.jp/livecamera/img/cty/15_yasato/yasato.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 120KB、Last-Modified 01:58:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kamiebi
+    name: "保々工業団地入口（四日市市上海老町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.02562
+    lng: 136.55936
+    image_url: "https://cty-cns.jp/livecamera/img/cty/26_kamiebi/kamiebi.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 85KB、Last-Modified 01:59:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-yougyo
+    name: "海蔵川（四日市市東阿倉川）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.98649
+    lng: 136.62318
+    image_url: "https://cty-cns.jp/livecamera/img/cty/18_yougyo/yougyo.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 87KB、Last-Modified 02:10:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-orinpia
+    name: "三滝川（四日市市末永町オリンピア前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.97647
+    lng: 136.61963
+    image_url: "https://cty-cns.jp/livecamera/img/cty/17_orinpia/orinpia.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 53KB、Last-Modified 02:09:01→02:09:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-shinobirahashi-kita
+    name: "新尾平橋北（四日市市尾平町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.97847
+    lng: 136.58881
+    image_url: "https://cty-cns.jp/livecamera/img/cty/48_shinobirahashi-kita/shinobirahashi-kita.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 71KB、Last-Modified 02:11:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-yokkaichi-busterminal
+    name: "よんまるテラス（愛汗ビル屋上）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: other
+    prefecture: "24"
+    lat: 34.966
+    lng: 136.6215
+    image_url: "https://cty-cns.jp/livecamera/img/cty/14_yokkaichi-busterminal/yokkaichi-busterminal.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 108KB、Last-Modified 02:08:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-chuodori
+    name: "四日市市中央通り（国道1号前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.9645
+    lng: 136.6255
+    image_url: "https://cty-cns.jp/livecamera/img/cty/42_chuodori/chuodori.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 101KB、Last-Modified 02:04:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-mitaki
+    name: "三滝通り（四日市市諏訪町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.96581
+    lng: 136.62424
+    image_url: "https://cty-cns.jp/livecamera/img/cty/02_mitaki/mitaki.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 75KB、Last-Modified 02:08:01→02:08:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-cty
+    name: "四日市港（CTY屋上）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: port
+    prefecture: "24"
+    lat: 34.9623
+    lng: 136.6302
+    image_url: "https://cty-cns.jp/livecamera/img/cty/01_cty/cty.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 51KB、Last-Modified 02:07:00→02:07:00 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kawashima
+    name: "鹿化川（四日市市川島町新川島橋付近）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.96871
+    lng: 136.54994
+    image_url: "https://cty-cns.jp/livecamera/img/yokkaichi/01_kawashima/kawashima.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 109KB、Last-Modified 02:00:05→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。画像パスが img/yokkaichi/ 配下（四日市市提供の河川カメラとみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-tokiwa
+    name: "鹿化川（四日市市ときわ）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.96698
+    lng: 136.59837
+    image_url: "https://cty-cns.jp/livecamera/img/cty/31_tokiwa/tokiwa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 107KB、Last-Modified 02:07:01→02:07:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kabake-akahori
+    name: "鹿化川（四日市市赤堀）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.95945
+    lng: 136.6124
+    image_url: "https://cty-cns.jp/livecamera/img/cty/39_kabake-akahori/kabake-akahori.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 95KB、Last-Modified 02:00:01→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-yokkaichi-chousya
+    name: "鹿化川（四日市市新正 四日市庁舎前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.959
+    lng: 136.61607
+    image_url: "https://cty-cns.jp/livecamera/img/cty/11_yokkaichi_chousya/yokkaichi_chousya.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 96KB、Last-Modified 01:50:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-yjc
+    name: "天白川（四日市市日永 YJC前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.94586
+    lng: 136.59003
+    image_url: "https://cty-cns.jp/livecamera/img/cty/16_yjc/yjc.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 114KB、Last-Modified 02:11:00→02:11:00 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-tenpaku-hinaga
+    name: "天白川（四日市市日永）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.94586
+    lng: 136.59003
+    image_url: "https://cty-cns.jp/livecamera/img/cty/41_tenpaku-hinaga/tenpaku-hinaga.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 89KB、Last-Modified 02:08:01→02:11:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-musen
+    name: "国道１号(四日市市泊町)（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.93933
+    lng: 136.59926
+    image_url: "https://cty-cns.jp/livecamera/img/cty/23_musen/musen.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 138KB、Last-Modified 02:12:01→02:14:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-uneme
+    name: "内部川（四日市市采女町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.9385
+    lng: 136.5905
+    image_url: "https://cty-cns.jp/livecamera/img/cty/30_uneme/uneme.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 118KB、Last-Modified 02:07:01→02:07:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-isozu
+    name: "鈴鹿川（四日市市塩浜町 磯津西公園付近）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.93654
+    lng: 136.63486
+    image_url: "https://cty-cns.jp/livecamera/img/cty/13_isozu/isozu.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 42KB、Last-Modified 02:10:00→02:14:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-ogura
+    name: "県道6号（四日市市楠町 鈴鹿川 小倉橋）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.91599
+    lng: 136.64246
+    image_url: "https://cty-cns.jp/livecamera/img/cty/08_ogura/ogura.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 69KB、Last-Modified 02:07:01→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kawaradatanigawa-matabei
+    name: "河原田谷川（四日市市河原田町又兵衛橋）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.91424
+    lng: 136.59817
+    image_url: "https://cty-cns.jp/livecamera/img/yokkaichi/06_kawaradatanigawa-matabei/kawaradatanigawa-matabei.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 99KB、Last-Modified 02:09:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。画像パスが img/yokkaichi/ 配下（四日市市提供の河川カメラとみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-suizawatanigawa-suizawa
+    name: "水沢谷川（四日市市水沢町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.97672
+    lng: 136.48753
+    image_url: "https://cty-cns.jp/livecamera/img/yokkaichi/07_suizawatanigawa-suizawa/suizawatanigawa-suizawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 74KB、Last-Modified 02:10:00→02:11:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。画像パスが img/yokkaichi/ 配下（四日市市提供の河川カメラとみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-suzuka-pa-smart-ic-suizawa
+    name: "新名神 鈴鹿PAスマートIC付近（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.955
+    lng: 136.478
+    image_url: "https://cty-cns.jp/livecamera/img/cty/47_suzuka-pa-smart-ic-suizawa/suzuka-pa-smart-ic-suizawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 94KB、Last-Modified 02:11:01→02:11:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-r306-suizawa
+    name: "国道306号（四日市市水沢町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.97672
+    lng: 136.48753
+    image_url: "https://cty-cns.jp/livecamera/img/cty/46_r306-suizawa/r306-suizawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 89KB、Last-Modified 01:57:00→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-ageki
+    name: "国道306号（いなべ市北勢町阿下喜）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.15162
+    lng: 136.51891
+    image_url: "https://cty-cns.jp/livecamera/img/cty/10_ageki/ageki.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 59KB、Last-Modified 02:08:01→02:11:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-tennou
+    name: "員弁川天王橋（いなべ市北勢町麻生田）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.13337
+    lng: 136.53606
+    image_url: "https://cty-cns.jp/livecamera/img/inabe/01_tennou/tennou.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 47KB、Last-Modified 02:04:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。画像パスが img/inabe/ 配下（いなべ市提供とみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-inabe
+    name: "国道421号（いなべ市員弁町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.12001
+    lng: 136.55211
+    image_url: "https://cty-cns.jp/livecamera/img/cty/24_inabe/inabe.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 132KB、Last-Modified 02:08:01→02:08:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-daianpublichall
+    name: "宇賀川（いなべ市大安町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.09475
+    lng: 136.49791
+    image_url: "https://cty-cns.jp/livecamera/img/cty/04_daianpublichall/daianpublichall.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 89KB、Last-Modified 02:05:01→02:05:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-r1-nagashima-matagi
+    name: "国道１号（長島町又木）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.09368
+    lng: 136.70335
+    image_url: "https://cty-cns.jp/livecamera/img/cty/45_r1-nagashima-matagi/r1-nagashima-matagi.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 105KB、Last-Modified 02:12:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kisosaki
+    name: "木曽川（木曽岬町役場屋上）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.0755
+    lng: 136.7314
+    image_url: "https://cty-cns.jp/livecamera/img/cty/28_kisosaki/kisosaki.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 44KB、Last-Modified 02:00:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-nichiham
+    name: "国道23号（木曽岬町日本ハム前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.07
+    lng: 136.739
+    image_url: "https://cty-cns.jp/livecamera/img/cty/20_nichiham/nichiham.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 71KB、Last-Modified 01:55:01→01:55:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-inari
+    name: "田口川稲荷橋（菰野町田口）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.08364
+    lng: 136.48625
+    image_url: "https://cty-cns.jp/livecamera/img/komono/01_inari/inari.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 101KB、Last-Modified 02:11:01→02:13:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kirihata
+    name: "田光川切畑橋（菰野町切畑）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.07381
+    lng: 136.47664
+    image_url: "https://cty-cns.jp/livecamera/img/komono/02_kirihata/kirihata.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 122KB、Last-Modified 02:11:00→02:14:05 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-aioi
+    name: "田光川相生橋（菰野町田光）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.07441
+    lng: 136.49939
+    image_url: "https://cty-cns.jp/livecamera/img/komono/03_aioi/aioi.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 74KB、Last-Modified 02:12:04→02:16:04 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-sugitani
+    name: "杉谷川杉谷橋（菰野町杉谷）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.05886
+    lng: 136.4969
+    image_url: "https://cty-cns.jp/livecamera/img/komono/04_sugitani/sugitani.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 112KB、Last-Modified 02:11:01→02:11:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-sugitanigawa
+    name: "杉谷川杉谷川橋（菰野町小島）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.06908
+    lng: 136.52728
+    image_url: "https://cty-cns.jp/livecamera/img/komono/05_sugitanigawa/sugitanigawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 131KB、Last-Modified 02:12:05→02:12:05 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-yagou
+    name: "焼合川焼合橋（菰野町杉谷）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.05886
+    lng: 136.4969
+    image_url: "https://cty-cns.jp/livecamera/img/komono/06_yagou/yagou.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 114KB、Last-Modified 02:06:05→02:13:10 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-ichinose
+    name: "朝明川一の瀬橋（菰野町千草）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.03893
+    lng: 136.46567
+    image_url: "https://cty-cns.jp/livecamera/img/komono/07_ichinose/ichinose.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 119KB、Last-Modified 02:12:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-happu
+    name: "朝明川八風橋（菰野町小島）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.06908
+    lng: 136.52728
+    image_url: "https://cty-cns.jp/livecamera/img/komono/08_happu/happu.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 91KB、Last-Modified 02:12:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-shinhappu
+    name: "朝明川新八風橋（菰野町小島）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.06908
+    lng: 136.52728
+    image_url: "https://cty-cns.jp/livecamera/img/komono/09_shinhappu/shinhappu.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 113KB、Last-Modified 02:07:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-mukoujo
+    name: "海蔵川向城橋（菰野町千草）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.03893
+    lng: 136.46567
+    image_url: "https://cty-cns.jp/livecamera/img/komono/10_mukoujo/mukoujo.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 72KB、Last-Modified 02:12:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-maeda
+    name: "海蔵川前田橋（菰野町大強原）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.02896
+    lng: 136.53067
+    image_url: "https://cty-cns.jp/livecamera/img/komono/11_maeda/maeda.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 112KB、Last-Modified 02:11:00→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-tujinouchi
+    name: "竹谷川一号橋（菰野町潤田）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.02816
+    lng: 136.51666
+    image_url: "https://cty-cns.jp/livecamera/img/komono/12_tujinouchi/tujinouchi.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 130KB、Last-Modified 02:12:00→02:15:05 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-midori
+    name: "鳥井戸川緑橋（菰野町千草）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.03893
+    lng: 136.46567
+    image_url: "https://cty-cns.jp/livecamera/img/komono/13_midori/midori.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 146KB、Last-Modified 02:11:04→02:14:12 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-ikoi
+    name: "三滝川憩橋（菰野町菰野）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.00877
+    lng: 136.46936
+    image_url: "https://cty-cns.jp/livecamera/img/komono/14_ikoi/ikoi.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 131KB、Last-Modified 02:12:00→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-komono-mitaki
+    name: "三滝川湯の山橋（菰野町菰野）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.00877
+    lng: 136.46936
+    image_url: "https://cty-cns.jp/livecamera/img/komono/15_mitaki/mitaki.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 81KB、Last-Modified 02:12:00→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-ishiki
+    name: "三滝川一色橋（菰野町福村）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.01245
+    lng: 136.52364
+    image_url: "https://cty-cns.jp/livecamera/img/komono/16_ishiki/ishiki.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 103KB、Last-Modified 02:12:00→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kantani
+    name: "金渓川金渓橋（菰野町菰野）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.00877
+    lng: 136.46936
+    image_url: "https://cty-cns.jp/livecamera/img/komono/17_kantani/kantani.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 77KB、Last-Modified 02:11:00→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kinsha
+    name: "金渓川錦社橋（菰野町宿野）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.00314
+    lng: 136.52502
+    image_url: "https://cty-cns.jp/livecamera/img/komono/18_kinsha/kinsha.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 89KB、Last-Modified 02:11:00→02:14:05 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-akagawa
+    name: "赤川一号橋（菰野町菰野）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 35.00877
+    lng: 136.46936
+    image_url: "https://cty-cns.jp/livecamera/img/komono/19_akagawa/akagawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 115KB、Last-Modified 02:11:00→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kokudo477-komono
+    name: "国道477号（菰野町菰野）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.00877
+    lng: 136.46936
+    image_url: "https://cty-cns.jp/livecamera/img/cty/49_kokudo477-komono/kokudo477-komono.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 96KB、Last-Modified 02:12:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-komono-lib
+    name: "菰野町図書館屋上カメラ（菰野町潤田）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: other
+    prefecture: "24"
+    lat: 35.02
+    lng: 136.50751
+    image_url: "https://cty-cns.jp/livecamera/img/komono/20_komono_lib/komono_lib.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 109KB、Last-Modified 02:12:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-chusei-bypass
+    name: "国道23号中勢バイパス鈴鹿中央総合病院前（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.8681
+    lng: 136.5777
+    image_url: "https://cty-cns.jp/livecamera/img/cns/24_chusei-bypass/chusei-bypass.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 91KB、Last-Modified 02:11:01→02:11:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-r23-shiroko
+    name: "国道23号（鈴鹿市白子駅前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.83593
+    lng: 136.58954
+    image_url: "https://cty-cns.jp/livecamera/img/cns/05_r23-shiroko/r23-shiroko.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 94KB、Last-Modified 02:12:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-vcv-east
+    name: "フジクラタワー 東方面（鈴鹿市岸岡町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: other
+    prefecture: "24"
+    lat: 34.85434
+    lng: 136.6024
+    image_url: "https://cty-cns.jp/livecamera/img/cns/22_vcv_east/vcv_east.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 54KB、Last-Modified 02:11:25→02:16:25 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-shiroko-eki
+    name: "鈴鹿市 白子駅西ロータリー（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.836
+    lng: 136.588
+    image_url: "https://cty-cns.jp/livecamera/img/cns/19_shiroko-eki/shiroko-eki.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 94KB、Last-Modified 02:06:01→02:13:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kendo6-minamiwakamatu
+    name: "県道6号（鈴鹿市南若松町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.84373
+    lng: 136.60336
+    image_url: "https://cty-cns.jp/livecamera/img/cns/20_kendo6-minamiwakamatu/kendo6-minamiwakamatu.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 84KB、Last-Modified 02:10:01→02:10:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kanbechu
+    name: "木田橋（鈴鹿市立神戸中学校前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.8818
+    lng: 136.5837
+    image_url: "https://cty-cns.jp/livecamera/img/cns/21_kanbechu/kanbechu.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 114KB、Last-Modified 02:12:00→02:12:00 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-suzukashiyakusyo
+    name: "県道8号 (鈴鹿市役所屋上）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.8819
+    lng: 136.5842
+    image_url: "https://cty-cns.jp/livecamera/img/cns/06_suzukashiyakusyo/suzukashiyakusyo.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 103KB、Last-Modified 02:11:01→02:11:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-chuoh-shobo
+    name: "鈴鹿市中央道路（消防本部前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.86
+    lng: 136.572
+    image_url: "https://cty-cns.jp/livecamera/img/cns/09_chuoh-shobo/chuoh-shobo.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 112KB、Last-Modified 02:12:01→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-chuoh-shiokawa
+    name: "鈴鹿市中央道路（塩川病院前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.87
+    lng: 136.54
+    image_url: "https://cty-cns.jp/livecamera/img/cns/08_chuoh-shiokawa/chuoh-shiokawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 84KB、Last-Modified 02:09:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kumigawara-suzukagawa
+    name: "鈴鹿川（汲川原橋）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.885
+    lng: 136.52
+    image_url: "https://cty-cns.jp/livecamera/img/cns/17_kumigawara-suzukagawa/kumigawara-suzukagawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 86KB、Last-Modified 02:11:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kumigawara-kousaten
+    name: "鈴鹿市中央道路（汲川原橋南詰交差点）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.882
+    lng: 136.521
+    image_url: "https://cty-cns.jp/livecamera/img/cns/18_kumigawara-kousaten/kumigawara-kousaten.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 89KB、Last-Modified 02:12:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-nomachi
+    name: "県道41号（野町交差点）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.8489
+    lng: 136.5643
+    image_url: "https://cty-cns.jp/livecamera/img/cns/13_nomachi/nomachi.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 73KB、Last-Modified 02:11:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kendo41-dohaku
+    name: "県道41号（鈴鹿市道伯町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.85785
+    lng: 136.54945
+    image_url: "https://cty-cns.jp/livecamera/img/cns/25_kendo41-dohaku/kendo41-dohaku.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 82KB、Last-Modified 02:11:00→02:13:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-kendo41-sumiyoshi
+    name: "県道41号鈴鹿亀山線（鈴鹿市住吉3丁目）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.86129
+    lng: 136.53552
+    image_url: "https://cty-cns.jp/livecamera/img/cns/10_kendo41-sumiyoshi/kendo41-sumiyoshi.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 100KB、Last-Modified 02:11:00→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-r1-ueno
+    name: "国道1号（鈴鹿市上野交差点）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.89471
+    lng: 136.55014
+    image_url: "https://cty-cns.jp/livecamera/img/cns/07_r1-ueno/r1-ueno.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 76KB、Last-Modified 02:12:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-inou-circuit
+    name: "サーキット道路（鈴鹿サーキット付近）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.8431
+    lng: 136.5407
+    image_url: "https://cty-cns.jp/livecamera/img/cns/15_inou-circuit/inou-circuit.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 94KB、Last-Modified 02:12:00→02:13:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-inou-f1mart
+    name: "サーキット道路（稲生3丁目交差点）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.8386
+    lng: 136.5601
+    image_url: "https://cty-cns.jp/livecamera/img/cns/16_inou-f1mart/inou-f1mart.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 68KB、Last-Modified 02:12:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-suzuka-ic
+    name: "東名阪 鈴鹿IC入口（鈴鹿市長澤町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.93892
+    lng: 136.47777
+    image_url: "https://cty-cns.jp/livecamera/img/cns/03_suzuka-ic/suzuka-ic.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 64KB、Last-Modified 02:11:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-anrakukawa
+    name: "安楽川（鈴鹿市西冨田町和泉橋）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.87843
+    lng: 136.50165
+    image_url: "https://cty-cns.jp/livecamera/img/cns/14_anrakukawa/anrakukawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 75KB、Last-Modified 02:07:00→02:07:00 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-nakanogawa
+    name: "中ノ川（鈴鹿市徳田町）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.82599
+    lng: 136.54536
+    image_url: "https://cty-cns.jp/livecamera/img/cns/11_nakanogawa/nakanogawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 67KB、Last-Modified 02:08:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-horikirigawa
+    name: "堀切川（鈴鹿市寺家）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: river
+    prefecture: "24"
+    lat: 34.81732
+    lng: 136.57892
+    image_url: "https://cty-cns.jp/livecamera/img/cns/02_horikirigawa/horikirigawa.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 82KB、Last-Modified 02:12:01→02:12:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+  - id: curated-catv-cty-shiroko-gyokou
+    name: "白子漁港（鈴鹿市白子）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: port
+    prefecture: "24"
+    lat: 34.82952
+    lng: 136.58818
+    image_url: "https://cty-cns.jp/livecamera/img/cns/04_shiroko-gyokou/shiroko-gyokou.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 35KB、Last-Modified 02:12:00→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
