@@ -69,6 +69,11 @@ python site/build.py                            # 配信ファイル生成
 - 運営者の明示的な断り（「無断転載禁止」「直接リンクはご遠慮」）があるものは技術的に取れても実装しない: ロードネット滋賀・山口県道路見えるナビ・三好市観光カメラ（取得経路は docs/research_followups_2026-08-25.md に記録済み、照会して許諾が得られれば即実装可）
 - **MBC南日本放送(mbc.co.jp)は画像の無断転載・二次利用お断りを明記** → 配信URLの直接参照は不可。既存67件は個別ページ(`/web-cam/movie.html?area=<img>`)への誘導型に変更済み、mbc_webcamパーサも誘導型を出す（2026-08-25ユーザー決定）
 
+## Crashlytics 対応の知見（2026-09-30追記）
+
+- 1.6.0 (48) の報告 4 件の内訳: ①`-[__NSDictionaryM setObject:forKeyedSubscript:]`（背景スレッド・Runner フレーム無し）= **Firebase Analytics の実験取得（APMEExperiment→GULMutableDictionary）に nil が来るサーバー側の不具合**。firebase-ios-sdk#16728、2026-09-28 23:52 PDT にサーバー側で修正済み。クライアント側の対処不要（GoogleUtilities PR#249 で nil を無視する修正がマージ済み、リリースは 8.1.3 以降待ち） ②`FLTNewGoogleMobileAdsViewFactory createArgsCodec`（実体は同ファイルの「Could not find an ad with id … already disposed?」の @throw）= 画面を閉じた直後に AdWidget の platform view 生成が走り、先に dispose した広告を参照して落ちる → `ad_banner.dart` の `_disposeAdLater`（3秒遅延。テストは `adDisposeDelay = Duration.zero`） ③`GeolocatorApple.getPositionStream` の FlutterError = 追従中のストリームのエラー（位置情報オフ等）が未処理で `recordError(fatal: true)` に流れていた → `onError` で追従停止 ④flutter_map の `DiscreteTileRange._floor` は 1.6.0 で flutter_map を廃止したので旧版のみ
+- Crashlytics の「Fatal Exception: FlutterError」は main.dart の `PlatformDispatcher.onError` が未処理の Dart エラーを fatal として記録しているもので、アプリは落ちていない。ストリームの `listen` には必ず `onError` を付ける
+
 ## 全国多角調査の知見（2026-09-30追記）
 
 - 星空・気象/牧場・自然/街・庁舎/交通・文化/産業・季節の5班＋鉱脈4班（CATV/自治体ネットカメラ/日中再点検・港/運営者横展開）で計 987 台を採用（21,954→22,941）。手順は scratchpad の GUIDE.md 方式（テーマ別エージェント→検証済み YAML→build_batch.py で curated_*.yaml に追記→crawler --source→review_cli の apply_bulk_approval）。季節限定・時期待ちの再確認リストはメモリ camera-survey-2026-09-30-followups に置いた

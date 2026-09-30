@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'fake_google_maps_platform.dart';
 import 'l10n_test_app.dart';
+import 'package:livecam_jp/ui/ad_banner.dart';
 import 'package:livecam_jp/app_state.dart';
 import 'package:livecam_jp/data/api_client.dart';
 import 'package:livecam_jp/data/cache_store.dart';
@@ -31,6 +32,8 @@ Camera cam(String id, {double? lat, double? lng, FeedType type = FeedType.mlitRo
     );
 
 void main() {
+  // 広告の遅延破棄タイマーがテスト終了時に残らないよう即時破棄にする
+  setUpAll(() => adDisposeDelay = Duration.zero);
   // VisibilityDetector は既定で500msのタイマーを持ち、テスト終了時に残る
   VisibilityDetectorController.instance.updateInterval = Duration.zero;
   // 詳細画面の小地図が GoogleMap を使うため、ウィジェットテストではフェイクの

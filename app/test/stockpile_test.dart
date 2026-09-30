@@ -52,6 +52,8 @@ StockpileItemSpec _spec(String id) =>
     defaultStockpileItems.firstWhere((s) => s.id == id);
 
 void main() {
+  // 広告の遅延破棄タイマーがテスト終了時に残らないよう即時破棄にする
+  setUpAll(() => adDisposeDelay = Duration.zero);
   group('必要量の計算', () {
     test('水は1人1日3L（内閣府・農水省の目安）', () {
       final water = _spec('water');

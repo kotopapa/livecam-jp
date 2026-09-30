@@ -216,6 +216,12 @@ class _MapScreenState extends State<MapScreen> {
       ).listen((p) {
         if (!mounted) return;
         if (_following) _moveCamera(LatLng(p.latitude, p.longitude), _zoom);
+      }, onError: (Object _) {
+        // 追従中に位置情報が取れなくなった（設定でオフにした・権限を取り消した等）。
+        // ストリームのエラーは未処理だと Crashlytics に致命的エラーとして記録される
+        // （1.6.0 で geolocator_apple.dart:188 の報告）ので、追従を止めて知らせる
+        _stopFollowing();
+        if (mounted) _showMessage(context.l10n.mapLocationFailed);
       });
     } catch (_) {
       if (mounted) _showMessage(context.l10n.mapLocationFailed);

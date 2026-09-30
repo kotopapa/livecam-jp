@@ -6,6 +6,23 @@ import '../app_state.dart';
 import '../config.dart';
 import '../data/ad_free.dart';
 
+/// 広告の破棄は少し遅らせる。画面を閉じた直後は AdWidget の platform view の生成が
+/// ネイティブ側でまだ進行中のことがあり、先に dispose すると iOS 側が
+/// 「Could not find an ad with id … already disposed?」で落ちる
+/// （1.6.0 の Crashlytics 報告: FLTAdInstanceManager_Internal.m）
+void _disposeAdLater(Ad? ad) {
+  if (ad == null) return;
+  if (adDisposeDelay == Duration.zero) {
+    ad.dispose();
+    return;
+  }
+  Future<void>.delayed(adDisposeDelay, ad.dispose);
+}
+
+/// 広告の遅延破棄までの時間。ウィジェットテストではタイマーが残ると失敗するので
+/// `Duration.zero` にして即時破棄にする
+Duration adDisposeDelay = const Duration(seconds: 3);
+
 /// 詳細画面に置くAdMobバナー（320×50）。
 ///
 /// 読み込み完了までは高さだけ確保して何も描かず、読み込み失敗時は
@@ -70,7 +87,8 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
   @override
   void dispose() {
     AdFree.instance.removeListener(_onAdFreeChanged);
-    _ad?.dispose();
+    _disposeAdLater(_ad);
+    _ad = null;
     super.dispose();
   }
 
@@ -164,7 +182,8 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
   @override
   void dispose() {
     AdFree.instance.removeListener(_onAdFreeChanged);
-    _ad?.dispose();
+    _disposeAdLater(_ad);
+    _ad = null;
     super.dispose();
   }
 
