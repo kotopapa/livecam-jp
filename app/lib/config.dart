@@ -6,7 +6,7 @@ const String manifestUrl = '${apiBaseUrl}manifest.json';
 
 /// アプリのバージョン表記（pubspec.yaml の version と一致させる。test/app_version_test.dart が照合する）。
 /// 画面の表示には実行時の PackageInfo（AppState.runtimeVersion）を使い、この定数は UA 文字列などの控えに使う
-const String appVersion = '1.6.1';
+const String appVersion = '1.6.2';
 
 /// アクセス制御（SPEC 9.4）。ユーザーが変更できない下限値。
 const Duration minRefetchInterval = Duration(seconds: 60);
