@@ -24164,3 +24164,609 @@ cameras:
     lat: 26.191133
     lng: 127.728523
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 VFRVlFKie8A status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+
+  # ===== 2026-09-30 全国多角調査 再確認（livecamera24 日中・ごみ処理施設）=====
+
+  - id: curated-ra-gomi-saitama-seibu-cc
+    name: "埼玉西部クリーンセンター 受入混雑状況（鳩山町）"
+    operator: "株式会社鳩山環境サービス（埼玉西部環境保全組合 埼玉西部クリーンセンター運営）"
+    category: other
+    channel_id: "UCj39KqM2uZTlVaExZZabaJQ"
+    prefecture: "11"
+    lat: 35.990814
+    lng: 139.307724
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 11:20 JST 検証: 現行枠 WwmIGmV8UDg status=OK isLiveNow=true playableInEmbed=true。チャンネル @hatoyama-eco は1本配信（早朝の旧枠 xahbRT9fcCw は終了→枠が変わるため channel_id）。公式ページ hatoyama-kankyo.com/live/ が『施設の混雑状況を YouTube LIVE でリアルタイム配信』として埋め込み。転載禁止・リンク制限の記載なし（© 表記のみ）。受入時間外は配信停止（早朝 05:50 は isLiveNow=false）。『混雑状況が的確なものではない場合がある』旨の注記あり"
+
+  - id: curated-ra-gomi-hamada-ecoclean
+    name: "浜田地区広域行政組合 エコクリーンセンター 場内混雑状況（江津市波子町）"
+    operator: "浜田地区広域行政組合"
+    category: other
+    channel_id: "UCh5Fhh_Y7LmGAXNtDtOl3bQ"
+    prefecture: "32"
+    lat: 34.957489
+    lng: 132.147903
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 11:20 JST 検証: 現行枠 UD0_1EqGBA0『浜田地区広域行政組合エコクリーセンター場内映像』status=OK isLiveNow=true playableInEmbed=true。チャンネル @eco_clean_center（浜田地区広域行政組合総務課）は1本配信で、組合ページが channel/live へリンクしているため channel_id。受付時間 平日 9:00〜16:30（土日祝・年末年始休み）、時間外は配信なし。転載禁止・リンク制限の記載なし。施設は浜田市ではなく江津市波子町に所在"
+
+  - id: curated-ra-lc24-01-2bd3215f
+    name: "室蘭市八丁平（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCmaziVJb0MhG6QPiKolt2zQ"
+    embed: false
+    prefecture: "01"
+    lat: 42.362198
+    lng: 141.00235
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 1ienZkmGa-E status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-01-da4c53de
+    name: "苫小牧市双葉町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCySRhxv911sNJ1-RFAHaW_A"
+    embed: false
+    prefecture: "01"
+    lat: 42.650829
+    lng: 141.613388
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 WRqv07q5GYg status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-01-4957a112
+    name: "苫小牧市桜木町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCRCQg9q8GvsUT0MvyXBh5xA"
+    embed: false
+    prefecture: "01"
+    lat: 42.629002
+    lng: 141.561035
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 FYnGYTpnAAs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-01-c7c06a3a
+    name: "上川郡美瑛町 大雪山連峰十勝岳（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: scenic
+    channel_id: "UC-a2ihKN-SYxUBsKPdH7MVw"
+    embed: false
+    prefecture: "01"
+    lat: 43.588284
+    lng: 142.46698
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 -ZInpezwakk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-01-2235edbe
+    name: "標津郡中標津町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UC4nt42w46XJWmPjfQCgw0xg"
+    prefecture: "01"
+    lat: 43.555206
+    lng: 144.97139
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 ZNtKfRQ8Bxk status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-02-064ea79d
+    name: " 青森市金沢（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UC3_VH5DSi8n3Zl6JEl4tiGg"
+    prefecture: "02"
+    lat: 40.814106
+    lng: 140.734024
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 Y9xXgou7KM4 status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は LIVE_STREAM_OFFLINE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-02-7b12e6b0
+    name: "青森市大字安田字近野（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCC78ZSh8t0if1FrLUJ3-XRQ"
+    embed: false
+    prefecture: "02"
+    lat: 40.80545
+    lng: 140.701996
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 KRbkf-v28BY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-02-9aae4426
+    name: "青森市栄町交差点（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCDtWe4uXpraQRcI9zf7a4lw"
+    embed: false
+    prefecture: "02"
+    lat: 40.824741
+    lng: 140.765518
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 aVNnPx8jKMs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-02-6b291f57
+    name: "八戸市内丸3丁目（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCiaQ3xhD9NJxgaIUpCCBWsA"
+    embed: false
+    prefecture: "02"
+    lat: 40.51342
+    lng: 141.491821
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 DJhT8p6asXo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-02-37a90947
+    name: "八戸市新井田お天気（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCcdEcIv1tSN7ISHRh8rveqw"
+    embed: false
+    prefecture: "02"
+    lat: 40.500313
+    lng: 141.536926
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 dFje8v0KMsI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-02-af3dfbba
+    name: "平川市猿賀石林猿賀公園（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCMOpCN9T1UUFfPbQ_12Crjw"
+    embed: false
+    prefecture: "02"
+    lat: 40.614559
+    lng: 140.561249
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 m7rBFx5Sc90 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-03-3c6b190d
+    name: "盛岡市上堂国道4号線（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCE-0B8E4XrJY5sAtJLVEgAQ"
+    prefecture: "03"
+    lat: 39.724697
+    lng: 141.120407
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 qmUkF9WxFk4 status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-03-202b7042
+    name: "盛岡市緑が丘（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCafW4740wm8r26KaWzbj0tw"
+    prefecture: "03"
+    lat: 39.73098
+    lng: 141.142853
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 k8VfeXAwNI8 status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-03-8bf99fc8
+    name: "大船渡市大船渡町猪頭（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCvHFBTsAWRiU2RZeGFD7x7w"
+    prefecture: "03"
+    lat: 39.057083
+    lng: 141.714417
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 CFPamRD22Qs status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-04-2cf79628
+    name: "仙台市青葉区折立（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCT7VGtkVrTC9cujzfSO__jA"
+    prefecture: "04"
+    lat: 38.264809
+    lng: 140.811661
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 11nZGPsrYFo status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-04-171ae6d6
+    name: "仙台市若林区荒浜（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCA60xTD9JKgmeY1YdjYJQEA"
+    embed: false
+    prefecture: "04"
+    lat: 38.22213
+    lng: 140.970123
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 ufqdjQk3v3k status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は LIVE_STREAM_OFFLINE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-04-36417c40
+    name: "大崎市古川駅前大通交差点（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCw7-2de7bEqQUxMCmKUqcbg"
+    embed: false
+    prefecture: "04"
+    lat: 38.571709
+    lng: 140.965668
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 U8O0Wut8SlU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-04-f60dae9f
+    name: "宮城郡利府町葉山（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCLp6mqZOGZ-3NCM6sz_6Ohg"
+    embed: false
+    prefecture: "04"
+    lat: 38.364456
+    lng: 141.022888
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 -kH7ORdyf30 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-05-415b4cb8
+    name: "秋田市寺内イサノ（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCW8lbxlkkZidgYbEnB7Ojkw"
+    embed: false
+    prefecture: "05"
+    lat: 39.738804
+    lng: 140.091858
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 iYOnX_5XDJE status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-05-b6604e59
+    name: "由利本荘市鶴沼（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UClVpjJ4Jo8jdJqI0dtGlxNw"
+    embed: false
+    prefecture: "05"
+    lat: 39.385563
+    lng: 140.042252
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 xummjl-34aI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-31c69121
+    name: "山形市下条五叉路（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCJV_dIBqvBccw_aYDnb1hLw"
+    prefecture: "06"
+    lat: 38.263119
+    lng: 140.326889
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 KsCslXPRRWw status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は LIVE_STREAM_OFFLINE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-4e2228b5
+    name: "山形市南原町1丁目（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UC0I4ImwnbX68CFNfrKsYO5Q"
+    prefecture: "06"
+    lat: 38.238075
+    lng: 140.345612
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 35SBdHh3Qj4 status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-6eeb6a30
+    name: "山形市城北町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCH5L4RcQoBJQHjZeMICR1ZA"
+    prefecture: "06"
+    lat: 38.258446
+    lng: 140.330231
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 O7yqBKAtYUE status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-8dcc30d8
+    name: "山形市城西町交差点（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCF3apESgxPEmqgG5XHh7nrw"
+    prefecture: "06"
+    lat: 38.255978
+    lng: 140.324081
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 oMvTDHjGN8c status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は LIVE_STREAM_OFFLINE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-f9da8975
+    name: "山形市小白川町山形大学前（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCMK0HWNSoOVPQQtr_WIK3sw"
+    prefecture: "06"
+    lat: 38.249104
+    lng: 140.367706
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 4jh5NivxBCs status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-4c1bb07e
+    name: "山形市小荷駄町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCsx75VSd8AwIrjBjfL6KurQ"
+    prefecture: "06"
+    lat: 38.239456
+    lng: 140.340881
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 Ks58qJzQrug status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は UNPLAYABLE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-fe96af07
+    name: "山形市香澄町すずらん通り（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCMUnRwysNOkZFhcRwaI1uNw"
+    prefecture: "06"
+    lat: 38.249424
+    lng: 140.329651
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 ISj_Vj3gGhg status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-cfbdfa8c
+    name: "天童市東本町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCe0xyzdjITVjB05vTAvOivQ"
+    prefecture: "06"
+    lat: 38.360603
+    lng: 140.375046
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 HwwvBR8Iz-A status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は LIVE_STREAM_OFFLINE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-06-4e452f85
+    name: "西置賜郡白鷹町乙（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCim7hpErKQgnp8WIUBO1ZQQ"
+    prefecture: "06"
+    lat: 38.183582
+    lng: 140.098221
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 B664Tj0WDCs status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-07-d30a3bd1
+    name: "福島市八木田（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UC5-ZRW-h2nvHd19__XaGjPQ"
+    embed: false
+    prefecture: "07"
+    lat: 37.750385
+    lng: 140.44577
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 bkhd8_6G9wg status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-07-6ca25945
+    name: "郡山市大槻町字北中野（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCiAJXSiDdutY0gL6a8R6iag"
+    embed: false
+    prefecture: "07"
+    lat: 37.391994
+    lng: 140.329788
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 6hflh3oqdb0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-08-79e1b009
+    name: "ひたちなか市東石川マラソン通り（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCSMw6xN0UY-zQUWWOLy2D2Q"
+    embed: false
+    prefecture: "08"
+    lat: 36.414593
+    lng: 140.534943
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 EwyYQ8yC3Xk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-09-5ddfc18b
+    name: "小山市中央町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCwB1SUkn4ZdsT1WdmlpPmfA"
+    prefecture: "09"
+    lat: 36.31509
+    lng: 139.799957
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 GaVea4miPxs status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は LIVE_STREAM_OFFLINE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-11-d2f72bf4
+    name: "さいたま市大宮区三橋交差点（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCUCgAV8Hu0Gk4ywLw1o81JA"
+    prefecture: "11"
+    lat: 35.909569
+    lng: 139.602585
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 XSm9jGhUrjs status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-11-d43cba6b
+    name: "行田市埼玉古墳通り（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCLw7rUTDWa8p6UCLb9fvtlg"
+    embed: false
+    prefecture: "11"
+    lat: 36.117615
+    lng: 139.496429
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 5xlYg1JaDpU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-12-5d63b60e
+    name: "船橋市高根台（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCGZj9csgxsW7UdpjjJSMNRw"
+    prefecture: "12"
+    lat: 35.731441
+    lng: 140.030228
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 yyLdwFPBa9Q status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-12-32ab5d0d
+    name: "匝瑳市八日市場イ（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCApjShkJkZWszR-0ZwBun-A"
+    prefecture: "12"
+    lat: 35.701088
+    lng: 140.537613
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 se2QO1Mogb0 status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-14-ca2f6352
+    name: "横浜市青葉区鉄町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UC-11jLi4dHuIicjGApT0MXA"
+    embed: false
+    prefecture: "14"
+    lat: 35.564667
+    lng: 139.521179
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 evjmvXkLn1E status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-15-64a7541f
+    name: "長岡市十日町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCaq14QUx6BAa6sWcr1dgSmw"
+    embed: false
+    prefecture: "15"
+    lat: 37.384647
+    lng: 138.838257
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 kuxnqWofPDQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-15-879c3abb
+    name: "長岡市十日町柏崎高浜堀之内線（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCGxYMiXavXOHH3srfvffDkg"
+    embed: false
+    prefecture: "15"
+    lat: 37.384647
+    lng: 138.838257
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 P3PV0n9y2Nk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-15-b46391d2
+    name: "上越市牧区柳島（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCtM9fANhAXUl3LawwoFx85w"
+    embed: false
+    prefecture: "15"
+    lat: 37.078068
+    lng: 138.384338
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 JLdizXlTLqI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は LIVE_STREAM_OFFLINE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-16-099e237a
+    name: "高岡市丸の内（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCBvyAdiJxOsSg1n6gOxGUnA"
+    embed: false
+    prefecture: "16"
+    lat: 36.752514
+    lng: 137.018845
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 7vxibRu8P2I status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-16-02c3a4f8
+    name: "南砺市閑乗寺公園（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: scenic
+    channel_id: "UC5WleQtJxmAa301fAJwpi7Q"
+    embed: false
+    prefecture: "16"
+    lat: 36.564026
+    lng: 136.97673
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 kX9QRFTQvSs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp。設置協力: 閑乗寺公園"
+
+  - id: curated-ra-lc24-16-93a3d6a2
+    name: "中新川郡立山町西大森（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCMZTslM0d3kqwSBZ6hUy9rA"
+    prefecture: "16"
+    lat: 36.648472
+    lng: 137.287659
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 FeJxx3C5Uo8 status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-19-4c08fb81
+    name: "甲府市蓬沢（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCPLxUHd5kS-aRLy-EclsTkA"
+    embed: false
+    prefecture: "19"
+    lat: 35.642849
+    lng: 138.590469
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 O2UjTENAix0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-19-076f1107
+    name: "北杜市小淵沢町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UC7ERI3vks8ca-Q7RfgCl2Dw"
+    embed: false
+    prefecture: "19"
+    lat: 35.895557
+    lng: 138.326645
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 b5RDgIlbcdc status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-20-aeb161d6
+    name: "上田市上丸子（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCWFjD7kq4gUur7aekSmT3Sw"
+    embed: false
+    prefecture: "20"
+    lat: 36.319172
+    lng: 138.27739
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 VUa55ioV2x0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-22-7829719b
+    name: "富士市中之郷（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCCZXKkpLB3BY1UH8jqPpu8w"
+    embed: false
+    prefecture: "22"
+    lat: 35.140945
+    lng: 138.614456
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 2ABI9ah9-1A status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-26-e1d9bec0
+    name: "京都市中京区三条通り（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCaR46IkjR6gNv6-DmLGukfg"
+    embed: false
+    prefecture: "26"
+    lat: 35.009998
+    lng: 135.751389
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 FbUu6oVNYIQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-28-a3776a61
+    name: "相生市垣内町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCyNTOFpbKHGtkb3u2LqJTUg"
+    prefecture: "28"
+    lat: 34.813133
+    lng: 134.475662
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 Zaa7YuqU9ew status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-33-46dbb033
+    name: "岡山市北区福谷（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCM2Lsv6gfj7KEEjIM2O-LIQ"
+    embed: false
+    prefecture: "33"
+    lat: 34.712185
+    lng: 133.853745
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 -76YHGVQJmQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-35-44c9aa6b
+    name: "熊毛郡田布施町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCdWpP9NYCBcgJhVK4kQ6_rw"
+    embed: false
+    prefecture: "35"
+    lat: 33.954723
+    lng: 132.041382
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 _yxCkjrQXBo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-41-6b728646
+    name: "小城市牛津町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCWNrjg4ie_Vs1YhTd3VDqiA"
+    embed: false
+    prefecture: "41"
+    lat: 33.264709
+    lng: 130.207718
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 Vx24FNtVbAA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-42-601a9942
+    name: "佐世保市有福町（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCms7Qke5nTTy-ZhndccEaGA"
+    prefecture: "42"
+    lat: 33.131599
+    lng: 129.781036
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 fAplbVh7GUs status=OK isLiveNow=true playableInEmbed=true。1チャンネル1配信のため channel_id。早朝の判定は LIVE_STREAM_OFFLINE。about に info@livecamera24.jp"
+
+  - id: curated-ra-lc24-46-b063a53d
+    name: "鹿児島市東谷山市電（livecamera24）"
+    operator: "ライブカメラ24（livecamera24.jp）"
+    category: other
+    channel_id: "UCNwU0j7LxRGFVbmuzYw2W_g"
+    embed: false
+    prefecture: "46"
+    lat: 31.537241
+    lng: 130.528992
+    note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 rEZm96qNpI4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
