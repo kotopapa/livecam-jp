@@ -267,8 +267,22 @@ def test_resolve_youtube_channel_live():
 
 def test_find_live_in_streams():
     from monitor.check import find_live_in_streams
-    page = ('{"contentId":"AAAAAAAAAA1","badgeStyle":"THUMBNAIL_OVERLAY_BADGE_STYLE_DEFAULT"}'
-            '{"contentId":"BBBBBBBBBB2","badgeStyle":"THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE"}'
-            '{"contentId":"CCCCCCCCCC3"}')
+    page = ('{"lockupViewModel":{"badgeStyle":"THUMBNAIL_OVERLAY_BADGE_STYLE_DEFAULT","contentId":"AAAAAAAAAA1"}}'
+            '{"lockupViewModel":{"badgeStyle":"THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE","contentId":"BBBBBBBBBB2"}}'
+            '{"lockupViewModel":{"contentId":"CCCCCCCCCC3"}}')
     assert find_live_in_streams(page) == "BBBBBBBBBB2"
     assert find_live_in_streams(page.replace("_LIVE", "_DEFAULT")) is None
+
+
+def test_pick_live_stream_prefers_camera_like_title():
+    from monitor.check import pick_live_stream, list_live_in_streams
+    page = ('{"lockupViewModel":{"badgeStyle":"THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE","title":{"content":"【獣医師ライブ】キャリーに入らない猫"},"contentId":"AAAAAAAAAA1"}}'
+            '{"lockupViewModel":{"badgeStyle":"THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE","title":{"content":"【24時間配信】保護猫ルーム｜富士見台どうぶつ病院"},"contentId":"BBBBBBBBBB2"}}'
+            '{"lockupViewModel":{"title":{"content":"過去の配信"},"contentId":"CCCCCCCCCC3"}}')
+    lives = list_live_in_streams(page)
+    assert [v for v, _ in lives] == ["AAAAAAAAAA1", "BBBBBBBBBB2"]
+    # 目印（24時間）とカメラ名の語で保護猫ルームを選ぶ
+    assert pick_live_stream(lives, "保護猫ルーム（富士見台どうぶつ病院）", None) == "BBBBBBBBBB2"
+    # 前回の枠がまだ配信中ならそれを維持
+    assert pick_live_stream(lives, "保護猫ルーム（富士見台どうぶつ病院）", "AAAAAAAAAA1") == "AAAAAAAAAA1"
+    assert pick_live_stream([], "x", None) is None

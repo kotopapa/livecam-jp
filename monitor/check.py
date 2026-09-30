@@ -7,6 +7,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import time
 import urllib.parse
@@ -283,19 +284,66 @@ def resolve_youtube_channel_live(text: str) -> str | None:
     return m.group(1)
 
 
-def find_live_in_streams(text: str) -> str | None:
-    """チャンネルの /streams ページ（ytInitialData）から配信中の動画IDを1つ返す。
+def list_live_in_streams(text: str) -> list[tuple[str, str]]:
+    """チャンネルの /streams ページ（ytInitialData）から配信中の (動画ID, タイトル) を列挙する。
 
     一覧の各項目は lockupViewModel（`"contentId":"<ID>"`）で、配信中の項目だけ
-    同じブロック内に `THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE` を持つ（2026-08 時点の構造）。
-    /live が古い予定枠を指すときの代替として使う
+    同じブロック内に `THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE` を持つ（2026-08 時点の構造）
     """
-    ids = [(m.start(), m.group(1)) for m in re.finditer(r'"contentId":"([\w-]{11})"', text)]
-    for i, (pos, vid) in enumerate(ids):
-        end = ids[i + 1][0] if i + 1 < len(ids) else len(text)
-        if "THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE" in text[pos:end]:
-            return vid
-    return None
+    # lockupViewModel の JSON は contentImage（サムネイルとライブ印）→ metadata（タイトル）
+    # → contentId の順なので、印とタイトルは contentId の**前**にある。contentId から
+    # 次の contentId までを見ると隣の項目の印を拾う（2026-09-30 富士見台で枠を取り違えた）
+    out: list[tuple[str, str]] = []
+    starts = [m.start() for m in re.finditer(r'"lockupViewModel":\{', text)]
+    for i, pos in enumerate(starts):
+        end = starts[i + 1] if i + 1 < len(starts) else len(text)
+        blk = text[pos:end]
+        cid = re.search(r'"contentId":"([\w-]{11})"', blk)
+        if not cid or "THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE" not in blk[:cid.start()]:
+            continue
+        vid = cid.group(1)
+        m = re.search(r'"title":\{"content":"((?:[^"\\]|\\.)*)"', blk[:cid.start()])
+        title = ""
+        if m:
+            try:
+                title = json.loads('"' + m.group(1) + '"')
+            except ValueError:
+                title = m.group(1)
+        out.append((vid, title))
+    return out
+
+
+# 定点カメラらしいタイトルの目印（同時に複数配信するチャンネルで枠を選ぶ）
+_CAMERA_TITLE_HINTS = ("24時間", "24h", "24H", "ライブカメラ", "定点", "LIVE CAMERA", "Live Camera", "live camera")
+
+
+def pick_live_stream(lives: list[tuple[str, str]], camera_name: str,
+                     previous: str | None) -> str | None:
+    """同時配信が複数あるとき、カメラ枠として最もそれらしい動画IDを選ぶ。
+
+    優先順: 前回選んだ枠がまだ配信中 → 「24時間」「ライブカメラ」等の目印 →
+    台帳のカメラ名との語の重なり → 一覧の先頭。富士見台どうぶつ病院は保護猫ルームの
+    24時間枠と獣医師の解説ライブを同時に流し、先頭を取ると解説ライブになった（2026-09-30）
+    """
+    if not lives:
+        return None
+    if previous and any(v == previous for v, _ in lives):
+        return previous
+    tokens = {t for t in re.split(r"[\s（）()【】｜|・、/／-]+", camera_name) if len(t) >= 2}
+
+    def score(item: tuple[str, str]) -> tuple[int, int]:
+        vid, title = item
+        hint = 1 if any(h in title for h in _CAMERA_TITLE_HINTS) else 0
+        overlap = sum(1 for t in tokens if t in title)
+        return (hint, overlap)
+
+    return max(lives, key=score)[0]
+
+
+def find_live_in_streams(text: str) -> str | None:
+    """後方互換: 配信中の先頭の動画ID"""
+    lives = list_live_in_streams(text)
+    return lives[0][0] if lives else None
 
 
 def _check_youtube(session, camera, state, now, prev_failures) -> dict:

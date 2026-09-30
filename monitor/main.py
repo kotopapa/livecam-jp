@@ -28,7 +28,8 @@ except ImportError:
     pass
 
 from crawler.sources.base import mount_legacy_tls
-from monitor.check import USER_AGENT, check_camera, find_live_in_streams, resolve_youtube_channel_live
+from monitor.check import (USER_AGENT, check_camera, list_live_in_streams, pick_live_stream,
+                           resolve_youtube_channel_live)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CAMERAS_PATH = REPO_ROOT / "data" / "cameras.json"
@@ -474,7 +475,12 @@ def run(shard: str | None = None) -> int:
         # 切り替え前の枠を指すことがある）。/streams で見つからないときだけ /live を見る
         vid = None
         base = f"https://www.youtube.com/channel/{cam['feed']['url']}"
-        for path, resolver in (("/streams", find_live_in_streams), ("/live", resolve_youtube_channel_live)):
+        prev_vid = (statuses.get(cam["id"]) or {}).get("video_id")
+
+        def _from_streams(text: str, _name=cam["name"], _prev=prev_vid) -> str | None:
+            return pick_live_stream(list_live_in_streams(text), _name, _prev)
+
+        for path, resolver in (("/streams", _from_streams), ("/live", resolve_youtube_channel_live)):
             try:
                 throttle.acquire("www.youtube.com")
                 try:
