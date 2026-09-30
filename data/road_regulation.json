@@ -1,5 +1,5 @@
 {
- "version": "2026-09-30T02:07:26Z",
+ "version": "2026-09-30T02:29:24Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-09-30T02:07:26Z",
+   "fetched_at": "2026-09-30T02:29:24Z",
    "items": [
     {
      "id": "2435d122a360e50d",
@@ -49570,6 +49570,17 @@
    "content": "通行止",
    "cause": "倒木",
    "start": "2026年09月30日 10:00",
+   "status": "実施中"
+  },
+  "2436197b280a8ced": {
+   "kind": "通行止（都道府県道）",
+   "route": "県道77号 足助下山線",
+   "direction": "上下",
+   "from": "豊田市四ツ松町",
+   "to": "豊田市四ツ松町",
+   "content": "通行止",
+   "cause": "倒木",
+   "start": "2026年09月30日 10:05",
    "status": "実施中"
   }
  }
