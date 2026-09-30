@@ -77,7 +77,7 @@ python site/build.py                            # 配信ファイル生成
 - 東京港総合ポータルの周辺道路カメラ（`portal-tokyoport.jp` `livecamera/image?cameraid=<エリア>&id=<番号>`、青海7・品川5・大井18・中防4）は名称一覧が `js/camera.js`。座標は交差点名からの推定
 - 自治体の Canon/Panasonic 直公開の当たり方: `site:lg.jp "SnapshotJPEG"`、`"live/index.html?Language=1"`、`"viewer/live/ja/live.html" 町`。`GetOneShot` が "Unknown Operator" を返す機種は `image.cgi`。日田玖珠九重の共同システム（`webcamera.city.hita.oita.jp/camN/-wvhttp-01-/`）は画像パスがカメラごとに違うので各 `cameraN.html` の IMG SRC を読む
 - JCV 上越の一覧 XML `media.jcv.co.jp/onesrc/livecam/town_joetsu_clist.xml`（cid・住所・lat/lng）。可児・テレビ松本は Google My Maps の KML（`google.com/maps/d/kml?mid=…&forcekml=1`）で全点の座標が取れる
-- いちごECO発電所（全国約37台）は `www.ichigo.gr.jp/<テナント>/solar/addons/cam/?cam=<ID>` で固定URLだが、規約に転載禁止＋リンク前連絡があり導線も撤去済み → 照会が要る（未実施）
+- いちごECO発電所（全国約37台）は規約に転載禁止＋リンク前連絡があり導線も撤去済み → **2026-09-30 ユーザー判断で見送り**（照会もしない。再提案不要）
 - 放置された「配信予定」枠（足寄町 2024-02）に /live が解決される問題は monitor 側で対処済み（/streams のライブ印優先）
 
 ## 国道50号カメラ調査の知見（2026-09-20追記）
