@@ -19623,3 +19623,4544 @@ cameras:
     lat: 34.33
     lng: 139.208
     note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true, playableInEmbed=true。"
+
+
+  # ===== 2026-09-30 全国多角調査 鉱脈の追加（CATV/自治体ネットカメラ/日中再点検・港/運営者横展開）=====
+
+  - id: curated-vd-port-chichijima-futami-tokyo
+    name: "二見港（父島・東京都港湾局）"
+    operator: "東京都港湾局（東京都伊豆・小笠原諸島港湾ライブカメラ）"
+    category: port
+    video_id: "1NRUjmE6WwU"
+    prefecture: "13"
+    lat: 27.0947
+    lng: 142.1935
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。2026-09-30 05:40 JST status=OK isLiveNow=true playableInEmbed=true。台帳の 父島 二見港（curated-port-ogasawara-futami-mura, poluvhrt6Dk）は小笠原村のカメラで別運営。港湾局チャンネルは1チャンネル複数配信のため video_id 登録"
+
+  - id: curated-vd-port-hahajima-oki-tokyo
+    name: "沖港（母島・東京都港湾局）"
+    operator: "東京都港湾局（東京都伊豆・小笠原諸島港湾ライブカメラ）"
+    category: port
+    video_id: "bH-zSqhkF8A"
+    prefecture: "13"
+    lat: 26.6398
+    lng: 142.16
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true。台帳の 母島 沖港（1s1N4e4qdpo）は小笠原村ライブカメラ③で別運営"
+
+  - id: curated-vd-port-hachijo-kaminato-sokodo-tokyo
+    name: "神湊港底土（八丈島・東京都港湾局）"
+    operator: "東京都港湾局（東京都伊豆・小笠原諸島港湾ライブカメラ）"
+    category: port
+    video_id: "SilNYdV2HNs"
+    prefecture: "13"
+    lat: 33.129
+    lng: 139.8035
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true。台帳の 八丈島 底土港（curated-port-hachijo-sokodo, 1Vl2OrZkwsM）はチャンネル「底土港」(UCSHVk9_ER59jtDEXhuxUJZA) の別カメラ"
+
+  - id: curated-vd-gomi-kashima-cc
+    name: "鹿島共同可燃ごみクリーンセンター 渋滞監視"
+    operator: "鹿島エコクリエイション株式会社（鹿島地方事務組合 鹿島共同可燃ごみクリーンセンター運営）"
+    category: other
+    video_id: "mzDj0Igmauc"
+    prefecture: "08"
+    lat: 35.9014
+    lng: 140.6898
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。2026-09-30 05:50 JST status=OK isLiveNow=true playableInEmbed=true。運営者はチャンネル名（運営会社）で特定。組合サイト kcj.or.jp/gomi.htm からのリンクは確認できず → レビュー時に留意"
+
+  - id: curated-vd-gomi-nishichita-cc
+    name: "西知多クリーンセンター 受付計量棟付近（搬入混雑状況）"
+    operator: "西知多医療厚生組合（西知多クリーンセンター）"
+    category: other
+    video_id: "mEtTSjHqAjA"
+    embed: false
+    prefecture: "23"
+    lat: 34.9967
+    lng: 136.854
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true だが、公式ページは「当サイトの利用条件に同意」ボタンを押してから再生する仕組み（60秒で自動停止）。利用条件ページは見つからず。運営者の意図を尊重して誘導型（page_url）にした。同意不要と判断できれば video_id で直接埋め込み可"
+
+  - id: curated-vd-gomi-iwata-cc-entrance
+    name: "磐田市クリーンセンター 搬入口"
+    operator: "磐田市ごみ対策課"
+    category: other
+    video_id: "WdBoibCoJIw"
+    embed: false
+    prefecture: "22"
+    lat: 34.7047
+    lng: 137.8287
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=false → 誘導型。チャンネル UCxCIxymujB4COCrEtMTSn1w（磐田市ごみ対策課）は1本配信。市サイト 1003153.html が【搬入口】としてリンク"
+
+  - id: curated-vd-gomi-iwata-cc-road
+    name: "磐田市クリーンセンター 周辺道路"
+    operator: "磐田市ごみ対策課"
+    category: other
+    video_id: "BmxAMpJ4IJY"
+    embed: false
+    prefecture: "22"
+    lat: 34.705
+    lng: 137.828
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=false → 誘導型。チャンネル UCUo3VCcmomnRVlfuHY-M8qA（磐田市ごみ対策課2）は1本配信。市サイトが【周辺道路】としてリンク"
+
+  - id: curated-vd-gomi-kanazawa-seibu-station
+    name: "金沢市西部環境エネルギーセンター横 資源搬入ステーション 搬入状況"
+    operator: "金沢市（ごみ減量推進課）"
+    category: other
+    video_id: "UFlT05Z4ZpQ"
+    prefecture: "17"
+    lat: 36.5633
+    lng: 136.6195
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true（市ページに embed）。チャンネル kctnlc2（UCLwsJphGN7SB2dqsnIoLwPA）は /streams に一覧が出ないが動画は配信中。前回「現在ライブなし」→ 05:50 に配信確認"
+
+  - id: curated-vd-gomi-kankyoshigen-gallery
+    name: "環境資源ギャラリー 搬入車列の状況（掛川市）"
+    operator: "掛川市・菊川市衛生施設組合（環境資源ギャラリー）"
+    category: other
+    video_id: "JSz78wLfsSE"
+    prefecture: "22"
+    lat: 34.7682
+    lng: 138.0449
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true（公式トップに embed。もう1枠 ssQnoeB2mts は isLiveNow=false）。前回「現在ライブなし」→ 05:50 に配信確認"
+
+  - id: curated-vd-gomi-kimotsuki-seisou
+    name: "肝属地区清掃センター 受付状況"
+    operator: "大隅肝属広域事務組合"
+    category: other
+    video_id: "A1N-Bro8vd4"
+    prefecture: "46"
+    lat: 31.3837
+    lng: 130.9406
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true（組合ページに embed）。チャンネル UCzLcQik0ydj0lV6I6x6kYgg は1本配信"
+
+  - id: curated-muni-funagata-sainokami
+    name: "塞の神カメラ（舟形町）"
+    operator: "舟形町"
+    category: river
+    video_id: "vWHiwNjhjXo"
+    embed: false
+    prefecture: "06"
+    lat: 38.7
+    lng: 140.32
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型（playableInEmbed=false）。町ページの分類は河川・防災ライブカメラ"
+
+  - id: curated-muni-funagata-chuo-kominkan
+    name: "舟形町中央公民館（舟形町）"
+    operator: "舟形町"
+    category: other
+    video_id: "gDJWbYyrR58"
+    embed: false
+    prefecture: "06"
+    lat: 38.6953
+    lng: 140.3212
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型（playableInEmbed=false）"
+
+  - id: curated-muni-funagata-tominaga-bridge
+    name: "富長橋上流右岸（最上小国川・舟形町）"
+    operator: "舟形町"
+    category: river
+    video_id: "bKtW5n_bRBo"
+    embed: false
+    prefecture: "06"
+    lat: 38.6743
+    lng: 140.2861
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型（playableInEmbed=false）"
+
+  - id: curated-muni-funagata-horiuchi-bridge
+    name: "堀内橋上流左岸（舟形町堀内）"
+    operator: "舟形町"
+    category: river
+    video_id: "hwA4kdRl6F0"
+    embed: false
+    prefecture: "06"
+    lat: 38.6265
+    lng: 140.268
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型（playableInEmbed=false）"
+
+  - id: curated-muni-funagata-hirasawagawa
+    name: "平沢川 河川監視（舟形町）"
+    operator: "舟形町"
+    category: river
+    video_id: "wGJACa5qRrE"
+    embed: false
+    prefecture: "06"
+    lat: 38.6915
+    lng: 140.3202
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型（playableInEmbed=false）"
+
+  - id: curated-catv-cvn-godochosha-north
+    name: "飯田合同庁舎 北側（cvn）"
+    operator: "株式会社シーブイエヌ（飯田ケーブルテレビ）"
+    category: other
+    channel_id: "UCTVZNbie6250ICvqL8RfrbQ"
+    prefecture: "20"
+    lat: 35.512417
+    lng: 137.831116
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:45 チャンネル/streamsでライブ1本（inBGRhQRih0）、watch: status=OK isLiveNow=true playableInEmbed=true。1カメラ1チャンネル運用なので channel_id 登録。公式一覧 https://www.iidacable.tv/livecamera/ に掲載。"
+
+  - id: curated-catv-cvn-godochosha-south
+    name: "飯田合同庁舎 南側（cvn）"
+    operator: "株式会社シーブイエヌ（飯田ケーブルテレビ）"
+    category: other
+    channel_id: "UCXPaDc3yp7kaMkkR4XLfhUQ"
+    prefecture: "20"
+    lat: 35.512417
+    lng: 137.831116
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:45 チャンネル/streamsでライブ1本（yzRM325bbHs）、watch: status=OK isLiveNow=true playableInEmbed=true。1カメラ1チャンネル運用なので channel_id 登録。公式一覧 https://www.iidacable.tv/livecamera/ に掲載。"
+
+  - id: curated-catv-cvn-zoo-saruyama
+    name: "飯田市立動物園 サル山（cvn）"
+    operator: "株式会社シーブイエヌ（飯田ケーブルテレビ）"
+    category: healing
+    channel_id: "UCNI0op3CT3IXCnOAhr9r3Mg"
+    prefecture: "20"
+    lat: 35.513966
+    lng: 137.824066
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:45 チャンネル/streamsでライブ1本（BehU1STa7Zs）、watch: status=OK isLiveNow=true playableInEmbed=true。1カメラ1チャンネル運用なので channel_id 登録。公式一覧 https://www.iidacable.tv/livecamera/ に掲載。"
+
+  - id: curated-catv-cvn-zoo-penguin
+    name: "飯田市立動物園 ペンギンの丘（cvn）"
+    operator: "株式会社シーブイエヌ（飯田ケーブルテレビ）"
+    category: healing
+    channel_id: "UCfLSbr8eONUgh3GmCv4QJPQ"
+    prefecture: "20"
+    lat: 35.513966
+    lng: 137.824066
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:45 チャンネル/streamsでライブ1本（831QJ5DMU3M）、watch: status=OK isLiveNow=true playableInEmbed=true。1カメラ1チャンネル運用なので channel_id 登録。公式一覧 https://www.iidacable.tv/livecamera/ に掲載。"
+
+  - id: curated-catv-cvn-namiki-dori
+    name: "飯田市 並木通り（cvn）"
+    operator: "株式会社シーブイエヌ（飯田ケーブルテレビ）"
+    category: other
+    channel_id: "UC1izLlsCadKVxQd4vrTMD8A"
+    prefecture: "20"
+    lat: 35.515007
+    lng: 137.821518
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:45 チャンネル/streamsでライブ1本（bHptGwWpIfY）、watch: status=OK isLiveNow=true playableInEmbed=true。1カメラ1チャンネル運用なので channel_id 登録。公式一覧 https://www.iidacable.tv/livecamera/ に掲載。"
+
+  - id: curated-catv-cvn-jibuzaka-ski
+    name: "治部坂高原スキー場（阿智村・cvn）"
+    operator: "株式会社シーブイエヌ（飯田ケーブルテレビ）"
+    category: scenic
+    channel_id: "UC3FO42o5-Tvl_vP_AZSy2kA"
+    prefecture: "20"
+    lat: 35.3268
+    lng: 137.7053
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:45 チャンネル/streamsでライブ1本（c5Bo8m9II7s）、watch: status=OK isLiveNow=true playableInEmbed=true。1カメラ1チャンネル運用なので channel_id 登録。公式一覧 https://www.iidacable.tv/livecamera/ に掲載。"
+
+  - id: curated-catv-cvn-toyooka-michinoeki
+    name: "豊丘村 道の駅とよおかマルシェ（豊丘村広報係・cvn掲載）"
+    operator: "豊丘村（配信: 飯田ケーブルテレビ ライブカメラ一覧）"
+    category: other
+    channel_id: "UCT6pawVDWlNGCkSIjGeJgaA"
+    prefecture: "20"
+    lat: 35.524612
+    lng: 137.949326
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:45 ライブ1本（iNr1Vi9zEak）status=OK isLiveNow=true embed=true。チャンネル名「豊丘村広報係ライブカメラ道の駅」。cvn公式一覧に掲載。台帳の豊丘村とよテラス（lw_3VOqM0fM）とは別カメラ。"
+
+  - id: curated-catv-inadani-hase-youtube
+    name: "南アルプスむら長谷 道の駅（伊那ケーブルテレビ YouTube）"
+    operator: "伊那ケーブルテレビジョン株式会社"
+    category: road
+    video_id: "PEzNv2kO-l8"
+    prefecture: "20"
+    lat: 35.810255
+    lng: 138.08257
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 watch: status=OK isLiveNow=true playableInEmbed=true。チャンネル UCM5h35VZ7R2x9K_GBO6ZnTQ（伊那ケーブルテレビ伊那市長谷道の駅ライブカメラ）。同地点の静止画 hase.jpg とは別枠（動画）。"
+
+  - id: curated-catv-kyoto-odawarabashi
+    name: "小田原橋（甲州市塩山）（峡東CATV）"
+    operator: "峡東ケーブルネット株式会社（峡東CATV）"
+    category: river
+    channel_id: "UCjaEe3O2OxS1vI_3wHjFr1A"
+    prefecture: "19"
+    lat: 35.709187
+    lng: 138.72963
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:00 公式ページは channel/…/live へリンク（サムネの旧動画IDは UNPLAYABLE）。/streams でライブ1本（NbxUBr6q6E0）、watch: status=OK isLiveNow=true playableInEmbed=true → channel_id 登録。甲州市内4か所。ページに転載・リンク制限なし。"
+
+  - id: curated-catv-kyoto-akaobashi
+    name: "赤尾橋（甲州市塩山）（峡東CATV）"
+    operator: "峡東ケーブルネット株式会社（峡東CATV）"
+    category: river
+    channel_id: "UCJ9ZE9InnZLIObZe_mSHDoQ"
+    prefecture: "19"
+    lat: 35.702812
+    lng: 138.738129
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:00 公式ページは channel/…/live へリンク（サムネの旧動画IDは UNPLAYABLE）。/streams でライブ1本（tzIhDJ0FVy8）、watch: status=OK isLiveNow=true playableInEmbed=true → channel_id 登録。甲州市内4か所。ページに転載・リンク制限なし。"
+
+  - id: curated-catv-kyoto-shobosho-kita
+    name: "消防署北側交差点（甲州市塩山）（峡東CATV）"
+    operator: "峡東ケーブルネット株式会社（峡東CATV）"
+    category: road
+    channel_id: "UC_480HdDaAiOWTLMKsLjRgA"
+    prefecture: "19"
+    lat: 35.699455
+    lng: 138.727921
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:00 公式ページは channel/…/live へリンク（サムネの旧動画IDは UNPLAYABLE）。/streams でライブ1本（jSvL77uFrNY）、watch: status=OK isLiveNow=true playableInEmbed=true → channel_id 登録。甲州市内4か所。ページに転載・リンク制限なし。"
+
+  - id: curated-catv-kyoto-yamato-keitokuin
+    name: "大和 景徳院（甲州市大和町）（峡東CATV）"
+    operator: "峡東ケーブルネット株式会社（峡東CATV）"
+    category: other
+    channel_id: "UC-WnTseCG4-O3H0ITOgdp3w"
+    prefecture: "19"
+    lat: 35.648556
+    lng: 138.830429
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:00 公式ページは channel/…/live へリンク（サムネの旧動画IDは UNPLAYABLE）。/streams でライブ1本（eyeIK26O_VQ）、watch: status=OK isLiveNow=true playableInEmbed=true → channel_id 登録。甲州市内4か所。ページに転載・リンク制限なし。"
+
+  - id: curated-vo-taxi-osaka-sta-sakurabashi
+    name: "JR大阪駅 桜橋口 タクシー乗場（大阪タクシーセンター）"
+    operator: "公益財団法人大阪タクシーセンター"
+    category: other
+    video_id: "jDCCynfjX9I"
+    prefecture: "27"
+    lat: 34.7014
+    lng: 135.4958
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:40 検証: status=OK isLiveNow=true playableInEmbed=true oEmbed 200 author=公益財団法人大阪タクシーセンター。同チャンネルは4本配信（新大阪①②は台帳収録済み）→ video_id"
+
+  - id: curated-vo-taxi-shin-osaka-waiting
+    name: "JR新大阪駅 タクシー待機場（大阪タクシーセンター）"
+    operator: "公益財団法人大阪タクシーセンター"
+    category: other
+    video_id: "n5DgxJ4fX5c"
+    prefecture: "27"
+    lat: 34.7324
+    lng: 135.5002
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:40 検証: status=OK isLiveNow=true playableInEmbed=true。乗場①②（台帳収録済み）とは別の待機場カメラ。待機場の正確な位置はレビュー時に映像で要確認"
+
+  - id: curated-vo-taxi-kix-t1
+    name: "関西国際空港 第1ターミナル タクシー乗り場（関西国際空港タクシー運営協議会）"
+    operator: "一般社団法人関西国際空港タクシー運営協議会"
+    category: other
+    video_id: "z-74c5RKNaw"
+    embed: false
+    prefecture: "27"
+    lat: 34.4347
+    lng: 135.244
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:40 検証: status=OK isLiveNow=true playableInEmbed=false oEmbed 401 → 誘導型。チャンネル UC-FbiTf6hR92dTmqBN1VwLA はT1/T2の2本配信 → video_id。タイトルに運営者名（一般社団法人関西国際空港タクシー運営協議会）明記"
+
+  - id: curated-vo-taxi-kix-t2
+    name: "関西国際空港 第2ターミナル タクシー乗り場（関西国際空港タクシー運営協議会）"
+    operator: "一般社団法人関西国際空港タクシー運営協議会"
+    category: other
+    video_id: "uuR6dyoCoyg"
+    embed: false
+    prefecture: "27"
+    lat: 34.4208
+    lng: 135.2326
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:40 検証: status=OK isLiveNow=true playableInEmbed=false oEmbed 401 → 誘導型"
+
+  - id: curated-vo-taxi-fukui-sta-east
+    name: "福井駅東口 タクシー乗場（福井県タクシー協会）"
+    operator: "一般社団法人福井県タクシー協会"
+    category: other
+    video_id: "rw9vvy8qKbU"
+    embed: false
+    prefecture: "18"
+    lat: 36.0615
+    lng: 136.2232
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:40 検証: status=OK isLiveNow=true playableInEmbed=false oEmbed 401 → 誘導型。チャンネル UCfqfhA7AQsCEjH8fU2tzF3A は6本同時配信（越前たけふ・敦賀西口・芦原温泉①は台帳/前回分に収録済み）→ video_id。台帳の「福井駅東口」は0件"
+
+  - id: curated-vo-taxi-tsuruga-sta-east
+    name: "敦賀駅東口 タクシー乗場（福井県タクシー協会）"
+    operator: "一般社団法人福井県タクシー協会"
+    category: other
+    video_id: "AXXYbrWUaL8"
+    embed: false
+    prefecture: "18"
+    lat: 35.6447
+    lng: 136.0755
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:40 検証: status=OK isLiveNow=true playableInEmbed=false oEmbed 401 → 誘導型。台帳の敦賀駅は西口（web_page, 旧ID 4iQYMcN6Djs）のみ"
+
+  - id: curated-vo-taxi-awara-onsen-sta-2
+    name: "芦原温泉駅 タクシー乗場②（福井県タクシー協会）"
+    operator: "一般社団法人福井県タクシー協会"
+    category: other
+    video_id: "9Si8-fRvCdI"
+    embed: false
+    prefecture: "18"
+    lat: 36.2153
+    lng: 136.2338
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:40 検証: status=OK isLiveNow=true playableInEmbed=false oEmbed 401 → 誘導型。①（EwfXRXo3tyI）は台帳収録済み、②は別アングル"
+
+  - id: curated-vo-tv-tbs-haneda-t2
+    name: "羽田空港 第2ターミナル（TBS NEWS DIG）"
+    operator: "TBSテレビ（TBS NEWS DIG）"
+    category: other
+    video_id: "dYpspgeXSaQ"
+    prefecture: "13"
+    lat: 35.5533
+    lng: 139.787
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の TBS 羽田は第1ターミナル（2f9NOSw-FqM）のみ。日テレ T2（2PIdi3Xa7TY）は別局"
+
+  - id: curated-vo-tv-ann-haneda-t2
+    name: "羽田空港 第2ターミナル（ANN/テレ朝 24時間配信）"
+    operator: "テレビ朝日（ANNnewsCH）"
+    category: other
+    video_id: "KMqigNv3LcY"
+    prefecture: "13"
+    lat: 35.5535
+    lng: 139.7868
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。ANNnewsCH は多数配信のため video_id"
+
+  - id: curated-vo-tv-kkt-kumamoto-city-1
+    name: "熊本市内 ライブ映像①（KKT熊本県民テレビ）"
+    operator: "熊本県民テレビ（KKT）"
+    category: other
+    video_id: "MAs18xtaP4M"
+    prefecture: "43"
+    lat: 32.8064
+    lng: 130.7266
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。同チャンネルに同名の熊本市内枠が2本（MAs18xtaP4M / gtLrD-Xz6Go）あり別アングルと思われる。台帳の KKT は牛深のみ"
+
+  - id: curated-vo-tv-kkt-kumamoto-city-2
+    name: "熊本市内 ライブ映像②（KKT熊本県民テレビ）"
+    operator: "熊本県民テレビ（KKT）"
+    category: other
+    video_id: "gtLrD-Xz6Go"
+    prefecture: "43"
+    lat: 32.8066
+    lng: 130.7268
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。①と同一映像ならレビューで片方を落とす"
+
+  - id: curated-vo-tv-kkt-aso
+    name: "阿蘇 ライブ映像（KKT熊本県民テレビ）"
+    operator: "熊本県民テレビ（KKT）"
+    category: volcano
+    video_id: "p9PSlQIFl9s"
+    prefecture: "43"
+    lat: 32.9486
+    lng: 131.1217
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の阿蘇26件は気象庁火山カメラ・RKK/KAB 等で KKT 枠は無し"
+
+  - id: curated-vo-tv-ybc-sakata
+    name: "現在の酒田市（YBC山形放送）"
+    operator: "山形放送（YBC）"
+    category: other
+    video_id: "OozjynN_Dd4"
+    prefecture: "06"
+    lat: 38.9145
+    lng: 139.8365
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true（YBC公式チャンネル UCq4EHq2s9H8hBPXZVOi9alw）。YBC NEWS チャンネルにも同内容の『現在の酒田市』oXrkEbPaj2o があるがミラーと判断。台帳の YBC は山形市内・米沢市内・山形空港のみ（YBC NEWS の山形市 ZZsOemx6CyE・山形空港 CNIT7lJ36x8 は公式ch枠と同一カメラのミラーとみて除外）"
+
+  - id: curated-vo-tv-tuy-yamagata-airport
+    name: "山形空港（TUYテレビユー山形）"
+    operator: "テレビユー山形（TUY）"
+    category: other
+    video_id: "rgss_LcepNE"
+    prefecture: "06"
+    lat: 38.4106
+    lng: 140.3673
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。『緊急情報はこちらでLIVE配信します』の注記があり、災害時は別映像に切り替わりうる。台帳の山形空港は YBC 枠のみ"
+
+  - id: curated-vo-tv-abs-akita-airport
+    name: "秋田空港 お天気カメラ（ABS秋田放送）"
+    operator: "秋田放送（ABS）"
+    category: other
+    video_id: "vMyKRCq3HMI"
+    prefecture: "05"
+    lat: 39.6136
+    lng: 140.2052
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の秋田空港は AKT（夜間は駅前へ切替）のみ、ABS 枠は無し"
+
+  - id: curated-vo-tv-abs-akita-port
+    name: "秋田港 お天気カメラ（ABS秋田放送）"
+    operator: "秋田放送（ABS）"
+    category: port
+    video_id: "4_NvXFvjfKM"
+    prefecture: "05"
+    lat: 39.7523
+    lng: 140.0612
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の秋田港は AAB・AKT4地点切替・セリオン静止画で、ABS 枠は無し"
+
+  - id: curated-vo-tv-aab-akita-airport
+    name: "秋田空港 情報カメラ（AAB秋田朝日放送）"
+    operator: "秋田朝日放送（AAB）"
+    category: other
+    video_id: "ERpPxOLDlqI"
+    prefecture: "05"
+    lat: 39.614
+    lng: 140.2056
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。AAB は秋田港枠が台帳収録済み、空港枠は未収録"
+
+  - id: curated-vo-tv-ktk-kenrokuen
+    name: "兼六園（テレビ金沢）"
+    operator: "テレビ金沢（KTK）"
+    category: scenic
+    video_id: "ZpzNv_hNxPE"
+    prefecture: "17"
+    lat: 36.5634
+    lng: 136.6616
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の兼六園（5uNwdsIUZOw）は kctnlc8 の個人/別運営で、テレビ金沢枠は未収録（台帳の KTK は内灘のみ）"
+
+  - id: curated-vo-tv-ktk-kanazawa-city
+    name: "金沢市（テレビ金沢 News LIVE チャンネル）"
+    operator: "テレビ金沢（KTK）"
+    category: other
+    video_id: "QdJWeODVjvA"
+    prefecture: "17"
+    lat: 36.5687
+    lng: 136.604
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。タイトルに News LIVE とあるがニュース番組ではなく定点映像（災害時は切替の可能性）"
+
+  - id: curated-vo-tv-ktk-wajima
+    name: "輪島市（テレビ金沢・被災地の天気）"
+    operator: "テレビ金沢（KTK）"
+    category: other
+    video_id: "rXF9kQldlao"
+    prefecture: "17"
+    lat: 37.3936
+    lng: 136.907
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の輪島は MRO 市街・HAB 輪島港（誘導型）で、テレビ金沢枠は無し"
+
+  - id: curated-vo-tv-mro-kanazawa-city
+    name: "金沢市 ライブカメラ（MRO北陸放送）"
+    operator: "MRO北陸放送"
+    category: other
+    video_id: "HmnLIvhyUZw"
+    prefecture: "17"
+    lat: 36.5577
+    lng: 136.6593
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の MRO は白山室堂・輪島・珠洲・福井のみ"
+
+  - id: curated-vo-tv-nst-nagaoka-sta
+    name: "長岡駅前（NST新潟総合テレビ）"
+    operator: "NST新潟総合テレビ"
+    category: other
+    video_id: "_GapP9nqEQQ"
+    prefecture: "15"
+    lat: 37.447
+    lng: 138.852
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の NST は新潟駅前（TUjtOgs_fCM）のみ。台帳に長岡駅は0件"
+
+  - id: curated-vo-tv-htb-sapporo-sta
+    name: "いまのJR札幌駅（HTB北海道テレビ）"
+    operator: "HTB北海道テレビ"
+    category: other
+    video_id: "gaNLXSEUVRw"
+    prefecture: "01"
+    lat: 43.0686
+    lng: 141.3508
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の札幌駅は STV（I1kJB1jdGo0）と HBC 静止画で、HTB 枠は未収録"
+
+  - id: curated-vo-tv-tulip-himi
+    name: "氷見市内 情報カメラ（チューリップテレビ）"
+    operator: "チューリップテレビ"
+    category: other
+    video_id: "u13B_yxQCB0"
+    prefecture: "16"
+    lat: 36.8499
+    lng: 136.9883
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳のチューリップテレビは富山駅南口・立山室堂のみ"
+
+  - id: curated-vo-tv-tulip-toyama-tower111
+    name: "富山市内 タワー111屋上 情報カメラ（チューリップテレビ）"
+    operator: "チューリップテレビ"
+    category: other
+    video_id: "ZAwOiSKL4Xc"
+    prefecture: "16"
+    lat: 36.7036
+    lng: 137.2163
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true"
+
+  - id: curated-vo-tv-fnn-rainbow-bridge
+    name: "お台場・レインボーブリッジ（FNNプライムオンライン）"
+    operator: "フジテレビ（FNNプライムオンライン）"
+    category: scenic
+    video_id: "kGG1CaeQ9oM"
+    prefecture: "13"
+    lat: 35.6365
+    lng: 139.7635
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の FNN は渋谷スクランブル交差点のみ。台帳のレインボーブリッジ4件は別運営"
+
+  - id: curated-vo-tv-stv-tokachidake
+    name: "十勝岳（STVニュース北海道・噴火警戒レベル3 監視ライブ）"
+    operator: "STVニュース北海道（札幌テレビ放送）"
+    category: volcano
+    video_id: "3COZXo_dOnA"
+    prefecture: "01"
+    lat: 43.431
+    lng: 142.6402
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。噴火警戒レベル3を受けた臨時枠のため、警戒解除で終了しうる（要定期点検）。台帳の十勝岳は気象庁火山カメラ2台と国交省望岳台静止画"
+
+  - id: curated-vo-tv-sbs-shimbashi
+    name: "東京・新橋駅方面（SBS静岡放送 東京支社カメラ）"
+    operator: "静岡放送（SBS NEWS6）"
+    category: other
+    video_id: "4OHc1tvQnCY"
+    prefecture: "13"
+    lat: 35.6631
+    lng: 139.7606
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の SBS は静岡県内（日本平・清水由比 等）のみ。新橋駅の定点は台帳に無し"
+
+  - id: curated-vo-tv-nbs-nagano-city
+    name: "長野市内の様子（NBS長野放送）"
+    operator: "長野放送（NBS）"
+    category: other
+    video_id: "qOWVxTCmnlE"
+    prefecture: "20"
+    lat: 36.6485
+    lng: 138.1948
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳に NBS の枠は無し（長野市街の放送局カメラは未収録）"
+
+  - id: curated-vo-tv-fbs-fukuoka-airport
+    name: "福岡空港の今の様子（FBS福岡放送）"
+    operator: "福岡放送（FBS）"
+    category: other
+    video_id: "uI8tWGe_FtA"
+    prefecture: "40"
+    lat: 33.5976
+    lng: 130.4441
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の福岡空港は TNC（切替）・KBC・民間で、FBS 枠は無し"
+
+  - id: curated-vo-tv-rkk-kumamoto-city
+    name: "熊本市内の風景（RKK熊本放送）"
+    operator: "RKK熊本放送（RKK NEWS DIG）"
+    category: other
+    video_id: "JC0_aImeb6o"
+    prefecture: "43"
+    lat: 32.7969
+    lng: 130.7031
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の RKK は熊本駅前・白川口・空港・草千里・牛深で、市内俯瞰の枠は無し"
+
+  - id: curated-vo-tv-rkk-hitoyoshi
+    name: "人吉市内 ライブカメラ（RKK熊本放送）"
+    operator: "RKK熊本放送（RKK NEWS DIG）"
+    category: other
+    video_id: "OYO_IZpUhOw"
+    prefecture: "43"
+    lat: 32.2129
+    lng: 130.754
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の人吉は国交省球磨川・熊本県河川のみで市街の放送局カメラは無し"
+
+  - id: curated-vo-tv-rkk-shirakawa
+    name: "熊本市内 白川ライブカメラ（RKK熊本放送）"
+    operator: "RKK熊本放送（RKK NEWS DIG）"
+    category: river
+    video_id: "u0zOoLKRLvs"
+    prefecture: "43"
+    lat: 32.8031
+    lng: 130.718
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。台帳の『熊本駅 白川口（RKK）』は駅前で別物"
+
+  - id: curated-vo-lc24-01-fc50295b
+    name: "札幌市東区本町一条（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCofJpaxmZXhT_9nmY5l2d-w"
+    prefecture: "01"
+    lat: 43.080231
+    lng: 141.379898
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 o1FpQkmEoZ4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-01-01df1cd5
+    name: "札幌市北区北七条西（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCGYM8bx_kWUOUCwVDOO4xDw"
+    prefecture: "01"
+    lat: 43.070175
+    lng: 141.353851
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 6-Gkin_ujRk status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-01-a69ef3ee
+    name: "札幌市白石区本通（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCeAHcMic3BJIz5s4VhMjLpw"
+    embed: false
+    prefecture: "01"
+    lat: 43.051102
+    lng: 141.403458
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 VB5RW3ZGN48 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-01-ab3bdcaf
+    name: "釧路市春採（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCDnzDR7x6b1iAyJK162_UBQ"
+    prefecture: "01"
+    lat: 42.970158
+    lng: 144.400345
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 o2sPj4THZMI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-01-7b0715c9
+    name: "帯広市西十六条南（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCX7H-tUpMizijkYY7Rg2E5g"
+    embed: false
+    prefecture: "01"
+    lat: 42.927509
+    lng: 143.173904
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 myc_75_sotw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-01-9cf3fac8
+    name: "網走市緑町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCDPcL7hccR_-xbagQ60kL7w"
+    prefecture: "01"
+    lat: 44.0224
+    lng: 144.249588
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 7MHyAtsMbNg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-01-f9ff5425
+    name: "苫小牧市表町交通状況（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCDLDUOVN77uM8TakoGeQdYw"
+    embed: false
+    prefecture: "01"
+    lat: 42.634953
+    lng: 141.602539
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 B9mHV4nJ_oc status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-01-e64311bd
+    name: "稚内市中央お天気（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCZCRg4W6eUuvFvtdtQjzEbg"
+    embed: false
+    prefecture: "01"
+    lat: 45.419991
+    lng: 141.673859
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 NrkvUVnu2No status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-01-59551bc8
+    name: "滝川市幸町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCKygUybHX3A3Dmew4-MnqnA"
+    embed: false
+    prefecture: "01"
+    lat: 43.568184
+    lng: 141.903976
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 wz4dDF55W2o status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-42ca854a
+    name: "青森市三内沢部（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UChJ_r9OzAKxLYLWIIeHU-cg"
+    embed: false
+    prefecture: "02"
+    lat: 40.815216
+    lng: 140.691498
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 2jFX9PIRyxI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-d8b7594a
+    name: "青森市八甲田山（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC6pfiSc9dUSgjSgWG0q8l3g"
+    embed: false
+    prefecture: "02"
+    lat: 40.834782
+    lng: 140.791794
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ocDZ-0wA7VY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-f7b091b3
+    name: "青森市大字横内字亀井（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCsGZG6Qz_8xyRGYCKl8vxBw"
+    prefecture: "02"
+    lat: 40.779076
+    lng: 140.765564
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 X1-NVkoY7gc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-b38508ca
+    name: "青森市新城（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC8UGS1K5jfWFyWUSoltgCWg"
+    embed: false
+    prefecture: "02"
+    lat: 40.816559
+    lng: 140.665283
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 S0lCmL2kiFI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-aa3a990e
+    name: "青森市新町野菅谷（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCCeCl0if14xrdqj1C62ULdA"
+    embed: false
+    prefecture: "02"
+    lat: 40.772636
+    lng: 140.752762
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 o1JBr4c4J9Y status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-d9519eb0
+    name: "青森市栄町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCXBadgIt35moOt4GYeILPoQ"
+    prefecture: "02"
+    lat: 40.824741
+    lng: 140.765518
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 3j5Uy-IRZkE status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-6db0902c
+    name: "青森市浪岡（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCpuiz0TQj6yr833zKF9f0YQ"
+    prefecture: "02"
+    lat: 40.704865
+    lng: 140.656631
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 1mnneZ-BNW4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-13a97a64
+    name: "青森市里見（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCl89UC5YG_SHxvpFe9gbbjg"
+    embed: false
+    prefecture: "02"
+    lat: 40.818798
+    lng: 140.710876
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 GDkNz97IU4Q status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-cbc350a6
+    name: "黒石市松原（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCUXNKR_-WDYOKCm3rkAIg6w"
+    embed: false
+    prefecture: "02"
+    lat: 40.659046
+    lng: 140.60524
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 KuNTcKnSyfY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-9bda2955
+    name: "五所川原市漆川（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCVbknFqML36XT80AgyWUkPQ"
+    prefecture: "02"
+    lat: 40.813328
+    lng: 140.463394
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 cWFIx3FYSCU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-5e2e5eff
+    name: "十和田市相坂高清水（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCrfpT3SiUF0SUJ4qKpOq9oA"
+    prefecture: "02"
+    lat: 40.631535
+    lng: 141.242905
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 FOrKD1iJOGw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-02-aa6758d7
+    name: "東津軽郡今別町津軽半島（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC2d1PpcZXwYNk834WXe7Axw"
+    prefecture: "02"
+    lat: 41.181942
+    lng: 140.481674
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 nklojdWYuo0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-03-e212cc4e
+    name: "盛岡市三ツ割からと石（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCCLD1w2BUDfY6z1R-2bxKvQ"
+    prefecture: "03"
+    lat: 39.738609
+    lng: 141.163635
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 eDD2OdXuESk status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-03-7b7a1a46
+    name: "盛岡市上堂（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCyZibsjDUPrrEgcSxXYWJAQ"
+    prefecture: "03"
+    lat: 39.724697
+    lng: 141.120407
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 auU_1r1PuG4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-03-ee2a9b4b
+    name: "盛岡市上堂県道220号線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCYit4rwH17h_-irr50W-2eQ"
+    prefecture: "03"
+    lat: 39.724697
+    lng: 141.120407
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 _PTH9Bt1EJo status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-03-d4525814
+    name: "盛岡市西青山（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCFmsT7nGvLqWJu_hcmig6pg"
+    embed: false
+    prefecture: "03"
+    lat: 39.722172
+    lng: 141.107574
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 0BCu-3n6lsw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-03-73350a53
+    name: "下閉伊郡田野畑村（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCpq-pVhtGrzQwvFcT16dcRw"
+    embed: false
+    prefecture: "03"
+    lat: 39.930458
+    lng: 141.88887
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 EtUE3oU8uxg status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-04-c9e7924d
+    name: "大崎市古川駅前大通（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCGfYqP31FAy5xjBzSp2AoNQ"
+    embed: false
+    prefecture: "04"
+    lat: 38.571709
+    lng: 140.965668
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 1GAszigf3-E status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-04-c36f2bc2
+    name: "富谷市日吉台（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCGNtAnKSHB6PFf7tmkEnPsg"
+    embed: false
+    prefecture: "04"
+    lat: 38.373573
+    lng: 140.863678
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 EKmVaPpQvzA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-04-5b7dc9f6
+    name: "柴田郡川崎町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCkoSi1OZNdKY_0NyfeE4ozw"
+    prefecture: "04"
+    lat: 38.177757
+    lng: 140.643158
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 9oclvov2fi8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-04-ee75890d
+    name: "柴田郡川崎町小野湯田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCWVy545MKmY8oqSgoQffWxQ"
+    prefecture: "04"
+    lat: 38.18676
+    lng: 140.6707
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 XtKn-5abpm0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-04-b015622b
+    name: "宮城郡利府町しらかし台（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UClgjI93X9tvF3MJUzX05UFA"
+    embed: false
+    prefecture: "04"
+    lat: 38.348534
+    lng: 140.962967
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 W3eyHVHsmH0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-5264f597
+    name: "秋田市寺内蛭根秋田北バイパス（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCh555Fwy-4sRUpLsuo3FTOQ"
+    embed: false
+    prefecture: "05"
+    lat: 39.727821
+    lng: 140.089722
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 YQ27bcQjgeo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-8f901ff2
+    name: "秋田市山王御休み通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCstnLd3ZX5q3dxCuYsugY6w"
+    prefecture: "05"
+    lat: 39.721066
+    lng: 140.102722
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 H7PSd1omZsg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-186c1fb8
+    name: "秋田市河辺松渕沼袋（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCOAj0VwI0NjiGGnbU_kn0NA"
+    embed: false
+    prefecture: "05"
+    lat: 39.646065
+    lng: 140.220032
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 idpkOeDLmI8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-1c9ec6e2
+    name: "能代市下野道路沿い（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC60XljUvK3w9eRf0p2ZGBgg"
+    prefecture: "05"
+    lat: 40.189064
+    lng: 140.039886
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Coo3FuHpR3Y status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-6c3334db
+    name: "鹿角市花輪字下花輪（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_cecrLpxMznrXwYFS2A7uw"
+    embed: false
+    prefecture: "05"
+    lat: 40.192661
+    lng: 140.789368
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 pdE0k8h3RYA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-cffcc85f
+    name: "鹿角郡小坂町小坂鉱山（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UChcADi0qFGxkjiajvqbZUZg"
+    embed: false
+    prefecture: "05"
+    lat: 40.341625
+    lng: 140.752808
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 w-yjz68B71Q status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-517cf6b1
+    name: "大仙市刈和野（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCIOb8eJ21ltcIVRTfji-vmg"
+    embed: false
+    prefecture: "05"
+    lat: 39.542557
+    lng: 140.371979
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 No_emaXdxgA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-cba25070
+    name: "大仙市大曲西根（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCW-ZMKua_TJI-X1zFK43oxQ"
+    embed: false
+    prefecture: "05"
+    lat: 39.444942
+    lng: 140.442429
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Pj8lKwmVYsw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-05-c24218e6
+    name: "大仙市川目月山（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCTqPctcw70k-WjhGf7GIQwg"
+    embed: false
+    prefecture: "05"
+    lat: 39.427395
+    lng: 140.49205
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 o6ijFBIBvoo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-e02466a8
+    name: "山形市あかねケ丘大通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC5sdwVvuFQu37XdZAGEOgPw"
+    embed: false
+    prefecture: "06"
+    lat: 38.250198
+    lng: 140.31131
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 94_aKze2gZI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-38a6c986
+    name: "山形市七日町国道112号線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCaM9_MIbop_Bp7lvtJWy4-Q"
+    prefecture: "06"
+    lat: 38.25309
+    lng: 140.337769
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 nqs18aBu5eM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-dd2f041b
+    name: "山形市南館大通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCtKP622RE2De5hF9DXCwqPA"
+    prefecture: "06"
+    lat: 38.234245
+    lng: 140.298706
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 81_2LsxsqO4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-674e5631
+    name: "山形市本町二丁目国道112号（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCn5VqP4zqgfchWKhsNZg1BQ"
+    embed: false
+    prefecture: "06"
+    lat: 38.25021
+    lng: 140.33905
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 JrBG50mIwo4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-178edab6
+    name: "山形市江俣（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCWx9KjjvMdQTMUJRmIQSBIA"
+    prefecture: "06"
+    lat: 38.274315
+    lng: 140.32341
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 BJBRPg542hM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-00605cb6
+    name: "山形市浜崎交差点（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC17s-Yxn80Dmtcu8-kDRWBw"
+    prefecture: "06"
+    lat: 38.284782
+    lng: 140.358932
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Td_lC65fLrQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-7cb7772d
+    name: "寒河江市本楯（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC2VOhxoDtS-tBew59-m3j_A"
+    prefecture: "06"
+    lat: 38.366676
+    lng: 140.294312
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 V2pFNuAe0_s status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-c1aeb1cf
+    name: "東村山郡中山町大字長崎（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCcCyV40xPWdvnxdUOBET6ag"
+    prefecture: "06"
+    lat: 38.332497
+    lng: 140.279572
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 pCpp4gguyLQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-057b1b76
+    name: "長井市本町長井大江線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCnimhn3B3d9G_fgJo4tHOBg"
+    prefecture: "06"
+    lat: 38.105648
+    lng: 140.036346
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 XDQejV3GyZY status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-03ad6115
+    name: "長井市栄町長井駅前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCSzM9GvmeBBCD2Z42IGxH2A"
+    prefecture: "06"
+    lat: 38.107697
+    lng: 140.037567
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 lLzrd-lkr7c status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-e3cb7d4c
+    name: "天童市乱川（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCfU4Jlxf6CW0aB4R_xCwlXw"
+    prefecture: "06"
+    lat: 38.387154
+    lng: 140.372543
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 etBI23u3-Xs status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-47724944
+    name: "南陽市椚塚（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC6IIJCTF3da-_fEF2QTFPvA"
+    prefecture: "06"
+    lat: 38.040771
+    lng: 140.171814
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 a_HVzNcIJDA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-19383c9d
+    name: "南陽市赤湯（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCTPIlfFFyjo3WSJJs86GWyA"
+    prefecture: "06"
+    lat: 38.057613
+    lng: 140.175369
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 QMo5rhHj8LA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-06-f73fa71a
+    name: "北村山郡大石田町田沢（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCVuk0-VLGI-rCtbU-t2BvZA"
+    embed: false
+    prefecture: "06"
+    lat: 38.560928
+    lng: 140.361176
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 pgFE3hVlIck status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-07-c0189aac
+    name: "郡山市安積町夜景（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCZhyv78bCXE4QVJleHvSy7Q"
+    embed: false
+    prefecture: "07"
+    lat: 37.346699
+    lng: 140.343201
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 BXbmA1vVIJ4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-07-ddffd938
+    name: "郡山市富久山町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCtayQ7YhAuOYIsz4rcDb4uw"
+    prefecture: "07"
+    lat: 37.431969
+    lng: 140.390396
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 dl3VMV67SII status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-07-7d127912
+    name: "郡山市田村町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCgaJyMdMhlzyijwbuLNtqtA"
+    prefecture: "07"
+    lat: 37.377148
+    lng: 140.410019
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 gyfSIEx2XCE status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-07-82db276c
+    name: "郡山市田村町古川第一池（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC1b8CcBJvEjYFBM4MYhQCmg"
+    prefecture: "07"
+    lat: 37.377148
+    lng: 140.410019
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 aZtLIuiRjvM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-07-861fa5bf
+    name: "郡山市豊田町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCLoN8GyafD6ygYabJiM6BqQ"
+    prefecture: "07"
+    lat: 37.397568
+    lng: 140.366196
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 wDj2anBHZ7A status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-07-d9b3c819
+    name: "いわき市平作町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCSRzlKrrBFa0UZ8MIohGbyQ"
+    prefecture: "07"
+    lat: 37.051796
+    lng: 140.901047
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Glf9jPHv4LA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-07-6f3cabd9
+    name: "いわき市平上荒川（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCkotx7bIbb8siMcQ1MijBGA"
+    embed: false
+    prefecture: "07"
+    lat: 37.029316
+    lng: 140.875717
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 59IxidZzDdU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-8fb48c72
+    name: "日立市水木町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC-_12j6GCr4MK9HzpSXIpyg"
+    prefecture: "08"
+    lat: 36.518494
+    lng: 140.631134
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 6qaKqioHjYA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-10239902
+    name: "古河市交差点（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCf98bJEqe5Lr39ATv9GvfAw"
+    prefecture: "08"
+    lat: 36.178242
+    lng: 139.75502
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 k3ZSHs5aPcc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-d2fab5de
+    name: "古河市東（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCCh9iZngnYQWn2ITv77XkmQ"
+    prefecture: "08"
+    lat: 36.196213
+    lng: 139.7117
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 A2zuVZeg430 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-cfc712cf
+    name: "古河市東野田古河線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCWiTpFzkGIBKcnqvfgzU5PA"
+    prefecture: "08"
+    lat: 36.196213
+    lng: 139.7117
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 jjkxPZyPXwA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-564bc1d9
+    name: "古河市西牛谷（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCUuT_waiH3-e5ts0MKbeWZA"
+    prefecture: "08"
+    lat: 36.201221
+    lng: 139.736755
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 wDvGRUVvyrc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-26762fce
+    name: "古河市西牛谷東部（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCG3A0KHnzBWZhJoWf5bgmOA"
+    prefecture: "08"
+    lat: 36.201221
+    lng: 139.736755
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 NoKJYHCkcUo status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-c93c7038
+    name: "古河市道路沿い（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCeryobNWZGiBhK9zItmflTw"
+    prefecture: "08"
+    lat: 36.178242
+    lng: 139.75502
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Rm14Y58s8KA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-9bb6b2e5
+    name: "古河市駒羽根（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC3Bm3r319wXXU9F4LdXAo5Q"
+    embed: false
+    prefecture: "08"
+    lat: 36.166512
+    lng: 139.758011
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 1hn1646xUX8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-377b034f
+    name: "笠間市下郷（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCwfxT58XHn3BAH9HyAgsEGQ"
+    prefecture: "08"
+    lat: 36.306374
+    lng: 140.283112
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 oGYnTQ_yjXs status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-842c459a
+    name: "筑西市田畑（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCnJHkR0Jp_YnfDCClTWr4vg"
+    prefecture: "08"
+    lat: 36.268238
+    lng: 140.043137
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 0rHxp7bh0f8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-659a57be
+    name: "東茨城郡城里町景観（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCf93aMYl3bStRsARoCF7fXw"
+    embed: false
+    prefecture: "08"
+    lat: 36.47924
+    lng: 140.376328
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Qrj2R156msY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-cfb18d70
+    name: "東茨城郡城里町石塚（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC3ZzMI_q4BBdA4QIHaxAWaA"
+    prefecture: "08"
+    lat: 36.476124
+    lng: 140.385803
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 7Q0YGyEnMcQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-08-0c83cab5
+    name: "猿島郡境町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC-4hCboFEeCdpnxtCVduCVg"
+    embed: false
+    prefecture: "08"
+    lat: 36.108456
+    lng: 139.794952
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 0-69q07XIfc status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-415b6809
+    name: "宇都宮市上野町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCdLa-h30or2fWhko-y-9bwg"
+    prefecture: "09"
+    lat: 36.592583
+    lng: 139.933807
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 h-O_OtMIBlw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-7048fefc
+    name: "宇都宮市江野町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCDwiOni85GLB8NEYIPUu5iw"
+    prefecture: "09"
+    lat: 36.560249
+    lng: 139.882233
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 OTBJdTI9ygg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-0f7f91af
+    name: "栃木市箱森町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC4TwKsr1RUig7VdjlKDVxFQ"
+    prefecture: "09"
+    lat: 36.391399
+    lng: 139.723038
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 30LEBwMYpX0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-4fdd1cc8
+    name: "栃木市箱森町栃木粕尾線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCEFcMMb6ROMz5OssJUHVAPw"
+    prefecture: "09"
+    lat: 36.391399
+    lng: 139.723038
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 cDiJspftQnw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-83c93316
+    name: "佐野市赤坂町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCOBgu6krDzfLgJhQgUz5O7g"
+    embed: false
+    prefecture: "09"
+    lat: 36.305305
+    lng: 139.566925
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 TPop44GxntQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-56fede83
+    name: "佐野市赤坂町交差点（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCqFUMW5mXf7W3A9jIC-4P3Q"
+    embed: false
+    prefecture: "09"
+    lat: 36.305305
+    lng: 139.566925
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 VZeVDUnSM7U status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-dd1ca216
+    name: "小山市犬塚（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCA0wD5MX06Hw30LCqPecz4A"
+    prefecture: "09"
+    lat: 36.307499
+    lng: 139.827881
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 RgGRmobYMOQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-430d3ccc
+    name: "小山市犬塚交差点（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC-gEJUghuwNpu34332iuCrw"
+    prefecture: "09"
+    lat: 36.307499
+    lng: 139.827881
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 fiz38A446dw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-9845dad7
+    name: "小山市神鳥谷（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCRSw-ly5AVRccjk-BzkFfrA"
+    prefecture: "09"
+    lat: 36.2785
+    lng: 139.799438
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 BoV8fpDScmI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-9a6dd7b2
+    name: "大田原市浅香（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCIy4XN4fxNNCYzKpzrTaVKA"
+    embed: false
+    prefecture: "09"
+    lat: 36.858459
+    lng: 140.012558
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Fxx0H0e2RXQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-0aeda0e2
+    name: "那須塩原市五軒町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCPrESq8to2DgCsKAZbsksrw"
+    embed: false
+    prefecture: "09"
+    lat: 36.889969
+    lng: 139.980408
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 62a2bV-LN7Y status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-b0ed07c8
+    name: "下都賀郡壬生町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCJOeNwpJ35_OruVJ_1PuOcg"
+    embed: false
+    prefecture: "09"
+    lat: 36.442177
+    lng: 139.814667
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 LtskjmyuRy0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-09-949c184c
+    name: "下都賀郡壬生町幸町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCKpSRb0dDyNo72230kqZ9bA"
+    prefecture: "09"
+    lat: 36.464226
+    lng: 139.82959
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Zin47Vmk0M4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-87fd1c3f
+    name: "前橋市岩神町大通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCQ4BfVyytnHTC98D49Piyzw"
+    embed: false
+    prefecture: "10"
+    lat: 36.397541
+    lng: 139.057755
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 taxbMZd8h_A status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-ffa544c1
+    name: "高崎市中居町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCkojEmG5dH1u_pWfz9XCqgA"
+    prefecture: "10"
+    lat: 36.320415
+    lng: 139.037994
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 EXDoeZpJHPQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-856ae558
+    name: "高崎市吉井町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCjr1mGeXZYjEy5LgdLucwfg"
+    embed: false
+    prefecture: "10"
+    lat: 36.23008
+    lng: 138.971786
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 KaMMlSTnqm8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-83f00613
+    name: "高崎市緑町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCOX4mHEvHdpsmUkhHjAiA0g"
+    prefecture: "10"
+    lat: 36.350552
+    lng: 139.002823
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 5uKDQ7ifKR8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-65cc713b
+    name: "高崎市西島町赤城山（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCi7Rl3qz3gW-fRSGtUc7PTA"
+    embed: false
+    prefecture: "10"
+    lat: 36.342258
+    lng: 139.047516
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 6e3CX-0f2Zo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-a00de64e
+    name: "伊勢崎市連取元町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCYfSUjLLNOSjWMRFjEcLIkQ"
+    prefecture: "10"
+    lat: 36.313828
+    lng: 139.181808
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 bAbKAlmAQfw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-a0fbca8b
+    name: "太田市新田市野井町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCyPWNK8r9lQPDuDScjge6zQ"
+    embed: false
+    prefecture: "10"
+    lat: 36.315395
+    lng: 139.301956
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 aFqoo40ceAo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-6cbc5cf2
+    name: "太田市新田早川町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCt_MLomHigH4mSgjn9jOMNw"
+    prefecture: "10"
+    lat: 36.29438
+    lng: 139.265564
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 uCSQ3vuN_5g status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-0f35ec97
+    name: "太田市西長岡町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCfak1EHL-BypUg-wTVpqPKw"
+    prefecture: "10"
+    lat: 36.353775
+    lng: 139.332108
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 sAlcqynWUkA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-10-3b025d3c
+    name: "太田市龍舞町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCV8ozQObYE8PG1dGNttDkYg"
+    prefecture: "10"
+    lat: 36.282673
+    lng: 139.416763
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 E6hxrAGl3Jw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-b1fce737
+    name: "さいたま市北区日進町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCro7uIZ5w3zICx31Sc2d4vw"
+    prefecture: "11"
+    lat: 35.92078
+    lng: 139.600037
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 I-grK7redmw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-38d4bdd2
+    name: "さいたま市西区（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCRaS69ZXrl1x-Knea5OwHvg"
+    prefecture: "11"
+    lat: 35.925198
+    lng: 139.579727
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Ud_oYy3uJHo status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-9d47f7d7
+    name: "さいたま市西区指扇（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UClEHi1BEnQxtmLSd_-5JgjQ"
+    prefecture: "11"
+    lat: 35.91404
+    lng: 139.579361
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Vx6BJKkn3A0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-2a0d83e9
+    name: "さいたま市西区西大宮（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCj0EhzPt7lMY42UuYekK4QA"
+    embed: false
+    prefecture: "11"
+    lat: 35.922859
+    lng: 139.577164
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 GYev1n4vtVY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-d26acd69
+    name: "川越市大正浪漫夢通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCExASDN78i5BDDgHWoy9QRQ"
+    prefecture: "11"
+    lat: 35.923122
+    lng: 139.485245
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 r68BiVq28RM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-5f96b482
+    name: "川越市熊野町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCf2uybR27vRBoBN4eLwhwdg"
+    embed: false
+    prefecture: "11"
+    lat: 35.875893
+    lng: 139.503235
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 lldu0RTn5oE status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-0e400c59
+    name: "熊谷市原島（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC817wncw7pT_Auh4n6uTfhA"
+    prefecture: "11"
+    lat: 36.164913
+    lng: 139.370468
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 D4onAwZcVQY status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-5860d474
+    name: "川口市東川口（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCpWKhZOOTcajs_7RK3WxNug"
+    prefecture: "11"
+    lat: 35.877792
+    lng: 139.741104
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 hUMX_9U9GRE status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-278f751c
+    name: "川口市東領家大通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCJJkhiGwX-ewva3Oo-bTm8A"
+    embed: false
+    prefecture: "11"
+    lat: 35.797615
+    lng: 139.746933
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 MVJwWfoZjog status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-977713dd
+    name: "川口市芝（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCYGmU2VFvK3713IRiivj1sw"
+    prefecture: "11"
+    lat: 35.833206
+    lng: 139.703339
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 i5grXFTMX1c status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-38312a0a
+    name: "東松山市石橋（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCgvWJYVsWsrwko5N_-FGwqA"
+    embed: false
+    prefecture: "11"
+    lat: 36.03233
+    lng: 139.377609
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Ay5REuikrWI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-e139d019
+    name: "深谷市西島町深谷駅前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCRPa4ZqA5JsZREv3gN7Fk8A"
+    embed: false
+    prefecture: "11"
+    lat: 36.192429
+    lng: 139.285309
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 uLOl9bIRaPs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-2299b4c7
+    name: "越谷市登戸町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UClOuEuFuHUVbQWY2hnbg_yA"
+    prefecture: "11"
+    lat: 35.872749
+    lng: 139.797821
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 PAwlR3NVjcQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-1301058f
+    name: "久喜市鷲宮（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCFBIxlikX8ZsSTrNPCBEiQQ"
+    embed: false
+    prefecture: "11"
+    lat: 36.100452
+    lng: 139.656448
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 BBnxE1-lvYM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-11-6954dd90
+    name: "富士見市西みずほ台（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCnNph6O0d8OCrlI7FqhkumA"
+    embed: false
+    prefecture: "11"
+    lat: 35.838268
+    lng: 139.548828
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 y-aEJSnB6ng status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-97f89d1e
+    name: "千葉市緑区おゆみ野中央バザール通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCESuvImXU1XNKLygCbqnbiw"
+    prefecture: "12"
+    lat: 35.55896
+    lng: 140.160385
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 syx_OczpoPg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-eeadcd3e
+    name: "千葉市美浜区幸町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCVEyPe3t4fDCxQ9m1RL4tEA"
+    prefecture: "12"
+    lat: 35.613102
+    lng: 140.100067
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 oRME8NLxj6Y status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-e1acc964
+    name: "松戸市金ケ作（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC9iy4iYZodoYcgFnoWp17ug"
+    embed: false
+    prefecture: "12"
+    lat: 35.803535
+    lng: 139.961594
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 SUwdMG8UQdY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-19ec3f0f
+    name: "松戸市高塚新田市川柏線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCcAKkOsNloYBA7hchxIKAYA"
+    prefecture: "12"
+    lat: 35.758316
+    lng: 139.937531
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Fkqbu5F2jcI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-909ccb9b
+    name: "野田市木間ケ瀬（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCvDVyWsJasAKW3jE4nMSYRQ"
+    embed: false
+    prefecture: "12"
+    lat: 36.022728
+    lng: 139.837173
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 QXexZGb0MT4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-df11795c
+    name: "茂原市早野（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCq9ZbvWlSkPbMkLlHFEDuNQ"
+    prefecture: "12"
+    lat: 35.415386
+    lng: 140.291855
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 JjQtBntCzT8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-1c392985
+    name: "流山市野々下（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCUrmmSNXWLPfJrVqbYz79XA"
+    embed: false
+    prefecture: "12"
+    lat: 35.859825
+    lng: 139.922989
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ICf8TJcvy6k status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-4a35dfc9
+    name: "八千代市島田台（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCAVY1ukJ02YQWLdSiejovJQ"
+    embed: false
+    prefecture: "12"
+    lat: 35.763767
+    lng: 140.090195
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 sAwTIQT-pw4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-f4d0a16d
+    name: "山武郡九十九里町粟生（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_E_W1eZrXD1Pwmy6MP9dFA"
+    embed: false
+    prefecture: "12"
+    lat: 35.523186
+    lng: 140.429489
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xqz2K88FHLU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-12-4632e95b
+    name: "山武郡九十九里町細屋敷産業道路（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCM4LqsVnFYccs1cVAdRVUUA"
+    embed: false
+    prefecture: "12"
+    lat: 35.515198
+    lng: 140.436005
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 uexQHwYccJY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-515eb796
+    name: "新橋駅新幹線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCYR27i2wj9PgsR9fYkpkFFw"
+    prefecture: "13"
+    lat: 35.667927
+    lng: 139.758179
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 bkHdzpp_D20 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-049f73a2
+    name: "港区海岸（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCy5bKIk1UN_qX92Z6AQ9Mdg"
+    prefecture: "13"
+    lat: 35.65538
+    lng: 139.761673
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 utKoDvZJlrI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-a61d67de
+    name: "港区赤坂（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCK1SHbanGOUZwBsUK3kmL0A"
+    embed: false
+    prefecture: "13"
+    lat: 35.668591
+    lng: 139.74234
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 L-YmEPpRnaY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-501c7648
+    name: "新宿区本塩町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCPvdGjF-i9rgcOdr3jqcIpQ"
+    embed: false
+    prefecture: "13"
+    lat: 35.69389
+    lng: 139.703613
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Ij_ACQtmU3A status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-c7705e78
+    name: "台東区上野（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCgwWRlWxSAuSNa2dPWVg9HA"
+    prefecture: "13"
+    lat: 35.706684
+    lng: 139.771393
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 YEQWVXhGmM0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-056acfc3
+    name: "江東区北砂（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCRlnjU5qdCG_5KiwU0c1sNQ"
+    prefecture: "13"
+    lat: 35.681446
+    lng: 139.823318
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 wEz03XypmT0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-1ab713f3
+    name: "江東区平野（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCpQj31W3w00LgussMOSz2lA"
+    prefecture: "13"
+    lat: 35.678265
+    lng: 139.799484
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 0bo8_eEQZQg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-95bbe821
+    name: "目黒区中町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCueUfs2beJaxDA5ju4FoXoQ"
+    prefecture: "13"
+    lat: 35.631229
+    lng: 139.697342
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 qovMpADtArk status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-eb51f87d
+    name: "大田区多摩川（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCn-lfT1fWCh7kAyVCvyiBVA"
+    embed: false
+    prefecture: "13"
+    lat: 35.563114
+    lng: 139.699417
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 itkEefB-BKM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-2f695c6b
+    name: "練馬区三原台（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCPFsRBB_Is0GkAUcXL305AQ"
+    prefecture: "13"
+    lat: 35.752815
+    lng: 139.604614
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 cXB52DmTIWw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-9901f36d
+    name: "練馬区三原台大通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_-tyYo_5zvlgDLGO2Picig"
+    prefecture: "13"
+    lat: 35.752815
+    lng: 139.604614
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 g-Q8D7GXzn8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-f0ccc0fa
+    name: "足立区千住旭町 北千住駅東口（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC0R4g0LcVAopWA93A18Jkdg"
+    prefecture: "13"
+    lat: 35.748875
+    lng: 139.807159
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 rbTpK1Xeq2I status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-4ad0e698
+    name: "八王子市北野町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UChw5NoCusmWMhpNn5qiXKtw"
+    embed: false
+    prefecture: "13"
+    lat: 35.650139
+    lng: 139.354721
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 a3rb65G3nw0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-388dc3bb
+    name: "武蔵野市中町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCycwu6t6T1l0pXmzXKYiQjA"
+    prefecture: "13"
+    lat: 35.704285
+    lng: 139.562241
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 t8iFpxFfFPU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-1498a27e
+    name: "昭島市福島町1丁目（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCAgjkxE9h2htpGmvps8EIBw"
+    prefecture: "13"
+    lat: 35.698105
+    lng: 139.382065
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 liIL3t1qtSQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-13-3fbadab3
+    name: "西多摩郡檜原村（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCu2dKDr2QkNFpnpYs5rQXlg"
+    prefecture: "13"
+    lat: 35.726822
+    lng: 139.14888
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 O-i4HPaBPAg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-ab9a84bf
+    name: "川崎市高津区宇奈根（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCtLTkUoReiaB8jQksza_O5g"
+    embed: false
+    prefecture: "14"
+    lat: 35.614929
+    lng: 139.603668
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 bux9aIRHqGQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-34e8d0fa
+    name: "相模原市中央区（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCN5AHh3CsY-CCBpnsIRw3Sw"
+    prefecture: "14"
+    lat: 35.571388
+    lng: 139.373337
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ACCZ-djSBm4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-559da456
+    name: "相模原市中央区村富星が丘線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCHauwhNjnPTn9B-6dvUzS0Q"
+    embed: false
+    prefecture: "14"
+    lat: 35.571388
+    lng: 139.373337
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 eADMQaKJua8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-cf359648
+    name: "相模原市南区南台サウザンロード（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCoSgbsgCeovaqXcfYDRGDJg"
+    prefecture: "14"
+    lat: 35.523491
+    lng: 139.423782
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 dXljcGAhhB0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-1fbe4da7
+    name: "小田原市城内ケルトお堀（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCHBOhqAOhWr0iOMuZBK4miQ"
+    prefecture: "14"
+    lat: 35.25106
+    lng: 139.154907
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 66g7D68-e8k status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-f584e04c
+    name: "小田原市栄町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCwvLW_7iljOtmDIalqaHWFg"
+    prefecture: "14"
+    lat: 35.254234
+    lng: 139.156479
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 b3YeYIsWosM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-6f68cb48
+    name: "小田原市江之浦（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCexRWOULT1Cp9h37RKiixlA"
+    prefecture: "14"
+    lat: 35.187325
+    lng: 139.129227
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Dls7MVwPyjQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-abfcaa74
+    name: "伊勢原市笠窪（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC6Qu5jpAIXUpmuxx-oTIxhQ"
+    embed: false
+    prefecture: "14"
+    lat: 35.386238
+    lng: 139.281845
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 uhgcMzYK_-0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-17eef75a
+    name: "足柄上郡 大井松田カートランドコース（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC0yBK57N2-O0sXyzwlyBIxQ"
+    embed: false
+    prefecture: "14"
+    lat: 35.326668
+    lng: 139.156387
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 yWA__-xaR0s status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-9f04a41d
+    name: "足柄下郡箱根町仙石原（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCau1O0L9FBRxXbHAsyxNwSw"
+    embed: false
+    prefecture: "14"
+    lat: 35.260601
+    lng: 139.004547
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 wHL5wpqih64 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-14-e044069e
+    name: "足柄下郡箱根町湯本駅前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UChv5Nj_I1K3NHfXlh59OZ8g"
+    prefecture: "14"
+    lat: 35.232288
+    lng: 139.105194
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 AkSp28ZKLA4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-02e554e9
+    name: "新潟市東区太平（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCy3WcAdptReDTtmAGqm6Kpw"
+    prefecture: "15"
+    lat: 37.945503
+    lng: 139.117981
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 88AdZSqA8GU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-ad4b73e4
+    name: "新潟市秋葉区北上新田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC0s2kFlLJCfLZF4jaoVdVOw"
+    embed: false
+    prefecture: "15"
+    lat: 37.813633
+    lng: 139.114548
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 YUHyrifsEmo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-b587c304
+    name: "新潟市秋葉区朝日（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCQLmaoERawb4hnKL-04POUQ"
+    embed: false
+    prefecture: "15"
+    lat: 37.763988
+    lng: 139.129639
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 9paBLoifb7c status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-990832f4
+    name: "新潟市西区小針（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCQAUq3WYdWlIBulOzPDjZ1Q"
+    embed: false
+    prefecture: "15"
+    lat: 37.887722
+    lng: 139.0047
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 uMn5rggkofA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-fcb970b8
+    name: "長岡市宮内町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCqrU0D1Z0huOsn0YqIFHv9g"
+    prefecture: "15"
+    lat: 37.42318
+    lng: 138.848892
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Zina_dL_zRw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-35030fb4
+    name: "長岡市殿町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCRzkgj4WEBSyOocZtaWVC2Q"
+    prefecture: "15"
+    lat: 37.444637
+    lng: 138.851898
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 8pxC2_ifE-M status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-296ed365
+    name: "長岡市要町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCS7oaGsC8Lg4RqKBUJAIXAw"
+    prefecture: "15"
+    lat: 37.423515
+    lng: 138.835938
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 CKLkQYc1TFo status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-b2b7566d
+    name: "三条市月岡（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCrkNUFPH5vaU8y_u9A6m1kg"
+    embed: false
+    prefecture: "15"
+    lat: 37.597389
+    lng: 138.983856
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 -qmXY1VPvTk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-f4810a7d
+    name: "三条市西大崎（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC0K-r8xBHG4Yeso2pXWBOdA"
+    embed: false
+    prefecture: "15"
+    lat: 37.613537
+    lng: 139.012695
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 U5wPbtR4Rzs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-8afb68a7
+    name: "柏崎市大字加納（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCw0e75RPIhpPJbWn8En3V5g"
+    prefecture: "15"
+    lat: 37.31781
+    lng: 138.613129
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 bKQzDMsK2Oc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-5d065136
+    name: "新発田市富塚町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCdmQT1zNgk2A4-spNx0XoTQ"
+    embed: false
+    prefecture: "15"
+    lat: 37.94614
+    lng: 139.305435
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 T2gfE7pMyGE status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-46a0b45f
+    name: "新発田市新富町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCRKmlehn7yxGUQOca2_4y7g"
+    embed: false
+    prefecture: "15"
+    lat: 37.954472
+    lng: 139.337463
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 QhcqC8iz4Tg status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-acf76fa7
+    name: "五泉市太田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCMW3xIGphu_fBjSvIHKK_Vw"
+    embed: false
+    prefecture: "15"
+    lat: 37.746193
+    lng: 139.186768
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 FSZsA0aRRY8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-70f88ca9
+    name: "佐渡市佐渡島（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCE-gBIUWTxW15u2VO5skYMA"
+    embed: false
+    prefecture: "15"
+    lat: 38.018604
+    lng: 138.368011
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 UmGixM9GyrY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-15-0cef4a68
+    name: "魚沼市堀之内（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCrS_42gl9970Y54zSUyoBMw"
+    embed: false
+    prefecture: "15"
+    lat: 37.224934
+    lng: 138.920166
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 P6ZCKb0yMJQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-16-724483be
+    name: "富山市五福（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCKxIipIp1ldTEWznk9PpplQ"
+    embed: false
+    prefecture: "16"
+    lat: 36.700943
+    lng: 137.192337
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 skoDxqhz1JE status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-16-961c2e94
+    name: "富山市五福富山大学前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC5eJ5q3aTEXNSdp5wWNnyfA"
+    prefecture: "16"
+    lat: 36.700943
+    lng: 137.192337
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Q34ajJaYIYM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-16-1e34d180
+    name: "富山市横内（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC00WNXmOrgIi9qMFERtmeGQ"
+    embed: false
+    prefecture: "16"
+    lat: 36.660194
+    lng: 137.259308
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 XtIZCUOhlOQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-16-826a52f8
+    name: "南砺市山見（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCXU3-yK9DcUcQ0NAHeUh-PQ"
+    embed: false
+    prefecture: "16"
+    lat: 36.561699
+    lng: 136.964264
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 KHA8phGGiAM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-17-457556a5
+    name: "金沢市弓取川県道8号沿い（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCprwLZ4gtbYlFUcMGiVefPQ"
+    embed: false
+    prefecture: "17"
+    lat: 36.611031
+    lng: 136.640106
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 hejrQQXTjCg status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-17-bc7b7e3b
+    name: "金沢市福久町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UChE8S-V3BN5P2FzeNdclYog"
+    prefecture: "17"
+    lat: 36.615337
+    lng: 136.677841
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Qc8P1QJBWO4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-17-1a6604a9
+    name: "金沢市諸江町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCPAFmBBVRiiMdRReLBfrHVw"
+    embed: false
+    prefecture: "17"
+    lat: 36.597404
+    lng: 136.645584
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 OyLMRz9wW-w status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-17-1531bdfa
+    name: "加賀市桑原町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCwRBihKTZkst30-dTe81r0A"
+    prefecture: "17"
+    lat: 36.313198
+    lng: 136.383911
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 _ITKv9U7hz4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-17-57dd3eec
+    name: "白山市乾町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCMQJSTjLCY_CvQHIvD7wdTw"
+    prefecture: "17"
+    lat: 36.523663
+    lng: 136.583054
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 nqxy0NRoi2s status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-17-e5371e48
+    name: "鳳珠郡穴水町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCYboq8awg8YQVKbZPZPkWxQ"
+    embed: false
+    prefecture: "17"
+    lat: 37.230942
+    lng: 136.912384
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 vIdV1ruUnRM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-18-6c85170b
+    name: "福井市大町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCnxGWcojnPsX_jqIGbbq5yA"
+    embed: false
+    prefecture: "18"
+    lat: 36.032047
+    lng: 136.220474
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 rO0nrXrrVH8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-18-19935e72
+    name: "福井市左内町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCcn8V9sDsMqKIjq-N4eWR3w"
+    embed: false
+    prefecture: "18"
+    lat: 36.059631
+    lng: 136.213074
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 8XMXlpH_oPM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-19-dad39fe4
+    name: "富士吉田市上吉田東（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCbczeVrxd1rEOKNYofrMGFg"
+    embed: false
+    prefecture: "19"
+    lat: 35.475945
+    lng: 138.799072
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Whv_Gr9A5nA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-19-990a6cc8
+    name: "富士吉田市中曽根（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCOZ9bDOtj5Ke2lvOV7vAM0A"
+    prefecture: "19"
+    lat: 35.484753
+    lng: 138.799789
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 sXKwl9G-WFA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-19-b10e2a81
+    name: "富士吉田市中曽根（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCGo2c3IHodmlSmJK_HCzBeg"
+    embed: false
+    prefecture: "19"
+    lat: 35.484753
+    lng: 138.799789
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xnDC34zkZmo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-19-bd3e5c8b
+    name: "南都留郡忍野村内野（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCWowPBctTS7cBwyVn07-XCA"
+    embed: false
+    prefecture: "19"
+    lat: 35.461575
+    lng: 138.870392
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 o-nkn_V3nnc status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-19-10b569f9
+    name: "笛吹市境川町前間田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCR2PHmQr2Ffy3QJgCxoCrEw"
+    embed: false
+    prefecture: "19"
+    lat: 35.598766
+    lng: 138.632706
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 yhboL7gqn8U status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-19-e8fe0f93
+    name: "上野原市上野原IC（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCFod_8qjE6MO5Jq9IWIAf7Q"
+    prefecture: "19"
+    lat: 35.63784
+    lng: 139.109634
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 zBmkRSzdxpU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-04db6da6
+    name: "長野市大字鶴賀権堂町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCaV63oXcWfvTCFaE39zO81A"
+    embed: false
+    prefecture: "20"
+    lat: 36.652729
+    lng: 138.187607
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 3JXnMUCmy1U status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-9b340657
+    name: "長野市小島田町お天気（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC063nguZr2_7Pg1tOmr-J_Q"
+    embed: false
+    prefecture: "20"
+    lat: 36.596783
+    lng: 138.187958
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xLUk7wcy6Vg status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-a3f4ad69
+    name: "長野市稲葉（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UChVhxyqTzM7ia1EtxmBP4lQ"
+    embed: false
+    prefecture: "20"
+    lat: 36.633194
+    lng: 138.207947
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 EuGLKC5L-YY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-7dbb4dd4
+    name: "松本市城山（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCIPyZF0kIrX1TzASiqNAylg"
+    embed: false
+    prefecture: "20"
+    lat: 36.249496
+    lng: 137.957794
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 GvVNhc5u8sA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-3961c632
+    name: "松本市平田東（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCzveOOdDNoywnxTm6QyazPg"
+    prefecture: "20"
+    lat: 36.202126
+    lng: 137.968323
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 rbV3fdIasOg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-c9cfd5b3
+    name: "松本市波田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCR8NAhQpwi_eRKF7byBP9jw"
+    prefecture: "20"
+    lat: 36.155022
+    lng: 137.796631
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 P4OA3tf_eCQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-14c05401
+    name: "上田市上田原（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC9FozY3xpMiV1RJYMzM3CAw"
+    embed: false
+    prefecture: "20"
+    lat: 36.389149
+    lng: 138.223312
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ir9SNuHBnDM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-d8b4a809
+    name: "岡谷市今井（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC438pNYtU0kpnor1vu1DC9A"
+    prefecture: "20"
+    lat: 36.066944
+    lng: 138.049454
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 lwNj0OMHKPA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-8eb04ff2
+    name: "岡谷市田中町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCK4mK0-uNfQadmuqHSo3Ukg"
+    embed: false
+    prefecture: "20"
+    lat: 36.059692
+    lng: 138.052902
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 yK6xrLMDkJI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-e5976fcd
+    name: "飯山市飯山谷街道（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCiiL7JeavQljbcrzZN8XVRA"
+    embed: false
+    prefecture: "20"
+    lat: 36.85236
+    lng: 138.356415
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 tiXkx0jhtsk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-20-3d02d723
+    name: "木曽郡上松町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC-xHOUJoIlfGaUCPk75jO0w"
+    embed: false
+    prefecture: "20"
+    lat: 35.782188
+    lng: 137.693237
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 IQh1K8vILaw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-6237d269
+    name: "静岡市清水区（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCLHq2666Xmx_tH5e66YXBAw"
+    embed: false
+    prefecture: "22"
+    lat: 35.015835
+    lng: 138.489716
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 jrTDTKM33W0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-483cd17d
+    name: "静岡市清水区船越（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCtgu0xCRKtCaxu5d6TsI9ew"
+    prefecture: "22"
+    lat: 34.998955
+    lng: 138.467224
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 S3W17OS_7hk status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-3809155b
+    name: "静岡市葵区安倍口新田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCXkaBOSmD8_QoMYGgxWEhIQ"
+    embed: false
+    prefecture: "22"
+    lat: 35.018963
+    lng: 138.359497
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 v2uVPCfTsts status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-85891d40
+    name: "静岡市駿河区石部（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCMygVqKD8lHrJ_v7C_f-rWA"
+    prefecture: "22"
+    lat: 34.90995
+    lng: 138.349731
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 H0pVJPoSpg8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-3870efe4
+    name: "三島市梅名（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCGuQRqfTXVgevDMzu2iCLRg"
+    embed: false
+    prefecture: "22"
+    lat: 35.093838
+    lng: 138.925644
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ixuIpfQR6Yc status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-de1ea485
+    name: "富士宮市中央町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCf80ivxlia8eTfyj4xJWMlg"
+    embed: false
+    prefecture: "22"
+    lat: 35.223049
+    lng: 138.614975
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ATtTLAbJ3oM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-3a833389
+    name: "御殿場市川島田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC3epV9Jnk2NRF9NrpYkCagg"
+    embed: false
+    prefecture: "22"
+    lat: 35.297329
+    lng: 138.924179
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ZmyjKzkRdOw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-731fc2fe
+    name: "御前崎市御前崎（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCOTzrKaVjOXRD6Yd75R_pcg"
+    prefecture: "22"
+    lat: 34.60442
+    lng: 138.216064
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 a0p0C-5MJwU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-3a400407
+    name: "御前崎市御前崎駿河湾方面（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCqXmoYw5GOHYe5DAYtwJh6Q"
+    prefecture: "22"
+    lat: 34.60442
+    lng: 138.216064
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 8LLGn--_Ehs status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-22-d3f16280
+    name: "駿東郡清水町中徳倉（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCz19RvXKwZvnZyB6wMwcRVQ"
+    prefecture: "22"
+    lat: 35.089836
+    lng: 138.895142
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 hnV4-gKRXdw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-23-66156058
+    name: "名古屋市中川区服部（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCbV7Z0ri-D0jsE5gNQuGv1Q"
+    prefecture: "23"
+    lat: 35.151382
+    lng: 136.816986
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 GCHb8ZeIPBk status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-23-f582bedc
+    name: "名古屋市北区如意（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCUo7tLdPMCQZua_l6mmIt5A"
+    prefecture: "23"
+    lat: 35.233582
+    lng: 136.918732
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 kY7xLwPV7NI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-23-b5c679a5
+    name: "名古屋市北区如意豊山町方面（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCL0xw6Ir2apIVIaq_ZxIq4A"
+    embed: false
+    prefecture: "23"
+    lat: 35.233582
+    lng: 136.918732
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 J8D0iOiKdvU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-23-d8f6f7cc
+    name: "名古屋市南区明治（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCvCU_ZbLKwxr4hvZO2ocoDA"
+    prefecture: "23"
+    lat: 35.114239
+    lng: 136.9039
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 YMF1OZ3YPl4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-23-a1337679
+    name: "名古屋市天白区野並（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCHS_cf4svIgX1HJl25wzWGQ"
+    prefecture: "23"
+    lat: 35.107841
+    lng: 136.95668
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 sVwPdmQz-tk status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-23-06ae9183
+    name: "犬山市大洞（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCb5NHBHkUibl5-XTY9bW59g"
+    embed: false
+    prefecture: "23"
+    lat: 35.339149
+    lng: 136.980362
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 WzicBC7HHH0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-23-5c4a31f6
+    name: "常滑市大野町 名鉄常滑線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCoMUBO51S9Rx_UzCFvCpscg"
+    prefecture: "23"
+    lat: 34.938297
+    lng: 136.825638
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 s_bvO7zClXg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-23-79b2a67f
+    name: "常滑市大野町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCU35mehF9L0i4XpBFYWvauA"
+    embed: false
+    prefecture: "23"
+    lat: 34.938297
+    lng: 136.825638
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 bMklpJE3Gjo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-59f34622
+    name: "津市あのつ台（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCJwN7QKPqgJYv4hIEh8-_TA"
+    prefecture: "24"
+    lat: 34.786041
+    lng: 136.49884
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 DAxr0Ww3b8E status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-ec0eac9c
+    name: "津市あのつ台（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCM7FNUkcxejE_mUbiOcE0eA"
+    embed: false
+    prefecture: "24"
+    lat: 34.786041
+    lng: 136.49884
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 0HuAX0-dl6E status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-a21278bc
+    name: "津市西丸之内伊賀街道（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCDQGloU2J3krCO1xuCeFXiQ"
+    embed: false
+    prefecture: "24"
+    lat: 34.718311
+    lng: 136.50351
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 PWktBbpUrg0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-e2ed6dbd
+    name: "四日市市小生町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCzRzXzPr8mHO33Cca-K2k7w"
+    embed: false
+    prefecture: "24"
+    lat: 34.975132
+    lng: 136.577286
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Un3QX_DixCo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-741a2dba
+    name: "四日市市蔵町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCJvuEzDw4U1bWNrrocZmBRQ"
+    prefecture: "24"
+    lat: 34.96537
+    lng: 136.633057
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 zi6-L-lAu-Y status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-4ea7f6bc
+    name: "四日市市青葉町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCAsJRFkehkDUFm34MNE6x0w"
+    prefecture: "24"
+    lat: 34.970669
+    lng: 136.581497
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 IxWggeyV28c status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-845165cc
+    name: "志摩市大王町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCv43QyrApeDG9BZ3UNOtBdg"
+    prefecture: "24"
+    lat: 34.27523
+    lng: 136.869858
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 CKLtgyb0Axo status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-5254557b
+    name: "志摩市大王町名田森林（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCS3klF25XBhBnaOUw_O53gA"
+    embed: false
+    prefecture: "24"
+    lat: 34.291096
+    lng: 136.889465
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 uzoPatCIJF0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-0357e194
+    name: "三重郡菰野町ミルクロード（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCO96WJirrHnhMIKz7jIrR8w"
+    embed: false
+    prefecture: "24"
+    lat: 35.02
+    lng: 136.507507
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 rLEfBffZ5GI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-dc999c93
+    name: "三重郡菰野町田口新田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCnj2cBRzbW3aQiIGj6C2JaQ"
+    prefecture: "24"
+    lat: 35.083557
+    lng: 136.519073
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 2fTQ49aL2I4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-24-772770c6
+    name: "多気郡明和町大淀寺前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC6tNPKq6eE3xUZmvlT3wjkA"
+    embed: false
+    prefecture: "24"
+    lat: 34.551865
+    lng: 136.649628
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Miq5Qtp07YI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-26-4d666627
+    name: "府京都市右京区京北周山町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCfFIv0FTqKR0vsIh94zZj2g"
+    prefecture: "26"
+    lat: 35.152298
+    lng: 135.644836
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 oOYi3hq9MrU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-26-409c7a0a
+    name: "府京都市左京区北白川久保田町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC6qB8_c5l6y1AJHL_7Rj4ug"
+    prefecture: "26"
+    lat: 35.028824
+    lng: 135.789215
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 NBjo5zPFyqg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-26-7190814a
+    name: "府京都市左京区大文字山（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCL0qeZAgAypio9e0DOyujmg"
+    prefecture: "26"
+    lat: 35.011669
+    lng: 135.768112
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 FRAso_BFR7Y status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-26-682da980
+    name: "府宮津市須津（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC4Byv5hc2ooIUEZWHZQXE-w"
+    prefecture: "26"
+    lat: 35.548054
+    lng: 135.155548
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 h9-8WlKjyG0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-26-d8969c4d
+    name: "府八幡市岩田高木（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCHnyFp-W5IR5RvRmSYzOHkA"
+    embed: false
+    prefecture: "26"
+    lat: 34.853893
+    lng: 135.744644
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Sru8ch4lKy0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-12aa7161
+    name: "大阪市平野区加美鞍作（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCSnJGv86J8m0MiYe7ojHPpA"
+    embed: false
+    prefecture: "27"
+    lat: 34.626167
+    lng: 135.566605
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ZtcGrkvEDG8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-23499092
+    name: "大阪市此花区常吉（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCqmDud1GKI9n_oyD_BUB9IA"
+    prefecture: "27"
+    lat: 34.675671
+    lng: 135.419403
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 aC4cRIcVkPY status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-213e3eed
+    name: "大阪市此花区舞洲方面（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCqz-EJYvEltpODq_o_PekdQ"
+    prefecture: "27"
+    lat: 34.683056
+    lng: 135.452225
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 DbbHhbGH40E status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-3ab1eef2
+    name: "大阪市浪速区日本橋（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCgm0E0vs45uKnQpgis7jeIA"
+    embed: false
+    prefecture: "27"
+    lat: 34.661987
+    lng: 135.506409
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 -mAN7LDSV_U status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-d67d9ae1
+    name: "大阪市西区九条（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCuQn9og_E79xhM0lek4xnbA"
+    embed: false
+    prefecture: "27"
+    lat: 34.67482
+    lng: 135.475693
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 qdf_0vV95Pw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-e677f4d9
+    name: "豊中市東寺内町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC8_sWjEcP5d1Bnn047w2Sjg"
+    embed: false
+    prefecture: "27"
+    lat: 34.774685
+    lng: 135.496735
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Vj90403YG4c status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-447ca048
+    name: "吹田市千里山月が丘（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC2vBDfWZRaUswH69Gfn-Mdw"
+    embed: false
+    prefecture: "27"
+    lat: 34.783909
+    lng: 135.509232
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 9YXKhEs0t58 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-5e8be38a
+    name: "枚方市北中振（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCrHA6f9BB3j0zS52ZCLzcJA"
+    prefecture: "27"
+    lat: 34.799114
+    lng: 135.632767
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Baa85VcOvF4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-62d57d86
+    name: "寝屋川市大利町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC5fBsz2KmMrVZxHCBx_HTew"
+    prefecture: "27"
+    lat: 34.766136
+    lng: 135.617569
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 JHB9WZqI-5g status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-d23bf847
+    name: "和泉市肥子町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCBqDGPbsj5peO1kTHScdzhg"
+    prefecture: "27"
+    lat: 34.488037
+    lng: 135.422043
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 jYCTCtCbTjs status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-afbac7c7
+    name: "摂津市千里丘（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCgyhg9emnHBYr3eq9CZW9Hw"
+    prefecture: "27"
+    lat: 34.792835
+    lng: 135.551529
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Ckd3U47qx9A status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-b165527f
+    name: "摂津市千里丘東千里丘駅前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCUb84vXmZH2lAh_7uATlJ7A"
+    prefecture: "27"
+    lat: 34.792164
+    lng: 135.553558
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 42YHNvH2-5k status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-8b5508f9
+    name: "東大阪市御厨西ノ町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCwKh9c_CKBJ2xvuAX3yaLyw"
+    embed: false
+    prefecture: "27"
+    lat: 34.672031
+    lng: 135.583206
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 6sOEl2UNinc status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-dbb77619
+    name: "東大阪市高井田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC7d3RDMrEgK3sWCTFtnlZ_w"
+    prefecture: "27"
+    lat: 34.673668
+    lng: 135.572739
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Ve1_YGaJGlg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-27-04f26138
+    name: "東大阪市高井田元町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC85_gAlEhxwRWd6A6klLm9w"
+    embed: false
+    prefecture: "27"
+    lat: 34.666542
+    lng: 135.573364
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 3tp97kzFqc0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-28-855510af
+    name: "尼崎市東難波町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCur1RoSJJHeq_epdpOKbHNg"
+    prefecture: "28"
+    lat: 34.733822
+    lng: 135.412811
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Yyy8uWAp7Hg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-28-edf3d532
+    name: "尼崎市開明町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_Q6FFgF-4oqTL3Ngskv3QA"
+    embed: false
+    prefecture: "28"
+    lat: 34.716274
+    lng: 135.417084
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 KUKChBFxo_w status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-28-d90aaf06
+    name: "加古郡稲美町国安天満大池（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCcZxQm-ojKs98j0_sfLKb6A"
+    prefecture: "28"
+    lat: 34.741467
+    lng: 134.910583
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 _WgDYh3-03M status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-28-c2e716dc
+    name: "加古郡稲美町国安天満神社（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC3teWaxXJ7EBIW73uQ9FiGw"
+    prefecture: "28"
+    lat: 34.741467
+    lng: 134.910583
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 REKBxCvLleE status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-29-13e2e090
+    name: "奈良市大宮町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_BUDXg-ERvXvyA4ekQDHKA"
+    prefecture: "29"
+    lat: 34.683472
+    lng: 135.819214
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 4ZnPJa51X0Q status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-29-649c3a79
+    name: "北葛城郡広陵町大字広瀬（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC-3wu9z21Y4gG7fguSD60Gg"
+    embed: false
+    prefecture: "29"
+    lat: 34.557491
+    lng: 135.758972
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ZjDbeHlymDA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-30-bcfda546
+    name: "和歌山市三葛（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UChg6Qn5kJKKzxjI8cSBQM7Q"
+    embed: false
+    prefecture: "30"
+    lat: 34.193146
+    lng: 135.187866
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 V-aBrhlW8P4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-30-5a2b424d
+    name: "和歌山市中之島（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCVYORYKzCGQzU5FYqTjlaUg"
+    embed: false
+    prefecture: "30"
+    lat: 34.241875
+    lng: 135.187805
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ow0aDp0QoUI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-30-5ac05f31
+    name: "和歌山市内原（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCT0geajh8YdBBXVGRFEjFSg"
+    embed: false
+    prefecture: "30"
+    lat: 34.17691
+    lng: 135.197708
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 SVWHa-6an8E status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-30-d8851b06
+    name: "和歌山市加太（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCJsh-bfr1Ii-3s3HKWN2hoA"
+    prefecture: "30"
+    lat: 34.27507
+    lng: 135.081161
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 7RFSbV84ZJ4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-30-01a7be51
+    name: "和歌山市加太海岸（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCgDpleZQrhKAB3ggOJRTr8g"
+    prefecture: "30"
+    lat: 34.27507
+    lng: 135.081161
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 zdSVcs0yMSI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-30-bba44586
+    name: "和歌山市加太海沿い（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCHdqS2sVRQi4LqXSlUj4yDg"
+    prefecture: "30"
+    lat: 34.27507
+    lng: 135.081161
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 GqIG3UwL_zA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-31-90acd011
+    name: "八頭郡八頭町井古（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCDQUxTLSRp48XxHfMe5S4Jg"
+    prefecture: "31"
+    lat: 35.428394
+    lng: 134.273651
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 rRI1DIGwHIU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-32-3eb0ffd2
+    name: "松江市東出雲町国道9号線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC6eR9hLT3qNKgEozIDs0P2A"
+    prefecture: "32"
+    lat: 35.436184
+    lng: 133.136505
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 MDmcJVxeCU8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-32-88950253
+    name: "松江市東出雲町揖屋（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCxYELOxxJrYcBH12gbU_87w"
+    prefecture: "32"
+    lat: 35.426456
+    lng: 133.153961
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 MnKJC66NDVM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-32-d0dd68c3
+    name: "出雲市一畑電車大社線 出雲大社前駅神門通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCxXv46NGVCKACeEepuPbPbA"
+    prefecture: "32"
+    lat: 35.367027
+    lng: 132.754669
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 S3FrxvbWpXg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-32-69374332
+    name: "出雲市白枝町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCk0MYJwsukQoJqUk08NA9mQ"
+    prefecture: "32"
+    lat: 35.365658
+    lng: 132.731689
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xJHkAqdhAdY status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-32-3b3a0f34
+    name: "出雲市白枝町高瀬川沿い（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_xjxvjOrg2GcOzwOewaaqQ"
+    embed: false
+    prefecture: "32"
+    lat: 35.365658
+    lng: 132.731689
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 fNnV7R_F2o8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-32-76502900
+    name: "益田市三宅町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC1j9TBj9fKp2BE5dY_zB8pg"
+    embed: false
+    prefecture: "32"
+    lat: 34.676739
+    lng: 131.855423
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 SaUms2MFAyQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-32-22d5a476
+    name: "大田市大田町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCXv33jGOi2EVQ3WE7A18psQ"
+    prefecture: "32"
+    lat: 35.180138
+    lng: 132.499252
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 T71YKk4vcEA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-33-06641ca3
+    name: "岡山市南区中畦（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC032e6PkTtAJyJ4TX4omaaQ"
+    embed: false
+    prefecture: "33"
+    lat: 34.58403
+    lng: 133.857346
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 saIBDJiebi4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-33-df624006
+    name: "岡山市南区当新田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCwT7epbejWq1p1w85GgNM4g"
+    embed: false
+    prefecture: "33"
+    lat: 34.622974
+    lng: 133.902603
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 PtdurQGzqe8 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-33-6cddc17f
+    name: "倉敷市二日市（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC5Mr3Er9Noc--iKxmsPn7tA"
+    embed: false
+    prefecture: "33"
+    lat: 34.590168
+    lng: 133.792953
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Iau_pm8gZgs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-33-d81ab9f2
+    name: "倉敷市真備町上二万（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCmi_jDhrBKgiI983ST77jQw"
+    embed: false
+    prefecture: "33"
+    lat: 34.606274
+    lng: 133.703461
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 gyYq9qFnLoU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-89df4c78
+    name: "広島市南区松川町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCUNL7GIRHxH6bJNskXwnA7w"
+    prefecture: "34"
+    lat: 34.390236
+    lng: 132.471664
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 3ZAbUuFl2lc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-4469433f
+    name: "尾道市因島お天気（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCrLxStFq3CzZ1d_KU_kKUcA"
+    embed: false
+    prefecture: "34"
+    lat: 34.296787
+    lng: 133.192078
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 2SkimG5EMx4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-a93d61fc
+    name: "尾道市東尾道（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCxlvjPrDJgz9JlPmbMOVBag"
+    embed: false
+    prefecture: "34"
+    lat: 34.422501
+    lng: 133.236755
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 eKHV6WsZRaE status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-689796c7
+    name: "尾道市栗原町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCgwsJXdYmzWd5HRZly0LM_A"
+    prefecture: "34"
+    lat: 34.430157
+    lng: 133.181641
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 lhaniy2jpL4 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-d386b34b
+    name: "尾道市栗原町新尾道駅前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCFkUsv-DANdCJgeu0L6NxyA"
+    prefecture: "34"
+    lat: 34.430157
+    lng: 133.181641
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 4-hF1YvFcbg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-50677361
+    name: "福山市神辺町十九軒屋（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCCwdg3w9V5MKYDnzTNYrgtA"
+    prefecture: "34"
+    lat: 34.54882
+    lng: 133.358917
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Vbp2CPtVliY status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-002c3167
+    name: "福山市三吉町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCviZkYsL1JgOlXlUoxA6bgg"
+    prefecture: "34"
+    lat: 34.49408
+    lng: 133.37294
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 5f0FrAEljQ0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-3b22a555
+    name: "福山市内海町海景（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCrwwdb3qgVz1ZD5SXi5_vGA"
+    embed: false
+    prefecture: "34"
+    lat: 34.357784
+    lng: 133.314316
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xW6pNHKpjTk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-023f326b
+    name: "福山市千田町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCoBVRRv2S7q5pY00V-mIB3A"
+    embed: false
+    prefecture: "34"
+    lat: 34.515965
+    lng: 133.360443
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 YPlqeOSG3Kw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-950996f6
+    name: "福山市多治米町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCcMAzuljgIkPLUjXzfsl_KA"
+    embed: false
+    prefecture: "34"
+    lat: 34.473492
+    lng: 133.38176
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 KB-bwJt2R1A status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-26dd59a7
+    name: "福山市御幸町森脇（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCjBGzEBIsyoB5BhtUT6e7dw"
+    embed: false
+    prefecture: "34"
+    lat: 34.532543
+    lng: 133.350861
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 H-FkDd4De90 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-ee1098f9
+    name: "福山市東手城町 手城橋（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC2_cl7s889S9jm-roiIrdJQ"
+    embed: false
+    prefecture: "34"
+    lat: 34.48613
+    lng: 133.403976
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 hMO6HMe2TnA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-572c9a3c
+    name: "福山市神辺町大通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC2wAFO1bc4WtbtRLxwnnrpw"
+    embed: false
+    prefecture: "34"
+    lat: 34.580601
+    lng: 133.391266
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 9t6pDlLm2Mw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-34-1f4d9071
+    name: "府中市元町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCZiEhpy4zQFKFFZcUlwcrgA"
+    embed: false
+    prefecture: "34"
+    lat: 34.575104
+    lng: 133.239182
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 BEobJysP1ZU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-35-36d24fe6
+    name: "山口市鋳銭司（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCRWvt7zz_iGnxEy-I1B_Apw"
+    embed: false
+    prefecture: "35"
+    lat: 34.086681
+    lng: 131.464523
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 d5HZBJTpzAY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-35-ea9fe595
+    name: "山口市鋳銭司花ヶ岳が見える（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCNMlm43K2PadT0B4ITiyq9g"
+    embed: false
+    prefecture: "35"
+    lat: 34.086681
+    lng: 131.464523
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xGa4uZqWZnk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-35-b38a16fa
+    name: "防府市台道（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UChHatcPcQrPs_ISHxqJX5NQ"
+    embed: false
+    prefecture: "35"
+    lat: 34.052521
+    lng: 131.480865
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 K9WIJJDxcII status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-b2c2918d
+    name: "徳島市応神町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC3ifsR-3ktCqERHtXHipROA"
+    prefecture: "36"
+    lat: 34.12236
+    lng: 134.523071
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 x-PfwxCAdgI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-eec14e28
+    name: "徳島市応神町古川戎子野（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCc64ahhsLrWNH6XRlVXZFjQ"
+    prefecture: "36"
+    lat: 34.103836
+    lng: 134.551132
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Uh_R0d9Xm1U status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-1bed56f8
+    name: "鳴門市鳴門町三ツ石（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCIlCVk3li_NMRSov-Bcm_vA"
+    embed: false
+    prefecture: "36"
+    lat: 34.203072
+    lng: 134.611786
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Bwzy460iK-I status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-189174c0
+    name: "鳴門市鳴門町三ツ石芙蓉山下（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCihbk9vbsvF1RRQVCoxaivQ"
+    embed: false
+    prefecture: "36"
+    lat: 34.205517
+    lng: 134.609283
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 z_v2lYrYoKo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-f5866e93
+    name: "小松島市赤石港（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCjDtZ7Ryondw8x_n9X4VG4A"
+    prefecture: "36"
+    lat: 33.982216
+    lng: 134.610535
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 MAiVxu1Nwzg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-767c9b26
+    name: "小松島市赤石町交差点（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCdijd6DjclUFZbeNwBOMvNQ"
+    embed: false
+    prefecture: "36"
+    lat: 33.982216
+    lng: 134.610535
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 4CXV0Dlu8Sw status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-b2e5787a
+    name: "阿南市日開野町谷田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCyL5Dj4aoB72VRgrFSxuoNg"
+    prefecture: "36"
+    lat: 33.917015
+    lng: 134.666748
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xIwDcM4vDSc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-5e0162da
+    name: "阿南市橘町江ノ浦（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCIfVz2UUzo_XN1z2cqOFJqw"
+    embed: false
+    prefecture: "36"
+    lat: 33.877407
+    lng: 134.636108
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 28c3ubIKD3o status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-36-4389fd8d
+    name: "阿南市橘町江ノ浦（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC9xjA_kzNer1TBB3dSndUZQ"
+    prefecture: "36"
+    lat: 33.877407
+    lng: 134.636108
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 7XbZUULFMd0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-dc5d5aa0
+    name: "高松市一宮町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCZbJIi2oDFiNgvszTved_Lw"
+    prefecture: "37"
+    lat: 34.287231
+    lng: 134.024963
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 cmdGi58Ssb8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-38abd03b
+    name: "高松市多肥上町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCdVjxJ-8g_9FNOniepEeLLw"
+    prefecture: "37"
+    lat: 34.28289
+    lng: 134.055756
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 bJqfxjVfIqU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-584d08cf
+    name: "善通寺市大麻山（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCq-b0bdbI4YKHAqrPDRjktg"
+    prefecture: "37"
+    lat: 34.202145
+    lng: 133.799377
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 EHAo1uVOchQ status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-fe11ad2f
+    name: "三豊市詫間町お天気（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCLd2pKS_fkZTI-sSDsGRxaA"
+    prefecture: "37"
+    lat: 34.271408
+    lng: 133.633026
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 mu5M_ALt7Lw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-9504475b
+    name: "三豊市詫間町瀬戸内海（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_S3wdk3RsrBhP7nI_o21sw"
+    prefecture: "37"
+    lat: 34.271408
+    lng: 133.633026
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 WkBlKUcKkFs status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-8ffdce46
+    name: "三豊市詫間町詫間（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC7DstFXq0KU7rWu__UXO5EQ"
+    prefecture: "37"
+    lat: 34.22858
+    lng: 133.656921
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 1_9xe1s-5_E status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-153b8f25
+    name: "小豆郡土庄町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCJ-RlT0Dg5ilcshKxPS3lig"
+    embed: false
+    prefecture: "37"
+    lat: 34.486652
+    lng: 134.188629
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 NwTx1zoN_lk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-3825b609
+    name: "綾歌郡綾川町北（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCd4CmnBB_Fc_Aj7z29gsQ1g"
+    prefecture: "37"
+    lat: 34.235703
+    lng: 133.92749
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 R8o65olp1Aw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-37-82cd33e6
+    name: "綾歌郡綾川町陶（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCm2JgiDr52l9AougsOUX16w"
+    embed: false
+    prefecture: "37"
+    lat: 34.257202
+    lng: 133.949463
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 E7tyhS5JU68 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-a76eb2b0
+    name: "松山市下伊台町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCVMT7mEP3J-5i3z0LkIeTYg"
+    prefecture: "38"
+    lat: 33.873539
+    lng: 132.799896
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Bwk9t-IKrl8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-1cc47ef7
+    name: "松山市別府町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCXectqgwIeJpnb6Ao64tstg"
+    embed: false
+    prefecture: "38"
+    lat: 33.846241
+    lng: 132.720871
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 4Mg-2tyGZOI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-8bbe549c
+    name: "松山市朝生田町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCN7s_deDQaOEQi4wBCwP9kA"
+    embed: false
+    prefecture: "38"
+    lat: 33.823193
+    lng: 132.773712
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 knFga1L_7aU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-82a73c57
+    name: "松山市束本松山環状線（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCPBztwBhuMQcj77p9koK_pA"
+    embed: false
+    prefecture: "38"
+    lat: 33.832745
+    lng: 132.787186
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 uepVMVhgJ6o status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-09f3737f
+    name: "松山市東方町お天気（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCSHesQCrvg-axrULquz0IsQ"
+    prefecture: "38"
+    lat: 33.763088
+    lng: 132.820618
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 PWYacJFp1aw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-0939827b
+    name: "宇和島市伊吹町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC-Wr-H2NVHOLYtw5AM7R14w"
+    prefecture: "38"
+    lat: 33.234585
+    lng: 132.579285
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 BAYVeFJJUuw status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-3515b70f
+    name: "新居浜市宇高町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCPSMhIsur3ljZeCKM7_KnCQ"
+    embed: false
+    prefecture: "38"
+    lat: 33.968681
+    lng: 133.304993
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 TYfO3W0s5yQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-06719d73
+    name: "伊予郡松前町浜（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCFLo7tbxEmygr8TzG4wV04g"
+    embed: false
+    prefecture: "38"
+    lat: 33.7892
+    lng: 132.701736
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 -jdKp5cojQs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-38-11fdcebd
+    name: "伊予郡松前町 伊予鉄松前駅前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCQo8gxUSiaunfb998G3ahPA"
+    prefecture: "38"
+    lat: 33.7892
+    lng: 132.701736
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 uXklMCGR-m0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-39-c089923a
+    name: "高知市仁井田（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC3FFNoHLo6_djlPnVPD8nYA"
+    embed: false
+    prefecture: "39"
+    lat: 33.517902
+    lng: 133.56926
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 RHcX1deHbcs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-39-5c344951
+    name: "香美市土佐山田町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCdquRw0nlqYFX6OohdCVLOw"
+    embed: false
+    prefecture: "39"
+    lat: 33.605453
+    lng: 133.673141
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Ox5X71c_vSU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-2159246c
+    name: "福岡市博多区東光（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCV33ecz9kTh9NVE0wxoXikQ"
+    embed: false
+    prefecture: "40"
+    lat: 33.592419
+    lng: 130.425735
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 KKpgcOHRIKo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-78424bf2
+    name: "福岡市城南区（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCpqzqC0VFFwIOMldmgOpK_g"
+    embed: false
+    prefecture: "40"
+    lat: 33.575657
+    lng: 130.369919
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 r_o5ukZtBQo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-bc7c810d
+    name: "福岡市城南区長尾（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCy1T3PBIcLJwQ6VdFMKfHtQ"
+    embed: false
+    prefecture: "40"
+    lat: 33.559181
+    lng: 130.379822
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 SGlwQsJZyOM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-2af33d7c
+    name: "福岡市早良区有田交差点（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC0dq9RWEH47FqoNKI_qN4Zg"
+    embed: false
+    prefecture: "40"
+    lat: 33.564346
+    lng: 130.336121
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 MEyfWLbal3E status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-a2729449
+    name: "福岡市東区箱崎（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCqsD8L4ZoaEZC8DsRA3Puxg"
+    prefecture: "40"
+    lat: 33.61618
+    lng: 130.423553
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 lWjY5AzWX3w status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-d0f3d72e
+    name: "福岡市西区大字吉武（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCYkOfPzuSR_-M7g4w_loBPA"
+    prefecture: "40"
+    lat: 33.532169
+    lng: 130.305984
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 cdfpZRaMjI0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-1f49b1b3
+    name: "久留米市善導寺町交差点（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCCv-RgELNW8azCyZ9r6tA5Q"
+    embed: false
+    prefecture: "40"
+    lat: 33.327278
+    lng: 130.622574
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 89YQzYt36EI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-ba98f6bb
+    name: "八女市豊福（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC-GUYV-5Tv62fIg3pLYKSFg"
+    embed: false
+    prefecture: "40"
+    lat: 33.232269
+    lng: 130.57724
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 J08C1IW5zPI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-e4335ddd
+    name: "大川市榎津（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC6AhSl7w0WV1V6PhFV0CSaQ"
+    embed: false
+    prefecture: "40"
+    lat: 33.204521
+    lng: 130.378143
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 bFRdupnYsw4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-f87a773d
+    name: "大野城市白木原（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCoZCnUgy19jha4lMUwmRvIA"
+    prefecture: "40"
+    lat: 33.524643
+    lng: 130.479187
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 s3rEosXk58s status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-e09e461a
+    name: "嘉麻市平（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCDP8Qr-S2KLpobAtJFVZC4g"
+    prefecture: "40"
+    lat: 33.588013
+    lng: 130.740692
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 86y6KeHKZYI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-40-bd387a36
+    name: "嘉麻市平田畑（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCnmDNnvla2XG8ffO1vi_HOw"
+    embed: false
+    prefecture: "40"
+    lat: 33.588013
+    lng: 130.740692
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 nRVh7sOkjOk status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-d19a5a89
+    name: "佐賀市JR佐賀駅南口（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC8ZBqoUk2bFyIQ_Wc4_xMDw"
+    embed: false
+    prefecture: "41"
+    lat: 33.263512
+    lng: 130.300888
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Dn3fj0GPBX0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-65bb5593
+    name: "佐賀市伊勢町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCvlpcs1v9pxUb_azPhm1J8A"
+    embed: false
+    prefecture: "41"
+    lat: 33.252045
+    lng: 130.289032
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 XVFnKSQFHrQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-8419add0
+    name: "佐賀市兵庫南（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC59KnUTtmRQWAMF5VhcIgmA"
+    embed: false
+    prefecture: "41"
+    lat: 33.260902
+    lng: 130.315765
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 zvZW37uqVTA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-3fd0c2bb
+    name: "佐賀市兵庫南（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC40mbK5S9ZBTfandDsoiksw"
+    prefecture: "41"
+    lat: 33.260902
+    lng: 130.315765
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Ft33O9QisI8 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-76d926fe
+    name: "佐賀市大財（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCUJqOy7IxNgttQ0MOoJTQ8Q"
+    embed: false
+    prefecture: "41"
+    lat: 33.257217
+    lng: 130.302856
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 2BtsnzQdUMg status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-e32507c1
+    name: "佐賀市天神（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCoks5PCZHu1yFG5OUax8ShQ"
+    prefecture: "41"
+    lat: 33.258652
+    lng: 130.295517
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 57eL8EH-9_Y status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-bc791669
+    name: "佐賀市愛敬町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC1JijA8j_0w-jIyxpSjFflw"
+    embed: false
+    prefecture: "41"
+    lat: 33.260193
+    lng: 130.301346
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 cH2nHSywv5o status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-05df08ef
+    name: "佐賀市木原（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC0mezHji98oj6NRMBx098yA"
+    prefecture: "41"
+    lat: 33.244129
+    lng: 130.317383
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 k2UBFfyC03c status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-4174cf12
+    name: "佐賀市本庄町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCIOdgZxBFHhDrgMcgPCKJmw"
+    prefecture: "41"
+    lat: 33.224899
+    lng: 130.288223
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 H-jZlySkmGc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-3ed729fb
+    name: "佐賀市水ケ江古賀橋（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCss5rzyL8vHqM4JSwPmvCKw"
+    embed: false
+    prefecture: "41"
+    lat: 33.249069
+    lng: 130.304947
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 90PupanEd0k status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-75861075
+    name: "佐賀市神野（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCT8AqYOuvqdi1xEpzCV-lvA"
+    embed: false
+    prefecture: "41"
+    lat: 33.26276
+    lng: 130.291367
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 8oRRsBRa4wI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-2eef27c1
+    name: "佐賀市神野東駅北通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCE6nKt3aILHasrKz_zf2-Og"
+    embed: false
+    prefecture: "41"
+    lat: 33.262791
+    lng: 130.294632
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 AapwnCgXX4M status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-26ca11a9
+    name: "佐賀市神野西（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCbS9I6V-kB2SNHG7Is2RsfQ"
+    prefecture: "41"
+    lat: 33.26276
+    lng: 130.291367
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 1YkRMEEYLFM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-7ab08855
+    name: "佐賀市鍋島町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCJP2fTPOAk-aAU1lPpwGKhQ"
+    prefecture: "41"
+    lat: 33.286568
+    lng: 130.27562
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 J_rjditMAss status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-1e895955
+    name: "佐賀市開成（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_Ke_XGrvJ2OKzfpVCKqq8w"
+    embed: false
+    prefecture: "41"
+    lat: 33.266792
+    lng: 130.279022
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 44jknIILKtU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-54272fff
+    name: "佐賀市駅前中央（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCnyzpCWfHUcRKz2L37APIHA"
+    embed: false
+    prefecture: "41"
+    lat: 33.263355
+    lng: 130.297928
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 axgh9txx0rU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-a0c4dd84
+    name: "佐賀市駅南本町中央大通り（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCsFUhkPcL9-meM5IC9aBMmw"
+    embed: false
+    prefecture: "41"
+    lat: 33.26096
+    lng: 130.298553
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ellPBxBYMe0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-dbf8dc18
+    name: "鳥栖市本通町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCM-4ZnSwgeZWfd3I_TE9NVQ"
+    embed: false
+    prefecture: "41"
+    lat: 33.373653
+    lng: 130.51593
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 aWz9zPhQUAs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-0407422c
+    name: "武雄市武雄町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCxcQsfawFrrWYVclX07Kh9Q"
+    embed: false
+    prefecture: "41"
+    lat: 33.186192
+    lng: 130.035828
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 rgh2co6ombg status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-72466a29
+    name: "小城市三日月町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCP8m8xAKRI9YjDlBV0SD8EQ"
+    embed: false
+    prefecture: "41"
+    lat: 33.280773
+    lng: 130.228928
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 nvvWJOq2Y8A status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-41-93923e70
+    name: "杵島郡江北町山口（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCra-sjFr0GFIsxPE9gLzXNw"
+    embed: false
+    prefecture: "41"
+    lat: 33.235771
+    lng: 130.151459
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 7fBNtH9FIlY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-42-0ccf7ca4
+    name: "佐世保市有福町早岐瀬戸（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCrZM434zoy_KGPqL3lcPuHA"
+    embed: false
+    prefecture: "42"
+    lat: 33.131599
+    lng: 129.781036
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 jCypOKBc7Ac status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-42-66d2a9e8
+    name: "長崎市北陽町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCygn9sYcQnl0f6EHLIsLWeg"
+    embed: false
+    prefecture: "42"
+    lat: 32.811115
+    lng: 129.82251
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 fMjZAHY6VjE status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-42-34ad98d9
+    name: "長崎市大橋町長崎大学前（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC1ROB8sf-P2qg41AgJA132A"
+    prefecture: "42"
+    lat: 32.7817
+    lng: 129.862595
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 sskVs6_vT-0 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-42-341ebc03
+    name: "諫早市貝津町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCir20snDEjXIJ8ZpAPenXXQ"
+    prefecture: "42"
+    lat: 32.831711
+    lng: 130.021576
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 A8genIz0JZs status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-43-df7a652e
+    name: "熊本市北区下硯川（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC9MMvkfuF5-SbvYHEhAGo5Q"
+    embed: false
+    prefecture: "43"
+    lat: 32.847759
+    lng: 130.705307
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 J1HhdGzOpYs status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-43-f34c487b
+    name: "熊本市南区近見（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCdpvGwSESOrvjPxwiwKX6Xg"
+    prefecture: "43"
+    lat: 32.768398
+    lng: 130.690414
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 _JQKsXsSe4o status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-43-d4f16922
+    name: "葦北郡芦北町花岡（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCLYixb5KMPIXqKShmFy4WeA"
+    embed: false
+    prefecture: "43"
+    lat: 32.292454
+    lng: 130.510193
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 P0nyYw63jWY status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-44-535f2cbe
+    name: "大分市高城本町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCEYiYPCaFHoX9kmxOHxDEzw"
+    prefecture: "44"
+    lat: 33.243816
+    lng: 131.656967
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 BAnED9ua7Dg status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-44-d6474d09
+    name: "大分市新貝（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCx7CUAfpLdunhWOcLCNBvZg"
+    prefecture: "44"
+    lat: 33.248558
+    lng: 131.647034
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 5ven6XQwozM status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-44-86ce1204
+    name: "大分市高城本町原川（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCfl9lHgCmjzeiCcFEIC0dWA"
+    prefecture: "44"
+    lat: 33.243816
+    lng: 131.656967
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ZimnriXqu4I status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-45-c8a3ea26
+    name: "宮崎市熊野木花駅（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC_CHLVHFArP1IO9k7kXNCLw"
+    embed: false
+    prefecture: "45"
+    lat: 31.832977
+    lng: 131.441925
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 oiAJd479ieo status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-45-d6423248
+    name: "小林市細野（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCddWL6bh4mdxDC5ffieBJ5A"
+    embed: false
+    prefecture: "45"
+    lat: 31.961666
+    lng: 130.948776
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xg11M4Y_QWU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-45-afdf4fad
+    name: "小林市細野小林駅北（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCmMG86Imqc1b_Lh9KhY2UGg"
+    prefecture: "45"
+    lat: 31.961666
+    lng: 130.948776
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 VXx9D79S_24 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-45-aade6af5
+    name: "日向市 日豊本線日向市駅（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCdXIAPsUb-KHeyf0i1pANXw"
+    prefecture: "45"
+    lat: 32.424835
+    lng: 131.625549
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 8p_ZKH-p-04 status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-45-949f9f86
+    name: "日向市大王町1丁目（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCEa3HJZQIFf7SH96McRgPzA"
+    prefecture: "45"
+    lat: 32.442394
+    lng: 131.629272
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 OOdTD1IENzc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-45-fd47f55d
+    name: "日向市財光寺（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCAB7Iu3aqTLUYwySiZMTsUg"
+    prefecture: "45"
+    lat: 32.404671
+    lng: 131.626419
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 IqNzSdlxxfY status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-45-1aa95672
+    name: "串間市寺里（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC6bwIuGZ_Y1frlAbaBFG5rw"
+    embed: false
+    prefecture: "45"
+    lat: 31.45772
+    lng: 131.21727
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 FKOMoiQiZZ0 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-45-6f2f2450
+    name: "えびの市大明司（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC5gG_KwzI8IQYNTtQekKs8g"
+    prefecture: "45"
+    lat: 32.049656
+    lng: 130.836319
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 G8Ry9LeNRig status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-46-de499417
+    name: "鹿児島市城山町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCRALjq9bdLtS9ervr45sIcw"
+    embed: false
+    prefecture: "46"
+    lat: 31.598068
+    lng: 130.552124
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 UgYV_dQENDI status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-46-d81da657
+    name: "鹿児島市田上（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UClqiZswrbILTdMqEwSwT3qw"
+    prefecture: "46"
+    lat: 31.577456
+    lng: 130.531067
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 _Y01NcpQHio status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-46-767e355c
+    name: "鹿児島市鴨池（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCCkrUv5qvai4Fq9LodMk88g"
+    embed: false
+    prefecture: "46"
+    lat: 31.56572
+    lng: 130.548203
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 TmEXEBClDtM status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-47-0abe4abf
+    name: "那覇市字識名お天気（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCHmmmuYL1lhaTSvbz_YcrKg"
+    prefecture: "47"
+    lat: 26.207251
+    lng: 127.704437
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 8unFr-sSejI status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-47-28900710
+    name: "那覇市首里汀良町モノレール（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCn-Vvet39ErgdWj_iRxWDZw"
+    prefecture: "47"
+    lat: 26.21991
+    lng: 127.722466
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 ZsiUvatQ5jU status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-47-a882dcfa
+    name: "那覇市首里汀良町（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UC1Wns73YTUfbJ30ALITbaPA"
+    embed: false
+    prefecture: "47"
+    lat: 26.21991
+    lng: 127.722466
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 Rn6hLdq15PU status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-47-2ee57533
+    name: "浦添市城間（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCO_IpSnNx-4FsDbZKFczwoQ"
+    embed: false
+    prefecture: "47"
+    lat: 26.255545
+    lng: 127.708862
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 5KTc5Fk0xAQ status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-47-e3a3db12
+    name: "糸満市西崎（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCmpTM75vXCxt4yPpQraEIqA"
+    prefecture: "47"
+    lat: 26.134123
+    lng: 127.665459
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 oXr_3PojqCA status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-47-e8ea3720
+    name: "うるま市州崎（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCU2Q1oGMqU1TWF8nIuoY4gg"
+    embed: false
+    prefecture: "47"
+    lat: 26.334312
+    lng: 127.853928
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 xBuD5D9FXPA status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-47-6f05bb76
+    name: "島尻郡与那原町字与那原（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCK7PK288TSvchouKhnTvcnA"
+    prefecture: "47"
+    lat: 26.204723
+    lng: 127.751228
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 _uk6NLa6cvc status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"
+
+  - id: curated-vo-lc24-47-4aebd2ca
+    name: "島尻郡（livecamera24）"
+    operator: "livecamera24.jp（運営会社未特定。2026-09-21 千葉市・盛岡・津の同系をユーザー判断で採用済み）"
+    category: other
+    channel_id: "UCAYGbiu07S1Qeb15bNV0_6g"
+    prefecture: "47"
+    lat: 26.191133
+    lng: 127.728523
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 検証: 現行枠 VFRVlFKie8A status=OK isLiveNow=true playableInEmbed=true。日替わり枠のため channel_id。about に info@livecamera24.jp"

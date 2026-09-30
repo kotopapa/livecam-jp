@@ -38044,10 +38044,13 @@ cameras:
     page_url: "https://www.chichibuji.gr.jp/live-station/"
     note: "2026-09-30 全国多角調査(transport_culture)。60秒で内容変化（22:15）。台帳に西武秩父駅は無し"
 
+  # 2026-09-30 富士河口湖町の二次使用禁止明記に合わせて誘導型に（KTV 防災カメラ14台と同じ扱い）
   - id: curated-tc-kawaguchiko-sta-town
     name: "河口湖駅前（富士河口湖町 防災カメラ）"
     operator: "富士河口湖町"
     category: other
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/ekimae.html"
     prefecture: "19"
     lat: 35.4985
     lng: 138.7662
@@ -38627,3 +38630,3945 @@ cameras:
     image_url: "http://180.43.84.117:50000/SnapshotJPEG?Resolution=640x480"
     page_url: "http://www.inae-bird-watching-place.org/"
     note: "2026-09-30 全国多角調査(industry_season)。ラムサール条約登録湿地の野鳥。2回取得で変化。"
+
+
+  # ===== 2026-09-30 全国多角調査 鉱脈の追加（CATV/自治体ネットカメラ/日中再点検・港/運営者横展開）=====
+
+  - id: curated-vd-tptc-aomi-1
+    name: "青海縦貫線（中防方面）東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6135
+    lng: 139.7845
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=1&id=1&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=AOMI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。2026-09-30 05:50 JST image/jpeg 148KB→147KB、70秒で内容変化。タイムスタンプ焼き込み。約1分更新"
+
+  - id: curated-vd-tptc-aomi-2
+    name: "青海縦貫線（テレコムセンター方面）東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.614
+    lng: 139.7843
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=1&id=2&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=AOMI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 141KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-aomi-3
+    name: "青海三丁目交差点付近 東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6121
+    lng: 139.7855
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=1&id=3&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=AOMI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 118KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-aomi-5
+    name: "青海公共埠頭背後道路2 東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.615
+    lng: 139.788
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=1&id=5&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=AOMI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 133KB、70秒で内容変化。背後道路1（id=4）は「調整中」プレースホルダのため保留"
+
+  - id: curated-vd-tptc-aomi-6
+    name: "「青海一丁目」交差点付近（中防方面）東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6248
+    lng: 139.7773
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=1&id=6&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=AOMI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 158KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-aomi-7
+    name: "青海公共埠頭車両待機場 東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6172
+    lng: 139.7898
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=1&id=7&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=AOMI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 103KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-shinagawa-1
+    name: "品川コンテナセンター前 東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6215
+    lng: 139.7565
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=2&id=1&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=SHINAGAWA"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 165KB、70秒で内容変化。プレビュー確認済み（埠頭前の交差点）"
+
+  - id: curated-vd-tptc-shinagawa-2
+    name: "品川埠頭背後道路（芝浦方面）東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6222
+    lng: 139.756
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=2&id=2&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=SHINAGAWA"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 95KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-shinagawa-3
+    name: "品川埠頭背後道路（大井方面）東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6195
+    lng: 139.7572
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=2&id=3&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=SHINAGAWA"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 122KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-shinagawa-4
+    name: "東京入管前道路 東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.621
+    lng: 139.7548
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=2&id=4&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=SHINAGAWA"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 147KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-shinagawa-5
+    name: "品川埠頭線 東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6205
+    lng: 139.757
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=2&id=5&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=SHINAGAWA"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 185KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-2
+    name: "「北部陸橋上」交差点 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5985
+    lng: 139.7565
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=2&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 86KB、70秒で内容変化。台帳の cameraid=3&id=1（北部陸橋南側方面）とは別カメラ"
+
+  - id: curated-vd-tptc-oi-3
+    name: "北部陸橋上交差点方面 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5985
+    lng: 139.757
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=3&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 148KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-4
+    name: "北部陸橋下交差点周辺 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.598
+    lng: 139.758
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=4&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 117KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-5
+    name: "「八潮二丁目」交差点 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6039
+    lng: 139.7637
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=5&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 166KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-6
+    name: "みなとが丘ふ頭公園付近 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.599
+    lng: 139.765
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=6&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 119KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-7
+    name: "「大井税関前」交差点 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.596
+    lng: 139.766
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=7&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 61KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-8
+    name: "「大井税関前」交差点2 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5958
+    lng: 139.7663
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=8&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 82KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-9
+    name: "「大井中央陸橋」交差点方面 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5935
+    lng: 139.7605
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=9&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 69KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-10
+    name: "「野鳥公園東」交差点(城南島方面) 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.587
+    lng: 139.766
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=10&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 131〜144KB、70秒では同一だったが100秒後の再取得で内容変化（更新間隔がやや長い）。camera.js では地図座標が空欄"
+
+  - id: curated-vd-tptc-oi-11
+    name: "「野鳥公園東」交差点(城南島方面・拡大) 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5872
+    lng: 139.7662
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=11&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 108〜121KB、100秒後の再取得で内容変化"
+
+  - id: curated-vd-tptc-oi-12
+    name: "「野鳥公園東」交差点付近(国道357号方面) 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5868
+    lng: 139.7655
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=12&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 154KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-13
+    name: "南部陸橋下交差点付近 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5865
+    lng: 139.762
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=13&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 147KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-14
+    name: "「南部陸橋東詰」交差点付近（大井埠頭方面）東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.587
+    lng: 139.764
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=14&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 96KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-15
+    name: "「南部陸橋東詰」交差点付近（環七交差点方面）東京港埠頭カメラ"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.5872
+    lng: 139.7636
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=15&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 66KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-oi-17
+    name: "大井時間貸しシャーシプール 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6
+    lng: 139.759
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=17&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 80KB、70秒で内容変化。物流施設の待機場（道路情報寄り）"
+
+  - id: curated-vd-tptc-oi-18
+    name: "大井時間貸しシャーシプール２ 東京港埠頭カメラ（大井埠頭）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.6003
+    lng: 139.7585
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=3&id=18&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=OI"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 129KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-chubo-1
+    name: "中央防波堤外側ふ頭方面 東京港埠頭カメラ（中防エリア）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: port
+    prefecture: "13"
+    lat: 35.5975
+    lng: 139.796
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=5&id=1&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=CHUBO"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 71KB、70秒で内容変化。プレビュー確認済み（コンテナヤードと道路）"
+
+  - id: curated-vd-tptc-chubo-2
+    name: "中防大橋方向 第二航路海底トンネル 東京港埠頭カメラ（中防エリア）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: road
+    prefecture: "13"
+    lat: 35.599
+    lng: 139.794
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=5&id=2&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=CHUBO"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 50KB、70秒で内容変化"
+
+  - id: curated-vd-tptc-chubo-3
+    name: "ゲートブリッジ方向 東京港埠頭カメラ（中防エリア）"
+    operator: "東京港埠頭株式会社（東京港総合ポータル）"
+    category: port
+    prefecture: "13"
+    lat: 35.5985
+    lng: 139.797
+    image_url: "https://www.portal-tokyoport.jp/livecamera/image?cameraid=5&id=3&w=1280&h=880"
+    page_url: "https://www.portal-tokyoport.jp/information.html?tab=camera&cid=CHUBO"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 55KB、70秒で内容変化。id=4 ゲートブリッジ(中央防波堤外側ふ頭方面) は「調整中」プレースホルダのため保留"
+
+  - id: curated-vd-gomi-nishio-cc-waiting
+    name: "西尾市クリーンセンター 搬入車待機所"
+    operator: "西尾市（西尾市クリーンセンター）"
+    category: other
+    prefecture: "23"
+    lat: 34.8424
+    lng: 137.0786
+    image_url: "http://www.katch.ne.jp/~ncckgk8112/webcam01.jpg"
+    page_url: "http://www.katch.ne.jp/~ncckgk8112/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 33KB、Last-Modified 2026-09-30 05:56 JST（当日）。ページは「30秒ごとに自動更新」だが 05:56〜06:05 の3回取得は同一（開場時間外は更新が止まる可能性）。転載文言なし。http のみ"
+
+  - id: curated-vd-gomi-tajiri-seisou-entrance
+    name: "田尻町清掃施設 焼却場入口（泉佐野市田尻町清掃施設組合 第二事業所）"
+    operator: "泉佐野市田尻町清掃施設組合"
+    category: other
+    prefecture: "27"
+    lat: 34.3923
+    lng: 135.2939
+    image_url: "http://sanotajiri.la.coocan.jp/cctv/snap_c1.jpg"
+    page_url: "http://sanotajiri.la.coocan.jp/cctv/webcam.htm"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 133KB、40秒で内容変化、Last-Modified 05:55 JST。注意: ページの JS は stop.jpg が存在すると outofservice.jpg（停止中表示）に切り替える仕組みで、05:55 時点は stop.jpg が存在＝ページ上は「停止中」表示。snap_c1.jpg 自体は更新継続。運営者が時間外の表示を意図的に止めている可能性があるのでレビュー時に判断（受入時間内のみ表示にするか）。http のみ"
+
+  - id: curated-vd-gomi-iwatechubu-cc
+    name: "岩手中部クリーンセンター 現在の混雑状況"
+    operator: "岩手中部エコクリエイション株式会社（岩手中部広域行政組合 岩手中部クリーンセンター運営）"
+    category: other
+    prefecture: "03"
+    lat: 39.3335
+    lng: 141.0204
+    feed_type: web_page
+    feed_url: "http://iwatechubu-eco.co.jp/"
+    image_url: "http://iwatechubu-eco.co.jp/"
+    page_url: "http://iwatechubu-eco.co.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。静止画 http://iwatechubu-eco.co.jp/cgi-bin/photo_get_top.cgi は image/jpeg 28KB・45秒で内容変化（トップページ埋め込み）。ただしサイトポリシーが『個人の私的使用…の範囲を超えて複製・改変・配布することは事前許可なく禁止』と明記 → 誘導型（トップページへのリンク）。許諾が得られれば静止画化可"
+
+  - id: curated-vd-chitose-aquarium-underwater
+    name: "サケのふるさと千歳水族館 千歳川水中観察窓"
+    operator: "サケのふるさと千歳水族館（千歳市）"
+    category: healing
+    prefecture: "01"
+    lat: 42.8338
+    lng: 141.659
+    image_url: "http://chitose-river.cam.miemasu.net:50001/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://chitose-aq.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。image/jpeg 22KB、30秒で内容変化（05:45 JST）。公式トップの「現在の水中観察窓の様子」（miemasu.net:50001）。夜明け前は白濁で被写体は見えにくい（水中カメラ）。2026-08-15 のお知らせ: 千歳川の風景カメラ（:50002）は機器不具合で停止中、水中観察窓カメラは復旧済み。http のみ・Panasonic 型"
+
+  - id: curated-vd-sizenken-69-washuzan
+    name: "鷲羽山からみた瀬戸内海（鷲羽山ビジターセンター）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: coast
+    prefecture: "33"
+    lat: 34.435
+    lng: 133.8086
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=69"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=69"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=69"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-30 05:00。台帳の KCT鷲羽山情報（YouTube）とは別カメラ。瀬戸大橋・備讃瀬戸"
+
+  - id: curated-vd-sizenken-70-goshikidai
+    name: "五色台からみた瀬戸内海（五色台ビジターセンター）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: coast
+    prefecture: "37"
+    lat: 34.3565
+    lng: 133.92
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=70"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=70"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=70"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-30 05:00。台帳に五色台 0件"
+
+  - id: curated-vd-sizenken-71-kurushima-kaikyo
+    name: "来島海峡（糸山公園・来島海峡展望館）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: coast
+    prefecture: "38"
+    lat: 34.1136
+    lng: 132.977
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=71"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=71"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=71"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-30 05:00。台帳の 今治港付近来島海峡南側（YouTube）とは別地点"
+
+  - id: curated-vd-sizenken-122-yoshinoyama
+    name: "吉野山上千本から望む吉野桜と町並み"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "29"
+    lat: 34.3595
+    lng: 135.8594
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=122"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=122"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=122"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-30 05:00。台帳の 金峯山寺（誘導型）とは別カメラ。桜期の価値高"
+
+  - id: curated-vd-sizenken-123-kyoto-gyoen
+    name: "京都御苑（九條家の遺構・拾翠亭）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "26"
+    lat: 35.0187
+    lng: 135.7605
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=123"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=123"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=123"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-30 04:27。台帳に京都御苑 0件"
+
+  - id: curated-vd-sizenken-125-manza
+    name: "万座しぜん情報館から見た空吹（万座温泉）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: volcano
+    prefecture: "10"
+    lat: 36.6408
+    lng: 138.504
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=125"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=125"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=125"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-29 21:00（05:00 時点で未更新。夜間停止か更新間隔が長い。日中に更新再開を確認）。台帳に万座 0件。草津白根山の噴気地帯「空吹」"
+
+  - id: curated-vd-sizenken-49-agowan
+    name: "志摩半島横山からみた英虞湾（横山展望台）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: coast
+    prefecture: "24"
+    lat: 34.3179
+    lng: 136.8118
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=49"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=49"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=49"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-29 20:00（05:00 時点で未更新。日中に再確認）。台帳に英虞湾 0件"
+
+  - id: curated-vd-sizenken-117-fuji-hokuroku-flux
+    name: "富士北麓からみた富士山2（富士山北麓フラックス観測サイト）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4437
+    lng: 138.7622
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=117"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=117"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=117"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-30 05:00。no=40（富士北麓1）は過去画像。台帳に「富士北麓」0件"
+
+  - id: curated-vd-sizenken-126-tsumagoi-asama
+    name: "嬬恋村からみた浅間山（仙之入ポケットパーク）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: volcano
+    prefecture: "10"
+    lat: 36.5812
+    lng: 138.5517
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=126"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=126"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=126"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-30 05:00。台帳の 浅間山火口（嬬恋村, YouTube）とは別カメラ"
+
+  - id: curated-vd-sizenken-43-tanukiko
+    name: "田貫湖畔からみた富士山（田貫湖ふれあい自然塾）"
+    operator: "環境省（生物多様性センター）インターネット自然研究所"
+    category: scenic
+    prefecture: "22"
+    lat: 35.3413
+    lng: 138.5537
+    feed_type: web_page
+    feed_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=43"
+    image_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=43"
+    page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=43"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。最新画像 2026-09-30 05:00。台帳の田貫湖4件は田貫湖キャンプ場（tanukiko.com）の別運営カメラ。ダイヤモンド富士の定番"
+
+  - id: curated-vd-mountain-yarigatake-sanso-east-kamikochi-vc
+    name: "槍ヶ岳山荘東側（常念山脈方面）山小屋カメラ"
+    operator: "環境省 上高地ビジターセンター（写真提供: 北アルプスブロードバンドネットワーク）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.3418
+    lng: 137.6478
+    image_url: "https://www.kamikochi-vc.or.jp/livecam/northalps_latest_images/yarigatake.jpg"
+    page_url: "https://www.kamikochi-vc.or.jp/watch-walk/live-camera"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。2026-09-30 05:45 JST 検証: image/jpeg、Last-Modified 05:30 JST（ページ表示 05:19 更新）。プレビューは槍ヶ岳山荘から東（常念山脈・雲海）。注意: ファイルが 4.0MB と大きい（他の小屋は 40〜180KB）。台帳の 槍ヶ岳山荘槍ヶ岳（mcci yari_00001.jpg）は Last-Modified 2025-06-24 で更新停止、長野市槍ヶ岳（mcci n-yari1.jpg）は別方向で別カメラ"
+
+  - id: curated-muni-hita-ono-elementary
+    name: "小野川（小野小学校付近・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.410831
+    lng: 130.940353
+    image_url: "http://webcamera.city.hita.oita.jp/cam2/-wvhttp-01-/getoneshot"
+    page_url: "http://webcamera.city.hita.oita.jp/camera2.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 06:0x image/jpeg 2.7KB→30秒で変化。320x240。市の一覧表の所在地: 大字小野1653-3（河川名 小野川）"
+
+  - id: curated-muni-hita-otsuru-center
+    name: "大肥川（大鶴振興センターから・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.364155
+    lng: 130.873398
+    image_url: "http://webcamera.city.hita.oita.jp/cam3/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera3.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 4.2KB→30秒で変化。所在地 大字大肥870"
+
+  - id: curated-muni-hita-kyomachi-mikuma
+    name: "三隈川（京町地区集会所から・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.311089
+    lng: 130.929108
+    image_url: "http://webcamera.city.hita.oita.jp/cam4/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera4.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 5.2KB→30秒で変化。筑後川（三隈川）"
+
+  - id: curated-muni-hita-higashiarita-jhs
+    name: "有田川（東有田中学校から・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.318008
+    lng: 131.005402
+    image_url: "http://webcamera.city.hita.oita.jp/cam5/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera5.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 3.9KB→30秒で変化。所在地 大字東有田488-2"
+
+  - id: curated-muni-hita-sapporo-beer
+    name: "三隈川（サッポロビール九州日田工場から・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.292564
+    lng: 130.945038
+    image_url: "http://webcamera.city.hita.oita.jp/cam6/-wvhttp-01-/getoneshot"
+    page_url: "http://webcamera.city.hita.oita.jp/camera6.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 4.6KB→30秒で変化"
+
+  - id: curated-muni-hita-kameyama-park
+    name: "庄手川（亀山公園・庄手川散歩道から・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.314632
+    lng: 130.930939
+    image_url: "http://webcamera.city.hita.oita.jp/cam7/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera7.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 3.9KB→30秒で変化"
+
+  - id: curated-muni-hita-otsuru-ohashi
+    name: "鶴河内川（大鶴大橋・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.366
+    lng: 130.876
+    image_url: "http://webcamera.city.hita.oita.jp/cam13/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera13.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 10.9KB→30秒で変化。目視で河川・橋の実写を確認"
+
+  - id: curated-muni-hita-uchikawano-bridge
+    name: "内河野川（内河野橋・日田市五和）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.304123
+    lng: 130.896469
+    image_url: "http://webcamera.city.hita.oita.jp/cam14/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera14.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 13.9KB→30秒で変化"
+
+  - id: curated-muni-hita-takasegawa
+    name: "高瀬川（下一ツ戸・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.273388
+    lng: 130.926208
+    image_url: "http://webcamera.city.hita.oita.jp/cam15/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera15.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 13.5KB→30秒で変化"
+
+  - id: curated-muni-hita-futakushigawa
+    name: "二串川（朝日橋・日田市光岡）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.329754
+    lng: 130.9021
+    image_url: "http://webcamera.city.hita.oita.jp/cam16/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera16.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 15.8KB→30秒で変化"
+
+  - id: curated-muni-hita-aritagawa-ryogumi
+    name: "有田川（両組・日田市東有田）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.321
+    lng: 131.01
+    image_url: "http://webcamera.city.hita.oita.jp/cam17/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera17.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 5.5KB→30秒で変化"
+
+  - id: curated-muni-hita-gogorogawa
+    name: "吾々路川（万々金橋・日田市大山町）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.224724
+    lng: 130.964523
+    image_url: "http://webcamera.city.hita.oita.jp/cam18/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera18.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 8.1KB→30秒で変化"
+
+  - id: curated-muni-hita-kagetsugawa
+    name: "花月川（藤山橋・日田市）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.363148
+    lng: 130.95752
+    image_url: "http://webcamera.city.hita.oita.jp/cam19/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera19.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 9.5KB→30秒で変化"
+
+  - id: curated-muni-hita-ohigawa-shiraiwa
+    name: "大肥川（白岩橋・日田市大鶴）"
+    operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.362
+    lng: 130.87
+    image_url: "http://webcamera.city.hita.oita.jp/cam20/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera20.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 8.6KB→30秒で変化"
+
+  - id: curated-muni-kusu-kyoshin-bridge
+    name: "玖珠川（協心橋・緑の風公園時計台から・玖珠町）"
+    operator: "玖珠町（日田玖珠九重Webカメラ画像提供システム）"
+    category: river
+    prefecture: "44"
+    lat: 33.2836
+    lng: 131.152
+    image_url: "http://webcamera.city.hita.oita.jp/cam9/-wvhttp-01-/getoneshot"
+    page_url: "http://webcamera.city.hita.oita.jp/camera9.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 3.2KB→30秒で変化。玖珠町サイト「Webカメラ情報」(town.kusu.oita.jp/soshiki/somuka/jyoho/1/854.html) からシステムへリンク。三島公園カメラ(cam8)は 2025-12-22 に削除済み"
+
+  - id: curated-muni-kokonoe-jizohara-iozan
+    name: "硫黄山（九重町 地蔵原・四季彩ロードから）"
+    operator: "九重町（日田玖珠九重Webカメラ画像提供システム）"
+    category: volcano
+    prefecture: "44"
+    lat: 33.13
+    lng: 131.235
+    image_url: "http://webcamera.city.hita.oita.jp/cam11/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera11.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 6.4KB→30秒で変化、480x270。システム説明「四季彩ロードより硫黄山の映像」。九重町サイトポリシーは一般的な著作権表記"
+
+  - id: curated-muni-kokonoe-oguradake
+    name: "小倉岳麓（九重町）"
+    operator: "九重町（日田玖珠九重Webカメラ画像提供システム）"
+    category: scenic
+    prefecture: "44"
+    lat: 33.18
+    lng: 131.19
+    image_url: "http://webcamera.city.hita.oita.jp/cam21/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera21.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 6.1KB→30秒で変化、480x270。2021-02 追加カメラ"
+
+  - id: curated-muni-kokonoe-ainose-chaya
+    name: "あいのせ茶屋前（九重町田野・四季彩ロード）"
+    operator: "九重町（日田玖珠九重Webカメラ画像提供システム）"
+    category: other
+    prefecture: "44"
+    lat: 33.115
+    lng: 131.24
+    image_url: "http://webcamera.city.hita.oita.jp/cam22/-wvhttp-01-/image.cgi"
+    page_url: "http://webcamera.city.hita.oita.jp/camera22.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 6.6KB→30秒で変化、480x270"
+
+  - id: curated-muni-suzu-rokkosaki-lighthouse
+    name: "禄剛埼灯台（珠洲市狼煙町）"
+    operator: "珠洲市"
+    category: scenic
+    prefecture: "17"
+    lat: 37.5262
+    lng: 137.3243
+    image_url: "http://202.163.170.237/-wvhttp-01-/GetOneShot"
+    page_url: "https://www.city.suzu.lg.jp/site/kankou/1135.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 GetOneShot image/jpeg 4.4KB→30秒で変化、320x240。目視で灯台を確認（夜明け）。市ページから「禄剛埼灯台」としてリンク。IP直・http のためURL変更に注意"
+
+  - id: curated-muni-suzu-beach-hotel
+    name: "珠洲ビーチホテルから鵜飼の街並みと海（珠洲市宝立町）"
+    operator: "珠洲市"
+    category: coast
+    prefecture: "17"
+    lat: 37.4033
+    lng: 137.2455
+    image_url: "http://202.163.170.222/-wvhttp-01-/GetOneShot"
+    page_url: "https://www.city.suzu.lg.jp/site/kankou/1135.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 GetOneShot image/jpeg 17KB→30秒で変化、640x480。目視で市街地と海岸の実写を確認"
+
+  - id: curated-muni-satsumasendai-shimokoshiki-napoleon
+    name: "下甑島 ナポレオン岩（薩摩川内市鹿島町）"
+    operator: "薩摩川内市"
+    category: coast
+    prefecture: "46"
+    lat: 31.7565
+    lng: 129.7735
+    image_url: "http://camera6.city.satsumasendai.lg.jp/-wvhttp-01-/image.cgi"
+    page_url: "https://www.city.satsumasendai.lg.jp/kurashi_tetsuzuki/lifeservice_sodan/5531.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image.cgi image/jpeg 25KB→30秒で変化、1280x720（GetOneShot は Unknown Operator）。目視でナポレオン岩を確認。市ページ「下甑」の枠（camera6）。上甑（camera8）は故障中表示・応答なし"
+
+  - id: curated-muni-hirosaki-park-otemon
+    name: "弘前公園（追手門前）"
+    operator: "弘前市"
+    category: scenic
+    prefecture: "02"
+    lat: 40.6046
+    lng: 140.4655
+    image_url: "https://outemon.hirosaki-livecam.jp/-wvhttp-01-/image.cgi"
+    page_url: "https://www.city.hirosaki.aomori.jp/gaiyou/livecam/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image.cgi image/jpeg 18KB→30秒で変化、640x360（GetOneShot は Unknown Operator）。目視で追手門付近の堀と緑を確認。弘前市「著作権・リンク・免責事項」は一般表記。同ページの天守(live4)・東門(live1)・りんご公園(live2)は登録済み/前回候補"
+
+  - id: curated-muni-maniwa-asahigawa-kaminagata
+    name: "旭川（蒜山上長田地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.30278
+    lng: 133.704773
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kaminagata/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1360.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 29KB、640x360、1分更新"
+
+  - id: curated-muni-maniwa-kochigawa-shimogouchi
+    name: "河内川（下河内地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.031582
+    lng: 133.784576
+    image_url: "https://www.city.maniwa.lg.jp/live/images/shimogouchi/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1361.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 34KB、1分更新"
+
+  - id: curated-muni-maniwa-kuritanigawa-tane
+    name: "栗谷川（種地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.208
+    lng: 133.668488
+    image_url: "https://www.city.maniwa.lg.jp/live/images/tane/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1362.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 30KB、1分更新"
+
+  - id: curated-muni-maniwa-tsukidagawa
+    name: "月田川（月田地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.044724
+    lng: 133.669067
+    image_url: "https://www.city.maniwa.lg.jp/live/images/tsukida/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1363.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 31KB、1分更新"
+
+  - id: curated-muni-maniwa-r181-mikamo
+    name: "国道181号（美甘地内・真庭市）"
+    operator: "真庭市"
+    category: road
+    prefecture: "33"
+    lat: 35.157154
+    lng: 133.616211
+    image_url: "https://www.city.maniwa.lg.jp/live/images/mikamo/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1364.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 35KB、1分更新。市設置の道路カメラ（県・国交省系ではない）"
+
+  - id: curated-muni-maniwa-r482-yatsuka
+    name: "国道482号（八束地内・真庭市蒜山）"
+    operator: "真庭市"
+    category: road
+    prefecture: "33"
+    lat: 35.302132
+    lng: 133.648834
+    image_url: "https://www.city.maniwa.lg.jp/live/images/root482/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1366.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 31KB、1分更新"
+
+  - id: curated-muni-maniwa-kuroo-misaka-gate
+    name: "黒尾三坂川ゲート（久世地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.09174
+    lng: 133.735382
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kuse/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1367.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、1分更新。目視で実写を確認"
+
+  - id: curated-muni-maniwa-mekigawa-meki
+    name: "目木川（目木地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.081669
+    lng: 133.786667
+    image_url: "https://www.city.maniwa.lg.jp/live/images/meki/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1379.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 31KB、1分更新"
+
+  - id: curated-muni-maniwa-ochiai-ohashi
+    name: "落合大橋と旭川（真庭市落合）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.0247
+    lng: 133.752
+    image_url: "https://www.city.maniwa.lg.jp/live/images/ochiaibridge/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1380.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 28KB、1分更新"
+
+  - id: curated-muni-maniwa-makagoshimowagawa
+    name: "真加子下和川（蒜山真加子地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.248714
+    lng: 133.756088
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri2/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/47444.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、1分更新（危機管理課カメラ kikikanri2）"
+
+  - id: curated-muni-maniwa-tomihara-nursery
+    name: "富原保育園前（若代地内・真庭市）"
+    operator: "真庭市"
+    category: other
+    prefecture: "33"
+    lat: 35.061134
+    lng: 133.603775
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri3/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/47443.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 31KB、1分更新（kikikanri3）"
+
+  - id: curated-muni-maniwa-mekigawa-yono
+    name: "目木川（余野地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.112717
+    lng: 133.8134
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri4/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/47441.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 34KB、1分更新（kikikanri4）"
+
+  - id: curated-muni-maniwa-dandogawa
+    name: "旦土川（旦土地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 34.983833
+    lng: 133.784668
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri5/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/47440.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、1分更新（kikikanri5）"
+
+  - id: curated-muni-maniwa-nakatsuigawa
+    name: "中津井川（中津井地内・真庭市北房）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 34.995
+    lng: 133.67
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri7/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/47438.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 34KB、1分更新（kikikanri7）"
+
+  - id: curated-muni-maniwa-shinjogawa-egawa
+    name: "新庄川（江川地内・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.067902
+    lng: 133.684464
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri8/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/82531.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、1分更新（kikikanri8）"
+
+  - id: curated-muni-maniwa-bitchugawa-kurihara
+    name: "備中川（栗原地内・真庭市北房）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 34.974995
+    lng: 133.713257
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri9/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/82530.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、1分更新（kikikanri9）"
+
+  - id: curated-muni-maniwa-bitchugawa-tarumi-gate-1
+    name: "備中川（落合垂水ゲート 1・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.013229
+    lng: 133.748688
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri10/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/88823.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、1分更新。同ページに kikikanri10 と 11 の2枚（ゲート両側と思われる）"
+
+  - id: curated-muni-maniwa-bitchugawa-tarumi-gate-2
+    name: "備中川（落合垂水ゲート 2・真庭市）"
+    operator: "真庭市"
+    category: river
+    prefecture: "33"
+    lat: 35.0135
+    lng: 133.749
+    image_url: "https://www.city.maniwa.lg.jp/live/images/kikikanri11/image2.jpg"
+    page_url: "https://www.city.maniwa.lg.jp/site/live-cam/88823.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、1分更新"
+
+  - id: curated-muni-ktv-yakuba
+    name: "富士河口湖町役場屋上（KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: other
+    prefecture: "19"
+    lat: 35.497
+    lng: 138.7548
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/yakuba.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/yakuba.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/yakuba.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。静止画 https://www.lcnet.jp/~live-cam/yakuba/yakuba-capt.jpg は 1920x1080・5分更新（2026-09-30 05:37 JST 更新を確認）だが町ページに二次使用禁止の明記"
+
+  - id: curated-muni-ktv-bell
+    name: "ショッピングセンターBELL（河口湖・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: other
+    prefecture: "19"
+    lat: 35.4925
+    lng: 138.761
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/bell.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/bell.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/bell.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新"
+
+  - id: curated-muni-ktv-azagawa-tenbo
+    name: "浅川展望（河口湖南岸・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.5089
+    lng: 138.7765
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/azagawa_tenbo.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/azagawa_tenbo.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/azagawa_tenbo.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新"
+
+  - id: curated-muni-ktv-kawaguchi-tunnel
+    name: "河口トンネル前（富士河口湖町河口・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: road
+    prefecture: "19"
+    lat: 35.5433
+    lng: 138.7791
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/kawaguchi.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/kawaguchi.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/kawaguchi.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新"
+
+  - id: curated-muni-ktv-ooishi-chiku
+    name: "大石地区（富士河口湖町・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: other
+    prefecture: "19"
+    lat: 35.532
+    lng: 138.7222
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/ooishichiku.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/ooishichiku.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/ooishichiku.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新。台帳の「KTV大石公園」(YouTube) とは別地点（大石公園 ooishipark は除外）"
+
+  - id: curated-muni-ktv-katsuyama-fc
+    name: "勝山ふれあいセンター（富士河口湖町・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: other
+    prefecture: "19"
+    lat: 35.4886
+    lng: 138.7354
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/katsuyamafc.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/katsuyamafc.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/katsuyamafc.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新"
+
+  - id: curated-muni-ktv-kodachi-minami
+    name: "小立南交差点（富士河口湖町・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: road
+    prefecture: "19"
+    lat: 35.488
+    lng: 138.7461
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/kodachimin.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/kodachimin.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/kodachimin.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新"
+
+  - id: curated-muni-ktv-nagahama
+    name: "長浜地区（河口湖西岸・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.5083
+    lng: 138.7157
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/nagahama.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/nagahama.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/nagahama.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新"
+
+  - id: curated-muni-ktv-saiko
+    name: "西湖（KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.5035
+    lng: 138.6851
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/saiko.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/saiko.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/saiko.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新。台帳に西湖のカメラは 0 件"
+
+  - id: curated-muni-ktv-motosu
+    name: "本栖地区（本栖湖・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4504
+    lng: 138.6171
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/motosu.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/motosu.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/motosu.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新"
+
+  - id: curated-muni-ktv-fujigane
+    name: "富士ヶ嶺地区（富士河口湖町・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4141
+    lng: 138.6269
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/fujigane.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/fujigane.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/fujigane.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新。町公式ページ https://www.town.fujikawaguchiko.lg.jp/ka/info.php?if_id=2621 にも同画像（二次使用禁止の明記あり）"
+
+  - id: curated-muni-ktv-asagiri
+    name: "朝霧高原（富士宮市根原付近・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "22"
+    lat: 35.4154
+    lng: 138.5846
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/asagiri.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/asagiri.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/asagiri.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新。台帳に朝霧高原は 0 件"
+
+  - id: curated-muni-ktv-fuji-south
+    name: "富士山南（KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "22"
+    lat: 35.222
+    lng: 138.621
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/fuji_south.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/fuji_south.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/fuji_south.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新。画像名 fuji_south。設置地の記載がないため座標は要確認"
+
+  - id: curated-muni-ktv-gotemba
+    name: "御殿場（富士山東・KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "22"
+    lat: 35.3087
+    lng: 138.9346
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/gotenba.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/gotenba.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/gotenba.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新。画像名 fuji_east"
+
+  - id: curated-muni-ktv-yamanakako
+    name: "山中湖（KTV 防災ライブカメラ・静止画）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4106
+    lng: 138.8611
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/yamanakako.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/yamanakako.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/yamanakako.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新。※KTV の YouTube「山中湖からの富士山ライブカメラ」は台帳では tuNC0ot0j9I（名称は葉山）で登録されている。KTV は動画IDを地点間で付け替えるので台帳側の名称ずれを要確認（下記保留メモ参照）。重複と判断するなら除外"
+
+  - id: curated-muni-ktv-oshino
+    name: "忍野（KTV 防災ライブカメラ）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.4601
+    lng: 138.8479
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/oshino.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/oshino.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/oshino.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新"
+
+  - id: curated-muni-ktv-hayama
+    name: "葉山（KTV 防災ライブカメラ・静止画）"
+    operator: "ケーブルテレビ河口湖（KTV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.52
+    lng: 138.76
+    feed_type: web_page
+    feed_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/hayama.html"
+    image_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/hayama.html"
+    page_url: "https://www.kawaguchiko.ne.jp/disaster/chiku/hayama.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。5分更新。KTV チャンネルの現行ライブ 5 本に「葉山」枠は無い（台帳の KTV葉山富士山 tuNC0ot0j9I は現在「山中湖」タイトル）"
+
+  - id: curated-muni-minamimaki-umijiri
+    name: "海尻（南牧村 カメラ①）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 36.022419
+    lng: 138.441711
+    image_url: "http://220.254.170.7/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 30KB、640x480、35秒で変化"
+
+  - id: curated-muni-minamimaki-morishita-oshiba
+    name: "森下・大芝（南牧村 カメラ②）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 36.01
+    lng: 138.447
+    image_url: "http://220.254.170.8/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 46KB、35秒で変化。ビューアは live/index.html 型"
+
+  - id: curated-muni-minamimaki-uminokuchi-honmura
+    name: "海ノ口本村（南牧村 カメラ③）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 35.993179
+    lng: 138.442673
+    image_url: "http://220.254.170.9/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 29KB、35秒で変化"
+
+  - id: curated-muni-minamimaki-hirose
+    name: "広瀬（南牧村 カメラ④）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 36.004662
+    lng: 138.531372
+    image_url: "http://220.254.170.10/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 31KB、35秒で変化"
+
+  - id: curated-muni-minamimaki-kawadaira
+    name: "川平（南牧村 カメラ⑤）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 35.985
+    lng: 138.45
+    image_url: "http://220.254.170.11/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 30KB、35秒で変化"
+
+  - id: curated-muni-minamimaki-ichibazaka
+    name: "市場坂（南牧村 カメラ⑦）"
+    operator: "南牧村（長野県）"
+    category: road
+    prefecture: "20"
+    lat: 35.975
+    lng: 138.455
+    image_url: "http://220.254.170.3/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 48KB、35秒で変化。ビューアは live/index.html 型"
+
+  - id: curated-muni-minamimaki-kaitaku-kinenhi
+    name: "開拓記念碑前（南牧村野辺山 カメラ⑧）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 35.958
+    lng: 138.472
+    image_url: "http://220.254.170.14/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 32KB、35秒で変化"
+
+  - id: curated-muni-minamimaki-itabashi
+    name: "板橋（南牧村 カメラ⑨）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 35.975731
+    lng: 138.462204
+    image_url: "http://220.254.170.15/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 31KB、35秒で変化"
+
+  - id: curated-muni-minamimaki-nobeyama
+    name: "野辺山駅前（南牧村 カメラ⑩）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 35.95
+    lng: 138.4713
+    image_url: "http://220.254.170.16/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、35秒で変化。目視で実写確認。台帳に野辺山は 0 件"
+
+  - id: curated-muni-minamimaki-hirasawa
+    name: "平沢（南牧村 カメラ⑫）"
+    operator: "南牧村（長野県）"
+    category: other
+    prefecture: "20"
+    lat: 35.917034
+    lng: 138.471161
+    image_url: "http://220.254.170.18/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.minamimakimura.jp/main/gov/soumu/kikaku/anzen/livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 33KB、35秒で変化"
+
+  - id: curated-muni-daigo-fukuroda-falls
+    name: "袋田の滝（大子町ライブカメラ）"
+    operator: "大子町"
+    category: scenic
+    prefecture: "08"
+    lat: 36.7643
+    lng: 140.4046
+    image_url: "http://183.77.203.213/-wvhttp-01-/image.cgi"
+    page_url: "https://www.town.daigo.ibaraki.jp/page/page004863.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image.cgi image/jpeg 80KB→40秒で変化、1920x1080（GetOneShot は Unknown Operator）。町ページの PTZ ビューア（showcontrol）から"
+
+  - id: curated-muni-daigo-tsukimachi-falls
+    name: "月待の滝（大子町ライブカメラ）"
+    operator: "大子町"
+    category: scenic
+    prefecture: "08"
+    lat: 36.807
+    lng: 140.372
+    image_url: "http://121.117.161.159/-wvhttp-01-/image.cgi"
+    page_url: "https://www.town.daigo.ibaraki.jp/page/page002580.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 45KB→40秒で変化"
+
+  - id: curated-muni-daigo-okukuji-nantaisan
+    name: "奥久慈男体山（大子町ライブカメラ）"
+    operator: "大子町"
+    category: scenic
+    prefecture: "08"
+    lat: 36.7945
+    lng: 140.398
+    image_url: "http://121.117.161.147/-wvhttp-01-/image.cgi"
+    page_url: "https://www.town.daigo.ibaraki.jp/page/page002579.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 9.8KB→40秒で変化、640x480（明るさ平均139で実写）"
+
+  - id: curated-muni-daigo-michinoeki-okukuji
+    name: "道の駅奥久慈だいご（大子町ライブカメラ）"
+    operator: "大子町"
+    category: other
+    prefecture: "08"
+    lat: 36.7695
+    lng: 140.3552
+    feed_type: web_page
+    feed_url: "http://www.town.daigo.ibaraki.jp/livecamera/"
+    image_url: "http://www.town.daigo.ibaraki.jp/livecamera/"
+    page_url: "http://www.town.daigo.ibaraki.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。町ページは MJPEG ストリーム（http://121.119.165.59/video1s1.mjpg、直接は 401）を埋め込むため静止画URLなし"
+
+  - id: curated-muni-shinonsen-hamasaka-coast
+    name: "浜坂海岸（山陰海岸ジオパーク館・新温泉町）"
+    operator: "新温泉町"
+    category: coast
+    prefecture: "28"
+    lat: 35.6268
+    lng: 134.4485
+    feed_type: web_page
+    feed_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/coast/"
+    image_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/coast/"
+    page_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/coast/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型（無断使用禁止の明記）。iframe live4。2026-09-30 ページ 200"
+
+  - id: curated-muni-shinonsen-library
+    name: "加藤文太郎記念図書館（新温泉町）"
+    operator: "新温泉町"
+    category: other
+    prefecture: "28"
+    lat: 35.6215
+    lng: 134.4478
+    feed_type: web_page
+    feed_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/library/"
+    image_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/library/"
+    page_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/library/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型"
+
+  - id: curated-muni-shinonsen-onsento
+    name: "浜坂温泉塔（新温泉町役場中庭）"
+    operator: "新温泉町"
+    category: other
+    prefecture: "28"
+    lat: 35.6237
+    lng: 134.4492
+    feed_type: web_page
+    feed_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/onsentou/"
+    image_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/onsentou/"
+    page_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/onsentou/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。iframe live3"
+
+  - id: curated-muni-shinonsen-yume-hall
+    name: "夢ホール（新温泉町）"
+    operator: "新温泉町"
+    category: other
+    prefecture: "28"
+    lat: 35.6229
+    lng: 134.4506
+    feed_type: web_page
+    feed_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/yumehall/"
+    image_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/yumehall/"
+    page_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/yumehall/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型"
+
+  - id: curated-muni-shinonsen-kenko-park
+    name: "健康公園センターハウス（新温泉町）"
+    operator: "新温泉町"
+    category: other
+    prefecture: "28"
+    lat: 35.6155
+    lng: 134.4545
+    feed_type: web_page
+    feed_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/kenkopark/"
+    image_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/kenkopark/"
+    page_url: "https://www.town.shinonsen.hyogo.jp/shinonsen_overview/livecamera/kenkopark/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型"
+
+  - id: curated-muni-niijima-habushiura
+    name: "羽伏浦海岸（新島村）"
+    operator: "新島村"
+    category: coast
+    prefecture: "13"
+    lat: 34.372
+    lng: 139.276
+    image_url: "http://121.117.160.58/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.niijima.com/soshiki/kikakuzaiseika/news/2018-0821-1714-90.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 Panasonic SnapshotJPEG image/jpeg 25KB→45秒で変化。村サイトのお知らせ（企画財政課）が現行アドレスを告知。サイトポリシーは見当たらず（一般表記と想定）。IP直・http"
+
+  - id: curated-muni-miharu-takizakura
+    name: "三春滝桜（三春町）"
+    operator: "三春まちづくり公社（三春町観光）"
+    category: scenic
+    prefecture: "07"
+    lat: 37.4297
+    lng: 140.5017
+    image_url: "https://153.142.240.65//-wvhttp-01-/image.cgi?v=jpg:1280x720"
+    page_url: "https://miharukoma.com/blog/information/13023"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 Canon image.cgi image/jpeg 164KB→45秒で変化、1280x720。ページは『10秒毎に自動更新』。https の IP 直（証明書は自己署名の可能性、verify=False で取得）。台帳に滝桜は 0 件"
+
+  - id: curated-muni-takayama-vill-office
+    name: "高山村役場から（長野県高山村）"
+    operator: "高山村（長野県）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.6642
+    lng: 138.3629
+    image_url: "https://www.vill.takayama.nagano.jp/ftp-c/takayama-cam.jpg"
+    page_url: "https://www.vill.takayama.nagano.jp/live-camera/live-camera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 350KB、1分更新"
+
+  - id: curated-muni-takayama-takai-bridge
+    name: "高井橋（松川渓谷・高山村）"
+    operator: "高山村（長野県）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.672
+    lng: 138.395
+    image_url: "https://www.vill.takayama.nagano.jp/ftp-c/takai_bridge-cam.jpg"
+    page_url: "https://www.vill.takayama.nagano.jp/live-camera/live-camera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 378KB、1分更新。紅葉の名所"
+
+  - id: curated-muni-takayama-yamada-bokujo
+    name: "山田牧場（高山村奥山田）"
+    operator: "高山村（長野県）"
+    category: healing
+    prefecture: "20"
+    lat: 36.678
+    lng: 138.4358
+    image_url: "https://www.vill.takayama.nagano.jp/ftp-c/yamada-cam.jpg"
+    page_url: "https://www.vill.takayama.nagano.jp/live-camera/live-camera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 388KB、1分更新"
+
+  - id: curated-muni-shima-nakiri-port
+    name: "志摩市 波切漁港（大王町波切）"
+    operator: "志摩市"
+    category: port
+    prefecture: "24"
+    lat: 34.2856
+    lng: 136.8738
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=24"
+    page_url: "https://webcam.mctv.jp/shima/cam-s02.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 39KB、内容変化"
+
+  - id: curated-muni-shima-fukaya-port
+    name: "志摩市 深谷漁港（大王町船越）"
+    operator: "志摩市"
+    category: port
+    prefecture: "24"
+    lat: 34.2752
+    lng: 136.8699
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=1"
+    page_url: "https://webcam.mctv.jp/shima/cam-s03.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 71KB、内容変化"
+
+  - id: curated-muni-shima-katada-port
+    name: "志摩市 片田漁港（志摩町片田）"
+    operator: "志摩市"
+    category: port
+    prefecture: "24"
+    lat: 34.2606
+    lng: 136.8445
+    image_url: "https://webcam.mctv.jp/cgi-bin/Get.cgi?n=23"
+    page_url: "https://webcam.mctv.jp/shima/cam-s04.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 35KB、内容変化"
+
+  - id: curated-muni-shoo-north-village
+    name: "おかやまファーマーズ・マーケット ノースヴィレッジ（勝央町）"
+    operator: "勝央町"
+    category: healing
+    prefecture: "33"
+    lat: 35.0415
+    lng: 134.1316
+    image_url: "http://north1.town.shoo.okayama.jp/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.town.shoo.lg.jp/soshiki/4/4716.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 10:20 JST Panasonic SnapshotJPEG image/jpeg 32KB、640x480、40秒で変化。町ページから CgiStart ビューアへリンク（ホストは town.shoo.okayama.jp）。目視で農業公園の芝生と山並みを確認"
+
+  - id: curated-muni-sabae-nishiyama-zoo-indoor
+    name: "西山動物園 レッサーパンダ屋内展示場（鯖江市）"
+    operator: "鯖江市（西山動物園）"
+    category: healing
+    prefecture: "18"
+    lat: 35.9502
+    lng: 136.1828
+    image_url: "http://58.94.98.44/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.city.sabae.fukui.jp/kurashi_tetsuduki/doro_kasen_koen/nishiyamadobutsuen/okunai_livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 10:12 JST Panasonic SnapshotJPEG image/jpeg 30KB、640x480、40秒で変化（画像に日時焼き込み）。市ページの iframe camera1_b.html → 58.94.98.44 ImageViewer（屋内）。公開は 9:00〜16:30 のみ（夜間は 950B のプレースホルダ）。個体が映らない時間帯あり。前回 farm_nature 班が夜間のため保留にしていたもの"
+
+  - id: curated-muni-sabae-nishiyama-zoo-outdoor
+    name: "西山動物園 レッサーパンダ屋外展示場（鯖江市）"
+    operator: "鯖江市（西山動物園）"
+    category: healing
+    prefecture: "18"
+    lat: 35.9503
+    lng: 136.183
+    image_url: "http://58.94.98.44:8080/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.city.sabae.fukui.jp/kurashi_tetsuduki/doro_kasen_koen/nishiyamadobutsuen/okugai-livecamera.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 10:08 JST image/jpeg 24KB、40秒で変化、屋外展示場の実写（日時焼き込み）。市ページ（2017年更新）に『現在、屋外展示場のカメラは停止中』の表記が残るが iframe camera2_b.html → :8080 は稼働中。9:00〜16:30 のみ公開"
+
+  - id: curated-muni-hakone-ashinoko-view
+    name: "芦ノ湖眺望カメラ（箱根町観光協会）"
+    operator: "箱根町観光協会"
+    category: scenic
+    prefecture: "14"
+    lat: 35.2164
+    lng: 139.0105
+    feed_type: web_page
+    feed_url: "http://ashi-camera.hakone.or.jp/"
+    image_url: "http://ashi-camera.hakone.or.jp/"
+    page_url: "http://ashi-camera.hakone.or.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。ビューア http://153.142.207.159/viewer/live/index.html?lang=ja（Canon）。image.cgi は image/jpeg 29KB・1280x960 で 40 秒ごとに変化するが、協会サイト利用規約 第13条に『商業目的での利用（複製等）禁止』があるため画像直接表示は避けた。2026-09-30 10:20 JST 目視は雨天で不鮮明"
+
+  - id: curated-muni-fuefuki-city-hall-cam
+    name: "笛吹市役所本館 観光ライブカメラ（境川町・八代町・御坂町・一宮町方面 等 10 プリセット）"
+    operator: "笛吹市"
+    category: scenic
+    prefecture: "19"
+    lat: 35.6474
+    lng: 138.64
+    feed_type: web_page
+    feed_url: "http://honkancam.city.fuefuki.yamanashi.jp/local/index01.html?p=2"
+    image_url: "http://honkancam.city.fuefuki.yamanashi.jp/local/index01.html?p=2"
+    page_url: "http://honkancam.city.fuefuki.yamanashi.jp/local/index01.html?p=2"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。Canon PTZ 共有カメラ（-wvhttp-01-/image.cgi?v=jpg:640x360 は image/jpeg 19KB で変化するが、市の『このサイトについて』に写真等の引用・転載は市長への許可申請が必要と明記）。市ページ https://www.city.fuefuki.yamanashi.jp/kikaku/sports/kanko/livecamera/index.html"
+
+  - id: curated-muni-fuefuki-linear-hill-cam
+    name: "リニアの見える丘・花鳥山一本杉公園 Webカメラ（笛吹市）"
+    operator: "笛吹市"
+    category: scenic
+    prefecture: "19"
+    lat: 35.5857
+    lng: 138.6755
+    feed_type: web_page
+    feed_url: "http://linearcam.city.fuefuki.yamanashi.jp/index.html?p=1"
+    image_url: "http://linearcam.city.fuefuki.yamanashi.jp/index.html?p=1"
+    page_url: "http://linearcam.city.fuefuki.yamanashi.jp/index.html?p=1"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。プリセット 1〜7（一本杉と展望台駐車場・桃畑・超電導リニアと南アルプス・甲府市方面 等）。映像は /camera/video.cgi の multipart（静止画 API は 403）"
+
+  - id: curated-muni-fuefuki-ichinomiya-cam
+    name: "笛吹市 一宮 観光ライブカメラ（山梨市・甲州市・釈迦堂遺跡博物館方面 等 6 プリセット）"
+    operator: "笛吹市"
+    category: scenic
+    prefecture: "19"
+    lat: 35.6466
+    lng: 138.692
+    feed_type: web_page
+    feed_url: "http://ichinomiyacam.city.fuefuki.yamanashi.jp/local/index01.html?p=2"
+    image_url: "http://ichinomiyacam.city.fuefuki.yamanashi.jp/local/index01.html?p=2"
+    page_url: "http://ichinomiyacam.city.fuefuki.yamanashi.jp/local/index01.html?p=2"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型。image.cgi は image/jpeg 11KB で変化。転載は許可申請が必要のため誘導型"
+
+  - id: curated-muni-munakata-akama-north
+    name: "赤間駅北口（赤間駅北口交差点付近・宗像市防災ライブカメラ）"
+    operator: "宗像市"
+    category: other
+    prefecture: "40"
+    lat: 33.8095
+    lng: 130.5712
+    image_url: "https://www.city.munakata.lg.jp/bousaicamera/akama2.jpg"
+    page_url: "https://www.city.munakata.lg.jp/bousai/kiji0032231/index.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。10分おき更新。2026-09-30 10:16 JST Last-Modified 01:16Z、10分でハッシュ変化。台帳に同システム 8 地点あり（赤間駅南口・河東①②・東郷①②・田久①②・くりえいと）、北口と河東③は未収録"
+
+  - id: curated-muni-munakata-kato3-keyaki
+    name: "河東③ 城西けやき通り（宗像市防災ライブカメラ）"
+    operator: "宗像市"
+    category: road
+    prefecture: "40"
+    lat: 33.8187
+    lng: 130.5508
+    image_url: "https://www.city.munakata.lg.jp/bousaicamera/katou3.jpg"
+    page_url: "https://www.city.munakata.lg.jp/bousai/kiji0032231/index.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。10分おき更新。Last-Modified 01:15Z（10:15 JST）で更新継続を確認（05:55Z との比較でハッシュ変化）"
+
+  - id: curated-muni-nikko-yutaki
+    name: "湯滝（日光湯元ビジターセンター 湯滝ライブカメラ）"
+    operator: "日光湯元ビジターセンター（湯滝レストハウス サイト掲載）"
+    category: scenic
+    prefecture: "09"
+    lat: 36.8036
+    lng: 139.419
+    image_url: "http://info.beecom.tokyo/cgi-bin/yutaki/camera_img.cgi"
+    page_url: "http://www.yutaki.com/livecamera.shtml"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。15分間隔更新。2026-09-30 06:03 と 10:16 JST でハッシュ変化（40秒間隔では同一）。日光市観光協会「ライブカメラ」特集ページからリンクされている。ページに転載禁止文言なし。運営主体（ビジターセンター／レストハウス）の表記が曖昧なので出典表記は要確認"
+
+  - id: curated-catv-ccn-akanabe002
+    name: "茜部菱野（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.382611
+    lng: 136.749
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/akanabe002.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/akanabe002.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-akanebe
+    name: "茜部本郷交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.388333
+    lng: 136.754583
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/akanebe.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/akanebe.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-asagiri
+    name: "あさぎり体育館（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.886877
+    lng: 137.206997
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/asagiri.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/asagiri.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-entsu
+    name: "円通橋（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: river
+    prefecture: "21"
+    lat: 35.845007
+    lng: 137.225024
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/entsu.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/entsu.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-fukumitsu
+    name: "福光交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.453455
+    lng: 136.774711
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/fukumitsu.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/fukumitsu.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-ginan
+    name: "国道21号 岐南インター（岐南町・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.388417
+    lng: 136.781472
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/ginan.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/ginan.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-ginan002
+    name: "上印食交差点（岐南町・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.392639
+    lng: 136.785
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/ginan002.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/ginan002.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-godohashi
+    name: "河渡橋東交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.408727
+    lng: 136.705233
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/godohashi.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/godohashi.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-hanamomo
+    name: "道の駅はなもも付近（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.931349
+    lng: 137.293503
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/hanamomo.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/hanamomo.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-hashima
+    name: "舟橋町宮北交差点（羽島市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.317306
+    lng: 136.693639
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/hashima.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/hashima.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-hinohigashi
+    name: "日野東・国道156号（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.429722
+    lng: 136.816278
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/hinohigashi.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/hinohigashi.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-hozumi
+    name: "穂積中原交差点（瑞穂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.387553
+    lng: 136.68894
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/hozumi.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/hozumi.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-ikeda
+    name: "池田橋（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: river
+    prefecture: "21"
+    lat: 35.643167
+    lng: 137.147333
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/ikeda.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/ikeda.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-kanayama
+    name: "金山振興事務所（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.662944
+    lng: 137.160889
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/kanayama.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/kanayama.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-kano001
+    name: "加納梅田町交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.398056
+    lng: 136.747583
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/kano001.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/kano001.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-kawashima
+    name: "川島大橋・木曽川左岸堤防（各務原市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: river
+    prefecture: "21"
+    lat: 35.370194
+    lng: 136.825222
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/kawashima.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/kawashima.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-kitagata
+    name: "北方町長谷川西交差点（北方町・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.431167
+    lng: 136.687306
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/kitagata.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/kitagata.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-kitaisshiki
+    name: "北一色周辺（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.409917
+    lng: 136.784972
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/kitaisshiki.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/kitaisshiki.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-mazeclinic
+    name: "馬瀬診療所付近（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.904754
+    lng: 137.149107
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/mazeclinic.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/mazeclinic.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-meishin
+    name: "名神高速道路（江吉良橋付近）（羽島市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.307506
+    lng: 136.690507
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/meishin.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/meishin.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-mino
+    name: "美濃インター入口（美濃市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.528994
+    lng: 136.90233
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/mino.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/mino.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-mizubenoyakata
+    name: "水辺の館（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: river
+    prefecture: "21"
+    lat: 35.82084
+    lng: 137.18883
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/mizubenoyakata.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/mizubenoyakata.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-nagara
+    name: "長良橋（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: river
+    prefecture: "21"
+    lat: 35.439977
+    lng: 136.769955
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/nagara.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/nagara.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-nagarapark
+    name: "長良堀田西交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.444958
+    lng: 136.784578
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/nagarapark.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/nagarapark.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-nakahara
+    name: "旧中原小学校（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.730778
+    lng: 137.197917
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/nakahara.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/nakahara.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-nakauzura
+    name: "中鶉周辺（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.383389
+    lng: 136.731833
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/nakauzura.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/nakauzura.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-norimasa
+    name: "乗政橋付近（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: river
+    prefecture: "21"
+    lat: 35.767719
+    lng: 137.283501
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/norimasa.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/norimasa.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-ogawah
+    name: "ヘリポート付近（小川）（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.797833
+    lng: 137.253306
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/ogawa-h.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/ogawa-h.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-osaka
+    name: "小坂健康ふれあいセンター（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: other
+    prefecture: "21"
+    lat: 35.950472
+    lng: 137.259694
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/osaka.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/osaka.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-oze
+    name: "国道156号沿い（小瀬）（関市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.48925
+    lng: 136.873778
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/oze.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/oze.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-rokujo
+    name: "六条江東交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.388833
+    lng: 136.744139
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/rokujo.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/rokujo.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-souden
+    name: "早田大通1交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.434111
+    lng: 136.749056
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/souden.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/souden.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-sujikai
+    name: "曲路（北方町・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.431314
+    lng: 136.696023
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/sujikai.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/sujikai.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-toukouchou
+    name: "国道248号（東興町）（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.416528
+    lng: 136.781778
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/toukouchou.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/toukouchou.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-uenota
+    name: "上之田橋（下呂市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: river
+    prefecture: "21"
+    lat: 35.983139
+    lng: 137.192028
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/uenota.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/uenota.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-yabuta
+    name: "薮田交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.395377
+    lng: 136.725993
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/yabuta.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/yabuta.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-yamagata
+    name: "高木交差点（山県市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.504196
+    lng: 136.780831
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/yamagata.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/yamagata.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccn-yanaizu
+    name: "柳津町交差点（岐阜市・CCN）"
+    operator: "シーシーエヌ株式会社（CCN）"
+    category: road
+    prefecture: "21"
+    lat: 35.368194
+    lng: 136.744861
+    image_url: "https://www.ccn-catv.co.jp/prevention/live/img/yanaizu.jpg"
+    page_url: "https://www.ccn-catv.co.jp/prevention/live/yanaizu.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-tsue
+    name: "杖突峠（国道152号）（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: road
+    prefecture: "20"
+    lat: 35.927083
+    lng: 138.098472
+    image_url: "https://ina-dani.net/liveimage/tsue.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/4"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒で内容変化。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-inahigasi
+    name: "伊那インター東（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: road
+    prefecture: "20"
+    lat: 35.859667
+    lng: 137.952111
+    image_url: "https://ina-dani.net/liveimage/inahigasi.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/5"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒で内容変化。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-gonbee
+    name: "権兵衛峠 与地（国道361号）（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: road
+    prefecture: "20"
+    lat: 35.857528
+    lng: 137.91525
+    image_url: "https://ina-dani.net/liveimage/gonbee.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/6"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒で内容変化。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-takato
+    name: "白山トンネル（高遠）（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: road
+    prefecture: "20"
+    lat: 35.831778
+    lng: 138.057
+    image_url: "https://ina-dani.net/liveimage/takato.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/9"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒では同一だが Last-Modified は当日（更新間隔が長め）。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-touzai
+    name: "小河内東西線（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: road
+    prefecture: "20"
+    lat: 35.942861
+    lng: 137.997194
+    image_url: "https://ina-dani.net/liveimage/touzai.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/11"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒で内容変化。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-aka
+    name: "箕輪町 赤そばの里（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: scenic
+    prefecture: "20"
+    lat: 35.92707
+    lng: 137.93876
+    image_url: "https://ina-dani.net/liveimage/aka.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/12"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒で内容変化。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-omote
+    name: "表木（伊那市）（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: other
+    prefecture: "20"
+    lat: 35.787083
+    lng: 137.947833
+    image_url: "https://ina-dani.net/liveimage/omote.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/20"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒で内容変化。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-kasuga
+    name: "伊那ケーブルテレビ 社屋情報カメラ（春日）（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: other
+    prefecture: "20"
+    lat: 35.8343
+    lng: 137.95278
+    image_url: "https://ina-dani.net/liveimage/kasuga.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/21"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒で内容変化。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-inadani-hase
+    name: "伊那市長谷 非持 道の駅南アルプスむら長谷（伊那ケーブルテレビ）"
+    operator: "伊那ケーブルテレビジョン株式会社（伊那谷ねっと）"
+    category: road
+    prefecture: "20"
+    lat: 35.810255
+    lng: 138.08257
+    image_url: "https://ina-dani.net/liveimage/hase.jpg"
+    page_url: "https://ina-dani.net/live_cameras/show/27"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:50 静止画 image/jpeg、60秒で内容変化。「著作権について」に「無断で複製・転載…をかたく禁じます」（出所明示の引用・転載は認める）、「リンクについて」は原則フリー → 誘導型で提案。直接表示に切り替える場合は direct_image_url。前回の いなっせ前（inasse.jpg）も同条件。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-ccs-touyoko
+    name: "徳山駅前（東横イン徳山駅北口）（シティーケーブル周南）"
+    operator: "株式会社シティーケーブル周南"
+    category: other
+    prefecture: "35"
+    lat: 34.052238
+    lng: 131.804703
+    image_url: "https://livecam.ccsonline.jp/img/touyoko/touyoko-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:47 静止画 image/jpeg、65秒で内容変化（「1分ごとに更新」明記）。一覧ページに転載・リンク制限なし。台帳の望海台・ソレーネ周南・新南陽駅前と同形式（直接表示の前例）。"
+
+  - id: curated-catv-ccs-higashiic
+    name: "徳山東インターチェンジ付近（シティーケーブル周南）"
+    operator: "株式会社シティーケーブル周南"
+    category: road
+    prefecture: "35"
+    lat: 34.0585
+    lng: 131.8565
+    image_url: "https://livecam.ccsonline.jp/img/higashiic/higashiic-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:47 静止画 image/jpeg、65秒で内容変化（「1分ごとに更新」明記）。一覧ページに転載・リンク制限なし。台帳の望海台・ソレーネ周南・新南陽駅前と同形式（直接表示の前例）。"
+
+  - id: curated-catv-ccs-kano
+    name: "鹿野（周南市鹿野上）（シティーケーブル周南）"
+    operator: "株式会社シティーケーブル周南"
+    category: other
+    prefecture: "35"
+    lat: 34.253082
+    lng: 131.853287
+    image_url: "https://livecam.ccsonline.jp/img/kano/kano-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:47 静止画 image/jpeg、65秒で内容変化（「1分ごとに更新」明記）。一覧ページに転載・リンク制限なし。台帳の望海台・ソレーネ周南・新南陽駅前と同形式（直接表示の前例）。"
+
+  - id: curated-catv-ccs-kume
+    name: "県道347号 桜木3丁目付近（シティーケーブル周南）"
+    operator: "株式会社シティーケーブル周南"
+    category: road
+    prefecture: "35"
+    lat: 34.037437
+    lng: 131.836594
+    image_url: "https://livecam.ccsonline.jp/img/kume/kume-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:47 静止画 image/jpeg、65秒で内容変化（「1分ごとに更新」明記）。一覧ページに転載・リンク制限なし。台帳の望海台・ソレーネ周南・新南陽駅前と同形式（直接表示の前例）。"
+
+  - id: curated-catv-ccs-nakag
+    name: "県道347号 富田川橋付近（シティーケーブル周南）"
+    operator: "株式会社シティーケーブル周南"
+    category: road
+    prefecture: "35"
+    lat: 34.039097
+    lng: 131.761826
+    image_url: "https://livecam.ccsonline.jp/img/nakag/nakag-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:47 静止画 image/jpeg、65秒で内容変化（「1分ごとに更新」明記）。一覧ページに転載・リンク制限なし。台帳の望海台・ソレーネ周南・新南陽駅前と同形式（直接表示の前例）。"
+
+  - id: curated-catv-ccs-ozaki
+    name: "国道2号 住吉中学校付近（シティーケーブル周南）"
+    operator: "株式会社シティーケーブル周南"
+    category: road
+    prefecture: "35"
+    lat: 34.064728
+    lng: 131.804092
+    image_url: "https://livecam.ccsonline.jp/img/ozaki/ozaki-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:47 静止画 image/jpeg、65秒で内容変化（「1分ごとに更新」明記）。一覧ページに転載・リンク制限なし。台帳の望海台・ソレーネ周南・新南陽駅前と同形式（直接表示の前例）。"
+
+  - id: curated-catv-ccs-sukumo
+    name: "貴船神社付近（須々万）（シティーケーブル周南）"
+    operator: "株式会社シティーケーブル周南"
+    category: other
+    prefecture: "35"
+    lat: 34.112503
+    lng: 131.864151
+    image_url: "https://livecam.ccsonline.jp/img/sukumo/sukumo-001.jpg"
+    page_url: "https://livecam.ccsonline.jp/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:47 静止画 image/jpeg、65秒で内容変化（「1分ごとに更新」明記）。一覧ページに転載・リンク制限なし。台帳の望海台・ソレーネ周南・新南陽駅前と同形式（直接表示の前例）。"
+
+  - id: curated-catv-chukai-houki-ohashi
+    name: "伯耆大橋（日野川・国道431号）（中海テレビ）"
+    operator: "中海テレビ放送（コミュニティチャンネル）"
+    category: river
+    prefecture: "31"
+    lat: 35.4467
+    lng: 133.3606
+    feed_type: web_page
+    feed_url: "https://www.chukai.co.jp/community/live/houkioohashi/"
+    image_url: "https://www.chukai.co.jp/community/live/houkioohashi/"
+    page_url: "https://www.chukai.co.jp/community/live/houkioohashi/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 ページ存在確認（タイトル「伯耆大橋 - 中海テレビ コミュニティチャンネル」）。自社HLSのため誘導型。© 表記のみで転載・リンク制限なし（前回の米子駅前ロータリー等5件と同形式）。"
+
+  - id: curated-catv-chukai-kimoribashi
+    name: "鬼守橋（加茂川・米子市）（中海テレビ）"
+    operator: "中海テレビ放送（コミュニティチャンネル）"
+    category: river
+    prefecture: "31"
+    lat: 35.4296
+    lng: 133.331
+    feed_type: web_page
+    feed_url: "https://www.chukai.co.jp/community/live/kimoribashi/"
+    image_url: "https://www.chukai.co.jp/community/live/kimoribashi/"
+    page_url: "https://www.chukai.co.jp/community/live/kimoribashi/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 ページ存在確認（タイトル「鬼守橋（きもりばし）」）。自社HLSのため誘導型。"
+
+  - id: curated-catv-ncv-yonezawa-camera011
+    name: "南陽市 国道13号 鳥上坂（NCV）"
+    operator: "株式会社ニューメディア（NCV）"
+    category: road
+    prefecture: "06"
+    lat: 38.0735
+    lng: 140.1536
+    image_url: "https://www.ncv.co.jp/livecamera/yonezawa/camera011.jpg"
+    page_url: "https://www.ncv.co.jp/yonezawa/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:52 静止画 image/jpeg、Last-Modified は取得時刻の直前（約5分ごと更新と明記。90秒では同一）。台帳の NCV 米沢・新潟・福島の静止画6件と同形式。センターページに掲載中の全カメラを収集（函館2台は前回済み）。台帳の「NCV高畠町役場前」(camera013) は現行ページに無く要点検。"
+
+  - id: curated-catv-ncv-yonezawa-camera012
+    name: "高畠町 国道113号 道の駅たかはた（NCV）"
+    operator: "株式会社ニューメディア（NCV）"
+    category: road
+    prefecture: "06"
+    lat: 38.0068
+    lng: 140.2185
+    image_url: "https://www.ncv.co.jp/livecamera/yonezawa/camera012.jpg"
+    page_url: "https://www.ncv.co.jp/yonezawa/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:52 静止画 image/jpeg、Last-Modified は取得時刻の直前（約5分ごと更新と明記。90秒では同一）。台帳の NCV 米沢・新潟・福島の静止画6件と同形式。センターページに掲載中の全カメラを収集（函館2台は前回済み）。台帳の「NCV高畠町役場前」(camera013) は現行ページに無く要点検。"
+
+  - id: curated-catv-ncv-niigata-camera073
+    name: "新潟市西区 新潟バイパス 黒埼IC（NCV）"
+    operator: "株式会社ニューメディア（NCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.8555
+    lng: 138.964
+    image_url: "https://www.ncv.co.jp/livecamera/niigata/camera073.jpg"
+    page_url: "https://www.ncv.co.jp/niigata/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:52 静止画 image/jpeg、Last-Modified は取得時刻の直前（約5分ごと更新と明記。90秒では同一）。台帳の NCV 米沢・新潟・福島の静止画6件と同形式。センターページに掲載中の全カメラを収集（函館2台は前回済み）。台帳の「NCV高畠町役場前」(camera013) は現行ページに無く要点検。"
+
+  - id: curated-catv-ncv-fukushima-camera075
+    name: "福島市 国道4号 伏拝交差点（NCV）"
+    operator: "株式会社ニューメディア（NCV）"
+    category: road
+    prefecture: "07"
+    lat: 37.717846
+    lng: 140.46286
+    image_url: "https://www.ncv.co.jp/livecamera/fukushima/camera075.jpg"
+    page_url: "https://www.ncv.co.jp/fukushima/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:52 静止画 image/jpeg、Last-Modified は取得時刻の直前（約5分ごと更新と明記。90秒では同一）。台帳の NCV 米沢・新潟・福島の静止画6件と同形式。センターページに掲載中の全カメラを収集（函館2台は前回済み）。台帳の「NCV高畠町役場前」(camera013) は現行ページに無く要点検。"
+
+  - id: curated-catv-ncv-fukushima-camera094
+    name: "福島市 国道4号 岩谷下交差点（NCV）"
+    operator: "株式会社ニューメディア（NCV）"
+    category: road
+    prefecture: "07"
+    lat: 37.7818
+    lng: 140.4735
+    image_url: "https://www.ncv.co.jp/livecamera/fukushima/camera094.jpg"
+    page_url: "https://www.ncv.co.jp/fukushima/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:52 静止画 image/jpeg、Last-Modified は取得時刻の直前（約5分ごと更新と明記。90秒では同一）。台帳の NCV 米沢・新潟・福島の静止画6件と同形式。センターページに掲載中の全カメラを収集（函館2台は前回済み）。台帳の「NCV高畠町役場前」(camera013) は現行ページに無く要点検。"
+
+  - id: curated-catv-ucv-kitamuki4
+    name: "北向観音 護摩祈祷（不動堂）（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: other
+    prefecture: "20"
+    lat: 36.347557
+    lng: 138.1465
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/kitamuki4.html"
+    image_url: "https://live.ucv.co.jp/kitamuki4.html"
+    page_url: "https://live.ucv.co.jp/kitamuki4.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は camstreamer。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-ikushima2
+    name: "生島足島神社 東の神門〜東鳥居（駐車場）（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: other
+    prefecture: "20"
+    lat: 36.366432
+    lng: 138.233246
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/ikushima2.html"
+    image_url: "https://live.ucv.co.jp/ikushima2.html"
+    page_url: "https://live.ucv.co.jp/ikushima2.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は camstreamer。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-kokubu3
+    name: "信濃国分寺 本堂裏 蓮田（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.3842
+    lng: 138.2729
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/kokubu3.html"
+    image_url: "https://live.ucv.co.jp/kokubu3.html"
+    page_url: "https://live.ucv.co.jp/kokubu3.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は camstreamer。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-kokubu6
+    name: "国道18号 上田市国分（信濃国分寺ライブカメラ6）（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: road
+    prefecture: "20"
+    lat: 36.383
+    lng: 138.276
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/kokubu6.html"
+    image_url: "https://live.ucv.co.jp/kokubu6.html"
+    page_url: "https://live.ucv.co.jp/kokubu6.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は 静止画 img/kokubu6.jpg。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-ooboshi1
+    name: "大星神社（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: other
+    prefecture: "20"
+    lat: 36.4087
+    lng: 138.2571
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/ooboshi1.html"
+    image_url: "https://live.ucv.co.jp/ooboshi1.html"
+    page_url: "https://live.ucv.co.jp/ooboshi1.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は 静止画 img/ooboshi.jpg。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-otenki
+    name: "UCVお天気カメラ（上田市の空）（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.398827
+    lng: 138.261932
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/otenki.html"
+    image_url: "https://live.ucv.co.jp/otenki.html"
+    page_url: "https://live.ucv.co.jp/otenki.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は camstreamer。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-parking
+    name: "上田市役所 駐車場（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: other
+    prefecture: "20"
+    lat: 36.400669
+    lng: 138.249268
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/parking.html"
+    image_url: "https://live.ucv.co.jp/parking.html"
+    page_url: "https://live.ucv.co.jp/parking.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は 静止画 img/uedashi2.jpg。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-pareo
+    name: "上田駅前 温度計カメラ（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: other
+    prefecture: "20"
+    lat: 36.3968
+    lng: 138.2497
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/pareo.html"
+    image_url: "https://live.ucv.co.jp/pareo.html"
+    page_url: "https://live.ucv.co.jp/pareo.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は 静止画 img/ondo.jpg。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-river2
+    name: "六ヶ村堰（上田市上田原）（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: river
+    prefecture: "20"
+    lat: 36.389076
+    lng: 138.219635
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/river2.html"
+    image_url: "https://live.ucv.co.jp/river2.html"
+    page_url: "https://live.ucv.co.jp/river2.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は 静止画 img/rokkason.jpg。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-river7
+    name: "蛭沢川1（上流・材木町二丁目）提供:上田市（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: river
+    prefecture: "20"
+    lat: 36.39727
+    lng: 138.266281
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/river7.html"
+    image_url: "https://live.ucv.co.jp/river7.html"
+    page_url: "https://live.ucv.co.jp/river7.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は camstreamer。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。 台帳の「UCV蛭沢川材木町」(YouTube Q0exMF0VDY8) は下流側 river1（材木町一丁目）と見られ、本件は2025年新設の上流側。"
+
+  - id: curated-catv-ucv-tarou
+    name: "太郎山（上田市街から）（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.398827
+    lng: 138.261932
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/tarou.html"
+    image_url: "https://live.ucv.co.jp/tarou.html"
+    page_url: "https://live.ucv.co.jp/tarou.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は camstreamer。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-ario1
+    name: "アリオ上田 1（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: other
+    prefecture: "20"
+    lat: 36.397003
+    lng: 138.25
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/ario1.html"
+    image_url: "https://live.ucv.co.jp/ario1.html"
+    page_url: "https://live.ucv.co.jp/ario1.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は 静止画 img/ario1.jpg。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-ario2
+    name: "アリオ上田 2（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: other
+    prefecture: "20"
+    lat: 36.397003
+    lng: 138.25
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/ario2.html"
+    image_url: "https://live.ucv.co.jp/ario2.html"
+    page_url: "https://live.ucv.co.jp/ario2.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は 静止画 img/ario2.jpg。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-ucv-yoshida
+    name: "浅間サンライン 芳田（UCV）"
+    operator: "上田ケーブルビジョン株式会社（UCV）"
+    category: road
+    prefecture: "20"
+    lat: 36.391357
+    lng: 138.309265
+    feed_type: web_page
+    feed_url: "https://live.ucv.co.jp/yoshida.html"
+    image_url: "https://live.ucv.co.jp/yoshida.html"
+    page_url: "https://live.ucv.co.jp/yoshida.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 ページ存在・タイトル確認。配信は 静止画 img/yoshida.jpg。サイトに「文章や画像などを許可なく複製、使用することを禁じます」明記、リンクは https://live.ucv.co.jp/ へと案内 → 誘導型（台帳の眞田神社・東御中央公園・生島足島神社と同じ扱い）。"
+
+  - id: curated-catv-nns-kaikokubashi-east
+    name: "NNS道路カメラ アルプス通り 開国橋東側"
+    operator: "株式会社日本ネットワークサービス（NNS・甲府）"
+    category: road
+    prefecture: "19"
+    lat: 35.6215
+    lng: 138.5205
+    feed_type: web_page
+    feed_url: "https://www.youtube.com/watch?v=6y-esk2rjB4"
+    image_url: "https://www.youtube.com/watch?v=6y-esk2rjB4"
+    page_url: "https://www.youtube.com/watch?v=6y-esk2rjB4"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:05 watch: status=OK isLiveNow=true playableInEmbed=false（チャンネル NNS LiveCamera）→ 誘導型（台帳の NNS 6件と同じ web_page 形式）。NNS 道路状況カメラ https://www.nns-catv.co.jp/traffic/new_area08.html。台帳の「NNS国道20号小瀬スポーツ公園入口交差点」は動画IDが JH7ChBC2uxc → vzQV9YE6Z_M に変わっている（要追従）。"
+
+  - id: curated-catv-nns-funayamabashi-north
+    name: "NNS道路カメラ 国道20号 船山橋北詰交差点"
+    operator: "株式会社日本ネットワークサービス（NNS・甲府）"
+    category: road
+    prefecture: "19"
+    lat: 35.6555
+    lng: 138.5245
+    feed_type: web_page
+    feed_url: "https://www.youtube.com/watch?v=FOYc4GjrRFY"
+    image_url: "https://www.youtube.com/watch?v=FOYc4GjrRFY"
+    page_url: "https://www.youtube.com/watch?v=FOYc4GjrRFY"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:05 watch: status=OK isLiveNow=true playableInEmbed=false（チャンネル NNS LiveCamera）→ 誘導型（台帳の NNS 6件と同じ web_page 形式）。NNS 道路状況カメラ https://www.nns-catv.co.jp/traffic/new_area10.html。台帳の「NNS国道20号小瀬スポーツ公園入口交差点」は動画IDが JH7ChBC2uxc → vzQV9YE6Z_M に変わっている（要追従）。"
+
+  - id: curated-catv-nns-jurobashi-west
+    name: "NNS道路カメラ 雁坂みち 十郎橋西交差点"
+    operator: "株式会社日本ネットワークサービス（NNS・甲府）"
+    category: road
+    prefecture: "19"
+    lat: 35.6835
+    lng: 138.5975
+    feed_type: web_page
+    feed_url: "https://www.youtube.com/watch?v=D5sOQf1bEoE"
+    image_url: "https://www.youtube.com/watch?v=D5sOQf1bEoE"
+    page_url: "https://www.youtube.com/watch?v=D5sOQf1bEoE"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:05 watch: status=OK isLiveNow=true playableInEmbed=false（チャンネル NNS LiveCamera）→ 誘導型（台帳の NNS 6件と同じ web_page 形式）。NNS 道路状況カメラ https://www.nns-catv.co.jp/traffic/new_area11.html。台帳の「NNS国道20号小瀬スポーツ公園入口交差点」は動画IDが JH7ChBC2uxc → vzQV9YE6Z_M に変わっている（要追従）。"
+
+  - id: curated-catv-ictv-iruma-cam1
+    name: "国道16号 扇町屋交差点付近（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: road
+    prefecture: "11"
+    lat: 35.81517
+    lng: 139.378647
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam1"
+    image_url: "https://ictv.jp/support/livecamera/#cam1"
+    page_url: "https://ictv.jp/support/livecamera/#cam1"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam1.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam1 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam2
+    name: "国道299号バイパス 小谷田3丁目付近（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: road
+    prefecture: "11"
+    lat: 35.827995
+    lng: 139.375137
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam2"
+    image_url: "https://ictv.jp/support/livecamera/#cam2"
+    page_url: "https://ictv.jp/support/livecamera/#cam2"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam2.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam2 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam3
+    name: "国道16号・国道463号 河原町交差点（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: road
+    prefecture: "11"
+    lat: 35.843075
+    lng: 139.387604
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam3"
+    image_url: "https://ictv.jp/support/livecamera/#cam3"
+    page_url: "https://ictv.jp/support/livecamera/#cam3"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam3.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam3 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam5
+    name: "国道463号 豊岡交差点付近（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: road
+    prefecture: "11"
+    lat: 35.838379
+    lng: 139.388489
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam5"
+    image_url: "https://ictv.jp/support/livecamera/#cam5"
+    page_url: "https://ictv.jp/support/livecamera/#cam5"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam5.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam5 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam6
+    name: "入間川 中橋付近（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: river
+    prefecture: "11"
+    lat: 35.818485
+    lng: 139.353912
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam6"
+    image_url: "https://ictv.jp/support/livecamera/#cam6"
+    page_url: "https://ictv.jp/support/livecamera/#cam6"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam6.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam6 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam7
+    name: "国道16号（瑞穂町長岡団地）（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: road
+    prefecture: "13"
+    lat: 35.784294
+    lng: 139.327179
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam7"
+    image_url: "https://ictv.jp/support/livecamera/#cam7"
+    page_url: "https://ictv.jp/support/livecamera/#cam7"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam7.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam7 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam8
+    name: "国道463号・不老川（宮寺）（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: river
+    prefecture: "11"
+    lat: 35.794926
+    lng: 139.376556
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam8"
+    image_url: "https://ictv.jp/support/livecamera/#cam8"
+    page_url: "https://ictv.jp/support/livecamera/#cam8"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam8.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam8 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam9
+    name: "鍵山浄水場（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: other
+    prefecture: "11"
+    lat: 35.84317
+    lng: 139.38295
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam9"
+    image_url: "https://ictv.jp/support/livecamera/#cam9"
+    page_url: "https://ictv.jp/support/livecamera/#cam9"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam9.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam9 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam10
+    name: "入間IC（クリーンセンター）（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: road
+    prefecture: "11"
+    lat: 35.835835
+    lng: 139.391113
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam10"
+    image_url: "https://ictv.jp/support/livecamera/#cam10"
+    page_url: "https://ictv.jp/support/livecamera/#cam10"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam10.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam10 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-ictv-iruma-cam4
+    name: "圏央道（クリーンセンター）（入間ケーブルテレビ 定点カメラ）"
+    operator: "入間ケーブルテレビ株式会社（ICTV）"
+    category: road
+    prefecture: "11"
+    lat: 35.835835
+    lng: 139.391113
+    feed_type: web_page
+    feed_url: "https://ictv.jp/support/livecamera/#cam4"
+    image_url: "https://ictv.jp/support/livecamera/#cam4"
+    page_url: "https://ictv.jp/support/livecamera/#cam4"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:58 公式「定点カメラ」ページに10台のHLS（unreal/mztm.html?src=livecamera/hls/cam4.m3u8）埋め込み。HLS抽出はしないため誘導型。同一ページなので URL にアンカー #cam4 を付けて区別（CC9 と同じ手法）。ページに転載・リンク制限の記載なし。"
+
+  - id: curated-catv-tonotv-nabekura
+    name: "鍋倉展望台（遠野市新町）（遠野テレビ）"
+    operator: "遠野テレビ（遠野市）"
+    category: scenic
+    prefecture: "03"
+    lat: 39.329624
+    lng: 141.525436
+    image_url: "http://www.tonotv.com/camera/nabekura.jpg"
+    page_url: "https://www.tonotv.com/html/catv/livecamera/index.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:53 静止画 image/jpeg、70秒で内容変化。遠野テレビ公式「ライブカメラ」ページ（市営CATV）。転載・リンク制限の記載なし（市サイトの一般的な著作権表記のみ）。URL は http。"
+
+  - id: curated-catv-tonotv-kappabuchi
+    name: "カッパ淵（遠野市土淵町）（遠野テレビ）"
+    operator: "遠野テレビ（遠野市）"
+    category: scenic
+    prefecture: "03"
+    lat: 39.351601
+    lng: 141.562805
+    image_url: "http://www.tonotv.com/camera/kappabuchi.jpg"
+    page_url: "https://www.tonotv.com/html/catv/livecamera/index.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:53 静止画 image/jpeg、70秒で内容変化。遠野テレビ公式「ライブカメラ」ページ（市営CATV）。転載・リンク制限の記載なし（市サイトの一般的な著作権表記のみ）。URL は http。"
+
+  - id: curated-catv-tonotv-kazenooka
+    name: "道の駅遠野風の丘（遠野市綾織町）（遠野テレビ）"
+    operator: "遠野テレビ（遠野市）"
+    category: road
+    prefecture: "03"
+    lat: 39.362244
+    lng: 141.479401
+    image_url: "http://www.tonotv.com/camera/kazenooka.jpg"
+    page_url: "https://www.tonotv.com/html/catv/livecamera/index.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:53 静止画 image/jpeg、70秒で内容変化。遠野テレビ公式「ライブカメラ」ページ（市営CATV）。転載・リンク制限の記載なし（市サイトの一般的な著作権表記のみ）。URL は http。"
+
+  - id: curated-catv-tonotv-meganebashi
+    name: "めがね橋（宮守川橋梁・遠野市宮守町）（遠野テレビ）"
+    operator: "遠野テレビ（遠野市）"
+    category: scenic
+    prefecture: "03"
+    lat: 39.35638
+    lng: 141.359421
+    image_url: "http://www.tonotv.com/camera/meganebashi.jpg"
+    page_url: "https://www.tonotv.com/html/catv/livecamera/index.html"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:53 静止画 image/jpeg、70秒で内容変化。遠野テレビ公式「ライブカメラ」ページ（市営CATV）。転載・リンク制限の記載なし（市サイトの一般的な著作権表記のみ）。URL は http。"
+
+  - id: curated-catv-tvm-minehara-r153
+    name: "塩尻市峰原 国道153号（テレビ松本 塩尻ライブカメラ）"
+    operator: "テレビ松本ケーブルビジョン株式会社"
+    category: road
+    prefecture: "20"
+    lat: 36.09452
+    lng: 137.98675
+    image_url: "https://shiojiri.ne.jp/~web/minehara/R153.jpg"
+    page_url: "https://www.tvm.ne.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:53 静止画 image/jpeg、70秒で内容変化（ページは8秒ごとに再読込）。テレビ松本公式「ライブカメラ」ページの塩尻ライブカメラ枠（画像ホストは shiojiri.ne.jp）。転載・リンク制限の記載なし。他の地点（新村・渚・平田交差点等）は放送/YouTube「防災・交通情報」（台帳 qtzPaAgItzQ）内の切替表示で個別枠なし。"
+
+  - id: curated-catv-tvm-enpark-roof
+    name: "えんぱーく屋上（塩尻市街）（テレビ松本 塩尻ライブカメラ）"
+    operator: "テレビ松本ケーブルビジョン株式会社"
+    category: other
+    prefecture: "20"
+    lat: 36.11172
+    lng: 137.95279
+    image_url: "https://shiojiri.ne.jp/~web/shiojiri.jpg"
+    page_url: "https://www.tvm.ne.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:53 静止画 image/jpeg、70秒で内容変化（ページは8秒ごとに再読込）。テレビ松本公式「ライブカメラ」ページの塩尻ライブカメラ枠（画像ホストは shiojiri.ne.jp）。転載・リンク制限の記載なし。他の地点（新村・渚・平田交差点等）は放送/YouTube「防災・交通情報」（台帳 qtzPaAgItzQ）内の切替表示で個別枠なし。"
+
+  - id: curated-catv-tvm-mdu-roof
+    name: "松本歯科大学屋上（塩尻市広丘）（テレビ松本 塩尻ライブカメラ）"
+    operator: "テレビ松本ケーブルビジョン株式会社"
+    category: scenic
+    prefecture: "20"
+    lat: 36.127342
+    lng: 137.940393
+    image_url: "https://shiojiri.ne.jp/~mdu/img/mdu_garden.jpg"
+    page_url: "https://www.tvm.ne.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:53 静止画 image/jpeg、70秒で内容変化（ページは8秒ごとに再読込）。テレビ松本公式「ライブカメラ」ページの塩尻ライブカメラ枠（画像ホストは shiojiri.ne.jp）。転載・リンク制限の記載なし。他の地点（新村・渚・平田交差点等）は放送/YouTube「防災・交通情報」（台帳 qtzPaAgItzQ）内の切替表示で個別枠なし。"
+
+  - id: curated-catv-ctk-kani-camera09
+    name: "CTK屋上（可児市街 広見方面）（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: other
+    prefecture: "21"
+    lat: 35.421683
+    lng: 137.066597
+    image_url: "https://www6.ctk.ne.jp/live/img/camera09.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index01/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera11
+    name: "虹ケ丘（岐阜医療科学大学屋上）（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.411985
+    lng: 137.013175
+    image_url: "https://www6.ctk.ne.jp/live/img/camera11.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index02/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera05
+    name: "鳩吹山山頂（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.419083
+    lng: 136.999047
+    image_url: "https://www6.ctk.ne.jp/live/img/camera05.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index03/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera06
+    name: "ぎふワールド・ローズガーデン ウェルカムガーデン（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.420679
+    lng: 137.095868
+    image_url: "https://www6.ctk.ne.jp/live/img/camera06.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index04/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera07
+    name: "ぎふワールド・ローズガーデン オールドローズガーデン（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: scenic
+    prefecture: "21"
+    lat: 35.424451
+    lng: 137.098318
+    image_url: "https://www6.ctk.ne.jp/live/img/camera07.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index05/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera10
+    name: "国道41号 帷子IC方面（岐阜医療科学大学屋上）（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: road
+    prefecture: "21"
+    lat: 35.411985
+    lng: 137.013175
+    image_url: "https://www6.ctk.ne.jp/live/img/camera10.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index06/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera02
+    name: "可児工業団地 あけぼの橋付近（北側道路）（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: road
+    prefecture: "21"
+    lat: 35.412718
+    lng: 137.046512
+    image_url: "https://www6.ctk.ne.jp/live/img/camera02.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index07/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera08
+    name: "県道83号 大森新田交差点（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: road
+    prefecture: "21"
+    lat: 35.385075
+    lng: 137.087297
+    image_url: "https://www6.ctk.ne.jp/live/img/camera08.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index08/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera03
+    name: "可児川 あけぼの橋付近（可児工業団地）（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: river
+    prefecture: "21"
+    lat: 35.41212
+    lng: 137.053843
+    image_url: "https://www6.ctk.ne.jp/live/img/camera03.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index10/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera04
+    name: "可児川 土田はね橋（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: river
+    prefecture: "21"
+    lat: 35.415974
+    lng: 137.017393
+    image_url: "https://www6.ctk.ne.jp/live/img/camera04.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index11/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kani-camera01
+    name: "明和町交差点（可児市）（ケーブルテレビ可児）"
+    operator: "ケーブルテレビ可児株式会社（CTK）"
+    category: road
+    prefecture: "21"
+    lat: 35.426125
+    lng: 137.06102
+    image_url: "https://www6.ctk.ne.jp/live/img/camera01.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
+
+  - id: curated-catv-ctk-kanicity-53
+    name: "可児川 さつき大橋（広見）（可児市提供・ケーブルテレビ可児）"
+    operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
+    category: river
+    prefecture: "21"
+    lat: 35.4225
+    lng: 137.0665
+    image_url: "https://www.ctk.jp/kani-camera/camera-image/53.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index53/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"
+
+  - id: curated-catv-ctk-kanicity-54
+    name: "久々利川 姫橋（下切）（可児市提供・ケーブルテレビ可児）"
+    operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
+    category: river
+    prefecture: "21"
+    lat: 35.4075
+    lng: 137.0855
+    image_url: "https://www.ctk.jp/kani-camera/camera-image/54.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index54/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"
+
+  - id: curated-catv-ctk-kanicity-55
+    name: "可児川 二の井大橋（塩）（可児市提供・ケーブルテレビ可児）"
+    operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
+    category: river
+    prefecture: "21"
+    lat: 35.418
+    lng: 137.079
+    image_url: "https://www.ctk.jp/kani-camera/camera-image/55.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index55/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"
+
+  - id: curated-catv-ctk-kanicity-56
+    name: "可児川 JR太多線鉄橋（下恵土）（可児市提供・ケーブルテレビ可児）"
+    operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
+    category: river
+    prefecture: "21"
+    lat: 35.42
+    lng: 137.048
+    image_url: "https://www.ctk.jp/kani-camera/camera-image/56.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index56/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"
+
+  - id: curated-catv-ctk-kanicity-58
+    name: "可児川 名鉄広見線鉄橋（中恵土）（可児市提供・ケーブルテレビ可児）"
+    operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
+    category: river
+    prefecture: "21"
+    lat: 35.42
+    lng: 137.06
+    image_url: "https://www.ctk.jp/kani-camera/camera-image/58.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index58/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"
+
+  - id: curated-catv-ctk-kanicity-59
+    name: "可児川 鳥屋場橋（広見）（可児市提供・ケーブルテレビ可児）"
+    operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
+    category: river
+    prefecture: "21"
+    lat: 35.4215
+    lng: 137.0735
+    image_url: "https://www.ctk.jp/kani-camera/camera-image/59.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index59/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"
+
+  - id: curated-catv-ctk-kanicity-60
+    name: "土田 名鉄アンダーパス（可児市提供・ケーブルテレビ可児）"
+    operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
+    category: road
+    prefecture: "21"
+    lat: 35.425243
+    lng: 137.018433
+    image_url: "https://www.ctk.jp/kani-camera/camera-image/60.jpg"
+    page_url: "https://www.ctk.jp/ctk-ch/livecamera/index60/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"
+
+  - id: curated-catv-cty-tanix
+    name: "中央通り（TANIXビル屋上・四日市市）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.9668
+    lng: 136.621
+    image_url: "https://cty-cns.jp/livecamera/img/cty/09_tanix/tanix.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:57 静止画 image/jpeg、Last-Modified は取得直前（「1分ごとに更新」明記。75秒では同一）。ページに【掲載の画像・写真などの営利目的の無断転載・無断利用を禁止します】→ 誘導型で提案（掛川市の前例のように出典明記の直接表示をユーザーが認めるなら direct_image_url）。地域ページは JS 描画で初期表示の1台のみ取得できた（他の地点は要追加調査）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-cty-furuta
+    name: "国道365号（いなべ市藤原町古田）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.228012
+    lng: 136.459412
+    image_url: "https://cty-cns.jp/livecamera/img/cty/25_furuta/furuta.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:57 静止画 image/jpeg、Last-Modified は取得直前（「1分ごとに更新」明記。75秒では同一）。ページに【掲載の画像・写真などの営利目的の無断転載・無断利用を禁止します】→ 誘導型で提案（掛川市の前例のように出典明記の直接表示をユーザーが認めるなら direct_image_url）。地域ページは JS 描画で初期表示の1台のみ取得できた（他の地点は要追加調査）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-cty-komono-syukuno
+    name: "県道140号（菰野町宿野）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 35.003136
+    lng: 136.525024
+    image_url: "https://cty-cns.jp/livecamera/img/cty/44_komono-syukuno/komono-syukuno.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/komono"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:57 静止画 image/jpeg、Last-Modified は取得直前（「1分ごとに更新」明記。75秒では同一）。ページに【掲載の画像・写真などの営利目的の無断転載・無断利用を禁止します】→ 誘導型で提案（掛川市の前例のように出典明記の直接表示をユーザーが認めるなら direct_image_url）。地域ページは JS 描画で初期表示の1台のみ取得できた（他の地点は要追加調査）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-cty-ichinomiya
+    name: "国道23号 一ノ宮町交差点（鈴鹿市・SK-NET前）（CTY・CNS 情報カメラ）"
+    operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
+    category: road
+    prefecture: "24"
+    lat: 34.89851
+    lng: 136.600357
+    image_url: "https://cty-cns.jp/livecamera/img/cns/12_ichinomiya/ichinomiya.jpg"
+    page_url: "https://community.cty-cns.jp/livecamera/suzuka"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:57 静止画 image/jpeg、Last-Modified は取得直前（「1分ごとに更新」明記。75秒では同一）。ページに【掲載の画像・写真などの営利目的の無断転載・無断利用を禁止します】→ 誘導型で提案（掛川市の前例のように出典明記の直接表示をユーザーが認めるなら direct_image_url）。地域ページは JS 描画で初期表示の1台のみ取得できた（他の地点は要追加調査）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
+
+  - id: curated-catv-katch-19
+    name: "西尾東IC（国道23号）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: road
+    prefecture: "23"
+    lat: 34.876
+    lng: 137.075
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=19"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-5
+    name: "高浜市碧海町（衣浦大橋）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: road
+    prefecture: "23"
+    lat: 34.91972
+    lng: 136.98053
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=5"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-18
+    name: "碧南市港本町（国道247号）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: road
+    prefecture: "23"
+    lat: 34.868977
+    lng: 136.971863
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=18"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-21
+    name: "安城市柿碕町（市道四十目三ツ訳線）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: road
+    prefecture: "23"
+    lat: 34.979107
+    lng: 137.119858
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=21"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-6
+    name: "刈谷駅（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: other
+    prefecture: "23"
+    lat: 34.9887
+    lng: 137.0053
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=6"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-31
+    name: "知立駅（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: other
+    prefecture: "23"
+    lat: 35.0014
+    lng: 137.0525
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=31"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-7
+    name: "刈谷市高須町（猿渡川）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: river
+    prefecture: "23"
+    lat: 34.971634
+    lng: 137.019409
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=7"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-8
+    name: "刈谷市泉田町（境川）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: river
+    prefecture: "23"
+    lat: 35.022949
+    lng: 137.002136
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=8"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-11
+    name: "岡崎大橋 岡崎市（矢作川）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: river
+    prefecture: "23"
+    lat: 34.9435
+    lng: 137.1585
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=11"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-10
+    name: "米津水位観測所 西尾市（矢作川）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: river
+    prefecture: "23"
+    lat: 34.89225
+    lng: 137.056763
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=10"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-22
+    name: "安城市柿碕町（神田支川）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: river
+    prefecture: "23"
+    lat: 34.979107
+    lng: 137.119858
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=22"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-23
+    name: "安城市城南町（追田川）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: river
+    prefecture: "23"
+    lat: 34.951393
+    lng: 137.079193
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=23"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-17
+    name: "碧南市港本町（衣浦湾）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: coast
+    prefecture: "23"
+    lat: 34.868977
+    lng: 136.971863
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=17"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-24
+    name: "西尾市一色町（佐久島行船のりば・一色港）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: port
+    prefecture: "23"
+    lat: 34.810116
+    lng: 137.024948
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=24"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-36
+    name: "佐久島（外海）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: coast
+    prefecture: "23"
+    lat: 34.7215
+    lng: 137.033
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=36"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-katch-37
+    name: "佐久島（東港）（キャッチネットワーク）"
+    operator: "株式会社キャッチネットワーク（KATCH）"
+    category: port
+    prefecture: "23"
+    lat: 34.7237
+    lng: 137.049
+    image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=37"
+    page_url: "https://www.katch.co.jp/community/livecamera/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
+
+  - id: curated-catv-cableone-bousai1
+    name: "下西山交差点（武雄市）（ケーブルワン 防災カメラ）"
+    operator: "株式会社ケーブルワン（佐賀県武雄市）"
+    category: road
+    prefecture: "41"
+    lat: 33.1862
+    lng: 130.0358
+    image_url: "https://www.cableone.ne.jp/~bousai1/img/snap.jpg"
+    page_url: "https://www.cableone.ne.jp/disaster-prevention/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化（「アクセス集中のため更新を一時的に120秒毎に変更」の注記）。公式「防災情報」ページ。転載・リンク制限の記載なし。大町駅は大町町（41423）の可能性あり要確認。"
+
+  - id: curated-catv-cableone-bousai2
+    name: "白石町 新有明漁港（ケーブルワン 防災カメラ）"
+    operator: "株式会社ケーブルワン（佐賀県武雄市）"
+    category: port
+    prefecture: "41"
+    lat: 33.122639
+    lng: 130.134171
+    image_url: "https://www.cableone.ne.jp/~bousai2/img/snap.jpg"
+    page_url: "https://www.cableone.ne.jp/disaster-prevention/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化（「アクセス集中のため更新を一時的に120秒毎に変更」の注記）。公式「防災情報」ページ。転載・リンク制限の記載なし。大町駅は大町町（41423）の可能性あり要確認。"
+
+  - id: curated-catv-cableone-bousai3
+    name: "JR大町駅前（ケーブルワン 防災カメラ）"
+    operator: "株式会社ケーブルワン（佐賀県武雄市）"
+    category: other
+    prefecture: "41"
+    lat: 33.1958
+    lng: 130.0206
+    image_url: "https://www.cableone.ne.jp/~bousai3/img/snap.jpg"
+    page_url: "https://www.cableone.ne.jp/disaster-prevention/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化（「アクセス集中のため更新を一時的に120秒毎に変更」の注記）。公式「防災情報」ページ。転載・リンク制限の記載なし。大町駅は大町町（41423）の可能性あり要確認。"
+
+  - id: curated-catv-cableone-bousai4
+    name: "武内町亀の甲（松浦川）（ケーブルワン 防災カメラ）"
+    operator: "株式会社ケーブルワン（佐賀県武雄市）"
+    category: river
+    prefecture: "41"
+    lat: 33.21373
+    lng: 129.994675
+    image_url: "https://www.cableone.ne.jp/~bousai4/img/snap.jpg"
+    page_url: "https://www.cableone.ne.jp/disaster-prevention/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化（「アクセス集中のため更新を一時的に120秒毎に変更」の注記）。公式「防災情報」ページ。転載・リンク制限の記載なし。大町駅は大町町（41423）の可能性あり要確認。"
+
+  - id: curated-catv-cableone-bousai5
+    name: "江北バイパス（江北町）（ケーブルワン 防災カメラ）"
+    operator: "株式会社ケーブルワン（佐賀県武雄市）"
+    category: road
+    prefecture: "41"
+    lat: 33.220554
+    lng: 130.157227
+    image_url: "https://www.cableone.ne.jp/~bousai5/img/snap.jpg"
+    page_url: "https://www.cableone.ne.jp/disaster-prevention/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化（「アクセス集中のため更新を一時的に120秒毎に変更」の注記）。公式「防災情報」ページ。転載・リンク制限の記載なし。大町駅は大町町（41423）の可能性あり要確認。"
+
+  - id: curated-catv-jcv-joetsu-31
+    name: "国道8号 能生（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.101483
+    lng: 137.982662
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=31"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=31"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=31"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/031.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 糸魚川市能生。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-20
+    name: "国道8号 うみてらす名立前（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.164261
+    lng: 138.088439
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=20"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=20"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=20"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/020.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市名立区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-71
+    name: "直江津駅北口（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.171798
+    lng: 138.243284
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=71"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=71"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=71"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/071.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市中央。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-43
+    name: "ブレッソ直江津（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.170718
+    lng: 138.239448
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=43"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=43"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=43"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/043.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市西本町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-21
+    name: "関川 関川大橋左岸（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: river
+    prefecture: "15"
+    lat: 37.16211
+    lng: 138.243046
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=21"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=21"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=21"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/021.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市栄町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-76
+    name: "保倉川 佐内橋左岸（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: river
+    prefecture: "15"
+    lat: 37.179505
+    lng: 138.266793
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=76"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=76"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=76"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/076.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市佐内町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-72
+    name: "頸城区総合事務所（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.18743
+    lng: 138.329296
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=72"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=72"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=72"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/072.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市頸城区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-22
+    name: "北陸道 大潟PA（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.218571
+    lng: 138.328321
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=22"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=22"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=22"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/022.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市大潟区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-50
+    name: "新柿線 長峰交差点（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.242206
+    lng: 138.376196
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=50"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=50"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=50"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/050.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市吉川区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-51
+    name: "国道8号 柿崎IC付近（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.275067
+    lng: 138.394586
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=51"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=51"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=51"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/051.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市柿崎区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-44
+    name: "上越地域消防局（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.155342
+    lng: 138.248732
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=44"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=44"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=44"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/044.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市藤野新田。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-25
+    name: "北陸自動車道上越IC（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.146129
+    lng: 138.26284
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=25"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=25"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=25"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/025.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市富岡。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-24
+    name: "上越大通り 市役所入口交差点（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.147778
+    lng: 138.239328
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=24"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=24"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=24"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/024.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市木田。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-73
+    name: "山麓線春日山（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.145537
+    lng: 138.228312
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=73"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=73"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=73"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/073.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市春日山町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-27
+    name: "山麓線 飯交差点（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.123338
+    lng: 138.232166
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=27"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=27"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=27"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/027.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市飯山。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-77
+    name: "上沼道 寺IC～門田新田IC（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.12907
+    lng: 138.278045
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=77"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=77"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=77"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/077.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市門田新田。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-41
+    name: "あすとぴあ高田（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.114588
+    lng: 138.244592
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=41"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=41"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=41"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/041.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市本町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-5
+    name: "JCV放送センター（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.11308
+    lng: 138.250482
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=5"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=5"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=5"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/005.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市西城町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-69
+    name: "高田城址公園中央（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: scenic
+    prefecture: "15"
+    lat: 37.108975
+    lng: 138.254254
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=69"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=69"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=69"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/069.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市本城町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-74
+    name: "オーレンプラザ屋上（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.107349
+    lng: 138.253712
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=74"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=74"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=74"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/074.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市本城町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-70
+    name: "高田城址公園極楽橋（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: river
+    prefecture: "15"
+    lat: 37.109634
+    lng: 138.256672
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=70"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=70"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=70"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/070.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市本城町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-26
+    name: "関川 中央橋左岸（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: river
+    prefecture: "15"
+    lat: 37.108916
+    lng: 138.264238
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=26"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=26"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=26"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/026.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市東城町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-53
+    name: "国道18号 子安交差点（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.103867
+    lng: 138.279279
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=53"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=53"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=53"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/053.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市子安。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-56
+    name: "上越妙高駅 東口（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.08198
+    lng: 138.250183
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=56"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=56"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=56"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/056.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市大和。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-55
+    name: "上越妙高駅 西口（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.082031
+    lng: 138.246728
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=55"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=55"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=55"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/055.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市大和。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-23
+    name: "上沼道 安塚IC（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.143306
+    lng: 138.441119
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=23"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=23"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=23"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/023.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市安塚区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-2
+    name: "三和区総合事務所前（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.124464
+    lng: 138.346087
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=2"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=2"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=2"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/002.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市三和区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-101
+    name: "国道253号 浦川原区有島（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.158126
+    lng: 138.424868
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=101"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=101"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=101"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/101.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市浦川原区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-89
+    name: "牧区総合事務所（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.078839
+    lng: 138.383068
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=89"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=89"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=89"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/089.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市牧区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-92
+    name: "清里区総合事務所（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.081735
+    lng: 138.334933
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=92"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=92"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=92"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/092.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市清里区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-100
+    name: "板倉区総合事務所（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.051868
+    lng: 138.294928
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=100"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=100"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=100"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/100.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市板倉区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-98
+    name: "国道18号 市屋交差点（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 36.9665
+    lng: 138.225193
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=98"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=98"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=98"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/098.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 上越市中郷区市屋。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-95
+    name: "ほくほく線 まつだい駅（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.132424
+    lng: 138.61481
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=95"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=95"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=95"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/095.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市松代。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-83
+    name: "十日町駅西口（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.135191
+    lng: 138.755426
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=83"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=83"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=83"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/083.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市旭町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-91
+    name: "十日町市博物館入口（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.140279
+    lng: 138.757592
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=91"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=91"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=91"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/091.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市西本町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-80
+    name: "十日町市クロステン（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.138563
+    lng: 138.760957
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=80"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=80"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=80"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/080.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市本町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-97
+    name: "国道117号 十日町本町（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.13195
+    lng: 138.761254
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=97"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=97"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=97"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/097.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市本町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-90
+    name: "十日町市 諏訪神社（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.129288
+    lng: 138.762362
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=90"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=90"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=90"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/090.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市宮下町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-99
+    name: "国道253号 池尻交差点（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.122793
+    lng: 138.589967
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=99"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=99"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=99"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/099.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市池尻。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-96
+    name: "国道117号 十日町中里支所前（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.053334
+    lng: 138.698412
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=96"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=96"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=96"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/096.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市上山。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-94
+    name: "国道117号 十日町中条（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: road
+    prefecture: "15"
+    lat: 37.173181
+    lng: 138.775871
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=94"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=94"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=94"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/094.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市中条。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-93
+    name: "十日町市役所川西支所（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: river
+    prefecture: "15"
+    lat: 37.162269
+    lng: 138.739006
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=93"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=93"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=93"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/093.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 十日町市水口沢。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-81
+    name: "南魚沼市六日町（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.06599
+    lng: 138.878001
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=81"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=81"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=81"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/081.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 南魚沼市六日町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-102
+    name: "越後湯沢駅東口側（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 36.937646
+    lng: 138.811787
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=102"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=102"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=102"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/102.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 湯沢町湯沢。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-82
+    name: "両津港佐渡汽船ターミナル（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: port
+    prefecture: "15"
+    lat: 38.081302
+    lng: 138.437019
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=82"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=82"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=82"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/082.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 佐渡市両津湊。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-75
+    name: "新潟市万代シテイ（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.914703
+    lng: 139.051162
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=75"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=75"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=75"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/075.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 新潟市中央区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-60
+    name: "新潟駅万代口側（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.913725
+    lng: 139.061258
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=60"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=60"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=60"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/060.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 新潟市中央区。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-61
+    name: "長岡駅大手口側（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: other
+    prefecture: "15"
+    lat: 37.447524
+    lng: 138.849392
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=61"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=61"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=61"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/061.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 長岡市大手通。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-catv-jcv-joetsu-79
+    name: "糸魚川市横町（JCV 上越妙高タウン情報）"
+    operator: "上越ケーブルビジョン株式会社（JCV）"
+    category: river
+    prefecture: "15"
+    lat: 37.04248
+    lng: 137.85222
+    feed_type: web_page
+    feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=79"
+    image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=79"
+    page_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=79"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:10 ポータル「上越妙高タウン情報」ライブカメラ詳細ページ（title 確認: 直江津駅北口）。動画は自社プレーヤー（playkey）で HLS 抽出はしない、サムネ thumb/079.jpg は 2KB の静止サムネで更新されない → 誘導型。利用規約に「本サイトで得た情報を…営利を目的とした情報提供活動に用いること」の禁止事項あり（誘導のみなら問題なし）。所在地: 糸魚川市横町。妙高市ページ由来の12台は台帳済みで除外。"
+
+  - id: curated-vo-taxi-kyoto-sta-karasuma
+    name: "京都駅烏丸口 タクシーのりば（京都タクシー業務センター）"
+    operator: "京都タクシー業務センター（京都市域のタクシー業務適正化 指定機関）"
+    category: other
+    prefecture: "26"
+    lat: 34.9866
+    lng: 135.7586
+    image_url: "https://kyototaxi.net/gazo2.jpg"
+    page_url: "https://kyototaxi.net/station/"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:36〜05:45 検証: image/jpeg 25〜27KB、Last-Modified が 20:36:09Z → 20:40:09Z と更新（ページは meta refresh 60秒・『何もしなければ3分毎に再読込』『1分以内の状況』）。ページ内の YouTube 埋め込み（QUwTM_Unfnw）は LOGIN_REQUIRED（非公開）のため静止画を採用。サイトに転載禁止文言なし（他サイトへの『リンクしています』表記のみ）。烏丸口のりばの待機人数表示もあり"
+
+  - id: curated-vo-taxi-haneda-t2-stand4-a
+    name: "羽田空港 第2ターミナル 第4タクシー乗り場（東京タクシーセンター）"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.5532
+    lng: 139.787
+    image_url: "https://ttc.taxi-inf.jp/Real104_line.jpg"
+    page_url: "https://ttc.taxi-inf.jp/No4TaxiStand.php"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:45 検証: image/jpeg 22〜24KB、45秒後に内容変化・Last-Modified 更新（1分更新）。台帳収録の Real106（T3乗り場）・Real001（第1待機所南側）と同じ『羽田空港TPシステム』。ページ記載『待機者数／混雑状況の把握を目的』『個人を特定する目的ではありません』、転載禁止文言なし。同ページに Real105_line（別アングル）"
+
+  - id: curated-vo-taxi-haneda-t2-stand4-b
+    name: "羽田空港 第2ターミナル 第4タクシー乗り場（別アングル・東京タクシーセンター）"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.5534
+    lng: 139.7872
+    image_url: "https://ttc.taxi-inf.jp/Real105_line.jpg"
+    page_url: "https://ttc.taxi-inf.jp/No4TaxiStand.php"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:45 検証: image/jpeg 25〜28KB、45秒後に内容変化・Last-Modified 更新"
+
+  - id: curated-vo-taxi-haneda-t3-stand-b
+    name: "羽田空港 第3ターミナル タクシー乗り場（別アングル・東京タクシーセンター）"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.5441
+    lng: 139.7689
+    image_url: "https://ttc.taxi-inf.jp/Real107.jpg"
+    page_url: "https://ttc.taxi-inf.jp/No5TaxiStand.php"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:45 検証: image/jpeg 18KB、45秒後に内容変化。台帳の Real106 と同ページの2枚目"
+
+  - id: curated-vo-taxi-haneda-pool1-east
+    name: "羽田空港 第1タクシー待機所（東側・東京タクシーセンター）"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.5493
+    lng: 139.785
+    image_url: "https://ttc.taxi-inf.jp/Real002.jpg"
+    page_url: "https://ttc.taxi-inf.jp/index.php"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:45 検証: image/jpeg 39KB、Last-Modified 20:45:25Z（早朝で『本日の配車業務は終了しました』表示中。45秒間は同一だったが台帳の Real001 と同システム・同ページ）。ページ見出し『羽田空港第１待機所東側の状況』"
+
+  - id: curated-vo-taxi-haneda-pool3-front
+    name: "羽田空港 第3タクシー待機所（前方・東京タクシーセンター）"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.556
+    lng: 139.771
+    image_url: "https://ttc.taxi-inf.jp/Real108.jpg"
+    page_url: "https://ttc.taxi-inf.jp/no23.php"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:45 検証: image/jpeg 68KB、45秒後に内容変化。ページ見出し『羽田空港第３待機所の状況(前方)』"
+
+  - id: curated-vo-taxi-haneda-pool3-rear
+    name: "羽田空港 第3タクシー待機所（後方・東京タクシーセンター）"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.5562
+    lng: 139.7712
+    image_url: "https://ttc.taxi-inf.jp/Real109.jpg"
+    page_url: "https://ttc.taxi-inf.jp/no23.php"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:45 検証: image/jpeg 60KB、Last-Modified 20:45:15Z（45秒間は同一。同システム）。見出し『羽田空港第３待機所の状況(後方)』"
+
+  - id: curated-vo-taxi-haneda-pool3
+    name: "羽田空港 第3タクシー待機所（東京タクシーセンター）"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.5558
+    lng: 139.7708
+    image_url: "https://ttc.taxi-inf.jp/Real03.jpg"
+    page_url: "https://ttc.taxi-inf.jp/no23.php"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:45 検証: image/jpeg 206KB、Last-Modified 20:45:21Z。見出し『羽田空港第３待機所の状況』"
+
+  - id: curated-vo-taxi-haneda-pool4
+    name: "羽田空港 第4タクシー待機所（東京タクシーセンター）"
+    operator: "公益財団法人東京タクシーセンター"
+    category: other
+    prefecture: "13"
+    lat: 35.557
+    lng: 139.769
+    image_url: "https://ttc.taxi-inf.jp/Real04.jpg"
+    page_url: "https://ttc.taxi-inf.jp/no23.php"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:45 検証: image/jpeg 72〜75KB、45秒後に内容変化・Last-Modified 更新。見出し『羽田空港第４待機所の状況』"
+
+  - id: curated-vo-solar-magara-goka
+    name: "まがらソーラーファーム五霞の里（真柄建設）"
+    operator: "真柄建設株式会社"
+    category: other
+    prefecture: "08"
+    lat: 36.1141
+    lng: 139.746
+    image_url: "https://www.magara.co.jp/uploads/energy/pic_goka1.jpg"
+    page_url: "https://www.magara.co.jp/modules/energy/index.php?content_id=1"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:23〜05:38 検証: image/jpeg 11〜13KB、Last-Modified 20:23:25Z → 20:38:25Z（ページ記載どおり15分更新）。JS 生成ではなく固定URL（<img src=/uploads/energy/pic_goka1.jpg>）。発電量表示のみ /uploads/data.xml を ajax で読む構造。サイトはフッターの Copyright 表記のみで転載・リンク制限なし。604.8kW"
+
+  - id: curated-vo-solar-magara-nio
+    name: "まがらソーラーファーム鳰の里（真柄建設・大津市）"
+    operator: "真柄建設株式会社"
+    category: other
+    prefecture: "25"
+    lat: 35.0178
+    lng: 135.8547
+    image_url: "https://www.magara.co.jp/uploads/energy/pic_nio1.jpg"
+    page_url: "https://www.magara.co.jp/modules/energy/index.php?content_id=1"
+    note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。2026-09-30 05:28〜05:43 検証: image/jpeg 24KB、Last-Modified 20:27:56Z → 20:42:56Z、内容変化（15分更新）。600kW。所在地の精度が低いのでレビューで位置確認"
