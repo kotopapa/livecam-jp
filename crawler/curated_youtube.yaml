@@ -1366,10 +1366,11 @@ cameras:
     lat: 35.01
     lng: 135.76
 
+  # 2026-09-30 配信枠更新: ZOScw9H4D94 → z6tIfP0qS94（旧枠が非公開）
   - id: curated-kanmon-bridge
     name: 関門橋
     operator: "tysテレビ山口"
-    video_id: "ZOScw9H4D94"
+    video_id: "z6tIfP0qS94"
     category: road
     prefecture: "35"
     lat: 33.96
@@ -3715,10 +3716,11 @@ cameras:
     lng: 127.6461
     note: "ウミカジテラスから空港・海"
 
+  # 2026-09-30 配信枠更新: tusny7uGPS8 → 09m1PXSGFS0（旧枠が記録閲覧不可）
   - id: curated-r2-b86f9a98
     name: 関西国際空港 第1ターミナル
     operator: "関西テレビ放送"
-    video_id: "tusny7uGPS8"
+    video_id: "09m1PXSGFS0"
     category: other
     prefecture: "27"
     lat: 34.4347
@@ -5169,10 +5171,11 @@ cameras:
     lng: 131.384445
     note: "oEmbed 200"
 
+  # 2026-09-30 配信枠更新: qqrGSjdqfdQ → BO-QDRQGUHA（旧枠が非公開）
   - id: curated-tys-nihogawa
     name: "仁保川（tys本社）"
     operator: "tysテレビ山口"
-    video_id: "qqrGSjdqfdQ"
+    video_id: "BO-QDRQGUHA"
     category: "river"
     prefecture: "35"
     lat: 34.161926
@@ -7836,10 +7839,11 @@ cameras:
   # lng: 133.67
   # note: "oEmbed 200・isLiveNow=true(チャンネルUCv82Gjr4ulqFHdvoCCQKTXg/liveの正規URL)。既存のRKC空港カメラ(uo-sHAw3cr0)とは別運営者・別視点(駐車場)。座標は高知龍馬空港ターミナル前駐車場の既知位置"
 
+  # 2026-09-30 配信枠更新: ETM2Gb2ks-4 → -1k1V-2kCI4（旧枠が非公開）
   - id: curated-port-miyazaki-airport-mrt
     name: "宮崎空港（MRT宮崎放送ライブカメラ）"
     operator: "MRT宮崎放送"
-    video_id: "ETM2Gb2ks-4"
+    video_id: "-1k1V-2kCI4"
     category: "port"
     prefecture: "45"
     lat: 31.8772
@@ -13594,6 +13598,7 @@ cameras:
     lng: 139.334503
     video_id: oTMFXMnt_Eg
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.coating-maintenance.com/shop/akishima/'
+  # 2026-09-30 配信枠更新: cscuZ9wbpO0 → Q-TG3dT0Jmg（旧枠が記録閲覧不可）
   - id: curated-lcdb-fdb73229
     name: 青ヶ島三宝港
     operator: 東京都伊豆・小笠原諸島港湾ライブカメラ
@@ -13601,7 +13606,7 @@ cameras:
     prefecture: '13'
     lat: 32.447518
     lng: 139.757209
-    video_id: cscuZ9wbpO0
+    video_id: "Q-TG3dT0Jmg"
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.kouwan.metro.tokyo.lg.jp/'
   - id: curated-lcdb-75259bd7
     name: 神田川掃部橋
