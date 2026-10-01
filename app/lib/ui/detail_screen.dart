@@ -278,7 +278,8 @@ class _DetailScreenState extends State<DetailScreen> {
         : (st?.imageTime ?? st?.lastOkAt);
     final left = _cooldownLeft;
     final l10n = context.l10n;
-    if (camera.isVideo) {
+    // YouTube への誘導型（埋め込み不可のライブ）も「取得時刻・更新ボタン」ではなくライブ表示にする
+    if (camera.isLiveVideo) {
       final offline = camera.feed.type == FeedType.youtubeChannel && st?.live == false;
       return Row(children: [
         Icon(offline ? Icons.sensors_off : Icons.sensors,
