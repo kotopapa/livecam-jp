@@ -1,19 +1,20 @@
 {
- "version": "2026-09-01T21:46:27Z",
+ "version": "2026-10-01T23:05:58Z",
  "counts": {
   "12": 37,
   "13": 376,
   "23": 655,
   "25": 71,
+  "30": 31,
   "45": 23
  },
- "total": 1162,
+ "total": 1193,
  "kinds": {
   "water": "給水拠点・応急給水施設",
   "stock": "防災備蓄倉庫"
  },
  "kind_counts": {
-  "stock": 109,
+  "stock": 140,
   "water": 1053
  },
  "record_fields": {
@@ -190,6 +191,17 @@
   },
   {
    "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
+   "org": "海南市",
+   "title": "備蓄倉庫一覧表_海南市",
+   "url": "https://data.bodik.jp/dataset/302023_bichikusoukoitiran",
+   "license": "PDL 1.0",
+   "license_id": "PDL1.0",
+   "updated": "2026-09-15T05:23:26.293746",
+   "kind": "stock",
+   "count": 31
+  },
+  {
+   "portal": "BODIK ODCS（九州・全国自治体共同カタログ）",
    "org": "宮崎市",
    "title": "応急給水資機材の配備場所",
    "url": "https://data.bodik.jp/dataset/452017_mzksuido_011",
@@ -281,6 +293,14 @@
    "title": "三田市避難所防災倉庫資機材一覧表",
    "url": "https://data.bodik.jp/dataset/282197_bousaisouko",
    "license": "CC BY",
+   "reason": "有効な行が0件（XLSXにヘッダ行を持つ表が無い）"
+  },
+  {
+   "portal": "bodik",
+   "org": "海南市",
+   "title": "備蓄物資一覧表_海南市",
+   "url": "https://data.bodik.jp/dataset/302023_bichikubusshi",
+   "license": "PDL 1.0",
    "reason": "有効な行が0件（XLSXにヘッダ行を持つ表が無い）"
   },
   {
