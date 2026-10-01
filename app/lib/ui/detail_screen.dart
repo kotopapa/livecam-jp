@@ -775,11 +775,13 @@ class _YoutubeEmbedViewState extends State<_YoutubeEmbedView>
       );
     }
     final sep = widget.embedPath.contains('?') ? '&' : '?';
-    // controls=0: 再生バー・設定・全画面等を非表示（映像を遮らない）。
-    // 音声はプレーヤー上で解除できなくなるため「YouTubeで見る」導線で補う
+    // YouTube API サービス利用規約（Developer Policies III.I.4/6, RMF）に従い、
+    // プレーヤーの機能は無効化しない: 標準コントロール・全画面・YouTube ロゴを
+    // そのまま出す（2026-10-01 Google Play が「YouTube 利用規約違反」で 1.6.0 を却下。
+    // 以前は controls=0&fs=0&disablekb=1 で再生バー等を隠していた）。
+    // 音声なしの自動再生は RMF で認められている（プレーヤーが画面内に見えている1台だけ）
     final src = 'https://www.youtube.com/embed/${widget.embedPath}'
-        '${sep}playsinline=1&autoplay=1&mute=1&rel=0'
-        '&controls=0&fs=0&iv_load_policy=3&disablekb=1';
+        '${sep}playsinline=1&autoplay=1&mute=1&rel=0';
     _controller = WebViewController.fromPlatformCreationParams(params)
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(Colors.black)
