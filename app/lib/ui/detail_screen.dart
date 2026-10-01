@@ -222,18 +222,23 @@ class _DetailScreenState extends State<DetailScreen> {
           padding: const EdgeInsets.all(12),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             // バナー広告（映像の直下。スクロールなしで見える位置。
-            // 読み込み失敗時は区切り線ごと自動で消える）
-            AdBannerPlaceholder(),
+            // 読み込み失敗時は区切り線ごと自動で消える）。
+            // YouTube のカメラでは出さない: YouTube API 開発者ポリシー III.G.1 は
+            // プレーヤーの周囲や YouTube の内容が主である画面での広告・宣伝の販売を禁じて
+            // おり、2026-10-01 に Google Play がこの画面（動画直下のバナー）を根拠に
+            // 1.6.0 を却下した。誘導型（watch リンク）の画面も同じ扱いにする
+            if (!camera.isLiveVideo) AdBannerPlaceholder(),
             _timeAndRefreshRow(st),
             const SizedBox(height: 8),
             _badges(st),
             const Divider(height: 24),
             _locationSection(),
             const Divider(height: 24),
-            if (hotels != null) ...[hotels, const Divider(height: 24)],
+            if (hotels != null && !camera.isLiveVideo) ...[hotels, const Divider(height: 24)],
             // 地図の下にレクタングル広告(300×250)。上部バナーがスクロールで
             // 見えなくなる位置まで来た利用者向け。失敗時は区切り線ごと消える
-            AdBannerPlaceholder(size: AdSize.mediumRectangle, adUnitId: admobRectangleUnitId),
+            if (!camera.isLiveVideo)
+              AdBannerPlaceholder(size: AdSize.mediumRectangle, adUnitId: admobRectangleUnitId),
             _sourceSection(pageUrl),
             const Divider(height: 24),
             _nearbySection(),

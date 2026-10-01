@@ -69,6 +69,12 @@ python site/build.py                            # 配信ファイル生成
 - 運営者の明示的な断り（「無断転載禁止」「直接リンクはご遠慮」）があるものは技術的に取れても実装しない: ロードネット滋賀・山口県道路見えるナビ・三好市観光カメラ（取得経路は docs/research_followups_2026-08-25.md に記録済み、照会して許諾が得られれば即実装可）
 - **MBC南日本放送(mbc.co.jp)は画像の無断転載・二次利用お断りを明記** → 配信URLの直接参照は不可。既存67件は個別ページ(`/web-cam/movie.html?area=<img>`)への誘導型に変更済み、mbc_webcamパーサも誘導型を出す（2026-08-25ユーザー決定）
 
+## Google Play 却下（YouTube 利用規約）の知見（2026-10-01追記・厳守）
+
+- 1.6.0（versionCode 43）が「デバイスおよびネットワークの不正使用: YouTube の利用規約に違反する形でサービスまたは API を使用」で却下された。根拠のスクリーンショットは**カメラ詳細画面で YouTube の埋め込みプレーヤーの直下に AdMob バナー（と地図下のレクタングル）が出ている画面**。YouTube API 開発者ポリシー III.G.1.c/d（プレーヤーの上・内・周囲での広告販売禁止、YouTube の内容が主の画面での広告は独立した価値のある内容が無い限り禁止）と III.I.4/6（プレーヤー機能の無効化禁止: 旧 `controls=0&fs=0&disablekb=1`）に該当
+- 対処（1.6.2）: ① `camera.isLiveVideo`（youtube_video / youtube_channel / hls / YouTube への誘導型）の詳細画面では `AdBannerPlaceholder` 2か所と宿導線（HotelLinks）を出さない ② 埋め込みは標準コントロールのまま（`playsinline=1&autoplay=1&mute=1&rel=0` のみ。音声なし自動再生は RMF で可）。**YouTube プレーヤーのある画面に広告・アフィリエイト導線を置かない**こと。一覧・ランキング等の AdFooter は YouTube 以外のカメラも並ぶ画面なので据え置き
+- 再提出は Play Console の「公開概要」から新しいバージョンコードを送る（異議申し立てではなく修正して再審査）
+
 ## Crashlytics 対応の知見（2026-09-30追記）
 
 - 1.6.0 (48) の報告 4 件の内訳: ①`-[__NSDictionaryM setObject:forKeyedSubscript:]`（背景スレッド・Runner フレーム無し）= **Firebase Analytics の実験取得（APMEExperiment→GULMutableDictionary）に nil が来るサーバー側の不具合**。firebase-ios-sdk#16728、2026-09-28 23:52 PDT にサーバー側で修正済み。クライアント側の対処不要（GoogleUtilities PR#249 で nil を無視する修正がマージ済み、リリースは 8.1.3 以降待ち） ②`FLTNewGoogleMobileAdsViewFactory createArgsCodec`（実体は同ファイルの「Could not find an ad with id … already disposed?」の @throw）= 画面を閉じた直後に AdWidget の platform view 生成が走り、先に dispose した広告を参照して落ちる → `ad_banner.dart` の `_disposeAdLater`（3秒遅延。テストは `adDisposeDelay = Duration.zero`） ③`GeolocatorApple.getPositionStream` の FlutterError = 追従中のストリームのエラー（位置情報オフ等）が未処理で `recordError(fatal: true)` に流れていた → `onError` で追従停止 ④flutter_map の `DiscreteTileRange._floor` は 1.6.0 で flutter_map を廃止したので旧版のみ
