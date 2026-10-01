@@ -250,10 +250,10 @@ def update_lp_numbers(total: int, cats: dict[str, int]) -> None:
         (rf"(カメラ約){num}(台です)", approx(total)),                    # FAQ
         (rf'(id="heroTotal">約){num}(</b>)', approx(total)),             # 見出し下（JS で上書きされる前の表示）
         (rf"(DATA\.total : ){num}(;)", str(total)),                      # data.json が読めないときの控え
-        (rf"(河川カメラ約){num}(台)", approx(cats["river"])),              # 機能カード
+        (rf"(河川カメラは約){num}(台)", approx(cats["river"])),              # 機能カード
         (rf"(約){num}(台の河川カメラ)", approx(cats["river"])),            # 構造化データの FAQ
-        (rf'(id="riverN">){num}(</b> 台以上)', floor(cats["river"])),    # 大雨の場面
-        (rf"(道路カメラ約){num}(台)", approx(cats["road"])),               # 機能カード
+        (rf'(id="riverN">){num}(</b>台以上)', floor(cats["river"])),    # 大雨の場面
+        (rf"(道路カメラは約){num}(台)", approx(cats["road"])),               # 機能カード
     ]
     path = REPO_ROOT / "site" / "index.html"
     html = path.read_text(encoding="utf-8")
