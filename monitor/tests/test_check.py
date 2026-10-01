@@ -286,3 +286,26 @@ def test_pick_live_stream_prefers_camera_like_title():
     # 前回の枠がまだ配信中ならそれを維持
     assert pick_live_stream(lives, "保護猫ルーム（富士見台どうぶつ病院）", "AAAAAAAAAA1") == "AAAAAAAAAA1"
     assert pick_live_stream([], "x", None) is None
+
+
+def test_check_page_youtube_watch_link_dead():
+    """誘導型の watch リンクで配信枠が終わっていたら失敗として数える"""
+    from datetime import datetime, timezone
+    from monitor.check import _check_page
+
+    class R:
+        status_code = 200
+        headers = {}
+        def __init__(self, text): self.text = text
+
+    class Sess:
+        def __init__(self, text): self.t = text
+        def get(self, *a, **k): return R(self.t)
+
+    cam = {"id": "x", "feed": {"type": "web_page", "url": "https://www.youtube.com/watch?v=AAAAAAAAAAA"}}
+    now = datetime(2026, 10, 1, tzinfo=timezone.utc)
+    dead = 'var ytInitialPlayerResponse = {"playabilityStatus":{"status":"UNPLAYABLE"}};'
+    live = 'var ytInitialPlayerResponse = {"playabilityStatus":{"status":"OK"},"isLiveNow":true};'
+    st = {}
+    assert _check_page(Sess(dead), cam, st, now, 2)["state"] == "error"
+    assert _check_page(Sess(live), cam, {}, now, 0)["state"] == "ok"

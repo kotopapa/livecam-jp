@@ -399,6 +399,13 @@ def _check_page(session, camera, state, now, prev_failures) -> dict:
     resp = _get(session, camera["feed"]["url"], _headers(camera, state))
     if resp is None or resp.status_code >= 400:
         return _fail(state, now, prev_failures, resp.status_code if resp is not None else None)
+    # YouTube への誘導型（watch リンク）は HTTP 200 のまま配信枠が終わる（「このライブ ストリームの
+    # 記録は、ご覧いただけません」）。youtube_video と同じく watch ページで生死を見る（2026-10-01
+    # 敦賀駅西口・山田農園ドッグランで、終わった枠へ案内していた）
+    url = camera["feed"]["url"]
+    if "youtube.com/watch" in url and "ytInitialPlayerResponse" in resp.text:
+        if not _youtube_watch_alive(resp.text, now):
+            return _fail(state, now, prev_failures, resp.status_code)
     state["consecutive_failures"] = 0
     state["etag"] = resp.headers.get("ETag")
     state["last_modified"] = resp.headers.get("Last-Modified")
