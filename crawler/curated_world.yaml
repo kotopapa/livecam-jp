@@ -3289,10 +3289,11 @@ cameras:
     lat: -33.617
     lng: -71.63
   # 2026-09-23 配信枠更新: SxrTLvn-YTQ → Yyp1_Di0LU4（埋め込み不可のため誘導型）
+  # 2026-10-01 配信枠が切り替わるためチャンネルの現在のライブへ: Yyp1_Di0LU4 → UCgtAAzMRP9ok3Cv0ZyxtJPQ/live
   - id: world-9929520f
     name: パナマシティ
     operator: Panama City Live Cam
-    video_id: Yyp1_Di0LU4
+    channel_id: "UCgtAAzMRP9ok3Cv0ZyxtJPQ"
     embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: PA
@@ -4910,15 +4911,16 @@ cameras:
     lat: 28.53
     lng: 83.878
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)。既存「エベレスト遠望(ホテルエベレストビュー)」と同運営者
-  - id: world-f26c5112
-    name: ムスタン カグベニ
-    operator: WEBCAM NEPAL LIVE
-    video_id: tyomcR9vQDI
-    category: scenic
-    country: NP
-    lat: 28.836
-    lng: 83.783
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)。既存「エベレスト遠望(ホテルエベレストビュー)」と同運営者
+  # 2026-10-01 退役: 配信終了（同チャンネルに該当地点のライブなし）
+  # - id: world-f26c5112
+  #   name: ムスタン カグベニ
+  #   operator: WEBCAM NEPAL LIVE
+  #   video_id: tyomcR9vQDI
+  #   category: scenic
+  #   country: NP
+  #   lat: 28.836
+  #   lng: 83.783
+  #   note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)。既存「エベレスト遠望(ホテルエベレストビュー)」と同運営者
   - id: world-4b480925
     name: クンブ タメ村
     operator: WEBCAM NEPAL LIVE
@@ -4955,19 +4957,21 @@ cameras:
     lat: 27.805
     lng: 86.711
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)。既存「エベレスト遠望(ホテルエベレストビュー)」と同運営者
-  - id: world-14cbd811
-    name: クンブ ディンボチェ(4360m)
-    operator: WEBCAM NEPAL LIVE
-    video_id: MOP1v1zd408
-    category: scenic
-    country: NP
-    lat: 27.893
-    lng: 86.831
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)。既存「エベレスト遠望(ホテルエベレストビュー)」と同運営者
+  # 2026-10-01 退役: 配信終了（同チャンネルに該当地点のライブなし）
+  # - id: world-14cbd811
+  #   name: クンブ ディンボチェ(4360m)
+  #   operator: WEBCAM NEPAL LIVE
+  #   video_id: MOP1v1zd408
+  #   category: scenic
+  #   country: NP
+  #   lat: 27.893
+  #   lng: 86.831
+  #   note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)。既存「エベレスト遠望(ホテルエベレストビュー)」と同運営者
+  # 2026-10-01 配信枠更新: vdw9G6r3fRg → BpgxVBmW2mw
   - id: world-baa64324
     name: ムスタン ムクティナート
     operator: WEBCAM NEPAL LIVE
-    video_id: vdw9G6r3fRg
+    video_id: BpgxVBmW2mw
     category: scenic
     country: NP
     lat: 28.817
@@ -4982,15 +4986,16 @@ cameras:
     lat: 28.376
     lng: 83.808
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可(oEmbed 401)。既存「エベレスト遠望(ホテルエベレストビュー)」と同運営者
-  - id: world-0ee77449
-    name: ムスタン レテ カロパニ
-    operator: WEBCAM NEPAL ANNAPURNA(WEBCAM NEPAL系列)
-    video_id: HxUjr2fGO-M
-    category: scenic
-    country: NP
-    lat: 28.63
-    lng: 83.61
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可
+  # 2026-10-01 退役: 配信終了（同チャンネルに該当地点のライブなし）
+  # - id: world-0ee77449
+  #   name: ムスタン レテ カロパニ
+  #   operator: WEBCAM NEPAL ANNAPURNA(WEBCAM NEPAL系列)
+  #   video_id: HxUjr2fGO-M
+  #   category: scenic
+  #   country: NP
+  #   lat: 28.63
+  #   lng: 83.61
+  #   note: 埋め込み不可(oEmbed 401)→誘導型で登録。埋め込み不可
   # 2026-09-23 配信枠更新: XW7bVO4igEc → e2DcVUYB5sU
   - id: world-e2c0cb84
     name: カトマンズ市街(WEBCAM NEPAL)
@@ -5220,10 +5225,11 @@ cameras:
     country: DE
     lat: 53.5484
     lng: 9.9787
+  # 2026-10-01 配信枠更新: YKK7qxWQ5d8 → EYdVPJ_wvHo
   - id: world-aa5dddb8
     name: ヴァルネミュンデ 灯台・港口
     operator: livespotting
-    video_id: YKK7qxWQ5d8
+    video_id: EYdVPJ_wvHo
     category: port
     country: DE
     lat: 54.181
@@ -5932,10 +5938,11 @@ cameras:
     country: SE
     lat: 64.068
     lng: 14.128
+  # 2026-10-01 配信枠が切り替わるためチャンネルの現在のライブへ: 6FyGuwH6I34 → UCPQH7Qez-TIVJv5cmquVFyg/live
   - id: world-3f824ffb
     name: ワルシャワ市街
     operator: Warsaw Livestream
-    video_id: 6FyGuwH6I34
+    channel_id: "UCPQH7Qez-TIVJv5cmquVFyg"
     category: scenic
     country: PL
     lat: 52.23
@@ -6565,10 +6572,11 @@ cameras:
     country: IT
     lat: 37.8
     lng: 15.03
+  # 2026-10-01 配信枠更新: ThX2Znx9zZY → QAsn_SUp130
   - id: world-b5efc2f0
     name: エトナ山 南側(リフージオ・サピエンツァ)
     operator: Weather Italy - WS Cam
-    video_id: ThX2Znx9zZY
+    video_id: QAsn_SUp130
     category: volcano
     country: IT
     lat: 37.7
@@ -7538,15 +7546,16 @@ cameras:
     country: BR
     lat: -23.969
     lng: -46.329
-  - id: world-3807c0f2
-    name: サント・アルベルト灯台(リオグランデ・ド・ノルテ)
-    operator: FVF Drone
-    video_id: z5Z1zGFqeqo
-    category: coast
-    country: BR
-    lat: -5.062
-    lng: -35.509
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。
+  # 2026-10-01 退役: 配信終了（同チャンネルは別地点の交通カメラのみ）
+  # - id: world-3807c0f2
+  #   name: サント・アルベルト灯台(リオグランデ・ド・ノルテ)
+  #   operator: FVF Drone
+  #   video_id: z5Z1zGFqeqo
+  #   category: coast
+  #   country: BR
+  #   lat: -5.062
+  #   lng: -35.509
+  #   note: 埋め込み不可(oEmbed 401)→誘導型で登録。
   # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
   # - id: world-0c7c8f3c
   # name: サン・ビセンテ イタラレ海岸
@@ -8745,10 +8754,11 @@ cameras:
     lng: 55.87
     note: 既存ノース島と同運営者。ループ映像の可能性あり要目視。approx
   # 2026-09-23 配信枠更新: sdgEUQQ4SzQ → upNOSgmrDYk（埋め込み不可のため誘導型）
+  # 2026-10-01 配信枠が切り替わるためチャンネルの現在のライブへ: upNOSgmrDYk → UCIQVWkOilfxoQSFcban_d-A/live
   - id: world-07b43231
     name: マウイ島 カアナパリ(ホエラー・コンド)
     operator: Maui Live Cam (WhalerCondo.net)
-    video_id: upNOSgmrDYk
+    channel_id: "UCIQVWkOilfxoQSFcban_d-A"
     embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     category: scenic
     country: US
@@ -9779,16 +9789,17 @@ cameras:
     lng: 175.4
     note: approx
   # 2026-09-23 配信枠更新: b3JLiw_arrA → MYYs93NSVEE（埋め込み不可のため誘導型）
-  - id: world-4ba13242
-    name: オカナガン湖
-    operator: Okanagan Lake Live Cam
-    video_id: MYYs93NSVEE
-    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
-    category: scenic
-    country: CA
-    lat: 49.7
-    lng: -119.7
-    note: 埋め込み不可(oEmbed 401)→誘導型で登録。approx
+  # 2026-10-01 退役: 配信終了・チャンネルに現行ライブなし
+  # - id: world-4ba13242
+  #   name: オカナガン湖
+  #   operator: Okanagan Lake Live Cam
+  #   video_id: MYYs93NSVEE
+  #   embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
+  #   category: scenic
+  #   country: CA
+  #   lat: 49.7
+  #   lng: -119.7
+  #   note: 埋め込み不可(oEmbed 401)→誘導型で登録。approx
   # 2026-09-23 配信枠更新: AWTNsq3easY → JkgfWXFz1N4
   - id: world-82fb308c
     name: レーニア山とタコマ(ピアース郡)

@@ -3883,10 +3883,11 @@ cameras:
     lng: 144.382
 
   # 2026-08-31 配信枠更新: riTcTDJ2UMA → CXb35rEdDWY
+  # 2026-10-01 配信枠が切り替わるためチャンネルの現在のライブへ: CXb35rEdDWY → UCzjRAMVvFtTp_20sLDv2OUA/live
   - id: curated-r2-f9606025
     name: 美瑛 四季の塔
     operator: "World.cam(美瑛町)"
-    video_id: "CXb35rEdDWY"
+    channel_id: "UCzjRAMVvFtTp_20sLDv2OUA"
     channel_id: "UCzjRAMVvFtTp_20sLDv2OUA"
     category: scenic
     prefecture: "01"
@@ -16764,6 +16765,7 @@ cameras:
     channel_id: "UCNoxPx5sKmEu5TiH3w5KI8A"
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 2026.8,26【ライブ配信】函館本線・いさりび鉄道)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@welcometohakodate4713'
   # 2026-08-31 配信枠更新: G38kbMne_IQ → H1DpFnz2Qwk
+  # 2026-10-01 配信枠更新: H1DpFnz2Qwk → rTDYtqJfpW0
   - id: curated-lcdb-574150f8
     name: ヴェルサイユリゾートファーム
     operator: ヴェルサイユリゾートファーム
@@ -16771,7 +16773,7 @@ cameras:
     prefecture: '01'
     lat: 42.51945
     lng: 142.11363
-    video_id: H1DpFnz2Qwk
+    video_id: rTDYtqJfpW0
     embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 大放牧地カメラ配信　2026年8月29日 | ヴェルサイユリゾートファーム)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.versailles-resort.com/'
   # 2026-08-31 配信枠更新: wE4JRWOY3YI → aFfWHJnvAwY
