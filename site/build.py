@@ -230,7 +230,64 @@ def build_lp_data(approved: list[dict]) -> int:
         encoding="utf-8",
     )
     update_lp_numbers(len(approved), cats)
+    build_lp_names(approved)
     return len(seen)
+
+
+LP_PREF_NAMES = (
+    "北海道 青森 岩手 宮城 秋田 山形 福島 茨城 栃木 群馬 埼玉 千葉 東京 神奈川 新潟 富山 石川 福井 山梨 長野 "
+    "岐阜 静岡 愛知 三重 滋賀 京都 大阪 兵庫 奈良 和歌山 鳥取 島根 岡山 広島 山口 徳島 香川 愛媛 高知 福岡 "
+    "佐賀 長崎 熊本 大分 宮崎 鹿児島 沖縄").split()
+
+
+def build_lp_names(approved: list[dict]) -> None:
+    """公式サイトの演出用にカメラ名の一部を site/lp/names.json に書く。
+
+    lens: 0.05° 格子ごとに代表1台 [緯度*100, 経度*100, カテゴリ番号, 名前]（地図に重ねた照準で名前を出す）
+    ticker: 放送の字幕風に流すカメラ [名前, 都道府県, カテゴリ番号]（カテゴリと地域が偏らないよう選ぶ）
+    名前は台帳の公開情報のみ。画像・URL は含めない
+    """
+    import hashlib
+    dom = [c for c in approved
+           if not str(c.get("id", "")).startswith("world-") and c.get("lat") is not None and c.get("name")]
+    dom.sort(key=lambda c: c["id"])
+
+    def rank(c: dict) -> tuple:
+        live = (c.get("feed") or {}).get("type") in ("youtube_video", "youtube_channel")
+        return (0 if live else 1, len(c["name"]), c["id"])
+
+    cells: dict[tuple[int, int], dict] = {}
+    for c in dom:
+        k = (round(c["lat"] * 20), round(c["lng"] * 20))
+        if k not in cells or rank(c) < rank(cells[k]):
+            cells[k] = c
+    cat_of = lambda c: LP_CATS.index(c["category"]) if c.get("category") in LP_CATS else LP_CATS.index("other")
+    lens = [[round(c["lat"] * 100), round(c["lng"] * 100), cat_of(c), c["name"]] for c in cells.values()]
+
+    quota = {"scenic": 34, "river": 26, "road": 18, "coast": 14, "volcano": 10,
+             "dam": 10, "port": 10, "healing": 14, "other": 14}
+    def h(c: dict) -> str:
+        return hashlib.sha1(c["id"].encode()).hexdigest()
+    ticker = []
+    for cat, n in quota.items():
+        pool = [c for c in dom if c.get("category") == cat and 3 <= len(c["name"]) <= 16]
+        pool.sort(key=h)
+        used_pref: dict[str, int] = {}
+        for c in pool:
+            pref = str(c.get("prefecture") or "")
+            if used_pref.get(pref, 0) >= 2:
+                continue
+            used_pref[pref] = used_pref.get(pref, 0) + 1
+            pi = int(pref) - 1 if pref.isdigit() and 1 <= int(pref) <= 47 else -1
+            ticker.append([c["name"], LP_PREF_NAMES[pi] if pi >= 0 else "", cat_of(c)])
+            if len([t for t in ticker if t[2] == LP_CATS.index(cat)]) >= n:
+                break
+    ticker.sort(key=lambda t: hashlib.sha1(t[0].encode()).hexdigest())
+    out = REPO_ROOT / "site" / "lp"
+    (out / "names.json").write_text(
+        json.dumps({"lens": lens, "ticker": ticker}, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
 
 
 def update_lp_numbers(total: int, cats: dict[str, int]) -> None:
@@ -249,7 +306,7 @@ def update_lp_numbers(total: int, cats: dict[str, int]) -> None:
         (rf"(約){num}(台のライブカメラ)", approx(total)),                # meta・og・構造化データ
         (rf"(カメラ約){num}(台です)", approx(total)),                    # FAQ
         (rf'(id="heroTotal">約){num}(</b>)', approx(total)),             # 見出し下（JS で上書きされる前の表示）
-        (rf"(DATA\.total : ){num}(;)", str(total)),                      # data.json が読めないときの控え
+        (rf'(data-fallback-total="){num}(")', str(total)),             # data.json が読めないときの控え
         (rf"(河川カメラは約){num}(台)", approx(cats["river"])),              # 機能カード
         (rf"(約){num}(台の河川カメラ)", approx(cats["river"])),            # 構造化データの FAQ
         (rf'(id="riverN">){num}(</b>台以上)', floor(cats["river"])),    # 大雨の場面

@@ -69,6 +69,14 @@ python site/build.py                            # 配信ファイル生成
 - 運営者の明示的な断り（「無断転載禁止」「直接リンクはご遠慮」）があるものは技術的に取れても実装しない: ロードネット滋賀・山口県道路見えるナビ・三好市観光カメラ（取得経路は docs/research_followups_2026-08-25.md に記録済み、照会して許諾が得られれば即実装可）
 - **MBC南日本放送(mbc.co.jp)は画像の無断転載・二次利用お断りを明記** → 配信URLの直接参照は不可。既存67件は個別ページ(`/web-cam/movie.html?area=<img>`)への誘導型に変更済み、mbc_webcamパーサも誘導型を出す（2026-08-25ユーザー決定）
 
+## 公式サイト（LP）の構成（2026-10-01 全面改修）
+
+- `site/index.html`（文書・SEO・構造化データ）＋ `site/lp/app.css`（見た目）＋ `site/lp/app.js`（動き）。GSAP 3.12＋ScrollTrigger＋Lenis は jsDelivr から defer で読む。フォントは Dela Gothic One（大見出し）・Zen Old Mincho（詩的な見出し・本文リード）・Zen Kaku Gothic New（本文）・Unbounded（英字）・JetBrains Mono（計器表示）
+- 地図は**実在カメラの位置**（`site/build.py` の `build_lp_data` → `lp/data.json`）を WebGL の光点（加算合成）で描く。視点は `app.js` の `buildKeys()`（スクロール位置に結び付けたキーフレーム）で決め、文字演出は ScrollTrigger。**地図の視点を GSAP で直接動かさない**（場面同士で衝突する）。`lp/names.json`（`build_lp_names`）は ON AIR 字幕と照準（地図にカーソルを置くと近くのカメラ名）用の公開名だけ
+- 読み込み中は `html.is-loading` で本文を不可視にして CLS を抑える（改修前 0.45 → 0.03）。場面の最後で要素を消すと次の場面までに空白ができるので、消さずに場面ごと流す
+- 見た目の監査は `tools/lp_audit/`（`audit.mjs` 段階スクロール撮影＋CLS/LCP/FPS、`sheet.mjs` コンタクトシート、`interact.mjs` 照準・音・動きを減らす設定）。Playwright は store_screenshots の node_modules を使うので、`store_screenshots/` にコピーして `python3 -m http.server 8765`（site/ で起動）に向けて実行する
+- `build.py` の `update_lp_numbers` は index.html の「約◯台のライブカメラ」等と `data-fallback-total` を書き換える。文言を変えたら規則も合わせる
+
 ## Google Play 却下（YouTube 利用規約）の知見（2026-10-01追記・厳守）
 
 - 1.6.0（versionCode 43）が「デバイスおよびネットワークの不正使用: YouTube の利用規約に違反する形でサービスまたは API を使用」で却下された。根拠のスクリーンショットは**カメラ詳細画面で YouTube の埋め込みプレーヤーの直下に AdMob バナー（と地図下のレクタングル）が出ている画面**。YouTube API 開発者ポリシー III.G.1.c/d（プレーヤーの上・内・周囲での広告販売禁止、YouTube の内容が主の画面での広告は独立した価値のある内容が無い限り禁止）と III.I.4/6（プレーヤー機能の無効化禁止: 旧 `controls=0&fs=0&disablekb=1`）に該当
