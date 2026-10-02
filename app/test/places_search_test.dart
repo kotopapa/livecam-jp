@@ -331,7 +331,7 @@ void main() {
         expect(req.headers['X-Goog-Api-Key'], 'KEY');
         expect(
           req.headers['X-Goog-FieldMask'],
-          'location,displayName,formattedAddress',
+          'location,formattedAddress',
         );
         return http.Response(
           jsonEncode({
