@@ -14,6 +14,7 @@ import '../data/heat_alert.dart';
 import '../data/hotel_links.dart' show MunicipalityNames;
 import '../data/wbgt.dart';
 import '../data/jma_flood.dart';
+import '../data/jma_tsunami.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
 import '../data/quake_intensity.dart';
@@ -613,8 +614,27 @@ class _BosaiScreenState extends State<BosaiScreen>
             .get(Uri.parse(BosaiScreen.tsunamiListUrl))
             .timeout(const Duration(seconds: 15));
         if (tresp.statusCode == 200) {
-          for (final e in (jsonDecode(utf8.decode(tresp.bodyBytes)) as List)
-              .cast<Map<String, dynamic>>()) {
+          // 地震ごとの最新報のうち、いま効力のあるものだけ（終わった津波予報を先頭に残さない）
+          final latest = latestByEvent(
+              (jsonDecode(utf8.decode(tresp.bodyBytes)) as List).cast<Map<String, dynamic>>());
+          final now = DateTime.now();
+          final active = <Map<String, dynamic>>[];
+          for (final t in latest.values) {
+            DateTime? until;
+            if (t.forecastOnly && t.json.isNotEmpty) {
+              try {
+                final r = await http
+                    .get(Uri.parse('https://www.jma.go.jp/bosai/tsunami/data/${t.json}'))
+                    .timeout(const Duration(seconds: 10));
+                if (r.statusCode == 200) {
+                  until = validUntilOf(jsonDecode(utf8.decode(r.bodyBytes)) as Map<String, dynamic>);
+                }
+              } catch (_) {}
+            }
+            if (isTsunamiActive(t, now, validUntil: until)) active.add(t.raw);
+          }
+          if (!mounted) return;
+          for (final e in active) {
             final at = DateTime.tryParse(e['at'] as String? ?? '');
             final cod = _codRe.firstMatch(e['cod'] as String? ?? '');
             final eid = 'tsunami-${e['eid']}';
