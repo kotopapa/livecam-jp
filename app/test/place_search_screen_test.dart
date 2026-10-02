@@ -357,15 +357,24 @@ void main() {
     expect(find.text('open'), findsOneWidget, reason: '元の画面に戻っている');
   });
 
-  testWidgets('キーボードの検索確定で textSearch の結果を表示し、選ぶと確定する', (tester) async {
+  testWidgets('キーボードの検索確定は候補一覧（オートコンプリート）を出し、地名検索は呼ばない', (tester) async {
     final app = await buildApp();
+    var textSearchCalls = 0, detailsCalls = 0;
     final harness = await pushSearch(
       tester,
       app: app,
       searchCameras: (_) => const [],
-      textSearch: (q, {bias, languageCode = 'ja'}) async => [
-        ('富士山', const LatLng(35.36, 138.73)),
+      autocomplete: (q, {bias, languageCode = 'ja', required sessionToken}) async => [
+        const PlacePrediction(placeId: 'p1', mainText: '富士山', secondaryText: ''),
       ],
+      details: (id, {required sessionToken}) async {
+        detailsCalls++;
+        return const LatLng(35.36, 138.73);
+      },
+      textSearch: (q, {bias, languageCode = 'ja'}) async {
+        textSearchCalls++;
+        return null;
+      },
     );
 
     await tester.enterText(find.byKey(const Key('place_search_field')), '富士山');
@@ -379,9 +388,11 @@ void main() {
     final result = harness.result;
     expect(result, isA<PlacePickResult>());
     expect((result as PlacePickResult).point, const LatLng(35.36, 138.73));
+    expect(textSearchCalls, 0, reason: '料金の高い地名検索（Text Search）は使わない');
+    expect(detailsCalls, 1, reason: '座標は選んだ1件だけ取る');
   });
 
-  testWidgets('textSearch が null(失敗)なら addressSearch へフォールバックする', (
+  testWidgets('候補が取れない(Google 失敗)なら addressSearch へフォールバックする', (
     tester,
   ) async {
     final app = await buildApp();

@@ -194,14 +194,31 @@ class _PlaceSearchScreenState extends State<PlaceSearchScreen> {
     _debounce?.cancel();
     final gen = ++_requestGen;
     setState(() => _loading = true);
-    var results = const <(String, LatLng)>[];
+    // 確定時も地名検索（Text Search Pro: 超過 $32/1,000）は使わず、入力中と同じ候補一覧
+    // （同一セッションで座標取得まで行えば無料）を出す。Google が使えないときだけ国土地理院へ
+    List<PlacePrediction>? preds;
     try {
-      final places = await widget.textSearch(
+      preds = await widget.autocomplete(
         q,
         bias: widget.center,
         languageCode: Localizations.localeOf(context).languageCode,
+        sessionToken: _sessionToken,
       );
-      results = places ?? await widget.addressSearch(q);
+    } catch (_) {
+      preds = null;
+    }
+    if (preds != null && preds.isNotEmpty) {
+      if (!mounted || gen != _requestGen) return;
+      setState(() {
+        _confirmedPlaces = null;
+        _predictions = preds!;
+        _loading = false;
+      });
+      return;
+    }
+    var results = const <(String, LatLng)>[];
+    try {
+      results = await widget.addressSearch(q);
     } catch (_) {
       results = const [];
     }

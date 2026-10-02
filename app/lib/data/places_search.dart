@@ -270,7 +270,10 @@ class PlacesSearch {
             headers: {
               ...hdrs,
               'X-Goog-Api-Key': key,
-              'X-Goog-FieldMask': 'location,displayName,formattedAddress',
+              // 施設名（displayName）を取ると Place Details Pro 区分（無料枠 月5,000・超過 $17/1,000）になる。
+              // 名前は候補（オートコンプリート）の表示名を使うので、座標と住所だけにして
+              // Essentials 区分（無料枠 月1万・超過 $5/1,000）に収める（2026-10-02）
+              'X-Goog-FieldMask': 'location,formattedAddress',
             },
           )
           .timeout(const Duration(seconds: 10));

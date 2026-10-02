@@ -3407,29 +3407,48 @@ class _MapScreenState extends State<MapScreen> {
     /// 例:「赤レンガ倉庫」は横浜・函館・舞鶴にある）。null は見つからない／取消
     /// 候補: 台帳のカメラ名 → Google Places（施設名に強い）→
     /// 国土地理院の住所検索（住所向け・Google が使えないときのフォールバック）の順に集める
-    Future<List<(String, LatLng)>> candidates(String query) async {
-      final out = <(String, LatLng)>[];
+    // Google の候補はオートコンプリート（同一セッションで座標取得まで行えば無料）で集め、
+    // 座標は選ばれた1件だけ取る（地名検索 Text Search Pro: 超過 $32/1,000 を使わない。2026-10-02）
+    Future<List<_RouteHit>> candidates(String query) async {
+      final out = <_RouteHit>[];
       for (final c in _searchCameras(query).take(5)) {
         if (!c.hasLocation) continue;
         final pref = c.prefecture.isEmpty ? '' : prefectureNameOf(l10n, c.prefecture);
-        out.add((l10n.routeCandidateCamera(c.name, pref), LatLng(c.lat!, c.lng!)));
+        out.add((label: l10n.routeCandidateCamera(c.name, pref), point: LatLng(c.lat!, c.lng!), placeId: null, token: null));
       }
-      final places = await PlacesSearch.textSearch(query,
-          bias: _center, languageCode: Localizations.localeOf(context).languageCode);
-      if (places != null && places.isNotEmpty) {
-        out.addAll(places);
+      final token = PlacesSearch.newSessionToken();
+      final preds = await PlacesSearch.autocomplete(query,
+          bias: _center, languageCode: Localizations.localeOf(context).languageCode, sessionToken: token);
+      if (preds != null && preds.isNotEmpty) {
+        for (final p in preds) {
+          out.add((label: p.secondaryText.isEmpty ? p.mainText : '${p.mainText}（${p.secondaryText}）',
+              point: null, placeId: p.placeId, token: token));
+        }
       } else {
         try {
-          out.addAll((await _searchPlace(query)).take(5));
+          for (final h in (await _searchPlace(query)).take(5)) {
+            out.add((label: h.$1, point: h.$2, placeId: null, token: null));
+          }
         } catch (_) {}
       }
       return out;
     }
 
-    Future<(String, LatLng)?> pick(
-        BuildContext ctx, String query, List<(String, LatLng)> hits) async {
+    /// 選ばれた候補の座標（Google の候補はここで初めて座標を取る）。取れなければ null
+    Future<LatLng?> resolve(_RouteHit h) async {
+      if (h.point != null) return h.point;
+      if (h.placeId == null || h.token == null) return null;
+      try {
+        return await PlacesSearch.details(h.placeId!, sessionToken: h.token!);
+      } catch (_) {
+        return null;
+      }
+    }
+
+    Future<_RouteHit?> pick(
+        BuildContext ctx, String query, List<_RouteHit> hits) async {
       if (!ctx.mounted) return null;
-      return showDialog<(String, LatLng)>(
+      return showDialog<_RouteHit>(
         context: ctx,
         builder: (dctx) => SimpleDialog(
           title: Text(l10n.routePickPlaceTitle(query)),
@@ -3437,7 +3456,7 @@ class _MapScreenState extends State<MapScreen> {
             for (final h in hits.take(10))
               SimpleDialogOption(
                 onPressed: () => Navigator.of(dctx).pop(h),
-                child: Text(h.$1, style: const TextStyle(fontSize: 14)),
+                child: Text(h.label, style: const TextStyle(fontSize: 14)),
               ),
           ],
         ),
@@ -3474,12 +3493,15 @@ class _MapScreenState extends State<MapScreen> {
                   final picked = hits.length == 1
                       ? hits.first
                       : await pick(sheetContext, oq, hits);
+                  final pt = picked == null ? null : await resolve(picked);
                   if (picked == null) {
                     cancelled = true;
+                  } else if (pt == null) {
+                    error = l10n.routePlaceNotFound(oq);
                   } else {
-                    o = picked.$2;
+                    o = pt;
                     originPos = o;
-                    originCtl.text = picked.$1;
+                    originCtl.text = picked.label;
                   }
                 }
               }
@@ -3494,12 +3516,15 @@ class _MapScreenState extends State<MapScreen> {
                   final picked = hits.length == 1
                       ? hits.first
                       : await pick(sheetContext, dq, hits);
+                  final pt = picked == null ? null : await resolve(picked);
                   if (picked == null) {
                     cancelled = true;
+                  } else if (pt == null) {
+                    error = l10n.routePlaceNotFound(dq);
                   } else {
-                    d = picked.$2;
+                    d = pt;
                     destPos = d;
-                    destCtl.text = picked.$1;
+                    destCtl.text = picked.label;
                   }
                 }
               }
@@ -4885,3 +4910,6 @@ class _SheetChevronState extends State<_SheetChevron> with SingleTickerProviderS
   }
 }
 
+
+/// ルート欄の地名候補。Google の候補は座標を持たず、選ばれたときに [placeId] で取る
+typedef _RouteHit = ({String label, LatLng? point, String? placeId, String? token});
