@@ -545,6 +545,40 @@ def test_tochigi_road_menu():
     assert validate_camera_record(c.to_record("2026-08-22")) == []
 
 
+def test_tochigi_road_map_coordinates():
+    """地域別地図のアイコン位置→緯度経度。宇都宮環状線のアンダーが環状道路上に乗ること"""
+    from crawler.sources.tochigi_road import (TochigiRoadParser, icon_to_latlng,
+                                              map_coordinates, parse_map_icons)
+    html = (FIXTURES / "tochigi_map07.html").read_text(encoding="utf-8")
+    icons = parse_map_icons(html)
+    assert icons["001"] == (209, 171) and icons["032"] == (190, 10)
+    coords = map_coordinates({"map07": html, "map99": html})
+    # 今泉アンダー: OSM の同名地点 36.56336,139.89943 から 400m 以内
+    lat, lng = coords["034"]
+    assert abs(lat - 36.56336) < 0.004 and abs(lng - 139.89943) < 0.005
+    # 宮環・ミレニアム上戸祭アンダー: OSM 36.59090,139.86252
+    lat, lng = coords["032"]
+    assert abs(lat - 36.59090) < 0.004 and abs(lng - 139.86252) < 0.005
+    assert icon_to_latlng("map07", 209, 171) == coords["001"]
+
+    menu = (FIXTURES / "tochigi_menu.html").read_text(encoding="utf-8")
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = html if "/map/map07.html" in url else (
+                    "" if "/map/map" in url else menu)
+            return P()
+    result = TochigiRoadParser().discover(S())
+    c = next(x for x in result.candidates if x.id == "tochigi-road-034")
+    assert c.coord_accuracy == "approx" and c.address_hint is None
+    assert abs(c.lat - 36.56336) < 0.004
+    other = next(x for x in result.candidates if x.id == "tochigi-road-008")
+    assert other.lat is None and other.address_hint.startswith("栃木県日光市")
+
+
 def test_shizuoka_doboku():
     from crawler.sources.shizuoka_doboku import parse_site
     html = (FIXTURES / "shizuoka_numadu.html").read_text(encoding="utf-8")
