@@ -297,6 +297,23 @@ def resolve_youtube_channel_live(text: str) -> str | None:
     return m.group(1)
 
 
+_YT_CHANNEL_LIVE_RE = re.compile(r"youtube\.com/(channel/UC[\w-]{22}|@[^/?#]+|c/[^/?#]+|user/[^/?#]+)/live(?:[?#]|$)")
+
+
+def _youtube_channel_live_page_alive(text: str) -> bool | None:
+    """チャンネルの /live ページが、いま配信中（または待機枠）の動画を指しているか。
+
+    True=配信あり / False=配信なし（canonical がチャンネル自身） / None=判定材料なし（429・同意画面等）
+    """
+    if _YT_CANONICAL_WATCH_RE.search(text):
+        if "ytInitialPlayerResponse" not in text:
+            return None
+        return resolve_youtube_channel_live(text) is not None
+    if re.search(r'<link rel="canonical" href="https://www\.youtube\.com/(channel/|@)', text):
+        return False
+    return None
+
+
 def list_live_in_streams(text: str) -> list[tuple[str, str]]:
     """チャンネルの /streams ページ（ytInitialData）から配信中の (動画ID, タイトル) を列挙する。
 
@@ -422,9 +439,22 @@ def _check_page(session, camera, state, now, prev_failures) -> dict:
     # 記録は、ご覧いただけません」）。youtube_video と同じく watch ページで生死を見る（2026-10-01
     # 敦賀駅西口・山田農園ドッグランで、終わった枠へ案内していた）
     url = camera["feed"]["url"]
-    if "youtube.com/watch" in url and "ytInitialPlayerResponse" in resp.text:
-        if not _youtube_watch_alive(resp.text, now):
+    if "youtube.com/watch" in url:
+        if "ytInitialPlayerResponse" in resp.text:
+            if not _youtube_watch_alive(resp.text, now):
+                return _fail(state, now, prev_failures, resp.status_code)
+        elif prev_failures > 0:
+            return _hold(state, prev_failures, resp.status_code)
+    elif _YT_CHANNEL_LIVE_RE.search(url):
+        # チャンネルの「ライブ」への誘導型。配信が無いと /live はチャンネルのページになり
+        # HTTP 200 のままなので、ここでも配信中かを見る（2026-10-03 保護猫カフェキズナ:
+        # 最後の配信が2年前なのに「ライブ配信中」として地図に出ていた）。
+        # 営業時間だけ配信する施設もあるので、非表示になるのは ERROR_AFTER_FAILURES 回続いたとき
+        alive = _youtube_channel_live_page_alive(resp.text)
+        if alive is False:
             return _fail(state, now, prev_failures, resp.status_code)
+        if alive is None and prev_failures > 0:
+            return _hold(state, prev_failures, resp.status_code)
     state["consecutive_failures"] = 0
     state["etag"] = resp.headers.get("ETag")
     state["last_modified"] = resp.headers.get("Last-Modified")

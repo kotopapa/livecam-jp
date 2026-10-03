@@ -324,3 +324,38 @@ def test_check_page_youtube_watch_link_dead():
     st = {}
     assert _check_page(Sess(dead), cam, st, now, 2)["state"] == "error"
     assert _check_page(Sess(live), cam, {}, now, 0)["state"] == "ok"
+
+
+def test_check_page_youtube_channel_live_link():
+    """チャンネルのライブへの誘導型: 配信が無い（canonical がチャンネル）なら失敗、判定材料が無ければ前回を保つ
+
+    2026-10-03 保護猫カフェキズナ: 最後の配信が2年前なのに HTTP 200 で正常扱いだった
+    """
+    from datetime import datetime, timezone
+    from monitor.check import _check_page
+
+    class R:
+        status_code = 200
+        headers = {}
+        def __init__(self, text): self.text = text
+
+    class Sess:
+        def __init__(self, text): self.t = text
+        def get(self, *a, **k): return R(self.t)
+
+    url = "https://www.youtube.com/channel/UCML_lMEOqOL78bghrm_7APw/live"
+    cam = {"id": "x", "feed": {"type": "web_page", "url": url}}
+    now = datetime(2026, 10, 3, tzinfo=timezone.utc)
+    offline = '<link rel="canonical" href="https://www.youtube.com/channel/UCML_lMEOqOL78bghrm_7APw">'
+    live = ('<link rel="canonical" href="https://www.youtube.com/watch?v=AAAAAAAAAAA">'
+            'var ytInitialPlayerResponse = {"playabilityStatus":{"status":"OK"}};')
+    upcoming_stale = ('<link rel="canonical" href="https://www.youtube.com/watch?v=AAAAAAAAAAA">'
+                      'var ytInitialPlayerResponse = {"playabilityStatus":{"status":"OK"},"isUpcoming":true};')
+    shell = '<html>consent</html>'
+    assert _check_page(Sess(offline), cam, {}, now, 2)["state"] == "error"
+    assert _check_page(Sess(offline), cam, {}, now, 0)["state"] == "unknown"
+    assert _check_page(Sess(live), cam, {}, now, 2)["state"] == "ok"
+    assert _check_page(Sess(upcoming_stale), cam, {}, now, 2)["state"] == "error"
+    held = _check_page(Sess(shell), cam, {}, now, 3)
+    assert held["state"] == "error" and held["consecutive_failures"] == 3
+    assert _check_page(Sess(shell), cam, {}, now, 0)["state"] == "ok"

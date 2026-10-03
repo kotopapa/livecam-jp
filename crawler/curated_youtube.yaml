@@ -1603,15 +1603,16 @@ cameras:
     lng: 137.657
     note: 日本一の星空で有名
 
-  - id: curated-kizuna-nekocafe
-    name: 保護猫カフェキズナ
-    operator: "保護猫カフェキズナ"
-    channel_id: "UCML_lMEOqOL78bghrm_7APw"
-    embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
-    category: healing
-    prefecture: "14"
-    lat: 35.4437
-    lng: 139.638
+  # 2026-10-03 退役: チャンネルの最後の配信が2年前（ユーザー報告）
+  # - id: curated-kizuna-nekocafe
+  #   name: 保護猫カフェキズナ
+  #   operator: "保護猫カフェキズナ"
+  #   channel_id: "UCML_lMEOqOL78bghrm_7APw"
+  #   embed: false   # 2026-09-23 playableInEmbed=false → 誘導型
+  #   category: healing
+  #   prefecture: "14"
+  #   lat: 35.4437
+  #   lng: 139.638
 
   # 2026-08-31 退役: youtube_channel: チャンネルに現行ライブなし
   # - id: curated-nikko-akechidaira
