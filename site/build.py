@@ -37,11 +37,27 @@ PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=jp.livecam.livec
 INTERNAL_FIELDS = {"verification"}
 
 
-def _notice() -> str | None:
+NOTICE_UNTIL_RE = re.compile(r"^until:\s*(\d{4}-\d{2}-\d{2})\s*\n", re.I)
+
+
+def _notice(today: str | None = None) -> str | None:
+    """data/notice.txt のお知らせ文。先頭行 `until: YYYY-MM-DD`（JST、その日まで有効）が
+    あれば期限を過ぎた配信で自動的に取り下げる（閉じない利用者にも出続けないよう
+    2026-10-04 ユーザー要望で7日程度の期限を付ける運用）。publish は monitor が
+    30分ごとに起動するので、期限の翌日 0時台には消える"""
     p = DATA / "notice.txt"
     if not p.exists():
         return None
-    t = p.read_text(encoding="utf-8").rstrip()  # 先頭の空行は旧版の重なり回避に使うので残す
+    raw = p.read_text(encoding="utf-8")
+    m = NOTICE_UNTIL_RE.match(raw)
+    if m:
+        raw = raw[m.end():]
+        if today is None:
+            from datetime import datetime, timedelta, timezone
+            today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
+        if today > m.group(1):
+            return None
+    t = raw.rstrip()  # 先頭の空行は旧版の重なり回避に使うので残す
     return t or None
 
 
