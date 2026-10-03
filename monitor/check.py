@@ -76,6 +76,19 @@ def _fail(state: dict, now: datetime, prev_failures: int, http_status: int | Non
     }
 
 
+def _hold(state: dict, prev_failures: int, http_status: int | None) -> dict:
+    """判定材料が取れなかった回。失敗回数を増やしも戻しもせず、前回の判定を保つ"""
+    state["consecutive_failures"] = prev_failures
+    return {
+        "state": "error" if prev_failures >= ERROR_AFTER_FAILURES else "unknown",
+        "last_ok_at": state.get("last_ok_at"),
+        "http_status": http_status,
+        "frozen_since": None,
+        "consecutive_failures": prev_failures,
+        "avg_interval_sec": state.get("avg_interval_sec"),
+    }
+
+
 def _headers(camera: dict, state: dict) -> dict[str, str]:
     h = {"User-Agent": USER_AGENT}
     h.update(camera["feed"].get("headers") or {})
@@ -382,7 +395,13 @@ def _check_youtube(session, camera, state, now, prev_failures) -> dict:
         if watch is not None and "ytInitialPlayerResponse" in watch.text:
             if not _youtube_watch_alive(watch.text, now):
                 return _fail(state, now, prev_failures, resp.status_code)
-        # 判定材料が無い応答(同意画面等のシェル)は oEmbed の結果を採用する
+        elif prev_failures > 0:
+            # 判定材料が無い応答（429・同意画面等のシェル・取得失敗）で、配信が終わったと
+            # 判定済みのカメラを oEmbed の 200 だけで「正常」に戻さない。GitHub Actions では
+            # watch ページが取れない回が混ざり、終わった枠が error⇄ok を往復して地図に
+            # 出続けていた（2026-10-03 釜山 海雲台: 2026-09-23 に配信終了）
+            return _hold(state, prev_failures, resp.status_code)
+        # 失敗歴の無いカメラは従来どおり oEmbed の結果を採用する
     state["consecutive_failures"] = 0
     state["last_ok_at"] = now.isoformat()
     return {

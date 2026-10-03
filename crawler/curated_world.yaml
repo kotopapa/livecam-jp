@@ -332,14 +332,15 @@ cameras:
   # lng: -0.0754
   # note: "誘導型 / 埋め込み不可→誘導型"
 
-  - id: world-7cb8df6d
-    name: パリ エッフェル塔
-    operator: "Vision-Environnement"
-    video_id: "OzYp4NRZlwQ"
-    category: scenic
-    country: "FR"
-    lat: 48.8584
-    lng: 2.2945
+  # 2026-10-03 退役: 配信終了（記録閲覧不可）・チャンネルに後継の配信なし
+  # - id: world-7cb8df6d
+  #   name: パリ エッフェル塔
+  #   operator: "Vision-Environnement"
+  #   video_id: "OzYp4NRZlwQ"
+  #   category: scenic
+  #   country: "FR"
+  #   lat: 48.8584
+  #   lng: 2.2945
 
   # 2026-08-31 退役: チャンネルに現行ライブなし（配信終了 2022-01-23）
   # - id: world-d2cea02e
@@ -2858,10 +2859,11 @@ cameras:
     lat: 37.5512
     lng: 126.9882
 
+  # 2026-10-03 配信枠更新: LGuktGeHQxI → x5paecMrjA8（旧枠が記録閲覧不可）
   - id: world-77e7a5f5
     name: 釜山 海雲台海水浴場
     operator: "Busan Haeundae Live"
-    video_id: "LGuktGeHQxI"
+    video_id: "x5paecMrjA8"
     category: coast
     country: "KR"
     lat: 35.1587
@@ -3120,10 +3122,11 @@ cameras:
     country: US
     lat: 20.9945
     lng: -156.667
+  # 2026-10-03 配信枠更新: 7pveAKZ03z4 → QzQ-7eiMw1w（旧枠が記録閲覧不可）
   - id: world-625bdae1
     name: マウイ島 ザトウクジラ保護区(キヘイ)
     operator: afarTV
-    video_id: 7pveAKZ03z4
+    video_id: QzQ-7eiMw1w
     category: healing
     country: US
     lat: 20.753
@@ -6777,10 +6780,11 @@ cameras:
     lat: -37.93
     lng: 144.66
     note: 同運営者のGiraffe Cam(hNexlUkTTuc)もあり
+  # 2026-10-03 配信枠更新: L1-Z2KOLDto → bV4EiHr53ek（旧枠が記録閲覧不可）
   - id: world-40a98c71
     name: カリフォルニア科学アカデミー ペンギン
     operator: California Academy of Sciences
-    video_id: L1-Z2KOLDto
+    video_id: bV4EiHr53ek
     category: healing
     country: US
     lat: 37.77
@@ -6881,15 +6885,16 @@ cameras:
     lat: 48.842
     lng: 2.24
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。ブローニュ側からパリ市街を望む固定カメラ
-  - id: world-27164fe7
-    name: モン・サン・ミシェル湾 ル・ヴァル=サン=ペール飛行場
-    operator: Les webcams de la Baie du Mont-Saint-Michel
-    video_id: iSuu7iW4xRQ
-    category: scenic
-    country: FR
-    lat: 48.656
-    lng: -1.398
-    note: 湾越しにモン・サン・ミシェルを望む別角度
+  # 2026-10-03 退役: 配信終了・チャンネルに後継の配信なし
+  # - id: world-27164fe7
+  #   name: モン・サン・ミシェル湾 ル・ヴァル=サン=ペール飛行場
+  #   operator: Les webcams de la Baie du Mont-Saint-Michel
+  #   video_id: iSuu7iW4xRQ
+  #   category: scenic
+  #   country: FR
+  #   lat: 48.656
+  #   lng: -1.398
+  #   note: 湾越しにモン・サン・ミシェルを望む別角度
   - id: world-de69e381
     name: アッシジ コムーネ広場
     operator: Umbria Webcam

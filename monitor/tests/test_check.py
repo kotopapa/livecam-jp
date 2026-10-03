@@ -195,6 +195,21 @@ def test_youtube_video_shell_response_keeps_ok():
     assert r["state"] == "ok"
 
 
+def test_youtube_video_shell_response_keeps_previous_failure():
+    """配信終了と判定済みのカメラは、判定材料のない回に oEmbed 200 で正常へ戻さない。
+
+    2026-10-03 釜山 海雲台: GitHub Actions で watch ページが取れない回が混ざり、
+    9/23 に終わった枠が error⇄ok を往復して地図に出続けていた
+    """
+    oembed = FakeResponse(200, b'{"title":"x"}')
+    shell = FakeResponse(429, b'<html>too many</html>')
+    state = {"consecutive_failures": 5, "last_ok_at": "2026-09-23T00:00:00+00:00"}
+    r = check_camera(FakeSession([oembed, shell]), _yt_camera(), state)
+    assert r["state"] == "error"
+    assert r["consecutive_failures"] == 5
+    assert r["last_ok_at"] == "2026-09-23T00:00:00+00:00"
+
+
 def test_yamaguchi_kasen_uses_resolved_image():
     """都度解決型 yamaguchi_kasen: main.py が解決した URL を取得し image_url/image_time を返す。"""
     from crawler.sources.yamaguchi_kasen import resolve_image_urls
