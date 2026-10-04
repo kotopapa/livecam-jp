@@ -2224,8 +2224,8 @@ cameras:
     video_id: "tDEB_0OpBWU"
     category: road
     prefecture: "32"
-    lat: 35.429
-    lng: 133.348
+    lat: 35.406742
+    lng: 133.312643
 
   - id: curated-dojocco-ekimae
     name: 安来駅前（国道9号）
@@ -2793,8 +2793,8 @@ cameras:
     video_id: "eHrqIefbe9Q"
     category: scenic
     prefecture: "40"
-    lat: 33.4746
-    lng: 130.9411
+    lat: 33.483748
+    lng: 130.910561
     note: "埋め込み不可→誘導型で登録"
 
   - id: curated-r2-01978867
@@ -10399,9 +10399,9 @@ cameras:
     name: まえちゃんねっと浅間山
     operator: まえちゃんねっと
     category: scenic
-    prefecture: '10'
-    lat: 36.525752
-    lng: 138.356647
+    prefecture: "10"
+    lat: 36.516666
+    lng: 138.530289
     video_id: Cul3fjBSATY
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://maechan.net/'
   - id: curated-lcdb-654defe7
@@ -11635,9 +11635,9 @@ cameras:
     name: アンサーポイント気仙沼
     operator: アンサーポイント
     category: scenic
-    prefecture: '04'
-    lat: 38.871383
-    lng: 141.397983
+    prefecture: "04"
+    lat: 38.773125
+    lng: 141.512711
     video_id: jOcmIJJ97hA
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.answerpoint.jp/'
   - id: curated-lcdb-868bf72c
@@ -12786,9 +12786,9 @@ cameras:
     name: バクノビジョン西新宿五丁目
     operator: バクノビジョン
     category: other
-    prefecture: '47'
-    lat: 35.68993
-    lng: 139.683177
+    prefecture: "13"
+    lat: 35.692944
+    lng: 139.68602
     video_id: gPsu9CBJm0Q
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.bakunobi.com/okinawa'
   - id: curated-lcdb-4f36f136
@@ -12804,7 +12804,7 @@ cameras:
     name: 朝日新聞大阪国際空港
     operator: 朝日新聞社(朝日新聞デジタル)
     category: other
-    prefecture: '27'
+    prefecture: "28"
     lat: 34.795895
     lng: 135.429744
     video_id: qwKh-LOkomQ
@@ -12960,9 +12960,9 @@ cameras:
     name: Baycom大和川
     operator: ベイ・コミュニケーションズ Baycom(ベイコム)
     category: river
-    prefecture: '27'
-    lat: 34.660988
-    lng: 135.088965
+    prefecture: "27"
+    lat: 34.591946
+    lng: 135.490921
     video_id: umKdv57mIn8
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://baycom.jp/'
   - id: curated-lcdb-1b2ac37f
@@ -13087,9 +13087,9 @@ cameras:
     name: BANTV琵琶湖リモート地蔵
     operator: BANTV
     category: scenic
-    prefecture: '25'
-    lat: 35.078029
-    lng: 135.79308
+    prefecture: "25"
+    lat: 35.010857
+    lng: 135.864319
     video_id: 5EmqtWR_Wv0
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.youtube.com/watch?v=5EmqtWR_Wv0'
   # 2026-09-23 配信枠更新: WQnIowwbhqQ → iBWy_HERzek
@@ -13097,9 +13097,9 @@ cameras:
     name: BANTV琵琶湖
     operator: BANTV
     category: scenic
-    prefecture: '25'
-    lat: 35.078029
-    lng: 135.79308
+    prefecture: "25"
+    lat: 35.010857
+    lng: 135.864319
     video_id: iBWy_HERzek
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.youtube.com/watch?v=WQnIowwbhqQ'
   # 2026-09-23 配信枠更新: KN09NTh_Gzg → sM2IjSRBwnY
@@ -13107,9 +13107,9 @@ cameras:
     name: BANTV大津港
     operator: BANTV
     category: port
-    prefecture: '25'
-    lat: 35.078029
-    lng: 135.79308
+    prefecture: "25"
+    lat: 35.010857
+    lng: 135.864319
     video_id: sM2IjSRBwnY
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.youtube.com/watch?v=KN09NTh_Gzg'
   - id: curated-lcdb-1d64e48a
@@ -15984,7 +15984,7 @@ cameras:
     name: 天空陵
     operator: 天空陵
     category: other
-    prefecture: '44'
+    prefecture: "44"
     lat: 33.075169
     lng: 131.18414
     video_id: ka9ymLXeXek
@@ -17806,7 +17806,7 @@ cameras:
     name: 磐田ラジコンクラブ滑走路
     operator: 磐田ラジコンクラブ滑走路
     category: other
-    prefecture: '13'
+    prefecture: "22"
     lat: 34.79997
     lng: 137.825869
     video_id: O1asXHMs788
