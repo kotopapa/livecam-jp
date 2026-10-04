@@ -97,6 +97,7 @@ class _WaterLevelCardState extends State<WaterLevelCard> {
                   nowJst: jstNow(),
                   textColor: Theme.of(context).colorScheme.onSurfaceVariant,
                   gridColor: Theme.of(context).dividerColor,
+                  fontFamily: Theme.of(context).textTheme.bodySmall?.fontFamily,
                 ),
               ),
             ),
@@ -167,6 +168,7 @@ class WaterLevelChartPainter extends CustomPainter {
     required this.textColor,
     required this.gridColor,
     this.forecast = const [],
+    this.fontFamily,
   });
 
   final List<WaterLevelPoint> points;
@@ -175,6 +177,8 @@ class WaterLevelChartPainter extends CustomPainter {
   final DateTime nowJst;
   final Color textColor;
   final Color gridColor;
+  /// 目盛り文字のフォント（アプリのテーマに合わせる）
+  final String? fontFamily;
 
   static const _left = 40.0;
   static const _bottom = 22.0;
@@ -211,7 +215,7 @@ class WaterLevelChartPainter extends CustomPainter {
     final grid = Paint()..color = gridColor..strokeWidth = 1;
     void tp(String s, Offset at, {TextAlign align = TextAlign.left}) {
       final painter = TextPainter(
-        text: TextSpan(text: s, style: TextStyle(fontSize: 10, color: textColor)),
+        text: TextSpan(text: s, style: TextStyle(fontSize: 10, color: textColor, fontFamily: fontFamily)),
         textDirection: TextDirection.ltr,
         textAlign: align,
       )..layout();
@@ -227,14 +231,16 @@ class WaterLevelChartPainter extends CustomPainter {
       canvas.drawLine(Offset(_left, yy), Offset(size.width, yy), grid);
       tp(v.toStringAsFixed(1), Offset(_left - 4, yy - 6), align: TextAlign.right);
     }
-    // 横軸: 12時間ごと
-    for (var h = 0; h <= 48; h += 12) {
-      final t = tStart.add(Duration(hours: h));
-      final xx = x(t);
+    // 横軸: 0時・12時に揃えた12時間ごとの目盛り
+    var tick = DateTime(tStart.year, tStart.month, tStart.day, tStart.hour < 12 ? 12 : 24);
+    while (!tick.isAfter(tEnd)) {
+      final xx = x(tick);
       canvas.drawLine(Offset(xx, _top), Offset(xx, _top + chartH), grid);
-      final label = '${t.month}/${t.day} ${t.hour}:00';
+      final label = tick.hour == 0 ? '${tick.month}/${tick.day}' : '${tick.hour}:00';
+      final nearRight = (size.width - xx) < 24;
       tp(label, Offset(xx, size.height - _bottom + 4),
-          align: h == 0 ? TextAlign.left : (h == 48 && tEnd == nowJst ? TextAlign.right : TextAlign.center));
+          align: nearRight ? TextAlign.right : TextAlign.center);
+      tick = tick.add(const Duration(hours: 12));
     }
     if (tEnd != nowJst) {
       final xx = x(nowJst);

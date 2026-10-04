@@ -112,6 +112,14 @@ python site/build.py                            # 配信ファイル生成
 - `data/notice.txt` の本文が manifest の `notice` として配信され、地図上部のバナーに出る（閉じると同じ文言は再表示されない）。**先頭行に `until: YYYY-MM-DD`（JST、その日まで有効）を必ず付ける**（2026-10-04 ユーザー要望: 閉じられなくても7日で取り下げる）。`site/build.py` の `_notice()` が期限超過で None を返し、monitor が30分ごとに publish を起動するので翌日0時台に自動で消える。アプリ側の変更は不要。`tools/tests/test_notice.py` が期限行の有無を検査する
 - notice.txt は publish.yml の自動起動パスに入っていないので、掲示・文言変更は `gh workflow run publish.yml` で手動配信する（取り下げは期限で自動）
 
+## 河川カメラの水位グラフ（1.6.4、2026-10-04追記）
+
+- 詳細画面に川の防災情報の最寄り水位観測所の直近48時間グラフ（`app/lib/ui/water_level_card.dart`、取得は `app/lib/data/water_level.dart`）。対象は台帳に `water_level: {obs, dist_m}` が付いた河川カメラ（`tools/water_stations.py` が一度限りで付ける。規則: 観測所マスタの scamId 一致＝併設 → 同一市町村・同一河川コードの最寄り 3km 以内）。観測所の名称・座標・基準水位は `data/water_stations.json` → `site/v1/water_stations.json`
+- **川の防災情報の内部ファイル**（`https://www.river.go.jp/kawabou/file/files/` 配下、SPA 内部なので構造変化に注意）: 観測所マスタ `master/obs/stg/<obsFcd>.json`（lat/lon・scamId・rsrvStg/warnStg/spclWarnStg/dngStg/fldStg）、現況 `tmlist/stg/YYYYMMDD/HHmm/<obsFcd>.json`（10分スロット。最新スロットは未生成のことがあるので3つさかのぼる。obsValue=最新、min10Values=10分値 新しい順 約8時間、predstgValues=予測）、過去 `tmlist/past/stg/YYYYMMDD/<obsFcd>.json`（時間値 約7日）、市町村の観測所一覧 `obslist/obs/twnlist/<twnCd>.json`（obsStg に rvrCd と基準水位、scam/cctv に scamId と rvrCd。座標は無い）、全市町村 `map/twn/twnarea.json`（twnCd = prefCd*1000 + JIS下3桁）
+- **水位の値はサーバーで収集せず端末が詳細画面を開いたときに直接取る**（同サイトは規約でツールによる定期収集を控えるよう求めている。対応付けの一度限りの取得も 1.2 秒間隔・控え付き）。時刻は "2026/10/04 22:30" の JST 壁時計を素の DateTime のまま扱う
+- 基準水位の各言語訳は気象庁多言語辞書に無いため独自訳（en は MLIT 英語サイトの用語）。色は 待機=緑 / 注意=黄 / 避難判断=橙 / 危険=紫（危険警報と同じ）
+- 見た目の確認はウィジェットテストで `FontLoader('Roboto')` に `/Library/Fonts/Arial Unicode.ttf` を読ませ、`ThemeData(fontFamily: 'Roboto')` で golden を書くと文字が出る（既定の Ahem フォントは四角になる。`tester.view.physicalSize` は devicePixelRatio で割った論理サイズになることに注意）
+
 ## 道路カメラ座標の全国見直し（2026-10-04追記）
 
 - 道路カメラで座標が推定（approx）だった2,149台を情報源ごとに5班で見直し、**1,280台を置き直し**（exact 約900・approx 約380）。手順と結果は scratchpad（消えたら本節の情報源一覧から再現）。反映は台帳 cameras.json と curated_still/youtube.yaml の lat/lng（人手台帳は `accuracy: exact` を付けると exact になる。**curated_still.py は 2026-10-04 まで一律 approx を付けていた**ため、鳥取の公式 GeoJSON 由来265台まで「位置はおおよそ」表示だった）
