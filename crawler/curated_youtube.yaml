@@ -9583,15 +9583,16 @@ cameras:
     video_id: JggH-oqueck
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.aab-tv.co.jp/live/'
   # 2026-10-05 座標修正: 地図中心（東京都港区）が入っていたため秋田市へ。分類 river→other（利用者報告）
-  - id: curated-lcdb-0a43059b
-    name: AAB秋田県内気象情報
-    operator: 秋田朝日放送(AAB)
-    category: other
-    prefecture: '05'
-    lat: 39.716853
-    lng: 140.084172
-    video_id: 8rrHvq4Mwpc
-    note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.aab-tv.co.jp/live/'
+  # 2026-10-05 退役: 気象情報番組「ポケット天気あきた」でカメラ映像ではない（利用者指摘）
+  # - id: curated-lcdb-0a43059b
+  #   name: AAB秋田県内気象情報
+  #   operator: 秋田朝日放送(AAB)
+  #   category: other
+  #   prefecture: '05'
+  #   lat: 39.716853
+  #   lng: 140.084172
+  #   video_id: 8rrHvq4Mwpc
+  #   note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.aab-tv.co.jp/live/'
   # 2026-09-23 配信枠更新: 2esxbRlwPJM → EWxzTkgNIBw
   - id: curated-lcdb-54a96978
     name: ABS秋田駅前
