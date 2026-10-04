@@ -794,5 +794,19 @@
   "mapOldMapNoticeBody": "・「今昔マップ on the web」의 옛 지형도를 현재 지도에 겹칩니다. 경계선의 손잡이를 움직이면 과거와 현재를 비교할 수 있습니다\n・옛 지도는 장소에 따라 위치가 수십 미터 이상 어긋날 수 있습니다\n・과거에 강이나 바다였던 곳을 아는 참고 자료입니다. 방재 판단은 해저드맵과 지자체 정보를 함께 확인하세요",
   "oldMapDisclaimer": "옛 지도는 위치가 어긋날 수 있습니다. 토지 형성의 참고용입니다",
   "settingsKjmap": "今昔マップ on the web(옛 지도)",
-  "settingsKjmapNote": "시계열 지형도 열람 사이트((C)谷 謙二). 「옛 지도」 레이어의 출처"
+  "settingsKjmapNote": "시계열 지형도 열람 사이트((C)谷 謙二). 「옛 지도」 레이어의 출처",
+  "waterLevelTitle": "수위",
+  "waterLevelStation": "관측소: {name} (카메라에서 약 {dist}m)",
+  "waterLevelLatest": "{value} m ({time} 현재)",
+  "waterLevelLoading": "수위를 불러오는 중…",
+  "waterLevelNoData": "수위 데이터를 가져올 수 없습니다",
+  "waterLevelLast48h": "지난 48시간의 수위",
+  "waterLevelForecast": "예측",
+  "waterLevelRsrv": "수방단 대기 수위",
+  "waterLevelWarn": "범람 주의 수위",
+  "waterLevelSpcl": "대피 판단 수위",
+  "waterLevelDng": "범람 위험 수위",
+  "waterLevelSource": "출처: 국토교통성 「하천 방재 정보」",
+  "waterLevelOpenSite": "하천 방재 정보에서 보기",
+  "waterLevelNote": "수위는 참고 정보입니다. 대피 여부는 지자체의 대피 정보에 따르세요."
 }

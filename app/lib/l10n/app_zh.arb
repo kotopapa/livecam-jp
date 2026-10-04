@@ -794,5 +794,19 @@
   "mapOldMapNoticeBody": "・将“今昔マップ on the web”的旧版地形图叠加在现在的地图上。拖动分界线上的把手即可比较新旧\n・旧地图在部分地点可能有数十米以上的位置偏差\n・仅供了解过去曾是河流或海洋的地方。防灾判断请结合灾害地图及自治体信息确认",
   "oldMapDisclaimer": "旧地图可能存在位置偏差。仅作为了解土地形成的参考",
   "settingsKjmap": "今昔マップ on the web（旧地图）",
-  "settingsKjmapNote": "时间序列地形图浏览网站（(C)谷 謙二）。“旧地图”图层的来源"
+  "settingsKjmapNote": "时间序列地形图浏览网站（(C)谷 謙二）。“旧地图”图层的来源",
+  "waterLevelTitle": "水位",
+  "waterLevelStation": "观测站：{name}（距摄像头约{dist}米）",
+  "waterLevelLatest": "{value} m（{time} 现在）",
+  "waterLevelLoading": "正在获取水位…",
+  "waterLevelNoData": "无法获取水位数据",
+  "waterLevelLast48h": "过去48小时的水位",
+  "waterLevelForecast": "预测",
+  "waterLevelRsrv": "水防团待命水位",
+  "waterLevelWarn": "泛滥注意水位",
+  "waterLevelSpcl": "避难判断水位",
+  "waterLevelDng": "泛滥危险水位",
+  "waterLevelSource": "来源：国土交通省“河川防灾信息”",
+  "waterLevelOpenSite": "在河川防灾信息网站查看",
+  "waterLevelNote": "水位仅供参考。是否避难请遵从当地政府的避难信息。"
 }

@@ -104,6 +104,22 @@ class Feed {
       );
 }
 
+/// 河川カメラに紐付けた水位観測所（川の防災情報）。tools/water_stations.py が付ける
+class WaterLevelRef {
+  const WaterLevelRef({required this.obs, required this.distM});
+
+  /// 観測所コード（obsFcd 13桁）
+  final String obs;
+  /// カメラから観測所までの距離（m）
+  final int distM;
+
+  static WaterLevelRef? fromJson(Map<String, dynamic>? json) {
+    final obs = json?['obs'] as String?;
+    if (obs == null || obs.isEmpty) return null;
+    return WaterLevelRef(obs: obs, distM: (json?['dist_m'] as num?)?.toInt() ?? 0);
+  }
+}
+
 class Camera {
   const Camera({
     required this.id,
@@ -124,6 +140,7 @@ class Camera {
     this.sourcePageUrl,
     this.termsUrl,
     this.license,
+    this.waterLevel,
   });
 
   final String id;
@@ -137,6 +154,8 @@ class Camera {
   final String? country; // 海外カメラのISO 3166-1 alpha-2（国内はnull）
   final String? municipality;
   final String? riverOrRoute;
+  /// 水位グラフ用の観測所（河川カメラのみ。無ければ null）
+  final WaterLevelRef? waterLevel;
   final Feed feed;
   final String? fallbackUrl;
   final String operator;
@@ -209,6 +228,7 @@ class Camera {
         sourcePageUrl: source['page_url'] as String?,
         termsUrl: source['terms_url'] as String?,
         license: source['license'] as String?,
+        waterLevel: WaterLevelRef.fromJson(json['water_level'] as Map<String, dynamic>?),
       );
     } catch (_) {
       return null; // 1件の不正データで全体を落とさない

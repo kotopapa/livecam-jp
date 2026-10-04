@@ -794,5 +794,19 @@
   "mapOldMapNoticeBody": "- Old topographic maps from \"Konjaku Map on the web\" are overlaid on today's map. Drag the handle on the divider to compare then and now\n- Old maps can be offset by tens of meters or more in some places\n- Use this as a guide to where rivers and the sea used to be. For safety decisions, also check hazard maps and municipal information",
   "oldMapDisclaimer": "Old maps may be offset. A guide to how the land was formed",
   "settingsKjmap": "Konjaku Map on the web (old maps)",
-  "settingsKjmapNote": "Time-series topographic map viewer ((C) Kenji Tani). Source of the old maps layer"
+  "settingsKjmapNote": "Time-series topographic map viewer ((C) Kenji Tani). Source of the old maps layer",
+  "waterLevelTitle": "Water level",
+  "waterLevelStation": "Station: {name} (about {dist} m from the camera)",
+  "waterLevelLatest": "{value} m (as of {time})",
+  "waterLevelLoading": "Loading water level…",
+  "waterLevelNoData": "Water level data is unavailable",
+  "waterLevelLast48h": "Water level, last 48 hours",
+  "waterLevelForecast": "Forecast",
+  "waterLevelRsrv": "Standby level for flood fighting",
+  "waterLevelWarn": "Flood advisory level",
+  "waterLevelSpcl": "Evacuation decision level",
+  "waterLevelDng": "Flood danger level",
+  "waterLevelSource": "Source: MLIT River Disaster Prevention Information",
+  "waterLevelOpenSite": "Open on the MLIT site",
+  "waterLevelNote": "Water levels are for reference only. Follow evacuation information from your municipality."
 }

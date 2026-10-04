@@ -188,6 +188,13 @@ def build() -> int:
     if n_stockpile:
         print(f"stockpile: {n_stockpile}ファイルをコピー")
 
+    # 河川カメラの水位観測所（data/water_stations.json。tools/water_stations.py の一度限りの対応付け）
+    ws = DATA / "water_stations.json"
+    if ws.exists():
+        (OUT / "water_stations.json").write_text(
+            json.dumps(json.loads(ws.read_text(encoding="utf-8")), ensure_ascii=False,
+                       separators=(",", ":")), encoding="utf-8")
+        print("water_stations.json: コピー")
     # 地下道（アンダーパス）の冠水状況（data/underpass_status.json。tools/underpass.py が5分おきに更新）
     from tools.underpass import sync_site as sync_underpass
     if sync_underpass():

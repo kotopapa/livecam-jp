@@ -30,6 +30,7 @@ import 'ad_banner.dart';
 import 'elevation_label.dart';
 import 'pin_bitmaps.dart';
 import 'pin_style.dart';
+import 'water_level_card.dart';
 import 'x_accounts_screen.dart';
 
 /// 免責文言（SPEC 9.5。削ってはいけない）。
@@ -232,6 +233,11 @@ class _DetailScreenState extends State<DetailScreen> {
             const SizedBox(height: 8),
             _badges(st),
             const Divider(height: 24),
+            // 河川カメラの水位グラフ（川の防災情報の観測所が紐付いているときだけ）
+            if (camera.waterLevel != null) ...[
+              WaterLevelCard(camera: camera),
+              const Divider(height: 24),
+            ],
             _locationSection(),
             const Divider(height: 24),
             if (hotels != null && !camera.isLiveVideo) ...[hotels, const Divider(height: 24)],

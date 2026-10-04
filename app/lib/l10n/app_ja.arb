@@ -2703,5 +2703,21 @@
   },
   "oldMapDisclaimer": "古い地図は位置がずれることがあります。土地の成り立ちの目安としてご覧ください",
   "settingsKjmap": "今昔マップ on the web（昔の地図）",
-  "settingsKjmapNote": "時系列地形図閲覧サイト（(C)谷 謙二）。地図レイヤー「昔の地図」の出典"
+  "settingsKjmapNote": "時系列地形図閲覧サイト（(C)谷 謙二）。地図レイヤー「昔の地図」の出典",
+  "waterLevelTitle": "水位",
+  "waterLevelStation": "観測所：{name}（カメラから約{dist}m）",
+  "@waterLevelStation": {"placeholders": {"name": {"type": "String"}, "dist": {"type": "int"}}},
+  "waterLevelLatest": "{value} m（{time} 現在）",
+  "@waterLevelLatest": {"placeholders": {"value": {"type": "String"}, "time": {"type": "String"}}},
+  "waterLevelLoading": "水位を取得しています…",
+  "waterLevelNoData": "水位データを取得できません",
+  "waterLevelLast48h": "過去48時間の水位",
+  "waterLevelForecast": "予測",
+  "waterLevelRsrv": "水防団待機水位",
+  "waterLevelWarn": "氾濫注意水位",
+  "waterLevelSpcl": "避難判断水位",
+  "waterLevelDng": "氾濫危険水位",
+  "waterLevelSource": "出典：国土交通省「川の防災情報」",
+  "waterLevelOpenSite": "川の防災情報で見る",
+  "waterLevelNote": "水位は参考情報です。避難の判断は自治体の避難情報に従ってください。"
 }
