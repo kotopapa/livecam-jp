@@ -120,6 +120,13 @@ python site/build.py                            # 配信ファイル生成
 - 基準水位の各言語訳は気象庁多言語辞書に無いため独自訳（en は MLIT 英語サイトの用語）。色は 待機=緑 / 注意=黄 / 避難判断=橙 / 危険=紫（危険警報と同じ）
 - 見た目の確認はウィジェットテストで `FontLoader('Roboto')` に `/Library/Fonts/Arial Unicode.ttf` を読ませ、`ThemeData(fontFamily: 'Roboto')` で golden を書くと文字が出る（既定の Ahem フォントは四角になる。`tester.view.physicalSize` は devicePixelRatio で割った論理サイズになることに注意）
 
+## 河川・ダムカメラ座標の見直し（2026-10-05追記）
+
+- 推定座標の河川・ダム（静止画・誘導型）1,202台を4班で見直し。F（鳥取・国交省）268台・G（県システム）218台を反映済み。**公式座標の所在**: 鳥取 `tori-bousai.jp/arcgis/kasenkanshi2.geojson`（feature id＝画像URLの `kasen/camera/NNN/`。道路同様に座標は元から一致）、和歌山 `geojson/wakayama_camera.geojson`＋`chitenconfig/CameraList.csv`（YouTube 誘導型も観測所名で一致。旧座標は約450m の一定ずれ＝日本測地系の疑い）、沖縄 `bousai-kasen.pref.okinawa.jp` の `dat_js/DBDAT_inf.js` cam[]、山形 新サイト `/map/servlet/bousaiweb.servletBousaiMap?dk=4`（ダム。dk=15 は河川カメラ101局）、徳島 県総合地図提供システム WFS（layer_id=1834、市町村層 1838 に未収録約40台）、兵庫 kasenkanshi の dam_detail `data-latitude/longitude`（トップの data-setting に河川カメラ417台の座標）、広島西部山系砂防 `cctv/index.php` の `map.setMarker(lat,lng,…,'cNNN')`、鬼怒川ダム統管 `kinudamu/daminfo/script/comnTbl.js` の CctvTbl。ダム管理所系は Wikidata P625（同名項目は旧座標20km以内で絞る）＋台帳 kawabou のダム本体カメラで本体位置（approx）
+- **cam.river.go.jp 直リンクの lcdb 由来カメラは `master/obs/scam/<id>.json` が 404 なら川の防災情報に無い旧番号**（9桁で1始まり）。81台を退役（同地点は kawabou-* の新番号で収録）。国交省事務所の直リンク版と kawabou 版が同一カメラとみられる重複候補39組は未整理（F_river_mlit_results の duplicate_of）
+- 京都府 chisuibousai（54台）は 2026-10-04 時点で全URL 403「メンテナンスのため利用停止中」→ 再開後に座標調査。山口 y-bousai 58台は公式座標が小数3桁のみで approx 据え置き
+- 並列調査では Nominatim・Wikidata・Overpass が同一IPで 429/504 になる。班をまたぐときは 3〜6秒間隔にする
+
 ## 道路カメラ座標の全国見直し（2026-10-04追記）
 
 - 道路カメラで座標が推定（approx）だった2,149台を情報源ごとに5班で見直し、**1,280台を置き直し**（exact 約900・approx 約380）。手順と結果は scratchpad（消えたら本節の情報源一覧から再現）。反映は台帳 cameras.json と curated_still/youtube.yaml の lat/lng（人手台帳は `accuracy: exact` を付けると exact になる。**curated_still.py は 2026-10-04 まで一律 approx を付けていた**ため、鳥取の公式 GeoJSON 由来265台まで「位置はおおよそ」表示だった）
