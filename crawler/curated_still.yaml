@@ -2285,8 +2285,9 @@ cameras:
     operator: "横浜市"
     category: river
     prefecture: "14"
-    lat: 35.4318
-    lng: 139.5375
+    lat: 35.432167
+    lng: 139.53175
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: camidx_latest
     feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546808/546808_latest.idx"
     image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546808/546808_latest.idx"
@@ -2298,8 +2299,9 @@ cameras:
     operator: "横浜市"
     category: river
     prefecture: "14"
-    lat: 35.4053
-    lng: 139.486
+    lat: 35.42475
+    lng: 139.490139
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: camidx_latest
     feed_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546810/546810_latest.idx"
     image_url: "https://mizubousai.city.yokohama.lg.jp/wdata/camera/546810/546810_latest.idx"
@@ -2313,8 +2315,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.7419
-    lng: 137.7758
+    lat: 34.742444
+    lng: 137.775444
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm01_02/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_01.php"
     note: "浜松市土木防災情報システム"
@@ -2324,8 +2327,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.6927
-    lng: 137.7378
+    lat: 34.693028
+    lng: 137.737667
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm02_03/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_02.php"
     note: "浜松市土木防災情報システム"
@@ -2335,8 +2339,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.6972
-    lng: 137.7344
+    lat: 34.698222
+    lng: 137.733944
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm03_01/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_03.php"
     note: "浜松市土木防災情報システム"
@@ -2346,8 +2351,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.6856
-    lng: 137.6876
+    lat: 34.685944
+    lng: 137.686694
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm05_01/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_04.php"
     note: "浜松市土木防災情報システム"
@@ -2357,8 +2363,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.6842
-    lng: 137.7124
+    lat: 34.684917
+    lng: 137.711333
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm05_02/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_05.php"
     note: "浜松市土木防災情報システム"
@@ -2368,8 +2375,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.6957
-    lng: 137.7011
+    lat: 34.696083
+    lng: 137.69975
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm06_01/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_06.php"
     note: "浜松市土木防災情報システム"
@@ -2379,8 +2387,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.6962
-    lng: 137.7169
+    lat: 34.696389
+    lng: 137.716083
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm07_01/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_07.php"
     note: "浜松市土木防災情報システム"
@@ -2390,8 +2399,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.7045
-    lng: 137.7086
+    lat: 34.705233
+    lng: 137.705921
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm06_02/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_08.php"
     note: "浜松市土木防災情報システム"
@@ -2401,8 +2411,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.6955
-    lng: 137.6988
+    lat: 34.696417
+    lng: 137.696917
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm06_04/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_09.php"
     note: "浜松市土木防災情報システム"
@@ -2412,8 +2423,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.7
-    lng: 137.6461
+    lat: 34.700733
+    lng: 137.646687
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm15_01/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_10.php"
     note: "浜松市土木防災情報システム"
@@ -2423,8 +2435,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.7249
-    lng: 137.7418
+    lat: 34.725018
+    lng: 137.742115
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm16_01/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_11.php"
     note: "浜松市土木防災情報システム"
@@ -2434,8 +2447,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.8087
-    lng: 137.7998
+    lat: 34.809771
+    lng: 137.797309
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm19_01/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_12.php"
     note: "浜松市土木防災情報システム"
@@ -2445,8 +2459,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.8667
-    lng: 137.8163
+    lat: 34.867776
+    lng: 137.815716
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm20_01/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_13.php"
     note: "浜松市土木防災情報システム"
@@ -2456,8 +2471,9 @@ cameras:
     operator: "浜松市"
     category: river
     prefecture: "22"
-    lat: 34.8654
-    lng: 137.8169
+    lat: 34.867881
+    lng: 137.816289
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.hamamatsu-dobokubousai.net/cm/cm13_02/cam.jpg"
     page_url: "https://www.hamamatsu-dobokubousai.net/camera_14.php"
     note: "浜松市土木防災情報システム"
@@ -2478,8 +2494,9 @@ cameras:
     operator: "大阪市"
     category: river
     prefecture: "27"
-    lat: 34.6692
-    lng: 135.4825
+    lat: 34.669148
+    lng: 135.481631
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://www.osaka-city-kasen.jp/Camera/04.jpg"
     page_url: "http://www.osaka-city-kasen.jp/"
     note: "座標根拠: マピオン電話帳「道頓堀川水門管理棟」住所: 大阪市浪速区幸町3-9-43 を国土"
@@ -2489,8 +2506,9 @@ cameras:
     operator: "大阪市"
     category: river
     prefecture: "27"
-    lat: 34.6891
-    lng: 135.5094
+    lat: 34.688441
+    lng: 135.50977
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://www.osaka-city-kasen.jp/Camera/05.jpg"
     page_url: "http://www.osaka-city-kasen.jp/"
 
@@ -2499,8 +2517,8 @@ cameras:
     operator: "大阪市"
     category: river
     prefecture: "27"
-    lat: 34.6081
-    lng: 135.5858
+    lat: 34.608803
+    lng: 135.585804
     image_url: "http://www.osaka-city-kasen.jp/Camera/06.jpg"
     page_url: "http://www.osaka-city-kasen.jp/"
 
@@ -2509,8 +2527,8 @@ cameras:
     operator: "大阪市"
     category: river
     prefecture: "27"
-    lat: 34.6108
-    lng: 135.5396
+    lat: 34.610472
+    lng: 135.539361
     image_url: "http://www.osaka-city-kasen.jp/Camera/07.jpg"
     page_url: "http://www.osaka-city-kasen.jp/"
 
@@ -2519,8 +2537,9 @@ cameras:
     operator: "大阪市"
     category: river
     prefecture: "27"
-    lat: 34.6216
-    lng: 135.5301
+    lat: 34.621609
+    lng: 135.530144
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://www.osaka-city-kasen.jp/Camera/09.jpg"
     page_url: "http://www.osaka-city-kasen.jp/"
 
@@ -2529,8 +2548,9 @@ cameras:
     operator: "大阪市"
     category: river
     prefecture: "27"
-    lat: 34.6513
-    lng: 135.5491
+    lat: 34.651269
+    lng: 135.549114
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://www.osaka-city-kasen.jp/Camera/10.jpg"
     page_url: "http://www.osaka-city-kasen.jp/"
 
@@ -2550,8 +2570,9 @@ cameras:
     operator: "川崎市"
     category: river
     prefecture: "14"
-    lat: 35.5362
-    lng: 139.7169
+    lat: 35.536185
+    lng: 139.716907
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku1/image/genzai.jpg"
     page_url: "https://kawasakicity.secure.tenki-info.com/"
 
@@ -2570,8 +2591,8 @@ cameras:
     operator: "川崎市"
     category: river
     prefecture: "14"
-    lat: 35.6071
-    lng: 139.6064
+    lat: 35.607099
+    lng: 139.605117
     image_url: "https://kawasakicity.secure.tenki-info.com/static/app/content/kawasaki/kyoku3/image/genzai.jpg"
     page_url: "https://kawasakicity.secure.tenki-info.com/"
 
@@ -2624,8 +2645,9 @@ cameras:
     operator: "京都市（阪神ケーブルエンジニアリングに委託）"
     category: river
     prefecture: "26"
-    lat: 35.009
-    lng: 135.7717
+    lat: 35.008954
+    lng: 135.771691
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://hce.hanshin.co.jp/weathercam/upload/sanjo-01.jpg"
     page_url: "http://hce.hanshin.co.jp/weathercam/"
 
@@ -2634,8 +2656,9 @@ cameras:
     operator: "京都市（阪神ケーブルエンジニアリングに委託）"
     category: river
     prefecture: "26"
-    lat: 34.9957
-    lng: 135.7679
+    lat: 34.99793
+    lng: 135.76798
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://hce.hanshin.co.jp/weathercam/upload/gojo-01.jpg"
     page_url: "http://hce.hanshin.co.jp/weathercam/"
 
@@ -9912,8 +9935,9 @@ cameras:
     operator: "東みよし町"
     category: "river"
     prefecture: "36"
-    lat: 34.0605
-    lng: 133.9093
+    lat: 34.036827
+    lng: 133.936885
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://tc001.t-cloudsystem.net/TC001-CAM0001-BS/bu3UfvLp/getjpeg.php"
     page_url: "https://www.town.higashimiyoshi.lg.jp/docs/976.html"
     note: "image/jpg 1280x720 確認。CAM0005(三三大橋)は既登録。CAM0001〜0003 の地点名は町ページ本文に記載(取得できず)→要確認。座標=足代代表点(仮)"
@@ -9923,8 +9947,9 @@ cameras:
     operator: "東みよし町"
     category: "river"
     prefecture: "36"
-    lat: 34.0605
-    lng: 133.9093
+    lat: 34.044133
+    lng: 133.940187
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://tc001.t-cloudsystem.net/TC001-CAM0002-BS/bR8hsVUB/getjpeg.php"
     page_url: "https://www.town.higashimiyoshi.lg.jp/docs/976.html"
     note: "image/jpg 275KB 確認。地点名要確認"
@@ -9934,8 +9959,9 @@ cameras:
     operator: "東みよし町"
     category: "river"
     prefecture: "36"
-    lat: 34.0605
-    lng: 133.9093
+    lat: 34.038957
+    lng: 133.858851
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://tc001.t-cloudsystem.net/TC001-CAM0003-BS/bU6kWDvt/getjpeg.php"
     page_url: "https://www.town.higashimiyoshi.lg.jp/docs/976.html"
     note: "image/jpg 確認。地点名要確認"
@@ -11249,8 +11275,9 @@ cameras:
     operator: "佐渡市"
     category: "dam"
     prefecture: "15"
-    lat: 38.0146
-    lng: 138.4226
+    lat: 38.007185
+    lng: 138.449996
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.sado.niigata.jp/today/index/body/c_img/17.jpg"
     page_url: "https://www.city.sado.niigata.jp/soshiki/2003/46544.html"
     note: "1分更新。c_img/16.jpg も画像応答するが地点名不明(旧・両津港/相川春日崎は2025-11撤去)のため未採用。座標: 新穂ダム"
@@ -11337,8 +11364,9 @@ cameras:
     operator: "上天草市"
     category: "river"
     prefecture: "43"
-    lat: 32.583
-    lng: 130.45
+    lat: 32.584294
+    lng: 130.428874
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera3.jpg"
     page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
     note: "curl 200 image/jpeg。座標: 大矢野川(概略)"
@@ -11348,8 +11376,9 @@ cameras:
     operator: "上天草市"
     category: "river"
     prefecture: "43"
-    lat: 32.585
-    lng: 130.448
+    lat: 32.585362
+    lng: 130.429924
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera4.jpg"
     page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
     note: "curl 200 image/jpeg。座標: 大矢野川(概略)"
@@ -11359,8 +11388,9 @@ cameras:
     operator: "上天草市"
     category: "river"
     prefecture: "43"
-    lat: 32.587
-    lng: 130.446
+    lat: 32.593153
+    lng: 130.429232
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/content/fr.bosai_public.camera/core/img/camera5.jpg"
     page_url: "https://kamiamakusa-bosai.trims-cloud.net/kamiamakusa_bosai/camera"
     note: "curl 200 image/jpeg。座標: 大矢野川(概略)"
@@ -11617,8 +11647,9 @@ cameras:
     operator: "古座川町"
     category: "river"
     prefecture: "30"
-    lat: 33.608
-    lng: 135.765
+    lat: 33.60377
+    lng: 135.76616
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://cam01.town.kozagawa.wakayama.jp/axis-cgi/jpg/image.cgi?resolution=640x480"
     page_url: "http://www.town.kozagawa.wakayama.jp/yakunitatu/sub006.html"
     note: "AXISカメラの標準静止画CGI。curl GET 200 image/jpeg 640x480 約27KB（fileでJPEG確認）。町ページは『詳細はこちら』で cam01 のAXISビューアへリンク。利用条件記載なし→license=unknown。http(非TLS)のみ。座標は滝の拝（小川の甌穴群・アユ釣り名所）の既知位置、GSI『古座川町小川』代表点は33.6011,135.7715"
@@ -17739,8 +17770,9 @@ cameras:
     operator: "真庭市"
     category: "dam"
     prefecture: "33"
-    lat: 34.9844
-    lng: 133.6425
+    lat: 35.00283
+    lng: 133.599
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.maniwa.lg.jp/live/images/hokubodam/image2.jpg"
     page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1378.html"
     note: "「北房ダム管理棟にカメラを設置、1分おきに最新の静止画像」。image/jpeg 200、当日。転載禁止記載なし(license unknown)。座標: GSI POIなし→真庭市阿口の北房ダム堤体既知位置34.9844,133.6425(要確認)"
@@ -17761,8 +17793,9 @@ cameras:
     operator: "臼杵市"
     category: "dam"
     prefecture: "44"
-    lat: 32.9771
-    lng: 131.6556
+    lat: 32.977101
+    lng: 131.655645
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.usuki.oita.jp/bousai_camera/p_ishibadamu.jpg"
     page_url: "https://www.city.usuki.oita.jp/docs/2014020700398/"
     note: "臼杵市防災カメラ(野津地域)の「石場ダム」。image/jpeg 200、当日。座標GSI POI「石場ダム」(131.65564,32.97710)"
@@ -18421,8 +18454,9 @@ cameras:
     operator: "葛巻町"
     category: "river"
     prefecture: "03"
-    lat: 39.9786
-    lng: 141.51
+    lat: 40.013843
+    lng: 141.467227
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.town.kuzumaki.lg.jp/webcamera/cam09.jpg"
     page_url: "https://www.town.kuzumaki.lg.jp/bousai-camera/camera-list.html"
     note: "image/jpeg 200。座標GSI(葛巻町江刈、概略)"
@@ -18498,8 +18532,9 @@ cameras:
     operator: "滝沢市"
     category: "river"
     prefecture: "03"
-    lat: 39.77496
-    lng: 141.12622
+    lat: 39.773978
+    lng: 141.13728
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kasen.city.takizawa.iwate.jp/contents/sugo01.jpg"
     page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
     note: "滝沢市河川監視カメラ5台。image/jpeg 200、LM当日。利用条件不明。座標GSI(滝沢市巣子、概略)"
@@ -18509,8 +18544,9 @@ cameras:
     operator: "滝沢市"
     category: "river"
     prefecture: "03"
-    lat: 39.7348
-    lng: 141.0771
+    lat: 39.716694
+    lng: 141.018963
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kasen.city.takizawa.iwate.jp/contents/koiwai01.jpg"
     page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
     note: "image/jpeg 200、LM当日。座標概略(小岩井地区)"
@@ -18520,8 +18556,9 @@ cameras:
     operator: "滝沢市"
     category: "river"
     prefecture: "03"
-    lat: 39.7348
-    lng: 141.0771
+    lat: 39.709019
+    lng: 141.021034
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kasen.city.takizawa.iwate.jp/contents/furin01.jpg"
     page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
     note: "image/jpeg 200、LM当日。座標概略"
@@ -18531,8 +18568,9 @@ cameras:
     operator: "滝沢市"
     category: "river"
     prefecture: "03"
-    lat: 39.8115
-    lng: 141.0926
+    lat: 39.814849
+    lng: 141.066417
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kasen.city.takizawa.iwate.jp/contents/iwate101.jpg"
     page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
     note: "image/jpeg 200、LM当日。座標GSI(滝沢市柳沢、概略)"
@@ -18542,8 +18580,9 @@ cameras:
     operator: "滝沢市"
     category: "river"
     prefecture: "03"
-    lat: 39.8115
-    lng: 141.0926
+    lat: 39.817321
+    lng: 141.068949
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://kasen.city.takizawa.iwate.jp/contents/iwate201.jpg"
     page_url: "https://www.city.takizawa.iwate.jp/life/taki_kurashi/crisismanagement/kasenkansi.html"
     note: "image/jpeg 200、LM当日。座標概略"
@@ -18663,8 +18702,9 @@ cameras:
     operator: "村山市"
     category: "river"
     prefecture: "06"
-    lat: 38.49
-    lng: 140.33
+    lat: 38.517793
+    lng: 140.353834
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.murayama.lg.jp/static/soumu/livecam/masimo.jpg"
     page_url: "https://www.city.murayama.lg.jp/kurashi/sumai/murra_livecam.html"
     note: "image/jpeg 200。約1時間更新。座標は真下慶治記念美術館(村山市大淀)の既知座標・概略"
@@ -18784,8 +18824,9 @@ cameras:
     operator: "三条市"
     category: "river"
     prefecture: "15"
-    lat: 37.6364
-    lng: 138.9617
+    lat: 37.53895
+    lng: 139.125592
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam3.jpg"
     page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
     note: "image/jpeg 200、LM当日。座標GSI(概略・要確認: いい湯らていは下田地区のため実位置は東寄りの可能性)"
@@ -18828,8 +18869,9 @@ cameras:
     operator: "三条市"
     category: "river"
     prefecture: "15"
-    lat: 37.65737
-    lng: 139.01199
+    lat: 37.545918
+    lng: 139.087268
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam10.jpg"
     page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
     note: "image/jpeg 200、LM当日。座標GSI(白鳥の郷公苑)"
@@ -18883,8 +18925,9 @@ cameras:
     operator: "三条市"
     category: "river"
     prefecture: "15"
-    lat: 37.62837
-    lng: 138.94731
+    lat: 37.619028
+    lng: 138.948728
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.sanjo.niigata.jp/section/bosaicam15.jpg"
     page_url: "http://www.city.sanjo.niigata.jp/gyousei/page00065.html"
     note: "image/jpeg 200、LM当日。座標GSI(三条市島田)"
@@ -19015,8 +19058,9 @@ cameras:
     operator: "砺波市"
     category: "river"
     prefecture: "16"
-    lat: 36.578
-    lng: 136.974
+    lat: 36.57923
+    lng: 136.9904
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.tonami.lg.jp/livecam/images/mirror/funatobashi.jpg"
     page_url: "https://www.city.tonami.lg.jp/livecam/cam07/"
     note: "image/jpeg 200確認。座標概略(庄川町舟戸)"
@@ -19158,8 +19202,8 @@ cameras:
     operator: "長和町"
     category: "river"
     prefecture: "20"
-    lat: 36.2206
-    lng: 138.2504
+    lat: 36.238661
+    lng: 138.252776
     image_url: "https://www.nagawa.ne.jp/image/aobara.jpg"
     page_url: "https://www.town.nagawa.nagano.jp/soshiki/somu/johokoho/johokohocatv/1/2/1/30.html"
     note: "image/jpeg 200、LM当日。座標GSI(長和町大門、概略)"
@@ -19414,8 +19458,9 @@ cameras:
     operator: "裾野市"
     category: "river"
     prefecture: "22"
-    lat: 35.19028
-    lng: 138.97134
+    lat: 35.171765
+    lng: 138.943317
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www2.city.susono.shizuoka.jp/data/ts-photo/ts5-photo.jpeg"
     page_url: "https://www.city.susono.shizuoka.jp/soshiki/6/4/1/1/19734.html"
     note: "image/jpeg 200、LM当日。座標GSI(裾野市茶畑)"
@@ -19469,8 +19514,9 @@ cameras:
     operator: "清水町（静岡県）"
     category: "river"
     prefecture: "22"
-    lat: 35.09903
-    lng: 138.90277
+    lat: 35.09526
+    lng: 138.89878
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.town.shimizu.shizuoka.jp/livecam/02.jpg"
     page_url: "https://www.town.shimizu.shizuoka.jp/anzen/anzen00084.html"
     note: "清水町河川カメラ4台、60秒更新。image/jpeg 200、LM当日。掲載順 02=本城山,03=かわせみ,04=江川(徳倉排水機場),01=新川(伏見)。利用条件不明。座標GSI(概略)"
@@ -19491,8 +19537,9 @@ cameras:
     operator: "清水町（静岡県）"
     category: "river"
     prefecture: "22"
-    lat: 35.08758
-    lng: 138.90082
+    lat: 35.082397
+    lng: 138.905809
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.town.shimizu.shizuoka.jp/livecam/04.jpg"
     page_url: "https://www.town.shimizu.shizuoka.jp/anzen/anzen00084.html"
     note: "image/jpeg 200、LM当日。座標GSI(清水町徳倉)"
@@ -19524,8 +19571,8 @@ cameras:
     operator: "新見市"
     category: "river"
     prefecture: "33"
-    lat: 34.975
-    lng: 133.468
+    lat: 34.987385
+    lng: 133.456898
     image_url: "http://camera.city.niimi.okayama.jp/gazo/wl04/image.jpg"
     page_url: "http://camera.city.niimi.okayama.jp/index.html"
     note: "河川カメラ。image/jpeg 200、LM当日。掲載順による対応(wl04=昭和橋, wl11=小川橋)は要確認。座標は新見駅付近概略"
@@ -19535,8 +19582,8 @@ cameras:
     operator: "新見市"
     category: "river"
     prefecture: "33"
-    lat: 34.96972
-    lng: 133.45718
+    lat: 34.976844
+    lng: 133.470182
     image_url: "http://camera.city.niimi.okayama.jp/gazo/wl10/image.jpg"
     page_url: "http://camera.city.niimi.okayama.jp/index.html"
     note: "image/jpeg 200、LM当日。座標GSI(新見市金谷)"
@@ -19568,8 +19615,8 @@ cameras:
     operator: "新見市"
     category: "river"
     prefecture: "33"
-    lat: 34.98208
-    lng: 133.38141
+    lat: 34.99251
+    lng: 133.396897
     image_url: "http://camera.city.niimi.okayama.jp/gazo/wl07/image.jpg"
     page_url: "http://camera.city.niimi.okayama.jp/index.html"
     note: "image/jpeg 200、LM当日。座標GSI(新見市神郷下神代)"
@@ -23170,8 +23217,9 @@ cameras:
     operator: 岡崎市役所防災課
     category: river
     prefecture: '23'
-    lat: 34.990306
-    lng: 137.178083
+    lat: 34.990318
+    lng: 137.178071
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_28/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒444-2112 愛知県岡崎市東阿知和町宮前 愛知県岡崎市東阿知和町北山 愛知'
@@ -23190,8 +23238,9 @@ cameras:
     operator: 岡崎市役所防災課
     category: river
     prefecture: '23'
-    lat: 34.907694
-    lng: 137.150611
+    lat: 34.907691
+    lng: 137.150618
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_1/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒444-0825 愛知県岡崎市福岡町荒追7-2'
@@ -23200,8 +23249,9 @@ cameras:
     operator: 岡崎市役所防災課
     category: river
     prefecture: '23'
-    lat: 34.931
-    lng: 137.220583
+    lat: 34.93094
+    lng: 137.22055
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_29/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒444-0004 愛知県岡崎市保母町河原田'
@@ -23210,8 +23260,9 @@ cameras:
     operator: 岡崎市役所防災課
     category: river
     prefecture: '23'
-    lat: 34.952412
-    lng: 137.148379
+    lat: 34.952473
+    lng: 137.150724
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_9/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒444-0922 愛知県岡崎市八帖南町2丁目4-1'
@@ -23220,8 +23271,9 @@ cameras:
     operator: 岡崎市役所防災課
     category: river
     prefecture: '23'
-    lat: 34.962389
-    lng: 137.129917
+    lat: 34.962436
+    lng: 137.129902
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_12/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒444-0944 愛知県岡崎市北本郷町赤池18-1'
@@ -23250,8 +23302,9 @@ cameras:
     operator: 岡崎市役所防災課
     category: river
     prefecture: '23'
-    lat: 34.966417
-    lng: 137.180667
+    lat: 34.966447
+    lng: 137.180636
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_5/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒444-0071 愛知県岡崎市稲熊町8丁目261-2'
@@ -23260,8 +23313,9 @@ cameras:
     operator: 岡崎市役所防災課
     category: river
     prefecture: '23'
-    lat: 34.932972
-    lng: 137.184972
+    lat: 34.933
+    lng: 137.184974
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_3/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 愛知県岡崎市大西町仁田5-4'
@@ -23270,8 +23324,9 @@ cameras:
     operator: 岡崎市役所防災課
     category: river
     prefecture: '23'
-    lat: 34.913389
-    lng: 137.16125
+    lat: 34.913372
+    lng: 137.161256
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_2/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 愛知県岡崎市若松町向山34-2'
@@ -23290,8 +23345,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.718089
-    lng: 137.402395
+    lat: 34.722173
+    lng: 137.407423
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/dodoike.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市浜道町'
@@ -23300,8 +23356,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.781714
-    lng: 137.364697
+    lat: 34.784441
+    lng: 137.373509
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/ega.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市横須賀町'
@@ -23310,8 +23367,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.728273
-    lng: 137.40355
+    lat: 34.727322
+    lng: 137.407439
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/hamaike.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市西幸町'
@@ -23320,8 +23378,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.72338
-    lng: 137.421425
+    lat: 34.736683
+    lng: 137.429454
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/higashi.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市大岩町'
@@ -23330,8 +23389,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.721031
-    lng: 137.466233
+    lat: 34.721809
+    lng: 137.477199
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/hira.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市中原町'
@@ -23340,8 +23400,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.728073
-    lng: 137.360716
+    lat: 34.724052
+    lng: 137.365178
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/kai.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市駒形町'
@@ -23350,8 +23411,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.690694
-    lng: 137.328389
+    lat: 34.690768
+    lng: 137.328388
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/kamita.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 愛知県豊橋市老津町'
@@ -23360,8 +23422,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.780758
-    lng: 137.422488
+    lat: 34.783269
+    lng: 137.424802
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/megane.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市牛川通4丁目'
@@ -23370,8 +23433,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.762284
-    lng: 137.394774
+    lat: 34.762962
+    lng: 137.394905
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/muro2.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市前田町1丁目'
@@ -23380,8 +23444,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.781572
-    lng: 137.399498
+    lat: 34.779887
+    lng: 137.432471
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/woihote.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市牛川町'
@@ -23390,8 +23455,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.718111
-    lng: 137.343159
+    lat: 34.722913
+    lng: 137.350628
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/shio.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市船渡町'
@@ -23400,8 +23466,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.728273
-    lng: 137.40355
+    lat: 34.727599
+    lng: 137.415181
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/tochika.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市西幸町'
@@ -23410,8 +23477,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.728073
-    lng: 137.360716
+    lat: 34.727374
+    lng: 137.36827
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/utibari.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市駒形町'
@@ -23420,8 +23488,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.716802
-    lng: 137.383845
+    lat: 34.715522
+    lng: 137.381882
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/umeda.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県豊橋市西高師町'
@@ -23430,8 +23499,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.747694
-    lng: 137.361611
+    lat: 34.747692
+    lng: 137.361647
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/yagyuu2.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 愛知県豊橋市牟呂市場町'
@@ -23440,8 +23510,9 @@ cameras:
     operator: 豊橋市役所(豊橋市河川ライブカメラ)
     category: river
     prefecture: '23'
-    lat: 34.718278
-    lng: 137.346083
+    lat: 34.718781
+    lng: 137.34622
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.kasen.city.toyohashi.lg.jp/camera/yamazaki.jpg
     page_url: http://www.kasen.city.toyohashi.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 愛知県豊橋市大崎町柿ノ木'
@@ -24028,8 +24099,9 @@ cameras:
     operator: おおい町役場
     category: river
     prefecture: '18'
-    lat: 35.400111
-    lng: 135.707556
+    lat: 35.4
+    lng: 135.7075
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/019.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒917-0364 福井県おおい町名田庄虫鹿野'
@@ -24038,8 +24110,9 @@ cameras:
     operator: おおい町役場
     category: river
     prefecture: '18'
-    lat: 35.406167
-    lng: 135.688417
+    lat: 35.406175
+    lng: 135.688408
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/017.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒917-0381 福井県おおい町名田庄三重'
@@ -24068,8 +24141,9 @@ cameras:
     operator: おおい町役場
     category: river
     prefecture: '18'
-    lat: 35.477944
-    lng: 135.624222
+    lat: 35.477931
+    lng: 135.624223
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/001.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 福井県おおい町本郷'
@@ -24078,8 +24152,9 @@ cameras:
     operator: おおい町役場
     category: river
     prefecture: '18'
-    lat: 35.480417
-    lng: 135.624056
+    lat: 35.480406
+    lng: 135.624058
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/002.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 福井県おおい町本郷'
@@ -24088,8 +24163,9 @@ cameras:
     operator: おおい町役場
     category: river
     prefecture: '18'
-    lat: 35.451917
-    lng: 135.564861
+    lat: 35.453086
+    lng: 135.565549
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/009.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 福井県おおい町鹿野42-27'
@@ -24098,8 +24174,9 @@ cameras:
     operator: おおい町役場
     category: river
     prefecture: '18'
-    lat: 35.471
-    lng: 135.621278
+    lat: 35.471044
+    lng: 135.621369
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/014.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒919-2111 福井県おおい町本郷'
@@ -24108,8 +24185,9 @@ cameras:
     operator: おおい町役場
     category: river
     prefecture: '18'
-    lat: 35.461836
-    lng: 135.605868
+    lat: 35.461698
+    lng: 135.608138
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/008.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福井県おおい町野尻57-1'
@@ -24118,8 +24196,9 @@ cameras:
     operator: おおい町役場
     category: river
     prefecture: '18'
-    lat: 35.451639
-    lng: 135.561944
+    lat: 35.451753
+    lng: 135.562286
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/016.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒919-2126 福井県おおい町佐畑'
@@ -25568,8 +25647,8 @@ cameras:
     operator: 能美市役所危機管理課
     category: river
     prefecture: '17'
-    lat: 36.446744
-    lng: 136.559097
+    lat: 36.452831
+    lng: 136.568053
     image_url: http://www.road-river-bousai-cam-nomi.jp/storage//cam19/cam.jpg
     page_url: http://www.road-river-bousai-cam-nomi.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 石川県能美市岩内町'
@@ -25608,8 +25687,8 @@ cameras:
     operator: 能美市役所危機管理課
     category: river
     prefecture: '17'
-    lat: 36.436083
-    lng: 136.456583
+    lat: 36.435342
+    lng: 136.454686
     image_url: http://www.road-river-bousai-cam-nomi.jp/storage//cam03/cam.jpg
     page_url: http://www.road-river-bousai-cam-nomi.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒929-0115 石川県能美市下ノ江町ロ'
@@ -25730,8 +25809,9 @@ cameras:
     operator: 三豊市観光交流局
     category: river
     prefecture: '37'
-    lat: 34.243824
-    lng: 133.594088
+    lat: 34.243773
+    lng: 133.596252
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://labs.maizm.or.jp/ark20001/S004.jpg
     page_url: https://labs.maizm.or.jp/sakura/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 香川県三豊市詫間町積451'
@@ -25816,8 +25896,8 @@ cameras:
     operator: 仁淀川町役場
     category: river
     prefecture: '39'
-    lat: 33.560985
-    lng: 133.127114
+    lat: 33.56327
+    lng: 133.12678
     image_url: https://niyodogawa-cam.sakura.ne.jp/nakatsu.jpg
     page_url: https://www.town.niyodogawa.lg.jp/kanko/camera.php
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒781-1741 高知県仁淀川町竹屋敷 〒781-1741 高知県仁淀川町名野'
@@ -25847,8 +25927,8 @@ cameras:
     operator: 仁淀川町役場
     category: river
     prefecture: '39'
-    lat: 33.668991
-    lng: 133.186313
+    lat: 33.664256
+    lng: 133.194208
     image_url: https://niyodogawa-cam.sakura.ne.jp/yasui.jpg
     page_url: https://www.town.niyodogawa.lg.jp/kanko/camera.php
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒781-1628 高知県仁淀川町大屋'
@@ -27488,8 +27568,9 @@ cameras:
     operator: 柴田町観光物産協会
     category: river
     prefecture: '04'
-    lat: 38.055205
-    lng: 140.757375
+    lat: 38.055176
+    lng: 140.758227
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.skbk.or.jp/camera-uploads/sanchou.jpg
     page_url: http://www.skbk.or.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 宮城県柴田町船岡館山95-1'
@@ -28965,8 +29046,9 @@ cameras:
     operator: 糸魚川市役所
     category: river
     prefecture: '15'
-    lat: 36.999392
-    lng: 138.067031
+    lat: 37.000483
+    lng: 138.06736
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://itoigawa.nihonkai.net/charmant.jpg
     page_url: https://charmant-hiuchi.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県糸魚川市西飛山1821'
@@ -29547,8 +29629,9 @@ cameras:
     operator: 佐伯市役所(佐伯市防災局防災危機管理課)
     category: river
     prefecture: '44'
-    lat: 32.937056
-    lng: 131.889639
+    lat: 32.936754
+    lng: 131.887185
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.saiki.tv/~saiki-cfdp/camera/10.161.104.170.jpg
     page_url: http://www.saiki.tv/~saiki-cfdp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 大分県佐伯市川原'
@@ -30200,8 +30283,9 @@ cameras:
     operator: 益田市役所
     category: river
     prefecture: '32'
-    lat: 34.684759
-    lng: 131.820111
+    lat: 34.69052
+    lng: 131.826988
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.city.masuda.lg.jp/section/livecamera/campict001.jpg
     page_url: https://www.city.masuda.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 島根県益田市高津1丁目'
@@ -30210,8 +30294,9 @@ cameras:
     operator: 益田市役所
     category: river
     prefecture: '32'
-    lat: 34.645318
-    lng: 131.799261
+    lat: 34.65195
+    lng: 131.81014
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.city.masuda.lg.jp/section/livecamera/campict002.jpg
     page_url: https://www.city.masuda.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 島根県益田市安富町'
@@ -30681,8 +30766,9 @@ cameras:
     operator: 葛飾区役所
     category: river
     prefecture: '13'
-    lat: 35.727528
-    lng: 139.837139
+    lat: 35.727759
+    lng: 139.837578
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://s3.ap-northeast-1.amazonaws.com/river-monitor.katsushika-web.net/st2_latest_image.jpg
     page_url: https://www.city.katsushika.lg.jp/kurashi/1004028/1000063/1004031/1028160.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒124-0014 東京都葛飾区東四つ木3丁目'
@@ -30701,8 +30787,9 @@ cameras:
     operator: 葛飾区役所
     category: river
     prefecture: '13'
-    lat: 35.731722
-    lng: 139.854639
+    lat: 35.731783
+    lng: 139.85373
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://s3.ap-northeast-1.amazonaws.com/river-monitor.katsushika-web.net/st5_latest_image.jpg
     page_url: https://www.city.katsushika.lg.jp/kurashi/1004028/1000063/1004031/1028160.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒124-0013 東京都葛飾区東立石4丁目'
@@ -30711,8 +30798,8 @@ cameras:
     operator: 葛飾区役所
     category: river
     prefecture: '13'
-    lat: 35.736222
-    lng: 139.860139
+    lat: 35.736865
+    lng: 139.862151
     image_url: https://s3.ap-northeast-1.amazonaws.com/river-monitor.katsushika-web.net/st4_latest_image.jpg
     page_url: https://www.city.katsushika.lg.jp/kurashi/1004028/1000063/1004031/1028160.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒124-0022 東京都葛飾区奥戸2丁目'
@@ -30721,8 +30808,8 @@ cameras:
     operator: 葛飾区役所
     category: river
     prefecture: '13'
-    lat: 35.745833
-    lng: 139.861194
+    lat: 35.747433
+    lng: 139.862727
     image_url: https://s3.ap-northeast-1.amazonaws.com/river-monitor.katsushika-web.net/st3_latest_image.jpg
     page_url: https://www.city.katsushika.lg.jp/kurashi/1004028/1000063/1004031/1028160.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒125-0054 東京都葛飾区高砂1丁目'
@@ -31972,8 +32059,9 @@ cameras:
     operator: 市川三郷町役場
     category: river
     prefecture: '19'
-    lat: 35.565199
-    lng: 138.500216
+    lat: 35.565185
+    lng: 138.502389
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.town.ichikawamisato.yamanashi.jp/livecamera/images/live14.jpg
     page_url: http://www.town.ichikawamisato.yamanashi.jp/livecamera/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県市川三郷町市川大門1790-3'
@@ -31982,8 +32070,9 @@ cameras:
     operator: 市川三郷町役場
     category: river
     prefecture: '19'
-    lat: 35.570192
-    lng: 138.535795
+    lat: 35.57017
+    lng: 138.53764
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.town.ichikawamisato.yamanashi.jp/livecamera/images/live13.jpg
     page_url: http://www.town.ichikawamisato.yamanashi.jp/livecamera/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県市川三郷町大塚4264'
@@ -31992,8 +32081,9 @@ cameras:
     operator: 市川三郷町役場
     category: river
     prefecture: '19'
-    lat: 35.482098
-    lng: 138.455872
+    lat: 35.48195
+    lng: 138.458069
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.town.ichikawamisato.yamanashi.jp/livecamera/images/live09.jpg
     page_url: http://www.town.ichikawamisato.yamanashi.jp/livecamera/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県市川三郷町鴨狩津向640'
@@ -37240,8 +37330,8 @@ cameras:
     operator: 鏡野町（くらし安全課）
     category: river
     prefecture: '33'
-    lat: 35.210882
-    lng: 133.91524800000002
+    lat: 35.211412
+    lng: 133.914757
     image_url: https://www.town.kagamino.lg.jp/webcam/ohtsuri.jpg
     page_url: https://www.town.kagamino.lg.jp/soshiki/1/2084.html
     note: '地図中心(概略); 索引: https://livecam.asia/okayama/kagamino/okutsukei.html'
@@ -37890,8 +37980,9 @@ cameras:
     operator: 東村（総務財政課）
     category: river
     prefecture: '47'
-    lat: 26.6015
-    lng: 128.1445
+    lat: 26.604313
+    lng: 128.145012
+    accuracy: exact   # 2026-10-05 座標見直し
     refresh_sec: 60
     feed_type: still_image
     feed_url: "http://www2.vill.higashi.okinawa.jp/photo/hirugi.jpg"
@@ -37904,8 +37995,9 @@ cameras:
     operator: 東村（総務財政課）
     category: river
     prefecture: '47'
-    lat: 26.604
-    lng: 128.12
+    lat: 26.603836
+    lng: 128.121547
+    accuracy: exact   # 2026-10-05 座標見直し
     refresh_sec: 60
     feed_type: still_image
     feed_url: "http://www2.vill.higashi.okinawa.jp/photo/arime-school.jpg"
@@ -38574,8 +38666,8 @@ cameras:
     operator: "八千代市上下水道局"
     category: river
     prefecture: "12"
-    lat: 35.7014
-    lng: 140.0885
+    lat: 35.703051
+    lng: 140.085957
     feed_type: yachiyo_kansen
     feed_url: "https://www.yachiyo-1goukansen-suii.jp/No1.php"
     image_url: "https://www.yachiyo-1goukansen-suii.jp/No1.php"
@@ -38587,8 +38679,8 @@ cameras:
     operator: "八千代市上下水道局"
     category: river
     prefecture: "12"
-    lat: 35.7025
-    lng: 140.0911
+    lat: 35.711481
+    lng: 140.104803
     feed_type: yachiyo_kansen
     feed_url: "https://www.yachiyo-1goukansen-suii.jp/No2.php"
     image_url: "https://www.yachiyo-1goukansen-suii.jp/No2.php"
@@ -38600,8 +38692,8 @@ cameras:
     operator: "八千代市上下水道局"
     category: river
     prefecture: "12"
-    lat: 35.715
-    lng: 140.1051
+    lat: 35.709829
+    lng: 140.107509
     feed_type: yachiyo_kansen
     feed_url: "https://www.yachiyo-1goukansen-suii.jp/No3.php"
     image_url: "https://www.yachiyo-1goukansen-suii.jp/No3.php"
@@ -39114,8 +39206,9 @@ cameras:
     operator: "香美町"
     category: river
     prefecture: "28"
-    lat: 35.545
-    lng: 134.635
+    lat: 35.556375
+    lng: 134.570487
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://yadagawa-cam.town.mikata-kami.lg.jp/-wvhttp-01-/image.cgi"
     page_url: "https://www.town.mikata-kami.lg.jp/live-camera/index.html#ayunosato"
     note: "2026-09-30 全国多角調査(town_gov)。2026-09-30 image/jpeg 73KB、20秒でハッシュ変化。座標は矢田川中流の推定なので要確認"
@@ -40698,8 +40791,9 @@ cameras:
     operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
     category: river
     prefecture: "44"
-    lat: 33.410831
-    lng: 130.940353
+    lat: 33.394076
+    lng: 130.941235
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://webcamera.city.hita.oita.jp/cam2/-wvhttp-01-/getoneshot"
     page_url: "http://webcamera.city.hita.oita.jp/camera2.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 06:0x image/jpeg 2.7KB→30秒で変化。320x240。市の一覧表の所在地: 大字小野1653-3（河川名 小野川）"
@@ -40731,8 +40825,9 @@ cameras:
     operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
     category: river
     prefecture: "44"
-    lat: 33.318008
-    lng: 131.005402
+    lat: 33.331442
+    lng: 130.98294
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://webcamera.city.hita.oita.jp/cam5/-wvhttp-01-/image.cgi"
     page_url: "http://webcamera.city.hita.oita.jp/camera5.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 3.9KB→30秒で変化。所在地 大字東有田488-2"
@@ -40753,8 +40848,9 @@ cameras:
     operator: "日田市（日田玖珠九重Webカメラ画像提供システム）"
     category: river
     prefecture: "44"
-    lat: 33.314632
-    lng: 130.930939
+    lat: 33.314664
+    lng: 130.928423
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "http://webcamera.city.hita.oita.jp/cam7/-wvhttp-01-/image.cgi"
     page_url: "http://webcamera.city.hita.oita.jp/camera7.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。2026-09-30 image/jpeg 3.9KB→30秒で変化"
@@ -41028,8 +41124,9 @@ cameras:
     operator: "真庭市"
     category: river
     prefecture: "33"
-    lat: 35.0247
-    lng: 133.752
+    lat: 35.01864
+    lng: 133.75295
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.city.maniwa.lg.jp/live/images/ochiaibridge/image2.jpg"
     page_url: "https://www.city.maniwa.lg.jp/site/live-cam/1380.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。image/jpeg 28KB、1分更新"
@@ -43081,8 +43178,9 @@ cameras:
     operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
     category: river
     prefecture: "21"
-    lat: 35.42
-    lng: 137.048
+    lat: 35.419385
+    lng: 137.055484
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ctk.jp/kani-camera/camera-image/56.jpg"
     page_url: "https://www.ctk.jp/ctk-ch/livecamera/index56/"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"
@@ -43092,8 +43190,9 @@ cameras:
     operator: "可児市（配信: ケーブルテレビ可児 情報カメラ）"
     category: river
     prefecture: "21"
-    lat: 35.42
-    lng: 137.06
+    lat: 35.426504
+    lng: 137.066326
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ctk.jp/kani-camera/camera-image/58.jpg"
     page_url: "https://www.ctk.jp/ctk-ch/livecamera/index58/"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、75秒で内容変化。ケーブルテレビ可児「情報カメラ」ページに「可児市提供」として掲載（ctk.jp/kani-camera/）。岐阜県提供（蛍橋・戸走橋・門前橋・久々利川）と木曽川上流河川事務所提供（今渡・兼山ダム）は台帳の gifu-road / kawabou と重複のため除外。座標は要確認。"

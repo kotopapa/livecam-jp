@@ -19805,8 +19805,9 @@ cameras:
     video_id: "hwA4kdRl6F0"
     embed: false
     prefecture: "06"
-    lat: 38.6265
-    lng: 140.268
+    lat: 38.66515
+    lng: 140.27266
+    accuracy: exact   # 2026-10-05 座標見直し
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_muni)。誘導型（playableInEmbed=false）"
 
   - id: curated-muni-funagata-hirasawagawa
