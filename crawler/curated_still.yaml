@@ -90,9 +90,10 @@ cameras:
     name: "下久保ダム"
     operator: "独立行政法人水資源機構 下久保ダム管理所"
     category: dam
-    prefecture: "10"
-    lat: 36.1611
-    lng: 138.9931
+    prefecture: "11"
+    lat: 36.131566
+    lng: 139.023726
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.water.go.jp/kanto/simokubo/dam/images/ph_damlive01.jpg"
     page_url: "https://www.water.go.jp/kanto/simokubo/dam/damlive.html"
     note: "利根川水系 神流川"
@@ -137,8 +138,8 @@ cameras:
     operator: "国土交通省九州地方整備局 筑後川ダム統合管理事務所"
     category: dam
     prefecture: "44"
-    lat: 33.2119
-    lng: 130.9756
+    lat: 33.159722
+    lng: 130.983889
     image_url: "https://www.qsr.mlit.go.jp/toukan/bousai/data/image/cctv/C_003_cctv2.jpg"
     page_url: "https://www.qsr.mlit.go.jp/toukan/bousai/cgdweb/livecamera.php"
     note: "筑後川水系 津江川"
@@ -9476,8 +9477,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.883602
-    lng: 130.00293
+    lat: 32.886129
+    lng: 129.997069
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_19.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c19.html"
     note: "座標=中里町代表点"
@@ -9487,8 +9488,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.69408
-    lng: 130.322647
+    lat: 32.71943
+    lng: 130.298434
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_23.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c23.html"
     note: "c23.html→ngscctv_vga_23.jpg・ngscctv_23.txt「南島原市有家町　俵石　下」を実確認(2026-08-25)。小浜管内。txtの住所が南島原市有家町のため座標を有家町原尾代表点(GSI)に修正(要微調整)"
@@ -9520,8 +9521,9 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 33.340569
-    lng: 129.659454
+    lat: 33.338451
+    lng: 129.658236
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_61.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c61.html"
     note: "佐世保国道維持出張所管内。c61.html→ngscctv_vga_61.jpg・ngscctv_61.txt「松浦市御厨町　御厨田代大橋」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=御厨町代表点(GSI AddressSearch)"
@@ -9542,8 +9544,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 33.33955
-    lng: 129.738708
+    lat: 33.355052
+    lng: 129.743056
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_30.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c30.html"
     note: "佐世保国道維持出張所管内。c30.html→ngscctv_vga_30.jpg・ngscctv_30.txt「松浦市調川町　調川ＩＣ」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=調川町代表点(GSI AddressSearch)"
@@ -9553,8 +9555,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 33.339535
-    lng: 129.769623
+    lat: 33.34794
+    lng: 129.768607
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_31.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c31.html"
     note: "佐世保国道維持出張所管内。c31.html→ngscctv_vga_31.jpg・ngscctv_31.txt「松浦市今福町　今福ＩＣ下り」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=今福町代表点(GSI AddressSearch)"
@@ -9619,8 +9621,9 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 33.109196
-    lng: 129.800735
+    lat: 33.110614
+    lng: 129.793769
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_37.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c37.html"
     note: "佐世保国道維持出張所管内。c37.html→ngscctv_vga_37.jpg・ngscctv_37.txt「佐世保市崎岡町　新早岐瀬戸大橋　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=崎岡町代表点(GSI AddressSearch)"
@@ -9685,8 +9688,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 33.037003
-    lng: 129.917145
+    lat: 33.035804
+    lng: 129.923316
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_43.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c43.html"
     note: "佐世保国道維持出張所管内。c43.html→ngscctv_vga_43.jpg・ngscctv_43.txt「東彼杵郡東彼杵町　江頭　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=東彼杵町代表点(高吉と同一点)(GSI AddressSearch)"
@@ -9696,8 +9699,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.926865
-    lng: 129.952713
+    lat: 32.929853
+    lng: 129.950716
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_44.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c44.html"
     note: "大村国道維持出張所管内。c44.html→ngscctv_vga_44.jpg・ngscctv_44.txt「大村市西大村本町　桜馬場　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=西大村本町代表点(GSI AddressSearch)"
@@ -9707,8 +9710,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.895477
-    lng: 129.971725
+    lat: 32.891216
+    lng: 129.973465
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_45.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c45.html"
     note: "大村国道維持出張所管内。c45.html→ngscctv_vga_45.jpg・ngscctv_45.txt「大村市久原二丁目　与崎　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=久原二丁目代表点(GSI AddressSearch)"
@@ -9795,8 +9798,9 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.747871
-    lng: 130.354874
+    lat: 32.748239
+    lng: 130.355754
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_54.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c54.html"
     note: "小浜国道維持出張所管内。c54.html→ngscctv_vga_54.jpg・ngscctv_54.txt「島原市札の元町　水無大橋　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=札の元町代表点(GSI AddressSearch)"
@@ -9806,8 +9810,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.723431
-    lng: 130.33255
+    lat: 32.733802
+    lng: 130.312274
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_28.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c28.html"
     note: "小浜国道維持出張所管内。c28.html→ngscctv_vga_28.jpg・ngscctv_28.txt「南島原市深江町　山ノ寺　上」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=深江町乙代表点(GSI AddressSearch)"
@@ -9817,8 +9821,8 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.723824
-    lng: 130.202728
+    lat: 32.719041
+    lng: 130.218001
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_55.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c55.html"
     note: "小浜国道維持出張所管内。c55.html→ngscctv_vga_55.jpg・ngscctv_55.txt「雲仙市小浜町　鬢串　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=小浜町代表点(要微調整)(GSI AddressSearch)"
@@ -9861,59 +9865,63 @@ cameras:
     operator: "国土交通省 長崎河川国道事務所"
     category: "road"
     prefecture: "42"
-    lat: 32.80624
-    lng: 130.1521
+    lat: 32.808421
+    lng: 130.150067
     image_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/cctv/ngscctv_vga_60.jpg"
     page_url: "https://www.qsr.mlit.go.jp/nagasaki/bousai/c60.html"
     note: "小浜国道維持出張所管内。c60.html→ngscctv_vga_60.jpg・ngscctv_60.txt「雲仙市愛野町　愛津　下」を実確認(2026-08-25, image/jpeg)。PDL1.0。座標=愛野町乙代表点(GSI AddressSearch)"
 
-  - id: curated-still-cgr-sabagawa-nishinoura
-    name: "佐波川 西ノ浦"
-    operator: "国土交通省 山口河川国道事務所"
-    category: "river"
-    prefecture: "35"
-    lat: 34.036081
-    lng: 131.501844
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00627.jpg"
-    page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
-    note: "image/jpeg 80KB 確認。座標=防府市西浦代表点。cgr.mlit.go.jp(www.road.cgr ではない)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-cgr-sabagawa-nishinoura
+  #   name: "佐波川 西ノ浦"
+  #   operator: "国土交通省 山口河川国道事務所"
+  #   category: "river"
+  #   prefecture: "35"
+  #   lat: 34.036081
+  #   lng: 131.501844
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00627.jpg"
+  #   page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
+  #   note: "image/jpeg 80KB 確認。座標=防府市西浦代表点。cgr.mlit.go.jp(www.road.cgr ではない)"
 
-  - id: curated-still-cgr-sabagawa-ohashi
-    name: "佐波川 佐波川大橋"
-    operator: "国土交通省 山口河川国道事務所"
-    category: "river"
-    prefecture: "35"
-    lat: 34.045697
-    lng: 131.518008
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00632.jpg"
-    page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
-    note: "alt='佐波川大橋カメラ'。座標=植松代表点"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-cgr-sabagawa-ohashi
+  #   name: "佐波川 佐波川大橋"
+  #   operator: "国土交通省 山口河川国道事務所"
+  #   category: "river"
+  #   prefecture: "35"
+  #   lat: 34.045697
+  #   lng: 131.518008
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00632.jpg"
+  #   page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
+  #   note: "alt='佐波川大橋カメラ'。座標=植松代表点"
 
-  - id: curated-still-cgr-sabagawa-shinbashi
-    name: "佐波川 新橋"
-    operator: "国土交通省 山口河川国道事務所"
-    category: "river"
-    prefecture: "35"
-    lat: 34.063464
-    lng: 131.558708
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00629.jpg"
-    page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
-    note: "座標=新橋町代表点。ほか C00628佐野堰/C00630総合堰/C00631小島/C00633甲久保/C00634佐波川出張所/C00635上右田/C00636矢筈/C00637上右田堰/C00638真尾/C00639真尾堰/C00640伊賀地/C00641漆尾/C00642合流点/C00643堀/C00644上流端/C01328岸見/C01484奈美 も同形式(計20台)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-cgr-sabagawa-shinbashi
+  #   name: "佐波川 新橋"
+  #   operator: "国土交通省 山口河川国道事務所"
+  #   category: "river"
+  #   prefecture: "35"
+  #   lat: 34.063464
+  #   lng: 131.558708
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00629.jpg"
+  #   page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
+  #   note: "座標=新橋町代表点。ほか C00628佐野堰/C00630総合堰/C00631小島/C00633甲久保/C00634佐波川出張所/C00635上右田/C00636矢筈/C00637上右田堰/C00638真尾/C00639真尾堰/C00640伊賀地/C00641漆尾/C00642合流点/C00643堀/C00644上流端/C01328岸見/C01484奈美 も同形式(計20台)"
 
-  - id: curated-still-cgr-sabagawa-hori
-    name: "佐波川 堀（徳地）"
-    operator: "国土交通省 山口河川国道事務所"
-    category: "river"
-    prefecture: "35"
-    lat: 34.189742
-    lng: 131.654475
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00643.jpg"
-    page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
-    note: "座標=徳地堀代表点"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-cgr-sabagawa-hori
+  #   name: "佐波川 堀（徳地）"
+  #   operator: "国土交通省 山口河川国道事務所"
+  #   category: "river"
+  #   prefecture: "35"
+  #   lat: 34.189742
+  #   lng: 131.654475
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "http://www.cgr.mlit.go.jp/river-cctv/yamaguchi/live/C00643.jpg"
+  #   page_url: "http://www.cgr.mlit.go.jp/yamaguchi/camera/index.html"
+  #   note: "座標=徳地堀代表点"
 
   - id: curated-still-ccs-boukaidai
     name: "望海台（周南市街・瀬戸内）"
@@ -11633,8 +11641,9 @@ cameras:
     operator: "公益社団法人 龍神観光協会"
     category: "road"
     prefecture: "30"
-    lat: 34.0663
-    lng: 135.5638
+    lat: 34.061495
+    lng: 135.564509
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://camesan02.from.tv/oma9101/secure/data-live/live.jpg"
     page_url: "https://www.ryujin-kanko.jp/access/livecamera/"
     note: "curl -sI 200 image/jpeg (8KB, Last-Modified 数秒前=ほぼリアルタイム更新)。国道371号・道の駅田辺市龍神ごまさんスカイタワー設置。ページに転載禁止記載なし（『参考程度に』の注意書きのみ）。座標は護摩壇山山頂東・ごまさんスカイタワー既知位置（GSI住所検索は龍神村中心を返すため不採用）。冬季(12/15-3/25)は積雪路面確認用途に有用"
@@ -11644,8 +11653,9 @@ cameras:
     operator: "公益社団法人 龍神観光協会"
     category: "road"
     prefecture: "30"
-    lat: 34.0665
-    lng: 135.564
+    lat: 34.061495
+    lng: 135.564509
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://camesan02.from.tv/oma9102/secure/data-live/live.jpg"
     page_url: "https://www.ryujin-kanko.jp/access/livecamera/"
     note: "curl -sI 200 image/jpeg。上と同じ設置地点で高野山側を向く。転載禁止記載なし。座標根拠は上と同じ"
@@ -17274,17 +17284,18 @@ cameras:
     page_url: "https://www.town.ino.kochi.jp/bousai/bousai2/4979/"
     note: "同上(camera2=天神ヶ谷川)。curl 200 image/jpeg確認。座標は枝川地区の概略位置"
 
-  - id: curated-still-dam-fujiwara-hjvalve
-    name: "藤原ダム HJバルブ"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.805558
-    lng: 139.031297
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01523.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_3.html"
-    note: "ページ内 live-image1(alt HJバルブ)。image/jpeg 200、Last-Modified当日。座標はGSI検索で群馬県みなかみ町藤原(139.0753,36.9140)ヒットのみ→ダム堤体の既知位置36.8675,139.0294(要確認)。利用条件: ktr.mlit.go.jp サイトポリシー(政府標準利用規約)= license unknown"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-fujiwara-hjvalve
+  #   name: "藤原ダム HJバルブ"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.805558
+  #   lng: 139.031297
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01523.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_3.html"
+  #   note: "ページ内 live-image1(alt HJバルブ)。image/jpeg 200、Last-Modified当日。座標はGSI検索で群馬県みなかみ町藤原(139.0753,36.9140)ヒットのみ→ダム堤体の既知位置36.8675,139.0294(要確認)。利用条件: ktr.mlit.go.jp サイトポリシー(政府標準利用規約)= license unknown"
 
   - id: curated-still-dam-fujiwara-tower
     name: "藤原ダム 管理所鉄塔"
@@ -17297,41 +17308,44 @@ cameras:
     page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_3.html"
     note: "live-image2(alt 管理所鉄塔)。image/jpeg 200。座標は藤原ダム堤体既知位置"
 
-  - id: curated-still-dam-fujiwara-inflow
-    name: "藤原ダム 本川流入"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.851478
-    lng: 139.056497
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01531.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_3.html"
-    note: "live-image3(alt 本川流入)。image/jpeg 200。座標は藤原ダム堤体(流入部は上流側のため実際は数百m上流)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-fujiwara-inflow
+  #   name: "藤原ダム 本川流入"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.851478
+  #   lng: 139.056497
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01531.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_3.html"
+  #   note: "live-image3(alt 本川流入)。image/jpeg 200。座標は藤原ダム堤体(流入部は上流側のため実際は数百m上流)"
 
-  - id: curated-still-dam-aimata-office
-    name: "相俣ダム 管理所前"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.71405
-    lng: 138.894167
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01532.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_4.html"
-    note: "live-image1(alt 管理所前)。image/jpeg 200。座標GSI POI「相俣ダム」(138.88993,36.71218)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-aimata-office
+  #   name: "相俣ダム 管理所前"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.71405
+  #   lng: 138.894167
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01532.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_4.html"
+  #   note: "live-image1(alt 管理所前)。image/jpeg 200。座標GSI POI「相俣ダム」(138.88993,36.71218)"
 
-  - id: curated-still-dam-aimata-subdam
-    name: "相俣ダム 副ダム"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.712222
-    lng: 138.892536
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01536.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_4.html"
-    note: "live-image2(alt 副ダム)。image/jpeg 200。座標GSI POI相俣ダム"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-aimata-subdam
+  #   name: "相俣ダム 副ダム"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.712222
+  #   lng: 138.892536
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01536.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_4.html"
+  #   note: "live-image2(alt 副ダム)。image/jpeg 200。座標GSI POI相俣ダム"
 
   - id: curated-still-dam-aimata-sanddam
     name: "相俣ダム 貯砂ダム"
@@ -17344,41 +17358,44 @@ cameras:
     page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_4.html"
     note: "live-image3(alt 貯砂ダム)。image/jpeg 200。座標GSI POI相俣ダム(貯砂ダムは上流側)"
 
-  - id: curated-still-dam-sonohara-subdam
-    name: "薗原ダム 副ダム"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.638175
-    lng: 139.176631
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01562.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
-    note: "live-image1(alt 副ダム)。image/jpeg 200。座標GSI POI「薗原ダム管理支所」(139.17531,36.63784)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-sonohara-subdam
+  #   name: "薗原ダム 副ダム"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.638175
+  #   lng: 139.176631
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01562.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
+  #   note: "live-image1(alt 副ダム)。image/jpeg 200。座標GSI POI「薗原ダム管理支所」(139.17531,36.63784)"
 
-  - id: curated-still-dam-sonohara-upstream1
-    name: "薗原ダム 上流1"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.640419
-    lng: 139.173819
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01563.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
-    note: "live-image2(alt 上流1)。image/jpeg 200。座標GSI POI薗原ダム管理支所"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-sonohara-upstream1
+  #   name: "薗原ダム 上流1"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.640419
+  #   lng: 139.173819
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01563.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
+  #   note: "live-image2(alt 上流1)。image/jpeg 200。座標GSI POI薗原ダム管理支所"
 
-  - id: curated-still-dam-sonohara-reservoir2
-    name: "薗原ダム 貯水池2"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.654286
-    lng: 139.185386
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01544.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
-    note: "live-image3(alt 貯水池2)。image/jpeg 200。座標GSI POI薗原ダム管理支所"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-sonohara-reservoir2
+  #   name: "薗原ダム 貯水池2"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.654286
+  #   lng: 139.185386
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C01544.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_5.html"
+  #   note: "live-image3(alt 貯水池2)。image/jpeg 200。座標GSI POI薗原ダム管理支所"
 
   - id: curated-still-dam-yamba-outlet
     name: "八ッ場ダム 減勢口（右岸）"
@@ -17391,77 +17408,83 @@ cameras:
     page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_6.html"
     note: "live-image1(alt 減勢口（右岸）)。image/jpeg 200。座標GSI POI「八ッ場ダム」(138.71382,36.55691)"
 
-  - id: curated-still-dam-yamba-mihodai
-    name: "八ッ場ダム 見放台"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.557283
-    lng: 138.710558
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C03982.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_6.html"
-    note: "live-image2(alt 見放台)。image/jpeg 200。座標GSI POI八ッ場ダム"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-yamba-mihodai
+  #   name: "八ッ場ダム 見放台"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.557283
+  #   lng: 138.710558
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C03982.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_6.html"
+  #   note: "live-image2(alt 見放台)。image/jpeg 200。座標GSI POI八ッ場ダム"
 
-  - id: curated-still-dam-yamba-yokokabe
-    name: "八ッ場ダム 横壁"
-    operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "10"
-    lat: 36.540358
-    lng: 138.670744
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/river/cctv/C05516.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_6.html"
-    note: "live-image3(alt 横壁)。image/jpeg 200。座標GSI POI八ッ場ダム(横壁は湖岸上流側)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-yamba-yokokabe
+  #   name: "八ッ場ダム 横壁"
+  #   operator: "国土交通省関東地方整備局 利根川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "10"
+  #   lat: 36.540358
+  #   lng: 138.670744
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/river/cctv/C05516.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/tonedamu/teikyo/realtime2/E014020_6.html"
+  #   note: "live-image3(alt 横壁)。image/jpeg 200。座標GSI POI八ッ場ダム(横壁は湖岸上流側)"
 
-  - id: curated-still-dam-ikari-body
-    name: "五十里ダム 堤体（無線室屋上）"
-    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "09"
-    lat: 36.9025
-    lng: 139.703889
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C304.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
-    note: "comnTbl.js CctvTbl 五十里[4]=ダム堤体カメラ(無線室屋上)。image/jpeg 200、Last-Modified当日(10分更新)。ページはJS描画だが画像は固定URL。座標GSI POI「五十里ダム管理支所」(139.70396,36.90335)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-ikari-body
+  #   name: "五十里ダム 堤体（無線室屋上）"
+  #   operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "09"
+  #   lat: 36.9025
+  #   lng: 139.703889
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C304.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+  #   note: "comnTbl.js CctvTbl 五十里[4]=ダム堤体カメラ(無線室屋上)。image/jpeg 200、Last-Modified当日(10分更新)。ページはJS描画だが画像は固定URL。座標GSI POI「五十里ダム管理支所」(139.70396,36.90335)"
 
-  - id: curated-still-dam-ikari-downstream
-    name: "五十里ダム 下流右岸"
-    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "09"
-    lat: 36.901389
-    lng: 139.705278
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C306.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
-    note: "五十里[6]=ダム下流２カメラ(ダム下流右岸)。image/jpeg 200"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-ikari-downstream
+  #   name: "五十里ダム 下流右岸"
+  #   operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "09"
+  #   lat: 36.901389
+  #   lng: 139.705278
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C306.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+  #   note: "五十里[6]=ダム下流２カメラ(ダム下流右岸)。image/jpeg 200"
 
-  - id: curated-still-dam-kawamata-deck
-    name: "川俣ダム 展望台デッキ"
-    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "09"
-    lat: 36.877778
-    lng: 139.520833
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C103.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
-    note: "川俣[3]=ダム堤体カメラ(展望台デッキ)。image/jpeg 200。座標: GSIは地名「日光市川俣」(139.4548,36.8916)のみ→川俣ダム堤体の既知位置36.886,139.4886(要確認)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-kawamata-deck
+  #   name: "川俣ダム 展望台デッキ"
+  #   operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "09"
+  #   lat: 36.877778
+  #   lng: 139.520833
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C103.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+  #   note: "川俣[3]=ダム堤体カメラ(展望台デッキ)。image/jpeg 200。座標: GSIは地名「日光市川俣」(139.4548,36.8916)のみ→川俣ダム堤体の既知位置36.886,139.4886(要確認)"
 
-  - id: curated-still-dam-kawamata-downstream
-    name: "川俣ダム 下流"
-    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "09"
-    lat: 36.8775
-    lng: 139.52
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C105.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
-    note: "川俣[5]=ダム下流２カメラ(下流カメラ)。image/jpeg 200"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-kawamata-downstream
+  #   name: "川俣ダム 下流"
+  #   operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "09"
+  #   lat: 36.8775
+  #   lng: 139.52
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C105.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+  #   note: "川俣[5]=ダム下流２カメラ(下流カメラ)。image/jpeg 200"
 
   - id: curated-still-dam-kawaji-office
     name: "川治ダム 支所屋上"
@@ -17485,29 +17508,31 @@ cameras:
     page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
     note: "川治[8]=ダム下流２カメラ(ダム下流左岸)。image/jpeg 200"
 
-  - id: curated-still-dam-yunishigawa-deck
-    name: "湯西川ダム 展望台"
-    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "09"
-    lat: 36.934722
-    lng: 139.664722
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C404.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
-    note: "湯西川[4]=ダム堤体カメラ(展望台)。image/jpeg 200。座標GSI POI「湯西川ダム」(139.65922,36.93588)"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-yunishigawa-deck
+  #   name: "湯西川ダム 展望台"
+  #   operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "09"
+  #   lat: 36.934722
+  #   lng: 139.664722
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C404.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+  #   note: "湯西川[4]=ダム堤体カメラ(展望台)。image/jpeg 200。座標GSI POI「湯西川ダム」(139.65922,36.93588)"
 
-  - id: curated-still-dam-yunishigawa-downstream
-    name: "湯西川ダム 下流右岸"
-    operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
-    category: "dam"
-    prefecture: "09"
-    lat: 36.936389
-    lng: 139.664444
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C405.jpg"
-    page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
-    note: "湯西川[5]=ダム下流１カメラ(ダム下流右岸)。image/jpeg 200"
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-dam-yunishigawa-downstream
+  #   name: "湯西川ダム 下流右岸"
+  #   operator: "国土交通省関東地方整備局 鬼怒川ダム統合管理事務所"
+  #   category: "dam"
+  #   prefecture: "09"
+  #   lat: 36.936389
+  #   lng: 139.664444
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/cctv/C405.jpg"
+  #   page_url: "https://www.ktr.mlit.go.jp/kinudamu/daminfo/jp/top_cctv.html"
+  #   note: "湯西川[5]=ダム下流１カメラ(ダム下流右岸)。image/jpeg 200"
 
   - id: curated-still-dam-moriyoshizan
     name: "森吉山ダム"
@@ -21679,9 +21704,10 @@ cameras:
     name: "木野警報所（小瀬川）動画"
     operator: "国土交通省 中国地方整備局（河川映像配信ch5 山口県内）"
     category: "river"
-    prefecture: "35"
-    lat: 34.226617
-    lng: 132.190796
+    prefecture: "34"
+    lat: 34.224597
+    lng: 132.205169
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.youtube.com/watch?v=WLGxKyBcJqg"
     page_url: "https://www.youtube.com/watch?v=WLGxKyBcJqg"
     feed_type: "web_page"
@@ -23951,28 +23977,30 @@ cameras:
   #   image_url: https://cam.river.go.jp/cam/now/100513028.jpg
   #   page_url: https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=100513028
   #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 青森県おいらせ町新助川原'
-  - id: curated-still-lcdb-4b6f6537
-    name: 江戸川野田岩名
-    operator: 江戸川河川事務所
-    category: river
-    prefecture: '12'
-    lat: 35.9616
-    lng: 139.8369
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.ktr.mlit.go.jp/edogawa/saigai/live/camera/img/p_iwana.jpg
-    page_url: https://www.ktr.mlit.go.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 千葉県野田市岩名'
-  - id: curated-still-lcdb-80c894b8
-    name: 江戸川野田尾崎
-    operator: 江戸川河川事務所
-    category: river
-    prefecture: '12'
-    lat: 35.981811
-    lng: 139.827881
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.ktr.mlit.go.jp/edogawa/saigai/live/camera/img/p_ozaki.jpg
-    page_url: https://www.ktr.mlit.go.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 千葉県野田市尾崎'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-4b6f6537
+  #   name: 江戸川野田岩名
+  #   operator: 江戸川河川事務所
+  #   category: river
+  #   prefecture: '12'
+  #   lat: 35.9616
+  #   lng: 139.8369
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.ktr.mlit.go.jp/edogawa/saigai/live/camera/img/p_iwana.jpg
+  #   page_url: https://www.ktr.mlit.go.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 千葉県野田市岩名'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-80c894b8
+  #   name: 江戸川野田尾崎
+  #   operator: 江戸川河川事務所
+  #   category: river
+  #   prefecture: '12'
+  #   lat: 35.981811
+  #   lng: 139.827881
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.ktr.mlit.go.jp/edogawa/saigai/live/camera/img/p_ozaki.jpg
+  #   page_url: https://www.ktr.mlit.go.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 千葉県野田市尾崎'
   - id: curated-still-lcdb-87885035
     name: 姫鶴平キャンプ場
     operator: 姫鶴平キャンプ場
@@ -24325,17 +24353,18 @@ cameras:
     image_url: https://www.city.munakata.lg.jp/bousaicamera/akama.jpg
     page_url: https://www.city.munakata.lg.jp/bousai/kiji0032231/index.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 福岡県宗像市栄町'
-  - id: curated-still-lcdb-c20df577
-    name: 宝満川端間
-    operator: 筑後川河川事務所
-    category: river
-    prefecture: '40'
-    lat: 33.377056
-    lng: 130.550869
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.qsr.mlit.go.jp/chikugo/bousai/cctv/camera/Cctv_11.jpg
-    page_url: https://www.qsr.mlit.go.jp/chikugo/bousai/cctv/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福岡県小郡市福童端間'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-c20df577
+  #   name: 宝満川端間
+  #   operator: 筑後川河川事務所
+  #   category: river
+  #   prefecture: '40'
+  #   lat: 33.377056
+  #   lng: 130.550869
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.qsr.mlit.go.jp/chikugo/bousai/cctv/camera/Cctv_11.jpg
+  #   page_url: https://www.qsr.mlit.go.jp/chikugo/bousai/cctv/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福岡県小郡市福童端間'
   - id: curated-still-lcdb-065678e0
     name: 筑後川千年分水路
     operator: 筑後川河川事務所
@@ -24367,17 +24396,18 @@ cameras:
     image_url: https://magamo.info/live3/snap.jpeg
     page_url: https://magamo.info/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福岡県柳川市三橋町垂見'
-  - id: curated-still-lcdb-2435404a
-    name: 阿賀川茗荷平
-    operator: 阿賀川河川事務所
-    category: river
-    prefecture: '07'
-    lat: 37.359489
-    lng: 139.907294
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: http://www.hrr.mlit.go.jp/bosai/img/723403.jpg
-    page_url: http://www.hrr.mlit.go.jp/agagawa/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福島県会津若松市大戸町芦牧'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-2435404a
+  #   name: 阿賀川茗荷平
+  #   operator: 阿賀川河川事務所
+  #   category: river
+  #   prefecture: '07'
+  #   lat: 37.359489
+  #   lng: 139.907294
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: http://www.hrr.mlit.go.jp/bosai/img/723403.jpg
+  #   page_url: http://www.hrr.mlit.go.jp/agagawa/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福島県会津若松市大戸町芦牧'
   - id: curated-still-lcdb-3b1a2d3a
     name: 阿武隈川伏黒出張所
     operator: 福島河川国道事務所(LIVEあぶくまがわ)
@@ -24459,17 +24489,18 @@ cameras:
     image_url: https://www.thr.mlit.go.jp/fukushima/abukuma_live/images/Ch_172.jpg
     page_url: https://www.thr.mlit.go.jp/fukushima/abukuma_live/live08.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福島県福島市佐原'
-  - id: curated-still-lcdb-7dfe6087
-    name: 阿賀川山科
-    operator: 阿賀川河川事務所
-    category: river
-    prefecture: '07'
-    lat: 37.609722
-    lng: 139.819167
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: http://www.hrr.mlit.go.jp/bosai/img/723101.jpg
-    page_url: http://www.hrr.mlit.go.jp/agagawa/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福島県喜多方市慶徳町山科'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-7dfe6087
+  #   name: 阿賀川山科
+  #   operator: 阿賀川河川事務所
+  #   category: river
+  #   prefecture: '07'
+  #   lat: 37.609722
+  #   lng: 139.819167
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: http://www.hrr.mlit.go.jp/bosai/img/723101.jpg
+  #   page_url: http://www.hrr.mlit.go.jp/agagawa/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福島県喜多方市慶徳町山科'
   - id: curated-still-lcdb-fa407fe4
     name: ペンションカレワラ天文台
     operator: ダイイチ(SkyArchives)
@@ -24788,17 +24819,18 @@ cameras:
     image_url: https://tosimaya.co.jp/livecam/02.jpg
     page_url: https://tosimaya.co.jp/livecamera/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県中之条町四万3887'
-  - id: curated-still-lcdb-75cc5b6b
-    name: 渡良瀬川葉鹿橋下流
-    operator: 渡良瀬川河川事務所
-    category: river
-    prefecture: '10'
-    lat: 36.353575
-    lng: 139.387572
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.ktr.mlit.go.jp/river/cctv/C01330.jpg
-    page_url: https://www.ktr.mlit.go.jp/river/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県太田市原宿町'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-75cc5b6b
+  #   name: 渡良瀬川葉鹿橋下流
+  #   operator: 渡良瀬川河川事務所
+  #   category: river
+  #   prefecture: '10'
+  #   lat: 36.353575
+  #   lng: 139.387572
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.ktr.mlit.go.jp/river/cctv/C01330.jpg
+  #   page_url: https://www.ktr.mlit.go.jp/river/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県太田市原宿町'
   - id: curated-still-lcdb-57e152d5
     name: 榛名湖湖畔亭
     operator: 湖畔亭
@@ -28227,9 +28259,10 @@ cameras:
     name: 槍ヶ岳山荘槍ヶ岳
     operator: 槍ヶ岳山荘グループ
     category: river
-    prefecture: '20'
-    lat: 36.339959
-    lng: 137.63846
+    prefecture: "21"
+    lat: 36.340953
+    lng: 137.64572
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.mcci.or.jp/www/yarigatake/live/yari_00001.jpg
     page_url: https://www.yarigatake.co.jp/livecamera/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長野県松本市埋橋1-7-2'
@@ -29079,17 +29112,18 @@ cameras:
     image_url: http://www.hrr.mlit.go.jp/bosai/img/735047.jpg
     page_url: http://www.hrr.mlit.go.jp/takada/livecam/indexkawacctv.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県糸魚川市大野'
-  - id: curated-still-lcdb-e6566295
-    name: 信濃川鵜森
-    operator: 信濃川下流河川事務所
-    category: river
-    prefecture: '15'
-    lat: 37.6875
-    lng: 139.001389
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: http://www.hrr.mlit.go.jp/bosai/img/727048.jpg
-    page_url: http://www.hrr.mlit.go.jp/shinage/platform/public/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 新潟県加茂市鵜森'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-e6566295
+  #   name: 信濃川鵜森
+  #   operator: 信濃川下流河川事務所
+  #   category: river
+  #   prefecture: '15'
+  #   lat: 37.6875
+  #   lng: 139.001389
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: http://www.hrr.mlit.go.jp/bosai/img/727048.jpg
+  #   page_url: http://www.hrr.mlit.go.jp/shinage/platform/public/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 新潟県加茂市鵜森'
   - id: curated-still-lcdb-793972ea
     name: 石打丸山スキー場スノーパーク
     operator: 石打丸山索道事業協同組合
@@ -29251,17 +29285,18 @@ cameras:
     image_url: http://www.hrr.mlit.go.jp/bosai/img/737012.jpg
     page_url: https://echigo-park.jp/livecamera/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒940-2082 新潟県長岡市宮本東方町三ツ又1950-1'
-  - id: curated-still-lcdb-528acc9d
-    name: 芋川寺野砂防堰堤上流
-    operator: 湯沢砂防事務所
-    category: river
-    prefecture: '15'
-    lat: 37.344222
-    lng: 138.920167
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/733133.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県長岡市山古志種苧原'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-528acc9d
+  #   name: 芋川寺野砂防堰堤上流
+  #   operator: 湯沢砂防事務所
+  #   category: river
+  #   prefecture: '15'
+  #   lat: 37.344222
+  #   lng: 138.920167
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/733133.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県長岡市山古志種苧原'
   - id: curated-still-lcdb-64f96a7b
     name: NCV国道8号新潟バイパス女池インターチェンジ黒埼方面
     operator: ニューメディア(NCV新潟センター)
@@ -29283,50 +29318,54 @@ cameras:
     image_url: https://www.live-cam.pref.niigata.jp/camera/pc/tokimesse.jpg
     page_url: https://www.live-cam.pref.niigata.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県新潟市中央区万代島6-1'
-  - id: curated-still-lcdb-a20fe9ce
-    name: 芋川十二平砂防堰堤
-    operator: 湯沢砂防事務所
-    category: river
-    prefecture: '15'
-    lat: 37.299917
-    lng: 138.902667
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/733125.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県小千谷市塩谷'
-  - id: curated-still-lcdb-7c05df6c
-    name: 中津川上結東砂防堰堤
-    operator: 湯沢砂防事務所
-    category: river
-    prefecture: '15'
-    lat: 36.915
-    lng: 138.639556
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/733604.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県津南町結東'
-  - id: curated-still-lcdb-c26d8583
-    name: 中津川牛首砂防堰堤
-    operator: 湯沢砂防事務所
-    category: river
-    prefecture: '15'
-    lat: 36.963764
-    lng: 138.661389
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/733602.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県津南町秋成'
-  - id: curated-still-lcdb-bad30bdc
-    name: 破間川守門川下流砂防堰堤
-    operator: 湯沢砂防事務所
-    category: river
-    prefecture: '15'
-    lat: 37.358333
-    lng: 139.133611
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/733123.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県魚沼市大白川'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-a20fe9ce
+  #   name: 芋川十二平砂防堰堤
+  #   operator: 湯沢砂防事務所
+  #   category: river
+  #   prefecture: '15'
+  #   lat: 37.299917
+  #   lng: 138.902667
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/733125.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県小千谷市塩谷'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-7c05df6c
+  #   name: 中津川上結東砂防堰堤
+  #   operator: 湯沢砂防事務所
+  #   category: river
+  #   prefecture: '15'
+  #   lat: 36.915
+  #   lng: 138.639556
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/733604.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県津南町結東'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-c26d8583
+  #   name: 中津川牛首砂防堰堤
+  #   operator: 湯沢砂防事務所
+  #   category: river
+  #   prefecture: '15'
+  #   lat: 36.963764
+  #   lng: 138.661389
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/733602.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県津南町秋成'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-bad30bdc
+  #   name: 破間川守門川下流砂防堰堤
+  #   operator: 湯沢砂防事務所
+  #   category: river
+  #   prefecture: '15'
+  #   lat: 37.358333
+  #   lng: 139.133611
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/733123.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県魚沼市大白川'
   - id: curated-still-lcdb-7a84a65c
     name: 福山川福山川第3号砂防堰堤
     operator: 湯沢砂防事務所
@@ -29347,17 +29386,18 @@ cameras:
     image_url: https://www.hrr.mlit.go.jp/bosai/img/733241.jpg
     page_url: https://www.hrr.mlit.go.jp/bosai/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県魚沼市下折立'
-  - id: curated-still-lcdb-36a8dcd8
-    name: 大源太川大源太川下流砂防堰堤
-    operator: 湯沢砂防事務所
-    category: river
-    prefecture: '15'
-    lat: 36.927889
-    lng: 138.867389
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/733402.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県湯沢町土樽'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-36a8dcd8
+  #   name: 大源太川大源太川下流砂防堰堤
+  #   operator: 湯沢砂防事務所
+  #   category: river
+  #   prefecture: '15'
+  #   lat: 36.927889
+  #   lng: 138.867389
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/733402.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県湯沢町土樽'
   - id: curated-still-lcdb-59a394dd
     name: 大源太川大源太川第1号砂防堰堤
     operator: 湯沢砂防事務所
@@ -29368,17 +29408,18 @@ cameras:
     image_url: https://www.hrr.mlit.go.jp/bosai/img/733403.jpg
     page_url: https://www.hrr.mlit.go.jp/bosai/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県湯沢町土樽'
-  - id: curated-still-lcdb-11fc32e9
-    name: 魚野川土樽砂防堰堤
-    operator: 湯沢砂防事務所
-    category: river
-    prefecture: '15'
-    lat: 36.884724
-    lng: 138.855284
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/733424.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県湯沢町土樽'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-11fc32e9
+  #   name: 魚野川土樽砂防堰堤
+  #   operator: 湯沢砂防事務所
+  #   category: river
+  #   prefecture: '15'
+  #   lat: 36.884724
+  #   lng: 138.855284
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/733424.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県湯沢町土樽'
   - id: curated-still-lcdb-b293827c
     name: 中九州横断道路朝地インターチェンジ
     operator: 国土交通省(道路情報提供システム)
@@ -30769,17 +30810,18 @@ cameras:
     image_url: https://www.ktr.mlit.go.jp/river/cctv/C01351.jpg
     page_url: https://www.ktr.mlit.go.jp/river/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 栃木県日光市足尾町'
-  - id: curated-still-lcdb-408e43b4
-    name: 渡良瀬川高取樋管
-    operator: 渡良瀬川河川事務所
-    category: river
-    prefecture: 09
-    lat: 36.265942
-    lng: 139.643175
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.ktr.mlit.go.jp/river/cctv/C01352.jpg
-    page_url: https://www.ktr.mlit.go.jp/river/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 栃木県栃木市藤岡町藤岡'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-408e43b4
+  #   name: 渡良瀬川高取樋管
+  #   operator: 渡良瀬川河川事務所
+  #   category: river
+  #   prefecture: 09
+  #   lat: 36.265942
+  #   lng: 139.643175
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.ktr.mlit.go.jp/river/cctv/C01352.jpg
+  #   page_url: https://www.ktr.mlit.go.jp/river/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 栃木県栃木市藤岡町藤岡'
   - id: curated-still-lcdb-7b436918
     name: 荒川東四つ木避難橋
     operator: 葛飾区役所
@@ -31707,17 +31749,18 @@ cameras:
     image_url: https://www.hrr.mlit.go.jp/bosai/img/722955.jpg
     page_url: https://www.hrr.mlit.go.jp/bosai/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山形県小国町五味沢'
-  - id: curated-still-lcdb-798b3ae2
-    name: 桜川横川沼沢
-    operator: 飯豊山系砂防事務所
-    category: river
-    prefecture: '06'
-    lat: 38.033955
-    lng: 139.86608
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/722953.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山形県小国町沼沢'
+  # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
+  # - id: curated-still-lcdb-798b3ae2
+  #   name: 桜川横川沼沢
+  #   operator: 飯豊山系砂防事務所
+  #   category: river
+  #   prefecture: '06'
+  #   lat: 38.033955
+  #   lng: 139.86608
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/722953.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山形県小国町沼沢'
   - id: curated-still-lcdb-89bf0e85
     name: 玉川梅花皮沢第1号砂防堰堤
     operator: 飯豊山系砂防事務所
@@ -44989,8 +45032,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 35.03893
-    lng: 136.46567
+    lat: 35.02309
+    lng: 136.47939
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/komono/13_midori/midori.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/komono"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 146KB、Last-Modified 02:11:04→02:14:12 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
