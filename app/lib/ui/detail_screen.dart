@@ -1077,7 +1077,7 @@ class _ZoomableImage extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
         fullscreenDialog: true,
-        builder: (_) => _FullscreenImage(title: title, child: builder(true)),
+        builder: (_) => FullscreenImageView(title: title, child: builder(true)),
       )),
       child: InteractiveViewer(
         minScale: 1,
@@ -1090,8 +1090,10 @@ class _ZoomableImage extends StatelessWidget {
   }
 }
 
-class _FullscreenImage extends StatelessWidget {
-  const _FullscreenImage({required this.child, required this.title});
+/// 静止画の全画面ビューア。画像は画面いっぱいの枠に入れて拡大する
+@visibleForTesting
+class FullscreenImageView extends StatelessWidget {
+  const FullscreenImageView({super.key, required this.child, required this.title});
 
   final Widget child;
   final String title;
@@ -1105,11 +1107,13 @@ class _FullscreenImage extends StatelessWidget {
         foregroundColor: Colors.white,
         title: Text(title, style: const TextStyle(fontSize: 16)),
       ),
-      body: Center(
+      // 画像を画面いっぱいの枠に入れて BoxFit.contain で拡大する（枠が無いと
+      // 320×240 の配信画像が等倍の小さな表示になる。2026-10-04 利用者報告）
+      body: SizedBox.expand(
         child: InteractiveViewer(
           minScale: 1,
           maxScale: 8,
-          child: child,
+          child: SizedBox.expand(child: child),
         ),
       ),
     );

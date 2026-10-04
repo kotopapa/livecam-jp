@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -163,6 +164,26 @@ void main() {
       expect(find.text('この付近の宿を探す'), findsNothing);
 
       await tester.pumpWidget(const SizedBox());
+    });
+  });
+
+
+  group('全画面の静止画', () {
+    testWidgets('小さな配信画像でも画面幅いっぱいに拡大される', (tester) async {
+      // 1×1 の PNG（配信画像が小さくても等倍で出さないことの確認）
+      final png = base64Decode(
+          'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==');
+      tester.view.physicalSize = const Size(400, 800);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      await tester.pumpWidget(testApp(FullscreenImageView(
+        title: 't',
+        child: Image.memory(png, fit: BoxFit.contain),
+      )));
+      await tester.pump();
+      final size = tester.getSize(find.byType(Image));
+      expect(size.width, 400, reason: '画像の枠が画面幅まで広がる（修正前は 1px だった）');
+      expect(size.height, greaterThan(400));
     });
   });
 }
