@@ -53,8 +53,9 @@ cameras:
     operator: "独立行政法人水資源機構 岩屋ダム管理所"
     category: dam
     prefecture: "21"
-    lat: 35.7869
-    lng: 137.24
+    lat: 35.760126
+    lng: 137.157084
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.iwayadam.jp/iwaya/camera/iwaya-dam.jpg"
     page_url: "https://www.water.go.jp/chubu/iwaya/html/camera/camera.html"
     note: "木曽川水系 馬瀬川"
@@ -64,8 +65,9 @@ cameras:
     operator: "独立行政法人水資源機構 池田総合管理所(吉野川上流総合管理所)"
     category: dam
     prefecture: "39"
-    lat: 33.7897
-    lng: 133.6661
+    lat: 33.756931
+    lng: 133.550788
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.water.go.jp/yoshino/ikeda/sameura/eizoukan.html"
     image_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/camera/latest/camDisp11.jpg"
@@ -77,8 +79,9 @@ cameras:
     operator: "独立行政法人水資源機構 味噌川ダム管理所"
     category: dam
     prefecture: "20"
-    lat: 35.9989
-    lng: 137.7961
+    lat: 35.975962
+    lng: 137.769946
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.misogawa.jp/live/miso_live.jpg"
     page_url: "https://www.water.go.jp/chubu/misogawa/live/camera_index.html"
     note: "木曽川水系 木曽川"
@@ -99,8 +102,9 @@ cameras:
     operator: "独立行政法人水資源機構 荒川ダム総合管理所"
     category: dam
     prefecture: "11"
-    lat: 35.9494
-    lng: 139.0839
+    lat: 35.953603
+    lng: 139.052694
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.arakawadam.org/livecamera/urayama/image.jpg"
     page_url: "https://www.water.go.jp/kanto/arakawa/realtime/realtime.html"
     note: "荒川水系 浦山川"
@@ -110,8 +114,9 @@ cameras:
     operator: "独立行政法人水資源機構 荒川ダム総合管理所"
     category: dam
     prefecture: "11"
-    lat: 35.9358
-    lng: 138.9997
+    lat: 35.955913
+    lng: 138.899068
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.arakawadam.org/livecamera/takizawa/image.jpg"
     page_url: "https://www.water.go.jp/kanto/arakawa/realtime/realtime.html"
     note: "荒川水系 中津川"
@@ -211,8 +216,9 @@ cameras:
     operator: "独立行政法人水資源機構 利根川上流総合管理所(旧沼田総合管理所)"
     category: dam
     prefecture: "10"
-    lat: 36.8563
-    lng: 139.1499
+    lat: 36.911626
+    lng: 139.056815
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www3.kannet.ne.jp/~numata/teiten/yagisawa_2m.jpg"
     page_url: "https://www.water.go.jp/kanto/numata/"
     note: "利根川水系 利根川"
@@ -222,8 +228,9 @@ cameras:
     operator: "独立行政法人水資源機構 木曽川用水総合管理所 徳山ダム管理所"
     category: dam
     prefecture: "21"
-    lat: 35.6647
-    lng: 136.4994
+    lat: 35.665992
+    lng: 136.5014
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.tokuyamadam.jp/dam.jpg"
     page_url: "https://www.tokuyamadam.jp/01_map_photo.html"
     note: "木曽川水系 揖斐川"
@@ -9341,8 +9348,9 @@ cameras:
     operator: "ケーブルメディア四国"
     category: "river"
     prefecture: "37"
-    lat: 34.328644
-    lng: 134.091675
+    lat: 34.337063
+    lng: 134.094131
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.cavy.co.jp/webcam/get_image.php?id=6"
     page_url: "https://www.cavy.co.jp/camera/"
     note: "STNet屋上。規則URL。ほか id=2川島(川島小)/3愛染川(香西ポンプ場)/5御坊川(ロイヤルケア高松)/8摺鉢谷川(西部ポンプ場)/11国分寺(新居コミセン)も同形式"
@@ -17539,8 +17547,9 @@ cameras:
     operator: "独立行政法人水資源機構 利根川上流総合管理所（沼田）"
     category: "dam"
     prefecture: "10"
-    lat: 36.8578
-    lng: 139.0917
+    lat: 36.881623
+    lng: 139.078544
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www3.kannet.ne.jp/~numata/teiten/naramata_2m.jpg"
     page_url: "https://www.water.go.jp/kanto/numata/"
     note: "矢木沢ダム(同システム yagisawa_2m.jpg)は既登録。定点画像、image/jpeg 200、Last-Modified 24日07:56Z(数時間更新の可能性、監視で要確認)。座標: GSI POIなし→奈良俣ダム堤体既知位置36.8578,139.0917(要確認)。利用条件記載なし(license unknown)"
@@ -17550,8 +17559,9 @@ cameras:
     operator: "独立行政法人水資源機構 草木ダム管理所"
     category: "dam"
     prefecture: "10"
-    lat: 36.5564
-    lng: 139.3781
+    lat: 36.541743
+    lng: 139.372446
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.kusakidam-001water.jp/kusatop.jpg"
     page_url: "https://www.water.go.jp/kanto/kusaki/livecamera-kusakidam.htm"
     note: "「約1分毎に自動更新」。image/jpeg 200、当日。「リンクを貼る際はご一報ください」(禁止ではない)→license unknown。座標: 管理所ページのGSI3Dリンク(36.5592,139.3778 付近)とダム堤体既知位置36.5564,139.3781"
@@ -17561,8 +17571,9 @@ cameras:
     operator: "関川地区土地改良区連合"
     category: "dam"
     prefecture: "15"
-    lat: 36.8577
-    lng: 138.0719
+    lat: 36.857412
+    lng: 138.075306
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.sekikawarengo.com/htmldata/cam01.jpg"
     page_url: "https://www.sekikawarengo.com/livecamera/"
     note: "ページに「笹ヶ峰ダム 2026/08/24 23:01」と時刻表示、cam01.jpg?t=UNIX付きだが素URLで image/jpeg 200。座標GSI POI「笹ヶ峰ダム」(138.07195,36.85772)。転載禁止記載なし(license unknown)"
@@ -17572,8 +17583,9 @@ cameras:
     operator: "関川地区土地改良区連合"
     category: "dam"
     prefecture: "15"
-    lat: 36.8577
-    lng: 138.0719
+    lat: 36.857412
+    lng: 138.075306
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.sekikawarengo.com/htmldata/cam02.jpg"
     page_url: "https://www.sekikawarengo.com/livecamera/"
     note: "同ページ2台目「焼山」(ダムから焼山を望む)。image/jpeg 200"
@@ -24709,8 +24721,9 @@ cameras:
     operator: 育恵会
     category: river
     prefecture: '10'
-    lat: 36.453128
-    lng: 139.147339
+    lat: 36.452801
+    lng: 139.148895
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.ikukei.or.jp/data/camera.jpg
     page_url: https://www.ikukei.or.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県前橋市市之関町401'
@@ -25727,8 +25740,9 @@ cameras:
     operator: えふえむ・エヌ・ワン(えふえむエヌワン)
     category: river
     prefecture: '17'
-    lat: 36.530493
-    lng: 136.628336
+    lat: 36.529015
+    lng: 136.627518
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.fmn1.jp/webcam/images/webcamhall.jpg
     page_url: https://www.fmn1.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 石川県野々市市高橋町24-2'
@@ -25737,8 +25751,9 @@ cameras:
     operator: えふえむ・エヌ・ワン(えふえむエヌワン)
     category: river
     prefecture: '17'
-    lat: 36.530493
-    lng: 136.628336
+    lat: 36.529015
+    lng: 136.627518
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.fmn1.jp/webcam/images/webcam1.jpg
     page_url: https://www.fmn1.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 石川県野々市市高橋町24-2'
@@ -25747,8 +25762,9 @@ cameras:
     operator: えふえむ・エヌ・ワン(えふえむエヌワン)
     category: river
     prefecture: '17'
-    lat: 36.530493
-    lng: 136.628336
+    lat: 36.529015
+    lng: 136.627518
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.fmn1.jp/webcam/images/webcam4.jpg
     page_url: https://www.fmn1.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 石川県野々市市高橋町24-2'
@@ -25757,8 +25773,9 @@ cameras:
     operator: えふえむ・エヌ・ワン(えふえむエヌワン)
     category: river
     prefecture: '17'
-    lat: 36.531558
-    lng: 136.625226
+    lat: 36.531703
+    lng: 136.627334
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.fmn1.jp/webcam/images/webcamlc.jpg
     page_url: https://www.fmn1.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 石川県野々市市扇が丘7-1'
@@ -30595,8 +30612,9 @@ cameras:
     operator: 日本エレクトリックインスルメント(NEI)
     category: river
     prefecture: '22'
-    lat: 35.131806
-    lng: 138.892389
+    lat: 35.132557
+    lng: 138.891995
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.bousai-n.org/data_xml/05.jpg
     page_url: http://www.bousai-n.org/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 静岡県長泉町下土狩'
@@ -30615,8 +30633,9 @@ cameras:
     operator: 日本エレクトリックインスルメント(NEI)
     category: river
     prefecture: '22'
-    lat: 35.143722
-    lng: 138.891944
+    lat: 35.142904
+    lng: 138.89326
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: http://www.bousai-n.org/data_xml/02.jpg
     page_url: http://www.bousai-n.org/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 静岡県長泉町下長窪'
@@ -31737,8 +31756,9 @@ cameras:
     operator: ニューメディア(NCV米沢センター)
     category: river
     prefecture: '06'
-    lat: 37.911
-    lng: 140.117361
+    lat: 37.911231
+    lng: 140.116947
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.ncv.co.jp/livecamera/yonezawa/camera006.jpg
     page_url: "https://www.ncv.co.jp/yonezawa/"
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 山形県米沢市大町４丁目'
@@ -32520,8 +32540,9 @@ cameras:
     operator: ひらたCATV(雲州わがとこテレビ)
     category: river
     prefecture: '32'
-    lat: 35.429833
-    lng: 132.809833
+    lat: 35.429947
+    lng: 132.809751
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: https://www.youtube.com/watch?v=GI7JaHEFNWQ
     image_url: https://www.youtube.com/watch?v=GI7JaHEFNWQ
@@ -32544,8 +32565,9 @@ cameras:
     operator: ひらたCATV(雲州わがとこテレビ)
     category: river
     prefecture: '32'
-    lat: 35.446222
-    lng: 132.863444
+    lat: 35.446136
+    lng: 132.863535
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: https://www.youtube.com/watch?v=t-4KLrsSBHU
     image_url: https://www.youtube.com/watch?v=t-4KLrsSBHU
@@ -32832,8 +32854,9 @@ cameras:
     operator: 日本ネットワークサービス(NNS)
     category: river
     prefecture: '19'
-    lat: 35.663639
-    lng: 138.551139
+    lat: 35.66345
+    lng: 138.552067
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: https://www.youtube.com/watch?v=v9EDE_Hk3jk
     image_url: https://www.youtube.com/watch?v=v9EDE_Hk3jk
@@ -33362,8 +33385,9 @@ cameras:
     operator: 白川渡オートキャンプ場
     category: river
     prefecture: '29'
-    lat: 34.303607
-    lng: 135.995502
+    lat: 34.304359
+    lng: 135.997564
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: https://www.youtube.com/watch?v=dZhtpKr-rbs
     image_url: https://www.youtube.com/watch?v=dZhtpKr-rbs
@@ -33922,8 +33946,9 @@ cameras:
     operator: NIIGATA LIVE CAM
     category: river
     prefecture: '15'
-    lat: 37.906386
-    lng: 139.019094
+    lat: 37.905765
+    lng: 139.02298
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: https://www.youtube.com/watch?v=spajJQ8YxxM
     image_url: https://www.youtube.com/watch?v=spajJQ8YxxM
@@ -34483,8 +34508,9 @@ cameras:
     operator: ホテルリステル猪苗代（長治観光株式会社）
     category: river
     prefecture: '07'
-    lat: 37.542371986065675
-    lng: 140.14999000000046
+    lat: 37.542494
+    lng: 140.149519
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://listel-hotels.com/live/liveimage1.jpg
     page_url: https://www.listel-inawashiro.jp/stay/camera.php
     note: '地図中心(概略); 索引: https://livecam.asia/fukushima/inawashiro/listel-inawashiro-lakeview.html'
@@ -34493,8 +34519,9 @@ cameras:
     operator: ホテルリステル猪苗代（長治観光株式会社）
     category: river
     prefecture: '07'
-    lat: 37.542371986065675
-    lng: 140.14999000000046
+    lat: 37.542494
+    lng: 140.149519
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://listel-hotels.com/live/liveimage2.jpg
     page_url: https://www.listel-inawashiro.jp/stay/camera.php
     note: '地図中心(概略); 索引: https://livecam.asia/fukushima/inawashiro/listel-inawashiro-mountain-view.html'
@@ -35315,8 +35342,8 @@ cameras:
     operator: 川場スキー場
     category: river
     prefecture: '10'
-    lat: 36.85200429657037
-    lng: 139.11121083757774
+    lat: 36.778054
+    lng: 139.119466
     image_url: https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch2s.jpg
     page_url: https://www.kawaba.co.jp/live-camera
     note: '地図中心(概略); 索引: https://livecam.asia/gunma/kawaba/kawaba-ski-parking.html'
@@ -35355,8 +35382,9 @@ cameras:
     operator: キララ★あがつま（shima-net.jp）／画像提供：株式会社測研・株式会社樋田塗装
     category: river
     prefecture: '10'
-    lat: 36.58333478757617
-    lng: 138.845576415588
+    lat: 36.583462
+    lng: 138.847412
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: https://www.shima-net.jp/live/toida-tosou-1.jpg
     page_url: https://www.shima-net.jp/live/
     note: '地図中心(概略); 索引: https://livecam.asia/gunma/nakanojo/toidatosou.html'
@@ -38114,8 +38142,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.376056
-    lng: 139.732333
+    lat: 36.375755
+    lng: 139.733337
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-001"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t17.jpg"
@@ -38127,8 +38156,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.377583
-    lng: 139.713083
+    lat: 36.378212
+    lng: 139.712817
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-002"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t18.jpg"
@@ -38140,8 +38170,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.378278
-    lng: 139.713
+    lat: 36.377944
+    lng: 139.713525
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-003"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t19.jpg"
@@ -38193,8 +38224,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.444806
-    lng: 139.889111
+    lat: 36.444819
+    lng: 139.889109
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-008"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t01.jpg"
@@ -38206,8 +38238,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.430083
-    lng: 139.842833
+    lat: 36.430027
+    lng: 139.842785
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-009"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t02.jpg"
@@ -38219,8 +38252,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.472194
-    lng: 139.62525
+    lat: 36.471927
+    lng: 139.625533
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-010"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t03.jpg"
@@ -38232,8 +38266,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.412583
-    lng: 139.713889
+    lat: 36.412713
+    lng: 139.714101
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-011"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t04.jpg"
@@ -38245,8 +38280,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.45625
-    lng: 139.715194
+    lat: 36.456292
+    lng: 139.715288
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-012"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t06.jpg"
@@ -38258,8 +38294,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.343944
-    lng: 139.720139
+    lat: 36.34451
+    lng: 139.71955
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-013"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t08.jpg"
@@ -38271,8 +38308,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.263472
-    lng: 139.651222
+    lat: 36.26332
+    lng: 139.65126
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-007"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t10.jpg"
@@ -38284,8 +38322,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.500917
-    lng: 139.831861
+    lat: 36.50077
+    lng: 139.83158
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-015"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t11.jpg"
@@ -38297,8 +38336,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.382222
-    lng: 139.733361
+    lat: 36.38223
+    lng: 139.73332
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-016"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t14.jpg"
@@ -38310,8 +38350,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.378583
-    lng: 139.730722
+    lat: 36.378853
+    lng: 139.731004
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-017"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t15.jpg"
@@ -38349,8 +38390,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "09"
-    lat: 36.377194
-    lng: 139.73
+    lat: 36.377205
+    lng: 139.729969
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-tochigi-020"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_t23.jpg"
@@ -38388,8 +38430,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "10"
-    lat: 36.22
-    lng: 139.425
+    lat: 36.214857
+    lng: 139.600588
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-gunma-003"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_g02.jpg"
@@ -38493,8 +38536,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "08"
-    lat: 36.288556
-    lng: 139.897472
+    lat: 36.288619
+    lng: 139.897547
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-003"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i01.jpg"
@@ -38506,8 +38550,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "08"
-    lat: 36.320889
-    lng: 139.976556
+    lat: 36.320767
+    lng: 139.976763
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-004"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i03.jpg"
@@ -38519,8 +38564,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "08"
-    lat: 36.276333
-    lng: 139.907389
+    lat: 36.27605
+    lng: 139.90719
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-005"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i05.jpg"
@@ -38532,8 +38578,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "08"
-    lat: 36.277528
-    lng: 139.971028
+    lat: 36.277569
+    lng: 139.971301
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-006"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i06.jpg"
@@ -38545,8 +38592,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "08"
-    lat: 36.301333
-    lng: 139.892083
+    lat: 36.30123
+    lng: 139.89195
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-007"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_i07.jpg"
@@ -38584,8 +38632,9 @@ cameras:
     operator: "ケーブルテレビ株式会社（CC9）"
     category: river
     prefecture: "08"
-    lat: 36.200694
-    lng: 139.8315
+    lat: 36.199639
+    lng: 139.832361
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.cc9.jp/community/livecamera/#livecamera-ibaraki-010"
     image_url: "https://www.cc9.jp/lc/web-cam/lifecam_kg03.jpg"
@@ -38955,8 +39004,9 @@ cameras:
     operator: "関西電力株式会社（黒部ダムオフィシャルサイト）"
     category: dam
     prefecture: "20"
-    lat: 36.566
-    lng: 137.663
+    lat: 36.566694
+    lng: 137.663639
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.kurobe-dam.com/live-photo/latest-photo/camera_live_image.jpg"
     page_url: "https://www.kurobe-dam.com/livecamera/"
     note: "2026-09-30 全国多角調査(stars_weather)。2026-09-30 05:05 JST 検証: image/jpeg 150KB、約60秒ごとに切替（ページ記載）、65秒で内容変化（Last-Modified 更新）。台帳の「黒部ダム」1件は kawabou の別カメラで公式サイト画像は未収録（kurobe-dam.com 0件）。観光放水（6/26〜10/15）の様子。規約: サイトに転載禁止文言なし"
@@ -39844,8 +39894,8 @@ cameras:
     operator: "独立行政法人水資源機構 思川開発建設所"
     category: dam
     prefecture: "09"
-    lat: 36.5534
-    lng: 139.6637
+    lat: 36.550278
+    lng: 139.669444
     feed_type: web_page
     feed_url: "https://omoigawa-cam.arksystem.jp/"
     image_url: "https://omoigawa-cam.arksystem.jp/"
@@ -41919,6 +41969,7 @@ cameras:
     prefecture: "21"
     lat: 35.845007
     lng: 137.225024
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ccn-catv.co.jp/prevention/live/img/entsu.jpg"
     page_url: "https://www.ccn-catv.co.jp/prevention/live/entsu.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
@@ -42026,6 +42077,7 @@ cameras:
     prefecture: "21"
     lat: 35.643167
     lng: 137.147333
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ccn-catv.co.jp/prevention/live/img/ikeda.jpg"
     page_url: "https://www.ccn-catv.co.jp/prevention/live/ikeda.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
@@ -42060,6 +42112,7 @@ cameras:
     prefecture: "21"
     lat: 35.370194
     lng: 136.825222
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ccn-catv.co.jp/prevention/live/img/kawashima.jpg"
     page_url: "https://www.ccn-catv.co.jp/prevention/live/kawashima.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
@@ -42129,6 +42182,7 @@ cameras:
     prefecture: "21"
     lat: 35.82084
     lng: 137.18883
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ccn-catv.co.jp/prevention/live/img/mizubenoyakata.jpg"
     page_url: "https://www.ccn-catv.co.jp/prevention/live/mizubenoyakata.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
@@ -42140,6 +42194,7 @@ cameras:
     prefecture: "21"
     lat: 35.439977
     lng: 136.769955
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ccn-catv.co.jp/prevention/live/img/nagara.jpg"
     page_url: "https://www.ccn-catv.co.jp/prevention/live/nagara.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
@@ -42185,6 +42240,7 @@ cameras:
     prefecture: "21"
     lat: 35.767719
     lng: 137.283501
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ccn-catv.co.jp/prevention/live/img/norimasa.jpg"
     page_url: "https://www.ccn-catv.co.jp/prevention/live/norimasa.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
@@ -42278,6 +42334,7 @@ cameras:
     prefecture: "21"
     lat: 35.983139
     lng: 137.192028
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www.ccn-catv.co.jp/prevention/live/img/uenota.jpg"
     page_url: "https://www.ccn-catv.co.jp/prevention/live/uenota.html"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:35 静止画 image/jpeg 23〜35KB、35秒で内容とLast-Modifiedが更新（約30秒更新）。サイトポリシーに「本サイトに掲載された内容を無断で転載、使用、複製、配布…することはできません」の一般条項があるため誘導型で提案。ユーザー判断で直接表示に切り替える場合は direct_image_url を image_url に読み替える（前回 town_gov 班の3件も同条件）。 出典明記で直接表示（2026-09-30 ユーザー決定）"
@@ -42504,8 +42561,8 @@ cameras:
     operator: "中海テレビ放送（コミュニティチャンネル）"
     category: river
     prefecture: "31"
-    lat: 35.4467
-    lng: 133.3606
+    lat: 35.374142
+    lng: 133.411728
     feed_type: web_page
     feed_url: "https://www.chukai.co.jp/community/live/houkioohashi/"
     image_url: "https://www.chukai.co.jp/community/live/houkioohashi/"
@@ -42517,8 +42574,9 @@ cameras:
     operator: "中海テレビ放送（コミュニティチャンネル）"
     category: river
     prefecture: "31"
-    lat: 35.4296
-    lng: 133.331
+    lat: 35.342331
+    lng: 133.435341
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://www.chukai.co.jp/community/live/kimoribashi/"
     image_url: "https://www.chukai.co.jp/community/live/kimoribashi/"
@@ -42864,8 +42922,9 @@ cameras:
     operator: "入間ケーブルテレビ株式会社（ICTV）"
     category: river
     prefecture: "11"
-    lat: 35.818485
-    lng: 139.353912
+    lat: 35.819374
+    lng: 139.353646
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://ictv.jp/support/livecamera/#cam6"
     image_url: "https://ictv.jp/support/livecamera/#cam6"
@@ -43114,6 +43173,7 @@ cameras:
     prefecture: "21"
     lat: 35.41212
     lng: 137.053843
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www6.ctk.ne.jp/live/img/camera03.jpg"
     page_url: "https://www.ctk.jp/ctk-ch/livecamera/index10/"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
@@ -43125,6 +43185,7 @@ cameras:
     prefecture: "21"
     lat: 35.415974
     lng: 137.017393
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://www6.ctk.ne.jp/live/img/camera04.jpg"
     page_url: "https://www.ctk.jp/ctk-ch/livecamera/index11/"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 05:55 静止画 image/jpeg、70秒で内容変化（「60秒ごとに静止画を更新」明記）。公式「情報カメラ」ページ。転載・リンク制限の記載なし（サイトポリシー頁は未発見）。"
@@ -43358,8 +43419,9 @@ cameras:
     operator: "株式会社キャッチネットワーク（KATCH）"
     category: river
     prefecture: "23"
-    lat: 34.9435
-    lng: 137.1585
+    lat: 34.984167
+    lng: 137.147772
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=11"
     page_url: "https://www.katch.co.jp/community/livecamera/"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
@@ -43369,8 +43431,9 @@ cameras:
     operator: "株式会社キャッチネットワーク（KATCH）"
     category: river
     prefecture: "23"
-    lat: 34.89225
-    lng: 137.056763
+    lat: 34.889331
+    lng: 137.058803
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://livecam.katch.co.jp/cgi-bin/Get.cgi?n=10"
     page_url: "https://www.katch.co.jp/community/livecamera/"
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_catv)。2026-09-30 06:07 静止画 image/jpeg、60秒で内容変化。公式「ライブカメラ」ページは JS で https://livecam.katch.co.jp/cgi-bin/Get.cgi?a=<乱数>&n=<id> を読み込むが、a= 無し・Referer 無しでも同じ画像が返る（固定URL扱い可）。ページ・サイトに転載・リンク制限の記載なし（サイトポリシー頁なし）。※1 岡崎大橋・米津は愛知県提供、※2 安城市3台は安城市提供の注記あり。"
@@ -43557,6 +43620,7 @@ cameras:
     prefecture: "15"
     lat: 37.16211
     lng: 138.243046
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=21"
     image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=21"
@@ -43570,6 +43634,7 @@ cameras:
     prefecture: "15"
     lat: 37.179505
     lng: 138.266793
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=76"
     image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=76"
@@ -43773,6 +43838,7 @@ cameras:
     prefecture: "15"
     lat: 37.109634
     lng: 138.256672
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=70"
     image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=70"
@@ -43786,6 +43852,7 @@ cameras:
     prefecture: "15"
     lat: 37.108916
     lng: 138.264238
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=26"
     image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=26"
@@ -44054,6 +44121,7 @@ cameras:
     prefecture: "15"
     lat: 37.162269
     lng: 138.739006
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=93"
     image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=93"
@@ -44145,6 +44213,7 @@ cameras:
     prefecture: "15"
     lat: 37.04248
     lng: 137.85222
+    accuracy: exact   # 2026-10-05 座標見直し
     feed_type: web_page
     feed_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=79"
     image_url: "https://joetsu.yukiguni.town/livecamera-detail/?cid=79"
@@ -44424,8 +44493,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 35.04288
-    lng: 136.58916
+    lat: 35.04063
+    lng: 136.588722
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/yokkaichi/02_asakeshinkawa-kitayama/asakeshinkawa-kitayama.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 78KB、Last-Modified 02:08:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。画像パスが img/yokkaichi/ 配下（四日市市提供の河川カメラとみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44446,8 +44516,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 35.036
-    lng: 136.597
+    lat: 35.029359
+    lng: 136.626108
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cty/15_yasato/yasato.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 120KB、Last-Modified 01:58:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44479,8 +44550,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 34.97647
-    lng: 136.61963
+    lat: 34.977575
+    lng: 136.618794
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cty/17_orinpia/orinpia.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 53KB、Last-Modified 02:09:01→02:09:01 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44490,8 +44562,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 34.97847
-    lng: 136.58881
+    lat: 34.977107
+    lng: 136.588091
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cty/48_shinobirahashi-kita/shinobirahashi-kita.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 71KB、Last-Modified 02:11:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44545,8 +44618,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 34.96871
-    lng: 136.54994
+    lat: 34.974002
+    lng: 136.558205
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/yokkaichi/01_kawashima/kawashima.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 109KB、Last-Modified 02:00:05→02:15:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。画像パスが img/yokkaichi/ 配下（四日市市提供の河川カメラとみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44578,8 +44652,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 34.959
-    lng: 136.61607
+    lat: 34.954456
+    lng: 136.61406
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cty/11_yokkaichi_chousya/yokkaichi_chousya.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 96KB、Last-Modified 01:50:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/yokkaichi.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44711,8 +44786,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 35.13337
-    lng: 136.53606
+    lat: 35.13029
+    lng: 136.533094
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/inabe/01_tennou/tennou.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 47KB、Last-Modified 02:04:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。画像パスが img/inabe/ 配下（いなべ市提供とみられる。設置者は要確認）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44755,8 +44831,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 35.0755
-    lng: 136.7314
+    lat: 35.075835
+    lng: 136.730937
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cty/28_kisosaki/kisosaki.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/inabe-nagashima-kisosaki"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 44KB、Last-Modified 02:00:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/inabe.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44854,8 +44931,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 35.06908
-    lng: 136.52728
+    lat: 35.059224
+    lng: 136.518275
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/komono/08_happu/happu.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/komono"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 91KB、Last-Modified 02:12:01→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44865,8 +44943,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 35.06908
-    lng: 136.52728
+    lat: 35.063603
+    lng: 136.523718
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/komono/09_shinhappu/shinhappu.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/komono"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 113KB、Last-Modified 02:07:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -44876,8 +44955,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 35.03893
-    lng: 136.46567
+    lat: 35.032553
+    lng: 136.491816
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/komono/10_mukoujo/mukoujo.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/komono"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 72KB、Last-Modified 02:12:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/komono.js の markersData）から取得。画像パスが img/komono/ 配下＝菰野町設置の河川監視カメラ（町公式が「20箇所をCTY情報カメラ（静止画）等で配信」と案内）。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -45063,8 +45143,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 34.8818
-    lng: 136.5837
+    lat: 34.89765
+    lng: 136.573981
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cns/21_kanbechu/kanbechu.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/suzuka"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 114KB、Last-Modified 02:12:00→02:12:00 UTC（3回とも同一だが直近15分以内の更新）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -45096,8 +45177,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 34.87
-    lng: 136.54
+    lat: 34.874397
+    lng: 136.539381
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cns/08_chuoh-shiokawa/chuoh-shiokawa.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/suzuka"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 84KB、Last-Modified 02:09:01→02:15:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -45107,8 +45189,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 34.885
-    lng: 136.52
+    lat: 34.8771
+    lng: 136.5213
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cns/17_kumigawara-suzukagawa/kumigawara-suzukagawa.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/suzuka"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 86KB、Last-Modified 02:11:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
@@ -45118,8 +45201,9 @@ cameras:
     operator: "株式会社シー・ティー・ワイ（CTY）／株式会社ケーブルネット鈴鹿（CNS）"
     category: river
     prefecture: "24"
-    lat: 34.882
-    lng: 136.521
+    lat: 34.873823
+    lng: 136.523065
+    accuracy: exact   # 2026-10-05 座標見直し
     image_url: "https://cty-cns.jp/livecamera/img/cns/18_kumigawara-kousaten/kumigawara-kousaten.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/suzuka"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 89KB、Last-Modified 02:12:00→02:16:00 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
