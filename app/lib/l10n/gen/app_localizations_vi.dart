@@ -2821,4 +2821,53 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get settingsKjmapNote =>
       'Trang xem bản đồ địa hình theo thời gian ((C) Kenji Tani). Nguồn của lớp \"Bản đồ xưa\"';
+
+  @override
+  String get waterLevelTitle => 'Mực nước';
+
+  @override
+  String waterLevelStation(String name, int dist) {
+    return 'Trạm quan trắc: $name (cách camera khoảng $dist m)';
+  }
+
+  @override
+  String waterLevelLatest(String value, String time) {
+    return '$value m (lúc $time)';
+  }
+
+  @override
+  String get waterLevelLoading => 'Đang tải mực nước…';
+
+  @override
+  String get waterLevelNoData => 'Không lấy được dữ liệu mực nước';
+
+  @override
+  String get waterLevelLast48h => 'Mực nước 48 giờ qua';
+
+  @override
+  String get waterLevelForecast => 'Dự báo';
+
+  @override
+  String get waterLevelRsrv => 'Mực nước đội phòng lũ sẵn sàng';
+
+  @override
+  String get waterLevelWarn => 'Mực nước cảnh báo ngập lụt';
+
+  @override
+  String get waterLevelSpcl => 'Mực nước quyết định sơ tán';
+
+  @override
+  String get waterLevelDng => 'Mực nước nguy hiểm ngập lụt';
+
+  @override
+  String get waterLevelSource =>
+      'Nguồn: Bộ Đất đai, Hạ tầng, Giao thông và Du lịch (MLIT) – Thông tin phòng chống thiên tai sông';
+
+  @override
+  String get waterLevelOpenSite =>
+      'Xem trên trang thông tin phòng chống thiên tai sông';
+
+  @override
+  String get waterLevelNote =>
+      'Mực nước chỉ mang tính tham khảo. Hãy tuân theo thông tin sơ tán của chính quyền địa phương.';
 }

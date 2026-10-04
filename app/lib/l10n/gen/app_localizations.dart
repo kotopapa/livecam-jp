@@ -4875,6 +4875,90 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'時系列地形図閲覧サイト（(C)谷 謙二）。地図レイヤー「昔の地図」の出典'**
   String get settingsKjmapNote;
+
+  /// No description provided for @waterLevelTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'水位'**
+  String get waterLevelTitle;
+
+  /// No description provided for @waterLevelStation.
+  ///
+  /// In ja, this message translates to:
+  /// **'観測所：{name}（カメラから約{dist}m）'**
+  String waterLevelStation(String name, int dist);
+
+  /// No description provided for @waterLevelLatest.
+  ///
+  /// In ja, this message translates to:
+  /// **'{value} m（{time} 現在）'**
+  String waterLevelLatest(String value, String time);
+
+  /// No description provided for @waterLevelLoading.
+  ///
+  /// In ja, this message translates to:
+  /// **'水位を取得しています…'**
+  String get waterLevelLoading;
+
+  /// No description provided for @waterLevelNoData.
+  ///
+  /// In ja, this message translates to:
+  /// **'水位データを取得できません'**
+  String get waterLevelNoData;
+
+  /// No description provided for @waterLevelLast48h.
+  ///
+  /// In ja, this message translates to:
+  /// **'過去48時間の水位'**
+  String get waterLevelLast48h;
+
+  /// No description provided for @waterLevelForecast.
+  ///
+  /// In ja, this message translates to:
+  /// **'予測'**
+  String get waterLevelForecast;
+
+  /// No description provided for @waterLevelRsrv.
+  ///
+  /// In ja, this message translates to:
+  /// **'水防団待機水位'**
+  String get waterLevelRsrv;
+
+  /// No description provided for @waterLevelWarn.
+  ///
+  /// In ja, this message translates to:
+  /// **'氾濫注意水位'**
+  String get waterLevelWarn;
+
+  /// No description provided for @waterLevelSpcl.
+  ///
+  /// In ja, this message translates to:
+  /// **'避難判断水位'**
+  String get waterLevelSpcl;
+
+  /// No description provided for @waterLevelDng.
+  ///
+  /// In ja, this message translates to:
+  /// **'氾濫危険水位'**
+  String get waterLevelDng;
+
+  /// No description provided for @waterLevelSource.
+  ///
+  /// In ja, this message translates to:
+  /// **'出典：国土交通省「川の防災情報」'**
+  String get waterLevelSource;
+
+  /// No description provided for @waterLevelOpenSite.
+  ///
+  /// In ja, this message translates to:
+  /// **'川の防災情報で見る'**
+  String get waterLevelOpenSite;
+
+  /// No description provided for @waterLevelNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'水位は参考情報です。避難の判断は自治体の避難情報に従ってください。'**
+  String get waterLevelNote;
 }
 
 class _AppLocalizationsDelegate

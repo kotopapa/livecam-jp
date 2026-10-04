@@ -2716,6 +2716,52 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get settingsKjmapNote => '時系列地形図閲覧サイト（(C)谷 謙二）。地図レイヤー「昔の地図」の出典';
+
+  @override
+  String get waterLevelTitle => '水位';
+
+  @override
+  String waterLevelStation(String name, int dist) {
+    return '観測所：$name（カメラから約${dist}m）';
+  }
+
+  @override
+  String waterLevelLatest(String value, String time) {
+    return '$value m（$time 現在）';
+  }
+
+  @override
+  String get waterLevelLoading => '水位を取得しています…';
+
+  @override
+  String get waterLevelNoData => '水位データを取得できません';
+
+  @override
+  String get waterLevelLast48h => '過去48時間の水位';
+
+  @override
+  String get waterLevelForecast => '予測';
+
+  @override
+  String get waterLevelRsrv => '水防団待機水位';
+
+  @override
+  String get waterLevelWarn => '氾濫注意水位';
+
+  @override
+  String get waterLevelSpcl => '避難判断水位';
+
+  @override
+  String get waterLevelDng => '氾濫危険水位';
+
+  @override
+  String get waterLevelSource => '出典：国土交通省「川の防災情報」';
+
+  @override
+  String get waterLevelOpenSite => '川の防災情報で見る';
+
+  @override
+  String get waterLevelNote => '水位は参考情報です。避難の判断は自治体の避難情報に従ってください。';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -5467,4 +5513,52 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String get settingsKjmapNote =>
       'むかしの 地図（ちず）を 見（み）る サイト（(C)谷 謙二）。「むかしの 地図（ちず）」の しゅってん';
+
+  @override
+  String get waterLevelTitle => '水（みず）の高（たか）さ';
+
+  @override
+  String waterLevelStation(String name, int dist) {
+    return 'はかる場所（ばしょ）：$name（カメラから約${dist}m）';
+  }
+
+  @override
+  String waterLevelLatest(String value, String time) {
+    return '$value m（$time 現在）';
+  }
+
+  @override
+  String get waterLevelLoading => '水（みず）の高（たか）さを取（と）っています…';
+
+  @override
+  String get waterLevelNoData => '水（みず）の高（たか）さのデータが取（と）れません';
+
+  @override
+  String get waterLevelLast48h => '過去（かこ）48時間（じかん）の水（みず）の高（たか）さ';
+
+  @override
+  String get waterLevelForecast => '予測（よそく）';
+
+  @override
+  String get waterLevelRsrv => '水防団待機水位（すいぼうだん たいき すいい）';
+
+  @override
+  String get waterLevelWarn => '氾濫注意水位（はんらん ちゅうい すいい）';
+
+  @override
+  String get waterLevelSpcl => '避難判断水位（ひなん はんだん すいい）';
+
+  @override
+  String get waterLevelDng => '氾濫危険水位（はんらん きけん すいい）';
+
+  @override
+  String get waterLevelSource =>
+      '出典（しゅってん）：国土交通省（こくどこうつうしょう）「川（かわ）の防災情報（ぼうさいじょうほう）」';
+
+  @override
+  String get waterLevelOpenSite => '川（かわ）の防災情報（ぼうさいじょうほう）で見（み）る';
+
+  @override
+  String get waterLevelNote =>
+      '水（みず）の高（たか）さは参考（さんこう）です。逃（に）げるかどうかは、市（し）や町（まち）の避難情報（ひなんじょうほう）に従（したが）ってください。';
 }

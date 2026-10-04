@@ -2814,4 +2814,52 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get settingsKjmapNote =>
       'Time-series topographic map viewer ((C) Kenji Tani). Source of the old maps layer';
+
+  @override
+  String get waterLevelTitle => 'Water level';
+
+  @override
+  String waterLevelStation(String name, int dist) {
+    return 'Station: $name (about $dist m from the camera)';
+  }
+
+  @override
+  String waterLevelLatest(String value, String time) {
+    return '$value m (as of $time)';
+  }
+
+  @override
+  String get waterLevelLoading => 'Loading water level…';
+
+  @override
+  String get waterLevelNoData => 'Water level data is unavailable';
+
+  @override
+  String get waterLevelLast48h => 'Water level, last 48 hours';
+
+  @override
+  String get waterLevelForecast => 'Forecast';
+
+  @override
+  String get waterLevelRsrv => 'Standby level for flood fighting';
+
+  @override
+  String get waterLevelWarn => 'Flood advisory level';
+
+  @override
+  String get waterLevelSpcl => 'Evacuation decision level';
+
+  @override
+  String get waterLevelDng => 'Flood danger level';
+
+  @override
+  String get waterLevelSource =>
+      'Source: MLIT River Disaster Prevention Information';
+
+  @override
+  String get waterLevelOpenSite => 'Open on the MLIT site';
+
+  @override
+  String get waterLevelNote =>
+      'Water levels are for reference only. Follow evacuation information from your municipality.';
 }

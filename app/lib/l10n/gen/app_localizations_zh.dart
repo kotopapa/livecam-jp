@@ -2702,6 +2702,52 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settingsKjmapNote => '时间序列地形图浏览网站（(C)谷 謙二）。“旧地图”图层的来源';
+
+  @override
+  String get waterLevelTitle => '水位';
+
+  @override
+  String waterLevelStation(String name, int dist) {
+    return '观测站：$name（距摄像头约$dist米）';
+  }
+
+  @override
+  String waterLevelLatest(String value, String time) {
+    return '$value m（$time 现在）';
+  }
+
+  @override
+  String get waterLevelLoading => '正在获取水位…';
+
+  @override
+  String get waterLevelNoData => '无法获取水位数据';
+
+  @override
+  String get waterLevelLast48h => '过去48小时的水位';
+
+  @override
+  String get waterLevelForecast => '预测';
+
+  @override
+  String get waterLevelRsrv => '水防团待命水位';
+
+  @override
+  String get waterLevelWarn => '泛滥注意水位';
+
+  @override
+  String get waterLevelSpcl => '避难判断水位';
+
+  @override
+  String get waterLevelDng => '泛滥危险水位';
+
+  @override
+  String get waterLevelSource => '来源：国土交通省“河川防灾信息”';
+
+  @override
+  String get waterLevelOpenSite => '在河川防灾信息网站查看';
+
+  @override
+  String get waterLevelNote => '水位仅供参考。是否避难请遵从当地政府的避难信息。';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -5402,4 +5448,50 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get settingsKjmapNote => '時間序列地形圖瀏覽網站（(C)谷 謙二）。「舊地圖」圖層的來源';
+
+  @override
+  String get waterLevelTitle => '水位';
+
+  @override
+  String waterLevelStation(String name, int dist) {
+    return '觀測站：$name（距攝影機約$dist公尺）';
+  }
+
+  @override
+  String waterLevelLatest(String value, String time) {
+    return '$value m（$time 現在）';
+  }
+
+  @override
+  String get waterLevelLoading => '正在取得水位…';
+
+  @override
+  String get waterLevelNoData => '無法取得水位資料';
+
+  @override
+  String get waterLevelLast48h => '過去48小時的水位';
+
+  @override
+  String get waterLevelForecast => '預測';
+
+  @override
+  String get waterLevelRsrv => '水防團待命水位';
+
+  @override
+  String get waterLevelWarn => '氾濫注意水位';
+
+  @override
+  String get waterLevelSpcl => '避難判斷水位';
+
+  @override
+  String get waterLevelDng => '氾濫危險水位';
+
+  @override
+  String get waterLevelSource => '來源：國土交通省「河川防災資訊」';
+
+  @override
+  String get waterLevelOpenSite => '在河川防災資訊網站查看';
+
+  @override
+  String get waterLevelNote => '水位僅供參考。是否避難請依照當地政府的避難資訊。';
 }

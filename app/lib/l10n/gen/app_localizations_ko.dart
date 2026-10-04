@@ -2726,4 +2726,50 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get settingsKjmapNote => '시계열 지형도 열람 사이트((C)谷 謙二). 「옛 지도」 레이어의 출처';
+
+  @override
+  String get waterLevelTitle => '수위';
+
+  @override
+  String waterLevelStation(String name, int dist) {
+    return '관측소: $name (카메라에서 약 ${dist}m)';
+  }
+
+  @override
+  String waterLevelLatest(String value, String time) {
+    return '$value m ($time 현재)';
+  }
+
+  @override
+  String get waterLevelLoading => '수위를 불러오는 중…';
+
+  @override
+  String get waterLevelNoData => '수위 데이터를 가져올 수 없습니다';
+
+  @override
+  String get waterLevelLast48h => '지난 48시간의 수위';
+
+  @override
+  String get waterLevelForecast => '예측';
+
+  @override
+  String get waterLevelRsrv => '수방단 대기 수위';
+
+  @override
+  String get waterLevelWarn => '범람 주의 수위';
+
+  @override
+  String get waterLevelSpcl => '대피 판단 수위';
+
+  @override
+  String get waterLevelDng => '범람 위험 수위';
+
+  @override
+  String get waterLevelSource => '출처: 국토교통성 「하천 방재 정보」';
+
+  @override
+  String get waterLevelOpenSite => '하천 방재 정보에서 보기';
+
+  @override
+  String get waterLevelNote => '수위는 참고 정보입니다. 대피 여부는 지자체의 대피 정보에 따르세요.';
 }
