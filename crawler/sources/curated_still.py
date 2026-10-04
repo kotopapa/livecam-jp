@@ -6,7 +6,8 @@
 - feed.type=still_image（画像URL直接検証済みのもののみ載せる）
 - タイムスタンプ名画像のみのカメラは feed_type/feed_url を明示指定できる
   （例: feed_type=thr_camxml + feed_url=<XML URL>。monitorが都度解決）
-- 座標は設置地点の手動指定（coord_accuracy=approx）
+- 座標は設置地点の手動指定。`accuracy: exact` を付けた項目（公式座標を写したもの）だけ exact、他は approx
+  （2026-10-04 まで一律 approx だったため、鳥取県の公式 GeoJSON 由来265台まで「位置はおおよそ」と出ていた）
 - license=unknown（各運営者の利用条件はレビューで確認。削除依頼即応）
 """
 
@@ -54,7 +55,7 @@ class CuratedStillParser(SourceParser):
                     license="unknown",
                     refresh_sec=int(cam.get("refresh_sec", 600)),
                     lat=float(cam["lat"]), lng=float(cam["lng"]),
-                    coord_accuracy="approx",
+                    coord_accuracy=str(cam.get("accuracy", "approx")),
                     review_note=note,
                 ))
             except (KeyError, TypeError, ValueError) as e:

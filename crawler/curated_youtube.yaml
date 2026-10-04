@@ -175,8 +175,8 @@ cameras:
     video_id: 6S4qvf97cbQ
     category: road
     prefecture: "22"
-    lat: 35.0510
-    lng: 138.5280
+    lat: 35.072027
+    lng: 138.540911
 
   # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
   # - id: curated-fuji-5thstation
@@ -685,8 +685,8 @@ cameras:
     video_id: "maMMEh-2Bsk"
     category: road
     prefecture: "14"
-    lat: 35.202
-    lng: 139.068
+    lat: 35.183106
+    lng: 139.046162
 
   - id: curated-hakodateyama
     name: 函館山山頂（夜景）
@@ -1110,8 +1110,9 @@ cameras:
     video_id: "GB85xHlkjWw"
     category: road
     prefecture: "07"
-    lat: 37.19
-    lng: 139.79
+    lat: 37.203598
+    lng: 139.916346
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-miyako-watermark
     name: 宮古島 ビーチ（ウォーターマークホテル）
@@ -1324,8 +1325,9 @@ cameras:
     video_id: "GkoIAnOeazM"
     category: road
     prefecture: "20"
-    lat: 36.342
-    lng: 138.633
+    lat: 36.3436
+    lng: 138.627511
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-karuizawa-kyukaru
     name: 旧軽井沢ロータリー
@@ -1351,8 +1353,8 @@ cameras:
     video_id: "fic_lTH_4KY"
     category: road
     prefecture: "20"
-    lat: 36.333
-    lng: 138.611
+    lat: 36.340056
+    lng: 138.594807
 
   # 2026-08-31 配信枠更新: ixZ4rgr6y2E → Rd4XwLJRmVQ
   # 2026-09-23 配信枠更新: Rd4XwLJRmVQ → ygib_yD_M5w
@@ -1363,8 +1365,9 @@ cameras:
     video_id: "NraGnE6edMY"
     category: road
     prefecture: "26"
-    lat: 35.01
-    lng: 135.76
+    lat: 35.015402
+    lng: 135.759914
+    accuracy: exact   # 2026-10-04 座標見直し
 
   # 2026-09-30 配信枠更新: ZOScw9H4D94 → z6tIfP0qS94（旧枠が非公開）
   - id: curated-kanmon-bridge
@@ -1373,8 +1376,8 @@ cameras:
     video_id: "z6tIfP0qS94"
     category: road
     prefecture: "35"
-    lat: 33.96
-    lng: 130.953
+    lat: 33.961672
+    lng: 130.958801
 
   - id: curated-ginowan-r58
     name: 宜野湾 国道58号 大謝名交差点
@@ -1382,8 +1385,9 @@ cameras:
     video_id: "qcXFhfNRe5g"
     category: road
     prefecture: "47"
-    lat: 26.277
-    lng: 127.728
+    lat: 26.268831
+    lng: 127.7331
+    accuracy: exact   # 2026-10-04 座標見直し
     note: 防災配信実績のある民間PTZカメラ
 
   - id: curated-abashiri-birds
@@ -1690,8 +1694,8 @@ cameras:
     video_id: "9UNpXYB8rCQ"
     category: road
     prefecture: "04"
-    lat: 38.254
-    lng: 140.877
+    lat: 38.251866
+    lng: 140.881045
 
   - id: curated-mmt-izumichuo
     name: 仙台 泉中央
@@ -1774,8 +1778,9 @@ cameras:
     video_id: "YodyWQUs24I"
     category: road
     prefecture: "01"
-    lat: 43.927
-    lng: 144.465
+    lat: 43.933563
+    lng: 144.453033
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-koshimizu-jaga-hama
     name: じゃがいも街道（浜小清水側）
@@ -1864,8 +1869,8 @@ cameras:
     video_id: "AWVVYHfxZac"
     category: road
     prefecture: "01"
-    lat: 43.059
-    lng: 141.36
+    lat: 43.060963
+    lng: 141.362198
 
   - id: curated-giken-ezorisu
     name: 札幌郊外 エゾリスと野鳥の餌場
@@ -2170,8 +2175,9 @@ cameras:
     video_id: "mspMbWuEbxk"
     category: road
     prefecture: "32"
-    lat: 35.468
-    lng: 133.048
+    lat: 35.466659
+    lng: 133.052306
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-mable-kunibiki
     name: 松江 くにびき大橋
@@ -2179,8 +2185,9 @@ cameras:
     video_id: "JEFoqOUDUI4"
     category: road
     prefecture: "32"
-    lat: 35.464
-    lng: 133.064
+    lat: 35.467192
+    lng: 133.06523
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-mable-enmusubi
     name: 松江 縁結び大橋
@@ -2188,8 +2195,9 @@ cameras:
     video_id: "gCSr3Qm3BDM"
     category: road
     prefecture: "32"
-    lat: 35.46
-    lng: 133.07
+    lat: 35.463854
+    lng: 133.093408
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-mable-sodeshi
     name: 松江 袖師交差点（国道9号）
@@ -2197,8 +2205,9 @@ cameras:
     video_id: "MZZPfI49aB4"
     category: road
     prefecture: "32"
-    lat: 35.456
-    lng: 133.064
+    lat: 35.459046
+    lng: 133.053342
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-mable-higashiagenogi
     name: 松江 東上乃木交差点（国道9号）
@@ -2206,8 +2215,8 @@ cameras:
     video_id: "Mk8z2d1lHfg"
     category: road
     prefecture: "32"
-    lat: 35.452
-    lng: 133.07
+    lat: 35.447072
+    lng: 133.067525
 
   - id: curated-dojocco-kenzakai
     name: 安来 県境交差点（国道9号・雪道）
@@ -2224,8 +2233,8 @@ cameras:
     video_id: "yZYiBmrlFwc"
     category: road
     prefecture: "32"
-    lat: 35.432
-    lng: 133.251
+    lat: 35.428064
+    lng: 133.259255
 
   - id: curated-dojocco-arashima
     name: 安来 荒島交差点（国道9号）
@@ -2252,8 +2261,9 @@ cameras:
     video_id: "LOSuQJUY_gc"
     category: road
     prefecture: "28"
-    lat: 34.793
-    lng: 134.688
+    lat: 34.810251
+    lng: 134.687029
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-tokushima-kachidoki
     name: 徳島 かちどき橋方面（国道11号）
@@ -2430,8 +2440,9 @@ cameras:
     channel_id: "UClAxnBf5cxpHFqv9PEBegSg"
     category: road
     prefecture: "06"
-    lat: 38.211
-    lng: 140.396
+    lat: 38.190368
+    lng: 140.312846
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-gutto-bypass
     name: 山形バイパス（国道13号）
@@ -2439,8 +2450,9 @@ cameras:
     channel_id: "UCabGvrOAKh2We0UeVEj8eeA"
     category: road
     prefecture: "06"
-    lat: 38.23
-    lng: 140.37
+    lat: 38.190368
+    lng: 140.312846
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-chigasaki-beach
     name: 茅ヶ崎海岸（江の島〜辻堂）
@@ -4521,8 +4533,9 @@ cameras:
     video_id: "6a8XvKfhc4Y"
     category: road
     prefecture: "27"
-    lat: 34.437
-    lng: 135.5493
+    lat: 34.435909
+    lng: 135.550913
+    accuracy: exact   # 2026-10-04 座標見直し
 
   - id: curated-ichinomiya-city-station-rotary
     name: "一宮市役所屋上カメラ（一宮駅東北側ロータリー）"
@@ -4740,8 +4753,9 @@ cameras:
     channel_id: "UCQJE3qm7Sjc5-JXAYjAfkrw"
     category: road
     prefecture: "47"
-    lat: 24.3379
-    lng: 124.1554
+    lat: 24.338251
+    lng: 124.157693
+    accuracy: exact   # 2026-10-04 座標見直し
     note: 個人運営の24時間配信。配信枠更新でID変動の可能性。oEmbed埋め込み可確認済み
 
 
@@ -4752,8 +4766,9 @@ cameras:
     video_id: QpQ0301lS6I
     category: road
     prefecture: "12"
-    lat: 35.103237
-    lng: 139.870987
+    lat: 35.100848
+    lng: 139.855344
+    accuracy: exact   # 2026-10-04 座標見直し
     note: 市公式「南房総いいとこどり」の24時間配信。駐車場・周辺道路(県道184号)方向。oEmbed埋め込み可確認済み
 
   - id: curated-mboso-biwakurabu
@@ -4818,8 +4833,9 @@ cameras:
     video_id: ww9VAQcZozw
     category: "road"
     prefecture: "47"
-    lat: 26.2354
-    lng: 127.6946
+    lat: 26.227267
+    lng: 127.681087
+    accuracy: exact   # 2026-10-04 座標見直し
     note: "oEmbed 200"
 
   # 2026-08-31 配信枠更新: Mc3OxQnVSrI → k7H1WGBspJ0
@@ -6048,8 +6064,8 @@ cameras:
     channel_id: "UCRZplV8vE67bgCI6_3sm3mQ"
     category: "road"
     prefecture: "01"
-    lat: 43.05632
-    lng: 141.35185
+    lat: 43.057179
+    lng: 141.352106
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(南3条西4)。geo=キリンビール園, 2, 南3条西4, 狸小路, 中央区, 札幌市, 石狩振興局, 北海道, 北海道地方, 060-0063, 日本"
 
   - id: curated-street-obiyamachi-kochi
@@ -6171,8 +6187,9 @@ cameras:
     video_id: "i-5fynOR1G8"
     category: "road"
     prefecture: "19"
-    lat: 35.6304
-    lng: 138.55139
+    lat: 35.640255
+    lng: 138.54887
+    accuracy: exact   # 2026-10-04 座標見直し
     note: "oEmbed 200確認(2026-08-24)。ホテル屋上カメラ。座標:Nominatim(国母交差点)。geo=国母, 甲府市川三郷線, 押越, 甲府市, 中巨摩郡, 山梨県, 409-3866, 日本"
 
   - id: curated-street-zazacity-hamamatsu
@@ -6191,8 +6208,8 @@ cameras:
     video_id: "Mfq_QtuyrYI"
     category: "road"
     prefecture: "43"
-    lat: 32.78979
-    lng: 130.68611
+    lat: 32.790412
+    lng: 130.688622
     note: "oEmbed 200確認(2026-08-24)。既存RKK熊本駅前(uvfo7eEirHs)とは別ID・別アングル。座標:Nominatim(熊本駅)。geo=市立春日小学校, 並建熊本線, 春日五丁目, 戸坂町, 西区, 熊本市, 熊本県, 860-8601, 日本"
 
   # 2026-09-23 配信枠更新: l-ZAJUd9G_4 → BxudHBjbvi0
@@ -6212,8 +6229,8 @@ cameras:
     video_id: "WhNoqKDlx8Y"
     category: "road"
     prefecture: "12"
-    lat: 35.72162
-    lng: 139.92703
+    lat: 35.720744
+    lng: 139.927659
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim。geo=本八幡駅(北口), 本八幡停車場線, 八幡二丁目, 市川市, 千葉県, 272-8510, 日本"
 
   - id: curated-street-motoyawata-minami
@@ -6316,8 +6333,8 @@ cameras:
     video_id: "ztXjQgNxi4o"
     category: "road"
     prefecture: "27"
-    lat: 34.66059
-    lng: 135.53702
+    lat: 34.660492
+    lng: 135.535076
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=御幸通中央商店街, 桃谷四丁目, 生野区, 大阪市, 大阪府, 544-0034, 日本"
 
   - id: curated-street-fst-shinsaibashi-shinbashi
@@ -6357,8 +6374,9 @@ cameras:
     video_id: "-nQCcDvp7Xs"
     category: "road"
     prefecture: "27"
-    lat: 34.83551
-    lng: 135.50582
+    lat: 34.83566
+    lng: 135.508952
+    accuracy: exact   # 2026-10-04 座標見直し
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=新家, 国道171号, 今宮一丁目, 箕面市, 大阪府, 562-0033, 日本"
 
   - id: curated-street-fst-kadoma-costco
@@ -6581,8 +6599,9 @@ cameras:
     video_id: "kdTzzqRh4LQ"
     category: "road"
     prefecture: "18"
-    lat: 36.06521
-    lng: 136.22294
+    lat: 36.062508
+    lng: 136.217558
+    accuracy: exact   # 2026-10-04 座標見直し
     note: "oEmbed 200確認(2026-08-24)。@FBC の/streamsでLIVE確認。既存FBC2件に未登録。座標:Nominatim。geo=大手, 福井市, 福井県, 910-0005, 日本"
 
   - id: curated-fbc-ono
@@ -6681,8 +6700,8 @@ cameras:
     video_id: "IrXQ8JID0Gs"
     category: "road"
     prefecture: "18"
-    lat: 36.06091
-    lng: 136.22056
+    lat: 36.062141
+    lng: 136.222191
     note: "oEmbed 200確認(2026-08-24)。@fctv_091 の/streamsでLIVE確認。新規CATV運営者。座標:Nominatim概略。geo=中央一丁目, 中央, 福井市, 福井県, 910-0006, 日本"
 
   - id: curated-fctv-r8-owada
@@ -7233,8 +7252,9 @@ cameras:
     video_id: "wVYiVODQAkg"
     category: "road"
     prefecture: "28"
-    lat: 34.583
-    lng: 135.01
+    lat: 34.585633
+    lng: 135.012677
+    accuracy: exact   # 2026-10-04 座標見直し
     note: "oEmbed 200 / isLiveNow:true。本四高速は転載禁止リスト対象外だが利用条件未確認→unknown。座標: 淡路SA上り(淡路市岩屋)"
 
   - id: curated-coast-awaji-shevron-place
@@ -9265,8 +9285,9 @@ cameras:
     video_id: "LzlrHXS-ebM"
     category: "road"
     prefecture: "14"
-    lat: 35.54307
-    lng: 139.53926
+    lat: 35.539312
+    lng: 139.536416
+    accuracy: exact   # 2026-10-04 座標見直し
     note: "oEmbed 200 / isLive=true(2026-08-26)。ケーブルテレビ局が市が尾メディアセンターから撮影する自社カメラ(NEXCOのカメラではない)。座標:cametan掲載値"
 
   # 2026-08-31 配信枠更新: 1ypCIGjesD8 → 5HULxYXaVtw
@@ -10113,8 +10134,9 @@ cameras:
     operator: 中京テレビ放送(中京テレビNEWS)
     category: road
     prefecture: '21'
-    lat: 35.310056
-    lng: 136.688352
+    lat: 35.307839
+    lng: 136.69
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: 5as8y6xA-kQ
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.ctv.co.jp/'
   - id: curated-lcdb-c501f585
@@ -10122,8 +10144,9 @@ cameras:
     operator: 東海テレビ放送(東海テレビNEWSONE)
     category: road
     prefecture: '21'
-    lat: 35.310056
-    lng: 136.688352
+    lat: 35.307839
+    lng: 136.69
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: hgogqv0lZpE
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.tokai-tv.com/'
   - id: curated-lcdb-2694a1dc
@@ -10475,8 +10498,9 @@ cameras:
     operator: 厚岸町役場(厚岸町防災情報カメラ3)
     category: road
     prefecture: '01'
-    lat: 43.043944
-    lng: 144.850472
+    lat: 43.043869
+    lng: 144.85097
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: lg4xRbXM0aI
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.youtube.com/channel/UCG6PypIHUrurDjypLzOrDWQ'
   - id: curated-lcdb-5950b82b
@@ -10751,8 +10775,9 @@ cameras:
     operator: ゼタセグメント
     category: coast
     prefecture: '01'
-    lat: 43.093664
-    lng: 141.371398
+    lat: 43.094085
+    lng: 141.371711
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: lK0pXrdkwK8
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://zetta-segment.co.jp/'
   - id: curated-lcdb-038ef609
@@ -11636,8 +11661,8 @@ cameras:
     operator: 河北新報社
     category: road
     prefecture: '04'
-    lat: 38.272596
-    lng: 140.872135
+    lat: 38.255309
+    lng: 140.878692
     video_id: MxgZz2Abc8k
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://kahoku.news/'
   - id: curated-lcdb-99ae4ba8
@@ -12000,8 +12025,9 @@ cameras:
     operator: 諏訪市役所(諏訪市公式チャンネル)
     category: road
     prefecture: '20'
-    lat: 36.053344
-    lng: 138.120922
+    lat: 36.053376
+    lng: 138.122504
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: FbAaCT9ykC4
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.city.suwa.lg.jp/soshiki/21/1281.html'
   - id: curated-lcdb-237dad9e
@@ -12027,8 +12053,9 @@ cameras:
     operator: グーライブ(Goolight)
     category: road
     prefecture: '20'
-    lat: 36.636528
-    lng: 138.275444
+    lat: 36.637107
+    lng: 138.274376
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: hlKxhMVdE_0
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://goolight.co.jp/'
   - id: curated-lcdb-56e78ca3
@@ -13361,8 +13388,9 @@ cameras:
     operator: 島田土木事務所(島田土木道路カメラ)
     category: road
     prefecture: '22'
-    lat: 34.878944
-    lng: 138.311056
+    lat: 34.879028
+    lng: 138.310731
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: esDegAZ6trM
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.youtube.com/channel/UC69XtYoPLUvePkPGj5cfNhg'
   - id: curated-lcdb-c01abef4
@@ -13406,8 +13434,9 @@ cameras:
     operator: 湖上苑
     category: road
     prefecture: 09
-    lat: 36.739909
-    lng: 139.489963
+    lat: 36.739914
+    lng: 139.492146
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: fxAhYaJYrwE
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: http://www.kojoen.com/'
   - id: curated-lcdb-7a4001e0
@@ -15127,8 +15156,9 @@ cameras:
     operator: テレビ山梨(UTY)
     category: road
     prefecture: '19'
-    lat: 35.621389
-    lng: 139.1135
+    lat: 35.621629
+    lng: 139.114156
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: slOgQojt8w8
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.uty.co.jp/'
   - id: curated-lcdb-b822f296
@@ -15136,8 +15166,8 @@ cameras:
     operator: 山梨放送(YBS)
     category: road
     prefecture: '19'
-    lat: 35.632031
-    lng: 139.065672
+    lat: 35.632455
+    lng: 139.063668
     video_id: 2hu2Lc5zO4o
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.ybs.jp/'
   - id: curated-lcdb-2b0a1224
@@ -15303,8 +15333,8 @@ cameras:
     operator: Blick
     category: road
     prefecture: '40'
-    lat: 33.902366
-    lng: 130.813345
+    lat: 33.902791
+    lng: 130.816641
     channel_id: "UCpamfEYa23EU7Da6T5vjINw"
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 🇯🇵 LIVE｜若戸大橋（Wakato / Red Bridge）北九州 昼景 )。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/channel/UCpamfEYa23EU7Da6T5vjINw'
   # 2026-08-31 退役: YouTube上で非公開動画になっている(oEmbed 403)
@@ -15752,8 +15782,9 @@ cameras:
     operator: 仙台測器社
     category: road
     prefecture: '04'
-    lat: 38.257147
-    lng: 140.919266
+    lat: 38.256918
+    lng: 140.920628
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: aQgRV-YO6B4
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 仙台測器社 のライブ配信 卸商センター前交差点付近)。oEmbed 200。座標は地図中心(概略)。掲載元: https://sensoku.co.jp/'
   # 2026-09-23 配信枠更新: N7HoeUbKz5o → sUJRN8NrZeg
@@ -16692,8 +16723,9 @@ cameras:
     operator: 広島WEST
     category: road
     prefecture: '34'
-    lat: 34.391909
-    lng: 132.412222
+    lat: 34.394545
+    lng: 132.416633
+    accuracy: exact   # 2026-10-04 座標見直し
     video_id: XgfO-cYvroo
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【LIVE】西広島バイパスのライブ配信)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@WestHiroshima'
   # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
@@ -19377,8 +19409,8 @@ cameras:
     category: road
     video_id: "y2xaFSo83aM"
     prefecture: "20"
-    lat: 36.3389
-    lng: 138.5911
+    lat: 36.345976
+    lng: 138.601632
     note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:30）。author=長野県軽井沢町。台帳の軽井沢町カメラ8本に無い地点"
 
   - id: curated-tc-akamondera-funabashi

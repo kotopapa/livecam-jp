@@ -112,6 +112,14 @@ python site/build.py                            # 配信ファイル生成
 - `data/notice.txt` の本文が manifest の `notice` として配信され、地図上部のバナーに出る（閉じると同じ文言は再表示されない）。**先頭行に `until: YYYY-MM-DD`（JST、その日まで有効）を必ず付ける**（2026-10-04 ユーザー要望: 閉じられなくても7日で取り下げる）。`site/build.py` の `_notice()` が期限超過で None を返し、monitor が30分ごとに publish を起動するので翌日0時台に自動で消える。アプリ側の変更は不要。`tools/tests/test_notice.py` が期限行の有無を検査する
 - notice.txt は publish.yml の自動起動パスに入っていないので、掲示・文言変更は `gh workflow run publish.yml` で手動配信する（取り下げは期限で自動）
 
+## 道路カメラ座標の全国見直し（2026-10-04追記）
+
+- 道路カメラで座標が推定（approx）だった2,149台を情報源ごとに5班で見直し、**1,280台を置き直し**（exact 約900・approx 約380）。手順と結果は scratchpad（消えたら本節の情報源一覧から再現）。反映は台帳 cameras.json と curated_still/youtube.yaml の lat/lng（人手台帳は `accuracy: exact` を付けると exact になる。**curated_still.py は 2026-10-04 まで一律 approx を付けていた**ため、鳥取の公式 GeoJSON 由来265台まで「位置はおおよそ」表示だった）
+- **公式座標の所在（パーサ化の候補）**: 国交省は道路情報提供システム `pcImage_<CD>_1.html` の kokudoJson（CD81〜90 で全1,926台、名称・路線・管理ID gis_point 付き。事務所サイト版との照合は名称正規化＋路線＋距離）、北勢国道 名阪ライブカメラと沼津河川国道は Google My Maps の KML（description に静止画URL）、浜田河川国道 `road-view/ini/douro_cameras.txt`、鳥取 `tori-bousai.jp/arcgis/yukinavi2.geojson`、広島 `getWinter.php?camera=true&romen=true&area=all&sort=sortno`（lat/lon 付き）、山口 roadinfo.pref.yamaguchi.lg.jp の getCamera JSON（ido/keido）、長野県道路気象情報 4事務所は Gmap.htm 内スクリプト（clat/clon）、秩父は Google マップ埋め込みの `!2z`、石川みち情報ネット API、JCV 上越 XML、CCN 各ページの地図埋め込み、伊那谷ねっと一覧の `lat=/lng=`、可児・テレビ松本・静岡県道路公社・にし阿波の My Maps KML、上天草市防災 API（load_camera_meta）、東京港は `images/camera/map_*.png` と `js/camera.js` の coords を基準点で幾何補正
+- **地図画像型**: 新潟 live-cam はトップの地図アイコンを河川カメラ48台（kawabou exact）でアフィン較正（±300m）、三重 douro は事務所別の模式図を市町境界マスクで較正（±300〜600m）。宮城 roadgis・静岡土木・南小国・葛巻はイラスト地図で照合不可
+- **交差点名は Nominatim で「交差点名だけ」（「交差点」「市名」を付けない）で検索し、都道府県・市町村で検証すると当たる**（ユーザー指摘どおり交差点名付きは正確に置ける）。Overpass は当日 timeout 続きで実用にならず
+- 残課題: 長崎河川国道38台（位置図が番号付き画像）、和歌山・紀勢・三重・岐阜国道60台（個別座標あり・公式無し）、静岡/長野 avis/宮城/南小国/葛巻の大字名のみ約90台、CTY 23台（模式図）、`hiroshima-road-157` 田尻町は一覧に無く退役候補、石川 lcdb の画像 id 付け替え（52→213, 34→212、149〜153 は停止）、municipality の誤り（新宇治川放水路呑口→39386 等は反映済み）。NEXCO iHighway 257台は別途
+
 ## 栃木県道路カメラの座標修正（2026-10-04追記）
 
 - 宇都宮の利用者から「環状線の各アンダーのカメラの場所が全然合ってない」と報告。栃木県道路ライブカメラ（kendo.pref.tochigi.lg.jp/roadcctv、59台）は一覧に座標が無く市町村名でジオコーディングしていたため、同じ市の複数台が市役所付近の同一座標に集まっていた（最大32km ずれ）
