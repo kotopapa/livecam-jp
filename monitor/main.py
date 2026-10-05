@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import threading
 import time
@@ -77,6 +78,12 @@ LOW_FREQ_HOSTS = ("cam.river.go.jp", "www.river.go.jp", "river.go.jp")
 LOW_FREQ_HOURS_JST = (3, 9, 15, 21)
 
 
+def _is_low_freq(camera: dict) -> bool:
+    url = (camera.get("feed", {}) or {}).get("url") or ""
+    page = (camera.get("source", {}) or {}).get("page_url") or ""
+    return any(h in url or h in page for h in LOW_FREQ_HOSTS)
+
+
 def _skip_low_freq(camera: dict, now: datetime) -> bool:
     """低頻度対象のカメラを、指定時刻の枠以外ではチェック対象から外す。
 
@@ -93,7 +100,16 @@ def _skip_low_freq(camera: dict, now: datetime) -> bool:
     return now.astimezone(JST).hour not in LOW_FREQ_HOURS_JST
 
 
+# 1回の実行の時間予算（秒）。GitHub Actions の timeout-minutes（25分）で打ち切られると
+# その回の結果が全部捨てられるため、予算を過ぎたら新しい確認を始めずに、確認済みの分を
+# 保存して終える（2026-10-06: 川の防災情報を確認する1日4回の枠で毎回25分を超え、
+# 6時間おきに2回ずつ中断していた）。確認できなかったカメラは前回の結果を保つ
+BUDGET_SEC = int(os.environ.get("MONITOR_BUDGET_SEC", str(20 * 60)))
+
+
 def run(shard: str | None = None) -> int:
+    started = time.monotonic()
+    deadline = started + BUDGET_SEC
     if not CAMERAS_PATH.exists():
         print("data/cameras.json がない", file=sys.stderr)
         return 1
@@ -453,10 +469,20 @@ def run(shard: str | None = None) -> int:
     max_workers = 8                      # 全体の同時実行（ホスト別制限は throttle が担保）
     sem = threading.Semaphore(max_workers)
 
+    skipped = 0
+
     def bounded(camera):
+        nonlocal skipped
         with sem:
+            if time.monotonic() > deadline:
+                with lock:
+                    skipped += 1
+                return
             work(camera)
 
+    # 時間がかかる川の防災情報（1日4回の枠でだけ入る）は後ろに回し、予算切れの影響を
+    # そちらに寄せる（次の枠で確認される）
+    cameras = sorted(cameras, key=lambda c: _is_low_freq(c))
     for cam in cameras:
         t = threading.Thread(target=bounded, args=(cam,), daemon=True)
         t.start()
@@ -467,10 +493,15 @@ def run(shard: str | None = None) -> int:
     # youtube_channel: いまの配信の動画IDを毎回解決して status.json の video_id で配信する。
     # アプリはこれがあれば動画IDで埋め込む（live_stream?channel= は再生できないことがある）。
     # 配信の切り替わりに追従するため、シャード外も含めて全台を毎回解決する（2026-09-29）
+    if skipped:
+        print(f"時間予算 {BUDGET_SEC}s を超えたため {skipped} 台の確認を次回に回した", file=sys.stderr)
     for cam in all_cameras:
         if (cam.get("review", {}).get("status") != "approved"
                 or cam["feed"]["type"] != "youtube_channel"):
             continue
+        if time.monotonic() > deadline + 120:
+            print("時間予算を超えたため youtube_channel の解決を打ち切り", file=sys.stderr)
+            break
         # 配信中の判定は /streams のライブ印が確実（/live は放置された古い予定枠や
         # 切り替え前の枠を指すことがある）。/streams で見つからないときだけ /live を見る
         vid = None

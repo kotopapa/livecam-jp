@@ -359,3 +359,24 @@ def test_check_page_youtube_channel_live_link():
     held = _check_page(Sess(shell), cam, {}, now, 3)
     assert held["state"] == "error" and held["consecutive_failures"] == 3
     assert _check_page(Sess(shell), cam, {}, now, 0)["state"] == "ok"
+
+
+def test_monitor_budget_skips_after_deadline(tmp_path, monkeypatch):
+    """時間予算を過ぎたら新しい確認を始めず、前回の結果を保ったまま保存する"""
+    import json
+    import monitor.main as m
+    cams = [{"id": f"c{i}", "review": {"status": "approved"},
+             "feed": {"type": "still_image", "url": f"https://example.jp/{i}.jpg"},
+             "source": {"page_url": "https://example.jp/"}} for i in range(3)]
+    (tmp_path / "cameras.json").write_text(json.dumps({"cameras": cams}), encoding="utf-8")
+    (tmp_path / "status.json").write_text(json.dumps({"statuses": {"c0": {"state": "ok", "prev": True}}}), encoding="utf-8")
+    monkeypatch.setattr(m, "CAMERAS_PATH", tmp_path / "cameras.json")
+    monkeypatch.setattr(m, "STATUS_PATH", tmp_path / "status.json")
+    monkeypatch.setattr(m, "STATE_PATH", tmp_path / "hashes.json")
+    monkeypatch.setattr(m, "BUDGET_SEC", -1)   # 開始時点で予算切れ
+    called = []
+    monkeypatch.setattr(m, "check_camera", lambda *a, **k: called.append(1) or {"state": "ok"})
+    m.run()
+    assert called == []
+    saved = json.loads((tmp_path / "status.json").read_text(encoding="utf-8"))["statuses"]
+    assert saved["c0"].get("prev") is True

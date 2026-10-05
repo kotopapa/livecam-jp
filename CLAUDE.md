@@ -180,6 +180,7 @@ python site/build.py                            # 配信ファイル生成
 - 対策として**ユーザーのGAS（Google Apps Script）から5分おきに`bosai-notify.yml`、30分おきに`monitor.yml`を`workflow_dispatch` APIで起動**している（Fine-grained PAT: livecam-jp限定・Actions Read/write）。GitHub側のcronは予備として併存。実行履歴で`workflow_dispatch`が5分ごとに並んでいれば正常。止まっていたらGASのトリガー/トークン期限(無期限設定)を疑う
 - 台帳の公開(publish)は全ユーザーに1MB(gzip)の再取得を発生させるため、1日1回程度にまとめる
 - **監視は10シャード制（1台あたり約5時間に1回）なので、ハッシュ履歴48件は約10日分**。凍結判定は「履歴全件が同一」ではなく「末尾の同一区間の先頭から6時間以上（＋日の出跨ぎ）」で行う（2026-09-07 栄橋の不具合報告: 配信元が19時間止まっても ok のままだった）。配信元サーバが同じ画像を毎回新しい Last-Modified で返すため、ヘッダでは検知できない
+- **監視は1回20分の時間予算（`monitor/main.py` の BUDGET_SEC、環境変数 MONITOR_BUDGET_SEC）**。通常18分かかり、川の防災情報を確認する1日4回の枠（UTC 6/12/18/0時台）は台数が増えて timeout-minutes 25 を超え、その回の結果が全部捨てられていた（2026-10-06 修正）。予算を過ぎたら新しい確認を始めず保存する。川の防災情報は後ろに回すので、溢れるのはそちら。GitHub Actions 側の障害（「The job was not acquired by Runner」）では待ちの実行が cancelled になる（こちらの問題ではない。githubstatus.com で確認）
 - 中部地整(cbr.mlit.go.jp)の道路カメラは配信停止中に「現在、この地点の画像配信は行っておりません」を HTTP 200 で返す → dHash を PLACEHOLDER_HASHES に登録済み（フィクスチャ cbr_road_placeholder.jpeg）
 
 ## カメラ調査の知見（2026-08-29追記）
