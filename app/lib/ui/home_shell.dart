@@ -148,9 +148,13 @@ class _HomeShellState extends State<HomeShell> {
       barrierDismissible: false,
       builder: (context) => PopScope(
         canPop: false,
+        // 狭い画面で見出しの末尾1文字や本文の「た。」だけが次行に送られないよう、
+        // 文字を一回り小さくする（既定は見出し24・本文14。2026-10-06 ユーザー指摘）
         child: AlertDialog(
-          title: Text(context.l10n.updateRequiredTitle),
-          content: Text(context.l10n.updateRequiredBody(storeName)),
+          title: Text(context.l10n.updateRequiredTitle,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          content: Text(context.l10n.updateRequiredBody(storeName),
+              style: const TextStyle(fontSize: 13.5, height: 1.5)),
           actions: [
             if (storeUrl != null)
               FilledButton(

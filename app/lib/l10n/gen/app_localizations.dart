@@ -337,7 +337,7 @@ abstract class AppLocalizations {
   /// No description provided for @updateRequiredBody.
   ///
   /// In ja, this message translates to:
-  /// **'このバージョンはサポートが終了しました。\n{store}から最新版に更新してください。'**
+  /// **'このバージョンは利用できません。\n最新版に更新してください。'**
   String updateRequiredBody(String store);
 
   /// No description provided for @updateOpenStore.

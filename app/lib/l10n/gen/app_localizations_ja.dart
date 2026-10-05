@@ -129,7 +129,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String updateRequiredBody(String store) {
-    return 'このバージョンはサポートが終了しました。\n$storeから最新版に更新してください。';
+    return 'このバージョンは利用できません。\n最新版に更新してください。';
   }
 
   @override
