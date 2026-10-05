@@ -10,6 +10,9 @@ def _cam(cid, scam, lat, lng, twn):
 def test_scam_id_of():
     assert scam_id_of({"feed": {"url": "https://cam.river.go.jp/cam/now/102305001.jpg"}}) == 102305001
     assert scam_id_of({"feed": {"url": "https://cam.river.go.jp/cam/now/cctv_090000_31C04212.jpg"}}) is None
+    # CCTV は台帳の id から取る
+    assert scam_id_of({"id": "kawabou-221261046",
+                       "feed": {"url": "https://cam.river.go.jp/cam/now/cctv_090000_31C04212.jpg"}}) == 221261046
     assert scam_id_of({"feed": {"url": "https://example.jp/a.jpg"}}) is None
 
 

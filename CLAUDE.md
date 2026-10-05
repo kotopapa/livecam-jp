@@ -115,7 +115,7 @@ python site/build.py                            # 配信ファイル生成
 
 ## 河川カメラの水位グラフ（1.6.4、2026-10-04追記）
 
-- 詳細画面に川の防災情報の最寄り水位観測所の直近48時間グラフ（`app/lib/ui/water_level_card.dart`、取得は `app/lib/data/water_level.dart`）。対象は台帳に `water_level: {obs, dist_m}` が付いた河川カメラ（`tools/water_stations.py` が一度限りで付ける。規則: 観測所マスタの scamId 一致＝併設 → 同一市町村・同一河川コードの最寄り 3km 以内）。観測所の名称・座標・基準水位は `data/water_stations.json` → `site/v1/water_stations.json`
+- 詳細画面に川の防災情報の最寄り水位観測所の直近48時間グラフ（2026-10-06 時点 6,190台・観測所3,006。国交省 CCTV は画像URLに番号が無く台帳 id `kawabou-<scamId>` から番号を取る。当初これが漏れて CCTV 約4,700台が対象外だった）（`app/lib/ui/water_level_card.dart`、取得は `app/lib/data/water_level.dart`）。対象は台帳に `water_level: {obs, dist_m}` が付いた河川カメラ（`tools/water_stations.py` が一度限りで付ける。規則: 観測所マスタの scamId 一致＝併設 → 同一市町村・同一河川コードの最寄り 3km 以内）。観測所の名称・座標・基準水位は `data/water_stations.json` → `site/v1/water_stations.json`
 - **川の防災情報の内部ファイル**（`https://www.river.go.jp/kawabou/file/files/` 配下、SPA 内部なので構造変化に注意）: 観測所マスタ `master/obs/stg/<obsFcd>.json`（lat/lon・scamId・rsrvStg/warnStg/spclWarnStg/dngStg/fldStg）、現況 `tmlist/stg/YYYYMMDD/HHmm/<obsFcd>.json`（10分スロット。最新スロットは未生成のことがあるので3つさかのぼる。obsValue=最新、min10Values=10分値 新しい順 約8時間、predstgValues=予測）、過去 `tmlist/past/stg/YYYYMMDD/<obsFcd>.json`（時間値 約7日）、市町村の観測所一覧 `obslist/obs/twnlist/<twnCd>.json`（obsStg に rvrCd と基準水位、scam/cctv に scamId と rvrCd。座標は無い）、全市町村 `map/twn/twnarea.json`（twnCd = prefCd*1000 + JIS下3桁）
 - **水位の値はサーバーで収集せず端末が詳細画面を開いたときに直接取る**（同サイトは規約でツールによる定期収集を控えるよう求めている。対応付けの一度限りの取得も 1.2 秒間隔・控え付き）。時刻は "2026/10/04 22:30" の JST 壁時計を素の DateTime のまま扱う
 - 基準水位の各言語訳は気象庁多言語辞書に無いため独自訳（en は MLIT 英語サイトの用語）。色は 待機=緑 / 注意=黄 / 避難判断=橙 / 危険=紫（危険警報と同じ）

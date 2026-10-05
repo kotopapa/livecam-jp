@@ -85,11 +85,21 @@ def pref_jis(pref_cd: int) -> str:
 
 
 def scam_id_of(camera: dict) -> int | None:
+    """川の防災情報のカメラ番号（scamId）。
+
+    簡易型は画像URL `cam/now/<scamId>.jpg` の数字。国交省の CCTV は画像URLが
+    `cam/now/cctv_090000_31C04212.jpg` 形式で番号が入らないため、台帳の id
+    `kawabou-<scamId>` から取る（2026-10-06 まで CCTV 約4,700台が対象外になっていた）"""
     url = camera.get("feed", {}).get("url") or ""
     if "cam.river.go.jp/cam/now/" not in url:
         return None
     tail = url.rsplit("/", 1)[-1].split(".")[0]
-    return int(tail) if tail.isdigit() else None
+    if tail.isdigit():
+        return int(tail)
+    cid = camera.get("id") or ""
+    if cid.startswith("kawabou-") and cid[8:].isdigit():
+        return int(cid[8:])
+    return None
 
 
 def levels_of(st: dict) -> dict:
