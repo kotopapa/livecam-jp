@@ -1950,25 +1950,27 @@ cameras:
     name: 稲村ヶ崎（3rd HOUSE西棟・江の島ビュー）
     operator: "湘南ライブカメラ"
     video_id: "_ddxDN0eMnA"
-    category: coast
+    category: scenic
     prefecture: "14"
     lat: 35.304
     lng: 139.526
 
-  - id: curated-shonan-fuji-enoshima
-    name: 七里ヶ浜 富士山・江の島
-    operator: "湘南ライブカメラ"
-    video_id: "PFqSE8GNfnE"
-    category: coast
-    prefecture: "14"
-    lat: 35.306
-    lng: 139.51
+  # 2026-10-06 退役: 非公開になり同じ向きの後継配信が無い（利用者報告）
+  # - id: curated-shonan-fuji-enoshima
+  #   name: 七里ヶ浜 富士山・江の島
+  #   operator: "湘南ライブカメラ"
+  #   video_id: "PFqSE8GNfnE"
+  #   category: coast
+  #   prefecture: "14"
+  #   lat: 35.306
+  #   lng: 139.51
 
+  # 2026-10-06 配信枠更新: wq5J3SZSdX8（非公開）→ VBb-yNFHi2c。分類 coast→scenic
   - id: curated-shonan-kamakurakoko
     name: 鎌倉高校前・七里ヶ浜
     operator: "湘南ライブカメラ"
-    video_id: "wq5J3SZSdX8"
-    category: coast
+    video_id: "VBb-yNFHi2c"
+    category: scenic
     prefecture: "14"
     lat: 35.308
     lng: 139.5
@@ -11343,7 +11345,7 @@ cameras:
   - id: curated-lcdb-123c5b49
     name: 3rdHOUSE稲村ケ崎西棟ルーフ稲村ケ崎ビュー
     operator: 湘南ライブカメラ
-    category: river
+    category: scenic
     prefecture: '14'
     lat: 35.303508
     lng: 139.518037
