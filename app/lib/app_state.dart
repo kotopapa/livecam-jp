@@ -409,8 +409,43 @@ class AppState extends ChangeNotifier {
     await refresh();
   }
 
+  /// バックグラウンドからの復帰の合図。画面側（地図・詳細）が監視して取り直す
+  final ValueNotifier<int> resumeTick = ValueNotifier(0);
+
+  /// 復帰時に refresh() を呼ぶ最小間隔（これ未満の短い離脱では呼ばない）
+  static const resumeRefreshInterval = Duration(minutes: 2);
+
+  /// 最後に refresh() を始めた時刻（復帰時の間隔判定用）
+  DateTime? lastRefreshAt;
+
+  /// 現在時刻（テストで差し替える）
+  DateTime Function() clock = DateTime.now;
+
+  /// 復帰時に呼ぶ更新処理（テストで差し替える）
+  late Future<void> Function() resumeRefresher = refresh;
+
+  bool _resuming = false;
+
+  /// バックグラウンドから戻ったときに呼ぶ。前回の更新から2分以上経っていれば
+  /// refresh() を呼ぶ（status の取得間隔は repository 側の判定がそのまま効く）。
+  /// 画面側へは resumeTick を進めて知らせる。処理中の再呼び出しは無視する
+  Future<void> onResumed() async {
+    if (_resuming) return;
+    _resuming = true;
+    try {
+      final last = lastRefreshAt;
+      if (last == null || clock().difference(last) >= resumeRefreshInterval) {
+        await resumeRefresher();
+      }
+      resumeTick.value++;
+    } finally {
+      _resuming = false;
+    }
+  }
+
   Future<void> refresh() async {
     if (refreshing) return;
+    lastRefreshAt = clock();
     refreshing = true;
     notifyListeners();
     try {

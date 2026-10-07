@@ -219,6 +219,9 @@ class WaterLevel {
       '${t.hour.toString().padLeft(2, '0')}${t.minute.toString().padLeft(2, '0')}';
 
   /// 観測所 [obs] の直近48時間。取れなければ null。5分メモリ控え
+  /// メモリ控えを捨てる（復帰時に5分控えを無視して取り直すため）
+  static void invalidate(String obs) => _mem.remove(obs);
+
   static Future<WaterLevelSeries?> fetch(String obs,
       {http.Client? client, DateTime? nowJst, bool force = false}) async {
     final cached = _mem[obs];

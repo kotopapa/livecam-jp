@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -24,9 +25,13 @@ Future<(WaterStation?, WaterLevelSeries?)> _defaultLoader(WaterLevelRef ref) asy
 
 /// 河川カメラ詳細の水位グラフ（直近48時間＋基準水位）
 class WaterLevelCard extends StatefulWidget {
-  const WaterLevelCard({super.key, required this.camera, this.loader = _defaultLoader});
+  const WaterLevelCard(
+      {super.key, required this.camera, this.loader = _defaultLoader, this.resumeTick});
 
   final Camera camera;
+
+  /// バックグラウンドからの復帰の合図。進んだら5分控えを捨てて取り直す
+  final ValueListenable<int>? resumeTick;
   final WaterLevelLoader loader;
 
   @override
@@ -40,6 +45,28 @@ class _WaterLevelCardState extends State<WaterLevelCard> {
   void initState() {
     super.initState();
     _future = widget.loader(widget.camera.waterLevel!);
+    widget.resumeTick?.addListener(_onResume);
+  }
+
+  @override
+  void didUpdateWidget(WaterLevelCard old) {
+    super.didUpdateWidget(old);
+    if (old.resumeTick != widget.resumeTick) {
+      old.resumeTick?.removeListener(_onResume);
+      widget.resumeTick?.addListener(_onResume);
+    }
+  }
+
+  @override
+  void dispose() {
+    widget.resumeTick?.removeListener(_onResume);
+    super.dispose();
+  }
+
+  void _onResume() {
+    final ref = widget.camera.waterLevel!;
+    WaterLevel.invalidate(ref.obs);
+    setState(() => _future = widget.loader(ref));
   }
 
   @override

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui' show PlatformDispatcher;
 
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
@@ -137,6 +138,8 @@ class _LiveCamAppState extends State<LiveCamApp>
       widget.app.syncWidgets();
       // 端末の省データ設定は復帰のたびに取り直す（設定アプリで切り替えた直後など）
       widget.app.refreshDeviceLowData();
+      // 長く離れていたあとの死活状態・「いま起きていること」・詳細画面の画像等の最新化
+      unawaited(widget.app.onResumed());
     }
   }
 

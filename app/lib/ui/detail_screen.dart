@@ -86,6 +86,7 @@ class _DetailScreenState extends State<DetailScreen> {
     });
     Analytics.screen('detail');
     Analytics.cameraView(camera);
+    app.resumeTick.addListener(_onResume);
     _prepareHotelLinks();
   }
 
@@ -155,6 +156,7 @@ class _DetailScreenState extends State<DetailScreen> {
 
   @override
   void dispose() {
+    app.resumeTick.removeListener(_onResume);
     _cooldownTimer?.cancel();
     _viewTimer?.cancel();
     super.dispose();
@@ -166,6 +168,19 @@ class _DetailScreenState extends State<DetailScreen> {
     final elapsed = DateTime.now().difference(_lastManualRefresh!);
     final left = minRefetchInterval - elapsed;
     return left.isNegative ? 0 : left.inSeconds + 1;
+  }
+
+  /// バックグラウンドからの復帰時。前回の画像取得から60秒以上経っていれば静止画を
+  /// 取り直す（手動更新のクールダウンは触らない）。YouTube など再生中の映像は触らない
+  void _onResume() {
+    if (!mounted || camera.isLiveVideo) return;
+    if (DateTime.now().difference(_imageLoadedAt) < const Duration(seconds: 60)) return;
+    final url = app.imageUrlFor(camera);
+    if (url != null) NetworkImage(url).evict();
+    setState(() {
+      _imageLoadedAt = DateTime.now();
+      _refreshTick++;
+    });
   }
 
   void _manualRefresh() {
@@ -241,7 +256,7 @@ class _DetailScreenState extends State<DetailScreen> {
             const Divider(height: 24),
             // 河川カメラの水位グラフ（川の防災情報の観測所が紐付いているときだけ）
             if (camera.waterLevel != null) ...[
-              WaterLevelCard(camera: camera),
+              WaterLevelCard(camera: camera, resumeTick: app.resumeTick),
               const Divider(height: 24),
             ],
             _locationSection(),

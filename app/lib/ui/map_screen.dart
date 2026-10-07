@@ -251,6 +251,7 @@ class _MapScreenState extends State<MapScreen> {
     // 初回フレーム後に前回位置へ移動（MapControllerはレイアウト後に有効）
     WidgetsBinding.instance.addPostFrameCallback((_) => _restorePosition());
     widget.app.navigationRequest.addListener(_onNavigationRequest);
+    widget.app.resumeTick.addListener(_onResume);
     _loadSituation();
     _saverApplied = widget.app.dataSaverActive;
     _restartSituationTimer();
@@ -358,6 +359,7 @@ class _MapScreenState extends State<MapScreen> {
     _facilities?.removeListener(_onDataChanged);
     _facilities?.dispose();
     widget.app.navigationRequest.removeListener(_onNavigationRequest);
+    widget.app.resumeTick.removeListener(_onResume);
     widget.app.removeListener(_onDataChanged);
     _searchController.dispose();
     _posSub?.cancel();
@@ -365,6 +367,24 @@ class _MapScreenState extends State<MapScreen> {
       p.dispose();
     }
     super.dispose();
+  }
+
+  bool _resumeBusy = false;
+
+  /// バックグラウンドからの復帰時。Timer.periodic は停止中に止まるので、
+  /// 「いま起きていること」と表示中の時刻レイヤーを取り直す。
+  /// 通信節約中はレイヤーの自動更新を止めているので、レイヤーは更新しない
+  Future<void> _onResume() async {
+    if (_resumeBusy || !mounted) return;
+    _resumeBusy = true;
+    try {
+      final layer = (!widget.app.dataSaverActive && _layerNeedsTimer)
+          ? _refreshLayer()
+          : Future<void>.value();
+      await Future.wait([_loadSituation(), layer]);
+    } finally {
+      _resumeBusy = false;
+    }
   }
 
   void _onDataChanged() {

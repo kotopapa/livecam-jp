@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -63,6 +64,55 @@ void main() {
       expect(store.contains('cam-1'), isTrue);
       expect(await store.toggle('cam-1'), isFalse);
       expect(store.contains('cam-1'), isFalse);
+    });
+  });
+
+  group('復帰時の最新化', () {
+    AppState makeApp() => AppState(CameraRepository(
+          api: ApiClient(client: MockClient((_) async => http.Response('x', 404))),
+          cache: CacheStore(Directory(Directory.systemTemp.path)),
+        ));
+
+    test('2分未満なら refresh を呼ばず、resumeTick は進む', () async {
+      final app = makeApp();
+      var now = DateTime(2026, 10, 7, 12);
+      var calls = 0;
+      app.clock = () => now;
+      app.resumeRefresher = () async {
+        calls++;
+        app.lastRefreshAt = now;
+      };
+      // 初回（更新履歴なし）は呼ぶ
+      await app.onResumed();
+      expect(calls, 1);
+      expect(app.resumeTick.value, 1);
+      // 1分後は呼ばない
+      now = now.add(const Duration(minutes: 1));
+      await app.onResumed();
+      expect(calls, 1);
+      expect(app.resumeTick.value, 2);
+      // 2分経過で呼ぶ
+      now = now.add(const Duration(minutes: 1));
+      await app.onResumed();
+      expect(calls, 2);
+      expect(app.resumeTick.value, 3);
+    });
+
+    test('処理中の再呼び出しは無視される', () async {
+      final app = makeApp();
+      final gate = Completer<void>();
+      var calls = 0;
+      app.resumeRefresher = () async {
+        calls++;
+        await gate.future;
+      };
+      final first = app.onResumed();
+      await app.onResumed(); // 進行中なので何もしない
+      expect(calls, 1);
+      expect(app.resumeTick.value, 0);
+      gate.complete();
+      await first;
+      expect(app.resumeTick.value, 1);
     });
   });
 

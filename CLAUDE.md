@@ -113,6 +113,12 @@ python site/build.py                            # 配信ファイル生成
 - `data/notice.txt` の本文が manifest の `notice` として配信され、地図上部のバナーに出る（閉じると同じ文言は再表示されない）。**先頭行に `until: YYYY-MM-DD`（JST、その日まで有効）を必ず付ける**（2026-10-04 ユーザー要望: 閉じられなくても7日で取り下げる）。`site/build.py` の `_notice()` が期限超過で None を返し、monitor が30分ごとに publish を起動するので翌日0時台に自動で消える。アプリ側の変更は不要。`tools/tests/test_notice.py` が期限行の有無を検査する
 - notice.txt は publish.yml の自動起動パスに入っていないので、掲示・文言変更は `gh workflow run publish.yml` で手動配信する（取り下げは期限で自動）
 
+## 通信節約モードと復帰時の最新化（1.6.5、2026-10-07追記）
+
+- **通信節約モード**（`app/lib/data/data_saver.dart`、設定 SharedPreferences `data_saver_mode`=auto/on/off）。自動は「端末の省データ設定（iOS 低データモード=NWPath.isConstrained / Android データセーバー=isActiveNetworkMetered かつ restrictBackgroundStatus ENABLED。MethodChannel `livecam/native_config` の `isLowDataMode`）」か「特別警報エリア在圏（`viewerInSpecialWarningArea`）」で入る。効くもの: 一覧のサムネイル非表示（`AppState.thumbUrlFor`）、YouTube はサムネイル＋タップで再生（`_YoutubeGate`）、レイヤー自動更新停止、死活状態 5→15分・「いま起きていること」10→30分。**詳細画面の静止画にはもともと自動更新タイマーが無い**（refresh_sec は表示文言のみ）
+- 死活状態は manifest の `status_lite`（ok 以外だけ）を優先して読み、載っていないカメラは `default_state` の ok 扱い（`StatusFile.statusOf`）。起動時は cameras まで読んだ時点で地図を出し、status は後から反映
+- **復帰時の最新化**: main.dart の resumed → `AppState.onResumed()`（前回 refresh から2分以上なら refresh、`resumeTick` を進める）。地図は「いま起きていること」と時刻レイヤー（節約中はレイヤーだけ更新しない）、詳細は60秒以上経った静止画と水位グラフ（`WaterLevel.invalidate`）を取り直す。Timer.periodic はバックグラウンドで止まり復帰直後に発火しないので、復帰の合図を別に持つ
+
 ## 河川カメラの水位グラフ（1.6.4、2026-10-04追記）
 
 - 詳細画面に川の防災情報の最寄り水位観測所の直近48時間グラフ（2026-10-06 時点 6,190台・観測所3,006。国交省 CCTV は画像URLに番号が無く台帳 id `kawabou-<scamId>` から番号を取る。当初これが漏れて CCTV 約4,700台が対象外だった）（`app/lib/ui/water_level_card.dart`、取得は `app/lib/data/water_level.dart`）。対象は台帳に `water_level: {obs, dist_m}` が付いた河川カメラ（`tools/water_stations.py` が一度限りで付ける。規則: 観測所マスタの scamId 一致＝併設 → 同一市町村・同一河川コードの最寄り 3km 以内）。観測所の名称・座標・基準水位は `data/water_stations.json` → `site/v1/water_stations.json`
