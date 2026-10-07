@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>App Store ヘッダ原稿</title>
+<style>
+  @font-face { font-family: "Dela Gothic One"; src: url("fonts/DelaGothicOne-Regular.ttf") format("truetype"); font-weight: 400; }
+  html, body { margin: 0; padding: 0; background: #050B13; }
+  #root { position: relative; width: 5244px; height: 2950px; overflow: hidden; background: #050B13; }
+  /* 中心 (2622,1320)・横半径1900・縦半径1100 の楕円グラデーション */
+  #glow { position: absolute; inset: 0;
+    background: radial-gradient(ellipse 1900px 1100px at 2622px 1320px, #10243B 0%, #050B13 100%); }
+  #map { position: absolute; left: 0; top: 0; width: 5244px; height: 2950px; }
+  #copy { position: absolute; left: 850px; top: 2230px; width: 3544px; height: 310px;
+    text-align: center; white-space: nowrap; color: #EDF3FF;
+    font-family: "Dela Gothic One", sans-serif; font-weight: 400;
+    font-size: 250px; line-height: 310px; letter-spacing: 0; }
+  #copy span { color: #A4E3EE; }
+  .guide { position: absolute; box-sizing: border-box; display: none; }
+  body.guide .guide { display: block; }
+  #g1 { left: 630px; top: 384px; width: 3984px; height: 2182px; border: 6px solid #FF4D99; }
+  #g2 { left: 850px; top: 540px; width: 3544px; height: 1880px; border: 4px solid #FFD36A; }
+</style>
+</head>
+<body>
+<div id="root">
+  <div id="glow"></div>
+  <canvas id="map" width="5244" height="2950"></canvas>
+  <div id="copy">日本の今を、<span>地図で。</span></div>
+  <div class="guide" id="g1"></div>
+  <div class="guide" id="g2"></div>
+</div>
+<script src="header.js"></script>
+</body>
+</html>

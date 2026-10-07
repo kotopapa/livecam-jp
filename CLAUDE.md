@@ -325,6 +325,12 @@ python site/build.py                            # 配信ファイル生成
 - Android は25枚を1回で返すと VM Service ごと落ちる（`Service has disappeared`）ので `--dart-define=CAPTURE_SET=maps|details|tabs` で分割して撮る
 - 編集・書き出しは `store_screenshots/`（ParthJadhav/app-store-screenshots のテンプレート。`npm install --legacy-peer-deps` → `npm run dev` → http://localhost:3000）。文言と構成は `app-store-screenshots.json`、フォントは Noto Sans JP、テーマ `livecam-sky`（ブランド色 #1E6FD9）。デザイン素案は `store_screenshots/DESIGN.md`（Codex 作成。強調語は textElements で重ねているので文言変更時は位置も直す）。ヘッドレス書き出しは `store_screenshots/tools/export.mjs`（Playwright）。書き出し済み PNG は `app/store_assets/ios/screenshots/<WxH>/ja/`・`app/store_assets/android/screenshots/`
 
+## App Store の新素材と iPhone Duo（2026-10-07追記）
+
+- **ヘッダ／検索結果**（iOS 27 の App Store。ASC「プロダクトページ情報 → ヘッダと検索結果」）は任意素材。汎用 5244×2950（16:9・PNG・アルファ不可）1枚でヘッダ（21:9 にトリミング）と検索結果（3:2）を兼ねられる。制作物は `app/store_assets/ios/product_page/`、原稿と再生成は `store_screenshots/header_assets/`（手順は docs/store_screenshots.md）。価格・「無料」・URL・©・受賞・他ストアロゴ・Apple バッジは禁止、4+ 相当の内容、言語ごとに別素材可。Asset Library から単独提出でき、承認後は再審査なしで差し替え可
+- **iPhone Duo**（折りたたみ iPhone、2026-10-23 発売、iOS 27.1）のスクリーンショットは内側 2007×2853・外側 1398×2034（横向きも可）、**2027年4月から新規・更新の提出で必須**。シミュレータは Xcode 27.1 以降（Device Hub で追加、`xcrun simctl list devicetypes | grep Duo`）。この Mac は 2026-10-07 時点で Xcode 27.0 で未対応。編集ツールには `iphone-duo` を追加済み（撮影後に `store_screenshots/public/screenshots/apple/iphone-duo/ja/` へ置いて書き出す。強調語の位置は画像を入れてから合わせ直す）
+- Codex exec は **git 管理下のディレクトリで動かす**（`-C` にリポジトリ内のフォルダ。scratchpad では「Not inside a trusted directory」で止まる）。プロンプトは標準入力（`cat PROMPT.md | codex exec … -`）で渡す（引数に渡すと stdin 待ちで止まった）
+
 ## YouTube 全国点検の知見（2026-09-23追記）
 
 - **点検手順**: ①watch ページの `playabilityStatus.status`（OK / UNPLAYABLE / LOGIN_REQUIRED / LIVE_STREAM_OFFLINE / ERROR）・`isLiveNow`・`playableInEmbed` を取り、②NG のものはチャンネル `/streams` の ytInitialData（lockupViewModel＋THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE）で現行ライブ一覧を取り、③各ライブの oEmbed でタイトル（401＝埋め込み不可）を取る。watch は2〜3秒間隔（429 対策）。3,251台で約2時間。スクリプトは scratchpad の yt_health_all.py / yt_follow_all.py / apply_yt_all.py（消えたらこの手順で再作成）。**`requests` は Homebrew の python3 に無いので `/Library/Frameworks/Python.framework/Versions/3.10/bin/python3` を使う**

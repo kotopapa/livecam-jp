@@ -136,3 +136,9 @@ Apple の新しい端末区分。2026-10-23 発売（iOS 27.1）。**2027年4月
 - 8枚の構成と文言は iPhone 版を写してある。縦横比が違うので x・幅は 2007/1320 倍、文字は 0.8 倍で換算した初期値。**強調語（「川」「地図」など）の位置は自動追従しないので、画像を入れてから目視で合わせ直す**
 - 「Export bundle」で内側 2007×2853 と外側 1398×2034 の2サイズが zip に入る。ヘッドレスは `node tools/export.mjs /tmp/export_duo.zip --device=iphone-duo`（JSON の device を一時的に書き換えて元に戻す。Android も `--device=android` で同様）
 - 出力先: `app/store_assets/ios/screenshots/2007x2853/ja/` と `app/store_assets/ios/screenshots/1398x2034/ja/`（zip 内は `ios/iphone-duo/<WxH>/ja/NN-layout.png`。iPhone の同名ファイルと混ざらないよう、取り出すときに端末区分のフォルダ名を除く）
+
+## ヘッダ・検索結果（iOS 27 の App Store、2026-10-07）
+
+- App Store Connect「ヘッダと検索結果」用の画像。素案は `store_screenshots/header_assets/DESIGN_HEADER.md`（Codex）、原稿は `header.html`/`header.js`（site/lp/data.json の実在カメラ位置を光点で描く）、再生成は `cd store_screenshots && node header_assets/render.mjs`
+- 提出用は `app/store_assets/ios/product_page/`: 汎用 `generic_5244x2950.png`（ヘッダと検索結果を兼ねる。PNG・アルファ無し）、ヘッダ専用 `header_3840x1646.png`、検索結果用 `search_3840x2560.png`（3:2）
+- 価格・「無料」・URL・©・受賞・他ストアのロゴ・Apple のバッジは入れない。重要な要素は中央のセーフエリア（上下13%・左右12%が切られても残る範囲）に置く。提出前に ASC のプレビューで 21:9 と 3:2 の見え方を確認する
