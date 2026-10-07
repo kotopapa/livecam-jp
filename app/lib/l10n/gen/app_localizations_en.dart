@@ -1346,6 +1346,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mapLayerSectionHazard => 'Hazard maps';
 
   @override
+  String get mapLayerSectionOther => 'Other';
+
+  @override
   String get mapHazardLandslideSubtitle =>
       'Steep slopes, debris flows and landslides (yellow = hazard area / red = special hazard area)';
 

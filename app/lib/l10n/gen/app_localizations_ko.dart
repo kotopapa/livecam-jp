@@ -1305,6 +1305,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mapLayerSectionHazard => '재해 위험 지도';
 
   @override
+  String get mapLayerSectionOther => '기타';
+
+  @override
   String get mapHazardLandslideSubtitle =>
       '급경사지·토석류·산사태(노랑=경계 구역 / 빨강=특별 경계 구역)';
 

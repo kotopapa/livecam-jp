@@ -2518,6 +2518,12 @@ abstract class AppLocalizations {
   /// **'ハザードマップ'**
   String get mapLayerSectionHazard;
 
+  /// No description provided for @mapLayerSectionOther.
+  ///
+  /// In ja, this message translates to:
+  /// **'そのほか'**
+  String get mapLayerSectionOther;
+
   /// ADAPT: 警戒区域/特別警戒区域は多言語辞書に無いため hazard area / special hazard area とした
   ///
   /// In ja, this message translates to:

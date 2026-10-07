@@ -643,14 +643,15 @@ class _MapScreenState extends State<MapScreen> {
     BuildContext ctx, {
     required MapLayerKind kind,
     String? tooltip,
-    bool fullWidth = false,
     VoidCallback? onTap,
   }) {
     final selected = _layer == kind;
     final scheme = Theme.of(ctx).colorScheme;
+    // 名称は折り返して全文を出す（1行＋「…」では英語・やさしい日本語などで切れていた。
+    // 2026-10-08 利用者報告）。高さは内容に合わせ、同じ段の2枚は _tileGrid が揃える
     final body = Container(
-      height: 48,
-      padding: const EdgeInsets.symmetric(horizontal: 12),
+      constraints: const BoxConstraints(minHeight: 48),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       decoration: BoxDecoration(
         color: selected ? scheme.primaryContainer : null,
         border: Border.all(
@@ -661,13 +662,14 @@ class _MapScreenState extends State<MapScreen> {
       child: Row(children: [
         Icon(_layerIcon(kind),
             size: 18, color: selected ? scheme.onPrimaryContainer : scheme.onSurfaceVariant),
-        const SizedBox(width: 8),
+        const SizedBox(width: 6),
         Expanded(
-          child: Text(_layerTitle(kind),
-              maxLines: 1,
+          child: Text(_layerTileTitle(kind),
+              maxLines: 4,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                  fontSize: 13,
+                  fontSize: 12,
+                  height: 1.25,
                   fontWeight: selected ? FontWeight.bold : FontWeight.normal,
                   color: selected ? scheme.onPrimaryContainer : scheme.onSurface)),
         ),
@@ -685,8 +687,32 @@ class _MapScreenState extends State<MapScreen> {
     final withTooltip = tooltip == null || tooltip.isEmpty
         ? tapped
         : Tooltip(message: tooltip, child: tapped);
-    if (fullWidth) return withTooltip;
-    return SizedBox(width: (MediaQuery.sizeOf(ctx).width - 56) / 2, child: withTooltip);
+    return withTooltip;
+  }
+
+  /// レイヤー選択シートのタイル名。避難場所は節の見出しに「避難場所」とあるので、
+  /// 長い正式名（指定緊急避難場所・指定避難所）は説明（長押し）に任せて短い名で出す
+  String _layerTileTitle(MapLayerKind kind) =>
+      kind == MapLayerKind.shelters ? context.l10n.mapShelterTitle : _layerTitle(kind);
+
+  /// タイルを2列に並べる。同じ段の2枚は高い方に揃える（文字数の違う言語でも段が崩れない）
+  Widget _tileGrid(List<Widget> tiles) {
+    final rows = <Widget>[];
+    for (var i = 0; i < tiles.length; i += 2) {
+      rows.add(IntrinsicHeight(
+        child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Expanded(child: tiles[i]),
+          const SizedBox(width: 16),
+          Expanded(child: i + 1 < tiles.length ? tiles[i + 1] : const SizedBox.shrink()),
+        ]),
+      ));
+    }
+    return Column(children: [
+      for (var i = 0; i < rows.length; i++) ...[
+        if (i > 0) const SizedBox(height: 8),
+        rows[i],
+      ],
+    ]);
   }
 
   void _showLayerPicker(BuildContext context) {
@@ -726,9 +752,9 @@ class _MapScreenState extends State<MapScreen> {
                 child: Text(l10n.mapLayerPanelSubtitle,
                     style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
               ),
-              _layerGridTile(ctx, kind: MapLayerKind.none, fullWidth: true),
+              _layerGridTile(ctx, kind: MapLayerKind.none),
               sectionHeading(l10n.mapLayerSectionWeather, const Text(JmaLayers.attribution)),
-              Wrap(spacing: 16, runSpacing: 8, children: [
+              _tileGrid([
                 _layerGridTile(ctx, kind: MapLayerKind.rainRadar, tooltip: l10n.mapLayerRainRadarSubtitle),
                 _layerGridTile(ctx, kind: MapLayerKind.quakes),
                 _layerGridTile(ctx, kind: MapLayerKind.rain24h, tooltip: l10n.mapLayerRain24hSubtitle),
@@ -743,7 +769,7 @@ class _MapScreenState extends State<MapScreen> {
                   _layerGridTile(ctx, kind: k, tooltip: riskLayerSubtitleOf(l10n, RiskLayers.titleKey(k))),
               ]),
               sectionHeading(l10n.mapLayerSectionHazard, const Text(HazardLayers.attribution)),
-              Wrap(spacing: 16, runSpacing: 8, children: [
+              _tileGrid([
                 for (final k in const [
                   MapLayerKind.hazardFlood,
                   MapLayerKind.hazardLandslide,
@@ -757,8 +783,13 @@ class _MapScreenState extends State<MapScreen> {
                           : l10n.mapHazardDepthSubtitle),
               ]),
               sectionHeading(l10n.mapShelterTitle, const Text(ShelterLayers.attribution)),
-              Wrap(spacing: 16, runSpacing: 8, children: [
+              _tileGrid([
                 _layerGridTile(ctx, kind: MapLayerKind.shelters, tooltip: l10n.mapLayerShelterSubtitle),
+              ]),
+              // 道路・昔の地図は避難場所と出典が違うので別の節にする（出典表記は翻訳しない。SPEC C5）
+              sectionHeading(l10n.mapLayerSectionOther,
+                  const Text('出典：国土交通省・各自治体（道路）、今昔マップ on the web（昔の地図）')),
+              _tileGrid([
                 // 道路の通行止め・規制（自治体の冠水センサー＋国交省の規制情報を統合。色＝原因。1.5.2）
                 // 旧「地下道の冠水状況」「道路の通行規制」の描画コードは残してあるが選択肢には出さない
                 _layerGridTile(ctx, kind: MapLayerKind.roadClosures, tooltip: l10n.mapLayerRoadClosuresSubtitle),
@@ -771,7 +802,7 @@ class _MapScreenState extends State<MapScreen> {
                 // 出典表記は翻訳しない（SPEC C5）
                 sectionHeading(l10n.mapFacilityTitle,
                     const Text('出典：各自治体のオープンデータ（公開している自治体のみ）')),
-                Wrap(spacing: 16, runSpacing: 8, children: [
+                _tileGrid([
                   _layerGridTile(ctx, kind: MapLayerKind.facilities, tooltip: l10n.mapLayerFacilitySubtitle),
                 ]),
               ],

@@ -1299,6 +1299,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mapLayerSectionHazard => 'ハザードマップ';
 
   @override
+  String get mapLayerSectionOther => 'そのほか';
+
+  @override
   String get mapHazardLandslideSubtitle => '急傾斜地・土石流・地すべり（黄=警戒区域 / 赤=特別警戒区域）';
 
   @override
@@ -4100,6 +4103,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get mapLayerSectionHazard => 'ハザードマップ（あぶない ところの 地図（ちず））';
+
+  @override
+  String get mapLayerSectionOther => 'そのほか';
 
   @override
   String get mapHazardLandslideSubtitle =>

@@ -1353,6 +1353,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mapLayerSectionHazard => 'Bản đồ nguy cơ thiên tai';
 
   @override
+  String get mapLayerSectionOther => 'Khác';
+
+  @override
   String get mapHazardLandslideSubtitle =>
       'Sườn dốc đứng, dòng mảnh vụn và trượt đất (vàng = khu vực cảnh giác / đỏ = khu vực cảnh giác đặc biệt)';
 

@@ -1289,6 +1289,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mapLayerSectionHazard => '灾害风险地图';
 
   @override
+  String get mapLayerSectionOther => '其他';
+
+  @override
   String get mapHazardLandslideSubtitle => '陡坡地、土石流、滑坡（黄=警戒区域／红=特别警戒区域）';
 
   @override
@@ -4058,6 +4061,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get mapLayerSectionHazard => '災害潛勢地圖';
+
+  @override
+  String get mapLayerSectionOther => '其他';
 
   @override
   String get mapHazardLandslideSubtitle => '陡坡地・土石流・地滑（黃＝警戒區域／紅＝特別警戒區域）';
