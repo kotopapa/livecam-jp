@@ -179,6 +179,8 @@ python site/build.py                            # 配信ファイル生成
 
 - **GitHub Actionsのcronは間引かれ・停止することがある**（2026-08-26〜27に5分cronが数時間おきになり、最後は8時間停止。大阪の大雨危険警報の通知が遅れた）。公開リポジトリで実行枠の問題ではなく、GitHub側のスケジュール取りこぼし
 - 対策として**ユーザーのGAS（Google Apps Script）から5分おきに`bosai-notify.yml`、30分おきに`monitor.yml`を`workflow_dispatch` APIで起動**している（Fine-grained PAT: livecam-jp限定・Actions Read/write）。GitHub側のcronは予備として併存。実行履歴で`workflow_dispatch`が5分ごとに並んでいれば正常。止まっていたらGASのトリガー/トークン期限(無期限設定)を疑う
+- **台帳の再取得は配信側で1日1回に丸めている（2026-10-07）**: site/build.py の `delivery_version()` が manifest/cameras.json の version を UTC 日付だけにするので、日に何度 push・publish しても利用者の再取得（gzip 1.4MB）は1日1回。日中の座標修正・退役はそのまま push してよい（翌日の最初の公開で届く）。**災害時の緊急追加・取り下げ依頼・誤案内の修正は `gh workflow run publish.yml -f urgent=true`** で完全な時刻の版番号にして即時配信する。30分ごとの publish（死活状態・都度解決型の画像URL・YouTube の配信ID）はこれまでどおり必要なので止めない
+- 配信の軽量化: build.py の `slim_camera()` がアプリの読まない項目（review・first_seen・last_updated・fallback.type・空値）を落とす（gzip では 6% 減、圧縮前は 30% 減で端末の読み込みが軽くなる）。`status_lite.json`（ok 以外と image_url/video_id/live を持つものだけ、gzip 88KB）を manifest の `status_lite` で配信し、1.6.5 以降のアプリが読む。旧アプリ用に status.json も残す
 - 台帳の公開(publish)は全ユーザーに1MB(gzip)の再取得を発生させるため、1日1回程度にまとめる
 - **監視は10シャード制（1台あたり約5時間に1回）なので、ハッシュ履歴48件は約10日分**。凍結判定は「履歴全件が同一」ではなく「末尾の同一区間の先頭から6時間以上（＋日の出跨ぎ）」で行う（2026-09-07 栄橋の不具合報告: 配信元が19時間止まっても ok のままだった）。配信元サーバが同じ画像を毎回新しい Last-Modified で返すため、ヘッダでは検知できない
 - **監視は1回20分の時間予算（`monitor/main.py` の BUDGET_SEC、環境変数 MONITOR_BUDGET_SEC）**。通常18分かかり、川の防災情報を確認する1日4回の枠（UTC 6/12/18/0時台）は台数が増えて timeout-minutes 25 を超え、その回の結果が全部捨てられていた（2026-10-06 修正）。予算を過ぎたら新しい確認を始めず保存する。川の防災情報は後ろに回すので、溢れるのはそちら。GitHub Actions 側の障害（「The job was not acquired by Runner」）では待ちの実行が cancelled になる（こちらの問題ではない。githubstatus.com で確認）
