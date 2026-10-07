@@ -4,6 +4,8 @@ import type { Device, Orientation, SlideLayout, Theme, ThemeId } from "./types";
 export const CANVAS: Record<Device, { w: number; h: number; wL?: number; hL?: number }> = {
   iphone:        { w: 1320, h: 2868 },
   ipad:          { w: 2064, h: 2752 },
+  // 折りたたみ iPhone「iPhone Duo」内側 7.6インチ（最大解像度で設計し、外側は縮小書き出し）
+  "iphone-duo":  { w: 2007, h: 2853 },
   android:       { w: 1080, h: 1920 },
   "android-7":   { w: 1200, h: 1920, wL: 1920, hL: 1200 },
   "android-10":  { w: 1600, h: 2560, wL: 2560, hL: 1600 },
@@ -23,6 +25,11 @@ export const EXPORT_SIZES: Record<Device, ExportSize[]> = {
   ipad: [
     { label: '13" iPad',       w: 2064, h: 2752 },
     { label: '12.9" iPad Pro', w: 2048, h: 2732 },
+  ],
+  // 縦向きのみ。内側 7.6" と外側 5.4"（縦横比はどちらも約1.42）
+  "iphone-duo": [
+    { label: '内側 7.6"', w: 2007, h: 2853 },
+    { label: '外側 5.4"', w: 1398, h: 2034 },
   ],
   android:       [{ label: "Phone",          w: 1080, h: 1920 }],
   "android-7":   [{ label: '7" Portrait',    w: 1200, h: 1920 }],
@@ -53,6 +60,13 @@ export const TAB_P_RATIO = 0.667;        // tablet portrait
 export const TAB_L_RATIO = 1.5;          // tablet landscape
 export const IPAD_RATIO  = 0.770;        // iPad
 
+// iPhone Duo: 画面比 669:951（約1.42）に、画面幅の2%の均一なベゼルを足した枠
+export const DUO_BEZEL = 0.02;
+export const DUO_SCREEN_RATIO = 669 / 951;                       // 画面の幅/高さ
+export const DUO_FRAME_W = 1 + 2 * DUO_BEZEL;                    // 画面幅=1としたときの枠幅
+export const DUO_FRAME_H = 1 / DUO_SCREEN_RATIO + 2 * DUO_BEZEL; // 同、枠高
+export const DUO_RATIO = DUO_FRAME_W / DUO_FRAME_H;              // 枠の幅/高さ
+
 // iPhone mockup screen overlay (pre-measured)
 export const PHONE_SCREEN = {
   L: (52 / 1022) * 100,
@@ -78,6 +92,10 @@ export function tabletLW(cW: number, cH: number, clamp = 0.62) {
 }
 export function ipadW(cW: number, cH: number, clamp = 0.75) {
   return Math.min(clamp, 0.72 * (cH / cW) * IPAD_RATIO);
+}
+
+export function duoW(cW: number, cH: number, clamp = 0.84) {
+  return Math.min(clamp, 0.72 * (cH / cW) * DUO_RATIO);
 }
 
 // ---------- Themes ----------
@@ -174,6 +192,7 @@ export const PROJECT_SCHEMA_VERSION = 2;
 export const DEVICE_LABEL: Record<Device, string> = {
   iphone: "iPhone",
   ipad: "iPad",
+  "iphone-duo": "iPhone Duo",
   android: "Android Phone",
   "android-7": 'Android 7" Tablet',
   "android-10": 'Android 10" Tablet',

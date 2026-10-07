@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { PHONE_SCREEN } from "@/lib/constants";
+import { DUO_BEZEL, DUO_FRAME_H, DUO_FRAME_W, PHONE_SCREEN } from "@/lib/constants";
 import { img } from "@/lib/image-cache";
 
 type FrameProps = {
@@ -255,6 +255,55 @@ export function IPad({ src, alt = "", style, hideEmpty }: FrameProps) {
             width: "92%",
             height: "94.4%",
             borderRadius: "2.2% / 1.6%",
+            overflow: "hidden",
+            background: "#000",
+          }}
+        >
+          {resolved ? (
+            <img
+              src={resolved}
+              alt={alt}
+              style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+              draggable={false}
+            />
+          ) : hideEmpty ? null : (
+            <EmptySlot />
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// iPhone Duo（折りたたみ・内側/外側ディスプレイ共通）。PNG モックは無いので角丸矩形を CSS で描く。
+// 画面比 669:951（約1.42）、ベゼルは画面幅の2%。画像は画面比のままはめる（cover / 上寄せ）。
+export function IPhoneDuo({ src, alt = "", style, hideEmpty }: FrameProps) {
+  const resolved = img(src);
+  const sx = (DUO_BEZEL / DUO_FRAME_W) * 100;   // 画面の左位置（枠幅に対する%）
+  const sy = (DUO_BEZEL / DUO_FRAME_H) * 100;   // 画面の上位置（枠高に対する%）
+  const sw = (1 / DUO_FRAME_W) * 100;
+  const sh = ((DUO_FRAME_H - 2 * DUO_BEZEL) / DUO_FRAME_H) * 100;
+  return (
+    <div style={{ position: "relative", aspectRatio: `${DUO_FRAME_W} / ${DUO_FRAME_H}`, ...style }}>
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          borderRadius: `${(0.08 / DUO_FRAME_W) * 100}% / ${(0.08 / DUO_FRAME_H) * 100}%`,
+          background: "linear-gradient(180deg, #2C2C2E 0%, #151517 100%)",
+          position: "relative",
+          overflow: "hidden",
+          boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.12), 0 8px 40px rgba(0,0,0,0.6)",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            left: `${sx}%`,
+            top: `${sy}%`,
+            width: `${sw}%`,
+            height: `${sh}%`,
+            borderRadius: `${(0.06 / 1) * 100}% / ${(0.06 / (DUO_FRAME_H - 2 * DUO_BEZEL)) * 100}%`,
             overflow: "hidden",
             background: "#000",
           }}

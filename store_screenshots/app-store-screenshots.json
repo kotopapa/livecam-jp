@@ -1527,6 +1527,716 @@
         },
         "screenshot": ""
       }
+    ],
+    "iphone-duo": [
+      {
+        "id": "iphone_duo_01",
+        "layout": "hero",
+        "label": {
+          "ja": "全国ライブカメラ地図"
+        },
+        "headline": {
+          "ja": "近くの川を、\n家から確認。"
+        },
+        "screenshot": "/screenshots/apple/iphone-duo/ja/01_detail_river.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 121.6,
+            "y": 139.3,
+            "width": 1763.7,
+            "height": 447.6,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 296.5,
+            "y": 1014.7,
+            "width": 1657.3,
+            "height": 2329.0,
+            "rotation": -5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "川"
+            },
+            "transform": {
+              "x": 778.5,
+              "y": 234.8,
+              "width": 218.9,
+              "height": 171.9,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 175,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "metric-count",
+            "text": {
+              "ja": "2万台以上"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 661.5,
+              "width": 1049.1,
+              "height": 164.1,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 146,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "hero-free",
+            "text": {
+              "ja": "無料・登録不要"
+            },
+            "transform": {
+              "x": 1193.6,
+              "y": 708.3,
+              "width": 691.8,
+              "height": 93.5,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 54,
+            "fontWeight": 700,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "全国のカメラをひとつの地図に"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 853.5,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 61,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_duo_02",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "川も、道路も。地図から探す"
+        },
+        "headline": {
+          "ja": "いつもの道も、\n地図でひと目。"
+        },
+        "screenshot": "/screenshots/apple/iphone-duo/ja/02_map_tokyo_pins.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 121.6,
+            "y": 139.3,
+            "width": 1763.7,
+            "height": 447.6,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 319.3,
+            "y": 845.6,
+            "width": 1383.6,
+            "height": 1944.4,
+            "rotation": 6,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "地図"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 406.7,
+              "width": 437.9,
+              "height": 171.9,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 175,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "近くのカメラをタップ"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 646.6,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 66,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_duo_03",
+        "layout": "device-top",
+        "label": {
+          "ja": "台風進路・雨雲レーダー"
+        },
+        "headline": {
+          "ja": "台風の進路を\nわが家の目線で。"
+        },
+        "screenshot": "/screenshots/apple/iphone-duo/ja/03_layer_typhoon.png",
+        "inverted": true,
+        "transforms": {
+          "caption": {
+            "x": 121.6,
+            "y": 2059.2,
+            "width": 1763.7,
+            "height": 447.6,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 319.3,
+            "y": -189.0,
+            "width": 1490.0,
+            "height": 2093.9,
+            "rotation": -5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "台風"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 2154.7,
+              "width": 437.9,
+              "height": 171.9,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 175,
+            "fontWeight": 900,
+            "color": "#A5D9F6",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "天気の動きを地図に重ねて"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 2576.5,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 66,
+            "fontWeight": 500,
+            "color": "#C5DEEE",
+            "align": "left"
+          },
+          {
+            "id": "chip-typhoon",
+            "text": {
+              "ja": "台風第25号・進路予報"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 1850.3,
+              "width": 1216.4,
+              "height": 109.4,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 58,
+            "fontWeight": 700,
+            "color": "#A5D9F6",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_duo_04",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "災害速報・プッシュ通知"
+        },
+        "headline": {
+          "ja": "地震も警報も\n通知で気づく。"
+        },
+        "screenshot": "/screenshots/apple/iphone-duo/ja/04_bosai_warning.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 121.6,
+            "y": 139.3,
+            "width": 1763.7,
+            "height": 447.6,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 311.7,
+            "y": 860.5,
+            "width": 1383.6,
+            "height": 1944.4,
+            "rotation": 0,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "通知"
+            },
+            "transform": {
+              "x": 237.2,
+              "y": 406.7,
+              "width": 437.9,
+              "height": 171.9,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 175,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "chip-region",
+            "text": {
+              "ja": "家族が暮らす地域の情報も"
+            },
+            "transform": {
+              "x": 288.9,
+              "y": 648.6,
+              "width": 1429.2,
+              "height": 107.4,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 61,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "center"
+          }
+        ]
+      },
+      {
+        "id": "iphone_duo_05",
+        "layout": "two-devices",
+        "label": {
+          "ja": "避難場所・ハザードマップ"
+        },
+        "headline": {
+          "ja": "家族と決める\n避難先。"
+        },
+        "screenshot": "/screenshots/apple/iphone-duo/ja/05_layer_shelters.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 121.6,
+            "y": 139.3,
+            "width": 1763.7,
+            "height": 447.6,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 805.8,
+            "y": 984.8,
+            "width": 1338.0,
+            "height": 1880.3,
+            "rotation": 5,
+            "zIndex": 3
+          },
+          "deviceSecondary": {
+            "x": -197.7,
+            "y": 1144.0,
+            "width": 1292.4,
+            "height": 1816.2,
+            "rotation": -7,
+            "zIndex": 2
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "避難先"
+            },
+            "transform": {
+              "x": 565.6,
+              "y": 406.7,
+              "width": 656.8,
+              "height": 171.9,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 175,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "いざという日の前に"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 646.6,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 66,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "center"
+          }
+        ],
+        "screenshotSecondary": "/screenshots/apple/iphone-duo/ja/06_layer_hazard_flood.png"
+      },
+      {
+        "id": "iphone_duo_06",
+        "layout": "device-top",
+        "label": {
+          "ja": "みんなのランキング"
+        },
+        "headline": {
+          "ja": "みんなが見てる\n今の注目地点。"
+        },
+        "screenshot": "/screenshots/apple/iphone-duo/ja/07_ranking.png",
+        "inverted": true,
+        "transforms": {
+          "caption": {
+            "x": 121.6,
+            "y": 2029.3,
+            "width": 1763.7,
+            "height": 447.6,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 182.5,
+            "y": -119.4,
+            "width": 1581.3,
+            "height": 2222.2,
+            "rotation": 5,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "注目"
+            },
+            "transform": {
+              "x": 559.5,
+              "y": 2296.7,
+              "width": 437.9,
+              "height": 171.9,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 175,
+            "fontWeight": 900,
+            "color": "#A5D9F6",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "気になる景色を見つけよう"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 2536.7,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 66,
+            "fontWeight": 500,
+            "color": "#C5DEEE",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_duo_07",
+        "layout": "device-bottom",
+        "label": {
+          "ja": "備蓄チェック・期限リマインド"
+        },
+        "headline": {
+          "ja": "備蓄の期限、\n忘れる前に。"
+        },
+        "screenshot": "/screenshots/apple/iphone-duo/ja/08_stockpile.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 121.6,
+            "y": 139.3,
+            "width": 1763.7,
+            "height": 447.6,
+            "rotation": 0,
+            "zIndex": 4
+          },
+          "device": {
+            "x": 349.7,
+            "y": 850.5,
+            "width": 1383.6,
+            "height": 1944.4,
+            "rotation": -4,
+            "zIndex": 3
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "期限"
+            },
+            "transform": {
+              "x": 778.5,
+              "y": 234.8,
+              "width": 437.9,
+              "height": 171.9,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 175,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "support",
+            "text": {
+              "ja": "家族の備えを、毎日の中に"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 646.6,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 66,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          }
+        ]
+      },
+      {
+        "id": "iphone_duo_08",
+        "layout": "no-device",
+        "label": {
+          "ja": "全国ライブカメラ地図"
+        },
+        "headline": {
+          "ja": "近所も、旅先も。\n今を見に行こう。"
+        },
+        "screenshot": "/screenshots/apple/iphone-duo/ja/09_detail_fuji.png",
+        "inverted": false,
+        "transforms": {
+          "caption": {
+            "x": 121.6,
+            "y": 139.3,
+            "width": 1763.7,
+            "height": 447.6,
+            "rotation": 0,
+            "zIndex": 4
+          }
+        },
+        "textElements": [
+          {
+            "id": "emphasis",
+            "text": {
+              "ja": "今"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 406.7,
+              "width": 218.9,
+              "height": 171.9,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 175,
+            "fontWeight": 900,
+            "color": "#1E6FD9",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-1",
+            "text": {
+              "ja": "見る。"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 845.6,
+              "width": 1763.7,
+              "height": 328.3,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 287,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-1",
+            "text": {
+              "ja": "川・道路のライブカメラ"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 1188.8,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 63,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-2",
+            "text": {
+              "ja": "備える。"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 1382.7,
+              "width": 1763.7,
+              "height": 328.3,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 287,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-2",
+            "text": {
+              "ja": "天気・警報・避難先・備蓄"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 1725.9,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 63,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "wall-title-3",
+            "text": {
+              "ja": "旅する。"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 1919.9,
+              "width": 1763.7,
+              "height": 328.3,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 287,
+            "fontWeight": 900,
+            "color": "#102E49",
+            "align": "left"
+          },
+          {
+            "id": "wall-label-3",
+            "text": {
+              "ja": "世界70カ国の景色も"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 2263.1,
+              "width": 1763.7,
+              "height": 77.6,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 63,
+            "fontWeight": 500,
+            "color": "#42627A",
+            "align": "left"
+          },
+          {
+            "id": "chip-free",
+            "text": {
+              "ja": "無料・登録不要"
+            },
+            "transform": {
+              "x": 121.6,
+              "y": 2556.6,
+              "width": 988.3,
+              "height": 109.4,
+              "rotation": 0,
+              "zIndex": 5
+            },
+            "fontSize": 63,
+            "fontWeight": 700,
+            "color": "#1E6FD9",
+            "align": "left"
+          }
+        ],
+        "screenshotSecondary": "/screenshots/apple/iphone-duo/ja/10_detail_coast.png"
+      }
     ]
   }
 }

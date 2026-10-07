@@ -109,3 +109,30 @@ node tools/shot.mjs /tmp/editor.png          # エディタ画面の確認用キ
 
 Android を書き出すときは `app-store-screenshots.json` の `"device"` を `"android"` にしてから実行し、終わったら `"iphone"` に戻す。
 `tools/seed_deck.py` はキャプチャから初期 JSON を作る雛形（現在の JSON は Codex 版なので通常は使わない）。
+
+## iPhone Duo（折りたたみ iPhone）用（2026-10 追加）
+
+Apple の新しい端末区分。2026-10-23 発売（iOS 27.1）。**2027年4月からスクリーンショットが必須**になる。
+
+| ディスプレイ | 画面 | 提出サイズ（縦） |
+|---|---|---|
+| 内側 7.6インチ | 669×951pt @3x | 2007×2853（横 2853×2007） |
+| 外側 5.4インチ | 466×678pt @3x | 1398×2034（横 2034×1398） |
+
+縦横比はどちらも約1.42（iPhone の約2.16よりかなり横長）。PNG/JPEG・アルファ不可・1〜10枚。ストア用は縦向きのみ作る。
+
+### 撮影
+
+- **Xcode 27.1 以降と iOS 27.1 ランタイムが要る**（2026-10-07 時点でこの Mac は Xcode 27.0 のため未導入）。Xcode 27.1 を入れたら Device Hub（Window → Devices and Simulators）の「Simulators」から iPhone Duo を追加し、iOS 27.1 ランタイムを入れる
+- 確認: `xcrun simctl list devicetypes | grep Duo`、`xcrun simctl list devices available | grep Duo` で udid を得る
+- 手順は iOS と同じ（上の「1. 実機キャプチャ」）。`tools/screenshot_capture/` のパッチと integration_test を当て、`SIM=<Duo の udid>` で `CAPTURE_DIR=store_assets/captures/ios-duo flutter drive …` を回す。`CAPTURE_VIA=simctl` は使えない点も同じ
+- **内側ディスプレイ（開いた状態、2007×2853）で撮る**。外側用は書き出し時に内側画像から縮小して作る（縦横比が同じなので比率は崩れない）。Duo のシミュレータで内側が選べない場合は、折りたたみ状態の切替（Simulator の Device メニュー）を開いた状態にする
+- 一度 ATT・位置情報の許可ダイアログを出したシミュレータは初回フレームが描画されないので、`SCREENSHOT_MODE=true` の版だけを起動する（iOS の注意と同じ）
+- 撮れた PNG は `app/store_assets/captures/ios-duo/` に置き、エディタ用に `store_screenshots/public/screenshots/apple/iphone-duo/ja/` へコピーする。ファイル名は iPhone と同じ（`01_detail_river.png` など。`app-store-screenshots.json` の `slidesByDevice.iphone-duo` が参照している）。**画像が無いうちは枠の中に「Drop a screenshot here」が出るだけで落ちない**
+
+### エディタと書き出し
+
+- ツールバーの端末選択に「iPhone Duo」がある（iOS タブ）。キャンバスは内側 2007×2853。端末枠は PNG モックではなく CSS の角丸矩形（画面比 669:951＋画面幅2%のベゼル。`device-frames.tsx` の `IPhoneDuo`、定数は `constants.ts` の `DUO_*`）
+- 8枚の構成と文言は iPhone 版を写してある。縦横比が違うので x・幅は 2007/1320 倍、文字は 0.8 倍で換算した初期値。**強調語（「川」「地図」など）の位置は自動追従しないので、画像を入れてから目視で合わせ直す**
+- 「Export bundle」で内側 2007×2853 と外側 1398×2034 の2サイズが zip に入る。ヘッドレスは `node tools/export.mjs /tmp/export_duo.zip --device=iphone-duo`（JSON の device を一時的に書き換えて元に戻す。Android も `--device=android` で同様）
+- 出力先: `app/store_assets/ios/screenshots/2007x2853/ja/` と `app/store_assets/ios/screenshots/1398x2034/ja/`（zip 内は `ios/iphone-duo/<WxH>/ja/NN-layout.png`。iPhone の同名ファイルと混ざらないよう、取り出すときに端末区分のフォルダ名を除く）

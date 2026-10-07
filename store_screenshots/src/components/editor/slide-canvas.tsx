@@ -15,7 +15,9 @@ import type {
 } from "@/lib/types";
 import {
   CANVAS,
+  DUO_RATIO,
   IPAD_RATIO,
+  duoW,
   LIVECAM_SURFACES,
   MK_RATIO,
   ipadW,
@@ -32,6 +34,7 @@ import {
   AndroidTabletL,
   AndroidTabletP,
   IPad,
+  IPhoneDuo,
   Phone,
 } from "./device-frames";
 
@@ -56,6 +59,7 @@ function getFrameAspect(device: Device, orientation: Orientation) {
     case "iphone":      return MK_RATIO;
     case "android":     return 9 / 19.5;
     case "ipad":        return IPAD_RATIO;
+    case "iphone-duo":  return DUO_RATIO;
     case "android-7":
     case "android-10":  return orientation === "landscape" ? 8 / 5 : 5 / 8;
     default:            return 1;
@@ -72,6 +76,8 @@ export function getFrameForDevice(device: Device, orientation: Orientation): {
       return { Comp: Phone, widthFn: phoneW, smallWidthFn: phoneWSmall };
     case "ipad":
       return { Comp: IPad, widthFn: ipadW, smallWidthFn: (cW, cH) => ipadW(cW, cH, 0.6) };
+    case "iphone-duo":
+      return { Comp: IPhoneDuo, widthFn: duoW, smallWidthFn: (cW, cH) => duoW(cW, cH, 0.66) };
     case "android":
       return { Comp: AndroidPhone, widthFn: phoneW, smallWidthFn: phoneWSmall };
     case "android-7":
@@ -1000,14 +1006,16 @@ function SlideElements({
   }
 
   function renderCaption() {
+    // iPhone Duo は縦横比が iPhone より横長で、幅基準のままだと文字が縦を食うので少し小さくする
+    const captionScale = device === "iphone-duo" ? 0.8 : 1;
     if (!captionRect) return null;
     const saved = slide.transforms?.caption;
     const rotation = saved?.rotation ?? 0;
     const zIndex = saved?.zIndex ?? 4;
     const inner = (
       <Caption
-        cW={cW}
-        cH={cH}
+        cW={cW * captionScale}
+        cH={cH * captionScale}
         slide={slide}
         theme={theme}
         locale={locale}
@@ -1080,7 +1088,7 @@ function SlideElements({
           {theme.id === "livecam-sky" && (
             <div aria-hidden className="livecam-device-shadow" style={{
               position: "absolute", inset: "1.2% 1.5%",
-              borderRadius: device === "iphone" ? "17% / 8.5%" : "8% / 4%",
+              borderRadius: device === "iphone" ? "17% / 8.5%" : device === "iphone-duo" ? "5% / 3.5%" : "8% / 4%",
               pointerEvents: "none",
               boxShadow: inverted
                 ? `${cW * 0.02}px ${cW * 0.075}px ${cW * 0.12}px ${-cW * 0.01}px #020D2280, 0 ${cW * 0.015}px ${cW * 0.027}px #010A1A99`
