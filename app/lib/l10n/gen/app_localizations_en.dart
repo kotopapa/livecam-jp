@@ -2864,6 +2864,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'Water levels are for reference only. Follow evacuation information from your municipality.';
 
   @override
+  String get waterLevelElevationNote =>
+      'This station reports water level as elevation above sea level.';
+
+  @override
   String get settingsDataSaver => 'Data saver mode';
 
   @override

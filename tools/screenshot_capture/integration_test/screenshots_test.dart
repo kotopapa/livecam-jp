@@ -1,17 +1,20 @@
-// ストア用スクリーンショットの自動撮影。
-// `--dart-define=SCREENSHOT_MODE=true` でデバッグリボンと広告を消して起動し、
-// 主要画面を順に開いて binding.takeScreenshot() で保存する（保存先は driver 側）。
+// ストア用スクリーンショットの自動撮影（Google マップ版）。
+// `--dart-define=SCREENSHOT_MODE=true` でデバッグリボン・広告・許可ダイアログを止めて起動し、
+// 主要画面を順に開く。撮影の合図は `debugPrint('SNAP <名前>')` で、ホスト側
+// （tools/screenshot_capture/run_capture.sh）がこの行を見て
+// `xcrun simctl io <udid> screenshot <dir>/<名前>.png` を実行する。
+// （binding.takeScreenshot は platform view＝Google マップを含まないので使わない）
 //
 // 実データ（台帳・気象庁・カメラ画像）を通信で取るため、読み込み待ちは
 // 固定秒数で行う。撮り逃しは画像を見て秒数を調整する。
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
+import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart'
+    as gmp;
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:latlong2/latlong.dart';
 import 'package:livecam_jp/data/locale_controller.dart';
 import 'package:livecam_jp/l10n/gen/app_localizations.dart';
 import 'package:livecam_jp/main.dart' as app;
@@ -44,18 +47,14 @@ void main() {
     }
   }
 
+  /// 撮影の合図。ホスト側が標準出力のこの行を見て simctl で撮る。
+  /// 撮り終わるまでの余裕（simctl の起動時間）として 2.5 秒待つ
   Future<void> snap(WidgetTester tester, String name) async {
-    final file = name;
-    // 起動画面の除去がテスト環境では効かないことがある（25枚全部が起動画面になった）
+    // 起動画面の除去がテスト環境では効かないことがある
     FlutterNativeSplash.remove();
-    // Android は最初の撮影前に一度だけ描画先を画像へ切り替える
-    if (Platform.isAndroid && !surfaceConverted) {
-      await binding.convertFlutterSurfaceToImage();
-      surfaceConverted = true;
-      await wait(tester, 1);
-    }
     await tester.pump();
-    await binding.takeScreenshot(file);
+    debugPrint('SNAP $name');
+    await wait(tester, 2.5);
   }
 
   Future<void> tapText(
@@ -70,27 +69,69 @@ void main() {
     await wait(tester, after);
   }
 
-  Future<void> tapTooltip(
+  Future<void> tapKey(
     WidgetTester tester,
-    String tip, {
+    String key, {
     double after = 1.5,
   }) async {
-    await tester.tap(find.byTooltip(tip).first, warnIfMissed: false);
+    await tester.tap(find.byKey(Key(key)).first, warnIfMissed: false);
     await wait(tester, after);
   }
 
+  /// 地図を動かすと下部シートが畳まれるので、ボタン行が要るときは開き直す
+  Future<void> openSheet(WidgetTester tester) async {
+    if (find.byKey(const Key('map_panel_layers')).evaluate().isEmpty) {
+      await tapKey(tester, 'map_sheet_handle', after: 1.5);
+    }
+  }
+
+  /// 上部のお知らせ帯（「…にまとめました」等）の×を押して消す。
+  /// 「いま起きていること」カードの×は対象外
+  Future<void> dismissNotice(WidgetTester tester) async {
+    final icons = find.byIcon(Icons.close);
+    for (final e in icons.evaluate()) {
+      final inCard = find
+          .ancestor(of: find.byWidget(e.widget), matching: find.byType(SituationCard))
+          .evaluate()
+          .isNotEmpty;
+      if (inCard) continue;
+      await tester.tap(find.byWidget(e.widget), warnIfMissed: false);
+      await wait(tester, 1);
+      return;
+    }
+  }
+
+  /// レイヤー選択シートを開いてタイトルのタイルを選ぶ
   Future<void> pickLayer(
     WidgetTester tester,
     String title, {
     double after = 6,
   }) async {
-    await tapTooltip(tester, l10n.mapLayersTooltip);
+    await openSheet(tester);
+    await tapKey(tester, 'map_panel_layers');
     await tapText(tester, title, after: after);
   }
 
-  void moveMap(WidgetTester tester, LatLng center, double zoom) {
-    final ctx = tester.element(find.byType(TileLayer).first);
-    MapController.of(ctx).move(center, zoom);
+  // 地図の移動。GoogleMapController はアプリ内部にあるので、プラットフォーム層へ直接
+  // moveCamera を送る（mapId は 0 から順に試して、通ったものを使い回す）。
+  // アプリ側の _center/_zoom は onCameraMove/Idle で追従する
+  int? mapId;
+  Future<void> moveMap(WidgetTester tester, double lat, double lng, double zoom) async {
+    final platform = gmp.GoogleMapsFlutterPlatform.instance;
+    final update = gmp.CameraUpdate.newLatLngZoom(gmp.LatLng(lat, lng), zoom);
+    if (mapId != null) {
+      await platform.moveCamera(update, mapId: mapId!);
+      return;
+    }
+    for (var id = 0; id < 8; id++) {
+      try {
+        await platform.moveCamera(update, mapId: id);
+        mapId = id;
+        debugPrint('map id: $id');
+        return;
+      } catch (_) {}
+    }
+    debugPrint('moveMap failed: no map id');
   }
 
   // 詳細画面を重ねると HomeShell はオフステージになるので skipOffstage: false
@@ -159,13 +200,14 @@ void main() {
         cams.where((c) => c.name.contains(part) && c.hasLocation).firstOrNull;
 
     // 1) 地図: 全国 → 首都圏（クラスタ）→ 東京都心（個別ピン）→ 富士山周辺
+    await dismissNotice(tester);
     if (want('maps')) {
       await snap(tester, 'map_japan');
-      moveMap(tester, const LatLng(35.66, 139.72), 10.5);
-      await wait(tester, 5);
-      await snap(tester, 'map_tokyo');
-      moveMap(tester, const LatLng(35.700, 139.800), 13.2);
+      await moveMap(tester, 35.66, 139.72, 10.5);
       await wait(tester, 6);
+      await snap(tester, 'map_tokyo');
+      await moveMap(tester, 35.700, 139.800, 13.2);
+      await wait(tester, 7);
       await snap(tester, 'map_tokyo_pins');
       // 「いま起きていること」カードを閉じた素の地図も撮る
       final close = find.descendant(
@@ -174,13 +216,29 @@ void main() {
         await tester.tap(close.first, warnIfMissed: false);
         await wait(tester, 2);
         await snap(tester, 'map_tokyo_pins_clean');
-        moveMap(tester, const LatLng(35.66, 139.72), 10.5);
-        await wait(tester, 5);
+        await moveMap(tester, 35.66, 139.72, 10.5);
+        await wait(tester, 6);
         await snap(tester, 'map_tokyo_clean');
       }
-      moveMap(tester, const LatLng(35.50, 138.76), 12.3);
+      await moveMap(tester, 35.50, 138.76, 12.3);
       await wait(tester, 6);
       await snap(tester, 'map_fuji');
+    }
+
+    // 1b) ヘッダ画像用の候補（隅田川〜荒川の都心。下部シートは畳んだまま、右上に「！」）
+    if (captureSet == 'header') {
+      final cands = <(String, double, double, double)>[
+        ('cand1', 35.712, 139.805, 13.6),
+        ('cand2', 35.690, 139.790, 13.5),
+        ('cand3', 35.730, 139.790, 13.4),
+        ('cand4', 35.700, 139.830, 13.4),
+      ];
+      for (final (n, lat, lng, z) in cands) {
+        await moveMap(tester, lat, lng, z);
+        await wait(tester, 8);
+        await dismissNotice(tester);
+        await snap(tester, 'map_tokyo_pins_$n');
+      }
     }
 
     // 2) カメラ詳細: 富士山（河口湖）・河川・ライブ配信
@@ -219,11 +277,11 @@ void main() {
 
     // 3) 地図レイヤー
     if (want('maps')) {
-      moveMap(tester, const LatLng(36.5, 137.5), 5.3);
-      await wait(tester, 2);
+      await moveMap(tester, 36.5, 137.5, 5.3);
+      await wait(tester, 3);
       await pickLayer(tester, l10n.mapLayerRainRadarTitle, after: 8);
       await snap(tester, 'layer_rain_radar');
-      moveMap(tester, const LatLng(35.7, 139.6), 8.5);
+      await moveMap(tester, 35.7, 139.6, 8.5);
       await wait(tester, 6);
       await snap(tester, 'layer_rain_radar_kanto');
       await pickLayer(tester, l10n.riskLandTitle, after: 8);
@@ -232,12 +290,12 @@ void main() {
       await snap(tester, 'layer_kikikuru_inund');
       await pickLayer(tester, l10n.mapLayerTyphoonTitle, after: 8);
       await snap(tester, 'layer_typhoon');
-      moveMap(tester, const LatLng(35.68, 139.77), 14.5);
-      await wait(tester, 2);
+      await moveMap(tester, 35.68, 139.77, 14.5);
+      await wait(tester, 4);
       await pickLayer(tester, l10n.mapLayerShelterTitle, after: 8);
       await snap(tester, 'layer_shelters');
-      moveMap(tester, const LatLng(35.75, 139.78), 12.5);
-      await wait(tester, 2);
+      await moveMap(tester, 35.75, 139.78, 12.5);
+      await wait(tester, 4);
       await pickLayer(tester, l10n.hazardFloodTitle, after: 8);
       await snap(tester, 'layer_hazard_flood');
       await pickLayer(tester, l10n.mapLayerNone, after: 2);

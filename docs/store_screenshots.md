@@ -10,10 +10,17 @@ App Store / Google Play に載せる宣伝用スクリーンショットの作�
 
 - `screenshot_mode.patch`: `config.dart` に `screenshotMode`（`--dart-define=SCREENSHOT_MODE=true`）を足し、
   デバッグリボン・AdMob バナー／レクタングル・ATT ダイアログ・一覧タブ起動時の位置情報許可要求を止める。
-  pubspec に dev 依存 `integration_test` を足す
-- `integration_test/screenshots_test.dart`: 地図・詳細・レイヤー・各タブを順に開いて `binding.takeScreenshot()`
-- `test_driver/integration_test.dart`: 受け取った PNG を `CAPTURE_DIR` に `<name>.png` で保存
-- `--dart-define=CAPTURE_SET=maps|details|tabs` で組を絞れる（Android は25枚まとめると VM Service が落ちるので分割必須）
+  pubspec に dev 依存 `integration_test` を足す。**コードが変わって `git apply` が失敗したら、同じ内容を手で入れてから
+  `git diff -- app/lib app/pubspec.yaml > tools/screenshot_capture/screenshot_mode.patch` で作り直す**（2026-10-07 に作り直し済み）
+- `integration_test/screenshots_test.dart`: 地図・詳細・レイヤー・各タブを順に開き、撮りたい場面で `debugPrint('SNAP <名前>')` を出す。
+  Google マップは platform view なので `binding.takeScreenshot()` には映らない。**合図を見て外から `xcrun simctl io <udid> screenshot` で撮る**
+- `run_capture.sh <udid> <出力dir> [maps|details|tabs|header|all]`: `flutter drive` の出力から `SNAP` 行を拾って simctl で撮る
+- `test_driver/integration_test.dart`: 結果を受け取るだけ（撮影はしない）
+- `CAPTURE_SET=maps|details|tabs` で組を絞れる（Android は25枚まとめると VM Service が落ちるので分割必須）。`header` はヘッダ画像用の候補
+  （東京都心の `map_tokyo_pins_cand1〜4`）だけを撮る
+- 地図の移動は `GoogleMapsFlutterPlatform.instance.moveCamera`（mapId は 0 から試して通ったものを使う）。アプリ側の操作扱いになるので、
+  動かすたびに下部シートが畳まれ「いま起きていること」カードが閉じる。レイヤー選択前は `map_sheet_handle` で開き直す。起動時のお知らせ帯は×で消す
+- 地図を動かしたあとはタイルとピンの描画に 6〜8 秒待つ（待ち時間は `wait`。足りなければ増やす）
 
 ```bash
 # 当てる
@@ -22,7 +29,7 @@ cp -R tools/screenshot_capture/integration_test tools/screenshot_capture/test_dr
 cd app && flutter pub get
 # …撮影（下記）…
 # 戻す
-cd .. && git checkout -- app/lib/config.dart app/lib/main.dart app/lib/ui/ad_banner.dart app/lib/ui/list_screen.dart app/pubspec.yaml app/pubspec.lock
+cd .. && git checkout -- app/lib app/pubspec.yaml app/pubspec.lock
 rm -rf app/integration_test app/test_driver
 cd app && flutter pub get && flutter build ios --config-only
 xcrun simctl status_bar <udid> clear && xcrun simctl location <udid> clear
@@ -30,18 +37,21 @@ xcrun simctl status_bar <udid> clear && xcrun simctl location <udid> clear
 
 ### iOS（iPhone 17 シミュレータ・1206×2622）
 
+**一度も `flutter run` していないシミュレータを使う**（ATT・位置情報の許可ダイアログが出た機体は初回フレームが描画されない。
+その場合は `xcrun simctl erase <udid>`）。
+
 ```bash
-cd app
 SIM=<simulator udid>   # xcrun simctl list devices available
+xcrun simctl boot $SIM
 xcrun simctl status_bar $SIM override --time "9:41" --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4 --operatorName ""
 xcrun simctl location $SIM set 35.681,139.767
-CAPTURE_DIR=store_assets/captures/ios flutter drive \
-  --driver=test_driver/integration_test.dart \
-  --target=integration_test/screenshots_test.dart \
-  -d $SIM --dart-define=SCREENSHOT_MODE=true
+tools/screenshot_capture/run_capture.sh $SIM "$PWD/app/store_assets/captures/ios" all   # maps / details / tabs / header も可
 ```
 
 ### Android（Pixel 8 エミュレータ・1080×2400）
+
+注: 下のコマンドは Google マップ化前の `takeScreenshot` 方式のまま（2026-10-07 時点で未更新）。Android で撮る場合は
+`CAPTURE_VIA=adb` 相当の合図方式（`SNAP` 行を見て `adb exec-out screencap -p`）に `run_capture.sh` を直す必要がある。
 
 ```bash
 adb shell settings put global sysui_demo_allowed 1
@@ -58,8 +68,7 @@ for set in details maps tabs; do
 done
 ```
 
-撮れる画面（29枚）: map_japan / map_tokyo / map_tokyo_pins / map_tokyo_pins_clean・map_tokyo_clean（「いま起きていること」カードを閉じた状態）/
-map_fuji / detail_kawaguchiko / detail_fuji / detail_oshino / detail_river / detail_coast / detail_live / detail_tokyotower / detail_sakurajima /
+撮れる画面（2026-10-07 の再撮影で全て確認。ヘッダ用の map_tokyo_pins_current は header の候補から選んで保存する。map_tokyo_pins_clean・map_tokyo_clean は廃止）: map_japan / map_tokyo / map_tokyo_pins / map_fuji / detail_kawaguchiko / detail_fuji / detail_oshino / detail_river / detail_coast / detail_live / detail_tokyotower / detail_sakurajima /
 layer_rain_radar / layer_rain_radar_kanto /
 layer_kikikuru_land / layer_kikikuru_inund / layer_typhoon / layer_shelters / layer_hazard_flood /
 list / ranking / bosai_quake / bosai_warning / bosai_heat / x_accounts / stockpile / settings

@@ -1,0 +1,33 @@
+/* B案「手元から、全国へ」。座標は DESIGN_HEADER_B.md の表どおり（原稿左上基準・5244x2950） */
+@font-face { font-family: "Noto Sans JP"; src: url("fonts/NotoSansJP-VF.ttf") format("truetype"); font-weight: 100 900; }
+html, body { margin: 0; padding: 0; background: #F3FAFD; }
+#root { position: relative; width: 5244px; height: 2950px; overflow: hidden;
+  background: linear-gradient(to bottom right, #F3FAFD 0%, #E5F3F7 55%, #C7E3EC 100%); }
+/* 白い光: 中心 (2000,1475)・半径 (1800,1475) の楕円。領域 (200,0,3600,2950) */
+#light { position: absolute; left: 200px; top: 0; width: 3600px; height: 2950px;
+  background: radial-gradient(ellipse 1800px 1475px at 1800px 1475px, rgba(255,255,255,.65) 0%, rgba(255,255,255,0) 100%); }
+/* 等高線: 描画領域 (2760,0,2484,2950)・左端から240pxで不透明度 0→指定値 */
+#contours { position: absolute; left: 2760px; top: 0; width: 2484px; height: 2950px; overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 240px); mask-image: linear-gradient(to right, transparent 0, #000 240px); }
+/* 端末 (3040,456,1000,2037.18)・中心基準で時計回り+3度 */
+#phone { position: absolute; left: 3040px; top: 456px; width: 1000px; height: 2037.18px; transform: rotate(3deg); transform-origin: 50% 50%; }
+/* 影は端末内側に収めた角丸シルエット（枠の外周から約10px内側）から2層 */
+#shadow-long, #shadow-short { position: absolute; left: 10px; top: 10px; right: 10px; bottom: 10px; border-radius: 130px; background: #1b2b3a; }
+#shadow-long { box-shadow: 0 65px 100px rgba(66,98,122,.20); }
+#shadow-short { box-shadow: 0 12px 24px rgba(66,98,122,.18); }
+/* 画面開口: PHONE_SCREEN（src/lib/constants.ts）= 左52 上46 幅918 高1990 / 角丸126（1022x2082 基準） */
+#screen { position: absolute; left: 5.0881%; top: 2.2095%; width: 89.8239%; height: 95.5812%;
+  border-radius: 13.7255% / 6.3317%; overflow: hidden; background: #111; z-index: 10; }
+#screen-img { width: 100%; height: 100%; object-fit: contain; display: block; }
+#frame { position: absolute; inset: 0; width: 100%; height: 100%; }
+.t { position: absolute; left: 1000px; white-space: nowrap; text-align: left; letter-spacing: 0;
+  font-family: "Noto Sans JP", sans-serif; font-feature-settings: normal; font-kerning: none; }
+#l1, #l2 { width: 1600px; height: 288px; line-height: 288px; font-size: 240px; font-weight: 900; color: #102E49; }
+#l1 { top: 1040px; }
+#l2 { top: 1328px; }
+#l2 .b { color: #1E6FD9; }
+#l3 { top: 1696px; width: 1600px; height: 272px; line-height: 272px; font-size: 226px; font-weight: 700; color: #42627A; }
+.guide { position: absolute; box-sizing: border-box; display: none; }
+body.guide .guide { display: block; }
+#g1 { left: 630px; top: 384px; width: 3984px; height: 2182px; border: 6px solid #FF4D99; }
+#g2 { left: 852px; top: 542px; width: 3540px; height: 1876px; border: 4px solid #FFD36A; }

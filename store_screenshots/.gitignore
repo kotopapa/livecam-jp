@@ -5,3 +5,9 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# ヘッダ画像 B 案: 出力・ログ・参照画像・9.6MB の可変フォント（README に入手先）
+header_assets/out_b/
+header_assets/codex_b.log
+header_assets/ref_*.png
+header_assets/fonts/NotoSansJP-VF.ttf

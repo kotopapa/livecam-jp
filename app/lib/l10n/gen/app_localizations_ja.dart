@@ -2764,6 +2764,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get waterLevelNote => '水位は参考情報です。避難の判断は自治体の避難情報に従ってください。';
 
   @override
+  String get waterLevelElevationNote => 'この観測所の水位は標高（海面からの高さ）で表されます。';
+
+  @override
   String get settingsDataSaver => '通信節約モード';
 
   @override
@@ -5583,6 +5586,10 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String get waterLevelNote =>
       '水（みず）の高（たか）さは参考（さんこう）です。逃（に）げるかどうかは、市（し）や町（まち）の避難情報（ひなんじょうほう）に従（したが）ってください。';
+
+  @override
+  String get waterLevelElevationNote =>
+      'この観測所（かんそくじょ）の水（みず）の高（たか）さは、海（うみ）からの高（たか）さ（標高（ひょうこう））で表（あらわ）されます。';
 
   @override
   String get settingsDataSaver => 'つうしん せつやく モード';

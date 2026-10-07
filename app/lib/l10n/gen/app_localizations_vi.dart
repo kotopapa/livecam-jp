@@ -2872,6 +2872,10 @@ class AppLocalizationsVi extends AppLocalizations {
       'Mực nước chỉ mang tính tham khảo. Hãy tuân theo thông tin sơ tán của chính quyền địa phương.';
 
   @override
+  String get waterLevelElevationNote =>
+      'Trạm này biểu thị mực nước theo độ cao so với mực nước biển.';
+
+  @override
   String get settingsDataSaver => 'Chế độ tiết kiệm dữ liệu';
 
   @override

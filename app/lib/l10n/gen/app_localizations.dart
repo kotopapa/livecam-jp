@@ -4960,6 +4960,12 @@ abstract class AppLocalizations {
   /// **'水位は参考情報です。避難の判断は自治体の避難情報に従ってください。'**
   String get waterLevelNote;
 
+  /// No description provided for @waterLevelElevationNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'この観測所の水位は標高（海面からの高さ）で表されます。'**
+  String get waterLevelElevationNote;
+
   /// No description provided for @settingsDataSaver.
   ///
   /// In ja, this message translates to:

@@ -2774,6 +2774,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get waterLevelNote => '수위는 참고 정보입니다. 대피 여부는 지자체의 대피 정보에 따르세요.';
 
   @override
+  String get waterLevelElevationNote => '이 관측소의 수위는 해발 고도(해수면으로부터의 높이)로 표시됩니다.';
+
+  @override
   String get settingsDataSaver => '데이터 절약 모드';
 
   @override

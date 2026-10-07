@@ -2750,6 +2750,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get waterLevelNote => '水位仅供参考。是否避难请遵从当地政府的避难信息。';
 
   @override
+  String get waterLevelElevationNote => '该观测站的水位以海拔高度（距海平面的高度）表示。';
+
+  @override
   String get settingsDataSaver => '流量节省模式';
 
   @override
@@ -5516,6 +5519,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get waterLevelNote => '水位僅供參考。是否避難請依照當地政府的避難資訊。';
+
+  @override
+  String get waterLevelElevationNote => '此觀測站的水位以海拔高度（距海平面的高度）表示。';
 
   @override
   String get settingsDataSaver => '流量節省模式';
