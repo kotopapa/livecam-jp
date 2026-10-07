@@ -112,6 +112,7 @@ python site/build.py                            # 配信ファイル生成
 
 - `data/notice.txt` の本文が manifest の `notice` として配信され、地図上部のバナーに出る（閉じると同じ文言は再表示されない）。**先頭行に `until: YYYY-MM-DD`（JST、その日まで有効）を必ず付ける**（2026-10-04 ユーザー要望: 閉じられなくても7日で取り下げる）。`site/build.py` の `_notice()` が期限超過で None を返し、monitor が30分ごとに publish を起動するので翌日0時台に自動で消える。アプリ側の変更は不要。`tools/tests/test_notice.py` が期限行の有無を検査する
 - notice.txt は publish.yml の自動起動パスに入っていないので、掲示・文言変更は `gh workflow run publish.yml` で手動配信する（取り下げは期限で自動）
+- **強制アップデートは `site/build.py` の `MIN_APP_VERSION`**（manifest の `min_app_version`）。アプリは PackageInfo の version（ビルド番号なし、例 1.6.5）を `isVersionBelow` で比較し、下回ると閉じられないダイアログでストアへ誘導する。site/** の変更なので push すれば publish が走る。両ストアで公開が済んでから上げる（2026-10-08 に 1.6.5 へ）
 
 ## 通信節約モードと復帰時の最新化（1.6.5、2026-10-07追記）
 
