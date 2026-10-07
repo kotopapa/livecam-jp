@@ -34,7 +34,50 @@ MIN_APP_VERSION = "1.0.0"
 STORE_URL = "https://apps.apple.com/jp/app/id6802841521"
 # Google Play のアプリページ（Android の強制アップデート・招待・レビュー導線）
 PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=jp.livecam.livecam_jp"
-INTERNAL_FIELDS = {"verification"}
+INTERNAL_FIELDS = {"review", "first_seen", "last_updated", "verification"}
+
+
+def _is_empty(v) -> bool:
+    """None / "" / {} / [] / False は省く（0 や 0.0 は値なので残す）"""
+    return v is None or v is False or (isinstance(v, (str, dict, list)) and len(v) == 0)
+
+
+def slim_camera(record: dict) -> dict:
+    """配信用に台帳の1件を軽量化する（災害時の通信量削減）。アプリが読まない内部項目と、
+    既定値と同じ空値を落とす。アプリ側の読み取りは app/lib/models/camera.dart の
+    Camera.tryParse（欠けた項目は既定値で補われる）"""
+    def clean(v):
+        if isinstance(v, dict):
+            v = {k: clean(x) for k, x in v.items()}
+            return {k: x for k, x in v.items() if not _is_empty(x)}
+        return v
+
+    out = {k: v for k, v in record.items() if k not in INTERNAL_FIELDS}
+    fb = out.get("fallback")
+    if isinstance(fb, dict):
+        out["fallback"] = {"url": fb.get("url")}  # type は配信しない
+    out = clean(out)
+    return {k: v for k, v in out.items() if not _is_empty(v)}
+
+
+def delivery_version(version: str | None) -> str | None:
+    """台帳の配信用版番号。アプリは版番号の一致だけで再取得を判断するので、
+    UTC 時刻の日付部分だけにして再取得を1日1回にまとめる。
+    URGENT_PUBLISH=1 のときは完全な時刻のまま出す（緊急の即時配信）"""
+    if not version or os.environ.get("URGENT_PUBLISH") == "1":
+        return version
+    return version.split("T", 1)[0]
+
+
+def build_status_lite(status: dict) -> dict:
+    """死活状態の軽量版。state が ok 以外、または画像URL等の動的情報を持つものだけ入れ、
+    それ以外は default_state（ok）とみなす"""
+    keep = {}
+    for k, v in status.get("statuses", {}).items():
+        if v.get("state") != "ok" or any(v.get(f) for f in ("image_url", "image_time", "video_id")) \
+                or "live" in v:
+            keep[k] = v
+    return {"generated_at": status.get("generated_at"), "default_state": "ok", "statuses": keep}
 
 
 NOTICE_UNTIL_RE = re.compile(r"^until:\s*(\d{4}-\d{2}-\d{2})\s*\n", re.I)
@@ -74,11 +117,11 @@ def _recommended_apps() -> list[dict]:
 def build() -> int:
     cameras_src = json.loads((DATA / "cameras.json").read_text(encoding="utf-8"))
     approved = [
-        {k: v for k, v in rec.items() if k not in INTERNAL_FIELDS}
+        slim_camera(rec)
         for rec in cameras_src.get("cameras", [])
         if rec.get("review", {}).get("status") == "approved"
     ]
-    version = cameras_src.get("version")
+    version = delivery_version(cameras_src.get("version"))
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "cameras").mkdir(exist_ok=True)
@@ -99,17 +142,22 @@ def build() -> int:
     if status_path.exists():
         status = json.loads(status_path.read_text(encoding="utf-8"))
     else:
-        status = {"generated_at": version, "statuses": {}}
+        status = {"generated_at": cameras_src.get("version"), "statuses": {}}
     # 承認済み以外のstatusは配信しない
     ids = {r["id"] for r in approved}
     status["statuses"] = {k: v for k, v in status["statuses"].items() if k in ids}
     (OUT / "status.json").write_text(
         json.dumps(status, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+    (OUT / "status_lite.json").write_text(
+        json.dumps(build_status_lite(status), ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8")
+
     manifest = {
         "schema_version": 1,
         "cameras": {"version": version, "url": "/v1/cameras.json", "count": len(approved)},
         "status": {"version": status.get("generated_at"), "url": "/v1/status.json"},
+        "status_lite": {"version": status.get("generated_at"), "url": "/v1/status_lite.json"},
         "prefectures": sorted(by_pref),
         "min_app_version": MIN_APP_VERSION,
         "store_url": STORE_URL,

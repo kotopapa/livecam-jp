@@ -14,6 +14,11 @@ on:
       - "data/road_regulation.json"
       - "site/**"
   workflow_dispatch:
+    inputs:
+      urgent:
+        description: "台帳の変更を即時配信する（通常は日次にまとめる）"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -35,6 +40,7 @@ jobs:
       - name: site/v1 を生成
         env:
           ORS_API_KEY: ${{ secrets.ORS_API_KEY }}
+          URGENT_PUBLISH: ${{ inputs.urgent && '1' || '0' }}
         run: python site/build.py
       - uses: actions/upload-pages-artifact@v3
         with:
