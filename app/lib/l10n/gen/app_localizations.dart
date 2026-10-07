@@ -4959,6 +4959,48 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'水位は参考情報です。避難の判断は自治体の避難情報に従ってください。'**
   String get waterLevelNote;
+
+  /// No description provided for @settingsDataSaver.
+  ///
+  /// In ja, this message translates to:
+  /// **'通信節約モード'**
+  String get settingsDataSaver;
+
+  /// No description provided for @settingsDataSaverSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'画像の自動更新や一覧のサムネイルを止めて通信量を抑えます。自動では、端末の省データ設定が有効なときや、特別警報の発表地域にいるときに入ります'**
+  String get settingsDataSaverSubtitle;
+
+  /// No description provided for @settingsDataSaverAuto.
+  ///
+  /// In ja, this message translates to:
+  /// **'自動'**
+  String get settingsDataSaverAuto;
+
+  /// No description provided for @settingsDataSaverOn.
+  ///
+  /// In ja, this message translates to:
+  /// **'常にオン'**
+  String get settingsDataSaverOn;
+
+  /// No description provided for @settingsDataSaverOff.
+  ///
+  /// In ja, this message translates to:
+  /// **'常にオフ'**
+  String get settingsDataSaverOff;
+
+  /// No description provided for @detailDataSaverChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'通信節約中（自動更新オフ）'**
+  String get detailDataSaverChip;
+
+  /// No description provided for @detailDataSaverTapToPlay.
+  ///
+  /// In ja, this message translates to:
+  /// **'タップして再生'**
+  String get detailDataSaverTapToPlay;
 }
 
 class _AppLocalizationsDelegate

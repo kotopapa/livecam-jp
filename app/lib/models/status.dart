@@ -55,17 +55,31 @@ class CameraStatus {
 }
 
 class StatusFile {
-  const StatusFile({required this.generatedAt, required this.statuses});
+  const StatusFile(
+      {required this.generatedAt, required this.statuses, this.defaultState});
 
   final String? generatedAt;
   final Map<String, CameraStatus> statuses;
 
+  /// 軽量版 status（status_lite.json）の既定状態。statuses に無いカメラはこの状態として
+  /// 扱う（配信側は ok 以外と追加情報を持つものだけを載せるため）。
+  /// null（従来の status.json）なら、載っていないカメラは「不明」のまま
+  final CameraState? defaultState;
+
   factory StatusFile.fromJson(Map<String, dynamic> json) => StatusFile(
         generatedAt: json['generated_at'] as String?,
+        defaultState: json['default_state'] is String
+            ? CameraState.parse(json['default_state'] as String)
+            : null,
         statuses: (json['statuses'] as Map<String, dynamic>? ?? const {}).map(
             (k, v) => MapEntry(
                 k, CameraStatus.fromJson(v as Map<String, dynamic>? ?? const {}))),
       );
 
-  CameraStatus? operator [](String cameraId) => statuses[cameraId];
+  /// 載っていれば実体、無ければ defaultState の既定値（defaultState も無ければ null）
+  CameraStatus? operator [](String cameraId) =>
+      statuses[cameraId] ??
+      (defaultState == null ? null : CameraStatus(state: defaultState!));
+
+  CameraStatus? statusOf(String cameraId) => this[cameraId];
 }

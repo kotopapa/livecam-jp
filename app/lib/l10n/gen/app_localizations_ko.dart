@@ -2772,4 +2772,26 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get waterLevelNote => '수위는 참고 정보입니다. 대피 여부는 지자체의 대피 정보에 따르세요.';
+
+  @override
+  String get settingsDataSaver => '데이터 절약 모드';
+
+  @override
+  String get settingsDataSaverSubtitle =>
+      '이미지 자동 갱신과 목록의 썸네일을 멈춰 데이터 사용량을 줄입니다. 자동에서는 기기의 데이터 절약 설정이 켜져 있거나 특별 경보 발표 지역에 있을 때 켜집니다.';
+
+  @override
+  String get settingsDataSaverAuto => '자동';
+
+  @override
+  String get settingsDataSaverOn => '항상 켜기';
+
+  @override
+  String get settingsDataSaverOff => '항상 끄기';
+
+  @override
+  String get detailDataSaverChip => '데이터 절약 중(자동 갱신 꺼짐)';
+
+  @override
+  String get detailDataSaverTapToPlay => '탭하여 재생';
 }

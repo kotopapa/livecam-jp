@@ -2099,7 +2099,7 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
                   );
                 }
                 final camera = cams[note != null ? i - 1 : i];
-                final url = app.imageUrlFor(camera);
+                final url = app.thumbUrlFor(camera);
                 return ListTile(
                   leading: ClipRRect(
                     borderRadius: BorderRadius.circular(6),
@@ -2212,7 +2212,7 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
               separatorBuilder: (_, _) => const Divider(height: 1),
               itemBuilder: (context, i) {
                 final (camera, dist) = cams[i];
-                final url = app.imageUrlFor(camera);
+                final url = app.thumbUrlFor(camera);
                 return ListTile(
                   leading: ClipRRect(
                     borderRadius: BorderRadius.circular(6),
@@ -2334,7 +2334,7 @@ class RiverCamerasScreen extends StatelessWidget {
                   separatorBuilder: (_, _) => const Divider(height: 1),
                   itemBuilder: (context, i) {
                     final camera = cams[i];
-                    final url = app.imageUrlFor(camera);
+                    final url = app.thumbUrlFor(camera);
                     return ListTile(
                       leading: ClipRRect(
                         borderRadius: BorderRadius.circular(6),

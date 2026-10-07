@@ -6,6 +6,7 @@ class Manifest {
     required this.camerasUrl,
     required this.camerasCount,
     required this.statusUrl,
+    this.statusLiteUrl,
     this.minAppVersion,
     this.storeUrl,
     this.playStoreUrl,
@@ -19,6 +20,9 @@ class Manifest {
   final String camerasUrl;
   final int camerasCount;
   final String statusUrl;
+
+  /// 軽量版 status（ok 以外と追加情報を持つものだけ。無ければ statusUrl を使う）
+  final String? statusLiteUrl;
   final String? minAppVersion;
 
   /// App Store のURL（強制アップデートダイアログの誘導先。未公開の間はnull）
@@ -39,12 +43,16 @@ class Manifest {
   factory Manifest.fromJson(Map<String, dynamic> json) {
     final cameras = (json['cameras'] as Map<String, dynamic>? ?? const {});
     final status = (json['status'] as Map<String, dynamic>? ?? const {});
+    final lite = json['status_lite'];
     return Manifest(
       schemaVersion: (json['schema_version'] as num?)?.toInt() ?? 1,
       camerasVersion: cameras['version'] as String?,
       camerasUrl: cameras['url'] as String? ?? '/v1/cameras.json',
       camerasCount: (cameras['count'] as num?)?.toInt() ?? 0,
       statusUrl: status['url'] as String? ?? '/v1/status.json',
+      statusLiteUrl: lite is Map && lite['url'] is String && (lite['url'] as String).isNotEmpty
+          ? lite['url'] as String
+          : null,
       minAppVersion: json['min_app_version'] as String?,
       storeUrl: json['store_url'] as String?,
       playStoreUrl: json['play_store_url'] as String?,

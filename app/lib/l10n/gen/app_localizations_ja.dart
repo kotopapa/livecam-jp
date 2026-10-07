@@ -2762,6 +2762,28 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get waterLevelNote => '水位は参考情報です。避難の判断は自治体の避難情報に従ってください。';
+
+  @override
+  String get settingsDataSaver => '通信節約モード';
+
+  @override
+  String get settingsDataSaverSubtitle =>
+      '画像の自動更新や一覧のサムネイルを止めて通信量を抑えます。自動では、端末の省データ設定が有効なときや、特別警報の発表地域にいるときに入ります';
+
+  @override
+  String get settingsDataSaverAuto => '自動';
+
+  @override
+  String get settingsDataSaverOn => '常にオン';
+
+  @override
+  String get settingsDataSaverOff => '常にオフ';
+
+  @override
+  String get detailDataSaverChip => '通信節約中（自動更新オフ）';
+
+  @override
+  String get detailDataSaverTapToPlay => 'タップして再生';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -5561,4 +5583,26 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String get waterLevelNote =>
       '水（みず）の高（たか）さは参考（さんこう）です。逃（に）げるかどうかは、市（し）や町（まち）の避難情報（ひなんじょうほう）に従（したが）ってください。';
+
+  @override
+  String get settingsDataSaver => 'つうしん せつやく モード';
+
+  @override
+  String get settingsDataSaverSubtitle =>
+      'がぞうの じどう こうしんや いちらんの サムネイルを とめて、つうしんりょうを おさえます。「じどう」では、たんまつの しょうデータ せっていが ゆうこうな ときや、とくべつ けいほうが でている ちいきに いる ときに はいります';
+
+  @override
+  String get settingsDataSaverAuto => 'じどう';
+
+  @override
+  String get settingsDataSaverOn => 'いつも オン';
+
+  @override
+  String get settingsDataSaverOff => 'いつも オフ';
+
+  @override
+  String get detailDataSaverChip => 'つうしん せつやくちゅう（じどう こうしん オフ）';
+
+  @override
+  String get detailDataSaverTapToPlay => 'タップして さいせい';
 }

@@ -57,6 +57,18 @@ class NativeConfig {
     return _headers ?? const {};
   }
 
+  /// 端末の省データ設定が有効か（通信節約モードの自動判定用）。
+  /// iOS: 低データモード（NWPath.isConstrained）、Android: メーター制の回線で
+  /// データセーバーが有効。チャンネル未実装・失敗時は false。
+  /// 設定は途中で変わるのでキャッシュしない（呼び出し側が起動時・復帰時に呼ぶ）
+  Future<bool> isLowDataMode() async {
+    try {
+      return await _channel.invokeMethod<bool>('isLowDataMode') ?? false;
+    } catch (_) {
+      return false;
+    }
+  }
+
   /// テスト用: キャッシュを消す
   void resetForTest() {
     _apiKeyLoaded = false;

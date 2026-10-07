@@ -18,6 +18,9 @@ class CameraRepository {
 
   static const _statusMaxAge = Duration(minutes: 5);
 
+  /// 通信節約モード中の status 再取得間隔
+  static const statusMaxAgeSaver = Duration(minutes: 15);
+
   final ApiClient api;
   final CacheStore cache;
   final DateTime Function() _now;
@@ -37,7 +40,15 @@ class CameraRepository {
   }
 
   /// SPEC 8.2 の戦略で更新する。オフライン時は既存データを維持して false を返す
-  Future<bool> refresh() async {
+  Future<bool> refresh({bool dataSaver = false}) async {
+    final a = await refreshCatalog();
+    final b = await refreshStatus(dataSaver: dataSaver);
+    return a || b;
+  }
+
+  /// manifest と cameras だけを更新する。地図のピンはこれだけで出せるので、
+  /// 起動時は status（大きい）を待たずにここまでで先に画面へ反映する
+  Future<bool> refreshCatalog() async {
     var updated = false;
 
     // 1) manifest（常に取得。ETagで304なら転送なし）
@@ -66,12 +77,21 @@ class CameraRepository {
       }
     }
 
-    // 3) status（5分以上経過していれば）
+    return updated;
+  }
+
+  /// status を更新する（前回取得から5分以上、通信節約モードなら15分以上経過していれば）
+  Future<bool> refreshStatus({bool dataSaver = false}) async {
+    var updated = false;
+    final statusMaxAge = dataSaver ? statusMaxAgeSaver : _statusMaxAge;
     final sMeta = await cache.readMeta('status');
     final stale = sMeta?.savedAt == null ||
-        _now().difference(sMeta!.savedAt!) >= _statusMaxAge;
+        _now().difference(sMeta!.savedAt!) >= statusMaxAge;
     if (manifest != null && stale) {
-      final sResp = await api.getJson(manifest!.statusUrl, etag: sMeta?.etag);
+      // 軽量版があればそちらを取る（ok 以外だけなので転送量が小さい）
+      final sResp = await api.getJson(
+          manifest!.statusLiteUrl ?? manifest!.statusUrl,
+          etag: sMeta?.etag);
       if (sResp.result == ApiResult.success) {
         status = StatusFile.fromJson(sResp.json);
         await cache.write('status', sResp.body!, etag: sResp.etag);

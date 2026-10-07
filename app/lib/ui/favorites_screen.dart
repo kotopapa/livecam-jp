@@ -228,7 +228,7 @@ void _openDetail(BuildContext context, Camera camera, AppState app) {
 Widget _thumb(BuildContext context, AppState app, Camera camera, int tick,
     {BoxFit fit = BoxFit.cover, int cacheWidth = 216}) {
   final scheme = Theme.of(context).colorScheme;
-  final url = app.imageUrlFor(camera);
+  final url = app.thumbUrlFor(camera);
   if (url == null) {
     return Container(
       color: scheme.surfaceContainerHighest,

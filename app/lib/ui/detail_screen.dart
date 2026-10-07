@@ -18,6 +18,7 @@ import '../app_state.dart';
 import '../config.dart';
 import '../data/affiliate.dart';
 import '../data/analytics.dart';
+import '../data/data_saver.dart';
 import '../data/hotel_links.dart';
 import '../data/stockpile_products.dart';
 import '../l10n/l10n.dart';
@@ -194,6 +195,11 @@ class _DetailScreenState extends State<DetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // 通信節約モードの入り切り・status の更新に追従して描き直す
+    return ListenableBuilder(listenable: app, builder: (_, _) => _buildScaffold());
+  }
+
+  Widget _buildScaffold() {
     final st = app.repository.status[camera.id];
     final pageUrl = camera.sourcePageUrl ?? camera.fallbackUrl;
     final hotels = _showHotels ? _hotelSection() : null;
@@ -320,6 +326,12 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget _badges(CameraStatus? st) {
     final l10n = context.l10n;
     final chips = <Widget>[];
+    // 通信節約中は静止画の自動更新を止めている（手動の更新ボタンだけ）。
+    // 常時再生のライブ映像は自動再生しない旨が画面に出るので、ここは静止画だけ
+    if (app.dataSaverActive && !camera.isLiveVideo) {
+      chips.add(_InfoChip(
+          text: l10n.detailDataSaverChip, color: Colors.blueGrey));
+    }
     if (camera.coordAccuracy == CoordAccuracy.area) {
       chips.add(_InfoChip(
           text: l10n.detailPosRepresentative, color: uncertainBorderColor));
@@ -684,14 +696,21 @@ class _MediaView extends StatelessWidget {
         final liveId = chSt?.videoId;
         return AspectRatio(
           aspectRatio: 16 / 9,
-          child: _YoutubeEmbedView(
-              embedPath: liveId ?? 'live_stream?channel=${camera.feed.url}'),
+          child: _YoutubeGate(
+            app: app,
+            thumbnailVideoId: liveId,
+            embedPath: liveId ?? 'live_stream?channel=${camera.feed.url}',
+          ),
         );
       case FeedType.youtubeVideo:
         // 動画ID固定のIFrame埋め込み（1チャンネル多配信のライブ用）
         return AspectRatio(
           aspectRatio: 16 / 9,
-          child: _YoutubeEmbedView(embedPath: camera.feed.url),
+          child: _YoutubeGate(
+            app: app,
+            thumbnailVideoId: camera.feed.url,
+            embedPath: camera.feed.url,
+          ),
         );
       default:
         // iHighway(NEXCO)は個別ページが無いため、公式地図をアプリ内で開き
@@ -752,6 +771,62 @@ class _MediaView extends StatelessWidget {
           icon: isYoutube ? Icons.play_circle_outline : Icons.videocam_off,
         );
     }
+  }
+}
+
+/// YouTube の埋め込みの入口。通常はそのまま埋め込む。通信節約モード中は WebView を
+/// 自動で開かず、サムネイル＋再生ボタンを出してタップされたときだけ埋め込む
+/// （動画の自動再生が通信量の大半を占めるため）。一度埋め込んだら節約モードが
+/// 後から入っても止めない（再生中の映像を勝手に消さない）
+class _YoutubeGate extends StatefulWidget {
+  const _YoutubeGate(
+      {required this.app, required this.embedPath, this.thumbnailVideoId});
+
+  final AppState app;
+  final String embedPath;
+
+  /// サムネイルの動画ID。youtube_channel で配信IDが未解決なら null（無地）
+  final String? thumbnailVideoId;
+
+  @override
+  State<_YoutubeGate> createState() => _YoutubeGateState();
+}
+
+class _YoutubeGateState extends State<_YoutubeGate> {
+  bool _embedded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    if (!widget.app.dataSaverActive) _embedded = true;
+    if (_embedded) return _YoutubeEmbedView(embedPath: widget.embedPath);
+    final thumb = youtubeThumbnailUrl(widget.thumbnailVideoId);
+    return Material(
+      color: Colors.black,
+      child: InkWell(
+        key: const ValueKey('youtube_tap_to_play'),
+        onTap: () => setState(() => _embedded = true),
+        child: Stack(alignment: Alignment.center, children: [
+          if (thumb != null)
+            Positioned.fill(
+              child: Image.network(thumb,
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, _, _) => const SizedBox.shrink()),
+            ),
+          const Icon(Icons.play_circle_fill, size: 64, color: Colors.white),
+          Positioned(
+            left: 8,
+            right: 8,
+            bottom: 8,
+            child: Text(context.l10n.detailDataSaverTapToPlay,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    shadows: [Shadow(blurRadius: 4, color: Colors.black)])),
+          ),
+        ]),
+      ),
+    );
   }
 }
 

@@ -195,7 +195,7 @@ class _CameraTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final url = app.imageUrlFor(camera);
+    final url = app.thumbUrlFor(camera);
     return ListTile(
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(6),

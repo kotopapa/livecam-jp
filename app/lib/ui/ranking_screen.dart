@@ -168,7 +168,7 @@ class _RankingScreenState extends State<RankingScreen> {
                     separatorBuilder: (_, _) => const Divider(height: 1),
                     itemBuilder: (context, i) {
                       final (camera, label) = ranked[i];
-                      final url = widget.app.imageUrlFor(camera);
+                      final url = widget.app.thumbUrlFor(camera);
                       final scheme = Theme.of(context).colorScheme;
                       return ListTile(
                         leading: SizedBox(

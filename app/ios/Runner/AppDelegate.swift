@@ -4,6 +4,33 @@ import UserNotifications
 import FirebaseMessaging
 import GoogleMaps
 import MetricKit
+import Network
+
+/// 端末の「低データモード」（NWPath.isConstrained）を監視する。
+/// 通信節約モードの自動判定用（Dart 側の isLowDataMode）。起動直後は最初の更新が
+/// 届くまで false を返す（Dart 側は復帰時・回線変化時に取り直す）
+final class LowDataMonitor {
+  static let shared = LowDataMonitor()
+  private let monitor = NWPathMonitor()
+  private let lock = NSLock()
+  private var constrained = false
+
+  var isConstrained: Bool {
+    lock.lock(); defer { lock.unlock() }
+    return constrained
+  }
+
+  private init() {
+    constrained = monitor.currentPath.isConstrained
+    monitor.pathUpdateHandler = { [weak self] path in
+      guard let self = self else { return }
+      self.lock.lock()
+      self.constrained = path.isConstrained
+      self.lock.unlock()
+    }
+    monitor.start(queue: DispatchQueue(label: "livecam.lowdata"))
+  }
+}
 
 @main
 @objc class AppDelegate: FlutterAppDelegate, FlutterImplicitEngineDelegate,
@@ -43,6 +70,7 @@ import MetricKit
     // 新しいAPIキーは発行せず、地図表示に使っているGoogle Mapsキー(GMSApiKey)を
     // Dart側へ渡す。キーはバンドルIDで制限されているため、REST呼び出し用に
     // バンドルIDもヘッダー用に返す（lib/data/native_config.dart）
+    _ = LowDataMonitor.shared  // 起動時から低データモードの監視を始める
     let configChannel = FlutterMethodChannel(
       name: "livecam/native_config",
       binaryMessenger: engineBridge.applicationRegistrar.messenger())
@@ -52,6 +80,8 @@ import MetricKit
         result(Bundle.main.object(forInfoDictionaryKey: "GMSApiKey") as? String ?? "")
       case "getAppRestrictionHeaders":
         result(["X-Ios-Bundle-Identifier": Bundle.main.bundleIdentifier ?? ""])
+      case "isLowDataMode":
+        result(LowDataMonitor.shared.isConstrained)
       default:
         result(FlutterMethodNotImplemented)
       }

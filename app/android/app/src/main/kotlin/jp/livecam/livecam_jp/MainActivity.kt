@@ -1,6 +1,8 @@
 package jp.livecam.livecam_jp
 
+import android.content.Context
 import android.content.pm.PackageManager
+import android.net.ConnectivityManager
 import android.content.pm.Signature
 import android.os.Build
 import io.flutter.embedding.android.FlutterActivity
@@ -23,9 +25,25 @@ class MainActivity : FlutterActivity() {
                 when (call.method) {
                     "getGoogleMapsApiKey" -> result.success(googleMapsApiKey())
                     "getAppRestrictionHeaders" -> result.success(appRestrictionHeaders())
+                    "isLowDataMode" -> result.success(isLowDataMode())
                     else -> result.notImplemented()
                 }
             }
+    }
+
+    /**
+     * 端末のデータセーバーが有効か（通信節約モードの自動判定用）。
+     * メーター制の回線につながっていて、かつ「バックグラウンドデータの制限」が
+     * 有効（RESTRICT_BACKGROUND_STATUS_ENABLED）のときだけ true
+     */
+    private fun isLowDataMode(): Boolean {
+        return try {
+            val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            cm.isActiveNetworkMetered &&
+                cm.restrictBackgroundStatus == ConnectivityManager.RESTRICT_BACKGROUND_STATUS_ENABLED
+        } catch (e: Exception) {
+            false
+        }
     }
 
     private fun googleMapsApiKey(): String {

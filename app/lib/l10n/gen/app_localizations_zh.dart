@@ -2748,6 +2748,28 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get waterLevelNote => '水位仅供参考。是否避难请遵从当地政府的避难信息。';
+
+  @override
+  String get settingsDataSaver => '流量节省模式';
+
+  @override
+  String get settingsDataSaverSubtitle =>
+      '停止图像自动刷新和列表缩略图，以减少流量。选择“自动”时，在设备开启省流量设置或您位于特别警报发布地区时启用。';
+
+  @override
+  String get settingsDataSaverAuto => '自动';
+
+  @override
+  String get settingsDataSaverOn => '始终开启';
+
+  @override
+  String get settingsDataSaverOff => '始终关闭';
+
+  @override
+  String get detailDataSaverChip => '流量节省中（自动刷新已关闭）';
+
+  @override
+  String get detailDataSaverTapToPlay => '点按播放';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -5494,4 +5516,26 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get waterLevelNote => '水位僅供參考。是否避難請依照當地政府的避難資訊。';
+
+  @override
+  String get settingsDataSaver => '流量節省模式';
+
+  @override
+  String get settingsDataSaverSubtitle =>
+      '停止圖像自動更新與列表縮圖，以減少流量。選擇「自動」時，會在裝置開啟省流量設定或您位於特別警報發布地區時啟用。';
+
+  @override
+  String get settingsDataSaverAuto => '自動';
+
+  @override
+  String get settingsDataSaverOn => '一律開啟';
+
+  @override
+  String get settingsDataSaverOff => '一律關閉';
+
+  @override
+  String get detailDataSaverChip => '流量節省中（自動更新已關閉）';
+
+  @override
+  String get detailDataSaverTapToPlay => '點按播放';
 }

@@ -2862,4 +2862,26 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get waterLevelNote =>
       'Water levels are for reference only. Follow evacuation information from your municipality.';
+
+  @override
+  String get settingsDataSaver => 'Data saver mode';
+
+  @override
+  String get settingsDataSaverSubtitle =>
+      'Stops automatic image refresh and list thumbnails to reduce data use. In Auto, it turns on when your device\'s data saver is enabled or when you are in an area under a Special Warning.';
+
+  @override
+  String get settingsDataSaverAuto => 'Auto';
+
+  @override
+  String get settingsDataSaverOn => 'Always on';
+
+  @override
+  String get settingsDataSaverOff => 'Always off';
+
+  @override
+  String get detailDataSaverChip => 'Data saver on (auto-refresh off)';
+
+  @override
+  String get detailDataSaverTapToPlay => 'Tap to play';
 }

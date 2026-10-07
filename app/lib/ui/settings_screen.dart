@@ -16,6 +16,7 @@ import 'package:in_app_review/in_app_review.dart';
 
 import '../data/ad_free.dart';
 import '../data/analytics.dart';
+import '../data/data_saver.dart';
 import '../data/kjmap.dart';
 import '../app_state.dart';
 import '../config.dart';
@@ -561,6 +562,38 @@ class _SettingsScreenState extends State<SettingsScreen> {
               await app.setWifiOnly(v);
               if (mounted) setState(() {});
             },
+          ),
+          // 通信節約モード（自動／常にオン／常にオフ。data/data_saver.dart）
+          ListTile(
+            leading: const Icon(Icons.data_saver_on),
+            title: Text(l10n.settingsDataSaver),
+            subtitle: Text(l10n.settingsDataSaverSubtitle),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+            child: SizedBox(
+              width: double.infinity,
+              child: SegmentedButton<DataSaverMode>(
+                key: const ValueKey('data_saver_mode'),
+                showSelectedIcon: false,
+                segments: [
+                  ButtonSegment(
+                      value: DataSaverMode.auto,
+                      label: Text(l10n.settingsDataSaverAuto)),
+                  ButtonSegment(
+                      value: DataSaverMode.on,
+                      label: Text(l10n.settingsDataSaverOn)),
+                  ButtonSegment(
+                      value: DataSaverMode.off,
+                      label: Text(l10n.settingsDataSaverOff)),
+                ],
+                selected: {app.dataSaverMode},
+                onSelectionChanged: (v) async {
+                  await app.setDataSaverMode(v.first);
+                  if (mounted) setState(() {});
+                },
+              ),
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.delete_outline),

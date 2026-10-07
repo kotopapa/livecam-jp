@@ -9,6 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'config.dart';
 import 'data/camera_repository.dart';
+import 'data/data_saver.dart';
+import 'data/native_config.dart';
 import 'data/favorites_store.dart';
 import 'data/global_stats.dart';
 import 'data/review_prompter.dart';
@@ -297,6 +299,41 @@ class AppState extends ChangeNotifier {
       _onWifi = onWifi;
       notifyListeners();
     }
+    // 回線が変わると省データの該当可否も変わりうる（Android: メーター制か）
+    unawaited(refreshDeviceLowData());
+  }
+
+  // --- 通信節約モード（災害時の回線混雑対策。data/data_saver.dart） ---
+  static const _dataSaverKey = 'data_saver_mode';
+  DataSaverMode dataSaverMode = DataSaverMode.auto;
+
+  /// 端末の省データ設定（iOS 低データモード／Android データセーバー）。取れなければ false
+  bool deviceLowData = false;
+
+  /// 通信節約モードが有効か。画像の自動更新・一覧サムネイル・YouTube の自動再生・
+  /// 定期取得の間隔に効く。自動のときは、端末の省データ設定か、利用者が
+  /// 特別警報の発表エリアに居ること（`viewerInSpecialWarningArea`）で入る
+  bool get dataSaverActive => resolveDataSaver(
+      mode: dataSaverMode,
+      deviceLowData: deviceLowData,
+      inSpecialWarningArea: viewerInSpecialWarningArea);
+
+  Future<void> setDataSaverMode(DataSaverMode mode) async {
+    dataSaverMode = mode;
+    notifyListeners();
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_dataSaverKey, mode.wire);
+    } catch (_) {}
+  }
+
+  /// 端末の省データ設定を取り直す（起動時・復帰時・回線の種類が変わったとき）
+  Future<void> refreshDeviceLowData() async {
+    final v = await NativeConfig.instance.isLowDataMode();
+    if (v != deviceLowData) {
+      deviceLowData = v;
+      notifyListeners();
+    }
   }
 
   /// キャッシュを全削除して再取得する（設定画面用）
@@ -326,6 +363,10 @@ class AppState extends ChangeNotifier {
     return repository.imageUrlFor(c);
   }
 
+  /// 一覧のサムネイル用URL。通信節約モード中は null（アイコンの枠だけにする）。
+  /// 詳細画面の本表示は [imageUrlFor] を使う（節約中も手動更新・再生は通常どおり）
+  String? thumbUrlFor(Camera c) => dataSaverActive ? null : imageUrlFor(c);
+
   String? imageTimeFor(Camera c) {
     // 静止画はアプリが表示のたびに配信元から直接取得するため、監視システムの
     // 確認時刻(最大5時間前)を「取得時刻」として出すと誤解を招く。一覧では出さない
@@ -347,6 +388,11 @@ class AppState extends ChangeNotifier {
       // テスト環境等で取れない場合は強制アップデート判定をスキップ
     }
     await _loadFilterDefaults();
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      dataSaverMode = DataSaverMode.parse(prefs.getString(_dataSaverKey));
+    } catch (_) {}
+    unawaited(refreshDeviceLowData());
     // 実装前から登録済みのお気に入りを全国集計へ一度だけ反映
     await globalStats.backfillFavorites(favorites.ids);
     try {
@@ -368,9 +414,14 @@ class AppState extends ChangeNotifier {
     refreshing = true;
     notifyListeners();
     try {
-      await repository.refresh();
+      // 1) manifest と cameras まで取れた時点で先に画面へ反映する（地図のピンは
+      //    status を待たずに出せる。status は大きいので後から非同期に届ける）
+      await repository.refreshCatalog();
       notice = repository.manifest?.notice;
       _checkUpdateRequired();
+      notifyListeners();
+      // 2) status（届いたら再描画。キャッシュ済みの status は loadCached で使用済み）
+      await repository.refreshStatus(dataSaver: dataSaverActive);
     } finally {
       refreshing = false;
       notifyListeners();

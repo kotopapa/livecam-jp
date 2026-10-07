@@ -2870,4 +2870,27 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get waterLevelNote =>
       'Mực nước chỉ mang tính tham khảo. Hãy tuân theo thông tin sơ tán của chính quyền địa phương.';
+
+  @override
+  String get settingsDataSaver => 'Chế độ tiết kiệm dữ liệu';
+
+  @override
+  String get settingsDataSaverSubtitle =>
+      'Tắt tự động làm mới ảnh và ảnh thu nhỏ trong danh sách để giảm lưu lượng. Ở chế độ Tự động, chế độ này bật khi thiết bị đang bật tiết kiệm dữ liệu hoặc khi bạn ở khu vực có cảnh báo đặc biệt.';
+
+  @override
+  String get settingsDataSaverAuto => 'Tự động';
+
+  @override
+  String get settingsDataSaverOn => 'Luôn bật';
+
+  @override
+  String get settingsDataSaverOff => 'Luôn tắt';
+
+  @override
+  String get detailDataSaverChip =>
+      'Đang tiết kiệm dữ liệu (tắt tự động làm mới)';
+
+  @override
+  String get detailDataSaverTapToPlay => 'Nhấn để phát';
 }

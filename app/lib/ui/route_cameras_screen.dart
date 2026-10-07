@@ -57,7 +57,7 @@ class _RouteCamerasScreenState extends State<RouteCamerasScreen> {
                 }
                 final cc = widget.cameras[i];
                 final camera = cc.camera;
-                final url = app.imageUrlFor(camera);
+                final url = app.thumbUrlFor(camera);
                 final km = (cc.alongM / 1000).toStringAsFixed(1);
                 return ListTile(
                   leading: ClipRRect(

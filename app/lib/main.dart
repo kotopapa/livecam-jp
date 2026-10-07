@@ -135,6 +135,8 @@ class _LiveCamAppState extends State<LiveCamApp>
     // 復帰時にホーム画面ウィジェットの内容を最新化する
     if (state == AppLifecycleState.resumed && widget.app.initialized) {
       widget.app.syncWidgets();
+      // 端末の省データ設定は復帰のたびに取り直す（設定アプリで切り替えた直後など）
+      widget.app.refreshDeviceLowData();
     }
   }
 

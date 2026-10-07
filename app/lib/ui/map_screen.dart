@@ -16,6 +16,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../app_state.dart';
 import '../l10n/l10n.dart';
 import '../data/analytics.dart';
+import '../data/data_saver.dart';
 import '../data/facility_layers.dart';
 import '../data/geo.dart';
 import '../data/gmaps_tile_provider.dart';
@@ -251,7 +252,8 @@ class _MapScreenState extends State<MapScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) => _restorePosition());
     widget.app.navigationRequest.addListener(_onNavigationRequest);
     _loadSituation();
-    _situationTimer = Timer.periodic(const Duration(minutes: 10), (_) => _loadSituation());
+    _saverApplied = widget.app.dataSaverActive;
+    _restartSituationTimer();
     _loadPanelPrefs();
     NativeConfig.instance.getGoogleMapsApiKey().then((k) {
       if (mounted && k != null && k.isNotEmpty) {
@@ -365,7 +367,47 @@ class _MapScreenState extends State<MapScreen> {
     super.dispose();
   }
 
-  void _onDataChanged() => setState(() {});
+  void _onDataChanged() {
+    // 通信節約モードの入り切りで定期取得を切り替える（節約中はレイヤーの自動更新を止め、
+    // 「いま起きていること」は30分間隔にする）
+    final saver = widget.app.dataSaverActive;
+    if (saver != _saverApplied) {
+      _saverApplied = saver;
+      _restartSituationTimer();
+      _layerTimer?.cancel();
+      _layerTimer = null;
+      _startLayerTimer();
+    }
+    setState(() {});
+  }
+
+  /// 最後に定期取得へ反映した通信節約モードの状態
+  bool _saverApplied = false;
+
+  void _restartSituationTimer() {
+    _situationTimer?.cancel();
+    _situationTimer = Timer.periodic(
+        situationInterval(_saverApplied), (_) => _loadSituation());
+  }
+
+  /// 定期更新が要るレイヤー（ハザード・避難場所・防災拠点・昔の地図は静的なので不要）
+  bool get _layerNeedsTimer =>
+      _layer != MapLayerKind.none &&
+      !HazardLayers.isHazard(_layer) &&
+      _layer != MapLayerKind.shelters &&
+      _layer != MapLayerKind.facilities &&
+      _layer != MapLayerKind.oldMap;
+
+  /// レイヤーON中だけ定期更新（雨雲5分・震源/雨量/キキクル10分）。
+  /// 通信節約中は自動更新しない（レイヤーを切り替え直せば取り直す）
+  void _startLayerTimer() {
+    _layerTimer?.cancel();
+    _layerTimer = null;
+    if (widget.app.dataSaverActive || !_layerNeedsTimer) return;
+    _layerTimer = Timer.periodic(
+        Duration(minutes: _layer == MapLayerKind.rainRadar ? 5 : 10),
+        (_) => _refreshLayer());
+  }
 
   // --- 地図レイヤー（雨雲レーダー / 震源 / 24時間雨量 / キキクル / ハザードマップ / 避難場所。排他表示） ---
   MapLayerKind _layer = MapLayerKind.none;
@@ -498,10 +540,7 @@ class _MapScreenState extends State<MapScreen> {
     if (kind == MapLayerKind.typhoon && _typhoons.isNotEmpty && mounted) {
       _fitToTyphoons(_selectedTyphoons);
     }
-    // レイヤーON中だけ定期更新（雨雲5分・震源/雨量/キキクル10分）
-    _layerTimer = Timer.periodic(
-        Duration(minutes: kind == MapLayerKind.rainRadar ? 5 : 10),
-        (_) => _refreshLayer());
+    _startLayerTimer();
   }
 
   Future<void> _refreshLayer() async {
