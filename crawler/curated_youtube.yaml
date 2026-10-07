@@ -968,13 +968,13 @@ cameras:
 
   # 2026-10-07 配信枠更新: rTViPLUmYAc → V6muNB5biYE（旧枠が記録閲覧不可）
   - id: curated-shinjiko-nkt
-    name: 宍道湖（夕日名所）
+    name: 宍道湖 嫁ヶ島（夕日名所）
     operator: "日本海テレビ"
     video_id: "V6muNB5biYE"
     category: scenic
     prefecture: "32"
-    lat: 35.457
-    lng: 133.045
+    lat: 35.4568   # 2026-10-07 袖師町の湖岸へ修正（湖面に落ちていた）
+    lng: 133.05
 
   # 2026-08-31 退役: youtube_channel: チャンネルに現行ライブなし
   # - id: curated-inubosaki
