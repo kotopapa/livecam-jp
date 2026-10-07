@@ -110,6 +110,10 @@ class _WaterLevelCardState extends State<WaterLevelCard> {
                     series.latest!.stage.toStringAsFixed(2), _fmtTime(series.latest!.time)),
                 style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
+            if (series.isElevationBased(station?.levels ?? const {})) ...[
+              const SizedBox(height: 2),
+              Text(l10n.waterLevelElevationNote, style: muted),
+            ],
             const SizedBox(height: 6),
             Text(l10n.waterLevelLast48h, style: muted),
             const SizedBox(height: 4),

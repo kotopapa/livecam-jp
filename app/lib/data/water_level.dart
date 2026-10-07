@@ -147,6 +147,15 @@ class WaterLevelSeries {
   final List<WaterLevelPoint> forecast;
 
   bool get isEmpty => points.isEmpty && latest == null;
+
+  /// 標高（T.P.）で水位を表す観測所か。零点高からの水位が 30m を超えることは無いので、
+  /// 観測値か基準水位がそれ以上なら標高表示とみなす（札幌 石山は 104m 台。2026-10-07 利用者の問い合わせ）
+  bool isElevationBased(Map<String, double> levels) {
+    const limit = 30.0;
+    if ((latest?.stage ?? 0) > limit) return true;
+    if (points.any((p) => p.stage > limit)) return true;
+    return levels.values.any((v) => v > limit);
+  }
 }
 
 class WaterLevel {
@@ -171,11 +180,17 @@ class WaterLevel {
       if (v is! Map<String, dynamic>) continue;
       final t = parseTime(v['obsTime'] as String?);
       final stg = v['stg'];
-      if (t == null || stg is! num) continue;
+      if (t == null || stg is! num || !_valid(v)) continue;
       out.add(WaterLevelPoint(t, stg.toDouble()));
     }
     out.sort((a, b) => a.time.compareTo(b.time));
     return out;
+  }
+
+  /// 欠測・異常（stgCcd≠0。欠測は stg=0 で届くのでそのまま描くと 0m に落ちる）を除く
+  static bool _valid(Map<String, dynamic> v) {
+    final ccd = v['stgCcd'];
+    return ccd == null || ccd == 0;
   }
 
   /// 現況ファイル（10分値・最新値・予測）を読む
@@ -185,7 +200,7 @@ class WaterLevel {
     if (ov is Map<String, dynamic>) {
       final t = parseTime(ov['obsTime'] as String?);
       final stg = ov['stg'];
-      if (t != null && stg is num) latest = WaterLevelPoint(t, stg.toDouble());
+      if (t != null && stg is num && _valid(ov)) latest = WaterLevelPoint(t, stg.toDouble());
     }
     return WaterLevelSeries(
       points: _pointsOf(json['min10Values']),

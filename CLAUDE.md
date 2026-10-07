@@ -125,6 +125,7 @@ python site/build.py                            # 配信ファイル生成
 - **川の防災情報の内部ファイル**（`https://www.river.go.jp/kawabou/file/files/` 配下、SPA 内部なので構造変化に注意）: 観測所マスタ `master/obs/stg/<obsFcd>.json`（lat/lon・scamId・rsrvStg/warnStg/spclWarnStg/dngStg/fldStg）、現況 `tmlist/stg/YYYYMMDD/HHmm/<obsFcd>.json`（10分スロット。最新スロットは未生成のことがあるので3つさかのぼる。obsValue=最新、min10Values=10分値 新しい順 約8時間、predstgValues=予測）、過去 `tmlist/past/stg/YYYYMMDD/<obsFcd>.json`（時間値 約7日）、市町村の観測所一覧 `obslist/obs/twnlist/<twnCd>.json`（obsStg に rvrCd と基準水位、scam/cctv に scamId と rvrCd。座標は無い）、全市町村 `map/twn/twnarea.json`（twnCd = prefCd*1000 + JIS下3桁）
 - **水位の値はサーバーで収集せず端末が詳細画面を開いたときに直接取る**（同サイトは規約でツールによる定期収集を控えるよう求めている。対応付けの一度限りの取得も 1.2 秒間隔・控え付き）。時刻は "2026/10/04 22:30" の JST 壁時計を素の DateTime のまま扱う
 - 基準水位の各言語訳は気象庁多言語辞書に無いため独自訳（en は MLIT 英語サイトの用語）。色は 待機=緑 / 注意=黄 / 避難判断=橙 / 危険=紫（危険警報と同じ）
+- **欠測は `stg: 0`＋`stgCcd: 140` で届く**（値が null にならない）。`stgCcd≠0` の値は捨てる（2026-10-07 札幌 石山でグラフが 0m に落ちていた）。**水位を標高（T.P.）で表す観測所がある**（石山は 104m 台、基準水位も 107.5/108.3m。マスタの `zeroHigh` が 0/null で `altiStdCd` は判別に使えない）。観測値か基準水位が 30m を超えたら標高表示とみなし「標高（海面からの高さ）で表されます」の注記を出す（`WaterLevelSeries.isElevationBased`）。cm ではない
 - 見た目の確認はウィジェットテストで `FontLoader('Roboto')` に `/Library/Fonts/Arial Unicode.ttf` を読ませ、`ThemeData(fontFamily: 'Roboto')` で golden を書くと文字が出る（既定の Ahem フォントは四角になる。`tester.view.physicalSize` は devicePixelRatio で割った論理サイズになることに注意）
 
 ## 河川・ダムカメラ座標の見直し（2026-10-05追記）

@@ -57,6 +57,37 @@ void main() {
     expect(merged.map((p) => p.stage), [0.70, 0.75, 0.79, 0.80, 0.81]);
   });
 
+  test('欠測コード付きの値（stg=0, stgCcd=140）は描かない', () {
+    final cur = WaterLevel.parseCurrent({
+      'obsValue': {'stg': 0, 'stgCcd': 140, 'obsTime': '2026/10/06 16:00'},
+      'min10Values': [
+        {'stg': 104.24, 'stgCcd': 0, 'obsTime': '2026/10/06 17:00'},
+        {'stg': 0, 'stgCcd': 140, 'obsTime': '2026/10/06 16:00'},
+        {'stg': 104.5, 'obsTime': '2026/10/06 08:00'},
+      ],
+    });
+    expect(cur.latest, isNull);
+    expect(cur.points.map((p) => p.stage), [104.5, 104.24]);
+    final past = WaterLevel.parsePast({
+      'pastValues': [
+        {'stg': 0, 'stgCcd': 140, 'obsTime': '2026/10/06 12:00'},
+        {'stg': 104.3, 'stgCcd': 0, 'obsTime': '2026/10/06 07:00'},
+      ],
+    });
+    expect(past.map((p) => p.stage), [104.3]);
+  });
+
+  test('標高基準の観測所（札幌 石山 104m 台）を見分ける', () {
+    final ishiyama = WaterLevelSeries(
+        points: const [], latest: WaterLevelPoint(now, 104.18));
+    expect(ishiyama.isElevationBased(const {'rsrv': 107.5, 'warn': 108.3}), isTrue);
+    final higashi = WaterLevelSeries(
+        points: [WaterLevelPoint(now, 0.81)], latest: WaterLevelPoint(now, 0.81));
+    expect(higashi.isElevationBased(const {'warn': 2.0, 'dng': 3.7}), isFalse);
+    // 観測値が小さくても基準水位が標高なら標高表示
+    expect(higashi.isElevationBased(const {'warn': 263.6}), isTrue);
+  });
+
   test('最新スロットが無ければさかのぼり、過去ファイルと結合する', () async {
     final requested = <String>[];
     final client = MockClient((req) async {
