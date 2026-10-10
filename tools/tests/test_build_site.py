@@ -59,6 +59,11 @@ def test_delivery_version(monkeypatch):
     assert build.delivery_version("2026-10-07T12:34:56Z") == "2026-10-07"
     monkeypatch.setenv("URGENT_PUBLISH", "1")
     assert build.delivery_version("2026-10-07T12:34:56Z") == "2026-10-07T12:34:56Z"
+    # 台帳の urgent_version が現在の version と一致するあいだは完全な時刻（定期 publish でも戻らない）
+    monkeypatch.delenv("URGENT_PUBLISH", raising=False)
+    assert build.delivery_version("2026-10-07T12:34:56Z", "2026-10-07T12:34:56Z") == "2026-10-07T12:34:56Z"
+    # 台帳が次に変わると自動で日次に戻る
+    assert build.delivery_version("2026-10-07T15:00:00Z", "2026-10-07T12:34:56Z") == "2026-10-07"
 
 
 def test_status_lite():

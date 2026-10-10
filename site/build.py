@@ -60,11 +60,17 @@ def slim_camera(record: dict) -> dict:
     return {k: v for k, v in out.items() if not _is_empty(v)}
 
 
-def delivery_version(version: str | None) -> str | None:
+def delivery_version(version: str | None, urgent_version: str | None = None) -> str | None:
     """台帳の配信用版番号。アプリは版番号の一致だけで再取得を判断するので、
     UTC 時刻の日付部分だけにして再取得を1日1回にまとめる。
-    URGENT_PUBLISH=1 のときは完全な時刻のまま出す（緊急の即時配信）"""
-    if not version or os.environ.get("URGENT_PUBLISH") == "1":
+    緊急の即時配信は台帳の `urgent_version` に現在の version と同じ値を入れて push する
+    （tools/mark_urgent.py）。一致するあいだは完全な時刻で出すので、30分ごとの publish で
+    日付だけの版に戻ることがない（2026-10-10: URGENT_PUBLISH=1 の手動起動は2分後の
+    定期 publish に上書きされ、利用者に届かなかった）。台帳が次に変わると自動で日次に戻る。
+    URGENT_PUBLISH=1 は互換のため残す（その1回だけ）"""
+    if not version:
+        return version
+    if os.environ.get("URGENT_PUBLISH") == "1" or (urgent_version and urgent_version == version):
         return version
     return version.split("T", 1)[0]
 
@@ -121,7 +127,7 @@ def build() -> int:
         for rec in cameras_src.get("cameras", [])
         if rec.get("review", {}).get("status") == "approved"
     ]
-    version = delivery_version(cameras_src.get("version"))
+    version = delivery_version(cameras_src.get("version"), cameras_src.get("urgent_version"))
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "cameras").mkdir(exist_ok=True)
