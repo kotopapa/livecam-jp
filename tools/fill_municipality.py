@@ -24,6 +24,12 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+try:  # 国土地理院の証明書チェーンが素の urllib では検証できない環境がある（2026-10-11 に全件失敗）
+    import truststore
+    truststore.inject_into_ssl()
+except ImportError:
+    pass
+
 ROOT = Path(__file__).resolve().parent.parent
 CAMERAS = ROOT / "data" / "cameras.json"
 CACHE = ROOT / "data" / "municipality_geocache.json"
