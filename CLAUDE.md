@@ -292,6 +292,7 @@ python site/build.py                            # 配信ファイル生成
 - `flutter build apk/appbundle` は **core library desugaring 必須**（flutter_local_notifications v16+）。`android/app/build.gradle.kts` に `isCoreLibraryDesugaringEnabled = true` と `coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")` を設定済み
 - ホーム画面ウィジェットは iOS のみ（`WidgetBridge.supported`）。ATT（app_tracking_transparency）は Android では notSupported を返すだけで無害
 - 署名鍵 `android/upload-keystore.jks` と `key.properties` は gitignore 対象。紛失すると Play へ更新できなくなる
+- **macOS 27 には Rosetta が無く、Intel 版 Android Studio（同梱 Java が x86_64）があると `flutter build appbundle` どころか `flutter doctor` も落ちる**（Flutter ツールが Android Studio 検出時に同梱 `jbr/.../java -version` を必ず実行し「Bad CPU type」で toolExit。`flutter config --jdk-dir` を指定しても検出が先に走る）。2026-10-10 に Intel 版 2024.1 をゴミ箱へ移し `brew install --cask android-studio`（Apple Silicon 版 2026.2.1）に入れ替えて復旧。Gradle が使う JDK は `flutter config --jdk-dir` の Homebrew `openjdk@21`（ARM）に固定してある
 - **Android の FCM 通知はチャンネル `bosai` を起動時に作る**（`app/lib/data/fcm_channel.dart`、重要度「高」）。マニフェストの default_notification_channel_id に書いてあるだけでは作られず、予備の「その他」チャンネル（ポップアップなし）に落ちる。送信側（bosai_notify.py / push-test.yml）は `android.priority: high` と `android.notification.channel_id: bosai` を付ける
 
 ## 台風情報・指定河川洪水予報の知見（2026-09-16追記）
