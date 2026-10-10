@@ -1,5 +1,6 @@
 {
- "version": "2026-10-10T19:58:28Z",
+ "version": "2026-10-10T23:17:46Z",
+ "urgent_version": "2026-10-10T23:17:46Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -784543,9 +784544,9 @@
    "id": "mbc-ksn01",
    "name": "甲突川 岩崎橋",
    "name_kana": null,
-   "lat": 31.610449,
-   "lng": 130.529877,
-   "coord_accuracy": "approx",
+   "lat": 31.613515,
+   "lng": 130.528779,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46201",
@@ -784571,7 +784572,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=1)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=1)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 岩崎橋)（旧座標から355m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784580,9 +784581,9 @@
    "id": "mbc-ksn02",
    "name": "甲突川 宮山橋",
    "name_kana": null,
-   "lat": 31.69759,
-   "lng": 130.462158,
-   "coord_accuracy": "approx",
+   "lat": 31.687262,
+   "lng": 130.466489,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46201",
@@ -784608,7 +784609,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=2)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=2)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 宮山橋)（旧座標から1213m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784617,8 +784618,8 @@
    "id": "mbc-ksn03",
    "name": "新川 田上橋",
    "name_kana": null,
-   "lat": 31.577456,
-   "lng": 130.531067,
+   "lat": 31.576502,
+   "lng": 130.530055,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -784645,7 +784646,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=3)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=3)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(美尾崎橋)（旧座標から143m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784654,8 +784655,8 @@
    "id": "mbc-ksn04",
    "name": "稲荷川 一ツ橋",
    "name_kana": null,
-   "lat": 31.61051,
-   "lng": 130.561447,
+   "lat": 31.608895,
+   "lng": 130.564678,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -784682,7 +784683,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=4)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=4)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から355m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784691,9 +784692,9 @@
    "id": "mbc-ksn05",
    "name": "永田川 宮下橋",
    "name_kana": null,
-   "lat": 31.548416,
-   "lng": 130.511566,
-   "coord_accuracy": "approx",
+   "lat": 31.546371,
+   "lng": 130.499813,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46201",
@@ -784719,7 +784720,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=5)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=5)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 宮下橋)（旧座標から1138m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784728,9 +784729,9 @@
    "id": "mbc-ksn06",
    "name": "万之瀬川 万之瀬橋",
    "name_kana": null,
-   "lat": 31.404226,
-   "lng": 130.323669,
-   "coord_accuracy": "approx",
+   "lat": 31.427912,
+   "lng": 130.326192,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46220",
@@ -784756,7 +784757,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=6)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=6)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 万之瀬橋)（旧座標から2629m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784765,9 +784766,9 @@
    "id": "mbc-ksn07",
    "name": "加世田川 日新橋",
    "name_kana": null,
-   "lat": 31.404226,
-   "lng": 130.323669,
-   "coord_accuracy": "approx",
+   "lat": 31.408742,
+   "lng": 130.315562,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46220",
@@ -784793,7 +784794,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=7)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=7)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 日新橋)（旧座標から918m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784802,8 +784803,8 @@
    "id": "mbc-ksn08",
    "name": "万之瀬川 大渡橋",
    "name_kana": null,
-   "lat": 31.391857,
-   "lng": 130.370712,
+   "lat": 31.392574,
+   "lng": 130.375468,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -784830,7 +784831,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=8)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=8)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(国道225号)（旧座標から459m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784839,8 +784840,8 @@
    "id": "mbc-ksn09",
    "name": "神之川 荒瀬橋",
    "name_kana": null,
-   "lat": 31.655741,
-   "lng": 130.416,
+   "lat": 31.645847,
+   "lng": 130.417905,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -784867,7 +784868,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=9)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=9)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から1108m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784876,8 +784877,8 @@
    "id": "mbc-ksn10",
    "name": "平佐川 草原橋",
    "name_kana": null,
-   "lat": 31.815609,
-   "lng": 130.312897,
+   "lat": 31.811902,
+   "lng": 130.311004,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -784904,7 +784905,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=10)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=10)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(川内郡山線旧道)（旧座標から447m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784913,9 +784914,9 @@
    "id": "mbc-ksn101",
    "name": "脇田川 広木橋",
    "name_kana": null,
-   "lat": 31.564325,
-   "lng": 130.522278,
-   "coord_accuracy": "approx",
+   "lat": 31.560176,
+   "lng": 130.52038,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46201",
@@ -784941,7 +784942,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=101)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=101)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 広木橋)（旧座標から493m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784950,8 +784951,8 @@
    "id": "mbc-ksn102",
    "name": "和田川 和田橋",
    "name_kana": null,
-   "lat": 31.512924,
-   "lng": 130.511322,
+   "lat": 31.511211,
+   "lng": 130.512889,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -784978,7 +784979,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=102)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=102)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から241m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -784987,9 +784988,9 @@
    "id": "mbc-ksn103",
    "name": "思川 高崎橋",
    "name_kana": null,
-   "lat": 31.738289,
-   "lng": 130.540466,
-   "coord_accuracy": "approx",
+   "lat": 31.737959,
+   "lng": 130.565814,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46201",
@@ -785015,7 +785016,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=103)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=103)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 高崎橋)（旧座標から2400m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785024,8 +785025,8 @@
    "id": "mbc-ksn104",
    "name": "五反田川 麓大橋",
    "name_kana": null,
-   "lat": 31.721218,
-   "lng": 130.293045,
+   "lat": 31.727422,
+   "lng": 130.291265,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785052,7 +785053,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=104)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=104)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から706m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785061,8 +785062,8 @@
    "id": "mbc-ksn105",
    "name": "隈之城川 佛生橋",
    "name_kana": null,
-   "lat": 31.783852,
-   "lng": 130.320099,
+   "lat": 31.792407,
+   "lng": 130.314439,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785089,7 +785090,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=105)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=105)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から1087m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785098,8 +785099,8 @@
    "id": "mbc-ksn106",
    "name": "大浦川 磯間橋",
    "name_kana": null,
-   "lat": 31.367495,
-   "lng": 130.23587,
+   "lat": 31.369608,
+   "lng": 130.234916,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785126,7 +785127,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=106)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=106)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(久玉橋)（旧座標から251m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785135,9 +785136,9 @@
    "id": "mbc-ksn107",
    "name": "天降川 天降川橋",
    "name_kana": null,
-   "lat": 31.741079,
-   "lng": 130.741089,
-   "coord_accuracy": "approx",
+   "lat": 31.743364,
+   "lng": 130.748456,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46218",
@@ -785163,7 +785164,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=107)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=107)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 天降川橋)（旧座標から742m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785172,8 +785173,8 @@
    "id": "mbc-ksn108",
    "name": "網掛川 竹下橋",
    "name_kana": null,
-   "lat": 31.741457,
-   "lng": 130.659851,
+   "lat": 31.74086,
+   "lng": 130.658217,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785200,7 +785201,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=108)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=108)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から168m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785209,8 +785210,8 @@
    "id": "mbc-ksn109",
    "name": "手籠川 鏡橋",
    "name_kana": null,
-   "lat": 31.747625,
-   "lng": 130.763947,
+   "lat": 31.749211,
+   "lng": 130.763514,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785237,7 +785238,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=109)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=109)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(日当山敷根線)（旧座標から180m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785246,9 +785247,9 @@
    "id": "mbc-ksn11",
    "name": "米之津川 春日橋",
    "name_kana": null,
-   "lat": 32.088696,
-   "lng": 130.354187,
-   "coord_accuracy": "approx",
+   "lat": 32.086333,
+   "lng": 130.353568,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46208",
@@ -785274,7 +785275,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=11)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=11)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 4 地理院地名検索(春日橋)（旧座標から268m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785283,8 +785284,8 @@
    "id": "mbc-ksn110",
    "name": "神ノ川 神之川・水流川合流点付近",
    "name_kana": null,
-   "lat": 31.276079,
-   "lng": 130.827118,
+   "lat": 31.266724,
+   "lng": 130.808954,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785311,7 +785312,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=110)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=110)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 3 流路上の最近点（旧座標から2014m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785320,9 +785321,9 @@
    "id": "mbc-ksn111",
    "name": "菱田川 菱田橋",
    "name_kana": null,
-   "lat": 31.48245,
-   "lng": 131.047577,
-   "coord_accuracy": "approx",
+   "lat": 31.447678,
+   "lng": 131.052438,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46221",
@@ -785348,7 +785349,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=111)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=111)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 4 地理院地名検索(菱田橋)（旧座標から3871m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785357,8 +785358,8 @@
    "id": "mbc-ksn112",
    "name": "前川 石踊橋",
    "name_kana": null,
-   "lat": 31.494001,
-   "lng": 131.131424,
+   "lat": 31.498232,
+   "lng": 131.126153,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785385,7 +785386,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=112)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=112)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 3 流路上の最近点（旧座標から685m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785431,8 +785432,8 @@
    "id": "mbc-ksn114",
    "name": "安房川 安房川橋",
    "name_kana": null,
-   "lat": 30.305077,
-   "lng": 130.649551,
+   "lat": 30.312903,
+   "lng": 130.653712,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785459,7 +785460,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=114)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=114)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から953m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785468,8 +785469,8 @@
    "id": "mbc-ksn115",
    "name": "新川 平田中央橋",
    "name_kana": null,
-   "lat": 28.35508,
-   "lng": 129.499817,
+   "lat": 28.35827,
+   "lng": 129.4982,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785496,7 +785497,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=115)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=115)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から387m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785505,8 +785506,8 @@
    "id": "mbc-ksn116",
    "name": "大瀬川 第３大瀬橋",
    "name_kana": null,
-   "lat": 27.741297,
-   "lng": 128.991821,
+   "lat": 27.731716,
+   "lng": 128.993986,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785533,7 +785534,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=116)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=116)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から1080m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785579,9 +785580,9 @@
    "id": "mbc-ksn12",
    "name": "天降川 日当山橋",
    "name_kana": null,
-   "lat": 31.769297,
-   "lng": 130.746796,
-   "coord_accuracy": "approx",
+   "lat": 31.770359,
+   "lng": 130.753504,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46218",
@@ -785607,7 +785608,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=12)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=12)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 4 地理院地名検索(日当山橋)（旧座標から646m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785616,8 +785617,8 @@
    "id": "mbc-ksn13",
    "name": "木之下川 JR橋",
    "name_kana": null,
-   "lat": 31.500528,
-   "lng": 130.524323,
+   "lat": 31.515438,
+   "lng": 130.515611,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785644,7 +785645,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=13)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=13)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(第1汐見橋)（旧座標から1844m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785653,9 +785654,9 @@
    "id": "mbc-ksn14",
    "name": "花渡川 神浦橋",
    "name_kana": null,
-   "lat": 31.272837,
-   "lng": 130.29689,
-   "coord_accuracy": "approx",
+   "lat": 31.29571,
+   "lng": 130.283541,
+   "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
    "municipality": "46204",
@@ -785681,7 +785682,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=14)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=14)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 1 橋(OSM 新神浦橋)（旧座標から2829m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785690,8 +785691,8 @@
    "id": "mbc-ksn15",
    "name": "二反田川 二月田橋",
    "name_kana": null,
-   "lat": 31.245895,
-   "lng": 130.629745,
+   "lat": 31.25524,
+   "lng": 130.633264,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785718,7 +785719,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=15)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=15)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から1086m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785727,8 +785728,8 @@
    "id": "mbc-ksn16",
    "name": "本城川 今川原橋",
    "name_kana": null,
-   "lat": 31.492752,
-   "lng": 130.700912,
+   "lat": 31.485964,
+   "lng": 130.69732,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785755,7 +785756,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=16)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=16)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(国道220号)（旧座標から824m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785764,8 +785765,8 @@
    "id": "mbc-ksn17",
    "name": "雄川 北之口橋",
    "name_kana": null,
-   "lat": 31.217297,
-   "lng": 130.768646,
+   "lat": 31.215203,
+   "lng": 130.76851,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785792,7 +785793,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=17)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=17)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(根占港線)（旧座標から232m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -785801,8 +785802,8 @@
    "id": "mbc-ksn18",
    "name": "別府川 友徳橋",
    "name_kana": null,
-   "lat": 31.75161,
-   "lng": 130.585815,
+   "lat": 31.757709,
+   "lng": 130.592144,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -785829,7 +785830,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=18)の静止画に変更（MBC経由の誘導型から。分類 scenic→river）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-25 MBCの二次利用お断り明記に従い誘導型へ変更 / 2026-10-11 配信元を県の河川砂防情報システム(sn=18)の静止画に変更（MBC経由の誘導型から。分類 scenic→river） / 2026-10-11 座標見直し: 2 流路×道路交点(川内加治木線)（旧座標から902m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-11"
@@ -919300,8 +919301,8 @@
    "id": "curated-still-kagoshima-river-117",
    "name": "余多川 天竜橋",
    "name_kana": null,
-   "lat": 27.3611345,
-   "lng": 128.6118166,
+   "lat": 27.362655,
+   "lng": 128.611285,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -919329,17 +919330,17 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-10-11",
-    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段） / 2026-10-11 座標見直し: 2 流路×道路交点(知名沖永良部空港線)（旧座標から176m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-10-10",
-   "last_updated": "2026-10-10"
+   "last_updated": "2026-10-11"
   },
   {
    "id": "curated-still-kagoshima-river-118",
    "name": "春田川 太陽橋",
    "name_kana": null,
-   "lat": 31.8194093,
-   "lng": 130.3158971,
+   "lat": 31.817837,
+   "lng": 130.315665,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -919367,17 +919368,17 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-10-11",
-    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から175m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-10-10",
-   "last_updated": "2026-10-10"
+   "last_updated": "2026-10-11"
   },
   {
    "id": "curated-still-kagoshima-river-119",
    "name": "高城川 妹背橋",
    "name_kana": null,
-   "lat": 31.85126,
-   "lng": 130.29068,
+   "lat": 31.852508,
+   "lng": 130.29242,
    "coord_accuracy": "exact",
    "category": "river",
    "prefecture": "46",
@@ -919405,10 +919406,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-10-11",
-    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から215m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-10-10",
-   "last_updated": "2026-10-10"
+   "last_updated": "2026-10-11"
   },
   {
    "id": "curated-still-kagoshima-river-120",
@@ -919452,8 +919453,8 @@
    "id": "curated-still-kagoshima-river-121",
    "name": "前川 下手橋",
    "name_kana": null,
-   "lat": 31.943996,
-   "lng": 130.497206,
+   "lat": 31.94536,
+   "lng": 130.49577,
    "coord_accuracy": "approx",
    "category": "river",
    "prefecture": "46",
@@ -919481,10 +919482,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-10-11",
-    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段） / 2026-10-11 座標見直し: 2 流路×道路交点(無名道路)（旧座標から203m、利用者報告「川の上に無い」）"
    },
    "first_seen": "2026-10-10",
-   "last_updated": "2026-10-10"
+   "last_updated": "2026-10-11"
   },
   {
    "id": "curated-still-kagoshima-river-122",
