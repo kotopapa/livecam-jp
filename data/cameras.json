@@ -1,6 +1,5 @@
 {
- "version": "2026-10-10T14:22:35Z",
- "urgent_version": "2026-10-10T14:22:35Z",
+ "version": "2026-10-10T19:57:32Z",
  "cameras": [
   {
    "id": "curated-abashiri-birds",
@@ -238434,7 +238433,7 @@
    "category": "other",
    "prefecture": "42",
    "country": null,
-   "municipality": null,
+   "municipality": "42202",
    "river_or_route": null,
    "feed": {
     "type": "web_page",
@@ -919258,6 +919257,728 @@
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-08-31"
+  },
+  {
+   "id": "curated-still-kagoshima-river-113",
+   "name": "甲女川 榕城橋",
+   "name_kana": null,
+   "lat": 30.726525,
+   "lng": 130.995679,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "甲女川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=113",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-117",
+   "name": "余多川 天竜橋",
+   "name_kana": null,
+   "lat": 27.3611345,
+   "lng": 128.6118166,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "余多川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=117",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-118",
+   "name": "春田川 太陽橋",
+   "name_kana": null,
+   "lat": 31.8194093,
+   "lng": 130.3158971,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "春田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=118",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-119",
+   "name": "高城川 妹背橋",
+   "name_kana": null,
+   "lat": 31.85126,
+   "lng": 130.29068,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "高城川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=119",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-120",
+   "name": "泊野川 新中間橋",
+   "name_kana": null,
+   "lat": 31.900402,
+   "lng": 130.432529,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "泊野川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=120",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-121",
+   "name": "前川 下手橋",
+   "name_kana": null,
+   "lat": 31.943996,
+   "lng": 130.497206,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "前川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=121",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-122",
+   "name": "宇曽ノ木川 川原田橋",
+   "name_kana": null,
+   "lat": 31.792176,
+   "lng": 130.657722,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "宇曽ノ木川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=122",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-123",
+   "name": "長谷川 神之門橋",
+   "name_kana": null,
+   "lat": 31.4360366,
+   "lng": 130.3791445,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "長谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=123",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-124",
+   "name": "串良川 堂園橋",
+   "name_kana": null,
+   "lat": 31.4203663,
+   "lng": 130.9527827,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "串良川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=124",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-125",
+   "name": "串良川 重田橋",
+   "name_kana": null,
+   "lat": 31.390795,
+   "lng": 130.961266,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "串良川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=125",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-126",
+   "name": "山田川 下名橋",
+   "name_kana": null,
+   "lat": 31.7669622,
+   "lng": 130.6122256,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "山田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=126",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-127",
+   "name": "網掛川 網掛橋",
+   "name_kana": null,
+   "lat": 31.7357292,
+   "lng": 130.6637376,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "網掛川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=127",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-128",
+   "name": "網掛川 小山田橋",
+   "name_kana": null,
+   "lat": 31.7372186,
+   "lng": 130.6627143,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "網掛川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=128",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-129",
+   "name": "角之下川 神田橋",
+   "name_kana": null,
+   "lat": 31.7508064,
+   "lng": 130.7355369,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "角之下川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=129",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-130",
+   "name": "菱田川 前田橋",
+   "name_kana": null,
+   "lat": 31.5965957,
+   "lng": 130.9965494,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "菱田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=130",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-131",
+   "name": "加世田川 内山田橋",
+   "name_kana": null,
+   "lat": 31.3920456,
+   "lng": 130.3144588,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "加世田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=131",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-184",
+   "name": "新川 大峯橋",
+   "name_kana": null,
+   "lat": 31.5865306,
+   "lng": 130.5114824,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=184",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-188",
+   "name": "万之瀬川 両添橋",
+   "name_kana": null,
+   "lat": 31.398274,
+   "lng": 130.4074051,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "万之瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=188",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-still-kagoshima-river-191",
+   "name": "大和川 瀬佳橋",
+   "name_kana": null,
+   "lat": 28.3572552,
+   "lng": 129.3950286,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "大和川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=191",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+   },
+   "operator": "鹿児島県",
+   "source": {
+    "page_url": "https://www.pref.kagoshima.jp/bosai/saigai/live.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鹿児島県"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-11",
+    "note": "bulk: license=unknown prefs=['46'] operator=鹿児島県 category=river feed_type=still_image with_coords=True / 2026-10-11 鹿児島県河川砂防情報システムの未収録分（ユーザー判断で19台全部採用。座標の根拠は note 前段）"
+   },
+   "first_seen": "2026-10-10",
+   "last_updated": "2026-10-10"
   }
  ]
 }

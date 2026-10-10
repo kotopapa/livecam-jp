@@ -45393,3 +45393,272 @@ cameras:
     image_url: "https://cty-cns.jp/livecamera/img/cns/04_shiroko-gyokou/shiroko-gyokou.jpg"
     page_url: "https://community.cty-cns.jp/livecamera/suzuka"
     note: "2026-09-30 全国多角調査 再確認(recheck_b)。2026-09-30 11:10〜11:17 JST 3回取得: image/jpeg 35KB、Last-Modified 02:12:00→02:16:01 UTC（更新確認）。ページ表記「1分ごとに更新」。一覧は JS（assets/js/suzuka.js の markersData）から取得。サイト規約: フッターに「画像等の無断転載・無断使用を固く禁じます」「営利目的の無断転載・無断利用を禁止」＝CATVの一般的な転載禁止条項（ユーザー決定: 出典明記で直接表示可。台帳の既存4台と同じ扱い）。座標はページの地図がSVG上の画素で緯度経度が無いため地名からの推定"
+
+
+  # ---- 鹿児島県河川砂防情報システム 河川監視カメラ(台帳未収録19台) 2026-10-10 ----
+
+  - id: curated-still-kagoshima-river-113
+    name: "甲女川 榕城橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "甲女川"
+    lat: 30.726525
+    lng: 130.995679
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=113"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "甲女川水系 西之表市甲女町。座標: 西之表市甲女町の位置に最も近い甲女川(OSM)の流路上。橋名の一致は無し"
+
+  - id: curated-still-kagoshima-river-117
+    name: "余多川 天竜橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "余多川"
+    lat: 27.3611345
+    lng: 128.6118166
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=117"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "余多川水系 知名町余多。座標: 知名町余多の位置に最も近い余多川(OSM)の流路上。橋名の一致は無し"
+
+  - id: curated-still-kagoshima-river-118
+    name: "春田川 太陽橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "春田川"
+    lat: 31.8194093
+    lng: 130.3158971
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=118"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "春田川水系 薩摩川内市鳥追町。座標: 薩摩川内市鳥追町付近の春田川(OSM)の流路上。橋名の一致は無し"
+
+  - id: curated-still-kagoshima-river-119
+    name: "高城川 妹背橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "高城川"
+    lat: 31.85126
+    lng: 130.29068
+    accuracy: exact
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=119"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "高城川水系 薩摩川内市高城町。座標: 国土地理院地名検索で橋名一致(妹背橋、薩摩川内市高城町)"
+
+  - id: curated-still-kagoshima-river-120
+    name: "泊野川 新中間橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "泊野川"
+    lat: 31.900402
+    lng: 130.432529
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=120"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "泊野川水系 薩摩郡さつま町。座標: さつま町の泊野川(OSM)の流路上(町中心から最寄り)。橋名・町内の位置は未確認で数km誤差あり"
+
+  - id: curated-still-kagoshima-river-121
+    name: "前川 下手橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "前川"
+    lat: 31.943996
+    lng: 130.497206
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=121"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "前川水系 薩摩郡さつま町。座標: さつま町の前川(OSM)の流路上(町中心から最寄り)。橋名・町内の位置は未確認で数km誤差あり"
+
+  - id: curated-still-kagoshima-river-122
+    name: "宇曽ノ木川 川原田橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "宇曽ノ木川"
+    lat: 31.792176
+    lng: 130.657722
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=122"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "宇曽ノ木川水系 姶良市加治木町辺川。座標: 加治木町辺川の位置に最も近い宇曽ノ木川(OSM)の流路上。橋名の一致は無し"
+
+  - id: curated-still-kagoshima-river-123
+    name: "長谷川 神之門橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "長谷川"
+    lat: 31.4360366
+    lng: 130.3791445
+    accuracy: exact
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=123"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "長谷川水系 南さつま市金峰町。座標: OSM橋名一致(神之門橋、南さつま市)"
+
+  - id: curated-still-kagoshima-river-124
+    name: "串良川 堂園橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "串良川"
+    lat: 31.4203663
+    lng: 130.9527827
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=124"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "串良川水系 鹿屋市串良町。座標: 鹿屋市串良町内の串良川(OSM)の流路上。堂園橋の位置は未確認で数km誤差あり"
+
+  - id: curated-still-kagoshima-river-125
+    name: "串良川 重田橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "串良川"
+    lat: 31.390795
+    lng: 130.961266
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=125"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "串良川水系 鹿屋市串良町。座標: 串良町の位置に最も近い串良川(OSM)の流路上。橋名の一致は無し"
+
+  - id: curated-still-kagoshima-river-126
+    name: "山田川 下名橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "山田川"
+    lat: 31.7669622
+    lng: 130.6122256
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=126"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "山田川水系 姶良市下名。座標: 国土地理院の姶良市下名の位置に最も近い山田川(OSM)の流路上。橋名の一致は無し"
+
+  - id: curated-still-kagoshima-river-127
+    name: "網掛川 網掛橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "網掛川"
+    lat: 31.7357292
+    lng: 130.6637376
+    accuracy: exact
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=127"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "網掛川水系 姶良市加治木町。座標: OSM橋名一致(網掛橋、姶良市加治木町)"
+
+  - id: curated-still-kagoshima-river-128
+    name: "網掛川 小山田橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "網掛川"
+    lat: 31.7372186
+    lng: 130.6627143
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=128"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "網掛川水系 姶良市加治木町。座標: 加治木町の位置に最も近い網掛川(OSM)の流路上。橋名の一致は無し"
+
+  - id: curated-still-kagoshima-river-129
+    name: "角之下川 神田橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "角之下川"
+    lat: 31.7508064
+    lng: 130.7355369
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=129"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "角之下川水系 霧島市隼人町。座標: 霧島市隼人町付近の角之下川(OSM)の流路上。橋名・町内の位置は未確認で数百m〜数km誤差あり"
+
+  - id: curated-still-kagoshima-river-130
+    name: "菱田川 前田橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "菱田川"
+    lat: 31.5965957
+    lng: 130.9965494
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=130"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "菱田川水系 曽於市大隅町。座標: 大隅町の位置に最も近い菱田川(OSM)の流路上。橋名の一致は無し"
+
+  - id: curated-still-kagoshima-river-131
+    name: "加世田川 内山田橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "加世田川"
+    lat: 31.3920456
+    lng: 130.3144588
+    accuracy: exact
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=131"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "加世田川水系 南さつま市加世田内山田。座標: OSM橋名一致(内山田橋、南さつま市加世田内山田)"
+
+  - id: curated-still-kagoshima-river-184
+    name: "新川 大峯橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "新川"
+    lat: 31.5865306
+    lng: 130.5114824
+    accuracy: exact
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=184"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "新川水系 鹿児島市田上8丁目。座標: OSM橋名一致(大峯橋、鹿児島市田上八丁目)"
+
+  - id: curated-still-kagoshima-river-188
+    name: "万之瀬川 両添橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "万之瀬川"
+    lat: 31.398274
+    lng: 130.4074051
+    accuracy: exact
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=188"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "万之瀬川水系 南九州市川辺町。座標: OSM橋名一致(両添橋、南九州市川辺町)"
+
+  - id: curated-still-kagoshima-river-191
+    name: "大和川 瀬佳橋"
+    operator: "鹿児島県"
+    category: river
+    prefecture: "46"
+    river_or_route: "大和川"
+    lat: 28.3572552
+    lng: 129.3950286
+    accuracy: approx
+    image_url: "http://www3.doboku-bousai.pref.kagoshima.jp/bousai/servlet/bousaiweb.servletBousaiITVCameraImage?nw=1&sn=191"
+    page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
+    attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
+    note: "大和川水系 大和村大字思勝。座標: 大和村思勝の位置に最も近い大和川(OSM)の流路上。橋名の一致は無し"
