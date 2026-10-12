@@ -121,20 +121,26 @@ class _WaveForecastCardState extends State<WaveForecastCard> {
           1 => l10n.waveDayTomorrow,
           _ => l10n.waveDayAfter,
         };
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      for (final d in f.days)
-        Padding(
-          padding: const EdgeInsets.only(bottom: 4),
-          child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            SizedBox(
-              width: 72,
+    // 見出し列は最も長い言語の語（英語の Tomorrow 等）に合わせて自動の幅＋余白
+    // （固定 72px では英語で見出しと値が詰まった。2026-10-12 実機確認）
+    return Table(
+      columnWidths: const {0: IntrinsicColumnWidth(), 1: FlexColumnWidth()},
+      defaultVerticalAlignment: TableCellVerticalAlignment.top,
+      children: [
+        for (final d in f.days)
+          TableRow(children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 12, bottom: 4),
               child: Text(label(d.dayOffset),
                   style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
             ),
-            Expanded(child: Text(dayText(l10n, d), style: const TextStyle(fontSize: 14))),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 4),
+              child: Text(dayText(l10n, d), style: const TextStyle(fontSize: 14)),
+            ),
           ]),
-        ),
-    ]);
+      ],
+    );
   }
 
   Widget _tide(AppLocalizations l10n, TideInfo t, TextStyle muted, {required bool gap}) {
