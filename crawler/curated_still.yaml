@@ -26076,16 +26076,17 @@ cameras:
   #   image_url: https://cam.river.go.jp/cam/now/111009002.jpg
   #   page_url: https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=111009002
   #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 熊本県熊本市中央区水前寺公園'
-  - id: curated-still-lcdb-a38a6486
-    name: 瀬の本高原ホテル阿蘇雲海
-    operator: 阿蘇広域観光連盟
-    category: scenic
-    prefecture: '43'
-    lat: 33.071232
-    lng: 131.178104
-    image_url: https://visitaso.com/livecam/020/images/image12.jpg
-    page_url: https://visitaso.com/ja/unkai/unkai_sanaihotel/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 熊本県南小国町満願寺5644'
+  # 2026-10-12 退役: 2026-06-02 から画像が更新されていない
+  # - id: curated-still-lcdb-a38a6486
+  #   name: 瀬の本高原ホテル阿蘇雲海
+  #   operator: 阿蘇広域観光連盟
+  #   category: scenic
+  #   prefecture: '43'
+  #   lat: 33.071232
+  #   lng: 131.178104
+  #   image_url: https://visitaso.com/livecam/020/images/image12.jpg
+  #   page_url: https://visitaso.com/ja/unkai/unkai_sanaihotel/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 熊本県南小国町満願寺5644'
   - id: curated-still-lcdb-f1ef1d04
     name: 京都縦貫自動車道綾部ジャンクション
     operator: 京都府道路公社
