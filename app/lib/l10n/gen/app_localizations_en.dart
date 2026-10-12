@@ -2891,4 +2891,65 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get detailDataSaverTapToPlay => 'Tap to play';
+
+  @override
+  String waveTitle(String area) {
+    return 'Wave forecast ($area)';
+  }
+
+  @override
+  String get waveDayToday => 'Today';
+
+  @override
+  String get waveDayTomorrow => 'Tomorrow';
+
+  @override
+  String get waveDayAfter => 'Day after';
+
+  @override
+  String waveMeters(String value) {
+    return '$value m';
+  }
+
+  @override
+  String waveUnder(String value) {
+    return 'Under $value m';
+  }
+
+  @override
+  String waveThen(String a, String b) {
+    return '$a → $b';
+  }
+
+  @override
+  String waveSometimes(String a, String b) {
+    return '$a, at times $b';
+  }
+
+  @override
+  String waveTemporarily(String a, String b) {
+    return '$a, briefly $b';
+  }
+
+  @override
+  String waveSwell(String text) {
+    return '$text (with sea swell)';
+  }
+
+  @override
+  String waveException(String place, String text) {
+    return 'However, $place: $text';
+  }
+
+  @override
+  String waveRaw(String raw) {
+    return '$raw (Japanese)';
+  }
+
+  @override
+  String get waveSource => 'Source: JMA \"Weather Forecast\"';
+
+  @override
+  String get waveNote =>
+      'Before going out to sea, check the latest weather and sea conditions and judge by the situation on site.';
 }

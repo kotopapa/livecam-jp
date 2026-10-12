@@ -21,6 +21,7 @@ import '../data/analytics.dart';
 import '../data/data_saver.dart';
 import '../data/hotel_links.dart';
 import '../data/stockpile_products.dart';
+import '../data/wave_forecast.dart' show WaveForecasts;
 import '../l10n/l10n.dart';
 import '../models/camera.dart';
 import '../models/status.dart';
@@ -32,6 +33,7 @@ import 'elevation_label.dart';
 import 'pin_bitmaps.dart';
 import 'pin_style.dart';
 import 'water_level_card.dart';
+import 'wave_forecast_card.dart';
 import 'x_accounts_screen.dart';
 
 /// 免責文言（SPEC 9.5。削ってはいけない）。
@@ -259,6 +261,9 @@ class _DetailScreenState extends State<DetailScreen> {
               WaterLevelCard(camera: camera, resumeTick: app.resumeTick),
               const Divider(height: 24),
             ],
+            // 海岸・港湾カメラの波の予報（気象庁の府県予報。無ければ区切り線ごと出ない）
+            if (WaveForecasts.appliesTo(camera))
+              WaveForecastCard(camera: camera, resumeTick: app.resumeTick),
             _locationSection(),
             const Divider(height: 24),
             if (hotels != null && !camera.isLiveVideo) ...[hotels, const Divider(height: 24)],

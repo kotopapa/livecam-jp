@@ -129,6 +129,12 @@ python site/build.py                            # 配信ファイル生成
 - **欠測は `stg: 0`＋`stgCcd: 140` で届く**（値が null にならない）。`stgCcd≠0` の値は捨てる（2026-10-07 札幌 石山でグラフが 0m に落ちていた）。**水位を標高（T.P.）で表す観測所がある**（石山は 104m 台、基準水位も 107.5/108.3m。マスタの `zeroHigh` が 0/null で `altiStdCd` は判別に使えない）。観測値か基準水位が 30m を超えたら標高表示とみなし「標高（海面からの高さ）で表されます」の注記を出す（`WaterLevelSeries.isElevationBased`）。cm ではない
 - 見た目の確認はウィジェットテストで `FontLoader('Roboto')` に `/Library/Fonts/Arial Unicode.ttf` を読ませ、`ThemeData(fontFamily: 'Roboto')` で golden を書くと文字が出る（既定の Ahem フォントは四角になる。`tester.view.physicalSize` は devicePixelRatio で割った論理サイズになることに注意）
 
+## 海岸・港湾カメラの波の予報（1.6.7、2026-10-12追記）
+
+- 詳細画面に「波の予報（<一次細分区域>）」カード（`app/lib/ui/wave_forecast_card.dart`、解析と取得は `app/lib/data/wave_forecast.dart`）。対象は category が coast / port の国内カメラ。データは気象庁の府県予報 `bosai/forecast/data/forecast/<官署>.json` の `[0].timeSeries[0].areas[].waves`（3日分の文。海に面さない区域には無い）。カメラの municipality → area.json の class20（5桁＋"00"。政令市は区コード→市コードへも寄せる）→ class15 → class10 → 官署。area.json の取得と階層は `app/lib/data/jma_area.dart`（`JmaAreaNames`、bosai_screen から切り出し）。官署ごとに30分のメモリ控え、復帰時に取り直す
+- 文の解析は「後」「時々」「一時」「未満」「うねりを伴う」「ただし 〇〇 では …」。解析できない文は日本語では原文、他言語は原文＋「（日本語）」。訳語は気象庁多言語辞書（波高・うねり・今日/明日/明後日）、「未満」「時々」「一時」は独自訳
+- **波高・周期の実況は正式に取れる経路が無い**（2026-10-12 調査）: ナウファス（国交省港湾局）は robots.txt が全面 Disallow で取得不可（使うなら港湾局へ照会）、気象庁 bosai/wave（沿岸6地点）は 2026-03-25 で更新停止、海上保安庁「海の安全情報」は出典明記で商用可だが波高は64地点中6地点だけ・座標は公開ドキュメントの無い内部 API。**潮位は気象庁 `bosai/tidelevel` が使える**（`const/tide_area.json` に166地点・緯度経度、`data/tide/tide_obs_<YYYYMMDD>_<地点>.json`、天文潮位 `const/tide_astro/tide_astro_<年>_<地点>.json`、更新 `data/tide/tide_time.json`。港湾局65・海保20地点の潮位を含む。単位 cm・TP。`tide` 配列の時間刻みは要確認）
+
 ## 河川・ダムカメラ座標の見直し（2026-10-05追記）
 
 - 推定座標の河川・ダム（静止画・誘導型）1,202台を4班で見直し。F（鳥取・国交省）268台・G（県システム）218台を反映済み。**公式座標の所在**: 鳥取 `tori-bousai.jp/arcgis/kasenkanshi2.geojson`（feature id＝画像URLの `kasen/camera/NNN/`。道路同様に座標は元から一致）、和歌山 `geojson/wakayama_camera.geojson`＋`chitenconfig/CameraList.csv`（YouTube 誘導型も観測所名で一致。旧座標は約450m の一定ずれ＝日本測地系の疑い）、沖縄 `bousai-kasen.pref.okinawa.jp` の `dat_js/DBDAT_inf.js` cam[]、山形 新サイト `/map/servlet/bousaiweb.servletBousaiMap?dk=4`（ダム。dk=15 は河川カメラ101局）、徳島 県総合地図提供システム WFS（layer_id=1834、市町村層 1838 に未収録約40台）、兵庫 kasenkanshi の dam_detail `data-latitude/longitude`（トップの data-setting に河川カメラ417台の座標）、広島西部山系砂防 `cctv/index.php` の `map.setMarker(lat,lng,…,'cNNN')`、鬼怒川ダム統管 `kinudamu/daminfo/script/comnTbl.js` の CctvTbl。ダム管理所系は Wikidata P625（同名項目は旧座標20km以内で絞る）＋台帳 kawabou のダム本体カメラで本体位置（approx）

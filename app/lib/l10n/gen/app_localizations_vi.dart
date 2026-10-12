@@ -2900,4 +2900,66 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get detailDataSaverTapToPlay => 'Nhấn để phát';
+
+  @override
+  String waveTitle(String area) {
+    return 'Dự báo sóng ($area)';
+  }
+
+  @override
+  String get waveDayToday => 'Hôm nay';
+
+  @override
+  String get waveDayTomorrow => 'Ngày mai';
+
+  @override
+  String get waveDayAfter => 'Ngày mốt';
+
+  @override
+  String waveMeters(String value) {
+    return '$value m';
+  }
+
+  @override
+  String waveUnder(String value) {
+    return 'Dưới $value m';
+  }
+
+  @override
+  String waveThen(String a, String b) {
+    return '$a → $b';
+  }
+
+  @override
+  String waveSometimes(String a, String b) {
+    return '$a, thỉnh thoảng $b';
+  }
+
+  @override
+  String waveTemporarily(String a, String b) {
+    return '$a, tạm thời $b';
+  }
+
+  @override
+  String waveSwell(String text) {
+    return '$text (kèm sóng cồn)';
+  }
+
+  @override
+  String waveException(String place, String text) {
+    return 'Tuy nhiên, $place: $text';
+  }
+
+  @override
+  String waveRaw(String raw) {
+    return '$raw (tiếng Nhật)';
+  }
+
+  @override
+  String get waveSource =>
+      'Nguồn: Cơ quan Khí tượng Nhật Bản (JMA) “Dự báo thời tiết”';
+
+  @override
+  String get waveNote =>
+      'Trước khi ra biển, hãy kiểm tra thông tin thời tiết, biển mới nhất và tự đánh giá theo tình hình tại chỗ.';
 }

@@ -2776,6 +2776,66 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get detailDataSaverTapToPlay => '点按播放';
+
+  @override
+  String waveTitle(String area) {
+    return '浪高预报（$area）';
+  }
+
+  @override
+  String get waveDayToday => '今天';
+
+  @override
+  String get waveDayTomorrow => '明天';
+
+  @override
+  String get waveDayAfter => '后天';
+
+  @override
+  String waveMeters(String value) {
+    return '$value米';
+  }
+
+  @override
+  String waveUnder(String value) {
+    return '不足$value米';
+  }
+
+  @override
+  String waveThen(String a, String b) {
+    return '$a → $b';
+  }
+
+  @override
+  String waveSometimes(String a, String b) {
+    return '$a，时有$b';
+  }
+
+  @override
+  String waveTemporarily(String a, String b) {
+    return '$a，一时$b';
+  }
+
+  @override
+  String waveSwell(String text) {
+    return '$text（伴有海浪）';
+  }
+
+  @override
+  String waveException(String place, String text) {
+    return '但$place：$text';
+  }
+
+  @override
+  String waveRaw(String raw) {
+    return '$raw（日文）';
+  }
+
+  @override
+  String get waveSource => '来源：气象厅“天气预报”';
+
+  @override
+  String get waveNote => '出海前请确认最新的气象和海况信息，并结合现场情况自行判断。';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -5550,4 +5610,64 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get detailDataSaverTapToPlay => '點按播放';
+
+  @override
+  String waveTitle(String area) {
+    return '浪高預報（$area）';
+  }
+
+  @override
+  String get waveDayToday => '今日';
+
+  @override
+  String get waveDayTomorrow => '明日';
+
+  @override
+  String get waveDayAfter => '後天';
+
+  @override
+  String waveMeters(String value) {
+    return '$value公尺';
+  }
+
+  @override
+  String waveUnder(String value) {
+    return '未滿$value公尺';
+  }
+
+  @override
+  String waveThen(String a, String b) {
+    return '$a → $b';
+  }
+
+  @override
+  String waveSometimes(String a, String b) {
+    return '$a，時有$b';
+  }
+
+  @override
+  String waveTemporarily(String a, String b) {
+    return '$a，一時$b';
+  }
+
+  @override
+  String waveSwell(String text) {
+    return '$text（伴隨海浪）';
+  }
+
+  @override
+  String waveException(String place, String text) {
+    return '但$place：$text';
+  }
+
+  @override
+  String waveRaw(String raw) {
+    return '$raw（日文）';
+  }
+
+  @override
+  String get waveSource => '來源：氣象廳「天氣預報」';
+
+  @override
+  String get waveNote => '出海前請確認最新的氣象與海況資訊，並依現場狀況自行判斷。';
 }

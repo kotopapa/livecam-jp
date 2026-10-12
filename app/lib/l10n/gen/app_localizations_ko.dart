@@ -2800,4 +2800,64 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get detailDataSaverTapToPlay => '탭하여 재생';
+
+  @override
+  String waveTitle(String area) {
+    return '파도 예보 ($area)';
+  }
+
+  @override
+  String get waveDayToday => '오늘';
+
+  @override
+  String get waveDayTomorrow => '내일';
+
+  @override
+  String get waveDayAfter => '모레';
+
+  @override
+  String waveMeters(String value) {
+    return '$value미터';
+  }
+
+  @override
+  String waveUnder(String value) {
+    return '$value미터 미만';
+  }
+
+  @override
+  String waveThen(String a, String b) {
+    return '$a → $b';
+  }
+
+  @override
+  String waveSometimes(String a, String b) {
+    return '$a, 때때로 $b';
+  }
+
+  @override
+  String waveTemporarily(String a, String b) {
+    return '$a, 일시 $b';
+  }
+
+  @override
+  String waveSwell(String text) {
+    return '$text (너울 동반)';
+  }
+
+  @override
+  String waveException(String place, String text) {
+    return '단, $place: $text';
+  }
+
+  @override
+  String waveRaw(String raw) {
+    return '$raw (일본어)';
+  }
+
+  @override
+  String get waveSource => '출처: 기상청(JMA) 「날씨 예보」';
+
+  @override
+  String get waveNote => '바다에 나갈 때는 최신 기상·해상 정보와 현지 상황을 확인하여 판단하세요.';
 }

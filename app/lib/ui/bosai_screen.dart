@@ -13,6 +13,7 @@ import '../l10n/l10n.dart';
 import '../data/heat_alert.dart';
 import '../data/hotel_links.dart' show MunicipalityNames;
 import '../data/wbgt.dart';
+import '../data/jma_area.dart';
 import '../data/jma_flood.dart';
 import '../data/jma_tsunami.dart';
 import '../data/jma_layers.dart';
@@ -79,48 +80,6 @@ class _Quake {
 /// 津波情報を _Quake の「震度」欄に流用するための内部マーカー。
 /// 画面には出さない（表示は l10n の bosaiBadgeTsunami）
 const _tsunamiIntensityMark = 'tsunami';
-
-/// 気象庁 area.json のキャッシュ（class10の親官署 / class20の市区町村名）。
-///
-/// 警報の市区町村詳細と、地震の市区町村別震度の表示名で同じファイルを使う。
-/// アプリの起動中に**1回だけ**取得して両方で共有する（地震側の機能追加で
-/// ネットワークアクセスを増やさないため）。取得に失敗しても空のまま続行し、
-/// 名前が引けない市区町村はコード表記にフォールバックする。
-class JmaAreaNames {
-  static const url = 'https://www.jma.go.jp/bosai/common/const/area.json';
-
-  static Map<String, String> _class10Office = const {};
-  static Map<String, String> _class20Name = const {};
-  static bool _loaded = false;
-  static Future<void>? _inflight;
-
-  static Map<String, String> get class10Office => _class10Office;
-  static Map<String, String> get class20Name => _class20Name;
-  static bool get isLoaded => _loaded;
-
-  static Future<void> load() {
-    if (_loaded) return Future<void>.value();
-    return _inflight ??= _fetch().whenComplete(() => _inflight = null);
-  }
-
-  static Future<void> _fetch() async {
-    final resp =
-        await http.get(Uri.parse(url)).timeout(const Duration(seconds: 20));
-    final data =
-        jsonDecode(utf8.decode(resp.bodyBytes)) as Map<String, dynamic>;
-    final c10 = data['class10s'] as Map<String, dynamic>? ?? const {};
-    final c20 = data['class20s'] as Map<String, dynamic>? ?? const {};
-    _class10Office = {
-      for (final e in c10.entries)
-        e.key: ((e.value as Map<String, dynamic>)['parent'] as String? ?? '')
-    };
-    _class20Name = {
-      for (final e in c20.entries)
-        e.key: ((e.value as Map<String, dynamic>)['name'] as String? ?? '')
-    };
-    _loaded = true;
-  }
-}
 
 /// 扱う気象警報コード（表示名は l10n で解決する。1.4.0 多言語化）。
 /// 表示名は気象庁「多言語辞書」準拠 → l10n/l10n.dart の warningNameOf()

@@ -5013,6 +5013,90 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'タップして再生'**
   String get detailDataSaverTapToPlay;
+
+  /// No description provided for @waveTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'波の予報（{area}）'**
+  String waveTitle(String area);
+
+  /// No description provided for @waveDayToday.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日'**
+  String get waveDayToday;
+
+  /// No description provided for @waveDayTomorrow.
+  ///
+  /// In ja, this message translates to:
+  /// **'明日'**
+  String get waveDayTomorrow;
+
+  /// No description provided for @waveDayAfter.
+  ///
+  /// In ja, this message translates to:
+  /// **'明後日'**
+  String get waveDayAfter;
+
+  /// No description provided for @waveMeters.
+  ///
+  /// In ja, this message translates to:
+  /// **'{value} m'**
+  String waveMeters(String value);
+
+  /// No description provided for @waveUnder.
+  ///
+  /// In ja, this message translates to:
+  /// **'{value} m未満'**
+  String waveUnder(String value);
+
+  /// No description provided for @waveThen.
+  ///
+  /// In ja, this message translates to:
+  /// **'{a} → {b}'**
+  String waveThen(String a, String b);
+
+  /// No description provided for @waveSometimes.
+  ///
+  /// In ja, this message translates to:
+  /// **'{a}、時々 {b}'**
+  String waveSometimes(String a, String b);
+
+  /// No description provided for @waveTemporarily.
+  ///
+  /// In ja, this message translates to:
+  /// **'{a}、一時 {b}'**
+  String waveTemporarily(String a, String b);
+
+  /// No description provided for @waveSwell.
+  ///
+  /// In ja, this message translates to:
+  /// **'{text}（うねりを伴う）'**
+  String waveSwell(String text);
+
+  /// No description provided for @waveException.
+  ///
+  /// In ja, this message translates to:
+  /// **'ただし{place}では{text}'**
+  String waveException(String place, String text);
+
+  /// No description provided for @waveRaw.
+  ///
+  /// In ja, this message translates to:
+  /// **'{raw}'**
+  String waveRaw(String raw);
+
+  /// No description provided for @waveSource.
+  ///
+  /// In ja, this message translates to:
+  /// **'出典：気象庁「天気予報」'**
+  String get waveSource;
+
+  /// No description provided for @waveNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'海に出るときは最新の気象・海象情報と現地の状況で判断してください。'**
+  String get waveNote;
 }
 
 class _AppLocalizationsDelegate

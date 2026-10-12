@@ -2790,6 +2790,66 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get detailDataSaverTapToPlay => 'タップして再生';
+
+  @override
+  String waveTitle(String area) {
+    return '波の予報（$area）';
+  }
+
+  @override
+  String get waveDayToday => '今日';
+
+  @override
+  String get waveDayTomorrow => '明日';
+
+  @override
+  String get waveDayAfter => '明後日';
+
+  @override
+  String waveMeters(String value) {
+    return '$value m';
+  }
+
+  @override
+  String waveUnder(String value) {
+    return '$value m未満';
+  }
+
+  @override
+  String waveThen(String a, String b) {
+    return '$a → $b';
+  }
+
+  @override
+  String waveSometimes(String a, String b) {
+    return '$a、時々 $b';
+  }
+
+  @override
+  String waveTemporarily(String a, String b) {
+    return '$a、一時 $b';
+  }
+
+  @override
+  String waveSwell(String text) {
+    return '$text（うねりを伴う）';
+  }
+
+  @override
+  String waveException(String place, String text) {
+    return 'ただし$placeでは$text';
+  }
+
+  @override
+  String waveRaw(String raw) {
+    return '$raw';
+  }
+
+  @override
+  String get waveSource => '出典：気象庁「天気予報」';
+
+  @override
+  String get waveNote => '海に出るときは最新の気象・海象情報と現地の状況で判断してください。';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -5618,4 +5678,65 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get detailDataSaverTapToPlay => 'タップして さいせい';
+
+  @override
+  String waveTitle(String area) {
+    return 'なみの予報（よほう）（$area）';
+  }
+
+  @override
+  String get waveDayToday => 'きょう';
+
+  @override
+  String get waveDayTomorrow => 'あした';
+
+  @override
+  String get waveDayAfter => 'あさって';
+
+  @override
+  String waveMeters(String value) {
+    return '$value m';
+  }
+
+  @override
+  String waveUnder(String value) {
+    return '$value m未満（みまん）';
+  }
+
+  @override
+  String waveThen(String a, String b) {
+    return '$a → $b';
+  }
+
+  @override
+  String waveSometimes(String a, String b) {
+    return '$a、ときどき $b';
+  }
+
+  @override
+  String waveTemporarily(String a, String b) {
+    return '$a、いちじ $b';
+  }
+
+  @override
+  String waveSwell(String text) {
+    return '$text（うねりを ともなう）';
+  }
+
+  @override
+  String waveException(String place, String text) {
+    return 'ただし $placeでは $text';
+  }
+
+  @override
+  String waveRaw(String raw) {
+    return '$raw';
+  }
+
+  @override
+  String get waveSource => '出典（しゅってん）：気象庁（きしょうちょう）「天気予報（てんきよほう）」';
+
+  @override
+  String get waveNote =>
+      '海（うみ）に出（で）るときは、最新（さいしん）の気象（きしょう）・海（うみ）の情報（じょうほう）と、その場所（ばしょ）のようすで判断（はんだん）してください。';
 }
