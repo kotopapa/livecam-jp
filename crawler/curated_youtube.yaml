@@ -17610,7 +17610,7 @@ cameras:
     prefecture: '11'
     lat: 35.874764
     lng: 139.511139
-    video_id: IRYpctD1Dfo
+    video_id: SC7RdafFwDU
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【ふじみ野市 上福岡駅】 東口ライブカメラ｜東武東上線 川越方面（2026/8/)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@fujimino_taroh'
   # 2026-08-31 配信枠更新: RRjgnrXuwMc → z3U_pxHe0Xc
   # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
@@ -18288,7 +18288,7 @@ cameras:
     prefecture: '11'
     lat: 35.874764
     lng: 139.511139
-    video_id: E5WOIPcbSd4
+    video_id: umo1V94Zhcc
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【ふじみ野市 上福岡駅】 ライブカメラ｜東武東上線 池袋方面 （2026/8/2)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@fujimino_taroh'
   # 2026-09-01 配信枠更新: qaYS3ztkwms → YXKNIaLnzJc
   # 2026-09-23 配信枠更新: YXKNIaLnzJc → HzLnNvYhakc
@@ -24811,3 +24811,252 @@ cameras:
     lat: 31.537241
     lng: 130.528992
     note: "2026-09-30 全国多角調査 再確認(recheck_a)。2026-09-30 日中再検証: 現行枠 rEZm96qNpI4 status=OK isLiveNow=true playableInEmbed=false（誘導型 channel/live）。早朝の判定は OK。about に info@livecamera24.jp"
+
+  # ---- 2026-10-12 鉄道ライブカメラ調査（4班）。ユーザー判断で全採用・分類は景観 ----
+
+  - id: curated-rail-fukutetsu-sanjuhassha
+    name: 福井鉄道福武線 三十八社駅
+    operator: 福井県福井市の定点ライブカメラ配信者（livecamera24系。チャンネルUC8JT5-ViCeeBNZ0phrzz-ZA）
+    video_id: mbW0gSSentI
+    channel_id: UC8JT5-ViCeeBNZ0phrzz-ZA
+    embed: false
+    category: scenic
+    prefecture: '18'
+    lat: 35.989079
+    lng: 136.193767
+    accuracy: exact
+    note: 2026-10-12確認 isLiveNow=true・playableInEmbed=false(誘導型)。座標はOSM三十八社駅。1チャンネル1配信のためchannel_id登録。livecamera24系は全数採用のユーザー判断に準拠
+
+  - id: curated-rail-fukutetsu-saiwaibashi
+    name: 福井鉄道福武線 幸橋（足羽川・併用軌道）
+    operator: 酒井電機株式会社（SDKチャンネル）
+    video_id: NeqcGRluu8w
+    channel_id: UCS9zYkc1fxdJghAAwTL4UTA
+    category: scenic
+    prefecture: '18'
+    lat: 36.060587
+    lng: 136.216287
+    accuracy: exact
+    note: 2026-10-12確認 isLiveNow=true・埋め込み可。幸橋は福井鉄道福武線の併用軌道上にあるが、画角に電車が映るかはサムネイル未確認（要目視）。座標はOSM幸橋。チャンネルの配信が複数の可能性あり要確認
+
+  - id: curated-rail-hakubi-kurosaka
+    name: JR伯備線 黒坂（鳥取県日野町）
+    operator: 黒坂ライブカメラ（個人チャンネル）
+    video_id: E_xCA2bw5ZE
+    category: scenic
+    prefecture: '31'
+    lat: 35.206996
+    lng: 133.383702
+    accuracy: approx
+
+  - id: curated-rail-sapporo-shiden-minami1
+    name: 札幌市電 南1条通（一条線）
+    operator: Hokkaido Kurashi no Yomimono（個人チャンネル）
+    video_id: HBF7bRKGlEU
+    channel_id: UCIMs8atP2qoxcfAvhiFlzGQ
+    category: scenic
+    prefecture: '01'
+    lat: 43.0574
+    lng: 141.3414
+    accuracy: approx
+    note: 2026-10-12確認 isLiveNow=true・埋め込み可。南1条通を走る札幌市電が映る(説明文)。座標は南1条西10〜11付近の電停から推定。lofi音楽付きの配信
+
+  - id: curated-rail-sapporo-shiden-chuokuyakusho
+    name: 札幌市電 中央区役所前停留場
+    operator: yuki nomad（個人チャンネル）
+    video_id: hph8YLrOsz4
+    channel_id: UC3IqtfSTFjXK5hhFqeTgJkw
+    category: scenic
+    prefecture: '01'
+    lat: 43.057437
+    lng: 141.340962
+    accuracy: exact
+    note: 2026-10-12確認 isLiveNow=true・埋め込み可。座標はOSM中央区役所前電停(SC03)。同チャンネルが複数配信を持つ場合は channel_id を外すこと
+
+  - id: curated-rail-tokyo-yurakucho
+    name: 東京駅 有楽町カーブ 新幹線・山手線
+    operator: 東京駅トレインビュー ライブカメラ（個人チャンネル）
+    channel_id: UC6Ljvl0Kghy9Fhe6SXViTPw
+    category: scenic
+    prefecture: '13'
+    lat: 35.6745
+    lng: 139.763
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。東京駅〜有楽町間のカーブを走る東海道新幹線・山手線などを撮影。1チャンネル1配信を確認し channel_id 登録。座標は区間の概略。24時間配信（メンテ時は翌平日復旧と概要欄に記載）。 確認時の動画ID: WfaJr7NKgLE。'
+
+  - id: curated-rail-odawara-shinkansen
+    name: 東海道新幹線 小田原駅
+    operator: こだまらいふ Kodama life
+    channel_id: UC9yuSASu1r3dKOvEmZwnptQ
+    category: scenic
+    prefecture: '14'
+    lat: 35.2563
+    lng: 139.1553
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。小田原駅の新幹線を撮影。12時間ごとに枠が切り替わる（日替わりID）ため channel_id 登録。座標は駅位置。 確認時の動画ID: ZUdkV2Faq3s。'
+
+  - id: curated-rail-shizuoka-abekawa
+    name: 東海道新幹線・東海道本線 安倍川駅付近（静岡）
+    operator: 鉄道ライブカメラ静岡（個人チャンネル）
+    channel_id: UCXkkaGmVYj1LCwKsEduPVeg
+    category: scenic
+    prefecture: '22'
+    lat: 34.941
+    lng: 138.3641
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。概要欄に『安倍川駅の静岡寄りの位置から撮影』とあり。日替わり枠のため channel_id 登録。貨物・サンライズ・ドクターイエローが映る。座標は安倍川駅（概略）。 確認時の動画ID: ApddsrNodb8。'
+
+  - id: curated-rail-sanyo-yumesaki
+    name: JR山陽本線 夢前川橋梁（姫路〜網干）
+    operator: JR山陽本線ライブ鉄道チャンネル（個人運営）
+    channel_id: UCoCGRZaPM6v52SVP9BuFvzw
+    category: scenic
+    prefecture: '28'
+    lat: 34.8125
+    lng: 134.656
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。概要欄に『姫路〜網干の夢前川橋梁よりほぼ24時間配信』。5〜11時間ごとに枠を切り替えるため channel_id 登録。サンライズ瀬戸・出雲や貨物も映る。座標は夢前川橋梁付近の概略。 確認時の動画ID: yNpqRMsTouY。'
+
+  - id: curated-rail-kobe-nada
+    name: JR神戸線 灘区
+    operator: ドウガほーそー局（個人チャンネル）
+    channel_id: UCqeZPyDgDk5EmtduYgH1MvA
+    category: scenic
+    prefecture: '28'
+    lat: 34.713
+    lng: 135.23
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。JR神戸線（灘区内）の定点。概要欄に詳細なし。座標は灘区内の概略（要現地確認）。 確認時の動画ID: Pryg5OPi5mY。'
+
+  - id: curated-rail-shin-osaka-bgv
+    name: 新大阪駅 北側（新幹線・在来線）
+    operator: BGV Cam
+    channel_id: UC34eMne6xBmBqsAfA8q8ZAg
+    category: scenic
+    prefecture: '27'
+    lat: 34.7336
+    lng: 135.5003
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。概要欄に『新大阪方面から北側を撮影』。伊丹空港への航空機も映る。1チャンネル1配信、channel_id 登録。座標は新大阪駅付近。 確認時の動画ID: oRt441_647E。'
+
+  - id: curated-rail-osaka-umekita-yodo
+    name: JR京都線・おおさか東線 大阪〜新大阪間（淀川付近）
+    operator: 【鉄道】大阪ライブカメラ（個人チャンネル）
+    channel_id: UCVw-HgO1ivfBtvxZ3x9pbDA
+    category: scenic
+    prefecture: '27'
+    lat: 34.717
+    lng: 135.495
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。概要欄: 手前(南)=大阪駅、奥(北)=新大阪駅、左(西)=うめきた地下。2026/3/23から生配信のみ CC BY-SA 4.0（表示名『【鉄道】大阪ライブカメラ』とチャンネルURLの常時表示が条件）→ 出典表記に運営者名を出すこと。4K。座標は大阪〜新大阪間の概略。 確認時の動画ID: l_JqrgyyXXA。'
+
+  - id: curated-rail-suita-tokaido
+    name: JR東海道本線 吹田駅付近（貨物・梅田貨物線）
+    operator: 東海道本線吹田駅 上り場内付近ライブカメラ（個人チャンネル）
+    channel_id: UCcNM7346kBbHF9lMB83qMDQ
+    category: scenic
+    prefecture: '27'
+    lat: 34.7585
+    lng: 135.519
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。概要欄『JR西日本 東海道本線 吹田駅付近の定点』。東海道貨物・梅田貨物線・吹田貨物ターミナルへの線路が映る。日替わり枠のため channel_id 登録。21時終了日あり（概要欄に日により記載）、アーカイブ作成時に短時間中断。座標は吹田駅付近の概略。 確認時の動画ID: jJW1WgAyCkc。'
+
+  - id: curated-rail-himeji-shinkansen
+    name: 山陽新幹線 姫路駅西側
+    operator: Live cam Himeji
+    channel_id: UCBBnqtplrtG5r1r7H-t9tTw
+    category: scenic
+    prefecture: '28'
+    lat: 34.8268
+    lng: 134.686
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。姫路駅の西側から山陽新幹線と空を撮影、発車標とお天気を重ねて表示。日替わりタイトルの枠のため channel_id 登録。 確認時の動画ID: 8Dc8FXt6Glg。'
+
+  - id: curated-rail-okayama-sanyo-shinkansen
+    name: 山陽新幹線 岡山 博多総合車両所岡山支所そば
+    operator: 山陽新幹線＆サンライズ 運行実況LIVE（岡山車両基地展望・個人チャンネル）
+    video_id: Dtl2klfe-Lg
+    category: scenic
+    prefecture: '33'
+    lat: 34.664
+    lng: 133.887
+    accuracy: approx
+    note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。概要欄: 岡山・北長瀬の博多総合車両所岡山支所至近から本線と車両基地を24時間撮影。2026年12月の本格配信前でテスト・試験配信中（枠・内容が変わる可能性あり）。複数枠の可能性があり channel_id は付けない。座標は北長瀬付近の概略。'
+
+  - id: curated-rail-hakata-sanyo-1
+    name: 山陽新幹線 博多駅（ライブカメラ1）
+    operator: 博多駅山陽新幹線ライブカメラ（個人チャンネル）
+    video_id: daPiuMO-iZQ
+    embed: false
+    category: scenic
+    prefecture: '40'
+    lat: 33.5897
+    lng: 130.4207
+    accuracy: approx
+    note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=false を確認。playableInEmbed=false のため誘導型。日替わり枠（タイトルに開始日時）で要定期追従。座標は博多駅（概略）。
+
+  - id: curated-rail-hakata-wayfarer
+    name: 博多駅 九州新幹線・鹿児島本線・博多南線
+    operator: The Wayfarer
+    video_id: exHmFS_2v_U
+    category: scenic
+    prefecture: '40'
+    lat: 33.5897
+    lng: 130.4207
+    accuracy: approx
+    note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。九州新幹線下り・鹿児島本線・博多南線・福岡空港方面が映る。配信枠は日々変わる可能性（当日 isLiveNow=true）。座標は博多駅。
+
+  - id: curated-rail-mukaimachi-yard
+    name: JR京都線 向日町操車場付近
+    operator: 鉄道ファンの待合室
+    video_id: 7kCOfXcjDso
+    category: scenic
+    prefecture: '26'
+    lat: 34.9455
+    lng: 135.6985
+    accuracy: approx
+    note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。概要欄『JR京都線 向日町操車場付近。JR西日本とは無関係で敷地外から撮影』。02:35〜14:30と14:35〜翌朝の2枠で1日分をつなぐ日替わりID。同チャンネルが日暮里も配信（台帳収録済み）のため channel_id は付けない→日々の枠追従が必要（監視で追従できない場合は追従スクリプトで更新）。座標は向日町操車場付近。
+
+  - id: curated-rail-akihabara-north
+    name: 秋葉原駅 北側（JR山手線・京浜東北線・総武線・つくばエクスプレス）
+    operator: North Akihabara Live Camera
+    video_id: kEb0Vu8PT_4
+    category: scenic
+    prefecture: '13'
+    lat: 35.7003
+    lng: 139.7737
+    accuracy: approx
+    note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。秋葉原駅北側の線路を撮影。緊急地震速報搭載（試験運用）、音に注意。座標は秋葉原駅北側の概略。
+
+  - id: curated-rail-kintetsu-takawashi
+    name: 近鉄南大阪線 高鷲駅
+    operator: PENの近鉄電車チャンネル
+    video_id: 605FI5EF9I0
+    category: scenic
+    prefecture: '27'
+    lat: 34.5706
+    lng: 135.5856
+    accuracy: approx
+    note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。近鉄南大阪線 高鷲駅付近。同チャンネルが恵我ノ荘駅方面も配信するため channel_id なし（要追従）。座標は高鷲駅。
+
+  - id: curated-rail-kintetsu-eganosho
+    name: 近鉄南大阪線 恵我ノ荘駅方面
+    operator: PENの近鉄電車チャンネル
+    video_id: qlzXA53GZWQ
+    category: scenic
+    prefecture: '27'
+    lat: 34.5737
+    lng: 135.5732
+    accuracy: approx
+    note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。近鉄南大阪線 恵我ノ荘駅方面。同チャンネル2配信のため channel_id なし（要追従）。座標は恵我ノ荘駅。
+
+  - id: curated-rail-totsuka
+    name: JR東海道線・横須賀線 戸塚駅付近
+    operator: 鉄道仮面（個人チャンネル）
+    video_id: MdQfskuvhBk
+    category: scenic
+    prefecture: '14'
+    lat: 35.501
+    lng: 139.534
+    accuracy: approx
+    note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。「戸塚ライブカメラ」定点（自動再起動システム稼働中）。確認時は isLiveNow=false（再起動の合間か時間帯外）のため後日再確認。channel_id はチャンネルIDの末尾を要照合（検索結果から取得）。座標は戸塚駅付近の概略。

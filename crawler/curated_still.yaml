@@ -45662,3 +45662,57 @@ cameras:
     page_url: "https://www.pref.kagoshima.jp/bosai/saigai/live.html"
     attribution: "映像提供：鹿児島県（鹿児島県河川砂防情報システム）"
     note: "大和川水系 大和村大字思勝。座標: 大和村思勝の位置に最も近い大和川(OSM)の流路上。橋名の一致は無し"
+
+  # ---- 2026-10-12 鉄道ライブカメラ調査（誘導型）。ユーザー判断で全採用・分類は景観 ----
+
+  - id: curated-rail-ucv-bessho-akatekkyo
+    name: 上田電鉄別所線 千曲川橋梁（赤い鉄橋）
+    operator: 株式会社上田ケーブルビジョン（UCV）
+    category: scenic
+    prefecture: '20'
+    lat: 36.394654
+    lng: 138.245459
+    accuracy: exact
+    feed_type: web_page
+    feed_url: https://live.ucv.co.jp/akatekkyou.html
+    page_url: https://live.ucv.co.jp/akatekkyou.html
+    note: 2026-10-12確認 ページ表示・camstreamer埋め込みの動画ライブ(静止画URLなし)のため誘導型。上田東急REIホテル屋上から千曲川橋梁を撮影。座標はOSM千曲川橋梁。CATVの一般条項扱い
+
+  - id: curated-rail-nagatoro-sta
+    name: 長瀞駅前（秩父鉄道 長瀞駅）
+    operator: 一般社団法人 長瀞町観光協会
+    category: scenic
+    prefecture: '11'
+    lat: 36.0953
+    lng: 139.1125
+    accuracy: approx
+    feed_type: web_page
+    feed_url: https://www.nagatoro.gr.jp/livecam/#station
+    page_url: https://www.nagatoro.gr.jp/livecam/#station
+    note: '2026-10-12 確認: 掲載ページ上の station/cam04-*.jpg が 200・image/jpeg・約44万バイト、約10分間隔更新（夜間20時〜5時は停止）。座標は OSM の長瀞地点（駅名検索が長井市に当たるため町内の地点）。直接表示するなら page 内の img を都度解決する型が必要'
+
+  - id: curated-rail-nagatoro-kaminagatoro
+    name: 上長瀞駅前（秩父鉄道 上長瀞駅）
+    operator: 一般社団法人 長瀞町観光協会
+    category: scenic
+    prefecture: '11'
+    lat: 36.0862
+    lng: 139.1132
+    accuracy: exact
+    feed_type: web_page
+    feed_url: https://www.nagatoro.gr.jp/livecam/#kaminagatoro
+    page_url: https://www.nagatoro.gr.jp/livecam/#kaminagatoro
+    note: '2026-10-12 確認: kaminaga/cam03-*.jpg 200・image/jpeg・約39万バイト、約10分間隔（夜間停止）。座標は国土地理院 AddressSearch の「上長瀞駅」。CC BY-NC-ND 4.0（出典表示）'
+
+  - id: curated-rail-nagatoro-iwadatami
+    name: 長瀞岩畳（ライン下り・秩父鉄道沿線）
+    operator: 一般社団法人 長瀞町観光協会
+    category: scenic
+    prefecture: '11'
+    lat: 36.0945
+    lng: 139.1159
+    accuracy: exact
+    feed_type: web_page
+    feed_url: https://www.nagatoro.gr.jp/livecam/#iwadatami
+    page_url: https://www.nagatoro.gr.jp/livecam/#iwadatami
+    note: '2026-10-12 確認: miharashi/cam01-*.jpg 200・image/jpeg・約45万バイト、約10分間隔（夜間停止）。座標は OSM 長瀞岩畳。CC BY-NC-ND 4.0（出典表示）。紅葉は11月上旬〜中旬'

@@ -1,5 +1,5 @@
 {
- "version": "2026-10-10T23:18:20Z",
+ "version": "2026-10-12T01:24:21Z",
  "urgent_version": "2026-10-10T23:18:20Z",
  "cameras": [
   {
@@ -26646,7 +26646,7 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "E5WOIPcbSd4",
+    "url": "umo1V94Zhcc",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
@@ -26665,7 +26665,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: RllZxOzq2gk→I_uvMp-WX-0 / 2026-09-23 配信枠更新: I_uvMp-WX-0→E5WOIPcbSd4"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: RllZxOzq2gk→I_uvMp-WX-0 / 2026-09-23 配信枠更新: I_uvMp-WX-0→E5WOIPcbSd4 / 2026-10-12 配信枠更新: E5WOIPcbSd4 → umo1V94Zhcc"
    },
    "first_seen": "2026-08-29",
    "last_updated": "2026-09-23"
@@ -26684,7 +26684,7 @@
    "river_or_route": null,
    "feed": {
     "type": "youtube_video",
-    "url": "IRYpctD1Dfo",
+    "url": "SC7RdafFwDU",
     "refresh_sec": null,
     "requires_referer": false,
     "headers": {}
@@ -26703,7 +26703,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: kusZaJkUU5M→sdCM-lxg86c / 2026-09-23 配信枠更新: sdCM-lxg86c→IRYpctD1Dfo"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: kusZaJkUU5M→sdCM-lxg86c / 2026-09-23 配信枠更新: sdCM-lxg86c→IRYpctD1Dfo / 2026-10-12 配信枠更新: IRYpctD1Dfo → SC7RdafFwDU"
    },
    "first_seen": "2026-08-29",
    "last_updated": "2026-09-23"
@@ -919980,6 +919980,994 @@
    },
    "first_seen": "2026-10-10",
    "last_updated": "2026-10-10"
+  },
+  {
+   "id": "curated-rail-akihabara-north",
+   "name": "秋葉原駅 北側（JR山手線・京浜東北線・総武線・つくばエクスプレス）",
+   "name_kana": null,
+   "lat": 35.7003,
+   "lng": 139.7737,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13101",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "kEb0Vu8PT_4",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=kEb0Vu8PT_4"
+   },
+   "operator": "North Akihabara Live Camera",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=kEb0Vu8PT_4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：North Akihabara Live Camera（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-fukutetsu-saiwaibashi",
+   "name": "福井鉄道福武線 幸橋（足羽川・併用軌道）",
+   "name_kana": null,
+   "lat": 36.060587,
+   "lng": 136.216287,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "18",
+   "country": null,
+   "municipality": "18201",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCS9zYkc1fxdJghAAwTL4UTA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCS9zYkc1fxdJghAAwTL4UTA/live"
+   },
+   "operator": "酒井電機株式会社（SDKチャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCS9zYkc1fxdJghAAwTL4UTA/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：酒井電機株式会社（SDKチャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-fukutetsu-sanjuhassha",
+   "name": "福井鉄道福武線 三十八社駅",
+   "name_kana": null,
+   "lat": 35.989079,
+   "lng": 136.193767,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "18",
+   "country": null,
+   "municipality": "18201",
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UC8JT5-ViCeeBNZ0phrzz-ZA/live",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UC8JT5-ViCeeBNZ0phrzz-ZA/live"
+   },
+   "operator": "福井県福井市の定点ライブカメラ配信者（livecamera24系。チャンネルUC8JT5-ViCeeBNZ0phrzz-ZA）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC8JT5-ViCeeBNZ0phrzz-ZA/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：福井県福井市の定点ライブカメラ配信者（livecamera24系。チャンネルUC8JT5-ViCeeBNZ0phrzz-ZA）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-hakata-sanyo-1",
+   "name": "山陽新幹線 博多駅（ライブカメラ1）",
+   "name_kana": null,
+   "lat": 33.5897,
+   "lng": 130.4207,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40132",
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=daPiuMO-iZQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=daPiuMO-iZQ"
+   },
+   "operator": "博多駅山陽新幹線ライブカメラ（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=daPiuMO-iZQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：博多駅山陽新幹線ライブカメラ（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-hakata-wayfarer",
+   "name": "博多駅 九州新幹線・鹿児島本線・博多南線",
+   "name_kana": null,
+   "lat": 33.5897,
+   "lng": 130.4207,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "40",
+   "country": null,
+   "municipality": "40132",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "exHmFS_2v_U",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=exHmFS_2v_U"
+   },
+   "operator": "The Wayfarer",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=exHmFS_2v_U",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：The Wayfarer（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-hakubi-kurosaka",
+   "name": "JR伯備線 黒坂（鳥取県日野町）",
+   "name_kana": null,
+   "lat": 35.206996,
+   "lng": 133.383702,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "31",
+   "country": null,
+   "municipality": "31402",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "E_xCA2bw5ZE",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=E_xCA2bw5ZE"
+   },
+   "operator": "黒坂ライブカメラ（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=E_xCA2bw5ZE",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：黒坂ライブカメラ（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-himeji-shinkansen",
+   "name": "山陽新幹線 姫路駅西側",
+   "name_kana": null,
+   "lat": 34.8268,
+   "lng": 134.686,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28201",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCBBnqtplrtG5r1r7H-t9tTw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCBBnqtplrtG5r1r7H-t9tTw/live"
+   },
+   "operator": "Live cam Himeji",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCBBnqtplrtG5r1r7H-t9tTw/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Live cam Himeji（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-kintetsu-eganosho",
+   "name": "近鉄南大阪線 恵我ノ荘駅方面",
+   "name_kana": null,
+   "lat": 34.5737,
+   "lng": 135.5732,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "27",
+   "country": null,
+   "municipality": "27222",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "qlzXA53GZWQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=qlzXA53GZWQ"
+   },
+   "operator": "PENの近鉄電車チャンネル",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=qlzXA53GZWQ",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：PENの近鉄電車チャンネル（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-kintetsu-takawashi",
+   "name": "近鉄南大阪線 高鷲駅",
+   "name_kana": null,
+   "lat": 34.5706,
+   "lng": 135.5856,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "27",
+   "country": null,
+   "municipality": "27222",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "605FI5EF9I0",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=605FI5EF9I0"
+   },
+   "operator": "PENの近鉄電車チャンネル",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=605FI5EF9I0",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：PENの近鉄電車チャンネル（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-kobe-nada",
+   "name": "JR神戸線 灘区",
+   "name_kana": null,
+   "lat": 34.713,
+   "lng": 135.23,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28102",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCqeZPyDgDk5EmtduYgH1MvA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCqeZPyDgDk5EmtduYgH1MvA/live"
+   },
+   "operator": "ドウガほーそー局（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCqeZPyDgDk5EmtduYgH1MvA/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：ドウガほーそー局（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-mukaimachi-yard",
+   "name": "JR京都線 向日町操車場付近",
+   "name_kana": null,
+   "lat": 34.9455,
+   "lng": 135.6985,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "26",
+   "country": null,
+   "municipality": "26208",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "7kCOfXcjDso",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=7kCOfXcjDso"
+   },
+   "operator": "鉄道ファンの待合室",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=7kCOfXcjDso",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鉄道ファンの待合室（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-nagatoro-iwadatami",
+   "name": "長瀞岩畳（ライン下り・秩父鉄道沿線）",
+   "name_kana": null,
+   "lat": 36.0945,
+   "lng": 139.1159,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11363",
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.nagatoro.gr.jp/livecam/#iwadatami",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.nagatoro.gr.jp/livecam/#iwadatami"
+   },
+   "operator": "一般社団法人 長瀞町観光協会",
+   "source": {
+    "page_url": "https://www.nagatoro.gr.jp/livecam/#iwadatami",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：一般社団法人 長瀞町観光協会"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-nagatoro-kaminagatoro",
+   "name": "上長瀞駅前（秩父鉄道 上長瀞駅）",
+   "name_kana": null,
+   "lat": 36.0862,
+   "lng": 139.1132,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11363",
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.nagatoro.gr.jp/livecam/#kaminagatoro",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.nagatoro.gr.jp/livecam/#kaminagatoro"
+   },
+   "operator": "一般社団法人 長瀞町観光協会",
+   "source": {
+    "page_url": "https://www.nagatoro.gr.jp/livecam/#kaminagatoro",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：一般社団法人 長瀞町観光協会"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-nagatoro-sta",
+   "name": "長瀞駅前（秩父鉄道 長瀞駅）",
+   "name_kana": null,
+   "lat": 36.0953,
+   "lng": 139.1125,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "11",
+   "country": null,
+   "municipality": "11363",
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://www.nagatoro.gr.jp/livecam/#station",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.nagatoro.gr.jp/livecam/#station"
+   },
+   "operator": "一般社団法人 長瀞町観光協会",
+   "source": {
+    "page_url": "https://www.nagatoro.gr.jp/livecam/#station",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：一般社団法人 長瀞町観光協会"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-odawara-shinkansen",
+   "name": "東海道新幹線 小田原駅",
+   "name_kana": null,
+   "lat": 35.2563,
+   "lng": 139.1553,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "14",
+   "country": null,
+   "municipality": "14206",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC9yuSASu1r3dKOvEmZwnptQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UC9yuSASu1r3dKOvEmZwnptQ/live"
+   },
+   "operator": "こだまらいふ Kodama life",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC9yuSASu1r3dKOvEmZwnptQ/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：こだまらいふ Kodama life（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-okayama-sanyo-shinkansen",
+   "name": "山陽新幹線 岡山 博多総合車両所岡山支所そば",
+   "name_kana": null,
+   "lat": 34.664,
+   "lng": 133.887,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "33",
+   "country": null,
+   "municipality": "33101",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Dtl2klfe-Lg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Dtl2klfe-Lg"
+   },
+   "operator": "山陽新幹線＆サンライズ 運行実況LIVE（岡山車両基地展望・個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=Dtl2klfe-Lg",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：山陽新幹線＆サンライズ 運行実況LIVE（岡山車両基地展望・個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-osaka-umekita-yodo",
+   "name": "JR京都線・おおさか東線 大阪〜新大阪間（淀川付近）",
+   "name_kana": null,
+   "lat": 34.717,
+   "lng": 135.495,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "27",
+   "country": null,
+   "municipality": "27127",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCVw-HgO1ivfBtvxZ3x9pbDA",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCVw-HgO1ivfBtvxZ3x9pbDA/live"
+   },
+   "operator": "【鉄道】大阪ライブカメラ（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCVw-HgO1ivfBtvxZ3x9pbDA/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：【鉄道】大阪ライブカメラ（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-sanyo-yumesaki",
+   "name": "JR山陽本線 夢前川橋梁（姫路〜網干）",
+   "name_kana": null,
+   "lat": 34.8125,
+   "lng": 134.656,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "28",
+   "country": null,
+   "municipality": "28201",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCoCGRZaPM6v52SVP9BuFvzw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCoCGRZaPM6v52SVP9BuFvzw/live"
+   },
+   "operator": "JR山陽本線ライブ鉄道チャンネル（個人運営）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCoCGRZaPM6v52SVP9BuFvzw/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：JR山陽本線ライブ鉄道チャンネル（個人運営）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-sapporo-shiden-chuokuyakusho",
+   "name": "札幌市電 中央区役所前停留場",
+   "name_kana": null,
+   "lat": 43.057437,
+   "lng": 141.340962,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01101",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC3IqtfSTFjXK5hhFqeTgJkw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UC3IqtfSTFjXK5hhFqeTgJkw/live"
+   },
+   "operator": "yuki nomad（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC3IqtfSTFjXK5hhFqeTgJkw/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：yuki nomad（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-sapporo-shiden-minami1",
+   "name": "札幌市電 南1条通（一条線）",
+   "name_kana": null,
+   "lat": 43.0574,
+   "lng": 141.3414,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01101",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCIMs8atP2qoxcfAvhiFlzGQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCIMs8atP2qoxcfAvhiFlzGQ/live"
+   },
+   "operator": "Hokkaido Kurashi no Yomimono（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCIMs8atP2qoxcfAvhiFlzGQ/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：Hokkaido Kurashi no Yomimono（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-shin-osaka-bgv",
+   "name": "新大阪駅 北側（新幹線・在来線）",
+   "name_kana": null,
+   "lat": 34.7336,
+   "lng": 135.5003,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "27",
+   "country": null,
+   "municipality": "27123",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC34eMne6xBmBqsAfA8q8ZAg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/live"
+   },
+   "operator": "BGV Cam",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：BGV Cam（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-shizuoka-abekawa",
+   "name": "東海道新幹線・東海道本線 安倍川駅付近（静岡）",
+   "name_kana": null,
+   "lat": 34.941,
+   "lng": 138.3641,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "22",
+   "country": null,
+   "municipality": "22102",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCXkkaGmVYj1LCwKsEduPVeg",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCXkkaGmVYj1LCwKsEduPVeg/live"
+   },
+   "operator": "鉄道ライブカメラ静岡（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCXkkaGmVYj1LCwKsEduPVeg/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鉄道ライブカメラ静岡（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-suita-tokaido",
+   "name": "JR東海道本線 吹田駅付近（貨物・梅田貨物線）",
+   "name_kana": null,
+   "lat": 34.7585,
+   "lng": 135.519,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "27",
+   "country": null,
+   "municipality": "27205",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCcNM7346kBbHF9lMB83qMDQ",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UCcNM7346kBbHF9lMB83qMDQ/live"
+   },
+   "operator": "東海道本線吹田駅 上り場内付近ライブカメラ（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UCcNM7346kBbHF9lMB83qMDQ/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東海道本線吹田駅 上り場内付近ライブカメラ（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-tokyo-yurakucho",
+   "name": "東京駅 有楽町カーブ 新幹線・山手線",
+   "name_kana": null,
+   "lat": 35.6745,
+   "lng": 139.763,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "13",
+   "country": null,
+   "municipality": "13101",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UC6Ljvl0Kghy9Fhe6SXViTPw",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/channel/UC6Ljvl0Kghy9Fhe6SXViTPw/live"
+   },
+   "operator": "東京駅トレインビュー ライブカメラ（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/channel/UC6Ljvl0Kghy9Fhe6SXViTPw/live",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：東京駅トレインビュー ライブカメラ（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-totsuka",
+   "name": "JR東海道線・横須賀線 戸塚駅付近",
+   "name_kana": null,
+   "lat": 35.501,
+   "lng": 139.534,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "14",
+   "country": null,
+   "municipality": "14113",
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "MdQfskuvhBk",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=MdQfskuvhBk"
+   },
+   "operator": "鉄道仮面（個人チャンネル）",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=MdQfskuvhBk",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：鉄道仮面（個人チャンネル）（YouTubeライブ）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
+  },
+  {
+   "id": "curated-rail-ucv-bessho-akatekkyo",
+   "name": "上田電鉄別所線 千曲川橋梁（赤い鉄橋）",
+   "name_kana": null,
+   "lat": 36.394654,
+   "lng": 138.245459,
+   "coord_accuracy": "exact",
+   "category": "scenic",
+   "prefecture": "20",
+   "country": null,
+   "municipality": "20203",
+   "river_or_route": null,
+   "feed": {
+    "type": "web_page",
+    "url": "https://live.ucv.co.jp/akatekkyou.html",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://live.ucv.co.jp/akatekkyou.html"
+   },
+   "operator": "株式会社上田ケーブルビジョン（UCV）",
+   "source": {
+    "page_url": "https://live.ucv.co.jp/akatekkyou.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：株式会社上田ケーブルビジョン（UCV）"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-10-12",
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観"
+   },
+   "first_seen": "2026-10-12",
+   "last_updated": "2026-10-12"
   }
  ]
 }
