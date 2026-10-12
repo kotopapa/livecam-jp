@@ -45675,6 +45675,7 @@ cameras:
     accuracy: exact
     feed_type: web_page
     feed_url: https://live.ucv.co.jp/akatekkyou.html
+    image_url: https://live.ucv.co.jp/akatekkyou.html  # 静止画の固定URLが無い誘導型（ページ自体）
     page_url: https://live.ucv.co.jp/akatekkyou.html
     note: 2026-10-12確認 ページ表示・camstreamer埋め込みの動画ライブ(静止画URLなし)のため誘導型。上田東急REIホテル屋上から千曲川橋梁を撮影。座標はOSM千曲川橋梁。CATVの一般条項扱い
 
@@ -45688,6 +45689,7 @@ cameras:
     accuracy: approx
     feed_type: web_page
     feed_url: https://www.nagatoro.gr.jp/livecam/#station
+    image_url: https://www.nagatoro.gr.jp/livecam/#station  # 静止画の固定URLが無い誘導型（ページ自体）
     page_url: https://www.nagatoro.gr.jp/livecam/#station
     note: '2026-10-12 確認: 掲載ページ上の station/cam04-*.jpg が 200・image/jpeg・約44万バイト、約10分間隔更新（夜間20時〜5時は停止）。座標は OSM の長瀞地点（駅名検索が長井市に当たるため町内の地点）。直接表示するなら page 内の img を都度解決する型が必要'
 
@@ -45701,6 +45703,7 @@ cameras:
     accuracy: exact
     feed_type: web_page
     feed_url: https://www.nagatoro.gr.jp/livecam/#kaminagatoro
+    image_url: https://www.nagatoro.gr.jp/livecam/#kaminagatoro  # 静止画の固定URLが無い誘導型（ページ自体）
     page_url: https://www.nagatoro.gr.jp/livecam/#kaminagatoro
     note: '2026-10-12 確認: kaminaga/cam03-*.jpg 200・image/jpeg・約39万バイト、約10分間隔（夜間停止）。座標は国土地理院 AddressSearch の「上長瀞駅」。CC BY-NC-ND 4.0（出典表示）'
 
@@ -45714,5 +45717,6 @@ cameras:
     accuracy: exact
     feed_type: web_page
     feed_url: https://www.nagatoro.gr.jp/livecam/#iwadatami
+    image_url: https://www.nagatoro.gr.jp/livecam/#iwadatami  # 静止画の固定URLが無い誘導型（ページ自体）
     page_url: https://www.nagatoro.gr.jp/livecam/#iwadatami
     note: '2026-10-12 確認: miharashi/cam01-*.jpg 200・image/jpeg・約45万バイト、約10分間隔（夜間停止）。座標は OSM 長瀞岩畳。CC BY-NC-ND 4.0（出典表示）。紅葉は11月上旬〜中旬'
