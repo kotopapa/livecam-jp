@@ -2836,6 +2836,57 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get waveNote => '出海前请确认最新的气象和海况信息，并结合现场情况自行判断。';
+
+  @override
+  String waveTideTitle(String area) {
+    return '海浪与潮位（$area）';
+  }
+
+  @override
+  String get tideTitle => '潮位';
+
+  @override
+  String tideStation(String name, String km) {
+    return '潮位：$name（距摄像头约 $km km）';
+  }
+
+  @override
+  String tideNow(String value, String time) {
+    return '当前 $value cm（$time）';
+  }
+
+  @override
+  String get tideRising => '↑涨潮';
+
+  @override
+  String get tideFalling => '↓退潮';
+
+  @override
+  String tideHighToday(String list) {
+    return '今日满潮 $list';
+  }
+
+  @override
+  String tideLowToday(String list) {
+    return '今日干潮 $list';
+  }
+
+  @override
+  String tideItem(String time, String value) {
+    return '$time $value cm';
+  }
+
+  @override
+  String get tideAstroNote => '满潮、干潮的时刻与高度为天文潮位（预测值），实际会受天气影响而变化。';
+
+  @override
+  String get tideDatum => '潮位为相对于东京湾平均海面（T.P.）的高度。';
+
+  @override
+  String get tideDerived => '满潮、干潮及涨退潮由本应用根据日本气象厅的数据计算得出。';
+
+  @override
+  String get tideSource => '来源：气象厅“潮位观测信息”';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -5670,4 +5721,55 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get waveNote => '出海前請確認最新的氣象與海況資訊，並依現場狀況自行判斷。';
+
+  @override
+  String waveTideTitle(String area) {
+    return '海浪與潮位（$area）';
+  }
+
+  @override
+  String get tideTitle => '潮位';
+
+  @override
+  String tideStation(String name, String km) {
+    return '潮位：$name（距攝影機約 $km km）';
+  }
+
+  @override
+  String tideNow(String value, String time) {
+    return '目前 $value cm（$time）';
+  }
+
+  @override
+  String get tideRising => '↑漲潮';
+
+  @override
+  String get tideFalling => '↓退潮';
+
+  @override
+  String tideHighToday(String list) {
+    return '今日滿潮 $list';
+  }
+
+  @override
+  String tideLowToday(String list) {
+    return '今日乾潮 $list';
+  }
+
+  @override
+  String tideItem(String time, String value) {
+    return '$time $value cm';
+  }
+
+  @override
+  String get tideAstroNote => '滿潮、乾潮的時刻與高度為天文潮位（預測值），實際會受天氣影響而變化。';
+
+  @override
+  String get tideDatum => '潮位為相對於東京灣平均海面（T.P.）的高度。';
+
+  @override
+  String get tideDerived => '滿潮、乾潮及漲退潮由本應用程式根據日本氣象廳的資料計算得出。';
+
+  @override
+  String get tideSource => '來源：氣象廳「潮位觀測資訊」';
 }

@@ -5097,6 +5097,84 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'海に出るときは最新の気象・海象情報と現地の状況で判断してください。'**
   String get waveNote;
+
+  /// No description provided for @waveTideTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'波と潮位（{area}）'**
+  String waveTideTitle(String area);
+
+  /// No description provided for @tideTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'潮位'**
+  String get tideTitle;
+
+  /// No description provided for @tideStation.
+  ///
+  /// In ja, this message translates to:
+  /// **'潮位：{name}（カメラから約 {km} km）'**
+  String tideStation(String name, String km);
+
+  /// No description provided for @tideNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在 {value} cm（{time}）'**
+  String tideNow(String value, String time);
+
+  /// No description provided for @tideRising.
+  ///
+  /// In ja, this message translates to:
+  /// **'↑上げ潮'**
+  String get tideRising;
+
+  /// No description provided for @tideFalling.
+  ///
+  /// In ja, this message translates to:
+  /// **'↓下げ潮'**
+  String get tideFalling;
+
+  /// No description provided for @tideHighToday.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日の満潮 {list}'**
+  String tideHighToday(String list);
+
+  /// No description provided for @tideLowToday.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日の干潮 {list}'**
+  String tideLowToday(String list);
+
+  /// No description provided for @tideItem.
+  ///
+  /// In ja, this message translates to:
+  /// **'{time} {value} cm'**
+  String tideItem(String time, String value);
+
+  /// No description provided for @tideAstroNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'満潮・干潮の時刻と高さは天文潮位（予測）で、実際は気象の影響で変わります。'**
+  String get tideAstroNote;
+
+  /// No description provided for @tideDatum.
+  ///
+  /// In ja, this message translates to:
+  /// **'潮位は東京湾平均海面（T.P.）からの高さです。'**
+  String get tideDatum;
+
+  /// No description provided for @tideDerived.
+  ///
+  /// In ja, this message translates to:
+  /// **'満潮・干潮と上げ下げは気象庁のデータをもとにアプリで算出しています。'**
+  String get tideDerived;
+
+  /// No description provided for @tideSource.
+  ///
+  /// In ja, this message translates to:
+  /// **'出典：気象庁「潮位観測情報」'**
+  String get tideSource;
 }
 
 class _AppLocalizationsDelegate

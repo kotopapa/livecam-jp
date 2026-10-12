@@ -2850,6 +2850,57 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get waveNote => '海に出るときは最新の気象・海象情報と現地の状況で判断してください。';
+
+  @override
+  String waveTideTitle(String area) {
+    return '波と潮位（$area）';
+  }
+
+  @override
+  String get tideTitle => '潮位';
+
+  @override
+  String tideStation(String name, String km) {
+    return '潮位：$name（カメラから約 $km km）';
+  }
+
+  @override
+  String tideNow(String value, String time) {
+    return '現在 $value cm（$time）';
+  }
+
+  @override
+  String get tideRising => '↑上げ潮';
+
+  @override
+  String get tideFalling => '↓下げ潮';
+
+  @override
+  String tideHighToday(String list) {
+    return '今日の満潮 $list';
+  }
+
+  @override
+  String tideLowToday(String list) {
+    return '今日の干潮 $list';
+  }
+
+  @override
+  String tideItem(String time, String value) {
+    return '$time $value cm';
+  }
+
+  @override
+  String get tideAstroNote => '満潮・干潮の時刻と高さは天文潮位（予測）で、実際は気象の影響で変わります。';
+
+  @override
+  String get tideDatum => '潮位は東京湾平均海面（T.P.）からの高さです。';
+
+  @override
+  String get tideDerived => '満潮・干潮と上げ下げは気象庁のデータをもとにアプリで算出しています。';
+
+  @override
+  String get tideSource => '出典：気象庁「潮位観測情報」';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -5739,4 +5790,58 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String get waveNote =>
       '海（うみ）に出（で）るときは、最新（さいしん）の気象（きしょう）・海（うみ）の情報（じょうほう）と、その場所（ばしょ）のようすで判断（はんだん）してください。';
+
+  @override
+  String waveTideTitle(String area) {
+    return 'なみと潮位（ちょうい）（$area）';
+  }
+
+  @override
+  String get tideTitle => '潮位（ちょうい）';
+
+  @override
+  String tideStation(String name, String km) {
+    return '潮位（ちょうい）：$name（カメラから約（やく） $km km）';
+  }
+
+  @override
+  String tideNow(String value, String time) {
+    return 'いま $value cm（$time）';
+  }
+
+  @override
+  String get tideRising => '↑上（あ）げ潮（しお）';
+
+  @override
+  String get tideFalling => '↓下（さ）げ潮（しお）';
+
+  @override
+  String tideHighToday(String list) {
+    return 'きょうの満潮（まんちょう） $list';
+  }
+
+  @override
+  String tideLowToday(String list) {
+    return 'きょうの干潮（かんちょう） $list';
+  }
+
+  @override
+  String tideItem(String time, String value) {
+    return '$time $value cm';
+  }
+
+  @override
+  String get tideAstroNote =>
+      '満潮（まんちょう）・干潮（かんちょう）の時刻（じこく）と高（たか）さは、計算（けいさん）で出（だ）した予想（よそう）です。天気（てんき）で変（か）わることがあります。';
+
+  @override
+  String get tideDatum =>
+      '潮位（ちょうい）は、東京湾（とうきょうわん）の平均（へいきん）の海面（かいめん）（T.P.）からの高（たか）さです。';
+
+  @override
+  String get tideDerived =>
+      '満潮（まんちょう）・干潮（かんちょう）と上（あ）げ下（さ）げは、気象庁（きしょうちょう）のデータをもとにアプリで計算（けいさん）しています。';
+
+  @override
+  String get tideSource => '出典（しゅってん）：気象庁（きしょうちょう）「潮位観測情報（ちょういかんそくじょうほう）」';
 }

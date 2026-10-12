@@ -2860,4 +2860,55 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get waveNote => '바다에 나갈 때는 최신 기상·해상 정보와 현지 상황을 확인하여 판단하세요.';
+
+  @override
+  String waveTideTitle(String area) {
+    return '파도와 조위($area)';
+  }
+
+  @override
+  String get tideTitle => '조위';
+
+  @override
+  String tideStation(String name, String km) {
+    return '조위: $name (카메라에서 약 $km km)';
+  }
+
+  @override
+  String tideNow(String value, String time) {
+    return '현재 $value cm ($time)';
+  }
+
+  @override
+  String get tideRising => '↑밀물';
+
+  @override
+  String get tideFalling => '↓썰물';
+
+  @override
+  String tideHighToday(String list) {
+    return '오늘의 만조 $list';
+  }
+
+  @override
+  String tideLowToday(String list) {
+    return '오늘의 간조 $list';
+  }
+
+  @override
+  String tideItem(String time, String value) {
+    return '$time $value cm';
+  }
+
+  @override
+  String get tideAstroNote => '만조·간조의 시각과 높이는 천문 조위(예측)이며, 실제로는 날씨에 따라 달라집니다.';
+
+  @override
+  String get tideDatum => '조위는 도쿄만 평균 해수면(T.P.)으로부터의 높이입니다.';
+
+  @override
+  String get tideDerived => '만조·간조와 밀물·썰물은 기상청 데이터를 바탕으로 앱에서 계산한 값입니다.';
+
+  @override
+  String get tideSource => '출처: 기상청(JMA) 「조위 관측 정보」';
 }

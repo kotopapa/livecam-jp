@@ -21,6 +21,7 @@ import '../data/analytics.dart';
 import '../data/data_saver.dart';
 import '../data/hotel_links.dart';
 import '../data/stockpile_products.dart';
+import '../data/tide_level.dart' show TideLevels;
 import '../data/wave_forecast.dart' show WaveForecasts;
 import '../l10n/l10n.dart';
 import '../models/camera.dart';
@@ -262,7 +263,7 @@ class _DetailScreenState extends State<DetailScreen> {
               const Divider(height: 24),
             ],
             // 海岸・港湾カメラの波の予報（気象庁の府県予報。無ければ区切り線ごと出ない）
-            if (WaveForecasts.appliesTo(camera))
+            if (WaveForecasts.appliesTo(camera) || TideLevels.appliesTo(camera))
               WaveForecastCard(camera: camera, resumeTick: app.resumeTick),
             _locationSection(),
             const Divider(height: 24),

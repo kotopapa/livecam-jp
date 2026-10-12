@@ -2962,4 +2962,59 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get waveNote =>
       'Trước khi ra biển, hãy kiểm tra thông tin thời tiết, biển mới nhất và tự đánh giá theo tình hình tại chỗ.';
+
+  @override
+  String waveTideTitle(String area) {
+    return 'Sóng và mực thủy triều ($area)';
+  }
+
+  @override
+  String get tideTitle => 'Mực thủy triều';
+
+  @override
+  String tideStation(String name, String km) {
+    return 'Mực thủy triều: $name (cách camera khoảng $km km)';
+  }
+
+  @override
+  String tideNow(String value, String time) {
+    return 'Hiện tại $value cm ($time)';
+  }
+
+  @override
+  String get tideRising => '↑ Triều lên';
+
+  @override
+  String get tideFalling => '↓ Triều xuống';
+
+  @override
+  String tideHighToday(String list) {
+    return 'Triều cao hôm nay $list';
+  }
+
+  @override
+  String tideLowToday(String list) {
+    return 'Triều thấp hôm nay $list';
+  }
+
+  @override
+  String tideItem(String time, String value) {
+    return '$time $value cm';
+  }
+
+  @override
+  String get tideAstroNote =>
+      'Giờ và độ cao triều cao/thấp là mực thủy triều thiên văn (dự báo); thực tế thay đổi theo thời tiết.';
+
+  @override
+  String get tideDatum =>
+      'Mực thủy triều là độ cao so với mực nước biển trung bình vịnh Tokyo (T.P.).';
+
+  @override
+  String get tideDerived =>
+      'Triều cao/thấp và triều lên/xuống do ứng dụng tính từ dữ liệu của JMA.';
+
+  @override
+  String get tideSource =>
+      'Nguồn: Cơ quan Khí tượng Nhật Bản (JMA) “Quan trắc mực thủy triều”';
 }

@@ -831,5 +831,18 @@
   "waveException": "但{place}：{text}",
   "waveRaw": "{raw}（日文）",
   "waveSource": "來源：氣象廳「天氣預報」",
-  "waveNote": "出海前請確認最新的氣象與海況資訊，並依現場狀況自行判斷。"
+  "waveNote": "出海前請確認最新的氣象與海況資訊，並依現場狀況自行判斷。",
+  "waveTideTitle": "海浪與潮位（{area}）",
+  "tideTitle": "潮位",
+  "tideStation": "潮位：{name}（距攝影機約 {km} km）",
+  "tideNow": "目前 {value} cm（{time}）",
+  "tideRising": "↑漲潮",
+  "tideFalling": "↓退潮",
+  "tideHighToday": "今日滿潮 {list}",
+  "tideLowToday": "今日乾潮 {list}",
+  "tideItem": "{time} {value} cm",
+  "tideAstroNote": "滿潮、乾潮的時刻與高度為天文潮位（預測值），實際會受天氣影響而變化。",
+  "tideDatum": "潮位為相對於東京灣平均海面（T.P.）的高度。",
+  "tideDerived": "滿潮、乾潮及漲退潮由本應用程式根據日本氣象廳的資料計算得出。",
+  "tideSource": "來源：氣象廳「潮位觀測資訊」"
 }

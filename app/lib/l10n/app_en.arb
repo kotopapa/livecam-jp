@@ -831,5 +831,18 @@
   "waveException": "However, {place}: {text}",
   "waveRaw": "{raw} (Japanese)",
   "waveSource": "Source: JMA \"Weather Forecast\"",
-  "waveNote": "Before going out to sea, check the latest weather and sea conditions and judge by the situation on site."
+  "waveNote": "Before going out to sea, check the latest weather and sea conditions and judge by the situation on site.",
+  "waveTideTitle": "Waves and tide level ({area})",
+  "tideTitle": "Tide level",
+  "tideStation": "Tide level: {name} (about {km} km from the camera)",
+  "tideNow": "Now {value} cm ({time})",
+  "tideRising": "↑ Rising tide",
+  "tideFalling": "↓ Falling tide",
+  "tideHighToday": "High tide today {list}",
+  "tideLowToday": "Low tide today {list}",
+  "tideItem": "{time} {value} cm",
+  "tideAstroNote": "High and low tide times and heights are astronomical tide predictions; actual levels change with the weather.",
+  "tideDatum": "Tide level is the height above Tokyo Bay mean sea level (T.P.).",
+  "tideDerived": "High/low tides and rising/falling are calculated by the app from JMA data.",
+  "tideSource": "Source: JMA \"Tide Level Observations\""
 }

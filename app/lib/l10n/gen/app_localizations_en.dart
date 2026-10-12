@@ -2952,4 +2952,58 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get waveNote =>
       'Before going out to sea, check the latest weather and sea conditions and judge by the situation on site.';
+
+  @override
+  String waveTideTitle(String area) {
+    return 'Waves and tide level ($area)';
+  }
+
+  @override
+  String get tideTitle => 'Tide level';
+
+  @override
+  String tideStation(String name, String km) {
+    return 'Tide level: $name (about $km km from the camera)';
+  }
+
+  @override
+  String tideNow(String value, String time) {
+    return 'Now $value cm ($time)';
+  }
+
+  @override
+  String get tideRising => '↑ Rising tide';
+
+  @override
+  String get tideFalling => '↓ Falling tide';
+
+  @override
+  String tideHighToday(String list) {
+    return 'High tide today $list';
+  }
+
+  @override
+  String tideLowToday(String list) {
+    return 'Low tide today $list';
+  }
+
+  @override
+  String tideItem(String time, String value) {
+    return '$time $value cm';
+  }
+
+  @override
+  String get tideAstroNote =>
+      'High and low tide times and heights are astronomical tide predictions; actual levels change with the weather.';
+
+  @override
+  String get tideDatum =>
+      'Tide level is the height above Tokyo Bay mean sea level (T.P.).';
+
+  @override
+  String get tideDerived =>
+      'High/low tides and rising/falling are calculated by the app from JMA data.';
+
+  @override
+  String get tideSource => 'Source: JMA \"Tide Level Observations\"';
 }

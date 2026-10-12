@@ -831,5 +831,18 @@
   "waveException": "但{place}：{text}",
   "waveRaw": "{raw}（日文）",
   "waveSource": "来源：气象厅“天气预报”",
-  "waveNote": "出海前请确认最新的气象和海况信息，并结合现场情况自行判断。"
+  "waveNote": "出海前请确认最新的气象和海况信息，并结合现场情况自行判断。",
+  "waveTideTitle": "海浪与潮位（{area}）",
+  "tideTitle": "潮位",
+  "tideStation": "潮位：{name}（距摄像头约 {km} km）",
+  "tideNow": "当前 {value} cm（{time}）",
+  "tideRising": "↑涨潮",
+  "tideFalling": "↓退潮",
+  "tideHighToday": "今日满潮 {list}",
+  "tideLowToday": "今日干潮 {list}",
+  "tideItem": "{time} {value} cm",
+  "tideAstroNote": "满潮、干潮的时刻与高度为天文潮位（预测值），实际会受天气影响而变化。",
+  "tideDatum": "潮位为相对于东京湾平均海面（T.P.）的高度。",
+  "tideDerived": "满潮、干潮及涨退潮由本应用根据日本气象厅的数据计算得出。",
+  "tideSource": "来源：气象厅“潮位观测信息”"
 }
