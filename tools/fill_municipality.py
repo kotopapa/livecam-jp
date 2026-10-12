@@ -63,10 +63,39 @@ def targets(cams: list[dict]) -> list[dict]:
     ]
 
 
+# 海上・岸壁で逆ジオコーダが市区町村を返さない地点は、周囲を同心円状に探して
+# 同じ都道府県の最寄りの陸の市区町村を採る（--near-land。江の島ヨットハーバー等、
+# 2026-10-12 波の予報が出ない海岸・港湾カメラ84台への対処）
+NEAR_LAND_KM = (0.3, 0.7, 1.2, 2.0, 3.0, 5.0)
+
+
+def near_land(lat: float, lng: float, pref: str, cache: dict, interval: float) -> tuple[str, float] | None:
+    import math
+    for km in NEAR_LAND_KM:
+        hits = []
+        for k in range(8):
+            a = math.radians(k * 45)
+            la = lat + km / 111.0 * math.cos(a)
+            ln = lng + km / (111.0 * math.cos(math.radians(lat))) * math.sin(a)
+            key = cache_key(la, ln)
+            if key not in cache:
+                cache[key] = reverse_geocode(la, ln)
+                time.sleep(interval)
+            code = cache[key]
+            if code and code[:2] == pref:
+                hits.append(code)
+        if hits:
+            # その半径で最も多く当たった市区町村
+            return max(set(hits), key=hits.count), km
+    return None
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--interval", type=float, default=0.25)
+    ap.add_argument("--near-land", action="store_true",
+                    help="海上で当たらない地点は周囲（最大5km）の同じ都道府県の陸の市区町村を採る")
     args = ap.parse_args()
 
     data = json.loads(CAMERAS.read_text(encoding="utf-8"))
@@ -96,6 +125,17 @@ def main() -> int:
                 continue
             cache[key] = code
             time.sleep(args.interval)
+        if code is None and args.near_land and c.get("prefecture"):
+            try:
+                found = near_land(c["lat"], c["lng"], c["prefecture"], cache, args.interval)
+            except Exception as e:  # noqa: BLE001
+                found = None
+                print(f"  ! near-land {c['id']} {e}")
+            if found:
+                c["municipality"] = found[0]
+                filled += 1
+                print(f"  陸寄せ: {c['id']} {c['name']} → {found[0]}（{found[1]}km 圏）")
+                continue
         if code is None:
             nohit += 1
         elif code[:2] != c.get("prefecture"):
