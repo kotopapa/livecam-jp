@@ -222,6 +222,13 @@ python site/build.py                            # 配信ファイル生成
 - **監視は HTTP 200・image/* でも本文0バイトを失敗として数える**（石川県道路カメラで停止中カメラが空ファイル配信）
 - 運営者不明分の再調査結果は docs/research_2026-08-29/operator_unknown_resolved.md。転載禁止で不採用にした運営者（yamagata-road.net・tollroad-saga・fujikichi 等）と、事前相談文言で見送った臼杵市・高砂市を記録。kawabou 重複候補（埼玉72・福岡24・島根1）は candidates.json に保留中
 
+## 鍵・権限の守り（2026-10-13 点検で設定）
+
+- **Google Maps の API キーは別プロジェクト `livecam-jp-509900`（番号 799882569675）**にあり、Firebase の `livecam-jp` とは別。キーはアプリに同梱されるため抜き取れ、iOS/Android のアプリ制限はヘッダで偽装できる。対策として Cloud Quotas で日次上限を設定済み: Places Autocomplete 2,000 / Place Details 1,000 / Text Search 100 / Nearby 0、Routes ComputeRoutes 1,000 / RouteMatrix 0（`cloudquotas.googleapis.com` の quotaPreferences、`ignoreSafetyChecks` 2種が必要。gcloud alpha は対話確認で止まるので REST で設定）。課金アカウント「Firebase のお支払い」に月 3,000 円の予算（50/90/100%・予測超過で通知）。上限で止まると国土地理院・openrouteservice へ自動で切り替わる
+- **FCM の送信は専用サービスアカウント `fcm-sender@livecam-jp.iam.gserviceaccount.com`（役割は Firebase Cloud Messaging API Admin のみ）**。鍵は GitHub の環境 `production`（保護ブランチ＝main からの実行だけが使える）の Secret `FIREBASE_SERVICE_ACCOUNT`。bosai-notify.yml と push-test.yml が `environment: production`。旧 `firebase-adminsdk-fbsvc`（sdkAdminServiceAgent）の鍵とリポジトリ直下の Secret は廃止。権限の確認は購読者のいないトピック `test-only` へ送って 200 を見る（本番トピックには送らない）
+- main ブランチは強制 push と削除を禁止（PR 必須にはしていない: monitor/bosai の自動コミットと直接 push を使うため）。GitHub アカウントの 2 要素認証はユーザー側で管理
+- 残る前提: 配信データ（台帳・お知らせ・min_app_version）はリポジトリを信頼して動く。官公庁カメラは http が約 1,000 台あり平文通信を全面許可（画像の差し替えは起こりうるが端末の乗っ取りにはならない）。アプリ内 WebView は YouTube 埋め込みと NEXCO iHighway の2か所だけ
+
 ## Push通知の運用ルール（2026-08-30追記・厳守）
 
 - **本番トピック（special-warning / danger-warning / quake* とその都道府県別）へテスト送信をしてはならない**。一般ユーザー700人超に「【テスト】」通知が届く事故を起こした。切り分けは必ず `push-test.yml` の **mode=send + token指定（直接送信のみ）** で行う。トピック経路の確認が必要なときは、本番と別のテスト専用トピック（例: `test-only`。アプリは購読しない）を使うか、ユーザーに事前に確認を取る
