@@ -344,7 +344,7 @@ python site/build.py                            # 配信ファイル生成
 ## App Store の新素材と iPhone Duo（2026-10-07追記）
 
 - **ヘッダ／検索結果**（iOS 27 の App Store。ASC「プロダクトページ情報 → ヘッダと検索結果」）は任意素材。汎用 5244×2950（16:9・PNG・アルファ不可）1枚でヘッダ（21:9 にトリミング）と検索結果（3:2）を兼ねられる。制作物は `app/store_assets/ios/product_page/`、原稿と再生成は `store_screenshots/header_assets/`（手順は docs/store_screenshots.md）。価格・「無料」・URL・©・受賞・他ストアロゴ・Apple バッジは禁止、4+ 相当の内容、言語ごとに別素材可。Asset Library から単独提出でき、承認後は再審査なしで差し替え可
-- **iPhone Duo**（折りたたみ iPhone、2026-10-23 発売、iOS 27.1）のスクリーンショットは内側 2007×2853・外側 1398×2034（横向きも可）、**2027年4月から新規・更新の提出で必須**。シミュレータは Xcode 27.1 以降（Device Hub で追加、`xcrun simctl list devicetypes | grep Duo`）。この Mac は 2026-10-07 時点で Xcode 27.0 で未対応。編集ツールには `iphone-duo` を追加済み（撮影後に `store_screenshots/public/screenshots/apple/iphone-duo/ja/` へ置いて書き出す。強調語の位置は画像を入れてから合わせ直す）
+- **iPhone Duo**（折りたたみ iPhone、2026-10-23 発売、iOS 27.1）のスクリーンショットは内側 2007×2853・外側 1398×2034（横向きも可）、**2027年4月から新規・更新の提出で必須**。シミュレータは Xcode 27.1 以降（Device Hub で追加、`xcrun simctl list devicetypes | grep Duo`）。**2026-10-13 に Xcode 27.1 RC で撮影・書き出し済み**（`app/store_assets/ios/screenshots/2007x2853/ja` と `1398x2034/ja`）。手順は docs/store_screenshots.md の Duo 節: 内側ディスプレイへの切替は Device Hub の Pose「Open」を手で押す（コマンドは無い）、撮影は `SIM_DISPLAY=3`（内側は display id 3）。内側ディスプレイの表示監査（4サイズ×11画面）で崩れは無し、ただし広い画面を活かす分岐（最大幅・2カラム）は未実装
 - Codex exec は **git 管理下のディレクトリで動かす**（`-C` にリポジトリ内のフォルダ。scratchpad では「Not inside a trusted directory」で止まる）。プロンプトは標準入力（`cat PROMPT.md | codex exec … -`）で渡す（引数に渡すと stdin 待ちで止まった）
 
 ## YouTube 全国点検の知見（2026-09-23追記）

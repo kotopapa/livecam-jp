@@ -137,6 +137,7 @@ Apple の新しい端末区分。2026-10-23 発売（iOS 27.1）。**2027年4月
 - 手順は iOS と同じ（上の「1. 実機キャプチャ」）。`tools/screenshot_capture/` のパッチと integration_test を当て、`SIM=<Duo の udid>` で `CAPTURE_DIR=store_assets/captures/ios-duo flutter drive …` を回す。`CAPTURE_VIA=simctl` は使えない点も同じ
 - **内側ディスプレイ（開いた状態、2007×2853）で撮る**。外側用は書き出し時に内側画像から縮小して作る（縦横比が同じなので比率は崩れない）。Duo のシミュレータで内側が選べない場合は、折りたたみ状態の切替（Simulator の Device メニュー）を開いた状態にする
 - 一度 ATT・位置情報の許可ダイアログを出したシミュレータは初回フレームが描画されないので、`SCREENSHOT_MODE=true` の版だけを起動する（iOS の注意と同じ）
+- **撮り方（2026-10-13 実施）**: Xcode 27.1 で `xcrun simctl create "iPhone Duo" com.apple.CoreSimulator.SimDeviceType.iPhone-Duo com.apple.CoreSimulator.SimRuntime.iOS-27-1` → boot。**開いた状態（内側ディスプレイ）への切替は Xcode の Device Hub（`/Applications/Xcode.app/Contents/Applications/DeviceHub.app`）の Pose「Open」を手で押す**（simctl/devicectl に姿勢のコマンドは無く、duoctl は 27.1 RC 27A9275 ではヒンジ角を変えられなかった）。内側ディスプレイは display id 3 なので `SIM_DISPLAY=3 tools/screenshot_capture/run_capture.sh <udid> app/store_assets/captures/ios-duo all`（`--display=internal` は外側が返る）。状態は `xcrun devicectl device info displays --device <udid>` で確認（LCD=外側 1398×2034、LCD-1=内側 2007×2853）
 - 撮れた PNG は `app/store_assets/captures/ios-duo/` に置き、エディタ用に `store_screenshots/public/screenshots/apple/iphone-duo/ja/` へコピーする。ファイル名は iPhone と同じ（`01_detail_river.png` など。`app-store-screenshots.json` の `slidesByDevice.iphone-duo` が参照している）。**画像が無いうちは枠の中に「Drop a screenshot here」が出るだけで落ちない**
 
 ### エディタと書き出し
