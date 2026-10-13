@@ -15,6 +15,7 @@ concurrency:
 jobs:
   notify:
     runs-on: ubuntu-latest
+    environment: production  # Secret は保護ブランチ（main）からの実行だけが使える（2026-10-13）
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

@@ -32,6 +32,7 @@ permissions:
 jobs:
   send:
     runs-on: ubuntu-latest
+    environment: production  # Secret は保護ブランチ（main）からの実行だけが使える（2026-10-13）
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
