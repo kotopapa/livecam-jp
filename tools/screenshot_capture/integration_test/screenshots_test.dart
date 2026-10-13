@@ -292,7 +292,13 @@ void main() {
       await snap(tester, 'layer_typhoon');
       await moveMap(tester, 35.68, 139.77, 14.5);
       await wait(tester, 4);
-      await pickLayer(tester, l10n.mapLayerShelterTitle, after: 8);
+      // 避難場所のタイルは短い名（mapShelterTitle）。同名の節見出しが先に見つかるので最後の一致を押す（2026-10-13）
+      await openSheet(tester);
+      await tapKey(tester, 'map_panel_layers');
+      await tester.ensureVisible(find.text(l10n.mapShelterTitle).last);
+      await tester.pump();
+      await tester.tap(find.text(l10n.mapShelterTitle).last, warnIfMissed: false);
+      await wait(tester, 8);
       await snap(tester, 'layer_shelters');
       await moveMap(tester, 35.75, 139.78, 12.5);
       await wait(tester, 4);
