@@ -21,6 +21,8 @@ from monitor.freeze import (HISTORY_MAX, as_utc, dhash64, is_black_frame,
                             parse_utc)
 
 USER_AGENT = "LiveCamJP-Monitor/1.0 (+https://github.com/kotopapa/livecam-jp)"
+# YouTube の同意画面（シェル）を減らすための Cookie（EU 向けの同意済み印。判定材料が取れる回を増やす）
+YT_CONSENT_COOKIE = "SOCS=CAI; CONSENT=YES+"
 TIMEOUT_SEC = 10
 ERROR_AFTER_FAILURES = 3
 
@@ -408,17 +410,19 @@ def _check_youtube(session, camera, state, now, prev_failures) -> dict:
     if feed["type"] == "youtube_video" and not feed["url"].startswith("videoseries"):
         watch = _get(session,
                      f"https://www.youtube.com/watch?v={feed['url']}",
-                     {"User-Agent": USER_AGENT})
+                     {"User-Agent": USER_AGENT, "Cookie": YT_CONSENT_COOKIE})
         if watch is not None and "ytInitialPlayerResponse" in watch.text:
             if not _youtube_watch_alive(watch.text, now):
                 return _fail(state, now, prev_failures, resp.status_code)
-        elif prev_failures > 0:
-            # 判定材料が無い応答（429・同意画面等のシェル・取得失敗）で、配信が終わったと
-            # 判定済みのカメラを oEmbed の 200 だけで「正常」に戻さない。GitHub Actions では
-            # watch ページが取れない回が混ざり、終わった枠が error⇄ok を往復して地図に
-            # 出続けていた（2026-10-03 釜山 海雲台: 2026-09-23 に配信終了）
+        elif prev_failures > 0 or state.get("last_ok_at"):
+            # 判定材料が無い応答（429・同意画面等のシェル・取得失敗）では oEmbed の 200 だけで
+            # 「正常」にしない。GitHub Actions では watch ページが取れない回が混ざり、終わった
+            # 枠が error⇄ok を往復して地図に出続けていた（2026-10-03 釜山 海雲台）。当初は
+            # 失敗歴のあるカメラだけ保っていたが、失敗歴の無いカメラが配信終了後に一度も
+            # watch ページを読めず ok のまま残った（2026-10-14 シドニー オジロワシ・オレンジ
+            # ハヤブサ）ため、一度でも判定したことのあるカメラは前回の判定を保つ。
+            # 初回（state が空）だけは従来どおり oEmbed の結果を採用し、新規カメラを隠さない
             return _hold(state, prev_failures, resp.status_code)
-        # 失敗歴の無いカメラは従来どおり oEmbed の結果を採用する
     state["consecutive_failures"] = 0
     state["last_ok_at"] = now.isoformat()
     return {

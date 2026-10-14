@@ -188,11 +188,25 @@ def test_youtube_video_live_ok():
 
 
 def test_youtube_video_shell_response_keeps_ok():
-    """同意画面等で判定材料がない場合はoEmbed結果を採用(誤爆防止)。"""
+    """同意画面等で判定材料がない場合、初回（state が空）だけは oEmbed 結果を採用（新規カメラを隠さない）。"""
     oembed = FakeResponse(200, b'{"title":"x"}')
     shell = FakeResponse(200, b'<html>consent</html>')
     r = check_camera(FakeSession([oembed, shell]), _yt_camera(), {})
     assert r["state"] == "ok"
+
+
+def test_youtube_video_shell_response_holds_once_judged():
+    """一度でも判定したカメラは、判定材料の無い回に oEmbed 200 で ok にしない（前回を保つ）。
+
+    2026-10-14 シドニー オジロワシ・オレンジ ハヤブサ: 配信終了後に watch ページが一度も
+    読めず、失敗歴が無いため ok のまま地図に残っていた
+    """
+    oembed = FakeResponse(200, b'{"title":"x"}')
+    shell = FakeResponse(200, b'<html>consent</html>')
+    state = {"consecutive_failures": 0, "last_ok_at": "2026-10-01T00:00:00+00:00"}
+    r = check_camera(FakeSession([oembed, shell]), _yt_camera(), state)
+    assert r["state"] == "unknown" and r["consecutive_failures"] == 0
+    assert r["last_ok_at"] == "2026-10-01T00:00:00+00:00"
 
 
 def test_youtube_video_shell_response_keeps_previous_failure():
