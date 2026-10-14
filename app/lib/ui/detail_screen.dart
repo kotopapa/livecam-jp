@@ -390,7 +390,8 @@ class _DetailScreenState extends State<DetailScreen> {
     final l10n = context.l10n;
     final cat = camera.category;
     final label = categoryLabelOf(l10n, cat);
-    final pref = camera.prefecture.isEmpty
+    // 海外カメラの prefecture は "99" で県名が無い。「海外」チップだけ出す（2026-10-14 利用者報告で "99" が出ていた）
+    final pref = camera.prefecture.isEmpty || camera.isWorld
         ? ''
         : prefectureNameOf(l10n, camera.prefecture);
     final chips = Wrap(spacing: 6, runSpacing: 4, children: [
