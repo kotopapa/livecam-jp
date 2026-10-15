@@ -422,14 +422,15 @@ cameras:
     lat: 42.8615
     lng: 140.689
 
-  - id: curated-zao-360
-    name: 蔵王温泉スキー場（360度）
-    operator: "蔵王索道協会"
-    video_id: "E59ywA_EtQI"
-    category: scenic
-    prefecture: "06"
-    lat: 38.166
-    lng: 140.403
+  # 2026-10-14 退役: 現行ライブなし（チャンネル配信一覧に現行枠なし・旧枠は再生不可）
+#   - id: curated-zao-360
+#     name: 蔵王温泉スキー場（360度）
+#     operator: "蔵王索道協会"
+#     video_id: "E59ywA_EtQI"
+#     category: scenic
+#     prefecture: "06"
+#     lat: 38.166
+#     lng: 140.403
 
   - id: curated-kusatsu-yubatake
     name: 草津温泉 湯畑
@@ -2144,10 +2145,11 @@ cameras:
   # lng: 136.168
   # note: 越前市・鯖江市・越前町の切替式
 
+  # 2026-10-14 配信枠更新: 1dz7RLJgNSo → djKLm8qKdlY
   - id: curated-tannan-2
     name: 丹南 県道武生美山線・福井鯖江線（切替）
     operator: "福井新聞社"
-    video_id: "1dz7RLJgNSo"
+    video_id: "djKLm8qKdlY"
     category: road
     prefecture: "18"
     lat: 35.905
@@ -2314,15 +2316,16 @@ cameras:
   # lat: 34.395
   # lng: 132.453
 
-  - id: curated-tss-hiroshima
-    name: TSS情報カメラ（広島）
-    operator: "テレビ新広島"
-    video_id: "lf-RntqEthQ"
-    category: scenic
-    prefecture: "34"
-    lat: 34.391
-    lng: 132.462
-    note: 画角はレビューで確認
+  # 2026-10-14 退役: 現行ライブなし（チャンネル配信一覧に現行枠なし・旧枠は再生不可）
+#   - id: curated-tss-hiroshima
+#     name: TSS情報カメラ（広島）
+#     operator: "テレビ新広島"
+#     video_id: "lf-RntqEthQ"
+#     category: scenic
+#     prefecture: "34"
+#     lat: 34.391
+#     lng: 132.462
+#     note: 画角はレビューで確認
 
   # 2026-09-23 配信枠更新: oOi1zUJZ5gk → GoC37SVY94w
   - id: curated-kry-shunan
@@ -4929,15 +4932,16 @@ cameras:
     lng: 127.909401
     note: "oEmbed 200。伊野波150-18"
 
-  - id: curated-transit-cafe-chatan
-    name: "トランジットカフェ（北谷町宮城海岸）"
-    operator: "Transit Café"
-    video_id: "Yq-tvHhSJN4"
-    category: "coast"
-    prefecture: "47"
-    lat: 26.330542
-    lng: 127.744049
-    note: "oEmbed 200 / 24時間。既登録のオーシャンビュー砂辺(vA_41GBLxVU)と近接だが別運営"
+  # 2026-10-14 退役: 現行ライブなし（チャンネル配信一覧に現行枠なし・旧枠は再生不可）
+#   - id: curated-transit-cafe-chatan
+#     name: "トランジットカフェ（北谷町宮城海岸）"
+#     operator: "Transit Café"
+#     video_id: "Yq-tvHhSJN4"
+#     category: "coast"
+#     prefecture: "47"
+#     lat: 26.330542
+#     lng: 127.744049
+#     note: "oEmbed 200 / 24時間。既登録のオーシャンビュー砂辺(vA_41GBLxVU)と近接だが別運営"
 
   # 2026-09-23 配信枠更新: mFSKW2VeYHo → FtDaGIo_kx0
   - id: curated-maedamisaki-blue-cave
@@ -5238,10 +5242,11 @@ cameras:
     note: "oEmbed 200 / 寺院設置 Axis カメラ"
 
   # 2026-09-23 配信枠更新: 0K3thF0EFtM → uuuHfRXM4Pk
+  # 2026-10-14 配信枠更新: uuuHfRXM4Pk → XZrv7-ee4qw
   - id: curated-sugane-ebisubashi
     name: "錦川 恵比須橋（須万）"
     operator: "須金地区自主防災"
-    video_id: uuuHfRXM4Pk
+    video_id: XZrv7-ee4qw
     category: "river"
     prefecture: "35"
     lat: 34.216507
@@ -5809,10 +5814,11 @@ cameras:
     lng: 135.65048
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。公式ch。座標:Nominatim(東大阪市出雲井町)。geo=枚岡神社, 枚岡停車場線, 豊浦町, 東大阪市, 大阪府, 579-8031, 日本"
 
+  # 2026-10-14 配信枠更新: ohYeZs4F0NY → uBbJUEOPINU
   - id: curated-temple-tsukiji-hongwanji
     name: "築地本願寺"
     operator: "築地本願寺"
-    video_id: "ohYeZs4F0NY"
+    video_id: "uBbJUEOPINU"
     category: "scenic"
     prefecture: "13"
     lat: 35.6666
@@ -6083,22 +6089,24 @@ cameras:
     lng: 133.53978
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。防犯カメラ兼用。座標:Nominatim(帯屋町1)。geo=帯屋町一丁目, 堺町, 高知市, 高知県, 780-8571, 日本"
 
-  - id: curated-street-kanda-sta-kita
-    name: "神田駅北口"
-    operator: "神田ライブチャンネル（個人ch）"
-    video_id: "ftkM0BVLhtg"
-    category: "road"
-    prefecture: "13"
-    lat: 35.69314
-    lng: 139.77118
-    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。運営者=チャンネル名。座標:Nominatim(鍛冶町2)。geo=神田駅北口, 中央通り, 内神田三丁目, 内神田, 千代田区, 東京都, 102-0000, 日本"
+  # 2026-10-14 退役: 現行ライブなし（チャンネル配信一覧に現行枠なし・旧枠は再生不可）
+#   - id: curated-street-kanda-sta-kita
+#     name: "神田駅北口"
+#     operator: "神田ライブチャンネル（個人ch）"
+#     video_id: "ftkM0BVLhtg"
+#     category: "road"
+#     prefecture: "13"
+#     lat: 35.69314
+#     lng: 139.77118
+#     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。運営者=チャンネル名。座標:Nominatim(鍛冶町2)。geo=神田駅北口, 中央通り, 内神田三丁目, 内神田, 千代田区, 東京都, 102-0000, 日本"
 
   # 2026-08-31 配信枠更新: hV38YF80Wkk → H6iToFQx7os
   # 2026-09-23 配信枠更新: H6iToFQx7os → IxMjo0rGCwQ
+  # 2026-10-14 配信枠更新: IxMjo0rGCwQ → tWB90g9M0nA
   - id: curated-street-kokubuncho-sendai
     name: "仙台 国分町"
     operator: "国分町ライブカメラ（YouTube ch）"
-    video_id: IxMjo0rGCwQ
+    video_id: tWB90g9M0nA
     category: "road"
     prefecture: "04"
     lat: 38.26387
@@ -6218,10 +6226,11 @@ cameras:
     note: "oEmbed 200確認(2026-08-24)。既存RKK熊本駅前(uvfo7eEirHs)とは別ID・別アングル。座標:Nominatim(熊本駅)。geo=市立春日小学校, 並建熊本線, 春日五丁目, 戸坂町, 西区, 熊本市, 熊本県, 860-8601, 日本"
 
   # 2026-09-23 配信枠更新: l-ZAJUd9G_4 → BxudHBjbvi0
+  # 2026-10-14 配信枠更新: BxudHBjbvi0 → 5mnAYikWOmg
   - id: curated-street-hachioji-ecotown
     name: "八王子 エコタウン屋上（交通状況）"
     operator: "株式会社ゼロエミッション"
-    video_id: BxudHBjbvi0
+    video_id: 5mnAYikWOmg
     category: "road"
     prefecture: "13"
     lat: 35.66423
@@ -6301,10 +6310,11 @@ cameras:
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(高槻駅)概略。geo=高槻, 高槻停車場線, 芥川町一丁目, 高槻市, 大阪府, 569-0804, 日本"
 
   # 2026-08-31 配信枠更新: n7L45-Ey_QE → NoO1Ra2sk9w
+  # 2026-10-14 配信枠更新: NoO1Ra2sk9w → FGdQjnS8Us4
   - id: curated-street-sankei-kunitachi
     name: "国立 富士見通り（サンケイハウジング前）"
     operator: "サンケイハウジング国立店（ch: chico sandesu）"
-    video_id: "NoO1Ra2sk9w"
+    video_id: "FGdQjnS8Us4"
     category: "road"
     prefecture: "13"
     lat: 35.69749
@@ -6436,10 +6446,11 @@ cameras:
 
   # 2026-08-31 配信枠更新: n43Rbr8kB-Y → IbgRGQCcRUo
   # 2026-09-23 配信枠更新: IbgRGQCcRUo → UXnBeU97BQk
+  # 2026-10-14 配信枠更新: UXnBeU97BQk → AsmL4dRdXrA
   - id: curated-street-hakodate-sta-1
     name: "函館駅前ライブカメラ①（函館湾）"
     operator: "HAKODATE LIVE CAMERA"
-    video_id: UXnBeU97BQk
+    video_id: AsmL4dRdXrA
     category: "road"
     prefecture: "01"
     lat: 41.7738
@@ -6933,15 +6944,16 @@ cameras:
   # lng: 140.57235
   # note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。タイトルに日付あり=IDが変わる可能性(要監視)。座標:Nominatim(鉾田市大竹)。geo=大竹, 鉾田市, 茨城県, 311-1512, 日本"
 
-  - id: curated-surf-kanegahama-stairs
-    name: "日向 金ヶ浜（stairs of the sea カメラ3）"
-    operator: "stairs of the sea（サーフショップ）"
-    video_id: "B8T2jPynrvE"
-    category: "coast"
-    prefecture: "45"
-    lat: 32.37837
-    lng: 131.62141
-    note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(日向市平岩)。geo=平岩, 日向市, 宮崎県, 883-0021, 日本"
+  # 2026-10-14 退役: 現行ライブなし（チャンネル配信一覧に現行枠なし・旧枠は再生不可）
+#   - id: curated-surf-kanegahama-stairs
+#     name: "日向 金ヶ浜（stairs of the sea カメラ3）"
+#     operator: "stairs of the sea（サーフショップ）"
+#     video_id: "B8T2jPynrvE"
+#     category: "coast"
+#     prefecture: "45"
+#     lat: 32.37837
+#     lng: 131.62141
+#     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。座標:Nominatim(日向市平岩)。geo=平岩, 日向市, 宮崎県, 883-0021, 日本"
 
   # 2026-09-23 退役: 動画が削除または非公開、チャンネルに現行ライブなし
   # - id: curated-ropeway-otaru-tenguyama
@@ -7427,10 +7439,11 @@ cameras:
 
   # 2026-08-31 配信枠更新: r4CcpvDcUZE → AYspakeTF14
   # 2026-09-23 配信枠更新: AYspakeTF14 → VOYitdlNMp4
+  # 2026-10-14 配信枠更新: VOYitdlNMp4 → DXNXCFLYiLI
   - id: curated-volcano-kyt-kuchinoerabujima
     name: "口永良部島（KYT情報カメラ）"
     operator: "KYT鹿児島読売テレビ"
-    video_id: VOYitdlNMp4
+    video_id: DXNXCFLYiLI
     category: "volcano"
     prefecture: "46"
     lat: 30.4561
@@ -8945,10 +8958,11 @@ cameras:
   # note: "oEmbed 200 / isLiveNow:true。channel/live解決"
 
   # 2026-09-23 配信枠更新: aZ6qUfgKlH8 → NZaqEnk1xWk
+  # 2026-10-14 配信枠更新: NZaqEnk1xWk → ZOnmx44W1Fo
   - id: curated-univ-tohoku-aobayama
     name: "東北大学 青葉山キャンパス"
     operator: "東北大学未来科学技術共同研究センター"
-    video_id: NZaqEnk1xWk
+    video_id: ZOnmx44W1Fo
     category: "other"
     prefecture: "04"
     lat: 38.2542
@@ -9098,10 +9112,11 @@ cameras:
     lng: 132.9194
     note: "oEmbed 200 / isLiveNow true。既存はRCC。座標は広島空港既知位置"
 
+  # 2026-10-14 配信枠更新: 0nC9ws-BSJA → ixXHFjpNG8E
   - id: curated-transport-airport-okayama-tsc
     name: "岡山桃太郎空港"
     operator: "TSCテレビせとうち"
-    video_id: "0nC9ws-BSJA"
+    video_id: "ixXHFjpNG8E"
     category: "port"
     prefecture: "33"
     lat: 34.7569
@@ -11114,15 +11129,16 @@ cameras:
     lng: 141.794917
     video_id: MNhLc-x64iQ
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.iat.co.jp/'
-  - id: curated-lcdb-6583ad1c
-    name: アンサーポイントバードフィーダー
-    operator: アンサーポイント
-    category: other
-    prefecture: '03'
-    lat: 39.152205
-    lng: 140.937732
-    video_id: AZvkFlZDtXA
-    note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.answerpoint.jp/'
+  # 2026-10-14 退役: 旧枠が UNPLAYABLE（この動画はご利用いただけません）で地域制限等とみられ、現行ライブも対応なし
+#   - id: curated-lcdb-6583ad1c
+#     name: アンサーポイントバードフィーダー
+#     operator: アンサーポイント
+#     category: other
+#     prefecture: '03'
+#     lat: 39.152205
+#     lng: 140.937732
+#     video_id: AZvkFlZDtXA
+#     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.answerpoint.jp/'
   - id: curated-lcdb-bca4c097
     name: アンサーポイント水沢市街方面
     operator: アンサーポイント
@@ -19321,11 +19337,12 @@ cameras:
     lng: 140.4058
     note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:10）。author=蔵王索道協会。台帳の蔵王ロープウェイ駐車場（Rs4CcR79sWA）とは別カメラ"
 
+  # 2026-10-14 配信枠更新: w5t-yN0u7Ss → TG-oKh7DG5o
   - id: curated-tc-ueji-ontakesan
     name: "上地御嶽山 境内（岡崎市）"
     operator: "上地御嶽山"
     category: other
-    video_id: "w5t-yN0u7Ss"
+    video_id: "TG-oKh7DG5o"
     prefecture: "23"
     lat: 34.8999
     lng: 137.1581
@@ -19371,11 +19388,12 @@ cameras:
     lng: 135.774
     note: "2026-09-30 全国多角調査(transport_culture)。status=OK isLiveNow=true embed=true（22:10）。以前の枠 D8AlstxJhuk は LOGIN_REQUIRED（非公開）で現行枠に切替済み。枠が変わりやすいので channel_id 併記"
 
+  # 2026-10-14 配信枠更新: ylwAxICbJkA → I6dX-AFFwX4
   - id: curated-tc-hotel-kuu-kyoto-higashihonganji
     name: "京都 東本願寺・烏丸通（HOTEL KUU KYOTO）"
     operator: "HOTEL KUU KYOTO"
     category: other
-    video_id: "ylwAxICbJkA"
+    video_id: "I6dX-AFFwX4"
     prefecture: "26"
     lat: 34.9925
     lng: 135.759
@@ -19753,21 +19771,23 @@ cameras:
     lng: 136.6195
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true（市ページに embed）。チャンネル kctnlc2（UCLwsJphGN7SB2dqsnIoLwPA）は /streams に一覧が出ないが動画は配信中。前回「現在ライブなし」→ 05:50 に配信確認"
 
-  - id: curated-vd-gomi-kankyoshigen-gallery
-    name: "環境資源ギャラリー 搬入車列の状況（掛川市）"
-    operator: "掛川市・菊川市衛生施設組合（環境資源ギャラリー）"
-    category: other
-    video_id: "JSz78wLfsSE"
-    prefecture: "22"
-    lat: 34.7682
-    lng: 138.0449
-    note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true（公式トップに embed。もう1枠 ssQnoeB2mts は isLiveNow=false）。前回「現在ライブなし」→ 05:50 に配信確認"
+  # 2026-10-14 退役: 現行ライブなし（チャンネル配信一覧に現行枠なし・旧枠は再生不可）
+#   - id: curated-vd-gomi-kankyoshigen-gallery
+#     name: "環境資源ギャラリー 搬入車列の状況（掛川市）"
+#     operator: "掛川市・菊川市衛生施設組合（環境資源ギャラリー）"
+#     category: other
+#     video_id: "JSz78wLfsSE"
+#     prefecture: "22"
+#     lat: 34.7682
+#     lng: 138.0449
+#     note: "2026-09-30 全国多角調査 鉱脈追加(veins_daytime)。status=OK isLiveNow=true playableInEmbed=true（公式トップに embed。もう1枠 ssQnoeB2mts は isLiveNow=false）。前回「現在ライブなし」→ 05:50 に配信確認"
 
+  # 2026-10-14 配信枠更新: A1N-Bro8vd4 → rh2nxZzyo2I
   - id: curated-vd-gomi-kimotsuki-seisou
     name: "肝属地区清掃センター 受付状況"
     operator: "大隅肝属広域事務組合"
     category: other
-    video_id: "A1N-Bro8vd4"
+    video_id: "rh2nxZzyo2I"
     prefecture: "46"
     lat: 31.3837
     lng: 130.9406
@@ -20084,11 +20104,12 @@ cameras:
     lng: 139.8365
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true（YBC公式チャンネル UCq4EHq2s9H8hBPXZVOi9alw）。YBC NEWS チャンネルにも同内容の『現在の酒田市』oXrkEbPaj2o があるがミラーと判断。台帳の YBC は山形市内・米沢市内・山形空港のみ（YBC NEWS の山形市 ZZsOemx6CyE・山形空港 CNIT7lJ36x8 は公式ch枠と同一カメラのミラーとみて除外）"
 
+  # 2026-10-14 配信枠更新: rgss_LcepNE → lcTE3TnXSdE
   - id: curated-vo-tv-tuy-yamagata-airport
     name: "山形空港（TUYテレビユー山形）"
     operator: "テレビユー山形（TUY）"
     category: other
-    video_id: "rgss_LcepNE"
+    video_id: "lcTE3TnXSdE"
     prefecture: "06"
     lat: 38.4106
     lng: 140.3673
@@ -20224,11 +20245,12 @@ cameras:
     lng: 142.6402
     note: "2026-09-30 全国多角調査 鉱脈追加(veins_operators)。status=OK isLiveNow=true playableInEmbed=true。噴火警戒レベル3を受けた臨時枠のため、警戒解除で終了しうる（要定期点検）。台帳の十勝岳は気象庁火山カメラ2台と国交省望岳台静止画"
 
+  # 2026-10-14 配信枠更新: 4OHc1tvQnCY → Be7dhMuFlGY
   - id: curated-vo-tv-sbs-shimbashi
     name: "東京・新橋駅方面（SBS静岡放送 東京支社カメラ）"
     operator: "静岡放送（SBS NEWS6）"
     category: other
-    video_id: "4OHc1tvQnCY"
+    video_id: "Be7dhMuFlGY"
     prefecture: "13"
     lat: 35.6631
     lng: 139.7606
@@ -24975,10 +24997,12 @@ cameras:
     accuracy: approx
     note: '2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。姫路駅の西側から山陽新幹線と空を撮影、発車標とお天気を重ねて表示。日替わりタイトルの枠のため channel_id 登録。 確認時の動画ID: 8Dc8FXt6Glg。'
 
+  # 2026-10-14 チャンネル登録化: 日替わり枠のため（旧 Dtl2klfe-Lg）
   - id: curated-rail-okayama-sanyo-shinkansen
     name: 山陽新幹線 岡山 博多総合車両所岡山支所そば
     operator: 山陽新幹線＆サンライズ 運行実況LIVE（岡山車両基地展望・個人チャンネル）
     video_id: Dtl2klfe-Lg
+    channel_id: UCKQb2CKFSbvnj8oIYxVCRow
     category: scenic
     prefecture: '33'
     lat: 34.664
@@ -24998,10 +25022,11 @@ cameras:
     accuracy: approx
     note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=false を確認。playableInEmbed=false のため誘導型。日替わり枠（タイトルに開始日時）で要定期追従。座標は博多駅（概略）。
 
+  # 2026-10-14 配信枠更新: exHmFS_2v_U → EAeW8eG-HaY
   - id: curated-rail-hakata-wayfarer
     name: 博多駅 九州新幹線・鹿児島本線・博多南線
     operator: The Wayfarer
-    video_id: exHmFS_2v_U
+    video_id: EAeW8eG-HaY
     category: scenic
     prefecture: '40'
     lat: 33.5897
@@ -25009,10 +25034,11 @@ cameras:
     accuracy: approx
     note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。九州新幹線下り・鹿児島本線・博多南線・福岡空港方面が映る。配信枠は日々変わる可能性（当日 isLiveNow=true）。座標は博多駅。
 
+  # 2026-10-14 配信枠更新: 7kCOfXcjDso → rLX-tzupnxc
   - id: curated-rail-mukaimachi-yard
     name: JR京都線 向日町操車場付近
     operator: 鉄道ファンの待合室
-    video_id: 7kCOfXcjDso
+    video_id: rLX-tzupnxc
     category: scenic
     prefecture: '26'
     lat: 34.9455
@@ -25020,10 +25046,11 @@ cameras:
     accuracy: approx
     note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。概要欄『JR京都線 向日町操車場付近。JR西日本とは無関係で敷地外から撮影』。02:35〜14:30と14:35〜翌朝の2枠で1日分をつなぐ日替わりID。同チャンネルが日暮里も配信（台帳収録済み）のため channel_id は付けない→日々の枠追従が必要（監視で追従できない場合は追従スクリプトで更新）。座標は向日町操車場付近。
 
+  # 2026-10-14 配信枠更新: kEb0Vu8PT_4 → -jOKa3AX5zc
   - id: curated-rail-akihabara-north
     name: 秋葉原駅 北側（JR山手線・京浜東北線・総武線・つくばエクスプレス）
     operator: North Akihabara Live Camera
-    video_id: kEb0Vu8PT_4
+    video_id: -jOKa3AX5zc
     category: scenic
     prefecture: '13'
     lat: 35.7003
@@ -25053,10 +25080,12 @@ cameras:
     accuracy: approx
     note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。近鉄南大阪線 恵我ノ荘駅方面。同チャンネル2配信のため channel_id なし（要追従）。座標は恵我ノ荘駅。
 
+  # 2026-10-14 チャンネル登録化: 日替わり枠のため（旧 MdQfskuvhBk）
   - id: curated-rail-totsuka
     name: JR東海道線・横須賀線 戸塚駅付近
     operator: 鉄道仮面（個人チャンネル）
     video_id: MdQfskuvhBk
+    channel_id: UClAsW3BLUyltG0iWhwNiMwA
     category: scenic
     prefecture: '14'
     lat: 35.501
