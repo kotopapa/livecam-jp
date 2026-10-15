@@ -53,7 +53,7 @@ def check_camera(session: requests.Session, camera: dict[str, Any],
         return _check_still(session, camera, state, now, prev_failures)
     if ftype in ("mlit_roadinfo", "jma_volcam", "thr_camxml", "camidx_latest",
                  "saitama_flood", "kochi_suibo", "sizenken", "shimanto_kasen", "takashima_river", "higashiomi_river", "yamaguchi_romen",
-                 "yamaguchi_kasen", "shimane_suibo", "fukuoka_kasen", "yachiyo_kansen"):
+                 "yamaguchi_kasen", "shimane_suibo", "fukuoka_kasen", "yachiyo_kansen", "roundshot"):
         # いずれも都度解決型: main.py が _resolved_image を事前解決してくる
         return _check_roadinfo(session, camera, state, now, prev_failures)
     if ftype in ("mie_douro", "sakura_bosaicam"):

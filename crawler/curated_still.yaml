@@ -45721,3 +45721,990 @@ cameras:
     image_url: https://www.nagatoro.gr.jp/livecam/#iwadatami  # 静止画の固定URLが無い誘導型（ページ自体）
     page_url: https://www.nagatoro.gr.jp/livecam/#iwadatami
     note: '2026-10-12 確認: miharashi/cam01-*.jpg 200・image/jpeg・約45万バイト、約10分間隔（夜間停止）。座標は OSM 長瀞岩畳。CC BY-NC-ND 4.0（出典表示）。紅葉は11月上旬〜中旬'
+
+  # ---- 2026-10-15 世界遺産・名峰・絶景調査（3班）。ユーザー判断で全採用 ----
+
+  - id: world-still-zermatt-mgp
+    name: "マッターホルン グレッシャー・パラダイス（ツェルマット）"
+    operator: "Zermatt Bergbahnen AG"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 45.9399
+    lng: 7.7288
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://zbag.roundshot.com/cams/964"
+    image_url: "https://zbag.roundshot.com/cams/964"
+    page_url: "https://zbag.roundshot.com/matterhornglacierparadise/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。標高3,883m展望台。Roundshot配信、/cams/<id>が最新画像へ302。画像は約2.7MB(3072px級)"
+
+  - id: world-still-zermatt-riffelberg
+    name: "マッターホルン（リッフェルベルク）"
+    operator: "Zermatt Bergbahnen AG"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 45.9985
+    lng: 7.7455
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://zbag.roundshot.com/cams/1048"
+    image_url: "https://zbag.roundshot.com/cams/1048"
+    page_url: "https://zbag.roundshot.com/riffelberg/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。リッフェルベルクから。画像約0.8MB"
+
+  - id: world-still-zermatt-rothorn
+    name: "マッターホルン・モンテローザ（ロートホルン）"
+    operator: "Zermatt Bergbahnen AG"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.0234
+    lng: 7.783
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://zbag.roundshot.com/cams/1045"
+    image_url: "https://zbag.roundshot.com/cams/1045"
+    page_url: "https://zbag.roundshot.com/rothorn/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。ロートホルン展望。画像約4MB"
+
+  - id: world-still-zermatt-trockener-steg
+    name: "マッターホルン（トロッケナー・シュテーク）"
+    operator: "Zermatt Bergbahnen AG"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 45.942
+    lng: 7.73
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://zbag.roundshot.com/cams/1044"
+    image_url: "https://zbag.roundshot.com/cams/1044"
+    page_url: "https://zbag.roundshot.com/trockener-steg/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。トロッケナー・シュテーク2,939m。画像約4.8MB"
+
+  - id: world-still-zermatt-schwarzsee
+    name: "マッターホルン（シュヴァルツゼー）"
+    operator: "Zermatt Bergbahnen AG"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 45.9858
+    lng: 7.7153
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://zbag.roundshot.com/cams/2090"
+    image_url: "https://zbag.roundshot.com/cams/2090"
+    page_url: "https://zbag.roundshot.com/schwarzsee/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。シュヴァルツゼー。画像約3.3MB"
+
+  - id: world-still-zermatt-sunnegga
+    name: "ツェルマット サンネガ・マッターホルン"
+    operator: "Zermatt Bergbahnen AG"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.014
+    lng: 7.766
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://zbag.roundshot.com/cams/1049"
+    image_url: "https://zbag.roundshot.com/cams/1049"
+    page_url: "https://zbag.roundshot.com/sunnegga/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。サンネガ展望。画像約0.8MB"
+
+  - id: world-still-zermatt-blauherd
+    name: "ツェルマット ブラウヘルド・マッターホルン"
+    operator: "Zermatt Bergbahnen AG"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.0189
+    lng: 7.7788
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://zbag.roundshot.com/cams/2091"
+    image_url: "https://zbag.roundshot.com/cams/2091"
+    page_url: "https://zbag.roundshot.com/blauherd/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。ブラウヘルド展望。画像約4.9MB"
+
+  - id: world-still-zermatt-gornergrat
+    name: "ゴルナーグラート（ツェルマット）"
+    operator: "Gornergrat Bahn (Matterhorn Gotthard Bahn)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 45.9835
+    lng: 7.7847
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://gornergrat.roundshot.com/cams/1586"
+    image_url: "https://gornergrat.roundshot.com/cams/1586"
+    page_url: "https://gornergrat.roundshot.com/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。ゴルナーグラート3,089m。ページタイトル『Matterhorn Gotthard Bahn』。画像約3.5MB"
+
+  - id: world-still-zermatt-monterosa
+    name: "モンテローザ（ツェルマット）"
+    operator: "Roundshot（zermatt.roundshot.com）"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 45.937
+    lng: 7.867
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://zermatt.roundshot.com/cams/1551"
+    image_url: "https://zermatt.roundshot.com/cams/1551"
+    page_url: "https://zermatt.roundshot.com/monterosa/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。モンテローザ方面。座標は山頂付近の概略、設置者は掲載ページで要確認"
+
+  - id: world-still-jungfrau-joch
+    name: "ユングフラウヨッホ（トップ・オブ・ヨーロッパ）"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.5475
+    lng: 7.9853
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/1087"
+    image_url: "https://webcams.jungfrau.ch/cams/1087"
+    page_url: "https://webcams.jungfrau.ch/top-of-europe-jungfraujoch/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。標高3,454m。Roundshot、/cams/<id>が最新画像へ302"
+
+  - id: world-still-jungfrau-ostgrat
+    name: "ユングフラウヨッホ（東稜 オストグラート）"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.549
+    lng: 7.99
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/862"
+    image_url: "https://webcams.jungfrau.ch/cams/862"
+    page_url: "https://webcams.jungfrau.ch/top-of-europe-jungfrau-ostgrat/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。ユングフラウ東稜方面。座標は概略"
+
+  - id: world-still-jungfrau-eigergletscher
+    name: "アイガー氷河駅（アイガー北壁麓）"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.5774
+    lng: 8.0006
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/756"
+    image_url: "https://webcams.jungfrau.ch/cams/756"
+    page_url: "https://webcams.jungfrau.ch/eigergletscher/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。アイガーグレッチャー駅2,320m"
+
+  - id: world-still-jungfrau-eiger-express
+    name: "アイガー・エクスプレス"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.59
+    lng: 8.01
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/1064"
+    image_url: "https://webcams.jungfrau.ch/cams/1064"
+    page_url: "https://webcams.jungfrau.ch/top-of-europe-eiger-express/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。アイガー・エクスプレス沿線。座標は概略"
+
+  - id: world-still-jungfrau-grindelwald-terminal
+    name: "グリンデルヴァルト・ターミナル（アイガー北壁）"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.6206
+    lng: 8.045
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/750"
+    image_url: "https://webcams.jungfrau.ch/cams/750"
+    page_url: "https://webcams.jungfrau.ch/grindelwald-terminal/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。グリンデルヴァルト・ターミナル。画像約4.4MB"
+
+  - id: world-still-jungfrau-first
+    name: "グリンデルヴァルト・フィルスト（シュレックフェルト）"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.6597
+    lng: 8.0529
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/1515"
+    image_url: "https://webcams.jungfrau.ch/cams/1515"
+    page_url: "https://webcams.jungfrau.ch/first-schreckfeld/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。フィルスト展望。画像約5.3MB"
+
+  - id: world-still-jungfrau-schynige-platte
+    name: "シュニーゲ・プラッテ（アイガー・メンヒ・ユングフラウ展望）"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.6567
+    lng: 7.9071
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/771"
+    image_url: "https://webcams.jungfrau.ch/cams/771"
+    page_url: "https://webcams.jungfrau.ch/schynige-platte/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。夏季営業の展望台だが、カメラ自体は通年更新を確認"
+
+  - id: world-still-jungfrau-harderkulm
+    name: "ハルダークルム（インターラーケン）"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.6963
+    lng: 7.852
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/740"
+    image_url: "https://webcams.jungfrau.ch/cams/740"
+    page_url: "https://webcams.jungfrau.ch/interlaken-harderkulm/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。インターラーケン上のハルダークルム展望台"
+
+  - id: world-still-jungfrau-lauberhorn
+    name: "ラウバーホルン（ヴェンゲン）"
+    operator: "Jungfraubahnen (jungfrau.ch)"
+    category: scenic
+    prefecture: "99"
+    country: "CH"
+    lat: 46.612
+    lng: 7.945
+    refresh_sec: 600
+    feed_type: roundshot
+    feed_url: "https://webcams.jungfrau.ch/cams/1514"
+    image_url: "https://webcams.jungfrau.ch/cams/1514"
+    page_url: "https://webcams.jungfrau.ch/lauberhorn/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。ラウバーホルン・レース斜面。座標は概略"
+
+  - id: world-still-lakelouise-ptarmigan
+    name: "レイクルイーズ スキーリゾート プタルミガン山頂"
+    operator: "Lake Louise Ski Resort (SKI Big 3 / Resorts of the Canadian Rockies)"
+    category: scenic
+    prefecture: "99"
+    country: "CA"
+    lat: 51.485
+    lng: -116.153
+    refresh_sec: 300
+    image_url: "https://cams.skilouise.com/cam3.jpg"
+    page_url: "https://www.skilouise.com/mountain-cam/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。公式ページに『Updates every 60 seconds』と記載。座標は概略"
+
+  - id: world-still-lakelouise-paradise
+    name: "レイクルイーズ スキーリゾート パラダイス・トップ"
+    operator: "Lake Louise Ski Resort (SKI Big 3 / Resorts of the Canadian Rockies)"
+    category: scenic
+    prefecture: "99"
+    country: "CA"
+    lat: 51.477
+    lng: -116.145
+    refresh_sec: 300
+    image_url: "https://cams.skilouise.com/cam8.jpg"
+    page_url: "https://www.skilouise.com/mountain-cam/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。同上。座標は概略"
+
+  - id: world-still-lakelouise-tenpeaks
+    name: "レイクルイーズ テン・ピークス方面（バンデッドピーク・ベースキャンプ）"
+    operator: "Lake Louise Ski Resort (SKI Big 3 / Resorts of the Canadian Rockies)"
+    category: scenic
+    prefecture: "99"
+    country: "CA"
+    lat: 51.442
+    lng: -116.157
+    refresh_sec: 300
+    image_url: "https://cams.skilouise.com/cam6.jpg"
+    page_url: "https://www.skilouise.com/mountain-cam/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Lodge of Ten Peaks方向。座標は概略"
+
+  - id: world-still-lakelouise-whitehorn
+    name: "レイクルイーズ ホワイトホーン・ビストロ テラス"
+    operator: "Lake Louise Ski Resort (SKI Big 3 / Resorts of the Canadian Rockies)"
+    category: scenic
+    prefecture: "99"
+    country: "CA"
+    lat: 51.442
+    lng: -116.158
+    refresh_sec: 300
+    image_url: "https://cams.skilouise.com/cam7.jpg"
+    page_url: "https://www.skilouise.com/mountain-cam/"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。ホワイトホーン・ビストロから。座標は概略"
+
+  - id: world-still-rainier-mountain
+    name: "マウントレーニア（パラダイスから）"
+    operator: "米国国立公園局 マウントレーニア国立公園 (NPS)"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 46.786
+    lng: -121.7357
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-mora/mountain.jpg"
+    page_url: "https://www.nps.gov/mora/learn/photosmultimedia/webcams.htm"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。『Is the mountain out?』用の公式カメラ。パブリックドメインの米国政府コンテンツ。数分間隔で更新"
+
+  - id: world-still-rainier-tatoosh
+    name: "マウントレーニア国立公園 タトゥーシュ山脈（パラダイス）"
+    operator: "米国国立公園局 マウントレーニア国立公園 (NPS)"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 46.786
+    lng: -121.7357
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-mora/tatoosh.jpg"
+    page_url: "https://www.nps.gov/mora/learn/photosmultimedia/webcams.htm"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。パラダイスから南のタトゥーシュ山脈方向"
+
+  - id: world-still-rainier-east
+    name: "マウントレーニア国立公園 パラダイス東向き"
+    operator: "米国国立公園局 マウントレーニア国立公園 (NPS)"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 46.786
+    lng: -121.7357
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-mora/east.jpg"
+    page_url: "https://www.nps.gov/mora/learn/photosmultimedia/webcams.htm"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。ジャクソン・ビジターセンターから東向き"
+
+  - id: world-still-rainier-west
+    name: "マウントレーニア国立公園 パラダイス西向き"
+    operator: "米国国立公園局 マウントレーニア国立公園 (NPS)"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 46.786
+    lng: -121.7357
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-mora/west.jpg"
+    page_url: "https://www.nps.gov/mora/learn/photosmultimedia/webcams.htm"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。ジャクソン・ビジターセンターから西向き"
+
+  - id: world-still-rainier-longmire
+    name: "マウントレーニア国立公園 ロングマイア"
+    operator: "米国国立公園局 マウントレーニア国立公園 (NPS)"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 46.7497
+    lng: -121.812
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-mora/longmire.jpg"
+    page_url: "https://www.nps.gov/mora/learn/photosmultimedia/webcams.htm"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。管理棟から南西向き"
+
+  - id: world-still-pmx-cervinia-matterhorn
+    name: "マッターホルン（イタリア側 ブルイユ・チェルヴィニア）"
+    operator: "Panomax"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 45.936
+    lng: 7.631
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/867/preview_og.jpg"
+    page_url: "https://cervinia.panomax.com/matterhorn"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。運営者はカメラ名『Cervino Ski Paradise』からの推定。座標はブルイユの概略"
+
+  - id: world-still-pmx-plateau-rosa
+    name: "プラトー・ローザ（マッターホルン／モンテローザ展望）"
+    operator: "Panomax"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 45.9333
+    lng: 7.7083
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/931/preview_og.jpg"
+    page_url: "https://cervinia.panomax.com/plateau-rosa"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。標高3,480m"
+
+  - id: world-still-pmx-cinque-torri
+    name: "コルティナ チンクエ・トッリ（スコイアットリ小屋）"
+    operator: "Panomax / Cortina d'Ampezzo"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 46.5183
+    lng: 12.0369
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/6678/preview_og.jpg"
+    page_url: "https://cortina.panomax.com/5torri"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。ページタイトル『Rifugio Scoiattoli facing the Cinque Torri』"
+
+  - id: world-still-pmx-tofana
+    name: "コルティナ トファーナ（ストラトファナ）"
+    operator: "Panomax / Cortina d'Ampezzo"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 46.55
+    lng: 12.07
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/2880/preview_og.jpg"
+    page_url: "https://cortina.panomax.com/tofana"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。座標は概略"
+
+  - id: world-still-pmx-faloria
+    name: "コルティナ ファローリア小屋"
+    operator: "Panomax / Cortina d'Ampezzo"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 46.55
+    lng: 12.18
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/6192/preview_og.jpg"
+    page_url: "https://cortina.panomax.com/faloria"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。座標は概略"
+
+  - id: world-still-pmx-seceda
+    name: "セチェーダ（ヴァル・ガルデナ ドロミテ）"
+    operator: "Panomax / Val Gardena"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 46.604
+    lng: 11.7236
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/1044/preview_og.jpg"
+    page_url: "https://valgardena.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。ページタイトル『Superwebcam Seceda - Val Gardena - Dolomites』"
+
+  - id: world-still-pmx-kronplatz
+    name: "クロンプラッツ（プラン・デ・コロネス）"
+    operator: "Panomax / Kronplatz"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 46.7388
+    lng: 11.9558
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/2044/preview_og.jpg"
+    page_url: "https://kronplatz.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。"
+
+  - id: world-still-pmx-seiser-alm
+    name: "シュリーン／セイサー・アルム（コンパッチ）"
+    operator: "Panomax / Seiser Alm"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 46.5433
+    lng: 11.5614
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/1389/preview_og.jpg"
+    page_url: "https://seiseralm.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。ヨーロッパ最大級の高原。座標はコンパッチ"
+
+  - id: world-still-pmx-arabba
+    name: "アラッバ（マルモラーダ氷河・セッラ山群）"
+    operator: "Panomax / Arabba"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 46.4906
+    lng: 11.87
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/1064/preview_og.jpg"
+    page_url: "https://arabba.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。ページ説明『Bec de Roces ... overlooking the Marmolada glacier and Sella Group』。座標は概略"
+
+  - id: world-still-pmx-solda
+    name: "ソルダ（オルトラー山群）"
+    operator: "Panomax / Ferienregion Ortlergebiet"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 46.53
+    lng: 10.59
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/4683/preview_og.jpg"
+    page_url: "https://sulden.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。座標は概略"
+
+  - id: world-still-pmx-skyway
+    name: "モンブラン（スカイウェイ モンテ・ビアンコ プンタ・エルブロンナー）"
+    operator: "Skyway Monte Bianco"
+    category: scenic
+    prefecture: "99"
+    country: "IT"
+    lat: 45.8667
+    lng: 6.9667
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/1437/preview_og.jpg"
+    page_url: "https://skyway.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。標高3,466m。ページ説明『240メガピクセルのSuperwebcam』。画像は小さめ(約36KB)"
+
+  - id: world-still-pmx-zugspitze
+    name: "ツークシュピッツェ"
+    operator: "Panomax"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "DE"
+    lat: 47.4211
+    lng: 10.9852
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/128/preview_og.jpg"
+    page_url: "https://zugspitze.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。ドイツ最高峰頂上"
+
+  - id: world-still-pmx-wank
+    name: "ヴァンク山（ガルミッシュ＝パルテンキルヒェン ツークシュピッツェ展望）"
+    operator: "Bayerische Zugspitzbahn"
+    category: scenic
+    prefecture: "99"
+    country: "DE"
+    lat: 47.5133
+    lng: 11.1117
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/149/preview_og.jpg"
+    page_url: "https://wank.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。ページ名『Panoramaberg Wank | Bayerische Zugspitzbahn』"
+
+  - id: world-still-pmx-grossglockner
+    name: "グロースグロックナー（カイザー・フランツ・ヨーゼフス・ヘーエ）"
+    operator: "Panomax"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "AT"
+    lat: 47.075
+    lng: 12.755
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/7/preview_og.jpg"
+    page_url: "https://grossglockner.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。KFJ展望台。道路は冬季閉鎖でもカメラ更新は継続"
+
+  - id: world-still-pmx-kitzsteinhorn
+    name: "キッツシュタインホルン氷河（国立公園ギャラリー）"
+    operator: "Panomax"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "AT"
+    lat: 47.195
+    lng: 12.688
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/11024/preview_og.jpg"
+    page_url: "https://kitzsteinhorn.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。座標は概略"
+
+  - id: world-still-pmx-dachstein-gosau
+    name: "ダッハシュタイン（ゴーザウ）"
+    operator: "Panomax / Dachstein"
+    category: scenic
+    prefecture: "99"
+    country: "AT"
+    lat: 47.5392
+    lng: 13.5033
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/2200/preview_og.jpg"
+    page_url: "https://gosau.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。ページ説明『360 degrees webcam in Gosau at Dachstein』。座標はゴーザウの概略"
+
+  - id: world-still-pmx-schafberg
+    name: "シャーフベルク（ザルツカンマーグート）"
+    operator: "Panomax"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "AT"
+    lat: 47.7767
+    lng: 13.4375
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/180/preview_og.jpg"
+    page_url: "https://schafberg.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。"
+
+  - id: world-still-pmx-patscherkofel
+    name: "パッチャーコーフェル（インスブルック）"
+    operator: "Panomax / Patscherkofelbahn"
+    category: scenic
+    prefecture: "99"
+    country: "AT"
+    lat: 47.2085
+    lng: 11.4605
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/2021/preview_og.jpg"
+    page_url: "https://patscherkofel.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。"
+
+  - id: world-still-pmx-soelden
+    name: "ゼルデン シュヴァルツェ・シュナイド（エッツタール）"
+    operator: "Panomax"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "AT"
+    lat: 46.935
+    lng: 10.962
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/216/preview_og.jpg"
+    page_url: "https://soelden.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。3,000m級。座標は概略"
+
+  - id: world-still-pmx-loser
+    name: "ロザー山（アルトアウスゼー）"
+    operator: "Panomax / Loser"
+    category: scenic
+    prefecture: "99"
+    country: "AT"
+    lat: 47.6425
+    lng: 13.8231
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/1774/preview_og.jpg"
+    page_url: "https://loser.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。座標は概略"
+
+  - id: world-still-pmx-table-mountain
+    name: "テーブルマウンテン（ケープタウン）"
+    operator: "Panomax"  # 設置者の記載なし
+    category: scenic
+    prefecture: "99"
+    country: "ZA"
+    lat: -33.9628
+    lng: 18.4098
+    refresh_sec: 600
+    image_url: "https://panodata.panomax.com/cams/5058/preview_og.jpg"
+    page_url: "https://tablemountain.panomax.com"
+    note: "2026-10-15 13時台UTCに2回取得(約9分間隔)し更新を確認。Panomax 360度ウェブカメラの最新プレビュー画像(preview_og.jpg、十数分以内に更新)。"
+
+  - id: world-still-grca-bright-angel
+    name: "グランドキャニオン ブライトエンジェル・トレイルヘッド"
+    operator: "米国国立公園局（NPS）（画像配信は Pixelcaster）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 36.0572
+    lng: -112.1434
+    refresh_sec: 600
+    image_url: "https://cdn.pixelcaster.com/public.pixelcaster.com/snapshots/grandcanyon-1/latest.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=69E0162D-0ED1-F68A-6B52A11F95FD867B"
+    note: "2026-10-15 に2回取得して更新を確認。NPS の公式ウェブカム一覧に掲載。画像は NPS 一覧が指す cdn.pixelcaster.com の最新静止画。"
+
+  - id: world-still-grca-kolb
+    name: "グランドキャニオン コルブ・スタジオからの眺め"
+    operator: "米国国立公園局（NPS）（画像配信は Pixelcaster）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 36.0567
+    lng: -112.1397
+    refresh_sec: 600
+    image_url: "https://cdn.pixelcaster.com/public.pixelcaster.com/snapshots/grandcanyon-2/latest.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=CC0CA1C7-E607-6F46-707E19938BBFEE63"
+    note: "2026-10-15 に2回取得して更新を確認。NPS の公式ウェブカム一覧に掲載。画像は cdn.pixelcaster.com の最新静止画。"
+
+  - id: world-still-yose-falls
+    name: "ヨセミテ ヨセミテ滝"
+    operator: "Yosemite Conservancy（NPS 公式ページからリンクされるパートナー団体）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 37.7456
+    lng: -119.5936
+    refresh_sec: 600
+    image_url: "https://cdn.pixelcaster.com/public.pixelcaster.com/snapshots/yosemite-yosfalls/latest_1920x.jpg"
+    page_url: "https://yosemite.org/webcams/yosemite-falls/"
+    note: "2026-10-15 に2回取得して更新を確認。yosemite.org/webcams/yosemite-falls/ の画像。座標は滝の概略（approx）。"
+
+  - id: world-still-yose-halfdome
+    name: "ヨセミテ ハーフドーム（アワニー方面）"
+    operator: "Yosemite Conservancy"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 37.7459
+    lng: -119.5332
+    refresh_sec: 600
+    image_url: "https://cdn.pixelcaster.com/public.pixelcaster.com/snapshots/yosemite-ahwahnee2/latest_1920x.jpg"
+    page_url: "https://yosemite.org/webcams/half-dome/"
+    note: "2026-10-15 に2回取得して更新を確認。yosemite.org/webcams/half-dome/ の画像（ahwahnee2）。座標はハーフドーム（approx）。"
+
+  - id: world-still-yose-highsierra
+    name: "ヨセミテ ハイシエラ（センチネルドーム方面）"
+    operator: "Yosemite Conservancy"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 37.7228
+    lng: -119.5851
+    refresh_sec: 600
+    image_url: "https://cdn.pixelcaster.com/public.pixelcaster.com/snapshots/yosemite-sentinel/latest_1920x.jpg"
+    page_url: "https://yosemite.org/webcams/high-sierra/"
+    note: "2026-10-15 に2回取得して更新を確認。yosemite.org/webcams/high-sierra/ の画像（sentinel）。座標はセンチネルドーム付近（approx）。"
+
+  - id: world-still-yose-turtleback
+    name: "ヨセミテ タートルバックドーム"
+    operator: "Yosemite Conservancy"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 37.7161
+    lng: -119.6727
+    refresh_sec: 600
+    image_url: "https://cdn.pixelcaster.com/public.pixelcaster.com/snapshots/yosemite-turtleback/latest_1920x.jpg"
+    page_url: "https://yosemite.org/webcams/half-dome/"
+    note: "2026-10-15 に2回取得して更新を確認。yosemite.org のウェブカム一覧の画像（turtleback）。座標は Turtleback Dome（approx）。"
+
+  - id: world-still-yose-wawona
+    name: "ヨセミテ ワオナ"
+    operator: "Yosemite Conservancy"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 37.5365
+    lng: -119.6563
+    refresh_sec: 600
+    image_url: "https://cdn.pixelcaster.com/public.pixelcaster.com/snapshots/yosemite-wawona/latest_1920x.jpg"
+    page_url: "https://yosemite.org/webcams/half-dome/"
+    note: "2026-10-15 に2回取得して更新を確認。yosemite.org のウェブカム一覧の画像（wawona）。座標はワオナ地区（approx）。"
+
+  - id: world-still-arch-entrance
+    name: "アーチーズ国立公園 入口ステーション"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 38.6165
+    lng: -109.6199
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-arch/arch_traffic.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=81B46BDB-1DD8-B71B-0B250E8F4CC1E74A"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。入口からの景観（交通状況用カメラ）。"
+
+  - id: world-still-yell-mammoth
+    name: "イエローストーン マンモス・ホット・スプリングス 石灰華テラス"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 44.9768
+    lng: -110.704
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-yell/mammoth_parade.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=696F20E1-F421-B232-FE72D6D85B157422"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。"
+
+  - id: world-still-yell-washburn-ne
+    name: "イエローストーン ワシュバーン山（北東向き）"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 44.7977
+    lng: -110.4338
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-yell/washburn_ne.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=81B46891-1DD8-B71B-0B6575944D4DECD5"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。"
+
+  - id: world-still-yell-washburn-sw
+    name: "イエローストーン ワシュバーン山（南向き）"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 44.7977
+    lng: -110.4338
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-yell/washburn_sw.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=81B4689E-1DD8-B71B-0B8741319EA29FD3"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。"
+
+  - id: world-still-yell-electric
+    name: "イエローストーン 北ゲートから望むエレクトリックピーク"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 45.0306
+    lng: -110.7066
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-yell/mammoth_electric.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=81B468AB-1DD8-B71B-0BE84D8E8E0F1112"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。"
+
+  - id: world-still-romo-longs
+    name: "ロッキーマウンテン ロングスピーク"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 40.2549
+    lng: -105.6162
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-romo/longs_peak.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=81B46847-1DD8-B71B-0B46D032F33B54DF"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。座標は山頂（approx）。"
+
+  - id: world-still-romo-kawuneeche
+    name: "ロッキーマウンテン カウニーチ・バレー"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 40.307
+    lng: -105.847
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-romo/kawuneeche_valley.jpeg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=81B4682A-1DD8-B71B-0BBC127D2E00ACD9"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。座標は谷の概略（approx）。"
+
+  - id: world-still-glac-lakemcd
+    name: "グレイシャー国立公園 マクドナルド湖"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 48.5237
+    lng: -113.9976
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-glac/lakemcdonaldptz.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=D428B88A-BC1A-A5BF-88E3D63CF89D3452"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式（PTZ）。"
+
+  - id: world-still-glac-apgar-mtn
+    name: "グレイシャー国立公園 アプガー山"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 48.543
+    lng: -113.9825
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-glac/ApgarLookout-01.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=81B4691B-1DD8-B71B-0BB9DBEE21A59335"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。座標は概略（approx）。"
+
+  - id: world-still-glac-twomed
+    name: "グレイシャー国立公園 ツーメディシン"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 48.4978
+    lng: -113.368
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-glac/TwoMedicine.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=29CE45EA-EF1D-13A4-9C8E92F1FBFED9C7"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。"
+
+  - id: world-still-glac-stmary
+    name: "グレイシャー国立公園 セントメリー"
+    operator: "米国国立公園局（NPS）"
+    category: scenic
+    prefecture: "99"
+    country: "US"
+    lat: 48.7497
+    lng: -113.4325
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-glac/StMaryPTZ.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=AE7C9B53-910E-6D3A-D6133266826C6977"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式（PTZ）。"
+
+  - id: world-still-hale-crater
+    name: "ハレアカラ火口（マウイ島）"
+    operator: "米国国立公園局（NPS）"
+    category: volcano
+    prefecture: "99"
+    country: "US"
+    lat: 20.7097
+    lng: -156.2535
+    refresh_sec: 600
+    image_url: "https://www.nps.gov/webcams-hale/HaleSummitCamCrater.jpg"
+    page_url: "https://www.nps.gov/media/webcam/view.htm?id=56F5E0DC-9116-8502-7F673D0FF0B8378A"
+    note: "2026-10-15 に2回取得して更新を確認。NPS 公式。"
+
+  - id: world-still-havo-v1
+    name: "キラウエア ハレマウマウ西火口（V1cam）"
+    operator: "米国地質調査所ハワイ火山観測所（USGS HVO・NPS 経由）"
+    category: volcano
+    prefecture: "99"
+    country: "US"
+    lat: 19.4069
+    lng: -155.2834
+    refresh_sec: 600
+    image_url: "https://volcanoes.usgs.gov/observatories/hvo/cams/V1cam/images/M.jpg"
+    page_url: "https://www.usgs.gov/volcanoes/kilauea/webcams"
+    note: "2026-10-15 に2回取得して更新を確認。USGS 公式画像。夜間は暗い/熱赤外像のカメラあり。座標は概略（approx）。"
+
+  - id: world-still-havo-k2
+    name: "キラウエア カルデラ（ウーエカフナ断崖から）"
+    operator: "米国地質調査所ハワイ火山観測所（USGS HVO・NPS 経由）"
+    category: volcano
+    prefecture: "99"
+    country: "US"
+    lat: 19.4214
+    lng: -155.2882
+    refresh_sec: 600
+    image_url: "https://volcanoes.usgs.gov/observatories/hvo/cams/K2cam/images/M.jpg"
+    page_url: "https://www.usgs.gov/volcanoes/kilauea/webcams"
+    note: "2026-10-15 に2回取得して更新を確認。USGS 公式画像。夜間は暗い/熱赤外像のカメラあり。座標は概略（approx）。"
+
+  - id: world-still-havo-s2
+    name: "キラウエア山頂 ハレマウマウ火口（西向き・S2cam）"
+    operator: "米国地質調査所ハワイ火山観測所（USGS HVO・NPS 経由）"
+    category: volcano
+    prefecture: "99"
+    country: "US"
+    lat: 19.4058
+    lng: -155.297
+    refresh_sec: 600
+    image_url: "https://volcanoes.usgs.gov/cams/S2cam/images/M.jpg"
+    page_url: "https://www.usgs.gov/volcanoes/kilauea/webcams"
+    note: "2026-10-15 に2回取得して更新を確認。USGS 公式画像。夜間は暗い/熱赤外像のカメラあり。座標は概略（approx）。"
+
+  - id: world-still-havo-v2
+    name: "キラウエア ハレマウマウ火口（東縁から・V2cam）"
+    operator: "米国地質調査所ハワイ火山観測所（USGS HVO・NPS 経由）"
+    category: volcano
+    prefecture: "99"
+    country: "US"
+    lat: 19.4069
+    lng: -155.2834
+    refresh_sec: 600
+    image_url: "https://volcanoes.usgs.gov/cams/V2cam/images/M.jpg"
+    page_url: "https://www.usgs.gov/volcanoes/kilauea/webcams"
+    note: "2026-10-15 に2回取得して更新を確認。USGS 公式画像。夜間は暗い/熱赤外像のカメラあり。座標は概略（approx）。"
+
+  - id: world-still-havo-ml
+    name: "マウナロア山頂カルデラ（北西縁から）"
+    operator: "米国地質調査所ハワイ火山観測所（USGS HVO・NPS 経由）"
+    category: volcano
+    prefecture: "99"
+    country: "US"
+    lat: 19.462
+    lng: -155.592
+    refresh_sec: 600
+    image_url: "https://volcanoes.usgs.gov/observatories/hvo/cams/MLcam/images/M.jpg"
+    page_url: "https://www.usgs.gov/volcanoes/kilauea/webcams"
+    note: "2026-10-15 に2回取得して更新を確認。USGS 公式画像。夜間は暗い/熱赤外像のカメラあり。座標は概略（approx）。"
+
+  - id: world-still-havo-m2
+    name: "マウナロア南西リフトゾーン中部"
+    operator: "米国地質調査所ハワイ火山観測所（USGS HVO・NPS 経由）"
+    category: volcano
+    prefecture: "99"
+    country: "US"
+    lat: 19.38
+    lng: -155.65
+    refresh_sec: 600
+    image_url: "https://volcanoes.usgs.gov/observatories/hvo/cams/M2cam/images/M.jpg"
+    page_url: "https://www.usgs.gov/volcanoes/kilauea/webcams"
+    note: "2026-10-15 に2回取得して更新を確認。USGS 公式画像。夜間は暗い/熱赤外像のカメラあり。座標は概略（approx）。"

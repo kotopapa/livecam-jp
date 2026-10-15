@@ -260,6 +260,41 @@ def run(shard: str | None = None) -> int:
             if cam["id"] in ref_by_id:
                 cam["_resolved_image"] = ref_by_id[cam["id"]]
 
+    # 都度解決型feed（roundshot）: 固定入口の302 Location から最新の _half.jpg を解決する。
+    # 解決に失敗した回は前回の image_url を保つ（status.json に残っている分で確認を続ける）
+    rs_cams = [c for c in all_cameras
+               if c.get("review", {}).get("status") == "approved"
+               and c["feed"]["type"] == "roundshot"]
+    if rs_cams:
+        from crawler.sources.roundshot import resolve_image_url as rs_resolve
+        rs_by_id = {}
+        for cam in rs_cams:
+            entry = cam["feed"]["url"]
+            host = urlparse(entry).netloc
+            hit = None
+            try:
+                throttle.acquire(host)
+                try:
+                    hit = rs_resolve(session, entry)
+                finally:
+                    throttle.release(host)
+            except requests.RequestException as e:
+                print(f"roundshot解決失敗 {entry}: {e}", file=sys.stderr)
+            st = statuses.setdefault(cam["id"], {
+                "state": "unknown", "last_ok_at": None,
+                "http_status": None, "frozen_since": None,
+                "consecutive_failures": 0, "avg_interval_sec": None,
+            })
+            if hit:
+                st["image_url"], st["image_time"] = hit
+            elif st.get("image_url"):
+                hit = (st["image_url"], st.get("image_time"))
+            if hit:
+                rs_by_id[cam["id"]] = {"url": hit[0], "time": hit[1]}
+        for cam in cameras:
+            if cam["id"] in rs_by_id:
+                cam["_resolved_image"] = rs_by_id[cam["id"]]
+
     # 都度解決型feed（saitama_flood / takashima_river / higashiomi_river / shimane_suibo）:
     # 一覧JSON 1リクエストで全台解決（feed.url が一覧、camera_ref がキー）
     from crawler.sources.fukuoka_kasen import resolve_image_urls as fk_resolve

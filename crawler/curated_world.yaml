@@ -10530,3 +10530,400 @@ cameras:
     lat: 19.8253
     lng: -155.4689
     note: "2026-09-30 全国多角調査(stars_weather)。2026-09-29 21:35 JST 検証: status=OK isLiveNow=true playableInEmbed=true「MaunaKea West view & Meteor shower LIVE from CFHT」。video_id 登録（同上）"
+
+  # ---- 2026-10-15 世界遺産・名峰・絶景調査（3班）。ユーザー判断で全採用 ----
+
+  - id: world-fe40b53d
+    name: "ロンドン ロンドン橋・テムズ川(ゴールデン・ハインド)"
+    operator: "Beach Life Cams"
+    video_id: "znmUEZUM9Zc"
+    category: scenic
+    country: "GB"
+    lat: 51.5075
+    lng: -0.0923
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。London Webcam LIVE 4K | London Bridge & River Thames | Golden Hinde。チャンネル UCG-Icsd_kbKnt9QraydFQPQ（英国南岸の店舗・施設設置カメラを多数運営。複数配信チャンネルなので channel_id は付けない）。座標はゴールデン・ハインド号付近の概略(approx)。タワーブリッジ本体ではなく上流側からの眺め"
+
+  - id: world-c8baaea0
+    name: "パリ エッフェル塔・モンパルナス塔の眺め"
+    operator: "Paris75Webcam"
+    video_id: "QI-PPEW2Bgc"
+    category: scenic
+    country: "FR"
+    lat: 48.8584
+    lng: 2.2945
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。Live Webcam - Vue de Paris avec la Tour Eiffel et la Tour Montparnasse。チャンネル UC5VvzLNELVAwuPiMWsr2cvQ（1チャンネル1配信、channel_id 登録可）。設置地点は説明欄に無く、座標はエッフェル塔の概略(approx)"
+
+  - id: world-f2261e3f
+    name: "イスタンブール 乙女の塔(クズ・クレシ)・ガラタ塔"
+    operator: "Istanbul Golden Horn Live（個人チャンネル）"
+    video_id: "zZ6Pa4yfkN4"
+    category: scenic
+    country: "TR"
+    lat: 41.0211
+    lng: 29.0041
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。Istanbul:Galata & Kız Kulesi Live Stream。チャンネル UCrRYP4a33Fvvd9j6TLtzj_Q（1チャンネル1配信、channel_id 登録可）。固定カメラの単一フレーミング。座標は乙女の塔(approx)"
+
+  - id: world-cfeb3785
+    name: "バルセロナ スカイライン(バイシュ・ギナルド)"
+    operator: "NicusNicusNicus (mil_house23)"
+    video_id: "d1Hqy8eNi9w"
+    category: scenic
+    country: "ES"
+    lat: 41.413
+    lng: 2.176
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。Barcelona Spain live cam from Baix Guinardo skyline。チャンネル UC2ne-RCxu_3zf0DrW4uWP9w（1チャンネル1配信）。個人チャンネル。サグラダ・ファミリアが見える方角かは未確認で、座標は地区の概略(approx)"
+
+  - id: world-b98ef1d7
+    name: "ケープタウン テーブルマウンテン・ライオンズヘッド"
+    operator: "FLOORING.CO.ZA（フローリング店ショールーム屋上）"
+    video_id: "hS7nsna56mo"
+    category: scenic
+    country: "ZA"
+    lat: -33.9013
+    lng: 18.47
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。Cape Town Live Stream 24/7。チャンネル UCMyCO_-D2eLocsvoiGob7iw（説明欄で運営者の床材店が屋上に設置したと明記、1チャンネル1配信）。座標はパーデネイランド地区の概略(approx)"
+
+  - id: world-eefe92e1
+    name: "エベレスト展望（ホテルエベレストビュー・パノラマ）"
+    operator: "Webcam Nepal (WEBCAM NEPAL LIVE)"
+    video_id: "AD4-Z-ONsIc"
+    embed: false
+    category: scenic
+    country: "NP"
+    lat: 27.8107
+    lng: 86.7183
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=false。Syangboche、標高3,880m。エベレスト・ローツェ方面のパノラマ。座標はホテル所在地。同ホテルの既存枠(SXsPeIqGJMA)と同系統の別アングル。"
+
+  - id: world-89ea2a3d
+    name: "エベレスト街道（ホテルエベレストビュー・コンデ・リ6,187m方面）"
+    operator: "Webcam Nepal (WEBCAM NEPAL LIVE)"
+    video_id: "pD00R1lKhIs"
+    embed: false
+    category: scenic
+    country: "NP"
+    lat: 27.8107
+    lng: 86.7183
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=false。Syangboche、標高3,880m、コンデ・リ(6,187m)方向。座標はホテル所在地。"
+
+  - id: world-315397c9
+    name: "ルクラ（バッダロッジ・エベレスト玄関口）"
+    operator: "Webcam Nepal (WEBCAM NEPAL LIVE)"
+    video_id: "kaRVui_uXa8"
+    embed: false
+    category: scenic
+    country: "NP"
+    lat: 27.6869
+    lng: 86.7314
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=false。エベレスト街道の起点ルクラ。座標は町の中心の概略。"
+
+  - id: world-df867ac7
+    name: "ペリチェ（エーデルワイスロッジ・標高4,371m）"
+    operator: "Webcam Nepal (WEBCAM NEPAL LIVE)"
+    video_id: "lHUky64A16Y"
+    embed: false
+    category: scenic
+    country: "NP"
+    lat: 27.8957
+    lng: 86.8194
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=false。エベレスト街道ペリチェ村。座標は村の概略。"
+
+  - id: world-256553fb
+    name: "ディンボチェ（ホテルタシデレク・標高4,360m）"
+    operator: "Webcam Nepal (WEBCAM NEPAL HIMALAYA)"
+    video_id: "5XSkU_RQyp8"
+    category: scenic
+    country: "NP"
+    lat: 27.8918
+    lng: 86.8311
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。エベレスト街道ディンボチェ村。座標は村の概略。ロッジの屋上カメラとみられる。"
+
+  - id: world-31ecf27d
+    name: "メラピーク登山口（レフュージ・メラロッジ）"
+    operator: "Webcam Nepal (WEBCAM NEPAL HIMALAYA)"
+    video_id: "5yndH8IhiEQ"
+    category: scenic
+    country: "NP"
+    lat: 27.53
+    lng: 86.8
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。メラピーク(6,476m)方面のロッジ。座標は地名からの概略(約10km誤差)。ロッジの正確な位置は未確認。"
+
+  - id: world-b2740b48
+    name: "メラピーク麓 コテ（ラマロッジ）"
+    operator: "Webcam Nepal (WEBCAM NEPAL HIMALAYA)"
+    video_id: "D2t_MUlkBn8"
+    category: scenic
+    country: "NP"
+    lat: 27.56
+    lng: 86.81
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。ヒンク谷コテ。座標は地名からの概略(約10km誤差)。"
+
+  - id: world-9579c8cb
+    name: "アンナプルナベースキャンプ（マチャプチャレ展望）"
+    operator: "Webcam Nepal (WEBCAM NEPAL ANNAPURNA)"
+    video_id: "NUN4Pgi0j9E"
+    category: scenic
+    country: "NP"
+    lat: 28.53
+    lng: 83.878
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。標高4,130mのABCからマチャプチャレ方向。座標はABCの概略。"
+
+  - id: world-818f3e57
+    name: "カグベニ（ムスタン・ニルギリ展望）"
+    operator: "Webcam Nepal (WEBCAM NEPAL ANNAPURNA)"
+    video_id: "dBU3ITvXjMc"
+    category: scenic
+    country: "NP"
+    lat: 28.835
+    lng: 83.7783
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。ムスタン地方カグベニ村。座標は村の概略。"
+
+  - id: world-113a7245
+    name: "ムクティナート（アンナプルナ周回路）"
+    operator: "Webcam Nepal (WEBCAM NEPAL ANNAPURNA)"
+    video_id: "KajJAlgLkXU"
+    category: scenic
+    country: "NP"
+    lat: 28.8167
+    lng: 83.8717
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。ムクティナート村、標高約3,700m。座標は村の概略。"
+
+  - id: world-3067eaa5
+    name: "ドロミテ ランゲンコーフェル／ソラスルンゴ（ヴィラ・アル・ボスコ）"
+    operator: "Villa al Bosco"
+    video_id: "nRelWmEPVCo"
+    category: scenic
+    country: "IT"
+    lat: 46.5156
+    lng: 11.7219
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。宿泊施設の公式ライブ。座標はソラスルンゴ山群の中心(カメラ設置地点の厳密位置は未確認)。夜間は暗転。"
+
+  - id: world-b7c53ff5
+    name: "ドロミテ ピアーヴェ川上流域（カドーレ）"
+    operator: "365COMPASS"
+    video_id: "lEaHtb5Dl3E"
+    category: scenic
+    country: "IT"
+    lat: 46.43
+    lng: 12.37
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。配信タイトル『DOLOMITI LIVE 24/7 (Alta valle del Piave)』。座標はピエーヴェ・ディ・カドーレ付近の概略(設置地点は未確認)。個人運営のため要目視確認。"
+
+  - id: world-22e434f5
+    name: "マウントワシントン観測所（ワイルドキャット方面）"
+    operator: "Mount Washington Observatory"
+    video_id: "KQX-Ao7cF0E"
+    category: scenic
+    country: "US"
+    lat: 44.2706
+    lng: -71.3033
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。配信タイトル『Weather Cam (view from Wildcat)』。既存の誘導型『マウントワシントン観測所』とは別のライブ枠。"
+
+  - id: world-1cd70c6a
+    name: "マウントワシントン観測所（北プレジデンシャル山群）"
+    operator: "Mount Washington Observatory"
+    video_id: "gE0Edb4FxjA"
+    category: scenic
+    country: "US"
+    lat: 44.2706
+    lng: -71.3033
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。配信タイトル『Northern Presidentials Cam』。"
+
+  - id: world-2886b744
+    name: "マウントワシントン観測所（西向き）"
+    operator: "Mount Washington Observatory"
+    video_id: "L2duADHowdY"
+    category: scenic
+    country: "US"
+    lat: 44.2706
+    lng: -71.3033
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。配信タイトル『West View Cam』。"
+
+  - id: world-4656a6ff
+    name: "マウントワシントン山頂 観測塔"
+    operator: "Mount Washington Observatory"
+    video_id: "JuJVUhj9JBo"
+    category: scenic
+    country: "US"
+    lat: 44.2706
+    lng: -71.3033
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。配信タイトル『Tower Cam』。山頂は霧・着氷で白くなる時間が長い。"
+
+  - id: world-2925d272
+    name: "マウントワシントン山頂 展望デッキ"
+    operator: "Mount Washington Observatory"
+    video_id: "Z27ghRYocJ4"
+    category: scenic
+    country: "US"
+    lat: 44.2706
+    lng: -71.3033
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。配信タイトル『Deck Cam』。"
+
+  - id: world-16c53d3a
+    name: "マウントワシントン コグ鉄道"
+    operator: "Mount Washington Cog Railway"
+    video_id: "6uzzroiwcAk"
+    category: scenic
+    country: "US"
+    lat: 44.2706
+    lng: -71.3033
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。運営鉄道会社の公式ライブ。座標は山頂(設置位置の根拠は未確認)。季節運行。"
+
+  - id: world-9581f558
+    name: "フィンセ駅（ハルダンゲルヨークル氷河の玄関）"
+    operator: "Ståle Ualand"
+    video_id: "Snzm38UTOKI"
+    embed: false
+    category: scenic
+    country: "NO"
+    lat: 60.6
+    lng: 7.503
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=false。ノルウェー ベルゲン線フィンセ駅(標高1,222m)。個人配信、埋め込み不可のため誘導型。冬は雪景色。"
+
+  - id: world-56e45b32
+    name: "ポポカテペトル火山"
+    operator: "webcamsdemexico"
+    video_id: "kZCcj_kpHZY"
+    category: volcano
+    country: "MX"
+    lat: 19.0225
+    lng: -98.6278
+    note: "2026-10-15 13時台UTC確認、status=OK isLiveNow=true playableInEmbed=true。配信タイトル『Popocatépetl EN VIVO』。座標は火口。既存のポポカテペトル枠と近いアングルの可能性。"
+
+  - id: world-f4dfbfb0
+    name: "イグアスの滝（アルゼンチン側・サンマルティン島と上流の滝）"
+    operator: "Parque Nacional Iguazú Oficial（イグアス国立公園公式）"
+    video_id: "htmdclJWosE"
+    channel_id: "UCw5INmG_YvWbyafODrVR1WQ"
+    category: scenic
+    country: "AR"
+    lat: -25.6866
+    lng: -54.4381
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。公式チャンネルは1本のみ配信。開園時間中の配信（夜間・閉園時は配信なしになりうる）。座標は上流遊歩道周辺の概略。"
+
+  - id: world-8a144d2f
+    name: "ノーサンバーランド クレスウェル オーロラカメラ"
+    operator: "Northumberland Astro"
+    video_id: "MYeOK93smBw"
+    category: scenic
+    country: "GB"
+    lat: 55.249
+    lng: -1.54
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。タイトル『Northumberland Aurora Cam LIVE Stream (Cresswell, UK)』。夜間のみ有意な映像。同チャンネルは複数配信のため channel_id 無し。座標はクレスウェル村。"
+
+  - id: world-948df599
+    name: "オウル（フィンランド） オーロラカメラ"
+    operator: "Samimaka"
+    video_id: "ZbRPgCffcqs"
+    category: scenic
+    country: "FI"
+    lat: 65.0121
+    lng: 25.4651
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。タイトル『Northern lights / Aurora borealis livestream Finland Oulu』。夜間・季節（秋〜春）に意味を持つ。同チャンネル3配信のため channel_id 無し。座標はオウル市街概略。"
+
+  - id: world-7fcd36b1
+    name: "オウル ナリカリ海岸 オーロラカメラ"
+    operator: "Samimaka"
+    video_id: "KrINK7wDiY8"
+    category: scenic
+    country: "FI"
+    lat: 65.0436
+    lng: 25.3917
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。タイトル『Seaside Nallikari Northern lights / Aurora borealis livestream North』。夜間・季節性あり。座標はナリカリ海岸。"
+
+  - id: world-d64e4c94
+    name: "キュラソー プラヤ・ラグン（スキューバロッジ）"
+    operator: "Scuba Lodge & Suites（SHOWME Caribbean 配信）"
+    video_id: "XHPX3vqxkCE"
+    category: coast
+    country: "CW"
+    lat: 12.3694
+    lng: -69.1578
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。タイトル『Playa Lagun LIVE Cam | Scuba Lodge Lagun Beach Hotel』。SHOWME Caribbean は18配信のチャンネルなので channel_id 無し。"
+
+  - id: world-e1587f5c
+    name: "クライペダ（リトアニア）港"
+    operator: "Klaipeda Live Camera"
+    video_id: "AlZHWbVzkLY"
+    channel_id: "UCdq2EiLmm5LnZLR8Pk_vfww"
+    category: scenic
+    country: "LT"
+    lat: 55.7033
+    lng: 21.1443
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。単一配信のチャンネル。BGM付き。座標は港の概略。"
+
+  - id: world-0ca7822b
+    name: "マルタ スカイライン・天候ビュー"
+    operator: "Birds Eye View Malta"
+    video_id: "Qh68QRsy7hU"
+    channel_id: "UC_JDyw-vsFmwJ35tojTiFeA"
+    category: scenic
+    country: "MT"
+    lat: 35.8989
+    lng: 14.5146
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。単一配信のチャンネル。設置地点は説明欄に明記なし、バレッタ周辺の概略座標（approx）。"
+
+  - id: world-82d05c21
+    name: "プンタ・アレナス マゼラン海峡 パタゴニア"
+    operator: "Explora Australis"
+    video_id: "G5qmac3hww0"
+    channel_id: "UCvW03Fg0if-Cj_iasOvhsKg"
+    category: coast
+    country: "CL"
+    lat: -53.1638
+    lng: -70.9171
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。チャンネル説明『マゼラン海峡の24/7ライブ』。単一配信。設置地点の詳細は不明、プンタ・アレナス市街の概略座標（approx）。"
+
+  - id: world-ab6be264
+    name: "ノースダコタ オーロラカメラ（NoDDAC・マーテンス天文台）"
+    operator: "North Dakota Dual Aurora Cameras（ノースダコタ大学・Aurorasaurus・LiveAuroraNetwork の共同プロジェクト）"
+    video_id: "1nLwqmuxdEI"
+    channel_id: "UC7pBM_HJbGO7IlYIAsFcKAg"
+    embed: false
+    category: scenic
+    country: "US"
+    lat: 48.1536
+    lng: -97.6523
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=false。playableInEmbed=false（誘導型）。学生主体の市民科学プロジェクト。夜間のみ有意。座標は説明欄のインクスター（Inkster）のマーテンス天文台付近（approx）。"
+
+  - id: world-7eff2c77
+    name: "ポランチク・ソリナ湖（ビェシュチャディ）"
+    operator: "Transmi TO"
+    video_id: "fo6tiOKSKvE"
+    category: scenic
+    country: "PL"
+    lat: 49.3846
+    lng: 22.4455
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。タイトル『POLAŃCZYK i SOLINA NA ŻYWO! 回転カメラ』。同チャンネルは4配信のため channel_id 無し。座標はポランチク。"
+
+  - id: world-a3fd0d95
+    name: "ダニーデン（ニュージーランド）市街"
+    operator: "Dunedin, New Zealand - Live Webcam"
+    video_id: "gCnBSZp7SKM"
+    channel_id: "UC10rtsw7RaZVrsObrMmOZ1A"
+    category: scenic
+    country: "NZ"
+    lat: -45.8788
+    lng: 170.5028
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。説明欄に『12時間ごとに配信が切り替わる』とあり channel_id で登録（/live で常に最新）。座標はダニーデン中心部の概略。"
+
+  - id: world-2fa4c1f4
+    name: "ポート・オー・バスク（ニューファンドランド）港 Tilley Cam"
+    operator: "Customs House 1897（個人・家族運営）"
+    video_id: "gu5bSTh6jQo"
+    channel_id: "UCpDwGh4oXSWjKJJl6-kyfHg"
+    category: coast
+    country: "CA"
+    lat: 47.5711
+    lng: -59.1357
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=true。Tilley Cam 24/7 Harbour Cam。単一配信。座標はポート・オー・バスク港。"
+
+  - id: world-6041aa22
+    name: "グラン・カナリア ガルダル海岸（テネリフェ島が見える）"
+    operator: "Cliff House Live"
+    video_id: "NE3TR2P0YkA"
+    channel_id: "UC8qCc7sF9hSjP-U0TiaO5Tw"
+    embed: false
+    category: coast
+    country: "ES"
+    lat: 28.15
+    lng: -15.66
+    note: "2026-10-15確認 status=OK isLiveNow=true playableInEmbed=false。playableInEmbed=false（誘導型）。説明欄『グラン・カナリア島ガルダルの海岸』。BGM付き。単一配信。"

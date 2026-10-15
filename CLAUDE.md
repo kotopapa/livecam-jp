@@ -263,6 +263,8 @@ python site/build.py                            # 配信ファイル生成
 - 追従判定のタイトル一致は誤マッチする（例: ハミングバード→ワシの巣、カホンパス→ジョージア）。自動追従は必ず目視で精査する
 - cameras.json に同一動画IDの二重登録が12件ある（主に `curated-lcdb-*` と既登録の重複）。未解消
 - 宗教団体が画面に聖句・祈りのテロップを重ねるカメラは中立性の観点で不採用。メッカ・メディナはサウジ放送庁の公式チャンネルのみ（再配信多数）。モスクワ中心部の24h固定カメラはYouTube上に無い（ロシアの都市カメラは VK/Rutube に移行）
+- **世界遺産・名峰・絶景調査（2026-10-15、3班）で111台をユーザー判断で全採用**（YouTube 38・静止画 73。班間重複3件は除外）。鉱脈: Webcam Nepal（エベレスト街道10本）、Mount Washington Observatory（5本＋コグ鉄道）、Roundshot（ツェルマット9・ユングフラウ9）と Panomax（`panodata.panomax.com` の固定画像、22本）、NPS の `webcams-*`、USGS HVO（キラウエア・マウナロア）、Yosemite Conservancy の pixelcaster、skilouise（レイクルイーズ4本）。静止画は `curated_still.yaml` の `country` 付き（prefecture "99"）。operator が「(推定)」のまま採用したのは ツェルマット モンテローザ・Panomax 8本（掲載ページに運営者の記載が無く Panomax GmbH の著作権表記のみ）
+- **feed.type `roundshot`（都度解決型）**: 固定入口 `https://<host>.roundshot.com/cams/<id>` が最新の日付入り画像 `.../yyyy-mm-dd/hh-mm-ss/..._full.jpg`（3〜5MB）へ 302 する。monitor（`crawler/sources/roundshot.py`）が入口へ HEAD（リダイレクトは辿らない）して Location の `_full.jpg` を `_half.jpg`（約0.2〜1.5MB）に置き換え、status.json の `image_url` で配信する。解決に失敗した回は前回の image_url を保って確認を続ける。アプリは FeedType と `imageUrlFor` の配線が要る（別担当）
 
 ## 沖縄・離島カメラの知見（2026-09-03追記）
 
