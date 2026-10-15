@@ -131,6 +131,10 @@ class CameraRepository {
         c.feed.type == FeedType.yachiyoKansen) {
       return status[c.id]?.imageUrl;
     }
+    // roundshot は image_url 優先。配信前・解決失敗時は feed.url（302で最新の _full.jpg）
+    if (c.feed.type == FeedType.roundshot) {
+      return status[c.id]?.imageUrl ?? c.feed.url;
+    }
     if (c.feed.type == FeedType.stillImage) return c.feed.url;
     return null;
   }

@@ -649,6 +649,8 @@ class _MediaView extends StatelessWidget {
       case FeedType.yamaguchiKasen:
       case FeedType.shimaneSuibo:
       case FeedType.fukuokaKasen:
+      case FeedType.yachiyoKansen:
+      case FeedType.roundshot:
         final url = app.imageUrlFor(camera);
         if (url == null) {
           return _MediaFallback(

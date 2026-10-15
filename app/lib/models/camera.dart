@@ -45,6 +45,10 @@ enum FeedType {
   /// 佐倉市 河川等監視カメラ（画像は wholemap.json 内の base64 のみ。_MieDouroView の sakura 形式）
   sakuraBosaicam('sakura_bosaicam'),
 
+  /// Roundshot パノラマカメラ（ツェルマット・ユングフラウ等。都度解決型）。
+  /// 最新画像URLは status.json の image_url。無ければ feed.url（302で最新へ）を読む
+  roundshot('roundshot'),
+
   /// 未知のtype。地図に出すが再生は fallback ページへ誘導する
   unknown('unknown');
 
