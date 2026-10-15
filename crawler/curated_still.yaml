@@ -21859,7 +21859,7 @@ cameras:
   - id: curated-link-port-airportview-naha
     name: "ホテルエアポートビュー那覇（那覇空港）"
     operator: "ホテルエアポートビュー那覇"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "47"
     lat: 26.201843
     lng: 127.657608
@@ -25128,7 +25128,7 @@ cameras:
   - id: curated-still-lcdb-a83948fa
     name: 新千歳空港B駐車場
     operator: 北海道エアポート
-    category: port
+    category: other  # 2026-10-15 港湾→その他
     prefecture: '01'
     lat: 42.785801
     lng: 141.678611
@@ -25192,7 +25192,7 @@ cameras:
   - id: curated-still-lcdb-66f21622
     name: 丘珠空港
     operator: 札幌丘珠空港ビル
-    category: port
+    category: other  # 2026-10-15 港湾→その他
     prefecture: '01'
     lat: 43.110784
     lng: 141.380219
@@ -30306,7 +30306,7 @@ cameras:
   - id: curated-still-lcdb-d8b527a9
     name: 萩石見空港空港公園サンシャイン広場持石海岸
     operator: 益田市役所
-    category: port
+    category: coast  # 2026-10-15 港湾→海岸
     prefecture: '32'
     lat: 34.681472
     lng: 131.770694
@@ -34490,7 +34490,7 @@ cameras:
   - id: curated-still-lcdb-8bf8d994
     name: 三沢空港
     operator: 三沢空港ターミナル株式会社
-    category: port
+    category: other  # 2026-10-15 港湾→その他
     prefecture: '02'
     lat: 40.696493
     lng: 141.387818

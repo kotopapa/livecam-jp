@@ -7884,7 +7884,7 @@ cameras:
     name: "宮崎空港（MRT宮崎放送ライブカメラ）"
     operator: "MRT宮崎放送"
     video_id: "-1k1V-2kCI4"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "45"
     lat: 31.8772
     lng: 131.4486
@@ -8985,7 +8985,7 @@ cameras:
     name: "新千歳空港（STV）"
     operator: "STVニュース北海道（札幌テレビ放送）"
     video_id: "3SKn4LgGJk8"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "01"
     lat: 42.7752
     lng: 141.6923
@@ -8995,7 +8995,7 @@ cameras:
     name: "とかち帯広空港"
     operator: "十勝毎日新聞"
     video_id: "IDXRscHtp2s"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "01"
     lat: 42.7333
     lng: 143.2172
@@ -9005,7 +9005,7 @@ cameras:
     name: "青森空港"
     operator: "ABA青森朝日放送"
     video_id: "pcA1VW0n7JU"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "02"
     lat: 40.7347
     lng: 140.6906
@@ -9015,7 +9015,7 @@ cameras:
     name: "いわて花巻空港"
     operator: "いわて花巻空港（岩手県空港ターミナルビル）"
     video_id: "XHnrgK4sEDE"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "03"
     lat: 39.4286
     lng: 141.1353
@@ -9025,7 +9025,7 @@ cameras:
     name: "秋田空港（AKT情報カメラ・夜間は秋田駅前）"
     operator: "AKT秋田テレビ"
     video_id: "2EfwG0g0rW4"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "05"
     lat: 39.6156
     lng: 140.2186
@@ -9035,7 +9035,7 @@ cameras:
     name: "山形空港"
     operator: "YBC山形放送"
     video_id: "log3DCKyMwI"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "06"
     lat: 38.4119
     lng: 140.3711
@@ -9045,7 +9045,7 @@ cameras:
     name: "庄内空港"
     operator: "TUYテレビユー山形"
     video_id: "VUztn_JkOjM"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "06"
     lat: 38.8122
     lng: 139.7872
@@ -9055,7 +9055,7 @@ cameras:
     name: "福島空港（KFB）"
     operator: "KFB福島放送"
     video_id: "CVp0bl7ROSM"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "07"
     lat: 37.2274
     lng: 140.4308
@@ -9065,7 +9065,7 @@ cameras:
     name: "信州まつもと空港 滑走路"
     operator: "松本空港（信州まつもと空港）"
     video_id: "WAzZUkjgT4k"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "20"
     lat: 36.1668
     lng: 137.9227
@@ -9075,7 +9075,7 @@ cameras:
     name: "県営名古屋空港"
     operator: "スターキャット（Starcat）"
     video_id: "LRgGBlcL4KU"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "23"
     lat: 35.255
     lng: 136.9244
@@ -9086,7 +9086,7 @@ cameras:
     name: "伊丹空港（MBS）"
     operator: "MBS NEWS（毎日放送）"
     video_id: _nUgTC9zJyc
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "28"
     lat: 34.7855
     lng: 135.4382
@@ -9096,7 +9096,7 @@ cameras:
     name: "神戸空港"
     operator: "読売テレビニュース"
     video_id: "1V-rE4Z1ZZQ"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "28"
     lat: 34.6328
     lng: 135.2239
@@ -9106,7 +9106,7 @@ cameras:
     name: "広島空港（HTV）"
     operator: "広テレ!NEWS（広島テレビ）"
     video_id: "uPXvT-eE0To"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "34"
     lat: 34.4361
     lng: 132.9194
@@ -9117,7 +9117,7 @@ cameras:
     name: "岡山桃太郎空港"
     operator: "TSCテレビせとうち"
     video_id: "ixXHFjpNG8E"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "33"
     lat: 34.7569
     lng: 133.8553
@@ -9127,7 +9127,7 @@ cameras:
     name: "福岡空港（KBC）"
     operator: "福岡・佐賀 KBC NEWS（九州朝日放送）"
     video_id: "uuMhOREzUYA"
-    category: "port"
+    category: other  # 2026-10-15 港湾→その他
     prefecture: "40"
     lat: 33.5859
     lng: 130.4507
@@ -14220,7 +14220,7 @@ cameras:
   - id: curated-lcdb-66b5bec0
     name: 共同通信社東京
     operator: 共同通信社
-    category: port
+    category: other  # 2026-10-15 港湾→その他
     prefecture: '13'
     lat: 35.663317
     lng: 139.75469
@@ -16288,7 +16288,7 @@ cameras:
   - id: curated-lcdb-9f08e943
     name: 古河産業東京上空天気
     operator: 古河産業
-    category: port
+    category: other  # 2026-10-15 港湾→その他
     prefecture: '13'
     lat: 35.664143
     lng: 139.755755
@@ -18503,7 +18503,7 @@ cameras:
   - id: curated-lcdb-7153fa80
     name: JapanesePod101赤坂
     operator: JapanesePod101
-    category: port
+    category: other  # 2026-10-15 港湾→その他
     prefecture: '13'
     lat: 35.675417
     lng: 139.734893
