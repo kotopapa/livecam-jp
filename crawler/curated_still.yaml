@@ -670,16 +670,17 @@ cameras:
     page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/mitsushima_lt/"
     note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
 
-  - id: curated-still-jcg-kinkasan-lighthouse-miyagi
-    name: "金華山灯台"
-    operator: "海上保安庁(第二管区海上保安本部)"
-    category: coast
-    prefecture: "04"
-    lat: 38.2766
-    lng: 141.5841
-    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kinkasan_lt.jpg"
-    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kinkasan_lt/"
-    note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
+  # 2026-10-17 退役: 配信元が「公開を終了しました」の画像（2024-10-31 から更新なし）
+  # - id: curated-still-jcg-kinkasan-lighthouse-miyagi
+  #   name: "金華山灯台"
+  #   operator: "海上保安庁(第二管区海上保安本部)"
+  #   category: coast
+  #   prefecture: "04"
+  #   lat: 38.2766
+  #   lng: 141.5841
+  #   image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/kinkasan_lt.jpg"
+  #   page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/kinkasan_lt/"
+  #   note: "著作権表示のみ、転載可否明記なし→要人手レビュー"
 
   - id: curated-still-jcg-nojimasaki-lighthouse-chiba
     name: "野島埼灯台"
