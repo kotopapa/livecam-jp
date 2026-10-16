@@ -86,17 +86,18 @@ cameras:
     page_url: "https://www.water.go.jp/chubu/misogawa/live/camera_index.html"
     note: "木曽川水系 木曽川"
 
-  - id: curated-still-dam-shimokubo
-    name: "下久保ダム"
-    operator: "独立行政法人水資源機構 下久保ダム管理所"
-    category: dam
-    prefecture: "11"
-    lat: 36.131566
-    lng: 139.023726
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.water.go.jp/kanto/simokubo/dam/images/ph_damlive01.jpg"
-    page_url: "https://www.water.go.jp/kanto/simokubo/dam/damlive.html"
-    note: "利根川水系 神流川"
+  # 2026-10-17 退役: 画像が5916日（1年以上）更新されていない
+  # - id: curated-still-dam-shimokubo
+  #   name: "下久保ダム"
+  #   operator: "独立行政法人水資源機構 下久保ダム管理所"
+  #   category: dam
+  #   prefecture: "11"
+  #   lat: 36.131566
+  #   lng: 139.023726
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.water.go.jp/kanto/simokubo/dam/images/ph_damlive01.jpg"
+  #   page_url: "https://www.water.go.jp/kanto/simokubo/dam/damlive.html"
+  #   note: "利根川水系 神流川"
 
   - id: curated-still-dam-urayama
     name: "浦山ダム"
@@ -157,60 +158,65 @@ cameras:
     page_url: "https://www.water.go.jp/mizu/ikeda/mizuinfo/dyn/html/p0502/p050204.html"
     note: "吉野川水系 銅山川"
 
-  - id: curated-still-dam-gosho
-    name: "御所ダム"
-    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
-    category: dam
-    prefecture: "03"
-    lat: 39.693611
-    lng: 141.03
-    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS12.jpg"
-    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam02.html"
-    note: "北上川水系 雫石川"
+  # 2026-10-17 退役: 画像が4428日（1年以上）更新されていない
+  # - id: curated-still-dam-gosho
+  #   name: "御所ダム"
+  #   operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+  #   category: dam
+  #   prefecture: "03"
+  #   lat: 39.693611
+  #   lng: 141.03
+  #   image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS12.jpg"
+  #   page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam02.html"
+  #   note: "北上川水系 雫石川"
 
-  - id: curated-still-dam-shijushida
-    name: "四十四田ダム"
-    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
-    category: dam
-    prefecture: "03"
-    lat: 39.752778
-    lng: 141.148333
-    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS06.jpg"
-    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam01.html"
-    note: "北上川水系 北上川"
+  # 2026-10-17 退役: 画像が4428日（1年以上）更新されていない
+  # - id: curated-still-dam-shijushida
+  #   name: "四十四田ダム"
+  #   operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+  #   category: dam
+  #   prefecture: "03"
+  #   lat: 39.752778
+  #   lng: 141.148333
+  #   image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS06.jpg"
+  #   page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam01.html"
+  #   note: "北上川水系 北上川"
 
-  - id: curated-still-dam-isawa
-    name: "胆沢ダム"
-    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
-    category: dam
-    prefecture: "03"
-    lat: 39.115556
-    lng: 140.919722
-    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS34.jpg"
-    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam05.html"
-    note: "北上川水系 胆沢川"
+  # 2026-10-17 退役: 画像が4428日（1年以上）更新されていない
+  # - id: curated-still-dam-isawa
+  #   name: "胆沢ダム"
+  #   operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+  #   category: dam
+  #   prefecture: "03"
+  #   lat: 39.115556
+  #   lng: 140.919722
+  #   image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS34.jpg"
+  #   page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam05.html"
+  #   note: "北上川水系 胆沢川"
 
-  - id: curated-still-dam-tase
-    name: "田瀬ダム"
-    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
-    category: dam
-    prefecture: "03"
-    lat: 39.343056
-    lng: 141.318611
-    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS21.jpg"
-    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam03.html"
-    note: "北上川水系 猿ヶ石川"
+  # 2026-10-17 退役: 画像が4428日（1年以上）更新されていない
+  # - id: curated-still-dam-tase
+  #   name: "田瀬ダム"
+  #   operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+  #   category: dam
+  #   prefecture: "03"
+  #   lat: 39.343056
+  #   lng: 141.318611
+  #   image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS21.jpg"
+  #   page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam03.html"
+  #   note: "北上川水系 猿ヶ石川"
 
-  - id: curated-still-dam-yuda
-    name: "湯田ダム"
-    operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
-    category: dam
-    prefecture: "03"
-    lat: 39.301565
-    lng: 140.884568
-    image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS46.jpg"
-    page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam04.html"
-    note: "北上川水系 和賀川"
+  # 2026-10-17 退役: 画像が4428日（1年以上）更新されていない
+  # - id: curated-still-dam-yuda
+  #   name: "湯田ダム"
+  #   operator: "国土交通省東北地方整備局 北上川ダム統合管理事務所"
+  #   category: dam
+  #   prefecture: "03"
+  #   lat: 39.301565
+  #   lng: 140.884568
+  #   image_url: "http://www.thr.mlit.go.jp/kitakato/02cam/img/FS46.jpg"
+  #   page_url: "http://www2.thr.mlit.go.jp/kitakato/02cam/lcam04.html"
+  #   note: "北上川水系 和賀川"
 
   - id: curated-still-dam-yagisawa
     name: "矢木沢ダム"
@@ -224,17 +230,18 @@ cameras:
     page_url: "https://www.water.go.jp/kanto/numata/"
     note: "利根川水系 利根川"
 
-  - id: curated-still-dam-tokuyama
-    name: "徳山ダム"
-    operator: "独立行政法人水資源機構 木曽川用水総合管理所 徳山ダム管理所"
-    category: dam
-    prefecture: "21"
-    lat: 35.665992
-    lng: 136.5014
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: "https://www.tokuyamadam.jp/dam.jpg"
-    page_url: "https://www.tokuyamadam.jp/01_map_photo.html"
-    note: "木曽川水系 揖斐川"
+  # 2026-10-17 退役: 画像が494日（1年以上）更新されていない
+  # - id: curated-still-dam-tokuyama
+  #   name: "徳山ダム"
+  #   operator: "独立行政法人水資源機構 木曽川用水総合管理所 徳山ダム管理所"
+  #   category: dam
+  #   prefecture: "21"
+  #   lat: 35.665992
+  #   lng: 136.5014
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: "https://www.tokuyamadam.jp/dam.jpg"
+  #   page_url: "https://www.tokuyamadam.jp/01_map_photo.html"
+  #   note: "木曽川水系 揖斐川"
 
   - id: curated-still-dam-hyogo-dam-tennodam
     name: "天王ダム"
@@ -2845,27 +2852,29 @@ cameras:
 
   # --- 2026-08-22 道路公社(静岡・京都) ---
 
-  - id: curated-still-shizuoka-kosha-izu-skyline
-    name: "伊豆スカイライン（熱海峠料金所）"
-    operator: "静岡県道路公社"
-    category: road
-    prefecture: "22"
-    lat: 35.086491
-    lng: 139.031587
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: "https://camera.siz-road.or.jp/img/camera_pic1.jpg"
-    page_url: "https://camera.siz-road.or.jp/"
+  # 2026-10-17 退役: 画像が2410日（1年以上）更新されていない
+  # - id: curated-still-shizuoka-kosha-izu-skyline
+  #   name: "伊豆スカイライン（熱海峠料金所）"
+  #   operator: "静岡県道路公社"
+  #   category: road
+  #   prefecture: "22"
+  #   lat: 35.086491
+  #   lng: 139.031587
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: "https://camera.siz-road.or.jp/img/camera_pic1.jpg"
+  #   page_url: "https://camera.siz-road.or.jp/"
 
-  - id: curated-still-shizuoka-kosha-hamayu
-    name: "浜名湖新橋（はまゆう大橋）"
-    operator: "静岡県道路公社"
-    category: road
-    prefecture: "22"
-    lat: 34.727073
-    lng: 137.627913
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: "https://camera.siz-road.or.jp/img/camera_pic3.jpg"
-    page_url: "https://camera.siz-road.or.jp/"
+  # 2026-10-17 退役: 画像が2410日（1年以上）更新されていない
+  # - id: curated-still-shizuoka-kosha-hamayu
+  #   name: "浜名湖新橋（はまゆう大橋）"
+  #   operator: "静岡県道路公社"
+  #   category: road
+  #   prefecture: "22"
+  #   lat: 34.727073
+  #   lng: 137.627913
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: "https://camera.siz-road.or.jp/img/camera_pic3.jpg"
+  #   page_url: "https://camera.siz-road.or.jp/"
 
   - id: curated-still-kyoto-kosha-daishiyama
     name: "大師山トンネル（野田川大宮道路）"
@@ -3059,15 +3068,16 @@ cameras:
     image_url: "https://www.sizenken.biodic.go.jp/camera_img/94_c/image/2026/08/21/NCS20260821200002970.jpg"
     page_url: "https://www.sizenken.biodic.go.jp/view_new.php?no=94"
 
-  - id: curated-still-kabushima-uminego-hachinohe
-    name: "蕪島・八戸港 （ウミネコ繁殖地）"
-    operator: "八戸テレビ放送株式会社"
-    category: healing
-    prefecture: "02"
-    lat: 40.5391
-    lng: 141.5575
-    image_url: "https://hachinohe-tv.jp/wp-content/uploads/livecamera/kabushima.jpg"
-    page_url: "https://hachinohe-tv.jp/livecamera"
+  # 2026-10-17 退役: 画像が843日（1年以上）更新されていない
+  # - id: curated-still-kabushima-uminego-hachinohe
+  #   name: "蕪島・八戸港 （ウミネコ繁殖地）"
+  #   operator: "八戸テレビ放送株式会社"
+  #   category: healing
+  #   prefecture: "02"
+  #   lat: 40.5391
+  #   lng: 141.5575
+  #   image_url: "https://hachinohe-tv.jp/wp-content/uploads/livecamera/kabushima.jpg"
+  #   page_url: "https://hachinohe-tv.jp/livecamera"
 
   - id: curated-still-tsushima-yamaneko-fukuoka-zoo
     name: "ツシマヤマネコ（福岡市動物園）"
@@ -4123,17 +4133,18 @@ cameras:
     page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hashidahana_lt/"
     note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
 
-  - id: curated-still-kaiho-owase-cgo
-    name: "尾鷲海上保安部庁舎"
-    operator: "海上保安庁 尾鷲海上保安部"
-    category: coast
-    prefecture: "24"
-    lat: 34.07166667
-    lng: 136.2019444
-    refresh_sec: 300
-    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/owase_cgo.jpg"
-    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/owase_cgo/"
-    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+  # 2026-10-17 退役: 画像が715日（1年以上）更新されていない
+  # - id: curated-still-kaiho-owase-cgo
+  #   name: "尾鷲海上保安部庁舎"
+  #   operator: "海上保安庁 尾鷲海上保安部"
+  #   category: coast
+  #   prefecture: "24"
+  #   lat: 34.07166667
+  #   lng: 136.2019444
+  #   refresh_sec: 300
+  #   image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/owase_cgo.jpg"
+  #   page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/owase_cgo/"
+  #   note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
 
   - id: curated-still-kaiho-yokkaichiko-bkw-lt
     name: "四日市防波堤信号所"
@@ -4243,17 +4254,18 @@ cameras:
     page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/sekisaki_lt/"
     note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
 
-  - id: curated-still-kaiho-mishima-n-lt
-    name: "見島北灯台"
-    operator: "海上保安庁 仙崎海上保安部"
-    category: coast
-    prefecture: "35"
-    lat: 34.7975
-    lng: 131.1311111
-    refresh_sec: 300
-    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/mishima_n_lt.jpg"
-    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/mishima_n_lt/"
-    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+  # 2026-10-17 退役: 画像が1487日（1年以上）更新されていない
+  # - id: curated-still-kaiho-mishima-n-lt
+  #   name: "見島北灯台"
+  #   operator: "海上保安庁 仙崎海上保安部"
+  #   category: coast
+  #   prefecture: "35"
+  #   lat: 34.7975
+  #   lng: 131.1311111
+  #   refresh_sec: 300
+  #   image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/mishima_n_lt.jpg"
+  #   page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/mishima_n_lt/"
+  #   note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
 
   - id: curated-still-kaiho-hinoyamashita-tss
     name: "火ノ山下潮流信号所"
@@ -4375,17 +4387,18 @@ cameras:
     page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/sawasakihana_lt/"
     note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
 
-  - id: curated-still-kaiho-hegurashima-lt
-    name: "舳倉島灯台"
-    operator: "海上保安庁 七尾海上保安部"
-    category: coast
-    prefecture: "17"
-    lat: 37.85138889
-    lng: 136.9188889
-    refresh_sec: 300
-    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hegurashima_lt.jpg"
-    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hegurashima_lt/"
-    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+  # 2026-10-17 退役: 画像が1662日（1年以上）更新されていない
+  # - id: curated-still-kaiho-hegurashima-lt
+  #   name: "舳倉島灯台"
+  #   operator: "海上保安庁 七尾海上保安部"
+  #   category: coast
+  #   prefecture: "17"
+  #   lat: 37.85138889
+  #   lng: 136.9188889
+  #   refresh_sec: 300
+  #   image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/hegurashima_lt.jpg"
+  #   page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/hegurashima_lt/"
+  #   note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
 
   - id: curated-still-kaiho-aganokawa-rm-lt
     name: "阿賀野川口灯台"
@@ -4411,17 +4424,18 @@ cameras:
     page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/satamisaki_lt/"
     note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
 
-  - id: curated-still-kaiho-tanegashima-lt
-    name: "種子島灯台"
-    operator: "海上保安庁 鹿児島海上保安部"
-    category: coast
-    prefecture: "46"
-    lat: 30.385
-    lng: 130.9622222
-    refresh_sec: 300
-    image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/tanegashima_lt.jpg"
-    page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/tanegashima_lt/"
-    note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
+  # 2026-10-17 退役: 画像が1662日（1年以上）更新されていない
+  # - id: curated-still-kaiho-tanegashima-lt
+  #   name: "種子島灯台"
+  #   operator: "海上保安庁 鹿児島海上保安部"
+  #   category: coast
+  #   prefecture: "46"
+  #   lat: 30.385
+  #   lng: 130.9622222
+  #   refresh_sec: 300
+  #   image_url: "https://camera.mics.kaiho.mlit.go.jp/thumbnail/tanegashima_lt.jpg"
+  #   page_url: "https://camera.mics.kaiho.mlit.go.jp/camstream/tanegashima_lt/"
+  #   note: "海の安全情報ポータル。座標はAPI提供値(exact相当)"
 
   - id: curated-still-kaiho-kohirasehana-lt
     name: "小平瀬鼻灯台"
@@ -9389,16 +9403,17 @@ cameras:
     page_url: "https://www.skr.mlit.go.jp/road/cctv/"
     note: "image/jpeg 確認(5分更新)。一覧ページは403で利用条件未確認(license=unknown)。座標=財田上代表点(要微調整)"
 
-  - id: curated-still-skr-kendo5-inohana
-    name: "県道5号 猪ノ鼻峠（猪ノ鼻トンネル）"
-    operator: "国土交通省 四国地方整備局"
-    category: "road"
-    prefecture: "37"
-    lat: 34.1
-    lng: 133.793
-    image_url: "https://www.skr.mlit.go.jp/road/pc/0E80B2204.jpg"
-    page_url: "https://www.skr.mlit.go.jp/road/pc/"
-    note: "/road/pc/*.jpg 系(0E815833D で image/jpeg 確認、Last-Modified 更新あり)。本IDは livecam.asia 記載、要curl確認。座標概算"
+  # 2026-10-17 退役: 画像が2004日（1年以上）更新されていない
+  # - id: curated-still-skr-kendo5-inohana
+  #   name: "県道5号 猪ノ鼻峠（猪ノ鼻トンネル）"
+  #   operator: "国土交通省 四国地方整備局"
+  #   category: "road"
+  #   prefecture: "37"
+  #   lat: 34.1
+  #   lng: 133.793
+  #   image_url: "https://www.skr.mlit.go.jp/road/pc/0E80B2204.jpg"
+  #   page_url: "https://www.skr.mlit.go.jp/road/pc/"
+  #   note: "/road/pc/*.jpg 系(0E815833D で image/jpeg 確認、Last-Modified 更新あり)。本IDは livecam.asia 記載、要curl確認。座標概算"
 
   - id: curated-still-qsr-ngs-r34-tawarazaka
     name: "国道34号 俵坂"
@@ -10094,16 +10109,17 @@ cameras:
     page_url: "https://chibacity.spo-sin.or.jp/shisetu/yacht-top/"
     note: "curl 200 image/jpeg。施設公式ページから weathernews livecam へリンク(liveid=410001688)。WNIホスティング。住所 千葉市美浜区磯辺2-8-1"
 
-  - id: curated-still-coast-gyoukeikan-inubosaki
-    name: "ぎょうけい館（犬吠埼灯台・太平洋）"
-    operator: "ぎょうけい館（日本ビューホテル）"
-    category: "coast"
-    prefecture: "12"
-    lat: 35.7008
-    lng: 140.8625
-    image_url: "https://webcam.wni.co.jp/BPL47738/00.jpg"
-    page_url: "https://webcam.wni.co.jp/BPL47738/loop.html"
-    note: "curl 200 image/jpeg。WNIホスティングのホテル屋上カメラ。既存の犬吠埼灯台(海保)・犬吠テラステラスとは別視点。住所 銚子市犬吠埼10293"
+  # 2026-10-17 退役: 画像が1360日（1年以上）更新されていない
+  # - id: curated-still-coast-gyoukeikan-inubosaki
+  #   name: "ぎょうけい館（犬吠埼灯台・太平洋）"
+  #   operator: "ぎょうけい館（日本ビューホテル）"
+  #   category: "coast"
+  #   prefecture: "12"
+  #   lat: 35.7008
+  #   lng: 140.8625
+  #   image_url: "https://webcam.wni.co.jp/BPL47738/00.jpg"
+  #   page_url: "https://webcam.wni.co.jp/BPL47738/loop.html"
+  #   note: "curl 200 image/jpeg。WNIホスティングのホテル屋上カメラ。既存の犬吠埼灯台(海保)・犬吠テラステラスとは別視点。住所 銚子市犬吠埼10293"
 
   - id: curated-still-scenic-michinoeki-tako-1
     name: "道の駅多古あじさい館 カメラ1（多古大橋・栗山川）"
@@ -11352,16 +11368,17 @@ cameras:
     page_url: "http://awajicitycam.city.awaji.lg.jp/shizukigawa.php"
     note: "curl 200 image/jpeg 24KB。httpのみ。座標: 淡路市中田(概略)"
 
-  - id: curated-still-port-awaji-eikou
-    name: "淡路市 江井港"
-    operator: "淡路市"
-    category: "port"
-    prefecture: "28"
-    lat: 34.4596
-    lng: 134.8221
-    image_url: "http://awajicitycam.city.awaji.lg.jp/new_image.php?camera=2"
-    page_url: "http://awajicitycam.city.awaji.lg.jp/eikou.php"
-    note: "curl 200 image/jpeg 25KB。座標: 江井港"
+  # 2026-10-17 退役: 画像が4950日（1年以上）更新されていない
+  # - id: curated-still-port-awaji-eikou
+  #   name: "淡路市 江井港"
+  #   operator: "淡路市"
+  #   category: "port"
+  #   prefecture: "28"
+  #   lat: 34.4596
+  #   lng: 134.8221
+  #   image_url: "http://awajicitycam.city.awaji.lg.jp/new_image.php?camera=2"
+  #   page_url: "http://awajicitycam.city.awaji.lg.jp/eikou.php"
+  #   note: "curl 200 image/jpeg 25KB。座標: 江井港"
 
   - id: curated-still-port-awaji-ikuha-gyokou
     name: "淡路市 育波漁港"
@@ -11579,16 +11596,17 @@ cameras:
     page_url: "https://www.town.amagi.lg.jp/"
     note: "curl 200 image/jpeg 77KB。webcam.wni.co.jp ホスティング(WNI側利用条件要確認→unknown)。座標: 天城町役場"
 
-  - id: curated-still-scenic-yoron-denshi-okinawa-hokubu
-    name: "与論島から望む沖縄本島北部（与論電子）"
-    operator: "与論電子"
-    category: "scenic"
-    prefecture: "46"
-    lat: 27.0374
-    lng: 128.4144
-    image_url: "http://www.ne.jp/asahi/yoron/tv/okinawa2.jpg"
-    page_url: "http://www.ne.jp/asahi/yoron/tv/"
-    note: "curl 200 image/jpeg 73KB。httpのみ。民間(電器店)運営、更新間隔・利用条件不明→unknown。座標: 与論町立長(概略)"
+  # 2026-10-17 退役: 画像が2524日（1年以上）更新されていない
+  # - id: curated-still-scenic-yoron-denshi-okinawa-hokubu
+  #   name: "与論島から望む沖縄本島北部（与論電子）"
+  #   operator: "与論電子"
+  #   category: "scenic"
+  #   prefecture: "46"
+  #   lat: 27.0374
+  #   lng: 128.4144
+  #   image_url: "http://www.ne.jp/asahi/yoron/tv/okinawa2.jpg"
+  #   page_url: "http://www.ne.jp/asahi/yoron/tv/"
+  #   note: "curl 200 image/jpeg 73KB。httpのみ。民間(電器店)運営、更新間隔・利用条件不明→unknown。座標: 与論町立長(概略)"
 
   - id: curated-still-river-okinawa-genkagawa-genka
     name: "源河川 源河（名護市）"
@@ -17990,27 +18008,29 @@ cameras:
     page_url: "https://haraikawa.pixif.jp/"
     note: "curl 200 image/jpeg(110KB)。同上(別方向)"
 
-  - id: curated-still-mountain-yuza-yakuba-chokaisan
-    name: "遊佐町役場から見る鳥海山"
-    operator: "遊佐町"
-    category: "scenic"
-    prefecture: "06"
-    lat: 39.0149
-    lng: 139.9074
-    image_url: "http://www.town.yuza.yamagata.jp/uploads/public/archive_0000001067_00/user_6/yakuba_yama.jpg"
-    page_url: "http://www.town.yuza.yamagata.jp/ou/somu/jyoho/live_camera.html"
-    note: "curl 200 image/jpeg(17KB、小サイズ)。自治体・利用条件不明。座標は遊佐町役場(遊佐字舞鶴211) → GSI"
+  # 2026-10-17 退役: 画像が557日（1年以上）更新されていない
+  # - id: curated-still-mountain-yuza-yakuba-chokaisan
+  #   name: "遊佐町役場から見る鳥海山"
+  #   operator: "遊佐町"
+  #   category: "scenic"
+  #   prefecture: "06"
+  #   lat: 39.0149
+  #   lng: 139.9074
+  #   image_url: "http://www.town.yuza.yamagata.jp/uploads/public/archive_0000001067_00/user_6/yakuba_yama.jpg"
+  #   page_url: "http://www.town.yuza.yamagata.jp/ou/somu/jyoho/live_camera.html"
+  #   note: "curl 200 image/jpeg(17KB、小サイズ)。自治体・利用条件不明。座標は遊佐町役場(遊佐字舞鶴211) → GSI"
 
-  - id: curated-still-mountain-yuza-yurari-chokaisan
-    name: "遊楽里（吹浦）から見る鳥海山"
-    operator: "遊佐町"
-    category: "scenic"
-    prefecture: "06"
-    lat: 39.0925
-    lng: 139.9195
-    image_url: "http://www.town.yuza.yamagata.jp/uploads/public/archive_0000001067_00/user_6/yurariyama.jpg"
-    page_url: "http://www.town.yuza.yamagata.jp/ou/somu/jyoho/live_camera.html"
-    note: "curl 200 image/jpeg(14KB)。ファイル名yurari=鳥海温泉遊楽里(遊佐町吹浦)と推定、座標は遊楽里の既知座標。要レビュー"
+  # 2026-10-17 退役: 画像が557日（1年以上）更新されていない
+  # - id: curated-still-mountain-yuza-yurari-chokaisan
+  #   name: "遊楽里（吹浦）から見る鳥海山"
+  #   operator: "遊佐町"
+  #   category: "scenic"
+  #   prefecture: "06"
+  #   lat: 39.0925
+  #   lng: 139.9195
+  #   image_url: "http://www.town.yuza.yamagata.jp/uploads/public/archive_0000001067_00/user_6/yurariyama.jpg"
+  #   page_url: "http://www.town.yuza.yamagata.jp/ou/somu/jyoho/live_camera.html"
+  #   note: "curl 200 image/jpeg(14KB)。ファイル名yurari=鳥海温泉遊楽里(遊佐町吹浦)と推定、座標は遊楽里の既知座標。要レビュー"
 
   - id: curated-still-mountain-atv-hirosaki-iwakisan
     name: "弘前市から見る岩木山（ATV）"
@@ -18067,16 +18087,17 @@ cameras:
     page_url: "https://www.urabandai-inf.com/livecamera/"
     note: "curl 200 image/jpeg(118KB)。ラベル『五色沼入口観光プラザ』=cam1"
 
-  - id: curated-still-mountain-ina-senjogatake
-    name: "仙丈ヶ岳（伊那市長谷浦）"
-    operator: "伊那市"
-    category: "scenic"
-    prefecture: "20"
-    lat: 35.6567
-    lng: 138.1503
-    image_url: "http://www.inacity.jp/koho/livecamera/senzyoulivecamera.images/camera_senjogatake02.jpg"
-    page_url: "http://www.inacity.jp/koho/livecamera/senzyoulivecamera.html"
-    note: "curl 200 image/jpeg(16KB)。長谷浦地区設置(標高3033mの仙丈ヶ岳)。自治体・利用条件不明。座標はGSI(伊那市長谷浦)"
+  # 2026-10-17 退役: 画像が4036日（1年以上）更新されていない
+  # - id: curated-still-mountain-ina-senjogatake
+  #   name: "仙丈ヶ岳（伊那市長谷浦）"
+  #   operator: "伊那市"
+  #   category: "scenic"
+  #   prefecture: "20"
+  #   lat: 35.6567
+  #   lng: 138.1503
+  #   image_url: "http://www.inacity.jp/koho/livecamera/senzyoulivecamera.images/camera_senjogatake02.jpg"
+  #   page_url: "http://www.inacity.jp/koho/livecamera/senzyoulivecamera.html"
+  #   note: "curl 200 image/jpeg(16KB)。長谷浦地区設置(標高3033mの仙丈ヶ岳)。自治体・利用条件不明。座標はGSI(伊那市長谷浦)"
 
   - id: curated-still-mountain-ogawa-rinrinkan-kitaalps
     name: "小川村 林りん館から見る北アルプス"
@@ -23346,16 +23367,17 @@ cameras:
     image_url: https://okazaki-bousai-portal.transmod.jp/file/camera/c683_14/now.jpg
     page_url: https://okazaki-bousai-portal.transmod.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 愛知県岡崎市中島町町後109-1'
-  - id: curated-still-lcdb-ae4b4f11
-    name: 岡崎市龍北総合運動場
-    operator: 龍北スポーツサポート
-    category: other
-    prefecture: '23'
-    lat: 34.9794
-    lng: 137.186208
-    image_url: https://www.ryuhoku-sf.jp/live/now/current.jpg
-    page_url: https://www.ryuhoku-sf.jp/live/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県岡崎市真伝町亀山12-2'
+  # 2026-10-17 退役: 画像が2296日（1年以上）更新されていない
+  # - id: curated-still-lcdb-ae4b4f11
+  #   name: 岡崎市龍北総合運動場
+  #   operator: 龍北スポーツサポート
+  #   category: other
+  #   prefecture: '23'
+  #   lat: 34.9794
+  #   lng: 137.186208
+  #   image_url: https://www.ryuhoku-sf.jp/live/now/current.jpg
+  #   page_url: https://www.ryuhoku-sf.jp/live/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛知県岡崎市真伝町亀山12-2'
   - id: curated-still-lcdb-cd24489c
     name: 小呂川稲熊町
     operator: 岡崎市役所防災課
@@ -23665,46 +23687,50 @@ cameras:
     image_url: https://chokai.pixif.jp/photo/hibari/latest.jpg
     page_url: https://chokai.pixif.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒018-0153 秋田県にかほ市象潟町小滝鉾立1地内'
-  - id: curated-still-lcdb-b4cacc8c
-    name: 勢至公園桜開花状況第1
-    operator: 今野工業所
-    category: scenic
-    prefecture: '05'
-    lat: 39.260962
-    lng: 139.918334
-    image_url: https://sakura.pixif.jp/photo/sakura/latest.jpg
-    page_url: https://sakura.pixif.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 秋田県にかほ市金浦上林地内'
-  - id: curated-still-lcdb-22b9b350
-    name: 勢至公園桜開花状況第2
-    operator: 今野工業所
-    category: scenic
-    prefecture: '05'
-    lat: 39.260962
-    lng: 139.918334
-    image_url: https://sakura.pixif.jp/photo/sakura2/latest.jpg
-    page_url: https://sakura.pixif.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 秋田県にかほ市金浦上林地内'
-  - id: curated-still-lcdb-cf3fc72e
-    name: 勢至公園桜開花状況第3
-    operator: 今野工業所
-    category: scenic
-    prefecture: '05'
-    lat: 39.260962
-    lng: 139.918334
-    image_url: https://sakura.pixif.jp/photo/sakura3/latest.jpg
-    page_url: https://sakura.pixif.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 秋田県にかほ市金浦上林地内'
-  - id: curated-still-lcdb-00be2e52
-    name: 勢至公園桜開花状況第4
-    operator: 今野工業所
-    category: scenic
-    prefecture: '05'
-    lat: 39.260962
-    lng: 139.918334
-    image_url: https://sakura.pixif.jp/photo/sakura4/latest.jpg
-    page_url: https://sakura.pixif.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 秋田県にかほ市金浦上林地内'
+  # 2026-10-17 退役: 画像が914日（1年以上）更新されていない
+  # - id: curated-still-lcdb-b4cacc8c
+  #   name: 勢至公園桜開花状況第1
+  #   operator: 今野工業所
+  #   category: scenic
+  #   prefecture: '05'
+  #   lat: 39.260962
+  #   lng: 139.918334
+  #   image_url: https://sakura.pixif.jp/photo/sakura/latest.jpg
+  #   page_url: https://sakura.pixif.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 秋田県にかほ市金浦上林地内'
+  # 2026-10-17 退役: 画像が914日（1年以上）更新されていない
+  # - id: curated-still-lcdb-22b9b350
+  #   name: 勢至公園桜開花状況第2
+  #   operator: 今野工業所
+  #   category: scenic
+  #   prefecture: '05'
+  #   lat: 39.260962
+  #   lng: 139.918334
+  #   image_url: https://sakura.pixif.jp/photo/sakura2/latest.jpg
+  #   page_url: https://sakura.pixif.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 秋田県にかほ市金浦上林地内'
+  # 2026-10-17 退役: 画像が914日（1年以上）更新されていない
+  # - id: curated-still-lcdb-cf3fc72e
+  #   name: 勢至公園桜開花状況第3
+  #   operator: 今野工業所
+  #   category: scenic
+  #   prefecture: '05'
+  #   lat: 39.260962
+  #   lng: 139.918334
+  #   image_url: https://sakura.pixif.jp/photo/sakura3/latest.jpg
+  #   page_url: https://sakura.pixif.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 秋田県にかほ市金浦上林地内'
+  # 2026-10-17 退役: 画像が914日（1年以上）更新されていない
+  # - id: curated-still-lcdb-00be2e52
+  #   name: 勢至公園桜開花状況第4
+  #   operator: 今野工業所
+  #   category: scenic
+  #   prefecture: '05'
+  #   lat: 39.260962
+  #   lng: 139.918334
+  #   image_url: https://sakura.pixif.jp/photo/sakura4/latest.jpg
+  #   page_url: https://sakura.pixif.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 秋田県にかほ市金浦上林地内'
   - id: curated-still-lcdb-7c6b8194
     name: かたくり群生の郷第1
     operator: 田沢湖角館観光協会
@@ -24054,36 +24080,39 @@ cameras:
     image_url: https://www.skr.mlit.go.jp/road/pc/0E829413A.jpg
     page_url: https://www.skr.mlit.go.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛媛県久万高原町日野浦'
-  - id: curated-still-lcdb-677ed494
-    name: マイントピア別子東平ゾーン
-    operator: 新居浜市観光物産協会
-    category: scenic
-    prefecture: '38'
-    lat: 33.876631
-    lng: 133.313574
-    image_url: https://visit.city.niihama.ehime.jp/share/live/tonaru.jpg
-    page_url: https://niihama.info/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛媛県新居浜市立川町'
-  - id: curated-still-lcdb-be14bccd
-    name: 生子山
-    operator: 新居浜市観光物産協会
-    category: scenic
-    prefecture: '38'
-    lat: 33.920395
-    lng: 133.307772
-    image_url: https://neo-bb.jp/Live/entotu.jpg
-    page_url: https://niihama.info/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛媛県新居浜市立川町'
-  - id: curated-still-lcdb-3a31933d
-    name: 新居大島
-    operator: 新居浜市観光物産協会
-    category: coast
-    prefecture: '38'
-    lat: 33.966345
-    lng: 133.347093
-    image_url: https://neo-bb.jp/Live/ohshima.jpg
-    page_url: https://niihama.info/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛媛県新居浜市阿島'
+  # 2026-10-17 退役: 画像が450日（1年以上）更新されていない
+  # - id: curated-still-lcdb-677ed494
+  #   name: マイントピア別子東平ゾーン
+  #   operator: 新居浜市観光物産協会
+  #   category: scenic
+  #   prefecture: '38'
+  #   lat: 33.876631
+  #   lng: 133.313574
+  #   image_url: https://visit.city.niihama.ehime.jp/share/live/tonaru.jpg
+  #   page_url: https://niihama.info/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛媛県新居浜市立川町'
+  # 2026-10-17 退役: 画像が453日（1年以上）更新されていない
+  # - id: curated-still-lcdb-be14bccd
+  #   name: 生子山
+  #   operator: 新居浜市観光物産協会
+  #   category: scenic
+  #   prefecture: '38'
+  #   lat: 33.920395
+  #   lng: 133.307772
+  #   image_url: https://neo-bb.jp/Live/entotu.jpg
+  #   page_url: https://niihama.info/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛媛県新居浜市立川町'
+  # 2026-10-17 退役: 画像が453日（1年以上）更新されていない
+  # - id: curated-still-lcdb-3a31933d
+  #   name: 新居大島
+  #   operator: 新居浜市観光物産協会
+  #   category: coast
+  #   prefecture: '38'
+  #   lat: 33.966345
+  #   lng: 133.347093
+  #   image_url: https://neo-bb.jp/Live/ohshima.jpg
+  #   page_url: https://niihama.info/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 愛媛県新居浜市阿島'
   - id: curated-still-lcdb-443e42a5
     name: 国道11号桜三里
     operator: 四国地方整備局
@@ -24263,26 +24292,28 @@ cameras:
     image_url: https://www.town.ohi.fukui.jp/hazardmap/hazardimages/016.jpg
     page_url: https://www.town.ohi.fukui.jp/bousai/6400/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒919-2126 福井県おおい町佐畑'
-  - id: curated-still-lcdb-05eff651
-    name: 国道201号八木山バイパス九郎原トンネル入口福岡側
-    operator: 国土交通省九州地方整備局北九州国道事務所(きたこくライブカメラ)
-    category: road
-    prefecture: '40'
-    lat: 33.600222
-    lng: 130.604917
-    image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam75_1.jpg
-    page_url: https://www.qsr.mlit.go.jp/kitakyu/live_camera/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 福岡県篠栗町内住'
-  - id: curated-still-lcdb-4a5bbbeb
-    name: 太刀浦第一コンテナターミナルゲート前状況
-    operator: 関門港運協会・関門コンテナターミナル
-    category: port
-    prefecture: '40'
-    lat: 33.967022
-    lng: 131.001785
-    image_url: http://www.moji-cont.com/cam/img/cmimg1cyg2.jpg
-    page_url: http://www.moji-cont.com/cam/index.cgi
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒801-0805 福岡県北九州市門司区太刀浦海岸19'
+  # 2026-10-17 退役: 画像が564日（1年以上）更新されていない
+  # - id: curated-still-lcdb-05eff651
+  #   name: 国道201号八木山バイパス九郎原トンネル入口福岡側
+  #   operator: 国土交通省九州地方整備局北九州国道事務所(きたこくライブカメラ)
+  #   category: road
+  #   prefecture: '40'
+  #   lat: 33.600222
+  #   lng: 130.604917
+  #   image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam75_1.jpg
+  #   page_url: https://www.qsr.mlit.go.jp/kitakyu/live_camera/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 福岡県篠栗町内住'
+  # 2026-10-17 退役: 画像が536日（1年以上）更新されていない
+  # - id: curated-still-lcdb-4a5bbbeb
+  #   name: 太刀浦第一コンテナターミナルゲート前状況
+  #   operator: 関門港運協会・関門コンテナターミナル
+  #   category: port
+  #   prefecture: '40'
+  #   lat: 33.967022
+  #   lng: 131.001785
+  #   image_url: http://www.moji-cont.com/cam/img/cmimg1cyg2.jpg
+  #   page_url: http://www.moji-cont.com/cam/index.cgi
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒801-0805 福岡県北九州市門司区太刀浦海岸19'
   - id: curated-still-lcdb-fd4eca60
     name: 太刀浦第二コンテナターミナルゲート前状況
     operator: 関門港運協会・関門コンテナターミナル
@@ -24522,16 +24553,17 @@ cameras:
   #   image_url: http://www.hrr.mlit.go.jp/bosai/img/723101.jpg
   #   page_url: http://www.hrr.mlit.go.jp/agagawa/
   #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福島県喜多方市慶徳町山科'
-  - id: curated-still-lcdb-fa407fe4
-    name: ペンションカレワラ天文台
-    operator: ダイイチ(SkyArchives)
-    category: other
-    prefecture: '07'
-    lat: 37.661873
-    lng: 140.093939
-    image_url: https://www.karewara.com/sample.jpg
-    page_url: https://www.karewara.com/live-camera
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福島県北塩原村桧原蛇平原山1074-2493'
+  # 2026-10-17 退役: 画像が1753日（1年以上）更新されていない
+  # - id: curated-still-lcdb-fa407fe4
+  #   name: ペンションカレワラ天文台
+  #   operator: ダイイチ(SkyArchives)
+  #   category: other
+  #   prefecture: '07'
+  #   lat: 37.661873
+  #   lng: 140.093939
+  #   image_url: https://www.karewara.com/sample.jpg
+  #   page_url: https://www.karewara.com/live-camera
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 福島県北塩原村桧原蛇平原山1074-2493'
   - id: curated-still-lcdb-b98a608c
     name: こまちダム堤体周辺
     operator: 県中建設事務所
@@ -24820,26 +24852,28 @@ cameras:
     image_url: https://www.ktr.mlit.go.jp/river/cctv/C01345.jpg
     page_url: https://www.ktr.mlit.go.jp/river/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県みどり市大間々町上神梅'
-  - id: curated-still-lcdb-715daea9
-    name: 豊島屋四万温泉足湯側
-    operator: 豊島屋
-    category: other
-    prefecture: '10'
-    lat: 36.68051
-    lng: 138.779193
-    image_url: https://tosimaya.co.jp/livecam/01.jpg
-    page_url: https://tosimaya.co.jp/livecamera/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県中之条町四万3887'
-  - id: curated-still-lcdb-c6d9dee9
-    name: 豊島屋四万温泉渓流側
-    operator: 豊島屋
-    category: other
-    prefecture: '10'
-    lat: 36.68051
-    lng: 138.779193
-    image_url: https://tosimaya.co.jp/livecam/02.jpg
-    page_url: https://tosimaya.co.jp/livecamera/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県中之条町四万3887'
+  # 2026-10-17 退役: 画像が1115日（1年以上）更新されていない
+  # - id: curated-still-lcdb-715daea9
+  #   name: 豊島屋四万温泉足湯側
+  #   operator: 豊島屋
+  #   category: other
+  #   prefecture: '10'
+  #   lat: 36.68051
+  #   lng: 138.779193
+  #   image_url: https://tosimaya.co.jp/livecam/01.jpg
+  #   page_url: https://tosimaya.co.jp/livecamera/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県中之条町四万3887'
+  # 2026-10-17 退役: 画像が1115日（1年以上）更新されていない
+  # - id: curated-still-lcdb-c6d9dee9
+  #   name: 豊島屋四万温泉渓流側
+  #   operator: 豊島屋
+  #   category: other
+  #   prefecture: '10'
+  #   lat: 36.68051
+  #   lng: 138.779193
+  #   image_url: https://tosimaya.co.jp/livecam/02.jpg
+  #   page_url: https://tosimaya.co.jp/livecamera/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県中之条町四万3887'
   # 2026-10-05 退役: kawabou 版と同一カメラ（画像の相関で確認）
   # - id: curated-still-lcdb-75cc5b6b
   #   name: 渡良瀬川葉鹿橋下流
@@ -24852,16 +24886,17 @@ cameras:
   #   image_url: https://www.ktr.mlit.go.jp/river/cctv/C01330.jpg
   #   page_url: https://www.ktr.mlit.go.jp/river/
   #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県太田市原宿町'
-  - id: curated-still-lcdb-57e152d5
-    name: 榛名湖湖畔亭
-    operator: 湖畔亭
-    category: scenic
-    prefecture: '10'
-    lat: 36.470583
-    lng: 138.860095
-    image_url: http://www12.wind.ne.jp/romansutei/licam.jpg
-    page_url: http://www12.wind.ne.jp/romansutei/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県高崎市榛名湖町847'
+  # 2026-10-17 退役: 画像が451日（1年以上）更新されていない
+  # - id: curated-still-lcdb-57e152d5
+  #   name: 榛名湖湖畔亭
+  #   operator: 湖畔亭
+  #   category: scenic
+  #   prefecture: '10'
+  #   lat: 36.470583
+  #   lng: 138.860095
+  #   image_url: http://www12.wind.ne.jp/romansutei/licam.jpg
+  #   page_url: http://www12.wind.ne.jp/romansutei/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 群馬県高崎市榛名湖町847'
   - id: curated-still-lcdb-5f4cba3e
     name: 神長川渓流監視
     operator: 国土交通省中国地方整備局広島西部山系砂防事務所
@@ -25240,16 +25275,17 @@ cameras:
     image_url: http://makomanai.takinoreien.com/webcamera/cam01.jpg
     page_url: https://www.takinoreien.com/publics/index/66/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 北海道札幌市南区滝野2-3'
-  - id: curated-still-lcdb-701595c7
-    name: 真駒内滝野霊園樹木葬さくらガーデン
-    operator: ふる里公苑
-    category: other
-    prefecture: '01'
-    lat: 42.927947
-    lng: 141.374387
-    image_url: http://makomanai.takinoreien.com/webcamera/cam05.jpg
-    page_url: https://www.takinoreien.com/publics/index/66/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 北海道札幌市南区滝野2-3'
+  # 2026-10-17 退役: 画像が1315日（1年以上）更新されていない
+  # - id: curated-still-lcdb-701595c7
+  #   name: 真駒内滝野霊園樹木葬さくらガーデン
+  #   operator: ふる里公苑
+  #   category: other
+  #   prefecture: '01'
+  #   lat: 42.927947
+  #   lng: 141.374387
+  #   image_url: http://makomanai.takinoreien.com/webcamera/cam05.jpg
+  #   page_url: https://www.takinoreien.com/publics/index/66/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 北海道札幌市南区滝野2-3'
   - id: curated-still-lcdb-ffcafe7c
     name: 滝野すずらん丘陵公園中央口
     operator: 滝野すずらん丘陵公園
@@ -25470,16 +25506,17 @@ cameras:
     image_url: https://cam.river.go.jp/cam/now/122064008.jpg
     page_url: https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=122064008
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 兵庫県豊岡市下鶴井'
-  - id: curated-still-lcdb-b3f88312
-    name: ホテルプラトーこのはな
-    operator: 木の花観光
-    category: scenic
-    prefecture: '28'
-    lat: 35.385252
-    lng: 134.535382
-    image_url: https://hotel-konohana.com/webcamera640.jpg
-    page_url: https://hotel-konohana.com/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 兵庫県養父市鉢高原'
+  # 2026-10-17 退役: 画像が1411日（1年以上）更新されていない
+  # - id: curated-still-lcdb-b3f88312
+  #   name: ホテルプラトーこのはな
+  #   operator: 木の花観光
+  #   category: scenic
+  #   prefecture: '28'
+  #   lat: 35.385252
+  #   lng: 134.535382
+  #   image_url: https://hotel-konohana.com/webcamera640.jpg
+  #   page_url: https://hotel-konohana.com/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 兵庫県養父市鉢高原'
   - id: curated-still-lcdb-ad839020
     name: 国道50号岡芹IC
     operator: 常陸河川国道事務所
@@ -25854,37 +25891,40 @@ cameras:
     image_url: https://douro.pref.ishikawa.lg.jp/img/camera/34.jpg
     page_url: https://douro.pref.ishikawa.lg.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 石川県輪島市門前町浦上中屋'
-  - id: curated-still-lcdb-960bc03c
-    name: ほんご動物病院駐車場
-    operator: ほんご動物病院
-    category: other
-    prefecture: '03'
-    lat: 38.921204
-    lng: 141.108688
-    image_url: https://www.hongo-animal.com/screenshot.jpg
-    page_url: https://www.hongo-animal.com/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 岩手県一関市萩荘金ケ崎49-1'
-  - id: curated-still-lcdb-87bd80b5
-    name: 【配信終了】紫雲出山第2駐車場展望台桜
-    operator: 三豊市観光交流局
-    category: coast
-    prefecture: '37'
-    lat: 34.242196
-    lng: 133.598608
-    image_url: https://labs.maizm.or.jp/ark20001/S002.jpg
-    page_url: https://labs.maizm.or.jp/sakura/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 香川県三豊市詫間町大浜'
-  - id: curated-still-lcdb-f3e5a8a1
-    name: 【配信終了】紫雲出山遺跡館桜
-    operator: 三豊市観光交流局
-    category: river
-    prefecture: '37'
-    lat: 34.243773
-    lng: 133.596252
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://labs.maizm.or.jp/ark20001/S004.jpg
-    page_url: https://labs.maizm.or.jp/sakura/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 香川県三豊市詫間町積451'
+  # 2026-10-17 退役: 画像が467日（1年以上）更新されていない
+  # - id: curated-still-lcdb-960bc03c
+  #   name: ほんご動物病院駐車場
+  #   operator: ほんご動物病院
+  #   category: other
+  #   prefecture: '03'
+  #   lat: 38.921204
+  #   lng: 141.108688
+  #   image_url: https://www.hongo-animal.com/screenshot.jpg
+  #   page_url: https://www.hongo-animal.com/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 岩手県一関市萩荘金ケ崎49-1'
+  # 2026-10-17 退役: 画像が1931日（1年以上）更新されていない
+  # - id: curated-still-lcdb-87bd80b5
+  #   name: 【配信終了】紫雲出山第2駐車場展望台桜
+  #   operator: 三豊市観光交流局
+  #   category: coast
+  #   prefecture: '37'
+  #   lat: 34.242196
+  #   lng: 133.598608
+  #   image_url: https://labs.maizm.or.jp/ark20001/S002.jpg
+  #   page_url: https://labs.maizm.or.jp/sakura/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 香川県三豊市詫間町大浜'
+  # 2026-10-17 退役: 画像が1931日（1年以上）更新されていない
+  # - id: curated-still-lcdb-f3e5a8a1
+  #   name: 【配信終了】紫雲出山遺跡館桜
+  #   operator: 三豊市観光交流局
+  #   category: river
+  #   prefecture: '37'
+  #   lat: 34.243773
+  #   lng: 133.596252
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://labs.maizm.or.jp/ark20001/S004.jpg
+  #   page_url: https://labs.maizm.or.jp/sakura/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 香川県三豊市詫間町積451'
   - id: curated-still-lcdb-16696cd3
     name: 新燃岳西側
     operator: 宮崎河川国道事務所
@@ -25895,39 +25935,42 @@ cameras:
     image_url: https://www.qsr.mlit.go.jp/miyazaki/bousai/Camera/s0004.jpg
     page_url: https://www.qsr.mlit.go.jp/miyazaki/bousai/top.html?gmn=mapDS2_I10
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 鹿児島県霧島市牧園町三体堂'
-  - id: curated-still-lcdb-a642719d
-    name: 日下川日下川放水路呑口
-    operator: 高知河川国道事務所
-    category: road
-    prefecture: '39'
-    lat: 33.534167
-    lng: 133.376667
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: http://www.skr.mlit.go.jp/kawabou/81F20101.jpg
-    page_url: https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_123.html
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県日高村下分'
-  - id: curated-still-lcdb-df91d49c
-    name: 仁淀川日下川放水路吐口
-    operator: 高知河川国道事務所
-    category: road
-    prefecture: '39'
-    lat: 33.527731
-    lng: 133.427978
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: http://www.skr.mlit.go.jp/kawabou/81F20127.jpg
-    page_url: https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_110.html
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県いの町大内'
-  - id: curated-still-lcdb-d2ea3cc3
-    name: 宇治川新宇治川放水路呑口
-    operator: 高知河川国道事務所
-    category: road
-    prefecture: '39'
-    lat: 33.545831
-    lng: 133.440831
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: http://www.skr.mlit.go.jp/kawabou/81F2010D.jpg
-    page_url: https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_124.html
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県いの町'
+  # 2026-10-17 退役: 画像が979日（1年以上）更新されていない
+  # - id: curated-still-lcdb-a642719d
+  #   name: 日下川日下川放水路呑口
+  #   operator: 高知河川国道事務所
+  #   category: road
+  #   prefecture: '39'
+  #   lat: 33.534167
+  #   lng: 133.376667
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: http://www.skr.mlit.go.jp/kawabou/81F20101.jpg
+  #   page_url: https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_123.html
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県日高村下分'
+  # 2026-10-17 退役: 画像が979日（1年以上）更新されていない
+  # - id: curated-still-lcdb-df91d49c
+  #   name: 仁淀川日下川放水路吐口
+  #   operator: 高知河川国道事務所
+  #   category: road
+  #   prefecture: '39'
+  #   lat: 33.527731
+  #   lng: 133.427978
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: http://www.skr.mlit.go.jp/kawabou/81F20127.jpg
+  #   page_url: https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_110.html
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県いの町大内'
+  # 2026-10-17 退役: 画像が979日（1年以上）更新されていない
+  # - id: curated-still-lcdb-d2ea3cc3
+  #   name: 宇治川新宇治川放水路呑口
+  #   operator: 高知河川国道事務所
+  #   category: road
+  #   prefecture: '39'
+  #   lat: 33.545831
+  #   lng: 133.440831
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: http://www.skr.mlit.go.jp/kawabou/81F2010D.jpg
+  #   page_url: https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_124.html
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県いの町'
   - id: curated-still-lcdb-22e36cf2
     name: 国道32号根曳峠
     operator: 四国地方整備局
@@ -26013,17 +26056,18 @@ cameras:
     image_url: https://www.skr.mlit.go.jp/road/pc/0E821210C.jpg
     page_url: https://www.skr.mlit.go.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県大豊町桃原'
-  - id: curated-still-lcdb-e9294f3f
-    name: 仁淀川新居樋門外水
-    operator: 高知河川国道事務所
-    category: road
-    prefecture: '39'
-    lat: 33.460317
-    lng: 133.477544
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: http://www.skr.mlit.go.jp/kawabou/81F2FF01.jpg
-    page_url: https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_105.html
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県土佐市新居'
+  # 2026-10-17 退役: 画像が979日（1年以上）更新されていない
+  # - id: curated-still-lcdb-e9294f3f
+  #   name: 仁淀川新居樋門外水
+  #   operator: 高知河川国道事務所
+  #   category: road
+  #   prefecture: '39'
+  #   lat: 33.460317
+  #   lng: 133.477544
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: http://www.skr.mlit.go.jp/kawabou/81F2FF01.jpg
+  #   page_url: https://suibo-kouho.suibou.pref.kochi.lg.jp/suibou/camera/itvDetail_105.html
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 高知県土佐市新居'
   - id: curated-still-lcdb-778f43fa
     name: 国道418号平谷峠下
     operator: 飯田建設事務所
@@ -27331,16 +27375,17 @@ cameras:
     image_url: https://www.cbr.mlit.go.jp/hokusei/cctv/A-15.jpg
     page_url: https://www.cbr.mlit.go.jp/hokusei/traffic/meihan_livecam/a.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県亀山市加太向井'
-  - id: curated-still-lcdb-5794465f
-    name: 国道42号便の山
-    operator: 紀勢国道事務所
-    category: road
-    prefecture: '24'
-    lat: 34.102333
-    lng: 136.209
-    image_url: https://www.cbr.mlit.go.jp/kisei/itv/030.jpg
-    page_url: https://www.cbr.mlit.go.jp/kisei/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県紀北町相賀 三重県紀北町便ノ山(三重県紀北町便の山)'
+  # 2026-10-17 退役: 画像が826日（1年以上）更新されていない
+  # - id: curated-still-lcdb-5794465f
+  #   name: 国道42号便の山
+  #   operator: 紀勢国道事務所
+  #   category: road
+  #   prefecture: '24'
+  #   lat: 34.102333
+  #   lng: 136.209
+  #   image_url: https://www.cbr.mlit.go.jp/kisei/itv/030.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/kisei/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県紀北町相賀 三重県紀北町便ノ山(三重県紀北町便の山)'
   - id: curated-still-lcdb-5759399e
     name: 国道42号大泊ゲート
     operator: 紀勢国道事務所
@@ -27373,16 +27418,17 @@ cameras:
   #   image_url: https://cam.river.go.jp/cam/now/106145028.jpg
   #   page_url: https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=106145028
   #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県松阪市久保町'
-  - id: curated-still-lcdb-e71908c5
-    name: 国道23号三渡大橋
-    operator: 三重河川国道事務所
-    category: road
-    prefecture: '24'
-    lat: 34.612611
-    lng: 136.518139
-    image_url: https://www.cbr.mlit.go.jp/mie/live/touketu/cam_data/Jpeg005.jpg
-    page_url: https://www.cbr.mlit.go.jp/mie/live/touketu/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県松阪市小津町'
+  # 2026-10-17 退役: 画像が994日（1年以上）更新されていない
+  # - id: curated-still-lcdb-e71908c5
+  #   name: 国道23号三渡大橋
+  #   operator: 三重河川国道事務所
+  #   category: road
+  #   prefecture: '24'
+  #   lat: 34.612611
+  #   lng: 136.518139
+  #   image_url: https://www.cbr.mlit.go.jp/mie/live/touketu/cam_data/Jpeg005.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/mie/live/touketu/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県松阪市小津町'
   - id: curated-still-lcdb-57e0635e
     name: 国道23号小津高架橋
     operator: 三重河川国道事務所
@@ -27414,26 +27460,28 @@ cameras:
     image_url: https://www.cbr.mlit.go.jp/kisei/itv/179.jpg
     page_url: https://www.cbr.mlit.go.jp/kisei/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大台町上三瀬'
-  - id: curated-still-lcdb-dc51daad
-    name: 国道42号下三瀬
-    operator: 紀勢国道事務所
-    category: road
-    prefecture: '24'
-    lat: 34.407222
-    lng: 136.442111
-    image_url: https://www.cbr.mlit.go.jp/kisei/itv/160.jpg
-    page_url: https://www.cbr.mlit.go.jp/kisei/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大台町下三瀬'
-  - id: curated-still-lcdb-12451756
-    name: 国道42号栃原
-    operator: 紀勢国道事務所
-    category: road
-    prefecture: '24'
-    lat: 34.453
-    lng: 136.508222
-    image_url: https://www.cbr.mlit.go.jp/kisei/itv/159.jpg
-    page_url: https://www.cbr.mlit.go.jp/kisei/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大台町栃原'
+  # 2026-10-17 退役: 画像が826日（1年以上）更新されていない
+  # - id: curated-still-lcdb-dc51daad
+  #   name: 国道42号下三瀬
+  #   operator: 紀勢国道事務所
+  #   category: road
+  #   prefecture: '24'
+  #   lat: 34.407222
+  #   lng: 136.442111
+  #   image_url: https://www.cbr.mlit.go.jp/kisei/itv/160.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/kisei/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大台町下三瀬'
+  # 2026-10-17 退役: 画像が826日（1年以上）更新されていない
+  # - id: curated-still-lcdb-12451756
+  #   name: 国道42号栃原
+  #   operator: 紀勢国道事務所
+  #   category: road
+  #   prefecture: '24'
+  #   lat: 34.453
+  #   lng: 136.508222
+  #   image_url: https://www.cbr.mlit.go.jp/kisei/itv/159.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/kisei/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大台町栃原'
   - id: curated-still-lcdb-91886abf
     name: 国道42号矢ノ浜ゲート
     operator: 紀勢国道事務所
@@ -27474,26 +27522,28 @@ cameras:
     image_url: https://www.cbr.mlit.go.jp/mie/live/touge/cam_data/Jpeg117.jpg
     page_url: https://www.cbr.mlit.go.jp/mie/live/touge/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒513-0811 三重県鈴鹿市柳町'
-  - id: curated-still-lcdb-f78f651c
-    name: 国道42号柏野
-    operator: 紀勢国道事務所
-    category: road
-    prefecture: '24'
-    lat: 34.317194
-    lng: 136.412139
-    image_url: https://www.cbr.mlit.go.jp/kisei/itv/157.jpg
-    page_url: https://www.cbr.mlit.go.jp/kisei/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大紀町柏野'
-  - id: curated-still-lcdb-afc08087
-    name: 国道42号勝瀬
-    operator: 紀勢国道事務所
-    category: road
-    prefecture: '24'
-    lat: 34.346556
-    lng: 136.407028
-    image_url: https://www.cbr.mlit.go.jp/kisei/itv/156.jpg
-    page_url: https://www.cbr.mlit.go.jp/kisei/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大紀町阿曽'
+  # 2026-10-17 退役: 画像が826日（1年以上）更新されていない
+  # - id: curated-still-lcdb-f78f651c
+  #   name: 国道42号柏野
+  #   operator: 紀勢国道事務所
+  #   category: road
+  #   prefecture: '24'
+  #   lat: 34.317194
+  #   lng: 136.412139
+  #   image_url: https://www.cbr.mlit.go.jp/kisei/itv/157.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/kisei/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大紀町柏野'
+  # 2026-10-17 退役: 画像が826日（1年以上）更新されていない
+  # - id: curated-still-lcdb-afc08087
+  #   name: 国道42号勝瀬
+  #   operator: 紀勢国道事務所
+  #   category: road
+  #   prefecture: '24'
+  #   lat: 34.346556
+  #   lng: 136.407028
+  #   image_url: https://www.cbr.mlit.go.jp/kisei/itv/156.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/kisei/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 三重県大紀町阿曽'
   - id: curated-still-lcdb-1d06a8f1
     name: 国道42号荷坂トンネル坑口松阪側
     operator: 紀勢国道事務所
@@ -28054,16 +28104,17 @@ cameras:
     image_url: http://toybox-net.jp/tennis/LiveCamera/AsamaLive2.jpg
     page_url: http://toybox-net.jp/tennis/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長野県松本市浅間温泉1丁目9-2'
-  - id: curated-still-lcdb-27a4ab68
-    name: 岳沢小屋
-    operator: 槍ヶ岳山荘グループ
-    category: scenic
-    prefecture: '20'
-    lat: 36.27659
-    lng: 137.645068
-    image_url: https://www.mcci.or.jp/www/yarigatake/dakesawa/live/dakesawa.jpg
-    page_url: https://www.yarigatake.co.jp/dakesawa/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長野県松本市安曇上高地岳沢'
+  # 2026-10-17 退役: 画像が448日（1年以上）更新されていない
+  # - id: curated-still-lcdb-27a4ab68
+  #   name: 岳沢小屋
+  #   operator: 槍ヶ岳山荘グループ
+  #   category: scenic
+  #   prefecture: '20'
+  #   lat: 36.27659
+  #   lng: 137.645068
+  #   image_url: https://www.mcci.or.jp/www/yarigatake/dakesawa/live/dakesawa.jpg
+  #   page_url: https://www.yarigatake.co.jp/dakesawa/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長野県松本市安曇上高地岳沢'
   - id: curated-still-lcdb-2446c777
     name: 三才山トンネル松本市側
     operator: 長野県道路公社
@@ -28085,26 +28136,28 @@ cameras:
     image_url: https://www.brnorikura.jp/upload/camera/yamabo_rest.jpg
     page_url: https://www.brnorikura.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒390-1520 長野県松本市安曇4293-4'
-  - id: curated-still-lcdb-db002c25
-    name: Mt.乗鞍スノーリゾートレンタルやまぼうし
-    operator: BlueResort乗鞍(ブルーリゾート乗鞍)
-    category: other
-    prefecture: '20'
-    lat: 36.121831
-    lng: 137.616387
-    image_url: https://www.brnorikura.jp/upload/camera/yamabo_rent.jpg
-    page_url: https://www.brnorikura.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒390-1520 長野県松本市安曇4293-4'
-  - id: curated-still-lcdb-99221106
-    name: Mt.乗鞍スノーリゾートレンタル湯楽里
-    operator: BlueResort乗鞍(ブルーリゾート乗鞍)
-    category: other
-    prefecture: '20'
-    lat: 36.121831
-    lng: 137.616387
-    image_url: https://www.brnorikura.jp/upload/camera/yurari_rent.jpg
-    page_url: https://www.brnorikura.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒390-1520 長野県松本市安曇4293-4'
+  # 2026-10-17 退役: 画像が2009日（1年以上）更新されていない
+  # - id: curated-still-lcdb-db002c25
+  #   name: Mt.乗鞍スノーリゾートレンタルやまぼうし
+  #   operator: BlueResort乗鞍(ブルーリゾート乗鞍)
+  #   category: other
+  #   prefecture: '20'
+  #   lat: 36.121831
+  #   lng: 137.616387
+  #   image_url: https://www.brnorikura.jp/upload/camera/yamabo_rent.jpg
+  #   page_url: https://www.brnorikura.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒390-1520 長野県松本市安曇4293-4'
+  # 2026-10-17 退役: 画像が1769日（1年以上）更新されていない
+  # - id: curated-still-lcdb-99221106
+  #   name: Mt.乗鞍スノーリゾートレンタル湯楽里
+  #   operator: BlueResort乗鞍(ブルーリゾート乗鞍)
+  #   category: other
+  #   prefecture: '20'
+  #   lat: 36.121831
+  #   lng: 137.616387
+  #   image_url: https://www.brnorikura.jp/upload/camera/yurari_rent.jpg
+  #   page_url: https://www.brnorikura.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒390-1520 長野県松本市安曇4293-4'
   - id: curated-still-lcdb-e219f923
     name: Mt.乗鞍スノーリゾート三本滝レストラン
     operator: BlueResort乗鞍(ブルーリゾート乗鞍)
@@ -28125,16 +28178,17 @@ cameras:
     image_url: https://www.brnorikura.jp/upload/camera/snap2.jpg
     page_url: https://www.brnorikura.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒390-1520 長野県松本市安曇4293-4'
-  - id: curated-still-lcdb-803567e2
-    name: Mt.乗鞍スノーリゾート第一チケット売場周辺
-    operator: BlueResort乗鞍(ブルーリゾート乗鞍)
-    category: other
-    prefecture: '20'
-    lat: 36.122774
-    lng: 137.615541
-    image_url: https://www.brnorikura.jp/upload/camera/yurari_315.jpg
-    page_url: https://www.brnorikura.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒390-1520 長野県松本市安曇鈴蘭4264'
+  # 2026-10-17 退役: 画像が1300日（1年以上）更新されていない
+  # - id: curated-still-lcdb-803567e2
+  #   name: Mt.乗鞍スノーリゾート第一チケット売場周辺
+  #   operator: BlueResort乗鞍(ブルーリゾート乗鞍)
+  #   category: other
+  #   prefecture: '20'
+  #   lat: 36.122774
+  #   lng: 137.615541
+  #   image_url: https://www.brnorikura.jp/upload/camera/yurari_315.jpg
+  #   page_url: https://www.brnorikura.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒390-1520 長野県松本市安曇鈴蘭4264'
   - id: curated-still-lcdb-d1c80ee7
     name: 長野県道26号奈川木祖線入山
     operator: 松本建設事務所
@@ -28277,17 +28331,18 @@ cameras:
     image_url: http://matumoto.pref-nagano-roadcamera.jp/CAM_SIMG_0013.jpg
     page_url: http://matumoto.pref-nagano-roadcamera.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 長野県松本市三才山'
-  - id: curated-still-lcdb-0f24c6af
-    name: 槍ヶ岳山荘槍ヶ岳
-    operator: 槍ヶ岳山荘グループ
-    category: river
-    prefecture: "21"
-    lat: 36.340953
-    lng: 137.64572
-    accuracy: exact   # 2026-10-05 座標見直し
-    image_url: https://www.mcci.or.jp/www/yarigatake/live/yari_00001.jpg
-    page_url: https://www.yarigatake.co.jp/livecamera/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長野県松本市埋橋1-7-2'
+  # 2026-10-17 退役: 画像が479日（1年以上）更新されていない
+  # - id: curated-still-lcdb-0f24c6af
+  #   name: 槍ヶ岳山荘槍ヶ岳
+  #   operator: 槍ヶ岳山荘グループ
+  #   category: river
+  #   prefecture: "21"
+  #   lat: 36.340953
+  #   lng: 137.64572
+  #   accuracy: exact   # 2026-10-05 座標見直し
+  #   image_url: https://www.mcci.or.jp/www/yarigatake/live/yari_00001.jpg
+  #   page_url: https://www.yarigatake.co.jp/livecamera/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長野県松本市埋橋1-7-2'
   - id: curated-still-lcdb-d79a5d38
     name: 長野日本無線
     operator: 長野日本無線
@@ -28880,26 +28935,28 @@ cameras:
     image_url: http://hokushin.pref-nagano-roadcamera.jp/CAM_SIMG_0003.jpg
     page_url: http://hokushin.pref-nagano-roadcamera.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長野県山ノ内町平穏硯川'
-  - id: curated-still-lcdb-4f807b77
-    name: 【休止中】長崎大学病院正面玄関側患者用駐車場
-    operator: 長崎大学病院
-    category: other
-    prefecture: '42'
-    lat: 32.769882
-    lng: 129.866641
-    image_url: http://www.mh.nagasaki-u.ac.jp/access/images/dai2-parking.jpg
-    page_url: http://www.mh.nagasaki-u.ac.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長崎県長崎市坂本1丁目7-1'
-  - id: curated-still-lcdb-cf18a41e
-    name: 【休止中】長崎大学病院歯学部側患者用駐車場
-    operator: 長崎大学病院
-    category: other
-    prefecture: '42'
-    lat: 32.769882
-    lng: 129.866641
-    image_url: http://www.mh.nagasaki-u.ac.jp/access/images/shigakubu-parking.jpg
-    page_url: http://www.mh.nagasaki-u.ac.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長崎県長崎市坂本1丁目7-1'
+  # 2026-10-17 退役: 画像が403日（1年以上）更新されていない
+  # - id: curated-still-lcdb-4f807b77
+  #   name: 【休止中】長崎大学病院正面玄関側患者用駐車場
+  #   operator: 長崎大学病院
+  #   category: other
+  #   prefecture: '42'
+  #   lat: 32.769882
+  #   lng: 129.866641
+  #   image_url: http://www.mh.nagasaki-u.ac.jp/access/images/dai2-parking.jpg
+  #   page_url: http://www.mh.nagasaki-u.ac.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長崎県長崎市坂本1丁目7-1'
+  # 2026-10-17 退役: 画像が2186日（1年以上）更新されていない
+  # - id: curated-still-lcdb-cf18a41e
+  #   name: 【休止中】長崎大学病院歯学部側患者用駐車場
+  #   operator: 長崎大学病院
+  #   category: other
+  #   prefecture: '42'
+  #   lat: 32.769882
+  #   lng: 129.866641
+  #   image_url: http://www.mh.nagasaki-u.ac.jp/access/images/shigakubu-parking.jpg
+  #   page_url: http://www.mh.nagasaki-u.ac.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 長崎県長崎市坂本1丁目7-1'
   - id: curated-still-lcdb-b14ee15e
     name: 葛城高原ロッジ葛城山山頂第1
     operator: 葛城高原ロッジ
@@ -29156,16 +29213,17 @@ cameras:
     image_url: https://livecam.ishiuchi.jp/kscam04/cam.jpg
     page_url: https://maruyama-gg.ishiuchi.jp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県南魚沼市石打1655'
-  - id: curated-still-lcdb-b3a315fa
-    name: 石打丸山スキー場北口観光口遠景
-    operator: 石打丸山索道事業協同組合
-    category: scenic
-    prefecture: '15'
-    lat: 36.979348
-    lng: 138.800405
-    image_url: https://www.snowmans-land.com/maruyama/today/licam.jpg
-    page_url: https://maruyama-gg.ishiuchi.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県南魚沼市石打1655'
+  # 2026-10-17 退役: 画像が1950日（1年以上）更新されていない
+  # - id: curated-still-lcdb-b3a315fa
+  #   name: 石打丸山スキー場北口観光口遠景
+  #   operator: 石打丸山索道事業協同組合
+  #   category: scenic
+  #   prefecture: '15'
+  #   lat: 36.979348
+  #   lng: 138.800405
+  #   image_url: https://www.snowmans-land.com/maruyama/today/licam.jpg
+  #   page_url: https://maruyama-gg.ishiuchi.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 新潟県南魚沼市石打1655'
   - id: curated-still-lcdb-b75d4506
     name: 登川長大橋
     operator: 湯沢砂防事務所
@@ -29513,16 +29571,17 @@ cameras:
     image_url: http://www.saiki.tv/~saiki-cfdp/camera/10.161.104.42.jpg
     page_url: http://www.saiki.tv/~saiki-cfdp/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 大分県佐伯市弥生上小倉'
-  - id: curated-still-lcdb-dae4b2cb
-    name: 大分県道122号古江丸市尾線葛原
-    operator: 佐伯市役所(佐伯市防災局防災危機管理課)
-    category: road
-    prefecture: '44'
-    lat: 32.777361
-    lng: 131.873417
-    image_url: http://www.saiki.tv/~saiki-cfdp/camera/10.161.104.130.jpg
-    page_url: http://www.saiki.tv/~saiki-cfdp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 大分県佐伯市蒲江葛原浦'
+  # 2026-10-17 退役: 画像が799日（1年以上）更新されていない
+  # - id: curated-still-lcdb-dae4b2cb
+  #   name: 大分県道122号古江丸市尾線葛原
+  #   operator: 佐伯市役所(佐伯市防災局防災危機管理課)
+  #   category: road
+  #   prefecture: '44'
+  #   lat: 32.777361
+  #   lng: 131.873417
+  #   image_url: http://www.saiki.tv/~saiki-cfdp/camera/10.161.104.130.jpg
+  #   page_url: http://www.saiki.tv/~saiki-cfdp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 大分県佐伯市蒲江葛原浦'
   - id: curated-still-lcdb-337c51af
     name: 大分県道37号佐伯蒲江線下久部
     operator: 佐伯市役所(佐伯市防災局防災危機管理課)
@@ -29746,26 +29805,28 @@ cameras:
     image_url: https://www.qsr.mlit.go.jp/saiki/cctv/img/cctv_vga_014.jpg
     page_url: https://www.qsr.mlit.go.jp/saiki/cctv/popup.html?cam=14
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 〒878-0011 大分県竹田市会々'
-  - id: curated-still-lcdb-0830fcc6
-    name: 【休止中】RSK日生港
-    operator: 山陽放送(RSK)
-    category: port
-    prefecture: '33'
-    lat: 34.735046
-    lng: 134.273785
-    image_url: http://www.rsk.co.jp/weather/tencame/image.jpg
-    page_url: http://www.rsk.co.jp/weather/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 岡山県備前市日生町寒河2570-31 サンバースビル1階'
-  - id: curated-still-lcdb-96c7b74d
-    name: 大阪府民の森ちはや星と自然のミュージアム
-    operator: 大阪府みどり公社
-    category: other
-    prefecture: '27'
-    lat: 34.410989
-    lng: 135.675349
-    image_url: http://osaka-midori.jp/mori/chihaya/images/live01/1000mcam.jpg
-    page_url: http://osaka-midori.jp/mori/chihaya/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 大阪府千早赤阪村千早'
+  # 2026-10-17 退役: 画像が1536日（1年以上）更新されていない
+  # - id: curated-still-lcdb-0830fcc6
+  #   name: 【休止中】RSK日生港
+  #   operator: 山陽放送(RSK)
+  #   category: port
+  #   prefecture: '33'
+  #   lat: 34.735046
+  #   lng: 134.273785
+  #   image_url: http://www.rsk.co.jp/weather/tencame/image.jpg
+  #   page_url: http://www.rsk.co.jp/weather/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 岡山県備前市日生町寒河2570-31 サンバースビル1階'
+  # 2026-10-17 退役: 画像が464日（1年以上）更新されていない
+  # - id: curated-still-lcdb-96c7b74d
+  #   name: 大阪府民の森ちはや星と自然のミュージアム
+  #   operator: 大阪府みどり公社
+  #   category: other
+  #   prefecture: '27'
+  #   lat: 34.410989
+  #   lng: 135.675349
+  #   image_url: http://osaka-midori.jp/mori/chihaya/images/live01/1000mcam.jpg
+  #   page_url: http://osaka-midori.jp/mori/chihaya/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 大阪府千早赤阪村千早'
   - id: curated-still-lcdb-03740a2b
     name: 大阪府民の森ほしだ園地駐車場入口
     operator: 大阪府みどり公社
@@ -30512,27 +30573,29 @@ cameras:
     image_url: https://www.cgr.mlit.go.jp/hamada/cctv/d_view/img/00016.jpg
     page_url: https://www.cgr.mlit.go.jp/hamada/road-view/road.php
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 島根県津和野町河村野口'
-  - id: curated-still-lcdb-85a909db
-    name: 富士海岸昭和放水路
-    operator: 沼津河川国道事務所
-    category: coast
-    prefecture: '22'
-    lat: 35.134611
-    lng: 138.742028
-    image_url: https://www.cbr.mlit.go.jp/numazu/kanogawa/cctv/snapshot/158.jpg
-    page_url: https://www.cbr.mlit.go.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 静岡県富士市西柏原新田'
-  - id: curated-still-lcdb-410a87f9
-    name: 国道1号藤枝岡部インターチェンジランプ第1
-    operator: 静岡国道事務所
-    category: road
-    prefecture: '22'
-    lat: 34.900517
-    lng: 138.275133
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: https://www.cbr.mlit.go.jp/shizukoku/camera/gazou/fujiedaokabeic1.jpg
-    page_url: https://www.cbr.mlit.go.jp/shizukoku/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 静岡県藤枝市仮宿'
+  # 2026-10-17 退役: 画像が507日（1年以上）更新されていない
+  # - id: curated-still-lcdb-85a909db
+  #   name: 富士海岸昭和放水路
+  #   operator: 沼津河川国道事務所
+  #   category: coast
+  #   prefecture: '22'
+  #   lat: 35.134611
+  #   lng: 138.742028
+  #   image_url: https://www.cbr.mlit.go.jp/numazu/kanogawa/cctv/snapshot/158.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 静岡県富士市西柏原新田'
+  # 2026-10-17 退役: 画像が946日（1年以上）更新されていない
+  # - id: curated-still-lcdb-410a87f9
+  #   name: 国道1号藤枝岡部インターチェンジランプ第1
+  #   operator: 静岡国道事務所
+  #   category: road
+  #   prefecture: '22'
+  #   lat: 34.900517
+  #   lng: 138.275133
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: https://www.cbr.mlit.go.jp/shizukoku/camera/gazou/fujiedaokabeic1.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/shizukoku/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 静岡県藤枝市仮宿'
   - id: curated-still-lcdb-6d6d1dfc
     name: 国道414号天城北道路トンネル電気室前
     operator: 沼津河川国道事務所
@@ -30722,16 +30785,17 @@ cameras:
     image_url: http://www.bousai-n.org/data_xml/03.jpg
     page_url: http://www.bousai-n.org/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 静岡県長泉町南一色'
-  - id: curated-still-lcdb-aa3e4788
-    name: 沼津国際カントリークラブ
-    operator: 沼津国際カントリークラブ
-    category: other
-    prefecture: '22'
-    lat: 35.179053
-    lng: 138.837412
-    image_url: http://www3.tokai.or.jp/k-graphic/camera/view.jpg
-    page_url: http://www.nkcc.jp/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 静岡県沼津市足高尾ノ上441-334'
+  # 2026-10-17 退役: 画像が415日（1年以上）更新されていない
+  # - id: curated-still-lcdb-aa3e4788
+  #   name: 沼津国際カントリークラブ
+  #   operator: 沼津国際カントリークラブ
+  #   category: other
+  #   prefecture: '22'
+  #   lat: 35.179053
+  #   lng: 138.837412
+  #   image_url: http://www3.tokai.or.jp/k-graphic/camera/view.jpg
+  #   page_url: http://www.nkcc.jp/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 静岡県沼津市足高尾ノ上441-334'
   - id: curated-still-lcdb-eb890998
     name: 東邦航空芦ノ湖へリポート
     operator: 東邦航空
@@ -31088,17 +31152,18 @@ cameras:
     image_url: http://www.hrr.mlit.go.jp/bosai/img/751470D08600.jpg
     page_url: http://www.hrr.mlit.go.jp/bosai/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 富山県高岡市荒屋敷'
-  - id: curated-still-lcdb-369167c1
-    name: 国道470号高岡北インターチェンジ
-    operator: 富山河川国道事務所
-    category: road
-    prefecture: '16'
-    lat: 36.771736
-    lng: 136.979803
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: https://www.hrr.mlit.go.jp/bosai/img/751470U08265.jpg
-    page_url: https://www.hrr.mlit.go.jp/bosai/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 富山県高岡市五十里'
+  # 2026-10-17 退役: 画像が1758日（1年以上）更新されていない
+  # - id: curated-still-lcdb-369167c1
+  #   name: 国道470号高岡北インターチェンジ
+  #   operator: 富山河川国道事務所
+  #   category: road
+  #   prefecture: '16'
+  #   lat: 36.771736
+  #   lng: 136.979803
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: https://www.hrr.mlit.go.jp/bosai/img/751470U08265.jpg
+  #   page_url: https://www.hrr.mlit.go.jp/bosai/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 富山県高岡市五十里'
   - id: curated-still-lcdb-5f248721
     name: 国道156号金屋
     operator: 富山河川国道事務所
@@ -31988,16 +32053,17 @@ cameras:
     image_url: https://www.ktr.mlit.go.jp/river/cctv/C05618.jpg
     page_url: https://www.ktr.mlit.go.jp/fujikawa/fujikawa00163.html
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 山梨県早川町黒桂'
-  - id: curated-still-lcdb-53c07fbc
-    name: 増富太陽光発電所
-    operator: 北杜星
-    category: scenic
-    prefecture: '19'
-    lat: 35.884846
-    lng: 138.515265
-    image_url: http://www.hokutostar.jp/plant/masutomi/camera1.jpg
-    page_url: http://www.hokutostar.jp/plant/masutomi/index.php
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市須玉町小尾'
+  # 2026-10-17 退役: 画像が2390日（1年以上）更新されていない
+  # - id: curated-still-lcdb-53c07fbc
+  #   name: 増富太陽光発電所
+  #   operator: 北杜星
+  #   category: scenic
+  #   prefecture: '19'
+  #   lat: 35.884846
+  #   lng: 138.515265
+  #   image_url: http://www.hokutostar.jp/plant/masutomi/camera1.jpg
+  #   page_url: http://www.hokutostar.jp/plant/masutomi/index.php
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市須玉町小尾'
   - id: curated-still-lcdb-448adac8
     name: 濁川下流砂防堰堤
     operator: 富士川砂防事務所
@@ -32019,46 +32085,50 @@ cameras:
   #   image_url: https://cam.river.go.jp/cam/now/104865006.jpg
   #   page_url: https://www.river.go.jp/kawabou/pc/tm?itmkndCd=100&scamId=104865006
   #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 山梨県北杜市明野町三之蔵'
-  - id: curated-still-lcdb-d17debd4
-    name: 白州太陽光発電所
-    operator: 山梨自然エネルギー発電
-    category: scenic
-    prefecture: '19'
-    lat: 35.85307
-    lng: 138.278236
-    image_url: http://www.yamanashigreenenergy.jp/plant/hakushu/camera1.jpg
-    page_url: http://www.yamanashigreenenergy.jp/plant/hakushu/index.php
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市白州町上教来石'
-  - id: curated-still-lcdb-e50cf59b
-    name: 白州太陽光発電所5号機
-    operator: 山梨自然エネルギー発電
-    category: road
-    prefecture: '19'
-    lat: 35.85307
-    lng: 138.278236
-    image_url: http://www.yamanashigreenenergy.jp/plant/hakushu/camera2.jpg
-    page_url: http://www.yamanashigreenenergy.jp/plant/hakushu/index5.php
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市白州町上教来石'
-  - id: curated-still-lcdb-8c30f840
-    name: 小尾平太陽光発電所
-    operator: 山梨自然エネルギー発電
-    category: scenic
-    prefecture: '19'
-    lat: 35.835424
-    lng: 138.354149
-    image_url: http://www.yamanashigreenenergy.jp/plant/obidaira/camera1.jpg
-    page_url: http://www.yamanashigreenenergy.jp/plant/obidaira/index.php
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市長坂町中丸小尾平'
-  - id: curated-still-lcdb-0010cd87
-    name: 谷戸太陽光発電所
-    operator: 山梨自然エネルギー発電
-    category: scenic
-    prefecture: '19'
-    lat: 35.894176
-    lng: 138.336614
-    image_url: http://www.yamanashigreenenergy.jp/plant/yato/camera1.jpg
-    page_url: http://www.yamanashigreenenergy.jp/plant/yato/index.php
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市大泉町谷戸'
+  # 2026-10-17 退役: 画像が1892日（1年以上）更新されていない
+  # - id: curated-still-lcdb-d17debd4
+  #   name: 白州太陽光発電所
+  #   operator: 山梨自然エネルギー発電
+  #   category: scenic
+  #   prefecture: '19'
+  #   lat: 35.85307
+  #   lng: 138.278236
+  #   image_url: http://www.yamanashigreenenergy.jp/plant/hakushu/camera1.jpg
+  #   page_url: http://www.yamanashigreenenergy.jp/plant/hakushu/index.php
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市白州町上教来石'
+  # 2026-10-17 退役: 画像が3191日（1年以上）更新されていない
+  # - id: curated-still-lcdb-e50cf59b
+  #   name: 白州太陽光発電所5号機
+  #   operator: 山梨自然エネルギー発電
+  #   category: road
+  #   prefecture: '19'
+  #   lat: 35.85307
+  #   lng: 138.278236
+  #   image_url: http://www.yamanashigreenenergy.jp/plant/hakushu/camera2.jpg
+  #   page_url: http://www.yamanashigreenenergy.jp/plant/hakushu/index5.php
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市白州町上教来石'
+  # 2026-10-17 退役: 画像が2815日（1年以上）更新されていない
+  # - id: curated-still-lcdb-8c30f840
+  #   name: 小尾平太陽光発電所
+  #   operator: 山梨自然エネルギー発電
+  #   category: scenic
+  #   prefecture: '19'
+  #   lat: 35.835424
+  #   lng: 138.354149
+  #   image_url: http://www.yamanashigreenenergy.jp/plant/obidaira/camera1.jpg
+  #   page_url: http://www.yamanashigreenenergy.jp/plant/obidaira/index.php
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市長坂町中丸小尾平'
+  # 2026-10-17 退役: 画像が3281日（1年以上）更新されていない
+  # - id: curated-still-lcdb-0010cd87
+  #   name: 谷戸太陽光発電所
+  #   operator: 山梨自然エネルギー発電
+  #   category: scenic
+  #   prefecture: '19'
+  #   lat: 35.894176
+  #   lng: 138.336614
+  #   image_url: http://www.yamanashigreenenergy.jp/plant/yato/camera1.jpg
+  #   page_url: http://www.yamanashigreenenergy.jp/plant/yato/index.php
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県北杜市大泉町谷戸'
   - id: curated-still-lcdb-1d8530d5
     name: 岩間排水機場
     operator: 市川三郷町役場
@@ -32182,16 +32252,17 @@ cameras:
     image_url: http://www.town.ichikawamisato.yamanashi.jp/livecamera/images/live12.jpg
     page_url: http://www.town.ichikawamisato.yamanashi.jp/livecamera/
     note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図マーカー実位置。所在地: 山梨県市川三郷町落居'
-  - id: curated-still-lcdb-1f51932d
-    name: 竹窪太陽光発電所第2
-    operator: 山梨自然エネルギー発電
-    category: scenic
-    prefecture: '19'
-    lat: 35.757531
-    lng: 138.401501
-    image_url: http://www.yamanashigreenenergy.jp/plant/takekubo/camera2.jpg
-    page_url: http://www.yamanashigreenenergy.jp/plant/takekubo/index.php
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県韮崎市穴山'
+  # 2026-10-17 退役: 画像が1675日（1年以上）更新されていない
+  # - id: curated-still-lcdb-1f51932d
+  #   name: 竹窪太陽光発電所第2
+  #   operator: 山梨自然エネルギー発電
+  #   category: scenic
+  #   prefecture: '19'
+  #   lat: 35.757531
+  #   lng: 138.401501
+  #   image_url: http://www.yamanashigreenenergy.jp/plant/takekubo/camera2.jpg
+  #   page_url: http://www.yamanashigreenenergy.jp/plant/takekubo/index.php
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 山梨県韮崎市穴山'
   - id: curated-still-lcdb-0ab0e406
     name: 【調整中】徳島堰太陽光発電所第1
     operator: 山梨自然エネルギー発電
@@ -34528,46 +34599,50 @@ cameras:
     image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam119_1.jpg
     page_url: https://www.qsr.mlit.go.jp/kitakyu/
     note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass1.html'
-  - id: curated-still-lcdb-c1541656
-    name: 国道201号八木山バイパス第2
-    operator: 国土交通省九州地方整備局 北九州国道事務所
-    category: road
-    prefecture: '40'
-    lat: 33.602613248736915
-    lng: 130.62154271553584
-    image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam80_1.jpg
-    page_url: https://www.qsr.mlit.go.jp/kitakyu/
-    note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass2.html'
-  - id: curated-still-lcdb-3f2f1b6f
-    name: 国道201号八木山バイパス第3
-    operator: 国土交通省九州地方整備局 北九州国道事務所
-    category: road
-    prefecture: '40'
-    lat: 33.602613248736915
-    lng: 130.62154271553584
-    image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam120_1.jpg
-    page_url: https://www.qsr.mlit.go.jp/kitakyu/
-    note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass3.html'
-  - id: curated-still-lcdb-560bf722
-    name: 国道201号八木山バイパス第4
-    operator: 国土交通省九州地方整備局 北九州国道事務所
-    category: road
-    prefecture: '40'
-    lat: 33.602613248736915
-    lng: 130.62154271553584
-    image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam73_1.jpg
-    page_url: https://www.qsr.mlit.go.jp/kitakyu/
-    note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass4.html'
-  - id: curated-still-lcdb-28b96731
-    name: 国道201号八木山バイパス第5
-    operator: 国土交通省九州地方整備局 北九州国道事務所
-    category: road
-    prefecture: '40'
-    lat: 33.602613248736915
-    lng: 130.62154271553584
-    image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam121_1.jpg
-    page_url: https://www.qsr.mlit.go.jp/kitakyu/
-    note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass5.html'
+  # 2026-10-17 退役: 画像が564日（1年以上）更新されていない
+  # - id: curated-still-lcdb-c1541656
+  #   name: 国道201号八木山バイパス第2
+  #   operator: 国土交通省九州地方整備局 北九州国道事務所
+  #   category: road
+  #   prefecture: '40'
+  #   lat: 33.602613248736915
+  #   lng: 130.62154271553584
+  #   image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam80_1.jpg
+  #   page_url: https://www.qsr.mlit.go.jp/kitakyu/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass2.html'
+  # 2026-10-17 退役: 画像が564日（1年以上）更新されていない
+  # - id: curated-still-lcdb-3f2f1b6f
+  #   name: 国道201号八木山バイパス第3
+  #   operator: 国土交通省九州地方整備局 北九州国道事務所
+  #   category: road
+  #   prefecture: '40'
+  #   lat: 33.602613248736915
+  #   lng: 130.62154271553584
+  #   image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam120_1.jpg
+  #   page_url: https://www.qsr.mlit.go.jp/kitakyu/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass3.html'
+  # 2026-10-17 退役: 画像が564日（1年以上）更新されていない
+  # - id: curated-still-lcdb-560bf722
+  #   name: 国道201号八木山バイパス第4
+  #   operator: 国土交通省九州地方整備局 北九州国道事務所
+  #   category: road
+  #   prefecture: '40'
+  #   lat: 33.602613248736915
+  #   lng: 130.62154271553584
+  #   image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam73_1.jpg
+  #   page_url: https://www.qsr.mlit.go.jp/kitakyu/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass4.html'
+  # 2026-10-17 退役: 画像が564日（1年以上）更新されていない
+  # - id: curated-still-lcdb-28b96731
+  #   name: 国道201号八木山バイパス第5
+  #   operator: 国土交通省九州地方整備局 北九州国道事務所
+  #   category: road
+  #   prefecture: '40'
+  #   lat: 33.602613248736915
+  #   lng: 130.62154271553584
+  #   image_url: https://www.qsr.mlit.go.jp/kitakyu/camera/cam121_1.jpg
+  #   page_url: https://www.qsr.mlit.go.jp/kitakyu/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/fukuoka/sasaguri/r201-yakiyama-bypass5.html'
   - id: curated-still-lcdb-d6b29958
     name: ホテルリステル猪苗代レイクビュー
     operator: ホテルリステル猪苗代（長治観光株式会社）
@@ -35255,36 +35330,39 @@ cameras:
     image_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_img/10410620.jpg
     page_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_all.html?cctv=b06&area=front
     note: '地図マーカー実位置; 索引: https://livecam.asia/gifu/takayama/r41-ishiura-minami.html'
-  - id: curated-still-lcdb-092c4994
-    name: 国道41号宮峠北
-    operator: 国土交通省中部地方整備局 高山国道事務所
-    category: road
-    prefecture: '21'
-    lat: 36.08025
-    lng: 137.249083
-    image_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_img/10410590.jpg
-    page_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_all.html?cctv=b09&area=front
-    note: '地図マーカー実位置; 索引: https://livecam.asia/gifu/takayama/r41-miyatouge-kita.html'
-  - id: curated-still-lcdb-19346d2d
-    name: 国道41号宮峠南
-    operator: 国土交通省中部地方整備局 高山国道事務所
-    category: road
-    prefecture: '21'
-    lat: 36.081667
-    lng: 137.256056
-    image_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_img/10410580.jpg
-    page_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_all.html?cctv=b10&area=front
-    note: '地図マーカー実位置; 索引: https://livecam.asia/gifu/takayama/r41-miyatouge-minami.html'
-  - id: curated-still-lcdb-c4f4ad7c
-    name: 国道41号宮峠頂上
-    operator: 国土交通省中部地方整備局 高山国道事務所
-    category: road
-    prefecture: '21'
-    lat: 36.081667
-    lng: 137.263056
-    image_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_img/10410570.jpg
-    page_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_all.html?cctv=b11&area=front
-    note: '地図マーカー実位置; 索引: https://livecam.asia/gifu/takayama/r41-miyatouge.html'
+  # 2026-10-17 退役: 画像が1533日（1年以上）更新されていない
+  # - id: curated-still-lcdb-092c4994
+  #   name: 国道41号宮峠北
+  #   operator: 国土交通省中部地方整備局 高山国道事務所
+  #   category: road
+  #   prefecture: '21'
+  #   lat: 36.08025
+  #   lng: 137.249083
+  #   image_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_img/10410590.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_all.html?cctv=b09&area=front
+  #   note: '地図マーカー実位置; 索引: https://livecam.asia/gifu/takayama/r41-miyatouge-kita.html'
+  # 2026-10-17 退役: 画像が1533日（1年以上）更新されていない
+  # - id: curated-still-lcdb-19346d2d
+  #   name: 国道41号宮峠南
+  #   operator: 国土交通省中部地方整備局 高山国道事務所
+  #   category: road
+  #   prefecture: '21'
+  #   lat: 36.081667
+  #   lng: 137.256056
+  #   image_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_img/10410580.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_all.html?cctv=b10&area=front
+  #   note: '地図マーカー実位置; 索引: https://livecam.asia/gifu/takayama/r41-miyatouge-minami.html'
+  # 2026-10-17 退役: 画像が1533日（1年以上）更新されていない
+  # - id: curated-still-lcdb-c4f4ad7c
+  #   name: 国道41号宮峠頂上
+  #   operator: 国土交通省中部地方整備局 高山国道事務所
+  #   category: road
+  #   prefecture: '21'
+  #   lat: 36.081667
+  #   lng: 137.263056
+  #   image_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_img/10410570.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/takayama/cctv/cctv_all.html?cctv=b11&area=front
+  #   note: '地図マーカー実位置; 索引: https://livecam.asia/gifu/takayama/r41-miyatouge.html'
   - id: curated-still-lcdb-c422a7e9
     name: 国道41号無数河北
     operator: 国土交通省中部地方整備局 高山国道事務所
@@ -35372,36 +35450,39 @@ cameras:
     image_url: https://www.cbr.mlit.go.jp/gifu/cctv/cameraimage/52517_853x480.jpg
     page_url: https://www.cbr.mlit.go.jp/gifu/
     note: '地図マーカー実位置; 索引: https://livecam.asia/gifu/tarui/r21-miyashiro.html'
-  - id: curated-still-lcdb-30ed2df3
-    name: 【冬季限定】丸沼高原スキー場コバルトコース
-    operator: 丸沼高原（日本製紙総合開発）
-    category: river
-    prefecture: '10'
-    lat: 36.81397557462335
-    lng: 139.33517041559244
-    image_url: https://www.marunuma.jp/live/maru198.jpg
-    page_url: https://www.marunuma.jp/
-    note: '地図中心(概略); 冬季限定; 索引: https://livecam.asia/gunma/katashina/malnumakougen-ski-cobaltcorse.html'
-  - id: curated-still-lcdb-9cc9d57c
-    name: 【冬季限定】丸沼高原スキー場オレンジコース
-    operator: 丸沼高原（日本製紙総合開発）
-    category: river
-    prefecture: '10'
-    lat: 36.81397557462335
-    lng: 139.33517041559244
-    image_url: https://www.marunuma.jp/live/maru196.jpg
-    page_url: https://www.marunuma.jp/
-    note: '地図中心(概略); 冬季限定; 索引: https://livecam.asia/gunma/katashina/malnumakougen-ski-orangecorse.html'
-  - id: curated-still-lcdb-c682e196
-    name: 【冬季限定】丸沼高原スキー場国道120号
-    operator: 丸沼高原（日本製紙総合開発）
-    category: road
-    prefecture: '10'
-    lat: 36.811484
-    lng: 139.346435
-    image_url: https://www.marunuma.jp/live/maru126.jpg
-    page_url: https://www.marunuma.jp/
-    note: '地図中心(概略); 冬季限定; 索引: https://livecam.asia/gunma/katashina/malnumakougen-ski-r120.html'
+  # 2026-10-17 退役: 画像が2246日（1年以上）更新されていない
+  # - id: curated-still-lcdb-30ed2df3
+  #   name: 【冬季限定】丸沼高原スキー場コバルトコース
+  #   operator: 丸沼高原（日本製紙総合開発）
+  #   category: river
+  #   prefecture: '10'
+  #   lat: 36.81397557462335
+  #   lng: 139.33517041559244
+  #   image_url: https://www.marunuma.jp/live/maru198.jpg
+  #   page_url: https://www.marunuma.jp/
+  #   note: '地図中心(概略); 冬季限定; 索引: https://livecam.asia/gunma/katashina/malnumakougen-ski-cobaltcorse.html'
+  # 2026-10-17 退役: 画像が2938日（1年以上）更新されていない
+  # - id: curated-still-lcdb-9cc9d57c
+  #   name: 【冬季限定】丸沼高原スキー場オレンジコース
+  #   operator: 丸沼高原（日本製紙総合開発）
+  #   category: river
+  #   prefecture: '10'
+  #   lat: 36.81397557462335
+  #   lng: 139.33517041559244
+  #   image_url: https://www.marunuma.jp/live/maru196.jpg
+  #   page_url: https://www.marunuma.jp/
+  #   note: '地図中心(概略); 冬季限定; 索引: https://livecam.asia/gunma/katashina/malnumakougen-ski-orangecorse.html'
+  # 2026-10-17 退役: 画像が380日（1年以上）更新されていない
+  # - id: curated-still-lcdb-c682e196
+  #   name: 【冬季限定】丸沼高原スキー場国道120号
+  #   operator: 丸沼高原（日本製紙総合開発）
+  #   category: road
+  #   prefecture: '10'
+  #   lat: 36.811484
+  #   lng: 139.346435
+  #   image_url: https://www.marunuma.jp/live/maru126.jpg
+  #   page_url: https://www.marunuma.jp/
+  #   note: '地図中心(概略); 冬季限定; 索引: https://livecam.asia/gunma/katashina/malnumakougen-ski-r120.html'
   - id: curated-still-lcdb-7d4544f0
     name: 川場スキー場駐車場第2
     operator: 川場スキー場
@@ -35453,16 +35534,17 @@ cameras:
     image_url: https://www.shima-net.jp/live/toida-tosou-1.jpg
     page_url: https://www.shima-net.jp/live/
     note: '地図中心(概略); 索引: https://livecam.asia/gunma/nakanojo/toidatosou.html'
-  - id: curated-still-lcdb-16d07e20
-    name: わらび平森林公園キャンプ場
-    operator: わらび平森林公園キャンプ場
-    category: scenic
-    prefecture: '10'
-    lat: 36.447917399999994
-    lng: 138.6785564
-    image_url: http://www5.wind.ne.jp/warabi/live/licam.jpg
-    page_url: http://warabidaira.com/
-    note: '地図中心(概略); 索引: https://livecam.asia/gunma/takasaki/warabidaira-shinrinkouen-camp.html'
+  # 2026-10-17 退役: 画像が1909日（1年以上）更新されていない
+  # - id: curated-still-lcdb-16d07e20
+  #   name: わらび平森林公園キャンプ場
+  #   operator: わらび平森林公園キャンプ場
+  #   category: scenic
+  #   prefecture: '10'
+  #   lat: 36.447917399999994
+  #   lng: 138.6785564
+  #   image_url: http://www5.wind.ne.jp/warabi/live/licam.jpg
+  #   page_url: http://warabidaira.com/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/gunma/takasaki/warabidaira-shinrinkouen-camp.html'
   - id: curated-still-lcdb-768f7883
     name: 十勝岳望岳台
     operator: 国土交通省北海道開発局（旭川開発建設部 十勝岳火山砂防）
@@ -35473,16 +35555,17 @@ cameras:
     image_url: https://info-dam.hdb.hkd.mlit.go.jp/erosion/images/camera/current/1030E002.jpg
     page_url: https://info-dam.hdb.hkd.mlit.go.jp/erosion/tokachi.htm
     note: '地図中心(概略); 索引: https://livecam.asia/hokkaido/biei/tokachidake-bouyoudai.html'
-  - id: curated-still-lcdb-6a39867a
-    name: ルスツリゾートスキー場イースト
-    operator: ルスツリゾート（株式会社Niseko Alpine Developments／加森観光）
-    category: scenic
-    prefecture: '01'
-    lat: 42.75117151830407
-    lng: 140.89958021571962
-    image_url: https://kamori.co.jp/rusutsu-sys/camera/east.jpg
-    page_url: https://rusutsu.com/live-mountain-cams/
-    note: '地図中心(概略); 索引: https://livecam.asia/hokkaido/rusutsu/rusutsu-resort-ski-east.html'
+  # 2026-10-17 退役: 画像が546日（1年以上）更新されていない
+  # - id: curated-still-lcdb-6a39867a
+  #   name: ルスツリゾートスキー場イースト
+  #   operator: ルスツリゾート（株式会社Niseko Alpine Developments／加森観光）
+  #   category: scenic
+  #   prefecture: '01'
+  #   lat: 42.75117151830407
+  #   lng: 140.89958021571962
+  #   image_url: https://kamori.co.jp/rusutsu-sys/camera/east.jpg
+  #   page_url: https://rusutsu.com/live-mountain-cams/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/hokkaido/rusutsu/rusutsu-resort-ski-east.html'
   - id: curated-still-lcdb-76d42081
     name: ルスツリゾートスキー場イゾラ降雪計
     operator: ルスツリゾート（株式会社Niseko Alpine Developments／加森観光）
@@ -35555,16 +35638,17 @@ cameras:
     image_url: https://www.seishiga.kkr.mlit.go.jp/himeji/pic/C03825.jpg
     page_url: https://www.kkr.mlit.go.jp/himeji/
     note: '地図マーカー実位置; 索引: https://livecam.asia/hyogo/himeji/r29-matsuyama.html'
-  - id: curated-still-lcdb-b4285941
-    name: 西はりま天文台上空
-    operator: 兵庫県立大学 西はりま天文台
-    category: other
-    prefecture: '28'
-    lat: 35.02718637316931
-    lng: 134.33355791556215
-    image_url: https://www.nhao.jp/nhao/live/images/skyview.jpg
-    page_url: http://www.nhao.jp/research/nhaolivecam.html
-    note: '地図中心(概略); 元URL http://www.nhao.jp/nhao/live/images/skyview.jpg はリダイレクト（解決後URLで登録）; 索引: https://livecam.asia/hyogo/sayo/nishiharimatenboudai-sora.html'
+  # 2026-10-17 退役: 画像が382日（1年以上）更新されていない
+  # - id: curated-still-lcdb-b4285941
+  #   name: 西はりま天文台上空
+  #   operator: 兵庫県立大学 西はりま天文台
+  #   category: other
+  #   prefecture: '28'
+  #   lat: 35.02718637316931
+  #   lng: 134.33355791556215
+  #   image_url: https://www.nhao.jp/nhao/live/images/skyview.jpg
+  #   page_url: http://www.nhao.jp/research/nhaolivecam.html
+  #   note: '地図中心(概略); 元URL http://www.nhao.jp/nhao/live/images/skyview.jpg はリダイレクト（解決後URLで登録）; 索引: https://livecam.asia/hyogo/sayo/nishiharimatenboudai-sora.html'
   - id: curated-still-lcdb-dbdb3862
     name: 国道29号嶋田
     operator: 国土交通省近畿地方整備局 姫路河川国道事務所
@@ -35639,26 +35723,28 @@ cameras:
     image_url: https://www.qsr.mlit.go.jp/kakoku/cctvimg/R10_422k300.jpg
     page_url: https://www.qsr.mlit.go.jp/kakoku/traffic/cctv/
     note: '地図マーカー実位置; 索引: https://livecam.asia/kagoshima/kirishima/r10-kamewaritouge.html'
-  - id: curated-still-lcdb-dff2e36d
-    name: 津久井湖ゴルフ倶楽部白ゆりコースNo.1
-    operator: 津久井湖ゴルフ倶楽部
-    category: scenic
-    prefecture: '14'
-    lat: 35.58524434283701
-    lng: 139.23420931556865
-    image_url: https://www.tsukuiko-gc.co.jp/~livecamera02/camera01.jpg
-    page_url: https://www.tsukuiko-gc.co.jp/guide/livecamera/
-    note: '地図中心(概略); 索引: https://livecam.asia/kanagawa/sagamihara-midori/tsukuiko-golfclub-no1.html'
-  - id: curated-still-lcdb-0f805d85
-    name: 津久井湖ゴルフ倶楽部山吹コースNo.9
-    operator: 津久井湖ゴルフ倶楽部
-    category: scenic
-    prefecture: '14'
-    lat: 35.58524434283701
-    lng: 139.23420931556865
-    image_url: https://www.tsukuiko-gc.co.jp/~livecamera02/camera02.jpg
-    page_url: https://www.tsukuiko-gc.co.jp/guide/livecamera/
-    note: '地図中心(概略); 索引: https://livecam.asia/kanagawa/sagamihara-midori/tsukuiko-golfclub-no9.html'
+  # 2026-10-17 退役: 画像が651日（1年以上）更新されていない
+  # - id: curated-still-lcdb-dff2e36d
+  #   name: 津久井湖ゴルフ倶楽部白ゆりコースNo.1
+  #   operator: 津久井湖ゴルフ倶楽部
+  #   category: scenic
+  #   prefecture: '14'
+  #   lat: 35.58524434283701
+  #   lng: 139.23420931556865
+  #   image_url: https://www.tsukuiko-gc.co.jp/~livecamera02/camera01.jpg
+  #   page_url: https://www.tsukuiko-gc.co.jp/guide/livecamera/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/kanagawa/sagamihara-midori/tsukuiko-golfclub-no1.html'
+  # 2026-10-17 退役: 画像が651日（1年以上）更新されていない
+  # - id: curated-still-lcdb-0f805d85
+  #   name: 津久井湖ゴルフ倶楽部山吹コースNo.9
+  #   operator: 津久井湖ゴルフ倶楽部
+  #   category: scenic
+  #   prefecture: '14'
+  #   lat: 35.58524434283701
+  #   lng: 139.23420931556865
+  #   image_url: https://www.tsukuiko-gc.co.jp/~livecamera02/camera02.jpg
+  #   page_url: https://www.tsukuiko-gc.co.jp/guide/livecamera/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/kanagawa/sagamihara-midori/tsukuiko-golfclub-no9.html'
   - id: curated-still-lcdb-b903579b
     name: 名阪国道治田東
     operator: 国土交通省中部地方整備局 北勢国道事務所
@@ -36689,17 +36775,18 @@ cameras:
     image_url: https://www.cbr.mlit.go.jp/iikoku/CCTV/C026.jpg
     page_url: https://www.cbr.mlit.go.jp/iikoku/info/live/live_area19.html?cmr=C026
     note: '地図マーカー実位置; 索引: https://livecam.asia/nagano/shiojiri/r19-hirasawakousaten.html'
-  - id: curated-still-lcdb-0b9fa5b8
-    name: 国道19号片平橋
-    operator: 国土交通省中部地方整備局 飯田国道事務所
-    category: road
-    prefecture: '20'
-    lat: 36.031733
-    lng: 137.877002
-    accuracy: exact   # 2026-10-04 座標見直し
-    image_url: https://www.cbr.mlit.go.jp/iikoku/CCTV/C028.jpg
-    page_url: https://www.cbr.mlit.go.jp/iikoku/info/live/live_area19.html?cmr=C028
-    note: '地図マーカー実位置; 索引: https://livecam.asia/nagano/shiojiri/r19-katahirabashi.html'
+  # 2026-10-17 退役: 画像が980日（1年以上）更新されていない
+  # - id: curated-still-lcdb-0b9fa5b8
+  #   name: 国道19号片平橋
+  #   operator: 国土交通省中部地方整備局 飯田国道事務所
+  #   category: road
+  #   prefecture: '20'
+  #   lat: 36.031733
+  #   lng: 137.877002
+  #   accuracy: exact   # 2026-10-04 座標見直し
+  #   image_url: https://www.cbr.mlit.go.jp/iikoku/CCTV/C028.jpg
+  #   page_url: https://www.cbr.mlit.go.jp/iikoku/info/live/live_area19.html?cmr=C028
+  #   note: '地図マーカー実位置; 索引: https://livecam.asia/nagano/shiojiri/r19-katahirabashi.html'
   - id: curated-still-lcdb-ad73494a
     name: 国道19号桃岡登坂
     operator: 国土交通省中部地方整備局 飯田国道事務所
@@ -36755,16 +36842,17 @@ cameras:
     image_url: https://www.cbr.mlit.go.jp/iikoku/CCTV/C075.jpg
     page_url: https://www.cbr.mlit.go.jp/iikoku/info/live/live_area19.html?cmr=C075
     note: '地図マーカー実位置; 索引: https://livecam.asia/nagano/shiojiri/r19-torii-tunnel-kita.html'
-  - id: curated-still-lcdb-2d0c1934
-    name: 竜王スキーパーク山頂
-    operator: 竜王スキーパーク
-    category: scenic
-    prefecture: '20'
-    lat: 36.78793397608915
-    lng: 138.4462506155921
-    image_url: https://ryuoo.com/img_cam/cam4/image.jpg
-    page_url: https://ryuoo.com/winter/
-    note: '地図中心(概略); 索引: https://livecam.asia/nagano/yamanouchi/ryuoo-skipark-sancho.html'
+  # 2026-10-17 退役: 画像が1597日（1年以上）更新されていない
+  # - id: curated-still-lcdb-2d0c1934
+  #   name: 竜王スキーパーク山頂
+  #   operator: 竜王スキーパーク
+  #   category: scenic
+  #   prefecture: '20'
+  #   lat: 36.78793397608915
+  #   lng: 138.4462506155921
+  #   image_url: https://ryuoo.com/img_cam/cam4/image.jpg
+  #   page_url: https://ryuoo.com/winter/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/nagano/yamanouchi/ryuoo-skipark-sancho.html'
   - id: curated-still-lcdb-cb633071
     name: 名阪国道針東
     operator: 国土交通省中部地方整備局 北勢国道事務所
@@ -37398,26 +37486,28 @@ cameras:
     image_url: https://www.qsr.mlit.go.jp/saiki/cctv/img/cctv_vga_006.jpg
     page_url: https://www.qsr.mlit.go.jp/saiki/cctv/popup.html?cam=6
     note: '地図中心(概略); 索引: https://livecam.asia/oita/saiki/r10-soutarou-tunnel.html'
-  - id: curated-still-lcdb-b755cb96
-    name: 道の駅奥津温泉
-    operator: 鏡野町（くらし安全課）
-    category: scenic
-    prefecture: '33'
-    lat: 35.22341736255005
-    lng: 133.92072431556193
-    image_url: https://www.town.kagamino.lg.jp/webcam/mitinoeki.jpg
-    page_url: https://www.town.kagamino.lg.jp/soshiki/1/6292.html
-    note: '地図中心(概略); 索引: https://livecam.asia/okayama/kagamino/mitinoeki-okutsuonsen.html'
-  - id: curated-still-lcdb-e0db43b1
-    name: のとろ温泉天空の湯
-    operator: 鏡野町（くらし安全課）
-    category: scenic
-    prefecture: '33'
-    lat: 35.201503699999996
-    lng: 133.7967177
-    image_url: https://www.town.kagamino.lg.jp/webcam/notoro.jpg
-    page_url: https://www.town.kagamino.lg.jp/soshiki/1/2083.html
-    note: '地図中心(概略); 索引: https://livecam.asia/okayama/kagamino/notoroonsen-tenkunoyu.html'
+  # 2026-10-17 退役: 画像が496日（1年以上）更新されていない
+  # - id: curated-still-lcdb-b755cb96
+  #   name: 道の駅奥津温泉
+  #   operator: 鏡野町（くらし安全課）
+  #   category: scenic
+  #   prefecture: '33'
+  #   lat: 35.22341736255005
+  #   lng: 133.92072431556193
+  #   image_url: https://www.town.kagamino.lg.jp/webcam/mitinoeki.jpg
+  #   page_url: https://www.town.kagamino.lg.jp/soshiki/1/6292.html
+  #   note: '地図中心(概略); 索引: https://livecam.asia/okayama/kagamino/mitinoeki-okutsuonsen.html'
+  # 2026-10-17 退役: 画像が496日（1年以上）更新されていない
+  # - id: curated-still-lcdb-e0db43b1
+  #   name: のとろ温泉天空の湯
+  #   operator: 鏡野町（くらし安全課）
+  #   category: scenic
+  #   prefecture: '33'
+  #   lat: 35.201503699999996
+  #   lng: 133.7967177
+  #   image_url: https://www.town.kagamino.lg.jp/webcam/notoro.jpg
+  #   page_url: https://www.town.kagamino.lg.jp/soshiki/1/2083.html
+  #   note: '地図中心(概略); 索引: https://livecam.asia/okayama/kagamino/notoroonsen-tenkunoyu.html'
   - id: curated-still-lcdb-91b514ee
     name: 奥津渓
     operator: 鏡野町（くらし安全課）
@@ -37894,16 +37984,17 @@ cameras:
     image_url: https://www.minamialps-net.jp/wp-content/themes/malps2019/images/top/Yashajin.jpg
     page_url: https://www.minamialps-net.jp/
     note: '地図中心(概略); 索引: https://livecam.asia/yamanashi/minami-alps/minamialps-net.html'
-  - id: curated-still-lcdb-a0892ea2
-    name: スポーツランドやまなし第2
-    operator: スポーツランドやまなし
-    category: scenic
-    prefecture: '19'
-    lat: 35.761826333154396
-    lng: 138.5051970155758
-    image_url: http://sly-rc.sakura.ne.jp/live/pana/pana.jpg
-    page_url: http://www.sly-rc.com/
-    note: '地図中心(概略); 索引: https://livecam.asia/yamanashi/nirasaki/sportsland-yamanashi2.html'
+  # 2026-10-17 退役: 画像が1511日（1年以上）更新されていない
+  # - id: curated-still-lcdb-a0892ea2
+  #   name: スポーツランドやまなし第2
+  #   operator: スポーツランドやまなし
+  #   category: scenic
+  #   prefecture: '19'
+  #   lat: 35.761826333154396
+  #   lng: 138.5051970155758
+  #   image_url: http://sly-rc.sakura.ne.jp/live/pana/pana.jpg
+  #   page_url: http://www.sly-rc.com/
+  #   note: '地図中心(概略); 索引: https://livecam.asia/yamanashi/nirasaki/sportsland-yamanashi2.html'
   - id: curated-still-lcdb-3835d6f0
     name: 国道7号潟端
     operator: 国土交通省北陸地方整備局 新潟国道事務所（にいがたLIVEカメラ経由）

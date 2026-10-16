@@ -37,8 +37,33 @@ def _get(session: requests.Session, url: str, headers: dict[str, str]) -> reques
     return None
 
 
+# 画像が止まって（frozen）からこの日数を過ぎたら error 扱いにしてアプリの地図・一覧から隠す。
+# 配信が戻れば次の確認で ok に戻り自動で再表示される（季節営業のカメラは翌シーズンに戻る）。
+# 2026-10-17: 2024-10 に「公開を終了しました」へ差し替わった金華山灯台など、1年以上止まった
+# カメラ108台が「更新されていません」の札付きで地図に残っていた
+LONG_FROZEN_DAYS = 90
+
+
+def _hide_long_frozen(result: dict[str, Any], now: datetime) -> dict[str, Any]:
+    if result.get("state") != "frozen" or not result.get("frozen_since"):
+        return result
+    try:
+        since = parse_utc(result["frozen_since"])
+    except (TypeError, ValueError):
+        return result
+    if (as_utc(now) - since).days >= LONG_FROZEN_DAYS:
+        result = dict(result, state="error")
+    return result
+
+
 def check_camera(session: requests.Session, camera: dict[str, Any],
                  state: dict[str, Any], now: datetime | None = None) -> dict[str, Any]:
+    now = now or datetime.now(timezone.utc)
+    return _hide_long_frozen(_check_camera(session, camera, state, now), now)
+
+
+def _check_camera(session: requests.Session, camera: dict[str, Any],
+                  state: dict[str, Any], now: datetime | None = None) -> dict[str, Any]:
     """1台チェックして status レコードと更新済み state を返す。
 
     state: {"history": [{"at","hash"}], "etag": str, "last_modified": str,

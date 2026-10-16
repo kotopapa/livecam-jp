@@ -88,10 +88,14 @@ def test_stale_last_modified_is_frozen_immediately():
     img = (FIXTURES / "kawabou_placeholder.png").read_bytes()  # デコード可能な画像なら何でもよい
     stale = FakeResponse(200, b"\xff\xd8" + img, {"Content-Type": "image/jpeg",
                                                    "Last-Modified": "Tue, 31 Mar 2026 15:57:14 GMT"})
+    from datetime import datetime, timezone
     state: dict = {}
-    r = check_camera(FakeSession([stale]), _camera(), state)
+    r = check_camera(FakeSession([stale]), _camera(), state, now=datetime(2026, 4, 20, tzinfo=timezone.utc))
     assert r["state"] == "frozen"
     assert r["frozen_since"].startswith("2026-03-31")
+    # 90日を過ぎると error（アプリで非表示）
+    r = check_camera(FakeSession([stale]), _camera(), {}, now=datetime(2026, 10, 17, tzinfo=timezone.utc))
+    assert r["state"] == "error" and r["frozen_since"].startswith("2026-03-31")
 
 
 def test_recent_last_modified_stays_ok():
@@ -394,3 +398,15 @@ def test_monitor_budget_skips_after_deadline(tmp_path, monkeypatch):
     assert called == []
     saved = json.loads((tmp_path / "status.json").read_text(encoding="utf-8"))["statuses"]
     assert saved["c0"].get("prev") is True
+
+
+def test_long_frozen_is_hidden_as_error():
+    """画像が止まって90日を過ぎたら error（アプリで非表示）、それ未満は frozen のまま。"""
+    from datetime import datetime, timezone
+    from monitor.check import _hide_long_frozen
+    now = datetime(2026, 10, 17, tzinfo=timezone.utc)
+    r = {"state": "frozen", "frozen_since": "2024-10-31T03:02:09+00:00"}
+    assert _hide_long_frozen(r, now)["state"] == "error"
+    r = {"state": "frozen", "frozen_since": "2026-09-01T00:00:00+00:00"}
+    assert _hide_long_frozen(r, now)["state"] == "frozen"
+    assert _hide_long_frozen({"state": "ok", "frozen_since": None}, now)["state"] == "ok"
