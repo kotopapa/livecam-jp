@@ -195,9 +195,14 @@ def build() -> int:
         yesterday = (now - timedelta(days=1)).strftime("%Y%m%d")
         frac = max(0.0, (24 - now.hour - now.minute / 60) / 24)
         entries = []
+        # アプリの地図・一覧で非表示（監視の state=error: 配信終了・非公開・90日以上の停止）の
+        # カメラもランキングから外す（2026-10-19 お気に入り1位に非公開の江ノ電が残っていた）
+        hidden = {cid for cid, st in status.get("statuses", {}).items()
+                  if isinstance(st, dict) and st.get("state") == "error"}
+        rank_ids = ids - hidden
         for cid in set(cams) | set(partial):
-            if cid not in ids:
-                continue  # 削除済みカメラはランキングから外す
+            if cid not in rank_ids:
+                continue  # 削除済み・非表示のカメラはランキングから外す
             rec = cams.get(cid, {})
             extra = partial.get(cid, 0)
             days = rec.get("days", {})
@@ -211,7 +216,7 @@ def build() -> int:
         top_total = sorted(entries, key=lambda e: -e["total"])[:30]
         favs = [{"id": cid, "count": n}
                 for cid, n in state.get("favorites", {}).items()
-                if cid in ids and n > 0]
+                if cid in rank_ids and n > 0]
         favs.sort(key=lambda e: -e["count"])
         (OUT / "ranking.json").write_text(json.dumps({
             "updated": state.get("updated"),

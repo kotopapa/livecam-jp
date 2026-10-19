@@ -1977,14 +1977,15 @@ cameras:
     lat: 35.308
     lng: 139.5
 
-  - id: curated-shonan-enoden-134
-    name: 江ノ電・国道134号
-    operator: "湘南ライブカメラ"
-    video_id: "DgIbfgFdGVI"
-    category: road
-    prefecture: "14"
-    lat: 35.307
-    lng: 139.495
+  # 2026-10-19 退役: 2026-10-10 に非公開、後継の配信なし
+  # - id: curated-shonan-enoden-134
+  #   name: 江ノ電・国道134号
+  #   operator: "湘南ライブカメラ"
+  #   video_id: "DgIbfgFdGVI"
+  #   category: road
+  #   prefecture: "14"
+  #   lat: 35.307
+  #   lng: 139.495
 
   - id: curated-kusatsu-maeguchi
     name: 国道292号 草津前口
