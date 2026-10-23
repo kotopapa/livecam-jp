@@ -1,5 +1,5 @@
 {
- "version": "2026-10-23T01:51:24Z",
+ "version": "2026-10-23T02:16:15Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-10-23T01:51:24Z",
+   "fetched_at": "2026-10-23T02:16:15Z",
    "items": [
     {
      "id": "24389e4a43121735",
@@ -47880,6 +47880,28 @@
    "content": "片側交互通行",
    "cause": "その他",
    "start": "",
+   "status": "実施中"
+  },
+  "2439674c2acd8384": {
+   "kind": "その他規制（国道）",
+   "route": "国道9号",
+   "direction": "下り",
+   "from": "瀧元",
+   "to": "-",
+   "content": "不明",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "24396749d6290886": {
+   "kind": "車線規制（高速（国交省））",
+   "route": "E25名阪国道",
+   "direction": "上り",
+   "from": "五ヶ谷ＩＣ",
+   "to": "-",
+   "content": "路肩規制",
+   "cause": "故障車",
+   "start": "2026年10月23日 10:17",
    "status": "実施中"
   }
  }
