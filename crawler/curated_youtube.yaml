@@ -61,10 +61,11 @@ cameras:
     lng: 139.7625
 
   # 2026-08-31 配信枠更新: 0P2dOCRPSRM → czJhGgFsp38
+  # 2026-10-28 配信枠更新: czJhGgFsp38 → 6OgYfTMOmhY（MBS は伊丹空港等も同時配信するので channel_id は付けない）
   - id: curated-dotonbori-mbs
     name: 道頓堀 グリコ看板前
     operator: 毎日放送（MBS NEWS）
-    video_id: czJhGgFsp38
+    video_id: 6OgYfTMOmhY
     category: scenic
     prefecture: "27"
     lat: 34.6687
@@ -3989,10 +3990,11 @@ cameras:
     lng: 139.0779
     note: "市公式別地点"
 
+  # 2026-10-28 配信枠更新: i2PpmC1IeKk（非公開化）→ kwUAeYZKjLM（「道頓堀ライブカメラ ２」）
   - id: curated-r2-42fcf67b
     name: 道頓堀(戎橋周辺)
     operator: "ラジカルビデオジョッキー"
-    video_id: "i2PpmC1IeKk"
+    video_id: "kwUAeYZKjLM"
     category: scenic
     prefecture: "27"
     lat: 34.6687
