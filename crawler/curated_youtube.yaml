@@ -1,6 +1,9 @@
 # 人手キュレーションの民間・報道系YouTubeライブカメラ台帳（SPEC 1.3の条件付き民間スコープ）。
 # 掲載条件: 公開YouTubeライブ / 運営者特定済み / IFrame埋め込み（削除依頼があれば即削除）。
 # 座標はカメラ設置地点の手動指定（approx）。videoIdは配信枠更新で変わることがある。
+# channel_id を書くと youtube_channel（監視が現在の配信IDを解決して配信。枠替えに自動追従）。
+# 1チャンネルで複数拠点を同時配信する運営者（MBS 等）は live_match（題名に含まれるべき語。文字列か配列）を
+# 併記する: その語を含む配信だけを枠に選び、該当が無ければ「配信休止中」になる（別拠点の映像を出さない）。
 # 2026-08-18 調査時点。運営者不明のカメラは載せない。
 
 cameras:
@@ -61,11 +64,12 @@ cameras:
     lng: 139.7625
 
   # 2026-08-31 配信枠更新: 0P2dOCRPSRM → czJhGgFsp38
-  # 2026-10-28 配信枠更新: czJhGgFsp38 → 6OgYfTMOmhY（MBS は伊丹空港等も同時配信するので channel_id は付けない）
+  # 2026-10-28 チャンネル登録化: MBS は伊丹空港等も同時配信するので live_match で道頓堀の枠だけを選ぶ（旧 czJhGgFsp38 → 6OgYfTMOmhY）
   - id: curated-dotonbori-mbs
     name: 道頓堀 グリコ看板前
     operator: 毎日放送（MBS NEWS）
-    video_id: 6OgYfTMOmhY
+    channel_id: UCkKJhKO73xF1pK5h9R82ZGQ
+    live_match: 道頓堀
     category: scenic
     prefecture: "27"
     lat: 34.6687
@@ -3990,11 +3994,12 @@ cameras:
     lng: 139.0779
     note: "市公式別地点"
 
-  # 2026-10-28 配信枠更新: i2PpmC1IeKk（非公開化）→ kwUAeYZKjLM（「道頓堀ライブカメラ ２」）
+  # 2026-10-28 チャンネル登録化（旧 i2PpmC1IeKk が非公開化 → 現行 kwUAeYZKjLM「道頓堀ライブカメラ ２」。題名に道頓堀を含む枠だけを選ぶ）
   - id: curated-r2-42fcf67b
     name: 道頓堀(戎橋周辺)
     operator: "ラジカルビデオジョッキー"
-    video_id: "kwUAeYZKjLM"
+    channel_id: UCQ2mmGKtrBp6rL8tSMJCCwA
+    live_match: 道頓堀
     category: scenic
     prefecture: "27"
     lat: 34.6687
@@ -9085,10 +9090,12 @@ cameras:
     note: "oEmbed 200 / isLiveNow true。座標は県営名古屋空港既知位置"
 
   # 2026-09-23 配信枠更新: zgaUF25Bh7E → _nUgTC9zJyc
+  # 2026-10-28 チャンネル登録化（旧 _nUgTC9zJyc。MBS の複数配信から題名に伊丹空港を含む枠を選ぶ）
   - id: curated-transport-airport-itami-mbs
     name: "伊丹空港（MBS）"
     operator: "MBS NEWS（毎日放送）"
-    video_id: _nUgTC9zJyc
+    channel_id: UCkKJhKO73xF1pK5h9R82ZGQ
+    live_match: 伊丹空港
     category: other  # 2026-10-15 港湾→その他
     prefecture: "28"
     lat: 34.7855

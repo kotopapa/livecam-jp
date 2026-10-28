@@ -375,13 +375,19 @@ _CAMERA_TITLE_HINTS = ("24時間", "24h", "24H", "ライブカメラ", "定点",
 
 
 def pick_live_stream(lives: list[tuple[str, str]], camera_name: str,
-                     previous: str | None) -> str | None:
+                     previous: str | None, match: list[str] | None = None) -> str | None:
     """同時配信が複数あるとき、カメラ枠として最もそれらしい動画IDを選ぶ。
 
+    match（台帳 feed.live_match）があれば、題名にその語のいずれかを含む配信だけを候補にし、
+    該当が無ければ推測で選ばず None（配信休止扱い）。MBS のように道頓堀と伊丹空港を
+    同時配信するチャンネルで別拠点の映像を出さないため（2026-10-28）。
     優先順: 前回選んだ枠がまだ配信中 → 「24時間」「ライブカメラ」等の目印 →
     台帳のカメラ名との語の重なり → 一覧の先頭。富士見台どうぶつ病院は保護猫ルームの
     24時間枠と獣医師の解説ライブを同時に流し、先頭を取ると解説ライブになった（2026-09-30）
     """
+    if match:
+        words = [w.casefold() for w in match if w]
+        lives = [(v, t) for v, t in lives if any(w in t.casefold() for w in words)]
     if not lives:
         return None
     if previous and any(v == previous for v, _ in lives):

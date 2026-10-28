@@ -135,6 +135,11 @@
      "type": "string",
      "minLength": 1
     },
+    "live_match": {
+     "type": "array",
+     "items": {"type": "string", "minLength": 1},
+     "minItems": 1
+    },
     "refresh_sec": {
      "type": [
       "integer",

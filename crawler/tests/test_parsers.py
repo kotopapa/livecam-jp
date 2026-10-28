@@ -587,3 +587,33 @@ def test_shizuoka_doboku():
     path, title, label = rows[0]
     assert path == "numadu/01_funabara/cam_funabara.jpg"
     assert "船原" in title and label.endswith("船原")
+
+
+def test_refresh_approved_feeds_syncs_live_match():
+    from crawler.main import refresh_approved_feeds
+    cam = {"id": "c1", "feed": {"type": "youtube_channel", "url": "UCx"}}
+    rec = {"id": "c1", "feed": {"type": "youtube_channel", "url": "UCx", "live_match": ["道頓堀"]}}
+    assert refresh_approved_feeds([cam], [rec]) == 1
+    assert cam["feed"]["live_match"] == ["道頓堀"]
+    assert refresh_approved_feeds([cam], [rec]) == 0
+    rec["feed"].pop("live_match")
+    assert refresh_approved_feeds([cam], [rec]) == 1
+    assert "live_match" not in cam["feed"]
+
+
+def test_curated_youtube_live_match(monkeypatch):
+    import crawler.sources.curated_youtube as cy
+    rows = [
+        {"id": "a", "name": "道頓堀", "operator": "MBS", "channel_id": "UCx", "live_match": "道頓堀",
+         "lat": 34.6, "lng": 135.5},
+        {"id": "b", "name": "伊丹", "operator": "MBS", "channel_id": "UCx", "live_match": ["伊丹", "Itami"],
+         "lat": 34.7, "lng": 135.4},
+        {"id": "c", "name": "単独", "operator": "X", "video_id": "VVVVVVVVVV1", "live_match": "無視される",
+         "lat": 35.0, "lng": 135.0},
+    ]
+    monkeypatch.setattr(cy, "load_curated", lambda: rows)
+    res = cy.CuratedYoutubeParser().discover(None)
+    feeds = {c.id: c.to_record("2026-10-28")["feed"] for c in res.candidates}
+    assert feeds["a"]["live_match"] == ["道頓堀"]
+    assert feeds["b"]["live_match"] == ["伊丹", "Itami"]
+    assert "live_match" not in feeds["c"]

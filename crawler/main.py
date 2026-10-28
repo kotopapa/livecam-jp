@@ -99,6 +99,16 @@ def refresh_approved_feeds(cameras: list[dict], new_records: list[dict]) -> int:
             cam["fallback"] = rec.get("fallback", cam.get("fallback"))
             cam["last_updated"] = rec.get("last_updated", cam.get("last_updated"))
             updated += 1
+        elif (cam["feed"]["type"] == "youtube_channel"
+                and rec["feed"]["type"] == "youtube_channel"
+                and cam["feed"]["url"] == rec["feed"]["url"]
+                and cam["feed"].get("live_match") != rec["feed"].get("live_match")):
+            # 複数配信チャンネルの枠選びの語（YAML の live_match）だけを同期する
+            if rec["feed"].get("live_match"):
+                cam["feed"]["live_match"] = rec["feed"]["live_match"]
+            else:
+                cam["feed"].pop("live_match", None)
+            updated += 1
     return updated
 
 

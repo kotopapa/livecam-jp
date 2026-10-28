@@ -1,5 +1,5 @@
 {
- "version": "2026-10-28T12:24:52Z",
+ "version": "2026-10-28T12:42:19Z",
  "urgent_version": "2026-10-10T23:18:20Z",
  "cameras": [
   {
@@ -14853,19 +14853,22 @@
    "municipality": "27128",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "6OgYfTMOmhY",
+    "type": "youtube_channel",
+    "url": "UCkKJhKO73xF1pK5h9R82ZGQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "道頓堀"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=czJhGgFsp38"
+    "url": "https://www.youtube.com/channel/UCkKJhKO73xF1pK5h9R82ZGQ/live"
    },
    "operator": "毎日放送（MBS NEWS）",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=czJhGgFsp38",
+    "page_url": "https://www.youtube.com/channel/UCkKJhKO73xF1pK5h9R82ZGQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：毎日放送（MBS NEWS）（YouTubeライブ）"
@@ -14873,7 +14876,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown feed_type=youtube_video / 2026-08-31 配信枠更新: 0P2dOCRPSRM→czJhGgFsp38 / 2026-10-28 配信枠更新: czJhGgFsp38→6OgYfTMOmhY"
+    "note": "bulk: license=unknown feed_type=youtube_video / 2026-08-31 配信枠更新: 0P2dOCRPSRM→czJhGgFsp38 / 2026-10-28 配信枠更新: czJhGgFsp38→6OgYfTMOmhY / 2026-10-28 チャンネル登録化（live_match=道頓堀。複数配信チャンネルでも枠替えに自動追従）"
    },
    "first_seen": "2026-08-18",
    "last_updated": "2026-10-28"
@@ -84851,19 +84854,22 @@
    "municipality": "27128",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "kwUAeYZKjLM",
+    "type": "youtube_channel",
+    "url": "UCQ2mmGKtrBp6rL8tSMJCCwA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "道頓堀"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=i2PpmC1IeKk"
+    "url": "https://www.youtube.com/channel/UCQ2mmGKtrBp6rL8tSMJCCwA/live"
    },
    "operator": "ラジカルビデオジョッキー",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=i2PpmC1IeKk",
+    "page_url": "https://www.youtube.com/channel/UCQ2mmGKtrBp6rL8tSMJCCwA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：ラジカルビデオジョッキー（YouTubeライブ）"
@@ -84871,7 +84877,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True / 2026-10-28 配信枠更新: i2PpmC1IeKk→kwUAeYZKjLM"
+    "note": "bulk: license=unknown with_coords=True / 2026-10-28 配信枠更新: i2PpmC1IeKk→kwUAeYZKjLM / 2026-10-28 チャンネル登録化（live_match=道頓堀。複数配信チャンネルでも枠替えに自動追従）"
    },
    "first_seen": "2026-08-19",
    "last_updated": "2026-10-28"
@@ -222066,19 +222072,22 @@
    "municipality": "28207",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "_nUgTC9zJyc",
+    "type": "youtube_channel",
+    "url": "UCkKJhKO73xF1pK5h9R82ZGQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "伊丹空港"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=_nUgTC9zJyc"
+    "url": "https://www.youtube.com/channel/UCkKJhKO73xF1pK5h9R82ZGQ/live"
    },
    "operator": "MBS NEWS（毎日放送）",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=_nUgTC9zJyc",
+    "page_url": "https://www.youtube.com/channel/UCkKJhKO73xF1pK5h9R82ZGQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：MBS NEWS（毎日放送）（YouTubeライブ）"
@@ -222086,7 +222095,7 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-25",
-    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-09-23 配信枠更新: zgaUF25Bh7E→_nUgTC9zJyc / 2026-10-15 分類 port→other（空港・内陸の施設は港湾ではない。新千歳空港B駐車場に波と潮位が出た利用者報告）"
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-09-23 配信枠更新: zgaUF25Bh7E→_nUgTC9zJyc / 2026-10-15 分類 port→other（空港・内陸の施設は港湾ではない。新千歳空港B駐車場に波と潮位が出た利用者報告） / 2026-10-28 チャンネル登録化（live_match=伊丹空港）"
    },
    "first_seen": "2026-08-25",
    "last_updated": "2026-10-15"

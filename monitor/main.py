@@ -542,11 +542,17 @@ def run(shard: str | None = None) -> int:
         vid = None
         base = f"https://www.youtube.com/channel/{cam['feed']['url']}"
         prev_vid = (statuses.get(cam["id"]) or {}).get("video_id")
+        live_match = cam["feed"].get("live_match") or None
 
-        def _from_streams(text: str, _name=cam["name"], _prev=prev_vid) -> str | None:
-            return pick_live_stream(list_live_in_streams(text), _name, _prev)
+        def _from_streams(text: str, _name=cam["name"], _prev=prev_vid, _match=live_match) -> str | None:
+            return pick_live_stream(list_live_in_streams(text), _name, _prev, _match)
 
-        for path, resolver in (("/streams", _from_streams), ("/live", resolve_youtube_channel_live)):
+        # live_match 付き（複数配信チャンネル）は /live の後詰めをしない: /live は題名を返さず
+        # 別拠点の枠を指しうる。/streams に該当が無ければ配信休止として扱う
+        resolvers = [("/streams", _from_streams)]
+        if not live_match:
+            resolvers.append(("/live", resolve_youtube_channel_live))
+        for path, resolver in resolvers:
             try:
                 throttle.acquire("www.youtube.com")
                 try:

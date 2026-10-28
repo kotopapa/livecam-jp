@@ -239,6 +239,7 @@ class CameraCandidate:
     requires_referer: bool = False
     headers: dict[str, str] = field(default_factory=dict)
     camera_ref: str | None = None       # 都度解決型feedのカメラ管理ID（mlit_roadinfo等）
+    live_match: list[str] | None = None  # youtube_channel: 配信の題名に含まれるべき語（複数配信チャンネルの枠選び）
     country: str | None = None          # 海外カメラのISO 3166-1 alpha-2（国内はNone）
     fallback_url: str | None = None
     address_hint: str | None = None     # geocode.py が使う住所ヒント（出力には含めない）
@@ -266,6 +267,7 @@ class CameraCandidate:
                 "requires_referer": self.requires_referer,
                 "headers": self.headers,
                 **({"camera_ref": self.camera_ref} if self.camera_ref else {}),
+                **({"live_match": list(self.live_match)} if self.live_match else {}),
             },
             "fallback": {"type": "web_page", "url": self.fallback_url or self.page_url},
             "operator": self.operator,

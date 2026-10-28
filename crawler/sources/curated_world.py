@@ -26,6 +26,14 @@ def load_world(path: Path = YAML_PATH) -> list[dict]:
     return data.get("cameras", [])
 
 
+
+def _live_match(cam: dict) -> list[str] | None:
+    """YAML の live_match（文字列か配列）。channel_id と組で、題名にこの語を含む配信だけを枠に選ぶ"""
+    v = cam.get("live_match")
+    if not v:
+        return None
+    return [str(v)] if isinstance(v, str) else [str(x) for x in v]
+
 class CuratedWorldParser(SourceParser):
     source_id = "curated_world"
     seed_url = str(YAML_PATH)
@@ -66,6 +74,7 @@ class CuratedWorldParser(SourceParser):
                     license="unknown",
                     lat=float(cam["lat"]), lng=float(cam["lng"]),
                     coord_accuracy=str(cam.get("accuracy", "approx")),
+                    live_match=_live_match(cam) if cam.get("channel_id") else None,
                     review_note=note,
                 ))
             except (KeyError, TypeError, ValueError) as e:

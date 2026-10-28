@@ -5,6 +5,8 @@
 
 - feed.type=youtube_video。報道系は配信枠の更新で動画IDが変わるため、
   台帳更新 + crawler/main.py の承認済みfeed安全更新で追従する
+- channel_id を書けば youtube_channel（monitor が /streams から現在の配信IDを解決）。複数拠点を
+  同時配信するチャンネルは live_match（題名に含まれるべき語）を併記し、feed.live_match に出す
 - 座標は設置地点の手動指定（coord_accuracy=approx）
 - license=unknown（各運営者の利用条件はレビューで確認。削除依頼即応）
 """
@@ -25,6 +27,14 @@ def load_curated(path: Path = YAML_PATH) -> list[dict]:
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     return data.get("cameras", [])
 
+
+
+def _live_match(cam: dict) -> list[str] | None:
+    """YAML の live_match（文字列か配列）。channel_id と組で、題名にこの語を含む配信だけを枠に選ぶ"""
+    v = cam.get("live_match")
+    if not v:
+        return None
+    return [str(v)] if isinstance(v, str) else [str(x) for x in v]
 
 class CuratedYoutubeParser(SourceParser):
     source_id = "curated_youtube"
@@ -67,6 +77,7 @@ class CuratedYoutubeParser(SourceParser):
                     terms_url=None,
                     lat=float(cam["lat"]), lng=float(cam["lng"]),
                     coord_accuracy=cam.get("accuracy", "approx"),
+                    live_match=_live_match(cam) if cam.get("channel_id") else None,
                     review_note=note,
                 ))
             except (KeyError, TypeError, ValueError) as e:

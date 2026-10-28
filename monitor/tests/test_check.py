@@ -410,3 +410,18 @@ def test_long_frozen_is_hidden_as_error():
     r = {"state": "frozen", "frozen_since": "2026-09-01T00:00:00+00:00"}
     assert _hide_long_frozen(r, now)["state"] == "frozen"
     assert _hide_long_frozen({"state": "ok", "frozen_since": None}, now)["state"] == "ok"
+
+
+def test_pick_live_stream_with_match_words():
+    """live_match があれば題名にその語を含む配信だけを候補にし、無ければ None（配信休止扱い）"""
+    from monitor.check import pick_live_stream
+    lives = [("AAAAAAAAAA1", "【LIVE】大阪・伊丹空港ライブカメラ 飛行機の離着陸"),
+             ("BBBBBBBBBB2", "【LIVE】大阪・道頓堀ライブカメラ グリコ看板前の様子は？")]
+    assert pick_live_stream(lives, "道頓堀 グリコ看板前", None, ["道頓堀"]) == "BBBBBBBBBB2"
+    # 前回の枠が語に合わなければ維持しない（伊丹の枠を引き継がない）
+    assert pick_live_stream(lives, "道頓堀 グリコ看板前", "AAAAAAAAAA1", ["道頓堀"]) == "BBBBBBBBBB2"
+    # 大文字小文字は区別しない・複数語は OR
+    assert pick_live_stream(lives, "x", None, ["ITAMI", "伊丹"]) == "AAAAAAAAAA1"
+    assert pick_live_stream(lives, "道頓堀 グリコ看板前", None, ["戎橋"]) is None
+    # match なしは従来どおり語の重なりで選ぶ
+    assert pick_live_stream(lives, "道頓堀 グリコ看板前", None) == "BBBBBBBBBB2"
