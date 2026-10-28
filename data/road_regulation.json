@@ -1,5 +1,5 @@
 {
- "version": "2026-10-28T13:56:08Z",
+ "version": "2026-10-28T14:21:06Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-10-28T13:56:08Z",
+   "fetched_at": "2026-10-28T14:21:06Z",
    "items": [
     {
      "id": "24398c5f7f2b29b7",
@@ -64871,6 +64871,28 @@
    "direction": "上下",
    "from": "清須市清洲",
    "to": "清須市一場",
+   "content": "片側交互通行",
+   "cause": "その他",
+   "start": "2026年10月28日 22:00",
+   "status": "実施中"
+  },
+  "243995dac360720c": {
+   "kind": "車線規制（国道）",
+   "route": "国道19号",
+   "direction": "上り",
+   "from": "名古屋市中区錦３丁目５",
+   "to": "名古屋市中区錦３丁目５",
+   "content": "２車線規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243995d9995a8018": {
+   "kind": "片側規制（国道）",
+   "route": "国道302号",
+   "direction": "上下",
+   "from": "清須市土田三反地",
+   "to": "清須市土田丁長",
    "content": "片側交互通行",
    "cause": "その他",
    "start": "2026年10月28日 22:00",
