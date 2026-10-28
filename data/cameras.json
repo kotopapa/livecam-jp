@@ -1,5 +1,5 @@
 {
- "version": "2026-10-28T15:16:38Z",
+ "version": "2026-10-28T15:26:08Z",
  "urgent_version": "2026-10-10T23:18:20Z",
  "cameras": [
   {
@@ -13112,19 +13112,22 @@
    "municipality": "09206",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "oy2smvJeGRE",
+    "type": "youtube_channel",
+    "url": "UChy0DnkIETJW0MWR7hIRKBA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "中禅寺湖"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=oy2smvJeGRE"
+    "url": "https://www.youtube.com/channel/UChy0DnkIETJW0MWR7hIRKBA/live"
    },
    "operator": "湖上苑",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=V7x3zhV2aTM",
+    "page_url": "https://www.youtube.com/channel/UChy0DnkIETJW0MWR7hIRKBA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：湖上苑（YouTubeライブ）"
@@ -13132,10 +13135,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-10-28 チャンネル登録化（live_match=中禅寺湖。oy2smvJeGRE → 4dhqsHHqcB8）"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-chuzenji-zen",
@@ -16309,19 +16312,22 @@
    "municipality": "19430",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "eU8A7QQOcso",
+    "type": "youtube_channel",
+    "url": "UCk2oG--VyYST4SYyQkeadjA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "富士山パノラマロープウェイ"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=eU8A7QQOcso"
+    "url": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/live"
    },
    "operator": "UTYテレビ山梨",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=eU8A7QQOcso",
+    "page_url": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：UTYテレビ山梨（YouTubeライブ）"
@@ -16329,10 +16335,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: feed_type=youtube_video with_coords=True"
+    "note": "bulk: feed_type=youtube_video with_coords=True / 2026-10-28 チャンネル登録化（live_match=富士山パノラマロープウェイ。eU8A7QQOcso → rW5aaFv8oxs）"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-fukashima-kaikyo",
@@ -16808,19 +16814,22 @@
    "municipality": "47205",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "qcXFhfNRe5g",
+    "type": "youtube_channel",
+    "url": "UCCpZAU0b2vZv598fDBlTlqw",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "大謝名交差点"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=qcXFhfNRe5g"
+    "url": "https://www.youtube.com/channel/UCCpZAU0b2vZv598fDBlTlqw/live"
    },
    "operator": "BANKSY（宜野湾）",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=qcXFhfNRe5g",
+    "page_url": "https://www.youtube.com/channel/UCCpZAU0b2vZv598fDBlTlqw/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：BANKSY（宜野湾）（YouTubeライブ）"
@@ -16828,10 +16837,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True / 2026-10-04 座標見直し(E): nominatim_osm（旧座標から1039m）"
+    "note": "bulk: license=unknown with_coords=True / 2026-10-04 座標見直し(E): nominatim_osm（旧座標から1039m） / 2026-10-28 チャンネル登録化（live_match=大謝名交差点。qcXFhfNRe5g → 7uT0izIZpD4）"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-10-04"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-ginza-sukiyabashi",
@@ -20795,19 +20804,22 @@
    "municipality": "19430",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "PW6zhYOkunI",
+    "type": "youtube_channel",
+    "url": "UCk2oG--VyYST4SYyQkeadjA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "河口湖駅前"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=PW6zhYOkunI"
+    "url": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/live"
    },
    "operator": "UTYテレビ山梨",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=PW6zhYOkunI",
+    "page_url": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：UTYテレビ山梨（YouTubeライブ）"
@@ -20815,10 +20827,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown feed_type=youtube_video"
+    "note": "bulk: license=unknown feed_type=youtube_video / 2026-10-28 チャンネル登録化（live_match=河口湖駅前。PW6zhYOkunI → ipbHUjTeUIw）"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-kbn-seto-ohashi",
@@ -20987,19 +20999,22 @@
    "municipality": "47201",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "ww9VAQcZozw",
+    "type": "youtube_channel",
+    "url": "UCjh7PkIBYtB0p5erDP4L6xg",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "曙"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=ww9VAQcZozw"
+    "url": "https://www.youtube.com/channel/UCjh7PkIBYtB0p5erDP4L6xg/live"
    },
    "operator": "KIN-TAKA",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=ww9VAQcZozw",
+    "page_url": "https://www.youtube.com/channel/UCjh7PkIBYtB0p5erDP4L6xg/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：KIN-TAKA（YouTubeライブ）"
@@ -21007,10 +21022,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-25",
-    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-08-31 配信枠更新: lYoxW4wkOZQ→j1TZPBCL0j0。2026-09-03 配信枠切替に追従(j1TZPBCL0j0→0XpS37JKd80) / 2026-09-23 配信枠更新: 0XpS37JKd80→ww9VAQcZozw / 2026-10-04 座標見直し(E): nominatim_osm（旧座標から1620m）"
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-08-31 配信枠更新: lYoxW4wkOZQ→j1TZPBCL0j0。2026-09-03 配信枠切替に追従(j1TZPBCL0j0→0XpS37JKd80) / 2026-09-23 配信枠更新: 0XpS37JKd80→ww9VAQcZozw / 2026-10-04 座標見直し(E): nominatim_osm（旧座標から1620m） / 2026-10-28 チャンネル登録化（live_match=曙。ww9VAQcZozw → MObtrgmO1Ps）"
    },
    "first_seen": "2026-08-25",
-   "last_updated": "2026-10-04"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-kisakata-nemunooka",
@@ -22298,19 +22313,22 @@
    "municipality": "10426",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "B_Sc1v1qR-g",
+    "type": "youtube_channel",
+    "url": "UCbn5eHDjwmPC2K9RG8P0i_A",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "移動式"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=B_Sc1v1qR-g"
+    "url": "https://www.youtube.com/channel/UCbn5eHDjwmPC2K9RG8P0i_A/live"
    },
    "operator": "草津町",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=B_Sc1v1qR-g",
+    "page_url": "https://www.youtube.com/channel/UCbn5eHDjwmPC2K9RG8P0i_A/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：草津町（YouTubeライブ）"
@@ -22318,10 +22336,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: feed_type=youtube_video with_coords=True"
+    "note": "bulk: feed_type=youtube_video with_coords=True / 2026-10-28 チャンネル登録化（live_match=移動式。B_Sc1v1qR-g → _Z1UzjJ6o2E）"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-kusatsu-onsen-iriguchi",
@@ -23852,19 +23870,22 @@
    "municipality": "22139",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "tjkw29xKw0c",
+    "type": "youtube_channel",
+    "url": "UClBcyQP2avPiN4RByltADOQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "神明川支流河川"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=tjkw29xKw0c"
+    "url": "https://www.youtube.com/channel/UClBcyQP2avPiN4RByltADOQ/live"
    },
    "operator": "三ヶ日わっしょい内藤チャンネル",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=tjkw29xKw0c",
+    "page_url": "https://www.youtube.com/channel/UClBcyQP2avPiN4RByltADOQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：三ヶ日わっしょい内藤チャンネル（YouTubeライブ）"
@@ -23872,10 +23893,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: -cW1KoSj6kM→96palHpngE4 / 2026-09-23 配信枠更新: 96palHpngE4→tjkw29xKw0c"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: -cW1KoSj6kM→96palHpngE4 / 2026-09-23 配信枠更新: 96palHpngE4→tjkw29xKw0c / 2026-10-28 チャンネル登録化（live_match=神明川支流河川。tjkw29xKw0c → 4saU3fgo0MU）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-00dcd725",
@@ -25814,19 +25835,22 @@
    "municipality": "05463",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "vvnZTAZazDs",
+    "type": "youtube_channel",
+    "url": "UCsMqZQxBAhVbDupWFUu4VMA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "北沢橋"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=vvnZTAZazDs"
+    "url": "https://www.youtube.com/channel/UCsMqZQxBAhVbDupWFUu4VMA/live"
    },
    "operator": "羽後町役場町民生活課",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=vvnZTAZazDs",
+    "page_url": "https://www.youtube.com/channel/UCsMqZQxBAhVbDupWFUu4VMA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：羽後町役場町民生活課（YouTubeライブ）"
@@ -25834,10 +25858,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=北沢橋。vvnZTAZazDs → pxNVpDjIC-4）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-0caed334",
@@ -26004,19 +26028,22 @@
    "municipality": "18207",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "eGMVkf5JWuk",
+    "type": "youtube_channel",
+    "url": "UCbxNvUOvm_SA8YTYTdpBE9g",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "鯖江市ふれあい広場駐車場"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=eGMVkf5JWuk"
+    "url": "https://www.youtube.com/channel/UCbxNvUOvm_SA8YTYTdpBE9g/live"
    },
    "operator": "こしの都ネットワーク(さばスタLIVE)",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=eGMVkf5JWuk",
+    "page_url": "https://www.youtube.com/channel/UCbxNvUOvm_SA8YTYTdpBE9g/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：こしの都ネットワーク(さばスタLIVE)（YouTubeライブ）"
@@ -26024,10 +26051,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=鯖江市ふれあい広場駐車場。eGMVkf5JWuk → o_eosdbNoSo）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-0db637be",
@@ -26425,19 +26452,22 @@
    "municipality": "18207",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "sSG9Ab_Ay4A",
+    "type": "youtube_channel",
+    "url": "UCbxNvUOvm_SA8YTYTdpBE9g",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "鯖江市嚮陽会館前駐車場"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=sSG9Ab_Ay4A"
+    "url": "https://www.youtube.com/channel/UCbxNvUOvm_SA8YTYTdpBE9g/live"
    },
    "operator": "こしの都ネットワーク(さばスタLIVE)",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=sSG9Ab_Ay4A",
+    "page_url": "https://www.youtube.com/channel/UCbxNvUOvm_SA8YTYTdpBE9g/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：こしの都ネットワーク(さばスタLIVE)（YouTubeライブ）"
@@ -26445,10 +26475,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=鯖江市嚮陽会館前駐車場。sSG9Ab_Ay4A → Ge_ciC2wn88）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-100c1d28",
@@ -26741,19 +26771,22 @@
    "municipality": "13106",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "YGosIeNUAY0",
+    "type": "youtube_channel",
+    "url": "UCDyC7xeQxsihyZj8SoICLEw",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "日暮里"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=YGosIeNUAY0"
+    "url": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw/live"
    },
    "operator": "鉄道ファンの待合室",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=YGosIeNUAY0",
+    "page_url": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：鉄道ファンの待合室（YouTubeライブ）"
@@ -26761,10 +26794,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: BZQE7Ztz5b4→YGosIeNUAY0"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: BZQE7Ztz5b4→YGosIeNUAY0 / 2026-10-28 チャンネル登録化（live_match=日暮里。YGosIeNUAY0 → pOhgG8bTIkc）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-31"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-1252f963",
@@ -26972,19 +27005,22 @@
    "municipality": "11245",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "umo1V94Zhcc",
+    "type": "youtube_channel",
+    "url": "UCJLpKOb6re6_Ey3pgbBWI9w",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "池袋方面"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=E5WOIPcbSd4"
+    "url": "https://www.youtube.com/channel/UCJLpKOb6re6_Ey3pgbBWI9w/live"
    },
    "operator": "ふじみ野太郎",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=E5WOIPcbSd4",
+    "page_url": "https://www.youtube.com/channel/UCJLpKOb6re6_Ey3pgbBWI9w/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：ふじみ野太郎（YouTubeライブ）"
@@ -26992,10 +27028,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: RllZxOzq2gk→I_uvMp-WX-0 / 2026-09-23 配信枠更新: I_uvMp-WX-0→E5WOIPcbSd4 / 2026-10-12 配信枠更新: E5WOIPcbSd4 → umo1V94Zhcc"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: RllZxOzq2gk→I_uvMp-WX-0 / 2026-09-23 配信枠更新: I_uvMp-WX-0→E5WOIPcbSd4 / 2026-10-12 配信枠更新: E5WOIPcbSd4 → umo1V94Zhcc / 2026-10-28 チャンネル登録化（live_match=池袋方面。umo1V94Zhcc → VnpwKBu3MDU）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-13659194",
@@ -27010,19 +27046,22 @@
    "municipality": "11245",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "SC7RdafFwDU",
+    "type": "youtube_channel",
+    "url": "UCJLpKOb6re6_Ey3pgbBWI9w",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "東口"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=IRYpctD1Dfo"
+    "url": "https://www.youtube.com/channel/UCJLpKOb6re6_Ey3pgbBWI9w/live"
    },
    "operator": "ふじみ野太郎",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=IRYpctD1Dfo",
+    "page_url": "https://www.youtube.com/channel/UCJLpKOb6re6_Ey3pgbBWI9w/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：ふじみ野太郎（YouTubeライブ）"
@@ -27030,10 +27069,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: kusZaJkUU5M→sdCM-lxg86c / 2026-09-23 配信枠更新: sdCM-lxg86c→IRYpctD1Dfo / 2026-10-12 配信枠更新: IRYpctD1Dfo → SC7RdafFwDU"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: kusZaJkUU5M→sdCM-lxg86c / 2026-09-23 配信枠更新: sdCM-lxg86c→IRYpctD1Dfo / 2026-10-12 配信枠更新: IRYpctD1Dfo → SC7RdafFwDU / 2026-10-28 チャンネル登録化（live_match=東口。SC7RdafFwDU → F9vAgq5iEUI）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-13a9dc57",
@@ -27434,19 +27473,22 @@
    "municipality": "10443",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "7DZP1tiOykA",
+    "type": "youtube_channel",
+    "url": "UCy3hvyby69u7HAWTcUq6EzQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "ゴンドラ山頂駅前"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=7DZP1tiOykA"
+    "url": "https://www.youtube.com/channel/UCy3hvyby69u7HAWTcUq6EzQ/live"
    },
    "operator": "尾瀬岩鞍リゾート",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=7DZP1tiOykA",
+    "page_url": "https://www.youtube.com/channel/UCy3hvyby69u7HAWTcUq6EzQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：尾瀬岩鞍リゾート（YouTubeライブ）"
@@ -27454,10 +27496,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=ゴンドラ山頂駅前。7DZP1tiOykA → TDTe8m3Z1MY）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-168767c3",
@@ -28206,19 +28248,22 @@
    "municipality": "07408",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "bzdjes-PTB0",
+    "type": "youtube_channel",
+    "url": "UC8AHDeJk9r2ko0f2LWp8h1A",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "スカイエリア"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=bzdjes-PTB0"
+    "url": "https://www.youtube.com/channel/UC8AHDeJk9r2ko0f2LWp8h1A/live"
    },
    "operator": "マックアースリゾート福島",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=bzdjes-PTB0",
+    "page_url": "https://www.youtube.com/channel/UC8AHDeJk9r2ko0f2LWp8h1A/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：マックアースリゾート福島（YouTubeライブ）"
@@ -28226,10 +28271,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: ySUSc6zIMU0→3hADiYbSZDs / 2026-09-23 配信枠更新: 3hADiYbSZDs→bzdjes-PTB0"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: ySUSc6zIMU0→3hADiYbSZDs / 2026-09-23 配信枠更新: 3hADiYbSZDs→bzdjes-PTB0 / 2026-10-28 チャンネル登録化（live_match=スカイエリア。bzdjes-PTB0 → V8TKXajF0tM）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-1c6d3ac0",
@@ -29440,19 +29485,22 @@
    "municipality": "20361",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "FZIXqsmcHe0",
+    "type": "youtube_channel",
+    "url": "UC95danhP-6ym8z3ST4ZRR_Q",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "諏訪湖富士山"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=FZIXqsmcHe0"
+    "url": "https://www.youtube.com/channel/UC95danhP-6ym8z3ST4ZRR_Q/live"
    },
    "operator": "下諏訪観光",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=FZIXqsmcHe0",
+    "page_url": "https://www.youtube.com/channel/UC95danhP-6ym8z3ST4ZRR_Q/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：下諏訪観光（YouTubeライブ）"
@@ -29460,10 +29508,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: J9lDHGKyyz0→FZIXqsmcHe0"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: J9lDHGKyyz0→FZIXqsmcHe0 / 2026-10-28 チャンネル登録化（live_match=諏訪湖富士山。FZIXqsmcHe0 → nHd9ShNYrgM）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-31"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-24a207c7",
@@ -31373,19 +31421,22 @@
    "municipality": "13107",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "XpIILFB9iS0",
+    "type": "youtube_channel",
+    "url": "UCkAB51Lbgor6SW8aE4S3zuQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "両国"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=XpIILFB9iS0"
+    "url": "https://www.youtube.com/channel/UCkAB51Lbgor6SW8aE4S3zuQ/live"
    },
    "operator": "Tokyolive",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=XpIILFB9iS0",
+    "page_url": "https://www.youtube.com/channel/UCkAB51Lbgor6SW8aE4S3zuQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：Tokyolive（YouTubeライブ）"
@@ -31393,10 +31444,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=両国。XpIILFB9iS0 → ITQrRCj8lOo）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-32326081",
@@ -32072,19 +32123,22 @@
    "municipality": "13104",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "buT3kGAsfFM",
+    "type": "youtube_channel",
+    "url": "UCOLGSHF7LfL-2svSfwsnOGQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "上落合"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=buT3kGAsfFM"
+    "url": "https://www.youtube.com/channel/UCOLGSHF7LfL-2svSfwsnOGQ/live"
    },
    "operator": "e-CAMチャンネル",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=buT3kGAsfFM",
+    "page_url": "https://www.youtube.com/channel/UCOLGSHF7LfL-2svSfwsnOGQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：e-CAMチャンネル（YouTubeライブ）"
@@ -32092,10 +32146,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=上落合。buT3kGAsfFM → eiku4C25Ctw）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-36d62885",
@@ -37324,19 +37378,22 @@
    "municipality": "13308",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "X14ed-Ryfgg",
+    "type": "youtube_channel",
+    "url": "UC_eA6kJqCVCL2Yds7--WHgQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "奥多摩駅運行"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=X14ed-Ryfgg"
+    "url": "https://www.youtube.com/channel/UC_eA6kJqCVCL2Yds7--WHgQ/live"
    },
    "operator": "Nature",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=X14ed-Ryfgg",
+    "page_url": "https://www.youtube.com/channel/UC_eA6kJqCVCL2Yds7--WHgQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：Nature（YouTubeライブ）"
@@ -37344,10 +37401,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: khKbTz4qZ08→jSQuZGG-7Mo / 2026-09-23 配信枠更新: jSQuZGG-7Mo→X14ed-Ryfgg"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: khKbTz4qZ08→jSQuZGG-7Mo / 2026-09-23 配信枠更新: jSQuZGG-7Mo→X14ed-Ryfgg / 2026-10-28 チャンネル登録化（live_match=奥多摩駅運行。X14ed-Ryfgg → OW7F8MT3DVU）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-5950b82b",
@@ -39991,19 +40048,22 @@
    "municipality": "18404",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "mqupgZ0IiX0",
+    "type": "youtube_channel",
+    "url": "UCxxq0vjnB7Nx-LPSd8QCMkA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "今庄支所"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=mqupgZ0IiX0"
+    "url": "https://www.youtube.com/channel/UCxxq0vjnB7Nx-LPSd8QCMkA/live"
    },
    "operator": "FISHPASS Video",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=mqupgZ0IiX0",
+    "page_url": "https://www.youtube.com/channel/UCxxq0vjnB7Nx-LPSd8QCMkA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：FISHPASS Video（YouTubeライブ）"
@@ -40011,10 +40071,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=今庄支所。mqupgZ0IiX0 → TNWhm9pfHM0）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-6cf2dfc2",
@@ -42842,19 +42902,22 @@
    "municipality": "19212",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "slOgQojt8w8",
+    "type": "youtube_channel",
+    "url": "UCk2oG--VyYST4SYyQkeadjA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "上野原インターチェンジ"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=slOgQojt8w8"
+    "url": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/live"
    },
    "operator": "テレビ山梨(UTY)",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=slOgQojt8w8",
+    "page_url": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：テレビ山梨(UTY)（YouTubeライブ）"
@@ -42862,10 +42925,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-04 座標見直し(E): nominatim_osm（旧座標から64m）"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-04 座標見直し(E): nominatim_osm（旧座標から64m） / 2026-10-28 チャンネル登録化（live_match=上野原インターチェンジ。slOgQojt8w8 → 0ZWLeCUwSOU）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-10-04"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-7ddb47df",
@@ -49933,19 +49996,22 @@
    "municipality": "01103",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "lK0pXrdkwK8",
+    "type": "youtube_channel",
+    "url": "UCrMOS_QpjjeIjMKUMOm4_Qw",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "元町駅交差点"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=lK0pXrdkwK8"
+    "url": "https://www.youtube.com/channel/UCrMOS_QpjjeIjMKUMOm4_Qw/live"
    },
    "operator": "ゼタセグメント",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=lK0pXrdkwK8",
+    "page_url": "https://www.youtube.com/channel/UCrMOS_QpjjeIjMKUMOm4_Qw/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：ゼタセグメント（YouTubeライブ）"
@@ -49953,10 +50019,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-04 座標見直し(E): nominatim_osm（旧座標から53m）"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-04 座標見直し(E): nominatim_osm（旧座標から53m） / 2026-10-28 チャンネル登録化（live_match=元町駅交差点。lK0pXrdkwK8 → CqtfZqZAxlU）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-10-04"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-aa9a6ada",
@@ -50857,19 +50923,22 @@
    "municipality": "13308",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "ND9M0h2o5DQ",
+    "type": "youtube_channel",
+    "url": "UCBT-WLQk0tN_WfjkrqdSVzQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "奥多摩"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=ND9M0h2o5DQ"
+    "url": "https://www.youtube.com/channel/UCBT-WLQk0tN_WfjkrqdSVzQ/live"
    },
    "operator": "Forest Notes",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=ND9M0h2o5DQ",
+    "page_url": "https://www.youtube.com/channel/UCBT-WLQk0tN_WfjkrqdSVzQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：Forest Notes（YouTubeライブ）"
@@ -50877,10 +50946,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=奥多摩。ND9M0h2o5DQ → Q-R8BTtlWSY）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-b22e1180",
@@ -51471,19 +51540,22 @@
    "municipality": "26213",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "eagAtywDxFI",
+    "type": "youtube_channel",
+    "url": "UCAqJUdintpCdd-Kqk-UxFTw",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "美山かやぶきの里"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=eagAtywDxFI"
+    "url": "https://www.youtube.com/channel/UCAqJUdintpCdd-Kqk-UxFTw/live"
    },
    "operator": "agataJapan",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=eagAtywDxFI",
+    "page_url": "https://www.youtube.com/channel/UCAqJUdintpCdd-Kqk-UxFTw/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：agataJapan（YouTubeライブ）"
@@ -51491,10 +51563,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: CMNPhsZEB08→eagAtywDxFI"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: CMNPhsZEB08→eagAtywDxFI / 2026-10-28 チャンネル登録化（live_match=美山かやぶきの里。eagAtywDxFI → roNVuAMzr-A）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-31"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-b5edcfc2",
@@ -52322,19 +52394,22 @@
    "municipality": "13381",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "6UMh7x2RSdE",
+    "type": "youtube_channel",
+    "url": "UCqdejTsUrCvZ55Y8u9v5h9w",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "伊ヶ谷"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=6UMh7x2RSdE"
+    "url": "https://www.youtube.com/channel/UCqdejTsUrCvZ55Y8u9v5h9w/live"
    },
    "operator": "東京都伊豆・小笠原諸島港湾ライブカメラ",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=6UMh7x2RSdE",
+    "page_url": "https://www.youtube.com/channel/UCqdejTsUrCvZ55Y8u9v5h9w/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：東京都伊豆・小笠原諸島港湾ライブカメラ（YouTubeライブ）"
@@ -52342,10 +52417,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=伊ヶ谷。6UMh7x2RSdE → thhX916tvUc）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-bc66043d",
@@ -52948,19 +53023,22 @@
    "municipality": "19201",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "2IP5umloFrE",
+    "type": "youtube_channel",
+    "url": "UCk2oG--VyYST4SYyQkeadjA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "山梨県立科学館"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=2IP5umloFrE"
+    "url": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/live"
    },
    "operator": "テレビ山梨(UTY)",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=2IP5umloFrE",
+    "page_url": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：テレビ山梨(UTY)（YouTubeライブ）"
@@ -52968,10 +53046,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=山梨県立科学館。2IP5umloFrE → Ifpk8p-EDAQ）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-c16aa2e5",
@@ -57925,19 +58003,22 @@
    "municipality": "27103",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "YMA6rmYKmJ8",
+    "type": "youtube_channel",
+    "url": "UCRruWUK0POjg2veibHucffQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "福島駅"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=YMA6rmYKmJ8"
+    "url": "https://www.youtube.com/channel/UCRruWUK0POjg2veibHucffQ/live"
    },
    "operator": "大阪環状線ライブカメラ",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=YMA6rmYKmJ8",
+    "page_url": "https://www.youtube.com/channel/UCRruWUK0POjg2veibHucffQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：大阪環状線ライブカメラ（YouTubeライブ）"
@@ -57945,10 +58026,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: YvQk_N2jpSM→BzD751n3tiM / 2026-09-23 配信枠更新: BzD751n3tiM→YMA6rmYKmJ8（日替わり枠。同チャンネル複数配信のため要定期追従）"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-08-31 配信枠更新: YvQk_N2jpSM→BzD751n3tiM / 2026-09-23 配信枠更新: BzD751n3tiM→YMA6rmYKmJ8（日替わり枠。同チャンネル複数配信のため要定期追従） / 2026-10-28 チャンネル登録化（live_match=福島駅。YMA6rmYKmJ8 → JsbAsUX5hhw）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-df652354",
@@ -60712,19 +60793,22 @@
    "municipality": "05463",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "tdI7ns38IPg",
+    "type": "youtube_channel",
+    "url": "UCsMqZQxBAhVbDupWFUu4VMA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "林崎"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=tdI7ns38IPg"
+    "url": "https://www.youtube.com/channel/UCsMqZQxBAhVbDupWFUu4VMA/live"
    },
    "operator": "羽後町役場町民生活課",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=tdI7ns38IPg",
+    "page_url": "https://www.youtube.com/channel/UCsMqZQxBAhVbDupWFUu4VMA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：羽後町役場町民生活課（YouTubeライブ）"
@@ -60732,10 +60816,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-29",
-    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用"
+    "note": "livecam.asia索引経由で一次ソース(運営者・画像URL・掲載元ページ)を個別確認し採用 / 2026-10-28 チャンネル登録化（live_match=林崎。tdI7ns38IPg → 5UhQAT98fqQ）"
    },
    "first_seen": "2026-08-29",
-   "last_updated": "2026-08-29"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-lcdb-f4b439c3",
@@ -81583,19 +81667,22 @@
    "municipality": "47201",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "jwhQ48gNzYE",
+    "type": "youtube_channel",
+    "url": "UCo_JM-fsLQQLz8hovcKkK0A",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "マキシアルパビル"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=jwhQ48gNzYE"
+    "url": "https://www.youtube.com/channel/UCo_JM-fsLQQLz8hovcKkK0A/live"
    },
    "operator": "8131 okichan（設置: マキシアルパビル）",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=jwhQ48gNzYE",
+    "page_url": "https://www.youtube.com/channel/UCo_JM-fsLQQLz8hovcKkK0A/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：8131 okichan（設置: マキシアルパビル）（YouTubeライブ）"
@@ -81603,10 +81690,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-09-03",
-    "note": "bulk: 2026-09-03 沖縄・離島カメラ調査(ユーザー依頼)。人手方針(license=unknown)に従い採用。既存の okichan（てだこ浦西）と同一チャンネル UCo_JM-fsLQQLz8hovcKkK0A。2026-09-03 isLiveNow=true。既存の那覇8件（牧志交番前・バクノビジョン等）とは別地点。 / 2026-09-23 配信枠更新: HVs3QN2P7RI→jwhQ48gNzYE"
+    "note": "bulk: 2026-09-03 沖縄・離島カメラ調査(ユーザー依頼)。人手方針(license=unknown)に従い採用。既存の okichan（てだこ浦西）と同一チャンネル UCo_JM-fsLQQLz8hovcKkK0A。2026-09-03 isLiveNow=true。既存の那覇8件（牧志交番前・バクノビジョン等）とは別地点。 / 2026-09-23 配信枠更新: HVs3QN2P7RI→jwhQ48gNzYE / 2026-10-28 チャンネル登録化（live_match=マキシアルパビル。jwhQ48gNzYE → hUQzS5zx3YM）"
    },
    "first_seen": "2026-09-03",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-oki-dbbdf50a",
@@ -81928,19 +82015,22 @@
    "municipality": "47329",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "wCmEcbNro0M",
+    "type": "youtube_channel",
+    "url": "UCo_JM-fsLQQLz8hovcKkK0A",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "イオンモール浦西"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=wCmEcbNro0M"
+    "url": "https://www.youtube.com/channel/UCo_JM-fsLQQLz8hovcKkK0A/live"
    },
    "operator": "8131 okichan",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=wCmEcbNro0M",
+    "page_url": "https://www.youtube.com/channel/UCo_JM-fsLQQLz8hovcKkK0A/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：8131 okichan（YouTubeライブ）"
@@ -81948,10 +82038,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-25",
-    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-10-28 チャンネル登録化（live_match=イオンモール浦西。wCmEcbNro0M → xlk-AHT8Mr4）"
    },
    "first_seen": "2026-08-25",
-   "last_updated": "2026-08-25"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-omaezaki-port",
@@ -82157,19 +82247,22 @@
    "municipality": "27128",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "alZ4nKwDQfc",
+    "type": "youtube_channel",
+    "url": "UCd6GEK664CTEWRZda7Fu7Lg",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "大阪城"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=alZ4nKwDQfc"
+    "url": "https://www.youtube.com/channel/UCd6GEK664CTEWRZda7Fu7Lg/live"
    },
    "operator": "テレビ大阪",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=-Vck0hn-zqk",
+    "page_url": "https://www.youtube.com/channel/UCd6GEK664CTEWRZda7Fu7Lg/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：テレビ大阪（YouTubeライブ）"
@@ -82177,10 +82270,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: feed_type=youtube_video with_coords=True"
+    "note": "bulk: feed_type=youtube_video with_coords=True / 2026-10-28 チャンネル登録化（live_match=大阪城。alZ4nKwDQfc → dOKOq-jU1b8）"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-osaka-tc-shinosaka-taxi-1",
@@ -83324,19 +83417,22 @@
    "municipality": "12211",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "KBwgvcdA7Qo",
+    "type": "youtube_channel",
+    "url": "UC5JYOz4iA6xfbkoXqUdzWPA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "ターミナル"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=KBwgvcdA7Qo"
+    "url": "https://www.youtube.com/channel/UC5JYOz4iA6xfbkoXqUdzWPA/live"
    },
    "operator": "SUPER PARKING",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=KBwgvcdA7Qo",
+    "page_url": "https://www.youtube.com/channel/UC5JYOz4iA6xfbkoXqUdzWPA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：SUPER PARKING（YouTubeライブ）"
@@ -83344,10 +83440,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-25",
-    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-10-28 チャンネル登録化（live_match=ターミナル。KBwgvcdA7Qo → zKssQHbiIjM）"
    },
    "first_seen": "2026-08-25",
-   "last_updated": "2026-08-25"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-parking-narita-superparking-2",
@@ -85018,19 +85114,22 @@
    "municipality": "09206",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "7oRZg_BHPXg",
+    "type": "youtube_channel",
+    "url": "UCwYeh4cu-0z0hFd3wwYgzeA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "神橋"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=7oRZg_BHPXg"
+    "url": "https://www.youtube.com/channel/UCwYeh4cu-0z0hFd3wwYgzeA/live"
    },
    "operator": "日光二荒山神社",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=7oRZg_BHPXg",
+    "page_url": "https://www.youtube.com/channel/UCwYeh4cu-0z0hFd3wwYgzeA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：日光二荒山神社（YouTubeライブ）"
@@ -85038,10 +85137,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-10-28 チャンネル登録化（live_match=神橋。7oRZg_BHPXg → augCXu3BkhM）"
    },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-08-19"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-r2-15e2f401",
@@ -85734,19 +85833,22 @@
    "municipality": "20208",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "nWc4_FFY-WY",
+    "type": "youtube_channel",
+    "url": "UCRs28y8_qHheJ_yPjZ37e-g",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "崖上のペンギン村"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=nWc4_FFY-WY"
+    "url": "https://www.youtube.com/channel/UCRs28y8_qHheJ_yPjZ37e-g/live"
    },
    "operator": "小諸市動物園",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=nWc4_FFY-WY",
+    "page_url": "https://www.youtube.com/channel/UCRs28y8_qHheJ_yPjZ37e-g/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：小諸市動物園（YouTubeライブ）"
@@ -85754,10 +85856,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-31 配信枠更新: xHRjp3b9WTI→T0dOSkPrCeM / 2026-09-23 配信枠更新: T0dOSkPrCeM→nWc4_FFY-WY"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-31 配信枠更新: xHRjp3b9WTI→T0dOSkPrCeM / 2026-09-23 配信枠更新: T0dOSkPrCeM→nWc4_FFY-WY / 2026-10-28 チャンネル登録化（live_match=崖上のペンギン村。nWc4_FFY-WY → AdjOwXzWHSE）"
    },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-r2-40ddaa3e",
@@ -85999,19 +86101,22 @@
    "municipality": "26106",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "k773eesrw9E",
+    "type": "youtube_channel",
+    "url": "UCd_j7Zc1KmjHkVyvNIySehQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "JR京都駅"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=k773eesrw9E"
+    "url": "https://www.youtube.com/channel/UCd_j7Zc1KmjHkVyvNIySehQ/live"
    },
    "operator": "JR京都駅ライブカメラ（民間）",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=k773eesrw9E",
+    "page_url": "https://www.youtube.com/channel/UCd_j7Zc1KmjHkVyvNIySehQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：JR京都駅ライブカメラ（民間）（YouTubeライブ）"
@@ -86019,10 +86124,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-31 配信枠更新: g6ysLd1h5v4→SVYBVl35R3I / 2026-09-23 配信枠更新: SVYBVl35R3I→k773eesrw9E（日替わり枠。同チャンネル複数配信のため要定期追従）"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-31 配信枠更新: g6ysLd1h5v4→SVYBVl35R3I / 2026-09-23 配信枠更新: SVYBVl35R3I→k773eesrw9E（日替わり枠。同チャンネル複数配信のため要定期追従） / 2026-10-28 チャンネル登録化（live_match=JR京都駅。k773eesrw9E → TMw-EdYQp7I）"
    },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-r2-452b7be7",
@@ -87374,19 +87479,22 @@
    "municipality": "20321",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "Arw1omQUnr4",
+    "type": "youtube_channel",
+    "url": "UCwWWMxoGXIVX_LZUn11bneQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "浅間山"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=Arw1omQUnr4"
+    "url": "https://www.youtube.com/channel/UCwWWMxoGXIVX_LZUn11bneQ/live"
    },
    "operator": "長野県軽井沢町",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=Arw1omQUnr4",
+    "page_url": "https://www.youtube.com/channel/UCwWWMxoGXIVX_LZUn11bneQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：長野県軽井沢町（YouTubeライブ）"
@@ -87394,10 +87502,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-10-28 チャンネル登録化（live_match=浅間山。Arw1omQUnr4 → UEp66_F6GWE）"
    },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-08-19"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-r2-72e017f6",
@@ -87975,19 +88083,22 @@
    "municipality": "14204",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "hxKBnoLH0uk",
+    "type": "youtube_channel",
+    "url": "UCfoiWJgMmg4p9olz1WE0-9A",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "材木座海岸"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=hxKBnoLH0uk"
+    "url": "https://www.youtube.com/channel/UCfoiWJgMmg4p9olz1WE0-9A/live"
    },
    "operator": "FlyingSuika（ローカス鎌倉）",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=hxKBnoLH0uk",
+    "page_url": "https://www.youtube.com/channel/UCfoiWJgMmg4p9olz1WE0-9A/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：FlyingSuika（ローカス鎌倉）（YouTubeライブ）"
@@ -87995,10 +88106,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-10-28 チャンネル登録化（live_match=材木座海岸。hxKBnoLH0uk → Z9Q9akr7QSE）"
    },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-08-19"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-r2-8f407d9f",
@@ -88653,19 +88764,22 @@
    "municipality": "19211",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "SLbSOmAazhg",
+    "type": "youtube_channel",
+    "url": "UCZ974tQkAeV7_l_opPHCcdg",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "熊野権現踏切"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=SLbSOmAazhg"
+    "url": "https://www.youtube.com/channel/UCZ974tQkAeV7_l_opPHCcdg/live"
    },
    "operator": "The Dramatic 中央本線。",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=SLbSOmAazhg",
+    "page_url": "https://www.youtube.com/channel/UCZ974tQkAeV7_l_opPHCcdg/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：The Dramatic 中央本線。（YouTubeライブ）"
@@ -88673,10 +88787,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-31 配信枠更新: G3_58aWKi_Q→SLbSOmAazhg"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-31 配信枠更新: G3_58aWKi_Q→SLbSOmAazhg / 2026-10-28 チャンネル登録化（live_match=熊野権現踏切。SLbSOmAazhg → -o-0x1vgU78）"
    },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-08-31"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-r2-a3692ade",
@@ -89066,19 +89180,22 @@
    "municipality": "01202",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "O6pHZUUUj7w",
+    "type": "youtube_channel",
+    "url": "UCynX4LJTQ_H7_KPy7QiIS2A",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "路面電車"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=O6pHZUUUj7w"
+    "url": "https://www.youtube.com/channel/UCynX4LJTQ_H7_KPy7QiIS2A/live"
    },
    "operator": "HAKODATE LIVE CAMERA",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=O6pHZUUUj7w",
+    "page_url": "https://www.youtube.com/channel/UCynX4LJTQ_H7_KPy7QiIS2A/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：HAKODATE LIVE CAMERA（YouTubeライブ）"
@@ -89086,10 +89203,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-19",
-    "note": "bulk: license=unknown with_coords=True / 2026-08-31 配信枠更新: rCgvMJGdhNo→P1GBlL8wwoE / 2026-09-23 配信枠更新: P1GBlL8wwoE→O6pHZUUUj7w"
+    "note": "bulk: license=unknown with_coords=True / 2026-08-31 配信枠更新: rCgvMJGdhNo→P1GBlL8wwoE / 2026-09-23 配信枠更新: P1GBlL8wwoE→O6pHZUUUj7w / 2026-10-28 チャンネル登録化（live_match=路面電車。O6pHZUUUj7w → 0pDnGSYXdMk）"
    },
    "first_seen": "2026-08-19",
-   "last_updated": "2026-09-23"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-r2-bfbac06e",
@@ -95784,19 +95901,22 @@
    "municipality": "22101",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "e5fTf-gywY0",
+    "type": "youtube_channel",
+    "url": "UCOLVB0iYK8ahQ0mFn-lF-8g",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "日本平"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=e5fTf-gywY0"
+    "url": "https://www.youtube.com/channel/UCOLVB0iYK8ahQ0mFn-lF-8g/live"
    },
    "operator": "SBS静岡放送",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=e5fTf-gywY0",
+    "page_url": "https://www.youtube.com/channel/UCOLVB0iYK8ahQ0mFn-lF-8g/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：SBS静岡放送（YouTubeライブ）"
@@ -95804,10 +95924,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: feed_type=youtube_video with_coords=True"
+    "note": "bulk: feed_type=youtube_video with_coords=True / 2026-10-28 チャンネル登録化（live_match=日本平。e5fTf-gywY0 → pPW9tqTL0BU）"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-sbs-shimizu-yui",
@@ -96092,19 +96212,22 @@
    "municipality": "42208",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "tEym4tCR1Js",
+    "type": "youtube_channel",
+    "url": "UCiK4obZhOWVjA4xNPfUoPwA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "土谷棚田"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=tEym4tCR1Js"
+    "url": "https://www.youtube.com/channel/UCiK4obZhOWVjA4xNPfUoPwA/live"
    },
    "operator": "chunchunTV（松浦市ケーブル系）",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=tEym4tCR1Js",
+    "page_url": "https://www.youtube.com/channel/UCiK4obZhOWVjA4xNPfUoPwA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：chunchunTV（松浦市ケーブル系）（YouTubeライブ）"
@@ -96112,10 +96235,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-25",
-    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-10-28 チャンネル登録化（live_match=土谷棚田。tEym4tCR1Js → a9V34RRTAQo）"
    },
    "first_seen": "2026-08-25",
-   "last_updated": "2026-08-25"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-scenic-ibuki-highschool-ibukiyama",
@@ -96900,19 +97023,22 @@
    "municipality": "01519",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "_CTve3fF0W4",
+    "type": "youtube_channel",
+    "url": "UCp1PQJKoJfZcfAcYlOh8sKA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "姫沼園地"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=_CTve3fF0W4"
+    "url": "https://www.youtube.com/channel/UCp1PQJKoJfZcfAcYlOh8sKA/live"
    },
    "operator": "Tetsu Kuro（YouTubeチャンネル）",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=_CTve3fF0W4",
+    "page_url": "https://www.youtube.com/channel/UCp1PQJKoJfZcfAcYlOh8sKA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：Tetsu Kuro（YouTubeチャンネル）（YouTubeライブ）"
@@ -96920,10 +97046,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-25",
-    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-10-28 チャンネル登録化（live_match=姫沼園地。_CTve3fF0W4 → wL2i45IZfvs）"
    },
    "first_seen": "2026-08-25",
-   "last_updated": "2026-08-25"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-scenic-rishiri-motodomari-rishirizan",
@@ -97941,19 +98067,22 @@
    "municipality": "07210",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "MhSWFRiy48Y",
+    "type": "youtube_channel",
+    "url": "UCdl93kGO3Di8TZhleUtjoFA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "合戦場のしだれ桜"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=MhSWFRiy48Y"
+    "url": "https://www.youtube.com/channel/UCdl93kGO3Di8TZhleUtjoFA/live"
    },
    "operator": "いわしろ夢現塾",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=MhSWFRiy48Y",
+    "page_url": "https://www.youtube.com/channel/UCdl93kGO3Di8TZhleUtjoFA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：いわしろ夢現塾（YouTubeライブ）"
@@ -97961,10 +98090,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-09-30",
-    "note": "bulk: 2026-09-30 全国多角調査（星空・気象/牧場・自然/街・庁舎/交通・文化/産業・季節）。運営者・配信/更新・規約を個別確認、ユーザー承認"
+    "note": "bulk: 2026-09-30 全国多角調査（星空・気象/牧場・自然/街・庁舎/交通・文化/産業・季節）。運営者・配信/更新・規約を個別確認、ユーザー承認 / 2026-10-28 チャンネル登録化（live_match=合戦場のしだれ桜。MhSWFRiy48Y → LEeq3Dwmjyc）"
    },
    "first_seen": "2026-09-30",
-   "last_updated": "2026-09-30"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-season-gyokusenin-maru-garden",
@@ -215486,19 +215615,22 @@
    "municipality": "27127",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "1na-ORGC1P8",
+    "type": "youtube_channel",
+    "url": "UCwNfkYp9gKIvQDN1kPhpCsQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "北新地本通"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=1na-ORGC1P8"
+    "url": "https://www.youtube.com/channel/UCwNfkYp9gKIvQDN1kPhpCsQ/live"
    },
    "operator": "F.S.T. NET",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=1na-ORGC1P8",
+    "page_url": "https://www.youtube.com/channel/UCwNfkYp9gKIvQDN1kPhpCsQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：F.S.T. NET（YouTubeライブ）"
@@ -215506,10 +215638,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-25",
-    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用)"
+    "note": "bulk: 2026-08-25 全国空白地帯・離島・ジャンル横断調査(id指定, license=unknown 人手方針に従い採用) / 2026-10-28 チャンネル登録化（live_match=北新地本通。1na-ORGC1P8 → CtFhpJFGqC8）"
    },
    "first_seen": "2026-08-25",
-   "last_updated": "2026-08-25"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-street-fst-minoh-aonoshinke",
@@ -224498,19 +224630,22 @@
    "municipality": "23445",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "UvSPftyU30U",
+    "type": "youtube_channel",
+    "url": "UCFM4GflSxh1UEJK1MJbnsEg",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "内海海岸"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=UvSPftyU30U"
+    "url": "https://www.youtube.com/channel/UCFM4GflSxh1UEJK1MJbnsEg/live"
    },
    "operator": "南知多町観光協会",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=Ka8HqXkN9oM",
+    "page_url": "https://www.youtube.com/channel/UCFM4GflSxh1UEJK1MJbnsEg/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：南知多町観光協会（YouTubeライブ）"
@@ -224518,10 +224653,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-18",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-10-28 チャンネル登録化（live_match=内海海岸。UvSPftyU30U → 3E_vx6pZ3aM）"
    },
    "first_seen": "2026-08-18",
-   "last_updated": "2026-08-18"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-vd-chitose-aquarium-underwater",
@@ -891652,19 +891787,22 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "cCRm_ZwxH1w",
+    "type": "youtube_channel",
+    "url": "UCsy6UOjk8q7Ajq9yQ7iDAbA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "Gyeongbokgung"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=cCRm_ZwxH1w"
+    "url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live"
    },
    "operator": "GiGAeyes Live TV(KTテレコップ)",
    "source": {
-    "page_url": "https://www.kttelecop.co.kr",
+    "page_url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：GiGAeyes Live TV(KTテレコップ)（YouTubeライブ）"
@@ -891672,10 +891810,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-09-02",
-    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用。既存「光化門広場」(GiGAeyes web_page)の隣接地点だが別カメラ(宮殿正面)"
+    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用。既存「光化門広場」(GiGAeyes web_page)の隣接地点だが別カメラ(宮殿正面) / 2026-10-28 チャンネル登録化（live_match=Gyeongbokgung。cCRm_ZwxH1w → IcTMxC_k57A）"
    },
    "first_seen": "2026-09-02",
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "world-51850b9b",
@@ -915500,19 +915638,22 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "rbrlNykp6SY",
+    "type": "youtube_channel",
+    "url": "UCxTqE-VM_Tfe6pAjrJHMByQ",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "南海遊客中心"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=rbrlNykp6SY"
+    "url": "https://www.youtube.com/channel/UCxTqE-VM_Tfe6pAjrJHMByQ/live"
    },
    "operator": "交通部観光署澎湖国家風景区管理処",
    "source": {
-    "page_url": "https://www.penghu-nsa.gov.tw",
+    "page_url": "https://www.youtube.com/channel/UCxTqE-VM_Tfe6pAjrJHMByQ/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：交通部観光署澎湖国家風景区管理処（YouTubeライブ）"
@@ -915520,10 +915661,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-09-02",
-    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用"
+    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用 / 2026-10-28 チャンネル登録化（live_match=南海遊客中心。rbrlNykp6SY → a1A44ICD6zE）"
    },
    "first_seen": "2026-09-02",
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "world-f06332d5",
@@ -921922,19 +922063,22 @@
    "municipality": "26208",
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "rLX-tzupnxc",
+    "type": "youtube_channel",
+    "url": "UCDyC7xeQxsihyZj8SoICLEw",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "向日町操車場"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=rLX-tzupnxc"
+    "url": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw/live"
    },
    "operator": "鉄道ファンの待合室",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=rLX-tzupnxc",
+    "page_url": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：鉄道ファンの待合室（YouTubeライブ）"
@@ -921942,10 +922086,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-10-12",
-    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観 2026-10-14 配信枠更新: 7kCOfXcjDso → rLX-tzupnxc（旧枠は配信終了、チャンネルの現行ライブへ追従）"
+    "note": "2026-10-12 鉄道ライブカメラ調査（4班）をユーザー判断で全採用・分類は景観 2026-10-14 配信枠更新: 7kCOfXcjDso → rLX-tzupnxc（旧枠は配信終了、チャンネルの現行ライブへ追従） / 2026-10-28 チャンネル登録化（live_match=向日町操車場。rLX-tzupnxc → tpEsJZFnTVA）"
    },
    "first_seen": "2026-10-12",
-   "last_updated": "2026-10-14"
+   "last_updated": "2026-10-28"
   },
   {
    "id": "curated-rail-nagatoro-iwadatami",

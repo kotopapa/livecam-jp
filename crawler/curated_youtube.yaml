@@ -114,10 +114,12 @@ cameras:
     lat: 31.6280
     lng: 130.7520
 
+  # 2026-10-28 チャンネル登録化（旧 PW6zhYOkunI → ipbHUjTeUIw。同チャンネルが複数拠点を同時配信するので題名に「河口湖駅前」を含む枠だけを選ぶ）
   - id: curated-kawaguchiko-uty
     name: 富士山 河口湖駅前
     operator: UTYテレビ山梨
-    video_id: PW6zhYOkunI
+    channel_id: UCk2oG--VyYST4SYyQkeadjA
+    live_match: 河口湖駅前
     category: scenic
     prefecture: "19"
     lat: 35.4980
@@ -331,10 +333,12 @@ cameras:
   # lng: 142.156
   # note: 島内複数地点のプレイリスト配信（離島港湾情報プラットフォーム）
 
+  # 2026-10-28 チャンネル登録化（旧 eU8A7QQOcso → rW5aaFv8oxs。同チャンネルが複数拠点を同時配信するので題名に「富士山パノラマロープウェイ」を含む枠だけを選ぶ）
   - id: curated-fuji-panorama-uty
     name: 富士山パノラマロープウェイ〜河口湖
     operator: "UTYテレビ山梨"
-    video_id: "eU8A7QQOcso"
+    channel_id: UCk2oG--VyYST4SYyQkeadjA
+    live_match: 富士山パノラマロープウェイ
     category: scenic
     prefecture: "19"
     lat: 35.517
@@ -388,10 +392,12 @@ cameras:
     lng: 131.048
     note: 草千里展望所から
 
+  # 2026-10-28 チャンネル登録化（旧 alZ4nKwDQfc → dOKOq-jU1b8。同チャンネルが複数拠点を同時配信するので題名に「大阪城」を含む枠だけを選ぶ）
   - id: curated-osaka-castle-tvo
     name: 大阪城（天満橋から）
     operator: "テレビ大阪"
-    video_id: "alZ4nKwDQfc"
+    channel_id: UCd6GEK664CTEWRZda7Fu7Lg
+    live_match: 大阪城
     category: scenic
     prefecture: "27"
     lat: 34.687
@@ -464,10 +470,12 @@ cameras:
     lat: 36.622
     lng: 138.596
 
+  # 2026-10-28 チャンネル登録化（旧 B_Sc1v1qR-g → _Z1UzjJ6o2E。同チャンネルが複数拠点を同時配信するので題名に「移動式」を含む枠だけを選ぶ）
   - id: curated-kusatsu-mobile
     name: 草津温泉（移動式カメラ）
     operator: "草津町"
-    video_id: "B_Sc1v1qR-g"
+    channel_id: UCbn5eHDjwmPC2K9RG8P0i_A
+    live_match: 移動式
     category: scenic
     prefecture: "10"
     lat: 36.6225
@@ -878,10 +886,12 @@ cameras:
     lat: 36.702
     lng: 137.213
 
+  # 2026-10-28 チャンネル登録化（旧 e5fTf-gywY0 → pPW9tqTL0BU。同チャンネルが複数拠点を同時配信するので題名に「日本平」を含む枠だけを選ぶ）
   - id: curated-sbs-nihondaira
     name: 日本平から富士山
     operator: "SBS静岡放送"
-    video_id: "e5fTf-gywY0"
+    channel_id: UCOLVB0iYK8ahQ0mFn-lF-8g
+    live_match: 日本平
     category: scenic
     prefecture: "22"
     lat: 34.964
@@ -1007,10 +1017,12 @@ cameras:
     lat: 40.455
     lng: 140.92
 
+  # 2026-10-28 チャンネル登録化（旧 oy2smvJeGRE → 4dhqsHHqcB8。同チャンネルが複数拠点を同時配信するので題名に「中禅寺湖」を含む枠だけを選ぶ）
   - id: curated-chuzenji-kojoen
     name: 中禅寺湖（湖上苑から）
     operator: "湖上苑"
-    video_id: "oy2smvJeGRE"
+    channel_id: UChy0DnkIETJW0MWR7hIRKBA
+    live_match: 中禅寺湖
     category: scenic
     prefecture: "09"
     lat: 36.732
@@ -1444,10 +1456,12 @@ cameras:
     lat: 33.961672
     lng: 130.958801
 
+  # 2026-10-28 チャンネル登録化（旧 qcXFhfNRe5g → 7uT0izIZpD4。同チャンネルが複数拠点を同時配信するので題名に「大謝名交差点」を含む枠だけを選ぶ）
   - id: curated-ginowan-r58
     name: 宜野湾 国道58号 大謝名交差点
     operator: "BANKSY（宜野湾）"
-    video_id: "qcXFhfNRe5g"
+    channel_id: UCCpZAU0b2vZv598fDBlTlqw
+    live_match: 大謝名交差点
     category: road
     prefecture: "47"
     lat: 26.268831
@@ -1533,10 +1547,12 @@ cameras:
     lng: 138.221
     note: 有事は画角変更運用
 
+  # 2026-10-28 チャンネル登録化（旧 UvSPftyU30U → 3E_vx6pZ3aM。同チャンネルが複数拠点を同時配信するので題名に「内海海岸」を含む枠だけを選ぶ）
   - id: curated-utsumi-beach
     name: 内海海岸
     operator: "南知多町観光協会"
-    video_id: "UvSPftyU30U"
+    channel_id: UCFM4GflSxh1UEJK1MJbnsEg
+    live_match: 内海海岸
     category: coast
     prefecture: "23"
     lat: 34.687
@@ -2700,10 +2716,12 @@ cameras:
     lng: 138.1876
     note: "本堂前方向の常設ライブ"
 
+  # 2026-10-28 チャンネル登録化（旧 7oRZg_BHPXg → augCXu3BkhM。同チャンネルが複数拠点を同時配信するので題名に「神橋」を含む枠だけを選ぶ）
   - id: curated-r2-15c96162
     name: 日光二荒山神社 神橋
     operator: "日光二荒山神社"
-    video_id: "7oRZg_BHPXg"
+    channel_id: UCwYeh4cu-0z0hFd3wwYgzeA
+    live_match: 神橋
     category: scenic
     prefecture: "09"
     lat: 36.7549
@@ -2732,10 +2750,12 @@ cameras:
     lng: 139.551
     note: "鶴岡八幡宮参道段葛。同chに第2(UrZWLQSjOuQ)・第3(5bEHNKM2H2k)あり"
 
+  # 2026-10-28 チャンネル登録化（旧 hxKBnoLH0uk → Z9Q9akr7QSE。同チャンネルが複数拠点を同時配信するので題名に「材木座海岸」を含む枠だけを選ぶ）
   - id: curated-r2-8dd282ef
     name: 鎌倉 材木座海岸・由比ガ浜
     operator: "FlyingSuika（ローカス鎌倉）"
-    video_id: "hxKBnoLH0uk"
+    channel_id: UCfoiWJgMmg4p9olz1WE0-9A
+    live_match: 材木座海岸
     category: scenic
     prefecture: "14"
     lat: 35.305
@@ -3583,10 +3603,12 @@ cameras:
     note: "ローカル私鉄終着駅"
 
   # 2026-08-31 配信枠更新: G3_58aWKi_Q → SLbSOmAazhg
+  # 2026-10-28 チャンネル登録化（旧 SLbSOmAazhg → -o-0x1vgU78。同チャンネルが複数拠点を同時配信するので題名に「熊野権現踏切」を含む枠だけを選ぶ）
   - id: curated-r2-a33106fd
     name: JR中央本線 熊野権現踏切
     operator: "The Dramatic 中央本線。"
-    video_id: "SLbSOmAazhg"
+    channel_id: UCZ974tQkAeV7_l_opPHCcdg
+    live_match: 熊野権現踏切
     category: other
     prefecture: "19"
     lat: 35.663
@@ -3629,10 +3651,12 @@ cameras:
 
   # 2026-08-31 配信枠更新: g6ysLd1h5v4 → SVYBVl35R3I
   # 2026-09-23 配信枠更新: SVYBVl35R3I → k773eesrw9E
+  # 2026-10-28 チャンネル登録化（旧 k773eesrw9E → TMw-EdYQp7I。同チャンネルが複数拠点を同時配信するので題名に「JR京都駅」を含む枠だけを選ぶ）
   - id: curated-r2-4457f7ee
     name: JR京都駅 新幹線・東海道線
     operator: "JR京都駅ライブカメラ（民間）"
-    video_id: k773eesrw9E
+    channel_id: UCd_j7Zc1KmjHkVyvNIySehQ
+    live_match: JR京都駅
     category: other
     prefecture: "26"
     lat: 34.985
@@ -3697,10 +3721,12 @@ cameras:
 
   # 2026-08-31 配信枠更新: rCgvMJGdhNo → P1GBlL8wwoE
   # 2026-09-23 配信枠更新: P1GBlL8wwoE → O6pHZUUUj7w
+  # 2026-10-28 チャンネル登録化（旧 O6pHZUUUj7w → 0pDnGSYXdMk。同チャンネルが複数拠点を同時配信するので題名に「路面電車」を含む枠だけを選ぶ）
   - id: curated-r2-bbbd5737
     name: 函館駅前（路面電車）
     operator: "HAKODATE LIVE CAMERA"
-    video_id: O6pHZUUUj7w
+    channel_id: UCynX4LJTQ_H7_KPy7QiIS2A
+    live_match: 路面電車
     category: other
     prefecture: "01"
     lat: 41.7737
@@ -4165,10 +4191,12 @@ cameras:
     lng: 138.2181
     note: "蓼科山方向"
 
+  # 2026-10-28 チャンネル登録化（旧 Arw1omQUnr4 → UEp66_F6GWE。同チャンネルが複数拠点を同時配信するので題名に「浅間山」を含む枠だけを選ぶ）
   - id: curated-r2-72c8880d
     name: 浅間山(軽井沢町役場)
     operator: "長野県軽井沢町"
-    video_id: "Arw1omQUnr4"
+    channel_id: UCwWWMxoGXIVX_LZUn11bneQ
+    live_match: 浅間山
     category: volcano
     prefecture: "20"
     lat: 36.3486
@@ -4443,10 +4471,12 @@ cameras:
 
   # 2026-08-31 配信枠更新: xHRjp3b9WTI → T0dOSkPrCeM
   # 2026-09-23 配信枠更新: T0dOSkPrCeM → nWc4_FFY-WY
+  # 2026-10-28 チャンネル登録化（旧 nWc4_FFY-WY → AdjOwXzWHSE。同チャンネルが複数拠点を同時配信するので題名に「崖上のペンギン村」を含む枠だけを選ぶ）
   - id: curated-r2-40d2fd8d
     name: 小諸市動物園 崖上のペンギン村
     operator: "小諸市動物園"
-    video_id: nWc4_FFY-WY
+    channel_id: UCRs28y8_qHheJ_yPjZ37e-g
+    live_match: 崖上のペンギン村
     category: healing
     prefecture: "20"
     lat: 36.3216
@@ -5077,10 +5107,12 @@ cameras:
 
   # 2026-08-31 配信枠更新: lYoxW4wkOZQ → j1TZPBCL0j0
   # 2026-09-23 配信枠更新: 0XpS37JKd80 → ww9VAQcZozw
+  # 2026-10-28 チャンネル登録化（旧 ww9VAQcZozw → MObtrgmO1Ps。同チャンネルが複数拠点を同時配信するので題名に「曙」を含む枠だけを選ぶ）
   - id: curated-kintaka-tomari-ohashi
     name: "泊大橋〜曙（国道58号 渋滞状況）"
     operator: "KIN-TAKA"
-    video_id: ww9VAQcZozw
+    channel_id: UCjh7PkIBYtB0p5erDP4L6xg
+    live_match: 曙
     category: "road"
     prefecture: "47"
     lat: 26.227267
@@ -5197,10 +5229,12 @@ cameras:
     note: "oEmbed 200 / チャンネル /live から解決。maedamisaki.jp"
 
 
+  # 2026-10-28 チャンネル登録化（旧 wCmEcbNro0M → xlk-AHT8Mr4。同チャンネルが複数拠点を同時配信するので題名に「イオンモール浦西」を含む枠だけを選ぶ）
   - id: curated-okichan-nishihara-urasoe
     name: "西原町 てだこ浦西駅周辺（イオンモール浦西）"
     operator: "8131 okichan"
-    video_id: "wCmEcbNro0M"
+    channel_id: UCo_JM-fsLQQLz8hovcKkK0A
+    live_match: イオンモール浦西
     category: "other"
     prefecture: "47"
     lat: 26.245747
@@ -5739,10 +5773,12 @@ cameras:
     lng: 139.8364
     note: "oEmbed 200 / isLive:true"
 
+  # 2026-10-28 チャンネル登録化（旧 KBwgvcdA7Qo → zKssQHbiIjM。同チャンネルが複数拠点を同時配信するので題名に「ターミナル」を含む枠だけを選ぶ）
   - id: curated-parking-narita-superparking-1
     name: "成田空港 スーパーパーキング（第3ターミナル至近）"
     operator: "SUPER PARKING"
-    video_id: "KBwgvcdA7Qo"
+    channel_id: UC5JYOz4iA6xfbkoXqUdzWPA
+    live_match: ターミナル
     category: "other"
     prefecture: "12"
     lat: 35.7815
@@ -6688,10 +6724,12 @@ cameras:
     lng: 135.50134
     note: "oEmbed 200確認(2026-08-24)。チャンネル/live または /streams で配信中(LIVE)確認(2026-08-24)。既存F.S.T.NET(心斎橋)の系列。座標:Nominatim。geo=心斎橋筋一丁目, 中央区, 大阪市, 大阪府, 日本"
 
+  # 2026-10-28 チャンネル登録化（旧 1na-ORGC1P8 → CtFhpJFGqC8。同チャンネルが複数拠点を同時配信するので題名に「北新地本通」を含む枠だけを選ぶ）
   - id: curated-street-fst-kitashinchi
     name: "大阪 北新地本通"
     operator: "F.S.T. NET"
-    video_id: "1na-ORGC1P8"
+    channel_id: UCwNfkYp9gKIvQDN1kPhpCsQ
+    live_match: 北新地本通
     category: "road"
     prefecture: "27"
     lat: 34.69736
@@ -7567,10 +7605,12 @@ cameras:
     lng: 141.2
     note: "oEmbed 200 / isLiveNow:true。座標: 利尻富士町鴛泊字本泊(概略)"
 
+  # 2026-10-28 チャンネル登録化（旧 _CTve3fF0W4 → wL2i45IZfvs。同チャンネルが複数拠点を同時配信するので題名に「姫沼園地」を含む枠だけを選ぶ）
   - id: curated-scenic-rishiri-himenuma
     name: "利尻島 姫沼園地"
     operator: "Tetsu Kuro（YouTubeチャンネル）"
-    video_id: "_CTve3fF0W4"
+    channel_id: UCp1PQJKoJfZcfAcYlOh8sKA
+    live_match: 姫沼園地
     category: "scenic"
     prefecture: "01"
     lat: 45.219
@@ -9137,10 +9177,12 @@ cameras:
     lng: 136.7519
     note: "oEmbed 200 / isLiveNow:true。自治体公式。台帳のHAB千里浜サンセットとは別地点"
 
+  # 2026-10-28 チャンネル登録化（旧 tEym4tCR1Js → a9V34RRTAQo。同チャンネルが複数拠点を同時配信するので題名に「土谷棚田」を含む枠だけを選ぶ）
   - id: curated-scenic-doya-tanada
     name: "土谷棚田（松浦市福島町）"
     operator: "chunchunTV（松浦市ケーブル系）"
-    video_id: "tEym4tCR1Js"
+    channel_id: UCiK4obZhOWVjA4xNPfUoPwA
+    live_match: 土谷棚田
     category: "scenic"
     prefecture: "42"
     lat: 33.3883
@@ -10158,6 +10200,7 @@ cameras:
     lng: 139.873238
     video_id: EQj6ZfVWL4E
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.akita-chuoukotsu.co.jp/kanpuzan/'
+  # 2026-10-28 チャンネル登録化（旧 vvnZTAZazDs → pxNVpDjIC-4。同チャンネルが複数拠点を同時配信するので題名に「北沢橋」を含む枠だけを選ぶ）
   - id: curated-lcdb-0ca9c0bc
     name: 石沢川北沢橋
     operator: 羽後町役場町民生活課
@@ -10165,7 +10208,8 @@ cameras:
     prefecture: '05'
     lat: 39.217167
     lng: 140.315528
-    video_id: vvnZTAZazDs
+    channel_id: UCsMqZQxBAhVbDupWFUu4VMA
+    live_match: 北沢橋
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.youtube.com/channel/UCsMqZQxBAhVbDupWFUu4VMA'
   # 2026-10-28 チャンネル登録化（旧 iRyXwBjN7EM。同チャンネルが複数拠点を同時配信するので題名に「高瀬ケアセンター」を含む枠だけを選ぶ）
   - id: curated-lcdb-31c6de74
@@ -10189,6 +10233,7 @@ cameras:
     channel_id: UCsMqZQxBAhVbDupWFUu4VMA
     live_match: 田代福祉センター
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.youtube.com/channel/UCsMqZQxBAhVbDupWFUu4VMA'
+  # 2026-10-28 チャンネル登録化（旧 tdI7ns38IPg → 5UhQAT98fqQ。同チャンネルが複数拠点を同時配信するので題名に「林崎」を含む枠だけを選ぶ）
   - id: curated-lcdb-f47c587f
     name: 新町川林崎
     operator: 羽後町役場町民生活課
@@ -10196,7 +10241,8 @@ cameras:
     prefecture: '05'
     lat: 39.223278
     lng: 140.380444
-    video_id: tdI7ns38IPg
+    channel_id: UCsMqZQxBAhVbDupWFUu4VMA
+    live_match: 林崎
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.youtube.com/channel/UCsMqZQxBAhVbDupWFUu4VMA'
   # 2026-10-28 チャンネル登録化（旧 Wrq2z5ZyaLE。同チャンネルが複数拠点を同時配信するので題名に「天神堂入口」を含む枠だけを選ぶ）
   - id: curated-lcdb-0afb55b5
@@ -10310,6 +10356,7 @@ cameras:
     lng: 136.476563
     video_id: xfC5DnoKbes
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.katsuyama-jf.com/'
+  # 2026-10-28 チャンネル登録化（旧 mqupgZ0IiX0 → TNWhm9pfHM0。同チャンネルが複数拠点を同時配信するので題名に「今庄支所」を含む枠だけを選ぶ）
   - id: curated-lcdb-6c4a42ba
     name: 日野川漁業協同組合今庄支所
     operator: FISHPASS Video
@@ -10317,7 +10364,8 @@ cameras:
     prefecture: '18'
     lat: 35.775315
     lng: 136.196712
-    video_id: mqupgZ0IiX0
+    channel_id: UCxxq0vjnB7Nx-LPSd8QCMkA
+    live_match: 今庄支所
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: http://fukui-hinogawa.com/'
   # 2026-10-28 チャンネル登録化（旧 Mpc-HgVk3XE。同チャンネルが複数拠点を同時配信するので題名に「西山公園」を含む枠だけを選ぶ）
   - id: curated-lcdb-69662f32
@@ -10330,6 +10378,7 @@ cameras:
     channel_id: UCbxNvUOvm_SA8YTYTdpBE9g
     live_match: 西山公園
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.city.sabae.fukui.jp/nishiyama_zoo/'
+  # 2026-10-28 チャンネル登録化（旧 eGMVkf5JWuk → o_eosdbNoSo。同チャンネルが複数拠点を同時配信するので題名に「鯖江市ふれあい広場駐車場」を含む枠だけを選ぶ）
   - id: curated-lcdb-0db2c5f3
     name: 鯖江市ふれあい広場駐車場
     operator: こしの都ネットワーク(さばスタLIVE)
@@ -10337,8 +10386,10 @@ cameras:
     prefecture: '18'
     lat: 35.947314
     lng: 136.179083
-    video_id: eGMVkf5JWuk
+    channel_id: UCbxNvUOvm_SA8YTYTdpBE9g
+    live_match: 鯖江市ふれあい広場駐車場
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://koshinomiyako.jp/'
+  # 2026-10-28 チャンネル登録化（旧 sSG9Ab_Ay4A → Ge_ciC2wn88。同チャンネルが複数拠点を同時配信するので題名に「鯖江市嚮陽会館前駐車場」を含む枠だけを選ぶ）
   - id: curated-lcdb-0f98b33f
     name: 鯖江市嚮陽会館前駐車場
     operator: こしの都ネットワーク(さばスタLIVE)
@@ -10346,7 +10397,8 @@ cameras:
     prefecture: '18'
     lat: 35.947314
     lng: 136.179083
-    video_id: sSG9Ab_Ay4A
+    channel_id: UCbxNvUOvm_SA8YTYTdpBE9g
+    live_match: 鯖江市嚮陽会館前駐車場
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://koshinomiyako.jp/'
   # 2026-09-23 配信枠更新: nOf-4L5Uvcs → 0VhLpfGp6oo
   - id: curated-lcdb-f51d97b5
@@ -10851,6 +10903,7 @@ cameras:
     channel_id: UCy3hvyby69u7HAWTcUq6EzQ
     live_match: レストランホルン前
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.oze-iwakura.co.jp/ski/slopeguide/live/'
+  # 2026-10-28 チャンネル登録化（旧 7DZP1tiOykA → TDTe8m3Z1MY。同チャンネルが複数拠点を同時配信するので題名に「ゴンドラ山頂駅前」を含む枠だけを選ぶ）
   - id: curated-lcdb-15b80ab1
     name: ホワイトワールド尾瀬岩鞍ゴンドラ山頂駅前
     operator: 尾瀬岩鞍リゾート
@@ -10858,7 +10911,8 @@ cameras:
     prefecture: '10'
     lat: 36.815002
     lng: 139.217848
-    video_id: 7DZP1tiOykA
+    channel_id: UCy3hvyby69u7HAWTcUq6EzQ
+    live_match: ゴンドラ山頂駅前
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.oze-iwakura.co.jp/ski/slopeguide/live/'
   # 2026-10-28 チャンネル登録化（旧 bB5w9bVNA9s。同チャンネルが複数拠点を同時配信するので題名に「ゴンドラ山麓駅前」を含む枠だけを選ぶ）
   - id: curated-lcdb-b705397d
@@ -11364,6 +11418,7 @@ cameras:
     channel_id: UCrMOS_QpjjeIjMKUMOm4_Qw
     live_match: 札幌市営地下鉄
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://zetta-segment.co.jp/'
+  # 2026-10-28 チャンネル登録化（旧 lK0pXrdkwK8 → CqtfZqZAxlU。同チャンネルが複数拠点を同時配信するので題名に「元町駅交差点」を含む枠だけを選ぶ）
   - id: curated-lcdb-aa88e438
     name: 札幌元町駅交差点
     operator: ゼタセグメント
@@ -11372,7 +11427,8 @@ cameras:
     lat: 43.094085
     lng: 141.371711
     accuracy: exact   # 2026-10-04 座標見直し
-    video_id: lK0pXrdkwK8
+    channel_id: UCrMOS_QpjjeIjMKUMOm4_Qw
+    live_match: 元町駅交差点
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://zetta-segment.co.jp/'
   - id: curated-lcdb-038ef609
     name: 札幌新道石狩街道交差点
@@ -12215,6 +12271,7 @@ cameras:
     live_match: まちてらすMUKO
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://machi-terrace-muko.jp/'
   # 2026-08-31 配信枠更新: CMNPhsZEB08 → eagAtywDxFI
+  # 2026-10-28 チャンネル登録化（旧 eagAtywDxFI → roNVuAMzr-A。同チャンネルが複数拠点を同時配信するので題名に「美山かやぶきの里」を含む枠だけを選ぶ）
   - id: curated-lcdb-b5c8a3f6
     name: 美山かやぶきの里
     operator: agataJapan
@@ -12222,7 +12279,8 @@ cameras:
     prefecture: '26'
     lat: 35.311632
     lng: 135.621337
-    video_id: eagAtywDxFI
+    channel_id: UCAqJUdintpCdd-Kqk-UxFTw
+    live_match: 美山かやぶきの里
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://kayabukinosato.jp/'
   - id: curated-lcdb-9f8b2081
     name: 二木島港
@@ -12646,6 +12704,7 @@ cameras:
     video_id: AnI_g4wXYRA
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: http://rowing.gr.jp/nagano/'
   # 2026-08-31 配信枠更新: J9lDHGKyyz0 → FZIXqsmcHe0
+  # 2026-10-28 チャンネル登録化（旧 FZIXqsmcHe0 → nHd9ShNYrgM。同チャンネルが複数拠点を同時配信するので題名に「諏訪湖富士山」を含む枠だけを選ぶ）
   - id: curated-lcdb-23a0035a
     name: 諏訪湖富士山
     operator: 下諏訪観光
@@ -12653,7 +12712,8 @@ cameras:
     prefecture: '20'
     lat: 36.065107
     lng: 138.089571
-    video_id: FZIXqsmcHe0
+    channel_id: UC95danhP-6ym8z3ST4ZRR_Q
+    live_match: 諏訪湖富士山
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.youtube.com/watch?v=FZIXqsmcHe0'
   - id: curated-lcdb-f75ec576
     name: 諏訪大社下社春宮駐車場
@@ -15117,6 +15177,7 @@ cameras:
     channel_id: UCqdejTsUrCvZ55Y8u9v5h9w
     live_match: 阿古漁港
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.kouwan.metro.tokyo.lg.jp/'
+  # 2026-10-28 チャンネル登録化（旧 6UMh7x2RSdE → thhX916tvUc。同チャンネルが複数拠点を同時配信するので題名に「伊ヶ谷」を含む枠だけを選ぶ）
   - id: curated-lcdb-bc64d99c
     name: 三宅島伊ヶ谷港
     operator: 東京都伊豆・小笠原諸島港湾ライブカメラ
@@ -15124,7 +15185,8 @@ cameras:
     prefecture: '13'
     lat: 34.100334
     lng: 139.48814
-    video_id: 6UMh7x2RSdE
+    channel_id: UCqdejTsUrCvZ55Y8u9v5h9w
+    live_match: 伊ヶ谷
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.kouwan.metro.tokyo.lg.jp/'
   - id: curated-lcdb-8149dd75
     name: 残堀川表橋
@@ -15186,6 +15248,7 @@ cameras:
     channel_id: UCqdejTsUrCvZ55Y8u9v5h9w
     live_match: 若郷漁港
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.soumu.metro.tokyo.lg.jp/11osima/harbor/minato_31wakagougyokou.html'
+  # 2026-10-28 チャンネル登録化（旧 ND9M0h2o5DQ → Q-R8BTtlWSY。同チャンネルが複数拠点を同時配信するので題名に「奥多摩」を含む枠だけを選ぶ）
   - id: curated-lcdb-b210c095
     name: ForestNotes奥多摩夜間動物観察
     operator: Forest Notes
@@ -15193,7 +15256,8 @@ cameras:
     prefecture: '13'
     lat: 35.817294
     lng: 139.077073
-    video_id: ND9M0h2o5DQ
+    channel_id: UCBT-WLQk0tN_WfjkrqdSVzQ
+    live_match: 奥多摩
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.forestnotes.jp/'
   # 2026-10-28 チャンネル登録化（旧 RWR-cOQTuL0。同チャンネルが複数拠点を同時配信するので題名に「御岳渓谷」を含む枠だけを選ぶ）
   - id: curated-lcdb-0e3b8281
@@ -15379,6 +15443,7 @@ cameras:
     lng: 139.697906
     video_id: 9i71a0tACaA
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.youtube.com/channel/UCwuBnZT9vYsA3gksq3Stb7A'
+  # 2026-10-28 チャンネル登録化（旧 buT3kGAsfFM → eiku4C25Ctw。同チャンネルが複数拠点を同時配信するので題名に「上落合」を含む枠だけを選ぶ）
   - id: curated-lcdb-3694d947
     name: 上落合1丁目交差点
     operator: e-CAMチャンネル
@@ -15386,7 +15451,8 @@ cameras:
     prefecture: '13'
     lat: 35.711713
     lng: 139.685367
-    video_id: buT3kGAsfFM
+    channel_id: UCOLGSHF7LfL-2svSfwsnOGQ
+    live_match: 上落合
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://camera.core-business.jp/'
   - id: curated-lcdb-95f6c260
     name: 妙正寺川落合調節池
@@ -15545,6 +15611,7 @@ cameras:
     lng: 139.653572
     video_id: VwLusPjP2gE
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.kasen-suibo.metro.tokyo.lg.jp/im/uryosuii/tsim0102g.html'
+  # 2026-10-28 チャンネル登録化（旧 XpIILFB9iS0 → ITQrRCj8lOo。同チャンネルが複数拠点を同時配信するので題名に「両国」を含む枠だけを選ぶ）
   - id: curated-lcdb-32016c7b
     name: 両国駅
     operator: Tokyolive
@@ -15552,7 +15619,8 @@ cameras:
     prefecture: '13'
     lat: 35.695589
     lng: 139.790296
-    video_id: XpIILFB9iS0
+    channel_id: UCkAB51Lbgor6SW8aE4S3zuQ
+    live_match: 両国
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.youtube.com/watch?v=XpIILFB9iS0'
   # 2026-09-23 退役: 動画がログイン必須（年齢確認等）、チャンネルに現行ライブなし
   # - id: curated-lcdb-8976c2f1
@@ -16002,6 +16070,7 @@ cameras:
     lng: 138.568187
     video_id: L6KE12PAKYA
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://shironohotel.com/'
+  # 2026-10-28 チャンネル登録化（旧 2IP5umloFrE → Ifpk8p-EDAQ。同チャンネルが複数拠点を同時配信するので題名に「山梨県立科学館」を含む枠だけを選ぶ）
   - id: curated-lcdb-c160141f
     name: UTY山梨県立科学館甲府盆地
     operator: テレビ山梨(UTY)
@@ -16009,7 +16078,8 @@ cameras:
     prefecture: '19'
     lat: 35.669316
     lng: 138.578194
-    video_id: 2IP5umloFrE
+    channel_id: UCk2oG--VyYST4SYyQkeadjA
+    live_match: 山梨県立科学館
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.uty.co.jp/'
   - id: curated-lcdb-237d1b89
     name: 青峰園ぶどう狩り園
@@ -16049,6 +16119,7 @@ cameras:
     channel_id: UCwzJctz6m-0wG_evkheecZA
     live_match: 忍野しのびの里
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図中心(概略)。掲載元: https://www.oshinoninja.com/'
+  # 2026-10-28 チャンネル登録化（旧 slOgQojt8w8 → 0ZWLeCUwSOU。同チャンネルが複数拠点を同時配信するので題名に「上野原インターチェンジ」を含む枠だけを選ぶ）
   - id: curated-lcdb-7d3467fb
     name: UTY中央自動車道上野原インターチェンジ小仏トンネル方面
     operator: テレビ山梨(UTY)
@@ -16057,7 +16128,8 @@ cameras:
     lat: 35.621629
     lng: 139.114156
     accuracy: exact   # 2026-10-04 座標見直し
-    video_id: slOgQojt8w8
+    channel_id: UCk2oG--VyYST4SYyQkeadjA
+    live_match: 上野原インターチェンジ
     note: 'ライブカメラDB索引経由。oEmbed 200・isLive確認。座標は地図マーカー実位置。掲載元: https://www.uty.co.jp/'
   - id: curated-lcdb-b822f296
     name: YBS中央自動車道談合坂サービスエリア付近
@@ -18500,6 +18572,7 @@ cameras:
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【2026.8.29】さがけいばライブ配信)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.sagakeiba.net/'
   # 2026-08-31 配信枠更新: kusZaJkUU5M → sdCM-lxg86c
   # 2026-09-23 配信枠更新: sdCM-lxg86c → IRYpctD1Dfo
+  # 2026-10-28 チャンネル登録化（旧 SC7RdafFwDU → F9vAgq5iEUI。同チャンネルが複数拠点を同時配信するので題名に「東口」を含む枠だけを選ぶ）
   - id: curated-lcdb-13659194
     name: 上福岡駅東口
     operator: ふじみ野太郎
@@ -18507,7 +18580,8 @@ cameras:
     prefecture: '11'
     lat: 35.874764
     lng: 139.511139
-    video_id: SC7RdafFwDU
+    channel_id: UCJLpKOb6re6_Ey3pgbBWI9w
+    live_match: 東口
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【ふじみ野市 上福岡駅】 東口ライブカメラ｜東武東上線 川越方面（2026/8/)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@fujimino_taroh'
   # 2026-08-31 配信枠更新: RRjgnrXuwMc → z3U_pxHe0Xc
   # 2026-09-23 退役: 動画が再生不可（ライブの記録は視聴不可/終了）、チャンネルに現行ライブなし
@@ -18988,6 +19062,7 @@ cameras:
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 甲斐駒ヶ岳と田園が見える店 オーブン料理 白州アルベロ のライブ配信)。oEmbed 200。座標は地図中心(概略)。掲載元: https://cafe-albero.jp/'
   # 2026-08-31 配信枠更新: ySUSc6zIMU0 → 3hADiYbSZDs
   # 2026-09-23 配信枠更新: 3hADiYbSZDs → bzdjes-PTB0
+  # 2026-10-28 チャンネル登録化（旧 bzdjes-PTB0 → V8TKXajF0tM。同チャンネルが複数拠点を同時配信するので題名に「スカイエリア」を含む枠だけを選ぶ）
   - id: curated-lcdb-1c21513d
     name: 猪苗代スキー場スカイエリア
     operator: マックアースリゾート福島
@@ -18995,7 +19070,8 @@ cameras:
     prefecture: '07'
     lat: 37.572803
     lng: 140.08995
-    video_id: bzdjes-PTB0
+    channel_id: UC8AHDeJk9r2ko0f2LWp8h1A
+    live_match: スカイエリア
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【ライブ配信】絶景・猪苗代スキー場（東北・福島）スカイエリア｜雲海と猪苗代湖)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.inawashiro-ski.com/'
   # 2026-09-23 配信枠更新: _yD8VhAAUa8 → j8wBvzrBLX0
   # 2026-10-28 チャンネル登録化（旧 j8wBvzrBLX0。同チャンネルが複数拠点を同時配信するので題名に「雪花火」を含む枠だけを選ぶ）
@@ -19171,6 +19247,7 @@ cameras:
     live_match: 中央採血室
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 中央採血室_呼出モニタ（LIVE配信）)。oEmbed 200。座標は地図中心(概略)。掲載元: http://www.hosp.yamaguchi-u.ac.jp/'
   # 2026-08-31 配信枠更新: BZQE7Ztz5b4 → YGosIeNUAY0
+  # 2026-10-28 チャンネル登録化（旧 YGosIeNUAY0 → pOhgG8bTIkc。同チャンネルが複数拠点を同時配信するので題名に「日暮里」を含む枠だけを選ぶ）
   - id: curated-lcdb-124078be
     name: 日暮里駅
     operator: 鉄道ファンの待合室
@@ -19178,10 +19255,12 @@ cameras:
     prefecture: '13'
     lat: 35.729741
     lng: 139.764798
-    video_id: YGosIeNUAY0
+    channel_id: UCDyC7xeQxsihyZj8SoICLEw
+    live_match: 日暮里
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【LIVE】東京日暮里 鉄道ライブカメラ 2026-08-29 15:00- N)。oEmbed 200。座標は地図中心(概略)。掲載元: https://livecam.train-fan.com/'
   # 2026-08-31 配信枠更新: RllZxOzq2gk → I_uvMp-WX-0
   # 2026-09-23 配信枠更新: I_uvMp-WX-0 → E5WOIPcbSd4
+  # 2026-10-28 チャンネル登録化（旧 umo1V94Zhcc → VnpwKBu3MDU。同チャンネルが複数拠点を同時配信するので題名に「池袋方面」を含む枠だけを選ぶ）
   - id: curated-lcdb-12f35e20
     name: 上福岡駅池袋方面ホーム
     operator: ふじみ野太郎
@@ -19189,7 +19268,8 @@ cameras:
     prefecture: '11'
     lat: 35.874764
     lng: 139.511139
-    video_id: umo1V94Zhcc
+    channel_id: UCJLpKOb6re6_Ey3pgbBWI9w
+    live_match: 池袋方面
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【ふじみ野市 上福岡駅】 ライブカメラ｜東武東上線 池袋方面 （2026/8/2)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@fujimino_taroh'
   # 2026-09-01 配信枠更新: qaYS3ztkwms → YXKNIaLnzJc
   # 2026-09-23 配信枠更新: YXKNIaLnzJc → HzLnNvYhakc
@@ -19277,6 +19357,7 @@ cameras:
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 東京スカイツリーライブカメラ　TOKYO SKY TREE Live Camer)。oEmbed 200。座標は地図中心(概略)。掲載元: http://hsstrong.co.jp/'
   # 2026-08-31 配信枠更新: YvQk_N2jpSM → BzD751n3tiM
   # 2026-09-23 配信枠更新: BzD751n3tiM → YMA6rmYKmJ8
+  # 2026-10-28 チャンネル登録化（旧 YMA6rmYKmJ8 → JsbAsUX5hhw。同チャンネルが複数拠点を同時配信するので題名に「福島駅」を含む枠だけを選ぶ）
   - id: curated-lcdb-df643fbd
     name: JR西日本大阪環状線福島駅方面
     operator: 大阪環状線ライブカメラ
@@ -19284,7 +19365,8 @@ cameras:
     prefecture: '27'
     lat: 34.693707
     lng: 135.467902
-    video_id: YMA6rmYKmJ8
+    channel_id: UCRruWUK0POjg2veibHucffQ
+    live_match: 福島駅
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【LIVE】福島駅方面 大阪環状線・梅田貨物線ライブカメラ 2026/08/29)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@osakalive'
   - id: curated-lcdb-d052d3b3
     name: 【休止中】ちんあなお台場
@@ -19379,6 +19461,7 @@ cameras:
   #   note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 💙【LIVE】沖縄ライブカメラ 那覇市 泊大橋～曙  渋滞状況  沖縄県 NAH)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@KIN-TAKA'
   # 2026-08-31 配信枠更新: -cW1KoSj6kM → 96palHpngE4
   # 2026-09-23 配信枠更新: 96palHpngE4 → tjkw29xKw0c
+  # 2026-10-28 チャンネル登録化（旧 tjkw29xKw0c → 4saU3fgo0MU。同チャンネルが複数拠点を同時配信するので題名に「神明川支流河川」を含む枠だけを選ぶ）
   - id: curated-lcdb-00cd5a29
     name: 三ヶ日みかん神明川支流河川
     operator: 三ヶ日わっしょい内藤チャンネル
@@ -19386,7 +19469,8 @@ cameras:
     prefecture: '22'
     lat: 34.805415
     lng: 137.540147
-    video_id: tjkw29xKw0c
+    channel_id: UClBcyQP2avPiN4RByltADOQ
+    live_match: 神明川支流河川
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 2026.8.29、環境ライブ、神明川支流河川カメラ、live of micro)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/@mknt123'
   - id: curated-lcdb-7153fa80
     name: JapanesePod101赤坂
@@ -19399,6 +19483,7 @@ cameras:
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 🔴 24/7 Japanese Learning TV — Study With)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.japanesepod101.com/'
   # 2026-08-31 配信枠更新: khKbTz4qZ08 → jSQuZGG-7Mo
   # 2026-09-23 配信枠更新: jSQuZGG-7Mo → X14ed-Ryfgg
+  # 2026-10-28 チャンネル登録化（旧 X14ed-Ryfgg → OW7F8MT3DVU。同チャンネルが複数拠点を同時配信するので題名に「奥多摩駅運行」を含む枠だけを選ぶ）
   - id: curated-lcdb-5944a506
     name: Nature奥多摩駅運行状況
     operator: Nature
@@ -19406,7 +19491,8 @@ cameras:
     prefecture: '13'
     lat: 35.818614
     lng: 138.990709
-    video_id: X14ed-Ryfgg
+    channel_id: UC_eA6kJqCVCL2Yds7--WHgQ
+    live_match: 奥多摩駅運行
     note: 'ライブカメラDB索引→チャンネル配信一覧で現在のライブ枠を特定(タイトル: 【LIVE】JR青梅線奥多摩駅運行ライブカメラ 東京最果　tokyo okuta)。oEmbed 200。座標は地図中心(概略)。掲載元: https://www.youtube.com/channel/UC_eA6kJqCVCL2Yds7--WHgQ'
   # 2026-08-31 配信枠更新: pCSaRANSKpo → ujwFaBEcADw
   # 2026-09-23 配信枠更新: ujwFaBEcADw → w7Vd338S2hE
@@ -19571,10 +19657,12 @@ cameras:
     lng: 128.02
     note: 現在のライブ動画ID FL11_MpJveA（タイトル「【台風LIVE】沖縄・古宇利島の今」。台風時以外も配信履歴あり）。配信ごとに動画IDが変わるためチャンネル型で登録。ライブカメラDBでは「古宇利島」「古宇利大橋側」の2画角が紹介されているが現在ライブは1本。座標はホテル所在の概略（要確認）。
   # 2026-09-23 配信枠更新: HVs3QN2P7RI → jwhQ48gNzYE
+  # 2026-10-28 チャンネル登録化（旧 jwhQ48gNzYE → hUQzS5zx3YM。同チャンネルが複数拠点を同時配信するので題名に「マキシアルパビル」を含む枠だけを選ぶ）
   - id: curated-oki-d9cecbb0
     name: 国際通り 安里三叉路（マキシアルパビル）
     operator: '8131 okichan（設置: マキシアルパビル）'
-    video_id: jwhQ48gNzYE
+    channel_id: UCo_JM-fsLQQLz8hovcKkK0A
+    live_match: マキシアルパビル
     category: road
     prefecture: '47'
     lat: 26.2188
@@ -20511,11 +20599,13 @@ cameras:
     lng: 132.7446
     note: "2026-09-30 全国多角調査(industry_season)。isLiveNow=true だが playableInEmbed=false → 誘導型。チャンネル UC4e4gaT5BGXjIZ67pmAAb1w の /live で解決。"
 
+  # 2026-10-28 チャンネル登録化（旧 MhSWFRiy48Y → LEeq3Dwmjyc。同チャンネルが複数拠点を同時配信するので題名に「合戦場のしだれ桜」を含む枠だけを選ぶ）
   - id: curated-season-gassenba-shidarezakura
     name: "合戦場のしだれ桜（二本松市）"
     operator: "いわしろ夢現塾"
     category: scenic
-    video_id: "MhSWFRiy48Y"
+    channel_id: UCdl93kGO3Di8TZhleUtjoFA
+    live_match: 合戦場のしだれ桜
     prefecture: "07"
     lat: 37.5335
     lng: 140.5959
@@ -25997,10 +26087,12 @@ cameras:
     note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。九州新幹線下り・鹿児島本線・博多南線・福岡空港方面が映る。配信枠は日々変わる可能性（当日 isLiveNow=true）。座標は博多駅。
 
   # 2026-10-14 配信枠更新: 7kCOfXcjDso → rLX-tzupnxc
+  # 2026-10-28 チャンネル登録化（旧 rLX-tzupnxc → tpEsJZFnTVA。同チャンネルが複数拠点を同時配信するので題名に「向日町操車場」を含む枠だけを選ぶ）
   - id: curated-rail-mukaimachi-yard
     name: JR京都線 向日町操車場付近
     operator: 鉄道ファンの待合室
-    video_id: rLX-tzupnxc
+    channel_id: UCDyC7xeQxsihyZj8SoICLEw
+    live_match: 向日町操車場
     category: scenic
     prefecture: '26'
     lat: 34.9455

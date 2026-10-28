@@ -4250,10 +4250,12 @@ cameras:
     country: KR
     lat: 37.5547
     lng: 126.9707
+  # 2026-10-28 チャンネル登録化（旧 cCRm_ZwxH1w → IcTMxC_k57A。同チャンネルが複数拠点を同時配信するので題名に「Gyeongbokgung」を含む枠だけを選ぶ）
   - id: world-517f9783
     name: ソウル 景福宮
     operator: GiGAeyes Live TV(KTテレコップ)
-    video_id: cCRm_ZwxH1w
+    channel_id: UCsy6UOjk8q7Ajq9yQ7iDAbA
+    live_match: Gyeongbokgung
     category: scenic
     country: KR
     lat: 37.5776
@@ -4728,10 +4730,12 @@ cameras:
     lat: 22.472
     lng: 120.953
     note: 4K 海の見える駅
+  # 2026-10-28 チャンネル登録化（旧 rbrlNykp6SY → a1A44ICD6zE。同チャンネルが複数拠点を同時配信するので題名に「南海遊客中心」を含む枠だけを選ぶ）
   - id: world-efe5c90d
     name: 澎湖 南海遊客中心埠頭
     operator: 交通部観光署澎湖国家風景区管理処
-    video_id: rbrlNykp6SY
+    channel_id: UCxTqE-VM_Tfe6pAjrJHMByQ
+    live_match: 南海遊客中心
     category: port
     country: TW
     lat: 23.562
