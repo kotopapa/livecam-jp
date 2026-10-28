@@ -473,10 +473,12 @@ cameras:
     lat: 25.0553
     lng: 121.5095
 
+  # 2026-10-28 チャンネル登録化（旧 XSD5ptYisw8。同チャンネルが複数拠点を同時配信するので題名に「九份」を含む枠だけを選ぶ）
   - id: world-3fed1985
     name: 九份
     operator: "新北市観光局"
-    video_id: "XSD5ptYisw8"
+    channel_id: UCm8_3Nf9LFmPwuKSvYhhwLw
+    live_match: 九份
     category: scenic
     country: "TW"
     lat: 25.1093
@@ -2826,28 +2828,34 @@ cameras:
 
 
   # ===== 世界第4弾: 300件到達分 (2026-08-20) =====
+  # 2026-10-28 チャンネル登録化（旧 ka7FV0sCvxQ。同チャンネルが複数拠点を同時配信するので題名に「旗津海水浴場」を含む枠だけを選ぶ）
   - id: world-517c78a0
     name: 高雄 旗津海水浴場
     operator: "高雄市観光局"
-    video_id: "ka7FV0sCvxQ"
+    channel_id: UC2lamMZjjT-Qcq-zIx6NrCw
+    live_match: 旗津海水浴場
     category: coast
     country: "TW"
     lat: 22.6163
     lng: 120.2694
 
+  # 2026-10-28 チャンネル登録化（旧 BnPoNatG-HE。同チャンネルが複数拠点を同時配信するので題名に「蓮池潭」を含む枠だけを選ぶ）
   - id: world-72746ef9
     name: 高雄 蓮池潭
     operator: "高雄市観光局"
-    video_id: "BnPoNatG-HE"
+    channel_id: UC2lamMZjjT-Qcq-zIx6NrCw
+    live_match: 蓮池潭
     category: scenic
     country: "TW"
     lat: 22.6928
     lng: 120.2937
 
+  # 2026-10-28 チャンネル登録化（旧 xwAWSh35uuw。同チャンネルが複数拠点を同時配信するので題名に「漁人碼頭」を含む枠だけを選ぶ）
   - id: world-8a85ae3b
     name: 淡水 漁人碼頭
     operator: "新北市観光局"
-    video_id: "xwAWSh35uuw"
+    channel_id: UCm8_3Nf9LFmPwuKSvYhhwLw
+    live_match: 漁人碼頭
     category: port
     country: "TW"
     lat: 25.1751
@@ -4222,18 +4230,22 @@ cameras:
     country: KR
     lat: 37.5085
     lng: 127.1
+  # 2026-10-28 チャンネル登録化（旧 GRwcf4_ZDYo。同チャンネルが複数拠点を同時配信するので題名に「ロッテワールド」を含む枠だけを選ぶ）
   - id: world-6e445406
     name: ソウル ロッテワールド
     operator: GiGAeyes Live TV(KTテレコップ)
-    video_id: GRwcf4_ZDYo
+    channel_id: UCsy6UOjk8q7Ajq9yQ7iDAbA
+    live_match: ロッテワールド
     category: scenic
     country: KR
     lat: 37.5111
     lng: 127.098
+  # 2026-10-28 チャンネル登録化（旧 C3hW1VrwmNc。同チャンネルが複数拠点を同時配信するので題名に「ソウル駅広場」を含む枠だけを選ぶ）
   - id: world-7a9a81f9
     name: ソウル ソウル駅広場
     operator: GiGAeyes Live TV(KTテレコップ)
-    video_id: C3hW1VrwmNc
+    channel_id: UCsy6UOjk8q7Ajq9yQ7iDAbA
+    live_match: ソウル駅広場
     category: scenic
     country: KR
     lat: 37.5547
@@ -4247,10 +4259,12 @@ cameras:
     lat: 37.5776
     lng: 126.9769
     note: 既存「光化門広場」(GiGAeyes web_page)の隣接地点だが別カメラ(宮殿正面)
+  # 2026-10-28 チャンネル登録化（旧 OCfFNf1oUFo。同チャンネルが複数拠点を同時配信するので題名に「漢江」を含む枠だけを選ぶ）
   - id: world-f7beb866
     name: ソウル 漢江 蚕室大橋
     operator: GiGAeyes Live TV(KTテレコップ)
-    video_id: OCfFNf1oUFo
+    channel_id: UCsy6UOjk8q7Ajq9yQ7iDAbA
+    live_match: 漢江
     category: river
     country: KR
     lat: 37.5205
@@ -4333,26 +4347,32 @@ cameras:
     lat: 37.38
     lng: 128.661
     note: 埋め込み不可(oEmbed 401)→誘導型で登録。郡公式。埋め込み不可
+  # 2026-10-28 チャンネル登録化（旧 34h_Cy_n0Ok。同チャンネルが複数拠点を同時配信するので題名に「剣潭山」を含む枠だけを選ぶ）
   - id: world-b2c03c65
     name: 台北 剣潭山 微風平台
     operator: 台北市政府観光伝播局(Taipei Travel Live Cam)
-    video_id: 34h_Cy_n0Ok
+    channel_id: UCJLjpq7pTJRbP3vtx0LxB9Q
+    live_match: 剣潭山
     category: scenic
     country: TW
     lat: 25.09
     lng: 121.526
+  # 2026-10-28 チャンネル登録化（旧 215ahZ_0rTg。同チャンネルが複数拠点を同時配信するので題名に「指南宮」を含む枠だけを選ぶ）
   - id: world-49608e41
     name: 台北 猫空 指南宮
     operator: 台北市政府観光伝播局(Taipei Travel Live Cam)
-    video_id: 215ahZ_0rTg
+    channel_id: UCJLjpq7pTJRbP3vtx0LxB9Q
+    live_match: 指南宮
     category: scenic
     country: TW
     lat: 24.98
     lng: 121.588
+  # 2026-10-28 チャンネル登録化（旧 uvwfYzwY8tg。同チャンネルが複数拠点を同時配信するので題名に「碧山巌」を含む枠だけを選ぶ）
   - id: world-b35b99f3
     name: 台北 碧山巌(内湖)
     operator: 台北市政府観光伝播局(Taipei Travel Live Cam)
-    video_id: uvwfYzwY8tg
+    channel_id: UCJLjpq7pTJRbP3vtx0LxB9Q
+    live_match: 碧山巌
     category: scenic
     country: TW
     lat: 25.1
@@ -4366,10 +4386,12 @@ cameras:
     country: TW
     lat: 25.072
     lng: 121.537
+  # 2026-10-28 チャンネル登録化（旧 HirBQsQEUeA。同チャンネルが複数拠点を同時配信するので題名に「十分瀑布」を含む枠だけを選ぶ）
   - id: world-52235cd2
     name: 新北 十分瀑布
     operator: 新北市観光局(新北旅客)
-    video_id: HirBQsQEUeA
+    channel_id: UCm8_3Nf9LFmPwuKSvYhhwLw
+    live_match: 十分瀑布
     category: scenic
     country: TW
     lat: 25.047
@@ -4383,128 +4405,158 @@ cameras:
     lat: 24.979
     lng: 121.499
     note: 夜景スポット
+  # 2026-10-28 チャンネル登録化（旧 tiPpFFdCkdY。同チャンネルが複数拠点を同時配信するので題名に「ミーアキャット」を含む枠だけを選ぶ）
   - id: world-86c149a3
     name: 高雄 寿山動物園 ミーアキャット
     operator: 高雄市観光局(高雄旅遊網)
-    video_id: tiPpFFdCkdY
+    channel_id: UC2lamMZjjT-Qcq-zIx6NrCw
+    live_match: ミーアキャット
     category: healing
     country: TW
     lat: 22.64
     lng: 120.27
+  # 2026-10-28 チャンネル登録化（旧 C03Itx8iSC0。同チャンネルが複数拠点を同時配信するので題名に「情人」を含む枠だけを選ぶ）
   - id: world-e9c5db3a
     name: 高雄 寿山 LOVE情人観景台
     operator: 高雄市観光局(高雄旅遊網)
-    video_id: C03Itx8iSC0
+    channel_id: UC2lamMZjjT-Qcq-zIx6NrCw
+    live_match: 情人
     category: scenic
     country: TW
     lat: 22.6365
     lng: 120.2725
+  # 2026-10-28 チャンネル登録化（旧 j2L_559nCjc。同チャンネルが複数拠点を同時配信するので題名に「二延平」を含む枠だけを選ぶ）
   - id: world-ae02d41a
     name: 阿里山 二延平歩道(雲海)
     operator: 阿里山国家風景区管理処
-    video_id: j2L_559nCjc
+    channel_id: UCQqyZgPh9Lu0w_rmWWBvuNg
+    live_match: 二延平
     category: scenic
     country: TW
     lat: 23.452
     lng: 120.604
     note: 4K。雲海・夕焼けの名所
+  # 2026-10-28 チャンネル登録化（旧 B6eki-0-w0g。同チャンネルが複数拠点を同時配信するので題名に「奮起湖」を含む枠だけを選ぶ）
   - id: world-3c8114fd
     name: 阿里山 奮起湖
     operator: 阿里山国家風景区管理処
-    video_id: B6eki-0-w0g
+    channel_id: UCQqyZgPh9Lu0w_rmWWBvuNg
+    live_match: 奮起湖
     category: scenic
     country: TW
     lat: 23.506
     lng: 120.696
     note: 4K
+  # 2026-10-28 チャンネル登録化（旧 dY2cRNr5Buw。同チャンネルが複数拠点を同時配信するので題名に「太平雲梯」を含む枠だけを選ぶ）
   - id: world-baffc5e6
     name: 阿里山 太平雲梯(吊橋)
     operator: 阿里山国家風景区管理処
-    video_id: dY2cRNr5Buw
+    channel_id: UCQqyZgPh9Lu0w_rmWWBvuNg
+    live_match: 太平雲梯
     category: scenic
     country: TW
     lat: 23.533
     lng: 120.596
+  # 2026-10-28 チャンネル登録化（旧 hMYs60qtkK8。同チャンネルが複数拠点を同時配信するので題名に「愛情大草原」を含む枠だけを選ぶ）
   - id: world-2a0598b2
     name: 阿里山 牛埔仔 愛情大草原
     operator: 阿里山国家風景区管理処
-    video_id: hMYs60qtkK8
+    channel_id: UCQqyZgPh9Lu0w_rmWWBvuNg
+    live_match: 愛情大草原
     category: scenic
     country: TW
     lat: 23.457
     lng: 120.554
+  # 2026-10-28 チャンネル登録化（旧 agEzlv9n9Eg。同チャンネルが複数拠点を同時配信するので題名に「生力農場」を含む枠だけを選ぶ）
   - id: world-a9724862
     name: 阿里山 隙頂 生力農場
     operator: 阿里山国家風景区管理処
-    video_id: agEzlv9n9Eg
+    channel_id: UCQqyZgPh9Lu0w_rmWWBvuNg
+    live_match: 生力農場
     category: scenic
     country: TW
     lat: 23.453
     lng: 120.625
     note: 茶畑と雲海
+  # 2026-10-28 チャンネル登録化（旧 AKl3F6cAY2Q。同チャンネルが複数拠点を同時配信するので題名に「加路蘭遊憩」を含む枠だけを選ぶ）
   - id: world-2e9115d7
     name: 台東 加路蘭遊憩区
     operator: 東部海岸国家風景区管理処
-    video_id: AKl3F6cAY2Q
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: 加路蘭遊憩
     category: scenic
     country: TW
     lat: 22.813
     lng: 121.199
     note: 4K。出典表記を求めている
+  # 2026-10-28 チャンネル登録化（旧 X_fchztvqI0。同チャンネルが複数拠点を同時配信するので題名に「三仙台」を含む枠だけを選ぶ）
   - id: world-177d2864
     name: 台東 三仙台
     operator: 東部海岸国家風景区管理処
-    video_id: X_fchztvqI0
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: 三仙台
     category: scenic
     country: TW
     lat: 23.1232
     lng: 121.411
     note: 4K
+  # 2026-10-28 チャンネル登録化（旧 fv1yFousBvc。同チャンネルが複数拠点を同時配信するので題名に「帆船鼻」を含む枠だけを選ぶ）
   - id: world-f3844e9c
     name: 緑島 帆船鼻大草原
     operator: 東部海岸国家風景区管理処
-    video_id: fv1yFousBvc
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: 帆船鼻
     category: scenic
     country: TW
     lat: 22.635
     lng: 121.499
+  # 2026-10-28 チャンネル登録化（旧 a8nJQr5rBGs。同チャンネルが複数拠点を同時配信するので題名に「ノーケリング」を含む枠だけを選ぶ）
   - id: world-18b922f7
     name: 緑島 柴口シュノーケリング区
     operator: 東部海岸国家風景区管理処
-    video_id: a8nJQr5rBGs
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: ノーケリング
     category: scenic
     country: TW
     lat: 22.6767
     lng: 121.487
+  # 2026-10-28 チャンネル登録化（旧 wTHhv7M0vCI。同チャンネルが複数拠点を同時配信するので題名に「南寮漁港」を含む枠だけを選ぶ）
   - id: world-302d784a
     name: 緑島 南寮漁港
     operator: 東部海岸国家風景区管理処
-    video_id: wTHhv7M0vCI
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: 南寮漁港
     category: port
     country: TW
     lat: 22.665
     lng: 121.474
     note: 船便到着時刻は埠頭に固定
+  # 2026-10-28 チャンネル登録化（旧 mXnigLvIL0Q。同チャンネルが複数拠点を同時配信するので題名に「石梯坪」を含む枠だけを選ぶ）
   - id: world-51850b9b
     name: 花蓮 石梯坪
     operator: 東部海岸国家風景区管理処
-    video_id: mXnigLvIL0Q
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: 石梯坪
     category: scenic
     country: TW
     lat: 23.4853
     lng: 121.513
+  # 2026-10-28 チャンネル登録化（旧 JnD8Rk3o0BM。同チャンネルが複数拠点を同時配信するので題名に「長虹橋」を含む枠だけを選ぶ）
   - id: world-c7f87050
     name: 花蓮 長虹橋(秀姑巒渓河口)
     operator: 東部海岸国家風景区管理処
-    video_id: JnD8Rk3o0BM
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: 長虹橋
     category: river
     country: TW
     lat: 23.4677
     lng: 121.4889
+  # 2026-10-28 チャンネル登録化（旧 JkoXcXI04Qk。同チャンネルが複数拠点を同時配信するので題名に「大石鼻山」を含む枠だけを選ぶ）
   - id: world-215a4edd
     name: 花蓮 大石鼻山
     operator: 東部海岸国家風景区管理処
-    video_id: JkoXcXI04Qk
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: 大石鼻山
     category: scenic
     country: TW
     lat: 23.4233
@@ -4517,10 +4569,12 @@ cameras:
     country: TW
     lat: 23.0201
     lng: 121.3249
+  # 2026-10-28 チャンネル登録化（旧 ZdqHgQwvZOw。同チャンネルが複数拠点を同時配信するので題名に「金樽」を含む枠だけを選ぶ）
   - id: world-065424e5
     name: 台東 金樽遊憩区
     operator: 東部海岸国家風景区管理処
-    video_id: ZdqHgQwvZOw
+    channel_id: UC5FiBoG6GcB5QqsiOsGe22A
+    live_match: 金樽
     category: scenic
     country: TW
     lat: 22.9451
@@ -4569,10 +4623,12 @@ cameras:
     lat: 21.945
     lng: 120.796
     note: 同チャンネルに墾丁大街2(hrpwltQqtq0)もあり
+  # 2026-10-28 チャンネル登録化（旧 7WOJMh_eSfY。同チャンネルが複数拠点を同時配信するので題名に「船帆石」を含む枠だけを選ぶ）
   - id: world-60cfab55
     name: 墾丁 船帆石海岸
     operator: 墾丁国家公園管理処
-    video_id: 7WOJMh_eSfY
+    channel_id: UC7RyAGaxzAI9dD8NINv653w
+    live_match: 船帆石
     category: coast
     country: TW
     lat: 21.939
@@ -4621,20 +4677,24 @@ cameras:
     lat: 21.953
     lng: 120.753
     note: 水中カメラ
+  # 2026-10-28 チャンネル登録化（旧 FbB8WDUXXqU。同チャンネルが複数拠点を同時配信するので題名に「白沙」を含む枠だけを選ぶ）
   - id: world-b57f02a0
     name: 新北 白沙湾
     operator: 北海岸及観音山国家風景区管理処
-    video_id: FbB8WDUXXqU
+    channel_id: UC0mfEc84Gk0bfYIzntXGTIQ
+    live_match: 白沙
     category: scenic
     country: TW
     lat: 25.286
     lng: 121.513
     note: 4K。引用時は出典表記
   # 2026-10-14 配信枠更新: Kbkn-TGoa_0 → gNWeZsaqD98
+  # 2026-10-28 チャンネル登録化（旧 gNWeZsaqD98。同チャンネルが複数拠点を同時配信するので題名に「音山」を含む枠だけを選ぶ）
   - id: world-752ad415
     name: 新北 観音山 硬漢嶺
     operator: 北海岸及観音山国家風景区管理処
-    video_id: gNWeZsaqD98
+    channel_id: UC0mfEc84Gk0bfYIzntXGTIQ
+    live_match: 音山
     category: scenic
     country: TW
     lat: 25.129
@@ -4702,19 +4762,23 @@ cameras:
     lat: 23.258
     lng: 119.508
     note: 360°4K全景
+  # 2026-10-28 チャンネル登録化（旧 lhXXhDyjFtI。同チャンネルが複数拠点を同時配信するので題名に「望高寮」を含む枠だけを選ぶ）
   - id: world-9368e6e5
     name: 台中 望高寮
     operator: 台中市政府観光旅遊局(大玩台中)
-    video_id: lhXXhDyjFtI
+    channel_id: UCSV_89hkpo3y_J1INMueN6A
+    live_match: 望高寮
     category: scenic
     country: TW
     lat: 24.173
     lng: 120.594
     note: 4K 夜景
+  # 2026-10-28 チャンネル登録化（旧 fjhg3gAnMFg。同チャンネルが複数拠点を同時配信するので題名に「高美湿地」を含む枠だけを選ぶ）
   - id: world-a50e4f9c
     name: 台中 高美湿地
     operator: 台中市政府観光旅遊局(大玩台中)
-    video_id: fjhg3gAnMFg
+    channel_id: UCSV_89hkpo3y_J1INMueN6A
+    live_match: 高美湿地
     category: scenic
     country: TW
     lat: 24.312
@@ -4762,10 +4826,12 @@ cameras:
     note: 既存「香港 アバディーン港」と同運営者の別地点
   # 2026-09-23 配信枠更新: xyPsNmVd698 → Z-g8M1QGKbg
   # 2026-10-14 配信枠更新: Z-g8M1QGKbg → mizy6R7JGdM
+  # 2026-10-28 チャンネル登録化（旧 mizy6R7JGdM。同チャンネルが複数拠点を同時配信するので題名に「東方明珠」を含む枠だけを選ぶ）
   - id: world-0ac06f2d
     name: 上海 東方明珠・外白渡橋
     operator: Brainrolling Workshop
-    video_id: mizy6R7JGdM
+    channel_id: UCWtgtd5245OHw4I2wL9K8jA
+    live_match: 東方明珠
     category: scenic
     country: CN
     lat: 31.247
@@ -5050,10 +5116,12 @@ cameras:
     lat: 27.71
     lng: 85.32
     note: 既存「カトマンズ市街」(Nepal VR, 現在停止中)とは別運営者
+  # 2026-10-28 チャンネル登録化（旧 PVvIVCkmQDY。同チャンネルが複数拠点を同時配信するので題名に「カトマンズ」を含む枠だけを選ぶ）
   - id: world-116e4dc9
     name: カトマンズ バグマティ川支流(ZAZA)
     operator: ZAZAマガジンチャンネル
-    video_id: PVvIVCkmQDY
+    channel_id: UCJKH8wYxFYeufDnvy1MPofA
+    live_match: カトマンズ
     category: river
     country: NP
     lat: 27.693
@@ -7418,10 +7486,12 @@ cameras:
     country: US
     lat: 40.71
     lng: -74.01
+  # 2026-10-28 チャンネル登録化（旧 EO_1LWqsCNE。同チャンネルが複数拠点を同時配信するので題名に「Venice」を含む枠だけを選ぶ）
   - id: world-e3c8e598
     name: ロサンゼルス ベニスビーチ(Venice V Hotel)
     operator: Teleport.camera
-    video_id: EO_1LWqsCNE
+    channel_id: UCegzBUd6-PYoO_v7gjJgufg
+    live_match: Venice
     category: coast
     country: US
     lat: 33.987
@@ -9130,10 +9200,12 @@ cameras:
     lat: 46.096
     lng: 7.228
     note: approx
+  # 2026-10-28 チャンネル登録化（旧 YuvgiDTzxhU。同チャンネルが複数拠点を同時配信するので題名に「ガルファニャーナ」を含む枠だけを選ぶ）
   - id: world-3b4a2473
     name: サン・ペッレグリーノ・イン・アルペ(ガルファニャーナ)
     operator: Paesaggi Digitali
-    video_id: YuvgiDTzxhU
+    channel_id: UC12-jDuDnEJAhtmukCFBEGQ
+    live_match: ガルファニャーナ
     category: scenic
     country: IT
     lat: 44.19
@@ -10205,10 +10277,12 @@ cameras:
     lat: 57.0
     lng: 25.5
     note: 場所非公開・座標は概略
+  # 2026-10-28 チャンネル登録化（旧 NSvQeguKlXo。同チャンネルが複数拠点を同時配信するので題名に「Purvs」を含む枠だけを選ぶ）
   - id: world-3f7fdfdb
     name: 湿原(LVM Purvs)
     operator: Latvijas valsts meži
-    video_id: NSvQeguKlXo
+    channel_id: UC8M9n-AqtbJm75xsKhWZk9w
+    live_match: Purvs
     category: healing
     country: LV
     lat: 57.0
