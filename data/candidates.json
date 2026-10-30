@@ -1,5 +1,5 @@
 {
- "version": "2026-10-15T14:23:50Z",
+ "version": "2026-10-30T22:22:31Z",
  "cameras": [
   {
    "id": "curated-lcdb-5621ad43",
@@ -38,7 +38,7 @@
    },
    "verification": null,
    "first_seen": "2026-08-29",
-   "last_updated": "2026-10-12"
+   "last_updated": "2026-10-31"
   },
   {
    "id": "curated-lcdb-d132db4d",
@@ -77,7 +77,85 @@
    },
    "verification": null,
    "first_seen": "2026-08-29",
-   "last_updated": "2026-10-12"
+   "last_updated": "2026-10-31"
+  },
+  {
+   "id": "curated-r2-5f9cb448",
+   "name": "新宿 歌舞伎町第2(区役所交差点)",
+   "name_kana": null,
+   "lat": 35.695,
+   "lng": 139.704,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "13",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "vuP9iwdyyFM",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=vuP9iwdyyFM"
+   },
+   "operator": "テイケイ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=vuP9iwdyyFM",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：テイケイ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "民間・報道系の公式YouTubeライブ（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。 警備会社本社ビル屋上・4K・24時間"
+   },
+   "verification": null,
+   "first_seen": "2026-10-31",
+   "last_updated": "2026-10-31"
+  },
+  {
+   "id": "curated-r2-abc50536",
+   "name": "新宿五丁目交差点",
+   "name_kana": null,
+   "lat": 35.6926,
+   "lng": 139.7066,
+   "coord_accuracy": "approx",
+   "category": "scenic",
+   "prefecture": "13",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "gTO_FJzv70k",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=gTO_FJzv70k"
+   },
+   "operator": "テイケイ",
+   "source": {
+    "page_url": "https://www.youtube.com/watch?v=gTO_FJzv70k",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：テイケイ（YouTubeライブ）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "民間・報道系の公式YouTubeライブ（キュレーション台帳）。埋め込み再生のみ・削除依頼即応。 テイケイ屋上カメラ姉妹配信"
+   },
+   "verification": null,
+   "first_seen": "2026-10-31",
+   "last_updated": "2026-10-31"
   },
   {
    "id": "fukuoka-kasen-281",
@@ -118,6 +196,133 @@
    "verification": null,
    "first_seen": "2026-08-29",
    "last_updated": "2026-08-29"
+  },
+  {
+   "id": "jwa-river-saitama-55201101050",
+   "name": "水谷調節池",
+   "name_kana": "みずたにちょうせつち",
+   "lat": 35.833892,
+   "lng": 139.566542,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "柳瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://suibo-river.pref.saitama.lg.jp/hyoujidata/camera/55201101050.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-river.pref.saitama.lg.jp/"
+   },
+   "operator": "埼玉県",
+   "source": {
+    "page_url": "https://suibo-river.pref.saitama.lg.jp/",
+    "terms_url": "https://suibo-river.pref.saitama.lg.jp/Templates/top_chuuijikou.pdf",
+    "license": "unknown",
+    "attribution": "映像提供：埼玉県（埼玉県 川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "埼玉県 川の防災情報の河川カメラ（川越県土整備事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 19529
+   },
+   "first_seen": "2026-10-31",
+   "last_updated": "2026-10-31"
+  },
+  {
+   "id": "jwa-river-saitama-55201101051",
+   "name": "文展橋",
+   "name_kana": "ぶんてんばし",
+   "lat": 35.8058957,
+   "lng": 139.6776525,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "菖蒲川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://suibo-river.pref.saitama.lg.jp/hyoujidata/camera/55201101051.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-river.pref.saitama.lg.jp/"
+   },
+   "operator": "埼玉県",
+   "source": {
+    "page_url": "https://suibo-river.pref.saitama.lg.jp/",
+    "terms_url": "https://suibo-river.pref.saitama.lg.jp/Templates/top_chuuijikou.pdf",
+    "license": "unknown",
+    "attribution": "映像提供：埼玉県（埼玉県 川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "埼玉県 川の防災情報の河川カメラ（さいたま県土整備事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 9917
+   },
+   "first_seen": "2026-10-31",
+   "last_updated": "2026-10-31"
+  },
+  {
+   "id": "mbc-kai",
+   "name": "桜島（牛根麓）",
+   "name_kana": null,
+   "lat": 31.557646,
+   "lng": 130.761551,
+   "coord_accuracy": "approx",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Hmmk0eYn0cw",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Hmmk0eYn0cw"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-10-31",
+   "last_updated": "2026-10-31"
   },
   {
    "id": "miyagi-road-hokubu-soto",
@@ -334,10 +539,10 @@
     "fetched_twice": true,
     "image_changed": false,
     "content_type": "image/jpeg",
-    "bytes": 41776
+    "bytes": 49622
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-10-31"
   },
   {
    "id": "nagano-road-oomachi-009",
@@ -378,10 +583,10 @@
     "fetched_twice": true,
     "image_changed": false,
     "content_type": "image/jpeg",
-    "bytes": 47697
+    "bytes": 49622
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-10-31"
   },
   {
    "id": "nagano-road-saku-001",
@@ -420,12 +625,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": true,
+    "image_changed": false,
     "content_type": "image/jpeg",
-    "bytes": 40717
+    "bytes": 49622
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-10-31"
   },
   {
    "id": "nagano-road-suzaka-003",
@@ -466,10 +671,10 @@
     "fetched_twice": true,
     "image_changed": false,
     "content_type": "image/jpeg",
-    "bytes": 105557
+    "bytes": 49622
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-10-31"
   },
   {
    "id": "shizukawa-coast-kanbara-takahama",
@@ -510,10 +715,10 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 68960
+    "bytes": 82654
    },
    "first_seen": "2026-08-22",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-10-31"
   }
  ]
 }
