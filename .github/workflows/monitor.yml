@@ -33,11 +33,13 @@ jobs:
         run: python -m crawler.validate
       - name: 道路の通行規制（国交省 道路情報提供システム。災害・気象由来だけ）
         run: python tools/road_regulation.py
+      - name: 積雪観測点（国交省と各県の道路管理者の積雪深センサー。10/15〜5/15のみ）
+        run: python tools/snow_points.py
       - name: status.json と履歴をコミット
         run: |
           git config user.name "livecam-jp-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/status.json monitor/.state/hashes.json data/road_regulation.json
+          git add data/status.json monitor/.state/hashes.json data/road_regulation.json data/snow_points.json data/municipality_geocache.json
           if git diff --cached --quiet; then
             echo "変更なし"
           else

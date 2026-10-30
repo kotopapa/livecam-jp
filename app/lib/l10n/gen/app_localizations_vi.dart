@@ -2731,7 +2731,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get bosaiSnowDisclaimer =>
-      'Là số liệu tại các trạm AMeDAS, có thể khác với tuyết phủ trên toàn khu vực.';
+      'Là số liệu tại các trạm AMeDAS và trạm của đơn vị quản lý đường, có thể khác với tuyết phủ trên toàn khu vực.';
 
   @override
   String get bosaiSnowTapHint =>

@@ -2641,7 +2641,8 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get bosaiSnowDisclaimer => 'AMeDAS 관측 지점의 값이며, 지역 전체의 적설과 다를 수 있습니다.';
+  String get bosaiSnowDisclaimer =>
+      'AMeDAS와 도로 관리자의 관측 지점 값이며, 지역 전체의 적설과 다를 수 있습니다.';
 
   @override
   String get bosaiSnowTapHint => '도도부현을 탭하면 시구정촌별 관측 지점을 표시합니다.';

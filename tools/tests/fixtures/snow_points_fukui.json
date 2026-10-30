@@ -1,0 +1,94 @@
+[
+ {
+  "id": 24,
+  "name": "名泉郷",
+  "category": {
+   "name": "福井県"
+  },
+  "route": {
+   "name": "(県124)牛ノ谷停車場線"
+  },
+  "map": {
+   "icons": [
+    {
+     "lat": 36.243874,
+     "lng": 136.27997
+    }
+   ]
+  },
+  "isSnowDepth": 1,
+  "data": {
+   "snowDepth": 21,
+   "observedAt": "20261030200000"
+  }
+ },
+ {
+  "id": 26,
+  "name": "錦",
+  "category": {
+   "name": "福井県"
+  },
+  "route": {
+   "name": "(県226)三国停車場桜谷線"
+  },
+  "map": {
+   "icons": [
+    {
+     "lat": 36.214237,
+     "lng": 136.1535
+    }
+   ]
+  },
+  "isSnowDepth": 1,
+  "data": {
+   "snowDepth": 0,
+   "observedAt": "20261030200000"
+  }
+ },
+ {
+  "id": 128,
+  "name": "福井 (気象庁)",
+  "category": {
+   "name": "気象庁"
+  },
+  "route": {
+   "name": "(主5)福井加賀線"
+  },
+  "map": {
+   "icons": [
+    {
+     "lat": 36.055053,
+     "lng": 136.221765
+    }
+   ]
+  },
+  "isSnowDepth": 1,
+  "data": {
+   "snowDepth": null,
+   "observedAt": "20261030200000"
+  }
+ },
+ {
+  "id": 9999,
+  "name": "雪なし用",
+  "category": {
+   "name": "福井県"
+  },
+  "route": {
+   "name": "x"
+  },
+  "map": {
+   "icons": [
+    {
+     "lat": 36.0,
+     "lng": 136.0
+    }
+   ]
+  },
+  "isSnowDepth": 0,
+  "data": {
+   "snowDepth": 0,
+   "observedAt": "20261030200000"
+  }
+ }
+]

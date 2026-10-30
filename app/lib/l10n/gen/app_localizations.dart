@@ -4735,7 +4735,7 @@ abstract class AppLocalizations {
   /// No description provided for @bosaiSnowDisclaimer.
   ///
   /// In ja, this message translates to:
-  /// **'アメダス観測点の値です。地域全体の積雪とは異なることがあります。'**
+  /// **'アメダスと道路管理者の観測点の値です。地域全体の積雪とは異なることがあります。'**
   String get bosaiSnowDisclaimer;
 
   /// No description provided for @bosaiSnowTapHint.

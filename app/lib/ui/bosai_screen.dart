@@ -8,6 +8,7 @@ import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
 import '../data/amedas_snow.dart';
+import '../data/snow_points.dart';
 import '../data/analytics.dart';
 import '../l10n/l10n.dart';
 import '../data/heat_alert.dart';
@@ -395,6 +396,12 @@ class _BosaiScreenState extends State<BosaiScreen>
   List<(SnowStation, double)>? _snowNearby;
   bool _snowNoLocation = false;
 
+  /// 近くの観測点を選び直すための現在地（最終既知位置）
+  (double, double)? _snowHere;
+
+  /// 近くの観測点の候補（アメダス＋外部点）
+  List<SnowStation> _snowStations = const [];
+
   /// 積雪を取得する（冬季のみ）。同じ観測時刻のあいだは AmedasSnow 側で
   /// 再取得しない。失敗は前回の内容を残して静かに諦める
   Future<void> _loadSnow() async {
@@ -408,23 +415,33 @@ class _BosaiScreenState extends State<BosaiScreen>
     try {
       // 市区町村名の表（じゃらん導線と共用のアセット）を先に読んでおく
       await MunicipalityNames.load();
-      final report = await AmedasSnow.fetch();
+      // アメダスと道路管理者の観測点を並列に取る。片方が失敗してももう片方で表示する
+      final results = await Future.wait<Object?>(
+          [AmedasSnow.fetch(), SnowPoints.fetch()]);
+      if (!mounted) return;
+      final amedas = results[0] as SnowReport?;
+      final ext = results[1] as SnowPointsDoc?;
+      final report = SnowPoints.merge(amedas, ext);
+      final amedasStations = await AmedasSnow.loadStations();
       if (!mounted) return;
       setState(() {
         if (report != null) _snow = report;
         _snowFailed = report == null && _snow == null;
       });
-      if (_snowNearby == null && !_snowNoLocation) {
+      _snowStations = SnowPoints.allStations(amedasStations, ext);
+      if (_snowHere == null && !_snowNoLocation) {
         final here = await _lastKnownLocation();
         if (!mounted) return;
         if (here == null) {
           setState(() => _snowNoLocation = true);
         } else {
-          final stations = await AmedasSnow.loadStations();
-          if (!mounted) return;
-          setState(() => _snowNearby =
-              AmedasSnow.nearest(stations, here.$1, here.$2));
+          _snowHere = (here.$1, here.$2);
         }
+      }
+      final here = _snowHere;
+      if (here != null) {
+        setState(() => _snowNearby =
+            AmedasSnow.nearest(_snowStations, here.$1, here.$2));
       }
     } finally {
       _snowLoading = false;
@@ -1226,7 +1243,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     final header = Padding(
       padding: const EdgeInsets.all(12),
       child: Text(
-        '${AmedasSnow.attribution}$when\n${l10n.bosaiSnowDisclaimer}'
+        '${SnowPoints.attributionText(report?.externalSources ?? const [])}$when\n${l10n.bosaiSnowDisclaimer}'
         '${prefs.isEmpty ? '' : '\n${l10n.bosaiSnowTapHint}'}',
         style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
       ),
@@ -1269,7 +1286,10 @@ class _BosaiScreenState extends State<BosaiScreen>
           trailing: const Icon(Icons.chevron_right),
           onTap: () => Navigator.of(context).push(MaterialPageRoute(
               builder: (_) => SnowPrefectureScreen(
-                  app: widget.app, title: prefName, data: p))),
+                  app: widget.app,
+                  title: prefName,
+                  data: p,
+                  sources: report?.externalSources ?? const []))),
         );
       },
     );
@@ -1345,6 +1365,10 @@ class _BosaiScreenState extends State<BosaiScreen>
             Text(s.name,
                 style: const TextStyle(
                     fontSize: 14, fontWeight: FontWeight.bold)),
+            if (s.source != null) ...[
+              const SizedBox(width: 4),
+              Text(s.source!, style: grey),
+            ],
             const SizedBox(width: 6),
             Text(l10n.bosaiApproxDistance(Wbgt.formatDistance(distance)),
                 style: grey),
@@ -2383,16 +2407,28 @@ Widget snowDepthChip(BuildContext context, AppLocalizations l10n, SnowObs o) {
 /// 市区町村の行からその市区町村のカメラ一覧へ進める
 class SnowPrefectureScreen extends StatelessWidget {
   const SnowPrefectureScreen(
-      {super.key, required this.app, required this.title, required this.data});
+      {super.key,
+      required this.app,
+      required this.title,
+      required this.data,
+      this.sources = const []});
 
   final AppState app;
   final String title;
   final SnowPrefecture data;
 
+  /// 合算に含まれている外部情報源。この県に出てくるものだけ出典に並べる
+  final List<SnowPointSource> sources;
+
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     final rows = <Widget>[];
+    final inPref = {
+      for (final m in data.municipalities)
+        for (final o in m.stations)
+          if (o.station.sourceId != null) o.station.sourceId!
+    };
     for (final m in data.municipalities) {
       final name = municipalityNameOf(m.code);
       rows.add(ListTile(
@@ -2413,7 +2449,15 @@ class SnowPrefectureScreen extends StatelessWidget {
         rows.add(ListTile(
           dense: true,
           contentPadding: const EdgeInsets.fromLTRB(32, 0, 16, 0),
-          title: Text(o.station.name),
+          title: Text.rich(TextSpan(children: [
+            TextSpan(text: o.station.name),
+            if (o.station.source != null)
+              TextSpan(
+                  text: '  ${o.station.source}',
+                  style: TextStyle(
+                      fontSize: 11,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant)),
+          ])),
           trailing: snowDepthChip(context, l10n, o),
         ));
       }
@@ -2424,7 +2468,7 @@ class SnowPrefectureScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(12),
           child: Text(
-              '${AmedasSnow.attribution}\n${l10n.bosaiSnowDisclaimer}',
+              '${SnowPoints.attributionText(sources.where((s) => inPref.contains(s.id)))}\n${l10n.bosaiSnowDisclaimer}',
               style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant)),
         ),
         ...rows,

@@ -1,0 +1,59 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": 1,
+    "name": "鳥取市岩坪",
+    "name2": "県道32号郡家鹿野気高線",
+    "積雪": "○",
+    "積雪深": "5.4",
+    "日時": "2026/10/30 20:50:00"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     134.117544,
+     35.401518
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": 2,
+    "name": "鹿野町河内",
+    "name2": "県道21号鳥取鹿野倉吉線",
+    "積雪": "○",
+    "積雪深": "0.0",
+    "日時": "2026/10/30 20:50:00"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     134.019559,
+     35.414984
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": 11,
+    "name": "鹿野町岡木【浜村鹿野温泉IC北】",
+    "name2": "県道32号郡家鹿野気高線",
+    "積雪": "-",
+    "積雪深": "",
+    "日時": ""
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     134.052875,
+     35.492503
+    ]
+   }
+  }
+ ]
+}

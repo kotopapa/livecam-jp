@@ -1,0 +1,34 @@
+{
+ "08_茨城県": [
+  {
+   "sensor_id": 835800034,
+   "cities_cd": "13201",
+   "rosen_meisho": "国道16号",
+   "pc_hyoji_meisho": "片倉",
+   "gis_point": "{\"type\":\"Point\",\"coordinates\":[139.342361,35.620917]}",
+   "date_time": "2026-10-30 20:40:00",
+   "sekisetsushin_flag": "1",
+   "snow_amount": "12.5"
+  },
+  {
+   "sensor_id": 833500007,
+   "cities_cd": "09386",
+   "rosen_meisho": "国道4号",
+   "pc_hyoji_meisho": "新鬼怒川橋",
+   "gis_point": "{\"type\":\"Point\",\"coordinates\":[139.973611,36.609722]}",
+   "date_time": "2026-10-30 20:50:00",
+   "sekisetsushin_flag": "1",
+   "snow_amount": "-"
+  },
+  {
+   "sensor_id": 833500019,
+   "cities_cd": "08542",
+   "rosen_meisho": "国道4号",
+   "pc_hyoji_meisho": "新利根川橋",
+   "gis_point": "{\"type\":\"Point\",\"coordinates\":[139.76,36.128611]}",
+   "date_time": "2026-10-30 20:50:00",
+   "sekisetsushin_flag": "0",
+   "snow_amount": "30"
+  }
+ ]
+}

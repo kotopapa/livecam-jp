@@ -2617,7 +2617,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get bosaiSnowDisclaimer => '为AMeDAS观测点的数值，可能与整个地区的积雪情况不同。';
+  String get bosaiSnowDisclaimer => '为AMeDAS及道路管理者观测点的数值，可能与整个地区的积雪情况不同。';
 
   @override
   String get bosaiSnowTapHint => '点按都道府县可查看各市区町村的观测点。';
@@ -5502,7 +5502,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get bosaiSnowDisclaimer => '為AMeDAS觀測點的數值，可能與整個地區的積雪情況不同。';
+  String get bosaiSnowDisclaimer => '為AMeDAS及道路管理者觀測點的數值，可能與整個地區的積雪情況不同。';
 
   @override
   String get bosaiSnowTapHint => '點選都道府縣可查看各市區町村的觀測點。';

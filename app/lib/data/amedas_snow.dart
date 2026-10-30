@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import '../util/geo.dart';
 import '../util/jst.dart';
 import 'heat_alert.dart';
+import 'snow_points.dart' show SnowPointSource;
 
 /// 気象庁アメダスの積雪深（冬季の災害速報タブ「積雪」）。
 ///
@@ -25,7 +26,15 @@ class SnowStation {
     required this.lat,
     required this.lng,
     required this.municipality,
+    this.source,
+    this.sourceId,
   });
+
+  /// 出典の短い名前（「国交省」など）。アメダスは null
+  final String? source;
+
+  /// 外部観測点の情報源ID（snow_points.json の source id）。アメダスは null
+  final String? sourceId;
 
   final String id;
   final String name;
@@ -90,7 +99,14 @@ class SnowPrefecture {
 
 /// 1回分の観測（10分値）
 class SnowReport {
-  const SnowReport({required this.observedAt, required this.observations});
+  const SnowReport({
+    required this.observedAt,
+    required this.observations,
+    this.externalSources = const [],
+  });
+
+  /// 合算に含まれている外部情報源（アメダス以外）。出典表記に使う
+  final List<SnowPointSource> externalSources;
 
   /// 観測時刻（JST 壁時計。素の DateTime）
   final DateTime observedAt;

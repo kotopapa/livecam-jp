@@ -2724,7 +2724,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bosaiSnowDisclaimer =>
-      'Values are from AMeDAS stations and may differ from snow cover across the area.';
+      'Values are from AMeDAS stations and road administrators\' stations, and may differ from snow cover across the area.';
 
   @override
   String get bosaiSnowTapHint =>

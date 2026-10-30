@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+	<Document>
+		<name>SnowDepthMap</name>
+		<description>2026/10/30 21:01:50</description>
+		<Style id="1">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthGreen.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="2">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthSkyBlue.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="3">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthBlue.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="4">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthYellow.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="5">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthOrange.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="6">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthPink.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="7">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthRed.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="8">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthBrown.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Style id="99">
+			<IconStyle>
+				<Icon>
+					<href>img/icon/icon_SnowDepthValueUnknown.png</href>
+					<gx:w>22</gx:w>
+					<gx:h>22</gx:h>
+				</Icon>
+				<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			</IconStyle>
+		</Style>
+		<Folder>
+			<Placemark>
+				<name>土生</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>積雪深</value>
+					</Data>
+					<Data name="積雪センサID">
+						<value>60</value>
+					</Data>
+					<Data name="観測区分">
+						<value>1</value>
+					</Data>
+					<Data name="観測日時">
+						<value>20261030210151</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#99</styleUrl>
+				<Point>
+					<coordinates>134.696095277778,35.594176397148,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>香住ＩＣ(路面)</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>積雪深</value>
+					</Data>
+					<Data name="積雪センサID">
+						<value>91</value>
+					</Data>
+					<Data name="観測区分">
+						<value>1</value>
+					</Data>
+					<Data name="観測日時">
+						<value>20261030210151</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#99</styleUrl>
+				<Point>
+					<coordinates>134.623446111111,35.6313001477717,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>佐津ＩＣ(路面)</name>
+				<ExtendedData>
+					<Data name="地物種別">
+						<value>積雪深</value>
+					</Data>
+					<Data name="積雪センサID">
+						<value>92</value>
+					</Data>
+					<Data name="観測区分">
+						<value>1</value>
+					</Data>
+					<Data name="観測日時">
+						<value>20261030210151</value>
+					</Data>
+				</ExtendedData>
+				<styleUrl>#99</styleUrl>
+				<Point>
+					<coordinates>134.684755794975,35.6198562171644,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>

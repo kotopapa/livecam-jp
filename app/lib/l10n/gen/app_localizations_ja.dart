@@ -2631,7 +2631,7 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get bosaiSnowDisclaimer => 'アメダス観測点の値です。地域全体の積雪とは異なることがあります。';
+  String get bosaiSnowDisclaimer => 'アメダスと道路管理者の観測点の値です。地域全体の積雪とは異なることがあります。';
 
   @override
   String get bosaiSnowTapHint => '都道府県をタップすると市区町村ごとの観測点を表示します。';
@@ -5563,7 +5563,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get bosaiSnowDisclaimer =>
-      'アメダスの ばしょで はかった あたいです。まちぜんたいの 雪（ゆき）とは ちがう ことが あります。';
+      'アメダスと どうろの かんりしゃの ばしょで はかった あたいです。まちぜんたいの 雪（ゆき）とは ちがう ことが あります。';
 
   @override
   String get bosaiSnowTapHint => '県（けん）を おすと 市（し）や 町（まち）ごとの ばしょが 出（で）ます。';
