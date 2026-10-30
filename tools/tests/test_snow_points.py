@@ -199,3 +199,14 @@ def test_mlit_muni_drops_designated_city_code():
     assert _mlit_muni("08542") == "08542"
     assert _mlit_muni("01100") == ""   # 政令市の市コードは区単位に引き直す
     assert _mlit_muni(None) == "" and _mlit_muni("123") == ""
+
+
+def test_build_keeps_only_fresh_points_from_previous_on_failure():
+    from tools.snow_points import build
+    now = datetime(2026, 10, 30, 12, 0, tzinfo=timezone.utc)  # JST 21:00
+    previous = {"sources": [{"id": "gifu", "name": "x", "short": "岐阜県", "operator": "岐阜県", "url": "u",
+                             "attribution": "a", "fetched_at": "", "points": [
+                                 {"id": "1", "n": "新", "lat": 35.6, "lng": 136.6, "d": 3, "at": "2026-10-30 20:00"},
+                                 {"id": "2", "n": "古", "lat": 35.6, "lng": 136.6, "d": 5, "at": "2026-10-29 10:00"}]}]}
+    doc = build(previous, {"gifu": None}, now)
+    assert [p["id"] for p in doc["sources"][0]["points"]] == ["1"]

@@ -600,7 +600,10 @@ def build(previous: dict[str, Any] | None, fetched: dict[str, list[dict[str, Any
         if pts is None:
             if src["id"] not in prev:
                 continue
-            sources.append(prev[src["id"]])
+            # 取得失敗が続いても古い値を出し続けないよう、前回の点も24時間以内のものだけ残す
+            kept = dict(prev[src["id"]])
+            kept["points"] = keep_fresh(kept.get("points") or [], now)
+            sources.append(kept)
             continue
         fresh = sorted(keep_fresh(pts, now), key=lambda p: p["id"])
         sources.append({k: src[k] for k in SOURCE_KEYS} | {
