@@ -2658,6 +2658,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get bosaiSnowNoSnowAtPoint => '積雪なし';
 
   @override
+  String get bosaiSnowNoData => '欠測';
+
+  @override
   String get bosaiSnowMuniCameras => 'この市区町村のカメラを見る';
 
   @override
@@ -5588,6 +5591,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get bosaiSnowNoSnowAtPoint => '雪（ゆき）なし';
+
+  @override
+  String get bosaiSnowNoData => 'データが ありません';
 
   @override
   String get bosaiSnowMuniCameras => 'この 市（し）・町（まち）の カメラを 見（み）る';

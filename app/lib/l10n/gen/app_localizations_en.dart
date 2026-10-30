@@ -2752,6 +2752,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get bosaiSnowNoSnowAtPoint => 'No snow cover';
 
   @override
+  String get bosaiSnowNoData => 'No data';
+
+  @override
   String get bosaiSnowMuniCameras => 'See cameras in this municipality';
 
   @override

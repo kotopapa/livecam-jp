@@ -2759,6 +2759,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get bosaiSnowNoSnowAtPoint => 'Không có tuyết phủ';
 
   @override
+  String get bosaiSnowNoData => 'Không có dữ liệu';
+
+  @override
   String get bosaiSnowMuniCameras => 'Xem camera ở thành phố/thị trấn này';
 
   @override

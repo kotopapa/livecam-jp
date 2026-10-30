@@ -2669,6 +2669,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get bosaiSnowNoSnowAtPoint => '적설 없음';
 
   @override
+  String get bosaiSnowNoData => '결측';
+
+  @override
   String get bosaiSnowMuniCameras => '이 시구정촌의 카메라 보기';
 
   @override

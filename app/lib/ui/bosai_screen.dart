@@ -8,6 +8,7 @@ import 'package:http/http.dart' as http;
 
 import '../app_state.dart';
 import '../data/amedas_snow.dart';
+import '../data/kawabou_snow.dart';
 import '../data/snow_points.dart';
 import '../data/analytics.dart';
 import '../l10n/l10n.dart';
@@ -402,6 +403,26 @@ class _BosaiScreenState extends State<BosaiScreen>
   /// 近くの観測点の候補（アメダス＋外部点）
   List<SnowStation> _snowStations = const [];
 
+  /// 川の防災情報の観測所の積雪深（観測所コード→cm）。キーがあって値が null なら欠測・失敗。
+  /// 近くの観測点に出る観測所の分だけ、タブを開いたとき端末が直接取る
+  final Map<String, int?> _kawabouDepth = {};
+  final Set<String> _kawabouLoading = {};
+
+  /// 近くの観測点のうち川の防災情報の観測所の値を取る（最大3件。取得は KawabouSnow 側で30分控え）
+  void _loadKawabouNearby() {
+    for (final e in _snowNearby ?? const <(SnowStation, double)>[]) {
+      final st = e.$1;
+      if (st.sourceId != KawabouSnow.sourceId) continue;
+      final code = KawabouSnow.obsFcdOf(st);
+      if (!_kawabouLoading.add(code)) continue;
+      KawabouSnow.fetchDepth(code).then((d) {
+        _kawabouLoading.remove(code);
+        if (!mounted) return;
+        setState(() => _kawabouDepth[code] = d);
+      });
+    }
+  }
+
   /// 積雪を取得する（冬季のみ）。同じ観測時刻のあいだは AmedasSnow 側で
   /// 再取得しない。失敗は前回の内容を残して静かに諦める
   Future<void> _loadSnow() async {
@@ -423,12 +444,16 @@ class _BosaiScreenState extends State<BosaiScreen>
       final ext = results[1] as SnowPointsDoc?;
       final report = SnowPoints.merge(amedas, ext);
       final amedasStations = await AmedasSnow.loadStations();
+      final kawabouStations = await KawabouSnow.loadStations();
       if (!mounted) return;
       setState(() {
         if (report != null) _snow = report;
         _snowFailed = report == null && _snow == null;
       });
-      _snowStations = SnowPoints.allStations(amedasStations, ext);
+      _snowStations = [
+        ...SnowPoints.allStations(amedasStations, ext),
+        ...kawabouStations,
+      ];
       if (_snowHere == null && !_snowNoLocation) {
         final here = await _lastKnownLocation();
         if (!mounted) return;
@@ -442,6 +467,7 @@ class _BosaiScreenState extends State<BosaiScreen>
       if (here != null) {
         setState(() => _snowNearby =
             AmedasSnow.nearest(_snowStations, here.$1, here.$2));
+        _loadKawabouNearby();
       }
     } finally {
       _snowLoading = false;
@@ -1240,10 +1266,15 @@ class _BosaiScreenState extends State<BosaiScreen>
             at.hour.toString().padLeft(2, '0'),
             at.minute.toString().padLeft(2, '0'));
     final prefs = report?.byPrefecture() ?? const <SnowPrefecture>[];
+    // 近くのカードに川の防災情報の観測所が出ているときだけ出典に加える
+    final kawabouShown = (_snowNearby ?? const <(SnowStation, double)>[])
+        .any((e) => e.$1.sourceId == KawabouSnow.sourceId);
+    final attribution =
+        SnowPoints.attributionText(report?.externalSources ?? const []);
     final header = Padding(
       padding: const EdgeInsets.all(12),
       child: Text(
-        '${SnowPoints.attributionText(report?.externalSources ?? const [])}$when\n${l10n.bosaiSnowDisclaimer}'
+        '${kawabouShown ? '$attribution、${KawabouSnow.attributionName}' : attribution}$when\n${l10n.bosaiSnowDisclaimer}'
         '${prefs.isEmpty ? '' : '\n${l10n.bosaiSnowTapHint}'}',
         style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
       ),
@@ -1380,11 +1411,29 @@ class _BosaiScreenState extends State<BosaiScreen>
         ),
       ),
       const SizedBox(width: 8),
-      if (o == null)
+      if (s.sourceId == KawabouSnow.sourceId)
+        _kawabouValue(s, grey)
+      else if (o == null)
         Text(l10n.bosaiSnowNoSnowAtPoint, style: grey)
       else
         snowDepthChip(context, l10n, o),
     ]);
+  }
+
+  /// 川の防災情報の観測所の値（取得中はインジケータ、欠測・失敗は「欠測」）
+  Widget _kawabouValue(SnowStation s, TextStyle grey) {
+    final l10n = context.l10n;
+    final code = KawabouSnow.obsFcdOf(s);
+    if (!_kawabouDepth.containsKey(code)) {
+      return const SizedBox(
+          width: 14,
+          height: 14,
+          child: CircularProgressIndicator(strokeWidth: 2));
+    }
+    final d = _kawabouDepth[code];
+    if (d == null) return Text(l10n.bosaiSnowNoData, style: grey);
+    if (d < 1) return Text(l10n.bosaiSnowNoSnowAtPoint, style: grey);
+    return snowDepthChip(context, l10n, SnowObs(station: s, depth: d));
   }
 
   /// 近くの地点の暑さ指数（WBGT）カード。現在地が取れる場合は最寄り3地点

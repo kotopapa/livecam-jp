@@ -4774,6 +4774,12 @@ abstract class AppLocalizations {
   /// **'積雪なし'**
   String get bosaiSnowNoSnowAtPoint;
 
+  /// No description provided for @bosaiSnowNoData.
+  ///
+  /// In ja, this message translates to:
+  /// **'欠測'**
+  String get bosaiSnowNoData;
+
   /// No description provided for @bosaiSnowMuniCameras.
   ///
   /// In ja, this message translates to:

@@ -2644,6 +2644,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get bosaiSnowNoSnowAtPoint => '无积雪';
 
   @override
+  String get bosaiSnowNoData => '缺测';
+
+  @override
   String get bosaiSnowMuniCameras => '查看该市区町村的摄像头';
 
   @override
@@ -5527,6 +5530,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get bosaiSnowNoSnowAtPoint => '無積雪';
+
+  @override
+  String get bosaiSnowNoData => '缺測';
 
   @override
   String get bosaiSnowMuniCameras => '查看該市區町村的攝影機';
