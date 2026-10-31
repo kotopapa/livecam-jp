@@ -19,6 +19,11 @@
 
 出力する点の条件
 - 積雪深が数値で取れ、観測時刻が取得時点から24時間以内の地点だけ（欠測・古い値は出さない）
+- **気象庁の解析積雪深（PNG タイル）と照合し、周囲 5km が「積雪なし」なのにセンサーが 10cm 以上、
+  または 1cm 以上かつ気温 3℃ 以上の地点は誤計測として出さない**（2026-10-31: 無雪期に七尾 166cm・
+  京丹波 136cm などの超音波積雪計の誤計測がそのまま配信され、利用者から指摘。各県サイトも生の値を
+  出す作りなので配信側で弾く）。解析タイルが取れない回は気温 8℃ 以上の地点だけ弾く
+- 気温 t（℃、小数1桁）は取れた情報源だけ付ける（照合に使う。アプリは未使用）
 - 積雪深 d は cm の整数（四捨五入）。0 も出す（「積雪なし」）
 - 時刻 at は JST の壁時計 "YYYY-MM-DD HH:MM"
 - 市区町村コード m は mlit 以外は座標から国土地理院の逆ジオコーダで引く
@@ -52,6 +57,12 @@ UA = {"User-Agent": "livecam-jp snow-points (+https://kotopapa.github.io/livecam
 JST = timezone(timedelta(hours=9))
 MAX_AGE = timedelta(hours=24)
 MAX_DEPTH_CM = 1500          # これを超える値はセンサー異常とみなして捨てる
+JMA_SNOW_BASE = "https://www.jma.go.jp/bosai/jmatile/data/snow/"   # 解析積雪深タイル（妥当性の照合用）
+ANALYSIS_ZOOM = 8            # 偶数ズームしか生成されない（maxNativeZoom 10）。z8 は 1px ≈ 600m で 5km メッシュに十分
+CHECK_RADIUS_KM = 5.0        # この距離だけ四方にずらした点も含めて「周囲に積雪なし」を判定する
+IMPLAUSIBLE_MIN_CM = 10      # 解析が積雪なしのとき、これ以上の値は気温によらず誤計測とみなす
+IMPLAUSIBLE_TEMP_C = 3.0     # 解析が積雪なしのとき、気温がこれ以上なら 1cm 以上の値も誤計測とみなす
+FALLBACK_TEMP_C = 8.0        # 解析タイルが取れない回に、気温だけで誤計測とみなす下限
 GEOCODE_LIMIT = 300          # 1回の実行で逆ジオコーダに問い合わせる最大件数
 HOST_INTERVAL = 1.5          # 同一ホストへの連続アクセスの間隔（秒）
 
@@ -109,6 +120,25 @@ def parse_depth(v: Any) -> float | None:
     return x
 
 
+def parse_temp(v: Any) -> float | None:
+    """気温の生の値 → ℃（小数1桁）。欠測・数値以外は None。負の値を受ける点が parse_depth と違う。"""
+    if v is None or isinstance(v, bool):
+        return None
+    if isinstance(v, (int, float)):
+        x = float(v)
+    else:
+        s = str(v).strip().replace("℃", "").replace("　", "").strip()
+        if not s or set(s) <= {"-", "－", "ー", "―"}:
+            return None
+        try:
+            x = float(s)
+        except ValueError:
+            return None
+    if math.isnan(x) or not -60 <= x <= 60:
+        return None
+    return round(x, 1)
+
+
 def round_cm(x: float) -> int:
     """四捨五入（銀行丸めにしない）。"""
     return int(math.floor(x + 0.5))
@@ -136,8 +166,9 @@ def parse_at(s: Any) -> datetime | None:
 
 
 def make_point(pid: Any, name: str, lat: Any, lng: Any, depth: Any, at: Any,
-               route: str = "", muni: str = "") -> dict[str, Any] | None:
-    """生の1地点 → 内部表現。座標や名前が無ければ None。d は欠測なら None（後段で落とす）。"""
+               route: str = "", muni: str = "", temp: Any = None) -> dict[str, Any] | None:
+    """生の1地点 → 内部表現。座標や名前が無ければ None。d は欠測なら None（後段で落とす）。
+    temp（気温）は妥当性の照合に使う。"""
     try:
         la, ln = float(lat), float(lng)
     except (TypeError, ValueError):
@@ -154,6 +185,9 @@ def make_point(pid: Any, name: str, lat: Any, lng: Any, depth: Any, at: Any,
     p["d"] = None if d is None else round_cm(d)
     dt = parse_at(at)
     p["at"] = fmt_at(dt) if dt else ""
+    t = parse_temp(temp)
+    if t is not None:
+        p["t"] = t
     return p
 
 
@@ -189,7 +223,8 @@ def parse_mlit(doc: dict[str, Any]) -> list[dict[str, Any]]:
                 continue
             p = make_point(r.get("sensor_id"), str(r.get("pc_hyoji_meisho") or ""), lat, lng,
                            r.get("snow_amount"), r.get("date_time"),
-                           route=r.get("rosen_meisho") or "", muni=_mlit_muni(r.get("cities_cd")))
+                           route=r.get("rosen_meisho") or "", muni=_mlit_muni(r.get("cities_cd")),
+                           temp=r.get("temperature"))
             if p:
                 out.append(p)
     return out
@@ -213,7 +248,7 @@ def parse_tottori(doc: dict[str, Any]) -> list[dict[str, Any]]:
         except (KeyError, TypeError, ValueError):
             continue
         p = make_point(pr.get("id"), str(pr.get("name") or ""), lat, lng, pr.get("積雪深"), pr.get("日時"),
-                       route=pr.get("name2") or "")
+                       route=pr.get("name2") or "", temp=pr.get("気温"))
         if p:
             out.append(p)
     return out
@@ -223,7 +258,8 @@ def parse_hiroshima(doc: dict[str, Any]) -> list[dict[str, Any]]:
     out = []
     for r in (doc or {}).get("results") or []:
         p = make_point(r.get("id"), str(r.get("site") or ""), r.get("lat"), r.get("lon"),
-                       r.get("snow_depth"), r.get("date"), route=r.get("rosenname") or "")
+                       r.get("snow_depth"), r.get("date"), route=r.get("rosenname") or "",
+                       temp=r.get("temperature"))
         if p:
             out.append(p)
     return out
@@ -241,7 +277,7 @@ def parse_kyoku_api(master: dict[str, Any], snow: dict[str, Any]) -> list[dict[s
         if not m:
             continue
         p = make_point(s.get("id"), str(m.get("pointName") or ""), m.get("latitude"), m.get("longitude"),
-                       s.get("snow"), s.get("ts"), route=m.get("route") or "")
+                       s.get("snow"), s.get("ts"), route=m.get("route") or "", temp=s.get("temperature"))
         if p:
             out.append(p)
     return out
@@ -256,7 +292,8 @@ def parse_fukui(doc: list[dict[str, Any]]) -> list[dict[str, Any]]:
         icons = (w.get("map") or {}).get("icons") or [{}]
         d = w.get("data") or {}
         p = make_point(w.get("id"), str(w.get("name") or ""), icons[0].get("lat"), icons[0].get("lng"),
-                       d.get("snowDepth"), d.get("observedAt"), route=(w.get("route") or {}).get("name") or "")
+                       d.get("snowDepth"), d.get("observedAt"), route=(w.get("route") or {}).get("name") or "",
+                       temp=d.get("temperature"))
         if p:
             out.append(p)
     return out
@@ -271,7 +308,8 @@ def parse_toyama(master: dict[str, Any], snow: dict[str, Any]) -> list[dict[str,
             continue
         latest = max(data)
         p = make_point(key, str(m.get("name") or ""), m.get("lat"), m.get("lng"),
-                       (data[latest] or {}).get("snowcover"), latest, route=m.get("rosen") or "")
+                       (data[latest] or {}).get("snowcover"), latest, route=m.get("rosen") or "",
+                       temp=(data[latest] or {}).get("temp"))
         if p:
             out.append(p)
     return out
@@ -308,7 +346,7 @@ def parse_shimane(point_text: str, recent_text: str) -> list[dict[str, Any]]:
         if not r:
             continue
         p = make_point(m.get("point_id"), str(m.get("name") or ""), m.get("lat"), m.get("lng"),
-                       r.get("snow_depth"), r.get("ts"), route=m.get("route") or "")
+                       r.get("snow_depth"), r.get("ts"), route=m.get("route") or "", temp=r.get("temperature"))
         if p:
             out.append(p)
     return out
@@ -327,7 +365,7 @@ def parse_okayama(stations: list[dict[str, Any]], top_html: str) -> list[dict[st
         # 休止中の観測点は値があっても採らない（d=None にして後段で落とす。全点休止の期間も「解析できた」扱い）
         depth = None if s.get("suspended") else s.get("snow")
         p = make_point(s.get("id"), str(s.get("name") or ""), lat, lng, depth, s.get("data_time"),
-                       route=s.get("road") or "")
+                       route=s.get("road") or "", temp=s.get("temp"))
         if p:
             out.append(p)
     return out
@@ -356,15 +394,16 @@ def parse_hyogo_kml(kml: bytes | str) -> dict[str, dict[str, Any]]:
 
 
 HYOGO_ROW_RE = re.compile(
-    r'<td align="left">\s*([^<]*?)\s*</td>\s*<td[^>]*>\s*([^<]*?)\s*cm\s*</td>.*?SDSID=(\d+)', re.S)
+    r'<td align="left">\s*([^<]*?)\s*</td>\s*<td[^>]*>\s*([^<]*?)\s*cm\s*</td>'
+    r'(?:\s*<td[^>]*>\s*[^<]*?\s*cm\s*</td>\s*<td[^>]*>\s*([^<]*?)\s*℃\s*</td>)?.*?SDSID=(\d+)', re.S)
 
 
 def parse_hyogo_list(page: str) -> dict[str, dict[str, Any]]:
-    """地域別一覧 HTML 1ページ分 → {積雪センサID: {r: 路線, d: 積雪(cm) or None}}。"""
+    """地域別一覧 HTML 1ページ分 → {積雪センサID: {r: 路線, d: 積雪(cm) or None, t: 気温 or None}}。"""
     out = {}
     for m in HYOGO_ROW_RE.finditer(page):
         route = " ".join(htmllib.unescape(m[1]).split())
-        out[m[3]] = {"r": route, "d": parse_depth(m[2])}
+        out[m[4]] = {"r": route, "d": parse_depth(m[2]), "t": parse_temp(m[3])}
     return out
 
 
@@ -395,7 +434,8 @@ def parse_hyogo(kml: bytes | str, pages: list[str], now: datetime) -> list[dict[
             if not g or sid in seen:
                 continue
             seen.add(sid)
-            p = make_point(sid, g["n"], g["lat"], g["lng"], v["d"], fmt_at(at) if at else "", route=v["r"])
+            p = make_point(sid, g["n"], g["lat"], g["lng"], v["d"], fmt_at(at) if at else "", route=v["r"],
+                           temp=v.get("t"))
             if p:
                 out.append(p)
     return out
@@ -555,6 +595,120 @@ def fetch_source(sid: str, fx: Fetcher, now: datetime) -> list[dict[str, Any]] |
     return pts
 
 
+# ---------------------------------------------------------------- 妥当性の照合（気象庁 解析積雪深）
+
+def latest_analysis_time(target_times: Any) -> str | None:
+    """targetTimes.json（実況と予測が混在・降順とは限らない）から最新の実況（basetime==validtime）を選ぶ。
+    アプリの JmaLayers.latestSnowTime と同じ規則。"""
+    best = None
+    for e in target_times if isinstance(target_times, list) else []:
+        if not isinstance(e, dict):
+            continue
+        b, v, els = e.get("basetime"), e.get("validtime"), e.get("elements")
+        if not isinstance(b, str) or b != v or (isinstance(els, list) and "snowd" not in els):
+            continue
+        if best is None or b > best:
+            best = b
+    return best
+
+
+def tile_pixel(lat: float, lng: float, z: int = ANALYSIS_ZOOM) -> tuple[int, int, int, int]:
+    """緯度経度 → (タイル x, タイル y, タイル内 px, py)。Web メルカトル・256px。"""
+    n = 2 ** z
+    x = (lng + 180.0) / 360.0 * n
+    la = math.radians(lat)
+    y = (1.0 - math.log(math.tan(la) + 1.0 / math.cos(la)) / math.pi) / 2.0 * n
+    tx, ty = int(math.floor(x)), int(math.floor(y))
+    return tx, ty, min(255, int((x - tx) * 256)), min(255, int((y - ty) * 256))
+
+
+class SnowAnalysis:
+    """気象庁の解析積雪深タイル（snowd）を読んで「その場所に積雪があるか」を返す。
+    タイルは塗りのある画素＝積雪あり、透明＝積雪なし（データ無し・海も透明）。取れないタイルは None。"""
+
+    def __init__(self, fx: Fetcher, basetime: str) -> None:
+        self.fx = fx
+        self.basetime = basetime
+        self._tiles: dict[tuple[int, int], Any] = {}
+        self.fetched = 0
+
+    @classmethod
+    def load(cls, fx: Fetcher) -> SnowAnalysis | None:
+        try:
+            bt = latest_analysis_time(fx.json(JMA_SNOW_BASE + "targetTimes.json"))
+        except Exception as e:  # noqa: BLE001
+            print(f"解析積雪深: targetTimes 取得失敗 {type(e).__name__}", file=sys.stderr)
+            return None
+        return cls(fx, bt) if bt else None
+
+    def _tile(self, x: int, y: int) -> Any:
+        key = (x, y)
+        if key not in self._tiles:
+            from io import BytesIO
+            from PIL import Image
+            url = f"{JMA_SNOW_BASE}{self.basetime}/none/{self.basetime}/surf/snowd/{ANALYSIS_ZOOM}/{x}/{y}.png"
+            try:
+                self._tiles[key] = Image.open(BytesIO(self.fx.get(url))).convert("RGBA")
+            except Exception as e:  # noqa: BLE001
+                print(f"解析積雪深: タイル {x}/{y} 取得失敗 {type(e).__name__}", file=sys.stderr)
+                self._tiles[key] = None
+            self.fetched += 1
+        return self._tiles[key]
+
+    def has_snow(self, lat: float, lng: float) -> bool | None:
+        x, y, px, py = tile_pixel(lat, lng)
+        im = self._tile(x, y)
+        if im is None:
+            return None
+        return im.getpixel((px, py))[3] > 0
+
+    def zero_around(self, lat: float, lng: float, radius_km: float = CHECK_RADIUS_KM) -> bool | None:
+        """その点と四方 radius_km の計5点がすべて積雪なしなら True。どれかに積雪があれば False。
+        どれかのタイルが取れなければ None（判定しない）。"""
+        dlat = radius_km / 111.0
+        dlng = radius_km / (111.0 * max(0.2, math.cos(math.radians(lat))))
+        result = True
+        for la, ln in ((lat, lng), (lat + dlat, lng), (lat - dlat, lng), (lat, lng + dlng), (lat, lng - dlng)):
+            s = self.has_snow(la, ln)
+            if s is None:
+                return None
+            if s:
+                result = False
+        return result
+
+
+def is_implausible(p: dict[str, Any], zero_around: bool | None) -> bool:
+    """センサー値が誤計測とみなせるか。zero_around は解析積雪深で周囲に積雪が無いか（None=判定できず）。
+    - 周囲に積雪なし かつ 10cm 以上 → 誤計測（春の残雪は解析にも出るので、季節によらず使える）
+    - 周囲に積雪なし かつ 1cm 以上 かつ 気温 3℃ 以上 → 誤計測
+    - 解析が取れないときは 気温 8℃ 以上 かつ 1cm 以上 だけ誤計測
+    積雪深 0 の点はそのまま出す。"""
+    d = p.get("d") or 0
+    t = p.get("t")
+    if d <= 0:
+        return False
+    if zero_around is None:
+        return t is not None and t >= FALLBACK_TEMP_C
+    if not zero_around:
+        return False
+    if d >= IMPLAUSIBLE_MIN_CM:
+        return True
+    return t is not None and t >= IMPLAUSIBLE_TEMP_C
+
+
+def drop_implausible(points: list[dict[str, Any]], analysis: SnowAnalysis | None
+                     ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """→ (残す点, 落とした点)。積雪深 0 の点はタイルを見ずに残す。"""
+    kept, dropped = [], []
+    for p in points:
+        if (p.get("d") or 0) <= 0:
+            kept.append(p)
+            continue
+        zero = analysis.zero_around(p["lat"], p["lng"]) if analysis else None
+        (dropped if is_implausible(p, zero) else kept).append(p)
+    return kept, dropped
+
+
 # ---------------------------------------------------------------- 市区町村コード
 
 def attach_municipality(points: list[dict[str, Any]], cache: dict[str, Any],
@@ -608,7 +762,7 @@ def build(previous: dict[str, Any] | None, fetched: dict[str, list[dict[str, Any
         fresh = sorted(keep_fresh(pts, now), key=lambda p: p["id"])
         sources.append({k: src[k] for k in SOURCE_KEYS} | {
             "fetched_at": iso(now),
-            "points": [{k: p[k] for k in ("id", "n", "r", "lat", "lng", "m", "d", "at") if k in p} for p in fresh]})
+            "points": [{k: p[k] for k in ("id", "n", "r", "lat", "lng", "m", "d", "at", "t") if k in p} for p in fresh]})
     return {"version": iso(now), "sources": sources}
 
 
@@ -672,6 +826,18 @@ def main(argv: list[str] | None = None) -> int:
     for sid, pts in fetched.items():
         if pts is not None:
             fetched[sid] = keep_fresh(pts, now)
+    # 気象庁の解析積雪深と照合し、無雪なのに積雪ありと言うセンサー（誤計測）を落とす
+    analysis = SnowAnalysis.load(Fetcher(interval=0.2))
+    if analysis is None:
+        print("解析積雪深が取れないため、気温だけで照合")
+    for sid, pts in fetched.items():
+        if not pts:
+            continue
+        fetched[sid], dropped = drop_implausible(pts, analysis)
+        for p in dropped:
+            print(f"{sid}: 誤計測として除外 {p['n']} {p['d']}cm 気温{p.get('t', '?')}℃ ({p['at']})")
+    if analysis:
+        print(f"解析積雪深 {analysis.basetime} タイル {analysis.fetched}枚で照合")
     budget = GEOCODE_LIMIT
     queried = 0
     for pts in fetched.values():

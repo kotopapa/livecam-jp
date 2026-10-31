@@ -210,3 +210,84 @@ def test_build_keeps_only_fresh_points_from_previous_on_failure():
                                  {"id": "2", "n": "古", "lat": 35.6, "lng": 136.6, "d": 5, "at": "2026-10-29 10:00"}]}]}
     doc = build(previous, {"gifu": None}, now)
     assert [p["id"] for p in doc["sources"][0]["points"]] == ["1"]
+
+
+# ---------------------------------------------------------------- 妥当性の照合（2026-10-31）
+
+def test_parse_temp_accepts_negative_and_rejects_missing():
+    assert sp.parse_temp("-1.4") == -1.4 and sp.parse_temp(11.24) == 11.2 and sp.parse_temp("9.5 ℃") == 9.5
+    assert sp.parse_temp("--") is None and sp.parse_temp("") is None and sp.parse_temp(None) is None
+    assert sp.parse_temp("99") is None
+
+
+def test_parsers_carry_temperature():
+    assert by_id(sp.parse_mlit(js("mlit.json")))["835800034"]["t"] == 11.2
+    assert by_id(sp.parse_tottori(js("tottori.geojson")))["1"]["t"] == 9.5
+    assert by_id(sp.parse_kyoku_api(js("ishikawa_master.json"), js("ishikawa_snow.json")))["3"]["t"] == -1.4
+    # 兵庫の一覧は「積雪 / 降雪 / 気温」の順。気温 "--" は欠測
+    rows = sp.parse_hyogo_list(txt("hyogo_list.html"))
+    assert rows["92"]["d"] == 12 and rows["92"]["t"] is None
+
+
+def test_latest_analysis_time_picks_latest_observation():
+    tt = [{"basetime": "20261031110000", "validtime": "20261031170000", "elements": ["snowd"]},
+          {"basetime": "20261031100000", "validtime": "20261031100000", "elements": ["snowd"]},
+          {"basetime": "20261031110000", "validtime": "20261031110000", "elements": ["snowd"]},
+          {"basetime": "20261031120000", "validtime": "20261031120000", "elements": ["snowf24h"]}]
+    assert sp.latest_analysis_time(tt) == "20261031110000"
+    assert sp.latest_analysis_time([]) is None and sp.latest_analysis_time(None) is None
+
+
+def test_tile_pixel_matches_web_mercator():
+    x, y, px, py = sp.tile_pixel(43.6467, 142.795, 10)   # 旭岳: z10 で 918/373
+    assert (x, y) == (918, 373) and 0 <= px < 256 and 0 <= py < 256
+    x8, y8, _, _ = sp.tile_pixel(43.6467, 142.795, 8)
+    assert (x8, y8) == (918 // 4, 373 // 4)
+
+
+class _FakeAnalysis:
+    """緯度 37 以北は積雪あり、それより南は積雪なし。lat が 99 のタイルは取れない。"""
+    basetime = "20261031110000"
+    fetched = 0
+
+    def zero_around(self, lat, lng, radius_km=sp.CHECK_RADIUS_KM):
+        if lat > 90:
+            return None
+        return lat < 37
+
+
+def test_is_implausible_rules():
+    # 周囲に積雪なし: 10cm 以上は気温によらず、1〜9cm は気温 3℃ 以上で誤計測
+    assert sp.is_implausible({"d": 166, "t": 11.2}, True)
+    assert sp.is_implausible({"d": 10}, True)
+    assert sp.is_implausible({"d": 3, "t": 3.0}, True)
+    assert not sp.is_implausible({"d": 3, "t": -0.5}, True)
+    assert not sp.is_implausible({"d": 3}, True)             # 気温不明の小さな値は残す
+    assert not sp.is_implausible({"d": 0, "t": 20.0}, True)  # 0 はそのまま
+    # 周囲に積雪あり: 何でも残す
+    assert not sp.is_implausible({"d": 166, "t": 11.2}, False)
+    # 解析が取れない: 気温 8℃ 以上だけ
+    assert sp.is_implausible({"d": 2, "t": 8.0}, None)
+    assert not sp.is_implausible({"d": 166, "t": 7.9}, None)
+    assert not sp.is_implausible({"d": 166}, None)
+
+
+def test_drop_implausible_uses_analysis_and_keeps_zero():
+    pts = [{"id": "a", "n": "七尾", "lat": 36.98, "lng": 137.04, "d": 166, "t": 11.2, "at": "x"},
+           {"id": "b", "n": "旭岳", "lat": 43.65, "lng": 142.80, "d": 7, "t": 1.0, "at": "x"},
+           {"id": "c", "n": "金沢", "lat": 36.56, "lng": 136.66, "d": 0, "t": 15.0, "at": "x"},
+           {"id": "d", "n": "能登", "lat": 37.12, "lng": 136.85, "d": 8, "t": 11.4, "at": "x"},
+           {"id": "e", "n": "不明", "lat": 99.0, "lng": 136.85, "d": 50, "t": 9.0, "at": "x"},
+           {"id": "f", "n": "不明2", "lat": 99.0, "lng": 136.85, "d": 50, "t": 7.0, "at": "x"}]
+    kept, dropped = sp.drop_implausible(pts, _FakeAnalysis())
+    assert [p["id"] for p in dropped] == ["a", "e"]
+    assert [p["id"] for p in kept] == ["b", "c", "d", "f"]
+    # 解析が無ければ気温だけ
+    kept, dropped = sp.drop_implausible(pts, None)
+    assert [p["id"] for p in dropped] == ["a", "d", "e"]
+
+
+def test_build_publishes_temperature():
+    pts = [{"id": "1", "n": "a", "lat": 36.0, "lng": 137.0, "d": 3, "t": -1.0, "at": "2026-10-30 20:00"}]
+    doc = sp.build(None, {"mlit": pts}, NOW)
+    assert doc["sources"][0]["points"][0]["t"] == -1.0
