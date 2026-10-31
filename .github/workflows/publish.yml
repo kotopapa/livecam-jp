@@ -12,6 +12,7 @@ on:
       - "data/stockpile/**"
       - "data/underpass_status.json"
       - "data/road_regulation.json"
+      - "data/snow_points.json"
       - "site/**"
   workflow_dispatch:
     inputs:
