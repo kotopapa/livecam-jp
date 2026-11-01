@@ -24,9 +24,23 @@ const _coldColor = Color(0xFF1E88E5);
 /// 天気マーク（Meteocons、Bas Milius、MIT。同梱 PNG）。「のち」は前半・後半の2枚を矢印でつなぐ。
 /// 塗り版は雲が薄いので、薄い丸角の下地を敷く。無いコードは Material Icons の雲で代える
 class WeatherIcon extends StatelessWidget {
-  const WeatherIcon(this.code, {super.key, this.width = 36});
+  const WeatherIcon(this.code, {super.key, this.width = 36, this.rain = 0, this.snow = 0});
   final String? code;
   final double width;
+
+  /// 3時間降水量の階級（0=1mm未満 … 5=20mm以上）。10mm/3h 以上（3〜）は雨粒の多いマーク、
+  /// 下地も濃くする。週間など階級が無いときは 0
+  final int rain;
+
+  /// 3時間降雪量の階級（0=1cm未満 … 3=6cm以上）。3cm/3h 以上（2〜）は雪の多いマーク
+  final int snow;
+
+  /// 強さに応じてマークを差し替える（雨系→ extreme-rain、雪系→ extreme-snow）
+  static String intensify(String name, int rain, int snow) {
+    if (rain >= 3 && (name == 'rain' || name.endsWith('-rain'))) return 'extreme-rain';
+    if (snow >= 2 && (name == 'snow' || name.endsWith('-snow'))) return 'extreme-snow';
+    return name;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +64,7 @@ class WeatherIcon extends StatelessWidget {
           height: width,
           child: Icon(Icons.cloud, size: width * 0.8, color: Colors.grey));
     } else if (spec.then == null) {
-      child = img(spec.main, width);
+      child = img(intensify(spec.main, rain, snow), width);
     } else {
       boxW = width + 12;
       child = FittedBox(
@@ -58,7 +72,7 @@ class WeatherIcon extends StatelessWidget {
         child: Row(mainAxisSize: MainAxisSize.min, children: [
           img(spec.main, width * 0.6),
           Icon(Icons.arrow_forward_ios, size: 6, color: scheme.onSurfaceVariant),
-          img(spec.then!, width * 0.5),
+          img(intensify(spec.then!, rain, snow), width * 0.5),
         ]),
       );
     }
@@ -67,7 +81,7 @@ class WeatherIcon extends StatelessWidget {
       height: box,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: tileColor(spec, scheme),
+        color: tileColor(spec, scheme, rain: rain, snow: snow),
         borderRadius: BorderRadius.circular(8),
       ),
       child: child,
@@ -76,13 +90,18 @@ class WeatherIcon extends StatelessWidget {
 
   /// 下地の色。塗り版は雨粒・雪が細くて小さい表示では薄いので、種別で色分けする
   /// （雨＝青、雪＝水色、みぞれ＝青灰、雷雨＝濃い青。晴れ・くもりは控えめな灰）。
-  /// 「のち」は後半の天気の色（これから変わる方を目立たせる）
-  static Color tileColor(({String main, String? then})? spec, ColorScheme scheme) {
+  /// 「のち」は後半の天気の色（これから変わる方を目立たせる）。雨・雪は階級が上がるほど濃く
+  static Color tileColor(({String main, String? then})? spec, ColorScheme scheme,
+      {int rain = 0, int snow = 0}) {
     final name = spec?.then ?? spec?.main ?? '';
     if (name.startsWith('thunderstorms')) return const Color(0xFF3949AB).withValues(alpha: 0.45);
     if (name.endsWith('sleet') || name == 'sleet') return const Color(0xFF5C8DB8).withValues(alpha: 0.40);
-    if (name.endsWith('snow') || name == 'snow') return const Color(0xFF80D8FF).withValues(alpha: 0.35);
-    if (name.endsWith('rain') || name == 'rain') return const Color(0xFF1E88E5).withValues(alpha: 0.40);
+    if (name.endsWith('snow') || name == 'snow') {
+      return const Color(0xFF80D8FF).withValues(alpha: const [0.35, 0.35, 0.50, 0.65][snow.clamp(0, 3)]);
+    }
+    if (name.endsWith('rain') || name == 'rain') {
+      return const Color(0xFF1E88E5).withValues(alpha: const [0.40, 0.40, 0.50, 0.62, 0.72, 0.82][rain.clamp(0, 5)]);
+    }
     return scheme.onSurface.withValues(alpha: 0.12);
   }
 }
@@ -375,7 +394,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
             ),
           ),
         ),
-      rowOf(44, (c, _) => Center(child: WeatherIcon(c.weatherCode))),
+      rowOf(44, (c, _) => Center(child: WeatherIcon(c.weatherCode, rain: c.rain ?? 0, snow: c.snow ?? 0))),
       rowOf(15, (c, _) => Center(
             child: Text(rainText(c.rain ?? 0),
                 style: const TextStyle(fontSize: 11, color: _coldColor), maxLines: 1, overflow: TextOverflow.clip))),
