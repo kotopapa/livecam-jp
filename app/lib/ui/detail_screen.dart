@@ -854,6 +854,34 @@ class _YoutubeGateState extends State<_YoutubeGate> {
   }
 }
 
+/// YouTube 埋め込み WebView 内で起きた遷移をどう扱うか
+enum YoutubeEmbedNavigation { allow, openExternal, prevent }
+
+/// [url] への遷移の扱いを決める（WebView に依存しない純粋な判定。テスト対象）。
+/// - 枠内（iframe）の遷移はプレーヤーの動作なので通す。ただし Google の
+///   サインインだけは枠内でも止める
+/// - 最上位フレームは、最初に読み込む自前 HTML（baseUrl）以外へ移らせない。
+///   YouTube の URL なら外部の YouTube アプリ／ブラウザで開く
+YoutubeEmbedNavigation youtubeEmbedNavigation(String url,
+    {required bool isMainFrame}) {
+  final uri = Uri.tryParse(url);
+  if (uri == null) return YoutubeEmbedNavigation.prevent;
+  final host = uri.host.toLowerCase();
+  if (host == 'accounts.google.com' || host.endsWith('.accounts.google.com')) {
+    return YoutubeEmbedNavigation.prevent;
+  }
+  if (!isMainFrame) return YoutubeEmbedNavigation.allow;
+  if (uri.scheme == 'about' || host == 'livecam-jp.local') {
+    return YoutubeEmbedNavigation.allow;
+  }
+  const youtubeHosts = {'youtube.com', 'youtu.be', 'youtube-nocookie.com'};
+  final isYoutube = youtubeHosts.any((h) => host == h || host.endsWith('.$h'));
+  if (isYoutube && (uri.scheme == 'https' || uri.scheme == 'http')) {
+    return YoutubeEmbedNavigation.openExternal;
+  }
+  return YoutubeEmbedNavigation.prevent;
+}
+
 class _YoutubeEmbedView extends StatefulWidget {
   const _YoutubeEmbedView({required this.embedPath});
 
@@ -896,6 +924,25 @@ class _YoutubeEmbedViewState extends State<_YoutubeEmbedView>
     _controller = WebViewController.fromPlatformCreationParams(params)
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(Colors.black)
+      // プレーヤー枠の外へは遷移させない。YouTube は審査端末などデータセンターの
+      // 回線からの再生に「ログインしてロボットでないことを確認」を出し、その
+      // 「ログイン」を押すと WebView 全体が Google のサインイン画面になる。
+      // Google Play はこれを「アプリにログインが必要なのに認証情報が無い」と
+      // 判定して 1.6.9 (53) を却下した（2026-11-01）。YouTube への遷移
+      //（ロゴ・「YouTube で見る」）は規約どおり外部の YouTube で開く
+      ..setNavigationDelegate(NavigationDelegate(
+        onNavigationRequest: (req) {
+          switch (youtubeEmbedNavigation(req.url, isMainFrame: req.isMainFrame)) {
+            case YoutubeEmbedNavigation.allow:
+              return NavigationDecision.navigate;
+            case YoutubeEmbedNavigation.openExternal:
+              launchUrl(Uri.parse(req.url), mode: LaunchMode.externalApplication);
+              return NavigationDecision.prevent;
+            case YoutubeEmbedNavigation.prevent:
+              return NavigationDecision.prevent;
+          }
+        },
+      ))
       ..loadHtmlString('''
 <!DOCTYPE html><html><head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
