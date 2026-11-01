@@ -20,6 +20,7 @@ import '../data/affiliate.dart';
 import '../data/analytics.dart';
 import '../data/data_saver.dart';
 import '../data/hotel_links.dart';
+import '../data/point_weather.dart' show PointWeathers;
 import '../data/stockpile_products.dart';
 import '../data/tide_level.dart' show TideLevels;
 import '../data/wave_forecast.dart' show WaveForecasts;
@@ -33,6 +34,7 @@ import 'ad_banner.dart';
 import 'elevation_label.dart';
 import 'pin_bitmaps.dart';
 import 'pin_style.dart';
+import 'point_weather_card.dart';
 import 'water_level_card.dart';
 import 'wave_forecast_card.dart';
 import 'x_accounts_screen.dart';
@@ -265,6 +267,9 @@ class _DetailScreenState extends State<DetailScreen> {
             // 海岸・港湾カメラの波の予報（気象庁の府県予報。無ければ区切り線ごと出ない）
             if (WaveForecasts.appliesTo(camera) || TideLevels.appliesTo(camera))
               WaveForecastCard(camera: camera, resumeTick: app.resumeTick),
+            // この地点の天気（気象庁。国内カメラのみ。取れなければ区切り線ごと出ない）
+            if (PointWeathers.appliesTo(camera))
+              PointWeatherCard(camera: camera, resumeTick: app.resumeTick),
             _locationSection(),
             const Divider(height: 24),
             if (hotels != null && !camera.isLiveVideo) ...[hotels, const Divider(height: 24)],

@@ -3009,4 +3009,166 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tideSource => 'Source: JMA \"Tide Level Observations\"';
+
+  @override
+  String get pwTitle => 'Weather at this location';
+
+  @override
+  String get pwSourceShort => 'JMA';
+
+  @override
+  String pwObsTime(String time) {
+    return 'As of $time';
+  }
+
+  @override
+  String pwNearStation(String name, String km) {
+    return 'Nearest station: $name ($km km)';
+  }
+
+  @override
+  String pwWindNow(String dir, String v) {
+    return 'Wind $dir $v m/s';
+  }
+
+  @override
+  String pwPrecipNow(String v) {
+    return 'Rain $v mm/h';
+  }
+
+  @override
+  String pwHumidityNow(String v) {
+    return 'Humidity $v%';
+  }
+
+  @override
+  String get pwCalm => 'Calm';
+
+  @override
+  String get pwDir1 => 'NNE';
+
+  @override
+  String get pwDir2 => 'NE';
+
+  @override
+  String get pwDir3 => 'ENE';
+
+  @override
+  String get pwDir4 => 'E';
+
+  @override
+  String get pwDir5 => 'ESE';
+
+  @override
+  String get pwDir6 => 'SE';
+
+  @override
+  String get pwDir7 => 'SSE';
+
+  @override
+  String get pwDir8 => 'S';
+
+  @override
+  String get pwDir9 => 'SSW';
+
+  @override
+  String get pwDir10 => 'SW';
+
+  @override
+  String get pwDir11 => 'WSW';
+
+  @override
+  String get pwDir12 => 'W';
+
+  @override
+  String get pwDir13 => 'WNW';
+
+  @override
+  String get pwDir14 => 'NW';
+
+  @override
+  String get pwDir15 => 'NNW';
+
+  @override
+  String get pwDir16 => 'N';
+
+  @override
+  String pwWindLegend(String area) {
+    return 'Wind is the forecast for $area (m/s; arrows show where the wind blows to)';
+  }
+
+  @override
+  String pwRepTemp(String name) {
+    return 'Temperatures are for the representative point $name';
+  }
+
+  @override
+  String pwWeekNote(String area, String station) {
+    return 'Weekly: forecast for $area; temperatures for $station';
+  }
+
+  @override
+  String pwWeekNoteArea(String area) {
+    return 'Weekly: forecast for $area';
+  }
+
+  @override
+  String get pwSource =>
+      'Source: JMA website (Weather Distribution Forecast, Regional Time Series Forecast, Prefectural Forecast, AMeDAS). Weather icons from the JMA website.';
+
+  @override
+  String pwIssued(String time) {
+    return 'Issued $time';
+  }
+
+  @override
+  String get pwWeekday1 => 'Mon';
+
+  @override
+  String get pwWeekday2 => 'Tue';
+
+  @override
+  String get pwWeekday3 => 'Wed';
+
+  @override
+  String get pwWeekday4 => 'Thu';
+
+  @override
+  String get pwWeekday5 => 'Fri';
+
+  @override
+  String get pwWeekday6 => 'Sat';
+
+  @override
+  String get pwWeekday7 => 'Sun';
+
+  @override
+  String pwHour(String h) {
+    return '$h:00';
+  }
+
+  @override
+  String pwRainRange(String a, String b) {
+    return '$a–${b}mm';
+  }
+
+  @override
+  String pwRainOver(String a) {
+    return '$a+ mm';
+  }
+
+  @override
+  String pwSnowRange(String a, String b) {
+    return '$a–${b}cm';
+  }
+
+  @override
+  String pwSnowOver(String a) {
+    return '$a+ cm';
+  }
+
+  @override
+  String pwSpeedRange(String a, String b) {
+    return '$a–$b';
+  }
 }

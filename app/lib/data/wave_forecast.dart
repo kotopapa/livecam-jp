@@ -199,6 +199,28 @@ class WaveForecasts {
 
   static void resetCache() => _mem.clear();
 
+  /// 官署の府県予報 JSON（30分のメモリ控え。カメラ詳細の「この地点の天気」と共用）。
+  /// 取得失敗は null
+  static Future<List<dynamic>?> forecastJson(String office, {http.Client? client}) async {
+    final cached = _mem[office];
+    if (cached != null && DateTime.now().difference(cached.$1) < _ttl) return cached.$2;
+    final cl = client ?? http.Client();
+    try {
+      final r = await cl
+          .get(Uri.parse('$_base$office.json'))
+          .timeout(const Duration(seconds: 15));
+      if (r.statusCode != 200) return null;
+      final j = jsonDecode(utf8.decode(r.bodyBytes));
+      if (j is! List<dynamic>) return null;
+      _mem[office] = (DateTime.now(), j);
+      return j;
+    } catch (_) {
+      return null;
+    } finally {
+      if (client == null) cl.close();
+    }
+  }
+
   /// カメラの海域の波の予報。海に面さない区域・取得失敗は null
   static Future<WaveForecast?> fetch(Camera camera,
       {http.Client? client, DateTime? nowJst}) async {
@@ -210,25 +232,9 @@ class WaveForecasts {
     }
     final area = JmaAreaNames.class10Of(camera.municipality);
     if (area == null) return null;
-    var cached = _mem[area.office];
-    if (cached == null || DateTime.now().difference(cached.$1) >= _ttl) {
-      final cl = client ?? http.Client();
-      try {
-        final r = await cl
-            .get(Uri.parse('$_base${area.office}.json'))
-            .timeout(const Duration(seconds: 15));
-        if (r.statusCode != 200) return null;
-        final j = jsonDecode(utf8.decode(r.bodyBytes));
-        if (j is! List<dynamic>) return null;
-        cached = (DateTime.now(), j);
-        _mem[area.office] = cached;
-      } catch (_) {
-        return null;
-      } finally {
-        if (client == null) cl.close();
-      }
-    }
-    final days = parseDays(cached.$2, area.code, nowJst ?? jstNow());
+    final json = await forecastJson(area.office, client: client);
+    if (json == null) return null;
+    final days = parseDays(json, area.code, nowJst ?? jstNow());
     if (days.isEmpty) return null;
     return WaveForecast(name: area.name, enName: area.enName, days: days);
   }

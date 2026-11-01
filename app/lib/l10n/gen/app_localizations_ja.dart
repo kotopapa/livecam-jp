@@ -2904,6 +2904,168 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tideSource => '出典：気象庁「潮位観測情報」';
+
+  @override
+  String get pwTitle => 'この地点の天気';
+
+  @override
+  String get pwSourceShort => '気象庁';
+
+  @override
+  String pwObsTime(String time) {
+    return '$time時点';
+  }
+
+  @override
+  String pwNearStation(String name, String km) {
+    return '最寄りの観測点 $name（${km}km）';
+  }
+
+  @override
+  String pwWindNow(String dir, String v) {
+    return '風 $dir ${v}m/s';
+  }
+
+  @override
+  String pwPrecipNow(String v) {
+    return '降水 ${v}mm/h';
+  }
+
+  @override
+  String pwHumidityNow(String v) {
+    return '湿度 $v%';
+  }
+
+  @override
+  String get pwCalm => '静穏';
+
+  @override
+  String get pwDir1 => '北北東';
+
+  @override
+  String get pwDir2 => '北東';
+
+  @override
+  String get pwDir3 => '東北東';
+
+  @override
+  String get pwDir4 => '東';
+
+  @override
+  String get pwDir5 => '東南東';
+
+  @override
+  String get pwDir6 => '南東';
+
+  @override
+  String get pwDir7 => '南南東';
+
+  @override
+  String get pwDir8 => '南';
+
+  @override
+  String get pwDir9 => '南南西';
+
+  @override
+  String get pwDir10 => '南西';
+
+  @override
+  String get pwDir11 => '西南西';
+
+  @override
+  String get pwDir12 => '西';
+
+  @override
+  String get pwDir13 => '西北西';
+
+  @override
+  String get pwDir14 => '北西';
+
+  @override
+  String get pwDir15 => '北北西';
+
+  @override
+  String get pwDir16 => '北';
+
+  @override
+  String pwWindLegend(String area) {
+    return '風は $area の予報（m/s・矢印は風が向かう先）';
+  }
+
+  @override
+  String pwRepTemp(String name) {
+    return '気温は代表地点 $name の予報';
+  }
+
+  @override
+  String pwWeekNote(String area, String station) {
+    return '週間は $area の予報・気温は $station';
+  }
+
+  @override
+  String pwWeekNoteArea(String area) {
+    return '週間は $area の予報';
+  }
+
+  @override
+  String get pwSource =>
+      '出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マークは気象庁ホームページより';
+
+  @override
+  String pwIssued(String time) {
+    return '$time 発表';
+  }
+
+  @override
+  String get pwWeekday1 => '月';
+
+  @override
+  String get pwWeekday2 => '火';
+
+  @override
+  String get pwWeekday3 => '水';
+
+  @override
+  String get pwWeekday4 => '木';
+
+  @override
+  String get pwWeekday5 => '金';
+
+  @override
+  String get pwWeekday6 => '土';
+
+  @override
+  String get pwWeekday7 => '日';
+
+  @override
+  String pwHour(String h) {
+    return '$h時';
+  }
+
+  @override
+  String pwRainRange(String a, String b) {
+    return '$a〜${b}mm';
+  }
+
+  @override
+  String pwRainOver(String a) {
+    return '${a}mm以上';
+  }
+
+  @override
+  String pwSnowRange(String a, String b) {
+    return '$a〜${b}cm';
+  }
+
+  @override
+  String pwSnowOver(String a) {
+    return '${a}cm以上';
+  }
+
+  @override
+  String pwSpeedRange(String a, String b) {
+    return '$a〜$b';
+  }
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -5850,4 +6012,166 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get tideSource => '出典（しゅってん）：気象庁（きしょうちょう）「潮位観測情報（ちょういかんそくじょうほう）」';
+
+  @override
+  String get pwTitle => 'この ばしょの てんき';
+
+  @override
+  String get pwSourceShort => 'きしょうちょう';
+
+  @override
+  String pwObsTime(String time) {
+    return '$timeの じてん';
+  }
+
+  @override
+  String pwNearStation(String name, String km) {
+    return 'いちばん ちかい かんそくてん $name（${km}km）';
+  }
+
+  @override
+  String pwWindNow(String dir, String v) {
+    return 'かぜ $dir ${v}m/s';
+  }
+
+  @override
+  String pwPrecipNow(String v) {
+    return 'あめ ${v}mm/h';
+  }
+
+  @override
+  String pwHumidityNow(String v) {
+    return 'しつど $v%';
+  }
+
+  @override
+  String get pwCalm => 'かぜなし';
+
+  @override
+  String get pwDir1 => 'きたきたひがし';
+
+  @override
+  String get pwDir2 => 'きたひがし';
+
+  @override
+  String get pwDir3 => 'ひがしきたひがし';
+
+  @override
+  String get pwDir4 => 'ひがし';
+
+  @override
+  String get pwDir5 => 'ひがしみなみひがし';
+
+  @override
+  String get pwDir6 => 'みなみひがし';
+
+  @override
+  String get pwDir7 => 'みなみみなみひがし';
+
+  @override
+  String get pwDir8 => 'みなみ';
+
+  @override
+  String get pwDir9 => 'みなみみなみにし';
+
+  @override
+  String get pwDir10 => 'みなみにし';
+
+  @override
+  String get pwDir11 => 'にしみなみにし';
+
+  @override
+  String get pwDir12 => 'にし';
+
+  @override
+  String get pwDir13 => 'にしきたにし';
+
+  @override
+  String get pwDir14 => 'きたにし';
+
+  @override
+  String get pwDir15 => 'きたきたにし';
+
+  @override
+  String get pwDir16 => 'きた';
+
+  @override
+  String pwWindLegend(String area) {
+    return 'かぜは $area の よほう（m/s・やじるしは かぜが ふいて いく ほう）';
+  }
+
+  @override
+  String pwRepTemp(String name) {
+    return 'きおんは だいひょうの ばしょ $name の よほう';
+  }
+
+  @override
+  String pwWeekNote(String area, String station) {
+    return 'しゅうかんは $area の よほう・きおんは $station';
+  }
+
+  @override
+  String pwWeekNoteArea(String area) {
+    return 'しゅうかんは $area の よほう';
+  }
+
+  @override
+  String get pwSource =>
+      'しゅってん：きしょうちょう ホームページ（てんきぶんぷ よほう・ちいき じけいれつ よほう・ふけん てんき よほう・アメダス）。てんきの マークも きしょうちょう ホームページより';
+
+  @override
+  String pwIssued(String time) {
+    return '$time はっぴょう';
+  }
+
+  @override
+  String get pwWeekday1 => 'げつ';
+
+  @override
+  String get pwWeekday2 => 'か';
+
+  @override
+  String get pwWeekday3 => 'すい';
+
+  @override
+  String get pwWeekday4 => 'もく';
+
+  @override
+  String get pwWeekday5 => 'きん';
+
+  @override
+  String get pwWeekday6 => 'ど';
+
+  @override
+  String get pwWeekday7 => 'にち';
+
+  @override
+  String pwHour(String h) {
+    return '$hじ';
+  }
+
+  @override
+  String pwRainRange(String a, String b) {
+    return '$a〜${b}mm';
+  }
+
+  @override
+  String pwRainOver(String a) {
+    return '${a}mm いじょう';
+  }
+
+  @override
+  String pwSnowRange(String a, String b) {
+    return '$a〜${b}cm';
+  }
+
+  @override
+  String pwSnowOver(String a) {
+    return '${a}cm いじょう';
+  }
+
+  @override
+  String pwSpeedRange(String a, String b) {
+    return '$a〜$b';
+  }
 }

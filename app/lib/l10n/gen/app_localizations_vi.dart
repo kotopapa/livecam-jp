@@ -3020,4 +3020,166 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get tideSource =>
       'Nguồn: Cơ quan Khí tượng Nhật Bản (JMA) “Quan trắc mực thủy triều”';
+
+  @override
+  String get pwTitle => 'Thời tiết tại địa điểm này';
+
+  @override
+  String get pwSourceShort => 'Cơ quan Khí tượng';
+
+  @override
+  String pwObsTime(String time) {
+    return 'Lúc $time';
+  }
+
+  @override
+  String pwNearStation(String name, String km) {
+    return 'Trạm đo gần nhất: $name ($km km)';
+  }
+
+  @override
+  String pwWindNow(String dir, String v) {
+    return 'Gió $dir $v m/s';
+  }
+
+  @override
+  String pwPrecipNow(String v) {
+    return 'Lượng mưa $v mm/h';
+  }
+
+  @override
+  String pwHumidityNow(String v) {
+    return 'Độ ẩm $v%';
+  }
+
+  @override
+  String get pwCalm => 'Lặng gió';
+
+  @override
+  String get pwDir1 => 'Bắc đông bắc';
+
+  @override
+  String get pwDir2 => 'Đông bắc';
+
+  @override
+  String get pwDir3 => 'Đông đông bắc';
+
+  @override
+  String get pwDir4 => 'Đông';
+
+  @override
+  String get pwDir5 => 'Đông đông nam';
+
+  @override
+  String get pwDir6 => 'Đông nam';
+
+  @override
+  String get pwDir7 => 'Nam đông nam';
+
+  @override
+  String get pwDir8 => 'Nam';
+
+  @override
+  String get pwDir9 => 'Nam tây nam';
+
+  @override
+  String get pwDir10 => 'Tây nam';
+
+  @override
+  String get pwDir11 => 'Tây tây nam';
+
+  @override
+  String get pwDir12 => 'Tây';
+
+  @override
+  String get pwDir13 => 'Tây tây bắc';
+
+  @override
+  String get pwDir14 => 'Tây bắc';
+
+  @override
+  String get pwDir15 => 'Bắc tây bắc';
+
+  @override
+  String get pwDir16 => 'Bắc';
+
+  @override
+  String pwWindLegend(String area) {
+    return 'Gió là dự báo cho $area (m/s; mũi tên chỉ hướng gió thổi tới)';
+  }
+
+  @override
+  String pwRepTemp(String name) {
+    return 'Nhiệt độ là dự báo cho điểm đại diện $name';
+  }
+
+  @override
+  String pwWeekNote(String area, String station) {
+    return 'Dự báo tuần cho $area; nhiệt độ tại $station';
+  }
+
+  @override
+  String pwWeekNoteArea(String area) {
+    return 'Dự báo tuần cho $area';
+  }
+
+  @override
+  String get pwSource =>
+      'Nguồn: trang web Cơ quan Khí tượng Nhật Bản (dự báo phân bố thời tiết, dự báo chuỗi thời gian theo khu vực, dự báo theo tỉnh, AMeDAS). Biểu tượng thời tiết lấy từ trang web của Cơ quan.';
+
+  @override
+  String pwIssued(String time) {
+    return 'Thông báo $time';
+  }
+
+  @override
+  String get pwWeekday1 => 'T2';
+
+  @override
+  String get pwWeekday2 => 'T3';
+
+  @override
+  String get pwWeekday3 => 'T4';
+
+  @override
+  String get pwWeekday4 => 'T5';
+
+  @override
+  String get pwWeekday5 => 'T6';
+
+  @override
+  String get pwWeekday6 => 'T7';
+
+  @override
+  String get pwWeekday7 => 'CN';
+
+  @override
+  String pwHour(String h) {
+    return '${h}h';
+  }
+
+  @override
+  String pwRainRange(String a, String b) {
+    return '$a–${b}mm';
+  }
+
+  @override
+  String pwRainOver(String a) {
+    return 'từ ${a}mm';
+  }
+
+  @override
+  String pwSnowRange(String a, String b) {
+    return '$a–${b}cm';
+  }
+
+  @override
+  String pwSnowOver(String a) {
+    return 'từ ${a}cm';
+  }
+
+  @override
+  String pwSpeedRange(String a, String b) {
+    return '$a–$b';
+  }
 }

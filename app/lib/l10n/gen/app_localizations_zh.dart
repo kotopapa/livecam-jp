@@ -2890,6 +2890,167 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get tideSource => '来源：气象厅“潮位观测信息”';
+
+  @override
+  String get pwTitle => '此地点的天气';
+
+  @override
+  String get pwSourceShort => '气象厅';
+
+  @override
+  String pwObsTime(String time) {
+    return '$time观测';
+  }
+
+  @override
+  String pwNearStation(String name, String km) {
+    return '最近的观测点 $name（$km公里）';
+  }
+
+  @override
+  String pwWindNow(String dir, String v) {
+    return '风 $dir ${v}m/s';
+  }
+
+  @override
+  String pwPrecipNow(String v) {
+    return '降雨量 ${v}mm/h';
+  }
+
+  @override
+  String pwHumidityNow(String v) {
+    return '湿度 $v%';
+  }
+
+  @override
+  String get pwCalm => '静风';
+
+  @override
+  String get pwDir1 => '北北东';
+
+  @override
+  String get pwDir2 => '东北';
+
+  @override
+  String get pwDir3 => '东北东';
+
+  @override
+  String get pwDir4 => '东';
+
+  @override
+  String get pwDir5 => '东南东';
+
+  @override
+  String get pwDir6 => '东南';
+
+  @override
+  String get pwDir7 => '南南东';
+
+  @override
+  String get pwDir8 => '南';
+
+  @override
+  String get pwDir9 => '南南西';
+
+  @override
+  String get pwDir10 => '西南';
+
+  @override
+  String get pwDir11 => '西南西';
+
+  @override
+  String get pwDir12 => '西';
+
+  @override
+  String get pwDir13 => '西北西';
+
+  @override
+  String get pwDir14 => '西北';
+
+  @override
+  String get pwDir15 => '北北西';
+
+  @override
+  String get pwDir16 => '北';
+
+  @override
+  String pwWindLegend(String area) {
+    return '风为$area的预报（m/s，箭头为风吹向的方向）';
+  }
+
+  @override
+  String pwRepTemp(String name) {
+    return '气温为代表地点$name的预报';
+  }
+
+  @override
+  String pwWeekNote(String area, String station) {
+    return '一周预报为$area，气温为$station';
+  }
+
+  @override
+  String pwWeekNoteArea(String area) {
+    return '一周预报为$area';
+  }
+
+  @override
+  String get pwSource => '出处：气象厅网站（天气分布预报、区域时间序列预报、府县天气预报、AMeDAS）。天气图标来自气象厅网站。';
+
+  @override
+  String pwIssued(String time) {
+    return '$time发表';
+  }
+
+  @override
+  String get pwWeekday1 => '周一';
+
+  @override
+  String get pwWeekday2 => '周二';
+
+  @override
+  String get pwWeekday3 => '周三';
+
+  @override
+  String get pwWeekday4 => '周四';
+
+  @override
+  String get pwWeekday5 => '周五';
+
+  @override
+  String get pwWeekday6 => '周六';
+
+  @override
+  String get pwWeekday7 => '周日';
+
+  @override
+  String pwHour(String h) {
+    return '$h时';
+  }
+
+  @override
+  String pwRainRange(String a, String b) {
+    return '$a~${b}mm';
+  }
+
+  @override
+  String pwRainOver(String a) {
+    return '${a}mm以上';
+  }
+
+  @override
+  String pwSnowRange(String a, String b) {
+    return '$a~${b}cm';
+  }
+
+  @override
+  String pwSnowOver(String a) {
+    return '${a}cm以上';
+  }
+
+  @override
+  String pwSpeedRange(String a, String b) {
+    return '$a~$b';
+  }
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -5778,4 +5939,165 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get tideSource => '來源：氣象廳「潮位觀測資訊」';
+
+  @override
+  String get pwTitle => '此地點的天氣';
+
+  @override
+  String get pwSourceShort => '氣象廳';
+
+  @override
+  String pwObsTime(String time) {
+    return '$time觀測';
+  }
+
+  @override
+  String pwNearStation(String name, String km) {
+    return '最近的觀測點 $name（$km公里）';
+  }
+
+  @override
+  String pwWindNow(String dir, String v) {
+    return '風 $dir ${v}m/s';
+  }
+
+  @override
+  String pwPrecipNow(String v) {
+    return '降雨量 ${v}mm/h';
+  }
+
+  @override
+  String pwHumidityNow(String v) {
+    return '濕度 $v%';
+  }
+
+  @override
+  String get pwCalm => '靜風';
+
+  @override
+  String get pwDir1 => '北北東';
+
+  @override
+  String get pwDir2 => '北東';
+
+  @override
+  String get pwDir3 => '東北東';
+
+  @override
+  String get pwDir4 => '東';
+
+  @override
+  String get pwDir5 => '東南東';
+
+  @override
+  String get pwDir6 => '南東';
+
+  @override
+  String get pwDir7 => '南南東';
+
+  @override
+  String get pwDir8 => '南';
+
+  @override
+  String get pwDir9 => '南南西';
+
+  @override
+  String get pwDir10 => '南西';
+
+  @override
+  String get pwDir11 => '西南西';
+
+  @override
+  String get pwDir12 => '西';
+
+  @override
+  String get pwDir13 => '西北西';
+
+  @override
+  String get pwDir14 => '北西';
+
+  @override
+  String get pwDir15 => '北北西';
+
+  @override
+  String get pwDir16 => '北';
+
+  @override
+  String pwWindLegend(String area) {
+    return '風為$area的預報（m/s，箭頭為風吹向的方向）';
+  }
+
+  @override
+  String pwRepTemp(String name) {
+    return '氣溫為代表地點$name的預報';
+  }
+
+  @override
+  String pwWeekNote(String area, String station) {
+    return '一週預報為$area，氣溫為$station';
+  }
+
+  @override
+  String pwWeekNoteArea(String area) {
+    return '一週預報為$area';
+  }
+
+  @override
+  String get pwSource => '出處：氣象廳網站（天氣分布預報、區域時間序列預報、府縣天氣預報、AMeDAS）。天氣圖示來自氣象廳網站。';
+
+  @override
+  String pwIssued(String time) {
+    return '$time發表';
+  }
+
+  @override
+  String get pwWeekday1 => '週一';
+
+  @override
+  String get pwWeekday2 => '週二';
+
+  @override
+  String get pwWeekday3 => '週三';
+
+  @override
+  String get pwWeekday4 => '週四';
+
+  @override
+  String get pwWeekday5 => '週五';
+
+  @override
+  String get pwWeekday6 => '週六';
+
+  @override
+  String get pwWeekday7 => '週日';
+
+  @override
+  String pwHour(String h) {
+    return '$h時';
+  }
+
+  @override
+  String pwRainRange(String a, String b) {
+    return '$a~${b}mm';
+  }
+
+  @override
+  String pwRainOver(String a) {
+    return '${a}mm以上';
+  }
+
+  @override
+  String pwSnowRange(String a, String b) {
+    return '$a~${b}cm';
+  }
+
+  @override
+  String pwSnowOver(String a) {
+    return '${a}cm以上';
+  }
+
+  @override
+  String pwSpeedRange(String a, String b) {
+    return '$a~$b';
+  }
 }

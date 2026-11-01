@@ -5181,6 +5181,264 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'出典：気象庁「潮位観測情報」'**
   String get tideSource;
+
+  /// No description provided for @pwTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'この地点の天気'**
+  String get pwTitle;
+
+  /// No description provided for @pwSourceShort.
+  ///
+  /// In ja, this message translates to:
+  /// **'気象庁'**
+  String get pwSourceShort;
+
+  /// No description provided for @pwObsTime.
+  ///
+  /// In ja, this message translates to:
+  /// **'{time}時点'**
+  String pwObsTime(String time);
+
+  /// No description provided for @pwNearStation.
+  ///
+  /// In ja, this message translates to:
+  /// **'最寄りの観測点 {name}（{km}km）'**
+  String pwNearStation(String name, String km);
+
+  /// No description provided for @pwWindNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'風 {dir} {v}m/s'**
+  String pwWindNow(String dir, String v);
+
+  /// No description provided for @pwPrecipNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'降水 {v}mm/h'**
+  String pwPrecipNow(String v);
+
+  /// No description provided for @pwHumidityNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'湿度 {v}%'**
+  String pwHumidityNow(String v);
+
+  /// No description provided for @pwCalm.
+  ///
+  /// In ja, this message translates to:
+  /// **'静穏'**
+  String get pwCalm;
+
+  /// No description provided for @pwDir1.
+  ///
+  /// In ja, this message translates to:
+  /// **'北北東'**
+  String get pwDir1;
+
+  /// No description provided for @pwDir2.
+  ///
+  /// In ja, this message translates to:
+  /// **'北東'**
+  String get pwDir2;
+
+  /// No description provided for @pwDir3.
+  ///
+  /// In ja, this message translates to:
+  /// **'東北東'**
+  String get pwDir3;
+
+  /// No description provided for @pwDir4.
+  ///
+  /// In ja, this message translates to:
+  /// **'東'**
+  String get pwDir4;
+
+  /// No description provided for @pwDir5.
+  ///
+  /// In ja, this message translates to:
+  /// **'東南東'**
+  String get pwDir5;
+
+  /// No description provided for @pwDir6.
+  ///
+  /// In ja, this message translates to:
+  /// **'南東'**
+  String get pwDir6;
+
+  /// No description provided for @pwDir7.
+  ///
+  /// In ja, this message translates to:
+  /// **'南南東'**
+  String get pwDir7;
+
+  /// No description provided for @pwDir8.
+  ///
+  /// In ja, this message translates to:
+  /// **'南'**
+  String get pwDir8;
+
+  /// No description provided for @pwDir9.
+  ///
+  /// In ja, this message translates to:
+  /// **'南南西'**
+  String get pwDir9;
+
+  /// No description provided for @pwDir10.
+  ///
+  /// In ja, this message translates to:
+  /// **'南西'**
+  String get pwDir10;
+
+  /// No description provided for @pwDir11.
+  ///
+  /// In ja, this message translates to:
+  /// **'西南西'**
+  String get pwDir11;
+
+  /// No description provided for @pwDir12.
+  ///
+  /// In ja, this message translates to:
+  /// **'西'**
+  String get pwDir12;
+
+  /// No description provided for @pwDir13.
+  ///
+  /// In ja, this message translates to:
+  /// **'西北西'**
+  String get pwDir13;
+
+  /// No description provided for @pwDir14.
+  ///
+  /// In ja, this message translates to:
+  /// **'北西'**
+  String get pwDir14;
+
+  /// No description provided for @pwDir15.
+  ///
+  /// In ja, this message translates to:
+  /// **'北北西'**
+  String get pwDir15;
+
+  /// No description provided for @pwDir16.
+  ///
+  /// In ja, this message translates to:
+  /// **'北'**
+  String get pwDir16;
+
+  /// No description provided for @pwWindLegend.
+  ///
+  /// In ja, this message translates to:
+  /// **'風は {area} の予報（m/s・矢印は風が向かう先）'**
+  String pwWindLegend(String area);
+
+  /// No description provided for @pwRepTemp.
+  ///
+  /// In ja, this message translates to:
+  /// **'気温は代表地点 {name} の予報'**
+  String pwRepTemp(String name);
+
+  /// No description provided for @pwWeekNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'週間は {area} の予報・気温は {station}'**
+  String pwWeekNote(String area, String station);
+
+  /// No description provided for @pwWeekNoteArea.
+  ///
+  /// In ja, this message translates to:
+  /// **'週間は {area} の予報'**
+  String pwWeekNoteArea(String area);
+
+  /// No description provided for @pwSource.
+  ///
+  /// In ja, this message translates to:
+  /// **'出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マークは気象庁ホームページより'**
+  String get pwSource;
+
+  /// No description provided for @pwIssued.
+  ///
+  /// In ja, this message translates to:
+  /// **'{time} 発表'**
+  String pwIssued(String time);
+
+  /// No description provided for @pwWeekday1.
+  ///
+  /// In ja, this message translates to:
+  /// **'月'**
+  String get pwWeekday1;
+
+  /// No description provided for @pwWeekday2.
+  ///
+  /// In ja, this message translates to:
+  /// **'火'**
+  String get pwWeekday2;
+
+  /// No description provided for @pwWeekday3.
+  ///
+  /// In ja, this message translates to:
+  /// **'水'**
+  String get pwWeekday3;
+
+  /// No description provided for @pwWeekday4.
+  ///
+  /// In ja, this message translates to:
+  /// **'木'**
+  String get pwWeekday4;
+
+  /// No description provided for @pwWeekday5.
+  ///
+  /// In ja, this message translates to:
+  /// **'金'**
+  String get pwWeekday5;
+
+  /// No description provided for @pwWeekday6.
+  ///
+  /// In ja, this message translates to:
+  /// **'土'**
+  String get pwWeekday6;
+
+  /// No description provided for @pwWeekday7.
+  ///
+  /// In ja, this message translates to:
+  /// **'日'**
+  String get pwWeekday7;
+
+  /// No description provided for @pwHour.
+  ///
+  /// In ja, this message translates to:
+  /// **'{h}時'**
+  String pwHour(String h);
+
+  /// No description provided for @pwRainRange.
+  ///
+  /// In ja, this message translates to:
+  /// **'{a}〜{b}mm'**
+  String pwRainRange(String a, String b);
+
+  /// No description provided for @pwRainOver.
+  ///
+  /// In ja, this message translates to:
+  /// **'{a}mm以上'**
+  String pwRainOver(String a);
+
+  /// No description provided for @pwSnowRange.
+  ///
+  /// In ja, this message translates to:
+  /// **'{a}〜{b}cm'**
+  String pwSnowRange(String a, String b);
+
+  /// No description provided for @pwSnowOver.
+  ///
+  /// In ja, this message translates to:
+  /// **'{a}cm以上'**
+  String pwSnowOver(String a);
+
+  /// No description provided for @pwSpeedRange.
+  ///
+  /// In ja, this message translates to:
+  /// **'{a}〜{b}'**
+  String pwSpeedRange(String a, String b);
 }
 
 class _AppLocalizationsDelegate

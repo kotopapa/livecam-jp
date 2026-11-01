@@ -2915,4 +2915,166 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get tideSource => '출처: 기상청(JMA) 「조위 관측 정보」';
+
+  @override
+  String get pwTitle => '이 지점의 날씨';
+
+  @override
+  String get pwSourceShort => '기상청';
+
+  @override
+  String pwObsTime(String time) {
+    return '$time 기준';
+  }
+
+  @override
+  String pwNearStation(String name, String km) {
+    return '가장 가까운 관측소 $name（${km}km）';
+  }
+
+  @override
+  String pwWindNow(String dir, String v) {
+    return '바람 $dir ${v}m/s';
+  }
+
+  @override
+  String pwPrecipNow(String v) {
+    return '강수량 ${v}mm/h';
+  }
+
+  @override
+  String pwHumidityNow(String v) {
+    return '습도 $v%';
+  }
+
+  @override
+  String get pwCalm => '고요';
+
+  @override
+  String get pwDir1 => '북북동';
+
+  @override
+  String get pwDir2 => '북동';
+
+  @override
+  String get pwDir3 => '동북동';
+
+  @override
+  String get pwDir4 => '동';
+
+  @override
+  String get pwDir5 => '동남동';
+
+  @override
+  String get pwDir6 => '남동';
+
+  @override
+  String get pwDir7 => '남남동';
+
+  @override
+  String get pwDir8 => '남';
+
+  @override
+  String get pwDir9 => '남남서';
+
+  @override
+  String get pwDir10 => '남서';
+
+  @override
+  String get pwDir11 => '서남서';
+
+  @override
+  String get pwDir12 => '서';
+
+  @override
+  String get pwDir13 => '서북서';
+
+  @override
+  String get pwDir14 => '북서';
+
+  @override
+  String get pwDir15 => '북북서';
+
+  @override
+  String get pwDir16 => '북';
+
+  @override
+  String pwWindLegend(String area) {
+    return '바람은 $area 예보입니다(m/s, 화살표는 바람이 향하는 방향)';
+  }
+
+  @override
+  String pwRepTemp(String name) {
+    return '기온은 대표 지점 $name의 예보입니다';
+  }
+
+  @override
+  String pwWeekNote(String area, String station) {
+    return '주간 예보는 $area, 기온은 $station입니다';
+  }
+
+  @override
+  String pwWeekNoteArea(String area) {
+    return '주간 예보는 $area입니다';
+  }
+
+  @override
+  String get pwSource =>
+      '출처: 기상청 홈페이지(날씨 분포 예보, 지역 시계열 예보, 부현 날씨 예보, AMeDAS). 날씨 아이콘은 기상청 홈페이지 제공.';
+
+  @override
+  String pwIssued(String time) {
+    return '$time 발표';
+  }
+
+  @override
+  String get pwWeekday1 => '월';
+
+  @override
+  String get pwWeekday2 => '화';
+
+  @override
+  String get pwWeekday3 => '수';
+
+  @override
+  String get pwWeekday4 => '목';
+
+  @override
+  String get pwWeekday5 => '금';
+
+  @override
+  String get pwWeekday6 => '토';
+
+  @override
+  String get pwWeekday7 => '일';
+
+  @override
+  String pwHour(String h) {
+    return '$h시';
+  }
+
+  @override
+  String pwRainRange(String a, String b) {
+    return '$a~${b}mm';
+  }
+
+  @override
+  String pwRainOver(String a) {
+    return '${a}mm 이상';
+  }
+
+  @override
+  String pwSnowRange(String a, String b) {
+    return '$a~${b}cm';
+  }
+
+  @override
+  String pwSnowOver(String a) {
+    return '${a}cm 이상';
+  }
+
+  @override
+  String pwSpeedRange(String a, String b) {
+    return '$a~$b';
+  }
 }
