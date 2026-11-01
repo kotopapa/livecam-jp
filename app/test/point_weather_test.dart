@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:livecam_jp/data/jma_area.dart';
+import 'package:livecam_jp/data/muni_warnings.dart';
 import 'package:livecam_jp/data/point_weather.dart';
 import 'package:livecam_jp/data/wave_forecast.dart';
 import 'package:livecam_jp/models/camera.dart';
@@ -365,6 +366,47 @@ void main() {
       expect(find.textContaining('風は'), findsNothing);
       expect(find.text('14.9℃'), findsOneWidget);
       expect(tester.takeException(), isNull);
+    });
+
+    testWidgets('警報あり → 最上位のバッジが出てタップでシート', (tester) async {
+      tester.view.physicalSize = const Size(390, 1200);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      var opened = false;
+      await tester.pumpWidget(testApp(Scaffold(body: SingleChildScrollView(
+          child: PointWeatherCard(
+              camera: cam(),
+              loader: (_) async => full(),
+              now: now,
+              onOpenWarningTab: () => opened = true,
+              warningLoader: (_) async => MuniWarnings(
+                  codes: const ['49', '14'],
+                  cityName: '横浜市北部',
+                  issuedAt: DateTime.utc(2026, 11, 1, 2)))))));
+      await tester.pumpAndSettle();
+      expect(find.text('危険警報 (Lv.4)'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('point_weather_warning_badge')));
+      await tester.pumpAndSettle();
+      expect(find.text('横浜市 の警報・注意報'), findsOneWidget);
+      expect(find.text('防災タブで見る'), findsOneWidget);
+      await tester.tap(find.text('防災タブで見る'));
+      await tester.pumpAndSettle();
+      expect(opened, isTrue);
+      expect(tester.takeException(), isNull);
+    });
+
+    testWidgets('警報なし・取得失敗 → バッジは出ず他は出る', (tester) async {
+      await pump(tester, full());
+      expect(find.byKey(const Key('point_weather_warning_badge')), findsNothing);
+      expect(find.text('14.9℃'), findsOneWidget);
+      await tester.pumpWidget(testApp(Scaffold(body: PointWeatherCard(
+          camera: cam(),
+          loader: (_) async => full(),
+          now: now,
+          warningLoader: (_) async => throw Exception('x')))));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('point_weather_warning_badge')), findsNothing);
+      expect(find.text('14.9℃'), findsOneWidget);
     });
 
     testWidgets('実況だけでも出る', (tester) async {

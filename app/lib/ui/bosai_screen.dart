@@ -1,3 +1,5 @@
+import '../data/warning_levels.dart';
+export '../data/warning_levels.dart' show warningLevelColor, warningLevelRank;
 import 'dart:async';
 import 'dart:convert';
 
@@ -83,35 +85,6 @@ class _Quake {
 /// 画面には出さない（表示は l10n の bosaiBadgeTsunami）
 const _tsunamiIntensityMark = 'tsunami';
 
-/// 扱う気象警報コード（表示名は l10n で解決する。1.4.0 多言語化）。
-/// 表示名は気象庁「多言語辞書」準拠 → l10n/l10n.dart の warningNameOf()
-const _warningCodes = {
-  '02', '03', '04', '05', '06', '07', '08', '09',
-  // 2026-05-28の新体系で追加された「危険警報」(警戒レベル4相当。コード=警報+40)
-  '43', '44', '48', '49',
-  '32', '33', '34', '35', '36', '37', '38', '39',
-};
-
-/// 特別警報（警戒レベル5相当）のコード
-const _emergencyCodes = {'32', '33', '34', '35', '36', '37', '38', '39'};
-
-/// 危険警報（警戒レベル4相当）のコード
-const _dangerCodes = {'43', '44', '48', '49'};
-
-/// 警報コード → 表示色（特別=赤 / 危険警報=紫(レベル4) / 警報=オレンジ）
-Color warningLevelColor(String code) {
-  if (_emergencyCodes.contains(code)) return const Color(0xFFD93025);
-  if (_dangerCodes.contains(code)) return const Color(0xFF9334E6);
-  return const Color(0xFFF29900);
-}
-
-/// 並び順ランク（特別→危険→警報）
-int warningLevelRank(String code) {
-  if (_emergencyCodes.contains(code)) return 0;
-  if (_dangerCodes.contains(code)) return 1;
-  return 2;
-}
-
 /// 淡い色付きの面（カード・注記帯の下地）をダークモードでも成立させる。
 /// ライトは元の色のまま、ダークは colorScheme.surface に薄く混ぜて
 /// 明るすぎる面にならないようにする
@@ -120,14 +93,6 @@ Color tintedSurface(BuildContext context, Color base) {
   if (scheme.brightness != Brightness.dark) return base;
   return Color.alphaBlend(base.withValues(alpha: 0.18), scheme.surface);
 }
-
-/// 扱う気象注意報コード（折りたたみ表示用。表示名は l10n で解決する）
-const _advisoryCodes = {
-  '10', '12', '13', '14', '15', '16', '17', '18',
-  '19', '20', '21', '22', '23', '24', '25', '26',
-  // 2026-05-28新体系で追加（土砂災害系が大雨から独立した）
-  '29',
-};
 
 class _BosaiScreenState extends State<BosaiScreen>
     with SingleTickerProviderStateMixin, WidgetsBindingObserver {
@@ -295,14 +260,14 @@ class _BosaiScreenState extends State<BosaiScreen>
             final status = w['status'] as String? ?? '';
             if (status == '解除' || status.contains('なし')) continue;
             final wc = w['code'] as String? ?? '';
-            if (_warningCodes.contains(wc)) {
+            if (warningCodes.contains(wc)) {
               byPref.putIfAbsent(pref, () => {}).add(wc);
               // 市区町村単位の詳細ファイルは官署コード単位（class10の先頭3桁+000）
               officesByPref
                   .putIfAbsent(pref, () => {})
                   .add(class10Office[code] ?? '${code.substring(0, 3)}000');
             } else {
-              if (_advisoryCodes.contains(wc)) {
+              if (advisoryCodes.contains(wc)) {
                 advByPref.putIfAbsent(pref, () => {}).add(wc);
                 advOfficesByPref
                     .putIfAbsent(pref, () => {})
@@ -1119,7 +1084,7 @@ class _BosaiScreenState extends State<BosaiScreen>
         final topColor = codes
             .map(warningLevelColor)
             .firstWhere((_) => true, orElse: () => const Color(0xFFF29900));
-        final emergency = codes.any(_emergencyCodes.contains);
+        final emergency = codes.any(emergencyCodes.contains);
         final prefName = prefectureNameOf(context.l10n, pref);
         return ListTile(
           leading: Icon(
@@ -1868,8 +1833,8 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
               if (status == '解除' || status.contains('なし')) continue;
               final wcode = w['code'] as String? ?? '';
               final valid = widget.isAdvisory
-                  ? _advisoryCodes.contains(wcode)
-                  : _warningCodes.contains(wcode);
+                  ? advisoryCodes.contains(wcode)
+                  : warningCodes.contains(wcode);
               if (!valid) continue;
               final muni = code.substring(0, 5);
               final entry = byMuni[muni] ??
@@ -1940,7 +1905,7 @@ class _WarningMuniListScreenState extends State<WarningMuniListScreen> {
                           c.prefecture == widget.pref &&
                           c.inMunicipality(muni))
                       .length;
-                  final emergency = warns.any(_emergencyCodes.contains);
+                  final emergency = warns.any(emergencyCodes.contains);
                   Color chipColor(String code) => widget.isAdvisory
                       ? const Color(0xFFF9A825)
                       : warningLevelColor(code);

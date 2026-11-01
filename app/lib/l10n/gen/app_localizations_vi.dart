@@ -3156,4 +3156,29 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get pwAmountLegend =>
       'Lượng mưa tính bằng mm/3h, lượng tuyết rơi tính bằng cm/3h';
+
+  @override
+  String get pwLevel5 => 'Cảnh báo đặc biệt';
+
+  @override
+  String get pwLevel4 => 'Cảnh báo khẩn cấp';
+
+  @override
+  String get pwLevel3 => 'Cảnh báo';
+
+  @override
+  String get pwLevel2 => 'Thông tin lưu ý';
+
+  @override
+  String pwWarnBadge(String name, String n) {
+    return '$name (Lv.$n)';
+  }
+
+  @override
+  String pwWarnSheetTitle(String city) {
+    return 'Cảnh báo và thông tin lưu ý: $city';
+  }
+
+  @override
+  String get pwWarnOpenTab => 'Xem trong thẻ Phòng chống thiên tai';
 }

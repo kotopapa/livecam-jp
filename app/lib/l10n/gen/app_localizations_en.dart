@@ -3144,4 +3144,29 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pwAmountLegend => 'Precipitation in mm/3h, snowfall in cm/3h';
+
+  @override
+  String get pwLevel5 => 'Emergency Warning';
+
+  @override
+  String get pwLevel4 => 'Urgent Warning';
+
+  @override
+  String get pwLevel3 => 'Warning';
+
+  @override
+  String get pwLevel2 => 'Advisory';
+
+  @override
+  String pwWarnBadge(String name, String n) {
+    return '$name (Lv.$n)';
+  }
+
+  @override
+  String pwWarnSheetTitle(String city) {
+    return 'Warnings and advisories: $city';
+  }
+
+  @override
+  String get pwWarnOpenTab => 'View in the Disaster tab';
 }

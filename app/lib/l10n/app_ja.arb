@@ -2819,5 +2819,14 @@
   "pwWeekday7": "日",
   "pwHour": "{h}時",
   "@pwHour": {"placeholders": {"h": {"type": "String"}}},
-  "pwAmountLegend": "降水量は mm/3h、降雪量は cm/3h"
+  "pwAmountLegend": "降水量は mm/3h、降雪量は cm/3h",
+  "pwLevel5": "特別警報",
+  "pwLevel4": "危険警報",
+  "pwLevel3": "警報",
+  "pwLevel2": "注意報",
+  "pwWarnBadge": "{name} (Lv.{n})",
+  "@pwWarnBadge": {"placeholders": {"name": {"type": "String"}, "n": {"type": "String"}}},
+  "pwWarnSheetTitle": "{city} の警報・注意報",
+  "@pwWarnSheetTitle": {"placeholders": {"city": {"type": "String"}}},
+  "pwWarnOpenTab": "防災タブで見る"
 }

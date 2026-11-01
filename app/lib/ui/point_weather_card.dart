@@ -3,14 +3,20 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../data/muni_warnings.dart';
 import '../data/point_weather.dart';
+import '../data/warning_levels.dart';
 import '../l10n/l10n.dart';
 import '../models/camera.dart';
 import '../util/jst.dart';
+import 'bosai_screen.dart' show jmaCityName;
 
 typedef PointWeatherLoader = Future<PointWeather?> Function(Camera camera);
 
+typedef MuniWarningLoader = Future<MuniWarnings?> Function(Camera camera);
+
 Future<PointWeather?> _defaultLoader(Camera camera) => PointWeathers.fetch(camera);
+Future<MuniWarnings?> _defaultWarningLoader(Camera camera) => MuniWarnings.fetch(camera);
 
 const _hotColor = Color(0xFFE53935);
 const _coldColor = Color(0xFF1E88E5);
@@ -49,7 +55,19 @@ class WeatherIcon extends StatelessWidget {
 /// 全部無ければ区切り線ごと何も出さない
 class PointWeatherCard extends StatefulWidget {
   const PointWeatherCard(
-      {super.key, required this.camera, this.loader = _defaultLoader, this.resumeTick, this.now});
+      {super.key,
+      required this.camera,
+      this.loader = _defaultLoader,
+      this.warningLoader = _defaultWarningLoader,
+      this.onOpenWarningTab,
+      this.resumeTick,
+      this.now});
+
+  /// 市区町村に発表中の警報・注意報（取れなくても他の部分は出す）
+  final MuniWarningLoader warningLoader;
+
+  /// 警報シートの「防災タブで見る」。null ならボタンを出さない
+  final VoidCallback? onOpenWarningTab;
 
   final Camera camera;
   final PointWeatherLoader loader;
@@ -66,14 +84,19 @@ class PointWeatherCard extends StatefulWidget {
 
 class _PointWeatherCardState extends State<PointWeatherCard> {
   late Future<PointWeather?> _future;
+  late Future<MuniWarnings?> _wfuture;
 
   Future<PointWeather?> _load() =>
-      widget.loader(widget.camera).catchError((_) => null as PointWeather?);
+      widget.loader(widget.camera).then<PointWeather?>((v) => v, onError: (_) => null);
+
+  Future<MuniWarnings?> _loadWarnings() =>
+      widget.warningLoader(widget.camera).then<MuniWarnings?>((v) => v, onError: (_) => null);
 
   @override
   void initState() {
     super.initState();
     _future = _load();
+    _wfuture = _loadWarnings();
     widget.resumeTick?.addListener(_onResume);
   }
 
@@ -94,9 +117,12 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
 
   void _onResume() {
     PointWeathers.invalidate();
+    MuniWarnings.invalidate();
     final next = _load();
+    final nextW = _loadWarnings();
     setState(() {
       _future = next;
+      _wfuture = nextW;
     });
   }
 
@@ -137,7 +163,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
 
   static String _two(int v) => v.toString().padLeft(2, '0');
 
-  Widget _current(AppLocalizations l, AmedasNow a, TextStyle muted) {
+  Widget _current(AppLocalizations l, AmedasNow a, TextStyle muted, Widget badge) {
     final items = <String>[];
     if (a.windMs != null) {
       final dir = a.windDir == null
@@ -158,6 +184,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         ),
       Expanded(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          badge,
           Text(l.pwObsTime('${_two(a.at.hour)}:${_two(a.at.minute)}'), style: muted),
           Text(l.pwNearStation(a.name, a.distanceKm.toString()), style: muted),
           if (items.isNotEmpty)
@@ -170,6 +197,100 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         ]),
       ),
     ]);
+  }
+
+  /// 発表中の最上位の段階を1つのバッジで（無ければ何も出さない）。タップで一覧シート
+  Widget _warningBadge({bool pad = false}) => FutureBuilder<MuniWarnings?>(
+        future: _wfuture,
+        builder: (context, snap) {
+          final w = snap.data;
+          if (w == null || w.codes.isEmpty) return const SizedBox.shrink();
+          final l = context.l10n;
+          final level = w.topLevel;
+          final badge = Padding(
+            padding: EdgeInsets.only(bottom: pad ? 8 : 4),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: InkWell(
+                key: const Key('point_weather_warning_badge'),
+                borderRadius: BorderRadius.circular(12),
+                onTap: () => _showWarningSheet(context, w),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                  decoration: BoxDecoration(
+                    color: warningBadgeColor(level),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Text(l.pwWarnBadge(levelName(l, level), '$level'),
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: warningBadgeTextColor(level))),
+                ),
+              ),
+            ),
+          );
+          return badge;
+        },
+      );
+
+  static String levelName(AppLocalizations l, int level) => switch (level) {
+        5 => l.pwLevel5,
+        4 => l.pwLevel4,
+        3 => l.pwLevel3,
+        _ => l.pwLevel2,
+      };
+
+  void _showWarningSheet(BuildContext context, MuniWarnings w) {
+    final l = context.l10n;
+    final issued = w.issuedAt == null ? null : toJstWallClock(w.issuedAt!);
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (sheet) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(l.pwWarnSheetTitle(jmaCityName(w.cityName)),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 10),
+            Wrap(spacing: 6, runSpacing: 6, children: [
+              for (final c in w.codes)
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: warningBadgeColor(warningLevelOf(c)),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Text(warningNameOf(l, c) ?? c,
+                      style: TextStyle(
+                          fontSize: 13,
+                          color: warningBadgeTextColor(warningLevelOf(c)))),
+                ),
+            ]),
+            if (issued != null) ...[
+              const SizedBox(height: 8),
+              Text(l.pwIssued('${issued.month}/${issued.day} ${_two(issued.hour)}:${_two(issued.minute)}'),
+                  style: TextStyle(
+                      fontSize: 11, color: Theme.of(sheet).colorScheme.onSurfaceVariant)),
+            ],
+            if (widget.onOpenWarningTab != null) ...[
+              const SizedBox(height: 8),
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.of(sheet).pop();
+                    widget.onOpenWarningTab!();
+                  },
+                  child: Text(l.pwWarnOpenTab),
+                ),
+              ),
+            ],
+          ]),
+        ),
+      ),
+    );
   }
 
   Widget _hourly(BuildContext context, AppLocalizations l, PointWeather pw,
@@ -335,9 +456,10 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
           ]),
           const SizedBox(height: 8),
           if (pw.amedas != null) ...[
-            _current(l, pw.amedas!, muted),
+            _current(l, pw.amedas!, muted, _warningBadge()),
             const SizedBox(height: 12),
-          ],
+          ] else
+            _warningBadge(pad: true),
           if (cols.isNotEmpty) ...[
             _hourly(context, l, pw, cols, muted),
             const SizedBox(height: 12),

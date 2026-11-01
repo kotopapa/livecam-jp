@@ -3050,4 +3050,29 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get pwAmountLegend => '강수량은 mm/3h, 강설량은 cm/3h';
+
+  @override
+  String get pwLevel5 => '특별 경보';
+
+  @override
+  String get pwLevel4 => '위험 경보';
+
+  @override
+  String get pwLevel3 => '경보';
+
+  @override
+  String get pwLevel2 => '주의보';
+
+  @override
+  String pwWarnBadge(String name, String n) {
+    return '$name (Lv.$n)';
+  }
+
+  @override
+  String pwWarnSheetTitle(String city) {
+    return '$city 경보・주의보';
+  }
+
+  @override
+  String get pwWarnOpenTab => '방재 탭에서 보기';
 }

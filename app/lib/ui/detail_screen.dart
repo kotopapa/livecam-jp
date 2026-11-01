@@ -269,7 +269,15 @@ class _DetailScreenState extends State<DetailScreen> {
               WaveForecastCard(camera: camera, resumeTick: app.resumeTick),
             // この地点の天気（気象庁。国内カメラのみ。取れなければ区切り線ごと出ない）
             if (PointWeathers.appliesTo(camera))
-              PointWeatherCard(camera: camera, resumeTick: app.resumeTick),
+              PointWeatherCard(
+                camera: camera,
+                resumeTick: app.resumeTick,
+                onOpenWarningTab: () {
+                  app.navigationRequest.value = null;
+                  app.navigationRequest.value = 'bosai/warning';
+                  Navigator.of(context).popUntil((r) => r.isFirst);
+                },
+              ),
             _locationSection(),
             const Divider(height: 24),
             if (hotels != null && !camera.isLiveVideo) ...[hotels, const Divider(height: 24)],

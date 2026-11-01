@@ -5409,6 +5409,48 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'降水量は mm/3h、降雪量は cm/3h'**
   String get pwAmountLegend;
+
+  /// No description provided for @pwLevel5.
+  ///
+  /// In ja, this message translates to:
+  /// **'特別警報'**
+  String get pwLevel5;
+
+  /// No description provided for @pwLevel4.
+  ///
+  /// In ja, this message translates to:
+  /// **'危険警報'**
+  String get pwLevel4;
+
+  /// No description provided for @pwLevel3.
+  ///
+  /// In ja, this message translates to:
+  /// **'警報'**
+  String get pwLevel3;
+
+  /// No description provided for @pwLevel2.
+  ///
+  /// In ja, this message translates to:
+  /// **'注意報'**
+  String get pwLevel2;
+
+  /// No description provided for @pwWarnBadge.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name} (Lv.{n})'**
+  String pwWarnBadge(String name, String n);
+
+  /// No description provided for @pwWarnSheetTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'{city} の警報・注意報'**
+  String pwWarnSheetTitle(String city);
+
+  /// No description provided for @pwWarnOpenTab.
+  ///
+  /// In ja, this message translates to:
+  /// **'防災タブで見る'**
+  String get pwWarnOpenTab;
 }
 
 class _AppLocalizationsDelegate

@@ -3039,6 +3039,31 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get pwAmountLegend => '降水量は mm/3h、降雪量は cm/3h';
+
+  @override
+  String get pwLevel5 => '特別警報';
+
+  @override
+  String get pwLevel4 => '危険警報';
+
+  @override
+  String get pwLevel3 => '警報';
+
+  @override
+  String get pwLevel2 => '注意報';
+
+  @override
+  String pwWarnBadge(String name, String n) {
+    return '$name (Lv.$n)';
+  }
+
+  @override
+  String pwWarnSheetTitle(String city) {
+    return '$city の警報・注意報';
+  }
+
+  @override
+  String get pwWarnOpenTab => '防災タブで見る';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -6120,4 +6145,29 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get pwAmountLegend => 'あめの りょうは mm/3じかん、ゆきの りょうは cm/3じかん';
+
+  @override
+  String get pwLevel5 => 'とくべつ けいほう';
+
+  @override
+  String get pwLevel4 => 'あぶない けいほう';
+
+  @override
+  String get pwLevel3 => 'けいほう';
+
+  @override
+  String get pwLevel2 => 'ちゅういほう';
+
+  @override
+  String pwWarnBadge(String name, String n) {
+    return '$name (Lv.$n)';
+  }
+
+  @override
+  String pwWarnSheetTitle(String city) {
+    return '$city の けいほう・ちゅういほう';
+  }
+
+  @override
+  String get pwWarnOpenTab => 'ぼうさいタブで みる';
 }

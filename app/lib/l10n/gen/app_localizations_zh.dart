@@ -3024,6 +3024,31 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get pwAmountLegend => '降雨量单位为mm/3h，降雪量单位为cm/3h';
+
+  @override
+  String get pwLevel5 => '特别警报';
+
+  @override
+  String get pwLevel4 => '危险警报';
+
+  @override
+  String get pwLevel3 => '警报';
+
+  @override
+  String get pwLevel2 => '注意报';
+
+  @override
+  String pwWarnBadge(String name, String n) {
+    return '$name (Lv.$n)';
+  }
+
+  @override
+  String pwWarnSheetTitle(String city) {
+    return '$city的警报和注意报';
+  }
+
+  @override
+  String get pwWarnOpenTab => '在防灾标签页查看';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6046,4 +6071,29 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get pwAmountLegend => '降雨量單位為mm/3h，降雪量單位為cm/3h';
+
+  @override
+  String get pwLevel5 => '特別警報';
+
+  @override
+  String get pwLevel4 => '危險警報';
+
+  @override
+  String get pwLevel3 => '警報';
+
+  @override
+  String get pwLevel2 => '注意報';
+
+  @override
+  String pwWarnBadge(String name, String n) {
+    return '$name (Lv.$n)';
+  }
+
+  @override
+  String pwWarnSheetTitle(String city) {
+    return '$city的警報和注意報';
+  }
+
+  @override
+  String get pwWarnOpenTab => '在防災分頁查看';
 }
