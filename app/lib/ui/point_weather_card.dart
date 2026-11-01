@@ -41,6 +41,9 @@ class WeatherIcon extends StatelessWidget {
         errorBuilder: (_, _, _) => SizedBox(
             width: w, height: w, child: Icon(Icons.cloud, size: w * 0.8, color: Colors.grey)));
     final Widget child;
+    // 「のち」の 2 枚は横に並ぶので、下地の幅を 1 列分（width + 12）に広げる。
+    // 36px なら 21.6 + 6 + 18 = 45.6px が 48px に収まり、縮小なしで描ける
+    var boxW = box;
     if (spec == null) {
       child = SizedBox(
           width: width,
@@ -49,17 +52,18 @@ class WeatherIcon extends StatelessWidget {
     } else if (spec.then == null) {
       child = img(spec.main, width);
     } else {
+      boxW = width + 12;
       child = FittedBox(
         fit: BoxFit.scaleDown,
         child: Row(mainAxisSize: MainAxisSize.min, children: [
           img(spec.main, width * 0.6),
-          Icon(Icons.arrow_forward_ios, size: 8, color: scheme.onSurfaceVariant),
+          Icon(Icons.arrow_forward_ios, size: 6, color: scheme.onSurfaceVariant),
           img(spec.then!, width * 0.5),
         ]),
       );
     }
     return Container(
-      width: box,
+      width: boxW,
       height: box,
       alignment: Alignment.center,
       decoration: BoxDecoration(
