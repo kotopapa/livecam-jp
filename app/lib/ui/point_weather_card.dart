@@ -141,22 +141,22 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
 
   /// 各列に代表する数字 1 つ（3時間あたり。青=降水量、紫=降雪量）。
   /// 天気分布予報は階級（1-5 / 5-10 / 10-15 / 15-20 / 20以上 mm、1-3 / 3-6 / 6以上 cm）
-  /// なので、気象庁の凡例のしきい値（階級の下限）を代表値にする（2026-11-02 ユーザー決定:
-  /// レンジや「〜」「-」は出さない）
+  /// なので、階級の中央値を代表値にする（上限の無い階級はしきい値）。0 も「0mm」と出す
+  /// （2026-11-02 ユーザー決定: レンジや「〜」「-」は出さない）
   static String rainText(int r) => switch (r) {
-        1 => '1mm',
-        2 => '5mm',
-        3 => '10mm',
-        4 => '15mm',
+        1 => '3mm',
+        2 => '8mm',
+        3 => '13mm',
+        4 => '18mm',
         5 => '20mm',
-        _ => '',
+        _ => '0mm',
       };
 
   static String snowText(int s) => switch (s) {
-        1 => '1cm',
-        2 => '3cm',
+        1 => '2cm',
+        2 => '5cm',
         3 => '6cm',
-        _ => '',
+        _ => '0cm',
       };
 
   static String weekday(AppLocalizations l, int w) => switch (w) {
@@ -308,7 +308,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
               SizedBox(width: colW, child: cell(cols[i], i)),
           ]),
         );
-    final hasRain = cols.any((c) => (c.rain ?? 0) >= 1);
     final hasSnow = cols.any((c) => (c.snow ?? 0) >= 1);
     final hasPop = cols.any((c) => c.pop != null);
     const small = TextStyle(fontSize: 10);
@@ -340,8 +339,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
           ),
         ),
       rowOf(32, (c, _) => Center(child: WeatherIcon(c.weatherCode))),
-      if (hasRain)
-        rowOf(15, (c, _) => Center(
+      rowOf(15, (c, _) => Center(
             child: Text(rainText(c.rain ?? 0),
                 style: const TextStyle(fontSize: 11, color: _coldColor), maxLines: 1, overflow: TextOverflow.clip))),
       if (hasSnow)
@@ -561,8 +559,28 @@ class TempChartPainter extends CustomPainter {
 
     final iMax = temps.indexWhere((t) => t == hi);
     final iMin = temps.indexWhere((t) => t == lo);
-    if (iMax >= 0) label(iMax, hi, _hotColor, above: true);
-    if (iMin >= 0 && (iMin != iMax)) label(iMin, lo, _coldColor, above: false);
+    // 全部の点に値を出す（右端の点にも数字が付くように。2026-11-02 利用者要望）。
+    // 最高は赤で上側、最低は青で下側、ほかは本文色で、線が上向きなら下側・下向きなら上側に置く
+    for (var i = 0; i < temps.length; i++) {
+      final t = temps[i];
+      if (t == null) continue;
+      if (i == iMax) {
+        label(i, t, _hotColor, above: true);
+      } else if (i == iMin) {
+        label(i, t, _coldColor, above: false);
+      } else {
+        final prev = i > 0 ? temps[i - 1] : null;
+        final next = i + 1 < temps.length ? temps[i + 1] : null;
+        final rising = (next ?? t) >= t && (prev ?? t) <= t;
+        final tp = TextPainter(
+          text: TextSpan(
+              text: '$t°', style: TextStyle(fontSize: 10, color: textColor, fontFamily: fontFamily)),
+          textDirection: TextDirection.ltr,
+        )..layout();
+        final dy = rising ? y(t) + 6 : y(t) - 6 - tp.height;
+        tp.paint(canvas, Offset(x(i) - tp.width / 2, dy));
+      }
+    }
   }
 
   @override
