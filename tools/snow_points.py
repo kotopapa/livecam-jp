@@ -64,7 +64,8 @@ IMPLAUSIBLE_MIN_CM = 10      # 解析が積雪なしのとき、これ以上の�
 IMPLAUSIBLE_TEMP_C = 3.0     # 解析が積雪なしのとき、気温がこれ以上なら 1cm 以上の値も誤計測とみなす
 FALLBACK_TEMP_C = 8.0
 AMEDAS_BASE = "https://www.jma.go.jp/bosai/amedas/"
-AMEDAS_TEMP_RADIUS_KM = 30.0  # センサーに気温が無いとき、この距離内の最寄りアメダスの気温で代用        # 解析タイルが取れない回に、気温だけで誤計測とみなす下限
+AMEDAS_TEMP_RADIUS_KM = 30.0  # センサーに気温が無いとき、この距離内の最寄りアメダスの気温で代用
+AMEDAS_SNOW_RADIUS_KM = 50.0  # 解析積雪深が 0 でも、この距離内のアメダスが積雪を観測していれば降り始めとみて残す        # 解析タイルが取れない回に、気温だけで誤計測とみなす下限
 GEOCODE_LIMIT = 300          # 1回の実行で逆ジオコーダに問い合わせる最大件数
 HOST_INTERVAL = 1.5          # 同一ホストへの連続アクセスの間隔（秒）
 
@@ -679,11 +680,14 @@ class SnowAnalysis:
         return result
 
 
-def is_implausible(p: dict[str, Any], zero_around: bool | None, t_fallback: float | None = None) -> bool:
-    """センサー値が誤計測とみなせるか。zero_around は解析積雪深で周囲に積雪が無いか（None=判定できず）。
+def is_implausible(p: dict[str, Any], zero_around: bool | None, t_fallback: float | None = None,
+                   snow_nearby: bool | None = None) -> bool:
+    """センサー値が誤計測とみなせるか。zero_around は解析積雪深で周囲に積雪が無いか（None=判定できず）、
+    snow_nearby は近くのアメダスが積雪を観測しているか（None=アメダスが取れない）。
     気温はセンサー自身の t、無ければ t_fallback（最寄りアメダス）を使う。
     - 周囲に積雪なし かつ 10cm 以上 → 誤計測（春の残雪は解析にも出るので、季節によらず使える）
-    - 周囲に積雪なし かつ 1cm 以上 かつ 気温 3℃ 以上 → 誤計測
+    - 周囲に積雪なし かつ 1cm 以上 → 誤計測。ただし近くのアメダスが積雪を観測していれば降り始め
+      （解析が追いついていない）とみて残す。アメダスが取れないときは気温 3℃ 以上のときだけ誤計測
     - 解析が取れないときは 気温 8℃ 以上 かつ 1cm 以上 だけ誤計測
     積雪深 0 の点はそのまま出す。"""
     d = p.get("d") or 0
@@ -698,35 +702,48 @@ def is_implausible(p: dict[str, Any], zero_around: bool | None, t_fallback: floa
         return False
     if d >= IMPLAUSIBLE_MIN_CM:
         return True
-    return t is not None and t >= IMPLAUSIBLE_TEMP_C
+    if snow_nearby is None:
+        return t is not None and t >= IMPLAUSIBLE_TEMP_C
+    return not snow_nearby
 
 
-def amedas_station_temps(map_doc: Any, table: Any) -> list[tuple[float, float, float]]:
-    """アメダス最新10分値（map/<時刻>.json）と観測所表（amedastable.json）→ [(lat, lng, 気温)]。
-    値は [値, 品質フラグ] で、フラグ 0（正常）の気温だけ使う。座標は [度, 分]。"""
+def amedas_stations(map_doc: Any, table: Any) -> list[tuple[float, float, float | None, float | None]]:
+    """アメダス最新10分値（map/<時刻>.json）と観測所表（amedastable.json）→ [(lat, lng, 気温, 積雪深cm)]。
+    値は [値, 品質フラグ] で、フラグ 0（正常）のものだけ使う（無いものは None）。座標は [度, 分]。
+    積雪深のキー snow は積雪を観測する地点にしか現れない。"""
+    def val(v: Any) -> float | None:
+        if not isinstance(v, list) or len(v) < 2 or v[0] is None or v[1] not in (0, "0"):
+            return None
+        try:
+            return float(v[0])
+        except (TypeError, ValueError):
+            return None
+
     out = []
     for k, v in (map_doc or {}).items() if isinstance(map_doc, dict) else []:
         st = (table or {}).get(k) if isinstance(table, dict) else None
-        tv = v.get("temp") if isinstance(v, dict) else None
-        if not isinstance(st, dict) or not isinstance(tv, list) or len(tv) < 2:
+        if not isinstance(st, dict) or not isinstance(v, dict):
             continue
-        if tv[0] is None or tv[1] not in (0, "0"):
+        t, sn = val(v.get("temp")), val(v.get("snow"))
+        if t is None and sn is None:
             continue
         try:
             la, ln = st["lat"], st["lon"]
             lat = float(la[0]) + float(la[1]) / 60.0
             lng = float(ln[0]) + float(ln[1]) / 60.0
-            out.append((lat, lng, float(tv[0])))
         except (KeyError, TypeError, ValueError, IndexError):
             continue
+        out.append((lat, lng, t, sn))
     return out
 
 
 class AmedasTemps:
-    """気象庁アメダスの最新の気温。積雪センサーに気温が無い点の照合に、最寄り観測所の気温を使う
-    （2026-11-02 山形の国交省センサー 6 地点が、気温欄が空だった回に 1〜3cm の誤計測のまま配信された）。"""
+    """気象庁アメダスの最新の気温と積雪深。積雪センサーに気温が無い点の照合に最寄り観測所の気温を使い
+    （2026-11-02 山形の国交省センサー 6 地点が、気温欄が空だった回に 1〜3cm の誤計測のまま配信された）、
+    解析積雪深が 0 の点を残すかどうかは近くのアメダスの積雪観測で決める。"""
 
-    def __init__(self, stations: list[tuple[float, float, float]], observed: str = "") -> None:
+    def __init__(self, stations: list[tuple[float, float, float | None, float | None]],
+                 observed: str = "") -> None:
         self.stations = stations
         self.observed = observed
 
@@ -743,36 +760,49 @@ class AmedasTemps:
         except Exception as e:  # noqa: BLE001
             print(f"アメダス気温: 取得失敗 {type(e).__name__}", file=sys.stderr)
             return None
-        st = amedas_station_temps(m, tbl)
+        st = amedas_stations(m, tbl)
         return cls(st, fmt_at(dt)) if st else None
+
+    @staticmethod
+    def _km(lat: float, lng: float, la: float, ln: float) -> float:
+        return math.hypot((la - lat) * 111.0, (ln - lng) * 111.0 * math.cos(math.radians(lat)))
 
     def nearest_temp(self, lat: float, lng: float, max_km: float = AMEDAS_TEMP_RADIUS_KM) -> float | None:
         best, best_km = None, max_km
-        coslat = math.cos(math.radians(lat))
-        for la, ln, t in self.stations:
-            km = math.hypot((la - lat) * 111.0, (ln - lng) * 111.0 * coslat)
+        for la, ln, t, _ in self.stations:
+            if t is None:
+                continue
+            km = self._km(lat, lng, la, ln)
             if km < best_km:
                 best, best_km = t, km
         return best
+
+    def snow_nearby(self, lat: float, lng: float, max_km: float = AMEDAS_SNOW_RADIUS_KM) -> bool:
+        """max_km 以内のアメダスのどれかが 1cm 以上の積雪を観測しているか。"""
+        return any(sn is not None and sn >= 1 and self._km(lat, lng, la, ln) < max_km
+                   for la, ln, _, sn in self.stations)
 
 
 def drop_implausible(points: list[dict[str, Any]], analysis: SnowAnalysis | None,
                      temps: AmedasTemps | None = None
                      ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     """→ (残す点, 落とした点)。積雪深 0 の点はタイルを見ずに残す。
-    センサーに気温が無い点は最寄りアメダスの気温（temps）で照合し、使った値を `ta` に残す（配信はしない）。"""
+    センサーに気温が無い点は最寄りアメダスの気温（temps）で照合し、使った値を `ta` に残す（配信はしない）。
+    解析積雪深が 0 の点は、近くのアメダスが積雪を観測しているときだけ残す。"""
     kept, dropped = [], []
     for p in points:
         if (p.get("d") or 0) <= 0:
             kept.append(p)
             continue
         zero = analysis.zero_around(p["lat"], p["lng"]) if analysis else None
-        fb = None
-        if p.get("t") is None and temps is not None:
-            fb = temps.nearest_temp(p["lat"], p["lng"])
-            if fb is not None:
-                p["ta"] = fb
-        (dropped if is_implausible(p, zero, fb) else kept).append(p)
+        fb, nearby = None, None
+        if temps is not None:
+            nearby = temps.snow_nearby(p["lat"], p["lng"])
+            if p.get("t") is None:
+                fb = temps.nearest_temp(p["lat"], p["lng"])
+                if fb is not None:
+                    p["ta"] = fb
+        (dropped if is_implausible(p, zero, fb, nearby) else kept).append(p)
     return kept, dropped
 
 
@@ -912,7 +942,8 @@ def main(argv: list[str] | None = None) -> int:
     if analysis:
         print(f"解析積雪深 {analysis.basetime} タイル {analysis.fetched}枚で照合")
     if temps:
-        print(f"アメダス気温 {temps.observed} {len(temps.stations)}地点で照合")
+        n_snow = sum(1 for _, _, _, sn in temps.stations if sn is not None and sn >= 1)
+        print(f"アメダス {temps.observed} {len(temps.stations)}地点（積雪あり {n_snow}）で照合")
     budget = GEOCODE_LIMIT
     queried = 0
     for pts in fetched.values():

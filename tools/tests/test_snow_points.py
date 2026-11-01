@@ -293,39 +293,60 @@ def test_build_publishes_temperature():
     assert doc["sources"][0]["points"][0]["t"] == -1.0
 
 
-def test_amedas_station_temps_parses_deg_min_and_quality():
+def test_amedas_stations_parses_deg_min_quality_and_snow():
     m = {"11001": {"temp": [5.5, 0], "snow": [None, 1]},
          "11016": {"temp": [None, 0]},            # 欠測
          "11046": {"temp": [9.0, 1]},             # 品質フラグ≠0 は使わない
+         "12442": {"temp": [-1.0, 0], "snow": [12, 0]},
          "99999": {"temp": [1.0, 0]}}             # 表に無い
     tbl = {"11001": {"lat": [45, 31.2], "lon": [141, 56.1]},
            "11016": {"lat": [45, 24.9], "lon": [141, 40.7]},
-           "11046": {"lat": [45, 0], "lon": [141, 0]}}
-    out = sp.amedas_station_temps(m, tbl)
-    assert len(out) == 1
-    lat, lng, t = out[0]
-    assert (round(lat, 3), round(lng, 3), t) == (45.52, 141.935, 5.5)
+           "11046": {"lat": [45, 0], "lon": [141, 0]},
+           "12442": {"lat": [43, 46.1], "lon": [142, 22.0]}}
+    out = sp.amedas_stations(m, tbl)
+    assert len(out) == 2
+    lat, lng, t, sn = out[0]
+    assert (round(lat, 3), round(lng, 3), t, sn) == (45.52, 141.935, 5.5, None)
+    assert out[1][2:] == (-1.0, 12.0)
 
 
-def test_amedas_nearest_temp_within_radius():
-    temps = sp.AmedasTemps([(38.9, 140.33, 7.8), (38.4, 140.5, 8.4)])
+def test_amedas_nearest_temp_and_snow_nearby():
+    temps = sp.AmedasTemps([(38.9, 140.33, 7.8, None), (38.4, 140.5, 8.4, None), (43.77, 142.37, None, 12.0)])
     assert temps.nearest_temp(38.905, 140.326) == 7.8
     assert temps.nearest_temp(38.39, 140.57) == 8.4
     assert temps.nearest_temp(35.0, 135.0) is None  # 30km 以内に無い
+    assert temps.nearest_temp(43.77, 142.37) is None  # 気温の無い地点は使わない
+    assert temps.snow_nearby(43.9, 142.5)
+    assert not temps.snow_nearby(38.9, 140.33)
 
 
-def test_drop_implausible_uses_amedas_temp_when_sensor_has_none():
-    # 気温欄が空の 3cm（2026-11-02 金山除雪ST）: 解析は無雪、最寄りアメダス 7.8℃ → 除外
+def test_is_implausible_with_analysis_zero_depends_on_amedas_snow():
+    # 解析が周囲 0: 近くのアメダスに積雪が無ければ気温が低くても誤計測、あれば降り始めとして残す
+    cold = {"d": 3, "t": -4.7}
+    assert sp.is_implausible(cold, True, None, False)
+    assert not sp.is_implausible(cold, True, None, True)
+    # アメダスが取れないときは従来の気温規則
+    assert not sp.is_implausible(cold, True, None, None)
+    assert sp.is_implausible({"d": 3, "t": 5.0}, True, None, None)
+    # 10cm 以上は無条件
+    assert sp.is_implausible({"d": 10, "t": -4.7}, True, None, True)
+
+
+def test_drop_implausible_uses_amedas_temp_and_snow():
     # （_FakeAnalysis は緯度 37 未満を無雪とするので南に置く）
-    temps = sp.AmedasTemps([(35.0, 135.0, 7.8)])
+    temps = sp.AmedasTemps([(35.0, 135.0, 7.8, None)])
     pts = [{"id": "a", "n": "金山", "lat": 35.01, "lng": 135.01, "d": 3, "at": "x"},
            {"id": "b", "n": "寒い", "lat": 35.01, "lng": 135.01, "d": 3, "at": "x", "t": -1.0},
            {"id": "c", "n": "零", "lat": 35.01, "lng": 135.01, "d": 0, "at": "x"}]
     kept, dropped = sp.drop_implausible(pts, _FakeAnalysis(), temps)
-    assert [p["id"] for p in dropped] == ["a"]
+    assert [p["id"] for p in dropped] == ["a", "b"]  # 近くのアメダスに積雪が無い
     assert dropped[0]["ta"] == 7.8
-    assert [p["id"] for p in kept] == ["b", "c"]
-    # アメダスも無ければ従来どおり残す
+    assert [p["id"] for p in kept] == ["c"]
+    # 近くのアメダスが積雪を観測していれば残す（降り始め）
+    snowy = sp.AmedasTemps([(35.0, 135.0, -1.0, 2.0)])
+    kept3, dropped3 = sp.drop_implausible([dict(p) for p in pts], _FakeAnalysis(), snowy)
+    assert [p["id"] for p in kept3] == ["a", "b", "c"] and not dropped3
+    # アメダスも無ければ気温規則だけ（気温不明の a は残る）
     kept2, dropped2 = sp.drop_implausible([dict(pts[0])], _FakeAnalysis(), None)
     assert not dropped2 and len(kept2) == 1
 
