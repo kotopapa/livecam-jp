@@ -101,6 +101,7 @@ Map<String, dynamic> vpfd() => {
     };
 
 void main() {
+  _popAtTests();
   setUp(() {
     JmaAreaNames.reset();
     JmaAreaNames.parse(readJson('area_wave.json'));
@@ -445,5 +446,18 @@ void main() {
       await tester.pumpAndSettle();
       expect(n, 2);
     });
+  });
+}
+
+void _popAtTests() {
+  test('降水確率は 6 時間枠の 2 列に同じ値', () {
+    final t0 = DateTime.utc(2026, 11, 1, 21); // JST 11/2 06:00 の枠
+    final pops = {t0: 30, t0.add(const Duration(hours: 6)): 80};
+    expect(PointWeather.popAt(pops, t0), 30);
+    expect(PointWeather.popAt(pops, t0.add(const Duration(hours: 3))), 30);
+    expect(PointWeather.popAt(pops, t0.add(const Duration(hours: 6))), 80);
+    expect(PointWeather.popAt(pops, t0.add(const Duration(hours: 9))), 80);
+    expect(PointWeather.popAt(pops, t0.add(const Duration(hours: 12))), isNull);
+    expect(PointWeather.popAt(pops, t0.subtract(const Duration(hours: 1))), isNull);
   });
 }

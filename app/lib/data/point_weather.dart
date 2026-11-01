@@ -230,6 +230,16 @@ class PointWeather {
 
   /// 区域の降水確率（6時間ごとの枠の開始 instant → %）
   final Map<DateTime, int> pops;
+
+  /// 3時間の列 [t] が属する 6 時間枠の降水確率。気象庁の降水確率は 6 時間枠
+  /// （0-6 / 6-12 / 12-18 / 18-24 時）の区域値しか無いので、枠内の 2 列に同じ値を出す
+  static int? popAt(Map<DateTime, int> pops, DateTime t) {
+    for (final e in pops.entries) {
+      final d = t.difference(e.key);
+      if (!d.isNegative && d < const Duration(hours: 6)) return e.value;
+    }
+    return null;
+  }
   final WeekForecast? week;
 
   /// 点の予報（無ければ空）
@@ -264,7 +274,7 @@ class PointWeather {
         rain: s.rain,
         snow: s.snow,
         wind: w,
-        pop: pops[s.validUtc],
+        pop: popAt(pops, s.validUtc),
       );
     }
     if (!hasPoint) {
@@ -275,7 +285,7 @@ class PointWeather {
             temp: rep[t],
             wind: windBy[t],
             weatherCode: windBy[t]?.weatherCode,
-            pop: pops[t]);
+            pop: popAt(pops, t));
       }
     }
     final keys = byTime.keys
