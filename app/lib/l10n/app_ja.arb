@@ -2821,14 +2821,7 @@
   "pwWeekday7": "日",
   "pwHour": "{h}時",
   "@pwHour": {"placeholders": {"h": {"type": "String"}}},
-  "pwRainRange": "{a}〜{b}mm",
-  "@pwRainRange": {"placeholders": {"a": {"type": "String"}, "b": {"type": "String"}}},
-  "pwRainOver": "{a}mm以上",
-  "@pwRainOver": {"placeholders": {"a": {"type": "String"}}},
-  "pwSnowRange": "{a}〜{b}cm",
-  "@pwSnowRange": {"placeholders": {"a": {"type": "String"}, "b": {"type": "String"}}},
-  "pwSnowOver": "{a}cm以上",
-  "@pwSnowOver": {"placeholders": {"a": {"type": "String"}}},
   "pwSpeedRange": "{a}〜{b}",
-  "@pwSpeedRange": {"placeholders": {"a": {"type": "String"}, "b": {"type": "String"}}}
+  "@pwSpeedRange": {"placeholders": {"a": {"type": "String"}, "b": {"type": "String"}}},
+  "pwAmountLegend": "降水量は mm/3h、降雪量は cm/3h"
 }

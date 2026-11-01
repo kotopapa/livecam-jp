@@ -3028,29 +3028,12 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String pwRainRange(String a, String b) {
-    return '$a~${b}mm';
-  }
-
-  @override
-  String pwRainOver(String a) {
-    return '${a}mm以上';
-  }
-
-  @override
-  String pwSnowRange(String a, String b) {
-    return '$a~${b}cm';
-  }
-
-  @override
-  String pwSnowOver(String a) {
-    return '${a}cm以上';
-  }
-
-  @override
   String pwSpeedRange(String a, String b) {
     return '$a~$b';
   }
+
+  @override
+  String get pwAmountLegend => '降雨量单位为mm/3h，降雪量单位为cm/3h';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6077,27 +6060,10 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String pwRainRange(String a, String b) {
-    return '$a~${b}mm';
-  }
-
-  @override
-  String pwRainOver(String a) {
-    return '${a}mm以上';
-  }
-
-  @override
-  String pwSnowRange(String a, String b) {
-    return '$a~${b}cm';
-  }
-
-  @override
-  String pwSnowOver(String a) {
-    return '${a}cm以上';
-  }
-
-  @override
   String pwSpeedRange(String a, String b) {
     return '$a~$b';
   }
+
+  @override
+  String get pwAmountLegend => '降雨量單位為mm/3h，降雪量單位為cm/3h';
 }

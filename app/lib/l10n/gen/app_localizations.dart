@@ -5410,35 +5410,17 @@ abstract class AppLocalizations {
   /// **'{h}時'**
   String pwHour(String h);
 
-  /// No description provided for @pwRainRange.
-  ///
-  /// In ja, this message translates to:
-  /// **'{a}〜{b}mm'**
-  String pwRainRange(String a, String b);
-
-  /// No description provided for @pwRainOver.
-  ///
-  /// In ja, this message translates to:
-  /// **'{a}mm以上'**
-  String pwRainOver(String a);
-
-  /// No description provided for @pwSnowRange.
-  ///
-  /// In ja, this message translates to:
-  /// **'{a}〜{b}cm'**
-  String pwSnowRange(String a, String b);
-
-  /// No description provided for @pwSnowOver.
-  ///
-  /// In ja, this message translates to:
-  /// **'{a}cm以上'**
-  String pwSnowOver(String a);
-
   /// No description provided for @pwSpeedRange.
   ///
   /// In ja, this message translates to:
   /// **'{a}〜{b}'**
   String pwSpeedRange(String a, String b);
+
+  /// No description provided for @pwAmountLegend.
+  ///
+  /// In ja, this message translates to:
+  /// **'降水量は mm/3h、降雪量は cm/3h'**
+  String get pwAmountLegend;
 }
 
 class _AppLocalizationsDelegate

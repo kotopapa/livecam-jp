@@ -3043,29 +3043,12 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String pwRainRange(String a, String b) {
-    return '$a〜${b}mm';
-  }
-
-  @override
-  String pwRainOver(String a) {
-    return '${a}mm以上';
-  }
-
-  @override
-  String pwSnowRange(String a, String b) {
-    return '$a〜${b}cm';
-  }
-
-  @override
-  String pwSnowOver(String a) {
-    return '${a}cm以上';
-  }
-
-  @override
   String pwSpeedRange(String a, String b) {
     return '$a〜$b';
   }
+
+  @override
+  String get pwAmountLegend => '降水量は mm/3h、降雪量は cm/3h';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -6151,27 +6134,10 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   }
 
   @override
-  String pwRainRange(String a, String b) {
-    return '$a〜${b}mm';
-  }
-
-  @override
-  String pwRainOver(String a) {
-    return '${a}mm いじょう';
-  }
-
-  @override
-  String pwSnowRange(String a, String b) {
-    return '$a〜${b}cm';
-  }
-
-  @override
-  String pwSnowOver(String a) {
-    return '${a}cm いじょう';
-  }
-
-  @override
   String pwSpeedRange(String a, String b) {
     return '$a〜$b';
   }
+
+  @override
+  String get pwAmountLegend => 'あめの りょうは mm/3じかん、ゆきの りょうは cm/3じかん';
 }

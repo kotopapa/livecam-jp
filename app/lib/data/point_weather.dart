@@ -518,6 +518,25 @@ class PointWeathers {
       ));
     }
     if (days.isEmpty) return null;
+    // 降水確率が空の日（週間の初日）は [0] の6時間ごとの確率のうち、その日（JST）に
+    // 開始する枠の最大値で補う
+    final p6 = parsePops(json, class10);
+    for (var i = 0; i < days.length; i++) {
+      if (days[i].pop != null) continue;
+      int? mx;
+      for (final e in p6.entries) {
+        if (startOfDay(toJstWallClock(e.key)) != days[i].day) continue;
+        if (mx == null || e.value > mx) mx = e.value;
+      }
+      if (mx != null) {
+        days[i] = WeekDay(
+            day: days[i].day,
+            code: days[i].code,
+            pop: mx,
+            tempMax: days[i].tempMax,
+            tempMin: days[i].tempMin);
+      }
+    }
     // 気温が空の日は [0] の今日明日の最高・最低（00時=最低・09時=最高）で補う
     final st = json[0] is Map ? ((json[0] as Map)['timeSeries'] as List?) : null;
     if (st != null && st.length > 2 && st[2] is Map) {
@@ -732,7 +751,13 @@ class PointWeathers {
       cached = (DateTime.now(), j);
       _vpfd[area.code] = cached;
     }
-    return parseVpfd(cached.$2, areaName: area.name, areaEnName: area.enName);
+    // 「東部」だけでは分かりにくいので府県名を前に付ける（週間の注記と同じ語）
+    final off = JmaAreaNames.officeNameOf(area.office);
+    return parseVpfd(cached.$2,
+        areaName: off == null ? area.name : '${off.name} ${area.name}',
+        areaEnName: off == null || area.enName.isEmpty
+            ? area.enName
+            : '${off.enName.isEmpty ? off.name : off.enName} ${area.enName}');
   }
 
   static Future<(WeekForecast?, Map<DateTime, int>)> _fetchWeek(

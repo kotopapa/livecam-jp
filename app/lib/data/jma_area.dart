@@ -16,6 +16,7 @@ class JmaAreaNames {
   static Map<String, String> _class20Parent = const {};
   static Map<String, String> _class15Parent = const {};
   static Map<String, ({String name, String enName})> _class10Name = const {};
+  static Map<String, ({String name, String enName})> _officeName = const {};
   static bool _loaded = false;
   static Future<void>? _inflight;
 
@@ -49,6 +50,11 @@ class JmaAreaNames {
       for (final e in c10.entries)
         e.key: (name: _str(e.value, 'name'), enName: _str(e.value, 'enName'))
     };
+    final off = _sec(data, 'offices');
+    _officeName = {
+      for (final e in off.entries)
+        e.key: (name: _str(e.value, 'name'), enName: _str(e.value, 'enName'))
+    };
     _class15Parent = {for (final e in c15.entries) e.key: _str(e.value, 'parent')};
     _class20Name = {for (final e in c20.entries) e.key: _str(e.value, 'name')};
     _class20Parent = {for (final e in c20.entries) e.key: _str(e.value, 'parent')};
@@ -62,8 +68,15 @@ class JmaAreaNames {
     _class20Parent = const {};
     _class15Parent = const {};
     _class10Name = const {};
+    _officeName = const {};
     _loaded = false;
     _inflight = null;
+  }
+
+  /// 官署コード → 府県名（「神奈川県」など。無ければ null）
+  static ({String name, String enName})? officeNameOf(String office) {
+    final o = _officeName[office];
+    return o == null || o.name.isEmpty ? null : o;
   }
 
   /// JIS市区町村コード（5桁）→ 一次細分区域（class10）。

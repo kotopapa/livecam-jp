@@ -166,7 +166,7 @@ void main() {
       expect(w.days.length, 3);
       expect(w.days[0].day, DateTime(2026, 11, 2));
       expect((w.days[0].tempMax, w.days[0].tempMin), (21, 13));
-      expect(w.days[0].pop, isNull);
+      expect(w.days[0].pop, 70); // 週間の初日は空 → [0] の6時間確率のその日の最大
       expect((w.days[1].tempMax, w.days[1].tempMin, w.days[1].pop), (20, 13, 20));
     });
 

@@ -3054,27 +3054,10 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String pwRainRange(String a, String b) {
-    return '$a~${b}mm';
-  }
-
-  @override
-  String pwRainOver(String a) {
-    return '${a}mm 이상';
-  }
-
-  @override
-  String pwSnowRange(String a, String b) {
-    return '$a~${b}cm';
-  }
-
-  @override
-  String pwSnowOver(String a) {
-    return '${a}cm 이상';
-  }
-
-  @override
   String pwSpeedRange(String a, String b) {
     return '$a~$b';
   }
+
+  @override
+  String get pwAmountLegend => '강수량은 mm/3h, 강설량은 cm/3h';
 }

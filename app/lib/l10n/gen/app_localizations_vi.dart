@@ -3159,27 +3159,11 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String pwRainRange(String a, String b) {
-    return '$a–${b}mm';
-  }
-
-  @override
-  String pwRainOver(String a) {
-    return 'từ ${a}mm';
-  }
-
-  @override
-  String pwSnowRange(String a, String b) {
-    return '$a–${b}cm';
-  }
-
-  @override
-  String pwSnowOver(String a) {
-    return 'từ ${a}cm';
-  }
-
-  @override
   String pwSpeedRange(String a, String b) {
     return '$a–$b';
   }
+
+  @override
+  String get pwAmountLegend =>
+      'Lượng mưa tính bằng mm/3h, lượng tuyết rơi tính bằng cm/3h';
 }

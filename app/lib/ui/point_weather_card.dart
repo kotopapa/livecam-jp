@@ -15,9 +15,10 @@ Future<PointWeather?> _defaultLoader(Camera camera) => PointWeathers.fetch(camer
 const _hotColor = Color(0xFFE53935);
 const _coldColor = Color(0xFF1E88E5);
 
-/// 気象庁の天気マーク（同梱 PNG）。無いコードは Material Icons の雲で代える
+/// 気象庁の天気マーク（同梱 PNG）。ダーク背景で沈まないよう薄い丸角の下地を敷く。
+/// 無いコードは Material Icons の雲で代える
 class WeatherIcon extends StatelessWidget {
-  const WeatherIcon(this.code, {super.key, this.width = 30});
+  const WeatherIcon(this.code, {super.key, this.width = 36});
   final String? code;
   final double width;
 
@@ -25,17 +26,21 @@ class WeatherIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     final h = width * 2 / 3;
     final c = code;
-    if (c == null) return SizedBox(width: width, height: h);
+    if (c == null) return SizedBox(width: width + 6, height: h + 6);
     final base = weatherIconBase(c);
-    if (base.isEmpty) {
-      return SizedBox(
-          width: width, height: h, child: Icon(Icons.cloud, size: h * 0.8, color: Colors.grey));
-    }
-    return Image.asset('assets/weather/$base.png',
-        width: width,
-        height: h,
-        errorBuilder: (_, _, _) => SizedBox(
-            width: width, height: h, child: Icon(Icons.cloud, size: h * 0.8, color: Colors.grey)));
+    final fallback = SizedBox(
+        width: width, height: h, child: Icon(Icons.cloud, size: h * 0.8, color: Colors.grey));
+    return Container(
+      padding: const EdgeInsets.all(3),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: base.isEmpty
+          ? fallback
+          : Image.asset('assets/weather/$base.png',
+              width: width, height: h, errorBuilder: (_, _, _) => fallback),
+    );
   }
 }
 
@@ -95,7 +100,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
     });
   }
 
-  static const colW = 44.0;
+  static const colW = 52.0;
   static const _timeH = 36.0;
   static const _chartH = 92.0;
   static const _axisW = 30.0;
@@ -108,19 +113,20 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         _ => '',
       };
 
-  static String rainText(AppLocalizations l, int r) => switch (r) {
-        1 => l.pwRainRange('1', '5'),
-        2 => l.pwRainRange('5', '10'),
-        3 => l.pwRainRange('10', '15'),
-        4 => l.pwRainRange('15', '20'),
-        5 => l.pwRainOver('20'),
+  /// 各列には短い形だけ（単位は凡例に1回）
+  static String rainText(int r) => switch (r) {
+        1 => '1-5',
+        2 => '5-10',
+        3 => '10-15',
+        4 => '15-20',
+        5 => '20+',
         _ => '',
       };
 
-  static String snowText(AppLocalizations l, int s) => switch (s) {
-        1 => l.pwSnowRange('1', '3'),
-        2 => l.pwSnowRange('3', '6'),
-        3 => l.pwSnowOver('6'),
+  static String snowText(int s) => switch (s) {
+        1 => '1-3',
+        2 => '3-6',
+        3 => '6+',
         _ => '',
       };
 
@@ -216,15 +222,15 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
             ),
           ),
         ),
-      rowOf(22, (c, _) => Center(child: WeatherIcon(c.weatherCode))),
+      rowOf(32, (c, _) => Center(child: WeatherIcon(c.weatherCode))),
       if (hasRain)
-        rowOf(13, (c, _) => Center(
-            child: Text(rainText(l, c.rain ?? 0),
-                style: small.copyWith(color: _coldColor), maxLines: 1, overflow: TextOverflow.clip))),
+        rowOf(15, (c, _) => Center(
+            child: Text(rainText(c.rain ?? 0),
+                style: const TextStyle(fontSize: 11, color: _coldColor), maxLines: 1, overflow: TextOverflow.clip))),
       if (hasSnow)
-        rowOf(13, (c, _) => Center(
-            child: Text(snowText(l, c.snow ?? 0),
-                style: small.copyWith(color: scheme.tertiary), maxLines: 1, overflow: TextOverflow.clip))),
+        rowOf(15, (c, _) => Center(
+            child: Text(snowText(c.snow ?? 0),
+                style: const TextStyle(fontSize: 11, color: Color(0xFF8E24AA)), maxLines: 1, overflow: TextOverflow.clip))),
       if (hasPop)
         rowOf(14, (c, _) => Center(
             child: Text(c.pop == null ? '' : '${c.pop}%',
@@ -269,6 +275,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
             ]),
           ),
       ]),
+      if (hasRain || hasSnow) Text(l.pwAmountLegend, style: muted),
       if (pw.tempIsRepresentative && pw.wind != null)
         Text(
             l.pwRepTemp(Localizations.localeOf(context).languageCode == 'en' &&
@@ -304,7 +311,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
                               : null)),
               Text('${d.day.month}/${d.day.day}', style: muted.copyWith(fontSize: 10)),
               const SizedBox(height: 2),
-              WeatherIcon(d.code, width: 34),
+              WeatherIcon(d.code, width: 40),
               Text(d.tempMax == null ? '—' : '${d.tempMax}°',
                   style: const TextStyle(fontSize: 13, color: _hotColor, fontWeight: FontWeight.w600)),
               Text(d.tempMin == null ? '—' : '${d.tempMin}°',
