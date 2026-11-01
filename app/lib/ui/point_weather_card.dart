@@ -67,11 +67,23 @@ class WeatherIcon extends StatelessWidget {
       height: box,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: scheme.onSurface.withValues(alpha: 0.12),
+        color: tileColor(spec, scheme),
         borderRadius: BorderRadius.circular(8),
       ),
       child: child,
     );
+  }
+
+  /// 下地の色。塗り版は雨粒・雪が細くて小さい表示では薄いので、種別で色分けする
+  /// （雨＝青、雪＝水色、みぞれ＝青灰、雷雨＝濃い青。晴れ・くもりは控えめな灰）。
+  /// 「のち」は後半の天気の色（これから変わる方を目立たせる）
+  static Color tileColor(({String main, String? then})? spec, ColorScheme scheme) {
+    final name = spec?.then ?? spec?.main ?? '';
+    if (name.startsWith('thunderstorms')) return const Color(0xFF3949AB).withValues(alpha: 0.45);
+    if (name.endsWith('sleet') || name == 'sleet') return const Color(0xFF5C8DB8).withValues(alpha: 0.40);
+    if (name.endsWith('snow') || name == 'snow') return const Color(0xFF80D8FF).withValues(alpha: 0.35);
+    if (name.endsWith('rain') || name == 'rain') return const Color(0xFF1E88E5).withValues(alpha: 0.40);
+    return scheme.onSurface.withValues(alpha: 0.12);
   }
 }
 
