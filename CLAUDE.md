@@ -423,6 +423,13 @@ python site/build.py                            # 配信ファイル生成
 - **川の防災情報の積雪観測所（テレメータ 125、山間・ダム中心）はサーバーで集約せず、端末が積雪タブを開いたときに「近くの観測点」に入った分（最大3件）だけ直接取る**（規約でツールによる定期収集を控えるよう求めているため。水位グラフと同じ扱い）。観測所の表は `tools/kawabou_snow_stations.py` が `app/assets/data/kawabou_snow_stations.json` に生成（twnarea.json の snwExistFlg → twnlist の obsSnow → `master/obs/snw/<obsFcd>.json`。冬前に一度回せば足りる）。値は `tmlist/snw/YYYYMMDD/HHmm/<obsFcd>.json` の obsValue.snwdp（`snwdpCcd≠0` は欠測、hrValues は時間値）を `app/lib/data/kawabou_snow.dart` が 10 分スロットを3つさかのぼって読む。都道府県一覧には入れない（全観測所を取りに行くことになる）
 - 使えなかった情報源: 新潟（robots で全面禁止）、長野（県サイトがメンテ中）、青森（座標なし・リンク事前連絡）、福島（日次・停止）、栃木（セッション型）、群馬（自動観測3地点のみ・座標なし）、NEXCO 3社、ウェザーニュース（有料）。照会すれば使える候補: 京都府 道路情報提供システム（滋賀・福井・国交省近畿のセンサー 214 地点、規約の記載なし）、防災科研 SW-Net（山地 16 地点）。照会文は docs/inquiries_2026-10-30.md（回答があるまで組み込まない）
 
+## カメラ詳細「この地点の天気」カード（1.7.0、2026-11-02追記）
+
+- `app/lib/ui/point_weather_card.dart`（表示）と `app/lib/data/point_weather.dart`（取得）。国内カメラ全部に出す。構成はウェザーニュースのウィジェットに倣い、大きな現在気温（最寄り 30km 以内のアメダス。観測点表は同梱 `assets/data/amedas_stations.json`、`tools/amedas_stations.py` 生成）→ 3 時間ごとの気温の折れ線＋天気マーク＋降水量/降雪量/降水確率（自サイト `v1/wdist/<lat0>_<lng0>.json` の 5km メッシュ）→ 週間（府県予報 [1]。当日の降水確率は [0] の 6 時間値の最大で補う）→ 出典行
+- **風は 3 時間予報に出さない**（2026-11-02 ユーザー決定。気象庁に点単位の風予報が無く、地域時系列予報の区域値は沿岸に引っ張られて内陸で過大だった）。VPFD（`jmatile/data/wdist/VPFD/<class10>.json`）の風の解析はデータ層に残してあり、点単位の風を入れるなら Apple WeatherKit（iOS はネイティブ、Android は署名鍵のサーバーが要る）か Open-Meteo 有料プランが候補
+- 天気マークは気象庁の天気予報アイコン（`bosai/forecast/img/<code>.svg`、実在は 30 コード）を `tools/weather_icons.mjs` で PNG にして `assets/weather/` に同梱。無いコードは `weatherIconBase` の表で近いコードに寄せる。出典行に「天気マークは気象庁ホームページより」
+- 現在気温の右に市区町村の警報・注意報バッジ（`lib/data/muni_warnings.dart`。気象庁 r8 の官署別 JSON を官署×報種別で合算、5 分控え。最上位の段階を「注意報 (Lv.2)」形式で 1 つ、タップで一覧シート）。段階の色・順位・コード群は `lib/data/warning_levels.dart` に切り出して bosai_screen と共用
+
 ## 天気分布予報の配信（2026-11-02追記）
 
 - カメラ詳細「この地点の天気」用に、気象庁の天気分布予報（5km メッシュ・3時間ごと・約2日分）を `tools/wdist_grid.py` が `site/v1/wdist/` に生成する。一覧 `bosai/jmatile/data/wdist/targetTimes.json`（basetime/validtime は UTC。要素は validtime ごとに違う）、気温は `surf/temp_point/data.geojson`（生 gzip のことあり。32,496点、格子 lat=0.025+0.05i・lng=0.03125+0.0625j）、天気 wm・降水 r3・降雪 s3 は PNG タイル（偶数ズーム。z6 で格子点の画素を読む）
