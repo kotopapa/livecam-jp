@@ -422,3 +422,10 @@ python site/build.py                            # 配信ファイル生成
 - **岐阜（douro.pref.gifu.lg.jp）は GitHub Actions のランナーから接続がタイムアウトする**（高知水防・高島市・三重道路と同じく海外 IP を通さないとみられる。手元の Mac からは取れる）。失敗した情報源は前回の点のうち24時間以内のものだけ残すので、取れないあいだは配信から自然に消える。monitor.yml の timeout-minutes は死活監視 22 分＋通行規制 2 分＋積雪 1 分で 25 分を超えたため 30 に上げた（2026-10-30）
 - **川の防災情報の積雪観測所（テレメータ 125、山間・ダム中心）はサーバーで集約せず、端末が積雪タブを開いたときに「近くの観測点」に入った分（最大3件）だけ直接取る**（規約でツールによる定期収集を控えるよう求めているため。水位グラフと同じ扱い）。観測所の表は `tools/kawabou_snow_stations.py` が `app/assets/data/kawabou_snow_stations.json` に生成（twnarea.json の snwExistFlg → twnlist の obsSnow → `master/obs/snw/<obsFcd>.json`。冬前に一度回せば足りる）。値は `tmlist/snw/YYYYMMDD/HHmm/<obsFcd>.json` の obsValue.snwdp（`snwdpCcd≠0` は欠測、hrValues は時間値）を `app/lib/data/kawabou_snow.dart` が 10 分スロットを3つさかのぼって読む。都道府県一覧には入れない（全観測所を取りに行くことになる）
 - 使えなかった情報源: 新潟（robots で全面禁止）、長野（県サイトがメンテ中）、青森（座標なし・リンク事前連絡）、福島（日次・停止）、栃木（セッション型）、群馬（自動観測3地点のみ・座標なし）、NEXCO 3社、ウェザーニュース（有料）。照会すれば使える候補: 京都府 道路情報提供システム（滋賀・福井・国交省近畿のセンサー 214 地点、規約の記載なし）、防災科研 SW-Net（山地 16 地点）。照会文は docs/inquiries_2026-10-30.md（回答があるまで組み込まない）
+
+## 天気分布予報の配信（2026-11-02追記）
+
+- カメラ詳細「この地点の天気」用に、気象庁の天気分布予報（5km メッシュ・3時間ごと・約2日分）を `tools/wdist_grid.py` が `site/v1/wdist/` に生成する。一覧 `bosai/jmatile/data/wdist/targetTimes.json`（basetime/validtime は UTC。要素は validtime ごとに違う）、気温は `surf/temp_point/data.geojson`（生 gzip のことあり。32,496点、格子 lat=0.025+0.05i・lng=0.03125+0.0625j）、天気 wm・降水 r3・降雪 s3 は PNG タイル（偶数ズーム。z6 で格子点の画素を読む）
+- 色→コード（±8 許容、透明=0）: wm 晴(255,170,0)=1 / くもり(170,170,170)=2 / 雨(0,65,255)=3 / 雨or雪(160,210,255)=4 / 雪(242,242,255)=5。r3 は 1–5・5–10・10–15・15–20・20以上=1〜5、s3 は 1–3・3–6・6以上=1〜3。表は wdist_grid.py の docstring
+- 出力は 2° ブロック（`<lat0>_<lng0>.json`、約55本・計32,496点・合計4MB 強）と `index.json`（basetime・validtimes・blocks）。形式はアプリ側（別担当 `app/lib/data/point_weather.dart`）と合意済みなので変えるときは両方直す
+- publish は30分ごとだが気象庁の発表は1日3回なので、`sync_site()` は公開中 `https://kotopapa.github.io/livecam-jp/v1/wdist/index.json` と basetime が同じならブロック一式をダウンロードして再利用し、違うときだけ気象庁から生成する（約1,000タイル・0.2秒間隔で約2分）。どちらも取れなければ何も置かない（アプリは無い前提で動く）。publish.yml に `pip install -r requirements.txt` を足した（requests・Pillow が要る。build.py は無ければ wdist をスキップ）

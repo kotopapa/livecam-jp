@@ -14,6 +14,7 @@
     site/v1/underpass_status.json   # 地下道の冠水状況（data/underpass_status.json。tools/underpass.py）
     site/v1/road_regulation.json    # 道路の通行規制（data/road_regulation.json。tools/road_regulation.py）
     site/v1/snow_points.json        # 積雪観測点（data/snow_points.json。tools/snow_points.py）
+    site/v1/wdist/*.json            # 天気分布予報の格子（気象庁から生成、同じ basetime なら公開中を再利用。tools/wdist_grid.py）
 
 アプリに配るのは approved のみ。verification 等の内部フィールドは落とす。
 """
@@ -267,6 +268,14 @@ def build() -> int:
     from tools.snow_points import sync_site as sync_snow_points
     if sync_snow_points():
         print("snow_points.json: コピー")
+    # 天気分布予報（気象庁。公開中と同じ basetime なら再利用。requests/Pillow が無い・取れないときはスキップ）
+    try:
+        from tools.wdist_grid import sync_site as sync_wdist
+        n_wdist = sync_wdist()
+        if n_wdist:
+            print(f"wdist: {n_wdist}ファイル")
+    except Exception as e:  # noqa: BLE001
+        print(f"wdist: スキップ {type(e).__name__}: {e}", file=sys.stderr)
 
     # 自治体・国の機関の災害情報 X アカウント（data/x_accounts.json の採用分のみ配信）
     from tools.x_accounts_publish import sync_site as sync_x_accounts
