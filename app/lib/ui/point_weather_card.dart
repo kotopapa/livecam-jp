@@ -36,12 +36,11 @@ class WeatherIcon extends StatelessWidget {
   final int snow;
 
   /// 表示用のマーク名。「雪」だけの天気は雪だるま（気象庁のマークと同じで分かりやすい。
-  /// 2026-11-02 ユーザー要望）。強さに応じて雨系→ extreme-rain、くもり一時雪などの
-  /// 雪の組み合わせ→ extreme-snow に差し替える（雪だるまは下地の濃さだけ変える）
+  /// 2026-11-02 ユーザー要望）。雨は 10mm/3h 以上で雨粒の多い extreme-rain に差し替える。
+  /// 雪は強さでマークを変えず（強い雪も雪だるまのまま。同日ユーザー決定）、下地の濃さだけ変える
   static String intensify(String name, int rain, int snow) {
     if (name == 'snow') return 'snowman';
     if (rain >= 3 && (name == 'rain' || name.endsWith('-rain'))) return 'extreme-rain';
-    if (snow >= 2 && name.endsWith('-snow')) return 'extreme-snow';
     return name;
   }
 
