@@ -108,6 +108,22 @@ class WeatherIcon extends StatelessWidget {
   }
 }
 
+/// 各列に代表する数字 1 つ（3時間降水量）。天気分布予報は階級（1-5 / 5-10 / 10-15 /
+/// 15-20 / 20以上 mm）なので、階級の中央値を代表値にする（上限の無い階級はしきい値）。
+/// 0 も「0mm」と出す（2026-11-02 ユーザー決定: レンジや「〜」「-」は出さない）。
+/// 降雪量（cm）は一般の天気予報と同じく時間別には出さない（雪は天気マークと下地の濃さで表す。同日決定）
+/// 天気が雨・雪・みぞれ・雷雨なのに階級が 0（1mm 未満）の列は「1mm」と出す
+/// （雪マークで 0mm は矛盾して見える。2026-11-02 ユーザー決定）
+String rainText(int r, {String? weatherCode}) => switch (r) {
+      0 when weatherCode != null && (weatherCode.startsWith('3') || weatherCode.startsWith('4')) => '1mm',
+      1 => '3mm',
+      2 => '8mm',
+      3 => '13mm',
+      4 => '18mm',
+      5 => '20mm',
+      _ => '0mm',
+    };
+
 /// カメラ詳細の「この地点の天気」。現在気温（最寄りアメダス）・3時間ごとの気温グラフと
 /// 天気マーク・風・降水・週間予報（出典は気象庁）。取れた情報源の分だけ出し、
 /// 全部無ければ区切り線ごと何も出さない
@@ -197,21 +213,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         _ => '',
       };
 
-  /// 各列に代表する数字 1 つ（3時間降水量）。天気分布予報は階級（1-5 / 5-10 / 10-15 /
-  /// 15-20 / 20以上 mm）なので、階級の中央値を代表値にする（上限の無い階級はしきい値）。
-  /// 0 も「0mm」と出す（2026-11-02 ユーザー決定: レンジや「〜」「-」は出さない）。
-  /// 降雪量（cm）は一般の天気予報と同じく時間別には出さない（雪は天気マークと下地の濃さで表す。同日決定）
-  /// 天気が雨・雪・みぞれ・雷雨なのに階級が 0（1mm 未満）の列は「1mm」と出す
-  /// （雪マークで 0mm は矛盾して見える。2026-11-02 ユーザー決定）
-  static String rainText(int r, {String? weatherCode}) => switch (r) {
-        0 when weatherCode != null && (weatherCode.startsWith('3') || weatherCode.startsWith('4')) => '1mm',
-        1 => '3mm',
-        2 => '8mm',
-        3 => '13mm',
-        4 => '18mm',
-        5 => '20mm',
-        _ => '0mm',
-      };
 
 
   static String weekday(AppLocalizations l, int w) => switch (w) {

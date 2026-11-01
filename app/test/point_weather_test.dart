@@ -468,10 +468,10 @@ void _popAtTests() {
 
 void _rainTextTests() {
   test('降るマークの列は 1mm 未満でも 1mm と出す', () {
-    expect(PointWeatherCard.rainText(0), '0mm');
-    expect(PointWeatherCard.rainText(0, weatherCode: '200'), '0mm');
-    expect(PointWeatherCard.rainText(0, weatherCode: '300'), '1mm');
-    expect(PointWeatherCard.rainText(0, weatherCode: '400'), '1mm');
-    expect(PointWeatherCard.rainText(1, weatherCode: '400'), '3mm');
+    expect(rainText(0), '0mm');
+    expect(rainText(0, weatherCode: '200'), '0mm');
+    expect(rainText(0, weatherCode: '300'), '1mm');
+    expect(rainText(0, weatherCode: '400'), '1mm');
+    expect(rainText(1, weatherCode: '400'), '3mm');
   });
 }
