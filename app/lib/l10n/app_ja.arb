@@ -2801,8 +2801,6 @@
   "pwDir14": "北西",
   "pwDir15": "北北西",
   "pwDir16": "北",
-  "pwWindLegend": "風は {area} の予報（m/s・矢印は風が向かう先）",
-  "@pwWindLegend": {"placeholders": {"area": {"type": "String"}}},
   "pwRepTemp": "気温は代表地点 {name} の予報",
   "@pwRepTemp": {"placeholders": {"name": {"type": "String"}}},
   "pwWeekNote": "週間は {area} の予報・気温は {station}",
@@ -2821,7 +2819,5 @@
   "pwWeekday7": "日",
   "pwHour": "{h}時",
   "@pwHour": {"placeholders": {"h": {"type": "String"}}},
-  "pwSpeedRange": "{a}〜{b}",
-  "@pwSpeedRange": {"placeholders": {"a": {"type": "String"}, "b": {"type": "String"}}},
   "pwAmountLegend": "降水量は mm/3h、降雪量は cm/3h"
 }

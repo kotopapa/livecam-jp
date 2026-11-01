@@ -3104,11 +3104,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get pwDir16 => 'Bắc';
 
   @override
-  String pwWindLegend(String area) {
-    return 'Gió là dự báo cho $area (m/s; mũi tên chỉ hướng gió thổi tới)';
-  }
-
-  @override
   String pwRepTemp(String name) {
     return 'Nhiệt độ là dự báo cho điểm đại diện $name';
   }
@@ -3156,11 +3151,6 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String pwHour(String h) {
     return '${h}h';
-  }
-
-  @override
-  String pwSpeedRange(String a, String b) {
-    return '$a–$b';
   }
 
   @override

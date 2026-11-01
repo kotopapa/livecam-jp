@@ -2988,11 +2988,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String get pwDir16 => '北';
 
   @override
-  String pwWindLegend(String area) {
-    return '風は $area の予報（m/s・矢印は風が向かう先）';
-  }
-
-  @override
   String pwRepTemp(String name) {
     return '気温は代表地点 $name の予報';
   }
@@ -3040,11 +3035,6 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String pwHour(String h) {
     return '$h時';
-  }
-
-  @override
-  String pwSpeedRange(String a, String b) {
-    return '$a〜$b';
   }
 
   @override
@@ -6079,11 +6069,6 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String get pwDir16 => 'きた';
 
   @override
-  String pwWindLegend(String area) {
-    return 'かぜは $area の よほう（m/s・やじるしは かぜが ふいて いく ほう）';
-  }
-
-  @override
   String pwRepTemp(String name) {
     return 'きおんは だいひょうの ばしょ $name の よほう';
   }
@@ -6131,11 +6116,6 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String pwHour(String h) {
     return '$hじ';
-  }
-
-  @override
-  String pwSpeedRange(String a, String b) {
-    return '$a〜$b';
   }
 
   @override

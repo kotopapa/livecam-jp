@@ -5326,12 +5326,6 @@ abstract class AppLocalizations {
   /// **'北'**
   String get pwDir16;
 
-  /// No description provided for @pwWindLegend.
-  ///
-  /// In ja, this message translates to:
-  /// **'風は {area} の予報（m/s・矢印は風が向かう先）'**
-  String pwWindLegend(String area);
-
   /// No description provided for @pwRepTemp.
   ///
   /// In ja, this message translates to:
@@ -5409,12 +5403,6 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'{h}時'**
   String pwHour(String h);
-
-  /// No description provided for @pwSpeedRange.
-  ///
-  /// In ja, this message translates to:
-  /// **'{a}〜{b}'**
-  String pwSpeedRange(String a, String b);
 
   /// No description provided for @pwAmountLegend.
   ///

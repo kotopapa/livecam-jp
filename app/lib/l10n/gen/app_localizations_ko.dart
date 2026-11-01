@@ -2999,11 +2999,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get pwDir16 => '북';
 
   @override
-  String pwWindLegend(String area) {
-    return '바람은 $area 예보입니다(m/s, 화살표는 바람이 향하는 방향)';
-  }
-
-  @override
   String pwRepTemp(String name) {
     return '기온은 대표 지점 $name의 예보입니다';
   }
@@ -3051,11 +3046,6 @@ class AppLocalizationsKo extends AppLocalizations {
   @override
   String pwHour(String h) {
     return '$h시';
-  }
-
-  @override
-  String pwSpeedRange(String a, String b) {
-    return '$a~$b';
   }
 
   @override

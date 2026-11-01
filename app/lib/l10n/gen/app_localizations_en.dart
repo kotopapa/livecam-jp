@@ -3093,11 +3093,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pwDir16 => 'N';
 
   @override
-  String pwWindLegend(String area) {
-    return 'Wind is the forecast for $area (m/s; arrows show where the wind blows to)';
-  }
-
-  @override
   String pwRepTemp(String name) {
     return 'Temperatures are for the representative point $name';
   }
@@ -3145,11 +3140,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String pwHour(String h) {
     return '$h:00';
-  }
-
-  @override
-  String pwSpeedRange(String a, String b) {
-    return '$a–$b';
   }
 
   @override

@@ -130,12 +130,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         _ => '',
       };
 
-  static String speedText(AppLocalizations l, WindStep w) {
-    final a = w.minMs, b = w.maxMs;
-    if (a == null || b == null) return '';
-    return a == b ? '$a' : l.pwSpeedRange('$a', '$b');
-  }
-
   static String weekday(AppLocalizations l, int w) => switch (w) {
         1 => l.pwWeekday1, 2 => l.pwWeekday2, 3 => l.pwWeekday3, 4 => l.pwWeekday4,
         5 => l.pwWeekday5, 6 => l.pwWeekday6, _ => l.pwWeekday7,
@@ -193,7 +187,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
     final hasRain = cols.any((c) => (c.rain ?? 0) >= 1);
     final hasSnow = cols.any((c) => (c.snow ?? 0) >= 1);
     final hasPop = cols.any((c) => c.pop != null);
-    final hasWind = cols.any((c) => c.wind != null && c.wind!.minMs != null);
     const small = TextStyle(fontSize: 10);
     final font = Theme.of(context).textTheme.bodyMedium?.fontFamily;
     final range = TempChartPainter.range(temps);
@@ -235,24 +228,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         rowOf(14, (c, _) => Center(
             child: Text(c.pop == null ? '' : '${c.pop}%',
                 style: small.copyWith(color: scheme.onSurfaceVariant)))),
-      if (hasWind)
-        rowOf(36, (c, _) {
-          final w = c.wind;
-          if (w == null || w.minMs == null) return const SizedBox.shrink();
-          if (w.dir == null) {
-            return Center(child: Text(speedText(l, w), style: small));
-          }
-          return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            if (w.dir == 0)
-              Text(l.pwCalm, style: small.copyWith(fontSize: 9))
-            else ...[
-              Transform.rotate(
-                  angle: (w.dir! * 22.5 + 180) * math.pi / 180,
-                  child: Icon(Icons.navigation, size: 14, color: scheme.onSurfaceVariant)),
-              Text(speedText(l, w), style: small),
-            ],
-          ]);
-        }),
     ]);
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -282,13 +257,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
                     (pw.wind!.repEnName ?? '').isNotEmpty
                 ? pw.wind!.repEnName!
                 : (pw.wind!.repName ?? pw.wind!.areaName)),
-            style: muted),
-      if (hasWind && pw.wind != null)
-        Text(
-            l.pwWindLegend(Localizations.localeOf(context).languageCode == 'en' &&
-                    pw.wind!.areaEnName.isNotEmpty
-                ? pw.wind!.areaEnName
-                : pw.wind!.areaName),
             style: muted),
     ]);
   }

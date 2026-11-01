@@ -2974,11 +2974,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get pwDir16 => '北';
 
   @override
-  String pwWindLegend(String area) {
-    return '风为$area的预报（m/s，箭头为风吹向的方向）';
-  }
-
-  @override
   String pwRepTemp(String name) {
     return '气温为代表地点$name的预报';
   }
@@ -3025,11 +3020,6 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String pwHour(String h) {
     return '$h时';
-  }
-
-  @override
-  String pwSpeedRange(String a, String b) {
-    return '$a~$b';
   }
 
   @override
@@ -6006,11 +5996,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get pwDir16 => '北';
 
   @override
-  String pwWindLegend(String area) {
-    return '風為$area的預報（m/s，箭頭為風吹向的方向）';
-  }
-
-  @override
   String pwRepTemp(String name) {
     return '氣溫為代表地點$name的預報';
   }
@@ -6057,11 +6042,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   @override
   String pwHour(String h) {
     return '$h時';
-  }
-
-  @override
-  String pwSpeedRange(String a, String b) {
-    return '$a~$b';
   }
 
   @override

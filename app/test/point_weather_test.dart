@@ -346,7 +346,7 @@ void main() {
       expect(find.byWidgetPredicate((w) => w is CustomPaint && w.painter is TempChartPainter),
           findsOneWidget);
       expect(find.byType(WeatherIcon, skipOffstage: false), findsWidgets);
-      expect(find.byIcon(Icons.navigation, skipOffstage: false), findsWidgets);
+      expect(find.byIcon(Icons.navigation, skipOffstage: false), findsNothing); // 3時間予報に風は出さない
       expect(find.text('月'), findsOneWidget);
       expect(find.text('日'), findsNothing); // 11/2 は月曜 〜 11/4 は水曜
       expect(find.textContaining('週間は 神奈川県 の予報・気温は 横浜'), findsOneWidget);
@@ -362,7 +362,7 @@ void main() {
       );
       await pump(tester, pw);
       expect(find.textContaining('代表地点 横浜'), findsOneWidget);
-      expect(find.textContaining('風は 東京地方 の予報'), findsOneWidget);
+      expect(find.textContaining('風は'), findsNothing);
       expect(find.text('14.9℃'), findsOneWidget);
       expect(tester.takeException(), isNull);
     });
