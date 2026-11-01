@@ -35,10 +35,13 @@ class WeatherIcon extends StatelessWidget {
   /// 3時間降雪量の階級（0=1cm未満 … 3=6cm以上）。3cm/3h 以上（2〜）は雪の多いマーク
   final int snow;
 
-  /// 強さに応じてマークを差し替える（雨系→ extreme-rain、雪系→ extreme-snow）
+  /// 表示用のマーク名。「雪」だけの天気は雪だるま（気象庁のマークと同じで分かりやすい。
+  /// 2026-11-02 ユーザー要望）。強さに応じて雨系→ extreme-rain、くもり一時雪などの
+  /// 雪の組み合わせ→ extreme-snow に差し替える（雪だるまは下地の濃さだけ変える）
   static String intensify(String name, int rain, int snow) {
+    if (name == 'snow') return 'snowman';
     if (rain >= 3 && (name == 'rain' || name.endsWith('-rain'))) return 'extreme-rain';
-    if (snow >= 2 && (name == 'snow' || name.endsWith('-snow'))) return 'extreme-snow';
+    if (snow >= 2 && name.endsWith('-snow')) return 'extreme-snow';
     return name;
   }
 
@@ -70,7 +73,7 @@ class WeatherIcon extends StatelessWidget {
       child = FittedBox(
         fit: BoxFit.scaleDown,
         child: Row(mainAxisSize: MainAxisSize.min, children: [
-          img(spec.main, width * 0.6),
+          img(intensify(spec.main, 0, 0), width * 0.6),
           Icon(Icons.arrow_forward_ios, size: 6, color: scheme.onSurfaceVariant),
           img(intensify(spec.then!, rain, snow), width * 0.5),
         ]),
