@@ -146,7 +146,7 @@ def run(shard: str | None = None) -> int:
                      if c.get("review", {}).get("status") == "approved"
                      and c["feed"]["type"] == "mlit_roadinfo"]
     if roadinfo_cams:
-        from crawler.sources.mlit_roadinfo import resolve_image_urls
+        from crawler.sources.mlit_roadinfo import large_image_url, resolve_image_urls
         resolved: dict[str, tuple[str, str]] = {}
         for page_url in sorted({c["feed"]["url"] for c in roadinfo_cams}):
             try:
@@ -170,7 +170,9 @@ def run(shard: str | None = None) -> int:
                     "http_status": None, "frozen_since": None,
                     "consecutive_failures": 0, "avg_interval_sec": None,
                 })
-                st["image_url"], st["image_time"] = hit
+                # 詳細は原寸、一覧は縮小版（確認は縮小版で行う。プレースホルダの dHash は縮小版のもの）
+                st["image_url"], st["image_time"] = large_image_url(hit[0]), hit[1]
+                st["thumb_url"] = hit[0]
         # cameras(シャード抽出済み)のdictはall_camerasと別オブジェクトなので反映する
         by_id = {c["id"]: c for c in roadinfo_cams}
         for cam in cameras:

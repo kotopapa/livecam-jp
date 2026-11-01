@@ -425,3 +425,19 @@ def test_pick_live_stream_with_match_words():
     assert pick_live_stream(lives, "道頓堀 グリコ看板前", None, ["戎橋"]) is None
     # match なしは従来どおり語の重なりで選ぶ
     assert pick_live_stream(lives, "道頓堀 グリコ看板前", None) == "BBBBBBBBBB2"
+
+
+def test_mlit_roadinfo_publishes_large_image_and_thumb(monkeypatch):
+    from crawler.sources.mlit_roadinfo import large_image_url
+    small = "https://www.road-info-prvs.mlit.go.jp/roadinfo/img/doro_gazo/pc/20261102030000/s_8110C0010E.jpeg"
+    assert large_image_url(small) == small.replace("/s_", "/")
+    assert large_image_url("https://x/img/no_data.jpeg") == "https://x/img/no_data.jpeg"
+    cam = {"id": "r", "feed": {"type": "mlit_roadinfo", "url": "https://x/pc/pcImage_81_1.html"},
+           "source": {"page_url": "https://x/"}, "_resolved_image": {"url": small, "time": "2026-11-02 03:00:36"}}
+    import monitor.check as chk
+    monkeypatch.setattr(chk, "_check_still", lambda *a, **k: {"state": "ok", "last_ok_at": None, "http_status": 200,
+                                                              "frozen_since": None, "consecutive_failures": 0})
+    r = chk.check_camera(None, cam, {})
+    assert r["image_url"] == small.replace("/s_", "/")
+    assert r["thumb_url"] == small
+    assert r["image_time"] == "2026-11-02 03:00:36"

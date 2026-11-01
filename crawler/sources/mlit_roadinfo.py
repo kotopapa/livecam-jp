@@ -7,7 +7,7 @@ JSONが埋め込まれている（JS実行不要・1リクエスト/整備局）
 レコード品質: 正確な経緯度（gis_point、[経度, 緯度] 順）、JIS都道府県/市区町村
 コード、路線名、地点名、機器状態コード付き。
 
-静止画URLは `img/doro_gazo/pc/<タイムスタンプ>/s_<管理ID>.jpeg` 形式で
+静止画URLは `img/doro_gazo/pc/<タイムスタンプ>/s_<管理ID>.jpeg`（縮小版。原寸は `s_` 無し）形式で
 **固定URLが存在しない**（約15分刻み・直近3世代のみ保持）。そのため:
 - feed.type は `mlit_roadinfo`（都度解決型）。feed.url は解決元の pcImage ページ、
   feed.camera_ref に管理IDを持つ
@@ -76,6 +76,14 @@ def latest_image(cam: dict) -> tuple[str, str] | None:
         return None
     latest = max(entries, key=lambda f: f.get("get_datetime") or "")
     return IMG_BASE + latest["file"], latest.get("get_datetime") or ""
+
+
+def large_image_url(url: str) -> str:
+    """縮小版（`s_<管理ID>.jpeg`、148×98）の URL → 原寸（`<管理ID>.jpeg`、720×480 など）の URL。
+    fileList に載るのは縮小版だけだが、同じタイムスタンプで原寸も配信されている（2026-11-02 に
+    20 台で確認。利用者から「画像が粗い」と報告があり、詳細画面は原寸・一覧は縮小版にした）。
+    `no_data.jpeg` 等 `s_` が無いものはそのまま返す。"""
+    return re.sub(r"/s_([^/]+)$", r"/\1", url)
 
 
 def resolve_image_urls(page_html: str) -> dict[str, tuple[str, str]]:

@@ -20,6 +20,7 @@ class CameraStatus {
     this.avgIntervalSec,
     this.imageUrl,
     this.imageTime,
+    this.thumbUrl,
     this.videoId,
     this.live,
   });
@@ -35,6 +36,9 @@ class CameraStatus {
   final String? imageUrl;
   final String? imageTime;
 
+  /// 一覧用の縮小版（mlit_roadinfo。無ければ imageUrl を一覧にも使う）
+  final String? thumbUrl;
+
   /// youtube_channel の、いま配信中の動画ID（monitorが30分ごとに解決。配信が無ければ null）。
   /// `embed/live_stream?channel=` は配信中でも再生できないことがあるため、あれば動画IDで埋め込む
   final String? videoId;
@@ -49,6 +53,7 @@ class CameraStatus {
         avgIntervalSec: (json['avg_interval_sec'] as num?)?.toInt(),
         imageUrl: json['image_url'] as String?,
         imageTime: json['image_time'] as String?,
+        thumbUrl: json['thumb_url'] as String?,
         videoId: json['video_id'] as String?,
         live: json['live'] as bool?,
       );

@@ -365,7 +365,13 @@ class AppState extends ChangeNotifier {
 
   /// 一覧のサムネイル用URL。通信節約モード中は null（アイコンの枠だけにする）。
   /// 詳細画面の本表示は [imageUrlFor] を使う（節約中も手動更新・再生は通常どおり）
-  String? thumbUrlFor(Camera c) => dataSaverActive ? null : imageUrlFor(c);
+  String? thumbUrlFor(Camera c) {
+    if (dataSaverActive || imagesBlockedByWifiSetting) return null;
+    // 監視が縮小版（mlit_roadinfo の s_ 版）を配っていれば一覧はそれを使う
+    final thumb = repository.status[c.id]?.thumbUrl;
+    if (thumb != null && thumb.isNotEmpty) return thumb;
+    return imageUrlFor(c);
+  }
 
   String? imageTimeFor(Camera c) {
     // 静止画はアプリが表示のたびに配信元から直接取得するため、監視システムの

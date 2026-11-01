@@ -145,6 +145,11 @@ def _check_roadinfo(session, camera, state, now, prev_failures) -> dict:
     result = _check_still(session, camera, state, now, prev_failures, url=url)
     result["image_url"] = url
     result["image_time"] = resolved.get("time") or None
+    if camera["feed"]["type"] == "mlit_roadinfo":
+        # 確認は縮小版（速い・プレースホルダの dHash が縮小版）で行い、配信は詳細＝原寸・一覧＝縮小版
+        from crawler.sources.mlit_roadinfo import large_image_url
+        result["image_url"] = large_image_url(url)
+        result["thumb_url"] = url
     return result
 
 

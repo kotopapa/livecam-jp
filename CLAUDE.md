@@ -37,7 +37,7 @@ python site/build.py                            # 配信ファイル生成
 ## 道路カメラの知見（2026-08-18追記）
 
 - **国交省の道路カメラは「道路情報提供システム」(road-info-prvs.mlit.go.jp) に集約されている**（道路版kawabou）。`pcImage_<整備局CD>_1.html` の hidden input `kokudoJson` に正確な座標・JIS市区町村コード付きの全カメラJSONが埋め込まれている（CD: 81=北海道〜90=沖縄）。パーサ: `crawler/sources/mlit_roadinfo.py`
-- **prvsの静止画は固定URLがない**（15分刻みタイムスタンプ・直近3世代）。feed.type=`mlit_roadinfo`（都度解決型）とし、monitorが毎回最新URLを解決して status.json の `image_url` で配信する。アプリはそれを読む
+- **prvsの静止画は固定URLがない**（15分刻みタイムスタンプ・直近3世代）。feed.type=`mlit_roadinfo`（都度解決型）とし、monitorが毎回最新URLを解決して status.json の `image_url` で配信する。アプリはそれを読む。**fileList に載る `s_<管理ID>.jpeg` は 148×98 の縮小版で、同じタイムスタンプの `<管理ID>.jpeg` が原寸（720×480〜、沖縄などは 2MB 超もある）**（2026-11-02 利用者報告「画像が粗い」）。monitor は確認を縮小版で行い（速い・no_data の dHash は縮小版）、status の `image_url` に原寸・`thumb_url` に縮小版を書く。アプリ（1.7.0〜）は一覧に `thumb_url` を優先する（`AppState.thumbUrlFor`）
 - prvsの欠測プレースホルダ no_data.jpeg のdHashは `monitor/freeze.py` に登録済み
 - 関東(83)・北陸(84)・中部(85)は事務所サイト直のパーサ（固定URL・mlit_ktr_road / mlit_hrr_road / mlit_cbr_road）を優先。prvs側CDは重複回避のため対象外にしている
 - 中国地整の道路ポータル www.road.cgr.mlit.go.jp は **robots.txt が Disallow: / のためクロール禁止**（prvs経由で取得する）
