@@ -2951,9 +2951,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get pwRowRain => '강수량';
 
   @override
-  String get pwRowSnow => '강설량';
-
-  @override
   String get pwRowPop => '강수 확률';
 
   @override

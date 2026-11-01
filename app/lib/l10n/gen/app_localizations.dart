@@ -5230,12 +5230,6 @@ abstract class AppLocalizations {
   /// **'降水量'**
   String get pwRowRain;
 
-  /// No description provided for @pwRowSnow.
-  ///
-  /// In ja, this message translates to:
-  /// **'降雪量'**
-  String get pwRowSnow;
-
   /// No description provided for @pwRowPop.
   ///
   /// In ja, this message translates to:

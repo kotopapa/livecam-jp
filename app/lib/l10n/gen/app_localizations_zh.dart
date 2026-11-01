@@ -2926,9 +2926,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get pwRowRain => '降水量';
 
   @override
-  String get pwRowSnow => '降雪量';
-
-  @override
   String get pwRowPop => '降水概率';
 
   @override
@@ -5978,9 +5975,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get pwRowRain => '降水量';
-
-  @override
-  String get pwRowSnow => '降雪量';
 
   @override
   String get pwRowPop => '降水機率';

@@ -197,10 +197,10 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         _ => '',
       };
 
-  /// 各列に代表する数字 1 つ（3時間あたり。青=降水量、紫=降雪量）。
-  /// 天気分布予報は階級（1-5 / 5-10 / 10-15 / 15-20 / 20以上 mm、1-3 / 3-6 / 6以上 cm）
-  /// なので、階級の中央値を代表値にする（上限の無い階級はしきい値）。0 も「0mm」と出す
-  /// （2026-11-02 ユーザー決定: レンジや「〜」「-」は出さない）
+  /// 各列に代表する数字 1 つ（3時間降水量）。天気分布予報は階級（1-5 / 5-10 / 10-15 /
+  /// 15-20 / 20以上 mm）なので、階級の中央値を代表値にする（上限の無い階級はしきい値）。
+  /// 0 も「0mm」と出す（2026-11-02 ユーザー決定: レンジや「〜」「-」は出さない）。
+  /// 降雪量（cm）は一般の天気予報と同じく時間別には出さない（雪は天気マークと下地の濃さで表す。同日決定）
   static String rainText(int r) => switch (r) {
         1 => '3mm',
         2 => '8mm',
@@ -210,12 +210,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         _ => '0mm',
       };
 
-  static String snowText(int s) => switch (s) {
-        1 => '2cm',
-        2 => '5cm',
-        3 => '6cm',
-        _ => '0cm',
-      };
 
   static String weekday(AppLocalizations l, int w) => switch (w) {
         1 => l.pwWeekday1, 2 => l.pwWeekday2, 3 => l.pwWeekday3, 4 => l.pwWeekday4,
@@ -366,7 +360,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
               SizedBox(width: colW, child: cell(cols[i], i)),
           ]),
         );
-    final hasSnow = cols.any((c) => (c.snow ?? 0) >= 1);
     final hasPop = cols.any((c) => c.pop != null);
     const small = TextStyle(fontSize: 10);
     final font = Theme.of(context).textTheme.bodyMedium?.fontFamily;
@@ -400,10 +393,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
       rowOf(15, (c, _) => Center(
             child: Text(rainText(c.rain ?? 0),
                 style: const TextStyle(fontSize: 11, color: _coldColor), maxLines: 1, overflow: TextOverflow.clip))),
-      if (hasSnow)
-        rowOf(15, (c, _) => Center(
-            child: Text(snowText(c.snow ?? 0),
-                style: const TextStyle(fontSize: 11, color: Color(0xFF8E24AA)), maxLines: 1, overflow: TextOverflow.clip))),
       if (hasPop)
         rowOf(14, (c, _) => Center(
             child: Text(c.pop == null ? '' : '${c.pop}%',
@@ -434,7 +423,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
           ),
         const SizedBox(height: 44),
         label(15, l.pwRowRain),
-        if (hasSnow) label(15, l.pwRowSnow),
         if (hasPop) label(14, l.pwRowPop),
       ]),
     );
