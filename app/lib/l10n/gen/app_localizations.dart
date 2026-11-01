@@ -5224,6 +5224,24 @@ abstract class AppLocalizations {
   /// **'湿度 {v}%'**
   String pwHumidityNow(String v);
 
+  /// No description provided for @pwRowRain.
+  ///
+  /// In ja, this message translates to:
+  /// **'降水量'**
+  String get pwRowRain;
+
+  /// No description provided for @pwRowSnow.
+  ///
+  /// In ja, this message translates to:
+  /// **'降雪量'**
+  String get pwRowSnow;
+
+  /// No description provided for @pwRowPop.
+  ///
+  /// In ja, this message translates to:
+  /// **'降水確率'**
+  String get pwRowPop;
+
   /// No description provided for @pwCalm.
   ///
   /// In ja, this message translates to:

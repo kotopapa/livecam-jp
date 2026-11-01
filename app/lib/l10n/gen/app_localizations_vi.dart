@@ -3053,6 +3053,15 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
+  String get pwRowRain => 'Lượng mưa';
+
+  @override
+  String get pwRowSnow => 'Tuyết rơi';
+
+  @override
+  String get pwRowPop => 'Xác suất';
+
+  @override
   String get pwCalm => 'Lặng gió';
 
   @override

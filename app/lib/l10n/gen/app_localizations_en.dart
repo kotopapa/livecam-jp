@@ -3042,6 +3042,15 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get pwRowRain => 'Precip.';
+
+  @override
+  String get pwRowSnow => 'Snowfall';
+
+  @override
+  String get pwRowPop => 'Chance';
+
+  @override
   String get pwCalm => 'Calm';
 
   @override

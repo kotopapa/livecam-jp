@@ -2923,6 +2923,15 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
+  String get pwRowRain => '降水量';
+
+  @override
+  String get pwRowSnow => '降雪量';
+
+  @override
+  String get pwRowPop => '降水概率';
+
+  @override
   String get pwCalm => '静风';
 
   @override
@@ -5966,6 +5975,15 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String pwHumidityNow(String v) {
     return '濕度 $v%';
   }
+
+  @override
+  String get pwRowRain => '降水量';
+
+  @override
+  String get pwRowSnow => '降雪量';
+
+  @override
+  String get pwRowPop => '降水機率';
 
   @override
   String get pwCalm => '靜風';

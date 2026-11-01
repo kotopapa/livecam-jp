@@ -2937,6 +2937,15 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
+  String get pwRowRain => '降水量';
+
+  @override
+  String get pwRowSnow => '降雪量';
+
+  @override
+  String get pwRowPop => '降水確率';
+
+  @override
   String get pwCalm => '静穏';
 
   @override
@@ -6038,6 +6047,15 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String pwHumidityNow(String v) {
     return 'しつど $v%';
   }
+
+  @override
+  String get pwRowRain => 'あめの 量';
+
+  @override
+  String get pwRowSnow => 'ゆきの 量';
+
+  @override
+  String get pwRowPop => 'あめの かくりつ';
 
   @override
   String get pwCalm => 'かぜなし';

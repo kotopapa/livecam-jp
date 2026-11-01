@@ -187,7 +187,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
   static const colW = 52.0;
   static const _timeH = 36.0;
   static const _chartH = 92.0;
-  static const _axisW = 30.0;
+  static const _axisW = 48.0; // 左の固定列（気温の目盛りと行の見出し）
 
   static String dirName(AppLocalizations l, int d) => switch (d) {
         1 => l.pwDir1, 2 => l.pwDir2, 3 => l.pwDir3, 4 => l.pwDir4,
@@ -409,26 +409,42 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
             child: Text(c.pop == null ? '' : '${c.pop}%',
                 style: small.copyWith(color: scheme.onSurfaceVariant)))),
     ]);
+    // 左の固定列: 気温の上限・下限、各行の見出し（降水量・降雪量・降水確率）。
+    // 数字が何かを左で示す（2026-11-02 利用者要望）
+    final labelStyle = small.copyWith(color: scheme.onSurfaceVariant);
+    Widget label(double h, String text) => SizedBox(
+        height: h,
+        child: Align(
+            alignment: Alignment.centerLeft,
+            child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(text, style: labelStyle, maxLines: 1))));
+    final left = SizedBox(
+      width: _axisW,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        const SizedBox(height: _timeH),
+        if (hasTemp)
+          SizedBox(
+            height: _chartH,
+            child: CustomPaint(
+                size: const Size(_axisW, _chartH),
+                painter: TempAxisPainter(
+                    range: range, textColor: scheme.onSurfaceVariant, fontFamily: font)),
+          ),
+        const SizedBox(height: 44),
+        label(15, l.pwRowRain),
+        if (hasSnow) label(15, l.pwRowSnow),
+        if (hasPop) label(14, l.pwRowPop),
+      ]),
+    );
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        left,
         Expanded(
           child: SingleChildScrollView(
               scrollDirection: Axis.horizontal, child: scroll),
         ),
-        if (hasTemp)
-          SizedBox(
-            width: _axisW,
-            child: Column(children: [
-              const SizedBox(height: _timeH),
-              SizedBox(
-                height: _chartH,
-                child: CustomPaint(
-                    size: const Size(_axisW, _chartH),
-                    painter: TempAxisPainter(
-                        range: range, textColor: scheme.onSurfaceVariant, fontFamily: font)),
-              ),
-            ]),
-          ),
       ]),
       if (pw.tempIsRepresentative && pw.wind != null)
         Text(
@@ -665,7 +681,7 @@ class TempAxisPainter extends CustomPainter {
             text: '$v°', style: TextStyle(fontSize: 10, color: textColor, fontFamily: fontFamily)),
         textDirection: TextDirection.ltr,
       )..layout();
-      p.paint(canvas, Offset(size.width - p.width, y - p.height / 2));
+      p.paint(canvas, Offset(size.width - p.width - 6, y - p.height / 2)); // 左列なので折れ線側に寄せる
     }
 
     tp(range.$2, TempChartPainter.pad);
