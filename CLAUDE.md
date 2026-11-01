@@ -427,7 +427,7 @@ python site/build.py                            # 配信ファイル生成
 
 - `app/lib/ui/point_weather_card.dart`（表示）と `app/lib/data/point_weather.dart`（取得）。国内カメラ全部に出す。構成はウェザーニュースのウィジェットに倣い、大きな現在気温（最寄り 30km 以内のアメダス。観測点表は同梱 `assets/data/amedas_stations.json`、`tools/amedas_stations.py` 生成）→ 3 時間ごとの気温の折れ線＋天気マーク＋降水量/降雪量/降水確率（自サイト `v1/wdist/<lat0>_<lng0>.json` の 5km メッシュ）→ 週間（府県予報 [1]。当日の降水確率は [0] の 6 時間値の最大で補う）→ 出典行
 - **風は 3 時間予報に出さない**（2026-11-02 ユーザー決定。気象庁に点単位の風予報が無く、地域時系列予報の区域値は沿岸に引っ張られて内陸で過大だった）。VPFD（`jmatile/data/wdist/VPFD/<class10>.json`）の風の解析はデータ層に残してあり、点単位の風を入れるなら Apple WeatherKit（iOS はネイティブ、Android は署名鍵のサーバーが要る）か Open-Meteo 有料プランが候補
-- 天気マークは気象庁の天気予報アイコン（`bosai/forecast/img/<code>.svg`、実在は 30 コード）を `tools/weather_icons.mjs` で PNG にして `assets/weather/` に同梱。無いコードは `weatherIconBase` の表で近いコードに寄せる。出典行に「天気マークは気象庁ホームページより」
+- 天気マークは Meteocons（Bas Milius, MIT。npm `@meteocons/svg-static` の fill 版）を `tools/weather_icons.mjs` で 144px PNG にして `assets/weather/` に同梱（13 種、LICENSE.txt をライセンス画面に登録）。気象庁の天気コードとの対応は `weatherIconSpec`（TELOPS 表で照合済み。「のち」は 2 枚を矢印でつなぐ）。2026-11-02 に気象庁アイコンから差し替え（ユーザー判断: 見た目が AI っぽい）
 - 現在気温の右に市区町村の警報・注意報バッジ（`lib/data/muni_warnings.dart`。気象庁 r8 の官署別 JSON を官署×報種別で合算、5 分控え。最上位の段階を「注意報 (Lv.2)」形式で 1 つ、タップで一覧シート）。段階の色・順位・コード群は `lib/data/warning_levels.dart` に切り出して bosai_screen と共用
 
 ## 天気分布予報の配信（2026-11-02追記）
