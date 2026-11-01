@@ -291,3 +291,49 @@ def test_build_publishes_temperature():
     pts = [{"id": "1", "n": "a", "lat": 36.0, "lng": 137.0, "d": 3, "t": -1.0, "at": "2026-10-30 20:00"}]
     doc = sp.build(None, {"mlit": pts}, NOW)
     assert doc["sources"][0]["points"][0]["t"] == -1.0
+
+
+def test_amedas_station_temps_parses_deg_min_and_quality():
+    m = {"11001": {"temp": [5.5, 0], "snow": [None, 1]},
+         "11016": {"temp": [None, 0]},            # 欠測
+         "11046": {"temp": [9.0, 1]},             # 品質フラグ≠0 は使わない
+         "99999": {"temp": [1.0, 0]}}             # 表に無い
+    tbl = {"11001": {"lat": [45, 31.2], "lon": [141, 56.1]},
+           "11016": {"lat": [45, 24.9], "lon": [141, 40.7]},
+           "11046": {"lat": [45, 0], "lon": [141, 0]}}
+    out = sp.amedas_station_temps(m, tbl)
+    assert len(out) == 1
+    lat, lng, t = out[0]
+    assert (round(lat, 3), round(lng, 3), t) == (45.52, 141.935, 5.5)
+
+
+def test_amedas_nearest_temp_within_radius():
+    temps = sp.AmedasTemps([(38.9, 140.33, 7.8), (38.4, 140.5, 8.4)])
+    assert temps.nearest_temp(38.905, 140.326) == 7.8
+    assert temps.nearest_temp(38.39, 140.57) == 8.4
+    assert temps.nearest_temp(35.0, 135.0) is None  # 30km 以内に無い
+
+
+def test_drop_implausible_uses_amedas_temp_when_sensor_has_none():
+    # 気温欄が空の 3cm（2026-11-02 金山除雪ST）: 解析は無雪、最寄りアメダス 7.8℃ → 除外
+    # （_FakeAnalysis は緯度 37 未満を無雪とするので南に置く）
+    temps = sp.AmedasTemps([(35.0, 135.0, 7.8)])
+    pts = [{"id": "a", "n": "金山", "lat": 35.01, "lng": 135.01, "d": 3, "at": "x"},
+           {"id": "b", "n": "寒い", "lat": 35.01, "lng": 135.01, "d": 3, "at": "x", "t": -1.0},
+           {"id": "c", "n": "零", "lat": 35.01, "lng": 135.01, "d": 0, "at": "x"}]
+    kept, dropped = sp.drop_implausible(pts, _FakeAnalysis(), temps)
+    assert [p["id"] for p in dropped] == ["a"]
+    assert dropped[0]["ta"] == 7.8
+    assert [p["id"] for p in kept] == ["b", "c"]
+    # アメダスも無ければ従来どおり残す
+    kept2, dropped2 = sp.drop_implausible([dict(pts[0])], _FakeAnalysis(), None)
+    assert not dropped2 and len(kept2) == 1
+
+
+def test_build_does_not_publish_amedas_fallback():
+    from datetime import datetime, timezone
+    doc = sp.build(None, {"mlit": [{"id": "1", "n": "a", "lat": 38.9, "lng": 140.3, "d": 1,
+                                    "at": "2026-11-02 02:50", "ta": 7.8}]},
+                   datetime(2026, 11, 1, 18, 0, tzinfo=timezone.utc))
+    p = doc["sources"][0]["points"][0]
+    assert "ta" not in p and "t" not in p

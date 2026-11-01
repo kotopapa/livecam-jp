@@ -62,7 +62,9 @@ ANALYSIS_ZOOM = 8            # 偶数ズームしか生成されない（maxNati
 CHECK_RADIUS_KM = 5.0        # この距離だけ四方にずらした点も含めて「周囲に積雪なし」を判定する
 IMPLAUSIBLE_MIN_CM = 10      # 解析が積雪なしのとき、これ以上の値は気温によらず誤計測とみなす
 IMPLAUSIBLE_TEMP_C = 3.0     # 解析が積雪なしのとき、気温がこれ以上なら 1cm 以上の値も誤計測とみなす
-FALLBACK_TEMP_C = 8.0        # 解析タイルが取れない回に、気温だけで誤計測とみなす下限
+FALLBACK_TEMP_C = 8.0
+AMEDAS_BASE = "https://www.jma.go.jp/bosai/amedas/"
+AMEDAS_TEMP_RADIUS_KM = 30.0  # センサーに気温が無いとき、この距離内の最寄りアメダスの気温で代用        # 解析タイルが取れない回に、気温だけで誤計測とみなす下限
 GEOCODE_LIMIT = 300          # 1回の実行で逆ジオコーダに問い合わせる最大件数
 HOST_INTERVAL = 1.5          # 同一ホストへの連続アクセスの間隔（秒）
 
@@ -677,14 +679,17 @@ class SnowAnalysis:
         return result
 
 
-def is_implausible(p: dict[str, Any], zero_around: bool | None) -> bool:
+def is_implausible(p: dict[str, Any], zero_around: bool | None, t_fallback: float | None = None) -> bool:
     """センサー値が誤計測とみなせるか。zero_around は解析積雪深で周囲に積雪が無いか（None=判定できず）。
+    気温はセンサー自身の t、無ければ t_fallback（最寄りアメダス）を使う。
     - 周囲に積雪なし かつ 10cm 以上 → 誤計測（春の残雪は解析にも出るので、季節によらず使える）
     - 周囲に積雪なし かつ 1cm 以上 かつ 気温 3℃ 以上 → 誤計測
     - 解析が取れないときは 気温 8℃ 以上 かつ 1cm 以上 だけ誤計測
     積雪深 0 の点はそのまま出す。"""
     d = p.get("d") or 0
     t = p.get("t")
+    if t is None:
+        t = t_fallback
     if d <= 0:
         return False
     if zero_around is None:
@@ -696,16 +701,78 @@ def is_implausible(p: dict[str, Any], zero_around: bool | None) -> bool:
     return t is not None and t >= IMPLAUSIBLE_TEMP_C
 
 
-def drop_implausible(points: list[dict[str, Any]], analysis: SnowAnalysis | None
+def amedas_station_temps(map_doc: Any, table: Any) -> list[tuple[float, float, float]]:
+    """アメダス最新10分値（map/<時刻>.json）と観測所表（amedastable.json）→ [(lat, lng, 気温)]。
+    値は [値, 品質フラグ] で、フラグ 0（正常）の気温だけ使う。座標は [度, 分]。"""
+    out = []
+    for k, v in (map_doc or {}).items() if isinstance(map_doc, dict) else []:
+        st = (table or {}).get(k) if isinstance(table, dict) else None
+        tv = v.get("temp") if isinstance(v, dict) else None
+        if not isinstance(st, dict) or not isinstance(tv, list) or len(tv) < 2:
+            continue
+        if tv[0] is None or tv[1] not in (0, "0"):
+            continue
+        try:
+            la, ln = st["lat"], st["lon"]
+            lat = float(la[0]) + float(la[1]) / 60.0
+            lng = float(ln[0]) + float(ln[1]) / 60.0
+            out.append((lat, lng, float(tv[0])))
+        except (KeyError, TypeError, ValueError, IndexError):
+            continue
+    return out
+
+
+class AmedasTemps:
+    """気象庁アメダスの最新の気温。積雪センサーに気温が無い点の照合に、最寄り観測所の気温を使う
+    （2026-11-02 山形の国交省センサー 6 地点が、気温欄が空だった回に 1〜3cm の誤計測のまま配信された）。"""
+
+    def __init__(self, stations: list[tuple[float, float, float]], observed: str = "") -> None:
+        self.stations = stations
+        self.observed = observed
+
+    @classmethod
+    def load(cls, fx: Fetcher) -> AmedasTemps | None:
+        try:
+            lt = fx.text(AMEDAS_BASE + "data/latest_time.txt").strip()
+            dt = parse_at(lt[:16])  # "2026-11-02T03:20:00+09:00" → 分まで
+            if dt is None:
+                raise ValueError(lt)
+            key = dt.strftime("%Y%m%d%H%M00")
+            m = fx.json(AMEDAS_BASE + f"data/map/{key}.json")
+            tbl = fx.json(AMEDAS_BASE + "const/amedastable.json")
+        except Exception as e:  # noqa: BLE001
+            print(f"アメダス気温: 取得失敗 {type(e).__name__}", file=sys.stderr)
+            return None
+        st = amedas_station_temps(m, tbl)
+        return cls(st, fmt_at(dt)) if st else None
+
+    def nearest_temp(self, lat: float, lng: float, max_km: float = AMEDAS_TEMP_RADIUS_KM) -> float | None:
+        best, best_km = None, max_km
+        coslat = math.cos(math.radians(lat))
+        for la, ln, t in self.stations:
+            km = math.hypot((la - lat) * 111.0, (ln - lng) * 111.0 * coslat)
+            if km < best_km:
+                best, best_km = t, km
+        return best
+
+
+def drop_implausible(points: list[dict[str, Any]], analysis: SnowAnalysis | None,
+                     temps: AmedasTemps | None = None
                      ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """→ (残す点, 落とした点)。積雪深 0 の点はタイルを見ずに残す。"""
+    """→ (残す点, 落とした点)。積雪深 0 の点はタイルを見ずに残す。
+    センサーに気温が無い点は最寄りアメダスの気温（temps）で照合し、使った値を `ta` に残す（配信はしない）。"""
     kept, dropped = [], []
     for p in points:
         if (p.get("d") or 0) <= 0:
             kept.append(p)
             continue
         zero = analysis.zero_around(p["lat"], p["lng"]) if analysis else None
-        (dropped if is_implausible(p, zero) else kept).append(p)
+        fb = None
+        if p.get("t") is None and temps is not None:
+            fb = temps.nearest_temp(p["lat"], p["lng"])
+            if fb is not None:
+                p["ta"] = fb
+        (dropped if is_implausible(p, zero, fb) else kept).append(p)
     return kept, dropped
 
 
@@ -827,17 +894,25 @@ def main(argv: list[str] | None = None) -> int:
         if pts is not None:
             fetched[sid] = keep_fresh(pts, now)
     # 気象庁の解析積雪深と照合し、無雪なのに積雪ありと言うセンサー（誤計測）を落とす
-    analysis = SnowAnalysis.load(Fetcher(interval=0.2))
+    jma = Fetcher(interval=0.2)
+    analysis = SnowAnalysis.load(jma)
     if analysis is None:
         print("解析積雪深が取れないため、気温だけで照合")
+    temps = AmedasTemps.load(jma)
+    if temps is None:
+        print("アメダス気温が取れないため、センサー自身の気温だけで照合")
     for sid, pts in fetched.items():
         if not pts:
             continue
-        fetched[sid], dropped = drop_implausible(pts, analysis)
+        fetched[sid], dropped = drop_implausible(pts, analysis, temps)
         for p in dropped:
-            print(f"{sid}: 誤計測として除外 {p['n']} {p['d']}cm 気温{p.get('t', '?')}℃ ({p['at']})")
+            t = f"{p['t']}℃" if p.get("t") is not None else (
+                f"{p['ta']}℃(アメダス)" if p.get("ta") is not None else "?")
+            print(f"{sid}: 誤計測として除外 {p['n']} {p['d']}cm 気温{t} ({p['at']})")
     if analysis:
         print(f"解析積雪深 {analysis.basetime} タイル {analysis.fetched}枚で照合")
+    if temps:
+        print(f"アメダス気温 {temps.observed} {len(temps.stations)}地点で照合")
     budget = GEOCODE_LIMIT
     queried = 0
     for pts in fetched.values():
