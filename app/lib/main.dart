@@ -8,8 +8,9 @@ import 'package:google_mobile_ads/google_mobile_ads.dart' show MobileAds;
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart'
     show FirebaseMessaging, RemoteMessage;
-import 'package:flutter/foundation.dart' show kDebugMode;
+import 'package:flutter/foundation.dart' show kDebugMode, LicenseEntryWithLineBreaks, LicenseRegistry;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -30,6 +31,11 @@ import 'data/fcm_channel.dart';
 import 'ui/onboarding_screen.dart';
 
 Future<void> main() async {
+  // 天気マーク（Meteocons、Bas Milius、MIT）のライセンスを設定のライセンス画面に載せる
+  LicenseRegistry.addLicense(() async* {
+    yield LicenseEntryWithLineBreaks(
+        const ['Meteocons'], await rootBundle.loadString('assets/weather/LICENSE.txt'));
+  });
   final binding = WidgetsFlutterBinding.ensureInitialized();
   // 画像はカメラ静止画(数MB級)が主体のため、既定100MBでは端末メモリを
   // 圧迫しすぎる。デコード画像のキャッシュ上限を50MBに抑える

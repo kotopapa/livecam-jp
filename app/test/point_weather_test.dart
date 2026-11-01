@@ -156,7 +156,7 @@ void main() {
       expect(w.steps.first.dir, 8);
       expect((w.steps.first.minMs, w.steps.first.maxMs), (3, 5));
       expect(w.steps[1].dir, 0);
-      expect(w.steps[1].weatherCode, '313');
+      expect(w.steps[1].weatherCode, '303');
       expect(w.repName, '横浜');
       expect(w.repTemps[DateTime.utc(2026, 11, 1, 15)], 17);
     });
@@ -184,12 +184,14 @@ void main() {
     });
 
     test('天気マーク: 無いコードは近いものへ・文字列対応', () {
-      expect(weatherIconBase('100'), '100');
-      expect(weatherIconBase('203'), '202');
-      expect(weatherIconBase('999'), '');
+      expect(weatherIconSpec('100'), (main: 'clear-day', then: null));
+      expect(weatherIconSpec('203'), (main: 'overcast-rain', then: null));
+      expect(weatherIconSpec('212'), (main: 'overcast', then: 'rain')); // のち
+      expect(weatherIconSpec('414'), (main: 'snow', then: 'rain'));
+      expect(weatherIconSpec('999'), isNull);
       expect(weatherCodeOfText('くもり　時々　晴れ'), '200');
       expect(weatherCodeOfText('雨'), '300');
-      expect(weatherCodeOfText('雨または雪'), '313');
+      expect(weatherCodeOfText('雨または雪'), '303');
       expect(weatherCodeOfText(''), isNull);
       expect(weatherCodeOfW(1), '100');
       expect(weatherCodeOfW(0), isNull);
@@ -353,6 +355,7 @@ void main() {
       expect(find.text('日'), findsNothing); // 11/2 は月曜 〜 11/4 は水曜
       expect(find.textContaining('週間は 神奈川県 の予報・気温は 横浜'), findsOneWidget);
       expect(find.textContaining('出典：気象庁ホームページ'), findsOneWidget);
+      expect(find.textContaining('Meteocons（Bas Milius, MIT）'), findsOneWidget);
       expect(find.textContaining('11/1 17:00 発表'), findsOneWidget);
       expect(tester.takeException(), isNull);
     });

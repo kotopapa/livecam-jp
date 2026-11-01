@@ -2989,7 +2989,8 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get pwSource => '出处：气象厅网站（天气分布预报、区域时间序列预报、府县天气预报、AMeDAS）。天气图标来自气象厅网站。';
+  String get pwSource =>
+      '出处：气象厅网站（天气分布预报、区域时间序列预报、府县天气预报、AMeDAS）。天气图标：Meteocons（Bas Milius, MIT）';
 
   @override
   String pwIssued(String time) {
@@ -6033,7 +6034,8 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get pwSource => '出處：氣象廳網站（天氣分布預報、區域時間序列預報、府縣天氣預報、AMeDAS）。天氣圖示來自氣象廳網站。';
+  String get pwSource =>
+      '出處：氣象廳網站（天氣分布預報、區域時間序列預報、府縣天氣預報、AMeDAS）。天氣圖示：Meteocons（Bas Milius, MIT）';
 
   @override
   String pwIssued(String time) {

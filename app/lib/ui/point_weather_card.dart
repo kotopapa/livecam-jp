@@ -21,8 +21,8 @@ Future<MuniWarnings?> _defaultWarningLoader(Camera camera) => MuniWarnings.fetch
 const _hotColor = Color(0xFFE53935);
 const _coldColor = Color(0xFF1E88E5);
 
-/// 気象庁の天気マーク（同梱 PNG）。ダーク背景で沈まないよう薄い丸角の下地を敷く。
-/// 無いコードは Material Icons の雲で代える
+/// 天気マーク（Meteocons、Bas Milius、MIT。同梱 PNG）。「のち」は前半・後半の2枚を矢印でつなぐ。
+/// 塗り版は雲が薄いので、薄い丸角の下地を敷く。無いコードは Material Icons の雲で代える
 class WeatherIcon extends StatelessWidget {
   const WeatherIcon(this.code, {super.key, this.width = 36});
   final String? code;
@@ -30,22 +30,43 @@ class WeatherIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final h = width * 2 / 3;
     final c = code;
-    if (c == null) return SizedBox(width: width + 6, height: h + 6);
-    final base = weatherIconBase(c);
-    final fallback = SizedBox(
-        width: width, height: h, child: Icon(Icons.cloud, size: h * 0.8, color: Colors.grey));
+    final box = width + 6;
+    if (c == null) return SizedBox(width: box, height: box);
+    final spec = weatherIconSpec(c);
+    final scheme = Theme.of(context).colorScheme;
+    Widget img(String name, double w) => Image.asset('assets/weather/$name.png',
+        width: w,
+        height: w,
+        errorBuilder: (_, _, _) => SizedBox(
+            width: w, height: w, child: Icon(Icons.cloud, size: w * 0.8, color: Colors.grey)));
+    final Widget child;
+    if (spec == null) {
+      child = SizedBox(
+          width: width,
+          height: width,
+          child: Icon(Icons.cloud, size: width * 0.8, color: Colors.grey));
+    } else if (spec.then == null) {
+      child = img(spec.main, width);
+    } else {
+      child = FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          img(spec.main, width * 0.6),
+          Icon(Icons.arrow_forward_ios, size: 8, color: scheme.onSurfaceVariant),
+          img(spec.then!, width * 0.5),
+        ]),
+      );
+    }
     return Container(
-      padding: const EdgeInsets.all(3),
+      width: box,
+      height: box,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.08),
+        color: scheme.onSurface.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(8),
       ),
-      child: base.isEmpty
-          ? fallback
-          : Image.asset('assets/weather/$base.png',
-              width: width, height: h, errorBuilder: (_, _, _) => fallback),
+      child: child,
     );
   }
 }
@@ -338,7 +359,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
             ),
           ),
         ),
-      rowOf(32, (c, _) => Center(child: WeatherIcon(c.weatherCode))),
+      rowOf(44, (c, _) => Center(child: WeatherIcon(c.weatherCode))),
       rowOf(15, (c, _) => Center(
             child: Text(rainText(c.rain ?? 0),
                 style: const TextStyle(fontSize: 11, color: _coldColor), maxLines: 1, overflow: TextOverflow.clip))),

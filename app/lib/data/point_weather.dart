@@ -166,7 +166,7 @@ String? weatherCodeOfW(int w) => switch (w) {
       1 => '100',
       2 => '200',
       3 => '300',
-      4 => '313',
+      4 => '303',
       5 => '400',
       _ => null,
     };
@@ -176,7 +176,7 @@ String? weatherCodeOfText(Object? text) {
   if (text is! String) return null;
   final t = text.replaceAll(RegExp(r'\s'), '');
   if (t.isEmpty) return null;
-  if (t.contains('雨または雪') || t.contains('みぞれ')) return '313';
+  if (t.contains('雨または雪') || t.contains('みぞれ')) return '303';
   if (t.contains('雪')) return '400';
   if (t.contains('雨')) return '300';
   if (t.contains('くもり') || t.contains('曇')) return '200';
@@ -184,39 +184,135 @@ String? weatherCodeOfText(Object? text) {
   return null;
 }
 
-/// 天気コード → 同梱 PNG（assets/weather/(番号).png）の番号。
-/// 気象庁が SVG を持つのは30コードだけなので、他のコードは近いものに寄せる
-/// （気象庁 TELOPS 表を取得できなかったため、昼用アイコンの見た目で割り当てた自己判断）。
-/// 対応が無ければ空文字
-String weatherIconBase(String code) {
-  const have = {
-    '100', '101', '102', '104', '110', '112', '115', '200', '201', '202', '204',
-    '210', '212', '215', '300', '301', '302', '303', '308', '311', '313', '314',
-    '400', '401', '402', '403', '406', '411', '413', '414',
+/// 天気コード → Meteocons（Bas Milius, MIT）のマーク名。「のち」は (前半, 後半) の2枚、
+/// それ以外は主マークだけ。昼夜は区別しない（気象庁の予報コードが区別しないため）。
+/// 「時々・一時」は partly-cloudy 系か主マークに寄せる。割り当ては気象庁の天気コード表
+/// （forecast ページの TELOPS。各コードが使う基本アイコン 100/101/102/104/110/112/115/
+/// 200〜215/300〜314/400〜414）に従い、名前に「雷」があれば雷雨、「雨か雪・みぞれ」が
+/// あればみぞれのマークに置き換えた（2026-11-02 に正式表で照合済み）。無いコードは null
+({String main, String? then})? weatherIconSpec(String code) {
+  const table = <String, (String, String?)>{
+    '100': ('clear-day', null),
+    '101': ('partly-cloudy-day', null),
+    '102': ('partly-cloudy-day-rain', null),
+    '103': ('partly-cloudy-day-rain', null),
+    '104': ('partly-cloudy-day-snow', null),
+    '105': ('partly-cloudy-day-snow', null),
+    '106': ('partly-cloudy-day-sleet', null),
+    '107': ('partly-cloudy-day-sleet', null),
+    '108': ('thunderstorms-day-rain', null),
+    '110': ('clear-day', 'overcast'),
+    '111': ('clear-day', 'overcast'),
+    '112': ('clear-day', 'rain'),
+    '113': ('clear-day', 'rain'),
+    '114': ('clear-day', 'rain'),
+    '115': ('clear-day', 'snow'),
+    '116': ('clear-day', 'snow'),
+    '117': ('clear-day', 'snow'),
+    '118': ('clear-day', 'sleet'),
+    '119': ('clear-day', 'thunderstorms-day-rain'),
+    '120': ('partly-cloudy-day-rain', null),
+    '121': ('partly-cloudy-day-rain', null),
+    '122': ('clear-day', 'rain'),
+    '123': ('clear-day', null),
+    '124': ('clear-day', null),
+    '125': ('clear-day', 'thunderstorms-day-rain'),
+    '126': ('clear-day', 'rain'),
+    '127': ('clear-day', 'rain'),
+    '128': ('clear-day', 'rain'),
+    '130': ('clear-day', null),
+    '131': ('clear-day', null),
+    '132': ('partly-cloudy-day', null),
+    '140': ('thunderstorms-day-rain', null),
+    '160': ('partly-cloudy-day-sleet', null),
+    '170': ('partly-cloudy-day-sleet', null),
+    '181': ('clear-day', 'sleet'),
+    '200': ('overcast', null),
+    '201': ('overcast-day', null),
+    '202': ('overcast-rain', null),
+    '203': ('overcast-rain', null),
+    '204': ('overcast-snow', null),
+    '205': ('overcast-snow', null),
+    '206': ('sleet', null),
+    '207': ('sleet', null),
+    '208': ('thunderstorms-day-rain', null),
+    '209': ('overcast', null),
+    '210': ('overcast', 'clear-day'),
+    '211': ('overcast', 'clear-day'),
+    '212': ('overcast', 'rain'),
+    '213': ('overcast', 'rain'),
+    '214': ('overcast', 'rain'),
+    '215': ('overcast', 'snow'),
+    '216': ('overcast', 'snow'),
+    '217': ('overcast', 'snow'),
+    '218': ('overcast', 'sleet'),
+    '219': ('overcast', 'thunderstorms-day-rain'),
+    '220': ('overcast-rain', null),
+    '221': ('overcast-rain', null),
+    '222': ('overcast', 'rain'),
+    '223': ('overcast-day', null),
+    '224': ('overcast', 'rain'),
+    '225': ('overcast', 'rain'),
+    '226': ('overcast', 'rain'),
+    '228': ('overcast', 'snow'),
+    '229': ('overcast', 'snow'),
+    '230': ('overcast', 'snow'),
+    '231': ('overcast', null),
+    '240': ('thunderstorms-day-rain', null),
+    '250': ('overcast-snow', null),
+    '260': ('sleet', null),
+    '270': ('sleet', null),
+    '281': ('overcast', 'sleet'),
+    '300': ('rain', null),
+    '301': ('partly-cloudy-day-rain', null),
+    '302': ('overcast-rain', null),
+    '303': ('sleet', null),
+    '304': ('sleet', null),
+    '306': ('rain', null),
+    '308': ('rain', null),
+    '309': ('sleet', null),
+    '311': ('rain', 'clear-day'),
+    '313': ('rain', 'overcast'),
+    '314': ('rain', 'snow'),
+    '315': ('rain', 'snow'),
+    '316': ('sleet', 'clear-day'),
+    '317': ('sleet', 'overcast'),
+    '320': ('rain', 'clear-day'),
+    '321': ('rain', 'overcast'),
+    '322': ('sleet', null),
+    '323': ('rain', 'clear-day'),
+    '324': ('rain', 'clear-day'),
+    '325': ('rain', 'clear-day'),
+    '326': ('rain', 'snow'),
+    '327': ('rain', 'snow'),
+    '328': ('rain', null),
+    '329': ('sleet', null),
+    '340': ('sleet', null),
+    '350': ('thunderstorms-day-rain', null),
+    '361': ('sleet', 'clear-day'),
+    '371': ('sleet', 'overcast'),
+    '400': ('snow', null),
+    '401': ('partly-cloudy-day-snow', null),
+    '402': ('overcast-snow', null),
+    '403': ('sleet', null),
+    '405': ('snow', null),
+    '406': ('snow', null),
+    '407': ('snow', null),
+    '409': ('sleet', null),
+    '411': ('snow', 'clear-day'),
+    '413': ('snow', 'overcast'),
+    '414': ('snow', 'rain'),
+    '420': ('snow', 'clear-day'),
+    '421': ('snow', 'overcast'),
+    '422': ('snow', 'rain'),
+    '423': ('snow', 'rain'),
+    '425': ('snow', null),
+    '426': ('snow', 'sleet'),
+    '427': ('sleet', null),
+    '450': ('snow', null),
   };
-  if (have.contains(code)) return code;
-  const map = {
-    '103': '102', '105': '104', '106': '102', '107': '102', '108': '102',
-    '111': '110', '113': '112', '114': '112', '116': '115', '117': '115',
-    '118': '112', '119': '112', '120': '102', '121': '102', '122': '112',
-    '123': '100', '124': '100', '125': '112', '126': '112', '127': '112',
-    '128': '112', '130': '100', '131': '100', '132': '101', '140': '102',
-    '160': '104', '170': '104', '181': '104',
-    '203': '202', '205': '204', '206': '202', '207': '202', '208': '202',
-    '209': '200', '211': '210', '213': '212', '214': '212', '216': '215',
-    '217': '215', '218': '212', '219': '212', '220': '202', '221': '202',
-    '222': '212', '223': '201', '224': '212', '225': '212', '226': '212',
-    '228': '215', '229': '215', '230': '215', '231': '200', '240': '202',
-    '250': '204', '260': '204', '270': '204', '281': '204',
-    '304': '300', '306': '302', '309': '303', '315': '314', '316': '311',
-    '317': '313', '320': '311', '321': '311', '322': '303', '323': '311',
-    '324': '311', '325': '311', '326': '313', '327': '313', '328': '302',
-    '329': '302', '340': '400', '350': '302', '361': '411', '371': '413',
-    '405': '400', '407': '406', '409': '402', '420': '411', '421': '411',
-    '422': '414', '423': '414', '425': '400', '426': '400', '427': '400',
-    '450': '400',
-  };
-  return map[code] ?? '';
+  final e = table[code];
+  return e == null ? null : (main: e.$1, then: e.$2);
 }
 
 class PointWeather {

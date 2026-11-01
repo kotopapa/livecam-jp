@@ -3120,7 +3120,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get pwSource =>
-      'Nguồn: trang web Cơ quan Khí tượng Nhật Bản (dự báo phân bố thời tiết, dự báo chuỗi thời gian theo khu vực, dự báo theo tỉnh, AMeDAS). Biểu tượng thời tiết lấy từ trang web của Cơ quan.';
+      'Nguồn: trang web Cơ quan Khí tượng Nhật Bản (dự báo phân bố thời tiết, dự báo chuỗi thời gian theo khu vực, dự báo theo tỉnh, AMeDAS). Biểu tượng thời tiết: Meteocons (Bas Milius, MIT).';
 
   @override
   String pwIssued(String time) {

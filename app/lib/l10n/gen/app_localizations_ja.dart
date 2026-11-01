@@ -3004,7 +3004,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get pwSource =>
-      '出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マークは気象庁ホームページより';
+      '出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マーク: Meteocons（Bas Milius, MIT）';
 
   @override
   String pwIssued(String time) {
@@ -6107,7 +6107,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get pwSource =>
-      'しゅってん：きしょうちょう ホームページ（てんきぶんぷ よほう・ちいき じけいれつ よほう・ふけん てんき よほう・アメダス）。てんきの マークも きしょうちょう ホームページより';
+      'しゅってん：きしょうちょう ホームページ（てんきぶんぷ よほう・ちいき じけいれつ よほう・ふけん てんき よほう・アメダス）。てんきの マーク: Meteocons（Bas Milius, MIT）';
 
   @override
   String pwIssued(String time) {

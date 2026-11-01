@@ -5347,7 +5347,7 @@ abstract class AppLocalizations {
   /// No description provided for @pwSource.
   ///
   /// In ja, this message translates to:
-  /// **'出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マークは気象庁ホームページより'**
+  /// **'出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マーク: Meteocons（Bas Milius, MIT）'**
   String get pwSource;
 
   /// No description provided for @pwIssued.

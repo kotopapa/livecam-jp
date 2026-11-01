@@ -3109,7 +3109,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pwSource =>
-      'Source: JMA website (Weather Distribution Forecast, Regional Time Series Forecast, Prefectural Forecast, AMeDAS). Weather icons from the JMA website.';
+      'Source: JMA website (Weather Distribution Forecast, Regional Time Series Forecast, Prefectural Forecast, AMeDAS). Weather icons: Meteocons (Bas Milius, MIT).';
 
   @override
   String pwIssued(String time) {

@@ -2807,7 +2807,7 @@
   "@pwWeekNote": {"placeholders": {"area": {"type": "String"}, "station": {"type": "String"}}},
   "pwWeekNoteArea": "週間は {area} の予報",
   "@pwWeekNoteArea": {"placeholders": {"area": {"type": "String"}}},
-  "pwSource": "出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マークは気象庁ホームページより",
+  "pwSource": "出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マーク: Meteocons（Bas Milius, MIT）",
   "pwIssued": "{time} 発表",
   "@pwIssued": {"placeholders": {"time": {"type": "String"}}},
   "pwWeekday1": "月",

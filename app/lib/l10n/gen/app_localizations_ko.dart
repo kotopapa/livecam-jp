@@ -3015,7 +3015,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get pwSource =>
-      '출처: 기상청 홈페이지(날씨 분포 예보, 지역 시계열 예보, 부현 날씨 예보, AMeDAS). 날씨 아이콘은 기상청 홈페이지 제공.';
+      '출처: 기상청 홈페이지(날씨 분포 예보, 지역 시계열 예보, 부현 날씨 예보, AMeDAS). 날씨 아이콘: Meteocons(Bas Milius, MIT)';
 
   @override
   String pwIssued(String time) {
