@@ -139,20 +139,20 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
         _ => '',
       };
 
-  /// 各列には短い形だけ（単位は凡例に1回）
+  /// 各列に単位付きの短い形（3時間あたり。青=降水量、紫=降雪量）
   static String rainText(int r) => switch (r) {
-        1 => '1-5',
-        2 => '5-10',
-        3 => '10-15',
-        4 => '15-20',
-        5 => '20+',
+        1 => '1-5mm',
+        2 => '5-10mm',
+        3 => '10-15mm',
+        4 => '15-20mm',
+        5 => '20mm+',
         _ => '',
       };
 
   static String snowText(int s) => switch (s) {
-        1 => '1-3',
-        2 => '3-6',
-        3 => '6+',
+        1 => '1-3cm',
+        2 => '3-6cm',
+        3 => '6cm+',
         _ => '',
       };
 
@@ -371,7 +371,6 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
             ]),
           ),
       ]),
-      if (hasRain || hasSnow) Text(l.pwAmountLegend, style: muted),
       if (pw.tempIsRepresentative && pw.wind != null)
         Text(
             l.pwRepTemp(Localizations.localeOf(context).languageCode == 'en' &&

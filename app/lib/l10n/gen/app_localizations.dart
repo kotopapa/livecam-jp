@@ -5404,12 +5404,6 @@ abstract class AppLocalizations {
   /// **'{h}時'**
   String pwHour(String h);
 
-  /// No description provided for @pwAmountLegend.
-  ///
-  /// In ja, this message translates to:
-  /// **'降水量は mm/3h、降雪量は cm/3h'**
-  String get pwAmountLegend;
-
   /// No description provided for @pwLevel5.
   ///
   /// In ja, this message translates to:

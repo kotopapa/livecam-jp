@@ -3038,9 +3038,6 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get pwAmountLegend => '降水量は mm/3h、降雪量は cm/3h';
-
-  @override
   String get pwLevel5 => '特別警報';
 
   @override
@@ -6142,9 +6139,6 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   String pwHour(String h) {
     return '$hじ';
   }
-
-  @override
-  String get pwAmountLegend => 'あめの りょうは mm/3じかん、ゆきの りょうは cm/3じかん';
 
   @override
   String get pwLevel5 => 'とくべつ けいほう';

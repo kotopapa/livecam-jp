@@ -3143,9 +3143,6 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get pwAmountLegend => 'Precipitation in mm/3h, snowfall in cm/3h';
-
-  @override
   String get pwLevel5 => 'Emergency Warning';
 
   @override

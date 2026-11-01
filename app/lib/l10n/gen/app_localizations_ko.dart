@@ -3049,9 +3049,6 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get pwAmountLegend => '강수량은 mm/3h, 강설량은 cm/3h';
-
-  @override
   String get pwLevel5 => '특별 경보';
 
   @override

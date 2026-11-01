@@ -3154,10 +3154,6 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get pwAmountLegend =>
-      'Lượng mưa tính bằng mm/3h, lượng tuyết rơi tính bằng cm/3h';
-
-  @override
   String get pwLevel5 => 'Cảnh báo đặc biệt';
 
   @override

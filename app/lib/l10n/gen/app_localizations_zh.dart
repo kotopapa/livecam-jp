@@ -3023,9 +3023,6 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get pwAmountLegend => '降雨量单位为mm/3h，降雪量单位为cm/3h';
-
-  @override
   String get pwLevel5 => '特别警报';
 
   @override
@@ -6068,9 +6065,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String pwHour(String h) {
     return '$h時';
   }
-
-  @override
-  String get pwAmountLegend => '降雨量單位為mm/3h，降雪量單位為cm/3h';
 
   @override
   String get pwLevel5 => '特別警報';
