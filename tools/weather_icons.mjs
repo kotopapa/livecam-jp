@@ -12,7 +12,7 @@ import fs from 'node:fs';
 const NAMES = [
   'clear-day', 'partly-cloudy-day', 'partly-cloudy-day-rain', 'partly-cloudy-day-snow',
   'partly-cloudy-day-sleet', 'overcast', 'overcast-day', 'overcast-rain', 'overcast-snow',
-  'rain', 'snow', 'sleet', 'thunderstorms-day-rain',
+  'rain', 'snow', 'sleet', 'thunderstorms-rain',
 ];
 const BASE = 'https://cdn.jsdelivr.net/npm/@meteocons/svg-static';
 const SIZE = 144;
