@@ -102,6 +102,7 @@ Map<String, dynamic> vpfd() => {
 
 void main() {
   _popAtTests();
+  _rainTextTests();
   setUp(() {
     JmaAreaNames.reset();
     JmaAreaNames.parse(readJson('area_wave.json'));
@@ -462,5 +463,15 @@ void _popAtTests() {
     expect(PointWeather.popAt(pops, t0.add(const Duration(hours: 9))), 80);
     expect(PointWeather.popAt(pops, t0.add(const Duration(hours: 12))), isNull);
     expect(PointWeather.popAt(pops, t0.subtract(const Duration(hours: 1))), isNull);
+  });
+}
+
+void _rainTextTests() {
+  test('降るマークの列は 1mm 未満でも 1mm と出す', () {
+    expect(PointWeatherCard.rainText(0), '0mm');
+    expect(PointWeatherCard.rainText(0, weatherCode: '200'), '0mm');
+    expect(PointWeatherCard.rainText(0, weatherCode: '300'), '1mm');
+    expect(PointWeatherCard.rainText(0, weatherCode: '400'), '1mm');
+    expect(PointWeatherCard.rainText(1, weatherCode: '400'), '3mm');
   });
 }
