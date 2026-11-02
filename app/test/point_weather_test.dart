@@ -421,6 +421,10 @@ void main() {
       await tester.tap(find.byKey(const Key('point_weather_warning_badge')));
       await tester.pumpAndSettle();
       expect(find.text('横浜市 の警報・注意報'), findsOneWidget);
+      // 警報も注意報も名前で出す（注意報 14 が '14' のまま出ていた。2026-11-02 神戸の濃霧注意報）
+      expect(find.text('土砂災害危険警報'), findsOneWidget);
+      expect(find.text('雷注意報'), findsOneWidget);
+      expect(find.text('14'), findsNothing);
       expect(find.text('防災タブで見る'), findsOneWidget);
       await tester.tap(find.text('防災タブで見る'));
       await tester.pumpAndSettle();

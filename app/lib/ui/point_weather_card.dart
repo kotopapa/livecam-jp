@@ -321,7 +321,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
                     color: warningBadgeColor(warningLevelOf(c)),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: Text(warningNameOf(l, c) ?? c,
+                  child: Text(warningNameOf(l, c) ?? advisoryNameOf(l, c) ?? c,
                       style: TextStyle(
                           fontSize: 13,
                           color: warningBadgeTextColor(warningLevelOf(c)))),
