@@ -100,6 +100,26 @@ def _skip_low_freq(camera: dict, now: datetime) -> bool:
     return now.astimezone(JST).hour not in LOW_FREQ_HOURS_JST
 
 
+# youtube_channel の配信ID解決に使う追加の時間（秒）。死活監視の予算を使い切ったあとも
+# これだけは解決に回す（workflow の timeout-minutes 30 から通行規制・積雪の分を引いた範囲）
+CHANNEL_EXTRA_SEC = int(os.environ.get("MONITOR_CHANNEL_EXTRA_SEC", "180"))
+
+
+def channel_resolution_order(cams: list[dict], state_all: dict) -> list[dict]:
+    """youtube_channel の解決順: 一度も解決していないもの → 解決が古い順。
+
+    898 チャンネル（2026-11-02 時点）を台帳順に毎回先頭から解決すると、時間予算で
+    毎回同じ所（約300台）で打ち切られ、後ろの約600台は video_id が永久に付かず、
+    アプリが live_stream?channel= の埋め込みにフォールバックして「この動画は再生
+    できません」になっていた（富士見台どうぶつ病院の利用者報告）。解決した時刻を
+    監視の状態ファイル（配信しない）に持ち、古いものから順に回す
+    """
+    def key(c: dict):
+        at = (state_all.get(c["id"]) or {}).get("live_resolved_at") or ""
+        return (at, c["id"])
+    return sorted(cams, key=key)
+
+
 # 1回の実行の時間予算（秒）。GitHub Actions の timeout-minutes（25分）で打ち切られると
 # その回の結果が全部捨てられるため、予算を過ぎたら新しい確認を始めずに、確認済みの分を
 # 保存して終える（2026-10-06: 川の防災情報を確認する1日4回の枠で毎回25分を超え、
@@ -532,22 +552,31 @@ def run(shard: str | None = None) -> int:
     # 配信の切り替わりに追従するため、シャード外も含めて全台を毎回解決する（2026-09-29）
     if skipped:
         print(f"時間予算 {BUDGET_SEC}s を超えたため {skipped} 台の確認を次回に回した", file=sys.stderr)
-    for cam in all_cameras:
-        if (cam.get("review", {}).get("status") != "approved"
-                or cam["feed"]["type"] != "youtube_channel"):
-            continue
-        if time.monotonic() > deadline + 120:
-            print("時間予算を超えたため youtube_channel の解決を打ち切り", file=sys.stderr)
-            break
+    channel_cams = channel_resolution_order(
+        [c for c in all_cameras
+         if c.get("review", {}).get("status") == "approved"
+         and c["feed"]["type"] == "youtube_channel"],
+        state_all)
+    channel_deadline = deadline + CHANNEL_EXTRA_SEC
+    resolved_channels = 0
+    cut_channels = 0
+
+    def resolve_channel(cam: dict) -> None:
+        nonlocal resolved_channels, cut_channels
+        if time.monotonic() > channel_deadline:
+            with lock:
+                cut_channels += 1
+            return
         # 配信中の判定は /streams のライブ印が確実（/live は放置された古い予定枠や
         # 切り替え前の枠を指すことがある）。/streams で見つからないときだけ /live を見る
         vid = None
         base = f"https://www.youtube.com/channel/{cam['feed']['url']}"
-        prev_vid = (statuses.get(cam["id"]) or {}).get("video_id")
+        with lock:
+            prev_vid = (statuses.get(cam["id"]) or {}).get("video_id")
         live_match = cam["feed"].get("live_match") or None
 
-        def _from_streams(text: str, _name=cam["name"], _prev=prev_vid, _match=live_match) -> str | None:
-            return pick_live_stream(list_live_in_streams(text), _name, _prev, _match)
+        def _from_streams(text: str) -> str | None:
+            return pick_live_stream(list_live_in_streams(text), cam["name"], prev_vid, live_match)
 
         # live_match 付き（複数配信チャンネル）は /live の後詰めをしない: /live は題名を返さず
         # 別拠点の枠を指しうる。/streams に該当が無ければ配信休止として扱う
@@ -568,19 +597,37 @@ def run(shard: str | None = None) -> int:
                 vid = resolver(resp.text)
             if vid:
                 break
-        st = statuses.setdefault(cam["id"], {
-            "state": "unknown", "last_ok_at": None,
-            "http_status": None, "frozen_since": None,
-            "consecutive_failures": 0, "avg_interval_sec": None,
-        })
-        if vid:
-            st["video_id"] = vid
-            st["live"] = True
-        else:
-            # 配信なし（営業時間外・季節休止など）。アプリは埋め込みの代わりに
-            # 「配信休止中」を出す（古い予定枠の待機画面を見せない）
-            st.pop("video_id", None)
-            st["live"] = False
+        with lock:
+            resolved_channels += 1
+            st = statuses.setdefault(cam["id"], {
+                "state": "unknown", "last_ok_at": None,
+                "http_status": None, "frozen_since": None,
+                "consecutive_failures": 0, "avg_interval_sec": None,
+            })
+            if vid:
+                st["video_id"] = vid
+                st["live"] = True
+            else:
+                # 配信なし（営業時間外・季節休止など）。アプリは埋め込みの代わりに
+                # 「配信休止中」を出す（古い予定枠の待機画面を見せない）
+                st.pop("video_id", None)
+                st["live"] = False
+            state_all.setdefault(cam["id"], {})["live_resolved_at"] = (
+                datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
+
+    # youtube.com は throttle が同時2接続・1秒間隔を守るので、2本で回して待ち時間を重ねる
+    channel_threads = [threading.Thread(target=lambda i=i: [resolve_channel(c) for c in channel_cams[i::2]],
+                                        daemon=True) for i in range(2)]
+    for t in channel_threads:
+        t.start()
+    for t in channel_threads:
+        t.join()
+    if cut_channels:
+        print(f"時間予算を超えたため youtube_channel の解決を打ち切り"
+              f"（{resolved_channels}/{len(channel_cams)} 台。残りは次回、古い順に解決）",
+              file=sys.stderr)
+    else:
+        print(f"youtube_channel {resolved_channels} 台の配信IDを解決", file=sys.stderr)
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
