@@ -17,6 +17,7 @@ concurrency:
 jobs:
   aggregate:
     runs-on: ubuntu-latest
+    environment: production  # FIREBASE_SERVICE_ACCOUNT は環境 Secret（2026-10-13 移設。付け忘れで 20 日間止まった）
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
