@@ -218,6 +218,34 @@ void main() {
       expect(cols.first.validUtc, DateTime.utc(2026, 11, 1, 15));
     });
 
+    test('現在の時刻を含む列の気温はアメダスの実況に置き換える', () {
+      final steps = PointWeathers.parsePoint(block(), 35.68, 139.76);
+      // 2026-11-01 14:00Z = JST 23:00。観測 JST 22:50（13:50Z）
+      final pw = PointWeather(
+          steps: steps,
+          amedas: AmedasNow(
+              name: '東京', distanceKm: 3.2, at: DateTime(2026, 11, 1, 22, 50), temp: 17.1));
+      final now = DateTime.utc(2026, 11, 1, 14);
+      final cols = pw.columns(now);
+      expect(cols.first.validUtc, DateTime.utc(2026, 11, 1, 12));
+      expect(cols.first.temp, 17);
+      expect(cols.first.tempObserved, isTrue);
+      // 次の列は予報のまま
+      expect(cols[1].temp, PointWeather(steps: steps).columns(now)[1].temp);
+      expect(cols[1].tempObserved, isFalse);
+      // 観測が古ければ置き換えない
+      final stale = PointWeather(
+          steps: steps,
+          amedas: AmedasNow(
+              name: '東京', distanceKm: 3.2, at: DateTime(2026, 11, 1, 18, 0), temp: 17.1));
+      expect(stale.columns(now).first.tempObserved, isFalse);
+      expect(stale.columns(now).first.temp, PointWeather(steps: steps).columns(now).first.temp);
+      // 最初の列がまだ先（now が枠の前）なら置き換えない
+      final early = pw.columns(DateTime.utc(2026, 11, 1, 11, 30));
+      expect(early.first.validUtc, DateTime.utc(2026, 11, 1, 12));
+      expect(early.first.tempObserved, isFalse);
+    });
+
     test('点の予報が無ければ区域の風と代表地点の気温で並べる', () {
       final pw = PointWeather(
           wind: PointWeathers.parseVpfd(vpfd(), areaName: '東部', areaEnName: ''));

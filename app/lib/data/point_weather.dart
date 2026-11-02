@@ -124,7 +124,8 @@ class PointColumn {
       this.snow,
       this.wind,
       this.weatherCode,
-      this.pop});
+      this.pop,
+      this.tempObserved = false});
   final DateTime validUtc;
   final int? weather;
 
@@ -137,6 +138,20 @@ class PointColumn {
   final int? rain;
   final int? snow;
   final WindStep? wind;
+
+  /// [temp] がアメダスの実況（現在の時刻を含む列だけ）
+  final bool tempObserved;
+
+  PointColumn withObservedTemp(int t) => PointColumn(
+      validUtc: validUtc,
+      weather: weather,
+      temp: t,
+      rain: rain,
+      snow: snow,
+      wind: wind,
+      weatherCode: weatherCode,
+      pop: pop,
+      tempObserved: true);
 }
 
 /// 週間予報の1日
@@ -355,7 +370,21 @@ class PointWeather {
       amedas == null &&
       (week == null || week!.days.isEmpty);
 
-  /// 表の列。枠の終わりが [now] より後のものだけ（過ぎた枠は出さない）
+  /// アメダス観測の instant（[AmedasNow.at] は JST 壁時計）
+  DateTime? get amedasInstant {
+    final a = amedas?.at;
+    if (a == null) return null;
+    return DateTime.utc(a.year, a.month, a.day, a.hour, a.minute)
+        .subtract(const Duration(hours: 9));
+  }
+
+  /// 観測が [now] の前後 2 時間以内なら、現在の時刻を含む列の気温に使える
+  static const observedTempWindow = Duration(hours: 2);
+
+  /// 表の列。枠の終わりが [now] より後のものだけ（過ぎた枠は出さない）。
+  /// 現在の時刻を含む列（validUtc ≤ now < validUtc+3h）の気温は、予報ではなく
+  /// アメダスの実況（上の大きな気温と同じ値）に置き換える（2026-11-02 ユーザー要望:
+  /// 11:50 の実況 17.1℃ の横に 12 時の予報 19℃ が並ぶと食い違って見える）
   List<PointColumn> columns(DateTime now, {int limit = 16}) {
     final byTime = <DateTime, PointColumn>{};
     final windBy = {for (final w in wind?.steps ?? const <WindStep>[]) w.validUtc: w};
@@ -388,7 +417,22 @@ class PointWeather {
         .where((t) => t.add(const Duration(hours: 3)).isAfter(now))
         .toList()
       ..sort();
-    return [for (final k in keys.take(limit)) byTime[k]!];
+    final list = [for (final k in keys.take(limit)) byTime[k]!];
+    final obs = amedas?.temp;
+    final obsAt = amedasInstant;
+    if (obs != null &&
+        obsAt != null &&
+        now.difference(obsAt).abs() <= observedTempWindow) {
+      for (var i = 0; i < list.length; i++) {
+        final c = list[i];
+        if (!c.validUtc.isAfter(now) &&
+            c.validUtc.add(const Duration(hours: 3)).isAfter(now)) {
+          list[i] = c.withObservedTemp(obs.round());
+          break;
+        }
+      }
+    }
+    return list;
   }
 }
 
