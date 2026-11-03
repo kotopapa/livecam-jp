@@ -44,6 +44,15 @@ class WeatherIcon extends StatelessWidget {
     return name;
   }
 
+  /// 「くもり時々雪」「晴れ時々雪」など雪を伴う 1 枚マークは、Meteocons 標準の雲＋雪の結晶
+  /// ではなく、雲（晴れ）のマークの右下に小さな雪だるまを重ねる（雪は必ず雪だるまで表す。
+  /// 2026-11-03 ユーザー指摘: 週間の結晶マークが雪に見えない）。戻り値は下に敷くマーク名
+  static String? snowBase(String name) => switch (name) {
+        'overcast-snow' => 'overcast',
+        'partly-cloudy-day-snow' => 'partly-cloudy-day',
+        _ => null,
+      };
+
   @override
   Widget build(BuildContext context) {
     final c = code;
@@ -51,11 +60,23 @@ class WeatherIcon extends StatelessWidget {
     if (c == null) return SizedBox(width: box, height: box);
     final spec = weatherIconSpec(c);
     final scheme = Theme.of(context).colorScheme;
-    Widget img(String name, double w) => Image.asset('assets/weather/$name.png',
+    Widget asset(String name, double w) => Image.asset('assets/weather/$name.png',
         width: w,
         height: w,
         errorBuilder: (_, _, _) => SizedBox(
             width: w, height: w, child: Icon(Icons.cloud, size: w * 0.8, color: Colors.grey)));
+    Widget img(String name, double w) {
+      final base = snowBase(name);
+      if (base == null) return asset(name, w);
+      return SizedBox(
+        width: w,
+        height: w,
+        child: Stack(children: [
+          asset(base, w),
+          Positioned(right: 0, bottom: 0, child: asset('snowman', w * 0.62)),
+        ]),
+      );
+    }
     final Widget child;
     // 「のち」の 2 枚は横に並ぶので、下地の幅を 1 列分（width + 12）に広げる。
     // 36px なら 21.6 + 6 + 18 = 45.6px が 48px に収まり、縮小なしで描ける

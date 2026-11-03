@@ -567,6 +567,28 @@ void main() {
       }
     });
 
+    testWidgets('雪を伴うマークは雲・晴れの右下に雪だるまを重ねる', (tester) async {
+      expect(WeatherIcon.snowBase('overcast-snow'), 'overcast');
+      expect(WeatherIcon.snowBase('partly-cloudy-day-snow'), 'partly-cloudy-day');
+      expect(WeatherIcon.snowBase('snow'), isNull);
+      await tester.pumpWidget(testApp(const Row(children: [
+        WeatherIcon('204'), // くもり時々雪
+        WeatherIcon('104'), // 晴れ時々雪
+        WeatherIcon('400'), // 雪
+        WeatherIcon('303'), // 雨か雪（みぞれ）
+      ])));
+      await tester.pump();
+      String src(Image w) => (w.image as AssetImage).assetName;
+      final names = tester.widgetList<Image>(find.byType(Image)).map(src).toList();
+      expect(names, [
+        'assets/weather/overcast.png', 'assets/weather/snowman.png',
+        'assets/weather/partly-cloudy-day.png', 'assets/weather/snowman.png',
+        'assets/weather/snowman.png',
+        'assets/weather/sleet.png',
+      ]);
+      expect(names.where((n) => n.contains('-snow')), isEmpty);
+    });
+
     testWidgets('復帰の合図で取り直す', (tester) async {
       final tick = ValueNotifier(0);
       var n = 0;
