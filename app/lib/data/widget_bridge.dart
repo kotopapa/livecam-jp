@@ -7,6 +7,8 @@ import 'package:home_widget/home_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/camera.dart';
+import '../util/geo.dart';
+import 'viewer_area.dart';
 
 /// iOSホーム画面ウィジェット（app/ios/LiveCamWidget）との橋渡し。
 ///
@@ -20,11 +22,24 @@ const String bosaiWidgetKind = 'BosaiWidget';
 const String favoritesWidgetDataKey = 'favorites_widget_json';
 const String bosaiWidgetSettingsKey = 'bosai_widget_settings_json';
 
+/// 利用者の最後の位置（lat/lng/pref/at）。両ウィジェットが「現在地を先頭」に
+/// 並べ替えるのに使う（2026-11-04 ユーザー決定: 方式B＝本体が書く。ウィジェット
+/// 自身は位置情報を取らないので NSWidgetWantsLocation は付けない）
+const String viewerLocationKey = 'viewer_location_json';
+/// 本体側の控え（SharedPreferences）。前回解決した座標と県
+const String viewerLocationCacheKey = 'widget_viewer_location';
+
+/// 前回解決した座標からこの距離以内なら県の再解決（逆ジオコーダ）をしない
+const double viewerPrefectureReuseMeters = 3000;
+/// 県が同じでこの距離以内の移動なら App Group への書き直しをしない
+const double viewerLocationRewriteMeters = 1000;
+
 /// ウィジェットタップで本体を開くURLスキーム（Info.plist の CFBundleURLTypes）
 const String widgetUrlScheme = 'livecamjp';
 
-/// ウィジェットに載せる最大台数（large=4台。予備を含めて8台まで書き出す）
-const int favoritesWidgetMaxCameras = 8;
+/// ウィジェットに載せる最大台数（large=4台。ウィジェット側が現在地に近い順へ
+/// 並べ替えるので、候補として多めに書き出す。画像を取るのは表示分だけ）
+const int favoritesWidgetMaxCameras = 24;
 
 /// お気に入りが変わったことをウィジェットに知らせるまでの猶予（連打の集約）
 const Duration widgetSyncDebounce = Duration(milliseconds: 800);
@@ -80,10 +95,61 @@ Map<String, dynamic> buildFavoritesWidgetData({
           'operator': c.operator,
           'updated_at': imageTimeFor?.call(c),
           'headers': widgetImageHeadersFor(c),
+          if (c.hasLocation) 'lat': c.lat,
+          if (c.hasLocation) 'lng': c.lng,
         },
     ],
   };
 }
+
+/// 利用者の最後の位置のウィジェット用JSON。[pref] は JIS 2桁（海上・国外・
+/// 解決失敗は null。座標だけでもお気に入りの並べ替えには使える）
+Map<String, dynamic> buildViewerLocationData({
+  required double lat,
+  required double lng,
+  required String? pref,
+  DateTime? at,
+}) =>
+    {
+      'lat': double.parse(lat.toStringAsFixed(4)),
+      'lng': double.parse(lng.toStringAsFixed(4)),
+      'pref': ?pref,
+      'at': (at ?? DateTime.now()).toUtc().toIso8601String(),
+    };
+
+/// 本体側の控え（前回解決した座標と県）
+class ViewerLocationCache {
+  const ViewerLocationCache({required this.lat, required this.lng, this.pref});
+
+  final double lat;
+  final double lng;
+  final String? pref;
+
+  Map<String, dynamic> toJson() => {'lat': lat, 'lng': lng, 'pref': ?pref};
+
+  static ViewerLocationCache? fromJson(Object? json) {
+    if (json is! Map) return null;
+    final lat = json['lat'], lng = json['lng'];
+    if (lat is! num || lng is! num) return null;
+    return ViewerLocationCache(
+        lat: lat.toDouble(), lng: lng.toDouble(), pref: json['pref'] as String?);
+  }
+
+  double distanceTo(double lat2, double lng2) =>
+      distanceMeters(lat, lng, lat2, lng2);
+}
+
+/// 前回の控えから県を再利用できるか（3km 以内なら逆ジオコーダを呼ばない。
+/// 前回が海上・国外（pref 無し）でも同じ場所なら呼び直さない）
+bool canReusePrefecture(ViewerLocationCache? cached, double lat, double lng) =>
+    cached != null && cached.distanceTo(lat, lng) <= viewerPrefectureReuseMeters;
+
+/// App Group へ書き直す必要があるか（県が変わったか 1km 以上動いたとき）
+bool shouldRewriteViewerLocation(
+        ViewerLocationCache? written, double lat, double lng, String? pref) =>
+    written == null ||
+    written.pref != pref ||
+    written.distanceTo(lat, lng) > viewerLocationRewriteMeters;
 
 /// 災害速報ウィジェットの設定JSON。prefs=対象都道府県JISコード（空=全国）
 Map<String, dynamic> buildBosaiWidgetSettings(Set<String> warningPrefs) => {
@@ -162,6 +228,67 @@ class WidgetBridge {
           favoritesWidgetDataKey, jsonEncode(data));
       await HomeWidget.updateWidget(iOSName: favoritesWidgetKind);
     } catch (_) {}
+  }
+
+  /// 現在地の取得と県の解決（テストで差し替える）。位置情報は**新たに許可を
+  /// 求めず**、許可済みのときの最後の既知位置だけを使う（viewer_area.dart と同じ）
+  static Future<(double, double)?> Function() positionProvider = () async {
+    final p = await ViewerArea.lastKnownPosition();
+    return p == null ? null : (p.latitude, p.longitude);
+  };
+  static final ViewerArea _viewerArea = ViewerArea();
+  static Future<String?> Function(double lat, double lng) prefectureResolver =
+      (lat, lng) => _viewerArea.prefectureOf(lat, lng);
+
+  /// 前回 App Group に書いた内容（起動中の重複書き込みを避ける）
+  static ViewerLocationCache? _written;
+  static bool _locating = false;
+
+  /// 利用者の最後の位置と県を App Group に書き、両ウィジェットを更新する。
+  /// 県の解決は前回の座標から 3km 以上動いたときだけ逆ジオコーダを呼ぶ
+  static Future<void> syncViewerLocation() async {
+    if (!await _ensureGroup() || _locating) return;
+    _locating = true;
+    try {
+      final pos = await positionProvider();
+      if (pos == null) return;
+      final (lat, lng) = pos;
+      final prefs = await SharedPreferences.getInstance();
+      final cached = ViewerLocationCache.fromJson(
+          _decode(prefs.getString(viewerLocationCacheKey)));
+      String? pref;
+      if (canReusePrefecture(cached, lat, lng)) {
+        pref = cached!.pref;
+      } else {
+        pref = await prefectureResolver(lat, lng);
+        await prefs.setString(
+            viewerLocationCacheKey,
+            jsonEncode(
+                ViewerLocationCache(lat: lat, lng: lng, pref: pref).toJson()));
+      }
+      final written = _written ??
+          ViewerLocationCache.fromJson(
+              _decode(await HomeWidget.getWidgetData<String>(viewerLocationKey)));
+      if (!shouldRewriteViewerLocation(written, lat, lng, pref)) return;
+      await HomeWidget.saveWidgetData<String>(viewerLocationKey,
+          jsonEncode(buildViewerLocationData(lat: lat, lng: lng, pref: pref)));
+      _written = ViewerLocationCache(lat: lat, lng: lng, pref: pref);
+      await HomeWidget.updateWidget(iOSName: favoritesWidgetKind);
+      await HomeWidget.updateWidget(iOSName: bosaiWidgetKind);
+    } catch (_) {
+      // 位置情報プラグイン未登録・通信失敗などは無視（次回の同期で再試行）
+    } finally {
+      _locating = false;
+    }
+  }
+
+  static Object? _decode(String? s) {
+    if (s == null || s.isEmpty) return null;
+    try {
+      return jsonDecode(s);
+    } catch (_) {
+      return null;
+    }
   }
 
   /// 災害速報ウィジェットの対象都道府県を書き出す。

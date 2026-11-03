@@ -12,9 +12,11 @@ struct WidgetCamera: Decodable, Hashable {
   let operatorName: String?
   let updatedAt: String?
   let headers: [String: String]?
+  let lat: Double?
+  let lng: Double?
 
   enum CodingKeys: String, CodingKey {
-    case id, name, category, prefecture, headers
+    case id, name, category, prefecture, headers, lat, lng
     case imageUrl = "image_url"
     case operatorName = "operator"
     case updatedAt = "updated_at"
@@ -35,6 +37,23 @@ struct FavoritesPayload: Decodable {
           let data = s.data(using: .utf8) else { return nil }
     return try? JSONDecoder().decode(FavoritesPayload.self, from: data)
   }
+
+  /// 表示順。現在地が分かれば近い順（座標の無いカメラは元の順で末尾）、
+  /// 分からなければ本体のお気に入り順のまま。距離（m）を添える
+  func ordered(by viewer: ViewerLocation?) -> [(camera: WidgetCamera, distance: Double?)] {
+    guard let viewer else { return cameras.map { ($0, nil) } }
+    var near: [(WidgetCamera, Double)] = []
+    var rest: [WidgetCamera] = []
+    for c in cameras {
+      if let lat = c.lat, let lng = c.lng {
+        near.append((c, viewer.distanceMeters(toLat: lat, lng: lng)))
+      } else {
+        rest.append(c)
+      }
+    }
+    near.sort { $0.1 < $1.1 }
+    return near.map { ($0.0, $0.1) } + rest.map { ($0, nil) }
+  }
 }
 
 // MARK: - Timeline
@@ -42,6 +61,15 @@ struct FavoritesPayload: Decodable {
 struct FavoriteItem {
   let camera: WidgetCamera
   let image: UIImage?
+  /// 現在地からの距離（m）。現在地が分からないか座標が無ければ nil
+  var distance: Double? = nil
+
+  var distanceText: String? {
+    guard let d = distance else { return nil }
+    if d < 950 { return "\(Int((d / 100).rounded()) * 100)m" }
+    if d < 9950 { return String(format: "%.1fkm", d / 1000) }
+    return "\(Int((d / 1000).rounded()))km"
+  }
 }
 
 struct FavoritesEntry: TimelineEntry {
@@ -57,7 +85,8 @@ struct FavoritesEntry: TimelineEntry {
     items: [
       FavoriteItem(camera: WidgetCamera(id: "p1", name: "サンプルカメラ", imageUrl: nil,
                                         category: "river", prefecture: "13",
-                                        operatorName: nil, updatedAt: nil, headers: nil),
+                                        operatorName: nil, updatedAt: nil, headers: nil,
+                                        lat: nil, lng: nil),
                    image: nil),
     ],
     hasFavorites: true, isPlaceholder: true)
@@ -97,8 +126,10 @@ struct FavoritesProvider: TimelineProvider {
       completion(.placeholder)
       return
     }
-    let items = payload.cameras.prefix(n).map {
-      FavoriteItem(camera: $0, image: ImageLoader.cached(cacheName: "cam-\($0.id).jpg", maxPixel: px))
+    let items = payload.ordered(by: SharedStore.loadViewerLocation()).prefix(n).map {
+      FavoriteItem(camera: $0.camera,
+                   image: ImageLoader.cached(cacheName: "cam-\($0.camera.id).jpg", maxPixel: px),
+                   distance: $0.distance)
     }
     completion(FavoritesEntry(date: Date(), items: items,
                               hasFavorites: !payload.cameras.isEmpty, isPlaceholder: false))
@@ -109,15 +140,17 @@ struct FavoritesProvider: TimelineProvider {
     let px = Self.maxPixel(for: context.family)
     Task {
       let payload = FavoritesPayload.load()
+      let ordered = payload?.ordered(by: SharedStore.loadViewerLocation()) ?? []
       var items: [FavoriteItem] = []
-      // 逐次取得（同時接続を増やさない）。1台ずつ縮小してから次へ進む
-      for cam in (payload?.cameras ?? []).prefix(n) {
+      // 逐次取得（同時接続を増やさない）。1台ずつ縮小してから次へ進む。
+      // 画像を取るのは表示する分（現在地に近い順の先頭 n 台）だけ
+      for (cam, distance) in ordered.prefix(n) {
         var image: UIImage? = nil
         if let s = cam.imageUrl, let url = URL(string: s) {
           image = await ImageLoader.load(url: url, headers: cam.headers ?? [:],
                                          cacheName: "cam-\(cam.id).jpg", maxPixel: px)
         }
-        items.append(FavoriteItem(camera: cam, image: image))
+        items.append(FavoriteItem(camera: cam, image: image, distance: distance))
       }
       let now = Date()
       let entry = FavoritesEntry(date: now, items: items,
@@ -140,7 +173,7 @@ struct FavoriteCamerasWidget: Widget {
         .containerBackground(for: .widget) { Color("WidgetBackground") }
     }
     .configurationDisplayName("お気に入りカメラ")
-    .description("お気に入りに登録したライブカメラの最新画像を表示します（15分ごとに更新）")
+    .description("お気に入りに登録したライブカメラの最新画像を、現在地に近い順に表示します（15分ごとに更新）")
     .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     .contentMarginsDisabled()
   }
@@ -247,9 +280,16 @@ struct CameraTile: View {
           Text(item.camera.name)
             .font(.system(size: large ? 13 : 11, weight: .semibold))
             .lineLimit(large ? 2 : 1)
-          Text("取得 \(TimeText.hm.string(from: fetchedAt))")
-            .font(.system(size: 9))
-            .opacity(0.85)
+          HStack(spacing: 4) {
+            Text("取得 \(TimeText.hm.string(from: fetchedAt))")
+            if let d = item.distanceText {
+              Image(systemName: "location.fill")
+                .font(.system(size: 7))
+              Text(d)
+            }
+          }
+          .font(.system(size: 9))
+          .opacity(0.85)
         }
         .foregroundStyle(.white)
         .padding(.horizontal, 8)

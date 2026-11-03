@@ -8,6 +8,23 @@ struct BosaiSnapshot: Codable {
   var fetchedAt: Date
   var warnings: [PrefWarnings]
   var quakes: [QuakeInfo]
+  /// 利用者がいま居る都道府県（JIS 2桁。本体が書いた最後の位置から。不明なら nil）。
+  /// この県の行を先頭に出す（2026-11-04 ユーザー要望）
+  var viewerPref: String? = nil
+
+  var viewerPrefName: String? { viewerPref.flatMap { JmaClient.prefectureNames[$0] } }
+
+  /// 現在地の県に発表中の警報（無ければ nil）
+  var viewerWarnings: PrefWarnings? {
+    guard let p = viewerPref else { return nil }
+    return warnings.first { $0.pref == p }
+  }
+
+  /// 表示順: 現在地の県 → 残りは重い順（元の順）
+  var orderedWarnings: [PrefWarnings] {
+    guard let v = viewerWarnings else { return warnings }
+    return [v] + warnings.filter { $0.pref != v.pref }
+  }
 
   static let cacheFile = "bosai-snapshot.json"
 
@@ -24,8 +41,14 @@ struct BosaiSnapshot: Codable {
   }
 
   /// 見出し（small / ロック画面用の1行）。
+  /// 現在地の県に警報があればそれを最優先。無ければ
   /// 特別警報 > 震度5弱以上 > 危険警報 > 震度4 > 警報 > 発表なし
   var headline: Headline {
+    if let v = viewerWarnings {
+      return Headline(text: "\(v.top) \(v.prefName)",
+                      level: v.rank == 0 ? .special : (v.rank == 1 ? .danger : .warning),
+                      isViewer: true)
+    }
     let topWarning = warnings.first
     let topQuake = quakes.max { JmaClient.intensityRank($0.maxIntensity) < JmaClient.intensityRank($1.maxIntensity) }
     func warningHeadline(_ w: PrefWarnings) -> Headline {
@@ -47,6 +70,8 @@ struct BosaiSnapshot: Codable {
     enum Level { case special, danger, warning, none }
     let text: String
     let level: Level
+    /// 現在地の県の警報
+    var isViewer: Bool = false
 
     var color: Color {
       switch level {
@@ -64,6 +89,13 @@ struct BosaiSnapshot: Codable {
       case .none: return "checkmark.circle"
       }
     }
+  }
+
+  /// 現在地の県の1行（medium の先頭行・small の補足）。現在地が不明なら nil
+  var viewerLine: String? {
+    guard let name = viewerPrefName else { return nil }
+    if let v = viewerWarnings { return "\(name)  \(v.names.joined(separator: "・"))" }
+    return "\(name)  発表なし"
   }
 }
 
@@ -109,7 +141,8 @@ struct BosaiProvider: TimelineProvider {
       completion(.placeholder)
       return
     }
-    if let cached = BosaiSnapshot.loadCached() {
+    if var cached = BosaiSnapshot.loadCached() {
+      cached.viewerPref = SharedStore.loadViewerLocation()?.pref
       completion(BosaiEntry(date: Date(), snapshot: cached, stale: false,
                             prefsCount: BosaiSettings.load().prefs.count))
     } else {
@@ -122,13 +155,19 @@ struct BosaiProvider: TimelineProvider {
     Task {
       let settings = BosaiSettings.load()
       let cached = BosaiSnapshot.loadCached()
-      async let w = try? JmaClient.fetchWarnings(prefs: settings.prefs)
+      let viewerPref = SharedStore.loadViewerLocation()?.pref
+      // 対象県を絞っていても、いま居る県は必ず含める
+      let prefs: Set<String> = {
+        guard !settings.prefs.isEmpty, let v = viewerPref else { return settings.prefs }
+        return settings.prefs.union([v])
+      }()
+      async let w = try? JmaClient.fetchWarnings(prefs: prefs)
       async let q = try? JmaClient.fetchQuakes()
       let warnings = await w
       let quakes = await q
       let now = Date()
       let stale = warnings == nil || quakes == nil
-      let snapshot: BosaiSnapshot
+      var snapshot: BosaiSnapshot
       if warnings == nil && quakes == nil, let cached {
         snapshot = cached  // 完全失敗: 前回分を維持
       } else {
@@ -138,6 +177,7 @@ struct BosaiProvider: TimelineProvider {
           quakes: quakes ?? cached?.quakes ?? [])
         if !stale { snapshot.save() }
       }
+      snapshot.viewerPref = viewerPref
       let entry = BosaiEntry(date: now, snapshot: snapshot, stale: stale,
                              prefsCount: settings.prefs.count)
       completion(Timeline(entries: [entry],
@@ -158,7 +198,7 @@ struct BosaiWidget: Widget {
         .widgetURL(SharedStore.bosaiURL)
     }
     .configurationDisplayName("災害速報")
-    .description("気象庁の特別警報・危険警報と震度4以上の地震を表示します（10分ごとに更新）")
+    .description("気象庁の特別警報・危険警報と震度4以上の地震を、いま居る都道府県を先頭に表示します（10分ごとに更新）")
     .supportedFamilies([.systemSmall, .systemMedium, .accessoryRectangular])
   }
 }
@@ -189,8 +229,8 @@ struct BosaiView: View {
   private var accessory: some View {
     VStack(alignment: .leading, spacing: 1) {
       HStack(spacing: 4) {
-        Image(systemName: headline.symbol)
-        Text("災害速報")
+        Image(systemName: headline.isViewer ? "location.fill" : headline.symbol)
+        Text(headline.isViewer ? "災害速報（現在地）" : "災害速報")
       }
       .font(.system(size: 12, weight: .semibold))
       Text(headline.text)
@@ -216,8 +256,23 @@ struct BosaiView: View {
       Text(headline.text)
         .font(.system(size: 16, weight: .bold))
         .foregroundStyle(.white)
-        .lineLimit(3)
+        .lineLimit(headline.isViewer || viewerLineForSmall == nil ? 3 : 2)
         .minimumScaleFactor(0.8)
+      if headline.isViewer {
+        Text("現在地")
+          .font(.system(size: 10))
+          .foregroundStyle(.white.opacity(0.7))
+      } else if let line = viewerLineForSmall {
+        // 現在地の県には発表が無い: 見出しは全国の最上位、補足に現在地
+        HStack(spacing: 3) {
+          Image(systemName: "location.fill")
+            .font(.system(size: 8))
+          Text(line)
+        }
+        .font(.system(size: 10))
+        .foregroundStyle(.white.opacity(0.7))
+        .lineLimit(1)
+      }
       Spacer(minLength: 0)
       footer
     }
@@ -225,8 +280,17 @@ struct BosaiView: View {
     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
   }
 
+  /// small の補足行（現在地の県に発表が無いとき）。例「東京都 発表なし」
+  private var viewerLineForSmall: String? {
+    guard let name = entry.snapshot.viewerPrefName, entry.snapshot.viewerWarnings == nil else { return nil }
+    return "\(name) 発表なし"
+  }
+
   private var medium: some View {
     let snap = entry.snapshot
+    // 先頭に現在地の県、続いて残り（重い順）。現在地が不明なら従来どおり
+    let others = snap.orderedWarnings.filter { $0.pref != snap.viewerPref }
+    let otherRows = snap.viewerPref == nil ? 3 : 2
     return VStack(alignment: .leading, spacing: 4) {
       HStack(spacing: 4) {
         Image(systemName: headline.symbol)
@@ -241,12 +305,31 @@ struct BosaiView: View {
         }
         Spacer()
       }
-      if snap.warnings.isEmpty && snap.quakes.isEmpty {
-        Text("発表なし")
-          .font(.system(size: 16, weight: .bold))
-          .foregroundStyle(.white)
+      if let line = snap.viewerLine {
+        let v = snap.viewerWarnings
+        HStack(alignment: .top, spacing: 6) {
+          Image(systemName: "location.fill")
+            .font(.system(size: 9))
+            .foregroundStyle(v.map { levelColor($0.rank) } ?? Color(white: 0.65))
+            .padding(.top, 3)
+          Text(line)
+            .font(.system(size: 12, weight: v == nil ? .regular : .bold))
+            .foregroundStyle(v == nil ? .white.opacity(0.8) : .white)
+            .lineLimit(1)
+        }
+      }
+      if others.isEmpty && snap.quakes.isEmpty {
+        if snap.viewerPref == nil {
+          Text("発表なし")
+            .font(.system(size: 16, weight: .bold))
+            .foregroundStyle(.white)
+        } else {
+          Text("ほかの都道府県も発表なし")
+            .font(.system(size: 11))
+            .foregroundStyle(.white.opacity(0.7))
+        }
       } else {
-        ForEach(snap.warnings.prefix(3), id: \.pref) { w in
+        ForEach(others.prefix(otherRows), id: \.pref) { w in
           HStack(alignment: .top, spacing: 6) {
             Circle()
               .fill(levelColor(w.rank))
@@ -258,8 +341,8 @@ struct BosaiView: View {
               .lineLimit(1)
           }
         }
-        if snap.warnings.count > 3 {
-          Text("ほか\(snap.warnings.count - 3)都道府県")
+        if others.count > otherRows {
+          Text("ほか\(others.count - otherRows)都道府県")
             .font(.system(size: 10))
             .foregroundStyle(.white.opacity(0.7))
         }

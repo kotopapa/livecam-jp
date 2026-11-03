@@ -69,6 +69,8 @@ class AppState extends ChangeNotifier {
       },
     ));
     unawaited(WidgetBridge.syncBosaiSettings());
+    // 現在地（許可済みの最後の既知位置）を書いて「現在地を先頭」に並べ替えさせる
+    unawaited(WidgetBridge.syncViewerLocation());
   }
 
   Future<void> toggleFavorite(Camera c) async {

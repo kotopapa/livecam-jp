@@ -56,7 +56,7 @@ void main() {
 
   test('buildFavoritesWidgetData: 順序・上限・キー形状', () {
     final favs = [
-      for (var i = 0; i < 10; i++) cam('c$i', FeedType.stillImage, 'http://x/$i.jpg'),
+      for (var i = 0; i < 30; i++) cam('c$i', FeedType.stillImage, 'http://x/$i.jpg'),
     ];
     final data = buildFavoritesWidgetData(
       favorites: favs,
@@ -77,7 +77,59 @@ void main() {
     expect(first['updated_at'], isNull);
     expect(first['headers'], isEmpty);
     expect((cams[1] as Map)['updated_at'], '2026-08-31T12:00:00+09:00');
-    expect((cams.last as Map)['id'], 'c7');
+    expect(first['lat'], 35.0, reason: '現在地に近い順の並べ替え用');
+    expect(first['lng'], 139.0);
+    expect((cams.last as Map)['id'], 'c23');
+  });
+
+  test('buildFavoritesWidgetData: 座標の無いカメラは lat/lng を書かない', () {
+    final c = Camera(
+      id: 'n', name: 'n', category: 'river', prefecture: '13',
+      feed: const Feed(type: FeedType.stillImage, url: 'http://x/n.jpg'),
+      operator: '運営', attribution: 'x',
+    );
+    final data = buildFavoritesWidgetData(favorites: [c], imageUrlFor: (_) => null);
+    final m = (data['cameras'] as List).first as Map;
+    expect(m.containsKey('lat'), isFalse);
+    expect(m.containsKey('lng'), isFalse);
+  });
+
+  group('現在地の書き出し', () {
+    test('buildViewerLocationData: 座標は小数4桁・県は無ければ省く', () {
+      expect(
+          buildViewerLocationData(
+              lat: 35.681236, lng: 139.767125, pref: '13',
+              at: DateTime.utc(2026, 11, 4, 1, 2, 3)),
+          {'lat': 35.6812, 'lng': 139.7671, 'pref': '13', 'at': '2026-11-04T01:02:03.000Z'});
+      expect(buildViewerLocationData(lat: 1, lng: 2, pref: null).containsKey('pref'),
+          isFalse);
+    });
+
+    test('canReusePrefecture: 3km 以内なら前回の県（海上の null も）を使う', () {
+      const c = ViewerLocationCache(lat: 35.68, lng: 139.76, pref: '13');
+      expect(canReusePrefecture(c, 35.69, 139.77), isTrue, reason: '約1.4km');
+      expect(canReusePrefecture(c, 35.75, 139.76), isFalse, reason: '約7.8km');
+      expect(canReusePrefecture(null, 35.68, 139.76), isFalse);
+      const sea = ViewerLocationCache(lat: 35.68, lng: 139.76);
+      expect(canReusePrefecture(sea, 35.68, 139.76), isTrue);
+    });
+
+    test('shouldRewriteViewerLocation: 県が変わるか 1km 以上動いたら書き直す', () {
+      const w = ViewerLocationCache(lat: 35.68, lng: 139.76, pref: '13');
+      expect(shouldRewriteViewerLocation(null, 35.68, 139.76, '13'), isTrue);
+      expect(shouldRewriteViewerLocation(w, 35.681, 139.761, '13'), isFalse);
+      expect(shouldRewriteViewerLocation(w, 35.681, 139.761, '14'), isTrue);
+      expect(shouldRewriteViewerLocation(w, 35.70, 139.76, '13'), isTrue, reason: '約2.2km');
+    });
+
+    test('ViewerLocationCache: JSON の往復と壊れた値', () {
+      const c = ViewerLocationCache(lat: 35.5, lng: 139.5, pref: '14');
+      expect(ViewerLocationCache.fromJson(c.toJson())?.pref, '14');
+      expect(ViewerLocationCache.fromJson(const ViewerLocationCache(lat: 1, lng: 2).toJson())?.pref,
+          isNull);
+      expect(ViewerLocationCache.fromJson({'lat': 'x'}), isNull);
+      expect(ViewerLocationCache.fromJson(null), isNull);
+    });
   });
 
   test('buildFavoritesWidgetData: 空なら cameras が空配列', () {
