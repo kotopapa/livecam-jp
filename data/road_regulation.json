@@ -1,5 +1,5 @@
 {
- "version": "2026-11-03T01:11:32Z",
+ "version": "2026-11-03T01:38:41Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-03T01:11:32Z",
+   "fetched_at": "2026-11-03T01:38:41Z",
    "items": [
     {
      "id": "243c3ec9e816c52d",
@@ -45488,6 +45488,17 @@
    "content": "１車線規制",
    "cause": "その他",
    "start": "2026年11月03日 09:00",
+   "status": "実施中"
+  },
+  "243c3ecfb903521e": {
+   "kind": "車線規制（国道）",
+   "route": "国道1号",
+   "direction": "上下",
+   "from": "亀山市栄町",
+   "to": "亀山市椿世町",
+   "content": "路肩規制",
+   "cause": "その他",
+   "start": "2026年11月03日 08:30",
    "status": "実施中"
   }
  }
