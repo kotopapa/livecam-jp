@@ -75,7 +75,7 @@ class WeatherIcon extends StatelessWidget {
   /// 下地の色（晴れ＝橙、くもり＝灰、雨＝青、雪＝水色、みぞれ＝青灰、雷雨＝濃い青）。
   /// 雨・雪は階級が上がるほど濃く。斜め分割・三角でも同じ色を使うので種別で見分けがつく
   static Color tileColor(WxKind k, {int rain = 0, int snow = 0}) => switch (k) {
-        WxKind.sun => const Color(0xFFFFA726).withValues(alpha: 0.42),
+        WxKind.sun => const Color(0xFFFFA726).withValues(alpha: 0.75),
         WxKind.cloud => const Color(0xFF78909C).withValues(alpha: 0.40),
         WxKind.rain => const Color(0xFF1E88E5)
             .withValues(alpha: const [0.52, 0.52, 0.60, 0.68, 0.76, 0.84][rain.clamp(0, 5)]),
@@ -92,9 +92,12 @@ class WeatherIcon extends StatelessWidget {
     if (c == null) return SizedBox(width: box, height: box);
     final spec = weatherIconSpec(c);
     final scheme = Theme.of(context).colorScheme;
+    // 太陽は橙の下地に黄色だと埋もれる（2026-11-03 ユーザー指摘）ので白抜き（白一色のシルエット）にする
     Widget img(WxKind k, double w) => Image.asset('assets/weather/${assetOf(k, rain: rain)}.png',
         width: w,
         height: w,
+        color: k == WxKind.sun ? Colors.white : null,
+        colorBlendMode: k == WxKind.sun ? BlendMode.srcIn : null,
         errorBuilder: (_, _, _) => SizedBox(
             width: w, height: w, child: Icon(Icons.cloud, size: w * 0.8, color: Colors.grey)));
     if (spec == null) {
