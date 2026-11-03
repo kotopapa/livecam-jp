@@ -3125,6 +3125,11 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
+  String pwWeekNoteNear(String area, String near, String station) {
+    return 'Dự báo tuần cho $area; nhiệt độ hôm nay và ngày mai tại $near, sau đó tại $station';
+  }
+
+  @override
   String get pwSource =>
       'Nguồn: trang web Cơ quan Khí tượng Nhật Bản (dự báo phân bố thời tiết, dự báo chuỗi thời gian theo khu vực, dự báo theo tỉnh, AMeDAS). Biểu tượng thời tiết: Meteocons (Bas Milius, MIT).';
 

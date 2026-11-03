@@ -3020,6 +3020,11 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
+  String pwWeekNoteNear(String area, String near, String station) {
+    return '주간 예보는 $area, 기온은 오늘·내일 $near, 이후 $station입니다';
+  }
+
+  @override
   String get pwSource =>
       '출처: 기상청 홈페이지(날씨 분포 예보, 지역 시계열 예보, 부현 날씨 예보, AMeDAS). 날씨 아이콘: Meteocons(Bas Milius, MIT)';
 

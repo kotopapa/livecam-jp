@@ -3114,6 +3114,11 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String pwWeekNoteNear(String area, String near, String station) {
+    return 'Weekly: forecast for $area; temperatures for $near today and tomorrow, then $station';
+  }
+
+  @override
   String get pwSource =>
       'Source: JMA website (Weather Distribution Forecast, Regional Time Series Forecast, Prefectural Forecast, AMeDAS). Weather icons: Meteocons (Bas Milius, MIT).';
 

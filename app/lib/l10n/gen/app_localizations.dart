@@ -5356,6 +5356,12 @@ abstract class AppLocalizations {
   /// **'週間は {area} の予報'**
   String pwWeekNoteArea(String area);
 
+  /// No description provided for @pwWeekNoteNear.
+  ///
+  /// In ja, this message translates to:
+  /// **'週間は {area} の予報・気温は今日明日が {near}、それ以降は {station}'**
+  String pwWeekNoteNear(String area, String near, String station);
+
   /// No description provided for @pwSource.
   ///
   /// In ja, this message translates to:

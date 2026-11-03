@@ -3009,6 +3009,11 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
+  String pwWeekNoteNear(String area, String near, String station) {
+    return '週間は $area の予報・気温は今日明日が $near、それ以降は $station';
+  }
+
+  @override
   String get pwSource =>
       '出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マーク: Meteocons（Bas Milius, MIT）';
 
@@ -6115,6 +6120,11 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   @override
   String pwWeekNoteArea(String area) {
     return 'しゅうかんは $area の よほう';
+  }
+
+  @override
+  String pwWeekNoteNear(String area, String near, String station) {
+    return 'しゅうかんは $area の よほう・きおんは きょう あしたが $near、その あとは $station';
   }
 
   @override

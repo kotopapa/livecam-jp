@@ -2995,6 +2995,11 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
+  String pwWeekNoteNear(String area, String near, String station) {
+    return '一周预报为$area，气温今明两天为$near，之后为$station';
+  }
+
+  @override
   String get pwSource =>
       '出处：气象厅网站（天气分布预报、区域时间序列预报、府县天气预报、AMeDAS）。天气图标：Meteocons（Bas Milius, MIT）';
 
@@ -6043,6 +6048,11 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   @override
   String pwWeekNoteArea(String area) {
     return '一週預報為$area';
+  }
+
+  @override
+  String pwWeekNoteNear(String area, String near, String station) {
+    return '一週預報為$area，氣溫今明兩天為$near，之後為$station';
   }
 
   @override
