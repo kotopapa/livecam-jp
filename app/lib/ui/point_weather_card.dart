@@ -126,9 +126,10 @@ class WeatherIcon extends StatelessWidget {
     }
     final radius = BorderRadius.circular(8);
     if (spec.then != null) {
-      // 「のち」: 斜めに 2 分割（左上＝前半、右下＝後半）
+      // 「のち」: 斜線（上 60% → 下 40%）で左右に 2 分割。前半は左、後半は右に、
+      // どちらも縦はほぼ中央（斜線の空きに合わせて前半を少し上、後半を少し下）に置く
       final a = kindsOf(spec.main).$1, b = kindsOf(spec.then!).$1;
-      final w = width * 0.68;
+      final w = width * 0.56;
       return ClipRRect(
         borderRadius: radius,
         child: SizedBox(
@@ -139,8 +140,8 @@ class WeatherIcon extends StatelessWidget {
                 size: Size(box, box),
                 painter: _SplitTilePainter(
                     tileColor(a, rain: rain, snow: snow), tileColor(b, rain: rain, snow: snow))),
-            Positioned(left: box * 0.02, top: box * 0.03, child: img(a, w)),
-            Positioned(right: box * 0.02, bottom: box * 0.03, child: img(b, w)),
+            Positioned(left: box * 0.27 - w / 2, top: box * 0.42 - w / 2, child: img(a, w)),
+            Positioned(left: box * 0.73 - w / 2, top: box * 0.58 - w / 2, child: img(b, w)),
           ]),
         ),
       );
@@ -155,7 +156,8 @@ class WeatherIcon extends StatelessWidget {
         child: img(main, width),
       );
     }
-    // 「時々・一時」: 主のマークに右下の三角で副の天気
+    // 「時々・一時」: 主のマークをほぼ中央（少し左上）に大きく、右下の三角に副の天気を小さく
+    final wm = width * 0.78, ws = width * 0.44;
     return ClipRRect(
       borderRadius: radius,
       child: SizedBox(
@@ -166,8 +168,18 @@ class WeatherIcon extends StatelessWidget {
               size: Size(box, box),
               painter: _CornerPainter(
                   tileColor(main, rain: rain, snow: snow), tileColor(sub, rain: rain, snow: snow))),
-          Positioned(left: box * 0.02, top: box * 0.02, child: img(main, width * 0.88)),
-          Positioned(right: box * 0.01, bottom: box * 0.01, child: img(sub, width * 0.52)),
+          Positioned(left: box * 0.42 - wm / 2, top: box * 0.42 - wm / 2, child: img(main, wm)),
+          // 副のマークは三角の中だけに描く（雪だるまの頭が斜線を越えないように）
+          ClipPath(
+            clipper: _CornerClipper(),
+            child: SizedBox(
+              width: box,
+              height: box,
+              child: Stack(children: [
+                Positioned(left: box * 0.79 - ws / 2, top: box * 0.79 - ws / 2, child: img(sub, ws)),
+              ]),
+            ),
+          ),
         ]),
       ),
     );
@@ -186,26 +198,42 @@ class _SplitTilePainter extends CustomPainter {
     final w = size.width, h = size.height;
     final l = Path()
       ..moveTo(0, 0)
-      ..lineTo(w * 0.64, 0)
-      ..lineTo(w * 0.36, h)
+      ..lineTo(w * 0.60, 0)
+      ..lineTo(w * 0.40, h)
       ..lineTo(0, h)
       ..close();
     final r = Path()
-      ..moveTo(w * 0.64, 0)
+      ..moveTo(w * 0.60, 0)
       ..lineTo(w, 0)
       ..lineTo(w, h)
-      ..lineTo(w * 0.36, h)
+      ..lineTo(w * 0.40, h)
       ..close();
     canvas.drawPath(l, Paint()..color = left);
     canvas.drawPath(r, Paint()..color = right);
-    canvas.drawLine(Offset(w * 0.64, 0), Offset(w * 0.36, h),
+    canvas.drawLine(Offset(w * 0.60, 0), Offset(w * 0.40, h),
         Paint()
-          ..color = Colors.white.withValues(alpha: 0.9)
-          ..strokeWidth = 1.5);
+          ..color = Colors.white
+          ..strokeWidth = 2);
   }
 
   @override
   bool shouldRepaint(_SplitTilePainter old) => old.left != left || old.right != right;
+}
+
+/// 「時々・一時」の右下の三角（斜線の内側）
+class _CornerClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    final w = size.width, h = size.height;
+    return Path()
+      ..moveTo(w, h * 0.38)
+      ..lineTo(w, h)
+      ..lineTo(w * 0.38, h)
+      ..close();
+  }
+
+  @override
+  bool shouldReclip(_CornerClipper old) => false;
 }
 
 /// 「時々・一時」の下地。主の色の面と、右下の三角（副の色）を重ねずに塗る
@@ -220,21 +248,21 @@ class _CornerPainter extends CustomPainter {
     final m = Path()
       ..moveTo(0, 0)
       ..lineTo(w, 0)
-      ..lineTo(w, h * 0.42)
-      ..lineTo(w * 0.42, h)
+      ..lineTo(w, h * 0.38)
+      ..lineTo(w * 0.38, h)
       ..lineTo(0, h)
       ..close();
     final c = Path()
-      ..moveTo(w, h * 0.42)
+      ..moveTo(w, h * 0.38)
       ..lineTo(w, h)
-      ..lineTo(w * 0.42, h)
+      ..lineTo(w * 0.38, h)
       ..close();
     canvas.drawPath(m, Paint()..color = main);
     canvas.drawPath(c, Paint()..color = corner);
-    canvas.drawLine(Offset(w, h * 0.42), Offset(w * 0.42, h),
+    canvas.drawLine(Offset(w, h * 0.38), Offset(w * 0.38, h),
         Paint()
-          ..color = Colors.white.withValues(alpha: 0.9)
-          ..strokeWidth = 1.2);
+          ..color = Colors.white
+          ..strokeWidth = 1.6);
   }
 
   @override
