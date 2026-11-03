@@ -114,7 +114,7 @@ class WeatherIcon extends StatelessWidget {
     if (spec.then != null) {
       // 「のち」: 斜めに 2 分割（左上＝前半、右下＝後半）
       final a = kindsOf(spec.main).$1, b = kindsOf(spec.then!).$1;
-      final w = width * 0.56;
+      final w = width * 0.68;
       return ClipRRect(
         borderRadius: radius,
         child: SizedBox(
@@ -125,8 +125,8 @@ class WeatherIcon extends StatelessWidget {
                 size: Size(box, box),
                 painter: _SplitTilePainter(
                     tileColor(a, rain: rain, snow: snow), tileColor(b, rain: rain, snow: snow))),
-            Positioned(left: box * 0.06, top: box * 0.08, child: img(a, w)),
-            Positioned(right: box * 0.06, bottom: box * 0.08, child: img(b, w)),
+            Positioned(left: box * 0.02, top: box * 0.03, child: img(a, w)),
+            Positioned(right: box * 0.02, bottom: box * 0.03, child: img(b, w)),
           ]),
         ),
       );
@@ -152,8 +152,8 @@ class WeatherIcon extends StatelessWidget {
               size: Size(box, box),
               painter: _CornerPainter(
                   tileColor(main, rain: rain, snow: snow), tileColor(sub, rain: rain, snow: snow))),
-          Positioned(left: box * 0.04, top: box * 0.04, child: img(main, width * 0.8)),
-          Positioned(right: box * 0.03, bottom: box * 0.03, child: img(sub, width * 0.42)),
+          Positioned(left: box * 0.02, top: box * 0.02, child: img(main, width * 0.88)),
+          Positioned(right: box * 0.01, bottom: box * 0.01, child: img(sub, width * 0.52)),
         ]),
       ),
     );
@@ -206,18 +206,18 @@ class _CornerPainter extends CustomPainter {
     final m = Path()
       ..moveTo(0, 0)
       ..lineTo(w, 0)
-      ..lineTo(w, h * 0.46)
-      ..lineTo(w * 0.46, h)
+      ..lineTo(w, h * 0.42)
+      ..lineTo(w * 0.42, h)
       ..lineTo(0, h)
       ..close();
     final c = Path()
-      ..moveTo(w, h * 0.46)
+      ..moveTo(w, h * 0.42)
       ..lineTo(w, h)
-      ..lineTo(w * 0.46, h)
+      ..lineTo(w * 0.42, h)
       ..close();
     canvas.drawPath(m, Paint()..color = main);
     canvas.drawPath(c, Paint()..color = corner);
-    canvas.drawLine(Offset(w, h * 0.46), Offset(w * 0.46, h),
+    canvas.drawLine(Offset(w, h * 0.42), Offset(w * 0.42, h),
         Paint()
           ..color = Colors.white.withValues(alpha: 0.9)
           ..strokeWidth = 1.2);
