@@ -62,27 +62,37 @@ class WeatherIcon extends StatelessWidget {
         _ => (WxKind.cloud, null),
       };
 
-  /// 種別ごとの 1 枚マーク。雨は 10mm/3h 以上で雨粒の多い extreme-rain、雪は雪だるま
+  /// 種別ごとの 1 枚マーク。雨は 10mm/3h 以上で雨粒の多い extreme-rain。
+  /// 雪は雪だるま（Tabler Icons の形を白塗りにして目とボタンを抜いた snowman-white。
+  /// Meteocons の雪だるまは白一色にすると形だけになり判別できなかった）、
+  /// 雷雨は雲と雨粒だけ白にして稲妻の黄色を残した thunderstorms-rain-white（元 SVG から生成）。
+  /// この 2 つは画像の時点で白いので実行時に塗らない（[isPrecolored]）
   static String assetOf(WxKind k, {int rain = 0}) => switch (k) {
         WxKind.sun => 'clear-day',
         WxKind.cloud => 'overcast',
         WxKind.rain => rain >= 3 ? 'extreme-rain' : 'rain',
-        WxKind.snow => 'snowman',
+        WxKind.snow => 'snowman-white',
         WxKind.sleet => 'sleet',
-        WxKind.thunder => 'thunderstorms-rain',
+        WxKind.thunder => 'thunderstorms-rain-white',
       };
 
-  /// 下地の色（晴れ＝橙、くもり＝灰、雨＝青、雪＝水色、みぞれ＝青灰、雷雨＝濃い青）。
-  /// 雨・雪は階級が上がるほど濃く。斜め分割・三角でも同じ色を使うので種別で見分けがつく
+  /// 画像の時点で白く仕上げてあり、実行時の白塗り（srcIn）をしない種別
+  static bool isPrecolored(WxKind k) => k == WxKind.snow || k == WxKind.thunder;
+
+  /// 下地の色（不透明。晴れ＝橙、くもり＝灰、雨＝青、雪＝水色、みぞれ＝青灰、雷雨＝濃い青）。
+  /// マークは白一色なので、下地は半透明にせずはっきりした色で塗る。雨・雪は階級が上がるほど濃く
   static Color tileColor(WxKind k, {int rain = 0, int snow = 0}) => switch (k) {
-        WxKind.sun => const Color(0xFFFFA726).withValues(alpha: 0.75),
-        WxKind.cloud => const Color(0xFF78909C).withValues(alpha: 0.40),
-        WxKind.rain => const Color(0xFF1E88E5)
-            .withValues(alpha: const [0.52, 0.52, 0.60, 0.68, 0.76, 0.84][rain.clamp(0, 5)]),
-        WxKind.snow =>
-          const Color(0xFF4FC3F7).withValues(alpha: const [0.52, 0.52, 0.64, 0.76][snow.clamp(0, 3)]),
-        WxKind.sleet => const Color(0xFF5C8DB8).withValues(alpha: 0.52),
-        WxKind.thunder => const Color(0xFF3949AB).withValues(alpha: 0.52),
+        WxKind.sun => const Color(0xFFF7A738),
+        WxKind.cloud => const Color(0xFF9DA7B0),
+        WxKind.rain => const [
+            Color(0xFF3D93E8), Color(0xFF3D93E8), Color(0xFF2F80D6),
+            Color(0xFF256EC2), Color(0xFF1C5DAD), Color(0xFF154C94),
+          ][rain.clamp(0, 5)],
+        WxKind.snow => const [
+            Color(0xFF6FC3EE), Color(0xFF6FC3EE), Color(0xFF52B2E6), Color(0xFF3AA0DB),
+          ][snow.clamp(0, 3)],
+        WxKind.sleet => const Color(0xFF6E92B8),
+        WxKind.thunder => const Color(0xFF5B62C4),
       };
 
   @override
@@ -92,14 +102,18 @@ class WeatherIcon extends StatelessWidget {
     if (c == null) return SizedBox(width: box, height: box);
     final spec = weatherIconSpec(c);
     final scheme = Theme.of(context).colorScheme;
-    // 太陽は橙の下地に黄色だと埋もれる（2026-11-03 ユーザー指摘）ので白抜き（白一色のシルエット）にする
-    Widget img(WxKind k, double w) => Image.asset('assets/weather/${assetOf(k, rain: rain)}.png',
+    // マークは白一色のシルエット（Meteocons の塗り版をそのまま使うと雲の階調や雪だるまの
+    // 描き込みが小さい表示でつぶれ、種類ごとに重さがばらつく。2026-11-03 ウェザーニュース比較）
+    Widget img(WxKind k, double w) {
+      final white = !isPrecolored(k);
+      return Image.asset('assets/weather/${assetOf(k, rain: rain)}.png',
         width: w,
         height: w,
-        color: k == WxKind.sun ? Colors.white : null,
-        colorBlendMode: k == WxKind.sun ? BlendMode.srcIn : null,
+        color: white ? Colors.white : null,
+        colorBlendMode: white ? BlendMode.srcIn : null,
         errorBuilder: (_, _, _) => SizedBox(
             width: w, height: w, child: Icon(Icons.cloud, size: w * 0.8, color: Colors.grey)));
+    }
     if (spec == null) {
       return Container(
         width: box,

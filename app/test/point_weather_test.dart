@@ -571,7 +571,7 @@ void main() {
       expect(WeatherIcon.kindsOf('overcast-snow'), (WxKind.cloud, WxKind.snow));
       expect(WeatherIcon.kindsOf('partly-cloudy-day'), (WxKind.sun, WxKind.cloud));
       expect(WeatherIcon.kindsOf('snow'), (WxKind.snow, null));
-      expect(WeatherIcon.assetOf(WxKind.snow), 'snowman');
+      expect(WeatherIcon.assetOf(WxKind.snow), 'snowman-white');
       expect(WeatherIcon.assetOf(WxKind.rain, rain: 3), 'extreme-rain');
       await tester.pumpWidget(testApp(const Row(children: [
         WeatherIcon('204'), // くもり時々雪 → 雲＋雪だるまの三角
@@ -583,9 +583,9 @@ void main() {
       String src(Image w) => (w.image as AssetImage).assetName;
       final names = tester.widgetList<Image>(find.byType(Image)).map(src).toList();
       expect(names, [
-        'assets/weather/overcast.png', 'assets/weather/snowman.png',
+        'assets/weather/overcast.png', 'assets/weather/snowman-white.png',
         'assets/weather/overcast.png', 'assets/weather/clear-day.png',
-        'assets/weather/snowman.png',
+        'assets/weather/snowman-white.png',
         'assets/weather/sleet.png',
       ]);
       expect(find.byIcon(Icons.arrow_forward_ios), findsNothing); // 矢印は廃止

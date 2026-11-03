@@ -9,11 +9,13 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 
-const NAMES = [
-  'clear-day', 'partly-cloudy-day', 'partly-cloudy-day-rain', 'partly-cloudy-day-snow',
-  'partly-cloudy-day-sleet', 'overcast', 'overcast-day', 'overcast-rain', 'overcast-snow',
-  'rain', 'snow', 'sleet', 'thunderstorms-rain', 'extreme-rain', 'snowman',
-];
+// 2026-11-03: 「時々」「のち」はアプリ側で主・副のマークを組み合わせるので、使う元画像は
+// 種別ごとの 1 枚だけ（partly-cloudy-* / overcast-* の合成画像は不要になった）。アプリは
+// これらを白一色（BlendMode.srcIn）で描く。雪だるま（Tabler Icons の形を白塗り・目とボタン抜き）と
+// 雷雨（雲と雨粒だけ白・稲妻は黄色）は tools/weather_icons/*.svg から
+//   rsvg-convert -w 144 -h 144 tools/weather_icons/<name>.svg -o app/assets/weather/<name>.png
+// で生成する（snowman-white / thunderstorms-rain-white）。
+const NAMES = ['clear-day', 'overcast', 'rain', 'extreme-rain', 'sleet'];
 const BASE = 'https://cdn.jsdelivr.net/npm/@meteocons/svg-static';
 const SIZE = 144;
 const out = process.argv[2] ?? '../app/assets/weather';

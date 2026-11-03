@@ -31,10 +31,13 @@ import 'data/fcm_channel.dart';
 import 'ui/onboarding_screen.dart';
 
 Future<void> main() async {
-  // 天気マーク（Meteocons、Bas Milius、MIT）のライセンスを設定のライセンス画面に載せる
+  // 天気マーク（Meteocons、Bas Milius、MIT。雪だるまの形は Tabler Icons、Paweł Kuna、MIT）の
+  // ライセンスを設定のライセンス画面に載せる
   LicenseRegistry.addLicense(() async* {
     yield LicenseEntryWithLineBreaks(
         const ['Meteocons'], await rootBundle.loadString('assets/weather/LICENSE.txt'));
+    yield LicenseEntryWithLineBreaks(
+        const ['Tabler Icons'], await rootBundle.loadString('assets/weather/LICENSE_tabler.txt'));
   });
   final binding = WidgetsFlutterBinding.ensureInitialized();
   // 画像はカメラ静止画(数MB級)が主体のため、既定100MBでは端末メモリを
