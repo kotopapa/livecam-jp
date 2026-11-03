@@ -76,6 +76,54 @@ List<dynamic> forecast() => [
       },
     ];
 
+/// 11時発表（神奈川。週間は翌日から・今日の最低は 09 時の後ろに最高と同じ値で入る）
+List<dynamic> forecast11() => [
+      {
+        'timeSeries': [
+          {
+            'timeDefines': ['2026-11-03T11:00:00+09:00', '2026-11-04T00:00:00+09:00', '2026-11-05T00:00:00+09:00'],
+            'areas': [
+              {'area': {'name': '東部', 'code': '140010'}, 'weatherCodes': ['101', '212', '302']},
+              {'area': {'name': '西部', 'code': '140020'}, 'weatherCodes': ['111', '212', '302']},
+            ],
+          },
+          {
+            'timeDefines': ['2026-11-03T12:00:00+09:00', '2026-11-03T18:00:00+09:00', '2026-11-04T00:00:00+09:00'],
+            'areas': [
+              {'area': {'name': '東部', 'code': '140010'}, 'pops': ['0', '0', '10']},
+              {'area': {'name': '西部', 'code': '140020'}, 'pops': ['0', '10', '10']},
+            ],
+          },
+          {
+            'timeDefines': ['2026-11-03T09:00:00+09:00', '2026-11-03T00:00:00+09:00',
+              '2026-11-04T00:00:00+09:00', '2026-11-04T09:00:00+09:00'],
+            'areas': [
+              {'area': {'name': '横浜', 'code': '46106'}, 'temps': ['19', '19', '13', '18']},
+              {'area': {'name': '小田原', 'code': '46166'}, 'temps': ['20', '20', '11', '18']},
+            ],
+          },
+        ],
+      },
+      {
+        'timeSeries': [
+          {
+            'timeDefines': ['2026-11-04T00:00:00+09:00', '2026-11-05T00:00:00+09:00', '2026-11-06T00:00:00+09:00'],
+            'areas': [
+              {'area': {'name': '神奈川県', 'code': '140000'},
+               'weatherCodes': ['212', '302', '201'], 'pops': ['', '90', '30']}
+            ],
+          },
+          {
+            'timeDefines': ['2026-11-04T00:00:00+09:00', '2026-11-05T00:00:00+09:00', '2026-11-06T00:00:00+09:00'],
+            'areas': [
+              {'area': {'name': '横浜', 'code': '46106'},
+               'tempsMin': ['', '16', '12'], 'tempsMax': ['', '24', '20']}
+            ],
+          },
+        ],
+      },
+    ];
+
 Map<String, dynamic> vpfd() => {
       'reportDateTime': '2026-11-01T17:00:00+09:00',
       'areaTimeSeries': {
@@ -162,15 +210,42 @@ void main() {
       expect(w.repTemps[DateTime.utc(2026, 11, 1, 15)], 17);
     });
 
-    test('週間: 初日の気温が空なら今日明日の最高・最低で補う', () {
+    test('週間: 今日は [0] の列を足し、初日の気温が空なら今日明日の最高・最低で補う', () {
       final w = PointWeathers.parseWeek(forecast(), '140010', DateTime(2026, 11, 1, 21))!;
       expect(w.areaName, '神奈川県');
       expect(w.stationName, '横浜');
-      expect(w.days.length, 3);
-      expect(w.days[0].day, DateTime(2026, 11, 2));
-      expect((w.days[0].tempMax, w.days[0].tempMin), (21, 13));
-      expect(w.days[0].pop, 70); // 週間の初日は空 → [0] の6時間確率のその日の最大
-      expect((w.days[1].tempMax, w.days[1].tempMin, w.days[1].pop), (20, 13, 20));
+      expect(w.nearStationName, isNull);
+      expect(w.days.length, 4);
+      // 今日（11/1）は週間に無い → [0] の日別天気と 6 時間確率（18 時枠）。気温は無い
+      expect(w.days[0].day, DateTime(2026, 11, 1));
+      expect((w.days[0].code, w.days[0].pop, w.days[0].tempMax, w.days[0].tempMin), ('200', 10, null, null));
+      expect(w.days[1].day, DateTime(2026, 11, 2));
+      expect((w.days[1].tempMax, w.days[1].tempMin), (21, 13));
+      expect(w.days[1].pop, 70); // 週間の初日は空 → [0] の6時間確率のその日の最大
+      expect((w.days[2].tempMax, w.days[2].tempMin, w.days[2].pop), (20, 13, 20));
+    });
+
+    test('週間: 11時発表は今日の列を [0] から作り、気温はカメラに最も近い地点', () {
+      final coords = {'46106': (35.4383, 139.6517), '46166': (35.2767, 139.155)};
+      // 小田原城のカメラ → 今日明日は小田原、3日目からは横浜
+      final w = PointWeathers.parseWeek(forecast11(), '140020', DateTime(2026, 11, 3, 12),
+          lat: 35.2506, lng: 139.1536, coords: coords)!;
+      expect((w.stationName, w.nearStationName), ('横浜', '小田原'));
+      expect(w.days.map((d) => d.day.day).toList(), [3, 4, 5, 6]);
+      // 今日: 天気は [0]、確率は 12 時・18 時枠の最大、最高は 09 時の値、最低は出さない
+      expect((w.days[0].code, w.days[0].pop, w.days[0].tempMax, w.days[0].tempMin), ('111', 10, 20, null));
+      // 明日: 天気は週間、確率は週間の初日が空なので [0] の 00 時枠、気温は小田原
+      expect((w.days[1].code, w.days[1].pop, w.days[1].tempMax, w.days[1].tempMin), ('212', 10, 18, 11));
+      // 3日目から: 週間の横浜
+      expect((w.days[2].pop, w.days[2].tempMax, w.days[2].tempMin), (90, 24, 16));
+      // 横浜に近いカメラなら横浜だけ
+      final y = PointWeathers.parseWeek(forecast11(), '140010', DateTime(2026, 11, 3, 12),
+          lat: 35.45, lng: 139.64, coords: coords)!;
+      expect((y.stationName, y.nearStationName), ('横浜', null));
+      expect((y.days[0].tempMax, y.days[1].tempMax, y.days[1].tempMin), (19, 18, 13));
+      // 座標が無ければ従来どおり週間の地点の名前で [0] を引く
+      final n = PointWeathers.parseWeek(forecast11(), '140020', DateTime(2026, 11, 3, 12))!;
+      expect((n.nearStationName, n.days[0].tempMax), (null, 19));
     });
 
     test('週間: 過ぎた日は出さない', () {
@@ -381,7 +456,7 @@ void main() {
       expect(find.byType(WeatherIcon, skipOffstage: false), findsWidgets);
       expect(find.byIcon(Icons.navigation, skipOffstage: false), findsNothing); // 3時間予報に風は出さない
       expect(find.text('月'), findsOneWidget);
-      expect(find.text('日'), findsNothing); // 11/2 は月曜 〜 11/4 は水曜
+      expect(find.text('日'), findsOneWidget); // 今日 11/1（日曜）の列も出る 〜 11/4 は水曜
       expect(find.textContaining('週間は 神奈川県 の予報・気温は 横浜'), findsOneWidget);
       expect(find.textContaining('出典：気象庁ホームページ'), findsOneWidget);
       expect(find.textContaining('Meteocons（Bas Milius, MIT）'), findsOneWidget);
@@ -471,6 +546,26 @@ void main() {
         expect(find.byType(WeatherIcon, skipOffstage: false), findsWidgets);
       });
     }
+
+    testWidgets('今日＋週間7日の 8 列でも 390px 幅で崩れない', (tester) async {
+      final week = WeekForecast(areaName: '神奈川県', stationName: '横浜', nearStationName: '小田原', days: [
+        for (var i = 0; i < 8; i++)
+          WeekDay(day: DateTime(2026, 11, 1 + i), code: '302', pop: 100, tempMax: -10 + i, tempMin: -15 + i),
+      ]);
+      for (final loc in const [
+        Locale('ja'),
+        Locale('en'),
+        Locale('vi'),
+        Locale.fromSubtags(languageCode: 'ja', scriptCode: 'Hira'),
+      ]) {
+        await pump(tester, PointWeather(steps: const [], week: week), locale: loc);
+        expect(find.byType(WeatherIcon, skipOffstage: false), findsNWidgets(8));
+        expect(tester.takeException(), isNull);
+        if (loc == const Locale('ja')) {
+          expect(find.textContaining('気温は今日明日が 小田原、それ以降は 横浜'), findsOneWidget);
+        }
+      }
+    });
 
     testWidgets('復帰の合図で取り直す', (tester) async {
       final tick = ValueNotifier(0);

@@ -449,7 +449,9 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
   }
 
   Widget _week(BuildContext context, AppLocalizations l, WeekForecast w, TextStyle muted) {
-    final days = w.days.take(7).toList();
+    // 今日＋週間7日で最大8列。8列のときはマークを少し小さく
+    final days = w.days.take(8).toList();
+    final iconW = days.length > 7 ? 36.0 : 40.0;
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Row(children: [
         for (final d in days)
@@ -466,7 +468,7 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
                               : null)),
               Text('${d.day.month}/${d.day.day}', style: muted.copyWith(fontSize: 10)),
               const SizedBox(height: 2),
-              WeatherIcon(d.code, width: 40),
+              WeatherIcon(d.code, width: iconW),
               Text(d.tempMax == null ? '—' : '${d.tempMax}°',
                   style: const TextStyle(fontSize: 13, color: _hotColor, fontWeight: FontWeight.w600)),
               Text(d.tempMin == null ? '—' : '${d.tempMin}°',
@@ -479,7 +481,9 @@ class _PointWeatherCardState extends State<PointWeatherCard> {
       Text(
           w.stationName == null || w.stationName!.isEmpty
               ? l.pwWeekNoteArea(w.areaName)
-              : l.pwWeekNote(w.areaName, w.stationName!),
+              : w.nearStationName == null
+                  ? l.pwWeekNote(w.areaName, w.stationName!)
+                  : l.pwWeekNoteNear(w.areaName, w.nearStationName!, w.stationName!),
           style: muted),
     ]);
   }

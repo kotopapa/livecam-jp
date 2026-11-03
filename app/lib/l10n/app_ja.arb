@@ -2808,6 +2808,8 @@
   "pwWeekNote": "週間は {area} の予報・気温は {station}",
   "@pwWeekNote": {"placeholders": {"area": {"type": "String"}, "station": {"type": "String"}}},
   "pwWeekNoteArea": "週間は {area} の予報",
+  "pwWeekNoteNear": "週間は {area} の予報・気温は今日明日が {near}、それ以降は {station}",
+  "@pwWeekNoteNear": {"placeholders": {"area": {"type": "String"}, "near": {"type": "String"}, "station": {"type": "String"}}},
   "@pwWeekNoteArea": {"placeholders": {"area": {"type": "String"}}},
   "pwSource": "出典：気象庁ホームページ（天気分布予報・地域時系列予報・府県天気予報・アメダス）。天気マーク: Meteocons（Bas Milius, MIT）",
   "pwIssued": "{time} 発表",

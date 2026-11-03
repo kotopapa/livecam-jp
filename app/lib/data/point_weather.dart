@@ -164,15 +164,27 @@ class WeekDay {
   final int? pop;
   final int? tempMax;
   final int? tempMin;
+
+  WeekDay copyWith({String? code, int? pop, int? tempMax, int? tempMin, bool clearTemps = false}) =>
+      WeekDay(
+          day: day,
+          code: code ?? this.code,
+          pop: pop ?? this.pop,
+          tempMax: clearTemps ? tempMax : (tempMax ?? this.tempMax),
+          tempMin: clearTemps ? tempMin : (tempMin ?? this.tempMin));
 }
 
 /// 週間予報（府県予報 [1]）
 class WeekForecast {
-  const WeekForecast({required this.areaName, this.stationName, required this.days});
+  const WeekForecast(
+      {required this.areaName, this.stationName, this.nearStationName, required this.days});
   final String areaName;
 
-  /// 気温の代表地点（横浜 など）
+  /// 週間の気温の地点（横浜 など。府県に1地点）
   final String? stationName;
+
+  /// 今日明日の気温の地点（小田原 など。[stationName] と同じなら null）
+  final String? nearStationName;
   final List<WeekDay> days;
 }
 
@@ -622,8 +634,14 @@ class PointWeathers {
   static String? _code(Object? v) => v is String && v.isNotEmpty ? v : null;
   static int? _intStr(Object? v) => v is String ? int.tryParse(v) : _int(v);
 
-  /// 府県予報 JSON の週間（[1]）。[class10] は一次細分区域コード
-  static WeekForecast? parseWeek(List<dynamic> json, String class10, DateTime nowJst) {
+  /// 府県予報 JSON の週間（[1]）に今日・明日（[0]）を合わせた日別の予報。[class10] は一次細分区域コード。
+  ///
+  /// 11時・17時発表の週間は翌日から始まるので、今日の列は [0] の日別天気・6時間降水確率・
+  /// 今日明日の最高最低気温で作る。気温の地点は [coords]（アメダス地点コード → 緯度経度）と
+  /// [lat]/[lng] があればカメラに最も近い地点を選ぶ（週間の気温は府県に1地点だけなので、
+  /// 今日明日は [0] の地点（横浜・小田原 など）、3日目からは週間の地点になる）。
+  static WeekForecast? parseWeek(List<dynamic> json, String class10, DateTime nowJst,
+      {double? lat, double? lng, Map<String, (double, double)> coords = const {}}) {
     if (json.length < 2 || json[1] is! Map) return null;
     final series = (json[1] as Map)['timeSeries'];
     if (series is! List || series.length < 2) return null;
@@ -636,8 +654,9 @@ class PointWeathers {
     final a0 = areas0[idx] as Map;
     final areas1 = (s1['areas'] as List?) ?? const [];
     if (areas1.isEmpty) return null;
-    // 代表地点: 週間の区域数と同じなら同じ並び、そうでなければ先頭
-    final a1 = (found && areas1.length == areas0.length ? areas1[idx] : areas1.first) as Map;
+    // 週間の気温地点: カメラに最も近い地点。座標が無ければ区域数が同じなら同じ並び、違えば先頭
+    final a1 = _nearestArea(areas1, lat, lng, coords) ??
+        (found && areas1.length == areas0.length ? areas1[idx] : areas1.first) as Map;
     final defs = (s0['timeDefines'] as List?) ?? const [];
     final codes = (a0['weatherCodes'] as List?) ?? const [];
     final pops = (a0['pops'] as List?) ?? const [];
@@ -645,7 +664,7 @@ class PointWeathers {
     final tmax = (a1['tempsMax'] as List?) ?? const [];
     final tmin = (a1['tempsMin'] as List?) ?? const [];
     final today = startOfDay(nowJst);
-    final days = <WeekDay>[];
+    final byDay = <DateTime, WeekDay>{};
     for (var k = 0; k < defs.length; k++) {
       final t = DateTime.tryParse('${defs[k]}');
       if (t == null) continue;
@@ -659,16 +678,43 @@ class PointWeathers {
           break;
         }
       }
-      days.add(WeekDay(
+      byDay[day] = WeekDay(
         day: day,
         code: k < codes.length ? _code(codes[k]) : null,
         pop: k < pops.length ? _intStr(pops[k]) : null,
         tempMax: k1 >= 0 && k1 < tmax.length ? _intStr(tmax[k1]) : null,
         tempMin: k1 >= 0 && k1 < tmin.length ? _intStr(tmin[k1]) : null,
-      ));
+      );
     }
+    // [0] の日別天気（今日・明日・明後日）。週間に無い日（今日）はここから列を作る
+    final st = json[0] is Map ? ((json[0] as Map)['timeSeries'] as List?) : null;
+    if (st != null && st.isNotEmpty && st[0] is Map) {
+      final s = st[0] as Map;
+      final ar = (s['areas'] as List?) ?? const [];
+      Map? a;
+      for (final x in ar) {
+        if ((x as Map)['area']?['code'] == class10) a = x;
+      }
+      a ??= ar.isNotEmpty ? ar.first as Map : null;
+      final d0 = ((s['timeDefines'] as List?) ?? const []).cast<String>();
+      final c0 = (a?['weatherCodes'] as List?) ?? const [];
+      for (var m = 0; m < d0.length && m < c0.length; m++) {
+        final t = DateTime.tryParse(d0[m]);
+        if (t == null) continue;
+        final day = startOfDay(toJstWallClock(t));
+        if (day.isBefore(today)) continue;
+        final cur = byDay[day];
+        if (cur == null) {
+          byDay[day] = WeekDay(day: day, code: _code(c0[m]));
+        } else if (cur.code == null) {
+          byDay[day] = cur.copyWith(code: _code(c0[m]));
+        }
+      }
+    }
+    final keys = byDay.keys.toList()..sort();
+    final days = [for (final k in keys) byDay[k]!];
     if (days.isEmpty) return null;
-    // 降水確率が空の日（週間の初日）は [0] の6時間ごとの確率のうち、その日（JST）に
+    // 降水確率が空の日（今日・週間の初日）は [0] の6時間ごとの確率のうち、その日（JST）に
     // 開始する枠の最大値で補う
     final p6 = parsePops(json, class10);
     for (var i = 0; i < days.length; i++) {
@@ -678,56 +724,74 @@ class PointWeathers {
         if (startOfDay(toJstWallClock(e.key)) != days[i].day) continue;
         if (mx == null || e.value > mx) mx = e.value;
       }
-      if (mx != null) {
-        days[i] = WeekDay(
-            day: days[i].day,
-            code: days[i].code,
-            pop: mx,
-            tempMax: days[i].tempMax,
-            tempMin: days[i].tempMin);
-      }
+      if (mx != null) days[i] = days[i].copyWith(pop: mx);
     }
-    // 気温が空の日は [0] の今日明日の最高・最低（00時=最低・09時=最高）で補う
-    final st = json[0] is Map ? ((json[0] as Map)['timeSeries'] as List?) : null;
+    // 今日明日の最高・最低は [0] の地点（府県内に数地点）のうちカメラに最も近い地点の値を優先する
+    // （00時=最低・09時=最高。11時発表は今日の最低が 09時の後ろに最高と同じ値で入るので使わない）
+    String? nearName;
     if (st != null && st.length > 2 && st[2] is Map) {
       final s2 = st[2] as Map;
       final ar = (s2['areas'] as List?) ?? const [];
       final name = (a1['area'] as Map?)?['name'];
-      Map? m2;
-      for (final a in ar) {
-        if ((a as Map)['area']?['name'] == name) m2 = a;
+      Map? m2 = _nearestArea(ar, lat, lng, coords);
+      if (m2 == null) {
+        for (final a in ar) {
+          if ((a as Map)['area']?['name'] == name) m2 = a;
+        }
       }
       m2 ??= ar.isNotEmpty ? ar.first as Map : null;
+      nearName = (m2?['area'] as Map?)?['name'] as String?;
       final d2 = ((s2['timeDefines'] as List?) ?? const []).cast<String>();
       final temps = (m2?['temps'] as List?) ?? const [];
       for (var i = 0; i < days.length; i++) {
-        int? mx = days[i].tempMax, mn = days[i].tempMin;
+        int? mx, mn, mxAt, mnAt;
         for (var m = 0; m < d2.length && m < temps.length; m++) {
           final t = DateTime.tryParse(d2[m]);
           if (t == null) continue;
           final w = toJstWallClock(t);
           if (startOfDay(w) != days[i].day) continue;
           final v = _intStr(temps[m]);
+          if (v == null) continue;
           if (w.hour < 9) {
-            mn ??= v;
+            mn = v;
+            mnAt = m;
           } else {
-            mx ??= v;
+            mx = v;
+            mxAt = m;
           }
         }
+        if (mn != null && mxAt != null && mnAt! > mxAt) mn = null; // 11時発表の今日の最低
+        mx ??= days[i].tempMax;
+        mn ??= days[i].tempMin;
         if (mx != days[i].tempMax || mn != days[i].tempMin) {
-          days[i] = WeekDay(
-              day: days[i].day,
-              code: days[i].code,
-              pop: days[i].pop,
-              tempMax: mx,
-              tempMin: mn);
+          days[i] = days[i].copyWith(tempMax: mx, tempMin: mn, clearTemps: true);
         }
       }
     }
+    final stationName = (a1['area'] as Map?)?['name'] as String?;
     return WeekForecast(
         areaName: (a0['area'] as Map?)?['name'] as String? ?? '',
-        stationName: (a1['area'] as Map?)?['name'] as String?,
+        stationName: stationName,
+        nearStationName: nearName == null || nearName == stationName ? null : nearName,
         days: days);
+  }
+
+  /// `areas[]` のうち地点コード（アメダス）の座標がカメラに最も近いもの。座標が無ければ null
+  static Map? _nearestArea(List areas, double? lat, double? lng, Map<String, (double, double)> coords) {
+    if (lat == null || lng == null || coords.isEmpty) return null;
+    Map? best;
+    double bestD = double.infinity;
+    for (final a in areas) {
+      if (a is! Map) continue;
+      final c = coords['${(a['area'] as Map?)?['code']}'];
+      if (c == null) continue;
+      final d = distanceMeters(lat, lng, c.$1, c.$2);
+      if (d < bestD) {
+        bestD = d;
+        best = a;
+      }
+    }
+    return best;
   }
 
   /// 府県予報 [0] timeSeries[1] の6時間降水確率（枠の開始 instant → %）
@@ -921,7 +985,11 @@ class PointWeathers {
     if (area == null) return (null, const <DateTime, int>{});
     final json = await WaveForecasts.forecastJson(area.office, client: cl);
     if (json == null) return (null, const <DateTime, int>{});
-    return (parseWeek(json, area.code, nowJst), parsePops(json, area.code));
+    final coords = {for (final s in await _loadStations()) s.id: (s.lat, s.lng)};
+    return (
+      parseWeek(json, area.code, nowJst, lat: c.lat, lng: c.lng, coords: coords),
+      parsePops(json, area.code)
+    );
   }
 
   static Future<AmedasNow?> _fetchAmedas(Camera c, http.Client cl) async {
