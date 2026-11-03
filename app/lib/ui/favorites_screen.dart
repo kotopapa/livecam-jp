@@ -18,10 +18,12 @@ class FavoritesScreen extends StatefulWidget {
   State<FavoritesScreen> createState() => _FavoritesScreenState();
 }
 
-enum _FavSort { newest, oldest, name, category }
+/// custom=利用者がドラッグで並べた順（既定。ウィジェットもこの順）
+enum _FavSort { custom, newest, oldest, name, category }
 
 /// 並べ替えの表示名（表示時に l10n で解決する）
 String _favSortLabel(AppLocalizations l10n, _FavSort sort) => switch (sort) {
+      _FavSort.custom => l10n.favoritesSortCustom,
       _FavSort.newest => l10n.favoritesSortNewest,
       _FavSort.oldest => l10n.favoritesSortOldest,
       _FavSort.name => l10n.favoritesSortName,
@@ -31,7 +33,9 @@ String _favSortLabel(AppLocalizations l10n, _FavSort sort) => switch (sort) {
 class _FavoritesScreenState extends State<FavoritesScreen> {
   bool _cardView = true;
   bool _bulkRefreshing = false;
-  _FavSort _sort = _FavSort.newest;
+  /// ドラッグで並べ替える画面（フィルタ・並べ替えを無視して全件を利用者の順で出す）
+  bool _reordering = false;
+  _FavSort _sort = _FavSort.custom;
   final Set<String> _filterCategories = {}; // 空=全カテゴリ
   bool _videoOnly = false;
   // カメラごとの再取得キー。一括更新は3件ずつ順次進める（SPEC 9.2⑤）
@@ -67,13 +71,17 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
 
   void _onChanged() => setState(() {});
 
-  /// 登録が新しい順を基準に、フィルタ→並べ替えを適用した一覧
+  /// 利用者が並べた順（custom）か登録が新しい順を基準に、フィルタ→並べ替えを
+  /// 適用した一覧
   List<Camera> get _favorites {
     final byId = {
       for (final c in widget.app.repository.cameras) c.id: c
     };
+    final baseIds = _sort == _FavSort.custom
+        ? widget.app.favorites.ordered
+        : widget.app.favorites.newestFirst;
     var list = [
-      for (final id in widget.app.favorites.newestFirst)
+      for (final id in baseIds)
         if (byId[id] != null) byId[id]!,
     ];
     if (_filterCategories.isNotEmpty) {
@@ -83,6 +91,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     }
     if (_videoOnly) list = list.where((c) => c.isVideo).toList();
     switch (_sort) {
+      case _FavSort.custom:
       case _FavSort.newest:
         break; // 基準順のまま
       case _FavSort.oldest:
@@ -111,11 +120,22 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
+    if (_reordering) return _buildReorder(l10n);
     final favorites = _favorites;
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.favoritesTitle(favorites.length)),
         actions: [
+          if (widget.app.favorites.ids.length > 1)
+            IconButton(
+              key: const Key('favorites_reorder'),
+              tooltip: l10n.favoritesReorder,
+              icon: const Icon(Icons.swap_vert),
+              onPressed: () => setState(() {
+                _reordering = true;
+                _sort = _FavSort.custom;
+              }),
+            ),
           PopupMenuButton<_FavSort>(
             tooltip: l10n.favoritesSort,
             icon: const Icon(Icons.sort),
@@ -179,6 +199,62 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             ),
           ),
         Expanded(child: _buildBody(favorites)),
+      ]),
+    );
+  }
+
+  /// ドラッグで並べ替える画面。全件を利用者の順で出し、右端の取っ手で動かす
+  Widget _buildReorder(AppLocalizations l10n) {
+    final favorites = widget.app.favoriteCameras();
+    final scheme = Theme.of(context).colorScheme;
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(l10n.favoritesReorderTitle),
+        actions: [
+          TextButton(
+            key: const Key('favorites_reorder_done'),
+            onPressed: () => setState(() => _reordering = false),
+            child: Text(l10n.favoritesReorderDone),
+          ),
+        ],
+      ),
+      body: Column(children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 10, 16, 6),
+          child: Text(l10n.favoritesReorderHint,
+              style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
+        ),
+        Expanded(
+          child: ReorderableListView.builder(
+            buildDefaultDragHandles: false,
+            itemCount: favorites.length,
+            // onReorderItem の newIndex は取り出した後の並びでの位置
+            onReorderItem: (oldIndex, newIndex) =>
+                widget.app.moveFavorite(oldIndex, newIndex),
+            itemBuilder: (context, i) {
+              final c = favorites[i];
+              return ListTile(
+                key: ValueKey('reorder-${c.id}'),
+                leading: ClipRRect(
+                  borderRadius: BorderRadius.circular(6),
+                  child: SizedBox(
+                      width: 72,
+                      height: 48,
+                      child: _thumb(context, widget.app, c, _ticks[c.id] ?? 0)),
+                ),
+                title: Text(c.name, maxLines: 1, overflow: TextOverflow.ellipsis),
+                subtitle: Text(c.operator,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 12)),
+                trailing: ReorderableDragStartListener(
+                  index: i,
+                  child: Icon(Icons.drag_handle, color: scheme.onSurfaceVariant),
+                ),
+              );
+            },
+          ),
+        ),
       ]),
     );
   }

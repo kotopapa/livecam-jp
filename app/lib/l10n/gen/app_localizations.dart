@@ -1204,6 +1204,36 @@ abstract class AppLocalizations {
   /// **'動画のみ'**
   String get favoritesVideoOnly;
 
+  /// No description provided for @favoritesSortCustom.
+  ///
+  /// In ja, this message translates to:
+  /// **'自分で並べた順'**
+  String get favoritesSortCustom;
+
+  /// No description provided for @favoritesReorder.
+  ///
+  /// In ja, this message translates to:
+  /// **'並べ替え（ドラッグ）'**
+  String get favoritesReorder;
+
+  /// No description provided for @favoritesReorderTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'お気に入りを並べ替え'**
+  String get favoritesReorderTitle;
+
+  /// No description provided for @favoritesReorderDone.
+  ///
+  /// In ja, this message translates to:
+  /// **'完了'**
+  String get favoritesReorderDone;
+
+  /// No description provided for @favoritesReorderHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'右端の取っ手を押したまま上下に動かします。ホーム画面ウィジェットもこの順で表示されます。'**
+  String get favoritesReorderHint;
+
   /// No description provided for @rankingTitle.
   ///
   /// In ja, this message translates to:

@@ -611,6 +611,22 @@ class AppLocalizationsVi extends AppLocalizations {
   String get favoritesVideoOnly => 'Chỉ video';
 
   @override
+  String get favoritesSortCustom => 'Thứ tự của tôi';
+
+  @override
+  String get favoritesReorder => 'Sắp xếp lại (kéo)';
+
+  @override
+  String get favoritesReorderTitle => 'Sắp xếp lại mục yêu thích';
+
+  @override
+  String get favoritesReorderDone => 'Xong';
+
+  @override
+  String get favoritesReorderHint =>
+      'Nhấn giữ tay cầm ở bên phải và kéo lên hoặc xuống. Tiện ích trên màn hình chính cũng hiển thị theo thứ tự này.';
+
+  @override
   String get rankingTitle => 'Xếp hạng toàn quốc';
 
   @override

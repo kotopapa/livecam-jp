@@ -595,6 +595,22 @@ class AppLocalizationsKo extends AppLocalizations {
   String get favoritesVideoOnly => '동영상만';
 
   @override
+  String get favoritesSortCustom => '내가 정한 순서';
+
+  @override
+  String get favoritesReorder => '순서 바꾸기(드래그)';
+
+  @override
+  String get favoritesReorderTitle => '즐겨찾기 순서 바꾸기';
+
+  @override
+  String get favoritesReorderDone => '완료';
+
+  @override
+  String get favoritesReorderHint =>
+      '오른쪽 손잡이를 누른 채 위아래로 움직이세요. 홈 화면 위젯도 이 순서로 표시됩니다.';
+
+  @override
   String get rankingTitle => '전국 랭킹';
 
   @override

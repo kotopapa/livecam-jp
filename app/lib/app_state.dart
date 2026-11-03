@@ -47,13 +47,20 @@ class AppState extends ChangeNotifier {
 
   bool isFavorite(Camera c) => favorites.contains(c.id);
 
-  /// お気に入りカメラ（登録が新しい順）。ウィジェットの表示順もこれに従う
+  /// お気に入りカメラ（利用者が並べた順）。ウィジェットの表示順もこれに従う
   List<Camera> favoriteCameras() {
     final byId = {for (final c in repository.cameras) c.id: c};
     return [
-      for (final id in favorites.newestFirst)
+      for (final id in favorites.ordered)
         if (byId[id] != null) byId[id]!,
     ];
+  }
+
+  /// お気に入りの表示順を動かす（お気に入り画面のドラッグ）。ウィジェットにも反映
+  Future<void> moveFavorite(int oldIndex, int newIndex) async {
+    await favorites.move(oldIndex, newIndex);
+    notifyListeners();
+    syncWidgets();
   }
 
   /// iOSホーム画面ウィジェットへ現在の状態を書き出す（お気に入り変更・

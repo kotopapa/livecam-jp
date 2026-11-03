@@ -610,6 +610,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get favoritesVideoOnly => 'Video only';
 
   @override
+  String get favoritesSortCustom => 'My order';
+
+  @override
+  String get favoritesReorder => 'Reorder (drag)';
+
+  @override
+  String get favoritesReorderTitle => 'Reorder favorites';
+
+  @override
+  String get favoritesReorderDone => 'Done';
+
+  @override
+  String get favoritesReorderHint =>
+      'Press and hold the handle on the right and move it up or down. The Home Screen widget uses this order too.';
+
+  @override
   String get rankingTitle => 'National ranking';
 
   @override

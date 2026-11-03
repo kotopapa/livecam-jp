@@ -56,7 +56,7 @@ void main() {
 
   test('buildFavoritesWidgetData: 順序・上限・キー形状', () {
     final favs = [
-      for (var i = 0; i < 30; i++) cam('c$i', FeedType.stillImage, 'http://x/$i.jpg'),
+      for (var i = 0; i < 10; i++) cam('c$i', FeedType.stillImage, 'http://x/$i.jpg'),
     ];
     final data = buildFavoritesWidgetData(
       favorites: favs,
@@ -77,21 +77,8 @@ void main() {
     expect(first['updated_at'], isNull);
     expect(first['headers'], isEmpty);
     expect((cams[1] as Map)['updated_at'], '2026-08-31T12:00:00+09:00');
-    expect(first['lat'], 35.0, reason: '現在地に近い順の並べ替え用');
-    expect(first['lng'], 139.0);
-    expect((cams.last as Map)['id'], 'c23');
-  });
-
-  test('buildFavoritesWidgetData: 座標の無いカメラは lat/lng を書かない', () {
-    final c = Camera(
-      id: 'n', name: 'n', category: 'river', prefecture: '13',
-      feed: const Feed(type: FeedType.stillImage, url: 'http://x/n.jpg'),
-      operator: '運営', attribution: 'x',
-    );
-    final data = buildFavoritesWidgetData(favorites: [c], imageUrlFor: (_) => null);
-    final m = (data['cameras'] as List).first as Map;
-    expect(m.containsKey('lat'), isFalse);
-    expect(m.containsKey('lng'), isFalse);
+    expect(first.containsKey('lat'), isFalse, reason: '並びは本体の順。座標は渡さない');
+    expect((cams.last as Map)['id'], 'c7');
   });
 
   group('現在地の書き出し', () {

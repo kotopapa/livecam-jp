@@ -591,6 +591,22 @@ class AppLocalizationsJa extends AppLocalizations {
   String get favoritesVideoOnly => '動画のみ';
 
   @override
+  String get favoritesSortCustom => '自分で並べた順';
+
+  @override
+  String get favoritesReorder => '並べ替え（ドラッグ）';
+
+  @override
+  String get favoritesReorderTitle => 'お気に入りを並べ替え';
+
+  @override
+  String get favoritesReorderDone => '完了';
+
+  @override
+  String get favoritesReorderHint =>
+      '右端の取っ手を押したまま上下に動かします。ホーム画面ウィジェットもこの順で表示されます。';
+
+  @override
   String get rankingTitle => '全国ランキング';
 
   @override
@@ -3670,6 +3686,22 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get favoritesVideoOnly => 'うごく えいぞうだけ';
+
+  @override
+  String get favoritesSortCustom => 'じぶんで ならべた じゅん';
+
+  @override
+  String get favoritesReorder => 'ならべかえ（ドラッグ）';
+
+  @override
+  String get favoritesReorderTitle => 'おきにいりを ならべかえ';
+
+  @override
+  String get favoritesReorderDone => 'おわり';
+
+  @override
+  String get favoritesReorderHint =>
+      'みぎの とってを おしたまま うえしたに うごかします。ホームがめんの ウィジェットも この じゅんばんに なります。';
 
   @override
   String get rankingTitle => 'ぜんこく ランキング';

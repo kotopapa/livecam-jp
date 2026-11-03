@@ -585,6 +585,21 @@ class AppLocalizationsZh extends AppLocalizations {
   String get favoritesVideoOnly => '仅视频';
 
   @override
+  String get favoritesSortCustom => '自定义顺序';
+
+  @override
+  String get favoritesReorder => '调整顺序（拖动）';
+
+  @override
+  String get favoritesReorderTitle => '调整收藏顺序';
+
+  @override
+  String get favoritesReorderDone => '完成';
+
+  @override
+  String get favoritesReorderHint => '按住右侧的把手上下拖动。主屏幕小组件也按此顺序显示。';
+
+  @override
   String get rankingTitle => '全国排行榜';
 
   @override
@@ -3639,6 +3654,21 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get favoritesVideoOnly => '僅影片';
+
+  @override
+  String get favoritesSortCustom => '自訂順序';
+
+  @override
+  String get favoritesReorder => '調整順序（拖曳）';
+
+  @override
+  String get favoritesReorderTitle => '調整收藏順序';
+
+  @override
+  String get favoritesReorderDone => '完成';
+
+  @override
+  String get favoritesReorderHint => '按住右側的把手上下拖曳。主畫面小工具也會依此順序顯示。';
 
   @override
   String get rankingTitle => '全日本排行榜';

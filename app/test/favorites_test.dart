@@ -61,4 +61,41 @@ void main() {
     await tester.pump();
     expect(find.textContaining('お気に入りはまだありません'), findsOneWidget);
   });
+
+  testWidgets('並べ替え画面でドラッグした順が既定の並びとウィジェットの順になる', (tester) async {
+    final app = await buildApp();
+    app.repository.cameras = [cam('a', '渋谷カメラ'), cam('b', '雷門カメラ'), cam('c', '横浜カメラ')];
+    for (final c in app.repository.cameras) {
+      await app.toggleFavorite(c);
+    }
+    expect(app.favoriteCameras().map((c) => c.id), ['c', 'b', 'a'], reason: '登録が新しい順が初期値');
+
+    await tester.pumpWidget(testApp(FavoritesScreen(app: app)));
+    await tester.tap(find.byKey(const Key('favorites_reorder')));
+    await tester.pumpAndSettle();
+    expect(find.text('お気に入りを並べ替え'), findsOneWidget);
+    expect(find.byType(ReorderableListView), findsOneWidget);
+
+    // 先頭（横浜）の取っ手を 2 行分下へ
+    final handles = find.byIcon(Icons.drag_handle);
+    expect(handles, findsNWidgets(3));
+    final rowHeight = tester.getRect(find.byType(ListTile).first).height;
+    await tester.timedDrag(handles.first, Offset(0, rowHeight * 2.6),
+        const Duration(milliseconds: 600));
+    await tester.pumpAndSettle();
+    expect(app.favorites.ordered, ['b', 'a', 'c']);
+    expect(app.favoriteCameras().map((c) => c.id), ['b', 'a', 'c'], reason: 'ウィジェットもこの順');
+
+    await tester.tap(find.byKey(const Key('favorites_reorder_done')));
+    await tester.pumpAndSettle();
+    expect(find.text('お気に入り（3）'), findsOneWidget);
+    await tester.tap(find.byIcon(Icons.view_list));
+    await tester.pump();
+    final names = tester.widgetList<Text>(find.descendant(
+        of: find.byType(ListTile), matching: find.byType(Text)))
+        .map((t) => t.data)
+        .where((t) => t != null && t.endsWith('カメラ'))
+        .toList();
+    expect(names, ['雷門カメラ', '渋谷カメラ', '横浜カメラ'], reason: '既定は自分で並べた順');
+  });
 }

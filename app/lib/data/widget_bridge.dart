@@ -22,9 +22,10 @@ const String bosaiWidgetKind = 'BosaiWidget';
 const String favoritesWidgetDataKey = 'favorites_widget_json';
 const String bosaiWidgetSettingsKey = 'bosai_widget_settings_json';
 
-/// 利用者の最後の位置（lat/lng/pref/at）。両ウィジェットが「現在地を先頭」に
-/// 並べ替えるのに使う（2026-11-04 ユーザー決定: 方式B＝本体が書く。ウィジェット
-/// 自身は位置情報を取らないので NSWidgetWantsLocation は付けない）
+/// 利用者の最後の位置（lat/lng/pref/at）。災害速報ウィジェットが「いま居る県を
+/// 先頭」に並べ替えるのに使う（2026-11-04 ユーザー決定: 方式B＝本体が書く。
+/// ウィジェット自身は位置情報を取らないので NSWidgetWantsLocation は付けない。
+/// お気に入りウィジェットは利用者が並べた順なので位置は使わない）
 const String viewerLocationKey = 'viewer_location_json';
 /// 本体側の控え（SharedPreferences）。前回解決した座標と県
 const String viewerLocationCacheKey = 'widget_viewer_location';
@@ -37,9 +38,8 @@ const double viewerLocationRewriteMeters = 1000;
 /// ウィジェットタップで本体を開くURLスキーム（Info.plist の CFBundleURLTypes）
 const String widgetUrlScheme = 'livecamjp';
 
-/// ウィジェットに載せる最大台数（large=4台。ウィジェット側が現在地に近い順へ
-/// 並べ替えるので、候補として多めに書き出す。画像を取るのは表示分だけ）
-const int favoritesWidgetMaxCameras = 24;
+/// ウィジェットに載せる最大台数（large=4台。予備を含めて8台まで書き出す）
+const int favoritesWidgetMaxCameras = 8;
 
 /// お気に入りが変わったことをウィジェットに知らせるまでの猶予（連打の集約）
 const Duration widgetSyncDebounce = Duration(milliseconds: 800);
@@ -73,7 +73,8 @@ Map<String, String> widgetImageHeadersFor(Camera c) {
 }
 
 /// お気に入りカメラ一覧のウィジェット用JSON（Map）。
-/// [favorites] は表示順（先頭が small の1台目）。座標の無いカメラも載せる
+/// [favorites] は表示順（先頭が small の1台目。利用者がお気に入り画面で並べた順）。
+/// 座標の無いカメラも載せる
 Map<String, dynamic> buildFavoritesWidgetData({
   required List<Camera> favorites,
   required String? Function(Camera) imageUrlFor,
@@ -95,8 +96,6 @@ Map<String, dynamic> buildFavoritesWidgetData({
           'operator': c.operator,
           'updated_at': imageTimeFor?.call(c),
           'headers': widgetImageHeadersFor(c),
-          if (c.hasLocation) 'lat': c.lat,
-          if (c.hasLocation) 'lng': c.lng,
         },
     ],
   };
@@ -244,7 +243,7 @@ class WidgetBridge {
   static ViewerLocationCache? _written;
   static bool _locating = false;
 
-  /// 利用者の最後の位置と県を App Group に書き、両ウィジェットを更新する。
+  /// 利用者の最後の位置と県を App Group に書き、災害速報ウィジェットを更新する。
   /// 県の解決は前回の座標から 3km 以上動いたときだけ逆ジオコーダを呼ぶ
   static Future<void> syncViewerLocation() async {
     if (!await _ensureGroup() || _locating) return;
@@ -273,7 +272,6 @@ class WidgetBridge {
       await HomeWidget.saveWidgetData<String>(viewerLocationKey,
           jsonEncode(buildViewerLocationData(lat: lat, lng: lng, pref: pref)));
       _written = ViewerLocationCache(lat: lat, lng: lng, pref: pref);
-      await HomeWidget.updateWidget(iOSName: favoritesWidgetKind);
       await HomeWidget.updateWidget(iOSName: bosaiWidgetKind);
     } catch (_) {
       // 位置情報プラグイン未登録・通信失敗などは無視（次回の同期で再試行）
