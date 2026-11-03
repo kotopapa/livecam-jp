@@ -21,8 +21,16 @@ Future<MuniWarnings?> _defaultWarningLoader(Camera camera) => MuniWarnings.fetch
 const _hotColor = Color(0xFFE53935);
 const _coldColor = Color(0xFF1E88E5);
 
-/// 天気マーク（Meteocons、Bas Milius、MIT。同梱 PNG）。「のち」は前半・後半の2枚を矢印でつなぐ。
-/// 塗り版は雲が薄いので、薄い丸角の下地を敷く。無いコードは Material Icons の雲で代える
+/// 天気の種別（タイルの色とマークの対応）
+enum WxKind { sun, cloud, rain, snow, sleet, thunder }
+
+/// 天気マーク（Meteocons、Bas Milius、MIT。同梱 PNG）。
+///
+/// 組み合わせの表し方はウェザーニュースの天気マークに倣う（2026-11-03 ユーザー要望）:
+/// - 「のち」は 1 枚の正方形タイルを斜めに 2 分割し、左上に前半・右下に後半の色とマークを置く
+/// - 「時々・一時」は主の天気の色とマークに、右下の小さな三角で副の天気の色とマークを添える
+/// - 雪は必ず雪だるま。雨は 10mm/3h 以上で雨粒の多いマーク。下地の濃さは雨・雪の階級で変える
+/// 無いコードは Material Icons の雲で代える
 class WeatherIcon extends StatelessWidget {
   const WeatherIcon(this.code, {super.key, this.width = 36, this.rain = 0, this.snow = 0});
   final String? code;
@@ -32,25 +40,49 @@ class WeatherIcon extends StatelessWidget {
   /// 下地も濃くする。週間など階級が無いときは 0
   final int rain;
 
-  /// 3時間降雪量の階級（0=1cm未満 … 3=6cm以上）。3cm/3h 以上（2〜）は雪の多いマーク
+  /// 3時間降雪量の階級（0=1cm未満 … 3=6cm以上）。下地の濃さだけ変える（マークは雪だるまのまま）
   final int snow;
 
-  /// 表示用のマーク名。「雪」だけの天気は雪だるま（気象庁のマークと同じで分かりやすい。
-  /// 2026-11-02 ユーザー要望）。雨は 10mm/3h 以上で雨粒の多い extreme-rain に差し替える。
-  /// 雪は強さでマークを変えず（強い雪も雪だるまのまま。同日ユーザー決定）、下地の濃さだけ変える
-  static String intensify(String name, int rain, int snow) {
-    if (name == 'snow') return 'snowman';
-    if (rain >= 3 && (name == 'rain' || name.endsWith('-rain'))) return 'extreme-rain';
-    return name;
-  }
+  /// マーク名 → (主の天気, 副の天気)。composite 名（overcast-rain = くもり時々雨 など）は
+  /// 2 つに分けて、主のマーク＋右下の三角に副のマークで表す
+  static (WxKind, WxKind?) kindsOf(String name) => switch (name) {
+        'clear-day' => (WxKind.sun, null),
+        'partly-cloudy-day' => (WxKind.sun, WxKind.cloud),
+        'partly-cloudy-day-rain' => (WxKind.sun, WxKind.rain),
+        'partly-cloudy-day-snow' => (WxKind.sun, WxKind.snow),
+        'partly-cloudy-day-sleet' => (WxKind.sun, WxKind.sleet),
+        'overcast' => (WxKind.cloud, null),
+        'overcast-day' => (WxKind.cloud, WxKind.sun),
+        'overcast-rain' => (WxKind.cloud, WxKind.rain),
+        'overcast-snow' => (WxKind.cloud, WxKind.snow),
+        'rain' || 'extreme-rain' => (WxKind.rain, null),
+        'snow' || 'snowman' => (WxKind.snow, null),
+        'sleet' => (WxKind.sleet, null),
+        'thunderstorms-rain' => (WxKind.thunder, null),
+        _ => (WxKind.cloud, null),
+      };
 
-  /// 「くもり時々雪」「晴れ時々雪」など雪を伴う 1 枚マークは、Meteocons 標準の雲＋雪の結晶
-  /// ではなく、雲（晴れ）のマークの右下に小さな雪だるまを重ねる（雪は必ず雪だるまで表す。
-  /// 2026-11-03 ユーザー指摘: 週間の結晶マークが雪に見えない）。戻り値は下に敷くマーク名
-  static String? snowBase(String name) => switch (name) {
-        'overcast-snow' => 'overcast',
-        'partly-cloudy-day-snow' => 'partly-cloudy-day',
-        _ => null,
+  /// 種別ごとの 1 枚マーク。雨は 10mm/3h 以上で雨粒の多い extreme-rain、雪は雪だるま
+  static String assetOf(WxKind k, {int rain = 0}) => switch (k) {
+        WxKind.sun => 'clear-day',
+        WxKind.cloud => 'overcast',
+        WxKind.rain => rain >= 3 ? 'extreme-rain' : 'rain',
+        WxKind.snow => 'snowman',
+        WxKind.sleet => 'sleet',
+        WxKind.thunder => 'thunderstorms-rain',
+      };
+
+  /// 下地の色（晴れ＝橙、くもり＝灰、雨＝青、雪＝水色、みぞれ＝青灰、雷雨＝濃い青）。
+  /// 雨・雪は階級が上がるほど濃く。斜め分割・三角でも同じ色を使うので種別で見分けがつく
+  static Color tileColor(WxKind k, {int rain = 0, int snow = 0}) => switch (k) {
+        WxKind.sun => const Color(0xFFFFA726).withValues(alpha: 0.42),
+        WxKind.cloud => const Color(0xFF78909C).withValues(alpha: 0.40),
+        WxKind.rain => const Color(0xFF1E88E5)
+            .withValues(alpha: const [0.52, 0.52, 0.60, 0.68, 0.76, 0.84][rain.clamp(0, 5)]),
+        WxKind.snow =>
+          const Color(0xFF4FC3F7).withValues(alpha: const [0.52, 0.52, 0.64, 0.76][snow.clamp(0, 3)]),
+        WxKind.sleet => const Color(0xFF5C8DB8).withValues(alpha: 0.52),
+        WxKind.thunder => const Color(0xFF3949AB).withValues(alpha: 0.52),
       };
 
   @override
@@ -60,73 +92,136 @@ class WeatherIcon extends StatelessWidget {
     if (c == null) return SizedBox(width: box, height: box);
     final spec = weatherIconSpec(c);
     final scheme = Theme.of(context).colorScheme;
-    Widget asset(String name, double w) => Image.asset('assets/weather/$name.png',
+    Widget img(WxKind k, double w) => Image.asset('assets/weather/${assetOf(k, rain: rain)}.png',
         width: w,
         height: w,
         errorBuilder: (_, _, _) => SizedBox(
             width: w, height: w, child: Icon(Icons.cloud, size: w * 0.8, color: Colors.grey)));
-    Widget img(String name, double w) {
-      final base = snowBase(name);
-      if (base == null) return asset(name, w);
-      return SizedBox(
-        width: w,
-        height: w,
-        child: Stack(children: [
-          asset(base, w),
-          Positioned(right: 0, bottom: 0, child: asset('snowman', w * 0.62)),
-        ]),
-      );
-    }
-    final Widget child;
-    // 「のち」の 2 枚は横に並ぶので、下地の幅を 1 列分（width + 12）に広げる。
-    // 36px なら 21.6 + 6 + 18 = 45.6px が 48px に収まり、縮小なしで描ける
-    var boxW = box;
     if (spec == null) {
-      child = SizedBox(
-          width: width,
-          height: width,
-          child: Icon(Icons.cloud, size: width * 0.8, color: Colors.grey));
-    } else if (spec.then == null) {
-      child = img(intensify(spec.main, rain, snow), width);
-    } else {
-      boxW = width + 12;
-      child = FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Row(mainAxisSize: MainAxisSize.min, children: [
-          img(intensify(spec.main, 0, 0), width * 0.6),
-          Icon(Icons.arrow_forward_ios, size: 6, color: scheme.onSurfaceVariant),
-          img(intensify(spec.then!, rain, snow), width * 0.5),
-        ]),
+      return Container(
+        width: box,
+        height: box,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: scheme.onSurface.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(8)),
+        child: Icon(Icons.cloud, size: width * 0.8, color: Colors.grey),
       );
     }
-    return Container(
-      width: boxW,
-      height: box,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: tileColor(spec, scheme, rain: rain, snow: snow),
-        borderRadius: BorderRadius.circular(8),
+    final radius = BorderRadius.circular(8);
+    if (spec.then != null) {
+      // 「のち」: 斜めに 2 分割（左上＝前半、右下＝後半）
+      final a = kindsOf(spec.main).$1, b = kindsOf(spec.then!).$1;
+      final w = width * 0.56;
+      return ClipRRect(
+        borderRadius: radius,
+        child: SizedBox(
+          width: box,
+          height: box,
+          child: Stack(children: [
+            CustomPaint(
+                size: Size(box, box),
+                painter: _SplitTilePainter(
+                    tileColor(a, rain: rain, snow: snow), tileColor(b, rain: rain, snow: snow))),
+            Positioned(left: box * 0.06, top: box * 0.08, child: img(a, w)),
+            Positioned(right: box * 0.06, bottom: box * 0.08, child: img(b, w)),
+          ]),
+        ),
+      );
+    }
+    final (main, sub) = kindsOf(spec.main);
+    if (sub == null) {
+      return Container(
+        width: box,
+        height: box,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(color: tileColor(main, rain: rain, snow: snow), borderRadius: radius),
+        child: img(main, width),
+      );
+    }
+    // 「時々・一時」: 主のマークに右下の三角で副の天気
+    return ClipRRect(
+      borderRadius: radius,
+      child: SizedBox(
+        width: box,
+        height: box,
+        child: Stack(children: [
+          CustomPaint(
+              size: Size(box, box),
+              painter: _CornerPainter(
+                  tileColor(main, rain: rain, snow: snow), tileColor(sub, rain: rain, snow: snow))),
+          Positioned(left: box * 0.04, top: box * 0.04, child: img(main, width * 0.8)),
+          Positioned(right: box * 0.03, bottom: box * 0.03, child: img(sub, width * 0.42)),
+        ]),
       ),
-      child: child,
     );
   }
+}
 
-  /// 下地の色。塗り版は雨粒・雪が細くて小さい表示では薄いので、種別で色分けする
-  /// （雨＝青、雪＝水色、みぞれ＝青灰、雷雨＝濃い青。晴れ・くもりは控えめな灰）。
-  /// 「のち」は後半の天気の色（これから変わる方を目立たせる）。雨・雪は階級が上がるほど濃く
-  static Color tileColor(({String main, String? then})? spec, ColorScheme scheme,
-      {int rain = 0, int snow = 0}) {
-    final name = spec?.then ?? spec?.main ?? '';
-    if (name.startsWith('thunderstorms')) return const Color(0xFF3949AB).withValues(alpha: 0.45);
-    if (name.endsWith('sleet') || name == 'sleet') return const Color(0xFF5C8DB8).withValues(alpha: 0.40);
-    if (name.endsWith('snow') || name == 'snow') {
-      return const Color(0xFF80D8FF).withValues(alpha: const [0.35, 0.35, 0.50, 0.65][snow.clamp(0, 3)]);
-    }
-    if (name.endsWith('rain') || name == 'rain') {
-      return const Color(0xFF1E88E5).withValues(alpha: const [0.40, 0.40, 0.50, 0.62, 0.72, 0.82][rain.clamp(0, 5)]);
-    }
-    return scheme.onSurface.withValues(alpha: 0.12);
+/// 「のち」の下地。斜線（右上寄りから左下寄りへ）で 2 分割。半透明の色なので重ねずに
+/// 左右の多角形を別々に塗る（重ねると混ざって別の色になる）
+class _SplitTilePainter extends CustomPainter {
+  const _SplitTilePainter(this.left, this.right);
+  final Color left;
+  final Color right;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width, h = size.height;
+    final l = Path()
+      ..moveTo(0, 0)
+      ..lineTo(w * 0.64, 0)
+      ..lineTo(w * 0.36, h)
+      ..lineTo(0, h)
+      ..close();
+    final r = Path()
+      ..moveTo(w * 0.64, 0)
+      ..lineTo(w, 0)
+      ..lineTo(w, h)
+      ..lineTo(w * 0.36, h)
+      ..close();
+    canvas.drawPath(l, Paint()..color = left);
+    canvas.drawPath(r, Paint()..color = right);
+    canvas.drawLine(Offset(w * 0.64, 0), Offset(w * 0.36, h),
+        Paint()
+          ..color = Colors.white.withValues(alpha: 0.9)
+          ..strokeWidth = 1.5);
   }
+
+  @override
+  bool shouldRepaint(_SplitTilePainter old) => old.left != left || old.right != right;
+}
+
+/// 「時々・一時」の下地。主の色の面と、右下の三角（副の色）を重ねずに塗る
+class _CornerPainter extends CustomPainter {
+  const _CornerPainter(this.main, this.corner);
+  final Color main;
+  final Color corner;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width, h = size.height;
+    final m = Path()
+      ..moveTo(0, 0)
+      ..lineTo(w, 0)
+      ..lineTo(w, h * 0.46)
+      ..lineTo(w * 0.46, h)
+      ..lineTo(0, h)
+      ..close();
+    final c = Path()
+      ..moveTo(w, h * 0.46)
+      ..lineTo(w, h)
+      ..lineTo(w * 0.46, h)
+      ..close();
+    canvas.drawPath(m, Paint()..color = main);
+    canvas.drawPath(c, Paint()..color = corner);
+    canvas.drawLine(Offset(w, h * 0.46), Offset(w * 0.46, h),
+        Paint()
+          ..color = Colors.white.withValues(alpha: 0.9)
+          ..strokeWidth = 1.2);
+  }
+
+  @override
+  bool shouldRepaint(_CornerPainter old) => old.main != main || old.corner != corner;
 }
 
 /// 各列に代表する数字 1 つ（3時間降水量）。天気分布予報は階級（1-5 / 5-10 / 10-15 /
