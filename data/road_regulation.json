@@ -1,5 +1,5 @@
 {
- "version": "2026-11-05T00:28:50Z",
+ "version": "2026-11-05T00:55:48Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-05T00:28:50Z",
+   "fetched_at": "2026-11-05T00:55:48Z",
    "items": [
     {
      "id": "243c2bc8e7d89735",
@@ -42569,6 +42569,149 @@
    "from": "高山市上切町",
    "to": "-",
    "content": "路肩規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f706ea2f7f": {
+   "kind": "その他規制（国道）",
+   "route": "国道191号",
+   "direction": "上り",
+   "from": "竹崎町３丁目７−１０",
+   "to": "竹崎町３丁目７−１０",
+   "content": "不明",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f706ea2f5d": {
+   "kind": "車線規制（国道）",
+   "route": "国道188号",
+   "direction": "上下",
+   "from": "大字宇佐木",
+   "to": "大字宇佐木",
+   "content": "路肩規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f706ea2f77": {
+   "kind": "片側規制（国道）",
+   "route": "国道2号",
+   "direction": "上下",
+   "from": "廿木",
+   "to": "廿木",
+   "content": "片側交互通行",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50eb617d8e1f": {
+   "kind": "車線規制（国道）",
+   "route": "国道42号",
+   "direction": "上下",
+   "from": "松阪市上川町",
+   "to": "松阪市上川町",
+   "content": "路肩規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f82fbef409": {
+   "kind": "車線規制（国道）",
+   "route": "国道19号",
+   "direction": "下り",
+   "from": "名古屋市中区金山１丁目１６",
+   "to": "名古屋市中区金山１丁目１５",
+   "content": "路肩規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f82fbef417": {
+   "kind": "車線規制（国道）",
+   "route": "国道19号",
+   "direction": "上り",
+   "from": "名古屋市東区東桜２丁目３",
+   "to": "名古屋市東区東桜２丁目３",
+   "content": "１車線規制",
+   "cause": "その他",
+   "start": "2026年11月05日 09:00",
+   "status": "実施中"
+  },
+  "243c50f82fbef418": {
+   "kind": "車線規制（国道）",
+   "route": "国道302号",
+   "direction": "下り",
+   "from": "名古屋市西区比良３丁目",
+   "to": "名古屋市西区比良３丁目",
+   "content": "１車線規制",
+   "cause": "その他",
+   "start": "2026年11月05日 09:00",
+   "status": "実施中"
+  },
+  "243c50f82fbef41a": {
+   "kind": "車線規制（国道）",
+   "route": "国道302号",
+   "direction": "上り",
+   "from": "名古屋市西区比良３丁目",
+   "to": "名古屋市西区砂原町",
+   "content": "１車線規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f82fbef419": {
+   "kind": "車線規制（国道）",
+   "route": "国道153号",
+   "direction": "上り",
+   "from": "清須市朝日貝塚",
+   "to": "清須市朝日愛宕",
+   "content": "１車線規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f82fbef41b": {
+   "kind": "車線規制（国道）",
+   "route": "国道302号",
+   "direction": "上り",
+   "from": "海部郡大治町大字西條弥勒",
+   "to": "海部郡大治町大字花常西屋敷",
+   "content": "１車線規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f82fbef41c": {
+   "kind": "車線規制（国道）",
+   "route": "国道302号",
+   "direction": "下り",
+   "from": "海部郡大治町大字花常西屋敷",
+   "to": "海部郡大治町大字西條海玄田",
+   "content": "１車線規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f82fbef41d": {
+   "kind": "車線規制（国道）",
+   "route": "国道302号",
+   "direction": "下り",
+   "from": "清須市一場",
+   "to": "清須市朝日五条",
+   "content": "１車線規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243c50f959c4e626": {
+   "kind": "片側規制（国道）",
+   "route": "国道153号",
+   "direction": "上下",
+   "from": "豊田市御所貝津町ワラビ平",
+   "to": "豊田市御所貝津町ス形",
+   "content": "片側交互通行",
    "cause": "その他",
    "start": "",
    "status": "実施中"
