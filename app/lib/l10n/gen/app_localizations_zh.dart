@@ -1349,7 +1349,41 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get mapQuakeTapHint => '点击可显示周边（50km以内）的实时摄像头。';
+  String get mapQuakeTapHint => '点击可在地图上显示各地震度。点击摄像头图标可查看周边（50km以内）的实时摄像头。';
+
+  @override
+  String get mapQuakeShowIntensity => '在地图上显示各地震度';
+
+  @override
+  String get mapQuakeNearbyCameras => '周边实时摄像头（50km以内）';
+
+  @override
+  String mapQuakeDepth(int km) {
+    return '深度约${km}km';
+  }
+
+  @override
+  String get mapQuakeDepthShallow => '极浅';
+
+  @override
+  String get mapQuakeBack => '返回震源列表';
+
+  @override
+  String mapQuakeIntensityLegend(String place) {
+    return '$place 各地震度';
+  }
+
+  @override
+  String get mapQuakeIntensityNone => '此次地震的各地震度尚未发布。';
+
+  @override
+  String get mapQuakeIntensityLoading => '正在获取各地震度…';
+
+  @override
+  String get mapQuakeIntensityNote => '缩小时按地区显示，放大后按市区町村和观测点显示震度。';
+
+  @override
+  String get bosaiQuakeShowMap => '在地图上查看各地震度';
 
   @override
   String get mapShelterNoticeTitle => '关于避难场所图层';
@@ -4420,7 +4454,41 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get mapQuakeTapHint => '點選可顯示周邊的即時攝影機（50 公里以內）';
+  String get mapQuakeTapHint => '點選可在地圖上顯示各地震度。點選攝影機圖示可查看周邊（50 公里以內）的即時攝影機';
+
+  @override
+  String get mapQuakeShowIntensity => '在地圖上顯示各地震度';
+
+  @override
+  String get mapQuakeNearbyCameras => '周邊即時攝影機（50 公里以內）';
+
+  @override
+  String mapQuakeDepth(int km) {
+    return '深度約 $km 公里';
+  }
+
+  @override
+  String get mapQuakeDepthShallow => '極淺';
+
+  @override
+  String get mapQuakeBack => '返回震源列表';
+
+  @override
+  String mapQuakeIntensityLegend(String place) {
+    return '$place 各地震度';
+  }
+
+  @override
+  String get mapQuakeIntensityNone => '此次地震的各地震度尚未發布';
+
+  @override
+  String get mapQuakeIntensityLoading => '正在取得各地震度…';
+
+  @override
+  String get mapQuakeIntensityNote => '縮小時依地區顯示，放大後依市區町村與觀測點顯示震度';
+
+  @override
+  String get bosaiQuakeShowMap => '在地圖上查看各地震度';
 
   @override
   String get mapShelterNoticeTitle => '關於避難場所圖層';

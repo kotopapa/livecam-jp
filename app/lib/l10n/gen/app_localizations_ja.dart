@@ -1360,7 +1360,41 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get mapQuakeTapHint => 'タップで周辺のライブカメラ（50km以内）を表示';
+  String get mapQuakeTapHint => 'タップで各地の震度を地図に表示。カメラのマークで周辺のライブカメラ（50km以内）';
+
+  @override
+  String get mapQuakeShowIntensity => '各地の震度を地図に表示';
+
+  @override
+  String get mapQuakeNearbyCameras => '周辺のライブカメラ（50km以内）';
+
+  @override
+  String mapQuakeDepth(int km) {
+    return '深さ約${km}km';
+  }
+
+  @override
+  String get mapQuakeDepthShallow => 'ごく浅い';
+
+  @override
+  String get mapQuakeBack => '震源一覧に戻る';
+
+  @override
+  String mapQuakeIntensityLegend(String place) {
+    return '$place の各地の震度';
+  }
+
+  @override
+  String get mapQuakeIntensityNone => 'この地震の各地の震度はまだ発表されていません';
+
+  @override
+  String get mapQuakeIntensityLoading => '各地の震度を取得中…';
+
+  @override
+  String get mapQuakeIntensityNote => '広域では地域ごと、拡大すると市区町村・観測点ごとの震度を表示します';
+
+  @override
+  String get bosaiQuakeShowMap => '地図で各地の震度を見る';
 
   @override
   String get mapShelterNoticeTitle => '避難場所レイヤーについて';
@@ -4470,7 +4504,44 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
   }
 
   @override
-  String get mapQuakeTapHint => 'さわると 近（ちか）く（50km いない）の カメラが 出（で）ます';
+  String get mapQuakeTapHint =>
+      'さわると 各地（かくち）の ゆれの 大（おお）きさが 地図（ちず）に 出（で）ます。カメラの マークで 近（ちか）く（50km いない）の カメラが 出ます';
+
+  @override
+  String get mapQuakeShowIntensity => '各地（かくち）の ゆれを 地図（ちず）に 出（だ）す';
+
+  @override
+  String get mapQuakeNearbyCameras => '近（ちか）くの カメラ（50km いない）';
+
+  @override
+  String mapQuakeDepth(int km) {
+    return 'ふかさ 約（やく）${km}km';
+  }
+
+  @override
+  String get mapQuakeDepthShallow => 'とても あさい';
+
+  @override
+  String get mapQuakeBack => '地震（じしん）の 一覧（いちらん）に もどる';
+
+  @override
+  String mapQuakeIntensityLegend(String place) {
+    return '$place の 各地（かくち）の ゆれ';
+  }
+
+  @override
+  String get mapQuakeIntensityNone =>
+      'この 地震（じしん）の 各地（かくち）の ゆれは まだ 発表（はっぴょう）されて いません';
+
+  @override
+  String get mapQuakeIntensityLoading => '各地（かくち）の ゆれを 読（よ）みこみ中（ちゅう）…';
+
+  @override
+  String get mapQuakeIntensityNote =>
+      'ひろい 地図（ちず）では 地域（ちいき）ごと、拡大（かくだい）すると 市区町村（しくちょうそん）や 観測点（かんそくてん）ごとの ゆれが 出（で）ます';
+
+  @override
+  String get bosaiQuakeShowMap => '地図（ちず）で 各地（かくち）の ゆれを 見（み）る';
 
   @override
   String get mapShelterNoticeTitle => 'にげる ところの 表示（ひょうじ）について';

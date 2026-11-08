@@ -1,0 +1,780 @@
+{
+ "Control": {
+  "Title": "震源・震度に関する情報",
+  "DateTime": "2026-11-07T16:12:57Z",
+  "Status": "通常",
+  "EditorialOffice": "気象庁本庁",
+  "PublishingOffice": "気象庁"
+ },
+ "Head": {
+  "Title": "震源・震度情報",
+  "ReportDateTime": "2026-11-08T01:12:00+09:00",
+  "TargetDateTime": "2026-11-08T01:12:00+09:00",
+  "EventID": "20261108010441",
+  "InfoType": "発表",
+  "Serial": "2",
+  "InfoKind": "地震情報",
+  "InfoKindVersion": "1.0_1",
+  "Headline": {
+   "Text": "８日０１時０４分ころ、地震がありました。",
+   "Information": [
+    {
+     "Item": [
+      {
+       "Kind": {
+        "Name": "震度５強"
+       },
+       "Areas": {
+        "Area": {
+         "Name": "愛知県西部",
+         "Code": "451"
+        }
+       }
+      },
+      {
+       "Kind": {
+        "Name": "震度５弱"
+       },
+       "Areas": {
+        "Area": [
+         {
+          "Name": "長野県南部",
+          "Code": "422"
+         },
+         {
+          "Name": "岐阜県美濃東部",
+          "Code": "431"
+         },
+         {
+          "Name": "静岡県西部",
+          "Code": "443"
+         },
+         {
+          "Name": "愛知県東部",
+          "Code": "450"
+         }
+        ]
+       }
+      },
+      {
+       "Kind": {
+        "Name": "震度４"
+       },
+       "Areas": {
+        "Area": [
+         {
+          "Name": "岐阜県美濃中西部",
+          "Code": "432"
+         },
+         {
+          "Name": "静岡県中部",
+          "Code": "442"
+         },
+         {
+          "Name": "三重県北部",
+          "Code": "460"
+         }
+        ]
+       }
+      },
+      {
+       "Kind": {
+        "Name": "震度３"
+       },
+       "Areas": {
+        "Area": [
+         {
+          "Name": "福井県嶺北",
+          "Code": "400"
+         },
+         {
+          "Name": "福井県嶺南",
+          "Code": "401"
+         },
+         {
+          "Name": "山梨県中・西部",
+          "Code": "411"
+         },
+         {
+          "Name": "長野県中部",
+          "Code": "421"
+         },
+         {
+          "Name": "岐阜県飛騨",
+          "Code": "430"
+         },
+         {
+          "Name": "静岡県伊豆",
+          "Code": "440"
+         },
+         {
+          "Name": "静岡県東部",
+          "Code": "441"
+         },
+         {
+          "Name": "三重県中部",
+          "Code": "461"
+         },
+         {
+          "Name": "三重県南部",
+          "Code": "462"
+         },
+         {
+          "Name": "滋賀県北部",
+          "Code": "500"
+         },
+         {
+          "Name": "滋賀県南部",
+          "Code": "501"
+         },
+         {
+          "Name": "京都府南部",
+          "Code": "511"
+         },
+         {
+          "Name": "大阪府北部",
+          "Code": "520"
+         },
+         {
+          "Name": "兵庫県北部",
+          "Code": "530"
+         },
+         {
+          "Name": "奈良県",
+          "Code": "540"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "Item": [
+      {
+       "Kind": {
+        "Name": "震度５強"
+       },
+       "Areas": {
+        "Area": {
+         "Name": "知多市",
+         "Code": "2322400"
+        }
+       }
+      },
+      {
+       "Kind": {
+        "Name": "震度５弱"
+       },
+       "Areas": {
+        "Area": [
+         {
+          "Name": "売木村",
+          "Code": "2041200"
+         },
+         {
+          "Name": "恵那市",
+          "Code": "2121000"
+         },
+         {
+          "Name": "浜松浜名区",
+          "Code": "2213900"
+         },
+         {
+          "Name": "瀬戸市",
+          "Code": "2320400"
+         },
+         {
+          "Name": "半田市",
+          "Code": "2320500"
+         },
+         {
+          "Name": "刈谷市",
+          "Code": "2321000"
+         },
+         {
+          "Name": "豊田市",
+          "Code": "2321100"
+         },
+         {
+          "Name": "新城市",
+          "Code": "2322100"
+         },
+         {
+          "Name": "東海市",
+          "Code": "2322200"
+         },
+         {
+          "Name": "愛知みよし市",
+          "Code": "2323600"
+         },
+         {
+          "Name": "東郷町",
+          "Code": "2330200"
+         }
+        ]
+       }
+      },
+      {
+       "Kind": {
+        "Name": "震度４"
+       },
+       "Areas": {
+        "Area": [
+         {
+          "Name": "飯田市",
+          "Code": "2020500"
+         },
+         {
+          "Name": "飯島町",
+          "Code": "2038400"
+         },
+         {
+          "Name": "中川村",
+          "Code": "2038600"
+         },
+         {
+          "Name": "松川町",
+          "Code": "2040200"
+         },
+         {
+          "Name": "長野高森町",
+          "Code": "2040300"
+         },
+         {
+          "Name": "阿南町",
+          "Code": "2040400"
+         },
+         {
+          "Name": "阿智村",
+          "Code": "2040700"
+         },
+         {
+          "Name": "根羽村",
+          "Code": "2041000"
+         },
+         {
+          "Name": "下條村",
+          "Code": "2041100"
+         },
+         {
+          "Name": "天龍村",
+          "Code": "2041300"
+         },
+         {
+          "Name": "泰阜村",
+          "Code": "2041400"
+         },
+         {
+          "Name": "喬木村",
+          "Code": "2041500"
+         },
+         {
+          "Name": "南木曽町",
+          "Code": "2042300"
+         },
+         {
+          "Name": "王滝村",
+          "Code": "2042900"
+         },
+         {
+          "Name": "大桑村",
+          "Code": "2043000"
+         },
+         {
+          "Name": "木曽町",
+          "Code": "2043200"
+         },
+         {
+          "Name": "多治見市",
+          "Code": "2120400"
+         },
+         {
+          "Name": "関市",
+          "Code": "2120500"
+         },
+         {
+          "Name": "中津川市",
+          "Code": "2120600"
+         },
+         {
+          "Name": "白川町",
+          "Code": "2150600"
+         },
+         {
+          "Name": "浜松中央区",
+          "Code": "2213800"
+         },
+         {
+          "Name": "浜松天竜区",
+          "Code": "2214000"
+         },
+         {
+          "Name": "島田市",
+          "Code": "2220900"
+         },
+         {
+          "Name": "磐田市",
+          "Code": "2221100"
+         },
+         {
+          "Name": "掛川市",
+          "Code": "2221300"
+         },
+         {
+          "Name": "袋井市",
+          "Code": "2221600"
+         },
+         {
+          "Name": "湖西市",
+          "Code": "2222100"
+         },
+         {
+          "Name": "名古屋千種区",
+          "Code": "2310100"
+         },
+         {
+          "Name": "名古屋北区",
+          "Code": "2310300"
+         },
+         {
+          "Name": "名古屋西区",
+          "Code": "2310400"
+         },
+         {
+          "Name": "名古屋中村区",
+          "Code": "2310500"
+         },
+         {
+          "Name": "名古屋中区",
+          "Code": "2310600"
+         },
+         {
+          "Name": "名古屋昭和区",
+          "Code": "2310700"
+         },
+         {
+          "Name": "名古屋瑞穂区",
+          "Code": "2310800"
+         },
+         {
+          "Name": "名古屋熱田区",
+          "Code": "2310900"
+         },
+         {
+          "Name": "名古屋港区",
+          "Code": "2311100"
+         },
+         {
+          "Name": "名古屋南区",
+          "Code": "2311200"
+         },
+         {
+          "Name": "名古屋守山区",
+          "Code": "2311300"
+         },
+         {
+          "Name": "名古屋緑区",
+          "Code": "2311400"
+         },
+         {
+          "Name": "名古屋名東区",
+          "Code": "2311500"
+         },
+         {
+          "Name": "名古屋天白区",
+          "Code": "2311600"
+         },
+         {
+          "Name": "豊橋市",
+          "Code": "2320100"
+         },
+         {
+          "Name": "岡崎市",
+          "Code": "2320200"
+         },
+         {
+          "Name": "一宮市",
+          "Code": "2320300"
+         },
+         {
+          "Name": "春日井市",
+          "Code": "2320600"
+         },
+         {
+          "Name": "豊川市",
+          "Code": "2320700"
+         },
+         {
+          "Name": "碧南市",
+          "Code": "2320900"
+         },
+         {
+          "Name": "安城市",
+          "Code": "2321200"
+         },
+         {
+          "Name": "西尾市",
+          "Code": "2321300"
+         },
+         {
+          "Name": "蒲郡市",
+          "Code": "2321400"
+         },
+         {
+          "Name": "犬山市",
+          "Code": "2321500"
+         },
+         {
+          "Name": "常滑市",
+          "Code": "2321600"
+         },
+         {
+          "Name": "大府市",
+          "Code": "2322300"
+         },
+         {
+          "Name": "知立市",
+          "Code": "2322500"
+         },
+         {
+          "Name": "尾張旭市",
+          "Code": "2322600"
+         },
+         {
+          "Name": "豊明市",
+          "Code": "2322900"
+         },
+         {
+          "Name": "日進市",
+          "Code": "2323000"
+         },
+         {
+          "Name": "田原市",
+          "Code": "2323100"
+         },
+         {
+          "Name": "清須市",
+          "Code": "2323300"
+         },
+         {
+          "Name": "あま市",
+          "Code": "2323700"
+         },
+         {
+          "Name": "長久手市",
+          "Code": "2323800"
+         },
+         {
+          "Name": "大口町",
+          "Code": "2336100"
+         },
+         {
+          "Name": "扶桑町",
+          "Code": "2336200"
+         },
+         {
+          "Name": "飛島村",
+          "Code": "2342700"
+         },
+         {
+          "Name": "阿久比町",
+          "Code": "2344100"
+         },
+         {
+          "Name": "東浦町",
+          "Code": "2344200"
+         },
+         {
+          "Name": "愛知美浜町",
+          "Code": "2344600"
+         },
+         {
+          "Name": "武豊町",
+          "Code": "2344700"
+         },
+         {
+          "Name": "幸田町",
+          "Code": "2350100"
+         },
+         {
+          "Name": "豊根村",
+          "Code": "2356300"
+         },
+         {
+          "Name": "木曽岬町",
+          "Code": "2430300"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "enTitle": "Earthquake and Seismic Intensity Information"
+ },
+ "Body": {
+  "Earthquake": {
+   "OriginTime": "2026-11-08T01:04:00+09:00",
+   "ArrivalTime": "2026-11-08T01:04:00+09:00",
+   "Hypocenter": {
+    "Area": {
+     "Name": "静岡県西部",
+     "Code": "443",
+     "Coordinate": "+34.9+137.7-40000/",
+     "enName": "Western Shizuoka Prefecture"
+    }
+   },
+   "Magnitude": "5.7"
+  },
+  "Intensity": {
+   "Observation": {
+    "MaxInt": "5+",
+    "Pref": [
+     {
+      "Name": "愛知県",
+      "Code": "23",
+      "MaxInt": "5+",
+      "Area": [
+       {
+        "Name": "愛知県西部",
+        "Code": "451",
+        "MaxInt": "5+",
+        "City": [
+         {
+          "Name": "知多市",
+          "Code": "2322400",
+          "MaxInt": "5+",
+          "IntensityStation": [
+           {
+            "Name": "知多市緑町＊",
+            "Code": "2322420",
+            "Int": "5+",
+            "latlon": {
+             "lat": 35.0,
+             "lon": 136.86
+            },
+            "enName": "Chita-shi Midoricho*"
+           }
+          ],
+          "enName": "Chita-shi"
+         },
+         {
+          "Name": "瀬戸市",
+          "Code": "2320400",
+          "MaxInt": "5-",
+          "IntensityStation": [
+           {
+            "Name": "瀬戸市追分町＊",
+            "Code": "2320431",
+            "Int": "5-",
+            "latlon": {
+             "lat": 35.22,
+             "lon": 137.08
+            },
+            "enName": "Seto-shi Oiwakecho*"
+           }
+          ],
+          "enName": "Seto-shi"
+         }
+        ],
+        "enName": "Aichi Ken Seibu"
+       },
+       {
+        "Name": "愛知県東部",
+        "Code": "450",
+        "MaxInt": "5-",
+        "City": [
+         {
+          "Name": "新城市",
+          "Code": "2322100",
+          "MaxInt": "5-",
+          "IntensityStation": [
+           {
+            "Name": "新城市大野＊",
+            "Code": "2322122",
+            "Int": "5-",
+            "latlon": {
+             "lat": 34.95,
+             "lon": 137.61
+            },
+            "enName": "Shinshiro-shi Ono*"
+           },
+           {
+            "Name": "新城市作手高里縄手上＊",
+            "Code": "2322133",
+            "Int": "5-",
+            "latlon": {
+             "lat": 34.98,
+             "lon": 137.42
+            },
+            "enName": "Shinshiro-shi Tsukude-takasato Nawatekami*"
+           }
+          ],
+          "enName": "Shinshiro-shi"
+         },
+         {
+          "Name": "豊橋市",
+          "Code": "2320100",
+          "MaxInt": "4",
+          "IntensityStation": [
+           {
+            "Name": "豊橋市向山",
+            "Code": "2320100",
+            "Int": "4",
+            "latlon": {
+             "lat": 34.76,
+             "lon": 137.41
+            },
+            "enName": "Toyohashi-shi Mukaiyama"
+           },
+           {
+            "Name": "豊橋市東松山町＊",
+            "Code": "2320130",
+            "Int": "4",
+            "latlon": {
+             "lat": 34.76,
+             "lon": 137.39
+            },
+            "enName": "Toyohashi-shi Higashi-matsuyamacho*"
+           }
+          ],
+          "enName": "Toyohashi-shi"
+         }
+        ],
+        "enName": "Aichi Ken Tobu"
+       }
+      ],
+      "enName": "Aichi"
+     },
+     {
+      "Name": "長野県",
+      "Code": "20",
+      "MaxInt": "5-",
+      "Area": [
+       {
+        "Name": "長野県南部",
+        "Code": "422",
+        "MaxInt": "5-",
+        "City": [
+         {
+          "Name": "売木村",
+          "Code": "2041200",
+          "MaxInt": "5-",
+          "IntensityStation": [
+           {
+            "Name": "売木村役場＊",
+            "Code": "2041231",
+            "Int": "5-",
+            "latlon": {
+             "lat": 35.27,
+             "lon": 137.71
+            },
+            "enName": "Urugi Murayakuba*"
+           }
+          ],
+          "enName": "Urugi-mura"
+         },
+         {
+          "Name": "飯田市",
+          "Code": "2020500",
+          "MaxInt": "4",
+          "IntensityStation": [
+           {
+            "Name": "飯田市高羽町",
+            "Code": "2020502",
+            "Int": "4",
+            "latlon": {
+             "lat": 35.52,
+             "lon": 137.82
+            },
+            "enName": "Iida-shi Takahacho"
+           },
+           {
+            "Name": "飯田市上郷黒田＊",
+            "Code": "2020520",
+            "Int": "4",
+            "latlon": {
+             "lat": 35.52,
+             "lon": 137.84
+            },
+            "enName": "Iida-shi Kamisato-kuroda*"
+           }
+          ],
+          "enName": "Iida-shi"
+         }
+        ],
+        "enName": "Nagano Ken Nambu"
+       },
+       {
+        "Name": "長野県中部",
+        "Code": "421",
+        "MaxInt": "3",
+        "City": [
+         {
+          "Name": "松本市",
+          "Code": "2020200",
+          "MaxInt": "3",
+          "IntensityStation": [
+           {
+            "Name": "松本市奈川＊",
+            "Code": "2020236",
+            "Int": "3",
+            "latlon": {
+             "lat": 36.09,
+             "lon": 137.68
+            },
+            "enName": "Matsumoto-shi Nagawa*"
+           },
+           {
+            "Name": "松本市沢村",
+            "Code": "2020201",
+            "Int": "2",
+            "latlon": {
+             "lat": 36.25,
+             "lon": 137.97
+            },
+            "enName": "Matsumoto-shi Sawamura"
+           }
+          ],
+          "enName": "Matsumoto-shi"
+         },
+         {
+          "Name": "諏訪市",
+          "Code": "2020600",
+          "MaxInt": "3",
+          "IntensityStation": [
+           {
+            "Name": "諏訪市湖岸通り",
+            "Code": "2020600",
+            "Int": "3",
+            "latlon": {
+             "lat": 36.05,
+             "lon": 138.11
+            },
+            "enName": "Suwa-shi Kogan-dori"
+           },
+           {
+            "Name": "諏訪市高島＊",
+            "Code": "2020630",
+            "Int": "3",
+            "latlon": {
+             "lat": 36.04,
+             "lon": 138.11
+            },
+            "enName": "Suwa-shi Takashima*"
+           }
+          ],
+          "enName": "Suwa-shi"
+         }
+        ],
+        "enName": "Nagano Ken Chubu"
+       }
+      ],
+      "enName": "Nagano"
+     }
+    ]
+   }
+  }
+ }
+}

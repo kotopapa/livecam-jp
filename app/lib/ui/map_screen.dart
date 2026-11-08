@@ -27,6 +27,7 @@ import '../data/kjmap.dart';
 import '../data/map_dark_style.dart';
 import '../data/native_config.dart';
 import '../data/places_search.dart';
+import '../data/quake_detail.dart';
 import '../data/route_corridor.dart';
 import '../data/situation.dart';
 import '../data/shelter_layers.dart';
@@ -337,6 +338,15 @@ class _MapScreenState extends State<MapScreen> {
       if (mounted) _setLayer(MapLayerKind.typhoon, typhoonId: id);
       return;
     }
+    // 災害速報タブの「地図で各地の震度を見る」（'map/quake/<eid>'）
+    if (r.startsWith('map/quake/')) {
+      final eid = r.substring('map/quake/'.length);
+      if (mounted && eid.isNotEmpty) {
+        _pendingQuakeEid = eid;
+        _setLayer(MapLayerKind.quakes, period: QuakePeriod.month);
+      }
+      return;
+    }
     final parts = r.substring(4).split(',');
     if (parts.length < 2) return;
     final lat = double.tryParse(parts[0]);
@@ -437,6 +447,16 @@ class _MapScreenState extends State<MapScreen> {
   int _nowcastIdx = 0;
   bool _nowcastUserMoved = false; // ユーザーがスライダーを動かしたら自動更新で最新へ戻さない
   List<QuakePoint> _quakes = const [];
+
+  /// 「各地の震度」を表示中の地震（震源の一覧から選ぶ。null なら全震源を表示）。
+  /// 詳報は QuakeDetails が控える。ウェザーニュースの地震情報画面に倣い、選んだ
+  /// 地震だけを震源（×）＋各地の震度（色付きの丸数字）で描く（2026-11-08 要望）
+  QuakePoint? _selectedQuake;
+  QuakeDetail? _quakeDetail;
+  bool _quakeDetailLoading = false;
+
+  /// 災害速報タブから `map/quake/<eid>` で来たときに、震源一覧の取得後に選ぶ地震
+  String? _pendingQuakeEid;
   List<RainPoint> _rain = const [];
   NowcastTime? _rain24hTile;
   RiskTime? _risk;
@@ -532,6 +552,11 @@ class _MapScreenState extends State<MapScreen> {
       if (period != null) {
         _quakePeriod = period;
       }
+      if (kind != MapLayerKind.quakes) {
+        _selectedQuake = null;
+        _quakeDetail = null;
+        _pendingQuakeEid = null;
+      }
       // 台風: 指定があればその1つだけ、無ければ全台風を表示する
       if (kind == MapLayerKind.typhoon) _typhoonId = typhoonId;
       _layerFailed = false;
@@ -585,6 +610,16 @@ class _MapScreenState extends State<MapScreen> {
         }
       case MapLayerKind.quakes:
         _quakes = await JmaLayers.fetchQuakes(_quakePeriod);
+        final pending = _pendingQuakeEid;
+        if (pending != null) {
+          _pendingQuakeEid = null;
+          final q = _quakes.where((q) => q.eid == pending).firstOrNull;
+          if (q != null && mounted) unawaited(_selectQuake(q));
+        } else if (_selectedQuake != null) {
+          // 自動更新で震源一覧が入れ替わっても選択中の地震は保つ（続報で詳報名が変わりうる）
+          final q = _quakes.where((q) => q.eid == _selectedQuake!.eid).firstOrNull;
+          if (q != null && q.detailJson != _selectedQuake!.detailJson) unawaited(_selectQuake(q));
+        }
       case MapLayerKind.rain24h:
         final tile = await JmaLayers.fetchRain24hTile();
         if (tile != null) _rain24hTile = tile;
@@ -816,6 +851,148 @@ class _MapScreenState extends State<MapScreen> {
   /// タップした震源と、現在のズームで同じマーカーに重なる震源をまとめて表示する
   /// （群発地震や同一震源の繰り返しで下に隠れた地震も選べるように）
   /// 描画順: 弱い/古い地震を先に、強い/新しい地震を後に描いて上に重ねる
+  void _openQuakeNearbyCameras(String place, LatLng pos) {
+    final l10n = context.l10n;
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => NearbyCamerasScreen(
+            app: widget.app,
+            title: l10n.mapNearbyCamerasTitle(place.isEmpty ? l10n.mapLayerQuakesTitle : place),
+            lat: pos.latitude,
+            lng: pos.longitude)));
+  }
+
+  /// 地震を選び、詳報（各地の震度）を取って地図に描く。観測点が収まるように寄せる
+  Future<void> _selectQuake(QuakePoint q) async {
+    Analytics.event('quake_intensity_open', params: {'maxi': q.maxIntensity});
+    setState(() {
+      _selectedQuake = q;
+      _quakeDetail = null;
+      _quakeDetailLoading = q.detailJson.isNotEmpty;
+    });
+    if (q.detailJson.isEmpty) return;
+    final d = await QuakeDetails.fetch(q.detailJson, eid: q.eid);
+    if (!mounted || _selectedQuake?.eid != q.eid) return;
+    setState(() {
+      _quakeDetail = d;
+      _quakeDetailLoading = false;
+    });
+    final b = d?.bounds;
+    if (b != null) {
+      _fitBounds([LatLng(b.$1, b.$2), LatLng(b.$3, b.$4)],
+          padding: const EdgeInsets.fromLTRB(32, 100, 32, 180));
+    }
+  }
+
+  void _clearSelectedQuake() {
+    if (_selectedQuake == null) return;
+    setState(() {
+      _selectedQuake = null;
+      _quakeDetail = null;
+      _quakeDetailLoading = false;
+    });
+  }
+
+  /// 各地の震度の 1 点をタップ: 名前と震度、周辺カメラへの導線
+  void _showIntensityPoint(QuakeIntensityPoint p) {
+    final l10n = context.l10n;
+    final color = JmaLayers.intensityColor(p.intensity);
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          ListTile(
+            leading: CircleAvatar(
+                backgroundColor: color,
+                child: Text(p.intensity,
+                    style: TextStyle(
+                        fontSize: 13, fontWeight: FontWeight.bold, color: _intensityTextColor(p.intensity)))),
+            title: Text(p.name),
+            subtitle: Text(l10n.mapQuakeMaxIntensity(intensityLabelOf(l10n, p.intensity))),
+          ),
+          ListTile(
+            leading: const Icon(Icons.videocam),
+            title: Text(l10n.mapQuakeNearbyCameras),
+            onTap: () {
+              Navigator.pop(ctx);
+              _openQuakeNearbyCameras(p.name, p.pos);
+            },
+          ),
+          const SizedBox(height: 8),
+        ]),
+      ),
+    );
+  }
+
+  /// 震度の丸の中の数字の色（明るい塗り＝震度1・4・5弱は黒、ほかは白）
+  static Color _intensityTextColor(String intensity) =>
+      const {'4', '5-'}.contains(intensity) ? Colors.black87 : Colors.white;
+
+  /// 選んだ地震の「各地の震度」（ズームで地域→市区町村→観測点に集約）と震源の×
+  Set<gmaps.Marker> _quakeIntensityMarkers(PinBitmaps pins) {
+    final markers = <gmaps.Marker>{};
+    final d = _quakeDetail;
+    if (d != null) {
+      final level = QuakeDetail.levelForZoom(_zoom);
+      final points = d.pointsFor(level);
+      // 弱い震度を先に、強い震度を後に描いて上に重ねる
+      final ordered = [...points]..sort((a, b) => a.rank - b.rank);
+      final withLabel = level == QuakeIntensityLevel.station && _zoom >= 11;
+      for (final p in ordered) {
+        final fill = JmaLayers.intensityColor(p.intensity);
+        final icon = pins.dotGlyph(
+              fillColor: fill,
+              borderColor: Colors.white,
+              borderWidth: 2,
+              diameter: 30,
+              text: p.intensity,
+              textStyle: TextStyle(
+                  fontSize: 14, fontWeight: FontWeight.w800, color: _intensityTextColor(p.intensity)),
+              shadow: true,
+              label: withLabel ? p.name : null,
+              onReady: _onPinReady,
+            ) ??
+            gmaps.BitmapDescriptor.defaultMarker;
+        markers.add(gmaps.Marker(
+          markerId: gmaps.MarkerId('qint-${level.name}-${p.code}-${p.pos.latitude},${p.pos.longitude}'),
+          position: _g(p.pos),
+          icon: icon,
+          anchor: PinBitmaps.dotGlyphAnchor(diameter: 30, hasLabel: withLabel),
+          zIndexInt: p.rank,
+          onTap: () => _showIntensityPoint(p),
+        ));
+      }
+    }
+    return markers;
+  }
+
+  /// 震源の×印（画面付近の上限処理の後に足し、必ず残す）
+  gmaps.Marker? _quakeEpicenterMarker(PinBitmaps pins) {
+    final q = _selectedQuake;
+    final pos = _quakeDetail?.epicenter ?? q?.pos;
+    if (q == null || pos == null) return null;
+    final icon = pins.dotGlyph(
+          fillColor: Colors.transparent,
+          borderColor: Colors.transparent,
+          borderWidth: 0,
+          diameter: 34,
+          icon: Icons.close,
+          iconScale: 1.0,
+          iconColor: const Color(0xFFE53935),
+          shadow: false,
+          onReady: _onPinReady,
+        ) ??
+        gmaps.BitmapDescriptor.defaultMarker;
+    return gmaps.Marker(
+      markerId: const gmaps.MarkerId('quake-epicenter'),
+      position: _g(pos),
+      icon: icon,
+      anchor: PinBitmaps.dotGlyphAnchor(diameter: 34),
+      zIndexInt: 20,
+      onTap: () => _showQuakeInfo(q),
+    );
+  }
+
   List<QuakePoint> get _quakesForDraw {
     int rank(String m) => const ['', '1', '2', '3', '4', '5-', '5+', '6-', '6+', '7'].indexOf(m);
     return [..._quakes]..sort((a, b) {
@@ -871,17 +1048,17 @@ class _MapScreenState extends State<MapScreen> {
                             '${q.magnitude.isNotEmpty ? '　M${q.magnitude}' : ''}'
                             '${q.maxIntensity.isNotEmpty ? '　${l10n.mapQuakeMaxIntensity(q.maxIntensity)}' : ''}');
                       }),
-                      trailing: const Icon(Icons.videocam),
+                      trailing: IconButton(
+                        tooltip: l10n.mapQuakeNearbyCameras,
+                        icon: const Icon(Icons.videocam),
+                        onPressed: () {
+                          Navigator.pop(ctx);
+                          _openQuakeNearbyCameras(q.place, q.pos!);
+                        },
+                      ),
                       onTap: () {
                         Navigator.pop(ctx);
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (_) => NearbyCamerasScreen(
-                                app: widget.app,
-                                title: l10n.mapNearbyCamerasTitle(q.place.isEmpty
-                                    ? l10n.mapLayerQuakesTitle
-                                    : q.place),
-                                lat: q.pos!.latitude,
-                                lng: q.pos!.longitude)));
+                        _selectQuake(q);
                       },
                     ),
                 ],
@@ -1646,6 +1823,68 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+  /// 「各地の震度」を表示中の地震の見出し（発生時刻・震源地・M・深さ）と戻るボタン
+  Widget _selectedQuakeBar() {
+    final l10n = context.l10n;
+    final scheme = Theme.of(context).colorScheme;
+    final q = _selectedQuake!;
+    final d = _quakeDetail;
+    final t = q.at.toLocal();
+    String two(int v) => v.toString().padLeft(2, '0');
+    final maxi = d?.maxIntensity.isNotEmpty == true ? d!.maxIntensity : q.maxIntensity;
+    final mag = d?.magnitude.isNotEmpty == true ? d!.magnitude : q.magnitude;
+    final depth = d?.depthKm;
+    final sub = [
+      '${t.month}/${t.day} ${two(t.hour)}:${two(t.minute)}',
+      if (mag.isNotEmpty) 'M$mag',
+      if (depth != null) depth == 0 ? l10n.mapQuakeDepthShallow : l10n.mapQuakeDepth(depth),
+    ].join('　');
+    final String? note;
+    if (_quakeDetailLoading) {
+      note = l10n.mapQuakeIntensityLoading;
+    } else if (d == null || !d.hasIntensity) {
+      note = l10n.mapQuakeIntensityNone;
+    } else {
+      note = null;
+    }
+    return Padding(
+      key: const Key('map_quake_selected'),
+      padding: const EdgeInsets.fromLTRB(12, 0, 4, 8),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+        Row(children: [
+          CircleAvatar(
+            radius: 14,
+            backgroundColor: JmaLayers.intensityColor(maxi),
+            child: Text(maxi.isEmpty ? '-' : maxi,
+                style: TextStyle(
+                    fontSize: 12, fontWeight: FontWeight.bold, color: _intensityTextColor(maxi))),
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(q.place.isEmpty ? l10n.mapQuakeUnknownPlace : q.place,
+                  style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                  maxLines: 1, overflow: TextOverflow.ellipsis),
+              Text(sub, style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant),
+                  maxLines: 1, overflow: TextOverflow.ellipsis),
+            ]),
+          ),
+          TextButton.icon(
+            key: const Key('map_quake_back'),
+            onPressed: _clearSelectedQuake,
+            icon: const Icon(Icons.arrow_back, size: 16),
+            label: Text(l10n.mapQuakeBack, style: const TextStyle(fontSize: 12)),
+          ),
+        ]),
+        if (note != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 2),
+            child: Text(note, style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant)),
+          ),
+      ]),
+    );
+  }
+
   Widget _nowcastCompactSlider() {
     final n = _nowcastTimes[_nowcastIdx];
     final scheme = Theme.of(context).colorScheme;
@@ -1761,6 +2000,20 @@ class _MapScreenState extends State<MapScreen> {
           swatch(const Color(0xFFFF2800), '80mm/h'),
         ]);
       case MapLayerKind.quakes:
+        if (_selectedQuake != null) {
+          final sq = _selectedQuake!;
+          title = l10n.mapQuakeIntensityLegend(sq.place.isEmpty ? l10n.mapQuakeUnknownPlace : sq.place);
+          items.addAll([
+            swatch(JmaLayers.intensityColor('1'), l10n.mapLegendIntensity('1')),
+            swatch(JmaLayers.intensityColor('2'), '2'),
+            swatch(JmaLayers.intensityColor('3'), '3'),
+            swatch(JmaLayers.intensityColor('4'), '4'),
+            swatch(JmaLayers.intensityColor('5-'), intensityLabelOf(l10n, '5-')),
+            swatch(JmaLayers.intensityColor('5+'), intensityLabelOf(l10n, '5+')),
+            swatch(JmaLayers.intensityColor('6-'), l10n.mapLegendIntensity6Up),
+          ]);
+          break;
+        }
         title = l10n.mapLegendQuakes(
             switch (_quakePeriod) {
               QuakePeriod.day => l10n.mapQuakePeriodDay,
@@ -2649,6 +2902,7 @@ class _MapScreenState extends State<MapScreen> {
 
   /// 震源のマーカー（円＋最大震度の数字。タップで近傍をまとめて表示）
   Set<gmaps.Marker> _quakeMarkers(PinBitmaps pins) {
+    if (_selectedQuake != null) return _quakeIntensityMarkers(pins);
     final markers = <gmaps.Marker>{};
     for (final q in _quakesForDraw) {
       final icon = pins.dotGlyph(
@@ -3905,6 +4159,10 @@ class _MapScreenState extends State<MapScreen> {
     // （2026-09-27 実機の 0x8BADF00D で確認）。画面付近・中心に近い順に上限を設ける
     final markers = _capMarkers(_buildCameraMarkers(items, pins), _maxCameraMarkers)
       ..addAll(_capMarkers(_vectorMarkers(pins), _maxLayerMarkers));
+    if (_layer == MapLayerKind.quakes) {
+      final ep = _quakeEpicenterMarker(pins);
+      if (ep != null) markers.add(ep);
+    }
     if (_pickedPlace != null) {
       markers.add(gmaps.Marker(
         markerId: const gmaps.MarkerId('picked_place'),
@@ -4486,7 +4744,8 @@ class _MapScreenState extends State<MapScreen> {
           if (showCompactSlider) _nowcastCompactSlider(),
           // 震源の期間（24時間／7日／30日）。レイヤー選択画面ではなく、震源を表示中の
           // カードで切り替える（2026-09-27 要望）
-          if (_layer == MapLayerKind.quakes) _quakePeriodChips(),
+          if (_layer == MapLayerKind.quakes)
+            (_selectedQuake == null ? _quakePeriodChips() : _selectedQuakeBar()),
           if (expanded) ...[
             const Divider(height: 1),
             Padding(

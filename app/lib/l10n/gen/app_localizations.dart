@@ -2629,8 +2629,68 @@ abstract class AppLocalizations {
   /// No description provided for @mapQuakeTapHint.
   ///
   /// In ja, this message translates to:
-  /// **'タップで周辺のライブカメラ（50km以内）を表示'**
+  /// **'タップで各地の震度を地図に表示。カメラのマークで周辺のライブカメラ（50km以内）'**
   String get mapQuakeTapHint;
+
+  /// No description provided for @mapQuakeShowIntensity.
+  ///
+  /// In ja, this message translates to:
+  /// **'各地の震度を地図に表示'**
+  String get mapQuakeShowIntensity;
+
+  /// No description provided for @mapQuakeNearbyCameras.
+  ///
+  /// In ja, this message translates to:
+  /// **'周辺のライブカメラ（50km以内）'**
+  String get mapQuakeNearbyCameras;
+
+  /// No description provided for @mapQuakeDepth.
+  ///
+  /// In ja, this message translates to:
+  /// **'深さ約{km}km'**
+  String mapQuakeDepth(int km);
+
+  /// No description provided for @mapQuakeDepthShallow.
+  ///
+  /// In ja, this message translates to:
+  /// **'ごく浅い'**
+  String get mapQuakeDepthShallow;
+
+  /// No description provided for @mapQuakeBack.
+  ///
+  /// In ja, this message translates to:
+  /// **'震源一覧に戻る'**
+  String get mapQuakeBack;
+
+  /// No description provided for @mapQuakeIntensityLegend.
+  ///
+  /// In ja, this message translates to:
+  /// **'{place} の各地の震度'**
+  String mapQuakeIntensityLegend(String place);
+
+  /// No description provided for @mapQuakeIntensityNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'この地震の各地の震度はまだ発表されていません'**
+  String get mapQuakeIntensityNone;
+
+  /// No description provided for @mapQuakeIntensityLoading.
+  ///
+  /// In ja, this message translates to:
+  /// **'各地の震度を取得中…'**
+  String get mapQuakeIntensityLoading;
+
+  /// No description provided for @mapQuakeIntensityNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'広域では地域ごと、拡大すると市区町村・観測点ごとの震度を表示します'**
+  String get mapQuakeIntensityNote;
+
+  /// No description provided for @bosaiQuakeShowMap.
+  ///
+  /// In ja, this message translates to:
+  /// **'地図で各地の震度を見る'**
+  String get bosaiQuakeShowMap;
 
   /// No description provided for @mapShelterNoticeTitle.
   ///

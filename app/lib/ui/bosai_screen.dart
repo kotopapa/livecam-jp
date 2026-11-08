@@ -67,8 +67,11 @@ class _Quake {
     required this.lng,
     this.isTsunami = false,
     this.munis = const [],
+    this.eid = '',
   });
 
+  /// 地震ID（地図の「各地の震度」へ渡す。津波は空）
+  final String eid;
   final String place;
   final String magnitude;
   final String maxIntensity;
@@ -637,6 +640,7 @@ class _BosaiScreenState extends State<BosaiScreen>
           lat: double.parse(cod.group(1)!),
           lng: double.parse(cod.group(2)!),
           munis: sortMuniIntensities(muniByEid[eid] ?? const {}),
+          eid: eid,
         ));
       }
       // 震度の大きい順 → 新しい順
@@ -796,7 +800,17 @@ class _BosaiScreenState extends State<BosaiScreen>
                                   l10n.bosaiMuniObserved(q.munis.length),
                               ].join(' · '),
                               style: const TextStyle(fontSize: 12)),
-                          trailing: const Icon(Icons.chevron_right),
+                          trailing: q.eid.isEmpty
+                              ? const Icon(Icons.chevron_right)
+                              : IconButton(
+                                  key: Key('bosai_quake_map_${q.eid}'),
+                                  tooltip: l10n.bosaiQuakeShowMap,
+                                  icon: const Icon(Icons.map_outlined),
+                                  onPressed: () {
+                                    widget.app.navigationRequest.value = null;
+                                    widget.app.navigationRequest.value = 'map/quake/${q.eid}';
+                                  },
+                                ),
                           onTap: () => _openQuake(context, q),
                         );
                       },

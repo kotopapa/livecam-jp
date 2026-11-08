@@ -1421,7 +1421,43 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get mapQuakeTapHint =>
-      'Nhấn để xem camera trực tiếp trong bán kính 50 km.';
+      'Nhấn để hiển thị cường độ rung lắc tại các khu vực trên bản đồ. Biểu tượng camera hiển thị camera trực tiếp trong bán kính 50 km.';
+
+  @override
+  String get mapQuakeShowIntensity => 'Hiển thị cường độ trên bản đồ';
+
+  @override
+  String get mapQuakeNearbyCameras => 'Camera trực tiếp trong bán kính 50 km';
+
+  @override
+  String mapQuakeDepth(int km) {
+    return 'Độ sâu khoảng $km km';
+  }
+
+  @override
+  String get mapQuakeDepthShallow => 'Rất nông';
+
+  @override
+  String get mapQuakeBack => 'Về danh sách tâm chấn';
+
+  @override
+  String mapQuakeIntensityLegend(String place) {
+    return 'Cường độ tại các khu vực: $place';
+  }
+
+  @override
+  String get mapQuakeIntensityNone =>
+      'Cường độ tại các khu vực của trận động đất này chưa được công bố.';
+
+  @override
+  String get mapQuakeIntensityLoading => 'Đang tải cường độ…';
+
+  @override
+  String get mapQuakeIntensityNote =>
+      'Thu nhỏ: một giá trị cho mỗi vùng. Phóng to: theo từng thành phố và trạm quan trắc.';
+
+  @override
+  String get bosaiQuakeShowMap => 'Xem cường độ trên bản đồ';
 
   @override
   String get mapShelterNoticeTitle => 'Về lớp nơi lánh nạn';

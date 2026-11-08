@@ -390,7 +390,7 @@ void main() {
     setUp(() => PointWeathers.setStations([const AmedasStation('2', '東京', 35.69, 139.75)]));
 
     test('3情報源がそろう', () async {
-      final pw = (await PointWeathers.fetch(cam(), client: client()))!;
+      final pw = (await PointWeathers.fetch(cam(), nowJst: DateTime(2026, 11, 2, 12), client: client()))!;
       expect(pw.hasPoint, isTrue);
       expect(pw.wind!.steps, isNotEmpty);
       expect(pw.amedas!.name, '東京');
@@ -399,7 +399,7 @@ void main() {
     });
 
     test('点の予報が 404 でも他で出す', () async {
-      final pw = (await PointWeathers.fetch(cam(), client: client(noBlock: true)))!;
+      final pw = (await PointWeathers.fetch(cam(), nowJst: DateTime(2026, 11, 2, 12), client: client(noBlock: true)))!;
       expect(pw.hasPoint, isFalse);
       expect(pw.wind, isNotNull);
     });

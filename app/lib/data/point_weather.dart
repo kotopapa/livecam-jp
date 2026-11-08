@@ -1012,7 +1012,8 @@ class PointWeathers {
   }
 
   /// 3つの情報源を並列に取る。1つでも取れれば返し、全部無ければ null
-  static Future<PointWeather?> fetch(Camera camera, {http.Client? client}) async {
+  /// [nowJst] は週間予報の「今日」の判定に使う JST 壁時計（テストで固定する）
+  static Future<PointWeather?> fetch(Camera camera, {http.Client? client, DateTime? nowJst}) async {
     if (!appliesTo(camera)) return null;
     final cl = client ?? http.Client();
     try {
@@ -1021,7 +1022,7 @@ class PointWeathers {
         safe(_fetchPoint(camera, cl)),
         safe(_fetchWind(camera, cl)),
         safe(_fetchAmedas(camera, cl)),
-        safe(_fetchWeek(camera, cl, jstNow())),
+        safe(_fetchWeek(camera, cl, nowJst ?? jstNow())),
       ]);
       final wk = r[3] as (WeekForecast?, Map<DateTime, int>)?;
       final steps = (r[0] as List<PointStep>?) ?? const <PointStep>[];

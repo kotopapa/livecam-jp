@@ -1109,7 +1109,19 @@
       }
     }
   },
-  "mapQuakeTapHint": "タップで周辺のライブカメラ（50km以内）を表示",
+  "mapQuakeTapHint": "タップで各地の震度を地図に表示。カメラのマークで周辺のライブカメラ（50km以内）",
+  "mapQuakeShowIntensity": "各地の震度を地図に表示",
+  "mapQuakeNearbyCameras": "周辺のライブカメラ（50km以内）",
+  "mapQuakeDepth": "深さ約{km}km",
+  "@mapQuakeDepth": {"placeholders": {"km": {"type": "int"}}},
+  "mapQuakeDepthShallow": "ごく浅い",
+  "mapQuakeBack": "震源一覧に戻る",
+  "mapQuakeIntensityLegend": "{place} の各地の震度",
+  "@mapQuakeIntensityLegend": {"placeholders": {"place": {"type": "String"}}},
+  "mapQuakeIntensityNone": "この地震の各地の震度はまだ発表されていません",
+  "mapQuakeIntensityLoading": "各地の震度を取得中…",
+  "mapQuakeIntensityNote": "広域では地域ごと、拡大すると市区町村・観測点ごとの震度を表示します",
+  "bosaiQuakeShowMap": "地図で各地の震度を見る",
   "mapShelterNoticeTitle": "避難場所レイヤーについて",
   "mapShelterNoticeBody": "・「指定緊急避難場所」は災害の危険から命を守るために逃げ込む場所、「指定避難所」は一定期間滞在する施設です（二重枠で表示）\n・指定緊急避難場所は災害種別ごとに指定されており、災害の種類によっては避難できない場合があります\n・市町村から提供された情報のため、最新でない場合や掲載されていない場所があります。正確な情報は当該市町村にご確認ください",
   "@mapShelterNoticeBody": {

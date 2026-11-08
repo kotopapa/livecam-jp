@@ -1413,7 +1413,44 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get mapQuakeTapHint => 'Tap to see live cameras within 50 km.';
+  String get mapQuakeTapHint =>
+      'Tap to show intensities across the region on the map. Use the camera icon for live cameras within 50 km.';
+
+  @override
+  String get mapQuakeShowIntensity => 'Show intensities on the map';
+
+  @override
+  String get mapQuakeNearbyCameras => 'Live cameras within 50 km';
+
+  @override
+  String mapQuakeDepth(int km) {
+    return 'Depth about $km km';
+  }
+
+  @override
+  String get mapQuakeDepthShallow => 'Very shallow';
+
+  @override
+  String get mapQuakeBack => 'Back to epicenter list';
+
+  @override
+  String mapQuakeIntensityLegend(String place) {
+    return 'Intensities: $place';
+  }
+
+  @override
+  String get mapQuakeIntensityNone =>
+      'Regional intensities for this earthquake have not been issued yet.';
+
+  @override
+  String get mapQuakeIntensityLoading => 'Loading intensities…';
+
+  @override
+  String get mapQuakeIntensityNote =>
+      'Zoomed out: one value per region. Zoomed in: per municipality and observation station.';
+
+  @override
+  String get bosaiQuakeShowMap => 'Show intensities on the map';
 
   @override
   String get mapShelterNoticeTitle => 'About the evacuation site layer';

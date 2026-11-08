@@ -1367,7 +1367,42 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get mapQuakeTapHint => '탭하면 주변 라이브 카메라(50km 이내)를 표시합니다';
+  String get mapQuakeTapHint =>
+      '탭하면 각지의 진도를 지도에 표시합니다. 카메라 아이콘으로 주변 라이브 카메라(50km 이내)를 볼 수 있습니다';
+
+  @override
+  String get mapQuakeShowIntensity => '각지의 진도를 지도에 표시';
+
+  @override
+  String get mapQuakeNearbyCameras => '주변 라이브 카메라(50km 이내)';
+
+  @override
+  String mapQuakeDepth(int km) {
+    return '깊이 약 ${km}km';
+  }
+
+  @override
+  String get mapQuakeDepthShallow => '매우 얕음';
+
+  @override
+  String get mapQuakeBack => '진원 목록으로 돌아가기';
+
+  @override
+  String mapQuakeIntensityLegend(String place) {
+    return '$place 각지의 진도';
+  }
+
+  @override
+  String get mapQuakeIntensityNone => '이 지진의 각지 진도는 아직 발표되지 않았습니다';
+
+  @override
+  String get mapQuakeIntensityLoading => '각지의 진도를 불러오는 중…';
+
+  @override
+  String get mapQuakeIntensityNote => '넓은 범위에서는 지역별, 확대하면 시구정촌·관측점별 진도를 표시합니다';
+
+  @override
+  String get bosaiQuakeShowMap => '지도에서 각지의 진도 보기';
 
   @override
   String get mapShelterNoticeTitle => '대피 장소 레이어에 대하여';

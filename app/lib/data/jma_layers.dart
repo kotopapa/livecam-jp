@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart' show visibleForTesting;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
@@ -283,6 +284,8 @@ class QuakePoint {
     required this.magnitude,
     required this.maxIntensity,
     required this.pos,
+    this.eid = '',
+    this.detailJson = '',
   });
   final DateTime at;
   final String place;
@@ -290,6 +293,13 @@ class QuakePoint {
   final String maxIntensity;
   /// 震度速報のみの段階では null（表示対象外）
   final LatLng? pos;
+
+  /// 地震ID（list.json の eid）
+  final String eid;
+
+  /// 各地の震度（観測点）を持つ詳報のファイル名（list.json の `json`。震源・震度情報の
+  /// 最新報。無ければ空）。`QuakeDetails.fetch` に渡す
+  final String detailJson;
 }
 
 class RainPoint {
@@ -388,8 +398,14 @@ class JmaLayers {
 
   static final _codRe = RegExp(r'^([+-][\d.]+)([+-][\d.]+)');
 
+  /// テストで差し替える震源リストの取得（null なら気象庁から取る）
+  @visibleForTesting
+  static Future<List<QuakePoint>> Function(QuakePeriod period)? quakeFetcher;
+
   /// 震源リスト（同一地震の複数報はeidで最新1件に）
   static Future<List<QuakePoint>> fetchQuakes(QuakePeriod period) async {
+    final override = quakeFetcher;
+    if (override != null) return override(period);
     try {
       final r = await http
           .get(Uri.parse('https://www.jma.go.jp/bosai/quake/data/list.json'), headers: _ua)
@@ -450,10 +466,15 @@ class JmaLayers {
       final mag = (e['mag'] as String?) ?? '';
       final maxi = (e['maxi'] as String?) ?? '';
       final key = eid.isEmpty ? '${e['cod']}' : eid;
+      // 各地の震度を持つのは市区町村別震度（int）が付く報（震源・震度情報）。
+      // list.json は新しい報が先に並ぶので、最初に見つかったものを採る
+      final hasInt = e['int'] is List && (e['int'] as List).isNotEmpty;
+      final jsonName = hasInt ? (e['json']?.toString() ?? '') : '';
       final cur = byEid[key];
       if (cur == null) {
         // 座標のない震度速報だけの段階は pos=null で保留し、後続の報で補う
-        byEid[key] = QuakePoint(at: at, place: place, magnitude: mag, maxIntensity: maxi, pos: pos);
+        byEid[key] = QuakePoint(at: at, place: place, magnitude: mag, maxIntensity: maxi, pos: pos,
+            eid: eid, detailJson: jsonName);
         continue;
       }
       byEid[key] = QuakePoint(
@@ -462,6 +483,8 @@ class JmaLayers {
         magnitude: cur.magnitude.isNotEmpty ? cur.magnitude : mag,
         maxIntensity: _intensityRank(maxi) > _intensityRank(cur.maxIntensity) ? maxi : cur.maxIntensity,
         pos: cur.pos ?? pos,
+        eid: eid,
+        detailJson: cur.detailJson.isNotEmpty ? cur.detailJson : jsonName,
       );
     }
     final out = byEid.values.where((q) => q.pos != null).toList()
