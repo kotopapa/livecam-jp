@@ -952,8 +952,10 @@ class _MapScreenState extends State<MapScreen> {
               label: withLabel ? p.name : null,
               square: true, // 丸のカメラ束ねピンと見分ける（気象庁の震度表示と同じ角丸四角）
               onReady: _onPinReady,
-            ) ??
-            gmaps.BitmapDescriptor.defaultMarker;
+            );
+        // 画像ができるまでは出さない（標準の赤いピンが一面に出てしまう。2026-11-08 TestFlight 報告）。
+        // 生成完了時に _onPinReady が setState して現れる
+        if (icon == null) continue;
         markers.add(gmaps.Marker(
           markerId: gmaps.MarkerId('qint-${level.name}-${p.code}-${p.pos.latitude},${p.pos.longitude}'),
           position: _g(p.pos),
@@ -982,8 +984,8 @@ class _MapScreenState extends State<MapScreen> {
           iconColor: const Color(0xFFE53935),
           shadow: false,
           onReady: _onPinReady,
-        ) ??
-        gmaps.BitmapDescriptor.defaultMarker;
+        );
+    if (icon == null) return null; // 画像ができるまでは出さない（標準ピンの仮置きをしない）
     return gmaps.Marker(
       markerId: const gmaps.MarkerId('quake-epicenter'),
       position: _g(pos),
