@@ -189,43 +189,15 @@ class _TipScreenState extends State<TipScreen> {
         Text(l10n.settingsSupportTitle,
             textAlign: TextAlign.center,
             style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
-        const SizedBox(height: 8),
-        Text(
-          l10n.tipIntro,
-          textAlign: TextAlign.center,
-          style: theme.textTheme.bodyMedium
-              ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-        ),
-        const SizedBox(height: 12),
-        // お礼としての広告非表示（購入対象ではないことを明記）
-        Card(
-          color: theme.colorScheme.primaryContainer.withValues(alpha: 0.35),
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Row(children: [
-                Icon(Icons.card_giftcard, size: 18, color: theme.colorScheme.primary),
-                const SizedBox(width: 6),
-                Text(l10n.tipAdFreeTitle,
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
-              ]),
-              const SizedBox(height: 6),
-              Text(l10n.tipAdFreeIntro, style: const TextStyle(fontSize: 12)),
-              if (adFree.isActive) ...[
-                const SizedBox(height: 6),
-                Text(l10n.tipAdFreeActive(_fmtDate(context, adFree.until!)),
-                    style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: theme.colorScheme.primary)),
-              ],
-              const SizedBox(height: 4),
-              Text(l10n.tipAdFreeNote,
-                  style: TextStyle(
-                      fontSize: 11, color: theme.colorScheme.onSurfaceVariant)),
-            ]),
-          ),
-        ),
+        if (adFree.isActive) ...[
+          const SizedBox(height: 8),
+          Text(l10n.tipAdFreeActive(_fmtDate(context, adFree.until!)),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: theme.colorScheme.primary)),
+        ],
         const SizedBox(height: 12),
         if (_loading)
           const Padding(
