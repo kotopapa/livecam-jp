@@ -2909,15 +2909,18 @@ class _MapScreenState extends State<MapScreen> {
     final markers = <gmaps.Marker>{};
     for (final q in _quakesForDraw) {
       final icon = pins.dotGlyph(
-            fillColor: JmaLayers.intensityColor(q.maxIntensity).withValues(alpha: 0.85),
+            fillColor: JmaLayers.intensityColor(q.maxIntensity).withValues(alpha: 0.9),
             borderColor: Colors.white,
             borderWidth: 1.5,
             diameter: 28,
             text: q.maxIntensity.isEmpty ? '' : q.maxIntensity,
+            textStyle: TextStyle(
+                fontSize: 12, fontWeight: FontWeight.w800, color: _intensityTextColor(q.maxIntensity)),
             shadow: false,
+            square: true, // 丸のカメラ束ねピンと見分ける（各地の震度と同じ角丸四角。2026-11-08 要望）
             onReady: _onPinReady,
-          ) ??
-          gmaps.BitmapDescriptor.defaultMarker;
+          );
+      if (icon == null) continue; // 画像ができるまでは出さない（標準ピンの仮置きをしない）
       markers.add(gmaps.Marker(
         markerId: gmaps.MarkerId(
             'quake-${q.at.toIso8601String()}-${q.pos!.latitude.toStringAsFixed(4)},${q.pos!.longitude.toStringAsFixed(4)}'),
