@@ -171,11 +171,12 @@ class PinBitmaps {
       );
     }
 
-    // お気に入りの星（左上）: Positioned(top:-5, left:-5, size:13)
+    // お気に入りの星（左上）。白い丸のバッジに載せて、橙系のピン（景観・
+    // 街）でも埋もれないようにする（2026-11-08 利用者報告「☆印が見にくい」）
     if (favorite) {
-      const starSize = 13.0;
-      final center = Offset(c - r + starSize / 2 - 5, c - r + starSize / 2 - 5);
-      _paintStar(canvas, center, starSize);
+      final center = Offset(c - r + favoriteBadgeSize / 2 - 6,
+          c - r + favoriteBadgeSize / 2 - 6);
+      _paintFavoriteBadge(canvas, center);
     }
 
     final picture = recorder.endRecording();
@@ -268,16 +269,32 @@ class PinBitmaps {
     tp.paint(canvas, Offset((size - tp.width) / 2, (size - tp.height) / 2));
   }
 
-  void _paintStar(Canvas canvas, Offset center, double size) {
-    // Icons.star を塗りで直接描く（TextPainter経由。#FFB300、CameraPin と同色）
+  /// お気に入りのバッジ: 白い丸（影・薄い縁取り付き）に金の星。CameraPin と同じ見た目
+  void _paintFavoriteBadge(Canvas canvas, Offset center) {
+    const radius = favoriteBadgeSize / 2;
+    canvas.drawCircle(
+      center.translate(0, 1),
+      radius,
+      Paint()
+        ..color = Colors.black26
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1.5),
+    );
+    canvas.drawCircle(center, radius, Paint()..color = Colors.white);
+    canvas.drawCircle(
+      center,
+      radius - 0.5,
+      Paint()
+        ..color = favoriteBadgeBorderColor
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1,
+    );
     final tp = TextPainter(
       text: TextSpan(
         text: String.fromCharCode(Icons.star.codePoint),
         style: TextStyle(
-          fontSize: size,
+          fontSize: favoriteStarSize,
           fontFamily: Icons.star.fontFamily,
-          color: const Color(0xFFFFB300),
-          shadows: const [Shadow(color: Colors.black45, blurRadius: 2)],
+          color: favoriteStarColor,
         ),
       ),
       textDirection: TextDirection.ltr,

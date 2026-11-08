@@ -220,13 +220,27 @@ class CameraPin extends StatelessWidget {
             ),
           ),
         ),
-      // お気に入りは左上に金の星
+      // お気に入りは左上に、白い丸のバッジに載せた金の星
+      // （橙系のピンに直接描くと埋もれる。2026-11-08 利用者報告）
       if (favorite)
-        const Positioned(
-          top: -5,
-          left: -5,
-          child: Icon(Icons.star, size: 13, color: Color(0xFFFFB300),
-              shadows: [Shadow(color: Colors.black45, blurRadius: 2)]),
+        Positioned(
+          top: -6,
+          left: -6,
+          child: Container(
+            width: favoriteBadgeSize,
+            height: favoriteBadgeSize,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle,
+              border: Border.all(color: favoriteBadgeBorderColor, width: 1),
+              boxShadow: const [
+                BoxShadow(color: Colors.black26, blurRadius: 2, offset: Offset(0, 1)),
+              ],
+            ),
+            child: const Icon(Icons.star,
+                size: favoriteStarSize, color: favoriteStarColor),
+          ),
         ),
     ];
     return Opacity(
@@ -237,6 +251,12 @@ class CameraPin extends StatelessWidget {
     );
   }
 }
+
+/// お気に入りのバッジ（白い丸）の直径と、その中の星の大きさ・色
+const double favoriteBadgeSize = 18;
+const double favoriteStarSize = 14;
+const Color favoriteStarColor = Color(0xFFFFB300);
+const Color favoriteBadgeBorderColor = Color(0x59000000);
 
 /// クラスタピンの見た目の直径（タップ領域は Marker 側で 44×44 に広げる）
 const double clusterPinDiameter = 40;
