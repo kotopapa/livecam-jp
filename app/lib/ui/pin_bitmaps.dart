@@ -385,12 +385,13 @@ class PinBitmaps {
     bool innerRing = false,
     String? label,
     Color labelColor = Colors.black87,
+    bool square = false,
     VoidCallback? onReady,
   }) {
     final hasLabel = label != null && label.isNotEmpty;
     final key = 'dot|$fillColor|$borderColor|$borderWidth|$diameter|${icon?.codePoint}|'
         '$iconScale|$iconColor|$text|${textStyle?.fontSize}|${textStyle?.color}|'
-        '$shadow|$innerRing|${hasLabel ? label : null}|$labelColor';
+        '$shadow|$innerRing|${hasLabel ? label : null}|$labelColor|$square';
     return _cachedOrRender(
       key,
       onReady,
@@ -408,10 +409,13 @@ class PinBitmaps {
         innerRing: innerRing,
         label: hasLabel ? label : null,
         labelColor: labelColor,
+        square: square,
       ),
     );
   }
 
+  /// [square] は丸の代わりに角丸の四角（地震の各地の震度。気象庁の震度表示と同じ形で、
+  /// カメラの束ねピン＝丸と見分けるため。2026-11-08 要望）
   Future<gmaps.BitmapDescriptor> _renderDotGlyph({
     required Color fillColor,
     required Color borderColor,
@@ -426,6 +430,7 @@ class PinBitmaps {
     required bool innerRing,
     String? label,
     required Color labelColor,
+    bool square = false,
   }) async {
     final hasLabel = label != null && label.isNotEmpty;
     TextPainter? labelTp;
@@ -450,25 +455,37 @@ class PinBitmaps {
     final recorder = ui.PictureRecorder();
     final canvas = Canvas(recorder);
     canvas.scale(devicePixelRatio);
+    // 角丸四角は丸より面積が大きく見えるので一回り小さく描く
+    final side = diameter * 0.9;
+    RRect rrect(double inset, double dy) => RRect.fromRectAndRadius(
+        Rect.fromCenter(center: Offset(cx, dotCenterY + dy), width: side - inset * 2, height: side - inset * 2),
+        Radius.circular(side * 0.22));
     if (shadow) {
-      canvas.drawCircle(
-        Offset(cx, dotCenterY + 1),
-        r,
-        Paint()
-          ..color = Colors.black26
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2),
-      );
+      final shadowPaint = Paint()
+        ..color = Colors.black26
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2);
+      if (square) {
+        canvas.drawRRect(rrect(0, 1), shadowPaint);
+      } else {
+        canvas.drawCircle(Offset(cx, dotCenterY + 1), r, shadowPaint);
+      }
     }
-    canvas.drawCircle(Offset(cx, dotCenterY), r, Paint()..color = fillColor);
+    final fillPaint = Paint()..color = fillColor;
+    if (square) {
+      canvas.drawRRect(rrect(0, 0), fillPaint);
+    } else {
+      canvas.drawCircle(Offset(cx, dotCenterY), r, fillPaint);
+    }
     if (borderWidth > 0) {
-      canvas.drawCircle(
-        Offset(cx, dotCenterY),
-        math.max(r - borderWidth / 2, 0),
-        Paint()
-          ..color = borderColor
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = borderWidth,
-      );
+      final borderPaint = Paint()
+        ..color = borderColor
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = borderWidth;
+      if (square) {
+        canvas.drawRRect(rrect(borderWidth / 2, 0), borderPaint);
+      } else {
+        canvas.drawCircle(Offset(cx, dotCenterY), math.max(r - borderWidth / 2, 0), borderPaint);
+      }
     }
     if (innerRing) {
       // 指定避難所の内側リング（_ShelterPin の designated 相当）

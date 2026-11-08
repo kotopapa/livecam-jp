@@ -22,7 +22,8 @@ void main() {
 
     expect(d.stations, isNotEmpty);
     expect(d.stations.first.intensity, '5+', reason: '強い順');
-    expect(d.stations.first.name, '知多市緑町＊');
+    expect(d.stations.first.name, '知多市緑町', reason: '末尾の＊（自治体等の観測点の印）は出さない');
+    expect(d.stations.every((s) => !s.name.endsWith('＊')), isTrue);
     expect(d.stations.first.pos.latitude, 35.0);
     expect(d.stations.first.pos.longitude, 136.86);
 
@@ -38,6 +39,12 @@ void main() {
     expect(d.hasIntensity, isTrue);
     final b = d.bounds!;
     expect(b.$1 <= 34.9 && b.$3 >= 35.22, isTrue, reason: '震源と観測点を含む');
+  });
+
+  test('観測点名の末尾の印を外す', () {
+    expect(stripStationMark('知多市緑町＊'), '知多市緑町');
+    expect(stripStationMark('豊橋市向山'), '豊橋市向山');
+    expect(stripStationMark('x*'), 'x');
   });
 
   test('ズームに応じた集約段階', () {

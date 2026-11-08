@@ -101,6 +101,9 @@ class QuakeDetail {
   }
 }
 
+/// 観測点名の末尾の「＊」「*」（気象庁以外の観測点を示す印）を取り除く
+String stripStationMark(String name) => name.replaceAll(RegExp(r'[＊*]+$'), '').trim();
+
 final RegExp _coordRe = RegExp(r'^([+-][\d.]+)([+-][\d.]+)(?:([+-]\d+))?');
 
 /// 震源の座標文字列（"+34.9+137.7-40000/"）→ 緯度経度と深さ（km）
@@ -172,8 +175,9 @@ QuakeDetail parseQuakeDetail(Map<String, dynamic> json, {String eid = ''}) {
           final lng = (ll['lon'] as num?)?.toDouble();
           final v = normalizeIntensity(st['Int']?.toString() ?? '');
           if (lat == null || lng == null || quakeIntensityRank(v) == 0) continue;
+          // 観測点名末尾の「＊」は気象庁以外（自治体・防災科研）の観測点の印。アプリでは出さない
           final p = QuakeIntensityPoint(
-              name: st['Name']?.toString() ?? '',
+              name: stripStationMark(st['Name']?.toString() ?? ''),
               code: st['Code']?.toString() ?? '',
               intensity: v,
               pos: LatLng(lat, lng));

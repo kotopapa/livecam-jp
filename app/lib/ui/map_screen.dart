@@ -950,6 +950,7 @@ class _MapScreenState extends State<MapScreen> {
                   fontSize: 14, fontWeight: FontWeight.w800, color: _intensityTextColor(p.intensity)),
               shadow: true,
               label: withLabel ? p.name : null,
+              square: true, // 丸のカメラ束ねピンと見分ける（気象庁の震度表示と同じ角丸四角）
               onReady: _onPinReady,
             ) ??
             gmaps.BitmapDescriptor.defaultMarker;
