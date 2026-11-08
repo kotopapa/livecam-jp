@@ -4,10 +4,10 @@ import 'dart:collection';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
-import 'package:image/image.dart' as imglib;
-
 import 'package:google_maps_flutter/google_maps_flutter.dart' show Tile, TileProvider;
 import 'package:http/http.dart' as http;
+
+import '../util/png_encoder.dart';
 
 /// URLテンプレート（`{z}/{x}/{y}`）から google_maps_flutter 用のタイルを取得する
 /// 汎用 TileProvider（GoogleMap移行 第2段階。docs/google_maps_migration.md）。
@@ -140,19 +140,13 @@ class UrlTileProvider implements TileProvider {
       try {
         // Flutter の PNG 書き出し（RGBA＋sBIT）は iOS 実機の Google Maps SDK が
         // 「Don't support little endian bitmaps」で受け付けず、拡大したタイルが
-        // 空白になっていた（2026-09-27 実機ログで確認）。生の画素から image パッケージで
-        // 書き出し直す（透過が要らない地図画像は RGB、気象庁の重ね図は RGBA）
+        // 空白になっていた（2026-09-27 実機ログで確認）。生の画素から自前の最小
+        // エンコーダで書き出し直す（透過が要らない地図画像は RGB、気象庁の重ね図は RGBA。
+        // 2026-11-09 まで image パッケージを使っていたが、この用途だけで実行コードが
+        // 大きくなるため置き換えた）
         final raw = await out.toByteData(format: ui.ImageByteFormat.rawRgba);
-        final rgba = raw!.buffer.asUint8List();
-        final im = imglib.Image.fromBytes(
-          width: size,
-          height: size,
-          bytes: rgba.buffer,
-          numChannels: 4,
-          order: imglib.ChannelOrder.rgba,
-        );
-        final outImg = evenZoomOnly ? im : im.convert(numChannels: 3);
-        return imglib.encodePng(outImg, level: 1);
+        return encodePngFromRgba(size, size, raw!.buffer.asUint8List(),
+            stripAlpha: !evenZoomOnly);
       } finally {
         out.dispose();
       }

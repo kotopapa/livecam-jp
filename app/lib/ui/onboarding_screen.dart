@@ -49,17 +49,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   List<_PromiseContent> _pages(AppLocalizations l10n) => [
     (
-      image: 'assets/images/onboarding_map.png',
+      image: 'assets/images/onboarding_map.webp',
       title: l10n.onboardingTitle1,
       body: l10n.onboardingBody1,
     ),
     (
-      image: 'assets/images/onboarding_monitor.png',
+      image: 'assets/images/onboarding_monitor.webp',
       title: l10n.onboardingTitle2,
       body: l10n.onboardingBody2,
     ),
     (
-      image: 'assets/images/onboarding_license.png',
+      image: 'assets/images/onboarding_license.webp',
       title: l10n.onboardingTitle3,
       body: l10n.onboardingBody3,
     ),

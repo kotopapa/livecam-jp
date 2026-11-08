@@ -441,3 +441,11 @@ python site/build.py                            # 配信ファイル生成
 - 色→コード（±8 許容、透明=0）: wm 晴(255,170,0)=1 / くもり(170,170,170)=2 / 雨(0,65,255)=3 / 雨or雪(160,210,255)=4 / 雪(242,242,255)=5。r3 は 1–5・5–10・10–15・15–20・20以上=1〜5、s3 は 1–3・3–6・6以上=1〜3。表は wdist_grid.py の docstring
 - 出力は 2° ブロック（`<lat0>_<lng0>.json`、約55本・計32,496点・合計4MB 強）と `index.json`（basetime・validtimes・blocks）。形式はアプリ側（別担当 `app/lib/data/point_weather.dart`）と合意済みなので変えるときは両方直す
 - publish は30分ごとだが気象庁の発表は1日3回なので、`sync_site()` は公開中 `https://kotopapa.github.io/livecam-jp/v1/wdist/index.json` と basetime が同じならブロック一式をダウンロードして再利用し、違うときだけ気象庁から生成する（約1,000タイル・0.2秒間隔で約2分）。どちらも取れなければ何も置かない（アプリは無い前提で動く）。publish.yml に `pip install -r requirements.txt` を足した（requests・Pillow が要る。build.py は無ければ wdist をスキップ）
+
+## アプリサイズの削減（2026-11-09追記）
+
+- 配信サイズの実測は `bundletool build-apks --device-spec=<arm64/420dpi/ja の json> --mode=default` → `bundletool get-size total`（AAB 78MB のうち利用者に届くのは約 14MB。BUNDLE-METADATA のデバッグシンボル 91MB・proguard.map 62MB は Play が保管するだけ）。1.7.3 で 18.8MB → 14.3MB
+- **起動画面の元画像は `assets/splash_src/splash.png`**（pubspec の assets に含めない。以前は `assets/images/` にあり Flutter の assets として 2.3MB 同梱されていたが、アプリ内では一度も表示していない）。ネイティブ側は Android `res/drawable*/background.webp`（q90、約 300KB）、iOS `LaunchBackground.imageset/background.jpg`（q85、約 500KB）に手で変換して置いてある。**`dart run flutter_native_splash:create` を再実行すると PNG（1.7MB/2.3MB）に戻る**ので、再生成したら cwebp / sips で変換し直す。Android 12 以降は OS のアイコン起動画面が出るだけで、この画像が全面表示されるのは Android 11 以前
+- オンボーディングの挿絵は WebP（q92、各 40KB。PNG は各 280KB だった）。Flutter は WebP を標準で表示できる
+- 未使用の依存を外した: cupertino_icons（フォント 257KB が同梱されていた）、youtube_player_iframe（埋め込みは自前の WebView）。`image` パッケージは `lib/util/png_encoder.dart`（RGBA→PNG の最小エンコーダ、zlib は dart:io）で置き換えた（タイルの切り出しで iOS の Google Maps SDK が Flutter 標準の PNG を受け付けない問題の回避に使っていた）
+- 残りの内訳（arm64）: libflutter.so 11.8MB（エンジン。削れない）・libapp.so 11.1MB（Dart コード）・classes.dex 7.4MB（Firebase 3 種・AdMob・Maps・Billing。R8 の minify/shrink は有効）。**`--split-debug-info` を付けると libapp.so は 9.4MB（−1.6MB）になるが、Crashlytics の Dart スタックトレースが読めなくなるため、採用するなら `firebase crashlytics:symbols:upload` をリリース手順に組み込む必要がある**（未採用）

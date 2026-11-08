@@ -37,9 +37,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
   shared_preferences: ^2.5.5
-  youtube_player_iframe: ^6.0.2
   http: ^1.6.0
   path_provider: ^2.1.6
   latlong2: ^0.10.1
@@ -66,8 +64,6 @@ dependencies:
   firebase_analytics: ^12.5.0
   google_maps_flutter: ^2.18.1
   google_maps_flutter_ios_sdk10: ^2.19.0
-  image: ^4.10.1
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -140,5 +136,6 @@ flutter_launcher_icons:
   image_path: "assets/icon/app_icon_1024.png"
 
 # ネイティブ起動画面（flutter_native_splash）。支給スプラッシュ画像を全面表示
+# 画像は Flutter の assets には含めない（起動画面にしか使わず 2.3MB あった。2026-11-09）
 flutter_native_splash:
-  background_image: "assets/images/splash.png"
+  background_image: "assets/splash_src/splash.png"
