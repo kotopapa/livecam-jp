@@ -1062,7 +1062,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get bosaiNoWarnings => '当前没有正在发布的警报和注意报';
 
   @override
-  String get bosaiWarningNoteNone => '来源：气象厅。当前没有发布警报和特别警报。仅有注意报的地区可在下方一览中确认。';
+  String get bosaiWarningNoteNone => '来源：气象厅。当前没有发布警报和特别警报。仅有注意报的地区可在上方一览中确认。';
 
   @override
   String get bosaiWarningNote => '来源：气象厅 气象警报・注意报。点击后将显示该都道府县的摄像头列表。';
@@ -4167,7 +4167,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get bosaiNoWarnings => '目前沒有發布中的警報與注意報';
 
   @override
-  String get bosaiWarningNoteNone => '來源：氣象廳。目前沒有發布警報與特別警報。僅發布注意報的地區可從下方列表確認。';
+  String get bosaiWarningNoteNone => '來源：氣象廳。目前沒有發布警報與特別警報。僅發布注意報的地區可從上方列表確認。';
 
   @override
   String get bosaiWarningNote => '來源：氣象廳 氣象警報・注意報。點選後會顯示該都道府縣的攝影機列表。';

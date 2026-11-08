@@ -1105,7 +1105,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bosaiWarningNoteNone =>
-      'Source: JMA. No Warnings or Emergency Warnings are in effect. Areas with advisories only are listed below.';
+      'Source: JMA. No Warnings or Emergency Warnings are in effect. Areas with advisories only are listed above.';
 
   @override
   String get bosaiWarningNote =>

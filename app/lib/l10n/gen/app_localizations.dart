@@ -2089,7 +2089,7 @@ abstract class AppLocalizations {
   /// 出典表記（気象庁）はどの言語でも省略しない。SPEC C5
   ///
   /// In ja, this message translates to:
-  /// **'出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は下の一覧から確認できます。'**
+  /// **'出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は上の一覧から確認できます。'**
   String get bosaiWarningNoteNone;
 
   /// 出典表記（気象庁）はどの言語でも省略しない。SPEC C5

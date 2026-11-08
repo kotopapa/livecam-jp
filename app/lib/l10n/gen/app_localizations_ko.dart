@@ -1076,7 +1076,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get bosaiWarningNoteNone =>
-      '출처: 기상청. 현재 경보·특별 경보 발표가 없습니다. 주의보만 발표된 지역은 아래 목록에서 확인할 수 있습니다.';
+      '출처: 기상청. 현재 경보·특별 경보 발표가 없습니다. 주의보만 발표된 지역은 위 목록에서 확인할 수 있습니다.';
 
   @override
   String get bosaiWarningNote =>

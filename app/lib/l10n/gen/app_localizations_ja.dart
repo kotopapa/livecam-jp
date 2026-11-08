@@ -1072,7 +1072,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get bosaiWarningNoteNone =>
-      '出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は下の一覧から確認できます。';
+      '出典：気象庁。現在、警報・特別警報の発表はありません。注意報のみの地域は上の一覧から確認できます。';
 
   @override
   String get bosaiWarningNote => '出典：気象庁 気象警報・注意報。タップするとその都道府県のカメラ一覧を表示します。';
@@ -4204,7 +4204,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get bosaiWarningNoteNone =>
-      '出典（しゅってん）：気象庁。いま けいほうは 出（で）て いません。ちゅういほうだけの ばしょは 下（した）の いちらんで 見（み）られます。';
+      '出典（しゅってん）：気象庁。いま けいほうは 出（で）て いません。ちゅういほうだけの ばしょは 上（うえ）の いちらんで 見（み）られます。';
 
   @override
   String get bosaiWarningNote =>

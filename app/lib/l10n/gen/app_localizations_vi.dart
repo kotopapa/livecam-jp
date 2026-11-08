@@ -1109,7 +1109,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get bosaiWarningNoteNone =>
-      'Nguồn: Cơ quan Khí tượng. Hiện không có cảnh báo hay cảnh báo đặc biệt nào được công bố. Các khu vực chỉ có thông tin lưu ý có thể xem ở danh sách bên dưới.';
+      'Nguồn: Cơ quan Khí tượng. Hiện không có cảnh báo hay cảnh báo đặc biệt nào được công bố. Các khu vực chỉ có thông tin lưu ý có thể xem ở danh sách bên trên.';
 
   @override
   String get bosaiWarningNote =>

@@ -753,7 +753,8 @@ class _BosaiScreenState extends State<BosaiScreen>
                       itemCount: _quakes!.length + 1,
                       separatorBuilder: (_, _) => const Divider(height: 1),
                       itemBuilder: (context, i) {
-                        if (i == 0) {
+                        // 出典・操作のヒントは一覧の最下部（2026-11-08 ユーザー要望）
+                        if (i == _quakes!.length) {
                           final t = _fetchedAt;
                           final ts = t == null
                               ? ''
@@ -769,7 +770,7 @@ class _BosaiScreenState extends State<BosaiScreen>
                             ),
                           );
                         }
-                        final q = _quakes![i - 1];
+                        final q = _quakes![i];
                         return ListTile(
                           leading: Container(
                             width: 44,
@@ -1032,6 +1033,7 @@ class _BosaiScreenState extends State<BosaiScreen>
         const SizedBox(height: 24),
         _stockpileLink(),
         _xAccountsLink(),
+        _warningNote(),
       ]);
     }
     final prefs = _warnings!.keys.toList()
@@ -1044,25 +1046,18 @@ class _BosaiScreenState extends State<BosaiScreen>
       });
     final advPrefs = (_advisories ?? const {}).keys.toList()..sort();
     return ListView.separated(
-      // 末尾の1件は備蓄チェックリストへの導線（控えめに1つだけ）
-      itemCount: prefs.length + 4,
+      // 末尾は 備蓄チェックリスト → X アカウント → 出典の注記
+      // （出典は最下部に置く。2026-11-08 ユーザー要望）
+      itemCount: prefs.length + 5,
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
+        if (i == prefs.length + 4) return _warningNote();
         if (i == prefs.length + 3) return _xAccountsLink();
         if (i == prefs.length + 2) return _stockpileLink();
         if (i == 0) {
           final bar = _warningFreshnessBar();
           return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             ?bar,
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
-              child: Text(
-                _warnings!.isEmpty
-                    ? context.l10n.bosaiWarningNoteNone
-                    : context.l10n.bosaiWarningNote,
-                style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
-              ),
-            ),
             ..._extraSections(),
           ]);
         }
@@ -1132,6 +1127,18 @@ class _BosaiScreenState extends State<BosaiScreen>
     );
   }
 
+  /// 気象警報タブ最下部の出典の注記（警報が無いときは注意報の案内を兼ねる）
+  Widget _warningNote() => Padding(
+        padding: const EdgeInsets.fromLTRB(12, 4, 12, 24),
+        child: Text(
+          (_warnings?.isEmpty ?? true)
+              ? context.l10n.bosaiWarningNoteNone
+              : context.l10n.bosaiWarningNote,
+          style: TextStyle(
+              fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
+        ),
+      );
+
   /// 気象警報タブ最下部の控えめな導線（防災の備え＝備蓄チェックリスト）
   Widget _stockpileLink() => Padding(
         padding: const EdgeInsets.fromLTRB(12, 8, 12, 20),
@@ -1179,12 +1186,8 @@ class _BosaiScreenState extends State<BosaiScreen>
         style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
       ),
     );
-    // 出典ヘッダの下に「近くの地点の暑さ指数」カードを置く
-    final top = Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      mainAxisSize: MainAxisSize.min,
-      children: [header, _buildWbgtCard(now)],
-    );
+    // 「近くの地点の暑さ指数」カードを先頭に、出典は最下部（2026-11-08 ユーザー要望）
+    final top = _buildWbgtCard(now);
     if (list.isEmpty) {
       return ListView(children: [
         top,
@@ -1192,13 +1195,15 @@ class _BosaiScreenState extends State<BosaiScreen>
           padding: const EdgeInsets.all(24),
           child: Center(child: Text(l10n.bosaiHeatNone)),
         ),
+        header,
       ]);
     }
     return ListView.separated(
-      itemCount: list.length + 1,
+      itemCount: list.length + 2,
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
         if (i == 0) return top;
+        if (i == list.length + 1) return header;
         final p = list[i - 1];
         final prefName = prefectureNameOf(l10n, p.prefCode);
         return ListTile(
@@ -1233,8 +1238,8 @@ class _BosaiScreenState extends State<BosaiScreen>
     );
   }
 
-  /// 積雪タブ（冬季）。出典・観測時刻の見出し → 近くの観測点カード →
-  /// 積雪のある都道府県（最深の深い順）。都道府県を開くと市区町村＞観測点
+  /// 積雪タブ（冬季）。近くの観測点カード → 積雪のある都道府県（最深の深い順）
+  /// → 出典・観測時刻の注記（最下部。2026-11-08 ユーザー要望）。都道府県を開くと市区町村＞観測点
   Widget _buildSnowTab() {
     final l10n = context.l10n;
     final report = _snow;
@@ -1258,11 +1263,7 @@ class _BosaiScreenState extends State<BosaiScreen>
         style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant),
       ),
     );
-    final top = Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      mainAxisSize: MainAxisSize.min,
-      children: [header, _buildSnowNearbyCard()],
-    );
+    final top = _buildSnowNearbyCard();
     if (prefs.isEmpty) {
       final Widget body;
       if (report == null && !_snowFailed) {
@@ -1279,13 +1280,14 @@ class _BosaiScreenState extends State<BosaiScreen>
                   textAlign: TextAlign.center)),
         );
       }
-      return ListView(children: [top, body]);
+      return ListView(children: [top, body, header]);
     }
     return ListView.separated(
-      itemCount: prefs.length + 1,
+      itemCount: prefs.length + 2,
       separatorBuilder: (_, _) => const Divider(height: 1),
       itemBuilder: (context, i) {
         if (i == 0) return top;
+        if (i == prefs.length + 1) return header;
         final p = prefs[i - 1];
         final prefName = prefectureNameOf(l10n, p.prefCode);
         return ListTile(
