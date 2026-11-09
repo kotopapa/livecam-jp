@@ -112,3 +112,19 @@ def test_cbr_road_placeholder_detected():
     data = (Path(__file__).resolve().parents[2] / "crawler" / "tests" / "fixtures"
             / "cbr_road_placeholder.jpeg").read_bytes()
     assert is_placeholder(dhash64(data))
+
+
+def test_kawabou_pause_placeholder_detected():
+    """川の防災情報の「ただいま調整中です。」（休止中。2026-11 北海道の冬期休止で 600 台超）"""
+    from pathlib import Path
+    from monitor.freeze import dhash64, is_placeholder
+    fx = Path(__file__).resolve().parents[2] / "crawler" / "tests" / "fixtures"
+    assert is_placeholder(dhash64((fx / "kawabou_pause_placeholder.jpg").read_bytes()))
+
+
+def test_hokkaido_mlit_placeholder_detected():
+    """北海道開発局 cctv_*.jpg の「調整中です」（作業員とキツネの絵）"""
+    from pathlib import Path
+    from monitor.freeze import dhash64, is_placeholder
+    fx = Path(__file__).resolve().parents[2] / "crawler" / "tests" / "fixtures"
+    assert is_placeholder(dhash64((fx / "hokkaido_mlit_placeholder.jpg").read_bytes()))
