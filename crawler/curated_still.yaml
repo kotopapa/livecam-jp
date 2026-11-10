@@ -25286,16 +25286,17 @@ cameras:
   #   image_url: http://makomanai.takinoreien.com/webcamera/cam05.jpg
   #   page_url: https://www.takinoreien.com/publics/index/66/
   #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 北海道札幌市南区滝野2-3'
-  - id: curated-still-lcdb-ffcafe7c
-    name: 滝野すずらん丘陵公園中央口
-    operator: 滝野すずらん丘陵公園
-    category: other
-    prefecture: '01'
-    lat: 42.919618
-    lng: 141.381423
-    image_url: https://takinopark.com/live_cam/country/takinocountry.jpg
-    page_url: https://www.takinopark.com/livecam/
-    note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒005-0862 北海道札幌市南区滝野247'
+  # 2026-11-11 退役: 2026-10-04 から画像が更新されず、公式サイトのライブカメラ枠も撤去された
+  # - id: curated-still-lcdb-ffcafe7c
+  #   name: 滝野すずらん丘陵公園中央口
+  #   operator: 滝野すずらん丘陵公園
+  #   category: other
+  #   prefecture: '01'
+  #   lat: 42.919618
+  #   lng: 141.381423
+  #   image_url: https://takinopark.com/live_cam/country/takinocountry.jpg
+  #   page_url: https://www.takinopark.com/livecam/
+  #   note: 'ライブカメラDB索引経由で一次ソースを確認。座標は地図中心(概略)。所在地: 〒005-0862 北海道札幌市南区滝野247'
   - id: curated-still-lcdb-2ddeb62e
     name: 中島公園テニスコート
     operator: 札幌テニス協会
