@@ -12,10 +12,9 @@
   グループ（地下道）ごとの alarm_level（0=通行可, 1=通行注意, 2=通行止め）が入る。
   同じ地下道に複数センサー（_状況1/_状況2）がある場合は group で1件にまとめる。
   他自治体のテナントは公開されていない（sendai/nagoya 等は JSON なし。2026-09-21確認）
-- 静岡市道路通行規制情報「しずみちinfo」（https://shizuokashi-road.appspot.com/）
-  API（オープンデータとして提供。config_pub.xml の WebAPIRoot=pub1/）
-  `pub1/flood/underpath` → {Success, Data:[{ObserverPointName, AlertMode（正常 等）,
-  WaterLevel, UpdateDate, Geometry{Coordinates:[lon,lat]}}]}。19か所
+- 静岡市道路通行規制情報「しずみちinfo」は 2026-09-30 にサービス終了（市の案内は「以降は
+  静岡県道路通行規制情報提供システムを利用」）。2026-11-12 に情報源から外した。市内の地下道
+  19か所は静岡県の冠水想定箇所（下記）に含まれるので地点は引き続き出る
 - さいたま市水位情報システム（https://www.flood-info.city.saitama.jp/ 、CC BY 4.0・出典明記）
   地点マスタ `ja/place.json`（place_type 2=道路（アンダーパス）17か所・4=道路（平面）5か所・
   6=冠水センサー40か所（平面道路の「〇〇付近」。2026-09-21 ユーザー決定でアンダーパス以外の冠水も見える化））
@@ -96,16 +95,6 @@ SOURCES: list[dict[str, Any]] = [
         "api": "https://pub.os-alert.info/chiba/devmap/JSONlist4",
         "attribution": "出典：千葉市地下道冠水情報システム",
         "kind": "os_alert",
-    },
-    {
-        "id": "shizuoka",
-        "name": "静岡市道路通行規制情報「しずみちinfo」",
-        "operator": "静岡市",
-        "prefecture": "22",
-        "url": "https://shizuokashi-road.appspot.com/",
-        "api": "https://shizuokashi-road.appspot.com/pub1/flood/underpath",
-        "attribution": "出典：静岡市道路通行規制情報「しずみちinfo」",
-        "kind": "shizumichi",
     },
     {
         "id": "saitama",
@@ -256,7 +245,7 @@ def level_from_text(s: str | None) -> int | None:
     for k, v in LEVEL_BY_TEXT.items():
         if k in s:
             return v
-    # しずみちinfo の AlertMode: 正常 / 注意 / 警戒・危険・通行止 系
+    # 「正常 / 注意 / 警戒・危険・通行止」系の表記（みち情報ネットふくい 等）
     if "正常" in s:
         return 0
     if "注意" in s:
@@ -264,31 +253,6 @@ def level_from_text(s: str | None) -> int | None:
     if any(k in s for k in ("警戒", "危険", "止")):
         return 2
     return None
-
-
-def parse_shizumichi(data: dict[str, Any]) -> list[dict[str, Any]]:
-    """しずみちinfo の flood/underpath → 地下道ごとの点。"""
-    out = []
-    for x in data.get("Data") or []:
-        if not isinstance(x, dict):
-            continue
-        geo = x.get("Geometry") or {}
-        coords = geo.get("Coordinates") if isinstance(geo, dict) else None
-        if not (isinstance(coords, list) and len(coords) >= 2):
-            continue
-        try:
-            lng, lat = float(coords[0]), float(coords[1])
-        except (TypeError, ValueError):
-            continue
-        name = str(x.get("ObserverPointName") or "").strip()
-        if not name:
-            continue
-        mode = str(x.get("AlertMode") or "")
-        lv = level_from_text(mode)
-        out.append({"id": str(x.get("ObserverPointCd") or name), "name": f"{name}（アンダーパス）",
-                    "lat": lat, "lng": lng, "level": -1 if lv is None else lv,
-                    "label": mode or "不明", "at": str(x.get("UpdateDate") or "")})
-    return sorted(out, key=lambda p: p["name"])
 
 
 def saitama_lines(geojson: dict[str, Any] | None) -> dict[str, list[list[list[float]]]]:
@@ -759,8 +723,6 @@ def fetch_source(src: dict[str, Any]) -> list[dict[str, Any]] | None:
         r = requests.get(url, headers=headers, timeout=30)
         r.raise_for_status()
         kind = src.get("kind")
-        if kind == "shizumichi":
-            return parse_shizumichi(r.json())
         if kind == "saitama":
             m = requests.get(src["master"], headers=UA, timeout=30)
             m.raise_for_status()

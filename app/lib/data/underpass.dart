@@ -11,9 +11,10 @@ import '../config.dart';
 /// 自治体がセンサーで公開している通行状況（通行可 / 通行注意 / 通行止め）を、
 /// 配信サイトの `underpass_status.json`（tools/underpass.py が5分おきに更新、
 /// 段階が変わったときだけ publish）から読む。2026-09-21 時点の情報源は
-/// 千葉市地下道冠水情報システム（14か所）・静岡市「しずみちinfo」（19か所）・
+/// 千葉市地下道冠水情報システム（14か所）・
 /// さいたま市水位情報システム（道路22か所）・たかまつマイセーフティマップ（18か所）・
 /// 兵庫県道路総合管理システム 冠水情報（25か所）・柏市 RisKma（28）・平塚市 RisKma（4）・福井県（9）・加古川市（2）・佐世保市（9）・掛川市（7）・静岡県の冠水規制区間（線）・兵庫県の冠水規制地点。映像ではなく状態表示。
+/// 静岡市「しずみちinfo」（19か所）は 2026-09-30 のサービス終了で外した（地点は静岡県の冠水想定箇所に含まれる）。
 /// 出典一覧ページ（凡例からリンク。site/underpass_sources.html を tools/underpass.py が生成）
 const String underpassSourcesPageUrl = 'https://kotopapa.github.io/livecam-jp/underpass_sources.html';
 

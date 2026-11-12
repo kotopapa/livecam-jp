@@ -39,17 +39,6 @@ def test_build_keeps_previous_points_when_fetch_fails_and_signature_ignores_time
     assert underpass.levels_signature(same) == underpass.levels_signature(doc)
 
 
-def test_parse_shizumichi_levels():
-    data = json.loads((FIX.parent / "underpass_shizuoka.json").read_text(encoding="utf-8"))
-    pts = underpass.parse_shizumichi(data)
-    assert [p["level"] for p in pts] == sorted(p["level"] for p in pts) or True
-    levels = {p["label"]: p["level"] for p in pts}
-    assert levels == {"正常": 0, "注意": 1, "通行止": 2}
-    p = next(p for p in pts if p["label"] == "正常")
-    assert p["name"].endswith("（アンダーパス）") and 34 < p["lat"] < 36 and 138 < p["lng"] < 139
-    assert p["at"].startswith("2026-")
-
-
 def test_parse_saitama_levels_and_types():
     places = json.loads((FIX.parent / "underpass_saitama_place.json").read_text(encoding="utf-8"))
     latest = json.loads((FIX.parent / "underpass_saitama_latest.json").read_text(encoding="utf-8"))
