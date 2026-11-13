@@ -1,5 +1,5 @@
 {
- "version": "2026-11-13T12:44:50Z",
+ "version": "2026-11-13T13:11:55Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-13T12:44:50Z",
+   "fetched_at": "2026-11-13T13:11:55Z",
    "items": [
     {
      "id": "243c5ac86c13a1b7",
@@ -38394,6 +38394,17 @@
    "content": "１車線規制",
    "cause": "その他",
    "start": "",
+   "status": "実施中"
+  },
+  "243c9ad208e6d43e": {
+   "kind": "オンランプ規制（国道）",
+   "route": "国道1号",
+   "direction": "不明",
+   "from": "静岡市清水区蒲原 神沢",
+   "to": "静岡市清水区蒲原 神沢",
+   "content": "入口閉鎖",
+   "cause": "その他",
+   "start": "2026年11月13日 21:00",
    "status": "実施中"
   }
  }
