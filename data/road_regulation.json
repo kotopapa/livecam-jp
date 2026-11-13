@@ -1,5 +1,5 @@
 {
- "version": "2026-11-13T01:12:39Z",
+ "version": "2026-11-13T01:39:38Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-13T01:12:39Z",
+   "fetched_at": "2026-11-13T01:39:38Z",
    "items": [
     {
      "id": "243c5ac86c13a1b7",
@@ -42997,6 +42997,17 @@
    "content": "１車線規制",
    "cause": "その他",
    "start": "2026年11月13日 09:00",
+   "status": "実施中"
+  },
+  "243c99c1a01036a8": {
+   "kind": "片側規制（国道）",
+   "route": "国道42号",
+   "direction": "上下",
+   "from": "串本町西向",
+   "to": "-",
+   "content": "片側交互通行",
+   "cause": "事故",
+   "start": "2026年11月13日 09:26",
    "status": "実施中"
   },
   "243c99c51ebaa32f": {
