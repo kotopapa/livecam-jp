@@ -1,5 +1,5 @@
 {
- "version": "2026-11-16T13:48:36Z",
+ "version": "2026-11-16T14:15:11Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-16T13:48:36Z",
+   "fetched_at": "2026-11-16T14:15:11Z",
    "items": [
     {
      "id": "243c5ac86c13a1b7",
@@ -38331,6 +38331,17 @@
    "from": "あま市甚目寺稲荷",
    "to": "あま市甚目寺稲荷",
    "content": "片側交互通行",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243cb6380ed3562c": {
+   "kind": "車線規制（国道）",
+   "route": "国道19号",
+   "direction": "上り",
+   "from": "名古屋市中区錦３丁目５",
+   "to": "名古屋市中区錦３丁目５",
+   "content": "１車線規制",
    "cause": "その他",
    "start": "",
    "status": "実施中"
