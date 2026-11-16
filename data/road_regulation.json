@@ -1,5 +1,5 @@
 {
- "version": "2026-11-16T20:01:52Z",
+ "version": "2026-11-16T20:31:46Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-16T20:01:52Z",
+   "fetched_at": "2026-11-16T20:31:46Z",
    "items": [
     {
      "id": "243c5ac86c13a1b7",
@@ -31854,11 +31854,11 @@
      ]
     },
     {
-     "id": "243cb6323cb59c1e",
+     "id": "243cbdbebb42d409",
      "name": "国道302号",
      "section": "名古屋市西区貴生町～春日井市勝川町４丁目",
      "kind": "車線規制（国道）",
-     "direction": "上下",
+     "direction": "下り",
      "cause": "その他",
      "content": "１車線規制",
      "lat": 35.2293895586674,
@@ -37989,10 +37989,10 @@
    "start": "",
    "status": "実施中"
   },
-  "243cb6323cb59c1e": {
+  "243cbdbebb42d409": {
    "kind": "車線規制（国道）",
    "route": "国道302号",
-   "direction": "上下",
+   "direction": "下り",
    "from": "名古屋市西区貴生町",
    "to": "春日井市勝川町４丁目",
    "content": "１車線規制",
