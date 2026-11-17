@@ -1,5 +1,5 @@
 {
- "version": "2026-11-17T00:39:23Z",
+ "version": "2026-11-17T01:06:26Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-17T00:39:23Z",
+   "fetched_at": "2026-11-17T01:06:26Z",
    "items": [
     {
      "id": "243c5ac86c13a1b7",
@@ -38920,6 +38920,17 @@
    "start": "2026年11月13日 17:00",
    "status": "実施中"
   },
+  "243cbe0b90cb3816": {
+   "kind": "車線規制（国道）",
+   "route": "国道1号",
+   "direction": "上下",
+   "from": "亀山市栄町",
+   "to": "亀山市椿世町",
+   "content": "路肩規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
   "243cbe1ab449af48": {
    "kind": "車線規制（国道）",
    "route": "国道191号",
@@ -38949,17 +38960,6 @@
    "from": "大字山野井",
    "to": "大字山中",
    "content": "１車線規制",
-   "cause": "その他",
-   "start": "",
-   "status": "実施中"
-  },
-  "243cbe0b90cb3816": {
-   "kind": "車線規制（国道）",
-   "route": "国道1号",
-   "direction": "上下",
-   "from": "亀山市栄町",
-   "to": "亀山市椿世町",
-   "content": "路肩規制",
    "cause": "その他",
    "start": "",
    "status": "実施中"
