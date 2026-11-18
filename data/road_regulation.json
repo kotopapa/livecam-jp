@@ -1,5 +1,5 @@
 {
- "version": "2026-11-18T01:37:00Z",
+ "version": "2026-11-18T02:03:54Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-18T01:37:00Z",
+   "fetched_at": "2026-11-18T02:03:54Z",
    "items": [
     {
      "id": "243c5ac86c13a1b7",
@@ -39060,6 +39060,39 @@
    "direction": "上下",
    "from": "郡上市白鳥町 越佐",
    "to": "郡上市白鳥町 向小駄良",
+   "content": "片側交互通行",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243cc73302bc4f3d": {
+   "kind": "車線規制（国道）",
+   "route": "国道191号",
+   "direction": "上下",
+   "from": "上新地町",
+   "to": "垢田町",
+   "content": "１車線規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243cc73302bc4f3f": {
+   "kind": "車線規制（国道）",
+   "route": "国道2号",
+   "direction": "上下",
+   "from": "松屋東町",
+   "to": "長府松小田本町",
+   "content": "路肩規制",
+   "cause": "その他",
+   "start": "",
+   "status": "実施中"
+  },
+  "243cc73302bc4f66": {
+   "kind": "片側規制（国道）",
+   "route": "国道2号",
+   "direction": "上下",
+   "from": "廿木",
+   "to": "廿木",
    "content": "片側交互通行",
    "cause": "その他",
    "start": "",
