@@ -1,5 +1,5 @@
 {
- "version": "2026-11-19T04:38:24Z",
+ "version": "2026-11-19T05:05:38Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-19T04:38:24Z",
+   "fetched_at": "2026-11-19T05:05:38Z",
    "items": [
     {
      "id": "243c5ac86c13a1b7",
@@ -41929,6 +41929,39 @@
    "content": "通行止",
    "cause": "大雨",
    "start": "2026年11月19日 12:20",
+   "status": "実施中"
+  },
+  "243cd0abf083ce84": {
+   "kind": "規制無し（高速（国交省））",
+   "route": "E24京奈和自動車道",
+   "direction": "下り",
+   "from": "三宅ＩＣ",
+   "to": "-",
+   "content": "規制無し",
+   "cause": "落下物",
+   "start": "2026年11月19日 13:10",
+   "status": "実施中"
+  },
+  "243cd0aac71673b2": {
+   "kind": "規制無し（高速（国交省））",
+   "route": "E54松江自動車道",
+   "direction": "下り",
+   "from": "-",
+   "to": "-",
+   "content": "規制無し",
+   "cause": "事故",
+   "start": "2026年11月19日 13:00",
+   "status": "実施中"
+  },
+  "243cd0a871d96221": {
+   "kind": "車線規制（国道）",
+   "route": "国道22号",
+   "direction": "下り",
+   "from": "名古屋市西区幅下１丁目２",
+   "to": "名古屋市西区幅下１丁目２",
+   "content": "路肩規制",
+   "cause": "その他",
+   "start": "2026年11月19日 09:00",
    "status": "実施中"
   }
  }
