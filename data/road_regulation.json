@@ -1,5 +1,5 @@
 {
- "version": "2026-11-19T09:58:28Z",
+ "version": "2026-11-19T10:25:51Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-19T09:58:28Z",
+   "fetched_at": "2026-11-19T10:25:51Z",
    "items": [
     {
      "id": "243c5ac86c13a1b7",
@@ -41225,6 +41225,17 @@
    "content": "通行止",
    "cause": "気象条件",
    "start": "2026年11月19日 10:40",
+   "status": "実施中"
+  },
+  "243cd12184dc4883": {
+   "kind": "車線規制（高速（国交省））",
+   "route": "E24京奈和自動車道",
+   "direction": "上り",
+   "from": "五條北ＩＣ",
+   "to": "-",
+   "content": "路肩規制",
+   "cause": "事故",
+   "start": "2026年11月19日 18:12",
    "status": "実施中"
   },
   "243cd123d7b774e9": {
