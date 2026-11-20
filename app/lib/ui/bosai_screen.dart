@@ -1366,8 +1366,20 @@ class _BosaiScreenState extends State<BosaiScreen>
 
   /// 1観測点分（観測所名・距離／積雪深・24時間降雪）。積雪が無ければその旨
   Widget _snowPointRow(SnowStation s, double distance, SnowObs? o) {
-    final l10n = context.l10n;
     final grey = TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant);
+    return InkWell(
+      key: ValueKey('snow_point_${s.sourceId ?? 'amedas'}_${s.id}'),
+      onTap: () => openSnowStationCameras(context, widget.app, s),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        child: _snowPointRowBody(s, distance, o, grey),
+      ),
+    );
+  }
+
+  Widget _snowPointRowBody(
+      SnowStation s, double distance, SnowObs? o, TextStyle grey) {
+    final l10n = context.l10n;
     return Row(children: [
       Expanded(
         child: Row(
@@ -1398,6 +1410,8 @@ class _BosaiScreenState extends State<BosaiScreen>
         Text(l10n.bosaiSnowNoSnowAtPoint, style: grey)
       else
         snowDepthChip(context, l10n, o),
+      const SizedBox(width: 6),
+      Icon(Icons.videocam_outlined, size: 18, color: grey.color),
     ]);
   }
 
@@ -2149,6 +2163,23 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
   }
 }
 
+/// 積雪の観測点の周辺カメラ（近い順・20km 以内・30台まで）。
+/// 観測値が実際の積雪と合っているかを、すぐ近くのカメラで確かめられるようにする
+void openSnowStationCameras(
+        BuildContext context, AppState app, SnowStation station) =>
+    Navigator.of(context).push(MaterialPageRoute<void>(
+      builder: (_) => NearbyCamerasScreen(
+        app: app,
+        title: context.l10n.bosaiNearbyCamerasTitle(station.name),
+        lat: station.lat,
+        lng: station.lng,
+        radiusMeters: snowStationCameraRadiusMeters,
+        limit: 30,
+      ),
+    ));
+
+const double snowStationCameraRadiusMeters = 20000;
+
 /// 指定地点の周辺カメラ一覧（距離順・50km以内）。
 class NearbyCamerasScreen extends StatefulWidget {
   const NearbyCamerasScreen({
@@ -2488,7 +2519,14 @@ class SnowPrefectureScreen extends StatelessWidget {
                       fontSize: 11,
                       color: Theme.of(context).colorScheme.onSurfaceVariant)),
           ])),
-          trailing: snowDepthChip(context, l10n, o),
+          trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+            snowDepthChip(context, l10n, o),
+            const SizedBox(width: 6),
+            Icon(Icons.videocam_outlined,
+                size: 18,
+                color: Theme.of(context).colorScheme.onSurfaceVariant),
+          ]),
+          onTap: () => openSnowStationCameras(context, app, o.station),
         ));
       }
     }
