@@ -255,6 +255,9 @@ class _FakeAnalysis:
             return None
         return lat < 37
 
+    def max_around(self, lat, lng, radius_km=sp.CHECK_RADIUS_KM):
+        return 50
+
 
 def test_is_implausible_rules():
     # 周囲に積雪なし: 10cm 以上は気温によらず、1〜9cm は気温 3℃ 以上で誤計測
@@ -358,3 +361,16 @@ def test_build_does_not_publish_amedas_fallback():
                    datetime(2026, 11, 1, 18, 0, tzinfo=timezone.utc))
     p = doc["sources"][0]["points"][0]
     assert "ta" not in p and "t" not in p
+
+
+def test_exceeds_analysis():
+    # 花巻 赤部トンネル坑口: 周囲の解析は 5〜20cm なのにセンサーは 355cm
+    assert sp.is_implausible({"d": 355, "t": -0.1}, False, max_around_cm=20)
+    # 中津川 一本松: 周囲は 5cm 未満
+    assert sp.is_implausible({"d": 57, "t": 2.4}, False, max_around_cm=5)
+    # 峠のセンサーは解析より深くても残す
+    assert not sp.is_implausible({"d": 52, "t": -5.3}, False, max_around_cm=50)
+    assert not sp.is_implausible({"d": 41}, False, max_around_cm=20)
+    assert not sp.is_implausible({"d": 300}, False, max_around_cm=10000)
+    # 解析が読めないときは判定しない
+    assert not sp.is_implausible({"d": 355}, False, max_around_cm=None)

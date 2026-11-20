@@ -62,6 +62,15 @@ ANALYSIS_ZOOM = 8            # 偶数ズームしか生成されない（maxNati
 CHECK_RADIUS_KM = 5.0        # この距離だけ四方にずらした点も含めて「周囲に積雪なし」を判定する
 IMPLAUSIBLE_MIN_CM = 10      # 解析が積雪なしのとき、これ以上の値は気温によらず誤計測とみなす
 IMPLAUSIBLE_TEMP_C = 3.0     # 解析が積雪なしのとき、気温がこれ以上なら 1cm 以上の値も誤計測とみなす
+# 解析積雪深タイルの色 → その階級の上限 cm（気象庁 legend_deep_snowd.svg。最上位は上限なし）
+ANALYSIS_BAND_MAX_CM = {
+    (160, 210, 255): 5, (33, 140, 255): 20, (0, 65, 255): 50, (250, 245, 0): 100,
+    (255, 153, 0): 150, (255, 40, 0): 200, (180, 0, 104): 10000,
+}
+# 周囲の解析積雪深（階級の上限）に対し、センサー値がこの倍率＋余裕を超えたら誤計測とみなす。
+# 峠のセンサーは 5km メッシュの解析より深く出るので緩めにしてある（上限 20cm なら 90cm まで残す）
+EXCESS_FACTOR = 3.0
+EXCESS_MARGIN_CM = 30
 FALLBACK_TEMP_C = 8.0
 AMEDAS_BASE = "https://www.jma.go.jp/bosai/amedas/"
 AMEDAS_TEMP_RADIUS_KM = 30.0  # センサーに気温が無いとき、この距離内の最寄りアメダスの気温で代用
@@ -665,6 +674,33 @@ class SnowAnalysis:
             return None
         return im.getpixel((px, py))[3] > 0
 
+    def band_max(self, lat: float, lng: float) -> int | None:
+        """その点の解析積雪深の階級の上限 cm。積雪なしは 0、タイルが取れない・知らない色は None。"""
+        x, y, px, py = tile_pixel(lat, lng)
+        im = self._tile(x, y)
+        if im is None:
+            return None
+        r, g, b, a = im.getpixel((px, py))
+        if a == 0:
+            return 0
+        for (cr, cg, cb), cm in ANALYSIS_BAND_MAX_CM.items():
+            if abs(r - cr) <= 8 and abs(g - cg) <= 8 and abs(b - cb) <= 8:
+                return cm
+        return None
+
+    def max_around(self, lat: float, lng: float, radius_km: float = CHECK_RADIUS_KM) -> int | None:
+        """その点と四方 radius_km の計5点の解析積雪深のうち、最も深い階級の上限 cm。
+        どれかが読めなければ None（判定しない）。"""
+        dlat = radius_km / 111.0
+        dlng = radius_km / (111.0 * max(0.2, math.cos(math.radians(lat))))
+        best = 0
+        for la, ln in ((lat, lng), (lat + dlat, lng), (lat - dlat, lng), (lat, lng + dlng), (lat, lng - dlng)):
+            m = self.band_max(la, ln)
+            if m is None:
+                return None
+            best = max(best, m)
+        return best
+
     def zero_around(self, lat: float, lng: float, radius_km: float = CHECK_RADIUS_KM) -> bool | None:
         """その点と四方 radius_km の計5点がすべて積雪なしなら True。どれかに積雪があれば False。
         どれかのタイルが取れなければ None（判定しない）。"""
@@ -680,8 +716,16 @@ class SnowAnalysis:
         return result
 
 
+def exceeds_analysis(d: float, max_around_cm: int | None) -> bool:
+    """センサー値が周囲の解析積雪深を大きく超えているか（2026-11-21 花巻 赤部トンネル坑口 355cm。
+    周囲の解析は 5〜20cm で、積雪はあるため「周囲に積雪なし」の規則では弾けなかった）。"""
+    if not max_around_cm:
+        return False
+    return d > max_around_cm * EXCESS_FACTOR + EXCESS_MARGIN_CM
+
+
 def is_implausible(p: dict[str, Any], zero_around: bool | None, t_fallback: float | None = None,
-                   snow_nearby: bool | None = None) -> bool:
+                   snow_nearby: bool | None = None, max_around_cm: int | None = None) -> bool:
     """センサー値が誤計測とみなせるか。zero_around は解析積雪深で周囲に積雪が無いか（None=判定できず）、
     snow_nearby は近くのアメダスが積雪を観測しているか（None=アメダスが取れない）。
     気温はセンサー自身の t、無ければ t_fallback（最寄りアメダス）を使う。
@@ -699,7 +743,7 @@ def is_implausible(p: dict[str, Any], zero_around: bool | None, t_fallback: floa
     if zero_around is None:
         return t is not None and t >= FALLBACK_TEMP_C
     if not zero_around:
-        return False
+        return exceeds_analysis(d, max_around_cm)
     if d >= IMPLAUSIBLE_MIN_CM:
         return True
     if snow_nearby is None:
@@ -795,6 +839,7 @@ def drop_implausible(points: list[dict[str, Any]], analysis: SnowAnalysis | None
             kept.append(p)
             continue
         zero = analysis.zero_around(p["lat"], p["lng"]) if analysis else None
+        mx = analysis.max_around(p["lat"], p["lng"]) if analysis and zero is False else None
         fb, nearby = None, None
         if temps is not None:
             nearby = temps.snow_nearby(p["lat"], p["lng"])
@@ -802,7 +847,7 @@ def drop_implausible(points: list[dict[str, Any]], analysis: SnowAnalysis | None
                 fb = temps.nearest_temp(p["lat"], p["lng"])
                 if fb is not None:
                     p["ta"] = fb
-        (dropped if is_implausible(p, zero, fb, nearby) else kept).append(p)
+        (dropped if is_implausible(p, zero, fb, nearby, mx) else kept).append(p)
     return kept, dropped
 
 
