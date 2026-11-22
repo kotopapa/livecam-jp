@@ -8,7 +8,7 @@ import '../data/ad_free.dart';
 import '../l10n/l10n.dart';
 import 'tip_screen.dart';
 
-/// 広告のそばに置く、支援画面への小さなリンク（1.7.5）。支援のお礼が広告の非表示なので、
+/// 広告のそばに置く、支援画面への小さなリンク（1.7.6）。支援のお礼が広告の非表示なので、
 /// 広告が出ている所にだけ入口を置く。広告と誤タップし合わないよう、広告とは別の行にして
 /// 右端へ寄せる
 class RemoveAdsLink extends StatelessWidget {

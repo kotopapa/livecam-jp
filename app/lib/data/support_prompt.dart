@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// カメラ詳細に出す「応援のお願い」の出し分け（1.7.5）。
+/// カメラ詳細に出す「応援のお願い」の出し分け（1.7.6）。
 ///
 /// よく使う人にだけ出す: カメラ詳細を開いた累計が [threshold] 回に達してから。
 /// 回数は端末内（SharedPreferences）にだけ持つ。
