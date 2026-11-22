@@ -5,6 +5,45 @@ import 'package:visibility_detector/visibility_detector.dart';
 import '../app_state.dart';
 import '../config.dart';
 import '../data/ad_free.dart';
+import '../l10n/l10n.dart';
+import 'tip_screen.dart';
+
+/// 広告のそばに置く、支援画面への小さなリンク（1.7.5）。支援のお礼が広告の非表示なので、
+/// 広告が出ている所にだけ入口を置く。広告と誤タップし合わないよう、広告とは別の行にして
+/// 右端へ寄せる
+class RemoveAdsLink extends StatelessWidget {
+  const RemoveAdsLink({super.key, required this.source});
+
+  /// Analytics の入口名（ad_anchor / ad_detail）
+  final String source;
+
+  static const double height = 24;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return SizedBox(
+      height: height,
+      child: Align(
+        alignment: AlignmentDirectional.centerEnd,
+        child: InkWell(
+          key: const ValueKey('remove_ads_link'),
+          onTap: () => TipScreen.open(context, source: source),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              Text(
+                context.l10n.adRemoveLink,
+                style: TextStyle(fontSize: 11, color: scheme.onSurfaceVariant),
+              ),
+              Icon(Icons.chevron_right, size: 14, color: scheme.onSurfaceVariant),
+            ]),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 /// 広告の破棄は少し遅らせる。画面を閉じた直後は AdWidget の platform view の生成が
 /// ネイティブ側でまだ進行中のことがあり、先に dispose すると iOS 側が
@@ -28,7 +67,11 @@ Duration adDisposeDelay = const Duration(seconds: 3);
 /// 読み込み完了までは高さだけ確保して何も描かず、読み込み失敗時は
 /// 高さ0に畳む（コンテンツの間なのでプレースホルダを見せない）。
 class AdBannerPlaceholder extends StatefulWidget {
-  AdBannerPlaceholder({super.key, this.size = AdSize.banner, String? adUnitId}) : adUnitId = adUnitId ?? admobBannerUnitId;
+  AdBannerPlaceholder({super.key, this.size = AdSize.banner, String? adUnitId, this.showRemoveLink = true})
+      : adUnitId = adUnitId ?? admobBannerUnitId;
+
+  /// 広告の下に「応援して広告を消す」を出すか（広告が読み込めたときだけ出る）
+  final bool showRemoveLink;
 
   /// 広告サイズ。既定は320×50。詳細画面の地図下には
   /// [AdSize.mediumRectangle](300×250)を使う
@@ -113,6 +156,8 @@ class _AdBannerPlaceholderState extends State<AdBannerPlaceholder> {
               )
             : const SizedBox.shrink(),
       ),
+      if (widget.showRemoveLink && _loaded && _ad != null)
+        const RemoveAdsLink(source: 'ad_detail'),
       const Divider(height: 24),
     ]),
     );
@@ -198,11 +243,14 @@ class _AnchoredAdBannerState extends State<AnchoredAdBanner> {
     if (!_loaded || _size == null) return const SizedBox.shrink();
     return SafeArea(
       top: false,
-      child: SizedBox(
-        width: _size!.width.toDouble(),
-        height: _size!.height.toDouble(),
-        child: AdWidget(ad: _ad!),
-      ),
+      child: Column(mainAxisSize: MainAxisSize.min, children: [
+        const RemoveAdsLink(source: 'ad_anchor'),
+        SizedBox(
+          width: _size!.width.toDouble(),
+          height: _size!.height.toDouble(),
+          child: AdWidget(ad: _ad!),
+        ),
+      ]),
     );
   }
 }

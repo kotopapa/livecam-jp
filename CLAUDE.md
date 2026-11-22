@@ -327,6 +327,8 @@ python site/build.py                            # 配信ファイル生成
 
 - **広告非表示は「買う」ものではなく、開発者支援（投げ銭）へのお礼**（2026-09-20 ユーザー決定。文言もそう書く）。`app/lib/data/ad_free.dart` の `AdFree.instance` が期限（SharedPreferences `ad_free_until`、UTC）と履歴（`tip_history`）を持ち、`AdBannerPlaceholder` / `AnchoredAdBanner` は期間中は読み込みもしない。日数は coffee 30 / sweets 90 / lunch 240 / devtools 730（月単価が上位ほど下がる設計）。期間中の再支援は残りに加算
 - **ストア側（App Store Connect / Play Console）の変更は不要**。商品は消耗型4種のまま。消耗型は復元できないため期限は端末内のみ（再インストール・機種変更で消える）と支援画面に明記。「永久」は非消耗型を別に作らない限り約束しない
+- **支援画面への入口を増やした（1.7.5、2026-11-22 ユーザー決定。それまでは設定画面の 1 か所だけで、支援がほぼ無かった）**: (A) 広告のそばの小さなリンク「応援して広告を消す」（`RemoveAdsLink`。下部固定バナーの上の行と、カメラ詳細の広告の下。広告が読み込めたときだけ出る）、(B) カメラ詳細の一文＋リンク（`_supportNote`。カメラ詳細を開いた累計 20 回以上の人にだけ、お礼の期間外にだけ出す。`lib/data/support_prompt.dart`、SharedPreferences `camera_open_count`）。**YouTube のカメラの画面には (B) を出さない**（広告と同じ扱い。プレーヤーのある画面に宣伝を置かない）。起動時などのポップアップは入れていない（災害時に操作を遮るため。入口ごとの数字を見てから判断する）
+- 支援画面を開いたとき Analytics イベント `tip_open`（source = settings / ad_anchor / ad_detail / detail_note）を送り、`tip_purchased` にも source を付ける
 - 購入時に Analytics イベント `tip_purchased`（product）を送る。それ以前の支援者は端末からもストアからも特定できない（集計だけ可能）
 
 ## Android版の知見（2026-09-10追記）

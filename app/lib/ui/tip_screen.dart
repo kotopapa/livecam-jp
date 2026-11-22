@@ -18,7 +18,15 @@ import '../l10n/l10n.dart';
 /// App Store Connect に同じ商品IDの「消耗型」商品を登録しておくこと
 /// （未登録・審査前は商品が取得できず「準備中」表示になる）。
 class TipScreen extends StatefulWidget {
-  const TipScreen({super.key});
+  const TipScreen({super.key, this.source = 'settings'});
+
+  /// どの入口から開いたか（Analytics 用。settings / ad_anchor / ad_detail / detail_note）
+  final String source;
+
+  static void open(BuildContext context, {required String source}) {
+    Navigator.of(context).push(
+        MaterialPageRoute(builder: (_) => TipScreen(source: source)));
+  }
 
   /// 商品ID（App Store Connect / Google Play で同じIDを登録する）
   static const productIds = <String>{
@@ -75,6 +83,7 @@ class _TipScreenState extends State<TipScreen> {
   void initState() {
     super.initState();
     Analytics.screen('tip');
+    Analytics.event('tip_open', params: {'source': widget.source});
     _sub = _iap.purchaseStream.listen(_onPurchases, onError: (_) {});
     _load();
   }
@@ -127,7 +136,8 @@ class _TipScreenState extends State<TipScreen> {
           if (pd.pendingCompletePurchase) await _iap.completePurchase(pd);
           // お礼の広告非表示期間を付与（restored は消耗型では来ないが同じ扱い）
           final until = await AdFree.instance.grant(pd.productID);
-          Analytics.event('tip_purchased', params: {'product': pd.productID});
+          Analytics.event('tip_purchased',
+              params: {'product': pd.productID, 'source': widget.source});
           if (mounted) {
             final l10n = context.l10n;
             setState(() {

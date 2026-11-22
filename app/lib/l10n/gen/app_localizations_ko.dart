@@ -3134,4 +3134,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get pwWarnOpenTab => '방재 탭에서 보기';
+
+  @override
+  String get adRemoveLink => '응원하고 광고 없애기';
+
+  @override
+  String get detailSupportNote => '이 앱은 개인이 개발·운영하고 있습니다.';
 }

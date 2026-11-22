@@ -3107,6 +3107,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get pwWarnOpenTab => '在防灾标签页查看';
+
+  @override
+  String get adRemoveLink => '支持开发者，去除广告';
+
+  @override
+  String get detailSupportNote => '本应用由个人开发和运营。';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6212,4 +6218,10 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get pwWarnOpenTab => '在防災分頁查看';
+
+  @override
+  String get adRemoveLink => '支持開發者，移除廣告';
+
+  @override
+  String get detailSupportNote => '本應用程式由個人開發與營運。';
 }

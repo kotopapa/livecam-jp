@@ -5553,6 +5553,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'防災タブで見る'**
   String get pwWarnOpenTab;
+
+  /// 広告のそばに置く、支援画面への小さなリンク
+  ///
+  /// In ja, this message translates to:
+  /// **'応援して広告を消す'**
+  String get adRemoveLink;
+
+  /// カメラ詳細に出す応援のお願いの一文。後ろに settingsSupportTitle のリンクが続く
+  ///
+  /// In ja, this message translates to:
+  /// **'このアプリは個人で開発・運営しています。'**
+  String get detailSupportNote;
 }
 
 class _AppLocalizationsDelegate

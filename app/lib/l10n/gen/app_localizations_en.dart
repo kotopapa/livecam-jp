@@ -3230,4 +3230,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pwWarnOpenTab => 'View in the Disaster tab';
+
+  @override
+  String get adRemoveLink => 'Support to remove ads';
+
+  @override
+  String get detailSupportNote =>
+      'This app is built and run by one independent developer.';
 }

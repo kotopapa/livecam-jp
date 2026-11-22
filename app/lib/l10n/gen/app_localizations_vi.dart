@@ -3240,4 +3240,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get pwWarnOpenTab => 'Xem trong thẻ Phòng chống thiên tai';
+
+  @override
+  String get adRemoveLink => 'Ủng hộ để tắt quảng cáo';
+
+  @override
+  String get detailSupportNote =>
+      'Ứng dụng này do một cá nhân phát triển và vận hành.';
 }

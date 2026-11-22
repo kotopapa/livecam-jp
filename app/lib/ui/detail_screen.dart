@@ -31,6 +31,9 @@ import '../util/geo.dart';
 import '../util/jst.dart';
 import '../util/time_format.dart';
 import 'ad_banner.dart';
+import 'tip_screen.dart';
+import '../data/ad_free.dart';
+import '../data/support_prompt.dart';
 import 'elevation_label.dart';
 import 'pin_bitmaps.dart';
 import 'pin_style.dart';
@@ -72,6 +75,16 @@ class _DetailScreenState extends State<DetailScreen> {
 
   Timer? _viewTimer;
 
+  /// カメラ詳細を開いた累計（応援のお願いの出し分け用。読めるまでは 0＝出さない）
+  int _openCount = 0;
+
+  /// 応援のお願いを出すか。よく使う人にだけ、お礼の期間外にだけ出す。
+  /// YouTube のカメラでは出さない（プレーヤーのある画面に宣伝を置かない。広告と同じ扱い）
+  bool get _showSupportNote =>
+      !camera.isLiveVideo &&
+      SupportPrompt.shouldShow(
+          openCount: _openCount, adFreeActive: AdFree.instance.isActive);
+
   /// 小地図のカメラピン画像（map_screen.dart と同じ仕組み。dpr が確定してから
   /// 一度だけ作る）
   PinBitmaps? _pinBitmaps;
@@ -91,7 +104,11 @@ class _DetailScreenState extends State<DetailScreen> {
     });
     Analytics.screen('detail');
     Analytics.cameraView(camera);
+    SupportPrompt.recordCameraOpen().then((n) {
+      if (mounted && n != _openCount) setState(() => _openCount = n);
+    });
     app.resumeTick.addListener(_onResume);
+    AdFree.instance.addListener(_onPinReady); // 支援の直後に応援のお願いを消す
     _prepareHotelLinks();
   }
 
@@ -162,6 +179,7 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   void dispose() {
     app.resumeTick.removeListener(_onResume);
+    AdFree.instance.removeListener(_onPinReady);
     _cooldownTimer?.cancel();
     _viewTimer?.cancel();
     super.dispose();
@@ -254,10 +272,12 @@ class _DetailScreenState extends State<DetailScreen> {
             // プレーヤーの周囲や YouTube の内容が主である画面での広告・宣伝の販売を禁じて
             // おり、2026-10-01 に Google Play がこの画面（動画直下のバナー）を根拠に
             // 1.6.0 を却下した。誘導型（watch リンク）の画面も同じ扱いにする
-            if (!camera.isLiveVideo) AdBannerPlaceholder(),
+            // 応援のお願いを出す人には、すぐ下に同じ行き先の一文があるのでリンクを重ねない
+            if (!camera.isLiveVideo) AdBannerPlaceholder(showRemoveLink: !_showSupportNote),
             _timeAndRefreshRow(st),
             const SizedBox(height: 8),
             _badges(st),
+            if (_showSupportNote) _supportNote(),
             const Divider(height: 24),
             // 河川カメラの水位グラフ（川の防災情報の観測所が紐付いているときだけ）
             if (camera.waterLevel != null) ...[
@@ -313,6 +333,37 @@ class _DetailScreenState extends State<DetailScreen> {
 
   /// 取得時刻を大きく表示 + 手動更新（60秒クールダウン）。
   /// 更新ボタンは静止画の再取得用のため、常時流れ続けるYouTube系では出さない
+  /// 応援のお願い（一文＋支援画面へのリンク）
+  Widget _supportNote() {
+    final scheme = Theme.of(context).colorScheme;
+    final l10n = context.l10n;
+    final style = TextStyle(fontSize: 12, color: scheme.onSurfaceVariant);
+    return Padding(
+      padding: const EdgeInsets.only(top: 12),
+      child: InkWell(
+        key: const ValueKey('detail_support_note'),
+        onTap: () => TipScreen.open(context, source: 'detail_note'),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 4),
+          child: Text.rich(
+            TextSpan(style: style, children: [
+              TextSpan(text: '${l10n.detailSupportNote} '),
+              TextSpan(
+                text: l10n.settingsSupportTitle,
+                style: TextStyle(
+                  color: scheme.primary,
+                  fontWeight: FontWeight.w600,
+                  decoration: TextDecoration.underline,
+                  decorationColor: scheme.primary,
+                ),
+              ),
+            ]),
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _timeAndRefreshRow(CameraStatus? st) {
     // 静止画はアプリがいま配信元から直接取得した画像なので、アプリの読込時刻を出す。
     // 都度解決型(roadinfo)はURL自体に撮影時刻が入っており status の image_time が正

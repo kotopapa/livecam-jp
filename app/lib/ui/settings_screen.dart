@@ -423,9 +423,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: ListView(
         children: [
           _SupportCard(
-            onTap: () => Navigator.of(
-              context,
-            ).push(MaterialPageRoute(builder: (_) => const TipScreen())),
+            onTap: () => TipScreen.open(context, source: 'settings'),
           ),
           // 言語切替（1.4.0。いつでも切り替えられる。選択は端末に保存される）
           LanguageSettingTile(controller: widget.localeController),

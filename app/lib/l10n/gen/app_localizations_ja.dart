@@ -3122,6 +3122,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get pwWarnOpenTab => '防災タブで見る';
+
+  @override
+  String get adRemoveLink => '応援して広告を消す';
+
+  @override
+  String get detailSupportNote => 'このアプリは個人で開発・運営しています。';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -6289,4 +6295,10 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get pwWarnOpenTab => 'ぼうさいタブで みる';
+
+  @override
+  String get adRemoveLink => 'おうえんして こうこくを けす';
+
+  @override
+  String get detailSupportNote => 'この アプリは 一人（ひとり）で つくって います。';
 }
