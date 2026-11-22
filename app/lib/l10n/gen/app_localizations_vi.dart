@@ -344,6 +344,10 @@ class AppLocalizationsVi extends AppLocalizations {
       'Nhận thông báo khi có cảnh báo đặc biệt về mưa to, gió bão dữ dội, triều cường và các hiện tượng khác';
 
   @override
+  String get settingsSnowWarningSubtitle =>
+      'Nhận thông báo khi các cảnh báo này được ban hành cho khu vực đã chọn';
+
+  @override
   String get settingsNotifyArea => 'Khu vực nhận thông báo';
 
   @override
@@ -356,7 +360,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get settingsNotifyAreaHint =>
-      'Chỉ thông báo cảnh báo đặc biệt của các tỉnh thành đã chọn. Nếu không chọn tỉnh thành nào thì toàn quốc sẽ là đối tượng thông báo';
+      'Chỉ thông báo cảnh báo của các tỉnh thành đã chọn. Nếu không chọn tỉnh thành nào thì toàn quốc sẽ là đối tượng thông báo';
 
   @override
   String get settingsNotifyAreaResetAll => 'Đặt lại về toàn quốc';

@@ -337,6 +337,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsWarningSubtitle => '发布大雨、暴风、暴潮等特别警报时通知您';
 
   @override
+  String get settingsSnowWarningSubtitle => '所选地区发布时通知您';
+
+  @override
   String get settingsNotifyArea => '接收通知的地区';
 
   @override
@@ -348,7 +351,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get settingsNotifyAreaHint => '仅通知所选都道府县的特别警报。未选择任何地区时，通知范围为全国';
+  String get settingsNotifyAreaHint => '仅通知所选都道府县的警报。未选择任何地区时，通知范围为全国';
 
   @override
   String get settingsNotifyAreaResetAll => '恢复为全国';
@@ -3464,6 +3467,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get settingsWarningSubtitle => '發布大雨、暴風、暴潮等特別警報時通知您';
 
   @override
+  String get settingsSnowWarningSubtitle => '所選地區發布時通知您';
+
+  @override
   String get settingsNotifyArea => '通知的地區';
 
   @override
@@ -3475,7 +3481,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   }
 
   @override
-  String get settingsNotifyAreaHint => '僅通知所選都道府縣的特別警報。未選擇任何項目時，通知範圍為全日本';
+  String get settingsNotifyAreaHint => '僅通知所選都道府縣的警報。未選擇任何項目時，通知範圍為全日本';
 
   @override
   String get settingsNotifyAreaResetAll => '恢復為全日本';

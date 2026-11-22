@@ -2,6 +2,9 @@
 
 - 震度5弱以上の地震（気象庁 quake/list.json）→ FCMトピック 'quake5'
 - 特別警報の新規発表（気象庁 warning/map.json）→ FCMトピック 'special-warning'(全国) と 'special-warning-<prefJIS>'(都道府県別)
+- 危険警報（警戒レベル4相当）→ 'danger-warning'(-<prefJIS>)
+- 大雪警報・暴風雪警報 → 'snow-warning'(-<prefJIS>)。雪には危険警報の区分が無く、特別警報まで
+  通知が無かったため 2026-11-23 に追加（アプリ側は別スイッチで購読する）
 
 通知済み管理は data/bosai_notify_state.json（変更時のみコミットされる）。
 認証は FIREBASE_SERVICE_ACCOUNT（既存のランキング集計と同じ鍵）。
@@ -44,6 +47,8 @@ DANGER_WARNINGS = {
     "43": "大雨危険警報", "44": "洪水危険警報",
     "48": "高潮危険警報", "49": "土砂災害危険警報",
 }
+# 大雪警報・暴風雪警報。snow-warning系トピックに送る（特別警報・危険警報とは別の購読）
+SNOW_WARNINGS = {"02": "暴風雪警報", "06": "大雪警報"}
 PREF_NAMES = {
     "01": "北海道", "02": "青森県", "03": "岩手県", "04": "宮城県", "05": "秋田県",
     "06": "山形県", "07": "福島県", "08": "茨城県", "09": "栃木県", "10": "群馬県",
@@ -190,6 +195,9 @@ def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], lis
         if key not in latest or dt > latest[key].get("reportDatetime", ""):
             latest[key] = rep
     current: set[str] = set()  # "pref:code"
+    # 雪の警報のうち、通常の発表・継続の地域があるもの。県内すべてが「特別警報から警報」
+    # への切り替えのときは、新規発表として通知しない
+    plain_snow: set[str] = set()
     for rep in latest.values():
         warning = rep.get("warning") or {}
         for area in warning.get("class10Items") or []:
@@ -200,15 +208,21 @@ def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], lis
             for w in area.get("kinds") or []:
                 wc = w.get("code", "")
                 status = w.get("status", "")
-                if (wc in SPECIAL_WARNINGS or wc in DANGER_WARNINGS) \
+                if (wc in SPECIAL_WARNINGS or wc in DANGER_WARNINGS
+                        or wc in SNOW_WARNINGS) \
                         and status != "解除" and "なし" not in status:
                     current.add(f"{pref}:{wc}")
+                    if wc in SNOW_WARNINGS and "から" not in status:
+                        plain_snow.add(f"{pref}:{wc}")
     previous = set(state["active_special"])
     out = []
     for key in sorted(current - previous):
         pref, wc = key.split(":")
         if wc in SPECIAL_WARNINGS:
             out.append((pref, wc, "special", SPECIAL_WARNINGS[wc]))
+        elif wc in SNOW_WARNINGS:
+            if key in plain_snow:
+                out.append((pref, wc, "snow", SNOW_WARNINGS[wc]))
         else:
             out.append((pref, wc, "danger", DANGER_WARNINGS[wc]))
     return out, sorted(current)
@@ -270,7 +284,8 @@ def aggregate_warning_pushes(events: list[tuple[str, str, str, str]]
     """
     pushes: list[tuple[str, str, str]] = []
     for family, generic, tag in (("special", "特別警報", ""),
-                                 ("danger", "危険警報", "（警戒レベル4相当）")):
+                                 ("danger", "危険警報", "（警戒レベル4相当）"),
+                                 ("snow", "大雪警報・暴風雪警報", "")):
         evs = sorted([e for e in events if e[2] == family])
         if not evs:
             continue
@@ -328,7 +343,7 @@ def main() -> int:
             state["notified_quakes"].append(eid)
             changed = True
         # 同一チェック内の複数発表はトピックごとに1通へ集約する
-        # (全国購読者への連打防止)。special=レベル5 / danger=レベル4
+        # (全国購読者への連打防止)。special=レベル5 / danger=レベル4 / snow=大雪・暴風雪の警報
         for topic, title, body in aggregate_warning_pushes(warning_events):
             send_push(token, project, topic, title, body, tab="warning")
             changed = True

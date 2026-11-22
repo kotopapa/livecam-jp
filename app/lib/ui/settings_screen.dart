@@ -480,13 +480,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   },
           ),
           if (_notifyLoaded && _notify.warningEnabled) ...[
-            ListTile(
-              contentPadding: const EdgeInsets.only(left: 72, right: 16),
-              title: Text(l10n.settingsNotifyArea),
-              subtitle: Text(_warningPrefsSummary(l10n)),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: _pickWarningPrefs,
-            ),
             Padding(
               padding: const EdgeInsets.only(left: 72, right: 16, bottom: 8),
               child: Column(
@@ -526,6 +519,43 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
             ),
           ],
+          // 大雪警報・暴風雪警報（1.7.6）。雪には危険警報の区分が無く、特別警報まで
+          // 通知が無かった。名称は気象庁の多言語辞書の対訳（warning06・warning02）を使う
+          SwitchListTile(
+            key: const ValueKey('notify_snow_switch'),
+            secondary: const Icon(Icons.ac_unit),
+            title: Text(
+              [l10n.warning06, l10n.warning02].join(
+                Localizations.localeOf(context).languageCode == 'ja'
+                    ? '・'
+                    : ', ',
+              ),
+            ),
+            subtitle: Text(l10n.settingsSnowWarningSubtitle),
+            value: _notifyLoaded && _notify.snowEnabled,
+            onChanged: !_notifyLoaded
+                ? null
+                : (v) async {
+                    final ok = await _notify.setSnowEnabled(v);
+                    if (!ok && mounted) _showPermissionDenied();
+                    if (!mounted) return;
+                    setState(() {});
+                    // 冬は発表が多い。全国のままだと通知が増えるので、地域を選ぶ画面を出す
+                    if (ok && v && _notify.warningPrefs.isEmpty) {
+                      await _pickWarningPrefs();
+                    }
+                  },
+          ),
+          // 通知する地域は、特別警報と大雪警報・暴風雪警報で共通
+          if (_notifyLoaded && (_notify.warningEnabled || _notify.snowEnabled))
+            ListTile(
+              key: const ValueKey('notify_area_tile'),
+              contentPadding: const EdgeInsets.only(left: 72, right: 16),
+              title: Text(l10n.settingsNotifyArea),
+              subtitle: Text(_warningPrefsSummary(l10n)),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: _pickWarningPrefs,
+            ),
           if (_diagUnlocked) ...[
             ListTile(
               leading: const Icon(Icons.troubleshoot),

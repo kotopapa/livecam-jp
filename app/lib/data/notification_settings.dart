@@ -3,6 +3,7 @@ import 'dart:async';
 import 'dart:io' show Platform;
 
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/foundation.dart' show visibleForTesting;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'widget_bridge.dart';
@@ -17,7 +18,9 @@ import 'widget_bridge.dart';
 ///   special-warning-`<XX>` = 特別警報・都道府県別（XXはJISコード01〜47）
 ///   danger-warning(-XX)  = 危険警報（警戒レベル4相当・2026新体系）。
 ///                          「レベル4から通知」を選んだ場合のみ追加購読する
-/// 地震はレベルに応じて1トピックだけ、特別警報は全国1つか都道府県別の
+///   snow-warning(-XX)    = 大雪警報・暴風雪警報（1.7.6）。特別警報とは別のスイッチ。
+///                          通知する地域は特別警報と共通
+/// 地震はレベルに応じて1トピックだけ、警報は全国1つか都道府県別の
 /// いずれかを購読する（対象未選択=全国）。
 class NotificationSettings {
   static const _quakeEnabledKey = 'notify_quake_enabled';
@@ -25,6 +28,7 @@ class NotificationSettings {
   static const _warningEnabledKey = 'notify_warning_enabled';
   static const _warningPrefsKey = 'notify_warning_prefs'; // JISコードのリスト
   static const _warningLevelKey = 'notify_warning_level'; // '5' | '4'
+  static const _snowEnabledKey = 'notify_snow_enabled';
 
   static final List<String> allPrefCodes = [
     for (var i = 1; i <= 47; i++) i.toString().padLeft(2, '0'),
@@ -46,7 +50,10 @@ class NotificationSettings {
   /// '5' = 特別警報のみ（既定） / '4' = 危険警報（レベル4相当）から通知
   String warningLevel = '5';
 
-  /// 特別警報の通知対象の都道府県JISコード。空 = 全国
+  /// 大雪警報・暴風雪警報の通知（特別警報のスイッチとは独立）
+  bool snowEnabled = false;
+
+  /// 警報（特別警報・大雪警報など）の通知対象の都道府県JISコード。空 = 全国
   Set<String> warningPrefs = {};
   SharedPreferences? _prefs;
 
@@ -56,6 +63,7 @@ class NotificationSettings {
     quakeLevel = _prefs!.getString(_quakeLevelKey) ?? '5-';
     warningEnabled = _prefs!.getBool(_warningEnabledKey) ?? false;
     warningLevel = _prefs!.getString(_warningLevelKey) ?? '5';
+    snowEnabled = _prefs!.getBool(_snowEnabledKey) ?? false;
     warningPrefs = (_prefs!.getStringList(_warningPrefsKey) ?? const [])
         .toSet();
   }
@@ -98,17 +106,29 @@ class NotificationSettings {
   static const _appliedTopicsKey = 'notify_applied_warning_topics';
 
   /// いま購読すべき警報トピックの集合
-  Set<String> _desiredWarningTopics() {
-    if (!warningEnabled) return {};
-    final danger = warningLevel == '4';
-    if (warningPrefs.isEmpty) {
-      return {'special-warning', if (danger) 'danger-warning'};
-    }
+  Set<String> _desiredWarningTopics() => warningTopicsFor(
+    warningEnabled: warningEnabled,
+    warningLevel: warningLevel,
+    snowEnabled: snowEnabled,
+    prefs: warningPrefs,
+  );
+
+  @visibleForTesting
+  static Set<String> warningTopicsFor({
+    required bool warningEnabled,
+    required String warningLevel,
+    required bool snowEnabled,
+    required Set<String> prefs,
+  }) {
+    final families = [
+      if (warningEnabled) 'special-warning',
+      if (warningEnabled && warningLevel == '4') 'danger-warning',
+      if (snowEnabled) 'snow-warning',
+    ];
+    if (prefs.isEmpty) return families.toSet();
     return {
-      for (final code in warningPrefs) ...{
-        'special-warning-$code',
-        if (danger) 'danger-warning-$code',
-      },
+      for (final code in prefs)
+        for (final family in families) '$family-$code',
     };
   }
 
@@ -152,6 +172,14 @@ class NotificationSettings {
     return true;
   }
 
+  Future<bool> setSnowEnabled(bool value) async {
+    if (value && !await _ensurePermission()) return false;
+    snowEnabled = value;
+    await _prefs?.setBool(_snowEnabledKey, value);
+    unawaited(_applyWarningTopics());
+    return true;
+  }
+
   Future<void> setWarningPrefs(Set<String> prefs) async {
     warningPrefs = prefs.where(allPrefCodes.contains).toSet();
     await _prefs?.setStringList(
@@ -167,7 +195,7 @@ class NotificationSettings {
   /// 起動のたびに48件の解除を投げないよう、購読side のみ再適用する
   void reapply() {
     if (quakeEnabled) _applyQuakeTopics();
-    if (warningEnabled) unawaited(_applyWarningTopics());
+    if (warningEnabled || snowEnabled) unawaited(_applyWarningTopics());
   }
 
   static const _lastFcmTokenKey = 'notify_last_fcm_token';

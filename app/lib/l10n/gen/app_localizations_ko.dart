@@ -340,6 +340,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get settingsWarningSubtitle => '호우·폭풍·고조 등 특별 경보 발표를 알립니다';
 
   @override
+  String get settingsSnowWarningSubtitle => '선택한 지역에 발표되면 알립니다';
+
+  @override
   String get settingsNotifyArea => '알림 받을 지역';
 
   @override
@@ -352,7 +355,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get settingsNotifyAreaHint =>
-      '선택한 도도부현의 특별 경보만 알립니다. 아무것도 선택하지 않으면 전국이 대상이 됩니다';
+      '선택한 도도부현의 경보만 알립니다. 아무것도 선택하지 않으면 전국이 대상이 됩니다';
 
   @override
   String get settingsNotifyAreaResetAll => '전국으로 되돌리기';

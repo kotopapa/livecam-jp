@@ -344,6 +344,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'Get notified when an Emergency Warning is issued for heavy rain, storms, storm surges and more';
 
   @override
+  String get settingsSnowWarningSubtitle =>
+      'Get notified when these warnings are issued for the areas you select';
+
+  @override
   String get settingsNotifyArea => 'Areas to be notified about';
 
   @override
@@ -356,7 +360,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsNotifyAreaHint =>
-      'You will only be notified about emergency warnings for the prefectures you select. If you select none, all of Japan is covered.';
+      'You will only be notified about warnings for the prefectures you select. If you select none, all of Japan is covered.';
 
   @override
   String get settingsNotifyAreaResetAll => 'Reset to all of Japan';

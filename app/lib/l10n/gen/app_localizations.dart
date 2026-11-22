@@ -742,6 +742,12 @@ abstract class AppLocalizations {
   /// **'大雨・暴風・高潮などの特別警報の発表を通知します'**
   String get settingsWarningSubtitle;
 
+  /// No description provided for @settingsSnowWarningSubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'選んだ地域に発表されたら通知します'**
+  String get settingsSnowWarningSubtitle;
+
   /// No description provided for @settingsNotifyArea.
   ///
   /// In ja, this message translates to:
@@ -763,7 +769,7 @@ abstract class AppLocalizations {
   /// No description provided for @settingsNotifyAreaHint.
   ///
   /// In ja, this message translates to:
-  /// **'選択した都道府県の特別警報のみ通知します。何も選ばない場合は全国が対象になります'**
+  /// **'選択した都道府県の警報のみ通知します。何も選ばない場合は全国が対象になります'**
   String get settingsNotifyAreaHint;
 
   /// No description provided for @settingsNotifyAreaResetAll.

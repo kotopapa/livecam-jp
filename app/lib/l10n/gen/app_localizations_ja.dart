@@ -338,6 +338,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsWarningSubtitle => '大雨・暴風・高潮などの特別警報の発表を通知します';
 
   @override
+  String get settingsSnowWarningSubtitle => '選んだ地域に発表されたら通知します';
+
+  @override
   String get settingsNotifyArea => '通知する地域';
 
   @override
@@ -349,8 +352,7 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get settingsNotifyAreaHint =>
-      '選択した都道府県の特別警報のみ通知します。何も選ばない場合は全国が対象になります';
+  String get settingsNotifyAreaHint => '選択した都道府県の警報のみ通知します。何も選ばない場合は全国が対象になります';
 
   @override
   String get settingsNotifyAreaResetAll => '全国に戻す';
@@ -3486,6 +3488,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
       '大雨（おおあめ）・つよい かぜ・高潮（たかしお）などの とくべつ けいほうが 出（で）たら おしらせします';
 
   @override
+  String get settingsSnowWarningSubtitle => 'えらんだ 県（けん）に 出（で）たら おしらせします';
+
+  @override
   String get settingsNotifyArea => 'おしらせを うけとる ばしょ';
 
   @override
@@ -3498,7 +3503,7 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get settingsNotifyAreaHint =>
-      'えらんだ 県（けん）の とくべつ けいほうだけ おしらせします。えらばないと 日本ぜんぶが たいしょうです';
+      'えらんだ 県（けん）の けいほうだけ おしらせします。えらばないと 日本ぜんぶが たいしょうです';
 
   @override
   String get settingsNotifyAreaResetAll => '日本ぜんぶに もどす';

@@ -365,3 +365,56 @@ def test_flood_forecast_without_class20s_uses_office_code_prefecture():
         events, current = bosai_notify.check_flood_forecasts({"active_special": []})
     assert events == [("13", "flood4", "danger", "善福寺川の氾濫危険情報")]
     assert current == ["13:flood4:830304004900"]
+
+
+def _warning_reports(kinds_by_area):
+    return [{
+        "publishingOffice": "新潟地方気象台",
+        "reportDatetime": "2026-12-20T05:00:00+09:00",
+        "warning": {"class10Items": [
+            {"areaCode": area, "kinds": kinds}
+            for area, kinds in kinds_by_area.items()
+        ]},
+    }]
+
+
+def _check_with(reports, active):
+    resp = mock.Mock(); resp.status_code = 200; resp.json.return_value = reports
+    with mock.patch.object(bosai_notify.requests, "get",
+                           lambda url, timeout=30: resp):
+        return bosai_notify.check_special_warnings({"active_special": active})
+
+
+def test_snow_warning_uses_snow_family():
+    """大雪警報(06)・暴風雪警報(02) は snow 系統。注意報(12・13)は対象外"""
+    reports = _warning_reports({
+        "150010": [{"code": "06", "status": "発表"},
+                   {"code": "12", "status": "発表"}],
+        "010011": [{"code": "02", "status": "継続"},
+                   {"code": "13", "status": "発表"}],
+    })
+    events, current = _check_with(reports, [])
+    assert current == ["01:02", "15:06"]
+    assert events == [("01", "02", "snow", "暴風雪警報"),
+                      ("15", "06", "snow", "大雪警報")]
+    pushes = dict((t, (ti, b))
+                  for t, ti, b in bosai_notify.aggregate_warning_pushes(events))
+    assert set(pushes) == {"snow-warning", "snow-warning-01", "snow-warning-15"}
+    assert pushes["snow-warning-15"][0] == "大雪警報が発表されました"
+    assert "新潟県に大雪警報" in pushes["snow-warning-15"][1]
+    # 特別警報・危険警報のトピックには流さない
+    assert not any(t.startswith(("special-", "danger-")) for t in pushes)
+
+
+def test_snow_warning_not_renotified_while_active():
+    reports = _warning_reports({"150010": [{"code": "06", "status": "継続"}]})
+    events, current = _check_with(reports, ["15:06"])
+    assert events == [] and current == ["15:06"]
+
+
+def test_snow_warning_lowered_from_special_is_not_a_new_issue():
+    """大雪特別警報から大雪警報への切り替えは、新規発表として通知しない"""
+    reports = _warning_reports(
+        {"150010": [{"code": "06", "status": "特別警報から警報"}]})
+    events, current = _check_with(reports, ["15:36"])
+    assert events == [] and current == ["15:06"]
