@@ -29,6 +29,7 @@ except ImportError:
     pass
 
 from crawler.sources.base import mount_legacy_tls
+from monitor.domestic import is_domestic_only, merge_domestic
 from monitor.check import (USER_AGENT, check_camera, list_live_in_streams, pick_live_stream,
                            resolve_youtube_channel_live)
 
@@ -36,6 +37,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CAMERAS_PATH = REPO_ROOT / "data" / "cameras.json"
 STATUS_PATH = REPO_ROOT / "data" / "status.json"
 STATE_PATH = REPO_ROOT / "monitor" / ".state" / "hashes.json"
+# 国内からしか届かないサイトの分（monitor/domestic.py）。国内の端末で --domestic を付けて回す
+DOMESTIC_STATUS_PATH = REPO_ROOT / "data" / "status_domestic.json"
+DOMESTIC_STATE_PATH = REPO_ROOT / "monitor" / ".state" / "hashes_domestic.json"
 
 JST = timezone(timedelta(hours=9))
 
@@ -130,7 +134,11 @@ def channel_resolution_order(cams: list[dict], state_all: dict) -> list[dict]:
 BUDGET_SEC = int(os.environ.get("MONITOR_BUDGET_SEC", str(20 * 60)))
 
 
-def run(shard: str | None = None) -> int:
+def run(shard: str | None = None, domestic: bool = False) -> int:
+    """domestic=False: 国内限定ホスト以外を確認して status.json に書く（GitHub Actions）。
+    domestic=True: 国内限定ホストだけを確認して status_domestic.json に書く（国内の端末）"""
+    status_path = DOMESTIC_STATUS_PATH if domestic else STATUS_PATH
+    state_path = DOMESTIC_STATE_PATH if domestic else STATE_PATH
     started = time.monotonic()
     deadline = started + BUDGET_SEC
     if not CAMERAS_PATH.exists():
@@ -138,6 +146,8 @@ def run(shard: str | None = None) -> int:
         return 1
     cameras = json.loads(CAMERAS_PATH.read_text(encoding="utf-8")).get("cameras", [])
     cameras = [c for c in cameras if c.get("review", {}).get("status") == "approved"]
+    approved_all = cameras
+    cameras = [c for c in cameras if is_domestic_only(c) == domestic]
     if shard:
         idx, total = (int(x) for x in shard.split("/"))
         cameras = [c for i, c in enumerate(cameras) if i % total == idx]
@@ -148,13 +158,13 @@ def run(shard: str | None = None) -> int:
     cameras = [c for c in cameras if not _skip_low_freq(c, datetime.now(timezone.utc))]
 
     state_all: dict = {}
-    if STATE_PATH.exists():
-        state_all = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    if state_path.exists():
+        state_all = json.loads(state_path.read_text(encoding="utf-8"))
 
     # 既存statusを読み、今回チェックしない群（シャード外）の結果を保持する
     statuses: dict = {}
-    if STATUS_PATH.exists():
-        statuses = json.loads(STATUS_PATH.read_text(encoding="utf-8")).get("statuses", {})
+    if status_path.exists():
+        statuses = json.loads(status_path.read_text(encoding="utf-8")).get("statuses", {})
 
     throttle = HostThrottle()
     session = requests.Session()
@@ -165,6 +175,7 @@ def run(shard: str | None = None) -> int:
     # 都度解決型feed（mlit_roadinfo）: 解決元ページ1枚で整備局分の最新URLが取れるので、
     # シャード外のカメラも含めて毎回解決し、status.json の image_url を新鮮に保つ
     all_cameras = json.loads(CAMERAS_PATH.read_text(encoding="utf-8")).get("cameras", [])
+    all_cameras = [c for c in all_cameras if is_domestic_only(c) == domestic]
     roadinfo_cams = [c for c in all_cameras
                      if c.get("review", {}).get("status") == "approved"
                      and c["feed"]["type"] == "mlit_roadinfo"]
@@ -674,13 +685,24 @@ def run(shard: str | None = None) -> int:
     else:
         print(f"youtube_channel {resolved_channels} 台の配信IDを解決", file=sys.stderr)
 
+    if domestic:
+        # 台帳から外れたカメラの結果を残さない
+        keep = {c["id"] for c in all_cameras if c.get("review", {}).get("status") == "approved"}
+        statuses = {k: v for k, v in statuses.items() if k in keep}
+    else:
+        # 国内限定ホストの分は国内の結果（無い・古いときは既定の扱い）に置き換える
+        dom = None
+        if DOMESTIC_STATUS_PATH.exists():
+            dom = json.loads(DOMESTIC_STATUS_PATH.read_text(encoding="utf-8"))
+        merge_domestic(statuses, approved_all, dom)
+
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    STATUS_PATH.write_text(json.dumps(
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    status_path.write_text(json.dumps(
         {"generated_at": now, "statuses": statuses},
         ensure_ascii=False, indent=1), encoding="utf-8")
-    STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    STATE_PATH.write_text(json.dumps(state_all, ensure_ascii=False), encoding="utf-8")
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    state_path.write_text(json.dumps(state_all, ensure_ascii=False), encoding="utf-8")
 
     counts: dict[str, int] = defaultdict(int)
     for s in statuses.values():
@@ -692,8 +714,10 @@ def run(shard: str | None = None) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description="livecam-jp monitor")
     ap.add_argument("--shard", help="例 0/2 = 2分割の0番目")
+    ap.add_argument("--domestic", action="store_true",
+                    help="国内限定ホスト（monitor/domestic.py）だけを確認して status_domestic.json に書く")
     args = ap.parse_args()
-    return run(args.shard)
+    return run(args.shard, args.domestic)
 
 
 if __name__ == "__main__":

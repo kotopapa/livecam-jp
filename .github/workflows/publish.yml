@@ -6,6 +6,7 @@ on:
     paths:
       - "data/cameras.json"
       - "data/status.json"
+      - "data/status_domestic.json"
       - "data/global_ranking.json"
       - "data/shelters/**"
       - "data/facilities/**"

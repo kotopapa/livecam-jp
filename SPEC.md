@@ -223,6 +223,8 @@ livecam-jp/
 - `error`（連続3回以上失敗） → **地図に出さない**
 - `unknown` → 通常表示するが「状態未確認」
 
+**国内からしか届かないサイト（2026-11-22 追記）：** 監視（GitHub Actions、海外 IP）からの接続だけを断るサイトは `monitor/domestic.py` の `DOMESTIC_ONLY_HOSTS` に挙げ、GitHub 側では確認しない。国内の端末で `python -m monitor.main --domestic` を回した結果（`data/status_domestic.json`）が 3 時間以内ならそれを配信する。無い・古いときは、直接表示できる型を `unknown`（地図に出す）、監視が画像 URL を解決する型と国内で `error` と判定済みのものを `error` にする。
+
 ---
 
 ## 6. Phase 1 — クローラ（`crawler/`）

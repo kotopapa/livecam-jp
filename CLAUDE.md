@@ -93,6 +93,13 @@ python site/build.py                            # 配信ファイル生成
 - 1.6.0 (48) の報告 4 件の内訳: ①`-[__NSDictionaryM setObject:forKeyedSubscript:]`（背景スレッド・Runner フレーム無し）= **Firebase Analytics の実験取得（APMEExperiment→GULMutableDictionary）に nil が来るサーバー側の不具合**。firebase-ios-sdk#16728、2026-09-28 23:52 PDT にサーバー側で修正済み。クライアント側の対処不要（GoogleUtilities PR#249 で nil を無視する修正がマージ済み、リリースは 8.1.3 以降待ち） ②`FLTNewGoogleMobileAdsViewFactory createArgsCodec`（実体は同ファイルの「Could not find an ad with id … already disposed?」の @throw）= 画面を閉じた直後に AdWidget の platform view 生成が走り、先に dispose した広告を参照して落ちる → `ad_banner.dart` の `_disposeAdLater`（3秒遅延。テストは `adDisposeDelay = Duration.zero`） ③`GeolocatorApple.getPositionStream` の FlutterError = 追従中のストリームのエラー（位置情報オフ等）が未処理で `recordError(fatal: true)` に流れていた → `onError` で追従停止 ④flutter_map の `DiscreteTileRange._floor` は 1.6.0 で flutter_map を廃止したので旧版のみ
 - Crashlytics の「Fatal Exception: FlutterError」は main.dart の `PlatformDispatcher.onError` が未処理の Dart エラーを fatal として記録しているもので、アプリは落ちていない。ストリームの `listen` には必ず `onError` を付ける
 
+## 国内からしか届かないサイトの監視（2026-11-22追記）
+
+- **GitHub Actions のランナー（海外 IP）からだけ接続失敗・403 になるサイトが 33 ホスト・617 台あり、全台が error で地図から消えていた**（岐阜県道路 200、福岡県河川 195、岩手県道路 75、CCN 41、三重県道路 35 など。last_ok_at は 2026-10-21〜22 に集中。その日に監視の設定は変えておらず、原因は未特定）。対処: `monitor/domestic.py` の `DOMESTIC_ONLY_HOSTS` に挙げたホストは GitHub 側で確認せず、国内で `python -m monitor.main --domestic [--shard N/10]` を回した結果（`data/status_domestic.json`、状態は `monitor/.state/hashes_domestic.json`）を `merge_domestic` で合成する（monitor/main.py と site/build.py の両方。SPEC 5.2）
+- ホストを足す条件は「承認済みの全台が error・ランナーからは接続失敗か 403・国内からは中身が取れる」。一部の台だけ error のホスト（石川県道路・島根水防・e-yahiko など）は入れない。調べるときは 200 が返っても中身を見る（**福岡県は 200 で「システム休止中」の案内ページだった**。PHP の脆弱性対応で停止中、再開時期は不明。リストには残してあり、再開すれば国内側の監視が画像 URL を解決して自動で戻る）
+- 国内の結果が 3 時間より古いと既定の扱いに落ちる（直接表示できる型は unknown で表示、監視解決型の高知水防 6・高島市 5・福岡 195 は非表示）。status_domestic.json の push だけで publish が走る
+- 実際に止まっていて非表示が正しいもの（同日の内訳）: 川の防災情報 約1,170（準備中・欠測の札画像や 404）、YouTube 約920（配信終了）、京都府 chisuibousai 54（403）、鹿児島県 60（503）など
+
 ## 単独カメラの追加調査の知見（2026-11-22追記）
 
 - 台帳に無い地点を配信元ごとに洗い直し、**239 台をユーザー判断で採用**（23,709→23,948）。内訳は静止画 112（うち福島県の道路・河川 35）、誘導型 103、YouTube 24。ID は `curated-cm-s-*` / `curated-cm-w-*` / `curated-cm-y-*` と `curated-still-fukushima-road-NNNN`

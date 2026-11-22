@@ -151,6 +151,19 @@ def build() -> int:
         status = json.loads(status_path.read_text(encoding="utf-8"))
     else:
         status = {"generated_at": cameras_src.get("version"), "statuses": {}}
+    # 国内からしか届かないサイトの分は、国内で回した監視の結果に置き換える
+    # （monitor/domestic.py。国内側の push だけでも配信に反映されるよう、ここでも合成する）
+    sys.path.insert(0, str(REPO_ROOT))
+    from monitor.domestic import is_fresh, merge_domestic
+    domestic_path = DATA / "status_domestic.json"
+    domestic = (json.loads(domestic_path.read_text(encoding="utf-8"))
+                if domestic_path.exists() else None)
+    from datetime import datetime, timezone
+    now_utc = datetime.now(timezone.utc)
+    merge_domestic(status["statuses"], cameras_src.get("cameras", []), domestic, now_utc)
+    if is_fresh(domestic, now_utc):
+        # アプリは generated_at が変わったときだけ status を取り直す
+        status["generated_at"] = max(status.get("generated_at") or "", domestic["generated_at"])
     # 承認済み以外のstatusは配信しない
     ids = {r["id"] for r in approved}
     status["statuses"] = {k: v for k, v in status["statuses"].items() if k in ids}
