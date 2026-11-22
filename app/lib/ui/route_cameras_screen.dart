@@ -6,6 +6,7 @@ import '../data/route_corridor.dart';
 import '../l10n/l10n.dart';
 import 'ad_banner.dart';
 import 'detail_screen.dart';
+import 'camera_thumb.dart';
 
 /// ルート沿いのカメラ一覧（出発地からの経路上距離の順）
 class RouteCamerasScreen extends StatefulWidget {
@@ -66,11 +67,7 @@ class _RouteCamerasScreenState extends State<RouteCamerasScreen> {
                       width: 72,
                       height: 48,
                       child: url != null
-                          ? Image.network(url,
-                              fit: BoxFit.cover,
-                              cacheWidth: 216,
-                              errorBuilder: (_, _, _) =>
-                                  Container(color: scheme.surfaceContainerHighest))
+                          ? CameraThumb(url: url)
                           : Container(
                               color: scheme.surfaceContainerHighest,
                               child: Icon(Icons.videocam,

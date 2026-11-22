@@ -7,6 +7,7 @@ import '../models/camera.dart';
 import '../models/status.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
+import 'camera_thumb.dart';
 
 /// お気に入り画面（SPEC 9.2⑤）。リスト表示とカード（グリッド）表示を切替できる。
 class FavoritesScreen extends StatefulWidget {
@@ -313,15 +314,13 @@ Widget _thumb(BuildContext context, AppState app, Camera camera, int tick,
           color: scheme.onSurfaceVariant),
     );
   }
-  return Image.network(url,
+  return CameraThumb(
       key: ValueKey('$url#$tick'),
+      url: url,
       fit: fit,
       // 表示サイズに合わせた縮小デコード（フル解像度8MB級を防ぐ）
       cacheWidth: cacheWidth,
-      errorBuilder: (_, _, _) => Container(
-          color: scheme.surfaceContainerHighest,
-          alignment: Alignment.center,
-          child: Icon(Icons.videocam_off, color: scheme.onSurfaceVariant)));
+      iconSize: 24);
 }
 
 /// カード（グリッド）表示の1枚。

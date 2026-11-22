@@ -11,6 +11,7 @@ import '../models/camera.dart';
 import 'ad_banner.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
+import 'camera_thumb.dart';
 
 enum _RankMode { day, recent, favorites }
 
@@ -195,15 +196,7 @@ class _RankingScreenState extends State<RankingScreen> {
                                   width: 60,
                                   height: 40,
                                   child: url != null
-                                      ? Image.network(
-                                          url,
-                                          fit: BoxFit.cover,
-                                          // 60×40表示への縮小デコード
-                                          cacheWidth: 180,
-                                          errorBuilder: (_, _, _) => Container(
-                                            color: scheme.surfaceContainerHighest,
-                                          ),
-                                        )
+                                      ? CameraThumb(url: url, cacheWidth: 180, iconSize: 16)
                                       : Container(
                                           color: scheme.surfaceContainerHighest,
                                           child: Icon(

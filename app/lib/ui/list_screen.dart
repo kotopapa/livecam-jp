@@ -8,6 +8,7 @@ import '../util/geo.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 import 'ranking_screen.dart';
+import 'camera_thumb.dart';
 
 /// 一覧タブ（SPEC 9.2④）。
 /// 検索は地図と共通のフィルタ（AppState.searchQuery）を使い、
@@ -203,11 +204,7 @@ class _CameraTile extends StatelessWidget {
           width: 72,
           height: 48,
           child: url != null
-              ? Image.network(url,
-                  fit: BoxFit.cover,
-                  // 72×48表示にフル解像度(1枚8MB級)をデコードしない
-                  cacheWidth: 216,
-                  errorBuilder: (_, _, _) => _placeholder(context))
+              ? CameraThumb(url: url)
               : _placeholder(context),
         ),
       ),

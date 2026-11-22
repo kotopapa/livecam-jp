@@ -32,6 +32,7 @@ import 'ad_banner.dart';
 import 'detail_screen.dart';
 import 'stockpile_screen.dart';
 import 'x_accounts_screen.dart';
+import 'camera_thumb.dart';
 
 /// 気象庁の公開JSONから直近の地震を表示し、震源周辺のカメラへ誘導する。
 /// 無料・認証不要のエンドポイントのみ使用（SPEC C2）。取得はこの画面を
@@ -2134,12 +2135,7 @@ class _PrefCamerasScreenState extends State<PrefCamerasScreen> {
                       width: 72,
                       height: 48,
                       child: url != null
-                          ? Image.network(url,
-                              fit: BoxFit.cover,
-                              // 72×48表示への縮小デコード(メモリ削減)
-                              cacheWidth: 216,
-                              errorBuilder: (_, _, _) =>
-                                  Container(color: Theme.of(context).colorScheme.surfaceContainerHighest))
+                          ? CameraThumb(url: url)
                           : Container(
                               color: Theme.of(context).colorScheme.surfaceContainerHighest,
                               child: Icon(Icons.videocam,
@@ -2264,12 +2260,7 @@ class _NearbyCamerasScreenState extends State<NearbyCamerasScreen> {
                       width: 72,
                       height: 48,
                       child: url != null
-                          ? Image.network(url,
-                              fit: BoxFit.cover,
-                              // 72×48表示への縮小デコード(メモリ削減)
-                              cacheWidth: 216,
-                              errorBuilder: (_, _, _) =>
-                                  Container(color: Theme.of(context).colorScheme.surfaceContainerHighest))
+                          ? CameraThumb(url: url)
                           : Container(
                               color: Theme.of(context).colorScheme.surfaceContainerHighest,
                               child: Icon(Icons.videocam,
@@ -2386,11 +2377,7 @@ class RiverCamerasScreen extends StatelessWidget {
                           width: 72,
                           height: 48,
                           child: url != null
-                              ? Image.network(url,
-                                  fit: BoxFit.cover,
-                                  cacheWidth: 216,
-                                  errorBuilder: (_, _, _) =>
-                                      Container(color: Theme.of(context).colorScheme.surfaceContainerHighest))
+                              ? CameraThumb(url: url)
                               : Container(
                                   color: Theme.of(context).colorScheme.surfaceContainerHighest,
                                   child: Icon(Icons.videocam,
