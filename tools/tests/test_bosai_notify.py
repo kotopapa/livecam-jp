@@ -418,3 +418,50 @@ def test_snow_warning_lowered_from_special_is_not_a_new_issue():
         {"150010": [{"code": "06", "status": "特別警報から警報"}]})
     events, current = _check_with(reports, ["15:36"])
     assert events == [] and current == ["15:06"]
+
+
+def _muni_reports(kinds_by_area):
+    return [{
+        "publishingOffice": "新潟地方気象台",
+        "dataTypeCode": "VPWW55",
+        "reportDatetime": "2026-12-20T05:00:00+09:00",
+        "warning": {"class10Items": [], "class20Items": [
+            {"areaCode": area, "kinds": kinds}
+            for area, kinds in kinds_by_area.items()
+        ]},
+    }]
+
+
+def test_snow_municipality_events_and_pushes():
+    reports = _muni_reports({
+        "1522200": [{"code": "06", "status": "発表"},
+                    {"code": "02", "status": "発表"},
+                    {"code": "12", "status": "継続"}],
+        "1510000": [{"status": "発表警報・注意報はなし"}],
+        "1520200": [{"code": "06", "status": "継続"}],
+        "1521000": [{"code": "06", "status": "特別警報から警報"}],
+    })
+    state = {"active_snow_muni": ["1520200:06"]}
+    events, current = bosai_notify.check_snow_municipalities(state, reports)
+    assert current == ["1520200:06", "1521000:06", "1522200:02", "1522200:06"]
+    # 継続中と、特別警報からの切り替えは通知しない
+    assert events == [("1522200", "02", "暴風雪警報"), ("1522200", "06", "大雪警報")]
+    pushes = bosai_notify.municipality_pushes(events, {"1522200": "上越市"})
+    assert pushes == [("snow-warning-1522200",
+                       "大雪警報・暴風雪警報が発表されました",
+                       "新潟県上越市に大雪警報・暴風雪警報。周辺のライブカメラを確認できます")]
+    # 名称が引けなくても送る
+    assert bosai_notify.municipality_pushes(events, {})[0][2].startswith("新潟県に")
+
+
+def test_snow_municipality_first_run_only_remembers():
+    """state に項目が無い初回は、発表中を覚えるだけ（導入時の一斉通知を防ぐ）"""
+    reports = _muni_reports({"1522200": [{"code": "06", "status": "発表"}]})
+    events, current = bosai_notify.check_snow_municipalities({}, reports)
+    assert events == [] and current == ["1522200:06"]
+
+
+def test_snow_municipality_fetch_failure_keeps_state():
+    events, current = bosai_notify.check_snow_municipalities(
+        {"active_snow_muni": ["1522200:06"]}, None)
+    assert events == [] and current is None

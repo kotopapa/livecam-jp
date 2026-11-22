@@ -4,7 +4,9 @@
 - 特別警報の新規発表（気象庁 warning/map.json）→ FCMトピック 'special-warning'(全国) と 'special-warning-<prefJIS>'(都道府県別)
 - 危険警報（警戒レベル4相当）→ 'danger-warning'(-<prefJIS>)
 - 大雪警報・暴風雪警報 → 'snow-warning'(-<prefJIS>)。雪には危険警報の区分が無く、特別警報まで
-  通知が無かったため 2026-11-23 に追加（アプリ側は別スイッチで購読する）
+  通知が無かったため 2026-11-23 に追加（アプリ側は別スイッチで購読する）。
+  市区町村単位は 'snow-warning-<気象庁の市町村等コード7桁>'（同じ県でも山沿いと平野で
+  発表が分かれるため）。発表中の管理は state の active_snow_muni
 
 通知済み管理は data/bosai_notify_state.json（変更時のみコミットされる）。
 認証は FIREBASE_SERVICE_ACCOUNT（既存のランキング集計と同じ鍵）。
@@ -25,6 +27,7 @@ STATE_PATH = "data/bosai_notify_state.json"
 QUAKE_URL = "https://www.jma.go.jp/bosai/quake/data/list.json"
 WARNING_URL = "https://www.jma.go.jp/bosai/warning/data/r8/map.json"  # 旧warning/map.jsonは2026-05で凍結
 # 指定河川洪水予報（発表中の報の配列。無ければ []）。氾濫危険情報=レベル4相当、氾濫発生情報=レベル5相当
+AREA_URL = "https://www.jma.go.jp/bosai/common/const/area.json"  # 市町村等コード→名称
 FLOOD_URL = "https://www.jma.go.jp/bosai/flood/data/r8/flood_xml.json"
 
 STRONG_INTENSITY = {"5-", "5+", "6-", "6+", "7"}
@@ -180,25 +183,96 @@ def check_quakes(state: dict) -> list[tuple[str, str, str, list[str]]]:
     return out
 
 
-def check_special_warnings(state: dict) -> tuple[list[tuple[str, str, str]], list[str]]:
-    """新規発表の特別警報 [(title, body, prefJIS)] と現在の発表中リストを返す。
-    r8形式: 発表報ログの配列。官署は気象警報(VPWW55)と土砂災害(VPWW56)等を
-    別々の報として出すため、官署×報種別ごとに最新報を採用して合算する
-    （官署単位だと同時刻の土砂災害報が落ちる。2026-08-23石垣島で実際に発生）。"""
-    reports = _fetch_json(WARNING_URL)
-    if reports is None:  # 取得失敗時は状態を変えない（解除扱いにして再通知させない）
-        return [], sorted(state["active_special"])
+def _latest_reports(reports: list) -> list[dict]:
+    """官署×報種別ごとの最新報だけを返す（check_special_warnings の説明を参照）"""
     latest: dict[tuple[str, str], dict] = {}
     for rep in reports:
         key = (rep.get("publishingOffice", ""), rep.get("dataTypeCode", ""))
         dt = rep.get("reportDatetime", "")
         if key not in latest or dt > latest[key].get("reportDatetime", ""):
             latest[key] = rep
+    return list(latest.values())
+
+
+def check_snow_municipalities(state: dict, reports: list | None
+                              ) -> tuple[list[tuple[str, str, str]], list[str] | None]:
+    """市区町村単位の大雪警報・暴風雪警報の新規発表 [(市町村等コード, 警報コード, 警報名)] と
+    現在の発表中キー（"<市町村等コード>:<警報コード>"）を返す。
+
+    - 取得失敗（reports が None）のときは状態を変えない（キーは None を返す）
+    - state に active_snow_muni が無い初回は、発表中を覚えるだけで通知しない
+    - 特別警報から警報への切り替えは新規発表として通知しない
+    """
+    if reports is None:
+        return [], None
+    current: set[str] = set()
+    plain: set[str] = set()
+    for rep in _latest_reports(reports):
+        for area in (rep.get("warning") or {}).get("class20Items") or []:
+            code = str(area.get("areaCode", ""))
+            if len(code) != 7 or code[:2] not in PREF_NAMES:
+                continue
+            for w in area.get("kinds") or []:
+                wc = w.get("code", "")
+                status = w.get("status", "")
+                if wc in SNOW_WARNINGS and status != "解除" and "なし" not in status:
+                    current.add(f"{code}:{wc}")
+                    if "から" not in status:
+                        plain.add(f"{code}:{wc}")
+    if "active_snow_muni" not in state:
+        return [], sorted(current)
+    previous = set(state["active_snow_muni"])
+    out = []
+    for key in sorted(current - previous):
+        if key in plain:
+            code, wc = key.split(":")
+            out.append((code, wc, SNOW_WARNINGS[wc]))
+    return out, sorted(current)
+
+
+def municipality_pushes(events: list[tuple[str, str, str]],
+                        names: dict[str, str]) -> list[tuple[str, str, str]]:
+    """市区町村ごとに1通へまとめる。返り値: [(topic, title, body)]。
+    names: 市町村等コード→名称（引けないときは都道府県名だけにする）"""
+    by_area: dict[str, list[str]] = {}
+    for code, _, name in events:
+        by_area.setdefault(code, []).append(name)
+    pushes = []
+    for code in sorted(by_area):
+        ns = sorted(set(by_area[code]))
+        title = f"{'・'.join(ns)}が発表されました"
+        place = PREF_NAMES[code[:2]] + names.get(code, "")
+        pushes.append((f"snow-warning-{code}", title,
+                       f"{place}に{'・'.join(ns)}{TAIL}"))
+    return pushes
+
+
+def fetch_municipality_names() -> dict[str, str]:
+    data = _fetch_json(AREA_URL)
+    c20 = (data or {}).get("class20s") if isinstance(data, dict) else None
+    if not isinstance(c20, dict):
+        return {}
+    return {code: str((v or {}).get("name") or "") for code, v in c20.items()}
+
+
+_UNSET = object()
+
+
+def check_special_warnings(state: dict, reports=_UNSET
+                           ) -> tuple[list[tuple[str, str, str]], list[str]]:
+    """新規発表の特別警報 [(title, body, prefJIS)] と現在の発表中リストを返す。
+    r8形式: 発表報ログの配列。官署は気象警報(VPWW55)と土砂災害(VPWW56)等を
+    別々の報として出すため、官署×報種別ごとに最新報を採用して合算する
+    （官署単位だと同時刻の土砂災害報が落ちる。2026-08-23石垣島で実際に発生）。"""
+    if reports is _UNSET:
+        reports = _fetch_json(WARNING_URL)
+    if reports is None:  # 取得失敗時は状態を変えない（解除扱いにして再通知させない）
+        return [], sorted(state["active_special"])
     current: set[str] = set()  # "pref:code"
     # 雪の警報のうち、通常の発表・継続の地域があるもの。県内すべてが「特別警報から警報」
     # への切り替えのときは、新規発表として通知しない
     plain_snow: set[str] = set()
-    for rep in latest.values():
+    for rep in _latest_reports(reports):
         warning = rep.get("warning") or {}
         for area in warning.get("class10Items") or []:
             code = area.get("areaCode", "")
@@ -327,7 +401,9 @@ def main() -> int:
         return 0
     state = load_state()
     quake_events = check_quakes(state)
-    warning_events, current_special = check_special_warnings(state)
+    reports = _fetch_json(WARNING_URL)
+    warning_events, current_special = check_special_warnings(state, reports)
+    muni_events, current_muni = check_snow_municipalities(state, reports)
     flood_events, current_flood = check_flood_forecasts(state)
     # 気象警報のキーと洪水予報のキーは同じ active_special に同居させる
     current_special = sorted(
@@ -335,7 +411,7 @@ def main() -> int:
     warning_events = warning_events + flood_events
 
     changed = False
-    if quake_events or warning_events:
+    if quake_events or warning_events or muni_events:
         token, project = fcm_token(json.loads(sa_raw))
         for eid, title, body, topics in quake_events:
             for topic in topics:
@@ -347,6 +423,21 @@ def main() -> int:
         for topic, title, body in aggregate_warning_pushes(warning_events):
             send_push(token, project, topic, title, body, tab="warning")
             changed = True
+        if muni_events:
+            # 市区町村単位は通数が多い。1通の失敗で残りと状態の保存を止めない
+            # （止めると次回に全通を送り直してしまう）
+            for topic, title, body in municipality_pushes(
+                    muni_events, fetch_municipality_names()):
+                try:
+                    send_push(token, project, topic, title, body, tab="warning")
+                except requests.RequestException as e:
+                    print(f"push 失敗 [{topic}]: {type(e).__name__}: {e}",
+                          file=sys.stderr)
+            changed = True
+    if current_muni is not None:
+        if current_muni != state.get("active_snow_muni"):
+            changed = True
+        state["active_snow_muni"] = current_muni
     if sorted(current_special) != sorted(state["active_special"]):
         changed = True
     state["active_special"] = current_special

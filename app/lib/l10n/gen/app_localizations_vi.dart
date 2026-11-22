@@ -348,6 +348,13 @@ class AppLocalizationsVi extends AppLocalizations {
       'Nhận thông báo khi các cảnh báo này được ban hành cho khu vực đã chọn';
 
   @override
+  String get settingsSnowAreaWholePref => 'Toàn tỉnh thành';
+
+  @override
+  String get settingsSnowAreaHint =>
+      'Có thể chọn toàn tỉnh thành hoặc từng thành phố, quận, thị trấn, làng. Nếu không chọn thì toàn quốc sẽ là đối tượng thông báo';
+
+  @override
   String get settingsNotifyArea => 'Khu vực nhận thông báo';
 
   @override

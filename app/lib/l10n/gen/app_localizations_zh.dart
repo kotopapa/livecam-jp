@@ -340,6 +340,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsSnowWarningSubtitle => '所选地区发布时通知您';
 
   @override
+  String get settingsSnowAreaWholePref => '整个都道府县';
+
+  @override
+  String get settingsSnowAreaHint => '可选择整个都道府县或市区町村。未选择任何地区时，通知范围为全国';
+
+  @override
   String get settingsNotifyArea => '接收通知的地区';
 
   @override
@@ -3468,6 +3474,12 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get settingsSnowWarningSubtitle => '所選地區發布時通知您';
+
+  @override
+  String get settingsSnowAreaWholePref => '整個都道府縣';
+
+  @override
+  String get settingsSnowAreaHint => '可選擇整個都道府縣或市區町村。未選擇任何項目時，通知範圍為全日本';
 
   @override
   String get settingsNotifyArea => '通知的地區';

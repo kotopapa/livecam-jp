@@ -17,6 +17,7 @@ import 'package:in_app_review/in_app_review.dart';
 import '../data/ad_free.dart';
 import '../data/analytics.dart';
 import '../data/data_saver.dart';
+import '../data/jma_area.dart';
 import '../data/kjmap.dart';
 import '../app_state.dart';
 import '../config.dart';
@@ -26,6 +27,7 @@ import '../l10n/l10n.dart';
 import '../models/manifest.dart';
 import 'detail_screen.dart' show disclaimerTextOf;
 import 'language_switcher.dart';
+import 'snow_area_picker.dart';
 
 const _requestFormUrl =
     'https://docs.google.com/forms/d/e/1FAIpQLScRz0Enqfrq-lrbuDVBdFD1jwSyl4GJEZtgTJxAoZfYo-QWJw/viewform';
@@ -72,6 +74,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
       // トークン健全性チェック込みの自己修復（APNs入替え等での不達を復旧）
       unawaited(_notify.healTokenAndReapply());
       if (mounted) setState(() => _notifyLoaded = true);
+      // 市区町村を選んでいれば、名前を出すために気象庁の地域一覧を読む
+      if (_notify.snowAreas.any((a) => a.length == 7)) {
+        JmaAreaNames.load().then((_) {
+          if (mounted) setState(() {});
+        }).catchError((_) {});
+      }
     });
   }
 
@@ -193,6 +201,36 @@ class _SettingsScreenState extends State<SettingsScreen> {
       names.take(3).join(sep),
       names.length,
     );
+  }
+
+  String _snowAreasSummary(AppLocalizations l10n) {
+    final areas = _notify.snowAreas.toList()..sort();
+    if (areas.isEmpty) return l10n.settingsNotifyAreaAll;
+    final ja = Localizations.localeOf(context).languageCode == 'ja';
+    final names = [
+      for (final a in areas)
+        a.length == 2
+            ? prefectureNameOf(l10n, a)
+            : JmaAreaNames.class20DisplayName(a, japanese: ja) ??
+                  prefectureNameOf(l10n, a.substring(0, 2)),
+    ];
+    final sep = ja ? '・' : ', ';
+    if (names.length <= 3) return names.join(sep);
+    return l10n.settingsNotifyAreaSummary(
+      names.take(3).join(sep),
+      names.length,
+    );
+  }
+
+  Future<void> _pickSnowAreas() async {
+    final result = await Navigator.of(context).push<Set<String>>(
+      MaterialPageRoute(
+        builder: (_) => SnowAreaPickerScreen(initial: _notify.snowAreas),
+      ),
+    );
+    if (result == null) return;
+    await _notify.setSnowAreas(result);
+    if (mounted) setState(() {});
   }
 
   // 通知診断の隠し表示(バージョン5回タップで解放)
@@ -480,6 +518,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   },
           ),
           if (_notifyLoaded && _notify.warningEnabled) ...[
+            ListTile(
+              contentPadding: const EdgeInsets.only(left: 72, right: 16),
+              title: Text(l10n.settingsNotifyArea),
+              subtitle: Text(_warningPrefsSummary(l10n)),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: _pickWarningPrefs,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 72, right: 16, bottom: 8),
               child: Column(
@@ -541,20 +586,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     if (!mounted) return;
                     setState(() {});
                     // 冬は発表が多い。全国のままだと通知が増えるので、地域を選ぶ画面を出す
-                    if (ok && v && _notify.warningPrefs.isEmpty) {
-                      await _pickWarningPrefs();
+                    if (ok && v && _notify.snowAreas.isEmpty) {
+                      await _pickSnowAreas();
                     }
                   },
           ),
-          // 通知する地域は、特別警報と大雪警報・暴風雪警報で共通
-          if (_notifyLoaded && (_notify.warningEnabled || _notify.snowEnabled))
+          // 地域は特別警報とは別に持つ（県全体か、市区町村単位）
+          if (_notifyLoaded && _notify.snowEnabled)
             ListTile(
-              key: const ValueKey('notify_area_tile'),
+              key: const ValueKey('notify_snow_area_tile'),
               contentPadding: const EdgeInsets.only(left: 72, right: 16),
               title: Text(l10n.settingsNotifyArea),
-              subtitle: Text(_warningPrefsSummary(l10n)),
+              subtitle: Text(_snowAreasSummary(l10n)),
               trailing: const Icon(Icons.chevron_right),
-              onTap: _pickWarningPrefs,
+              onTap: _pickSnowAreas,
             ),
           if (_diagUnlocked) ...[
             ListTile(

@@ -748,6 +748,18 @@ abstract class AppLocalizations {
   /// **'選んだ地域に発表されたら通知します'**
   String get settingsSnowWarningSubtitle;
 
+  /// No description provided for @settingsSnowAreaWholePref.
+  ///
+  /// In ja, this message translates to:
+  /// **'都道府県全体'**
+  String get settingsSnowAreaWholePref;
+
+  /// No description provided for @settingsSnowAreaHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'都道府県の全体か、市区町村を選べます。何も選ばない場合は全国が対象になります。市区町村の区分は気象庁の発表のとおりです'**
+  String get settingsSnowAreaHint;
+
   /// No description provided for @settingsNotifyArea.
   ///
   /// In ja, this message translates to:

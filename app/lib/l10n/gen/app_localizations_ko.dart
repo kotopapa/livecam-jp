@@ -343,6 +343,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get settingsSnowWarningSubtitle => '선택한 지역에 발표되면 알립니다';
 
   @override
+  String get settingsSnowAreaWholePref => '도도부현 전체';
+
+  @override
+  String get settingsSnowAreaHint =>
+      '도도부현 전체 또는 시구정촌을 선택할 수 있습니다. 아무것도 선택하지 않으면 전국이 대상이 됩니다';
+
+  @override
   String get settingsNotifyArea => '알림 받을 지역';
 
   @override

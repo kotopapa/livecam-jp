@@ -348,6 +348,13 @@ class AppLocalizationsEn extends AppLocalizations {
       'Get notified when these warnings are issued for the areas you select';
 
   @override
+  String get settingsSnowAreaWholePref => 'Entire prefecture';
+
+  @override
+  String get settingsSnowAreaHint =>
+      'Choose an entire prefecture or individual municipalities. If you select none, all of Japan is covered. Municipal areas follow the JMA\'s divisions.';
+
+  @override
   String get settingsNotifyArea => 'Areas to be notified about';
 
   @override

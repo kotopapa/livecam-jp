@@ -7,11 +7,13 @@ void main() {
     String level = '5',
     bool snow = false,
     Set<String> prefs = const {},
+    Set<String> snowAreas = const {},
   }) => NotificationSettings.warningTopicsFor(
     warningEnabled: warning,
     warningLevel: level,
     snowEnabled: snow,
     prefs: prefs,
+    snowAreas: snowAreas,
   );
 
   test('どちらも切なら購読しない', () {
@@ -33,20 +35,46 @@ void main() {
     });
   });
 
-  test('大雪・暴風雪の警報は特別警報のスイッチと独立', () {
+  test('大雪・暴風雪の警報は特別警報のスイッチ・地域と独立', () {
     expect(topics(snow: true), {'snow-warning'});
-    expect(topics(snow: true, prefs: {'01', '15'}), {
-      'snow-warning-01',
+    // 特別警報の地域（prefs）は雪には効かない
+    expect(topics(snow: true, prefs: {'13'}), {'snow-warning'});
+    expect(topics(snow: true, level: '4', snowAreas: {'15'}), {
       'snow-warning-15',
     });
-    // 危険警報のレベル設定は、特別警報が切なら効かない
-    expect(topics(snow: true, level: '4', prefs: {'15'}), {'snow-warning-15'});
+    // 切なら地域が残っていても購読しない
+    expect(topics(snowAreas: {'15', '0110000'}), isEmpty);
   });
 
-  test('両方入: 地域は共通', () {
-    expect(topics(warning: true, snow: true, prefs: {'15'}), {
-      'special-warning-15',
-      'snow-warning-15',
-    });
+  test('雪の地域: 県全体と市区町村を混ぜて選べる', () {
+    expect(
+      topics(
+        warning: true,
+        prefs: {'13'},
+        snow: true,
+        snowAreas: {'01', '1522200', '1520200'},
+      ),
+      {
+        'special-warning-13',
+        'snow-warning-01',
+        'snow-warning-1522200',
+        'snow-warning-1520200',
+      },
+    );
+  });
+
+  test('雪の地域の正規化: 県全体を選んだ県の市区町村と、形の合わないコードを落とす', () {
+    expect(
+      NotificationSettings.normalizeSnowAreas({
+        '15',
+        '1522200',
+        '0110000',
+        '99',
+        '9912345',
+        'abc',
+        '152220',
+      }),
+      {'15', '0110000'},
+    );
   });
 }

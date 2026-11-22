@@ -48,7 +48,7 @@ python site/build.py                            # 配信ファイル生成
 - **新FlutterテンプレートはAPNs自動登録が効かない**。scene lifecycle構成（FlutterImplicitEngineDelegate）ではfirebase_messagingの自動処理が動かず、APNsトークンがnullのままになる。AppDelegateで`registerForRemoteNotifications()`明示呼び出し＋`didRegisterForRemoteNotificationsWithDeviceToken`で`Messaging.messaging().apnsToken`を直接設定して解決
 - **FCMトピック購読の一斉送信はレート制限で静かに全滅する**。47都道府県×2系統の購読/解除を並列で投げると全て失敗する（エラーはcatchErrorで握りつぶされ見えない）。`notify_applied_warning_topics`に適用済み集合を保存し差分のみ逐次awaitする方式にした（notification_settings.dart）
 - 設定画面の「通知診断」で通知許可/APNsトークン/FCMトークンを確認できる。トークンがあれば `push-test.yml` の mode=inspect で購読状況照会、mode=subscribe でサーバー側から購読登録、mode=send（token指定）で直接送信テストができる
-- 通知トピック: special-warning(-XX)=特別警報レベル5 / danger-warning(-XX)=危険警報レベル4(2026新体系) / snow-warning(-XX)=大雪警報・暴風雪警報(1.7.6。設定の別スイッチ、地域は特別警報と共通)。送信はtools/bosai_notify.py（同一チェック内はトピックごと1通に集約）
+- 通知トピック: special-warning(-XX)=特別警報レベル5 / danger-warning(-XX)=危険警報レベル4(2026新体系) / snow-warning(-XX)=大雪警報・暴風雪警報(1.7.6。設定の別スイッチ。地域は特別警報とは別に持ち、県全体=JIS 2桁か、市区町村=気象庁の市町村等コード7桁の snow-warning-XXXXXXX。発表中の管理は state の active_snow_muni、項目が無い初回は覚えるだけで通知しない)。送信はtools/bosai_notify.py（同一チェック内はトピックごと1通に集約）
 - 気象庁のr8警報コードは2026-05-28新体系対応済み（43大雨/44洪水/48高潮/49土砂災害の危険警報=紫表示、34洪水/39土砂災害の特別警報追加）
 
 ## Push通知の知見（2026-08-23追記）

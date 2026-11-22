@@ -19,7 +19,8 @@ import 'widget_bridge.dart';
 ///   danger-warning(-XX)  = 危険警報（警戒レベル4相当・2026新体系）。
 ///                          「レベル4から通知」を選んだ場合のみ追加購読する
 ///   snow-warning(-XX)    = 大雪警報・暴風雪警報（1.7.6）。特別警報とは別のスイッチ。
-///                          通知する地域は特別警報と共通
+///   snow-warning-`<7桁>`   = 同・市区町村単位（気象庁の市町村等コード）。
+///                          地域は特別警報とは別に持つ（都道府県全体か市区町村）
 /// 地震はレベルに応じて1トピックだけ、警報は全国1つか都道府県別の
 /// いずれかを購読する（対象未選択=全国）。
 class NotificationSettings {
@@ -29,6 +30,7 @@ class NotificationSettings {
   static const _warningPrefsKey = 'notify_warning_prefs'; // JISコードのリスト
   static const _warningLevelKey = 'notify_warning_level'; // '5' | '4'
   static const _snowEnabledKey = 'notify_snow_enabled';
+  static const _snowAreasKey = 'notify_snow_areas'; // JIS 2桁 or 市町村等コード7桁
 
   static final List<String> allPrefCodes = [
     for (var i = 1; i <= 47; i++) i.toString().padLeft(2, '0'),
@@ -53,7 +55,11 @@ class NotificationSettings {
   /// 大雪警報・暴風雪警報の通知（特別警報のスイッチとは独立）
   bool snowEnabled = false;
 
-  /// 警報（特別警報・大雪警報など）の通知対象の都道府県JISコード。空 = 全国
+  /// 大雪警報・暴風雪警報の通知対象。都道府県JISコード（2桁＝県全体）か
+  /// 気象庁の市町村等コード（7桁）。空 = 全国
+  Set<String> snowAreas = {};
+
+  /// 特別警報の通知対象の都道府県JISコード。空 = 全国
   Set<String> warningPrefs = {};
   SharedPreferences? _prefs;
 
@@ -64,6 +70,9 @@ class NotificationSettings {
     warningEnabled = _prefs!.getBool(_warningEnabledKey) ?? false;
     warningLevel = _prefs!.getString(_warningLevelKey) ?? '5';
     snowEnabled = _prefs!.getBool(_snowEnabledKey) ?? false;
+    snowAreas = normalizeSnowAreas(
+      (_prefs!.getStringList(_snowAreasKey) ?? const []).toSet(),
+    );
     warningPrefs = (_prefs!.getStringList(_warningPrefsKey) ?? const [])
         .toSet();
   }
@@ -111,7 +120,21 @@ class NotificationSettings {
     warningLevel: warningLevel,
     snowEnabled: snowEnabled,
     prefs: warningPrefs,
+    snowAreas: snowAreas,
   );
+
+  /// 形の合わないコードと、県全体を選んだ県の市区町村（重複）を落とす
+  static Set<String> normalizeSnowAreas(Set<String> areas) {
+    final prefs = areas.where(allPrefCodes.contains).toSet();
+    return {
+      ...prefs,
+      for (final a in areas)
+        if (RegExp(r'^\d{7}$').hasMatch(a) &&
+            allPrefCodes.contains(a.substring(0, 2)) &&
+            !prefs.contains(a.substring(0, 2)))
+          a,
+    };
+  }
 
   @visibleForTesting
   static Set<String> warningTopicsFor({
@@ -119,16 +142,21 @@ class NotificationSettings {
     required String warningLevel,
     required bool snowEnabled,
     required Set<String> prefs,
+    Set<String> snowAreas = const {},
   }) {
     final families = [
       if (warningEnabled) 'special-warning',
       if (warningEnabled && warningLevel == '4') 'danger-warning',
-      if (snowEnabled) 'snow-warning',
     ];
-    if (prefs.isEmpty) return families.toSet();
     return {
-      for (final code in prefs)
-        for (final family in families) '$family-$code',
+      if (prefs.isEmpty)
+        ...families
+      else
+        for (final code in prefs)
+          for (final family in families) '$family-$code',
+      if (snowEnabled && snowAreas.isEmpty) 'snow-warning',
+      if (snowEnabled)
+        for (final area in snowAreas) 'snow-warning-$area',
     };
   }
 
@@ -178,6 +206,12 @@ class NotificationSettings {
     await _prefs?.setBool(_snowEnabledKey, value);
     unawaited(_applyWarningTopics());
     return true;
+  }
+
+  Future<void> setSnowAreas(Set<String> areas) async {
+    snowAreas = normalizeSnowAreas(areas);
+    await _prefs?.setStringList(_snowAreasKey, snowAreas.toList()..sort());
+    unawaited(_applyWarningTopics());
   }
 
   Future<void> setWarningPrefs(Set<String> prefs) async {

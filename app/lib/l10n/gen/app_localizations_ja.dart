@@ -341,6 +341,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsSnowWarningSubtitle => '選んだ地域に発表されたら通知します';
 
   @override
+  String get settingsSnowAreaWholePref => '都道府県全体';
+
+  @override
+  String get settingsSnowAreaHint =>
+      '都道府県の全体か、市区町村を選べます。何も選ばない場合は全国が対象になります。市区町村の区分は気象庁の発表のとおりです';
+
+  @override
   String get settingsNotifyArea => '通知する地域';
 
   @override
@@ -3489,6 +3496,13 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get settingsSnowWarningSubtitle => 'えらんだ 県（けん）に 出（で）たら おしらせします';
+
+  @override
+  String get settingsSnowAreaWholePref => '県（けん）ぜんぶ';
+
+  @override
+  String get settingsSnowAreaHint =>
+      '県（けん）ぜんぶか、市（し）・町（まち）・村（むら）を えらべます。えらばないと 日本ぜんぶが たいしょうです';
 
   @override
   String get settingsNotifyArea => 'おしらせを うけとる ばしょ';

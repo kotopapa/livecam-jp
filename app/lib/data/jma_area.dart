@@ -13,6 +13,7 @@ class JmaAreaNames {
 
   static Map<String, String> _class10Office = const {};
   static Map<String, String> _class20Name = const {};
+  static Map<String, String> _class20EnName = const {};
   static Map<String, String> _class20Parent = const {};
   static Map<String, String> _class15Parent = const {};
   static Map<String, ({String name, String enName})> _class10Name = const {};
@@ -23,6 +24,15 @@ class JmaAreaNames {
   static Map<String, String> get class10Office => _class10Office;
   static Map<String, String> get class20Name => _class20Name;
   static bool get isLoaded => _loaded;
+
+  /// 市町村等コード（7桁）→ 表示名。日本語以外は enName（無ければ日本語名）
+  static String? class20DisplayName(String code, {required bool japanese}) {
+    final ja = _class20Name[code];
+    if (ja == null || ja.isEmpty) return null;
+    if (japanese) return ja;
+    final en = _class20EnName[code] ?? '';
+    return en.isEmpty ? ja : en;
+  }
 
   static Future<void> load() {
     if (_loaded) return Future<void>.value();
@@ -57,6 +67,9 @@ class JmaAreaNames {
     };
     _class15Parent = {for (final e in c15.entries) e.key: _str(e.value, 'parent')};
     _class20Name = {for (final e in c20.entries) e.key: _str(e.value, 'name')};
+    _class20EnName = {
+      for (final e in c20.entries) e.key: _str(e.value, 'enName')
+    };
     _class20Parent = {for (final e in c20.entries) e.key: _str(e.value, 'parent')};
     _loaded = true;
   }
@@ -65,6 +78,7 @@ class JmaAreaNames {
   static void reset() {
     _class10Office = const {};
     _class20Name = const {};
+    _class20EnName = const {};
     _class20Parent = const {};
     _class15Parent = const {};
     _class10Name = const {};
