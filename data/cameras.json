@@ -1,5 +1,5 @@
 {
- "version": "2026-11-22T04:12:16Z",
+ "version": "2026-11-22T04:36:50Z",
  "urgent_version": "2026-10-10T23:18:20Z",
  "cameras": [
   {
@@ -935996,6 +935996,1944 @@
     "status": "approved",
     "reviewed_at": "2026-11-22",
     "note": "2026-11-22 ユーザー判断で採用（福島県 南会津・富岡の道路カメラ、単独カメラの静止画・誘導型・YouTube。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100001",
+   "name": "新川（新川下之一色）",
+   "name_kana": null,
+   "lat": 35.118481,
+   "lng": 136.834854,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23110",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110111.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100001.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100001.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100002",
+   "name": "新川（三日月橋）",
+   "name_kana": null,
+   "lat": 35.127823,
+   "lng": 136.821793,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23110",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110110.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100002.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100002.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100003",
+   "name": "境川（泉田）",
+   "name_kana": null,
+   "lat": 35.022949,
+   "lng": 137.002136,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23210",
+   "river_or_route": "境川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/110.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_3_100003.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_3_100003.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100004",
+   "name": "逢妻川（一ツ木）",
+   "name_kana": null,
+   "lat": 35.016663,
+   "lng": 137.029175,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23210",
+   "river_or_route": "逢妻川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/111.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_3_100004.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_3_100004.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100007",
+   "name": "中江川（中江川）",
+   "name_kana": null,
+   "lat": 35.244801,
+   "lng": 136.898834,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23234",
+   "river_or_route": "中江川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110101.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100007.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100007.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100008",
+   "name": "新川（喜惣治）",
+   "name_kana": null,
+   "lat": 35.233047,
+   "lng": 136.906006,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23103",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110105.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100008.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100008.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100009",
+   "name": "新川（久地野）",
+   "name_kana": null,
+   "lat": 35.235722,
+   "lng": 136.896347,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23234",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110106.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100009.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100009.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100010",
+   "name": "新川（鴨田川）",
+   "name_kana": null,
+   "lat": 35.227318,
+   "lng": 136.87883,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23234",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110107.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100010.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100010.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100011",
+   "name": "新川（新川大橋）",
+   "name_kana": null,
+   "lat": 35.206089,
+   "lng": 136.858932,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23233",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110108.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100011.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100011.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100012",
+   "name": "新川（水場川）",
+   "name_kana": null,
+   "lat": 35.216751,
+   "lng": 136.858307,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23233",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110109.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100012.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100012.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100013",
+   "name": "新川（新川橋）",
+   "name_kana": null,
+   "lat": 35.19257,
+   "lng": 136.852875,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23233",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C011010C.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100013.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100013.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100014",
+   "name": "新川（萱津橋）",
+   "name_kana": null,
+   "lat": 35.180626,
+   "lng": 136.842697,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23237",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C011010D.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100014.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100014.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100015",
+   "name": "新川（大治橋）",
+   "name_kana": null,
+   "lat": 35.172932,
+   "lng": 136.825745,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23424",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C011010E.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100015.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100015.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100016",
+   "name": "新川（西伏屋）",
+   "name_kana": null,
+   "lat": 35.140541,
+   "lng": 136.821487,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23110",
+   "river_or_route": "新川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C011010F.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100016.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100016.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100018",
+   "name": "五条川（野田）",
+   "name_kana": null,
+   "lat": 35.22506,
+   "lng": 136.84462,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23233",
+   "river_or_route": "五条川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110202.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100018.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100018.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100019",
+   "name": "五条川（清洲）",
+   "name_kana": null,
+   "lat": 35.209953,
+   "lng": 136.840363,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23233",
+   "river_or_route": "五条川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110203.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100019.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100019.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100020",
+   "name": "五条川（法界門橋）",
+   "name_kana": null,
+   "lat": 35.196983,
+   "lng": 136.841156,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23233",
+   "river_or_route": "五条川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110204.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100020.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100020.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100021",
+   "name": "八田川（味美）",
+   "name_kana": null,
+   "lat": 35.236683,
+   "lng": 136.944077,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23206",
+   "river_or_route": "八田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110205.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100021.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100021.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100022",
+   "name": "八田川（地蔵川交差部）",
+   "name_kana": null,
+   "lat": 35.22361,
+   "lng": 136.94252,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23206",
+   "river_or_route": "八田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0110206.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100022.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100022.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100023",
+   "name": "天白川（菅田橋）",
+   "name_kana": null,
+   "lat": 35.117764,
+   "lng": 136.986786,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23116",
+   "river_or_route": "天白川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0120101.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100023.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100023.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100024",
+   "name": "天白川（野並橋）",
+   "name_kana": null,
+   "lat": 35.102924,
+   "lng": 136.947922,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23112",
+   "river_or_route": "天白川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0120102.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100024.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100024.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100025",
+   "name": "天白川（藤川合流部）",
+   "name_kana": null,
+   "lat": 35.097408,
+   "lng": 136.945419,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23112",
+   "river_or_route": "天白川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0120103.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100025.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100025.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100026",
+   "name": "天白川（大慶橋）",
+   "name_kana": null,
+   "lat": 35.094555,
+   "lng": 136.947784,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23114",
+   "river_or_route": "天白川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0120104.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100026.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100026.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100027",
+   "name": "天白川（中川）",
+   "name_kana": null,
+   "lat": 35.069923,
+   "lng": 136.931702,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23114",
+   "river_or_route": "天白川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0120105.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100027.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100027.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100028",
+   "name": "天白川（天白川河口）",
+   "name_kana": null,
+   "lat": 35.067097,
+   "lng": 136.900543,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23222",
+   "river_or_route": "天白川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/C0120106.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100028.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100028.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100101",
+   "name": "矢田川（平子）",
+   "name_kana": null,
+   "lat": 35.204002,
+   "lng": 137.019608,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23226",
+   "river_or_route": "矢田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/026.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100101.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100101.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100102",
+   "name": "大山川（豊山）",
+   "name_kana": null,
+   "lat": 35.249863,
+   "lng": 136.906448,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23342",
+   "river_or_route": "大山川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/025.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100102.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100102.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100103",
+   "name": "領内川（諏訪）",
+   "name_kana": null,
+   "lat": 35.195625,
+   "lng": 136.736923,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23220",
+   "river_or_route": "領内川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/002.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100103.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100103.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100104",
+   "name": "領内川（祖父江）",
+   "name_kana": null,
+   "lat": 35.235344,
+   "lng": 136.72052,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23220",
+   "river_or_route": "領内川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/005.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100104.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100104.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100105",
+   "name": "日光川（戸苅）",
+   "name_kana": null,
+   "lat": 35.269611,
+   "lng": 136.750031,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23203",
+   "river_or_route": "日光川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/009.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100105.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100105.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100106",
+   "name": "日光川（三条）",
+   "name_kana": null,
+   "lat": 35.298229,
+   "lng": 136.761093,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23203",
+   "river_or_route": "日光川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/010.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100106.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100106.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100107",
+   "name": "新郷瀬川（羽黒）",
+   "name_kana": null,
+   "lat": 35.35247,
+   "lng": 136.973373,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23215",
+   "river_or_route": "新郷瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/011.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100107.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100107.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100108",
+   "name": "三宅川（井堀）",
+   "name_kana": null,
+   "lat": 35.229225,
+   "lng": 136.766022,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23220",
+   "river_or_route": "三宅川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/014.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100108.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100108.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100109",
+   "name": "日光川（古瀬）",
+   "name_kana": null,
+   "lat": 35.189484,
+   "lng": 136.750259,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23232",
+   "river_or_route": "日光川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/001.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100109.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100109.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100110",
+   "name": "目比川（目比）",
+   "name_kana": null,
+   "lat": 35.192749,
+   "lng": 136.760635,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23208",
+   "river_or_route": "目比川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/003.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100110.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100110.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100111",
+   "name": "蟹江川（木田）",
+   "name_kana": null,
+   "lat": 35.194973,
+   "lng": 136.790466,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23237",
+   "river_or_route": "蟹江川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/004.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100111.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100111.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100112",
+   "name": "福田川（新居屋）",
+   "name_kana": null,
+   "lat": 35.193249,
+   "lng": 136.812561,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23237",
+   "river_or_route": "福田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/006.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_1_100112.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_1_100112.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100113",
+   "name": "福田川（福田）",
+   "name_kana": null,
+   "lat": 35.116261,
+   "lng": 136.801239,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23111",
+   "river_or_route": "福田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/007.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100113.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100113.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100114",
+   "name": "蟹江川（蟹江）",
+   "name_kana": null,
+   "lat": 35.138748,
+   "lng": 136.793976,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23425",
+   "river_or_route": "蟹江川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/008.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100114.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100114.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100115",
+   "name": "善太川（善太）",
+   "name_kana": null,
+   "lat": 35.114704,
+   "lng": 136.779282,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23425",
+   "river_or_route": "善太川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/012.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100115.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100115.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100116",
+   "name": "蟹江川（須成）",
+   "name_kana": null,
+   "lat": 35.145927,
+   "lng": 136.790924,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23425",
+   "river_or_route": "蟹江川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/013.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_2_100116.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_2_100116.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100117",
+   "name": "信濃川（信濃川）",
+   "name_kana": null,
+   "lat": 35.007374,
+   "lng": 136.875748,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23222",
+   "river_or_route": "信濃川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/024.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_3_100117.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_3_100117.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100118",
+   "name": "乙川（大平）",
+   "name_kana": null,
+   "lat": 34.930923,
+   "lng": 137.20311,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23202",
+   "river_or_route": "乙川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/015.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100118.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100118.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100119",
+   "name": "乙川（茅原沢）",
+   "name_kana": null,
+   "lat": 34.935165,
+   "lng": 137.238708,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23202",
+   "river_or_route": "乙川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/016.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100119.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100119.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100120",
+   "name": "伊賀川（伊賀川）",
+   "name_kana": null,
+   "lat": 34.966637,
+   "lng": 137.176468,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23202",
+   "river_or_route": "伊賀川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/017.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100120.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100120.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100121",
+   "name": "鹿乗川（筒針）",
+   "name_kana": null,
+   "lat": 34.942066,
+   "lng": 137.129257,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23202",
+   "river_or_route": "鹿乗川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/018.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100121.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100121.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100122",
+   "name": "矢作古川（上横須賀）",
+   "name_kana": null,
+   "lat": 34.828491,
+   "lng": 137.071289,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23213",
+   "river_or_route": "矢作古川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/019.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100122.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100122.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100123",
+   "name": "広田川（上横須賀）",
+   "name_kana": null,
+   "lat": 34.8295,
+   "lng": 137.0725,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23213",
+   "river_or_route": "広田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/020.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100123.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100123.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100124",
+   "name": "広田川（永良）",
+   "name_kana": null,
+   "lat": 34.869053,
+   "lng": 137.102219,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23213",
+   "river_or_route": "広田川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/021.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100124.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100124.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100125",
+   "name": "北浜川（北浜）",
+   "name_kana": null,
+   "lat": 34.842167,
+   "lng": 137.028961,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23213",
+   "river_or_route": "北浜川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/022.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100125.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100125.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "aichi-kasen-100126",
+   "name": "矢崎川（矢崎川）",
+   "name_kana": null,
+   "lat": 34.832951,
+   "lng": 137.085022,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "23",
+   "country": null,
+   "municipality": "23213",
+   "river_or_route": "矢崎川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.kasen-aichi.jp/Images/CameraImage/023.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kasen-aichi.jp/CameraImage_4_100126.html"
+   },
+   "operator": "愛知県",
+   "source": {
+    "page_url": "https://www.kasen-aichi.jp/CameraImage_4_100126.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：愛知県 川の防災情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
    },
    "first_seen": "2026-11-22",
    "last_updated": "2026-11-22"

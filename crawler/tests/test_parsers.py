@@ -447,6 +447,36 @@ def test_kobe_river_parser():
     assert validate_camera_record(c.to_record("2026-08-21")) == []
 
 
+def test_aichi_kasen_parser():
+    from crawler.sources.aichi_kasen import (AichiKasenParser, address_hint,
+                                             parse_address, parse_list)
+    lst = ("<a href='CameraList_1.html'>a</a><a href='CameraList_8.html'>b</a>"
+           "<div class='camera-mini-image'> <div class='camera-mini-image-header'>新川（新川下之一色）</div> "
+           "<div class='camera-mini-image-container'><a href='CameraImage_1_100001.html' target='_blank'>"
+           "<img src='Images/CameraImage/C0110111.jpg?time=20261122130913' /></a></div></div>")
+    lst8 = lst.replace("100001", "800001").replace("C0110111", "C0810001").replace("新川（新川下之一色）", "柳生川（花田）")
+    detail = "<tr><th>住所</th><td>\n <span>名古屋市中川区下之一色町字三角地内</span></td></tr>"
+    assert parse_list(lst)[0] == {"id": "100001", "name": "新川（新川下之一色）",
+                                  "page": "CameraImage_1_100001.html",
+                                  "image": "Images/CameraImage/C0110111.jpg"}
+    assert parse_address(detail) == "名古屋市中川区下之一色町字三角地内"
+    assert address_hint("名古屋市中川区下之一色町字三角地内") == "愛知県名古屋市中川区下之一色町字三角"
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = detail if "CameraImage_" in url else (lst8 if "List_8" in url else lst)
+            return P()
+    result = AichiKasenParser().discover(S())
+    assert [c.id for c in result.candidates] == ["aichi-kasen-100001", "aichi-kasen-800001"]
+    c = result.candidates[0]
+    assert c.feed_url == "https://www.kasen-aichi.jp/Images/CameraImage/C0110111.jpg"
+    assert c.river_or_route == "新川" and c.address_hint.startswith("愛知県名古屋市")
+    assert validate_camera_record(c.to_record("2026-11-22")) == []
+
+
 def test_thr_camxml_resolver():
     from crawler.sources.thr_camxml import resolve_image_url
     xml = ("<Camera><ObservationDate>2026/08/21-19:20</ObservationDate>"

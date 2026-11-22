@@ -156,6 +156,10 @@ sources:
     enabled: true
     note: 神戸市河川モニタリングカメラ30台。詳細ページのGoogleマップリンクから
           正確な座標。固定URL images/camera/mobile/<NN>.jpg。license=unknown
+  - id: aichi_kasen
+    enabled: true
+    note: 愛知県 川の防災情報の河川カメラ約93台。CameraList_<N>.html を巡回。
+          固定URL Images/CameraImage/<名>.jpg。座標は個別ページの住所から。license=unknown
   - id: fukuoka_city_river
     enabled: true
     note: 福岡市防災気象情報の河川カメラ24台。トップ埋め込みGeoJSONに座標・住所・

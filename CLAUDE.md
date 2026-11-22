@@ -100,7 +100,8 @@ python site/build.py                            # 配信ファイル生成
 - **同じ channel_id の YouTube 候補は `normalize.dedupe` と `merge_candidates` が feed.url 一致で落とす**（live_match 違いでも落ちる）。同一チャンネルの別枠を足すときは `CuratedYoutubeParser().discover(None)` の候補から `to_record()` で直接レコードを作り、`apply_bulk_approval` に渡す
 - curated_still.yaml の誘導型（`feed_type: web_page`）にも `image_url` が要る（`test_curated_still_yaml` が全件に要求。`feed_url` と同じ値でよい）
 - `apply_bulk_approval` のあとは `tools/fill_municipality.py` をかける。「県違い」と出た新規は座標か prefecture を直す（今回は斑尾高原＝県境、伊丹空港＝兵庫県伊丹市）
-- **未着手の大口**: 愛知県 川の防災情報（kasen-aichi.jp、画像 `/Images/CameraImage/<番号>.jpg` 固定、約88台、座標は別途）、宮崎県 簡易河川カメラ（kasen.pref.miyazaki.jp、`/cameraData/now/now_<番号>.jpg`）、栃木県 リアルタイム雨量・河川水位（dif.pref.tochigi.lg.jp、約17地点）、宮城県 河川流域情報システム（画像 URL が撮影時刻入りで都度解決型）。台帳はいずれも 0 台
+- **愛知県 川の防災情報（kasen-aichi.jp）の河川カメラ 51 台を採用**（2026-11-22、`crawler/sources/aichi_kasen.py`、ID `aichi-kasen-<局番号>`）。一覧 `CameraList_<N>.html`（N は 1〜5 と 8）に 93 局あるが、画像が `https://cam.river.go.jp/…` の約 40 局は国の簡易型カメラなので拾わない。県の画像は `Images/CameraImage/<名>.jpg` 固定で約 10 分更新（5 分あけた 2 回取得では 3 分の 1 しか変化しない）。座標は公開が無く、個別ページの「住所」をジオコーディング（approx）。住所が「中川区…」と市名抜きのものは名古屋市を補う。五条川（春日）は同日に単独カメラとして先に採用済み（同一 URL なので候補に出ない）
+- **未着手の大口**: 宮崎県 簡易河川カメラ（kasen.pref.miyazaki.jp、`/cameraData/now/now_<番号>.jpg`）、栃木県 リアルタイム雨量・河川水位（dif.pref.tochigi.lg.jp、約17地点）、宮城県 河川流域情報システム（画像 URL が撮影時刻入りで都度解決型）。台帳はいずれも 0 台
 - 冬だけ動くスキー場のカメラを多く含む（琴引・ちくさ高原・八幡平は開業前で配信休止中のまま channel_id 登録）。開業後に配信の題名と live_match（キロロ・札幌国際）が合っているかを見直す
 
 ## 全国多角調査の知見（2026-09-30追記）
