@@ -160,6 +160,11 @@ sources:
     enabled: true
     note: 愛知県 川の防災情報の河川カメラ約93台。CameraList_<N>.html を巡回。
           固定URL Images/CameraImage/<名>.jpg。座標は個別ページの住所から。license=unknown
+  - id: miyazaki_kasen
+    enabled: true
+    note: 宮崎県 雨量・河川水位観測情報の河川監視カメラ約135台（保守中を除く）。http のみ。
+          固定URL camera/CamData/Now<NNN>.jpg・cameraData/now/now_<NNN>.jpg。
+          座標は県の設置図のピクセル位置から換算（approx）。license=unknown
   - id: fukuoka_city_river
     enabled: true
     note: 福岡市防災気象情報の河川カメラ24台。トップ埋め込みGeoJSONに座標・住所・

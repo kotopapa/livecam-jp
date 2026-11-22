@@ -1,5 +1,5 @@
 {
- "version": "2026-11-22T04:36:50Z",
+ "version": "2026-11-22T06:15:18Z",
  "urgent_version": "2026-10-10T23:18:20Z",
  "cameras": [
   {
@@ -937934,6 +937934,5098 @@
     "status": "approved",
     "reviewed_at": "2026-11-22",
     "note": "2026-11-22 ユーザー判断で採用（愛知県 川の防災情報の河川カメラ。license=unknown・削除依頼即応）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-1",
+   "name": "年見川 年見川放水路沖水川合流点",
+   "name_kana": null,
+   "lat": 31.74652,
+   "lng": 131.10142,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "年見川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now001.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=1"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=1",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-10",
+   "name": "北川 家田",
+   "name_kana": null,
+   "lat": 32.66748,
+   "lng": 131.71119,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "北川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now010.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=10"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=10",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-100",
+   "name": "赤岩川 赤岩橋（簡易）",
+   "name_kana": null,
+   "lat": 32.39502,
+   "lng": 131.6251,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "赤岩川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now100.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=100"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=100",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-101",
+   "name": "奥野川 瓦田橋（簡易）",
+   "name_kana": null,
+   "lat": 32.41279,
+   "lng": 131.59561,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "奥野川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now101.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=101"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=101",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-102",
+   "name": "富高川 年の神橋（簡易）",
+   "name_kana": null,
+   "lat": 32.43352,
+   "lng": 131.60745,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "富高川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now102.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=102"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=102",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-103",
+   "name": "塩見川 縁開橋（簡易）",
+   "name_kana": null,
+   "lat": 32.41575,
+   "lng": 131.61333,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "塩見川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now103.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=103"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=103",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-104",
+   "name": "丸バエ川 草川小学校（簡易）",
+   "name_kana": null,
+   "lat": 32.48682,
+   "lng": 131.66364,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45421",
+   "river_or_route": "丸バエ川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now104.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=104"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=104",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-105",
+   "name": "塩見川 下ノ原橋（簡易）",
+   "name_kana": null,
+   "lat": 32.40687,
+   "lng": 131.58969,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "塩見川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now105.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=105"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=105",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-106",
+   "name": "行縢川 小峰天下橋（簡易）",
+   "name_kana": null,
+   "lat": 32.57865,
+   "lng": 131.62541,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "行縢川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now106.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=106"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=106",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-107",
+   "name": "沖田川 口広橋（簡易）",
+   "name_kana": null,
+   "lat": 32.54902,
+   "lng": 131.64898,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "沖田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now107.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=107"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=107",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-108",
+   "name": "五ヶ瀬川 原尾野橋（簡易）",
+   "name_kana": null,
+   "lat": 32.67058,
+   "lng": 131.1591,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45443",
+   "river_or_route": "五ヶ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now108.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=108"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=108",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-109",
+   "name": "五ヶ瀬川 音の谷吊橋",
+   "name_kana": null,
+   "lat": 32.6972,
+   "lng": 131.31267,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45441",
+   "river_or_route": "五ヶ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now109.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=109"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=109",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-11",
+   "name": "北川 熊田",
+   "name_kana": null,
+   "lat": 32.68229,
+   "lng": 131.69645,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "北川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now011.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=11"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=11",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-114",
+   "name": "木脇川 池王橋（簡易）",
+   "name_kana": null,
+   "lat": 31.99228,
+   "lng": 131.3587,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45382",
+   "river_or_route": "木脇川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now114.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=114"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=114",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-115",
+   "name": "木脇川 木の峰橋（簡易）",
+   "name_kana": null,
+   "lat": 31.99524,
+   "lng": 131.36461,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45382",
+   "river_or_route": "木脇川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now115.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=115"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=115",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-116",
+   "name": "銀鏡川 征矢抜（簡易）",
+   "name_kana": null,
+   "lat": 32.27368,
+   "lng": 131.24699,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45208",
+   "river_or_route": "銀鏡川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now116.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=116"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=116",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-12",
+   "name": "五ヶ瀬川 川水流",
+   "name_kana": null,
+   "lat": 32.55498,
+   "lng": 131.52204,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "五ヶ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now012.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=12"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=12",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-15",
+   "name": "祝子川 蛇谷川樋門",
+   "name_kana": null,
+   "lat": 32.60233,
+   "lng": 131.67269,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "祝子川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now015.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=15"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=15",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-16",
+   "name": "飯田川 飯田川排水機場",
+   "name_kana": null,
+   "lat": 31.95675,
+   "lng": 131.30254,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "飯田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now016.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=16"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=16",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-17",
+   "name": "熊野川 熊野川排水機場",
+   "name_kana": null,
+   "lat": 31.83529,
+   "lng": 131.42929,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "熊野川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now017.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=17"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=17",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-18",
+   "name": "追手川 追手川排水機場",
+   "name_kana": null,
+   "lat": 32.05446,
+   "lng": 131.43261,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45208",
+   "river_or_route": "追手川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now018.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=18"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=18",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-19",
+   "name": "小松川 小松川放水路",
+   "name_kana": null,
+   "lat": 31.92711,
+   "lng": 131.40878,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "小松川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now019.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=19"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=19",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-2",
+   "name": "年見川 年見川放水路",
+   "name_kana": null,
+   "lat": 31.73171,
+   "lng": 131.10435,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45341",
+   "river_or_route": "年見川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now002.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=2"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=2",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-21",
+   "name": "耳川 東郷",
+   "name_kana": null,
+   "lat": 32.38616,
+   "lng": 131.53061,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "耳川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now021.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=21"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=21",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-22",
+   "name": "北川 川島橋",
+   "name_kana": null,
+   "lat": 32.61417,
+   "lng": 131.69043,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "北川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now022.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=22"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=22",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-23",
+   "name": "耳川河口 美々津大橋",
+   "name_kana": null,
+   "lat": 32.33875,
+   "lng": 131.61319,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "耳川河口",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now023.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=23"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=23",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-24",
+   "name": "大淀川 仁反尾橋",
+   "name_kana": null,
+   "lat": 31.93011,
+   "lng": 131.24935,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "大淀川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now024.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=24"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=24",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-25",
+   "name": "六田川 六田川排水ポンプ場・内水位",
+   "name_kana": null,
+   "lat": 31.94785,
+   "lng": 131.36157,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "六田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now025.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=25"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=25",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-27",
+   "name": "六田川 六田川排水ポンプ場・外水位",
+   "name_kana": null,
+   "lat": 31.94785,
+   "lng": 131.36157,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "六田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now027.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=27"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=27",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-28",
+   "name": "清武川 清武川岡川合流点",
+   "name_kana": null,
+   "lat": 31.85307,
+   "lng": 131.39094,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "清武川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now028.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=28"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=28",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-29",
+   "name": "耳川 諸塚",
+   "name_kana": null,
+   "lat": 32.50764,
+   "lng": 131.33301,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45429",
+   "river_or_route": "耳川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now029.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=29"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=29",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-3",
+   "name": "柳川原川 柳河原川放水路",
+   "name_kana": null,
+   "lat": 31.72579,
+   "lng": 131.08662,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "柳川原川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now003.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=3"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=3",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-30",
+   "name": "五十鈴川 小園井堰",
+   "name_kana": null,
+   "lat": 32.47202,
+   "lng": 131.62523,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45421",
+   "river_or_route": "五十鈴川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now030.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=30"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=30",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-301",
+   "name": "天神川 富吉（天神橋）",
+   "name_kana": null,
+   "lat": 31.93897,
+   "lng": 131.35861,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "天神川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_301.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=301"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=301",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-302",
+   "name": "六田川 富吉（鐙田橋）",
+   "name_kana": null,
+   "lat": 31.94193,
+   "lng": 131.36452,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "六田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_302.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=302"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=302",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-303",
+   "name": "明久川 堤内（堤内橋）",
+   "name_kana": null,
+   "lat": 31.97155,
+   "lng": 131.34685,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "明久川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_303.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=303"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=303",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-304",
+   "name": "内の丸川 糸原（新内の丸橋）",
+   "name_kana": null,
+   "lat": 31.95674,
+   "lng": 131.36454,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "内の丸川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_304.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=304"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=304",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-306",
+   "name": "清武川 船引（黒北橋）",
+   "name_kana": null,
+   "lat": 31.87677,
+   "lng": 131.36145,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "清武川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_306.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=306"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=306",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-307",
+   "name": "野島川 内海（野島上橋）",
+   "name_kana": null,
+   "lat": 31.74642,
+   "lng": 131.46751,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "野島川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_307.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=307"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=307",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-308",
+   "name": "広渡川 郷之原（大藤堰）",
+   "name_kana": null,
+   "lat": 31.6724,
+   "lng": 131.37882,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "広渡川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_308.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=308"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=308",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-309",
+   "name": "広渡川 殿所（殿所樋門）",
+   "name_kana": null,
+   "lat": 31.62501,
+   "lng": 131.37578,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "広渡川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_309.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=309"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=309",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-31",
+   "name": "一ツ瀬川 一ツ瀬橋",
+   "name_kana": null,
+   "lat": 32.06038,
+   "lng": 131.44443,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45402",
+   "river_or_route": "一ツ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now031.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=31"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=31",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-310",
+   "name": "広渡川 益安（益安橋上流）",
+   "name_kana": null,
+   "lat": 31.6102,
+   "lng": 131.38757,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "広渡川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_310.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=310"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=310",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-311",
+   "name": "広渡川 益安（益安橋下流）",
+   "name_kana": null,
+   "lat": 31.6102,
+   "lng": 131.38757,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "広渡川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_311.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=311"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=311",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-312",
+   "name": "酒谷川 飫肥（前鶴橋）",
+   "name_kana": null,
+   "lat": 31.62206,
+   "lng": 131.35216,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "酒谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_312.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=312"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=312",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-313",
+   "name": "酒谷川 星倉（JR）",
+   "name_kana": null,
+   "lat": 31.63094,
+   "lng": 131.36694,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "酒谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_313.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=313"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=313",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-314",
+   "name": "酒谷川 吾田東（山瀬橋）",
+   "name_kana": null,
+   "lat": 31.61613,
+   "lng": 131.37872,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "酒谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_314.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=314"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=314",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-315",
+   "name": "酒谷川 吾田東２丁目（東光寺橋）",
+   "name_kana": null,
+   "lat": 31.6102,
+   "lng": 131.38166,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "酒谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_315.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=315"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=315",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-316",
+   "name": "戸高川 時任（時任橋）",
+   "name_kana": null,
+   "lat": 31.61909,
+   "lng": 131.35806,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "戸高川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_316.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=316"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=316",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-317",
+   "name": "福島川（天神川） 天神（寺里橋）",
+   "name_kana": null,
+   "lat": 31.45623,
+   "lng": 131.21902,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45207",
+   "river_or_route": "福島川（天神川）",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_317.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=317"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=317",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-318",
+   "name": "本城川 本城（城泉坊橋）",
+   "name_kana": null,
+   "lat": 31.4266,
+   "lng": 131.2544,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45207",
+   "river_or_route": "本城川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_318.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=318"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=318",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-319",
+   "name": "市木川 市木（中福良橋）",
+   "name_kana": null,
+   "lat": 31.47101,
+   "lng": 131.34304,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45207",
+   "river_or_route": "市木川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_319.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=319"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=319",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-32",
+   "name": "三財川 清水橋",
+   "name_kana": null,
+   "lat": 32.09001,
+   "lng": 131.39134,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45208",
+   "river_or_route": "三財川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now032.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=32"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=32",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-320",
+   "name": "丸谷川 山田町（向洲橋）",
+   "name_kana": null,
+   "lat": 31.8028,
+   "lng": 131.04837,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "丸谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_320.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=320"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=320",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-321",
+   "name": "高崎川 高崎町（高崎橋）",
+   "name_kana": null,
+   "lat": 31.86796,
+   "lng": 131.06325,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "高崎川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_321.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=321"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=321",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-323",
+   "name": "岩瀬川 東方（栗巣野橋）",
+   "name_kana": null,
+   "lat": 31.98941,
+   "lng": 131.00146,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45205",
+   "river_or_route": "岩瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_323.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=323"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=323",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-324",
+   "name": "飯田川 高岡町（新坂下橋）",
+   "name_kana": null,
+   "lat": 31.95675,
+   "lng": 131.30549,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "飯田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_324.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=324"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=324",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-326",
+   "name": "瓜田川 高岡町（前原橋）",
+   "name_kana": null,
+   "lat": 31.9212,
+   "lng": 131.332,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "瓜田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_326.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=326"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=326",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-328",
+   "name": "鳥子川 平田（農業活性化センター）",
+   "name_kana": null,
+   "lat": 32.10778,
+   "lng": 131.39728,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45208",
+   "river_or_route": "鳥子川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_328.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=328"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=328",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-33",
+   "name": "一ツ瀬川 杉安橋",
+   "name_kana": null,
+   "lat": 32.14925,
+   "lng": 131.37373,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45208",
+   "river_or_route": "一ツ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now033.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=33"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=33",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-333",
+   "name": "一ツ瀬川 右松（西都市衛生センター）",
+   "name_kana": null,
+   "lat": 32.11074,
+   "lng": 131.41795,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45208",
+   "river_or_route": "一ツ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_333.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=333"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=333",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-334",
+   "name": "板谷川 板谷（吐合橋）",
+   "name_kana": null,
+   "lat": 32.25299,
+   "lng": 131.09343,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45403",
+   "river_or_route": "板谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_334.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=334"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=334",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-335",
+   "name": "一ツ瀬川 西米良（双子橋）",
+   "name_kana": null,
+   "lat": 32.22631,
+   "lng": 131.16424,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45403",
+   "river_or_route": "一ツ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_335.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=335"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=335",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-336",
+   "name": "鬼付女川 平伊倉（第二平伊倉橋）",
+   "name_kana": null,
+   "lat": 32.08703,
+   "lng": 131.47105,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45402",
+   "river_or_route": "鬼付女川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_336.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=336"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=336",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-337",
+   "name": "平田川 川南（丸山橋）",
+   "name_kana": null,
+   "lat": 32.21142,
+   "lng": 131.49488,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45405",
+   "river_or_route": "平田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_337.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=337"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=337",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-338",
+   "name": "平田川 垂門（垂門橋）",
+   "name_kana": null,
+   "lat": 32.19068,
+   "lng": 131.52437,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45405",
+   "river_or_route": "平田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_338.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=338"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=338",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-34",
+   "name": "福島川 福島川上町橋",
+   "name_kana": null,
+   "lat": 31.47992,
+   "lng": 131.24268,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45207",
+   "river_or_route": "福島川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now034.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=34"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=34",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-340",
+   "name": "坪谷川 東郷町下三ヶ（楠森橋）",
+   "name_kana": null,
+   "lat": 32.36248,
+   "lng": 131.46857,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "坪谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_340.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=340"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=340",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-341",
+   "name": "耳川 島戸",
+   "name_kana": null,
+   "lat": 32.49876,
+   "lng": 131.30642,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45429",
+   "river_or_route": "耳川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_341.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=341"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=341",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-342",
+   "name": "中山川 門川栄ヶ丘（栄ヶ丘橋）",
+   "name_kana": null,
+   "lat": 32.47794,
+   "lng": 131.64296,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45421",
+   "river_or_route": "中山川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_342.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=342"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=342",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-343",
+   "name": "津々良川 門川大内原（津々良橋）",
+   "name_kana": null,
+   "lat": 32.48388,
+   "lng": 131.59868,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45421",
+   "river_or_route": "津々良川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_343.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=343"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=343",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-344",
+   "name": "三ヶ瀬川 門川阿仙原（トビノキ橋）",
+   "name_kana": null,
+   "lat": 32.47796,
+   "lng": 131.56029,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45421",
+   "river_or_route": "三ヶ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_344.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=344"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=344",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-345",
+   "name": "耳川 山陰（東郷橋）",
+   "name_kana": null,
+   "lat": 32.38616,
+   "lng": 131.5247,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "耳川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_345.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=345"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=345",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-346",
+   "name": "耳川 西郷区田代（和田大橋）",
+   "name_kana": null,
+   "lat": 32.45726,
+   "lng": 131.43626,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45431",
+   "river_or_route": "耳川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_346.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=346"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=346",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-347",
+   "name": "耳川 幸脇（飯谷）",
+   "name_kana": null,
+   "lat": 32.34764,
+   "lng": 131.58959,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "耳川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_347.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=347"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=347",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-348",
+   "name": "坪谷川 山陰（羽坂橋）",
+   "name_kana": null,
+   "lat": 32.38024,
+   "lng": 131.51584,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "坪谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_348.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=348"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=348",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-349",
+   "name": "五十鈴川 門川（更生橋）",
+   "name_kana": null,
+   "lat": 32.48981,
+   "lng": 131.57212,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45421",
+   "river_or_route": "五十鈴川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_349.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=349"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=349",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-35",
+   "name": "五ヶ瀬川 日之影町役場",
+   "name_kana": null,
+   "lat": 32.65275,
+   "lng": 131.38935,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45442",
+   "river_or_route": "五ヶ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now035.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=35"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=35",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-350",
+   "name": "五十鈴川 北郷区宇納間（中原橋）",
+   "name_kana": null,
+   "lat": 32.50169,
+   "lng": 131.44224,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45431",
+   "river_or_route": "五十鈴川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_350.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=350"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=350",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-351",
+   "name": "小丸川 東郷町下三ヶ（中水流）",
+   "name_kana": null,
+   "lat": 32.35657,
+   "lng": 131.38589,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "小丸川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_351.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=351"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=351",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-352",
+   "name": "小丸川 南郷区神門（天神橋）",
+   "name_kana": null,
+   "lat": 32.39806,
+   "lng": 131.32396,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45431",
+   "river_or_route": "小丸川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_352.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=352"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=352",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-353",
+   "name": "亀崎川 日知屋（無田之原橋）",
+   "name_kana": null,
+   "lat": 32.43352,
+   "lng": 131.63402,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "亀崎川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_353.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=353"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=353",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-354",
+   "name": "小川 小川葛葉大橋",
+   "name_kana": null,
+   "lat": 32.74449,
+   "lng": 131.70836,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "小川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_354.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=354"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=354",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-355",
+   "name": "家田川 家田川陰橋",
+   "name_kana": null,
+   "lat": 32.66748,
+   "lng": 131.71709,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "家田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_355.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=355"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=355",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-357",
+   "name": "日之影川 見立（見立橋）",
+   "name_kana": null,
+   "lat": 32.78602,
+   "lng": 131.45453,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45442",
+   "river_or_route": "日之影川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_357.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=357"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=357",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-38",
+   "name": "蛇谷川 蛇谷川排水ポンプ場 桜ヶ丘",
+   "name_kana": null,
+   "lat": 32.60529,
+   "lng": 131.6727,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "蛇谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now038.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=38"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=38",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-4",
+   "name": "姫城川 姫城川放水路",
+   "name_kana": null,
+   "lat": 31.71987,
+   "lng": 131.07776,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "姫城川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now004.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=4"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=4",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-41",
+   "name": "五ヶ瀬川 南久保山",
+   "name_kana": null,
+   "lat": 32.5609,
+   "lng": 131.54567,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "五ヶ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now041.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=41"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=41",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-5",
+   "name": "姫城川 姫城川放水路荻原川合流点",
+   "name_kana": null,
+   "lat": 31.70506,
+   "lng": 131.06887,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "姫城川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now005.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=5"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=5",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-52",
+   "name": "広渡川 東郷橋（日南市）",
+   "name_kana": null,
+   "lat": 31.63093,
+   "lng": 131.38465,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "広渡川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now052.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=52"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=52",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-54",
+   "name": "酒谷川 本町橋",
+   "name_kana": null,
+   "lat": 31.62502,
+   "lng": 131.34921,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "酒谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now054.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=54"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=54",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-55",
+   "name": "塩見川河口 塩見川河口",
+   "name_kana": null,
+   "lat": 32.4039,
+   "lng": 131.63988,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "塩見川河口",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now055.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=55"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=55",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-56",
+   "name": "巣之浦川 巣の浦",
+   "name_kana": null,
+   "lat": 31.97759,
+   "lng": 130.90991,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45205",
+   "river_or_route": "巣之浦川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now056.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=56"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=56",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-57",
+   "name": "一ツ瀬川河口 一ツ瀬川河口",
+   "name_kana": null,
+   "lat": 32.04852,
+   "lng": 131.4887,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45402",
+   "river_or_route": "一ツ瀬川河口",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now057.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=57"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=57",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-59",
+   "name": "広渡川 谷之城橋",
+   "name_kana": null,
+   "lat": 31.68425,
+   "lng": 131.38179,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "広渡川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now059.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=59"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=59",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-6",
+   "name": "五十鈴川 更生橋",
+   "name_kana": null,
+   "lat": 32.48981,
+   "lng": 131.57507,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45421",
+   "river_or_route": "五十鈴川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now006.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=6"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=6",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-60",
+   "name": "加江田川 第一竹の内橋",
+   "name_kana": null,
+   "lat": 31.82641,
+   "lng": 131.40565,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "加江田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now060.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=60"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=60",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-61",
+   "name": "熊野川 熊野川合流点",
+   "name_kana": null,
+   "lat": 31.83529,
+   "lng": 131.42929,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "熊野川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now061.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=61"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=61",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-62",
+   "name": "一ツ瀬川 瀬口橋",
+   "name_kana": null,
+   "lat": 32.08408,
+   "lng": 131.412,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45208",
+   "river_or_route": "一ツ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now062.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=62"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=62",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-63",
+   "name": "一ツ瀬川 村所橋",
+   "name_kana": null,
+   "lat": 32.22632,
+   "lng": 131.15243,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45403",
+   "river_or_route": "一ツ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now063.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=63"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=63",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-65",
+   "name": "瓜田川 番所橋",
+   "name_kana": null,
+   "lat": 31.93601,
+   "lng": 131.32613,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "瓜田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now065.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=65"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=65",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-66",
+   "name": "庄手川河口 庄手川防潮堰",
+   "name_kana": null,
+   "lat": 32.44536,
+   "lng": 131.63995,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45206",
+   "river_or_route": "庄手川河口",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now066.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=66"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=66",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-67",
+   "name": "新別府川河口 新別府川防潮堰",
+   "name_kana": null,
+   "lat": 31.91525,
+   "lng": 131.45599,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "新別府川河口",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now067.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=67"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=67",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-68",
+   "name": "酒谷川 戸高川合流点",
+   "name_kana": null,
+   "lat": 31.60428,
+   "lng": 131.38756,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "酒谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now068.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=68"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=68",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-69",
+   "name": "浜川河口 浜川防潮水門",
+   "name_kana": null,
+   "lat": 32.54309,
+   "lng": 131.6785,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "浜川河口",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now069.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=69"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=69",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-7",
+   "name": "戸高川 戸高川排水機場",
+   "name_kana": null,
+   "lat": 31.60428,
+   "lng": 131.38756,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "戸高川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now007.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=7"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=7",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-70",
+   "name": "三ケ所川 貫原橋",
+   "name_kana": null,
+   "lat": 32.68242,
+   "lng": 131.1975,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45443",
+   "river_or_route": "三ケ所川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now070.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=70"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=70",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-71",
+   "name": "長江川 柳ヶ本橋",
+   "name_kana": null,
+   "lat": 32.03092,
+   "lng": 130.81257,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45209",
+   "river_or_route": "長江川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now071.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=71"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=71",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-73",
+   "name": "沖田川 沖田川井替川合流点",
+   "name_kana": null,
+   "lat": 32.53125,
+   "lng": 131.67552,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45203",
+   "river_or_route": "沖田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now073.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=73"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=73",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-74",
+   "name": "五十鈴川 五十鈴川河口",
+   "name_kana": null,
+   "lat": 32.46905,
+   "lng": 131.6518,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45421",
+   "river_or_route": "五十鈴川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now074.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=74"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=74",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-77",
+   "name": "清武川 清武川河口",
+   "name_kana": null,
+   "lat": 31.83824,
+   "lng": 131.44405,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "清武川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now077.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=77"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=77",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-78",
+   "name": "都農川 都農川河口",
+   "name_kana": null,
+   "lat": 32.25879,
+   "lng": 131.57468,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45406",
+   "river_or_route": "都農川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now078.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=78"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=78",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-79",
+   "name": "福島川 福島川河口",
+   "name_kana": null,
+   "lat": 31.45031,
+   "lng": 131.2131,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45207",
+   "river_or_route": "福島川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now079.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=79"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=79",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-8",
+   "name": "酒谷川 東光寺橋",
+   "name_kana": null,
+   "lat": 31.6102,
+   "lng": 131.38461,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "酒谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now008.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=8"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=8",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-80",
+   "name": "市木川 市木川古都橋",
+   "name_kana": null,
+   "lat": 31.46508,
+   "lng": 131.34303,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45207",
+   "river_or_route": "市木川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now080.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=80"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=80",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-81",
+   "name": "大谷川 城の下橋（簡易）",
+   "name_kana": null,
+   "lat": 31.92712,
+   "lng": 131.3763,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "大谷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now081.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=81"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=81",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-82",
+   "name": "八重川 両国橋（簡易）",
+   "name_kana": null,
+   "lat": 31.8886,
+   "lng": 131.41461,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "八重川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now082.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=82"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=82",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-83",
+   "name": "本城川 本城川小田代橋",
+   "name_kana": null,
+   "lat": 31.43252,
+   "lng": 131.26622,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45207",
+   "river_or_route": "本城川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now083.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=83"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=83",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-84",
+   "name": "瓜生野川 後溝橋（簡易）",
+   "name_kana": null,
+   "lat": 31.96562,
+   "lng": 131.39113,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "瓜生野川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now084.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=84"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=84",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-85",
+   "name": "萩原川 栄源寺橋（簡易）",
+   "name_kana": null,
+   "lat": 31.71395,
+   "lng": 131.05708,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "萩原川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now085.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=85"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=85",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-86",
+   "name": "沖水川 沖水橋（簡易）",
+   "name_kana": null,
+   "lat": 31.74948,
+   "lng": 131.07781,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "沖水川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now086.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=86"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=86",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-87",
+   "name": "東岳川 大井出橋（簡易）",
+   "name_kana": null,
+   "lat": 31.79389,
+   "lng": 131.14579,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45202",
+   "river_or_route": "東岳川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now087.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=87"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=87",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-88",
+   "name": "長江川 浜川原橋（簡易）",
+   "name_kana": null,
+   "lat": 32.01611,
+   "lng": 130.81845,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45209",
+   "river_or_route": "長江川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now088.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=88"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=88",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-89",
+   "name": "石氷川 大手橋（簡易）",
+   "name_kana": null,
+   "lat": 32.00422,
+   "lng": 130.98377,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45205",
+   "river_or_route": "石氷川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now089.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=89"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=89",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-9",
+   "name": "広渡川 大藤井堰上流",
+   "name_kana": null,
+   "lat": 31.67536,
+   "lng": 131.37882,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45204",
+   "river_or_route": "広渡川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now009.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=9"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=9",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-90",
+   "name": "岩瀬川 旧岩瀬橋（簡易）",
+   "name_kana": null,
+   "lat": 31.97756,
+   "lng": 131.01324,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45205",
+   "river_or_route": "岩瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now090.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=90"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=90",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-91",
+   "name": "本庄川 須木水位局（簡易）",
+   "name_kana": null,
+   "lat": 32.07232,
+   "lng": 131.07836,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45205",
+   "river_or_route": "本庄川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now091.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=91"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=91",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-92",
+   "name": "弥次川 元町橋（簡易）",
+   "name_kana": null,
+   "lat": 31.99527,
+   "lng": 131.26718,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45383",
+   "river_or_route": "弥次川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now092.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=92"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=92",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-93",
+   "name": "江川 新山下橋（簡易）",
+   "name_kana": null,
+   "lat": 31.94489,
+   "lng": 131.34681,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "江川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now093.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=93"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=93",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-94",
+   "name": "麓川 大津庵橋（簡易）",
+   "name_kana": null,
+   "lat": 31.93305,
+   "lng": 131.32612,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "麓川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now094.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=94"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=94",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-95",
+   "name": "瓜田川 瓜田川（輪中堤）（簡易）",
+   "name_kana": null,
+   "lat": 31.93898,
+   "lng": 131.32023,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45201",
+   "river_or_route": "瓜田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now095.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=95"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=95",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-96",
+   "name": "三財川 岩崎橋（簡易）",
+   "name_kana": null,
+   "lat": 32.05744,
+   "lng": 131.35586,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45208",
+   "river_or_route": "三財川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now096.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=96"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=96",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-98",
+   "name": "宮田川 塩田樋門（簡易）",
+   "name_kana": null,
+   "lat": 32.1196,
+   "lng": 131.50653,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45401",
+   "river_or_route": "宮田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now098.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=98"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=98",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
+   },
+   "first_seen": "2026-11-22",
+   "last_updated": "2026-11-22"
+  },
+  {
+   "id": "miyazaki-kasen-99",
+   "name": "平田川 松原橋（簡易）",
+   "name_kana": null,
+   "lat": 32.19067,
+   "lng": 131.54208,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": "45405",
+   "river_or_route": "平田川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/camera/CamData/Now099.jpg",
+    "refresh_sec": 60,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=99"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=99",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-22",
+    "note": "宮崎県 雨量・河川水位観測情報の河川監視カメラ。サイトに転載・リンクの制限記載なし・robots.txt なし。全台の画像更新を確認（2026-11-22）。座標は県の設置図からの換算（概略）"
    },
    "first_seen": "2026-11-22",
    "last_updated": "2026-11-22"

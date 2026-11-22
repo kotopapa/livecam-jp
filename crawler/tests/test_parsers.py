@@ -477,6 +477,43 @@ def test_aichi_kasen_parser():
     assert validate_camera_record(c.to_record("2026-11-22")) == []
 
 
+def test_miyazaki_kasen_parser():
+    from crawler.sources.miyazaki_kasen import (MiyazakiKasenParser, image_url,
+                                                parse_list, parse_map)
+    lst = ("""<script>var sitenolist={
+            "key81":"城の下橋(簡易)","key340":"東郷町下三ヶ(楠森橋)","key356":"祝子川大野地区"
+            };
+            var rnamelist={"key81":"大淀川","key340":"耳川","key356":"祝子川"};
+            var addlist={"key81":"都城市　高城町","key340":"日向市","key356":"延岡市"};
+            var managelist={"key81":"3","key340":"3","key356":"3"};
+            var obslist={"key81":"81","key340":"340","key356":"356"};
+            var actionlist={"key81":"","key340":"","key356":"2"};</script>""")
+    mp = ('<img alt="" src="../map_data_www/itv_ken_000.jpg">'
+          '<div class="site1" style="position:absolute;left:189px;top:392px;" id="camera1" '
+          'na="城の下橋(簡易)" rivna="大淀川" c314="都城市" c308="1">')
+    cams = parse_list(lst)
+    assert [c["id"] for c in cams] == [81, 340, 356] and cams[2]["maintenance"]
+    assert cams[0]["name"] == "城の下橋（簡易）" and cams[0]["address"] == "都城市 高城町"
+    assert parse_map(mp) == {("城の下橋（簡易）", "大淀川"): (189, 392)}
+    assert image_url(81).endswith("/camera/CamData/Now081.jpg")
+    assert image_url(340).endswith("/cameraData/now/now_340.jpg")
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = mp if "SelectMap" in url else lst
+            return P()
+    result = MiyazakiKasenParser().discover(S())
+    assert [c.id for c in result.candidates] == ["miyazaki-kasen-81", "miyazaki-kasen-340"]   # 保守中は拾わない
+    c, d = result.candidates
+    assert c.name == "大淀川 城の下橋（簡易）" and c.coord_accuracy == "approx"
+    assert 31.7 < c.lat < 31.8 and 131.0 < c.lng < 131.2
+    assert d.lat is None and d.address_hint == "宮崎県日向市"      # 設置図に無ければ住所から
+    assert validate_camera_record(c.to_record("2026-11-22")) == []
+
+
 def test_thr_camxml_resolver():
     from crawler.sources.thr_camxml import resolve_image_url
     xml = ("<Camera><ObservationDate>2026/08/21-19:20</ObservationDate>"
