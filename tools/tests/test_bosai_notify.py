@@ -446,12 +446,56 @@ def test_snow_municipality_events_and_pushes():
     assert current == ["1520200:06", "1521000:06", "1522200:02", "1522200:06"]
     # 継続中と、特別警報からの切り替えは通知しない
     assert events == [("1522200", "02", "暴風雪警報"), ("1522200", "06", "大雪警報")]
-    pushes = bosai_notify.municipality_pushes(events, {"1522200": "上越市"})
+    pushes = bosai_notify.municipality_pushes(events, {"1522200": "上越市"}, "t1")
     assert pushes == [("snow-warning-1522200",
                        "大雪警報・暴風雪警報が発表されました",
-                       "新潟県上越市に大雪警報・暴風雪警報。周辺のライブカメラを確認できます")]
+                       "新潟県上越市に大雪警報・暴風雪警報。周辺のライブカメラを確認できます",
+                       "snow-15-t1")]
     # 名称が引けなくても送る
     assert bosai_notify.municipality_pushes(events, {})[0][2].startswith("新潟県に")
+
+
+def test_snow_municipality_pushes_collapse_within_prefecture():
+    """同じ県の通知は題名と collapse をそろえる（複数選んでいる人に1件で見せる）。
+    本文は、そのトピックの市区町村が先頭"""
+    names = {"1522200": "上越市", "1521700": "妙高市", "1521600": "糸魚川市",
+             "1520200": "長岡市", "1520400": "三条市", "1521000": "十日町市",
+             "0121400": "稚内市"}
+    events = [(c, "06", "大雪警報") for c in names if c != "1521000"]
+    events.append(("1521000", "02", "暴風雪警報"))
+    pushes = {p[0]: p for p in
+              bosai_notify.municipality_pushes(events, names, "202612200510")}
+    assert len(pushes) == 7
+    niigata = [p for t, p in pushes.items() if t.startswith("snow-warning-15")]
+    assert {p[3] for p in niigata} == {"snow-15-202612200510"}
+    assert {p[1] for p in niigata} == {"大雪警報・暴風雪警報が発表されました"}
+    assert pushes["snow-warning-1522200"][2].startswith(
+        "新潟県上越市・長岡市・三条市・十日町市 ほか2市町村に")
+    assert pushes["snow-warning-1521700"][2].startswith("新潟県妙高市・")
+    # 別の県は別の通知
+    hokkaido = pushes["snow-warning-0121400"]
+    assert hokkaido[3] == "snow-01-202612200510"
+    assert hokkaido[1] == "大雪警報が発表されました"
+    assert hokkaido[2].startswith("北海道稚内市に大雪警報")
+
+
+def test_send_push_sets_collapse_fields():
+    sent = {}
+
+    def fake_post(url, headers=None, json=None, timeout=30):
+        sent.update(json["message"])
+        return mock.Mock()
+
+    with mock.patch.object(bosai_notify.requests, "post", fake_post):
+        bosai_notify.send_push("t", "p", "snow-warning-1522200", "題", "本文",
+                               tab="warning", collapse="snow-15-x")
+        assert sent["apns"]["headers"]["apns-collapse-id"] == "snow-15-x"
+        assert sent["android"]["notification"]["tag"] == "snow-15-x"
+        assert sent["android"]["notification"]["channel_id"] == "bosai"
+        # 既存の通知には付けない
+        bosai_notify.send_push("t", "p", "quake5", "題", "本文", tab="quake")
+        assert "apns-collapse-id" not in sent["apns"]["headers"]
+        assert "tag" not in sent["android"]["notification"]
 
 
 def test_snow_municipality_first_run_only_remembers():

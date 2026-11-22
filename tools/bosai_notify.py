@@ -75,8 +75,16 @@ def fcm_token(sa_info: dict) -> tuple[str, str]:
 
 
 def send_push(token: str, project: str, topic: str,
-              title: str, body: str, tab: str = "") -> None:
-    """tab: アプリが通知タップ時に開く災害速報内タブ('quake'|'warning'|'')"""
+              title: str, body: str, tab: str = "", collapse: str = "") -> None:
+    """tab: アプリが通知タップ時に開く災害速報内タブ('quake'|'warning'|'')
+    collapse: 同じ値の通知は端末で1件に置き換わる（iOS は apns-collapse-id、
+    Android は notification.tag）。複数トピックを購読している人に同じ発表を
+    何通も並べないために使う"""
+    apns_headers = {"apns-priority": "10"}
+    android_notification = {"channel_id": "bosai", "sound": "default"}
+    if collapse:
+        apns_headers["apns-collapse-id"] = collapse
+        android_notification["tag"] = collapse
     r = requests.post(
         f"https://fcm.googleapis.com/v1/projects/{project}/messages:send",
         headers={"Authorization": f"Bearer {token}"},
@@ -84,13 +92,12 @@ def send_push(token: str, project: str, topic: str,
             "topic": topic,
             "notification": {"title": title, "body": body},
             "data": {"screen": "bosai", "tab": tab},
-            "apns": {"headers": {"apns-priority": "10"},
+            "apns": {"headers": apns_headers,
                      "payload": {"aps": {"sound": "default"}}},
             # Android: 省電力(Doze)中でも即時配信する high 優先度と、アプリが
             # 起動時に作る重要度「高」のチャンネル bosai（無いと「その他」に落ちる）
             "android": {"priority": "high",
-                        "notification": {"channel_id": "bosai",
-                                         "sound": "default"}},
+                        "notification": android_notification},
         }},
         timeout=30)
     r.raise_for_status()
@@ -230,20 +237,40 @@ def check_snow_municipalities(state: dict, reports: list | None
     return out, sorted(current)
 
 
+MUNI_NAMES_SHOWN = 4
+
+
 def municipality_pushes(events: list[tuple[str, str, str]],
-                        names: dict[str, str]) -> list[tuple[str, str, str]]:
-    """市区町村ごとに1通へまとめる。返り値: [(topic, title, body)]。
-    names: 市町村等コード→名称（引けないときは都道府県名だけにする）"""
-    by_area: dict[str, list[str]] = {}
+                        names: dict[str, str], stamp: str = ""
+                        ) -> list[tuple[str, str, str, str]]:
+    """市区町村単位の通知を作る。返り値: [(topic, title, body, collapse)]。
+
+    トピックは市区町村ごとだが、同じ県の通知は題名をそろえ、同じ collapse を付ける。
+    同じ県で市区町村を複数選んでいる人には、端末で1件に置き換わって見える
+    （2026-11-23。3つ選んでいて同時に発表されると3通並んでいた）。
+    本文は、そのトピックの市区町村を先頭に、同じ県で同時に発表された市区町村を並べる。
+    どの1通が残っても、選んだ市区町村が含まれた文面になる。
+    names: 市町村等コード→名称（引けないときは都道府県名だけにする）
+    stamp: collapse に入れる発表回の識別子（回が変われば別の通知として並ぶ）"""
+    by_pref: dict[str, dict[str, set[str]]] = {}
     for code, _, name in events:
-        by_area.setdefault(code, []).append(name)
+        by_pref.setdefault(code[:2], {}).setdefault(code, set()).add(name)
     pushes = []
-    for code in sorted(by_area):
-        ns = sorted(set(by_area[code]))
-        title = f"{'・'.join(ns)}が発表されました"
-        place = PREF_NAMES[code[:2]] + names.get(code, "")
-        pushes.append((f"snow-warning-{code}", title,
-                       f"{place}に{'・'.join(ns)}{TAIL}"))
+    for pref in sorted(by_pref):
+        areas = by_pref[pref]
+        kinds = "・".join(sorted(set().union(*areas.values())))
+        title = f"{kinds}が発表されました"
+        collapse = f"snow-{pref}-{stamp}" if stamp else f"snow-{pref}"
+        for code in sorted(areas):
+            ordered = [code] + [c for c in sorted(areas) if c != code]
+            shown = [names.get(c, "") for c in ordered]
+            shown = [n for n in shown if n][:MUNI_NAMES_SHOWN]
+            rest = len(areas) - len(shown)
+            place = PREF_NAMES[pref] + "・".join(shown)
+            if shown and rest > 0:
+                place += f" ほか{rest}市町村"
+            pushes.append((f"snow-warning-{code}", title,
+                           f"{place}に{kinds}{TAIL}", collapse))
     return pushes
 
 
@@ -426,10 +453,12 @@ def main() -> int:
         if muni_events:
             # 市区町村単位は通数が多い。1通の失敗で残りと状態の保存を止めない
             # （止めると次回に全通を送り直してしまう）
-            for topic, title, body in municipality_pushes(
-                    muni_events, fetch_municipality_names()):
+            stamp = datetime.now(JST).strftime("%Y%m%d%H%M")
+            for topic, title, body, collapse in municipality_pushes(
+                    muni_events, fetch_municipality_names(), stamp):
                 try:
-                    send_push(token, project, topic, title, body, tab="warning")
+                    send_push(token, project, topic, title, body,
+                              tab="warning", collapse=collapse)
                 except requests.RequestException as e:
                     print(f"push 失敗 [{topic}]: {type(e).__name__}: {e}",
                           file=sys.stderr)
