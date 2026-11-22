@@ -1,5 +1,5 @@
 {
- "version": "2026-11-22T02:39:24Z",
+ "version": "2026-11-22T03:06:45Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-22T02:39:24Z",
+   "fetched_at": "2026-11-22T03:06:45Z",
    "items": [
     {
      "id": "243c2bc8e7d89735",
@@ -58501,6 +58501,28 @@
    "content": "通行止",
    "cause": "倒木",
    "start": "2026年11月22日 09:00",
+   "status": "実施中"
+  },
+  "243cebc649bd26cd": {
+   "kind": "通行止（都道府県道）",
+   "route": "県道11号 柏崎小国線",
+   "direction": "上下",
+   "from": "柏崎市畔屋",
+   "to": "柏崎市畔屋トンネル",
+   "content": "通行止",
+   "cause": "道路損壊",
+   "start": "2026年11月22日 10:00",
+   "status": "実施中"
+  },
+  "243cebc649bd26cf": {
+   "kind": "通行止（都道府県道）",
+   "route": "県道23号 柏崎高浜堀之内線",
+   "direction": "上下",
+   "from": "柏崎市西山町坂田",
+   "to": "長岡市大積町１丁目",
+   "content": "通行止",
+   "cause": "道路損壊",
+   "start": "2026年11月22日 10:45",
    "status": "実施中"
   }
  }
