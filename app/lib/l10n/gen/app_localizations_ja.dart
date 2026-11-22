@@ -3130,9 +3130,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String get detailSupportNote => 'このアプリは個人で開発・運営しています。';
 
   @override
-  String get stockpileIntroTitle => 'もしもの備え、足りていますか？';
-
-  @override
   String get stockpileIntroBody =>
       '大きな災害のあとは、電気・水道・物流が止まり、支援が届くまで数日かかることがあります。国は、最低3日分、できれば1週間分の備蓄をすすめています。';
 
@@ -6320,9 +6317,6 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get detailSupportNote => 'この アプリは 一人（ひとり）で つくって います。';
-
-  @override
-  String get stockpileIntroTitle => 'もしもの ときの そなえは たりて いますか？';
 
   @override
   String get stockpileIntroBody =>

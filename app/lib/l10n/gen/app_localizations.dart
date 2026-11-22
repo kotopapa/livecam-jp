@@ -5566,12 +5566,6 @@ abstract class AppLocalizations {
   /// **'このアプリは個人で開発・運営しています。'**
   String get detailSupportNote;
 
-  /// No description provided for @stockpileIntroTitle.
-  ///
-  /// In ja, this message translates to:
-  /// **'もしもの備え、足りていますか？'**
-  String get stockpileIntroTitle;
-
   /// No description provided for @stockpileIntroBody.
   ///
   /// In ja, this message translates to:

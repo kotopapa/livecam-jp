@@ -375,7 +375,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
   // 世帯人数・必要量
   // -------------------------------------------------------------------------
 
-  /// 画面上部の説明。なぜ備えるのかと、この画面の使い方（3 手順）。見出しを押すと畳める
+  /// 画面上部の説明。なぜ備えるのかと、この画面の使い方（3 手順）。右上の印を押すと畳める
   Widget _introCard(AppLocalizations l10n) {
     final scheme = Theme.of(context).colorScheme;
     final bodyStyle = TextStyle(fontSize: 13, height: 1.5, color: scheme.onSurface);
@@ -402,35 +402,52 @@ class _StockpileScreenState extends State<StockpileScreen> {
       color: scheme.primaryContainer.withValues(alpha: 0.35),
       clipBehavior: Clip.antiAlias,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        InkWell(
-          key: const ValueKey('stockpile_intro_toggle'),
-          onTap: _toggleIntro,
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(12, 10, 8, 10),
-            child: Row(children: [
-              Icon(Icons.backpack_outlined, size: 20, color: scheme.primary),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Text(l10n.stockpileIntroTitle,
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
-              ),
-              Icon(_introCollapsed ? Icons.expand_more : Icons.expand_less,
-                  color: scheme.onSurfaceVariant),
-            ]),
-          ),
-        ),
-        if (!_introCollapsed)
+        if (_introCollapsed)
+          // 畳んだ状態: 1 行だけ残し、押すと開く
+          InkWell(
+            key: const ValueKey('stockpile_intro_toggle'),
+            onTap: _toggleIntro,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(12, 10, 8, 10),
+              child: Row(children: [
+                Icon(Icons.backpack_outlined, size: 20, color: scheme.primary),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(l10n.stockpileEntrySubtitle,
+                      style: TextStyle(fontSize: 13, color: scheme.onSurface)),
+                ),
+                Icon(Icons.expand_more, color: scheme.onSurfaceVariant),
+              ]),
+            ),
+          )
+        else
           Padding(
-            padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+            padding: const EdgeInsets.fromLTRB(12, 12, 4, 12),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(l10n.stockpileIntroBody, style: bodyStyle),
-              const SizedBox(height: 4),
-              step(1, l10n.stockpileIntroStep1),
-              step(2, l10n.stockpileIntroStep2),
-              step(3, l10n.stockpileIntroStep3),
-              const SizedBox(height: 10),
-              Text(l10n.stockpileIntroCta,
-                  style: bodyStyle.copyWith(fontWeight: FontWeight.w600)),
+              Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Expanded(child: Text(l10n.stockpileIntroBody, style: bodyStyle)),
+                InkWell(
+                  key: const ValueKey('stockpile_intro_toggle'),
+                  onTap: _toggleIntro,
+                  customBorder: const CircleBorder(),
+                  child: Padding(
+                    padding: const EdgeInsets.all(4),
+                    child: Icon(Icons.expand_less, color: scheme.onSurfaceVariant),
+                  ),
+                ),
+              ]),
+              Padding(
+                padding: const EdgeInsets.only(right: 8),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  const SizedBox(height: 4),
+                  step(1, l10n.stockpileIntroStep1),
+                  step(2, l10n.stockpileIntroStep2),
+                  step(3, l10n.stockpileIntroStep3),
+                  const SizedBox(height: 10),
+                  Text(l10n.stockpileIntroCta,
+                      style: bodyStyle.copyWith(fontWeight: FontWeight.w600)),
+                ]),
+              ),
             ]),
           ),
       ]),

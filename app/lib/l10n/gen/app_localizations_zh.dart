@@ -3115,9 +3115,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get detailSupportNote => '本应用由个人开发和运营。';
 
   @override
-  String get stockpileIntroTitle => '应急储备，您准备好了吗？';
-
-  @override
   String get stockpileIntroBody =>
       '发生大规模灾害后，电力、自来水和物流可能中断，救援物资可能需要数日才能送达。日本政府建议至少储备3天、最好1周的用品。';
 
@@ -6243,9 +6240,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get detailSupportNote => '本應用程式由個人開發與營運。';
-
-  @override
-  String get stockpileIntroTitle => '緊急儲備，您準備好了嗎？';
 
   @override
   String get stockpileIntroBody =>

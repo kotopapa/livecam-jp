@@ -3239,9 +3239,6 @@ class AppLocalizationsEn extends AppLocalizations {
       'This app is built and run by one independent developer.';
 
   @override
-  String get stockpileIntroTitle => 'Are you ready for an emergency?';
-
-  @override
   String get stockpileIntroBody =>
       'After a major disaster, power, water and deliveries can stop, and it may take several days for help to arrive. The Japanese government recommends keeping supplies for at least 3 days, ideally a week.';
 

@@ -897,13 +897,12 @@ void main() {
       SharedPreferences.setMockInitialValues({});
       await tester.pumpWidget(testApp(StockpileScreen(app: makeApp())));
       await tester.pumpAndSettle();
-      expect(find.text('もしもの備え、足りていますか？'), findsOneWidget);
       expect(find.textContaining('最低3日分、できれば1週間分'), findsOneWidget);
       expect(find.text('家族の人数と日数を入れると、必要な量が分かります'), findsOneWidget);
 
       await tester.tap(find.byKey(const ValueKey('stockpile_intro_toggle')));
       await tester.pumpAndSettle();
-      expect(find.text('もしもの備え、足りていますか？'), findsOneWidget); // 見出しは残る
+      expect(find.text('家族の人数から必要量を計算してチェックできます'), findsOneWidget); // 1 行だけ残る
       expect(find.textContaining('最低3日分、できれば1週間分'), findsNothing);
       final prefs = await SharedPreferences.getInstance();
       expect(prefs.getBool('stockpile_intro_collapsed'), isTrue);
