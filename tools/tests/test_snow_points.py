@@ -374,3 +374,9 @@ def test_exceeds_analysis():
     assert not sp.is_implausible({"d": 300}, False, max_around_cm=10000)
     # 解析が読めないときは判定しない
     assert not sp.is_implausible({"d": 355}, False, max_around_cm=None)
+
+
+def test_drop_faulty_sensor():
+    pts = [{"id": "823500061", "n": "橋場", "d": 166}, {"id": "823500011", "n": "橋場ＳＴ", "d": 0}]
+    assert [p["n"] for p in sp.drop_faulty("mlit", pts)] == ["橋場ＳＴ"]
+    assert len(sp.drop_faulty("tottori", pts)) == 2     # 情報源が違えば同じ ID でも外さない

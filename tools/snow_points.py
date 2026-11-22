@@ -75,6 +75,13 @@ FALLBACK_TEMP_C = 8.0
 AMEDAS_BASE = "https://www.jma.go.jp/bosai/amedas/"
 AMEDAS_TEMP_RADIUS_KM = 30.0  # センサーに気温が無いとき、この距離内の最寄りアメダスの気温で代用
 AMEDAS_SNOW_RADIUS_KM = 50.0  # 解析積雪深が 0 でも、この距離内のアメダスが積雪を観測していれば降り始めとみて残す        # 解析タイルが取れない回に、気温だけで誤計測とみなす下限
+# 故障しているセンサー（情報源 ID, 観測点 ID）。値がもっともらしい範囲を動くので照合では弾けないもの。
+# 提供元の表示が直ったら外す
+FAULTY_SENSORS = {
+    # 国道46号 橋場（岩手県雫石町）: 7〜8 時間かけて 35→165cm まで上がっては戻る動きを繰り返す
+    # （2026-11-21〜22。6km 先の橋場ＳＴと雫石のアメダスは 0cm。利用者の指摘で判明）
+    ("mlit", "823500061"),
+}
 GEOCODE_LIMIT = 300          # 1回の実行で逆ジオコーダに問い合わせる最大件数
 HOST_INTERVAL = 1.5          # 同一ホストへの連続アクセスの間隔（秒）
 
@@ -827,6 +834,11 @@ class AmedasTemps:
                    for la, ln, _, sn in self.stations)
 
 
+def drop_faulty(sid: str, points: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """故障と分かっているセンサー（FAULTY_SENSORS）を外す。"""
+    return [p for p in points if (sid, str(p.get("id"))) not in FAULTY_SENSORS]
+
+
 def drop_implausible(points: list[dict[str, Any]], analysis: SnowAnalysis | None,
                      temps: AmedasTemps | None = None
                      ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -979,6 +991,7 @@ def main(argv: list[str] | None = None) -> int:
     for sid, pts in fetched.items():
         if not pts:
             continue
+        pts = drop_faulty(sid, pts)
         fetched[sid], dropped = drop_implausible(pts, analysis, temps)
         for p in dropped:
             t = f"{p['t']}℃" if p.get("t") is not None else (
