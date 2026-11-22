@@ -39,6 +39,9 @@ STATE_PATH = REPO_ROOT / "monitor" / ".state" / "hashes.json"
 
 JST = timezone(timedelta(hours=9))
 
+# 宮城県 河川流域情報システム（feed.type は camidx_latest を流用。解決は crawler.sources.miyagi_kasen）
+MIYAGI_KASEN_HOST = "www.dobokusougou.pref.miyagi.jp"
+
 HOST_MIN_INTERVAL = 1.0
 HOST_MAX_CONCURRENCY = 2
 
@@ -237,7 +240,8 @@ def run(shard: str | None = None) -> int:
     # 都度解決型feed（thr_camxml / camidx_latest）: 参照ファイルから最新画像名を解決する
     ref_cams = [c for c in all_cameras
                 if c.get("review", {}).get("status") == "approved"
-                and c["feed"]["type"] in ("thr_camxml", "camidx_latest", "kochi_suibo", "sizenken", "yachiyo_kansen")]
+                and c["feed"]["type"] in ("thr_camxml", "camidx_latest", "kochi_suibo", "sizenken", "yachiyo_kansen")
+                and urlparse(c["feed"]["url"]).netloc != MIYAGI_KASEN_HOST]
     if ref_cams:
         from crawler.sources.kochi_suibo import resolve_image_url as kochi_resolve
         from crawler.sources.sizenken import resolve_image_url as sizenken_resolve
@@ -281,6 +285,47 @@ def run(shard: str | None = None) -> int:
         for cam in cameras:
             if cam["id"] in ref_by_id:
                 cam["_resolved_image"] = ref_by_id[cam["id"]]
+
+    # 都度解決型feed（宮城県 河川カメラ）: 撮影時刻は全台共通なので、1 台分だけ問い合わせて
+    # 残りは同じ時刻で組み立てる。問い合わせに失敗した回は前回の image_url を保つ
+    mk_cams = [c for c in all_cameras
+               if c.get("review", {}).get("status") == "approved"
+               and c["feed"]["type"] == "camidx_latest"
+               and urlparse(c["feed"]["url"]).netloc == MIYAGI_KASEN_HOST
+               and c["feed"].get("camera_ref")]
+    if mk_cams:
+        from crawler.sources import miyagi_kasen
+        hit = None
+        for probe in mk_cams[:3]:     # 先頭の台が止まっていても次の台で試す
+            pid = probe["feed"]["url"].rsplit("=", 1)[-1]
+            try:
+                throttle.acquire(MIYAGI_KASEN_HOST)
+                try:
+                    resp = session.post(miyagi_kasen.RESOLVE_URL,
+                                        data=miyagi_kasen.resolve_form(pid), timeout=30)
+                finally:
+                    throttle.release(MIYAGI_KASEN_HOST)
+            except requests.RequestException as e:
+                print(f"宮城県 河川カメラの解決失敗: {e}", file=sys.stderr)
+                continue
+            hit = miyagi_kasen.resolve_stamp(resp.text) if resp.status_code == 200 else None
+            if hit:
+                break
+        if hit:
+            mk_by_id = {}
+            for cam in mk_cams:
+                url = miyagi_kasen.image_url(cam["feed"]["camera_ref"], hit[0])
+                cam["_resolved_image"] = {"url": url, "time": hit[1]}
+                mk_by_id[cam["id"]] = cam["_resolved_image"]
+                st = statuses.setdefault(cam["id"], {
+                    "state": "unknown", "last_ok_at": None,
+                    "http_status": None, "frozen_since": None,
+                    "consecutive_failures": 0, "avg_interval_sec": None,
+                })
+                st["image_url"], st["image_time"] = url, hit[1]
+            for cam in cameras:
+                if cam["id"] in mk_by_id:
+                    cam["_resolved_image"] = mk_by_id[cam["id"]]
 
     # 都度解決型feed（roundshot）: 固定入口の302 Location から最新の _half.jpg を解決する。
     # 解決に失敗した回は前回の image_url を保つ（status.json に残っている分で確認を続ける）

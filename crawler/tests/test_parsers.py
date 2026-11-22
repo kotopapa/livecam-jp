@@ -514,6 +514,33 @@ def test_miyazaki_kasen_parser():
     assert validate_camera_record(c.to_record("2026-11-22")) == []
 
 
+def test_miyagi_kasen_parser():
+    from crawler.sources.miyagi_kasen import (CAMERAS, MiyagiKasenParser, image_url,
+                                              resolve_form, resolve_stamp)
+    html = ('<img id="camera_latestTime_img" src="http://www.dobokusougou.pref.miyagi.jp/camera/'
+            'miyagi/area1_cam2_20261122153945.jpg">')
+    assert resolve_stamp(html) == ("20261122153945", "2026-11-22T15:39:45+09:00")
+    assert resolve_stamp("<html></html>") is None
+    assert image_url("area4_cam47", "20261122153945") == (
+        "https://www.dobokusougou.pref.miyagi.jp/camera/miyagi/area4_cam47_20261122153945.jpg")
+    assert resolve_form("104100001")["kansokuPointId"] == "104100001"
+    assert len({c[0] for c in CAMERAS}) == len({c[3] for c in CAMERAS}) == len(CAMERAS) == 40
+
+    class S:
+        def fetch(self, url):
+            class P:
+                ok = True
+                status = 200
+                text = " ".join(f"kansokuPointId=1041000{n:02d}" for n in range(1, 43))
+            return P()
+    result = MiyagiKasenParser().discover(S())
+    assert result.errors == [] and len(result.candidates) == 40
+    c = next(x for x in result.candidates if x.id == "miyagi-kasen-01")
+    assert c.name == "迫川 佐沼" and c.feed_type == "camidx_latest" and c.camera_ref == "area1_cam2"
+    assert c.feed_url.endswith("kansokuPointId=104100001")
+    assert validate_camera_record(c.to_record("2026-11-22")) == []
+
+
 def test_thr_camxml_resolver():
     from crawler.sources.thr_camxml import resolve_image_url
     xml = ("<Camera><ObservationDate>2026/08/21-19:20</ObservationDate>"

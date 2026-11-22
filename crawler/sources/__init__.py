@@ -7,6 +7,7 @@ from crawler.sources.curated_still import CuratedStillParser
 from crawler.sources.curated_world import CuratedWorldParser
 from crawler.sources.curated_youtube import CuratedYoutubeParser
 from crawler.sources.aichi_kasen import AichiKasenParser
+from crawler.sources.miyagi_kasen import MiyagiKasenParser
 from crawler.sources.miyazaki_kasen import MiyazakiKasenParser
 from crawler.sources.ehime_road import EhimeRoadParser
 from crawler.sources.fukui_road import FukuiRoadParser
@@ -71,6 +72,7 @@ REGISTRY = {
         KobeRiverParser,
         AichiKasenParser,
         MiyazakiKasenParser,
+        MiyagiKasenParser,
         MbcWebcamParser,
         MiyagiRoadParser,
         MlitCbrRoadParser,
