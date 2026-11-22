@@ -2,6 +2,7 @@ import 'dart:io' show Directory;
 
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../data/analytics.dart';
@@ -66,10 +67,32 @@ class _StockpileScreenState extends State<StockpileScreen> {
   /// （アプリ内の検索語にフォールバックするので画面は成立する）
   StockpileProducts? _products;
 
+  /// 画面上部の説明（この画面が何で、どう使うか）を畳んでいるか。
+  /// 初めての人には開いて見せ、畳んだら端末に覚えておく
+  static const _introCollapsedKey = 'stockpile_intro_collapsed';
+  bool _introCollapsed = false;
+
+  Future<void> _loadIntroCollapsed() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final v = prefs.getBool(_introCollapsedKey) ?? false;
+      if (mounted && v != _introCollapsed) setState(() => _introCollapsed = v);
+    } catch (_) {}
+  }
+
+  Future<void> _toggleIntro() async {
+    setState(() => _introCollapsed = !_introCollapsed);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setBool(_introCollapsedKey, _introCollapsed);
+    } catch (_) {}
+  }
+
   @override
   void initState() {
     super.initState();
     Analytics.screen('stockpile');
+    _loadIntroCollapsed();
     StockpileStore.load().then((s) {
       if (!mounted) return;
       setState(() => _state = s);
@@ -221,6 +244,7 @@ class _StockpileScreenState extends State<StockpileScreen> {
     return ListView(
       padding: const EdgeInsets.only(bottom: 32),
       children: [
+        _introCard(l10n),
         _householdCard(l10n, s),
         _summaryCard(l10n, s),
         Padding(
@@ -350,6 +374,68 @@ class _StockpileScreenState extends State<StockpileScreen> {
   // -------------------------------------------------------------------------
   // 世帯人数・必要量
   // -------------------------------------------------------------------------
+
+  /// 画面上部の説明。なぜ備えるのかと、この画面の使い方（3 手順）。見出しを押すと畳める
+  Widget _introCard(AppLocalizations l10n) {
+    final scheme = Theme.of(context).colorScheme;
+    final bodyStyle = TextStyle(fontSize: 13, height: 1.5, color: scheme.onSurface);
+    Widget step(int n, String text) => Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Container(
+              width: 20,
+              height: 20,
+              margin: const EdgeInsets.only(top: 1),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(color: scheme.primary, shape: BoxShape.circle),
+              child: Text('$n',
+                  style: TextStyle(
+                      fontSize: 12, fontWeight: FontWeight.bold, color: scheme.onPrimary)),
+            ),
+            const SizedBox(width: 8),
+            Expanded(child: Text(text, style: bodyStyle)),
+          ]),
+        );
+    return Card(
+      key: const ValueKey('stockpile_intro'),
+      margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+      color: scheme.primaryContainer.withValues(alpha: 0.35),
+      clipBehavior: Clip.antiAlias,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        InkWell(
+          key: const ValueKey('stockpile_intro_toggle'),
+          onTap: _toggleIntro,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(12, 10, 8, 10),
+            child: Row(children: [
+              Icon(Icons.backpack_outlined, size: 20, color: scheme.primary),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(l10n.stockpileIntroTitle,
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              Icon(_introCollapsed ? Icons.expand_more : Icons.expand_less,
+                  color: scheme.onSurfaceVariant),
+            ]),
+          ),
+        ),
+        if (!_introCollapsed)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(l10n.stockpileIntroBody, style: bodyStyle),
+              const SizedBox(height: 4),
+              step(1, l10n.stockpileIntroStep1),
+              step(2, l10n.stockpileIntroStep2),
+              step(3, l10n.stockpileIntroStep3),
+              const SizedBox(height: 10),
+              Text(l10n.stockpileIntroCta,
+                  style: bodyStyle.copyWith(fontWeight: FontWeight.w600)),
+            ]),
+          ),
+      ]),
+    );
+  }
 
   Widget _householdCard(AppLocalizations l10n, StockpileState s) => Card(
     margin: const EdgeInsets.fromLTRB(16, 16, 16, 4),

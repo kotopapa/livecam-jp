@@ -748,7 +748,7 @@ void main() {
     );
 
     testWidgets('世帯人数を変えると必要量の表示が変わる', (tester) async {
-      SharedPreferences.setMockInitialValues({});
+      SharedPreferences.setMockInitialValues({'stockpile_intro_collapsed': true});
       await tester.pumpWidget(testApp(StockpileScreen(app: makeApp())));
       await tester.pumpAndSettle();
 
@@ -767,7 +767,7 @@ void main() {
     });
 
     testWidgets('品目をタップすると期限・購入先のシートが開く', (tester) async {
-      SharedPreferences.setMockInitialValues({});
+      SharedPreferences.setMockInitialValues({'stockpile_intro_collapsed': true});
       final app = makeApp();
       await tester.pumpWidget(testApp(StockpileScreen(app: app)));
       await tester.pumpAndSettle();
@@ -837,7 +837,7 @@ void main() {
     });
 
     testWidgets('カスタム項目は名前で店舗検索でき、削除もできる', (tester) async {
-      SharedPreferences.setMockInitialValues({});
+      SharedPreferences.setMockInitialValues({'stockpile_intro_collapsed': true});
       // 一覧が長いので背の高い画面で確認する（ボタンが画面外に残らないように）
       tester.view.physicalSize = const Size(800, 2400);
       tester.view.devicePixelRatio = 1.0;
@@ -893,8 +893,30 @@ void main() {
       expect(find.text('「カセットコンロ」を削除しました'), findsNothing);
     });
 
-    testWidgets('チェックが保存され、進捗に反映される', (tester) async {
+    testWidgets('上部に説明が出て、畳むと次回も畳んだままになる', (tester) async {
       SharedPreferences.setMockInitialValues({});
+      await tester.pumpWidget(testApp(StockpileScreen(app: makeApp())));
+      await tester.pumpAndSettle();
+      expect(find.text('もしもの備え、足りていますか？'), findsOneWidget);
+      expect(find.textContaining('最低3日分、できれば1週間分'), findsOneWidget);
+      expect(find.text('家族の人数と日数を入れると、必要な量が分かります'), findsOneWidget);
+
+      await tester.tap(find.byKey(const ValueKey('stockpile_intro_toggle')));
+      await tester.pumpAndSettle();
+      expect(find.text('もしもの備え、足りていますか？'), findsOneWidget); // 見出しは残る
+      expect(find.textContaining('最低3日分、できれば1週間分'), findsNothing);
+      final prefs = await SharedPreferences.getInstance();
+      expect(prefs.getBool('stockpile_intro_collapsed'), isTrue);
+
+      // 開き直した画面でも畳んだまま
+      await tester.pumpWidget(const SizedBox());
+      await tester.pumpWidget(testApp(StockpileScreen(app: makeApp())));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('最低3日分、できれば1週間分'), findsNothing);
+    });
+
+    testWidgets('チェックが保存され、進捗に反映される', (tester) async {
+      SharedPreferences.setMockInitialValues({'stockpile_intro_collapsed': true});
       await tester.pumpWidget(testApp(StockpileScreen(app: makeApp())));
       await tester.pumpAndSettle();
       // 既定は子ども0人なので、子ども専用の2品目を除いた24項目

@@ -3237,4 +3237,26 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get detailSupportNote =>
       'This app is built and run by one independent developer.';
+
+  @override
+  String get stockpileIntroTitle => 'Are you ready for an emergency?';
+
+  @override
+  String get stockpileIntroBody =>
+      'After a major disaster, power, water and deliveries can stop, and it may take several days for help to arrive. The Japanese government recommends keeping supplies for at least 3 days, ideally a week.';
+
+  @override
+  String get stockpileIntroStep1 =>
+      'Enter your household size and the number of days to see how much you need';
+
+  @override
+  String get stockpileIntroStep2 =>
+      'Check off what you already have to see what is missing';
+
+  @override
+  String get stockpileIntroStep3 =>
+      'Set expiry dates and we will remind you before they pass';
+
+  @override
+  String get stockpileIntroCta => 'Start by checking your water and food.';
 }

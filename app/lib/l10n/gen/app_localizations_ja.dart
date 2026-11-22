@@ -3128,6 +3128,25 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get detailSupportNote => 'このアプリは個人で開発・運営しています。';
+
+  @override
+  String get stockpileIntroTitle => 'もしもの備え、足りていますか？';
+
+  @override
+  String get stockpileIntroBody =>
+      '大きな災害のあとは、電気・水道・物流が止まり、支援が届くまで数日かかることがあります。国は、最低3日分、できれば1週間分の備蓄をすすめています。';
+
+  @override
+  String get stockpileIntroStep1 => '家族の人数と日数を入れると、必要な量が分かります';
+
+  @override
+  String get stockpileIntroStep2 => '家にあるものにチェックを付けると、足りないものが分かります';
+
+  @override
+  String get stockpileIntroStep3 => '期限を登録すると、切れる前にお知らせします';
+
+  @override
+  String get stockpileIntroCta => 'まずは水と食料から確かめてみてください。';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -6301,4 +6320,24 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get detailSupportNote => 'この アプリは 一人（ひとり）で つくって います。';
+
+  @override
+  String get stockpileIntroTitle => 'もしもの ときの そなえは たりて いますか？';
+
+  @override
+  String get stockpileIntroBody =>
+      '大（おお）きな さいがいの あとは、でんき・すいどうが とまり、たすけが くるまで 何日（なんにち）も かかる ことが あります。国（くに）は 3日分（みっかぶん）いじょう、できれば 1週間分（いっしゅうかんぶん）の そなえを すすめて います。';
+
+  @override
+  String get stockpileIntroStep1 =>
+      'かぞくの 人数（にんずう）と 日数（にっすう）を いれると、ひつような りょうが わかります';
+
+  @override
+  String get stockpileIntroStep2 => 'いえに ある ものに チェックを つけると、たりない ものが わかります';
+
+  @override
+  String get stockpileIntroStep3 => 'きげんを いれると、きれる まえに おしらせします';
+
+  @override
+  String get stockpileIntroCta => 'まず 水（みず）と たべものから たしかめて ください。';
 }

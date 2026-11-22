@@ -3140,4 +3140,23 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get detailSupportNote => '이 앱은 개인이 개발·운영하고 있습니다.';
+
+  @override
+  String get stockpileIntroTitle => '만일의 대비, 충분하십니까?';
+
+  @override
+  String get stockpileIntroBody =>
+      '큰 재해가 일어나면 전기·수도·물류가 멈추고, 지원이 도착하기까지 며칠이 걸릴 수 있습니다. 일본 정부는 최소 3일분, 가능하면 1주일분의 비축을 권장하고 있습니다.';
+
+  @override
+  String get stockpileIntroStep1 => '가족 수와 일수를 입력하면 필요한 양을 알 수 있습니다';
+
+  @override
+  String get stockpileIntroStep2 => '집에 있는 물품에 체크하면 부족한 물품을 알 수 있습니다';
+
+  @override
+  String get stockpileIntroStep3 => '기한을 등록하면 지나기 전에 알려 드립니다';
+
+  @override
+  String get stockpileIntroCta => '먼저 물과 식량부터 확인해 보십시오.';
 }

@@ -5565,6 +5565,42 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'このアプリは個人で開発・運営しています。'**
   String get detailSupportNote;
+
+  /// No description provided for @stockpileIntroTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'もしもの備え、足りていますか？'**
+  String get stockpileIntroTitle;
+
+  /// No description provided for @stockpileIntroBody.
+  ///
+  /// In ja, this message translates to:
+  /// **'大きな災害のあとは、電気・水道・物流が止まり、支援が届くまで数日かかることがあります。国は、最低3日分、できれば1週間分の備蓄をすすめています。'**
+  String get stockpileIntroBody;
+
+  /// No description provided for @stockpileIntroStep1.
+  ///
+  /// In ja, this message translates to:
+  /// **'家族の人数と日数を入れると、必要な量が分かります'**
+  String get stockpileIntroStep1;
+
+  /// No description provided for @stockpileIntroStep2.
+  ///
+  /// In ja, this message translates to:
+  /// **'家にあるものにチェックを付けると、足りないものが分かります'**
+  String get stockpileIntroStep2;
+
+  /// No description provided for @stockpileIntroStep3.
+  ///
+  /// In ja, this message translates to:
+  /// **'期限を登録すると、切れる前にお知らせします'**
+  String get stockpileIntroStep3;
+
+  /// No description provided for @stockpileIntroCta.
+  ///
+  /// In ja, this message translates to:
+  /// **'まずは水と食料から確かめてみてください。'**
+  String get stockpileIntroCta;
 }
 
 class _AppLocalizationsDelegate

@@ -3113,6 +3113,25 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get detailSupportNote => '本应用由个人开发和运营。';
+
+  @override
+  String get stockpileIntroTitle => '应急储备，您准备好了吗？';
+
+  @override
+  String get stockpileIntroBody =>
+      '发生大规模灾害后，电力、自来水和物流可能中断，救援物资可能需要数日才能送达。日本政府建议至少储备3天、最好1周的用品。';
+
+  @override
+  String get stockpileIntroStep1 => '输入家庭人数和天数，即可了解所需数量';
+
+  @override
+  String get stockpileIntroStep2 => '勾选家中已有的物品，即可了解还缺什么';
+
+  @override
+  String get stockpileIntroStep3 => '登记保质期后，到期前会提醒您';
+
+  @override
+  String get stockpileIntroCta => '请先从水和食品开始确认。';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6224,4 +6243,23 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get detailSupportNote => '本應用程式由個人開發與營運。';
+
+  @override
+  String get stockpileIntroTitle => '緊急儲備，您準備好了嗎？';
+
+  @override
+  String get stockpileIntroBody =>
+      '發生大規模災害後，電力、自來水和物流可能中斷，救援物資可能需要數日才能送達。日本政府建議至少儲備3天、最好1週的用品。';
+
+  @override
+  String get stockpileIntroStep1 => '輸入家庭人數和天數，即可了解所需數量';
+
+  @override
+  String get stockpileIntroStep2 => '勾選家中已有的物品，即可了解還缺什麼';
+
+  @override
+  String get stockpileIntroStep3 => '登記保存期限後，到期前會提醒您';
+
+  @override
+  String get stockpileIntroCta => '請先從水和食品開始確認。';
 }

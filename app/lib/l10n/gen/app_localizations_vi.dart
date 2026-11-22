@@ -3247,4 +3247,27 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get detailSupportNote =>
       'Ứng dụng này do một cá nhân phát triển và vận hành.';
+
+  @override
+  String get stockpileIntroTitle =>
+      'Bạn đã chuẩn bị đủ cho tình huống khẩn cấp chưa?';
+
+  @override
+  String get stockpileIntroBody =>
+      'Sau thảm họa lớn, điện, nước và vận chuyển hàng hóa có thể ngừng, và có thể mất vài ngày để hỗ trợ đến nơi. Chính phủ Nhật Bản khuyến nghị dự trữ ít nhất 3 ngày, tốt nhất là 1 tuần.';
+
+  @override
+  String get stockpileIntroStep1 =>
+      'Nhập số người trong gia đình và số ngày để biết lượng cần thiết';
+
+  @override
+  String get stockpileIntroStep2 =>
+      'Đánh dấu những thứ đã có ở nhà để biết còn thiếu gì';
+
+  @override
+  String get stockpileIntroStep3 =>
+      'Đăng ký hạn sử dụng, ứng dụng sẽ nhắc bạn trước khi hết hạn';
+
+  @override
+  String get stockpileIntroCta => 'Hãy bắt đầu kiểm tra từ nước và thực phẩm.';
 }
