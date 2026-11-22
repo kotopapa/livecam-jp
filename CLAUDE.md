@@ -93,6 +93,16 @@ python site/build.py                            # 配信ファイル生成
 - 1.6.0 (48) の報告 4 件の内訳: ①`-[__NSDictionaryM setObject:forKeyedSubscript:]`（背景スレッド・Runner フレーム無し）= **Firebase Analytics の実験取得（APMEExperiment→GULMutableDictionary）に nil が来るサーバー側の不具合**。firebase-ios-sdk#16728、2026-09-28 23:52 PDT にサーバー側で修正済み。クライアント側の対処不要（GoogleUtilities PR#249 で nil を無視する修正がマージ済み、リリースは 8.1.3 以降待ち） ②`FLTNewGoogleMobileAdsViewFactory createArgsCodec`（実体は同ファイルの「Could not find an ad with id … already disposed?」の @throw）= 画面を閉じた直後に AdWidget の platform view 生成が走り、先に dispose した広告を参照して落ちる → `ad_banner.dart` の `_disposeAdLater`（3秒遅延。テストは `adDisposeDelay = Duration.zero`） ③`GeolocatorApple.getPositionStream` の FlutterError = 追従中のストリームのエラー（位置情報オフ等）が未処理で `recordError(fatal: true)` に流れていた → `onError` で追従停止 ④flutter_map の `DiscreteTileRange._floor` は 1.6.0 で flutter_map を廃止したので旧版のみ
 - Crashlytics の「Fatal Exception: FlutterError」は main.dart の `PlatformDispatcher.onError` が未処理の Dart エラーを fatal として記録しているもので、アプリは落ちていない。ストリームの `listen` には必ず `onError` を付ける
 
+## 単独カメラの追加調査の知見（2026-11-22追記）
+
+- 台帳に無い地点を配信元ごとに洗い直し、**239 台をユーザー判断で採用**（23,709→23,948）。内訳は静止画 112（うち福島県の道路・河川 35）、誘導型 103、YouTube 24。ID は `curated-cm-s-*` / `curated-cm-w-*` / `curated-cm-y-*` と `curated-still-fukushima-road-NNNN`
+- **福島県 道路画像情報（fukushima-road.net）は地区ページごとに扱いが違う**。県中・県北・県南・石川・喜多方・相双の各ページは「各ページに掲載の写真・音声及び記事の無断転載を禁じます」を明記しているので不採用。明記の無い南会津（/maizu/）と富岡（/tomioka/）だけを curated_still.yaml に追加した。あぶくま高原道路（/kentyuu/abukuma/）は県中建設事務所の配下なので見送り。画像は会津と同じ `https://absv2.f-road.info/cs1/ms/cam{ID}m.jpg`（ID は 3 桁ゼロ埋め、4 桁はそのまま）。表示ページ `camViewA.php?CID=` の `<h1>` が名称、`画像更新日時` が鮮度。約 6KB の同一画像は「準備中」の代替画像
+- **同じ channel_id の YouTube 候補は `normalize.dedupe` と `merge_candidates` が feed.url 一致で落とす**（live_match 違いでも落ちる）。同一チャンネルの別枠を足すときは `CuratedYoutubeParser().discover(None)` の候補から `to_record()` で直接レコードを作り、`apply_bulk_approval` に渡す
+- curated_still.yaml の誘導型（`feed_type: web_page`）にも `image_url` が要る（`test_curated_still_yaml` が全件に要求。`feed_url` と同じ値でよい）
+- `apply_bulk_approval` のあとは `tools/fill_municipality.py` をかける。「県違い」と出た新規は座標か prefecture を直す（今回は斑尾高原＝県境、伊丹空港＝兵庫県伊丹市）
+- **未着手の大口**: 愛知県 川の防災情報（kasen-aichi.jp、画像 `/Images/CameraImage/<番号>.jpg` 固定、約88台、座標は別途）、宮崎県 簡易河川カメラ（kasen.pref.miyazaki.jp、`/cameraData/now/now_<番号>.jpg`）、栃木県 リアルタイム雨量・河川水位（dif.pref.tochigi.lg.jp、約17地点）、宮城県 河川流域情報システム（画像 URL が撮影時刻入りで都度解決型）。台帳はいずれも 0 台
+- 冬だけ動くスキー場のカメラを多く含む（琴引・ちくさ高原・八幡平は開業前で配信休止中のまま channel_id 登録）。開業後に配信の題名と live_match（キロロ・札幌国際）が合っているかを見直す
+
 ## 全国多角調査の知見（2026-09-30追記）
 
 - 星空・気象/牧場・自然/街・庁舎/交通・文化/産業・季節の5班＋鉱脈4班（CATV/自治体ネットカメラ/日中再点検・港/運営者横展開）で計 987 台を採用（21,954→22,941）。手順は scratchpad の GUIDE.md 方式（テーマ別エージェント→検証済み YAML→build_batch.py で curated_*.yaml に追記→crawler --source→review_cli の apply_bulk_approval）。季節限定・時期待ちの再確認リストはメモリ camera-survey-2026-09-30-followups に置いた

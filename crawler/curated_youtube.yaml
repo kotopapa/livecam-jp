@@ -19865,6 +19865,7 @@ cameras:
     operator: "タングラム斑尾東急リゾート（東急リゾーツ＆ステイ株式会社）"
     category: scenic
     channel_id: "UCnO4Bd0YTXkth8dpxVOq1xQ"
+    live_match: "野尻湖テラス"   # 2026-11-22 同チャンネルにホテルタングラムの配信が加わったため枠を指定
     prefecture: "20"
     lat: 36.847206
     lng: 138.248276
@@ -26146,3 +26147,256 @@ cameras:
     lng: 139.534
     accuracy: approx
     note: 2026-10-12 watchページで playabilityStatus=OK・isLiveNow=true・playableInEmbed=true を確認。「戸塚ライブカメラ」定点（自動再起動システム稼働中）。確認時は isLiveNow=false（再起動の合間か時間帯外）のため後日再確認。channel_id はチャンネルIDの末尾を要照合（検索結果から取得）。座標は戸塚駅付近の概略。
+
+  # 2026-11-22 追加（スキー場・空港・海岸などの公式 YouTube 配信）
+  - id: curated-cm-y-9c26f8a1
+    name: "伊丹空港（カンテレ）"
+    operator: "関西テレビ放送（カンテレNEWS）"
+    channel_id: UCQhaZjODkIjuv38d-i5TVRw
+    live_match: "伊丹空港"
+    category: other
+    prefecture: "28"
+    lat: 34.7855
+    lng: 135.4382
+    note: "2026-11-22 watch ページで isLiveNow・埋め込み可を確認（eS9qhrWtKTw）。座標は空港の概略"
+
+  - id: curated-cm-y-cef6d865
+    name: "ZAZA浜名湖ガーデンパーク"
+    operator: "ZAZAマガジンチャンネル"
+    channel_id: UCJKH8wYxFYeufDnvy1MPofA
+    live_match: "浜名湖ガーデンパーク"
+    category: scenic
+    prefecture: "22"
+    lat: 34.7147
+    lng: 137.6008
+    note: "2026-11-22 watch ページで isLiveNow・埋め込み可を確認（L7fvQQMRuFM）。座標は公園の概略"
+
+  - id: curated-cm-y-b525da44
+    name: "湾岸Go三浦海岸"
+    operator: "湾岸Go (TOKYO BAY LIVE)"
+    channel_id: UCwalBJrcoOVwid4wKfWkRiA
+    live_match: "三浦海岸"
+    category: coast
+    prefecture: "14"
+    lat: 35.1875
+    lng: 139.6535
+    note: "2026-11-22 watch ページで isLiveNow・埋め込み可を確認（MOkZUavnHM4）。座標は海岸の概略"
+
+  - id: curated-cm-y-bad866da
+    name: "TCN高岡市広小路交通情報"
+    operator: "高岡ケーブルネットワーク"
+    channel_id: UCViEINl4jn95elupZZPk__w
+    live_match: "広小路"
+    category: road
+    prefecture: "16"
+    lat: 36.7477
+    lng: 137.0183
+    note: "2026-11-22 watch ページで isLiveNow・埋め込み可を確認（B1tvHi67OgA）。座標は交差点の概略"
+
+  - id: curated-cm-y-4628073e
+    name: "立山山麓スキー場 ユートピアゲレンデ"
+    operator: "立山山麓スキー場(大山観光開発株式会社)"
+    channel_id: UC0JpXT3OvDGbiuFxgwmK2VQ
+    category: scenic
+    prefecture: "16"
+    lat: 36.559391
+    lng: 137.433773
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-46d94c7a
+    name: "立山山麓スキー場 極楽坂 第3ゲレンデ"
+    operator: "立山山麓スキー場(大山観光開発株式会社)"
+    channel_id: UC4oiJIlTxN8z_LR2QC6EIVw
+    category: scenic
+    prefecture: "16"
+    lat: 36.559948
+    lng: 137.431875
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-eaf19982
+    name: "立山山麓スキー場 らいちょうバレー 第4ゲレンデ"
+    operator: "立山山麓スキー場(大山観光開発株式会社)"
+    channel_id: UCip32NgjAQ9DJEIphqKitqg
+    category: scenic
+    prefecture: "16"
+    lat: 36.560302
+    lng: 137.431309
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-0c1f7be0
+    name: "ちくさ高原スキー場"
+    operator: "ちくさ高原スキー場"
+    channel_id: UCzkXmMhjMq_8iaVBUqqWi-w
+    category: scenic
+    prefecture: "28"
+    lat: 35.217752
+    lng: 134.387951
+    note: "2026-11-22 追加。2026-11-22 watch で isLiveNow:false(endTimestamp 2026-03-31)・playableInEmbed:true"
+
+  - id: curated-cm-y-3db28ea1
+    name: "軽井沢プリンスホテルスキー場 スキーセンター前"
+    operator: "SAJ軽井沢スキー学校"
+    channel_id: UCnXXZnHcM2Y-WX7U_fNR2Qg
+    category: scenic
+    prefecture: "20"
+    lat: 36.340504
+    lng: 138.64366
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-c048dacf
+    name: "海王丸パーク"
+    operator: "射水ケーブルネットワーク"
+    channel_id: UCmkNrofq9nIencouBLGGY3w
+    category: coast
+    prefecture: "16"
+    lat: 36.7785
+    lng: 137.0995
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true、タイトル「海王丸ライブカメラ」"
+
+  - id: curated-cm-y-79cd60f7
+    name: "おじろスキー場 ゲレンデ"
+    operator: "おじろスキー場(おじろスキー場運営)"
+    channel_id: UCffDjCNP1PVsVcUAQ7TVEkg
+    category: scenic
+    prefecture: "28"
+    lat: 35.451882
+    lng: 134.531295
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-5f6e2817
+    name: "安比高原スキー場 リゾートセンター"
+    operator: "安比高原（株式会社安比高原）"
+    channel_id: UCnbwnji-8ARAkWXw0i3MaBg
+    category: scenic
+    prefecture: "03"
+    lat: 40.002147
+    lng: 140.970354
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true、チャンネル名 APPI Kogen WEB"
+
+  - id: curated-cm-y-5ca624d3
+    name: "安比高原スキー場 ゴンドラ山頂"
+    operator: "安比高原（株式会社安比高原）"
+    channel_id: UCGV0llV5YRkuk7i93y-ZuVA
+    category: scenic
+    prefecture: "03"
+    lat: 40.002147
+    lng: 140.970354
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true、チャンネル名 安比高原"
+
+  - id: curated-cm-y-9815f660
+    name: "札幌国際スキー場 山頂"
+    operator: "札幌国際スキー場（札幌リゾート開発公社）"
+    channel_id: UCvEoZXnlnqxP8ruGuJc2Elg
+    live_match: "山頂"
+    category: scenic
+    prefecture: "01"
+    lat: 43.07214
+    lng: 141.082772
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-a12dfca6
+    name: "札幌国際スキー場 山麓"
+    operator: "札幌国際スキー場（札幌リゾート開発公社）"
+    channel_id: UCvEoZXnlnqxP8ruGuJc2Elg
+    live_match: "山麓"
+    category: scenic
+    prefecture: "01"
+    lat: 43.07214
+    lng: 141.082772
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-5bc4c07f
+    name: "札幌国際スキー場 24時間降雪量"
+    operator: "札幌国際スキー場（札幌リゾート開発公社）"
+    channel_id: UCvEoZXnlnqxP8ruGuJc2Elg
+    live_match: "降雪量"
+    category: scenic
+    prefecture: "01"
+    lat: 43.07214
+    lng: 141.082772
+    note: "2026-11-22 追加。2026-11-22 watch ページで isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-874ad8de
+    name: "ホテルタングラム周辺"
+    operator: "タングラム斑尾東急リゾート（東急リゾーツ＆ステイ株式会社）"
+    channel_id: UCnO4Bd0YTXkth8dpxVOq1xQ
+    live_match: "ホテルタングラム"
+    category: scenic
+    prefecture: "20"
+    lat: 36.852209
+    lng: 138.263296
+    note: "2026-11-22 追加。2026-11-22 watch ページ isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-80727002
+    name: "琴引フォレストパーク スキー場"
+    operator: "琴引フォレストパーク（琴引リゾート）"
+    channel_id: UCZLYAVX1gUnljKqStaWtoPg
+    category: scenic
+    prefecture: "32"
+    lat: 35.054868
+    lng: 132.768154
+    note: "2026-11-22 追加。2026-11-22 watch ページ isLiveNow:false(冬季営業前), playableInEmbed:true"
+
+  - id: curated-cm-y-9a377d60
+    name: "キロロ ベースエリア"
+    operator: "キロロリゾート（株式会社キロロ）"
+    channel_id: UCfDj0Nie4sGZU6StTsGRe_g
+    live_match: "ベースエリア"
+    category: scenic
+    prefecture: "01"
+    lat: 43.075713
+    lng: 140.982218
+    note: "2026-11-22 追加。2026-11-22 watch ページ isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-a1d5ef9d
+    name: "キロロ 積雪カメラ"
+    operator: "キロロリゾート（株式会社キロロ）"
+    channel_id: UCfDj0Nie4sGZU6StTsGRe_g
+    live_match: "積雪カメラ"
+    category: scenic
+    prefecture: "01"
+    lat: 43.075713
+    lng: 140.982218
+    note: "2026-11-22 追加。2026-11-22 watch ページ isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-85df6667
+    name: "キロロ 朝里山頂"
+    operator: "キロロリゾート（株式会社キロロ）"
+    channel_id: UCfDj0Nie4sGZU6StTsGRe_g
+    live_match: "朝里山頂"
+    category: scenic
+    prefecture: "01"
+    lat: 43.075713
+    lng: 140.982218
+    note: "2026-11-22 追加。2026-11-22 watch ページ isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-196aa34d
+    name: "キロロ 長峰エリア"
+    operator: "キロロリゾート（株式会社キロロ）"
+    channel_id: UCfDj0Nie4sGZU6StTsGRe_g
+    live_match: "長峰エリア"
+    category: scenic
+    prefecture: "01"
+    lat: 43.075713
+    lng: 140.982218
+    note: "2026-11-22 追加。2026-11-22 watch ページ isLiveNow:true / playableInEmbed:true"
+
+  - id: curated-cm-y-63a15d29
+    name: "八幡平リゾート パノラマスキー場"
+    operator: "八幡平リゾート"
+    channel_id: UCIJILlnhQs_OpQeT2VK910A
+    category: scenic
+    prefecture: "03"
+    lat: 39.890028
+    lng: 140.977459
+    note: "2026-11-22 追加。2026-11-22 /channel/UCIJILlnhQs_OpQeT2VK910A/live で isLiveNow:false, playableInEmbed:true（直近の動画 y3MXBhZ3fUQ）"
+
+  - id: curated-cm-y-76ba48d1
+    name: "八幡平リゾート 下倉スキー場"
+    operator: "八幡平リゾート"
+    channel_id: UCK-174OXa-6JQCniHJvfdwA
+    category: scenic
+    prefecture: "03"
+    lat: 39.890028
+    lng: 140.977459
+    note: "2026-11-22 追加。2026-11-22 /channel/UCK-174OXa-6JQCniHJvfdwA/live で isLiveNow:false, playableInEmbed:true（直近の動画 O4VjCJWlHno）"

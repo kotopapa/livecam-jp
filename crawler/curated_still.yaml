@@ -46801,3 +46801,2662 @@ cameras:
     image_url: "https://volcanoes.usgs.gov/observatories/hvo/cams/M2cam/images/M.jpg"
     page_url: "https://www.usgs.gov/volcanoes/kilauea/webcams"
     note: "2026-10-15 に2回取得して更新を確認。USGS 公式画像。夜間は暗い/熱赤外像のカメラあり。座標は概略（approx）。"
+
+  # 2026-11-22 追加（福島県 南会津・富岡の道路カメラ、単独カメラの静止画・誘導型）
+  - id: curated-cm-s-d9348d23
+    name: "かぐらスキー場 みつまたエリア"
+    operator: "西武プリンスホテルズ＆リゾーツ（配信基盤: SKIDAY）"
+    category: scenic
+    prefecture: "15"
+    lat: 36.8939
+    lng: 138.7685
+    refresh_sec: 600
+    image_url: "https://skiday.app/i5tCGq5NoeXiz8wHgPQe/865036047347867/images/latest"
+    page_url: "https://www.princehotels.co.jp/ski/kagura/livecamera/"
+    note: "2026-11-22 追加。2026-11-22 images/latest(302→storage.googleapis.com の jpg)が Last-Modified 当日、画像内日時 11:39〜11:51 JST、数分あけて2回取得して内容が変化。かぐらスキー場側。 同ページ上の見出しと ID の対応が かぐら/苗場ページ間で食い違うので名称は要確認。ページ上の判断: 見出しは配信元ページの表記。"
+
+  - id: curated-cm-s-5c97ff2d
+    name: "かぐらスキー場 かぐらエリア"
+    operator: "西武プリンスホテルズ＆リゾーツ（配信基盤: SKIDAY）"
+    category: scenic
+    prefecture: "15"
+    lat: 36.8939
+    lng: 138.7685
+    refresh_sec: 600
+    image_url: "https://skiday.app/i5tCGq5NoeXiz8wHgPQe/869223046913016/images/latest"
+    page_url: "https://www.princehotels.co.jp/ski/kagura/livecamera/"
+    note: "2026-11-22 追加。2026-11-22 images/latest(302→storage.googleapis.com の jpg)が Last-Modified 当日、画像内日時 11:39〜11:51 JST、数分あけて2回取得して内容が変化。かぐらスキー場側。 同ページ上の見出しと ID の対応が かぐら/苗場ページ間で食い違うので名称は要確認。ページ上の判断: 見出しは配信元ページの表記。"
+
+  - id: curated-cm-s-9abfc1f8
+    name: "苗場スキー場 ホテル前"
+    operator: "西武プリンスホテルズ＆リゾーツ（配信基盤: SKIDAY）"
+    category: scenic
+    prefecture: "15"
+    lat: 36.792816
+    lng: 138.778168
+    refresh_sec: 600
+    image_url: "https://skiday.app/qNZn0zI8wvmOV2CZ3OFY/869223047442742/images/latest"
+    page_url: "https://www.princehotels.co.jp/ski/naeba/livecamera/"
+    note: "2026-11-22 追加。2026-11-22 images/latest(302→storage.googleapis.com の jpg)が Last-Modified 当日、画像内日時 11:39〜11:51 JST、数分あけて2回取得して内容が変化。苗場側。 同ページ上の見出しと ID の対応が かぐら/苗場ページ間で食い違うので名称は要確認。ページ上の判断: 見出しは配信元ページの表記。"
+
+  - id: curated-cm-s-08e4d7e7
+    name: "苗場スキー場 ドラゴンドラ山頂付近"
+    operator: "西武プリンスホテルズ＆リゾーツ（配信基盤: SKIDAY）"
+    category: scenic
+    prefecture: "15"
+    lat: 36.792816
+    lng: 138.778168
+    refresh_sec: 600
+    image_url: "https://skiday.app/qNZn0zI8wvmOV2CZ3OFY/869223047452949/images/latest"
+    page_url: "https://www.princehotels.co.jp/ski/naeba/livecamera/"
+    note: "2026-11-22 追加。2026-11-22 images/latest(302→storage.googleapis.com の jpg)が Last-Modified 当日、画像内日時 11:39〜11:51 JST、数分あけて2回取得して内容が変化。苗場側。更新は10分前後の間隔。 同ページ上の見出しと ID の対応が かぐら/苗場ページ間で食い違うので名称は要確認。ページ上の判断: 見出しは配信元ページの表記。"
+
+  - id: curated-cm-s-1e38ab76
+    name: "苗場スキー場 ドラゴンドラ山麓付近"
+    operator: "西武プリンスホテルズ＆リゾーツ（配信基盤: SKIDAY）"
+    category: scenic
+    prefecture: "15"
+    lat: 36.792816
+    lng: 138.778168
+    refresh_sec: 600
+    image_url: "https://skiday.app/qNZn0zI8wvmOV2CZ3OFY/869223047446750/images/latest"
+    page_url: "https://www.princehotels.co.jp/ski/naeba/livecamera/"
+    note: "2026-11-22 追加。2026-11-22 images/latest(302→storage.googleapis.com の jpg)が Last-Modified 当日、画像内日時 11:39〜11:51 JST、数分あけて2回取得して内容が変化。苗場側。 同ページ上の見出しと ID の対応が かぐら/苗場ページ間で食い違うので名称は要確認。ページ上の判断: 見出しは配信元ページの表記。"
+
+  - id: curated-cm-s-0fe5455e
+    name: "奥中山高原スキー場"
+    operator: "奥中山高原株式会社"
+    category: scenic
+    prefecture: "03"
+    lat: 40.082215
+    lng: 141.189853
+    refresh_sec: 600
+    image_url: "https://www.okunakayamakogen.jp/camera/live.jpg"
+    page_url: "https://www.okunakayamakogen.jp/camera/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 02:49:59→03:00:00 GMT に更新、画像内日時 11:37、md5 が変化。ウィンターシーズン/グリーンシーズンの切替ページ。現在映るのはリフト施設越しの積雪の風景で見映えは良くない。http は https へ301。"
+
+  - id: curated-cm-s-197d015e
+    name: "JGR日本庭園鉄道 全景（日本庭園鉄道ライブ）"
+    operator: "JGR 日本庭園鉄道（裾野市）"
+    category: scenic
+    prefecture: "22"
+    lat: 35.219091
+    lng: 138.891107
+    refresh_sec: 60
+    image_url: "https://live.jgr1.org/index05_files/current05.jpg"
+    page_url: "https://live.jgr1.org/index05.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:02:3x→03:09:3x GMT に更新、md5 が変化。利用条件・運営者表記のページは見つからず license は unknown。同サイトの 富士山カメラ(index06) は Last-Modified が 2026-03-09、操車場カメラ(index08) は 2025-10-17 で停止、山の上カメラ(index09) は当日 06:12 JST で止まっており、採用しない。"
+
+  - id: curated-cm-s-0994024c
+    name: "JGR日本庭園鉄道 倉庫前"
+    operator: "JGR 日本庭園鉄道（裾野市）"
+    category: scenic
+    prefecture: "22"
+    lat: 35.219091
+    lng: 138.891107
+    refresh_sec: 60
+    image_url: "https://live.jgr1.org/index07_files/current07.jpg"
+    page_url: "https://live.jgr1.org/index07.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:02:3x→03:09:3x GMT に更新、md5 が変化。利用条件・運営者表記のページは見つからず license は unknown。同サイトの 富士山カメラ(index06) は Last-Modified が 2026-03-09、操車場カメラ(index08) は 2025-10-17 で停止、山の上カメラ(index09) は当日 06:12 JST で止まっており、採用しない。"
+
+  - id: curated-cm-s-c2e09885
+    name: "屋根岩（岩根山荘）"
+    operator: "株式会社 岩根山荘"
+    category: scenic
+    prefecture: "20"
+    lat: 35.92375
+    lng: 138.641513
+    refresh_sec: 60
+    image_url: "https://www.iwane-inc.co.jp/webcam1/getcurrimage.php?w=1280"
+    page_url: "https://www.iwane-inc.co.jp/sanso/webcam1.php"
+    note: "2026-11-22 追加。2026-11-22 2回取得で md5 が変化、画像内日時が現在時刻。画像に岩根山荘のロゴ入り。w=512/1280 を選べる。利用条件の記載は見つからず license は unknown。"
+
+  - id: curated-cm-s-ecc0fabe
+    name: "青森市 鶴ヶ坂千刈線 石江付近"
+    operator: "青森ITSクラブ"
+    category: road
+    prefecture: "02"
+    lat: 40.821587
+    lng: 140.68782
+    refresh_sec: 300
+    image_url: "https://aomori.cc/pc/live/img/sannaicam.jpg"
+    page_url: "https://aomori.cc/pc/live/sannaicam.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日03:0x GMT、2回取得で内容が変化（一部は25分前更新）。青森市内以外に八戸市内(aomori.cc/pc/live/hachinohe/)などの別カメラもあるが今回の対象外。手がかりの運営者「ATV青森テレビ」は誤り。"
+
+  - id: curated-cm-s-4d11743f
+    name: "青森市 国道4号 NTT交差点"
+    operator: "青森ITSクラブ"
+    category: road
+    prefecture: "02"
+    lat: 40.827152
+    lng: 140.737106
+    refresh_sec: 300
+    image_url: "https://aomori.cc/pc/live/img/tyuuouoohashicam.jpg"
+    page_url: "https://aomori.cc/pc/live/tyuuouoohashicam.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日03:0x GMT、2回取得で内容が変化（一部は25分前更新）。青森市内以外に八戸市内(aomori.cc/pc/live/hachinohe/)などの別カメラもあるが今回の対象外。手がかりの運営者「ATV青森テレビ」は誤り。"
+
+  - id: curated-cm-s-abc2cd57
+    name: "青森市 松原通り 松原交差点"
+    operator: "青森ITSクラブ"
+    category: road
+    prefecture: "02"
+    lat: 40.821533
+    lng: 140.761993
+    refresh_sec: 300
+    image_url: "https://aomori.cc/pc/live/img/matsubaracam.jpg"
+    page_url: "https://aomori.cc/pc/live/matsubaracam.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日03:0x GMT、2回取得で内容が変化（一部は25分前更新）。青森市内以外に八戸市内(aomori.cc/pc/live/hachinohe/)などの別カメラもあるが今回の対象外。手がかりの運営者「ATV青森テレビ」は誤り。"
+
+  - id: curated-cm-s-86f43509
+    name: "青森市 藤田組通り 松森交差点"
+    operator: "青森ITSクラブ"
+    category: road
+    prefecture: "02"
+    lat: 40.810017
+    lng: 140.782318
+    refresh_sec: 300
+    image_url: "https://aomori.cc/pc/live/img/fujitagumidoricam.jpg"
+    page_url: "https://aomori.cc/pc/live/fujitagumidoricam.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日03:0x GMT、2回取得で内容が変化（一部は25分前更新）。青森市内以外に八戸市内(aomori.cc/pc/live/hachinohe/)などの別カメラもあるが今回の対象外。手がかりの運営者「ATV青森テレビ」は誤り。"
+
+  - id: curated-cm-s-ca4abd7d
+    name: "青森市 中央大橋通り 大野付近"
+    operator: "青森ITSクラブ"
+    category: road
+    prefecture: "02"
+    lat: 40.805473
+    lng: 140.72319
+    refresh_sec: 300
+    image_url: "https://aomori.cc/pc/live/img/oonocam.jpg"
+    page_url: "https://aomori.cc/pc/live/oonocam.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日03:0x GMT、2回取得で内容が変化（一部は25分前更新）。青森市内以外に八戸市内(aomori.cc/pc/live/hachinohe/)などの別カメラもあるが今回の対象外。手がかりの運営者「ATV青森テレビ」は誤り。"
+
+  - id: curated-cm-s-7b0fb9ee
+    name: "青森市 環状7号 青森中央インター交差点"
+    operator: "青森ITSクラブ"
+    category: road
+    prefecture: "02"
+    lat: 40.81255
+    lng: 140.710709
+    refresh_sec: 300
+    image_url: "https://aomori.cc/pc/live/img/kan7tonyamachicam.jpg"
+    page_url: "https://aomori.cc/pc/live/kan7tonyamachicam.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日03:0x GMT、2回取得で内容が変化（一部は25分前更新）。青森市内以外に八戸市内(aomori.cc/pc/live/hachinohe/)などの別カメラもあるが今回の対象外。手がかりの運営者「ATV青森テレビ」は誤り。"
+
+  - id: curated-cm-s-8bab16fc
+    name: "青森市 環状7号 駒込交差点"
+    operator: "青森ITSクラブ"
+    category: road
+    prefecture: "02"
+    lat: 40.73703
+    lng: 140.841568
+    refresh_sec: 300
+    image_url: "https://aomori.cc/pc/live/img/kan7komagomecam.jpg"
+    page_url: "https://aomori.cc/pc/live/kan7komagomecam.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日03:0x GMT、2回取得で内容が変化（一部は25分前更新）。青森市内以外に八戸市内(aomori.cc/pc/live/hachinohe/)などの別カメラもあるが今回の対象外。手がかりの運営者「ATV青森テレビ」は誤り。 駒込は青森市南部で、座標の確度が低い。"
+
+  - id: curated-cm-s-dbdeef34
+    name: "板橋区 学校橋（石神井川）"
+    operator: "板橋区"
+    category: river
+    prefecture: "13"
+    lat: 35.751221
+    lng: 139.709229
+    image_url: "http://itabashi.tenki.ne.jp/itabashi/data_xml/01.jpg"
+    page_url: "http://itabashi.tenki.ne.jp/itabashi/picture_list.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:05:1x→03:09:1x GMT に更新、2回取得で md5 が変化（01,07 を再取得）。7枚とも目視で当日の河川映像。http のみ。画像は小さい(約320x240)。tenki.ne.jp 上のホストだが ページの内容（雨量局の工事告知・板橋区の警報表示）から板橋区の運用と判断、運営主体の明記ページは未確認。利用条件の記載は見つからず license は unknown。手がかりの座標は芝原橋のみ具体的。"
+
+  - id: curated-cm-s-b5448479
+    name: "板橋区 栗原橋（石神井川）"
+    operator: "板橋区"
+    category: river
+    prefecture: "13"
+    lat: 35.751221
+    lng: 139.709229
+    image_url: "http://itabashi.tenki.ne.jp/itabashi/data_xml/02.jpg"
+    page_url: "http://itabashi.tenki.ne.jp/itabashi/picture_list.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:05:1x→03:09:1x GMT に更新、2回取得で md5 が変化（01,07 を再取得）。7枚とも目視で当日の河川映像。http のみ。画像は小さい(約320x240)。tenki.ne.jp 上のホストだが ページの内容（雨量局の工事告知・板橋区の警報表示）から板橋区の運用と判断、運営主体の明記ページは未確認。利用条件の記載は見つからず license は unknown。手がかりの座標は芝原橋のみ具体的。"
+
+  - id: curated-cm-s-1a4287af
+    name: "板橋区 落合橋（白子川）"
+    operator: "板橋区"
+    category: river
+    prefecture: "13"
+    lat: 35.751221
+    lng: 139.709229
+    image_url: "http://itabashi.tenki.ne.jp/itabashi/data_xml/03.jpg"
+    page_url: "http://itabashi.tenki.ne.jp/itabashi/picture_list.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:05:1x→03:09:1x GMT に更新、2回取得で md5 が変化（01,07 を再取得）。7枚とも目視で当日の河川映像。http のみ。画像は小さい(約320x240)。tenki.ne.jp 上のホストだが ページの内容（雨量局の工事告知・板橋区の警報表示）から板橋区の運用と判断、運営主体の明記ページは未確認。利用条件の記載は見つからず license は unknown。手がかりの座標は芝原橋のみ具体的。"
+
+  - id: curated-cm-s-ec31cc3f
+    name: "板橋区 成増橋（白子川）"
+    operator: "板橋区"
+    category: river
+    prefecture: "13"
+    lat: 35.774216
+    lng: 139.631332
+    image_url: "http://itabashi.tenki.ne.jp/itabashi/data_xml/04.jpg"
+    page_url: "http://itabashi.tenki.ne.jp/itabashi/picture_list.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:05:1x→03:09:1x GMT に更新、2回取得で md5 が変化（01,07 を再取得）。7枚とも目視で当日の河川映像。http のみ。画像は小さい(約320x240)。tenki.ne.jp 上のホストだが ページの内容（雨量局の工事告知・板橋区の警報表示）から板橋区の運用と判断、運営主体の明記ページは未確認。利用条件の記載は見つからず license は unknown。手がかりの座標は芝原橋のみ具体的。"
+
+  - id: curated-cm-s-b1d0f4fd
+    name: "板橋区 板橋（石神井川）"
+    operator: "板橋区"
+    category: river
+    prefecture: "13"
+    lat: 35.747128
+    lng: 139.718079
+    image_url: "http://itabashi.tenki.ne.jp/itabashi/data_xml/05.jpg"
+    page_url: "http://itabashi.tenki.ne.jp/itabashi/picture_list.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:05:1x→03:09:1x GMT に更新、2回取得で md5 が変化（01,07 を再取得）。7枚とも目視で当日の河川映像。http のみ。画像は小さい(約320x240)。tenki.ne.jp 上のホストだが ページの内容（雨量局の工事告知・板橋区の警報表示）から板橋区の運用と判断、運営主体の明記ページは未確認。利用条件の記載は見つからず license は unknown。手がかりの座標は芝原橋のみ具体的。"
+
+  - id: curated-cm-s-09340df4
+    name: "板橋区 平成橋（新河岸川）"
+    operator: "板橋区"
+    category: river
+    prefecture: "13"
+    lat: 35.751221
+    lng: 139.709229
+    image_url: "http://itabashi.tenki.ne.jp/itabashi/data_xml/06.jpg"
+    page_url: "http://itabashi.tenki.ne.jp/itabashi/picture_list.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:05:1x→03:09:1x GMT に更新、2回取得で md5 が変化（01,07 を再取得）。7枚とも目視で当日の河川映像。http のみ。画像は小さい(約320x240)。tenki.ne.jp 上のホストだが ページの内容（雨量局の工事告知・板橋区の警報表示）から板橋区の運用と判断、運営主体の明記ページは未確認。利用条件の記載は見つからず license は unknown。手がかりの座標は芝原橋のみ具体的。"
+
+  - id: curated-cm-s-3d2a0940
+    name: "板橋区 芝原橋（新河岸川）"
+    operator: "板橋区"
+    category: river
+    prefecture: "13"
+    lat: 35.79307
+    lng: 139.65936
+    image_url: "http://itabashi.tenki.ne.jp/itabashi/data_xml/07.jpg"
+    page_url: "http://itabashi.tenki.ne.jp/itabashi/picture_list.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:05:1x→03:09:1x GMT に更新、2回取得で md5 が変化（01,07 を再取得）。7枚とも目視で当日の河川映像。http のみ。画像は小さい(約320x240)。tenki.ne.jp 上のホストだが ページの内容（雨量局の工事告知・板橋区の警報表示）から板橋区の運用と判断、運営主体の明記ページは未確認。利用条件の記載は見つからず license は unknown。手がかりの座標は芝原橋のみ具体的。"
+
+  - id: curated-cm-s-240bd8ad
+    name: "山中湖 グリーンヒルズニューみなみ（富士山）"
+    operator: "グリーンヒルズニューみなみ（株式会社）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.420398
+    lng: 138.909134
+    refresh_sec: 60
+    image_url: "https://www.new-minami.co.jp/getcurrlive.php?w=1280"
+    page_url: "https://www.new-minami.co.jp/livecamera.php"
+    note: "2026-11-22 追加。2026-11-22 2回取得で md5 が変化、画像内日時が現在時刻（Temp.3.8）。w=640/1280 を選べる。画像左下にロゴ入り。手がかりの運営者「山中湖観光協会」は誤り（宿泊施設が運営）。"
+
+  - id: curated-cm-s-eea9cc45
+    name: "斑尾高原スキー場 インフォメーションセンター"
+    operator: "斑尾高原スキー場(斑尾高原ホテル運営)"
+    category: scenic
+    prefecture: "20"
+    lat: 36.843
+    lng: 138.292
+    refresh_sec: 300
+    image_url: "https://madarao.jp/livecam/upload/Live-18.jpg"
+    page_url: "https://www.madarao.jp/ski/live-camera"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が 02:57:23Z、10分後も更新(03:05:23Z)・画像に日時焼き込み。ページ内に載るのはこの1枚のみ(Live-18)。利用約款ページに画像転載の禁止文言は見つからず。更新間隔は数分(8分程度で変化を確認)。"
+
+  - id: curated-cm-s-2f5d67cf
+    name: "雪だるま高原 キューピットバレイ ゲレンデ"
+    operator: "キューピットバレイ(CupidValley)"
+    category: scenic
+    prefecture: "15"
+    lat: 37.054913
+    lng: 138.48485
+    refresh_sec: 60
+    image_url: "https://www.yukidaruma-kogen.com/html/livecam/ch.jpg"
+    page_url: "https://www.yukidaruma-kogen.com/winter/camera.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が 03:02:17Z→03:05:18Z と更新、目視で降雪の現景色・日時焼き込み。ページ内では ?タイムスタンプ付きで60秒ごと再取得。Copyright CupidValley の一般表示のみ(転載禁止文言なし)。冬季営業だが通年稼働している様子。外部の skiday.app 版カメラもあるが未確認。"
+
+  - id: curated-cm-s-40a3707a
+    name: "五条川 広瀬橋"
+    operator: "北名古屋市 危機管理課"
+    category: river
+    prefecture: "23"
+    lat: 35.263704
+    lng: 136.851936
+    refresh_sec: 60
+    image_url: "https://www2.city.kitanagoya.lg.jp/camera/kasen1/a.jpg"
+    page_url: "https://www.city.kitanagoya.lg.jp/kurashi/anzen/1001563/1001623/1001624.html"
+    note: "2026-11-22 追加。2026-11-22 HEAD で Last-Modified が 03:02〜03:03Z(取得直前)、他の4台も同様。市ページに「更新は1分ごと」。市サイトの転載・リンク条件ページは特定できず(license unknown)。座標は要確認(5台共通の手がかり座標を使用)。"
+
+  - id: curated-cm-s-7739c017
+    name: "五条川（北名古屋市）"
+    operator: "北名古屋市 危機管理課"
+    category: river
+    prefecture: "23"
+    lat: 35.263704
+    lng: 136.851936
+    refresh_sec: 60
+    image_url: "https://www2.city.kitanagoya.lg.jp/camera/kasen2/b.jpg"
+    page_url: "https://www.city.kitanagoya.lg.jp/kurashi/anzen/1001563/1001623/1001625.html"
+    note: "2026-11-22 追加。2026-11-22 HEAD で Last-Modified が 03:02〜03:03Z(取得直前)、他の4台も同様。市ページに「更新は1分ごと」。市サイトの転載・リンク条件ページは特定できず(license unknown)。座標は要確認(5台共通の手がかり座標を使用)。"
+
+  - id: curated-cm-s-0a0d56a6
+    name: "鴨田川 鴨田橋"
+    operator: "北名古屋市 危機管理課"
+    category: river
+    prefecture: "23"
+    lat: 35.263704
+    lng: 136.851936
+    refresh_sec: 60
+    image_url: "https://www2.city.kitanagoya.lg.jp/camera/kasen3/c.jpg"
+    page_url: "https://www.city.kitanagoya.lg.jp/kurashi/anzen/1001563/1001623/1001626.html"
+    note: "2026-11-22 追加。2026-11-22 HEAD で Last-Modified が 03:02〜03:03Z(取得直前)、他の4台も同様。市ページに「更新は1分ごと」。市サイトの転載・リンク条件ページは特定できず(license unknown)。座標は要確認(5台共通の手がかり座標を使用)。"
+
+  - id: curated-cm-s-53bc7fcc
+    name: "水場川 長田"
+    operator: "北名古屋市 危機管理課"
+    category: river
+    prefecture: "23"
+    lat: 35.263704
+    lng: 136.851936
+    refresh_sec: 60
+    image_url: "https://www2.city.kitanagoya.lg.jp/camera/kasen4/d.jpg"
+    page_url: "https://www.city.kitanagoya.lg.jp/kurashi/anzen/1001563/1001623/1001627.html"
+    note: "2026-11-22 追加。2026-11-22 HEAD で Last-Modified が 03:02〜03:03Z(取得直前)、他の4台も同様。市ページに「更新は1分ごと」。市サイトの転載・リンク条件ページは特定できず(license unknown)。座標は要確認(5台共通の手がかり座標を使用)。"
+
+  - id: curated-cm-s-1c7767df
+    name: "新川 電車川排水機場"
+    operator: "北名古屋市 危機管理課"
+    category: river
+    prefecture: "23"
+    lat: 35.263704
+    lng: 136.851936
+    refresh_sec: 60
+    image_url: "https://www2.city.kitanagoya.lg.jp/camera/kasen5/e.jpg"
+    page_url: "https://www.city.kitanagoya.lg.jp/kurashi/anzen/1001563/1001623/1001628.html"
+    note: "2026-11-22 追加。2026-11-22 HEAD で Last-Modified が 03:02〜03:03Z(取得直前)、他の4台も同様。市ページに「更新は1分ごと」。市サイトの転載・リンク条件ページは特定できず(license unknown)。座標は要確認(5台共通の手がかり座標を使用)。"
+
+  - id: curated-cm-s-24d314a0
+    name: "コウノトリ但馬空港"
+    operator: "但馬空港ターミナル株式会社"
+    category: other
+    prefecture: "28"
+    lat: 35.516489
+    lng: 134.789461
+    image_url: "http://tajima-airportterm.miemasu.net/SnapshotJPEG?Resolution=640x480"
+    page_url: "https://www.tajima-airport.jp/livecamera/"
+    note: "2026-11-22 追加。2026-11-22 12:05:00 と少し後の取得で md5 が変化、画像内日時も進行。http のみ。公式ページに「連続視聴時間は約1分」の注意あり(ビューア側の制限)。SnapshotJPEG の解像度指定は 640x480 で 640x360 が返る。利用条件は未確認(プライバシーポリシーのみ)。"
+
+  - id: curated-cm-s-d06d4b3a
+    name: "豊岡駅・豊岡市街"
+    operator: "北関西ジャパンネット"
+    category: other
+    prefecture: "28"
+    lat: 35.542636
+    lng: 134.812721
+    image_url: "http://came3.nkansai.ne.jp:81/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://live.kitakansai.tv/toyooka/topl.html"
+    note: "2026-11-22 追加。2026-11-22 2回取得で md5 が変化・目視で豊岡駅の現景色。http のみ・ポート81。同社の福知山(live.kitakansai.tv/fukuchiyama)はメンテ中。ページ/規約の転載条件は未確認。nkansai.ne.jp 本体は403。"
+
+  - id: curated-cm-s-f8bbd7d9
+    name: "突浪川 突浪橋（青島）"
+    operator: "宮崎県県土整備部"
+    category: river
+    prefecture: "45"
+    lat: 31.7926
+    lng: 131.471033
+    refresh_sec: 300
+    image_url: "http://kasen.pref.miyazaki.jp/cameraData/now/now_305.jpg"
+    page_url: "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=305"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified: 2026-11-22 02:47:02 GMT（11:47 JST）、直後のアクセス時刻と2分差。http のみ（https は応答なし）。同システムの静止画カメラ一覧(openCameraMap&no=15)に他にも簡易河川カメラ(now_3xx.jpg)と固定カメラ(Now0xx.jpg)が多数あり、台帳未登録の有望な鉱脈。camera番号 sn=305 以外は未確認。"
+
+  - id: curated-cm-s-48bdff2c
+    name: "園瀬川 一ノ瀬付近"
+    operator: "佐那河内村"
+    category: river
+    prefecture: "36"
+    lat: 33.996587
+    lng: 134.464807
+    refresh_sec: 300
+    image_url: "http://www2.vill.sanagochi.lg.jp/camera/ichinose.jpg"
+    page_url: "http://www2.vill.sanagochi.lg.jp/camera/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified: 2026-11-22 02:49:22 GMT。2地点ある。座標は一ノ瀬の正確な位置が不明で概略。http のみ。11/5・11/8にメンテ停止の告知あり(終了済み)。"
+
+  - id: curated-cm-s-4c068f04
+    name: "佐那河内村 根郷集会所付近"
+    operator: "佐那河内村"
+    category: river
+    prefecture: "36"
+    lat: 33.996587
+    lng: 134.464807
+    refresh_sec: 300
+    image_url: "http://www2.vill.sanagochi.lg.jp/camera/negou.jpg"
+    page_url: "http://www2.vill.sanagochi.lg.jp/camera/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified: 2026-11-22 02:49:37 GMT。同ページの2つ目のカメラ。座標は概略（一ノ瀬と同じ）。必要なら村の地図で精査。"
+
+  - id: curated-cm-s-4f5c391f
+    name: "はまなすクラブ・パークゴルフ場"
+    operator: "NPOはまなすクラブ"
+    category: scenic
+    prefecture: "01"
+    lat: 42.630131
+    lng: 141.513815
+    refresh_sec: 60
+    image_url: "http://hamanasu.syncline.jp/images/licam_50.jpg"
+    page_url: "http://hamanasu.syncline.jp/livecamera-l.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 02:52:36 GMT・画像内時刻11:52:34。http のみ。冬季も稼働(積雪画像)。パークゴルフ場だが景観カメラとして扱える。利用規約ページは未確認(フッターは Copyright のみ)。"
+
+  - id: curated-cm-s-10a79cac
+    name: "糸井の森パークゴルフ場"
+    operator: "NPOはまなすクラブ（糸井の森）"
+    category: scenic
+    prefecture: "01"
+    lat: 42.639091
+    lng: 141.540695
+    refresh_sec: 60
+    image_url: "http://itoinomori.syncline.jp/images/licam_50.jpg"
+    page_url: "http://itoinomori.syncline.jp/livecamera-l.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 02:52:55 GMT。入力にない追加カメラ（同じ運営者のページから発見）。http のみ。"
+
+  - id: curated-cm-s-8ce5be7f
+    name: "秋田八幡平スキー場 ゲレンデ"
+    operator: "秋八高原リゾート合同会社"
+    category: scenic
+    prefecture: "05"
+    lat: 39.97637
+    lng: 140.803862
+    image_url: "http://www.akihachi.jp/new_photo.cgi"
+    page_url: "http://www.akihachi.jp/live.html"
+    note: "2026-11-22 追加。2026-11-22 画像内時刻2026/11/22 11:36:00(取得は11:5x)。「動体検知方式でシャッターが切れる」ため更新間隔は不定（人がいない時は止まる）。http のみ。営業期間外や夜間は古い画像のままの可能性。Last-Modified ヘッダなし。利用規約は未確認。"
+
+  - id: curated-cm-s-c16a158e
+    name: "志賀高原 一の瀬ファミリースキー場"
+    operator: "ホテルホゥルス志賀高原"
+    category: scenic
+    prefecture: "20"
+    lat: 36.736478
+    lng: 138.5162
+    image_url: "http://219.111.32.220/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "https://www.shigakogen.gr.jp/live/index.html"
+    note: "2026-11-22 追加。2026-11-22 約1分あけて2回取得しMD5が変化。画像は積雪のゲレンデ。http のみ。IP 直指定のホテル設置カメラ。冬季運用。ヒントの URL(viewer/live/index.html)はビューア画面。公式ページ上の提供者表記: ホテルホゥルス志賀高原"
+
+  - id: curated-cm-s-f0c94239
+    name: "志賀高原 一の瀬ファミリースキー場正面"
+    operator: "志賀高原リゾート開発"
+    category: scenic
+    prefecture: "20"
+    lat: 36.7355
+    lng: 138.5145
+    image_url: "http://ichinosecamera.aa0.netvolante.jp/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "https://www.shigakogen.gr.jp/live/index.html"
+    note: "2026-11-22 追加。2026-11-22 約1分あけて2回取得しMD5が変化。http のみ。冬季運用。"
+
+  - id: curated-cm-s-e928538d
+    name: "志賀高原 蓮池から東館山・西館山方面"
+    operator: "志賀レークホテル"
+    category: scenic
+    prefecture: "20"
+    lat: 36.7179
+    lng: 138.4909
+    image_url: "http://219.111.32.218:8088/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "https://www.shigakogen.gr.jp/live/index.html"
+    note: "2026-11-22 追加。2026-11-22 1回取得して画像確認。更新は未確認(同型機は変化する)。入力ヒント外の追加発見(n4 と同じ公式一覧ページ)。http・非標準ポート。2回目の取得での変化は未確認"
+
+  - id: curated-cm-s-2897dc75
+    name: "志賀高原 一の瀬タンネの森オコジョスキー場"
+    operator: "ホテルむつみ"
+    category: scenic
+    prefecture: "20"
+    lat: 36.734879
+    lng: 138.512188
+    image_url: "http://219.111.32.223/-wvhttp-01-/GetOneShot?image_size=640x480"
+    page_url: "https://www.shigakogen.gr.jp/live/index.html"
+    note: "2026-11-22 追加。2026-11-22 約1分あけて2回取得しMD5が変化。http のみ。冬季運用。旧 live06.php は消滅、現行は live_camera_ichinose.php(公式一覧経由)"
+
+  - id: curated-cm-s-3c2f1176
+    name: "五条川（春日）"
+    operator: "愛知県建設局河川課"
+    category: river
+    prefecture: "23"
+    lat: 35.237419
+    lng: 136.840851
+    refresh_sec: 600
+    image_url: "https://www.kasen-aichi.jp/Images/CameraImage/132.jpg"
+    page_url: "https://www.kasen-aichi.jp/CameraImage_2_100017.html"
+    note: "2026-11-22 追加。2026-11-22 画像 Last-Modified が当日(02:50GMT)、1920x1080で川面が写る。有望な鉱脈: kasen-aichi.jp には CameraList_1〜5 に計約88台(尾張東部36/尾張西部24/知多9/西三河南部15/西三河北西部4)。Images/CameraImage/<番号>.jpg 形式。台帳に愛知県の kasen-aichi 由来は0件。天白川は2026-03故障で休止の告知あり。他カメラは座標が Station_1.html 等から"
+
+  - id: curated-cm-s-6b9b28f8
+    name: "軽井沢プリンスホテルスキー場 イースト受付前(プリンスゲレンデ)"
+    operator: "SAJ軽井沢スキー学校"
+    category: scenic
+    prefecture: "20"
+    lat: 36.340504
+    lng: 138.64366
+    refresh_sec: 60
+    image_url: "http://www.saj-karuizawa.com/images/live/livecam.jpg"
+    page_url: "http://www.saj-karuizawa.com/live.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日(02:53GMT)、画像 510KB。http のみ。画像と名称の対応はページ記載順からの推定"
+
+  - id: curated-cm-s-c395c84a
+    name: "軽井沢プリンスホテルスキー場 スキーセンター前(第一駐車場側)"
+    operator: "SAJ軽井沢スキー学校"
+    category: scenic
+    prefecture: "20"
+    lat: 36.3403
+    lng: 138.6432
+    refresh_sec: 60
+    image_url: "http://www.saj-karuizawa.com/images/live/livecam2.jpg"
+    page_url: "http://www.saj-karuizawa.com/live.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日(02:53GMT)。http のみ。名称対応は推定"
+
+  - id: curated-cm-s-254cb3ca
+    name: "清川村役場庁舎"
+    operator: "清川村"
+    category: scenic
+    prefecture: "14"
+    lat: 35.48248
+    lng: 139.27646
+    image_url: "http://118.21.50.204/SnapshotJPEG?Resolution=640x480&Quality=Clarity"
+    page_url: "http://www.town.kiyokawa.kanagawa.jp/section/livecamera/camera2.html"
+    note: "2026-11-22 追加。2026-11-22 2回取得しMD5が変化。画像は道の駅付近の街並み。http のみ。ページは Internet Explorer 9 以降非対応と記載。村サイトの利用条件は未確認。ページ側は ImageViewer?...RPeriod=65535 の更新方式。"
+
+  - id: curated-cm-s-ad09c9c5
+    name: "王滝村 八海山"
+    operator: "王滝村"
+    category: scenic
+    prefecture: "20"
+    lat: 35.862834
+    lng: 137.529885
+    image_url: "http://61.25.167.161/SnapshotJPEG?Resolution=640x480"
+    page_url: "http://www.ontake.jp/"
+    note: "2026-11-22 追加。2026-11-22 画像内日時が取得時刻と一致(11:57:22)。ヒントの 202.189.152.161 は接続不可で別物。http のみ。冬季は積雪のゲレンデ(Explorer Park 看板)。村サイトに利用条件ページは未確認"
+
+  - id: curated-cm-s-fff0c7ec
+    name: "王滝村 御岳湖南岸"
+    operator: "王滝村"
+    category: scenic
+    prefecture: "20"
+    lat: 35.848492
+    lng: 137.546509
+    image_url: "http://61.25.167.162/SnapshotJPEG?Resolution=640x480&Quality=Clarity"
+    page_url: "http://www.ontake.jp/"
+    note: "2026-11-22 追加。2026-11-22 画像内日時 11:57:00。入力外の追加発見。http のみ。③田の原(61.25.167.160)は接続タイムアウトで除外"
+
+  - id: curated-cm-s-d240c2e2
+    name: "東松山カントリークラブ"
+    operator: "東松山カントリークラブ"
+    category: scenic
+    prefecture: "11"
+    lat: 36.069449
+    lng: 139.382598
+    image_url: "http://hmcc.aa1.netvolante.jp:60001/SnapshotJPEG?Resolution=640x480&Quality=Clarity"
+    page_url: "https://www.hmcc.co.jp/"
+    note: "2026-11-22 追加。2026-11-22 3秒あけて2回取得しMD5が変化。http・ポート60001。ヒントの IP 直指定はホスト名 hmcc.aa1.netvolante.jp に置換(IP 側は接続不可)。ゴルフ場コースの映像。利用条件は未確認"
+
+  - id: curated-cm-s-0a1b5632
+    name: "さかえ倶楽部スキー場 ゲレンデ"
+    operator: "さかえ倶楽部スキー場(栄村)"
+    category: scenic
+    prefecture: "20"
+    lat: 36.995747
+    lng: 138.564936
+    image_url: "http://220.254.144.208/SnapshotJPEG?Resolution=640x480&Quality=Clarity"
+    page_url: "https://sakaeclub.jp/"
+    note: "2026-11-22 追加。2026-11-22 約6分あけて2回取得しMD5が変化。画像内に日時表示。http のみ。冬季運用。リフトの映る画像。運営法人名は公式サイトで未確認(さかえ倶楽部スキー場とした)"
+
+  - id: curated-cm-s-df1f4337
+    name: "飯尾川(飯尾川橋近辺)"
+    operator: "吉野川市"
+    category: river
+    prefecture: "36"
+    lat: 34.052441
+    lng: 134.354538
+    refresh_sec: 600
+    image_url: "http://camera.city.yoshinogawa.lg.jp/image/cam-01.jpg"
+    page_url: "http://camera.city.yoshinogawa.lg.jp/1.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日。6分後に再確認して更新あり。http のみ。江川(cam-02)は断続的に500、みかわ橋(03)・川田川(08)・瀬詰橋(09)は500で取得不可のため除外(復旧後に再確認)。台帳に camera.city.yoshinogawa は0件"
+
+  - id: curated-cm-s-46934c2f
+    name: "桑村川(川島図書館近辺)"
+    operator: "吉野川市"
+    category: river
+    prefecture: "36"
+    lat: 34.055756
+    lng: 134.313477
+    refresh_sec: 600
+    image_url: "http://camera.city.yoshinogawa.lg.jp/image/cam-04.jpg"
+    page_url: "http://camera.city.yoshinogawa.lg.jp/4.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日。6分後に再確認して更新あり。http のみ。江川(cam-02)は断続的に500、みかわ橋(03)・川田川(08)・瀬詰橋(09)は500で取得不可のため除外(復旧後に再確認)。台帳に camera.city.yoshinogawa は0件"
+
+  - id: curated-cm-s-a0c23214
+    name: "学島川(学駅東側)"
+    operator: "吉野川市"
+    category: river
+    prefecture: "36"
+    lat: 34.05505
+    lng: 134.283844
+    refresh_sec: 600
+    image_url: "http://camera.city.yoshinogawa.lg.jp/image/cam-05.jpg"
+    page_url: "http://camera.city.yoshinogawa.lg.jp/5.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日。6分後に再確認して更新あり。http のみ。江川(cam-02)は断続的に500、みかわ橋(03)・川田川(08)・瀬詰橋(09)は500で取得不可のため除外(復旧後に再確認)。台帳に camera.city.yoshinogawa は0件"
+
+  - id: curated-cm-s-0624fa53
+    name: "ほたる川(山瀬小学校東側)"
+    operator: "吉野川市"
+    category: river
+    prefecture: "36"
+    lat: 34.041107
+    lng: 134.210281
+    refresh_sec: 600
+    image_url: "http://camera.city.yoshinogawa.lg.jp/image/cam-06.jpg"
+    page_url: "http://camera.city.yoshinogawa.lg.jp/6.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が当日。6分後に再確認して更新あり。http のみ。江川(cam-02)は断続的に500、みかわ橋(03)・川田川(08)・瀬詰橋(09)は500で取得不可のため除外(復旧後に再確認)。台帳に camera.city.yoshinogawa は0件"
+
+  - id: curated-cm-s-1fca1ab0
+    name: "スプリングバレー泉高原スキー場"
+    operator: "スプリングバレー仙台泉"
+    category: scenic
+    prefecture: "04"
+    lat: 38.418773
+    lng: 140.723035
+    image_url: "https://www.springvalley.co.jp/cameradata/livecamera01.php"
+    page_url: "https://www.springvalley.co.jp/winter"
+    note: "2026-11-22 追加。2026-11-22 約1分あけて2回取得しMD5が変化。640x480。PHP が画像を返す方式(Cloudflare 配下)。冬季運用。利用条件は未確認。ヒントの運営者(宮城県)は誤り"
+
+  - id: curated-cm-s-8b624718
+    name: "平野サーフビーチ"
+    operator: "四万十市"
+    category: coast
+    prefecture: "39"
+    lat: 32.96056
+    lng: 132.994612
+    image_url: "http://210.161.63.243/SnapshotJPEG?Resolution=640x480&Quality=Clarity"
+    page_url: "https://www.city.shimanto.lg.jp/site/scp/1741.html"
+    note: "2026-11-22 追加。2026-11-22 画像内日時 12:05:31、2回取得でMD5が変化。過去の見送り記録(next5_39.yaml)では「静止画エンドポイント未発見」だったが、SnapshotJPEG で取得可能と判明。http のみ。四万十市の著作権・リンクのページは未確認。ヒントの運営者(中村河川国道事務所)は誤り"
+
+  - id: curated-cm-s-5c84e5ba
+    name: "栂池自然園 みずばしょう湿原と白馬三山"
+    operator: "栂池自然園（小谷村）"
+    category: scenic
+    prefecture: "20"
+    lat: 36.772622
+    lng: 137.814423
+    image_url: "https://skiday.app/emHjDgWUUgt0bg1H7v0z/865036047347206/images/latest"
+    page_url: "https://sizenen.otarimura.com/#camera-pic"
+    note: "2026-11-22 追加。2026-11-22 302先 JPEG の Last-Modified 02:51GMT、EXIF 2026:11:22 11:50 (JST)、1280x960。台帳に同カメラ未登録（skiday.app 経由の別カメラは登録済み）。禁止文言は両サイトで見つからず（未確認）。2026グリーンシーズン終了の告知あり、冬季は画像更新が止まる可能性あり。ledger 内の栂池の他カメラとは別地点。"
+
+  - id: curated-cm-s-efbcc405
+    name: "ひるぜんベアバレースキー場 ゲレンデ"
+    operator: "真庭市（ひるぜんベアバレースキー場公式HPに掲載）"
+    category: scenic
+    prefecture: "33"
+    lat: 35.26117
+    lng: 133.596148
+    image_url: "https://www.city.maniwa.lg.jp/live/images/bearvalley/image2.jpg"
+    page_url: "http://ww51.tiki.ne.jp/~bear-ski/bearvalley-live_c.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が取得時刻、65秒あけて2回取得し内容が変化。ページに禁止文言は見つからず（未確認）。冬季営業（12月中旬〜3月上旬）。"
+
+  - id: curated-cm-s-257c8f60
+    name: "付知川 島田橋上流"
+    operator: "恵那漁業協同組合"
+    category: river
+    prefecture: "21"
+    lat: 35.612202
+    lng: 137.460291
+    refresh_sec: 600
+    image_url: "https://ena-fs.jp/photo.jpg"
+    page_url: "https://ena-fs.jp/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 02:53GMT(=11:53JST)、65秒あけて2回取得し内容が変化。ページに「岐阜県川の防災情報【ライブカメラ】」とあり、県のカメラ画像を漁協が転載している可能性。元の県カメラと重複しないか人の判断が必要（台帳の付知川付知とは別地点）。禁止文言は見つからず（未確認）。"
+
+  - id: curated-cm-s-6534f66f
+    name: "吉野川 徳島市川内町"
+    operator: "チルダアットマーク有限会社"
+    category: river
+    prefecture: "36"
+    lat: 34.08618
+    lng: 134.594929
+    image_url: "http://nobita.bf1.jp/-wvhttp-01-/GetOneShot?image_size=640x480&frame_count=1&frame_interval=0"
+    page_url: "http://childa.com/live/live.html"
+    note: "2026-11-22 追加。2026-11-22 12時台に 65秒あけて2回取得し MD5 が変化、JPEG 640x480 を目視確認。http のみ（https なし）。動作時間は季節で変わる（秋は 06:30〜17:30 と告知）ため夜間は停止。URL の -wvhttp-01- は Canon VB の標準スナップ API。禁止文言は見つからず（未確認）。入力のリンク先 live.html（childa.com）は 404 だが /live/live.html が正しい案内ページ。"
+
+  - id: curated-cm-s-b41d3844
+    name: "エーデルワイススキーリゾート ゲレンデ"
+    operator: "エーデルワイススキーリゾート"
+    category: scenic
+    prefecture: "09"
+    lat: 36.92343
+    lng: 139.74937
+    refresh_sec: 180
+    image_url: "https://edelsnow.com/livecamera/now.jpg"
+    page_url: "https://edelsnow.com/live_camera.php"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:00GMT(=12:00JST)、65秒あけて2回取得し内容が変化。同ページに 2枚目の画像 camesan06.from.tv/omb3201/secure/data-live/live.jpg があるが更新が数時間前（Last-Modified 07:20JST）で、採用は now.jpg のみ。Copyright 表示のみで禁止文言なし（License unknown）。冬季営業。"
+
+  - id: curated-cm-s-5bca2cf6
+    name: "ノルンみなかみ ゲレンデ"
+    operator: "ノルンみなかみ（ノルン水上スキー場）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.74341
+    lng: 138.942442
+    image_url: "http://www.norn.co.jp/home/tmp/norn.jpg"
+    page_url: "http://www.norn.co.jp/livecamera/index.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 03:00GMT(=12:00JST)、65秒あけて2回取得し内容が変化。http のみ。ページ内の YouTube/Ustream 埋め込みは終了・非公開で不採用。運営法人名は未確認。禁止文言は見つからず（未確認）。冬季営業。"
+
+  - id: curated-cm-s-592488f8
+    name: "白川 柏本橋（東白川村五加下野）"
+    operator: "東白川村役場 総務課"
+    category: river
+    prefecture: "21"
+    lat: 35.622864
+    lng: 137.294053
+    refresh_sec: 300
+    image_url: "http://www.50913.ne.jp/kasencamera/shimono.jpg"
+    page_url: "http://www.50913.ne.jp/kasencamera/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が取得の1〜3分前。ページに「5分置き新しい画像になります」。http のみ(https 不可を未確認)。利用条件・著作権ページは未確認(ページ上に禁止文言なし)。台帳に同ホスト・同運営者なし。"
+
+  - id: curated-cm-s-1c27c1ea
+    name: "白川 平成橋（東白川村神土平）"
+    operator: "東白川村役場 総務課"
+    category: river
+    prefecture: "21"
+    lat: 35.644533
+    lng: 137.328009
+    refresh_sec: 300
+    image_url: "http://www.50913.ne.jp/kasencamera/taira.jpg"
+    page_url: "http://www.50913.ne.jp/kasencamera/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が取得の1〜3分前。ページに「5分置き新しい画像になります」。http のみ(https 不可を未確認)。利用条件・著作権ページは未確認(ページ上に禁止文言なし)。台帳に同ホスト・同運営者なし。"
+
+  - id: curated-cm-s-0de2b86d
+    name: "白川・大明神川合流地点（東白川村越原日向）"
+    operator: "東白川村役場 総務課"
+    category: river
+    prefecture: "21"
+    lat: 35.669699
+    lng: 137.362622
+    refresh_sec: 300
+    image_url: "http://www.50913.ne.jp/kasencamera/hiyomo.jpg"
+    page_url: "http://www.50913.ne.jp/kasencamera/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が取得の1〜3分前。ページに「5分置き新しい画像になります」。http のみ(https 不可を未確認)。利用条件・著作権ページは未確認(ページ上に禁止文言なし)。台帳に同ホスト・同運営者なし。"
+
+  - id: curated-cm-s-dd049c43
+    name: "釜臥山展望台"
+    operator: "むつ市 商工観光課（観光振興担当）"
+    category: scenic
+    prefecture: "02"
+    lat: 41.282139
+    lng: 141.120216
+    refresh_sec: 60
+    image_url: "http://livecamera.e-shimokita.jp/mutsu/image.jpg"
+    page_url: "http://www.e-shimokita.jp/livecamera.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 取得の約1分前・61秒あけ2回取得でMD5が変化。http のみ(640x360)。「展望台の冬季閉鎖中は閲覧できません」「業務の都合で更新を中断する場合あり」との記載。利用条件ページは未確認。"
+
+  - id: curated-cm-s-fad4da59
+    name: "たんばらスキーパーク ゲレンデ"
+    operator: "東急リゾーツ＆ステイ株式会社（たんばらスキーパーク）"
+    category: scenic
+    prefecture: "10"
+    lat: 36.77857
+    lng: 139.07262
+    refresh_sec: 600
+    image_url: "https://skiday.app/XqmtM84yBd8LdRd7h5My/869223046914956/images/latest"
+    page_url: "https://www.tambara.co.jp/winter/livecamera/"
+    note: "2026-11-22 追加。2026-11-22 images/latest の302先ファイル名が 20261122115123(取得直前)。ページ全体に noindex,nofollow メタあり。フッタは「Copyright Tokyu Resorts & Stays Co., Ltd. All rights reserved.」のみ(license=unknown)。冬季営業期間外は更新が止まる可能性。"
+
+  - id: curated-cm-s-7e060bab
+    name: "根室中標津空港"
+    operator: "根室中標津空港ターミナルビル株式会社"
+    category: other
+    prefecture: "01"
+    lat: 43.573124
+    lng: 144.956055
+    refresh_sec: 60
+    image_url: "http://shbairport.aa1.netvolante.jp:93/jpg/1/image.jpg"
+    page_url: "http://www.nakashibetsu-airport.jp/webcam/"
+    note: "2026-11-22 追加。2026-11-22 3秒あけ2回取得でMD5が変化。ページ側JSも同URLを0.5秒毎に更新。http・ポート93。「毎日朝7時〜夜9時のみご覧いただけます」（夜間は停止）。利用条件ページは未確認。netvolante(NetworkCamera)系。"
+
+  - id: curated-cm-s-d0264bdd
+    name: "山中湖畔（旭日丘）"
+    operator: "旭日丘観光"
+    category: scenic
+    prefecture: "19"
+    lat: 35.407946
+    lng: 138.874394
+    refresh_sec: 60
+    image_url: "https://www.asakan.gr.jp/liveimage.php"
+    page_url: "https://www.asakan.gr.jp/livecam.php"
+    note: "2026-11-22 追加。2026-11-22 65秒あけ2回取得でMD5変化(640x480)。フッタ「Copyright ・Asahigaoka Kanko. All Rights Reserved.」のみ。入力の ?mode=motion は現在 Smarty エラー、/livecam.php が正。「機材・回線状況によっては正常に表示されない場合」の注記あり。"
+
+  - id: curated-cm-s-0791acd6
+    name: "ジュネス栗駒スキー場"
+    operator: "ジュネス栗駒スキー場"
+    category: scenic
+    prefecture: "05"
+    lat: 39.159208
+    lng: 140.726507
+    refresh_sec: 60
+    image_url: "http://115.179.110.55/cgi-bin/camera"
+    page_url: "http://www.jeunesse-ski.com/08_live/index.html"
+    note: "2026-11-22 追加。2026-11-22 20秒あけ2回取得でMD5が変化(640x480)。IPアドレス直・http のみ。カメラ機器の Date ヘッダは時計が狂っている。冬季(スキー場営業期間)のみの可能性。フッタ著作権は JEUNESSE-SKI のみ。"
+
+  - id: curated-cm-s-726dcd2e
+    name: "別府扇山ゴルフ倶楽部"
+    operator: "別府扇山ゴルフ倶楽部"
+    category: scenic
+    prefecture: "44"
+    lat: 33.304887
+    lng: 131.452924
+    refresh_sec: 60
+    image_url: "http://ogiyama-golf.miemasu.net/SnapshotJPEG?Resolution=640x480&Quality=Standard"
+    page_url: "https://www.ogiyama-golf.net/"
+    note: "2026-11-22 追加。2026-11-22 5秒あけ2回取得でMD5が変化(640x480)。http のみ。公式サイトのライブカメラボタンのリンク先は CgiStart ビューア(PTZ可)。静止画 URL は Panasonic 標準の SnapshotJPEG(自分で推定、取得は確認済み)。利用条件ページは未確認。"
+
+  - id: curated-cm-s-d2287d14
+    name: "みやぎ蔵王えぼしリゾート ゴンドラ乗り場"
+    operator: "みやぎ蔵王えぼしリゾート"
+    category: scenic
+    prefecture: "04"
+    lat: 38.125988
+    lng: 140.528468
+    refresh_sec: 600
+    image_url: "https://eboshi.co.jp/img_cam/img/live01.jpg"
+    page_url: "https://eboshi.co.jp/winter/condition/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 02:49〜03:02 GMT(取得は03:02頃)。入力はトップのみで、カメラは /winter/condition/ に3台。冬季営業(11月下旬〜)向けの可能性。利用条件ページは未確認(ページ上に禁止文言なし)。"
+
+  - id: curated-cm-s-0e4c65cd
+    name: "みやぎ蔵王えぼしリゾート 高原ゲレンデ"
+    operator: "みやぎ蔵王えぼしリゾート"
+    category: scenic
+    prefecture: "04"
+    lat: 38.125988
+    lng: 140.528468
+    refresh_sec: 600
+    image_url: "https://eboshi.co.jp/img_cam/img/live02.jpg"
+    page_url: "https://eboshi.co.jp/winter/condition/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 02:49〜03:02 GMT(取得は03:02頃)。入力はトップのみで、カメラは /winter/condition/ に3台。冬季営業(11月下旬〜)向けの可能性。利用条件ページは未確認(ページ上に禁止文言なし)。"
+
+  - id: curated-cm-s-68170825
+    name: "みやぎ蔵王えぼしリゾート 石子ゲレンデ"
+    operator: "みやぎ蔵王えぼしリゾート"
+    category: scenic
+    prefecture: "04"
+    lat: 38.125988
+    lng: 140.528468
+    refresh_sec: 600
+    image_url: "https://eboshi.co.jp/img_cam/img/live03.jpg"
+    page_url: "https://eboshi.co.jp/winter/condition/"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified 02:49〜03:02 GMT(取得は03:02頃)。入力はトップのみで、カメラは /winter/condition/ に3台。冬季営業(11月下旬〜)向けの可能性。利用条件ページは未確認(ページ上に禁止文言なし)。"
+
+  - id: curated-cm-s-8ab6ae57
+    name: "秋野川（下市町）"
+    operator: "下市町"
+    category: river
+    prefecture: "29"
+    lat: 34.385128
+    lng: 135.798027
+    refresh_sec: 60
+    image_url: "http://riversrv.town.shimoichi.nara.jp/cam/webcam02.jpg"
+    page_url: "https://www.town.shimoichi.lg.jp/0000000230.html"
+    note: "2026-11-22 追加。2026-11-22 30秒あけ2回取得でMD5変化。http のみ・320x240。公式がリンクするのは cam02(秋野川)のみ。cam01 は Last-Modified 2025-08 で停止、cam03(山並みの眺望)・cam04(道路・河川)は動作中だが町ページ未掲載のため除外。Last-Modified がリクエスト時刻でサーバー時計も数時間ずれているため鮮度は内容変化で判断。町の運用管理規約は未確認。"
+
+  - id: curated-cm-s-79f360f3
+    name: "峠の茶屋駐車場（那須岳）"
+    operator: "那須町"
+    category: scenic
+    prefecture: "09"
+    lat: 37.12815
+    lng: 139.975151
+    refresh_sec: 60
+    image_url: "http://118.21.97.251/SnapshotJPEG?Resolution=640x480&Quality=Standard"
+    page_url: "http://www.town.nasu.lg.jp/0040/info-0000000964-1.html"
+    note: "2026-11-22 追加。2026-11-22 20秒あけ2回取得でMD5が変化(640x360)。IPアドレス直・http のみ。町のフレーム内は ImageViewer?Mode=Motion(10秒間隔)。静止画 URL(SnapshotJPEG)は自分で推定、取得は確認済み。フッタは「Copyright © Nasu Town. All Rights Reserved.」のみ。近傍に台帳 tochigi-road-051 あり(別カメラ)。"
+
+  - id: curated-still-fukushima-road-0001
+    name: "国道121号 南会津町 道の駅たじま"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.08625
+    lng: 139.728369
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam001m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0002
+    name: "国道352号 南会津町 八総"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.063042
+    lng: 139.630801
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam002m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0003
+    name: "国道289号 南会津町 駒止"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.183713
+    lng: 139.62345
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam003m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0004
+    name: "国道400号 下郷町 戸赤"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.25479
+    lng: 139.742381
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam004m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0005
+    name: "県道下郷会津本郷線 下郷町 氷玉トンネル南側坑口"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.358972
+    lng: 139.871403
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam005m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0006
+    name: "国道118号 下郷町 小沼崎"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.322427
+    lng: 139.909167
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam006m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0007
+    name: "国道118号 下郷町 枝松 蝉トンネル下郷坑口"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.288662
+    lng: 139.966904
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam007m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-0008
+    name: "国道352号 檜枝岐村 葭ヶ平"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.059528
+    lng: 139.410972
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam008m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0009
+    name: "国道252号 只見町 叶津"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.373707
+    lng: 139.276917
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam009m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-0101
+    name: "国道121号 下郷町 湯野上橋"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.304607
+    lng: 139.890289
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam101m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-0103
+    name: "県道下郷会津本郷線 会津美里町 氷玉トンネル北側坑口"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.364771
+    lng: 139.878756
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam103m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0105
+    name: "国道118号 下郷町 小沼崎トンネル"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.334538
+    lng: 139.897903
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam105m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-0301
+    name: "国道289号 甲子トンネル 下郷側坑口"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.204123
+    lng: 139.946409
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam301m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0302
+    name: "国道289号 甲子トンネル 西郷側坑口"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.179798
+    lng: 139.988842
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam302m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-2671
+    name: "国道252号 只見町寄岩"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.389958
+    lng: 139.352623
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2671m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-2661
+    name: "国道289号 只見町明和"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.296295
+    lng: 139.44017
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2661m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2651
+    name: "国道289号 南会津町東"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.190137
+    lng: 139.588842
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2651m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-0421
+    name: "只見川 只見町 柴倉橋"
+    operator: "福島県"
+    category: river
+    prefecture: "07"
+    lat: 37.345173
+    lng: 139.313248
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam421m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-0441
+    name: "只見川 只見町 伊南川合流地点"
+    operator: "福島県"
+    category: river
+    prefecture: "07"
+    lat: 37.346673
+    lng: 139.314748
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam441m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2811
+    name: "戸石川 下郷町戸赤"
+    operator: "福島県"
+    category: river
+    prefecture: "07"
+    lat: 37.262207
+    lng: 139.745972
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2811m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2821
+    name: "阿賀川 南会津町丹藤"
+    operator: "福島県"
+    category: river
+    prefecture: "07"
+    lat: 37.217735
+    lng: 139.773499
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2821m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2751
+    name: "湯ノ岐川 南会津町湯ノ花"
+    operator: "福島県"
+    category: river
+    prefecture: "07"
+    lat: 37.030689
+    lng: 139.557999
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2751m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2761
+    name: "西根川 南会津町木賊温泉"
+    operator: "福島県"
+    category: river
+    prefecture: "07"
+    lat: 37.052734
+    lng: 139.480438
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2761m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2771
+    name: "伊南川 檜枝岐村前川橋"
+    operator: "福島県"
+    category: river
+    prefecture: "07"
+    lat: 37.024166
+    lng: 139.388962
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2771m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2731
+    name: "下郷町 南倉沢1"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.204998
+    lng: 139.936386
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2731m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2741
+    name: "下郷町 南倉沢2"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.206498
+    lng: 139.937886
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2741m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2831
+    name: "下郷町 大内宿"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.334476
+    lng: 139.857742
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2831m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2962
+    name: "下郷町 中山峠"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.298813
+    lng: 139.835388
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2961m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-4011
+    name: "国道352号 檜枝岐村見通"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.035046
+    lng: 139.399338
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam4011m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-4041
+    name: "国道400号 下郷町戸赤（舟鼻峠）"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.263707
+    lng: 139.747472
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam4041m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-4031
+    name: "国道401号 南会津町界"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.266842
+    lng: 139.540375
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam4031m.jpg"
+    page_url: "https://fukushima-road.net/maizu/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（南会津建設事務所）。座標は大字の代表点（概略）"
+
+  - id: curated-still-fukushima-road-2111
+    name: "国道114号 浪江町 津島"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.56636
+    lng: 140.743392
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2111m.jpg"
+    page_url: "https://fukushima-road.net/tomioka/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（富岡土木事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-2121
+    name: "県道浪江三春線 葛尾村 野川"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.51067
+    lng: 140.704819
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2121m.jpg"
+    page_url: "https://fukushima-road.net/tomioka/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（富岡土木事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-2141
+    name: "県道富岡大越線 川内村 上川内"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.382489
+    lng: 140.721373
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2141m.jpg"
+    page_url: "https://fukushima-road.net/tomioka/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（富岡土木事務所）。座標は概略"
+
+  - id: curated-still-fukushima-road-2131
+    name: "国道288号 大熊町 野上"
+    operator: "福島県"
+    category: road
+    prefecture: "07"
+    lat: 37.403485
+    lng: 140.869048
+    refresh_sec: 600
+    image_url: "https://absv2.f-road.info/cs1/ms/cam2131m.jpg"
+    page_url: "https://fukushima-road.net/tomioka/"
+    note: "2026-11-22 追加。2026-11-22 表示ページの画像更新日時が当日。福島県 道路画像情報（富岡土木事務所）。座標は概略"
+
+  - id: curated-cm-w-9142adb8
+    name: "三好市 黒沢湿原"
+    operator: "三好市"
+    category: scenic
+    prefecture: "36"
+    lat: 33.977406
+    lng: 133.832849
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=6&id=438"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=6&id=438"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=6&id=438"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-kuro1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-8510dd30
+    name: "西祖谷旧料金所（県道45号・祖谷トンネル観光カメラ）"
+    operator: "三好市"
+    category: road
+    prefecture: "36"
+    lat: 33.8844
+    lng: 133.786906
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=23&id=491&m=start&vs=3"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=23&id=491&m=start&vs=3"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=23&id=491&m=start&vs=3"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-gate1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-14d67c02
+    name: "三好市 大歩危橋"
+    operator: "三好市"
+    category: river
+    prefecture: "36"
+    lat: 33.87569
+    lng: 133.767126
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=20&id=488"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=20&id=488"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=20&id=488"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-ohbokeba1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。防災カメラ 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-7c9b9fae
+    name: "三好市 井ノ内谷川"
+    operator: "三好市"
+    category: river
+    prefecture: "36"
+    lat: 34.01178
+    lng: 133.879994
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=21&id=489"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=21&id=489"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=21&id=489"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-iuchisu1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。防災カメラ 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-4748cf4d
+    name: "祖谷トンネル（防災カメラ）"
+    operator: "三好市"
+    category: road
+    prefecture: "36"
+    lat: 33.883627
+    lng: 133.788563
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=18&id=444"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=18&id=444"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=18&id=444"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-iyat1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。防災カメラ 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-6578ab79
+    name: "三好市 健康とふれあいの森"
+    operator: "三好市"
+    category: scenic
+    prefecture: "36"
+    lat: 34.058967
+    lng: 133.969191
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=5&id=435"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=5&id=435"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=5&id=435"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-fure1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-d123f584
+    name: "井川スキー場 腕山山頂"
+    operator: "三好市"
+    category: scenic
+    prefecture: "36"
+    lat: 33.963357
+    lng: 133.884471
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=2&id=436"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=2&id=436"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=2&id=436"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-kana2.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-aa7b7b65
+    name: "井川スキー場 腕山ふもと"
+    operator: "三好市"
+    category: scenic
+    prefecture: "36"
+    lat: 33.963196
+    lng: 133.884889
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=1&id=436"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=1&id=436"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=1&id=436"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-kana1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-8c6f8990
+    name: "三好市 箸蔵寺 本殿"
+    operator: "三好市"
+    category: scenic
+    prefecture: "36"
+    lat: 34.047822
+    lng: 133.840951
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=9&id=453"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=9&id=453"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=9&id=453"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-hasi2.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-364ef75e
+    name: "祖谷のかずら橋"
+    operator: "三好市"
+    category: scenic
+    prefecture: "36"
+    lat: 33.875315
+    lng: 133.835494
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=17&id=441"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=17&id=441"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=17&id=441"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-kazu1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-964db40e
+    name: "奥祖谷二重かずら橋"
+    operator: "三好市"
+    category: scenic
+    prefecture: "36"
+    lat: 33.853501
+    lng: 134.045728
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=16&id=439"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=16&id=439"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv.php?lcid=16&id=439"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-okkz1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-bd23c661
+    name: "三好市 塩塚高原"
+    operator: "三好市"
+    category: scenic
+    prefecture: "36"
+    lat: 33.935816
+    lng: 133.680917
+    feed_type: web_page
+    feed_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=11&id=446"
+    image_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=11&id=446"
+    page_url: "https://mgis.city-miyoshi.jp/mgis/mgs/lc_jv2.php?lcid=11&id=446"
+    note: "2026-11-22 追加。2026-11-22 ビューアHTMLから came-sioz1.city-miyoshi.jp/SnapshotJPEG を特定し、65秒あけて2回取得して内容が変化。画像内の日時表示もその時刻(Nov/22/2026 11:50)。運営は三好市（防災カメラ分は防災用）。サイト上の利用条件ページは市サイトが接続不可で未確認。ビューアは EUC-JP。 親ページ miyoshinavi.jp/15livecamera/ は Cloudflare で取得不可。"
+
+  - id: curated-cm-w-762b09c8
+    name: "鶴の舞橋（津軽富士見湖）"
+    operator: "鶴田町（メデタイ・ツルタ＝鶴田町観光サイト）"
+    category: scenic
+    prefecture: "02"
+    lat: 40.751474
+    lng: 140.373952
+    feed_type: web_page
+    feed_url: "http://www.medetai-tsuruta.jp/live-camera.html"
+    image_url: "http://www.medetai-tsuruta.jp/live-camera.html"
+    page_url: "http://www.medetai-tsuruta.jp/live-camera.html"
+    note: "2026-11-22 追加。2026-11-22 mjpg/video.mjpg が8秒で約5MBを返し、取得した1フレームは当日の鶴の舞橋。同ホストの jpg/image.jpg も2回の取得で内容が変化。静止画の jpg/image.jpg(http) は取得可能だが robots Disallow のため非推奨。ページのメンテナンス文言はHTMLコメント内で現在は表示されていない。リンクページの条件は未読。"
+
+  - id: curated-cm-w-b3ee6df3
+    name: "五木村 防災カメラ1 頭地（小八重橋付近）"
+    operator: "五木村"
+    category: road
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/1_touji_koyaehasi.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/1_touji_koyaehasi.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/1_touji_koyaehasi.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam1.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-eab9e9a6
+    name: "五木村 防災カメラ2 小鶴"
+    operator: "五木村"
+    category: road
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/2_koduru.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/2_koduru.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/2_koduru.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam2.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-8cac2014
+    name: "五木村 防災カメラ3 宮園"
+    operator: "五木村"
+    category: road
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/3_miyazono.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/3_miyazono.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/3_miyazono.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam3.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-dd7096aa
+    name: "五木村 防災カメラ4 竹の川"
+    operator: "五木村"
+    category: road
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/4_takenokawa.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/4_takenokawa.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/4_takenokawa.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam4.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-73221fb6
+    name: "五木村 防災カメラ5 大通（八代側）"
+    operator: "五木村"
+    category: road
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/5_ootoori_yatusiro.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/5_ootoori_yatusiro.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/5_ootoori_yatusiro.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam5.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-6a473263
+    name: "五木村 防災カメラ6 大通（五木側）"
+    operator: "五木村"
+    category: road
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/6_ootoori_ituki.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/6_ootoori_ituki.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/6_ootoori_ituki.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam6.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-c6fc9e58
+    name: "五木村 防災カメラ7 元井谷"
+    operator: "五木村"
+    category: road
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/7_motoidani.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/7_motoidani.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/7_motoidani.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam7.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-3f18f6e9
+    name: "五木村 防災カメラ9 頭地（坊主山付近）"
+    operator: "五木村"
+    category: road
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/9_touji_bouzuyama.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/9_touji_bouzuyama.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/9_touji_bouzuyama.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam9.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-0e922e5f
+    name: "五木村 防災カメラ10 田口砂防堰堤"
+    operator: "五木村"
+    category: river
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/10_kokudo_taguti.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/10_kokudo_taguti.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/10_kokudo_taguti.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam10.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-ac8ea067
+    name: "五木村 防災カメラ11 田口第２砂防堰堤"
+    operator: "五木村"
+    category: river
+    prefecture: "43"
+    lat: 32.399282
+    lng: 130.825151
+    feed_type: web_page
+    feed_url: "https://www.vill.itsuki.lg.jp/bousai_camera/11_kokudo_taguti2.html"
+    image_url: "https://www.vill.itsuki.lg.jp/bousai_camera/11_kokudo_taguti2.html"
+    page_url: "https://www.vill.itsuki.lg.jp/bousai_camera/11_kokudo_taguti2.html"
+    note: "2026-11-22 追加。2026-11-22 dynamic/camera/?image=cam11.jpg の base64 を復号して JPEG(640x360)を確認、画像内日時が取得時刻。公式の防災カメラマップ https://www.vill.itsuki.lg.jp/bousai_camera/index.html から各カメラへ。ページは5分で自動リロード。利用条件ページは未確認。手がかりの「県道25号・川辺川」は10台の一部。座標は要個別調整。"
+
+  - id: curated-cm-w-4f2911cb
+    name: "諏訪市 霧ヶ峰"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.097075
+    lng: 138.168757
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=1"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=1"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=1"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 霧ヶ峰道路：主要地方道諏訪・白樺湖・小諸線方向：霧ケ峰スキー場 → 車山方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=1... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(l"
+
+  - id: curated-cm-w-13795511
+    name: "茅野市 北山"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.085676
+    lng: 138.222837
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=2"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=2"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=2"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 茅野市北山道路：国道152号線方向：白樺湖方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=2... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が接続不可で"
+
+  - id: curated-cm-w-6ddc394f
+    name: "茅野市 鬼場"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.003239
+    lng: 138.174129
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=3"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=3"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=3"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 茅野市米沢道路：国道152号線方向：米沢 → 茅野駅方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=3... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が"
+
+  - id: curated-cm-w-ec1581d8
+    name: "茅野市 本町東"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.000229
+    lng: 138.167607
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=4"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=4"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=4"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 茅野市本町東道路：国道152号線方向：茅野市役所 → 北山方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=4... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.j"
+
+  - id: curated-cm-w-df4286f8
+    name: "茅野市 運動公園"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 35.991382
+    lng: 138.165728
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=5"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=5"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=5"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 茅野市運動公園方向：茅野市街 → 中央病院方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=5... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が接続不可で"
+
+  - id: curated-cm-w-4e79b431
+    name: "茅野市 横内"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 35.998352
+    lng: 138.142847
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=6"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=6"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=6"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 茅野市横内道路：国道152号線方向：上川 → 立科町方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=6... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が"
+
+  - id: curated-cm-w-97ec0b20
+    name: "茅野市 上川バイパス"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 35.999033
+    lng: 138.140066
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=7"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=7"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=7"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 茅野市ちの道路：上川バイパス方向：茅野 → 諏訪方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=7... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が接続"
+
+  - id: curated-cm-w-3100364f
+    name: "茅野市 杖突峠"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 35.971673
+    lng: 138.135725
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=8"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=8"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=8"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 茅野市宮川杖突峠道路：国道152号線方向：茅野 → 高遠方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=8... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp"
+
+  - id: curated-cm-w-f04b8df6
+    name: "富士見町 諏訪南"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 35.93637
+    lng: 138.213675
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=9"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=9"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=9"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 富士見町富士見道路：主要地方道 諏訪南インター線方向：諏訪南IC → 富士見(国道20号)方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=9... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LC"
+
+  - id: curated-cm-w-289346f0
+    name: "茅野市 坂室"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 35.978887
+    lng: 138.166601
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=10"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=10"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=10"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 茅野市坂室道路：国道20号線方向：茅野 → 諏訪方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=10... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が接"
+
+  - id: curated-cm-w-f481a4e2
+    name: "諏訪市 四賀20号"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.022237
+    lng: 138.131453
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=11"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=11"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=11"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 諏訪市四賀道路：国道20号線方向：茅野 → 諏訪方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=11... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が接"
+
+  - id: curated-cm-w-3e17a6f1
+    name: "諏訪市 飯島"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.013531
+    lng: 138.126945
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=12"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=12"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=12"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 諏訪市四賀飯島道路：一般県道 諏訪湖四賀線方向：諏訪 → 諏訪IC方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=12... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv"
+
+  - id: curated-cm-w-f7b09d86
+    name: "諏訪市 片倉館"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.049725
+    lng: 138.112756
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=13"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=13"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=13"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 諏訪市片倉館前道路：湖岸線方向：諏訪 → 下諏訪方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=13... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が接"
+
+  - id: curated-cm-w-5793fc59
+    name: "下諏訪町 高浜 交差点"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.067352
+    lng: 138.099046
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=14"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=14"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=14"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 下諏訪町高浜道路：国道20号線、県道岡谷・下諏訪線方向：高浜交差点。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=14... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.n"
+
+  - id: curated-cm-w-dc7371dc
+    name: "下諏訪町 高木 下→諏"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.066576
+    lng: 138.101766
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=15"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=15"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=15"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 下諏訪町高浜道路：湖岸線方向：下諏訪 → 諏訪方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=15... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が接続"
+
+  - id: curated-cm-w-6351fa56
+    name: "下諏訪町 赤砂"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.066122
+    lng: 138.080476
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=16"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=16"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=16"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 下諏訪町赤砂道路：県道岡谷・下諏訪線方向：下諏訪 → 岡谷方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=16... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne."
+
+  - id: curated-cm-w-d01d8ed2
+    name: "諏訪市 石舟渡"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.02824
+    lng: 138.079209
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=17"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=17"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=17"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 諏訪市豊田（石舟渡）道路：主要地方道 岡谷・茅野線方向：諏訪 → 岡谷方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=17... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(l"
+
+  - id: curated-cm-w-d359d67a
+    name: "岡谷市 湊"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.045727
+    lng: 138.058404
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=18"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=18"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=18"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 岡谷市湊道路：主要地方道 岡谷・茅野線方向：諏訪 → 釜口水門方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=18... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.n"
+
+  - id: curated-cm-w-f7c3dd7c
+    name: "岡谷市 釜口橋"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.053704
+    lng: 138.050572
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=19"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=19"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=19"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 岡谷市湊道路：主要地方道 岡谷・茅野線方向：岡谷市 → 諏訪市方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=19... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.n"
+
+  - id: curated-cm-w-7d4fb8fa
+    name: "岡谷市 川岸"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.013607
+    lng: 138.010717
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=20"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=20"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=20"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 岡谷市川岸（ヤナ上）道路：主要地方道 下諏訪辰野線方向：辰野町 → 岡谷市街地方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=20... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サ"
+
+  - id: curated-cm-w-424793e7
+    name: "下諏訪町 四つ角"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.074495
+    lng: 138.08492
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=21"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=21"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=21"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 下諏訪町矢木東わかされ付近道路：国道20号線方向：岡谷 → 秋宮方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=21... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv."
+
+  - id: curated-cm-w-a5088633
+    name: "岡谷市 長地"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.077815
+    lng: 138.067854
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=22"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=22"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=22"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 岡谷市長地道路：国道20号線方向：下諏訪 → 岡谷IC方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=22... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp"
+
+  - id: curated-cm-w-bcd98426
+    name: "岡谷市 岡谷JCT"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.057698
+    lng: 138.038779
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=23"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=23"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=23"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 中央道岡谷JCT道路：長野自動車道方向：長野 → 東京・名古屋方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=23... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.n"
+
+  - id: curated-cm-w-fa399ad8
+    name: "辰野町 伊北IC"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 35.94535
+    lng: 137.979111
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=24"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=24"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=24"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 伊北IC道路：国道153号線方向：伊那 → 辰野方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=24... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp)が接"
+
+  - id: curated-cm-w-75eb8bc9
+    name: "諏訪市 有賀峠 辰→諏"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.012403
+    lng: 138.069338
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=25"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=25"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=25"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 諏訪市豊田上野(有賀峠)道路：主要地方道 諏訪辰野線方向：辰野 → 諏訪方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=25... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト("
+
+  - id: curated-cm-w-eb627524
+    name: "諏訪市 有賀峠 諏→辰"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.012534
+    lng: 138.066031
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=26"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=26"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=26"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 諏訪市豊田上野(有賀峠)道路：主要地方道 諏訪辰野線方向：諏訪 → 辰野方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=26... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト("
+
+  - id: curated-cm-w-88dfbf52
+    name: "辰野町 平出"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 35.982176
+    lng: 138.001371
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=27"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=27"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=27"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 辰野町平出道路：主要地方道 下諏訪辰野線方向：辰野 → 伊那方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=27... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne"
+
+  - id: curated-cm-w-bb965012
+    name: "塩尻市 北小野"
+    operator: "LCV株式会社（エルシーブイ）"
+    category: road
+    prefecture: "20"
+    lat: 36.05727
+    lng: 137.971041
+    feed_type: web_page
+    feed_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=28"
+    image_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=28"
+    page_url: "https://live.lcv.ne.jp/cgi-bin/road/movie.php?camera_id=28"
+    note: "2026-11-22 追加。2026-11-22 camera_id=1 の playlist.m3u8 → chunklist.m3u8 が取得でき、メディアシーケンスが進行（4734433）。視点: 塩尻市北小野道路：国道153号方向：辰野 → 善知鳥峠方面。HLS は https://live.lcv.ne.jp/playlist.m3u8?camera_id=28... で取得（セッションCookie付き）。個別に実際の映像を確認したのは camera_id=1 のみ。LCVの会社サイト(lcv.ne.jp"
+
+  - id: curated-cm-w-fa872fed
+    name: "冨士山公園(大洲盆地・大洲城方面)"
+    operator: "大洲市"
+    category: scenic
+    prefecture: "38"
+    lat: 33.50941
+    lng: 132.560666
+    feed_type: web_page
+    feed_url: "https://www.city.ozu.ehime.jp/site/movie-library/1175.html"
+    image_url: "https://www.city.ozu.ehime.jp/site/movie-library/1175.html"
+    page_url: "https://www.city.ozu.ehime.jp/site/movie-library/1175.html"
+    note: "2026-11-22 追加。2026-11-22 ビューアURLが307→/viewer/ で200。映像の稼働自体はJS製のため目視未確認。市サイトの一般的な無断複製禁止の文言あり(映像ライブラリのメニューページ)。誘導型(リンクのみ)なら可の可能性。最終判断は人。ビューアの稼働は未確認。"
+
+  - id: curated-cm-w-f4759f04
+    name: "野迫川村 雲海景勝地(高野辻休憩所)"
+    operator: "こまどりケーブル株式会社"
+    category: scenic
+    prefecture: "29"
+    lat: 34.187559
+    lng: 135.644333
+    feed_type: web_page
+    feed_url: "http://www.komadori.ne.jp/livecamera/area/nosegawa1.html"
+    image_url: "http://www.komadori.ne.jp/livecamera/area/nosegawa1.html"
+    page_url: "http://www.komadori.ne.jp/livecamera/area/nosegawa1.html"
+    note: "2026-11-22 追加。2026-11-22 m3u8 の Last-Modified が取得時刻(02:33:47Z)で、シーケンス番号が進行。サイトポリシーに転載・リンクの禁止文言は見つからず(grepで該当なし)。m3u8 は Access-Control-Allow-Origin を komadori.ne.jp に限定。同ページ群に川原樋川(かわらび)など別カメラも掲載されているが個別は未確認。雲海は秋〜冬の早朝向け。"
+
+  - id: curated-cm-w-8d4efbfb
+    name: "だるま山高原(富士山と駿河湾)"
+    operator: "伊豆市 産業部観光課"
+    category: scenic
+    prefecture: "22"
+    lat: 34.975565
+    lng: 138.851229
+    feed_type: web_page
+    feed_url: "https://livecamera.city.izu.shizuoka.jp/index.php"
+    image_url: "https://livecamera.city.izu.shizuoka.jp/index.php"
+    page_url: "https://livecamera.city.izu.shizuoka.jp/index.php"
+    note: "2026-11-22 追加。2026-11-22 drm26112211000000.jpg の Last-Modified が当日 01:50Z。フッターの「リンク・著作権」は別サイト(kanko.city.izu.shizuoka.jp)のフォームで条件文言は未確認。Copyright (c) Izu city。台帳には伊豆市ホストなし(shimizucho は別自治体)。"
+
+  - id: curated-cm-w-84d170cd
+    name: "安曇野 ほりでーゆ～四季の郷"
+    operator: "安曇野市"
+    category: scenic
+    prefecture: "20"
+    lat: 36.335845
+    lng: 137.94062
+    feed_type: web_page
+    feed_url: "https://www.city.azumino.nagano.jp/site/camera/2468.html"
+    image_url: "https://www.city.azumino.nagano.jp/site/camera/2468.html"
+    page_url: "https://www.city.azumino.nagano.jp/site/camera/2468.html"
+    note: "2026-11-22 追加。2026-11-22 Last-Modified が 02:57:20Z→03:02:20Z と更新、目視で現景色。http のみ。画像ホストは安曇野ケーブルテレビ(anc-tv)管理部のユーザー領域で、運営者表記は市。座標は要確認。"
+
+  - id: curated-cm-w-495148ed
+    name: "安曇野 長峰山頂"
+    operator: "安曇野市"
+    category: scenic
+    prefecture: "20"
+    lat: 36.335845
+    lng: 137.94062
+    feed_type: web_page
+    feed_url: "https://www.city.azumino.nagano.jp/site/camera/2471.html"
+    image_url: "https://www.city.azumino.nagano.jp/site/camera/2471.html"
+    page_url: "https://www.city.azumino.nagano.jp/site/camera/2471.html"
+    note: "2026-11-22 追加。2026-11-22 ビューア・モバイルビューア(210.160.209.203/mobile/)が200。映像自体は目視未確認。YouTubeに公式チャンネル UCsiMO-r7i9NVoLucXeAdoAQ(安曇野市)もあるが現在ライブなし。リンクは市トップ推奨の文言あり。"
+
+  - id: curated-cm-w-278c01e0
+    name: "安曇野 自然体験交流センター"
+    operator: "安曇野市"
+    category: scenic
+    prefecture: "20"
+    lat: 36.335845
+    lng: 137.94062
+    feed_type: web_page
+    feed_url: "https://www.city.azumino.nagano.jp/site/camera/11861.html"
+    image_url: "https://www.city.azumino.nagano.jp/site/camera/11861.html"
+    page_url: "https://www.city.azumino.nagano.jp/site/camera/11861.html"
+    note: "2026-11-22 追加。2026-11-22 ビューアが200。映像自体は目視未確認。座標は要確認(自然体験交流センターの所在地を別途調べること)。"
+
+  - id: curated-cm-w-ad22fc02
+    name: "光市 EyeLiveひかり(虹ヶ浜海岸ほか)"
+    operator: "光市"
+    category: coast
+    prefecture: "35"
+    lat: 33.972466
+    lng: 131.919342
+    feed_type: web_page
+    feed_url: "https://www.city.hikari.lg.jp/soshiki/1/johosuishin/kenko/2297.html"
+    image_url: "https://www.city.hikari.lg.jp/soshiki/1/johosuishin/kenko/2297.html"
+    page_url: "https://www.city.hikari.lg.jp/soshiki/1/johosuishin/kenko/2297.html"
+    note: "2026-11-22 追加。2026-11-22 camera1.city.hikari.lg.jp が 307→/viewer/ で200。映像目視不可。過去調査(bottom5.yaml)は cgi-bin/camera 401で静止画取得不可と記録。複数地点を1エントリにまとめた(虹ヶ浜・室積・冠山総合公園・伊藤公記念公園)。同ページの「お天気カメラ」は台帳に既存。"
+
+  - id: curated-cm-w-b6e8b724
+    name: "迫川 大林"
+    operator: "宮城県土木部河川課（宮城県河川流域情報システム）"
+    category: river
+    prefecture: "04"
+    lat: 38.786995
+    lng: 141.090086
+    feed_type: web_page
+    feed_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100018"
+    image_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100018"
+    page_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100018"
+    note: "2026-11-22 追加。2026-11-22 POST応答で撮影日時2026/11/22 11:39:45・画像 area1_cam23_20261122113945.jpg を確認。都度解決型にする場合: POST https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/camera（kindId=100,jiseiId=1,areaId,kansokuPointId=104100018 ほか）の応答HTMLの camera_latestTime_img を抽出。同"
+
+  - id: curated-cm-w-601eeca4
+    name: "迫川 留場"
+    operator: "宮城県土木部河川課（宮城県河川流域情報システム）"
+    category: river
+    prefecture: "04"
+    lat: 38.741289
+    lng: 141.01822
+    feed_type: web_page
+    feed_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100019"
+    image_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100019"
+    page_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100019"
+    note: "2026-11-22 追加。2026-11-22 POST応答で撮影日時2026/11/22 11:39:45・画像 area1_cam24_20261122113945.jpg を確認。都度解決型にする場合: POST https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/camera（kindId=100,jiseiId=1,areaId,kansokuPointId=104100019 ほか）の応答HTMLの camera_latestTime_img を抽出。同"
+
+  - id: curated-cm-w-c512baf5
+    name: "芋埣川 栗駒公園線"
+    operator: "宮城県土木部河川課（宮城県河川流域情報システム）"
+    category: river
+    prefecture: "04"
+    lat: 38.771354
+    lng: 140.999803
+    feed_type: web_page
+    feed_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100016"
+    image_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100016"
+    page_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100016"
+    note: "2026-11-22 追加。2026-11-22 POST応答で撮影日時2026/11/22 11:39:45・画像 area1_cam21_20261122113945.jpg を確認。都度解決型にする場合: POST https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/camera（kindId=100,jiseiId=1,areaId,kansokuPointId=104100016 ほか）の応答HTMLの camera_latestTime_img を抽出。同"
+
+  - id: curated-cm-w-e8bbc522
+    name: "多田川 下狼塚"
+    operator: "宮城県土木部河川課（宮城県河川流域情報システム）"
+    category: river
+    prefecture: "04"
+    lat: 38.573633
+    lng: 140.883891
+    feed_type: web_page
+    feed_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100011"
+    image_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100011"
+    page_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100011"
+    note: "2026-11-22 追加。2026-11-22 POST応答で撮影日時2026/11/22 11:39:45・画像 area2_cam16_20261122113945.jpg を確認。都度解決型にする場合: POST https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/camera（kindId=100,jiseiId=1,areaId,kansokuPointId=104100011 ほか）の応答HTMLの camera_latestTime_img を抽出。同"
+
+  - id: curated-cm-w-083bd49c
+    name: "吉田川 高田中央橋"
+    operator: "宮城県土木部河川課（宮城県河川流域情報システム）"
+    category: river
+    prefecture: "04"
+    lat: 38.431703
+    lng: 140.880752
+    feed_type: web_page
+    feed_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100010"
+    image_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100010"
+    page_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100010"
+    note: "2026-11-22 追加。2026-11-22 POST応答で撮影日時2026/11/22 11:39:45・画像 area2_cam15_20261122113945.jpg を確認。都度解決型にする場合: POST https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/camera（kindId=100,jiseiId=1,areaId,kansokuPointId=104100010 ほか）の応答HTMLの camera_latestTime_img を抽出。同"
+
+  - id: curated-cm-w-bf6d1958
+    name: "渋井川 西荒井"
+    operator: "宮城県土木部河川課（宮城県河川流域情報システム）"
+    category: river
+    prefecture: "04"
+    lat: 38.554208
+    lng: 140.940145
+    feed_type: web_page
+    feed_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100008"
+    image_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100008"
+    page_url: "https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/cameraImage?kindId=100&jiseiId=1&areaId=1&kansokuPointId=104100008"
+    note: "2026-11-22 追加。2026-11-22 POST応答で撮影日時2026/11/22 11:39:45・画像 area2_cam13_20261122113945.jpg を確認。都度解決型にする場合: POST https://www.dobokusougou.pref.miyagi.jp/miyagi_sp/camera（kindId=100,jiseiId=1,areaId,kansokuPointId=104100008 ほか）の応答HTMLの camera_latestTime_img を抽出。同"
+
+  - id: curated-cm-w-08ee3e64
+    name: "福山港 一文字防潮堤"
+    operator: "広域ネットワーク（広島わんがんカメラ／Sponsored by 株式会社ひろしま港湾管理センター）"
+    category: port
+    prefecture: "34"
+    lat: 34.466735
+    lng: 133.408522
+    feed_type: web_page
+    feed_url: "https://wangan.kouiki-nw.jp/camerapage/?device=31"
+    image_url: "https://wangan.kouiki-nw.jp/camerapage/?device=31"
+    page_url: "https://wangan.kouiki-nw.jp/camerapage/?device=31"
+    note: "2026-11-22 追加。2026-11-22 一覧ページに「最新：2026-11-22 11:40」の画像を確認。都度解決型にする場合: POST /wp-content/themes/wangancamera/camera-slide.php (device_id=31) の応答から最新画像URLを取得できる。他の道路/港カメラも同サイトにあり。"
+
+  - id: curated-cm-w-bcc6e9d3
+    name: "広島はつかいち大橋"
+    operator: "広域ネットワーク（広島わんがんカメラ／Sponsored by 株式会社ひろしま港湾管理センター）"
+    category: road
+    prefecture: "34"
+    lat: 34.354667
+    lng: 132.357548
+    feed_type: web_page
+    feed_url: "https://wangan.kouiki-nw.jp/camerapage/?device=1"
+    image_url: "https://wangan.kouiki-nw.jp/camerapage/?device=1"
+    page_url: "https://wangan.kouiki-nw.jp/camerapage/?device=1"
+    note: "2026-11-22 追加。2026-11-22 一覧ページに「最新：2026-11-22 11:40」の画像を確認。都度解決型にする場合: POST /wp-content/themes/wangancamera/camera-slide.php (device_id=1) の応答から最新画像URLを取得できる。他の道路/港カメラも同サイトにあり。"
+
+  - id: curated-cm-w-4202f910
+    name: "海田大橋"
+    operator: "広域ネットワーク（広島わんがんカメラ／Sponsored by 株式会社ひろしま港湾管理センター）"
+    category: road
+    prefecture: "34"
+    lat: 34.35475
+    lng: 132.503194
+    feed_type: web_page
+    feed_url: "https://wangan.kouiki-nw.jp/camerapage/?device=2"
+    image_url: "https://wangan.kouiki-nw.jp/camerapage/?device=2"
+    page_url: "https://wangan.kouiki-nw.jp/camerapage/?device=2"
+    note: "2026-11-22 追加。2026-11-22 一覧ページに「最新：2026-11-22 11:40」の画像を確認。都度解決型にする場合: POST /wp-content/themes/wangancamera/camera-slide.php (device_id=2) の応答から最新画像URLを取得できる。他の道路/港カメラも同サイトにあり。"
+
+  - id: curated-cm-w-fe858a2d
+    name: "神渕川 大塚橋"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-46bfa9c1
+    name: "神渕川 飯高橋"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam2"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam2"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-275ddf58
+    name: "飛騨川 石の博物館"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.533017
+    lng: 137.114803
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam3"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam3"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-936733fc
+    name: "葛屋川 室兼橋"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam4"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam4"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-f6db110a
+    name: "葉津川 葉津口"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam5"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam5"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-22164554
+    name: "杉洞川 杉洞橋"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam6"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam6"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-42f9b793
+    name: "奥田川 奥田松葉橋"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam7"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam7"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-bade91c7
+    name: "七宗町 八日市川"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam8"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam8"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-a1a77fe0
+    name: "七宗町 間見"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam9"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam9"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-7f7d1e6c
+    name: "七宗町 大崎橋"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam10"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam10"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-bfc424ed
+    name: "七宗町 葛屋公民館"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam11"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam11"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-dbe05862
+    name: "七宗町 葉津神社"
+    operator: "七宗町"
+    category: river
+    prefecture: "21"
+    lat: 35.543858
+    lng: 137.11998
+    feed_type: web_page
+    feed_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam12"
+    image_url: "http://www.hichiso.jp/top/life/bosai/cam/#cam12"
+    page_url: "http://www.hichiso.jp/top/life/bosai/cam/"
+    note: "2026-11-22 追加。2026-11-22 m3u8 Last-Modified が当日(2026-11-22 02:59-03:00 UTC)・セグメント約32秒。ページに「メンテナンス中のため現在映像がご覧いただけません」の注意文があるが非表示(vk_hidden)で、m3u8は応答している。m3u8のパスに推測困難なトークンが含まれる（ページ内JSに平文記載）。利用規約ページは見つからず未確認。台帳に hichiso の河川カメラは無し(道路のみ)。"
+
+  - id: curated-cm-w-c33c9541
+    name: "飯塚市 河川監視カメラ（庄司川柳橋ほか）"
+    operator: "飯塚市"
+    category: river
+    prefecture: "40"
+    lat: 33.671283
+    lng: 130.692175
+    feed_type: web_page
+    feed_url: "https://iizuka.e-monitor.jp/iizuka/"
+    image_url: "https://iizuka.e-monitor.jp/iizuka/"
+    page_url: "https://iizuka.e-monitor.jp/iizuka/"
+    note: "2026-11-22 追加。2026-11-22 市ページに9地点の記載(庄司川柳橋・椎木川新町橋・建花寺川新横田橋・新川野間橋・明星寺川調整池・明星寺川登々樹橋・姿川小正調節池・熊添川蓼原橋・西秋松川秋松西地区排水機場)。ビューアはSPAのため画像の鮮度は未確認。station/6=庄司川柳橋。ほかに泉河内川天道公民館・碇川平恒中野市住・庄内川旧頴田支所・鹿毛馬川鹿毛馬中公民館・明星寺川枝国三区太田橋付近も同システム。座標は未確認(GSIで橋の位置が引けない)。1エントリにまとめた。"
+
+  - id: curated-cm-w-4395ce54
+    name: "御殿場合同庁舎から見る富士山"
+    operator: "静岡県(沼津土木事務所)"
+    category: scenic
+    prefecture: "22"
+    lat: 35.283493
+    lng: 138.926624
+    feed_type: web_page
+    feed_url: "http://www.pref.shizuoka.jp/~live/gotenba/index.html"
+    image_url: "http://www.pref.shizuoka.jp/~live/gotenba/index.html"
+    page_url: "http://www.pref.shizuoka.jp/~live/gotenba/index.html"
+    note: "2026-11-22 追加。2026-11-22 m.jpg の Last-Modified が当日、画像内日時 11:50。画像 URL は http://www.pref.shizuoka.jp/~live/gotenba/m.jpg(40秒ごと再読込)。画像直接利用は許諾確認が必要。ページ内に運営課の記載なし(運営者は県のため静岡県とした)"
+
+  - id: curated-cm-w-7fcdddac
+    name: "長良川（鮎之瀬大橋）"
+    operator: "関市"
+    category: river
+    prefecture: "21"
+    lat: 35.495834
+    lng: 136.91777
+    feed_type: web_page
+    feed_url: "http://www3.city.seki.gifu.jp/Camera/Index"
+    image_url: "http://www3.city.seki.gifu.jp/Camera/Index"
+    page_url: "http://www3.city.seki.gifu.jp/Camera/Index"
+    note: "2026-11-22 追加。2026-11-22 Camera/Index が 11:50 の画像を表示。10分ごとに更新。カメラ番号 no=6。同ページに津保川(鮎登里橋・若栗橋)・板取川(洞戸橋)の計6台。過去に気象河川情報のうち slev-*.jpg(水位表示)を見送った記録あり(municipal.yaml)が、カメラ画像は別物。画像 URL は日時入りで毎回変わる"
+
+  - id: curated-cm-w-74e85abc
+    name: "長良川（千疋大橋）"
+    operator: "関市"
+    category: river
+    prefecture: "21"
+    lat: 35.494164
+    lng: 136.862228
+    feed_type: web_page
+    feed_url: "http://www3.city.seki.gifu.jp/Camera/Index#cam2"
+    image_url: "http://www3.city.seki.gifu.jp/Camera/Index#cam2"
+    page_url: "http://www3.city.seki.gifu.jp/Camera/Index"
+    note: "2026-11-22 追加。2026-11-22 Camera/Index が 11:50 の画像を表示。10分ごとに更新。カメラ番号 no=7。同ページに津保川(鮎登里橋・若栗橋)・板取川(洞戸橋)の計6台。過去に気象河川情報のうち slev-*.jpg(水位表示)を見送った記録あり(municipal.yaml)が、カメラ画像は別物。画像 URL は日時入りで毎回変わる"
+
+  - id: curated-cm-w-2f2f31b6
+    name: "長良川（東志摩樋門）"
+    operator: "関市"
+    category: river
+    prefecture: "21"
+    lat: 35.514385
+    lng: 136.898453
+    feed_type: web_page
+    feed_url: "http://www3.city.seki.gifu.jp/Camera/Index#cam3"
+    image_url: "http://www3.city.seki.gifu.jp/Camera/Index#cam3"
+    page_url: "http://www3.city.seki.gifu.jp/Camera/Index"
+    note: "2026-11-22 追加。2026-11-22 Camera/Index が 11:50 の画像を表示。10分ごとに更新。カメラ番号 no=3。同ページに津保川(鮎登里橋・若栗橋)・板取川(洞戸橋)の計6台。過去に気象河川情報のうち slev-*.jpg(水位表示)を見送った記録あり(municipal.yaml)が、カメラ画像は別物。画像 URL は日時入りで毎回変わる"
+
+  - id: curated-cm-w-f8c74314
+    name: "小田原城 常盤木門"
+    operator: "小田原市"
+    category: scenic
+    prefecture: "14"
+    lat: 35.2503
+    lng: 139.1537
+    feed_type: web_page
+    feed_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html"
+    image_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html"
+    page_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html"
+    note: "2026-11-22 追加。2026-11-22 m3u8 を取得しライブ(MEDIA-SEQUENCE が進行)。プレイヤー https://www.videog.jp/player/S7w6rh2not6f / HLS https://c14897-live501.videog.jp/live/_definst_/tJBHEQrcYBDc/playlist.m3u8（HLS 直再生はアプリ対応次第）。台帳の「小田原城 お堀端」(curated-r2-c134e484)は店舗(ケルト)の YouTube で別フィ"
+
+  - id: curated-cm-w-6a40905e
+    name: "小田原城 お堀端(市設置)"
+    operator: "小田原市"
+    category: scenic
+    prefecture: "14"
+    lat: 35.25106
+    lng: 139.154907
+    feed_type: web_page
+    feed_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html#cam2"
+    image_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html#cam2"
+    page_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html"
+    note: "2026-11-22 追加。2026-11-22 m3u8 を取得しライブ(MEDIA-SEQUENCE が進行)。プレイヤー https://www.videog.jp/player/mjW_HDmjZ3DP / HLS https://c14897-live501.videog.jp/live/_definst_/xsFiUz9rmuEq/playlist.m3u8（HLS 直再生はアプリ対応次第）。台帳の「小田原城 お堀端」(curated-r2-c134e484)は店舗(ケルト)の YouTube で別フィ"
+
+  - id: curated-cm-w-ee0189c0
+    name: "小田原三の丸ホール(小田原市民ホール)"
+    operator: "小田原市"
+    category: scenic
+    prefecture: "14"
+    lat: 35.2475
+    lng: 139.1565
+    feed_type: web_page
+    feed_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html#cam3"
+    image_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html#cam3"
+    page_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html"
+    note: "2026-11-22 追加。2026-11-22 m3u8 を取得しライブ(MEDIA-SEQUENCE が進行)。プレイヤー https://www.videog.jp/player/aF7k0MWeWDo0 / HLS https://c14897-live501.videog.jp/live/_definst_/r7pxc8M_3cDj/playlist.m3u8（HLS 直再生はアプリ対応次第）。台帳の「小田原城 お堀端」(curated-r2-c134e484)は店舗(ケルト)の YouTube で別フィ"
+
+  - id: curated-cm-w-a648d951
+    name: "漁港の駅 TOTOCO小田原"
+    operator: "小田原市"
+    category: scenic
+    prefecture: "14"
+    lat: 35.234565
+    lng: 139.144799
+    feed_type: web_page
+    feed_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html#cam4"
+    image_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html#cam4"
+    page_url: "https://www.city.odawara.kanagawa.jp/kanko/livecamera.html"
+    note: "2026-11-22 追加。2026-11-22 m3u8 を取得しライブ(MEDIA-SEQUENCE が進行)。プレイヤー https://www.videog.jp/player/D-c6lGKr2ag9 / HLS https://c14897-live501.videog.jp/live/_definst_/ZsLVFl-gFe78/playlist.m3u8（HLS 直再生はアプリ対応次第）。台帳の「小田原城 お堀端」(curated-r2-c134e484)は店舗(ケルト)の YouTube で別フィ"
+
+  - id: curated-cm-w-e5fc48be
+    name: "かさね橋（箒川）"
+    operator: "栃木県（栃木県リアルタイム雨量・河川水位観測情報）"
+    category: river
+    prefecture: "09"
+    lat: 36.811655
+    lng: 140.00762
+    feed_type: web_page
+    feed_url: "https://www.dif.pref.tochigi.lg.jp/main.asp?area_no=&mno=0122&screen=camera_river&rain=time&list=&min_interval=60&river_no="
+    image_url: "https://www.dif.pref.tochigi.lg.jp/main.asp?area_no=&mno=0122&screen=camera_river&rain=time&list=&min_interval=60&river_no="
+    page_url: "https://www.dif.pref.tochigi.lg.jp/main.asp?area_no=&mno=0122&screen=camera_river&rain=time&list=&min_interval=60&river_no="
+    note: "2026-11-22 追加。2026-11-22 ID0122_1100.jpg(Last-Modified 当日11:00JST) と ID0122_1200.jpg を取得、いずれも image/jpeg 200。台帳に dif.pref.tochigi.lg.jp は未登録。同システムに(県)カメラ約15地点あり（選択肢で確認）。画像URLは時刻入りなので直接表示には日付解決が必要。利用規約ページは見つからず（未確認）。"
+
+  - id: curated-cm-w-9f85fa3c
+    name: "晩翠橋（那珂川）"
+    operator: "栃木県（栃木県リアルタイム雨量・河川水位観測情報）"
+    category: river
+    prefecture: "09"
+    lat: 36.977488
+    lng: 140.064898
+    feed_type: web_page
+    feed_url: "https://www.dif.pref.tochigi.lg.jp/main.asp?area_no=&mno=0817&screen=camera_river&rain=time&list=&min_interval=60&river_no="
+    image_url: "https://www.dif.pref.tochigi.lg.jp/main.asp?area_no=&mno=0817&screen=camera_river&rain=time&list=&min_interval=60&river_no="
+    page_url: "https://www.dif.pref.tochigi.lg.jp/main.asp?area_no=&mno=0817&screen=camera_river&rain=time&list=&min_interval=60&river_no="
+    note: "2026-11-22 追加。2026-11-22 ID0817_1200.jpg を取得 Last-Modified 03:05GMT(=12:05JST)。13番と同じ配信元。利用規約は未確認。"
+
+  - id: curated-cm-w-ff41912b
+    name: "三種川 落合"
+    operator: "秋田県三種町役場"
+    category: river
+    prefecture: "05"
+    lat: 40.054682
+    lng: 140.150896
+    feed_type: web_page
+    feed_url: "https://webcam.town.mitane.akita.jp/area.php?id=06"
+    image_url: "https://webcam.town.mitane.akita.jp/area.php?id=06"
+    page_url: "https://webcam.town.mitane.akita.jp/area.php?id=06"
+    note: "2026-11-22 追加。2026-11-22 area.php?id=06 が当日11:57の時刻表示、一覧に同日11:48〜11:49の画像。台帳に mitane は未登録。禁止文言・規約ページは見つからず（未確認）。area.php の title は id によらず「落合」と表示されるが、名称は一覧ページ JSON の name/type 対応による。入力 operator_hint は秋田県三種町役場で一致。"
+
+  - id: curated-cm-w-fecb2e04
+    name: "三種川 中野橋"
+    operator: "秋田県三種町役場"
+    category: river
+    prefecture: "05"
+    lat: 40.07547
+    lng: 140.148431
+    feed_type: web_page
+    feed_url: "https://webcam.town.mitane.akita.jp/area.php?id=05"
+    image_url: "https://webcam.town.mitane.akita.jp/area.php?id=05"
+    page_url: "https://webcam.town.mitane.akita.jp/area.php?id=05"
+    note: "2026-11-22 追加。2026-11-22 area.php?id=06 が当日11:57の時刻表示、一覧に同日11:48〜11:49の画像。台帳に mitane は未登録。禁止文言・規約ページは見つからず（未確認）。area.php の title は id によらず「落合」と表示されるが、名称は一覧ページ JSON の name/type 対応による。"
+
+  - id: curated-cm-w-8c94191d
+    name: "三種川 宮橋"
+    operator: "秋田県三種町役場"
+    category: river
+    prefecture: "05"
+    lat: 40.085844
+    lng: 140.138488
+    feed_type: web_page
+    feed_url: "https://webcam.town.mitane.akita.jp/area.php?id=04"
+    image_url: "https://webcam.town.mitane.akita.jp/area.php?id=04"
+    page_url: "https://webcam.town.mitane.akita.jp/area.php?id=04"
+    note: "2026-11-22 追加。2026-11-22 area.php?id=06 が当日11:57の時刻表示、一覧に同日11:48〜11:49の画像。台帳に mitane は未登録。禁止文言・規約ページは見つからず（未確認）。area.php の title は id によらず「落合」と表示されるが、名称は一覧ページ JSON の name/type 対応による。"
+
+  - id: curated-cm-w-f775b5b5
+    name: "三種川 川口橋"
+    operator: "秋田県三種町役場"
+    category: river
+    prefecture: "05"
+    lat: 40.095906
+    lng: 140.134362
+    feed_type: web_page
+    feed_url: "https://webcam.town.mitane.akita.jp/area.php?id=03"
+    image_url: "https://webcam.town.mitane.akita.jp/area.php?id=03"
+    page_url: "https://webcam.town.mitane.akita.jp/area.php?id=03"
+    note: "2026-11-22 追加。2026-11-22 area.php?id=06 が当日11:57の時刻表示、一覧に同日11:48〜11:49の画像。台帳に mitane は未登録。禁止文言・規約ページは見つからず（未確認）。area.php の title は id によらず「落合」と表示されるが、名称は一覧ページ JSON の name/type 対応による。"
+
+  - id: curated-cm-w-d0c130e0
+    name: "三種川 増沢"
+    operator: "秋田県三種町役場"
+    category: river
+    prefecture: "05"
+    lat: 40.087366
+    lng: 140.112312
+    feed_type: web_page
+    feed_url: "https://webcam.town.mitane.akita.jp/area.php?id=02"
+    image_url: "https://webcam.town.mitane.akita.jp/area.php?id=02"
+    page_url: "https://webcam.town.mitane.akita.jp/area.php?id=02"
+    note: "2026-11-22 追加。2026-11-22 area.php?id=06 が当日11:57の時刻表示、一覧に同日11:48〜11:49の画像。台帳に mitane は未登録。禁止文言・規約ページは見つからず（未確認）。area.php の title は id によらず「落合」と表示されるが、名称は一覧ページ JSON の name/type 対応による。"
+
+  - id: curated-cm-w-400681b0
+    name: "三種川 牛沢橋"
+    operator: "秋田県三種町役場"
+    category: river
+    prefecture: "05"
+    lat: 40.090747
+    lng: 140.104966
+    feed_type: web_page
+    feed_url: "https://webcam.town.mitane.akita.jp/area.php?id=01"
+    image_url: "https://webcam.town.mitane.akita.jp/area.php?id=01"
+    page_url: "https://webcam.town.mitane.akita.jp/area.php?id=01"
+    note: "2026-11-22 追加。2026-11-22 area.php?id=06 が当日11:57の時刻表示、一覧に同日11:48〜11:49の画像。台帳に mitane は未登録。禁止文言・規約ページは見つからず（未確認）。area.php の title は id によらず「落合」と表示されるが、名称は一覧ページ JSON の name/type 対応による。"
+
+  - id: curated-cm-w-aba4d407
+    name: "鳴沢村活き活き広場"
+    operator: "ふじやま.TV（Fujiyama.TV／富士五湖地域情報サイト Fujigoko.TV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.481388
+    lng: 138.706665
+    feed_type: web_page
+    feed_url: "https://fujiyama.tv/live/?n=26&b=0"
+    image_url: "https://fujiyama.tv/live/?n=26&b=0"
+    page_url: "https://fujiyama.tv/live/?n=26&b=0"
+    note: "2026-11-22 追加。2026-11-22 camimg.php?n=26 を取得し JPEG 更新を確認（EXIF 撮影時刻が取得時刻に近い）。camimg.php 経由の画像は取得でき現在時刻で更新中だが、規約で画像直リンク・自動取得を禁止。個人・報道は紹介リンク条件で自由、それ以外の商用利用は要連絡と明記されているため、アプリで案内する場合は運営者(ふじやま.TV)への照会を推奨。ライブカメラ一覧は https://fujiyama.tv/live/ 。画像のみの直接リンクは不可。設置場所は鳴沢村活き活"
+
+  - id: curated-cm-w-56cedb2c
+    name: "富士山五合目"
+    operator: "ふじやま.TV（Fujiyama.TV／富士五湖地域情報サイト Fujigoko.TV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.3944
+    lng: 138.7326
+    feed_type: web_page
+    feed_url: "https://fujiyama.tv/live/?n=21&b=0"
+    image_url: "https://fujiyama.tv/live/?n=21&b=0"
+    page_url: "https://fujiyama.tv/live/?n=21&b=0"
+    note: "2026-11-22 追加。2026-11-22 camimg.php?n=21 を取得し JPEG 更新を確認（EXIF 撮影時刻が取得時刻に近い）。camimg.php 経由の画像は取得でき現在時刻で更新中だが、規約で画像直リンク・自動取得を禁止。個人・報道は紹介リンク条件で自由、それ以外の商用利用は要連絡と明記されているため、アプリで案内する場合は運営者(ふじやま.TV)への照会を推奨。ライブカメラ一覧は https://fujiyama.tv/live/ 。画像のみの直接リンクは不可。夜間・厳冬期は一時停止"
+
+  - id: curated-cm-w-83555b2b
+    name: "河口湖ハーブ庭園（ハーブ庭園旅日記 富士河口湖庭園）"
+    operator: "ふじやま.TV（Fujiyama.TV／富士五湖地域情報サイト Fujigoko.TV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.5433
+    lng: 138.7791
+    feed_type: web_page
+    feed_url: "https://fujiyama.tv/live/?n=20&b=0"
+    image_url: "https://fujiyama.tv/live/?n=20&b=0"
+    page_url: "https://fujiyama.tv/live/?n=20&b=0"
+    note: "2026-11-22 追加。2026-11-22 camimg.php?n=20 を取得し JPEG 更新を確認（EXIF 撮影時刻が取得時刻に近い）。camimg.php 経由の画像は取得でき現在時刻で更新中だが、規約で画像直リンク・自動取得を禁止。個人・報道は紹介リンク条件で自由、それ以外の商用利用は要連絡と明記されているため、アプリで案内する場合は運営者(ふじやま.TV)への照会を推奨。ライブカメラ一覧は https://fujiyama.tv/live/ 。画像のみの直接リンクは不可。入力の title_h"
+
+  - id: curated-cm-w-836370f7
+    name: "本栖湖千円札（本栖湖西岸）"
+    operator: "ふじやま.TV（Fujiyama.TV／富士五湖地域情報サイト Fujigoko.TV）"
+    category: scenic
+    prefecture: "19"
+    lat: 35.463278
+    lng: 138.585797
+    feed_type: web_page
+    feed_url: "https://fujiyama.tv/live/?n=5&b=0"
+    image_url: "https://fujiyama.tv/live/?n=5&b=0"
+    page_url: "https://fujiyama.tv/live/?n=5&b=0"
+    note: "2026-11-22 追加。2026-11-22 camimg.php?n=5 を取得し JPEG 更新を確認（EXIF 撮影時刻が取得時刻に近い）。camimg.php 経由の画像は取得でき現在時刻で更新中だが、規約で画像直リンク・自動取得を禁止。個人・報道は紹介リンク条件で自由、それ以外の商用利用は要連絡と明記されているため、アプリで案内する場合は運営者(ふじやま.TV)への照会を推奨。ライブカメラ一覧は https://fujiyama.tv/live/ 。画像のみの直接リンクは不可。入力の title_hi"
+
+  - id: curated-cm-w-465ede83
+    name: "秩父雲海カメラ（旅立ちの丘）"
+    operator: "秩父市"
+    category: scenic
+    prefecture: "11"
+    lat: 36.000645
+    lng: 139.062082
+    feed_type: web_page
+    feed_url: "https://navi.city.chichibu.lg.jp/cloudview/"
+    image_url: "https://navi.city.chichibu.lg.jp/cloudview/"
+    page_url: "https://navi.city.chichibu.lg.jp/cloudview/"
+    note: "2026-11-22 追加。2026-11-22 ページ表示の最新画像が 2026/11/22 11:58 撮影。画像名 unkai_FV5730835_<日時>_TIMING.jpg。雲海シーズン(秋〜冬の早朝)向け。「画像は静止画として通常5分ごとに配信」「過去20日分程度の写真を保存」。最新画像の固定 URL(latest 等)は未確認。パーサ化(都度解決)なら still 化可能。"
+
+  - id: curated-cm-w-768adc05
+    name: "阿蘇地域の道路ライブカメラ（高森峠・阿蘇スカイライン・やまなみ道路ほか）"
+    operator: "熊本県 阿蘇地域振興局"
+    category: road
+    prefecture: "43"
+    lat: 33.073821
+    lng: 131.156764
+    feed_type: web_page
+    feed_url: "http://www.asoroadlive.jp/www/select_camera.php?selectAreaId=001&selectAreaName=%E9%98%BF%E8%98%87%E5%9C%B0%E5%9F%9F%E6%8C%AF%E8%88%88%E5%B1%80"
+    image_url: "http://www.asoroadlive.jp/www/select_camera.php?selectAreaId=001&selectAreaName=%E9%98%BF%E8%98%87%E5%9C%B0%E5%9F%9F%E6%8C%AF%E8%88%88%E5%B1%80"
+    page_url: "http://www.asoroadlive.jp/www/select_camera.php?selectAreaId=001&selectAreaName=%E9%98%BF%E8%98%87%E5%9C%B0%E5%9F%9F%E6%8C%AF%E8%88%88%E5%B1%80"
+    note: "2026-11-22 追加。2026-11-22 一覧ページ取得。記録日時は09時台(取得は12時)と数時間遅れ。「火の山トンネル」は気温欠測・記録日時が 2026/02/25。入力の asocam.extride.ad.jp は接続不可、www.asoroadlive.jp が現行。カメラ名: 国道265号 高森峠(山都町側/3号トンネル/村山交差点)・大戸の口、阿蘇東登山道路(坊中)、阿蘇南登山道路(火の山トンネル)、阿蘇スカイライン大観峰、やまなみ道路 瀬の本・荻の草、阿蘇登山道路山上駐車場、ミルクロード鞍岳"
+
+  - id: curated-cm-w-bf9af4d0
+    name: "割烹旅館たちばな（富士山ライブカメラ）"
+    operator: "割烹旅館 たちばな"
+    category: scenic
+    prefecture: "22"
+    lat: 35.212338
+    lng: 138.603806
+    feed_type: web_page
+    feed_url: "https://www.tachibana-fuji.co.jp/fujisan/index.html"
+    image_url: "https://www.tachibana-fuji.co.jp/fujisan/index.html"
+    page_url: "https://www.tachibana-fuji.co.jp/fujisan/index.html"
+    note: "2026-11-22 追加。2026-11-22 iframe 内の最新画像が 2026/11/22 10:53 撮影。モーション検知で更新される画像のため更新間隔は不定。最新画像の固定 URL は未確認。台帳に近傍の富士宮系カメラあり(別カメラ)。"
