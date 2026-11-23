@@ -1,5 +1,5 @@
 {
- "version": "2026-11-23T01:12:32Z",
+ "version": "2026-11-23T01:36:09Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-23T01:12:32Z",
+   "fetched_at": "2026-11-23T01:36:09Z",
    "items": [
     {
      "id": "243c2bc8e7d89735",
@@ -56099,6 +56099,17 @@
    "content": "通行止",
    "cause": "倒木",
    "start": "2026年11月23日 09:00",
+   "status": "実施中"
+  },
+  "243cf4b5db28ff26": {
+   "kind": "その他規制（国道）",
+   "route": "国道9号",
+   "direction": "上り",
+   "from": "竹崎町",
+   "to": "竹崎町",
+   "content": "不明",
+   "cause": "その他",
+   "start": "",
    "status": "実施中"
   }
  }
