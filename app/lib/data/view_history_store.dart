@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// カメラ閲覧履歴（端末内のみ。SPEC C1: サーバーを持たないため統計はローカル）。
-/// 詳細画面を開いた時刻を記録し、閲覧履歴の画面（ui/view_history_screen.dart。1.7.7）と
+/// 詳細画面を開いた時刻を記録し、閲覧履歴の画面（ui/view_history_screen.dart。1.7.6）と
 /// レビュー訴求のタイミング判定に使う。
 class ViewHistoryStore {
   static const _key = 'view_history_v1';

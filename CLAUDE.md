@@ -206,7 +206,7 @@ python site/build.py                            # 配信ファイル生成
 
 ## 道路の通行規制レイヤーの知見（2026-09-21追記）
 
-- **2026-09-21 ユーザー決定: 冠水センサーと国交省の規制は1つのレイヤー「道路の通行止め・規制」に統合し、色＝原因（冠水=青/土砂=茶/雪=水色/気象=紫/その他=灰。雪は 2026-11-23 のユーザー要望で気象から分けた。積雪・凍結・なだれ。1.7.6 は +64 で出たため 1.7.7 から）、チップで原因の絞り込み、塗りつぶし＝通行止め／白抜き＝規制・注意／小さい丸＝センサー正常**（`app/lib/data/road_closures.dart` の `RoadClosures.merge` と `classifyCause`。原因語の分類表はここ）。旧 `MapLayerKind.underpass` / `roadRegulation` の描画コードは残すが選択肢には出さない。「いま起きていること」の冠水行は統合レイヤーを冠水フィルタで開く。出典一覧ページには国交省の行も載せる
+- **2026-09-21 ユーザー決定: 冠水センサーと国交省の規制は1つのレイヤー「道路の通行止め・規制」に統合し、色＝原因（冠水=青/土砂=茶/雪=水色/気象=紫/その他=灰。雪は 2026-11-23 のユーザー要望で気象から分けた。積雪・凍結・なだれ。1.7.6+65）、チップで原因の絞り込み、塗りつぶし＝通行止め／白抜き＝規制・注意／小さい丸＝センサー正常**（`app/lib/data/road_closures.dart` の `RoadClosures.merge` と `classifyCause`。原因語の分類表はここ）。旧 `MapLayerKind.underpass` / `roadRegulation` の描画コードは残すが選択肢には出さない。「いま起きていること」の冠水行は統合レイヤーを冠水フィルタで開く。出典一覧ページには国交省の行も載せる
 
 - `tools/road_regulation.py` が monitor.yml（30分おき）で国交省「道路情報提供システム」の現在の通行規制を集約し `data/road_regulation.json` → `site/v1/road_regulation.json`（detail_cache は配信から除く）。アプリは `app/lib/data/road_regulation.dart` → `MapLayerKind.roadRegulation`（規制区間の線＋起点ピン、詳細シート）
 - **取得の仕組み**: `pc/pcTukokisei_83_1.html` の script src に5分ごとに変わる `backup/<yyyymmddHHMMSS>/<乱数>/` があり、`<dir>TukoKisei/<1次メッシュ>.json` に規制配列（座標・区間の GeoJSON・コード類）。路線名・区間・原因の文字列は `pc/pcTukokiseiDetail_<same_tukokisei_info_id>.html` の div.detailData（複数ブロック）から取り、一度取った分は detail_cache に残す。**詳細ページは Content-Type に charset が無く requests が ISO-8859-1 と誤判定するので `content.decode("utf-8")`**（初回に文字化けで路線名が空になった）

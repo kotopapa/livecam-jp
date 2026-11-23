@@ -7,7 +7,7 @@ import '../models/camera.dart';
 import 'camera_thumb.dart';
 import 'detail_screen.dart';
 
-/// 閲覧履歴（1.7.7。2026-11-23 ユーザー要望）。
+/// 閲覧履歴（1.7.6。2026-11-23 ユーザー要望）。
 ///
 /// 詳細画面を開いたカメラを、最後に見た時刻が新しい順に並べる。記録は端末内だけ
 /// （data/view_history_store.dart。サーバーへは送らない）。行を横に払うと1台分、
