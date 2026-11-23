@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// カメラ閲覧履歴（端末内のみ。SPEC C1: サーバーを持たないため統計はローカル）。
-/// 詳細画面を開いた時刻を記録し、ランキング（直近/累計）に使う。
+/// 詳細画面を開いた時刻を記録し、閲覧履歴の画面（ui/view_history_screen.dart。1.7.7）と
+/// レビュー訴求のタイミング判定に使う。
 class ViewHistoryStore {
   static const _key = 'view_history_v1';
   static const _maxTimestampsPerCamera = 50;
@@ -52,6 +53,32 @@ class ViewHistoryStore {
         .subtract(Duration(days: days))
         .millisecondsSinceEpoch;
     return _views[cameraId]?.where((t) => t >= since).length ?? 0;
+  }
+
+  /// 最後に見た時刻（履歴が無ければ null）
+  DateTime? lastViewedAt(String cameraId) {
+    final list = _views[cameraId];
+    if (list == null || list.isEmpty) return null;
+    return DateTime.fromMillisecondsSinceEpoch(list.first);
+  }
+
+  /// 最後に見た時刻が新しい順のカメラID
+  List<String> get recentIds {
+    final ids = _views.keys.where((id) => _views[id]!.isNotEmpty).toList();
+    ids.sort((a, b) => _views[b]!.first.compareTo(_views[a]!.first));
+    return ids;
+  }
+
+  /// 1台分の履歴を消す
+  Future<void> remove(String cameraId) async {
+    if (_views.remove(cameraId) == null) return;
+    await _prefs?.setString(_key, jsonEncode(_views));
+  }
+
+  /// 履歴をすべて消す
+  Future<void> clear() async {
+    _views.clear();
+    await _prefs?.remove(_key);
   }
 
   /// 閲覧のあるカメラID一覧

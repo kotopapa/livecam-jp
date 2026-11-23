@@ -565,6 +565,18 @@ class AppLocalizationsJa extends AppLocalizations {
   String get listRanking => 'ランキング';
 
   @override
+  String get viewHistoryTitle => '閲覧履歴';
+
+  @override
+  String get viewHistoryEmpty => '閲覧履歴はまだありません。\nカメラを開くと、ここに記録されます。';
+
+  @override
+  String get viewHistoryNote => 'この端末だけに保存されます。新しい順に最大500台まで残ります。';
+
+  @override
+  String get viewHistoryClearConfirm => '閲覧履歴をすべて削除しますか？';
+
+  @override
   String favoritesTitle(int count) {
     return 'お気に入り（$count）';
   }
@@ -3729,6 +3741,18 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get listRanking => 'ランキング';
+
+  @override
+  String get viewHistoryTitle => 'みた カメラ';
+
+  @override
+  String get viewHistoryEmpty => 'まだ ありません。\nカメラを ひらくと、ここに のこります。';
+
+  @override
+  String get viewHistoryNote => 'この スマホだけに のこります。あたらしい じゅんに 500だいまで のこります。';
+
+  @override
+  String get viewHistoryClearConfirm => 'みた カメラの きろくを ぜんぶ けしますか？';
 
   @override
   String favoritesTitle(int count) {

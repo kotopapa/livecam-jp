@@ -559,6 +559,18 @@ class AppLocalizationsZh extends AppLocalizations {
   String get listRanking => '排行榜';
 
   @override
+  String get viewHistoryTitle => '浏览记录';
+
+  @override
+  String get viewHistoryEmpty => '暂无浏览记录。\n打开摄像头后会记录在这里。';
+
+  @override
+  String get viewHistoryNote => '仅保存在本设备上。按最新顺序最多保留500台。';
+
+  @override
+  String get viewHistoryClearConfirm => '要删除全部浏览记录吗？';
+
+  @override
   String favoritesTitle(int count) {
     return '收藏（$count）';
   }
@@ -3696,6 +3708,18 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get listRanking => '排行榜';
+
+  @override
+  String get viewHistoryTitle => '瀏覽紀錄';
+
+  @override
+  String get viewHistoryEmpty => '尚無瀏覽紀錄。\n開啟攝影機後會記錄在這裡。';
+
+  @override
+  String get viewHistoryNote => '僅儲存在本裝置上。依最新順序最多保留500台。';
+
+  @override
+  String get viewHistoryClearConfirm => '要刪除全部瀏覽紀錄嗎？';
 
   @override
   String favoritesTitle(int count) {

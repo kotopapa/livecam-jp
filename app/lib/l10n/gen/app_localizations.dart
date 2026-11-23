@@ -1156,6 +1156,30 @@ abstract class AppLocalizations {
   /// **'ランキング'**
   String get listRanking;
 
+  /// No description provided for @viewHistoryTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'閲覧履歴'**
+  String get viewHistoryTitle;
+
+  /// No description provided for @viewHistoryEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'閲覧履歴はまだありません。\nカメラを開くと、ここに記録されます。'**
+  String get viewHistoryEmpty;
+
+  /// No description provided for @viewHistoryNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'この端末だけに保存されます。新しい順に最大500台まで残ります。'**
+  String get viewHistoryNote;
+
+  /// No description provided for @viewHistoryClearConfirm.
+  ///
+  /// In ja, this message translates to:
+  /// **'閲覧履歴をすべて削除しますか？'**
+  String get viewHistoryClearConfirm;
+
   /// No description provided for @favoritesTitle.
   ///
   /// In ja, this message translates to:

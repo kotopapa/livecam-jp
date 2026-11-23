@@ -585,6 +585,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get listRanking => 'Ranking';
 
   @override
+  String get viewHistoryTitle => 'Viewing history';
+
+  @override
+  String get viewHistoryEmpty =>
+      'No viewing history yet.\nCameras you open will be listed here.';
+
+  @override
+  String get viewHistoryNote =>
+      'Saved on this device only. Up to 500 cameras are kept, newest first.';
+
+  @override
+  String get viewHistoryClearConfirm => 'Clear all viewing history?';
+
+  @override
   String favoritesTitle(int count) {
     return 'Favorites ($count)';
   }

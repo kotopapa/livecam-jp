@@ -585,6 +585,20 @@ class AppLocalizationsVi extends AppLocalizations {
   String get listRanking => 'Bảng xếp hạng';
 
   @override
+  String get viewHistoryTitle => 'Lịch sử xem';
+
+  @override
+  String get viewHistoryEmpty =>
+      'Chưa có lịch sử xem.\nCamera bạn mở sẽ được ghi lại ở đây.';
+
+  @override
+  String get viewHistoryNote =>
+      'Chỉ lưu trên thiết bị này. Giữ tối đa 500 camera, mới nhất trước.';
+
+  @override
+  String get viewHistoryClearConfirm => 'Xóa toàn bộ lịch sử xem?';
+
+  @override
   String favoritesTitle(int count) {
     return 'Yêu thích ($count)';
   }

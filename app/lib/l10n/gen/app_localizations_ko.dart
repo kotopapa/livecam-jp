@@ -570,6 +570,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get listRanking => '랭킹';
 
   @override
+  String get viewHistoryTitle => '열람 기록';
+
+  @override
+  String get viewHistoryEmpty => '아직 열람 기록이 없습니다.\n카메라를 열면 여기에 기록됩니다.';
+
+  @override
+  String get viewHistoryNote => '이 기기에만 저장됩니다. 최신순으로 최대 500대까지 남습니다.';
+
+  @override
+  String get viewHistoryClearConfirm => '열람 기록을 모두 삭제하시겠습니까?';
+
+  @override
   String favoritesTitle(int count) {
     return '즐겨찾기($count)';
   }

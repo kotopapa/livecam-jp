@@ -8,6 +8,7 @@ import '../util/geo.dart';
 import 'detail_screen.dart';
 import 'pin_style.dart';
 import 'ranking_screen.dart';
+import 'view_history_screen.dart';
 import 'camera_thumb.dart';
 
 /// 一覧タブ（SPEC 9.2④）。
@@ -132,6 +133,13 @@ class _ListScreenState extends State<ListScreen> {
       appBar: AppBar(
         title: Text(context.l10n.listTitle(cams.length)),
         actions: [
+          IconButton(
+            key: const ValueKey('list_view_history'),
+            tooltip: context.l10n.viewHistoryTitle,
+            icon: const Icon(Icons.history),
+            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => ViewHistoryScreen(app: widget.app))),
+          ),
           IconButton(
             tooltip: context.l10n.listRanking,
             icon: const Icon(Icons.leaderboard_outlined),
