@@ -5064,6 +5064,7 @@ class _NoticeBanner extends StatelessWidget {
 String closureCauseNameOf(AppLocalizations l10n, ClosureCause c) => switch (c) {
       ClosureCause.flood => l10n.closureCauseFlood,
       ClosureCause.landslide => l10n.closureCauseLandslide,
+      ClosureCause.snow => l10n.closureCauseSnow,
       ClosureCause.weather => l10n.closureCauseWeather,
       ClosureCause.other => l10n.closureCauseOther,
     };

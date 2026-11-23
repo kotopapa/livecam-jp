@@ -2492,6 +2492,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get closureCauseLandslide => 'Sạt lở';
 
   @override
+  String get closureCauseSnow => 'Tuyết';
+
+  @override
   String get closureCauseWeather => 'Thời tiết';
 
   @override

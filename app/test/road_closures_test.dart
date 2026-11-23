@@ -11,6 +11,15 @@ void main() {
     expect(classifyCause('道路損壊'), ClosureCause.landslide);
     expect(classifyCause('大雨'), ClosureCause.weather);
     expect(classifyCause('高波'), ClosureCause.weather);
+    expect(classifyCause('気象条件 通行止'), ClosureCause.weather);
+    // 雪は気象から分ける（国交省の規制原因の表記）
+    expect(classifyCause('積雪 通行止'), ClosureCause.snow);
+    expect(classifyCause('雪 滑り止め装着'), ClosureCause.snow);
+    expect(classifyCause('凍結 滑り止め装着'), ClosureCause.snow);
+    expect(classifyCause('雪崩'), ClosureCause.snow);
+    expect(classifyCause('吹雪'), ClosureCause.snow);
+    // 雪の重みで倒れた木は、表記どおり土砂・倒木の側
+    expect(classifyCause('倒木 通行止'), ClosureCause.landslide);
     expect(classifyCause('災害等'), ClosureCause.other);
     expect(classifyCause('事故'), ClosureCause.other);
   });

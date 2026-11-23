@@ -2484,6 +2484,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get closureCauseLandslide => 'Landslide';
 
   @override
+  String get closureCauseSnow => 'Snow';
+
+  @override
   String get closureCauseWeather => 'Weather';
 
   @override

@@ -2410,6 +2410,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get closureCauseLandslide => '토사';
 
   @override
+  String get closureCauseSnow => '눈';
+
+  @override
   String get closureCauseWeather => '기상';
 
   @override

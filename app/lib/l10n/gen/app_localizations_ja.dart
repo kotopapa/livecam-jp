@@ -2398,6 +2398,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get closureCauseLandslide => '土砂';
 
   @override
+  String get closureCauseSnow => '雪';
+
+  @override
   String get closureCauseWeather => '気象';
 
   @override
@@ -5583,6 +5586,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get closureCauseLandslide => 'どしゃ';
+
+  @override
+  String get closureCauseSnow => 'ゆき';
 
   @override
   String get closureCauseWeather => 'てんき';

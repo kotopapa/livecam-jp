@@ -2383,6 +2383,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get closureCauseLandslide => '塌方';
 
   @override
+  String get closureCauseSnow => '雪';
+
+  @override
   String get closureCauseWeather => '气象';
 
   @override
@@ -5517,6 +5520,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get closureCauseLandslide => '土石';
+
+  @override
+  String get closureCauseSnow => '雪';
 
   @override
   String get closureCauseWeather => '氣象';

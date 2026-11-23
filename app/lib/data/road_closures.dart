@@ -7,13 +7,17 @@ import 'underpass.dart';
 /// 道路の通行止め・規制（統合レイヤー。1.5.2）。
 ///
 /// 自治体の冠水センサー（underpass_status.json）と国交省の通行規制（road_regulation.json）を
-/// 1つのレイヤーにまとめ、**色＝原因**（冠水・土砂・気象・その他）、**塗りつぶし＝通行止め／
+/// 1つのレイヤーにまとめ、**色＝原因**（冠水・土砂・雪・気象・その他）、**塗りつぶし＝通行止め／
 /// 白抜き＝規制・注意／小さい丸＝センサー正常** で描く（2026-09-21 ユーザー要望）。
-enum ClosureCause { flood, landslide, weather, other }
+///
+/// 雪（積雪・凍結・なだれ）は 1.7.6 で気象から分けた（2026-11-23 ユーザー要望。冬は
+/// 積雪の通行止めが気象の大半を占め、大雨や強風の規制と見分けられなかった）。
+enum ClosureCause { flood, landslide, snow, weather, other }
 
 Color closureCauseColor(ClosureCause c) => switch (c) {
       ClosureCause.flood => const Color(0xFF1E88E5),
       ClosureCause.landslide => const Color(0xFF8D6E63),
+      ClosureCause.snow => const Color(0xFF00ACC1),
       ClosureCause.weather => const Color(0xFF8E24AA),
       ClosureCause.other => const Color(0xFF616161),
     };
@@ -25,7 +29,8 @@ ClosureCause classifyCause(String text) {
   if (RegExp(r'土砂|土石|落石|崩落|崩壊|道路損壊|法面|地すべり|地滑り|陥没|路面損壊|倒木').hasMatch(t)) {
     return ClosureCause.landslide;
   }
-  if (RegExp(r'雨|雪|凍結|風|波|台風|気象|吹雪|霧|雷|津波|高潮|なだれ|雪崩').hasMatch(t)) {
+  if (RegExp(r'雪|凍結|なだれ|雪崩').hasMatch(t)) return ClosureCause.snow;
+  if (RegExp(r'雨|風|波|台風|気象|霧|雷|津波|高潮').hasMatch(t)) {
     return ClosureCause.weather;
   }
   return ClosureCause.other;

@@ -4360,6 +4360,12 @@ abstract class AppLocalizations {
   /// **'土砂'**
   String get closureCauseLandslide;
 
+  /// No description provided for @closureCauseSnow.
+  ///
+  /// In ja, this message translates to:
+  /// **'雪'**
+  String get closureCauseSnow;
+
   /// No description provided for @closureCauseWeather.
   ///
   /// In ja, this message translates to:
