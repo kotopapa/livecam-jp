@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'catalog_load_banner.dart';
 
 import 'ad_banner.dart';
 
@@ -48,7 +49,13 @@ class _HomeShellState extends State<HomeShell> {
   /// 備えタブのバッジ（期限1か月以内・期限切れの品目数＋点検日超過）
   int _stockpileAlertCount = 0;
 
-  static const _tabScreenNames = ['map', 'list', 'bosai', 'stockpile', 'favorites'];
+  static const _tabScreenNames = [
+    'map',
+    'list',
+    'bosai',
+    'stockpile',
+    'favorites',
+  ];
 
   void _setIndex(int i) {
     if (i == _index) return;
@@ -151,10 +158,14 @@ class _HomeShellState extends State<HomeShell> {
         // 狭い画面で見出しの末尾1文字や本文の「た。」だけが次行に送られないよう、
         // 文字を一回り小さくする（既定は見出し24・本文14。2026-10-06 ユーザー指摘）
         child: AlertDialog(
-          title: Text(context.l10n.updateRequiredTitle,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          content: Text(context.l10n.updateRequiredBody(storeName),
-              style: const TextStyle(fontSize: 13.5, height: 1.5)),
+          title: Text(
+            context.l10n.updateRequiredTitle,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          content: Text(
+            context.l10n.updateRequiredBody(storeName),
+            style: const TextStyle(fontSize: 13.5, height: 1.5),
+          ),
           actions: [
             if (storeUrl != null)
               FilledButton(
@@ -180,22 +191,29 @@ class _HomeShellState extends State<HomeShell> {
     // 利用者が特別警報の発表エリアに居る間は防災アプリとして広告を出さない
     // （エリア外の人には出す。AppState.viewerInSpecialWarningArea）
     final showAd = _index != 4 && !widget.app.viewerInSpecialWarningArea;
+    final catalogBanner = CatalogLoadBanner.shouldShow(widget.app);
     return Scaffold(
       body: Column(
         children: [
+          if (catalogBanner) CatalogLoadBanner(app: widget.app),
           Expanded(
-            child: IndexedStack(
-              index: _index,
-              children: [
-                MapScreen(app: widget.app),
-                ListScreen(app: widget.app),
-                BosaiScreen(app: widget.app, visible: _bosaiVisible),
-                StockpileScreen(app: widget.app, visible: _stockpileVisible),
-                SettingsScreen(
-                  app: widget.app,
-                  localeController: widget.localeController,
-                ),
-              ],
+            // 案内が上端の余白（ノッチ）を使ったので、下の画面では二重に空けない
+            child: MediaQuery.removePadding(
+              context: context,
+              removeTop: catalogBanner,
+              child: IndexedStack(
+                index: _index,
+                children: [
+                  MapScreen(app: widget.app),
+                  ListScreen(app: widget.app),
+                  BosaiScreen(app: widget.app, visible: _bosaiVisible),
+                  StockpileScreen(app: widget.app, visible: _stockpileVisible),
+                  SettingsScreen(
+                    app: widget.app,
+                    localeController: widget.localeController,
+                  ),
+                ],
+              ),
             ),
           ),
           // 表示するタブのときだけ広告を組み立てる。

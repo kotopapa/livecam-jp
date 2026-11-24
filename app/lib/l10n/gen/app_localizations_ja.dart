@@ -3168,6 +3168,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get stockpileIntroCta => 'まずは水と食料から確かめてみてください。';
+
+  @override
+  String get catalogLoading => 'カメラの情報を読み込んでいます…';
+
+  @override
+  String get catalogLoadFailed => 'カメラの情報を読み込めませんでした。通信状況を確かめて、もう一度お試しください。';
 }
 
 /// The translations for Japanese, using the Hiragana script (`ja_Hira`).
@@ -6383,4 +6389,11 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get stockpileIntroCta => 'まず 水（みず）と たべものから たしかめて ください。';
+
+  @override
+  String get catalogLoading => 'カメラの じょうほうを よみこみちゅう…';
+
+  @override
+  String get catalogLoadFailed =>
+      'カメラの じょうほうを よみこめませんでした。つうしんを たしかめて、もう一回 ためしてください。';
 }

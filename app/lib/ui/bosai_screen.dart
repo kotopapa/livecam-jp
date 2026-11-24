@@ -744,18 +744,21 @@ class _BosaiScreenState extends State<BosaiScreen>
 
   Widget _buildQuakeTab() {
     final l10n = context.l10n;
+    // 再読み込みで _quakes が null に戻っても、表示中の一覧の遅延ビルドが落ちないよう
+    // この build の時点の一覧を使う（Crashlytics: Null check operator、2026-11）
+    final quakes = _quakes;
     return _error != null
           ? Center(child: Text(_error!))
-          : _quakes == null
+          : quakes == null
               ? const Center(child: CircularProgressIndicator())
-              : _quakes!.isEmpty
+              : quakes.isEmpty
                   ? Center(child: Text(l10n.bosaiQuakeEmpty))
                   : ListView.separated(
-                      itemCount: _quakes!.length + 1,
+                      itemCount: quakes.length + 1,
                       separatorBuilder: (_, _) => const Divider(height: 1),
                       itemBuilder: (context, i) {
                         // 出典・操作のヒントは一覧の最下部（2026-11-08 ユーザー要望）
-                        if (i == _quakes!.length) {
+                        if (i == quakes.length) {
                           final t = _fetchedAt;
                           final ts = t == null
                               ? ''
@@ -771,7 +774,7 @@ class _BosaiScreenState extends State<BosaiScreen>
                             ),
                           );
                         }
-                        final q = _quakes![i];
+                        final q = quakes[i];
                         return ListTile(
                           leading: Container(
                             width: 44,

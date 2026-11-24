@@ -31,7 +31,11 @@ class ApiClient {
     return _base.resolve(url);
   }
 
-  Future<ApiResponse> getJson(String url, {String? etag}) async {
+  /// [timeout] は本文を受け取り終えるまでの上限。大きいファイル（cameras は転送 1.5MB）は
+  /// 呼び出し側で長くする。既定の 15 秒だと、速度制限中の回線では初回起動で台帳が
+  /// 取れず、地図が空のままになっていた（2026-11 のレビュー「何も表示されない」）
+  Future<ApiResponse> getJson(String url,
+      {String? etag, Duration timeout = const Duration(seconds: 15)}) async {
     final headers = <String, String>{
       'Accept': 'application/json',
       'If-None-Match': ?etag,
@@ -39,7 +43,7 @@ class ApiClient {
     try {
       final resp = await _client
           .get(resolve(url), headers: headers)
-          .timeout(const Duration(seconds: 15));
+          .timeout(timeout);
       if (resp.statusCode == 304) {
         return const ApiResponse.notModified();
       }

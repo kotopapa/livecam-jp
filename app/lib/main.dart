@@ -77,6 +77,15 @@ Future<void> main() async {
   await AdFree.instance.load();
   // 表示言語（未設定なら端末の言語設定から自動判定。SPEC 1.4.0 多言語対応）
   final localeController = await LocaleController.load();
+  // 広告プラグインの内部初期化（_init）を、最初の広告を読み込む前に済ませる。
+  // MobileAds.instance に初めて触れたとき、プラグインはネイティブ側の広告を全部破棄する
+  // （ホットリスタート用の後始末）。これが下部バナーの読み込みより後（_initAds の 2 秒後）に
+  // 走ると、読み込んだばかりのバナーがネイティブ側だけ消え、iOS は AdWidget の生成時に
+  // 「Could not find an ad with id: 0」で落ちる（起動 1〜2 秒後。2026-11 の Crashlytics で
+  // iOS の最多。落ちない場合もその起動ではバナーが出ない）
+  try {
+    MobileAds.instance.hashCode;
+  } catch (_) {}
   runApp(LiveCamApp(
       app: app,
       onboardingDone: onboardingDone,

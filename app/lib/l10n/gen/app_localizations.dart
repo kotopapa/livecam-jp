@@ -5643,6 +5643,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'まずは水と食料から確かめてみてください。'**
   String get stockpileIntroCta;
+
+  /// No description provided for @catalogLoading.
+  ///
+  /// In ja, this message translates to:
+  /// **'カメラの情報を読み込んでいます…'**
+  String get catalogLoading;
+
+  /// No description provided for @catalogLoadFailed.
+  ///
+  /// In ja, this message translates to:
+  /// **'カメラの情報を読み込めませんでした。通信状況を確かめて、もう一度お試しください。'**
+  String get catalogLoadFailed;
 }
 
 class _AppLocalizationsDelegate

@@ -3294,4 +3294,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get stockpileIntroCta => 'Hãy bắt đầu kiểm tra từ nước và thực phẩm.';
+
+  @override
+  String get catalogLoading => 'Đang tải dữ liệu camera…';
+
+  @override
+  String get catalogLoadFailed =>
+      'Không tải được dữ liệu camera. Hãy kiểm tra kết nối và thử lại.';
 }

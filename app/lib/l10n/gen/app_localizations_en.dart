@@ -3284,4 +3284,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get stockpileIntroCta => 'Start by checking your water and food.';
+
+  @override
+  String get catalogLoading => 'Loading camera data…';
+
+  @override
+  String get catalogLoadFailed =>
+      'Couldn\'t load camera data. Check your connection and try again.';
 }

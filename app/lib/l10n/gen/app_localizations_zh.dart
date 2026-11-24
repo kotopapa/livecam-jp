@@ -3153,6 +3153,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get stockpileIntroCta => '请先从水和食品开始确认。';
+
+  @override
+  String get catalogLoading => '正在加载摄像头信息…';
+
+  @override
+  String get catalogLoadFailed => '无法加载摄像头信息。请检查网络连接后重试。';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6304,4 +6310,10 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get stockpileIntroCta => '請先從水和食品開始確認。';
+
+  @override
+  String get catalogLoading => '正在載入攝影機資訊…';
+
+  @override
+  String get catalogLoadFailed => '無法載入攝影機資訊。請檢查網路連線後再試一次。';
 }

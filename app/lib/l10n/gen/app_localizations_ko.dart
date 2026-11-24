@@ -3181,4 +3181,11 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get stockpileIntroCta => '먼저 물과 식량부터 확인해 보십시오.';
+
+  @override
+  String get catalogLoading => '카메라 정보를 불러오는 중…';
+
+  @override
+  String get catalogLoadFailed =>
+      '카메라 정보를 불러오지 못했습니다. 통신 상태를 확인한 후 다시 시도해 주세요.';
 }

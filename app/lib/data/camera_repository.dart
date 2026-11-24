@@ -48,6 +48,11 @@ class CameraRepository {
 
   /// manifest と cameras だけを更新する。地図のピンはこれだけで出せるので、
   /// 起動時は status（大きい）を待たずにここまでで先に画面へ反映する
+  /// cameras（転送 約1.5MB）と status（軽量版 約0.2MB）の受信の上限。
+  /// 128kbps まで落ちた回線でも cameras が取り切れる長さにする
+  static const catalogTimeout = Duration(seconds: 120);
+  static const statusTimeout = Duration(seconds: 45);
+
   Future<bool> refreshCatalog() async {
     var updated = false;
 
@@ -68,7 +73,8 @@ class CameraRepository {
     final wantVersion = manifest?.camerasVersion;
     if (manifest != null && (cameras.isEmpty || currentVersion != wantVersion)) {
       final cResp = await api.getJson(manifest!.camerasUrl,
-          etag: (await cache.readMeta('cameras'))?.etag);
+          etag: (await cache.readMeta('cameras'))?.etag,
+          timeout: catalogTimeout);
       if (cResp.result == ApiResult.success) {
         cameras = Camera.listFromJson(cResp.json);
         await cache.write('cameras', cResp.body!,
@@ -91,7 +97,7 @@ class CameraRepository {
       // 軽量版があればそちらを取る（ok 以外だけなので転送量が小さい）
       final sResp = await api.getJson(
           manifest!.statusLiteUrl ?? manifest!.statusUrl,
-          etag: sMeta?.etag);
+          etag: sMeta?.etag, timeout: statusTimeout);
       if (sResp.result == ApiResult.success) {
         status = StatusFile.fromJson(sResp.json);
         await cache.write('status', sResp.body!, etag: sResp.etag);
