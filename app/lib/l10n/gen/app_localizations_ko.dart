@@ -727,6 +727,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get detailOpenOriginalPage => '원본 페이지에서 보기';
 
   @override
+  String get detailWatchVideo => '동영상으로 보기';
+
+  @override
   String get detailReportProblem => '이 카메라의 문제 신고';
 
   @override

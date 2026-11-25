@@ -152,6 +152,61 @@ void main() {
       await tester.pumpWidget(const SizedBox());
     });
 
+    test('海上保安庁の静止画カメラだけ、公式プレーヤーのページが決まる', () {
+      Camera still(String url, {FeedType type = FeedType.stillImage}) => Camera(
+            id: 'k', name: 'k', category: 'coast', prefecture: '06',
+            feed: Feed(type: type, url: url),
+            operator: '海上保安庁', attribution: '出典：海上保安庁',
+          );
+      expect(
+          still('https://camera.mics.kaiho.mlit.go.jp/thumbnail/sakata_lt.jpg')
+              .officialVideoPageUrl,
+          'https://camera.mics.kaiho.mlit.go.jp/camstream/sakata_lt/');
+      expect(still('https://example.jp/thumbnail/sakata_lt.jpg').officialVideoPageUrl,
+          isNull);
+      expect(
+          still('https://camera.mics.kaiho.mlit.go.jp/thumbnail/../x.jpg')
+              .officialVideoPageUrl,
+          isNull);
+      expect(
+          still('https://camera.mics.kaiho.mlit.go.jp/thumbnail/sakata_lt.jpg',
+                  type: FeedType.webPage)
+              .officialVideoPageUrl,
+          isNull);
+    });
+
+    testWidgets('公式プレーヤーのあるカメラは、静止画の上に「動画で見る」が出る',
+        (tester) async {
+      tester.view.physicalSize = const Size(1200, 3200);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.reset);
+      SharedPreferences.setMockInitialValues({});
+      final app = AppState(CameraRepository(
+        api: ApiClient(client: MockClient((_) async => http.Response('x', 404))),
+        cache: CacheStore(Directory(Directory.systemTemp.path)),
+      ));
+      await app.favorites.load();
+      Camera still(String id, String url) => Camera(
+            id: id, name: id, category: 'coast', prefecture: '06',
+            feed: Feed(type: FeedType.stillImage, url: url, refreshSec: 600),
+            operator: '海上保安庁', attribution: '出典：海上保安庁',
+            lat: 38.9, lng: 139.8, coordAccuracy: CoordAccuracy.exact,
+          );
+
+      await tester.pumpWidget(testApp(DetailScreen(
+          camera: still('kaiho',
+              'https://camera.mics.kaiho.mlit.go.jp/thumbnail/sakata_lt.jpg'),
+          app: app)));
+      expect(find.byKey(const ValueKey('detail_watch_video')), findsOneWidget);
+      expect(find.text('動画で見る'), findsOneWidget);
+      await tester.pumpWidget(const SizedBox());
+
+      await tester.pumpWidget(testApp(DetailScreen(
+          camera: still('other', 'https://example.jp/a.jpg'), app: app)));
+      expect(find.byKey(const ValueKey('detail_watch_video')), findsNothing);
+      await tester.pumpWidget(const SizedBox());
+    });
+
     testWidgets('観光系カメラには「この付近の宿を探す」が出て、警報中の県では伏せる',
         (tester) async {
       tester.view.physicalSize = const Size(1200, 3200);

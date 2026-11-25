@@ -722,6 +722,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get detailOpenOriginalPage => '元ページで見る';
 
   @override
+  String get detailWatchVideo => '動画で見る';
+
+  @override
   String get detailReportProblem => 'このカメラの不具合を報告';
 
   @override
@@ -3904,6 +3907,9 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get detailOpenOriginalPage => 'もとの ページで 見（み）る';
+
+  @override
+  String get detailWatchVideo => 'どうがで 見（み）る';
 
   @override
   String get detailReportProblem => 'この カメラの ちょうしが わるい ことを しらせる';

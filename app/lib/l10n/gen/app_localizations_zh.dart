@@ -714,6 +714,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get detailOpenOriginalPage => '在原页面查看';
 
   @override
+  String get detailWatchVideo => '观看视频';
+
+  @override
   String get detailReportProblem => '报告此摄像头的问题';
 
   @override
@@ -3869,6 +3872,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get detailOpenOriginalPage => '在原始頁面觀看';
+
+  @override
+  String get detailWatchVideo => '觀看影片';
 
   @override
   String get detailReportProblem => '回報這台攝影機的問題';

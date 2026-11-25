@@ -1450,6 +1450,12 @@ abstract class AppLocalizations {
   /// **'元ページで見る'**
   String get detailOpenOriginalPage;
 
+  /// No description provided for @detailWatchVideo.
+  ///
+  /// In ja, this message translates to:
+  /// **'動画で見る'**
+  String get detailWatchVideo;
+
   /// No description provided for @detailReportProblem.
   ///
   /// In ja, this message translates to:

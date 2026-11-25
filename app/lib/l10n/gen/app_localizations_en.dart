@@ -747,6 +747,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get detailOpenOriginalPage => 'Open the original page';
 
   @override
+  String get detailWatchVideo => 'Watch video';
+
+  @override
   String get detailReportProblem => 'Report a problem with this camera';
 
   @override

@@ -750,6 +750,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get detailOpenOriginalPage => 'Xem trang gốc';
 
   @override
+  String get detailWatchVideo => 'Xem video';
+
+  @override
   String get detailReportProblem => 'Báo lỗi của camera này';
 
   @override

@@ -179,6 +179,23 @@ class Camera {
       feed.type == FeedType.youtubeVideo ||
       feed.type == FeedType.hls;
 
+  static final _kaihoThumb = RegExp(
+      r'^https://camera\.mics\.kaiho\.mlit\.go\.jp/thumbnail/([A-Za-z0-9_]+)\.jpg$');
+
+  /// 静止画のカメラで、提供元が公式プレーヤーのページで動画も出しているときの URL。
+  /// アプリは動画を直接再生せず、このページを開く（静止画の上の「動画で見る」）。
+  ///
+  /// 海上保安庁の箇所別ライブカメラ（2026-11-25）: 静止画は 320x180 の代表画像だけで、
+  /// 動画（640x480）は公式プレーヤーが再生状況をサーバーへ送り、接続時間の制限と
+  /// カメラ別の公開停止を受ける作り。配信 URL を直接読むとその制限を通らないので、
+  /// 直接再生はしない
+  String? get officialVideoPageUrl {
+    if (feed.type != FeedType.stillImage) return null;
+    final m = _kaihoThumb.firstMatch(feed.url);
+    if (m == null) return null;
+    return 'https://camera.mics.kaiho.mlit.go.jp/camstream/${m.group(1)}/';
+  }
+
   /// 動画ライブとして見られるか。アプリ内再生できる[isVideo]に加え、
   /// 埋め込み不可のためYouTubeへ誘導する形(web_page)のライブも含む
   bool get isLiveVideo =>

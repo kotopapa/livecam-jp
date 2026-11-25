@@ -727,22 +727,46 @@ class _MediaView extends StatelessWidget {
                 camera.sourcePageUrl != null
             ? {'Referer': camera.sourcePageUrl!}
             : null;
+        final image = _ZoomableImage(
+          title: camera.name,
+          builder: (fullscreen) => Image.network(
+            url,
+            key: ValueKey('$url#$refreshTick#$fullscreen'),
+            fit: BoxFit.contain,
+            headers: headers,
+            errorBuilder: (_, _, _) =>
+                _MediaFallback(text: context.l10n.detailNoImage),
+            loadingBuilder: (_, child, progress) => progress == null
+                ? child
+                : const Center(child: CircularProgressIndicator()),
+          ),
+        );
+        // 提供元が公式プレーヤーで動画も出しているカメラは、静止画の上にそのページを
+        // 開くボタンを置く（動画の直接再生はしない。Camera.officialVideoPageUrl）
+        final videoPage = camera.officialVideoPageUrl;
         return AspectRatio(
           aspectRatio: 4 / 3,
-          child: _ZoomableImage(
-            title: camera.name,
-            builder: (fullscreen) => Image.network(
-              url,
-              key: ValueKey('$url#$refreshTick#$fullscreen'),
-              fit: BoxFit.contain,
-              headers: headers,
-              errorBuilder: (_, _, _) =>
-                  _MediaFallback(text: context.l10n.detailNoImage),
-              loadingBuilder: (_, child, progress) => progress == null
-                  ? child
-                  : const Center(child: CircularProgressIndicator()),
-            ),
-          ),
+          child: videoPage == null
+              ? image
+              : Stack(fit: StackFit.expand, children: [
+                  image,
+                  Positioned(
+                    right: 8,
+                    bottom: 8,
+                    child: FilledButton.icon(
+                      key: const ValueKey('detail_watch_video'),
+                      style: FilledButton.styleFrom(
+                        backgroundColor: Colors.black.withValues(alpha: 0.7),
+                        foregroundColor: Colors.white,
+                        visualDensity: VisualDensity.compact,
+                      ),
+                      onPressed: () => launchUrl(Uri.parse(videoPage),
+                          mode: LaunchMode.inAppBrowserView),
+                      icon: const Icon(Icons.play_circle_outline, size: 18),
+                      label: Text(context.l10n.detailWatchVideo),
+                    ),
+                  ),
+                ]),
         );
       case FeedType.mieDouro:
         // 三重県道路規制情報: 画像はAPI応答内のbase64のみ（直URLなし）
