@@ -1,5 +1,5 @@
 {
- "version": "2026-11-25T16:49:02Z",
+ "version": "2026-11-25T17:23:57Z",
  "sources": [
   {
    "id": "mlit",
@@ -7,7 +7,7 @@
    "operator": "国土交通省",
    "url": "https://www.road-info-prvs.mlit.go.jp/roadinfo/",
    "attribution": "出典：国土交通省 道路情報提供システム",
-   "fetched_at": "2026-11-25T16:49:02Z",
+   "fetched_at": "2026-11-25T17:23:57Z",
    "items": [
     {
      "id": "243cfddc20b23f3f",
@@ -34352,17 +34352,17 @@
      ]
     },
     {
-     "id": "243d0f29bba84a8b",
+     "id": "243d0f53a47e528a",
      "name": "E25名阪国道",
      "section": "五ヶ谷ＩＣ",
      "kind": "車線規制（高速（国交省））",
      "direction": "上り",
      "cause": "故障車",
-     "content": "路肩規制",
+     "content": "登坂車線規制",
      "lat": 34.6292714181926,
      "lng": 135.882136546466,
      "level": 1,
-     "label": "路肩規制（故障車）",
+     "label": "登坂車線規制（故障車）",
      "at": "2026年11月26日 00:15",
      "lines": [
       [
@@ -51739,13 +51739,13 @@
    "start": "",
    "status": "実施中"
   },
-  "243d0f29bba84a8b": {
+  "243d0f53a47e528a": {
    "kind": "車線規制（高速（国交省））",
    "route": "E25名阪国道",
    "direction": "上り",
    "from": "五ヶ谷ＩＣ",
    "to": "-",
-   "content": "路肩規制",
+   "content": "登坂車線規制",
    "cause": "故障車",
    "start": "2026年11月26日 00:15",
    "status": "実施中"
