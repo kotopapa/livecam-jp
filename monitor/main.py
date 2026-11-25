@@ -112,6 +112,20 @@ def _skip_low_freq(camera: dict, now: datetime) -> bool:
 CHANNEL_EXTRA_SEC = int(os.environ.get("MONITOR_CHANNEL_EXTRA_SEC", "180"))
 
 
+def group_by_channel(cams: list[dict]) -> list[list[dict]]:
+    """解決順に並んだ youtube_channel のカメラを、チャンネルごとにまとめる。
+
+    1 つのチャンネルが複数の拠点を同時配信している（東京都水防チャンネルは 30 台）ので、
+    922 台に対してチャンネルは 550（2026-11-25）。カメラごとに /streams を取り直すと
+    時間予算で毎回 6 割しか解決できなかった。まとめる順は、各チャンネルで最も古い
+    カメラの順（渡された並びで最初に現れた順）
+    """
+    groups: dict[str, list[dict]] = {}
+    for c in cams:
+        groups.setdefault(c["feed"]["url"], []).append(c)
+    return list(groups.values())
+
+
 def carry_live_fields(prev: dict | None, result: dict) -> dict:
     """死活確認の結果に、前回までに解決した配信ID（video_id / live）を引き継ぐ。
 
@@ -633,7 +647,7 @@ def run(shard: str | None = None, domestic: bool = False) -> int:
     resolved_channels = 0
     cut_channels = 0
 
-    def resolve_channel(cam: dict) -> None:
+    def resolve_channel(cam: dict, pages: dict[str, str | None]) -> None:
         nonlocal resolved_channels, cut_channels
         if time.monotonic() > channel_deadline:
             with lock:
@@ -656,17 +670,22 @@ def run(shard: str | None = None, domestic: bool = False) -> int:
         if not live_match:
             resolvers.append(("/live", resolve_youtube_channel_live))
         for path, resolver in resolvers:
-            try:
-                throttle.acquire("www.youtube.com")
+            # 同じチャンネルの別のカメラが取ったページを使い回す（pages はチャンネルごと）
+            if path not in pages:
+                pages[path] = None
                 try:
-                    resp = session.get(base + path, timeout=30, headers={"Accept-Language": "ja"})
-                finally:
-                    throttle.release("www.youtube.com")
-            except requests.RequestException as e:
-                print(f"youtube_channel解決失敗 {base}{path}: {e}", file=sys.stderr)
-                continue
-            if resp.status_code == 200:
-                vid = resolver(resp.text)
+                    throttle.acquire("www.youtube.com")
+                    try:
+                        resp = session.get(base + path, timeout=30, headers={"Accept-Language": "ja"})
+                    finally:
+                        throttle.release("www.youtube.com")
+                    if resp.status_code == 200:
+                        pages[path] = resp.text
+                except requests.RequestException as e:
+                    print(f"youtube_channel解決失敗 {base}{path}: {e}", file=sys.stderr)
+            text = pages[path]
+            if text is not None:
+                vid = resolver(text)
             if vid:
                 break
         with lock:
@@ -688,7 +707,16 @@ def run(shard: str | None = None, domestic: bool = False) -> int:
                 datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
 
     # youtube.com は throttle が同時2接続・1秒間隔を守るので、2本で回して待ち時間を重ねる
-    channel_threads = [threading.Thread(target=lambda i=i: [resolve_channel(c) for c in channel_cams[i::2]],
+    # 同じチャンネルのカメラはまとめて解決し、ページの取得は 1 チャンネル 1 回にする
+    channel_groups = group_by_channel(channel_cams)
+
+    def resolve_groups(groups: list[list[dict]]) -> None:
+        for group in groups:
+            pages: dict[str, str | None] = {}
+            for c in group:
+                resolve_channel(c, pages)
+
+    channel_threads = [threading.Thread(target=resolve_groups, args=(channel_groups[i::2],),
                                         daemon=True) for i in range(2)]
     for t in channel_threads:
         t.start()

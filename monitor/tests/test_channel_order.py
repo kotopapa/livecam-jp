@@ -28,3 +28,13 @@ def test_carry_live_fields_keeps_resolved_video():
     # 前回が無い・確認の結果が自分で値を持つときはそのまま
     assert carry_live_fields(None, {"state": "ok"}) == {"state": "ok"}
     assert carry_live_fields(prev, {"state": "ok", "video_id": "new"})["video_id"] == "new"
+
+
+def test_group_by_channel_keeps_oldest_first_order():
+    from monitor.main import group_by_channel
+    cams = [
+        {"id": "a", "feed": {"url": "CH1"}},
+        {"id": "b", "feed": {"url": "CH2"}},
+        {"id": "c", "feed": {"url": "CH1"}},
+    ]
+    assert [[c["id"] for c in g] for g in group_by_channel(cams)] == [["a", "c"], ["b"]]
