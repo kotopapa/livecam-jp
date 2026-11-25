@@ -112,6 +112,22 @@ def _skip_low_freq(camera: dict, now: datetime) -> bool:
 CHANNEL_EXTRA_SEC = int(os.environ.get("MONITOR_CHANNEL_EXTRA_SEC", "180"))
 
 
+def carry_live_fields(prev: dict | None, result: dict) -> dict:
+    """死活確認の結果に、前回までに解決した配信ID（video_id / live）を引き継ぐ。
+
+    確認の結果は status を丸ごと置き換える。配信IDの解決は時間予算で毎回 6 割ほどしか
+    回らないので、その回に確認だけ済んで解決が回らなかったカメラは video_id が消え、
+    次に解決が回るまで（30〜60 分）アプリが live_stream?channel= の埋め込みに落ちて
+    「この動画は再生できません」になっていた（2026-11-25 江古田川西原橋の利用者報告。
+    936 台中 61 台がこの状態）。解決が回った回は resolve_channel が上書きする
+    """
+    if prev:
+        for k in ("video_id", "live"):
+            if k in prev and k not in result:
+                result[k] = prev[k]
+    return result
+
+
 def channel_resolution_order(cams: list[dict], state_all: dict) -> list[dict]:
     """youtube_channel の解決順: 一度も解決していないもの → 解決が古い順。
 
@@ -576,7 +592,7 @@ def run(shard: str | None = None, domestic: bool = False) -> int:
             throttle.release(host)
         with lock:
             state_all[camera["id"]] = st
-            statuses[camera["id"]] = result
+            statuses[camera["id"]] = carry_live_fields(statuses.get(camera["id"]), result)
 
     threads: list[threading.Thread] = []
     max_workers = 8                      # 全体の同時実行（ホスト別制限は throttle が担保）
