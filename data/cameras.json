@@ -1,5 +1,5 @@
 {
- "version": "2026-11-22T06:48:48Z",
+ "version": "2026-11-25T01:44:42Z",
  "urgent_version": "2026-10-10T23:18:20Z",
  "cameras": [
   {
@@ -944361,6 +944361,44 @@
    },
    "first_seen": "2026-11-22",
    "last_updated": "2026-11-22"
+  },
+  {
+   "id": "curated-still-takayama-91580020",
+   "name": "国道158号中部縦貫自動車道 平湯（平湯IC口交差点）",
+   "name_kana": null,
+   "lat": 36.186188,
+   "lng": 137.551573,
+   "coord_accuracy": "approx",
+   "category": "road",
+   "prefecture": "21",
+   "country": null,
+   "municipality": "21203",
+   "river_or_route": null,
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.cbr.mlit.go.jp/takayama/cctv/cctv_img/91580020.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.cbr.mlit.go.jp/takayama/cctv/cctv_awa.html"
+   },
+   "operator": "高山国道事務所",
+   "source": {
+    "page_url": "https://www.cbr.mlit.go.jp/takayama/cctv/cctv_awa.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：高山国道事務所"
+   },
+   "review": {
+    "status": "approved",
+    "reviewed_at": "2026-11-25",
+    "note": "user-request: 2026-11-25 利用者の追加要請（高山国道事務所・既採用の情報源）"
+   },
+   "first_seen": "2026-11-25",
+   "last_updated": "2026-11-25"
   }
  ]
 }
