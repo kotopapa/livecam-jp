@@ -2891,10 +2891,12 @@ cameras:
     lat: 35.1587
     lng: 129.1604
 
+  # 2026-11-25 チャンネル登録化（旧 pMaqsb26eSE。固定の枠は配信が終わっても検知できず「再生できません」が出た。題名にこの語を含む枠だけを選ぶ）
   - id: world-b9176e5f
     name: 釜山 松亭(GiGAeyes)
     operator: "GiGAeyes Live TV"
-    video_id: "pMaqsb26eSE"
+    channel_id: UCsy6UOjk8q7Ajq9yQ7iDAbA
+    live_match: [송정, Songjeong, 松亭]
     category: scenic
     country: "KR"
     lat: 35.1786
@@ -4212,20 +4214,24 @@ cameras:
     lat: 64.176
     lng: -51.725
   # 2026-10-14 配信枠更新: n8mJCRXGoXc → ZddW7k1ZXr4
+  # 2026-11-25 チャンネル登録化（旧 ZddW7k1ZXr4。固定の枠は配信が終わっても検知できず「再生できません」が出た。題名にこの語を含む枠だけを選ぶ）
   - id: world-db33f55a
     name: 江陵 江門海岸
     operator: GiGAeyes Live TV(KTテレコップ)
-    video_id: ZddW7k1ZXr4
+    channel_id: UCsy6UOjk8q7Ajq9yQ7iDAbA
+    live_match: [강문, Gangmun, 江門]
     category: coast
     country: KR
     lat: 37.7975
     lng: 128.912
     note: KTテレコップのCCTV配信。24時間
   # 2026-10-14 配信枠更新: _bQ-zPlmfx4 → AKcsJqkcRP0
+  # 2026-11-25 チャンネル登録化（旧 AKcsJqkcRP0。固定の枠は配信が終わっても検知できず「再生できません」が出た。題名にこの語を含む枠だけを選ぶ）
   - id: world-895dec5a
     name: ソウル 石村湖
     operator: GiGAeyes Live TV(KTテレコップ)
-    video_id: AKcsJqkcRP0
+    channel_id: UCsy6UOjk8q7Ajq9yQ7iDAbA
+    live_match: [석촌호수, Seokchon, 石村湖]
     category: scenic
     country: KR
     lat: 37.5085
@@ -4271,10 +4277,12 @@ cameras:
     country: KR
     lat: 37.5205
     lng: 127.087
+  # 2026-11-25 チャンネル登録化（旧 CQO1Ka7HqCg。固定の枠は配信が終わっても検知できず「再生できません」が出た。題名にこの語を含む枠だけを選ぶ）
   - id: world-4ae6fabd
     name: 大田 エキスポ科学公園 ハンビッ広場
     operator: GiGAeyes Live TV(KTテレコップ)
-    video_id: CQO1Ka7HqCg
+    channel_id: UCsy6UOjk8q7Ajq9yQ7iDAbA
+    live_match: [대전엑스포, ExpoSciencePark, エキスポ科学公園]
     category: scenic
     country: KR
     lat: 36.3752

@@ -1,5 +1,5 @@
 {
- "version": "2026-11-25T03:49:22Z",
+ "version": "2026-11-25T10:27:32Z",
  "urgent_version": "2026-10-10T23:18:20Z",
  "cameras": [
   {
@@ -890761,19 +890761,24 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "CQO1Ka7HqCg",
+    "type": "youtube_channel",
+    "url": "UCsy6UOjk8q7Ajq9yQ7iDAbA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "대전엑스포",
+     "ExpoSciencePark",
+     "エキスポ科学公園"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=CQO1Ka7HqCg"
+    "url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live"
    },
    "operator": "GiGAeyes Live TV(KTテレコップ)",
    "source": {
-    "page_url": "https://www.kttelecop.co.kr",
+    "page_url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：GiGAeyes Live TV(KTテレコップ)（YouTubeライブ）"
@@ -890781,10 +890786,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-09-02",
-    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用"
+    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用 / 2026-11-25 チャンネル登録化（旧 CQO1Ka7HqCg）: 利用者報告（終了した枠が「再生できません」）"
    },
    "first_seen": "2026-09-02",
-   "last_updated": "2026-09-02"
+   "last_updated": "2026-11-25"
   },
   {
    "id": "world-4b0f3b3d",
@@ -900025,19 +900030,24 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "AKcsJqkcRP0",
+    "type": "youtube_channel",
+    "url": "UCsy6UOjk8q7Ajq9yQ7iDAbA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "석촌호수",
+     "Seokchon",
+     "石村湖"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=AKcsJqkcRP0"
+    "url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live"
    },
    "operator": "GiGAeyes Live TV(KTテレコップ)",
    "source": {
-    "page_url": "https://www.kttelecop.co.kr",
+    "page_url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：GiGAeyes Live TV(KTテレコップ)（YouTubeライブ）"
@@ -900045,10 +900055,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-09-02",
-    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用 2026-10-14 配信枠更新: _bQ-zPlmfx4 → AKcsJqkcRP0（旧枠は配信終了、チャンネルの現行ライブへ追従）"
+    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用 2026-10-14 配信枠更新: _bQ-zPlmfx4 → AKcsJqkcRP0（旧枠は配信終了、チャンネルの現行ライブへ追従） / 2026-11-25 チャンネル登録化（旧 AKcsJqkcRP0）: 利用者報告（終了した枠が「再生できません」）"
    },
    "first_seen": "2026-09-02",
-   "last_updated": "2026-10-14"
+   "last_updated": "2026-11-25"
   },
   {
    "id": "world-899db03a",
@@ -907193,19 +907203,24 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "pMaqsb26eSE",
+    "type": "youtube_channel",
+    "url": "UCsy6UOjk8q7Ajq9yQ7iDAbA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "송정",
+     "Songjeong",
+     "松亭"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=pMaqsb26eSE"
+    "url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live"
    },
    "operator": "GiGAeyes Live TV",
    "source": {
-    "page_url": "https://www.youtube.com/watch?v=tQ9tse8cTy4",
+    "page_url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：GiGAeyes Live TV（YouTubeライブ）"
@@ -907213,10 +907228,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-08-20",
-    "note": "bulk: license=unknown with_coords=True"
+    "note": "bulk: license=unknown with_coords=True / 2026-11-25 チャンネル登録化（旧 pMaqsb26eSE）: 利用者報告（終了した枠が「再生できません」）"
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-20"
+   "last_updated": "2026-11-25"
   },
   {
    "id": "world-b92623f7",
@@ -912405,19 +912420,24 @@
    "municipality": null,
    "river_or_route": null,
    "feed": {
-    "type": "youtube_video",
-    "url": "ZddW7k1ZXr4",
+    "type": "youtube_channel",
+    "url": "UCsy6UOjk8q7Ajq9yQ7iDAbA",
     "refresh_sec": null,
     "requires_referer": false,
-    "headers": {}
+    "headers": {},
+    "live_match": [
+     "강문",
+     "Gangmun",
+     "江門"
+    ]
    },
    "fallback": {
     "type": "web_page",
-    "url": "https://www.youtube.com/watch?v=ZddW7k1ZXr4"
+    "url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live"
    },
    "operator": "GiGAeyes Live TV(KTテレコップ)",
    "source": {
-    "page_url": "https://www.kttelecop.co.kr",
+    "page_url": "https://www.youtube.com/channel/UCsy6UOjk8q7Ajq9yQ7iDAbA/live",
     "terms_url": null,
     "license": "unknown",
     "attribution": "映像提供：GiGAeyes Live TV(KTテレコップ)（YouTubeライブ）"
@@ -912425,10 +912445,10 @@
    "review": {
     "status": "approved",
     "reviewed_at": "2026-09-02",
-    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用。KTテレコップのCCTV配信。24時間 2026-10-14 配信枠更新: n8mJCRXGoXc → ZddW7k1ZXr4（旧枠は配信終了、チャンネルの現行ライブへ追従）"
+    "note": "bulk: 2026-09-02 海外の観光地・絶景ライブカメラ調査(ユーザー依頼)。isLiveNow・oEmbed確認済み、license=unknown 人手方針に従い採用。KTテレコップのCCTV配信。24時間 2026-10-14 配信枠更新: n8mJCRXGoXc → ZddW7k1ZXr4（旧枠は配信終了、チャンネルの現行ライブへ追従） / 2026-11-25 チャンネル登録化（旧 ZddW7k1ZXr4）: 利用者報告（終了した枠が「再生できません」）"
    },
    "first_seen": "2026-09-02",
-   "last_updated": "2026-10-14"
+   "last_updated": "2026-11-25"
   },
   {
    "id": "world-dc54b887",
