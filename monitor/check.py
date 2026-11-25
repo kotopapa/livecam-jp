@@ -414,6 +414,23 @@ def find_live_in_streams(text: str) -> str | None:
     return lives[0][0] if lives else None
 
 
+def oembed_has_no_metadata(resp) -> bool:
+    """oEmbed が 200 なのに題名もチャンネルも返さないか。
+
+    配信が終わって記録を見られない枠（「このライブ ストリームの記録は、ご覧いただけません」）と
+    開始待ちのまま止まっている枠は、oEmbed が 200 のまま title・author_url を落とす
+    （2026-11-25 に手元で 180 台を watch ページの判定と突き合わせ: 終了 6 台は全部これに
+    当たり、配信中 174 台で当たったのは開始待ちの 1 台だけ）。配信中なら必ず両方が入る
+    """
+    try:
+        data = json.loads(resp.text)
+    except ValueError:
+        return False
+    if not isinstance(data, dict) or not data.get("html"):
+        return False
+    return not data.get("title") and not data.get("author_url")
+
+
 def _check_youtube(session, camera, state, now, prev_failures) -> dict:
     """oEmbed / チャンネルURLの応答コードで判定する（Data APIは使わない）。
 
@@ -450,6 +467,12 @@ def _check_youtube(session, camera, state, now, prev_failures) -> dict:
         if watch is not None and "ytInitialPlayerResponse" in watch.text:
             if not _youtube_watch_alive(watch.text, now):
                 return _fail(state, now, prev_failures, resp.status_code)
+        elif oembed_has_no_metadata(resp):
+            # watch ページが読めない回（ランナーでは大半）の代わりの判定。main.py が
+            # 回全体の件数を見てから失敗として数える（apply_oembed_empty）
+            held = _hold(state, prev_failures, resp.status_code)
+            held["_oembed_empty"] = True
+            return held
         elif prev_failures > 0 or state.get("last_ok_at"):
             # 判定材料が無い応答（429・同意画面等のシェル・取得失敗）では oEmbed の 200 だけで
             # 「正常」にしない。GitHub Actions では watch ページが取れない回が混ざり、終わった

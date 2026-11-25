@@ -441,3 +441,19 @@ def test_mlit_roadinfo_publishes_large_image_and_thumb(monkeypatch):
     assert r["image_url"] == small.replace("/s_", "/")
     assert r["thumb_url"] == small
     assert r["image_time"] == "2026-11-02 03:00:36"
+
+
+_OEMBED_FULL = b'{"title":"Live Cam","author_url":"https://www.youtube.com/@x","html":"<iframe></iframe>"}'
+_OEMBED_EMPTY = b'{"type":"video","html":"<iframe></iframe>"}'
+
+
+def test_youtube_video_oembed_without_metadata_is_marked():
+    """watch ページが読めない回で、oEmbed に題名もチャンネルも無ければ印を付けて保留で返す"""
+    shell = FakeResponse(200, b"<html>shell</html>")
+    state = {"last_ok_at": "2026-11-07T00:00:00+00:00"}
+    r = check_camera(FakeSession([FakeResponse(200, _OEMBED_EMPTY), shell]), _yt_camera(), state)
+    assert r["_oembed_empty"] is True
+    assert r["state"] == "unknown" and r["consecutive_failures"] == 0
+    # 題名が入っていれば、これまでどおり印なしの保留
+    r = check_camera(FakeSession([FakeResponse(200, _OEMBED_FULL), shell]), _yt_camera(), state)
+    assert "_oembed_empty" not in r and r["state"] == "unknown"

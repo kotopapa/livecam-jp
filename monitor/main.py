@@ -30,7 +30,7 @@ except ImportError:
 
 from crawler.sources.base import mount_legacy_tls
 from monitor.domestic import is_domestic_only, merge_domestic
-from monitor.check import (USER_AGENT, check_camera, list_live_in_streams, pick_live_stream,
+from monitor.check import (ERROR_AFTER_FAILURES, USER_AGENT, check_camera, list_live_in_streams, pick_live_stream,
                            resolve_youtube_channel_live)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -140,6 +140,36 @@ def carry_live_fields(prev: dict | None, result: dict) -> dict:
             if k in prev and k not in result:
                 result[k] = prev[k]
     return result
+
+
+# oEmbed に題名が無い台がこの割合を超えた回は、YouTube 側の一時的な応答の変化とみなして
+# 判定を見送る（配信中のカメラをまとめて隠さないため）。手元の実測は 180 台中 7 台（4%）
+OEMBED_EMPTY_MAX_RATIO = 0.15
+OEMBED_EMPTY_MIN_ALLOWED = 10
+
+
+def apply_oembed_empty(statuses: dict, state_all: dict, empty_ids: list[str], checked: int) -> bool:
+    """oEmbed が題名もチャンネルも返さなかった youtube_video を、失敗 1 回として数える。
+
+    固定の動画IDは、配信が終わっても oEmbed が 200 のままで、ランナーからは watch ページも
+    読めない回が大半なので、前回の判定を保ったまま地図に出続けていた（2026-11-25 江陵
+    江門海岸。「動画を再生できません」）。check 側は保留で返し、ここで回全体の件数を見てから
+    数える。ERROR_AFTER_FAILURES 回続くと error（地図に出さない）になり、配信が戻れば
+    次の確認で ok に戻る。数えたら True、割合が高すぎて見送ったら False
+    """
+    if not empty_ids:
+        return False
+    if len(empty_ids) > max(OEMBED_EMPTY_MIN_ALLOWED, checked * OEMBED_EMPTY_MAX_RATIO):
+        return False
+    for cid in empty_ids:
+        st = state_all.setdefault(cid, {})
+        failures = st.get("consecutive_failures", 0) + 1
+        st["consecutive_failures"] = failures
+        rec = statuses.get(cid)
+        if rec is not None:
+            rec["consecutive_failures"] = failures
+            rec["state"] = "error" if failures >= ERROR_AFTER_FAILURES else "unknown"
+    return True
 
 
 def channel_resolution_order(cams: list[dict], state_all: dict) -> list[dict]:
@@ -596,6 +626,9 @@ def run(shard: str | None = None, domestic: bool = False) -> int:
             if cam["id"] in sakura_by_id:
                 cam["_mie_bytes"], cam["_mie_time"] = sakura_by_id[cam["id"]]
 
+    video_checked: list[str] = []   # この回に確認した youtube_video
+    oembed_empty: list[str] = []    # うち、oEmbed が題名もチャンネルも返さなかったもの
+
     def work(camera: dict):
         host = monitor_host(camera)
         throttle.acquire(host)
@@ -605,6 +638,10 @@ def run(shard: str | None = None, domestic: bool = False) -> int:
         finally:
             throttle.release(host)
         with lock:
+            if camera["feed"]["type"] == "youtube_video":
+                video_checked.append(camera["id"])
+            if result.pop("_oembed_empty", False):
+                oembed_empty.append(camera["id"])
             state_all[camera["id"]] = st
             statuses[camera["id"]] = carry_live_fields(statuses.get(camera["id"]), result)
 
@@ -632,6 +669,12 @@ def run(shard: str | None = None, domestic: bool = False) -> int:
         threads.append(t)
     for t in threads:
         t.join()
+
+    applied = apply_oembed_empty(statuses, state_all, oembed_empty, len(video_checked))
+    if oembed_empty:
+        print(f"youtube_video {len(video_checked)} 台のうち oEmbed に題名が無い {len(oembed_empty)} 台"
+              + ("を配信終了として数えた" if applied else "は割合が高すぎるので判定を見送った"),
+              file=sys.stderr)
 
     # youtube_channel: いまの配信の動画IDを毎回解決して status.json の video_id で配信する。
     # アプリはこれがあれば動画IDで埋め込む（live_stream?channel= は再生できないことがある）。
