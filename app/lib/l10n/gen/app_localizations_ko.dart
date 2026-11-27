@@ -1097,6 +1097,15 @@ class AppLocalizationsKo extends AppLocalizations {
   String get bosaiTabHeat => '열사병';
 
   @override
+  String get bosaiWarnHereTitle => '현재 위치의 경보·주의보';
+
+  @override
+  String get bosaiWarnHereNone => '발표 중인 경보·주의보가 없습니다';
+
+  @override
+  String get bosaiWarnHereUnavailable => '현재 위치의 경보·주의보를 가져오지 못했습니다';
+
+  @override
   String get bosaiNoWarnings => '현재 발표 중인 경보·주의보가 없습니다';
 
   @override

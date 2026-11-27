@@ -1083,6 +1083,15 @@ class AppLocalizationsZh extends AppLocalizations {
   String get bosaiTabHeat => '中暑';
 
   @override
+  String get bosaiWarnHereTitle => '当前位置的警报和注意报';
+
+  @override
+  String get bosaiWarnHereNone => '没有正在发布的警报和注意报';
+
+  @override
+  String get bosaiWarnHereUnavailable => '无法获取当前位置的警报和注意报';
+
+  @override
   String get bosaiNoWarnings => '当前没有正在发布的警报和注意报';
 
   @override
@@ -4241,6 +4250,15 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get bosaiTabHeat => '中暑';
+
+  @override
+  String get bosaiWarnHereTitle => '目前位置的警報與注意報';
+
+  @override
+  String get bosaiWarnHereNone => '沒有發布中的警報與注意報';
+
+  @override
+  String get bosaiWarnHereUnavailable => '無法取得目前位置的警報與注意報';
 
   @override
   String get bosaiNoWarnings => '目前沒有發布中的警報與注意報';

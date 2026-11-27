@@ -64,6 +64,32 @@ class ViewerArea {
     }
   }
 
+  /// 座標の市区町村コード（JIS 5桁。政令市は区）。海上・国外・失敗は null。
+  /// 気象警報タブの「現在地の警報・注意報」で、タブを開いたときに 1 回だけ呼ぶ
+  /// （位置が大きく変わらないかぎり呼び直さない。呼び出し側で控える）
+  Future<String?> municipalityOf(double lat, double lng) async {
+    try {
+      final uri = Uri.parse(endpoint).replace(queryParameters: {
+        'lat': lat.toStringAsFixed(5),
+        'lon': lng.toStringAsFixed(5),
+      });
+      final r = await _client
+          .get(uri, headers: _ua)
+          .timeout(const Duration(seconds: 10));
+      if (r.statusCode != 200) return null;
+      return parseMunicipality(utf8.decode(r.bodyBytes));
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// `{"results":{"muniCd":"19430","lv01Nm":"船津"}}` → "19430"
+  static String? parseMunicipality(String body) {
+    if (parsePrefecture(body) == null) return null;
+    final muni = ((jsonDecode(body) as Map)['results'] as Map)['muniCd'] as String;
+    return muni.length == 5 && int.tryParse(muni) != null ? muni : null;
+  }
+
   /// 端末の最後の既知位置（許可済みのときだけ。ダイアログは出さない）
   static Future<Position?> lastKnownPosition() async {
     try {

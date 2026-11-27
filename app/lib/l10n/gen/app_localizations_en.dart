@@ -1128,6 +1128,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get bosaiTabHeat => 'Heat';
 
   @override
+  String get bosaiWarnHereTitle => 'Warnings where you are';
+
+  @override
+  String get bosaiWarnHereNone => 'No warnings or advisories in effect';
+
+  @override
+  String get bosaiWarnHereUnavailable =>
+      'Could not get warnings for your location';
+
+  @override
   String get bosaiNoWarnings =>
       'No warnings or advisories are currently in effect';
 

@@ -1132,6 +1132,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get bosaiTabHeat => 'Sốc nhiệt';
 
   @override
+  String get bosaiWarnHereTitle => 'Cảnh báo tại vị trí của bạn';
+
+  @override
+  String get bosaiWarnHereNone => 'Không có cảnh báo hay thông tin lưu ý nào';
+
+  @override
+  String get bosaiWarnHereUnavailable =>
+      'Không lấy được cảnh báo tại vị trí của bạn';
+
+  @override
   String get bosaiNoWarnings =>
       'Hiện không có cảnh báo hay thông tin lưu ý nào đang được công bố';
 

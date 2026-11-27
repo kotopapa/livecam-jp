@@ -1092,6 +1092,15 @@ class AppLocalizationsJa extends AppLocalizations {
   String get bosaiTabHeat => '熱中症';
 
   @override
+  String get bosaiWarnHereTitle => '現在地の警報・注意報';
+
+  @override
+  String get bosaiWarnHereNone => '発表中の警報・注意報はありません';
+
+  @override
+  String get bosaiWarnHereUnavailable => '現在地の警報・注意報を取得できませんでした';
+
+  @override
   String get bosaiNoWarnings => '現在、発表中の警報・注意報はありません';
 
   @override
@@ -4278,6 +4287,15 @@ class AppLocalizationsJaHira extends AppLocalizationsJa {
 
   @override
   String get bosaiTabHeat => 'ねっちゅうしょう';
+
+  @override
+  String get bosaiWarnHereTitle => 'いま いる ばしょの けいほう・ちゅういほう';
+
+  @override
+  String get bosaiWarnHereNone => 'けいほうと ちゅういほうは 出（で）て いません';
+
+  @override
+  String get bosaiWarnHereUnavailable => 'いま いる ばしょの けいほうを しらべられませんでした';
 
   @override
   String get bosaiNoWarnings => 'いま、けいほうと ちゅういほうは 出（で）て いません';

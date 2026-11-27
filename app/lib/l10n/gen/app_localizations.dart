@@ -2128,6 +2128,24 @@ abstract class AppLocalizations {
   /// **'熱中症'**
   String get bosaiTabHeat;
 
+  /// No description provided for @bosaiWarnHereTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在地の警報・注意報'**
+  String get bosaiWarnHereTitle;
+
+  /// No description provided for @bosaiWarnHereNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'発表中の警報・注意報はありません'**
+  String get bosaiWarnHereNone;
+
+  /// No description provided for @bosaiWarnHereUnavailable.
+  ///
+  /// In ja, this message translates to:
+  /// **'現在地の警報・注意報を取得できませんでした'**
+  String get bosaiWarnHereUnavailable;
+
   /// No description provided for @bosaiNoWarnings.
   ///
   /// In ja, this message translates to:

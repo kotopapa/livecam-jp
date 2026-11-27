@@ -22,6 +22,8 @@ import '../data/jma_flood.dart';
 import '../data/jma_tsunami.dart';
 import '../data/jma_layers.dart';
 import '../data/jma_typhoon.dart';
+import '../data/muni_warnings.dart';
+import '../data/viewer_area.dart';
 import '../data/quake_intensity.dart';
 import '../data/ward_names.dart';
 import '../models/camera.dart';
@@ -30,6 +32,7 @@ import '../util/jst.dart';
 import '../util/prefectures.dart';
 import 'ad_banner.dart';
 import 'detail_screen.dart';
+import 'here_warning_card.dart';
 import 'stockpile_screen.dart';
 import 'x_accounts_screen.dart';
 import 'camera_thumb.dart';
@@ -229,6 +232,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     final officeFuture = _loadClass10Offices()
         .catchError((_) => const <String, String>{});
     _loadTyphoonAndFlood();
+    _loadHereWarnings();
     try {
       final resp = await _getWarningMap();
       final class10Office = await officeFuture;
@@ -316,6 +320,84 @@ class _BosaiScreenState extends State<BosaiScreen>
         }
       });
     }
+  }
+
+  // ---- 現在地の警報・注意報（気象警報タブの先頭のカード）----
+
+  HereWarningStatus _hereStatus = HereWarningStatus.loading;
+  MuniWarnings? _hereWarnings;
+
+  /// 現在地の市区町村（JIS 5桁）と、それを求めた位置。位置が 1km 以上動くまで逆ジオコーダを呼び直さない
+  String? _hereMuni;
+  (double, double)? _herePos;
+  bool _hereLoading = false;
+
+  /// 現在地の市区町村に発表中の警報・注意報を取る。位置情報の許可は新たに求めない。
+  /// 失敗しても前回の内容があれば残す（取得中に「発表なし」に見せない）
+  Future<void> _loadHereWarnings() async {
+    if (_hereLoading) return;
+    _hereLoading = true;
+    try {
+      final pos = await _lastKnownLocation();
+      if (!mounted) return;
+      if (pos == null) {
+        setState(() {
+          _hereStatus = HereWarningStatus.noLocation;
+          _hereWarnings = null;
+        });
+        return;
+      }
+      final prev = _herePos;
+      if (_hereMuni == null ||
+          prev == null ||
+          distanceMeters(prev.$1, prev.$2, pos.$1, pos.$2) > 1000) {
+        final muni = await ViewerArea().municipalityOf(pos.$1, pos.$2);
+        if (!mounted) return;
+        if (muni == null) {
+          if (_hereWarnings == null) {
+            setState(() => _hereStatus = HereWarningStatus.unavailable);
+          }
+          return;
+        }
+        if (muni != _hereMuni) _hereWarnings = null;
+        _hereMuni = muni;
+        _herePos = pos;
+      }
+      await MunicipalityNames.load().catchError((_) {});
+      final w = await MuniWarnings.fetchForMunicipality(_hereMuni!,
+          maxAge: _staleAfter);
+      if (!mounted) return;
+      setState(() {
+        if (w != null) {
+          _hereWarnings = w;
+          _hereStatus = HereWarningStatus.ready;
+        } else if (_hereWarnings == null) {
+          _hereStatus = HereWarningStatus.unavailable;
+        }
+      });
+    } finally {
+      _hereLoading = false;
+    }
+  }
+
+  Widget _hereWarningCard() {
+    final muni = _hereMuni;
+    final pos = _herePos;
+    final place = muni == null ? '' : municipalityNameOf(muni);
+    return HereWarningCard(
+      status: _hereStatus,
+      warnings: _hereWarnings,
+      placeName: place,
+      onTap: pos == null
+          ? null
+          : () => Navigator.of(context).push(MaterialPageRoute<void>(
+              builder: (_) => NearbyCamerasScreen(
+                    app: widget.app,
+                    title: context.l10n.bosaiNearbyCamerasTitle(place),
+                    lat: pos.$1,
+                    lng: pos.$2,
+                  ))),
+    );
   }
 
   /// 警報マップの取得（キャッシュ無効化つき。1回だけ再試行する）
@@ -1031,6 +1113,7 @@ class _BosaiScreenState extends State<BosaiScreen>
     }
     if (_warnings!.isEmpty && (_advisories?.isEmpty ?? true)) {
       return ListView(children: [
+        _hereWarningCard(),
         ..._extraSections(),
         const SizedBox(height: 72),
         Center(child: Text(context.l10n.bosaiNoWarnings)),
@@ -1062,6 +1145,7 @@ class _BosaiScreenState extends State<BosaiScreen>
           final bar = _warningFreshnessBar();
           return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             ?bar,
+            _hereWarningCard(),
             ..._extraSections(),
           ]);
         }
