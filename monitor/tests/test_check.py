@@ -93,7 +93,7 @@ def test_stale_last_modified_is_frozen_immediately():
     r = check_camera(FakeSession([stale]), _camera(), state, now=datetime(2026, 4, 20, tzinfo=timezone.utc))
     assert r["state"] == "frozen"
     assert r["frozen_since"].startswith("2026-03-31")
-    # 90日を過ぎると error（アプリで非表示）
+    # 30日を過ぎると error（アプリで非表示）
     r = check_camera(FakeSession([stale]), _camera(), {}, now=datetime(2026, 10, 17, tzinfo=timezone.utc))
     assert r["state"] == "error" and r["frozen_since"].startswith("2026-03-31")
 
@@ -401,14 +401,16 @@ def test_monitor_budget_skips_after_deadline(tmp_path, monkeypatch):
 
 
 def test_long_frozen_is_hidden_as_error():
-    """画像が止まって90日を過ぎたら error（アプリで非表示）、それ未満は frozen のまま。"""
+    """画像が止まって30日を過ぎたら error（アプリで非表示）、それ未満は frozen のまま。"""
     from datetime import datetime, timezone
     from monitor.check import _hide_long_frozen
     now = datetime(2026, 10, 17, tzinfo=timezone.utc)
     r = {"state": "frozen", "frozen_since": "2024-10-31T03:02:09+00:00"}
     assert _hide_long_frozen(r, now)["state"] == "error"
-    r = {"state": "frozen", "frozen_since": "2026-09-01T00:00:00+00:00"}
-    assert _hide_long_frozen(r, now)["state"] == "frozen"
+    r = {"state": "frozen", "frozen_since": "2026-09-17T00:00:00+00:00"}
+    assert _hide_long_frozen(r, now)["state"] == "error"   # ちょうど 30 日
+    r = {"state": "frozen", "frozen_since": "2026-09-18T00:00:00+00:00"}
+    assert _hide_long_frozen(r, now)["state"] == "frozen"  # 29 日
     assert _hide_long_frozen({"state": "ok", "frozen_since": None}, now)["state"] == "ok"
 
 

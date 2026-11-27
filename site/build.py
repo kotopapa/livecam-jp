@@ -210,7 +210,7 @@ def build() -> int:
         yesterday = (now - timedelta(days=1)).strftime("%Y%m%d")
         frac = max(0.0, (24 - now.hour - now.minute / 60) / 24)
         entries = []
-        # アプリの地図・一覧で非表示（監視の state=error: 配信終了・非公開・90日以上の停止）の
+        # アプリの地図・一覧で非表示（監視の state=error: 配信終了・非公開・30日以上の停止）の
         # カメラもランキングから外す（2026-10-19 お気に入り1位に非公開の江ノ電が残っていた）
         hidden = {cid for cid, st in status.get("statuses", {}).items()
                   if isinstance(st, dict) and st.get("state") == "error"}
