@@ -306,6 +306,29 @@ def _youtube_watch_alive(text: str, now: datetime) -> bool:
     return (as_utc(now) - start).total_seconds() <= 48 * 3600
 
 
+_YT_SCHEDULED_RE = re.compile(
+    r'"liveStreamOfflineSlateRenderer":\{"scheduledStartTime":"(\d+)"')
+# 予定時刻を過ぎた待機枠（「○○を待っています」）がこの時間続いたら、配信が止まったとみなす
+STALE_WAITING_HOURS = 48
+
+
+def _youtube_stale_waiting(text: str, now: datetime) -> bool:
+    """配信中でなく、予定時刻を 48 時間以上過ぎた待機枠か。
+
+    常時配信の枠は、配信機器が止まると「○○を待っています」の待機画面に戻り、予定時刻は
+    枠を作った日のまま残る（2026-11-28 富良野スキー場 北の峰: 予定 2023-04-27 の待機画面が
+    「ライブ配信中」として地図に出ていた）。機器が戻れば同じ ID で配信中に戻る
+    """
+    # 待機画面でも視聴者数の欄に "isLive":true が入るので、配信中かは isLiveNow だけで見る
+    if '"isLiveNow":true' in text:
+        return False
+    m = _YT_SCHEDULED_RE.search(text)
+    if not m:
+        return False
+    scheduled = datetime.fromtimestamp(int(m.group(1)), tz=timezone.utc)
+    return (as_utc(now) - scheduled).total_seconds() > STALE_WAITING_HOURS * 3600
+
+
 _YT_CANONICAL_WATCH_RE = re.compile(
     r'<link rel="canonical" href="https://www\.youtube\.com/watch\?v=([\w-]{11})"')
 
@@ -469,6 +492,13 @@ def _check_youtube(session, camera, state, now, prev_failures) -> dict:
         if watch is not None and "ytInitialPlayerResponse" in watch.text:
             if not _youtube_watch_alive(watch.text, now):
                 return _fail(state, now, prev_failures, resp.status_code)
+            if _youtube_stale_waiting(watch.text, now):
+                # 夜間だけ止める配信を隠さないよう、待機画面を最初に見てから 48 時間は待つ
+                since = state.setdefault("yt_waiting_since", now.isoformat())
+                if (as_utc(now) - parse_utc(since)).total_seconds() >= STALE_WAITING_HOURS * 3600:
+                    return _fail(state, now, prev_failures, resp.status_code)
+            else:
+                state.pop("yt_waiting_since", None)
         elif oembed_has_no_metadata(resp):
             # watch ページが読めない回（ランナーでは大半）の代わりの判定。main.py が
             # 回全体の件数を見てから失敗として数える（apply_oembed_empty）

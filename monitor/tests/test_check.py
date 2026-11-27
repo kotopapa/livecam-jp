@@ -184,6 +184,43 @@ def test_youtube_video_nightly_pause_stays_ok():
     assert r["state"] == "ok"
 
 
+def test_youtube_video_stale_waiting_fails_after_48h():
+    """予定時刻を大きく過ぎた待機枠は、待機画面を 48 時間見続けたら失敗として数える（富良野）。"""
+    from datetime import datetime, timedelta, timezone
+    # 待機画面でも視聴者数の欄に "isLive":true が入る（実物のページで確認）
+    page = (b'ytInitialPlayerResponse {"status":"LIVE_STREAM_OFFLINE","offlineSlate":'
+            b'{"liveStreamOfflineSlateRenderer":{"scheduledStartTime":"1682577600"}},'
+            b'"isUpcoming":true,"isLiveNow":false,"isLive":true}')
+    oembed = FakeResponse(200, b'{"html":"<iframe>"}')
+    t0 = datetime(2026, 11, 28, tzinfo=timezone.utc)
+    state: dict = {}
+    r = check_camera(FakeSession([oembed, FakeResponse(200, page)]), _yt_camera(), state, now=t0)
+    assert r["state"] == "ok" and state["yt_waiting_since"] == t0.isoformat()
+    r = check_camera(FakeSession([oembed, FakeResponse(200, page)]), _yt_camera(), state,
+                     now=t0 + timedelta(hours=47))
+    assert r["state"] == "ok"
+    r = check_camera(FakeSession([oembed, FakeResponse(200, page)]), _yt_camera(), state,
+                     now=t0 + timedelta(hours=48))
+    assert r["state"] == "unknown" and r["consecutive_failures"] == 1
+    # 配信が戻れば数え直す
+    live = FakeResponse(200, b'ytInitialPlayerResponse "isLiveNow":true,"isLive":true')
+    r = check_camera(FakeSession([oembed, live]), _yt_camera(), state, now=t0 + timedelta(hours=53))
+    assert r["state"] == "ok" and "yt_waiting_since" not in state
+
+
+def test_youtube_video_future_waiting_stays_ok():
+    """これから始まる予定枠は従来どおり生存扱い。"""
+    from datetime import datetime, timedelta, timezone
+    now = datetime(2026, 11, 28, tzinfo=timezone.utc)
+    sched = int((now + timedelta(hours=3)).timestamp())
+    page = ('ytInitialPlayerResponse {"liveStreamOfflineSlateRenderer":{"scheduledStartTime":"%d"},'
+            '"isUpcoming":true}' % sched).encode()
+    state: dict = {}
+    r = check_camera(FakeSession([FakeResponse(200, b'{"title":"x"}'), FakeResponse(200, page)]),
+                     _yt_camera(), state, now=now)
+    assert r["state"] == "ok" and "yt_waiting_since" not in state
+
+
 def test_youtube_video_live_ok():
     oembed = FakeResponse(200, b'{"title":"x"}')
     watch = FakeResponse(200, b'ytInitialPlayerResponse "isLiveNow":true')
