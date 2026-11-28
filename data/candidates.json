@@ -1,5 +1,5 @@
 {
- "version": "2026-11-22T06:48:45Z",
+ "version": "2026-11-28T01:36:11Z",
  "cameras": [
   {
    "id": "curated-lcdb-5621ad43",
@@ -38,7 +38,7 @@
    },
    "verification": null,
    "first_seen": "2026-08-29",
-   "last_updated": "2026-11-22"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "curated-lcdb-d132db4d",
@@ -77,7 +77,7 @@
    },
    "verification": null,
    "first_seen": "2026-08-29",
-   "last_updated": "2026-11-22"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "curated-r2-5f9cb448",
@@ -116,7 +116,7 @@
    },
    "verification": null,
    "first_seen": "2026-11-22",
-   "last_updated": "2026-11-22"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "curated-r2-abc50536",
@@ -155,7 +155,887 @@
    },
    "verification": null,
    "first_seen": "2026-11-22",
-   "last_updated": "2026-11-22"
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-1012",
+   "name": "笈松(越前町提供)",
+   "name_kana": null,
+   "lat": 35.981627,
+   "lng": 136.042339,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "その他道路",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/1012.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=1012"
+   },
+   "operator": "越前町",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 越前町）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 58585
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-11",
+   "name": "天菅生橋（福井市）",
+   "name_kana": null,
+   "lat": 36.118949,
+   "lng": 136.176225,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道416号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/279.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=11"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 福井土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 48948
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-12",
+   "name": "高屋橋（福井市）",
+   "name_kana": null,
+   "lat": 36.108228,
+   "lng": 136.188607,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道416号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/364.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=12"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 福井土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 52244
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-137",
+   "name": "余座（敦賀市）",
+   "name_kana": null,
+   "lat": 35.65132,
+   "lng": 136.089156,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道476号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/172.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=137"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 敦賀土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 34637
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-18",
+   "name": "禅の里（永平寺町）",
+   "name_kana": null,
+   "lat": 36.080643,
+   "lng": 136.399651,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道416号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/182.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=18"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 福井土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 147445
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-341",
+   "name": "米ノ(越前町提供)",
+   "name_kana": null,
+   "lat": 35.890043,
+   "lng": 136.000607,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主19)武生米ノ線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/99.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=341"
+   },
+   "operator": "越前町",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 越前町）。利用条件はレビューで確認 / 検証NG: 300秒間隔で画像が同一(フリーズ/バナーの可能性)"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": false,
+    "content_type": "image/jpeg",
+    "bytes": 31223
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-378",
+   "name": "中川（あわら市）",
+   "name_kana": null,
+   "lat": 36.196333,
+   "lng": 136.273722,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(県272)金津丸岡線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/394.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=378"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 三国土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 50176
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-494",
+   "name": "竹生（福井市）",
+   "name_kana": null,
+   "lat": 36.048756,
+   "lng": 136.15791,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主6)福井四ヶ浦線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/510.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=494"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 福井土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 55044
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-495",
+   "name": "東長田（坂井市）",
+   "name_kana": null,
+   "lat": 36.152718,
+   "lng": 136.21914,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主29)福井金津線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/511.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=495"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 三国土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 54442
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-496",
+   "name": "猪爪（坂井市）",
+   "name_kana": null,
+   "lat": 36.141477,
+   "lng": 136.27674,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主38)丸岡インター線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/512.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=496"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 三国土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 58108
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-497",
+   "name": "南新在家（大野市）",
+   "name_kana": null,
+   "lat": 36.0154,
+   "lng": 136.51234,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道157号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/513.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=497"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 奥越土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 52642
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-505",
+   "name": "野田（越前町）",
+   "name_kana": null,
+   "lat": 35.988007,
+   "lng": 136.09061,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主3)福井大森河野線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/518.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=505"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 丹南土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 42416
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-506",
+   "name": "中戸口（鯖江市）",
+   "name_kana": null,
+   "lat": 35.959735,
+   "lng": 136.2476,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主25)福井今立線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/519.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=506"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 丹南土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 51985
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-508",
+   "name": "家久町（越前市）",
+   "name_kana": null,
+   "lat": 35.932485,
+   "lng": 136.16387,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(県229)福井鯖江線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/521.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=508"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 丹南土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 42635
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-569",
+   "name": "御油田（坂井市）",
+   "name_kana": null,
+   "lat": 36.173283,
+   "lng": 136.24967,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主9)芦原丸岡線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/582.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=569"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 三国土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 54253
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-572",
+   "name": "南六呂師（大野市）",
+   "name_kana": null,
+   "lat": 36.016364,
+   "lng": 136.5718,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主26)大野勝山線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/585.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=572"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 奥越土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 53844
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-577",
+   "name": "広瀬町（越前市）",
+   "name_kana": null,
+   "lat": 35.89063,
+   "lng": 136.14394,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(主19)武生米ノ線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/590.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=577"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 丹南土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 57625
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-83",
+   "name": "長山（勝山市）",
+   "name_kana": null,
+   "lat": 36.069481,
+   "lng": 136.507539,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道157号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/26.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=83"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 奥越土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 27725
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-84",
+   "name": "下荒井橋（勝山市）",
+   "name_kana": null,
+   "lat": 36.022193,
+   "lng": 136.51415,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "国道157号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/173.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=84"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 奥越土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 43734
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "fukui-road-98",
+   "name": "上野（大野市）",
+   "name_kana": null,
+   "lat": 35.990904,
+   "lng": 136.540704,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "18",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "(県171)五条方松原出勝山線",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/assets/images/camera/334.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera.html?id=98"
+   },
+   "operator": "福井県",
+   "source": {
+    "page_url": "https://www.hozen.pref.fukui.lg.jp/hozen/yuki/camera-list.html",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：福井県「みち情報ネットふくい」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "みち情報ネットふくい（設置: 奥越土木事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 39059
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
   },
   {
    "id": "fukuoka-kasen-281",
@@ -198,6 +1078,172 @@
    "last_updated": "2026-08-29"
   },
   {
+   "id": "jma-volcam-10803",
+   "name": "十勝岳 西山麓（火山監視カメラ）",
+   "name_kana": null,
+   "lat": 43.403,
+   "lng": 142.516,
+   "coord_accuracy": "exact",
+   "category": "volcano",
+   "prefecture": "01",
+   "country": null,
+   "municipality": "01460",
+   "river_or_route": null,
+   "feed": {
+    "type": "jma_volcam",
+    "url": "10803",
+    "refresh_sec": 120,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10803"
+   },
+   "operator": "気象庁",
+   "source": {
+    "page_url": "https://www.data.jma.go.jp/vois/data/obs/volcam/volcam.php?VC=10803",
+    "terms_url": null,
+    "license": "gov_std_2.0",
+    "attribution": "出典：気象庁ホームページ（監視カメラ画像）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "気象庁の火山監視カメラ。政府標準利用規約（出典明記で利用可）"
+   },
+   "verification": null,
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "jwa-river-saitama-55201101050",
+   "name": "水谷調節池",
+   "name_kana": "みずたにちょうせつち",
+   "lat": 35.833892,
+   "lng": 139.566542,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "柳瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://suibo-river.pref.saitama.lg.jp/hyoujidata/camera/55201101050.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-river.pref.saitama.lg.jp/"
+   },
+   "operator": "埼玉県",
+   "source": {
+    "page_url": "https://suibo-river.pref.saitama.lg.jp/",
+    "terms_url": "https://suibo-river.pref.saitama.lg.jp/Templates/top_chuuijikou.pdf",
+    "license": "unknown",
+    "attribution": "映像提供：埼玉県（埼玉県 川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "埼玉県 川の防災情報の河川カメラ（川越県土整備事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 12282
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "jwa-river-saitama-55201101051",
+   "name": "文展橋",
+   "name_kana": "ぶんてんばし",
+   "lat": 35.8058957,
+   "lng": 139.6776525,
+   "coord_accuracy": "exact",
+   "category": "river",
+   "prefecture": "11",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "菖蒲川",
+   "feed": {
+    "type": "still_image",
+    "url": "https://suibo-river.pref.saitama.lg.jp/hyoujidata/camera/55201101051.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://suibo-river.pref.saitama.lg.jp/"
+   },
+   "operator": "埼玉県",
+   "source": {
+    "page_url": "https://suibo-river.pref.saitama.lg.jp/",
+    "terms_url": "https://suibo-river.pref.saitama.lg.jp/Templates/top_chuuijikou.pdf",
+    "license": "unknown",
+    "attribution": "映像提供：埼玉県（埼玉県 川の防災情報）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "埼玉県 川の防災情報の河川カメラ（さいたま県土整備事務所）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 7412
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "mbc-kai",
+   "name": "桜島（牛根麓）",
+   "name_kana": null,
+   "lat": 31.557646,
+   "lng": 130.761551,
+   "coord_accuracy": "approx",
+   "category": "volcano",
+   "prefecture": "46",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_video",
+    "url": "Hmmk0eYn0cw",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.youtube.com/watch?v=Hmmk0eYn0cw"
+   },
+   "operator": "MBC南日本放送",
+   "source": {
+    "page_url": "https://www.mbc.co.jp/web-cam/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "映像提供：MBC南日本放送（設置：MBC南日本放送）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "MBC「かごしまライブカメラ」経由。設置者の利用条件はレビューで確認"
+   },
+   "verification": null,
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
    "id": "miyagi-road-hokubu-soto",
    "name": "国道347号 外川",
    "name_kana": null,
@@ -234,12 +1280,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 98346
+    "bytes": 71556
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "miyagi-road-hokubu-yanagi1",
@@ -278,12 +1324,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 73718
+    "bytes": 54801
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "miyagi-road-hokubu-yanagi2",
@@ -322,12 +1368,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 107443
+    "bytes": 98802
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "miyagi-road-tobu-oosawa",
@@ -366,12 +1412,227 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 7984
+    "bytes": 10160
    },
    "first_seen": "2026-08-20",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "miyazaki-kasen-327",
+   "name": "三財川 宮ノ下（戸敷橋）",
+   "name_kana": null,
+   "lat": 32.08113,
+   "lng": 131.37066,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "三財川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_327.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=327"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=327",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "宮崎県の河川監視カメラ（簡易型河川）。座標は県の設置図からの換算（概略）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 233211
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "miyazaki-kasen-329",
+   "name": "山路川 三宅（西都市浄化センター）",
+   "name_kana": null,
+   "lat": 32.09297,
+   "lng": 131.39135,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "山路川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_329.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=329"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=329",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "宮崎県の河川監視カメラ（簡易型河川）。座標は県の設置図からの換算（概略）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 282417
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "miyazaki-kasen-330",
+   "name": "一ツ瀬川 牛掛（囲橋）",
+   "name_kana": null,
+   "lat": 32.14332,
+   "lng": 131.39438,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "一ツ瀬川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_330.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=330"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=330",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "宮崎県の河川監視カメラ（簡易型河川）。座標は県の設置図からの換算（概略）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 229116
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "miyazaki-kasen-332",
+   "name": "桜川 白馬町（白鳥橋）",
+   "name_kana": null,
+   "lat": 32.10778,
+   "lng": 131.40909,
+   "coord_accuracy": "approx",
+   "category": "river",
+   "prefecture": "45",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "桜川",
+   "feed": {
+    "type": "still_image",
+    "url": "http://kasen.pref.miyazaki.jp/cameraData/now/now_332.jpg",
+    "refresh_sec": 300,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=332"
+   },
+   "operator": "宮崎県",
+   "source": {
+    "page_url": "http://kasen.pref.miyazaki.jp/bousai/servlet/bousaiweb.servletBousaiContents?style=itv_img&dk=15&nw=1&sn=332",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：宮崎県 雨量・河川水位観測情報"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "宮崎県の河川監視カメラ（簡易型河川）。座標は県の設置図からの換算（概略）。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 196821
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "mlit-kkr-yt-ucmki0wbq0n0gnqerhodq4a",
+   "name": "北川水系",
+   "name_kana": null,
+   "lat": null,
+   "lng": null,
+   "coord_accuracy": null,
+   "category": "river",
+   "prefecture": "27",
+   "country": null,
+   "municipality": null,
+   "river_or_route": null,
+   "feed": {
+    "type": "youtube_channel",
+    "url": "UCmKI0wbq0N0GNQeRH-OdQ4A",
+    "refresh_sec": null,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html"
+   },
+   "operator": "国土交通省 近畿地方整備局",
+   "source": {
+    "page_url": "https://www.kkr.mlit.go.jp/river/bousai/livecamera.html",
+    "terms_url": "https://www.kkr.mlit.go.jp/guide/rules.html",
+    "license": "youtube_gov",
+    "attribution": "出典：国土交通省 近畿地方整備局（公式YouTube）"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "1チャンネル=1カメラか要確認。座標は手動で設定すること。"
+   },
+   "verification": null,
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
   },
   {
    "id": "nagano-road-oomachi-003",
@@ -410,12 +1671,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 41776
+    "bytes": 41108
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "nagano-road-oomachi-009",
@@ -454,12 +1715,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 47697
+    "bytes": 38676
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "nagano-road-saku-001",
@@ -498,12 +1759,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": true,
+    "image_changed": false,
     "content_type": "image/jpeg",
-    "bytes": 40717
+    "bytes": 41705
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "nagano-road-suzaka-003",
@@ -542,12 +1803,12 @@
    },
    "verification": {
     "fetched_twice": true,
-    "image_changed": false,
+    "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 105557
+    "bytes": 42195
    },
    "first_seen": "2026-08-21",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
   },
   {
    "id": "shizukawa-coast-kanbara-takahama",
@@ -588,10 +1849,98 @@
     "fetched_twice": true,
     "image_changed": true,
     "content_type": "image/jpeg",
-    "bytes": 68960
+    "bytes": 98998
    },
    "first_seen": "2026-08-22",
-   "last_updated": "2026-08-27"
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "toyama-road-350",
+   "name": "小矢部市後谷",
+   "name_kana": null,
+   "lat": 36.671893,
+   "lng": 136.860359,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "16",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "（国）４７１号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.toyama-douro.toyama.toyama.jp/kl/camimg/camimg350.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.toyama-douro.toyama.toyama.jp/"
+   },
+   "operator": "富山県",
+   "source": {
+    "page_url": "https://www.toyama-douro.toyama.toyama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：富山県「とやま道路情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "富山県道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 46413
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
+  },
+  {
+   "id": "toyama-road-351",
+   "name": "小矢部市南谷",
+   "name_kana": null,
+   "lat": 36.675667,
+   "lng": 136.847768,
+   "coord_accuracy": "exact",
+   "category": "road",
+   "prefecture": "16",
+   "country": null,
+   "municipality": null,
+   "river_or_route": "（国）４７１号",
+   "feed": {
+    "type": "still_image",
+    "url": "https://www.toyama-douro.toyama.toyama.jp/kl/camimg/camimg351.jpg",
+    "refresh_sec": 600,
+    "requires_referer": false,
+    "headers": {}
+   },
+   "fallback": {
+    "type": "web_page",
+    "url": "https://www.toyama-douro.toyama.toyama.jp/"
+   },
+   "operator": "富山県",
+   "source": {
+    "page_url": "https://www.toyama-douro.toyama.toyama.jp/",
+    "terms_url": null,
+    "license": "unknown",
+    "attribution": "出典：富山県「とやま道路情報」"
+   },
+   "review": {
+    "status": "pending",
+    "reviewed_at": null,
+    "note": "富山県道路カメラ。利用条件はレビューで確認"
+   },
+   "verification": {
+    "fetched_twice": true,
+    "image_changed": true,
+    "content_type": "image/jpeg",
+    "bytes": 42897
+   },
+   "first_seen": "2026-11-28",
+   "last_updated": "2026-11-28"
   }
  ]
 }
